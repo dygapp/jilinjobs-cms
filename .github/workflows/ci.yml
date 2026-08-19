@@ -180,6 +180,25 @@ jobs:
           if-no-files-found: ignore
           retention-days: 5
 
+      - name: Capture runtime diagnostics
+        if: failure()
+        run: |
+          mkdir -p runtime-diagnostics
+          docker ps -a > runtime-diagnostics/docker-ps.txt 2>&1 || true
+          docker inspect cms-backend > runtime-diagnostics/backend-inspect.json 2>&1 || true
+          docker logs cms-backend > runtime-diagnostics/backend.log 2>&1 || true
+          docker inspect cms-frontend > runtime-diagnostics/frontend-inspect.json 2>&1 || true
+          docker logs cms-frontend > runtime-diagnostics/frontend.log 2>&1 || true
+
+      - name: Upload runtime diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: runtime-diagnostics
+          path: runtime-diagnostics
+          if-no-files-found: error
+          retention-days: 5
+
       - name: Show runtime logs on failure
         if: failure()
         run: |
