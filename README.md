@@ -43,13 +43,15 @@
 
 ## 权威业务需求
 
-当前初始业务需求来源：
+当前详细业务需求：
 
 ```text
- docs/requirements/information-publishing.md
+docs/requirements/information-publishing.md
 ```
 
-该需求文档作为当前迭代的详细业务依据。
+该需求文档已经由本仓库显式采纳，作为当前迭代 Scope 内的详细业务依据。
+
+该来源文档中引用的 `docs/project/project.md` 和 `docs/requirements/overview/system-module-boundaries.md` 当前不存在于本 Consumer Repository，因此这些 upstream references 只保留来源关系，不构成本项目 Authority。当前需求解释必须同时服从本 README 的迭代 Scope 与 `AGENTS.md` 的 Authority Boundary。
 
 需求事实必须来自明确的 Authority，不得通过实现习惯、其他项目经验或常见做法自行扩展、修改或替换。
 
@@ -61,8 +63,8 @@
 Repository:
 dygapp/agentic-dev
 
-Bootstrap Baseline:
-master@d8b90b1880a13c061b3e854abcfe4e5e93c31229
+Experiment Validation Baseline:
+master@3e3f9c9abd338680f5944dd43355404109b8b326
 ```
 
 使用原则：

@@ -29,6 +29,8 @@
 5. Code 与 Tests：用于证明当前实现状态，不得反向发明产品需求；
 6. Conversation History、临时计划和 Agent reasoning：均不构成项目权威。
 
+`docs/requirements/information-publishing.md` 已由本仓库显式采纳为当前迭代的详细业务需求，但其来源文档中声明的 `relations.upstream` 以及正文引用的 `docs/project/project.md`、`docs/requirements/overview/system-module-boundaries.md` 当前并不存在于本 Consumer Repository。这些引用只保留其来源关系（provenance / upstream references），**不构成当前 Consumer Authority，也不得用于扩大或覆盖本仓库已明确的 Goal、Scope 与 Boundary**。只有后续被本仓库显式采纳的上游事实才可成为新的 Consumer Authority。
+
 `README.md` 的当前迭代范围可以有意只选择原始需求的一部分。即使某项能力存在于详细需求文档中，只要 `README.md` 已明确将其排除在当前迭代之外，就不得在本轮自行实现，除非项目负责人正式调整范围。
 
 ## Knowledge Boundary（知识边界）
@@ -49,8 +51,10 @@
 方法来源：
 
 - Repository：`dygapp/agentic-dev`
-- 启动 baseline branch：`master`
-- 启动 baseline commit：`d8b90b1880a13c061b3e854abcfe4e5e93c31229`
+- Validation Baseline Branch：`master`
+- Validation Baseline Commit：`3e3f9c9abd338680f5944dd43355404109b8b326`
+
+当前 Consumer Experiment 的 Method、Operating Guide 与 Skills 判断必须基于上述精确 Validation Baseline。若项目负责人后续明确指定新的 Validation Baseline，应先更新本处，再按新的精确 baseline 继续工作。
 
 按 `agentic-dev` 当前 Operating Guide 与 Method 使用 Progressive Disclosure（渐进披露）：
 
