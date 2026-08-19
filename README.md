@@ -55,6 +55,16 @@ docs/requirements/information-publishing.md
 
 需求事实必须来自明确的 Authority，不得通过实现习惯、其他项目经验或常见做法自行扩展、修改或替换。
 
+## 当前 Specification
+
+当前迭代的 WHAT / WHY Specification：
+
+```text
+docs/specifications/center-main-site-core.md
+```
+
+Specification 只收敛当前 Scope 内的 Required Behavior、Boundary 与 Acceptance，不替代更高优先级 Authority，也不提前规定实现 HOW。
+
 ## 开发方法来源
 
 本项目采用 `agentic-dev` 作为 AI Agent 驱动开发 Method 与 Skills 的知识来源：
@@ -78,16 +88,15 @@ master@3e3f9c9abd338680f5944dd43355404109b8b326
 ## 当前阶段
 
 ```text
-Project Initialization → Specification
+Specification Ready → Technical Planning Decision
 ```
 
 当前下一步目标：
 
-形成当前迭代最小充分的 WHAT / WHY Specification，使新的 Agent 可以仅依靠项目 Authority 理解：
-
-- 系统需要实现什么；
-- 明确不实现什么；
-- 什么结果表示完成。
+- 判断当前 Greenfield 系统是否存在需要跨 Execution Units 长期协调的 HOW；
+- 如需要，形成最小必要 Technical Plan；
+- 如不需要，则直接进入 Work Slicing 与 Readiness Check；
+- 在进入生产代码前保持 Specification、Repository Authority 与实现输入一致。
 
 当前尚未进入生产代码开发阶段。
 
@@ -98,8 +107,10 @@ Project Initialization → Specification
 ├── AGENTS.md
 ├── README.md
 └── docs/
-    └── requirements/
-        └── information-publishing.md
+    ├── requirements/
+    │   └── information-publishing.md
+    └── specifications/
+        └── center-main-site-core.md
 ```
 
 项目结构应随着真实开发需要逐步演进。
