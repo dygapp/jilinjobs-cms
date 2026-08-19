@@ -1,0 +1,13 @@
+.idea/
+.vscode/
+*.log
+
+backend/.gradle/
+backend/build/
+
+frontend/node_modules/
+frontend/dist/
+frontend/playwright-report/
+frontend/test-results/
+
+uploads/
