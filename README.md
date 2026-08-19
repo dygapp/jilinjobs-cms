@@ -2,7 +2,7 @@
 
 `jilinjobs-cms` 是吉林省智慧就业云平台中“信息发布与网站服务”相关能力的独立 Consumer 项目。
 
-本项目从 Greenfield（绿色场）状态开始建设，目标是在明确业务需求和最小项目治理基础上，逐步形成可持续开发的软件系统。
+当前阶段建设一个**可运行的网站信息发布原型应用**，用于验证中心主站的信息发布核心需求。后续完善为正式系统或嵌入 `jilinjobs` 主系统，不属于当前阶段范围。
 
 ## 当前项目目标
 
@@ -20,7 +20,7 @@
 
 ## 当前迭代范围（Scope）
 
-### In Scope（本轮范围内）
+### In Scope
 
 - 栏目和分类管理；
 - 菜单与导航组织；
@@ -30,14 +30,16 @@
   - 栏目/二级页面；
   - 内容详情页面。
 
-### Out of Scope（本轮不包含）
+### Out of Scope
 
 - 外部内容嵌入；
-- 用户与权限管理；
+- 用户与权限管理及认证授权接入；
 - “中心党建”二级网站；
 - 评论及其他互动能力；
 - 复杂统计分析；
-- 多站点扩展能力。
+- 多站点扩展能力；
+- 后续嵌入 `jilinjobs` 主系统；
+- MQ、MinIO、Redis 等当前原型不需要的基础设施。
 
 详细业务需求范围可能比当前迭代更广。只有属于当前 Scope 的内容才是本轮有效实现要求。
 
@@ -55,7 +57,7 @@ docs/requirements/information-publishing.md
 
 需求事实必须来自明确的 Authority，不得通过实现习惯、其他项目经验或常见做法自行扩展、修改或替换。
 
-## 当前 Specification
+## 当前规格说明（Specification）
 
 当前迭代的 WHAT / WHY Specification：
 
@@ -63,7 +65,38 @@ docs/requirements/information-publishing.md
 docs/specifications/center-main-site-core.md
 ```
 
-Specification 只收敛当前 Scope 内的 Required Behavior、Boundary 与 Acceptance，不替代更高优先级 Authority，也不提前规定实现 HOW。
+Specification 只收敛当前 Scope 内的必需行为、边界与验收，不替代更高优先级 Authority，也不提前规定实现 HOW。
+
+当前 Specification 已明确：当前原型后台不建设或接入认证授权机制，后台直接用于验证信息发布核心业务；该简化不代表未来正式系统的安全边界。
+
+## 当前原型技术边界
+
+以下内容已经由人工权威（Human Authority）明确：
+
+- 当前形态：独立建设的原型应用；
+- 后续完善为正式系统或嵌入 `jilinjobs`：不属于当前阶段；
+- 后端与运行技术基线：Spring Boot、Gradle、Java 21、Kotlin；
+- 数据持久化：MySQL + MyBatis；
+- 当前阶段不考虑认证授权；
+- 当前阶段不引入 MQ、MinIO、Redis。
+
+### 前端方案提案（待人工确认）
+
+Agent 当前选择：
+
+```text
+Vue 3 + TypeScript + Vite + Vue Router
+```
+
+选择原因：
+
+- 与当前明确的 Vue.js 技术方向一致；
+- 原型阶段依赖和运行复杂度较低；
+- 适合把公开站点与管理端通过明确路由边界组织在同一前端工程中；
+- 与 Spring Boot REST API 保持清晰前后端边界；
+- 后续若进入正式系统阶段，仍可基于真实 SEO、部署或主系统集成要求重新评估渲染和集成方式。
+
+该前端选择属于当前 Technical Planning 的最后一项人工确认点。在确认前不把它提升为最终 Technical Plan 决策，也不开始生产代码实现。
 
 ## 开发方法来源
 
@@ -74,36 +107,36 @@ Repository:
 dygapp/agentic-dev
 
 Experiment Validation Baseline:
-master@3e3f9c9abd338680f5944dd43355404109b8b326
+master@9ae3f4e73ef1e4b27a30f7ac791ae4b079dee269
 ```
 
 使用原则：
 
 - 按当前阶段加载需要的 Method / Skill；
 - 不为了流程完整性创建无实际价值的文档或目录；
-- Specification 负责 WHAT / WHY；
-- Technical Plan 只在必要时产生；
-- Execution Unit 应适合 Fresh Context 独立执行和验证。
+- 规格说明（Specification）负责 WHAT / WHY；
+- 技术计划（Technical Plan）只在必要时产生；
+- 执行单元（Execution Unit）应适合 Fresh Context 独立执行和验证。
 
 ## 当前阶段
 
 ```text
-Specification Ready → Technical Planning Required → Human Architecture Decision
+Specification Ready
+→ Technical Planning
+→ Frontend Proposal Confirmation
 ```
 
-Technical Planning 已确认有必要：当前 Greenfield 系统需要跨多个 Execution Units 长期协调公开前端、后台管理、内容状态、数据持久化、文件资源和共享契约，不能安全地把这些 HOW 全部留给各 Unit 独立决定。
+此前阻塞 Technical Planning 的两项高影响问题已经解除：
 
-当前存在两个必须在形成 Technical Plan 前解除的高影响阻塞点：
+1. **目标技术与部署架构基线**：当前作为独立原型应用建设，并已给出 JVM / Spring Boot / Kotlin / Gradle / MySQL / MyBatis 技术基线；
+2. **后台认证与授权边界**：当前原型明确不考虑认证授权，只验证网站信息发布核心需求。
 
-1. **目标技术与部署架构基线**：当前 Authority 未说明本项目应作为独立应用/服务建设，还是嵌入既有智慧就业云平台，也未提供前端、后端、运行时或部署技术基线。该选择会决定主要组件边界与共享契约，属于 Major Architecture Direction。
-2. **后台认证与授权集成边界**：当前 Scope 明确不建设用户与权限管理，但详细业务需求要求后台只面向具备相应资格的中心管理用户。当前 Authority 未提供应接入的认证/授权机制或安全边界，不能通过“暂时无认证”静默替代，属于 Security-sensitive / External Integration Decision。
+当前只剩前端方案需要按人工要求完成确认。确认后，Agent 将：
 
-在上述 Human Decision 明确前：
-
-- 不创建假定性 Technical Plan；
-- 不开始生产代码实现；
-- 不从缺失的 upstream references、其他项目或 Conversation History 推断技术基线；
-- 其余普通、低影响、可逆的技术细节仍由 Agent 在后续 Technical Planning / Execution 中自主处理。
+- 基于已确认架构形成最小必要 Technical Plan；
+- 自主决定其余普通、低影响、可逆的实现细节；
+- 进入 Work Slicing 与 Readiness Check；
+- 只有在执行单元达到就绪条件后才进入生产代码实现。
 
 ## 当前仓库结构
 
@@ -120,7 +153,7 @@ Technical Planning 已确认有必要：当前 Greenfield 系统需要跨多个 
 
 项目结构应随着真实开发需要逐步演进。
 
-只有具有 Authority、协调、追踪或长期知识价值的信息，才应形成新的项目 Artifact。
+只有具有 Authority、协调、追踪或长期知识价值的信息，才应形成新的项目产物（Artifact）。
 
 ## GitHub Repository 操作约定
 
