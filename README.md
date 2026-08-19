@@ -88,17 +88,22 @@ master@3e3f9c9abd338680f5944dd43355404109b8b326
 ## 当前阶段
 
 ```text
-Specification Ready → Technical Planning Decision
+Specification Ready → Technical Planning Required → Human Architecture Decision
 ```
 
-当前下一步目标：
+Technical Planning 已确认有必要：当前 Greenfield 系统需要跨多个 Execution Units 长期协调公开前端、后台管理、内容状态、数据持久化、文件资源和共享契约，不能安全地把这些 HOW 全部留给各 Unit 独立决定。
 
-- 判断当前 Greenfield 系统是否存在需要跨 Execution Units 长期协调的 HOW；
-- 如需要，形成最小必要 Technical Plan；
-- 如不需要，则直接进入 Work Slicing 与 Readiness Check；
-- 在进入生产代码前保持 Specification、Repository Authority 与实现输入一致。
+当前存在两个必须在形成 Technical Plan 前解除的高影响阻塞点：
 
-当前尚未进入生产代码开发阶段。
+1. **目标技术与部署架构基线**：当前 Authority 未说明本项目应作为独立应用/服务建设，还是嵌入既有智慧就业云平台，也未提供前端、后端、运行时或部署技术基线。该选择会决定主要组件边界与共享契约，属于 Major Architecture Direction。
+2. **后台认证与授权集成边界**：当前 Scope 明确不建设用户与权限管理，但详细业务需求要求后台只面向具备相应资格的中心管理用户。当前 Authority 未提供应接入的认证/授权机制或安全边界，不能通过“暂时无认证”静默替代，属于 Security-sensitive / External Integration Decision。
+
+在上述 Human Decision 明确前：
+
+- 不创建假定性 Technical Plan；
+- 不开始生产代码实现；
+- 不从缺失的 upstream references、其他项目或 Conversation History 推断技术基线；
+- 其余普通、低影响、可逆的技术细节仍由 Agent 在后续 Technical Planning / Execution 中自主处理。
 
 ## 当前仓库结构
 
