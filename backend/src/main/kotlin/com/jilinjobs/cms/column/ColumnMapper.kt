@@ -69,7 +69,7 @@ data class ColumnRecord(
 class MyBatisColumnRepository(
     private val mapper: ColumnMapper,
 ) : ColumnRepository {
-    override fun findAll(): List<CmsColumn> = mapper.findAll().map(ColumnRecord::toModel)
+    override fun findAll(): List<CmsColumn> = mapper.findAll().map { it.toModel() }
 
     override fun findById(id: Long): CmsColumn? = mapper.findById(id)?.toModel()
 
