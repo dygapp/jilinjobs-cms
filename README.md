@@ -71,32 +71,25 @@ Specification 只收敛当前 Scope 内的必需行为、边界与验收，不�
 
 ## 当前原型技术边界
 
-以下内容已经由人工权威（Human Authority）明确：
+以下内容已经由人工权威（Human Authority）确认：
 
 - 当前形态：独立建设的原型应用；
 - 后续完善为正式系统或嵌入 `jilinjobs`：不属于当前阶段；
-- 后端与运行技术基线：Spring Boot、Gradle、Java 21、Kotlin；
+- 前端：Vue 3 + TypeScript + Vite + Vue Router；
+- 原型管理端：Element Plus；
+- 后端：Spring Boot 模块化单体应用；
+- 构建与运行基线：Gradle、Java 21、Kotlin；
 - 数据持久化：MySQL + MyBatis；
 - 当前阶段不考虑认证授权；
 - 当前阶段不引入 MQ、MinIO、Redis。
 
-### 前端方案提案（待人工确认）
-
-Agent 当前选择：
+当前技术计划（Technical Plan）：
 
 ```text
-Vue 3 + TypeScript + Vite + Vue Router
+docs/technical/center-main-site-core.md
 ```
 
-选择原因：
-
-- 与当前明确的 Vue.js 技术方向一致；
-- 原型阶段依赖和运行复杂度较低；
-- 适合把公开站点与管理端通过明确路由边界组织在同一前端工程中；
-- 与 Spring Boot REST API 保持清晰前后端边界；
-- 后续若进入正式系统阶段，仍可基于真实 SEO、部署或主系统集成要求重新评估渲染和集成方式。
-
-该前端选择属于当前 Technical Planning 的最后一项人工确认点。在确认前不把它提升为最终 Technical Plan 决策，也不开始生产代码实现。
+Technical Plan 只持久化跨执行单元需要长期共享的 HOW：模块化单体边界、前后端契约、数据与文件资源策略、同步事务模型、部署边界和验证责任。普通、低影响、可逆的文件组织、库级细节、精确版本和测试命令留给执行阶段即时计划（JIT Plan）。
 
 ## 开发方法来源
 
@@ -122,21 +115,16 @@ master@9ae3f4e73ef1e4b27a30f7ac791ae4b079dee269
 
 ```text
 Specification Ready
-→ Technical Planning
-→ Frontend Proposal Confirmation
+→ Technical Plan Ready
+→ Work Slicing & Readiness
 ```
 
-此前阻塞 Technical Planning 的两项高影响问题已经解除：
+此前的架构确认点已经全部解除。当前下一步是：
 
-1. **目标技术与部署架构基线**：当前作为独立原型应用建设，并已给出 JVM / Spring Boot / Kotlin / Gradle / MySQL / MyBatis 技术基线；
-2. **后台认证与授权边界**：当前原型明确不考虑认证授权，只验证网站信息发布核心需求。
-
-当前只剩前端方案需要按人工要求完成确认。确认后，Agent 将：
-
-- 基于已确认架构形成最小必要 Technical Plan；
-- 自主决定其余普通、低影响、可逆的实现细节；
-- 进入 Work Slicing 与 Readiness Check；
-- 只有在执行单元达到就绪条件后才进入生产代码实现。
+- 按 Specification 与 Technical Plan 切分纵向、可独立验证的执行单元（Execution Units）；
+- 对每个 Unit 执行就绪检查（Readiness Check）；
+- 就绪后再进入 Fresh-context Execute；
+- 实现阶段不得重新打开已经确认的产品范围或重大架构方向，除非出现新的权威冲突或当前证据证明存在阻塞问题。
 
 ## 当前仓库结构
 
@@ -147,7 +135,9 @@ Specification Ready
 └── docs/
     ├── requirements/
     │   └── information-publishing.md
-    └── specifications/
+    ├── specifications/
+    │   └── center-main-site-core.md
+    └── technical/
         └── center-main-site-core.md
 ```
 
