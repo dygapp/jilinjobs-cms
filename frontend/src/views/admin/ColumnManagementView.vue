@@ -143,6 +143,10 @@ async function remove(row: CmsColumn) {
   }
 }
 
+function asCmsColumn(row: unknown): CmsColumn {
+  return row as CmsColumn
+}
+
 function toMessage(error: unknown): string {
   return error instanceof Error ? error.message : '操作失败'
 }
@@ -175,15 +179,15 @@ function toMessage(error: unknown): string {
               :data-testid="`enabled-${scope.row.id}`"
               active-text="启用"
               inactive-text="停用"
-              @change="(value: boolean) => toggleEnabled(scope.row, value)"
+              @change="(value) => toggleEnabled(asCmsColumn(scope.row), value === true)"
             />
           </template>
         </el-table-column>
         <el-table-column label="操作" width="230" fixed="right">
           <template #default="scope">
             <el-button link type="primary" @click="openCreate(scope.row.id)">新增子栏目</el-button>
-            <el-button :data-testid="`edit-${scope.row.id}`" link type="primary" @click="openEdit(scope.row)">编辑</el-button>
-            <el-button :data-testid="`delete-${scope.row.id}`" link type="danger" @click="remove(scope.row)">删除</el-button>
+            <el-button :data-testid="`edit-${scope.row.id}`" link type="primary" @click="openEdit(asCmsColumn(scope.row))">编辑</el-button>
+            <el-button :data-testid="`delete-${scope.row.id}`" link type="danger" @click="remove(asCmsColumn(scope.row))">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
