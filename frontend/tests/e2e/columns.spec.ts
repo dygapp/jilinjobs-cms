@@ -37,7 +37,7 @@ test('栏目可以通过管理界面维护且父栏目删除约束生效', async
   await expect(page.getByText('政策动态')).toBeVisible()
 
   await page.getByTestId(`delete-${parent!.id}`).click()
-  await page.getByRole('button', { name: '删除', exact: true }).click()
+  await page.getByRole('dialog').getByRole('button', { name: '删除', exact: true }).click()
   await expect(page.getByText('栏目存在下级栏目，不能直接删除')).toBeVisible()
 
   await page.getByTestId(`enabled-${parent!.id}`).click()
