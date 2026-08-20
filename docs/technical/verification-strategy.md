@@ -149,7 +149,7 @@ EU-01 完成后停止执行，不继续 EU-02；先将 Consumer Issue #1/#2 与�
 
 ## 8. EU-02 验证收敛记录
 
-EU-02 继续复用分层 CI，并在实际 Completion Verification 中产生两类新证据：
+EU-02 继续复用分层 CI，并在实际 Completion Verification 中产生新的验证实践证据：
 
 - 前端 Fast Feedback 首先暴露 `vue-tsc` 类型错误，修复后重新执行当前 Head 的完整验证；
 - 首轮 Browser verification 的 Runtime、后端与前端均正常，失败被定位到 Element Plus 选择器使用脆弱 placeholder locator；改用稳定 `data-testid` 后，新的 Head 上 Backend Verify、Frontend Verify 与 Browser verification 全部 PASS；

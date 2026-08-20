@@ -7,12 +7,10 @@ export default defineConfig({
   fullyParallel: false,
   workers: process.env.CI ? 1 : undefined,
   retries: process.env.CI ? 1 : 0,
-  reporter: process.env.CI
-    ? [
-        ['list'],
-        ['html', { outputFolder: 'playwright-report', open: 'never' }],
-      ]
-    : [['list']],
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: 'playwright-report', open: 'never' }],
+  ],
   use: {
     baseURL: 'http://127.0.0.1:5173',
     trace: 'on-first-retry',
