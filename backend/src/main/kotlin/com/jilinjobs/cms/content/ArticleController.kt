@@ -1,0 +1,68 @@
+package com.jilinjobs.cms.content
+
+import jakarta.validation.Valid
+import jakarta.validation.constraints.NotBlank
+import jakarta.validation.constraints.Size
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.PutMapping
+import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RestController
+import java.time.LocalDate
+
+@RestController
+@RequestMapping("/api/admin/articles")
+class ArticleController(
+    private val service: ArticleService,
+) {
+    @GetMapping
+    fun list(): List<CmsArticle> = service.list()
+
+    @GetMapping("/{id}")
+    fun get(@PathVariable id: Long): CmsArticle = service.get(id)
+
+    @PostMapping
+    fun create(@Valid @RequestBody request: SaveArticleRequest): ResponseEntity<CmsArticle> =
+        ResponseEntity.status(HttpStatus.CREATED).body(service.create(request.toDraft()))
+
+    @PutMapping("/{id}")
+    fun update(
+        @PathVariable id: Long,
+        @Valid @RequestBody request: SaveArticleRequest,
+    ): CmsArticle = service.update(id, request.toDraft())
+}
+
+data class SaveArticleRequest(
+    val columnId: Long,
+    @field:NotBlank
+    @field:Size(max = 200)
+    val title: String,
+    val bodyHtml: String = "",
+    @field:Size(max = 200)
+    val source: String = "",
+    val publishDate: LocalDate? = null,
+    val pinned: Boolean = false,
+    val recommended: Boolean = false,
+    val sortOrder: Int = 0,
+    val coverResourceId: Long? = null,
+    val bodyImageResourceIds: List<Long> = emptyList(),
+    val attachmentResourceIds: List<Long> = emptyList(),
+) {
+    fun toDraft(): ArticleDraft = ArticleDraft(
+        columnId = columnId,
+        title = title,
+        bodyHtml = bodyHtml,
+        source = source,
+        publishDate = publishDate,
+        pinned = pinned,
+        recommended = recommended,
+        sortOrder = sortOrder,
+        coverResourceId = coverResourceId,
+        bodyImageResourceIds = bodyImageResourceIds,
+        attachmentResourceIds = attachmentResourceIds,
+    )
+}
