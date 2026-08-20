@@ -2,6 +2,7 @@ package com.jilinjobs.cms.resource
 
 import org.springframework.core.io.FileSystemResource
 import org.springframework.core.io.Resource
+import org.springframework.http.ContentDisposition
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.multipart.MultipartFile
+import java.nio.charset.StandardCharsets
 
 @RestController
 @RequestMapping("/api/admin/resources")
@@ -26,19 +28,7 @@ class ResourceController(
     fun get(@PathVariable id: Long): CmsResource = service.get(id)
 
     @GetMapping("/{id}/content")
-    fun content(@PathVariable id: Long): ResponseEntity<Resource> = contentResponse(service.resolveContent(id))
-
-    private fun contentResponse(resolved: Pair<CmsResource, java.nio.file.Path>): ResponseEntity<Resource> {
-        val (metadata, path) = resolved
-        val mediaType = metadata.contentType
-            ?.let { runCatching { MediaType.parseMediaType(it) }.getOrNull() }
-            ?: MediaType.APPLICATION_OCTET_STREAM
-        val body: Resource = FileSystemResource(path)
-        return ResponseEntity.ok()
-            .contentType(mediaType)
-            .contentLength(metadata.sizeBytes)
-            .body(body)
-    }
+    fun content(@PathVariable id: Long): ResponseEntity<Resource> = resourceResponse(service.resolveContent(id))
 }
 
 @RestController
@@ -47,15 +37,31 @@ class PublicResourceController(
     private val service: ResourceService,
 ) {
     @GetMapping("/{id}/content")
-    fun content(@PathVariable id: Long): ResponseEntity<Resource> {
-        val (metadata, path) = service.resolvePublishedBodyImage(id)
-        val mediaType = metadata.contentType
-            ?.let { runCatching { MediaType.parseMediaType(it) }.getOrNull() }
-            ?: MediaType.APPLICATION_OCTET_STREAM
-        val body: Resource = FileSystemResource(path)
-        return ResponseEntity.ok()
-            .contentType(mediaType)
-            .contentLength(metadata.sizeBytes)
-            .body(body)
+    fun content(@PathVariable id: Long): ResponseEntity<Resource> =
+        resourceResponse(service.resolvePublishedBodyImage(id))
+
+    @GetMapping("/{id}/attachment")
+    fun attachment(@PathVariable id: Long): ResponseEntity<Resource> =
+        resourceResponse(service.resolvePublishedAttachment(id), download = true)
+}
+
+private fun resourceResponse(
+    resolved: Pair<CmsResource, java.nio.file.Path>,
+    download: Boolean = false,
+): ResponseEntity<Resource> {
+    val (metadata, path) = resolved
+    val mediaType = metadata.contentType
+        ?.let { runCatching { MediaType.parseMediaType(it) }.getOrNull() }
+        ?: MediaType.APPLICATION_OCTET_STREAM
+    val response = ResponseEntity.ok()
+        .contentType(mediaType)
+        .contentLength(metadata.sizeBytes)
+    if (download) {
+        response.headers { headers ->
+            headers.contentDisposition = ContentDisposition.attachment()
+                .filename(metadata.originalFilename, StandardCharsets.UTF_8)
+                .build()
+        }
     }
+    return response.body(FileSystemResource(path))
 }

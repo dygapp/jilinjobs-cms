@@ -96,11 +96,21 @@ class ResourceService(
         return resolveContent(id)
     }
 
+    fun resolvePublishedAttachment(id: Long): Pair<CmsResource, Path> {
+        if (!repository.isPublishedAttachment(id)) {
+            throw ResourceNotFoundException(id)
+        }
+        return resolveContent(id)
+    }
+
     override fun findArticleResources(articleId: Long): ArticleResourceLinks = ArticleResourceLinks(
         coverResourceId = repository.findArticleResourceIds(articleId, ArticleResourceRole.COVER).firstOrNull(),
         bodyImageResourceIds = repository.findArticleResourceIds(articleId, ArticleResourceRole.BODY_IMAGE),
         attachmentResourceIds = repository.findArticleResourceIds(articleId, ArticleResourceRole.ATTACHMENT),
     )
+
+    override fun findArticleAttachments(articleId: Long): List<CmsResource> =
+        repository.findArticleResourceIds(articleId, ArticleResourceRole.ATTACHMENT).map(::get)
 
     override fun replaceArticleResources(articleId: Long, links: ArticleResourceLinks) {
         val bodyImages = links.bodyImageResourceIds.distinct()

@@ -36,6 +36,8 @@ interface ResourceRepository {
 
     fun isPublishedBodyImage(resourceId: Long): Boolean
 
+    fun isPublishedAttachment(resourceId: Long): Boolean
+
     fun deleteArticleLinks(articleId: Long)
 
     fun insertArticleLink(articleId: Long, resourceId: Long, role: ArticleResourceRole, sortOrder: Int)
@@ -43,6 +45,8 @@ interface ResourceRepository {
 
 interface ArticleResourceAssociation {
     fun findArticleResources(articleId: Long): ArticleResourceLinks
+
+    fun findArticleAttachments(articleId: Long): List<CmsResource>
 
     fun replaceArticleResources(articleId: Long, links: ArticleResourceLinks)
 }

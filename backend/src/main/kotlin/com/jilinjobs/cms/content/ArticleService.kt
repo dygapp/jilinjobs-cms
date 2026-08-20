@@ -80,8 +80,11 @@ class ArticleService(
         )
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     fun getPublic(id: Long): PublicArticleDetail {
+        if (!repository.incrementPublishedViewCount(id)) {
+            throw ArticleNotFoundException(id)
+        }
         val article = withResources(repository.findPublishedById(id) ?: throw ArticleNotFoundException(id))
         val column = columnQuery.find(article.columnId) ?: throw ArticleNotFoundException(id)
         return PublicArticleDetail(
@@ -93,6 +96,14 @@ class ArticleService(
             source = article.source,
             publishDate = article.publishDate,
             bodyImageResourceIds = article.bodyImageResourceIds,
+            attachments = resourceAssociation.findArticleAttachments(article.id).map { resource ->
+                PublicArticleAttachment(
+                    id = resource.id,
+                    originalFilename = resource.originalFilename,
+                    contentType = resource.contentType,
+                    sizeBytes = resource.sizeBytes,
+                )
+            },
         )
     }
 
