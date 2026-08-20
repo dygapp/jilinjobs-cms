@@ -7,9 +7,11 @@ import {
   getArticle,
   getResource,
   listArticles,
+  publishArticle,
   resourceContentUrl,
   updateArticle,
   uploadResource,
+  withdrawArticle,
   type ArticleDraft,
   type CmsArticle,
 } from '../../api/articles'
@@ -21,6 +23,7 @@ const columns = ref<CmsColumn[]>([])
 const loading = ref(false)
 const saving = ref(false)
 const uploading = ref(false)
+const statusChangingId = ref<number | null>(null)
 const dialogVisible = ref(false)
 const editingId = ref<number | null>(null)
 const editorRef = ref<HTMLElement | null>(null)
@@ -123,7 +126,7 @@ async function save() {
       ElMessage.success('文章草稿已创建')
     } else {
       await updateArticle(editingId.value, draft)
-      ElMessage.success('文章草稿已保存')
+      ElMessage.success('文章内容已保存，发布状态保持不变')
     }
     dialogVisible.value = false
     await refresh()
@@ -131,6 +134,24 @@ async function save() {
     ElMessage.error(toMessage(error))
   } finally {
     saving.value = false
+  }
+}
+
+async function changeStatus(row: CmsArticle) {
+  statusChangingId.value = row.id
+  try {
+    if (row.status === 'PUBLISHED') {
+      await withdrawArticle(row.id)
+      ElMessage.success('文章已撤回')
+    } else {
+      await publishArticle(row.id)
+      ElMessage.success(row.status === 'WITHDRAWN' ? '文章已重新发布' : '文章已发布')
+    }
+    await refresh()
+  } catch (error) {
+    ElMessage.error(toMessage(error))
+  } finally {
+    statusChangingId.value = null
   }
 }
 
@@ -243,6 +264,10 @@ function statusName(status: CmsArticle['status']): string {
   return status === 'DRAFT' ? '草稿' : status === 'PUBLISHED' ? '已发布' : '已撤回'
 }
 
+function statusActionName(status: CmsArticle['status']): string {
+  return status === 'PUBLISHED' ? '撤回' : status === 'WITHDRAWN' ? '重新发布' : '发布'
+}
+
 function resourceName(id: number): string {
   return resourceNames[id] ?? `资源 #${id}`
 }
@@ -267,8 +292,8 @@ function toMessage(error: unknown): string {
     <header class="page-header">
       <div>
         <p class="eyebrow">jilinjobs-cms prototype</p>
-        <h1>文章草稿管理</h1>
-        <p class="subtitle">维护文章草稿、正文图片、封面和附件；保存不会自动发布。</p>
+        <h1>文章管理</h1>
+        <p class="subtitle">维护文章内容，并显式执行发布、撤回和重新发布；普通编辑不会改变当前发布状态。</p>
       </div>
       <el-button data-testid="add-article" type="primary" @click="openCreate">新增文章</el-button>
     </header>
@@ -283,15 +308,22 @@ function toMessage(error: unknown): string {
           <template #default="scope">{{ statusName(scope.row.status) }}</template>
         </el-table-column>
         <el-table-column prop="source" label="来源" min-width="140" />
-        <el-table-column label="操作" width="110" fixed="right">
+        <el-table-column label="操作" width="210" fixed="right">
           <template #default="scope">
             <el-button :data-testid="`edit-article-${scope.row.id}`" link type="primary" @click="openEdit(asCmsArticle(scope.row))">编辑</el-button>
+            <el-button
+              :data-testid="`${scope.row.status === 'PUBLISHED' ? 'withdraw' : 'publish'}-article-${scope.row.id}`"
+              link
+              :type="scope.row.status === 'PUBLISHED' ? 'danger' : 'success'"
+              :loading="statusChangingId === scope.row.id"
+              @click="changeStatus(asCmsArticle(scope.row))"
+            >{{ statusActionName(scope.row.status) }}</el-button>
           </template>
         </el-table-column>
       </el-table>
     </el-card>
 
-    <el-dialog v-model="dialogVisible" :title="editingId == null ? '新增文章草稿' : '编辑文章草稿'" width="860px" destroy-on-close>
+    <el-dialog v-model="dialogVisible" :title="editingId == null ? '新增文章草稿' : '编辑文章'" width="860px" destroy-on-close>
       <el-form label-width="95px">
         <el-form-item label="文章标题" required>
           <el-input v-model="form.title" data-testid="article-title" placeholder="请输入文章标题" maxlength="200" show-word-limit />
@@ -347,11 +379,11 @@ function toMessage(error: unknown): string {
           <span class="sort-label">展示顺序</span>
           <el-input-number v-model="form.sortOrder" data-testid="article-sort-order" :step="1" />
         </el-form-item>
-        <el-alert title="新建文章固定保存为草稿；普通编辑不会改变发布状态。" type="info" :closable="false" show-icon />
+        <el-alert title="新建文章固定保存为草稿；普通编辑不会改变当前发布状态。" type="info" :closable="false" show-icon />
       </el-form>
       <template #footer>
         <el-button @click="dialogVisible = false">取消</el-button>
-        <el-button data-testid="save-article" type="primary" :loading="saving" :disabled="uploading" @click="save">保存草稿</el-button>
+        <el-button data-testid="save-article" type="primary" :loading="saving" :disabled="uploading" @click="save">保存</el-button>
       </template>
     </el-dialog>
   </main>

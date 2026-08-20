@@ -18,7 +18,7 @@ test('文章草稿、文件资源与栏目内容依赖形成管理端闭环', as
   const column = await columnResponse.json() as { id: number }
 
   await page.goto('/admin/articles')
-  await expect(page.getByRole('heading', { name: '文章草稿管理' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: '文章管理' })).toBeVisible()
   await page.getByTestId('add-article').click()
 
   await page.getByPlaceholder('请输入文章标题').fill(title)
@@ -89,7 +89,7 @@ test('文章草稿、文件资源与栏目内容依赖形成管理端闭环', as
   await page.getByPlaceholder('请输入文章标题').fill(updatedTitle)
   await page.getByTestId('article-body-editor').fill('更新后的草稿正文')
   await page.getByTestId('save-article').click()
-  await expect(page.getByRole('dialog', { name: '编辑文章草稿' })).toBeHidden()
+  await expect(page.getByRole('dialog', { name: '编辑文章' })).toBeHidden()
   await expect(page.getByRole('cell', { name: updatedTitle, exact: true })).toBeVisible()
 
   await page.reload()
@@ -115,4 +115,128 @@ test('文章草稿、文件资源与栏目内容依赖形成管理端闭环', as
   expect(deleteColumnResponse.status()).toBe(400)
   const deleteColumnError = await deleteColumnResponse.json() as { message: string }
   expect(deleteColumnError.message).toBe('栏目存在内容，不能直接删除')
+})
+
+test('EU-04 发布撤回重新发布驱动公开三级页面可见性', async ({ page, request }, testInfo) => {
+  const suffix = `${Date.now()}-${testInfo.retry}`
+  const columnName = `公开栏目-${suffix}`
+  const title = `待发布文章-${suffix}`
+  const updatedTitle = `已编辑发布文章-${suffix}`
+
+  const columnResponse = await request.post('/api/admin/columns', {
+    data: { parentId: null, name: columnName, sortOrder: 10, enabled: true },
+  })
+  expect(columnResponse.ok()).toBeTruthy()
+  const column = await columnResponse.json() as { id: number }
+
+  const imageResponse = await request.post('/api/admin/resources', {
+    multipart: {
+      file: {
+        name: 'public-body.png',
+        mimeType: 'image/png',
+        buffer: Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Z0WQAAAAASUVORK5CYII=', 'base64'),
+      },
+    },
+  })
+  expect(imageResponse.ok()).toBeTruthy()
+  const image = await imageResponse.json() as { id: number }
+
+  const articleResponse = await request.post('/api/admin/articles', {
+    data: {
+      columnId: column.id,
+      title,
+      bodyHtml: `<p>这是公开正文</p><p><img src="/api/admin/resources/${image.id}/content" alt="正文图片"></p>`,
+      source: '吉林就业公开来源',
+      publishDate: '2026-08-20',
+      pinned: true,
+      recommended: true,
+      sortOrder: 50,
+      coverResourceId: null,
+      bodyImageResourceIds: [image.id],
+      attachmentResourceIds: [],
+    },
+  })
+  expect(articleResponse.ok()).toBeTruthy()
+  const article = await articleResponse.json() as { id: number; status: string }
+  expect(article.status).toBe('DRAFT')
+
+  expect((await request.get(`/api/public/articles/${article.id}`)).status()).toBe(404)
+  expect((await request.get(`/api/public/resources/${image.id}/content`)).status()).toBe(404)
+
+  await page.goto('/admin/articles')
+  const articleRow = page.getByRole('row').filter({ hasText: title })
+  await expect(articleRow.getByRole('cell', { name: '草稿', exact: true })).toBeVisible()
+  await page.getByTestId(`publish-article-${article.id}`).click()
+  await expect(page.getByRole('row').filter({ hasText: title }).getByRole('cell', { name: '已发布', exact: true })).toBeVisible()
+
+  const homeArticles = page.waitForResponse((response) => response.url().includes('/api/public/articles?') && response.ok())
+  await page.goto('/')
+  await homeArticles
+  await expect(page.getByTestId(`public-article-${article.id}`)).toHaveText(title)
+
+  const columnArticles = page.waitForResponse((response) => response.url().includes(`/api/public/articles?`) && response.url().includes(`columnId=${column.id}`) && response.ok())
+  await page.goto(`/columns/${column.id}`)
+  await columnArticles
+  await expect(page.getByRole('navigation', { name: '栏目位置' })).toContainText(columnName)
+  await expect(page.getByTestId(`column-article-${article.id}`)).toHaveText(title)
+  await expect(page.getByText('2026-08-20', { exact: true })).toBeVisible()
+
+  await page.goto(`/articles/${article.id}`)
+  await expect(page.getByTestId('public-article-title')).toHaveText(title)
+  await expect(page.getByText('来源：吉林就业公开来源', { exact: true })).toBeVisible()
+  await expect(page.getByText('发布日期：2026-08-20', { exact: true })).toBeVisible()
+  await expect(page.getByTestId('public-article-body')).toContainText('这是公开正文')
+  await expect(page.getByTestId('public-article-body').locator('img')).toHaveAttribute('src', `/api/public/resources/${image.id}/content`)
+  expect((await request.get(`/api/public/resources/${image.id}/content`)).ok()).toBeTruthy()
+
+  const editResponse = await request.put(`/api/admin/articles/${article.id}`, {
+    data: {
+      columnId: column.id,
+      title: updatedTitle,
+      bodyHtml: `<p>编辑后的公开正文</p><p><img src="/api/admin/resources/${image.id}/content" alt="正文图片"></p>`,
+      source: '吉林就业公开来源',
+      publishDate: '2026-08-20',
+      pinned: true,
+      recommended: true,
+      sortOrder: 50,
+      coverResourceId: null,
+      bodyImageResourceIds: [image.id],
+      attachmentResourceIds: [],
+    },
+  })
+  expect(editResponse.ok()).toBeTruthy()
+  const edited = await editResponse.json() as { status: string }
+  expect(edited.status).toBe('PUBLISHED')
+  const editedPublic = await request.get(`/api/public/articles/${article.id}`)
+  expect(editedPublic.ok()).toBeTruthy()
+  expect((await editedPublic.json() as { title: string }).title).toBe(updatedTitle)
+
+  await page.goto('/admin/articles')
+  await expect(page.getByRole('row').filter({ hasText: updatedTitle }).getByRole('cell', { name: '已发布', exact: true })).toBeVisible()
+  await page.getByTestId(`withdraw-article-${article.id}`).click()
+  await expect(page.getByRole('row').filter({ hasText: updatedTitle }).getByRole('cell', { name: '已撤回', exact: true })).toBeVisible()
+
+  expect((await request.get(`/api/public/articles/${article.id}`)).status()).toBe(404)
+  expect((await request.get(`/api/public/resources/${image.id}/content`)).status()).toBe(404)
+
+  const withdrawnHomeArticles = page.waitForResponse((response) => response.url().includes('/api/public/articles?') && response.ok())
+  await page.goto('/')
+  await withdrawnHomeArticles
+  await expect(page.getByText(updatedTitle, { exact: true })).toHaveCount(0)
+
+  const withdrawnColumnArticles = page.waitForResponse((response) => response.url().includes('/api/public/articles?') && response.url().includes(`columnId=${column.id}`) && response.ok())
+  await page.goto(`/columns/${column.id}`)
+  await withdrawnColumnArticles
+  await expect(page.getByText(updatedTitle, { exact: true })).toHaveCount(0)
+
+  await page.goto(`/articles/${article.id}`)
+  await expect(page.getByTestId('public-article-unavailable')).toHaveText('文章不可用或不存在')
+
+  await page.goto('/admin/articles')
+  await page.getByTestId(`publish-article-${article.id}`).click()
+  await expect(page.getByRole('row').filter({ hasText: updatedTitle }).getByRole('cell', { name: '已发布', exact: true })).toBeVisible()
+
+  await page.goto(`/articles/${article.id}`)
+  await expect(page.getByTestId('public-article-title')).toHaveText(updatedTitle)
+  expect((await request.get(`/api/public/resources/${image.id}/content`)).ok()).toBeTruthy()
 })

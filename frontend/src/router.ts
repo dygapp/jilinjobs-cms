@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import ArticleManagementView from './views/admin/ArticleManagementView.vue'
 import ColumnManagementView from './views/admin/ColumnManagementView.vue'
 import NavigationManagementView from './views/admin/NavigationManagementView.vue'
+import PublicArticleView from './views/public/PublicArticleView.vue'
 import PublicColumnView from './views/public/PublicColumnView.vue'
 import PublicHomeView from './views/public/PublicHomeView.vue'
 
@@ -17,6 +18,11 @@ const router = createRouter({
       path: '/columns/:id',
       name: 'public-column',
       component: PublicColumnView,
+    },
+    {
+      path: '/articles/:id',
+      name: 'public-article',
+      component: PublicArticleView,
     },
     {
       path: '/admin/columns',

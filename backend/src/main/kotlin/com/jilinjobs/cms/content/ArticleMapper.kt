@@ -65,6 +65,63 @@ interface ArticleMapper {
     )
     fun update(record: ArticleRecord): Int
 
+    @Update(
+        """
+        UPDATE cms_article
+        SET status = #{status},
+            actual_published_at = #{actualPublishedAt}
+        WHERE id = #{id}
+        """,
+    )
+    fun updateStatus(
+        @Param("id") id: Long,
+        @Param("status") status: String,
+        @Param("actualPublishedAt") actualPublishedAt: LocalDateTime?,
+    ): Int
+
+    @Select(
+        """
+        SELECT id, column_id, title, body_html, source, publish_date,
+               pinned, recommended, sort_order, status, actual_published_at,
+               view_count, updated_at
+        FROM cms_article
+        WHERE status = 'PUBLISHED'
+          AND (#{columnId} IS NULL OR column_id = #{columnId})
+        ORDER BY pinned DESC,
+                 recommended DESC,
+                 sort_order DESC,
+                 COALESCE(publish_date, DATE(actual_published_at)) DESC,
+                 id DESC
+        LIMIT #{limit} OFFSET #{offset}
+        """,
+    )
+    fun findPublished(
+        @Param("columnId") columnId: Long?,
+        @Param("limit") limit: Int,
+        @Param("offset") offset: Int,
+    ): List<ArticleRecord>
+
+    @Select(
+        """
+        SELECT COUNT(*)
+        FROM cms_article
+        WHERE status = 'PUBLISHED'
+          AND (#{columnId} IS NULL OR column_id = #{columnId})
+        """,
+    )
+    fun countPublished(@Param("columnId") columnId: Long?): Long
+
+    @Select(
+        """
+        SELECT id, column_id, title, body_html, source, publish_date,
+               pinned, recommended, sort_order, status, actual_published_at,
+               view_count, updated_at
+        FROM cms_article
+        WHERE id = #{id} AND status = 'PUBLISHED'
+        """,
+    )
+    fun findPublishedById(@Param("id") id: Long): ArticleRecord?
+
     @Select("SELECT COUNT(*) > 0 FROM cms_article WHERE column_id = #{columnId}")
     fun existsByColumn(@Param("columnId") columnId: Long): Boolean
 }
@@ -104,6 +161,18 @@ class MyBatisArticleRepository(
         mapper.update(draft.toRecord(id))
         return mapper.findById(id)?.toModel() ?: throw ArticleNotFoundException(id)
     }
+
+    override fun updateStatus(id: Long, status: ArticleStatus, actualPublishedAt: LocalDateTime?): CmsArticle {
+        mapper.updateStatus(id, status.name, actualPublishedAt)
+        return mapper.findById(id)?.toModel() ?: throw ArticleNotFoundException(id)
+    }
+
+    override fun findPublished(columnId: Long?, limit: Int, offset: Int): List<CmsArticle> =
+        mapper.findPublished(columnId, limit, offset).map { it.toModel() }
+
+    override fun countPublished(columnId: Long?): Long = mapper.countPublished(columnId)
+
+    override fun findPublishedById(id: Long): CmsArticle? = mapper.findPublishedById(id)?.toModel()
 
     override fun existsByColumn(columnId: Long): Boolean = mapper.existsByColumn(columnId)
 

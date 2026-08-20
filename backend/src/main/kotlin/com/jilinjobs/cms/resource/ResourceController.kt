@@ -26,8 +26,29 @@ class ResourceController(
     fun get(@PathVariable id: Long): CmsResource = service.get(id)
 
     @GetMapping("/{id}/content")
+    fun content(@PathVariable id: Long): ResponseEntity<Resource> = contentResponse(service.resolveContent(id))
+
+    private fun contentResponse(resolved: Pair<CmsResource, java.nio.file.Path>): ResponseEntity<Resource> {
+        val (metadata, path) = resolved
+        val mediaType = metadata.contentType
+            ?.let { runCatching { MediaType.parseMediaType(it) }.getOrNull() }
+            ?: MediaType.APPLICATION_OCTET_STREAM
+        val body: Resource = FileSystemResource(path)
+        return ResponseEntity.ok()
+            .contentType(mediaType)
+            .contentLength(metadata.sizeBytes)
+            .body(body)
+    }
+}
+
+@RestController
+@RequestMapping("/api/public/resources")
+class PublicResourceController(
+    private val service: ResourceService,
+) {
+    @GetMapping("/{id}/content")
     fun content(@PathVariable id: Long): ResponseEntity<Resource> {
-        val (metadata, path) = service.resolveContent(id)
+        val (metadata, path) = service.resolvePublishedBodyImage(id)
         val mediaType = metadata.contentType
             ?.let { runCatching { MediaType.parseMediaType(it) }.getOrNull() }
             ?: MediaType.APPLICATION_OCTET_STREAM
