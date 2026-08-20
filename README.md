@@ -135,7 +135,8 @@ Specification Ready
 → EU-04 Completion Verification PASS
 → EU-04 Integrated
 → agentic-dev Baseline Updated
-→ EU-05 Readiness
+→ EU-05 Readiness PASS
+→ EU-05 Execute / Completion Verification
 ```
 
 EU-01「栏目管理闭环」已经取得完整 Current Evidence 并完成集成：
@@ -183,7 +184,9 @@ EU-04「发布状态与公开三级页面」已经取得与实现 Head 匹配的
 - EU-02 readiness 曾返回 `slice-work` 修正“已有公开栏目路由”的隐藏前置条件，修正后由 EU-02 自身建立最小公开栏目入口且不侵入 EU-04；
 - EU-03 readiness 在先修正 Consumer baseline Authority 漂移后 PASS；EU-03 已完成实现、Completion Verification 与集成；
 - EU-04 readiness PASS，既有 Technical Plan 足以支撑本 Unit，实现过程中未形成新的跨 Feature 长期架构决策，因此未触发新的 Technical Planning 或 ADR；
-- EU-04 已取得 Completion Evidence 并通过 PR #7 集成；当前进入 EU-05 readiness-check，Gate 通过前不得执行 EU-05；
+- EU-04 已取得 Completion Evidence 并通过 PR #7 集成；
+- EU-05 readiness-check PASS：Specification、既有 Technical Plan、依赖、受控资源边界和验证策略足以支撑本 Unit；未发现 Domain / Architecture Authority、ADR 或 Artifact Lifecycle Gap；
+- EU-05 当前已进入 Execute，完成声明必须等待与最终 Head 匹配的后端、前端和浏览器纵向验证证据；
 - GitHub Actions 仍是后续跨前后端 Execution Unit 的重要 Completion Evidence 来源，继续按当前 Verification Runtime Strategy 与 `github-actions-verification` 条件化执行。
 
 实现阶段不得重新打开已经确认的产品范围或重大架构方向，除非出现新的权威冲突或当前证据证明存在阻塞问题。
