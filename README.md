@@ -106,7 +106,7 @@ Repository:
 dygapp/agentic-dev
 
 Experiment Validation Baseline:
-master@c76d2996497bfd9632eb75ead3bc38b7f2d647a9
+master@ba1de553d523fc571fb760cbf5154540c4c1ef99
 ```
 
 使用原则：
@@ -149,7 +149,7 @@ EU-02「导航管理与公开入口」已经取得与最终实现匹配的 Compl
 
 当前协调状态：
 
-- 当前 `agentic-dev` validation baseline 为 `c76d2996497bfd9632eb75ead3bc38b7f2d647a9`；
+- 当前 `agentic-dev` validation baseline 为 `ba1de553d523fc571fb760cbf5154540c4c1ef99`；
 - EU-02 readiness 曾返回 `slice-work` 修正“已有公开栏目路由”的隐藏前置条件，修正后由 EU-02 自身建立最小公开栏目入口且不侵入 EU-04；
 - EU-02 已按 Fresh Execution Context、Current Evidence 与 Verification-before-claim 原则执行、验证并集成；
 - GitHub Actions 仍是后续跨前后端 Execution Unit 的重要 Completion Evidence 来源，继续按当前 Verification Runtime Strategy 与 `github-actions-verification` 条件化执行；
