@@ -22,7 +22,7 @@ test('导航可维护并只把启用条目暴露为正确公开入口', async ({
 
   await page.getByTestId('add-navigation').click()
   await page.getByPlaceholder('请输入导航名称').fill(internalName)
-  await page.getByPlaceholder('请选择栏目').click()
+  await page.getByTestId('navigation-column-select').click()
   await page.getByRole('option', { name: columnName, exact: true }).click()
   await page.getByTestId('save-navigation').click()
   await expect(page.getByRole('dialog', { name: '新增导航' })).toBeHidden()
