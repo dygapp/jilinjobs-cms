@@ -131,7 +131,9 @@ Specification Ready
 → EU-03 Completion Verification PASS
 → EU-03 Integrated
 → agentic-dev Baseline Updated
-→ EU-04 Readiness Pending
+→ EU-04 Readiness PASS
+→ EU-04 Completion Verification PASS
+→ EU-04 Ready to Integrate
 ```
 
 EU-01「栏目管理闭环」已经取得完整 Current Evidence 并完成集成：
@@ -162,13 +164,24 @@ EU-03「文章草稿与文件资源维护」已经取得与实现 Head 匹配的
 - EU-03 未实现发布/撤回操作或公开文章详情，相关能力仍属于后续 Execution Unit Scope；
 - EU-03 本轮没有产生新的 `agentic-dev` Consumer Experiment Evidence。
 
+EU-04「发布状态与公开三级页面」已经取得与实现 Head 匹配的 Completion Evidence，当前等待集成：
+
+- 验证 PR：`#7`；
+- 实现验证 Head：`cc030c9da79a3d415682983e0a0164c6ea08a0f6`；
+- CI：Run `32338802376`（CI #25），Backend verify、Frontend verify 与 Browser verification 全部 PASS，整个 Run `completed/success`；
+- Browser verification 中 Playwright 结果为 `4 passed (12.6s)`，其中 EU-04 纵向用例验证 `DRAFT → PUBLISHED → WITHDRAWN → PUBLISHED`、首页/栏目/详情可见性、已发布编辑保持状态与正文图片公开访问；
+- Artifact Collection 已确认存在 `backend-jar`（ID `9395597129`）、`frontend-dist`（ID `9395585376`）与 `playwright-evidence`（ID `9395638292`），三个 Artifact 都属于 Run `32338802376` 且绑定实现验证 Head `cc030c9da79a3d415682983e0a0164c6ea08a0f6`；
+- EU-04 只公开正文图片，不实现附件公开下载、复制链接、二维码或浏览量统计，这些能力仍保留在后续 Execution Unit；
+- EU-04 执行中没有发现新的 `agentic-dev` Consumer Experiment Evidence。
+
 当前协调状态：
 
 - 当前 `agentic-dev` validation baseline 为 `cdcf97cdbbf9d4fe28ed65d4ae8ea0c5120bfe84`，从 EU-04 起生效，不追溯重解释或重跑 EU-03；
 - EU-02 readiness 曾返回 `slice-work` 修正“已有公开栏目路由”的隐藏前置条件，修正后由 EU-02 自身建立最小公开栏目入口且不侵入 EU-04；
-- EU-03 readiness 在先修正 Consumer baseline Authority 漂移后 PASS；EU-03 已完成实现、Completion Verification 与集成，并保持发布/公开文章能力在后续 Unit 边界之外；
-- GitHub Actions 仍是后续跨前后端 Execution Unit 的重要 Completion Evidence 来源，继续按当前 Verification Runtime Strategy 与 `github-actions-verification` 条件化执行；
-- 当前进入 EU-04 readiness；后续是否 Execute 必须依据当前 Consumer Repository Authority、当前有效 Architecture / ADR Authority 与实际 Repository Evidence 判断。
+- EU-03 readiness 在先修正 Consumer baseline Authority 漂移后 PASS；EU-03 已完成实现、Completion Verification 与集成；
+- EU-04 readiness PASS，既有 Technical Plan 足以支撑本 Unit，实现过程中未形成新的跨 Feature 长期架构决策，因此未触发新的 Technical Planning 或 ADR；
+- EU-04 已取得 Completion Evidence，当前 PR #7 等待集成；不得自动进入 EU-05；
+- GitHub Actions 仍是后续跨前后端 Execution Unit 的重要 Completion Evidence 来源，继续按当前 Verification Runtime Strategy 与 `github-actions-verification` 条件化执行。
 
 实现阶段不得重新打开已经确认的产品范围或重大架构方向，除非出现新的权威冲突或当前证据证明存在阻塞问题。
 
