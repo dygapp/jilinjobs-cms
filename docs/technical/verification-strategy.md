@@ -2,7 +2,7 @@
 
 ## 1. 目的与适用范围
 
-本文补充 `docs/technical/center-main-site-core.md` 中的验证责任，固化当前 Consumer 项目在真实 GitHub Runtime 中已经通过 EU-01 暴露并确认的跨执行单元验证 HOW。
+本文补充 `docs/technical/center-main-site-core.md` 中的验证责任，固化当前 Consumer 项目在真实 GitHub Runtime 中已经通过 EU-01 与 EU-02 暴露并确认的跨执行单元验证 HOW。
 
 本文不改变业务 Specification、Execution Unit 的业务完成条件或产品范围；它只规定如何以更可观察、可复现、成本可控的方式取得当前证据（Current Evidence）。
 
@@ -75,6 +75,8 @@ Human Runtime Observation **不能直接证明 Execution Unit Completed**。切�
 
 E2E 优先消费已经构建完成的 artifacts，不重复承担应用编译职责。
 
+成功或失败的 Completion E2E 都应留下可回取的 Playwright 报告 Artifact，以便将浏览器结论与对应 Run / Head SHA 长期关联；如果 workflow 配置要求的证据路径没有生成文件，Artifact 上传步骤应失败，而不是静默忽略。Runtime diagnostics 仍只在失败时生成，职责与测试报告分离。
+
 ## 4. E2E 运行拓扑
 
 当前项目优先使用预定义 Runtime Containers，而不是在每个 GitHub-hosted runner 中临时安装完整环境：
@@ -120,7 +122,8 @@ Execution Unit / Task Branch
 
 - Consumer Issue #1：push-triggered Actions 可观察性；
 - Consumer Issue #2：E2E 环境准备异常耗时与分层验证；
-- PR #3：EU-01 容器化验证重构。
+- PR #3：EU-01 容器化验证重构；
+- PR #4：EU-02 在既有分层 CI 上暴露并修正浏览器定位器与成功证据 Artifact 可观察性问题。
 
 ## 6. 超时与过期运行
 
@@ -143,3 +146,13 @@ EU-01 改由 PR #3 的分层、容器化验证重新取得完整 Current Evidenc
 只有新的 Backend Verify、Frontend Verify 和 browser verification 全部 PASS 后，才可以声明 EU-01 Completed。
 
 EU-01 完成后停止执行，不继续 EU-02；先将 Consumer Issue #1/#2 与最终验证结果汇总反馈到 `dygapp/agentic-dev` Experiment Issue #18，等待 agentic-dev 更新后，再基于新基线重新检查和执行 EU-02。
+
+## 8. EU-02 验证收敛记录
+
+EU-02 继续复用分层 CI，并在实际 Completion Verification 中产生新的验证实践证据：
+
+- 前端 Fast Feedback 首先暴露 `vue-tsc` 类型错误，修复后重新执行当前 Head 的完整验证；
+- 首轮 Browser verification 的 Runtime、后端与前端均正常，失败被定位到 Element Plus 选择器使用脆弱 placeholder locator；改用稳定 `data-testid` 后，新的 Head 上 Backend Verify、Frontend Verify 与 Browser verification 全部 PASS；
+- 成功 Run 的日志明确给出 Playwright `2 passed`，但默认 reporter 没有产生 `playwright-report` / `test-results` 文件，导致原 `Upload Playwright evidence` step 虽显示 success 却没有实际 Artifact。
+
+因此后续 CI 在成功路径显式生成 HTML Playwright report，并将缺少预期 evidence 文件视为 workflow failure。该调整只增强 Completion Evidence 的可观察性，不改变业务完成条件。
