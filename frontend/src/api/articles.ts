@@ -153,7 +153,7 @@ export function publicResourceContentUrl(id: number): string {
 
 export function publicBodyHtml(article: PublicArticleDetail): string {
   return article.bodyImageResourceIds.reduce(
-    (html, id) => html.replaceAll(resourceContentUrl(id), publicResourceContentUrl(id)),
+    (html, id) => html.split(resourceContentUrl(id)).join(publicResourceContentUrl(id)),
     article.bodyHtml,
   )
 }
