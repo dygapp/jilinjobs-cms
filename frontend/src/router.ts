@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import ArticleManagementView from './views/admin/ArticleManagementView.vue'
 import ColumnManagementView from './views/admin/ColumnManagementView.vue'
 import NavigationManagementView from './views/admin/NavigationManagementView.vue'
 import PublicColumnView from './views/public/PublicColumnView.vue'
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/admin/navigation',
       name: 'admin-navigation',
       component: NavigationManagementView,
+    },
+    {
+      path: '/admin/articles',
+      name: 'admin-articles',
+      component: ArticleManagementView,
     },
   ],
 })

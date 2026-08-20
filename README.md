@@ -106,7 +106,7 @@ Repository:
 dygapp/agentic-dev
 
 Experiment Validation Baseline:
-master@c76d2996497bfd9632eb75ead3bc38b7f2d647a9
+master@ba1de553d523fc571fb760cbf5154540c4c1ef99
 ```
 
 使用原则：
@@ -127,7 +127,9 @@ Specification Ready
 → agentic-dev Baseline Updated
 → EU-02 Readiness PASS
 → EU-02 Completed
-→ EU-03 Readiness Pending
+→ EU-03 Readiness PASS
+→ EU-03 Completion Verification PASS
+→ Ready to Integrate
 ```
 
 EU-01「栏目管理闭环」已经取得完整 Current Evidence 并完成集成：
@@ -147,13 +149,22 @@ EU-02「导航管理与公开入口」已经取得与最终实现匹配的 Compl
 - Browser verification 中 Playwright 纵向验证结果为 `2 passed (7.0s)`；
 - 集成提交：`32e25b85b6aed893c20da6e2612cd5ac2a196350`。
 
+EU-03「文章草稿与文件资源维护」已经取得与实现 Head 匹配的 Completion Evidence，当前停在集成前：
+
+- 验证 PR：`#6`；
+- 实现验证 Head：`8b0abb89cb86b939e7e6595f32916ece727c8260`；
+- CI：Run `32331905285`（CI #22），Backend verify、Frontend verify 与 Browser verification 全部 PASS，整个 Run `completed/success`；
+- Browser verification 中 Playwright 纵向验证结果为 `3 passed (11.6s)`，包含 EU-03 的文章草稿、文件资源与栏目内容依赖闭环；
+- Artifact Collection 已确认存在 `backend-jar`（ID `9393319564`）、`frontend-dist`（ID `9393308838`）与 `playwright-evidence`（ID `9393352016`），三个 Artifact 都属于 Run `32331905285` 且绑定实现验证 Head `8b0abb89cb86b939e7e6595f32916ece727c8260`；
+- EU-03 未实现发布/撤回操作或公开文章详情，相关能力仍属于后续 Execution Unit Scope。
+
 当前协调状态：
 
-- 当前 `agentic-dev` validation baseline 为 `c76d2996497bfd9632eb75ead3bc38b7f2d647a9`；
+- 当前 `agentic-dev` validation baseline 为 `ba1de553d523fc571fb760cbf5154540c4c1ef99`；
 - EU-02 readiness 曾返回 `slice-work` 修正“已有公开栏目路由”的隐藏前置条件，修正后由 EU-02 自身建立最小公开栏目入口且不侵入 EU-04；
-- EU-02 已按 Fresh Execution Context、Current Evidence 与 Verification-before-claim 原则执行、验证并集成；
+- EU-03 readiness 在先修正 Consumer baseline Authority 漂移后 PASS；EU-03 已完成实现与 Completion Verification，并保持发布/公开文章能力在后续 Unit 边界之外；
 - GitHub Actions 仍是后续跨前后端 Execution Unit 的重要 Completion Evidence 来源，继续按当前 Verification Runtime Strategy 与 `github-actions-verification` 条件化执行；
-- 下一步进入 EU-03「文章草稿与文件资源维护」前，应重新建立 Fresh Execution Context 并执行当前 readiness-check，不直接继承 EU-02 的临时执行假设。
+- 当前停止在 EU-03 集成前，不自动进入 EU-04；后续 Unit 仍需从届时的 Consumer Repository Authority 和实际 Repository Evidence 重新执行 readiness-check。
 
 实现阶段不得重新打开已经确认的产品范围或重大架构方向，除非出现新的权威冲突或当前证据证明存在阻塞问题。
 
