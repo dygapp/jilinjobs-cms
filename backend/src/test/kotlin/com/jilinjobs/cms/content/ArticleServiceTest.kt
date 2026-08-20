@@ -5,6 +5,9 @@ import com.jilinjobs.cms.column.ColumnQuery
 import com.jilinjobs.cms.resource.ArticleResourceAssociation
 import com.jilinjobs.cms.resource.ArticleResourceLinks
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertNotNull
+import org.junit.jupiter.api.Assertions.assertNull
+import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.Test
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -29,13 +32,56 @@ class ArticleServiceTest {
         val repository = InMemoryArticleRepository()
         val resources = InMemoryArticleResourceAssociation()
         val existing = repository.insert(sampleDraft())
-        repository.forceStatus(existing.id, ArticleStatus.PUBLISHED)
+        repository.updateStatus(existing.id, ArticleStatus.PUBLISHED, LocalDateTime.now())
         val service = ArticleService(repository, FixedColumnQuery(), resources)
 
         val updated = service.update(existing.id, sampleDraft().copy(title = "更新后的标题"))
 
         assertEquals("更新后的标题", updated.title)
         assertEquals(ArticleStatus.PUBLISHED, updated.status)
+        assertNotNull(updated.actualPublishedAt)
+    }
+
+    @Test
+    fun `文章只允许通过显式状态操作发布撤回并重新发布`() {
+        val repository = InMemoryArticleRepository()
+        val resources = InMemoryArticleResourceAssociation()
+        val service = ArticleService(repository, FixedColumnQuery(), resources)
+        val created = service.create(sampleDraft())
+
+        val published = service.publish(created.id)
+        assertEquals(ArticleStatus.PUBLISHED, published.status)
+        assertNotNull(published.actualPublishedAt)
+        assertThrows(ArticleValidationException::class.java) { service.publish(created.id) }
+
+        val withdrawn = service.withdraw(created.id)
+        assertEquals(ArticleStatus.WITHDRAWN, withdrawn.status)
+        assertEquals(published.actualPublishedAt, withdrawn.actualPublishedAt)
+        assertThrows(ArticleValidationException::class.java) { service.withdraw(created.id) }
+
+        val republished = service.publish(created.id)
+        assertEquals(ArticleStatus.PUBLISHED, republished.status)
+        assertNotNull(republished.actualPublishedAt)
+    }
+
+    @Test
+    fun `公开查询只返回已发布文章且撤回后详情不可访问`() {
+        val repository = InMemoryArticleRepository()
+        val resources = InMemoryArticleResourceAssociation()
+        val service = ArticleService(repository, FixedColumnQuery(), resources)
+        val draft = service.create(sampleDraft().copy(title = "草稿文章"))
+        val published = service.create(sampleDraft().copy(title = "公开文章"))
+        service.publish(published.id)
+
+        val page = service.listPublic(columnId = 1, page = 0, size = 10)
+        assertEquals(1, page.total)
+        assertEquals(listOf("公开文章"), page.items.map { it.title })
+        assertEquals("栏目 1", service.getPublic(published.id).columnName)
+        assertThrows(ArticleNotFoundException::class.java) { service.getPublic(draft.id) }
+
+        service.withdraw(published.id)
+        assertEquals(0, service.listPublic(columnId = 1, page = 0, size = 10).total)
+        assertThrows(ArticleNotFoundException::class.java) { service.getPublic(published.id) }
     }
 
     private fun sampleDraft(): ArticleDraft = ArticleDraft(
@@ -54,7 +100,7 @@ class ArticleServiceTest {
 }
 
 private class FixedColumnQuery : ColumnQuery {
-    override fun find(id: Long): CmsColumn? = CmsColumn(id, null, "栏目", 0, true)
+    override fun find(id: Long): CmsColumn? = CmsColumn(id, null, "栏目 $id", 0, true)
 }
 
 private class InMemoryArticleResourceAssociation : ArticleResourceAssociation {
@@ -77,25 +123,43 @@ private class InMemoryArticleRepository : ArticleRepository {
 
     override fun insert(draft: ArticleDraft): CmsArticle {
         val id = ++sequence
-        val article = draft.toArticle(id, ArticleStatus.DRAFT)
+        val article = draft.toArticle(id, ArticleStatus.DRAFT, null)
         data[id] = article
         return article
     }
 
     override fun update(id: Long, draft: ArticleDraft): CmsArticle {
-        val status = data[id]?.status ?: throw ArticleNotFoundException(id)
-        val article = draft.toArticle(id, status)
+        val current = data[id] ?: throw ArticleNotFoundException(id)
+        val article = draft.toArticle(id, current.status, current.actualPublishedAt)
         data[id] = article
         return article
     }
 
-    override fun existsByColumn(columnId: Long): Boolean = data.values.any { it.columnId == columnId }
-
-    fun forceStatus(id: Long, status: ArticleStatus) {
-        data[id] = requireNotNull(data[id]).copy(status = status)
+    override fun updateStatus(id: Long, status: ArticleStatus, actualPublishedAt: LocalDateTime?): CmsArticle {
+        val current = data[id] ?: throw ArticleNotFoundException(id)
+        val updated = current.copy(status = status, actualPublishedAt = actualPublishedAt, updatedAt = LocalDateTime.now())
+        data[id] = updated
+        return updated
     }
 
-    private fun ArticleDraft.toArticle(id: Long, status: ArticleStatus): CmsArticle = CmsArticle(
+    override fun findPublished(columnId: Long?, limit: Int, offset: Int): List<CmsArticle> = data.values
+        .filter { it.status == ArticleStatus.PUBLISHED && (columnId == null || it.columnId == columnId) }
+        .drop(offset)
+        .take(limit)
+
+    override fun countPublished(columnId: Long?): Long = data.values.count {
+        it.status == ArticleStatus.PUBLISHED && (columnId == null || it.columnId == columnId)
+    }.toLong()
+
+    override fun findPublishedById(id: Long): CmsArticle? = data[id]?.takeIf { it.status == ArticleStatus.PUBLISHED }
+
+    override fun existsByColumn(columnId: Long): Boolean = data.values.any { it.columnId == columnId }
+
+    private fun ArticleDraft.toArticle(
+        id: Long,
+        status: ArticleStatus,
+        actualPublishedAt: LocalDateTime?,
+    ): CmsArticle = CmsArticle(
         id = id,
         columnId = columnId,
         title = title,
@@ -106,7 +170,7 @@ private class InMemoryArticleRepository : ArticleRepository {
         recommended = recommended,
         sortOrder = sortOrder,
         status = status,
-        actualPublishedAt = if (status == ArticleStatus.PUBLISHED) LocalDateTime.now() else null,
+        actualPublishedAt = actualPublishedAt,
         viewCount = 0,
         updatedAt = LocalDateTime.now(),
     )
