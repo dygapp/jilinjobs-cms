@@ -240,3 +240,102 @@ test('EU-04 发布撤回重新发布驱动公开三级页面可见性', async ({
   await expect(page.getByTestId('public-article-title')).toHaveText(updatedTitle)
   expect((await request.get(`/api/public/resources/${image.id}/content`)).ok()).toBeTruthy()
 })
+
+test('EU-05 详情附件复制二维码与浏览量形成公开闭环', async ({ page, request }, testInfo) => {
+  const suffix = `${Date.now()}-${testInfo.retry}`
+  const title = `详情增强文章-${suffix}`
+  const attachmentName = `办事指南-${suffix}.txt`
+
+  const columnResponse = await request.post('/api/admin/columns', {
+    data: { parentId: null, name: `详情栏目-${suffix}`, sortOrder: 10, enabled: true },
+  })
+  expect(columnResponse.ok()).toBeTruthy()
+  const column = await columnResponse.json() as { id: number }
+
+  const attachmentResponse = await request.post('/api/admin/resources', {
+    multipart: {
+      file: {
+        name: attachmentName,
+        mimeType: 'text/plain',
+        buffer: Buffer.from('吉林就业附件内容'),
+      },
+    },
+  })
+  expect(attachmentResponse.ok()).toBeTruthy()
+  const attachment = await attachmentResponse.json() as { id: number; sizeBytes: number }
+
+  const articleResponse = await request.post('/api/admin/articles', {
+    data: {
+      columnId: column.id,
+      title,
+      bodyHtml: '<p>详情增强正文</p>',
+      source: '吉林就业',
+      publishDate: '2026-08-20',
+      pinned: false,
+      recommended: false,
+      sortOrder: 10,
+      coverResourceId: null,
+      bodyImageResourceIds: [],
+      attachmentResourceIds: [attachment.id],
+    },
+  })
+  expect(articleResponse.ok()).toBeTruthy()
+  const article = await articleResponse.json() as { id: number }
+
+  const publicAttachmentUrl = `/api/public/resources/${attachment.id}/attachment`
+  expect((await request.get(publicAttachmentUrl)).status()).toBe(404)
+
+  const publishResponse = await request.post(`/api/admin/articles/${article.id}/publish`)
+  expect(publishResponse.ok()).toBeTruthy()
+
+  const firstDetailResponse = await request.get(`/api/public/articles/${article.id}`)
+  expect(firstDetailResponse.ok()).toBeTruthy()
+  const firstDetail = await firstDetailResponse.json() as {
+    attachments: Array<{ id: number; originalFilename: string; sizeBytes: number }>
+  }
+  expect(firstDetail.attachments).toEqual([
+    expect.objectContaining({
+      id: attachment.id,
+      originalFilename: attachmentName,
+      sizeBytes: attachment.sizeBytes,
+    }),
+  ])
+
+  const firstAdminResponse = await request.get(`/api/admin/articles/${article.id}`)
+  expect(firstAdminResponse.ok()).toBeTruthy()
+  expect((await firstAdminResponse.json() as { viewCount: number }).viewCount).toBe(1)
+
+  await page.context().grantPermissions(['clipboard-read', 'clipboard-write'], {
+    origin: 'http://127.0.0.1:5173',
+  })
+  await page.goto(`/articles/${article.id}`)
+  await expect(page.getByTestId('public-article-title')).toHaveText(title)
+  const attachmentLink = page.getByTestId(`public-attachment-${attachment.id}`)
+  await expect(attachmentLink).toContainText(attachmentName)
+
+  await page.getByTestId('copy-article-link').click()
+  await expect(page.getByRole('status')).toHaveText('链接已复制')
+  const copiedUrl = await page.evaluate(() => navigator.clipboard.readText())
+  expect(copiedUrl).toBe(page.url())
+
+  const qrCode = page.getByTestId('article-qrcode')
+  await expect(qrCode).toBeVisible()
+  await expect(qrCode).toHaveAttribute('src', /^data:image\/png;base64,/)
+
+  const downloadPromise = page.waitForEvent('download')
+  await attachmentLink.click()
+  const download = await downloadPromise
+  expect(download.suggestedFilename()).toBe(attachmentName)
+
+  const secondAdminResponse = await request.get(`/api/admin/articles/${article.id}`)
+  expect(secondAdminResponse.ok()).toBeTruthy()
+  expect((await secondAdminResponse.json() as { viewCount: number }).viewCount).toBe(2)
+
+  await page.goto('/admin/articles')
+  const adminRow = page.getByRole('row').filter({ hasText: title })
+  await expect(adminRow.getByRole('cell', { name: '2', exact: true })).toBeVisible()
+
+  const withdrawResponse = await request.post(`/api/admin/articles/${article.id}/withdraw`)
+  expect(withdrawResponse.ok()).toBeTruthy()
+  expect((await request.get(publicAttachmentUrl)).status()).toBe(404)
+})
