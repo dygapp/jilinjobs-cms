@@ -4,6 +4,7 @@ import com.jilinjobs.cms.column.CmsColumn
 import com.jilinjobs.cms.column.ColumnQuery
 import com.jilinjobs.cms.resource.ArticleResourceAssociation
 import com.jilinjobs.cms.resource.ArticleResourceLinks
+import com.jilinjobs.cms.resource.CmsResource
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Assertions.assertNull
@@ -76,8 +77,12 @@ class ArticleServiceTest {
         val page = service.listPublic(columnId = 1, page = 0, size = 10)
         assertEquals(1, page.total)
         assertEquals(listOf("公开文章"), page.items.map { it.title })
-        assertEquals("栏目 1", service.getPublic(published.id).columnName)
+        val detail = service.getPublic(published.id)
+        assertEquals("栏目 1", detail.columnName)
+        assertEquals(listOf("附件-13", "附件-14"), detail.attachments.map { it.originalFilename })
+        assertEquals(1L, repository.findById(published.id)?.viewCount)
         assertThrows(ArticleNotFoundException::class.java) { service.getPublic(draft.id) }
+        assertEquals(0L, repository.findById(draft.id)?.viewCount)
 
         service.withdraw(published.id)
         assertEquals(0, service.listPublic(columnId = 1, page = 0, size = 10).total)
@@ -107,6 +112,11 @@ private class InMemoryArticleResourceAssociation : ArticleResourceAssociation {
     private val links = mutableMapOf<Long, ArticleResourceLinks>()
 
     override fun findArticleResources(articleId: Long): ArticleResourceLinks = links[articleId] ?: ArticleResourceLinks()
+
+    override fun findArticleAttachments(articleId: Long): List<CmsResource> =
+        findArticleResources(articleId).attachmentResourceIds.map { id ->
+            CmsResource(id, "resource-$id", "附件-$id", "application/octet-stream", id)
+        }
 
     override fun replaceArticleResources(articleId: Long, links: ArticleResourceLinks) {
         this.links[articleId] = links
@@ -152,6 +162,12 @@ private class InMemoryArticleRepository : ArticleRepository {
     }.toLong()
 
     override fun findPublishedById(id: Long): CmsArticle? = data[id]?.takeIf { it.status == ArticleStatus.PUBLISHED }
+
+    override fun incrementPublishedViewCount(id: Long): Boolean {
+        val current = findPublishedById(id) ?: return false
+        data[id] = current.copy(viewCount = current.viewCount + 1)
+        return true
+    }
 
     override fun existsByColumn(columnId: Long): Boolean = data.values.any { it.columnId == columnId }
 

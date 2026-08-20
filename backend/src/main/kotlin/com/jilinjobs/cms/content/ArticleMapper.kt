@@ -122,6 +122,15 @@ interface ArticleMapper {
     )
     fun findPublishedById(@Param("id") id: Long): ArticleRecord?
 
+    @Update(
+        """
+        UPDATE cms_article
+        SET view_count = view_count + 1
+        WHERE id = #{id} AND status = 'PUBLISHED'
+        """,
+    )
+    fun incrementPublishedViewCount(@Param("id") id: Long): Int
+
     @Select("SELECT COUNT(*) > 0 FROM cms_article WHERE column_id = #{columnId}")
     fun existsByColumn(@Param("columnId") columnId: Long): Boolean
 }
@@ -173,6 +182,8 @@ class MyBatisArticleRepository(
     override fun countPublished(columnId: Long?): Long = mapper.countPublished(columnId)
 
     override fun findPublishedById(id: Long): CmsArticle? = mapper.findPublishedById(id)?.toModel()
+
+    override fun incrementPublishedViewCount(id: Long): Boolean = mapper.incrementPublishedViewCount(id) == 1
 
     override fun existsByColumn(columnId: Long): Boolean = mapper.existsByColumn(columnId)
 

@@ -62,6 +62,14 @@ data class PublicArticleDetail(
     val source: String,
     val publishDate: LocalDate?,
     val bodyImageResourceIds: List<Long>,
+    val attachments: List<PublicArticleAttachment>,
+)
+
+data class PublicArticleAttachment(
+    val id: Long,
+    val originalFilename: String,
+    val contentType: String?,
+    val sizeBytes: Long,
 )
 
 data class PublicArticlePage(
@@ -87,6 +95,8 @@ interface ArticleRepository {
     fun countPublished(columnId: Long?): Long
 
     fun findPublishedById(id: Long): CmsArticle?
+
+    fun incrementPublishedViewCount(id: Long): Boolean
 
     fun existsByColumn(columnId: Long): Boolean
 }

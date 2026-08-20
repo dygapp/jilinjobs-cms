@@ -53,6 +53,18 @@ interface ResourceMapper {
     )
     fun isPublishedBodyImage(@Param("resourceId") resourceId: Long): Boolean
 
+    @Select(
+        """
+        SELECT COUNT(*) > 0
+        FROM cms_article_resource ar
+        JOIN cms_article a ON a.id = ar.article_id
+        WHERE ar.resource_id = #{resourceId}
+          AND ar.resource_role = 'ATTACHMENT'
+          AND a.status = 'PUBLISHED'
+        """,
+    )
+    fun isPublishedAttachment(@Param("resourceId") resourceId: Long): Boolean
+
     @Delete("DELETE FROM cms_article_resource WHERE article_id = #{articleId}")
     fun deleteArticleLinks(@Param("articleId") articleId: Long): Int
 
@@ -99,6 +111,8 @@ class MyBatisResourceRepository(
         mapper.findArticleResourceIds(articleId, role.name)
 
     override fun isPublishedBodyImage(resourceId: Long): Boolean = mapper.isPublishedBodyImage(resourceId)
+
+    override fun isPublishedAttachment(resourceId: Long): Boolean = mapper.isPublishedAttachment(resourceId)
 
     override fun deleteArticleLinks(articleId: Long) {
         mapper.deleteArticleLinks(articleId)
