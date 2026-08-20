@@ -89,6 +89,13 @@ class ResourceService(
         return resource to path
     }
 
+    fun resolvePublishedBodyImage(id: Long): Pair<CmsResource, Path> {
+        if (!repository.isPublishedBodyImage(id)) {
+            throw ResourceNotFoundException(id)
+        }
+        return resolveContent(id)
+    }
+
     override fun findArticleResources(articleId: Long): ArticleResourceLinks = ArticleResourceLinks(
         coverResourceId = repository.findArticleResourceIds(articleId, ArticleResourceRole.COVER).firstOrNull(),
         bodyImageResourceIds = repository.findArticleResourceIds(articleId, ArticleResourceRole.BODY_IMAGE),
