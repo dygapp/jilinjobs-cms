@@ -126,7 +126,8 @@ Specification Ready
 → EU-01 Completed
 → agentic-dev Baseline Updated
 → EU-02 Readiness PASS
-→ EU-02 Execution
+→ EU-02 Completed
+→ EU-03 Readiness Pending
 ```
 
 EU-01「栏目管理闭环」已经取得完整 Current Evidence 并完成集成：
@@ -138,13 +139,21 @@ EU-01「栏目管理闭环」已经取得完整 Current Evidence 并完成集成
 - Consumer Issue #1/#2 已记录最终处理结果并关闭；
 - 完整实验反馈已提交至 `dygapp/agentic-dev` Experiment Issue #18。
 
+EU-02「导航管理与公开入口」已经取得与最终实现匹配的 Completion Evidence 并完成集成：
+
+- 验证 PR：`#4`；
+- 通过验证的 Head：`9d84a8d996e3ce51aaf7d7d3d9dd0abdff6dad74`；
+- CI：Run `32327138763`（CI #17），Backend verify、Frontend verify 与 Browser verification 全部 PASS，整个 Run `completed/success`；
+- Browser verification 中 Playwright 纵向验证结果为 `2 passed (7.0s)`；
+- 集成提交：`32e25b85b6aed893c20da6e2612cd5ac2a196350`。
+
 当前协调状态：
 
-- 已读取并采用新的 `agentic-dev` validation baseline `c76d2996497bfd9632eb75ead3bc38b7f2d647a9`；
-- 已基于当前 `main` 的实际 EU-01 实施结果重新检查 EU-02；
-- 已返回 `slice-work` 修正原 EU-02 对“已有公开栏目路由”的隐藏前置条件，由 EU-02 自身建立导航所需的最小公开栏目入口路由，但不提前实现 EU-04 负责的栏目文章列表、分页等完整二级页面行为；
-- 修正后的 EU-02 已重新通过 `readiness-check`，当前按 Fresh Execution Context、Current Evidence 与 Verification-before-claim 原则进入 EU-02 `execute-unit`；
-- GitHub Actions 仍是当前 Completion Evidence 的重要来源，验证路径继续按当前 Verification Runtime Strategy 与 `github-actions-verification` 条件化执行。
+- 当前 `agentic-dev` validation baseline 为 `c76d2996497bfd9632eb75ead3bc38b7f2d647a9`；
+- EU-02 readiness 曾返回 `slice-work` 修正“已有公开栏目路由”的隐藏前置条件，修正后由 EU-02 自身建立最小公开栏目入口且不侵入 EU-04；
+- EU-02 已按 Fresh Execution Context、Current Evidence 与 Verification-before-claim 原则执行、验证并集成；
+- GitHub Actions 仍是后续跨前后端 Execution Unit 的重要 Completion Evidence 来源，继续按当前 Verification Runtime Strategy 与 `github-actions-verification` 条件化执行；
+- 下一步进入 EU-03「文章草稿与文件资源维护」前，应重新建立 Fresh Execution Context 并执行当前 readiness-check，不直接继承 EU-02 的临时执行假设。
 
 实现阶段不得重新打开已经确认的产品范围或重大架构方向，除非出现新的权威冲突或当前证据证明存在阻塞问题。
 
