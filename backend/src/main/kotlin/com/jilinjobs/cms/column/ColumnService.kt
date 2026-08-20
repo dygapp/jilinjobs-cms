@@ -6,9 +6,13 @@ import org.springframework.transaction.annotation.Transactional
 @Service
 class ColumnService(
     private val repository: ColumnRepository,
-) {
+    private val contentDependency: ColumnContentDependency,
+) : ColumnQuery {
     @Transactional(readOnly = true)
     fun list(): List<CmsColumn> = repository.findAll()
+
+    @Transactional(readOnly = true)
+    override fun find(id: Long): CmsColumn? = repository.findById(id)
 
     @Transactional
     fun create(draft: ColumnDraft): CmsColumn {
@@ -30,6 +34,9 @@ class ColumnService(
         repository.findById(id) ?: throw ColumnNotFoundException(id)
         if (repository.countChildren(id) > 0) {
             throw ColumnValidationException("栏目存在下级栏目，不能直接删除")
+        }
+        if (contentDependency.hasContent(id)) {
+            throw ColumnValidationException("栏目存在内容，不能直接删除")
         }
         repository.delete(id)
     }

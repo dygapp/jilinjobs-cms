@@ -89,7 +89,13 @@ Specification 只收敛当前 Scope 内的必需行为、边界与验收，不�
 docs/technical/center-main-site-core.md
 ```
 
-Technical Plan 只持久化跨执行单元需要长期共享的 HOW：模块化单体边界、前后端契约、数据与文件资源策略、同步事务模型、部署边界和验证责任。普通、低影响、可逆的文件组织、库级细节、精确版本和测试命令留给执行阶段即时计划（JIT Plan）。
+当前验证运行策略（Verification Runtime Strategy）：
+
+```text
+docs/technical/verification-strategy.md
+```
+
+Technical Plan 持久化跨执行单元需要长期共享的 HOW：模块化单体边界、前后端契约、数据与文件资源策略、同步事务模型、部署边界和验证责任；验证运行策略补充 Current Evidence 口径、分层 CI、容器化 E2E、超时边界与当前 GitHub Runtime 可观察性策略。普通、低影响、可逆的文件组织、库级细节、精确版本和测试命令仍留给执行阶段即时计划（JIT Plan）或当前 workflow 固定。
 
 ## 开发方法来源
 
@@ -100,7 +106,7 @@ Repository:
 dygapp/agentic-dev
 
 Experiment Validation Baseline:
-master@9ae3f4e73ef1e4b27a30f7ac791ae4b079dee269
+master@cdcf97cdbbf9d4fe28ed65d4ae8ea0c5120bfe84
 ```
 
 使用原则：
@@ -116,15 +122,68 @@ master@9ae3f4e73ef1e4b27a30f7ac791ae4b079dee269
 ```text
 Specification Ready
 → Technical Plan Ready
-→ Work Slicing & Readiness
+→ Work Slicing & Readiness PASS
+→ EU-01 Completed
+→ agentic-dev Baseline Updated
+→ EU-02 Readiness PASS
+→ EU-02 Completed
+→ EU-03 Readiness PASS
+→ EU-03 Completion Verification PASS
+→ EU-03 Integrated
+→ agentic-dev Baseline Updated
+→ EU-04 Readiness PASS
+→ EU-04 Completion Verification PASS
+→ EU-04 Ready to Integrate
 ```
 
-此前的架构确认点已经全部解除。当前下一步是：
+EU-01「栏目管理闭环」已经取得完整 Current Evidence 并完成集成：
 
-- 按 Specification 与 Technical Plan 切分纵向、可独立验证的执行单元（Execution Units）；
-- 对每个 Unit 执行就绪检查（Readiness Check）；
-- 就绪后再进入 Fresh-context Execute；
-- 实现阶段不得重新打开已经确认的产品范围或重大架构方向，除非出现新的权威冲突或当前证据证明存在阻塞问题。
+- 验证 PR：`#3`；
+- 通过验证的 Head：`cf212739beef482d7fe746fdfa0a1e0c1fc57bab`；
+- CI：Run `32318100988`（CI #12），Backend Verify、Frontend Verify、Backend Runtime、Frontend Runtime 与 Playwright browser verification 全部 PASS，整个 Run `completed/success`；
+- 集成提交：`cdfe90fd9d0b165accf81e1f39dc3abf4ad14f0a`；
+- Consumer Issue #1/#2 已记录最终处理结果并关闭；
+- 完整实验反馈已提交至 `dygapp/agentic-dev` Experiment Issue #18。
+
+EU-02「导航管理与公开入口」已经取得与最终实现匹配的 Completion Evidence 并完成集成：
+
+- 验证 PR：`#4`；
+- 通过验证的 Head：`9d84a8d996e3ce51aaf7d7d3d9dd0abdff6dad74`；
+- CI：Run `32327138763`（CI #17），Backend verify、Frontend verify 与 Browser verification 全部 PASS，整个 Run `completed/success`；
+- Browser verification 中 Playwright 纵向验证结果为 `2 passed (7.0s)`；
+- 集成提交：`32e25b85b6aed893c20da6e2612cd5ac2a196350`。
+
+EU-03「文章草稿与文件资源维护」已经取得与实现 Head 匹配的 Completion Evidence 并完成集成：
+
+- 验证 PR：`#6`；
+- 实现验证 Head：`8b0abb89cb86b939e7e6595f32916ece727c8260`；
+- CI：Run `32331905285`（CI #22），Backend verify、Frontend verify 与 Browser verification 全部 PASS，整个 Run `completed/success`；
+- Browser verification 中 Playwright 纵向验证结果为 `3 passed (11.6s)`，包含 EU-03 的文章草稿、文件资源与栏目内容依赖闭环；
+- Artifact Collection 已确认存在 `backend-jar`（ID `9393319564`）、`frontend-dist`（ID `9393308838`）与 `playwright-evidence`（ID `9393352016`），三个 Artifact 都属于 Run `32331905285` 且绑定实现验证 Head `8b0abb89cb86b939e7e6595f32916ece727c8260`；
+- 集成提交：`b86824a3db6ca33e6ff8b20598bdf75215792447`；
+- EU-03 未实现发布/撤回操作或公开文章详情，相关能力仍属于后续 Execution Unit Scope；
+- EU-03 本轮没有产生新的 `agentic-dev` Consumer Experiment Evidence。
+
+EU-04「发布状态与公开三级页面」已经取得与实现 Head 匹配的 Completion Evidence，当前等待集成：
+
+- 验证 PR：`#7`；
+- 实现验证 Head：`cc030c9da79a3d415682983e0a0164c6ea08a0f6`；
+- CI：Run `32338802376`（CI #25），Backend verify、Frontend verify 与 Browser verification 全部 PASS，整个 Run `completed/success`；
+- Browser verification 中 Playwright 结果为 `4 passed (12.6s)`，其中 EU-04 纵向用例验证 `DRAFT → PUBLISHED → WITHDRAWN → PUBLISHED`、首页/栏目/详情可见性、已发布编辑保持状态与正文图片公开访问；
+- Artifact Collection 已确认存在 `backend-jar`（ID `9395597129`）、`frontend-dist`（ID `9395585376`）与 `playwright-evidence`（ID `9395638292`），三个 Artifact 都属于 Run `32338802376` 且绑定实现验证 Head `cc030c9da79a3d415682983e0a0164c6ea08a0f6`；
+- EU-04 只公开正文图片，不实现附件公开下载、复制链接、二维码或浏览量统计，这些能力仍保留在后续 Execution Unit；
+- EU-04 执行中没有发现新的 `agentic-dev` Consumer Experiment Evidence。
+
+当前协调状态：
+
+- 当前 `agentic-dev` validation baseline 为 `cdcf97cdbbf9d4fe28ed65d4ae8ea0c5120bfe84`，从 EU-04 起生效，不追溯重解释或重跑 EU-03；
+- EU-02 readiness 曾返回 `slice-work` 修正“已有公开栏目路由”的隐藏前置条件，修正后由 EU-02 自身建立最小公开栏目入口且不侵入 EU-04；
+- EU-03 readiness 在先修正 Consumer baseline Authority 漂移后 PASS；EU-03 已完成实现、Completion Verification 与集成；
+- EU-04 readiness PASS，既有 Technical Plan 足以支撑本 Unit，实现过程中未形成新的跨 Feature 长期架构决策，因此未触发新的 Technical Planning 或 ADR；
+- EU-04 已取得 Completion Evidence，当前 PR #7 等待集成；不得自动进入 EU-05；
+- GitHub Actions 仍是后续跨前后端 Execution Unit 的重要 Completion Evidence 来源，继续按当前 Verification Runtime Strategy 与 `github-actions-verification` 条件化执行。
+
+实现阶段不得重新打开已经确认的产品范围或重大架构方向，除非出现新的权威冲突或当前证据证明存在阻塞问题。
 
 ## 当前仓库结构
 
@@ -137,8 +196,11 @@ Specification Ready
     │   └── information-publishing.md
     ├── specifications/
     │   └── center-main-site-core.md
-    └── technical/
-        └── center-main-site-core.md
+    ├── technical/
+    │   ├── center-main-site-core.md
+    │   └── verification-strategy.md
+    └── work/
+        └── center-main-site-core-execution-units.md
 ```
 
 项目结构应随着真实开发需要逐步演进。
