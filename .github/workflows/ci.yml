@@ -177,7 +177,7 @@ jobs:
           path: |
             frontend/playwright-report
             frontend/test-results
-          if-no-files-found: ignore
+          if-no-files-found: error
           retention-days: 5
 
       - name: Capture runtime diagnostics
