@@ -123,19 +123,26 @@ master@9ae3f4e73ef1e4b27a30f7ac791ae4b079dee269
 Specification Ready
 → Technical Plan Ready
 → Work Slicing & Readiness PASS
-→ EU-01 Execution / Verification
+→ EU-01 Completed
+→ Experiment Feedback / Awaiting agentic-dev Update
 ```
 
-EU-01「栏目管理闭环」实现已经存在，当前正在重新取得完整 Current Evidence。此前单 Job CI 在 `playwright install --with-deps chromium` 环境准备阶段发生小时级异常阻塞，因此 EU-01 改由任务分支 + PR 的分层、容器化 CI 重新验证。
+EU-01「栏目管理闭环」已经取得完整 Current Evidence 并完成集成：
+
+- 验证 PR：`#3`；
+- 通过验证的 Head：`cf212739beef482d7fe746fdfa0a1e0c1fc57bab`；
+- CI：Run `32318100988`（CI #12），Backend Verify、Frontend Verify、Backend Runtime、Frontend Runtime 与 Playwright browser verification 全部 PASS，整个 Run `completed/success`；
+- 集成提交：`cdfe90fd9d0b165accf81e1f39dc3abf4ad14f0a`；
+- Consumer Issue #1/#2 已记录最终处理结果并关闭；
+- 完整实验反馈已提交至 `dygapp/agentic-dev` Experiment Issue #18。
 
 当前协调顺序：
 
-- 完成 EU-01 Backend Verify、Frontend Verify 与 browser verification；
-- 只有新的自动化 PASS Current Evidence 支持时才声明 EU-01 Completed；
-- EU-01 完成后不继续 EU-02；
-- 先将 Consumer Issue #1/#2 与最终处理结果回传 `dygapp/agentic-dev` Experiment Issue #18；
-- 等待 agentic-dev 完成方法论 / Guide / Skill / Runtime Integration 更新；
-- 读取新的 agentic-dev 权威基线后，重新检查 EU-02 readiness，再按新方法执行。
+- 暂停在 EU-01 完成点，不进入 EU-02；
+- 等待 agentic-dev 评估实验反馈并完成必要的 Method / Operating Guide / Skill / Runtime Integration 更新；
+- 更新完成后读取新的 agentic-dev 权威 baseline；
+- 基于新 baseline 重新检查 EU-02 readiness；
+- 只有 readiness 通过后，才按新的方法继续 EU-02。
 
 实现阶段不得重新打开已经确认的产品范围或重大架构方向，除非出现新的权威冲突或当前证据证明存在阻塞问题。
 
