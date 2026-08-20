@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 import java.time.LocalDate
 
@@ -34,6 +35,28 @@ class ArticleController(
         @PathVariable id: Long,
         @Valid @RequestBody request: SaveArticleRequest,
     ): CmsArticle = service.update(id, request.toDraft())
+
+    @PostMapping("/{id}/publish")
+    fun publish(@PathVariable id: Long): CmsArticle = service.publish(id)
+
+    @PostMapping("/{id}/withdraw")
+    fun withdraw(@PathVariable id: Long): CmsArticle = service.withdraw(id)
+}
+
+@RestController
+@RequestMapping("/api/public/articles")
+class PublicArticleController(
+    private val service: ArticleService,
+) {
+    @GetMapping
+    fun list(
+        @RequestParam(required = false) columnId: Long?,
+        @RequestParam(defaultValue = "0") page: Int,
+        @RequestParam(defaultValue = "10") size: Int,
+    ): PublicArticlePage = service.listPublic(columnId, page, size)
+
+    @GetMapping("/{id}")
+    fun get(@PathVariable id: Long): PublicArticleDetail = service.getPublic(id)
 }
 
 data class SaveArticleRequest(
