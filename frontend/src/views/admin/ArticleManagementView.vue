@@ -308,6 +308,7 @@ function toMessage(error: unknown): string {
           <template #default="scope">{{ statusName(scope.row.status) }}</template>
         </el-table-column>
         <el-table-column prop="source" label="来源" min-width="140" />
+        <el-table-column prop="viewCount" label="浏览量" width="100" />
         <el-table-column label="操作" width="210" fixed="right">
           <template #default="scope">
             <el-button :data-testid="`edit-article-${scope.row.id}`" link type="primary" @click="openEdit(asCmsArticle(scope.row))">编辑</el-button>

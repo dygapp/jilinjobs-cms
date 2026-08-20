@@ -1,12 +1,21 @@
 <script setup lang="ts">
+import QRCode from 'qrcode'
 import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { getPublicArticle, publicBodyHtml, type PublicArticleDetail } from '../../api/articles'
+import {
+  getPublicArticle,
+  publicAttachmentUrl,
+  publicBodyHtml,
+  type PublicArticleDetail,
+} from '../../api/articles'
 
 const route = useRoute()
 const article = ref<PublicArticleDetail | null>(null)
 const loading = ref(false)
 const error = ref('')
+const articleUrl = ref('')
+const qrCodeUrl = ref('')
+const copyMessage = ref('')
 const renderedBody = computed(() => article.value ? publicBodyHtml(article.value) : '')
 
 watch(
@@ -14,6 +23,9 @@ watch(
   async (value) => {
     const id = Number(value)
     article.value = null
+    articleUrl.value = ''
+    qrCodeUrl.value = ''
+    copyMessage.value = ''
     error.value = ''
     if (!Number.isInteger(id) || id <= 0) {
       error.value = '文章不可用或不存在'
@@ -23,6 +35,8 @@ watch(
     loading.value = true
     try {
       article.value = await getPublicArticle(id)
+      articleUrl.value = window.location.href
+      qrCodeUrl.value = await QRCode.toDataURL(articleUrl.value, { width: 180, margin: 1 })
     } catch {
       error.value = '文章不可用或不存在'
     } finally {
@@ -31,6 +45,29 @@ watch(
   },
   { immediate: true },
 )
+
+async function copyArticleLink() {
+  try {
+    await navigator.clipboard.writeText(articleUrl.value)
+    copyMessage.value = '链接已复制'
+  } catch {
+    const textarea = document.createElement('textarea')
+    textarea.value = articleUrl.value
+    textarea.style.position = 'fixed'
+    textarea.style.opacity = '0'
+    document.body.appendChild(textarea)
+    textarea.select()
+    const copied = document.execCommand('copy')
+    textarea.remove()
+    copyMessage.value = copied ? '链接已复制' : '复制失败，请手动复制浏览器地址'
+  }
+}
+
+function formatFileSize(sizeBytes: number): string {
+  if (sizeBytes < 1024) return `${sizeBytes} B`
+  if (sizeBytes < 1024 * 1024) return `${(sizeBytes / 1024).toFixed(1)} KB`
+  return `${(sizeBytes / 1024 / 1024).toFixed(1)} MB`
+}
 </script>
 
 <template>
@@ -60,6 +97,28 @@ watch(
           </div>
         </header>
         <div class="article-body" data-testid="public-article-body" v-html="renderedBody" />
+        <section v-if="article.attachments.length" class="article-attachments" data-testid="public-attachments">
+          <h2>附件下载</h2>
+          <a
+            v-for="attachment in article.attachments"
+            :key="attachment.id"
+            :data-testid="`public-attachment-${attachment.id}`"
+            :href="publicAttachmentUrl(attachment.id)"
+          >
+            <span>{{ attachment.originalFilename }}</span>
+            <small>{{ formatFileSize(attachment.sizeBytes) }}</small>
+          </a>
+        </section>
+        <section class="article-share" aria-label="内容分享">
+          <div>
+            <button data-testid="copy-article-link" type="button" @click="copyArticleLink">复制链接</button>
+            <p v-if="copyMessage" class="copy-message" role="status">{{ copyMessage }}</p>
+          </div>
+          <figure v-if="qrCodeUrl">
+            <img data-testid="article-qrcode" :src="qrCodeUrl" alt="当前页面访问二维码">
+            <figcaption>扫码访问当前页面</figcaption>
+          </figure>
+        </section>
       </template>
       <p v-else class="public-state error-text" data-testid="public-article-unavailable">{{ error }}</p>
     </article>
@@ -102,5 +161,64 @@ watch(
   max-width: 100%;
   height: auto;
   margin: 22px auto;
+}
+.article-attachments {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #dce8ef;
+}
+.article-attachments h2 {
+  margin: 0 0 14px;
+  color: #18313e;
+  font-size: 20px;
+}
+.article-attachments a {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #eef7fa;
+  color: #176d88;
+  text-decoration: none;
+}
+.article-attachments small {
+  color: #6c7d87;
+}
+.article-share {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 28px;
+  margin-top: 36px;
+  padding: 22px;
+  border-radius: 12px;
+  background: #f5f9fb;
+}
+.article-share button {
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 6px;
+  background: #147b95;
+  color: white;
+  cursor: pointer;
+}
+.copy-message {
+  margin: 10px 0 0;
+  color: #287047;
+}
+.article-share figure {
+  margin: 0;
+  text-align: center;
+}
+.article-share img {
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+.article-share figcaption {
+  margin-top: 6px;
+  color: #6c7d87;
+  font-size: 13px;
 }
 </style>

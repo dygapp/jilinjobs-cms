@@ -61,6 +61,14 @@ export interface PublicArticleDetail {
   source: string
   publishDate: string | null
   bodyImageResourceIds: number[]
+  attachments: PublicArticleAttachment[]
+}
+
+export interface PublicArticleAttachment {
+  id: number
+  originalFilename: string
+  contentType: string | null
+  sizeBytes: number
 }
 
 export interface PublicArticlePage {
@@ -149,6 +157,10 @@ export function resourceContentUrl(id: number): string {
 
 export function publicResourceContentUrl(id: number): string {
   return `/api/public/resources/${id}/content`
+}
+
+export function publicAttachmentUrl(id: number): string {
+  return `/api/public/resources/${id}/attachment`
 }
 
 export function publicBodyHtml(article: PublicArticleDetail): string {
