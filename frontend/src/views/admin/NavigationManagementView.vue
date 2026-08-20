@@ -168,6 +168,10 @@ function targetLabel(row: CmsNavigation): string {
   return columns.value.find((item) => item.id === row.targetColumnId)?.name ?? `栏目 #${row.targetColumnId ?? '-'}`
 }
 
+function asNavigation(row: unknown): CmsNavigation {
+  return row as CmsNavigation
+}
+
 function toMessage(error: unknown): string {
   return error instanceof Error ? error.message : '操作失败'
 }
@@ -197,7 +201,7 @@ function toMessage(error: unknown): string {
           <template #default="scope">{{ scope.row.category || '-' }}</template>
         </el-table-column>
         <el-table-column label="目标" min-width="240">
-          <template #default="scope">{{ targetLabel(scope.row) }}</template>
+          <template #default="scope">{{ targetLabel(asNavigation(scope.row)) }}</template>
         </el-table-column>
         <el-table-column prop="sortOrder" label="排序" width="90" />
         <el-table-column label="状态" width="130">
@@ -207,14 +211,14 @@ function toMessage(error: unknown): string {
               :data-testid="`navigation-enabled-${scope.row.id}`"
               active-text="启用"
               inactive-text="停用"
-              @change="(value) => toggleEnabled(scope.row, value === true)"
+              @change="(value) => toggleEnabled(asNavigation(scope.row), value === true)"
             />
           </template>
         </el-table-column>
         <el-table-column label="操作" width="150" fixed="right">
           <template #default="scope">
-            <el-button :data-testid="`navigation-edit-${scope.row.id}`" link type="primary" @click="openEdit(scope.row)">编辑</el-button>
-            <el-button :data-testid="`navigation-delete-${scope.row.id}`" link type="danger" @click="remove(scope.row)">删除</el-button>
+            <el-button :data-testid="`navigation-edit-${scope.row.id}`" link type="primary" @click="openEdit(asNavigation(scope.row))">编辑</el-button>
+            <el-button :data-testid="`navigation-delete-${scope.row.id}`" link type="danger" @click="remove(asNavigation(scope.row))">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
