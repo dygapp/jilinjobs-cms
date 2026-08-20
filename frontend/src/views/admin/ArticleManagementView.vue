@@ -231,6 +231,10 @@ function resetInput(event: Event) {
   ;(event.target as HTMLInputElement).value = ''
 }
 
+function asCmsArticle(row: unknown): CmsArticle {
+  return row as CmsArticle
+}
+
 function columnName(columnId: number): string {
   return columns.value.find((item) => item.id === columnId)?.name ?? `栏目 #${columnId}`
 }
@@ -281,7 +285,7 @@ function toMessage(error: unknown): string {
         <el-table-column prop="source" label="来源" min-width="140" />
         <el-table-column label="操作" width="110" fixed="right">
           <template #default="scope">
-            <el-button :data-testid="`edit-article-${scope.row.id}`" link type="primary" @click="openEdit(scope.row)">编辑</el-button>
+            <el-button :data-testid="`edit-article-${scope.row.id}`" link type="primary" @click="openEdit(asCmsArticle(scope.row))">编辑</el-button>
           </template>
         </el-table-column>
       </el-table>
