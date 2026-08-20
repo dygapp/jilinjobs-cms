@@ -34,6 +34,8 @@ interface ResourceRepository {
 
     fun findArticleResourceIds(articleId: Long, role: ArticleResourceRole): List<Long>
 
+    fun isPublishedBodyImage(resourceId: Long): Boolean
+
     fun deleteArticleLinks(articleId: Long)
 
     fun insertArticleLink(articleId: Long, resourceId: Long, role: ArticleResourceRole, sortOrder: Int)
@@ -47,4 +49,4 @@ interface ArticleResourceAssociation {
 
 class ResourceValidationException(message: String) : RuntimeException(message)
 
-class ResourceNotFoundException(id: Long) : RuntimeException("文件资源不存在：$id")
+class ResourceNotFoundException(id: Long) : RuntimeException("文件资源不存在或不可用：$id")
