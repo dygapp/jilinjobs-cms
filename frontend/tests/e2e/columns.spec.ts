@@ -47,8 +47,9 @@ test('栏目可以通过管理界面维护且父栏目删除约束生效', async
   await page.getByRole('dialog').getByRole('button', { name: '删除', exact: true }).click()
   await expect(page.getByText('栏目存在下级栏目，不能直接删除', { exact: true })).toBeVisible()
 
-  const enabledSwitch = page.getByTestId(`enabled-${parent!.id}`).getByRole('switch')
-  await expect(enabledSwitch).toBeChecked()
-  await enabledSwitch.click()
-  await expect(enabledSwitch).not.toBeChecked()
+  const enabledSwitchRoot = page.getByTestId(`enabled-${parent!.id}`)
+  const enabledSwitchInput = enabledSwitchRoot.getByRole('switch')
+  await expect(enabledSwitchInput).toBeChecked()
+  await enabledSwitchRoot.click()
+  await expect(enabledSwitchInput).not.toBeChecked()
 })
