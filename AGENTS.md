@@ -52,7 +52,7 @@
 
 - Repository：`dygapp/agentic-dev`
 - Validation Baseline Branch：`master`
-- Validation Baseline Commit：`ba1de553d523fc571fb760cbf5154540c4c1ef99`
+- Validation Baseline Commit：`cdcf97cdbbf9d4fe28ed65d4ae8ea0c5120bfe84`
 
 当前 Consumer Experiment 的 Method、Operating Guide 与 Skills 判断必须基于上述精确 Validation Baseline。若项目负责人后续明确指定新的 Validation Baseline，应先更新本处，再按新的精确 baseline 继续工作。
 
