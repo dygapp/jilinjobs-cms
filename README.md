@@ -125,7 +125,8 @@ Specification Ready
 → Work Slicing & Readiness PASS
 → EU-01 Completed
 → agentic-dev Baseline Updated
-→ EU-02 Readiness Re-check / Boundary Correction
+→ EU-02 Readiness PASS
+→ EU-02 Execution
 ```
 
 EU-01「栏目管理闭环」已经取得完整 Current Evidence 并完成集成：
@@ -141,9 +142,9 @@ EU-01「栏目管理闭环」已经取得完整 Current Evidence 并完成集成
 
 - 已读取并采用新的 `agentic-dev` validation baseline `c76d2996497bfd9632eb75ead3bc38b7f2d647a9`；
 - 已基于当前 `main` 的实际 EU-01 实施结果重新检查 EU-02；
-- 当前代码只有管理端 `/admin/columns` 路由，EU-01 未建立公开栏目路由，而原 EU-02 completion condition 将“已有栏目路由”作为隐含前置条件；
-- 已返回 `slice-work` 修正 EU-02：由 EU-02 自身建立导航所需的最小公开栏目入口路由，但不提前实现 EU-04 负责的栏目文章列表、分页等完整二级页面行为；
-- 下一步重新执行 EU-02 `readiness-check`；只有 Gate 通过后才进入 EU-02 `execute-unit`。
+- 已返回 `slice-work` 修正原 EU-02 对“已有公开栏目路由”的隐藏前置条件，由 EU-02 自身建立导航所需的最小公开栏目入口路由，但不提前实现 EU-04 负责的栏目文章列表、分页等完整二级页面行为；
+- 修正后的 EU-02 已重新通过 `readiness-check`，当前按 Fresh Execution Context、Current Evidence 与 Verification-before-claim 原则进入 EU-02 `execute-unit`；
+- GitHub Actions 仍是当前 Completion Evidence 的重要来源，验证路径继续按当前 Verification Runtime Strategy 与 `github-actions-verification` 条件化执行。
 
 实现阶段不得重新打开已经确认的产品范围或重大架构方向，除非出现新的权威冲突或当前证据证明存在阻塞问题。
 
