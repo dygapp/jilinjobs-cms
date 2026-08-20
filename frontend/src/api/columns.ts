@@ -6,6 +6,12 @@ export interface CmsColumn {
   enabled: boolean
 }
 
+export interface PublicColumn {
+  id: number
+  parentId: number | null
+  name: string
+}
+
 export interface ColumnDraft {
   parentId: number | null
   name: string
@@ -36,6 +42,10 @@ async function request<T>(url: string, init?: RequestInit): Promise<T> {
 
 export function listColumns(): Promise<CmsColumn[]> {
   return request('/api/admin/columns')
+}
+
+export function getPublicColumn(id: number): Promise<PublicColumn> {
+  return request(`/api/public/columns/${id}`)
 }
 
 export function createColumn(draft: ColumnDraft): Promise<CmsColumn> {

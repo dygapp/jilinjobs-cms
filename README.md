@@ -106,7 +106,7 @@ Repository:
 dygapp/agentic-dev
 
 Experiment Validation Baseline:
-master@9ae3f4e73ef1e4b27a30f7ac791ae4b079dee269
+master@c76d2996497bfd9632eb75ead3bc38b7f2d647a9
 ```
 
 使用原则：
@@ -124,7 +124,9 @@ Specification Ready
 → Technical Plan Ready
 → Work Slicing & Readiness PASS
 → EU-01 Completed
-→ Experiment Feedback / Awaiting agentic-dev Update
+→ agentic-dev Baseline Updated
+→ EU-02 Readiness PASS
+→ EU-02 Execution
 ```
 
 EU-01「栏目管理闭环」已经取得完整 Current Evidence 并完成集成：
@@ -136,13 +138,13 @@ EU-01「栏目管理闭环」已经取得完整 Current Evidence 并完成集成
 - Consumer Issue #1/#2 已记录最终处理结果并关闭；
 - 完整实验反馈已提交至 `dygapp/agentic-dev` Experiment Issue #18。
 
-当前协调顺序：
+当前协调状态：
 
-- 暂停在 EU-01 完成点，不进入 EU-02；
-- 等待 agentic-dev 评估实验反馈并完成必要的 Method / Operating Guide / Skill / Runtime Integration 更新；
-- 更新完成后读取新的 agentic-dev 权威 baseline；
-- 基于新 baseline 重新检查 EU-02 readiness；
-- 只有 readiness 通过后，才按新的方法继续 EU-02。
+- 已读取并采用新的 `agentic-dev` validation baseline `c76d2996497bfd9632eb75ead3bc38b7f2d647a9`；
+- 已基于当前 `main` 的实际 EU-01 实施结果重新检查 EU-02；
+- 已返回 `slice-work` 修正原 EU-02 对“已有公开栏目路由”的隐藏前置条件，由 EU-02 自身建立导航所需的最小公开栏目入口路由，但不提前实现 EU-04 负责的栏目文章列表、分页等完整二级页面行为；
+- 修正后的 EU-02 已重新通过 `readiness-check`，当前按 Fresh Execution Context、Current Evidence 与 Verification-before-claim 原则进入 EU-02 `execute-unit`；
+- GitHub Actions 仍是当前 Completion Evidence 的重要来源，验证路径继续按当前 Verification Runtime Strategy 与 `github-actions-verification` 条件化执行。
 
 实现阶段不得重新打开已经确认的产品范围或重大架构方向，除非出现新的权威冲突或当前证据证明存在阻塞问题。
 

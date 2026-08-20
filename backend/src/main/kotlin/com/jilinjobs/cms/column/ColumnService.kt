@@ -6,9 +6,12 @@ import org.springframework.transaction.annotation.Transactional
 @Service
 class ColumnService(
     private val repository: ColumnRepository,
-) {
+) : ColumnQuery {
     @Transactional(readOnly = true)
     fun list(): List<CmsColumn> = repository.findAll()
+
+    @Transactional(readOnly = true)
+    override fun find(id: Long): CmsColumn? = repository.findById(id)
 
     @Transactional
     fun create(draft: ColumnDraft): CmsColumn {
