@@ -244,7 +244,7 @@ function toMessage(error: unknown): string {
           </el-radio-group>
         </el-form-item>
         <el-form-item v-if="form.targetType === 'COLUMN'" label="目标栏目" required>
-          <el-select v-model="form.targetColumnId" filterable placeholder="请选择栏目" style="width: 100%">
+          <el-select data-testid="navigation-column-select" v-model="form.targetColumnId" filterable placeholder="请选择栏目" style="width: 100%">
             <el-option v-for="column in enabledColumns" :key="column.id" :label="column.name" :value="column.id" />
           </el-select>
         </el-form-item>
