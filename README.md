@@ -196,10 +196,10 @@ EU-05「详情增强、附件与浏览量」已经取得与实现 Head 匹配的
 EU-06「公开站点响应式与基础搜索引擎友好」已经取得与实现 Head 匹配的 Completion Evidence，当前等待集成：
 
 - 验证 PR：`#9`；
-- 实现验证 Head：`5000968ff2f54b62af21aa830d9ff8c24629a71a`；
-- CI：Run `32439910782`（CI #31），Backend verify、Frontend verify 与 Browser verification 全部 PASS，整个 Run `completed/success`；
-- Browser verification 中 Playwright 结果为 `8 passed (22.5s)`；既有 5 个 Chromium 纵向回归继续通过，EU-06 smoke 在 Chromium、Firefox、WebKit 分别验证桌面、平板、手机主要视口、移动导航折叠、内容与图片宽度适配、标题与摘要、直接地址 fallback 及前进后退；
-- Artifact Collection 已确认存在 `backend-jar`（ID `9432040455`）、`frontend-dist`（ID `9432029833`）与 `playwright-evidence`（ID `9432080381`），三个 Artifact 都属于 Run `32439910782` 且绑定实现验证 Head `5000968ff2f54b62af21aa830d9ff8c24629a71a`；
+- 最终验证 Head：`27892b26fae6c1c8b9bc9bfba85f5d1a64514382`；
+- CI：Run `32440242363`（CI #32），Backend verify、Frontend verify 与 Browser verification 全部 PASS，整个 Run `completed/success`；
+- Browser verification 中 Playwright 结果为 `8 passed (23.5s)`；既有 5 个 Chromium 纵向回归继续通过，EU-06 smoke 在 Chromium、Firefox、WebKit 分别验证桌面、平板、手机主要视口、移动导航折叠、内容与图片宽度适配、标题与摘要、直接地址 fallback 及前进后退；
+- Artifact Collection 已确认存在 `backend-jar`（ID `9432165095`）、`frontend-dist`（ID `9432150056`）与 `playwright-evidence`（ID `9432210638`），三个 Artifact 都属于 Run `32440242363` 且绑定最终验证 Head `27892b26fae6c1c8b9bc9bfba85f5d1a64514382`；
 - 当前 Nginx fallback 的原始 HTML 提供站点级默认标题与摘要，内容级标题与摘要由 SPA JavaScript 在数据加载后设置；这形成了当前 SPA 基础收录风险证据，不能推断为不执行 JavaScript 的爬虫也能取得内容级 meta；
 - 当前证据不要求回退阶段或引入 SSR / SSG；EU-06 未扩展复杂 SEO 运营、关键词管理、收录效果分析或后续 Execution Unit。
 
