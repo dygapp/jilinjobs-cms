@@ -8,6 +8,7 @@ import {
   publicBodyHtml,
   type PublicArticleDetail,
 } from '../../api/articles'
+import { setPageMeta, summarizeHtml } from '../../seo'
 
 const route = useRoute()
 const article = ref<PublicArticleDetail | null>(null)
@@ -27,18 +28,32 @@ watch(
     qrCodeUrl.value = ''
     copyMessage.value = ''
     error.value = ''
+    setPageMeta({
+      title: '文章',
+      description: '浏览吉林就业中心主站已发布信息。',
+    })
     if (!Number.isInteger(id) || id <= 0) {
       error.value = '文章不可用或不存在'
+      setPageMeta({ title: '文章不可用', description: error.value })
       return
     }
 
     loading.value = true
     try {
-      article.value = await getPublicArticle(id)
+      const current = await getPublicArticle(id)
+      article.value = current
       articleUrl.value = window.location.href
       qrCodeUrl.value = await QRCode.toDataURL(articleUrl.value, { width: 180, margin: 1 })
+      setPageMeta({
+        title: current.title,
+        description: summarizeHtml(
+          current.bodyHtml,
+          [current.source, current.publishDate].filter(Boolean).join(' · '),
+        ),
+      })
     } catch {
       error.value = '文章不可用或不存在'
+      setPageMeta({ title: '文章不可用', description: error.value })
     } finally {
       loading.value = false
     }
@@ -155,12 +170,26 @@ function formatFileSize(sizeBytes: number): string {
   color: #273d49;
   font-size: 17px;
   line-height: 1.9;
+  overflow-wrap: anywhere;
 }
 .article-body :deep(img) {
   display: block;
   max-width: 100%;
   height: auto;
   margin: 22px auto;
+}
+.article-body :deep(video),
+.article-body :deep(iframe) {
+  max-width: 100%;
+}
+.article-body :deep(pre) {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.article-body :deep(table) {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
 }
 .article-attachments {
   margin-top: 32px;
@@ -220,5 +249,41 @@ function formatFileSize(sizeBytes: number): string {
   margin-top: 6px;
   color: #6c7d87;
   font-size: 13px;
+}
+
+@media (max-width: 720px) {
+  .article-detail {
+    padding: 20px 12px 48px;
+  }
+
+  .article-heading {
+    padding-top: 12px;
+    text-align: left;
+  }
+
+  .article-heading h1 {
+    font-size: 26px;
+  }
+
+  .article-meta,
+  .article-share {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .article-meta {
+    gap: 6px;
+  }
+
+  .article-attachments a {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    overflow-wrap: anywhere;
+  }
+
+  .article-share figure {
+    align-self: center;
+  }
 }
 </style>

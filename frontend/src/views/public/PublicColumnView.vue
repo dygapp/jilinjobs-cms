@@ -3,6 +3,7 @@ import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { listPublicArticles, type PublicArticleSummary } from '../../api/articles'
 import { getPublicColumn, type PublicColumn } from '../../api/columns'
+import { setPageMeta } from '../../seo'
 
 const route = useRoute()
 const router = useRouter()
@@ -32,8 +33,13 @@ async function load() {
   articles.value = []
   total.value = 0
   error.value = ''
+  setPageMeta({
+    title: '栏目',
+    description: '浏览吉林就业中心主站栏目中的已发布信息。',
+  })
   if (!Number.isInteger(id) || id <= 0) {
     error.value = '栏目地址无效'
+    setPageMeta({ title: '栏目不可用', description: error.value })
     return
   }
 
@@ -55,8 +61,13 @@ async function load() {
     articles.value = articlePage.items
     total.value = articlePage.total
     page.value = articlePage.page
+    setPageMeta({
+      title: current.name,
+      description: `浏览吉林就业中心主站“${current.name}”栏目的已发布信息。`,
+    })
   } catch (reason) {
     error.value = reason instanceof Error ? reason.message : '栏目加载失败'
+    setPageMeta({ title: '栏目不可用', description: error.value })
   } finally {
     loading.value = false
   }
@@ -144,5 +155,17 @@ function goToPage(target: number) {
 .pagination button:disabled {
   cursor: default;
   opacity: 0.45;
+}
+
+@media (max-width: 720px) {
+  .column-article-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .pagination {
+    gap: 10px;
+  }
 }
 </style>

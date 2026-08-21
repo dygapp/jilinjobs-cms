@@ -2,11 +2,17 @@
 import { computed, onMounted, ref } from 'vue'
 import { listPublicArticles, type PublicArticleSummary } from '../../api/articles'
 import { listPublicNavigations, type PublicNavigation } from '../../api/navigation'
+import { setPageMeta } from '../../seo'
 
 const items = ref<PublicNavigation[]>([])
 const articles = ref<PublicArticleSummary[]>([])
 const loading = ref(true)
 const error = ref('')
+const navigationOpen = ref(false)
+
+setPageMeta({
+  description: '吉林省智慧就业云平台中心主站，浏览已发布就业信息，并通过栏目和服务导航进入所需内容。',
+})
 
 const mainItems = computed(() => items.value.filter((item) => item.position === 'MAIN'))
 const serviceItems = computed(() => items.value.filter((item) => item.position === 'SERVICE'))
@@ -59,7 +65,26 @@ onMounted(async () => {
         <span class="brand-mark">吉林就业</span>
         <strong>吉林省智慧就业云平台</strong>
       </div>
-      <nav class="main-navigation" aria-label="主导航">
+      <button
+        class="navigation-toggle"
+        type="button"
+        aria-controls="main-navigation"
+        :aria-expanded="navigationOpen"
+        @click="navigationOpen = !navigationOpen"
+      >
+        <span class="navigation-toggle-icon" aria-hidden="true">
+          <i />
+          <i />
+          <i />
+        </span>
+        <span>{{ navigationOpen ? '收起导航' : '展开导航' }}</span>
+      </button>
+      <nav
+        id="main-navigation"
+        class="main-navigation"
+        :class="{ 'is-open': navigationOpen }"
+        aria-label="主导航"
+      >
         <template v-for="item in mainItems" :key="item.id">
           <a
             v-if="item.external"
@@ -67,8 +92,14 @@ onMounted(async () => {
             :href="item.href"
             target="_blank"
             rel="noopener noreferrer"
+            @click="navigationOpen = false"
           >{{ item.name }}</a>
-          <router-link v-else :data-testid="`public-nav-${item.id}`" :to="item.href">{{ item.name }}</router-link>
+          <router-link
+            v-else
+            :data-testid="`public-nav-${item.id}`"
+            :to="item.href"
+            @click="navigationOpen = false"
+          >{{ item.name }}</router-link>
         </template>
       </nav>
     </header>
@@ -172,5 +203,17 @@ onMounted(async () => {
   flex: 0 0 auto;
   color: #72828c;
   font-size: 13px;
+}
+
+@media (max-width: 720px) {
+  .article-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .article-group li {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
 }
 </style>
