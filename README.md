@@ -106,7 +106,7 @@ Repository:
 dygapp/agentic-dev
 
 Experiment Validation Baseline:
-master@9ae3f4e73ef1e4b27a30f7ac791ae4b079dee269
+master@3e0b99d85d968f138e6eae9bc51ea1b7a710748e
 ```
 
 使用原则：
@@ -137,7 +137,10 @@ Specification Ready
 → agentic-dev Baseline Updated
 → EU-05 Readiness PASS
 → EU-05 Completion Verification PASS
-→ EU-05 Completed / Awaiting Integration
+→ EU-05 Integrated
+→ agentic-dev Baseline Updated
+→ EU-06 Readiness PASS
+→ EU-06 Execute
 ```
 
 EU-01「栏目管理闭环」已经取得完整 Current Evidence 并完成集成：
@@ -179,24 +182,26 @@ EU-04「发布状态与公开三级页面」已经取得与实现 Head 匹配的
 - EU-04 只公开正文图片，不实现附件公开下载、复制链接、二维码或浏览量统计，这些能力仍保留在后续 Execution Unit；
 - EU-04 执行中没有发现新的 `agentic-dev` Consumer Experiment Evidence。
 
-EU-05「详情增强、附件与浏览量」已经取得与实现 Head 匹配的 Completion Evidence，当前等待集成：
+EU-05「详情增强、附件与浏览量」已经取得与实现 Head 匹配的 Completion Evidence 并完成集成：
 
 - 验证 PR：`#8`；
 - 实现验证 Head：`3489ecc21dfd34cf180f4f00999aaca560463e77`；
 - CI：Run `32372151197`（CI #28），Backend verify、Frontend verify 与 Browser verification 全部 PASS，整个 Run `completed/success`；
 - Browser verification 中 Playwright 结果为 `5 passed (13.8s)`，其中 EU-05 纵向用例验证草稿与撤回附件不可公开访问、发布后附件下载、稳定地址复制、二维码生成、MySQL 浏览量递增及管理端查看；
 - Artifact Collection 已确认存在 `backend-jar`（ID `9407570112`）、`frontend-dist`（ID `9407561886`）与 `playwright-evidence`（ID `9407626646`），三个 Artifact 都属于 Run `32372151197` 且绑定实现验证 Head `3489ecc21dfd34cf180f4f00999aaca560463e77`；
+- 集成提交：`b6c05ac6587477ccbdce54b36a7ff40b74af4e1c`；
 - EU-05 没有实现复杂统计、来源分析、第三方分享接口或绕过受控资源边界的公开目录。
 
 当前协调状态：
 
-- 当前 `agentic-dev` validation baseline 为 `9ae3f4e73ef1e4b27a30f7ac791ae4b079dee269`，从 EU-05 起生效，不追溯重解释或重跑 EU-04；
+- 当前 `agentic-dev` validation baseline 为 `3e0b99d85d968f138e6eae9bc51ea1b7a710748e`，从 EU-06 起生效，不追溯重解释或重跑已集成的 EU-05；
 - EU-02 readiness 曾返回 `slice-work` 修正“已有公开栏目路由”的隐藏前置条件，修正后由 EU-02 自身建立最小公开栏目入口且不侵入 EU-04；
 - EU-03 readiness 在先修正 Consumer baseline Authority 漂移后 PASS；EU-03 已完成实现、Completion Verification 与集成；
 - EU-04 readiness PASS，既有 Technical Plan 足以支撑本 Unit，实现过程中未形成新的跨 Feature 长期架构决策，因此未触发新的 Technical Planning 或 ADR；
 - EU-04 已取得 Completion Evidence 并通过 PR #7 集成；
 - EU-05 readiness-check PASS：Specification、既有 Technical Plan、依赖、受控资源边界和验证策略足以支撑本 Unit；未发现 Domain / Architecture Authority 或 ADR Gap；
-- EU-05 已完成实现与 Completion Verification，当前 PR #8 等待集成；不得自动进入 EU-06；
+- EU-05 已完成实现与 Completion Verification，并通过 PR #8 集成；
+- EU-06 readiness-check 已基于当前 baseline 对 Specification、Technical Plan、Execution Unit、Domain / Architecture / ADR Authority、Artifact Lifecycle 与 Governance 完成只读检查并返回 `PASS`；当前只执行 EU-06，不进入后续工作；
 - GitHub Actions 仍是后续跨前后端 Execution Unit 的重要 Completion Evidence 来源；按 `execute-unit` 从当前 Repository Rules 与实际仓库状态发现并执行验证机制。
 
 实现阶段不得重新打开已经确认的产品范围或重大架构方向，除非出现新的权威冲突或当前证据证明存在阻塞问题。
