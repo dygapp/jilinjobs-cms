@@ -73,6 +73,7 @@ textarea {
 
 .public-shell {
   min-height: 100vh;
+  overflow-x: hidden;
   background: linear-gradient(180deg, #eefafd 0, #f7fbfd 360px, #fff 100%);
 }
 
@@ -122,6 +123,33 @@ textarea {
   color: #24445e;
   font-weight: 600;
   text-decoration: none;
+}
+
+.navigation-toggle {
+  display: none;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 11px;
+  border: 1px solid #bdd5de;
+  border-radius: 9px;
+  background: rgb(255 255 255 / 72%);
+  color: #24445e;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navigation-toggle-icon {
+  display: grid;
+  gap: 3px;
+  width: 17px;
+}
+
+.navigation-toggle-icon i {
+  display: block;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
 }
 
 .public-hero,
@@ -211,6 +239,11 @@ textarea {
   color: #607d92;
 }
 
+.article-detail > .public-state,
+.column-entry > .public-state {
+  width: 100%;
+}
+
 .error-text {
   color: #b43b3b;
 }
@@ -253,20 +286,76 @@ textarea {
   }
 
   .page-header,
-  .public-header {
+  .page-header {
     align-items: stretch;
     flex-direction: column;
   }
 
   .public-header {
-    padding: 20px 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-height: 0;
+    padding: 16px 0;
+    gap: 14px;
+  }
+
+  .compact-header {
+    display: flex;
+  }
+
+  .brand-block {
+    min-width: 0;
+  }
+
+  .brand-block strong {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .navigation-toggle {
+    display: inline-flex;
   }
 
   .main-navigation {
+    display: none;
+    grid-column: 1 / -1;
+    align-items: stretch;
+    flex-direction: column;
     gap: 12px 20px;
+    padding: 14px;
+    border: 1px solid #d5e5eb;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 12px 28px rgb(31 92 112 / 10%);
+  }
+
+  .main-navigation.is-open {
+    display: flex;
+  }
+
+  .main-navigation a {
+    padding: 5px 2px;
   }
 
   .public-hero {
-    padding: 56px 0;
+    padding: 44px 0 48px;
+  }
+
+  .public-hero h1,
+  .column-entry h1 {
+    font-size: clamp(30px, 10vw, 42px);
+  }
+
+  .public-section {
+    padding: 28px 0 42px;
+  }
+
+  .breadcrumb {
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+
+  .column-entry {
+    padding: 32px 0 64px;
   }
 }
