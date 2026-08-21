@@ -60,11 +60,17 @@ test('EU-06 公开三级页面具备响应式、直接访问与基础页面信�
 
   const directColumnResponse = await request.get(`/columns/${column.id}`)
   expect(directColumnResponse.ok()).toBeTruthy()
-  expect(await directColumnResponse.text()).toContain('<div id="app"></div>')
+  const directColumnHtml = await directColumnResponse.text()
+  expect(directColumnHtml).toContain('<div id="app"></div>')
+  expect(directColumnHtml).toContain('<title>吉林就业信息发布原型</title>')
+  expect(directColumnHtml).not.toContain(columnName)
 
   const directArticleResponse = await request.get(`/articles/${article.id}`)
   expect(directArticleResponse.ok()).toBeTruthy()
-  expect(await directArticleResponse.text()).toContain('<div id="app"></div>')
+  const directArticleHtml = await directArticleResponse.text()
+  expect(directArticleHtml).toContain('<div id="app"></div>')
+  expect(directArticleHtml).toContain('<title>吉林就业信息发布原型</title>')
+  expect(directArticleHtml).not.toContain(title)
 
   const viewports = [
     { name: '桌面', width: 1280, height: 800 },

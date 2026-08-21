@@ -140,7 +140,8 @@ Specification Ready
 → EU-05 Integrated
 → agentic-dev Baseline Updated
 → EU-06 Readiness PASS
-→ EU-06 Execute
+→ EU-06 Completion Verification PASS
+→ EU-06 Completed / Awaiting Integration
 ```
 
 EU-01「栏目管理闭环」已经取得完整 Current Evidence 并完成集成：
@@ -192,6 +193,16 @@ EU-05「详情增强、附件与浏览量」已经取得与实现 Head 匹配的
 - 集成提交：`b6c05ac6587477ccbdce54b36a7ff40b74af4e1c`；
 - EU-05 没有实现复杂统计、来源分析、第三方分享接口或绕过受控资源边界的公开目录。
 
+EU-06「公开站点响应式与基础搜索引擎友好」已经取得与实现 Head 匹配的 Completion Evidence，当前等待集成：
+
+- 验证 PR：`#9`；
+- 实现验证 Head：`5000968ff2f54b62af21aa830d9ff8c24629a71a`；
+- CI：Run `32439910782`（CI #31），Backend verify、Frontend verify 与 Browser verification 全部 PASS，整个 Run `completed/success`；
+- Browser verification 中 Playwright 结果为 `8 passed (22.5s)`；既有 5 个 Chromium 纵向回归继续通过，EU-06 smoke 在 Chromium、Firefox、WebKit 分别验证桌面、平板、手机主要视口、移动导航折叠、内容与图片宽度适配、标题与摘要、直接地址 fallback 及前进后退；
+- Artifact Collection 已确认存在 `backend-jar`（ID `9432040455`）、`frontend-dist`（ID `9432029833`）与 `playwright-evidence`（ID `9432080381`），三个 Artifact 都属于 Run `32439910782` 且绑定实现验证 Head `5000968ff2f54b62af21aa830d9ff8c24629a71a`；
+- 当前 Nginx fallback 的原始 HTML 提供站点级默认标题与摘要，内容级标题与摘要由 SPA JavaScript 在数据加载后设置；这形成了当前 SPA 基础收录风险证据，不能推断为不执行 JavaScript 的爬虫也能取得内容级 meta；
+- 当前证据不要求回退阶段或引入 SSR / SSG；EU-06 未扩展复杂 SEO 运营、关键词管理、收录效果分析或后续 Execution Unit。
+
 当前协调状态：
 
 - 当前 `agentic-dev` validation baseline 为 `3e0b99d85d968f138e6eae9bc51ea1b7a710748e`，从 EU-06 起生效，不追溯重解释或重跑已集成的 EU-05；
@@ -202,6 +213,7 @@ EU-05「详情增强、附件与浏览量」已经取得与实现 Head 匹配的
 - EU-05 readiness-check PASS：Specification、既有 Technical Plan、依赖、受控资源边界和验证策略足以支撑本 Unit；未发现 Domain / Architecture Authority 或 ADR Gap；
 - EU-05 已完成实现与 Completion Verification，并通过 PR #8 集成；
 - EU-06 readiness-check 已基于当前 baseline 对 Specification、Technical Plan、Execution Unit、Domain / Architecture / ADR Authority、Artifact Lifecycle 与 Governance 完成只读检查并返回 `PASS`；当前只执行 EU-06，不进入后续工作；
+- EU-06 已取得与实现 Head 匹配的 Completion Evidence，当前 PR #9 等待集成；不得自动进入后续 Execution Unit；
 - GitHub Actions 仍是后续跨前后端 Execution Unit 的重要 Completion Evidence 来源；按 `execute-unit` 从当前 Repository Rules 与实际仓库状态发现并执行验证机制。
 
 实现阶段不得重新打开已经确认的产品范围或重大架构方向，除非出现新的权威冲突或当前证据证明存在阻塞问题。
