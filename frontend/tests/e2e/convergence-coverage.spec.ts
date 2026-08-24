@@ -1,11 +1,11 @@
-import { expect, test } from '@playwright/test'
+import { expect, test, type APIRequestContext } from '@playwright/test'
 
 type CreatedArticle = {
   id: number
   title: string
 }
 
-async function createColumn(request: Parameters<typeof test>[0] extends never ? never : any, name: string) {
+async function createColumn(request: APIRequestContext, name: string): Promise<{ id: number }> {
   const response = await request.post('/api/admin/columns', {
     data: {
       parentId: null,
@@ -19,7 +19,7 @@ async function createColumn(request: Parameters<typeof test>[0] extends never ? 
 }
 
 async function createAndPublishArticle(
-  request: any,
+  request: APIRequestContext,
   input: {
     columnId: number
     title: string
@@ -114,9 +114,7 @@ test('Feature-wide closure：首页按置顶推荐和展示顺序组织多篇已
   })
 
   await page.goto('/')
-  const group = page.locator('.article-group').filter({
-    has: page.getByRole('link', { name: columnName, exact: true }),
-  })
+  const group = page.locator('.article-group').filter({ hasText: columnName })
   await expect(group).toBeVisible()
 
   const orderedTitles = await group.locator('[data-testid^="public-article-"]').allTextContents()
@@ -171,14 +169,13 @@ test('Feature-wide closure：SERVICE 与 SITE 导航进入公开首页对应分�
 
   await page.goto('/')
 
-  const serviceSection = page.locator('.public-section').filter({
-    has: page.getByRole('heading', { name: '常用服务', exact: true }),
-  })
+  const serviceSection = page.locator('.public-section').filter({ hasText: '常用服务' })
   await expect(serviceSection).toBeVisible()
-  const serviceLinks = serviceSection.locator('a')
-  await expect(serviceLinks.filter({ hasText: serviceFirst })).toHaveAttribute('href', 'https://example.com/service-a')
-  await expect(serviceLinks.filter({ hasText: serviceSecond })).toHaveAttribute('href', 'https://example.com/service-b')
-  const serviceTexts = await serviceLinks.allTextContents()
+  const serviceFirstLink = serviceSection.getByRole('link', { name: serviceFirst, exact: true })
+  const serviceSecondLink = serviceSection.getByRole('link', { name: serviceSecond, exact: true })
+  await expect(serviceFirstLink).toHaveAttribute('href', 'https://example.com/service-a')
+  await expect(serviceSecondLink).toHaveAttribute('href', 'https://example.com/service-b')
+  const serviceTexts = await serviceSection.locator('a').allTextContents()
   expect(serviceTexts.indexOf(serviceFirst)).toBeLessThan(serviceTexts.indexOf(serviceSecond))
 
   const siteSection = page.locator('.site-navigation')
