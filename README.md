@@ -142,6 +142,11 @@ Specification Ready
 → EU-06 Readiness PASS
 → EU-06 Completion Verification PASS
 → EU-06 Integrated
+→ Feature-wide Convergence GAPS (Verification Coverage)
+→ CV-01 Readiness PASS
+→ CV-01 Completion Verification PASS
+→ Feature-wide Convergence READY
+→ CV-01 Integrated
 ```
 
 EU-01「栏目管理闭环」已经取得完整 Current Evidence 并完成集成：
@@ -204,17 +209,30 @@ EU-06「公开站点响应式与基础搜索引擎友好」已经取得与实现
 - 当前 Nginx fallback 的原始 HTML 提供站点级默认标题与摘要，内容级标题与摘要由 SPA JavaScript 在数据加载后设置；这形成了当前 SPA 基础收录风险证据，不能推断为不执行 JavaScript 的爬虫也能取得内容级 meta；
 - 当前证据不要求回退阶段或引入 SSR / SSG；EU-06 未扩展复杂 SEO 运营、关键词管理、收录效果分析或后续 Execution Unit。
 
+CV-01「Feature Acceptance Verification Closure」用于关闭首次 Feature-wide `converge` 暴露的验证覆盖缺口，不新增产品范围：
+
+- 首次 Feature-wide `converge` 结论：`GAPS`，阻塞项均为已有 Specification Acceptance Obligation 缺少 Current Verification Evidence；
+- Closure 范围：栏目真实多页分页、首页多文章置顶/推荐/展示顺序、`SERVICE` / `SITE` 导航公开分区与 SITE category；
+- 验证 PR：`#11`；
+- 最终 PR Head：`1f4d5021f5fa12126e9baaacb08f187bb69cc5ad`；
+- CI：Run `32682753321`（CI #37），Backend verify、Frontend verify 与 Browser verification 全部 PASS，整个 Run `completed/success`；
+- Browser verification 结果为 `11 passed (21.2s)`；三个新增 closure 用例均通过，并同时保留既有栏目、导航、文章发布、附件/浏览量和 EU-06 三浏览器回归；
+- Artifact Collection 已确认存在 `backend-jar`（ID `9504637135`）、`frontend-dist`（ID `9504631165`）与 `playwright-evidence`（ID `9504669767`），三个 Artifact 都属于 Run `32682753321` 且绑定 PR Head `1f4d5021f5fa12126e9baaacb08f187bb69cc5ad`；
+- 新增内容仅为 `frontend/tests/e2e/convergence-coverage.spec.ts`，没有修改产品实现；新证据没有暴露实现缺陷，证明首次 `GAPS` 的直接原因是 Verification Coverage 不完整；
+- 补齐证据后重新执行 Feature-wide `converge`，结论为 `READY`：当前 Specification Required Behavior、Current Implemented System、Technical Plan、Current Evidence 与跨 Unit 集成状态已收敛，不存在阻塞性的 Product / Domain / Architecture / ADR / Artifact Lifecycle Gap；
+- 集成提交：`266c54503ba8d165287a3968405150b079076491`；
+- 对应方法层 Finding 已反馈到 `dygapp/agentic-dev` Experiment Issue #18，后续将继续补充 closure outcome。
+
 当前协调状态：
 
-- 当前 `agentic-dev` validation baseline 为 `3e0b99d85d968f138e6eae9bc51ea1b7a710748e`，从 EU-06 起生效，不追溯重解释或重跑已集成的 EU-05；
+- 当前 `agentic-dev` validation baseline 为 `3e0b99d85d968f138e6eae9bc51ea1b7a710748e`，且该 commit 仍为 `agentic-dev/master` 当前最新 baseline；
 - EU-02 readiness 曾返回 `slice-work` 修正“已有公开栏目路由”的隐藏前置条件，修正后由 EU-02 自身建立最小公开栏目入口且不侵入 EU-04；
 - EU-03 readiness 在先修正 Consumer baseline Authority 漂移后 PASS；EU-03 已完成实现、Completion Verification 与集成；
 - EU-04 readiness PASS，既有 Technical Plan 足以支撑本 Unit，实现过程中未形成新的跨 Feature 长期架构决策，因此未触发新的 Technical Planning 或 ADR；
-- EU-04 已取得 Completion Evidence 并通过 PR #7 集成；
 - EU-05 readiness-check PASS：Specification、既有 Technical Plan、依赖、受控资源边界和验证策略足以支撑本 Unit；未发现 Domain / Architecture Authority 或 ADR Gap；
-- EU-05 已完成实现与 Completion Verification，并通过 PR #8 集成；
-- EU-06 readiness-check 已基于当前 baseline 对 Specification、Technical Plan、Execution Unit、Domain / Architecture / ADR Authority、Artifact Lifecycle 与 Governance 完成只读检查并返回 `PASS`；当前只执行 EU-06，不进入后续工作；
-- EU-06 已完成实现、Completion Verification 与集成；当前权威 Execution Units 已全部集成，不自动进入未定义的后续工作；
+- EU-06 readiness-check 已基于当前 baseline 对 Specification、Technical Plan、Execution Unit、Domain / Architecture / ADR Authority、Artifact Lifecycle 与 Governance 完成只读检查并返回 `PASS`；
+- EU-01～EU-06 已全部集成；首次 Feature-wide convergence 发现的纯 Verification Coverage 缺口已由 CV-01 关闭，重新 `converge` 已返回 `READY`，CV-01 也已通过 PR #11 集成；
+- 当前迭代已经达到 Feature-wide 收敛完成状态，不自动进入未定义的后续产品工作或自行创造 EU-07；
 - GitHub Actions 仍是后续跨前后端 Execution Unit 的重要 Completion Evidence 来源；按 `execute-unit` 从当前 Repository Rules 与实际仓库状态发现并执行验证机制。
 
 实现阶段不得重新打开已经确认的产品范围或重大架构方向，除非出现新的权威冲突或当前证据证明存在阻塞问题。
