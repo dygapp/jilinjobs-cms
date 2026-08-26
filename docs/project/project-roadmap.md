@@ -23,16 +23,16 @@ Repository:
 dygapp/agentic-dev
 
 Baseline:
-master@b4e5b2027bdbbe97cc0b7153be65c5afb7a0274e
+master@2ee56a5866d0201977a75b2b18ca2e791a218983
 ```
 
-本次 baseline 升级覆盖了旧 baseline `3e0b99d85d968f138e6eae9bc51ea1b7a710748e` 之后的三次集成变化，重点包括：
+本次 baseline 从 `b4e5b2027bdbbe97cc0b7153be65c5afb7a0274e` 升级到当前 `master`，共覆盖 3 个上游集成提交。对本 Consumer 有持续价值的变化包括：
 
-- 验收义务到验证证据的闭环强化；
-- `agentic-dev` 自身 Project Roadmap 基线；
-- 通用的条件性 Consumer Project Roadmap 规则及 Fresh Context 恢复要求。
+- 正式化已有 Consumer 的采用与 baseline 升级闭环，明确 `agentic-dev` 是上游知识源而非普通开发运行依赖；
+- 明确同一任务涉及多个 Repository 时分别确认授权，并将持续权限边界固化为 Consumer-local Project Rule；
+- 强化异步外部操作和 `github-actions-verification`：`queued` / `pending` / `in_progress` 属于闭环中间状态，应在可观察且获授权时有界持续观察、诊断、修复、重跑和复验。
 
-这些变化已固化到本仓库 `docs/project/development-method.md` 和本文。后续普通开发优先使用 Consumer-local 规则，不需要持续跨仓库读取 `agentic-dev`。
+这些变化已固化到本仓库 `AGENTS.md`、`docs/project/development-method.md` 与相关连续执行规则。`agentic-dev` 自身 Project Roadmap、Issue #33 处理状态与 eval 状态没有进入 Consumer Authority。后续普通开发继续优先使用 Consumer-local 规则。
 
 ## 总体路线
 
@@ -52,6 +52,7 @@ master@b4e5b2027bdbbe97cc0b7153be65c5afb7a0274e
 | 2026-08-24 | Feature-wide Convergence 完成并固化状态 | PR #11、PR #12、`f848f86fc410f391f69e674b9ab0b3df6992023e` |
 | 2026-08-26 | 建立人工集成评审环境 RC-01 | PR #13、`dddbea592e933bb5a3ca3bb9911f645c2a752ea9` |
 | 2026-08-26 | 建立 Consumer Project Roadmap 与本地开发方法 | `docs/project/project-roadmap.md`、`docs/project/development-method.md` |
+| 2026-08-26 | 将 `agentic-dev` baseline 升级到 `2ee56a5866d0201977a75b2b18ca2e791a218983` 并吸收 Issue #33 后续通用规则 | `AGENTS.md`、`docs/project/development-method.md`、`docs/agentic-dev-continuous-execution-mode.md` |
 
 此前 EU-01～EU-06、CV-01 的详细证据由当前 Git 历史、PR、CI 和 `README.md` 历史版本保留，不在本 Roadmap 重复维护全部流水。
 
@@ -67,7 +68,9 @@ master@b4e5b2027bdbbe97cc0b7153be65c5afb7a0274e
 2. 开发方法优先读取 `docs/project/development-method.md`；
 3. 没有新的 Product Intent 时，不自行创造 EU-07 或扩大现有 Scope；
 4. 新需求进入后，按 Specification → Slice → Readiness → Execute → Converge 推进；
-5. 每项 Acceptance Obligation 必须闭环到实现责任、验证责任、计划证据与 Current Evidence。
+5. 每项 Acceptance Obligation 必须闭环到实现责任、验证责任、计划证据与 Current Evidence；
+6. 跨 Repository 操作按 `AGENTS.md` 的具体权限矩阵逐 Repository 判断；
+7. 异步 GitHub Actions / 外部 Job 仍可观察时保持有界执行闭环，不把非终态当作完成或默认人工接管点。
 
 ## 下一步工作
 

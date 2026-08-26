@@ -94,7 +94,7 @@ docs/technical/verification-strategy.md
 当前精确 baseline：
 
 ```text
-master@b4e5b2027bdbbe97cc0b7153be65c5afb7a0274e
+master@2ee56a5866d0201977a75b2b18ca2e791a218983
 ```
 
 但后续普通开发不要求持续跨仓库读取 `agentic-dev`。本项目已经将当前采用的方法和 Skills 使用规则固化在：
