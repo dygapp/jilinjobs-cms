@@ -115,13 +115,37 @@ docs/project/development-method.md
 - 在本项目范围内创建或更新文件；
 - 创建和更新 Branch、Commit、Issue、Pull Request；
 - Push 已验证的项目变更；
+- 运行、观察或按当前项目规则重试 GitHub Actions；
 - 在当前工作已经满足相应 Verification / Convergence 要求时执行本仓库内的正常集成操作。
 
 该授权只代表 Repository 操作权限，不代表 Agent 可以自行改变 Product Intent 或 Scope。产品决策仍必须遵守上面的 Human Escalation 规则。
 
-以下事项不因本授权自动放开：
+### Repository Operation Boundary
 
-- `dygapp/jilinjobs-cms` 之外的 Repository 或外部系统操作；
+当前 Consumer 工作对两个 Repository 的操作权限明确区分：
+
+`dygapp/jilinjobs-cms`：
+
+- 允许读取和修改仓库文件；
+- 允许创建或更新 Branch、Commit、Issue、Pull Request；
+- 允许 Push 已验证的项目变更；
+- 允许运行、观察或按项目规则重试 GitHub Actions；
+- 允许在当前 Consumer Authority 与验证要求满足时执行本仓库内正常集成操作。
+
+`dygapp/agentic-dev`：
+
+- 允许读取 Repository、Branch、Commit、Issue、Pull Request 和文件内容；
+- 允许创建新的 Experiment / Feedback Issue，或向现有相关 Issue 追加、更新反馈；
+- **禁止修改该仓库文件；**
+- **禁止创建或更新该仓库 Branch、Commit、Pull Request；**
+- **禁止运行、重试或以其他方式改变该仓库 GitHub Actions 状态；**
+- 即使 Consumer Evidence 暴露 Method、Contract、Skill 或 Guide 改进候选，也只能通过 Issue 反馈，不得由当前 Consumer 工作直接实施到 `agentic-dev`。
+
+上述边界属于 Human Authority 明确授权，优先于工具本身可能具备的技术写权限。工具可执行某项操作不等于当前工作已获授权执行该操作。
+
+除上述对 `dygapp/agentic-dev` 明确开放的只读与 Issue 反馈权限外，以下事项不因本授权自动放开：
+
+- 其他 `dygapp/jilinjobs-cms` 之外的 Repository 或外部系统写操作；
 - Production Deployment / Release 到真实运行环境；
 - Credentials、Secrets 或其他敏感配置操作；
 - 与当前项目工作无关的外部副作用；
