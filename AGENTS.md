@@ -23,9 +23,9 @@
 项目事实或规则发生冲突时，按以下优先级判断：
 
 1. `AGENTS.md`：Repository Governance、Authority Boundary 与工作规则；
-2. `README.md`：当前项目目标、当前迭代范围与项目阶段；
+2. `README.md`：当前项目目标、当前迭代范围与稳定项目入口；
 3. `docs/requirements/information-publishing.md`：当前迭代范围内行为的详细权威业务需求；
-4. 后续依据以上权威正式形成的 Specification、Architecture、Decision 等项目产物（Artifact）；
+4. 后续依据以上权威正式形成的 Specification、Architecture、Decision、Project Roadmap、Consumer-local Development Method 等项目产物（Artifact）；
 5. Code 与 Tests：用于证明当前实现状态，不得反向发明产品需求；
 6. 会话历史（Conversation History）、临时计划和 Agent reasoning：均不构成项目权威。
 
@@ -52,21 +52,40 @@
 
 - Repository：`dygapp/agentic-dev`
 - Validation Baseline Branch：`master`
-- Validation Baseline Commit：`3e0b99d85d968f138e6eae9bc51ea1b7a710748e`
+- Validation Baseline Commit：`b4e5b2027bdbbe97cc0b7153be65c5afb7a0274e`
 
-当前 Consumer Experiment 的 Method、Operating Guide 与 Skills 判断必须基于上述精确 Validation Baseline。若项目负责人后续明确指定新的 Validation Baseline，应先更新本处，再按新的精确 baseline 继续工作。
+该 baseline 已完成 Consumer Project Roadmap、Fresh Context 恢复以及验收义务到 Current Evidence 闭环等方法增强。
 
-按 `agentic-dev` 当前 Operating Guide 与 Method 使用渐进式披露（Progressive Disclosure）：
+本项目不是在每次开发工作中直接运行 `agentic-dev` 仓库的方法文档，而是将当前采用的方法和 Skills 使用规则固化在 Consumer Repository：
 
-- 只加载当前阶段真正需要的 Skills；
+```text
+docs/project/development-method.md
+```
+
+后续普通开发应优先读取并遵循本仓库 `AGENTS.md`、`README.md`、`docs/project/development-method.md`、`docs/project/project-roadmap.md` 以及与当前工作相关的 Consumer Authority。除非项目负责人明确要求更新 `agentic-dev` baseline，或本仓库尚未固化某个必要的方法问题，否则不要求为普通开发重新跨仓库读取 `agentic-dev`。
+
+当项目负责人明确要求升级 baseline 时，应：
+
+1. 读取指定分支的最新精确 commit；
+2. 比较当前 Consumer baseline 到新 baseline 的 Method、Operating Guide、Contract 与 Skill 变化；
+3. 只将影响本 Consumer 工作方式的变化固化到本仓库；
+4. 同步更新本节、`docs/project/development-method.md` 和 `docs/project/project-roadmap.md`；
+5. 不继承 `agentic-dev` 自身的 Project Roadmap、Issue、实验状态或项目事实。
+
+当前采用的主要方法原则：
+
+- 使用渐进式披露（Progressive Disclosure），只加载当前阶段真正需要的 Skills；
 - 阶段是工作状态，不为了表示阶段而机械创建 Artifact；
 - 规格说明（Specification）聚焦 WHAT / WHY；
 - 只有存在跨执行单元（Execution Units）的长期 HOW 协调价值时，才持久化技术计划（Technical Plan）；
 - 优先形成纵向、可独立验证、范围明确且 context-fit 的 Execution Unit；
 - 在条件允许时使用 Fresh Context；
-- 没有当前证据（Current Evidence），不得声明完成、通过或修复成功。
+- 每项 Acceptance Obligation 必须闭环到实现责任、验证责任、计划证据与已执行的 Current Evidence；
+- 实现覆盖不等于验证覆盖；
+- 没有 Current Evidence，不得声明完成、通过或修复成功；
+- 项目跨多个里程碑或 Fresh Context 持续演进时，维护 Consumer 自己的 `docs/project/project-roadmap.md`。
 
-除非 Consumer 项目后续产生真实需要，不复制 `agentic-dev` 的完整目录结构、方法文档或 Skills 到本仓库。
+当前核心 Skills 和平台专项 Skill 的使用边界统一记录在 `docs/project/development-method.md`，不在本文件重复维护 Skill 级细节。
 
 ## 人工升级（Human Escalation）
 
@@ -110,9 +129,7 @@
 
 ## 实验边界（Experiment Boundary）
 
-本项目当前同时是 `agentic-dev` Consumer Experiment。
-
-Experiment Feedback 通过 `dygapp/agentic-dev` GitHub Issue #18 跟踪。该 Issue 只是 Evidence 传输和实验跟踪通道，不属于 Consumer Product Authority。
+本项目当前同时是 `agentic-dev` Consumer Experiment / Validation 的真实 Consumer，但实验跟踪事实不得成为 Consumer Product Authority。
 
 只回传有意义的 Evidence 与 Classification Candidate，不记录：
 
