@@ -23,15 +23,16 @@ Repository:
 dygapp/agentic-dev
 
 Baseline:
-master@3e0b99d85d968f138e6eae9bc51ea1b7a710748e
+master@b4e5b2027bdbbe97cc0b7153be65c5afb7a0274e
 ```
 
-Consumer 使用原则：
+本次 baseline 升级覆盖了旧 baseline `3e0b99d85d968f138e6eae9bc51ea1b7a710748e` 之后的三次集成变化，重点包括：
 
-- `agentic-dev` 决定如何工作（Method / Operating Guide / Skills）；
-- `jilinjobs-cms` 自身文档决定产品事实、Scope 和验收要求；
-- 不直接复制 `agentic-dev` 的项目事实、路线状态或实验结论；
-- 当需要升级方法基线时，先更新 Consumer 中记录的 baseline，再依据新的 baseline 工作。
+- 验收义务到验证证据的闭环强化；
+- `agentic-dev` 自身 Project Roadmap 基线；
+- 通用的条件性 Consumer Project Roadmap 规则及 Fresh Context 恢复要求。
+
+这些变化已固化到本仓库 `docs/project/development-method.md` 和本文。后续普通开发优先使用 Consumer-local 规则，不需要持续跨仓库读取 `agentic-dev`。
 
 ## 总体路线
 
@@ -40,55 +41,69 @@ Consumer 使用原则：
 | Consumer Repository Bootstrap | 已完成 | 建立独立 Consumer Authority、Specification、Technical Plan 和验证边界 |
 | 信息发布核心能力纵向建设 | 已完成 | 完成栏目、导航、文章、发布、公开页面、附件、浏览量和响应式能力建设 |
 | Feature-wide Convergence 验证 | 已完成 | 完成首次功能范围整体验证并关闭已发现验证缺口 |
-| Consumer 继续演进验证 | 当前 | 验证 Fresh Context 基于 Consumer Authority 恢复项目状态，并开展新的真实工作 |
+| 人工集成评审环境 | 已完成 | 建立可手工触发的临时评审环境、AI 测试数据与外部 HTTP 评审入口 |
+| Consumer 继续演进 | 当前 | 以当前 Consumer Authority、Project Roadmap 和本地开发方法恢复并推进后续真实工作 |
 | 新业务能力扩展 | 条件性后续 | 根据新的 Product Intent 和 Authority 增量定义 |
 
 ## 已完成里程碑
 
-| 项目 | 证据 |
-|---|---|
-| Consumer Authority 建立 | `AGENTS.md`、`README.md` |
-| Specification 建立 | `docs/specifications/center-main-site-core.md` |
-| Technical Plan 建立 | `docs/technical/` |
-| 多个 Execution Unit 完成 | PR、CI、Browser Verification 记录 |
-| Feature-wide Convergence 完成 | 当前 GitHub 记录 |
+| 日期 | 里程碑 | 证据 |
+|---|---|---|
+| 2026-08-24 | Feature-wide Convergence 完成并固化状态 | PR #11、PR #12、`f848f86fc410f391f69e674b9ab0b3df6992023e` |
+| 2026-08-26 | 建立人工集成评审环境 RC-01 | PR #13、`dddbea592e933bb5a3ca3bb9911f645c2a752ea9` |
+| 2026-08-26 | 建立 Consumer Project Roadmap 与本地开发方法 | `docs/project/project-roadmap.md`、`docs/project/development-method.md` |
+
+此前 EU-01～EU-06、CV-01 的详细证据由当前 Git 历史、PR、CI 和 `README.md` 历史版本保留，不在本 Roadmap 重复维护全部流水。
 
 ## 当前阶段
 
 当前核心目标：
 
-> 基于已有 Consumer Repository 开展继续演进验证，不重复 Bootstrap，不机械扩展方法和 Skill。
+> 从“首轮功能建设与收敛”切换为“已有 Consumer 的持续演进”，后续 Fresh Context 应只依赖 Consumer Repository Authority、当前代码与当前证据恢复工作，不重复 Greenfield Bootstrap。
 
-重点验证：
+当前约束：
 
-1. Fresh Context 是否可以仅依靠 Consumer Repository Authority 恢复工作状态；
-2. 新需求是否可以通过 Specification → Slice → Execution → Convergence 闭环推进；
-3. Consumer 是否保持与 `agentic-dev` 的职责边界；
-4. 验收要求是否持续关联实现责任和 Current Evidence。
+1. 产品事实继续由 `AGENTS.md`、`README.md`、权威需求和当前 Specification 决定；
+2. 开发方法优先读取 `docs/project/development-method.md`；
+3. 没有新的 Product Intent 时，不自行创造 EU-07 或扩大现有 Scope；
+4. 新需求进入后，按 Specification → Slice → Readiness → Execute → Converge 推进；
+5. 每项 Acceptance Obligation 必须闭环到实现责任、验证责任、计划证据与 Current Evidence。
 
 ## 下一步工作
 
-1. 根据新的真实需求建立后续 Specification；
-2. 必要时创建 Technical Plan；
-3. 按 Execution Unit 进行独立验证；
-4. 持续更新本 Roadmap 中的项目级状态。
+当前没有由 Repository Authority 定义的新产品切片。
 
-## 不属于本 Roadmap 的内容
+新的真实需求到达后：
 
-以下内容不在本文维护：
+1. 判断是否改变当前 Goal / Scope / User-visible Behavior；
+2. 更新或新增 Specification；
+3. 仅在跨 Execution Unit 的长期 HOW 需要协调时更新 Technical Plan；
+4. 形成纵向、可验证、context-fit 的 Execution Unit；
+5. 通过 Readiness、Fresh-context Execute 和 Converge 完成闭环；
+6. 项目级路线变化时更新本文。
 
-- 单次执行命令；
-- 临时实施步骤；
-- 单个文件修改过程；
-- Agent 私有推理过程；
-- `agentic-dev` 方法内部演进状态。
+## Fresh Context 恢复入口
+
+新的项目上下文按以下顺序恢复：
+
+1. `AGENTS.md`；
+2. `README.md`；
+3. `docs/project/project-roadmap.md`；
+4. `docs/project/development-method.md`；
+5. 当前工作直接相关的 Requirement / Specification / Technical Plan / Work Artifact；
+6. 当前代码、测试、Branch / PR / CI 等 Current Evidence。
+
+不得使用其他聊天、其他项目或个人记忆补充未固化的 Consumer 项目事实。
 
 ## 更新触发条件
 
 出现以下情况时更新本文：
 
-- 项目阶段变化；
-- 重要里程碑完成；
-- 当前目标变化；
-- 方法 baseline 发生正式升级并影响 Consumer 使用方式；
-- 新证据改变项目路线判断。
+- 项目阶段或当前核心目标改变；
+- 项目级里程碑完成、取消或被替代；
+- 已确定的下一步工作改变；
+- 新需求进入正式路线；
+- 项目负责人明确要求升级 `agentic-dev` baseline；
+- 当前路线与 GitHub 当前事实不再一致。
+
+普通局部实现、单个 Execution Unit 内部状态变化或临时实施步骤不要求更新本文。
