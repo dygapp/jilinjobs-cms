@@ -11,10 +11,19 @@ Repository:
 dygapp/agentic-dev
 
 Baseline:
-master@b4e5b2027bdbbe97cc0b7153be65c5afb7a0274e
+master@2ee56a5866d0201977a75b2b18ca2e791a218983
 ```
 
 该 baseline 提供 Method、Operating Guide、Skill Contracts 与 Skills 的来源依据，但不提供本项目的业务事实。
+
+相对上一 baseline `b4e5b2027bdbbe97cc0b7153be65c5afb7a0274e`，本次实际吸收的新增规则是：
+
+- 已有 Consumer 将 `agentic-dev` 视为上游知识源而非日常运行依赖，并采用“精确 baseline → 选择性采纳 → Consumer-local 固化 → 恢复本地 Authority”的升级闭环；
+- 同一工作涉及多个 Repository 时，逐 Repository 判断具体操作授权，技术工具能力不能替代 Human Authority；
+- Workflow / Deployment / 远程 Job 等异步外部操作属于执行闭环中间状态，等待、观察、失败诊断、授权内修复和重试必须保持有界并持续到取得目标证据或出现真实阻塞；
+- `github-actions-verification` 对 `queued` / `pending` / `in_progress` Run 明确不再视为默认退出条件，并要求重新核对 event、Head SHA、status / conclusion、Jobs / Logs / Artifacts 与当前目标提交的关联。
+
+`agentic-dev` 自身 Project Roadmap、Issue #33 处理状态、eval 维护状态等没有被继承为 Consumer 项目事实。
 
 ## 2. Consumer 与 agentic-dev 的职责边界
 
@@ -22,6 +31,7 @@ master@b4e5b2027bdbbe97cc0b7153be65c5afb7a0274e
 - `jilinjobs-cms` 决定本项目的 Goal、Scope、Requirements、Specification、Architecture、Code、Tests、Verification 与 Integration Policy。
 - `agentic-dev/docs/project/*` 中属于其自身项目的状态、路线和实验事实不得复制为 Consumer 项目事实。
 - 从 `agentic-dev` baseline 吸收的方法变化，应转化为本仓库可直接执行的本地规则，而不是要求后续 Agent 持续跨仓库读取方法文档。
+- 新的 `agentic-dev` 提交不会仅因存在就自动覆盖已固化的 Consumer-local 规则；只有显式 baseline 升级才重新比较并处理更新、保留或取代关系。
 
 ## 3. 常规 Feature 工作流
 
@@ -71,7 +81,32 @@ Repository Policy / Human Authority
 
 当 Feature-wide `converge` 暴露的缺口只是已有 Acceptance Obligation 缺少验证覆盖时，应优先补齐 Verification Coverage，不得因此发明新的产品范围。
 
-## 5. Project Roadmap
+## 5. 外部操作与异步执行闭环
+
+外部 Repository / GitHub / Workflow 操作遵循：
+
+```text
+Analyze
+→ Act
+→ Observe
+→ Collect Current Evidence
+→ Diagnose
+→ Fix / Retry when authorized
+→ Verify
+→ Report
+```
+
+规则：
+
+- 写操作前读取当前 Source of Truth，写后重新读取验证；Mutation Response 不等于目标状态已成立。
+- 同一任务涉及多个 Repository 时，对读取、Issue / Evidence、文件 / Branch / Commit / PR、Workflow、Merge / Release / Deploy 等权限分别判断，不把一个 Repository 的授权推导到另一个 Repository。
+- 持续有效的权限边界应固化为 Consumer Project Rule；本项目的具体权限矩阵以 `AGENTS.md` 为准。
+- Workflow、Deployment、远程 Job 等异步操作进入 `queued`、`pending` 或 `in_progress` 时，只表示执行仍处在闭环中间状态；当当前目标要求取得结果且 Runtime 仍可观察时，不因“仍在运行”而默认请求人工继续。
+- 异步观察必须有界：按正常运行基线设置合理轮询间隔、观察上限、timeout 与 cancellation 策略，避免无限等待。
+- 失败后先取得日志、Job / Step、Artifact 或其他诊断证据；修复属于当前 Scope 且已授权时，使用 `systematic-debug` 定位 Root Cause、执行最小修复、重跑并重新观察。
+- 闭环可在三类结果下结束：取得并核对目标证据；出现真实 Human / Runtime 阻塞；达到有界观察上限并准确保留 `Executed but not fully verified`。后两者均不能声明完成。
+
+## 6. Project Roadmap
 
 本项目需要跨多个里程碑和 Fresh Context 持续演进，因此维护：
 
@@ -83,7 +118,7 @@ Roadmap 只维护项目级路线：已完成、当前、下一步和条件性后
 
 README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项目路线。
 
-## 6. Skills
+## 7. Skills
 
 当前 baseline 的核心 Skills：
 
@@ -106,30 +141,36 @@ README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项�
 - 不要求每个工作都走完整 Skill 清单；
 - Skill 不得覆盖 Consumer Authority；
 - 遇到实现阶段的意外失败时，使用系统化调试路径，而不是无证据试错；
-- 当 GitHub Actions 的触发、CI 可观察性、Artifact、容器 Runtime、timeout / cancellation 或 diagnostics 会影响证据可靠性时，按需应用 `github-actions-verification` 的规则。
+- 当 GitHub Actions 的触发、CI 可观察性、Artifact、容器 Runtime、timeout / cancellation 或 diagnostics 会影响证据可靠性时，按需应用 `github-actions-verification`；
+- 如果调用要求实际完成 GitHub Actions 验证，dispatch / rerun 成功只是 `Act`，不是 Skill 退出条件；仍可观察的 `queued` / `pending` / `in_progress` Run 必须继续有界观察；
+- 观察中持续核对 Run event、Head SHA、status / conclusion、Jobs / Steps / Logs / Artifacts 与当前 PR / Branch / Commit 的对应关系，只使用与当前目标提交真实关联的 Evidence；
+- Run 失败且修复已获授权时，取得诊断证据后进入 `systematic-debug`，完成最小修复、重跑和复验；
+- 如果调用只要求设计或优化验证路径而不要求实际执行，应返回 Evidence Retrieval Plan，并明确实际 Completion Evidence 尚未取得，不把计划写成已执行结果。
 
-## 7. Fresh Context 恢复顺序
+## 8. Fresh Context 恢复顺序
 
 新的开发上下文默认按以下顺序恢复：
 
 1. 读取根目录 `AGENTS.md`；
 2. 读取 `README.md`；
 3. 读取 `docs/project/project-roadmap.md`，确认当前路线和当前目标；
-4. 读取与当前工作直接相关的 Requirement / Specification / Technical Plan / Work Artifact；
-5. 读取当前代码、测试、Branch / PR / CI 等 Current Evidence；
-6. 只在当前任务真实需要时加载对应 Skill。
+4. 读取 `docs/project/development-method.md`；
+5. 读取与当前工作直接相关的 Requirement / Specification / Technical Plan / Work Artifact；
+6. 读取当前代码、测试、Branch / PR / CI 等 Current Evidence；
+7. 只在当前任务真实需要时加载对应 Skill。
 
 不得依赖历史聊天或个人记忆补充未固化的项目事实。
 
-## 8. baseline 升级规则
+## 9. baseline 升级规则
 
 只有项目负责人明确要求更新 `agentic-dev` baseline 时，才执行 baseline 升级。
 
 升级时：
 
-1. 读取 `agentic-dev` 指定分支最新精确 commit；
+1. 读取并记录 `agentic-dev` 指定分支最新精确 commit；
 2. 对比本项目当前 baseline 到新 baseline 的 Method、Operating Guide、Contract 与 Skill 变化；
-3. 只吸收会影响当前 Consumer 工作方式的变化；
-4. 将这些变化固化到本仓库对应文档；
-5. 同步更新 `AGENTS.md`、本文和 Roadmap 中的 baseline 记录；
-6. 不自动继承 `agentic-dev` 自身的 Project Roadmap、Issue、实验状态或其他项目事实。
+3. 区分跨项目可复用资产与 `agentic-dev` 自身 Project Rule；
+4. 根据 Consumer 真实需要和现有 Authority 选择性采纳，不机械复制完整文档体系；
+5. 将具有持续约束价值的已采纳规则固化到 Consumer 可发现的 Authority 中，并显式处理旧规则的更新、保留或取代；
+6. 同步更新 `AGENTS.md`、本文和 Roadmap 的 baseline 记录；
+7. 完成升级后恢复以 Consumer-local Authority 为普通开发入口，不自动继承 `agentic-dev` 自身 Project Roadmap、Issue、实验状态或其他项目事实。
