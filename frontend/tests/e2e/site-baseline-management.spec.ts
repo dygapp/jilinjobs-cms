@@ -33,14 +33,16 @@ test('EU-10：版本化初始化静态资源包在干净运行时挂载并公开
   expect((await publicResource.body()).length).toBeGreaterThan(0)
 })
 
-test('EU-10：静态资源支持目录浏览、上传、替换、删除和恢复', async ({ page, request }, testInfo) => {
+test('EU-10：静态资源支持目录浏览、上传、后台替换、删除和恢复', async ({ page, request }, testInfo) => {
   const suffix = `${Date.now()}-${testInfo.retry}`
   const directory = `verification-${suffix}`
   const filename = 'sample.png'
   const path = `${directory}/${filename}`
 
+  const initialContent = Buffer.from('version-one')
+  const replacementContent = Buffer.from('version-two')
   let response = await request.post(`/api/admin/static-resources?path=${encodeURIComponent(path)}&replace=false`, {
-    multipart: { file: { name: filename, mimeType: 'image/png', buffer: Buffer.from('version-one') } },
+    multipart: { file: { name: filename, mimeType: 'image/png', buffer: initialContent } },
   })
   expect(response.ok()).toBeTruthy()
 
@@ -51,15 +53,17 @@ test('EU-10：静态资源支持目录浏览、上传、替换、删除和恢复
   await expect(page.getByTestId('static-current-path')).toHaveText(directory)
   const fileRow = page.getByRole('row').filter({ hasText: filename })
   await expect(fileRow.getByRole('link', { name: '查看/下载' })).toHaveAttribute('href', `/static/${directory}/${filename}`)
+
   await fileRow.getByRole('button', { name: '替换' }).click()
   await expect(page.getByText(`待替换：${path}`)).toBeVisible()
+  await page.getByTestId('static-file-input').setInputFiles({ name: 'replacement.png', mimeType: 'image/png', buffer: replacementContent })
+  await page.getByTestId('confirm-static-replace').click()
+  await page.getByRole('button', { name: '确认替换' }).click()
+  await expect(page.getByText('静态资源已替换', { exact: true })).toBeVisible()
 
-  response = await request.post(`/api/admin/static-resources?path=${encodeURIComponent(path)}&replace=true`, {
-    multipart: { file: { name: filename, mimeType: 'image/png', buffer: Buffer.from('version-two') } },
-  })
-  expect(response.ok()).toBeTruthy()
   const replaced = await request.get(`/static/${directory}/${filename}`)
-  expect(await replaced.body()).toEqual(Buffer.from('version-two'))
+  expect(replaced.ok()).toBeTruthy()
+  expect(await replaced.body()).toEqual(replacementContent)
 
   const removed = await request.delete(`/api/admin/static-resources?path=${encodeURIComponent(path)}`)
   expect(removed.ok()).toBeTruthy()
