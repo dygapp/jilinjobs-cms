@@ -1,205 +1,177 @@
-# 中心主站原型技术计划（Technical Plan）
+# 中心主站站点收敛技术计划（Technical Plan）
 
-## 1. 目的与边界
+## 1. 目的
 
-本文记录当前原型阶段对多个执行单元（Execution Units）具有持续协调价值的 HOW 决策，用于把 `docs/specifications/center-main-site-core.md` 安全映射到实现。
+本文把 `docs/specifications/center-main-site-core.md` 当前站点收敛规格映射到跨执行单元具有长期价值的 HOW。
 
-本计划只服务当前可运行原型：独立建设、验证中心主站信息发布核心能力。后续正式化、嵌入 `jilinjobs`、认证授权、分布式基础设施等不属于当前阶段，不在本计划中提前设计。
+当前继续使用 Vue 3 + TypeScript + Vite + Vue Router、Element Plus、Spring Boot 模块化单体、Kotlin / Java 21 / Gradle、MySQL + MyBatis、本地文件系统和 REST API。
 
-## 2. 总体技术方案
+不引入 MQ、Redis、MinIO、SSR/SSG 或新的认证系统。
 
-当前采用前后端分离开发、同一原型系统边界内协作的结构：
+## 2. 总体架构
 
-- 前端：Vue 3 + TypeScript + Vite + Vue Router；
-- 原型管理端组件库：Element Plus；
-- 后端：Spring Boot 模块化单体应用；
-- 构建与运行基线：Gradle、Java 21、Kotlin；
-- 数据持久化：MySQL + MyBatis；
-- 文件资源：原型阶段使用本地文件系统保存文件内容，MySQL 保存资源元数据；
-- 通信：前后端通过同步 REST API 交互；
-- 当前不引入 MQ、MinIO、Redis；
-- 当前不建设或接入认证授权。
+后端增加 `page`（固定页面与页面组）、`siteconfig`（网站配置）、`staticresource`（网站静态目录管理）。已有 `column`、`navigation`、`content`、`resource` 继续保留原边界。
 
-原型优先保持单体、同步、可直接运行和可验证，不为未来可能的分布式形态预设中间件或服务拆分。
+前端仍为一个 Vite 工程，但公开端按“可演进多 Shell”组织：默认/Home Shell、Page Shell，后续按需要增加 Guide / Jobs / 页面专用 Shell。
 
-## 3. 前端边界
+第一版允许 `page.html` 统一处理 `/page/**`，不要求立即创建所有专用 Entry。
 
-### 3.1 单一前端工程
+## 3. URL 与前端 Entry
 
-当前使用一个 Vue 前端工程承载两类界面，并通过路由边界隔离：
+### 3.1 Canonical URL
 
-- 公开站点：主站首页、栏目/二级页面、内容详情页面；
-- 原型管理端：栏目、导航、文章、发布状态、附件和浏览量查看等管理界面。
+```text
+/                         首页
+/column/{alias}           栏目
+/article/{id}             文章
+/page/{alias}             普通固定页
+/page/{group}/{alias}     页面组固定页
+/static/**                网站静态资源
+/assets/**                前端构建资源
+/api/**                   后端 API
+/admin/**                 原型管理端
+```
 
-管理端使用 Element Plus 提升原型建设效率；公开站点不以 Element Plus 作为视觉体系约束，避免将管理组件样式直接带入面向公众的主站页面。
+### 3.2 Shell fallback
 
-### 3.2 路由与直接访问
+页面 URL 与 HTML Entry 解耦。长期规则：
 
-Vue Router 使用能够表达稳定页面地址的历史路由方式。公开内容详情必须拥有可复制、可刷新、可再次直接打开的稳定地址。
+```text
+/page/{group}/{page}
+→ 最具体页面 Shell（如存在）
+→ group Shell（如存在）
+→ page Shell
+→ 默认 Shell
+```
 
-部署时必须为前端路由提供服务端 fallback，保证浏览器直接访问前端路由时仍能进入应用，而不是返回静态文件 404。
+第一版实现可以让 Nginx 对 `/page/**` 统一 fallback `page.html`；后续新增 `guide.html` / `jobs.html` 不改变公开 URL。
 
-### 3.3 基础搜索引擎友好
+Nginx 不实现无限层级递归查找；当前公开页面业务层级控制在 `/page/{page}` 与 `/page/{group}/{page}` 两级。
 
-公开页面按当前 Specification 提供稳定 URL，并根据页面内容设置合理的页面标题和摘要信息。
+## 4. 数据模型
 
-当前原型不引入 SSR / SSG 框架。SPA 对不同搜索引擎爬虫的实际收录能力作为验证风险保留；如果后续当前证据证明无法满足本轮已确认的基础收录要求，再基于证据调整渲染策略，而不是现在预先扩大架构复杂度。
+### 4.1 栏目
 
-## 4. 后端模块化单体边界
+`cms_column` 增加稳定 `alias`，唯一约束。公开查询支持按 alias 获取。
 
-后端保持一个 Spring Boot 可部署应用，在应用内部按业务职责形成清晰模块。当前长期模块边界为：
+### 4.2 固定页面组
 
-- **栏目模块**：栏目层级、排序、启停、删除约束；
-- **导航模块**：主导航、服务入口、网站导航及目标组织；
-- **内容模块**：文章维护、发布状态、推荐/置顶/排序、浏览量；
-- **资源模块**：正文图片、封面、附件的元数据与文件读写；
-- **站点查询边界**：面向公开首页、栏目页、详情页组织跨模块只读数据；
-- **管理 API 边界**：面向原型管理端暴露写操作与后台查询。
+新增 `cms_page_group`：id、alias、name、sort_order、enabled。
 
-这些是领域与应用层面的模块边界，不要求当前阶段拆成独立服务，也不要求为每个模块创建独立部署单元。
+### 4.3 固定页面
 
-各模块拥有自己的业务规则与持久化映射。跨模块协作通过明确的应用服务或模块接口完成，不允许为了方便直接跨模块操作对方的 Mapper 或数据库表，从而避免模块化单体退化为无边界的共享数据层。
+新增 `cms_page`：id、group_id（可空）、alias、name、body_html、render_mode、embed_url（可空）、sort_order、enabled、timestamps。
 
-## 5. API 与调用边界
+同一 group 内 alias 唯一；无 group 的普通固定页 alias 全局唯一。
 
-REST API 分成两个稳定命名空间：
+`render_mode` 第一版包含 `RICH_TEXT`、`EMBED_PLACEHOLDER`、`INTERNAL_STATIC`。第一版完整实现 RICH_TEXT 与 EMBED_PLACEHOLDER； INTERNAL_STATIC 保留工程接缝，不允许后台上传 HTML/JS。
 
-- `/api/public/**`：公众访问所需的只读查询、详情访问、浏览量记录和公开资源读取；
-- `/api/admin/**`：当前原型管理端使用的栏目、导航、内容、资源维护接口。
+### 4.4 导航
 
-当前 `/api/admin/**` 不设置登录、认证或授权校验，这是本轮明确的原型边界；保留独立命名空间的目的，是避免未来若正式接入认证授权时侵入领域模块和公开 API。
+`cms_navigation` 增加 `parent_id`、`target_page_id`、`open_mode`。
 
-公开 API 必须在服务端执行“只暴露已发布内容”的业务约束，不能仅依赖前端隐藏草稿或已撤回内容。
+目标类型扩展为 HOME、COLUMN、PAGE、LINK、PLACEHOLDER。
 
-## 6. 数据与持久化设计
+`open_mode`：DEFAULT、SAME_WINDOW、NEW_WINDOW。
 
-### 6.1 数据库边界
+DEFAULT 解析：外部 LINK → NEW_WINDOW；其他本站目标 → SAME_WINDOW。
 
-当前使用单个 MySQL 数据库。各业务模块维护自己的表和 MyBatis 映射，不为原型阶段引入独立数据库、缓存或事件存储。
+### 4.5 网站配置
 
-需要持久化的核心数据至少覆盖：
+新增 `cms_site_config`：config_key、config_value、value_type、description、updated_at。
 
-- 栏目层级、展示属性、排序与启停状态；
-- 导航类别/位置、目标、排序与启停状态；
-- 文章标题、栏目归属、正文、来源、发布日期、封面、推荐/置顶/排序；
-- 文章状态、实际发布时间、最后修改时间、浏览量；
-- 文件资源元数据及与文章的关联关系。
+表结构可以通用，但允许的 key 由后端注册表/枚举定义，管理 API 只暴露已定义配置项，避免变成自由配置中心。
 
-当前不建立独立标签/分类内容模型。
+链接组第一版可以使用 JSON 值承载结构化数组，后端校验基本格式；后续需要复杂查询时再拆表。
 
-### 6.2 发布状态
+## 5. 初始化数据
 
-文章状态使用明确枚举表达：草稿、已发布、已撤回。
+新增 Flyway migration，不修改 V1～V3。
 
-以下规则必须由后端业务层统一保证：
+迁移负责 column alias、新页面/页面组/配置表、导航扩展，以及插入确认的栏目、页面组、固定页面、导航、站点配置。
 
-- 新文章默认为草稿；
-- 发布、撤回、重新发布是显式状态操作；
-- 普通编辑不自动改变发布状态；
-- 公开查询只能返回已发布文章；
-- 重新发布时保留可用于表达当前实际发布结果的发布时间语义。
+初始化 SQL 使用稳定 alias 和可阅读的显式 INSERT。
 
-影响文章状态及其关键发布字段的写操作在同一数据库事务中完成。
+初始化资源文件不写入 SQL。前端仓库或受控资源目录提供少量默认静态资源；部署/Review Environment 将其复制到 `CMS_STATIC_ROOT`。
 
-### 6.3 栏目约束
+## 6. 网站静态资源
 
-删除栏目之前必须检查下属栏目与内容引用；存在依赖时拒绝删除。该约束由后端业务层统一执行，不能只依赖管理端按钮状态。
+新增配置：
 
-### 6.4 浏览量
+```text
+cms.static.root=${CMS_STATIC_ROOT:./data/static}
+```
 
-浏览量采用 MySQL 中的简单计数，不引入 Redis、消息队列或独立分析系统。公开访问已发布详情时使用数据库原子更新方式递增计数；后台读取当前累计值。
+回收区为 `${CMS_STATIC_ROOT}/.trash`。
 
-该实现只服务本轮简单浏览量需求，不扩展为访问日志、来源分析或用户画像。
+管理 API 每次读取实际目录，而不是依赖数据库登记，因此人工复制进去的文件也可见。第一版不建立静态资源表。
 
-## 7. 文件资源设计
+所有管理路径必须为相对路径，normalize 后仍位于 static root 内，禁止 `..` 目录穿越；上传只允许白名单静态类型；禁止 HTML、JS 等可执行页面资源上传；文件大小遵循当前 multipart 限制。
 
-图片与附件当前保存到应用可配置的本地文件目录；数据库只保存业务所需的资源标识、原始文件名、类型、大小、存储键及关联信息等元数据。
+删除将文件移动到 `.trash`；恢复时目标已存在则返回冲突。永久删除不是第一版常用操作，可不提供。
 
-文件访问遵循以下长期边界：
+## 7. 页面上下文与面包屑
 
-- 存储键由服务端生成，不把客户端提交的文件路径直接映射到文件系统；
-- 管理端上传通过资源模块完成；
-- 公开图片或附件读取由公开 API 根据业务关联关系提供，不直接把整个本地上传目录暴露为无约束静态目录；
-- 与未发布或已撤回内容关联的资源不能因为已知物理路径而绕过内容公开状态直接成为正常公开内容。
+后端公开查询提供同构页面上下文：canonicalUrl、pageType、title、breadcrumbs、navigation/page-group context。
 
-资源模块内部保留“文件存储能力”接口边界，使未来若进入正式阶段需要替换为对象存储时，可以在不改变内容模块业务语义的前提下替换实现；当前不实现 MinIO 适配器。
+面包屑由业务关系计算，不从 URL 拆分。第一版可以分别在 column/article/page 查询中生成同构 DTO，不要求立即抽象复杂公共框架。
 
-## 8. 事务与一致性
+## 8. 首页
 
-当前采用同步调用与本地数据库事务，不引入最终一致性或异步事件机制。
+首页模板由前端代码固定。公开 API 提供主导航树、栏目/文章数据、页面组快捷入口和网站配置。首页不建复制内容表。
 
-需要原子完成的业务操作包括但不限于：
+视觉实现优先复刻原网站主要结构。无法自动采集的图片/尺寸细节使用已确认素材和合理默认值，进入人工 Review Environment 后再微调。
 
-- 文章创建/编辑与其核心持久化字段更新；
-- 发布状态变更与对应发布时间更新；
-- 删除栏目之前的依赖检查与删除动作；
-- 文章与附件关联关系的关键更新。
+## 9. 前端页面组织
 
-跨模块只读聚合由站点查询边界协调；不得为了首页展示建立独立复制数据或缓存层。
+第一版在现有结构上增加 Page 入口和共享公共组件，不要求一次性完成大规模物理目录重构。
 
-## 9. 部署与运行边界
+新增公开视图：FixedPageView、共享 GroupTabs、外部嵌入占位区域。
 
-当前系统作为独立原型应用运行。
+新增管理视图：PageManagementView、SiteConfigManagementView、StaticResourceManagementView。
 
-开发时前端与后端可以分别启动；原型交付时保持公开站点、管理端和后端 API 处于同一系统边界，并优先采用同源访问，减少额外网关、认证和跨域复杂度。
+## 10. API
 
-具体由 Spring Boot 直接承载前端静态产物，还是通过轻量静态服务器/反向代理提供同源访问，属于执行阶段可逆的部署细节，不在本 Technical Plan 中冻结。
+新增：
 
-当前不设计：
+```text
+GET    /api/public/pages/{alias}
+GET    /api/public/page-groups/{group}/{alias}
+GET    /api/public/page-groups/{group}
 
-- 多实例高可用；
-- 容器编排拓扑；
-- 服务发现；
-- MQ；
-- Redis；
-- MinIO；
-- 正式环境 SSO / 权限中心集成；
-- 嵌入 `jilinjobs` 的模块或部署契约。
+GET    /api/admin/pages
+POST   /api/admin/pages
+PUT    /api/admin/pages/{id}
+DELETE /api/admin/pages/{id}
 
-## 10. 验证策略
+GET    /api/admin/page-groups
+POST   /api/admin/page-groups
+PUT    /api/admin/page-groups/{id}
 
-验证必须覆盖业务规则和跨组件契约，而不仅是页面是否能够打开。
+GET    /api/admin/site-config
+PUT    /api/admin/site-config/{key}
 
-后端重点验证：
+GET    /api/admin/static-resources
+POST   /api/admin/static-resources
+DELETE /api/admin/static-resources
+GET    /api/admin/static-resources/trash
+POST   /api/admin/static-resources/restore
+```
 
-- 文章状态流转与公开过滤；
-- 编辑不改变发布状态；
-- 栏目删除依赖约束；
-- 导航启停与目标数据；
-- 文件资源与内容公开状态边界；
-- 浏览量原子递增；
-- MyBatis 持久化与 MySQL 关键查询行为。
+现有 `/api/public/columns/{id}` 可保留兼容，但新增 alias 查询并让新前端使用 alias。
 
-前端重点验证：
+## 11. 测试策略
 
-- 公开三级页面路由与直接访问；
-- 管理端栏目、导航、文章维护主流程；
-- 响应式主要布局；
-- 发布/撤回后公开页面的可观察变化；
-- 页面标题、摘要与稳定 URL。
+Backend：Flyway V4 在 MySQL 上通过；column alias 唯一；page group/page alias 校验；页面公开过滤；导航 target/open mode；site config key 白名单；static path traversal；upload type；trash/restore；既有文章发布状态回归。
 
-整体至少形成一条端到端关键路径证据：管理端创建草稿 → 发布 → 公开首页/栏目/详情可见 → 撤回 → 公开入口消失且直接详情显示不可用提示。
+Frontend：`vue-tsc`、Vite 多入口 build、`/column/{alias}`、`/article/{id}`、`/page/about`、`/page/guide/dagl`、guide Tab、jobs placeholder、管理端 Page / Config / Static Resource 主流程。
 
-具体测试框架、测试文件组织和命令属于执行单元内的即时计划（JIT Plan），在不改变上述验证责任的前提下由 Agent 自主选择。
+E2E：Review Environment 不再依赖测试脚本创建栏目/主菜单/页面组；Playwright 验证 Flyway 初始化基线已经存在；测试只创建动态文章等场景数据；完成后上传 Playwright evidence。
 
-## 11. 风险与约束
+## 12. 风险
 
-当前已知但不阻塞切分与实现的风险：
-
-1. **SPA 与搜索引擎收录差异**：当前通过稳定 URL、页面标题和摘要满足基础要求；真实爬虫收录能力需要用当前证据验证，必要时再调整渲染方式。
-2. **本地文件系统只适合单实例原型**：当前与“独立原型、无 MinIO”边界一致；如果未来进入多实例或正式环境，必须重新评估共享存储。
-3. **原型管理端无认证授权**：这是当前 Human Authority 明确允许的阶段性简化，不得将此状态直接延续为未来正式系统安全设计。
-
-## 12. Technical Plan Ready Check
-
-当前跨执行单元必须共享的主要 HOW 已确定：
-
-- 前端栈和公开/管理界面边界已确定；
-- 后端模块化单体方向与模块职责已确定；
-- REST API 公共/管理边界已确定；
-- MySQL + MyBatis 持久化边界已确定；
-- 文件资源的原型存储策略与未来替换接缝已确定；
-- 当前同步事务模型与不使用 MQ/Redis/MinIO 的边界已确定；
-- 验证责任已确定。
-
-当前不存在阻止进入 Work Slicing 的重大架构、安全或跨单元技术不确定性。普通、低影响、可逆的库级选择、文件组织、精确版本和测试命令留给后续执行单元处理。
+1. 多入口 Shell 过度设计：第一版只建立 `page.html` 必要接缝，专用 Shell 按真实需求增量加入。
+2. 静态资源误删：通过高风险入口、警告、回收区降低风险，不建设虚假的完整引用检测。
+3. 现网视觉自动复刻不完整：视觉精确值作为人工 Review Environment 校正项，不阻塞结构和数据模型收敛。
+4. 初始化数据可维护性：稳定 alias 与 Flyway 版本化，禁止依赖自增 ID 作为长期外部契约。
+5. 原型无认证：高风险权限仅固化要求和入口边界，正式系统接入统一权限后实施角色限制。
