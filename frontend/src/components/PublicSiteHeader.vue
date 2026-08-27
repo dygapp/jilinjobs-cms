@@ -1,0 +1,10 @@
+<script setup lang="ts">
+import {computed,onMounted,ref} from 'vue'
+import {listPublicNavigations,type PublicNavigation} from '../api/navigation'
+import {listPublicSiteConfig} from '../api/siteConfig'
+const items=ref<PublicNavigation[]>([]);const siteName=ref('吉林省高等学校毕业生就业信息网');const open=ref(false)
+const roots=computed(()=>items.value.filter(i=>i.position==='MAIN'&&i.parentId==null).sort((a,b)=>a.sortOrder-b.sortOrder||a.id-b.id))
+const children=(id:number)=>items.value.filter(i=>i.parentId===id).sort((a,b)=>a.sortOrder-b.sortOrder||a.id-b.id)
+onMounted(async()=>{const [nav,config]=await Promise.all([listPublicNavigations(),listPublicSiteConfig()]);items.value=nav;siteName.value=config.find(i=>i.key==='SITE_NAME')?.value||siteName.value})
+</script>
+<template><header class="site-header"><div class="site-top"><div class="site-width"><a href="https://zhjy.jilinjobs.cn" target="_blank" rel="noopener noreferrer">我是学生</a></div></div><div class="site-brand site-width"><router-link to="/"><span class="site-logo-mark">吉林就业</span><strong>{{siteName}}</strong></router-link><button class="navigation-toggle" aria-controls="main-navigation" :aria-expanded="open" @click="open=!open">{{open?'收起导航':'展开导航'}}</button></div><nav id="main-navigation" class="site-nav" :class="{'is-open':open}"><ul class="site-width nav-root"><li v-for="item in roots" :key="item.id" class="nav-item"><a v-if="item.external" :data-testid="`public-nav-${item.id}`" :href="item.href" :target="item.newWindow?'_blank':undefined" rel="noopener noreferrer">{{item.name}}</a><router-link v-else-if="item.clickable" :data-testid="`public-nav-${item.id}`" :to="item.href">{{item.name}}</router-link><span v-else>{{item.name}}</span><ul v-if="children(item.id).length" class="nav-children"><li v-for="child in children(item.id)" :key="child.id"><a v-if="child.external" :href="child.href" :target="child.newWindow?'_blank':undefined" rel="noopener noreferrer">{{child.name}}</a><router-link v-else-if="child.clickable" :to="child.href">{{child.name}}</router-link><span v-else>{{child.name}}</span></li></ul></li></ul></nav></header></template>
