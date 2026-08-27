@@ -1,5 +1,7 @@
 import { expect, test } from '@playwright/test'
 
+const SITE_NAME = '吉林省高等学校毕业生就业信息网'
+
 test('EU-06 公开三级页面具备响应式、直接访问与基础页面信息', async ({ page, request }, testInfo) => {
   const suffix = `${Date.now()}-${testInfo.project.name}-${testInfo.retry}`
   const columnName = `响应式栏目-${suffix}`
@@ -62,14 +64,14 @@ test('EU-06 公开三级页面具备响应式、直接访问与基础页面信�
   expect(directColumnResponse.ok()).toBeTruthy()
   const directColumnHtml = await directColumnResponse.text()
   expect(directColumnHtml).toContain('<div id="app"></div>')
-  expect(directColumnHtml).toContain('<title>吉林就业信息发布原型</title>')
+  expect(directColumnHtml).toContain(`<title>${SITE_NAME}</title>`)
   expect(directColumnHtml).not.toContain(columnName)
 
   const directArticleResponse = await request.get(`/articles/${article.id}`)
   expect(directArticleResponse.ok()).toBeTruthy()
   const directArticleHtml = await directArticleResponse.text()
   expect(directArticleHtml).toContain('<div id="app"></div>')
-  expect(directArticleHtml).toContain('<title>吉林就业信息发布原型</title>')
+  expect(directArticleHtml).toContain(`<title>${SITE_NAME}</title>`)
   expect(directArticleHtml).not.toContain(title)
 
   const viewports = [
@@ -82,8 +84,8 @@ test('EU-06 公开三级页面具备响应式、直接访问与基础页面信�
     await test.step(`${viewport.name}主要页面 smoke`, async () => {
       await page.setViewportSize({ width: viewport.width, height: viewport.height })
       await page.goto('/')
-      await expect(page).toHaveTitle('吉林就业信息发布原型')
-      await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /吉林省智慧就业云平台中心主站/)
+      await expect(page).toHaveTitle(SITE_NAME)
+      await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /吉林省高等学校毕业生就业信息网/)
 
       const navigationToggle = page.getByRole('button', { name: '展开导航' })
       const navigationLink = page.getByRole('link', { name: navigationName, exact: true })
@@ -100,13 +102,13 @@ test('EU-06 公开三级页面具备响应式、直接访问与基础页面信�
 
       await navigationLink.click()
       await expect(page).toHaveURL(new RegExp(`/columns/${column.id}$`))
-      await expect(page).toHaveTitle(`${columnName} - 吉林就业信息发布原型`)
+      await expect(page).toHaveTitle(`${columnName} - ${SITE_NAME}`)
       await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', new RegExp(columnName))
       await expect(page.getByTestId(`column-article-${article.id}`)).toBeVisible()
 
       await page.getByTestId(`column-article-${article.id}`).click()
-      await expect(page).toHaveURL(new RegExp(`/articles/${article.id}$`))
-      await expect(page).toHaveTitle(`${title} - 吉林就业信息发布原型`)
+      await expect(page).toHaveURL(new RegExp(`/article/${article.id}$`))
+      await expect(page).toHaveTitle(`${title} - ${SITE_NAME}`)
       await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', descriptionText)
       await expect(page.getByTestId('public-article-body').locator('img')).toBeVisible()
 
@@ -116,10 +118,10 @@ test('EU-06 公开三级页面具备响应式、直接访问与基础页面信�
       await page.goBack()
       await expect(page).toHaveURL(new RegExp(`/columns/${column.id}$`))
       await page.goForward()
-      await expect(page).toHaveURL(new RegExp(`/articles/${article.id}$`))
+      await expect(page).toHaveURL(new RegExp(`/article/${article.id}$`))
     })
   }
 
-  await page.goto(`/articles/${article.id}`)
+  await page.goto(`/article/${article.id}`)
   await expect(page.getByTestId('public-article-title')).toHaveText(title)
 })

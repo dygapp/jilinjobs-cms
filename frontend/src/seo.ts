@@ -1,5 +1,5 @@
-const SITE_NAME = '吉林就业信息发布原型'
-const DEFAULT_DESCRIPTION = '吉林省智慧就业云平台中心主站，提供已发布就业信息、栏目导航与公共服务入口。'
+const SITE_NAME = '吉林省高等学校毕业生就业信息网'
+const DEFAULT_DESCRIPTION = '吉林省高等学校毕业生就业信息网，提供就业资讯、政策法规、业务指南和公共服务入口。'
 
 interface PageMeta {
   title?: string

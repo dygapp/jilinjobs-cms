@@ -1,112 +1,90 @@
 # 项目演进路线与当前状态
 
-本文是 `jilinjobs-cms` Consumer Repository 的 Project Roadmap，用于记录本项目自身的演进路线、阶段状态、已完成里程碑、当前目标和下一步工作。
-
-本文只描述 Consumer 项目事实，不继承 `dygapp/agentic-dev/docs/project/project-roadmap.md` 中的项目状态。`agentic-dev` 只提供 AI Agent 开发 Method、Operating Guide 和 Skills 知识来源。
-
-## 使用规则
-
-- 路线图记录项目级状态，不替代 Specification、Technical Plan 或 Execution Unit。
-- 路线变化通过 Git 历史保留，不在 README、聊天或临时任务中维护第二份长期状态。
-- 状态语义：
-  - **已完成**：存在当前仓库可验证证据；
-  - **当前**：正在推进的阶段或目标；
-  - **下一步**：已经确定的近期工作；
-  - **条件性后续**：需要新的真实证据后再评估。
+本文是 `jilinjobs-cms` Consumer Repository 的 Project Roadmap。
 
 ## 方法基线
 
-当前 AI Agent 开发方法来源：
-
 ```text
-Repository:
 dygapp/agentic-dev
-
-Baseline:
 master@2ee56a5866d0201977a75b2b18ca2e791a218983
 ```
 
-本次 baseline 从 `b4e5b2027bdbbe97cc0b7153be65c5afb7a0274e` 升级到当前 `master`，共覆盖 3 个上游集成提交。对本 Consumer 有持续价值的变化包括：
-
-- 正式化已有 Consumer 的采用与 baseline 升级闭环，明确 `agentic-dev` 是上游知识源而非普通开发运行依赖；
-- 明确同一任务涉及多个 Repository 时分别确认授权，并将持续权限边界固化为 Consumer-local Project Rule；
-- 强化异步外部操作和 `github-actions-verification`：`queued` / `pending` / `in_progress` 属于闭环中间状态，应在可观察且获授权时有界持续观察、诊断、修复、重跑和复验。
-
-这些变化已固化到本仓库 `AGENTS.md`、`docs/project/development-method.md` 与相关连续执行规则。`agentic-dev` 自身 Project Roadmap、Issue #33 处理状态与 eval 状态没有进入 Consumer Authority。后续普通开发继续优先使用 Consumer-local 规则。
+普通开发优先使用 Consumer-local：`AGENTS.md`、`docs/project/development-method.md`、当前 Requirement / Specification / Technical Plan。
 
 ## 总体路线
 
 | 路线 | 状态 | 结果 |
 |---|---|---|
-| Consumer Repository Bootstrap | 已完成 | 建立独立 Consumer Authority、Specification、Technical Plan 和验证边界 |
-| 信息发布核心能力纵向建设 | 已完成 | 完成栏目、导航、文章、发布、公开页面、附件、浏览量和响应式能力建设 |
-| Feature-wide Convergence 验证 | 已完成 | 完成首次功能范围整体验证并关闭已发现验证缺口 |
-| 人工集成评审环境 | 已完成 | 建立可手工触发的临时评审环境、AI 测试数据与外部 HTTP 评审入口 |
-| Consumer 继续演进 | 当前 | 以当前 Consumer Authority、Project Roadmap 和本地开发方法恢复并推进后续真实工作 |
-| 新业务能力扩展 | 条件性后续 | 根据新的 Product Intent 和 Authority 增量定义 |
+| Consumer Repository Bootstrap | 已完成 | 独立 Consumer Authority 与工程骨架 |
+| EU-01～EU-06 信息发布核心能力 | 已完成 | 栏目、导航、文章、发布、公开页面、附件、浏览量、响应式 |
+| Feature-wide Convergence | 已完成 | 首轮功能整体验证闭环 |
+| RC-01 人工集成评审环境 | 已完成 | 可手工启动临时 Review Environment |
+| 站点基线收敛 EU-07～EU-12 | 已完成 | 现网站点结构、页面模型、规范 URL、网站配置、静态资源与初始化基线完成自动化收敛 |
+| 人工页面评审与集成决策 | 当前 | 在 Review Environment 中检查视觉精度与低风险交互，并决定是否集成当前 PR |
+| 真实第三方集成 / 中心党建 | 条件性后续 | 根据后续 Product Intent 再进入 |
 
 ## 已完成里程碑
 
-| 日期 | 里程碑 | 证据 |
-|---|---|---|
-| 2026-08-24 | Feature-wide Convergence 完成并固化状态 | PR #11、PR #12、`f848f86fc410f391f69e674b9ab0b3df6992023e` |
-| 2026-08-26 | 建立人工集成评审环境 RC-01 | PR #13、`dddbea592e933bb5a3ca3bb9911f645c2a752ea9` |
-| 2026-08-26 | 建立 Consumer Project Roadmap 与本地开发方法 | `docs/project/project-roadmap.md`、`docs/project/development-method.md` |
-| 2026-08-26 | 将 `agentic-dev` baseline 升级到 `2ee56a5866d0201977a75b2b18ca2e791a218983` 并吸收 Issue #33 后续通用规则 | `AGENTS.md`、`docs/project/development-method.md`、`docs/agentic-dev-continuous-execution-mode.md` |
-
-此前 EU-01～EU-06、CV-01 的详细证据由当前 Git 历史、PR、CI 和 `README.md` 历史版本保留，不在本 Roadmap 重复维护全部流水。
+| 日期 | 里程碑 |
+|---|---|
+| 2026-08-24 | Feature-wide Convergence 完成 |
+| 2026-08-26 | RC-01 Human Integration Review Environment 完成 |
+| 2026-08-26 | Consumer-local 方法与 Roadmap 固化 |
+| 2026-08-26 | agentic-dev baseline 更新到 `2ee56a5866d0201977a75b2b18ca2e791a218983` |
+| 2026-08-27 | 完成原站取证与 26 项关键 Product Intent 人工确认，进入站点收敛实施 |
+| 2026-08-27 | EU-07～EU-12 完成实现与自动化收敛；页面组后台、静态资源目录/替换/恢复、版本化初始化静态资源包及 Review Environment 均形成当前证据 |
 
 ## 当前阶段
 
 当前核心目标：
 
-> 从“首轮功能建设与收敛”切换为“已有 Consumer 的持续演进”，后续 Fresh Context 应只依赖 Consumer Repository Authority、当前代码与当前证据恢复工作，不重复 Greenfield Bootstrap。
+> 对已经完成自动化收敛的现网站点基线版本进行人工页面评审和集成判断；视觉精度与低风险交互问题允许在人工 Review 后增量调整。
 
-当前约束：
+当前已固化结果：
 
-1. 产品事实继续由 `AGENTS.md`、`README.md`、权威需求和当前 Specification 决定；
-2. 开发方法优先读取 `docs/project/development-method.md`；
-3. 没有新的 Product Intent 时，不自行创造 EU-07 或扩大现有 Scope；
-4. 新需求进入后，按 Specification → Slice → Readiness → Execute → Converge 推进；
-5. 每项 Acceptance Obligation 必须闭环到实现责任、验证责任、计划证据与 Current Evidence；
-6. 跨 Repository 操作按 `AGENTS.md` 的具体权限矩阵逐 Repository 判断；
-7. 异步 GitHub Actions / 外部 Job 仍可观察时保持有界执行闭环，不把非终态当作完成或默认人工接管点。
+- `www.jilinjobs.cn` 与 `24365.jl.smartedu.cn` 作为同一原网站取证基线；
+- 视觉原则为“现网视觉与布局复刻 + 必要技术适配”；
+- 中心党建本轮只保留主菜单占位；
+- 慧就业本轮只保留页面组/页面占位；
+- 栏目、菜单、文章、固定页面、页面组、网站配置和网站静态资源职责已分离；
+- `/page/**`、`/column/{alias}`、`/article/{id}` 作为规范公开 URL；
+- 页面组后台可维护，业务指南与招聘信息初始化关系来自 Flyway 基线；
+- 网站静态资源后台支持目录浏览、上传、显式替换、查看/下载、删除到回收区和恢复，并保留风险提示；
+- 站点初始化基线由数据库基线 + 版本化初始化静态资源包组成，Review Runtime 明确挂载并验证该资源包；
+- 测试只把临时数据用于具体 CRUD/发布行为验证，不承担 guide/jobs 等基础站点结构初始化；
+- 历史内容迁移与初始化基线分离；
+- Review Environment 对同一 PR 使用并发互斥，避免固定 FRP 评审域名被多个 Head 同时占用。
 
-## 下一步工作
+## 已完成执行单元
 
-当前没有由 Repository Authority 定义的新产品切片。
+```text
+EU-07 站点结构与初始化基线
+EU-08 固定页面与页面组闭环
+EU-09 菜单、栏目 URL 与页面上下文收敛
+EU-10 网站配置与静态资源管理
+EU-11 现网主站前台复刻
+EU-12 站点收敛验证与人工评审准备
+```
 
-新的真实需求到达后：
+详见 `docs/work/center-main-site-core-execution-units.md`。
 
-1. 判断是否改变当前 Goal / Scope / User-visible Behavior；
-2. 更新或新增 Specification；
-3. 仅在跨 Execution Unit 的长期 HOW 需要协调时更新 Technical Plan；
-4. 形成纵向、可验证、context-fit 的 Execution Unit；
-5. 通过 Readiness、Fresh-context Execute 和 Converge 完成闭环；
-6. 项目级路线变化时更新本文。
+## 下一步
+
+1. 使用当前 PR 的 Review Environment 进行人工页面评审；
+2. 重点检查现网视觉复刻精度、首页区域关系、字号/间距/图片比例、业务指南 Tab、固定页面呈现、菜单跳转以及静态资源管理易用性；
+3. 低风险视觉/交互问题可在评审后增量调整；如无阻塞问题，则进入当前 PR 的集成决策；
+4. 慧就业真实 iframe、中心党建主题和历史内容迁移按后续 Product Intent / 迁移阶段单独推进。
 
 ## Fresh Context 恢复入口
 
-新的项目上下文按以下顺序恢复：
+1. `AGENTS.md`
+2. `README.md`
+3. `docs/project/project-roadmap.md`
+4. `docs/project/development-method.md`
+5. `docs/requirements/information-publishing.md`
+6. `docs/specifications/center-main-site-core.md`
+7. `docs/technical/center-main-site-core.md`
+8. `docs/work/center-main-site-core-execution-units.md`
+9. 当前 Branch / PR / CI / Runtime Evidence
 
-1. `AGENTS.md`；
-2. `README.md`；
-3. `docs/project/project-roadmap.md`；
-4. `docs/project/development-method.md`；
-5. 当前工作直接相关的 Requirement / Specification / Technical Plan / Work Artifact；
-6. 当前代码、测试、Branch / PR / CI 等 Current Evidence。
-
-不得使用其他聊天、其他项目或个人记忆补充未固化的 Consumer 项目事实。
-
-## 更新触发条件
-
-出现以下情况时更新本文：
-
-- 项目阶段或当前核心目标改变；
-- 项目级里程碑完成、取消或被替代；
-- 已确定的下一步工作改变；
-- 新需求进入正式路线；
-- 项目负责人明确要求升级 `agentic-dev` baseline；
-- 当前路线与 GitHub 当前事实不再一致。
-
-普通局部实现、单个 Execution Unit 内部状态变化或临时实施步骤不要求更新本文。
+不得使用其他聊天或其他项目状态补充未固化的 Consumer 产品事实。

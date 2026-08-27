@@ -10,6 +10,10 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 
+concurrency:
+  group: review-environment-${{ github.event.pull_request.number || github.event.inputs.ref || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   review-environment:
     name: 启动人工评审环境
@@ -63,13 +67,22 @@ jobs:
           wait "$backend_build_pid"
           wait "$frontend_build_pid"
 
+      - name: 准备初始化静态资源包
+        run: |
+          rm -rf runtime-static
+          mkdir -p runtime-static
+          cp -a site-baseline/static/. runtime-static/
+          test -f runtime-static/health/baseline.png
+
       - name: 启动后端与前端
         run: |
           docker run -d --name cms-backend --network host \
             -e 'DB_URL=jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true' \
             -e DB_USERNAME=root \
             -e DB_PASSWORD=root \
+            -e CMS_STATIC_ROOT=/static-baseline \
             -v "$GITHUB_WORKSPACE/backend/build/libs:/app:ro" \
+            -v "$GITHUB_WORKSPACE/runtime-static:/static-baseline" \
             eclipse-temurin:21-jre-alpine-3.23 \
             java -jar /app/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar
 
@@ -83,6 +96,8 @@ jobs:
             fi
             sleep 2
           done
+
+          curl --fail --silent http://127.0.0.1:8080/static/health/baseline.png > /dev/null
 
           docker run -d --name cms-frontend --network host \
             -v "$GITHUB_WORKSPACE/frontend/dist:/usr/share/nginx/html:ro" \
@@ -109,12 +124,11 @@ jobs:
             mcr.microsoft.com/playwright:v1.61.0-noble \
             bash -lc 'npm install --no-audit --no-fund && npx playwright test --project=chromium'
 
-          curl --fail --silent http://127.0.0.1:5173/api/admin/columns \
-            | jq --exit-status 'length > 0' > /dev/null
-          curl --fail --silent http://127.0.0.1:5173/api/admin/navigations \
-            | jq --exit-status 'length > 0' > /dev/null
-          curl --fail --silent 'http://127.0.0.1:5173/api/public/articles?page=0&size=10' \
-            | jq --exit-status '.total > 0 and (.items | length > 0)' > /dev/null
+          curl --fail --silent http://127.0.0.1:5173/api/admin/columns | jq --exit-status 'length > 0' > /dev/null
+          curl --fail --silent http://127.0.0.1:5173/api/admin/navigations | jq --exit-status 'length > 0' > /dev/null
+          curl --fail --silent http://127.0.0.1:5173/api/admin/page-groups | jq --exit-status 'map(.alias) | index("guide") != null and index("jobs") != null' > /dev/null
+          curl --fail --silent http://127.0.0.1:5173/static/health/baseline.png > /dev/null
+          curl --fail --silent 'http://127.0.0.1:5173/api/public/articles?page=0&size=10' | jq --exit-status '.total > 0 and (.items | length > 0)' > /dev/null
 
       - name: 上传 AI 评审证据
         uses: actions/upload-artifact@v7
@@ -156,59 +170,35 @@ jobs:
           ./frp/frpc -c ./frp/frpc.toml > frpc.log 2>&1 &
           FRPC_PID=$!
           sleep 10
-
-          if ! kill -0 $FRPC_PID; then
-            cat frpc.log
-            exit 1
-          fi
-
-          if ! grep -q "start proxy success" frpc.log; then
-            cat frpc.log
-            echo "frpc 隧道未建立"
-            exit 1
-          fi
+          if ! kill -0 $FRPC_PID; then cat frpc.log; exit 1; fi
+          if ! grep -q "start proxy success" frpc.log; then cat frpc.log; echo "frpc 隧道未建立"; exit 1; fi
 
       - name: 验证外部评审地址
         run: |
           for i in $(seq 1 30); do
-            if curl --fail --show-error --silent http://review.cc-lotus.info/ -o review-home.html \
-              && grep -qi '<html' review-home.html; then
+            if curl --fail --show-error --silent http://review.cc-lotus.info/ -o review-home.html && grep -qi '<html' review-home.html; then
               break
             fi
-            if [ "$i" -eq 30 ]; then
-              echo "评审地址验证失败"
-              exit 1
-            fi
+            if [ "$i" -eq 30 ]; then echo "评审地址验证失败"; exit 1; fi
             sleep 2
           done
-
-          grep -q '<title>吉林就业信息发布原型</title>' review-home.html
+          grep -q '<title>吉林省高等学校毕业生就业信息网</title>' review-home.html
           js_path=$(grep -oE 'src="/assets/[^"]+\.js"' review-home.html | head -1 | cut -d'"' -f2)
           css_path=$(grep -oE 'href="/assets/[^"]+\.css"' review-home.html | head -1 | cut -d'"' -f2)
           test -n "$js_path"
           test -n "$css_path"
-
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors \
-            "http://review.cc-lotus.info${js_path}" > /dev/null
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors \
-            "http://review.cc-lotus.info${css_path}" > /dev/null
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors \
-            http://review.cc-lotus.info/admin/articles | grep -qi '<html'
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors \
-            'http://review.cc-lotus.info/api/public/articles?page=0&size=10' \
-            | jq --exit-status '.total > 0 and (.items | length > 0)'
+          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors "http://review.cc-lotus.info${js_path}" > /dev/null
+          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors "http://review.cc-lotus.info${css_path}" > /dev/null
+          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/admin/articles | grep -qi '<html'
+          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/health/baseline.png > /dev/null
+          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors 'http://review.cc-lotus.info/api/public/articles?page=0&size=10' | jq --exit-status '.total > 0 and (.items | length > 0)'
 
       - name: 输出评审地址
-        run: |
-          echo "人工评审地址：http://review.cc-lotus.info"
+        run: echo "人工评审地址：http://review.cc-lotus.info"
 
       - name: 保持环境运行
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            sleep 120
-          else
-            sleep 3300
-          fi
+          if [ "${{ github.event_name }}" = "pull_request" ]; then sleep 120; else sleep 3300; fi
 
       - name: 清理环境
         if: always()

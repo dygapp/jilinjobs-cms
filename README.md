@@ -1,151 +1,58 @@
 # jilinjobs-cms
 
-`jilinjobs-cms` 是吉林省智慧就业云平台中“信息发布与网站服务”相关能力的独立 Consumer 项目。
+`jilinjobs-cms` 是“吉林省高等学校毕业生就业信息网”主站内容管理与公开展示能力的 Consumer Repository。
 
-当前项目已经完成中心主站信息发布核心原型的首轮建设、Feature-wide Convergence 和人工集成评审环境建设。后续工作进入已有 Consumer 的持续演进阶段。
+## 当前目标
 
-## 当前项目目标
+当前版本以原网站现有结构和视觉关系为基准，采用 Vue + Spring Boot 重建中心主站，形成可持续演进的 CMS、固定页面、页面组、网站配置、静态资源和公开页面能力。
 
-当前原型验证中心主站的信息发布核心能力，包括：
+当前权威需求：
 
-- 栏目管理；
-- 菜单 / 导航组织；
-- 信息内容发布；
-- 网站前端三级页面：
-  - 首页；
-  - 栏目 / 二级页面；
-  - 内容详情页面。
+- `docs/requirements/information-publishing.md`
 
-## 当前迭代范围（Scope）
+当前 Specification / Technical Plan：
 
-### In Scope
+- `docs/specifications/center-main-site-core.md`
+- `docs/technical/center-main-site-core.md`
+- `docs/technical/verification-strategy.md`
 
-- 栏目和分类管理；
-- 菜单与导航组织；
-- 信息内容发布；
-- 中心主站公开访问页面：
-  - 首页；
-  - 栏目 / 二级页面；
-  - 内容详情页面。
+当前执行单元：
 
-### Out of Scope
+- `docs/work/center-main-site-core-execution-units.md`
 
-- 外部内容嵌入；
-- 用户与权限管理及认证授权接入；
-- “中心党建”二级网站；
-- 评论及其他互动能力；
-- 复杂统计分析；
-- 多站点扩展能力；
-- 后续嵌入 `jilinjobs` 主系统；
-- MQ、MinIO、Redis 等当前原型不需要的基础设施。
+项目演进状态：
 
-详细业务需求范围可能比当前迭代更广。只有属于当前 Scope 的内容才是当前有效实现要求。
+- `docs/project/project-roadmap.md`
 
-## 仓库权威入口
+项目本地开发方法：
 
-Repository Governance、Authority Boundary、Knowledge Boundary、Human Escalation 和 GitHub 操作授权统一以：
+- `docs/project/development-method.md`
 
-```text
-AGENTS.md
-```
+## Repository Authority
 
-为最高入口。
+仓库工作必须首先遵循根目录 `AGENTS.md`。产品事实、当前范围、技术状态和验证结果均以本 Consumer Repository 当前权威文件和可观察 GitHub / Runtime Evidence 为准。
 
-当前详细业务需求：
+`dygapp/agentic-dev` 提供可复用的 AI 开发方法与 Skills，但普通 Consumer 开发优先使用本仓库已经固化的项目本地规则；只有明确进行 baseline 升级或本地规则不足以回答必要方法问题时，才重新读取指定的 upstream baseline。
 
-```text
-docs/requirements/information-publishing.md
-```
+## 当前站点能力
 
-该需求文档已经由本仓库显式采纳，作为当前 Scope 内的详细业务依据。其引用但未被本 Consumer Repository 采纳的 upstream references 只保留 provenance，不自动成为本项目 Authority。
+当前主站基线包含：
 
-当前 Specification：
+- 栏目、文章与发布状态；
+- 分层菜单与多目标导航；
+- 固定页面和页面组；
+- `/column/{alias}`、`/article/{id}`、`/page/**` 公开 URL；
+- 网站配置管理；
+- 网站静态资源目录浏览、上传、替换、删除到回收区和恢复；
+- 版本化初始化静态资源包；
+- 首页、栏目页、文章详情页、固定页、业务指南与招聘信息占位等公开模板；
+- MySQL + Flyway 初始化基线；
+- Backend / Frontend / Browser E2E 和临时人工评审环境。
 
-```text
-docs/specifications/center-main-site-core.md
-```
+中心党建内容主题和慧就业真实 iframe 接入不属于当前迭代实现范围，按照权威需求保留相应占位和后续演进边界。
 
-当前 Technical Plan 与 Verification Strategy：
+## 验证原则
 
-```text
-docs/technical/center-main-site-core.md
-docs/technical/verification-strategy.md
-```
+完成状态必须由当前 Head 对应的 Current Evidence 支持。Backend、Frontend、Browser verification 与 Review Environment 的实时结果由 GitHub Actions 保存；README 不复制具体 Run 编号或流水状态，避免形成第二份状态数据库。
 
-## 当前原型技术边界
-
-以下内容已经由当前项目 Authority 确认：
-
-- 当前形态：独立建设的原型应用；
-- 前端：Vue 3 + TypeScript + Vite + Vue Router；
-- 原型管理端：Element Plus；
-- 后端：Spring Boot 模块化单体应用；
-- 构建与运行基线：Gradle、Java 21、Kotlin；
-- 数据持久化：MySQL + MyBatis；
-- 当前阶段不建设认证授权；
-- 当前阶段不引入 MQ、MinIO、Redis。
-
-后续完善为正式系统或嵌入 `jilinjobs` 主系统不属于当前已确认范围。
-
-## 开发方法
-
-本项目使用 `dygapp/agentic-dev` 作为 Method、Operating Guide 与 Skills 的上游知识来源。
-
-当前精确 baseline：
-
-```text
-master@2ee56a5866d0201977a75b2b18ca2e791a218983
-```
-
-但后续普通开发不要求持续跨仓库读取 `agentic-dev`。本项目已经将当前采用的方法和 Skills 使用规则固化在：
-
-```text
-docs/project/development-method.md
-```
-
-除非项目负责人明确要求更新 `agentic-dev` baseline，后续开发优先遵循 Consumer Repository 自身的规则和权威文档。
-
-## 项目路线图
-
-当前项目阶段、已完成里程碑、当前目标、下一步工作与 Fresh Context 恢复入口统一维护在：
-
-```text
-docs/project/project-roadmap.md
-```
-
-README 不再并行维护 EU、PR、CI、Artifact 等易变化的详细状态流水；这些证据由 Git 历史、PR、CI 和对应长期 Artifact 保留。
-
-当前总体状态：
-
-```text
-Consumer Bootstrap
-→ Specification / Technical Planning
-→ EU-01 ～ EU-06
-→ Feature-wide Convergence
-→ CV-01 Verification Closure
-→ Feature-wide READY / Integrated
-→ RC-01 Human Integration Review Environment
-→ Consumer Continuous Evolution
-```
-
-## 当前开发原则
-
-- Specification 负责 WHAT / WHY；
-- Technical Plan 只在跨 Execution Unit 的长期 HOW 协调具有持续价值时持久化；
-- Execution Unit 应纵向、可验证、范围明确并适合 Fresh Context；
-- 每项 Acceptance Obligation 必须闭环到实现责任、验证责任、计划证据和 Current Evidence；
-- 实现覆盖不等于验证覆盖；
-- 没有 Current Evidence，不得声明完成、通过或修复成功；
-- 没有新的 Product Intent 时，不自行创造新的产品范围或 Execution Unit。
-
-## GitHub Repository 操作约定
-
-`dygapp/jilinjobs-cms` 已获得项目负责人持续授权。Agent 可以直接进行本项目范围内的正常 Repository 操作，无需重复请求许可。
-
-该授权不包含：
-
-- 改变项目目标或 Scope；
-- 替代产品决策；
-- 未授权的外部系统操作；
-- Production 发布或部署；
-- Credentials、Secrets 或其他敏感配置操作。
+视觉复刻精度、间距、字号、图片比例和低风险交互体验在人工评审阶段继续调整；这类调整不改变已经确认的数据模型、URL、站点结构和主要用户行为。

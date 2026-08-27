@@ -183,8 +183,8 @@ test('EU-04 发布撤回重新发布驱动公开三级页面可见性', async ({
 
   await page.goto(`/articles/${article.id}`)
   await expect(page.getByTestId('public-article-title')).toHaveText(title)
-  await expect(page.getByText('来源：吉林就业公开来源', { exact: true })).toBeVisible()
-  await expect(page.getByText('发布日期：2026-08-20', { exact: true })).toBeVisible()
+  await expect(page.getByText('信息来源：吉林就业公开来源', { exact: true })).toBeVisible()
+  await expect(page.getByText('发布时间：2026-08-20', { exact: true })).toBeVisible()
   await expect(page.getByTestId('public-article-body')).toContainText('这是公开正文')
   await expect(page.getByTestId('public-article-body').locator('img')).toHaveAttribute('src', `/api/public/resources/${image.id}/content`)
   expect((await request.get(`/api/public/resources/${image.id}/content`)).ok()).toBeTruthy()

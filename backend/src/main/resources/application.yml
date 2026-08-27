@@ -19,6 +19,8 @@ mybatis:
 cms:
   storage:
     root: ${CMS_STORAGE_ROOT:./data/uploads}
+  static:
+    root: ${CMS_STATIC_ROOT:./data/static}
 
 server:
   port: ${SERVER_PORT:8080}

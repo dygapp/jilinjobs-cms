@@ -1,158 +1,71 @@
 # 验证运行策略（Verification Runtime Strategy）
 
-## 1. 目的与适用范围
+## 1. 目的
 
-本文补充 `docs/technical/center-main-site-core.md` 中的验证责任，固化当前 Consumer 项目在真实 GitHub Runtime 中已经通过 EU-01 与 EU-02 暴露并确认的跨执行单元验证 HOW。
+本文定义 `jilinjobs-cms` 当前验证运行规则。
 
-本文不改变业务 Specification、Execution Unit 的业务完成条件或产品范围；它只规定如何以更可观察、可复现、成本可控的方式取得当前证据（Current Evidence）。
+验证必须区分 Implementation Exists、Automated Completion Evidence、Human Runtime Observation。没有当前提交对应的成功证据，不声明完成。
 
-## 2. 证据口径
+## 2. 分层验证
 
-验证证据分为两类，职责不同。
+### 2.1 Backend Verify
 
-### 2.1 自动化完成证据（Automated Completion Evidence）
+独立执行 Java 21、Gradle、Kotlin/Spring Boot 编译、后端自动化测试和 bootJar。
 
-Execution Unit 声明 Completed 前，必须取得与该 Unit 完成条件匹配、在当前提交上实际执行成功的自动化验证证据。
+当前站点收敛迭代还必须覆盖 Flyway 新 migration、column alias、page/page-group、navigation 新目标类型、site config、static resource path safety 和既有文章发布状态回归。
 
-对于包含前后端协作与浏览器行为的 Unit，最终完成证据至少应覆盖：
+### 2.2 Frontend Verify
 
-- 后端编译/测试通过；
-- 前端类型检查/构建通过；
-- Unit 所要求的关键浏览器级纵向闭环通过。
+独立执行 npm ci、`vue-tsc`、Vite build。
 
-Implementation Exists、历史成功结果、计划中的测试或仅有人工观察均不能替代当前自动化 PASS。
+当前迭代重点验证多入口 HTML 构建、`/column/{alias}`、`/article/{id}`、`/page/**`、新后台页面和公开页面共享布局。
 
-### 2.2 人工运行时观察（Human Runtime Observation）
+### 2.3 Completion E2E
 
-Human 可以提供以下可核对信息作为 Runtime / Tooling 事实证据：
+Backend 和 Frontend 都 PASS 后执行 Playwright。
 
-- GitHub Actions Run URL；
-- Actions UI 截图；
-- Step 状态、可见日志与持续时间；
-- 明确的人工取消、重试或异常环境观察。
+E2E 必须消费真实 Flyway 初始化结果，不允许测试代码重新创建站点基础栏目、主菜单、页面组和固定页面。测试代码只补充动态测试数据，例如文章草稿、发布、撤回和附件。
 
-Human Runtime Observation 可以用于：
+## 3. 当前站点收敛验收路径
 
-- 证明验证基础设施发生异常阻塞或明显超出合理耗时；
-- 在 Agent 受 Connector 可观察性限制时补足事实；
-- 支持将当前 Run 记录为 Interrupted / Aborted；
-- 支持停止无价值等待并切换验证实现；
-- 为 Tool / Runtime / Operating Guide 改进提供实验数据。
+至少覆盖：
 
-Human Runtime Observation **不能直接证明 Execution Unit Completed**。切换验证实现后，仍需新的自动化 PASS Current Evidence。
+1. 干净 MySQL 启动；
+2. Flyway 完成；
+3. 主菜单已经存在；
+4. 招聘信息只有 5 个确认子项；
+5. 中心党建为占位；
+6. `/page/about` 可访问；
+7. `/page/guide/dagl` 可访问并显示业务指南公共 Tab；
+8. `/page/jobs/...` 显示外部嵌入占位；
+9. `/column/{alias}` 可访问；
+10. 创建动态测试文章并发布；
+11. `/article/{id}` 可访问；
+12. 撤回后公开入口消失；
+13. 网站配置后台可读取；
+14. 静态资源后台能够上传、删除到回收区、恢复测试文件；
+15. Playwright report Artifact 存在。
 
-## 3. 分层验证
+## 4. Review Environment
 
-验证分成 Fast Feedback 与 Completion Evidence 两层，避免每次局部修复都支付最高成本环境准备。
+Review Environment 继续采用 MySQL service、Backend runtime、Frontend artifact + Nginx、Playwright official runtime 和 FRP 临时外部 HTTP 地址。
 
-### 3.1 Backend Verify
+Review Environment 的站点真实结构来自 Flyway + 初始化静态资源包。AI 测试数据只用于增加人工可观察的动态场景，不承担网站初始化职责。
 
-后端 Job 独立执行：
+## 5. 异步 Actions 观察
 
-- Java 21；
-- Gradle；
-- Kotlin / Spring Boot 编译；
-- 后端自动化测试；
-- 生成可运行 backend artifact。
+Actions 中 queued / pending / in_progress 均为中间状态。
 
-后端失败时不启动浏览器 E2E 环境。
+当结果仍可通过当前授权路径观察时，应进行有界持续观察，直到成功并取得证据、失败并完成诊断/修复/重跑、出现真实权限/运行时阻塞，或达到有界观察退出条件并明确记录“Executed but not fully verified”。
 
-### 3.2 Frontend Verify
+Dispatch/rerun API 返回成功不等于验证完成。
 
-前端 Job 独立执行：
+## 6. 证据关联
 
-- Node；
-- 依赖安装；
-- `vue-tsc`；
-- Vite build；
-- 生成 frontend artifact。
+对目标 PR/commit 的验证必须关联 Event、Head SHA、Run、Job、Step、Conclusion、Logs 和必要 Artifact。历史 Run 不能替代当前 Head 的 Completion Evidence。
 
-前端失败时不启动浏览器 E2E 环境。
+## 7. 人工评审
 
-### 3.3 Completion E2E
+人工 Review 主要承担现网视觉复刻精度、具体间距/字号/图片比例、首页区域视觉关系、业务指南 Tab 体验、固定页面正文表现、菜单和跳转体验、静态资源管理风险提示和易用性。
 
-只有 Backend Verify 与 Frontend Verify 均 PASS 后才启动 E2E。
-
-E2E 优先消费已经构建完成的 artifacts，不重复承担应用编译职责。
-
-成功或失败的 Completion E2E 都应留下可回取的 Playwright 报告 Artifact，以便将浏览器结论与对应 Run / Head SHA 长期关联；如果 workflow 配置要求的证据路径没有生成文件，Artifact 上传步骤应失败，而不是静默忽略。Runtime diagnostics 仍只在失败时生成，职责与测试报告分离。
-
-## 4. E2E 运行拓扑
-
-当前项目优先使用预定义 Runtime Containers，而不是在每个 GitHub-hosted runner 中临时安装完整环境：
-
-```text
-MySQL service container
-        │
-        ├─ Java Runtime container + backend artifact
-        │
-        ├─ Nginx/static runtime container + frontend artifact
-        │
-        └─ Playwright official container + browser tests
-```
-
-长期约束：
-
-- MySQL 使用官方镜像；
-- 后端 E2E Runtime 只需要 Java Runtime，不在 E2E 阶段重新安装/运行 Gradle 构建；
-- 前端使用已构建静态 artifact，由轻量 HTTP Runtime 提供页面和 `/api` 反向代理；
-- Playwright 使用官方预构建镜像，避免每次执行 `playwright install --with-deps`；
-- Playwright package 版本必须与官方 Docker image 版本匹配；
-- 具体镜像 tag、Node/Gradle/Playwright 精确版本仍属于可逆执行细节，以 workflow 中的当前固定值为准。
-
-如果未来已有官方镜像不能满足固定依赖且准备成本重新显著上升，可在证据支持下建立 Consumer 自有的薄封装 CI 镜像；不预先维护“包含所有工具”的万能镜像。
-
-## 5. GitHub 执行路径与可观察性
-
-当前 ChatGPT GitHub Connector 已观察到：按 commit 自动枚举 `push` 触发的 workflow run 能力不足，而 PR 相关能力更完整。
-
-因此当前 Consumer Runtime 优先采用：
-
-```text
-Execution Unit / Task Branch
-→ Pull Request
-→ pull_request-triggered CI
-→ Current Evidence
-→ Integration
-```
-
-这是一项当前 Runtime 适配策略，不自动上升为所有 Consumer / Runtime 都必须使用 PR 的通用 Method 结论。
-
-相关证据：
-
-- Consumer Issue #1：push-triggered Actions 可观察性；
-- Consumer Issue #2：E2E 环境准备异常耗时与分层验证；
-- PR #3：EU-01 容器化验证重构；
-- PR #4：EU-02 在既有分层 CI 上暴露并修正浏览器定位器与成功证据 Artifact 可观察性问题。
-
-## 6. 超时与过期运行
-
-CI 不依赖 GitHub Actions 的 6 小时默认 Job 上限作为正常失败边界。
-
-要求：
-
-- 每个主要 Job 配置与正常基线相称的显式 `timeout-minutes`；
-- 高成本环境准备、Runtime 拉取和 E2E Step 配置更短的局部超时；
-- 同一 PR/ref 的新提交使用 `concurrency.cancel-in-progress` 取消已过期运行；
-- 环境准备明显异常时，Human Runtime Observation 可以支持提前中止并切换验证实现；
-- 被中止/取消的 Run 记录原因，但不能作为 Completion PASS。
-
-## 7. EU-01 恢复验证决策
-
-EU-01 原 CI #5 在后端测试与前端构建已经 PASS 后，`Install Chromium for Playwright` 在 APT 仓库阶段持续数小时未完成。该 Run 不再作为完成路径继续等待。
-
-EU-01 改由 PR #3 的分层、容器化验证重新取得完整 Current Evidence。
-
-只有新的 Backend Verify、Frontend Verify 和 browser verification 全部 PASS 后，才可以声明 EU-01 Completed。
-
-EU-01 完成后停止执行，不继续 EU-02；先将 Consumer Issue #1/#2 与最终验证结果汇总反馈到 `dygapp/agentic-dev` Experiment Issue #18，等待 agentic-dev 更新后，再基于新基线重新检查和执行 EU-02。
-
-## 8. EU-02 验证收敛记录
-
-EU-02 继续复用分层 CI，并在实际 Completion Verification 中产生新的验证实践证据：
-
-- 前端 Fast Feedback 首先暴露 `vue-tsc` 类型错误，修复后重新执行当前 Head 的完整验证；
-- 首轮 Browser verification 的 Runtime、后端与前端均正常，失败被定位到 Element Plus 选择器使用脆弱 placeholder locator；改用稳定 `data-testid` 后，新的 Head 上 Backend Verify、Frontend Verify 与 Browser verification 全部 PASS；
-- 成功 Run 的日志明确给出 Playwright `2 passed`，但默认 reporter 没有产生 `playwright-report` / `test-results` 文件，导致原 `Upload Playwright evidence` step 虽显示 success 却没有实际 Artifact。
-
-因此后续 CI 在成功路径显式生成 HTML Playwright report，并将缺少预期 evidence 文件视为 workflow failure。该调整只增强 Completion Evidence 的可观察性，不改变业务完成条件。
+上述低风险视觉/交互调整允许在人工 Review 后增量修订；数据模型、Scope 和重大用户行为改变仍按 Product Intent 处理。

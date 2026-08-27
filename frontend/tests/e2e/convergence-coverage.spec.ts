@@ -114,10 +114,10 @@ test('Feature-wide closure：首页按置顶推荐和展示顺序组织多篇已
   })
 
   await page.goto('/')
-  const group = page.locator('.article-group').filter({ hasText: columnName })
+  const group = page.locator('.news-column').filter({ hasText: columnName })
   await expect(group).toBeVisible()
 
-  const orderedTitles = await group.locator('[data-testid^="public-article-"]').allTextContents()
+  const orderedTitles = await group.locator('li a').allTextContents()
   expect(orderedTitles).toEqual([
     pinned.title,
     recommended.title,
@@ -169,8 +169,8 @@ test('Feature-wide closure：SERVICE 与 SITE 导航进入公开首页对应分�
 
   await page.goto('/')
 
-  const serviceSection = page.locator('.public-section').filter({ hasText: '常用服务' })
-  await expect(serviceSection).toBeVisible()
+  const serviceSection = page.locator('.service-panel')
+  await expect(serviceSection.getByRole('heading', { name: '公共服务', exact: true })).toBeVisible()
   const serviceFirstLink = serviceSection.getByRole('link', { name: serviceFirst, exact: true })
   const serviceSecondLink = serviceSection.getByRole('link', { name: serviceSecond, exact: true })
   await expect(serviceFirstLink).toHaveAttribute('href', 'https://example.com/service-a')
@@ -179,7 +179,7 @@ test('Feature-wide closure：SERVICE 与 SITE 导航进入公开首页对应分�
   expect(serviceTexts.indexOf(serviceFirst)).toBeLessThan(serviceTexts.indexOf(serviceSecond))
 
   const siteSection = page.locator('.site-navigation')
-  await expect(siteSection.getByRole('heading', { name: '相关站点', exact: true })).toBeVisible()
-  await expect(siteSection.getByRole('heading', { name: siteCategory, exact: true })).toBeVisible()
+  await expect(siteSection.getByRole('heading', { name: '网站导航', exact: true })).toBeVisible()
+  await expect(siteSection.getByText(siteCategory, { exact: true })).toBeVisible()
   await expect(siteSection.getByRole('link', { name: siteName, exact: true })).toHaveAttribute('href', 'https://example.com/site')
 })
