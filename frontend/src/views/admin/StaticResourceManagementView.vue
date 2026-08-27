@@ -16,6 +16,7 @@ const trash = ref<TrashEntry[]>([])
 const currentPath = ref('')
 const file = ref<File | null>(null)
 const replaceTarget = ref<string | null>(null)
+const fileInput = ref<HTMLInputElement | null>(null)
 const asEntry = (row: unknown) => row as StaticEntry
 const asTrash = (row: unknown) => row as TrashEntry
 const displayPath = computed(() => currentPath.value || '/')
@@ -27,11 +28,16 @@ async function refresh() {
 }
 function choose(e: Event) {
   file.value = (e.target as HTMLInputElement).files?.[0] ?? null
+}
+function clearSelection() {
+  file.value = null
   replaceTarget.value = null
+  if (fileInput.value) fileInput.value.value = ''
 }
 async function enter(row: StaticEntry) {
   if (!row.directory) return
   currentPath.value = row.path
+  clearSelection()
   await refresh()
 }
 async function goUp() {
@@ -39,6 +45,7 @@ async function goUp() {
   const segments = currentPath.value.split('/').filter(Boolean)
   segments.pop()
   currentPath.value = segments.join('/')
+  clearSelection()
   await refresh()
 }
 function publicUrl(path: string) {
@@ -51,16 +58,16 @@ async function upload(replace = false) {
     : [currentPath.value, file.value.name].filter(Boolean).join('/')
   try {
     await uploadStaticResource(path, file.value, replace)
-    file.value = null
-    replaceTarget.value = null
+    clearSelection()
     ElMessage.success(replace ? '静态资源已替换' : '静态资源已上传')
     await refresh()
   } catch (e) { ElMessage.error(e instanceof Error ? e.message : '上传失败') }
 }
-async function prepareReplace(row: StaticEntry) {
+function prepareReplace(row: StaticEntry) {
   if (row.directory) return
   replaceTarget.value = row.path
   file.value = null
+  if (fileInput.value) fileInput.value.value = ''
   ElMessage.info(`请选择新文件以替换：${row.path}`)
 }
 async function confirmReplace() {
@@ -96,7 +103,7 @@ async function restore(row: TrashEntry) {
     <el-card shadow="never" style="margin-top:16px">
       <div class="toolbar">
         <div class="path-bar"><el-button :disabled="!canGoUp" @click="goUp">返回上级</el-button><code data-testid="static-current-path">{{ displayPath }}</code></div>
-        <div class="resource-upload"><input type="file" @change="choose"><el-button type="primary" @click="upload(false)">上传到当前目录</el-button><el-button v-if="replaceTarget" type="warning" @click="confirmReplace">替换所选资源</el-button></div>
+        <div class="resource-upload"><input ref="fileInput" data-testid="static-file-input" type="file" @change="choose"><el-button type="primary" @click="upload(false)">上传到当前目录</el-button><el-button v-if="replaceTarget" data-testid="confirm-static-replace" type="warning" @click="confirmReplace">替换所选资源</el-button><el-button v-if="replaceTarget" @click="clearSelection">取消替换</el-button></div>
       </div>
       <el-alert v-if="replaceTarget" :title="`待替换：${replaceTarget}`" type="info" :closable="false" style="margin-bottom:12px" />
       <el-table :data="entries" data-testid="static-resource-table">
