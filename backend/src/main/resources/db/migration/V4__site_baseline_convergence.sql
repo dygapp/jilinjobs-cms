@@ -121,22 +121,28 @@ VALUES (NULL, '网站首页', 'MAIN', NULL, 'HOME', NULL, NULL, NULL, 'DEFAULT',
        (NULL, '预决算公开', 'MAIN', NULL, 'PAGE', NULL, (SELECT id FROM cms_page WHERE group_id IS NULL AND alias='budget'), NULL, 'DEFAULT', 80, 1),
        (NULL, '关于我们', 'MAIN', NULL, 'PAGE', NULL, (SELECT id FROM cms_page WHERE group_id IS NULL AND alias='about'), NULL, 'DEFAULT', 90, 1);
 
+SET @jobs_navigation_id = (SELECT id FROM cms_navigation WHERE parent_id IS NULL AND name='招聘信息' ORDER BY id DESC LIMIT 1);
+SET @guide_navigation_id = (SELECT id FROM cms_navigation WHERE parent_id IS NULL AND name='业务指南' ORDER BY id DESC LIMIT 1);
+SET @policy_navigation_id = (SELECT id FROM cms_navigation WHERE parent_id IS NULL AND name='政策法规' ORDER BY id DESC LIMIT 1);
+SET @guidance_navigation_id = (SELECT id FROM cms_navigation WHERE parent_id IS NULL AND name='就业指导' ORDER BY id DESC LIMIT 1);
+SET @typical_navigation_id = (SELECT id FROM cms_navigation WHERE parent_id IS NULL AND name='典型事迹' ORDER BY id DESC LIMIT 1);
+
 INSERT INTO cms_navigation(parent_id, name, position, category, target_type, target_page_id, open_mode, sort_order, enabled)
-SELECT (SELECT id FROM cms_navigation WHERE parent_id IS NULL AND name='招聘信息' ORDER BY id DESC LIMIT 1), p.name, 'MAIN', NULL, 'PAGE', p.id, 'DEFAULT', p.sort_order, 1
+SELECT @jobs_navigation_id, p.name, 'MAIN', NULL, 'PAGE', p.id, 'DEFAULT', p.sort_order, 1
 FROM cms_page p JOIN cms_page_group g ON g.id=p.group_id WHERE g.alias='jobs';
 
 INSERT INTO cms_navigation(parent_id, name, position, category, target_type, target_page_id, open_mode, sort_order, enabled)
-SELECT (SELECT id FROM cms_navigation WHERE parent_id IS NULL AND name='业务指南' ORDER BY id DESC LIMIT 1), p.name, 'MAIN', NULL, 'PAGE', p.id, 'DEFAULT', p.sort_order, 1
+SELECT @guide_navigation_id, p.name, 'MAIN', NULL, 'PAGE', p.id, 'DEFAULT', p.sort_order, 1
 FROM cms_page p JOIN cms_page_group g ON g.id=p.group_id WHERE g.alias='guide';
 
 INSERT INTO cms_navigation(parent_id, name, position, category, target_type, target_column_id, open_mode, sort_order, enabled)
-SELECT (SELECT id FROM cms_navigation WHERE parent_id IS NULL AND name='政策法规' ORDER BY id DESC LIMIT 1), name, 'MAIN', NULL, 'COLUMN', id, 'DEFAULT', sort_order, 1
+SELECT @policy_navigation_id, name, 'MAIN', NULL, 'COLUMN', id, 'DEFAULT', sort_order, 1
 FROM cms_column WHERE parent_id=(SELECT id FROM cms_column WHERE alias='policy');
 
 INSERT INTO cms_navigation(parent_id, name, position, category, target_type, target_page_id, open_mode, sort_order, enabled) VALUES
-((SELECT id FROM cms_navigation WHERE parent_id IS NULL AND name='就业指导' ORDER BY id DESC LIMIT 1), '直播课程', 'MAIN', NULL, 'PAGE', (SELECT id FROM cms_page WHERE group_id IS NULL AND alias='live-course'), 'DEFAULT', 10, 1),
-((SELECT id FROM cms_navigation WHERE parent_id IS NULL AND name='就业指导' ORDER BY id DESC LIMIT 1), '就业创业师资库', 'MAIN', NULL, 'PAGE', (SELECT id FROM cms_page WHERE group_id IS NULL AND alias='teacher-library'), 'DEFAULT', 20, 1);
+(@guidance_navigation_id, '直播课程', 'MAIN', NULL, 'PAGE', (SELECT id FROM cms_page WHERE group_id IS NULL AND alias='live-course'), 'DEFAULT', 10, 1),
+(@guidance_navigation_id, '就业创业师资库', 'MAIN', NULL, 'PAGE', (SELECT id FROM cms_page WHERE group_id IS NULL AND alias='teacher-library'), 'DEFAULT', 20, 1);
 
 INSERT INTO cms_navigation(parent_id, name, position, category, target_type, target_column_id, open_mode, sort_order, enabled)
-SELECT (SELECT id FROM cms_navigation WHERE parent_id IS NULL AND name='典型事迹' ORDER BY id DESC LIMIT 1), name, 'MAIN', NULL, 'COLUMN', id, 'DEFAULT', sort_order, 1
+SELECT @typical_navigation_id, name, 'MAIN', NULL, 'COLUMN', id, 'DEFAULT', sort_order, 1
 FROM cms_column WHERE parent_id=(SELECT id FROM cms_column WHERE alias='typical');
