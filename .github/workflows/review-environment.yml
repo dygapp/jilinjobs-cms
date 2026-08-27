@@ -10,6 +10,10 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 
+concurrency:
+  group: review-environment-${{ github.event.pull_request.number || github.event.inputs.ref || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   review-environment:
     name: 启动人工评审环境
