@@ -1,99 +1,58 @@
 # jilinjobs-cms
 
-`jilinjobs-cms` 是吉林省智慧就业云平台中“信息发布与网站服务”相关能力的独立 Consumer 项目。
+`jilinjobs-cms` 是“吉林省高等学校毕业生就业信息网”主站内容管理与公开展示能力的 Consumer Repository。
 
-项目已经完成首轮信息发布核心能力、Feature-wide Convergence 和人工集成评审环境建设。2026-08-27 根据新的人工 Product Intent 进入“现网站点收敛”迭代。
+## 当前目标
 
-## 当前项目目标
+当前版本以原网站现有结构和视觉关系为基准，采用 Vue + Spring Boot 重建中心主站，形成可持续演进的 CMS、固定页面、页面组、网站配置、静态资源和公开页面能力。
 
-当前主站以原网站 `www.jilinjobs.cn` / `24365.jl.smartedu.cn` 为参照基线，目标为：
+当前权威需求：
 
-- 复刻现网站主要页面结构、菜单/栏目和蓝—青色视觉；
-- 维护普通栏目和文章；
-- 维护固定页面和页面组；
-- 维护主菜单与二级菜单；
-- 提供网站配置管理；
-- 提供高权限网站静态资源管理；
-- 通过 Flyway + 初始化静态资源包形成可重复的真实站点初始状态；
-- 保持可运行、可自动验证、可启动人工 Review Environment。
+- `docs/requirements/information-publishing.md`
 
-## 当前迭代范围
+当前 Specification / Technical Plan：
 
-### In Scope
+- `docs/specifications/center-main-site-core.md`
+- `docs/technical/center-main-site-core.md`
+- `docs/technical/verification-strategy.md`
 
-- 栏目、文章；
-- 菜单与二级导航；
-- 固定页面；
-- 页面组；
-- 业务指南公共 Tab；
-- 招聘信息页面组框架与占位；
-- 直播课程占位；
-- 固定首页模板；
-- 网站配置管理；
-- 网站静态资源管理；
+当前执行单元：
+
+- `docs/work/center-main-site-core-execution-units.md`
+
+项目演进状态：
+
+- `docs/project/project-roadmap.md`
+
+项目本地开发方法：
+
+- `docs/project/development-method.md`
+
+## Repository Authority
+
+仓库工作必须首先遵循根目录 `AGENTS.md`。产品事实、当前范围、技术状态和验证结果均以本 Consumer Repository 当前权威文件和可观察 GitHub / Runtime Evidence 为准。
+
+`dygapp/agentic-dev` 提供可复用的 AI 开发方法与 Skills，但普通 Consumer 开发优先使用本仓库已经固化的项目本地规则；只有明确进行 baseline 升级或本地规则不足以回答必要方法问题时，才重新读取指定的 upstream baseline。
+
+## 当前站点能力
+
+当前主站基线包含：
+
+- 栏目、文章与发布状态；
+- 分层菜单与多目标导航；
+- 固定页面和页面组；
 - `/column/{alias}`、`/article/{id}`、`/page/**` 公开 URL；
-- 现网视觉与布局复刻；
-- 初始化数据库基线与初始化静态资源包；
-- 自动化验证与人工评审环境。
+- 网站配置管理；
+- 网站静态资源目录浏览、上传、替换、删除到回收区和恢复；
+- 版本化初始化静态资源包；
+- 首页、栏目页、文章详情页、固定页、业务指南与招聘信息占位等公开模板；
+- MySQL + Flyway 初始化基线；
+- Backend / Frontend / Browser E2E 和临时人工评审环境。
 
-### Out of Scope
+中心党建内容主题和慧就业真实 iframe 接入不属于当前迭代实现范围，按照权威需求保留相应占位和后续演进边界。
 
-- 本轮真实慧就业 iframe 接入；
-- 本轮中心党建主题与内容实现；
-- 当前原型认证授权；
-- 通用 Page Builder；
-- 通用静态资源引用关系分析；
-- 互动、全文搜索、复杂统计、多站点；
-- MQ、MinIO、Redis；
-- Production 发布。
+## 验证原则
 
-详细需求以 `docs/requirements/information-publishing.md` 为当前业务基线。
+完成状态必须由当前 Head 对应的 Current Evidence 支持。Backend、Frontend、Browser verification 与 Review Environment 的实时结果由 GitHub Actions 保存；README 不复制具体 Run 编号或流水状态，避免形成第二份状态数据库。
 
-## 仓库权威入口
-
-最高治理入口：`AGENTS.md`。
-
-当前 Specification：`docs/specifications/center-main-site-core.md`。
-
-当前 Technical Plan 与 Verification Strategy：`docs/technical/center-main-site-core.md`、`docs/technical/verification-strategy.md`。
-
-当前增量 Execution Units：`docs/work/center-main-site-core-execution-units.md`。
-
-## 当前技术边界
-
-- 前端：Vue 3 + TypeScript + Vite + Vue Router；
-- 管理端：Element Plus；
-- 后端：Spring Boot 模块化单体；
-- Java 21 + Kotlin + Gradle；
-- MySQL + MyBatis；
-- 文件资源：本地文件系统；
-- 当前不建设认证授权；
-- 当前不引入 MQ、MinIO、Redis。
-
-公开前端允许从单一 SPA 演进为多个 SPA Shell；公开 URL 与具体 HTML Entry 解耦。
-
-## 开发方法
-
-方法上游：
-
-```text
-dygapp/agentic-dev
-master@2ee56a5866d0201977a75b2b18ca2e791a218983
-```
-
-普通开发优先遵循本仓库 `docs/project/development-method.md`。
-
-## 项目路线图
-
-当前项目状态统一维护在 `docs/project/project-roadmap.md`。
-
-## 当前开发原则
-
-- Requirement 是当前产品事实；
-- Specification 负责 WHAT / WHY；
-- Technical Plan 只固化跨 Execution Unit 有持续价值的 HOW；
-- Execution Unit 纵向、可验证、context-fit；
-- 站点初始化基线与测试数据分离；
-- 实现覆盖不等于验证覆盖；
-- 没有 Current Evidence，不声明完成/通过/修复；
-- Actions 非终态不是默认人工接管点。
+视觉复刻精度、间距、字号、图片比例和低风险交互体验在人工评审阶段继续调整；这类调整不改变已经确认的数据模型、URL、站点结构和主要用户行为。
