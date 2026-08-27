@@ -182,7 +182,7 @@ jobs:
             sleep 2
           done
 
-          grep -q '<title>吉林就业信息发布原型</title>' review-home.html
+          grep -q '<title>吉林省高等学校毕业生就业信息网</title>' review-home.html
           js_path=$(grep -oE 'src="/assets/[^"]+\.js"' review-home.html | head -1 | cut -d'"' -f2)
           css_path=$(grep -oE 'href="/assets/[^"]+\.css"' review-home.html | head -1 | cut -d'"' -f2)
           test -n "$js_path"
