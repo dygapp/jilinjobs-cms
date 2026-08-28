@@ -27,6 +27,9 @@ test('视觉基线：页脚备案、事业单位、公众号与 favicon 使用�
   await expect(page.locator('.public-institution-badge img')).toHaveAttribute('src', '/static/footer/public-institution.png')
   await expect(page.locator('.wechat-entry img')).toHaveAttribute('src', '/static/footer/wechat-qr.png')
   await expect(page.locator('.wechat-entry')).toContainText('吉林省大学生就业创业')
+  await expect(page.locator('.public-institution-badge')).not.toHaveAttribute('href')
+  await expect(page.locator('.wechat-entry')).not.toHaveAttribute('href')
+  await expect(footer).toContainText(`Copyright ${new Date().getFullYear()}`)
 
   expect(Math.round((await page.locator('.public-security-record img').boundingBox())?.width ?? 0)).toBe(20)
   expect(Math.round((await page.locator('.public-institution-badge img').boundingBox())?.width ?? 0)).toBe(96)
@@ -44,7 +47,7 @@ test('视觉基线：首页举报入口打开站内固定页并保留原站正�
   await link.click()
 
   await expect(page).toHaveURL(/\/page\/employment-report-contact$/)
-  await expect(page.getByRole('heading', { name: '吉林省高校毕业生就业工作举报电话及邮箱', exact: true })).toBeVisible()
+  await expect(page.getByRole('heading', { name: '举报电话及邮箱', exact: true })).toBeVisible()
   const body = page.locator('.fixed-page-body')
   await expect(body).toContainText('0431-84657570')
   await expect(body).toContainText('0431-84657571')
