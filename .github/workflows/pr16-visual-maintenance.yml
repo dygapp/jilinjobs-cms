@@ -25,30 +25,28 @@ jobs:
 
           test_path = Path('frontend/tests/e2e/articles.spec.ts')
           text = test_path.read_text()
-          old = '''  const columnName = `公开栏目-${suffix}`
-          const title = `待发布文章-${suffix}`
-          const updatedTitle = `已编辑发布文章-${suffix}`
+          start_marker = '  const columnName = `公开栏目-${suffix}`\n'
+          end_marker = '  const imageResponse = await request.post(\'/api/admin/resources\', {\n'
+          start = text.find(start_marker)
+          end = text.find(end_marker, start)
+          if start < 0 or end < 0:
+              raise SystemExit(f'EU-04 markers missing: start={start}, end={end}')
+          replacement = '''  const title = `待发布文章-${suffix}`
+            const updatedTitle = `已编辑发布文章-${suffix}`
 
-          const columnResponse = await request.post('/api/admin/columns', {
-            data: { parentId: null, name: columnName, sortOrder: 10, enabled: true },
-          })
-          expect(columnResponse.ok()).toBeTruthy()
-          const column = await columnResponse.json() as { id: number }
-          '''
-          new = '''  const title = `待发布文章-${suffix}`
-          const updatedTitle = `已编辑发布文章-${suffix}`
+            const columnsResponse = await request.get('/api/admin/columns')
+            expect(columnsResponse.ok()).toBeTruthy()
+            const columns = await columnsResponse.json() as Array<{ id: number; name: string; alias: string }>
+            const noticeColumn = columns.find((item) => item.alias === 'notice')
+            expect(noticeColumn).toBeTruthy()
+            const column = noticeColumn!
+            const columnName = column.name
 
-          const columnsResponse = await request.get('/api/admin/columns')
-          expect(columnsResponse.ok()).toBeTruthy()
-          const columns = await columnsResponse.json() as Array<{ id: number; name: string; alias: string }>
-          const noticeColumn = columns.find((item) => item.alias === 'notice')
-          expect(noticeColumn).toBeTruthy()
-          const column = noticeColumn!
-          const columnName = column.name
           '''
-          if text.count(old) != 1:
-              raise SystemExit(f'EU-04 target count != 1: {text.count(old)}')
-          test_path.write_text(text.replace(old, new, 1))
+          # YAML block indentation removes two leading spaces from every embedded line.
+          # Restore the TypeScript two-space test-body indentation explicitly.
+          replacement = '\n'.join(('  ' + line if line else '') for line in replacement.splitlines()) + '\n'
+          test_path.write_text(text[:start] + replacement + text[end:])
 
           workflow_path = Path('.github/workflows/review-environment.yml')
           workflow = workflow_path.read_text()
