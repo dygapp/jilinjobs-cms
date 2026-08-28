@@ -52,10 +52,10 @@ const siteGroups = computed(() => {
 })
 
 const articlesFor = (alias: string) => articles.value.filter(article => article.columnAlias === alias).slice(0, 7)
+const isExternalArticle = (article: PublicArticleSummary) => article.articleType === 'EXTERNAL_LINK' && Boolean(article.externalUrl)
 const noticeArticles = computed(() => articlesFor('notice'))
 const employmentArticles = computed(() => articlesFor('employment-news'))
-const recruitmentArticles = computed(() => articlesFor('recruitment-announcement'))
-const isExternalArticle = (article: PublicArticleSummary) => article.articleType === 'EXTERNAL_LINK' && Boolean(article.externalUrl)
+const recruitmentArticles = computed(() => articlesFor('recruitment-announcement').filter(isExternalArticle))
 
 const guideItems = [
   { name: '就业派遣', to: '/page/guide/jypq', icon: '/static/icons/guide-01.png' },
@@ -192,8 +192,7 @@ onMounted(async () => {
           <header><h2>招聘公告</h2><router-link to="/column/recruitment-announcement">更多 &gt;</router-link></header>
           <ul>
             <li v-for="article in recruitmentArticles" :key="article.id">
-              <a v-if="isExternalArticle(article)" :data-testid="`recruitment-external-${article.id}`" :href="article.externalUrl!" target="_blank" rel="noopener noreferrer">{{ article.title }}</a>
-              <router-link v-else :to="`/article/${article.id}`">{{ article.title }}</router-link>
+              <a :data-testid="`recruitment-external-${article.id}`" :href="article.externalUrl!" target="_blank" rel="noopener noreferrer">{{ article.title }}</a>
               <time v-if="article.publishDate">{{ article.publishDate }}</time>
             </li>
             <li v-if="!recruitmentArticles.length" class="empty-item">暂无已发布内容</li>
