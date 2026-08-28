@@ -39,8 +39,8 @@ jobs:
           if-no-files-found: error
           retention-days: 3
 
-  frontend:
-    name: Frontend verify
+  public-frontend:
+    name: Public site frontend verify
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -49,27 +49,49 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: "24"
-          cache: npm
-          cache-dependency-path: frontend/package.json
-      - name: Install frontend dependencies
-        working-directory: frontend
+      - name: Install public site dependencies
+        working-directory: frontend/public-site
         run: npm install --no-audit --no-fund
-      - name: Build frontend
-        working-directory: frontend
+      - name: Build public site
+        working-directory: frontend/public-site
         run: npm run build
-      - name: Upload frontend artifact
+      - name: Upload public site artifact
         uses: actions/upload-artifact@v7
         with:
-          name: frontend-dist
-          path: frontend/dist
+          name: public-site-dist
+          path: frontend/public-site/dist
+          if-no-files-found: error
+          retention-days: 3
+
+  admin-frontend:
+    name: Admin frontend verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+      - name: Install admin dependencies
+        working-directory: frontend/admin
+        run: npm install --no-audit --no-fund
+      - name: Build admin
+        working-directory: frontend/admin
+        run: npm run build
+      - name: Upload admin artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: admin-dist
+          path: frontend/admin/dist
           if-no-files-found: error
           retention-days: 3
 
   e2e:
-    name: Browser verification
-    needs: [backend, frontend]
+    name: Integrated browser verification
+    needs: [backend, public-frontend, admin-frontend]
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
     services:
       mysql:
         image: mysql:8.4
@@ -91,11 +113,16 @@ jobs:
         with:
           name: backend-jar
           path: backend-artifact
-      - name: Download frontend artifact
+      - name: Download public site artifact
         uses: actions/download-artifact@v8
         with:
-          name: frontend-dist
-          path: frontend-dist
+          name: public-site-dist
+          path: public-site-dist
+      - name: Download admin artifact
+        uses: actions/download-artifact@v8
+        with:
+          name: admin-dist
+          path: admin-dist
       - name: Prepare versioned static baseline
         run: |
           rm -rf runtime-static
@@ -105,12 +132,9 @@ jobs:
       - name: Pull predefined runtime images
         timeout-minutes: 12
         run: |
-          docker pull eclipse-temurin:21-jre-alpine-3.23 &
-          java_image_pid=$!
-          docker pull nginx:1.29.8-alpine &
-          nginx_image_pid=$!
-          docker pull mcr.microsoft.com/playwright:v1.61.0-noble &
-          playwright_image_pid=$!
+          docker pull eclipse-temurin:21-jre-alpine-3.23 & java_image_pid=$!
+          docker pull nginx:1.29.8-alpine & nginx_image_pid=$!
+          docker pull mcr.microsoft.com/playwright:v1.61.0-noble & playwright_image_pid=$!
           wait "$java_image_pid"
           wait "$nginx_image_pid"
           wait "$playwright_image_pid"
@@ -127,33 +151,43 @@ jobs:
             eclipse-temurin:21-jre-alpine-3.23 \
             java -jar /app/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar
           for i in $(seq 1 60); do
-            if curl --fail --silent http://127.0.0.1:8080/api/admin/columns > /dev/null; then
-              break
-            fi
+            if curl --fail --silent http://127.0.0.1:8080/api/admin/columns > /dev/null; then break; fi
             if [ "$i" -eq 60 ]; then docker logs cms-backend; exit 1; fi
             sleep 2
           done
           curl --fail --silent http://127.0.0.1:8080/static/health/baseline.png > /dev/null
-      - name: Start frontend runtime container
+      - name: Start combined frontend runtime container
         timeout-minutes: 5
         run: |
           docker run -d --name cms-frontend --network host \
-            -v "$GITHUB_WORKSPACE/frontend-dist:/usr/share/nginx/html:ro" \
+            -v "$GITHUB_WORKSPACE/public-site-dist:/usr/share/nginx/html/public:ro" \
+            -v "$GITHUB_WORKSPACE/admin-dist:/usr/share/nginx/html/admin:ro" \
             -v "$GITHUB_WORKSPACE/frontend/nginx.e2e.conf:/etc/nginx/nginx.conf:ro" \
             nginx:1.29.8-alpine
           for i in $(seq 1 30); do
-            if curl --fail --silent http://127.0.0.1:5173/ > /dev/null; then exit 0; fi
+            if curl --fail --silent http://127.0.0.1:5173/ > /dev/null \
+              && curl --fail --silent http://127.0.0.1:5173/admin/ > /dev/null; then exit 0; fi
             sleep 1
           done
           docker logs cms-frontend
           exit 1
-      - name: Run browser-level verification
-        timeout-minutes: 10
+      - name: Run existing feature browser verification
+        timeout-minutes: 12
         run: |
           docker run --rm --init --ipc=host --network host \
             -e CI=true \
             -e CI_EXTERNAL_WEB_SERVER=true \
-            -v "$GITHUB_WORKSPACE/frontend:/work" \
+            -v "$GITHUB_WORKSPACE/frontend/public-site:/work" \
+            -w /work \
+            mcr.microsoft.com/playwright:v1.61.0-noble \
+            bash -lc 'npm install --no-audit --no-fund && npm run test:e2e'
+      - name: Run admin browser verification
+        if: ${{ hashFiles('frontend/admin/tests/e2e/*.spec.ts') != '' }}
+        timeout-minutes: 8
+        run: |
+          docker run --rm --init --ipc=host --network host \
+            -e CI=true \
+            -v "$GITHUB_WORKSPACE/frontend/admin:/work" \
             -w /work \
             mcr.microsoft.com/playwright:v1.61.0-noble \
             bash -lc 'npm install --no-audit --no-fund && npm run test:e2e'
@@ -163,9 +197,11 @@ jobs:
         with:
           name: playwright-evidence
           path: |
-            frontend/playwright-report
-            frontend/test-results
-          if-no-files-found: error
+            frontend/public-site/playwright-report
+            frontend/public-site/test-results
+            frontend/admin/playwright-report
+            frontend/admin/test-results
+          if-no-files-found: warn
           retention-days: 5
       - name: Capture runtime diagnostics
         if: failure()
@@ -184,12 +220,6 @@ jobs:
           path: runtime-diagnostics
           if-no-files-found: error
           retention-days: 5
-      - name: Show runtime logs on failure
-        if: failure()
-        run: |
-          docker logs cms-backend || true
-          docker logs cms-frontend || true
       - name: Stop runtime containers
         if: always()
-        run: |
-          docker rm -f cms-backend cms-frontend || true
+        run: docker rm -f cms-backend cms-frontend || true
