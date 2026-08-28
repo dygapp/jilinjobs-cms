@@ -13,33 +13,35 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 8
     steps:
       - name: Collect original and official footer assets
         shell: bash
         run: |
-          set -euo pipefail
+          set -u
           mkdir -p evidence
           UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36'
+          fetch() {
+            local url="$1"
+            local output="$2"
+            curl --fail --location --retry 1 --connect-timeout 10 --max-time 35 --user-agent "$UA" "$url" --output "$output" || rm -f "$output"
+          }
 
-          curl --fail --location --retry 3 --user-agent "$UA" \
-            'https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-04/71f4afb3-b77a-48b7-a098-af8c73074286.png' \
-            --output evidence/public-security-record.png
+          fetch 'https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-04/71f4afb3-b77a-48b7-a098-af8c73074286.png' evidence/public-security-record.png
+          fetch 'https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/siteattr1/2021-07-22/edda0322-2d1a-4a44-8260-a554323e8cee.png' evidence/site-favicon.png
+          fetch 'https://dcs.conac.cn/js/09/000/0000/40363940/CA090000000403639400002.js' evidence/conac-script.js
+          fetch 'https://mp.weixin.qq.com/s/fKfXBvBb9aQLAqoIJeEldQ' evidence/wechat-article.html
+          fetch 'https://24365.jl.smartedu.cn/detail.html?content_id=162461430857728' evidence/report-contact.html
 
-          curl --fail --location --retry 3 --user-agent "$UA" \
-            'https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/siteattr1/2021-07-22/edda0322-2d1a-4a44-8260-a554323e8cee.png' \
-            --output evidence/site-favicon.png
+          if [[ -f evidence/wechat-article.html ]]; then
+            grep -Eo 'https?[^"'"' ]+' evidence/wechat-article.html | grep -Ei 'mmbiz|qpic|qr|code' | head -100 > evidence/wechat-image-urls.txt || true
+          fi
+          if [[ -f evidence/conac-script.js ]]; then
+            cat evidence/conac-script.js > evidence/conac-script-copy.txt
+          fi
 
-          curl --fail --location --retry 3 --user-agent "$UA" \
-            'https://dcs.conac.cn/js/09/000/0000/40363940/CA090000000403639400002.js' \
-            --output evidence/conac-script.js || true
-
-          curl --location --retry 2 --user-agent "$UA" \
-            'https://mp.weixin.qq.com/s/fKfXBvBb9aQLAqoIJeEldQ' \
-            --output evidence/wechat-article.html || true
-
-          file evidence/* | tee evidence/file-types.txt
-          wc -c evidence/* | tee evidence/sizes.txt
+          file evidence/* 2>/dev/null | tee evidence/file-types.txt || true
+          wc -c evidence/* 2>/dev/null | tee evidence/sizes.txt || true
 
       - name: Upload evidence
         uses: actions/upload-artifact@v4
