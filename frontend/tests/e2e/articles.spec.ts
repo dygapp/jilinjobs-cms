@@ -179,7 +179,7 @@ test('EU-04 发布撤回重新发布驱动公开三级页面可见性', async ({
   await page.goto(`/columns/${column.id}`)
   await columnArticles
   await expect(page.getByRole('navigation', { name: '栏目位置' })).toContainText(columnName)
-  await expect(page.getByTestId(`column-article-${article.id}`)).toHaveText(title)
+  await expect(page.getByTestId(`column-article-${article.id}`).locator('.column-list-title')).toHaveText(title)
   await expect(page.getByText('2026-08-20', { exact: true })).toBeVisible()
 
   await page.goto(`/articles/${article.id}`)
