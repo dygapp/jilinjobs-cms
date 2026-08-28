@@ -96,7 +96,7 @@ class ArticleService(
         if (draft.articleType == ArticleType.EXTERNAL_LINK) {
             if (externalUrl == null) throw ArticleValidationException("外链文章必须填写原文链接")
             val uri = runCatching { URI(externalUrl) }.getOrNull()
-            if (uri?.scheme !in setOf("http", "https") || uri.host.isNullOrBlank()) {
+            if (uri == null || uri.scheme !in setOf("http", "https") || uri.host.isNullOrBlank()) {
                 throw ArticleValidationException("原文链接必须是有效的 http/https 地址")
             }
             return draft.copy(
