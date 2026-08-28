@@ -8,10 +8,9 @@ new = '外链文章在首页和栏目列表中直接打开原文链接，按外�
 if old not in text:
     raise SystemExit('recruitment rule anchor not found')
 text = text.replace(old, new, 1)
-acceptance_anchor = '18. 自动化验证和人工 Review Environment 能够对上述主要行为形成 Current Evidence。'
-acceptance_new = acceptance_anchor + '\n19. “招聘公告”栏目可同时发布站内文章和外链文章；首页“招聘公告”区域仅展示已发布外链文章并直接打开原文链接。'
-if acceptance_anchor not in text:
+acceptance_old = '18. “招聘公告”使用外链文章模型，本站仅维护标题、日期、来源、原文链接等基础信息，点击直接进入来源网站；\n19. 自动化验证和人工 Review Environment 能够对上述主要行为形成 Current Evidence。'
+acceptance_new = '18. “招聘公告”栏目可同时发布站内文章和外链文章；首页“招聘公告”区域仅展示已发布外链文章并直接打开原文链接；\n19. 自动化验证和人工 Review Environment 能够对上述主要行为形成 Current Evidence。'
+if acceptance_old not in text:
     raise SystemExit('acceptance anchor not found')
-if '19. “招聘公告”栏目可同时发布站内文章和外链文章' not in text:
-    text = text.replace(acceptance_anchor, acceptance_new, 1)
+text = text.replace(acceptance_old, acceptance_new, 1)
 path.write_text(text)
