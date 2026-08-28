@@ -1,0 +1,39 @@
+name: 原站视觉取证
+
+on:
+  push:
+    branches:
+      - feature/site-visual-fidelity-20260828
+    paths:
+      - .github/workflows/visual-reference-capture.yml
+      - scripts/visual-reference-capture.js
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v7
+
+      - name: 采集原站视觉与图片资源
+        run: |
+          rm -rf visual-reference
+          mkdir -p visual-reference/assets
+          docker run --rm --init --ipc=host \
+            -v "$GITHUB_WORKSPACE:/work" \
+            -w /work \
+            mcr.microsoft.com/playwright:v1.61.0-noble \
+            node scripts/visual-reference-capture.js
+
+      - name: 输出取证摘要
+        run: |
+          cat visual-reference/summary.txt
+
+      - name: 上传取证证据
+        uses: actions/upload-artifact@v7
+        with:
+          name: original-site-visual-reference
+          path: visual-reference
+          if-no-files-found: error
+          retention-days: 5
