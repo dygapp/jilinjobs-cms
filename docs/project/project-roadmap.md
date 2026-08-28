@@ -37,7 +37,7 @@ master@df4d6a607597eeb3684279e269cb073fcb398f83
 | 2026-08-27 | PR #15 合并，站点结构、页面模型、后台闭环、静态资源和初始化基线进入 `main` |
 | 2026-08-28 | PR #16 合并，首页与公共视觉基线、真实原站静态资源、AI/Human Review 数据隔离及视觉复核进入 `main` |
 | 2026-08-28 | `agentic-dev` baseline 更新到 `df4d6a607597eeb3684279e269cb073fcb398f83`，同步验证证据、Stale Verification Contract、Visual Fidelity 与 Human Review Environment 边界 |
-| 2026-08-28 | PR #18 完成栏目列表、文章详情、固定页、业务指南、页脚、favicon、举报固定页与外链文章等页面细节收敛，并通过最终人工复核，达到合并条件 |
+| 2026-08-28 | PR #18 完成栏目列表、文章详情、固定页、业务指南、页脚、favicon、举报固定页与外链文章等页面细节收敛；最终 Human Visual Review 已通过，页面细节视觉收敛阶段关闭 |
 
 ## 当前已固化结果
 
@@ -93,7 +93,7 @@ PR #18 关闭的是“当前页面结构与视觉细节收敛”，不是公开�
 
 ## 阶段切换原则
 
-- PR #18 人工复核通过后即可合并，页面细节视觉收敛阶段关闭；
+- PR #18 Human Visual Review 已通过，页面细节视觉收敛阶段关闭，可执行合并；
 - 下一工作会话优先进入“管理端工程分离与功能收敛”；
 - 公开站点剩余内容与嵌入任务保留在本 Roadmap，后续按独立阶段继续，不要求在 PR #18 中实现；
 - 新阶段开始时先基于 `main` 和本 Roadmap 重新形成 Technical Plan / Execution Plan，不直接沿用旧 PR 分支。
