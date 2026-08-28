@@ -134,7 +134,7 @@ class StaticResourceService(
  private fun ByteArray.startsWith(prefix:ByteArray):Boolean=size>=prefix.size && prefix.indices.all{this[it]==prefix[it]}
  private fun ByteArray.asAscii(length:Int):String=take(length).toByteArray().toString(StandardCharsets.US_ASCII)
 
- private fun protectedPaths():Set<String>=buildSet{
+ private fun protectedPaths(): Set<String> = buildSet {
   add("health/baseline.png")
   siteConfigMapper.findAll().forEach{row->
    if(row.valueType=="RESOURCE_PATH") normalizedConfiguredStaticPath(row.configValue)?.let(::add)
