@@ -11,19 +11,22 @@ Repository:
 dygapp/agentic-dev
 
 Baseline:
-master@2ee56a5866d0201977a75b2b18ca2e791a218983
+master@df4d6a607597eeb3684279e269cb073fcb398f83
 ```
 
 该 baseline 提供 Method、Operating Guide、Skill Contracts 与 Skills 的来源依据，但不提供本项目的业务事实。
 
-相对上一 baseline `b4e5b2027bdbbe97cc0b7153be65c5afb7a0274e`，本次实际吸收的新增规则是：
+相对上一 baseline `2ee56a5866d0201977a75b2b18ca2e791a218983`，本次实际吸收的新增规则是：
 
-- 已有 Consumer 将 `agentic-dev` 视为上游知识源而非日常运行依赖，并采用“精确 baseline → 选择性采纳 → Consumer-local 固化 → 恢复本地 Authority”的升级闭环；
-- 同一工作涉及多个 Repository 时，逐 Repository 判断具体操作授权，技术工具能力不能替代 Human Authority；
-- Workflow / Deployment / 远程 Job 等异步外部操作属于执行闭环中间状态，等待、观察、失败诊断、授权内修复和重试必须保持有界并持续到取得目标证据或出现真实阻塞；
-- `github-actions-verification` 对 `queued` / `pending` / `in_progress` Run 明确不再视为默认退出条件，并要求重新核对 event、Head SHA、status / conclusion、Jobs / Logs / Artifacts 与当前目标提交的关联。
+- Test、Workflow assertion、fixture、snapshot 等 Verification Artifact 也可能陈旧；当其与当前更高优先级 Authority / Specification 冲突时，应分类为 **Stale Verification Contract**，修正拥有过期断言的验证层，而不是修改产品实现去恢复旧行为；
+- 验证证据必须与声明类型匹配；Functional Browser Verification 可以证明路由、交互、资源加载和已编码断言，但不能在缺少完整机器可判定容差时单独证明 Visual Fidelity；
+- Visual Fidelity 需要与视觉 Requirement 对应的参考证据、AI 视觉对照和 Human Visual Review；人工结论按实际范围记录，不得扩大原始结论；
+- 自动 E2E 与人工评审共用 Runtime 时，应执行“自动验证 → 收集证据 → 恢复已知数据库/静态资源基线 → 注入明确 Human Review Fixture → 暴露并验证评审环境”，不得把测试结束状态默认当作 Human Review Baseline；
+- 容器可写 host bind mount 时，应显式处理 UID/GID、ownership、permissions 与 cleanup；Reset 需要可重复执行并重新验证，调用 `rm -rf` 本身不构成 Cleanup Evidence；
+- Workflow 应优先承担构建、运行环境、HTTP/API 可达和正式测试套件等运行语义，避免在多个验证层重复硬编码同一产品展示语义；
+- 当 Artifact 本身承担必要验证证据职责时，应重新读取当前 Run 的 Artifact 集合并核对名称、Run 和 Head SHA，上传步骤成功不能单独证明 Artifact 实体存在。
 
-`agentic-dev` 自身 Project Roadmap、Issue #33 处理状态、eval 维护状态等没有被继承为 Consumer 项目事实。
+`agentic-dev` 自身 Project Roadmap、Issue / eval 处理状态等没有被继承为 Consumer 项目事实。
 
 ## 2. Consumer 与 agentic-dev 的职责边界
 
@@ -68,7 +71,7 @@ Repository Policy / Human Authority
 - 实施文件、具体命令和局部施工步骤优先通过 JIT Plan 在执行时确定。
 - 通用 Method 的终点是 `Ready to Integrate`；实际 merge / release / deploy 仍服从本仓库授权和策略。
 
-## 4. 验收与验证闭环
+## 4. 验收、调试与验证闭环
 
 每项 Specification Acceptance Obligation 必须能够闭环到：
 
@@ -81,7 +84,58 @@ Repository Policy / Human Authority
 
 当 Feature-wide `converge` 暴露的缺口只是已有 Acceptance Obligation 缺少验证覆盖时，应优先补齐 Verification Coverage，不得因此发明新的产品范围。
 
-## 5. 外部操作与异步执行闭环
+遇到验证失败时，不默认“测试永远正确”，先建立 Authority-backed Expected vs Actual，并至少区分：
+
+```text
+Implementation Defect
+Stale Verification Contract
+Runtime / Environment Problem
+External Dependency Problem
+```
+
+当 Test / Workflow assertion / fixture / snapshot 与当前更高优先级 Authority 或 Specification 冲突时：
+
+- 把问题归类为 Stale Verification Contract；
+- 修正真正拥有陈旧断言的验证层；
+- 如果同一产品语义在多个验证层重复维护，识别契约所有者，删除无必要重复或共享同一权威来源；
+- 修正后重新运行当前有效验证，确认新契约能证明当前 Expected Behavior，同时不掩盖真实实现缺陷。
+
+## 5. 证据声明与视觉验收边界
+
+证据类型必须与声明类型匹配：
+
+- Backend / Frontend Build、Unit / Integration / Browser E2E 只证明其实际覆盖的行为；
+- Functional Browser Verification 可证明路由、交互、资源加载和已编码断言；
+- 对视觉复刻、设计稿还原、品牌一致性等 Visual Fidelity Requirement，在没有完整机器可判定容差时，Functional Browser PASS 不能单独替代视觉判断；
+- Visual Fidelity 应使用可追溯参考证据，优先形成“原站/设计参考 → Review Runtime 截图 → AI 明显差异检查 → Human Visual Review”的组合路径；
+- AI 视觉检查用于提前消除明显差异，Human Visual Review 负责最终人工判断边界；
+- Human Review 原始结论必须按实际范围记录，例如“基本通过，暂未发现新的阻塞问题”不能扩大为“完全一致”或无条件验收。
+
+如果 Artifact 本身是必要 Verification Evidence，除了确认 upload step 成功，还应重新读取当前 Run 的 Artifact 集合并核对 Artifact 名称、Run 和 Head SHA；必要 Artifact 缺失时 Workflow 应配置为失败。
+
+## 6. Human Review Environment 状态隔离
+
+当自动化验证后还需要暴露同一 Runtime 供人工评审时，默认采用：
+
+```text
+Automated Verification
+→ Collect Current Evidence
+→ Recreate / Reset Known Database and Static Baseline
+→ Seed Explicit Human Review Fixtures
+→ Start / Expose Review Runtime
+→ Verify Review Baseline and Access Path
+```
+
+规则：
+
+- 自动测试数据、测试导航、临时文件、缓存和会话不得因共用环境而默认进入 Human Review；
+- Human Review Fixture 必须显式定义，只保留确实用于人工观察的数据；
+- 数据库和静态资源应从 Flyway、版本化静态资源包或其他 Consumer Authority 可追溯来源恢复；
+- Reset 后重新验证测试数据已移除、版本化资源已恢复、人工 Fixture 已准备、服务健康和外部评审地址可访问；
+- 容器向 host bind mount 写文件时，明确 UID/GID、ownership、permissions 与清理身份；普通 runner 无权删除 root-owned 文件时，不得把普通 `rm -rf` 当作可靠清理方案；
+- Cleanup / Reset 必须可重复执行并得到同一已知状态；该规则仅适用于已授权的临时验证/评审环境，不授予 Production 或共享数据的破坏性清理权限。
+
+## 7. 外部操作与异步执行闭环
 
 外部 Repository / GitHub / Workflow 操作遵循：
 
@@ -106,7 +160,7 @@ Analyze
 - 失败后先取得日志、Job / Step、Artifact 或其他诊断证据；修复属于当前 Scope 且已授权时，使用 `systematic-debug` 定位 Root Cause、执行最小修复、重跑并重新观察。
 - 闭环可在三类结果下结束：取得并核对目标证据；出现真实 Human / Runtime 阻塞；达到有界观察上限并准确保留 `Executed but not fully verified`。后两者均不能声明完成。
 
-## 6. Project Roadmap
+## 8. Project Roadmap
 
 本项目需要跨多个里程碑和 Fresh Context 持续演进，因此维护：
 
@@ -118,7 +172,7 @@ Roadmap 只维护项目级路线：已完成、当前、下一步和条件性后
 
 README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项目路线。
 
-## 7. Skills
+## 9. Skills
 
 当前 baseline 的核心 Skills：
 
@@ -141,13 +195,14 @@ README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项�
 - 不要求每个工作都走完整 Skill 清单；
 - Skill 不得覆盖 Consumer Authority；
 - 遇到实现阶段的意外失败时，使用系统化调试路径，而不是无证据试错；
-- 当 GitHub Actions 的触发、CI 可观察性、Artifact、容器 Runtime、timeout / cancellation 或 diagnostics 会影响证据可靠性时，按需应用 `github-actions-verification`；
+- 当失败来自 Test / Workflow assertion 等 Verification Artifact 时，`systematic-debug` 必须先核对其与当前 Authority 的一致性，允许并要求在证据支持时识别 Stale Verification Contract；
+- 当 GitHub Actions 的触发、CI 可观察性、Artifact、容器 Runtime、Human Review Baseline、timeout / cancellation 或 diagnostics 会影响证据可靠性时，按需应用 `github-actions-verification`；
 - 如果调用要求实际完成 GitHub Actions 验证，dispatch / rerun 成功只是 `Act`，不是 Skill 退出条件；仍可观察的 `queued` / `pending` / `in_progress` Run 必须继续有界观察；
 - 观察中持续核对 Run event、Head SHA、status / conclusion、Jobs / Steps / Logs / Artifacts 与当前 PR / Branch / Commit 的对应关系，只使用与当前目标提交真实关联的 Evidence；
 - Run 失败且修复已获授权时，取得诊断证据后进入 `systematic-debug`，完成最小修复、重跑和复验；
 - 如果调用只要求设计或优化验证路径而不要求实际执行，应返回 Evidence Retrieval Plan，并明确实际 Completion Evidence 尚未取得，不把计划写成已执行结果。
 
-## 8. Fresh Context 恢复顺序
+## 10. Fresh Context 恢复顺序
 
 新的开发上下文默认按以下顺序恢复：
 
@@ -161,7 +216,7 @@ README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项�
 
 不得依赖历史聊天或个人记忆补充未固化的项目事实。
 
-## 9. baseline 升级规则
+## 11. baseline 升级规则
 
 只有项目负责人明确要求更新 `agentic-dev` baseline 时，才执行 baseline 升级。
 
