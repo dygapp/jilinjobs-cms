@@ -67,21 +67,22 @@ class ArticleServiceTest {
     }
 
     @Test
-    fun `招聘公告栏目只允许外链文章`() {
+    fun `招聘公告栏目同时支持站内和外链文章`() {
         val service = ArticleService(InMemoryArticleRepository(), RecruitmentColumnQuery(), InMemoryArticleResourceAssociation())
 
-        assertThrows(ArticleValidationException::class.java) {
-            service.create(sampleDraft())
-        }
-
-        val created = service.create(
+        val internal = service.create(sampleDraft())
+        val external = service.create(
             sampleDraft().copy(
+                title = "外链招聘公告",
                 articleType = ArticleType.EXTERNAL_LINK,
                 externalUrl = "https://example.com/recruitment/1",
             ),
         )
-        assertEquals(ArticleType.EXTERNAL_LINK, created.articleType)
-        assertEquals("https://example.com/recruitment/1", created.externalUrl)
+
+        assertEquals(ArticleType.INTERNAL, internal.articleType)
+        assertNull(internal.externalUrl)
+        assertEquals(ArticleType.EXTERNAL_LINK, external.articleType)
+        assertEquals("https://example.com/recruitment/1", external.externalUrl)
     }
 
     @Test
