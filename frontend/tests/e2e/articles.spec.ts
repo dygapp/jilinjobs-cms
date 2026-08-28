@@ -119,15 +119,16 @@ test('文章草稿、文件资源与栏目内容依赖形成管理端闭环', as
 
 test('EU-04 发布撤回重新发布驱动公开三级页面可见性', async ({ page, request }, testInfo) => {
   const suffix = `${Date.now()}-${testInfo.retry}`
-  const columnName = `公开栏目-${suffix}`
   const title = `待发布文章-${suffix}`
   const updatedTitle = `已编辑发布文章-${suffix}`
 
-  const columnResponse = await request.post('/api/admin/columns', {
-    data: { parentId: null, name: columnName, sortOrder: 10, enabled: true },
-  })
-  expect(columnResponse.ok()).toBeTruthy()
-  const column = await columnResponse.json() as { id: number }
+  const columnsResponse = await request.get('/api/admin/columns')
+  expect(columnsResponse.ok()).toBeTruthy()
+  const columns = await columnsResponse.json() as Array<{ id: number; name: string; alias: string }>
+  const noticeColumn = columns.find((item) => item.alias === 'notice')
+  expect(noticeColumn).toBeTruthy()
+  const column = noticeColumn!
+  const columnName = column.name
 
   const imageResponse = await request.post('/api/admin/resources', {
     multipart: {
