@@ -28,6 +28,10 @@ jobs:
             -w /work \
             mcr.microsoft.com/playwright:v1.61.0-noble \
             bash -lc 'cd frontend && npm install --no-audit --no-fund >/dev/null && cd /work && NODE_PATH=/work/frontend/node_modules node scripts/page-detail-reference-capture.js'
+          curl --fail --silent --show-error \
+            'https://24365.jl.smartedu.cn/webfile/theme2/img/img_vocation_default%20copy%206@2x.png' \
+            -o page-detail-reference/list-item-icon.png
+          test -s page-detail-reference/list-item-icon.png
 
       - name: 输出取证摘要
         run: cat page-detail-reference/summary.txt
