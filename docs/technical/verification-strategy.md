@@ -24,13 +24,13 @@ Fresh Database
 
 ### 2.2 Frontend Verify
 
-独立执行 npm ci、`vue-tsc`、Vite build。
+每个独立前端工程分别执行 npm 依赖安装、`vue-tsc` 与 Vite build。
 
-重点验证多入口 HTML 构建、公开 URL、后台页面和公开页面共享布局不因当前变更破坏。
+前端工程物理拆分后，公开站点与管理端分别形成独立 build artifact 和验证入口；不得用其中一个应用的成功构建替代另一个应用的验证。
 
 ### 2.3 Completion E2E
 
-Backend 和 Frontend 都 PASS 后执行 Playwright。
+Backend 和所有当前相关 Frontend Verify 都 PASS 后执行 Playwright / Browser Verification。
 
 E2E 必须消费真实 Flyway 初始化结果和版本化静态资源基线，不允许测试代码重新创建站点基础栏目、主菜单、页面组和固定页面。测试代码只补充当前验证需要的动态测试数据。
 
@@ -56,9 +56,9 @@ External Dependency Problem
 
 Workflow 优先验证构建、运行环境、服务健康、HTTP/API 可达与正式测试套件，不把大量具体产品展示语义重复维护为第二套硬编码契约。
 
-## 4. Current Evidence 与 Artifact
+## 4. Current Evidence、Artifact 与后继提交
 
-对目标 PR / commit 的验证必须关联 Event、Head SHA、Run、Job、Step、Conclusion、必要 Logs 与 Artifact。历史 Run 不能替代当前 Head 的 Completion Evidence。
+对目标 PR / commit 的验证必须关联 Event、Head SHA、Run、Job、Step、Conclusion、必要 Logs 与 Artifact。历史 Run 不能自动替代当前 Head 的 Completion Evidence。
 
 如果某个 Artifact 本身构成必要 Verification Evidence：
 
@@ -67,9 +67,23 @@ Workflow 优先验证构建、运行环境、服务健康、HTTP/API 可达与�
 - 核对 Artifact 名称、Run 和 Head SHA；
 - 缺少该 Artifact 应使 Workflow 失败时，使用 `if-no-files-found: error` 或等价机制。
 
+### 4.1 Descendant Commit Evidence Reuse
+
+如果高成本 Runtime 或 Human Review Evidence 来自当前目标提交的祖先提交，不因后续提交看起来是 `docs-only`、文件少或 CI 绿色就自动继承。
+
+只有同时满足以下条件，才可以按具体 Evidence Claim 复用未受影响的祖先证据：
+
+1. 确认 Evidence Commit 是当前目标提交祖先，并取得两者之间完整、精确的 compare diff；
+2. 逐项说明差异为什么不会改变该 Claim 所覆盖的行为、环境、数据、资源或人工判断对象；
+3. 与该 Claim 相关的 Repository Authority、Requirement、Specification、Architecture、Acceptance、Workflow、Runtime Configuration、Migration、Fixture 和版本化资源没有影响性变化；
+4. 当前 Head 已完成其自身需要的 targeted verification；
+5. 记录 Evidence Commit SHA、Current Target SHA、compare range、原 Run / Review 引用、可复用 Claim 与仍需重新验证的 Claim。
+
+祖先 Run 可以继续作为未受影响行为的祖先证据，但不能被描述为当前 Head 的 Run。受影响或无法证明不受影响的 Claim 必须重新取得相应验证或 Review。
+
 ## 5. Review Environment
 
-Review Environment 采用 MySQL service、Backend runtime、Frontend artifact + Nginx、Playwright official runtime 和 FRP 临时外部 HTTP 地址。
+Review Environment 使用 MySQL service、Backend runtime、版本化 Frontend artifact + Nginx、Playwright official runtime 和 FRP 临时外部 HTTP 地址。
 
 站点真实结构来自 Flyway + 版本化初始化静态资源包。自动测试数据不承担网站初始化职责。
 
@@ -107,9 +121,30 @@ Automated Verification
 
 这些清理规则只适用于已授权的临时验证 / 评审环境，不扩展为 Production 或共享数据的破坏性清理授权。
 
-## 6. Visual Fidelity 验证
+## 6. Human Review Finding 分类
 
-对于当前“现网视觉与布局复刻 + 必要技术适配”的要求，采用三层证据：
+Human Review Finding 不由评审名称决定类别。视觉评审、管理端评审或其他人工观察都可能暴露：
+
+```text
+Implementation Defect
+Product / Requirement Ambiguity
+Domain / Architecture Authority Gap
+Runtime Problem
+Low-risk Visual / Interaction Adjustment
+```
+
+处理规则：
+
+- 保留人工观察的原始范围和上下文；
+- 重新读取当前 Repository Authority、Requirement、Specification 与 Product Intent 后分类；
+- 人工观察是重要 Evidence，但不会仅因来自 Human Review 就自动成为新 Requirement；
+- 不得因为 Finding 来自 Visual Review 就静默压缩成视觉调整；
+- Product / Requirement / Architecture 级歧义回到相应澄清或规划阶段；明确的实现缺陷按当前 Scope 修复并重新验证；Runtime Problem 进入系统化诊断；
+- 人工结论只按实际范围声明，不扩大为无条件验收。
+
+## 7. Visual Fidelity 验证
+
+对于“现网视觉与布局复刻 + 必要技术适配”的要求，采用三层证据：
 
 ```text
 Reference Evidence
@@ -117,7 +152,7 @@ Reference Evidence
 → Human Visual Review
 ```
 
-### 6.1 Reference Evidence
+### 7.1 Reference Evidence
 
 从当前原网站运行时直接取得必要证据，例如：
 
@@ -128,7 +163,7 @@ Reference Evidence
 
 不得凭聊天记忆、旧截图印象或实现便利性自行推断视觉事实。
 
-### 6.2 AI Visual Comparison
+### 7.2 AI Visual Comparison
 
 在 Human Review 前，优先使用 Review Runtime 完整截图与参考截图对照，消除明显的：
 
@@ -140,36 +175,47 @@ Reference Evidence
 
 AI Visual Comparison 是人工评审前的收敛手段，不替代 Human Visual Review。
 
-### 6.3 Human Visual Review
+### 7.3 Human Visual Review
 
-人工 Review 承担最终视觉判断，包括：
-
-- 现网视觉复刻精度；
-- 具体间距、字号、图片比例；
-- 栏目列表、文章详情、固定页面、页面组 / Tab 等页面级体验；
-- 移动端可读性和必要技术适配；
-- 其他难以通过稳定机器阈值表达的视觉差异。
+人工 Review 承担最终视觉判断，包括现网视觉复刻精度、具体间距和字号、图片比例、页面级体验、移动端可读性以及其他难以通过稳定机器阈值表达的差异。
 
 人工结论必须按原始范围记录。例如“基本通过，暂未发现新的阻塞问题”不能扩大为“完全一致”或无条件验收。
 
 低风险视觉 / 交互问题可在人工 Review 后增量修订；数据模型、Scope 和重大用户行为改变仍按 Product Intent 处理。
 
-## 7. 当前页面细节收敛验证路径
+## 8. 外部媒体与二进制输入验证
 
-下一轮栏目、文章、固定页与页面组细节收敛至少遵循：
+如果外部站点、接口、附件或其他 Repository 提供的二进制/媒体资源将进入版本化站点基线、后台静态资源或目标 Runtime，应按当前风险核对真实内容：
 
-1. 从原站选择代表页面并取得运行时参考证据；
-2. 在当前 Consumer Runtime 取得对应页面截图和行为证据；
-3. 修复 Authority 已明确的视觉 / 交互偏差；
-4. 执行 Backend / Frontend targeted verification；
-5. 执行 Completion Browser E2E；
-6. 对需要视觉判断的页面执行 AI Visual Comparison；
-7. 自动验证结束后恢复 Clean Human Review Baseline；
-8. 验证外部 Review URL；
-9. 进入 Human Visual Review；
-10. 只有当前 Head 的功能证据、视觉证据和实际 Human Review 结论共同支持时，才声明相应视觉收敛完成。
+```text
+Acquire
+→ Verify Content Signature / Media Type
+→ Decode or Parse when relevant
+→ Normalize when needed
+→ Version / Persist
+→ Verify in Target Runtime
+```
 
-## 8. 异步 Actions 观察
+文件名、扩展名、URL 后缀和响应头不能单独证明内容类型。图片等资源在相关时应验证实际解码，并核对影响当前声明的尺寸/透明度等属性。格式不匹配时更正命名、转换或拒绝输入，禁止只改扩展名。规范化后重新验证生成物。
+
+## 9. 当前管理端收敛验证路径
+
+管理端工程分离与功能收敛阶段至少遵循：
+
+1. Backend Verify；
+2. Public Site Frontend Verify；
+3. Admin Frontend Verify；
+4. 集成 Runtime 启动，验证 `/`、公开 canonical URL、`/admin/` 和 `/api/**` 路由；
+5. Browser E2E 验证管理端自身核心流程；
+6. Browser E2E 验证后台变更到公开站展示的跨边界闭环；
+7. 收集当前 Head 的测试报告、trace / screenshot 等必要 Current Evidence；
+8. 自动验证后恢复数据库和版本化静态资源基线；
+9. 注入明确的 Human Admin Review Fixture，并验证自动测试残留已清除；
+10. 验证外部 Review URL 的公开站与 `/admin/` 均可访问；
+11. 进入 Human Admin Review；
+12. Human Review Finding 按第 6 节分类路由，不因“管理端评审”名称自动决定处理方式。
+
+## 10. 异步 Actions 观察
 
 Actions 中 queued / pending / in_progress 均为中间状态。
 

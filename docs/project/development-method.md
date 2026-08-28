@@ -11,22 +11,21 @@ Repository:
 dygapp/agentic-dev
 
 Baseline:
-master@df4d6a607597eeb3684279e269cb073fcb398f83
+master@bf21c7bcd711fd667c43007a72fae65750d1af09
 ```
 
 该 baseline 提供 Method、Operating Guide、Skill Contracts 与 Skills 的来源依据，但不提供本项目的业务事实。
 
-相对上一 baseline `2ee56a5866d0201977a75b2b18ca2e791a218983`，本次实际吸收的新增规则是：
+相对上一 baseline `df4d6a607597eeb3684279e269cb073fcb398f83`，本次实际吸收的新增规则是：
 
-- Test、Workflow assertion、fixture、snapshot 等 Verification Artifact 也可能陈旧；当其与当前更高优先级 Authority / Specification 冲突时，应分类为 **Stale Verification Contract**，修正拥有过期断言的验证层，而不是修改产品实现去恢复旧行为；
-- 验证证据必须与声明类型匹配；Functional Browser Verification 可以证明路由、交互、资源加载和已编码断言，但不能在缺少完整机器可判定容差时单独证明 Visual Fidelity；
-- Visual Fidelity 需要与视觉 Requirement 对应的参考证据、AI 视觉对照和 Human Visual Review；人工结论按实际范围记录，不得扩大原始结论；
-- 自动 E2E 与人工评审共用 Runtime 时，应执行“自动验证 → 收集证据 → 恢复已知数据库/静态资源基线 → 注入明确 Human Review Fixture → 暴露并验证评审环境”，不得把测试结束状态默认当作 Human Review Baseline；
-- 容器可写 host bind mount 时，应显式处理 UID/GID、ownership、permissions 与 cleanup；Reset 需要可重复执行并重新验证，调用 `rm -rf` 本身不构成 Cleanup Evidence；
-- Workflow 应优先承担构建、运行环境、HTTP/API 可达和正式测试套件等运行语义，避免在多个验证层重复硬编码同一产品展示语义；
-- 当 Artifact 本身承担必要验证证据职责时，应重新读取当前 Run 的 Artifact 集合并核对名称、Run 和 Head SHA，上传步骤成功不能单独证明 Artifact 实体存在。
+- Human Review Finding 不受评审名称限制；视觉评审也可能暴露 Implementation Defect、Product / Requirement Ambiguity、Domain / Architecture Authority Gap 或 Runtime Problem，应保留人工观察的原始范围并重新读取当前 Authority 后分类路由；人工观察不会仅因来自 Human Review 就自动成为新 Requirement；
+- 从外部站点、接口、附件或其他 Repository 取得的二进制/媒体输入，在版本化或交给 Runtime 消费前，文件名、扩展名、URL 后缀和响应头只能作为线索；当真实内容类型会影响当前行为、验证或安全边界时，应通过内容签名、可靠媒体类型识别或实际解码/解析确认真实格式，必要时规范化并重新验证，禁止仅修改扩展名伪装格式；
+- 已验证提交之后出现新提交时，不得根据 `docs-only`、文件扩展名或变更数量机械继承祖先 Runtime / Human Review Evidence；只有取得祖先 Evidence Commit 到当前目标提交的完整精确差异，并按 Evidence Claim 证明相关行为、环境、数据、资源、Authority、Requirement、Specification、Architecture、Acceptance、Workflow、Runtime、Migration、Fixture 与版本化资源均未受影响时，才可以复用未受影响的祖先证据；必须记录祖先 SHA、当前 SHA、compare range、原 Evidence 引用和 claim 映射；
+- Project Roadmap 维护持久路线和可恢复状态，不逐项复制 PR open/merged、精确 Merge Commit、临时 Branch 删除等 GitHub 原生瞬时状态；进入 Ready to Integrate 前应让当前变更中的长期路线表达在集成后仍成立，合并后若阶段、核心目标、里程碑或已决定下一步未改变，不为“记录刚刚合并”再创建递归尾部变更。
 
-`agentic-dev` 自身 Project Roadmap、Issue / eval 处理状态等没有被继承为 Consumer 项目事实。
+上一 baseline 已固化的 Stale Verification Contract、Visual Fidelity、自动化验证与 Human Review Baseline 隔离、bind mount 可重复恢复、Artifact Evidence 与异步 Actions 闭环规则继续有效。
+
+`agentic-dev` 自身 Project Roadmap、Issue / eval / PR 集成状态等没有被继承为 Consumer 项目事实。
 
 ## 2. Consumer 与 agentic-dev 的职责边界
 
@@ -100,7 +99,7 @@ External Dependency Problem
 - 如果同一产品语义在多个验证层重复维护，识别契约所有者，删除无必要重复或共享同一权威来源；
 - 修正后重新运行当前有效验证，确认新契约能证明当前 Expected Behavior，同时不掩盖真实实现缺陷。
 
-## 5. 证据声明与视觉验收边界
+## 5. 证据声明、Human Review 与视觉验收边界
 
 证据类型必须与声明类型匹配：
 
@@ -111,7 +110,37 @@ External Dependency Problem
 - AI 视觉检查用于提前消除明显差异，Human Visual Review 负责最终人工判断边界；
 - Human Review 原始结论必须按实际范围记录，例如“基本通过，暂未发现新的阻塞问题”不能扩大为“完全一致”或无条件验收。
 
+Human Review Finding 需要按观察内容而不是评审名称分类：
+
+```text
+Human Observation
+→ Re-read Current Authority / Product Intent
+→ Classify
+   - Implementation Defect
+   - Product / Requirement Ambiguity
+   - Domain / Architecture Authority Gap
+   - Runtime Problem
+   - Low-risk Visual / Interaction Adjustment
+→ Route to matching work stage
+```
+
+人工观察是 Evidence，但不会仅因为来自 Human Review 就自动成为 Requirement；同样，也不能因为来自 Visual Review 就把产品或架构缺口静默压缩成 CSS 微调。
+
 如果 Artifact 本身是必要 Verification Evidence，除了确认 upload step 成功，还应重新读取当前 Run 的 Artifact 集合并核对 Artifact 名称、Run 和 Head SHA；必要 Artifact 缺失时 Workflow 应配置为失败。
+
+### 5.1 后继提交的 Evidence Claim 影响判断
+
+祖先提交已经获得 Runtime / Human Review Evidence 后，如果当前目标提交又产生新变更，默认先把祖先证据视为待重新判断的旧证据，不根据 `docs-only`、文件扩展名、文件数量或“CI 仍为绿色”自动继承。
+
+只有同时满足以下条件，才可以按具体 Evidence Claim 复用未受影响证据：
+
+1. 确认 Evidence Commit 是当前目标提交祖先，并取得两者完整、精确差异；
+2. 逐项说明差异为什么不会改变该 Evidence Claim 所覆盖的行为、环境、数据、资源或人工判断对象；
+3. 与该 Claim 相关的 Repository Authority、Requirement、Specification、Architecture、Acceptance、Workflow、Runtime Configuration、Migration、Fixture 和版本化资源均未发生影响性变化；
+4. 当前 Head 完成其自身需要的 targeted checks；
+5. 记录 Evidence Commit SHA、Current Target SHA、compare range、原 Run / Review 引用、可复用 Claim 与需要重新验证的 Claim。
+
+Evidence reuse 是按声明的，不是给整个提交一次性盖章。祖先 Run 可以继续作为未受影响行为的祖先证据，但不得描述为当前 Head 的 Run；如果无法证明某项 Claim 不受影响，就重新取得该项验证或 Review。
 
 ## 6. Human Review Environment 状态隔离
 
@@ -135,7 +164,30 @@ Automated Verification
 - 容器向 host bind mount 写文件时，明确 UID/GID、ownership、permissions 与清理身份；普通 runner 无权删除 root-owned 文件时，不得把普通 `rm -rf` 当作可靠清理方案；
 - Cleanup / Reset 必须可重复执行并得到同一已知状态；该规则仅适用于已授权的临时验证/评审环境，不授予 Production 或共享数据的破坏性清理权限。
 
-## 7. 外部操作与异步执行闭环
+## 7. 外部输入与媒体资源验证
+
+从外部站点、API、附件或其他 Repository 取得的二进制/媒体资源，如果准备进入版本化站点基线、后台可管理资源或目标 Runtime，应按当前风险执行：
+
+```text
+Acquire
+→ Verify Content Signature / Media Type
+→ Decode or Parse when relevant
+→ Normalize when needed
+→ Version / Persist
+→ Verify in Target Runtime
+```
+
+规则：
+
+- 文件名、扩展名、URL 后缀和响应头只能作为线索，不能单独证明真实内容类型；
+- 图片等资源在需要时同时核对是否可实际解码，以及尺寸、透明度等会影响当前声明的属性；
+- 实际格式与扩展名或目标 Runtime 要求不一致时，应更正命名、转换格式或拒绝输入，禁止只改扩展名；
+- 转换或规范化后重新验证生成物，不能把转换命令退出成功当作 Runtime 可用；
+- 普通文本或与当前行为无关的低风险输入不要求无差别执行昂贵媒体分析。
+
+该规则同时约束后台静态资源管理的服务端校验：如果后台宣称接收图片等受控媒体类型，应验证实际内容与允许类型一致，而不能只依据文件扩展名放行。
+
+## 8. 外部操作与异步执行闭环
 
 外部 Repository / GitHub / Workflow 操作遵循：
 
@@ -160,7 +212,7 @@ Analyze
 - 失败后先取得日志、Job / Step、Artifact 或其他诊断证据；修复属于当前 Scope 且已授权时，使用 `systematic-debug` 定位 Root Cause、执行最小修复、重跑并重新观察。
 - 闭环可在三类结果下结束：取得并核对目标证据；出现真实 Human / Runtime 阻塞；达到有界观察上限并准确保留 `Executed but not fully verified`。后两者均不能声明完成。
 
-## 8. Project Roadmap
+## 9. Project Roadmap
 
 本项目需要跨多个里程碑和 Fresh Context 持续演进，因此维护：
 
@@ -168,11 +220,19 @@ Analyze
 docs/project/project-roadmap.md
 ```
 
-Roadmap 只维护项目级路线：已完成、当前、下一步和条件性后续。单个 Execution Unit、临时命令或局部实施步骤不进入 Roadmap。
+Roadmap 只维护项目级持久路线：已完成、当前、下一步和条件性后续。单个 Execution Unit、临时命令或局部实施步骤不进入 Roadmap。
+
+Roadmap 与 GitHub 原生集成状态职责分离：
+
+- PR 是否 open / merged、精确 Merge Commit、临时 Branch 是否删除等瞬时事实由 PR、Issue、Commit History 等 Source of Truth 保存；
+- 在工作进入 Ready to Integrate 前，应让拟集成版本中的阶段、核心目标和已决定下一步在合并后仍然成立，不留下“等待当前 PR 合并”一类马上陈旧的长期路线；
+- 合并后如果没有改变阶段、核心目标、里程碑状态或已决定的下一步，不仅为了记录“刚刚合并”创建新的 Repository Change；
+- 如果合并确实改变长期路线，优先并入紧随其后的实质工作；只有陈旧 Roadmap 会立即阻塞或误导 Fresh Context 时才单独修复；
+- 状态修复本身不能继续触发另一个只记录该修复已合并的递归尾部变更。
 
 README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项目路线。
 
-## 9. Skills
+## 10. Skills
 
 当前 baseline 的核心 Skills：
 
@@ -196,13 +256,13 @@ README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项�
 - Skill 不得覆盖 Consumer Authority；
 - 遇到实现阶段的意外失败时，使用系统化调试路径，而不是无证据试错；
 - 当失败来自 Test / Workflow assertion 等 Verification Artifact 时，`systematic-debug` 必须先核对其与当前 Authority 的一致性，允许并要求在证据支持时识别 Stale Verification Contract；
-- 当 GitHub Actions 的触发、CI 可观察性、Artifact、容器 Runtime、Human Review Baseline、timeout / cancellation 或 diagnostics 会影响证据可靠性时，按需应用 `github-actions-verification`；
+- 当 GitHub Actions 的触发、CI 可观察性、Artifact、容器 Runtime、Human Review Baseline、timeout / cancellation、diagnostics 或祖先 Evidence reuse 会影响证据可靠性时，按需应用 `github-actions-verification`；
 - 如果调用要求实际完成 GitHub Actions 验证，dispatch / rerun 成功只是 `Act`，不是 Skill 退出条件；仍可观察的 `queued` / `pending` / `in_progress` Run 必须继续有界观察；
 - 观察中持续核对 Run event、Head SHA、status / conclusion、Jobs / Steps / Logs / Artifacts 与当前 PR / Branch / Commit 的对应关系，只使用与当前目标提交真实关联的 Evidence；
 - Run 失败且修复已获授权时，取得诊断证据后进入 `systematic-debug`，完成最小修复、重跑和复验；
 - 如果调用只要求设计或优化验证路径而不要求实际执行，应返回 Evidence Retrieval Plan，并明确实际 Completion Evidence 尚未取得，不把计划写成已执行结果。
 
-## 10. Fresh Context 恢复顺序
+## 11. Fresh Context 恢复顺序
 
 新的开发上下文默认按以下顺序恢复：
 
@@ -216,7 +276,7 @@ README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项�
 
 不得依赖历史聊天或个人记忆补充未固化的项目事实。
 
-## 11. baseline 升级规则
+## 12. baseline 升级规则
 
 只有项目负责人明确要求更新 `agentic-dev` baseline 时，才执行 baseline 升级。
 
@@ -227,5 +287,5 @@ README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项�
 3. 区分跨项目可复用资产与 `agentic-dev` 自身 Project Rule；
 4. 根据 Consumer 真实需要和现有 Authority 选择性采纳，不机械复制完整文档体系；
 5. 将具有持续约束价值的已采纳规则固化到 Consumer 可发现的 Authority 中，并显式处理旧规则的更新、保留或取代；
-6. 同步更新 `AGENTS.md`、本文和 Roadmap 的 baseline 记录；
+6. 同步更新 `AGENTS.md`、本文、Verification Strategy 和 Roadmap 的 baseline / 方法记录；
 7. 完成升级后恢复以 Consumer-local Authority 为普通开发入口，不自动继承 `agentic-dev` 自身 Project Roadmap、Issue、实验状态或其他项目事实。

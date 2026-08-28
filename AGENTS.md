@@ -52,9 +52,9 @@
 
 - Repository：`dygapp/agentic-dev`
 - Validation Baseline Branch：`master`
-- Validation Baseline Commit：`df4d6a607597eeb3684279e269cb073fcb398f83`
+- Validation Baseline Commit：`bf21c7bcd711fd667c43007a72fae65750d1af09`
 
-该 baseline 在此前 Project Roadmap、Fresh Context、Consumer-local Method、跨 Repository 授权边界和异步外部操作闭环基础上，进一步正式化了验证证据与声明匹配、陈旧验证契约（Stale Verification Contract）诊断、Visual Fidelity 的 AI / Human 验证边界、自动化验证状态与 Human Review Baseline 隔离，以及容器 bind mount ownership / cleanup / 可重复恢复规则。
+该 baseline 延续已有 Project Roadmap、Fresh Context、Consumer-local Method、跨 Repository 授权、异步外部操作、验证证据与 Human Review Environment 边界，并进一步固化了 Human Review Finding 分类、外部二进制/媒体真实内容校验、后继提交 Evidence Claim 影响判断，以及 Project Roadmap 与 GitHub 瞬时集成状态的职责边界。
 
 本项目不是在每次开发工作中直接运行 `agentic-dev` 仓库的方法文档，而是将当前采用的方法和 Skills 使用规则固化在 Consumer Repository：
 
@@ -86,10 +86,12 @@ docs/project/development-method.md
 - 没有 Current Evidence，不得声明完成、通过或修复成功；
 - 测试、Workflow assertion、fixture、snapshot 等 Verification Artifact 也可能陈旧；当其与更高优先级 Authority / Specification 冲突时，应分类为 Stale Verification Contract 并修正验证层，而不是修改产品去恢复已被取代的旧行为；
 - 证据类型必须与声明类型匹配；Functional Browser PASS 不能单独证明 Visual Fidelity，视觉复刻在缺少完整机器可判定容差时需要参考证据、AI 视觉对照与 Human Visual Review；
-- Human Review 的原始结论按实际范围记录，不把“基本通过、暂未发现阻塞问题”扩大为“完全一致”或无条件验收；
+- Human Review 的原始结论按实际范围记录，不把“基本通过，暂未发现阻塞问题”扩大为“完全一致”或无条件验收；Human Review 中发现的问题不因评审名称自动归类为视觉问题，应重新读取当前 Authority 与 Product Intent 后区分 Implementation Defect、Product / Requirement Ambiguity、Domain / Architecture Authority Gap 或 Runtime Problem；
 - 自动 E2E 与 Human Review 共用 Runtime 时，应在收集自动化证据后恢复已知数据库/静态资源基线，再注入明确的人工评审 Fixture；测试数据不得因环境复用而意外泄漏；
 - 容器可写 host bind mount 时，必须显式处理 UID/GID、ownership、permissions、cleanup 与 Reset 的可重复验证；调用清理命令本身不构成 Cleanup Evidence；
-- 项目跨多个里程碑或 Fresh Context 持续演进时，维护 Consumer 自己的 `docs/project/project-roadmap.md`；
+- 从外部网站、接口、附件或其他 Repository 取得并准备版本化或交给 Runtime 消费的二进制/媒体资源时，文件名、扩展名、URL 后缀和响应头只能作为线索；当内容类型会影响行为、验证或安全边界时，必须使用内容签名、可靠媒体类型识别或实际解码/解析核对真实格式，必要时规范化后重新验证，禁止只改扩展名伪装格式；
+- 已验证提交之后出现新提交时，不按 `docs-only`、文件扩展名或变更数量机械继承祖先证据；只有取得祖先 Evidence Commit 到当前目标提交的精确差异、逐项证明差异不影响具体 Evidence Claim 且相关 Authority / Requirement / Specification / Architecture / Acceptance / Runtime 语义未变时，才可按声明复用未受影响证据，并记录祖先 SHA、当前 SHA、compare range 与 claim 映射；受影响或无法证明不受影响的声明必须重新验证或重新 Review；
+- 项目跨多个里程碑或 Fresh Context 持续演进时，维护 Consumer 自己的 `docs/project/project-roadmap.md`；Roadmap 维护持久路线和可恢复状态，不逐项复制 PR open/merged、精确 Merge Commit、临时分支删除等 GitHub 原生瞬时事实；仅当集成结果改变阶段、核心目标、里程碑或已决定下一步时更新路线，避免形成只记录上一 PR 已合并的递归尾部变更；
 - 同一任务涉及多个 Repository 时，分别确认每个 Repository 的操作授权，Runtime 工具能力本身不构成授权；
 - Workflow、Deployment、远程 Job 等异步外部操作在 `queued` / `pending` / `in_progress` 时仍属于执行闭环中间状态；只要 Runtime 可继续观察且当前目标需要结果，就应在授权范围内有界观察、收集证据、诊断、修复和重试，而不是仅因“仍在运行”就默认交回人工。
 
