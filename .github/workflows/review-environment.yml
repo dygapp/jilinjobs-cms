@@ -69,7 +69,7 @@ jobs:
 
       - name: 准备初始化静态资源包
         run: |
-          rm -rf runtime-static
+          sudo rm -rf runtime-static
           mkdir -p runtime-static
           cp -a site-baseline/static/. runtime-static/
           test -f runtime-static/health/baseline.png
@@ -143,7 +143,7 @@ jobs:
           docker run --rm --network host mysql:8.4 \
             mysql -h127.0.0.1 -uroot -proot -e 'DROP DATABASE IF EXISTS jilinjobs_cms; CREATE DATABASE jilinjobs_cms CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;'
 
-          rm -rf runtime-static
+          sudo rm -rf runtime-static
           mkdir -p runtime-static
           cp -a site-baseline/static/. runtime-static/
 
