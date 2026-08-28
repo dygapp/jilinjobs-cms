@@ -58,7 +58,7 @@
 .article-share img{width:64px;height:64px}
 
 /* 固定页面 */
-.fixed-detail-card{min-height:500px}
+.fixed-detail-card{min-height:500px;background:#fff}
 .fixed-page-content{min-height:360px}
 .fixed-page-body{padding:10px 0 20px}
 .fixed-page-body>.rich-content{padding:34px 110px 40px;color:#323b47;font-size:16px;line-height:1.75}
