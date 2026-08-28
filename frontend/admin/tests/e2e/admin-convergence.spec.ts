@@ -51,7 +51,7 @@ test('EU-16：文章筛选分页并保持后台发布到公开站闭环', async 
   }
 
   await page.goto('/admin/articles')
-  await page.getByTestId('article-filter-keyword').locator('input').fill(prefix)
+  await page.getByTestId('article-filter-keyword').fill(prefix)
   await expect(page.getByTestId('article-table').locator('tbody tr')).toHaveCount(10)
   await page.getByTestId('article-pagination').locator('.el-pager li').filter({ hasText: '2' }).click()
   await expect(page.getByTestId('article-table').locator('tbody tr')).toHaveCount(2)
@@ -89,7 +89,7 @@ test('EU-16：固定页面按 render mode 提供对应编辑字段', async ({ pa
 
 test('EU-17：网站配置在前端阻止非法 JSON', async ({ page }) => {
   await page.goto('/admin/site-config')
-  const editor = page.getByTestId('site-config-HOME_BANNERS').locator('textarea')
+  const editor = page.getByTestId('site-config-HOME_BANNERS')
   await editor.fill('[{not-json}]')
   await page.getByTestId('save-site-config-HOME_BANNERS').click()
   await expect(page.getByText('JSON 配置格式不正确，请修正后再保存', { exact: true })).toBeVisible()
