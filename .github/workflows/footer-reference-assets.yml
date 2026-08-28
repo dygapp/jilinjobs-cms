@@ -34,10 +34,15 @@ jobs:
           fetch 'https://24365.jl.smartedu.cn/detail.html?content_id=162461430857728' evidence/report-contact.html
 
           if [[ -f evidence/wechat-article.html ]]; then
-            grep -Eo 'https?[^"'"' ]+' evidence/wechat-article.html | grep -Ei 'mmbiz|qpic|qr|code' | head -100 > evidence/wechat-image-urls.txt || true
-          fi
-          if [[ -f evidence/conac-script.js ]]; then
-            cat evidence/conac-script.js > evidence/conac-script-copy.txt
+            python3 - <<'PY' > evidence/wechat-image-urls.txt
+          import re
+          from pathlib import Path
+          text = Path('evidence/wechat-article.html').read_text(errors='ignore')
+          urls = re.findall(r'https?://[^"\'<> ]+', text)
+          for url in urls:
+              if any(token in url.lower() for token in ('mmbiz', 'qpic', 'qr', 'code')):
+                  print(url.replace('&amp;', '&'))
+          PY
           fi
 
           file evidence/* 2>/dev/null | tee evidence/file-types.txt || true
