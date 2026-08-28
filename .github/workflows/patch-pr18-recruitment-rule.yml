@@ -6,6 +6,7 @@ on:
       - feature/page-detail-visual-convergence-20260828
     paths:
       - .github/workflows/patch-pr18-recruitment-rule.yml
+      - .github/scripts/patch-recruitment-article-rule.py
 
 permissions:
   contents: write
