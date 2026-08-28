@@ -13,7 +13,7 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 5
     steps:
       - name: Collect original and official footer assets
         shell: bash
@@ -24,13 +24,14 @@ jobs:
           fetch() {
             local url="$1"
             local output="$2"
-            curl --fail --location --retry 1 --connect-timeout 10 --max-time 35 --user-agent "$UA" "$url" --output "$output" || rm -f "$output"
+            curl --fail --location --retry 1 --connect-timeout 8 --max-time 25 --user-agent "$UA" "$url" --output "$output" || rm -f "$output"
           }
 
           fetch 'https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-04/71f4afb3-b77a-48b7-a098-af8c73074286.png' evidence/public-security-record.png
           fetch 'https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/siteattr1/2021-07-22/edda0322-2d1a-4a44-8260-a554323e8cee.png' evidence/site-favicon.png
-          fetch 'https://dcs.conac.cn/js/09/000/0000/40363940/CA090000000403639400002.js' evidence/conac-script.js
           fetch 'https://mp.weixin.qq.com/s/fKfXBvBb9aQLAqoIJeEldQ' evidence/wechat-article.html
+          fetch 'https://mp.weixin.qq.com/mp/qrcode?scene=10000004&size=180&__biz=MzAxMzg2ODE0NA%3D%3D&mid=2247484638&idx=1&sn=34805c98f0f95bf89d21c646080995bd' evidence/wechat-qr.png
+          fetch 'https://mmbiz.qpic.cn/mmbiz_png/SQJTzSayaicehzo6W2hBjpcI0sdIpSkCHt75icFice4P93LfdsNTkShWjUKAz5MCIQ44ZgLoX1s7MalLUA4Tj3VWQ/0?wx_fmt=png' evidence/wechat-avatar.png
           fetch 'https://24365.jl.smartedu.cn/detail.html?content_id=162461430857728' evidence/report-contact.html
 
           if [[ -f evidence/wechat-article.html ]]; then
