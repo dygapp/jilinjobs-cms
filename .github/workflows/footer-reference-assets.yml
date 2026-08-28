@@ -1,0 +1,50 @@
+name: Footer Reference Assets
+
+on:
+  push:
+    branches:
+      - feature/page-detail-visual-convergence-20260828
+    paths:
+      - .github/workflows/footer-reference-assets.yml
+
+permissions:
+  contents: read
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Collect original and official footer assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36'
+
+          curl --fail --location --retry 3 --user-agent "$UA" \
+            'https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-04/71f4afb3-b77a-48b7-a098-af8c73074286.png' \
+            --output evidence/public-security-record.png
+
+          curl --fail --location --retry 3 --user-agent "$UA" \
+            'https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/siteattr1/2021-07-22/edda0322-2d1a-4a44-8260-a554323e8cee.png' \
+            --output evidence/site-favicon.png
+
+          curl --fail --location --retry 3 --user-agent "$UA" \
+            'https://dcs.conac.cn/js/09/000/0000/40363940/CA090000000403639400002.js' \
+            --output evidence/conac-script.js || true
+
+          curl --location --retry 2 --user-agent "$UA" \
+            'https://mp.weixin.qq.com/s/fKfXBvBb9aQLAqoIJeEldQ' \
+            --output evidence/wechat-article.html || true
+
+          file evidence/* | tee evidence/file-types.txt
+          wc -c evidence/* | tee evidence/sizes.txt
+
+      - name: Upload evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: footer-reference-assets
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 3
