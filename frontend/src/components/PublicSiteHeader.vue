@@ -10,6 +10,8 @@ const siteName = ref('吉林省高等学校毕业生就业信息网')
 const platformLogoIcon = ref('/static/brand/smartedu-logo-icon.png')
 const platformLogoText = ref('/static/brand/smartedu-logo-text.png')
 const headerBanner = ref('/static/home/header-banner.png')
+const studentIcon = '/static/icons/student.png'
+const arrowIcon = '/static/icons/arrow-down.png'
 const open = ref(false)
 
 const roots = computed(() => items.value
@@ -46,7 +48,7 @@ onMounted(async () => {
           <img :src="platformLogoText" alt="吉林智慧教育平台" class="platform-logo-text">
         </a>
         <a class="student-entry" href="https://zhjy.jilinjobs.cn" target="_blank" rel="noopener noreferrer">
-          <img src="/static/icons/student.png" alt="">
+          <img :src="studentIcon" alt="">
           <span>我是学生</span>
         </a>
       </div>
@@ -67,15 +69,15 @@ onMounted(async () => {
         <li v-for="item in roots" :key="item.id" class="nav-item" :class="{ active: isActive(item) }">
           <a v-if="item.external" :data-testid="`public-nav-${item.id}`" :href="item.href" :target="item.newWindow ? '_blank' : undefined" rel="noopener noreferrer">
             <span>{{ item.name }}</span>
-            <img v-if="children(item.id).length" class="nav-arrow" src="/static/icons/arrow-down.png" alt="">
+            <img v-if="children(item.id).length" class="nav-arrow" :src="arrowIcon" alt="">
           </a>
           <router-link v-else-if="item.clickable" :data-testid="`public-nav-${item.id}`" :to="item.href">
             <span>{{ item.name }}</span>
-            <img v-if="children(item.id).length" class="nav-arrow" src="/static/icons/arrow-down.png" alt="">
+            <img v-if="children(item.id).length" class="nav-arrow" :src="arrowIcon" alt="">
           </router-link>
           <span v-else class="nav-placeholder">
             <span>{{ item.name }}</span>
-            <img v-if="children(item.id).length" class="nav-arrow" src="/static/icons/arrow-down.png" alt="">
+            <img v-if="children(item.id).length" class="nav-arrow" :src="arrowIcon" alt="">
           </span>
           <ul v-if="children(item.id).length" class="nav-children">
             <li v-for="child in children(item.id)" :key="child.id">
