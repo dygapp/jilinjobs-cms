@@ -12,9 +12,11 @@
 
 后端增加 `page`（固定页面与页面组）、`siteconfig`（网站配置）、`staticresource`（网站静态目录管理）。已有 `column`、`navigation`、`content`、`resource` 继续保留原边界。
 
-前端仍为一个 Vite 工程，但公开端按“可演进多 Shell”组织：默认/Home Shell、Page Shell，后续按需要增加 Guide / Jobs / 页面专用 Shell。
+当前实现阶段前端仍为一个 Vite 工程，公开端按“可演进多 Shell”组织：默认/Home Shell、Page Shell，后续按需要增加 Guide / Jobs / 页面专用 Shell；同一工程当前也承载 `/admin/**` 原型管理端路由。
 
 第一版允许 `page.html` 统一处理 `/page/**`，不要求立即创建所有专用 Entry。
+
+> Roadmap 已明确下一阶段将公开网站与管理端拆分为两个独立前端工程。本文以下内容记录 PR #18 收口时的现状技术基线；前端物理拆分后的目录、构建、共享代码和部署边界应在下一阶段重新形成 Technical Plan，不应直接把本节“一个 Vite 工程”的现状描述当作长期目标架构。
 
 ## 3. URL 与前端 Entry
 
@@ -29,7 +31,7 @@
 /static/**                网站静态资源
 /assets/**                前端构建资源
 /api/**                   后端 API
-/admin/**                 原型管理端
+/admin/**                 当前原型管理端
 ```
 
 ### 3.2 Shell fallback
@@ -124,11 +126,13 @@ cms.static.root=${CMS_STATIC_ROOT:./data/static}
 
 ## 9. 前端页面组织
 
-第一版在现有结构上增加 Page 入口和共享公共组件，不要求一次性完成大规模物理目录重构。
+PR #18 收口时，前端仍在单一 `frontend` Vite 工程中同时承载公开站点和管理端：公开视图位于 `views/public`，管理视图位于 `views/admin`，统一 Router 同时注册公开路由和 `/admin/**` 路由。
 
-新增公开视图：FixedPageView、共享 GroupTabs、外部嵌入占位区域。
+公开端已增加 Page 入口和共享公共组件；现有公开视图包括首页、栏目、文章、固定页面 / 页面组以及外部嵌入占位区域。
 
-新增管理视图：PageManagementView、SiteConfigManagementView、StaticResourceManagementView。
+现有管理视图包括栏目、菜单、文章、固定页面、网站配置、网站静态资源等管理页面。
+
+下一阶段按 Roadmap 执行前端工程物理拆分：公开站点与管理端分别形成独立前端工程、构建产物、路由和测试入口。共享类型/API 客户端/通用组件是否抽取为共享包，应依据实际重复度和部署边界决定，避免在拆分前过早抽象。
 
 ## 10. API
 
@@ -168,6 +172,8 @@ Frontend：`vue-tsc`、Vite 多入口 build、`/column/{alias}`、`/article/{id}
 
 E2E：Review Environment 不再依赖测试脚本创建栏目/主菜单/页面组；Playwright 验证 Flyway 初始化基线已经存在；测试只创建动态文章等场景数据；完成后上传 Playwright evidence。
 
+下一阶段拆分公开站点 / 管理端工程后，应分别建立前端构建与 Browser Verification，同时保留必要的端到端跨边界验证；不得因物理拆分而降低现有公开站点回归覆盖。
+
 ## 12. 风险
 
 1. 多入口 Shell 过度设计：第一版只建立 `page.html` 必要接缝，专用 Shell 按真实需求增量加入。
@@ -175,3 +181,4 @@ E2E：Review Environment 不再依赖测试脚本创建栏目/主菜单/页面�
 3. 现网视觉自动复刻不完整：视觉精确值作为人工 Review Environment 校正项，不阻塞结构和数据模型收敛。
 4. 初始化数据可维护性：稳定 alias 与 Flyway 版本化，禁止依赖自增 ID 作为长期外部契约。
 5. 原型无认证：高风险权限仅固化要求和入口边界，正式系统接入统一权限后实施角色限制。
+6. 前端工程拆分引入重复与漂移：下一阶段先明确公开端 / 管理端职责边界、共享代码最小集合和独立验证策略，再实施物理迁移；不得通过复制两套 API 模型和基础类型形成长期分叉。
