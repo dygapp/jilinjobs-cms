@@ -1,0 +1,22 @@
+.site-footer-layout{display:flex;align-items:center;justify-content:space-between;gap:48px}
+.site-footer-main{min-width:0;flex:1}
+.site-footer-records{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.public-security-record{display:inline-flex;align-items:center;gap:5px;text-decoration:none;color:#fff}
+.public-security-record img{display:block;width:20px;height:20px;flex:none;object-fit:contain}
+.site-footer-badges{display:flex;align-items:center;justify-content:flex-end;gap:26px;flex:0 0 auto;min-width:250px}
+.public-institution-badge{display:flex;align-items:center;justify-content:center;text-decoration:none}
+.public-institution-badge img{display:block;width:96px;height:96px;object-fit:contain}
+.wechat-entry{display:flex;flex-direction:column;align-items:center;gap:5px;color:#fff;text-decoration:none;font-size:12px;line-height:1.4;white-space:nowrap}
+.wechat-entry img{display:block;width:92px;height:92px;object-fit:contain;background:#fff;padding:3px}
+@media(max-width:900px){
+  .site-footer-layout{align-items:flex-start;gap:24px}
+  .site-footer-badges{min-width:190px;gap:14px}
+  .public-institution-badge img{width:76px;height:76px}
+  .wechat-entry img{width:76px;height:76px}
+  .wechat-entry span{display:none}
+}
+@media(max-width:760px){
+  .site-footer-layout{display:block}
+  .site-footer-badges{justify-content:flex-start;margin-top:16px;min-width:0}
+  .site-footer-records{gap:8px 12px}
+}
