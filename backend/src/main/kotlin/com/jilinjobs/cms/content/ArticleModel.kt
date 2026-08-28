@@ -4,6 +4,7 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 
 enum class ArticleStatus { DRAFT, PUBLISHED, WITHDRAWN }
+enum class ArticleType { INTERNAL, EXTERNAL_LINK }
 
 data class CmsArticle(
     val id: Long,
@@ -11,6 +12,8 @@ data class CmsArticle(
     val title: String,
     val bodyHtml: String,
     val source: String,
+    val articleType: ArticleType,
+    val externalUrl: String?,
     val publishDate: LocalDate?,
     val pinned: Boolean,
     val recommended: Boolean,
@@ -29,6 +32,8 @@ data class ArticleDraft(
     val title: String,
     val bodyHtml: String,
     val source: String,
+    val articleType: ArticleType,
+    val externalUrl: String?,
     val publishDate: LocalDate?,
     val pinned: Boolean,
     val recommended: Boolean,
@@ -48,6 +53,9 @@ data class PublicArticleSummary(
     val recommended: Boolean,
     val sortOrder: Int,
     val columnAlias: String = "",
+    val source: String = "",
+    val articleType: ArticleType = ArticleType.INTERNAL,
+    val externalUrl: String? = null,
 )
 
 data class PublicArticleDetail(
@@ -61,6 +69,8 @@ data class PublicArticleDetail(
     val bodyImageResourceIds: List<Long>,
     val attachments: List<PublicArticleAttachment>,
     val columnAlias: String = "",
+    val articleType: ArticleType = ArticleType.INTERNAL,
+    val externalUrl: String? = null,
 )
 
 data class PublicArticleAttachment(val id: Long,val originalFilename: String,val contentType: String?,val sizeBytes: Long)

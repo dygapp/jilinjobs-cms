@@ -38,6 +38,8 @@ function emptyForm(): ArticleForm {
     title: '',
     bodyHtml: '',
     source: '',
+    articleType: 'INTERNAL',
+    externalUrl: null,
     publishDate: null,
     pinned: false,
     recommended: false,
@@ -77,6 +79,8 @@ async function openEdit(row: CmsArticle) {
     title: article.title,
     bodyHtml: article.bodyHtml,
     source: article.source,
+    articleType: article.articleType,
+    externalUrl: article.externalUrl,
     publishDate: article.publishDate,
     pinned: article.pinned,
     recommended: article.recommended,
@@ -96,7 +100,7 @@ async function openEdit(row: CmsArticle) {
 }
 
 async function save() {
-  syncBody()
+  if (form.articleType === 'INTERNAL') syncBody()
   if (!form.title.trim()) {
     ElMessage.warning('请输入文章标题')
     return
@@ -105,21 +109,27 @@ async function save() {
     ElMessage.warning('请选择所属栏目')
     return
   }
+  if (form.articleType === 'EXTERNAL_LINK' && !form.externalUrl?.trim()) {
+    ElMessage.warning('请输入原文链接')
+    return
+  }
 
   saving.value = true
   try {
     const draft: ArticleDraft = {
       columnId: form.columnId,
       title: form.title,
-      bodyHtml: form.bodyHtml,
+      bodyHtml: form.articleType === 'INTERNAL' ? form.bodyHtml : '',
       source: form.source,
+      articleType: form.articleType,
+      externalUrl: form.articleType === 'EXTERNAL_LINK' ? form.externalUrl : null,
       publishDate: form.publishDate || null,
       pinned: form.pinned,
       recommended: form.recommended,
       sortOrder: form.sortOrder,
-      coverResourceId: form.coverResourceId,
-      bodyImageResourceIds: [...form.bodyImageResourceIds],
-      attachmentResourceIds: [...form.attachmentResourceIds],
+      coverResourceId: form.articleType === 'INTERNAL' ? form.coverResourceId : null,
+      bodyImageResourceIds: form.articleType === 'INTERNAL' ? [...form.bodyImageResourceIds] : [],
+      attachmentResourceIds: form.articleType === 'INTERNAL' ? [...form.attachmentResourceIds] : [],
     }
     if (editingId.value == null) {
       await createArticle(draft)
@@ -273,12 +283,7 @@ function resourceName(id: number): string {
 }
 
 function escapeHtml(value: string): string {
-  const entities: Record<string, string> = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-  }
+  const entities: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }
   return value.replace(/[&<>"]/g, (char) => entities[char] ?? char)
 }
 
@@ -293,7 +298,7 @@ function toMessage(error: unknown): string {
       <div>
         <p class="eyebrow">jilinjobs-cms prototype</p>
         <h1>文章管理</h1>
-        <p class="subtitle">维护文章内容，并显式执行发布、撤回和重新发布；普通编辑不会改变当前发布状态。</p>
+        <p class="subtitle">维护站内文章或外链文章，并显式执行发布、撤回和重新发布。</p>
       </div>
       <el-button data-testid="add-article" type="primary" @click="openCreate">新增文章</el-button>
     </header>
@@ -303,6 +308,9 @@ function toMessage(error: unknown): string {
         <el-table-column prop="title" label="标题" min-width="260" />
         <el-table-column label="栏目" min-width="160">
           <template #default="scope">{{ columnName(scope.row.columnId) }}</template>
+        </el-table-column>
+        <el-table-column label="类型" width="100">
+          <template #default="scope">{{ scope.row.articleType === 'EXTERNAL_LINK' ? '外链' : '站内' }}</template>
         </el-table-column>
         <el-table-column label="状态" width="100">
           <template #default="scope">{{ statusName(scope.row.status) }}</template>
@@ -334,13 +342,22 @@ function toMessage(error: unknown): string {
             <el-option v-for="item in columns" :key="item.id" :label="item.name" :value="item.id" />
           </el-select>
         </el-form-item>
+        <el-form-item label="内容类型" required>
+          <el-radio-group v-model="form.articleType" data-testid="article-type">
+            <el-radio-button value="INTERNAL">站内文章</el-radio-button>
+            <el-radio-button value="EXTERNAL_LINK">外链文章</el-radio-button>
+          </el-radio-group>
+        </el-form-item>
         <el-form-item label="内容来源">
           <el-input v-model="form.source" data-testid="article-source" placeholder="请输入内容来源" maxlength="200" />
+        </el-form-item>
+        <el-form-item v-if="form.articleType === 'EXTERNAL_LINK'" label="原文链接" required>
+          <el-input v-model="form.externalUrl" data-testid="article-external-url" placeholder="https://来源网站/..." maxlength="2000" />
         </el-form-item>
         <el-form-item label="发布日期">
           <el-date-picker v-model="form.publishDate" data-testid="article-publish-date" type="date" value-format="YYYY-MM-DD" placeholder="选择发布日期" style="width: 100%" />
         </el-form-item>
-        <el-form-item label="正文">
+        <el-form-item v-if="form.articleType === 'INTERNAL'" label="正文">
           <div class="editor-shell">
             <div class="editor-toolbar">
               <el-button size="small" @click="formatBody('bold')"><strong>加粗</strong></el-button>
@@ -353,7 +370,7 @@ function toMessage(error: unknown): string {
             <div ref="editorRef" data-testid="article-body-editor" class="rich-editor" contenteditable="true" @input="syncBody" />
           </div>
         </el-form-item>
-        <el-form-item label="封面图片">
+        <el-form-item v-if="form.articleType === 'INTERNAL'" label="封面图片">
           <div class="resource-row">
             <label class="upload-button">
               <span>{{ form.coverResourceId == null ? '上传封面' : '更换封面' }}</span>
@@ -362,7 +379,7 @@ function toMessage(error: unknown): string {
             <span v-if="form.coverResourceId != null" data-testid="cover-resource-name">{{ resourceName(form.coverResourceId) }}</span>
           </div>
         </el-form-item>
-        <el-form-item label="附件">
+        <el-form-item v-if="form.articleType === 'INTERNAL'" label="附件">
           <div class="attachments">
             <label class="upload-button">
               <span>上传附件</span>
@@ -380,7 +397,8 @@ function toMessage(error: unknown): string {
           <span class="sort-label">展示顺序</span>
           <el-input-number v-model="form.sortOrder" data-testid="article-sort-order" :step="1" />
         </el-form-item>
-        <el-alert title="新建文章固定保存为草稿；普通编辑不会改变当前发布状态。" type="info" :closable="false" show-icon />
+        <el-alert v-if="form.articleType === 'EXTERNAL_LINK'" title="外链文章只保存标题、日期、来源和原文链接等基础信息，公开访问时直接跳转来源网站。" type="info" :closable="false" show-icon />
+        <el-alert v-else title="新建文章固定保存为草稿；普通编辑不会改变当前发布状态。" type="info" :closable="false" show-icon />
       </el-form>
       <template #footer>
         <el-button @click="dialogVisible = false">取消</el-button>
@@ -411,9 +429,7 @@ function toMessage(error: unknown): string {
   outline: none;
   line-height: 1.7;
 }
-.rich-editor :deep(img) {
-  max-width: 100%;
-}
+.rich-editor :deep(img) { max-width: 100%; }
 .upload-button {
   display: inline-flex;
   align-items: center;
@@ -424,9 +440,7 @@ function toMessage(error: unknown): string {
   cursor: pointer;
   background: white;
 }
-.upload-button input {
-  display: none;
-}
+.upload-button input { display: none; }
 .resource-row,
 .attachments {
   display: flex;

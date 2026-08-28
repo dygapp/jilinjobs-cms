@@ -64,12 +64,13 @@ test('Feature-wide closure：栏目内容超过单页容量时可以完整分页
   await expect(page.getByRole('heading', { name: columnName, exact: true })).toBeVisible()
   await expect(page.getByTestId(`column-article-${highest.id}`)).toBeVisible()
   await expect(page.getByTestId(`column-article-${lowest.id}`)).toHaveCount(0)
-  await expect(page.getByText('第 1 页', { exact: true })).toBeVisible()
+  await expect(page.getByRole('button', { name: '第 1 页' })).toHaveAttribute('aria-current', 'page')
   await page.getByRole('button', { name: '下一页' }).click()
   await expect(page).toHaveURL(new RegExp(`/columns/${column.id}\\?page=1$`))
-  await expect(page.getByText('第 2 页', { exact: true })).toBeVisible()
+  await expect(page.getByRole('button', { name: '第 2 页' })).toHaveAttribute('aria-current', 'page')
   await expect(page.getByTestId(`column-article-${lowest.id}`)).toBeVisible()
   await page.getByRole('button', { name: '上一页' }).click()
+  await expect(page.getByRole('button', { name: '第 1 页' })).toHaveAttribute('aria-current', 'page')
   await expect(page.getByTestId(`column-article-${highest.id}`)).toBeVisible()
 })
 
@@ -87,6 +88,51 @@ test('Feature-wide closure：首页通知公告按置顶推荐和展示顺序组
   const texts = await group.locator('li a').allTextContents()
   const selected = texts.filter(text => [pinned.title, recommended.title, high.title, low.title].includes(text))
   expect(selected).toEqual([pinned.title, recommended.title, high.title, low.title])
+})
+
+test('Feature-wide closure：招聘公告外链文章只保存基础信息并直接跳转原站', async ({ page, request }, testInfo) => {
+  const suffix = `${Date.now()}-${testInfo.retry}`
+  const column = await baselineColumn(request, 'recruitment-announcement')
+  const title = `外链招聘公告-${suffix}`
+  const externalUrl = `https://example.com/recruitment/${suffix}`
+  const createResponse = await request.post('/api/admin/articles', {
+    data: {
+      columnId: column.id,
+      title,
+      bodyHtml: '<p>这段正文不应被保存</p>',
+      source: '外部招聘平台',
+      articleType: 'EXTERNAL_LINK',
+      externalUrl,
+      publishDate: '2026-08-28',
+      pinned: true,
+      recommended: false,
+      sortOrder: 9999,
+      coverResourceId: null,
+      bodyImageResourceIds: [],
+      attachmentResourceIds: [],
+    },
+  })
+  expect(createResponse.ok()).toBeTruthy()
+  const created = await createResponse.json() as { id: number }
+  expect((await request.post(`/api/admin/articles/${created.id}/publish`)).ok()).toBeTruthy()
+
+  const adminResponse = await request.get(`/api/admin/articles/${created.id}`)
+  expect(adminResponse.ok()).toBeTruthy()
+  const stored = await adminResponse.json() as { articleType: string; externalUrl: string; bodyHtml: string; source: string }
+  expect(stored.articleType).toBe('EXTERNAL_LINK')
+  expect(stored.externalUrl).toBe(externalUrl)
+  expect(stored.bodyHtml).toBe('')
+  expect(stored.source).toBe('外部招聘平台')
+
+  await page.goto('/')
+  const homeLink = page.getByTestId(`recruitment-external-${created.id}`)
+  await expect(homeLink).toHaveAttribute('href', externalUrl)
+  await expect(homeLink).toHaveAttribute('target', '_blank')
+
+  await page.goto('/column/recruitment-announcement')
+  const columnLink = page.getByTestId(`column-article-${created.id}`)
+  await expect(columnLink).toHaveAttribute('href', externalUrl)
+  await expect(columnLink).toHaveAttribute('target', '_blank')
 })
 
 test('Feature-wide closure：SERVICE 与 SITE 数据进入原站快速导航和网站导航区域', async ({ page, request }, testInfo) => {
@@ -121,4 +167,44 @@ test('Feature-wide closure：SERVICE 与 SITE 数据进入原站快速导航和�
   await expect(siteSection.getByRole('heading', { name: '网站导航', exact: true })).toBeVisible()
   await siteSection.getByRole('button', { name: siteCategory, exact: true }).click()
   await expect(siteSection.getByRole('link', { name: siteName, exact: true })).toHaveAttribute('href', 'https://example.com/site')
+})
+
+test('Feature-wide closure：首页举报电话及邮箱使用站内固定页面', async ({ page }) => {
+  await page.goto('/')
+  const link = page.locator('.home-top-shortcuts').getByRole('link', { name: '举报电话及邮箱', exact: true })
+  await expect(link).toHaveAttribute('href', '/page/employment-report-contact')
+  await expect(link).not.toHaveAttribute('target', '_blank')
+  await link.click()
+  await expect(page).toHaveURL(/\/page\/employment-report-contact$/)
+  await expect(page.getByRole('heading', { name: '举报电话及邮箱', exact: true })).toBeVisible()
+  const body = page.locator('.fixed-page-body')
+  await expect(body).toContainText('0431-84657570')
+  await expect(body).toContainText('0431-84657571')
+  await expect(body).toContainText('xxb@jilinjobs.cn')
+})
+
+test('Feature-wide closure：页脚备案图标、非链接官方标识、当年版权与 favicon 可用', async ({ page, request }) => {
+  for (const resource of [
+    '/static/footer/public-security-record.png',
+    '/static/footer/public-institution.png',
+    '/static/footer/wechat-qr.png',
+    '/static/brand/site-favicon.png',
+  ]) {
+    const response = await request.get(resource)
+    expect(response.ok(), `${resource} 应来自版本化静态资源包`).toBeTruthy()
+    expect((await response.body()).length).toBeGreaterThan(100)
+  }
+
+  await page.goto('/')
+  await expect(page.locator('link[rel="icon"]')).toHaveAttribute('href', '/static/brand/site-favicon.png')
+  await expect(page.locator('.public-security-record img')).toHaveAttribute('src', '/static/footer/public-security-record.png')
+  await expect(page.locator('.public-institution-badge img')).toHaveAttribute('src', '/static/footer/public-institution.png')
+  await expect(page.locator('.wechat-entry img')).toHaveAttribute('src', '/static/footer/wechat-qr.png')
+  await expect(page.locator('.public-security-record')).toContainText('吉公网安备 22010702000243号')
+  await expect(page.locator('.public-institution-badge')).not.toHaveAttribute('href')
+  await expect(page.locator('.wechat-entry')).not.toHaveAttribute('href')
+  await expect(page.locator('.site-footer')).toContainText(`Copyright ${new Date().getFullYear()}`)
+
+  const footerLayout = await page.locator('.site-footer-layout').evaluate(el => getComputedStyle(el).display)
+  expect(footerLayout).toBe('flex')
 })
