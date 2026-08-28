@@ -131,9 +131,32 @@ test('Feature-wide closure：首页举报电话及邮箱使用站内固定页面
   await expect(link).not.toHaveAttribute('target', '_blank')
   await link.click()
   await expect(page).toHaveURL(/\/page\/employment-report-contact$/)
-  await expect(page.getByRole('heading', { name: '举报电话及邮箱', exact: true })).toBeVisible()
+  await expect(page.getByRole('heading', { name: '吉林省高校毕业生就业工作举报电话及邮箱', exact: true })).toBeVisible()
   const body = page.locator('.fixed-page-body')
   await expect(body).toContainText('0431-84657570')
   await expect(body).toContainText('0431-84657571')
-  await expect(body).toContainText('scb@jilinjobs.cn')
+  await expect(body).toContainText('xxb@jilinjobs.cn')
+})
+
+test('Feature-wide closure：页脚备案图标、事业单位标识、公众号二维码与 favicon 可用', async ({ page, request }) => {
+  for (const resource of [
+    '/static/footer/public-security-record.png',
+    '/static/footer/public-institution.png',
+    '/static/footer/wechat-qr.png',
+    '/static/brand/site-favicon.png',
+  ]) {
+    const response = await request.get(resource)
+    expect(response.ok(), `${resource} 应来自版本化静态资源包`).toBeTruthy()
+    expect((await response.body()).length).toBeGreaterThan(100)
+  }
+
+  await page.goto('/')
+  await expect(page.locator('link[rel="icon"]')).toHaveAttribute('href', '/static/brand/site-favicon.png')
+  await expect(page.locator('.public-security-record img')).toHaveAttribute('src', '/static/footer/public-security-record.png')
+  await expect(page.locator('.public-institution-badge img')).toHaveAttribute('src', '/static/footer/public-institution.png')
+  await expect(page.locator('.wechat-entry img')).toHaveAttribute('src', '/static/footer/wechat-qr.png')
+  await expect(page.locator('.public-security-record')).toContainText('吉公网安备 22010702000243号')
+
+  const footerLayout = await page.locator('.site-footer-layout').evaluate(el => getComputedStyle(el).display)
+  expect(footerLayout).toBe('flex')
 })
