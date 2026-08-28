@@ -90,7 +90,11 @@ class ArticleService(
         if (title.isBlank()) throw ArticleValidationException("文章标题不能为空")
         if (title.length > 200) throw ArticleValidationException("文章标题不能超过 200 个字符")
         if (draft.source.length > 200) throw ArticleValidationException("内容来源不能超过 200 个字符")
-        if (columnQuery.find(draft.columnId) == null) throw ArticleValidationException("所属栏目不存在：${draft.columnId}")
+        val column = columnQuery.find(draft.columnId)
+            ?: throw ArticleValidationException("所属栏目不存在：${draft.columnId}")
+        if (column.alias == "recruitment-announcement" && draft.articleType != ArticleType.EXTERNAL_LINK) {
+            throw ArticleValidationException("招聘公告栏目只允许维护外链文章")
+        }
 
         val externalUrl = draft.externalUrl?.trim()?.takeIf { it.isNotEmpty() }
         if (draft.articleType == ArticleType.EXTERNAL_LINK) {
