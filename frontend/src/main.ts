@@ -5,5 +5,6 @@ import App from './App.vue'
 import router from './router'
 import './style.css'
 import './public-pages.css'
+import './footer.css'
 
 createApp(App).use(router).use(ElementPlus).mount('#app')
