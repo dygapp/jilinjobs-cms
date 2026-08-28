@@ -10,12 +10,46 @@ onMounted(async () => {
 
 <template>
   <footer class="site-footer">
-    <div class="site-width">
-      <p>办公地址：{{ values.CONTACT_ADDRESS }}，吉林省高等学校毕业生就业指导中心2楼一站式办公大厅，邮编：130033。</p>
-      <p>公交线路：乘坐120路、227路、20路、130路、281路、154路、190路、125路公交北方市场下车，北方市场南门南行200米。</p>
-      <p>业务咨询电话：{{ values.CONTACT_PHONE }}；办公时间：{{ values.OFFICE_HOURS }}</p>
-      <p><strong>{{ values.FOOTER_COPYRIGHT }}</strong></p>
-      <p><a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=22010702000243" target="_blank" rel="noopener noreferrer">吉公网安备 22010702000243号</a>　{{ values.ICP_NUMBER }}</p>
+    <div class="site-width site-footer-layout">
+      <div class="site-footer-main">
+        <p>办公地址：{{ values.CONTACT_ADDRESS }}，吉林省高等学校毕业生就业指导中心2楼一站式办公大厅，邮编：130033。</p>
+        <p>公交线路：乘坐120路、227路、20路、130路、281路、154路、190路、125路公交北方市场下车，北方市场南门南行200米。</p>
+        <p>业务咨询电话：{{ values.CONTACT_PHONE }}；办公时间：{{ values.OFFICE_HOURS }}</p>
+        <p><strong>{{ values.FOOTER_COPYRIGHT }}</strong></p>
+        <p class="site-footer-records">
+          <a
+            class="public-security-record"
+            href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=22010702000243"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/static/footer/public-security-record.png" alt="" width="20" height="20">
+            <span>吉公网安备 22010702000243号</span>
+          </a>
+          <span>{{ values.ICP_NUMBER }}</span>
+        </p>
+      </div>
+
+      <aside class="site-footer-badges" aria-label="网站官方信息">
+        <a
+          class="public-institution-badge"
+          href="https://biaozhi.conac.cn/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="事业单位网站标识平台"
+        >
+          <img src="/static/footer/public-institution.png" alt="事业单位">
+        </a>
+        <a
+          class="wechat-entry"
+          href="https://mp.weixin.qq.com/s/fKfXBvBb9aQLAqoIJeEldQ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/static/footer/wechat-qr.png" alt="吉林省大学生就业创业微信公众号二维码">
+          <span>吉林省大学生就业创业</span>
+        </a>
+      </aside>
     </div>
   </footer>
 </template>
