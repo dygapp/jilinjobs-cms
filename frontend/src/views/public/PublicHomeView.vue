@@ -82,7 +82,7 @@ onMounted(async () => {
   try {
     const [navigation, articlePage, config] = await Promise.all([
       listPublicNavigations(),
-      listPublicArticles(null, 0, 60),
+      listPublicArticles(null, 0, 50),
       listPublicSiteConfig(),
     ])
     items.value = navigation
