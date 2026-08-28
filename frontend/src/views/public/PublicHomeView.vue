@@ -145,7 +145,7 @@ onMounted(async () => {
       <section class="home-secondary-row">
         <div class="home-calendar" aria-label="招聘日历">
           <div class="calendar-selects"><span>{{ calendar.year }}年</span><span>{{ calendar.month }}月</span></div>
-          <div class="calendar-week"><span v-for="name in ['一','二','三','四','五','六','日'] :key="name">{{ name }}</span></div>
+          <div class="calendar-week"><span v-for="name in ['一','二','三','四','五','六','日']" :key="name">{{ name }}</span></div>
           <div class="calendar-days">
             <span v-for="(day, index) in calendar.cells" :key="index" :class="{ today: day === calendar.today, empty: day == null }">{{ day || '' }}</span>
           </div>
