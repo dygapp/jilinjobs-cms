@@ -3,6 +3,10 @@ import { onMounted, ref } from 'vue'
 import { listPublicSiteConfig } from '../api/siteConfig'
 
 const values = ref<Record<string, string>>({})
+const publicSecurityIcon = '/static/footer/public-security-record.png'
+const publicInstitutionBadge = '/static/footer/public-institution.png'
+const wechatQr = '/static/footer/wechat-qr.png'
+
 onMounted(async () => {
   values.value = Object.fromEntries((await listPublicSiteConfig()).map(item => [item.key, item.value]))
 })
@@ -23,7 +27,7 @@ onMounted(async () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/static/footer/public-security-record.png" alt="" width="20" height="20">
+            <img :src="publicSecurityIcon" alt="" width="20" height="20">
             <span>吉公网安备 22010702000243号</span>
           </a>
           <span>{{ values.ICP_NUMBER }}</span>
@@ -38,7 +42,7 @@ onMounted(async () => {
           rel="noopener noreferrer"
           title="事业单位网站标识平台"
         >
-          <img src="/static/footer/public-institution.png" alt="事业单位">
+          <img :src="publicInstitutionBadge" alt="事业单位">
         </a>
         <a
           class="wechat-entry"
@@ -46,7 +50,7 @@ onMounted(async () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/static/footer/wechat-qr.png" alt="吉林省大学生就业创业微信公众号二维码">
+          <img :src="wechatQr" alt="吉林省大学生就业创业微信公众号二维码">
           <span>吉林省大学生就业创业</span>
         </a>
       </aside>
