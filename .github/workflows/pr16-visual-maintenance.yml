@@ -1,0 +1,89 @@
+name: PR16 临时视觉维护
+
+on:
+  push:
+    branches:
+      - feature/site-visual-fidelity-20260828
+
+permissions:
+  contents: write
+
+jobs:
+  maintain:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: feature/site-visual-fidelity-20260828
+          fetch-depth: 0
+
+      - name: 同步EU-04与首页绑定栏目契约并补充评审截图
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          test_path = Path('frontend/tests/e2e/articles.spec.ts')
+          text = test_path.read_text()
+          old = '''  const columnName = `公开栏目-${suffix}`
+          const title = `待发布文章-${suffix}`
+          const updatedTitle = `已编辑发布文章-${suffix}`
+
+          const columnResponse = await request.post('/api/admin/columns', {
+            data: { parentId: null, name: columnName, sortOrder: 10, enabled: true },
+          })
+          expect(columnResponse.ok()).toBeTruthy()
+          const column = await columnResponse.json() as { id: number }
+          '''
+          new = '''  const title = `待发布文章-${suffix}`
+          const updatedTitle = `已编辑发布文章-${suffix}`
+
+          const columnsResponse = await request.get('/api/admin/columns')
+          expect(columnsResponse.ok()).toBeTruthy()
+          const columns = await columnsResponse.json() as Array<{ id: number; name: string; alias: string }>
+          const noticeColumn = columns.find((item) => item.alias === 'notice')
+          expect(noticeColumn).toBeTruthy()
+          const column = noticeColumn!
+          const columnName = column.name
+          '''
+          if text.count(old) != 1:
+              raise SystemExit(f'EU-04 target count != 1: {text.count(old)}')
+          test_path.write_text(text.replace(old, new, 1))
+
+          workflow_path = Path('.github/workflows/review-environment.yml')
+          workflow = workflow_path.read_text()
+          anchor = '      - name: 下载 frpc\n'
+          insert = '''      - name: 采集干净人工评审视觉证据
+            run: |
+              docker run --rm --init --ipc=host --network host \\
+                -v "$GITHUB_WORKSPACE/frontend:/work" \\
+                -w /work \\
+                mcr.microsoft.com/playwright:v1.61.0-noble \\
+                bash -lc 'npm install --no-audit --no-fund && npx playwright screenshot --full-page --viewport-size="1440,1000" http://127.0.0.1:5173/ review-home-1440.png && npx playwright screenshot --full-page --viewport-size="390,844" http://127.0.0.1:5173/ review-home-390.png'
+
+          - name: 上传人工评审视觉证据
+            uses: actions/upload-artifact@v7
+            with:
+              name: review-visual-evidence
+              path: |
+                frontend/review-home-1440.png
+                frontend/review-home-390.png
+              if-no-files-found: error
+              retention-days: 5
+
+          '''
+          if 'name: 采集干净人工评审视觉证据' not in workflow:
+              if workflow.count(anchor) != 1:
+                  raise SystemExit(f'review workflow anchor count != 1: {workflow.count(anchor)}')
+              workflow = workflow.replace(anchor, insert + anchor, 1)
+              workflow_path.write_text(workflow)
+          PY
+
+      - name: 提交维护结果
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add frontend/tests/e2e/articles.spec.ts .github/workflows/review-environment.yml
+          git diff --cached --check
+          git commit -m 'test(review): 对齐首页栏目契约并保留视觉证据'
+          git push origin HEAD:feature/site-visual-fidelity-20260828
