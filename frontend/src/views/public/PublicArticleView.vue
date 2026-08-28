@@ -28,6 +28,10 @@ watch(() => route.params.id, async value => {
   loading.value = true
   try {
     const item = await getPublicArticle(id)
+    if (item.articleType === 'EXTERNAL_LINK' && item.externalUrl) {
+      window.location.replace(item.externalUrl)
+      return
+    }
     article.value = item
     articleUrl.value = window.location.origin + `/article/${id}`
     qrCodeUrl.value = await QRCode.toDataURL(articleUrl.value, { width: 180, margin: 1 })
@@ -87,12 +91,7 @@ function size(bytes: number) {
 
             <section v-if="article.attachments.length" class="article-attachments" data-testid="public-attachments">
               <h2>附件下载</h2>
-              <a
-                v-for="file in article.attachments"
-                :key="file.id"
-                :data-testid="`public-attachment-${file.id}`"
-                :href="publicAttachmentUrl(file.id)"
-              >
+              <a v-for="file in article.attachments" :key="file.id" :data-testid="`public-attachment-${file.id}`" :href="publicAttachmentUrl(file.id)">
                 <span>{{ file.originalFilename }}</span>
                 <small>{{ size(file.sizeBytes) }}</small>
               </a>
