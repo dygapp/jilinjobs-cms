@@ -29,6 +29,7 @@ const visiblePages = computed(() => {
   const start = Math.min(Math.max(page.value - 4, 0), count - 9)
   return Array.from({ length: 9 }, (_, index) => start + index)
 })
+const isExternalArticle = (article: PublicArticleSummary) => article.articleType === 'EXTERNAL_LINK' && Boolean(article.externalUrl)
 
 watch(() => [route.params.alias, route.params.id, route.query.page, route.query.size], load, { immediate: true })
 
@@ -114,7 +115,22 @@ function jump() {
           <div class="column-content">
             <div class="column-list" data-testid="column-articles">
               <article v-for="article in articles" :key="article.id">
+                <a
+                  v-if="isExternalArticle(article)"
+                  class="column-list-link"
+                  :data-testid="`column-article-${article.id}`"
+                  :href="article.externalUrl!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="column-list-icon" aria-hidden="true" />
+                  <span class="column-list-copy">
+                    <strong class="column-list-title">{{ article.title }}</strong>
+                    <time v-if="article.publishDate">{{ article.publishDate }}</time>
+                  </span>
+                </a>
                 <router-link
+                  v-else
                   class="column-list-link"
                   :data-testid="`column-article-${article.id}`"
                   :to="`/article/${article.id}`"
