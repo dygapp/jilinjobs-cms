@@ -14,7 +14,7 @@ import java.time.LocalDateTime
 interface ArticleMapper {
     @Select(
         """
-        SELECT id, column_id, title, body_html, source, publish_date,
+        SELECT id, column_id, title, body_html, source, article_type, external_url, publish_date,
                pinned, recommended, sort_order, status, actual_published_at,
                view_count, updated_at
         FROM cms_article
@@ -25,7 +25,7 @@ interface ArticleMapper {
 
     @Select(
         """
-        SELECT id, column_id, title, body_html, source, publish_date,
+        SELECT id, column_id, title, body_html, source, article_type, external_url, publish_date,
                pinned, recommended, sort_order, status, actual_published_at,
                view_count, updated_at
         FROM cms_article
@@ -37,11 +37,11 @@ interface ArticleMapper {
     @Insert(
         """
         INSERT INTO cms_article(
-            column_id, title, body_html, source, publish_date,
+            column_id, title, body_html, source, article_type, external_url, publish_date,
             pinned, recommended, sort_order, status
         )
         VALUES(
-            #{columnId}, #{title}, #{bodyHtml}, #{source}, #{publishDate},
+            #{columnId}, #{title}, #{bodyHtml}, #{source}, #{articleType}, #{externalUrl}, #{publishDate},
             #{pinned}, #{recommended}, #{sortOrder}, 'DRAFT'
         )
         """,
@@ -56,6 +56,8 @@ interface ArticleMapper {
             title = #{title},
             body_html = #{bodyHtml},
             source = #{source},
+            article_type = #{articleType},
+            external_url = #{externalUrl},
             publish_date = #{publishDate},
             pinned = #{pinned},
             recommended = #{recommended},
@@ -81,7 +83,7 @@ interface ArticleMapper {
 
     @Select(
         """
-        SELECT id, column_id, title, body_html, source, publish_date,
+        SELECT id, column_id, title, body_html, source, article_type, external_url, publish_date,
                pinned, recommended, sort_order, status, actual_published_at,
                view_count, updated_at
         FROM cms_article
@@ -113,7 +115,7 @@ interface ArticleMapper {
 
     @Select(
         """
-        SELECT id, column_id, title, body_html, source, publish_date,
+        SELECT id, column_id, title, body_html, source, article_type, external_url, publish_date,
                pinned, recommended, sort_order, status, actual_published_at,
                view_count, updated_at
         FROM cms_article
@@ -141,6 +143,8 @@ data class ArticleRecord(
     var title: String = "",
     var bodyHtml: String = "",
     var source: String = "",
+    var articleType: String = ArticleType.INTERNAL.name,
+    var externalUrl: String? = null,
     var publishDate: LocalDate? = null,
     var pinned: Boolean = false,
     var recommended: Boolean = false,
@@ -156,35 +160,24 @@ class MyBatisArticleRepository(
     private val mapper: ArticleMapper,
 ) : ArticleRepository {
     override fun findAll(): List<CmsArticle> = mapper.findAll().map { it.toModel() }
-
     override fun findById(id: Long): CmsArticle? = mapper.findById(id)?.toModel()
-
     override fun insert(draft: ArticleDraft): CmsArticle {
         val record = draft.toRecord()
         mapper.insert(record)
-        return mapper.findById(requireNotNull(record.id))?.toModel()
-            ?: error("文章创建后无法重新读取")
+        return mapper.findById(requireNotNull(record.id))?.toModel() ?: error("文章创建后无法重新读取")
     }
-
     override fun update(id: Long, draft: ArticleDraft): CmsArticle {
         mapper.update(draft.toRecord(id))
         return mapper.findById(id)?.toModel() ?: throw ArticleNotFoundException(id)
     }
-
     override fun updateStatus(id: Long, status: ArticleStatus, actualPublishedAt: LocalDateTime?): CmsArticle {
         mapper.updateStatus(id, status.name, actualPublishedAt)
         return mapper.findById(id)?.toModel() ?: throw ArticleNotFoundException(id)
     }
-
-    override fun findPublished(columnId: Long?, limit: Int, offset: Int): List<CmsArticle> =
-        mapper.findPublished(columnId, limit, offset).map { it.toModel() }
-
+    override fun findPublished(columnId: Long?, limit: Int, offset: Int): List<CmsArticle> = mapper.findPublished(columnId, limit, offset).map { it.toModel() }
     override fun countPublished(columnId: Long?): Long = mapper.countPublished(columnId)
-
     override fun findPublishedById(id: Long): CmsArticle? = mapper.findPublishedById(id)?.toModel()
-
     override fun incrementPublishedViewCount(id: Long): Boolean = mapper.incrementPublishedViewCount(id) == 1
-
     override fun existsByColumn(columnId: Long): Boolean = mapper.existsByColumn(columnId)
 
     private fun ArticleDraft.toRecord(id: Long? = null): ArticleRecord = ArticleRecord(
@@ -193,6 +186,8 @@ class MyBatisArticleRepository(
         title = title,
         bodyHtml = bodyHtml,
         source = source,
+        articleType = articleType.name,
+        externalUrl = externalUrl,
         publishDate = publishDate,
         pinned = pinned,
         recommended = recommended,
@@ -205,6 +200,8 @@ class MyBatisArticleRepository(
         title = title,
         bodyHtml = bodyHtml,
         source = source,
+        articleType = ArticleType.valueOf(articleType),
+        externalUrl = externalUrl,
         publishDate = publishDate,
         pinned = pinned,
         recommended = recommended,
