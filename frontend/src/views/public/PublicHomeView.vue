@@ -55,7 +55,9 @@ const articlesFor = (alias: string) => articles.value.filter(article => article.
 const isExternalArticle = (article: PublicArticleSummary) => article.articleType === 'EXTERNAL_LINK' && Boolean(article.externalUrl)
 const noticeArticles = computed(() => articlesFor('notice'))
 const employmentArticles = computed(() => articlesFor('employment-news'))
-const recruitmentArticles = computed(() => articlesFor('recruitment-announcement').filter(isExternalArticle))
+const recruitmentArticles = computed(() => articles.value
+  .filter(article => article.columnAlias === 'recruitment-announcement' && isExternalArticle(article))
+  .slice(0, 7))
 
 const guideItems = [
   { name: '就业派遣', to: '/page/guide/jypq', icon: '/static/icons/guide-01.png' },
@@ -143,7 +145,7 @@ onMounted(async () => {
       <section class="home-secondary-row">
         <div class="home-calendar" aria-label="招聘日历">
           <div class="calendar-selects"><span>{{ calendar.year }}年</span><span>{{ calendar.month }}月</span></div>
-          <div class="calendar-week"><span v-for="name in ['一','二','三','四','五','六','日']" :key="name">{{ name }}</span></div>
+          <div class="calendar-week"><span v-for="name in ['一','二','三','四','五','六','日'] :key="name">{{ name }}</span></div>
           <div class="calendar-days">
             <span v-for="(day, index) in calendar.cells" :key="index" :class="{ today: day === calendar.today, empty: day == null }">{{ day || '' }}</span>
           </div>
