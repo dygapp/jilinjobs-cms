@@ -24,7 +24,7 @@ jobs:
             -v "$GITHUB_WORKSPACE:/work" \
             -w /work \
             mcr.microsoft.com/playwright:v1.61.0-noble \
-            node scripts/visual-reference-capture.js
+            bash -lc 'cd frontend && npm install --no-audit --no-fund >/dev/null && cd /work && NODE_PATH=/work/frontend/node_modules node scripts/visual-reference-capture.js'
 
       - name: 输出取证摘要
         run: |
