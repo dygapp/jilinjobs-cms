@@ -18,6 +18,7 @@ const configuredSiteGroups = ref<SiteLinkGroup[]>([])
 const banners = ref<HomeBanner[]>([])
 const promoBanner = ref('/static/home/recruitment-campaign.png')
 const ncssLogo = ref('/static/home/ncss-logo.png')
+const phoneIcon = '/static/icons/phone.png'
 const activeSiteGroup = ref(0)
 const loading = ref(true)
 const error = ref('')
@@ -63,7 +64,6 @@ const guideItems = [
   { name: '联系我们', to: '/page/guide/contact', icon: '/static/icons/guide-05.png' },
   { name: '常见问题', to: '/page/guide/faq', icon: '/static/icons/guide-06.png' },
 ]
-
 const quickIcon = (index: number) => `/static/icons/top-nav-${String(index + 1).padStart(2, '0')}.png`
 
 const calendar = computed(() => {
@@ -160,7 +160,7 @@ onMounted(async () => {
 
         <aside class="service-panel">
           <h2>快速导航</h2>
-          <p class="service-phone"><img src="/static/icons/phone.png" alt="">咨询电话：<strong>0431-84657570</strong></p>
+          <p class="service-phone"><img :src="phoneIcon" alt="">咨询电话：<strong>0431-84657570</strong></p>
           <div class="service-shortcuts">
             <router-link v-for="item in guideItems" :key="item.name" :to="item.to">
               <img :src="item.icon" alt="">
