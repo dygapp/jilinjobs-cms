@@ -123,3 +123,16 @@ test('Feature-wide closure：SERVICE 与 SITE 数据进入原站快速导航和�
   await siteSection.getByRole('button', { name: siteCategory, exact: true }).click()
   await expect(siteSection.getByRole('link', { name: siteName, exact: true })).toHaveAttribute('href', 'https://example.com/site')
 })
+
+test('Feature-wide closure：首页举报电话及邮箱使用站内固定页面', async ({ page }) => {
+  await page.goto('/')
+  const link = page.locator('.home-top-shortcuts').getByRole('link', { name: '举报电话及邮箱', exact: true })
+  await expect(link).toHaveAttribute('href', '/page/employment-report-contact')
+  await expect(link).not.toHaveAttribute('target', '_blank')
+  await link.click()
+  await expect(page).toHaveURL(/\/page\/employment-report-contact$/)
+  await expect(page.getByRole('heading', { name: '举报电话及邮箱', exact: true })).toBeVisible()
+  await expect(page.getByText('0431-84657570', { exact: true })).toBeVisible()
+  await expect(page.getByText('0431-84657571', { exact: true })).toBeVisible()
+  await expect(page.getByText(/scb@jilinjobs\.cn/)).toBeVisible()
+})
