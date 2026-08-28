@@ -1,0 +1,46 @@
+name: PR16 视觉对照取证
+
+on:
+  push:
+    branches:
+      - feature/site-visual-fidelity-20260828
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: 等待干净人工评审环境
+        run: |
+          set -euo pipefail
+          for i in $(seq 1 120); do
+            if curl --fail --silent http://review.cc-lotus.info/api/public/navigations -o /tmp/nav.json \
+              && jq --exit-status '[.[] | select(.position == "MAIN" and .parentId == null) | .name] == ["网站首页","中心党建","招聘信息","业务指南","政策法规","就业指导","典型事迹","预决算公开","关于我们"]' /tmp/nav.json > /dev/null \
+              && jq --exit-status 'all(.[]; (.name | startswith("移动导航-") | not) and (.name | startswith("外部服务-") | not))' /tmp/nav.json > /dev/null \
+              && curl --fail --silent 'http://review.cc-lotus.info/api/public/articles?page=0&size=50' -o /tmp/articles.json \
+              && jq --exit-status '.total >= 15' /tmp/articles.json > /dev/null \
+              && curl --fail --silent http://review.cc-lotus.info/static/home/header-banner.png > /dev/null; then
+              exit 0
+            fi
+            sleep 5
+          done
+          echo '未等到干净人工评审环境'
+          exit 1
+
+      - name: 采集桌面与移动端完整首页
+        run: |
+          mkdir -p visual-evidence
+          docker run --rm --init --ipc=host --network host \
+            -v "$GITHUB_WORKSPACE/visual-evidence:/evidence" \
+            mcr.microsoft.com/playwright:v1.61.0-noble \
+            bash -lc 'npx -y playwright@1.61.0 screenshot --full-page --viewport-size="1440,1000" http://review.cc-lotus.info/ /evidence/review-home-1440.png && npx -y playwright@1.61.0 screenshot --full-page --viewport-size="390,844" http://review.cc-lotus.info/ /evidence/review-home-390.png'
+
+      - name: 上传视觉对照证据
+        uses: actions/upload-artifact@v7
+        with:
+          name: pr16-review-visual-evidence
+          path: visual-evidence
+          if-no-files-found: error
+          retention-days: 5
