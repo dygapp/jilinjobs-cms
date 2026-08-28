@@ -67,6 +67,24 @@ class ArticleServiceTest {
     }
 
     @Test
+    fun `招聘公告栏目只允许外链文章`() {
+        val service = ArticleService(InMemoryArticleRepository(), RecruitmentColumnQuery(), InMemoryArticleResourceAssociation())
+
+        assertThrows(ArticleValidationException::class.java) {
+            service.create(sampleDraft())
+        }
+
+        val created = service.create(
+            sampleDraft().copy(
+                articleType = ArticleType.EXTERNAL_LINK,
+                externalUrl = "https://example.com/recruitment/1",
+            ),
+        )
+        assertEquals(ArticleType.EXTERNAL_LINK, created.articleType)
+        assertEquals("https://example.com/recruitment/1", created.externalUrl)
+    }
+
+    @Test
     fun `编辑文章不会改变当前发布状态`() {
         val repository = InMemoryArticleRepository()
         val resources = InMemoryArticleResourceAssociation()
@@ -146,6 +164,10 @@ class ArticleServiceTest {
 
 private class FixedColumnQuery : ColumnQuery {
     override fun find(id: Long): CmsColumn? = CmsColumn(id, null, "栏目 $id", 0, true)
+}
+
+private class RecruitmentColumnQuery : ColumnQuery {
+    override fun find(id: Long): CmsColumn? = CmsColumn(id, null, "招聘公告", 0, true, "recruitment-announcement")
 }
 
 private class InMemoryArticleResourceAssociation : ArticleResourceAssociation {
