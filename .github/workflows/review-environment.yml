@@ -187,6 +187,13 @@ jobs:
             curl --fail --silent -X POST "http://127.0.0.1:5173/api/admin/articles/${article_id}/publish" > /dev/null
           }
 
+          create_external_article() {
+            column_id="$1"; title="$2"; published="$3"; url="$4"
+            payload=$(jq -n --argjson columnId "$column_id" --arg title "$title" --arg published "$published" --arg url "$url" '{columnId:$columnId,title:$title,bodyHtml:"",source:"外部招聘信息源",articleType:"EXTERNAL_LINK",externalUrl:$url,publishDate:$published,pinned:false,recommended:false,sortOrder:0,coverResourceId:null,bodyImageResourceIds:[],attachmentResourceIds:[]}')
+            article_id=$(curl --fail --silent -H 'Content-Type: application/json' -d "$payload" http://127.0.0.1:5173/api/admin/articles | jq -r '.id')
+            curl --fail --silent -X POST "http://127.0.0.1:5173/api/admin/articles/${article_id}/publish" > /dev/null
+          }
+
           create_article "$notice_id" '关于开展高校毕业生就业服务相关工作的通知' '2026-08-28'
           create_article "$notice_id" '吉林省高校毕业生就业创业服务工作安排' '2026-08-26'
           create_article "$notice_id" '关于做好毕业生就业手续办理工作的提示' '2026-08-22'
@@ -199,11 +206,11 @@ jobs:
           create_article "$employment_id" '校企协同拓展毕业生就业岗位资源' '2026-08-19'
           create_article "$employment_id" '重点群体毕业生就业帮扶工作持续推进' '2026-08-16'
 
-          create_article "$recruitment_id" '吉林省高校毕业生专场招聘活动公告' '2026-08-28'
-          create_article "$recruitment_id" '长春市重点用人单位高校毕业生招聘公告' '2026-08-24'
-          create_article "$recruitment_id" '吉林省事业单位面向高校毕业生公开招聘信息' '2026-08-20'
-          create_article "$recruitment_id" '高校毕业生线上双选会参会公告' '2026-08-17'
-          create_article "$recruitment_id" '省内重点企业招聘高校毕业生岗位信息' '2026-08-13'
+          create_external_article "$recruitment_id" '吉林省高校毕业生专场招聘活动公告' '2026-08-28' 'https://example.com/review/recruitment-1'
+          create_external_article "$recruitment_id" '长春市重点用人单位高校毕业生招聘公告' '2026-08-24' 'https://example.com/review/recruitment-2'
+          create_external_article "$recruitment_id" '吉林省事业单位面向高校毕业生公开招聘信息' '2026-08-20' 'https://example.com/review/recruitment-3'
+          create_external_article "$recruitment_id" '高校毕业生线上双选会参会公告' '2026-08-17' 'https://example.com/review/recruitment-4'
+          create_external_article "$recruitment_id" '省内重点企业招聘高校毕业生岗位信息' '2026-08-13' 'https://example.com/review/recruitment-5'
 
           curl --fail --silent 'http://127.0.0.1:5173/api/public/articles?page=0&size=50' | jq --exit-status '.total >= 15' > /dev/null
 
