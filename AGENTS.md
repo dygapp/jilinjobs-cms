@@ -52,9 +52,9 @@
 
 - Repository：`dygapp/agentic-dev`
 - Validation Baseline Branch：`master`
-- Validation Baseline Commit：`2ee56a5866d0201977a75b2b18ca2e791a218983`
+- Validation Baseline Commit：`df4d6a607597eeb3684279e269cb073fcb398f83`
 
-该 baseline 在此前 Project Roadmap、Fresh Context 和验收证据闭环基础上，进一步正式化了已有 Consumer 的采用 / baseline 升级闭环、多 Repository 操作授权边界，以及异步外部操作与 GitHub Actions 的持续观察、诊断、修复、重试和有界退出规则。
+该 baseline 在此前 Project Roadmap、Fresh Context、Consumer-local Method、跨 Repository 授权边界和异步外部操作闭环基础上，进一步正式化了验证证据与声明匹配、陈旧验证契约（Stale Verification Contract）诊断、Visual Fidelity 的 AI / Human 验证边界、自动化验证状态与 Human Review Baseline 隔离，以及容器 bind mount ownership / cleanup / 可重复恢复规则。
 
 本项目不是在每次开发工作中直接运行 `agentic-dev` 仓库的方法文档，而是将当前采用的方法和 Skills 使用规则固化在 Consumer Repository：
 
@@ -84,6 +84,11 @@ docs/project/development-method.md
 - 每项 Acceptance Obligation 必须闭环到实现责任、验证责任、计划证据与已执行的 Current Evidence；
 - 实现覆盖不等于验证覆盖；
 - 没有 Current Evidence，不得声明完成、通过或修复成功；
+- 测试、Workflow assertion、fixture、snapshot 等 Verification Artifact 也可能陈旧；当其与更高优先级 Authority / Specification 冲突时，应分类为 Stale Verification Contract 并修正验证层，而不是修改产品去恢复已被取代的旧行为；
+- 证据类型必须与声明类型匹配；Functional Browser PASS 不能单独证明 Visual Fidelity，视觉复刻在缺少完整机器可判定容差时需要参考证据、AI 视觉对照与 Human Visual Review；
+- Human Review 的原始结论按实际范围记录，不把“基本通过、暂未发现阻塞问题”扩大为“完全一致”或无条件验收；
+- 自动 E2E 与 Human Review 共用 Runtime 时，应在收集自动化证据后恢复已知数据库/静态资源基线，再注入明确的人工评审 Fixture；测试数据不得因环境复用而意外泄漏；
+- 容器可写 host bind mount 时，必须显式处理 UID/GID、ownership、permissions、cleanup 与 Reset 的可重复验证；调用清理命令本身不构成 Cleanup Evidence；
 - 项目跨多个里程碑或 Fresh Context 持续演进时，维护 Consumer 自己的 `docs/project/project-roadmap.md`；
 - 同一任务涉及多个 Repository 时，分别确认每个 Repository 的操作授权，Runtime 工具能力本身不构成授权；
 - Workflow、Deployment、远程 Job 等异步外部操作在 `queued` / `pending` / `in_progress` 时仍属于执行闭环中间状态；只要 Runtime 可继续观察且当前目标需要结果，就应在授权范围内有界观察、收集证据、诊断、修复和重试，而不是仅因“仍在运行”就默认交回人工。
