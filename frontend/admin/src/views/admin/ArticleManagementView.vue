@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { nextTick, onMounted, reactive, ref } from 'vue'
+import { computed, nextTick, onMounted, reactive, ref } from 'vue'
 import { ElMessage } from 'element-plus'
 import { listColumns, type CmsColumn } from '../../api/columns'
 import {
@@ -13,10 +13,14 @@ import {
   uploadResource,
   withdrawArticle,
   type ArticleDraft,
+  type ArticleStatus,
+  type ArticleType,
   type CmsArticle,
 } from '../../api/articles'
 
 type ArticleForm = Omit<ArticleDraft, 'columnId'> & { columnId: number | null }
+type StatusFilter = 'ALL' | ArticleStatus
+type TypeFilter = 'ALL' | ArticleType
 
 const articles = ref<CmsArticle[]>([])
 const columns = ref<CmsColumn[]>([])
@@ -29,6 +33,29 @@ const editingId = ref<number | null>(null)
 const editorRef = ref<HTMLElement | null>(null)
 const resourceNames = reactive<Record<number, string>>({})
 const form = reactive<ArticleForm>(emptyForm())
+
+const keyword = ref('')
+const filterColumnId = ref<number | null>(null)
+const filterStatus = ref<StatusFilter>('ALL')
+const filterType = ref<TypeFilter>('ALL')
+const currentPage = ref(1)
+const pageSize = 10
+
+const filteredArticles = computed(() => {
+  const text = keyword.value.trim().toLowerCase()
+  return articles.value.filter((article) => {
+    if (text && !`${article.title} ${article.source}`.toLowerCase().includes(text)) return false
+    if (filterColumnId.value != null && article.columnId !== filterColumnId.value) return false
+    if (filterStatus.value !== 'ALL' && article.status !== filterStatus.value) return false
+    if (filterType.value !== 'ALL' && article.articleType !== filterType.value) return false
+    return true
+  })
+})
+
+const pagedArticles = computed(() => {
+  const start = (currentPage.value - 1) * pageSize
+  return filteredArticles.value.slice(start, start + pageSize)
+})
 
 onMounted(refresh)
 
@@ -56,11 +83,29 @@ async function refresh() {
     const [articleRows, columnRows] = await Promise.all([listArticles(), listColumns()])
     articles.value = articleRows
     columns.value = columnRows
+    normalizePage()
   } catch (error) {
     ElMessage.error(toMessage(error))
   } finally {
     loading.value = false
   }
+}
+
+function resetFilters() {
+  keyword.value = ''
+  filterColumnId.value = null
+  filterStatus.value = 'ALL'
+  filterType.value = 'ALL'
+  currentPage.value = 1
+}
+
+function filterChanged() {
+  currentPage.value = 1
+}
+
+function normalizePage() {
+  const max = Math.max(1, Math.ceil(filteredArticles.value.length / pageSize))
+  if (currentPage.value > max) currentPage.value = max
 }
 
 async function openCreate() {
@@ -72,57 +117,52 @@ async function openCreate() {
 }
 
 async function openEdit(row: CmsArticle) {
-  const article = await getArticle(row.id)
-  editingId.value = article.id
-  Object.assign(form, {
-    columnId: article.columnId,
-    title: article.title,
-    bodyHtml: article.bodyHtml,
-    source: article.source,
-    articleType: article.articleType,
-    externalUrl: article.externalUrl,
-    publishDate: article.publishDate,
-    pinned: article.pinned,
-    recommended: article.recommended,
-    sortOrder: article.sortOrder,
-    coverResourceId: article.coverResourceId,
-    bodyImageResourceIds: [...article.bodyImageResourceIds],
-    attachmentResourceIds: [...article.attachmentResourceIds],
-  })
-  await hydrateResourceNames([
-    article.coverResourceId,
-    ...article.bodyImageResourceIds,
-    ...article.attachmentResourceIds,
-  ])
-  dialogVisible.value = true
-  await nextTick()
-  if (editorRef.value) editorRef.value.innerHTML = article.bodyHtml
+  try {
+    const article = await getArticle(row.id)
+    editingId.value = article.id
+    Object.assign(form, {
+      columnId: article.columnId,
+      title: article.title,
+      bodyHtml: article.bodyHtml,
+      source: article.source,
+      articleType: article.articleType,
+      externalUrl: article.externalUrl,
+      publishDate: article.publishDate,
+      pinned: article.pinned,
+      recommended: article.recommended,
+      sortOrder: article.sortOrder,
+      coverResourceId: article.coverResourceId,
+      bodyImageResourceIds: [...article.bodyImageResourceIds],
+      attachmentResourceIds: [...article.attachmentResourceIds],
+    })
+    await hydrateResourceNames([
+      article.coverResourceId,
+      ...article.bodyImageResourceIds,
+      ...article.attachmentResourceIds,
+    ])
+    dialogVisible.value = true
+    await nextTick()
+    if (editorRef.value) editorRef.value.innerHTML = article.bodyHtml
+  } catch (error) {
+    ElMessage.error(toMessage(error))
+  }
 }
 
 async function save() {
   if (form.articleType === 'INTERNAL') syncBody()
-  if (!form.title.trim()) {
-    ElMessage.warning('请输入文章标题')
-    return
-  }
-  if (form.columnId == null) {
-    ElMessage.warning('请选择所属栏目')
-    return
-  }
-  if (form.articleType === 'EXTERNAL_LINK' && !form.externalUrl?.trim()) {
-    ElMessage.warning('请输入原文链接')
-    return
-  }
+  if (!form.title.trim()) { ElMessage.warning('请输入文章标题'); return }
+  if (form.columnId == null) { ElMessage.warning('请选择所属栏目'); return }
+  if (form.articleType === 'EXTERNAL_LINK' && !form.externalUrl?.trim()) { ElMessage.warning('请输入原文链接'); return }
 
   saving.value = true
   try {
     const draft: ArticleDraft = {
       columnId: form.columnId,
-      title: form.title,
+      title: form.title.trim(),
       bodyHtml: form.articleType === 'INTERNAL' ? form.bodyHtml : '',
-      source: form.source,
+      source: form.source.trim(),
       articleType: form.articleType,
-      externalUrl: form.articleType === 'EXTERNAL_LINK' ? form.externalUrl : null,
+      externalUrl: form.articleType === 'EXTERNAL_LINK' ? form.externalUrl?.trim() || null : null,
       publishDate: form.publishDate || null,
       pinned: form.pinned,
       recommended: form.recommended,
@@ -185,10 +225,7 @@ async function uploadBodyImage(event: Event) {
     const resource = await uploadResource(file)
     resourceNames[resource.id] = resource.originalFilename
     form.bodyImageResourceIds.push(resource.id)
-    editorRef.value?.insertAdjacentHTML(
-      'beforeend',
-      `<p><img src="${resourceContentUrl(resource.id)}" alt="${escapeHtml(resource.originalFilename)}" style="max-width:100%"></p>`,
-    )
+    editorRef.value?.insertAdjacentHTML('beforeend', `<p><img src="${resourceContentUrl(resource.id)}" alt="${escapeHtml(resource.originalFilename)}" style="max-width:100%"></p>`)
     syncBody()
     ElMessage.success('正文图片已上传')
   } catch (error) {
@@ -296,169 +333,71 @@ function toMessage(error: unknown): string {
   <main class="admin-shell">
     <header class="page-header">
       <div>
-        <p class="eyebrow">jilinjobs-cms prototype</p>
+        <p class="eyebrow">网站内容</p>
         <h1>文章管理</h1>
-        <p class="subtitle">维护站内文章或外链文章，并显式执行发布、撤回和重新发布。</p>
+        <p class="subtitle">维护站内文章和外链文章；编辑与发布状态分离，发布、撤回均为显式动作。</p>
       </div>
       <el-button data-testid="add-article" type="primary" @click="openCreate">新增文章</el-button>
     </header>
 
+    <el-card shadow="never" class="admin-filter-card">
+      <div class="admin-toolbar">
+        <el-input v-model="keyword" data-testid="article-filter-keyword" class="grow" clearable placeholder="按标题或来源筛选" @input="filterChanged" />
+        <el-select v-model="filterColumnId" data-testid="article-filter-column" clearable placeholder="全部栏目" style="width:170px" @change="filterChanged">
+          <el-option v-for="item in columns" :key="item.id" :label="item.name" :value="item.id" />
+        </el-select>
+        <el-select v-model="filterStatus" data-testid="article-filter-status" style="width:130px" @change="filterChanged">
+          <el-option label="全部状态" value="ALL" /><el-option label="草稿" value="DRAFT" /><el-option label="已发布" value="PUBLISHED" /><el-option label="已撤回" value="WITHDRAWN" />
+        </el-select>
+        <el-select v-model="filterType" data-testid="article-filter-type" style="width:130px" @change="filterChanged">
+          <el-option label="全部类型" value="ALL" /><el-option label="站内文章" value="INTERNAL" /><el-option label="外链文章" value="EXTERNAL_LINK" />
+        </el-select>
+        <el-button @click="resetFilters">重置</el-button>
+      </div>
+    </el-card>
+
     <el-card shadow="never">
-      <el-table v-loading="loading" :data="articles" row-key="id">
-        <el-table-column prop="title" label="标题" min-width="260" />
-        <el-table-column label="栏目" min-width="160">
-          <template #default="scope">{{ columnName(scope.row.columnId) }}</template>
-        </el-table-column>
-        <el-table-column label="类型" width="100">
-          <template #default="scope">{{ scope.row.articleType === 'EXTERNAL_LINK' ? '外链' : '站内' }}</template>
-        </el-table-column>
-        <el-table-column label="状态" width="100">
-          <template #default="scope">{{ statusName(scope.row.status) }}</template>
-        </el-table-column>
-        <el-table-column prop="source" label="来源" min-width="140" />
-        <el-table-column prop="viewCount" label="浏览量" width="100" />
+      <el-table v-loading="loading" :data="pagedArticles" row-key="id" data-testid="article-table">
+        <el-table-column prop="title" label="标题" min-width="260" show-overflow-tooltip />
+        <el-table-column label="栏目" min-width="150"><template #default="scope">{{ columnName(scope.row.columnId) }}</template></el-table-column>
+        <el-table-column label="类型" width="95"><template #default="scope"><el-tag :type="scope.row.articleType === 'EXTERNAL_LINK' ? 'warning' : 'info'" size="small">{{ scope.row.articleType === 'EXTERNAL_LINK' ? '外链' : '站内' }}</el-tag></template></el-table-column>
+        <el-table-column label="状态" width="95"><template #default="scope">{{ statusName(scope.row.status) }}</template></el-table-column>
+        <el-table-column prop="source" label="来源" min-width="130" show-overflow-tooltip />
+        <el-table-column prop="publishDate" label="发布日期" width="120" />
+        <el-table-column prop="viewCount" label="浏览量" width="90" />
         <el-table-column label="操作" width="210" fixed="right">
           <template #default="scope">
             <el-button :data-testid="`edit-article-${scope.row.id}`" link type="primary" @click="openEdit(asCmsArticle(scope.row))">编辑</el-button>
-            <el-button
-              :data-testid="`${scope.row.status === 'PUBLISHED' ? 'withdraw' : 'publish'}-article-${scope.row.id}`"
-              link
-              :type="scope.row.status === 'PUBLISHED' ? 'danger' : 'success'"
-              :loading="statusChangingId === scope.row.id"
-              @click="changeStatus(asCmsArticle(scope.row))"
-            >{{ statusActionName(scope.row.status) }}</el-button>
+            <el-button :data-testid="`${scope.row.status === 'PUBLISHED' ? 'withdraw' : 'publish'}-article-${scope.row.id}`" link :type="scope.row.status === 'PUBLISHED' ? 'danger' : 'success'" :loading="statusChangingId === scope.row.id" @click="changeStatus(asCmsArticle(scope.row))">{{ statusActionName(scope.row.status) }}</el-button>
           </template>
         </el-table-column>
       </el-table>
+      <div class="admin-pagination">
+        <el-pagination data-testid="article-pagination" background layout="total, prev, pager, next" :page-size="pageSize" :total="filteredArticles.length" :current-page="currentPage" @current-change="value => currentPage = value" />
+      </div>
     </el-card>
 
     <el-dialog v-model="dialogVisible" :title="editingId == null ? '新增文章草稿' : '编辑文章'" width="860px" destroy-on-close>
       <el-form label-width="95px">
-        <el-form-item label="文章标题" required>
-          <el-input v-model="form.title" data-testid="article-title" placeholder="请输入文章标题" maxlength="200" show-word-limit />
-        </el-form-item>
-        <el-form-item label="所属栏目" required>
-          <el-select v-model="form.columnId" data-testid="article-column" placeholder="请选择所属栏目" style="width: 100%">
-            <el-option v-for="item in columns" :key="item.id" :label="item.name" :value="item.id" />
-          </el-select>
-        </el-form-item>
-        <el-form-item label="内容类型" required>
-          <el-radio-group v-model="form.articleType" data-testid="article-type">
-            <el-radio-button value="INTERNAL">站内文章</el-radio-button>
-            <el-radio-button value="EXTERNAL_LINK">外链文章</el-radio-button>
-          </el-radio-group>
-        </el-form-item>
-        <el-form-item label="内容来源">
-          <el-input v-model="form.source" data-testid="article-source" placeholder="请输入内容来源" maxlength="200" />
-        </el-form-item>
-        <el-form-item v-if="form.articleType === 'EXTERNAL_LINK'" label="原文链接" required>
-          <el-input v-model="form.externalUrl" data-testid="article-external-url" placeholder="https://来源网站/..." maxlength="2000" />
-        </el-form-item>
-        <el-form-item label="发布日期">
-          <el-date-picker v-model="form.publishDate" data-testid="article-publish-date" type="date" value-format="YYYY-MM-DD" placeholder="选择发布日期" style="width: 100%" />
-        </el-form-item>
+        <el-form-item label="文章标题" required><el-input v-model="form.title" data-testid="article-title" placeholder="请输入文章标题" maxlength="200" show-word-limit /></el-form-item>
+        <el-form-item label="所属栏目" required><el-select v-model="form.columnId" data-testid="article-column" placeholder="请选择所属栏目" style="width:100%"><el-option v-for="item in columns" :key="item.id" :label="item.name" :value="item.id" /></el-select></el-form-item>
+        <el-form-item label="内容类型" required><el-radio-group v-model="form.articleType" data-testid="article-type"><el-radio-button value="INTERNAL">站内文章</el-radio-button><el-radio-button value="EXTERNAL_LINK">外链文章</el-radio-button></el-radio-group></el-form-item>
+        <el-form-item label="内容来源"><el-input v-model="form.source" data-testid="article-source" placeholder="请输入内容来源" maxlength="200" /></el-form-item>
+        <el-form-item v-if="form.articleType === 'EXTERNAL_LINK'" label="原文链接" required><el-input v-model="form.externalUrl" data-testid="article-external-url" placeholder="https://来源网站/..." maxlength="2000" /></el-form-item>
+        <el-form-item label="发布日期"><el-date-picker v-model="form.publishDate" data-testid="article-publish-date" type="date" value-format="YYYY-MM-DD" placeholder="选择发布日期" style="width:100%" /></el-form-item>
         <el-form-item v-if="form.articleType === 'INTERNAL'" label="正文">
           <div class="editor-shell">
-            <div class="editor-toolbar">
-              <el-button size="small" @click="formatBody('bold')"><strong>加粗</strong></el-button>
-              <el-button size="small" @click="formatBody('italic')"><em>斜体</em></el-button>
-              <label class="upload-button">
-                <span>{{ uploading ? '上传中…' : '插入图片' }}</span>
-                <input data-testid="body-image-input" type="file" accept="image/*" :disabled="uploading" @change="uploadBodyImage">
-              </label>
-            </div>
+            <div class="editor-toolbar"><el-button size="small" @click="formatBody('bold')"><strong>加粗</strong></el-button><el-button size="small" @click="formatBody('italic')"><em>斜体</em></el-button><label class="upload-button"><span>{{ uploading ? '上传中…' : '插入图片' }}</span><input data-testid="body-image-input" type="file" accept="image/*" :disabled="uploading" @change="uploadBodyImage"></label></div>
             <div ref="editorRef" data-testid="article-body-editor" class="rich-editor" contenteditable="true" @input="syncBody" />
           </div>
         </el-form-item>
-        <el-form-item v-if="form.articleType === 'INTERNAL'" label="封面图片">
-          <div class="resource-row">
-            <label class="upload-button">
-              <span>{{ form.coverResourceId == null ? '上传封面' : '更换封面' }}</span>
-              <input data-testid="cover-input" type="file" accept="image/*" :disabled="uploading" @change="uploadCover">
-            </label>
-            <span v-if="form.coverResourceId != null" data-testid="cover-resource-name">{{ resourceName(form.coverResourceId) }}</span>
-          </div>
-        </el-form-item>
-        <el-form-item v-if="form.articleType === 'INTERNAL'" label="附件">
-          <div class="attachments">
-            <label class="upload-button">
-              <span>上传附件</span>
-              <input data-testid="attachment-input" type="file" multiple :disabled="uploading" @change="uploadAttachments">
-            </label>
-            <div v-for="id in form.attachmentResourceIds" :key="id" class="attachment-chip" :data-testid="`attachment-${id}`">
-              <span>{{ resourceName(id) }}</span>
-              <el-button link type="danger" @click="removeAttachment(id)">移除</el-button>
-            </div>
-          </div>
-        </el-form-item>
-        <el-form-item label="运营属性">
-          <el-checkbox v-model="form.pinned" data-testid="article-pinned">置顶</el-checkbox>
-          <el-checkbox v-model="form.recommended" data-testid="article-recommended">推荐</el-checkbox>
-          <span class="sort-label">展示顺序</span>
-          <el-input-number v-model="form.sortOrder" data-testid="article-sort-order" :step="1" />
-        </el-form-item>
+        <el-form-item v-if="form.articleType === 'INTERNAL'" label="封面图片"><div class="resource-row"><label class="upload-button"><span>{{ form.coverResourceId == null ? '上传封面' : '更换封面' }}</span><input data-testid="cover-input" type="file" accept="image/*" :disabled="uploading" @change="uploadCover"></label><span v-if="form.coverResourceId != null" data-testid="cover-resource-name">{{ resourceName(form.coverResourceId) }}</span></div></el-form-item>
+        <el-form-item v-if="form.articleType === 'INTERNAL'" label="附件"><div class="attachments"><label class="upload-button"><span>上传附件</span><input data-testid="attachment-input" type="file" multiple :disabled="uploading" @change="uploadAttachments"></label><div v-for="id in form.attachmentResourceIds" :key="id" class="attachment-chip" :data-testid="`attachment-${id}`"><span>{{ resourceName(id) }}</span><el-button link type="danger" @click="removeAttachment(id)">移除</el-button></div></div></el-form-item>
+        <el-form-item label="运营属性"><el-checkbox v-model="form.pinned" data-testid="article-pinned">置顶</el-checkbox><el-checkbox v-model="form.recommended" data-testid="article-recommended">推荐</el-checkbox><span class="sort-label">展示顺序</span><el-input-number v-model="form.sortOrder" data-testid="article-sort-order" :step="1" /></el-form-item>
         <el-alert v-if="form.articleType === 'EXTERNAL_LINK'" title="外链文章只保存标题、日期、来源和原文链接等基础信息，公开访问时直接跳转来源网站。" type="info" :closable="false" show-icon />
         <el-alert v-else title="新建文章固定保存为草稿；普通编辑不会改变当前发布状态。" type="info" :closable="false" show-icon />
       </el-form>
-      <template #footer>
-        <el-button @click="dialogVisible = false">取消</el-button>
-        <el-button data-testid="save-article" type="primary" :loading="saving" :disabled="uploading" @click="save">保存</el-button>
-      </template>
+      <template #footer><el-button @click="dialogVisible = false">取消</el-button><el-button data-testid="save-article" type="primary" :loading="saving" :disabled="uploading" @click="save">保存</el-button></template>
     </el-dialog>
   </main>
 </template>
-
-<style scoped>
-.editor-shell {
-  width: 100%;
-  border: 1px solid var(--el-border-color);
-  border-radius: 6px;
-  overflow: hidden;
-}
-.editor-toolbar {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  padding: 8px;
-  background: var(--el-fill-color-light);
-  border-bottom: 1px solid var(--el-border-color);
-}
-.rich-editor {
-  min-height: 220px;
-  padding: 12px;
-  outline: none;
-  line-height: 1.7;
-}
-.rich-editor :deep(img) { max-width: 100%; }
-.upload-button {
-  display: inline-flex;
-  align-items: center;
-  min-height: 30px;
-  padding: 0 12px;
-  border: 1px solid var(--el-border-color);
-  border-radius: 4px;
-  cursor: pointer;
-  background: white;
-}
-.upload-button input { display: none; }
-.resource-row,
-.attachments {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-}
-.attachment-chip {
-  display: inline-flex;
-  gap: 6px;
-  align-items: center;
-  padding: 3px 8px;
-  background: var(--el-fill-color-light);
-  border-radius: 4px;
-}
-.sort-label {
-  margin-left: 24px;
-  margin-right: 8px;
-  color: var(--el-text-color-regular);
-}
-</style>

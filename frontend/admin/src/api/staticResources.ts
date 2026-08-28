@@ -1,4 +1,4 @@
-export interface StaticEntry{path:string;name:string;directory:boolean;size:number;modifiedAt:string|null}
+export interface StaticEntry{path:string;name:string;directory:boolean;size:number;modifiedAt:string|null;protectedResource:boolean}
 export interface TrashEntry{id:string;originalPath:string}
 async function checked<T>(responsePromise:Promise<Response>):Promise<T>{const r=await responsePromise;if(!r.ok){const e=await r.json().catch(()=>({message:`请求失败：${r.status}`})) as {message?:string};throw new Error(e.message??`请求失败：${r.status}`)}return r.json() as Promise<T>}
 export const listStaticResources=(path='')=>checked<StaticEntry[]>(fetch(`/api/admin/static-resources?path=${encodeURIComponent(path)}`))
