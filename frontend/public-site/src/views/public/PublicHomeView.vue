@@ -1,73 +1,40 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
+import { listPublicAdvertisements } from '../../api/advertisements'
 import { listPublicArticles, type PublicArticleSummary } from '../../api/articles'
+import { listPublicCmsLists, type CmsListItem } from '../../api/lists'
 import { listPublicNavigations, type PublicNavigation } from '../../api/navigation'
 import { listPublicSiteConfig } from '../../api/siteConfig'
 import PublicSiteHeader from '../../components/PublicSiteHeader.vue'
 import PublicSiteFooter from '../../components/PublicSiteFooter.vue'
 import { setPageMeta } from '../../seo'
 
-type SiteLink = { name: string; url: string }
-type SiteLinkGroup = { name: string; links: SiteLink[] }
-type HomeBanner = { image: string; title?: string; url?: string }
+type SiteLinkGroup = { name: string; links: CmsListItem[] }
 
 const items = ref<PublicNavigation[]>([])
 const articles = ref<PublicArticleSummary[]>([])
-const serviceLinks = ref<SiteLink[]>([])
-const configuredSiteGroups = ref<SiteLinkGroup[]>([])
-const banners = ref<HomeBanner[]>([])
-const promoBanner = ref('/static/home/recruitment-campaign.png')
-const ncssLogo = ref('/static/home/ncss-logo.png')
-const phoneIcon = '/static/icons/phone.png'
+const siteGroups = ref<SiteLinkGroup[]>([])
+const carouselItems = ref<CmsListItem[]>([])
+const promo = ref<CmsListItem | null>(null)
+const contactPhone = ref('')
 const activeSiteGroup = ref(0)
 const loading = ref(true)
 const error = ref('')
+const ncssLogo = '/static/home/ncss-logo.png'
+const phoneIcon = '/static/icons/phone.png'
 
 setPageMeta({ description: '吉林省高等学校毕业生就业信息网，提供就业资讯、政策法规、业务指南和公共服务入口。' })
 
-const parseJson = <T,>(value: string | undefined, fallback: T): T => {
-  if (!value) return fallback
-  try { return JSON.parse(value) as T } catch { return fallback }
-}
-
-const serviceItems = computed(() => items.value.filter(item => item.position === 'SERVICE'))
-const navigationSiteGroups = computed<SiteLinkGroup[]>(() => {
-  const groups = new Map<string, SiteLink[]>()
-  items.value.filter(item => item.position === 'SITE').forEach(item => {
-    const name = item.category || '相关网站服务'
-    const links = groups.get(name) || []
-    links.push({ name: item.name, url: item.href })
-    groups.set(name, links)
-  })
-  return Array.from(groups, ([name, links]) => ({ name, links }))
-})
-const siteGroups = computed(() => {
-  const groups = configuredSiteGroups.value.map(group => ({ ...group, links: [...group.links] }))
-  for (const extra of navigationSiteGroups.value) {
-    const existing = groups.find(group => group.name === extra.name)
-    if (existing) existing.links.push(...extra.links)
-    else groups.push(extra)
-  }
-  return groups
-})
-
+const shortcutItems = computed(() => items.value.filter(item => item.position === 'HOME_SHORTCUT'))
+const quickItems = computed(() => items.value.filter(item => item.position === 'HOME_QUICK'))
 const articlesFor = (alias: string) => articles.value.filter(article => article.columnAlias === alias).slice(0, 7)
 const isExternalArticle = (article: PublicArticleSummary) => article.articleType === 'EXTERNAL_LINK' && Boolean(article.externalUrl)
 const noticeArticles = computed(() => articlesFor('notice'))
 const employmentArticles = computed(() => articlesFor('employment-news'))
-const recruitmentArticles = computed(() => articles.value
-  .filter(article => article.columnAlias === 'recruitment-announcement' && isExternalArticle(article))
-  .slice(0, 7))
-
-const guideItems = [
-  { name: '就业派遣', to: '/page/guide/jypq', icon: '/static/icons/guide-01.png' },
-  { name: '档案管理', to: '/page/guide/dagl', icon: '/static/icons/guide-02.png' },
-  { name: '流动党员', to: '/page/guide/dygl', icon: '/static/icons/guide-03.png' },
-  { name: '学历认证', to: '/page/guide/xlrz', icon: '/static/icons/guide-04.png' },
-  { name: '联系我们', to: '/page/guide/contact', icon: '/static/icons/guide-05.png' },
-  { name: '常见问题', to: '/page/guide/faq', icon: '/static/icons/guide-06.png' },
-]
+const recruitmentArticles = computed(() => articles.value.filter(article => article.columnAlias === 'recruitment-announcement' && isExternalArticle(article)).slice(0, 7))
 const quickIcon = (index: number) => `/static/icons/top-nav-${String(index + 1).padStart(2, '0')}.png`
+const guideIcon = (index: number) => `/static/icons/guide-${String(index + 1).padStart(2, '0')}.png`
+const newWindow = (mode: string, url: string | null | undefined) => mode === 'NEW_WINDOW' || (mode === 'DEFAULT' && Boolean(url?.startsWith('http')))
 
 const calendar = computed(() => {
   const today = new Date()
@@ -83,19 +50,21 @@ const calendar = computed(() => {
 
 onMounted(async () => {
   try {
-    const [navigation, articlePage, config] = await Promise.all([
+    const [navigation, articlePage, config, lists, advertisementSlots] = await Promise.all([
       listPublicNavigations(),
       listPublicArticles(null, 0, 50),
       listPublicSiteConfig(),
+      listPublicCmsLists(),
+      listPublicAdvertisements(),
     ])
     items.value = navigation
     articles.value = articlePage.items
     const values = Object.fromEntries(config.map(item => [item.key, item.value]))
-    serviceLinks.value = parseJson<SiteLink[]>(values.SERVICE_LINKS, [])
-    configuredSiteGroups.value = parseJson<SiteLinkGroup[]>(values.SITE_LINK_GROUPS, [])
-    banners.value = parseJson<HomeBanner[]>(values.HOME_BANNERS, [])
-    promoBanner.value = values.HOME_PROMO_BANNER_PATH || promoBanner.value
-    ncssLogo.value = values.HOME_NCSS_LOGO_PATH || ncssLogo.value
+    contactPhone.value = values.CONTACT_PHONE || ''
+    carouselItems.value = lists.find(list => list.code === 'HOME_CAROUSEL')?.items || []
+    siteGroups.value = lists.filter(list => list.groupCode === 'SITE_LINKS').map(list => ({ name: list.name, links: list.items }))
+    const promoAd = advertisementSlots.find(slot => slot.code === 'HOME_RECRUITMENT_PROMO')?.advertisements[0]
+    promo.value = promoAd ? { id: promoAd.id, listId: promoAd.slotId, title: promoAd.title, subtitle: null, url: promoAd.url, imagePath: promoAd.imagePath, openMode: promoAd.openMode, sortOrder: promoAd.sortOrder, enabled: promoAd.enabled, extraJson: null } : null
   } catch (e) {
     error.value = e instanceof Error ? e.message : '公开内容加载失败'
   } finally {
@@ -113,9 +82,9 @@ onMounted(async () => {
     <div class="site-width home-content" data-testid="public-content">
       <section class="home-primary-row">
         <div class="home-carousel">
-          <a v-if="banners[0]" :href="banners[0].url || '#'" :target="banners[0].url?.startsWith('http') ? '_blank' : undefined" rel="noopener noreferrer">
-            <img :src="banners[0].image" :alt="banners[0].title || '首页轮播图'">
-            <span v-if="banners[0].title" class="carousel-caption">{{ banners[0].title }}</span>
+          <a v-if="carouselItems[0]" :href="carouselItems[0].url || '#'" :target="newWindow(carouselItems[0].openMode, carouselItems[0].url) ? '_blank' : undefined" rel="noopener noreferrer">
+            <img :src="carouselItems[0].imagePath || ''" :alt="carouselItems[0].title || '首页轮播图'">
+            <span v-if="carouselItems[0].title" class="carousel-caption">{{ carouselItems[0].title }}</span>
           </a>
           <div v-else class="visual-empty">轮播图</div>
         </div>
@@ -133,11 +102,11 @@ onMounted(async () => {
         </section>
 
         <aside class="home-top-shortcuts">
-          <template v-for="(link, index) in serviceLinks.slice(0, 5)" :key="link.name">
-            <a :href="link.url" :target="link.url.startsWith('http') ? '_blank' : undefined" rel="noopener noreferrer">
-              <img :src="quickIcon(index)" alt="">
-              <span>{{ link.name }}</span>
+          <template v-for="(link, index) in shortcutItems" :key="link.id">
+            <a v-if="link.external" :href="link.href" :target="link.newWindow ? '_blank' : undefined" rel="noopener noreferrer">
+              <img :src="quickIcon(index)" alt=""><span>{{ link.name }}</span>
             </a>
+            <router-link v-else :to="link.href"><img :src="quickIcon(index)" alt=""><span>{{ link.name }}</span></router-link>
           </template>
         </aside>
       </section>
@@ -146,9 +115,7 @@ onMounted(async () => {
         <div class="home-calendar" aria-label="招聘日历">
           <div class="calendar-selects"><span>{{ calendar.year }}年</span><span>{{ calendar.month }}月</span></div>
           <div class="calendar-week"><span v-for="name in ['一','二','三','四','五','六','日']" :key="name">{{ name }}</span></div>
-          <div class="calendar-days">
-            <span v-for="(day, index) in calendar.cells" :key="index" :class="{ today: day === calendar.today, empty: day == null }">{{ day || '' }}</span>
-          </div>
+          <div class="calendar-days"><span v-for="(day, index) in calendar.cells" :key="index" :class="{ today: day === calendar.today, empty: day == null }">{{ day || '' }}</span></div>
         </div>
 
         <section class="home-panel employment-panel news-column">
@@ -165,40 +132,27 @@ onMounted(async () => {
 
         <aside class="service-panel">
           <h2>快速导航</h2>
-          <p class="service-phone"><img :src="phoneIcon" alt="">咨询电话：<strong>0431-84657570</strong></p>
+          <p class="service-phone"><img :src="phoneIcon" alt="">咨询电话：<strong>{{ contactPhone }}</strong></p>
           <div class="service-shortcuts">
-            <router-link v-for="item in guideItems" :key="item.name" :to="item.to">
-              <img :src="item.icon" alt="">
-              <span>{{ item.name }}</span>
-            </router-link>
-            <template v-for="item in serviceItems" :key="item.id">
-              <a v-if="item.external" :href="item.href" :target="item.newWindow ? '_blank' : undefined" rel="noopener noreferrer"><span>{{ item.name }}</span></a>
-              <router-link v-else :to="item.href"><span>{{ item.name }}</span></router-link>
+            <template v-for="(item, index) in quickItems" :key="item.id">
+              <a v-if="item.external" :href="item.href" :target="item.newWindow ? '_blank' : undefined" rel="noopener noreferrer"><img :src="guideIcon(index)" alt=""><span>{{ item.name }}</span></a>
+              <router-link v-else :to="item.href"><img :src="guideIcon(index)" alt=""><span>{{ item.name }}</span></router-link>
             </template>
           </div>
         </aside>
       </section>
 
-      <a class="home-promo-banner" href="https://24365.jl.smartedu.cn/" target="_blank" rel="noopener noreferrer">
-        <img :src="promoBanner" alt="吉林省高校毕业生招聘活动">
+      <a v-if="promo" class="home-promo-banner" :href="promo.url || '#'" :target="newWindow(promo.openMode, promo.url) ? '_blank' : undefined" rel="noopener noreferrer">
+        <img :src="promo.imagePath || ''" :alt="promo.title">
       </a>
 
-      <section class="home-section original-section latest-recruitment">
-        <header class="section-title"><h2>最新招聘</h2></header>
-        <div class="external-placeholder iframe-placeholder"><span>慧就业招聘信息区域</span></div>
-      </section>
+      <section class="home-section original-section latest-recruitment"><header class="section-title"><h2>最新招聘</h2></header><div class="external-placeholder iframe-placeholder"><span>慧就业招聘信息区域</span></div></section>
 
       <section class="home-recruitment-row">
         <div class="external-placeholder recruitment-stream"><span>招聘与宣讲内容区域</span></div>
         <section class="home-panel recruitment-panel news-column">
           <header><h2>招聘公告</h2><router-link to="/column/recruitment-announcement">更多 &gt;</router-link></header>
-          <ul>
-            <li v-for="article in recruitmentArticles" :key="article.id">
-              <a :data-testid="`recruitment-external-${article.id}`" :href="article.externalUrl!" target="_blank" rel="noopener noreferrer">{{ article.title }}</a>
-              <time v-if="article.publishDate">{{ article.publishDate }}</time>
-            </li>
-            <li v-if="!recruitmentArticles.length" class="empty-item">暂无已发布内容</li>
-          </ul>
+          <ul><li v-for="article in recruitmentArticles" :key="article.id"><a :data-testid="`recruitment-external-${article.id}`" :href="article.externalUrl!" target="_blank" rel="noopener noreferrer">{{ article.title }}</a><time v-if="article.publishDate">{{ article.publishDate }}</time></li><li v-if="!recruitmentArticles.length" class="empty-item">暂无已发布内容</li></ul>
         </section>
       </section>
 
@@ -213,11 +167,9 @@ onMounted(async () => {
       <section class="home-section site-navigation">
         <header class="section-title"><h2>网站导航</h2></header>
         <div class="site-navigation-card">
-          <div class="site-navigation-tabs" role="tablist">
-            <button v-for="(group, index) in siteGroups" :key="group.name" type="button" :class="{ active: activeSiteGroup === index }" @click="activeSiteGroup = index">{{ group.name }}</button>
-          </div>
+          <div class="site-navigation-tabs" role="tablist"><button v-for="(group, index) in siteGroups" :key="group.name" type="button" :class="{ active: activeSiteGroup === index }" @click="activeSiteGroup = index">{{ group.name }}</button></div>
           <div v-if="siteGroups[activeSiteGroup]" class="site-link-group">
-            <a v-for="link in siteGroups[activeSiteGroup].links" :key="link.name" :href="link.url" :target="link.url.startsWith('http') ? '_blank' : undefined" rel="noopener noreferrer">{{ link.name }}</a>
+            <a v-for="link in siteGroups[activeSiteGroup].links" :key="link.id" :href="link.url || '#'" :target="newWindow(link.openMode, link.url) ? '_blank' : undefined" rel="noopener noreferrer">{{ link.title }}</a>
             <span v-if="!siteGroups[activeSiteGroup].links.length" class="empty-item">相关链接将在后续内容整理中补充</span>
           </div>
         </div>

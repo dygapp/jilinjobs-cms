@@ -4,7 +4,9 @@ const items = [
   { to: '/columns', label: '栏目管理', icon: '栏' },
   { to: '/navigation', label: '导航管理', icon: '导' },
   { to: '/pages', label: '固定页面', icon: '页' },
-  { to: '/site-config', label: '网站配置', icon: '配' },
+  { to: '/lists', label: '列表管理', icon: '列' },
+  { to: '/advertisements', label: '广告管理', icon: '广' },
+  { to: '/site-config', label: '网站属性', icon: '属' },
   { to: '/static-resources', label: '静态资源', icon: '资' },
 ]
 </script>
@@ -28,7 +30,7 @@ const items = [
       <header class="admin-topbar">
         <div>
           <strong>内容管理后台</strong>
-          <span>公开站与管理端已独立构建</span>
+          <span>通用 CMS 模型与公开站独立构建</span>
         </div>
       </header>
       <router-view />

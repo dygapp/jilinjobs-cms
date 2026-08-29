@@ -1,107 +1,20 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-import { ElMessage } from 'element-plus'
-import { listSiteConfig, updateSiteConfig, type SiteConfigItem } from '../../api/siteConfig'
-
-const items = ref<SiteConfigItem[]>([])
-const loading = ref(false)
-const saving = ref('')
-const asConfig = (row: unknown) => row as SiteConfigItem
-
+import { onMounted, reactive, ref } from 'vue'
+import { ElMessage, ElMessageBox } from 'element-plus'
+import { createSiteConfig, deleteSiteConfig, listSiteConfig, updateSiteConfig, updateSiteConfigDefinition, type SiteConfigDraft, type SiteConfigItem, type SitePropertyType } from '../../api/siteConfig'
+const items=ref<SiteConfigItem[]>([]),loading=ref(false),saving=ref(''),dialog=ref(false),editingKey=ref<string|null>(null)
+const form=reactive<SiteConfigDraft>({key:'',name:'',groupCode:'GENERAL',value:'',valueType:'TEXT',description:'',sortOrder:0,required:false,system:false,enabled:true})
+const types:Array<{value:SitePropertyType;label:string}>=[{value:'TEXT',label:'文本'},{value:'RESOURCE_PATH',label:'静态资源路径'},{value:'JSON',label:'JSON'},{value:'URL',label:'URL'},{value:'BOOLEAN',label:'布尔值'}]
+const asConfig=(row:unknown)=>row as SiteConfigItem
 onMounted(refresh)
-
-async function refresh() {
-  loading.value = true
-  try {
-    items.value = await listSiteConfig()
-  } catch (error) {
-    ElMessage.error(message(error))
-  } finally {
-    loading.value = false
-  }
-}
-
-async function save(item: SiteConfigItem) {
-  if (item.valueType === 'JSON') {
-    try {
-      const parsed = JSON.parse(item.value)
-      if (parsed == null || (typeof parsed !== 'object')) throw new Error('root')
-    } catch {
-      ElMessage.warning('JSON 配置格式不正确，请修正后再保存')
-      return
-    }
-  }
-  if (item.valueType === 'RESOURCE_PATH' && item.value.trim() && !item.value.trim().startsWith('/static/')) {
-    ElMessage.warning('静态资源配置必须使用 /static/ 路径')
-    return
-  }
-  saving.value = item.key
-  try {
-    await updateSiteConfig(item.key, item.value)
-    ElMessage.success('网站配置已保存')
-  } catch (error) {
-    ElMessage.error(message(error))
-  } finally {
-    saving.value = ''
-  }
-}
-
-function formatJson(item: SiteConfigItem) {
-  try {
-    item.value = JSON.stringify(JSON.parse(item.value), null, 2)
-  } catch {
-    ElMessage.warning('当前内容不是合法 JSON')
-  }
-}
-
-function typeName(type: string) {
-  if (type === 'JSON') return '结构化 JSON'
-  if (type === 'RESOURCE_PATH') return '静态资源路径'
-  return '文本'
-}
-
-function message(error: unknown) {
-  return error instanceof Error ? error.message : '操作失败'
-}
+async function refresh(){loading.value=true;try{items.value=await listSiteConfig()}catch(e){ElMessage.error(msg(e))}finally{loading.value=false}}
+function add(){editingKey.value=null;Object.assign(form,{key:'',name:'',groupCode:'GENERAL',value:'',valueType:'TEXT',description:'',sortOrder:0,required:false,system:false,enabled:true});dialog.value=true}
+function edit(row:SiteConfigItem){editingKey.value=row.key;Object.assign(form,{key:row.key,name:row.name,groupCode:row.groupCode,value:row.value,valueType:row.valueType,description:row.description,sortOrder:row.sortOrder,required:row.required,system:row.system,enabled:row.enabled});dialog.value=true}
+async function saveDefinition(){if(!validateValue(form.valueType,form.value))return;saving.value=form.key||'new';try{editingKey.value?await updateSiteConfigDefinition(editingKey.value,{...form}):await createSiteConfig({...form});dialog.value=false;await refresh();ElMessage.success('网站属性已保存')}catch(e){ElMessage.error(msg(e))}finally{saving.value=''}}
+async function saveValue(row:SiteConfigItem){if(!validateValue(row.valueType,row.value))return;saving.value=row.key;try{await updateSiteConfig(row.key,row.value);ElMessage.success('属性值已保存')}catch(e){ElMessage.error(msg(e))}finally{saving.value=''}}
+async function remove(row:SiteConfigItem){try{await ElMessageBox.confirm(`确定删除网站属性“${row.name}（${row.key}）”吗？`,'删除网站属性',{type:'warning'});await deleteSiteConfig(row.key);await refresh()}catch(e){if(e!=='cancel'&&e!=='close')ElMessage.error(msg(e))}}
+function validateValue(type:SitePropertyType,value:string){const v=value.trim();if(type==='JSON'&&v){try{const parsed=JSON.parse(v);if(parsed==null||typeof parsed!=='object')throw new Error()}catch{ElMessage.warning('JSON 属性格式不正确，请修正后再保存');return false}}if(type==='RESOURCE_PATH'&&v&&!v.startsWith('/static/')){ElMessage.warning('静态资源属性必须使用 /static/ 路径');return false}if(type==='BOOLEAN'&&v&&!['true','false'].includes(v.toLowerCase())){ElMessage.warning('布尔属性必须填写 true 或 false');return false}return true}
+function typeName(type:SitePropertyType){return types.find(i=>i.value===type)?.label||type}
+const msg=(e:unknown)=>e instanceof Error?e.message:'操作失败'
 </script>
-
-<template>
-  <main class="admin-shell">
-    <header class="page-header">
-      <div>
-        <p class="eyebrow">站点级配置</p>
-        <h1>网站配置管理</h1>
-        <p class="subtitle">只维护系统预定义的网站公共配置；JSON 与静态资源路径会在前后端双重校验。</p>
-      </div>
-    </header>
-
-    <el-alert title="这些配置会直接影响公开站。静态资源路径使用 /static/ 开头；JSON 保存前必须通过真实语法解析。" type="info" :closable="false" show-icon />
-
-    <el-card shadow="never" style="margin-top:16px">
-      <el-table v-loading="loading" :data="items" row-key="key" data-testid="site-config-table">
-        <el-table-column prop="description" label="配置项" min-width="190" />
-        <el-table-column prop="key" label="Key" min-width="220" />
-        <el-table-column label="类型" width="130">
-          <template #default="scope"><span class="config-type">{{ typeName(scope.row.valueType) }}</span></template>
-        </el-table-column>
-        <el-table-column label="配置值" min-width="380">
-          <template #default="scope">
-            <el-input
-              v-model="scope.row.value"
-              :data-testid="`site-config-${scope.row.key}`"
-              :type="scope.row.valueType === 'JSON' ? 'textarea' : 'text'"
-              :rows="scope.row.valueType === 'JSON' ? 5 : undefined"
-              :placeholder="scope.row.valueType === 'RESOURCE_PATH' ? '/static/...' : '请输入配置值'"
-            />
-            <el-button v-if="scope.row.valueType === 'JSON'" link type="primary" style="margin-top:6px" @click="formatJson(asConfig(scope.row))">格式化 JSON</el-button>
-          </template>
-        </el-table-column>
-        <el-table-column label="操作" width="110" fixed="right">
-          <template #default="scope">
-            <el-button :data-testid="`save-site-config-${scope.row.key}`" type="primary" link :loading="saving === scope.row.key" @click="save(asConfig(scope.row))">保存</el-button>
-          </template>
-        </el-table-column>
-      </el-table>
-    </el-card>
-  </main>
-</template>
+<template><main class="admin-shell"><header class="page-header"><div><p class="eyebrow">站点级公共属性</p><h1>网站属性</h1><p class="subtitle">维护真正的站点属性；轮播、导航和广告使用各自通用模型，不再塞入 JSON 配置。</p></div><el-button data-testid="add-site-property" type="primary" @click="add">新增属性</el-button></header><el-alert title="当前阶段未接入认证和权限，属性定义增删改直接开放；未来权限差异只作为规划。" type="info" :closable="false" show-icon/><el-card shadow="never" style="margin-top:16px"><el-table v-loading="loading" :data="items" row-key="key" data-testid="site-config-table"><el-table-column prop="name" label="属性名称" min-width="150"/><el-table-column prop="key" label="Key" min-width="190"/><el-table-column prop="groupCode" label="分组" width="120"/><el-table-column label="类型" width="120"><template #default="s">{{typeName(asConfig(s.row).valueType)}}</template></el-table-column><el-table-column label="属性值" min-width="320"><template #default="s"><el-switch v-if="asConfig(s.row).valueType==='BOOLEAN'" :model-value="asConfig(s.row).value.toLowerCase()==='true'" @change="v=>asConfig(s.row).value=v===true?'true':'false'"/><el-input v-else v-model="asConfig(s.row).value" :data-testid="`site-config-${asConfig(s.row).key}`" :type="asConfig(s.row).valueType==='JSON'?'textarea':'text'" :rows="asConfig(s.row).valueType==='JSON'?4:undefined"/></template></el-table-column><el-table-column label="操作" width="190" fixed="right"><template #default="s"><el-button :data-testid="`save-site-config-${asConfig(s.row).key}`" link type="primary" :loading="saving===asConfig(s.row).key" @click="saveValue(asConfig(s.row))">保存值</el-button><el-button link type="primary" @click="edit(asConfig(s.row))">定义</el-button><el-button link type="danger" @click="remove(asConfig(s.row))">删除</el-button></template></el-table-column></el-table></el-card><el-dialog v-model="dialog" :title="editingKey?'编辑网站属性':'新增网站属性'" width="620px"><el-form label-width="100px"><el-form-item label="Key"><el-input v-model="form.key" :disabled="Boolean(editingKey)" placeholder="例如 SUPPORT_EMAIL"/></el-form-item><el-form-item label="名称"><el-input v-model="form.name"/></el-form-item><el-form-item label="分组"><el-input v-model="form.groupCode"/></el-form-item><el-form-item label="类型"><el-select v-model="form.valueType" style="width:100%"><el-option v-for="item in types" :key="item.value" :label="item.label" :value="item.value"/></el-select></el-form-item><el-form-item label="初始值"><el-input v-model="form.value" :type="form.valueType==='JSON'?'textarea':'text'" :rows="5"/></el-form-item><el-form-item label="说明"><el-input v-model="form.description" type="textarea"/></el-form-item><el-form-item label="排序"><el-input-number v-model="form.sortOrder"/></el-form-item><el-form-item label="必填"><el-switch v-model="form.required"/></el-form-item><el-form-item label="启用"><el-switch v-model="form.enabled"/></el-form-item></el-form><template #footer><el-button @click="dialog=false">取消</el-button><el-button type="primary" :loading="Boolean(saving)" @click="saveDefinition">保存</el-button></template></el-dialog></main></template>
