@@ -135,37 +135,63 @@ test('Feature-wide closure：招聘公告外链文章只保存基础信息并直
   await expect(columnLink).toHaveAttribute('target', '_blank')
 })
 
-test('Feature-wide closure：SERVICE 与 SITE 数据进入原站快速导航和网站导航区域', async ({ page, request }, testInfo) => {
+test('Feature-wide closure：HOME_QUICK 与通用列表进入原站快速导航和网站导航区域', async ({ page, request }, testInfo) => {
   const suffix = `${Date.now()}-${testInfo.retry}`
-  const serviceFirst = `服务入口A-${suffix}`
-  const serviceSecond = `服务入口B-${suffix}`
-  const siteCategory = `省级平台-${suffix}`
+  const quickFirst = `快速入口A-${suffix}`
+  const quickSecond = `快速入口B-${suffix}`
   const siteName = `站点导航-${suffix}`
 
   for (const row of [
-    { name: serviceSecond, sortOrder: 20, targetUrl: 'https://example.com/service-b' },
-    { name: serviceFirst, sortOrder: 10, targetUrl: 'https://example.com/service-a' },
+    { name: quickSecond, sortOrder: 20, targetUrl: 'https://example.com/service-b' },
+    { name: quickFirst, sortOrder: 10, targetUrl: 'https://example.com/service-a' },
   ]) {
     const response = await request.post('/api/admin/navigations', {
-      data: { name: row.name, position: 'SERVICE', category: null, targetType: 'LINK', targetColumnId: null, targetUrl: row.targetUrl, sortOrder: row.sortOrder, enabled: true },
+      data: {
+        parentId: null,
+        name: row.name,
+        position: 'HOME_QUICK',
+        category: null,
+        targetType: 'LINK',
+        targetColumnId: null,
+        targetPageId: null,
+        targetUrl: row.targetUrl,
+        openMode: 'DEFAULT',
+        sortOrder: row.sortOrder,
+        enabled: true,
+      },
     })
     expect(response.ok()).toBeTruthy()
   }
 
-  const siteResponse = await request.post('/api/admin/navigations', {
-    data: { name: siteName, position: 'SITE', category: siteCategory, targetType: 'LINK', targetColumnId: null, targetUrl: 'https://example.com/site', sortOrder: 10, enabled: true },
+  const listsResponse = await request.get('/api/admin/lists')
+  expect(listsResponse.ok()).toBeTruthy()
+  const lists = await listsResponse.json() as Array<{ id: number; code: string; name: string }>
+  const siteList = lists.find(item => item.code === 'SITE_RELATED')
+  expect(siteList, '缺少 SITE_RELATED 通用列表基线').toBeTruthy()
+
+  const siteItemResponse = await request.post(`/api/admin/lists/${siteList!.id}/items`, {
+    data: {
+      title: siteName,
+      subtitle: null,
+      url: 'https://example.com/site',
+      imagePath: null,
+      openMode: 'DEFAULT',
+      sortOrder: 999,
+      enabled: true,
+      extraJson: null,
+    },
   })
-  expect(siteResponse.ok()).toBeTruthy()
+  expect(siteItemResponse.ok()).toBeTruthy()
 
   await page.goto('/')
   const serviceSection = page.locator('.service-panel')
   await expect(serviceSection.getByRole('heading', { name: '快速导航', exact: true })).toBeVisible()
-  await expect(serviceSection.getByRole('link', { name: serviceFirst, exact: true })).toHaveAttribute('href', 'https://example.com/service-a')
-  await expect(serviceSection.getByRole('link', { name: serviceSecond, exact: true })).toHaveAttribute('href', 'https://example.com/service-b')
+  await expect(serviceSection.getByRole('link', { name: quickFirst, exact: true })).toHaveAttribute('href', 'https://example.com/service-a')
+  await expect(serviceSection.getByRole('link', { name: quickSecond, exact: true })).toHaveAttribute('href', 'https://example.com/service-b')
 
   const siteSection = page.locator('.site-navigation')
   await expect(siteSection.getByRole('heading', { name: '网站导航', exact: true })).toBeVisible()
-  await siteSection.getByRole('button', { name: siteCategory, exact: true }).click()
+  await expect(siteSection.getByRole('button', { name: siteList!.name, exact: true })).toHaveClass(/active/)
   await expect(siteSection.getByRole('link', { name: siteName, exact: true })).toHaveAttribute('href', 'https://example.com/site')
 })
 

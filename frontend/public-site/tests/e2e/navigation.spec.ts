@@ -21,21 +21,25 @@ test('导航可维护并只把启用条目暴露为正确公开入口', async ({
   await expect(page.getByRole('heading', { name: '导航管理' })).toBeVisible()
 
   await page.getByTestId('add-navigation').click()
-  await page.getByPlaceholder('请输入导航名称').fill(internalName)
+  const dialog = page.getByRole('dialog', { name: '新增导航' })
+  await dialog.locator('.el-form-item').filter({ hasText: '导航名称' }).locator('input').fill(internalName)
   await page.getByTestId('navigation-column-select').click()
   await page.getByRole('option', { name: columnName, exact: true }).click()
   await page.getByTestId('save-navigation').click()
-  await expect(page.getByRole('dialog', { name: '新增导航' })).toBeHidden()
+  await expect(dialog).toBeHidden()
   await expect(page.getByRole('cell', { name: internalName, exact: true })).toBeVisible()
 
   const externalResponse = await request.post('/api/admin/navigations', {
     data: {
+      parentId: null,
       name: externalName,
       position: 'MAIN',
       category: null,
       targetType: 'LINK',
       targetColumnId: null,
+      targetPageId: null,
       targetUrl: 'https://example.com/service',
+      openMode: 'DEFAULT',
       sortOrder: 20,
       enabled: true,
     },
@@ -60,10 +64,10 @@ test('导航可维护并只把启用条目暴露为正确公开入口', async ({
   await expect(page.getByRole('heading', { name: columnName, exact: true })).toBeVisible()
 
   await page.goto('/admin/navigation')
-  const switchRoot = page.getByTestId(`navigation-enabled-${internal!.id}`)
-  const switchInput = switchRoot.getByRole('switch')
+  const row = page.getByTestId('navigation-tree-table').getByRole('row').filter({ hasText: internalName })
+  const switchInput = row.getByRole('switch')
   await expect(switchInput).toBeChecked()
-  await switchRoot.click()
+  await row.locator('.el-switch').click()
   await expect(switchInput).not.toBeChecked()
 
   await page.goto('/')
