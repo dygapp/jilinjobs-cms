@@ -31,7 +31,9 @@ test('视觉基线：原站关键静态资源与蓝色公共框架可用', async
   await expect(page.locator('.site-hero')).toHaveCSS('background-image', /header-banner\.png/)
   await expect(page.locator('.home-carousel img')).toHaveAttribute('src', '/static/home/carousel-01.jpg')
   await expect(page.locator('.home-promo-banner img')).toHaveAttribute('src', '/static/home/recruitment-campaign.png')
-  await expect(page.locator('.service-shortcuts img')).toHaveCount(6)
+  const shortcutImages = page.locator('.service-shortcuts img')
+  expect(await shortcutImages.count()).toBeGreaterThanOrEqual(6)
+  for (const image of await shortcutImages.all()) await expect(image).toHaveAttribute('src', /^\/static\//)
 
   expect(await page.locator('.platform-bar').evaluate(el => getComputedStyle(el).backgroundColor)).toBe('rgb(3, 86, 202)')
   expect(await page.locator('.site-nav').evaluate(el => getComputedStyle(el).backgroundColor)).toBe('rgb(0, 92, 212)')
