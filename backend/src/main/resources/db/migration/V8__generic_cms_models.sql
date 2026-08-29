@@ -5,14 +5,14 @@ CREATE TABLE cms_navigation_location (
     description VARCHAR(255) NOT NULL DEFAULT '',
     sort_order INT NOT NULL DEFAULT 0,
     enabled TINYINT(1) NOT NULL DEFAULT 1,
-    system TINYINT(1) NOT NULL DEFAULT 0,
+    system_flag TINYINT(1) NOT NULL DEFAULT 0,
     created_at TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     updated_at TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
     PRIMARY KEY (id),
     CONSTRAINT uk_cms_navigation_location_code UNIQUE (code)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO cms_navigation_location(code,name,description,sort_order,enabled,system) VALUES
+INSERT INTO cms_navigation_location(code,name,description,sort_order,enabled,system_flag) VALUES
 ('MAIN','主导航','网站 Header 主导航及多级菜单',10,1,1),
 ('HOME_SHORTCUT','首页快捷入口','首页首屏右侧蓝色快捷入口',20,1,1),
 ('HOME_QUICK','首页快速导航','首页业务指南等快速导航入口',30,1,1),
@@ -27,16 +27,16 @@ ALTER TABLE cms_site_config
     ADD COLUMN group_code VARCHAR(50) NOT NULL DEFAULT 'GENERAL' AFTER property_name,
     ADD COLUMN sort_order INT NOT NULL DEFAULT 0 AFTER description,
     ADD COLUMN required TINYINT(1) NOT NULL DEFAULT 0 AFTER sort_order,
-    ADD COLUMN system TINYINT(1) NOT NULL DEFAULT 0 AFTER required,
-    ADD COLUMN enabled TINYINT(1) NOT NULL DEFAULT 1 AFTER system;
+    ADD COLUMN system_flag TINYINT(1) NOT NULL DEFAULT 0 AFTER required,
+    ADD COLUMN enabled TINYINT(1) NOT NULL DEFAULT 1 AFTER system_flag;
 
 UPDATE cms_site_config SET property_name=description WHERE property_name='';
 UPDATE cms_site_config SET group_code='BASIC' WHERE config_key IN ('SITE_NAME','SITE_SHORT_NAME');
 UPDATE cms_site_config SET group_code='BRAND' WHERE config_key IN ('LOGO_PATH','PLATFORM_LOGO_ICON_PATH','PLATFORM_LOGO_TEXT_PATH','HEADER_BANNER_PATH');
 UPDATE cms_site_config SET group_code='CONTACT' WHERE config_key IN ('CONTACT_PHONE','CONTACT_ADDRESS','OFFICE_HOURS');
 UPDATE cms_site_config SET group_code='FOOTER' WHERE config_key IN ('ICP_NUMBER','FOOTER_COPYRIGHT');
-UPDATE cms_site_config SET system=1, sort_order=10 WHERE config_key='SITE_NAME';
-UPDATE cms_site_config SET system=1, sort_order=20 WHERE config_key='SITE_SHORT_NAME';
+UPDATE cms_site_config SET system_flag=1, sort_order=10 WHERE config_key='SITE_NAME';
+UPDATE cms_site_config SET system_flag=1, sort_order=20 WHERE config_key='SITE_SHORT_NAME';
 
 CREATE TABLE cms_list (
     id BIGINT NOT NULL AUTO_INCREMENT,
@@ -47,7 +47,7 @@ CREATE TABLE cms_list (
     description VARCHAR(255) NOT NULL DEFAULT '',
     sort_order INT NOT NULL DEFAULT 0,
     enabled TINYINT(1) NOT NULL DEFAULT 1,
-    system TINYINT(1) NOT NULL DEFAULT 0,
+    system_flag TINYINT(1) NOT NULL DEFAULT 0,
     created_at TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     updated_at TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
     PRIMARY KEY (id),
@@ -79,7 +79,7 @@ CREATE TABLE cms_ad_slot (
     description VARCHAR(255) NOT NULL DEFAULT '',
     sort_order INT NOT NULL DEFAULT 0,
     enabled TINYINT(1) NOT NULL DEFAULT 1,
-    system TINYINT(1) NOT NULL DEFAULT 0,
+    system_flag TINYINT(1) NOT NULL DEFAULT 0,
     created_at TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     updated_at TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
     PRIMARY KEY (id),
@@ -116,7 +116,7 @@ SELECT NULL,p.name,'HOME_QUICK',NULL,'PAGE',NULL,p.id,NULL,'DEFAULT',p.sort_orde
 FROM cms_page p JOIN cms_page_group g ON g.id=p.group_id
 WHERE g.alias='guide';
 
-INSERT INTO cms_list(code,name,group_code,item_type,description,sort_order,enabled,system) VALUES
+INSERT INTO cms_list(code,name,group_code,item_type,description,sort_order,enabled,system_flag) VALUES
 ('HOME_CAROUSEL','首页轮播','HOME','IMAGE_LINK','首页首屏轮播内容',10,1,1),
 ('SITE_RELATED','相关网站服务','SITE_LINKS','LINK','网站导航：相关网站服务',10,1,1),
 ('SITE_REGIONAL_GRADUATES','各地毕业生','SITE_LINKS','LINK','网站导航：各地毕业生',20,1,1),
@@ -132,7 +132,7 @@ INSERT INTO cms_list_item(list_id,title,url,open_mode,sort_order,enabled) VALUES
 ((SELECT id FROM cms_list WHERE code='SITE_RELATED'),'全国征兵网','https://www.gfbzb.gov.cn/','DEFAULT',40,1),
 ((SELECT id FROM cms_list WHERE code='SITE_RELATED'),'吉林省教育厅','http://jyt.jl.gov.cn/','DEFAULT',50,1);
 
-INSERT INTO cms_ad_slot(code,name,description,sort_order,enabled,system)
+INSERT INTO cms_ad_slot(code,name,description,sort_order,enabled,system_flag)
 VALUES ('HOME_RECRUITMENT_PROMO','首页招聘活动广告位','首页招聘活动横幅区域',10,1,1);
 INSERT INTO cms_advertisement(slot_id,title,image_path,url,open_mode,sort_order,enabled)
 VALUES ((SELECT id FROM cms_ad_slot WHERE code='HOME_RECRUITMENT_PROMO'),'吉林省高校毕业生招聘活动','/static/home/recruitment-campaign.png','https://24365.jl.smartedu.cn/','DEFAULT',10,1);
