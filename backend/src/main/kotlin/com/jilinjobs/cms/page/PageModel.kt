@@ -2,7 +2,7 @@ package com.jilinjobs.cms.page
 
 enum class PageRenderMode { RICH_TEXT, EMBED_PLACEHOLDER, INTERNAL_STATIC }
 
-data class CmsPageGroup(val id: Long, val alias: String, val name: String, val sortOrder: Int, val enabled: Boolean)
+data class CmsPageGroup(val id: Long, val alias: String, val name: String, val sortOrder: Int, val enabled: Boolean, val preset: Boolean = false)
 data class PageGroupDraft(val alias: String, val name: String, val sortOrder: Int = 0, val enabled: Boolean = true)
 
 data class CmsPage(
@@ -15,6 +15,7 @@ data class CmsPage(
     val embedUrl: String?,
     val sortOrder: Int,
     val enabled: Boolean,
+    val preset: Boolean = false,
 )
 
 data class PageDraft(
