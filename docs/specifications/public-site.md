@@ -23,7 +23,8 @@
 - 主导航：`MAIN` Navigation；
 - 首屏右侧五个蓝色入口：`HOME_SHORTCUT` Navigation，图标来自导航条目 `iconPath`；
 - 业务指南快速入口：`HOME_QUICK` Navigation，图标来自导航条目 `iconPath`；
-- 轮播：`HOME_CAROUSEL` CmsList；
+- 轮播内容：`HOME_CAROUSEL` CmsList；
+- 轮播自动切换间隔：`HOME_CAROUSEL_INTERVAL_SECONDS` SiteProperty；
 - 通知公告 / 就业动态 / 招聘公告：Column + Article；
 - 招聘活动横幅：`HOME_RECRUITMENT_PROMO` 展示位（技术实现仍为 AdvertisementSlot）；
 - 网站导航 / 友情链接：`SITE_LINKS` 分组 CmsList；
@@ -34,9 +35,15 @@
 
 ## 4. 数据与展示职责
 
-CMS 提供内容数据属性，公开站页面设计决定如何展示。通用列表不向公开站下发展示模式配置。
+CMS 提供内容数据属性，公开站页面设计决定如何展示。Column `coverPolicy`、CmsList `imagePolicy` 都是数据契约，不向公开站下发展示模式配置。
 
-首页 `HOME_CAROUSEL` 按页面契约消费具有 `imagePath` 的列表项；URL 存在时图片可点击，URL 为空时仅显示图片。友情链接当前页面可以只显示标题文字；未来页面若改为 Logo 或 Logo+名称，可直接消费列表项可选 `imagePath`，无需修改通用列表模型。
+首页 `HOME_CAROUSEL` 基线 `imagePolicy=REQUIRED`，公开站只消费具有有效 `imagePath` 的启用列表项。只有一张有效图片时静态展示；存在两张及以上时按列表顺序自动切换。切换间隔读取 `HOME_CAROUSEL_INTERVAL_SECONDS`，正常配置必须是大于 0 的整数秒；公开端仍保留安全 fallback，避免异常历史数据阻断首页。
+
+轮播项 URL 存在时图片可点击，URL 为空时仅显示图片。标题当前可作为 caption/alt 数据使用；是否显示 caption、指示器、切换动画、图片尺寸等属于页面工程设计，不由 CmsList imagePolicy 或 SiteProperty 控制。
+
+当前 `SITE_LINKS` 相关列表基线 `imagePolicy=NONE`，页面按 title + URL 输出文字链接。未来若视觉设计确认需要 Logo，应先把对应列表数据策略调整为 `OPTIONAL / REQUIRED` 并补充数据，再由公开页面设计消费 `imagePath`；不得通过新增 `displayMode` 控制布局。
+
+Public Article Summary 可以包含可选 `coverResourceId`，为将来的带图栏目模板提供数据；当前普通栏目列表是否展示封面仍由页面基线决定。栏目 `coverPolicy` 不直接决定 DOM 布局。
 
 首页快捷入口和快速导航直接使用 Navigation `iconPath`；不得使用数组下标拼接 `top-nav-01`、`guide-01` 等路径。
 
@@ -65,9 +72,12 @@ CMS 提供内容数据属性，公开站页面设计决定如何展示。通用�
 - 首页不再读取 `SERVICE_LINKS`、`HOME_BANNERS`、`SITE_LINK_GROUPS`、`HOME_PROMO_BANNER_PATH`、`HOME_NCSS_LOGO_PATH` 作为运行时内容源；
 - 首页五个蓝色入口来自 `HOME_SHORTCUT`，图标来自导航条目而非排序下标；
 - 业务指南快捷入口来自 `HOME_QUICK`，图标来自导航条目；
-- 轮播来自通用列表，URL 可选；
+- `HOME_CAROUSEL` 使用图片必填数据契约；单图静态展示，多图按列表顺序自动切换；
+- 自动切换间隔来自正整数 SiteProperty `HOME_CAROUSEL_INTERVAL_SECONDS`；
+- 轮播项 URL 可选，没有 URL 时不产生伪链接；
+- `SITE_LINKS` 当前以不使用图片的文字链接基线输出，未来 Logo 需求不引入 displayMode；
+- Public Article Summary 能提供可选封面引用，但页面是否展示由模板设计决定；
 - 招聘活动横幅来自宣传展示位；
-- 网站导航/友情链接来自通用列表，页面可按设计选择使用标题或可选 Logo；
 - 联系电话等站点属性来自 SiteProperty；
 - NCSS 固定集成正常；
 - 既有公开 URL、文章/栏目/单页行为、视觉主基线无回归。
