@@ -1,6 +1,8 @@
 spring:
   application:
     name: jilinjobs-cms
+  config:
+    import: optional:classpath:cms-metadata.yml
   datasource:
     url: ${DB_URL:jdbc:mysql://localhost:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true}
     username: ${DB_USERNAME:root}
