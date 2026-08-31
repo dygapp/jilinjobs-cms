@@ -10,6 +10,7 @@ data class CmsColumn(
     val enabled: Boolean,
     val alias: String = "",
     val coverPolicy: ContentImagePolicy = ContentImagePolicy.OPTIONAL,
+    val preset: Boolean = false,
 )
 
 data class ColumnDraft(
