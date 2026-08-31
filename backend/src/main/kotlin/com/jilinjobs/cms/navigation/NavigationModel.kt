@@ -17,6 +17,7 @@ data class CmsNavigation(
     val targetPageId: Long? = null,
     val openMode: NavigationOpenMode = NavigationOpenMode.DEFAULT,
     val iconPath: String? = null,
+    val preset: Boolean = false,
 )
 
 data class NavigationDraft(
