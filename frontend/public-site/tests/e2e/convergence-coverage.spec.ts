@@ -209,7 +209,7 @@ test('Feature-wide closure：首页举报电话及邮箱使用站内固定页面
   await expect(body).toContainText('xxb@jilinjobs.cn')
 })
 
-test('Feature-wide closure：页脚备案图标、非链接官方标识、当年版权与 favicon 可用', async ({ page, request }) => {
+test('Feature-wide closure：页脚备案图标、非链接官方标识、配置版权与 favicon 可用', async ({ page, request }) => {
   for (const resource of [
     '/static/footer/public-security-record.png',
     '/static/footer/public-institution.png',
@@ -221,6 +221,12 @@ test('Feature-wide closure：页脚备案图标、非链接官方标识、当年
     expect((await response.body()).length).toBeGreaterThan(100)
   }
 
+  const configResponse = await request.get('/api/public/site-config')
+  expect(configResponse.ok()).toBeTruthy()
+  const config = await configResponse.json() as Array<{ key: string; value: string }>
+  const copyright = config.find(item => item.key === 'FOOTER_COPYRIGHT')?.value
+  expect(copyright, '缺少 FOOTER_COPYRIGHT 网站属性').toBeTruthy()
+
   await page.goto('/')
   await expect(page.locator('link[rel="icon"]')).toHaveAttribute('href', '/static/brand/site-favicon.png')
   await expect(page.locator('.public-security-record img')).toHaveAttribute('src', '/static/footer/public-security-record.png')
@@ -229,7 +235,7 @@ test('Feature-wide closure：页脚备案图标、非链接官方标识、当年
   await expect(page.locator('.public-security-record')).toContainText('吉公网安备 22010702000243号')
   await expect(page.locator('.public-institution-badge')).not.toHaveAttribute('href')
   await expect(page.locator('.wechat-entry')).not.toHaveAttribute('href')
-  await expect(page.locator('.site-footer')).toContainText(`Copyright ${new Date().getFullYear()}`)
+  await expect(page.locator('.site-footer')).toContainText(copyright!)
 
   const footerLayout = await page.locator('.site-footer-layout').evaluate(el => getComputedStyle(el).display)
   expect(footerLayout).toBe('flex')
