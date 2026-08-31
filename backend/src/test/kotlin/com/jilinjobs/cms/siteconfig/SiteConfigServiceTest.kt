@@ -12,7 +12,7 @@ class SiteConfigServiceTest {
             record("CUSTOM_JSON", "JSON", "{}"),
             record("HEADER_BANNER_PATH", "RESOURCE_PATH", "/static/home/header-banner.png"),
         )
-        val service = SiteConfigService(mapper, ObjectMapper())
+        val service = service(mapper)
 
         val json = service.update("CUSTOM_JSON", "{\"enabled\":true}")
         val resource = service.update("HEADER_BANNER_PATH", "/static/home/new-header.png")
@@ -22,28 +22,60 @@ class SiteConfigServiceTest {
     }
 
     @Test
-    fun `creates custom property without compile-time key whitelist`() {
-        val service = SiteConfigService(FakeSiteConfigMapper(), ObjectMapper())
+    fun `creates custom property in metadata-defined group without compile-time key whitelist`() {
+        val service = service(FakeSiteConfigMapper())
         val created = service.create(SiteConfigDraft("SUPPORT_EMAIL", "支持邮箱", "CONTACT", "help@example.com", "TEXT"))
         assertEquals("SUPPORT_EMAIL", created.key)
         assertEquals("支持邮箱", created.name)
+        assertEquals("CONTACT", created.groupCode)
+    }
+
+    @Test
+    fun `rejects unknown property group`() {
+        val service = service(FakeSiteConfigMapper())
+        assertThrows(SiteConfigValidationException::class.java) {
+            service.create(SiteConfigDraft("UNKNOWN_GROUP_PROP", "未知分组", "UNKNOWN", "x", "TEXT"))
+        }
+    }
+
+    @Test
+    fun `exposes metadata-defined groups in configured order`() {
+        val groups = service(FakeSiteConfigMapper()).groups()
+        assertEquals(listOf("CONTACT", "GENERAL"), groups.map { it.code })
+        assertEquals(listOf("联系方式", "通用"), groups.map { it.name })
     }
 
     @Test
     fun `rejects malformed json and invalid resource paths`() {
         val mapper = FakeSiteConfigMapper(record("CUSTOM_JSON", "JSON", "{}"), record("LOGO_PATH", "RESOURCE_PATH", ""))
-        val service = SiteConfigService(mapper, ObjectMapper())
+        val service = service(mapper)
         assertThrows(SiteConfigValidationException::class.java) { service.update("CUSTOM_JSON", "[{not-json}]") }
         assertThrows(SiteConfigValidationException::class.java) { service.update("LOGO_PATH", "https://example.com/logo.png") }
     }
 
     @Test
-    fun `validates url and boolean property types`() {
-        val mapper = FakeSiteConfigMapper(record("SERVICE_URL", "URL", "/page/about"), record("FEATURE_ENABLED", "BOOLEAN", "true"))
-        val service = SiteConfigService(mapper, ObjectMapper())
+    fun `validates url boolean and integer property types`() {
+        val mapper = FakeSiteConfigMapper(
+            record("SERVICE_URL", "URL", "/page/about"),
+            record("FEATURE_ENABLED", "BOOLEAN", "true"),
+            record("CAROUSEL_INTERVAL", "INTEGER", "4"),
+        )
+        val service = service(mapper)
         assertEquals("https://example.com/path", service.update("SERVICE_URL", "https://example.com/path").value)
+        assertEquals("6", service.update("CAROUSEL_INTERVAL", "6").value)
         assertThrows(SiteConfigValidationException::class.java) { service.update("SERVICE_URL", "javascript:alert(1)") }
         assertThrows(SiteConfigValidationException::class.java) { service.update("FEATURE_ENABLED", "yes") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_INTERVAL", "4.5") }
+    }
+
+    private fun service(mapper: SiteConfigMapper): SiteConfigService {
+        val metadata = CmsMetadataProperties().apply {
+            sitePropertyGroups = linkedMapOf(
+                "GENERAL" to SitePropertyGroupMetadata("通用", 100),
+                "CONTACT" to SitePropertyGroupMetadata("联系方式", 40),
+            )
+        }
+        return SiteConfigService(mapper, ObjectMapper(), metadata)
     }
 
     private fun record(key: String, type: String, value: String) = SiteConfigRecord(
