@@ -28,13 +28,17 @@ UPDATE cms_column SET preset=1 WHERE alias IN (
     'typical','typical-grassroots','typical-startup','typical-military','recruitment-announcement'
 );
 
--- 单页分组与单页：保护站点规划中具有稳定公开 URL / Tab 语义的预置对象。
+-- 单页分组与单页：按独立页 / 分组上下文精确保护稳定公开 URL，避免同名 Alias 的运行期自定义页被误标记。
 UPDATE cms_page_group SET preset=1 WHERE alias IN ('guide','jobs');
-UPDATE cms_page SET preset=1 WHERE alias IN (
-    'about','budget','teacher-library','live-course','employment-report-contact',
-    'jypq','dagl','dygl','xlrz','contact','faq',
-    'positions','recruitment','jobfair','presentation','jilin'
-);
+UPDATE cms_page SET preset=1
+WHERE group_id IS NULL
+  AND alias IN ('about','budget','teacher-library','live-course','employment-report-contact');
+UPDATE cms_page SET preset=1
+WHERE group_id=(SELECT id FROM cms_page_group WHERE alias='guide' LIMIT 1)
+  AND alias IN ('jypq','dagl','dygl','xlrz','contact','faq');
+UPDATE cms_page SET preset=1
+WHERE group_id=(SELECT id FROM cms_page_group WHERE alias='jobs' LIMIT 1)
+  AND alias IN ('positions','recruitment','jobfair','presentation','jilin');
 
 -- 导航位置和已确认的预置导航条目。运行期新增导航保持 preset=0。
 UPDATE cms_navigation_location SET preset=1 WHERE code IN ('MAIN','HOME_SHORTCUT','HOME_QUICK');
