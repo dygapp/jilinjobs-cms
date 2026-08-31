@@ -40,7 +40,7 @@ interface AdvertisementMapper{
 
 @Service
 class AdvertisementService(private val mapper:AdvertisementMapper){
- private val openModes=setOf("DEFAULT","SAME_WINDOW","NEW_WINDOW")
+ private val openModes=setOf("DEFAULT","SAME_WINDOW","NEW_WINDOW","NO_LINK")
  @Transactional(readOnly=true) fun slots()=mapper.findSlots().map{it.model()}
  @Transactional(readOnly=true) fun ads(slotId:Long):List<Advertisement>{requireSlot(slotId);return mapper.findAds(slotId).map{it.model()}}
  @Transactional(readOnly=true) fun publicSlots()=mapper.findEnabledSlots().map{r->PublicAdvertisementSlot(requireNotNull(r.id),r.code,r.name,mapper.findActiveAds(requireNotNull(r.id)).map{it.model()})}
