@@ -6,18 +6,11 @@
 
 ## 2. 统一图片资源选择器
 
-新增可复用 `ImageResourcePicker`，作为所有 `/static/**` 图片属性的优先编辑方式。它负责：
+`ImageResourcePicker` 作为 `/static/**` 图片属性的优先编辑方式，负责当前图片预览、既有 StaticResource multipart 上传、稳定 Runtime 文件名、浏览 `/static/uploads/**` 共享图片库、导航语义候选和清除可选值。
 
-- 当前图片预览和路径展示；
-- 通过既有 StaticResource multipart API 上传；
-- 生成稳定、不依赖用户原文件名的运行时文件名；
-- 浏览 `/static/uploads/**` 共享 Runtime 图片库，允许跨 CMS 模块复用已经上传的图片；
-- 在导航图标等场景合并经过语义整理的内置候选；
-- 清除可选图片值。
+Backend 继续负责真实媒体校验。控件不自行删除旧资源。新文件仍只能上传到当前业务上下文约定目录；共享图片库只用于复用已有 Runtime 图片。
 
-Backend 继续负责真实媒体校验。控件不自行删除旧资源。新文件仍只能上传到当前业务上下文约定目录；“共享图片库”只用于复用已有 Runtime 图片，不改变上传目录治理。
-
-新增 `AdaptiveImagePreview` 作为预览层公共组件。默认普通图片使用白色背景；图标场景显式启用 adaptive 模式。adaptive 模式在浏览器端用小尺寸 Canvas 采样有效透明像素，按亮度分布选择深色、浅色或中性棋盘背景；采样失败或明暗混合时回退棋盘背景。深/浅背景在 hover 时切换到相反对比背景，棋盘背景 hover 时切换深色。该逻辑只影响 Admin DOM/CSS，不写入 CMS 数据、不修改图片文件，也不参与 Public Site 渲染。
+`AdaptiveImagePreview` 只在图标等显式场景启用自适应对比背景。该逻辑只影响 Admin DOM/CSS，不写入 CMS 数据、不修改图片文件，也不参与 Public Site 渲染。
 
 ## 3. 内容管理信息架构
 
@@ -28,57 +21,80 @@ Admin Shell 按业务职责分为四个无额外点击层级的导航分组：
 - 运营展示：宣传展示；
 - 站点设置：网站属性、静态资源。
 
-技术路由继续保持 `/articles`、`/pages`、`/lists`、`/columns`、`/navigation`、`/advertisements`、`/site-config`、`/static-resources`。产品界面使用“单页管理 / 单页 / 单页分组”，技术模型和 API 继续使用 `Page / PageGroup`。
+技术路由继续保持 `/articles`、`/pages`、`/lists`、`/columns`、`/navigation`、`/advertisements`、`/site-config`、`/static-resources`。不新增独立“系统设置”路由或菜单。
 
 对于“容器 → 成员”模型，页面优先采用左侧容器导航 + 右侧成员列表；栏目管理本身仍直接维护栏目树，不重复放置栏目导航树。
 
-## 4. 单页管理
+## 4. 文章与栏目
 
-`/pages` 同时加载 PageGroup 和 Page。左侧组织区域包含：
+`/articles` 同时加载 Article 和 Column。左侧把 flat columns 转换为层级树，父栏目筛选在前端收集全部后代 id；右侧文章列表继续叠加关键词、状态、文章类型筛选。TreeSelect 用同一栏目树数据生成。
 
-- 全部单页；
-- 独立单页，对应 `groupId = null`；
-- 当前所有 PageGroup，产品界面称“单页分组”。
+Column API Type 增加 `coverPolicy: 'NONE' | 'OPTIONAL' | 'REQUIRED'`。栏目管理整页树表的新增/编辑 Dialog 提供“文章封面”策略 Select，并随 create/update 请求提交。
 
-右侧 Table 根据左侧上下文在前端过滤成员。选择具体分组后新增 Page 时将当前分组 id 作为表单默认 `groupId`；“独立单页”以及“全部单页”上下文新增时默认为 `null`。表单继续允许管理员修改分组。
+文章表单根据当前 `form.columnId` 计算 `formCoverPolicy`：
 
-PageGroup 当前为平级对象，左侧使用普通分组列表而不是树。分组新增/编辑继续复用既有 `/api/admin/page-groups`，不因产品术语调整重命名 API 或数据库模型。
+- NONE：不渲染封面上传控件；保存 draft 时强制发送 `coverResourceId=null`；
+- OPTIONAL：正常显示可选封面；
+- REQUIRED：显示封面字段和“草稿可暂存，发布前必须设置封面”说明。
 
-## 5. 导航管理
+前端提示不是最终约束。发布和已发布文章编辑的契约由 Backend 保证。外链文章继续不提交本地封面。
 
-页面加载 NavigationLocation 和 NavigationItem。左侧显示位置并采用整行选择 + `...` 菜单；右侧将当前位置的 flat items 转换为 tree table。新增/编辑条目时 position 固定为当前 code，parent 只从当前位置选择。
+## 5. 单页管理
 
-正式初始化只保留 `MAIN`、`HOME_SHORTCUT`、`HOME_QUICK` 三个内置导航位置。V8 曾为模型迁移加入的 `SERVICE`、`SITE` 通过后续 Flyway 迁移从升级数据库中清理；如果旧库仍残留这些位置下的兼容导航条目，先解除父子引用并删除条目，再删除位置。网站导航/友情链接继续由通用列表承担。
+`/pages` 同时加载 PageGroup 和 Page。左侧组织区域包含全部单页、独立单页和所有 PageGroup；右侧 Table 根据左侧上下文过滤成员。选择具体分组后新增 Page 时默认 current group id，其他上下文默认为 null；表单仍可调整。
 
-导航条目新增可选 iconPath。表单通过 ImageResourcePicker 从语义化导航图标目录选择现有站点图标，或上传到 `uploads/navigation-icons/`；同时可按统一规则复用 Runtime 图片。导航表格和图标选择器均启用 AdaptiveImagePreview，保证淡色透明图标在管理端白色 Shell 中仍清晰可见。
+PageGroup 当前为平级对象，左侧使用普通分组列表而不是树。技术 API/数据库继续使用 Page/PageGroup。
 
-## 6. 列表管理
+## 6. 导航管理
 
-`/lists` 左侧选择列表定义，右侧维护列表项。列表定义不再编辑 itemType。条目编辑器统一显示 title、subtitle、可选 imagePath、可选 URL、openMode、sortOrder、enabled；新图片上传到 `uploads/lists/{code}/`，也可从共享 Runtime 图片库选择已有图片。
+页面加载 NavigationLocation 和 NavigationItem。左侧显示位置并采用整行选择 + `...` 菜单；右侧将当前位置 flat items 转换为 tree table。新增/编辑条目时 position 固定为当前 code，parent 只从当前位置选择。
 
-是否需要图片、是否显示名称、Logo 如何布局等属于具体 Public Site 页面设计，不由 CMS 表单配置展示模式。普通列表照片/Logo 目前保持常规图片预览；若后续某特定页面的管理体验需要图标型自适应背景，应由调用场景显式开启，而不是通过数据属性控制。
+正式初始化只保留 `MAIN`、`HOME_SHORTCUT`、`HOME_QUICK` 三个内置导航位置。V8 的 SERVICE/SITE 已由后续 migration 清理。
 
-## 7. 宣传展示管理
+导航条目 iconPath 通过 ImageResourcePicker 编辑；导航表格和图标选择器均启用 AdaptiveImagePreview。
+
+## 7. 列表管理
+
+`/lists` 左侧选择列表定义，右侧维护列表项。列表定义不再编辑 itemType，新增 `imagePolicy` 选择：
+
+- NONE：列表项 Dialog 不显示 ImageResourcePicker，并在提交前清空 imagePath；
+- OPTIONAL：显示可选图片；
+- REQUIRED：图片字段标记必填，前端在没有 imagePath 时先给出提示。
+
+Backend 仍是最终校验层，因此直接 API 调用无法绕过 NONE/REQUIRED 规则。列表策略变更时的既有数据冲突由 Backend 拒绝，前端展示服务端错误即可。
+
+图片策略不控制页面显示模式。普通列表照片/Logo 使用常规图片预览；是否显示名称、Logo 如何布局等属于 Public Site 设计。
+
+`HOME_CAROUSEL` 基线应在 UI 显示“图片必填”；当前 SITE_LINKS 列表显示“不使用图片”。
+
+## 8. 宣传展示管理
 
 技术路由保持 `/advertisements`，界面统一使用“宣传展示管理 / 展示位 / 展示内容”。先选择展示位，再维护内容。支持图片、URL、openMode、startAt/endAt、展示顺序和 enabled。新图片上传到 `uploads/displays/{slotCode}/`，也可复用共享 Runtime 图片。
 
-## 8. 网站属性
+## 9. 网站属性
 
-保留兼容 URL `/site-config`，页面名称“网站属性”。支持属性定义新增/编辑/删除和值维护。表单根据 valueType 提供 JSON textarea、URL、BOOLEAN 等输入；RESOURCE_PATH 改用 ImageResourcePicker，新图片上传到 `uploads/site-properties/{key}/`，也可复用共享 Runtime 图片。
+保留兼容 URL `/site-config`，页面名称“网站属性”。页面并行请求：
 
-当前不实现权限差异，新增/删除按钮不基于用户身份隐藏。
+- `/api/admin/site-config` 获取属性；
+- `/api/admin/site-config/groups` 获取 Spring CMS metadata 定义的分组。
 
-## 9. Browser Verification
+左侧复用现有 Master–Detail 样式显示“全部属性 + metadata groups”，右侧只显示当前分组属性。新增属性默认使用当前选中分组；定义 Dialog 的 groupCode 改为受控 Select，不允许任意输入未知分组。
+
+valueType 支持 `TEXT / INTEGER / RESOURCE_PATH / JSON / URL / BOOLEAN`。INTEGER 使用 number 输入并在保存前用整数正则校验；Backend 再做最终类型校验。`HOME_CAROUSEL_INTERVAL_SECONDS` 在 PRESENTATION 分组显示为整数属性，正常值为正整数秒。
+
+RESOURCE_PATH 使用 ImageResourcePicker，新图片上传到 `uploads/site-properties/{key}/`。当前不实现权限差异。
+
+## 10. Browser Verification
 
 E2E 必须覆盖：
 
-- Shell 四个导航分组及八类入口可达；
-- 单页管理显示“全部单页 / 独立单页 / 单页分组”，选择分组只显示对应成员并在该上下文新增时默认带入分组；
-- 导航位置接口和左侧列表均不再出现 `SERVICE`、`SITE`，并保留 `MAIN`、`HOME_SHORTCUT`、`HOME_QUICK`；
-- 导航位置切换 + 树形数据 + 图标属性/选择器；
-- 已知淡色透明导航图标在表格、当前值预览和内置图标库中均解析为高对比深色背景，并保留 hover 对比切换提示；
-- 通用列表不依赖 itemType，并至少验证列表图片通过统一选择器上传到约定目录；
-- 统一图片选择器能够跨 CMS 模块从 `/static/uploads/**` 复用 Runtime 已上传图片；
-- 宣传展示至少验证首页招聘展示位、图片选择器和 NO_LINK；
-- 网站属性创建自定义 JSON 属性并验证非法 JSON 被前端阻止；
-- 已有文章发布、单页 render mode、静态资源安全回归继续执行。
+- Shell 四个导航分组及八类入口可达，没有独立“系统设置”；
+- 单页管理组织导航和上下文新增；
+- 文章栏目树父子聚合和层级 TreeSelect；
+- Column REQUIRED 策略可维护；无封面草稿能创建但发布被 Backend 阻止；Article Dialog 显示 REQUIRED 提示；
+- 正式导航位置和导航图标属性/自适应预览；
+- HOME_CAROUSEL imagePolicy=REQUIRED、SITE_LINKS 当前 NONE；NONE UI 隐藏图片，Backend 直接 API 对 NONE/REQUIRED 都执行约束；
+- SiteProperty group endpoint 返回 metadata 定义顺序；未知 group 直接 API 被拒绝；Admin 左侧 PRESENTATION 分组及受控 group Select 正常；
+- INTEGER 非整数值前端拒绝，Backend 单元测试覆盖最终整数与正整数间隔约束；
+- 公开首页通过真实 SiteProperty=1 秒 + 临时第二轮播项验证 active carousel id 实际发生切换，再清理 fixture 并恢复属性值；
+- 统一图片选择器跨模块复用、宣传展示、文章发布、单页 render mode、静态资源安全等既有回归继续执行。
