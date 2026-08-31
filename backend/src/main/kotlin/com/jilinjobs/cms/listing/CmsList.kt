@@ -20,6 +20,7 @@ data class CmsListDefinition(
     val sortOrder: Int,
     val enabled: Boolean,
     val system: Boolean,
+    val preset: Boolean = false,
 )
 
 data class CmsListItem(
@@ -80,6 +81,7 @@ data class CmsListRecord(
     var sortOrder: Int = 0,
     var enabled: Boolean = true,
     var systemFlag: Boolean = false,
+    var preset: Boolean = false,
 )
 
 data class CmsListItemRecord(
@@ -97,16 +99,16 @@ data class CmsListItemRecord(
 
 @Mapper
 interface CmsListMapper {
-    @Select("SELECT id,code,name,group_code,image_policy,description,sort_order,enabled,system_flag FROM cms_list ORDER BY group_code,sort_order,id")
+    @Select("SELECT id,code,name,group_code,image_policy,description,sort_order,enabled,system_flag,preset FROM cms_list ORDER BY group_code,sort_order,id")
     fun findAll(): List<CmsListRecord>
 
-    @Select("SELECT id,code,name,group_code,image_policy,description,sort_order,enabled,system_flag FROM cms_list WHERE enabled=1 ORDER BY group_code,sort_order,id")
+    @Select("SELECT id,code,name,group_code,image_policy,description,sort_order,enabled,system_flag,preset FROM cms_list WHERE enabled=1 ORDER BY group_code,sort_order,id")
     fun findEnabled(): List<CmsListRecord>
 
-    @Select("SELECT id,code,name,group_code,image_policy,description,sort_order,enabled,system_flag FROM cms_list WHERE id=#{id}")
+    @Select("SELECT id,code,name,group_code,image_policy,description,sort_order,enabled,system_flag,preset FROM cms_list WHERE id=#{id}")
     fun findById(@Param("id") id: Long): CmsListRecord?
 
-    @Select("SELECT id,code,name,group_code,image_policy,description,sort_order,enabled,system_flag FROM cms_list WHERE code=#{code}")
+    @Select("SELECT id,code,name,group_code,image_policy,description,sort_order,enabled,system_flag,preset FROM cms_list WHERE code=#{code}")
     fun findByCode(@Param("code") code: String): CmsListRecord?
 
     @Insert("INSERT INTO cms_list(code,name,group_code,image_policy,description,sort_order,enabled,system_flag) VALUES(#{code},#{name},#{groupCode},#{imagePolicy},#{description},#{sortOrder},#{enabled},#{systemFlag})")
@@ -176,7 +178,7 @@ class CmsListService(
         if (mapper.findByCode(normalized.code) != null) throw CmsListValidationException("列表 Code 已存在：${normalized.code}")
         val record = normalized.record()
         mapper.insertList(record)
-        return record.model()
+        return mapper.findById(requireNotNull(record.id))!!.model()
     }
 
     @Transactional
@@ -190,7 +192,8 @@ class CmsListService(
 
     @Transactional
     fun deleteList(id: Long) {
-        requireList(id)
+        val current = requireList(id)
+        if (current.preset) throw CmsListValidationException("预置列表属于网站规划基线，不能删除")
         mapper.deleteList(id)
     }
 
@@ -280,7 +283,7 @@ class CmsListService(
 
     private fun CmsListDraft.record(id: Long? = null) = CmsListRecord(id, code, name, groupCode, imagePolicy.name, description, sortOrder, enabled, system)
     private fun CmsListItemDraft.record(listId: Long, id: Long? = null) = CmsListItemRecord(id, listId, title, subtitle, url, imagePath, openMode, sortOrder, enabled, extraJson)
-    private fun CmsListRecord.model() = CmsListDefinition(requireNotNull(id), code, name, groupCode, ContentImagePolicy.valueOf(imagePolicy), description, sortOrder, enabled, systemFlag)
+    private fun CmsListRecord.model() = CmsListDefinition(requireNotNull(id), code, name, groupCode, ContentImagePolicy.valueOf(imagePolicy), description, sortOrder, enabled, systemFlag, preset)
     private fun CmsListItemRecord.model() = CmsListItem(requireNotNull(id), listId, title, subtitle, url, imagePath, openMode, sortOrder, enabled, extraJson)
 }
 
