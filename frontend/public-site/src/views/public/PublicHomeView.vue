@@ -15,6 +15,8 @@ const items = ref<PublicNavigation[]>([])
 const articles = ref<PublicArticleSummary[]>([])
 const siteGroups = ref<SiteLinkGroup[]>([])
 const carouselItems = ref<CmsListItem[]>([])
+const activeCarouselIndex = ref(0)
+const carouselIntervalSeconds = ref(4)
 const promoAds = ref<Advertisement[]>([])
 const activePromoIndex = ref(0)
 const contactPhone = ref('')
@@ -23,13 +25,15 @@ const loading = ref(true)
 const error = ref('')
 const ncssLogo = '/static/home/ncss-logo.png'
 const phoneIcon = '/static/icons/phone.png'
+let carouselTimer: ReturnType<typeof setInterval> | null = null
 let promoTimer: ReturnType<typeof setInterval> | null = null
 
 setPageMeta({ description: '吉林省高等学校毕业生就业信息网，提供就业资讯、政策法规、业务指南和公共服务入口。' })
 
 const shortcutItems = computed(() => items.value.filter(item => item.position === 'HOME_SHORTCUT'))
 const quickItems = computed(() => items.value.filter(item => item.position === 'HOME_QUICK'))
-const carouselItem = computed(() => carouselItems.value.find(item => Boolean(item.imagePath)) || null)
+const validCarouselItems = computed(() => carouselItems.value.filter(item => Boolean(item.imagePath)))
+const carouselItem = computed(() => validCarouselItems.value[activeCarouselIndex.value] || null)
 const articlesFor = (alias: string) => articles.value.filter(article => article.columnAlias === alias).slice(0, 7)
 const isExternalArticle = (article: PublicArticleSummary) => article.articleType === 'EXTERNAL_LINK' && Boolean(article.externalUrl)
 const noticeArticles = computed(() => articlesFor('notice'))
@@ -38,6 +42,17 @@ const recruitmentArticles = computed(() => articles.value.filter(article => arti
 const newWindow = (mode: string, url: string | null | undefined) => mode === 'NEW_WINDOW' || (mode === 'DEFAULT' && Boolean(url?.startsWith('http')))
 const activePromo = computed(() => promoAds.value[activePromoIndex.value] || null)
 const promoLinked = computed(() => Boolean(activePromo.value?.url) && activePromo.value?.openMode !== 'NO_LINK')
+
+function startCarouselRotation() {
+  if (carouselTimer) clearInterval(carouselTimer)
+  carouselTimer = null
+  activeCarouselIndex.value = 0
+  if (validCarouselItems.value.length > 1) {
+    carouselTimer = setInterval(() => {
+      activeCarouselIndex.value = (activeCarouselIndex.value + 1) % validCarouselItems.value.length
+    }, carouselIntervalSeconds.value * 1000)
+  }
+}
 
 function startPromoRotation() {
   if (promoTimer) clearInterval(promoTimer)
@@ -48,6 +63,11 @@ function startPromoRotation() {
       activePromoIndex.value = (activePromoIndex.value + 1) % promoAds.value.length
     }, 4000)
   }
+}
+
+function positiveInteger(value: string | undefined, fallback: number) {
+  const parsed = Number.parseInt(value || '', 10)
+  return Number.isInteger(parsed) && parsed > 0 ? parsed : fallback
 }
 
 const calendar = computed(() => {
@@ -75,9 +95,11 @@ onMounted(async () => {
     articles.value = articlePage.items
     const values = Object.fromEntries(config.map(item => [item.key, item.value]))
     contactPhone.value = values.CONTACT_PHONE || ''
+    carouselIntervalSeconds.value = positiveInteger(values.HOME_CAROUSEL_INTERVAL_SECONDS, 4)
     carouselItems.value = lists.find(list => list.code === 'HOME_CAROUSEL')?.items || []
     siteGroups.value = lists.filter(list => list.groupCode === 'SITE_LINKS').map(list => ({ name: list.name, links: list.items }))
     promoAds.value = advertisementSlots.find(slot => slot.code === 'HOME_RECRUITMENT_PROMO')?.advertisements || []
+    startCarouselRotation()
     startPromoRotation()
   } catch (e) {
     error.value = e instanceof Error ? e.message : '公开内容加载失败'
@@ -87,6 +109,7 @@ onMounted(async () => {
 })
 
 onUnmounted(() => {
+  if (carouselTimer) clearInterval(carouselTimer)
   if (promoTimer) clearInterval(promoTimer)
 })
 </script>
@@ -99,7 +122,7 @@ onUnmounted(() => {
 
     <div class="site-width home-content" data-testid="public-content">
       <section class="home-primary-row">
-        <div class="home-carousel">
+        <div class="home-carousel" data-testid="home-carousel-active" :data-carousel-item-id="carouselItem?.id || ''">
           <a v-if="carouselItem?.url" :href="carouselItem.url" :target="newWindow(carouselItem.openMode, carouselItem.url) ? '_blank' : undefined" rel="noopener noreferrer">
             <img :src="carouselItem.imagePath || ''" :alt="carouselItem.title || '首页轮播图'">
             <span v-if="carouselItem.title" class="carousel-caption">{{ carouselItem.title }}</span>
@@ -125,9 +148,7 @@ onUnmounted(() => {
 
         <aside class="home-top-shortcuts">
           <template v-for="link in shortcutItems" :key="link.id">
-            <a v-if="link.external" :href="link.href" :target="link.newWindow ? '_blank' : undefined" rel="noopener noreferrer">
-              <img v-if="link.iconPath" :src="link.iconPath" alt=""><span>{{ link.name }}</span>
-            </a>
+            <a v-if="link.external" :href="link.href" :target="link.newWindow ? '_blank' : undefined" rel="noopener noreferrer"><img v-if="link.iconPath" :src="link.iconPath" alt=""><span>{{ link.name }}</span></a>
             <router-link v-else :to="link.href"><img v-if="link.iconPath" :src="link.iconPath" alt=""><span>{{ link.name }}</span></router-link>
           </template>
         </aside>
@@ -165,12 +186,8 @@ onUnmounted(() => {
       </section>
 
       <template v-if="activePromo">
-        <a v-if="promoLinked" class="home-promo-banner" :data-testid="`home-promo-ad-${activePromo.id}`" :href="activePromo.url!" :target="newWindow(activePromo.openMode, activePromo.url) ? '_blank' : undefined" rel="noopener noreferrer">
-          <img :src="activePromo.imagePath" :alt="activePromo.title">
-        </a>
-        <div v-else class="home-promo-banner" :data-testid="`home-promo-ad-${activePromo.id}`">
-          <img :src="activePromo.imagePath" :alt="activePromo.title">
-        </div>
+        <a v-if="promoLinked" class="home-promo-banner" :data-testid="`home-promo-ad-${activePromo.id}`" :href="activePromo.url!" :target="newWindow(activePromo.openMode, activePromo.url) ? '_blank' : undefined" rel="noopener noreferrer"><img :src="activePromo.imagePath" :alt="activePromo.title"></a>
+        <div v-else class="home-promo-banner" :data-testid="`home-promo-ad-${activePromo.id}`"><img :src="activePromo.imagePath" :alt="activePromo.title"></div>
       </template>
 
       <section class="home-section original-section latest-recruitment"><header class="section-title"><h2>最新招聘</h2></header><div class="external-placeholder iframe-placeholder"><span>慧就业招聘信息区域</span></div></section>
