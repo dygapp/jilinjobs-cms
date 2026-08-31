@@ -27,8 +27,11 @@ class ColumnService(
 
     @Transactional
     fun update(id: Long, draft: ColumnDraft): CmsColumn {
-        repository.findById(id) ?: throw ColumnNotFoundException(id)
+        val current = repository.findById(id) ?: throw ColumnNotFoundException(id)
         val normalized = normalize(draft)
+        if (current.preset && normalized.alias != current.alias) {
+            throw ColumnValidationException("预置栏目的 Alias 属于稳定站点身份，不能修改")
+        }
         validateParent(normalized.parentId, id)
         validateAlias(normalized.alias, id)
         return repository.update(id, normalized)
@@ -36,7 +39,8 @@ class ColumnService(
 
     @Transactional
     fun delete(id: Long) {
-        repository.findById(id) ?: throw ColumnNotFoundException(id)
+        val current = repository.findById(id) ?: throw ColumnNotFoundException(id)
+        if (current.preset) throw ColumnValidationException("预置栏目属于网站规划基线，不能删除")
         if (repository.countChildren(id) > 0) throw ColumnValidationException("栏目存在下级栏目，不能直接删除")
         if (contentDependency.hasContent(id)) throw ColumnValidationException("栏目存在内容，不能直接删除")
         repository.delete(id)
