@@ -16,6 +16,12 @@ test('视觉基线：页脚备案、事业单位、公众号与 favicon 使用�
     expect(body.subarray(0, PNG_SIGNATURE.length).equals(PNG_SIGNATURE), `${resource} 应为真实 PNG 编码`).toBeTruthy()
   }
 
+  const configResponse = await request.get('/api/public/site-config')
+  expect(configResponse.ok()).toBeTruthy()
+  const configs = await configResponse.json() as Array<{ key: string; value: string }>
+  const configuredCopyright = configs.find(item => item.key === 'FOOTER_COPYRIGHT')?.value
+  expect(configuredCopyright).toBeTruthy()
+
   await page.setViewportSize({ width: 1440, height: 1000 })
   await page.goto('/')
 
@@ -29,7 +35,7 @@ test('视觉基线：页脚备案、事业单位、公众号与 favicon 使用�
   await expect(page.locator('.wechat-entry')).toContainText('吉林省大学生就业创业')
   await expect(page.locator('.public-institution-badge')).not.toHaveAttribute('href')
   await expect(page.locator('.wechat-entry')).not.toHaveAttribute('href')
-  await expect(footer).toContainText(`Copyright ${new Date().getFullYear()}`)
+  await expect(footer.locator('strong')).toHaveText(configuredCopyright!)
 
   expect(Math.round((await page.locator('.public-security-record img').boundingBox())?.width ?? 0)).toBe(20)
   expect(Math.round((await page.locator('.public-institution-badge img').boundingBox())?.width ?? 0)).toBe(96)
