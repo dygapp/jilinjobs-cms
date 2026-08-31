@@ -195,6 +195,60 @@ test('Feature-wide closure：HOME_QUICK 与通用列表进入原站快速导航�
   await expect(siteSection.getByRole('link', { name: siteName, exact: true })).toHaveAttribute('href', 'https://example.com/site')
 })
 
+test('Feature-wide closure：广告位支持多图轮动、NO_LINK 保留 URL 并按有效期过滤', async ({ page, request }, testInfo) => {
+  const slotsResponse = await request.get('/api/admin/advertisements/slots')
+  expect(slotsResponse.ok()).toBeTruthy()
+  const slots = await slotsResponse.json() as Array<{ id:number;code:string }>
+  const slot = slots.find(item => item.code === 'HOME_RECRUITMENT_PROMO')
+  expect(slot, '缺少 HOME_RECRUITMENT_PROMO 广告位').toBeTruthy()
+  const suffix = `${Date.now()}-${testInfo.retry}`
+  const createdIds:number[] = []
+  const createAd = async (data: Record<string, unknown>) => {
+    const response = await request.post(`/api/admin/advertisements/slots/${slot!.id}/items`, { data })
+    expect(response.ok()).toBeTruthy()
+    const created = await response.json() as { id:number }
+    createdIds.push(created.id)
+    return created
+  }
+
+  try {
+    const retainedUrl = `https://example.com/promo/${suffix}`
+    const first = await createAd({title:`禁用跳转-${suffix}`,imagePath:'/static/home/recruitment-campaign.png',url:retainedUrl,openMode:'NO_LINK',startAt:null,endAt:null,sortOrder:-200,enabled:true})
+    const second = await createAd({title:`轮动广告-${suffix}`,imagePath:'/static/home/recruitment-campaign.png',url:`https://example.com/promo-next/${suffix}`,openMode:'NEW_WINDOW',startAt:null,endAt:null,sortOrder:-190,enabled:true})
+    const expired = await createAd({title:`过期广告-${suffix}`,imagePath:'/static/home/recruitment-campaign.png',url:null,openMode:'NO_LINK',startAt:'2020-01-01T00:00:00',endAt:'2020-01-02T00:00:00',sortOrder:-300,enabled:true})
+
+    const publicResponse = await request.get('/api/public/advertisements')
+    expect(publicResponse.ok()).toBeTruthy()
+    const publicSlots = await publicResponse.json() as Array<{code:string;advertisements:Array<{id:number;sortOrder:number}>}>
+    const publicAds = publicSlots.find(item => item.code === 'HOME_RECRUITMENT_PROMO')?.advertisements || []
+    expect(publicAds.map(item => item.id)).toContain(first.id)
+    expect(publicAds.map(item => item.id)).toContain(second.id)
+    expect(publicAds.map(item => item.id)).not.toContain(expired.id)
+    expect(publicAds.findIndex(item => item.id === first.id)).toBeLessThan(publicAds.findIndex(item => item.id === second.id))
+
+    await page.goto('/')
+    const noLinkVisual = page.getByTestId(`home-promo-ad-${first.id}`)
+    await expect(noLinkVisual).toBeVisible()
+    await expect(noLinkVisual).not.toHaveAttribute('href')
+
+    const updateResponse = await request.put(`/api/admin/advertisements/slots/${slot!.id}/items/${first.id}`, {
+      data: {title:`禁用跳转-${suffix}`,imagePath:'/static/home/recruitment-campaign.png',url:retainedUrl,openMode:'NEW_WINDOW',startAt:null,endAt:null,sortOrder:-200,enabled:true},
+    })
+    expect(updateResponse.ok()).toBeTruthy()
+    const updated = await updateResponse.json() as { url:string;openMode:string }
+    expect(updated.url).toBe(retainedUrl)
+    expect(updated.openMode).toBe('NEW_WINDOW')
+
+    await page.reload()
+    const restoredLink = page.getByTestId(`home-promo-ad-${first.id}`)
+    await expect(restoredLink).toHaveAttribute('href', retainedUrl)
+    await expect(restoredLink).toHaveAttribute('target', '_blank')
+    await expect(page.getByTestId(`home-promo-ad-${second.id}`)).toBeVisible({ timeout: 7000 })
+  } finally {
+    for (const id of createdIds) await request.delete(`/api/admin/advertisements/slots/${slot!.id}/items/${id}`)
+  }
+})
+
 test('Feature-wide closure：首页举报电话及邮箱使用站内固定页面', async ({ page }) => {
   await page.goto('/')
   const link = page.locator('.home-top-shortcuts').getByRole('link', { name: '举报电话及邮箱', exact: true })
