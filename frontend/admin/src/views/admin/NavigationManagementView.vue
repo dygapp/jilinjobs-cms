@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, reactive, ref } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
+import { MoreFilled } from '@element-plus/icons-vue'
 import { listColumns, type CmsColumn } from '../../api/columns'
 import { listPages, type CmsPage } from '../../api/pages'
 import {
@@ -61,11 +62,21 @@ const msg=(e:unknown)=>e instanceof Error?e.message:'操作失败'
     <div style="display:grid;grid-template-columns:230px minmax(0,1fr);gap:16px;align-items:start">
       <el-card shadow="never">
         <template #header><div style="display:flex;align-items:center;justify-content:space-between"><strong>导航位置</strong><el-button link type="primary" data-testid="add-navigation-location" @click="openCreateLocation">新增</el-button></div></template>
-        <div style="display:flex;flex-direction:column;gap:8px">
-          <div v-for="location in locations" :key="location.code" :data-testid="`navigation-location-${location.code}`" style="display:flex;align-items:center;gap:4px">
-            <el-button :type="activePosition===location.code?'primary':'default'" plain style="flex:1;justify-content:flex-start" @click="selectLocation(location.code)">{{location.name}}</el-button>
-            <el-button link type="primary" @click="openEditLocation(location)">编辑</el-button>
-            <el-button link type="danger" @click="removeLocation(location)">删</el-button>
+        <div style="display:flex;flex-direction:column">
+          <div
+            v-for="location in locations"
+            :key="location.code"
+            :data-testid="`navigation-location-${location.code}`"
+            :style="{display:'flex',alignItems:'center',minHeight:'44px',padding:'0 6px 0 12px',borderRadius:'6px',cursor:'pointer',background:activePosition===location.code?'var(--el-fill-color-light)':'transparent'}"
+            @click="selectLocation(location.code)"
+          >
+            <span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{location.name}}</span>
+            <span @click.stop>
+              <el-dropdown trigger="click" @command="command=>command==='edit'?openEditLocation(location):removeLocation(location)">
+                <el-button text circle aria-label="导航位置操作"><el-icon><MoreFilled/></el-icon></el-button>
+                <template #dropdown><el-dropdown-menu><el-dropdown-item command="edit">编辑</el-dropdown-item><el-dropdown-item command="delete" divided>删除</el-dropdown-item></el-dropdown-menu></template>
+              </el-dropdown>
+            </span>
           </div>
         </div>
       </el-card>
