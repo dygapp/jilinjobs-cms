@@ -2,6 +2,7 @@ package com.jilinjobs.cms.content
 
 import com.jilinjobs.cms.column.ColumnContentDependency
 import com.jilinjobs.cms.column.ColumnQuery
+import com.jilinjobs.cms.common.ContentImagePolicy
 import com.jilinjobs.cms.resource.ArticleResourceAssociation
 import com.jilinjobs.cms.resource.ArticleResourceLinks
 import org.springframework.stereotype.Component
@@ -41,8 +42,12 @@ class ArticleService(
 
     @Transactional
     fun publish(id: Long): CmsArticle {
-        val article = repository.findById(id) ?: throw ArticleNotFoundException(id)
+        val article = withResources(repository.findById(id) ?: throw ArticleNotFoundException(id))
         if (article.status == ArticleStatus.PUBLISHED) throw ArticleValidationException("文章已经处于已发布状态")
+        val column = columnQuery.find(article.columnId) ?: throw ArticleValidationException("所属栏目不存在：${article.columnId}")
+        if (article.articleType == ArticleType.INTERNAL && column.coverPolicy == ContentImagePolicy.REQUIRED && article.coverResourceId == null) {
+            throw ArticleValidationException("当前栏目要求文章设置封面图片，补充封面后才能发布")
+        }
         return withResources(repository.updateStatus(id, ArticleStatus.PUBLISHED, LocalDateTime.now()))
     }
 
@@ -90,7 +95,7 @@ class ArticleService(
         if (title.isBlank()) throw ArticleValidationException("文章标题不能为空")
         if (title.length > 200) throw ArticleValidationException("文章标题不能超过 200 个字符")
         if (draft.source.length > 200) throw ArticleValidationException("内容来源不能超过 200 个字符")
-        if (columnQuery.find(draft.columnId) == null) throw ArticleValidationException("所属栏目不存在：${draft.columnId}")
+        val column = columnQuery.find(draft.columnId) ?: throw ArticleValidationException("所属栏目不存在：${draft.columnId}")
 
         val externalUrl = draft.externalUrl?.trim()?.takeIf { it.isNotEmpty() }
         if (draft.articleType == ArticleType.EXTERNAL_LINK) {
@@ -108,6 +113,10 @@ class ArticleService(
                 bodyImageResourceIds = emptyList(),
                 attachmentResourceIds = emptyList(),
             )
+        }
+
+        if (column.coverPolicy == ContentImagePolicy.NONE && draft.coverResourceId != null) {
+            throw ArticleValidationException("当前栏目不使用文章封面图片")
         }
 
         return draft.copy(
