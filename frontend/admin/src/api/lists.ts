@@ -1,5 +1,5 @@
 export type ContentImagePolicy='NONE'|'OPTIONAL'|'REQUIRED'
-export interface CmsListDefinition{id:number;code:string;name:string;groupCode:string;imagePolicy:ContentImagePolicy;description:string;sortOrder:number;enabled:boolean;system:boolean}
+export interface CmsListDefinition{id:number;code:string;name:string;groupCode:string;imagePolicy:ContentImagePolicy;description:string;sortOrder:number;enabled:boolean;system:boolean;preset:boolean}
 export interface CmsListItem{id:number;listId:number;title:string;subtitle:string|null;url:string|null;imagePath:string|null;openMode:string;sortOrder:number;enabled:boolean;extraJson:string|null}
 export interface PublicCmsList{id:number;code:string;name:string;groupCode:string;imagePolicy:ContentImagePolicy;items:CmsListItem[]}
 export interface CmsListDraft{code:string;name:string;groupCode:string;imagePolicy:ContentImagePolicy;description:string;sortOrder:number;enabled:boolean;system:boolean}
