@@ -33,8 +33,9 @@ class ArticleService(
 
     @Transactional
     fun update(id: Long, draft: ArticleDraft): CmsArticle {
-        repository.findById(id) ?: throw ArticleNotFoundException(id)
+        val current = repository.findById(id) ?: throw ArticleNotFoundException(id)
         val normalized = normalize(draft)
+        if (current.status == ArticleStatus.PUBLISHED) validatePublicationCover(normalized.articleType, normalized.columnId, normalized.coverResourceId)
         val article = repository.update(id, normalized)
         resourceAssociation.replaceArticleResources(id, normalized.links())
         return withResources(article)
@@ -44,10 +45,7 @@ class ArticleService(
     fun publish(id: Long): CmsArticle {
         val article = withResources(repository.findById(id) ?: throw ArticleNotFoundException(id))
         if (article.status == ArticleStatus.PUBLISHED) throw ArticleValidationException("文章已经处于已发布状态")
-        val column = columnQuery.find(article.columnId) ?: throw ArticleValidationException("所属栏目不存在：${article.columnId}")
-        if (article.articleType == ArticleType.INTERNAL && column.coverPolicy == ContentImagePolicy.REQUIRED && article.coverResourceId == null) {
-            throw ArticleValidationException("当前栏目要求文章设置封面图片，补充封面后才能发布")
-        }
+        validatePublicationCover(article.articleType, article.columnId, article.coverResourceId)
         return withResources(repository.updateStatus(id, ArticleStatus.PUBLISHED, LocalDateTime.now()))
     }
 
@@ -126,6 +124,14 @@ class ArticleService(
             bodyImageResourceIds = draft.bodyImageResourceIds.distinct(),
             attachmentResourceIds = draft.attachmentResourceIds.distinct(),
         )
+    }
+
+    private fun validatePublicationCover(articleType: ArticleType, columnId: Long, coverResourceId: Long?) {
+        if (articleType != ArticleType.INTERNAL) return
+        val column = columnQuery.find(columnId) ?: throw ArticleValidationException("所属栏目不存在：$columnId")
+        if (column.coverPolicy == ContentImagePolicy.REQUIRED && coverResourceId == null) {
+            throw ArticleValidationException("当前栏目要求文章设置封面图片，补充封面后才能发布")
+        }
     }
 
     private fun summary(article: CmsArticle): PublicArticleSummary {
