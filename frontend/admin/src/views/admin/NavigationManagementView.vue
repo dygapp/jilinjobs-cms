@@ -2,6 +2,8 @@
 import { computed, onMounted, reactive, ref } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { MoreFilled } from '@element-plus/icons-vue'
+import ImageResourcePicker from '../../components/ImageResourcePicker.vue'
+import { navigationIconCatalog } from '../../iconCatalog'
 import { listColumns, type CmsColumn } from '../../api/columns'
 import { listPages, type CmsPage } from '../../api/pages'
 import {
@@ -21,7 +23,7 @@ const locationDialogVisible = ref(false)
 const saving = ref(false)
 const editingId = ref<number|null>(null)
 const editingLocationCode = ref<string|null>(null)
-const form = reactive<NavigationDraft>({name:'',position:'MAIN',category:null,targetType:'COLUMN',targetColumnId:null,targetPageId:null,targetUrl:null,parentId:null,openMode:'DEFAULT',sortOrder:0,enabled:true})
+const form = reactive<NavigationDraft>({name:'',position:'MAIN',category:null,targetType:'COLUMN',targetColumnId:null,targetPageId:null,targetUrl:null,parentId:null,openMode:'DEFAULT',iconPath:null,sortOrder:0,enabled:true})
 const locationForm = reactive<NavigationLocationDraft>({code:'',name:'',description:'',sortOrder:0,enabled:true,system:false})
 const targetOptions:Array<{value:NavigationTargetType;label:string}>=[{value:'HOME',label:'网站首页'},{value:'COLUMN',label:'本站栏目'},{value:'PAGE',label:'固定页面'},{value:'LINK',label:'链接地址'},{value:'PLACEHOLDER',label:'占位菜单'}]
 const asNavigation=(row:unknown)=>row as CmsNavigation
@@ -43,10 +45,10 @@ const treeData = computed(()=>{
 onMounted(refresh)
 async function refresh(){loading.value=true;try{const [nav,cols,pgs,locs]=await Promise.all([listNavigations(),listColumns(),listPages(),listNavigationLocations()]);items.value=nav;columns.value=cols;pages.value=pgs;locations.value=locs;if(!locs.some(i=>i.code===activePosition.value))activePosition.value=locs[0]?.code||'MAIN'}catch(e){ElMessage.error(msg(e))}finally{loading.value=false}}
 function selectLocation(code:string){activePosition.value=code}
-function openCreate(){editingId.value=null;Object.assign(form,{name:'',position:activePosition.value,category:null,targetType:'COLUMN',targetColumnId:null,targetPageId:null,targetUrl:null,parentId:null,openMode:'DEFAULT',sortOrder:0,enabled:true});dialogVisible.value=true}
-function openEdit(row:CmsNavigation){editingId.value=row.id;Object.assign(form,{name:row.name,position:row.position,category:row.category,targetType:row.targetType,targetColumnId:row.targetColumnId,targetPageId:row.targetPageId,targetUrl:row.targetUrl,parentId:row.parentId,openMode:row.openMode,sortOrder:row.sortOrder,enabled:row.enabled});dialogVisible.value=true}
+function openCreate(){editingId.value=null;Object.assign(form,{name:'',position:activePosition.value,category:null,targetType:'COLUMN',targetColumnId:null,targetPageId:null,targetUrl:null,parentId:null,openMode:'DEFAULT',iconPath:null,sortOrder:0,enabled:true});dialogVisible.value=true}
+function openEdit(row:CmsNavigation){editingId.value=row.id;Object.assign(form,{name:row.name,position:row.position,category:row.category,targetType:row.targetType,targetColumnId:row.targetColumnId,targetPageId:row.targetPageId,targetUrl:row.targetUrl,parentId:row.parentId,openMode:row.openMode,iconPath:row.iconPath,sortOrder:row.sortOrder,enabled:row.enabled});dialogVisible.value=true}
 async function save(){saving.value=true;try{form.position=activePosition.value;editingId.value==null?await createNavigation({...form}):await updateNavigation(editingId.value,{...form});dialogVisible.value=false;await refresh()}catch(e){ElMessage.error(msg(e))}finally{saving.value=false}}
-async function toggle(row:CmsNavigation,enabled:boolean){try{await updateNavigation(row.id,{name:row.name,position:row.position,category:row.category,targetType:row.targetType,targetColumnId:row.targetColumnId,targetPageId:row.targetPageId,targetUrl:row.targetUrl,parentId:row.parentId,openMode:row.openMode,sortOrder:row.sortOrder,enabled});await refresh()}catch(e){ElMessage.error(msg(e));await refresh()}}
+async function toggle(row:CmsNavigation,enabled:boolean){try{await updateNavigation(row.id,{name:row.name,position:row.position,category:row.category,targetType:row.targetType,targetColumnId:row.targetColumnId,targetPageId:row.targetPageId,targetUrl:row.targetUrl,parentId:row.parentId,openMode:row.openMode,iconPath:row.iconPath,sortOrder:row.sortOrder,enabled});await refresh()}catch(e){ElMessage.error(msg(e));await refresh()}}
 async function remove(row:CmsNavigation){try{await ElMessageBox.confirm(`确定删除导航“${row.name}”吗？`,'删除导航',{type:'warning'});await deleteNavigation(row.id);await refresh()}catch(e){if(e!=='cancel'&&e!=='close')ElMessage.error(msg(e))}}
 function openCreateLocation(){editingLocationCode.value=null;Object.assign(locationForm,{code:'',name:'',description:'',sortOrder:0,enabled:true,system:false});locationDialogVisible.value=true}
 function openEditLocation(row:NavigationLocation){editingLocationCode.value=row.code;Object.assign(locationForm,{code:row.code,name:row.name,description:row.description,sortOrder:row.sortOrder,enabled:row.enabled,system:row.system});locationDialogVisible.value=true}
@@ -58,25 +60,14 @@ const msg=(e:unknown)=>e instanceof Error?e.message:'操作失败'
 
 <template>
   <main class="admin-shell">
-    <header class="page-header"><div><p class="eyebrow">网站导航</p><h1>导航管理</h1><p class="subtitle">先选择导航位置，再以树形结构维护该位置的多级菜单。</p></div><el-button data-testid="add-navigation" type="primary" :disabled="!currentLocation" @click="openCreate">新增导航</el-button></header>
+    <header class="page-header"><div><p class="eyebrow">网站导航</p><h1>导航管理</h1><p class="subtitle">先选择导航位置，再以树形结构维护多级菜单；导航图标作为条目属性维护，不再依赖前台排序位置推导。</p></div><el-button data-testid="add-navigation" type="primary" :disabled="!currentLocation" @click="openCreate">新增导航</el-button></header>
     <div style="display:grid;grid-template-columns:230px minmax(0,1fr);gap:16px;align-items:start">
       <el-card shadow="never">
         <template #header><div style="display:flex;align-items:center;justify-content:space-between"><strong>导航位置</strong><el-button link type="primary" data-testid="add-navigation-location" @click="openCreateLocation">新增</el-button></div></template>
         <div style="display:flex;flex-direction:column">
-          <div
-            v-for="location in locations"
-            :key="location.code"
-            :data-testid="`navigation-location-${location.code}`"
-            :style="{display:'flex',alignItems:'center',minHeight:'44px',padding:'0 6px 0 12px',borderRadius:'6px',cursor:'pointer',background:activePosition===location.code?'var(--el-fill-color-light)':'transparent'}"
-            @click="selectLocation(location.code)"
-          >
+          <div v-for="location in locations" :key="location.code" :data-testid="`navigation-location-${location.code}`" :style="{display:'flex',alignItems:'center',minHeight:'44px',padding:'0 6px 0 12px',borderRadius:'6px',cursor:'pointer',background:activePosition===location.code?'var(--el-fill-color-light)':'transparent'}" @click="selectLocation(location.code)">
             <span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{location.name}}</span>
-            <span @click.stop>
-              <el-dropdown trigger="click" @command="command=>command==='edit'?openEditLocation(location):removeLocation(location)">
-                <el-button text circle aria-label="导航位置操作"><el-icon><MoreFilled/></el-icon></el-button>
-                <template #dropdown><el-dropdown-menu><el-dropdown-item command="edit">编辑</el-dropdown-item><el-dropdown-item command="delete" divided>删除</el-dropdown-item></el-dropdown-menu></template>
-              </el-dropdown>
-            </span>
+            <span @click.stop><el-dropdown trigger="click" @command="command=>command==='edit'?openEditLocation(location):removeLocation(location)"><el-button text circle aria-label="导航位置操作"><el-icon><MoreFilled/></el-icon></el-button><template #dropdown><el-dropdown-menu><el-dropdown-item command="edit">编辑</el-dropdown-item><el-dropdown-item command="delete" divided>删除</el-dropdown-item></el-dropdown-menu></template></el-dropdown></span>
           </div>
         </div>
       </el-card>
@@ -84,6 +75,7 @@ const msg=(e:unknown)=>e instanceof Error?e.message:'操作失败'
         <template #header><div><strong>{{currentLocation?.name||'请选择导航位置'}}</strong><span v-if="currentLocation" style="margin-left:8px;color:#909399">{{currentLocation.code}}</span></div></template>
         <el-table v-loading="loading" :data="treeData" row-key="id" default-expand-all :tree-props="{children:'children'}" data-testid="navigation-tree-table">
           <el-table-column prop="name" label="导航名称" min-width="180"/>
+          <el-table-column label="图标" width="76"><template #default="s"><img v-if="asNavigation(s.row).iconPath" :src="asNavigation(s.row).iconPath || ''" alt="" style="width:28px;height:28px;object-fit:contain"></template></el-table-column>
           <el-table-column label="目标" min-width="220"><template #default="s">{{target(asNavigation(s.row))}}</template></el-table-column>
           <el-table-column prop="sortOrder" label="排序" width="80"/>
           <el-table-column label="状态" width="100"><template #default="s"><el-switch :model-value="s.row.enabled" @change="v=>toggle(asNavigation(s.row),v===true)"/></template></el-table-column>
@@ -92,10 +84,11 @@ const msg=(e:unknown)=>e instanceof Error?e.message:'操作失败'
       </el-card>
     </div>
 
-    <el-dialog v-model="dialogVisible" :title="editingId==null?'新增导航':'编辑导航'" width="620px">
+    <el-dialog v-model="dialogVisible" :title="editingId==null?'新增导航':'编辑导航'" width="680px">
       <el-form label-width="100px">
         <el-form-item label="导航位置"><el-input :model-value="currentLocation?.name||activePosition" disabled/></el-form-item>
         <el-form-item label="导航名称"><el-input v-model="form.name"/></el-form-item>
+        <el-form-item label="图标"><ImageResourcePicker v-model="form.iconPath" upload-directory="uploads/navigation-icons" :preset-options="navigationIconCatalog"/></el-form-item>
         <el-form-item label="上级菜单"><el-select v-model="form.parentId" clearable style="width:100%"><el-option v-for="i in parentOptions" :key="i.id" :label="i.name" :value="i.id"/></el-select></el-form-item>
         <el-form-item label="目标类型"><el-select v-model="form.targetType" style="width:100%"><el-option v-for="o in targetOptions" :key="o.value" :label="o.label" :value="o.value"/></el-select></el-form-item>
         <el-form-item v-if="form.targetType==='COLUMN'" label="目标栏目"><el-select data-testid="navigation-column-select" v-model="form.targetColumnId" filterable style="width:100%"><el-option v-for="c in columns" :key="c.id" :label="c.name" :value="c.id"/></el-select></el-form-item>

@@ -29,13 +29,12 @@ setPageMeta({ description: '吉林省高等学校毕业生就业信息网，提�
 
 const shortcutItems = computed(() => items.value.filter(item => item.position === 'HOME_SHORTCUT'))
 const quickItems = computed(() => items.value.filter(item => item.position === 'HOME_QUICK'))
+const carouselItem = computed(() => carouselItems.value.find(item => Boolean(item.imagePath)) || null)
 const articlesFor = (alias: string) => articles.value.filter(article => article.columnAlias === alias).slice(0, 7)
 const isExternalArticle = (article: PublicArticleSummary) => article.articleType === 'EXTERNAL_LINK' && Boolean(article.externalUrl)
 const noticeArticles = computed(() => articlesFor('notice'))
 const employmentArticles = computed(() => articlesFor('employment-news'))
 const recruitmentArticles = computed(() => articles.value.filter(article => article.columnAlias === 'recruitment-announcement' && isExternalArticle(article)).slice(0, 7))
-const quickIcon = (index: number) => `/static/icons/top-nav-${String(index + 1).padStart(2, '0')}.png`
-const guideIcon = (index: number) => `/static/icons/guide-${String(index + 1).padStart(2, '0')}.png`
 const newWindow = (mode: string, url: string | null | undefined) => mode === 'NEW_WINDOW' || (mode === 'DEFAULT' && Boolean(url?.startsWith('http')))
 const activePromo = computed(() => promoAds.value[activePromoIndex.value] || null)
 const promoLinked = computed(() => Boolean(activePromo.value?.url) && activePromo.value?.openMode !== 'NO_LINK')
@@ -101,10 +100,14 @@ onUnmounted(() => {
     <div class="site-width home-content" data-testid="public-content">
       <section class="home-primary-row">
         <div class="home-carousel">
-          <a v-if="carouselItems[0]" :href="carouselItems[0].url || '#'" :target="newWindow(carouselItems[0].openMode, carouselItems[0].url) ? '_blank' : undefined" rel="noopener noreferrer">
-            <img :src="carouselItems[0].imagePath || ''" :alt="carouselItems[0].title || '首页轮播图'">
-            <span v-if="carouselItems[0].title" class="carousel-caption">{{ carouselItems[0].title }}</span>
+          <a v-if="carouselItem?.url" :href="carouselItem.url" :target="newWindow(carouselItem.openMode, carouselItem.url) ? '_blank' : undefined" rel="noopener noreferrer">
+            <img :src="carouselItem.imagePath || ''" :alt="carouselItem.title || '首页轮播图'">
+            <span v-if="carouselItem.title" class="carousel-caption">{{ carouselItem.title }}</span>
           </a>
+          <div v-else-if="carouselItem" style="position:relative;display:block;width:100%;height:100%">
+            <img :src="carouselItem.imagePath || ''" :alt="carouselItem.title || '首页轮播图'">
+            <span v-if="carouselItem.title" class="carousel-caption">{{ carouselItem.title }}</span>
+          </div>
           <div v-else class="visual-empty">轮播图</div>
         </div>
 
@@ -121,11 +124,11 @@ onUnmounted(() => {
         </section>
 
         <aside class="home-top-shortcuts">
-          <template v-for="(link, index) in shortcutItems" :key="link.id">
+          <template v-for="link in shortcutItems" :key="link.id">
             <a v-if="link.external" :href="link.href" :target="link.newWindow ? '_blank' : undefined" rel="noopener noreferrer">
-              <img :src="quickIcon(index)" alt=""><span>{{ link.name }}</span>
+              <img v-if="link.iconPath" :src="link.iconPath" alt=""><span>{{ link.name }}</span>
             </a>
-            <router-link v-else :to="link.href"><img :src="quickIcon(index)" alt=""><span>{{ link.name }}</span></router-link>
+            <router-link v-else :to="link.href"><img v-if="link.iconPath" :src="link.iconPath" alt=""><span>{{ link.name }}</span></router-link>
           </template>
         </aside>
       </section>
@@ -153,9 +156,9 @@ onUnmounted(() => {
           <h2>快速导航</h2>
           <p class="service-phone"><img :src="phoneIcon" alt="">咨询电话：<strong>{{ contactPhone }}</strong></p>
           <div class="service-shortcuts">
-            <template v-for="(item, index) in quickItems" :key="item.id">
-              <a v-if="item.external" :href="item.href" :target="item.newWindow ? '_blank' : undefined" rel="noopener noreferrer"><img :src="guideIcon(index)" alt=""><span>{{ item.name }}</span></a>
-              <router-link v-else :to="item.href"><img :src="guideIcon(index)" alt=""><span>{{ item.name }}</span></router-link>
+            <template v-for="item in quickItems" :key="item.id">
+              <a v-if="item.external" :href="item.href" :target="item.newWindow ? '_blank' : undefined" rel="noopener noreferrer"><img v-if="item.iconPath" :src="item.iconPath" alt=""><span>{{ item.name }}</span></a>
+              <router-link v-else :to="item.href"><img v-if="item.iconPath" :src="item.iconPath" alt=""><span>{{ item.name }}</span></router-link>
             </template>
           </div>
         </aside>

@@ -38,7 +38,16 @@ class NavigationService(
         val position = draft.position.trim().uppercase()
         if (locations.findByCode(position) == null) throw NavigationValidationException("导航位置不存在：$position")
         validateParent(draft.parentId, currentId, position)
-        val base = draft.copy(name = name, position = position, category = draft.category?.trim()?.takeIf { it.isNotBlank() })
+        val iconPath = draft.iconPath?.trim()?.takeIf { it.isNotBlank() }
+        if (iconPath != null && (!iconPath.startsWith("/static/") || iconPath.length > 1000)) {
+            throw NavigationValidationException("导航图标必须使用有效的 /static/ 资源路径")
+        }
+        val base = draft.copy(
+            name = name,
+            position = position,
+            category = draft.category?.trim()?.takeIf { it.isNotBlank() },
+            iconPath = iconPath,
+        )
         return when (draft.targetType) {
             NavigationTargetType.HOME, NavigationTargetType.PLACEHOLDER -> base.copy(targetColumnId = null, targetPageId = null, targetUrl = null)
             NavigationTargetType.COLUMN -> {
@@ -92,6 +101,9 @@ class NavigationService(
             NavigationOpenMode.SAME_WINDOW -> false
             NavigationOpenMode.DEFAULT -> external
         }
-        return PublicNavigation(id, name, position, category, sortOrder, targetType, href, external, parentId, newWindow, targetType != NavigationTargetType.PLACEHOLDER)
+        return PublicNavigation(
+            id, name, position, category, sortOrder, targetType, href, external,
+            parentId, newWindow, targetType != NavigationTargetType.PLACEHOLDER, iconPath,
+        )
     }
 }

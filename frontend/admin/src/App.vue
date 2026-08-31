@@ -5,7 +5,7 @@ const items = [
   { to: '/navigation', label: '导航管理', icon: '导' },
   { to: '/pages', label: '固定页面', icon: '页' },
   { to: '/lists', label: '列表管理', icon: '列' },
-  { to: '/advertisements', label: '广告管理', icon: '广' },
+  { to: '/advertisements', label: '宣传展示', icon: '展' },
   { to: '/site-config', label: '网站属性', icon: '属' },
   { to: '/static-resources', label: '静态资源', icon: '资' },
 ]

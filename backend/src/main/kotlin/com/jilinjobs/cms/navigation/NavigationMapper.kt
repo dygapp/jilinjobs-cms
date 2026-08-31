@@ -5,23 +5,26 @@ import org.springframework.stereotype.Repository
 
 @Mapper
 interface NavigationMapper {
-    @Select("SELECT n.id,n.parent_id,n.name,n.position,n.category,n.target_type,n.target_column_id,n.target_page_id,n.target_url,n.open_mode,n.sort_order,n.enabled FROM cms_navigation n ORDER BY n.position,COALESCE(n.parent_id,0),n.sort_order,n.id")
+    @Select("SELECT n.id,n.parent_id,n.name,n.position,n.category,n.target_type,n.target_column_id,n.target_page_id,n.target_url,n.open_mode,n.icon_path,n.sort_order,n.enabled FROM cms_navigation n ORDER BY n.position,COALESCE(n.parent_id,0),n.sort_order,n.id")
     fun findAll(): List<NavigationRecord>
 
-    @Select("SELECT n.id,n.parent_id,n.name,n.position,n.category,n.target_type,n.target_column_id,n.target_page_id,n.target_url,n.open_mode,n.sort_order,n.enabled FROM cms_navigation n JOIN cms_navigation_location l ON l.code=n.position WHERE n.enabled=1 AND l.enabled=1 ORDER BY l.sort_order,n.position,COALESCE(n.parent_id,0),n.sort_order,n.id")
+    @Select("SELECT n.id,n.parent_id,n.name,n.position,n.category,n.target_type,n.target_column_id,n.target_page_id,n.target_url,n.open_mode,n.icon_path,n.sort_order,n.enabled FROM cms_navigation n JOIN cms_navigation_location l ON l.code=n.position WHERE n.enabled=1 AND l.enabled=1 ORDER BY l.sort_order,n.position,COALESCE(n.parent_id,0),n.sort_order,n.id")
     fun findEnabled(): List<NavigationRecord>
 
-    @Select("SELECT id,parent_id,name,position,category,target_type,target_column_id,target_page_id,target_url,open_mode,sort_order,enabled FROM cms_navigation WHERE id=#{id}")
+    @Select("SELECT id,parent_id,name,position,category,target_type,target_column_id,target_page_id,target_url,open_mode,icon_path,sort_order,enabled FROM cms_navigation WHERE id=#{id}")
     fun findById(@Param("id") id: Long): NavigationRecord?
 
     @Select("SELECT COUNT(*) FROM cms_navigation WHERE position=#{position}")
     fun countByPosition(@Param("position") position: String): Long
 
-    @Insert("INSERT INTO cms_navigation(parent_id,name,position,category,target_type,target_column_id,target_page_id,target_url,open_mode,sort_order,enabled) VALUES(#{parentId},#{name},#{position},#{category},#{targetType},#{targetColumnId},#{targetPageId},#{targetUrl},#{openMode},#{sortOrder},#{enabled})")
+    @Select("SELECT icon_path FROM cms_navigation WHERE enabled=1 AND icon_path LIKE '/static/%'")
+    fun findReferencedIcons(): List<String>
+
+    @Insert("INSERT INTO cms_navigation(parent_id,name,position,category,target_type,target_column_id,target_page_id,target_url,open_mode,icon_path,sort_order,enabled) VALUES(#{parentId},#{name},#{position},#{category},#{targetType},#{targetColumnId},#{targetPageId},#{targetUrl},#{openMode},#{iconPath},#{sortOrder},#{enabled})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     fun insert(record: NavigationRecord): Int
 
-    @Update("UPDATE cms_navigation SET parent_id=#{parentId},name=#{name},position=#{position},category=#{category},target_type=#{targetType},target_column_id=#{targetColumnId},target_page_id=#{targetPageId},target_url=#{targetUrl},open_mode=#{openMode},sort_order=#{sortOrder},enabled=#{enabled} WHERE id=#{id}")
+    @Update("UPDATE cms_navigation SET parent_id=#{parentId},name=#{name},position=#{position},category=#{category},target_type=#{targetType},target_column_id=#{targetColumnId},target_page_id=#{targetPageId},target_url=#{targetUrl},open_mode=#{openMode},icon_path=#{iconPath},sort_order=#{sortOrder},enabled=#{enabled} WHERE id=#{id}")
     fun update(record: NavigationRecord): Int
 
     @Delete("DELETE FROM cms_navigation WHERE id=#{id}")
@@ -39,6 +42,7 @@ data class NavigationRecord(
     var targetPageId: Long? = null,
     var targetUrl: String? = null,
     var openMode: String = NavigationOpenMode.DEFAULT.name,
+    var iconPath: String? = null,
     var sortOrder: Int = 0,
     var enabled: Boolean = true,
 )
@@ -67,12 +71,12 @@ class MyBatisNavigationRepository(private val mapper: NavigationMapper) : Naviga
 
     private fun NavigationDraft.record(id: Long? = null) = NavigationRecord(
         id, parentId, name, position, category, targetType.name, targetColumnId, targetPageId,
-        targetUrl, openMode.name, sortOrder, enabled,
+        targetUrl, openMode.name, iconPath, sortOrder, enabled,
     )
 
     private fun NavigationRecord.model() = CmsNavigation(
         requireNotNull(id), name, position, category, NavigationTargetType.valueOf(targetType),
         targetColumnId, targetUrl, sortOrder, enabled, parentId, targetPageId,
-        NavigationOpenMode.valueOf(openMode),
+        NavigationOpenMode.valueOf(openMode), iconPath,
     )
 }

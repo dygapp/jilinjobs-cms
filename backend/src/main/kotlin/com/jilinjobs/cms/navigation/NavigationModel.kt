@@ -16,6 +16,7 @@ data class CmsNavigation(
     val parentId: Long? = null,
     val targetPageId: Long? = null,
     val openMode: NavigationOpenMode = NavigationOpenMode.DEFAULT,
+    val iconPath: String? = null,
 )
 
 data class NavigationDraft(
@@ -30,6 +31,7 @@ data class NavigationDraft(
     val parentId: Long? = null,
     val targetPageId: Long? = null,
     val openMode: NavigationOpenMode = NavigationOpenMode.DEFAULT,
+    val iconPath: String? = null,
 )
 
 data class PublicNavigation(
@@ -44,6 +46,7 @@ data class PublicNavigation(
     val parentId: Long? = null,
     val newWindow: Boolean = false,
     val clickable: Boolean = true,
+    val iconPath: String? = null,
 )
 
 class NavigationValidationException(message: String) : RuntimeException(message)

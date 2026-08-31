@@ -10,25 +10,38 @@ test('EU-21：独立管理端 Shell 提供八类 CMS 管理入口', async ({ pag
   await page.goto('/admin/')
   await expect(page.getByRole('heading',{name:'文章管理'})).toBeVisible()
   for (const id of ['articles','columns','navigation','pages','lists','advertisements','site-config','static-resources']) await expect(page.getByTestId(`admin-nav-${id}`)).toBeVisible()
+  await expect(page.getByTestId('admin-nav-advertisements')).toContainText('宣传展示')
   await page.getByTestId('admin-nav-lists').click()
   await expect(page).toHaveURL(/\/admin\/lists$/)
   await expect(page.getByRole('heading',{name:'列表管理'})).toBeVisible()
 })
 
-test('EU-21：导航按位置切换并显示树形主数据', async ({ page }) => {
+test('EU-21：导航位置、条目图标与树形主数据形成管理闭环', async ({ page, request }) => {
   await page.goto('/admin/navigation')
   await expect(page.getByTestId('navigation-location-MAIN')).toBeVisible()
   await expect(page.getByTestId('navigation-location-HOME_SHORTCUT')).toBeVisible()
   await page.getByTestId('navigation-location-HOME_SHORTCUT').click()
   await expect(page.getByTestId('navigation-tree-table')).toContainText('就业信息填报')
   await expect(page.getByTestId('navigation-tree-table')).toContainText('举报电话及邮箱')
+
+  const publicResponse=await request.get('/api/public/navigations')
+  expect(publicResponse.ok()).toBeTruthy()
+  const publicItems=await publicResponse.json() as Array<{name:string;position:string;iconPath:string|null}>
+  expect(publicItems.find(item=>item.position==='HOME_SHORTCUT'&&item.name==='就业信息填报')?.iconPath).toBe('/static/icons/top-nav-01.png')
+
+  const firstRow=page.getByTestId('navigation-tree-table').getByRole('row').filter({hasText:'就业信息填报'})
+  await firstRow.getByRole('button',{name:'编辑'}).click()
+  await expect(page.getByRole('dialog',{name:'编辑导航'}).getByTestId('image-resource-picker')).toBeVisible()
+  await expect(page.getByRole('dialog',{name:'编辑导航'}).locator('img[alt="当前图片"]')).toHaveAttribute('src','/static/icons/top-nav-01.png')
+  await page.getByRole('dialog',{name:'编辑导航'}).getByRole('button',{name:'取消'}).click()
+
   await page.getByTestId('navigation-location-HOME_SHORTCUT').getByRole('button',{name:'导航位置操作'}).click()
   await expect(page.getByRole('menuitem',{name:'编辑'})).toBeVisible()
   await expect(page.getByRole('menuitem',{name:'删除'})).toBeVisible()
   await page.keyboard.press('Escape')
 })
 
-test('EU-21：通用列表和广告位承载首页运营数据', async ({ page }) => {
+test('EU-21：通用列表只维护数据属性并复用统一图片上传', async ({ page }) => {
   await page.goto('/admin/lists')
   await expect(page.getByTestId('cms-list-HOME_CAROUSEL')).toBeVisible()
   await page.getByTestId('cms-list-HOME_CAROUSEL').click()
@@ -37,18 +50,35 @@ test('EU-21：通用列表和广告位承载首页运营数据', async ({ page }
   await expect(page.getByRole('menuitem',{name:'编辑'})).toBeVisible()
   await expect(page.getByRole('menuitem',{name:'删除'})).toBeVisible()
   await page.keyboard.press('Escape')
+
+  const carouselRow=page.getByTestId('cms-list-item-table').getByRole('row').filter({hasText:'这里美得不愿离开'})
+  await carouselRow.getByRole('button',{name:'编辑'}).click()
+  const dialog=page.getByRole('dialog',{name:'编辑列表项'})
+  await expect(dialog.getByText('标题作为后台识别名称保留')).toBeVisible()
+  await dialog.getByTestId('image-resource-upload').setInputFiles({
+    name:'e2e-list-image.png',
+    mimeType:'image/png',
+    buffer:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=','base64'),
+  })
+  await expect(dialog.locator('img[alt="当前图片"]')).toHaveAttribute('src',/\/static\/uploads\/lists\/HOME_CAROUSEL\//)
+  await dialog.getByRole('button',{name:'取消'}).click()
+})
+
+test('EU-21：宣传展示承载首页运营数据并保留 NO_LINK 行为', async ({ page }) => {
   await page.goto('/admin/advertisements')
+  await expect(page.getByRole('heading',{name:'宣传展示管理'})).toBeVisible()
   await expect(page.getByTestId('ad-slot-HOME_RECRUITMENT_PROMO')).toBeVisible()
   await expect(page.getByTestId('advertisement-table')).toContainText('吉林省高校毕业生招聘活动')
   await expect(page.getByTestId('advertisement-table')).toContainText('展示中')
   const promoRow=page.getByTestId('advertisement-table').getByRole('row').filter({hasText:'吉林省高校毕业生招聘活动'})
   await promoRow.getByRole('button',{name:'编辑'}).click()
-  await expect(page.getByRole('dialog',{name:'编辑广告'})).toBeVisible()
+  await expect(page.getByRole('dialog',{name:'编辑展示内容'})).toBeVisible()
+  await expect(page.getByRole('dialog',{name:'编辑展示内容'}).getByTestId('image-resource-picker')).toBeVisible()
   await page.getByTestId('advertisement-open-mode').click()
   await expect(page.getByRole('option',{name:'不跳转，仅展示图片'})).toBeVisible()
   await page.keyboard.press('Escape')
-  await page.getByRole('button',{name:'取消'}).click()
-  await page.getByTestId('ad-slot-HOME_RECRUITMENT_PROMO').getByRole('button',{name:'广告位操作'}).click()
+  await page.getByRole('dialog',{name:'编辑展示内容'}).getByRole('button',{name:'取消'}).click()
+  await page.getByTestId('ad-slot-HOME_RECRUITMENT_PROMO').getByRole('button',{name:'展示位操作'}).click()
   await expect(page.getByRole('menuitem',{name:'编辑'})).toBeVisible()
   await expect(page.getByRole('menuitem',{name:'删除'})).toBeVisible()
   await page.keyboard.press('Escape')

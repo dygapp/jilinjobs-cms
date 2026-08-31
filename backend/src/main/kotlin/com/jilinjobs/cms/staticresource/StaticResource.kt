@@ -2,6 +2,7 @@ package com.jilinjobs.cms.staticresource
 
 import com.jilinjobs.cms.advertisement.AdvertisementMapper
 import com.jilinjobs.cms.listing.CmsListMapper
+import com.jilinjobs.cms.navigation.NavigationMapper
 import com.jilinjobs.cms.siteconfig.SiteConfigMapper
 import jakarta.servlet.http.HttpServletRequest
 import java.nio.charset.StandardCharsets
@@ -34,6 +35,7 @@ class StaticResourceService(
     private val siteConfigMapper: SiteConfigMapper,
     private val listMapper: CmsListMapper? = null,
     private val advertisementMapper: AdvertisementMapper? = null,
+    private val navigationMapper: NavigationMapper? = null,
 ) {
     private val root = Paths.get(rootText).toAbsolutePath().normalize().also { Files.createDirectories(it) }
     private val trashRoot = root.resolve(".trash").also { Files.createDirectories(it) }
@@ -147,6 +149,7 @@ class StaticResourceService(
         }
         listMapper?.findReferencedImages()?.forEach { normalizedConfiguredStaticPath(it)?.let(::add) }
         advertisementMapper?.findReferencedImages()?.forEach { normalizedConfiguredStaticPath(it)?.let(::add) }
+        navigationMapper?.findReferencedIcons()?.forEach { normalizedConfiguredStaticPath(it)?.let(::add) }
     }
 
     private fun normalizedConfiguredStaticPath(value: String): String? {

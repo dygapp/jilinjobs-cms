@@ -28,6 +28,21 @@ class NavigationServiceTest {
     }
 
     @Test
+    fun `导航图标作为条目属性公开输出`() {
+        val service = NavigationService(InMemoryNavigationRepository(), StubColumnQuery(), FakeNavigationLocationMapper("HOME_SHORTCUT"))
+        service.create(NavigationDraft("快捷入口", "HOME_SHORTCUT", null, NavigationTargetType.LINK, null, "/service", 10, true, iconPath = "/static/icons/top-nav-01.png"))
+        assertEquals("/static/icons/top-nav-01.png", service.listPublic().single().iconPath)
+    }
+
+    @Test
+    fun `导航图标必须引用静态资源路径`() {
+        val service = NavigationService(InMemoryNavigationRepository(), StubColumnQuery(), FakeNavigationLocationMapper("HOME_SHORTCUT"))
+        assertThrows(NavigationValidationException::class.java) {
+            service.create(NavigationDraft("快捷入口", "HOME_SHORTCUT", null, NavigationTargetType.LINK, null, "/service", 10, true, iconPath = "https://example.com/icon.png"))
+        }
+    }
+
+    @Test
     fun `栏目目标必须引用已有栏目`() {
         val service = NavigationService(InMemoryNavigationRepository(), StubColumnQuery(), FakeNavigationLocationMapper("MAIN"))
         val error = assertThrows(NavigationValidationException::class.java) {
@@ -72,7 +87,7 @@ private class InMemoryNavigationRepository : NavigationRepository {
     override fun update(id: Long, draft: NavigationDraft): CmsNavigation = draft.toModel(id).also { data[id] = it }
     override fun delete(id: Long) { data.remove(id) }
     private fun sorted(items: Collection<CmsNavigation>) = items.sortedWith(compareBy<CmsNavigation> { it.position }.thenBy { it.sortOrder }.thenBy { it.id })
-    private fun NavigationDraft.toModel(id: Long) = CmsNavigation(id, name, position, category, targetType, targetColumnId, targetUrl, sortOrder, enabled, parentId, targetPageId, openMode)
+    private fun NavigationDraft.toModel(id: Long) = CmsNavigation(id, name, position, category, targetType, targetColumnId, targetUrl, sortOrder, enabled, parentId, targetPageId, openMode, iconPath)
 }
 
 private class FakeNavigationLocationMapper(vararg codes: String) : NavigationLocationMapper {
