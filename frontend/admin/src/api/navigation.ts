@@ -1,8 +1,8 @@
 export type NavigationTargetType='HOME'|'COLUMN'|'PAGE'|'LINK'|'PLACEHOLDER'
 export type NavigationOpenMode='DEFAULT'|'SAME_WINDOW'|'NEW_WINDOW'
-export interface NavigationLocation{id:number;code:string;name:string;description:string;sortOrder:number;enabled:boolean;system:boolean}
+export interface NavigationLocation{id:number;code:string;name:string;description:string;sortOrder:number;enabled:boolean;system:boolean;preset:boolean}
 export interface NavigationLocationDraft{code:string;name:string;description:string;sortOrder:number;enabled:boolean;system:boolean}
-export interface CmsNavigation{id:number;parentId:number|null;name:string;position:string;category:string|null;targetType:NavigationTargetType;targetColumnId:number|null;targetPageId:number|null;targetUrl:string|null;openMode:NavigationOpenMode;sortOrder:number;enabled:boolean;iconPath:string|null}
+export interface CmsNavigation{id:number;parentId:number|null;name:string;position:string;category:string|null;targetType:NavigationTargetType;targetColumnId:number|null;targetPageId:number|null;targetUrl:string|null;openMode:NavigationOpenMode;sortOrder:number;enabled:boolean;iconPath:string|null;preset:boolean}
 export interface NavigationDraft{name:string;position:string;category:string|null;targetType:NavigationTargetType;targetColumnId:number|null;targetUrl:string|null;sortOrder:number;enabled:boolean;parentId?:number|null;targetPageId?:number|null;openMode?:NavigationOpenMode;iconPath?:string|null}
 export interface PublicNavigation{id:number;parentId:number|null;name:string;position:string;category:string|null;sortOrder:number;targetType:NavigationTargetType;href:string;external:boolean;newWindow:boolean;clickable:boolean;iconPath:string|null}
 async function request<T>(url:string,init?:RequestInit):Promise<T>{const r=await fetch(url,{...init,headers:{'Content-Type':'application/json',...(init?.headers??{})}});if(!r.ok){const e=await r.json().catch(()=>({message:`请求失败：${r.status}`})) as {message?:string};throw new Error(e.message??`请求失败：${r.status}`)}if(r.status===204)return undefined as T;return r.json() as Promise<T>}
