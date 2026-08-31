@@ -37,6 +37,7 @@ const treeRows = computed<Node[]>(() => {
 })
 
 const parentOptions = computed(() => columns.value.filter(item => item.id !== editingId.value))
+const editingColumn = computed(() => editingId.value == null ? null : columns.value.find(item => item.id === editingId.value) || null)
 const asColumn = (row: unknown) => row as CmsColumn
 
 onMounted(refresh)
@@ -101,14 +102,14 @@ const message = (error: unknown) => error instanceof Error ? error.message : '�
       <div>
         <p class="eyebrow">内容结构</p>
         <h1>栏目管理</h1>
-        <p class="subtitle">维护普通信息发布栏目、稳定 Alias、层级和文章封面数据策略。</p>
+        <p class="subtitle">维护普通信息发布栏目、稳定 Alias、层级和文章封面数据策略；预置栏目属于网站规划基线，不可删除。</p>
       </div>
       <el-button data-testid="add-column" type="primary" @click="openCreate()">新增栏目</el-button>
     </header>
 
     <el-card shadow="never">
       <el-table v-loading="loading" :data="treeRows" row-key="id" default-expand-all>
-        <el-table-column prop="name" label="栏目名称" min-width="220" />
+        <el-table-column label="栏目名称" min-width="220"><template #default="scope"><span>{{ asColumn(scope.row).name }}</span><el-tag v-if="asColumn(scope.row).preset" :data-testid="`preset-column-${asColumn(scope.row).id}`" size="small" type="info" style="margin-left:8px">预置</el-tag></template></el-table-column>
         <el-table-column prop="alias" label="Alias" min-width="180" />
         <el-table-column label="文章封面" width="110"><template #default="scope">{{ policyName(asColumn(scope.row).coverPolicy) }}</template></el-table-column>
         <el-table-column prop="sortOrder" label="排序" width="90" />
@@ -121,7 +122,7 @@ const message = (error: unknown) => error instanceof Error ? error.message : '�
           <template #default="scope">
             <el-button link type="primary" @click="openCreate(scope.row.id)">新增子栏目</el-button>
             <el-button :data-testid="`edit-${scope.row.id}`" link type="primary" @click="openEdit(asColumn(scope.row))">编辑</el-button>
-            <el-button :data-testid="`delete-${scope.row.id}`" link type="danger" @click="remove(asColumn(scope.row))">删除</el-button>
+            <el-button v-if="!asColumn(scope.row).preset" :data-testid="`delete-${scope.row.id}`" link type="danger" @click="remove(asColumn(scope.row))">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -130,7 +131,7 @@ const message = (error: unknown) => error instanceof Error ? error.message : '�
     <el-dialog v-model="dialogVisible" :title="editingId == null ? '新增栏目' : '编辑栏目'" width="540px">
       <el-form label-width="100px">
         <el-form-item label="栏目名称" required><el-input v-model="form.name" placeholder="请输入栏目名称" /></el-form-item>
-        <el-form-item label="Alias"><el-input v-model="form.alias" placeholder="留空时自动生成兼容别名" /></el-form-item>
+        <el-form-item label="Alias"><el-input v-model="form.alias" :disabled="Boolean(editingColumn?.preset)" placeholder="留空时自动生成兼容别名" /><div v-if="editingColumn?.preset" data-testid="preset-column-alias-hint" style="color:#909399;font-size:12px">预置栏目的 Alias 是稳定站点身份，不允许修改。</div></el-form-item>
         <el-form-item label="上级栏目"><el-select v-model="form.parentId" clearable style="width:100%"><el-option v-for="item in parentOptions" :key="item.id" :label="item.name" :value="item.id" /></el-select></el-form-item>
         <el-form-item label="文章封面">
           <el-select v-model="form.coverPolicy" data-testid="column-cover-policy" style="width:100%">
