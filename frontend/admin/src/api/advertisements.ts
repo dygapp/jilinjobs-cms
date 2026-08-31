@@ -1,4 +1,4 @@
-export interface AdvertisementSlot{id:number;code:string;name:string;description:string;sortOrder:number;enabled:boolean;system:boolean}
+export interface AdvertisementSlot{id:number;code:string;name:string;description:string;sortOrder:number;enabled:boolean;system:boolean;preset:boolean}
 export interface Advertisement{id:number;slotId:number;title:string;imagePath:string;url:string|null;openMode:string;startAt:string|null;endAt:string|null;sortOrder:number;enabled:boolean}
 export interface PublicAdvertisementSlot{id:number;code:string;name:string;advertisements:Advertisement[]}
 export interface AdvertisementSlotDraft{code:string;name:string;description:string;sortOrder:number;enabled:boolean;system:boolean}
