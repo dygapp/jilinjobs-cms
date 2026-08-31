@@ -20,6 +20,15 @@ test('EU-21：导航位置、条目图标与树形主数据形成管理闭环', 
   await page.goto('/admin/navigation')
   await expect(page.getByTestId('navigation-location-MAIN')).toBeVisible()
   await expect(page.getByTestId('navigation-location-HOME_SHORTCUT')).toBeVisible()
+  await expect(page.getByTestId('navigation-location-HOME_QUICK')).toBeVisible()
+  await expect(page.getByTestId('navigation-location-SERVICE')).toHaveCount(0)
+  await expect(page.getByTestId('navigation-location-SITE')).toHaveCount(0)
+
+  const locationsResponse=await request.get('/api/admin/navigation-locations')
+  expect(locationsResponse.ok()).toBeTruthy()
+  const locations=await locationsResponse.json() as Array<{code:string}>
+  expect(locations.map(item=>item.code)).toEqual(['MAIN','HOME_SHORTCUT','HOME_QUICK'])
+
   await page.getByTestId('navigation-location-HOME_SHORTCUT').click()
   await expect(page.getByTestId('navigation-tree-table')).toContainText('就业信息填报')
   await expect(page.getByTestId('navigation-tree-table')).toContainText('举报电话及邮箱')
