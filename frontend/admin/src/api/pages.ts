@@ -1,6 +1,6 @@
 export type PageRenderMode='RICH_TEXT'|'EMBED_PLACEHOLDER'|'INTERNAL_STATIC'
-export interface CmsPageGroup{id:number;alias:string;name:string;sortOrder:number;enabled:boolean}
-export interface CmsPage{id:number;groupId:number|null;alias:string;name:string;bodyHtml:string;renderMode:PageRenderMode;embedUrl:string|null;sortOrder:number;enabled:boolean}
+export interface CmsPageGroup{id:number;alias:string;name:string;sortOrder:number;enabled:boolean;preset:boolean}
+export interface CmsPage{id:number;groupId:number|null;alias:string;name:string;bodyHtml:string;renderMode:PageRenderMode;embedUrl:string|null;sortOrder:number;enabled:boolean;preset:boolean}
 export interface PageGroupDraft{alias:string;name:string;sortOrder:number;enabled:boolean}
 export interface PageDraft{groupId:number|null;alias:string;name:string;bodyHtml:string;renderMode:PageRenderMode;embedUrl:string|null;sortOrder:number;enabled:boolean}
 export interface PublicPageMember{alias:string;name:string;href:string;sortOrder:number}
