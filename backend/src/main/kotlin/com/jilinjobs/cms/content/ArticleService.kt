@@ -64,7 +64,7 @@ class ArticleService(
         if (size !in 1..50) throw ArticleValidationException("每页数量必须在 1 到 50 之间")
         columnId?.let { if (columnQuery.find(it) == null) throw ArticleValidationException("所属栏目不存在：$it") }
         val rows = repository.findPublished(columnId, size, page * size)
-        return PublicArticlePage(rows.map(::summary), page, size, repository.countPublished(columnId))
+        return PublicArticlePage(rows.map { summary(withResources(it)) }, page, size, repository.countPublished(columnId))
     }
 
     @Transactional
@@ -143,6 +143,7 @@ class ArticleService(
             article.source,
             article.articleType,
             article.externalUrl,
+            article.coverResourceId,
         )
     }
 
