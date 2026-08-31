@@ -2,6 +2,7 @@ package com.jilinjobs.cms.content
 
 import com.jilinjobs.cms.column.CmsColumn
 import com.jilinjobs.cms.column.ColumnQuery
+import com.jilinjobs.cms.common.ContentImagePolicy
 import com.jilinjobs.cms.resource.ArticleResourceAssociation
 import com.jilinjobs.cms.resource.ArticleResourceLinks
 import com.jilinjobs.cms.resource.CmsResource
@@ -101,6 +102,51 @@ class ArticleServiceTest {
     }
 
     @Test
+    fun `封面必填栏目允许无封面草稿但阻止发布`() {
+        val service = ArticleService(InMemoryArticleRepository(), RequiredCoverColumnQuery(), InMemoryArticleResourceAssociation())
+        val created = service.create(sampleDraft().copy(coverResourceId = null))
+
+        assertEquals(ArticleStatus.DRAFT, created.status)
+        assertNull(created.coverResourceId)
+        assertThrows(ArticleValidationException::class.java) { service.publish(created.id) }
+    }
+
+    @Test
+    fun `已发布文章不能编辑为违反封面必填契约的状态`() {
+        val repository = InMemoryArticleRepository()
+        val resources = InMemoryArticleResourceAssociation()
+        val service = ArticleService(repository, RequiredCoverColumnQuery(), resources)
+        val created = service.create(sampleDraft())
+        service.publish(created.id)
+
+        assertThrows(ArticleValidationException::class.java) {
+            service.update(created.id, sampleDraft().copy(title = "移除封面的编辑", coverResourceId = null))
+        }
+
+        val persisted = service.get(created.id)
+        assertEquals(ArticleStatus.PUBLISHED, persisted.status)
+        assertEquals(11L, persisted.coverResourceId)
+    }
+
+    @Test
+    fun `不使用封面的栏目拒绝保存封面数据`() {
+        val service = ArticleService(InMemoryArticleRepository(), NoCoverColumnQuery(), InMemoryArticleResourceAssociation())
+        assertThrows(ArticleValidationException::class.java) { service.create(sampleDraft()) }
+        val created = service.create(sampleDraft().copy(coverResourceId = null))
+        assertNull(created.coverResourceId)
+    }
+
+    @Test
+    fun `公开文章摘要携带封面资源引用`() {
+        val service = ArticleService(InMemoryArticleRepository(), FixedColumnQuery(), InMemoryArticleResourceAssociation())
+        val created = service.create(sampleDraft())
+        service.publish(created.id)
+
+        val summary = service.listPublic(1, 0, 10).items.single()
+        assertEquals(11L, summary.coverResourceId)
+    }
+
+    @Test
     fun `文章只允许通过显式状态操作发布撤回并重新发布`() {
         val repository = InMemoryArticleRepository()
         val resources = InMemoryArticleResourceAssociation()
@@ -169,6 +215,14 @@ private class FixedColumnQuery : ColumnQuery {
 
 private class RecruitmentColumnQuery : ColumnQuery {
     override fun find(id: Long): CmsColumn? = CmsColumn(id, null, "招聘公告", 0, true, "recruitment-announcement")
+}
+
+private class RequiredCoverColumnQuery : ColumnQuery {
+    override fun find(id: Long): CmsColumn? = CmsColumn(id, null, "图片必填栏目", 0, true, "required-cover", ContentImagePolicy.REQUIRED)
+}
+
+private class NoCoverColumnQuery : ColumnQuery {
+    override fun find(id: Long): CmsColumn? = CmsColumn(id, null, "无封面栏目", 0, true, "no-cover", ContentImagePolicy.NONE)
 }
 
 private class InMemoryArticleResourceAssociation : ArticleResourceAssociation {
