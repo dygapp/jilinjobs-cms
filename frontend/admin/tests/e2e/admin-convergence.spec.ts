@@ -19,9 +19,13 @@ test('EU-21：导航按位置切换并显示树形主数据', async ({ page }) =
   await page.goto('/admin/navigation')
   await expect(page.getByTestId('navigation-location-MAIN')).toBeVisible()
   await expect(page.getByTestId('navigation-location-HOME_SHORTCUT')).toBeVisible()
-  await page.getByTestId('navigation-location-HOME_SHORTCUT').getByRole('button',{name:'首页快捷入口'}).click()
+  await page.getByTestId('navigation-location-HOME_SHORTCUT').click()
   await expect(page.getByTestId('navigation-tree-table')).toContainText('就业信息填报')
   await expect(page.getByTestId('navigation-tree-table')).toContainText('举报电话及邮箱')
+  await page.getByTestId('navigation-location-HOME_SHORTCUT').getByRole('button',{name:'导航位置操作'}).click()
+  await expect(page.getByRole('menuitem',{name:'编辑'})).toBeVisible()
+  await expect(page.getByRole('menuitem',{name:'删除'})).toBeVisible()
+  await page.keyboard.press('Escape')
 })
 
 test('EU-21：通用列表和广告位承载首页运营数据', async ({ page }) => {
