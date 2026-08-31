@@ -168,8 +168,11 @@ class SiteConfigService(
             "BOOLEAN" -> if (normalized.lowercase() !in setOf("true", "false")) {
                 throw SiteConfigValidationException("网站属性 $key 必须是 true 或 false")
             }
-            "INTEGER" -> if (normalized.toLongOrNull() == null) {
-                throw SiteConfigValidationException("网站属性 $key 必须是整数")
+            "INTEGER" -> {
+                val number = normalized.toLongOrNull() ?: throw SiteConfigValidationException("网站属性 $key 必须是整数")
+                if (key == "HOME_CAROUSEL_INTERVAL_SECONDS" && number <= 0) {
+                    throw SiteConfigValidationException("网站属性 $key 必须是大于 0 的整数秒")
+                }
             }
         }
     }
