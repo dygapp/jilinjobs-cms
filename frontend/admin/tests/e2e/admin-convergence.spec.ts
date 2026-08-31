@@ -61,10 +61,16 @@ test('EU-21：导航位置、条目图标与树形主数据形成管理闭环', 
   await page.keyboard.press('Escape')
 })
 
-test('EU-21：通用列表只维护数据属性并复用统一图片上传', async ({ page }) => {
+test('EU-21：通用列表只维护数据属性、图片契约并复用统一图片上传', async ({ page, request }) => {
+  const response=await request.get('/api/admin/lists');expect(response.ok()).toBeTruthy()
+  const definitions=await response.json() as Array<{id:number;code:string;imagePolicy:string}>
+  expect(definitions.find(item=>item.code==='HOME_CAROUSEL')?.imagePolicy).toBe('REQUIRED')
+  expect(definitions.find(item=>item.code==='SITE_RELATED')?.imagePolicy).toBe('NONE')
+
   await page.goto('/admin/lists')
   await expect(page.getByTestId('cms-list-HOME_CAROUSEL')).toBeVisible()
   await page.getByTestId('cms-list-HOME_CAROUSEL').click()
+  await expect(page.getByTestId('active-list-image-policy')).toContainText('图片必填')
   await expect(page.getByTestId('cms-list-item-table')).toContainText('这里美得不愿离开')
   await page.getByTestId('cms-list-HOME_CAROUSEL').getByRole('button',{name:'列表操作'}).click()
   await expect(page.getByRole('menuitem',{name:'编辑'})).toBeVisible()
@@ -82,6 +88,29 @@ test('EU-21：通用列表只维护数据属性并复用统一图片上传', asy
   })
   await expect(dialog.locator('img[alt="当前图片"]')).toHaveAttribute('src',/\/static\/uploads\/lists\/HOME_CAROUSEL\//)
   await dialog.getByRole('button',{name:'取消'}).click()
+
+  await page.getByTestId('cms-list-SITE_RELATED').click()
+  await expect(page.getByTestId('active-list-image-policy')).toContainText('不使用图片')
+  await page.getByTestId('add-cms-list-item').click()
+  await expect(page.getByRole('dialog',{name:'新增列表项'}).getByTestId('list-image-disabled')).toBeVisible()
+  await page.getByRole('dialog',{name:'新增列表项'}).getByRole('button',{name:'取消'}).click()
+})
+
+test('EU-21：列表图片策略在服务端约束列表项数据', async ({ request }, testInfo) => {
+  const suffix=`${Date.now()}-${testInfo.retry}`
+  const requiredResponse=await request.post('/api/admin/lists',{data:{code:`E2E_REQUIRED_${suffix.replaceAll('-','_')}`,name:'E2E 图片必填',groupCode:'E2E',imagePolicy:'REQUIRED',description:'',sortOrder:990,enabled:true,system:false}})
+  expect(requiredResponse.ok()).toBeTruthy()
+  const requiredList=await requiredResponse.json() as {id:number}
+  const missingImage=await request.post(`/api/admin/lists/${requiredList.id}/items`,{data:{title:'无图项目',subtitle:null,url:null,imagePath:null,openMode:'DEFAULT',sortOrder:0,enabled:true,extraJson:null}})
+  expect(missingImage.ok()).toBeFalsy()
+  expect((await missingImage.json() as {message:string}).message).toContain('要求每个列表项设置图片')
+
+  const noneResponse=await request.post('/api/admin/lists',{data:{code:`E2E_NONE_${suffix.replaceAll('-','_')}`,name:'E2E 不使用图片',groupCode:'E2E',imagePolicy:'NONE',description:'',sortOrder:991,enabled:true,system:false}})
+  expect(noneResponse.ok()).toBeTruthy()
+  const noneList=await noneResponse.json() as {id:number}
+  const unexpectedImage=await request.post(`/api/admin/lists/${noneList.id}/items`,{data:{title:'错误带图项目',subtitle:null,url:null,imagePath:'/static/home/carousel-01.jpg',openMode:'DEFAULT',sortOrder:0,enabled:true,extraJson:null}})
+  expect(unexpectedImage.ok()).toBeFalsy()
+  expect((await unexpectedImage.json() as {message:string}).message).toContain('不使用图片')
 })
 
 test('EU-21：宣传展示承载首页运营数据并保留 NO_LINK 行为', async ({ page }) => {
@@ -104,15 +133,41 @@ test('EU-21：宣传展示承载首页运营数据并保留 NO_LINK 行为', asy
   await page.keyboard.press('Escape')
 })
 
-test('EU-21：网站属性支持运行时自定义 Key 并阻止非法 JSON', async ({ page, request }) => {
+test('EU-21：网站属性使用资源分组、整数展示参数并阻止非法值', async ({ page, request }) => {
+  const groupsResponse=await request.get('/api/admin/site-config/groups');expect(groupsResponse.ok()).toBeTruthy()
+  const groups=await groupsResponse.json() as Array<{code:string;name:string;order:number}>
+  expect(groups.map(group=>group.code)).toEqual(['BASIC','BRAND','CONTACT','FOOTER','PRESENTATION','GENERAL'])
+
   const key=`E2E_JSON_${Date.now()}`
-  const created=await request.post('/api/admin/site-config',{data:{key,name:'E2E JSON 属性',groupCode:'E2E',value:'{}',valueType:'JSON',description:'测试运行时属性',sortOrder:0,required:false,system:false,enabled:true}})
+  const created=await request.post('/api/admin/site-config',{data:{key,name:'E2E JSON 属性',groupCode:'GENERAL',value:'{}',valueType:'JSON',description:'测试运行时属性',sortOrder:0,required:false,system:false,enabled:true}})
   expect(created.ok()).toBeTruthy()
+  const unknownGroup=await request.post('/api/admin/site-config',{data:{key:`E2E_UNKNOWN_${Date.now()}`,name:'未知分组属性',groupCode:'UNKNOWN',value:'x',valueType:'TEXT',description:'',sortOrder:0,required:false,system:false,enabled:true}})
+  expect(unknownGroup.ok()).toBeFalsy()
+  expect((await unknownGroup.json() as {message:string}).message).toContain('网站属性分组不存在')
+
   await page.goto('/admin/site-config')
+  await expect(page.getByTestId('site-property-group-PRESENTATION')).toContainText('展示设置')
+  await page.getByTestId('site-property-group-PRESENTATION').click()
+  await expect(page.getByTestId('site-property-group-context')).toContainText('展示设置')
+  const intervalEditor=page.getByTestId('site-config-HOME_CAROUSEL_INTERVAL_SECONDS')
+  await expect(intervalEditor).toHaveValue('4')
+  await intervalEditor.fill('4.5')
+  await page.getByTestId('save-site-config-HOME_CAROUSEL_INTERVAL_SECONDS').click()
+  await expect(page.getByText('整数属性必须填写整数',{exact:true})).toBeVisible()
+
+  await page.getByTestId('site-property-group-all').click()
   const editor=page.getByTestId(`site-config-${key}`)
   await editor.fill('[{not-json}]')
   await page.getByTestId(`save-site-config-${key}`).click()
   await expect(page.getByText('JSON 属性格式不正确，请修正后再保存',{exact:true})).toBeVisible()
+
+  await page.getByTestId('add-site-property').click()
+  const definitionDialog=page.getByRole('dialog',{name:'新增网站属性'})
+  await expect(definitionDialog.getByTestId('site-property-group-select')).toBeVisible()
+  await definitionDialog.getByTestId('site-property-group-select').click()
+  await expect(page.getByRole('option',{name:'展示设置'})).toBeVisible()
+  await page.keyboard.press('Escape')
+  await definitionDialog.getByRole('button',{name:'取消'}).click()
 })
 
 test('EU-16：文章管理以栏目树组织内容且父栏目包含子栏目文章', async ({ page, request }, testInfo) => {
@@ -120,11 +175,11 @@ test('EU-16：文章管理以栏目树组织内容且父栏目包含子栏目文
   const parentName=`栏目树父级-${suffix}`
   const childName=`栏目树子级-${suffix}`
 
-  const parentResponse=await request.post('/api/admin/columns',{data:{parentId:null,name:parentName,alias:`e2e-tree-parent-${suffix}`,sortOrder:900,enabled:true}})
+  const parentResponse=await request.post('/api/admin/columns',{data:{parentId:null,name:parentName,alias:`e2e-tree-parent-${suffix}`,coverPolicy:'OPTIONAL',sortOrder:900,enabled:true}})
   expect(parentResponse.ok()).toBeTruthy()
   const parent=await parentResponse.json() as {id:number}
 
-  const childResponse=await request.post('/api/admin/columns',{data:{parentId:parent.id,name:childName,alias:`e2e-tree-child-${suffix}`,sortOrder:0,enabled:true}})
+  const childResponse=await request.post('/api/admin/columns',{data:{parentId:parent.id,name:childName,alias:`e2e-tree-child-${suffix}`,coverPolicy:'OPTIONAL',sortOrder:0,enabled:true}})
   expect(childResponse.ok()).toBeTruthy()
   const child=await childResponse.json() as {id:number}
 
@@ -156,6 +211,31 @@ test('EU-16：文章管理以栏目树组织内容且父栏目包含子栏目文
   await expect(page.getByTestId('article-column-context')).toContainText('全部文章')
 })
 
+test('EU-16：栏目封面策略允许草稿暂存并在发布时强制 REQUIRED', async ({ page, request }, testInfo) => {
+  const suffix=`${Date.now()}-${testInfo.retry}`
+  const name=`封面必填栏目-${suffix}`
+  const columnResponse=await request.post('/api/admin/columns',{data:{parentId:null,name,alias:`e2e-cover-required-${suffix}`,coverPolicy:'REQUIRED',sortOrder:920,enabled:true}})
+  expect(columnResponse.ok()).toBeTruthy()
+  const column=await columnResponse.json() as {id:number;coverPolicy:string}
+  expect(column.coverPolicy).toBe('REQUIRED')
+
+  const article=await createArticle(request,column.id,`封面策略草稿-${suffix}`)
+  const publish=await request.post(`/api/admin/articles/${article.id}/publish`)
+  expect(publish.ok()).toBeFalsy()
+  expect((await publish.json() as {message:string}).message).toContain('补充封面后才能发布')
+
+  await page.goto('/admin/columns')
+  await page.getByTestId(`edit-${column.id}`).click()
+  await expect(page.getByRole('dialog',{name:'编辑栏目'}).getByTestId('column-cover-policy')).toContainText('发布时必须有封面')
+  await page.getByRole('dialog',{name:'编辑栏目'}).getByRole('button',{name:'取消'}).click()
+
+  await page.goto('/admin/articles')
+  await page.getByTestId(`article-column-node-${column.id}`).click()
+  await page.getByTestId('add-article').click()
+  await expect(page.getByRole('dialog',{name:'新增文章草稿'}).getByTestId('article-cover-required')).toBeVisible()
+  await page.getByRole('dialog',{name:'新增文章草稿'}).getByRole('button',{name:'取消'}).click()
+})
+
 test('EU-16：文章筛选分页并保持后台发布到公开站闭环', async ({ page, request }, testInfo) => {
   const columnsResponse=await request.get('/api/admin/columns');expect(columnsResponse.ok()).toBeTruthy()
   const columns=await columnsResponse.json() as Array<{id:number;alias:string}>
@@ -167,6 +247,32 @@ test('EU-16：文章筛选分页并保持后台发布到公开站闭环', async 
   await page.getByTestId('article-pagination').locator('.el-pager li').filter({hasText:'2'}).click();await expect(page.getByTestId('article-table').locator('tbody tr')).toHaveCount(2)
   const published=created[0];expect((await request.post(`/api/admin/articles/${published.id}/publish`)).ok()).toBeTruthy();expect((await request.get(`/api/public/articles/${published.id}`)).ok()).toBeTruthy()
   await page.goto(`/article/${published.id}`);await expect(page.getByRole('heading',{name:published.title})).toBeVisible()
+})
+
+test('EU-21：首页轮播按网站属性中的切换间隔运行', async ({ page, request }, testInfo) => {
+  const configResponse=await request.get('/api/admin/site-config');expect(configResponse.ok()).toBeTruthy()
+  const config=await configResponse.json() as Array<{key:string;value:string}>
+  const originalInterval=config.find(item=>item.key==='HOME_CAROUSEL_INTERVAL_SECONDS')?.value || '4'
+  const listsResponse=await request.get('/api/admin/lists');expect(listsResponse.ok()).toBeTruthy()
+  const lists=await listsResponse.json() as Array<{id:number;code:string}>
+  const carousel=lists.find(item=>item.code==='HOME_CAROUSEL');expect(carousel).toBeTruthy()
+  const suffix=`${Date.now()}-${testInfo.retry}`
+  let createdId:number|null=null
+  try {
+    expect((await request.put('/api/admin/site-config/HOME_CAROUSEL_INTERVAL_SECONDS',{data:{value:'1'}})).ok()).toBeTruthy()
+    const created=await request.post(`/api/admin/lists/${carousel!.id}/items`,{data:{title:`轮播切换验证-${suffix}`,subtitle:null,url:null,imagePath:'/static/home/carousel-01.jpg',openMode:'DEFAULT',sortOrder:999,enabled:true,extraJson:null}})
+    expect(created.ok()).toBeTruthy()
+    createdId=(await created.json() as {id:number}).id
+    await page.goto('/')
+    const active=page.getByTestId('home-carousel-active')
+    await expect(active).toBeVisible()
+    const firstId=await active.getAttribute('data-carousel-item-id')
+    expect(firstId).toBeTruthy()
+    await expect(active).not.toHaveAttribute('data-carousel-item-id',firstId!,{timeout:3500})
+  } finally {
+    if(createdId!=null)await request.delete(`/api/admin/lists/${carousel!.id}/items/${createdId}`)
+    await request.put('/api/admin/site-config/HOME_CAROUSEL_INTERVAL_SECONDS',{data:{value:originalInterval}})
+  }
 })
 
 test('EU-16：单页以左侧分组组织并按 render mode 提供编辑字段', async ({ page, request }, testInfo) => {
