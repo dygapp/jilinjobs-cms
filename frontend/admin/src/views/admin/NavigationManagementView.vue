@@ -2,6 +2,7 @@
 import { computed, onMounted, reactive, ref } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { MoreFilled } from '@element-plus/icons-vue'
+import AdaptiveImagePreview from '../../components/AdaptiveImagePreview.vue'
 import ImageResourcePicker from '../../components/ImageResourcePicker.vue'
 import { navigationIconCatalog } from '../../iconCatalog'
 import { listColumns, type CmsColumn } from '../../api/columns'
@@ -75,7 +76,7 @@ const msg=(e:unknown)=>e instanceof Error?e.message:'操作失败'
         <template #header><div><strong>{{currentLocation?.name||'请选择导航位置'}}</strong><span v-if="currentLocation" style="margin-left:8px;color:#909399">{{currentLocation.code}}</span></div></template>
         <el-table v-loading="loading" :data="treeData" row-key="id" default-expand-all :tree-props="{children:'children'}" data-testid="navigation-tree-table">
           <el-table-column prop="name" label="导航名称" min-width="180"/>
-          <el-table-column label="图标" width="76"><template #default="s"><img v-if="asNavigation(s.row).iconPath" :src="asNavigation(s.row).iconPath || ''" alt="" style="width:28px;height:28px;object-fit:contain"></template></el-table-column>
+          <el-table-column label="图标" width="76"><template #default="s"><AdaptiveImagePreview v-if="asNavigation(s.row).iconPath" :src="asNavigation(s.row).iconPath || ''" :adaptive="true" alt="" style="width:32px;height:32px" /></template></el-table-column>
           <el-table-column label="目标" min-width="220"><template #default="s">{{target(asNavigation(s.row))}}</template></el-table-column>
           <el-table-column prop="sortOrder" label="排序" width="80"/>
           <el-table-column label="状态" width="100"><template #default="s"><el-switch :model-value="s.row.enabled" @change="v=>toggle(asNavigation(s.row),v===true)"/></template></el-table-column>
@@ -88,7 +89,7 @@ const msg=(e:unknown)=>e instanceof Error?e.message:'操作失败'
       <el-form label-width="100px">
         <el-form-item label="导航位置"><el-input :model-value="currentLocation?.name||activePosition" disabled/></el-form-item>
         <el-form-item label="导航名称"><el-input v-model="form.name"/></el-form-item>
-        <el-form-item label="图标"><ImageResourcePicker v-model="form.iconPath" upload-directory="uploads/navigation-icons" :preset-options="navigationIconCatalog"/></el-form-item>
+        <el-form-item label="图标"><ImageResourcePicker v-model="form.iconPath" upload-directory="uploads/navigation-icons" :preset-options="navigationIconCatalog" adaptive-preview/></el-form-item>
         <el-form-item label="上级菜单"><el-select v-model="form.parentId" clearable style="width:100%"><el-option v-for="i in parentOptions" :key="i.id" :label="i.name" :value="i.id"/></el-select></el-form-item>
         <el-form-item label="目标类型"><el-select v-model="form.targetType" style="width:100%"><el-option v-for="o in targetOptions" :key="o.value" :label="o.label" :value="o.value"/></el-select></el-form-item>
         <el-form-item v-if="form.targetType==='COLUMN'" label="目标栏目"><el-select data-testid="navigation-column-select" v-model="form.targetColumnId" filterable style="width:100%"><el-option v-for="c in columns" :key="c.id" :label="c.name" :value="c.id"/></el-select></el-form-item>
