@@ -27,11 +27,19 @@ test('EU-21：导航按位置切换并显示树形主数据', async ({ page }) =
 test('EU-21：通用列表和广告位承载首页运营数据', async ({ page }) => {
   await page.goto('/admin/lists')
   await expect(page.getByTestId('cms-list-HOME_CAROUSEL')).toBeVisible()
-  await page.getByTestId('cms-list-HOME_CAROUSEL').getByRole('button',{name:'首页轮播'}).click()
+  await page.getByTestId('cms-list-HOME_CAROUSEL').click()
   await expect(page.getByTestId('cms-list-item-table')).toContainText('这里美得不愿离开')
+  await page.getByTestId('cms-list-HOME_CAROUSEL').getByRole('button',{name:'列表操作'}).click()
+  await expect(page.getByRole('menuitem',{name:'编辑'})).toBeVisible()
+  await expect(page.getByRole('menuitem',{name:'删除'})).toBeVisible()
+  await page.keyboard.press('Escape')
   await page.goto('/admin/advertisements')
   await expect(page.getByTestId('ad-slot-HOME_RECRUITMENT_PROMO')).toBeVisible()
   await expect(page.getByTestId('advertisement-table')).toContainText('吉林省高校毕业生招聘活动')
+  await page.getByTestId('ad-slot-HOME_RECRUITMENT_PROMO').getByRole('button',{name:'广告位操作'}).click()
+  await expect(page.getByRole('menuitem',{name:'编辑'})).toBeVisible()
+  await expect(page.getByRole('menuitem',{name:'删除'})).toBeVisible()
+  await page.keyboard.press('Escape')
 })
 
 test('EU-21：网站属性支持运行时自定义 Key 并阻止非法 JSON', async ({ page, request }) => {
