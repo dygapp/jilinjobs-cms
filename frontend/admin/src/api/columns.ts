@@ -1,5 +1,5 @@
 export type ContentImagePolicy='NONE'|'OPTIONAL'|'REQUIRED'
-export interface CmsColumn { id:number; parentId:number|null; name:string; sortOrder:number; enabled:boolean; alias:string; coverPolicy:ContentImagePolicy }
+export interface CmsColumn { id:number; parentId:number|null; name:string; sortOrder:number; enabled:boolean; alias:string; coverPolicy:ContentImagePolicy; preset:boolean }
 export interface PublicColumn { id:number; parentId:number|null; name:string; alias:string }
 export interface ColumnDraft { parentId:number|null; name:string; sortOrder:number; enabled:boolean; alias:string; coverPolicy:ContentImagePolicy }
 async function request<T>(url:string,init?:RequestInit):Promise<T>{const r=await fetch(url,{...init,headers:{'Content-Type':'application/json',...(init?.headers??{})}});if(!r.ok){const e=await r.json().catch(()=>({message:`请求失败：${r.status}`})) as {message?:string};throw new Error(e.message??`请求失败：${r.status}`)}if(r.status===204)return undefined as T;return r.json() as Promise<T>}
