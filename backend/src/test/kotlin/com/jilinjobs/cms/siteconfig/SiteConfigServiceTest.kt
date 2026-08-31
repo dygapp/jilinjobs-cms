@@ -59,13 +59,17 @@ class SiteConfigServiceTest {
             record("SERVICE_URL", "URL", "/page/about"),
             record("FEATURE_ENABLED", "BOOLEAN", "true"),
             record("CAROUSEL_INTERVAL", "INTEGER", "4"),
+            record("HOME_CAROUSEL_INTERVAL_SECONDS", "INTEGER", "4"),
         )
         val service = service(mapper)
         assertEquals("https://example.com/path", service.update("SERVICE_URL", "https://example.com/path").value)
         assertEquals("6", service.update("CAROUSEL_INTERVAL", "6").value)
+        assertEquals("1", service.update("HOME_CAROUSEL_INTERVAL_SECONDS", "1").value)
         assertThrows(SiteConfigValidationException::class.java) { service.update("SERVICE_URL", "javascript:alert(1)") }
         assertThrows(SiteConfigValidationException::class.java) { service.update("FEATURE_ENABLED", "yes") }
         assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_INTERVAL", "4.5") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("HOME_CAROUSEL_INTERVAL_SECONDS", "0") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("HOME_CAROUSEL_INTERVAL_SECONDS", "-1") }
     }
 
     private fun service(mapper: SiteConfigMapper): SiteConfigService {
