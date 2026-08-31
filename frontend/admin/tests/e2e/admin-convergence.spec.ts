@@ -6,10 +6,12 @@ async function createArticle(request: APIRequestContext, columnId: number, title
   return await response.json() as { id:number;title:string }
 }
 
-test('EU-21：独立管理端 Shell 提供八类 CMS 管理入口', async ({ page }) => {
+test('EU-21：独立管理端 Shell 按内容职责组织八类 CMS 管理入口', async ({ page }) => {
   await page.goto('/admin/')
   await expect(page.getByRole('heading',{name:'文章管理'})).toBeVisible()
-  for (const id of ['articles','columns','navigation','pages','lists','advertisements','site-config','static-resources']) await expect(page.getByTestId(`admin-nav-${id}`)).toBeVisible()
+  for (const section of ['内容管理','内容结构','运营展示','站点设置']) await expect(page.getByTestId(`admin-nav-section-${section}`)).toBeVisible()
+  for (const id of ['articles','pages','lists','columns','navigation','advertisements','site-config','static-resources']) await expect(page.getByTestId(`admin-nav-${id}`)).toBeVisible()
+  await expect(page.getByTestId('admin-nav-pages')).toContainText('单页管理')
   await expect(page.getByTestId('admin-nav-advertisements')).toContainText('宣传展示')
   await page.getByTestId('admin-nav-lists').click()
   await expect(page).toHaveURL(/\/admin\/lists$/)
@@ -167,10 +169,40 @@ test('EU-16：文章筛选分页并保持后台发布到公开站闭环', async 
   await page.goto(`/article/${published.id}`);await expect(page.getByRole('heading',{name:published.title})).toBeVisible()
 })
 
-test('EU-16：固定页面按 render mode 提供对应编辑字段', async ({ page }) => {
-  await page.goto('/admin/pages');await page.getByTestId('add-page').click();await expect(page.getByRole('dialog',{name:'新增固定页面'})).toBeVisible();await expect(page.getByTestId('page-body-editor')).toBeVisible()
-  await page.getByTestId('page-render-mode').click();await page.getByRole('option',{name:'外部嵌入占位'}).click();await expect(page.getByTestId('page-embed-url')).toBeVisible();await expect(page.getByTestId('page-placeholder-body')).toBeVisible()
-  await page.getByRole('button',{name:'取消'}).click()
+test('EU-16：单页以左侧分组组织并按 render mode 提供编辑字段', async ({ page, request }, testInfo) => {
+  const suffix=`${Date.now()}-${testInfo.retry}`
+  const groupsResponse=await request.get('/api/admin/page-groups');expect(groupsResponse.ok()).toBeTruthy()
+  const groups=await groupsResponse.json() as Array<{id:number;name:string;alias:string}>
+  const group=groups.find(item=>item.alias==='guide')??groups[0];expect(group).toBeTruthy()
+
+  const groupedName=`分组单页-${suffix}`
+  const grouped=await request.post('/api/admin/pages',{data:{groupId:group.id,alias:`e2e-grouped-${suffix}`,name:groupedName,bodyHtml:'<p>分组单页</p>',renderMode:'RICH_TEXT',embedUrl:null,sortOrder:900,enabled:true}});expect(grouped.ok()).toBeTruthy()
+  const independentName=`独立单页-${suffix}`
+  const independent=await request.post('/api/admin/pages',{data:{groupId:null,alias:`e2e-independent-${suffix}`,name:independentName,bodyHtml:'<p>独立单页</p>',renderMode:'RICH_TEXT',embedUrl:null,sortOrder:901,enabled:true}});expect(independent.ok()).toBeTruthy()
+
+  await page.goto('/admin/pages')
+  await expect(page.getByRole('heading',{name:'单页管理'})).toBeVisible()
+  await expect(page.getByTestId('page-group-all')).toBeVisible()
+  await expect(page.getByTestId('page-group-ungrouped')).toBeVisible()
+  await expect(page.getByTestId('page-table')).toContainText(groupedName)
+  await expect(page.getByTestId('page-table')).toContainText(independentName)
+
+  await page.getByTestId(`page-group-${group.id}`).click()
+  await expect(page.getByTestId('page-group-context')).toContainText(group.name)
+  await expect(page.getByTestId('page-table')).toContainText(groupedName)
+  await expect(page.getByTestId('page-table')).not.toContainText(independentName)
+
+  await page.getByTestId('add-page').click()
+  const dialog=page.getByRole('dialog',{name:'新增单页'})
+  await expect(dialog.getByTestId('page-group-select')).toContainText(group.name)
+  await expect(dialog.getByTestId('page-body-editor')).toBeVisible()
+  await dialog.getByTestId('page-render-mode').click();await page.getByRole('option',{name:'外部嵌入占位'}).click();await expect(dialog.getByTestId('page-embed-url')).toBeVisible();await expect(dialog.getByTestId('page-placeholder-body')).toBeVisible()
+  await dialog.getByRole('button',{name:'取消'}).click()
+
+  await page.getByTestId('page-group-ungrouped').click()
+  await expect(page.getByTestId('page-group-context')).toContainText('独立单页')
+  await expect(page.getByTestId('page-table')).toContainText(independentName)
+  await expect(page.getByTestId('page-table')).not.toContainText(groupedName)
 })
 
 test('EU-17：静态资源拒绝伪装 PNG 并保护站点关键资源', async ({ page, request }) => {
