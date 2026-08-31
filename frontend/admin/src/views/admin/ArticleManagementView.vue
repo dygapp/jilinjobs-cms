@@ -202,7 +202,7 @@ async function save() {
       pinned: form.pinned,
       recommended: form.recommended,
       sortOrder: form.sortOrder,
-      coverResourceId: form.articleType === 'INTERNAL' && formCoverPolicy !== 'NONE' ? form.coverResourceId : null,
+      coverResourceId: form.articleType === 'INTERNAL' && formCoverPolicy.value !== 'NONE' ? form.coverResourceId : null,
       bodyImageResourceIds: form.articleType === 'INTERNAL' ? [...form.bodyImageResourceIds] : [],
       attachmentResourceIds: form.articleType === 'INTERNAL' ? [...form.attachmentResourceIds] : [],
     }
