@@ -6,13 +6,9 @@ const values = ref<Record<string, string>>({})
 const publicSecurityIcon = '/static/footer/public-security-record.png'
 const publicInstitutionBadge = '/static/footer/public-institution.png'
 const wechatQr = '/static/footer/wechat-qr.png'
-const currentYear = new Date().getFullYear()
-const copyrightText = computed(() => {
-  const configured = values.value.FOOTER_COPYRIGHT || 'Copyright 版权所有 吉林省高等学校毕业生就业指导中心 All Rights Reserved'
-  return configured.match(/\b\d{4}\b/)
-    ? configured.replace(/\b\d{4}\b/, String(currentYear))
-    : configured.replace(/^Copyright\s*/i, `Copyright ${currentYear} `)
-})
+const copyrightText = computed(() =>
+  values.value.FOOTER_COPYRIGHT || 'Copyright 版权所有 吉林省高等学校毕业生就业指导中心 All Rights Reserved',
+)
 
 onMounted(async () => {
   values.value = Object.fromEntries((await listPublicSiteConfig()).map(item => [item.key, item.value]))
