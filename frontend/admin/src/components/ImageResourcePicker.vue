@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue'
 import { ElMessage } from 'element-plus'
 import { listStaticResources, uploadStaticResource } from '../api/staticResources'
+import AdaptiveImagePreview from './AdaptiveImagePreview.vue'
 
 interface ImageResourceOption { label: string; path: string }
 
@@ -10,10 +11,12 @@ const props = withDefaults(defineProps<{
   uploadDirectory: string
   presetOptions?: ImageResourceOption[]
   disabled?: boolean
+  adaptivePreview?: boolean
 }>(), {
   modelValue: null,
   presetOptions: () => [],
   disabled: false,
+  adaptivePreview: false,
 })
 const emit = defineEmits<{ (event: 'update:modelValue', value: string | null): void }>()
 
@@ -94,7 +97,7 @@ function select(path: string) {
 <template>
   <div class="image-resource-picker" data-testid="image-resource-picker">
     <div v-if="current" style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
-      <img :src="current" alt="当前图片" style="width:96px;height:60px;object-fit:contain;border:1px solid #dcdfe6;border-radius:4px;background:#fff">
+      <AdaptiveImagePreview :src="current" alt="当前图片" :adaptive="adaptivePreview" style="width:96px;height:60px;flex:none" />
       <el-input :model-value="current" readonly />
     </div>
     <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
@@ -109,7 +112,7 @@ function select(path: string) {
     <el-dialog v-model="dialogVisible" title="选择已有图片" width="720px" append-to-body>
       <div v-loading="loading" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;min-height:120px">
         <button v-for="item in choices" :key="item.path" type="button" style="border:1px solid #dcdfe6;background:#fff;padding:8px;border-radius:6px;cursor:pointer" @click="select(item.path)">
-          <img :src="item.path" :alt="item.label" style="width:100%;height:84px;object-fit:contain;display:block">
+          <AdaptiveImagePreview :src="item.path" :alt="item.label" :adaptive="adaptivePreview" style="width:100%;height:84px" />
           <span style="display:block;margin-top:6px;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ item.label }}</span>
         </button>
         <el-empty v-if="!loading && choices.length===0" description="当前没有可选图片" style="grid-column:1/-1" />
