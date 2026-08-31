@@ -5,13 +5,13 @@ import org.springframework.stereotype.Repository
 
 @Mapper
 interface NavigationMapper {
-    @Select("SELECT n.id,n.parent_id,n.name,n.position,n.category,n.target_type,n.target_column_id,n.target_page_id,n.target_url,n.open_mode,n.icon_path,n.sort_order,n.enabled FROM cms_navigation n ORDER BY n.position,COALESCE(n.parent_id,0),n.sort_order,n.id")
+    @Select("SELECT n.id,n.parent_id,n.name,n.position,n.category,n.target_type,n.target_column_id,n.target_page_id,n.target_url,n.open_mode,n.icon_path,n.sort_order,n.enabled,n.preset FROM cms_navigation n ORDER BY n.position,COALESCE(n.parent_id,0),n.sort_order,n.id")
     fun findAll(): List<NavigationRecord>
 
-    @Select("SELECT n.id,n.parent_id,n.name,n.position,n.category,n.target_type,n.target_column_id,n.target_page_id,n.target_url,n.open_mode,n.icon_path,n.sort_order,n.enabled FROM cms_navigation n JOIN cms_navigation_location l ON l.code=n.position WHERE n.enabled=1 AND l.enabled=1 ORDER BY l.sort_order,n.position,COALESCE(n.parent_id,0),n.sort_order,n.id")
+    @Select("SELECT n.id,n.parent_id,n.name,n.position,n.category,n.target_type,n.target_column_id,n.target_page_id,n.target_url,n.open_mode,n.icon_path,n.sort_order,n.enabled,n.preset FROM cms_navigation n JOIN cms_navigation_location l ON l.code=n.position WHERE n.enabled=1 AND l.enabled=1 ORDER BY l.sort_order,n.position,COALESCE(n.parent_id,0),n.sort_order,n.id")
     fun findEnabled(): List<NavigationRecord>
 
-    @Select("SELECT id,parent_id,name,position,category,target_type,target_column_id,target_page_id,target_url,open_mode,icon_path,sort_order,enabled FROM cms_navigation WHERE id=#{id}")
+    @Select("SELECT id,parent_id,name,position,category,target_type,target_column_id,target_page_id,target_url,open_mode,icon_path,sort_order,enabled,preset FROM cms_navigation WHERE id=#{id}")
     fun findById(@Param("id") id: Long): NavigationRecord?
 
     @Select("SELECT COUNT(*) FROM cms_navigation WHERE position=#{position}")
@@ -45,6 +45,7 @@ data class NavigationRecord(
     var iconPath: String? = null,
     var sortOrder: Int = 0,
     var enabled: Boolean = true,
+    var preset: Boolean = false,
 )
 
 @Repository
@@ -56,13 +57,13 @@ class MyBatisNavigationRepository(private val mapper: NavigationMapper) : Naviga
     override fun insert(draft: NavigationDraft): CmsNavigation {
         val record = draft.record()
         mapper.insert(record)
-        return record.model()
+        return mapper.findById(requireNotNull(record.id))!!.model()
     }
 
     override fun update(id: Long, draft: NavigationDraft): CmsNavigation {
         val record = draft.record(id)
         mapper.update(record)
-        return record.model()
+        return mapper.findById(id)!!.model()
     }
 
     override fun delete(id: Long) {
@@ -77,6 +78,6 @@ class MyBatisNavigationRepository(private val mapper: NavigationMapper) : Naviga
     private fun NavigationRecord.model() = CmsNavigation(
         requireNotNull(id), name, position, category, NavigationTargetType.valueOf(targetType),
         targetColumnId, targetUrl, sortOrder, enabled, parentId, targetPageId,
-        NavigationOpenMode.valueOf(openMode), iconPath,
+        NavigationOpenMode.valueOf(openMode), iconPath, preset,
     )
 }
