@@ -22,8 +22,8 @@ test('文章草稿、文件资源与栏目内容依赖形成管理端闭环', as
   await page.getByTestId('add-article').click()
 
   await page.getByPlaceholder('请输入文章标题').fill(title)
-  await page.getByTestId('article-column').click()
-  await page.getByRole('option', { name: columnName, exact: true }).click()
+  await page.getByTestId('article-column-tree-select').click()
+  await page.locator('.el-select-dropdown:visible').getByText(columnName, { exact: true }).click()
   await page.getByPlaceholder('请输入内容来源').fill('吉林就业测试来源')
   await page.getByTestId('article-body-editor').fill('这是草稿正文')
 
