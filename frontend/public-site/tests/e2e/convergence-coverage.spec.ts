@@ -229,7 +229,7 @@ test('Feature-wide closure：广告位支持多图轮动、NO_LINK 保留 URL �
     await page.goto('/')
     const noLinkVisual = page.getByTestId(`home-promo-ad-${first.id}`)
     await expect(noLinkVisual).toBeVisible()
-    await expect(noLinkVisual).not.toHaveAttribute('href')
+    expect(await noLinkVisual.getAttribute('href')).toBeNull()
 
     const updateResponse = await request.put(`/api/admin/advertisements/slots/${slot!.id}/items/${first.id}`, {
       data: {title:`禁用跳转-${suffix}`,imagePath:'/static/home/recruitment-campaign.png',url:retainedUrl,openMode:'NEW_WINDOW',startAt:null,endAt:null,sortOrder:-200,enabled:true},
