@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import org.springframework.web.bind.annotation.*
 
-data class AdvertisementSlot(val id:Long,val code:String,val name:String,val description:String,val sortOrder:Int,val enabled:Boolean,val system:Boolean)
+data class AdvertisementSlot(val id:Long,val code:String,val name:String,val description:String,val sortOrder:Int,val enabled:Boolean,val system:Boolean,val preset:Boolean=false)
 data class Advertisement(val id:Long,val slotId:Long,val title:String,val imagePath:String,val url:String?,val openMode:String,val startAt:LocalDateTime?,val endAt:LocalDateTime?,val sortOrder:Int,val enabled:Boolean)
 data class PublicAdvertisementSlot(val id:Long,val code:String,val name:String,val advertisements:List<Advertisement>)
 data class AdvertisementSlotDraft(val code:String,val name:String,val description:String="",val sortOrder:Int=0,val enabled:Boolean=true,val system:Boolean=false)
@@ -17,15 +17,15 @@ data class AdvertisementDraft(val title:String,val imagePath:String,val url:Stri
 class AdvertisementValidationException(message:String):RuntimeException(message)
 class AdvertisementSlotNotFoundException(value:String):RuntimeException("广告位不存在：$value")
 class AdvertisementNotFoundException(id:Long):RuntimeException("广告不存在：$id")
-data class AdvertisementSlotRecord(var id:Long?=null,var code:String="",var name:String="",var description:String="",var sortOrder:Int=0,var enabled:Boolean=true,var systemFlag:Boolean=false)
+data class AdvertisementSlotRecord(var id:Long?=null,var code:String="",var name:String="",var description:String="",var sortOrder:Int=0,var enabled:Boolean=true,var systemFlag:Boolean=false,var preset:Boolean=false)
 data class AdvertisementRecord(var id:Long?=null,var slotId:Long=0,var title:String="",var imagePath:String="",var url:String?=null,var openMode:String="DEFAULT",var startAt:LocalDateTime?=null,var endAt:LocalDateTime?=null,var sortOrder:Int=0,var enabled:Boolean=true)
 
 @Mapper
 interface AdvertisementMapper{
- @Select("SELECT id,code,name,description,sort_order,enabled,system_flag FROM cms_ad_slot ORDER BY sort_order,id") fun findSlots():List<AdvertisementSlotRecord>
- @Select("SELECT id,code,name,description,sort_order,enabled,system_flag FROM cms_ad_slot WHERE enabled=1 ORDER BY sort_order,id") fun findEnabledSlots():List<AdvertisementSlotRecord>
- @Select("SELECT id,code,name,description,sort_order,enabled,system_flag FROM cms_ad_slot WHERE id=#{id}") fun findSlot(@Param("id") id:Long):AdvertisementSlotRecord?
- @Select("SELECT id,code,name,description,sort_order,enabled,system_flag FROM cms_ad_slot WHERE code=#{code}") fun findSlotByCode(@Param("code") code:String):AdvertisementSlotRecord?
+ @Select("SELECT id,code,name,description,sort_order,enabled,system_flag,preset FROM cms_ad_slot ORDER BY sort_order,id") fun findSlots():List<AdvertisementSlotRecord>
+ @Select("SELECT id,code,name,description,sort_order,enabled,system_flag,preset FROM cms_ad_slot WHERE enabled=1 ORDER BY sort_order,id") fun findEnabledSlots():List<AdvertisementSlotRecord>
+ @Select("SELECT id,code,name,description,sort_order,enabled,system_flag,preset FROM cms_ad_slot WHERE id=#{id}") fun findSlot(@Param("id") id:Long):AdvertisementSlotRecord?
+ @Select("SELECT id,code,name,description,sort_order,enabled,system_flag,preset FROM cms_ad_slot WHERE code=#{code}") fun findSlotByCode(@Param("code") code:String):AdvertisementSlotRecord?
  @Insert("INSERT INTO cms_ad_slot(code,name,description,sort_order,enabled,system_flag) VALUES(#{code},#{name},#{description},#{sortOrder},#{enabled},#{systemFlag})") @Options(useGeneratedKeys=true,keyProperty="id") fun insertSlot(record:AdvertisementSlotRecord):Int
  @Update("UPDATE cms_ad_slot SET name=#{name},description=#{description},sort_order=#{sortOrder},enabled=#{enabled},system_flag=#{systemFlag} WHERE id=#{id}") fun updateSlot(record:AdvertisementSlotRecord):Int
  @Delete("DELETE FROM cms_ad_slot WHERE id=#{id}") fun deleteSlot(@Param("id") id:Long):Int
@@ -44,9 +44,9 @@ class AdvertisementService(private val mapper:AdvertisementMapper){
  @Transactional(readOnly=true) fun slots()=mapper.findSlots().map{it.model()}
  @Transactional(readOnly=true) fun ads(slotId:Long):List<Advertisement>{requireSlot(slotId);return mapper.findAds(slotId).map{it.model()}}
  @Transactional(readOnly=true) fun publicSlots()=mapper.findEnabledSlots().map{r->PublicAdvertisementSlot(requireNotNull(r.id),r.code,r.name,mapper.findActiveAds(requireNotNull(r.id)).map{it.model()})}
- @Transactional fun createSlot(d:AdvertisementSlotDraft):AdvertisementSlot{val n=normalizeSlot(d);if(mapper.findSlotByCode(n.code)!=null)throw AdvertisementValidationException("广告位 Code 已存在：${n.code}");val r=n.record();mapper.insertSlot(r);return r.model()}
+ @Transactional fun createSlot(d:AdvertisementSlotDraft):AdvertisementSlot{val n=normalizeSlot(d);if(mapper.findSlotByCode(n.code)!=null)throw AdvertisementValidationException("广告位 Code 已存在：${n.code}");val r=n.record();mapper.insertSlot(r);return mapper.findSlot(requireNotNull(r.id))!!.model()}
  @Transactional fun updateSlot(id:Long,d:AdvertisementSlotDraft):AdvertisementSlot{val c=requireSlot(id);val n=normalizeSlot(d.copy(code=c.code));mapper.updateSlot(n.record(id));return mapper.findSlot(id)!!.model()}
- @Transactional fun deleteSlot(id:Long){requireSlot(id);mapper.deleteSlot(id)}
+ @Transactional fun deleteSlot(id:Long){val current=requireSlot(id);if(current.preset)throw AdvertisementValidationException("预置展示位属于网站规划基线，不能删除");mapper.deleteSlot(id)}
  @Transactional fun createAd(slotId:Long,d:AdvertisementDraft):Advertisement{requireSlot(slotId);val r=normalizeAd(d).record(slotId);mapper.insertAd(r);return r.model()}
  @Transactional fun updateAd(slotId:Long,id:Long,d:AdvertisementDraft):Advertisement{requireSlot(slotId);val c=mapper.findAd(id)?:throw AdvertisementNotFoundException(id);if(c.slotId!=slotId)throw AdvertisementValidationException("广告不属于当前广告位");mapper.updateAd(normalizeAd(d).record(slotId,id));return mapper.findAd(id)!!.model()}
  @Transactional fun deleteAd(slotId:Long,id:Long){requireSlot(slotId);val c=mapper.findAd(id)?:throw AdvertisementNotFoundException(id);if(c.slotId!=slotId)throw AdvertisementValidationException("广告不属于当前广告位");mapper.deleteAd(id)}
@@ -56,7 +56,7 @@ class AdvertisementService(private val mapper:AdvertisementMapper){
  private fun validateUrl(v:String){if(v.startsWith("/")&&!v.startsWith("//"))return;val u=runCatching{URI(v)}.getOrElse{throw AdvertisementValidationException("广告 URL 格式不正确")};if(u.scheme?.lowercase() !in setOf("http","https")||u.host.isNullOrBlank())throw AdvertisementValidationException("广告 URL 必须是站内路径或 HTTP(S) 地址")}
  private fun AdvertisementSlotDraft.record(id:Long?=null)=AdvertisementSlotRecord(id,code,name,description,sortOrder,enabled,system)
  private fun AdvertisementDraft.record(slotId:Long,id:Long?=null)=AdvertisementRecord(id,slotId,title,imagePath,url,openMode,startAt,endAt,sortOrder,enabled)
- private fun AdvertisementSlotRecord.model()=AdvertisementSlot(requireNotNull(id),code,name,description,sortOrder,enabled,systemFlag)
+ private fun AdvertisementSlotRecord.model()=AdvertisementSlot(requireNotNull(id),code,name,description,sortOrder,enabled,systemFlag,preset)
  private fun AdvertisementRecord.model()=Advertisement(requireNotNull(id),slotId,title,imagePath,url,openMode,startAt,endAt,sortOrder,enabled)
 }
 
