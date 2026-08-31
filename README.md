@@ -8,13 +8,14 @@
 
 当前权威需求：
 
-- `docs/requirements/information-publishing.md` V4.5
+- `docs/requirements/information-publishing.md` V4.6
 
 当前 Specification：
 
 - `docs/specifications/cms-core.md`
 - `docs/specifications/public-site.md`
 - `docs/specifications/admin-site.md`
+- `docs/specifications/preset-site-structure.md`
 
 当前 Technical Plan：
 
@@ -23,6 +24,7 @@
 - `docs/technical/public-site-frontend.md`
 - `docs/technical/admin-frontend.md`
 - `docs/technical/verification-strategy.md`
+- `docs/technical/preset-site-structure.md`
 
 当前执行单元：
 
@@ -65,9 +67,11 @@ CMS 通用业务对象：
 
 通用列表只保存标题、副标题、图片、URL、打开方式、排序等数据属性；前台具体页面根据自身设计决定消费哪些属性以及如何展示，不由 CMS 列表定义控制视觉模式。导航条目可维护可选图标，避免前台按排序位置推导图标。
 
+网站规划基线中的关键结构对象使用只读 `preset` 标识保护：预置栏目、导航位置/条目、单页分组/单页、列表容器、宣传展示位和稳定网站属性定义不能被误删；具有稳定 Alias/Code/Key 的预置对象不能修改该身份字段。`preset` 不等于完全只读，名称、排序、启停以及正常运营字段仍按各自模型维护；Article、CmsListItem、Advertisement 等运营成员不因此变成预置内容。普通 Admin API 新增对象默认 `preset=false`，客户端不能自行设置或取消该标识。
+
 工程基线静态资源继续位于 `/static/home`、`/static/brand`、`/static/footer`、`/static/icons` 等版本化目录；CMS 运行时上传统一进入 `/static/uploads/**`，由宣传展示/列表/导航图标/RESOURCE_PATH 网站属性等管理界面复用统一图片资源选择与上传能力。
 
-当前阶段明确不实现用户、账号、角色、登录和权限控制。未来“普通管理员 / 超级管理员”差异只作为规划边界，不进入当前代码和验收条件；删除确认、路径安全、真实媒体校验和关键资源保护等业务安全措施仍继续执行。
+当前阶段明确不实现用户、账号、角色、登录和权限控制。未来“普通管理员 / 超级管理员”差异只作为规划边界，不进入当前代码和验收条件；`preset` 保护、删除确认、路径安全、真实媒体校验和关键资源保护等业务安全措施仍继续执行。
 
 ## 前端工程
 
