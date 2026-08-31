@@ -55,19 +55,32 @@ async function upload(event: Event) {
   }
 }
 
+async function collectRuntimeImages(path: string, depth = 0): Promise<ImageResourceOption[]> {
+  if (depth > 6) return []
+  let entries
+  try {
+    entries = await listStaticResources(path)
+  } catch {
+    return []
+  }
+  const result: ImageResourceOption[] = []
+  for (const entry of entries) {
+    if (entry.directory) {
+      result.push(...await collectRuntimeImages(entry.path, depth + 1))
+    } else if (imageExtensions.has(extension(entry.name))) {
+      result.push({ label: entry.path, path: `/static/${entry.path}` })
+    }
+  }
+  return result
+}
+
 async function openLibrary() {
   loading.value = true
   dialogVisible.value = true
   const map = new Map<string, ImageResourceOption>()
   props.presetOptions.forEach(item => map.set(item.path, item))
-  try {
-    const entries = await listStaticResources(props.uploadDirectory)
-    entries
-      .filter(entry => !entry.directory && imageExtensions.has(extension(entry.name)))
-      .forEach(entry => map.set(`/static/${entry.path}`, { label: entry.name, path: `/static/${entry.path}` }))
-  } catch {
-    // 运行期目录在首次上传前可以不存在；此时只展示内置候选。
-  }
+  const runtimeImages = await collectRuntimeImages('uploads')
+  runtimeImages.forEach(item => map.set(item.path, item))
   choices.value = [...map.values()]
   loading.value = false
 }
@@ -91,7 +104,7 @@ function select(path: string) {
       <el-button :disabled="disabled" @click="openLibrary">选择已有图片</el-button>
       <el-button v-if="current" :disabled="disabled" @click="emit('update:modelValue', null)">清除</el-button>
     </div>
-    <p style="margin:6px 0 0;color:#909399;font-size:12px">上传文件自动保存到 /static/{{ uploadDirectory }}/，无需手工维护文件路径。</p>
+    <p style="margin:6px 0 0;color:#909399;font-size:12px">新上传文件自动保存到 /static/{{ uploadDirectory }}/；“选择已有图片”可复用 /static/uploads/** 共享 Runtime 图片。</p>
 
     <el-dialog v-model="dialogVisible" title="选择已有图片" width="720px" append-to-body>
       <div v-loading="loading" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;min-height:120px">
