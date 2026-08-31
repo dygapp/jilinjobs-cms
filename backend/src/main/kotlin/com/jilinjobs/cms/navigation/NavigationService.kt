@@ -26,7 +26,8 @@ class NavigationService(
 
     @Transactional
     fun delete(id: Long) {
-        repository.findById(id) ?: throw NavigationNotFoundException(id)
+        val current = repository.findById(id) ?: throw NavigationNotFoundException(id)
+        if (current.preset) throw NavigationValidationException("预置导航属于网站规划基线，不能删除")
         if (repository.findAll().any { it.parentId == id }) throw NavigationValidationException("导航存在下级菜单，不能直接删除")
         repository.delete(id)
     }
