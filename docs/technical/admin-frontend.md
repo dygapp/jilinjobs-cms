@@ -23,6 +23,8 @@ Backend 继续负责真实媒体校验。控件不自行删除旧资源。新文
 
 页面加载 NavigationLocation 和 NavigationItem。左侧显示位置并采用整行选择 + `...` 菜单；右侧将当前位置的 flat items 转换为 tree table。新增/编辑条目时 position 固定为当前 code，parent 只从当前位置选择。
 
+正式初始化只保留 `MAIN`、`HOME_SHORTCUT`、`HOME_QUICK` 三个内置导航位置。V8 曾为模型迁移加入的 `SERVICE`、`SITE` 通过后续 Flyway 迁移从升级数据库中清理；如果旧库仍残留这些位置下的兼容导航条目，先解除父子引用并删除条目，再删除位置。网站导航/友情链接继续由通用列表承担。
+
 导航条目新增可选 iconPath。表单通过 ImageResourcePicker 从语义化导航图标目录选择现有站点图标，或上传到 `uploads/navigation-icons/`；同时可按统一规则复用 Runtime 图片。导航表格和图标选择器均启用 AdaptiveImagePreview，保证淡色透明图标在管理端白色 Shell 中仍清晰可见。
 
 ## 4. 列表管理
@@ -50,6 +52,7 @@ Backend 继续负责真实媒体校验。控件不自行删除旧资源。新文
 E2E 必须覆盖：
 
 - Shell “宣传展示”入口可达；
+- 导航位置接口和左侧列表均不再出现 `SERVICE`、`SITE`，并保留 `MAIN`、`HOME_SHORTCUT`、`HOME_QUICK`；
 - 导航位置切换 + 树形数据 + 图标属性/选择器；
 - 已知淡色透明导航图标在表格、当前值预览和内置图标库中均解析为高对比深色背景，并保留 hover 对比切换提示；
 - 通用列表不依赖 itemType，并至少验证列表图片通过统一选择器上传到约定目录；
