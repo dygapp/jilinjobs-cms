@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
-import { listPublicAdvertisements } from '../../api/advertisements'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { listPublicAdvertisements, type Advertisement } from '../../api/advertisements'
 import { listPublicArticles, type PublicArticleSummary } from '../../api/articles'
 import { listPublicCmsLists, type CmsListItem } from '../../api/lists'
 import { listPublicNavigations, type PublicNavigation } from '../../api/navigation'
@@ -15,13 +15,15 @@ const items = ref<PublicNavigation[]>([])
 const articles = ref<PublicArticleSummary[]>([])
 const siteGroups = ref<SiteLinkGroup[]>([])
 const carouselItems = ref<CmsListItem[]>([])
-const promo = ref<CmsListItem | null>(null)
+const promoAds = ref<Advertisement[]>([])
+const activePromoIndex = ref(0)
 const contactPhone = ref('')
 const activeSiteGroup = ref(0)
 const loading = ref(true)
 const error = ref('')
 const ncssLogo = '/static/home/ncss-logo.png'
 const phoneIcon = '/static/icons/phone.png'
+let promoTimer: ReturnType<typeof setInterval> | null = null
 
 setPageMeta({ description: '吉林省高等学校毕业生就业信息网，提供就业资讯、政策法规、业务指南和公共服务入口。' })
 
@@ -35,6 +37,19 @@ const recruitmentArticles = computed(() => articles.value.filter(article => arti
 const quickIcon = (index: number) => `/static/icons/top-nav-${String(index + 1).padStart(2, '0')}.png`
 const guideIcon = (index: number) => `/static/icons/guide-${String(index + 1).padStart(2, '0')}.png`
 const newWindow = (mode: string, url: string | null | undefined) => mode === 'NEW_WINDOW' || (mode === 'DEFAULT' && Boolean(url?.startsWith('http')))
+const activePromo = computed(() => promoAds.value[activePromoIndex.value] || null)
+const promoLinked = computed(() => Boolean(activePromo.value?.url) && activePromo.value?.openMode !== 'NO_LINK')
+
+function startPromoRotation() {
+  if (promoTimer) clearInterval(promoTimer)
+  promoTimer = null
+  activePromoIndex.value = 0
+  if (promoAds.value.length > 1) {
+    promoTimer = setInterval(() => {
+      activePromoIndex.value = (activePromoIndex.value + 1) % promoAds.value.length
+    }, 4000)
+  }
+}
 
 const calendar = computed(() => {
   const today = new Date()
@@ -63,13 +78,17 @@ onMounted(async () => {
     contactPhone.value = values.CONTACT_PHONE || ''
     carouselItems.value = lists.find(list => list.code === 'HOME_CAROUSEL')?.items || []
     siteGroups.value = lists.filter(list => list.groupCode === 'SITE_LINKS').map(list => ({ name: list.name, links: list.items }))
-    const promoAd = advertisementSlots.find(slot => slot.code === 'HOME_RECRUITMENT_PROMO')?.advertisements[0]
-    promo.value = promoAd ? { id: promoAd.id, listId: promoAd.slotId, title: promoAd.title, subtitle: null, url: promoAd.url, imagePath: promoAd.imagePath, openMode: promoAd.openMode, sortOrder: promoAd.sortOrder, enabled: promoAd.enabled, extraJson: null } : null
+    promoAds.value = advertisementSlots.find(slot => slot.code === 'HOME_RECRUITMENT_PROMO')?.advertisements || []
+    startPromoRotation()
   } catch (e) {
     error.value = e instanceof Error ? e.message : '公开内容加载失败'
   } finally {
     loading.value = false
   }
+})
+
+onUnmounted(() => {
+  if (promoTimer) clearInterval(promoTimer)
 })
 </script>
 
@@ -142,9 +161,14 @@ onMounted(async () => {
         </aside>
       </section>
 
-      <a v-if="promo" class="home-promo-banner" :href="promo.url || '#'" :target="newWindow(promo.openMode, promo.url) ? '_blank' : undefined" rel="noopener noreferrer">
-        <img :src="promo.imagePath || ''" :alt="promo.title">
-      </a>
+      <template v-if="activePromo">
+        <a v-if="promoLinked" class="home-promo-banner" :data-testid="`home-promo-ad-${activePromo.id}`" :href="activePromo.url!" :target="newWindow(activePromo.openMode, activePromo.url) ? '_blank' : undefined" rel="noopener noreferrer">
+          <img :src="activePromo.imagePath" :alt="activePromo.title">
+        </a>
+        <div v-else class="home-promo-banner" :data-testid="`home-promo-ad-${activePromo.id}`">
+          <img :src="activePromo.imagePath" :alt="activePromo.title">
+        </div>
+      </template>
 
       <section class="home-section original-section latest-recruitment"><header class="section-title"><h2>最新招聘</h2></header><div class="external-placeholder iframe-placeholder"><span>慧就业招聘信息区域</span></div></section>
 
