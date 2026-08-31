@@ -113,6 +113,47 @@ test('EU-21：网站属性支持运行时自定义 Key 并阻止非法 JSON', as
   await expect(page.getByText('JSON 属性格式不正确，请修正后再保存',{exact:true})).toBeVisible()
 })
 
+test('EU-16：文章管理以栏目树组织内容且父栏目包含子栏目文章', async ({ page, request }, testInfo) => {
+  const suffix=`${Date.now()}-${testInfo.retry}`
+  const parentName=`栏目树父级-${suffix}`
+  const childName=`栏目树子级-${suffix}`
+
+  const parentResponse=await request.post('/api/admin/columns',{data:{parentId:null,name:parentName,alias:`e2e-tree-parent-${suffix}`,sortOrder:900,enabled:true}})
+  expect(parentResponse.ok()).toBeTruthy()
+  const parent=await parentResponse.json() as {id:number}
+
+  const childResponse=await request.post('/api/admin/columns',{data:{parentId:parent.id,name:childName,alias:`e2e-tree-child-${suffix}`,sortOrder:0,enabled:true}})
+  expect(childResponse.ok()).toBeTruthy()
+  const child=await childResponse.json() as {id:number}
+
+  const articleTitle=`栏目树文章-${suffix}`
+  await createArticle(request,child.id,articleTitle)
+
+  await page.goto('/admin/articles')
+  await expect(page.getByTestId('article-column-tree')).toBeVisible()
+  await expect(page.getByTestId('article-column-all')).toBeVisible()
+  await page.getByTestId('article-filter-keyword').fill(articleTitle)
+  await expect(page.getByTestId('article-table')).toContainText(articleTitle)
+
+  await page.getByTestId(`article-column-node-${parent.id}`).click()
+  await expect(page.getByTestId('article-column-context')).toContainText(parentName)
+  await expect(page.getByTestId('article-column-context')).toContainText('包含当前栏目及全部子栏目文章')
+  await expect(page.getByTestId('article-table')).toContainText(articleTitle)
+
+  await page.getByTestId('add-article').click()
+  const dialog=page.getByRole('dialog',{name:'新增文章草稿'})
+  await expect(dialog.getByTestId('article-column-tree-select')).toBeVisible()
+  await expect(dialog.getByTestId('article-column-tree-select')).toContainText(parentName)
+  await dialog.getByRole('button',{name:'取消'}).click()
+
+  await page.getByTestId(`article-column-node-${child.id}`).click()
+  await expect(page.getByTestId('article-column-context')).toContainText(childName)
+  await expect(page.getByTestId('article-table')).toContainText(articleTitle)
+
+  await page.getByTestId('article-column-all').click()
+  await expect(page.getByTestId('article-column-context')).toContainText('全部文章')
+})
+
 test('EU-16：文章筛选分页并保持后台发布到公开站闭环', async ({ page, request }, testInfo) => {
   const columnsResponse=await request.get('/api/admin/columns');expect(columnsResponse.ok()).toBeTruthy()
   const columns=await columnsResponse.json() as Array<{id:number;alias:string}>
