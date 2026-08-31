@@ -20,6 +20,7 @@ data class SiteConfigItem(
     val required: Boolean,
     val system: Boolean,
     val enabled: Boolean,
+    val preset: Boolean = false,
 )
 
 data class SiteConfigDraft(
@@ -49,17 +50,18 @@ data class SiteConfigRecord(
     var required: Boolean = false,
     var systemFlag: Boolean = false,
     var enabled: Boolean = true,
+    var preset: Boolean = false,
 )
 
 @Mapper
 interface SiteConfigMapper {
-    @Select("SELECT config_key,property_name,group_code,config_value,value_type,description,sort_order,required,system_flag,enabled FROM cms_site_config ORDER BY group_code,sort_order,config_key")
+    @Select("SELECT config_key,property_name,group_code,config_value,value_type,description,sort_order,required,system_flag,enabled,preset FROM cms_site_config ORDER BY group_code,sort_order,config_key")
     fun findAll(): List<SiteConfigRecord>
 
-    @Select("SELECT config_key,property_name,group_code,config_value,value_type,description,sort_order,required,system_flag,enabled FROM cms_site_config WHERE enabled=1 ORDER BY group_code,sort_order,config_key")
+    @Select("SELECT config_key,property_name,group_code,config_value,value_type,description,sort_order,required,system_flag,enabled,preset FROM cms_site_config WHERE enabled=1 ORDER BY group_code,sort_order,config_key")
     fun findEnabled(): List<SiteConfigRecord>
 
-    @Select("SELECT config_key,property_name,group_code,config_value,value_type,description,sort_order,required,system_flag,enabled FROM cms_site_config WHERE config_key=#{key}")
+    @Select("SELECT config_key,property_name,group_code,config_value,value_type,description,sort_order,required,system_flag,enabled,preset FROM cms_site_config WHERE config_key=#{key}")
     fun find(@Param("key") key: String): SiteConfigRecord?
 
     @Insert("INSERT INTO cms_site_config(config_key,property_name,group_code,config_value,value_type,description,sort_order,required,system_flag,enabled) VALUES(#{configKey},#{propertyName},#{groupCode},#{configValue},#{valueType},#{description},#{sortOrder},#{required},#{systemFlag},#{enabled})")
@@ -97,7 +99,7 @@ class SiteConfigService(
         if (mapper.find(normalized.key) != null) throw SiteConfigValidationException("网站属性 Key 已存在：${normalized.key}")
         val record = normalized.record()
         mapper.insert(record)
-        return record.item()
+        return mapper.find(normalized.key)!!.item()
     }
 
     @Transactional
@@ -120,7 +122,8 @@ class SiteConfigService(
     @Transactional
     fun delete(key: String) {
         val normalizedKey = normalizeKey(key)
-        mapper.find(normalizedKey) ?: throw SiteConfigNotFoundException(normalizedKey)
+        val current = mapper.find(normalizedKey) ?: throw SiteConfigNotFoundException(normalizedKey)
+        if (current.preset) throw SiteConfigValidationException("预置网站属性属于站点规划基线，不能删除定义")
         mapper.delete(normalizedKey)
     }
 
@@ -186,7 +189,7 @@ class SiteConfigService(
     }
 
     private fun SiteConfigDraft.record() = SiteConfigRecord(key, name, groupCode, value, valueType, description, sortOrder, required, system, enabled)
-    private fun SiteConfigRecord.item() = SiteConfigItem(configKey, propertyName, groupCode, configValue, valueType, description, sortOrder, required, systemFlag, enabled)
+    private fun SiteConfigRecord.item() = SiteConfigItem(configKey, propertyName, groupCode, configValue, valueType, description, sortOrder, required, systemFlag, enabled, preset)
 }
 
 @RestController
