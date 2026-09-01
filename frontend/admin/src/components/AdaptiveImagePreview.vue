@@ -88,7 +88,7 @@ function failed() {
     :class="`theme-${theme}`"
     :data-preview-theme="theme"
     data-testid="adaptive-image-preview"
-    :title="adaptive ? '预览背景会根据图片明暗自动调整；点击可使用 Element Plus 查看原图' : '点击可查看原图'"
+    :title="adaptive ? '预览背景会根据图标明暗自动调整；悬停可切换对比背景；点击可使用 Element Plus 查看原图' : '点击可使用 Element Plus 查看原图'"
   >
     <el-image
       class="adaptive-image"
