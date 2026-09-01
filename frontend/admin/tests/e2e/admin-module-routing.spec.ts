@@ -16,7 +16,7 @@ test('Admin Shell 使用 CMS canonical 路由命名空间', async ({ page }) => 
   await expect(page).toHaveURL(/\/admin\/cms\/articles$/)
 
   for (const [id, url] of canonicalRoutes) {
-    await expect(page.getByTestId(`admin-nav-${id}`)).toHaveAttribute('href', url.replace('/admin', ''))
+    await expect(page.getByTestId(`admin-nav-${id}`)).toHaveAttribute('href', url)
   }
 })
 
