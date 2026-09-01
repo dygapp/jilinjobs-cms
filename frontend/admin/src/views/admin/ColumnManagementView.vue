@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, onMounted, reactive, ref } from 'vue'
+import { Delete, Edit, Plus } from '@element-plus/icons-vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
+import AdminIconAction from '../../components/AdminIconAction.vue'
 import {
   createColumn,
   deleteColumn,
@@ -118,12 +120,12 @@ const message = (error: unknown) => error instanceof Error ? error.message : '�
             <el-switch :model-value="scope.row.enabled" :data-testid="`enabled-${scope.row.id}`" active-text="启用" inactive-text="停用" @change="value => toggle(asColumn(scope.row), value === true)" />
           </template>
         </el-table-column>
-        <el-table-column label="操作" width="230">
-          <template #default="scope">
-            <el-button link type="primary" @click="openCreate(scope.row.id)">新增子栏目</el-button>
-            <el-button :data-testid="`edit-${scope.row.id}`" link type="primary" @click="openEdit(asColumn(scope.row))">编辑</el-button>
-            <el-button v-if="!asColumn(scope.row).preset" :data-testid="`delete-${scope.row.id}`" link type="danger" @click="remove(asColumn(scope.row))">删除</el-button>
-          </template>
+        <el-table-column label="操作" width="124" fixed="right">
+          <template #default="scope"><div class="admin-table-actions">
+            <AdminIconAction label="新增子栏目" :icon="Plus" @click="openCreate(scope.row.id)" />
+            <AdminIconAction :testid="`edit-${scope.row.id}`" label="编辑" :icon="Edit" @click="openEdit(asColumn(scope.row))" />
+            <AdminIconAction v-if="!asColumn(scope.row).preset" :testid="`delete-${scope.row.id}`" label="删除" :icon="Delete" type="danger" @click="remove(asColumn(scope.row))" />
+          </div></template>
         </el-table-column>
       </el-table>
     </el-card>
