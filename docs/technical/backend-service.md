@@ -4,6 +4,8 @@
 
 Backend 负责 CMS Core 的业务校验、持久化、公开/管理 API 和静态资源服务。
 
+跨模块配置责任统一遵循 `docs/technical/configuration-governance.md`；不得因为存在字面常量就机械增加系统配置。
+
 ## 2. Column 与 Article
 
 `cms_column` 通过 V11 增加 `cover_policy VARCHAR(16) NOT NULL DEFAULT 'OPTIONAL'`，模型映射为共享 `ContentImagePolicy`：`NONE / OPTIONAL / REQUIRED`。
@@ -94,9 +96,16 @@ RESOURCE_PATH 继续只接受 `/static/**`。
 - `uploads/site-properties/{key}/`；
 - `uploads/navigation-icons/`。
 
-实际公开值统一为 `/static/{relativePath}`。上传仍执行扩展名 + 真实文件签名校验，并自动创建父目录。
+实际公开值统一为 `/static/{relativePath}`。上传仍执行扩展名 + 真实文件签名校验，并自动创建父目录。允许扩展名和文件签名属于安全边界，保持代码契约，不提升为运营配置。
 
-关键资源集合为：固定 runtime 基线 + enabled RESOURCE_PATH 网站属性 + CmsList 图片 + Advertisement 图片 + Navigation iconPath。仍不扫描所有 CSS/JS/富文本引用。
+`protectedResource` 统一称“受保护资源”，其集合由两类来源合并：
+
+1. `cms.static.protected-resources`：Spring 外部化配置声明的固定部署 / 工程基线资源；默认值通过 `application.yml` 提供，可由环境变量 `CMS_STATIC_PROTECTED_RESOURCES` 覆盖；
+2. 运行时引用：启用的 RESOURCE_PATH 网站属性、CmsList 图片、Advertisement 图片、Navigation iconPath。
+
+StaticResourceService 不再直接写死具体基线文件路径。运行时引用仍必须动态计算，不增加数据库 `protected=true` 人工字段。资源开始被 CMS 引用时自动获得保护，解除引用后自然退出保护集合。
+
+受保护资源的普通 DELETE 由 Backend 最终拒绝；明确 replace 仍允许。该机制仍不扫描所有 CSS / JS / 富文本引用，因此 Admin 对普通资源删除继续给出风险提示。
 
 ## 9. Test
 
@@ -108,4 +117,6 @@ RESOURCE_PATH 继续只接受 `/static/**`。
 - CmsList：NONE / OPTIONAL / REQUIRED item imagePath 约束与策略切换一致性；
 - 宣传展示有效期和 NO_LINK；
 - Fresh Database 全量 migration + Runtime；
-- 静态资源真实媒体校验和新引用模型保护无回归。
+- 静态资源真实媒体校验；
+- 配置提供的固定受保护资源与运行时引用资源都返回 `protectedResource=true`；更换测试配置后保护集合随配置变化，证明 Service 不再依赖具体路径硬编码；
+- 受保护资源拒绝普通删除但允许明确替换。
