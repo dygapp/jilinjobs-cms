@@ -1,5 +1,6 @@
 package com.jilinjobs.cms.column
 
+import com.jilinjobs.cms.common.ContentImagePolicy
 import jakarta.validation.Valid
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.Size
@@ -21,6 +22,7 @@ data class SaveColumnRequest(
     val sortOrder: Int = 0,
     val enabled: Boolean = true,
     @field:Size(max=100) val alias: String = "",
+    val coverPolicy: ContentImagePolicy = ContentImagePolicy.OPTIONAL,
 ) {
-    fun toDraft() = ColumnDraft(parentId, name, sortOrder, enabled, alias)
+    fun toDraft() = ColumnDraft(parentId, name, sortOrder, enabled, alias, coverPolicy)
 }

@@ -1,0 +1,21 @@
+cms:
+  metadata:
+    site-property-groups:
+      BASIC:
+        name: 基础信息
+        order: 10
+      BRAND:
+        name: 品牌与标识
+        order: 20
+      CONTACT:
+        name: 联系信息
+        order: 30
+      FOOTER:
+        name: 页脚信息
+        order: 40
+      PRESENTATION:
+        name: 展示设置
+        order: 50
+      GENERAL:
+        name: 其他
+        order: 100

@@ -2,6 +2,7 @@ package com.jilinjobs.cms.content
 
 import com.jilinjobs.cms.column.ColumnContentDependency
 import com.jilinjobs.cms.column.ColumnQuery
+import com.jilinjobs.cms.common.ContentImagePolicy
 import com.jilinjobs.cms.resource.ArticleResourceAssociation
 import com.jilinjobs.cms.resource.ArticleResourceLinks
 import org.springframework.stereotype.Component
@@ -32,8 +33,9 @@ class ArticleService(
 
     @Transactional
     fun update(id: Long, draft: ArticleDraft): CmsArticle {
-        repository.findById(id) ?: throw ArticleNotFoundException(id)
+        val current = repository.findById(id) ?: throw ArticleNotFoundException(id)
         val normalized = normalize(draft)
+        if (current.status == ArticleStatus.PUBLISHED) validatePublicationCover(normalized.articleType, normalized.columnId, normalized.coverResourceId)
         val article = repository.update(id, normalized)
         resourceAssociation.replaceArticleResources(id, normalized.links())
         return withResources(article)
@@ -41,8 +43,9 @@ class ArticleService(
 
     @Transactional
     fun publish(id: Long): CmsArticle {
-        val article = repository.findById(id) ?: throw ArticleNotFoundException(id)
+        val article = withResources(repository.findById(id) ?: throw ArticleNotFoundException(id))
         if (article.status == ArticleStatus.PUBLISHED) throw ArticleValidationException("文章已经处于已发布状态")
+        validatePublicationCover(article.articleType, article.columnId, article.coverResourceId)
         return withResources(repository.updateStatus(id, ArticleStatus.PUBLISHED, LocalDateTime.now()))
     }
 
@@ -59,7 +62,7 @@ class ArticleService(
         if (size !in 1..50) throw ArticleValidationException("每页数量必须在 1 到 50 之间")
         columnId?.let { if (columnQuery.find(it) == null) throw ArticleValidationException("所属栏目不存在：$it") }
         val rows = repository.findPublished(columnId, size, page * size)
-        return PublicArticlePage(rows.map(::summary), page, size, repository.countPublished(columnId))
+        return PublicArticlePage(rows.map { summary(withResources(it)) }, page, size, repository.countPublished(columnId))
     }
 
     @Transactional
@@ -90,7 +93,7 @@ class ArticleService(
         if (title.isBlank()) throw ArticleValidationException("文章标题不能为空")
         if (title.length > 200) throw ArticleValidationException("文章标题不能超过 200 个字符")
         if (draft.source.length > 200) throw ArticleValidationException("内容来源不能超过 200 个字符")
-        if (columnQuery.find(draft.columnId) == null) throw ArticleValidationException("所属栏目不存在：${draft.columnId}")
+        val column = columnQuery.find(draft.columnId) ?: throw ArticleValidationException("所属栏目不存在：${draft.columnId}")
 
         val externalUrl = draft.externalUrl?.trim()?.takeIf { it.isNotEmpty() }
         if (draft.articleType == ArticleType.EXTERNAL_LINK) {
@@ -110,6 +113,10 @@ class ArticleService(
             )
         }
 
+        if (column.coverPolicy == ContentImagePolicy.NONE && draft.coverResourceId != null) {
+            throw ArticleValidationException("当前栏目不使用文章封面图片")
+        }
+
         return draft.copy(
             title = title,
             source = draft.source.trim(),
@@ -117,6 +124,14 @@ class ArticleService(
             bodyImageResourceIds = draft.bodyImageResourceIds.distinct(),
             attachmentResourceIds = draft.attachmentResourceIds.distinct(),
         )
+    }
+
+    private fun validatePublicationCover(articleType: ArticleType, columnId: Long, coverResourceId: Long?) {
+        if (articleType != ArticleType.INTERNAL) return
+        val column = columnQuery.find(columnId) ?: throw ArticleValidationException("所属栏目不存在：$columnId")
+        if (column.coverPolicy == ContentImagePolicy.REQUIRED && coverResourceId == null) {
+            throw ArticleValidationException("当前栏目要求文章设置封面图片，补充封面后才能发布")
+        }
     }
 
     private fun summary(article: CmsArticle): PublicArticleSummary {
@@ -134,6 +149,7 @@ class ArticleService(
             article.source,
             article.articleType,
             article.externalUrl,
+            article.coverResourceId,
         )
     }
 

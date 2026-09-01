@@ -56,6 +56,7 @@ data class PublicArticleSummary(
     val source: String = "",
     val articleType: ArticleType = ArticleType.INTERNAL,
     val externalUrl: String? = null,
+    val coverResourceId: Long? = null,
 )
 
 data class PublicArticleDetail(

@@ -6,7 +6,7 @@
 
 ```text
 dygapp/agentic-dev
-master@df4d6a607597eeb3684279e269cb073fcb398f83
+master@bf21c7bcd711fd667c43007a72fae65750d1af09
 ```
 
 普通开发优先使用 Consumer-local：`AGENTS.md`、`docs/project/development-method.md`、当前 Requirement / Specification / Technical Plan。
@@ -22,7 +22,7 @@ master@df4d6a607597eeb3684279e269cb073fcb398f83
 | 站点基线收敛 EU-07～EU-12 | 已完成 | 现网站点结构、页面模型、规范 URL、网站配置、静态资源与初始化基线完成自动化收敛 |
 | 首页与公共视觉基线收敛 | 已完成 | 原站关键视觉资源、蓝白视觉体系、首页主要布局、Header / Nav / Footer、移动端基础适配及人工视觉复核完成 |
 | 页面细节视觉收敛 | 已完成 | 栏目列表、文章详情、固定页面、页面组 / Tab、业务指南、页脚与外链文章行为完成自动化和人工视觉复核 |
-| 管理端工程分离与功能收敛 | 下一阶段 | 将公开网站与管理端拆分为独立前端工程，并对管理页面、后台功能和管理流程进行人工复核与完善 |
+| 管理端工程分离与功能收敛 | 当前 | 将公开网站与管理端拆分为独立前端工程，并对管理页面、后台功能、管理流程和管理端验证进行收敛 |
 | 公开站点内容与集成收敛 | 后续 | 完善固定页面内容、嵌入内容、网站导航预设基线及剩余公开页面内容与集成 |
 | 真实第三方深度集成 / 中心党建 | 条件性后续 | 根据后续 Product Intent、第三方接口与认证条件再进入 |
 
@@ -34,10 +34,11 @@ master@df4d6a607597eeb3684279e269cb073fcb398f83
 | 2026-08-26 | RC-01 Human Integration Review Environment 完成 |
 | 2026-08-26 | Consumer-local 方法与 Roadmap 固化 |
 | 2026-08-27 | 完成原站取证与关键 Product Intent 人工确认，EU-07～EU-12 完成实现与自动化收敛 |
-| 2026-08-27 | PR #15 合并，站点结构、页面模型、后台闭环、静态资源和初始化基线进入 `main` |
-| 2026-08-28 | PR #16 合并，首页与公共视觉基线、真实原站静态资源、AI/Human Review 数据隔离及视觉复核进入 `main` |
+| 2026-08-27 | 站点结构、页面模型、后台闭环、静态资源和初始化基线进入 `main` |
+| 2026-08-28 | 首页与公共视觉基线、真实原站静态资源、AI/Human Review 数据隔离及视觉复核进入 `main` |
 | 2026-08-28 | `agentic-dev` baseline 更新到 `df4d6a607597eeb3684279e269cb073fcb398f83`，同步验证证据、Stale Verification Contract、Visual Fidelity 与 Human Review Environment 边界 |
-| 2026-08-28 | PR #18 完成栏目列表、文章详情、固定页、业务指南、页脚、favicon、举报固定页与外链文章等页面细节收敛；最终 Human Visual Review 已通过，页面细节视觉收敛阶段关闭 |
+| 2026-08-28 | 栏目列表、文章详情、固定页、业务指南、页脚、favicon、举报固定页与外链文章等页面细节收敛完成；最终 Human Visual Review 已通过，页面细节视觉收敛阶段关闭 |
+| 2026-08-28 | `agentic-dev` baseline 更新到 `bf21c7bcd711fd667c43007a72fae65750d1af09`，新增 Human Review Finding 分类、外部媒体真实内容验证、后继提交 Evidence Claim 影响判断和 Roadmap / GitHub 集成状态边界 |
 
 ## 当前已固化结果
 
@@ -59,44 +60,64 @@ master@df4d6a607597eeb3684279e269cb073fcb398f83
 - Review Environment 对同一 PR 使用并发互斥，避免固定 FRP 评审域名被多个 Head 同时占用；
 - Visual Fidelity 不由 Functional Browser PASS 单独证明；当前路径使用原站参考证据、AI 截图对照与 Human Visual Review；
 - 测试 / Workflow assertion 可能成为 Stale Verification Contract，失败时先核对当前 Authority / Specification，再决定修实现还是修验证层；
+- Human Review Finding 需要按观察内容重新对照 Authority 分类，不因“视觉评审”名称自动缩减为视觉微调；
+- 外部二进制 / 媒体资源在版本化或 Runtime 消费前按风险验证真实内容类型，不只依赖文件名、扩展名或响应头；
+- 后继提交不按 `docs-only` 机械继承祖先 Evidence，只有按具体 Evidence Claim 完成影响判断并记录 commit / compare / claim 映射时才可复用未受影响证据；
+- Roadmap 只维护持久路线与可恢复状态，不复制 PR / Merge Commit / 临时分支等 GitHub 瞬时状态；
 - 历史内容迁移与初始化基线分离；
 - 中心党建当前只保留主菜单占位，第三方深度集成仍属于条件性后续。
 
-## 下一阶段：管理端工程分离与功能收敛
+## 当前阶段：管理端工程分离与功能收敛
 
 当前前端仍是**一个 Vite / Vue 前端工程**：同一 `frontend/package.json`、同一 Router 同时承载公开网站路由与 `/admin/**` 管理路由。该结构适合前期原型和功能验证，但不再作为后续正式管理端收敛的目标结构。
 
-下一阶段优先执行：
+本阶段已确认目标结构与执行边界：
 
-1. 重构前端工程，将公开网站与管理端拆分为两个独立前端工程，各自拥有独立入口、路由、依赖边界、构建产物和测试入口；具体目录名称、共享代码方式和部署路径在该阶段 Technical Plan 中确定，不在本 Roadmap 预设实现细节；
-2. 保持后端 REST API 和现有业务模型稳定，先完成前端物理边界拆分，再根据实际问题调整 API；
-3. 对栏目管理、菜单管理、文章管理、固定页面 / 页面组管理、网站配置管理、网站静态资源管理等现有管理页面进行完整人工复核；
-4. 完善管理端页面布局、表单、校验、状态反馈、列表筛选/分页、危险操作提示、异常处理和可用性；
-5. 复核站内文章 / 外链文章、页面渲染模式、菜单目标与打开方式等新模型在管理端的编辑体验，避免底层模型已扩展但管理界面仍停留在原型状态；
-6. 检查管理 API 是否存在仅为早期原型服务的缺口或不一致，并补齐 Backend / Frontend / Browser Verification；
-7. 管理端完成自动化收敛后建立独立的人工作业评审入口，再执行 Human Review。
+1. 将当前 `frontend` 拆分为 `frontend/public-site` 与 `frontend/admin` 两个独立 Vue / Vite 工程，各自拥有独立入口、Router、依赖边界、构建产物和 Browser Verification 入口；
+2. 保持后端 Spring Boot 单工程、现有 REST API 与业务模型边界稳定，先完成前端物理拆分，再只针对真实管理能力缺口调整 API；
+3. Review / Runtime Gateway 继续使用同一 Nginx / FRP 地址：`/admin/**` 路由到管理端静态产物，其余公开路径路由到公开站点静态产物；
+4. 暂不预先建立大型共享前端 package；只有拆分后出现稳定、明确且值得长期维护的 transport 类型或通用实现重复时，再抽取最小共享包；
+5. 建立统一 Admin Application Shell 和管理导航，使管理端从一组独立 `/admin/**` 页面收敛为完整管理应用；
+6. 对栏目、导航、文章、固定页面 / 页面组、网站配置、网站静态资源六类管理能力进行功能与可用性收敛；
+7. 补齐文章筛选/分页、固定页面 render mode 对应编辑字段、类型化网站配置、静态资源真实媒体内容校验、关键资源保护和新后台模块定向测试；
+8. 认证、账号、角色、统一权限体系仍按当前 Requirement 保持 Out of Scope；高风险网站配置和静态资源只保留明确的后续权限边界；
+9. 自动验证闭环完成后建立独立 Human Admin Review 入口和示例数据，进入人工管理端复核。
+
+### 当前执行顺序
+
+```text
+EU-13 Baseline Upgrade
+→ EU-14 Frontend Physical Separation
+→ EU-15 Admin Application Shell
+→ EU-16 Content Administration Convergence
+→ EU-17 Site Configuration & Static Resource Safety
+→ EU-18 Feature-wide Verification & Human Admin Review
+```
+
+本阶段新的 Technical Plan / Execution Units 作为当前工作 Authority 保存；上一阶段 `center-main-site-core` Technical Plan 中“一个 Vite 工程同时承载公开端与管理端”的描述只代表历史实现基线，不再作为目标架构。
 
 ## 后续公开站点内容与集成收敛
 
-PR #18 关闭的是“当前页面结构与视觉细节收敛”，不是公开站点全部内容建设完成。后续仍需至少处理：
+当前公开站点页面结构与视觉细节阶段已经关闭，但公开站点全部内容建设尚未完成。后续仍需至少处理：
 
 1. **完善固定页面建设与内容填充**：逐页核对关于我们、预决算公开、就业创业师资库、联系我们、常见问题、业务指南各页及其他固定页面，补齐正式内容、图片、附件和必要的专用布局；避免长期保留占位文本或只完成页面框架；
 2. **完成嵌入内容建设**：在产品边界和第三方条件明确后，完成招聘信息各页面、就业指导直播课程等嵌入型内容的实际加载方案，包括嵌入地址配置、加载状态、失败提示、尺寸适配、移动端行为和必要的安全限制；第三方认证、接口联动或故障保障超出单纯页面嵌入时，单独进入第三方集成任务；
 3. **固化网站导航预设内容**：核对现网网站导航 / 友情链接各分类、名称、排序和目标地址，将确认后的预设内容固化到可重复初始化的数据库基线中，同时保持后台可维护，不依赖 Review Fixture 或人工临时录入；
 4. **补齐公开页面的正式初始化内容**：继续识别仍使用占位数据、测试数据或缺少正式初始内容的首页固定入口、业务指南快捷项、Banner / 专题入口等，并按“数据库基线 + 版本化静态资源包”原则固化；
-5. **完成外部聚合内容的数据来源闭环**：招聘公告等已支持 `EXTERNAL_LINK` 的区域后续需要明确抓取 / 同步机制、来源字段、去重、更新与失效策略；页面模型与展示能力已经具备，但数据采集本身不属于 PR #18；
+5. **完成外部聚合内容的数据来源闭环**：招聘公告等已支持 `EXTERNAL_LINK` 的区域后续需要明确抓取 / 同步机制、来源字段、去重、更新与失效策略；页面模型与展示能力已经具备，但数据采集本身不属于当前管理端阶段；
 6. **继续历史内容与旧 URL 迁移准备**：完整历史文章、附件、图片和可识别旧地址映射继续与 Flyway 初始化基线分离，在上线前通过专项迁移任务处理；
-7. **完成剩余响应式和真实内容回归**：正式内容与真实嵌入接入后重新检查桌面端、移动端、微信内置浏览器等主要场景，防止占位内容阶段无法暴露的高度、溢出、图片比例和长文本问题；
+7. **完成剩余响应式和真实内容回归**：正式内容与真实嵌入接入后重新检查桌面端、移动端、微信内置浏览器等主要场景；
 8. **按条件推进中心党建**：当前仍只保留主导航占位，主题视觉、栏目内容和专属能力需在 Product Intent 明确后作为独立阶段处理。
 
 上述公开站点后续任务原则上不回退已经人工确认的首页总体视觉结构；如真实内容或嵌入暴露公共组件缺陷，只针对明确问题增量调整。
 
 ## 阶段切换原则
 
-- PR #18 Human Visual Review 已通过，页面细节视觉收敛阶段关闭，可执行合并；
-- 下一工作会话优先进入“管理端工程分离与功能收敛”；
-- 公开站点剩余内容与嵌入任务保留在本 Roadmap，后续按独立阶段继续，不要求在 PR #18 中实现；
-- 新阶段开始时先基于 `main` 和本 Roadmap 重新形成 Technical Plan / Execution Plan，不直接沿用旧 PR 分支。
+- 页面细节视觉收敛阶段已经关闭；
+- 当前进入“管理端工程分离与功能收敛”，按当前 `main` 和本 Roadmap 新形成的 Technical Plan / Execution Units 实施；
+- 公开站点剩余内容与嵌入任务保留在本 Roadmap，后续按独立阶段继续；
+- 当前阶段完成自动化收敛并建立 Human Admin Review Runtime 后，交由人工复核；Human Review Finding 按 Consumer-local Method 分类路由；
+- 最终 PR 不自动合并。
 
 ## Fresh Context 恢复入口
 
@@ -105,10 +126,8 @@ PR #18 关闭的是“当前页面结构与视觉细节收敛”，不是公开�
 3. `docs/project/project-roadmap.md`
 4. `docs/project/development-method.md`
 5. `docs/requirements/information-publishing.md`
-6. `docs/specifications/center-main-site-core.md`
-7. `docs/technical/center-main-site-core.md`
-8. `docs/technical/verification-strategy.md`
-9. `docs/work/center-main-site-core-execution-units.md`
-10. 当前 Branch / PR / CI / Runtime Evidence
+6. 当前阶段 Specification / Technical Plan / Execution Units
+7. `docs/technical/verification-strategy.md`
+8. 当前 Branch / PR / CI / Runtime Evidence
 
 不得使用其他聊天或其他项目状态补充未固化的 Consumer 产品事实。

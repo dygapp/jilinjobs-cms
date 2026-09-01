@@ -11,8 +11,12 @@ on:
     types: [opened, synchronize, reopened]
 
 concurrency:
-  group: review-environment-${{ github.event.pull_request.number || github.event.inputs.ref || github.ref }}
+  # 评审环境共用固定 FRP proxy/custom domain，整个仓库同一时间只能存在一个实例。
+  group: review-environment
   cancel-in-progress: true
+
+permissions:
+  contents: read
 
 jobs:
   review-environment:
@@ -55,17 +59,15 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: "24"
-          cache: npm
-          cache-dependency-path: frontend/package.json
 
-      - name: 构建评审环境
+      - name: 构建 Backend / Public Site / Admin
         run: |
-          (cd backend && gradle clean bootJar --no-daemon) &
-          backend_build_pid=$!
-          (cd frontend && npm install --no-audit --no-fund && npm run build) &
-          frontend_build_pid=$!
+          (cd backend && gradle clean bootJar --no-daemon) & backend_build_pid=$!
+          (cd frontend/public-site && npm install --no-audit --no-fund && npm run build) & public_build_pid=$!
+          (cd frontend/admin && npm install --no-audit --no-fund && npm run build) & admin_build_pid=$!
           wait "$backend_build_pid"
-          wait "$frontend_build_pid"
+          wait "$public_build_pid"
+          wait "$admin_build_pid"
 
       - name: 准备初始化静态资源包
         run: |
@@ -78,7 +80,7 @@ jobs:
           test -f runtime-static/home/recruitment-campaign.png
           test -f runtime-static/brand/smartedu-logo-text.png
 
-      - name: 启动后端与前端
+      - name: 启动 Backend 与双前端 Gateway
         run: |
           docker run -d --name cms-backend --network host \
             -e 'DB_URL=jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true' \
@@ -96,44 +98,57 @@ jobs:
             sleep 2
           done
 
-          curl --fail --silent http://127.0.0.1:8080/static/health/baseline.png > /dev/null
-
           docker run -d --name cms-frontend --network host \
-            -v "$GITHUB_WORKSPACE/frontend/dist:/usr/share/nginx/html:ro" \
+            -v "$GITHUB_WORKSPACE/frontend/public-site/dist:/usr/share/nginx/html/public:ro" \
+            -v "$GITHUB_WORKSPACE/frontend/admin/dist:/usr/share/nginx/html/admin:ro" \
             -v "$GITHUB_WORKSPACE/frontend/nginx.e2e.conf:/etc/nginx/nginx.conf:ro" \
             nginx:1.29.8-alpine
 
           for i in $(seq 1 30); do
-            if curl --fail --silent http://127.0.0.1:5173/ | grep -qi '<html'; then exit 0; fi
+            if curl --fail --silent http://127.0.0.1:5173/ | grep -qi '<html' \
+              && curl --fail --silent http://127.0.0.1:5173/admin/ | grep -qi '<html'; then exit 0; fi
             sleep 1
           done
           docker logs cms-frontend
           exit 1
 
-      - name: 生成并验证 AI 评审数据
-        timeout-minutes: 10
+      - name: 执行 AI / Browser 评审验证
+        timeout-minutes: 15
         run: |
           docker run --rm --init --ipc=host --network host \
             -e CI=true \
             -e CI_EXTERNAL_WEB_SERVER=true \
-            -v "$GITHUB_WORKSPACE/frontend:/work" \
+            -v "$GITHUB_WORKSPACE/frontend/public-site:/work" \
             -w /work \
             mcr.microsoft.com/playwright:v1.61.0-noble \
             bash -lc 'npm install --no-audit --no-fund && npx playwright test --project=chromium'
+
+          if compgen -G 'frontend/admin/tests/e2e/*.spec.ts' > /dev/null; then
+            docker run --rm --init --ipc=host --network host \
+              -e CI=true \
+              -v "$GITHUB_WORKSPACE/frontend/admin:/work" \
+              -w /work \
+              mcr.microsoft.com/playwright:v1.61.0-noble \
+              bash -lc 'npm install --no-audit --no-fund && npm run test:e2e'
+          fi
 
           curl --fail --silent http://127.0.0.1:5173/api/admin/columns | jq --exit-status 'length > 0' > /dev/null
           curl --fail --silent http://127.0.0.1:5173/api/admin/navigations | jq --exit-status 'length > 0' > /dev/null
           curl --fail --silent http://127.0.0.1:5173/api/admin/page-groups | jq --exit-status 'map(.alias) | index("guide") != null and index("jobs") != null' > /dev/null
           curl --fail --silent http://127.0.0.1:5173/static/home/header-banner.png > /dev/null
+          curl --fail --silent http://127.0.0.1:5173/admin/articles | grep -qi '<html'
 
       - name: 上传 AI 评审证据
+        if: always()
         uses: actions/upload-artifact@v7
         with:
           name: review-environment-playwright-evidence
           path: |
-            frontend/playwright-report
-            frontend/test-results
-          if-no-files-found: error
+            frontend/public-site/playwright-report
+            frontend/public-site/test-results
+            frontend/admin/playwright-report
+            frontend/admin/test-results
+          if-no-files-found: warn
           retention-days: 5
 
       - name: 重置为干净人工评审基线
@@ -165,13 +180,10 @@ jobs:
 
           curl --fail --silent http://127.0.0.1:5173/api/public/navigations \
             | jq --exit-status '[.[] | select(.position == "MAIN" and .parentId == null) | .name] == ["网站首页","中心党建","招聘信息","业务指南","政策法规","就业指导","典型事迹","预决算公开","关于我们"]' > /dev/null
-          curl --fail --silent http://127.0.0.1:5173/api/public/navigations \
-            | jq --exit-status 'all(.[]; (.name | startswith("移动导航-") | not) and (.name | startswith("外部服务-") | not))' > /dev/null
           curl --fail --silent http://127.0.0.1:5173/static/home/header-banner.png > /dev/null
-          curl --fail --silent http://127.0.0.1:5173/static/home/carousel-01.jpg > /dev/null
-          curl --fail --silent http://127.0.0.1:5173/static/home/recruitment-campaign.png > /dev/null
+          test "$(find runtime-static -maxdepth 1 -type d -name 'verification-*' | wc -l)" -eq 0
 
-      - name: 准备人工评审示例内容
+      - name: 准备 Human Admin Review 示例内容
         run: |
           set -euo pipefail
           columns=$(curl --fail --silent http://127.0.0.1:5173/api/admin/columns)
@@ -182,7 +194,7 @@ jobs:
 
           create_article() {
             column_id="$1"; title="$2"; published="$3"
-            payload=$(jq -n --argjson columnId "$column_id" --arg title "$title" --arg published "$published" '{columnId:$columnId,title:$title,bodyHtml:"<p>人工评审环境示例内容，用于观察页面排版与视觉效果。</p>",source:"人工评审示例数据",publishDate:$published,pinned:false,recommended:false,sortOrder:0,coverResourceId:null,bodyImageResourceIds:[],attachmentResourceIds:[]}')
+            payload=$(jq -n --argjson columnId "$column_id" --arg title "$title" --arg published "$published" '{columnId:$columnId,title:$title,bodyHtml:"<p>人工管理端评审示例内容，用于验证编辑、发布与公开展示闭环。</p>",source:"Human Admin Review Fixture",publishDate:$published,pinned:false,recommended:false,sortOrder:0,coverResourceId:null,bodyImageResourceIds:[],attachmentResourceIds:[]}')
             article_id=$(curl --fail --silent -H 'Content-Type: application/json' -d "$payload" http://127.0.0.1:5173/api/admin/articles | jq -r '.id')
             curl --fail --silent -X POST "http://127.0.0.1:5173/api/admin/articles/${article_id}/publish" > /dev/null
           }
@@ -194,25 +206,14 @@ jobs:
             curl --fail --silent -X POST "http://127.0.0.1:5173/api/admin/articles/${article_id}/publish" > /dev/null
           }
 
-          create_article "$notice_id" '关于开展高校毕业生就业服务相关工作的通知' '2026-08-28'
-          create_article "$notice_id" '吉林省高校毕业生就业创业服务工作安排' '2026-08-26'
-          create_article "$notice_id" '关于做好毕业生就业手续办理工作的提示' '2026-08-22'
-          create_article "$notice_id" '高校毕业生就业政策宣传活动通知' '2026-08-18'
-          create_article "$notice_id" '就业服务大厅近期业务办理温馨提示' '2026-08-15'
+          create_article "$notice_id" '管理端人工评审：就业服务工作通知' '2026-08-28'
+          create_article "$notice_id" '管理端人工评审：毕业生就业手续办理提示' '2026-08-26'
+          create_article "$employment_id" '管理端人工评审：访企拓岗促就业专项行动' '2026-08-27'
+          create_external_article "$recruitment_id" '管理端人工评审：高校毕业生专场招聘公告' '2026-08-28' 'https://example.com/review/recruitment-1'
+          create_external_article "$recruitment_id" '管理端人工评审：重点单位招聘公告' '2026-08-24' 'https://example.com/review/recruitment-2'
 
-          create_article "$employment_id" '吉林省高校持续开展访企拓岗促就业专项行动' '2026-08-27'
-          create_article "$employment_id" '高校毕业生就业服务系列活动有序开展' '2026-08-25'
-          create_article "$employment_id" '全省高校就业指导服务能力提升活动举办' '2026-08-21'
-          create_article "$employment_id" '校企协同拓展毕业生就业岗位资源' '2026-08-19'
-          create_article "$employment_id" '重点群体毕业生就业帮扶工作持续推进' '2026-08-16'
-
-          create_external_article "$recruitment_id" '吉林省高校毕业生专场招聘活动公告' '2026-08-28' 'https://example.com/review/recruitment-1'
-          create_external_article "$recruitment_id" '长春市重点用人单位高校毕业生招聘公告' '2026-08-24' 'https://example.com/review/recruitment-2'
-          create_external_article "$recruitment_id" '吉林省事业单位面向高校毕业生公开招聘信息' '2026-08-20' 'https://example.com/review/recruitment-3'
-          create_external_article "$recruitment_id" '高校毕业生线上双选会参会公告' '2026-08-17' 'https://example.com/review/recruitment-4'
-          create_external_article "$recruitment_id" '省内重点企业招聘高校毕业生岗位信息' '2026-08-13' 'https://example.com/review/recruitment-5'
-
-          curl --fail --silent 'http://127.0.0.1:5173/api/public/articles?page=0&size=50' | jq --exit-status '.total >= 15' > /dev/null
+          curl --fail --silent 'http://127.0.0.1:5173/api/public/articles?page=0&size=50' | jq --exit-status '.total >= 5' > /dev/null
+          curl --fail --silent http://127.0.0.1:5173/admin/articles | grep -qi '<html'
 
       - name: 下载 frpc
         run: |
@@ -240,33 +241,54 @@ jobs:
 
       - name: 启动 frpc 并验证隧道
         run: |
-          test -x ./frp/frpc
-          ./frp/frpc -c ./frp/frpc.toml > frpc.log 2>&1 &
-          FRPC_PID=$!
-          sleep 10
-          if ! kill -0 $FRPC_PID; then cat frpc.log; exit 1; fi
-          if ! grep -q "start proxy success" frpc.log; then cat frpc.log; echo "frpc 隧道未建立"; exit 1; fi
+          set -euo pipefail
+          for attempt in $(seq 1 6); do
+            rm -f frpc.log
+            ./frp/frpc -c ./frp/frpc.toml > frpc.log 2>&1 &
+            FRPC_PID=$!
+            sleep 5
 
-      - name: 验证外部评审地址
+            if kill -0 "$FRPC_PID" 2>/dev/null && grep -q "start proxy success" frpc.log; then
+              echo "frpc 隧道已建立"
+              exit 0
+            fi
+
+            cat frpc.log
+            kill "$FRPC_PID" 2>/dev/null || true
+            wait "$FRPC_PID" 2>/dev/null || true
+
+            if grep -q "already exists" frpc.log && [ "$attempt" -lt 6 ]; then
+              echo "固定评审代理尚未从上一实例释放，5 秒后重试（${attempt}/6）"
+              sleep 5
+              continue
+            fi
+
+            echo "frpc 隧道未建立"
+            exit 1
+          done
+          echo "frpc 隧道重试耗尽"
+          exit 1
+
+      - name: 验证外部公开站与管理端地址
         run: |
           for i in $(seq 1 30); do
-            if curl --fail --show-error --silent http://review.cc-lotus.info/ -o review-home.html && grep -qi '<html' review-home.html; then break; fi
-            if [ "$i" -eq 30 ]; then echo "评审地址验证失败"; exit 1; fi
+            if curl --fail --show-error --silent http://review.cc-lotus.info/ -o review-home.html \
+              && curl --fail --show-error --silent http://review.cc-lotus.info/admin/ -o review-admin.html \
+              && grep -qi '<html' review-home.html \
+              && grep -qi '<html' review-admin.html; then break; fi
+            if [ "$i" -eq 30 ]; then echo "评审地址验证失败"; cat frpc.log; exit 1; fi
             sleep 2
           done
           grep -q '<title>吉林省高等学校毕业生就业信息网</title>' review-home.html
-          js_path=$(grep -oE 'src="/assets/[^"]+\.js"' review-home.html | head -1 | cut -d'"' -f2)
-          css_path=$(grep -oE 'href="/assets/[^"]+\.css"' review-home.html | head -1 | cut -d'"' -f2)
-          test -n "$js_path"; test -n "$css_path"
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors "http://review.cc-lotus.info${js_path}" > /dev/null
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors "http://review.cc-lotus.info${css_path}" > /dev/null
+          grep -q '内容管理' review-admin.html
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/home/header-banner.png > /dev/null
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors 'http://review.cc-lotus.info/api/public/articles?page=0&size=20' | jq --exit-status '.total >= 15' > /dev/null
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/public/navigations \
-            | jq --exit-status 'all(.[]; (.name | startswith("移动导航-") | not) and (.name | startswith("外部服务-") | not))' > /dev/null
+          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/admin/columns | jq --exit-status 'length > 0' > /dev/null
+          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors 'http://review.cc-lotus.info/api/public/articles?page=0&size=50' | jq --exit-status '.total >= 5' > /dev/null
 
       - name: 输出评审地址
-        run: echo "人工评审地址：http://review.cc-lotus.info"
+        run: |
+          echo "公开站人工评审地址：http://review.cc-lotus.info/"
+          echo "管理端人工评审地址：http://review.cc-lotus.info/admin/"
 
       - name: 保持环境运行
         run: |

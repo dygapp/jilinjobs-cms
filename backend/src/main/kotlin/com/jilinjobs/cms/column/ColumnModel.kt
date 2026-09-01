@@ -1,5 +1,7 @@
 package com.jilinjobs.cms.column
 
+import com.jilinjobs.cms.common.ContentImagePolicy
+
 data class CmsColumn(
     val id: Long,
     val parentId: Long?,
@@ -7,6 +9,8 @@ data class CmsColumn(
     val sortOrder: Int,
     val enabled: Boolean,
     val alias: String = "",
+    val coverPolicy: ContentImagePolicy = ContentImagePolicy.OPTIONAL,
+    val preset: Boolean = false,
 )
 
 data class ColumnDraft(
@@ -15,6 +19,7 @@ data class ColumnDraft(
     val sortOrder: Int,
     val enabled: Boolean,
     val alias: String = "",
+    val coverPolicy: ContentImagePolicy = ContentImagePolicy.OPTIONAL,
 )
 
 interface ColumnQuery {
