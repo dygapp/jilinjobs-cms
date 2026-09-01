@@ -17,25 +17,14 @@ setPageMeta({
         <div class="party-width party-hero-inner">
           <p class="party-kicker">党建引领 · 服务发展</p>
           <h1>中心党建</h1>
-          <p>当前页面用于承载中心党建独立站点入口、红色视觉主题和后续页面模块。正式栏目、内容与原站视觉细节将在下一阶段专项完善。</p>
+          <p>中心党建独立站点基础页面已经建立，正式栏目、内容和视觉细节将在后续专项中按确认后的站点基线完善。</p>
         </div>
       </section>
 
-      <section class="party-width party-foundation" aria-label="中心党建基础框架">
+      <section class="party-width party-foundation party-foundation-placeholder" aria-label="中心党建内容状态">
         <article>
-          <span>01</span>
-          <h2>党建动态</h2>
-          <p>预留党建信息发布内容区域，后续根据原站结构和正式需求接入 CMS 数据。</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h2>学习教育</h2>
-          <p>预留学习教育内容区域，本阶段不提前定义具体栏目或运营数据。</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h2>组织建设</h2>
-          <p>预留组织建设内容区域，为后续真实页面设计提供稳定扩展位置。</p>
+          <h2>内容建设中</h2>
+          <p>当前仅提供中心党建独立入口和基础页面框架，不提前定义尚未确认的栏目与运营内容。</p>
         </article>
       </section>
     </main>
