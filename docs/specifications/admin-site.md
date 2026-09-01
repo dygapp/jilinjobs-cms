@@ -6,6 +6,8 @@
 
 管理端目标是提供通用、可复用的 CMS 管理体验，而不是把当前首页每个视觉区块都做成专用配置页面。
 
+管理端前端模块集成方向遵循 `docs/architecture/decisions/ADR-0001-admin-frontend-module-integration.md`：当前采用模块化 SPA，Module Federation 仅作为未来按需演进机制。
+
 ## 2. 管理信息架构
 
 管理端以业务职责组织现有八类 CMS 能力，而不是在一级侧边栏无差别平铺：
@@ -17,7 +19,7 @@
 
 上述四项是侧边栏分组标题，不增加额外点击层级，也不新增独立“系统设置”模块。数据库、环境地址、上传安全限制等基础设施配置不进入 CMS 菜单。
 
-管理端保持独立 `/admin/` SPA 和统一 Application Shell。技术路由 `/pages`、`/page-groups`、`/advertisements` 等可以继续保留；产品界面分别使用“单页 / 单页分组 / 宣传展示”等业务术语。
+管理端保持独立 `/admin/` SPA 和统一 Application Shell。CMS canonical 技术路由统一位于 `/admin/cms/**` 命名空间，例如 `/admin/cms/articles`、`/admin/cms/pages`、`/admin/cms/advertisements`；原 `/admin/articles`、`/admin/pages`、`/admin/advertisements` 等路径只作为兼容重定向保留。产品界面继续使用“文章 / 单页 / 单页分组 / 宣传展示”等业务术语，不向管理员暴露模块装配细节。
 
 主要内容类型按“文章 / 单页 / 列表”组织。栏目和导航负责内容结构，宣传展示负责稳定展示位中的运营内容，网站属性和静态资源属于站点设置。不得为了技术对象名称一致而让管理员理解数据库/API 术语。
 
@@ -134,6 +136,7 @@
 
 ## 9. Acceptance Criteria
 
+- 管理端保持单一 Vue SPA；Admin Shell 与 CMS Module 具有明确源码边界，CMS canonical 路由统一使用 `/admin/cms/**`，原 `/admin/<feature>` 路径仅兼容重定向；
 - 管理端侧边栏按“内容管理 / 内容结构 / 运营展示 / 站点设置”组织八类入口，不增加父级点击层级，也不新增独立“系统设置”；
 - 主侧边栏可以收起/展开；文章、单页、列表、导航、宣传展示、网站属性等 Master–Detail 页面可以收起/展开左侧组织面板，收起后右侧列表取得更多横向空间；
 - 当前阶段不为上述显示方式增加系统配置、数据库字段或用户个人设置；
@@ -155,4 +158,4 @@
 - 图片内容识别型缩略图统一解决浅色/透明图片可辨识问题，普通浏览场景可以直接调用 Element Plus Viewer 查看原图；
 - 静态资源 UI 使用“受保护”语义，保护状态来自 Backend，不提供人工 `protected=true` 开关；
 - 当前阶段无登录/角色/权限实现；
-- Browser E2E 覆盖导航收起、图标操作可访问名称/Tooltip、网站属性弹窗值编辑、统一图片预览/Viewer、受保护资源、图片策略、属性元数据分组、整数校验、轮播参数及既有核心路径。
+- Browser E2E 覆盖 canonical/legacy CMS 路由、导航收起、图标操作可访问名称/Tooltip、网站属性弹窗值编辑、统一图片预览/Viewer、受保护资源、图片策略、属性元数据分组、整数校验、轮播参数及既有核心路径。
