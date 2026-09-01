@@ -4,13 +4,17 @@
 
 `frontend/admin` 维护通用 CMS 对象，继续使用 Vue 3 + TypeScript + Element Plus 和 `/admin/` base。
 
-## 2. 统一图片资源选择器
+## 2. 统一图片资源选择与预览
 
 `ImageResourcePicker` 作为 `/static/**` 图片属性的优先编辑方式，负责当前图片预览、既有 StaticResource multipart 上传、稳定 Runtime 文件名、浏览 `/static/uploads/**` 共享图片库、导航语义候选和清除可选值。
 
 Backend 继续负责真实媒体校验。控件不自行删除旧资源。新文件仍只能上传到当前业务上下文约定目录；共享图片库只用于复用已有 Runtime 图片。
 
-`AdaptiveImagePreview` 只在图标等显式场景启用自适应对比背景。该逻辑只影响 Admin DOM/CSS，不写入 CMS 数据、不修改图片文件，也不参与 Public Site 渲染。
+`AdaptiveImagePreview` 是 Admin 的统一图片缩略图基础组件。凡后台界面需要让运营人员辨识图片内容，应优先复用该组件，不再在各页面直接创建普通 `<img>` 缩略图。组件默认启用透明/浅色图片的可辨识背景：根据图像亮度和透明度选择浅色、深色或棋盘格背景，并允许 Hover 切换对比背景。该逻辑只影响 Admin DOM/CSS，不写入 CMS 数据、不修改图片文件，也不参与 Public Site 渲染。
+
+放大查看不自研 Dialog / Viewer。`AdaptiveImagePreview` 内部复用 Element Plus `el-image` 的 `preview-src-list` / Viewer 能力，缩放、旋转、关闭等通用交互由 Element Plus 负责。图片选择库中的候选卡片点击职责是“选择图片”，因此候选缩略图可以关闭 Viewer；当前已选图片、列表缩略图等普通浏览场景默认允许点击查看原图。
+
+当前统一接入范围包括导航图标、网站属性 RESOURCE_PATH、通用列表图片、宣传展示图片、静态资源图片，以及后续新增的同类 Admin 图片内容。新增页面若需要图片缩略图，不应复制新的背景判断或大图 Dialog。
 
 ## 3. 内容管理信息架构
 
@@ -61,7 +65,7 @@ PageGroup 当前为平级对象，左侧使用普通分组列表而不是树。�
 
 正式初始化只保留 `MAIN`、`HOME_SHORTCUT`、`HOME_QUICK` 三个内置导航位置。V8 的 SERVICE/SITE 已由后续 migration 清理。
 
-导航条目 iconPath 通过 ImageResourcePicker 编辑；导航表格和图标选择器均启用 AdaptiveImagePreview。
+导航条目 iconPath 通过 ImageResourcePicker 编辑；导航表格和图标选择器均复用统一 AdaptiveImagePreview，并允许在普通浏览场景通过 Element Plus Viewer 查看原图。
 
 ## 7. 列表管理
 
@@ -73,13 +77,15 @@ PageGroup 当前为平级对象，左侧使用普通分组列表而不是树。�
 
 Backend 仍是最终校验层，因此直接 API 调用无法绕过 NONE/REQUIRED 规则。列表策略变更时的既有数据冲突由 Backend 拒绝，前端展示服务端错误即可。
 
-图片策略不控制页面显示模式。普通列表照片/Logo 使用常规图片预览；是否显示名称、Logo 如何布局等属于 Public Site 设计。
+图片策略不控制页面显示模式。列表中存在 imagePath 时，Admin Table 使用统一 AdaptiveImagePreview + 截断路径显示；是否在 Public Site 显示名称、Logo 如何布局等仍属于 Public Site 设计。
 
 `HOME_CAROUSEL` 基线应在 UI 显示“图片必填”；当前 SITE_LINKS 列表显示“不使用图片”。
 
 ## 8. 宣传展示管理
 
 技术路由保持 `/advertisements`，界面统一使用“宣传展示管理 / 展示位 / 展示内容”。先选择展示位，再维护内容。支持图片、URL、openMode、startAt/endAt、展示顺序和 enabled。新图片上传到 `uploads/displays/{slotCode}/`，也可复用共享 Runtime 图片。
+
+展示内容 Table 的图片列使用统一 AdaptiveImagePreview + 路径摘要，编辑 Dialog 继续使用 ImageResourcePicker。宣传图片即使通常为照片，也统一获得透明/浅色内容的可辨识背景和 Element Plus 原图 Viewer。
 
 ## 9. 网站属性
 
@@ -90,15 +96,21 @@ Backend 仍是最终校验层，因此直接 API 调用无法绕过 NONE/REQUIRE
 
 左侧复用现有 Master–Detail 样式显示“全部属性 + metadata groups”，右侧只显示当前分组属性。新增属性默认使用当前选中分组；定义 Dialog 的 groupCode 改为受控 Select，不允许任意输入未知分组。
 
-右侧 Table 不再直接渲染可编辑 `el-input`、`el-switch` 或 `ImageResourcePicker`。值列只渲染紧凑只读摘要：资源路径显示小缩略图和截断路径，布尔值显示状态 Tag，其余值使用单行截断文本。点击“编辑值”图标后使用独立 Dialog，根据 `valueType` 渲染类型化编辑控件；保存仍调用既有 `PUT /api/admin/site-config/{key}`。
+右侧 Table 不再直接渲染可编辑 `el-input`、`el-switch` 或 `ImageResourcePicker`。值列只渲染紧凑只读摘要：RESOURCE_PATH 使用统一 AdaptiveImagePreview 缩略图和截断路径，布尔值显示状态 Tag，其余值使用单行截断文本。点击“编辑值”图标后使用独立 Dialog，根据 `valueType` 渲染类型化编辑控件；保存仍调用既有 `PUT /api/admin/site-config/{key}`。
 
 属性定义 Dialog 与值编辑分离：新建定义时仍可录入初始值；编辑已有定义时不重复提供日常值编辑控件，并提示从列表“编辑值”进入。定义更新继续携带当前值以保持既有 API contract，类型变化仍先验证现有值是否满足新类型。
 
 valueType 支持 `TEXT / INTEGER / RESOURCE_PATH / JSON / URL / BOOLEAN`。INTEGER 使用 number 输入并在保存前用整数正则校验；Backend 再做最终类型校验。`HOME_CAROUSEL_INTERVAL_SECONDS` 在 PRESENTATION 分组显示为整数属性，正常值为正整数秒。
 
-RESOURCE_PATH 的值编辑 Dialog 使用 ImageResourcePicker，新图片上传到 `uploads/site-properties/{key}/`。当前不实现权限差异。
+RESOURCE_PATH 的值编辑 Dialog 使用 ImageResourcePicker，新图片上传到 `uploads/site-properties/{key}/`，并显式使用统一自适应预览。当前不实现权限差异。
 
-## 10. Browser Verification
+## 10. 静态资源管理
+
+静态资源列表使用 Backend 返回的 `protectedResource` 判断是否允许普通删除。界面术语统一使用“受保护资源”，Tooltip 说明“当前由站点基线或 CMS 数据引用保护，不能直接删除”；不再使用容易被理解为人工重要性等级的“关键资源”。
+
+图片类型静态资源在列表中提供统一 AdaptiveImagePreview。普通点击使用 Element Plus Viewer 页内查看；“打开原文件”动作继续保留，用于浏览器直接访问或下载原始资源。非图片文件不强行生成预览。
+
+## 11. Browser Verification
 
 E2E 必须覆盖：
 
@@ -110,6 +122,8 @@ E2E 必须覆盖：
 - 文章栏目树父子聚合和层级 TreeSelect；
 - Column REQUIRED 策略可维护；无封面草稿能创建但发布被 Backend 阻止；Article Dialog 显示 REQUIRED 提示；
 - 正式导航位置和导航图标属性/自适应预览；
+- RESOURCE_PATH、列表图片、宣传展示图片和静态资源图片均复用 AdaptiveImagePreview；至少一个普通缩略图点击后出现 Element Plus `.el-image-viewer__wrapper`；
+- 静态资源“受保护”标签与 Backend `protectedResource=true` 一致；
 - HOME_CAROUSEL imagePolicy=REQUIRED、SITE_LINKS 当前 NONE；NONE UI 隐藏图片，Backend 直接 API 对 NONE/REQUIRED 都执行约束；
 - SiteProperty group endpoint 返回 metadata 定义顺序；未知 group 直接 API 被拒绝；Admin 左侧 PRESENTATION 分组及受控 group Select 正常；
 - SiteProperty 整数和 JSON 值通过独立值编辑 Dialog 修改，非法值仍被前端校验拒绝；
