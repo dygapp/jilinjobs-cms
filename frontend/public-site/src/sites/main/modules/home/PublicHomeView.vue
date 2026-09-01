@@ -140,7 +140,7 @@ onUnmounted(() => {
     <p v-if="loading" class="public-state">正在加载公开内容…</p>
     <p v-else-if="error" class="public-state error-text">{{ error }}</p>
 
-    <div class="site-width home-content" data-testid="public-content">
+    <div v-if="!loading && !error" class="site-width home-content" data-testid="public-content">
       <section class="home-primary-row">
         <div class="home-carousel" data-testid="home-carousel-active" :data-carousel-item-id="carouselItem?.id || ''">
           <a v-if="carouselItem?.url" :href="carouselItem.url" :target="newWindow(carouselItem.openMode, carouselItem.url) ? '_blank' : undefined" rel="noopener noreferrer">
