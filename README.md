@@ -4,7 +4,7 @@
 
 ## 当前目标
 
-当前版本以原网站现有结构和视觉关系为公开站基线，采用 Vue + Spring Boot 重建中心主站。当前阶段已完成公开站与管理端前端工程分离，并根据 Human Admin Review 继续收敛 CMS 通用模型：减少首页专用 JSON 配置和重复硬编码，建立可复用的导航位置、通用列表、宣传展示位、网站属性和统一静态资源能力，同时按文章、单页、列表等内容类型整理管理端信息架构。
+当前版本以原网站现有结构和视觉关系为公开站基线，采用 Vue + Spring Boot 重建中心主站。当前阶段已完成公开站与管理端前端工程分离，并根据 Human Admin Review 继续收敛 CMS 通用模型：减少首页专用 JSON 配置和重复 Authority，建立可复用的导航位置、通用列表、宣传展示位、网站属性和统一静态资源能力，同时按文章、单页、列表等内容类型整理管理端信息架构。
 
 当前权威需求：
 
@@ -17,9 +17,10 @@
 - `docs/specifications/admin-site.md`
 - `docs/specifications/preset-site-structure.md`
 
-当前 Technical Plan：
+当前 Technical Plan / Governance：
 
 - `docs/technical/cms-architecture.md`
+- `docs/technical/configuration-governance.md`
 - `docs/technical/backend-service.md`
 - `docs/technical/public-site-frontend.md`
 - `docs/technical/admin-frontend.md`
@@ -69,9 +70,13 @@ CMS 通用业务对象：
 
 网站规划基线中的关键结构对象使用只读 `preset` 标识保护：预置栏目、导航位置/条目、单页分组/单页、列表容器、宣传展示位和稳定网站属性定义不能被误删；具有稳定 Alias/Code/Key 的预置对象不能修改该身份字段。`preset` 不等于完全只读，名称、排序、启停以及正常运营字段仍按各自模型维护；Article、CmsListItem、Advertisement 等运营成员不因此变成预置内容。普通 Admin API 新增对象默认 `preset=false`，客户端不能自行设置或取消该标识。
 
-工程基线静态资源继续位于 `/static/home`、`/static/brand`、`/static/footer`、`/static/icons` 等版本化目录；CMS 运行时上传统一进入 `/static/uploads/**`，由宣传展示/列表/导航图标/RESOURCE_PATH 网站属性等管理界面复用统一图片资源选择与上传能力。
+工程基线静态资源继续位于 `/static/home`、`/static/brand`、`/static/footer`、`/static/icons` 等版本化目录；CMS 运行时上传统一进入 `/static/uploads/**`，由宣传展示/列表/导航图标/RESOURCE_PATH 网站属性等管理界面复用统一图片资源选择与上传能力。Admin 中需要辨识图片内容的缩略图统一使用自适应背景，并复用 Element Plus 原生 Viewer 查看原图，不重复实现大图预览器。
 
-当前阶段明确不实现用户、账号、角色、登录和权限控制。未来“普通管理员 / 超级管理员”差异只作为规划边界，不进入当前代码和验收条件；`preset` 保护、删除确认、路径安全、真实媒体校验和关键资源保护等业务安全措施仍继续执行。
+静态资源“受保护”状态由 Backend 负责：固定部署/工程基线来自 Spring 外部化配置，当前网站属性、列表、宣传展示和导航直接引用的资源由 Runtime 动态加入保护集合；该状态不是管理员人工维护的重要性等级。普通删除必须拒绝，明确替换仍允许。
+
+配置责任长期遵循 `docs/technical/configuration-governance.md`：稳定领域/安全/页面模板契约保留代码常量；运营可维护数据进入 CMS / 网站属性；低频结构定义进入 CMS 资源元数据；部署实例差异进入 Spring 外部化配置；CI、FRP 和 Review 环境参数属于 CI / Deployment Variables。存在字面硬编码本身不构成缺陷，禁止为了“消除硬编码”机械增加系统配置。
+
+当前阶段明确不实现用户、账号、角色、登录和权限控制。未来“普通管理员 / 超级管理员”差异只作为规划边界，不进入当前代码和验收条件；`preset` 保护、删除确认、路径安全、真实媒体校验和受保护资源等业务安全措施仍继续执行。
 
 ## 前端工程
 
