@@ -36,9 +36,17 @@ class StaticResourceService(
     private val listMapper: CmsListMapper? = null,
     private val advertisementMapper: AdvertisementMapper? = null,
     private val navigationMapper: NavigationMapper? = null,
+    @Value("\${cms.static.protected-resources:}") protectedResourcesText: String = "",
 ) {
     private val root = Paths.get(rootText).toAbsolutePath().normalize().also { Files.createDirectories(it) }
     private val trashRoot = root.resolve(".trash").also { Files.createDirectories(it) }
+    private val configuredProtectedPaths = protectedResourcesText
+        .split(',')
+        .asSequence()
+        .map(String::trim)
+        .filter(String::isNotBlank)
+        .map(::normalizeFile)
+        .toCollection(linkedSetOf())
     private val allowed = setOf("png", "jpg", "jpeg", "gif", "webp", "ico", "pdf", "doc", "docx", "xls", "xlsx")
 
     fun list(path: String = ""): List<StaticEntry> {
@@ -68,7 +76,7 @@ class StaticResourceService(
 
     fun delete(path: String): TrashEntry {
         val relative = normalizeFile(path)
-        if (relative in protectedPaths()) throw StaticResourceValidationException("该资源属于站点关键资源，不能通过普通删除入口移除；如需更新请使用明确替换操作")
+        if (relative in protectedPaths()) throw StaticResourceValidationException("该资源属于站点受保护资源，不能通过普通删除入口移除；如需更新请使用明确替换操作")
         val source = safeFile(relative)
         if (!Files.isRegularFile(source)) throw StaticResourceNotFoundException(path)
         val id = UUID.randomUUID().toString()
@@ -141,9 +149,7 @@ class StaticResourceService(
     private fun ByteArray.asAscii(length: Int): String = take(length).toByteArray().toString(StandardCharsets.US_ASCII)
 
     private fun protectedPaths(): Set<String> = buildSet {
-        add("health/baseline.png")
-        // NCSS 首页区块属于固定工程资产，不提供 CMS 配置；其版本化 Logo 仍作为工程基线资源保护。
-        add("home/ncss-logo.png")
+        addAll(configuredProtectedPaths)
         siteConfigMapper.findAll().forEach { row ->
             if (row.enabled && row.valueType == "RESOURCE_PATH") normalizedConfiguredStaticPath(row.configValue)?.let(::add)
         }
