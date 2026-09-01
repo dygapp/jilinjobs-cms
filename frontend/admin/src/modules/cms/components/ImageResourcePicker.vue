@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { ElMessage } from 'element-plus'
-import { listStaticResources, uploadStaticResource } from '../api/staticResources'
+import {
+  listStaticResources,
+  STATIC_RESOURCE_MAX_FILE_SIZE_BYTES,
+  STATIC_RESOURCE_MAX_FILE_SIZE_LABEL,
+  uploadStaticResource,
+} from '../api/staticResources'
 import AdaptiveImagePreview from './AdaptiveImagePreview.vue'
 
 interface ImageResourceOption { label: string; path: string }
@@ -23,6 +28,7 @@ const emit = defineEmits<{ (event: 'update:modelValue', value: string | null): v
 const dialogVisible = ref(false)
 const loading = ref(false)
 const uploading = ref(false)
+const uploadInput = ref<HTMLInputElement | null>(null)
 const choices = ref<ImageResourceOption[]>([])
 const current = computed(() => props.modelValue?.trim() || '')
 const imageExtensions = new Set(['png', 'jpg', 'jpeg', 'gif', 'webp', 'ico'])
@@ -36,6 +42,10 @@ function generatedName(file: File) {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 10)}.${ext}`
 }
 
+function chooseUpload() {
+  if (!props.disabled && !uploading.value) uploadInput.value?.click()
+}
+
 async function upload(event: Event) {
   const input = event.target as HTMLInputElement
   const file = input.files?.[0]
@@ -43,6 +53,10 @@ async function upload(event: Event) {
   if (!file) return
   if (!imageExtensions.has(extension(file.name))) {
     ElMessage.warning('请选择 PNG、JPG、GIF、WEBP 或 ICO 图片')
+    return
+  }
+  if (file.size > STATIC_RESOURCE_MAX_FILE_SIZE_BYTES) {
+    ElMessage.warning(`图片大小不能超过 ${STATIC_RESOURCE_MAX_FILE_SIZE_LABEL}`)
     return
   }
   uploading.value = true
@@ -101,13 +115,27 @@ function select(path: string) {
       <el-input :model-value="current" readonly />
     </div>
     <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-      <label>
-        <input data-testid="image-resource-upload" type="file" accept=".png,.jpg,.jpeg,.gif,.webp,.ico" :disabled="disabled || uploading" style="max-width:230px" @change="upload">
-      </label>
+      <input
+        ref="uploadInput"
+        data-testid="image-resource-upload"
+        type="file"
+        accept=".png,.jpg,.jpeg,.gif,.webp,.ico"
+        :disabled="disabled || uploading"
+        style="display:none"
+        @change="upload"
+      >
+      <el-button
+        data-testid="image-resource-upload-trigger"
+        :disabled="disabled || uploading"
+        :loading="uploading"
+        @click="chooseUpload"
+      >上传图片</el-button>
       <el-button :disabled="disabled" @click="openLibrary">选择已有图片</el-button>
       <el-button v-if="current" :disabled="disabled" @click="emit('update:modelValue', null)">清除</el-button>
     </div>
-    <p style="margin:6px 0 0;color:#909399;font-size:12px">新上传文件自动保存到 /static/{{ uploadDirectory }}/；“选择已有图片”可复用 /static/uploads/** 共享 Runtime 图片。</p>
+    <p style="margin:6px 0 0;color:#909399;font-size:12px">
+      支持 PNG、JPG、GIF、WEBP、ICO，单张不超过 {{ STATIC_RESOURCE_MAX_FILE_SIZE_LABEL }}；新上传文件自动保存到 /static/{{ uploadDirectory }}/；“选择已有图片”可复用 /static/uploads/** 共享 Runtime 图片。
+    </p>
 
     <el-dialog v-model="dialogVisible" title="选择已有图片" width="720px" append-to-body>
       <div v-loading="loading" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;min-height:120px">
