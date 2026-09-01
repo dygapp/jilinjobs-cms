@@ -25,6 +25,16 @@ Admin Shell 按业务职责分为四个无额外点击层级的导航分组：
 
 对于“容器 → 成员”模型，页面优先采用左侧容器导航 + 右侧成员列表；栏目管理本身仍直接维护栏目树，不重复放置栏目导航树。
 
+### 3.1 可折叠导航与紧凑操作
+
+`App.vue` 以本地 `ref<boolean>` 控制主侧边栏展开/收起，并通过 `.sidebar-collapsed` 切换 220px 与紧凑宽度；收起时仍保留各入口图标和 title，顶部始终保留重新展开按钮。该状态当前不写入 Database、SiteProperty、localStorage 或用户 Profile。
+
+文章、单页、列表、导航、宣传展示、网站属性等 Master–Detail 页面以本地 `sideCollapsed` 控制左侧组织面板。公共 CSS 使用 `.side-panel-collapsed` 将两列布局切换为单列；`AdminPanelToggle` 始终位于右侧上下文/Header 中，因此左侧隐藏后仍可恢复。
+
+常规 Table 行操作复用 `AdminIconAction`：Element Plus icon + `el-tooltip` + `aria-label`，固定操作列宽度按动作数量压缩。复杂容器操作继续使用 `MoreFilled` 下拉菜单。`AdminIconAction` 的可访问名称继续支持 Browser E2E 使用 role/name 定位，避免视觉收敛破坏已有验证契约。
+
+本阶段不增加“紧凑/文字操作/图标操作”等显示风格系统配置，也不建立用户个人 UI 偏好持久化。待未来真实用户/账号能力建立且出现稳定个性化需求后再评估。
+
 ## 4. 文章与栏目
 
 `/articles` 同时加载 Article 和 Column。左侧把 flat columns 转换为层级树，父栏目筛选在前端收集全部后代 id；右侧文章列表继续叠加关键词、状态、文章类型筛选。TreeSelect 用同一栏目树数据生成。
@@ -80,21 +90,29 @@ Backend 仍是最终校验层，因此直接 API 调用无法绕过 NONE/REQUIRE
 
 左侧复用现有 Master–Detail 样式显示“全部属性 + metadata groups”，右侧只显示当前分组属性。新增属性默认使用当前选中分组；定义 Dialog 的 groupCode 改为受控 Select，不允许任意输入未知分组。
 
+右侧 Table 不再直接渲染可编辑 `el-input`、`el-switch` 或 `ImageResourcePicker`。值列只渲染紧凑只读摘要：资源路径显示小缩略图和截断路径，布尔值显示状态 Tag，其余值使用单行截断文本。点击“编辑值”图标后使用独立 Dialog，根据 `valueType` 渲染类型化编辑控件；保存仍调用既有 `PUT /api/admin/site-config/{key}`。
+
+属性定义 Dialog 与值编辑分离：新建定义时仍可录入初始值；编辑已有定义时不重复提供日常值编辑控件，并提示从列表“编辑值”进入。定义更新继续携带当前值以保持既有 API contract，类型变化仍先验证现有值是否满足新类型。
+
 valueType 支持 `TEXT / INTEGER / RESOURCE_PATH / JSON / URL / BOOLEAN`。INTEGER 使用 number 输入并在保存前用整数正则校验；Backend 再做最终类型校验。`HOME_CAROUSEL_INTERVAL_SECONDS` 在 PRESENTATION 分组显示为整数属性，正常值为正整数秒。
 
-RESOURCE_PATH 使用 ImageResourcePicker，新图片上传到 `uploads/site-properties/{key}/`。当前不实现权限差异。
+RESOURCE_PATH 的值编辑 Dialog 使用 ImageResourcePicker，新图片上传到 `uploads/site-properties/{key}/`。当前不实现权限差异。
 
 ## 10. Browser Verification
 
 E2E 必须覆盖：
 
 - Shell 四个导航分组及八类入口可达，没有独立“系统设置”；
+- 主侧边栏可以收起/展开且收起后入口仍存在；
+- 至少覆盖文章栏目导航和网站属性分组面板的收起/恢复，证明局部面板隐藏后右侧仍保留恢复入口；
+- 紧凑图标操作保持 `aria-label`，Hover 可展示 Tooltip，既有 role/name 操作定位继续有效；
 - 单页管理组织导航和上下文新增；
 - 文章栏目树父子聚合和层级 TreeSelect；
 - Column REQUIRED 策略可维护；无封面草稿能创建但发布被 Backend 阻止；Article Dialog 显示 REQUIRED 提示；
 - 正式导航位置和导航图标属性/自适应预览；
 - HOME_CAROUSEL imagePolicy=REQUIRED、SITE_LINKS 当前 NONE；NONE UI 隐藏图片，Backend 直接 API 对 NONE/REQUIRED 都执行约束；
 - SiteProperty group endpoint 返回 metadata 定义顺序；未知 group 直接 API 被拒绝；Admin 左侧 PRESENTATION 分组及受控 group Select 正常；
+- SiteProperty 整数和 JSON 值通过独立值编辑 Dialog 修改，非法值仍被前端校验拒绝；
 - INTEGER 非整数值前端拒绝，Backend 单元测试覆盖最终整数与正整数间隔约束；
 - 公开首页通过真实 SiteProperty=1 秒 + 临时第二轮播项验证 active carousel id 实际发生切换，再清理 fixture 并恢复属性值；
 - 统一图片选择器跨模块复用、宣传展示、文章发布、单页 render mode、静态资源安全等既有回归继续执行。
