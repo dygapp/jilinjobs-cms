@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { computed, nextTick, onMounted, reactive, ref } from 'vue'
+import { Delete, Edit } from '@element-plus/icons-vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
+import AdminIconAction from '../../components/AdminIconAction.vue'
+import AdminPanelToggle from '../../components/AdminPanelToggle.vue'
 import {
   createPage,
   createPageGroup,
@@ -22,6 +25,7 @@ const groupVisible = ref(false)
 const editingPage = ref<number | null>(null)
 const editingGroup = ref<number | null>(null)
 const selectedGroup = ref<'all' | 'ungrouped' | number>('all')
+const sideCollapsed = ref(false)
 const saving = ref(false)
 const loading = ref(false)
 const editorRef = ref<HTMLElement | null>(null)
@@ -179,7 +183,7 @@ function message(error: unknown) {
       </div>
     </header>
 
-    <div class="page-management-layout">
+    <div class="page-management-layout" :class="{ 'side-panel-collapsed': sideCollapsed }">
       <el-card class="page-group-panel" shadow="never">
         <div class="page-group-heading">
           <strong>单页组织</strong>
@@ -192,13 +196,13 @@ function message(error: unknown) {
           <span class="page-group-name">{{ group.name }}<el-tag v-if="group.preset" :data-testid="`preset-page-group-${group.id}`" size="small" type="info" style="margin-left:6px">预置</el-tag></span>
           <span v-if="!group.enabled" class="page-group-disabled">停用</span>
           <small>{{ groupCount(group.id) }}</small>
-          <el-button link type="primary" size="small" aria-label="编辑单页分组" @click.stop="openGroup(group)">编辑</el-button>
+          <span @click.stop><AdminIconAction label="编辑单页分组" :icon="Edit" @click="openGroup(group)" /></span>
         </div>
       </el-card>
 
       <el-card class="page-list-panel" shadow="never">
         <div class="page-list-context" data-testid="page-group-context">
-          <div><strong>{{ selectedGroupName }}</strong><span>{{ selectedGroup === 'all' ? '查看全部单页' : selectedGroup === 'ungrouped' ? '不属于任何分组的独立单页' : '当前分组成员' }}</span></div><small>共 {{ filteredPages.length }} 项</small>
+          <div><AdminPanelToggle :collapsed="sideCollapsed" label="单页组织" @toggle="sideCollapsed = !sideCollapsed" /><strong>{{ selectedGroupName }}</strong><span>{{ selectedGroup === 'all' ? '查看全部单页' : selectedGroup === 'ungrouped' ? '不属于任何分组的独立单页' : '当前分组成员' }}</span></div><small>共 {{ filteredPages.length }} 项</small>
         </div>
         <el-table v-loading="loading" :data="filteredPages" data-testid="page-table">
           <el-table-column label="单页名称" min-width="170"><template #default="scope"><span>{{asPage(scope.row).name}}</span><el-tag v-if="asPage(scope.row).preset" :data-testid="`preset-page-${asPage(scope.row).id}`" size="small" type="info" style="margin-left:8px">预置</el-tag></template></el-table-column>
@@ -206,7 +210,7 @@ function message(error: unknown) {
           <el-table-column prop="alias" label="Alias" min-width="140" />
           <el-table-column label="呈现方式" min-width="150"><template #default="scope">{{ renderModeName(scope.row.renderMode) }}</template></el-table-column>
           <el-table-column label="状态" width="90"><template #default="scope">{{ scope.row.enabled ? '启用' : '停用' }}</template></el-table-column>
-          <el-table-column label="操作" width="150" fixed="right"><template #default="scope"><el-button :data-testid="`edit-page-${scope.row.id}`" link type="primary" @click="openPage(asPage(scope.row))">编辑</el-button><el-button v-if="!asPage(scope.row).preset" link type="danger" @click="remove(asPage(scope.row))">删除</el-button></template></el-table-column>
+          <el-table-column label="操作" width="92" fixed="right"><template #default="scope"><div class="admin-table-actions"><AdminIconAction :testid="`edit-page-${scope.row.id}`" label="编辑" :icon="Edit" @click="openPage(asPage(scope.row))" /><AdminIconAction v-if="!asPage(scope.row).preset" label="删除" :icon="Delete" type="danger" @click="remove(asPage(scope.row))" /></div></template></el-table-column>
         </el-table>
       </el-card>
     </div>
