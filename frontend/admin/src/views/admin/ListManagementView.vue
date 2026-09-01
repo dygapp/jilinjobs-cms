@@ -1,26 +1,85 @@
 <script setup lang="ts">
 import { computed, onMounted, reactive, ref } from 'vue'
+import { Delete, Edit, MoreFilled } from '@element-plus/icons-vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
-import { MoreFilled } from '@element-plus/icons-vue'
+import AdminIconAction from '../../components/AdminIconAction.vue'
+import AdminPanelToggle from '../../components/AdminPanelToggle.vue'
 import ImageResourcePicker from '../../components/ImageResourcePicker.vue'
-import { createCmsList,createCmsListItem,deleteCmsList,deleteCmsListItem,listCmsListItems,listCmsLists,updateCmsList,updateCmsListItem,type CmsListDefinition,type CmsListDraft,type CmsListItem,type CmsListItemDraft,type ContentImagePolicy } from '../../api/lists'
-const lists=ref<CmsListDefinition[]>([]),items=ref<CmsListItem[]>([]),activeId=ref<number|null>(null),loading=ref(false),dialog=ref(false),itemDialog=ref(false),saving=ref(false),editingList=ref<number|null>(null),editingItem=ref<number|null>(null)
-const listForm=reactive<CmsListDraft>({code:'',name:'',groupCode:'GENERAL',imagePolicy:'OPTIONAL',description:'',sortOrder:0,enabled:true,system:false})
-const itemForm=reactive<CmsListItemDraft>({title:'',subtitle:null,url:null,imagePath:null,openMode:'DEFAULT',sortOrder:0,enabled:true,extraJson:null})
-const active=computed(()=>lists.value.find(item=>item.id===activeId.value)||null),editingListModel=computed(()=>editingList.value==null?null:lists.value.find(item=>item.id===editingList.value)||null),asItem=(row:unknown)=>row as CmsListItem
+import {
+  createCmsList, createCmsListItem, deleteCmsList, deleteCmsListItem, listCmsListItems, listCmsLists, updateCmsList, updateCmsListItem,
+  type CmsListDefinition, type CmsListDraft, type CmsListItem, type CmsListItemDraft, type ContentImagePolicy,
+} from '../../api/lists'
+
+const lists = ref<CmsListDefinition[]>([])
+const items = ref<CmsListItem[]>([])
+const activeId = ref<number | null>(null)
+const sideCollapsed = ref(false)
+const loading = ref(false)
+const dialog = ref(false)
+const itemDialog = ref(false)
+const saving = ref(false)
+const editingList = ref<number | null>(null)
+const editingItem = ref<number | null>(null)
+const listForm = reactive<CmsListDraft>({ code: '', name: '', groupCode: 'GENERAL', imagePolicy: 'OPTIONAL', description: '', sortOrder: 0, enabled: true, system: false })
+const itemForm = reactive<CmsListItemDraft>({ title: '', subtitle: null, url: null, imagePath: null, openMode: 'DEFAULT', sortOrder: 0, enabled: true, extraJson: null })
+const active = computed(() => lists.value.find(item => item.id === activeId.value) || null)
+const editingListModel = computed(() => editingList.value == null ? null : lists.value.find(item => item.id === editingList.value) || null)
+const asItem = (row: unknown) => row as CmsListItem
+
 onMounted(refresh)
-async function refresh(){loading.value=true;try{lists.value=await listCmsLists();if(!lists.value.some(item=>item.id===activeId.value))activeId.value=lists.value[0]?.id||null;await refreshItems()}catch(error){ElMessage.error(message(error))}finally{loading.value=false}}
-async function refreshItems(){items.value=activeId.value?await listCmsListItems(activeId.value):[]}
-async function select(id:number){activeId.value=id;await refreshItems()}
-function addList(){editingList.value=null;Object.assign(listForm,{code:'',name:'',groupCode:'GENERAL',imagePolicy:'OPTIONAL',description:'',sortOrder:0,enabled:true,system:false});dialog.value=true}
-function editList(row:CmsListDefinition){editingList.value=row.id;Object.assign(listForm,{code:row.code,name:row.name,groupCode:row.groupCode,imagePolicy:row.imagePolicy,description:row.description,sortOrder:row.sortOrder,enabled:row.enabled,system:row.system});dialog.value=true}
-async function saveList(){saving.value=true;try{const saved=editingList.value?await updateCmsList(editingList.value,{...listForm}):await createCmsList({...listForm});dialog.value=false;activeId.value=saved.id;await refresh()}catch(error){ElMessage.error(message(error))}finally{saving.value=false}}
-async function removeList(row:CmsListDefinition){try{await ElMessageBox.confirm(`删除列表“${row.name}”将同时删除列表项，是否继续？`,'删除列表',{type:'warning'});await deleteCmsList(row.id);await refresh()}catch(error){if(error!=='cancel'&&error!=='close')ElMessage.error(message(error))}}
-function addItem(){editingItem.value=null;Object.assign(itemForm,{title:'',subtitle:null,url:null,imagePath:null,openMode:'DEFAULT',sortOrder:0,enabled:true,extraJson:null});itemDialog.value=true}
-function editItem(row:CmsListItem){editingItem.value=row.id;Object.assign(itemForm,{title:row.title,subtitle:row.subtitle,url:row.url,imagePath:row.imagePath,openMode:row.openMode,sortOrder:row.sortOrder,enabled:row.enabled,extraJson:row.extraJson});itemDialog.value=true}
-async function saveItem(){if(!activeId.value||!active.value)return;if(active.value.imagePolicy==='REQUIRED'&&!itemForm.imagePath){ElMessage.warning('当前列表要求每个列表项设置图片');return}if(active.value.imagePolicy==='NONE')itemForm.imagePath=null;saving.value=true;try{editingItem.value?await updateCmsListItem(activeId.value,editingItem.value,{...itemForm}):await createCmsListItem(activeId.value,{...itemForm});itemDialog.value=false;await refreshItems()}catch(error){ElMessage.error(message(error))}finally{saving.value=false}}
-async function removeItem(row:CmsListItem){if(!activeId.value)return;try{await ElMessageBox.confirm(`确定删除列表项“${row.title}”吗？`,'删除列表项',{type:'warning'});await deleteCmsListItem(activeId.value,row.id);await refreshItems()}catch(error){if(error!=='cancel'&&error!=='close')ElMessage.error(message(error))}}
-function policyName(policy:ContentImagePolicy){return policy==='NONE'?'不使用图片':policy==='REQUIRED'?'图片必填':'图片可选'}
-const message=(error:unknown)=>error instanceof Error?error.message:'操作失败'
+
+async function refresh() {
+  loading.value = true
+  try {
+    lists.value = await listCmsLists()
+    if (!lists.value.some(item => item.id === activeId.value)) activeId.value = lists.value[0]?.id || null
+    await refreshItems()
+  } catch (error) { ElMessage.error(message(error)) }
+  finally { loading.value = false }
+}
+async function refreshItems() { items.value = activeId.value ? await listCmsListItems(activeId.value) : [] }
+async function select(id: number) { activeId.value = id; await refreshItems() }
+function addList() { editingList.value = null; Object.assign(listForm, { code: '', name: '', groupCode: 'GENERAL', imagePolicy: 'OPTIONAL', description: '', sortOrder: 0, enabled: true, system: false }); dialog.value = true }
+function editList(row: CmsListDefinition) { editingList.value = row.id; Object.assign(listForm, { code: row.code, name: row.name, groupCode: row.groupCode, imagePolicy: row.imagePolicy, description: row.description, sortOrder: row.sortOrder, enabled: row.enabled, system: row.system }); dialog.value = true }
+async function saveList() { saving.value = true; try { const saved = editingList.value ? await updateCmsList(editingList.value, { ...listForm }) : await createCmsList({ ...listForm }); dialog.value = false; activeId.value = saved.id; await refresh() } catch (error) { ElMessage.error(message(error)) } finally { saving.value = false } }
+async function removeList(row: CmsListDefinition) { try { await ElMessageBox.confirm(`删除列表“${row.name}”将同时删除列表项，是否继续？`, '删除列表', { type: 'warning' }); await deleteCmsList(row.id); await refresh() } catch (error) { if (error !== 'cancel' && error !== 'close') ElMessage.error(message(error)) } }
+function addItem() { editingItem.value = null; Object.assign(itemForm, { title: '', subtitle: null, url: null, imagePath: null, openMode: 'DEFAULT', sortOrder: 0, enabled: true, extraJson: null }); itemDialog.value = true }
+function editItem(row: CmsListItem) { editingItem.value = row.id; Object.assign(itemForm, { title: row.title, subtitle: row.subtitle, url: row.url, imagePath: row.imagePath, openMode: row.openMode, sortOrder: row.sortOrder, enabled: row.enabled, extraJson: row.extraJson }); itemDialog.value = true }
+async function saveItem() { if (!activeId.value || !active.value) return; if (active.value.imagePolicy === 'REQUIRED' && !itemForm.imagePath) { ElMessage.warning('当前列表要求每个列表项设置图片'); return } if (active.value.imagePolicy === 'NONE') itemForm.imagePath = null; saving.value = true; try { editingItem.value ? await updateCmsListItem(activeId.value, editingItem.value, { ...itemForm }) : await createCmsListItem(activeId.value, { ...itemForm }); itemDialog.value = false; await refreshItems() } catch (error) { ElMessage.error(message(error)) } finally { saving.value = false } }
+async function removeItem(row: CmsListItem) { if (!activeId.value) return; try { await ElMessageBox.confirm(`确定删除列表项“${row.title}”吗？`, '删除列表项', { type: 'warning' }); await deleteCmsListItem(activeId.value, row.id); await refreshItems() } catch (error) { if (error !== 'cancel' && error !== 'close') ElMessage.error(message(error)) } }
+function policyName(policy: ContentImagePolicy) { return policy === 'NONE' ? '不使用图片' : policy === 'REQUIRED' ? '图片必填' : '图片可选' }
+const message = (error: unknown) => error instanceof Error ? error.message : '操作失败'
 </script>
-<template><main class="admin-shell"><header class="page-header"><div><p class="eyebrow">可复用展示数据</p><h1>列表管理</h1><p class="subtitle">列表维护可复用数据属性和图片数据要求；预置列表作为页面稳定数据容器，不可删除。</p></div><el-button data-testid="add-cms-list" type="primary" @click="addList">新增列表</el-button></header><div style="display:grid;grid-template-columns:260px minmax(0,1fr);gap:16px;align-items:start"><el-card shadow="never"><div style="display:flex;flex-direction:column"><div v-for="list in lists" :key="list.id" :data-testid="`cms-list-${list.code}`" :style="{display:'flex',alignItems:'center',minHeight:'44px',padding:'0 6px 0 12px',borderRadius:'6px',cursor:'pointer',background:activeId===list.id?'var(--el-fill-color-light)':'transparent'}" @click="select(list.id)"><span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{list.name}}<el-tag v-if="list.preset" :data-testid="`preset-cms-list-${list.code}`" size="small" type="info" style="margin-left:6px">预置</el-tag></span><span @click.stop><el-dropdown trigger="click" @command="command=>command==='edit'?editList(list):removeList(list)"><el-button text circle aria-label="列表操作"><el-icon><MoreFilled/></el-icon></el-button><template #dropdown><el-dropdown-menu><el-dropdown-item command="edit">编辑</el-dropdown-item><el-dropdown-item command="delete" divided :disabled="list.preset">删除</el-dropdown-item></el-dropdown-menu></template></el-dropdown></span></div></div></el-card><el-card shadow="never"><template #header><div style="display:flex;justify-content:space-between;align-items:center"><div><strong>{{active?.name||'请选择列表'}}</strong><span v-if="active" style="margin-left:8px;color:#909399">{{active.code}}</span><el-tag v-if="active?.preset" data-testid="active-list-preset" size="small" type="info" style="margin-left:8px">预置</el-tag><el-tag v-if="active" data-testid="active-list-image-policy" size="small" style="margin-left:8px">{{policyName(active.imagePolicy)}}</el-tag></div><el-button data-testid="add-cms-list-item" type="primary" :disabled="!active" @click="addItem">新增列表项</el-button></div></template><el-table v-loading="loading" :data="items" row-key="id" data-testid="cms-list-item-table"><el-table-column prop="title" label="标题" min-width="180"/><el-table-column prop="url" label="链接" min-width="220" show-overflow-tooltip/><el-table-column v-if="active?.imagePolicy!=='NONE'" prop="imagePath" label="图片" min-width="180" show-overflow-tooltip/><el-table-column prop="sortOrder" label="排序" width="80"/><el-table-column label="状态" width="80"><template #default="scope">{{asItem(scope.row).enabled?'启用':'停用'}}</template></el-table-column><el-table-column label="操作" width="130"><template #default="scope"><el-button link type="primary" @click="editItem(asItem(scope.row))">编辑</el-button><el-button link type="danger" @click="removeItem(asItem(scope.row))">删除</el-button></template></el-table-column></el-table></el-card></div><el-dialog v-model="dialog" :title="editingList?'编辑列表':'新增列表'" width="580px"><el-form label-width="110px"><el-form-item label="Code"><el-input v-model="listForm.code" :disabled="Boolean(editingList)"/><div v-if="editingListModel?.preset" data-testid="preset-list-code-hint" style="color:#909399;font-size:12px">预置列表的 Code 是稳定站点身份，不允许修改。</div></el-form-item><el-form-item label="名称"><el-input v-model="listForm.name"/></el-form-item><el-form-item label="分组"><el-input v-model="listForm.groupCode"/></el-form-item><el-form-item label="列表项图片"><el-select v-model="listForm.imagePolicy" data-testid="list-image-policy" style="width:100%"><el-option label="不使用图片" value="NONE"/><el-option label="图片可选" value="OPTIONAL"/><el-option label="图片必填" value="REQUIRED"/></el-select><div style="color:#909399;font-size:12px">这里只定义列表项是否具有图片数据，不控制公开页面的布局、尺寸或展示模式。</div></el-form-item><el-form-item label="说明"><el-input v-model="listForm.description" type="textarea"/></el-form-item><el-form-item label="排序"><el-input-number v-model="listForm.sortOrder"/></el-form-item><el-form-item label="启用"><el-switch v-model="listForm.enabled"/></el-form-item></el-form><template #footer><el-button @click="dialog=false">取消</el-button><el-button type="primary" :loading="saving" @click="saveList">保存</el-button></template></el-dialog><el-dialog v-model="itemDialog" :title="editingItem?'编辑列表项':'新增列表项'" width="680px"><el-form label-width="100px"><el-form-item label="标题"><el-input v-model="itemForm.title"/><div style="color:#909399;font-size:12px">标题作为后台识别名称保留；前台是否显示由具体页面设计决定。</div></el-form-item><el-form-item label="副标题"><el-input v-model="itemForm.subtitle"/></el-form-item><el-form-item v-if="active?.imagePolicy!=='NONE'" :label="active?.imagePolicy==='REQUIRED'?'图片（必填）':'图片'" :required="active?.imagePolicy==='REQUIRED'"><ImageResourcePicker v-model="itemForm.imagePath" :upload-directory="`uploads/lists/${active?.code||'GENERAL'}`"/></el-form-item><el-alert v-else data-testid="list-image-disabled" title="当前列表定义为不使用图片，列表项不保存图片数据。" type="info" :closable="false" show-icon/><el-form-item label="目标地址"><el-input v-model="itemForm.url" placeholder="可选；是否需要链接由具体页面使用场景决定"/></el-form-item><el-form-item label="打开方式"><el-select v-model="itemForm.openMode" style="width:100%"><el-option label="按目标默认" value="DEFAULT"/><el-option label="当前窗口" value="SAME_WINDOW"/><el-option label="新窗口" value="NEW_WINDOW"/></el-select></el-form-item><el-form-item label="排序"><el-input-number v-model="itemForm.sortOrder"/></el-form-item><el-form-item label="启用"><el-switch v-model="itemForm.enabled"/></el-form-item></el-form><template #footer><el-button @click="itemDialog=false">取消</el-button><el-button type="primary" :loading="saving" @click="saveItem">保存</el-button></template></el-dialog></main></template>
+
+<template>
+  <main class="admin-shell">
+    <header class="page-header"><div><p class="eyebrow">可复用展示数据</p><h1>列表管理</h1><p class="subtitle">列表维护可复用数据属性和图片数据要求；预置列表作为页面稳定数据容器，不可删除。</p></div><el-button data-testid="add-cms-list" type="primary" @click="addList">新增列表</el-button></header>
+
+    <div class="admin-split-layout" :class="{ 'side-panel-collapsed': sideCollapsed }">
+      <el-card class="admin-side-panel" shadow="never">
+        <div class="admin-side-list">
+          <div v-for="list in lists" :key="list.id" class="admin-side-row" :class="{ active: activeId === list.id }" :data-testid="`cms-list-${list.code}`" @click="select(list.id)">
+            <span class="admin-side-row-main">{{list.name}}<el-tag v-if="list.preset" :data-testid="`preset-cms-list-${list.code}`" size="small" type="info" style="margin-left:6px">预置</el-tag></span>
+            <span @click.stop><el-dropdown trigger="click" @command="command => command === 'edit' ? editList(list) : removeList(list)"><el-button text circle aria-label="列表操作"><el-icon><MoreFilled /></el-icon></el-button><template #dropdown><el-dropdown-menu><el-dropdown-item command="edit">编辑</el-dropdown-item><el-dropdown-item command="delete" divided :disabled="list.preset">删除</el-dropdown-item></el-dropdown-menu></template></el-dropdown></span>
+          </div>
+        </div>
+      </el-card>
+
+      <el-card class="admin-main-panel" shadow="never">
+        <template #header><div class="admin-card-header"><div class="admin-card-header-title"><AdminPanelToggle :collapsed="sideCollapsed" label="列表导航" @toggle="sideCollapsed = !sideCollapsed" /><div><strong>{{active?.name || '请选择列表'}}</strong><span v-if="active" style="margin-left:8px;color:#909399">{{active.code}}</span><el-tag v-if="active?.preset" data-testid="active-list-preset" size="small" type="info" style="margin-left:8px">预置</el-tag><el-tag v-if="active" data-testid="active-list-image-policy" size="small" style="margin-left:8px">{{policyName(active.imagePolicy)}}</el-tag></div></div><el-button data-testid="add-cms-list-item" type="primary" :disabled="!active" @click="addItem">新增列表项</el-button></div></template>
+        <el-table v-loading="loading" :data="items" row-key="id" data-testid="cms-list-item-table">
+          <el-table-column prop="title" label="标题" min-width="180" />
+          <el-table-column prop="url" label="链接" min-width="220" show-overflow-tooltip />
+          <el-table-column v-if="active?.imagePolicy !== 'NONE'" prop="imagePath" label="图片" min-width="180" show-overflow-tooltip />
+          <el-table-column prop="sortOrder" label="排序" width="80" />
+          <el-table-column label="状态" width="80"><template #default="scope">{{asItem(scope.row).enabled ? '启用' : '停用'}}</template></el-table-column>
+          <el-table-column label="操作" width="92" fixed="right"><template #default="scope"><div class="admin-table-actions"><AdminIconAction label="编辑" :icon="Edit" @click="editItem(asItem(scope.row))" /><AdminIconAction label="删除" :icon="Delete" type="danger" @click="removeItem(asItem(scope.row))" /></div></template></el-table-column>
+        </el-table>
+      </el-card>
+    </div>
+
+    <el-dialog v-model="dialog" :title="editingList ? '编辑列表' : '新增列表'" width="580px"><el-form label-width="110px"><el-form-item label="Code"><el-input v-model="listForm.code" :disabled="Boolean(editingList)" /><div v-if="editingListModel?.preset" data-testid="preset-list-code-hint" style="color:#909399;font-size:12px">预置列表的 Code 是稳定站点身份，不允许修改。</div></el-form-item><el-form-item label="名称"><el-input v-model="listForm.name" /></el-form-item><el-form-item label="分组"><el-input v-model="listForm.groupCode" /></el-form-item><el-form-item label="列表项图片"><el-select v-model="listForm.imagePolicy" data-testid="list-image-policy" style="width:100%"><el-option label="不使用图片" value="NONE" /><el-option label="图片可选" value="OPTIONAL" /><el-option label="图片必填" value="REQUIRED" /></el-select><div style="color:#909399;font-size:12px">这里只定义列表项是否具有图片数据，不控制公开页面的布局、尺寸或展示模式。</div></el-form-item><el-form-item label="说明"><el-input v-model="listForm.description" type="textarea" /></el-form-item><el-form-item label="排序"><el-input-number v-model="listForm.sortOrder" /></el-form-item><el-form-item label="启用"><el-switch v-model="listForm.enabled" /></el-form-item></el-form><template #footer><el-button @click="dialog=false">取消</el-button><el-button type="primary" :loading="saving" @click="saveList">保存</el-button></template></el-dialog>
+
+    <el-dialog v-model="itemDialog" :title="editingItem ? '编辑列表项' : '新增列表项'" width="680px"><el-form label-width="100px"><el-form-item label="标题"><el-input v-model="itemForm.title" /><div style="color:#909399;font-size:12px">标题作为后台识别名称保留；前台是否显示由具体页面设计决定。</div></el-form-item><el-form-item label="副标题"><el-input v-model="itemForm.subtitle" /></el-form-item><el-form-item v-if="active?.imagePolicy !== 'NONE'" :label="active?.imagePolicy === 'REQUIRED' ? '图片（必填）' : '图片'" :required="active?.imagePolicy === 'REQUIRED'"><ImageResourcePicker v-model="itemForm.imagePath" :upload-directory="`uploads/lists/${active?.code || 'GENERAL'}`" /></el-form-item><el-alert v-else data-testid="list-image-disabled" title="当前列表定义为不使用图片，列表项不保存图片数据。" type="info" :closable="false" show-icon /><el-form-item label="目标地址"><el-input v-model="itemForm.url" placeholder="可选；是否需要链接由具体页面使用场景决定" /></el-form-item><el-form-item label="打开方式"><el-select v-model="itemForm.openMode" style="width:100%"><el-option label="按目标默认" value="DEFAULT" /><el-option label="当前窗口" value="SAME_WINDOW" /><el-option label="新窗口" value="NEW_WINDOW" /></el-select></el-form-item><el-form-item label="排序"><el-input-number v-model="itemForm.sortOrder" /></el-form-item><el-form-item label="启用"><el-switch v-model="itemForm.enabled" /></el-form-item></el-form><template #footer><el-button @click="itemDialog=false">取消</el-button><el-button type="primary" :loading="saving" @click="saveItem">保存</el-button></template></el-dialog>
+  </main>
+</template>
