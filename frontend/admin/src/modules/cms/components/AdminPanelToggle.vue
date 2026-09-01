@@ -21,3 +21,7 @@ defineEmits<{ toggle: [] }>()
     />
   </el-tooltip>
 </template>
+
+<style scoped>
+.admin-panel-toggle{flex:none}
+</style>
