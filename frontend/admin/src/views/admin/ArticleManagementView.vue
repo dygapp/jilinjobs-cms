@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { computed, nextTick, onMounted, reactive, ref } from 'vue'
+import { Edit, Refresh } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
+import AdminIconAction from '../../components/AdminIconAction.vue'
+import AdminPanelToggle from '../../components/AdminPanelToggle.vue'
 import { listColumns, type CmsColumn } from '../../api/columns'
 import {
   createArticle,
@@ -32,6 +35,7 @@ const uploading = ref(false)
 const statusChangingId = ref<number | null>(null)
 const dialogVisible = ref(false)
 const editingId = ref<number | null>(null)
+const sideCollapsed = ref(false)
 const editorRef = ref<HTMLElement | null>(null)
 const columnTreeRef = ref<{ setCurrentKey: (key: number | null) => void } | null>(null)
 const resourceNames = reactive<Record<number, string>>({})
@@ -319,7 +323,7 @@ function toMessage(error: unknown): string { return error instanceof Error ? err
       <el-button data-testid="add-article" type="primary" @click="openCreate">新增文章</el-button>
     </header>
 
-    <div class="article-management-layout">
+    <div class="article-management-layout" :class="{ 'side-panel-collapsed': sideCollapsed }">
       <aside class="article-column-panel">
         <el-card shadow="never">
           <div class="article-column-heading"><strong>栏目导航</strong><span>父栏目包含全部下级栏目</span></div>
@@ -341,7 +345,7 @@ function toMessage(error: unknown): string { return error instanceof Error ? err
         </el-card>
 
         <el-card shadow="never">
-          <div class="article-list-context" data-testid="article-column-context"><div><strong>{{ currentColumnName }}</strong><span v-if="selectedColumnId != null">包含当前栏目及全部子栏目文章</span><span v-else>显示所有栏目文章</span></div><small>共 {{ filteredArticles.length }} 篇</small></div>
+          <div class="article-list-context" data-testid="article-column-context"><div><AdminPanelToggle :collapsed="sideCollapsed" label="栏目导航" @toggle="sideCollapsed = !sideCollapsed" /><strong>{{ currentColumnName }}</strong><span v-if="selectedColumnId != null">包含当前栏目及全部子栏目文章</span><span v-else>显示所有栏目文章</span></div><small>共 {{ filteredArticles.length }} 篇</small></div>
           <el-table v-loading="loading" :data="pagedArticles" row-key="id" data-testid="article-table">
             <el-table-column prop="title" label="标题" min-width="260" show-overflow-tooltip />
             <el-table-column label="栏目" min-width="150"><template #default="scope">{{ columnName(scope.row.columnId) }}</template></el-table-column>
@@ -350,11 +354,11 @@ function toMessage(error: unknown): string { return error instanceof Error ? err
             <el-table-column prop="source" label="来源" min-width="130" show-overflow-tooltip />
             <el-table-column prop="publishDate" label="发布日期" width="120" />
             <el-table-column prop="viewCount" label="浏览量" width="90" />
-            <el-table-column label="操作" width="210" fixed="right">
-              <template #default="scope">
-                <el-button :data-testid="`edit-article-${scope.row.id}`" link type="primary" @click="openEdit(asCmsArticle(scope.row))">编辑</el-button>
-                <el-button :data-testid="`${scope.row.status === 'PUBLISHED' ? 'withdraw' : 'publish'}-article-${scope.row.id}`" link :type="scope.row.status === 'PUBLISHED' ? 'danger' : 'success'" :loading="statusChangingId === scope.row.id" @click="changeStatus(asCmsArticle(scope.row))">{{ statusActionName(scope.row.status) }}</el-button>
-              </template>
+            <el-table-column label="操作" width="92" fixed="right">
+              <template #default="scope"><div class="admin-table-actions">
+                <AdminIconAction :testid="`edit-article-${scope.row.id}`" label="编辑" :icon="Edit" @click="openEdit(asCmsArticle(scope.row))" />
+                <AdminIconAction :testid="`${scope.row.status === 'PUBLISHED' ? 'withdraw' : 'publish'}-article-${scope.row.id}`" :label="statusActionName(scope.row.status)" :icon="Refresh" :type="scope.row.status === 'PUBLISHED' ? 'danger' : 'success'" :loading="statusChangingId === scope.row.id" @click="changeStatus(asCmsArticle(scope.row))" />
+              </div></template>
             </el-table-column>
           </el-table>
           <div class="admin-pagination"><el-pagination data-testid="article-pagination" background layout="total, prev, pager, next" :page-size="pageSize" :total="filteredArticles.length" :current-page="currentPage" @current-change="value => currentPage = value" /></div>
