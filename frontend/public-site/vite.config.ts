@@ -1,8 +1,27 @@
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+function partyEntryFallback(): Plugin {
+  return {
+    name: 'party-entry-fallback',
+    configureServer(server) {
+      server.middlewares.use((request, _response, next) => {
+        if (request.url === '/party' || request.url?.startsWith('/party/')) {
+          request.url = '/party.html'
+        }
+        next()
+      })
+    },
+  }
+}
+
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [partyEntryFallback(), vue()],
+  build: {
+    rollupOptions: {
+      input: { main: 'index.html', party: 'party.html' },
+    },
+  },
   server: {
     port: 5173,
     proxy: {
