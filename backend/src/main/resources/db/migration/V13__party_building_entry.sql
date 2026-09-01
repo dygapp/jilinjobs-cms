@@ -7,4 +7,5 @@ SET target_type = 'LINK',
 WHERE parent_id IS NULL
   AND position = 'MAIN'
   AND name = '中心党建'
-  AND target_type = 'PLACEHOLDER';
+  AND target_type = 'PLACEHOLDER'
+  AND preset = 1;
