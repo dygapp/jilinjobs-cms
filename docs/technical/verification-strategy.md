@@ -240,6 +240,18 @@ Acquire
 - SiteProperty 定义 Dialog 与值编辑职责分离，新建定义仍允许初始值；
 - 不增加“后台显示风格”系统属性、用户配置 API、Profile 数据或其他与当前无账号基线冲突的持久化能力。
 
+### 9.3 图片预览与配置治理专项验证
+
+统一图片预览与受保护资源配置整改至少验证：
+
+- `cms.static.protected-resources` 的默认值能够保护工程基线资源，并允许通过 `CMS_STATIC_PROTECTED_RESOURCES` 进行部署覆盖；固定工程保护路径不得再次散落写入 `StaticResourceService`；
+- 当前启用的网站属性 `RESOURCE_PATH`、列表图片、宣传展示图片和导航图标仍由 Backend Runtime 动态加入受保护集合，不改为管理员人工维护的 `protected=true` 数据字段；
+- Admin 静态资源列表使用“受保护”语义，受保护资源普通删除入口禁用且 Backend 最终拒绝删除，明确替换行为仍可使用；
+- 网站属性、列表、宣传展示、导航和静态资源等需要辨识图片内容的位置复用统一自适应图片组件，不再各自维护白底 `<img>` 预览；
+- 自适应图片组件负责浅色、深色、透明图片的可辨识背景，放大、缩放、旋转和 Viewer 生命周期直接复用 Element Plus `el-image`，不得另建重复的大图预览器；
+- `ImageResourcePicker` 当前值预览默认启用自适应背景；图片库中的选择卡片保持“点击选择”语义，不因 Viewer 抢占选择操作；
+- 对发现的固定路径、时间间隔、外部地址、稳定 Code/Alias、分页值和安全白名单按 `configuration-governance.md` 先分类责任，不以存在字面常量作为必须配置化的判据。
+
 ## 10. AI Implementation Review
 
 最终 Completion Evidence 前，必须对本轮实现差异执行 Authority-oriented AI Review，至少检查：
@@ -253,7 +265,11 @@ Acquire
 - HOME_CAROUSEL interval 的配置、读取、实际 timer 行为和 cleanup fixture 一致；
 - 管理端收起状态仅为前端界面状态，没有引入新的系统/用户配置模型；
 - 图标化操作保留可访问名称，网站属性值编辑从列表内联迁移到 Dialog 后没有削弱原有类型校验和 Backend 约束；
-- V11/V12 等既有 migration 没有因纯管理端视觉调整被回改；
+- 固定工程受保护资源由 Spring 外部化配置拥有，CMS 当前引用资源继续由 Backend 动态计算，不能把两类保护来源混成管理员维护字段；
+- 图片缩略图统一复用自适应公共组件，Element Plus `el-image` 负责通用 Viewer 能力，没有重复实现预览 Dialog / Viewer；
+- 新发现的硬编码候选已按 `configuration-governance.md` 判断其责任层；稳定领域、安全和页面模板契约不得为了消除常量而错误配置化；
+- CI / Review / FRP 环境参数不得进入 CMS 网站属性；只有在确有环境差异需求时才迁移为 Repository / Environment / Deployment Variables；
+- V11/V12 等既有 migration 没有因纯管理端视觉或配置治理调整被回改；
 - 无无关文件、临时文件、调试入口或测试残留进入 PR。
 
 发现 Implementation Defect 时直接在当前授权范围修复，并重新取得新 Head Evidence；不得用“AI Review 已完成”代替修复后的测试。
