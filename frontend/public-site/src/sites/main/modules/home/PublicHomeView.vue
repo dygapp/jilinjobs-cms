@@ -2,6 +2,7 @@
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { listPublicAdvertisements, type Advertisement } from '../../api/advertisements'
 import { listPublicArticles, type PublicArticleSummary } from '../../api/articles'
+import { getPublicColumnByAlias } from '../../api/columns'
 import { listPublicCmsLists, type CmsListItem } from '../../api/lists'
 import { listPublicNavigations, type PublicNavigation } from '../../api/navigation'
 import { listPublicSiteConfig } from '../../api/siteConfig'
@@ -12,7 +13,9 @@ import { setPageMeta } from '../../seo'
 type SiteLinkGroup = { name: string; links: CmsListItem[] }
 
 const items = ref<PublicNavigation[]>([])
-const articles = ref<PublicArticleSummary[]>([])
+const noticeArticles = ref<PublicArticleSummary[]>([])
+const employmentArticles = ref<PublicArticleSummary[]>([])
+const recruitmentArticles = ref<PublicArticleSummary[]>([])
 const siteGroups = ref<SiteLinkGroup[]>([])
 const carouselItems = ref<CmsListItem[]>([])
 const activeCarouselIndex = ref(0)
@@ -34,14 +37,22 @@ const shortcutItems = computed(() => items.value.filter(item => item.position ==
 const quickItems = computed(() => items.value.filter(item => item.position === 'HOME_QUICK'))
 const validCarouselItems = computed(() => carouselItems.value.filter(item => Boolean(item.imagePath)))
 const carouselItem = computed(() => validCarouselItems.value[activeCarouselIndex.value] || null)
-const articlesFor = (alias: string) => articles.value.filter(article => article.columnAlias === alias).slice(0, 7)
 const isExternalArticle = (article: PublicArticleSummary) => article.articleType === 'EXTERNAL_LINK' && Boolean(article.externalUrl)
-const noticeArticles = computed(() => articlesFor('notice'))
-const employmentArticles = computed(() => articlesFor('employment-news'))
-const recruitmentArticles = computed(() => articles.value.filter(article => article.columnAlias === 'recruitment-announcement' && isExternalArticle(article)).slice(0, 7))
 const newWindow = (mode: string, url: string | null | undefined) => mode === 'NEW_WINDOW' || (mode === 'DEFAULT' && Boolean(url?.startsWith('http')))
 const activePromo = computed(() => promoAds.value[activePromoIndex.value] || null)
 const promoLinked = computed(() => Boolean(activePromo.value?.url) && activePromo.value?.openMode !== 'NO_LINK')
+
+async function listExternalArticles(columnId: number, limit: number) {
+  const selected: PublicArticleSummary[] = []
+  let page = 0
+  while (selected.length < limit) {
+    const articlePage = await listPublicArticles(columnId, page, 50)
+    selected.push(...articlePage.items.filter(isExternalArticle))
+    if ((page + 1) * articlePage.size >= articlePage.total) break
+    page += 1
+  }
+  return selected.slice(0, limit)
+}
 
 function startCarouselRotation() {
   if (carouselTimer) clearInterval(carouselTimer)
@@ -84,15 +95,24 @@ const calendar = computed(() => {
 
 onMounted(async () => {
   try {
-    const [navigation, articlePage, config, lists, advertisementSlots] = await Promise.all([
+    const [navigation, config, lists, advertisementSlots, noticeColumn, employmentColumn, recruitmentColumn] = await Promise.all([
       listPublicNavigations(),
-      listPublicArticles(null, 0, 50),
       listPublicSiteConfig(),
       listPublicCmsLists(),
       listPublicAdvertisements(),
+      getPublicColumnByAlias('notice'),
+      getPublicColumnByAlias('employment-news'),
+      getPublicColumnByAlias('recruitment-announcement'),
+    ])
+    const [noticePage, employmentPage, recruitmentItems] = await Promise.all([
+      listPublicArticles(noticeColumn.id, 0, 7),
+      listPublicArticles(employmentColumn.id, 0, 7),
+      listExternalArticles(recruitmentColumn.id, 7),
     ])
     items.value = navigation
-    articles.value = articlePage.items
+    noticeArticles.value = noticePage.items
+    employmentArticles.value = employmentPage.items
+    recruitmentArticles.value = recruitmentItems
     const values = Object.fromEntries(config.map(item => [item.key, item.value]))
     contactPhone.value = values.CONTACT_PHONE || ''
     carouselIntervalSeconds.value = positiveInteger(values.HOME_CAROUSEL_INTERVAL_SECONDS, 4)
@@ -120,7 +140,7 @@ onUnmounted(() => {
     <p v-if="loading" class="public-state">正在加载公开内容…</p>
     <p v-else-if="error" class="public-state error-text">{{ error }}</p>
 
-    <div class="site-width home-content" data-testid="public-content">
+    <div v-if="!loading && !error" class="site-width home-content" data-testid="public-content">
       <section class="home-primary-row">
         <div class="home-carousel" data-testid="home-carousel-active" :data-carousel-item-id="carouselItem?.id || ''">
           <a v-if="carouselItem?.url" :href="carouselItem.url" :target="newWindow(carouselItem.openMode, carouselItem.url) ? '_blank' : undefined" rel="noopener noreferrer">
