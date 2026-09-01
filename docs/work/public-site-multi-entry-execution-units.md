@@ -1,6 +1,8 @@
 # 公开站 Multi-entry Modular SPA 执行单元
 
-本文记录当前公开站架构重构的持久执行切分。每个 Execution Unit 都必须能够独立审查、独立验证并在必要时回滚；PR 是否合并继续遵循当前 Repository Authority 与 Roadmap，不因为后续单元已准备就跳过前序验证。
+本文记录公开站架构重构的持久执行切分。每个 Execution Unit 都必须能够独立审查、独立验证并在必要时回滚；PR 是否合并继续遵循当前 Repository Authority 与 Roadmap，不因为后续单元已准备就跳过前序验证。
+
+**状态：已完成（2026-09-01）。** EU-23～EU-25 已完成实现、Current Evidence 与集成；本文转为阶段追溯，当前主动路线以 `docs/project/project-roadmap.md` 为准。
 
 ## EU-23 — Public Frontend Authority & Architecture Convergence
 
