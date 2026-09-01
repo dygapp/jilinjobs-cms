@@ -1,4 +1,5 @@
 import type { AdminModule } from '../../app/adminModule'
+import './admin.css'
 
 export const cmsAdminModule: AdminModule = {
   id: 'cms',
