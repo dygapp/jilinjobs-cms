@@ -13,6 +13,9 @@ export interface AdminNavigationSection {
 
 export interface AdminModule {
   id: string
+  defaultEntry?: boolean
+  landingRoute: string
   routes: RouteRecordRaw[]
+  compatibilityRoutes?: RouteRecordRaw[]
   navigationSections: AdminNavigationSection[]
 }
