@@ -4,6 +4,8 @@
 
 `frontend/admin` 维护通用 CMS 对象，继续使用 Vue 3 + TypeScript + Element Plus 和 `/admin/` base。
 
+管理端模块集成边界由 `docs/architecture/decisions/ADR-0001-admin-frontend-module-integration.md` 决定，具体 Shell / Module 装配方式以 `docs/technical/admin-frontend-integration.md` 为准。当前保持单一 Vue SPA，不引入 Module Federation Runtime。
+
 ## 2. 统一图片资源选择与预览
 
 `ImageResourcePicker` 作为 `/static/**` 图片属性的优先编辑方式，负责当前图片预览、既有 StaticResource multipart 上传、稳定 Runtime 文件名、浏览 `/static/uploads/**` 共享图片库、导航语义候选和清除可选值。
@@ -25,13 +27,13 @@ Admin Shell 按业务职责分为四个无额外点击层级的导航分组：
 - 运营展示：宣传展示；
 - 站点设置：网站属性、静态资源。
 
-技术路由继续保持 `/articles`、`/pages`、`/lists`、`/columns`、`/navigation`、`/advertisements`、`/site-config`、`/static-resources`。不新增独立“系统设置”路由或菜单。
+CMS canonical 技术路由统一保持在 `/cms/**` 模块命名空间：`/cms/articles`、`/cms/pages`、`/cms/lists`、`/cms/columns`、`/cms/navigation`、`/cms/advertisements`、`/cms/site-config`、`/cms/static-resources`；配合 `/admin/` history base 后浏览器 URL 为 `/admin/cms/**`。原 `/articles`、`/pages` 等路由只作为兼容重定向保留。不新增独立“系统设置”路由或菜单。
 
 对于“容器 → 成员”模型，页面优先采用左侧容器导航 + 右侧成员列表；栏目管理本身仍直接维护栏目树，不重复放置栏目导航树。
 
 ### 3.1 可折叠导航与紧凑操作
 
-`App.vue` 以本地 `ref<boolean>` 控制主侧边栏展开/收起，并通过 `.sidebar-collapsed` 切换 220px 与紧凑宽度；收起时仍保留各入口图标和 title，顶部始终保留重新展开按钮。该状态当前不写入 Database、SiteProperty、localStorage 或用户 Profile。
+`app/App.vue` 以本地 `ref<boolean>` 控制主侧边栏展开/收起，并通过 `.sidebar-collapsed` 切换 220px 与紧凑宽度；收起时仍保留各入口图标和 title，顶部始终保留重新展开按钮。该状态当前不写入 Database、SiteProperty、localStorage 或用户 Profile。
 
 文章、单页、列表、导航、宣传展示、网站属性等 Master–Detail 页面以本地 `sideCollapsed` 控制左侧组织面板。公共 CSS 使用 `.side-panel-collapsed` 将两列布局切换为单列；`AdminPanelToggle` 始终位于右侧上下文/Header 中，因此左侧隐藏后仍可恢复。
 
@@ -41,7 +43,7 @@ Admin Shell 按业务职责分为四个无额外点击层级的导航分组：
 
 ## 4. 文章与栏目
 
-`/articles` 同时加载 Article 和 Column。左侧把 flat columns 转换为层级树，父栏目筛选在前端收集全部后代 id；右侧文章列表继续叠加关键词、状态、文章类型筛选。TreeSelect 用同一栏目树数据生成。
+`/cms/articles` 同时加载 Article 和 Column。左侧把 flat columns 转换为层级树，父栏目筛选在前端收集全部后代 id；右侧文章列表继续叠加关键词、状态、文章类型筛选。TreeSelect 用同一栏目树数据生成。
 
 Column API Type 增加 `coverPolicy: 'NONE' | 'OPTIONAL' | 'REQUIRED'`。栏目管理整页树表的新增/编辑 Dialog 提供“文章封面”策略 Select，并随 create/update 请求提交。
 
@@ -55,13 +57,13 @@ Column API Type 增加 `coverPolicy: 'NONE' | 'OPTIONAL' | 'REQUIRED'`。栏目�
 
 ## 5. 单页管理
 
-`/pages` 同时加载 PageGroup 和 Page。左侧组织区域包含全部单页、独立单页和所有 PageGroup；右侧 Table 根据左侧上下文过滤成员。选择具体分组后新增 Page 时默认 current group id，其他上下文默认为 null；表单仍可调整。
+`/cms/pages` 同时加载 PageGroup 和 Page。左侧组织区域包含全部单页、独立单页和所有 PageGroup；右侧 Table 根据左侧上下文过滤成员。选择具体分组后新增 Page 时默认 current group id，其他上下文默认为 null；表单仍可调整。
 
 PageGroup 当前为平级对象，左侧使用普通分组列表而不是树。技术 API/数据库继续使用 Page/PageGroup。
 
 ## 6. 导航管理
 
-页面加载 NavigationLocation 和 NavigationItem。左侧显示位置并采用整行选择 + `...` 菜单；右侧将当前位置 flat items 转换为 tree table。新增/编辑条目时 position 固定为当前 code，parent 只从当前位置选择。
+`/cms/navigation` 页面加载 NavigationLocation 和 NavigationItem。左侧显示位置并采用整行选择 + `...` 菜单；右侧将当前位置 flat items 转换为 tree table。新增/编辑条目时 position 固定为当前 code，parent 只从当前位置选择。
 
 正式初始化只保留 `MAIN`、`HOME_SHORTCUT`、`HOME_QUICK` 三个内置导航位置。V8 的 SERVICE/SITE 已由后续 migration 清理。
 
@@ -69,7 +71,7 @@ PageGroup 当前为平级对象，左侧使用普通分组列表而不是树。�
 
 ## 7. 列表管理
 
-`/lists` 左侧选择列表定义，右侧维护列表项。列表定义不再编辑 itemType，新增 `imagePolicy` 选择：
+`/cms/lists` 左侧选择列表定义，右侧维护列表项。列表定义不再编辑 itemType，新增 `imagePolicy` 选择：
 
 - NONE：列表项 Dialog 不显示 ImageResourcePicker，并在提交前清空 imagePath；
 - OPTIONAL：显示可选图片；
@@ -83,13 +85,13 @@ Backend 仍是最终校验层，因此直接 API 调用无法绕过 NONE/REQUIRE
 
 ## 8. 宣传展示管理
 
-技术路由保持 `/advertisements`，界面统一使用“宣传展示管理 / 展示位 / 展示内容”。先选择展示位，再维护内容。支持图片、URL、openMode、startAt/endAt、展示顺序和 enabled。新图片上传到 `uploads/displays/{slotCode}/`，也可复用共享 Runtime 图片。
+canonical 技术路由为 `/cms/advertisements`，界面统一使用“宣传展示管理 / 展示位 / 展示内容”。先选择展示位，再维护内容。支持图片、URL、openMode、startAt/endAt、展示顺序和 enabled。新图片上传到 `uploads/displays/{slotCode}/`，也可复用共享 Runtime 图片。
 
 展示内容 Table 的图片列使用统一 AdaptiveImagePreview + 路径摘要，编辑 Dialog 继续使用 ImageResourcePicker。宣传图片即使通常为照片，也统一获得透明/浅色内容的可辨识背景和 Element Plus 原图 Viewer。
 
 ## 9. 网站属性
 
-保留兼容 URL `/site-config`，页面名称“网站属性”。页面并行请求：
+canonical 技术路由为 `/cms/site-config`；旧 `/site-config` 只作为兼容重定向保留。页面名称“网站属性”。页面并行请求：
 
 - `/api/admin/site-config` 获取属性；
 - `/api/admin/site-config/groups` 获取 Spring CMS metadata 定义的分组。
@@ -106,7 +108,7 @@ RESOURCE_PATH 的值编辑 Dialog 使用 ImageResourcePicker，新图片上传�
 
 ## 10. 静态资源管理
 
-静态资源列表使用 Backend 返回的 `protectedResource` 判断是否允许普通删除。界面术语统一使用“受保护资源”，Tooltip 说明“当前由站点基线或 CMS 数据引用保护，不能直接删除”；不再使用容易被理解为人工重要性等级的“关键资源”。
+canonical 技术路由为 `/cms/static-resources`。静态资源列表使用 Backend 返回的 `protectedResource` 判断是否允许普通删除。界面术语统一使用“受保护资源”，Tooltip 说明“当前由站点基线或 CMS 数据引用保护，不能直接删除”；不再使用容易被理解为人工重要性等级的“关键资源”。
 
 图片类型静态资源在列表中提供统一 AdaptiveImagePreview。普通点击使用 Element Plus Viewer 页内查看；“打开原文件”动作继续保留，用于浏览器直接访问或下载原始资源。非图片文件不强行生成预览。
 
@@ -114,6 +116,7 @@ RESOURCE_PATH 的值编辑 Dialog 使用 ImageResourcePicker，新图片上传�
 
 E2E 必须覆盖：
 
+- `/admin/` 进入 `/admin/cms/articles`，八类菜单使用 `/admin/cms/**` canonical URL，旧 `/admin/<feature>` 路径重定向到对应 canonical route；
 - Shell 四个导航分组及八类入口可达，没有独立“系统设置”；
 - 主侧边栏可以收起/展开且收起后入口仍存在；
 - 至少覆盖文章栏目导航和网站属性分组面板的收起/恢复，证明局部面板隐藏后右侧仍保留恢复入口；
