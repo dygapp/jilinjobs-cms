@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 
 type PreviewTheme = 'plain' | 'analyzing' | 'dark' | 'light' | 'checker'
 
@@ -7,12 +7,15 @@ const props = withDefaults(defineProps<{
   src: string
   alt?: string
   adaptive?: boolean
+  preview?: boolean
 }>(), {
   alt: '',
   adaptive: false,
+  preview: true,
 })
 
 const theme = ref<PreviewTheme>(props.adaptive ? 'analyzing' : 'plain')
+const previewSources = computed(() => props.preview && props.src ? [props.src] : [])
 
 watch(() => `${props.src}|${props.adaptive}`, () => {
   theme.value = props.adaptive ? 'analyzing' : 'plain'
@@ -85,9 +88,19 @@ function failed() {
     :class="`theme-${theme}`"
     :data-preview-theme="theme"
     data-testid="adaptive-image-preview"
-    :title="adaptive ? '预览背景会根据图标明暗自动调整；悬停可切换对比背景' : undefined"
+    :title="adaptive ? '预览背景会根据图片明暗自动调整；点击可使用 Element Plus 查看原图' : '点击可查看原图'"
   >
-    <img :src="src" :alt="alt" @load="analyse" @error="failed">
+    <el-image
+      class="adaptive-image"
+      :src="src"
+      :alt="alt"
+      fit="contain"
+      :preview-src-list="previewSources"
+      :preview-teleported="true"
+      :hide-on-click-modal="true"
+      @load="analyse"
+      @error="failed"
+    />
   </div>
 </template>
 
@@ -101,7 +114,11 @@ function failed() {
   border-radius: 4px;
   transition: background .16s ease, border-color .16s ease;
 }
-.adaptive-image-preview img {
+.adaptive-image {
+  width: 100%;
+  height: 100%;
+}
+.adaptive-image :deep(.el-image__inner) {
   width: 100%;
   height: 100%;
   object-fit: contain;
