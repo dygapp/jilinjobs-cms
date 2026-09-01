@@ -1,4 +1,6 @@
-export type ContentImagePolicy='NONE'|'OPTIONAL'|'REQUIRED'
+import type { ContentImagePolicy } from '../cmsEnums'
+export type { ContentImagePolicy } from '../cmsEnums'
+
 export interface CmsColumn { id:number; parentId:number|null; name:string; sortOrder:number; enabled:boolean; alias:string; coverPolicy:ContentImagePolicy; preset:boolean }
 export interface PublicColumn { id:number; parentId:number|null; name:string; alias:string }
 export interface ColumnDraft { parentId:number|null; name:string; sortOrder:number; enabled:boolean; alias:string; coverPolicy:ContentImagePolicy }
