@@ -2,9 +2,11 @@
 
 ## 1. 目的
 
-本文固化 2026-08-31 人工确认的 CMS 预置站点结构保护规则，作为 `docs/requirements/information-publishing.md` V4.6 的后续增量 Specification。
+本文固化 2026-08-31 人工确认的 CMS 预置站点结构保护规则，作为 `docs/requirements/information-publishing.md` V4.7 的增量 Specification。
 
 该规则解决的是“站点规划基线被运营人员误删导致页面结构失效”的问题，不引入认证、角色、超级管理员或权限体系，也不把 CMS 运营内容整体变成不可修改的系统数据。
+
+V4.7 将中心党建从主导航占位调整为下一阶段公开 Site Entry。该变化不改变 `preset` 的保护语义：既有“中心党建”仍是预置 NavigationItem，可以通过后续 Flyway migration 修改其目标为 `/party/`，但仍不可删除；`preset` 保护的是规划身份，不是冻结全部运营字段。
 
 ## 2. `preset` 语义
 
@@ -37,7 +39,7 @@
 |---|---|---|---|---|
 | Column 栏目 | 支持 | `alias` | 是 | 保护站点规划栏目；Article 不因此成为预置内容 |
 | NavigationLocation 导航位置 | 支持 | `code` | 是 | `MAIN / HOME_SHORTCUT / HOME_QUICK` 属于正式位置基线 |
-| NavigationItem 导航条目 | 支持 | 无独立 Alias/Code | 是 | 预置导航可继续修改名称、目标、排序、启停和图标 |
+| NavigationItem 导航条目 | 支持 | 无独立 Alias/Code | 是 | 预置导航可继续修改名称、目标、排序、启停和图标；中心党建可从占位迁移为 `/party/` 入口 |
 | PageGroup 单页分组 | 支持 | `alias` | 由现有模型无删除 API + preset 语义共同保护 | 分组继续为平级结构 |
 | Page 单页 | 支持 | `alias` | 是 | 保护稳定公开 URL；正文和呈现相关运营字段仍可维护 |
 | CmsList 列表定义 | 支持 | `code` | 是 | 保护页面依赖的数据容器；CmsListItem 仍是普通运营内容 |
@@ -62,6 +64,8 @@ Flyway 只把已经由当前站点规划明确建立的记录标记为 `preset=t
 
 当前页面稳定依赖的列表、展示位和站点属性定义按现有初始化基线逐项标记，不据此推导未来新增业务对象自动成为 preset。
 
+既有 Migration 历史不回改。中心党建入口由 V12 之后的新 migration 在保持 `preset=true` 的前提下把既有预置 NavigationItem 的目标从 `PLACEHOLDER` 调整为站内 `LINK /party/`。
+
 ## 6. 管理端交互
 
 管理端采用一致的轻量表达：
@@ -83,4 +87,5 @@ Flyway 只把已经由当前站点规划明确建立的记录标记为 `preset=t
 5. 普通管理 API 新增的结构对象返回 `preset=false`，并可按原规则删除；
 6. Article、CmsListItem、Advertisement 等运营内容仍保持正常 CRUD；
 7. 管理端能够识别预置对象，删除入口被禁用/移除且稳定身份字段不可编辑；
-8. Public Site 既有行为和视觉结构不得因 `preset` 标记本身发生变化。
+8. 中心党建预置导航在新 migration 后仍保持 `preset=true`，目标变为 `/party/`，删除保护不受目标变化影响；
+9. Public Site 既有行为和视觉结构不得因 `preset` 标记本身发生变化。
