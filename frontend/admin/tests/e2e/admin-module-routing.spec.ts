@@ -1,3 +1,4 @@
+import { readFile } from 'node:fs/promises'
 import { expect, test } from '@playwright/test'
 
 const canonicalRoutes = [
@@ -25,4 +26,19 @@ test('旧 CMS 管理路径重定向到 canonical 路由', async ({ page }) => {
     await page.goto(`/admin/${id}`)
     await expect(page).toHaveURL(new RegExp(`${canonical.replaceAll('/', '\\/')}$`))
   }
+})
+
+test('未知管理端路径回到模块注册表声明的默认入口', async ({ page }) => {
+  await page.goto('/admin/not-a-real-module/unknown')
+  await expect(page).toHaveURL(/\/admin\/cms\/articles$/)
+  await expect(page.getByRole('heading', { name: '文章管理' })).toBeVisible()
+})
+
+test('Shell Router 不重新持有 CMS feature 路由知识', async () => {
+  const routerSource = await readFile(new URL('../../src/app/router.ts', import.meta.url), 'utf8')
+  expect(routerSource).toContain('adminDefaultRoute')
+  expect(routerSource).toContain('adminModuleRoutes')
+  expect(routerSource).not.toContain('/cms/')
+  expect(routerSource).not.toContain("'/articles'")
+  expect(routerSource).not.toContain("'/lists'")
 })
