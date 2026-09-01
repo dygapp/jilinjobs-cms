@@ -11,19 +11,18 @@ Repository:
 dygapp/agentic-dev
 
 Baseline:
-master@bf21c7bcd711fd667c43007a72fae65750d1af09
+master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 ```
 
 该 baseline 提供 Method、Operating Guide、Skill Contracts 与 Skills 的来源依据，但不提供本项目的业务事实。
 
-相对上一 baseline `df4d6a607597eeb3684279e269cb073fcb398f83`，本次实际吸收的新增规则是：
+相对上一 baseline `bf21c7bcd711fd667c43007a72fae65750d1af09`，本次实际吸收的新增规则是：
 
-- Human Review Finding 不受评审名称限制；视觉评审也可能暴露 Implementation Defect、Product / Requirement Ambiguity、Domain / Architecture Authority Gap 或 Runtime Problem，应保留人工观察的原始范围并重新读取当前 Authority 后分类路由；人工观察不会仅因来自 Human Review 就自动成为新 Requirement；
-- 从外部站点、接口、附件或其他 Repository 取得的二进制/媒体输入，在版本化或交给 Runtime 消费前，文件名、扩展名、URL 后缀和响应头只能作为线索；当真实内容类型会影响当前行为、验证或安全边界时，应通过内容签名、可靠媒体类型识别或实际解码/解析确认真实格式，必要时规范化并重新验证，禁止仅修改扩展名伪装格式；
-- 已验证提交之后出现新提交时，不得根据 `docs-only`、文件扩展名或变更数量机械继承祖先 Runtime / Human Review Evidence；只有取得祖先 Evidence Commit 到当前目标提交的完整精确差异，并按 Evidence Claim 证明相关行为、环境、数据、资源、Authority、Requirement、Specification、Architecture、Acceptance、Workflow、Runtime、Migration、Fixture 与版本化资源均未受影响时，才可以复用未受影响的祖先证据；必须记录祖先 SHA、当前 SHA、compare range、原 Evidence 引用和 claim 映射；
-- Project Roadmap 维护持久路线和可恢复状态，不逐项复制 PR open/merged、精确 Merge Commit、临时 Branch 删除等 GitHub 原生瞬时状态；进入 Ready to Integrate 前应让当前变更中的长期路线表达在集成后仍成立，合并后若阶段、核心目标、里程碑或已决定下一步未改变，不为“记录刚刚合并”再创建递归尾部变更。
+- 共享外部资源的并发边界必须匹配真实冲突域，而不是逻辑 PR / Branch / ref 标识；固定域名、代理名、端口、评审 / 部署槽位、临时数据库或单例服务等资源被不同触发路径共同使用时，所有争用者进入同一排他边界；独立工作默认有界排队，只有新工作确实取代旧工作且取消后的资源释放闭环可靠时才取消；Run cancellation、进程终止、锁取得与外部资源实际释放 / 归属正确必须分别验证。
+- 实施判断不把‘硬编码’或‘自行实现’脱离上下文直接视为缺陷：先根据真实变化来源、维护者、稳定性、安全 / 协议约束和生命周期判断代码常量、CMS 运营数据、结构元数据、Spring 外部化配置或 CI / Deployment Variables 的责任归属；没有已证明外部维护责任的稳定常量默认保留在代码或既有权威载体中，不为消除字面量机械配置化。
+- 实现通用技术能力前先检查当前代码库、框架、标准库与已引入依赖；已有能力满足功能契约及安全、可观察性、性能和生命周期约束时优先复用，用最薄适配层承载项目差异；存在可证明的不匹配时可以采用自有实现，但不得为了复用扩大依赖面、改变产品行为或覆盖 Consumer Architecture Authority。
 
-上一 baseline 已固化的 Stale Verification Contract、Visual Fidelity、自动化验证与 Human Review Baseline 隔离、bind mount 可重复恢复、Artifact Evidence 与异步 Actions 闭环规则继续有效。
+此前 baseline 已固化的 Stale Verification Contract、Visual Fidelity、自动化验证与 Human Review Baseline 隔离、bind mount 可重复恢复、Artifact Evidence、异步 Actions 闭环、Human Review Finding 分类、外部媒体真实内容验证、后继提交 Evidence Claim 影响判断与 Roadmap / GitHub 集成状态边界继续有效。
 
 `agentic-dev` 自身 Project Roadmap、Issue / eval / PR 集成状态等没有被继承为 Consumer 项目事实。
 
@@ -98,6 +97,22 @@ External Dependency Problem
 - 修正真正拥有陈旧断言的验证层；
 - 如果同一产品语义在多个验证层重复维护，识别契约所有者，删除无必要重复或共享同一权威来源；
 - 修正后重新运行当前有效验证，确认新契约能证明当前 Expected Behavior，同时不掩盖真实实现缺陷。
+
+### 4.1 实施判断：配置责任与已有能力复用
+
+实施阶段发现固定值、硬编码或准备自行实现通用技术能力时，不根据字面形式直接判定缺陷，先读取当前 Consumer Authority、实际代码、依赖与 Runtime 边界。
+
+配置责任至少区分：
+
+- 稳定领域 / 安全 / 协议 / 页面模板 / 算法常量：保留在版本控制代码或相应权威载体；
+- 管理员持续维护的运营数据：进入现有 CMS / 网站属性；
+- 低频结构元数据：进入 Consumer 已选择的结构化元数据权威；
+- 部署实例差异：进入 Spring 外部化配置；
+- CI、Review、FRP、发布过程参数：进入 Repository / Environment / Deployment Variables。
+
+具体项目分类继续以 `docs/technical/configuration-governance.md` 为准。不得只为消除字面量新增数据库字段、设置页面、环境变量或配置框架。
+
+实现通用能力前必须检查当前代码库、框架、标准库和已引入依赖；已有能力满足当前功能契约及安全、可观察性、性能和生命周期约束时优先复用，仅使用最薄适配层承载项目特有差异。已有能力与真实需求不匹配时允许自有实现，但需基于当前证据说明差异，不以‘框架优先’替代工程判断。
 
 ## 5. 证据声明、Human Review 与视觉验收边界
 
@@ -211,6 +226,8 @@ Analyze
 - 异步观察必须有界：按正常运行基线设置合理轮询间隔、观察上限、timeout 与 cancellation 策略，避免无限等待。
 - 失败后先取得日志、Job / Step、Artifact 或其他诊断证据；修复属于当前 Scope 且已授权时，使用 `systematic-debug` 定位 Root Cause、执行最小修复、重跑并重新观察。
 - 闭环可在三类结果下结束：取得并核对目标证据；出现真实 Human / Runtime 阻塞；达到有界观察上限并准确保留 `Executed but not fully verified`。后两者均不能声明完成。
+- 外部操作使用固定域名、代理名、端口、评审 / 部署槽位、临时数据库或其他排他资源时，必须按真实共享资源确定 concurrency / lock 范围，覆盖所有会争用该资源的触发路径；独立工作默认排队，不把取消当作默认互斥策略；只有新工作确实 supersede 旧工作且取消后的释放闭环可靠时才取消。
+- Workflow cancellation、进程终止、锁取得或清理命令成功不能单独证明共享资源已经释放或归属正确；重新取得资源后必须核对 owner / Head / 环境，并验证目标地址或服务实际对应当前 Run。
 
 ## 9. Project Roadmap
 

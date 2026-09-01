@@ -27,9 +27,11 @@
 - `docs/technical/verification-strategy.md`
 - `docs/technical/preset-site-structure.md`
 
-当前执行单元：
+最近完成的管理端执行单元（阶段追溯）：
 
 - `docs/work/admin-frontend-convergence-execution-units.md`
+
+当前仍处于管理端收敛路线；下一轮后台管理页面重构 / 细节收敛的具体范围由人工下一步指令确定，确有持久协调价值时再形成新的 Execution Units。
 
 历史阶段文档继续保留用于追溯，但不再作为当前目标架构：
 

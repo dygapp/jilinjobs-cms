@@ -2,11 +2,11 @@
 
 ## 使用边界
 
-本文件承担当前阶段执行切片。EU-13～EU-18 已完成第一轮独立管理端自动化收敛并进入 Human Admin Review；Human Review 暴露 CMS 模型与文档边界需要进一步收敛，因此在同一阶段追加 EU-19～EU-22。
+本文件记录管理端工程分离与 CMS 模型第一轮收敛的执行切片。EU-13～EU-22 已完成并进入 `main`；本文件继续作为已完成阶段追溯，不把历史 completion condition 误写成当前 GitHub 状态。下一轮后台管理页面重构 / 细节收敛在人工明确具体范围后，再按实际需要形成新的 Execution Units。
 
 执行依据：
 
-- `docs/requirements/information-publishing.md` V4.2
+- `docs/requirements/information-publishing.md` V4.6
 - `docs/specifications/cms-core.md`
 - `docs/specifications/public-site.md`
 - `docs/specifications/admin-site.md`
@@ -27,6 +27,8 @@
 - Human Admin Review Runtime。
 
 Human Review 结论属于 Product / Architecture Authority Gap：后台通用 CMS 模型不足，存在 SiteConfig JSON、Navigation 与前端硬编码重复 Authority，因此当前阶段继续执行以下单元。
+
+> 状态说明：以下 EU-19～EU-22 为当时针对该 Finding 形成的执行单元，当前均已完成；其中‘PR 保持未合并’等文字是当时的集成前 completion condition，不代表当前 Repository 状态。
 
 ---
 

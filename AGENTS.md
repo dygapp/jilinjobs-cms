@@ -52,9 +52,9 @@
 
 - Repository：`dygapp/agentic-dev`
 - Validation Baseline Branch：`master`
-- Validation Baseline Commit：`bf21c7bcd711fd667c43007a72fae65750d1af09`
+- Validation Baseline Commit：`a82e559cb67cafbcf96265a70a1167a9a75db5ba`
 
-该 baseline 延续已有 Project Roadmap、Fresh Context、Consumer-local Method、跨 Repository 授权、异步外部操作、验证证据与 Human Review Environment 边界，并进一步固化了 Human Review Finding 分类、外部二进制/媒体真实内容校验、后继提交 Evidence Claim 影响判断，以及 Project Roadmap 与 GitHub 瞬时集成状态的职责边界。
+该 baseline 延续已有 Project Roadmap、Fresh Context、Consumer-local Method、跨 Repository 授权、异步外部操作、验证证据、Human Review Environment、Human Review Finding 分类、外部媒体真实内容校验、后继提交 Evidence Claim 影响判断与 Roadmap / GitHub 集成状态边界，并进一步固化了共享外部资源的真实冲突域、排队 / 取消与释放验证边界，以及实施阶段的配置责任判断和已有能力复用边界。
 
 本项目不是在每次开发工作中直接运行 `agentic-dev` 仓库的方法文档，而是将当前采用的方法和 Skills 使用规则固化在 Consumer Repository：
 
@@ -94,6 +94,8 @@ docs/project/development-method.md
 - 项目跨多个里程碑或 Fresh Context 持续演进时，维护 Consumer 自己的 `docs/project/project-roadmap.md`；Roadmap 维护持久路线和可恢复状态，不逐项复制 PR open/merged、精确 Merge Commit、临时分支删除等 GitHub 原生瞬时事实；仅当集成结果改变阶段、核心目标、里程碑或已决定下一步时更新路线，避免形成只记录上一 PR 已合并的递归尾部变更；
 - 同一任务涉及多个 Repository 时，分别确认每个 Repository 的操作授权，Runtime 工具能力本身不构成授权；
 - Workflow、Deployment、远程 Job 等异步外部操作在 `queued` / `pending` / `in_progress` 时仍属于执行闭环中间状态；只要 Runtime 可继续观察且当前目标需要结果，就应在授权范围内有界观察、收集证据、诊断、修复和重试，而不是仅因“仍在运行”就默认交回人工。
+- 固定域名、代理名、端口、评审 / 部署槽位、临时数据库或单例服务等共享外部资源的并发边界必须按真实冲突域覆盖所有触发路径；独立工作争用同一资源时默认有界排队，只有新 Run 确实取代旧工作且取消后的资源释放闭环可靠时才使用 cancellation；Run cancellation 与资源释放必须分别验证。
+- 实施阶段发现‘硬编码’或准备自行实现通用技术能力时，先按真实变化来源、维护者、稳定性、安全 / 协议约束和生命周期判断责任层；稳定且没有已证明外部维护责任的值默认保留在代码或既有权威载体中，不为消除字面量机械配置化；当前代码、框架、标准库或已引入依赖满足契约时优先复用，并只使用最薄适配层承载项目差异。
 
 当前核心 Skills 和平台专项 Skill 的使用边界统一记录在 `docs/project/development-method.md`，不在本文件重复维护 Skill 级细节。
 

@@ -105,7 +105,7 @@ Automated Verification
 - 自动测试创建的菜单、栏目、文章、文件、缓存和会话不能因共用 Runtime 而默认进入 Human Review；
 - Human Review Fixture 必须显式准备，只保留确实用于人工观察的数据；
 - Reset 后重新验证测试数据已移除、版本化资源已恢复、人工 Fixture 已准备、服务健康且评审地址可访问；
-- Review Environment 对同一 PR/ref 使用 concurrency / cancellation 避免固定 FRP 域名被旧 Head 占用。
+- Review Environment 的固定 FRP proxy / custom domain 是仓库级共享外部资源，所有会使用该资源的 PR 与手工触发路径必须进入同一 concurrency group；不同工作争用时默认排队，不因 ref 不同建立并行实例，也不把 `cancel-in-progress` 当作默认互斥策略。只有新 Run 确实取代旧工作且取消后的 FRP 释放闭环可靠时才允许取消；Run cancellation 与代理实际释放 / 新 Run 归属必须分别验证。
 
 ### 5.2 Bind Mount Ownership 与可重复恢复
 
@@ -120,6 +120,24 @@ Automated Verification
 调用 `rm -rf` 本身不构成 Cleanup Evidence；应重新检查目标路径、预期基线内容和后续 Runtime 结果。
 
 这些清理规则只适用于已授权的临时验证 / 评审环境，不扩展为 Production 或共享数据的破坏性清理授权。
+
+### 5.3 固定 FRP 共享资源并发边界
+
+当前 Review Environment 的 `review.cc-lotus.info` 与 `jilinjobs-review` proxy 属于同一仓库级排他资源。并发治理遵循：
+
+```text
+Identify Shared FRP Resource
+→ Repository-wide Exclusivity
+→ Queue Independent Runs
+→ Verify Release / Ownership
+→ Verify External Target
+```
+
+- PR 与 `workflow_dispatch` 等所有触发路径使用同一 concurrency group；
+- 独立 Human Review / PR Review 不互相 supersede，默认有界排队；
+- 当前 baseline 升级检查发现 Review Environment 仍使用 `cancel-in-progress: true`；这与本节“独立工作默认排队”的规则不一致，属于已识别 Workflow Finding。完成修复前，不得把 Run cancellation 单独视为共享 FRP 资源已经释放或归属正确的证据；
+- 若未来确实引入 superseding cancellation，必须先证明取消后的 frpc / proxy 释放路径可靠，并重新核对代理 owner、目标 Head 与外部地址；
+- `frpc` 进程退出、Workflow cancelled 或重试成功都不能单独证明外部 proxy 已释放，仍需通过外部可达性和目标 Head / 环境证据完成验证。
 
 ## 6. Human Review Finding 分类
 
