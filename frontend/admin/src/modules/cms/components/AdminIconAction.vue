@@ -51,3 +51,10 @@ defineEmits<{ click: [event: MouseEvent] }>()
     </span>
   </el-tooltip>
 </template>
+
+<style scoped>
+.admin-icon-action-wrap{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle}
+.admin-icon-action.el-button{width:30px;height:30px;margin:0!important;padding:0;border-radius:5px}
+.admin-icon-link.el-link{width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;border-radius:5px;font-size:16px}
+.admin-icon-action:hover,.admin-icon-link:hover{background:var(--el-fill-color-light)}
+</style>
