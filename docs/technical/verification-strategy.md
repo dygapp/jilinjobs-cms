@@ -228,6 +228,18 @@ Acquire
 
 这些策略只验证“数据是否允许/要求图片”和轮播行为参数，不建立“图片策略决定页面布局”的断言；不得把数据契约误写成 `displayMode`。
 
+### 9.2 管理端最终视觉交互专项验证
+
+合并前最终视觉收敛至少验证：
+
+- 主侧边栏默认展开，点击后进入紧凑状态并保留全部八类路由入口，再次点击可恢复；
+- 文章栏目导航与网站属性分组面板至少各验证一次收起/展开；收起后右侧内容仍可操作且恢复按钮可见；
+- 表格图标操作必须保留 `aria-label`，Browser role/name 定位继续通过；至少对一个操作执行 hover 并验证 Tooltip 文本；
+- 网站属性 Table 不再包含常驻可编辑输入/图片上传器；点击“编辑值”后才出现类型化 Dialog；
+- `HOME_CAROUSEL_INTERVAL_SECONDS` 在值编辑 Dialog 中仍拒绝非整数；动态 JSON 属性在值编辑 Dialog 中仍拒绝非法 JSON；
+- SiteProperty 定义 Dialog 与值编辑职责分离，新建定义仍允许初始值；
+- 不增加“后台显示风格”系统属性、用户配置 API、Profile 数据或其他与当前无账号基线冲突的持久化能力。
+
 ## 10. AI Implementation Review
 
 最终 Completion Evidence 前，必须对本轮实现差异执行 Authority-oriented AI Review，至少检查：
@@ -239,7 +251,9 @@ Acquire
 - 已发布 Article 不存在通过普通编辑绕开 REQUIRED 封面的状态漏洞；
 - Public Summary 真正补齐 cover resource，而不只是 DTO 字段存在；
 - HOME_CAROUSEL interval 的配置、读取、实际 timer 行为和 cleanup fixture 一致；
-- V11 是后续 migration，没有回改 V8/V9/V10；
+- 管理端收起状态仅为前端界面状态，没有引入新的系统/用户配置模型；
+- 图标化操作保留可访问名称，网站属性值编辑从列表内联迁移到 Dialog 后没有削弱原有类型校验和 Backend 约束；
+- V11/V12 等既有 migration 没有因纯管理端视觉调整被回改；
 - 无无关文件、临时文件、调试入口或测试残留进入 PR。
 
 发现 Implementation Defect 时直接在当前授权范围修复，并重新取得新 Head Evidence；不得用“AI Review 已完成”代替修复后的测试。
