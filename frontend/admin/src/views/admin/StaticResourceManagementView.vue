@@ -2,6 +2,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { Delete, FolderOpened, Refresh, RefreshLeft, View } from '@element-plus/icons-vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
+import AdaptiveImagePreview from '../../components/AdaptiveImagePreview.vue'
 import AdminIconAction from '../../components/AdminIconAction.vue'
 import {
   deleteStaticResource,
@@ -24,6 +25,7 @@ const asEntry = (row: unknown) => row as StaticEntry
 const asTrash = (row: unknown) => row as TrashEntry
 const displayPath = computed(() => currentPath.value || '/')
 const canGoUp = computed(() => currentPath.value.length > 0)
+const imageExtensions = new Set(['png', 'jpg', 'jpeg', 'gif', 'webp', 'ico'])
 
 onMounted(refresh)
 
@@ -62,6 +64,11 @@ async function goUp() {
 function publicUrl(path: string) {
   return `/static/${path.split('/').map(encodeURIComponent).join('/')}`
 }
+function isImage(row: StaticEntry) {
+  if (row.directory) return false
+  const ext = row.name.includes('.') ? row.name.split('.').pop()!.toLowerCase() : ''
+  return imageExtensions.has(ext)
+}
 async function upload(replace = false) {
   if (!file.value) { ElMessage.warning('请选择文件'); return }
   const path = replace && replaceTarget.value
@@ -85,7 +92,7 @@ async function confirmReplace() {
   if (!replaceTarget.value) { ElMessage.warning('请先选择要替换的资源'); return }
   if (!file.value) { ElMessage.warning('请选择新文件'); return }
   const warning = replaceTarget.value.protectedResource
-    ? '这是站点关键受保护资源。替换会立即影响当前公开站，且系统不会完整检查 CSS、富文本等全部引用。确认继续？'
+    ? '这是站点受保护资源。替换会立即影响当前公开站，且系统不会完整检查 CSS、富文本等全部引用。确认继续？'
     : '替换会立即覆盖当前公开 URL 对应文件，系统不会完整检查引用。是否继续？'
   try {
     await ElMessageBox.confirm(warning, '替换静态资源', { type: 'warning', confirmButtonText: '确认替换' })
@@ -95,7 +102,7 @@ async function confirmReplace() {
 async function remove(row: StaticEntry) {
   if (row.directory) return
   if (row.protectedResource) {
-    ElMessage.warning('该资源由站点配置或 Runtime 基线保护，不能普通删除；如需更新请使用替换操作')
+    ElMessage.warning('该资源由站点基线或当前 CMS 引用保护，不能普通删除；如需更新请使用替换操作')
     return
   }
   try {
@@ -126,7 +133,7 @@ function message(error: unknown) {
       </div>
     </header>
 
-    <el-alert title="系统会保护 Runtime 基线和网站配置直接引用的关键资源；其他资源仍不提供完整 CSS / JS / 富文本引用扫描。" type="warning" :closable="false" show-icon />
+    <el-alert title="系统会保护配置声明的站点基线资源和当前 CMS 数据直接引用的资源；其他资源仍不提供完整 CSS / JS / 富文本引用扫描。" type="warning" :closable="false" show-icon />
 
     <el-card shadow="never" style="margin-top:16px">
       <div class="admin-toolbar">
@@ -141,17 +148,18 @@ function message(error: unknown) {
           <el-button v-if="replaceTarget" @click="clearSelection">取消替换</el-button>
         </div>
       </div>
-      <el-alert v-if="replaceTarget" :title="`待替换：${replaceTarget.path}${replaceTarget.protectedResource ? '（关键受保护资源）' : ''}`" :type="replaceTarget.protectedResource ? 'warning' : 'info'" :closable="false" style="margin-bottom:12px" />
+      <el-alert v-if="replaceTarget" :title="`待替换：${replaceTarget.path}${replaceTarget.protectedResource ? '（受保护资源）' : ''}`" :type="replaceTarget.protectedResource ? 'warning' : 'info'" :closable="false" style="margin-bottom:12px" />
       <el-table v-loading="loading" :data="entries" data-testid="static-resource-table">
+        <el-table-column label="预览" width="92"><template #default="scope"><AdaptiveImagePreview v-if="isImage(asEntry(scope.row))" :src="publicUrl(asEntry(scope.row).path)" :alt="asEntry(scope.row).name" adaptive style="width:64px;height:42px" /></template></el-table-column>
         <el-table-column prop="name" label="名称" min-width="180" />
         <el-table-column prop="path" label="路径" min-width="260" />
         <el-table-column label="类型" width="100"><template #default="scope">{{ scope.row.directory ? '目录' : '文件' }}</template></el-table-column>
-        <el-table-column label="保护" width="100"><template #default="scope"><el-tag v-if="scope.row.protectedResource" type="warning" size="small">关键资源</el-tag><span v-else>-</span></template></el-table-column>
+        <el-table-column label="保护" width="110"><template #default="scope"><el-tooltip v-if="scope.row.protectedResource" content="当前由站点基线或 CMS 数据引用保护，不能直接删除" placement="top"><el-tag type="warning" size="small">受保护</el-tag></el-tooltip><span v-else>-</span></template></el-table-column>
         <el-table-column prop="size" label="大小" width="110" />
         <el-table-column label="操作" width="124" fixed="right"><template #default="scope"><div class="admin-table-actions">
           <AdminIconAction v-if="scope.row.directory" label="进入" :icon="FolderOpened" @click="enter(asEntry(scope.row))" />
           <template v-else>
-            <AdminIconAction label="查看/下载" :icon="View" :href="publicUrl(scope.row.path)" />
+            <AdminIconAction label="打开原文件" :icon="View" :href="publicUrl(scope.row.path)" />
             <AdminIconAction label="替换" :icon="Refresh" type="warning" @click="prepareReplace(asEntry(scope.row))" />
             <AdminIconAction :testid="`delete-static-${scope.row.path}`" label="删除" :icon="Delete" type="danger" :disabled="scope.row.protectedResource" @click="remove(asEntry(scope.row))" />
           </template>
