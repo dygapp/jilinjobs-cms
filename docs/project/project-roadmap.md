@@ -22,7 +22,7 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 | 站点基线收敛 EU-07～EU-12 | 已完成 | 现网站点结构、页面模型、规范 URL、网站配置、静态资源与初始化基线完成自动化收敛 |
 | 首页与公共视觉基线收敛 | 已完成 | 原站关键视觉资源、蓝白视觉体系、首页主要布局、Header / Nav / Footer、移动端基础适配及人工视觉复核完成 |
 | 页面细节视觉收敛 | 已完成 | 栏目列表、文章详情、固定页面、页面组 / Tab、业务指南、页脚与外链文章行为完成自动化和人工视觉复核 |
-| 管理端工程分离与功能收敛 | 当前 | 双前端物理拆分与通用 CMS 模型第一轮收敛已完成，继续按明确的 Human Admin Review / 人工指令增量收敛后台页面与管理体验 |
+| 管理端工程分离与功能收敛 | 当前 | 双前端物理拆分、通用 CMS 模型与 Admin Modular SPA 架构已完成收敛，继续按明确的 Human Admin Review / 人工指令增量收敛后台页面与管理体验 |
 | 公开站点内容与集成收敛 | 后续 | 完善固定页面内容、嵌入内容、网站导航预设基线及剩余公开页面内容与集成 |
 | 真实第三方深度集成 / 中心党建 | 条件性后续 | 根据后续 Product Intent、第三方接口与认证条件再进入 |
 
@@ -40,6 +40,7 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 | 2026-08-28 | 栏目列表、文章详情、固定页、业务指南、页脚、favicon、举报固定页与外链文章等页面细节收敛完成；最终 Human Visual Review 已通过，页面细节视觉收敛阶段关闭 |
 | 2026-08-28 | `agentic-dev` baseline 更新到 `bf21c7bcd711fd667c43007a72fae65750d1af09`，新增 Human Review Finding 分类、外部媒体真实内容验证、后继提交 Evidence Claim 影响判断和 Roadmap / GitHub 集成状态边界 |
 | 2026-09-01 | 管理端独立双前端、通用 CMS 模型、预置结构保护、配置治理、统一图片预览与静态资源保护第一轮收敛进入 `main`；`agentic-dev` baseline 更新到 `a82e559cb67cafbcf96265a70a1167a9a75db5ba`，同步共享外部资源并发 / 释放边界与实施判断 / 已有能力复用规则 |
+| 2026-09-01 | 管理端 Modular SPA 架构收敛完成，形成 Admin Shell / Shared / CMS Module 源码边界、Module Contract / Registry 集成机制与 `/admin/cms/**` canonical route namespace；Module Federation 仅保留为满足真实独立发布 / 部署需求后的条件性演进路径 |
 
 ## 当前已固化结果
 
@@ -56,6 +57,8 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 - `/page/**`、`/column/{alias}`、`/article/{id}` 作为规范公开 URL；
 - 页面组后台可维护，业务指南与招聘信息初始化关系来自 Flyway 基线；
 - 网站静态资源后台支持目录浏览、上传、显式替换、查看/下载、删除到回收区和恢复，并保留风险提示；
+- 管理端当前采用单一 Vue SPA / 单一 Router / 单一构建部署的 Modular SPA：`app/` 负责 Admin Shell 与 Module Registry，`shared/` 承担跨模块管理端 primitives，`modules/cms/` 持有 CMS 业务路由、页面、组件与私有样式；Shell 通过公开 Module Contract 消费模块声明，不直接持有 CMS feature route / selector 知识；
+- CMS canonical 管理端路由使用 `/admin/cms/**`，旧 `/admin/<cms-feature>` 仅作为兼容重定向；Module Federation 不属于当前基础设施，只有出现真实独立发布、独立部署、跨团队或跨技术栈需求时再评估 Remote Module 演进；
 - 站点初始化基线由数据库基线 + 版本化初始化静态资源包组成；
 - Automated Verification 与 Human Review Baseline 已分离：自动 E2E 结束后恢复数据库与静态资源已知基线，再注入明确 Human Review Fixture；
 - Review Environment 对同一 PR 使用并发互斥，避免固定 FRP 评审域名被多个 Head 同时占用；
@@ -70,7 +73,7 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 
 ## 当前阶段：管理端工程分离与功能收敛
 
-当前 `frontend/public-site` 与 `frontend/admin` 已完成物理拆分，分别拥有独立 Vue / Vite 入口、Router、依赖和构建产物，并共享同一个 Spring Boot CMS Backend。管理端 Application Shell、通用 CMS 模型、预置结构保护、网站属性 / 静态资源治理和第一轮 Human Admin Review 收敛已经进入 `main`；本阶段继续针对后续明确的管理端页面与交互问题做增量收敛，不回退双前端结构，也不在人工下一步范围明确前扩大产品范围。
+当前 `frontend/public-site` 与 `frontend/admin` 已完成物理拆分，分别拥有独立 Vue / Vite 入口、Router、依赖和构建产物，并共享同一个 Spring Boot CMS Backend。管理端内部也已完成 Modular SPA 架构收敛：Admin Shell、Shared Layer 与 CMS Module 的源码和样式所有权边界已经明确，CMS 通过 Module Contract / Registry 接入 Shell，并使用 `/admin/cms/**` canonical route namespace；当前仍保持单 SPA、单 Router、单构建和单部署，不引入 Module Federation。管理端通用 CMS 模型、预置结构保护、网站属性 / 静态资源治理和第一轮 Human Admin Review 也已进入 `main`；本阶段后续只在这一已固化架构基线上针对明确的管理端页面与交互问题做增量收敛，不回退双前端或 Modular SPA 边界，也不在人工下一步范围明确前扩大产品范围。
 
 本阶段已确认目标结构与执行边界：
 
@@ -78,11 +81,12 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 2. 保持后端 Spring Boot 单工程、现有 REST API 与业务模型边界稳定，先完成前端物理拆分，再只针对真实管理能力缺口调整 API；
 3. Review / Runtime Gateway 继续使用同一 Nginx / FRP 地址：`/admin/**` 路由到管理端静态产物，其余公开路径路由到公开站点静态产物；
 4. 暂不预先建立大型共享前端 package；只有拆分后出现稳定、明确且值得长期维护的 transport 类型或通用实现重复时，再抽取最小共享包；
-5. 建立统一 Admin Application Shell 和管理导航，使管理端从一组独立 `/admin/**` 页面收敛为完整管理应用；
+5. 建立统一 Admin Application Shell 和管理导航，使管理端从一组独立 `/admin/**` 页面收敛为完整管理应用；Admin 内部采用 Modular SPA，Shell 仅通过 Module Contract / Registry 组合业务模块，当前 CMS 模块持有自身 `/cms/**` canonical route、导航、兼容路由和私有样式；
 6. 对栏目、导航、文章、固定页面 / 页面组、网站配置、网站静态资源六类管理能力进行功能与可用性收敛；
 7. 补齐文章筛选/分页、固定页面 render mode 对应编辑字段、类型化网站配置、静态资源真实媒体内容校验、关键资源保护和新后台模块定向测试；
 8. 认证、账号、角色、统一权限体系仍按当前 Requirement 保持 Out of Scope；高风险网站配置和静态资源只保留明确的后续权限边界；
-9. 自动验证闭环完成后建立独立 Human Admin Review 入口和示例数据，进入人工管理端复核。
+9. 自动验证闭环完成后建立独立 Human Admin Review 入口和示例数据，进入人工管理端复核；
+10. Module Federation、Remote Module 与独立前端部署不作为当前阶段目标；只有出现真实独立发布 / 部署、跨团队或跨技术栈需求时，才基于 ADR-0001 评估演进。
 
 ### 当前执行顺序
 
@@ -92,10 +96,11 @@ EU-13～EU-18 独立管理端第一轮收敛：已完成
 → EU-20 General CMS model convergence：已完成
 → EU-21 Admin & Public consumption convergence：已完成
 → EU-22 Feature-wide re-verification & Human Review：已完成本轮集成前闭环
+→ Admin Modular SPA / CMS Module architecture convergence：已完成
 → 后续管理端页面重构 / 细节收敛：等待人工明确下一轮范围后按需形成新的 Execution Units
 ```
 
-当前 `docs/work/admin-frontend-convergence-execution-units.md` 保留 EU-13～EU-22 的已完成阶段追溯；新的管理端页面收敛单元只在下一轮范围明确且确有持久协调价值时新增。上一阶段 `center-main-site-core` Technical Plan 中“一个 Vite 工程同时承载公开端与管理端”的描述仅代表历史实现基线，不再作为目标架构。
+当前 `docs/work/admin-frontend-convergence-execution-units.md` 保留 EU-13～EU-22 的已完成阶段追溯；管理端 Modular SPA 的长期架构决策由 `docs/architecture/decisions/ADR-0001-admin-frontend-module-integration.md` 承载，Roadmap 只记录其已经成为当前恢复基线。新的管理端页面收敛单元只在下一轮范围明确且确有持久协调价值时新增。上一阶段 `center-main-site-core` Technical Plan 中“一个 Vite 工程同时承载公开端与管理端”的描述仅代表历史实现基线，不再作为目标架构。
 
 ## 后续公开站点内容与集成收敛
 
@@ -115,7 +120,7 @@ EU-13～EU-18 独立管理端第一轮收敛：已完成
 ## 阶段切换原则
 
 - 页面细节视觉收敛阶段已经关闭；
-- 当前仍处于“管理端工程分离与功能收敛”路线，但双前端拆分与第一轮 CMS 模型 / 管理能力收敛已完成；后续只按明确的人工 Review Finding 或下一步指令形成增量工作；
+- 当前仍处于“管理端工程分离与功能收敛”路线，双前端拆分、第一轮 CMS 模型 / 管理能力收敛以及 Admin Modular SPA / CMS Module 架构收敛均已完成；后续只按明确的人工 Review Finding 或下一步指令在现有架构基线上形成增量工作；
 - 公开站点剩余内容与嵌入任务保留在本 Roadmap，后续按独立阶段继续；
 - 后续每轮管理端增量收敛仍先取得自动化 Current Evidence，再恢复干净 Human Admin Review Baseline 并交由人工复核；Human Review Finding 按 Consumer-local Method 分类路由；
 - 最终 PR 不自动合并。
