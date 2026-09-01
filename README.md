@@ -4,7 +4,7 @@
 
 ## 当前目标
 
-当前版本以原网站现有结构和视觉关系为公开站基线，采用 Vue + Spring Boot 重建中心主站。当前阶段已完成公开站与管理端前端工程分离，并根据 Human Admin Review 继续收敛 CMS 通用模型：减少首页专用 JSON 配置和重复硬编码，建立可复用的导航位置、通用列表、宣传展示位、网站属性和统一静态资源能力，同时按文章、单页、列表等内容类型整理管理端信息架构。
+当前版本以原网站现有结构和视觉关系为公开站基线，采用 Vue + Spring Boot 重建中心主站。当前阶段已完成公开站与管理端前端工程分离，并根据 Human Admin Review 继续收敛 CMS 通用模型：减少首页专用 JSON 配置和重复硬编码，建立可复用的导航位置、通用列表、宣传展示位、网站属性和统一静态资源能力，同时按文章、单页、列表等内容类型整理管理端信息架构。管理端进一步采用模块化 SPA 架构，将 Application Shell 与 CMS Module 分离，并以 `/admin/cms/**` 作为 CMS canonical URL，为未来完整管理平台集成保留稳定模块边界；当前不引入 Module Federation Runtime。
 
 当前权威需求：
 
@@ -17,6 +17,10 @@
 - `docs/specifications/admin-site.md`
 - `docs/specifications/preset-site-structure.md`
 
+当前 Architecture Decision：
+
+- `docs/architecture/decisions/ADR-0001-admin-frontend-module-integration.md`
+
 当前 Technical Plan / Governance：
 
 - `docs/technical/cms-architecture.md`
@@ -24,6 +28,7 @@
 - `docs/technical/backend-service.md`
 - `docs/technical/public-site-frontend.md`
 - `docs/technical/admin-frontend.md`
+- `docs/technical/admin-frontend-integration.md`
 - `docs/technical/verification-strategy.md`
 - `docs/technical/preset-site-structure.md`
 
@@ -66,6 +71,8 @@ CMS 通用业务对象：
 
 公开站和管理端是同级独立 Vue / Vite 前端应用，共享 Spring Boot CMS Backend。
 
+管理端当前是单一 Vue SPA，但源码按 `app/` 与 `modules/cms/` 分离：Shell 只聚合模块声明，CMS Module 自己声明 routes/navigation，并使用 Vue Router 动态 import 进行路由级懒加载。Module Federation、iframe 或其他运行时微前端机制不属于当前基础设施；未来只有出现真实独立发布、独立部署、跨团队或跨技术栈要求时再单独评估。
+
 公开站固定布局、Header/Footer、页面 Shell，以及基本不会变化的一次性集成可以作为工程资产。首页 NCSS 区域属于固定工程集成，不要求后台管理。需要持续运营维护的数据优先使用 CMS 对象，避免在 SiteProperty JSON、导航和 Vue 常量中维护重复数据来源。
 
 通用列表只保存标题、副标题、图片、URL、打开方式、排序等数据属性；前台具体页面根据自身设计决定消费哪些属性以及如何展示，不由 CMS 列表定义控制视觉模式。导航条目可维护可选图标，避免前台按排序位置推导图标。
@@ -86,10 +93,14 @@ CMS 通用业务对象：
 frontend/
 ├── public-site/
 └── admin/
+    └── src/
+        ├── app/
+        └── modules/cms/
 ```
 
 - Public Site base：`/`
 - Admin Site base：`/admin/`
+- CMS Admin canonical routes：`/admin/cms/**`
 - Backend API：`/api/**`
 - Public static assets：`/static/**`
 
