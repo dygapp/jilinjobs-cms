@@ -23,7 +23,7 @@ test('EU-21：独立管理端 Shell 按内容职责组织八类 CMS 管理入口
   await expect(shell).not.toHaveClass(/sidebar-collapsed/)
 
   await page.getByTestId('admin-nav-lists').click()
-  await expect(page).toHaveURL(/\/admin\/lists$/)
+  await expect(page).toHaveURL(/\/admin\/cms\/lists$/)
   await expect(page.getByRole('heading',{name:'列表管理'})).toBeVisible()
 })
 
