@@ -22,6 +22,11 @@ const children = (id: number) => items.value
   .filter(item => item.parentId === id)
   .sort((a, b) => a.sortOrder - b.sortOrder || a.id - b.id)
 
+const isOtherPublicSiteEntry = (item: PublicNavigation) =>
+  item.targetType === 'LINK' && (item.href === '/party' || item.href.startsWith('/party/'))
+
+const usesDocumentNavigation = (item: PublicNavigation) => item.external || isOtherPublicSiteEntry(item)
+
 const isActive = (item: PublicNavigation) => {
   if (item.targetType === 'HOME') return route.path === '/'
   if (item.clickable && item.href && item.href !== '#') return route.path === item.href || route.path.startsWith(`${item.href}/`)
@@ -67,7 +72,7 @@ onMounted(async () => {
       </div>
       <ul class="site-width nav-root">
         <li v-for="item in roots" :key="item.id" class="nav-item" :class="{ active: isActive(item) }">
-          <a v-if="item.external" :data-testid="`public-nav-${item.id}`" :href="item.href" :target="item.newWindow ? '_blank' : undefined" rel="noopener noreferrer">
+          <a v-if="usesDocumentNavigation(item)" :data-testid="`public-nav-${item.id}`" :href="item.href" :target="item.newWindow ? '_blank' : undefined" rel="noopener noreferrer">
             <span>{{ item.name }}</span>
             <img v-if="children(item.id).length" class="nav-arrow" :src="arrowIcon" alt="">
           </a>
@@ -81,7 +86,7 @@ onMounted(async () => {
           </span>
           <ul v-if="children(item.id).length" class="nav-children">
             <li v-for="child in children(item.id)" :key="child.id">
-              <a v-if="child.external" :href="child.href" :target="child.newWindow ? '_blank' : undefined" rel="noopener noreferrer">{{ child.name }}</a>
+              <a v-if="usesDocumentNavigation(child)" :href="child.href" :target="child.newWindow ? '_blank' : undefined" rel="noopener noreferrer">{{ child.name }}</a>
               <router-link v-else-if="child.clickable" :to="child.href">{{ child.name }}</router-link>
               <span v-else>{{ child.name }}</span>
             </li>
