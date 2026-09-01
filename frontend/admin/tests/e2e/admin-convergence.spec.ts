@@ -347,9 +347,9 @@ test('EU-16：单页以左侧分组组织并按 render mode 提供编辑字段',
   await expect(page.getByTestId('page-table')).not.toContainText(groupedName)
 })
 
-test('EU-17：静态资源拒绝伪装 PNG 并保护站点关键资源', async ({ page, request }) => {
+test('EU-17：静态资源拒绝伪装 PNG 并保护站点受保护资源', async ({ page, request }) => {
   const fakeUpload=await request.post('/api/admin/static-resources?path=verification-fake/fake.png&replace=false',{multipart:{file:{name:'fake.png',mimeType:'image/png',buffer:Buffer.from('not a png')}}});expect(fakeUpload.ok()).toBeFalsy();expect((await fakeUpload.json() as {message:string}).message).toContain('实际内容')
   const homeList=await request.get('/api/admin/static-resources?path=home');expect(homeList.ok()).toBeTruthy();const rows=await homeList.json() as Array<{path:string;protectedResource:boolean}>;expect(rows.find(row=>row.path==='home/ncss-logo.png')?.protectedResource).toBeTruthy()
-  const deleteResponse=await request.delete('/api/admin/static-resources?path=home%2Fncss-logo.png');expect(deleteResponse.ok()).toBeFalsy();expect((await deleteResponse.json() as {message:string}).message).toContain('关键资源')
-  await page.goto('/admin/static-resources');const homeRow=page.getByTestId('static-resource-table').getByRole('row').filter({hasText:'home'});await homeRow.getByRole('button',{name:'进入'}).click();const ncssRow=page.getByTestId('static-resource-table').getByRole('row').filter({hasText:'ncss-logo.png'});await expect(ncssRow).toContainText('关键资源')
+  const deleteResponse=await request.delete('/api/admin/static-resources?path=home%2Fncss-logo.png');expect(deleteResponse.ok()).toBeFalsy();expect((await deleteResponse.json() as {message:string}).message).toContain('受保护资源')
+  await page.goto('/admin/static-resources');const homeRow=page.getByTestId('static-resource-table').getByRole('row').filter({hasText:'home'});await homeRow.getByRole('button',{name:'进入'}).click();const ncssRow=page.getByTestId('static-resource-table').getByRole('row').filter({hasText:'ncss-logo.png'});await expect(ncssRow).toContainText('受保护')
 })
