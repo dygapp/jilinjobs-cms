@@ -41,7 +41,7 @@ class StaticResourceServiceTest {
     }
 
     @Test
-    fun `protects runtime baseline site property and fixed ncss engineering asset`() {
+    fun `protects configured baseline and runtime referenced resources`() {
         val mapper = StaticFakeSiteConfigMapper(property("LOGO_PATH", "/static/brand/logo.png", "RESOURCE_PATH"))
         val service = service(mapper)
         write("health/baseline.png", png)
@@ -57,6 +57,16 @@ class StaticResourceServiceTest {
     }
 
     @Test
+    fun `configured baseline is not hard coded by service`() {
+        val service = service(protectedResources = "custom/protected.png")
+        write("custom/protected.png", png)
+        write("health/baseline.png", png)
+
+        assertTrue(service.list("custom").single().protectedResource)
+        assertFalse(service.list("health").single().protectedResource)
+    }
+
+    @Test
     fun `explicit replacement remains allowed for a protected resource`() {
         val mapper = StaticFakeSiteConfigMapper(property("LOGO_PATH", "/static/brand/logo.png", "RESOURCE_PATH"))
         val service = service(mapper)
@@ -66,7 +76,10 @@ class StaticResourceServiceTest {
         assertTrue(Files.size(tempDir.resolve("brand/logo.png")) > png.size)
     }
 
-    private fun service(mapper: SiteConfigMapper = StaticFakeSiteConfigMapper()) = StaticResourceService(tempDir.toString(), mapper)
+    private fun service(
+        mapper: SiteConfigMapper = StaticFakeSiteConfigMapper(),
+        protectedResources: String = "health/baseline.png,home/ncss-logo.png",
+    ) = StaticResourceService(tempDir.toString(), mapper, protectedResourcesText = protectedResources)
     private fun write(relative: String, bytes: ByteArray) { val path=tempDir.resolve(relative);Files.createDirectories(path.parent);Files.write(path,bytes) }
     private fun property(key:String,value:String,type:String)=SiteConfigRecord(configKey=key,propertyName=key,configValue=value,valueType=type,description=key)
 }
