@@ -22,6 +22,7 @@
 7. 管理端模块使用 `/admin/<module>/<feature>` 路由命名空间。当前 CMS canonical URL 为 `/admin/cms/**`；原 `/admin/<cms-feature>` 路径仅作为兼容重定向保留。
 8. 本次前端路由命名空间调整不自动改变 Backend API。当前 `/api/admin/**` 是否未来增加服务/模块 namespace，需结合 Backend Service Boundary 单独决策。
 9. 公开站可以采用模块化源码组织和路由懒加载，但不把可演进微前端作为当前公开站核心架构目标。
+10. 模块声明同时拥有自身 landing route 与 compatibility routes；Shell Router 不枚举任何模块 feature path。Module Registry 必须校验默认入口唯一、模块 id 唯一、canonical route/navigation 均位于自身 namespace，并拒绝重复路由路径，使模块边界成为可执行约束而非仅文档约定。
 
 ## Consequences
 
@@ -31,12 +32,13 @@
 - 当前不承担 Module Federation 的运行时、依赖共享、远程版本和故障治理成本。
 - 模块边界、路由 namespace 和模块声明契约可直接成为未来微前端演进的稳定切分点。
 - 可以保持现有 Vue/Vite/Element Plus 技术栈和统一 E2E 验证链路。
+- Shell Router 不再持有 CMS feature 路由知识，新增本地模块时只需要增加模块声明与 Registry composition，不需要修改 Shell 的模块内部路由表。
 
 ### Trade-offs
 
 - 当前模块仍随 Admin SPA 一起发布，不能做到 Remote Module 的独立部署。
 - 需要维护 Shell 与 Module Contract，禁止模块通过任意跨目录 import 重新形成隐式耦合。
-- 旧 CMS URL 需要在兼容期维护重定向。
+- 旧 CMS URL 需要在兼容期维护重定向，但兼容映射由 CMS Module 自己维护。
 
 ## Current Consumer Mapping
 
@@ -53,5 +55,7 @@ frontend/admin/src/
         ├── iconCatalog.ts
         └── module.ts
 ```
+
+`app/router.ts` 仅消费 Registry 聚合后的 `adminDefaultRoute` 与 `adminModuleRoutes`。当前 CMS 的 `/cms/**` canonical routes、旧顶级路径 compatibility redirects 和默认 landing route 全部声明在 `modules/cms/module.ts`；`moduleRegistry.ts` 在应用启动时验证模块路由契约。
 
 本 ADR 不扩大当前产品范围，不引入登录、账号、角色或权限实现。
