@@ -12,6 +12,7 @@ import com.jilinjobs.cms.staticresource.*
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.MethodArgumentNotValidException
 import org.springframework.web.bind.annotation.*
+import org.springframework.web.multipart.MaxUploadSizeExceededException
 
 @RestControllerAdvice
 class ApiExceptionHandler {
@@ -46,6 +47,11 @@ class ApiExceptionHandler {
     )
     @ResponseStatus(HttpStatus.NOT_FOUND)
     fun notFound(e: RuntimeException) = ApiError(e.message ?: "资源不存在")
+
+    @ExceptionHandler(MaxUploadSizeExceededException::class)
+    @ResponseStatus(HttpStatus.PAYLOAD_TOO_LARGE)
+    fun uploadTooLarge(@Suppress("UNUSED_PARAMETER") e: MaxUploadSizeExceededException) =
+        ApiError("上传文件过大，单个文件不能超过 20MB")
 
     @ExceptionHandler(MethodArgumentNotValidException::class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
