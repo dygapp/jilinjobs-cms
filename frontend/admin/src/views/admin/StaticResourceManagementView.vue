@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
+import { Delete, FolderOpened, Refresh, RefreshLeft, View } from '@element-plus/icons-vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
+import AdminIconAction from '../../components/AdminIconAction.vue'
 import {
   deleteStaticResource,
   listStaticResources,
@@ -146,14 +148,14 @@ function message(error: unknown) {
         <el-table-column label="类型" width="100"><template #default="scope">{{ scope.row.directory ? '目录' : '文件' }}</template></el-table-column>
         <el-table-column label="保护" width="100"><template #default="scope"><el-tag v-if="scope.row.protectedResource" type="warning" size="small">关键资源</el-tag><span v-else>-</span></template></el-table-column>
         <el-table-column prop="size" label="大小" width="110" />
-        <el-table-column label="操作" width="280" fixed="right"><template #default="scope">
-          <el-button v-if="scope.row.directory" link type="primary" @click="enter(asEntry(scope.row))">进入</el-button>
+        <el-table-column label="操作" width="124" fixed="right"><template #default="scope"><div class="admin-table-actions">
+          <AdminIconAction v-if="scope.row.directory" label="进入" :icon="FolderOpened" @click="enter(asEntry(scope.row))" />
           <template v-else>
-            <el-link :href="publicUrl(scope.row.path)" target="_blank" type="primary">查看/下载</el-link>
-            <el-button link type="warning" @click="prepareReplace(asEntry(scope.row))">替换</el-button>
-            <el-button :data-testid="`delete-static-${scope.row.path}`" link type="danger" :disabled="scope.row.protectedResource" @click="remove(asEntry(scope.row))">删除</el-button>
+            <AdminIconAction label="查看/下载" :icon="View" :href="publicUrl(scope.row.path)" />
+            <AdminIconAction label="替换" :icon="Refresh" type="warning" @click="prepareReplace(asEntry(scope.row))" />
+            <AdminIconAction :testid="`delete-static-${scope.row.path}`" label="删除" :icon="Delete" type="danger" :disabled="scope.row.protectedResource" @click="remove(asEntry(scope.row))" />
           </template>
-        </template></el-table-column>
+        </div></template></el-table-column>
       </el-table>
     </el-card>
 
@@ -161,7 +163,7 @@ function message(error: unknown) {
       <template #header>回收区</template>
       <el-table :data="trash">
         <el-table-column prop="originalPath" label="原路径" />
-        <el-table-column label="操作" width="100"><template #default="scope"><el-button link type="primary" @click="restore(asTrash(scope.row))">恢复</el-button></template></el-table-column>
+        <el-table-column label="操作" width="72"><template #default="scope"><AdminIconAction label="恢复" :icon="RefreshLeft" @click="restore(asTrash(scope.row))" /></template></el-table-column>
       </el-table>
     </el-card>
   </main>
