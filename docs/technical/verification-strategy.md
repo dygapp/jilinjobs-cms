@@ -36,6 +36,17 @@ E2E 必须消费真实 Flyway 初始化结果和版本化静态资源基线，�
 
 Functional Browser Verification 用于证明路由、交互、资源加载和已编码断言；它不能在缺少完整机器可判定容差时单独证明 Visual Fidelity。
 
+### 2.4 分页作用域与异步 UI 完成条件
+
+当一个页面区域在当前 Authority / Specification 中明确绑定到栏目、分类、租户、所有者、状态或其他稳定业务作用域，而 Backend API 已提供对应过滤能力时，默认直接在该作用域内查询和验证。不得用“先读取全局前 N 条 / 第一页，再在前端过滤”代替作用域查询，除非当前数据契约能够证明该窗口完整覆盖目标集合。
+
+验证规则：
+
+- 对分页、Top-N、窗口截断相关行为，测试数据应能跨越实际分页/窗口边界，或直接断言请求携带正确作用域参数；少量样例数据 PASS 不能单独证明数据量增长后的正确性。
+- 如果页面需要从某个作用域中继续筛选子类型，例如只消费某栏目中的 `EXTERNAL_LINK`，应在该作用域内继续分页直到取得所需数量或耗尽数据，不回退到无作用域的固定全局窗口。
+- Browser E2E 对异步页面不以 `page.goto()` 完成、DOM 节点早期存在或固定 `sleep` 作为数据装配完成条件；应等待可观察的语义完成信号，例如 loading 状态结束、成功内容容器出现、预期响应完成或等价稳定状态。
+- 如果实现从单次请求演进为多个并行/分阶段请求后旧测试出现时序失败，先按第 3 节分类。不能为了迎合测试中的偶然时序恢复错误的数据访问方式；应修正陈旧完成条件，或在实现层补齐本就合理的 loading / empty / error 状态契约。
+
 ## 3. 验证失败分类
 
 遇到 Test、Workflow assertion、fixture、snapshot 或 Runtime 验证失败时，先读取当前 Repository Authority / Specification，建立 Expected vs Actual，再至少区分：
@@ -134,8 +145,7 @@ Identify Shared FRP Resource
 ```
 
 - PR 与 `workflow_dispatch` 等所有触发路径使用同一 concurrency group；
-- 独立 Human Review / PR Review 不互相 supersede，默认有界排队；
-- 当前 baseline 升级检查发现 Review Environment 仍使用 `cancel-in-progress: true`；这与本节“独立工作默认排队”的规则不一致，属于已识别 Workflow Finding。完成修复前，不得把 Run cancellation 单独视为共享 FRP 资源已经释放或归属正确的证据；
+- 独立 Human Review / PR Review 不互相 supersede，默认有界排队；当前 Workflow 使用 `cancel-in-progress: false`，后触发的独立工作等待共享评审资源，而不是取消正在运行的评审；
 - 若未来确实引入 superseding cancellation，必须先证明取消后的 frpc / proxy 释放路径可靠，并重新核对代理 owner、目标 Head 与外部地址；
 - `frpc` 进程退出、Workflow cancelled 或重试成功都不能单独证明外部 proxy 已释放，仍需通过外部可达性和目标 Head / 环境证据完成验证。
 
