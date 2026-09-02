@@ -59,34 +59,42 @@ test('文章草稿、文件资源与栏目内容依赖形成管理端闭环', as
   await expect(createdRow.getByRole('cell', { name: title, exact: true })).toBeVisible()
   await expect(createdRow.getByRole('cell', { name: '草稿', exact: true })).toBeVisible()
 
-  const articleListResponse = await request.get('/api/admin/articles')
+  const articleListResponse = await request.get(`/api/admin/articles?keyword=${encodeURIComponent(title)}&page=0&size=10`)
   expect(articleListResponse.ok()).toBeTruthy()
-  const articleList = await articleListResponse.json() as Array<{
+  const articlePage = await articleListResponse.json() as {
+    items: Array<{ id: number; title: string; status: string }>
+    total: number
+  }
+  const createdSummary = articlePage.items.find((item) => item.title === title)
+  expect(articlePage.total).toBe(1)
+  expect(createdSummary).toBeTruthy()
+  expect(createdSummary!.status).toBe('DRAFT')
+
+  const createdDetailResponse = await request.get(`/api/admin/articles/${createdSummary!.id}`)
+  expect(createdDetailResponse.ok()).toBeTruthy()
+  const created = await createdDetailResponse.json() as {
     id: number
     title: string
     status: string
     coverResourceId: number | null
     bodyImageResourceIds: number[]
     attachmentResourceIds: number[]
-  }>
-  const created = articleList.find((item) => item.title === title)
-  expect(created).toBeTruthy()
-  expect(created!.status).toBe('DRAFT')
-  expect(created!.coverResourceId).not.toBeNull()
-  expect(created!.bodyImageResourceIds).toHaveLength(1)
-  expect(created!.attachmentResourceIds).toHaveLength(1)
+  }
+  expect(created.coverResourceId).not.toBeNull()
+  expect(created.bodyImageResourceIds).toHaveLength(1)
+  expect(created.attachmentResourceIds).toHaveLength(1)
 
-  const coverMetadataResponse = await request.get(`/api/admin/resources/${created!.coverResourceId}`)
+  const coverMetadataResponse = await request.get(`/api/admin/resources/${created.coverResourceId}`)
   expect(coverMetadataResponse.ok()).toBeTruthy()
   const coverMetadata = await coverMetadataResponse.json() as { storageKey: string; originalFilename: string }
   expect(coverMetadata.originalFilename).toBe('cover-image.png')
   expect(coverMetadata.storageKey).not.toContain('cover-image.png')
   expect(coverMetadata.storageKey).not.toMatch(/[\\/]/)
 
-  const coverContentResponse = await request.get(`/api/admin/resources/${created!.coverResourceId}/content`)
+  const coverContentResponse = await request.get(`/api/admin/resources/${created.coverResourceId}/content`)
   expect(coverContentResponse.ok()).toBeTruthy()
 
-  await page.getByTestId(`edit-article-${created!.id}`).click()
+  await page.getByTestId(`edit-article-${created.id}`).click()
   await page.getByPlaceholder('请输入文章标题').fill(updatedTitle)
   await page.getByTestId('article-body-editor').fill('更新后的草稿正文')
   await page.getByTestId('save-article').click()
@@ -95,21 +103,21 @@ test('文章草稿、文件资源与栏目内容依赖形成管理端闭环', as
 
   await page.reload()
   await expect(page.getByRole('cell', { name: updatedTitle, exact: true })).toBeVisible()
-  await page.getByTestId(`edit-article-${created!.id}`).click()
+  await page.getByTestId(`edit-article-${created.id}`).click()
   await expect(page.getByPlaceholder('请输入文章标题')).toHaveValue(updatedTitle)
   await expect(page.getByTestId('article-body-editor')).toContainText('更新后的草稿正文')
   await expect(page.getByText('guide.pdf', { exact: true })).toBeVisible()
   await expect(page.getByTestId('cover-resource-name')).toHaveText('cover-image.png')
 
-  const articleResponse = await request.get(`/api/admin/articles/${created!.id}`)
+  const articleResponse = await request.get(`/api/admin/articles/${created.id}`)
   expect(articleResponse.ok()).toBeTruthy()
   const persisted = await articleResponse.json() as { status: string; title: string }
   expect(persisted.status).toBe('DRAFT')
   expect(persisted.title).toBe(updatedTitle)
 
-  const publicArticleResponse = await request.get(`/api/public/articles/${created!.id}`)
+  const publicArticleResponse = await request.get(`/api/public/articles/${created.id}`)
   expect(publicArticleResponse.status()).toBe(404)
-  const publicResourceResponse = await request.get(`/api/public/resources/${created!.coverResourceId}/content`)
+  const publicResourceResponse = await request.get(`/api/public/resources/${created.coverResourceId}/content`)
   expect(publicResourceResponse.status()).toBe(404)
 
   const deleteColumnResponse = await request.delete(`/api/admin/columns/${column.id}`)
