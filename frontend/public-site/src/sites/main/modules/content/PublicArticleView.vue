@@ -3,8 +3,6 @@ import QRCode from 'qrcode'
 import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { getPublicArticle, publicAttachmentUrl, publicBodyHtml, type PublicArticleDetail } from '../../api/articles'
-import PublicSiteHeader from '../../components/PublicSiteHeader.vue'
-import PublicSiteFooter from '../../components/PublicSiteFooter.vue'
 import { setPageMeta, summarizeHtml } from '../../seo'
 
 const route = useRoute()
@@ -60,7 +58,6 @@ function size(bytes: number) {
 </script>
 
 <template>
-  <PublicSiteHeader />
   <main class="public-page-shell">
     <div class="site-width public-page-frame">
       <p v-if="loading" class="public-state">正在加载文章…</p>
@@ -113,5 +110,4 @@ function size(bytes: number) {
       <p v-else class="public-state error-text" data-testid="public-article-unavailable">{{ error }}</p>
     </div>
   </main>
-  <PublicSiteFooter />
 </template>

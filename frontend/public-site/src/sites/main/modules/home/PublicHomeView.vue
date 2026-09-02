@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { MAIN_SITE_CONFIG_KEYS, useMainSiteContext } from '../../app/siteContext'
 import { getPublicAdvertisementSlot, type Advertisement } from '../../api/advertisements'
 import { listPublicArticles, type PublicArticleSummary } from '../../api/articles'
 import { getPublicColumnByAlias } from '../../api/columns'
 import { getPublicCmsListByCode, listPublicCmsListsByGroup, type CmsListItem } from '../../api/lists'
-import { listPublicNavigations, type PublicNavigation } from '../../api/navigation'
-import { listPublicSiteConfig } from '../../api/siteConfig'
-import PublicSiteHeader from '../../components/PublicSiteHeader.vue'
-import PublicSiteFooter from '../../components/PublicSiteFooter.vue'
 import { setPageMeta } from '../../seo'
 
 type SiteLinkGroup = { name: string; links: CmsListItem[] }
@@ -23,10 +20,8 @@ const SITE_LINKS_GROUP_CODE = 'SITE_LINKS'
 const HOME_RECRUITMENT_PROMO_SLOT_CODE = 'HOME_RECRUITMENT_PROMO'
 const HOME_SHORTCUT_POSITION = 'HOME_SHORTCUT'
 const HOME_QUICK_POSITION = 'HOME_QUICK'
-const CAROUSEL_INTERVAL_PROPERTY = 'HOME_CAROUSEL_INTERVAL_SECONDS'
-const CONTACT_PHONE_PROPERTY = 'CONTACT_PHONE'
 
-const items = ref<PublicNavigation[]>([])
+const { navigation: items, config: siteConfig, error: shellError, ready: shellReady } = useMainSiteContext()
 const noticeArticles = ref<PublicArticleSummary[]>([])
 const employmentArticles = ref<PublicArticleSummary[]>([])
 const recruitmentArticles = ref<PublicArticleSummary[]>([])
@@ -97,28 +92,38 @@ const calendar = computed(() => {
 
 onMounted(async () => {
   try {
-    const [navigation, config, carouselList, siteLinkLists, promoSlot, noticeColumn, employmentColumn, recruitmentColumn] = await Promise.all([
-      listPublicNavigations(),
-      listPublicSiteConfig(),
-      getPublicCmsListByCode(HOME_CAROUSEL_LIST_CODE),
-      listPublicCmsListsByGroup(SITE_LINKS_GROUP_CODE),
-      getPublicAdvertisementSlot(HOME_RECRUITMENT_PROMO_SLOT_CODE),
-      getPublicColumnByAlias(NOTICE_COLUMN_ALIAS),
-      getPublicColumnByAlias(EMPLOYMENT_NEWS_COLUMN_ALIAS),
-      getPublicColumnByAlias(RECRUITMENT_COLUMN_ALIAS),
+    const carouselPromise = getPublicCmsListByCode(HOME_CAROUSEL_LIST_CODE)
+    const siteLinksPromise = listPublicCmsListsByGroup(SITE_LINKS_GROUP_CODE)
+    const promoPromise = getPublicAdvertisementSlot(HOME_RECRUITMENT_PROMO_SLOT_CODE)
+    const noticeColumnPromise = getPublicColumnByAlias(NOTICE_COLUMN_ALIAS)
+    const employmentColumnPromise = getPublicColumnByAlias(EMPLOYMENT_NEWS_COLUMN_ALIAS)
+    const recruitmentColumnPromise = getPublicColumnByAlias(RECRUITMENT_COLUMN_ALIAS)
+
+    await shellReady
+    if (shellError.value) throw new Error(shellError.value)
+
+    const [carouselList, siteLinkLists, promoSlot, noticeColumn, employmentColumn, recruitmentColumn] = await Promise.all([
+      carouselPromise,
+      siteLinksPromise,
+      promoPromise,
+      noticeColumnPromise,
+      employmentColumnPromise,
+      recruitmentColumnPromise,
     ])
     const [noticePage, employmentPage, recruitmentPage] = await Promise.all([
       listPublicArticles(noticeColumn.id, 0, HOME_NEWS_ITEM_LIMIT),
       listPublicArticles(employmentColumn.id, 0, HOME_NEWS_ITEM_LIMIT),
       listPublicArticles(recruitmentColumn.id, 0, HOME_NEWS_ITEM_LIMIT, 'EXTERNAL_LINK'),
     ])
-    items.value = navigation
+
     noticeArticles.value = noticePage.items
     employmentArticles.value = employmentPage.items
     recruitmentArticles.value = recruitmentPage.items
-    const values = Object.fromEntries(config.map(item => [item.key, item.value]))
-    contactPhone.value = values[CONTACT_PHONE_PROPERTY] || ''
-    carouselIntervalSeconds.value = positiveInteger(values[CAROUSEL_INTERVAL_PROPERTY], DEFAULT_CAROUSEL_INTERVAL_SECONDS)
+    contactPhone.value = siteConfig.value[MAIN_SITE_CONFIG_KEYS.CONTACT_PHONE] || ''
+    carouselIntervalSeconds.value = positiveInteger(
+      siteConfig.value[MAIN_SITE_CONFIG_KEYS.CAROUSEL_INTERVAL_SECONDS],
+      DEFAULT_CAROUSEL_INTERVAL_SECONDS,
+    )
     carouselItems.value = carouselList.items
     siteGroups.value = siteLinkLists.map(list => ({ name: list.name, links: list.items }))
     promoAds.value = promoSlot.advertisements
@@ -138,7 +143,6 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <PublicSiteHeader />
   <main class="home-main">
     <p v-if="loading" class="public-state">正在加载公开内容…</p>
     <p v-else-if="error" class="public-state error-text">{{ error }}</p>
@@ -243,5 +247,4 @@ onUnmounted(() => {
       </section>
     </div>
   </main>
-  <PublicSiteFooter />
 </template>

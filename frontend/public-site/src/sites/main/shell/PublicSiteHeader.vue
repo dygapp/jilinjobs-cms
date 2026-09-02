@@ -1,18 +1,25 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { listPublicNavigations, type PublicNavigation } from '../api/navigation'
-import { listPublicSiteConfig } from '../api/siteConfig'
+import { MAIN_SITE_CONFIG_KEYS, useMainSiteContext } from '../app/siteContext'
+import type { PublicNavigation } from '../api/navigation'
 
 const route = useRoute()
-const items = ref<PublicNavigation[]>([])
-const siteName = ref('吉林省高等学校毕业生就业信息网')
-const platformLogoIcon = ref('/static/brand/smartedu-logo-icon.png')
-const platformLogoText = ref('/static/brand/smartedu-logo-text.png')
-const headerBanner = ref('/static/home/header-banner.png')
+const { navigation: items, config } = useMainSiteContext()
+const defaultSiteName = '吉林省高等学校毕业生就业信息网'
+const defaultPlatformLogoIcon = '/static/brand/smartedu-logo-icon.png'
+const defaultPlatformLogoText = '/static/brand/smartedu-logo-text.png'
+const defaultHeaderBanner = '/static/home/header-banner.png'
 const studentIcon = '/static/icons/student.png'
 const arrowIcon = '/static/icons/arrow-down.png'
 const open = ref(false)
+
+const siteName = computed(() => config.value[MAIN_SITE_CONFIG_KEYS.SITE_NAME] || defaultSiteName)
+const platformLogoIcon = computed(() => config.value[MAIN_SITE_CONFIG_KEYS.PLATFORM_LOGO_ICON_PATH] || defaultPlatformLogoIcon)
+const platformLogoText = computed(() => config.value[MAIN_SITE_CONFIG_KEYS.PLATFORM_LOGO_TEXT_PATH]
+  || config.value[MAIN_SITE_CONFIG_KEYS.LEGACY_LOGO_PATH]
+  || defaultPlatformLogoText)
+const headerBanner = computed(() => config.value[MAIN_SITE_CONFIG_KEYS.HEADER_BANNER_PATH] || defaultHeaderBanner)
 
 const roots = computed(() => items.value
   .filter(item => item.position === 'MAIN' && item.parentId == null)
@@ -32,16 +39,6 @@ const isActive = (item: PublicNavigation) => {
   if (item.clickable && item.href && item.href !== '#') return route.path === item.href || route.path.startsWith(`${item.href}/`)
   return children(item.id).some(child => child.clickable && child.href && (route.path === child.href || route.path.startsWith(`${child.href}/`)))
 }
-
-onMounted(async () => {
-  const [navigation, config] = await Promise.all([listPublicNavigations(), listPublicSiteConfig()])
-  items.value = navigation
-  const values = Object.fromEntries(config.map(item => [item.key, item.value]))
-  siteName.value = values.SITE_NAME || siteName.value
-  platformLogoIcon.value = values.PLATFORM_LOGO_ICON_PATH || platformLogoIcon.value
-  platformLogoText.value = values.PLATFORM_LOGO_TEXT_PATH || values.LOGO_PATH || platformLogoText.value
-  headerBanner.value = values.HEADER_BANNER_PATH || headerBanner.value
-})
 </script>
 
 <template>

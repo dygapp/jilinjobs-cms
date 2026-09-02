@@ -2,8 +2,6 @@
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { getPublicGroupedPage, getPublicPage, type PublicPage } from '../../api/pages'
-import PublicSiteHeader from '../../components/PublicSiteHeader.vue'
-import PublicSiteFooter from '../../components/PublicSiteFooter.vue'
 import { setPageMeta, summarizeHtml } from '../../seo'
 
 const route = useRoute()
@@ -31,7 +29,6 @@ async function load() {
 </script>
 
 <template>
-  <PublicSiteHeader />
   <main class="public-page-shell">
     <div class="site-width public-page-frame">
       <p v-if="loading" class="public-state">正在加载页面…</p>
@@ -78,5 +75,4 @@ async function load() {
       <p v-else class="public-state error-text">{{ error }}</p>
     </div>
   </main>
-  <PublicSiteFooter />
 </template>
