@@ -28,13 +28,17 @@ class ArticleController(private val service: ArticleService) {
 
 @RestController
 @RequestMapping("/api/public/articles")
-class PublicArticleController(private val service: ArticleService) {
+class PublicArticleController(
+    private val service: ArticleService,
+    private val summaryQuery: PublicArticleSummaryQueryService,
+) {
     @GetMapping
     fun list(
         @RequestParam(required = false) columnId: Long?,
+        @RequestParam(required = false) articleType: ArticleType?,
         @RequestParam(defaultValue = "0") page: Int,
         @RequestParam(defaultValue = "10") size: Int,
-    ): PublicArticlePage = service.listPublic(columnId, page, size)
+    ): PublicArticlePage = summaryQuery.list(columnId, articleType, page, size)
 
     @GetMapping("/{id}") fun get(@PathVariable id: Long): PublicArticleDetail = service.getPublic(id)
 }
@@ -54,7 +58,7 @@ data class SaveArticleRequest(
     val bodyImageResourceIds: List<Long> = emptyList(),
     val attachmentResourceIds: List<Long> = emptyList(),
 ) {
-    fun toDraft(): ArticleDraft = ArticleDraft(
+    fun toDraft() = ArticleDraft(
         columnId = columnId,
         title = title,
         bodyHtml = bodyHtml,

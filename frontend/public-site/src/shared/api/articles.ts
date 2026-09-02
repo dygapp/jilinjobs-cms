@@ -14,7 +14,7 @@ export const createArticle=(d:ArticleDraft)=>jsonRequest<CmsArticle>('/api/admin
 export const updateArticle=(id:number,d:ArticleDraft)=>jsonRequest<CmsArticle>(`/api/admin/articles/${id}`,{method:'PUT',body:JSON.stringify(d)})
 export const publishArticle=(id:number)=>jsonRequest<CmsArticle>(`/api/admin/articles/${id}/publish`,{method:'POST'})
 export const withdrawArticle=(id:number)=>jsonRequest<CmsArticle>(`/api/admin/articles/${id}/withdraw`,{method:'POST'})
-export function listPublicArticles(columnId:number|null,page=0,size=10){const p=new URLSearchParams({page:String(page),size:String(size)});if(columnId!=null)p.set('columnId',String(columnId));return jsonRequest<PublicArticlePage>(`/api/public/articles?${p}`)}
+export function listPublicArticles(columnId:number|null,page=0,size=10,articleType:ArticleType|null=null){const p=new URLSearchParams({page:String(page),size:String(size)});if(columnId!=null)p.set('columnId',String(columnId));if(articleType!=null)p.set('articleType',articleType);return jsonRequest<PublicArticlePage>(`/api/public/articles?${p}`)}
 export const getPublicArticle=(id:number)=>jsonRequest<PublicArticleDetail>(`/api/public/articles/${id}`)
 export async function uploadResource(file:File):Promise<CmsResource>{const f=new FormData();f.append('file',file);const r=await fetch('/api/admin/resources',{method:'POST',body:f});if(!r.ok){const e=await r.json().catch(()=>({message:`上传失败：${r.status}`})) as {message?:string};throw new Error(e.message??`上传失败：${r.status}`)}return r.json() as Promise<CmsResource>}
 export const getResource=(id:number)=>jsonRequest<CmsResource>(`/api/admin/resources/${id}`)
