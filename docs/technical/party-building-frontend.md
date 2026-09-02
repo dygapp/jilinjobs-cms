@@ -51,6 +51,8 @@ party-building
 └── party-study
 ```
 
+四个子栏目显示名分别为“高层声音、工作动态、党规党章、理论学习”，与 2026-09-02 原站直接证据一致。
+
 全部标记为 preset。子栏目 `coverPolicy` 默认 `OPTIONAL`，避免把原站并未证明的统一封面要求硬编码为发布门槛。
 
 不得修改已执行的 V4 / V12 / V13。
@@ -132,6 +134,7 @@ Flyway：只建立栏目结构。
 
 - legacy content_id；
 - legacy typeCode；
+- legacy detail path（至少覆盖已观察到的 `pdetail.html` 与更早 `detail.html` 变体）；
 - 标题；
 - 来源；
 - 日期；
@@ -143,7 +146,7 @@ Flyway：只建立栏目结构。
 
 ### 7.2 Legacy URL 映射
 
-如果当前仓库已有统一历史 URL 映射机制，则复用；若尚无机制，迁移单元先保存 legacy id/typeCode 与新 Article ID 的映射证据，不在页面组件中硬编码大量旧 ID。
+如果当前仓库已有统一历史 URL 映射机制，则复用；若尚无机制，迁移单元先保存 legacy id/typeCode/detail path 与新 Article ID 的映射证据，不在页面组件中硬编码大量旧 ID。
 
 ## 8. 视觉与资源
 
