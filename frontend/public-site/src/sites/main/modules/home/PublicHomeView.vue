@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from 'vue'
-import { listPublicAdvertisements, type Advertisement } from '../../api/advertisements'
+import { getPublicAdvertisementSlot, type Advertisement } from '../../api/advertisements'
 import { listPublicArticles, type PublicArticleSummary } from '../../api/articles'
 import { getPublicColumnByAlias } from '../../api/columns'
-import { listPublicCmsLists, type CmsListItem } from '../../api/lists'
+import { getPublicCmsListByCode, listPublicCmsListsByGroup, type CmsListItem } from '../../api/lists'
 import { listPublicNavigations, type PublicNavigation } from '../../api/navigation'
 import { listPublicSiteConfig } from '../../api/siteConfig'
 import PublicSiteHeader from '../../components/PublicSiteHeader.vue'
@@ -12,6 +12,20 @@ import { setPageMeta } from '../../seo'
 
 type SiteLinkGroup = { name: string; links: CmsListItem[] }
 
+const HOME_NEWS_ITEM_LIMIT = 7
+const DEFAULT_CAROUSEL_INTERVAL_SECONDS = 4
+const PROMO_ROTATION_INTERVAL_MS = 4000
+const NOTICE_COLUMN_ALIAS = 'notice'
+const EMPLOYMENT_NEWS_COLUMN_ALIAS = 'employment-news'
+const RECRUITMENT_COLUMN_ALIAS = 'recruitment-announcement'
+const HOME_CAROUSEL_LIST_CODE = 'HOME_CAROUSEL'
+const SITE_LINKS_GROUP_CODE = 'SITE_LINKS'
+const HOME_RECRUITMENT_PROMO_SLOT_CODE = 'HOME_RECRUITMENT_PROMO'
+const HOME_SHORTCUT_POSITION = 'HOME_SHORTCUT'
+const HOME_QUICK_POSITION = 'HOME_QUICK'
+const CAROUSEL_INTERVAL_PROPERTY = 'HOME_CAROUSEL_INTERVAL_SECONDS'
+const CONTACT_PHONE_PROPERTY = 'CONTACT_PHONE'
+
 const items = ref<PublicNavigation[]>([])
 const noticeArticles = ref<PublicArticleSummary[]>([])
 const employmentArticles = ref<PublicArticleSummary[]>([])
@@ -19,7 +33,7 @@ const recruitmentArticles = ref<PublicArticleSummary[]>([])
 const siteGroups = ref<SiteLinkGroup[]>([])
 const carouselItems = ref<CmsListItem[]>([])
 const activeCarouselIndex = ref(0)
-const carouselIntervalSeconds = ref(4)
+const carouselIntervalSeconds = ref(DEFAULT_CAROUSEL_INTERVAL_SECONDS)
 const promoAds = ref<Advertisement[]>([])
 const activePromoIndex = ref(0)
 const contactPhone = ref('')
@@ -33,26 +47,14 @@ let promoTimer: ReturnType<typeof setInterval> | null = null
 
 setPageMeta({ description: '吉林省高等学校毕业生就业信息网，提供就业资讯、政策法规、业务指南和公共服务入口。' })
 
-const shortcutItems = computed(() => items.value.filter(item => item.position === 'HOME_SHORTCUT'))
-const quickItems = computed(() => items.value.filter(item => item.position === 'HOME_QUICK'))
+const shortcutItems = computed(() => items.value.filter(item => item.position === HOME_SHORTCUT_POSITION))
+const quickItems = computed(() => items.value.filter(item => item.position === HOME_QUICK_POSITION))
 const validCarouselItems = computed(() => carouselItems.value.filter(item => Boolean(item.imagePath)))
 const carouselItem = computed(() => validCarouselItems.value[activeCarouselIndex.value] || null)
 const isExternalArticle = (article: PublicArticleSummary) => article.articleType === 'EXTERNAL_LINK' && Boolean(article.externalUrl)
 const newWindow = (mode: string, url: string | null | undefined) => mode === 'NEW_WINDOW' || (mode === 'DEFAULT' && Boolean(url?.startsWith('http')))
 const activePromo = computed(() => promoAds.value[activePromoIndex.value] || null)
 const promoLinked = computed(() => Boolean(activePromo.value?.url) && activePromo.value?.openMode !== 'NO_LINK')
-
-async function listExternalArticles(columnId: number, limit: number) {
-  const selected: PublicArticleSummary[] = []
-  let page = 0
-  while (selected.length < limit) {
-    const articlePage = await listPublicArticles(columnId, page, 50)
-    selected.push(...articlePage.items.filter(isExternalArticle))
-    if ((page + 1) * articlePage.size >= articlePage.total) break
-    page += 1
-  }
-  return selected.slice(0, limit)
-}
 
 function startCarouselRotation() {
   if (carouselTimer) clearInterval(carouselTimer)
@@ -72,7 +74,7 @@ function startPromoRotation() {
   if (promoAds.value.length > 1) {
     promoTimer = setInterval(() => {
       activePromoIndex.value = (activePromoIndex.value + 1) % promoAds.value.length
-    }, 4000)
+    }, PROMO_ROTATION_INTERVAL_MS)
   }
 }
 
@@ -95,30 +97,31 @@ const calendar = computed(() => {
 
 onMounted(async () => {
   try {
-    const [navigation, config, lists, advertisementSlots, noticeColumn, employmentColumn, recruitmentColumn] = await Promise.all([
+    const [navigation, config, carouselList, siteLinkLists, promoSlot, noticeColumn, employmentColumn, recruitmentColumn] = await Promise.all([
       listPublicNavigations(),
       listPublicSiteConfig(),
-      listPublicCmsLists(),
-      listPublicAdvertisements(),
-      getPublicColumnByAlias('notice'),
-      getPublicColumnByAlias('employment-news'),
-      getPublicColumnByAlias('recruitment-announcement'),
+      getPublicCmsListByCode(HOME_CAROUSEL_LIST_CODE),
+      listPublicCmsListsByGroup(SITE_LINKS_GROUP_CODE),
+      getPublicAdvertisementSlot(HOME_RECRUITMENT_PROMO_SLOT_CODE),
+      getPublicColumnByAlias(NOTICE_COLUMN_ALIAS),
+      getPublicColumnByAlias(EMPLOYMENT_NEWS_COLUMN_ALIAS),
+      getPublicColumnByAlias(RECRUITMENT_COLUMN_ALIAS),
     ])
-    const [noticePage, employmentPage, recruitmentItems] = await Promise.all([
-      listPublicArticles(noticeColumn.id, 0, 7),
-      listPublicArticles(employmentColumn.id, 0, 7),
-      listExternalArticles(recruitmentColumn.id, 7),
+    const [noticePage, employmentPage, recruitmentPage] = await Promise.all([
+      listPublicArticles(noticeColumn.id, 0, HOME_NEWS_ITEM_LIMIT),
+      listPublicArticles(employmentColumn.id, 0, HOME_NEWS_ITEM_LIMIT),
+      listPublicArticles(recruitmentColumn.id, 0, HOME_NEWS_ITEM_LIMIT, 'EXTERNAL_LINK'),
     ])
     items.value = navigation
     noticeArticles.value = noticePage.items
     employmentArticles.value = employmentPage.items
-    recruitmentArticles.value = recruitmentItems
+    recruitmentArticles.value = recruitmentPage.items
     const values = Object.fromEntries(config.map(item => [item.key, item.value]))
-    contactPhone.value = values.CONTACT_PHONE || ''
-    carouselIntervalSeconds.value = positiveInteger(values.HOME_CAROUSEL_INTERVAL_SECONDS, 4)
-    carouselItems.value = lists.find(list => list.code === 'HOME_CAROUSEL')?.items || []
-    siteGroups.value = lists.filter(list => list.groupCode === 'SITE_LINKS').map(list => ({ name: list.name, links: list.items }))
-    promoAds.value = advertisementSlots.find(slot => slot.code === 'HOME_RECRUITMENT_PROMO')?.advertisements || []
+    contactPhone.value = values[CONTACT_PHONE_PROPERTY] || ''
+    carouselIntervalSeconds.value = positiveInteger(values[CAROUSEL_INTERVAL_PROPERTY], DEFAULT_CAROUSEL_INTERVAL_SECONDS)
+    carouselItems.value = carouselList.items
+    siteGroups.value = siteLinkLists.map(list => ({ name: list.name, links: list.items }))
+    promoAds.value = promoSlot.advertisements
     startCarouselRotation()
     startPromoRotation()
   } catch (e) {
