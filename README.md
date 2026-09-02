@@ -6,7 +6,7 @@
 
 当前版本以原网站现有结构和视觉关系为主站公开基线，采用 Vue + Spring Boot 重建中心主站，并在同一公开站前端工程中建设具有独立红色视觉主题的“中心党建”站点边界。管理端已经完成独立前端工程与 Modular SPA 收敛；公开站已经完成 **Multi-entry Modular SPA** 基础架构：Entry 只按真实 Site / Theme Boundary 划分，中心主站与中心党建分别拥有独立 App、Router、Shell 和主题样式，但继续共用 `frontend/public-site` 工程、Vue/Vite 技术栈、构建发布链路和 Spring Boot CMS Backend。
 
-中心党建 Foundation Entry / Router / Shell 已完成，当前主动路线切换到**中心党建正式页面、真实栏目、内容迁移与视觉收敛**。2026-09-02 对原站 `https://24365.jl.smartedu.cn/dyzj` 重新取证后，已确认高层声音、工作动态、党章党规、理论学习四条内容线；当前优先复用现有通用 Column + Article，不新增党建专属 Admin Module 或多站点 CMS 模型。正式阶段按 EU-26～EU-29 推进，并保持历史运营内容与 Flyway 结构基线分离。
+中心党建 Foundation Entry / Router / Shell 已完成，当前主动路线切换到**中心党建正式页面、真实栏目、内容迁移与视觉收敛**。2026-09-02 对原站 `https://24365.jl.smartedu.cn/dyzj` 重新取证后，已确认高层声音、工作动态、党规党章、理论学习四条内容线；当前优先复用现有通用 Column + Article，不新增党建专属 Admin Module 或多站点 CMS 模型。正式阶段按 EU-26～EU-29 推进，并保持历史运营内容与 Flyway 结构基线分离。
 
 当前权威需求：
 
@@ -84,7 +84,7 @@ CMS 通用业务对象：
 
 公开站和管理端是同级独立 Vue / Vite 前端工程，共享 Spring Boot CMS Backend。公开站工程内部不把普通页面类型机械映射成独立 HTML Entry；主站 `/`、`/column/**`、`/article/**`、`/page/**` 统一属于 Main Site Entry，中心党建使用独立 Party Building Site Entry 和 `/party/**` URL namespace。两个公开 Site 当前同构建、同部署，但 Shell、Router 与主题样式互不共享所有权。
 
-中心党建正式内容继续复用通用 CMS：预置父栏目 `party-building` 组织 `party-voice / party-work / party-rules / party-study` 四个子栏目；四条内容线都使用通用 Article，并允许 INTERNAL / EXTERNAL_LINK 混合。`学习园地` 只是 Party 首页对党章党规与理论学习的固定视觉分组，不新增 CMS 类型。Party canonical URL 为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`。
+中心党建正式内容继续复用通用 CMS：预置父栏目 `party-building` 组织 `party-voice / party-work / party-rules / party-study` 四个子栏目；四条内容线都使用通用 Article，并允许 INTERNAL / EXTERNAL_LINK 混合。`学习园地` 只是 Party 首页对党规党章与理论学习的固定视觉分组，不新增 CMS 类型。Party canonical URL 为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`。原站 `plist.html`、当前 `pdetail.html` 和更早 `detail.html` 地址及其 `content_id/typeCode` 参数变体只作为历史迁移映射输入，不延续为新版 Router 模型。
 
 管理端当前是单一 Vue SPA，但源码按 `app/`、`shared/` 与 `modules/cms/` 分离：Shell 只聚合模块声明，CMS Module 自己声明 routes/navigation，并使用 Vue Router 动态 import 进行路由级懒加载。Module Federation、iframe 或其他运行时微前端机制不属于当前基础设施；未来只有出现真实独立发布、独立部署、跨团队或跨技术栈要求时再单独评估。
 
