@@ -16,11 +16,11 @@
 - 原站首页明确存在四条内容线：
   - 高层声音：`typeCode=gcsy`；
   - 工作动态：`typeCode=gzdt`；
-  - 党章党规：`typeCode=dgdz`；
+  - 党规党章：`typeCode=dgdz`；
   - 理论学习：`typeCode=llxx`；
-- “学习园地”是首页对“党章党规 + 理论学习”的页面分组，不是第五种内容类型；
+- “学习园地”是首页对“党规党章 + 理论学习”的页面分组，不是第五种内容类型；
 - 原站四个栏目列表分别使用 `/plist.html?typeCode=gcsy/gzdt/dgdz/llxx`，且均存在多页历史内容；
-- 当前原站生成的站内详情链接使用 `/pdetail.html?content_id=...`；部分可观察历史地址还会携带 `typeCode`，因此 `content_id` 与 `typeCode` 应分别作为迁移映射输入，不把 `typeCode` 误写为所有详情 URL 的必需参数；
+- 当前原站生成的站内详情链接使用 `/pdetail.html?content_id=...`；部分可观察历史地址还会携带 `typeCode`，更早历史内容还存在 `/detail.html?content_id=...` 变体，因此 `content_id`、`typeCode` 与详情路径类型应作为迁移映射证据分别保留，不把某一种参数组合误写为所有历史详情 URL 的必需格式；
 - 内容同时存在站内详情与外部权威来源直链，外部来源包括共产党员网、政府网站、吉林省政府网站等；
 - 原站党建页 Footer 使用与中心主站一致的机构地址、联系电话、备案与版权信息。
 
@@ -36,7 +36,7 @@
 中心党建 (party-building)
 ├── 高层声音 (party-voice)   <- legacy gcsy
 ├── 工作动态 (party-work)    <- legacy gzdt
-├── 党章党规 (party-rules)   <- legacy dgdz
+├── 党规党章 (party-rules)   <- legacy dgdz
 └── 理论学习 (party-study)   <- legacy llxx
 ```
 
@@ -67,7 +67,7 @@
 
 Party Router 必须验证栏目/文章属于 `party-building` 栏目树，不能让普通主站文章通过 `/party/article/{id}` 套用党建主题。
 
-旧 `/plist.html?typeCode=...`、`/pdetail.html?content_id=...` 及其可观察历史参数变体只作为历史迁移映射输入，不作为新版 canonical URL。
+旧 `/plist.html?typeCode=...`、`/pdetail.html?content_id=...`、`/detail.html?content_id=...` 及其可观察历史参数变体只作为历史迁移映射输入，不作为新版 canonical URL。
 
 ## 5. 页面规格
 
@@ -80,7 +80,7 @@ Party Router 必须验证栏目/文章属于 `party-building` 栏目树，不能
 3. 高层声音；
 4. 工作动态；
 5. 学习园地；
-   - 党章党规；
+   - 党规党章；
    - 理论学习；
 6. Party Footer。
 
@@ -128,7 +128,7 @@ Functional Browser PASS 只能证明功能，最终 Visual Fidelity 需要 AI Vi
 
 Flyway 只负责站点结构：父栏目和四个子栏目，不负责历史文章。
 
-历史党建文章、外链、正文图片、legacy content_id/typeCode 映射由独立迁移/采集工作处理。迁移结果必须仍落入通用 Column / Article / Resource 模型，不建立第二套长期内容库。
+历史党建文章、外链、正文图片、legacy `content_id` / `typeCode` / 详情路径变体映射由独立迁移/采集工作处理。迁移结果必须仍落入通用 Column / Article / Resource 模型，不建立第二套长期内容库。
 
 在完整历史迁移完成前，自动验证可使用明确 E2E fixture；Human Review 环境可注入代表性党建内容，但 Fixture 不得冒充正式历史迁移完成。
 
