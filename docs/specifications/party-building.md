@@ -19,8 +19,8 @@
   - 党章党规：`typeCode=dgdz`；
   - 理论学习：`typeCode=llxx`；
 - “学习园地”是首页对“党章党规 + 理论学习”的页面分组，不是第五种内容类型；
-- 原站栏目列表使用 `/plist.html?typeCode=...`；
-- 原站站内详情使用 `/pdetail.html?content_id=...&typeCode=...`；
+- 原站四个栏目列表分别使用 `/plist.html?typeCode=gcsy/gzdt/dgdz/llxx`，且均存在多页历史内容；
+- 当前原站生成的站内详情链接使用 `/pdetail.html?content_id=...`；部分可观察历史地址还会携带 `typeCode`，因此 `content_id` 与 `typeCode` 应分别作为迁移映射输入，不把 `typeCode` 误写为所有详情 URL 的必需参数；
 - 内容同时存在站内详情与外部权威来源直链，外部来源包括共产党员网、政府网站、吉林省政府网站等；
 - 原站党建页 Footer 使用与中心主站一致的机构地址、联系电话、备案与版权信息。
 
@@ -67,7 +67,7 @@
 
 Party Router 必须验证栏目/文章属于 `party-building` 栏目树，不能让普通主站文章通过 `/party/article/{id}` 套用党建主题。
 
-旧 `/plist.html?typeCode=...`、`/pdetail.html?content_id=...&typeCode=...` 只作为历史迁移映射输入，不作为新版 canonical URL。
+旧 `/plist.html?typeCode=...`、`/pdetail.html?content_id=...` 及其可观察历史参数变体只作为历史迁移映射输入，不作为新版 canonical URL。
 
 ## 5. 页面规格
 
