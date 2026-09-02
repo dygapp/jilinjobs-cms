@@ -69,6 +69,20 @@ Repository Policy / Human Authority
 - 实施文件、具体命令和局部施工步骤优先通过 JIT Plan 在执行时确定。
 - 通用 Method 的终点是 `Ready to Integrate`；实际 merge / release / deploy 仍服从本仓库授权和策略。
 
+### 3.1 依赖 PR 与 squash merge
+
+当一个工作被拆成多个存在依赖关系的 PR，而最终集成采用 squash merge 时，必须区分临时的 **review topology** 与最终的 **integration topology**。stacked PR 可以用于提前审查和并行准备，但它的 Git ancestry 不能自动视为最终 `main` ancestry。
+
+规则：
+
+- 如果没有明显的并行审查或提前验证收益，优先在父 PR 合并后从最新 `main` 创建下一层依赖 PR，减少不必要的 ancestry 重写。
+- 如果使用 stacked PR，父层 squash merge 后，child 在进入 Ready to Integrate 前必须规范化到实际最新 `main`，并重新确认 PR diff 只包含本层职责，不把已合并父层再次带入 diff。
+- rebase、rebuild、cherry-pick、force-update 或等价 branch normalization 后，必须重新读取 GitHub PR 的实际 Head SHA、base、changed files / diff 和关联 Workflow；branch ref 更新成功不能单独证明 PR snapshot 与 Actions 已经刷新。
+- 规范化导致 Head SHA 改变时，Current Evidence 继续按当前 Evidence Claim 规则重新取得或逐项判断，不复用与旧 Head 错配的 CI / Review 结果。
+- 如果现有 PR 在 branch rewrite 后无法可靠刷新到新 Head，或 PR snapshot / diff 与实际目标树存在歧义，不得继续合并该 PR；应保留历史记录并创建基于最新 `main` 的干净替代 PR。
+
+该规则不禁止 stacked PR；目标是在 squash merge 仓库中避免把 review convenience 误当作无需重新收敛的最终集成结构。
+
 ## 4. 验收、调试与验证闭环
 
 每项 Specification Acceptance Obligation 必须能够闭环到：
