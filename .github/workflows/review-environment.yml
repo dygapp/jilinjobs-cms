@@ -13,7 +13,7 @@ on:
 concurrency:
   # 评审环境共用固定 FRP proxy/custom domain，整个仓库同一时间只能存在一个实例。
   group: review-environment
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
   contents: read
