@@ -177,6 +177,7 @@ jobs:
           docker run --rm --init --ipc=host --network host \
             -e CI=true \
             -e CI_EXTERNAL_WEB_SERVER=true \
+            -e PARTY_REFERENCE_EVIDENCE="${{ contains(github.event.pull_request.head.ref || github.ref_name, 'party-building') }}" \
             -v "$GITHUB_WORKSPACE/frontend/public-site:/work" \
             -w /work \
             mcr.microsoft.com/playwright:v1.61.0-noble \
