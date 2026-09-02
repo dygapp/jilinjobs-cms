@@ -14,10 +14,12 @@
 |---|---|---|
 | 高层声音 | `gcsy` | `party-voice` |
 | 工作动态 | `gzdt` | `party-work` |
-| 党章党规 | `dgdz` | `party-rules` |
+| 党规党章 | `dgdz` | `party-rules` |
 | 理论学习 | `llxx` | `party-study` |
 
-原站列表使用 `/plist.html?typeCode=...`，站内详情使用 `/pdetail.html?content_id=...&typeCode=...`；外部文章可直接跳转来源网站。“学习园地”只组合党章党规与理论学习，不作为独立 CMS 类型。
+原站列表使用 `/plist.html?typeCode=...`；当前生成的站内详情使用 `/pdetail.html?content_id=...`，部分历史地址可携带 `typeCode`，更早历史内容还存在 `/detail.html?content_id=...` 变体；外部文章可直接跳转来源网站。“学习园地”只组合党规党章与理论学习，不作为独立 CMS 类型。
+
+原站四个栏目均存在多页历史内容，因此正式实现和迁移不得使用全站固定窗口后前端筛选代替栏目作用域分页。
 
 ---
 
@@ -29,6 +31,8 @@
 
 ### Scope
 
+- 原站 Desktop / Mobile 页面截图；
+- 原站 DOM / computed style / CSS / 可取得静态资源清单；
 - `docs/requirements/information-publishing.md` -> V4.8；
 - `docs/specifications/party-building.md`；
 - `docs/technical/party-building-frontend.md`；
@@ -41,7 +45,7 @@
 - 使用一个 `party-building` 预置父栏目组织四个真实子栏目；
 - `学习园地` 为页面分组；
 - Party canonical URL 为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`；
-- legacy `plist/pdetail` 只属于迁移输入；
+- legacy `plist/pdetail/detail` 及其参数变体只属于迁移输入；
 - Flyway 只固化结构，历史运营文章独立迁移；
 - Foundation CSS / 文案不是最终视觉 Authority。
 
@@ -49,6 +53,7 @@
 
 - 文档不再把正式党建内容列为当前暂不实现；
 - 四条原站内容线与 legacy 映射明确；
+- 原站 Desktop / Mobile screenshot、DOM、computed style、CSS 与资源清单形成可复用 Current Evidence；
 - CMS 复用边界、URL、历史迁移和视觉证据层次无冲突；
 - Repository CI 在当前 Head 上成功。
 
@@ -130,7 +135,7 @@
 ### Scope
 
 - 明确迁移输入格式和幂等键；
-- 保存 legacy `content_id / typeCode`；
+- 保存 legacy `content_id / typeCode / detail path`；
 - 映射到四个新栏目；
 - 站内正文转换为 INTERNAL；
 - 外部原文转换为 EXTERNAL_LINK；
