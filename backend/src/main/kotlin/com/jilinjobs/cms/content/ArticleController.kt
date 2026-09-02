@@ -17,8 +17,20 @@ import java.time.LocalDate
 
 @RestController
 @RequestMapping("/api/admin/articles")
-class ArticleController(private val service: ArticleService) {
-    @GetMapping fun list(): List<CmsArticle> = service.list()
+class ArticleController(
+    private val service: ArticleService,
+    private val query: AdminArticleQueryService,
+) {
+    @GetMapping
+    fun list(
+        @RequestParam(required = false) keyword: String?,
+        @RequestParam(required = false) columnId: Long?,
+        @RequestParam(required = false) status: ArticleStatus?,
+        @RequestParam(required = false) articleType: ArticleType?,
+        @RequestParam(defaultValue = "0") page: Int,
+        @RequestParam(defaultValue = "10") size: Int,
+    ): AdminArticlePage = query.list(keyword, columnId, status, articleType, page, size)
+
     @GetMapping("/{id}") fun get(@PathVariable id: Long): CmsArticle = service.get(id)
     @PostMapping fun create(@Valid @RequestBody request: SaveArticleRequest): ResponseEntity<CmsArticle> = ResponseEntity.status(HttpStatus.CREATED).body(service.create(request.toDraft()))
     @PutMapping("/{id}") fun update(@PathVariable id: Long, @Valid @RequestBody request: SaveArticleRequest): CmsArticle = service.update(id, request.toDraft())

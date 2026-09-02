@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, onMounted, reactive, ref } from 'vue'
+import { computed, nextTick, onMounted, onUnmounted, reactive, ref } from 'vue'
 import { Edit, Refresh } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
 import AdminIconAction from '../../components/AdminIconAction.vue'
@@ -15,10 +15,10 @@ import {
   updateArticle,
   uploadResource,
   withdrawArticle,
+  type AdminArticleSummary,
   type ArticleDraft,
   type ArticleStatus,
   type ArticleType,
-  type CmsArticle,
 } from '../../api/articles'
 
 type ArticleForm = Omit<ArticleDraft, 'columnId'> & { columnId: number | null }
@@ -27,7 +27,11 @@ type TypeFilter = 'ALL' | ArticleType
 type ColumnTreeNode = CmsColumn & { children: ColumnTreeNode[] }
 type ColumnSelectNode = { value: number; label: string; children: ColumnSelectNode[] }
 
-const articles = ref<CmsArticle[]>([])
+const ARTICLE_PAGE_SIZE = 10
+const ARTICLE_FILTER_DEBOUNCE_MS = 250
+
+const articles = ref<AdminArticleSummary[]>([])
+const total = ref(0)
 const columns = ref<CmsColumn[]>([])
 const loading = ref(false)
 const saving = ref(false)
@@ -46,7 +50,8 @@ const selectedColumnId = ref<number | null>(null)
 const filterStatus = ref<StatusFilter>('ALL')
 const filterType = ref<TypeFilter>('ALL')
 const currentPage = ref(1)
-const pageSize = 10
+const pageSize = ARTICLE_PAGE_SIZE
+let filterTimer: ReturnType<typeof setTimeout> | null = null
 
 const columnTree = computed<ColumnTreeNode[]>(() => {
   const nodes = new Map<number, ColumnTreeNode>()
@@ -69,50 +74,13 @@ const columnSelectTree = computed<ColumnSelectNode[]>(() => {
   return toSelectNodes(columnTree.value)
 })
 
-const selectedColumnIds = computed<Set<number> | null>(() => {
-  if (selectedColumnId.value == null) return null
-  const descendants = new Set<number>([selectedColumnId.value])
-  const childrenByParent = new Map<number, number[]>()
-  columns.value.forEach(item => {
-    if (item.parentId == null) return
-    const children = childrenByParent.get(item.parentId) ?? []
-    children.push(item.id)
-    childrenByParent.set(item.parentId, children)
-  })
-  const queue = [selectedColumnId.value]
-  while (queue.length > 0) {
-    const parentId = queue.shift()!
-    for (const childId of childrenByParent.get(parentId) ?? []) {
-      if (descendants.has(childId)) continue
-      descendants.add(childId)
-      queue.push(childId)
-    }
-  }
-  return descendants
-})
-
 const currentColumnName = computed(() => selectedColumnId.value == null ? '全部文章' : columnName(selectedColumnId.value))
 const formColumn = computed(() => form.columnId == null ? null : columns.value.find(item => item.id === form.columnId) || null)
 const formCoverPolicy = computed(() => formColumn.value?.coverPolicy ?? 'OPTIONAL')
+const showAllArticleCount = computed(() => selectedColumnId.value == null && !keyword.value.trim() && filterStatus.value === 'ALL' && filterType.value === 'ALL')
 
-const filteredArticles = computed(() => {
-  const text = keyword.value.trim().toLowerCase()
-  const scopedColumnIds = selectedColumnIds.value
-  return articles.value.filter(article => {
-    if (text && !`${article.title} ${article.source}`.toLowerCase().includes(text)) return false
-    if (scopedColumnIds != null && !scopedColumnIds.has(article.columnId)) return false
-    if (filterStatus.value !== 'ALL' && article.status !== filterStatus.value) return false
-    if (filterType.value !== 'ALL' && article.articleType !== filterType.value) return false
-    return true
-  })
-})
-
-const pagedArticles = computed(() => {
-  const start = (currentPage.value - 1) * pageSize
-  return filteredArticles.value.slice(start, start + pageSize)
-})
-
-onMounted(refresh)
+onMounted(initialize)
+onUnmounted(() => { if (filterTimer) clearTimeout(filterTimer) })
 
 function emptyForm(): ArticleForm {
   return {
@@ -132,26 +100,81 @@ function emptyForm(): ArticleForm {
   }
 }
 
-async function refresh() {
+async function initialize() {
   loading.value = true
   try {
-    const [articleRows, columnRows] = await Promise.all([listArticles(), listColumns()])
-    articles.value = articleRows
-    columns.value = columnRows
-    if (selectedColumnId.value != null && !columns.value.some(item => item.id === selectedColumnId.value)) {
-      selectedColumnId.value = null
-      columnTreeRef.value?.setCurrentKey(null)
-    }
-    normalizePage()
+    columns.value = await listColumns()
+    await loadArticles(false)
   } catch (error) { ElMessage.error(toMessage(error)) }
   finally { loading.value = false }
 }
 
-function selectColumn(row: unknown) { selectedColumnId.value = (row as ColumnTreeNode).id; currentPage.value = 1 }
-function selectAllColumns() { selectedColumnId.value = null; currentPage.value = 1; columnTreeRef.value?.setCurrentKey(null) }
-function resetFilters() { keyword.value = ''; filterStatus.value = 'ALL'; filterType.value = 'ALL'; selectAllColumns() }
-function filterChanged() { currentPage.value = 1 }
-function normalizePage() { const max = Math.max(1, Math.ceil(filteredArticles.value.length / pageSize)); if (currentPage.value > max) currentPage.value = max }
+async function loadArticles(manageLoading = true) {
+  if (manageLoading) loading.value = true
+  try {
+    const page = await listArticles({
+      keyword: keyword.value,
+      columnId: selectedColumnId.value,
+      status: filterStatus.value === 'ALL' ? null : filterStatus.value,
+      articleType: filterType.value === 'ALL' ? null : filterType.value,
+      page: currentPage.value - 1,
+      size: ARTICLE_PAGE_SIZE,
+    })
+    const maxPage = Math.max(1, Math.ceil(page.total / ARTICLE_PAGE_SIZE))
+    if (currentPage.value > maxPage) {
+      currentPage.value = maxPage
+      await loadArticles(false)
+      return
+    }
+    articles.value = page.items
+    total.value = page.total
+  } catch (error) { ElMessage.error(toMessage(error)) }
+  finally { if (manageLoading) loading.value = false }
+}
+
+function selectColumn(row: unknown) {
+  selectedColumnId.value = (row as ColumnTreeNode).id
+  currentPage.value = 1
+  void loadArticles()
+}
+
+function selectAllColumns() {
+  selectedColumnId.value = null
+  currentPage.value = 1
+  columnTreeRef.value?.setCurrentKey(null)
+  void loadArticles()
+}
+
+function resetFilters() {
+  if (filterTimer) clearTimeout(filterTimer)
+  filterTimer = null
+  keyword.value = ''
+  filterStatus.value = 'ALL'
+  filterType.value = 'ALL'
+  selectedColumnId.value = null
+  currentPage.value = 1
+  columnTreeRef.value?.setCurrentKey(null)
+  void loadArticles()
+}
+
+function filterChanged() {
+  currentPage.value = 1
+  void loadArticles()
+}
+
+function keywordChanged() {
+  currentPage.value = 1
+  if (filterTimer) clearTimeout(filterTimer)
+  filterTimer = setTimeout(() => {
+    filterTimer = null
+    void loadArticles()
+  }, ARTICLE_FILTER_DEBOUNCE_MS)
+}
+
+function pageChanged(value: number) {
+  currentPage.value = value
+  void loadArticles()
+}
 
 async function openCreate() {
   editingId.value = null
@@ -161,7 +184,7 @@ async function openCreate() {
   if (editorRef.value) editorRef.value.innerHTML = ''
 }
 
-async function openEdit(row: CmsArticle) {
+async function openEdit(row: AdminArticleSummary) {
   try {
     const article = await getArticle(row.id)
     editingId.value = article.id
@@ -218,12 +241,12 @@ async function save() {
       ElMessage.success('文章内容已保存，发布状态保持不变')
     }
     dialogVisible.value = false
-    await refresh()
+    await loadArticles()
   } catch (error) { ElMessage.error(toMessage(error)) }
   finally { saving.value = false }
 }
 
-async function changeStatus(row: CmsArticle) {
+async function changeStatus(row: AdminArticleSummary) {
   statusChangingId.value = row.id
   try {
     if (row.status === 'PUBLISHED') {
@@ -233,7 +256,7 @@ async function changeStatus(row: CmsArticle) {
       await publishArticle(row.id)
       ElMessage.success(row.status === 'WITHDRAWN' ? '文章已重新发布' : '文章已发布')
     }
-    await refresh()
+    await loadArticles()
   } catch (error) { ElMessage.error(toMessage(error)) }
   finally { statusChangingId.value = null }
 }
@@ -303,10 +326,10 @@ async function hydrateResourceNames(ids: Array<number | null>) {
 
 function firstFile(event: Event): File | null { return (event.target as HTMLInputElement).files?.[0] ?? null }
 function resetInput(event: Event) { ;(event.target as HTMLInputElement).value = '' }
-function asCmsArticle(row: unknown): CmsArticle { return row as CmsArticle }
+function asArticleSummary(row: unknown): AdminArticleSummary { return row as AdminArticleSummary }
 function columnName(columnId: number): string { return columns.value.find(item => item.id === columnId)?.name ?? `栏目 #${columnId}` }
-function statusName(status: CmsArticle['status']): string { return status === 'DRAFT' ? '草稿' : status === 'PUBLISHED' ? '已发布' : '已撤回' }
-function statusActionName(status: CmsArticle['status']): string { return status === 'PUBLISHED' ? '撤回' : status === 'WITHDRAWN' ? '重新发布' : '发布' }
+function statusName(status: ArticleStatus): string { return status === 'DRAFT' ? '草稿' : status === 'PUBLISHED' ? '已发布' : '已撤回' }
+function statusActionName(status: ArticleStatus): string { return status === 'PUBLISHED' ? '撤回' : status === 'WITHDRAWN' ? '重新发布' : '发布' }
 function resourceName(id: number): string { return resourceNames[id] ?? `资源 #${id}` }
 function escapeHtml(value: string): string { const entities: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }; return value.replace(/[&<>"]/g, char => entities[char] ?? char) }
 function toMessage(error: unknown): string { return error instanceof Error ? error.message : '操作失败' }
@@ -327,7 +350,7 @@ function toMessage(error: unknown): string { return error instanceof Error ? err
       <aside class="article-column-panel">
         <el-card shadow="never">
           <div class="article-column-heading"><strong>栏目导航</strong><span>父栏目包含全部下级栏目</span></div>
-          <button type="button" class="article-column-all" :class="{ active: selectedColumnId == null }" data-testid="article-column-all" @click="selectAllColumns"><span>全部文章</span><small>{{ articles.length }}</small></button>
+          <button type="button" class="article-column-all" :class="{ active: selectedColumnId == null }" data-testid="article-column-all" @click="selectAllColumns"><span>全部文章</span><small v-if="showAllArticleCount">{{ total }}</small></button>
           <el-tree ref="columnTreeRef" class="article-column-tree" data-testid="article-column-tree" :data="columnTree" :props="{ children: 'children', label: 'name' }" node-key="id" default-expand-all highlight-current :expand-on-click-node="false" @node-click="selectColumn">
             <template #default="{ data }"><span class="article-column-tree-node" :data-testid="`article-column-node-${data.id}`"><span class="article-column-tree-name">{{ data.name }}</span><small v-if="!data.enabled" class="article-column-disabled">停用</small></span></template>
           </el-tree>
@@ -337,7 +360,7 @@ function toMessage(error: unknown): string { return error instanceof Error ? err
       <section class="article-list-panel">
         <el-card shadow="never" class="admin-filter-card">
           <div class="admin-toolbar">
-            <el-input v-model="keyword" data-testid="article-filter-keyword" class="grow" clearable placeholder="按标题或来源筛选" @input="filterChanged" />
+            <el-input v-model="keyword" data-testid="article-filter-keyword" class="grow" clearable placeholder="按标题或来源筛选" @input="keywordChanged" />
             <el-select v-model="filterStatus" data-testid="article-filter-status" style="width:130px" @change="filterChanged"><el-option label="全部状态" value="ALL" /><el-option label="草稿" value="DRAFT" /><el-option label="已发布" value="PUBLISHED" /><el-option label="已撤回" value="WITHDRAWN" /></el-select>
             <el-select v-model="filterType" data-testid="article-filter-type" style="width:130px" @change="filterChanged"><el-option label="全部类型" value="ALL" /><el-option label="站内文章" value="INTERNAL" /><el-option label="外链文章" value="EXTERNAL_LINK" /></el-select>
             <el-button @click="resetFilters">重置</el-button>
@@ -345,8 +368,8 @@ function toMessage(error: unknown): string { return error instanceof Error ? err
         </el-card>
 
         <el-card shadow="never">
-          <div class="article-list-context" data-testid="article-column-context"><div><AdminPanelToggle :collapsed="sideCollapsed" label="栏目导航" @toggle="sideCollapsed = !sideCollapsed" /><strong>{{ currentColumnName }}</strong><span v-if="selectedColumnId != null">包含当前栏目及全部子栏目文章</span><span v-else>显示所有栏目文章</span></div><small>共 {{ filteredArticles.length }} 篇</small></div>
-          <el-table v-loading="loading" :data="pagedArticles" row-key="id" data-testid="article-table">
+          <div class="article-list-context" data-testid="article-column-context"><div><AdminPanelToggle :collapsed="sideCollapsed" label="栏目导航" @toggle="sideCollapsed = !sideCollapsed" /><strong>{{ currentColumnName }}</strong><span v-if="selectedColumnId != null">包含当前栏目及全部子栏目文章</span><span v-else>显示所有栏目文章</span></div><small>共 {{ total }} 篇</small></div>
+          <el-table v-loading="loading" :data="articles" row-key="id" data-testid="article-table">
             <el-table-column prop="title" label="标题" min-width="260" show-overflow-tooltip />
             <el-table-column label="栏目" min-width="150"><template #default="scope">{{ columnName(scope.row.columnId) }}</template></el-table-column>
             <el-table-column label="类型" width="95"><template #default="scope"><el-tag :type="scope.row.articleType === 'EXTERNAL_LINK' ? 'warning' : 'info'" size="small">{{ scope.row.articleType === 'EXTERNAL_LINK' ? '外链' : '站内' }}</el-tag></template></el-table-column>
@@ -356,12 +379,12 @@ function toMessage(error: unknown): string { return error instanceof Error ? err
             <el-table-column prop="viewCount" label="浏览量" width="90" />
             <el-table-column label="操作" width="92" fixed="right">
               <template #default="scope"><div class="admin-table-actions">
-                <AdminIconAction :testid="`edit-article-${scope.row.id}`" label="编辑" :icon="Edit" @click="openEdit(asCmsArticle(scope.row))" />
-                <AdminIconAction :testid="`${scope.row.status === 'PUBLISHED' ? 'withdraw' : 'publish'}-article-${scope.row.id}`" :label="statusActionName(scope.row.status)" :icon="Refresh" :type="scope.row.status === 'PUBLISHED' ? 'danger' : 'success'" :loading="statusChangingId === scope.row.id" @click="changeStatus(asCmsArticle(scope.row))" />
+                <AdminIconAction :testid="`edit-article-${scope.row.id}`" label="编辑" :icon="Edit" @click="openEdit(asArticleSummary(scope.row))" />
+                <AdminIconAction :testid="`${scope.row.status === 'PUBLISHED' ? 'withdraw' : 'publish'}-article-${scope.row.id}`" :label="statusActionName(scope.row.status)" :icon="Refresh" :type="scope.row.status === 'PUBLISHED' ? 'danger' : 'success'" :loading="statusChangingId === scope.row.id" @click="changeStatus(asArticleSummary(scope.row))" />
               </div></template>
             </el-table-column>
           </el-table>
-          <div class="admin-pagination"><el-pagination data-testid="article-pagination" background layout="total, prev, pager, next" :page-size="pageSize" :total="filteredArticles.length" :current-page="currentPage" @current-change="value => currentPage = value" /></div>
+          <div class="admin-pagination"><el-pagination data-testid="article-pagination" background layout="total, prev, pager, next" :page-size="pageSize" :total="total" :current-page="currentPage" @current-change="pageChanged" /></div>
         </el-card>
       </section>
     </div>
