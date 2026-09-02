@@ -2,13 +2,13 @@
 
 ## 1. 目标
 
-本文定义吉林省高等学校毕业生就业信息网公开站及中心党建基础公开站点的 WHAT / WHY。共享内容模型以 `docs/specifications/cms-core.md` 为准。
+本文定义吉林省高等学校毕业生就业信息网公开站及中心党建 Site Boundary 的总体 WHAT / WHY。共享内容模型以 `docs/specifications/cms-core.md` 为准；中心党建正式页面与内容规格以 `docs/specifications/party-building.md` 为准。
 
 中心主站目标仍为现网视觉与布局复刻，并通过 CMS 数据驱动需要持续运营维护的内容；稳定布局、固定集成和无需运营维护的内容保留为工程资产。
 
-中心党建已从“仅保留菜单占位”调整为下一阶段立即建设的公开 Site Boundary。本轮先建立独立入口、Router、红色主题 Shell 与基础页面框架，为后续真实党建页面和内容收敛提供稳定承载；不得把基础框架扩大解释为完整党建需求已经实现。
+中心党建独立 Entry / Router / Shell Foundation 已完成，当前正式进入真实栏目、页面、内容与视觉收敛。Foundation 阶段的占位文案、临时品牌元素和基础 CSS 不构成最终内容/视觉 Authority。
 
-公开前端目标架构为 **Multi-entry Modular SPA**：同一 `frontend/public-site` Vue / Vite 工程内，中心主站与中心党建按真实 Site / Theme Boundary 分别拥有 Entry、App、Router、Shell 和主题样式；当前共用构建部署链路与 Spring Boot CMS Backend，不引入 Module Federation，也不提前拆成独立前端工程。
+公开前端目标架构为 **Multi-entry Modular SPA**：同一 `frontend/public-site` Vue / Vite 工程内，中心主站与中心党建按真实 Site / Theme Boundary 分别拥有 Entry、App、Router、Shell 和主题样式；当前共用构建部署链路与 Spring Boot CMS Backend，不引入 Module Federation，也不拆成独立前端工程。
 
 ## 2. URL 与页面
 
@@ -26,12 +26,14 @@
 
 ### 2.2 中心党建
 
-- 基础入口：`/party/`
+- 首页：`/party/`
+- 栏目：`/party/column/{alias}`
+- 站内文章：`/party/article/{id}`
 - canonical namespace：`/party/**`
 
-当前只确认 `/party/` 基础页面框架。党建具体栏目、文章、专题或其他子页面 URL 在下一阶段需求和原站取证完成后补充，不在本轮架构任务中预设。
+党建栏目与文章的允许作用域、四条原站内容线、旧 `plist/pdetail` 地址迁移边界以 `docs/specifications/party-building.md` 为准。
 
-主站 `MAIN` Navigation 中“中心党建”预置条目应指向 `/party/`，当前窗口进入。
+主站 `MAIN` Navigation 中“中心党建”预置条目指向 `/party/`，当前窗口进入。
 
 ## 3. 公开前端站点边界
 
@@ -51,10 +53,10 @@ Main Site 持有：
 Party Building Site 持有：
 
 - 独立 App / Router；
-- 独立 Header / Footer / Navigation 基础 Shell；
+- 独立 Header / Footer / Navigation Shell；
 - 独立红色主题与页面 Frame；
-- 当前基础首页模块；
-- 后续党建页面模块的扩展位置。
+- 正式党建首页模块；
+- 党建栏目列表与文章详情模块。
 
 Party Building Site 不复用 Main Site Header/Footer DOM 与主站主题 CSS。当前可以共用无主题的 API transport、CMS DTO、静态资源 URL、SEO/通用工具等技术能力。
 
@@ -69,7 +71,7 @@ Party Building Site 不复用 Main Site Header/Footer DOM 与主站主题 CSS。
 - Typography / Theme CSS；
 - 首页区块布局。
 
-存在两个 Site Entry 不等于构建通用多站点平台，也不要求把中心党建预先拆成独立 Repository / Frontend Project。
+存在两个 Site Entry 不等于构建通用多站点平台，也不要求把中心党建拆成独立 Repository / Frontend Project。
 
 ## 4. 主站首页数据来源
 
@@ -98,11 +100,11 @@ CMS 提供内容数据属性，公开站页面设计决定如何展示。Column 
 
 当前 `SITE_LINKS` 相关列表基线 `imagePolicy=NONE`，页面按 title + URL 输出文字链接。未来若视觉设计确认需要 Logo，应先把对应列表数据策略调整为 `OPTIONAL / REQUIRED` 并补充数据，再由公开页面设计消费 `imagePath`；不得通过新增 `displayMode` 控制布局。
 
-Public Article Summary 可以包含可选 `coverResourceId`，为将来的带图栏目模板提供数据；当前普通栏目列表是否展示封面仍由页面基线决定。栏目 `coverPolicy` 不直接决定 DOM 布局。
+Public Article Summary 可以包含可选 `coverResourceId`，为带图模板提供可消费数据；具体页面是否展示封面仍由页面基线决定。栏目 `coverPolicy` 不直接决定 DOM 布局。
 
 首页快捷入口和快速导航直接使用 Navigation `iconPath`；不得使用数组下标拼接 `top-nav-01`、`guide-01` 等路径。
 
-中心党建后续内容优先评估复用相同 CMS 通用对象；独立视觉主题本身不构成新增党建专属 CMS 模型或 Admin Module 的理由。
+中心党建正式内容已经确认复用现有 Column + Article；四条真实内容线、INTERNAL / EXTERNAL_LINK 行为和 Party 作用域由 `docs/specifications/party-building.md` 约束。独立视觉主题本身不构成新增党建专属 CMS 模型或 Admin Module 的理由。
 
 ## 6. 工程资产
 
@@ -120,22 +122,21 @@ Public Article Summary 可以包含可选 `coverResourceId`，为将来的带图
 
 ## 7. 页面基线
 
-栏目列表、文章详情、独立单页、业务指南单页分组继续以现网页面主要版式为复刻基准。单页分组 Tab 从 PageGroup 成员数据生成。
+主站栏目列表、文章详情、独立单页、业务指南单页分组继续以现网页面主要版式为复刻基准。单页分组 Tab 从 PageGroup 成员数据生成。
 
-中心党建本轮建立红色主题基础 Shell 和基础首页框架；正式视觉复刻、页面区块、栏目内容及真实静态资源在后续党建专项中重新取得原站证据后收敛。
+中心党建 Foundation 已结束；正式首页、栏目列表、文章详情、红色视觉和真实静态资源依据 `docs/specifications/party-building.md` 与原站证据收敛，不再以 Foundation 页面作为验收基线。
 
 招聘信息和直播课程继续保留本站页面框架/占位，不加载真实第三方 iframe。
 
 ## 8. Acceptance Criteria
 
 - Main Site 的 `/`、`/column/**`、`/article/**`、`/page/**` 由同一 Main Site Entry 承载，既有 canonical URL 与视觉主基线无回归；
-- 删除原 `/page/**` 专用重复 HTML/Vue Entry 后，直接访问和刷新单页仍正常；
-- Main Site 源码形成 `app / shell / modules` 所有权边界，首页、内容、单页等路由使用动态 import；
-- `/party/` 由独立 Party Building HTML Entry、Vue App、Router、Shell 与红色主题样式承载，直接访问与刷新正常；
+- Main Site 源码保持 `app / shell / modules` 所有权边界和 route-level lazy loading；
+- `/party/**` 由独立 Party Building HTML Entry、Vue App、Router、Shell 与红色主题样式承载，直接访问与刷新正常；
+- Party 首页/栏目/文章正式行为符合 `docs/specifications/party-building.md`；
 - 主站与党建主题 CSS 互不污染，党建不得依赖主站 Header/Footer DOM 才能正常显示；
-- `MAIN` Navigation 中“中心党建”从 `PLACEHOLDER` 调整为指向 `/party/` 的站内入口；
+- `MAIN` Navigation 中“中心党建”指向 `/party/`；
 - 当前公开站仍为一个 `frontend/public-site` 工程、一个 build/deploy 单元；不引入 Module Federation 或独立党建前端工程；
-- 党建基础框架不声称已经完成正式内容、最终视觉或专属后台能力；
 - 首页不再读取 `SERVICE_LINKS`、`HOME_BANNERS`、`SITE_LINK_GROUPS`、`HOME_PROMO_BANNER_PATH`、`HOME_NCSS_LOGO_PATH` 作为运行时内容源；
 - 首页五个蓝色入口来自 `HOME_SHORTCUT`，图标来自导航条目而非排序下标；
 - 业务指南快捷入口来自 `HOME_QUICK`，图标来自导航条目；
