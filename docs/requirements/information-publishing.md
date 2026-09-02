@@ -26,7 +26,7 @@ updated_at: 2026-09-02
 
 当前网站参照基线为“吉林省高等学校毕业生就业信息网”。`www.jilinjobs.cn` 因上级统一规划跳转到 `24365.jl.smartedu.cn`；在需求分析、页面结构分析、视觉取证和内容采集过程中，两者视为同一原网站。其他域名原则上视为外部网站或外部系统。
 
-V4.8 在 V4.7 已完成中心党建独立 Site Entry / Router / Shell 基础框架后，依据原站 `https://24365.jl.smartedu.cn/dyzj` 的重新取证正式进入党建页面与内容收敛。原站明确存在“高层声音、工作动态、党章党规、理论学习”四条内容线，其中“学习园地”是首页对“党章党规 + 理论学习”的视觉分组，而不是独立内容类型；列表历史地址分别使用 `typeCode=gcsy/gzdt/dgdz/llxx`，站内详情使用 `pdetail.html`，同时大量内容直接跳转 12371、gov.cn、jl.gov.cn 等外部权威来源。现有通用 `Column + Article(INTERNAL / EXTERNAL_LINK)` 已足以承担这些数据，不新增党建专属 CMS 类型或 Admin Module。中心党建 canonical URL 统一进入 `/party/**`；历史 `plist.html / pdetail.html` 只作为迁移映射证据，不继续作为新版 canonical URL。党建结构基线可通过新的 Flyway migration 固化，但历史运营文章与资源继续通过独立迁移/采集机制处理，不混入 Flyway。
+V4.8 在 V4.7 已完成中心党建独立 Site Entry / Router / Shell 基础框架后，依据原站 `https://24365.jl.smartedu.cn/dyzj` 的重新取证正式进入党建页面与内容收敛。原站明确存在“高层声音、工作动态、党规党章、理论学习”四条内容线，其中“学习园地”是首页对“党规党章 + 理论学习”的视觉分组，而不是独立内容类型；列表历史地址分别使用 `typeCode=gcsy/gzdt/dgdz/llxx`，当前原站生成的站内详情使用 `pdetail.html?content_id=...`，部分历史地址可携带 `typeCode`，更早历史内容还存在 `detail.html?content_id=...` 变体，同时大量内容直接跳转 12371、gov.cn、jl.gov.cn 等外部权威来源。现有通用 `Column + Article(INTERNAL / EXTERNAL_LINK)` 已足以承担这些数据，不新增党建专属 CMS 类型或 Admin Module。中心党建 canonical URL 统一进入 `/party/**`；历史 `plist.html / pdetail.html / detail.html` 及其参数变体只作为迁移映射证据，不继续作为新版 canonical URL。党建结构基线可通过新的 Flyway migration 固化，但历史运营文章与资源继续通过独立迁移/采集机制处理，不混入 Flyway。
 
 V4.7 在 V4.6 基础上确认公开前端下一阶段演进：中心党建不再只作为主导航占位，而进入公开前端架构与基础页面框架范围。公开站采用按真实 Site / Theme Boundary 划分 Entry 的 Multi-entry Modular SPA：中心主站与中心党建在同一 `frontend/public-site` Vue / Vite 工程内分别拥有独立 App、Router、Shell 和主题样式，当前继续同构建、同部署并复用 Spring Boot CMS Backend。主站普通 `/page/**` 页面不再因为页面类型单独维护重复 HTML Entry。中心党建基础阶段只建立独立入口、红色主题基础 Shell 和可验证的基础页面框架；V4.8 接续其正式栏目、内容和视觉收敛。
 
@@ -64,7 +64,7 @@ V4.4 在 V4.3 基础上补充 2026-08-31 后续人工评审确认的 CMS 数据�
 - 中心主站公开前台；
 - 中心党建独立公开 Site Entry、Router、Header、Footer、页面 Frame 与正式红色主题；
 - 中心党建首页真实信息架构与原站已确认内容区块；
-- 中心党建“高层声音、工作动态、党章党规、理论学习”四条内容线；
+- 中心党建“高层声音、工作动态、党规党章、理论学习”四条内容线；
 - 中心党建栏目列表页、站内文章详情页，以及外链文章直接进入来源网站的行为；
 - 中心党建 `/party/**` canonical URL、直接访问与刷新；
 - 主导航“中心党建”作为中心党建站点入口；
@@ -172,12 +172,12 @@ CMS 主要内容类型按“文章 / 单页 / 列表”组织。栏目与导航�
 - 父栏目：`中心党建`，alias `party-building`，只承担后台组织和 Party 作用域识别；
 - `高层声音`，alias `party-voice`，对应原站 `typeCode=gcsy`；
 - `工作动态`，alias `party-work`，对应原站 `typeCode=gzdt`；
-- `党章党规`，alias `party-rules`，对应原站 `typeCode=dgdz`；
+- `党规党章`，alias `party-rules`，对应原站 `typeCode=dgdz`；
 - `理论学习`，alias `party-study`，对应原站 `typeCode=llxx`。
 
 四个子栏目允许同时包含 `INTERNAL` 与 `EXTERNAL_LINK` 文章，以匹配原站站内详情与外部权威来源混合的真实数据。Party canonical 栏目 URL 为 `/party/column/{alias}`；Party 站内文章 canonical URL 为 `/party/article/{id}`。Party 前端只把属于上述党建栏目树的文章作为 Party 站内详情渲染，避免普通主站文章被 `/party/article/**` 错误套用党建主题。
 
-“学习园地”是 Party 首页对“党章党规 / 理论学习”的固定视觉分组，由 Party 页面工程表达，不新增 Column、CmsList 或 displayMode。
+“学习园地”是 Party 首页对“党规党章 / 理论学习”的固定视觉分组，由 Party 页面工程表达，不新增 Column、CmsList 或 displayMode。
 
 ### 5.2 单页与单页分组
 
@@ -345,7 +345,7 @@ CMS 提供宣传展示位和展示内容模型。展示位代表公开站稳定�
 
 主站首页第一版继续复刻：Header、主导航及二级菜单、轮播、通知公告、固定业务入口、招聘日历、就业动态、业务指南快捷入口、专题/宣传 Banner、招聘相关区域、招聘公告、NCSS 固定集成、网站导航/友情链接和 Footer。
 
-中心党建使用独立公开 Site Shell 与红色主题，不复用主站 Header/Footer DOM 或主题 CSS。依据原站 `/dyzj` 取证，Party 首页至少形成：顶部重点内容区域、高层声音、工作动态、学习园地；学习园地内部包含党章党规与理论学习两组内容。高层声音、工作动态、党章党规、理论学习均由对应 Column + Article 数据驱动；学习园地只负责固定页面分组布局。
+中心党建使用独立公开 Site Shell 与红色主题，不复用主站 Header/Footer DOM 或主题 CSS。依据原站 `/dyzj` 取证，Party 首页至少形成：顶部重点内容区域、高层声音、工作动态、学习园地；学习园地内部包含党规党章与理论学习两组内容。高层声音、工作动态、党规党章、理论学习均由对应 Column + Article 数据驱动；学习园地只负责固定页面分组布局。
 
 中心党建 Header/Footer、页面 Frame、颜色、装饰和响应式属于 Party Site 工程资产；运营文章、来源、日期、外链目标等来自 CMS。正式视觉以原站证据 + AI Visual + Human Review 收敛，不以当前 Foundation CSS 作为最终 Authority。
 
@@ -361,7 +361,7 @@ CMS 提供宣传展示位和展示内容模型。展示位代表公开站稳定�
 
 Party 栏目列表页与文章详情页必须由 Party Entry / Router / Shell 承载，保持红色主题和直接访问/刷新能力。Party 外链文章从列表直接打开原文，不进入本地详情模板。
 
-原站 `/plist.html?typeCode=gcsy|gzdt|dgdz|llxx` 和 `/pdetail.html?content_id=...&typeCode=...` 作为历史迁移映射输入，不作为新版 canonical URL；迁移实现可以按可获得的 legacy id/typeCode 建立重定向或映射表，但不得让新版路由继续依赖旧 query-string 页面模型。
+原站 `/plist.html?typeCode=gcsy|gzdt|dgdz|llxx`、当前 `/pdetail.html?content_id=...`、更早 `/detail.html?content_id=...` 及已观察到的可选 `typeCode` 参数变体作为历史迁移映射输入，不作为新版 canonical URL；迁移实现可以按可获得的 legacy id/typeCode/detail path 建立重定向或映射表，但不得让新版路由继续依赖旧 query-string 页面模型。
 
 面包屑来自栏目/单页分组/单页或党建栏目/文章等业务关系，不从 URL、旧 typeCode 或某个导航入口机械推导。
 
@@ -421,12 +421,12 @@ Party 栏目列表页与文章详情页必须由 Party Entry / Router / Shell �
 24. 主站 `/`、栏目、文章、单页、单页分组及其既有视觉主基线无回归，并且 `/page/**` 不再依赖无业务价值的重复 HTML Entry；
 25. 公开站源码形成 Main Site / Party Building Site 所有权边界；主站页面按 `home / content / page / integration` 等真实职责组织并使用 route-level lazy loading；
 26. `/party/`、`/party/column/{alias}`、`/party/article/{id}` 由独立 Party Entry / App / Router / Shell / 红色主题承载，直接访问和刷新均正常；党建样式不得污染主站，主站蓝白主题也不得作为党建 Shell 的隐式依赖；
-27. 党建站点结构基线包含父栏目“中心党建”和 `高层声音 / 工作动态 / 党章党规 / 理论学习` 四个预置子栏目，并与原站 `gcsy / gzdt / dgdz / llxx` 建立明确映射；
+27. 党建站点结构基线包含父栏目“中心党建”和 `高层声音 / 工作动态 / 党规党章 / 理论学习` 四个预置子栏目，并与原站 `gcsy / gzdt / dgdz / llxx` 建立明确映射；
 28. 四个党建栏目使用通用 Column + Article，同一栏目可包含站内文章与外链文章；不新增党建专属 CMS 类型、`site` 字段、Admin Module 或第二套文章模型；
-29. Party 首页至少呈现原站已确认的顶部重点内容、高层声音、工作动态、学习园地结构，学习园地包含党章党规与理论学习；`学习园地` 只作为页面视觉分组，不新增 CMS 内容类型或重复 Authority；
+29. Party 首页至少呈现原站已确认的顶部重点内容、高层声音、工作动态、学习园地结构，学习园地包含党规党章与理论学习；`学习园地` 只作为页面视觉分组，不新增 CMS 内容类型或重复 Authority；
 30. Party 外链文章直接打开原文；Party 站内文章使用党建详情模板，并拒绝把非党建文章作为 `/party/article/**` 正常详情呈现；栏目列表、文章详情、面包屑、来源、发布日期和不可用状态形成完整闭环；
 31. Flyway 干净初始化得到完整 CMS 站点骨架并通过后续 migration 完成既有模型升级、中心党建入口及党建栏目结构；Flyway 不批量注入党建历史运营文章和正文资源；
-32. 原站 `plist/pdetail + typeCode` 被记录为历史迁移输入，但新版 canonical URL 不依赖旧路由模型；
+32. 原站 `plist / pdetail / detail` 及 `content_id / typeCode` 参数变体被记录为历史迁移输入，但新版 canonical URL 不依赖旧路由模型；
 33. 静态资源真实媒体验证、路径安全、关键资源保护和回收恢复无回归，导航图标引用进入可识别关键资源保护；
 34. 党建正式视觉必须经过原站证据、自动功能验证、AI Visual 与 Human Review；Functional Browser PASS 单独不能证明最终 Visual Fidelity；
 35. Backend、Public Site、Admin Frontend 与 Browser Verification 形成 Current Evidence；
