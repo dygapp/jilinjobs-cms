@@ -3,8 +3,6 @@ import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { listPublicArticles, type PublicArticleSummary } from '../../api/articles'
 import { getPublicColumn, getPublicColumnByAlias, type PublicColumn } from '../../api/columns'
-import PublicSiteHeader from '../../components/PublicSiteHeader.vue'
-import PublicSiteFooter from '../../components/PublicSiteFooter.vue'
 import { setPageMeta } from '../../seo'
 
 const route = useRoute()
@@ -94,7 +92,6 @@ function jump() {
 </script>
 
 <template>
-  <PublicSiteHeader />
   <main class="public-page-shell">
     <div class="site-width public-page-frame">
       <nav class="breadcrumb" aria-label="栏目位置">
@@ -177,5 +174,4 @@ function jump() {
       <p v-else class="public-state error-text">{{ error }}</p>
     </div>
   </main>
-  <PublicSiteFooter />
 </template>
