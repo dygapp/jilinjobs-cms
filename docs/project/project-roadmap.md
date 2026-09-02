@@ -45,7 +45,7 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 | 2026-09-01 | 管理端 Modular SPA 架构收敛完成，形成 Admin Shell / Shared / CMS Module 源码边界、Module Contract / Registry 集成机制与 `/admin/cms/**` canonical route namespace；Module Federation 仅保留为满足真实独立发布 / 部署需求后的条件性演进路径 |
 | 2026-09-01 | 项目负责人确认中心党建下一阶段立即进入实现；公开站目标架构调整为按真实 Site / Theme Boundary 划分 Entry 的 Multi-entry Modular SPA，并规划 Main Site 重构与 Party Building 基础框架 |
 | 2026-09-01 | 公开站 Multi-entry Modular SPA 与中心党建基础框架完成：Main Site 模块化、重复 Page Entry 移除、Party Building 独立 Entry / Router / 红色主题 Shell、预置导航切换及 Main / Party / Admin / Backend / Gateway 验证闭环完成；路线切换到中心党建正式页面与内容收敛 |
-| 2026-09-02 | 中心党建正式阶段完成第一轮原站重新取证：确认“高层声音 / 工作动态 / 党章党规 / 理论学习”及 legacy `gcsy/gzdt/dgdz/llxx`，确认站内详情与外部权威来源混合；通用 Column + Article 足以承载，正式阶段切分为 EU-26～EU-29 |
+| 2026-09-02 | 中心党建正式阶段完成第一轮原站重新取证：确认“高层声音 / 工作动态 / 党规党章 / 理论学习”及 legacy `gcsy/gzdt/dgdz/llxx`，确认当前 `pdetail.html`、更早 `detail.html` 与外部权威来源混合；通用 Column + Article 足以承载，正式阶段切分为 EU-26～EU-29 |
 
 ## 当前已固化结果
 
@@ -70,11 +70,11 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 - Main Site 持有独立 App / Router / Shell / 蓝白主题，源码已按 `home / content / page` 等职责形成模块边界，路由级页面使用动态 import；
 - Main Site Header / Footer 已提升到 App 生命周期，Navigation / SiteProperty 等有界站点结构快照不在页面切换中重复装配；
 - Party Building Site 使用 `/party/**` namespace，持有独立 App / Router / Shell / 红色主题基础框架；Foundation 阶段已经关闭，正式页面/视觉不以 Foundation 占位文案和临时 CSS 为 Authority；
-- 原站党建正式信息架构确认四条内容线：高层声音 `gcsy`、工作动态 `gzdt`、党章党规 `dgdz`、理论学习 `llxx`；“学习园地”是页面对后两者的视觉分组，不是独立 CMS 内容类型；
+- 原站党建正式信息架构确认四条内容线：高层声音 `gcsy`、工作动态 `gzdt`、党规党章 `dgdz`、理论学习 `llxx`；“学习园地”是页面对后两者的视觉分组，不是独立 CMS 内容类型；
 - 党建正式内容继续复用通用 Column + Article：预置父栏目 `party-building` 组织 `party-voice / party-work / party-rules / party-study`；同一栏目可混合 INTERNAL / EXTERNAL_LINK；
-- Party canonical URL 确认为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`；原站 `plist.html / pdetail.html + typeCode` 只作为历史迁移输入；
+- Party canonical URL 确认为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`；原站 `plist.html`、当前 `pdetail.html`、更早 `detail.html` 及 `content_id/typeCode` 参数变体只作为历史迁移输入；
 - 中心党建不拆成独立前端工程，不引入 Module Federation、`site` 字段或党建专属 Admin Module；只有真实独立生命周期或专属业务模型出现后再评估；
-- 党建 Flyway 只固化站点结构，历史文章、外链、正文资源与 legacy id/typeCode 映射继续通过独立内容迁移/采集机制处理；
+- 党建 Flyway 只固化站点结构，历史文章、外链、正文资源与 legacy id/typeCode/detail path 映射继续通过独立内容迁移/采集机制处理；
 - 预置主导航“中心党建”已从 `PLACEHOLDER` 切换为当前窗口进入 `/party/` 的站内 `LINK`；跨 Site Entry 导航在 Main Header 渲染层使用文档级跳转，不改变 PublicNavigation 的既有 `external` 语义；
 - `shared/` 只允许无主题 API transport、CMS DTO、SEO / resource utility 等稳定技术能力，Main / Party Header、Footer、Page Frame 与 Theme 不为形式复用进入 Shared；
 - 站点初始化基线由数据库基线 + 版本化初始化静态资源包组成；
@@ -133,7 +133,7 @@ EU-26 Party Building Evidence & Authority Convergence
 
 当前阶段约束：
 
-1. 原站 `/dyzj` 已确认“高层声音、工作动态、党章党规、理论学习”四条正式内容线；实现不得恢复 Foundation 虚构栏目；
+1. 原站 `/dyzj` 已确认“高层声音、工作动态、党规党章、理论学习”四条正式内容线；实现不得恢复 Foundation 虚构栏目；
 2. 复用 Column + Article，父栏目 `party-building` 只承担 CMS 组织和 Party 作用域识别；
 3. `学习园地` 只作为首页固定布局分组；
 4. Party 列表/详情 canonical route 使用 `/party/column/{alias}`、`/party/article/{id}`；
