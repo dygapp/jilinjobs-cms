@@ -22,9 +22,12 @@ const isPartyRoute = (item: PublicNavigation) =>
 
 const usesDocumentNavigation = (item: PublicNavigation) => item.external || !isPartyRoute(item)
 
-const matchesRoute = (item: PublicNavigation) =>
-  item.clickable && item.href && item.href !== '#'
-    && (route.path === item.href || route.path.startsWith(`${item.href.replace(/\/$/, '')}/`))
+const matchesRoute = (item: PublicNavigation) => {
+  if (!item.clickable || !item.href || item.href === '#') return false
+  if (item.targetType === 'HOME') return route.path === '/'
+  const normalizedHref = item.href.replace(/\/$/, '')
+  return route.path === item.href || route.path === normalizedHref || route.path.startsWith(`${normalizedHref}/`)
+}
 
 const isActive = (item: PublicNavigation) => matchesRoute(item) || children(item.id).some(matchesRoute)
 
