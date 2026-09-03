@@ -2,7 +2,7 @@
 
 本文记录中心党建 Foundation 之后的正式页面、内容、视觉和历史迁移切分。中心党建在业务上是**主站下的特殊栏目/专题页面**；`party.html`、Party Router 与 `/party/**` 是红色主题和模板隔离的技术实现，不代表第二个网站或独立首页。
 
-中文原站页面名称沿用“党员之家”，英文统一为 **Party Members’ Home**；既有 `party` 为兼容性技术标识。
+中文原站页面名称沿用“党员之家”，英文业务表述为 **Party Members’ Home**。当前工程技术命名使用 `party / Party`，仅 `/party/` 入口页使用 `party-home / PartyHome`。
 
 **状态：进行中（2026-09-03），当前 EU-28 Human Visual Review 修正中。**
 
@@ -25,7 +25,7 @@
 
 ---
 
-## EU-26 — Party Building Evidence & Authority Convergence
+## EU-26 — Party Evidence & Authority Convergence
 
 ### Goal
 
@@ -54,7 +54,7 @@
 - Flyway 建立父栏目与四个子栏目；
 - CmsList 轮播容器 `imagePolicy=REQUIRED`；
 - Party App/Router 内容主题隔离；
-- Column / Article View；
+- `PartyHomeView / PartyColumnView / PartyArticleView`；
 - 入口页从四个 Column 加载 Article 摘要；
 - 入口页从 CmsList 加载轮播；
 - INTERNAL / EXTERNAL_LINK；
@@ -67,17 +67,18 @@ V14 初始使用 `PARTY_HOME_CAROUSEL / 中心党建首页轮播`。2026-09-03 H
 
 ---
 
-## EU-28 — Party Members’ Home Visual Fidelity Convergence
+## EU-28 — Party Visual Fidelity Convergence
 
 ### Goal
 
-依据原站证据完成中心党建 Banner、共享 Navigation/Footer、轮播、高层声音、工作动态、学习园地、栏目和文章详情的正式视觉收敛。
+依据原站证据完成中心党建 Banner、共享 Navigation/Footer、轮播、高层声音、工作动态、学习园地、栏目和文章详情的正式视觉收敛，并完成当前技术命名重构。
 
 ### Scope
 
 - Party-owned：Banner、内容 Frame、轮播、栏目/详情内容主题；
 - Shared：Navigation/Footer DOM、交互、字体、响应式与稳定机构信息；
 - Desktop / Mobile；
+- `party / Party` 与 `party-home / PartyHome` 技术命名收敛；
 - Current Screenshot Evidence；
 - AI Visual + Human Visual Review。
 
@@ -87,18 +88,25 @@ V14 初始使用 `PARTY_HOME_CAROUSEL / 中心党建首页轮播`。2026-09-03 H
 
 1. **Banner 清晰度与资源归属**：WebP/AVIF 二次有损编码会使标题文字边缘出现毛刺。正式基线保存原站原始 JPEG 字节为 `party-header-banner.jpg`，运行时只引用本地 `/static/**` 路径，不直接依赖原站资源地址。
 2. **Banner 点击语义**：Banner 不属于导航入口。Header 使用纯展示 `<div> + <img>`，不得含 `<a>`。
-3. **“首页”语义错误**：中心党建业务上属于主站特殊栏目/专题页面。当前代码、测试、CmsList、Review fixture 和 Authority 统一使用“入口页 / 中心党建轮播”；运行时稳定 code 统一为 `PARTY_CAROUSEL`。
+3. **“首页”业务语义错误**：中心党建属于主站特殊栏目/专题页面。CmsList 与文档使用“中心党建轮播”；`PartyHome / party-home` 只表示 `/party/` 入口页技术角色。
 4. **公共 Shell**：Main / Party Navigation 与 Footer 使用同一 Shared Components，仅主题色不同。
-5. **外部展示资源依赖**：公开站设计模板所需稳定图片、图标、二维码、字体等必须本地版本化或来自受控 CMS 静态资源；业务外链除外。新增自动契约扫描模板中的外部媒体 `src/poster`、CSS `url(http...)` 和资源型常量。
+5. **导航视觉**：一级菜单恢复原站 16px bold；二级菜单必须与一级菜单同主题底色、白色粗体，并使用主题深色 hover/active。
+6. **Favicon**：Main / Party Entry 都必须从版本化 `/static/brand/site-favicon.png` 实际加载 favicon，不能只验证文件存在。
+7. **外部展示资源依赖**：公开站设计模板所需稳定图片、图标、二维码、字体等必须本地版本化或来自受控 CMS 静态资源；业务外链除外。新增自动契约扫描模板中的外部媒体 `src/poster`、CSS `url(http...)` 和资源型常量。
+8. **技术命名**：当前源码、目录、测试、静态基线和 Party 专项 Authority 统一从 `party-building / PartyBuilding` 收敛为 `party / Party`；入口组件使用 `PartyHomeView.vue`。已执行 V13/V14 与当前 PR 分支名保留历史/兼容标识，不改写历史。
 
 ### Acceptance
 
 - 本地 `party-header-banner.jpg` 与原站证据保持相同 3072×512 与 SHA-256；Browser natural size 验证通过；
 - Banner DOM 无 `<a>`；
 - 当前 CmsList 为 `PARTY_CAROUSEL / 中心党建轮播`；
-- 当前实现不再使用 `PartyHomeView / party-home-* / party-home` 等入口页 Home 语义；
+- 父栏目当前 alias 为 `party`；
+- 源码目录为 `src/sites/party/`，入口组件为 `modules/home/PartyHomeView.vue`，route name 为 `party-home`；
+- 除历史 V13/V14 和当前未改名 PR 分支外，不再使用 `party-building / PartyBuilding` 当前技术命名；
 - 公开站模板外部静态资源契约扫描通过；
 - Main / Party Shared Navigation/Footer 无结构漂移；
+- Main / Party Desktop 一级导航均为 16px/700，二级菜单为主题底色 + 白色粗体 + 深色 hover/active；
+- Main / Party favicon 运行时 HTTP 与 HTML Entry 契约通过；
 - 390px 无横向溢出；
 - Backend + Public + Admin + Integrated Browser 成功；
 - AI Visual Review 无未处理高优先级差异；
