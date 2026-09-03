@@ -52,9 +52,9 @@
 
 - Repository：`dygapp/agentic-dev`
 - Validation Baseline Branch：`master`
-- Validation Baseline Commit：`b80b2b1b7cea38eed0aef9807879e2a0d56afd2f`
+- Validation Baseline Commit：`a0aece02414aa36ca7421db391cb3124ad0780f2`
 
-该 baseline 延续已有 Project Roadmap、Fresh Context、Consumer-local Method、跨 Repository 授权、异步外部操作、验证证据、Human Review Environment、Human Review Finding 分类、外部媒体真实内容校验、后继提交 Evidence Claim 影响判断、Roadmap / GitHub 集成状态边界、共享资源真实冲突域、配置责任与已有能力复用规则，并新增可复用的 Engineering Discipline Authority、Technology Profile Contract、Vue 3 + TypeScript Technology Profile 与 Verification Profile。
+该 baseline 延续已有 Project Roadmap、Fresh Context、Consumer-local Method、跨 Repository 授权、异步外部操作、验证证据、Human Review Environment、Human Review Finding 分类、外部媒体真实内容校验、后继提交 Evidence Claim 影响判断、Roadmap / GitHub 集成状态边界、共享资源真实冲突域、配置责任与已有能力复用规则，以及 Engineering Discipline Authority、Technology Profile Contract、Vue 3 + TypeScript Technology Profile 与 Verification Profile。相对上一 Consumer baseline `b80b2b1b7cea38eed0aef9807879e2a0d56afd2f`，本次新增提交只涉及 `agentic-dev` 自身 Foundation v1 Closure、Project Roadmap 与 Consumer Adoption Handoff / 收尾记录，没有改变 Method、Operating Guide、Engineering Discipline、Technology Profile、Contract 或 Skill 语义，因此本 Consumer 只更新精确 baseline 引用，不新增或取代 Consumer-local 方法规则，也不继承 `agentic-dev` 自身的 Closure / Issue / Roadmap 状态。
 
 本项目不是在每次开发工作中直接运行 `agentic-dev` 仓库的方法文档，而是将当前采用的方法和 Skills 使用规则固化在 Consumer Repository：
 
