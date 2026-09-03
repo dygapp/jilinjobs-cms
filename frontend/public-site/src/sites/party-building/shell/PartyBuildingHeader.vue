@@ -4,7 +4,7 @@ import { listPublicNavigations, type PublicNavigation } from '../../../shared/ap
 import SharedPublicNavigation from '../../../shared/components/PublicNavigation.vue'
 
 const items = ref<PublicNavigation[]>([])
-const headerBanner = 'https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png'
+const headerBanner = '/static/party-building/party-header-banner.jpg'
 
 onMounted(async () => {
   try {
