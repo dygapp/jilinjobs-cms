@@ -51,10 +51,10 @@
 方法来源：
 
 - Repository：`dygapp/agentic-dev`
-- Validation Baseline Branch：`master`
-- Validation Baseline Commit：`a0aece02414aa36ca7421db391cb3124ad0780f2`
+- Validation Baseline Tag：`baseline-2026-09-04-engineering-capability`
+- Validation Baseline Commit：`5be2e6aad29b2be6b8535b3690daf3533ee22a46`
 
-该 baseline 延续已有 Project Roadmap、Fresh Context、Consumer-local Method、跨 Repository 授权、异步外部操作、验证证据、Human Review Environment、Human Review Finding 分类、外部媒体真实内容校验、后继提交 Evidence Claim 影响判断、Roadmap / GitHub 集成状态边界、共享资源真实冲突域、配置责任与已有能力复用规则，以及 Engineering Discipline Authority、Technology Profile Contract、Vue 3 + TypeScript Technology Profile 与 Verification Profile。相对上一 Consumer baseline `b80b2b1b7cea38eed0aef9807879e2a0d56afd2f`，本次新增提交只涉及 `agentic-dev` 自身 Foundation v1 Closure、Project Roadmap 与 Consumer Adoption Handoff / 收尾记录，没有改变 Method、Operating Guide、Engineering Discipline、Technology Profile、Contract 或 Skill 语义，因此本 Consumer 只更新精确 baseline 引用，不新增或取代 Consumer-local 方法规则，也不继承 `agentic-dev` 自身的 Closure / Issue / Roadmap 状态。
+该 baseline 延续已有 Project Roadmap、Fresh Context、Consumer-local Method、跨 Repository 授权、异步外部操作、验证证据、Human Review Environment、Human Review Finding 分类、外部媒体真实内容校验、后继提交 Evidence Claim 影响判断、Roadmap / GitHub 集成状态边界、共享资源真实冲突域、配置责任与已有能力复用规则，以及 Engineering Discipline Authority、Technology Profile Contract、Vue 3 + TypeScript Technology Profile 与 Verification Profile。相对上一 Consumer baseline `a0aece02414aa36ca7421db391cb3124ad0780f2`，指定 Tag 向前包含 2 个提交：新增并完成 **Data Access Scope & Boundedness Control（数据访问作用域与有界性控制）** Engineering Discipline，并完成 `agentic-dev` 自身 Engineering Discipline Expansion v1 Closure。该 Discipline 不增加新的 Method Stage 或 Task-oriented Skill；本 Consumer 选择性固化其集合数据访问规则，并继续以现有 `docs/technical/verification-strategy.md` 的作用域查询、分页窗口与边界验证规则作为项目级验证实现。`agentic-dev` 自身 Closure、Issue、Experiment 和 Roadmap 状态不继承为 Consumer 项目事实，Technology Profile 与当前项目依赖也不因本次升级改变。
 
 本项目不是在每次开发工作中直接运行 `agentic-dev` 仓库的方法文档，而是将当前采用的方法和 Skills 使用规则固化在 Consumer Repository：
 
@@ -66,7 +66,7 @@ docs/project/development-method.md
 
 当项目负责人明确要求升级 baseline 时，应：
 
-1. 读取指定分支的最新精确 commit；
+1. 读取指定 Branch / Tag / commit ref 并解析其精确 commit；
 2. 比较当前 Consumer baseline 到新 baseline 的 Method、Operating Guide、Engineering Discipline、Technology Profile、Contract 与 Skill 变化；
 3. 区分跨项目可复用规则与 `agentic-dev` 自身 Project Rule；
 4. 只将影响本 Consumer 工作方式、且具有持续约束价值的变化固化到本仓库；
@@ -83,6 +83,7 @@ docs/project/development-method.md
 - 在条件允许时使用 Fresh Context；
 - 实施时选择当前证据支持的最低必要复杂度；没有当前 Requirement、Specification、Architecture、Verification、安全、性能、生命周期或真实多消费者证据支持的额外抽象、配置项、依赖、扩展点、框架层和未来分支默认不进入实现；必要的失败路径、安全措施、验证能力、行为保持型 preparatory refactor 与薄适配不属于“过度设计”；
 - 最终 Diff 的每个有意义区域必须能追溯到当前 Unit 实现、验证、Authority 同步、必要 preparatory refactor 或其直接 cleanup；相邻 typo、TODO、历史死代码、独立优化、全局格式化等默认留在当前 Diff 之外；
+- 当 Unit 涉及集合、列表或 snapshot 数据访问时，先确认真实 Consumer Scope、集合的稳定有界性或增长特征、Lifecycle / Freshness，再决定过滤、稳定排序、window / pagination、representation 与复用方式；页面最终展示数量、现有 `LIMIT/OFFSET` 或客户端过滤不能替代业务作用域，业务 scope 决定成员资格时应先形成 scope 再 window / paginate；只有当前 Authority 明确定义 global Top-N / ranking 本身为业务语义时例外；稳定有界的结构性共享快照可以按当前生命周期完整读取，不为形式统一机械分页；
 - 每项 Acceptance Obligation 必须闭环到实现责任、验证责任、计划证据与已执行的 Current Evidence；
 - 实现覆盖不等于验证覆盖；
 - 没有 Current Evidence，不得声明完成、通过或修复成功；

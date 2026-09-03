@@ -10,13 +10,16 @@
 Repository:
 dygapp/agentic-dev
 
-Baseline:
-master@a0aece02414aa36ca7421db391cb3124ad0780f2
+Baseline Tag:
+baseline-2026-09-04-engineering-capability
+
+Baseline Commit:
+5be2e6aad29b2be6b8535b3690daf3533ee22a46
 ```
 
 该 baseline 提供 Method、Operating Guide、Engineering Discipline Authority、Technology Profile Contract、Skill Contracts 与 Skills 的来源依据，但不提供本项目的业务事实。
 
-相对上一 Consumer baseline `b80b2b1b7cea38eed0aef9807879e2a0d56afd2f`，本次升级到 `a0aece02414aa36ca7421db391cb3124ad0780f2` 的 3 个新增提交只涉及 `agentic-dev` 自身 Engineering Capability Foundation v1 Closure、Project Roadmap、Consumer Adoption Handoff 与实验收尾记录；Method、Operating Guide、Engineering Discipline、Technology Profile、Contract 与 Skill 语义均未变化。因此本次只更新精确 baseline 指针，不新增、替换或删除 Consumer-local 方法规则；`docs/technical/verification-strategy.md` 也不因本次升级改变验证语义。`agentic-dev` 自身 Closure、Issue、Experiment 和 Roadmap 状态不继承为 Consumer 项目事实。
+相对上一 Consumer baseline `a0aece02414aa36ca7421db391cb3124ad0780f2`，指定 Tag 向前包含 2 个提交：`8d0c7ccd1b13db05540fefc619725f9d1f7fc2de` 新增并完成 **Data Access Scope & Boundedness Control（数据访问作用域与有界性控制）** Engineering Discipline，`5be2e6aad29b2be6b8535b3690daf3533ee22a46` 完成 `agentic-dev` 自身 Engineering Discipline Expansion v1 Closure。新增 Discipline 不增加 Method Stage，不创建新的 Task-oriented Skill，也不改变 Technology Profile；`execute-unit` 只增加对该 Discipline 的薄消费规则。该 Discipline 与本 Consumer 已有 `docs/technical/verification-strategy.md` §2.4 的栏目/业务作用域、分页窗口和边界验证语义一致，因此本次正式将其固化为 Consumer-local Engineering Discipline，而不另造第二套验证规则或新增框架。`agentic-dev` 自身 Closure、Issue、Experiment 与 Roadmap 状态不继承为 Consumer 项目事实。
 
 相对更早 baseline `bf21c7bcd711fd667c43007a72fae65750d1af09`，本项目此前实际吸收的新增规则是：
 
@@ -33,7 +36,7 @@ master@a0aece02414aa36ca7421db391cb3124ad0780f2
 
 此前 baseline 已固化的 Stale Verification Contract、Visual Fidelity、自动化验证与 Human Review Baseline 隔离、bind mount 可重复恢复、Artifact Evidence、异步 Actions 闭环、Human Review Finding 分类、外部媒体真实内容验证、后继提交 Evidence Claim 影响判断与 Roadmap / GitHub 集成状态边界继续有效。
 
-`agentic-dev` 自身 Project Roadmap、Engineering Capability Foundation 状态、Issue / eval / PR 集成状态等没有被继承为 Consumer 项目事实。
+`agentic-dev` 自身 Project Roadmap、Engineering Capability Foundation / Engineering Discipline Expansion 状态、Issue / eval / PR 集成状态等没有被继承为 Consumer 项目事实。
 
 ## 2. Consumer 与 agentic-dev 的职责边界
 
@@ -155,7 +158,30 @@ External Dependency Problem
 
 Unit 完成前执行轻量 Final Diff Scope Check。每个有意义的 Diff 区域必须属于当前 Unit 产品实现、当前验证、当前变更导致的 Authority 同步、必要 preparatory refactor 或其直接 cleanup；邻近但独立的 bug、TODO、历史死代码、样式清理、全局格式化和无关优化默认不进入当前 Diff。
 
-### 4.3 Vue 3 + TypeScript Technology Profile
+### 4.3 Data Access Scope & Boundedness Control
+
+集合型数据访问首先保护正确的数据集合边界，其次才是性能优化。当前 Unit 涉及列表、集合、Top-N、分页、snapshot 或批量读取时，按实际风险确认：
+
+1. 当前页面、API、Job 或模块真正消费的业务作用域，例如栏目、parent、tenant、状态、组织或其他 membership boundary；
+2. 集合是有当前 Authority 支持的稳定有界集合，还是会持续增长 / 无法可靠界定；
+3. 数据需要的 lifecycle / freshness，是 request-local、page-local、稳定 application snapshot，还是需要持续刷新；
+4. 定义成员资格和业务顺序的过滤 / 排序是否在 window / pagination 前形成；
+5. 是否需要 page、cursor、chunk、Top-N，以及 continuation 是否具有稳定排序；
+6. 列表是否只需要 summary/basic fields，detail 是否需要完整表示；不因存在两个消费者就机械创建第二套 DTO；
+7. 验证是否真正越过 page / Top-N / scope 边界，并包含足以暴露截断问题的 competing records。
+
+规则：
+
+- 页面最终只展示 N 条，不能证明先读“全局前 N 条”再客户端过滤是正确的数据访问边界；
+- 当业务 scope 决定集合成员资格时，优先在数据访问契约 / 查询层形成 scope，再执行 window / pagination；只有 Specification / Domain Authority 明确定义 global Top-N / ranking 本身属于业务语义时例外；
+- “当前 fixture 只有少量数据”不能证明集合稳定有界；持续增长或无可靠上界的数据默认不能依赖永久全量加载；
+- 导航树、受控站点配置等由 Authority 能解释长期小规模上界的结构数据，可以完整获取并在合适生命周期复用，不为了接口形式统一机械分页；
+- 不为了避免重复请求机械创建全局 cache / registry / 新状态层，新增复用机制继续受 Implementation Minimality 约束；
+- 本纪律不固定 page size、cursor 技术、数据库方案，也不要求所有接口都分页或所有列表都创建 Summary DTO。
+
+本 Consumer 的机器验证映射继续以 `docs/technical/verification-strategy.md` §2.4 为准。该节现有“作用域查询、分页窗口、异步 UI 完成条件”规则已覆盖本 Discipline 当前需要的验证边界，不需要建立第二套重复契约。
+
+### 4.4 Vue 3 + TypeScript Technology Profile
 
 当前 `frontend/public-site` 已确认使用 Vue `3.5.40`、TypeScript `5.9.3`、`vue-tsc 3.3.9`、Vite `8.1.5`、Vue Router `5.2.0` 与 Element Plus `2.14.4`；`npm run build` 实际执行 `vue-tsc --noEmit && vite build`。这些 Consumer 事实覆盖 Profile Research Anchor。
 
@@ -320,7 +346,7 @@ README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项�
 - 只加载当前工作真正需要的 Skill；
 - 不要求每个工作都走完整 Skill 清单；
 - Skill 不得覆盖 Consumer Authority；
-- `execute-unit` 在实现前读取当前适用的 Consumer-local Engineering Discipline / Technology Profile 规则，并在完成前执行 Final Diff Scope Check；
+- `execute-unit` 在实现前读取当前适用的 Consumer-local Engineering Discipline / Technology Profile 规则，并在完成前执行 Final Diff Scope Check；涉及集合、列表、Top-N、分页或 snapshot 时，同时应用 Data Access Scope & Boundedness Control，不以页面显示数量、固定 window 或客户端过滤替代业务 scope；
 - 遇到实现阶段的意外失败时，使用系统化调试路径，而不是无证据试错；
 - 当失败来自 Test / Workflow assertion 等 Verification Artifact 时，`systematic-debug` 必须先核对其与当前 Authority 的一致性，允许并要求在证据支持时识别 Stale Verification Contract；
 - 当 GitHub Actions 的触发、CI 可观察性、Artifact、容器 Runtime、Human Review Baseline、timeout / cancellation、diagnostics 或祖先 Evidence reuse 会影响证据可靠性时，按需应用 `github-actions-verification`；
@@ -349,10 +375,10 @@ README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项�
 
 升级时：
 
-1. 读取并记录 `agentic-dev` 指定分支最新精确 commit；
+1. 读取指定 Branch / Tag / commit ref，并解析记录其精确 commit；
 2. 对比本项目当前 baseline 到新 baseline 的 Method、Operating Guide、Engineering Discipline、Technology Profile、Contract 与 Skill 变化；
 3. 区分跨项目可复用资产与 `agentic-dev` 自身 Project Rule；
 4. 根据 Consumer 真实需要和现有 Authority 选择性采纳，不机械复制完整文档体系；
 5. 将具有持续约束价值的已采纳规则固化到 Consumer 可发现的 Authority 中，并显式处理旧规则的更新、保留或取代；
-6. 同步更新 `AGENTS.md`、本文、Verification Strategy 和 Roadmap 的 baseline / 方法记录；
-7. 完成升级后恢复以 Consumer-local Authority 为普通开发入口，不自动继承 `agentic-dev` 自身 Project Roadmap、Engineering Capability Foundation 状态、Issue、实验状态或其他项目事实。
+6. 同步检查并按实际变化更新 `AGENTS.md`、本文、Verification Strategy 和 Roadmap 的 baseline / 方法记录；已与新规则一致的 Consumer-local 契约不为制造 diff 重复改写；
+7. 完成升级后恢复以 Consumer-local Authority 为普通开发入口，不自动继承 `agentic-dev` 自身 Project Roadmap、Engineering Capability Foundation / Engineering Discipline Expansion 状态、Issue、实验状态或其他项目事实。
