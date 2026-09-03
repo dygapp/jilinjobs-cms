@@ -10,9 +10,9 @@
 - 原始 SHA-256：`7444d50235d4c87a00d0221ac84551ea083c617bb8a15e58f58d002224bd27a3`
 - 当前仓库资源：`party-header-banner.avif`
 - 当前仓库尺寸：3072 × 512
-- 当前仓库 SHA-256：`0dff03d5a9e826fac83ee4e36a0db201bb08e42f67aa35cb13a9feca08c7ae3e`
-- 当前 Git blob SHA：`914cb30e8d5e0bc81febd55faddac8fa726982bf`
-- 处理：保持原始 3072 × 512 像素尺寸，只转换为 AVIF 以降低版本化资源体积；不重新设计、不裁剪、不加入非原站素材。
+- 当前仓库 SHA-256：`90cb8426a96060f8b700e3b9b53ee8deedcb63d8b5fdedd27999d6b5582af864`
+- 当前 Git blob SHA：`4d0fd888bd33d0ae3784f5d3e5b040c07188f841`
+- 处理：保持原始 3072 × 512 像素尺寸，只转换为较高质量 AVIF 以降低版本化资源体积；不重新设计、不裁剪、不加入非原站素材。Human Review 后将编码质量从早期偏低的 q5 提升至 q20，优先保留标题文字、烟花和建筑边缘清晰度。
 - Human Review 修正：早期 `party-header-banner.webp` 曾缩放至 960 × 160，再在 Desktop 以 320px 高展示，产生明显上采样模糊。该派生方案已被 2026-09-03 Human Visual Review 否决；正式页面不得再使用低分辨率版本。
 
 ## UI Markers
