@@ -31,7 +31,7 @@ const legacyClass = computed(() => props.theme === 'main' ? 'site-footer' : 'par
     :data-theme="theme"
     :data-testid="testId"
   >
-    <div class="shared-public-shell-width shared-public-footer-layout">
+    <div class="shared-public-shell-width shared-public-footer-layout site-footer-layout">
       <div class="shared-public-footer-main">
         <p>办公地址：{{ address }}，吉林省高等学校毕业生就业指导中心2楼一站式办公大厅，邮编：130033。</p>
         <p>公交线路：乘坐120路、227路、20路、130路、281路、154路、190路、125路公交北方市场下车，北方市场南门南行200米。</p>
