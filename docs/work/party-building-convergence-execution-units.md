@@ -21,7 +21,7 @@
 
 页面顶部存在独立 4 项图片轮播，与高层声音并列。当前稳定 CmsList code 为 **`PARTY_CAROUSEL`**，产品名称为“中心党建轮播”；历史 V14 中的 `PARTY_HOME_CAROUSEL / 中心党建首页轮播` 由 V15 原地重命名，不修改已执行 Migration。
 
-原站 Banner：`https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png`，3072×512，SHA-256 `7444d50235d4c87a00d0221ac84551ea083c617bb8a15e58f58d002224bd27a3`。Human Review 已否决 WebP/AVIF 二次有损派生作为正式 Banner。
+原站 Banner 证据地址为 `https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png`，3072×512，SHA-256 `7444d50235d4c87a00d0221ac84551ea083c617bb8a15e58f58d002224bd27a3`。原始媒体实际为 JPEG/JFIF，当前版本化基线使用正确扩展名 `site-baseline/static/party-building/party-header-banner.jpg`，保持原始字节不变。正式运行只使用本地 `/static/party-building/party-header-banner.jpg`，不得直接依赖原站资源 URL。Human Review 已否决 WebP/AVIF 二次有损派生作为正式 Banner。
 
 ---
 
@@ -85,17 +85,19 @@ V14 初始使用 `PARTY_HOME_CAROUSEL / 中心党建首页轮播`。2026-09-03 H
 
 截至 2026-09-03，本轮新增并必须关闭的 Finding：
 
-1. **Banner 清晰度**：AVIF 二次有损编码仍使标题文字边缘出现毛刺。正式页面改为直接使用原站 `party_banner.png` 原始资源，不再把 WebP/AVIF 派生资源作为正式 Banner。
-2. **Banner 点击语义**：Banner 不属于导航入口。Header 改为纯展示 `<div> + <img>`，不得含 `<a>`。
+1. **Banner 清晰度与资源归属**：WebP/AVIF 二次有损编码会使标题文字边缘出现毛刺。正式基线保存原站原始 JPEG 字节为 `party-header-banner.jpg`，运行时只引用本地 `/static/**` 路径，不直接依赖原站资源地址。
+2. **Banner 点击语义**：Banner 不属于导航入口。Header 使用纯展示 `<div> + <img>`，不得含 `<a>`。
 3. **“首页”语义错误**：中心党建业务上属于主站特殊栏目/专题页面。当前代码、测试、CmsList、Review fixture 和 Authority 统一使用“入口页 / 中心党建轮播”；运行时稳定 code 统一为 `PARTY_CAROUSEL`。
 4. **公共 Shell**：Main / Party Navigation 与 Footer 使用同一 Shared Components，仅主题色不同。
+5. **外部展示资源依赖**：公开站设计模板所需稳定图片、图标、二维码、字体等必须本地版本化或来自受控 CMS 静态资源；业务外链除外。新增自动契约扫描模板中的外部媒体 `src/poster`、CSS `url(http...)` 和资源型常量。
 
 ### Acceptance
 
-- Banner 使用原站 3072×512 原始资源，Browser natural size 验证通过；
+- 本地 `party-header-banner.jpg` 与原站证据保持相同 3072×512 与 SHA-256；Browser natural size 验证通过；
 - Banner DOM 无 `<a>`；
 - 当前 CmsList 为 `PARTY_CAROUSEL / 中心党建轮播`；
 - 当前实现不再使用 `PartyBuildingHomeView / party-home-* / party-building-home` 等入口页 Home 语义；
+- 公开站模板外部静态资源契约扫描通过；
 - Main / Party Shared Navigation/Footer 无结构漂移；
 - 390px 无横向溢出；
 - Backend + Public + Admin + Integrated Browser 成功；
