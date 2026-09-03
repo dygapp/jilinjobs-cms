@@ -56,7 +56,7 @@ test('EU-29：较慢的旧分页响应不得覆盖浏览器返回后的当前栏
       const isDelayedSecondPage = url.searchParams.get('columnId') === String(column.id)
         && url.searchParams.get('page') === '1'
       if (isDelayedSecondPage) {
-        await new Promise(resolve => setTimeout(resolve, 350))
+        await new Promise(resolve => setTimeout(resolve, 800))
       }
       await route.continue()
     })
@@ -64,6 +64,12 @@ test('EU-29：较慢的旧分页响应不得覆盖浏览器返回后的当前栏
     await page.goto('/party/column/party-rules')
     await expect(page.getByTestId(`party-column-article-${created[10].id}`)).toBeVisible()
 
+    const delayedRequest = page.waitForRequest(requestEvent => {
+      const url = new URL(requestEvent.url())
+      return url.pathname === '/api/public/articles'
+        && url.searchParams.get('columnId') === String(column.id)
+        && url.searchParams.get('page') === '1'
+    })
     const delayedResponse = page.waitForResponse(response => {
       const url = new URL(response.url())
       return url.pathname === '/api/public/articles'
@@ -73,6 +79,11 @@ test('EU-29：较慢的旧分页响应不得覆盖浏览器返回后的当前栏
 
     await page.getByRole('button', { name: '下一页' }).click()
     await expect(page).toHaveURL(/\/party\/column\/party-rules\?page=1$/)
+    await delayedRequest
+
+    await expect(page.getByTestId(`party-column-article-${created[10].id}`)).toBeVisible()
+    await expect(page.getByText('正在加载栏目…', { exact: true })).toHaveCount(0)
+
     await page.goBack()
     await expect(page).toHaveURL(/\/party\/column\/party-rules$/)
     await expect(page.getByTestId(`party-column-article-${created[10].id}`)).toBeVisible()
