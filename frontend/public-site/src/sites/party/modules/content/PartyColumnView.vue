@@ -35,11 +35,12 @@ watch(
 async function load(isCurrent: () => boolean) {
   const alias = route.params.alias
   error.value = ''
-  articles.value = []
-  total.value = 0
-  loading.value = false
   if (!isPartyColumnAlias(alias)) {
     columnName.value = ''
+    articles.value = []
+    total.value = 0
+    page.value = 0
+    loading.value = false
     error.value = '党建栏目不可用或不存在'
     return
   }
@@ -47,21 +48,25 @@ async function load(isCurrent: () => boolean) {
   const requestedPage = Math.max(0, Number(route.query.page ?? 0) || 0)
   const requestedSize = Number(route.query.size ?? 10)
   const pageSize = allowedSizes.includes(requestedSize) ? requestedSize : 10
-  size.value = pageSize
   loading.value = true
   try {
     const column = await getPartyColumn(alias)
     if (!isCurrent()) return
     const result = await listPublicArticles(column.id, requestedPage, pageSize)
     if (!isCurrent()) return
+
     columnName.value = column.name
     articles.value = result.items
     total.value = result.total
     page.value = result.page
+    size.value = pageSize
     setPageMeta({ title: column.name, description: `浏览中心党建“${column.name}”栏目已发布信息。` })
   } catch (e) {
     if (!isCurrent()) return
     columnName.value = ''
+    articles.value = []
+    total.value = 0
+    page.value = 0
     error.value = e instanceof Error ? e.message : '党建栏目加载失败'
   } finally {
     if (isCurrent()) loading.value = false
@@ -101,9 +106,9 @@ function changeSize(event: Event) {
         <span v-if="columnName">{{ columnName }}</span>
       </nav>
 
-      <p v-if="loading" class="party-state">正在加载栏目…</p>
+      <p v-if="loading && !columnName" class="party-state">正在加载栏目…</p>
       <p v-else-if="error" class="party-state party-state-error" data-testid="party-column-unavailable">{{ error }}</p>
-      <section v-else class="party-content-card" data-testid="party-column-page">
+      <section v-else class="party-content-card" data-testid="party-column-page" :aria-busy="loading">
         <header class="party-content-title"><h1>{{ columnName }}</h1></header>
         <ul class="party-column-list" data-testid="party-column-articles">
           <li v-for="article in articles" :key="article.id">
