@@ -1,4 +1,4 @@
-import { expect, test, type APIRequestContext, type Page } from '@playwright/test'
+import { expect, test, type APIRequestContext } from '@playwright/test'
 
 type Column = { id: number; alias: string }
 type Article = { id: number; title: string }
@@ -67,11 +67,6 @@ async function seedVisualContent(request: APIRequestContext, suffix: string) {
     expect(response.ok()).toBeTruthy()
   }
   return articles
-}
-
-async function attachScreenshot(page: Page, name: string, testInfo: Parameters<typeof test>[1] extends never ? never : any) {
-  const body = await page.screenshot({ fullPage: true })
-  await testInfo.attach(name, { body, contentType: 'image/png' })
 }
 
 test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer 使用正式红色基线', async ({ page, request }) => {
