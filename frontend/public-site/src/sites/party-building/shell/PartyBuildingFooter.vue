@@ -184,6 +184,8 @@ onMounted(async () => {
 
   .party-footer-records {
     gap: 8px 12px;
+    flex-direction: row;
+    align-items: center;
   }
 }
 </style>
