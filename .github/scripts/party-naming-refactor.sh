@@ -1,0 +1,140 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+git config user.name 'dygapp'
+git config user.email 'dygapp@qq.com'
+
+git mv frontend/public-site/src/sites/party-building frontend/public-site/src/sites/party
+git mv frontend/public-site/src/sites/party/modules/entry frontend/public-site/src/sites/party/modules/home
+git mv frontend/public-site/src/sites/party/modules/home/PartyBuildingView.vue frontend/public-site/src/sites/party/modules/home/PartyHomeView.vue
+git mv frontend/public-site/src/sites/party/modules/content/PartyBuildingArticleView.vue frontend/public-site/src/sites/party/modules/content/PartyArticleView.vue
+git mv frontend/public-site/src/sites/party/modules/content/PartyBuildingColumnView.vue frontend/public-site/src/sites/party/modules/content/PartyColumnView.vue
+git mv frontend/public-site/src/sites/party/shell/PartyBuildingHeader.vue frontend/public-site/src/sites/party/shell/PartyHeader.vue
+git mv frontend/public-site/src/sites/party/shell/PartyBuildingFooter.vue frontend/public-site/src/sites/party/shell/PartyFooter.vue
+git mv frontend/public-site/src/sites/party/styles/party-building.css frontend/public-site/src/sites/party/styles/party.css
+
+git mv frontend/public-site/tests/e2e/party-building-content-routing.spec.ts frontend/public-site/tests/e2e/party-content-routing.spec.ts
+git mv frontend/public-site/tests/e2e/party-building-foundation.spec.ts frontend/public-site/tests/e2e/party-foundation.spec.ts
+git mv frontend/public-site/tests/e2e/party-building-reference-evidence.spec.ts frontend/public-site/tests/e2e/party-reference-evidence.spec.ts
+git mv frontend/public-site/tests/e2e/party-building-visual-fidelity.spec.ts frontend/public-site/tests/e2e/party-visual-fidelity.spec.ts
+
+git mv site-baseline/static/party-building site-baseline/static/party
+git mv docs/requirements/party-building-positioning.md docs/requirements/party-positioning.md
+git mv docs/specifications/party-building.md docs/specifications/party.md
+git mv docs/technical/party-building-frontend.md docs/technical/party-frontend.md
+git mv docs/work/party-building-convergence-execution-units.md docs/work/party-convergence-execution-units.md
+
+python3 <<'PY'
+from pathlib import Path
+import subprocess
+
+skip = {
+    Path('backend/src/main/resources/db/migration/V13__party_building_entry.sql'),
+    Path('backend/src/main/resources/db/migration/V14__party_building_structure.sql'),
+    Path('.github/workflows/party-naming-refactor.yml'),
+    Path('.github/scripts/party-naming-refactor.sh'),
+}
+replacements = [
+    ('PartyBuildingView', 'PartyHomeView'),
+    ('PartyBuildingArticleView', 'PartyArticleView'),
+    ('PartyBuildingColumnView', 'PartyColumnView'),
+    ('PartyBuildingHeader', 'PartyHeader'),
+    ('PartyBuildingFooter', 'PartyFooter'),
+    ('party-building-entry', 'party-home'),
+    ('party-building-column', 'party-column'),
+    ('party-building-article', 'party-article'),
+    ('party-building-site', 'party-site'),
+    ('party-building-header', 'party-header'),
+    ('party-building-footer', 'party-footer'),
+    ('party-building-positioning.md', 'party-positioning.md'),
+    ('party-building-convergence-execution-units.md', 'party-convergence-execution-units.md'),
+    ('party-building-frontend.md', 'party-frontend.md'),
+    ('party-building-visual-fidelity.spec.ts', 'party-visual-fidelity.spec.ts'),
+    ('party-building-reference-evidence.spec.ts', 'party-reference-evidence.spec.ts'),
+    ('party-building-content-routing.spec.ts', 'party-content-routing.spec.ts'),
+    ('party-building-foundation.spec.ts', 'party-foundation.spec.ts'),
+    ('PartyBuilding', 'Party'),
+    ('party-building', 'party'),
+]
+
+for raw in subprocess.check_output(['git', 'ls-files'], text=True).splitlines():
+    path = Path(raw)
+    if path in skip:
+        continue
+    try:
+        text = path.read_text(encoding='utf-8')
+    except (UnicodeDecodeError, IsADirectoryError):
+        continue
+    updated = text
+    for old, new in replacements:
+        updated = updated.replace(old, new)
+    if updated != text:
+        path.write_text(updated, encoding='utf-8')
+
+css_path = Path('frontend/public-site/src/shared/styles/public-shell.css')
+css = css_path.read_text(encoding='utf-8')
+css = css.replace(
+    '  --shared-nav-sub-bg:#fff;\n  --shared-nav-sub-color:#323b47;\n  --shared-nav-sub-border:#dfe7f1;\n  --shared-nav-sub-shadow:0 8px 18px rgba(0,50,120,.18);\n  --shared-nav-sub-hover-bg:#edf5ff;\n  --shared-nav-sub-hover-color:#005cd4;',
+    '  --shared-nav-sub-bg:var(--shared-nav-bg);\n  --shared-nav-sub-color:#fff;\n  --shared-nav-sub-border:#004eb4;\n  --shared-nav-sub-shadow:none;\n  --shared-nav-sub-hover-bg:var(--shared-nav-active-bg);\n  --shared-nav-sub-hover-color:#fff;')
+css = css.replace(
+    '  --shared-nav-sub-border:#ead9dc;\n  --shared-nav-sub-shadow:0 8px 18px rgba(120,0,20,.18);\n  --shared-nav-sub-hover-bg:#fff0f2;\n  --shared-nav-sub-hover-color:#ad001d;',
+    '  --shared-nav-sub-border:#ad001d;')
+css = css.replace(
+    '  font-size:14px;\n  font-weight:400;\n  text-decoration:none;',
+    '  font-size:16px;\n  font-weight:700;\n  text-decoration:none;', 1)
+css = css.replace(
+    '  min-width:160px;\n  margin:0;\n  padding:5px 0;\n  list-style:none;\n  background:var(--shared-nav-sub-bg);\n  color:var(--shared-nav-sub-color);\n  border:1px solid var(--shared-nav-sub-border);\n  box-shadow:var(--shared-nav-sub-shadow);',
+    '  min-width:160px;\n  margin:0;\n  padding:5px 0 0;\n  list-style:none;\n  background:var(--shared-nav-sub-bg);\n  color:var(--shared-nav-sub-color);\n  border:0;\n  box-shadow:var(--shared-nav-sub-shadow);')
+css = css.replace(
+    '.shared-public-nav-children li{min-width:160px;text-align:left}',
+    '.shared-public-nav-children li{min-width:160px;min-height:50px;text-align:left;background:var(--shared-nav-sub-bg);border-bottom:1px solid var(--shared-nav-sub-border)}')
+css = css.replace(
+    '  display:block;\n  padding:11px 18px;\n  color:var(--shared-nav-sub-color);\n  font-size:14px;\n  font-weight:400;\n  line-height:1.5;',
+    '  min-height:49px;\n  display:flex;\n  align-items:center;\n  padding:0 15px;\n  color:var(--shared-nav-sub-color);\n  font-size:16px;\n  font-weight:700;\n  line-height:1.5;')
+css = css.replace(
+    '  .shared-public-nav-children li{min-width:0;width:100%}\n  .shared-public-nav-children a,.shared-public-nav-children span{padding:8px 12px;color:#fff;white-space:normal}',
+    '  .shared-public-nav-children li{min-width:0;width:100%;min-height:0;border-bottom:1px solid rgba(255,255,255,.16)}\n  .shared-public-nav-children a,.shared-public-nav-children span{min-height:0;padding:8px 12px;color:#fff;font-size:14px;white-space:normal}')
+css_path.write_text(css, encoding='utf-8')
+
+for html_name in ('index.html', 'party.html'):
+    path = Path('frontend/public-site') / html_name
+    text = path.read_text(encoding='utf-8')
+    old = '<link rel="icon" type="image/png" href="/static/brand/site-favicon.png" />'
+    new = '<link rel="icon" type="image/png" sizes="128x128" href="/static/brand/site-favicon.png" />\n    <link rel="shortcut icon" type="image/png" href="/static/brand/site-favicon.png" />'
+    path.write_text(text.replace(old, new), encoding='utf-8')
+
+visual = Path('frontend/public-site/tests/e2e/party-visual-fidelity.spec.ts')
+text = visual.read_text(encoding='utf-8')
+text = text.replace("expect(partyNavigationFont).toEqual({ fontSize: '14px', fontWeight: '400' })", "expect(partyNavigationFont).toEqual({ fontSize: '16px', fontWeight: '700' })")
+marker = "  const rootWithChildrenElement = partyNavigation.locator('.shared-public-nav-root > .shared-public-nav-item').nth(rootWithChildrenIndex)"
+text = text.replace(marker, "  const mainRootWithChildren = mainNavigation.locator('.shared-public-nav-root > .shared-public-nav-item').nth(rootWithChildrenIndex)\n  await mainRootWithChildren.hover()\n  const mainChildMenu = mainRootWithChildren.locator(':scope > .shared-public-nav-children')\n  await expect(mainChildMenu).toBeVisible()\n  await expect(mainChildMenu).toHaveCSS('background-color', 'rgb(0, 92, 212)')\n  await expect(mainChildMenu.locator('a, span').first()).toHaveCSS('color', 'rgb(255, 255, 255)')\n\n" + marker)
+party_marker = "  await rootWithChildrenElement.hover()\n  await expect(childMenu).toBeVisible()"
+text = text.replace(party_marker, "  await rootWithChildrenElement.hover()\n  await expect(childMenu).toBeVisible()\n  await expect(childMenu).toHaveCSS('background-color', 'rgb(208, 0, 35)')\n  await expect(childMenu.locator('a, span').first()).toHaveCSS('color', 'rgb(255, 255, 255)')\n  await expect(childMenu.locator('a, span').first()).toHaveCSS('font-size', '16px')\n  await expect(childMenu.locator('a, span').first()).toHaveCSS('font-weight', '700')")
+visual.write_text(text, encoding='utf-8')
+
+favicon_test = Path('frontend/public-site/tests/e2e/footer-visual.spec.ts')
+text = favicon_test.read_text(encoding='utf-8')
+text += '''\n\ntest('视觉基线：Main 与 Party Entry 的 favicon 均由版本化 PNG 正常加载', async ({ page, request }) => {\n  const faviconPath = '/static/brand/site-favicon.png'\n  const response = await request.get(faviconPath)\n  expect(response.ok()).toBeTruthy()\n  expect(response.headers()['content-type']).toContain('image/png')\n  const body = await response.body()\n  expect(body.length).toBeGreaterThan(100)\n  expect(body.subarray(0, PNG_SIGNATURE.length).equals(PNG_SIGNATURE)).toBeTruthy()\n\n  for (const entry of ['/', '/party/']) {\n    await page.goto(entry)\n    await expect(page.locator('link[rel="icon"]')).toHaveAttribute('href', faviconPath)\n    await expect(page.locator('link[rel="icon"]')).toHaveAttribute('sizes', '128x128')\n    await expect(page.locator('link[rel="shortcut icon"]')).toHaveAttribute('href', faviconPath)\n  }\n})\n'''
+favicon_test.write_text(text, encoding='utf-8')
+PY
+
+cat > backend/src/main/resources/db/migration/V16__party_naming_convergence.sql <<'SQL'
+-- Current technical naming uses "party"; preserve executed V13/V14 migration history unchanged.
+UPDATE cms_column
+SET alias = 'party'
+WHERE alias = 'party-building'
+  AND NOT EXISTS (
+    SELECT 1 FROM (SELECT alias FROM cms_column WHERE alias = 'party') AS existing_party
+  );
+SQL
+
+stale=$(git grep -n -E 'party-building|PartyBuilding' -- ':!backend/src/main/resources/db/migration/V13__party_building_entry.sql' ':!backend/src/main/resources/db/migration/V14__party_building_structure.sql' ':!.github/workflows/party-naming-refactor.yml' ':!.github/scripts/party-naming-refactor.sh' || true)
+if [ -n "$stale" ]; then
+  echo '仍存在旧 Party 技术命名：'
+  echo "$stale"
+  exit 1
+fi
+
+git add -A
+git commit -m 'refactor(party): 统一中心党建命名与公共导航视觉'
+git push origin HEAD:feat/party-building-visual-fidelity
