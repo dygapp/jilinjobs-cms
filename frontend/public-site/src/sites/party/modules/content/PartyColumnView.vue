@@ -20,13 +20,24 @@ const pageCount = computed(() => Math.max(1, Math.ceil(total.value / size.value)
 const hasPrevious = computed(() => page.value > 0)
 const hasNext = computed(() => page.value + 1 < pageCount.value)
 
-watch(() => [route.params.alias, route.query.page, route.query.size], load, { immediate: true })
+watch(
+  () => [route.params.alias, route.query.page, route.query.size],
+  (_value, _oldValue, onCleanup) => {
+    let current = true
+    onCleanup(() => {
+      current = false
+    })
+    void load(() => current)
+  },
+  { immediate: true },
+)
 
-async function load() {
+async function load(isCurrent: () => boolean) {
   const alias = route.params.alias
   error.value = ''
   articles.value = []
   total.value = 0
+  loading.value = false
   if (!isPartyColumnAlias(alias)) {
     columnName.value = ''
     error.value = '党建栏目不可用或不存在'
@@ -35,21 +46,25 @@ async function load() {
 
   const requestedPage = Math.max(0, Number(route.query.page ?? 0) || 0)
   const requestedSize = Number(route.query.size ?? 10)
-  size.value = allowedSizes.includes(requestedSize) ? requestedSize : 10
+  const pageSize = allowedSizes.includes(requestedSize) ? requestedSize : 10
+  size.value = pageSize
   loading.value = true
   try {
     const column = await getPartyColumn(alias)
-    const result = await listPublicArticles(column.id, requestedPage, size.value)
+    if (!isCurrent()) return
+    const result = await listPublicArticles(column.id, requestedPage, pageSize)
+    if (!isCurrent()) return
     columnName.value = column.name
     articles.value = result.items
     total.value = result.total
     page.value = result.page
     setPageMeta({ title: column.name, description: `浏览中心党建“${column.name}”栏目已发布信息。` })
   } catch (e) {
+    if (!isCurrent()) return
     columnName.value = ''
     error.value = e instanceof Error ? e.message : '党建栏目加载失败'
   } finally {
-    loading.value = false
+    if (isCurrent()) loading.value = false
   }
 }
 
