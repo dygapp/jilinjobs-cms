@@ -52,14 +52,15 @@ async function seedVisualContent(request: APIRequestContext, suffix: string) {
   const lists = await listsResponse.json() as Array<{ id: number; code: string }>
   const carousel = lists.find(item => item.code === 'PARTY_HOME_CAROUSEL')
   expect(carousel).toBeTruthy()
-  const aliases = ['party-voice', 'party-work', 'party-rules', 'party-study']
+  const aliases = ['party-voice', 'party-work', 'party-rules', 'party-study'] as const
   const carouselItems: CarouselItem[] = []
   for (let index = 0; index < 4; index += 1) {
+    const targetArticle = articles[aliases[index]]
     const response = await request.post(`/api/admin/lists/${carousel!.id}/items`, {
       data: {
         title: `党建轮播代表内容 ${index + 1}-${suffix}`,
         subtitle: null,
-        url: `/party/column/${aliases[index]}`,
+        url: `/party/article/${targetArticle.id}`,
         imagePath: '/static/health/baseline.png',
         openMode: 'DEFAULT',
         sortOrder: index * 10,
@@ -79,6 +80,8 @@ test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer �
     '/static/party-building/ic-title-yellow.png',
     '/static/party-building/section-marker.png',
     '/static/footer/public-security-record.png',
+    '/static/footer/public-institution.png',
+    '/static/footer/wechat-qr.png',
   ]) {
     const response = await request.get(path)
     expect(response.ok(), `${path} 应由版本化静态基线提供`).toBeTruthy()
@@ -105,13 +108,16 @@ test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer �
   await expect(page.locator('.party-voice-list li').first()).toHaveCSS('min-height', '20px')
   await expect(page.locator('.party-work-list')).toHaveCSS('display', 'block')
   await expect(page.locator('.party-footer')).toHaveCSS('background-color', 'rgb(173, 0, 29)')
-  await expect(page.locator('.party-footer-inner')).toHaveCSS('text-align', 'left')
+  await expect(page.locator('.party-footer-layout')).toHaveCSS('display', 'flex')
+  await expect(page.locator('.party-footer-layout')).toHaveCSS('text-align', 'left')
   await expect(page.locator('.party-public-security-record img')).toBeVisible()
+  await expect(page.locator('.party-public-institution-badge img')).toBeVisible()
+  await expect(page.locator('.party-wechat-entry img')).toBeVisible()
   await expect(page.locator('.party-emblem')).toHaveCount(0)
   await expect(page.locator('.party-hero')).toHaveCount(0)
 })
 
-test('EU-28：党建 Desktop / Mobile 当前视觉截图形成 Current Evidence 且轮播可跳转', async ({ page, request }, testInfo) => {
+test('EU-28：党建 Desktop / Mobile 当前视觉截图形成 Current Evidence 且轮播进入对应新闻详情', async ({ page, request }, testInfo) => {
   const suffix = `${Date.now()}-${testInfo.retry}`
   const { articles, carouselItems } = await seedVisualContent(request, suffix)
 
@@ -119,9 +125,10 @@ test('EU-28：党建 Desktop / Mobile 当前视觉截图形成 Current Evidence 
   await page.goto('/party/')
   await expect(page.getByText(articles['party-voice'].title, { exact: true })).toBeVisible()
   const firstSeededCarousel = page.getByTestId(`party-carousel-item-${carouselItems[0].id}`).locator('a')
-  await expect(firstSeededCarousel).toHaveAttribute('href', '/party/column/party-voice')
+  await expect(firstSeededCarousel).toHaveAttribute('href', `/party/article/${articles['party-voice'].id}`)
   await firstSeededCarousel.click({ force: true })
-  await expect(page).toHaveURL(/\/party\/column\/party-voice$/)
+  await expect(page).toHaveURL(new RegExp(`/party/article/${articles['party-voice'].id}$`))
+  await expect(page.getByTestId('party-article-title')).toHaveText(articles['party-voice'].title)
   await page.goto('/party/')
   await page.waitForTimeout(200)
   await testInfo.attach('party-home-desktop-current.png', {
