@@ -24,9 +24,28 @@ Fresh Database
 
 ### 2.2 Frontend Verify
 
-每个独立前端工程分别执行 npm 依赖安装、`vue-tsc` 与 Vite build。
+每个独立前端工程分别执行 npm 依赖安装、Vue-aware type-check 与 Vite build。
+
+当前 `frontend/public-site` 与 `frontend/admin` 的 `npm run build` 均由 Consumer package script 串联 `vue-tsc --noEmit && vite build`。因此成功的项目 build script 同时提供 Vue SFC type-check 与 bundler build evidence；证据记录仍应区分这两个子层，不能把“Vite transpile / bundle 成功”单独描述为类型验证成功。
 
 前端工程物理拆分后，公开站点与管理端分别形成独立 build artifact 和验证入口；不得用其中一个应用的成功构建替代另一个应用的验证。
+
+不得为了匹配外部 Technology Profile 的 Research Anchor 机械升级 Vue、TypeScript、`vue-tsc`、Vite 或其他依赖；验证以当前 Consumer 实际 package、tsconfig、Architecture 和命令为准。
+
+#### 2.2.1 Vue 3 + TypeScript Verification Profile 映射
+
+前端变更按实际风险选择验证层，不机械运行所有层：
+
+| 变更类型 | 最低当前证据 | 需要追加的证据 |
+|---|---|---|
+| SFC template、props、emits | Vue-aware type-check | 有运行时行为变化时追加行为测试 |
+| reactivity、computed、composable | Vue-aware type-check + 能证明依赖变化后状态正确的行为测试 | 跨页面/跨组件时按实际边界追加 Browser |
+| `watch` / lifecycle / async side effect | Vue-aware type-check + 触发/时序/旧工作失效等行为测试 | 涉及 Router / DOM / 用户可见状态时追加 Browser E2E |
+| DOM、Router、template ref、用户交互 | Vue-aware type-check + Browser E2E | 有视觉 Acceptance 时追加 AI/Human Visual Evidence |
+| build / module / tsconfig | Vue-aware type-check + Vite build | 影响 Entry / Runtime 时追加 Browser / Integration |
+| 仅 TypeScript 类型变化 | Vue-aware type-check | 是否追加行为测试取决于 Acceptance 风险 |
+
+Profile 只提供默认风险映射；本仓库的 Requirement、Specification、Architecture、实际命令和现有 Workflow 可以增加、收窄或替代 Engineering Default，但不能违反 Vue / TypeScript 客观语义。
 
 ### 2.3 Completion E2E
 
@@ -45,6 +64,7 @@ Functional Browser Verification 用于证明路由、交互、资源加载和已
 - 对分页、Top-N、窗口截断相关行为，测试数据应能跨越实际分页/窗口边界，或直接断言请求携带正确作用域参数；少量样例数据 PASS 不能单独证明数据量增长后的正确性。
 - 如果页面需要从某个作用域中继续筛选子类型，例如只消费某栏目中的 `EXTERNAL_LINK`，应在该作用域内继续分页直到取得所需数量或耗尽数据，不回退到无作用域的固定全局窗口。
 - Browser E2E 对异步页面不以 `page.goto()` 完成、DOM 节点早期存在或固定 `sleep` 作为数据装配完成条件；应等待可观察的语义完成信号，例如 loading 状态结束、成功内容容器出现、预期响应完成或等价稳定状态。
+- 对 Router / query / watcher 驱动的异步页面，测试应覆盖“较早但较慢的请求在路由已变化后才完成”的场景；旧请求不得覆盖当前路由对应的成功、错误、loading、metadata 或导航副作用。优先通过受控响应顺序和可观察 response / DOM 状态验证，不用固定 sleep 代替完成条件。
 - 如果实现从单次请求演进为多个并行/分阶段请求后旧测试出现时序失败，先按第 3 节分类。不能为了迎合测试中的偶然时序恢复错误的数据访问方式；应修正陈旧完成条件，或在实现层补齐本就合理的 loading / empty / error 状态契约。
 
 ## 3. 验证失败分类
@@ -182,34 +202,15 @@ Reference Evidence
 
 ### 7.1 Reference Evidence
 
-从当前原网站运行时直接取得必要证据，例如：
-
-- 完整页面截图；
-- DOM / computed style；
-- 真实静态资源 URL；
-- 页面宽度、颜色、间距、图片比例和响应式表现。
-
-不得凭聊天记忆、旧截图印象或实现便利性自行推断视觉事实。
+从当前原网站运行时直接取得必要证据，例如完整页面截图、DOM / computed style、真实静态资源 URL、页面宽度、颜色、间距、图片比例和响应式表现。不得凭聊天记忆、旧截图印象或实现便利性自行推断视觉事实。
 
 ### 7.2 AI Visual Comparison
 
-在 Human Review 前，优先使用 Review Runtime 完整截图与参考截图对照，消除明显的：
-
-- 大面积颜色偏差；
-- Header / Nav / Footer 结构偏差；
-- 主要区块比例和层级偏差；
-- 图片资源错误或缺失；
-- 明显裁切、溢出和响应式问题。
-
-AI Visual Comparison 是人工评审前的收敛手段，不替代 Human Visual Review。
+在 Human Review 前，优先使用 Review Runtime 完整截图与参考截图对照，消除明显的大面积颜色偏差、Header / Nav / Footer 结构偏差、主要区块比例和层级偏差、图片资源错误或缺失，以及裁切、溢出和响应式问题。AI Visual Comparison 不替代 Human Visual Review。
 
 ### 7.3 Human Visual Review
 
-人工 Review 承担最终视觉判断，包括现网视觉复刻精度、具体间距和字号、图片比例、页面级体验、移动端可读性以及其他难以通过稳定机器阈值表达的差异。
-
-人工结论必须按原始范围记录。例如“基本通过，暂未发现新的阻塞问题”不能扩大为“完全一致”或无条件验收。
-
-低风险视觉 / 交互问题可在人工 Review 后增量修订；数据模型、Scope 和重大用户行为改变仍按 Product Intent 处理。
+人工 Review 承担最终视觉判断，包括现网视觉复刻精度、具体间距和字号、图片比例、页面级体验、移动端可读性及其他难以稳定机器化表达的差异。人工结论按原始范围记录，不扩大为“完全一致”或无条件验收。
 
 ## 8. 外部媒体与二进制输入验证
 
@@ -228,89 +229,35 @@ Acquire
 
 ## 9. 当前管理端收敛验证路径
 
-管理端工程分离与功能收敛阶段至少遵循：
-
-1. Backend Verify；
-2. Public Site Frontend Verify；
-3. Admin Frontend Verify；
-4. 集成 Runtime 启动，验证 `/`、公开 canonical URL、`/admin/` 和 `/api/**` 路由；
-5. Browser E2E 验证管理端自身核心流程；
-6. Browser E2E 验证后台变更到公开站展示的跨边界闭环；
-7. 收集当前 Head 的测试报告、trace / screenshot 等必要 Current Evidence；
-8. 自动验证后恢复数据库和版本化静态资源基线；
-9. 注入明确的 Human Admin Review Fixture，并验证自动测试残留已清除；
-10. 验证外部 Review URL 的公开站与 `/admin/` 均可访问；
-11. 进入 Human Admin Review；
-12. Human Review Finding 按第 6 节分类路由，不因“管理端评审”名称自动决定处理方式。
+管理端工程分离与功能收敛阶段至少遵循：Backend Verify、Public Site Frontend Verify、Admin Frontend Verify、集成 Runtime、Browser E2E 管理端核心流程与跨边界闭环、Current Evidence 收集、自动验证后的 baseline reset、Human Admin Review Fixture、外部 Review URL 验证和 Human Admin Review Finding 分类。
 
 ### 9.1 V4.6 数据契约专项验证
 
-本轮图片数据策略与网站属性元数据必须至少形成以下机器证据：
-
-- Backend 单元测试：SiteProperty metadata groups 能按 order 输出；未知 group 拒绝；INTEGER 校验；`HOME_CAROUSEL_INTERVAL_SECONDS` 拒绝 0/负数；
-- Backend 单元测试：Column `NONE` 拒绝站内文章封面；`REQUIRED` 允许无封面 DRAFT 但阻止 publish；PUBLISHED Article update 不得删除 REQUIRED 封面；Public Summary 能返回封面引用；
-- Browser/API：HOME_CAROUSEL 定义为 REQUIRED，当前 SITE_LINKS 基线为 NONE；直接 API 对 REQUIRED 缺图与 NONE 带图均拒绝，证明约束不只存在于 UI；
-- Admin Browser：栏目 REQUIRED 策略、文章 REQUIRED 提示、列表 NONE/REQUIRED UI、SiteProperty 左侧 PRESENTATION 元数据分组和受控 group Select 可观察；
-- Admin Browser：INTEGER 非整数输入在 UI 被阻止；最终正整数约束仍由 Backend 证明；
-- Cross-boundary Browser：临时把 `HOME_CAROUSEL_INTERVAL_SECONDS` 改为 1 秒并为 HOME_CAROUSEL 增加第二张有效图片，打开真实公开首页后验证 `data-carousel-item-id` 在时限内实际变化；finally 删除测试项并恢复原配置。
-
-这些策略只验证“数据是否允许/要求图片”和轮播行为参数，不建立“图片策略决定页面布局”的断言；不得把数据契约误写成 `displayMode`。
+既有 V4.6 图片数据策略与网站属性元数据验证要求继续有效，包括 Backend 约束、HOME_CAROUSEL / SITE_LINKS 图片策略、Admin Browser 元数据与整数校验，以及真实公开首页轮播行为的 cross-boundary Browser Evidence。
 
 ### 9.2 管理端最终视觉交互专项验证
 
-合并前最终视觉收敛至少验证：
-
-- 主侧边栏默认展开，点击后进入紧凑状态并保留全部八类路由入口，再次点击可恢复；
-- 文章栏目导航与网站属性分组面板至少各验证一次收起/展开；收起后右侧内容仍可操作且恢复按钮可见；
-- 表格图标操作必须保留 `aria-label`，Browser role/name 定位继续通过；至少对一个操作执行 hover 并验证 Tooltip 文本；
-- 网站属性 Table 不再包含常驻可编辑输入/图片上传器；点击“编辑值”后才出现类型化 Dialog；
-- `HOME_CAROUSEL_INTERVAL_SECONDS` 在值编辑 Dialog 中仍拒绝非整数；动态 JSON 属性在值编辑 Dialog 中仍拒绝非法 JSON；
-- SiteProperty 定义 Dialog 与值编辑职责分离，新建定义仍允许初始值；
-- 不增加“后台显示风格”系统属性、用户配置 API、Profile 数据或其他与当前无账号基线冲突的持久化能力。
+既有管理端视觉交互专项要求继续有效，包括侧边栏/上下文面板收起展开、图标操作可访问名称与 Tooltip、网站属性值编辑 Dialog、INTEGER/JSON 校验、定义和值编辑职责分离，以及不得引入与当前无账号基线冲突的持久化 UI 偏好。
 
 ### 9.3 图片预览与配置治理专项验证
 
-统一图片预览与受保护资源配置整改至少验证：
-
-- `cms.static.protected-resources` 的默认值能够保护工程基线资源，并允许通过 `CMS_STATIC_PROTECTED_RESOURCES` 进行部署覆盖；固定工程保护路径不得再次散落写入 `StaticResourceService`；
-- 当前启用的网站属性 `RESOURCE_PATH`、列表图片、宣传展示图片和导航图标仍由 Backend Runtime 动态加入受保护集合，不改为管理员人工维护的 `protected=true` 数据字段；
-- Admin 静态资源列表使用“受保护”语义，受保护资源普通删除入口禁用且 Backend 最终拒绝删除，明确替换行为仍可使用；
-- 网站属性、列表、宣传展示、导航和静态资源等需要辨识图片内容的位置复用统一自适应图片组件，不再各自维护白底 `<img>` 预览；
-- 自适应图片组件负责浅色、深色、透明图片的可辨识背景，放大、缩放、旋转和 Viewer 生命周期直接复用 Element Plus `el-image`，不得另建重复的大图预览器；
-- `ImageResourcePicker` 当前值预览默认启用自适应背景；图片库中的选择卡片保持“点击选择”语义，不因 Viewer 抢占选择操作；
-- 对发现的固定路径、时间间隔、外部地址、稳定 Code/Alias、分页值和安全白名单按 `configuration-governance.md` 先分类责任，不以存在字面常量作为必须配置化的判据。
+既有图片预览与配置治理专项要求继续有效：工程基线保护路径使用 Spring 外部化配置，Runtime 当前引用由 Backend 动态保护；Admin 使用“受保护”语义；图片辨识位置复用统一自适应图片组件；Viewer 复用 Element Plus `el-image`；配置候选先按 `configuration-governance.md` 分类责任，不因存在字面常量机械配置化。
 
 ## 10. AI Implementation Review
 
-最终 Completion Evidence 前，必须对本轮实现差异执行 Authority-oriented AI Review，至少检查：
+最终 Completion Evidence 前，对本轮实现差异执行 Authority-oriented AI Review。除当前 Unit 特定 Acceptance 外，继续检查：
 
-- Requirement V4.6、CMS Core / Admin / Public Specifications 与 Technical Plan 是否一致；
-- 未新增“系统设置”模块、认证/角色/权限或其他越界能力；
-- `ContentImagePolicy` 没有演变成展示模式；
-- Backend 是图片必填/禁用、属性分组、整数值等最终约束层；
-- 已发布 Article 不存在通过普通编辑绕开 REQUIRED 封面的状态漏洞；
-- Public Summary 真正补齐 cover resource，而不只是 DTO 字段存在；
-- HOME_CAROUSEL interval 的配置、读取、实际 timer 行为和 cleanup fixture 一致；
-- 管理端收起状态仅为前端界面状态，没有引入新的系统/用户配置模型；
-- 图标化操作保留可访问名称，网站属性值编辑从列表内联迁移到 Dialog 后没有削弱原有类型校验和 Backend 约束；
-- 固定工程受保护资源由 Spring 外部化配置拥有，CMS 当前引用资源继续由 Backend 动态计算，不能把两类保护来源混成管理员维护字段；
-- 图片缩略图统一复用自适应公共组件，Element Plus `el-image` 负责通用 Viewer 能力，没有重复实现预览 Dialog / Viewer；
-- 新发现的硬编码候选已按 `configuration-governance.md` 判断其责任层；稳定领域、安全和页面模板契约不得为了消除常量而错误配置化；
-- CI / Review / FRP 环境参数不得进入 CMS 网站属性；只有在确有环境差异需求时才迁移为 Repository / Environment / Deployment Variables；
-- V11/V12 等既有 migration 没有因纯管理端视觉或配置治理调整被回改；
+- 未新增越界能力；
+- Backend / Frontend 职责没有因实现便利被反转；
+- 既有 Migration 不因无关调整被回改；
+- 当前硬编码/配置候选已按 `configuration-governance.md` 判断责任层；
+- 已有框架、标准库、依赖和公共组件满足契约时优先复用，未为复用扩大依赖面；
+- Implementation Minimality 没有引入无当前证据支持的抽象、配置、依赖、扩展点或未来设计；
+- Final Diff Scope 中每个有意义区域能追溯到当前 Unit、验证、Authority 同步、必要 preparatory refactor 或其直接 cleanup；
 - 无无关文件、临时文件、调试入口或测试残留进入 PR。
 
-发现 Implementation Defect 时直接在当前授权范围修复，并重新取得新 Head Evidence；不得用“AI Review 已完成”代替修复后的测试。
+发现 Implementation Defect 时在授权范围内修复，并重新取得新 Head Evidence；不得用“AI Review 已完成”替代修复后的测试。
 
 ## 11. 异步 Actions 观察
 
-Actions 中 queued / pending / in_progress 均为中间状态。
-
-当结果仍可通过当前授权路径观察时，应进行有界持续观察，直到：
-
-- 成功并取得所需证据；
-- 失败并完成诊断 / 授权内修复 / 重跑；
-- 出现真实权限、业务、架构或 Runtime 阻塞；
-- 达到有界观察退出条件并明确记录 `Executed but not fully verified`。
-
-Dispatch / rerun API 返回成功不等于验证完成。
+Actions 中 queued / pending / in_progress 均为中间状态。当结果仍可通过当前授权路径观察时，应有界持续观察，直到成功并取得证据；失败并完成诊断/授权内修复/重跑；出现真实权限、业务、架构或 Runtime 阻塞；或达到有界观察退出条件并明确记录 `Executed but not fully verified`。Dispatch / rerun API 返回成功不等于验证完成。
