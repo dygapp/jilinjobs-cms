@@ -13,7 +13,7 @@ type NavigationItem = {
   clickable: boolean
 }
 
-const ORIGINAL_PARTY_BANNER = 'https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png'
+const PARTY_BANNER = '/static/party-building/party-header-banner.jpg'
 
 async function partyColumns(request: APIRequestContext) {
   const response = await request.get('/api/admin/columns')
@@ -85,8 +85,9 @@ async function seedVisualContent(request: APIRequestContext, suffix: string) {
   return { articles, carouselItems }
 }
 
-test('EU-28：中心党建 Banner 使用原站资源且不可点击，公共导航和页脚仅覆盖红色主题', async ({ page, request }) => {
+test('EU-28：中心党建 Banner 使用本地原站基线资源且不可点击，公共导航和页脚仅覆盖红色主题', async ({ page, request }) => {
   for (const path of [
+    PARTY_BANNER,
     '/static/party-building/ic-title-yellow.png',
     '/static/party-building/section-marker.png',
     '/static/footer/public-security-record.png',
@@ -96,9 +97,6 @@ test('EU-28：中心党建 Banner 使用原站资源且不可点击，公共导�
     const response = await request.get(path)
     expect(response.ok(), `${path} 应由版本化静态基线提供`).toBeTruthy()
   }
-
-  const originalBannerResponse = await request.get(ORIGINAL_PARTY_BANNER)
-  expect(originalBannerResponse.ok(), '原站中心党建 Banner 应可直接读取').toBeTruthy()
 
   const navigationResponse = await request.get('/api/public/navigations')
   expect(navigationResponse.ok()).toBeTruthy()
@@ -129,7 +127,7 @@ test('EU-28：中心党建 Banner 使用原站资源且不可点击，公共导�
   const bannerImage = banner.locator('.party-banner-image')
   await expect(banner).toHaveCSS('height', '320px')
   await expect(banner.locator('a')).toHaveCount(0)
-  await expect(bannerImage).toHaveAttribute('src', ORIGINAL_PARTY_BANNER)
+  await expect(bannerImage).toHaveAttribute('src', PARTY_BANNER)
   await expect(bannerImage).toBeVisible()
   const dimensions = await bannerImage.evaluate(image => {
     const element = image as HTMLImageElement
