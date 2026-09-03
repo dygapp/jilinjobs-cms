@@ -221,8 +221,8 @@ jobs:
           }
 
           create_carousel_item() {
-            title="$1"; sort_order="$2"
-            payload=$(jq -n --arg title "$title" --argjson sortOrder "$sort_order" '{title:$title,subtitle:"人工评审示例（非历史迁移内容）",url:null,imagePath:"/static/party-building/party-header-banner.webp",openMode:"DEFAULT",sortOrder:$sortOrder,enabled:true,extraJson:null}')
+            title="$1"; sort_order="$2"; url="$3"
+            payload=$(jq -n --arg title "$title" --arg url "$url" --argjson sortOrder "$sort_order" '{title:$title,subtitle:"人工评审示例（非历史迁移内容）",url:$url,imagePath:"/static/party-building/party-header-banner.webp",openMode:"DEFAULT",sortOrder:$sortOrder,enabled:true,extraJson:null}')
             curl --fail --silent -H 'Content-Type: application/json' -d "$payload" "http://127.0.0.1:5173/api/admin/lists/${party_carousel_id}/items" > /dev/null
           }
 
@@ -252,13 +252,13 @@ jobs:
           create_article "$party_study_id" '党建人工评审示例：理论学习专题（二）' '2026-08-26' '中心党建 Human Review Fixture'
           create_article "$party_study_id" '党建人工评审示例：理论学习专题（三）' '2026-08-25' '中心党建 Human Review Fixture'
 
-          create_carousel_item '党建人工评审示例轮播（一）' 0
-          create_carousel_item '党建人工评审示例轮播（二）' 10
-          create_carousel_item '党建人工评审示例轮播（三）' 20
-          create_carousel_item '党建人工评审示例轮播（四）' 30
+          create_carousel_item '党建人工评审示例轮播（一）' 0 '/party/column/party-voice'
+          create_carousel_item '党建人工评审示例轮播（二）' 10 '/party/column/party-work'
+          create_carousel_item '党建人工评审示例轮播（三）' 20 '/party/column/party-rules'
+          create_carousel_item '党建人工评审示例轮播（四）' 30 '/party/column/party-study'
 
           curl --fail --silent 'http://127.0.0.1:5173/api/public/articles?page=0&size=50' | jq --exit-status '.total >= 20' > /dev/null
-          curl --fail --silent http://127.0.0.1:5173/api/public/lists/by-code/PARTY_HOME_CAROUSEL | jq --exit-status '.items | length == 4' > /dev/null
+          curl --fail --silent http://127.0.0.1:5173/api/public/lists/by-code/PARTY_HOME_CAROUSEL | jq --exit-status '.items | length == 4 and all(.items[]; .url != null)' > /dev/null
           curl --fail --silent http://127.0.0.1:5173/admin/articles | grep -qi '<html'
           curl --fail --silent http://127.0.0.1:5173/party/ | grep -qi '<html'
 
@@ -328,14 +328,14 @@ jobs:
             if [ "$i" -eq 30 ]; then echo "评审地址验证失败"; cat frpc.log; exit 1; fi
             sleep 2
           done
-          grep -q '<title>吉林省高等学校毕业生就业信息网</title>' review-home.html
           grep -q '<title>中心党建</title>' review-party.html
+          grep -q '<title>吉林省高等学校毕业生就业信息网</title>' review-home.html
           grep -q '内容管理' review-admin.html
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/home/header-banner.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/party-building/party-header-banner.webp > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/admin/columns | jq --exit-status 'length > 0' > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors 'http://review.cc-lotus.info/api/public/articles?page=0&size=50' | jq --exit-status '.total >= 20' > /dev/null
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/public/lists/by-code/PARTY_HOME_CAROUSEL | jq --exit-status '.items | length == 4' > /dev/null
+          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/public/lists/by-code/PARTY_HOME_CAROUSEL | jq --exit-status '.items | length == 4 and all(.items[]; .url != null)' > /dev/null
 
       - name: 输出评审地址
         run: |
