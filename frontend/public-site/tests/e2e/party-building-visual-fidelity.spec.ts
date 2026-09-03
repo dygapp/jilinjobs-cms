@@ -69,7 +69,7 @@ async function seedVisualContent(request: APIRequestContext, suffix: string) {
   return articles
 }
 
-test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer 使用正式红色基线', async ({ page, request }) => {
+test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer 使用正式视觉基线', async ({ page, request }) => {
   for (const path of [
     '/static/party-building/party-header-banner.webp',
     '/static/party-building/ic-title-yellow.png',
@@ -79,10 +79,19 @@ test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer �
     expect(response.ok(), `${path} 应由版本化静态基线提供`).toBeTruthy()
   }
 
+  await page.setViewportSize({ width: 1440, height: 1000 })
   await page.goto('/party/')
-  await expect(page.locator('.party-banner')).toHaveCSS('background-image', /party-header-banner\.webp/)
+  const banner = page.locator('.party-banner')
+  await expect(banner).toHaveCSS('background-image', /party-header-banner\.webp/)
+  await expect(banner).toHaveCSS('height', '320px')
   await expect(page.locator('.party-navigation')).toHaveCSS('background-color', 'rgb(208, 0, 35)')
+  const firstNavigation = page.locator('.party-nav-root > li').first()
+  await expect(firstNavigation).toHaveCSS('width', '120px')
+  await expect(firstNavigation.locator('a, span').first()).toHaveCSS('min-height', '60px')
+  await expect(page.locator('.party-red-tab').first()).toHaveCSS('min-height', '40px')
+  await expect(page.locator('.party-work-list')).toHaveCSS('display', 'block')
   await expect(page.locator('.party-footer')).toHaveCSS('background-color', 'rgb(173, 0, 29)')
+  await expect(page.locator('.party-footer-inner')).toHaveCSS('text-align', 'left')
   await expect(page.locator('.party-emblem')).toHaveCount(0)
   await expect(page.locator('.party-hero')).toHaveCount(0)
 })
