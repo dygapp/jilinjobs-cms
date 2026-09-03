@@ -1,0 +1,146 @@
+.shared-public-shell-width{width:min(1200px,calc(100% - 32px));margin-left:auto;margin-right:auto}
+
+/* Shared public navigation: structure and interaction are identical across site entries. */
+.shared-public-navigation{
+  --shared-nav-bg:#005cd4;
+  --shared-nav-active-bg:#00439a;
+  --shared-nav-sub-bg:#fff;
+  --shared-nav-sub-color:#323b47;
+  --shared-nav-sub-border:#dfe7f1;
+  --shared-nav-sub-shadow:0 8px 18px rgba(0,50,120,.18);
+  --shared-nav-sub-hover-bg:#edf5ff;
+  --shared-nav-sub-hover-color:#005cd4;
+  --shared-nav-mobile-child-bg:#004fae;
+  height:60px;
+  position:relative;
+  z-index:30;
+  background:var(--shared-nav-bg);
+  color:#fff;
+}
+.shared-public-navigation--party{
+  --shared-nav-bg:#d00023;
+  --shared-nav-active-bg:#ad001d;
+  --shared-nav-sub-border:#ead9dc;
+  --shared-nav-sub-shadow:0 8px 18px rgba(120,0,20,.18);
+  --shared-nav-sub-hover-bg:#fff0f2;
+  --shared-nav-sub-hover-color:#ad001d;
+  --shared-nav-mobile-child-bg:#ad001d;
+}
+.shared-public-nav-mobile{display:none}
+.shared-public-nav-root{height:60px;display:flex;align-items:stretch;list-style:none;margin-top:0;margin-bottom:0;padding:0}
+.shared-public-nav-item{position:relative;flex:1;min-width:0;text-align:center}
+.shared-public-nav-link{
+  height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  padding:0 8px;
+  color:#fff;
+  font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;
+  font-size:14px;
+  font-weight:400;
+  text-decoration:none;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  cursor:pointer;
+}
+.shared-public-nav-item:hover,.shared-public-nav-item.active{background:var(--shared-nav-active-bg)}
+.shared-public-nav-arrow{width:16px;height:16px;object-fit:contain;flex:none}
+.shared-public-nav-children{
+  display:none;
+  position:absolute;
+  z-index:50;
+  top:60px;
+  left:0;
+  min-width:160px;
+  margin:0;
+  padding:5px 0;
+  list-style:none;
+  background:var(--shared-nav-sub-bg);
+  color:var(--shared-nav-sub-color);
+  border:1px solid var(--shared-nav-sub-border);
+  box-shadow:var(--shared-nav-sub-shadow);
+  text-align:left;
+}
+.shared-public-nav-item:hover>.shared-public-nav-children,
+.shared-public-nav-item:focus-within>.shared-public-nav-children{display:block}
+.shared-public-nav-children li{min-width:160px;text-align:left}
+.shared-public-nav-children a,.shared-public-nav-children span{
+  display:block;
+  padding:11px 18px;
+  color:var(--shared-nav-sub-color);
+  font-size:14px;
+  font-weight:400;
+  line-height:1.5;
+  text-decoration:none;
+  white-space:nowrap;
+}
+.shared-public-nav-children a:hover,
+.shared-public-nav-children li.active>a{
+  background:var(--shared-nav-sub-hover-bg);
+  color:var(--shared-nav-sub-hover-color);
+}
+.shared-public-nav-toggle{display:none}
+
+/* Shared public footer: content structure and responsive layout are identical across site entries. */
+.shared-public-footer{
+  --shared-footer-bg:#005cd4;
+  --shared-footer-color:#fff;
+  margin-top:0;
+  padding:0;
+  background:var(--shared-footer-bg);
+  color:var(--shared-footer-color);
+  font-size:12px;
+  line-height:1.75;
+}
+.shared-public-footer--party{--shared-footer-bg:#ad001d}
+.shared-public-footer.site-footer{padding:0}
+.shared-public-footer p{margin:2px 0}
+.shared-public-footer-layout{display:flex;align-items:center;justify-content:space-between;gap:48px;padding:27px 0;text-align:left}
+.shared-public-footer-main{min-width:0;flex:1}
+.shared-public-footer-main strong{font-weight:700}
+.shared-public-footer-records{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.shared-public-security-record{display:inline-flex;align-items:center;gap:5px;color:var(--shared-footer-color);text-decoration:none}
+.shared-public-security-record img{display:block;width:20px;height:20px;flex:none;object-fit:contain}
+.shared-public-footer-badges{display:flex;align-items:center;justify-content:flex-end;gap:26px;flex:0 0 auto;min-width:250px}
+.shared-public-institution-badge{display:flex;align-items:center;justify-content:center}
+.shared-public-institution-badge img{display:block;width:96px;height:96px;object-fit:contain}
+.shared-public-wechat-entry{display:flex;flex-direction:column;align-items:center;gap:5px;color:var(--shared-footer-color);font-size:12px;line-height:1.4;white-space:nowrap}
+.shared-public-wechat-entry img{display:block;width:92px;height:92px;object-fit:contain;background:#fff;padding:3px}
+
+@media(max-width:900px){
+  .shared-public-footer-layout{align-items:flex-start;gap:24px}
+  .shared-public-footer-badges{min-width:190px;gap:14px}
+  .shared-public-institution-badge img,.shared-public-wechat-entry img{width:76px;height:76px}
+  .shared-public-wechat-entry span{display:none}
+}
+
+@media(max-width:760px){
+  .shared-public-shell-width{width:calc(100% - 24px)}
+  .shared-public-navigation{height:auto;min-height:48px}
+  .shared-public-nav-mobile{height:48px;display:flex;align-items:center;justify-content:space-between;color:#fff}
+  .shared-public-nav-toggle{display:inline-block;padding:6px 10px;border:1px solid rgba(255,255,255,.6);background:transparent;color:#fff}
+  .shared-public-nav-root{display:none;height:auto;width:100%;padding:4px 12px 10px}
+  .shared-public-navigation.is-open .shared-public-nav-root{display:block}
+  .shared-public-nav-item{text-align:left}
+  .shared-public-nav-link{height:auto;min-height:42px;justify-content:flex-start;padding:12px;overflow:visible;text-overflow:clip}
+  .shared-public-nav-children{
+    display:block;
+    position:static;
+    min-width:0;
+    margin:0 0 4px;
+    padding:0 0 0 15px;
+    box-shadow:none;
+    border:0;
+    background:var(--shared-nav-mobile-child-bg);
+    color:#fff;
+  }
+  .shared-public-nav-children li{min-width:0;width:100%}
+  .shared-public-nav-children a,.shared-public-nav-children span{padding:8px 12px;color:#fff;white-space:normal}
+  .shared-public-nav-children a:hover,.shared-public-nav-children li.active>a{background:rgba(255,255,255,.12);color:#fff}
+  .shared-public-footer-layout{display:block}
+  .shared-public-footer-badges{justify-content:flex-start;margin-top:16px;min-width:0}
+  .shared-public-footer-records{gap:8px 12px;flex-direction:row;align-items:center}
+}

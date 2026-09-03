@@ -83,7 +83,7 @@ async function seedVisualContent(request: APIRequestContext, suffix: string) {
   return { articles, carouselItems }
 }
 
-test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer 使用正式视觉基线', async ({ page, request }) => {
+test('EU-28：党员之家复用主站公共导航和页脚结构，仅覆盖红色主题', async ({ page, request }) => {
   for (const path of [
     '/static/party-building/party-header-banner.avif',
     '/static/party-building/ic-title-yellow.png',
@@ -110,6 +110,17 @@ test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer �
     .sort((a, b) => a.sortOrder - b.sortOrder || a.id - b.id)
 
   await page.setViewportSize({ width: 1440, height: 1000 })
+
+  await page.goto('/')
+  const mainNavigation = page.locator('[data-component="public-navigation"]')
+  const mainFooter = page.locator('[data-component="public-footer"]')
+  await expect(mainNavigation).toHaveAttribute('data-theme', 'main')
+  await expect(mainFooter).toHaveAttribute('data-theme', 'main')
+  const mainNavigationFont = await mainNavigation.locator('.shared-public-nav-link').first().evaluate(element => {
+    const style = getComputedStyle(element)
+    return { fontSize: style.fontSize, fontWeight: style.fontWeight }
+  })
+
   await page.goto('/party/')
   const bannerDimensions = await page.evaluate(async () => {
     const response = await fetch('/static/party-building/party-header-banner.avif')
@@ -119,20 +130,31 @@ test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer �
     return dimensions
   })
   expect(bannerDimensions).toEqual({ width: 3072, height: 512 })
+
   const banner = page.locator('.party-banner')
   await expect(banner).toHaveCSS('background-image', /party-header-banner\.avif/)
   await expect(banner).toHaveCSS('height', '320px')
-  await expect(page.locator('.party-navigation')).toHaveCSS('background-color', 'rgb(208, 0, 35)')
-  const firstNavigation = page.locator('.party-nav-root > .party-nav-item').first()
-  await expect(firstNavigation).toHaveCSS('width', '120px')
-  const firstNavigationLink = firstNavigation.locator(':scope > .party-nav-link')
-  await expect(firstNavigationLink).toHaveCSS('min-height', '60px')
-  await expect(firstNavigationLink).toHaveCSS('font-size', '14px')
-  await expect(firstNavigationLink).toHaveCSS('font-weight', '400')
 
-  const rootWithChildrenElement = page.locator('.party-nav-root > .party-nav-item').nth(rootWithChildrenIndex)
-  await expect(rootWithChildrenElement.locator(':scope > .party-nav-link .party-nav-arrow')).toBeVisible()
-  const childMenu = rootWithChildrenElement.locator(':scope > .party-nav-children')
+  const partyNavigation = page.locator('[data-component="public-navigation"]')
+  const partyFooter = page.locator('[data-component="public-footer"]')
+  await expect(partyNavigation).toHaveAttribute('data-theme', 'party')
+  await expect(partyFooter).toHaveAttribute('data-theme', 'party')
+  await expect(partyNavigation).toHaveCSS('background-color', 'rgb(208, 0, 35)')
+  await expect(partyFooter).toHaveCSS('background-color', 'rgb(173, 0, 29)')
+
+  const firstNavigation = partyNavigation.locator('.shared-public-nav-root > .shared-public-nav-item').first()
+  const firstNavigationLink = firstNavigation.locator(':scope > .shared-public-nav-link')
+  await expect(firstNavigationLink).toHaveCSS('height', '60px')
+  const partyNavigationFont = await firstNavigationLink.evaluate(element => {
+    const style = getComputedStyle(element)
+    return { fontSize: style.fontSize, fontWeight: style.fontWeight }
+  })
+  expect(partyNavigationFont).toEqual(mainNavigationFont)
+  expect(partyNavigationFont).toEqual({ fontSize: '14px', fontWeight: '400' })
+
+  const rootWithChildrenElement = partyNavigation.locator('.shared-public-nav-root > .shared-public-nav-item').nth(rootWithChildrenIndex)
+  await expect(rootWithChildrenElement.locator(':scope > .shared-public-nav-link .shared-public-nav-arrow')).toBeVisible()
+  const childMenu = rootWithChildrenElement.locator(':scope > .shared-public-nav-children')
   await expect(childMenu.locator(':scope > li')).toHaveCount(expectedChildren.length)
   await rootWithChildrenElement.hover()
   await expect(childMenu).toBeVisible()
@@ -143,12 +165,12 @@ test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer �
   await expect(page.locator('.party-red-tab').first()).toHaveCSS('min-height', '40px')
   await expect(page.locator('.party-voice-list li').first()).toHaveCSS('min-height', '20px')
   await expect(page.locator('.party-work-list')).toHaveCSS('display', 'block')
-  await expect(page.locator('.party-footer')).toHaveCSS('background-color', 'rgb(173, 0, 29)')
-  await expect(page.locator('.party-footer-layout')).toHaveCSS('display', 'flex')
-  await expect(page.locator('.party-footer-layout')).toHaveCSS('text-align', 'left')
-  await expect(page.locator('.party-public-security-record img')).toBeVisible()
-  await expect(page.locator('.party-public-institution-badge img')).toBeVisible()
-  await expect(page.locator('.party-wechat-entry img')).toBeVisible()
+
+  await expect(partyFooter.locator('.shared-public-footer-layout')).toHaveCSS('display', 'flex')
+  await expect(partyFooter.locator('.shared-public-footer-layout')).toHaveCSS('text-align', 'left')
+  await expect(partyFooter.locator('.public-security-record img')).toBeVisible()
+  await expect(partyFooter.locator('.public-institution-badge img')).toBeVisible()
+  await expect(partyFooter.locator('.wechat-entry img')).toBeVisible()
   await expect(page.locator('.party-emblem')).toHaveCount(0)
   await expect(page.locator('.party-hero')).toHaveCount(0)
 })
@@ -190,12 +212,12 @@ test('EU-28：党建 Desktop / Mobile 当前视觉截图形成 Current Evidence 
   await page.goto('/party/')
   const dimensions = await page.evaluate(() => ({ viewport: innerWidth, documentWidth: document.documentElement.scrollWidth }))
   expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewport)
-  await expect(page.locator('.party-footer-layout')).toHaveCSS('display', 'block')
-  await expect(page.locator('.party-footer-records')).toHaveCSS('flex-direction', 'row')
-  await expect(page.locator('.party-footer-records')).toHaveCSS('align-items', 'center')
+  await expect(page.locator('.shared-public-footer-layout')).toHaveCSS('display', 'block')
+  await expect(page.locator('.shared-public-footer-records')).toHaveCSS('flex-direction', 'row')
+  await expect(page.locator('.shared-public-footer-records')).toHaveCSS('align-items', 'center')
   await page.getByRole('button', { name: '展开导航' }).click()
-  await expect(page.locator('.party-nav-root')).toBeVisible()
-  await expect(page.locator('.party-nav-children').first()).toBeVisible()
+  await expect(page.locator('.shared-public-nav-root')).toBeVisible()
+  await expect(page.locator('.shared-public-nav-children').first()).toBeVisible()
   await testInfo.attach('party-home-mobile-current.png', {
     body: await page.screenshot({ fullPage: true }),
     contentType: 'image/png',
