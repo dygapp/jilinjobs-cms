@@ -121,6 +121,16 @@ test('EU-28：中心党建 Banner 使用本地原站基线资源且不可点击�
     const style = getComputedStyle(element)
     return { fontSize: style.fontSize, fontWeight: style.fontWeight }
   })
+  expect(mainNavigationFont).toEqual({ fontSize: '16px', fontWeight: '700' })
+
+  const mainRootWithChildren = mainNavigation.locator('.shared-public-nav-root > .shared-public-nav-item').nth(rootWithChildrenIndex)
+  await mainRootWithChildren.hover()
+  const mainChildMenu = mainRootWithChildren.locator(':scope > .shared-public-nav-children')
+  await expect(mainChildMenu).toBeVisible()
+  await expect(mainChildMenu).toHaveCSS('background-color', 'rgb(0, 92, 212)')
+  await expect(mainChildMenu.locator('a, span').first()).toHaveCSS('color', 'rgb(255, 255, 255)')
+  await expect(mainChildMenu.locator('a, span').first()).toHaveCSS('font-size', '16px')
+  await expect(mainChildMenu.locator('a, span').first()).toHaveCSS('font-weight', '700')
 
   await page.goto('/party/')
   const banner = page.locator('.party-banner')
@@ -151,13 +161,6 @@ test('EU-28：中心党建 Banner 使用本地原站基线资源且不可点击�
   })
   expect(partyNavigationFont).toEqual(mainNavigationFont)
   expect(partyNavigationFont).toEqual({ fontSize: '16px', fontWeight: '700' })
-
-  const mainRootWithChildren = mainNavigation.locator('.shared-public-nav-root > .shared-public-nav-item').nth(rootWithChildrenIndex)
-  await mainRootWithChildren.hover()
-  const mainChildMenu = mainRootWithChildren.locator(':scope > .shared-public-nav-children')
-  await expect(mainChildMenu).toBeVisible()
-  await expect(mainChildMenu).toHaveCSS('background-color', 'rgb(0, 92, 212)')
-  await expect(mainChildMenu.locator('a, span').first()).toHaveCSS('color', 'rgb(255, 255, 255)')
 
   const rootWithChildrenElement = partyNavigation.locator('.shared-public-nav-root > .shared-public-nav-item').nth(rootWithChildrenIndex)
   await expect(rootWithChildrenElement.locator(':scope > .shared-public-nav-link .shared-public-nav-arrow')).toBeVisible()
@@ -194,7 +197,7 @@ test('EU-28：中心党建 Desktop / Mobile 当前视觉截图形成 Current Evi
   await expect(page.getByTestId('party-article-title')).toHaveText(articles['party-voice'].title)
   await page.goto('/party/')
   await page.waitForTimeout(200)
-  await testInfo.attach('party-entry-desktop-current.png', {
+  await testInfo.attach('party-home-desktop-current.png', {
     body: await page.screenshot({ fullPage: true }),
     contentType: 'image/png',
   })
@@ -221,7 +224,7 @@ test('EU-28：中心党建 Desktop / Mobile 当前视觉截图形成 Current Evi
   await page.getByRole('button', { name: '展开导航' }).click()
   await expect(page.locator('.shared-public-nav-root')).toBeVisible()
   await expect(page.locator('.shared-public-nav-children').first()).toBeVisible()
-  await testInfo.attach('party-entry-mobile-current.png', {
+  await testInfo.attach('party-home-mobile-current.png', {
     body: await page.screenshot({ fullPage: true }),
     contentType: 'image/png',
   })
