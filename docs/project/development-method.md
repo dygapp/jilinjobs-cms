@@ -11,20 +11,27 @@ Repository:
 dygapp/agentic-dev
 
 Baseline:
-master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
+master@b80b2b1b7cea38eed0aef9807879e2a0d56afd2f
 ```
 
-该 baseline 提供 Method、Operating Guide、Skill Contracts 与 Skills 的来源依据，但不提供本项目的业务事实。
+该 baseline 提供 Method、Operating Guide、Engineering Discipline Authority、Technology Profile Contract、Skill Contracts 与 Skills 的来源依据，但不提供本项目的业务事实。
 
-相对上一 baseline `bf21c7bcd711fd667c43007a72fae65750d1af09`，本次实际吸收的新增规则是：
+相对上一 baseline `bf21c7bcd711fd667c43007a72fae65750d1af09`，本项目此前实际吸收的新增规则是：
 
 - 共享外部资源的并发边界必须匹配真实冲突域，而不是逻辑 PR / Branch / ref 标识；固定域名、代理名、端口、评审 / 部署槽位、临时数据库或单例服务等资源被不同触发路径共同使用时，所有争用者进入同一排他边界；独立工作默认有界排队，只有新工作确实取代旧工作且取消后的资源释放闭环可靠时才取消；Run cancellation、进程终止、锁取得与外部资源实际释放 / 归属正确必须分别验证。
 - 实施判断不把‘硬编码’或‘自行实现’脱离上下文直接视为缺陷：先根据真实变化来源、维护者、稳定性、安全 / 协议约束和生命周期判断代码常量、CMS 运营数据、结构元数据、Spring 外部化配置或 CI / Deployment Variables 的责任归属；没有已证明外部维护责任的稳定常量默认保留在代码或既有权威载体中，不为消除字面量机械配置化。
 - 实现通用技术能力前先检查当前代码库、框架、标准库与已引入依赖；已有能力满足功能契约及安全、可观察性、性能和生命周期约束时优先复用，用最薄适配层承载项目差异；存在可证明的不匹配时可以采用自有实现，但不得为了复用扩大依赖面、改变产品行为或覆盖 Consumer Architecture Authority。
 
+相对上一 Consumer baseline `a82e559cb67cafbcf96265a70a1167a9a75db5ba`，本次选择性固化：
+
+- **Implementation Minimality & Speculative Complexity Control**：选择当前证据支持的最低必要复杂度；没有当前 Requirement、Specification、Architecture、Verification、安全、性能、生命周期或真实多消费者证据支持的额外抽象、配置、依赖、扩展点、框架层和未来设计默认不进入实现。
+- **Surgical Change & Diff Scope Control**：最终 Diff 的每个有意义区域必须能追溯到当前 Unit 实现、验证、Authority 同步、必要 preparatory refactor 或其直接 cleanup；相邻 typo、TODO、历史死代码、独立优化和全局格式化默认留在当前 Diff 之外。
+- **Technology Profile Contract**：Technology Profile 是可复用默认值，不是 Consumer 产品事实；Consumer 当前确认的版本、Architecture / ADR、目录、依赖、组件库、package scripts、tsconfig、验证命令和 Human Review 规则具有覆盖权。
+- **Vue 3 + TypeScript Technology Profile / Verification Profile**：在当前 Consumer 真实版本和 Authority 下采用适用的 Vue / TypeScript 客观语义与工程默认值，并把验证映射到本仓库实际 type-check、build、test、Browser / Visual / Integration Evidence；Research Anchor 不构成依赖升级目标。
+
 此前 baseline 已固化的 Stale Verification Contract、Visual Fidelity、自动化验证与 Human Review Baseline 隔离、bind mount 可重复恢复、Artifact Evidence、异步 Actions 闭环、Human Review Finding 分类、外部媒体真实内容验证、后继提交 Evidence Claim 影响判断与 Roadmap / GitHub 集成状态边界继续有效。
 
-`agentic-dev` 自身 Project Roadmap、Issue / eval / PR 集成状态等没有被继承为 Consumer 项目事实。
+`agentic-dev` 自身 Project Roadmap、Engineering Capability Foundation 状态、Issue / eval / PR 集成状态等没有被继承为 Consumer 项目事实。
 
 ## 2. Consumer 与 agentic-dev 的职责边界
 
@@ -33,6 +40,18 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 - `agentic-dev/docs/project/*` 中属于其自身项目的状态、路线和实验事实不得复制为 Consumer 项目事实。
 - 从 `agentic-dev` baseline 吸收的方法变化，应转化为本仓库可直接执行的本地规则，而不是要求后续 Agent 持续跨仓库读取方法文档。
 - 新的 `agentic-dev` 提交不会仅因存在就自动覆盖已固化的 Consumer-local 规则；只有显式 baseline 升级才重新比较并处理更新、保留或取代关系。
+
+### 2.1 Consumer Override Boundary
+
+Technology Profile 的适用顺序为：
+
+1. Vue / TypeScript 等技术本身的客观语义约束；
+2. 本 Consumer 已确认的实际版本、Architecture / ADR 与项目技术边界；
+3. 本 Consumer 的 Repository / Engineering / Verification Authority；
+4. Technology Profile 的 Engineering Default / Conditional Guidance；
+5. 普通实现偏好。
+
+当前实际 package versions、package scripts、tsconfig、Vue Router / Multi-entry Architecture、Element Plus 使用规则和 `docs/technical/verification-strategy.md` 均属于 Consumer-local Authority。不得为了匹配 Technology Profile Research Anchor 机械升级 Vue、TypeScript、`vue-tsc`、Vite、Vue Router、Element Plus 或其他依赖，也不得仅为采用 Profile 迁移稳定组件或重写既有 API 风格。
 
 ## 3. 常规 Feature 工作流
 
@@ -127,6 +146,20 @@ External Dependency Problem
 具体项目分类继续以 `docs/technical/configuration-governance.md` 为准。不得只为消除字面量新增数据库字段、设置页面、环境变量或配置框架。
 
 实现通用能力前必须检查当前代码库、框架、标准库和已引入依赖；已有能力满足当前功能契约及安全、可观察性、性能和生命周期约束时优先复用，仅使用最薄适配层承载项目特有差异。已有能力与真实需求不匹配时允许自有实现，但需基于当前证据说明差异，不以‘框架优先’替代工程判断。
+
+### 4.2 Implementation Minimality 与 Diff Scope
+
+实施选择的目标不是最少行数，而是在满足当前 Authority、Acceptance、Verification 与工程健康前提下使用最低必要复杂度。失败路径、安全措施、当前验证需要、真实多个消费者、Authority 要求的配置 / 迁移 / 兼容性，以及小范围行为保持型 preparatory refactor 可以构成必要复杂度；“未来可能需要”“为了更灵活/企业级/可扩展”“可以套设计模式”“所有值都应配置化”等不能单独构成证据。
+
+Unit 完成前执行轻量 Final Diff Scope Check。每个有意义的 Diff 区域必须属于当前 Unit 产品实现、当前验证、当前变更导致的 Authority 同步、必要 preparatory refactor 或其直接 cleanup；邻近但独立的 bug、TODO、历史死代码、样式清理、全局格式化和无关优化默认不进入当前 Diff。
+
+### 4.3 Vue 3 + TypeScript Technology Profile
+
+当前 `frontend/public-site` 已确认使用 Vue `3.5.40`、TypeScript `5.9.3`、`vue-tsc 3.3.9`、Vite `8.1.5`、Vue Router `5.2.0` 与 Element Plus `2.14.4`；`npm run build` 实际执行 `vue-tsc --noEmit && vite build`。这些 Consumer 事实覆盖 Profile Research Anchor。
+
+在当前代码真实适用时采用以下默认：props 保持单向数据流；正确声明 props / emits；模板引用按生命周期视为可能为空；computed 保持无副作用；`watch` / `watchEffect` 正确处理依赖与异步失效工作，旧异步结果不得在依赖改变后无条件覆盖新状态；新代码优先保持 TypeScript inference，不以 `any` 或无证据断言逃逸类型系统；`defineModel`、`useTemplateRef` 等版本能力只在当前组件真实受益时使用，不为统一风格重写稳定组件。
+
+验证按风险映射到 Consumer 实际命令：SFC / 类型契约至少需要 Vue-aware type-check；reactivity / watcher / lifecycle 需要能证明依赖变化和旧工作失效的行为测试；DOM / Router / 用户交互增加 Browser E2E；视觉 Acceptance 再增加 Visual Evidence；build / module / tsconfig 需要 type-check + bundler build，并按 Runtime 风险追加 Browser / Integration。具体执行以 `docs/technical/verification-strategy.md` 为准。
 
 ## 5. 证据声明、Human Review 与视觉验收边界
 
@@ -285,6 +318,7 @@ README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项�
 - 只加载当前工作真正需要的 Skill；
 - 不要求每个工作都走完整 Skill 清单；
 - Skill 不得覆盖 Consumer Authority；
+- `execute-unit` 在实现前读取当前适用的 Consumer-local Engineering Discipline / Technology Profile 规则，并在完成前执行 Final Diff Scope Check；
 - 遇到实现阶段的意外失败时，使用系统化调试路径，而不是无证据试错；
 - 当失败来自 Test / Workflow assertion 等 Verification Artifact 时，`systematic-debug` 必须先核对其与当前 Authority 的一致性，允许并要求在证据支持时识别 Stale Verification Contract；
 - 当 GitHub Actions 的触发、CI 可观察性、Artifact、容器 Runtime、Human Review Baseline、timeout / cancellation、diagnostics 或祖先 Evidence reuse 会影响证据可靠性时，按需应用 `github-actions-verification`；
@@ -314,9 +348,9 @@ README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项�
 升级时：
 
 1. 读取并记录 `agentic-dev` 指定分支最新精确 commit；
-2. 对比本项目当前 baseline 到新 baseline 的 Method、Operating Guide、Contract 与 Skill 变化；
+2. 对比本项目当前 baseline 到新 baseline 的 Method、Operating Guide、Engineering Discipline、Technology Profile、Contract 与 Skill 变化；
 3. 区分跨项目可复用资产与 `agentic-dev` 自身 Project Rule；
 4. 根据 Consumer 真实需要和现有 Authority 选择性采纳，不机械复制完整文档体系；
 5. 将具有持续约束价值的已采纳规则固化到 Consumer 可发现的 Authority 中，并显式处理旧规则的更新、保留或取代；
 6. 同步更新 `AGENTS.md`、本文、Verification Strategy 和 Roadmap 的 baseline / 方法记录；
-7. 完成升级后恢复以 Consumer-local Authority 为普通开发入口，不自动继承 `agentic-dev` 自身 Project Roadmap、Issue、实验状态或其他项目事实。
+7. 完成升级后恢复以 Consumer-local Authority 为普通开发入口，不自动继承 `agentic-dev` 自身 Project Roadmap、Engineering Capability Foundation 状态、Issue、实验状态或其他项目事实。

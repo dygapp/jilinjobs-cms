@@ -6,10 +6,10 @@
 
 ```text
 dygapp/agentic-dev
-master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
+master@b80b2b1b7cea38eed0aef9807879e2a0d56afd2f
 ```
 
-普通开发优先使用 Consumer-local：`AGENTS.md`、`docs/project/development-method.md`、当前 Requirement / Specification / Technical Plan。
+普通开发优先使用 Consumer-local：`AGENTS.md`、`docs/project/development-method.md`、当前 Requirement / Specification / Technical Plan。外部 baseline 的 Engineering Discipline / Technology Profile 只有经本仓库选择性固化后才成为普通开发规则；`agentic-dev` 自身 Project Roadmap、Foundation 状态、PR / Issue / Experiment 事实不进入本 Roadmap。
 
 ## 总体路线
 
@@ -24,7 +24,7 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 | 页面细节视觉收敛 | 已完成 | 栏目列表、文章详情、固定页面、页面组 / Tab、业务指南、页脚与外链文章行为完成自动化和人工视觉复核 |
 | 管理端工程分离与功能收敛 | 已完成当前阶段 | 双前端物理拆分、通用 CMS 模型、Admin Modular SPA / CMS Module 边界完成收敛；后续只按 Human Admin Review / 明确人工指令增量调整 |
 | 公开站 Multi-entry Modular SPA 与中心党建基础框架 | 已完成 | Entry 已从页面类型收敛为真实 Theme / Router Boundary；Main Site 已模块化并移除重复 Page Entry；Party Entry / Router / 红色主题基础框架已建立 |
-| 中心党建正式页面与内容收敛 | **当前** | 原站信息架构重新取证已完成第一轮，确认四条真实内容线并确认通用 Column + Article 足够；按 EU-26～EU-29 完成结构、页面、视觉、历史内容迁移与最终 Review |
+| 中心党建正式页面与内容收敛 | **当前** | EU-26～EU-28 已完成；当前进入 EU-29 历史内容迁移与最终 Review，保持真实四栏目、通用 CMS、Party canonical URL 与最终回归责任 |
 | 公开站点剩余内容与集成收敛 | 后续 | 完善固定页面正式内容、嵌入内容、网站导航预设基线、剩余公开页面内容与外部聚合数据来源 |
 | 真实第三方深度集成 | 条件性后续 | 根据第三方接口、认证、可靠性与 Product Intent 再进入 |
 
@@ -46,6 +46,8 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 | 2026-09-01 | 项目负责人确认中心党建下一阶段立即进入实现；公开站目标架构调整为按真实 Site / Theme Boundary 划分 Entry 的 Multi-entry Modular SPA，并规划 Main Site 重构与 Party 基础框架 |
 | 2026-09-01 | 公开站 Multi-entry Modular SPA 与中心党建基础框架完成：Main Site 模块化、重复 Page Entry 移除、Party Entry / Router / 红色主题基础框架、预置导航切换及 Main / Party / Admin / Backend / Gateway 验证闭环完成；路线切换到中心党建正式页面与内容收敛 |
 | 2026-09-02 | 中心党建正式阶段完成第一轮原站重新取证：确认“高层声音 / 工作动态 / 党规党章 / 理论学习”及 legacy `gcsy/gzdt/dgdz/llxx`，确认当前 `pdetail.html`、更早 `detail.html` 与外部权威来源混合；通用 Column + Article 足以承载，正式阶段切分为 EU-26～EU-29 |
+| 2026-09-03 | EU-26～EU-28 已完成并进入 `main`；当前 Roadmap 恢复到 EU-29 Historical Content Migration & Final Review |
+| 2026-09-03 | `agentic-dev` baseline 更新到 `b80b2b1b7cea38eed0aef9807879e2a0d56afd2f`；Consumer-local Authority 选择性固化 Implementation Minimality、Surgical Diff Scope、Vue 3 + TypeScript Technology Profile、Verification Profile 与 Consumer Override Boundary，不继承 Foundation 项目事实，也不机械升级技术依赖 |
 
 ## 当前已固化结果
 
@@ -125,10 +127,10 @@ EU-23 Public Frontend Authority & Architecture Convergence：已完成
 第一轮原站重新取证和 CMS 复用判断已经完成，当前持久执行路线以 `docs/work/party-convergence-execution-units.md` 为准：
 
 ```text
-EU-26 Party Evidence & Authority Convergence
-→ EU-27 Party CMS Structure & Content Routing
-→ EU-28 Party Home & Visual Fidelity Convergence
-→ EU-29 Party Historical Content Migration & Final Review
+EU-26 Party Evidence & Authority Convergence：已完成
+→ EU-27 Party CMS Structure & Content Routing：已完成
+→ EU-28 Party Home & Visual Fidelity Convergence：已完成
+→ EU-29 Party Historical Content Migration & Final Review：当前
 ```
 
 当前阶段约束：
@@ -138,7 +140,7 @@ EU-26 Party Evidence & Authority Convergence
 3. `学习园地` 只作为 PartyHome 入口页固定布局分组；
 4. Party 列表/详情 canonical route 使用 `/party/column/{alias}`、`/party/article/{id}`；
 5. 新 Flyway 只建立栏目结构，历史运营文章和资源走独立迁移；
-6. EU-27 先完成功能/结构闭环，EU-28 再依据更强视觉证据收敛最终红色页面；
+6. EU-26～EU-28 已完成；当前只按 EU-29 的历史内容迁移、最终回归与 Review 责任继续收敛；
 7. EU-29 建立幂等内容迁移和 legacy URL 映射证据，最终 Human Review 通过后关闭党建阶段；
 8. Foundation 红色 Theme 不能替代最终视觉复刻证据。
 
@@ -160,7 +162,7 @@ EU-26 Party Evidence & Authority Convergence
 
 - 管理端工程分离、通用 CMS 与 Admin Modular SPA 当前阶段已经关闭，后续按明确 Review Finding 增量维护；
 - 公开站 Multi-entry Modular SPA 与中心党建基础框架阶段已经关闭，Main / Party Boundary 作为后续恢复基线；
-- 当前主动路线为中心党建正式页面 / 内容 / 视觉 / 历史迁移专项；
+- 当前主动路线为 EU-29 中心党建历史内容迁移与最终 Review；
 - 党建完整内容和最终视觉不得因基础框架已经完成而提前声明完成；
 - EU-29 Human Review 关闭后，Roadmap 切换到“公开站点剩余内容与集成收敛”；
 - 后续如调整 Main Site Router / Entry / Gateway，既有 Human Visual Review Evidence 不机械继承，应按具体 Evidence Claim 重新取得必要自动化和视觉证据；

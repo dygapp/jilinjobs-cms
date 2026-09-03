@@ -24,9 +24,28 @@ Fresh Database
 
 ### 2.2 Frontend Verify
 
-每个独立前端工程分别执行 npm 依赖安装、`vue-tsc` 与 Vite build。
+每个独立前端工程分别执行 npm 依赖安装、Vue-aware type-check 与 Vite build。
+
+当前 `frontend/public-site` 与 `frontend/admin` 的 `npm run build` 均由 Consumer package script 串联 `vue-tsc --noEmit && vite build`。因此成功的项目 build script 同时提供 Vue SFC type-check 与 bundler build evidence；证据记录仍应区分这两个子层，不能把 Vite transpile / bundle 成功单独描述为类型验证成功。
 
 前端工程物理拆分后，公开站点与管理端分别形成独立 build artifact 和验证入口；不得用其中一个应用的成功构建替代另一个应用的验证。
+
+不得为了匹配外部 Technology Profile 的 Research Anchor 机械升级 Vue、TypeScript、`vue-tsc`、Vite 或其他依赖；验证以当前 Consumer 实际 package、tsconfig、Architecture 和命令为准。
+
+#### 2.2.1 Vue 3 + TypeScript Verification Profile 映射
+
+前端变更按实际风险选择验证层，不机械运行所有层：
+
+| 变更类型 | 最低当前证据 | 需要追加的证据 |
+|---|---|---|
+| SFC template、props、emits | Vue-aware type-check | 有运行时行为变化时追加行为测试 |
+| reactivity、computed、composable | Vue-aware type-check + 能证明依赖变化后状态正确的行为测试 | 跨页面/跨组件时按实际边界追加 Browser |
+| `watch` / lifecycle / async side effect | Vue-aware type-check + 触发/时序/旧工作失效等行为测试 | 涉及 Router / DOM / 用户可见状态时追加 Browser E2E |
+| DOM、Router、template ref、用户交互 | Vue-aware type-check + Browser E2E | 有视觉 Acceptance 时追加 AI/Human Visual Evidence |
+| build / module / tsconfig | Vue-aware type-check + Vite build | 影响 Entry / Runtime 时追加 Browser / Integration |
+| 仅 TypeScript 类型变化 | Vue-aware type-check | 是否追加行为测试取决于 Acceptance 风险 |
+
+Profile 只提供默认风险映射；本仓库的 Requirement、Specification、Architecture、实际命令和现有 Workflow 可以增加、收窄或替代 Engineering Default，但不能违反 Vue / TypeScript 客观语义。
 
 ### 2.3 Completion E2E
 
@@ -45,6 +64,7 @@ Functional Browser Verification 用于证明路由、交互、资源加载和已
 - 对分页、Top-N、窗口截断相关行为，测试数据应能跨越实际分页/窗口边界，或直接断言请求携带正确作用域参数；少量样例数据 PASS 不能单独证明数据量增长后的正确性。
 - 如果页面需要从某个作用域中继续筛选子类型，例如只消费某栏目中的 `EXTERNAL_LINK`，应在该作用域内继续分页直到取得所需数量或耗尽数据，不回退到无作用域的固定全局窗口。
 - Browser E2E 对异步页面不以 `page.goto()` 完成、DOM 节点早期存在或固定 `sleep` 作为数据装配完成条件；应等待可观察的语义完成信号，例如 loading 状态结束、成功内容容器出现、预期响应完成或等价稳定状态。
+- 对 Router / query / watcher 驱动的异步页面，测试应覆盖“较早但较慢的请求在路由已变化后才完成”的场景；旧请求不得覆盖当前路由对应的成功、错误、loading、metadata 或导航副作用。优先通过受控响应顺序和可观察 response / DOM 状态验证，不用固定 sleep 代替完成条件。
 - 如果实现从单次请求演进为多个并行/分阶段请求后旧测试出现时序失败，先按第 3 节分类。不能为了迎合测试中的偶然时序恢复错误的数据访问方式；应修正陈旧完成条件，或在实现层补齐本就合理的 loading / empty / error 状态契约。
 
 ## 3. 验证失败分类
@@ -298,6 +318,8 @@ Acquire
 - 新发现的硬编码候选已按 `configuration-governance.md` 判断其责任层；稳定领域、安全和页面模板契约不得为了消除常量而错误配置化；
 - CI / Review / FRP 环境参数不得进入 CMS 网站属性；只有在确有环境差异需求时才迁移为 Repository / Environment / Deployment Variables；
 - V11/V12 等既有 migration 没有因纯管理端视觉或配置治理调整被回改；
+- Implementation Minimality 没有引入无当前证据支持的抽象、配置、依赖、扩展点、框架层或未来设计；
+- Final Diff Scope 中每个有意义区域能追溯到当前 Unit、验证、Authority 同步、必要 preparatory refactor 或其直接 cleanup；
 - 无无关文件、临时文件、调试入口或测试残留进入 PR。
 
 发现 Implementation Defect 时直接在当前授权范围修复，并重新取得新 Head Evidence；不得用“AI Review 已完成”代替修复后的测试。
