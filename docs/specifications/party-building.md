@@ -37,9 +37,22 @@
 - SHA-256：`7444d50235d4c87a00d0221ac84551ea083c617bb8a15e58f58d002224bd27a3`；
 - 原站文件名扩展名为 `.png`，Reference Evidence 取得的原始文件实际媒体字节为 JFIF/JPEG；不得因为扩展名再次转码。
 
-2026-09-03 Human Review 已两次证明派生 WebP/AVIF 会在标题文字边缘产生可见清晰度损失。因此正式页面直接使用上述原站原始资源，不再使用 WebP/AVIF 派生文件作为 Banner。
+2026-09-03 Human Review 已两次证明派生 WebP/AVIF 会在标题文字边缘产生可见清晰度损失。因此正式页面必须使用**原站原始字节的版本化本地副本**：
+
+`/static/party-building/party-header-banner.jpg`
+
+该文件以正确 JPEG 扩展名保存，必须保持原始 SHA-256，不允许重新编码后冒充原始资源；正式运行不得再依赖原站 URL。
 
 Banner 仅承担视觉展示：必须使用非链接容器 + `<img>`，不得包裹 `<a>`，不得通过点击 Banner 返回 `/party/` 或执行其他导航。
+
+### 2.2 稳定展示资源边界
+
+公开站设计模板使用的稳定图片、图标、二维码、字体等展示资源，必须来自：
+
+1. 本项目版本化 `site-baseline/static/**`；或
+2. 受控 CMS 静态资源路径。
+
+除开源 JS/CSS 依赖外，模板不得通过 `img/src`、媒体 `src/poster`、CSS `url(http...)`、资源型常量等方式直接依赖第三方静态资源 URL。业务 `<a href>` 外链、文章外链和外部平台入口不属于此限制。
 
 ## 3. CMS 复用规格
 
@@ -100,7 +113,7 @@ Router 必须验证栏目/文章属于上述中心党建栏目树，普通主站
 
 `/party/` 至少包含：
 
-1. 原站 Banner（纯展示、不可点击）；
+1. 原站 Banner 的本地原始字节副本（纯展示、不可点击）；
 2. 主站共享 Navigation，使用红色主题变量；
 3. 中心党建轮播；
 4. 高层声音；
@@ -142,7 +155,7 @@ Party-owned 视觉仅包括 Banner、内容 Frame、轮播和内容区块模板�
 
 Desktop 关键关系：
 
-- Banner 3072×512 原始资源按容器裁切展示，不二次有损转码；
+- Banner 使用版本化 `party-header-banner.jpg` 原始字节副本，按容器裁切展示，不二次有损转码；
 - 中心党建轮播与高层声音约 585×329 并列；
 - 工作动态单列；
 - 学习园地两栏；
@@ -162,8 +175,9 @@ Flyway 只负责稳定结构：父栏目、四个子栏目、轮播容器及必�
 - `/party/**` 独立 Entry/Router 仅作为主题与模板隔离技术实现；
 - 四个内容子栏目及其 legacy 映射明确；
 - CmsList 稳定 code 为 `PARTY_CAROUSEL`，名称为“中心党建轮播”，旧 `PARTY_HOME_CAROUSEL` 不再作为当前运行时 code；
-- Banner 直接使用原站 `party_banner.png` 原始资源，不使用 WebP/AVIF 派生资源；
+- Banner 使用版本化 `/static/party-building/party-header-banner.jpg`，其字节 SHA-256 与原站一致；正式运行不访问原站 Banner URL；
 - Banner DOM 不含 `<a>`，不可点击；
+- 公开站设计模板不存在未经允许的外部静态资源直接引用；
 - Main / Party Navigation 与 Footer 使用同一 Shared Components，仅主题色不同；
 - 中心党建入口页、栏目、文章功能和响应式通过 Browser Verification；
 - AI Visual Review 无未处理的 Authority-backed 高优先级差异；
