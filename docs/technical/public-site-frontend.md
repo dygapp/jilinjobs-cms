@@ -4,7 +4,7 @@
 
 `frontend/public-site` 只负责公开页面与固定工程集成，不承载 CMS 管理页面。公开前端采用 **Multi-entry Modular SPA**，Entry 按真实 Site / Theme Boundary 划分，而不是按普通页面类型划分。
 
-当前目标：
+当前结构：
 
 ```text
 frontend/public-site/
@@ -28,13 +28,16 @@ frontend/public-site/
             ├── app/
             ├── shell/
             ├── modules/
-            │   └── home/
+            │   ├── home/
+            │   └── content/       # 正式党建栏目/文章阶段新增
             └── styles/
 ```
 
 中心主站与中心党建当前同 package、同 Vite build、同部署、同 Spring Boot CMS Backend，但分别拥有 App、Router、Shell 与主题样式所有权。
 
 不引入 Module Federation；不建立 `frontend/party-building` 独立工程。后续只有出现独立发布/部署、不同团队或技术栈、明显不同生命周期等真实需求时再重新评估工程拆分。
+
+中心党建 Foundation 架构已经完成；正式党建前端实施细节由 `docs/technical/party-building-frontend.md` 接续，本文件继续承担两个 Site 的总体工程边界。
 
 ## 2. Entry 与 Runtime 路由
 
@@ -49,33 +52,35 @@ Main Site Entry 使用 `index.html`，承载：
 - `/articles/**` 兼容地址
 - `/page/**`
 
-原 `page.html / page-main.ts` 删除。`/page/**` 继续保持公开 canonical URL，但不再拥有重复 Vue bootstrap。
+原 `page.html / page-main.ts` 已删除。`/page/**` 继续保持公开 canonical URL，但不再拥有重复 Vue bootstrap。
 
 Main Router 只组合主站页面路由，各页面组件使用动态 `import()`：
 
 ```text
-home     -> 首页
-content  -> 栏目 + 文章
-page     -> 独立单页 + 单页分组
-integration -> 后续稳定外部集成页面
+home        -> 首页
+content     -> 栏目 + 文章
+page        -> 独立单页 + 单页分组
+integration -> 稳定外部集成页面
 ```
 
 ### 2.2 Party Building Entry
 
-Party Building Entry 使用 `party.html`，Nginx 对 `/party/**` fallback 到该 Entry。Party Router 当前只要求：
+Party Building Entry 使用 `party.html`，Nginx 对 `/party/**` fallback 到该 Entry。正式 Party Router 承载：
 
-- `/party/`：党建基础首页框架；
-- catch-all：回到 `/party/` 或显示同一基础框架，不提前发明后续业务 URL。
+- `/party/`：党建首页；
+- `/party/column/:alias`：党建栏目列表；
+- `/party/article/:id`：党建站内文章详情；
+- Party catch-all：保持在 Party Entry 内处理，不回落 Main Router。
 
-Party Building Site 拥有独立红色主题 Shell，不能依赖 Main Site Header/Footer 或主站 CSS 才能正常显示。
+Party Building Site 拥有独立红色主题 Shell，不能依赖 Main Site Header/Footer 或主站 CSS 才能正常显示。正式实现细节见 `docs/technical/party-building-frontend.md`。
 
 ### 2.3 Gateway
 
 ```text
-/api/**     -> Backend
-/static/**  -> Backend / static resources
-/admin/**   -> Admin frontend
-/party/**   -> Public Party Building Entry
+/api/**      -> Backend
+/static/**   -> Backend / static resources
+/admin/**    -> Admin frontend
+/party/**    -> Public Party Building Entry
 其他公开路径 -> Public Main Site Entry
 ```
 
@@ -103,7 +108,7 @@ Party Building Site 拥有独立红色主题 Shell，不能依赖 Main Site Head
 
 ## 4. Main Site 数据装配
 
-首页并行加载 Navigation、Article、SiteProperty、CmsList、Advertisement。
+Main Site App 统一装配有界 Navigation + SiteProperty 快照；首页再按真实业务作用域加载 Article、CmsList、Advertisement，不恢复全站前 N 条后前端过滤。
 
 映射规则：
 
@@ -119,7 +124,7 @@ Party Building Site 拥有独立红色主题 Shell，不能依赖 Main Site Head
 
 删除旧 JSON merge/fallback 逻辑，避免两个 Authority 同时生效。不得恢复 `top-nav-${index}`、`guide-${index}` 等按数据位置推导业务图标的逻辑。
 
-Main Navigation 中既有“中心党建”预置项通过后续 Flyway migration 从 `PLACEHOLDER` 更新为 `LINK /party/`，默认当前窗口进入 Party Building Entry。
+Main Navigation 中“中心党建”预置项通过 V13 为 `LINK /party/`，默认当前窗口进入 Party Building Entry。
 
 ## 5. Main Site 主轮播
 
@@ -142,7 +147,9 @@ CmsList 不提供 displayMode/itemType。页面代码自行决定消费字段：
 - `HOME_CAROUSEL`：消费 imagePath 和可选 URL；
 - `SITE_LINKS`：当前基线 imagePolicy=NONE，页面使用 title + URL；未来若确认 Logo 方案，先调整列表图片数据策略和数据，再由页面读取 imagePath。
 
-Public Article Summary 的可选 `coverResourceId` 只是可消费数据；当前栏目列表是否展示封面仍按现网页面设计，Column coverPolicy 不参与 DOM 模板分支。
+Public Article Summary 的可选 `coverResourceId` 只是可消费数据；具体栏目列表是否展示封面按页面设计决定，Column coverPolicy 不参与 DOM 模板分支。
+
+中心党建四条正式内容线同样复用 Public Article Summary / Detail；Party 页面按自身 alias 作用域和模板消费数据，不新增 PartyArticle DTO。
 
 页面显示模式属于前端工程设计，不回写成 CMS 可配置展示模式。
 
@@ -156,9 +163,11 @@ Main Site：
 
 Party Building Site：
 
-- 本轮建立独立红色主题变量、Header、Footer、基础导航和 Page Frame；
-- 只要求形成明显独立于主站的视觉骨架，不以当前基础框架冒充最终原站视觉复刻；
-- 真实 Logo、Banner、栏目、图片和具体页面布局在后续专项重新取证后补齐。
+- Foundation 红色 Shell 已证明 Site/Theme 隔离；
+- 正式阶段按原站证据重构 Header、Footer、首页、栏目和详情视觉；
+- Foundation 占位文案、伪品牌元素和临时 CSS 不作为最终 Authority；
+- 可靠取得并验证的党建 Logo、背景、装饰图片等进入 `site-baseline/static/party-building/**`；
+- 历史文章正文图片属于内容迁移，不混入工程静态基线。
 
 `/static/icons/**` 可以保存版本化图标文件，但导航条目与图标的对应关系仍来自 Navigation `iconPath`。
 
@@ -179,30 +188,33 @@ party -> party.html
 
 保持 `/`、`/column/**`、`/article/**`、`/page/**`、SEO、响应式和既有视觉 E2E。至少证明：
 
-- `/page/**` 删除专用 Entry 后直接访问和刷新仍正常；
-- 主站 Header / Nav / Footer 及首页主视觉无架构重构回归；
-- Main Router 页面改为 lazy import 后核心页面仍正常；
-- 首页现有 Navigation / CmsList / Advertisement / SiteProperty 消费契约无回归。
+- `/page/**` 直接访问和刷新仍正常；
+- 主站 Header / Nav / Footer 及首页主视觉无党建改造回归；
+- Main Router route-level lazy loading 正常；
+- Main Site Context 的站点级装配与首页 scoped data 查询无回退。
 
-### 8.3 Party Building Foundation Verification
+### 8.3 Party Building Formal Verification
 
-至少证明：
+按 `docs/technical/party-building-frontend.md` 至少证明：
 
-- `/party/` 通过独立 Entry 可直接访问和刷新；
-- Party App / Router 不依赖 Main Router；
-- Party Shell 使用独立红色主题基础样式；
-- 主站页面不存在党建主题样式污染；
-- Main Navigation “中心党建”可进入 `/party/`；
-- `/admin/`、`/api/**`、`/static/**` Gateway 无回归。
-
-当前验证只声明“党建基础框架可用”，不声明真实内容、最终视觉或专属后台能力完成。
+- `/party/`、`/party/column/**`、`/party/article/**` 直接访问和刷新；
+- Party App / Router / Shell 不依赖 Main Router/DOM/CSS；
+- 四个预置党建栏目与通用 Article 闭环；
+- INTERNAL / EXTERNAL_LINK 行为；
+- 非党建文章不能由 Party 详情正常呈现；
+- Party 首页/列表/详情 Browser E2E；
+- `/admin/`、`/api/**`、`/static/**` Gateway 无回归；
+- AI Visual + Human Review 用于最终视觉声明。
 
 ## 9. 实施顺序
 
-按 `docs/work/public-site-multi-entry-execution-units.md` 分步：
+`docs/work/public-site-multi-entry-execution-units.md` 的 EU-23～EU-25 已完成并转为追溯。
 
-1. Authority / Specification / ADR / Roadmap 固化；
-2. Main Site 源码模块化并移除重复 Page Entry；
-3. Party Building 独立 Site Entry / Shell / Theme 基础框架与导航入口；
-4. 对每个目标提交取得对应 Frontend / Backend（涉及 migration 时）/ Integrated Browser Current Evidence；
-5. 基础框架完成后，另起中心党建正式页面与内容收敛任务。
+当前按照 `docs/work/party-building-convergence-execution-units.md` 执行：
+
+1. EU-26：原站证据与 Authority 收敛；
+2. EU-27：党建 CMS 结构与 Party 内容路由；
+3. EU-28：党建首页与视觉精度收敛；
+4. EU-29：历史内容迁移与最终 Review。
+
+每个目标提交取得对应 Backend / Public / Admin / Integrated Browser Current Evidence；最终视觉声明必须额外满足 AI Visual / Human Review。
