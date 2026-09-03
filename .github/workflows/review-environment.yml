@@ -78,8 +78,10 @@ jobs:
           test -f runtime-static/home/carousel-01.jpg
           test -f runtime-static/home/recruitment-campaign.png
           test -f runtime-static/brand/smartedu-logo-text.png
-          test -f runtime-static/party-building/ic-title-yellow.png
-          test -f runtime-static/party-building/section-marker.png
+          test -f runtime-static/brand/site-favicon.png
+          test -f runtime-static/party/ic-title-yellow.png
+          test -f runtime-static/party/section-marker.png
+          test -f runtime-static/party/party-header-banner.jpg
           test -f runtime-static/footer/public-security-record.png
           test -f runtime-static/footer/public-institution.png
           test -f runtime-static/footer/wechat-qr.png
@@ -140,7 +142,8 @@ jobs:
           curl --fail --silent http://127.0.0.1:5173/api/admin/navigations | jq --exit-status 'length > 0' > /dev/null
           curl --fail --silent http://127.0.0.1:5173/api/admin/page-groups | jq --exit-status 'map(.alias) | index("guide") != null and index("jobs") != null' > /dev/null
           curl --fail --silent http://127.0.0.1:5173/static/home/header-banner.png > /dev/null
-          curl --fail --silent https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png > /dev/null
+          curl --fail --silent http://127.0.0.1:5173/static/party/party-header-banner.jpg > /dev/null
+          curl --fail --silent http://127.0.0.1:5173/static/brand/site-favicon.png > /dev/null
           curl --fail --silent http://127.0.0.1:5173/admin/articles | grep -qi '<html'
 
       - name: 上传 AI 评审证据
@@ -186,7 +189,8 @@ jobs:
           curl --fail --silent http://127.0.0.1:5173/api/public/navigations \
             | jq --exit-status '[.[] | select(.position == "MAIN" and .parentId == null) | .name] == ["网站首页","中心党建","招聘信息","业务指南","政策法规","就业指导","典型事迹","预决算公开","关于我们"]' > /dev/null
           curl --fail --silent http://127.0.0.1:5173/static/home/header-banner.png > /dev/null
-          curl --fail --silent https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png > /dev/null
+          curl --fail --silent http://127.0.0.1:5173/static/party/party-header-banner.jpg > /dev/null
+          curl --fail --silent http://127.0.0.1:5173/static/brand/site-favicon.png > /dev/null
           test "$(find runtime-static -maxdepth 1 -type d -name 'verification-*' | wc -l)" -eq 0
 
       - name: 准备 Human Review 示例内容
@@ -335,7 +339,8 @@ jobs:
           grep -q '<title>吉林省高等学校毕业生就业信息网</title>' review-home.html
           grep -q '内容管理' review-admin.html
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/home/header-banner.png > /dev/null
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png > /dev/null
+          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/party/party-header-banner.jpg > /dev/null
+          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/brand/site-favicon.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/public-institution.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/wechat-qr.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/admin/columns | jq --exit-status 'length > 0' > /dev/null
