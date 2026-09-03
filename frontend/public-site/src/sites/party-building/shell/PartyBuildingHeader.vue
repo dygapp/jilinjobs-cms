@@ -1,28 +1,55 @@
+<script setup lang="ts">
+import { computed, onMounted, ref } from 'vue'
+import { listPublicNavigations, type PublicNavigation } from '../../../shared/api/navigation'
+
+const items = ref<PublicNavigation[]>([])
+const menuOpen = ref(false)
+const headerBanner = '/static/party-building/party-header-banner.webp'
+
+const roots = computed(() => items.value
+  .filter(item => item.position === 'MAIN' && item.parentId == null)
+  .sort((a, b) => a.sortOrder - b.sortOrder || a.id - b.id))
+
+onMounted(async () => {
+  try {
+    items.value = await listPublicNavigations()
+  } catch {
+    items.value = []
+  }
+})
+
+function target(item: PublicNavigation) {
+  return item.newWindow ? '_blank' : undefined
+}
+
+function isPartyEntry(item: PublicNavigation) {
+  return item.href === '/party/' || item.href === '/party' || item.name === '中心党建'
+}
+</script>
+
 <template>
   <header class="party-header" data-testid="party-building-header">
-    <div class="party-topbar">
-      <div class="party-width party-topbar-inner">
-        <span>吉林省高等学校毕业生就业指导中心</span>
-        <a href="/">返回就业信息网</a>
+    <a class="party-banner" href="/party/" :style="{ backgroundImage: `url(${headerBanner})` }" aria-label="吉林省高等学校毕业生就业信息网党员之家">
+      <span class="party-sr-only">吉林省高等学校毕业生就业信息网党员之家</span>
+    </a>
+
+    <nav class="party-navigation" :class="{ 'is-open': menuOpen }" aria-label="网站主导航">
+      <div class="party-mobile-nav-head party-width">
+        <span>网站导航</span>
+        <button type="button" :aria-expanded="menuOpen" @click="menuOpen = !menuOpen">{{ menuOpen ? '收起' : '展开' }}</button>
       </div>
-    </div>
-    <div class="party-brand party-width">
-      <router-link class="party-brand-link" to="/party/" aria-label="中心党建首页">
-        <span class="party-emblem" aria-hidden="true">党</span>
-        <span class="party-brand-copy">
-          <strong>中心党建</strong>
-          <small>党员之家</small>
-        </span>
-      </router-link>
-    </div>
-    <nav class="party-navigation" aria-label="中心党建导航">
-      <div class="party-width">
-        <router-link to="/party/">党建首页</router-link>
-        <router-link to="/party/column/party-voice">高层声音</router-link>
-        <router-link to="/party/column/party-work">工作动态</router-link>
-        <router-link to="/party/column/party-rules">党规党章</router-link>
-        <router-link to="/party/column/party-study">理论学习</router-link>
-      </div>
+      <ul class="party-width party-nav-root">
+        <li v-for="item in roots" :key="item.id" :class="{ active: isPartyEntry(item) }">
+          <a
+            v-if="item.clickable"
+            :data-testid="`party-main-nav-${item.id}`"
+            :href="item.href"
+            :target="target(item)"
+            :rel="target(item) ? 'noopener noreferrer' : undefined"
+          >{{ item.name }}</a>
+          <span v-else>{{ item.name }}</span>
+        </li>
+      </ul>
     </nav>
   </header>
 </template>
