@@ -2,9 +2,29 @@
 
 本文描述党员之家（**Party Members’ Home**）前端正式实现方案。`party-building` 为 EU-27 已落地的兼容性技术标识，不再作为“党员之家”的正式英文翻译；新的英文逻辑命名应使用 `party-members-home`。对外 canonical URL 继续使用 `/party/`。
 
+本方案遵循 ADR-0002 的 Multi-entry Site Boundary，并按 ADR-0003 / `docs/specifications/public-shared-shell.md` 将 Navigation 与 Footer 收敛为跨 Site Shared Shell Components。
+
 ## 1. 工程边界
 
-党员之家继续位于同一 `frontend/public-site` Vite/Vue 工程，通过独立 `party.html` Entry、App、Router、Shell 和样式域实现。共享能力限定为 API client、通用 CMS 数据模型、SiteConfig、Navigation 等数据能力；不得直接复用 Main Header/Footer DOM 或主站主题 CSS。
+党员之家继续位于同一 `frontend/public-site` Vite/Vue 工程，通过独立 `party.html` Entry、App、Router 和内容主题实现。
+
+Site-owned：
+
+- Party Banner；
+- Party Router；
+- Party Page Frame；
+- Home / Column / Article 模板；
+- 红色内容主题。
+
+Shared：
+
+- API client / CMS DTO；
+- SiteConfig / Navigation 数据；
+- `shared/components/PublicNavigation.vue`；
+- `shared/components/PublicFooter.vue`；
+- `shared/styles/public-shell.css`。
+
+Main 与 Party 不再分别维护 Navigation / Footer DOM 与响应式算法。
 
 ## 2. 数据边界
 
@@ -22,58 +42,60 @@
 
 Router / Article View 必须确认目标栏目属于上述党员之家子栏目集合；不得通过党员之家 URL 展示主站文章。
 
-## 4. Shell 与视觉
+Shared Navigation 通过 `siteRoot=/party` 确认 `/party/**` 属于当前 Entry；Main Entry 将 `/party/**` 视为跨 Entry document navigation。菜单树、active、placeholder、external/newWindow、Desktop/Mobile 行为均由同一个 Shared Component 实现。
 
-党员之家拥有独立 Header/Footer/Page Frame 和红色主题。Header 使用原站证据确认的 Banner，并消费与主站相同的通用 Navigation 数据。
+## 4. Shared Navigation / Footer
 
-导航不是党员之家独立维护的简化菜单。除主题颜色和 Party-owned DOM/CSS 外，导航的信息结构与交互能力必须与当前主站保持一致：
+### 4.1 Navigation
 
-- 使用相同的 `MAIN` 一级菜单筛选、`parentId` 二级层级和 `sortOrder / id` 排序语义；
-- 支持一级可点击项、不可点击占位项以及二级菜单；
-- 一级项存在子菜单时显示下拉提示，并在 Desktop 支持 hover/focus 展开；
-- active 状态同时依据一级目标和二级目标计算，访问 `/party/**` 时“中心党建”保持选中；
-- 继续遵守 `external / newWindow / clickable` 导航语义；
-- Party 内 `/party/**` 使用 Party Router，跳转到主站其他 Entry 或外部地址时使用文档导航，避免由 Party Router 错误接管；
-- Mobile 展开后保留完整一级/二级层级，不得只显示一级菜单；
-- 导航文字字体口径与主站一致，继承 `Microsoft YaHei / PingFang SC / Arial` 字体栈，当前基线为 14px、normal；
-- 党员之家仅将背景、active/hover、下拉强调色等切换为红色主题，不复制主站蓝色 CSS。
+Main / Party 使用同一 `PublicNavigation.vue`：
 
-Footer 的信息结构与当前主站 Footer 保持一致，但继续由党员之家自有 DOM/CSS 实现：
+- 同一一级/二级 DOM；
+- 同一字体、间距、宽度分配和 60px Desktop 高度；
+- 同一 Desktop hover/focus 与 Mobile 展开规则；
+- 同一 active 计算；
+- Party 不再保留 120px 固定导航项等独立结构规则。
 
-- 左侧展示机构地址、公交线路、咨询电话、办公时间、版权、公安备案和 ICP 备案；
-- 右侧展示事业单位图标和微信公众号二维码；
-- 地址、电话、办公时间、版权与 ICP 等继续来自共享 SiteConfig；
-- 公安备案图标、事业单位图标和微信公众号二维码直接复用主站现有版本化稳定资源；
-- Desktop 使用与主站相同的左右两栏信息结构与左对齐方式；窄屏使用与主站一致的上下重排逻辑；
-- 党员之家只保留 `#AD001D` 红色主题和 Party-owned DOM/CSS，不导入 Main Footer 组件或主站主题 CSS。
+主题仅通过 Shared CSS variables 切换：
 
-稳定 Banner 使用版本化 3072×512 资源覆盖 320px Desktop 展示，不允许先降至低分辨率再放大。窄屏按响应式规则缩放，不复制原站固定 1200px 横向溢出。
+- Main：蓝色；
+- Party：`#D00023` 主导航、`#AD001D` active/hover。
 
-## 5. 首页
+### 4.2 Footer
 
-Desktop 维持 1200px 内容宽度：
+Main / Party 使用同一 `PublicFooter.vue`：
+
+- 左侧地址、公交、电话、办公时间、版权、公安备案、ICP；
+- 右侧事业单位图标、微信公众号二维码；
+- Desktop / Mobile 布局完全一致；
+- 稳定资源完全一致。
+
+主题仅通过 CSS variables 切换 Main 蓝色 / Party `#AD001D` 红色。
+
+## 5. Party Site-owned Visual
+
+稳定 Banner 使用版本化 3072×512 资源覆盖 Desktop 展示，不允许先降至低分辨率再放大。窄屏按响应式规则缩放，不复制原站固定 1200px 横向溢出。
+
+首页 Desktop：
 
 - 585×329 轮播；
 - 585×329 高层声音；
 - 工作动态单列；
 - 学习园地两栏（党规党章、理论学习）。
 
-高层声音使用独立密度覆盖，不继承通用列表 36px 最小行高造成额外空隙。
+高层声音使用独立密度覆盖，不继承通用列表额外最小行高。
 
-`PARTY_HOME_CAROUSEL` 仍使用通用 CmsList URL 字段。本轮已确认的党员之家用法是：轮播项对应本站新闻时，URL 指向该新闻的 `/party/article/{id}`，点击整项进入对应新闻详情，不以 `/party/column/:alias` 栏目页作为替代目标。轮播更完整的数据关系、编辑方式和其他跳转类型留待后续专项讨论，本轮不扩展模型。
+`PARTY_HOME_CAROUSEL` 使用通用 CmsList URL 字段。当前已确认：轮播项对应本站新闻时，URL 指向该新闻 `/party/article/{id}`，点击进入对应新闻详情；更完整的轮播数据关系、编辑方式和其他跳转类型留待后续专项讨论。
 
 ## 6. 验证
 
-- 静态资源可访问；
-- Banner 媒体源尺寸固定验证为 3072×512；
-- Navigation 一级/二级菜单数量和顺序来自同一公开导航数据，至少选择一个真实父菜单验证子项完整渲染；
-- Desktop 二级菜单可展开，导航字体为主站同一 14px/normal 口径；
-- Mobile 展开后一级/二级菜单均可访问；
-- Desktop 主结构尺寸/红色视觉基线；
+- Main / Party 都存在 `data-component="public-navigation"`；
+- Main / Party 都存在 `data-component="public-footer"`；
+- 两边 Navigation DOM/层级/字体/响应式一致，只允许 theme color 不同；
+- 两边 Footer 内容/布局/响应式一致，只允许 theme color 不同；
+- Party Banner 媒体源尺寸固定为 3072×512；
 - 高层声音列表密度；
-- 轮播项实际点击进入对应 `/party/article/{id}` 新闻详情；
-- Footer 左侧信息与右侧事业单位图标、微信公众号二维码均可见，Desktop 两栏/窄屏重排与主站保持同一结构基线；
-- 公安备案图标可见；
+- 轮播项实际点击进入对应 `/party/article/{id}`；
 - 390px 无横向溢出；
-- Main / Admin 无主题和功能回归；
-- Reference Evidence + Current Screenshot + AI Visual + Human Review 共同完成视觉收敛。
+- Main / Admin 无功能回归；
+- Current Screenshot + AI Visual + Human Review 共同完成视觉收敛。
