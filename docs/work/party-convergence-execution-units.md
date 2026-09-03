@@ -4,7 +4,7 @@
 
 中文原站页面名称沿用“党员之家”，英文业务表述为 **Party Members’ Home**。当前工程技术命名使用 `party / Party`，仅 `/party/` 入口页使用 `party-home / PartyHome`。
 
-**状态：进行中（2026-09-03），当前 EU-28 Human Visual Review 修正中。**
+**状态：进行中（2026-09-04），EU-26～EU-28 已完成，当前 EU-29 Party Historical Content Migration & Final Review。**
 
 ## 证据基线
 
@@ -84,7 +84,7 @@ V14 初始使用 `PARTY_HOME_CAROUSEL / 中心党建首页轮播`。2026-09-03 H
 
 ### Human Review Findings
 
-截至 2026-09-03，本轮新增并必须关闭的 Finding：
+截至 2026-09-03，本轮新增并已关闭的 Finding：
 
 1. **Banner 清晰度与资源归属**：WebP/AVIF 二次有损编码会使标题文字边缘出现毛刺。正式基线保存原站原始 JPEG 字节为 `party-header-banner.jpg`，运行时只引用本地 `/static/**` 路径，不直接依赖原站资源地址。
 2. **Banner 点击语义**：Banner 不属于导航入口。Header 使用纯展示 `<div> + <img>`，不得含 `<a>`。
@@ -110,7 +110,7 @@ V14 初始使用 `PARTY_HOME_CAROUSEL / 中心党建首页轮播`。2026-09-03 H
 - 390px 无横向溢出；
 - Backend + Public + Admin + Integrated Browser 成功；
 - AI Visual Review 无未处理高优先级差异；
-- Human Visual Review 通过后方可合并 PR #48。
+- Human Visual Review 已完成，EU-28 关闭；后续只有 EU-29 或其他新变更影响对应 Evidence Claim 时，才重新取得必要视觉证据。
 
 ---
 
