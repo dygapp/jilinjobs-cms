@@ -23,7 +23,7 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 | 首页与公共视觉基线收敛 | 已完成 | 原站关键视觉资源、蓝白视觉体系、首页主要布局、Header / Nav / Footer、移动端基础适配及人工视觉复核完成 |
 | 页面细节视觉收敛 | 已完成 | 栏目列表、文章详情、固定页面、页面组 / Tab、业务指南、页脚与外链文章行为完成自动化和人工视觉复核 |
 | 管理端工程分离与功能收敛 | 已完成当前阶段 | 双前端物理拆分、通用 CMS 模型、Admin Modular SPA / CMS Module 边界完成收敛；后续只按 Human Admin Review / 明确人工指令增量调整 |
-| 公开站 Multi-entry Modular SPA 与中心党建基础框架 | 已完成 | Entry 已从页面类型收敛为真实 Site / Theme Boundary；Main Site 已模块化并移除重复 Page Entry；Party Building Site 独立 Entry / Router / 红色主题 Shell / 基础页面框架已建立 |
+| 公开站 Multi-entry Modular SPA 与中心党建基础框架 | 已完成 | Entry 已从页面类型收敛为真实 Theme / Router Boundary；Main Site 已模块化并移除重复 Page Entry；Party Entry / Router / 红色主题基础框架已建立 |
 | 中心党建正式页面与内容收敛 | **当前** | 原站信息架构重新取证已完成第一轮，确认四条真实内容线并确认通用 Column + Article 足够；按 EU-26～EU-29 完成结构、页面、视觉、历史内容迁移与最终 Review |
 | 公开站点剩余内容与集成收敛 | 后续 | 完善固定页面正式内容、嵌入内容、网站导航预设基线、剩余公开页面内容与外部聚合数据来源 |
 | 真实第三方深度集成 | 条件性后续 | 根据第三方接口、认证、可靠性与 Product Intent 再进入 |
@@ -43,8 +43,8 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 | 2026-08-28 | `agentic-dev` baseline 更新到 `bf21c7bcd711fd667c43007a72fae65750d1af09`，新增 Human Review Finding 分类、外部媒体真实内容验证、后继提交 Evidence Claim 影响判断和 Roadmap / GitHub 集成状态边界 |
 | 2026-09-01 | 管理端独立双前端、通用 CMS 模型、预置结构保护、配置治理、统一图片预览与静态资源保护第一轮收敛进入 `main`；`agentic-dev` baseline 更新到 `a82e559cb67cafbcf96265a70a1167a9a75db5ba`，同步共享外部资源并发 / 释放边界与实施判断 / 已有能力复用规则 |
 | 2026-09-01 | 管理端 Modular SPA 架构收敛完成，形成 Admin Shell / Shared / CMS Module 源码边界、Module Contract / Registry 集成机制与 `/admin/cms/**` canonical route namespace；Module Federation 仅保留为满足真实独立发布 / 部署需求后的条件性演进路径 |
-| 2026-09-01 | 项目负责人确认中心党建下一阶段立即进入实现；公开站目标架构调整为按真实 Site / Theme Boundary 划分 Entry 的 Multi-entry Modular SPA，并规划 Main Site 重构与 Party Building 基础框架 |
-| 2026-09-01 | 公开站 Multi-entry Modular SPA 与中心党建基础框架完成：Main Site 模块化、重复 Page Entry 移除、Party Building 独立 Entry / Router / 红色主题 Shell、预置导航切换及 Main / Party / Admin / Backend / Gateway 验证闭环完成；路线切换到中心党建正式页面与内容收敛 |
+| 2026-09-01 | 项目负责人确认中心党建下一阶段立即进入实现；公开站目标架构调整为按真实 Site / Theme Boundary 划分 Entry 的 Multi-entry Modular SPA，并规划 Main Site 重构与 Party 基础框架 |
+| 2026-09-01 | 公开站 Multi-entry Modular SPA 与中心党建基础框架完成：Main Site 模块化、重复 Page Entry 移除、Party Entry / Router / 红色主题基础框架、预置导航切换及 Main / Party / Admin / Backend / Gateway 验证闭环完成；路线切换到中心党建正式页面与内容收敛 |
 | 2026-09-02 | 中心党建正式阶段完成第一轮原站重新取证：确认“高层声音 / 工作动态 / 党规党章 / 理论学习”及 legacy `gcsy/gzdt/dgdz/llxx`，确认当前 `pdetail.html`、更早 `detail.html` 与外部权威来源混合；通用 Column + Article 足以承载，正式阶段切分为 EU-26～EU-29 |
 
 ## 当前已固化结果
@@ -65,18 +65,18 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 - 网站静态资源后台支持目录浏览、上传、显式替换、查看/下载、删除到回收区和恢复，并保留风险提示；
 - 管理端当前采用单一 Vue SPA / 单一 Router / 单一构建部署的 Modular SPA：`app/` 负责 Admin Shell 与 Module Registry，`shared/` 承担跨模块管理端 primitives，`modules/cms/` 持有 CMS 业务路由、页面、组件与私有样式；Shell 通过公开 Module Contract 消费模块声明，不直接持有 CMS feature route / selector 知识；
 - CMS canonical 管理端路由使用 `/admin/cms/**`，旧 `/admin/<cms-feature>` 仅作为兼容重定向；Module Federation 不属于当前基础设施，只有出现真实独立发布、独立部署、跨团队或跨技术栈需求时再评估 Remote Module 演进；
-- 公开前端采用同一 `frontend/public-site` 工程中的 Main Site + Party Building Site 两个真实 Site Entry；Entry 按 Site / Theme Boundary 而非普通页面类型划分；
+- 公开前端采用同一 `frontend/public-site` 工程中的 Main + Party 两个真实 Entry；Entry 按 Theme / Router Boundary 而非普通页面类型划分；
 - 历史 `page.html / page-main.ts` 重复 Entry 已移除，`/page/**` 与 `/column/**`、`/article/**` 统一由 Main Site Entry 承载并保持直接访问 / 刷新行为；
-- Main Site 持有独立 App / Router / Shell / 蓝白主题，源码已按 `home / content / page` 等职责形成模块边界，路由级页面使用动态 import；
-- Main Site Header / Footer 已提升到 App 生命周期，Navigation / SiteProperty 等有界站点结构快照不在页面切换中重复装配；
-- Party Building Site 使用 `/party/**` namespace，持有独立 App / Router / Shell / 红色主题基础框架；Foundation 阶段已经关闭，正式页面/视觉不以 Foundation 占位文案和临时 CSS 为 Authority；
-- 原站党建正式信息架构确认四条内容线：高层声音 `gcsy`、工作动态 `gzdt`、党规党章 `dgdz`、理论学习 `llxx`；“学习园地”是页面对后两者的视觉分组，不是独立 CMS 内容类型；
+- Main Site 持有独立 App / Router / 蓝白内容主题，源码已按 `home / content / page` 等职责形成模块边界，路由级页面使用动态 import；
+- Party 使用 `/party/**` namespace，持有独立 App / Router / Banner / 内容 Frame / 红色页面主题；Foundation 阶段已经关闭，正式页面/视觉不以 Foundation 占位文案和临时 CSS 为 Authority；
+- Main / Party 主导航和 Footer 已抽取为 Shared Shell Components，共用 DOM、菜单层级、交互、响应式和机构信息，仅通过主题变量切换蓝色 / 红色；
+- 原站党建正式信息架构确认四条内容线：高层声音 `gcsy`、工作动态 `gzdt`、党规党章 `dgdz`、理论学习 `llxx`；“学习园地”是 PartyHome 入口页对后两者的视觉分组，不是独立 CMS 内容类型；
 - 党建正式内容继续复用通用 Column + Article：预置父栏目 `party` 组织 `party-voice / party-work / party-rules / party-study`；同一栏目可混合 INTERNAL / EXTERNAL_LINK；
 - Party canonical URL 确认为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`；原站 `plist.html`、当前 `pdetail.html`、更早 `detail.html` 及 `content_id/typeCode` 参数变体只作为历史迁移输入；
 - 中心党建不拆成独立前端工程，不引入 Module Federation、`site` 字段或党建专属 Admin Module；只有真实独立生命周期或专属业务模型出现后再评估；
 - 党建 Flyway 只固化站点结构，历史文章、外链、正文资源与 legacy id/typeCode/detail path 映射继续通过独立内容迁移/采集机制处理；
-- 预置主导航“中心党建”已从 `PLACEHOLDER` 切换为当前窗口进入 `/party/` 的站内 `LINK`；跨 Site Entry 导航在 Main Header 渲染层使用文档级跳转，不改变 PublicNavigation 的既有 `external` 语义；
-- `shared/` 只允许无主题 API transport、CMS DTO、SEO / resource utility 等稳定技术能力，Main / Party Header、Footer、Page Frame 与 Theme 不为形式复用进入 Shared；
+- 预置主导航“中心党建”已从 `PLACEHOLDER` 切换为当前窗口进入 `/party/` 的站内 `LINK`；Main 将 `/party/**` 视为跨 Entry document navigation，Party 将 `/party/**` 视为当前 Router 内部导航；
+- 当前技术命名统一使用 `party / Party`；仅 `/party/` 入口页使用 `party-home / PartyHome`（如 `PartyHomeView.vue`）。已执行 V13/V14 Migration 和当前 PR 分支名中的 `party-building` 属于历史/兼容标识，不回写历史；
 - 站点初始化基线由数据库基线 + 版本化初始化静态资源包组成；
 - Automated Verification 与 Human Review Baseline 已分离：自动 E2E 结束后恢复数据库与静态资源已知基线，再注入明确 Human Review Fixture；
 - Review Environment 对同一 PR 使用并发互斥，避免固定 FRP 评审域名被多个 Head 同时占用；
@@ -102,11 +102,11 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 
 ### 已完成目标
 
-1. 将中心党建基础公开站点从“占位”推进为独立 Site Boundary；
-2. 把公开前端 Entry Boundary 从“普通页面类型”改为“真实 Site / Theme Boundary”；
+1. 将中心党建基础公开页面从“占位”推进为独立 Theme / Router Boundary；
+2. 把公开前端 Entry Boundary 从“普通页面类型”改为“真实 Theme / Router Boundary”；
 3. 将 Main Site 从平铺结构重构为 `app / shell / modules`，并使用 route-level lazy loading；
 4. 删除 `page.html / page-main.ts` 重复 Entry，同时保持 `/page/**` canonical URL 与直接刷新行为；
-5. 建立 Party Building Site 独立 `party.html` Entry、App、Router、红色主题 Shell 和基础首页框架；
+5. 建立 Party 独立 `party.html` Entry、App、Router、红色主题基础框架；
 6. 将预置主导航“中心党建”切换为当前窗口进入 `/party/` 的站内 `LINK`；
 7. 保持一个 `frontend/public-site` 工程、一个 package、一个 build/deploy unit；未引入 Module Federation，也未创建独立党建前端工程；
 8. Main / Party / Admin / Backend / Gateway 已取得与目标实现匹配的 Current Evidence；
@@ -117,7 +117,7 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 ```text
 EU-23 Public Frontend Authority & Architecture Convergence：已完成
 → EU-24 Main Site Modularization & Page Entry Removal：已完成
-→ EU-25 Party Building Site Entry & Foundation Shell：已完成
+→ EU-25 Party Site Entry & Foundation Shell：已完成
 ```
 
 ## 当前阶段：中心党建正式页面与内容收敛
@@ -125,7 +125,7 @@ EU-23 Public Frontend Authority & Architecture Convergence：已完成
 第一轮原站重新取证和 CMS 复用判断已经完成，当前持久执行路线以 `docs/work/party-convergence-execution-units.md` 为准：
 
 ```text
-EU-26 Party Building Evidence & Authority Convergence
+EU-26 Party Evidence & Authority Convergence
 → EU-27 Party CMS Structure & Content Routing
 → EU-28 Party Home & Visual Fidelity Convergence
 → EU-29 Party Historical Content Migration & Final Review
@@ -135,7 +135,7 @@ EU-26 Party Building Evidence & Authority Convergence
 
 1. 原站 `/dyzj` 已确认“高层声音、工作动态、党规党章、理论学习”四条正式内容线；实现不得恢复 Foundation 虚构栏目；
 2. 复用 Column + Article，父栏目 `party` 只承担 CMS 组织和 Party 作用域识别；
-3. `学习园地` 只作为首页固定布局分组；
+3. `学习园地` 只作为 PartyHome 入口页固定布局分组；
 4. Party 列表/详情 canonical route 使用 `/party/column/{alias}`、`/party/article/{id}`；
 5. 新 Flyway 只建立栏目结构，历史运营文章和资源走独立迁移；
 6. EU-27 先完成功能/结构闭环，EU-28 再依据更强视觉证据收敛最终红色页面；
@@ -159,7 +159,7 @@ EU-26 Party Building Evidence & Authority Convergence
 ## 阶段切换原则
 
 - 管理端工程分离、通用 CMS 与 Admin Modular SPA 当前阶段已经关闭，后续按明确 Review Finding 增量维护；
-- 公开站 Multi-entry Modular SPA 与中心党建基础框架阶段已经关闭，Main / Party Site Boundary 作为后续恢复基线；
+- 公开站 Multi-entry Modular SPA 与中心党建基础框架阶段已经关闭，Main / Party Boundary 作为后续恢复基线；
 - 当前主动路线为中心党建正式页面 / 内容 / 视觉 / 历史迁移专项；
 - 党建完整内容和最终视觉不得因基础框架已经完成而提前声明完成；
 - EU-29 Human Review 关闭后，Roadmap 切换到“公开站点剩余内容与集成收敛”；
