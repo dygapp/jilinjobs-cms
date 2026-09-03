@@ -4,7 +4,7 @@ import { listPublicNavigations, type PublicNavigation } from '../../../shared/ap
 
 const items = ref<PublicNavigation[]>([])
 const menuOpen = ref(false)
-const headerBanner = '/static/party-building/party-header-banner.webp'
+const headerBanner = '/static/party-building/party-header-banner.avif'
 
 const roots = computed(() => items.value
   .filter(item => item.position === 'MAIN' && item.parentId == null)

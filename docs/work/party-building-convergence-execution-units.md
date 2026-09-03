@@ -1,6 +1,6 @@
 # 中心党建正式页面与内容收敛执行单元
 
-本文记录中心党建 Foundation 之后的正式页面、内容与视觉收敛切分。每个 Execution Unit 必须能够独立审查、验证和回滚；不得因为后续单元已准备就跳过前序 Current Evidence。
+本文记录中心党建 Foundation 之后的正式页面、内容与视觉收敛切分。中文正式页面名称沿用“党员之家”，英文统一表述为 **Party Members’ Home**；已落地的 `party-building` 仅作为兼容性技术标识保留，不作为正式英文翻译。每个 Execution Unit 必须能够独立审查、验证和回滚；不得因为后续单元已准备就跳过前序 Current Evidence。
 
 **状态：进行中（2026-09-03）。**
 
@@ -44,10 +44,11 @@
 ### Decisions
 
 - 复用通用 Column + Article，不新增党建专属 CMS 类型；
-- 使用一个 `party-building` 预置父栏目组织四个真实子栏目；
+- 使用一个 `party-building` 预置父栏目组织四个真实子栏目；该字符串是兼容性技术 alias，不再作为“党员之家”的正式英文翻译；
+- 正式英文术语为 **Party Members’ Home**，新的逻辑 slug 使用 `party-members-home`；
 - `学习园地` 为页面分组；
 - 顶部 4 项图片轮播复用 CmsList，稳定容器为 `PARTY_HOME_CAROUSEL`，历史/运营成员独立迁移；
-- Party canonical URL 为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`；
+- canonical URL 为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`；
 - legacy `plist/pdetail/detail` 及其参数变体只属于迁移输入；
 - Flyway 只固化稳定结构，不注入历史文章、轮播成员和正文资源；
 - Foundation CSS / 文案不是最终视觉 Authority；
@@ -68,19 +69,19 @@
 
 ### Goal
 
-建立可重复初始化的党建栏目与顶部轮播容器结构，并完成 Party 首页/栏目/详情所需的真实内容路由闭环，不在此单元追求最终视觉精度。
+建立可重复初始化的党建栏目与顶部轮播容器结构，并完成党员之家首页/栏目/详情所需的真实内容路由闭环，不在此单元追求最终视觉精度。
 
 ### Scope
 
 - 新 Flyway migration 建立预置 `party-building` 父栏目及四个子栏目；
 - 同一 migration 建立预置 `PARTY_HOME_CAROUSEL` CmsList 容器，`imagePolicy=REQUIRED`；
-- Party App 提升 Header / Footer ownership；
-- Party Router 增加 column / article 路由；
-- 新建 Party Column View / Article View；
+- 党员之家 App 提升 Header / Footer ownership；
+- Router 增加 column / article 路由；
+- 新建 Column View / Article View；
 - 首页从四个真实 Column 加载 Article 摘要；
 - 首页顶部从 `PARTY_HOME_CAROUSEL` 加载列表项；
 - INTERNAL / EXTERNAL_LINK 行为；
-- 非党建文章 Party 详情隔离；
+- 非党建文章党员之家详情隔离；
 - E2E fixture 覆盖轮播、分页、外链、详情、撤回/不可用等核心行为。
 
 ### Non-goals
@@ -96,38 +97,42 @@
 - `/party/` 不再使用虚构栏目/静态文章数组；
 - 四条内容线使用通用 Article；
 - 顶部轮播使用通用 CmsList，不从 Article 全站结果推导；
-- Party list/detail canonical routes 可直接访问和刷新；
+- list/detail canonical routes 可直接访问和刷新；
 - Main / Admin 无回归；
 - Backend + Public + Admin + Integrated Browser 当前 Head 成功。
 
 ---
 
-## EU-28 — Party Home & Visual Fidelity Convergence
+## EU-28 — Party Members’ Home Visual Fidelity Convergence
 
 ### Goal
 
-依据原站证据完成 Party Header、顶部轮播、高层声音、工作动态、学习园地、Footer，以及列表/详情页面的正式红色视觉收敛。
+依据原站证据完成党员之家 Header、顶部轮播、高层声音、工作动态、学习园地、Footer，以及列表/详情页面的正式红色视觉收敛。
 
 ### Scope
 
 - 继续使用已采集的原站 DOM、CSS、computed styles、静态资源和代表性截图；
 - 将可靠稳定资源整理到 `site-baseline/static/party-building/**`；
-- Party Header / Footer / Page Frame；
+- 党员之家 Header / Footer / Page Frame；
 - 首页顶部轮播与高层声音并列结构；
 - 工作动态、学习园地布局；
 - 栏目列表与文章详情视觉；
 - Desktop / Mobile 响应式；
 - 不复制原站 `min-width: 1200px` 横向溢出；
-- 必要 Party SEO metadata。
+- 必要 SEO metadata。
 
 ### Evidence Rule
 
-文本/DOM 证据可以证明信息架构，但不能单独证明视觉。无法可靠取得的原站图片不得用无关搜索图片替代；历史轮播成员图片属于运营内容，不自动转为工程基线。
+文本/DOM 证据可以证明信息架构，但不能单独证明视觉。无法可靠取得的原站图片不得用无关搜索图片替代；历史轮播成员图片属于运营内容，不自动转为工程基线。稳定 Banner 不得先降低像素尺寸后再放大显示。
 
 ### Acceptance
 
 - Foundation 占位文案与伪品牌元素退出正式页面；
-- Party 首页/列表/详情达到当前原站可证明的视觉主结构；
+- 党员之家首页/列表/详情达到当前原站可证明的视觉主结构；
+- Banner 使用足以覆盖实际展示尺寸的版本化资源，不发生低分辨率上采样；
+- 高层声音密度与原站证据一致；
+- 配置 URL 的轮播项可正常跳转；
+- Footer 与主站共享机构信息、备案口径和稳定备案图标，但保持党员之家自有红色 DOM/CSS；
 - 新版 Mobile 在窄屏正常重排，无固定 1200px 横向溢出；
 - Main 蓝白主题无污染；
 - AI Visual Review 无未处理的 Authority-backed 高优先级差异；
@@ -140,7 +145,7 @@
 
 ### Goal
 
-建立与 Flyway 分离的党建历史内容迁移机制，导入足以支持正式运营/复核的原站文章、外链与顶部轮播内容，并关闭中心党建正式收敛阶段。
+建立与 Flyway 分离的党员之家历史内容迁移机制，导入足以支持正式运营/复核的原站文章、外链与顶部轮播内容，并关闭中心党建正式收敛阶段。
 
 ### Scope
 
@@ -168,5 +173,5 @@
 - INTERNAL / EXTERNAL_LINK 映射正确；
 - 顶部轮播成员进入通用 CmsList 而非专属模型；
 - 历史无法自动迁移项有明确报告而非静默丢失；
-- Party 首页、栏目、详情与 Main/Admin 回归通过；
+- 党员之家首页、栏目、详情与 Main/Admin 回归通过；
 - Human Review 通过后 Roadmap 切换到“公开站点剩余内容与集成收敛”。

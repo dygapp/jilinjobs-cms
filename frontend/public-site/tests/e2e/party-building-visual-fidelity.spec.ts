@@ -75,7 +75,7 @@ async function seedVisualContent(request: APIRequestContext, suffix: string) {
 
 test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer 使用正式视觉基线', async ({ page, request }) => {
   for (const path of [
-    '/static/party-building/party-header-banner.webp',
+    '/static/party-building/party-header-banner.avif',
     '/static/party-building/ic-title-yellow.png',
     '/static/party-building/section-marker.png',
     '/static/footer/public-security-record.png',
@@ -86,8 +86,16 @@ test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer �
 
   await page.setViewportSize({ width: 1440, height: 1000 })
   await page.goto('/party/')
+  const bannerDimensions = await page.evaluate(async () => {
+    const response = await fetch('/static/party-building/party-header-banner.avif')
+    const bitmap = await createImageBitmap(await response.blob())
+    const dimensions = { width: bitmap.width, height: bitmap.height }
+    bitmap.close()
+    return dimensions
+  })
+  expect(bannerDimensions).toEqual({ width: 3072, height: 512 })
   const banner = page.locator('.party-banner')
-  await expect(banner).toHaveCSS('background-image', /party-header-banner\.webp/)
+  await expect(banner).toHaveCSS('background-image', /party-header-banner\.avif/)
   await expect(banner).toHaveCSS('height', '320px')
   await expect(page.locator('.party-navigation')).toHaveCSS('background-color', 'rgb(208, 0, 35)')
   const firstNavigation = page.locator('.party-nav-root > li').first()
