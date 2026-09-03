@@ -1,8 +1,10 @@
 import { expect, test } from '@playwright/test'
 import fs from 'node:fs'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const ROOT = path.resolve(__dirname, '../..')
+const CURRENT_DIR = path.dirname(fileURLToPath(import.meta.url))
+const ROOT = path.resolve(CURRENT_DIR, '../..')
 const SCAN_ROOTS = [path.join(ROOT, 'src'), path.join(ROOT, 'index.html'), path.join(ROOT, 'party.html')]
 const TEXT_EXTENSIONS = new Set(['.vue', '.ts', '.css', '.html'])
 
