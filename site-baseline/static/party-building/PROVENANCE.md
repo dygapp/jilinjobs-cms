@@ -9,8 +9,8 @@
 - 原始尺寸：3072 × 512
 - 原始 SHA-256：`7444d50235d4c87a00d0221ac84551ea083c617bb8a15e58f58d002224bd27a3`
 - 仓库资源：`party-header-banner.webp`
-- 仓库尺寸：1536 × 256
-- 仓库 SHA-256：`fa4eda6930f2a4d476eb77ad15686d60307c7d49b165daf069d6737cbc9cd009`
+- 仓库尺寸：960 × 160
+- 仓库 SHA-256：`4767b29adcd95dcb91f79ae49b621bb7aa2778ae6bb874e07f4f39f1daf4bd1b`
 - 处理：仅做等比例 Lanczos 缩放与 WebP 编码，以降低版本化资源体积；没有重新设计、替换图像内容或加入非原站素材。
 
 ## UI Markers
