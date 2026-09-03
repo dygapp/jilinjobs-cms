@@ -24,7 +24,19 @@ Router / Article View 必须确认目标栏目属于上述党员之家子栏目�
 
 ## 4. Shell 与视觉
 
-党员之家拥有独立 Header/Footer/Page Frame 和红色主题。Header 使用原站证据确认的 Banner 与主导航数据。
+党员之家拥有独立 Header/Footer/Page Frame 和红色主题。Header 使用原站证据确认的 Banner，并消费与主站相同的通用 Navigation 数据。
+
+导航不是党员之家独立维护的简化菜单。除主题颜色和 Party-owned DOM/CSS 外，导航的信息结构与交互能力必须与当前主站保持一致：
+
+- 使用相同的 `MAIN` 一级菜单筛选、`parentId` 二级层级和 `sortOrder / id` 排序语义；
+- 支持一级可点击项、不可点击占位项以及二级菜单；
+- 一级项存在子菜单时显示下拉提示，并在 Desktop 支持 hover/focus 展开；
+- active 状态同时依据一级目标和二级目标计算，访问 `/party/**` 时“中心党建”保持选中；
+- 继续遵守 `external / newWindow / clickable` 导航语义；
+- Party 内 `/party/**` 使用 Party Router，跳转到主站其他 Entry 或外部地址时使用文档导航，避免由 Party Router 错误接管；
+- Mobile 展开后保留完整一级/二级层级，不得只显示一级菜单；
+- 导航文字字体口径与主站一致，继承 `Microsoft YaHei / PingFang SC / Arial` 字体栈，当前基线为 14px、normal；
+- 党员之家仅将背景、active/hover、下拉强调色等切换为红色主题，不复制主站蓝色 CSS。
 
 Footer 的信息结构与当前主站 Footer 保持一致，但继续由党员之家自有 DOM/CSS 实现：
 
@@ -54,6 +66,9 @@ Desktop 维持 1200px 内容宽度：
 
 - 静态资源可访问；
 - Banner 媒体源尺寸固定验证为 3072×512；
+- Navigation 一级/二级菜单数量和顺序来自同一公开导航数据，至少选择一个真实父菜单验证子项完整渲染；
+- Desktop 二级菜单可展开，导航字体为主站同一 14px/normal 口径；
+- Mobile 展开后一级/二级菜单均可访问；
 - Desktop 主结构尺寸/红色视觉基线；
 - 高层声音列表密度；
 - 轮播项实际点击进入对应 `/party/article/{id}` 新闻详情；
