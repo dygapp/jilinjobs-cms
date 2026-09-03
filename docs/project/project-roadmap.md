@@ -6,7 +6,7 @@
 
 ```text
 dygapp/agentic-dev
-master@b80b2b1b7cea38eed0aef9807879e2a0d56afd2f
+master@a0aece02414aa36ca7421db391cb3124ad0780f2
 ```
 
 普通开发优先使用 Consumer-local：`AGENTS.md`、`docs/project/development-method.md`、当前 Requirement / Specification / Technical Plan。外部 baseline 的 Engineering Discipline / Technology Profile 只有经本仓库选择性固化后才成为普通开发规则；`agentic-dev` 自身 Project Roadmap、Foundation 状态、PR / Issue / Experiment 事实不进入本 Roadmap。
@@ -48,6 +48,7 @@ master@b80b2b1b7cea38eed0aef9807879e2a0d56afd2f
 | 2026-09-02 | 中心党建正式阶段完成第一轮原站重新取证：确认“高层声音 / 工作动态 / 党规党章 / 理论学习”及 legacy `gcsy/gzdt/dgdz/llxx`，确认当前 `pdetail.html`、更早 `detail.html` 与外部权威来源混合；通用 Column + Article 足以承载，正式阶段切分为 EU-26～EU-29 |
 | 2026-09-03 | EU-26～EU-28 已完成并进入 `main`；当前 Roadmap 恢复到 EU-29 Historical Content Migration & Final Review |
 | 2026-09-03 | `agentic-dev` baseline 更新到 `b80b2b1b7cea38eed0aef9807879e2a0d56afd2f`；Consumer-local Authority 选择性固化 Implementation Minimality、Surgical Diff Scope、Vue 3 + TypeScript Technology Profile、Verification Profile 与 Consumer Override Boundary，不继承 Foundation 项目事实，也不机械升级技术依赖 |
+| 2026-09-04 | `agentic-dev` baseline 更新到 `a0aece02414aa36ca7421db391cb3124ad0780f2`；相对 `b80b2b1b7cea38eed0aef9807879e2a0d56afd2f` 的新增提交仅涉及 `agentic-dev` 自身 Foundation v1 Closure、Project Roadmap、Consumer Adoption Handoff 与实验收尾记录，Consumer-local Method / Verification 语义无变化，仅更新精确 baseline 引用，不继承其项目状态 |
 
 ## 当前已固化结果
 
