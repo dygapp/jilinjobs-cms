@@ -11,6 +11,7 @@ import {
 } from '../../app/partyContext'
 
 const SECTION_SIZE = 6
+const studyAliases: PartyColumnAlias[] = ['party-rules', 'party-study']
 const sectionArticles = ref<Record<PartyColumnAlias, PublicArticleSummary[]>>({
   'party-voice': [],
   'party-work': [],
@@ -128,7 +129,7 @@ function itemTarget(item: CmsListItem) {
         <section class="party-study-garden" aria-labelledby="party-study-garden-title">
           <h2 id="party-study-garden-title" class="party-garden-title">学习园地</h2>
           <div class="party-study-grid">
-            <section v-for="alias in ['party-rules', 'party-study'] as PartyColumnAlias[]" :key="alias" class="party-home-section" :data-testid="`party-section-${alias}`">
+            <section v-for="alias in studyAliases" :key="alias" class="party-home-section" :data-testid="`party-section-${alias}`">
               <header class="party-section-heading">
                 <h3>{{ sectionTitles[alias] }}</h3>
                 <router-link :to="`/party/column/${alias}`">更多</router-link>
