@@ -6,7 +6,7 @@
 
 **中心党建不是第二个网站，也不是主站之外的独立首页。** 它是主站信息架构下具有独立红色视觉主题的特殊栏目/专题入口。当前 `/party/**`、`party.html`、独立 App/Router 只是为了隔离红色主题、路由和页面模板的技术实现边界，不改变其业务上属于主站的定位。
 
-原站页面名称为“党员之家”，英文统一表述为 **Party Members’ Home**；新的英文逻辑命名使用 `party-members-home`。既有 `party` 父栏目 alias、源码目录等属于兼容性技术标识，不再作为“党员之家”的正式英文翻译。
+原站页面名称为“党员之家”，英文业务表述为 **Party Members’ Home**。当前工程技术命名统一使用 `party / Party` 表示中心党建 Site/模块；仅 `/party/` 入口页使用 `party-home / PartyHome`，例如 `PartyHomeView.vue`。技术标识不作为“党员之家”的英文翻译。
 
 本规格依据 2026-09-02～2026-09-03 对原站 `https://24365.jl.smartedu.cn/dyzj` 的 Browser Evidence，以及 2026-09-03 Human Visual Review 结论收敛。凡旧文档把中心党建描述为“独立站点”“党建首页”的业务语义，以本规格和本轮 Human Review 结论为准。
 
@@ -61,7 +61,7 @@ Banner 仅承担视觉展示：必须使用非链接容器 + `<img>`，不得包
 继续使用通用 Column：
 
 ```text
-中心党建 (party，兼容性技术 alias)
+中心党建 (party)
 ├── 高层声音 (party-voice)   <- legacy gcsy
 ├── 工作动态 (party-work)    <- legacy gzdt
 ├── 党规党章 (party-rules)   <- legacy dgdz
@@ -103,13 +103,13 @@ Canonical URL：
 - 栏目：`/party/column/{alias}`；
 - 站内文章：`/party/article/{id}`。
 
-这里的“入口”不是独立网站首页。`party.html` / Party Router 用于主题与模板隔离；产品信息架构仍把“中心党建”视为主导航中的特殊栏目入口。
+这里的“入口”不是独立网站首页。`party.html` / Party Router 用于主题与模板隔离；产品信息架构仍把“中心党建”视为主导航中的特殊栏目入口。路由名称使用 `party-home / party-column / party-article`，其中 `party-home` 仅表示 `/party/` 入口页技术角色。
 
 Router 必须验证栏目/文章属于上述中心党建栏目树，普通主站文章不得通过 `/party/article/{id}` 套用红色主题。
 
 ## 5. 页面规格
 
-### 5.1 中心党建入口页
+### 5.1 中心党建入口页（PartyHome）
 
 `/party/` 至少包含：
 
@@ -156,6 +156,7 @@ Party-owned 视觉仅包括 Banner、内容 Frame、轮播和内容区块模板�
 Desktop 关键关系：
 
 - Banner 使用版本化 `party-header-banner.jpg` 原始字节副本，按容器裁切展示，不二次有损转码；
+- 主导航一级菜单使用原站 16px bold；二级菜单与一级菜单同主题底色、白色粗体文字，hover/active 使用主题深色；
 - 中心党建轮播与高层声音约 585×329 并列；
 - 工作动态单列；
 - 学习园地两栏；
@@ -169,16 +170,21 @@ Flyway 只负责稳定结构：父栏目、四个子栏目、轮播容器及必�
 
 历史迁移必须保留可识别的 `content_id / typeCode / detail path` 证据并落入通用 Column / Article / CmsList / Resource 模型。
 
+已执行 V13/V14 的 Migration 文件名和历史 SQL 中可保留 `party_building / party-building` 作为不可改写历史；V16 将当前父栏目 alias 原地收敛为 `party`。当前源码、目录、测试和现行 Authority 不再使用 `PartyBuilding / party-building` 作为技术命名。
+
 ## 8. Acceptance Criteria
 
 - 中心党建在业务上明确属于主站特殊栏目/专题页面，不再称为独立网站或党建首页；
 - `/party/**` 独立 Entry/Router 仅作为主题与模板隔离技术实现；
+- 当前技术命名以 `party / Party` 为通用标识，入口页使用 `party-home / PartyHome`；
 - 四个内容子栏目及其 legacy 映射明确；
 - CmsList 稳定 code 为 `PARTY_CAROUSEL`，名称为“中心党建轮播”，旧 `PARTY_HOME_CAROUSEL` 不再作为当前运行时 code；
 - Banner 使用版本化 `/static/party/party-header-banner.jpg`，其字节 SHA-256 与原站一致；正式运行不访问原站 Banner URL；
 - Banner DOM 不含 `<a>`，不可点击；
 - 公开站设计模板不存在未经允许的外部静态资源直接引用；
 - Main / Party Navigation 与 Footer 使用同一 Shared Components，仅主题色不同；
+- 主导航一级/二级菜单视觉符合原站主题规则：16px bold、主题底色、白字、深色 hover/active；
+- Main / Party Entry 的 favicon 均从版本化 `/static/brand/site-favicon.png` 正常加载；
 - 中心党建入口页、栏目、文章功能和响应式通过 Browser Verification；
 - AI Visual Review 无未处理的 Authority-backed 高优先级差异；
 - Human Visual Review 通过后方可结束 EU-28。
