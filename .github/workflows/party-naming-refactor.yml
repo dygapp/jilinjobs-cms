@@ -19,4 +19,4 @@ jobs:
           ref: feat/party-building-visual-fidelity
           fetch-depth: 0
       - name: 执行 Party 命名重构
-        run: bash .github/scripts/party-naming-refactor.sh
+        run: bash .github/scripts/run-party-naming-refactor.sh
