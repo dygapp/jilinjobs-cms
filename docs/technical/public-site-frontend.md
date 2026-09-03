@@ -2,17 +2,22 @@
 
 ## 1. 目标架构
 
-`frontend/public-site` 只负责公开页面与固定工程集成，不承载 CMS 管理页面。公开前端采用 **Multi-entry Modular SPA**，Entry 按真实 Site / Theme Boundary 划分，而不是按普通页面类型划分。
+`frontend/public-site` 只负责公开页面与固定工程集成，不承载 CMS 管理页面。公开前端采用 **Multi-entry Modular SPA**，Entry 按真实 Theme / Router Boundary 划分，而不是按普通页面类型划分。
 
 当前结构：
 
 ```text
 frontend/public-site/
 ├── index.html                 # Main Site Entry
-├── party.html                 # Party Building Site Entry
+├── party.html                 # Party Entry
 └── src/
     ├── shared/
     │   ├── api/
+    │   ├── components/
+    │   │   ├── PublicNavigation.vue
+    │   │   └── PublicFooter.vue
+    │   ├── styles/
+    │   │   └── public-shell.css
     │   └── seo.ts
     └── sites/
         ├── main/
@@ -24,20 +29,20 @@ frontend/public-site/
         │   │   ├── page/
         │   │   └── integration/
         │   └── styles/
-        └── party-building/
+        └── party/
             ├── app/
             ├── shell/
             ├── modules/
             │   ├── home/
-            │   └── content/       # 正式党建栏目/文章阶段新增
+            │   └── content/
             └── styles/
 ```
 
-中心主站与中心党建当前同 package、同 Vite build、同部署、同 Spring Boot CMS Backend，但分别拥有 App、Router、Shell 与主题样式所有权。
+中心主站与中心党建当前同 package、同 Vite build、同部署、同 Spring Boot CMS Backend。两者分别拥有 App、Router、Banner、内容 Frame 与页面主题；Navigation/Footer 通过 Shared Shell Components 共享结构、交互和响应式，仅由 theme variables 切换蓝色/红色。
 
-不引入 Module Federation；不建立 `frontend/party-building` 独立工程。后续只有出现独立发布/部署、不同团队或技术栈、明显不同生命周期等真实需求时再重新评估工程拆分。
+不引入 Module Federation；不建立 `frontend/party` 独立工程。后续只有出现独立发布/部署、不同团队或技术栈、明显不同生命周期等真实需求时再重新评估工程拆分。
 
-中心党建 Foundation 架构已经完成；正式党建前端实施细节由 `docs/technical/party-building-frontend.md` 接续，本文件继续承担两个 Site 的总体工程边界。
+中心党建 Foundation 架构已经完成；正式党建前端实施细节由 `docs/technical/party-frontend.md` 接续，本文件继续承担 Main / Party 两个 Entry 的总体工程边界。
 
 ## 2. Entry 与 Runtime 路由
 
@@ -63,16 +68,16 @@ page        -> 独立单页 + 单页分组
 integration -> 稳定外部集成页面
 ```
 
-### 2.2 Party Building Entry
+### 2.2 Party Entry
 
-Party Building Entry 使用 `party.html`，Nginx 对 `/party/**` fallback 到该 Entry。正式 Party Router 承载：
+Party Entry 使用 `party.html`，Nginx 对 `/party/**` fallback 到该 Entry。正式 Party Router 承载：
 
-- `/party/`：党建首页；
+- `/party/`：中心党建入口页（`PartyHome`）；
 - `/party/column/:alias`：党建栏目列表；
 - `/party/article/:id`：党建站内文章详情；
 - Party catch-all：保持在 Party Entry 内处理，不回落 Main Router。
 
-Party Building Site 拥有独立红色主题 Shell，不能依赖 Main Site Header/Footer 或主站 CSS 才能正常显示。正式实现细节见 `docs/technical/party-building-frontend.md`。
+Party Entry 拥有独立红色内容主题、Banner 和页面 Frame；Navigation/Footer 复用 Shared Components，不复制 Main DOM，也不依赖 Main 私有 CSS。正式实现细节见 `docs/technical/party-frontend.md`。
 
 ### 2.3 Gateway
 
@@ -80,7 +85,7 @@ Party Building Site 拥有独立红色主题 Shell，不能依赖 Main Site Head
 /api/**      -> Backend
 /static/**   -> Backend / static resources
 /admin/**    -> Admin frontend
-/party/**    -> Public Party Building Entry
+/party/**    -> Public Party Entry
 其他公开路径 -> Public Main Site Entry
 ```
 
@@ -88,23 +93,25 @@ Party Building Site 拥有独立红色主题 Shell，不能依赖 Main Site Head
 
 ## 3. Shared 与 Site Ownership
 
-`src/shared/` 只放明确无主题、跨 Main / Party 两个 Site 都具有长期复用价值的能力：
+`src/shared/` 放跨 Main / Party 两个 Entry 已经证明具有长期复用价值的能力：
 
 - API transport 与 CMS DTO；
 - 静态资源 URL helper；
 - SEO / metadata helper；
-- 无主题通用 utility。
+- 无主题通用 utility；
+- `PublicNavigation.vue`：统一一级/二级菜单、active、external/newWindow、Desktop/Mobile 交互；
+- `PublicFooter.vue`：统一机构信息、备案、事业单位图标、微信公众号二维码和响应式结构；
+- `public-shell.css`：共享 Navigation/Footer 结构样式以及蓝/红主题变量。
 
-以下内容默认归 Site，不进入 Shared：
+以下内容继续归各 Entry：
 
-- Header / Footer；
-- Navigation Layout；
+- Main 顶部平台条与 Main Banner；
+- Party Banner；
 - Page Frame；
-- 颜色、字体、间距等 Theme tokens；
-- 首页/专题区块布局；
-- Site-specific responsive rules。
+- 首页/专题内容布局；
+- Site-specific 内容 Theme 和页面模板。
 
-共享的判断依据是稳定技术职责，不是简单代码相似。
+共享的判断依据是稳定产品/技术职责，不是简单代码相似。若未来某 Entry 要求不同的菜单层级、Footer 信息架构或响应式行为，应先形成 Requirement Change，不通过 Site-local DOM/CSS 静默分叉 Shared Shell。
 
 ## 4. Main Site 数据装配
 
@@ -112,7 +119,7 @@ Main Site App 统一装配有界 Navigation + SiteProperty 快照；首页再按
 
 映射规则：
 
-- `MAIN` → Header 主导航；
+- `MAIN` → Shared Navigation；
 - `HOME_SHORTCUT` → 首屏右侧快捷入口，并直接使用 Navigation `iconPath`；
 - `HOME_QUICK` → 快速导航，并直接使用 Navigation `iconPath`；
 - `HOME_CAROUSEL` → 主轮播数据；
@@ -124,7 +131,7 @@ Main Site App 统一装配有界 Navigation + SiteProperty 快照；首页再按
 
 删除旧 JSON merge/fallback 逻辑，避免两个 Authority 同时生效。不得恢复 `top-nav-${index}`、`guide-${index}` 等按数据位置推导业务图标的逻辑。
 
-Main Navigation 中“中心党建”预置项通过 V13 为 `LINK /party/`，默认当前窗口进入 Party Building Entry。
+Main Navigation 中“中心党建”预置项通过 V13 为 `LINK /party/`，默认当前窗口进入 Party Entry。
 
 ## 5. Main Site 主轮播
 
@@ -155,19 +162,21 @@ Public Article Summary 的可选 `coverResourceId` 只是可消费数据；具�
 
 ## 7. 工程资产与 Theme
 
-Main Site：
+Main：
 
 - 继续使用现有蓝白主题和视觉基线；
 - NCSS 区域继续使用固定工程集成；
-- Header、Footer、页面 Shell、首页区域布局属于 Main Site 工程资产。
+- 顶部平台条、Main Banner、页面 Frame、首页区域布局属于 Main 工程资产。
 
-Party Building Site：
+Party：
 
-- Foundation 红色 Shell 已证明 Site/Theme 隔离；
-- 正式阶段按原站证据重构 Header、Footer、首页、栏目和详情视觉；
+- Foundation 红色 Theme 已证明 Theme / Router 隔离；
+- 正式阶段按原站证据重构 Banner、PartyHome、栏目和详情视觉；
 - Foundation 占位文案、伪品牌元素和临时 CSS 不作为最终 Authority；
-- 可靠取得并验证的党建 Logo、背景、装饰图片等进入 `site-baseline/static/party-building/**`；
+- 可靠取得并验证的党建稳定视觉资源进入 `site-baseline/static/party/**`；
 - 历史文章正文图片属于内容迁移，不混入工程静态基线。
+
+Main / Party 公共 Navigation/Footer 属于 Shared Shell 工程资产。两者结构和交互保持一致，Main 使用蓝色 theme，Party 使用红色 theme。
 
 `/static/icons/**` 可以保存版本化图标文件，但导航条目与图标的对应关系仍来自 Navigation `iconPath`。
 
@@ -175,7 +184,7 @@ Party Building Site：
 
 ### 8.1 Public Frontend Build
 
-一次 `npm run build` 必须同时验证 Main 与 Party Building 两个 Entry 可成功构建。Vite multi-input 仅保留真实 Site Entry：
+一次 `npm run build` 必须同时验证 Main 与 Party 两个 Entry 可成功构建。Vite multi-input 仅保留真实 Entry：
 
 ```text
 main  -> index.html
@@ -189,20 +198,22 @@ party -> party.html
 保持 `/`、`/column/**`、`/article/**`、`/page/**`、SEO、响应式和既有视觉 E2E。至少证明：
 
 - `/page/**` 直接访问和刷新仍正常；
-- 主站 Header / Nav / Footer 及首页主视觉无党建改造回归；
+- 主站顶部 Header、Shared Navigation/Footer 及首页主视觉无党建改造回归；
 - Main Router route-level lazy loading 正常；
 - Main Site Context 的站点级装配与首页 scoped data 查询无回退。
 
-### 8.3 Party Building Formal Verification
+### 8.3 Party Formal Verification
 
-按 `docs/technical/party-building-frontend.md` 至少证明：
+按 `docs/technical/party-frontend.md` 至少证明：
 
 - `/party/`、`/party/column/**`、`/party/article/**` 直接访问和刷新；
-- Party App / Router / Shell 不依赖 Main Router/DOM/CSS；
+- Party App / Router / Banner / Content Theme 不依赖 Main Router 或 Main 私有 DOM/CSS；
+- Main / Party 使用同一 Navigation/Footer component marker，且只存在蓝/红主题差异；
 - 四个预置党建栏目与通用 Article 闭环；
 - INTERNAL / EXTERNAL_LINK 行为；
 - 非党建文章不能由 Party 详情正常呈现；
-- Party 首页/列表/详情 Browser E2E；
+- PartyHome/列表/详情 Browser E2E；
+- Main / Party favicon 使用同一版本化 PNG 并在运行时正常加载；
 - `/admin/`、`/api/**`、`/static/**` Gateway 无回归；
 - AI Visual + Human Review 用于最终视觉声明。
 
@@ -210,11 +221,11 @@ party -> party.html
 
 `docs/work/public-site-multi-entry-execution-units.md` 的 EU-23～EU-25 已完成并转为追溯。
 
-当前按照 `docs/work/party-building-convergence-execution-units.md` 执行：
+当前按照 `docs/work/party-convergence-execution-units.md` 执行：
 
 1. EU-26：原站证据与 Authority 收敛；
 2. EU-27：党建 CMS 结构与 Party 内容路由；
-3. EU-28：党建首页与视觉精度收敛；
+3. EU-28：PartyHome 与视觉精度收敛；
 4. EU-29：历史内容迁移与最终 Review。
 
 每个目标提交取得对应 Backend / Public / Admin / Integrated Browser Current Evidence；最终视觉声明必须额外满足 AI Visual / Human Review。

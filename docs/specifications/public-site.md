@@ -2,13 +2,13 @@
 
 ## 1. 目标
 
-本文定义吉林省高等学校毕业生就业信息网公开站及中心党建 Site Boundary 的总体 WHAT / WHY。共享内容模型以 `docs/specifications/cms-core.md` 为准；中心党建正式页面与内容规格以 `docs/specifications/party-building.md` 为准。
+本文定义吉林省高等学校毕业生就业信息网公开站及中心党建 Theme / Router Boundary 的总体 WHAT / WHY。共享内容模型以 `docs/specifications/cms-core.md` 为准；中心党建正式页面与内容规格以 `docs/specifications/party.md` 为准；Main / Party 公共导航与 Footer 以 `docs/specifications/public-shared-shell.md` 和 ADR-0003 为准。
 
 中心主站目标仍为现网视觉与布局复刻，并通过 CMS 数据驱动需要持续运营维护的内容；稳定布局、固定集成和无需运营维护的内容保留为工程资产。
 
-中心党建独立 Entry / Router / Shell Foundation 已完成，当前正式进入真实栏目、页面、内容与视觉收敛。Foundation 阶段的占位文案、临时品牌元素和基础 CSS 不构成最终内容/视觉 Authority。
+中心党建 Party Entry / Router / Theme Foundation 已完成，当前正式进入真实栏目、页面、内容与视觉收敛。Foundation 阶段的占位文案、临时品牌元素和基础 CSS 不构成最终内容/视觉 Authority。
 
-公开前端目标架构为 **Multi-entry Modular SPA**：同一 `frontend/public-site` Vue / Vite 工程内，中心主站与中心党建按真实 Site / Theme Boundary 分别拥有 Entry、App、Router、Shell 和主题样式；当前共用构建部署链路与 Spring Boot CMS Backend，不引入 Module Federation，也不拆成独立前端工程。
+公开前端目标架构为 **Multi-entry Modular SPA**：同一 `frontend/public-site` Vue / Vite 工程内，中心主站与中心党建按真实 Theme / Router Boundary 分别拥有 Entry、App、Router、Banner、内容 Frame 与主题页面样式；当前共用构建部署链路与 Spring Boot CMS Backend，并共享主导航与 Footer，不引入 Module Federation，也不拆成独立前端工程。
 
 ## 2. URL 与页面
 
@@ -26,52 +26,61 @@
 
 ### 2.2 中心党建
 
-- 首页：`/party/`
+- 入口页：`/party/`
 - 栏目：`/party/column/{alias}`
 - 站内文章：`/party/article/{id}`
 - canonical namespace：`/party/**`
 
-党建栏目与文章的允许作用域、四条原站内容线、旧 `plist/pdetail` 地址迁移边界以 `docs/specifications/party-building.md` 为准。
+党建栏目与文章的允许作用域、四条原站内容线、旧 `plist/pdetail` 地址迁移边界以 `docs/specifications/party.md` 为准。
 
-主站 `MAIN` Navigation 中“中心党建”预置条目指向 `/party/`，当前窗口进入。
+主站 `MAIN` Navigation 中“中心党建”预置条目指向 `/party/`，当前窗口进入。业务定位上中心党建属于主站特殊栏目/专题页面，`/party/**` 独立 Entry 只承担红色主题、路由与内容模板隔离。
 
-## 3. 公开前端站点边界
+## 3. 公开前端边界
 
 ### 3.1 Main Site
 
 Main Site 持有：
 
 - 主站 App / Router；
-- 主站 Header / Footer / Navigation Layout；
-- 蓝白主题、页面 Frame 与主站视觉样式；
+- 主站顶部平台条与 Banner；
+- 蓝白内容主题、页面 Frame 与主站页面样式；
 - 首页、内容（栏目/文章）、单页、固定集成等页面模块。
 
-主站页面模块采用 route-level lazy loading，避免继续以同步 import 将所有页面代码绑定到首屏 bundle。
+Main Site 的页面路由使用 Vue Router 动态 `import()` 进行 route-level lazy loading，避免继续以同步 import 将所有页面代码绑定到首屏 bundle。
 
-### 3.2 Party Building Site
+### 3.2 Party Site
 
-Party Building Site 持有：
+Party Site 持有：
 
 - 独立 App / Router；
-- 独立 Header / Footer / Navigation Shell；
-- 独立红色主题与页面 Frame；
-- 正式党建首页模块；
+- 中心党建 Banner；
+- 独立红色内容主题与页面 Frame；
+- `PartyHome` 入口页模块；
 - 党建栏目列表与文章详情模块。
 
-Party Building Site 不复用 Main Site Header/Footer DOM 与主站主题 CSS。当前可以共用无主题的 API transport、CMS DTO、静态资源 URL、SEO/通用工具等技术能力。
+Party 不复制 Main Header/Footer/Navigation DOM，也不依赖 Main 私有 CSS。Main / Party 都通过 Shared Shell Components 使用同一 Navigation 与 Footer 结构和交互，只通过 theme variables / modifier class 切换蓝色与红色。
 
 ### 3.3 Shared Boundary
 
-`shared/` 只放已经证明跨两个公开 Site 稳定复用、且不携带站点主题所有权的能力。不得为了“去重复”提前抽取：
+`shared/` 承担已经证明跨两个公开 Entry 稳定复用的公共能力：
 
-- Header / Footer；
-- Navigation Layout；
-- 页面 Frame；
-- 颜色变量；
-- Typography / Theme CSS；
-- 首页区块布局。
+- API transport / CMS DTO；
+- 静态资源 URL 处理；
+- SEO / metadata utility；
+- 无主题通用工具；
+- `PublicNavigation.vue` 与其菜单树、active、Desktop/Mobile 交互；
+- `PublicFooter.vue` 与机构信息、备案、官方标识及响应式结构；
+- Navigation / Footer 的公共结构样式与主题变量。
 
-存在两个 Site Entry 不等于构建通用多站点平台，也不要求把中心党建拆成独立 Repository / Frontend Project。
+以下内容仍不得为了“去重复”强行进入 Shared：
+
+- Main 顶部平台条与 Main Banner；
+- Party Banner；
+- Page Frame；
+- 首页/专题内容区块布局；
+- Site-specific 内容主题与页面模板。
+
+存在两个 Entry 不等于构建通用多站点平台，也不要求把中心党建拆成独立 Repository / Frontend Project。
 
 ## 4. 主站首页数据来源
 
@@ -104,15 +113,16 @@ Public Article Summary 可以包含可选 `coverResourceId`，为带图模板提
 
 首页快捷入口和快速导航直接使用 Navigation `iconPath`；不得使用数组下标拼接 `top-nav-01`、`guide-01` 等路径。
 
-中心党建正式内容已经确认复用现有 Column + Article；四条真实内容线、INTERNAL / EXTERNAL_LINK 行为和 Party 作用域由 `docs/specifications/party-building.md` 约束。独立视觉主题本身不构成新增党建专属 CMS 模型或 Admin Module 的理由。
+中心党建正式内容已经确认复用现有 Column + Article；四条真实内容线、INTERNAL / EXTERNAL_LINK 行为和 Party 作用域由 `docs/specifications/party.md` 约束。独立视觉主题本身不构成新增党建专属 CMS 模型或 Admin Module 的理由。
 
 ## 6. 工程资产
 
 以下内容允许固定在公开站工程或版本化静态资产中：
 
 - 主站首页区域布局、尺寸关系和视觉样式；
-- 各 Site 自己的 Header / Footer / Navigation Layout；
-- 各 Site 自己的页面 Shell / Theme；
+- Main 顶部平台条与 Banner、Party Banner；
+- 各 Entry 自己的 Page Frame / 内容 Theme；
+- Shared Navigation / Footer 的稳定结构和主题变量；
 - NCSS Logo、学生入口、企业入口及其固定集成布局；
 - 明确无需运营维护的装饰图标与一次性外部平台接缝。
 
@@ -124,7 +134,7 @@ Public Article Summary 可以包含可选 `coverResourceId`，为带图模板提
 
 主站栏目列表、文章详情、独立单页、业务指南单页分组继续以现网页面主要版式为复刻基准。单页分组 Tab 从 PageGroup 成员数据生成。
 
-中心党建 Foundation 已结束；正式首页、栏目列表、文章详情、红色视觉和真实静态资源依据 `docs/specifications/party-building.md` 与原站证据收敛，不再以 Foundation 页面作为验收基线。
+中心党建 Foundation 已结束；正式入口页、栏目列表、文章详情、红色视觉和真实静态资源依据 `docs/specifications/party.md` 与原站证据收敛，不再以 Foundation 页面作为验收基线。
 
 招聘信息和直播课程继续保留本站页面框架/占位，不加载真实第三方 iframe。
 
@@ -132,9 +142,10 @@ Public Article Summary 可以包含可选 `coverResourceId`，为带图模板提
 
 - Main Site 的 `/`、`/column/**`、`/article/**`、`/page/**` 由同一 Main Site Entry 承载，既有 canonical URL 与视觉主基线无回归；
 - Main Site 源码保持 `app / shell / modules` 所有权边界和 route-level lazy loading；
-- `/party/**` 由独立 Party Building HTML Entry、Vue App、Router、Shell 与红色主题样式承载，直接访问与刷新正常；
-- Party 首页/栏目/文章正式行为符合 `docs/specifications/party-building.md`；
-- 主站与党建主题 CSS 互不污染，党建不得依赖主站 Header/Footer DOM 才能正常显示；
+- `/party/**` 由独立 Party HTML Entry、Vue App、Router 与红色内容主题承载，直接访问与刷新正常；
+- PartyHome 入口页、栏目、文章正式行为符合 `docs/specifications/party.md`；
+- Main / Party Navigation 与 Footer 复用同一 Shared Components，仅主题颜色不同；
+- 主站与党建内容主题 CSS 互不污染，Party Banner 与内容 Frame 不依赖 Main 私有 DOM/CSS；
 - `MAIN` Navigation 中“中心党建”指向 `/party/`；
 - 当前公开站仍为一个 `frontend/public-site` 工程、一个 build/deploy 单元；不引入 Module Federation 或独立党建前端工程；
 - 首页不再读取 `SERVICE_LINKS`、`HOME_BANNERS`、`SITE_LINK_GROUPS`、`HOME_PROMO_BANNER_PATH`、`HOME_NCSS_LOGO_PATH` 作为运行时内容源；

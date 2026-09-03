@@ -58,9 +58,9 @@ Main Site 的页面路由使用 Vue Router 动态 `import()` 进行 route-level 
 
 Party Building Site 持有：
 
-- `sites/party-building/app/`：独立 App、Router、bootstrap；
-- `sites/party-building/shell/`：党建 Header / Footer / Navigation 基础 Shell；
-- `sites/party-building/modules/`：党建页面模块；
+- `sites/party/app/`：独立 App、Router、bootstrap；
+- `sites/party/shell/`：党建 Header / Footer / Navigation 基础 Shell；
+- `sites/party/modules/`：党建页面模块；
 - 独立红色主题、页面 Frame 和 Site-level CSS。
 
 当前 canonical namespace 为 `/party/**`，基础入口为 `/party/`。
@@ -110,7 +110,7 @@ Gateway：
 
 独立前端工程能够提供更强的 package/build/deploy 隔离，但当前只有视觉和主题边界得到确认，尚未出现工程生命周期边界。
 
-如果现在建立 `frontend/party-building`，会立即增加：
+如果现在建立 `frontend/party`，会立即增加：
 
 - 第二套 `package.json` / Vite / TypeScript 配置；
 - 第二次 npm install、build artifact 和 CI job；
@@ -122,7 +122,7 @@ Gateway：
 
 ## 4. Future extraction trigger
 
-只有出现以下真实需求之一，再评估把 `sites/party-building` 提取为独立前端工程或独立应用：
+只有出现以下真实需求之一，再评估把 `sites/party` 提取为独立前端工程或独立应用：
 
 - 独立发布或独立部署；
 - 独立域名及明显不同的运行环境；
@@ -141,7 +141,7 @@ Gateway：
 - 主站与党建视觉 Shell 强隔离；
 - 保持单工程、单依赖基线、单构建部署，避免过早分布式前端复杂度；
 - Site 内部继续模块化并支持 route-level lazy loading；
-- 未来如需独立工程，可从清晰 `sites/party-building` 边界直接提取。
+- 未来如需独立工程，可从清晰 `sites/party` 边界直接提取。
 
 代价与约束：
 

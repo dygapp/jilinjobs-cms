@@ -110,9 +110,9 @@ src/
 ### Scope
 
 - 新增 `party.html`；
-- 新增 `sites/party-building/app`；
-- 新增 `sites/party-building/shell`；
-- 新增 `sites/party-building/modules/home` 基础页面；
+- 新增 `sites/party/app`；
+- 新增 `sites/party/shell`；
+- 新增 `sites/party/modules/home` 基础页面；
 - 新增独立红色主题基础样式；
 - Vite multi-input：`main -> index.html`、`party -> party.html`；
 - Nginx `/party/** -> party.html` fallback；

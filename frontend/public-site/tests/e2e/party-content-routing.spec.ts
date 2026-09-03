@@ -43,9 +43,9 @@ async function createArticle(
   return article
 }
 
-test('EU-27：党建栏目树与首页轮播容器来自 Fresh Flyway 基线', async ({ request }) => {
+test('EU-27：党建栏目树与中心党建轮播容器来自 Fresh Flyway 基线', async ({ request }) => {
   const allColumns = await columns(request)
-  const parent = allColumns.find(item => item.alias === 'party-building')
+  const parent = allColumns.find(item => item.alias === 'party')
   expect(parent).toMatchObject({ name: '中心党建', parentId: null, preset: true })
 
   for (const [alias, name] of [
@@ -60,11 +60,17 @@ test('EU-27：党建栏目树与首页轮播容器来自 Fresh Flyway 基线', a
 
   const listsResponse = await request.get('/api/admin/lists')
   expect(listsResponse.ok()).toBeTruthy()
-  const lists = await listsResponse.json() as Array<{ id: number; code: string; imagePolicy: string; preset: boolean }>
-  expect(lists.find(item => item.code === 'PARTY_HOME_CAROUSEL')).toMatchObject({ imagePolicy: 'REQUIRED', preset: true })
+  const lists = await listsResponse.json() as Array<{ id: number; code: string; name: string; description: string | null; imagePolicy: string; preset: boolean }>
+  expect(lists.find(item => item.code === 'PARTY_CAROUSEL')).toMatchObject({
+    name: '中心党建轮播',
+    description: '中心党建顶部图片轮播',
+    imagePolicy: 'REQUIRED',
+    preset: true,
+  })
+  expect(lists.find(item => item.code === 'PARTY_HOME_CAROUSEL')).toBeUndefined()
 })
 
-test('EU-27：首页按业务 scope 加载四栏目，顶部轮播复用 CmsList', async ({ page, request }, testInfo) => {
+test('EU-27：中心党建入口页按业务 scope 加载四栏目，顶部轮播复用 CmsList', async ({ page, request }, testInfo) => {
   const suffix = `${Date.now()}-${testInfo.retry}`
   const voice = await partyColumn(request, 'party-voice')
   const work = await partyColumn(request, 'party-work')
@@ -81,7 +87,7 @@ test('EU-27：首页按业务 scope 加载四栏目，顶部轮播复用 CmsList
 
   const listsResponse = await request.get('/api/admin/lists')
   const lists = await listsResponse.json() as Array<{ id: number; code: string }>
-  const carousel = lists.find(item => item.code === 'PARTY_HOME_CAROUSEL')
+  const carousel = lists.find(item => item.code === 'PARTY_CAROUSEL')
   expect(carousel).toBeTruthy()
   const carouselResponse = await request.post(`/api/admin/lists/${carousel!.id}/items`, {
     data: {
@@ -99,7 +105,7 @@ test('EU-27：首页按业务 scope 加载四栏目，顶部轮播复用 CmsList
   const carouselItem = await carouselResponse.json() as { id: number }
 
   await page.goto('/party/')
-  await expect(page.getByTestId('party-home-carousel')).toBeVisible()
+  await expect(page.getByTestId('party-carousel')).toBeVisible()
   await expect(page.getByTestId(`party-carousel-item-${carouselItem.id}`)).toContainText(`党建轮播-${suffix}`)
   await expect(page.getByTestId('party-section-party-voice').getByText(voiceArticle.title, { exact: true })).toBeVisible()
   await expect(page.getByTestId('party-section-party-work').getByText(workArticle.title, { exact: true })).toBeVisible()
@@ -153,12 +159,12 @@ test('EU-27：Party 详情只接受党建站内文章，非党建文章被隔离
   await expect(page.getByTestId('party-article-page')).toHaveCount(0)
 })
 
-test('EU-27：Party Shell 在内容路由间保持隔离且移动端不产生 1200px 横向溢出', async ({ page }) => {
+test('EU-27：Party 主题隔离且移动端不产生 1200px 横向溢出', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto('/party/')
-  await expect(page.getByTestId('party-building-header')).toBeVisible()
+  await expect(page.getByTestId('party-header')).toBeVisible()
   await page.goto('/party/column/party-work')
-  await expect(page.getByTestId('party-building-header')).toBeVisible()
+  await expect(page.getByTestId('party-header')).toBeVisible()
   await expect(page.locator('.site-header')).toHaveCount(0)
   const metrics = await page.evaluate(() => ({ viewport: innerWidth, documentWidth: document.documentElement.scrollWidth }))
   expect(metrics.viewport).toBe(390)
@@ -166,5 +172,5 @@ test('EU-27：Party Shell 在内容路由间保持隔离且移动端不产生 12
 
   await page.goto('/')
   await expect(page.getByTestId('public-content')).toBeVisible()
-  await expect(page.getByTestId('party-building-site')).toHaveCount(0)
+  await expect(page.getByTestId('party-site')).toHaveCount(0)
 })

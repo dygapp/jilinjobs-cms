@@ -13,7 +13,7 @@ relations:
     - docs/project/project.md
     - docs/requirements/overview/system-module-boundaries.md
   related:
-    - docs/specifications/party-building.md
+    - docs/specifications/party.md
 created_at: 2026-07-27
 updated_at: 2026-09-02
 ---
@@ -169,7 +169,7 @@ CMS 主要内容类型按“文章 / 单页 / 列表”组织。栏目与导航�
 
 中心党建站点结构使用以下预置栏目：
 
-- 父栏目：`中心党建`，alias `party-building`，只承担后台组织和 Party 作用域识别；
+- 父栏目：`中心党建`，alias `party`，只承担后台组织和 Party 作用域识别；
 - `高层声音`，alias `party-voice`，对应原站 `typeCode=gcsy`；
 - `工作动态`，alias `party-work`，对应原站 `typeCode=gzdt`；
 - `党规党章`，alias `party-rules`，对应原站 `typeCode=dgdz`；
@@ -315,7 +315,7 @@ CMS 提供宣传展示位和展示内容模型。展示位代表公开站稳定�
 
 上传文件名由系统生成稳定名称，避免直接以中文、同名或“最终版”等用户文件名作为正式资源地址。
 
-中心党建重新取证后确认的 Logo、背景、装饰图片等稳定视觉资源进入 `site-baseline/static/party-building/**` 或等价语义目录；历史文章正文图片继续属于内容迁移范围，不因为页面复刻需要而混入 Flyway。
+中心党建重新取证后确认的 Logo、背景、装饰图片等稳定视觉资源进入 `site-baseline/static/party/**` 或等价语义目录；历史文章正文图片继续属于内容迁移范围，不因为页面复刻需要而混入 Flyway。
 
 ### 10.2 统一图片选择/上传
 
@@ -375,7 +375,7 @@ Party 栏目列表页与文章详情页必须由 Party Entry / Router / Shell �
 
 已经执行的 Flyway migration 不回改；模型调整通过新的后续 migration 收敛。V11 增加 Column/CmsList 图片数据策略并新增首页轮播间隔网站属性，不修改既有 V8/V9/V10 migration。中心党建入口继续使用既有 V13 将“中心党建”预置主导航调整为站内 `LINK /party/`，不得回改 V4/V13 初始化历史。
 
-新的党建结构 migration 只建立预置父栏目 `party-building` 及四个预置子栏目 `party-voice / party-work / party-rules / party-study`，并将它们标记为站点结构基线；不得把原站历史运营文章批量写入 Flyway。党建历史文章、外链记录、正文图片和 legacy URL 映射通过独立内容迁移/采集机制处理。
+新的党建结构 migration 只建立预置父栏目 `party` 及四个预置子栏目 `party-voice / party-work / party-rules / party-study`，并将它们标记为站点结构基线；不得把原站历史运营文章批量写入 Flyway。党建历史文章、外链记录、正文图片和 legacy URL 映射通过独立内容迁移/采集机制处理。
 
 ## 14. 权限规划边界
 
