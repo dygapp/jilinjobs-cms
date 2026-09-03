@@ -1,6 +1,8 @@
 import { expect, test } from '@playwright/test'
 
-test('中心党建使用独立公开站入口并与主站主题隔离', async ({ page, request }) => {
+const ORIGINAL_PARTY_BANNER = 'https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png'
+
+test('中心党建作为主站特殊栏目入口并保持独立红色主题', async ({ page, request }) => {
   const navigationResponse = await request.get('/api/public/navigations')
   expect(navigationResponse.ok()).toBeTruthy()
   const navigations = await navigationResponse.json() as Array<{
@@ -28,7 +30,10 @@ test('中心党建使用独立公开站入口并与主站主题隔离', async ({
   await expect(page).toHaveURL(/\/party\/$/)
   await expect(page.getByTestId('party-building-site')).toBeVisible()
   await expect(page.getByTestId('party-building-header')).toBeVisible()
-  await expect(page.locator('.party-banner')).toBeVisible()
+  const banner = page.locator('.party-banner')
+  await expect(banner).toBeVisible()
+  await expect(banner.locator('a')).toHaveCount(0)
+  await expect(banner.locator('.party-banner-image')).toHaveAttribute('src', ORIGINAL_PARTY_BANNER)
   await expect(page.locator('.party-navigation')).toBeVisible()
   await expect(page.locator('.party-hero')).toHaveCount(0)
   await expect(page.locator('.site-header')).toHaveCount(0)

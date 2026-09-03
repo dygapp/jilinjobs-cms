@@ -78,7 +78,6 @@ jobs:
           test -f runtime-static/home/carousel-01.jpg
           test -f runtime-static/home/recruitment-campaign.png
           test -f runtime-static/brand/smartedu-logo-text.png
-          test -f runtime-static/party-building/party-header-banner.avif
           test -f runtime-static/party-building/ic-title-yellow.png
           test -f runtime-static/party-building/section-marker.png
           test -f runtime-static/footer/public-security-record.png
@@ -141,7 +140,7 @@ jobs:
           curl --fail --silent http://127.0.0.1:5173/api/admin/navigations | jq --exit-status 'length > 0' > /dev/null
           curl --fail --silent http://127.0.0.1:5173/api/admin/page-groups | jq --exit-status 'map(.alias) | index("guide") != null and index("jobs") != null' > /dev/null
           curl --fail --silent http://127.0.0.1:5173/static/home/header-banner.png > /dev/null
-          curl --fail --silent http://127.0.0.1:5173/static/party-building/party-header-banner.avif > /dev/null
+          curl --fail --silent https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png > /dev/null
           curl --fail --silent http://127.0.0.1:5173/admin/articles | grep -qi '<html'
 
       - name: 上传 AI 评审证据
@@ -187,7 +186,7 @@ jobs:
           curl --fail --silent http://127.0.0.1:5173/api/public/navigations \
             | jq --exit-status '[.[] | select(.position == "MAIN" and .parentId == null) | .name] == ["网站首页","中心党建","招聘信息","业务指南","政策法规","就业指导","典型事迹","预决算公开","关于我们"]' > /dev/null
           curl --fail --silent http://127.0.0.1:5173/static/home/header-banner.png > /dev/null
-          curl --fail --silent http://127.0.0.1:5173/static/party-building/party-header-banner.avif > /dev/null
+          curl --fail --silent https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png > /dev/null
           test "$(find runtime-static -maxdepth 1 -type d -name 'verification-*' | wc -l)" -eq 0
 
       - name: 准备 Human Review 示例内容
@@ -205,7 +204,7 @@ jobs:
           test -n "$party_voice_id"; test -n "$party_work_id"; test -n "$party_rules_id"; test -n "$party_study_id"
 
           lists=$(curl --fail --silent http://127.0.0.1:5173/api/admin/lists)
-          party_carousel_id=$(echo "$lists" | jq -r '.[] | select(.code == "PARTY_HOME_CAROUSEL") | .id' | head -1)
+          party_carousel_id=$(echo "$lists" | jq -r '.[] | select(.code == "PARTY_CAROUSEL") | .id' | head -1)
           test -n "$party_carousel_id"
 
           create_article() {
@@ -225,7 +224,7 @@ jobs:
 
           create_carousel_item() {
             title="$1"; sort_order="$2"; url="$3"
-            payload=$(jq -n --arg title "$title" --arg url "$url" --argjson sortOrder "$sort_order" '{title:$title,subtitle:"人工评审示例（非历史迁移内容）",url:$url,imagePath:"/static/party-building/party-header-banner.avif",openMode:"DEFAULT",sortOrder:$sortOrder,enabled:true,extraJson:null}')
+            payload=$(jq -n --arg title "$title" --arg url "$url" --argjson sortOrder "$sort_order" '{title:$title,subtitle:"人工评审示例（非历史迁移内容）",url:$url,imagePath:"/static/home/carousel-01.jpg",openMode:"DEFAULT",sortOrder:$sortOrder,enabled:true,extraJson:null}')
             curl --fail --silent -H 'Content-Type: application/json' -d "$payload" "http://127.0.0.1:5173/api/admin/lists/${party_carousel_id}/items" > /dev/null
           }
 
@@ -261,7 +260,7 @@ jobs:
           create_carousel_item '党员之家人工评审示例轮播（四）' 30 "/party/article/${party_study_carousel_article_id}"
 
           curl --fail --silent 'http://127.0.0.1:5173/api/public/articles?page=0&size=50' | jq --exit-status '.total >= 20' > /dev/null
-          curl --fail --silent http://127.0.0.1:5173/api/public/lists/by-code/PARTY_HOME_CAROUSEL \
+          curl --fail --silent http://127.0.0.1:5173/api/public/lists/by-code/PARTY_CAROUSEL \
             | jq --exit-status '(.items | length == 4) and all(.items[]; (.url // "") | test("^/party/article/[0-9]+$"))' > /dev/null
           curl --fail --silent http://127.0.0.1:5173/admin/articles | grep -qi '<html'
           curl --fail --silent http://127.0.0.1:5173/party/ | grep -qi '<html'
@@ -336,12 +335,12 @@ jobs:
           grep -q '<title>吉林省高等学校毕业生就业信息网</title>' review-home.html
           grep -q '内容管理' review-admin.html
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/home/header-banner.png > /dev/null
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/party-building/party-header-banner.avif > /dev/null
+          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/public-institution.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/wechat-qr.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/admin/columns | jq --exit-status 'length > 0' > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors 'http://review.cc-lotus.info/api/public/articles?page=0&size=50' | jq --exit-status '.total >= 20' > /dev/null
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/public/lists/by-code/PARTY_HOME_CAROUSEL \
+          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/public/lists/by-code/PARTY_CAROUSEL \
             | jq --exit-status '(.items | length == 4) and all(.items[]; (.url // "") | test("^/party/article/[0-9]+$"))' > /dev/null
 
       - name: 输出评审地址

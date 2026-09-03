@@ -1,31 +1,45 @@
 # 中心党建稳定视觉资源来源
 
-本目录只保存经 2026-09-02～2026-09-03 原站 Browser Evidence 验证、且属于党员之家（**Party Members’ Home**）稳定页面视觉的工程资产。目录名 `party-building` 是已落地兼容性技术标识，不再作为“党员之家”的正式英文翻译。历史文章正文图片、附件和首页轮播成员属于运营内容，不进入本目录。
+本目录保存经 2026-09-02～2026-09-03 原站 Browser Evidence 验证的中心党建稳定视觉资源与来源说明。`party-building` 是既有兼容性技术目录名。
 
 ## Header Banner
 
-- 原站：`https://24365.jl.smartedu.cn/dyzj`
-- 原始资源：`https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png`
+原站：`https://24365.jl.smartedu.cn/dyzj`
+
+原始 Banner：
+
+- URL：`https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png`
 - 原始尺寸：3072 × 512
 - 原始 SHA-256：`7444d50235d4c87a00d0221ac84551ea083c617bb8a15e58f58d002224bd27a3`
-- 当前仓库资源：`party-header-banner.avif`
-- 当前仓库尺寸：3072 × 512
-- 当前仓库 SHA-256：`90cb8426a96060f8b700e3b9b53ee8deedcb63d8b5fdedd27999d6b5582af864`
-- 当前 Git blob SHA：`4d0fd888bd33d0ae3784f5d3e5b040c07188f841`
-- 处理：保持原始 3072 × 512 像素尺寸，只转换为较高质量 AVIF 以降低版本化资源体积；不重新设计、不裁剪、不加入非原站素材。Human Review 后将编码质量从早期偏低的 q5 提升至 q20，优先保留标题文字、烟花和建筑边缘清晰度。
-- Human Review 修正：早期 `party-header-banner.webp` 曾缩放至 960 × 160，再在 Desktop 以 320px 高展示，产生明显上采样模糊。该派生方案已被 2026-09-03 Human Visual Review 否决；正式页面不得再使用低分辨率版本。
+- Reference Evidence 文件：`original-resources/21-party_banner.png`
+- 注意：原站 URL/文件名扩展名为 `.png`，但 Reference Evidence 对原始字节识别为 JFIF/JPEG。该事实不影响资源真实性；不得仅因扩展名再次转码。
+
+### Human Review 结论
+
+早期曾产生：
+
+- 960×160 WebP：因低分辨率上采样被 Human Review 否决；
+- 3072×512 AVIF：虽然保留像素尺寸，但二次有损编码仍在标题文字边缘产生可见毛刺，被 2026-09-03 Human Review 否决。
+
+因此当前正式页面直接使用上述原站原始资源 URL，停止对 Banner 进行 WebP/AVIF 二次有损转码。仓库内既有 `party-header-banner.avif` 仅保留为本 PR 历史派生证据，不再是正式页面 Banner 依赖，也不得被 Review fixture 用作轮播图片。
+
+如果后续为了消除外部运行时依赖而把原始资源纳入版本化静态包，必须 byte-for-byte 保存原站原始文件，并验证 SHA-256 仍为 `7444d502...`；不得重新编码后声称为原始资源。
+
+Banner 是纯视觉内容，不承担导航：正式 DOM 使用非链接容器与 `<img>`，不包裹 `<a>`。
 
 ## UI Markers
 
 - `ic-title-yellow.png`
   - 原站文件：`ic_title_yellow@2x.png`
-  - 原始 SHA-256：`187493b0b6ac2d1b673b28d22a355d4539e35b91b85cbab49b68cf9986b67b40`
-  - 用途：高层声音等资讯列表前置黄色标记。
+  - SHA-256：`187493b0b6ac2d1b673b28d22a355d4539e35b91b85cbab49b68cf9986b67b40`
+  - 用途：高层声音列表黄色标记。
 - `section-marker.png`
   - 原站文件：`mark_y@2x.png`
-  - 原始 SHA-256：`7e11fddb8e600534593c2afeb9af20226c4850cef58196eff1bb72fcca4be457`
-  - 用途：工作动态、学习园地等标题左侧竖向标记。
+  - SHA-256：`7e11fddb8e600534593c2afeb9af20226c4850cef58196eff1bb72fcca4be457`
+  - 用途：工作动态、学习园地标题左侧标记。
 
 ## Evidence Boundary
 
-原站 CSS 同时显示 `html, body { min-width: 1200px }` 与 1200px 固定主内容宽度。该行为只作为旧站实现证据；新版按现行 Requirement 保留视觉比例与层级，但在窄屏正常响应式重排，不复制横向溢出。
+原站 `html, body { min-width: 1200px }` 与固定 1200px 内容宽度只作为历史证据；新版保留可证明的视觉关系并实现窄屏响应式，不复制横向溢出。
+
+历史文章正文图片、附件和中心党建轮播成员属于运营内容，由 EU-29 迁移，不进入本稳定视觉资源目录。

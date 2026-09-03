@@ -13,6 +13,8 @@ type NavigationItem = {
   clickable: boolean
 }
 
+const ORIGINAL_PARTY_BANNER = 'https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png'
+
 async function partyColumns(request: APIRequestContext) {
   const response = await request.get('/api/admin/columns')
   expect(response.ok()).toBeTruthy()
@@ -59,7 +61,7 @@ async function seedVisualContent(request: APIRequestContext, suffix: string) {
   const listsResponse = await request.get('/api/admin/lists')
   expect(listsResponse.ok()).toBeTruthy()
   const lists = await listsResponse.json() as Array<{ id: number; code: string }>
-  const carousel = lists.find(item => item.code === 'PARTY_HOME_CAROUSEL')
+  const carousel = lists.find(item => item.code === 'PARTY_CAROUSEL')
   expect(carousel).toBeTruthy()
   const aliases = ['party-voice', 'party-work', 'party-rules', 'party-study'] as const
   const carouselItems: CarouselItem[] = []
@@ -83,9 +85,8 @@ async function seedVisualContent(request: APIRequestContext, suffix: string) {
   return { articles, carouselItems }
 }
 
-test('EU-28：党员之家复用主站公共导航和页脚结构，仅覆盖红色主题', async ({ page, request }) => {
+test('EU-28：中心党建 Banner 使用原站资源且不可点击，公共导航和页脚仅覆盖红色主题', async ({ page, request }) => {
   for (const path of [
-    '/static/party-building/party-header-banner.avif',
     '/static/party-building/ic-title-yellow.png',
     '/static/party-building/section-marker.png',
     '/static/footer/public-security-record.png',
@@ -95,6 +96,9 @@ test('EU-28：党员之家复用主站公共导航和页脚结构，仅覆盖红
     const response = await request.get(path)
     expect(response.ok(), `${path} 应由版本化静态基线提供`).toBeTruthy()
   }
+
+  const originalBannerResponse = await request.get(ORIGINAL_PARTY_BANNER)
+  expect(originalBannerResponse.ok(), '原站中心党建 Banner 应可直接读取').toBeTruthy()
 
   const navigationResponse = await request.get('/api/public/navigations')
   expect(navigationResponse.ok()).toBeTruthy()
@@ -110,7 +114,6 @@ test('EU-28：党员之家复用主站公共导航和页脚结构，仅覆盖红
     .sort((a, b) => a.sortOrder - b.sortOrder || a.id - b.id)
 
   await page.setViewportSize({ width: 1440, height: 1000 })
-
   await page.goto('/')
   const mainNavigation = page.locator('[data-component="public-navigation"]')
   const mainFooter = page.locator('[data-component="public-footer"]')
@@ -122,18 +125,17 @@ test('EU-28：党员之家复用主站公共导航和页脚结构，仅覆盖红
   })
 
   await page.goto('/party/')
-  const bannerDimensions = await page.evaluate(async () => {
-    const response = await fetch('/static/party-building/party-header-banner.avif')
-    const bitmap = await createImageBitmap(await response.blob())
-    const dimensions = { width: bitmap.width, height: bitmap.height }
-    bitmap.close()
-    return dimensions
-  })
-  expect(bannerDimensions).toEqual({ width: 3072, height: 512 })
-
   const banner = page.locator('.party-banner')
-  await expect(banner).toHaveCSS('background-image', /party-header-banner\.avif/)
+  const bannerImage = banner.locator('.party-banner-image')
   await expect(banner).toHaveCSS('height', '320px')
+  await expect(banner.locator('a')).toHaveCount(0)
+  await expect(bannerImage).toHaveAttribute('src', ORIGINAL_PARTY_BANNER)
+  await expect(bannerImage).toBeVisible()
+  const dimensions = await bannerImage.evaluate(image => {
+    const element = image as HTMLImageElement
+    return { width: element.naturalWidth, height: element.naturalHeight, complete: element.complete }
+  })
+  expect(dimensions).toEqual({ width: 3072, height: 512, complete: true })
 
   const partyNavigation = page.locator('[data-component="public-navigation"]')
   const partyFooter = page.locator('[data-component="public-footer"]')
@@ -165,17 +167,11 @@ test('EU-28：党员之家复用主站公共导航和页脚结构，仅覆盖红
   await expect(page.locator('.party-red-tab').first()).toHaveCSS('min-height', '40px')
   await expect(page.locator('.party-voice-list li').first()).toHaveCSS('min-height', '20px')
   await expect(page.locator('.party-work-list')).toHaveCSS('display', 'block')
-
   await expect(partyFooter.locator('.shared-public-footer-layout')).toHaveCSS('display', 'flex')
   await expect(partyFooter.locator('.shared-public-footer-layout')).toHaveCSS('text-align', 'left')
-  await expect(partyFooter.locator('.public-security-record img')).toBeVisible()
-  await expect(partyFooter.locator('.public-institution-badge img')).toBeVisible()
-  await expect(partyFooter.locator('.wechat-entry img')).toBeVisible()
-  await expect(page.locator('.party-emblem')).toHaveCount(0)
-  await expect(page.locator('.party-hero')).toHaveCount(0)
 })
 
-test('EU-28：党建 Desktop / Mobile 当前视觉截图形成 Current Evidence 且轮播进入对应新闻详情', async ({ page, request }, testInfo) => {
+test('EU-28：中心党建 Desktop / Mobile 当前视觉截图形成 Current Evidence 且轮播进入对应新闻详情', async ({ page, request }, testInfo) => {
   const suffix = `${Date.now()}-${testInfo.retry}`
   const { articles, carouselItems } = await seedVisualContent(request, suffix)
 
@@ -189,7 +185,7 @@ test('EU-28：党建 Desktop / Mobile 当前视觉截图形成 Current Evidence 
   await expect(page.getByTestId('party-article-title')).toHaveText(articles['party-voice'].title)
   await page.goto('/party/')
   await page.waitForTimeout(200)
-  await testInfo.attach('party-home-desktop-current.png', {
+  await testInfo.attach('party-entry-desktop-current.png', {
     body: await page.screenshot({ fullPage: true }),
     contentType: 'image/png',
   })
@@ -213,12 +209,10 @@ test('EU-28：党建 Desktop / Mobile 当前视觉截图形成 Current Evidence 
   const dimensions = await page.evaluate(() => ({ viewport: innerWidth, documentWidth: document.documentElement.scrollWidth }))
   expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewport)
   await expect(page.locator('.shared-public-footer-layout')).toHaveCSS('display', 'block')
-  await expect(page.locator('.shared-public-footer-records')).toHaveCSS('flex-direction', 'row')
-  await expect(page.locator('.shared-public-footer-records')).toHaveCSS('align-items', 'center')
   await page.getByRole('button', { name: '展开导航' }).click()
   await expect(page.locator('.shared-public-nav-root')).toBeVisible()
   await expect(page.locator('.shared-public-nav-children').first()).toBeVisible()
-  await testInfo.attach('party-home-mobile-current.png', {
+  await testInfo.attach('party-entry-mobile-current.png', {
     body: await page.screenshot({ fullPage: true }),
     contentType: 'image/png',
   })

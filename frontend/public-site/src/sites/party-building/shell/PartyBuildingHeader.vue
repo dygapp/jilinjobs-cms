@@ -4,7 +4,7 @@ import { listPublicNavigations, type PublicNavigation } from '../../../shared/ap
 import SharedPublicNavigation from '../../../shared/components/PublicNavigation.vue'
 
 const items = ref<PublicNavigation[]>([])
-const headerBanner = '/static/party-building/party-header-banner.avif'
+const headerBanner = 'https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png'
 
 onMounted(async () => {
   try {
@@ -17,9 +17,13 @@ onMounted(async () => {
 
 <template>
   <header class="party-header" data-testid="party-building-header">
-    <a class="party-banner" href="/party/" :style="{ backgroundImage: `url(${headerBanner})` }" aria-label="吉林省高等学校毕业生就业信息网党员之家">
-      <span class="party-sr-only">吉林省高等学校毕业生就业信息网党员之家</span>
-    </a>
+    <div class="party-banner">
+      <img
+        class="party-banner-image"
+        :src="headerBanner"
+        alt="吉林省高等学校毕业生就业信息网党员之家"
+      >
+    </div>
 
     <SharedPublicNavigation
       :items="items"

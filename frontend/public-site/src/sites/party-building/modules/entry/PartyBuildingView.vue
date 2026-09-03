@@ -4,8 +4,8 @@ import { listPublicArticles, type PublicArticleSummary } from '../../../../share
 import { getPublicCmsListByCode, type CmsListItem } from '../../../../shared/api/lists'
 import { setPageMeta } from '../../../../shared/seo'
 import {
+  PARTY_CAROUSEL_CODE,
   PARTY_COLUMN_ALIASES,
-  PARTY_HOME_CAROUSEL_CODE,
   loadPartyColumns,
   type PartyColumnAlias,
 } from '../../app/partyContext'
@@ -46,7 +46,7 @@ async function load() {
   try {
     const columns = await loadPartyColumns()
     const [carousel, ...articlePages] = await Promise.all([
-      getPublicCmsListByCode(PARTY_HOME_CAROUSEL_CODE),
+      getPublicCmsListByCode(PARTY_CAROUSEL_CODE),
       ...PARTY_COLUMN_ALIASES.map(alias => listPublicArticles(columns[alias].id, 0, SECTION_SIZE)),
     ])
     carouselItems.value = carousel.items.filter(item => item.enabled)
@@ -86,12 +86,12 @@ function itemTarget(item: CmsListItem) {
 
 <template>
   <main class="party-main">
-    <div class="party-width party-content-home">
+    <div class="party-width party-content-entry">
       <p v-if="loading" class="party-state">正在加载党建内容…</p>
       <p v-else-if="error" class="party-state party-state-error">{{ error }}</p>
       <template v-else>
-        <section class="party-home-top" aria-label="党建首页重点内容">
-          <div class="party-carousel" data-testid="party-home-carousel" @mouseenter="stopCarousel" @mouseleave="startCarousel">
+        <section class="party-entry-top" aria-label="中心党建重点内容">
+          <div class="party-carousel" data-testid="party-carousel" @mouseenter="stopCarousel" @mouseleave="startCarousel">
             <template v-if="carouselItems.length">
               <article
                 v-for="(item, index) in carouselItems"
@@ -124,7 +124,7 @@ function itemTarget(item: CmsListItem) {
             <p v-else class="party-empty">暂无轮播内容</p>
           </div>
 
-          <section class="party-home-panel party-home-voice" data-testid="party-section-party-voice">
+          <section class="party-section-panel party-voice-panel" data-testid="party-section-party-voice">
             <header class="party-red-tab">
               <h2>{{ sectionTitles['party-voice'] }}</h2>
               <router-link to="/party/column/party-voice">更多 »</router-link>
@@ -144,7 +144,7 @@ function itemTarget(item: CmsListItem) {
           <header class="party-block-title">
             <h2>{{ sectionTitles['party-work'] }}</h2>
           </header>
-          <div class="party-home-panel">
+          <div class="party-section-panel">
             <header class="party-red-tab">
               <h3>工作动态</h3>
               <router-link to="/party/column/party-work">更多 »</router-link>
@@ -165,7 +165,7 @@ function itemTarget(item: CmsListItem) {
             <h2 id="party-study-garden-title">学习园地</h2>
           </header>
           <div class="party-study-grid">
-            <section v-for="alias in studyAliases" :key="alias" class="party-home-panel" :data-testid="`party-section-${alias}`">
+            <section v-for="alias in studyAliases" :key="alias" class="party-section-panel" :data-testid="`party-section-${alias}`">
               <header class="party-red-tab">
                 <h3>{{ sectionTitles[alias] }}</h3>
                 <router-link :to="`/party/column/${alias}`">更多 »</router-link>

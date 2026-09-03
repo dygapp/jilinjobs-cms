@@ -1,7 +1,7 @@
 import { getPublicColumnByAlias, type PublicColumn } from '../../../shared/api/columns'
 
 export const PARTY_PARENT_ALIAS = 'party-building' as const
-export const PARTY_HOME_CAROUSEL_CODE = 'PARTY_HOME_CAROUSEL' as const
+export const PARTY_CAROUSEL_CODE = 'PARTY_CAROUSEL' as const
 export const PARTY_COLUMN_ALIASES = ['party-voice', 'party-work', 'party-rules', 'party-study'] as const
 export type PartyColumnAlias = typeof PARTY_COLUMN_ALIASES[number]
 
