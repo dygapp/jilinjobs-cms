@@ -29,42 +29,62 @@ const visiblePages = computed(() => {
 })
 const isExternalArticle = (article: PublicArticleSummary) => article.articleType === 'EXTERNAL_LINK' && Boolean(article.externalUrl)
 
-watch(() => [route.params.alias, route.params.id, route.query.page, route.query.size], load, { immediate: true })
+watch(
+  () => [route.params.alias, route.params.id, route.query.page, route.query.size],
+  (_value, _oldValue, onCleanup) => {
+    let current = true
+    onCleanup(() => {
+      current = false
+    })
+    void load(() => current)
+  },
+  { immediate: true },
+)
 
-async function load() {
+async function load(isCurrent: () => boolean) {
   const alias = typeof route.params.alias === 'string' ? route.params.alias : null
   const id = Number(route.params.id)
   const requestedPage = Math.max(0, Number(route.query.page ?? 0) || 0)
   const requestedSize = Number(route.query.size ?? 10)
-  size.value = allowedSizes.includes(requestedSize) ? requestedSize : 10
-  column.value = null
-  breadcrumbs.value = []
-  articles.value = []
+  const pageSize = allowedSizes.includes(requestedSize) ? requestedSize : 10
+
   error.value = ''
   loading.value = true
   try {
-    const current = alias ? await getPublicColumnByAlias(alias) : await getPublicColumn(id)
-    const trail = [current]
-    const seen = new Set([current.id])
-    let parent = current.parentId
+    const nextColumn = alias ? await getPublicColumnByAlias(alias) : await getPublicColumn(id)
+    if (!isCurrent()) return
+
+    const trail = [nextColumn]
+    const seen = new Set([nextColumn.id])
+    let parent = nextColumn.parentId
     while (parent != null && !seen.has(parent)) {
       const item = await getPublicColumn(parent)
+      if (!isCurrent()) return
       trail.unshift(item)
       seen.add(item.id)
       parent = item.parentId
     }
-    const articlePage = await listPublicArticles(current.id, requestedPage, size.value)
-    column.value = current
+
+    const articlePage = await listPublicArticles(nextColumn.id, requestedPage, pageSize)
+    if (!isCurrent()) return
+
+    column.value = nextColumn
     breadcrumbs.value = trail
     articles.value = articlePage.items
     total.value = articlePage.total
     page.value = articlePage.page
+    size.value = pageSize
     jumpPage.value = ''
-    setPageMeta({ title: current.name, description: `浏览“${current.name}”栏目已发布信息。` })
+    setPageMeta({ title: nextColumn.name, description: `浏览“${nextColumn.name}”栏目已发布信息。` })
   } catch (e) {
+    if (!isCurrent()) return
+    column.value = null
+    breadcrumbs.value = []
+    articles.value = []
+    total.value = 0
     error.value = e instanceof Error ? e.message : '栏目加载失败'
   } finally {
-    loading.value = false
+    if (isCurrent()) loading.value = false
   }
 }
 
@@ -103,9 +123,9 @@ function jump() {
         </template>
       </nav>
 
-      <p v-if="loading" class="public-state">正在加载栏目…</p>
+      <p v-if="loading && !column" class="public-state">正在加载栏目…</p>
       <template v-else-if="column">
-        <section class="detail-card column-detail-card">
+        <section class="detail-card column-detail-card" :aria-busy="loading">
           <header class="detail-section-title">
             <h1>{{ column.name }}</h1>
           </header>
