@@ -47,7 +47,7 @@ test('EU-29：较慢的旧分页响应不得覆盖浏览器返回后的当前栏
   const created: Article[] = []
 
   for (let index = 0; index < 11; index += 1) {
-    created.push(await createArticle(request, column.id, `党建竞态-${index}-${suffix}`, 2000 + index))
+    created.push(await createArticle(request, column.id, `党建竞态-${index}-${suffix}`, -2000 + index))
   }
 
   await page.route('**/api/public/articles?*', async route => {
