@@ -3,6 +3,15 @@ import { expect, test, type APIRequestContext } from '@playwright/test'
 type Column = { id: number; alias: string }
 type Article = { id: number; title: string }
 type CarouselItem = { id: number; title: string; url: string | null }
+type NavigationItem = {
+  id: number
+  parentId: number | null
+  name: string
+  position: string
+  sortOrder: number
+  href: string
+  clickable: boolean
+}
 
 async function partyColumns(request: APIRequestContext) {
   const response = await request.get('/api/admin/columns')
@@ -87,6 +96,19 @@ test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer �
     expect(response.ok(), `${path} 应由版本化静态基线提供`).toBeTruthy()
   }
 
+  const navigationResponse = await request.get('/api/public/navigations')
+  expect(navigationResponse.ok()).toBeTruthy()
+  const navigationItems = await navigationResponse.json() as NavigationItem[]
+  const navigationRoots = navigationItems
+    .filter(item => item.position === 'MAIN' && item.parentId == null)
+    .sort((a, b) => a.sortOrder - b.sortOrder || a.id - b.id)
+  const rootWithChildrenIndex = navigationRoots.findIndex(root => navigationItems.some(item => item.parentId === root.id))
+  expect(rootWithChildrenIndex, '主站导航基线应至少存在一个二级菜单').toBeGreaterThanOrEqual(0)
+  const rootWithChildren = navigationRoots[rootWithChildrenIndex]
+  const expectedChildren = navigationItems
+    .filter(item => item.parentId === rootWithChildren.id)
+    .sort((a, b) => a.sortOrder - b.sortOrder || a.id - b.id)
+
   await page.setViewportSize({ width: 1440, height: 1000 })
   await page.goto('/party/')
   const bannerDimensions = await page.evaluate(async () => {
@@ -101,9 +123,23 @@ test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer �
   await expect(banner).toHaveCSS('background-image', /party-header-banner\.avif/)
   await expect(banner).toHaveCSS('height', '320px')
   await expect(page.locator('.party-navigation')).toHaveCSS('background-color', 'rgb(208, 0, 35)')
-  const firstNavigation = page.locator('.party-nav-root > li').first()
+  const firstNavigation = page.locator('.party-nav-root > .party-nav-item').first()
   await expect(firstNavigation).toHaveCSS('width', '120px')
-  await expect(firstNavigation.locator('a, span').first()).toHaveCSS('min-height', '60px')
+  const firstNavigationLink = firstNavigation.locator(':scope > .party-nav-link')
+  await expect(firstNavigationLink).toHaveCSS('min-height', '60px')
+  await expect(firstNavigationLink).toHaveCSS('font-size', '14px')
+  await expect(firstNavigationLink).toHaveCSS('font-weight', '400')
+
+  const rootWithChildrenElement = page.locator('.party-nav-root > .party-nav-item').nth(rootWithChildrenIndex)
+  await expect(rootWithChildrenElement.locator(':scope > .party-nav-link .party-nav-arrow')).toBeVisible()
+  const childMenu = rootWithChildrenElement.locator(':scope > .party-nav-children')
+  await expect(childMenu.locator(':scope > li')).toHaveCount(expectedChildren.length)
+  await rootWithChildrenElement.hover()
+  await expect(childMenu).toBeVisible()
+  for (const child of expectedChildren) {
+    await expect(childMenu.getByText(child.name, { exact: true })).toBeVisible()
+  }
+
   await expect(page.locator('.party-red-tab').first()).toHaveCSS('min-height', '40px')
   await expect(page.locator('.party-voice-list li').first()).toHaveCSS('min-height', '20px')
   await expect(page.locator('.party-work-list')).toHaveCSS('display', 'block')
@@ -157,6 +193,9 @@ test('EU-28：党建 Desktop / Mobile 当前视觉截图形成 Current Evidence 
   await expect(page.locator('.party-footer-layout')).toHaveCSS('display', 'block')
   await expect(page.locator('.party-footer-records')).toHaveCSS('flex-direction', 'row')
   await expect(page.locator('.party-footer-records')).toHaveCSS('align-items', 'center')
+  await page.getByRole('button', { name: '展开导航' }).click()
+  await expect(page.locator('.party-nav-root')).toBeVisible()
+  await expect(page.locator('.party-nav-children').first()).toBeVisible()
   await testInfo.attach('party-home-mobile-current.png', {
     body: await page.screenshot({ fullPage: true }),
     contentType: 'image/png',
