@@ -6,10 +6,10 @@
 
 ```text
 dygapp/agentic-dev
-master@a0aece02414aa36ca7421db391cb3124ad0780f2
+baseline-2026-09-04-engineering-capability@5be2e6aad29b2be6b8535b3690daf3533ee22a46
 ```
 
-普通开发优先使用 Consumer-local：`AGENTS.md`、`docs/project/development-method.md`、当前 Requirement / Specification / Technical Plan。外部 baseline 的 Engineering Discipline / Technology Profile 只有经本仓库选择性固化后才成为普通开发规则；`agentic-dev` 自身 Project Roadmap、Foundation 状态、PR / Issue / Experiment 事实不进入本 Roadmap。
+普通开发优先使用 Consumer-local：`AGENTS.md`、`docs/project/development-method.md`、当前 Requirement / Specification / Technical Plan。外部 baseline 的 Engineering Discipline / Technology Profile 只有经本仓库选择性固化后才成为普通开发规则；`agentic-dev` 自身 Project Roadmap、Foundation / Engineering Discipline Expansion 状态、PR / Issue / Experiment 事实不进入本 Roadmap。
 
 ## 总体路线
 
@@ -51,6 +51,7 @@ master@a0aece02414aa36ca7421db391cb3124ad0780f2
 | 2026-09-03 | EU-26～EU-28 已完成并进入 `main`；当前 Roadmap 恢复到 EU-29 Historical Content Migration & Final Review |
 | 2026-09-03 | `agentic-dev` baseline 更新到 `b80b2b1b7cea38eed0aef9807879e2a0d56afd2f`；Consumer-local Authority 选择性固化 Implementation Minimality、Surgical Diff Scope、Vue 3 + TypeScript Technology Profile、Verification Profile 与 Consumer Override Boundary，不继承 Foundation 项目事实，也不机械升级技术依赖 |
 | 2026-09-04 | `agentic-dev` baseline 更新到 `a0aece02414aa36ca7421db391cb3124ad0780f2`；相对 `b80b2b1b7cea38eed0aef9807879e2a0d56afd2f` 的新增提交仅涉及 `agentic-dev` 自身 Foundation v1 Closure、Project Roadmap、Consumer Adoption Handoff 与实验收尾记录，Consumer-local Method / Verification 语义无变化，仅更新精确 baseline 引用，不继承其项目状态 |
+| 2026-09-04 | `agentic-dev` baseline 更新到 Tag `baseline-2026-09-04-engineering-capability`（commit `5be2e6aad29b2be6b8535b3690daf3533ee22a46`）；相对 `a0aece02414aa36ca7421db391cb3124ad0780f2` 新增 Data Access Scope & Boundedness Control Engineering Discipline，并完成 `agentic-dev` 自身 Engineering Discipline Expansion v1 Closure。Consumer-local Method 正式固化该数据访问纪律；现有 Verification Strategy §2.4 已覆盖对应作用域、分页窗口与边界验证语义，因此不重复建立第二套验证契约，也不继承 `agentic-dev` 项目状态 |
 | 2026-09-04 | 固化 EU-29 之后的前端后续路线：先执行 EU-30 轮播图方案与实现收敛，再执行 EU-31 浏览器兼容性与 Runtime Guard 收敛；EU-30 当前只保留占位级规划，EU-31 已记录 Public / Admin 双标准、Public IE11 备用路径与独立兼容 Workflow 边界 |
 
 ## 当前已固化结果
@@ -64,6 +65,7 @@ master@a0aece02414aa36ca7421db391cb3124ad0780f2
 - 首页“举报电话及邮箱”已转为站内固定页面；
 - 文章支持 `INTERNAL` 与 `EXTERNAL_LINK` 两种承载方式；“招聘公告”栏目允许同时发布两类文章，首页招聘公告区域只聚合已发布外链文章；
 - 首页通知公告、就业动态与招聘公告已按各自稳定栏目边界加载公开文章，不再依赖“全站前 N 条文章再前端筛选”的全局截断；
+- 集合型数据访问遵循 Data Access Scope & Boundedness Control：业务 scope 决定成员资格时先形成 scope 再 window / pagination；页面展示数量、固定 `LIMIT/OFFSET` 或客户端过滤不能替代业务作用域；稳定有界的结构性共享 snapshot 可按当前生命周期完整读取，不为形式统一机械分页；
 - 首页整体结构默认不在后续页面内容完善过程中重新设计，除非暴露出明确的公共组件缺陷；
 - 栏目、菜单、文章、固定页面、页面组、网站配置和网站静态资源职责已分离；
 - `/page/**`、`/column/{alias}`、`/article/{id}` 作为主站规范公开 URL；
