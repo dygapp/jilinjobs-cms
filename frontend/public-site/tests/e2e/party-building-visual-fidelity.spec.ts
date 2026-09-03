@@ -154,6 +154,9 @@ test('EU-28：党建 Desktop / Mobile 当前视觉截图形成 Current Evidence 
   await page.goto('/party/')
   const dimensions = await page.evaluate(() => ({ viewport: innerWidth, documentWidth: document.documentElement.scrollWidth }))
   expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewport)
+  await expect(page.locator('.party-footer-layout')).toHaveCSS('display', 'block')
+  await expect(page.locator('.party-footer-records')).toHaveCSS('flex-direction', 'row')
+  await expect(page.locator('.party-footer-records')).toHaveCSS('align-items', 'center')
   await testInfo.attach('party-home-mobile-current.png', {
     body: await page.screenshot({ fullPage: true }),
     contentType: 'image/png',
