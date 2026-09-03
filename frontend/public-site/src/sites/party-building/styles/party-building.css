@@ -36,7 +36,7 @@ body{font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;background:#f5
 .party-article-list a:hover{color:#d00023}
 .party-article-list time{flex:0 0 auto;color:#9ba2aa;font-size:13px}
 .party-voice-list{padding:30px 16px 35px}
-.party-voice-list li{padding-left:24px;margin-bottom:25px}
+.party-voice-list li{min-height:20px;line-height:20px;padding-left:24px;margin-bottom:25px}
 .party-voice-list li::before{content:"";position:absolute;left:0;top:50%;width:16px;height:16px;transform:translateY(-50%);background:url('/static/party-building/ic-title-yellow.png') center/16px 16px no-repeat}
 .party-voice-list li:last-child{margin-bottom:0}
 .party-block{margin-top:16px}
@@ -81,8 +81,10 @@ body{font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;background:#f5
 .party-footer-inner{width:min(720px,calc(100% - 32px));padding:28px 0;text-align:left;font-size:13px;line-height:21px}
 .party-footer p{margin:2px 0}
 .party-footer strong{font-weight:500}
-.party-footer-records{display:flex;justify-content:flex-start;gap:18px;flex-wrap:wrap}
+.party-footer-records{display:flex;justify-content:flex-start;align-items:center;gap:18px;flex-wrap:wrap}
 .party-footer a{color:#fff;text-decoration:none}
+.party-public-security-record{display:inline-flex;align-items:center;gap:4px}
+.party-public-security-record img{display:block;width:20px;height:20px}
 @media(max-width:900px){
   .party-banner{height:clamp(128px,16.67vw,200px)}
   .party-mobile-nav-head{display:flex;align-items:center;justify-content:space-between;min-height:44px;color:#fff}
@@ -109,7 +111,7 @@ body{font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;background:#f5
   .party-article-list li{align-items:flex-start;flex-direction:column;gap:4px;padding:7px 0}
   .party-article-list a{width:100%;white-space:normal;line-height:1.6}
   .party-article-list time{align-self:flex-end}
-  .party-voice-list li{padding-left:24px;margin-bottom:2px}
+  .party-voice-list li{min-height:20px;line-height:20px;padding-left:24px;margin-bottom:2px}
   .party-red-tab{min-height:48px}
   .party-page{padding-top:16px}
   .party-content-card{padding:0 16px 20px}
@@ -119,5 +121,5 @@ body{font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;background:#f5
   .party-article-meta{flex-direction:column;gap:5px}
   .party-article-body{padding:22px 0}
   .party-footer-inner{width:min(100% - 24px,720px);padding:22px 0}
-  .party-footer-records{gap:6px;flex-direction:column}
+  .party-footer-records{gap:6px;flex-direction:column;align-items:flex-start}
 }
