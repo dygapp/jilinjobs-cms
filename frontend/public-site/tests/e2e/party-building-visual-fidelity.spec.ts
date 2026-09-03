@@ -2,6 +2,7 @@ import { expect, test, type APIRequestContext } from '@playwright/test'
 
 type Column = { id: number; alias: string }
 type Article = { id: number; title: string }
+type CarouselItem = { id: number; title: string; url: string | null }
 
 async function partyColumns(request: APIRequestContext) {
   const response = await request.get('/api/admin/columns')
@@ -51,12 +52,14 @@ async function seedVisualContent(request: APIRequestContext, suffix: string) {
   const lists = await listsResponse.json() as Array<{ id: number; code: string }>
   const carousel = lists.find(item => item.code === 'PARTY_HOME_CAROUSEL')
   expect(carousel).toBeTruthy()
+  const aliases = ['party-voice', 'party-work', 'party-rules', 'party-study']
+  const carouselItems: CarouselItem[] = []
   for (let index = 0; index < 4; index += 1) {
     const response = await request.post(`/api/admin/lists/${carousel!.id}/items`, {
       data: {
         title: `党建轮播代表内容 ${index + 1}-${suffix}`,
         subtitle: null,
-        url: null,
+        url: `/party/column/${aliases[index]}`,
         imagePath: '/static/health/baseline.png',
         openMode: 'DEFAULT',
         sortOrder: index * 10,
@@ -65,8 +68,9 @@ async function seedVisualContent(request: APIRequestContext, suffix: string) {
       },
     })
     expect(response.ok()).toBeTruthy()
+    carouselItems.push(await response.json() as CarouselItem)
   }
-  return articles
+  return { articles, carouselItems }
 }
 
 test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer 使用正式视觉基线', async ({ page, request }) => {
@@ -74,6 +78,7 @@ test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer �
     '/static/party-building/party-header-banner.webp',
     '/static/party-building/ic-title-yellow.png',
     '/static/party-building/section-marker.png',
+    '/static/footer/public-security-record.png',
   ]) {
     const response = await request.get(path)
     expect(response.ok(), `${path} 应由版本化静态基线提供`).toBeTruthy()
@@ -89,20 +94,27 @@ test('EU-28：党建稳定原站视觉资源可访问且 Header / Nav / Footer �
   await expect(firstNavigation).toHaveCSS('width', '120px')
   await expect(firstNavigation.locator('a, span').first()).toHaveCSS('min-height', '60px')
   await expect(page.locator('.party-red-tab').first()).toHaveCSS('min-height', '40px')
+  await expect(page.locator('.party-voice-list li').first()).toHaveCSS('min-height', '20px')
   await expect(page.locator('.party-work-list')).toHaveCSS('display', 'block')
   await expect(page.locator('.party-footer')).toHaveCSS('background-color', 'rgb(173, 0, 29)')
   await expect(page.locator('.party-footer-inner')).toHaveCSS('text-align', 'left')
+  await expect(page.locator('.party-public-security-record img')).toBeVisible()
   await expect(page.locator('.party-emblem')).toHaveCount(0)
   await expect(page.locator('.party-hero')).toHaveCount(0)
 })
 
-test('EU-28：党建 Desktop / Mobile 当前视觉截图形成 Current Evidence', async ({ page, request }, testInfo) => {
+test('EU-28：党建 Desktop / Mobile 当前视觉截图形成 Current Evidence 且轮播可跳转', async ({ page, request }, testInfo) => {
   const suffix = `${Date.now()}-${testInfo.retry}`
-  const articles = await seedVisualContent(request, suffix)
+  const { articles, carouselItems } = await seedVisualContent(request, suffix)
 
   await page.setViewportSize({ width: 1440, height: 1000 })
   await page.goto('/party/')
   await expect(page.getByText(articles['party-voice'].title, { exact: true })).toBeVisible()
+  const firstSeededCarousel = page.getByTestId(`party-carousel-item-${carouselItems[0].id}`).locator('a')
+  await expect(firstSeededCarousel).toHaveAttribute('href', '/party/column/party-voice')
+  await firstSeededCarousel.click({ force: true })
+  await expect(page).toHaveURL(/\/party\/column\/party-voice$/)
+  await page.goto('/party/')
   await page.waitForTimeout(200)
   await testInfo.attach('party-home-desktop-current.png', {
     body: await page.screenshot({ fullPage: true }),
