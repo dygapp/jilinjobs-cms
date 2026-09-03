@@ -1,5 +1,5 @@
 ---
-id: requirement-party-building-positioning
+id: requirement-party-positioning
 title: 中心党建业务定位补充需求
 type: business-requirement
 status: confirmed
@@ -11,8 +11,8 @@ relations:
   upstream:
     - docs/requirements/information-publishing.md
   downstream:
-    - docs/specifications/party-building.md
-    - docs/technical/party-building-frontend.md
+    - docs/specifications/party.md
+    - docs/technical/party-frontend.md
 created_at: 2026-09-03
 updated_at: 2026-09-03
 ---

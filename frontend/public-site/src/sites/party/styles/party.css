@@ -38,12 +38,12 @@ body{font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;background:#f5
 .party-article-list time{flex:0 0 auto;color:#9ba2aa;font-size:13px}
 .party-voice-list{padding:30px 16px 35px}
 .party-voice-list li{min-height:20px;line-height:20px;padding-left:24px;margin-bottom:25px}
-.party-voice-list li::before{content:"";position:absolute;left:0;top:50%;width:16px;height:16px;transform:translateY(-50%);background:url('/static/party-building/ic-title-yellow.png') center/16px 16px no-repeat}
+.party-voice-list li::before{content:"";position:absolute;left:0;top:50%;width:16px;height:16px;transform:translateY(-50%);background:url('/static/party/ic-title-yellow.png') center/16px 16px no-repeat}
 .party-voice-list li:last-child{margin-bottom:0}
 .party-block{margin-top:16px}
 .party-block-title{margin-bottom:8px}
 .party-block-title h2{position:relative;margin:0;padding-left:20px;color:#323b47;font-size:24px;font-weight:400;line-height:32px}
-.party-block-title h2::before{content:"";position:absolute;left:0;top:50%;width:4px;height:16px;transform:translateY(-50%);background:url('/static/party-building/section-marker.png') center/4px 16px no-repeat}
+.party-block-title h2::before{content:"";position:absolute;left:0;top:50%;width:4px;height:16px;transform:translateY(-50%);background:url('/static/party/section-marker.png') center/4px 16px no-repeat}
 .party-block>.party-section-panel{border:1px solid #eceff2}
 .party-work-list{display:block;min-height:210px;padding:16px}
 .party-work-list li{border-bottom:1px dashed #e1e5e8}

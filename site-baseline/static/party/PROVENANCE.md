@@ -1,6 +1,6 @@
 # 中心党建稳定视觉资源来源
 
-本目录保存经 2026-09-02～2026-09-03 原站 Browser Evidence 验证、且属于党员之家（**Party Members’ Home**）稳定页面视觉的工程资产。目录名 `party-building` 是已落地兼容性技术标识，不再作为“党员之家”的正式英文翻译。历史文章正文图片、附件和轮播成员属于运营内容，不进入本目录。
+本目录保存经 2026-09-02～2026-09-03 原站 Browser Evidence 验证、且属于党员之家（**Party Members’ Home**）稳定页面视觉的工程资产。目录名 `party` 是已落地兼容性技术标识，不再作为“党员之家”的正式英文翻译。历史文章正文图片、附件和轮播成员属于运营内容，不进入本目录。
 
 ## Header Banner
 
@@ -12,7 +12,7 @@
 - 原始 SHA-256：`7444d50235d4c87a00d0221ac84551ea083c617bb8a15e58f58d002224bd27a3`
 - 当前仓库资源：`party-header-banner.jpg`
 - 当前 Git blob SHA：`926e7d67ae530e2e8135a6631ac0fda7b876b743`
-- 处理：**原始字节直接入库，不做重采样、不做 WebP/AVIF 转码、不重新编码、不裁剪。** 页面正式运行只引用 `/static/party-building/party-header-banner.jpg`，不得依赖原站资源地址。
+- 处理：**原始字节直接入库，不做重采样、不做 WebP/AVIF 转码、不重新编码、不裁剪。** 页面正式运行只引用 `/static/party/party-header-banner.jpg`，不得依赖原站资源地址。
 
 ### 已否决的派生方案
 

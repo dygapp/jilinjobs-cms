@@ -13,7 +13,7 @@ type NavigationItem = {
   clickable: boolean
 }
 
-const PARTY_BANNER = '/static/party-building/party-header-banner.jpg'
+const PARTY_BANNER = '/static/party/party-header-banner.jpg'
 
 async function partyColumns(request: APIRequestContext) {
   const response = await request.get('/api/admin/columns')
@@ -88,8 +88,8 @@ async function seedVisualContent(request: APIRequestContext, suffix: string) {
 test('EU-28：中心党建 Banner 使用本地原站基线资源且不可点击，公共导航和页脚仅覆盖红色主题', async ({ page, request }) => {
   for (const path of [
     PARTY_BANNER,
-    '/static/party-building/ic-title-yellow.png',
-    '/static/party-building/section-marker.png',
+    '/static/party/ic-title-yellow.png',
+    '/static/party/section-marker.png',
     '/static/footer/public-security-record.png',
     '/static/footer/public-institution.png',
     '/static/footer/wechat-qr.png',
@@ -150,7 +150,14 @@ test('EU-28：中心党建 Banner 使用本地原站基线资源且不可点击�
     return { fontSize: style.fontSize, fontWeight: style.fontWeight }
   })
   expect(partyNavigationFont).toEqual(mainNavigationFont)
-  expect(partyNavigationFont).toEqual({ fontSize: '14px', fontWeight: '400' })
+  expect(partyNavigationFont).toEqual({ fontSize: '16px', fontWeight: '700' })
+
+  const mainRootWithChildren = mainNavigation.locator('.shared-public-nav-root > .shared-public-nav-item').nth(rootWithChildrenIndex)
+  await mainRootWithChildren.hover()
+  const mainChildMenu = mainRootWithChildren.locator(':scope > .shared-public-nav-children')
+  await expect(mainChildMenu).toBeVisible()
+  await expect(mainChildMenu).toHaveCSS('background-color', 'rgb(0, 92, 212)')
+  await expect(mainChildMenu.locator('a, span').first()).toHaveCSS('color', 'rgb(255, 255, 255)')
 
   const rootWithChildrenElement = partyNavigation.locator('.shared-public-nav-root > .shared-public-nav-item').nth(rootWithChildrenIndex)
   await expect(rootWithChildrenElement.locator(':scope > .shared-public-nav-link .shared-public-nav-arrow')).toBeVisible()
@@ -158,6 +165,10 @@ test('EU-28：中心党建 Banner 使用本地原站基线资源且不可点击�
   await expect(childMenu.locator(':scope > li')).toHaveCount(expectedChildren.length)
   await rootWithChildrenElement.hover()
   await expect(childMenu).toBeVisible()
+  await expect(childMenu).toHaveCSS('background-color', 'rgb(208, 0, 35)')
+  await expect(childMenu.locator('a, span').first()).toHaveCSS('color', 'rgb(255, 255, 255)')
+  await expect(childMenu.locator('a, span').first()).toHaveCSS('font-size', '16px')
+  await expect(childMenu.locator('a, span').first()).toHaveCSS('font-weight', '700')
   for (const child of expectedChildren) {
     await expect(childMenu.getByText(child.name, { exact: true })).toBeVisible()
   }

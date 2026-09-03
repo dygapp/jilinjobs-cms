@@ -45,7 +45,7 @@ async function createArticle(
 
 test('EU-27：党建栏目树与中心党建轮播容器来自 Fresh Flyway 基线', async ({ request }) => {
   const allColumns = await columns(request)
-  const parent = allColumns.find(item => item.alias === 'party-building')
+  const parent = allColumns.find(item => item.alias === 'party')
   expect(parent).toMatchObject({ name: '中心党建', parentId: null, preset: true })
 
   for (const [alias, name] of [
@@ -162,9 +162,9 @@ test('EU-27：Party 详情只接受党建站内文章，非党建文章被隔离
 test('EU-27：Party 主题隔离且移动端不产生 1200px 横向溢出', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto('/party/')
-  await expect(page.getByTestId('party-building-header')).toBeVisible()
+  await expect(page.getByTestId('party-header')).toBeVisible()
   await page.goto('/party/column/party-work')
-  await expect(page.getByTestId('party-building-header')).toBeVisible()
+  await expect(page.getByTestId('party-header')).toBeVisible()
   await expect(page.locator('.site-header')).toHaveCount(0)
   const metrics = await page.evaluate(() => ({ viewport: innerWidth, documentWidth: document.documentElement.scrollWidth }))
   expect(metrics.viewport).toBe(390)
@@ -172,5 +172,5 @@ test('EU-27：Party 主题隔离且移动端不产生 1200px 横向溢出', asyn
 
   await page.goto('/')
   await expect(page.getByTestId('public-content')).toBeVisible()
-  await expect(page.getByTestId('party-building-site')).toHaveCount(0)
+  await expect(page.getByTestId('party-site')).toHaveCount(0)
 })

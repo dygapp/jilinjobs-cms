@@ -4,7 +4,7 @@ import { listPublicNavigations, type PublicNavigation } from '../../../shared/ap
 import SharedPublicNavigation from '../../../shared/components/PublicNavigation.vue'
 
 const items = ref<PublicNavigation[]>([])
-const headerBanner = '/static/party-building/party-header-banner.jpg'
+const headerBanner = '/static/party/party-header-banner.jpg'
 
 onMounted(async () => {
   try {
@@ -16,7 +16,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <header class="party-header" data-testid="party-building-header">
+  <header class="party-header" data-testid="party-header">
     <div class="party-banner">
       <img
         class="party-banner-image"

@@ -24,7 +24,7 @@ frontend/public-site/
         │   │   ├── page/
         │   │   └── integration/
         │   └── styles/
-        └── party-building/
+        └── party/
             ├── app/
             ├── shell/
             ├── modules/
@@ -35,9 +35,9 @@ frontend/public-site/
 
 中心主站与中心党建当前同 package、同 Vite build、同部署、同 Spring Boot CMS Backend，但分别拥有 App、Router、Shell 与主题样式所有权。
 
-不引入 Module Federation；不建立 `frontend/party-building` 独立工程。后续只有出现独立发布/部署、不同团队或技术栈、明显不同生命周期等真实需求时再重新评估工程拆分。
+不引入 Module Federation；不建立 `frontend/party` 独立工程。后续只有出现独立发布/部署、不同团队或技术栈、明显不同生命周期等真实需求时再重新评估工程拆分。
 
-中心党建 Foundation 架构已经完成；正式党建前端实施细节由 `docs/technical/party-building-frontend.md` 接续，本文件继续承担两个 Site 的总体工程边界。
+中心党建 Foundation 架构已经完成；正式党建前端实施细节由 `docs/technical/party-frontend.md` 接续，本文件继续承担两个 Site 的总体工程边界。
 
 ## 2. Entry 与 Runtime 路由
 
@@ -72,7 +72,7 @@ Party Building Entry 使用 `party.html`，Nginx 对 `/party/**` fallback 到该
 - `/party/article/:id`：党建站内文章详情；
 - Party catch-all：保持在 Party Entry 内处理，不回落 Main Router。
 
-Party Building Site 拥有独立红色主题 Shell，不能依赖 Main Site Header/Footer 或主站 CSS 才能正常显示。正式实现细节见 `docs/technical/party-building-frontend.md`。
+Party Building Site 拥有独立红色主题 Shell，不能依赖 Main Site Header/Footer 或主站 CSS 才能正常显示。正式实现细节见 `docs/technical/party-frontend.md`。
 
 ### 2.3 Gateway
 
@@ -166,7 +166,7 @@ Party Building Site：
 - Foundation 红色 Shell 已证明 Site/Theme 隔离；
 - 正式阶段按原站证据重构 Header、Footer、首页、栏目和详情视觉；
 - Foundation 占位文案、伪品牌元素和临时 CSS 不作为最终 Authority；
-- 可靠取得并验证的党建 Logo、背景、装饰图片等进入 `site-baseline/static/party-building/**`；
+- 可靠取得并验证的党建 Logo、背景、装饰图片等进入 `site-baseline/static/party/**`；
 - 历史文章正文图片属于内容迁移，不混入工程静态基线。
 
 `/static/icons/**` 可以保存版本化图标文件，但导航条目与图标的对应关系仍来自 Navigation `iconPath`。
@@ -195,7 +195,7 @@ party -> party.html
 
 ### 8.3 Party Building Formal Verification
 
-按 `docs/technical/party-building-frontend.md` 至少证明：
+按 `docs/technical/party-frontend.md` 至少证明：
 
 - `/party/`、`/party/column/**`、`/party/article/**` 直接访问和刷新；
 - Party App / Router / Shell 不依赖 Main Router/DOM/CSS；
@@ -210,7 +210,7 @@ party -> party.html
 
 `docs/work/public-site-multi-entry-execution-units.md` 的 EU-23～EU-25 已完成并转为追溯。
 
-当前按照 `docs/work/party-building-convergence-execution-units.md` 执行：
+当前按照 `docs/work/party-convergence-execution-units.md` 执行：
 
 1. EU-26：原站证据与 Authority 收敛；
 2. EU-27：党建 CMS 结构与 Party 内容路由；

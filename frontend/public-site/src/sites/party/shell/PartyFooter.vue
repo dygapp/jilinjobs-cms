@@ -16,5 +16,5 @@ onMounted(async () => {
 </script>
 
 <template>
-  <SharedPublicFooter :config="config" theme="party" test-id="party-building-footer" />
+  <SharedPublicFooter :config="config" theme="party" test-id="party-footer" />
 </template>

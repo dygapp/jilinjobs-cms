@@ -71,7 +71,7 @@ master@a82e559cb67cafbcf96265a70a1167a9a75db5ba
 - Main Site Header / Footer 已提升到 App 生命周期，Navigation / SiteProperty 等有界站点结构快照不在页面切换中重复装配；
 - Party Building Site 使用 `/party/**` namespace，持有独立 App / Router / Shell / 红色主题基础框架；Foundation 阶段已经关闭，正式页面/视觉不以 Foundation 占位文案和临时 CSS 为 Authority；
 - 原站党建正式信息架构确认四条内容线：高层声音 `gcsy`、工作动态 `gzdt`、党规党章 `dgdz`、理论学习 `llxx`；“学习园地”是页面对后两者的视觉分组，不是独立 CMS 内容类型；
-- 党建正式内容继续复用通用 Column + Article：预置父栏目 `party-building` 组织 `party-voice / party-work / party-rules / party-study`；同一栏目可混合 INTERNAL / EXTERNAL_LINK；
+- 党建正式内容继续复用通用 Column + Article：预置父栏目 `party` 组织 `party-voice / party-work / party-rules / party-study`；同一栏目可混合 INTERNAL / EXTERNAL_LINK；
 - Party canonical URL 确认为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`；原站 `plist.html`、当前 `pdetail.html`、更早 `detail.html` 及 `content_id/typeCode` 参数变体只作为历史迁移输入；
 - 中心党建不拆成独立前端工程，不引入 Module Federation、`site` 字段或党建专属 Admin Module；只有真实独立生命周期或专属业务模型出现后再评估；
 - 党建 Flyway 只固化站点结构，历史文章、外链、正文资源与 legacy id/typeCode/detail path 映射继续通过独立内容迁移/采集机制处理；
@@ -122,7 +122,7 @@ EU-23 Public Frontend Authority & Architecture Convergence：已完成
 
 ## 当前阶段：中心党建正式页面与内容收敛
 
-第一轮原站重新取证和 CMS 复用判断已经完成，当前持久执行路线以 `docs/work/party-building-convergence-execution-units.md` 为准：
+第一轮原站重新取证和 CMS 复用判断已经完成，当前持久执行路线以 `docs/work/party-convergence-execution-units.md` 为准：
 
 ```text
 EU-26 Party Building Evidence & Authority Convergence
@@ -134,7 +134,7 @@ EU-26 Party Building Evidence & Authority Convergence
 当前阶段约束：
 
 1. 原站 `/dyzj` 已确认“高层声音、工作动态、党规党章、理论学习”四条正式内容线；实现不得恢复 Foundation 虚构栏目；
-2. 复用 Column + Article，父栏目 `party-building` 只承担 CMS 组织和 Party 作用域识别；
+2. 复用 Column + Article，父栏目 `party` 只承担 CMS 组织和 Party 作用域识别；
 3. `学习园地` 只作为首页固定布局分组；
 4. Party 列表/详情 canonical route 使用 `/party/column/{alias}`、`/party/article/{id}`；
 5. 新 Flyway 只建立栏目结构，历史运营文章和资源走独立迁移；
@@ -174,11 +174,11 @@ EU-26 Party Building Evidence & Authority Convergence
 4. `docs/project/development-method.md`
 5. `docs/requirements/information-publishing.md`
 6. `docs/specifications/public-site.md`
-7. `docs/specifications/party-building.md`
+7. `docs/specifications/party.md`
 8. `docs/architecture/decisions/ADR-0002-public-site-multi-entry-modular-spa.md`
 9. `docs/technical/public-site-frontend.md`
-10. `docs/technical/party-building-frontend.md`
-11. `docs/work/party-building-convergence-execution-units.md`
+10. `docs/technical/party-frontend.md`
+11. `docs/work/party-convergence-execution-units.md`
 12. `docs/technical/verification-strategy.md`
 13. 当前 Branch / PR / CI / Runtime Evidence
 

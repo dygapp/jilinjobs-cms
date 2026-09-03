@@ -59,7 +59,7 @@ replacements = [
 
 for raw in subprocess.check_output(['git', 'ls-files'], text=True).splitlines():
     path = Path(raw)
-    if path in skip:
+    if path in skip or path.parts[:2] == ('.github', 'workflows'):
         continue
     try:
         text = path.read_text(encoding='utf-8')
@@ -128,7 +128,7 @@ WHERE alias = 'party-building'
   );
 SQL
 
-stale=$(git grep -n -E 'party-building|PartyBuilding' -- ':!backend/src/main/resources/db/migration/V13__party_building_entry.sql' ':!backend/src/main/resources/db/migration/V14__party_building_structure.sql' ':!.github/workflows/party-naming-refactor.yml' ':!.github/scripts/party-naming-refactor.sh' || true)
+stale=$(git grep -n -E 'party-building|PartyBuilding' -- ':!backend/src/main/resources/db/migration/V13__party_building_entry.sql' ':!backend/src/main/resources/db/migration/V14__party_building_structure.sql' ':!.github/workflows/party-naming-refactor.yml' ':!.github/scripts/party-naming-refactor.sh' ':!.github/scripts/run-party-naming-refactor.sh' ':!.github/workflows/**' || true)
 if [ -n "$stale" ]; then
   echo '仍存在旧 Party 技术命名：'
   echo "$stale"

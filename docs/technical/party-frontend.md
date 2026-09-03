@@ -1,6 +1,6 @@
 # 中心党建前端技术方案（Technical Plan）
 
-本文描述主站“中心党建”特殊栏目/专题页面的前端实现。正式英文术语为 **Party Members’ Home**，新的英文逻辑命名使用 `party-members-home`；既有 `party-building` 为兼容性技术标识。
+本文描述主站“中心党建”特殊栏目/专题页面的前端实现。正式英文术语为 **Party Members’ Home**，新的英文逻辑命名使用 `party-members-home`；既有 `party` 为兼容性技术标识。
 
 ## 1. 业务边界与技术边界
 
@@ -26,7 +26,7 @@ Main / Party 共同复用：
 
 ## 2. 数据边界
 
-- 父栏目：`party-building`（兼容性 alias）；
+- 父栏目：`party`（兼容性 alias）；
 - 子栏目：`party-voice / party-work / party-rules / party-study`；
 - 文章：通用 Article，栏目作用域服务端分页；
 - 中心党建轮播：通用 CmsList，当前 code **`PARTY_CAROUSEL`**；
@@ -37,11 +37,11 @@ V14 已执行且曾创建 `PARTY_HOME_CAROUSEL`。不得修改 V14；V15 原地�
 
 ## 3. 路由
 
-- `/party/`：中心党建入口页，route name `party-building-entry`；
+- `/party/`：中心党建入口页，route name `party-home`；
 - `/party/column/:alias`；
 - `/party/article/:id`。
 
-入口组件使用 `PartyBuildingView.vue`，不再使用 `HomeView` 命名。
+入口组件使用 `PartyHomeView.vue`，不再使用 `HomeView` 命名。
 
 Router / Article View 必须确认目标栏目属于中心党建子栏目集合。Shared Navigation 通过 `siteRoot=/party` 处理当前 Entry 内路由，Main Entry 将 `/party/**` 视为跨 Entry document navigation。
 
@@ -56,9 +56,9 @@ Router / Article View 必须确认目标栏目属于中心党建子栏目集合�
 
 正式运行使用版本化本地资源：
 
-`/static/party-building/party-header-banner.jpg`
+`/static/party/party-header-banner.jpg`
 
-仓库文件 `site-baseline/static/party-building/party-header-banner.jpg` 必须与原站证据 byte-for-byte 一致。不得重新编码、转 WebP/AVIF、重采样或在运行时直接访问原站 Banner URL。
+仓库文件 `site-baseline/static/party/party-header-banner.jpg` 必须与原站证据 byte-for-byte 一致。不得重新编码、转 WebP/AVIF、重采样或在运行时直接访问原站 Banner URL。
 
 Header 使用 `<div class="party-banner"><img ...></div>`：
 
@@ -115,7 +115,7 @@ Desktop：
 
 - Fresh Flyway 后存在 `PARTY_CAROUSEL / 中心党建轮播`，不存在当前 `PARTY_HOME_CAROUSEL`；
 - Main / Party 使用相同 Navigation/Footer component marker；
-- `/static/party-building/party-header-banner.jpg` 可从版本化静态基线读取，Browser natural size 为 3072×512；
+- `/static/party/party-header-banner.jpg` 可从版本化静态基线读取，Browser natural size 为 3072×512；
 - Banner `<img>` 使用本地 `/static/**` 路径，`.party-banner` 内无 `<a>`；
 - WebP/AVIF 派生 Banner 不再作为正式资源；
 - 外部静态资源契约扫描无违规项；

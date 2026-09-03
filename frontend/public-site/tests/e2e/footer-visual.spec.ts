@@ -60,3 +60,21 @@ test('视觉基线：首页举报入口打开站内固定页并保留原站正�
   await expect(body).toContainText('xxb@jilinjobs.cn')
   await page.screenshot({ path: testInfo.outputPath('report-contact-desktop.png'), fullPage: true })
 })
+
+
+test('视觉基线：Main 与 Party Entry 的 favicon 均由版本化 PNG 正常加载', async ({ page, request }) => {
+  const faviconPath = '/static/brand/site-favicon.png'
+  const response = await request.get(faviconPath)
+  expect(response.ok()).toBeTruthy()
+  expect(response.headers()['content-type']).toContain('image/png')
+  const body = await response.body()
+  expect(body.length).toBeGreaterThan(100)
+  expect(body.subarray(0, PNG_SIGNATURE.length).equals(PNG_SIGNATURE)).toBeTruthy()
+
+  for (const entry of ['/', '/party/']) {
+    await page.goto(entry)
+    await expect(page.locator('link[rel="icon"]')).toHaveAttribute('href', faviconPath)
+    await expect(page.locator('link[rel="icon"]')).toHaveAttribute('sizes', '128x128')
+    await expect(page.locator('link[rel="shortcut icon"]')).toHaveAttribute('href', faviconPath)
+  }
+})

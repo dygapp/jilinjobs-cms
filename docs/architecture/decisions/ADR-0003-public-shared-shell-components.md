@@ -50,7 +50,7 @@ Site Entry 只提供：
 - theme 标识；
 - 必要的 test-id / aria 元数据。
 
-颜色通过 Shared CSS theme variables / modifier class 覆盖。不得在 `sites/main/**` 或 `sites/party-building/**` 再复制一套 Navigation DOM、菜单树算法或响应式布局。
+颜色通过 Shared CSS theme variables / modifier class 覆盖。不得在 `sites/main/**` 或 `sites/party/**` 再复制一套 Navigation DOM、菜单树算法或响应式布局。
 
 ### 2.2 PublicFooter
 

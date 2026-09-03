@@ -2,7 +2,7 @@
 
 本文记录中心党建 Foundation 之后的正式页面、内容、视觉和历史迁移切分。中心党建在业务上是**主站下的特殊栏目/专题页面**；`party.html`、Party Router 与 `/party/**` 是红色主题和模板隔离的技术实现，不代表第二个网站或独立首页。
 
-中文原站页面名称沿用“党员之家”，英文统一为 **Party Members’ Home**；既有 `party-building` 为兼容性技术标识。
+中文原站页面名称沿用“党员之家”，英文统一为 **Party Members’ Home**；既有 `party` 为兼容性技术标识。
 
 **状态：进行中（2026-09-03），当前 EU-28 Human Visual Review 修正中。**
 
@@ -21,7 +21,7 @@
 
 页面顶部存在独立 4 项图片轮播，与高层声音并列。当前稳定 CmsList code 为 **`PARTY_CAROUSEL`**，产品名称为“中心党建轮播”；历史 V14 中的 `PARTY_HOME_CAROUSEL / 中心党建首页轮播` 由 V15 原地重命名，不修改已执行 Migration。
 
-原站 Banner 证据地址为 `https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png`，3072×512，SHA-256 `7444d50235d4c87a00d0221ac84551ea083c617bb8a15e58f58d002224bd27a3`。原始媒体实际为 JPEG/JFIF，当前版本化基线使用正确扩展名 `site-baseline/static/party-building/party-header-banner.jpg`，保持原始字节不变。正式运行只使用本地 `/static/party-building/party-header-banner.jpg`，不得直接依赖原站资源 URL。Human Review 已否决 WebP/AVIF 二次有损派生作为正式 Banner。
+原站 Banner 证据地址为 `https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png`，3072×512，SHA-256 `7444d50235d4c87a00d0221ac84551ea083c617bb8a15e58f58d002224bd27a3`。原始媒体实际为 JPEG/JFIF，当前版本化基线使用正确扩展名 `site-baseline/static/party/party-header-banner.jpg`，保持原始字节不变。正式运行只使用本地 `/static/party/party-header-banner.jpg`，不得直接依赖原站资源 URL。Human Review 已否决 WebP/AVIF 二次有损派生作为正式 Banner。
 
 ---
 
@@ -34,7 +34,7 @@
 ### Decisions
 
 - 复用 Column + Article；
-- `party-building` 父栏目组织四个真实子栏目；
+- `party` 父栏目组织四个真实子栏目；
 - “学习园地”为页面分组；
 - 顶部图片轮播复用 CmsList；
 - canonical URL 使用 `/party/`、`/party/column/{alias}`、`/party/article/{id}`；
@@ -96,7 +96,7 @@ V14 初始使用 `PARTY_HOME_CAROUSEL / 中心党建首页轮播`。2026-09-03 H
 - 本地 `party-header-banner.jpg` 与原站证据保持相同 3072×512 与 SHA-256；Browser natural size 验证通过；
 - Banner DOM 无 `<a>`；
 - 当前 CmsList 为 `PARTY_CAROUSEL / 中心党建轮播`；
-- 当前实现不再使用 `PartyBuildingHomeView / party-home-* / party-building-home` 等入口页 Home 语义；
+- 当前实现不再使用 `PartyHomeView / party-home-* / party-home` 等入口页 Home 语义；
 - 公开站模板外部静态资源契约扫描通过；
 - Main / Party Shared Navigation/Footer 无结构漂移；
 - 390px 无横向溢出；

@@ -6,7 +6,7 @@
 
 **中心党建不是第二个网站，也不是主站之外的独立首页。** 它是主站信息架构下具有独立红色视觉主题的特殊栏目/专题入口。当前 `/party/**`、`party.html`、独立 App/Router 只是为了隔离红色主题、路由和页面模板的技术实现边界，不改变其业务上属于主站的定位。
 
-原站页面名称为“党员之家”，英文统一表述为 **Party Members’ Home**；新的英文逻辑命名使用 `party-members-home`。既有 `party-building` 父栏目 alias、源码目录等属于兼容性技术标识，不再作为“党员之家”的正式英文翻译。
+原站页面名称为“党员之家”，英文统一表述为 **Party Members’ Home**；新的英文逻辑命名使用 `party-members-home`。既有 `party` 父栏目 alias、源码目录等属于兼容性技术标识，不再作为“党员之家”的正式英文翻译。
 
 本规格依据 2026-09-02～2026-09-03 对原站 `https://24365.jl.smartedu.cn/dyzj` 的 Browser Evidence，以及 2026-09-03 Human Visual Review 结论收敛。凡旧文档把中心党建描述为“独立站点”“党建首页”的业务语义，以本规格和本轮 Human Review 结论为准。
 
@@ -39,7 +39,7 @@
 
 2026-09-03 Human Review 已两次证明派生 WebP/AVIF 会在标题文字边缘产生可见清晰度损失。因此正式页面必须使用**原站原始字节的版本化本地副本**：
 
-`/static/party-building/party-header-banner.jpg`
+`/static/party/party-header-banner.jpg`
 
 该文件以正确 JPEG 扩展名保存，必须保持原始 SHA-256，不允许重新编码后冒充原始资源；正式运行不得再依赖原站 URL。
 
@@ -61,7 +61,7 @@ Banner 仅承担视觉展示：必须使用非链接容器 + `<img>`，不得包
 继续使用通用 Column：
 
 ```text
-中心党建 (party-building，兼容性技术 alias)
+中心党建 (party，兼容性技术 alias)
 ├── 高层声音 (party-voice)   <- legacy gcsy
 ├── 工作动态 (party-work)    <- legacy gzdt
 ├── 党规党章 (party-rules)   <- legacy dgdz
@@ -175,7 +175,7 @@ Flyway 只负责稳定结构：父栏目、四个子栏目、轮播容器及必�
 - `/party/**` 独立 Entry/Router 仅作为主题与模板隔离技术实现；
 - 四个内容子栏目及其 legacy 映射明确；
 - CmsList 稳定 code 为 `PARTY_CAROUSEL`，名称为“中心党建轮播”，旧 `PARTY_HOME_CAROUSEL` 不再作为当前运行时 code；
-- Banner 使用版本化 `/static/party-building/party-header-banner.jpg`，其字节 SHA-256 与原站一致；正式运行不访问原站 Banner URL；
+- Banner 使用版本化 `/static/party/party-header-banner.jpg`，其字节 SHA-256 与原站一致；正式运行不访问原站 Banner URL；
 - Banner DOM 不含 `<a>`，不可点击；
 - 公开站设计模板不存在未经允许的外部静态资源直接引用；
 - Main / Party Navigation 与 Footer 使用同一 Shared Components，仅主题色不同；

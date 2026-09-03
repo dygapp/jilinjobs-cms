@@ -16,7 +16,7 @@
 
 - `docs/specifications/cms-core.md`
 - `docs/specifications/public-site.md`
-- `docs/specifications/party-building.md`
+- `docs/specifications/party.md`
 - `docs/specifications/admin-site.md`
 - `docs/specifications/preset-site-structure.md`
 
@@ -31,7 +31,7 @@
 - `docs/technical/configuration-governance.md`
 - `docs/technical/backend-service.md`
 - `docs/technical/public-site-frontend.md`
-- `docs/technical/party-building-frontend.md`
+- `docs/technical/party-frontend.md`
 - `docs/technical/admin-frontend.md`
 - `docs/technical/admin-frontend-integration.md`
 - `docs/technical/verification-strategy.md`
@@ -39,7 +39,7 @@
 
 当前执行单元：
 
-- `docs/work/party-building-convergence-execution-units.md`
+- `docs/work/party-convergence-execution-units.md`
 
 最近完成的公开站架构执行单元（阶段追溯）：
 
@@ -84,7 +84,7 @@ CMS 通用业务对象：
 
 公开站和管理端是同级独立 Vue / Vite 前端工程，共享 Spring Boot CMS Backend。公开站工程内部不把普通页面类型机械映射成独立 HTML Entry；主站 `/`、`/column/**`、`/article/**`、`/page/**` 统一属于 Main Site Entry，中心党建使用独立 Party Building Site Entry 和 `/party/**` URL namespace。两个公开 Site 当前同构建、同部署，但 Shell、Router 与主题样式互不共享所有权。
 
-中心党建正式内容继续复用通用 CMS：预置父栏目 `party-building` 组织 `party-voice / party-work / party-rules / party-study` 四个子栏目；四条内容线都使用通用 Article，并允许 INTERNAL / EXTERNAL_LINK 混合。`学习园地` 只是 Party 首页对党规党章与理论学习的固定视觉分组，不新增 CMS 类型。Party canonical URL 为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`。原站 `plist.html`、当前 `pdetail.html` 和更早 `detail.html` 地址及其 `content_id/typeCode` 参数变体只作为历史迁移映射输入，不延续为新版 Router 模型。
+中心党建正式内容继续复用通用 CMS：预置父栏目 `party` 组织 `party-voice / party-work / party-rules / party-study` 四个子栏目；四条内容线都使用通用 Article，并允许 INTERNAL / EXTERNAL_LINK 混合。`学习园地` 只是 Party 首页对党规党章与理论学习的固定视觉分组，不新增 CMS 类型。Party canonical URL 为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`。原站 `plist.html`、当前 `pdetail.html` 和更早 `detail.html` 地址及其 `content_id/typeCode` 参数变体只作为历史迁移映射输入，不延续为新版 Router 模型。
 
 管理端当前是单一 Vue SPA，但源码按 `app/`、`shared/` 与 `modules/cms/` 分离：Shell 只聚合模块声明，CMS Module 自己声明 routes/navigation，并使用 Vue Router 动态 import 进行路由级懒加载。Module Federation、iframe 或其他运行时微前端机制不属于当前基础设施；未来只有出现真实独立发布、独立部署、跨团队或跨技术栈要求时再单独评估。
 
@@ -96,7 +96,7 @@ CMS 通用业务对象：
 
 网站规划基线中的关键结构对象使用只读 `preset` 标识保护：预置栏目、导航位置/条目、单页分组/单页、列表容器、宣传展示位和稳定网站属性定义不能被误删；具有稳定 Alias/Code/Key 的预置对象不能修改该身份字段。`preset` 不等于完全只读，名称、排序、启停以及正常运营字段仍按各自模型维护；Article、CmsListItem、Advertisement 等运营成员不因此变成预置内容。普通 Admin API 新增对象默认 `preset=false`，客户端不能自行设置或取消该标识。
 
-工程基线静态资源继续位于 `/static/home`、`/static/brand`、`/static/footer`、`/static/icons` 等版本化目录；CMS 运行时上传统一进入 `/static/uploads/**`，由宣传展示/列表/导航图标/RESOURCE_PATH 网站属性等管理界面复用统一图片资源选择与上传能力。中心党建可可靠取得并验证的稳定视觉资源进入 `site-baseline/static/party-building/**`；历史党建文章正文资源继续属于独立内容迁移范围。
+工程基线静态资源继续位于 `/static/home`、`/static/brand`、`/static/footer`、`/static/icons` 等版本化目录；CMS 运行时上传统一进入 `/static/uploads/**`，由宣传展示/列表/导航图标/RESOURCE_PATH 网站属性等管理界面复用统一图片资源选择与上传能力。中心党建可可靠取得并验证的稳定视觉资源进入 `site-baseline/static/party/**`；历史党建文章正文资源继续属于独立内容迁移范围。
 
 静态资源“受保护”状态由 Backend 负责：固定部署/工程基线来自 Spring 外部化配置，当前网站属性、列表、宣传展示和导航直接引用的资源由 Runtime 动态加入保护集合；该状态不是管理员人工维护的重要性等级。普通删除必须拒绝，明确替换仍允许。
 
@@ -118,7 +118,7 @@ frontend/
 │           │   ├── app/
 │           │   ├── shell/
 │           │   └── modules/
-│           └── party-building/
+│           └── party/
 │               ├── app/
 │               ├── shell/
 │               └── modules/

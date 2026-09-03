@@ -2,7 +2,7 @@
 
 ## 1. 目标
 
-定义 Main Site 与 Party Members’ Home 必须共享的公开站公共 Shell。本文与 ADR-0003 配套，并对 `docs/specifications/party-building.md` 中此前“Navigation / Footer 必须 Party-owned DOM/CSS”的描述形成后续覆盖。
+定义 Main Site 与 Party Members’ Home 必须共享的公开站公共 Shell。本文与 ADR-0003 配套，并对 `docs/specifications/party.md` 中此前“Navigation / Footer 必须 Party-owned DOM/CSS”的描述形成后续覆盖。
 
 党员之家仍保留独立红色主题、Banner、页面 Frame 和内容模板；但它作为主站“中心党建”入口，不维护第二套公共 Navigation / Footer 产品规则。
 

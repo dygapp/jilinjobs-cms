@@ -4,12 +4,12 @@
 .shared-public-navigation{
   --shared-nav-bg:#005cd4;
   --shared-nav-active-bg:#00439a;
-  --shared-nav-sub-bg:#fff;
-  --shared-nav-sub-color:#323b47;
-  --shared-nav-sub-border:#dfe7f1;
-  --shared-nav-sub-shadow:0 8px 18px rgba(0,50,120,.18);
-  --shared-nav-sub-hover-bg:#edf5ff;
-  --shared-nav-sub-hover-color:#005cd4;
+  --shared-nav-sub-bg:var(--shared-nav-bg);
+  --shared-nav-sub-color:#fff;
+  --shared-nav-sub-border:#004eb4;
+  --shared-nav-sub-shadow:none;
+  --shared-nav-sub-hover-bg:var(--shared-nav-active-bg);
+  --shared-nav-sub-hover-color:#fff;
   --shared-nav-mobile-child-bg:#004fae;
   height:60px;
   position:relative;
@@ -20,10 +20,7 @@
 .shared-public-navigation--party{
   --shared-nav-bg:#d00023;
   --shared-nav-active-bg:#ad001d;
-  --shared-nav-sub-border:#ead9dc;
-  --shared-nav-sub-shadow:0 8px 18px rgba(120,0,20,.18);
-  --shared-nav-sub-hover-bg:#fff0f2;
-  --shared-nav-sub-hover-color:#ad001d;
+  --shared-nav-sub-border:#ad001d;
   --shared-nav-mobile-child-bg:#ad001d;
 }
 .shared-public-nav-mobile{display:none}
@@ -38,8 +35,8 @@
   padding:0 8px;
   color:#fff;
   font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;
-  font-size:14px;
-  font-weight:400;
+  font-size:16px;
+  font-weight:700;
   text-decoration:none;
   white-space:nowrap;
   overflow:hidden;
@@ -56,23 +53,25 @@
   left:0;
   min-width:160px;
   margin:0;
-  padding:5px 0;
+  padding:5px 0 0;
   list-style:none;
   background:var(--shared-nav-sub-bg);
   color:var(--shared-nav-sub-color);
-  border:1px solid var(--shared-nav-sub-border);
+  border:0;
   box-shadow:var(--shared-nav-sub-shadow);
   text-align:left;
 }
 .shared-public-nav-item:hover>.shared-public-nav-children,
 .shared-public-nav-item:focus-within>.shared-public-nav-children{display:block}
-.shared-public-nav-children li{min-width:160px;text-align:left}
+.shared-public-nav-children li{min-width:160px;min-height:50px;text-align:left;background:var(--shared-nav-sub-bg);border-bottom:1px solid var(--shared-nav-sub-border)}
 .shared-public-nav-children a,.shared-public-nav-children span{
-  display:block;
-  padding:11px 18px;
+  min-height:49px;
+  display:flex;
+  align-items:center;
+  padding:0 15px;
   color:var(--shared-nav-sub-color);
-  font-size:14px;
-  font-weight:400;
+  font-size:16px;
+  font-weight:700;
   line-height:1.5;
   text-decoration:none;
   white-space:nowrap;
@@ -137,8 +136,8 @@
     background:var(--shared-nav-mobile-child-bg);
     color:#fff;
   }
-  .shared-public-nav-children li{min-width:0;width:100%}
-  .shared-public-nav-children a,.shared-public-nav-children span{padding:8px 12px;color:#fff;white-space:normal}
+  .shared-public-nav-children li{min-width:0;width:100%;min-height:0;border-bottom:1px solid rgba(255,255,255,.16)}
+  .shared-public-nav-children a,.shared-public-nav-children span{min-height:0;padding:8px 12px;color:#fff;font-size:14px;white-space:normal}
   .shared-public-nav-children a:hover,.shared-public-nav-children li.active>a{background:rgba(255,255,255,.12);color:#fff}
   .shared-public-footer-layout{display:block}
   .shared-public-footer-badges{justify-content:flex-start;margin-top:16px;min-width:0}
