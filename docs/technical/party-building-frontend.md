@@ -45,25 +45,41 @@ V14 已执行且曾创建 `PARTY_HOME_CAROUSEL`。不得修改 V14；V15 原地�
 
 Router / Article View 必须确认目标栏目属于中心党建子栏目集合。Shared Navigation 通过 `siteRoot=/party` 处理当前 Entry 内路由，Main Entry 将 `/party/**` 视为跨 Entry document navigation。
 
-## 4. Banner
+## 4. Banner 与静态资源
 
-原站资源：
+原站 Banner 证据：
 
-`https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png`
+- 原站 URL：`https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png`；
+- 尺寸：3072×512；
+- SHA-256：`7444d50235d4c87a00d0221ac84551ea083c617bb8a15e58f58d002224bd27a3`；
+- 文件名虽为 `.png`，原始媒体字节实际为 JFIF/JPEG。
 
-- 3072×512；
-- SHA-256 `7444d50235d4c87a00d0221ac84551ea083c617bb8a15e58f58d002224bd27a3`；
-- 文件扩展名为 `.png`，Reference Evidence 取得的原始字节实际为 JFIF/JPEG。
+正式运行使用版本化本地资源：
 
-Human Review 已否决 WebP/AVIF 二次有损派生方案。正式 Header 直接使用原站原始资源 URL，以 `<div class="party-banner"><img ...></div>` 展示：
+`/static/party-building/party-header-banner.jpg`
 
-- 不做 WebP/AVIF 转码；
+仓库文件 `site-baseline/static/party-building/party-header-banner.jpg` 必须与原站证据 byte-for-byte 一致。不得重新编码、转 WebP/AVIF、重采样或在运行时直接访问原站 Banner URL。
+
+Header 使用 `<div class="party-banner"><img ...></div>`：
+
 - 不包裹 `<a>`；
 - Banner 点击不产生导航；
 - Desktop 容器保持 320px 高，图片 `object-fit: cover`；
 - Mobile 按容器缩放并保持无横向溢出。
 
-如果后续把原始字节正式版本化进仓库，必须 byte-for-byte 保持原站文件 SHA-256，不允许重新编码后冒充原始资源。
+### 4.1 外部静态资源契约
+
+公开站模板所需的稳定图片、图标、二维码、字体等展示资源只能来自版本化 `site-baseline/static/**` 或受控 CMS 静态资源路径。
+
+除项目允许的开源 JS/CSS 依赖外，不允许在设计模板中直接使用：
+
+- 外部 `img/src`、媒体 `src/poster`；
+- CSS `url(http://...)` / `url(https://...)`；
+- Banner / Logo / Icon / Image / Background / Font 等资源常量的外部 URL。
+
+业务 `<a href>` 外链、文章外链、第三方业务平台入口不属于静态资源依赖，可以继续使用外部 URL。
+
+`frontend/public-site/tests/e2e/public-external-resource-contract.spec.ts` 对 `src/**/*.{vue,ts,css}` 与两个 HTML Entry 执行自动扫描，防止模板重新引入外部展示资源依赖。
 
 ## 5. Shared Navigation / Footer
 
@@ -99,11 +115,12 @@ Desktop：
 
 - Fresh Flyway 后存在 `PARTY_CAROUSEL / 中心党建轮播`，不存在当前 `PARTY_HOME_CAROUSEL`；
 - Main / Party 使用相同 Navigation/Footer component marker；
-- Banner `<img>` src 为原站资源 URL，natural size 3072×512；
-- `.party-banner` 内无 `<a>`；
-- Party Banner 不引用 AVIF/WebP 派生资源；
+- `/static/party-building/party-header-banner.jpg` 可从版本化静态基线读取，Browser natural size 为 3072×512；
+- Banner `<img>` 使用本地 `/static/**` 路径，`.party-banner` 内无 `<a>`；
+- WebP/AVIF 派生 Banner 不再作为正式资源；
+- 外部静态资源契约扫描无违规项；
 - 四栏目与轮播真实加载；
 - 轮播项点击进入对应详情；
 - 390px 无横向溢出；
-- Main / Admin 无回归；
-- Current Screenshot + AI Visual + Human Review 完成视觉闭环。
+- Main / Admin 无功能回归；
+- Current Screenshot + AI Visual + Human Review 共同完成视觉收敛。
