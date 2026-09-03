@@ -11,18 +11,20 @@ Repository:
 dygapp/agentic-dev
 
 Baseline:
-master@b80b2b1b7cea38eed0aef9807879e2a0d56afd2f
+master@a0aece02414aa36ca7421db391cb3124ad0780f2
 ```
 
 该 baseline 提供 Method、Operating Guide、Engineering Discipline Authority、Technology Profile Contract、Skill Contracts 与 Skills 的来源依据，但不提供本项目的业务事实。
 
-相对上一 baseline `bf21c7bcd711fd667c43007a72fae65750d1af09`，本项目此前实际吸收的新增规则是：
+相对上一 Consumer baseline `b80b2b1b7cea38eed0aef9807879e2a0d56afd2f`，本次升级到 `a0aece02414aa36ca7421db391cb3124ad0780f2` 的 3 个新增提交只涉及 `agentic-dev` 自身 Engineering Capability Foundation v1 Closure、Project Roadmap、Consumer Adoption Handoff 与实验收尾记录；Method、Operating Guide、Engineering Discipline、Technology Profile、Contract 与 Skill 语义均未变化。因此本次只更新精确 baseline 指针，不新增、替换或删除 Consumer-local 方法规则；`docs/technical/verification-strategy.md` 也不因本次升级改变验证语义。`agentic-dev` 自身 Closure、Issue、Experiment 和 Roadmap 状态不继承为 Consumer 项目事实。
+
+相对更早 baseline `bf21c7bcd711fd667c43007a72fae65750d1af09`，本项目此前实际吸收的新增规则是：
 
 - 共享外部资源的并发边界必须匹配真实冲突域，而不是逻辑 PR / Branch / ref 标识；固定域名、代理名、端口、评审 / 部署槽位、临时数据库或单例服务等资源被不同触发路径共同使用时，所有争用者进入同一排他边界；独立工作默认有界排队，只有新工作确实取代旧工作且取消后的资源释放闭环可靠时才取消；Run cancellation、进程终止、锁取得与外部资源实际释放 / 归属正确必须分别验证。
 - 实施判断不把‘硬编码’或‘自行实现’脱离上下文直接视为缺陷：先根据真实变化来源、维护者、稳定性、安全 / 协议约束和生命周期判断代码常量、CMS 运营数据、结构元数据、Spring 外部化配置或 CI / Deployment Variables 的责任归属；没有已证明外部维护责任的稳定常量默认保留在代码或既有权威载体中，不为消除字面量机械配置化。
 - 实现通用技术能力前先检查当前代码库、框架、标准库与已引入依赖；已有能力满足功能契约及安全、可观察性、性能和生命周期约束时优先复用，用最薄适配层承载项目差异；存在可证明的不匹配时可以采用自有实现，但不得为了复用扩大依赖面、改变产品行为或覆盖 Consumer Architecture Authority。
 
-相对上一 Consumer baseline `a82e559cb67cafbcf96265a70a1167a9a75db5ba`，本次选择性固化：
+此前从 Consumer baseline `a82e559cb67cafbcf96265a70a1167a9a75db5ba` 升级到 `b80b2b1b7cea38eed0aef9807879e2a0d56afd2f` 时，已选择性固化：
 
 - **Implementation Minimality & Speculative Complexity Control**：选择当前证据支持的最低必要复杂度；没有当前 Requirement、Specification、Architecture、Verification、安全、性能、生命周期或真实多消费者证据支持的额外抽象、配置、依赖、扩展点、框架层和未来设计默认不进入实现。
 - **Surgical Change & Diff Scope Control**：最终 Diff 的每个有意义区域必须能追溯到当前 Unit 实现、验证、Authority 同步、必要 preparatory refactor 或其直接 cleanup；相邻 typo、TODO、历史死代码、独立优化和全局格式化默认留在当前 Diff 之外。
