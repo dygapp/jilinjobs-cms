@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import { listPublicArticles, type PublicArticleSummary } from '../../../../shared/api/articles'
 import { getPublicCmsListByCode, type CmsListItem } from '../../../../shared/api/lists'
 import { setPageMeta } from '../../../../shared/seo'
@@ -11,6 +11,7 @@ import {
 } from '../../app/partyContext'
 
 const SECTION_SIZE = 6
+const CAROUSEL_INTERVAL_MS = 5000
 const studyAliases: PartyColumnAlias[] = ['party-rules', 'party-study']
 const sectionArticles = ref<Record<PartyColumnAlias, PublicArticleSummary[]>>({
   'party-voice': [],
@@ -19,8 +20,10 @@ const sectionArticles = ref<Record<PartyColumnAlias, PublicArticleSummary[]>>({
   'party-study': [],
 })
 const carouselItems = ref<CmsListItem[]>([])
+const activeSlide = ref(0)
 const loading = ref(true)
 const error = ref('')
+let carouselTimer: number | undefined
 
 const sectionTitles: Record<PartyColumnAlias, string> = {
   'party-voice': '高层声音',
@@ -35,6 +38,7 @@ setPageMeta({
 })
 
 onMounted(load)
+onUnmounted(stopCarousel)
 
 async function load() {
   loading.value = true
@@ -49,11 +53,26 @@ async function load() {
     PARTY_COLUMN_ALIASES.forEach((alias, index) => {
       sectionArticles.value[alias] = articlePages[index].items
     })
+    startCarousel()
   } catch (e) {
     error.value = e instanceof Error ? e.message : '党建内容加载失败'
   } finally {
     loading.value = false
   }
+}
+
+function startCarousel() {
+  stopCarousel()
+  activeSlide.value = 0
+  if (carouselItems.value.length <= 1) return
+  carouselTimer = window.setInterval(() => {
+    activeSlide.value = (activeSlide.value + 1) % carouselItems.value.length
+  }, CAROUSEL_INTERVAL_MS)
+}
+
+function stopCarousel() {
+  if (carouselTimer !== undefined) window.clearInterval(carouselTimer)
+  carouselTimer = undefined
 }
 
 function isExternal(article: PublicArticleSummary) {
@@ -67,21 +86,21 @@ function itemTarget(item: CmsListItem) {
 
 <template>
   <main class="party-main">
-    <section class="party-hero">
-      <div class="party-width party-hero-inner">
-        <p class="party-kicker">党建引领 · 服务发展</p>
-        <h1>中心党建</h1>
-      </div>
-    </section>
-
     <div class="party-width party-content-home">
       <p v-if="loading" class="party-state">正在加载党建内容…</p>
       <p v-else-if="error" class="party-state party-state-error">{{ error }}</p>
       <template v-else>
         <section class="party-home-top" aria-label="党建首页重点内容">
-          <div class="party-carousel" data-testid="party-home-carousel">
+          <div class="party-carousel" data-testid="party-home-carousel" @mouseenter="stopCarousel" @mouseleave="startCarousel">
             <template v-if="carouselItems.length">
-              <article v-for="item in carouselItems" :key="item.id" class="party-carousel-item" :data-testid="`party-carousel-item-${item.id}`">
+              <article
+                v-for="(item, index) in carouselItems"
+                :key="item.id"
+                class="party-carousel-item"
+                :class="{ active: index === activeSlide }"
+                :aria-hidden="index !== activeSlide"
+                :data-testid="`party-carousel-item-${item.id}`"
+              >
                 <a v-if="item.url" :href="item.url" :target="itemTarget(item)" :rel="itemTarget(item) ? 'noopener noreferrer' : undefined">
                   <img v-if="item.imagePath" :src="item.imagePath" :alt="item.title">
                   <strong>{{ item.title }}</strong>
@@ -91,16 +110,26 @@ function itemTarget(item: CmsListItem) {
                   <strong>{{ item.title }}</strong>
                 </div>
               </article>
+              <div v-if="carouselItems.length > 1" class="party-carousel-dots" aria-label="轮播页码">
+                <button
+                  v-for="(item, index) in carouselItems"
+                  :key="`dot-${item.id}`"
+                  type="button"
+                  :class="{ active: index === activeSlide }"
+                  :aria-label="`查看第 ${index + 1} 项：${item.title}`"
+                  @click="activeSlide = index"
+                />
+              </div>
             </template>
             <p v-else class="party-empty">暂无轮播内容</p>
           </div>
 
-          <section class="party-home-section party-home-voice" data-testid="party-section-party-voice">
-            <header class="party-section-heading">
+          <section class="party-home-panel party-home-voice" data-testid="party-section-party-voice">
+            <header class="party-red-tab">
               <h2>{{ sectionTitles['party-voice'] }}</h2>
-              <router-link to="/party/column/party-voice">更多</router-link>
+              <router-link to="/party/column/party-voice">更多 »</router-link>
             </header>
-            <ul class="party-article-list">
+            <ul class="party-article-list party-voice-list">
               <li v-for="article in sectionArticles['party-voice']" :key="article.id">
                 <a v-if="isExternal(article)" :href="article.externalUrl!" target="_blank" rel="noopener noreferrer">{{ article.title }}</a>
                 <router-link v-else :to="`/party/article/${article.id}`">{{ article.title }}</router-link>
@@ -111,28 +140,35 @@ function itemTarget(item: CmsListItem) {
           </section>
         </section>
 
-        <section class="party-home-section" data-testid="party-section-party-work">
-          <header class="party-section-heading">
+        <section class="party-block" data-testid="party-section-party-work">
+          <header class="party-block-title">
             <h2>{{ sectionTitles['party-work'] }}</h2>
-            <router-link to="/party/column/party-work">更多</router-link>
           </header>
-          <ul class="party-article-list">
-            <li v-for="article in sectionArticles['party-work']" :key="article.id">
-              <a v-if="isExternal(article)" :href="article.externalUrl!" target="_blank" rel="noopener noreferrer">{{ article.title }}</a>
-              <router-link v-else :to="`/party/article/${article.id}`">{{ article.title }}</router-link>
-              <time v-if="article.publishDate">{{ article.publishDate }}</time>
-            </li>
-            <li v-if="!sectionArticles['party-work'].length" class="party-empty">暂无已发布内容</li>
-          </ul>
+          <div class="party-home-panel">
+            <header class="party-red-tab">
+              <h3>工作动态</h3>
+              <router-link to="/party/column/party-work">更多 »</router-link>
+            </header>
+            <ul class="party-article-list party-work-list">
+              <li v-for="article in sectionArticles['party-work']" :key="article.id">
+                <a v-if="isExternal(article)" :href="article.externalUrl!" target="_blank" rel="noopener noreferrer">{{ article.title }}</a>
+                <router-link v-else :to="`/party/article/${article.id}`">{{ article.title }}</router-link>
+                <time v-if="article.publishDate">{{ article.publishDate }}</time>
+              </li>
+              <li v-if="!sectionArticles['party-work'].length" class="party-empty">暂无已发布内容</li>
+            </ul>
+          </div>
         </section>
 
-        <section class="party-study-garden" aria-labelledby="party-study-garden-title">
-          <h2 id="party-study-garden-title" class="party-garden-title">学习园地</h2>
+        <section class="party-block party-study-garden" aria-labelledby="party-study-garden-title">
+          <header class="party-block-title">
+            <h2 id="party-study-garden-title">学习园地</h2>
+          </header>
           <div class="party-study-grid">
-            <section v-for="alias in studyAliases" :key="alias" class="party-home-section" :data-testid="`party-section-${alias}`">
-              <header class="party-section-heading">
+            <section v-for="alias in studyAliases" :key="alias" class="party-home-panel" :data-testid="`party-section-${alias}`">
+              <header class="party-red-tab">
                 <h3>{{ sectionTitles[alias] }}</h3>
-                <router-link :to="`/party/column/${alias}`">更多</router-link>
+                <router-link :to="`/party/column/${alias}`">更多 »</router-link>
               </header>
               <ul class="party-article-list">
                 <li v-for="article in sectionArticles[alias]" :key="article.id">
