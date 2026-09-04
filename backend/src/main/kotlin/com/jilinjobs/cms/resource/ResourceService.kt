@@ -89,6 +89,13 @@ class ResourceService(
         return resource to path
     }
 
+    fun resolvePublishedImage(id: Long): Pair<CmsResource, Path> {
+        if (!repository.isPublishedImage(id)) {
+            throw ResourceNotFoundException(id)
+        }
+        return resolveContent(id)
+    }
+
     fun resolvePublishedBodyImage(id: Long): Pair<CmsResource, Path> {
         if (!repository.isPublishedBodyImage(id)) {
             throw ResourceNotFoundException(id)
