@@ -14,6 +14,8 @@ type PublicListItem = {
 }
 
 type PublicList = { code: string; items: PublicListItem[] }
+type AdminList = { id: number; code: string }
+type SeededCarousel = { listId: number; itemIds: number[] }
 
 async function siteConfig(request: APIRequestContext) {
   const response = await request.get('/api/admin/site-config')
@@ -26,6 +28,15 @@ async function setSiteConfig(request: APIRequestContext, key: string, value: str
   expect(response.ok()).toBeTruthy()
 }
 
+async function adminListByCode(request: APIRequestContext, code: string): Promise<AdminList> {
+  const response = await request.get('/api/admin/lists')
+  expect(response.ok()).toBeTruthy()
+  const lists = await response.json() as AdminList[]
+  const list = lists.find(item => item.code === code)
+  expect(list, `后台列表不存在：${code}`).toBeTruthy()
+  return list!
+}
+
 async function publicListByCode(request: APIRequestContext, code: string): Promise<PublicList> {
   const response = await request.get('/api/public/lists')
   expect(response.ok()).toBeTruthy()
@@ -35,7 +46,45 @@ async function publicListByCode(request: APIRequestContext, code: string): Promi
   return list!
 }
 
-test('EU-30：Main 与 Party 共用轮播展示参数并在 reduced-motion 下保留手动切换', async ({ page, request }) => {
+async function seedCarousel(request: APIRequestContext, code: string, suffix: string): Promise<SeededCarousel> {
+  const list = await adminListByCode(request, code)
+  const itemIds: number[] = []
+  try {
+    for (let index = 0; index < 2; index += 1) {
+      const response = await request.post(`/api/admin/lists/${list.id}/items`, {
+        data: {
+          sourceType: 'LINK',
+          articleId: null,
+          title: `${code}-EU30-${suffix}-${index + 1}`,
+          subtitle: null,
+          url: null,
+          imagePath: '/static/health/baseline.png',
+          imageResourceId: null,
+          openMode: 'DEFAULT',
+          sortOrder: -100000 + index,
+          enabled: true,
+          extraJson: null,
+        },
+      })
+      expect(response.ok()).toBeTruthy()
+      itemIds.push((await response.json() as { id: number }).id)
+    }
+    return { listId: list.id, itemIds }
+  } catch (error) {
+    for (const id of itemIds) await request.delete(`/api/admin/lists/${list.id}/items/${id}`)
+    throw error
+  }
+}
+
+async function cleanupCarousel(request: APIRequestContext, seeded: SeededCarousel | null) {
+  if (!seeded) return
+  for (const id of seeded.itemIds) {
+    const response = await request.delete(`/api/admin/lists/${seeded.listId}/items/${id}`)
+    expect(response.ok()).toBeTruthy()
+  }
+}
+
+test('EU-30：Main 与 Party 共用轮播展示参数并在 reduced-motion 下保留手动切换', async ({ page, request }, testInfo) => {
   const config = await siteConfig(request)
   expect(config.find(item => item.key === 'HOME_CAROUSEL_INTERVAL_SECONDS')).toBeUndefined()
   expect(config.find(item => item.key === 'CAROUSEL_INTERVAL_SECONDS')?.value).toBe('4')
@@ -43,7 +92,12 @@ test('EU-30：Main 与 Party 共用轮播展示参数并在 reduced-motion 下�
 
   const originalInterval = config.find(item => item.key === 'CAROUSEL_INTERVAL_SECONDS')?.value || '4'
   const originalMaxItems = config.find(item => item.key === 'CAROUSEL_MAX_ITEMS')?.value || '5'
+  const suffix = `${Date.now()}-${testInfo.retry}`
+  let mainSeed: SeededCarousel | null = null
+  let partySeed: SeededCarousel | null = null
   try {
+    mainSeed = await seedCarousel(request, 'HOME_CAROUSEL', `main-${suffix}`)
+    partySeed = await seedCarousel(request, 'PARTY_CAROUSEL', `party-${suffix}`)
     await setSiteConfig(request, 'CAROUSEL_INTERVAL_SECONDS', '1')
     await setSiteConfig(request, 'CAROUSEL_MAX_ITEMS', '2')
     await page.emulateMedia({ reducedMotion: 'reduce' })
@@ -53,7 +107,7 @@ test('EU-30：Main 与 Party 共用轮播展示参数并在 reduced-motion 下�
     await expect(mainCarousel).toBeVisible()
     await expect(mainCarousel.locator('.home-carousel-dots button')).toHaveCount(2)
     const mainInitialId = await mainCarousel.getAttribute('data-carousel-item-id')
-    expect(mainInitialId).toBeTruthy()
+    expect(mainSeed.itemIds.map(String)).toContain(mainInitialId)
     await page.waitForTimeout(1400)
     await expect(mainCarousel).toHaveAttribute('data-carousel-item-id', mainInitialId!)
     await mainCarousel.locator('.home-carousel-dots button').nth(1).click()
@@ -64,12 +118,14 @@ test('EU-30：Main 与 Party 共用轮播展示参数并在 reduced-motion 下�
     await expect(partyCarousel).toBeVisible()
     await expect(partyCarousel.locator('.party-carousel-dots button')).toHaveCount(2)
     const partyActiveBefore = await partyCarousel.locator('.party-carousel-item.active').getAttribute('data-testid')
-    expect(partyActiveBefore).toBeTruthy()
+    expect(partyActiveBefore).toBe(`party-carousel-item-${partySeed.itemIds[0]}`)
     await page.waitForTimeout(1400)
     await expect(partyCarousel.locator('.party-carousel-item.active')).toHaveAttribute('data-testid', partyActiveBefore!)
     await partyCarousel.locator('.party-carousel-dots button').nth(1).click()
     await expect(partyCarousel.locator('.party-carousel-item.active')).not.toHaveAttribute('data-testid', partyActiveBefore!)
   } finally {
+    await cleanupCarousel(request, mainSeed)
+    await cleanupCarousel(request, partySeed)
     await setSiteConfig(request, 'CAROUSEL_INTERVAL_SECONDS', originalInterval)
     await setSiteConfig(request, 'CAROUSEL_MAX_ITEMS', originalMaxItems)
   }
@@ -121,13 +177,9 @@ test('EU-30：ARTICLE 列表投放保持文章单一栏目归属并随发布状�
     expect(article.columnId).toBe(theme!.id)
     expect((await request.post(`/api/admin/articles/${article.id}/publish`)).ok()).toBeTruthy()
 
-    const listsResponse = await request.get('/api/admin/lists')
-    expect(listsResponse.ok()).toBeTruthy()
-    const lists = await listsResponse.json() as Array<{ id: number; code: string }>
-    const carousel = lists.find(item => item.code === 'PARTY_CAROUSEL')
-    expect(carousel).toBeTruthy()
+    const carousel = await adminListByCode(request, 'PARTY_CAROUSEL')
 
-    const placementResponse = await request.post(`/api/admin/lists/${carousel!.id}/items`, {
+    const placementResponse = await request.post(`/api/admin/lists/${carousel.id}/items`, {
       data: {
         sourceType: 'ARTICLE',
         articleId: article.id,
@@ -188,11 +240,7 @@ test('EU-30：REQUIRED ARTICLE 继承图片失效后不再作为有效公开投�
   const theme = columns.find(item => item.alias === 'party-theme-education')
   expect(theme).toBeTruthy()
 
-  const listsResponse = await request.get('/api/admin/lists')
-  expect(listsResponse.ok()).toBeTruthy()
-  const lists = await listsResponse.json() as Array<{ id: number; code: string }>
-  const carousel = lists.find(item => item.code === 'PARTY_CAROUSEL')
-  expect(carousel).toBeTruthy()
+  const carousel = await adminListByCode(request, 'PARTY_CAROUSEL')
 
   const imageResponse = await request.post('/api/admin/resources', {
     multipart: {
@@ -223,7 +271,7 @@ test('EU-30：REQUIRED ARTICLE 继承图片失效后不再作为有效公开投�
   const article = await articleResponse.json() as { id: number }
   expect((await request.post(`/api/admin/articles/${article.id}/publish`)).ok()).toBeTruthy()
 
-  const placementResponse = await request.post(`/api/admin/lists/${carousel!.id}/items`, {
+  const placementResponse = await request.post(`/api/admin/lists/${carousel.id}/items`, {
     data: {
       sourceType: 'ARTICLE',
       articleId: article.id,
@@ -255,6 +303,6 @@ test('EU-30：REQUIRED ARTICLE 继承图片失效后不再作为有效公开投�
   expect(publicList.items.some(item => item.id === placement.id)).toBeFalsy()
   expect((await request.get(`/api/public/resources/${image.id}/content`)).status()).toBe(404)
 
-  expect((await request.delete(`/api/admin/lists/${carousel!.id}/items/${placement.id}`)).ok()).toBeTruthy()
+  expect((await request.delete(`/api/admin/lists/${carousel.id}/items/${placement.id}`)).ok()).toBeTruthy()
   expect((await request.post(`/api/admin/articles/${article.id}/withdraw`)).ok()).toBeTruthy()
 })
