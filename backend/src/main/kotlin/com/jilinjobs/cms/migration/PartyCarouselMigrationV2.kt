@@ -25,6 +25,9 @@ import java.nio.file.StandardCopyOption
 import java.security.MessageDigest
 
 private const val EU30_PARTY_CAROUSEL_CODE = "PARTY_CAROUSEL"
+private const val EU30_POSITION2_LEGACY_KEY = "party-carousel:position:2"
+private const val EU29_POSITION2_FINGERPRINT = "c2ad182b8b2dc981a3cbe3b0153a1e3e47604c1f01dd43e6d25971e1deed10dc"
+private const val EU30_POSITION2_FINGERPRINT = "f8b5d8df87021373803639b174bf88e46ae6cef7f2599a205763b5887c78be84"
 private val EU30_CAROUSEL_SHA256 = Regex("[0-9a-f]{64}")
 private val EU30_CAROUSEL_IMAGE_EXTENSIONS = setOf("png", "jpg", "jpeg", "gif", "webp")
 private val EU30_CAROUSEL_OPEN_MODES = setOf("DEFAULT", "SAME_WINDOW", "NEW_WINDOW")
@@ -116,7 +119,7 @@ class PartyCarouselPlacementImporter(
         if (existing != null && existing.sourceFingerprint == item.sourceFingerprint) {
             return PartyCarouselPlacementImportResult(item.legacyKey, PartyCarouselPlacementImportStatus.SKIPPED, existing.listItemId)
         }
-        if (existing != null && !(item.legacyKey == "party-carousel:position:2" && item.sourceType == CmsListItemSourceType.ARTICLE)) {
+        if (existing != null && !isAcceptedPosition2Upgrade(existing, item)) {
             return PartyCarouselPlacementImportResult(
                 item.legacyKey,
                 PartyCarouselPlacementImportStatus.CONFLICT,
@@ -152,6 +155,15 @@ class PartyCarouselPlacementImporter(
             listItem.id,
         )
     }
+
+    private fun isAcceptedPosition2Upgrade(
+        existing: CmsListItemLegacyMappingRecord,
+        item: PartyCarouselPlacementItem,
+    ): Boolean =
+        item.legacyKey == EU30_POSITION2_LEGACY_KEY &&
+            item.sourceType == CmsListItemSourceType.ARTICLE &&
+            existing.sourceFingerprint == EU29_POSITION2_FINGERPRINT &&
+            item.sourceFingerprint == EU30_POSITION2_FINGERPRINT
 
     private fun linkDraft(
         itemRoot: Path,
