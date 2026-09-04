@@ -1,0 +1,43 @@
+name: EU-29 Party Source Discovery
+
+on:
+  pull_request:
+    paths:
+      - 'data-migrations/**'
+      - 'frontend/public-site/tests/e2e/party-migration-source-discovery.spec.ts'
+      - '.github/workflows/eu29-source-discovery.yml'
+
+concurrency:
+  group: eu29-source-discovery-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    name: Discover legacy Party content source
+    if: ${{ github.event.pull_request.head.ref == 'feature/eu-29-party-history-migration' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v7
+      - name: Pull Playwright runtime
+        run: docker pull mcr.microsoft.com/playwright:v1.61.0-noble
+      - name: Capture HTTP / DOM / Network evidence
+        run: |
+          docker run --rm --init --ipc=host \
+            -e CI=true \
+            -e PARTY_MIGRATION_DISCOVERY=true \
+            -v "$GITHUB_WORKSPACE/frontend/public-site:/work" \
+            -w /work \
+            mcr.microsoft.com/playwright:v1.61.0-noble \
+            bash -lc 'npm install --no-audit --no-fund && npx playwright test tests/e2e/party-migration-source-discovery.spec.ts --reporter=line'
+      - name: Upload discovery evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: eu29-party-source-discovery
+          path: frontend/public-site/test-results
+          if-no-files-found: error
+          retention-days: 7
