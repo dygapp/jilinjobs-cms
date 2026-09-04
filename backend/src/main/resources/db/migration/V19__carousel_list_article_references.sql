@@ -46,7 +46,8 @@ SELECT
 WHERE NOT EXISTS (SELECT 1 FROM cms_site_config WHERE config_key='CAROUSEL_MAX_ITEMS');
 
 -- 原站历史栏目名“主题教育2023”在新系统收敛为“主题教育”；legacy typeCode 只保留在迁移证据中。
+-- V16 已将当前党建父栏目 alias 收敛为 party，因此 V19 必须引用当前 alias，避免 Fresh DB 把主题教育插成顶级栏目。
 INSERT INTO cms_column(parent_id, alias, name, cover_policy, sort_order, enabled, preset)
-SELECT (SELECT id FROM cms_column WHERE alias='party-building' LIMIT 1),
+SELECT (SELECT id FROM cms_column WHERE alias='party' LIMIT 1),
        'party-theme-education', '主题教育', 'OPTIONAL', 50, 1, 1
 WHERE NOT EXISTS (SELECT 1 FROM cms_column WHERE alias='party-theme-education');
