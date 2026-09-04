@@ -211,9 +211,13 @@ Review Environment Run #502 / #503 已证明：构建和前置 AI / Browser Veri
 
 该失败分类为 **Stale Verification Contract**，不是产品实现失败。
 
-当前 ChatGPT GitHub Connector 对 `.github/workflows/review-environment.yml` 的写入接口只能整文件替换；该文件包含仓库既有 FRP 外网隧道配置，整文件写入触发当前平台安全检查。Repository Authority 与 GitHub 权限本身允许 AI 修改 Workflow，历史上也由 AI 维护；本阻塞属于 **Tooling / Connector Write Limitation**，不是项目要求的 Human Engineering Decision。不得通过低层 Git Object API 规避已触发的安全检查，也不得篡改 manifest / 产品行为去迎合旧 Workflow。
+2026-09-04 继续收敛时，使用正常 GitHub `update_file` 已成功提交 `80fcf7e3840de9090d6230ca99a6801dc0ded3a8`，并重新读取确认 Workflow 内容。此前会话报告的整文件写入限制在本次环境未复现，不能继续将其记为当前阻塞，也没有创建副本或修改 FRP 配置。
 
-因此最终 Review Environment / Human Review 尚未完成，EU-30 继续保持 CURRENT / Draft。
+该提交修正 manifest accepted/candidate 分层、按当前 Runtime 数据集判断导入报告、按 Party 父栏目对账五个子栏目，并让本地 Gateway 与外部地址复用同一验证脚本：核对来源顺序、标题、打开方式、ARTICLE/Resource 关系和四张原轮播图的 SHA-256。主站增加两条明确的人工评审轮播示例，使多项行为可观察。第二项稳定 legacy identity 与原地升级幂等性另见 `eu30-migration-upgrade-verification.md`。
+
+Review Environment 新增显式 `human-review` PR 标签触发；只有该次 labeled 事件或 workflow_dispatch 取得 45 分钟 Human Review lease，普通 PR 自动验证仍只保留 120 秒。所有路径共用原 concurrency group，不取消有效租约。公开 `/review-environment.json` 和 Artifact 记录 Run、实际 checkout Head、readyAt、expiresAt；外部内容必须与本地 owner 文件完全一致。租约到期或获授权取消后按原 cleanup 释放，重新申请需要移除再添加标签或手工 dispatch；标签持续存在不会让后续普通 synchronize 自动取得长租约。
+
+上述修订必须在新 Head 取得实际 CI / Canonical / Upgrade / Review Evidence 后才可宣布通过。Human Review 仍未执行，EU-30 继续保持 CURRENT / Draft，candidateExtension 保持 pending-human-review。
 
 ## 7. Exit Condition
 

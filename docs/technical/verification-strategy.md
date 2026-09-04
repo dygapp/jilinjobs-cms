@@ -169,6 +169,15 @@ Identify Shared FRP Resource
 - 若未来确实引入 superseding cancellation，必须先证明取消后的 frpc / proxy 释放路径可靠，并重新核对代理 owner、目标 Head 与外部地址；
 - `frpc` 进程退出、Workflow cancelled 或重试成功都不能单独证明外部 proxy 已释放，仍需通过外部可达性和目标 Head / 环境证据完成验证。
 
+### 5.4 显式 Human Review 租约与归属
+
+- 普通 opened / synchronize / reopened PR 自动验证在外部验证成功后保留 120 秒，不承担完整人工评审窗口。
+- 对 PR 添加 `human-review` 标签的 labeled 事件，或 workflow_dispatch，在验证和干净基线准备后开启 45 分钟人工评审窗口。其他标签不启动 Review Job；标签保留期间的普通代码提交不会自动续租。
+- 两类运行都使用同一 `review-environment` concurrency group，`cancel-in-progress: false`，不抢占有效人工评审。
+- `/review-environment.json` 记录 owner Run、实际 checkout Head、模式、就绪和到期时间；外部文件必须与当前 Run 生成的本地文件一致，并上传 `review-external-runtime-evidence` Artifact。
+- 完成时间、到期时间和 Run 状态共同判断租约是否有效；stale / 已到期环境不可被宣称可评审。重新申请前检查原 Run 已结束或获授权取消并完成释放，下一 Run 必须重新核对外部 owner。
+- 取消和到期沿用 always cleanup；不允许通过创建独立 concurrency group 的副本争用同一 FRP 地址。
+
 ## 6. Human Review Finding 分类
 
 Human Review Finding 不由评审名称决定类别。视觉评审、管理端评审或其他人工观察都可能暴露：
@@ -267,12 +276,12 @@ Acquire
 
 本轮图片数据策略与网站属性元数据必须至少形成以下机器证据：
 
-- Backend 单元测试：SiteProperty metadata groups 能按 order 输出；未知 group 拒绝；INTEGER 校验；`HOME_CAROUSEL_INTERVAL_SECONDS` 拒绝 0/负数；
+- Backend 单元测试：SiteProperty metadata groups 能按 order 输出；未知 group 拒绝；INTEGER 校验；`CAROUSEL_INTERVAL_SECONDS` 拒绝 0/负数；
 - Backend 单元测试：Column `NONE` 拒绝站内文章封面；`REQUIRED` 允许无封面 DRAFT 但阻止 publish；PUBLISHED Article update 不得删除 REQUIRED 封面；Public Summary 能返回封面引用；
 - Browser/API：HOME_CAROUSEL 定义为 REQUIRED，当前 SITE_LINKS 基线为 NONE；直接 API 对 REQUIRED 缺图与 NONE 带图均拒绝，证明约束不只存在于 UI；
 - Admin Browser：栏目 REQUIRED 策略、文章 REQUIRED 提示、列表 NONE/REQUIRED UI、SiteProperty 左侧 PRESENTATION 元数据分组和受控 group Select 可观察；
 - Admin Browser：INTEGER 非整数输入在 UI 被阻止；最终正整数约束仍由 Backend 证明；
-- Cross-boundary Browser：临时把 `HOME_CAROUSEL_INTERVAL_SECONDS` 改为 1 秒并为 HOME_CAROUSEL 增加第二张有效图片，打开真实公开首页后验证 `data-carousel-item-id` 在时限内实际变化；finally 删除测试项并恢复原配置。
+- Cross-boundary Browser：临时把 `CAROUSEL_INTERVAL_SECONDS` 改为 1 秒并为 HOME_CAROUSEL 增加第二张有效图片，打开真实公开首页后验证 `data-carousel-item-id` 在时限内实际变化；finally 删除测试项并恢复原配置。
 
 这些策略只验证“数据是否允许/要求图片”和轮播行为参数，不建立“图片策略决定页面布局”的断言；不得把数据契约误写成 `displayMode`。
 
@@ -284,7 +293,7 @@ Acquire
 - 文章栏目导航与网站属性分组面板至少各验证一次收起/展开；收起后右侧内容仍可操作且恢复按钮可见；
 - 表格图标操作必须保留 `aria-label`，Browser role/name 定位继续通过；至少对一个操作执行 hover 并验证 Tooltip 文本；
 - 网站属性 Table 不再包含常驻可编辑输入/图片上传器；点击“编辑值”后才出现类型化 Dialog；
-- `HOME_CAROUSEL_INTERVAL_SECONDS` 在值编辑 Dialog 中仍拒绝非整数；动态 JSON 属性在值编辑 Dialog 中仍拒绝非法 JSON；
+- `CAROUSEL_INTERVAL_SECONDS` 在值编辑 Dialog 中仍拒绝非整数；动态 JSON 属性在值编辑 Dialog 中仍拒绝非法 JSON；
 - SiteProperty 定义 Dialog 与值编辑职责分离，新建定义仍允许初始值；
 - 不增加“后台显示风格”系统属性、用户配置 API、Profile 数据或其他与当前无账号基线冲突的持久化能力。
 

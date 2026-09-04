@@ -8,7 +8,7 @@ on:
         required: false
         default: main
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [opened, synchronize, reopened, labeled]
 
 concurrency:
   group: review-environment
@@ -21,6 +21,7 @@ permissions:
 jobs:
   review-environment:
     name: 启动人工评审环境
+    if: github.event.action != 'labeled' || github.event.label.name == 'human-review'
     runs-on: ubuntu-latest
     timeout-minutes: 60
     services:
@@ -289,7 +290,7 @@ jobs:
           # 显式人工评审数据，使主站也能观察多项自动/手动切换。
           home_list_id=$(curl --fail --silent http://127.0.0.1:5173/api/admin/lists | jq --exit-status '.[] | select(.code == "HOME_CAROUSEL") | .id')
           for position in 1 2; do
-            payload=$(jq -n --argjson position "$position" '{sourceType:"LINK",articleId:null,title:("主站轮播人工评审示例 " + ($position|tostring)),subtitle:null,url:"/column/notice",imagePath:"/static/home/carousel-01.jpg",imageResourceId:null,openMode:"SAME_WINDOW",sortOrder:(-100 + $position),enabled:true,extraJson:null}')
+            payload=$(jq -n --argjson position "$position" '{sourceType:"LINK",articleId:null,title:("主站轮播人工评审示例 " + ($position|tostring)),subtitle:null,url:"/column/notice",imagePath:(if $position == 1 then "/static/home/carousel-01.jpg" else "/static/home/recruitment-campaign.png" end),imageResourceId:null,openMode:"SAME_WINDOW",sortOrder:(-100 + $position),enabled:true,extraJson:null}')
             curl --fail --silent -H 'Content-Type: application/json' -d "$payload" "http://127.0.0.1:5173/api/admin/lists/$home_list_id/items" | jq --exit-status '.id > 0' > /dev/null
           done
 
@@ -471,6 +472,44 @@ jobs:
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/admin/columns | jq --exit-status 'length > 0' > /dev/null
           python3 review-party-runtime.py http://review.cc-lotus.info | tee eu30-review-external-runtime.json
 
+      - name: 记录评审环境归属与租约
+        env:
+          REVIEW_EVENT: ${{ github.event_name }}
+          REVIEW_ACTION: ${{ github.event.action }}
+          REVIEW_LABEL: ${{ github.event.label.name }}
+        run: |
+          set -euo pipefail
+          export REVIEW_HEAD_SHA=$(git rev-parse HEAD)
+          python3 - <<'PY'
+          import datetime, json, os
+          from pathlib import Path
+          human = os.environ['REVIEW_EVENT'] == 'workflow_dispatch' or (
+              os.environ['REVIEW_ACTION'] == 'labeled' and os.environ['REVIEW_LABEL'] == 'human-review')
+          seconds = 2700 if human else 120
+          now = datetime.datetime.now(datetime.timezone.utc)
+          owner = {'runId': os.environ['GITHUB_RUN_ID'], 'headSha': os.environ['REVIEW_HEAD_SHA'],
+                   'mode': 'human-review' if human else 'verification',
+                   'readyAt': now.isoformat(), 'expiresAt': (now + datetime.timedelta(seconds=seconds)).isoformat()}
+          Path('frontend/public-site/dist/review-environment.json').write_text(json.dumps(owner), encoding='utf-8')
+          with open(os.environ['GITHUB_ENV'], 'a') as env:
+              env.write(f'REVIEW_LEASE_SECONDS={seconds}\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+              summary.write(f"Review owner: {json.dumps(owner)}\n\n公开站：http://review.cc-lotus.info/\n\n中心党建：http://review.cc-lotus.info/party/\n\n管理端：http://review.cc-lotus.info/admin/\n")
+          print(json.dumps(owner))
+          PY
+          curl --fail --silent --show-error --retry 5 --retry-delay 2 --retry-all-errors             http://review.cc-lotus.info/review-environment.json -o review-external-owner.json
+          cmp frontend/public-site/dist/review-environment.json review-external-owner.json
+
+      - name: 上传外部访问与租约证据
+        uses: actions/upload-artifact@v7
+        with:
+          name: review-external-runtime-evidence
+          path: |
+            eu30-review-external-runtime.json
+            review-external-owner.json
+          if-no-files-found: error
+          retention-days: 7
+
       - name: 输出评审地址
         run: |
           echo "公开站人工评审地址：http://review.cc-lotus.info/"
@@ -480,11 +519,7 @@ jobs:
 
       - name: 保持环境运行
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            sleep 120
-          else
-            sleep 3300
-          fi
+          sleep "$REVIEW_LEASE_SECONDS"
 
       - name: 清理环境
         if: always()

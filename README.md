@@ -6,11 +6,12 @@
 
 当前版本以原网站现有结构和视觉关系为主站公开基线，采用 Vue + Spring Boot 重建中心主站，并在同一公开站前端工程中建设具有独立红色视觉主题的“中心党建”特殊栏目/专题页面。管理端已经完成独立前端工程与 Modular SPA 收敛；公开站已经完成 **Multi-entry Modular SPA** 基础架构：Entry 只按真实 Theme / Router Boundary 划分，中心主站与中心党建分别拥有独立 App、Router、Banner 与内容主题，但继续共用 `frontend/public-site` 工程、Vue/Vite 技术栈、构建发布链路和 Spring Boot CMS Backend；主导航与 Footer 使用 Shared Shell Components 保持公共区域一致。
 
-中心党建 Foundation Entry / Router / Shell 已完成，当前主动路线切换到**中心党建正式页面、真实栏目、内容迁移与视觉收敛**。2026-09-02 对原站 `https://24365.jl.smartedu.cn/dyzj` 重新取证后，已确认高层声音、工作动态、党规党章、理论学习四条内容线；当前优先复用现有通用 Column + Article，不新增党建专属 Admin Module 或多站点 CMS 模型。正式阶段按 EU-26～EU-29 推进，并保持历史运营内容与 Flyway 结构基线分离。
+中心党建 EU-26～EU-29 已完成正式页面与历史迁移收敛。当前按 `docs/project/project-roadmap.md` 推进 **EU-30 轮播方案与实现收敛**：复用通用 CmsList 的 LINK / ARTICLE 投放，统一 Main / Party 轮播生命周期，补齐主题教育历史增量。历史运营内容继续与 Flyway 结构基线分离；新增候选在 Human Review 前不提前验收。
 
 当前权威需求：
 
 - `docs/requirements/information-publishing.md` V4.8
+- `docs/requirements/information-publishing-eu30-amendment.md` V4.9-EU30（轮播范围定向修订）
 - `docs/requirements/party-positioning.md`
 
 当前 Specification：
@@ -30,6 +31,7 @@
 
 当前 Technical Plan / Governance：
 
+- `docs/technical/carousel-list-placement.md`
 - `docs/technical/cms-architecture.md`
 - `docs/technical/configuration-governance.md`
 - `docs/technical/backend-service.md`
@@ -42,6 +44,11 @@
 
 当前执行单元：
 
+- `docs/work/eu30-carousel-convergence.md`
+- `docs/work/frontend-follow-up-execution-units.md`（EU-31 后续路线）
+
+中心党建阶段追溯：
+
 - `docs/work/party-convergence-execution-units.md`
 
 最近完成的公开站架构执行单元（阶段追溯）：
@@ -52,7 +59,7 @@
 
 - `docs/work/admin-frontend-convergence-execution-units.md`
 
-管理端双前端拆分、通用 CMS 模型和 Admin Modular SPA 已完成当前阶段收敛，后续只按 Human Admin Review / 明确人工指令增量调整；公开站 Multi-entry Modular SPA 与中心党建基础框架也已完成，当前主动路线是中心党建正式页面与内容收敛。
+管理端双前端拆分、通用 CMS 模型和 Admin Modular SPA 已完成当前阶段收敛，后续只按 Human Admin Review / 明确人工指令增量调整；公开站 Multi-entry Modular SPA 与中心党建基础框架也已完成，当前主动路线以 Roadmap 与 EU-30 执行文档为准。
 
 历史阶段文档继续保留用于追溯，但不再作为当前目标架构：
 
@@ -87,7 +94,7 @@ CMS 通用业务对象：
 
 公开站和管理端是同级独立 Vue / Vite 前端工程，共享 Spring Boot CMS Backend。公开站工程内部不把普通页面类型机械映射成独立 HTML Entry；主站 `/`、`/column/**`、`/article/**`、`/page/**` 统一属于 Main Site Entry，中心党建使用 Party Site Entry 和 `/party/**` URL namespace。两个公开 Entry 当前同构建、同部署；App、Router、Banner、内容 Frame 与主题内容模板按 Entry 隔离，Navigation/Footer 则复用 Shared Shell Components，通过主题变量切换主站蓝色与 Party 红色。
 
-中心党建正式内容继续复用通用 CMS：预置父栏目 `party` 组织 `party-voice / party-work / party-rules / party-study` 四个子栏目；四条内容线都使用通用 Article，并允许 INTERNAL / EXTERNAL_LINK 混合。`学习园地` 只是 PartyHome 入口页对党规党章与理论学习的固定视觉分组，不新增 CMS 类型。Party canonical URL 为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`。原站 `plist.html`、当前 `pdetail.html` 和更早 `detail.html` 地址及其 `content_id/typeCode` 参数变体只作为历史迁移映射输入，不延续为新版 Router 模型。
+中心党建正式内容继续复用通用 CMS：预置父栏目 `party` 组织 `party-voice / party-work / party-rules / party-study / party-theme-education` 五个子栏目；这些内容线都使用通用 Article，并允许 INTERNAL / EXTERNAL_LINK 混合。`学习园地` 只是 PartyHome 入口页对党规党章与理论学习的固定视觉分组，不新增 CMS 类型。Party canonical URL 为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`。原站 `plist.html`、当前 `pdetail.html` 和更早 `detail.html` 地址及其 `content_id/typeCode` 参数变体只作为历史迁移映射输入，不延续为新版 Router 模型。
 
 当前工程技术命名统一使用 `party / Party` 表示中心党建 Site/模块，`party-home / PartyHome` 只用于 `/party/` 入口页（如 `PartyHomeView.vue`）。已执行 V13/V14 Migration 和当前 PR 分支名中的 `party-building` 属于历史/兼容标识，不回写历史；当前源码目录、组件、测试、静态基线和 Party 专项 Authority 不再使用 `PartyBuilding / party-building` 作为现行命名。
 
@@ -97,7 +104,7 @@ CMS 通用业务对象：
 
 首页 NCSS 区域属于主站固定工程集成，不要求后台管理。需要持续运营维护的数据优先使用 CMS 对象，避免在 SiteProperty JSON、导航和 Vue 常量中维护重复数据来源。中心党建已证明可以复用现有栏目/文章模型，不因公开前端存在独立 Entry 就预设新的党建专属 Admin Module。
 
-通用列表只保存标题、副标题、图片、URL、打开方式、排序等数据属性；前台具体页面根据自身设计决定消费哪些属性以及如何展示，不由 CMS 列表定义控制视觉模式。导航条目可维护可选图标，避免前台按排序位置推导图标。
+通用列表项支持 `LINK / ARTICLE`：LINK 保存标题、图片、URL 等自身数据；ARTICLE 引用已有文章与可选覆盖 Resource，不改变文章单一栏目归属。两种来源都保留打开方式、排序等投放属性；前台具体页面根据自身设计决定消费哪些属性以及如何展示，不由 CMS 列表定义控制视觉模式。导航条目可维护可选图标，避免前台按排序位置推导图标。
 
 网站规划基线中的关键结构对象使用只读 `preset` 标识保护：预置栏目、导航位置/条目、单页分组/单页、列表容器、宣传展示位和稳定网站属性定义不能被误删；具有稳定 Alias/Code/Key 的预置对象不能修改该身份字段。`preset` 不等于完全只读，名称、排序、启停以及正常运营字段仍按各自模型维护；Article、CmsListItem、Advertisement 等运营成员不因此变成预置内容。普通 Admin API 新增对象默认 `preset=false`，客户端不能自行设置或取消该标识。
 
