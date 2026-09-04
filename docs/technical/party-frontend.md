@@ -50,7 +50,7 @@ V14 已执行且曾创建 `PARTY_HOME_CAROUSEL`。不得修改 V14；V15 原地�
 
 Router / Article View 必须确认目标栏目属于中心党建五个允许子栏目集合。Shared Navigation 通过 `siteRoot=/party` 处理当前 Entry 内路由，Main Entry 将 `/party/**` 视为跨 Entry document navigation。
 
-ARTICLE 轮播项不保存 Party canonical URL；PartyHome 根据 `articleId + articleType` 生成 `/party/article/{id}` 或使用 Article externalUrl。
+ARTICLE 轮播项不持久化 Party canonical URL：`INTERNAL` 由 PartyHome 根据 `articleId` 生成 `/party/article/{id}`；`EXTERNAL_LINK` 的当前 Article 外链由 Backend 在公开查询时解析到通用 `CmsListItem.url`，Party 前端只消费解析后的 `item.url`，不维护独立 `externalUrl` 列表 DTO 字段。
 
 ## 4. Banner 与静态资源
 
@@ -144,9 +144,9 @@ Desktop：
 
 数据目标：
 
-- LINK：使用 item.url / openMode；
+- LINK：使用列表项自身解析后的 `item.url / openMode`；
 - ARTICLE INTERNAL：`/party/article/{articleId}`；
-- ARTICLE EXTERNAL_LINK：使用公开 API 计算出的 Article external URL；
+- ARTICLE EXTERNAL_LINK：Backend 依据关联 Article 当前 `externalUrl` 解析并写入公开 DTO 的通用 `item.url`；Party 不读取不存在的 `item.externalUrl`；
 - 图片：优先 `effectiveImageResourceId -> /api/public/resources/{id}/content`，否则使用 `imagePath`。
 
 交互：
@@ -192,6 +192,7 @@ position 1 / 3 / 4 保持 LINK 语义和 migrated static image path。
 - `CAROUSEL_INTERVAL_SECONDS=4 / CAROUSEL_MAX_ITEMS=5` 为 Fresh DB 基线，旧 Main-only key 不存在；
 - reduced-motion 下超过 interval 不自动切换，dot 仍可手动切换；
 - ARTICLE 投放进入 `/party/article/{id}`，且 Article columnId 保持不变；
+- EXTERNAL_LINK ARTICLE 修改 Article 外链后，公开轮播下一次查询解析出的 `CmsListItem.url` 随 Article 当前地址变化；
 - Article withdraw 后 ARTICLE item 从公开 `PARTY_CAROUSEL` 消失，覆盖 Resource 不再公开；
 - Canonical Fresh DB import 当前导入 183 篇，EU-29 accepted 181 与 EU-30 candidate 2 可独立审计；
 - position 2 的 article legacy identity、Runtime article_id 和 Resource bytes SHA-256 一致；
