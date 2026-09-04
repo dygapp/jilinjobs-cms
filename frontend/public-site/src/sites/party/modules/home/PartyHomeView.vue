@@ -102,7 +102,9 @@ function carouselInternalRoute(item: CmsListItem) {
 }
 
 function carouselHref(item: CmsListItem) {
-  return carouselInternalRoute(item) ? null : item.url
+  if (carouselInternalRoute(item)) return null
+  if (item.sourceType === 'ARTICLE' && item.articleType === 'EXTERNAL_LINK') return item.externalUrl
+  return item.url
 }
 
 function carouselImage(item: CmsListItem) {
