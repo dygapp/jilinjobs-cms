@@ -136,7 +136,7 @@ jobs:
           assert report['total']==4 and report['created']==4, report
           assert report['skipped']==0 and report['conflicts']==0 and report['invalid']==0, report
           PY
-          docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+          docker run --rm --network host mysql:8.4 mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
             "SELECT i.sort_order,i.title,COALESCE(i.url,''),COALESCE(i.image_path,''),i.open_mode,COALESCE(m.legacy_key,''),COALESCE(m.image_sha256,'') FROM cms_list_item i JOIN cms_list l ON l.id=i.list_id LEFT JOIN cms_list_item_legacy_mapping m ON m.list_item_id=i.id WHERE l.code='PARTY_CAROUSEL' ORDER BY i.sort_order,i.id" \
             | tee eu29-carousel-db.tsv
           python3 - <<'PY'
@@ -198,7 +198,7 @@ jobs:
           assert carousel['total']==4 and carousel['created']==0 and carousel['skipped']==4, carousel
           assert carousel['conflicts']==0 and carousel['invalid']==0, carousel
           PY
-          docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -e \
+          docker run --rm --network host mysql:8.4 mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -e \
             "SELECT c.alias, COUNT(a.id), COUNT(m.id) FROM cms_column c LEFT JOIN cms_article a ON a.column_id=c.id AND a.status='PUBLISHED' LEFT JOIN cms_article_legacy_mapping m ON m.article_id=a.id WHERE c.alias IN ('party-voice','party-work','party-rules','party-study') GROUP BY c.alias ORDER BY c.alias" \
             | tee eu29-db-counts.tsv
           node - <<'NODE'
@@ -212,8 +212,8 @@ jobs:
           }
           console.log(rows)
           NODE
-          carousel_items=$(docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -e "SELECT COUNT(*) FROM cms_list_item i JOIN cms_list l ON l.id=i.list_id WHERE l.code='PARTY_CAROUSEL'")
-          carousel_mappings=$(docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -e "SELECT COUNT(*) FROM cms_list_item_legacy_mapping")
+          carousel_items=$(docker run --rm --network host mysql:8.4 mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -e "SELECT COUNT(*) FROM cms_list_item i JOIN cms_list l ON l.id=i.list_id WHERE l.code='PARTY_CAROUSEL'")
+          carousel_mappings=$(docker run --rm --network host mysql:8.4 mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -e "SELECT COUNT(*) FROM cms_list_item_legacy_mapping")
           test "$carousel_items" -eq 4
           test "$carousel_mappings" -eq 4
       - name: Upload source discovery evidence
