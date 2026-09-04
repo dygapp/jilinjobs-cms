@@ -12,6 +12,11 @@ type NavigationItem = {
   href: string
   clickable: boolean
 }
+type SeededVisualContent = {
+  articles: Record<string, Article>
+  carouselItems: CarouselItem[]
+  carouselListId: number
+}
 
 const PARTY_BANNER = '/static/party/party-header-banner.jpg'
 
@@ -46,7 +51,7 @@ async function createArticle(request: APIRequestContext, columnId: number, title
   return article
 }
 
-async function seedVisualContent(request: APIRequestContext, suffix: string) {
+async function seedVisualContent(request: APIRequestContext, suffix: string): Promise<SeededVisualContent> {
   const columns = await partyColumns(request)
   const articles: Record<string, Article> = {}
   for (const [alias, title] of [
@@ -74,7 +79,7 @@ async function seedVisualContent(request: APIRequestContext, suffix: string) {
         url: `/party/article/${targetArticle.id}`,
         imagePath: '/static/health/baseline.png',
         openMode: 'DEFAULT',
-        sortOrder: index * 10,
+        sortOrder: -300000 + index,
         enabled: true,
         extraJson: null,
       },
@@ -82,7 +87,16 @@ async function seedVisualContent(request: APIRequestContext, suffix: string) {
     expect(response.ok()).toBeTruthy()
     carouselItems.push(await response.json() as CarouselItem)
   }
-  return { articles, carouselItems }
+  return { articles, carouselItems, carouselListId: carousel!.id }
+}
+
+async function cleanupVisualContent(request: APIRequestContext, seeded: SeededVisualContent) {
+  for (const item of seeded.carouselItems) {
+    await request.delete(`/api/admin/lists/${seeded.carouselListId}/items/${item.id}`)
+  }
+  for (const article of Object.values(seeded.articles)) {
+    await request.post(`/api/admin/articles/${article.id}/withdraw`)
+  }
 }
 
 test('EU-28：中心党建 Banner 使用本地原站基线资源且不可点击，公共导航和页脚仅覆盖红色主题', async ({ page, request }) => {
@@ -185,47 +199,57 @@ test('EU-28：中心党建 Banner 使用本地原站基线资源且不可点击�
 
 test('EU-28：中心党建 Desktop / Mobile 当前视觉截图形成 Current Evidence 且轮播进入对应新闻详情', async ({ page, request }, testInfo) => {
   const suffix = `${Date.now()}-${testInfo.retry}`
-  const { articles, carouselItems } = await seedVisualContent(request, suffix)
+  const seeded = await seedVisualContent(request, suffix)
+  const { articles, carouselItems } = seeded
 
-  await page.setViewportSize({ width: 1440, height: 1000 })
-  await page.goto('/party/')
-  await expect(page.getByText(articles['party-voice'].title, { exact: true })).toBeVisible()
-  const firstSeededCarousel = page.getByTestId(`party-carousel-item-${carouselItems[0].id}`).locator('a')
-  await expect(firstSeededCarousel).toHaveAttribute('href', `/party/article/${articles['party-voice'].id}`)
-  await firstSeededCarousel.click({ force: true })
-  await expect(page).toHaveURL(new RegExp(`/party/article/${articles['party-voice'].id}$`))
-  await expect(page.getByTestId('party-article-title')).toHaveText(articles['party-voice'].title)
-  await page.goto('/party/')
-  await page.waitForTimeout(200)
-  await testInfo.attach('party-home-desktop-current.png', {
-    body: await page.screenshot({ fullPage: true }),
-    contentType: 'image/png',
-  })
+  try {
+    await page.setViewportSize({ width: 1440, height: 1000 })
+    await page.goto('/party/')
+    await expect(page.getByText(articles['party-voice'].title, { exact: true })).toBeVisible()
+    const partyCarousel = page.getByTestId('party-carousel')
+    await partyCarousel.hover()
+    await partyCarousel.getByRole('button', { name: `查看第 1 项：${carouselItems[0].title}` }).click()
+    const firstSeededCarousel = page.getByTestId(`party-carousel-item-${carouselItems[0].id}`)
+    await expect(firstSeededCarousel).toBeVisible()
+    const firstSeededLink = firstSeededCarousel.locator('a')
+    await expect(firstSeededLink).toHaveAttribute('href', `/party/article/${articles['party-voice'].id}`)
+    await firstSeededLink.click()
+    await expect(page).toHaveURL(new RegExp(`/party/article/${articles['party-voice'].id}$`))
+    await expect(page.getByTestId('party-article-title')).toHaveText(articles['party-voice'].title)
+    await page.goto('/party/')
+    await page.waitForTimeout(200)
+    await testInfo.attach('party-home-desktop-current.png', {
+      body: await page.screenshot({ fullPage: true }),
+      contentType: 'image/png',
+    })
 
-  await page.goto('/party/column/party-work')
-  await expect(page.getByRole('heading', { name: '工作动态', exact: true })).toBeVisible()
-  await testInfo.attach('party-column-desktop-current.png', {
-    body: await page.screenshot({ fullPage: true }),
-    contentType: 'image/png',
-  })
+    await page.goto('/party/column/party-work')
+    await expect(page.getByRole('heading', { name: '工作动态', exact: true })).toBeVisible()
+    await testInfo.attach('party-column-desktop-current.png', {
+      body: await page.screenshot({ fullPage: true }),
+      contentType: 'image/png',
+    })
 
-  await page.goto(`/party/article/${articles['party-study'].id}`)
-  await expect(page.getByTestId('party-article-title')).toBeVisible()
-  await testInfo.attach('party-article-desktop-current.png', {
-    body: await page.screenshot({ fullPage: true }),
-    contentType: 'image/png',
-  })
+    await page.goto(`/party/article/${articles['party-study'].id}`)
+    await expect(page.getByTestId('party-article-title')).toBeVisible()
+    await testInfo.attach('party-article-desktop-current.png', {
+      body: await page.screenshot({ fullPage: true }),
+      contentType: 'image/png',
+    })
 
-  await page.setViewportSize({ width: 390, height: 844 })
-  await page.goto('/party/')
-  const dimensions = await page.evaluate(() => ({ viewport: innerWidth, documentWidth: document.documentElement.scrollWidth }))
-  expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewport)
-  await expect(page.locator('.shared-public-footer-layout')).toHaveCSS('display', 'block')
-  await page.getByRole('button', { name: '展开导航' }).click()
-  await expect(page.locator('.shared-public-nav-root')).toBeVisible()
-  await expect(page.locator('.shared-public-nav-children').first()).toBeVisible()
-  await testInfo.attach('party-home-mobile-current.png', {
-    body: await page.screenshot({ fullPage: true }),
-    contentType: 'image/png',
-  })
+    await page.setViewportSize({ width: 390, height: 844 })
+    await page.goto('/party/')
+    const dimensions = await page.evaluate(() => ({ viewport: innerWidth, documentWidth: document.documentElement.scrollWidth }))
+    expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewport)
+    await expect(page.locator('.shared-public-footer-layout')).toHaveCSS('display', 'block')
+    await page.getByRole('button', { name: '展开导航' }).click()
+    await expect(page.locator('.shared-public-nav-root')).toBeVisible()
+    await expect(page.locator('.shared-public-nav-children').first()).toBeVisible()
+    await testInfo.attach('party-home-mobile-current.png', {
+      body: await page.screenshot({ fullPage: true }),
+      contentType: 'image/png',
+    })
+  } finally {
+    await cleanupVisualContent(request, seeded)
+  }
 })
