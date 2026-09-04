@@ -4,7 +4,7 @@
 
 中文原站页面名称沿用“党员之家”，英文业务表述为 **Party Members’ Home**。当前工程技术命名使用 `party / Party`，仅 `/party/` 入口页使用 `party-home / PartyHome`。
 
-**状态：进行中（2026-09-04），EU-26～EU-28 已完成，当前 EU-29 Party Historical Content Migration & Final Review。**
+**状态：已完成（2026-09-04），EU-26～EU-29 全部关闭；后续路线切换到 EU-30 Carousel Architecture & Behavior Convergence。**
 
 ## 证据基线
 
@@ -147,3 +147,14 @@ V14 初始使用 `PARTY_HOME_CAROUSEL / 中心党建首页轮播`。2026-09-03 H
 - 无法自动迁移项有报告；
 - 中心党建入口、栏目、详情与 Main/Admin 回归通过；
 - Human Review 通过后 Roadmap 才可切换到后续阶段。
+
+### Final Closure — 2026-09-04
+
+- Human Review：**PASS**；本轮人工发现的栏目共享视觉、后台长标题、加载状态与管理端列表项取消操作问题均已关闭；
+- 冻结来源：`EU-29 Party Migration Evidence` Run #7 / Run ID `33831279817`，Artifact ID `9921976616`，digest `sha256:230ac0df997b3dc913ed38503a8289eae30d8bb0a455fd858e388ddc27066148`；
+- 接受数据：181 篇文章（120 INTERNAL / 61 EXTERNAL_LINK）、184 个资源、4 条 `PARTY_CAROUSEL`，unresolved=0；
+- 已验收 Snapshot 无损晋升为仓库 `data-migrations/party/v1` canonical dataset；原 Actions Artifact 仅保留 provenance，不再作为稳定运行或评审依赖；
+- Canonical Migration Verification 已验证 Fresh DB 首次导入、第二次幂等 SKIPPED、栏目计数、资源字节与 Runtime 轮播图片 SHA；
+- Review Environment 已改为直接消费仓库 canonical dataset，不重新抓取原站，也不依赖即将过期的 Artifact；
+- 轮播第 2 项“主题教育2023” canonical 站内目标语义继续作为 EU-30 输入，不在 EU-29 伪造映射；
+- EU-29 关闭后，Roadmap 切换至 EU-30；PR 仍保持人工合并边界。
