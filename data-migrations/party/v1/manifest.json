@@ -15,7 +15,18 @@
     "articleAssetFiles": 180,
     "carouselItems": 4,
     "carouselResources": 4,
-    "unresolved": 0
+    "unresolved": 0,
+    "sourceWorkflowRunId": 33831279817,
+    "sourceWorkflowRunNumber": 7,
+    "sourceArtifactId": 9921976616,
+    "sourceArtifactName": "eu29-party-migration-evidence",
+    "sourceHeadSha": "ad1cfda1921e69e41d1cebc808263adbb70c8d48"
+  },
+  "acceptance": {
+    "humanReview": "PASS",
+    "acceptedAt": "2026-09-04",
+    "canonicalVerificationRunId": 33844142237,
+    "note": "EU-29 final closeout accepted by project owner; source Artifact is provenance only and the repository canonical dataset is the durable migration input."
   },
   "contentScope": [
     {
