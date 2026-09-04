@@ -16,6 +16,7 @@ CREATE INDEX idx_cms_list_item_image_resource ON cms_list_item(image_resource_id
 
 -- V11 的 Main-only 属性收敛为 Main / Party 共用的轮播展示参数。
 -- 历史值必须是完整的十进制正整数；不能让 MySQL CAST 把 5abc / 1.5 之类的非法值截断后继续沿用。
+-- V12 已把旧属性标记为 preset；这里再次显式保持稳定 Runtime Key 的定义保护。
 UPDATE cms_site_config
 SET config_key='CAROUSEL_INTERVAL_SECONDS',
     property_name='轮播切换间隔',
@@ -29,12 +30,13 @@ SET config_key='CAROUSEL_INTERVAL_SECONDS',
     sort_order=10,
     required=1,
     system_flag=1,
-    enabled=1
+    enabled=1,
+    preset=1
 WHERE config_key='HOME_CAROUSEL_INTERVAL_SECONDS';
 
 INSERT INTO cms_site_config(
     config_key, property_name, group_code, config_value, value_type, description,
-    sort_order, required, system_flag, enabled
+    sort_order, required, system_flag, enabled, preset
 )
 SELECT
     'CAROUSEL_MAX_ITEMS',
@@ -44,6 +46,7 @@ SELECT
     'INTEGER',
     '单个轮播区域前台最多展示的有效内容数量；后台允许维护更多记录',
     20,
+    1,
     1,
     1,
     1
