@@ -227,7 +227,6 @@ jobs:
           export DB_PASSWORD=root
           export CMS_STORAGE_ROOT="$GITHUB_WORKSPACE/runtime-uploads"
           export CMS_STATIC_ROOT="$GITHUB_WORKSPACE/runtime-static"
-
           (cd backend && gradle importPartyHistoricalContent --args="../data-migrations/party/v1" --no-daemon) | tee eu29-review-article-import.log
           (cd backend && gradle importPartyCarousel --args="../data-migrations/party/v1" --no-daemon) | tee eu29-review-carousel-import.log
 
@@ -253,9 +252,11 @@ jobs:
           const fs=require('fs')
           const manifest=require('./data-migrations/party/v1/manifest.json')
           const expected=Object.fromEntries(manifest.contentScope.map(scope=>[scope.columnAlias,scope.observedListCount]))
-          const rows=fs.readFileSync('eu29-review-column-counts.tsv','utf8').trim().split(/\n/).map(line=>line.split('\t'))
-          if (rows.length !== Object.keys(expected).length) throw new Error(`Party column rows=${rows.length}`)
-          for (const [alias,count] of rows) if (Number(count)!==expected[alias]) throw new Error(`${alias}: ${count} != ${expected[alias]}`)
+          const rows=fs.readFileSync('eu29-review-column-counts.tsv','utf8').trim().split(/\n/).filter(Boolean).map(line=>line.split('\t'))
+          const actual=Object.fromEntries(rows.map(([alias,count])=>[alias,Number(count)]))
+          for (const [alias,count] of Object.entries(expected)) {
+            if (actual[alias] !== Number(count)) throw new Error(`${alias}: ${actual[alias]} != ${count}`)
+          }
           NODE
 
       - name: 准备 Human Review 主站示例内容
@@ -497,7 +498,7 @@ jobs:
               summary.write(f"Review owner: {json.dumps(owner)}\n\n公开站：http://review.cc-lotus.info/\n\n中心党建：http://review.cc-lotus.info/party/\n\n管理端：http://review.cc-lotus.info/admin/\n")
           print(json.dumps(owner))
           PY
-          curl --fail --silent --show-error --retry 5 --retry-delay 2 --retry-all-errors             http://review.cc-lotus.info/review-environment.json -o review-external-owner.json
+          curl --fail --silent --show-error --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/review-environment.json -o review-external-owner.json
           cmp frontend/public-site/dist/review-environment.json review-external-owner.json
 
       - name: 上传外部访问与租约证据
