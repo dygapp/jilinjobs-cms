@@ -71,91 +71,91 @@ function jump() {
 
 <template>
   <main
-    class="shared-column-page-shell"
+    class="shared-column-page-shell public-page-shell"
     data-component="public-column-page"
     :data-testid="`${testIdPrefix}-page`"
   >
-    <div class="shared-column-page-width">
-      <nav class="shared-column-breadcrumb" aria-label="栏目位置">
-        <span class="shared-column-breadcrumb-label">当前位置：</span>
+    <div class="shared-column-page-width public-page-frame">
+      <nav class="shared-column-breadcrumb breadcrumb" aria-label="栏目位置">
+        <span class="shared-column-breadcrumb-label breadcrumb-label">当前位置：</span>
         <template v-for="(item, index) in breadcrumbs" :key="`${item.label}-${index}`">
-          <span v-if="index > 0" class="shared-column-breadcrumb-separator">›</span>
+          <span v-if="index > 0" class="shared-column-breadcrumb-separator breadcrumb-separator">›</span>
           <router-link v-if="item.to" :to="item.to">{{ item.label }}</router-link>
           <span v-else>{{ item.label }}</span>
         </template>
       </nav>
 
-      <p v-if="loading && !title" class="shared-column-state">正在加载栏目…</p>
+      <p v-if="loading && !title" class="shared-column-state public-state">正在加载栏目…</p>
       <section
         v-else-if="title"
-        class="shared-column-card"
+        class="shared-column-card detail-card column-detail-card"
         :aria-busy="loading"
       >
-        <header class="shared-column-section-title">
+        <header class="shared-column-section-title detail-section-title">
           <h1>{{ title }}</h1>
         </header>
-        <div class="shared-column-content">
-          <div class="shared-column-list" :data-testid="`${testIdPrefix}-articles`">
+        <div class="shared-column-content column-content">
+          <div class="shared-column-list column-list" :data-testid="`${testIdPrefix}-articles`">
             <article v-for="article in articles" :key="article.id">
               <a
                 v-if="isExternal(article)"
-                class="shared-column-list-link"
+                class="shared-column-list-link column-list-link"
                 :data-testid="`${testIdPrefix}-article-${article.id}`"
                 :href="article.externalUrl!"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span class="shared-column-list-icon" aria-hidden="true" />
-                <span class="shared-column-list-copy">
-                  <strong class="shared-column-list-title">{{ article.title }}</strong>
+                <span class="shared-column-list-icon column-list-icon" aria-hidden="true" />
+                <span class="shared-column-list-copy column-list-copy">
+                  <strong class="shared-column-list-title column-list-title">{{ article.title }}</strong>
                   <time v-if="article.publishDate">{{ article.publishDate }}</time>
                 </span>
               </a>
               <router-link
                 v-else
-                class="shared-column-list-link"
+                class="shared-column-list-link column-list-link"
                 :data-testid="`${testIdPrefix}-article-${article.id}`"
                 :to="articlePath(article)"
               >
-                <span class="shared-column-list-icon" aria-hidden="true" />
-                <span class="shared-column-list-copy">
-                  <strong class="shared-column-list-title">{{ article.title }}</strong>
+                <span class="shared-column-list-icon column-list-icon" aria-hidden="true" />
+                <span class="shared-column-list-copy column-list-copy">
+                  <strong class="shared-column-list-title column-list-title">{{ article.title }}</strong>
                   <time v-if="article.publishDate">{{ article.publishDate }}</time>
                 </span>
               </router-link>
             </article>
-            <p v-if="!articles.length" class="shared-column-empty">当前栏目暂无已发布内容。</p>
+            <p v-if="!articles.length" class="shared-column-empty empty-item">当前栏目暂无已发布内容。</p>
           </div>
 
-          <div v-if="total > size" class="shared-column-pagination-wrap">
-            <span class="shared-column-pagination-summary">共{{ pageCount }}页，{{ total }}条记录</span>
-            <div class="shared-column-pagination" aria-label="栏目分页">
-              <button class="shared-column-page-button shared-column-page-arrow" type="button" :disabled="!hasPrevious" aria-label="上一页" @click="go(page - 1)">‹</button>
+          <div v-if="total > size" class="shared-column-pagination-wrap pagination-wrap">
+            <span class="shared-column-pagination-summary pagination-summary">共{{ pageCount }}页，{{ total }}条记录</span>
+            <div class="shared-column-pagination pagination" aria-label="栏目分页">
+              <button class="shared-column-page-button shared-column-page-arrow page-button page-arrow" type="button" :disabled="!hasPrevious" aria-label="上一页" @click="go(page - 1)">‹</button>
               <button
                 v-for="pageIndex in visiblePages"
                 :key="pageIndex"
-                class="shared-column-page-button"
+                class="shared-column-page-button page-button"
                 :class="{ active: pageIndex === page }"
                 type="button"
                 :aria-current="pageIndex === page ? 'page' : undefined"
                 :aria-label="`第 ${pageIndex + 1} 页`"
                 @click="go(pageIndex)"
               >{{ pageIndex + 1 }}</button>
-              <button class="shared-column-page-button shared-column-page-arrow" type="button" :disabled="!hasNext" aria-label="下一页" @click="go(page + 1)">›</button>
-              <select class="shared-column-page-size-select" :value="size" aria-label="每页条数" @change="changeSize">
+              <button class="shared-column-page-button shared-column-page-arrow page-button page-arrow" type="button" :disabled="!hasNext" aria-label="下一页" @click="go(page + 1)">›</button>
+              <select class="shared-column-page-size-select page-size-select" :value="size" aria-label="每页条数" @change="changeSize">
                 <option v-for="option in allowedSizes" :key="option" :value="option">{{ option }}条/页</option>
               </select>
-              <label class="shared-column-page-jump">
+              <label class="shared-column-page-jump page-jump">
                 <span>跳至</span>
                 <input v-model="jumpPage" type="number" min="1" :max="pageCount" aria-label="跳转页码" @keyup.enter="jump">
                 <span>页</span>
               </label>
-              <button class="shared-column-page-jump-submit" type="button" aria-label="跳转" @click="jump">确定</button>
+              <button class="shared-column-page-jump-submit page-jump-submit" type="button" aria-label="跳转" @click="jump">确定</button>
             </div>
           </div>
         </div>
       </section>
-      <p v-else class="shared-column-state shared-column-state-error">{{ error }}</p>
+      <p v-else class="shared-column-state shared-column-state-error public-state error-text">{{ error }}</p>
     </div>
   </main>
 </template>
