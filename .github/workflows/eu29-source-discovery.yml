@@ -7,6 +7,7 @@ on:
       - 'data-migrations/**'
       - 'backend/src/main/kotlin/com/jilinjobs/cms/migration/**'
       - 'backend/src/main/resources/db/migration/V17__historical_article_migration_mapping.sql'
+      - 'backend/src/main/resources/db/migration/V18__historical_carousel_migration_mapping.sql'
       - 'backend/build.gradle.kts'
       - 'frontend/public-site/tests/e2e/party-migration-source-discovery.spec.ts'
       - '.github/workflows/eu29-source-discovery.yml'
@@ -76,9 +77,13 @@ jobs:
         run: |
           node - <<'NODE'
           const report = require('./data-migrations/party/v1/generated/reports/reconciliation.json')
+          const carousel = require('./data-migrations/party/v1/generated/carousel.json')
           console.log(JSON.stringify(report, null, 2))
+          console.log(JSON.stringify(carousel, null, 2))
           if (report.listedRecords !== report.normalizedRecords) throw new Error(`listed=${report.listedRecords} normalized=${report.normalizedRecords}`)
           if (report.unresolved !== 0) throw new Error(`unresolved=${report.unresolved}`)
+          if (report.home?.carouselItems !== 4 || carousel.items?.length !== 4) throw new Error(`carousel=${report.home?.carouselItems}/${carousel.items?.length}`)
+          if (new Set(carousel.items.map(item => item.sourceOrder)).size !== 4) throw new Error('carousel sourceOrder is not unique')
           for (const scope of report.scopes) {
             if (scope.reportedTotal !== scope.uniqueCount) throw new Error(`${scope.typeCode}: reported=${scope.reportedTotal}, unique=${scope.uniqueCount}`)
           }
@@ -86,7 +91,7 @@ jobs:
       - name: Verify backend and Flyway on fresh MySQL
         working-directory: backend
         run: gradle clean test classes --no-daemon
-      - name: Import snapshot into fresh Runtime DB
+      - name: Import article snapshot into fresh Runtime DB
         working-directory: backend
         env:
           DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
@@ -97,7 +102,7 @@ jobs:
         run: |
           mkdir -p "$GITHUB_WORKSPACE/eu29-runtime/uploads" "$GITHUB_WORKSPACE/eu29-runtime/static"
           gradle importPartyHistoricalContent --args="../data-migrations/party/v1/generated" --no-daemon | tee ../eu29-first-import.log
-      - name: Verify first import reconciliation
+      - name: Verify first article import reconciliation
         run: |
           python3 - <<'PY'
           import json, re
@@ -111,7 +116,51 @@ jobs:
           assert report['skipped']==0 and report['conflicts']==0 and report['invalid']==0, report
           print(json.dumps({k:report[k] for k in ('total','created','skipped','conflicts','invalid')}, ensure_ascii=False))
           PY
-      - name: Import same snapshot again to prove idempotency
+      - name: Import Party carousel snapshot
+        working-directory: backend
+        env:
+          DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          DB_USERNAME: root
+          DB_PASSWORD: root
+          CMS_STORAGE_ROOT: ${{ github.workspace }}/eu29-runtime/uploads
+          CMS_STATIC_ROOT: ${{ github.workspace }}/eu29-runtime/static
+        run: gradle importPartyCarousel --args="../data-migrations/party/v1/generated" --no-daemon | tee ../eu29-first-carousel-import.log
+      - name: Verify first carousel import and bytes
+        run: |
+          python3 - <<'PY'
+          import json, re
+          text=open('eu29-first-carousel-import.log', encoding='utf-8').read()
+          matches=re.findall(r'EU29_CAROUSEL_IMPORT_REPORT (\{.*\})', text)
+          assert matches, 'missing EU29_CAROUSEL_IMPORT_REPORT'
+          report=json.loads(matches[-1])
+          assert report['total']==4 and report['created']==4, report
+          assert report['skipped']==0 and report['conflicts']==0 and report['invalid']==0, report
+          PY
+          docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT i.sort_order,i.title,COALESCE(i.url,''),COALESCE(i.image_path,''),i.open_mode,COALESCE(m.legacy_key,''),COALESCE(m.image_sha256,'') FROM cms_list_item i JOIN cms_list l ON l.id=i.list_id LEFT JOIN cms_list_item_legacy_mapping m ON m.list_item_id=i.id WHERE l.code='PARTY_CAROUSEL' ORDER BY i.sort_order,i.id" \
+            | tee eu29-carousel-db.tsv
+          python3 - <<'PY'
+          import csv, hashlib, json
+          from pathlib import Path
+          snapshot=json.load(open('data-migrations/party/v1/generated/carousel.json', encoding='utf-8'))
+          rows=list(csv.reader(open('eu29-carousel-db.tsv', encoding='utf-8'), delimiter='\t'))
+          assert len(rows)==4, rows
+          expected=sorted(snapshot['items'], key=lambda item:item['sourceOrder'])
+          for item,row in zip(expected,rows):
+              order,title,url,image_path,open_mode,legacy_key,image_sha=row
+              assert int(order)==item['sourceOrder'], (row,item)
+              assert title==item['title'], (title,item['title'])
+              assert url==item['url'], (url,item['url'])
+              assert open_mode==item['openMode'], (open_mode,item['openMode'])
+              assert legacy_key==item['legacyKey'], (legacy_key,item['legacyKey'])
+              assert image_sha==item['image']['sha256'], (image_sha,item['image']['sha256'])
+              assert image_path.startswith('/static/migrated/party/carousel/'), image_path
+              file=Path('eu29-runtime/static') / image_path.removeprefix('/static/')
+              assert file.is_file(), file
+              assert hashlib.sha256(file.read_bytes()).hexdigest()==item['image']['sha256'], file
+          print(json.dumps([{k:item[k] for k in ('sourceOrder','title','url','openMode')} for item in expected], ensure_ascii=False, indent=2))
+          PY
+      - name: Import same article snapshot again to prove idempotency
         working-directory: backend
         env:
           DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
@@ -120,7 +169,16 @@ jobs:
           CMS_STORAGE_ROOT: ${{ github.workspace }}/eu29-runtime/uploads
           CMS_STATIC_ROOT: ${{ github.workspace }}/eu29-runtime/static
         run: gradle importPartyHistoricalContent --args="../data-migrations/party/v1/generated" --no-daemon | tee ../eu29-second-import.log
-      - name: Verify idempotency and Party column counts
+      - name: Import same carousel snapshot again to prove idempotency
+        working-directory: backend
+        env:
+          DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          DB_USERNAME: root
+          DB_PASSWORD: root
+          CMS_STORAGE_ROOT: ${{ github.workspace }}/eu29-runtime/uploads
+          CMS_STATIC_ROOT: ${{ github.workspace }}/eu29-runtime/static
+        run: gradle importPartyCarousel --args="../data-migrations/party/v1/generated" --no-daemon | tee ../eu29-second-carousel-import.log
+      - name: Verify idempotency and Party Runtime counts
         run: |
           python3 - <<'PY'
           import json, re
@@ -132,6 +190,13 @@ jobs:
           assert report['total']==expected['normalizedRecords'], report
           assert report['created']==0 and report['skipped']==expected['normalizedRecords'], report
           assert report['conflicts']==0 and report['invalid']==0, report
+
+          text=open('eu29-second-carousel-import.log', encoding='utf-8').read()
+          matches=re.findall(r'EU29_CAROUSEL_IMPORT_REPORT (\{.*\})', text)
+          assert matches, 'missing second EU29_CAROUSEL_IMPORT_REPORT'
+          carousel=json.loads(matches[-1])
+          assert carousel['total']==4 and carousel['created']==0 and carousel['skipped']==4, carousel
+          assert carousel['conflicts']==0 and carousel['invalid']==0, carousel
           PY
           docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -e \
             "SELECT c.alias, COUNT(a.id), COUNT(m.id) FROM cms_column c LEFT JOIN cms_article a ON a.column_id=c.id AND a.status='PUBLISHED' LEFT JOIN cms_article_legacy_mapping m ON m.article_id=a.id WHERE c.alias IN ('party-voice','party-work','party-rules','party-study') GROUP BY c.alias ORDER BY c.alias" \
@@ -147,6 +212,10 @@ jobs:
           }
           console.log(rows)
           NODE
+          carousel_items=$(docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -e "SELECT COUNT(*) FROM cms_list_item i JOIN cms_list l ON l.id=i.list_id WHERE l.code='PARTY_CAROUSEL'")
+          carousel_mappings=$(docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -e "SELECT COUNT(*) FROM cms_list_item_legacy_mapping")
+          test "$carousel_items" -eq 4
+          test "$carousel_mappings" -eq 4
       - name: Upload source discovery evidence
         if: always()
         uses: actions/upload-artifact@v7
@@ -164,6 +233,9 @@ jobs:
             data-migrations/party/v1/generated
             eu29-first-import.log
             eu29-second-import.log
+            eu29-first-carousel-import.log
+            eu29-second-carousel-import.log
             eu29-db-counts.tsv
+            eu29-carousel-db.tsv
           if-no-files-found: warn
           retention-days: 7

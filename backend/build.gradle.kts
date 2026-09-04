@@ -38,7 +38,7 @@ kotlin {
 }
 
 springBoot {
-    // EU-29 增加独立迁移 CLI 后，显式固定正常 Runtime 的 Spring Boot 入口，避免 bootJar 自动探测到两个 main class。
+    // EU-29 增加独立迁移 CLI 后，显式固定正常 Runtime 的 Spring Boot 入口，避免 bootJar 自动探测到多个 main class。
     mainClass.set("com.jilinjobs.cms.CmsApplicationKt")
 }
 
@@ -51,4 +51,11 @@ tasks.register<JavaExec>("importPartyHistoricalContent") {
     description = "Import an EU-29 normalized Party historical-content snapshot"
     classpath = sourceSets["main"].runtimeClasspath
     mainClass.set("com.jilinjobs.cms.migration.PartyHistoricalContentMigrationKt")
+}
+
+tasks.register<JavaExec>("importPartyCarousel") {
+    group = "migration"
+    description = "Import the EU-29 normalized Party carousel snapshot"
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("com.jilinjobs.cms.migration.PartyCarouselMigrationKt")
 }
