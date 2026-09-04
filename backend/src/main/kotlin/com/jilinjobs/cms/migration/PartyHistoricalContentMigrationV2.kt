@@ -60,12 +60,12 @@ class PartyThemeEducationRecordImporter(
             ?: return PartyRecordImportResult(record.source.legacyKey, PartyRecordImportStatus.INVALID, message = "目标栏目不存在：${record.target.columnAlias}")
         if (!column.enabled) return PartyRecordImportResult(record.source.legacyKey, PartyRecordImportStatus.INVALID, message = "目标栏目已停用：${record.target.columnAlias}")
 
-        // Canonical resources preserve source-reference occurrences. The same source image may
-        // therefore appear multiple times in resources[] with the same migration token. Runtime
-        // storage/Article associations are identity-based, so upload each stable token once and
-        // let the first replacement rewrite every matching body occurrence.
-        val verifiedResources = record.resources.distinctBy { it.token }
+        // Canonical resources preserve source-reference occurrences. Validate every occurrence
+        // first, then collapse identical stable tokens for Runtime storage/Article association.
+        // This preserves source evidence without creating duplicate CmsResource rows.
+        val verifiedResources = record.resources
             .map { resource -> resource to verifiedSnapshotFile(snapshotRoot, resource) }
+            .distinctBy { (resource, _) -> resource.token }
         var bodyHtml = record.content.bodyHtml
         val bodyImageIds = mutableListOf<Long>()
         val attachmentIds = mutableListOf<Long>()
