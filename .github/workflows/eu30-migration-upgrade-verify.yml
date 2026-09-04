@@ -40,10 +40,12 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           fetch-depth: 1
 
-      - name: Materialize accepted EU-29 canonical baseline from main
+      - name: Materialize pinned accepted EU-29 canonical baseline
         run: |
           set -euo pipefail
-          git fetch origin main --depth=1
+          EU29_ACCEPTED_COMMIT=59c855f55899cd613fdee059b27db762ffa3b092
+          git fetch origin "$EU29_ACCEPTED_COMMIT" --depth=1
+          test "$(git rev-parse FETCH_HEAD)" = "$EU29_ACCEPTED_COMMIT"
           mkdir -p eu29-accepted
           git archive FETCH_HEAD data-migrations/party/v1 | tar -x -C eu29-accepted
           test -f eu29-accepted/data-migrations/party/v1/manifest.json
@@ -55,7 +57,8 @@ jobs:
             eu29-accepted/data-migrations/party/v1/manifest.json > /dev/null
           jq --exit-status '
             (.sourceType // "LINK") == "LINK"
-            and .legacyKey == "party-carousel:position:2"' \
+            and .legacyKey == "party-carousel:position:2"
+            and .sourceFingerprint == "c2ad182b8b2dc981a3cbe3b0153a1e3e47604c1f01dd43e6d25971e1deed10dc"' \
             eu29-accepted/data-migrations/party/v1/lists/PARTY_CAROUSEL/items/party-carousel-position-2/item.json > /dev/null
 
       - name: Set up Java 21
@@ -178,6 +181,33 @@ jobs:
           assert carousel['conflicts']==0 and carousel['invalid']==0, carousel
           PY
 
+      - name: Reject unexpected position 2 fingerprint drift
+        env:
+          DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          DB_USERNAME: root
+          DB_PASSWORD: root
+          CMS_STORAGE_ROOT: ${{ github.workspace }}/upgrade-runtime/uploads
+          CMS_STATIC_ROOT: ${{ github.workspace }}/upgrade-runtime/static
+        run: |
+          set -euo pipefail
+          docker run --rm --network host mysql:8.4 \
+            mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -e \
+            "UPDATE cms_list_item_legacy_mapping SET source_fingerprint=REPEAT('f',64) WHERE legacy_key='party-carousel:position:2';"
+
+          set +e
+          (cd backend && gradle importPartyCarousel --args="../data-migrations/party/v1" --no-daemon) > eu30-position2-conflict.log 2>&1
+          status=$?
+          set -e
+          test "$status" -ne 0
+          python3 - <<'PY'
+          import json, re
+          text=open('eu30-position2-conflict.log', encoding='utf-8').read()
+          report=json.loads(re.findall(r'EU29_CAROUSEL_IMPORT_REPORT (\{.*\})', text)[-1])
+          assert report['total']==4 and report['conflicts']==1 and report['invalid']==0, report
+          position2=next(result for result in report['results'] if result['legacyKey']=='party-carousel:position:2')
+          assert position2['status']=='CONFLICT', position2
+          PY
+
       - name: Upload upgrade verification evidence
         if: always()
         uses: actions/upload-artifact@v7
@@ -192,5 +222,6 @@ jobs:
             eu30-position2-after.tsv
             eu30-upgrade-second-article-import.log
             eu30-upgrade-second-carousel-import.log
+            eu30-position2-conflict.log
           if-no-files-found: warn
           retention-days: 7
