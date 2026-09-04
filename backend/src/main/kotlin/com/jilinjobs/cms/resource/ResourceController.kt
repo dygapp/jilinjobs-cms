@@ -38,7 +38,7 @@ class PublicResourceController(
 ) {
     @GetMapping("/{id}/content")
     fun content(@PathVariable id: Long): ResponseEntity<Resource> =
-        resourceResponse(service.resolvePublishedBodyImage(id))
+        resourceResponse(service.resolvePublishedImage(id))
 
     @GetMapping("/{id}/attachment")
     fun attachment(@PathVariable id: Long): ResponseEntity<Resource> =
