@@ -43,6 +43,33 @@ interface ResourceMapper {
 
     @Select(
         """
+        SELECT (
+            EXISTS(
+                SELECT 1
+                FROM cms_article_resource ar
+                JOIN cms_article a ON a.id = ar.article_id
+                WHERE ar.resource_id = #{resourceId}
+                  AND ar.resource_role IN ('COVER','BODY_IMAGE')
+                  AND a.status = 'PUBLISHED'
+            )
+            OR EXISTS(
+                SELECT 1
+                FROM cms_list_item i
+                JOIN cms_list l ON l.id = i.list_id
+                JOIN cms_article a ON a.id = i.article_id
+                WHERE i.image_resource_id = #{resourceId}
+                  AND i.source_type = 'ARTICLE'
+                  AND i.enabled = 1
+                  AND l.enabled = 1
+                  AND a.status = 'PUBLISHED'
+            )
+        )
+        """,
+    )
+    fun isPublishedImage(@Param("resourceId") resourceId: Long): Boolean
+
+    @Select(
+        """
         SELECT COUNT(*) > 0
         FROM cms_article_resource ar
         JOIN cms_article a ON a.id = ar.article_id
@@ -109,6 +136,8 @@ class MyBatisResourceRepository(
 
     override fun findArticleResourceIds(articleId: Long, role: ArticleResourceRole): List<Long> =
         mapper.findArticleResourceIds(articleId, role.name)
+
+    override fun isPublishedImage(resourceId: Long): Boolean = mapper.isPublishedImage(resourceId)
 
     override fun isPublishedBodyImage(resourceId: Long): Boolean = mapper.isPublishedBodyImage(resourceId)
 
