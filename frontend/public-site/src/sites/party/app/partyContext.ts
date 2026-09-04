@@ -2,8 +2,10 @@ import { getPublicColumnByAlias, type PublicColumn } from '../../../shared/api/c
 
 export const PARTY_PARENT_ALIAS = 'party' as const
 export const PARTY_CAROUSEL_CODE = 'PARTY_CAROUSEL' as const
-export const PARTY_COLUMN_ALIASES = ['party-voice', 'party-work', 'party-rules', 'party-study'] as const
+export const PARTY_COLUMN_ALIASES = ['party-voice', 'party-work', 'party-rules', 'party-study', 'party-theme-education'] as const
+export const PARTY_HOME_COLUMN_ALIASES = ['party-voice', 'party-work', 'party-rules', 'party-study'] as const
 export type PartyColumnAlias = typeof PARTY_COLUMN_ALIASES[number]
+export type PartyHomeColumnAlias = typeof PARTY_HOME_COLUMN_ALIASES[number]
 
 let columnsPromise: Promise<Record<PartyColumnAlias, PublicColumn>> | null = null
 
