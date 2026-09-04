@@ -15,12 +15,16 @@ CREATE INDEX idx_cms_list_item_article ON cms_list_item(article_id, enabled, sor
 CREATE INDEX idx_cms_list_item_image_resource ON cms_list_item(image_resource_id);
 
 -- V11 的 Main-only 属性收敛为 Main / Party 共用的轮播展示参数。
+-- 历史值必须是完整的十进制正整数；不能让 MySQL CAST 把 5abc / 1.5 之类的非法值截断后继续沿用。
 UPDATE cms_site_config
 SET config_key='CAROUSEL_INTERVAL_SECONDS',
     property_name='轮播切换间隔',
     description='轮播存在多张有效内容时的自动切换间隔，单位：秒',
     group_code='PRESENTATION',
-    config_value=CASE WHEN CAST(config_value AS SIGNED) > 0 THEN config_value ELSE '4' END,
+    config_value=CASE
+        WHEN config_value REGEXP '^[0-9]+$' AND CAST(config_value AS UNSIGNED) > 0 THEN config_value
+        ELSE '4'
+    END,
     value_type='INTEGER',
     sort_order=10,
     required=1,
