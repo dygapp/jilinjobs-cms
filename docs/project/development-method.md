@@ -2,7 +2,7 @@
 
 本文固化 `jilinjobs-cms` 在持续开发阶段实际采用的 AI Agent 开发方法、Skill 使用规则和上下文恢复规则。
 
-本文是 Consumer-local 规则。后续开发默认优先读取并遵循本仓库 `AGENTS.md`、`README.md`、本文及其他当前 Authority；不需要在每次普通开发工作中重新读取 `dygapp/agentic-dev`。只有项目负责人明确要求升级 `agentic-dev` baseline，或当前 Consumer 文档明确无法回答方法问题时，才重新读取指定 baseline 并将需要长期保留的变化回写到本仓库。
+本文是 Consumer-local 规则。后续开发默认优先读取并遵守本仓库 `AGENTS.md`、`README.md`、本文及其他当前 Authority；不需要在每次普通开发工作中重新读取 `dygapp/agentic-dev`。只有项目负责人明确要求升级 `agentic-dev` baseline，或当前 Consumer 文档明确无法回答方法问题时，才重新读取指定 baseline 并将需要长期保留的变化回写到本仓库。
 
 ## 1. 方法来源与当前基线
 
@@ -10,16 +10,29 @@
 Repository:
 dygapp/agentic-dev
 
-Baseline Tag:
+Validation Baseline Ref:
+master
+
+Validation Baseline Commit:
+394d1c3cde04b35940d5e33b7cbcaaf6557678ce
+
+Capability Milestone Tag:
 baseline-2026-09-04-engineering-capability
 
-Baseline Commit:
+Capability Milestone Commit:
 5be2e6aad29b2be6b8535b3690daf3533ee22a46
 ```
 
-该 baseline 提供 Method、Operating Guide、Engineering Discipline Authority、Technology Profile Contract、Skill Contracts 与 Skills 的来源依据，但不提供本项目的业务事实。
+当前 Validation Baseline 以 `master@394d1c3cde04b35940d5e33b7cbcaaf6557678ce` 为精确方法来源；正式 Capability Milestone Tag 仍指向 `5be2e6aad29b2be6b8535b3690daf3533ee22a46`。相对该 Tag，`master` 只前进 1 个 Stable Maintenance 提交，没有增加 Method Stage、Engineering Discipline、Technology Profile、Task-oriented Skill 或 Skill Contract，也不改变本 Consumer 当前依赖版本或产品路线。
 
-相对上一 Consumer baseline `a0aece02414aa36ca7421db391cb3124ad0780f2`，指定 Tag 向前包含 2 个提交：`8d0c7ccd1b13db05540fefc619725f9d1f7fc2de` 新增并完成 **Data Access Scope & Boundedness Control（数据访问作用域与有界性控制）** Engineering Discipline，`5be2e6aad29b2be6b8535b3690daf3533ee22a46` 完成 `agentic-dev` 自身 Engineering Discipline Expansion v1 Closure。新增 Discipline 不增加 Method Stage，不创建新的 Task-oriented Skill，也不改变 Technology Profile；`execute-unit` 只增加对该 Discipline 的薄消费规则。该 Discipline 与本 Consumer 已有 `docs/technical/verification-strategy.md` §2.4 的栏目/业务作用域、分页窗口和边界验证语义一致，因此本次正式将其固化为 Consumer-local Engineering Discipline，而不另造第二套验证规则或新增框架。`agentic-dev` 自身 Closure、Issue、Experiment 与 Roadmap 状态不继承为 Consumer 项目事实。
+本次从 Stable Maintenance 选择性固化两项具有持续约束价值的生命周期规则：
+
+- **Ephemeral Evidence Promotion**：Workflow Artifact、远程输出、临时 Snapshot 等执行证据，如果经过适当 Authority 接受并成为后续稳定迁移、评审或运行输入，必须显式晋升为 Consumer-owned、可持续维护、版本化或等价持久输入；保留来源 Run / Head / Artifact / digest 等 provenance / integrity，并在 Promotion 后对受影响最终状态重新取得 Current Evidence，长期消费者不得继续依赖会过期的临时 Artifact。
+- **Long-lived Review Environment Lifecycle**：长生命周期单实例 Review Environment 必须具有可观察 owner、lease 取得 / 续期 / 到期 / 释放与 stale-run 策略；自动 Verification 与有效 Human Review 可以具有不同租约生命周期；是否由新 Head 接管由 Consumer Policy 决定，不机械采用 `latest-head-wins`，不得在有效 Human Review lease 存续时无审计地摧毁环境。
+
+`agentic-dev` 自身 Stable Maintenance、Issue、Eval、PR 与 Roadmap 状态不继承为 Consumer 项目事实。
+
+上一 Capability Milestone 相对更早 Consumer baseline `a0aece02414aa36ca7421db391cb3124ad0780f2` 向前包含 2 个提交：`8d0c7ccd1b13db05540fefc619725f9d1f7fc2de` 新增并完成 **Data Access Scope & Boundedness Control（数据访问作用域与有界性控制）** Engineering Discipline，`5be2e6aad29b2be6b8535b3690daf3533ee22a46` 完成 `agentic-dev` 自身 Engineering Discipline Expansion v1 Closure。新增 Discipline 不增加 Method Stage，不创建新的 Task-oriented Skill，也不改变 Technology Profile；`execute-unit` 只增加对该 Discipline 的薄消费规则。该 Discipline 与本 Consumer 已有 `docs/technical/verification-strategy.md` §2.4 的栏目/业务作用域、分页窗口和边界验证语义一致，因此本项目继续以现有 Consumer-local 规则承载，不另造第二套验证规则或新增框架。
 
 相对更早 baseline `bf21c7bcd711fd667c43007a72fae65750d1af09`，本项目此前实际吸收的新增规则是：
 
@@ -253,6 +266,7 @@ Automated Verification
 - Reset 后重新验证测试数据已移除、版本化资源已恢复、人工 Fixture 已准备、服务健康和外部评审地址可访问；
 - 容器向 host bind mount 写文件时，明确 UID/GID、ownership、permissions 与清理身份；普通 runner 无权删除 root-owned 文件时，不得把普通 `rm -rf` 当作可靠清理方案；
 - Cleanup / Reset 必须可重复执行并得到同一已知状态；该规则仅适用于已授权的临时验证/评审环境，不授予 Production 或共享数据的破坏性清理权限。
+- 长生命周期单实例 Review Environment 还必须维护可观察 owner / lease：明确自动 Verification 与 Human Review 的租约取得、续期、到期和释放条件，定义 stale-run 判定与接管规则；新 Head 不因“更新”这一事实自动取得摧毁有效 Human Review lease 的权利。
 
 ## 7. 外部输入与媒体资源验证
 
@@ -303,6 +317,7 @@ Analyze
 - 闭环可在三类结果下结束：取得并核对目标证据；出现真实 Human / Runtime 阻塞；达到有界观察上限并准确保留 `Executed but not fully verified`。后两者均不能声明完成。
 - 外部操作使用固定域名、代理名、端口、评审 / 部署槽位、临时数据库或其他排他资源时，必须按真实共享资源确定 concurrency / lock 范围，覆盖所有会争用该资源的触发路径；独立工作默认排队，不把取消当作默认互斥策略；只有新工作确实 supersede 旧工作且取消后的释放闭环可靠时才取消。
 - Workflow cancellation、进程终止、锁取得或清理命令成功不能单独证明共享资源已经释放或归属正确；重新取得资源后必须核对 owner / Head / 环境，并验证目标地址或服务实际对应当前 Run。
+- 当临时 Workflow Artifact / Snapshot / 远程输出已经被 Authority 接受为后续稳定迁移、评审或运行输入时，必须完成持久化 Promotion、保留 provenance / integrity，并把后续长期消费者切换到持久输入；不能继续把会过期的 Artifact 当作长期事实来源。
 
 ## 9. Project Roadmap
 
