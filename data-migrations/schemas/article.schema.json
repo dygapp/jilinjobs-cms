@@ -4,7 +4,7 @@
   "title": "Historical Article Migration Record",
   "type": "object",
   "additionalProperties": false,
-  "required": ["source", "target", "content", "resources", "sourceFingerprint"],
+  "required": ["source", "target", "content", "resources", "sourceFingerprint", "evidence"],
   "properties": {
     "source": {
       "type": "object",
@@ -45,10 +45,12 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["role", "sourceUrl", "snapshotPath", "sha256"],
+        "required": ["role", "sourceUrl", "originalReference", "token", "snapshotPath", "sha256"],
         "properties": {
           "role": { "enum": ["BODY_IMAGE", "ATTACHMENT"] },
           "sourceUrl": { "type": "string", "format": "uri" },
+          "originalReference": { "type": "string", "minLength": 1 },
+          "token": { "type": "string", "minLength": 1 },
           "snapshotPath": { "type": "string", "minLength": 1 },
           "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
           "contentType": { "type": ["string", "null"] },
@@ -56,6 +58,18 @@
         }
       }
     },
-    "sourceFingerprint": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+    "sourceFingerprint": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["listPage", "listTitle", "listPublishDate"],
+      "properties": {
+        "listPage": { "type": "integer", "minimum": 1 },
+        "listTitle": { "type": "string", "minLength": 1 },
+        "listPublishDate": { "type": ["string", "null"], "format": "date" },
+        "detailPublishDate": { "type": ["string", "null"], "format": "date" },
+        "rawDetailPath": { "type": "string" }
+      }
+    }
   }
 }

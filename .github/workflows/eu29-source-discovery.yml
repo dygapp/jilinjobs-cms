@@ -16,12 +16,16 @@ permissions:
 
 jobs:
   discover:
-    name: Discover legacy Party content source
+    name: Discover and collect legacy Party content
     if: ${{ github.event.pull_request.head.ref == 'feature/eu-29-party-history-migration' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
       - name: Pull Playwright runtime
         run: docker pull mcr.microsoft.com/playwright:v1.61.0-noble
       - name: Capture HTTP / DOM / Network evidence
@@ -33,11 +37,27 @@ jobs:
             -w /work \
             mcr.microsoft.com/playwright:v1.61.0-noble \
             bash -lc 'npm install --no-audit --no-fund && npx playwright test tests/e2e/party-migration-source-discovery.spec.ts --reporter=line'
-      - name: Upload discovery evidence
+      - name: Install migration collector dependencies
+        working-directory: data-migrations
+        run: npm install --no-audit --no-fund
+      - name: Collect full Party migration snapshot candidate
+        working-directory: data-migrations
+        env:
+          MIGRATION_OUTPUT: party/v1/generated
+        run: npm run collect:party
+      - name: Upload source discovery evidence
         if: always()
         uses: actions/upload-artifact@v7
         with:
           name: eu29-party-source-discovery
           path: frontend/public-site/test-results
+          if-no-files-found: error
+          retention-days: 7
+      - name: Upload migration snapshot candidate
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: eu29-party-migration-snapshot-candidate
+          path: data-migrations/party/v1/generated
           if-no-files-found: error
           retention-days: 7

@@ -41,6 +41,8 @@ async function inspect(page: Page, url: string, name: string, testInfo: TestInfo
     const normalize = (value: string | null | undefined) => (value ?? '').replace(/\s+/g, ' ').trim()
     return {
       title: document.title,
+      articleTitle: normalize(document.querySelector('.detail-content-title')?.textContent),
+      articleBodyText: normalize(document.querySelector('.rich-text-wrap')?.textContent).slice(0, 20_000),
       bodyText: normalize(document.body.textContent).slice(0, 20_000),
       anchors: Array.from(document.querySelectorAll<HTMLAnchorElement>('a[href]')).map(anchor => ({
         text: normalize(anchor.textContent),
@@ -96,42 +98,38 @@ test('EU-29 Source Discovery：比较初始 HTML、最终 DOM 与 XHR/fetch', as
   const summary: Record<string, unknown> = { lists: {}, detail: {} }
   for (const [typeCode, url] of Object.entries(listUrls)) {
     const result = await inspect(page, url, `party-list-${typeCode}`, testInfo)
-    const legacyDetailLinks = result.dom.anchors.filter(link => /\/(pdetail|detail)\.html\?/.test(link.href))
-    const externalLinks = result.dom.anchors.filter(link => {
-      try { return /^https?:/.test(link.href) && new URL(link.href).origin !== origin } catch { return false }
-    })
+    const contentLinks = result.dom.anchors.filter(link => link.grandParentClass.includes('default-list') || link.parentClass.includes('list-item'))
     summary.lists[typeCode] = {
       initialHtmlHasTypeCode: result.initialHtml.includes(`typeCode=${typeCode}`),
-      legacyDetailLinks: legacyDetailLinks.length,
-      externalHttpLinks: externalLinks.length,
+      contentLinks: contentLinks.length,
       xhrOrFetch: result.network.length,
-      sampleLegacyDetailLinks: legacyDetailLinks.slice(0, 5),
+      samples: contentLinks.slice(0, 5),
     }
     expect(result.initialHtml).toContain(`typeCode=${typeCode}`)
   }
 
   const detail = await inspect(page, knownInternal.url, 'party-detail-known-internal', testInfo)
-  const headingCandidates = detail.dom.anchors.length
-  const normalizedBody = detail.dom.bodyText
-  const titleLine = normalizedBody.split(/信息来源|发布时间/)[0].trim().split(/\s+/).slice(-20).join(' ')
-  const initialContainsVisibleText = titleLine.length >= 4 && detail.initialHtml.includes(titleLine)
   const structuredCandidates = detail.network.filter(record => {
     const excerpt = record.bodyExcerpt ?? ''
-    return excerpt.includes(knownInternal.contentId) || (titleLine.length >= 4 && excerpt.includes(titleLine))
+    return excerpt.includes(knownInternal.contentId) || (detail.dom.articleTitle.length >= 4 && excerpt.includes(detail.dom.articleTitle))
   })
+  const initialContainsArticle = detail.dom.articleTitle.length >= 4
+    && detail.initialHtml.includes(detail.dom.articleTitle)
+    && detail.initialHtml.includes('class="rich-text-wrap"')
 
   summary.detail = {
     url: knownInternal.url,
     contentId: knownInternal.contentId,
-    initialHtmlContainsContentId: detail.initialHtml.includes(knownInternal.contentId),
-    initialHtmlContainsVisibleTitleCandidate: initialContainsVisibleText,
+    articleTitle: detail.dom.articleTitle,
+    initialHtmlContainsRenderedArticle: initialContainsArticle,
     xhrOrFetchCount: detail.network.length,
     structuredContentCandidates: structuredCandidates,
-    anchorCount: headingCandidates,
   }
   await writeFile(testInfo.outputPath('source-discovery-summary.json'), JSON.stringify(summary, null, 2), 'utf8')
 
   console.log(`EU29_SOURCE_DISCOVERY ${JSON.stringify(summary)}`)
   expect(detail.dom.title.length).toBeGreaterThan(0)
-  expect(normalizedBody).toContain('吉林省高等学校毕业生就业指导中心')
+  expect(detail.dom.articleTitle.length).toBeGreaterThan(0)
+  expect(detail.dom.articleBodyText.length).toBeGreaterThan(0)
+  expect(initialContainsArticle).toBeTruthy()
 })

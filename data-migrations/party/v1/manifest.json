@@ -2,7 +2,8 @@
   "migrationId": "party-v1",
   "sourceSystem": "legacy-jilinjobs",
   "sourceOrigin": "https://24365.jl.smartedu.cn",
-  "status": "source-discovery",
+  "status": "collection-pilot",
+  "sourceStrategy": "server-rendered-html-with-browser-cross-check",
   "contentScope": [
     { "typeCode": "gcsy", "columnAlias": "party-voice", "observedListCount": 37 },
     { "typeCode": "gzdt", "columnAlias": "party-work", "observedListCount": 88 },
@@ -12,7 +13,7 @@
   "observedListedRecords": 178,
   "notes": [
     "observedListCount 来自 2026-09-04 原站四栏目分页证据；不将 178 直接视为全局唯一 content_id 数量。",
-    "Source Discovery 完成前不假定存在公开 JSON 内容 API。",
+    "Source Discovery Run #1 未观察到内容 XHR/fetch，且原始 Document HTML 已包含列表与详情正文，因此 Collector 使用服务端 HTML 主源。",
     "正式 Snapshot 生成后由 reconciliation report 给出 discovered/internal/external/unresolved 结果。"
   ]
 }
