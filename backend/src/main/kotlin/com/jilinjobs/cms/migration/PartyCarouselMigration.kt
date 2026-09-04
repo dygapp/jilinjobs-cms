@@ -100,6 +100,20 @@ data class PartyCarouselSnapshot(
     val items: List<PartyCarouselSnapshotItem>,
 )
 
+data class PartyCarouselCanonicalIndexItem(
+    val legacyKey: String,
+    val path: String,
+    val sourceOrder: Int,
+    val sourceFingerprint: String,
+)
+
+data class PartyCarouselCanonicalIndex(
+    val listCode: String,
+    val sourceSystem: String,
+    val sourcePage: String,
+    val items: List<PartyCarouselCanonicalIndexItem>,
+)
+
 enum class PartyCarouselItemImportStatus { CREATED, SKIPPED, CONFLICT, INVALID }
 
 data class PartyCarouselItemImportResult(
@@ -242,19 +256,49 @@ class PartyCarouselMigrationService(
     private val itemImporter: PartyCarouselItemImporter,
 ) {
     fun importSnapshot(snapshotRoot: Path): PartyCarouselImportReport {
-        val file = snapshotRoot.resolve("carousel.json")
-        require(Files.isRegularFile(file)) { "缺少 Snapshot carousel.json：$file" }
-        val snapshot = Files.newBufferedReader(file).use { reader -> objectMapper.readValue(reader, PartyCarouselSnapshot::class.java) }
-        require(snapshot.listCode == PARTY_CAROUSEL_CODE) { "EU-29 carousel snapshot 只允许 $PARTY_CAROUSEL_CODE" }
-        require(snapshot.items.size == 4) { "党建历史轮播必须恰好 4 条，实际 ${snapshot.items.size}" }
-        require(snapshot.items.map { it.sourceOrder }.toSet() == setOf(1, 2, 3, 4)) { "党建历史轮播顺序必须完整覆盖 1..4" }
+        val canonicalIndexFile = snapshotRoot.resolve("lists/$PARTY_CAROUSEL_CODE/index.json")
+        val sourceSystem: String
+        val sourcePage: String
+        val itemsWithRoots: List<Pair<Path, PartyCarouselSnapshotItem>>
+
+        if (Files.isRegularFile(canonicalIndexFile)) {
+            val listRoot = canonicalIndexFile.parent
+            val canonicalIndex = Files.newBufferedReader(canonicalIndexFile).use { reader ->
+                objectMapper.readValue(reader, PartyCarouselCanonicalIndex::class.java)
+            }
+            require(canonicalIndex.listCode == PARTY_CAROUSEL_CODE) { "EU-29 canonical carousel 只允许 $PARTY_CAROUSEL_CODE" }
+            sourceSystem = canonicalIndex.sourceSystem
+            sourcePage = canonicalIndex.sourcePage
+            itemsWithRoots = canonicalIndex.items.sortedBy { it.sourceOrder }.map { reference ->
+                val root = listRoot.toAbsolutePath().normalize()
+                val itemFile = root.resolve(reference.path).normalize()
+                require(itemFile.startsWith(root) && Files.isRegularFile(itemFile)) { "Canonical carousel item 不存在或路径越界：${reference.path}" }
+                val item = Files.newBufferedReader(itemFile).use { reader -> objectMapper.readValue(reader, PartyCarouselSnapshotItem::class.java) }
+                require(item.legacyKey == reference.legacyKey) { "Canonical carousel legacyKey 与 item.json 不一致：${reference.legacyKey}" }
+                require(item.sourceOrder == reference.sourceOrder) { "Canonical carousel sourceOrder 与 item.json 不一致：${reference.legacyKey}" }
+                require(item.sourceFingerprint == reference.sourceFingerprint) { "Canonical carousel fingerprint 与 item.json 不一致：${reference.legacyKey}" }
+                itemFile.parent to item
+            }
+        } else {
+            val file = snapshotRoot.resolve("carousel.json")
+            require(Files.isRegularFile(file)) { "缺少 canonical lists/$PARTY_CAROUSEL_CODE/index.json 或 legacy carousel.json：$snapshotRoot" }
+            val snapshot = Files.newBufferedReader(file).use { reader -> objectMapper.readValue(reader, PartyCarouselSnapshot::class.java) }
+            require(snapshot.listCode == PARTY_CAROUSEL_CODE) { "EU-29 carousel snapshot 只允许 $PARTY_CAROUSEL_CODE" }
+            sourceSystem = snapshot.sourceSystem
+            sourcePage = snapshot.sourcePage
+            itemsWithRoots = snapshot.items.sortedBy { it.sourceOrder }.map { snapshotRoot to it }
+        }
+
+        val items = itemsWithRoots.map { it.second }
+        require(items.size == 4) { "党建历史轮播必须恰好 4 条，实际 ${items.size}" }
+        require(items.map { it.sourceOrder }.toSet() == setOf(1, 2, 3, 4)) { "党建历史轮播顺序必须完整覆盖 1..4" }
         val list = listService.listDefinitions().singleOrNull { it.code == PARTY_CAROUSEL_CODE }
             ?: error("未找到稳定列表：$PARTY_CAROUSEL_CODE")
         require(list.enabled) { "$PARTY_CAROUSEL_CODE 已停用" }
 
-        val results = snapshot.items.sortedBy { it.sourceOrder }.map { item ->
+        val results = itemsWithRoots.map { (itemRoot, item) ->
             runCatching {
-                itemImporter.importItem(snapshotRoot, snapshot.sourceSystem, snapshot.sourcePage, list.id, item)
+                itemImporter.importItem(itemRoot, sourceSystem, sourcePage, list.id, item)
             }.getOrElse { error ->
                 PartyCarouselItemImportResult(item.legacyKey, PartyCarouselItemImportStatus.INVALID, message = error.message ?: error::class.java.simpleName)
             }
