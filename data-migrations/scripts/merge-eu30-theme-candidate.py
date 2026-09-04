@@ -46,9 +46,8 @@ def merge(candidate: Path, target: Path, run_id: str, head_sha: str):
     for row in candidate_rows:
         source_article = candidate / row['path']
         target_article = target / row['path']
-        if target_article.exists():
+        if target_article.exists() or target_article.parent.exists():
             raise ValueError(f'target article already exists: {row["path"]}')
-        target_article.parent.mkdir(parents=True, exist_ok=True)
         shutil.copytree(source_article.parent, target_article.parent, dirs_exist_ok=False)
 
     merged_rows = target_rows + candidate_rows
