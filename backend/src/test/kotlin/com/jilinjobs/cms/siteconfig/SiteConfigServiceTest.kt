@@ -52,6 +52,23 @@ class SiteConfigServiceTest {
     }
 
     @Test
+    fun `carousel keys keep integer semantics even if definition update tries to change type`() {
+        val mapper = FakeSiteConfigMapper(record("CAROUSEL_INTERVAL_SECONDS", "INTEGER", "4"))
+        val service = service(mapper)
+        assertThrows(SiteConfigValidationException::class.java) {
+            service.updateDefinition(
+                "CAROUSEL_INTERVAL_SECONDS",
+                SiteConfigDraft("CAROUSEL_INTERVAL_SECONDS", "轮播切换间隔", "GENERAL", "4", "TEXT", required = true),
+            )
+        }
+
+        val driftedMapper = FakeSiteConfigMapper(record("CAROUSEL_MAX_ITEMS", "TEXT", "5"))
+        val driftedService = service(driftedMapper)
+        assertThrows(SiteConfigValidationException::class.java) { driftedService.update("CAROUSEL_MAX_ITEMS", "5abc") }
+        assertEquals("6", driftedService.update("CAROUSEL_MAX_ITEMS", " 6 ").value)
+    }
+
+    @Test
     fun `预置网站属性不能删除定义但允许修改值和普通定义字段`() {
         val preset = record("SITE_NAME", "TEXT", "吉林就业").copy(preset = true)
         val mapper = FakeSiteConfigMapper(preset)
