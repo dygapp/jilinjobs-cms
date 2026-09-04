@@ -55,7 +55,7 @@ tasks.register<JavaExec>("importPartyHistoricalContent") {
 
 tasks.register<JavaExec>("importPartyCarousel") {
     group = "migration"
-    description = "Import the Party carousel canonical dataset"
+    description = "Import the Party carousel canonical dataset with LINK / ARTICLE placement resolution"
     classpath = sourceSets["main"].runtimeClasspath
-    mainClass.set("com.jilinjobs.cms.migration.PartyCarouselMigrationKt")
+    mainClass.set("com.jilinjobs.cms.migration.PartyCarouselMigrationV2Kt")
 }
