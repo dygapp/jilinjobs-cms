@@ -5,6 +5,16 @@ const onePixelPng = Buffer.from(
   'base64',
 )
 
+type PublicListItem = {
+  id: number
+  articleId: number | null
+  sourceType: string
+  title: string
+  effectiveImageResourceId: number | null
+}
+
+type PublicList = { code: string; items: PublicListItem[] }
+
 async function siteConfig(request: APIRequestContext) {
   const response = await request.get('/api/admin/site-config')
   expect(response.ok()).toBeTruthy()
@@ -14,6 +24,15 @@ async function siteConfig(request: APIRequestContext) {
 async function setSiteConfig(request: APIRequestContext, key: string, value: string) {
   const response = await request.put(`/api/admin/site-config/${key}`, { data: { value } })
   expect(response.ok()).toBeTruthy()
+}
+
+async function publicListByCode(request: APIRequestContext, code: string): Promise<PublicList> {
+  const response = await request.get('/api/public/lists')
+  expect(response.ok()).toBeTruthy()
+  const lists = await response.json() as PublicList[]
+  const list = lists.find(item => item.code === code)
+  expect(list, `公开列表不存在：${code}`).toBeTruthy()
+  return list!
 }
 
 test('EU-30：Main 与 Party 共用轮播展示参数并在 reduced-motion 下保留手动切换', async ({ page, request }) => {
@@ -127,9 +146,7 @@ test('EU-30：ARTICLE 列表投放保持文章单一栏目归属并随发布状�
     const placement = await placementResponse.json() as { id: number; articleId: number; sourceType: string; imageResourceId: number }
     expect(placement).toMatchObject({ articleId: article.id, sourceType: 'ARTICLE', imageResourceId: image.id })
 
-    const publicListResponse = await request.get('/api/public/lists/by-code/PARTY_CAROUSEL')
-    expect(publicListResponse.ok()).toBeTruthy()
-    const publicList = await publicListResponse.json() as { items: Array<{ id: number; articleId: number | null; sourceType: string; title: string; effectiveImageResourceId: number | null }> }
+    const publicList = await publicListByCode(request, 'PARTY_CAROUSEL')
     expect(publicList.items.find(item => item.id === placement.id)).toMatchObject({
       articleId: article.id,
       sourceType: 'ARTICLE',
@@ -155,9 +172,7 @@ test('EU-30：ARTICLE 列表投放保持文章单一栏目归属并随发布状�
     expect(persisted.columnId).toBe(theme!.id)
 
     expect((await request.post(`/api/admin/articles/${article.id}/withdraw`)).ok()).toBeTruthy()
-    const withdrawnPublicList = await request.get('/api/public/lists/by-code/PARTY_CAROUSEL')
-    expect(withdrawnPublicList.ok()).toBeTruthy()
-    const withdrawn = await withdrawnPublicList.json() as { items: Array<{ id: number }> }
+    const withdrawn = await publicListByCode(request, 'PARTY_CAROUSEL')
     expect(withdrawn.items.some(item => item.id === placement.id)).toBeFalsy()
     expect((await request.get(`/api/public/resources/${image.id}/content`)).status()).toBe(404)
   } finally {
@@ -227,9 +242,7 @@ test('EU-30：REQUIRED ARTICLE 继承图片失效后不再作为有效公开投�
   const placement = await placementResponse.json() as { id: number; effectiveImageResourceId: number | null }
   expect(placement.effectiveImageResourceId).toBe(image.id)
 
-  let publicResponse = await request.get('/api/public/lists/by-code/PARTY_CAROUSEL')
-  expect(publicResponse.ok()).toBeTruthy()
-  let publicList = await publicResponse.json() as { items: Array<{ id: number }> }
+  let publicList = await publicListByCode(request, 'PARTY_CAROUSEL')
   expect(publicList.items.some(item => item.id === placement.id)).toBeTruthy()
   expect((await request.get(`/api/public/resources/${image.id}/content`)).ok()).toBeTruthy()
 
@@ -238,9 +251,7 @@ test('EU-30：REQUIRED ARTICLE 继承图片失效后不再作为有效公开投�
   })
   expect(removeCover.ok()).toBeTruthy()
 
-  publicResponse = await request.get('/api/public/lists/by-code/PARTY_CAROUSEL')
-  expect(publicResponse.ok()).toBeTruthy()
-  publicList = await publicResponse.json() as { items: Array<{ id: number }> }
+  publicList = await publicListByCode(request, 'PARTY_CAROUSEL')
   expect(publicList.items.some(item => item.id === placement.id)).toBeFalsy()
   expect((await request.get(`/api/public/resources/${image.id}/content`)).status()).toBe(404)
 
