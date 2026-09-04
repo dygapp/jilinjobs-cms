@@ -8,7 +8,7 @@ import { setPageMeta } from '../../../../shared/seo'
 import {
   PARTY_CAROUSEL_CODE,
   PARTY_HOME_COLUMN_ALIASES,
-  loadPartyColumns,
+  loadPartyHomeColumns,
   type PartyHomeColumnAlias,
 } from '../../app/partyContext'
 
@@ -63,7 +63,7 @@ async function load() {
   loading.value = true
   error.value = ''
   try {
-    const columnsPromise = loadPartyColumns()
+    const columnsPromise = loadPartyHomeColumns()
     const [carousel, properties, columns] = await Promise.all([
       getPublicCmsListByCode(PARTY_CAROUSEL_CODE),
       listPublicSiteConfig(),
