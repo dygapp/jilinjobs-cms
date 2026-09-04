@@ -280,6 +280,9 @@ jobs:
               assert int(articles)==expected[alias], (alias,articles,expected[alias])
               assert int(mappings)==expected[alias], (alias,mappings,expected[alias])
           PY
+          theme_body_resources=$(docker run --rm --network host mysql:8.4 mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e "SELECT COUNT(*) FROM cms_article_resource ar JOIN cms_article_legacy_mapping m ON m.article_id=ar.article_id WHERE m.source_system='legacy-jilinjobs' AND m.legacy_key='zhutijiaoyu:content:154659859759104' AND ar.resource_role='BODY_IMAGE'")
+          printf '%s\n' "$theme_body_resources" | tee canonical-theme-body-resource-count.txt
+          test "$theme_body_resources" -eq 1
           carousel_items=$(docker run --rm --network host mysql:8.4 mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -e "SELECT COUNT(*) FROM cms_list_item i JOIN cms_list l ON l.id=i.list_id WHERE l.code='PARTY_CAROUSEL'")
           carousel_mappings=$(docker run --rm --network host mysql:8.4 mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -e "SELECT COUNT(*) FROM cms_list_item_legacy_mapping")
           test "$carousel_items" -eq 4
@@ -297,5 +300,6 @@ jobs:
             canonical-second-carousel-import.log
             canonical-db-counts.tsv
             canonical-carousel-db.tsv
+            canonical-theme-body-resource-count.txt
           if-no-files-found: warn
           retention-days: 7
