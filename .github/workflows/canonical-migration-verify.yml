@@ -5,6 +5,7 @@ on:
     paths:
       - 'data-migrations/**'
       - 'backend/src/main/kotlin/com/jilinjobs/cms/migration/**'
+      - 'backend/src/main/resources/db/migration/**'
       - '.github/workflows/canonical-migration-verify.yml'
   workflow_dispatch:
 
@@ -41,7 +42,7 @@ jobs:
 
           root = Path('data-migrations/party/v1')
           manifest = json.load(open(root / 'manifest.json', encoding='utf-8'))
-          assert manifest['status'] == 'accepted-canonical', manifest
+          assert manifest['status'] in {'accepted-canonical', 'candidate-extension'}, manifest
           accepted = manifest['acceptedSnapshot']
           assert accepted['articles'] == 181
           assert accepted['internalArticles'] == 120
@@ -52,6 +53,18 @@ jobs:
           assert accepted['unresolved'] == 0
           assert accepted['artifactDigest'] == 'sha256:230ac0df997b3dc913ed38503a8289eae30d8bb0a455fd858e388ddc27066148'
 
+          extension = manifest.get('candidateExtension')
+          added = int(extension['addedArticles']) if extension else 0
+          runtime_articles = accepted['articles'] + added
+          runtime_internal = accepted['internalArticles'] + (int(extension['internalArticles']) if extension else 0)
+          runtime_external = accepted['externalArticles'] + (int(extension['externalArticles']) if extension else 0)
+          if manifest['status'] == 'candidate-extension':
+              assert extension, manifest
+              assert extension['status'] == 'pending-human-review', extension
+              assert extension['runtimeDatasetArticles'] == runtime_articles, extension
+              assert extension['acceptedEu29Articles'] == accepted['articles'], extension
+              assert extension['reportedTotal'] == added and extension['unresolved'] == 0, extension
+
           def digest(path):
               value = hashlib.sha256()
               with path.open('rb') as stream:
@@ -60,9 +73,9 @@ jobs:
               return value.hexdigest()
 
           rows = [json.loads(line) for line in (root / 'index.ndjson').read_text(encoding='utf-8').splitlines() if line.strip()]
-          assert len(rows) == 181
-          assert len({row['legacyKey'] for row in rows}) == 181
-          assert len({row['path'] for row in rows}) == 181
+          assert len(rows) == runtime_articles, (len(rows), runtime_articles)
+          assert len({row['legacyKey'] for row in rows}) == runtime_articles
+          assert len({row['path'] for row in rows}) == runtime_articles
           article_hashes = set()
           article_types = {'INTERNAL': 0, 'EXTERNAL_LINK': 0}
           by_alias = {}
@@ -86,9 +99,14 @@ jobs:
                   article_hashes.add(resource['sha256'])
               for relative in re.findall(r'(?:src|href)=["\'](assets/[^"\']+)["\']', article['content']['bodyHtml']):
                   assert relative in resource_paths, (row['legacyKey'], relative)
-          assert article_types == {'INTERNAL': 120, 'EXTERNAL_LINK': 61}, article_types
-          assert by_alias == {'party-voice': 40, 'party-work': 88, 'party-rules': 22, 'party-study': 31}, by_alias
-          assert len(article_hashes) == 180
+
+          expected_scope = {scope['columnAlias']: int(scope['observedListCount']) for scope in manifest['contentScope']}
+          assert sum(expected_scope.values()) == runtime_articles, expected_scope
+          assert article_types == {'INTERNAL': runtime_internal, 'EXTERNAL_LINK': runtime_external}, article_types
+          assert by_alias == expected_scope, (by_alias, expected_scope)
+          assert len(article_hashes) >= accepted['uniqueArticleResources'], len(article_hashes)
+          if extension:
+              assert extension['articleRefForCarouselPosition2'] in {row['legacyKey'] for row in rows}
 
           carousel_root = root / 'lists/PARTY_CAROUSEL'
           carousel = json.load(open(carousel_root / 'index.json', encoding='utf-8'))
@@ -96,6 +114,7 @@ jobs:
           assert len(carousel['items']) == 4
           assert {item['sourceOrder'] for item in carousel['items']} == {1, 2, 3, 4}
           carousel_hashes = set()
+          by_order = {}
           for reference in carousel['items']:
               item_path = (carousel_root / reference['path']).resolve()
               assert carousel_root.resolve() in item_path.parents and item_path.is_file(), reference
@@ -109,8 +128,22 @@ jobs:
               assert path.stat().st_size == image['sizeBytes']
               assert digest(path) == image['sha256']
               carousel_hashes.add(image['sha256'])
+              by_order[item['sourceOrder']] = item
           assert len(carousel_hashes) == 4
-          print(json.dumps({'articles': len(rows), 'articleResources': len(article_hashes), 'carouselItems': 4, 'carouselResources': 4}, ensure_ascii=False))
+          assert by_order[2]['sourceType'] == 'ARTICLE', by_order[2]
+          assert by_order[2]['articleRef']['sourceSystem'] == manifest['sourceSystem'], by_order[2]
+          if extension:
+              assert by_order[2]['articleRef']['legacyKey'] == extension['articleRefForCarouselPosition2'], by_order[2]
+          assert all(by_order[order].get('sourceType', 'LINK') == 'LINK' for order in (1, 3, 4))
+          print(json.dumps({
+              'acceptedArticles': accepted['articles'],
+              'runtimeArticles': runtime_articles,
+              'candidateArticles': added,
+              'articleResources': len(article_hashes),
+              'carouselItems': 4,
+              'carouselResources': 4,
+              'status': manifest['status'],
+          }, ensure_ascii=False))
           PY
 
       - name: Set up Java 21
@@ -144,11 +177,13 @@ jobs:
         run: |
           python3 - <<'PY'
           import json, re
+          manifest=json.load(open('data-migrations/party/v1/manifest.json', encoding='utf-8'))
+          expected=manifest.get('candidateExtension',{}).get('runtimeDatasetArticles',manifest['acceptedSnapshot']['articles'])
           text=open('canonical-first-import.log', encoding='utf-8').read()
           matches=re.findall(r'EU29_IMPORT_REPORT (\{.*\})', text)
           assert matches, 'missing EU29_IMPORT_REPORT'
           report=json.loads(matches[-1])
-          assert report['total']==181 and report['created']==181, report
+          assert report['total']==expected and report['created']==expected, report
           assert report['skipped']==0 and report['conflicts']==0 and report['invalid']==0, report
           PY
 
@@ -171,10 +206,10 @@ jobs:
           assert matches, 'missing EU29_CAROUSEL_IMPORT_REPORT'
           report=json.loads(matches[-1])
           assert report['total']==4 and report['created']==4, report
-          assert report['skipped']==0 and report['conflicts']==0 and report['invalid']==0, report
+          assert report['updated']==0 and report['skipped']==0 and report['conflicts']==0 and report['invalid']==0, report
           PY
           docker run --rm --network host mysql:8.4 mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
-            "SELECT i.sort_order,i.title,COALESCE(i.image_path,''),COALESCE(m.image_sha256,'') FROM cms_list_item i JOIN cms_list l ON l.id=i.list_id JOIN cms_list_item_legacy_mapping m ON m.list_item_id=i.id WHERE l.code='PARTY_CAROUSEL' ORDER BY i.sort_order" \
+            "SELECT i.sort_order,i.title,i.source_type,COALESCE(i.article_id,''),COALESCE(am.legacy_key,''),COALESCE(i.image_path,''),COALESCE(i.image_resource_id,''),COALESCE(r.storage_key,''),COALESCE(m.image_sha256,'') FROM cms_list_item i JOIN cms_list l ON l.id=i.list_id JOIN cms_list_item_legacy_mapping m ON m.list_item_id=i.id LEFT JOIN cms_article_legacy_mapping am ON am.article_id=i.article_id LEFT JOIN cms_resource r ON r.id=i.image_resource_id WHERE l.code='PARTY_CAROUSEL' ORDER BY i.sort_order" \
             | tee canonical-carousel-db.tsv
           python3 - <<'PY'
           import csv, hashlib, json
@@ -183,16 +218,24 @@ jobs:
           index=json.load(open(root/'index.json', encoding='utf-8'))
           expected=[]
           for ref in sorted(index['items'], key=lambda item:item['sourceOrder']):
-              item=json.load(open(root/ref['path'], encoding='utf-8'))
-              expected.append(item)
+              expected.append(json.load(open(root/ref['path'], encoding='utf-8')))
           rows=list(csv.reader(open('canonical-carousel-db.tsv', encoding='utf-8'), delimiter='\t'))
           assert len(rows)==4, rows
           for item,row in zip(expected,rows):
-              order,title,image_path,image_sha=row
+              order,title,source_type,article_id,article_legacy_key,image_path,image_resource_id,storage_key,image_sha=row
               assert int(order)==item['sourceOrder']
               assert title==item['title']
+              assert source_type==item.get('sourceType','LINK')
               assert image_sha==item['image']['sha256']
-              file=Path('canonical-runtime/static') / image_path.removeprefix('/static/')
+              if source_type=='ARTICLE':
+                  assert article_id and image_resource_id and storage_key, row
+                  assert not image_path, row
+                  assert article_legacy_key==item['articleRef']['legacyKey'], row
+                  file=Path('canonical-runtime/uploads') / storage_key
+              else:
+                  assert not article_id and not article_legacy_key and not image_resource_id and not storage_key, row
+                  assert image_path.startswith('/static/migrated/party/carousel/'), image_path
+                  file=Path('canonical-runtime/static') / image_path.removeprefix('/static/')
               assert file.is_file(), file
               assert hashlib.sha256(file.read_bytes()).hexdigest()==image_sha
           PY
@@ -213,26 +256,29 @@ jobs:
         run: |
           python3 - <<'PY'
           import json, re
+          manifest=json.load(open('data-migrations/party/v1/manifest.json', encoding='utf-8'))
+          expected=manifest.get('candidateExtension',{}).get('runtimeDatasetArticles',manifest['acceptedSnapshot']['articles'])
           text=open('canonical-second-import.log', encoding='utf-8').read()
           report=json.loads(re.findall(r'EU29_IMPORT_REPORT (\{.*\})', text)[-1])
-          assert report['total']==181 and report['created']==0 and report['skipped']==181, report
+          assert report['total']==expected and report['created']==0 and report['skipped']==expected, report
           assert report['conflicts']==0 and report['invalid']==0, report
           text=open('canonical-second-carousel-import.log', encoding='utf-8').read()
           carousel=json.loads(re.findall(r'EU29_CAROUSEL_IMPORT_REPORT (\{.*\})', text)[-1])
-          assert carousel['total']==4 and carousel['created']==0 and carousel['skipped']==4, carousel
+          assert carousel['total']==4 and carousel['created']==0 and carousel['updated']==0 and carousel['skipped']==4, carousel
           assert carousel['conflicts']==0 and carousel['invalid']==0, carousel
           PY
           docker run --rm --network host mysql:8.4 mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
-            "SELECT c.alias, COUNT(a.id), COUNT(m.id) FROM cms_column c LEFT JOIN cms_article a ON a.column_id=c.id AND a.status='PUBLISHED' LEFT JOIN cms_article_legacy_mapping m ON m.article_id=a.id WHERE c.alias IN ('party-voice','party-work','party-rules','party-study') GROUP BY c.alias ORDER BY c.alias" \
+            "SELECT c.alias, COUNT(DISTINCT a.id), COUNT(DISTINCT m.id) FROM cms_column c LEFT JOIN cms_article a ON a.column_id=c.id AND a.status='PUBLISHED' LEFT JOIN cms_article_legacy_mapping m ON m.article_id=a.id WHERE c.alias IN ('party-voice','party-work','party-rules','party-study','party-theme-education') GROUP BY c.alias ORDER BY c.alias" \
             | tee canonical-db-counts.tsv
           python3 - <<'PY'
-          import csv
-          expected={'party-rules':22,'party-study':31,'party-voice':40,'party-work':88}
+          import csv, json
+          manifest=json.load(open('data-migrations/party/v1/manifest.json', encoding='utf-8'))
+          expected={scope['columnAlias']:int(scope['observedListCount']) for scope in manifest['contentScope']}
           rows=list(csv.reader(open('canonical-db-counts.tsv', encoding='utf-8'), delimiter='\t'))
-          assert len(rows)==4, rows
+          assert len(rows)==len(expected), (rows,expected)
           for alias,articles,mappings in rows:
-              assert int(articles)==expected[alias], (alias,articles)
-              assert int(mappings)==expected[alias], (alias,mappings)
+              assert int(articles)==expected[alias], (alias,articles,expected[alias])
+              assert int(mappings)==expected[alias], (alias,mappings,expected[alias])
           PY
           carousel_items=$(docker run --rm --network host mysql:8.4 mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -e "SELECT COUNT(*) FROM cms_list_item i JOIN cms_list l ON l.id=i.list_id WHERE l.code='PARTY_CAROUSEL'")
           carousel_mappings=$(docker run --rm --network host mysql:8.4 mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -e "SELECT COUNT(*) FROM cms_list_item_legacy_mapping")
