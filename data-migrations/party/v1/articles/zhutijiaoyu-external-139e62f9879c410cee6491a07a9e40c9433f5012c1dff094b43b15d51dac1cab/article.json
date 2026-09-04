@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "zhutijiaoyu:external:139e62f9879c410cee6491a07a9e40c9433f5012c1dff094b43b15d51dac1cab",
+    "contentId": null,
+    "typeCode": "zhutijiaoyu",
+    "detailPath": "/plist.html",
+    "url": "https://cms.jilinjobs.cn/plist.html?typeCode=zxzbdt"
+  },
+  "target": {
+    "columnAlias": "party-theme-education",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "主题教育2023.2",
+    "source": "",
+    "publishDate": "2023-05-09",
+    "bodyHtml": "",
+    "externalUrl": "https://cms.jilinjobs.cn/plist.html?typeCode=zxzbdt"
+  },
+  "resources": [],
+  "sourceFingerprint": "3e9944bd6a69b0ffb51aaf93b97563607bc9d1eaada6d7a5b79949d88d2dedfb",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "主题教育2023.2",
+    "listPublishDate": "2023-05-09",
+    "sourceOrder": 1
+  }
+}
