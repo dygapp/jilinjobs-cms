@@ -56,6 +56,8 @@ test('EU-30：Party canonical 历史文章、资源与 LINK/ARTICLE 混合轮播
   await partyCarousel.getByRole('button', { name: new RegExp(articleItem.title) }).click()
   const articleSlide = partyCarousel.getByText(articleItem.title, { exact: true }).locator('..')
   await expect(articleSlide).toHaveAttribute('href', `/party/article/${articleItem.articleId}`)
+  await expect(articleSlide).toHaveAttribute('target', '_blank')
+  await expect(articleSlide).toHaveAttribute('rel', 'noopener noreferrer')
 
   const workSection = page.getByTestId('party-section-party-work')
   const workLink = workSection.getByText(representativeWorkTitle, { exact: true })
