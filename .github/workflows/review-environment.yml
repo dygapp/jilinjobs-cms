@@ -481,7 +481,13 @@ jobs:
 
       - name: 保持环境运行
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then sleep 120; else sleep 3300; fi
+          if [ "$EU29_REAL_PARTY" = "true" ]; then
+            sleep 3300
+          elif [ "${{ github.event_name }}" = "pull_request" ]; then
+            sleep 120
+          else
+            sleep 3300
+          fi
 
       - name: 清理环境
         if: always()
