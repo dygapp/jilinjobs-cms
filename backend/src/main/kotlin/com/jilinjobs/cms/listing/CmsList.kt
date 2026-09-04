@@ -263,7 +263,17 @@ class CmsListService(
             policy,
             mapper.findEnabledItems(requireNotNull(record.id)).mapNotNull { row ->
                 val item = resolveItem(row, policy)
-                if (item.sourceType == CmsListItemSourceType.ARTICLE && item.articleStatus != ArticleStatus.PUBLISHED) null else item
+                if (item.sourceType == CmsListItemSourceType.ARTICLE && item.articleStatus != ArticleStatus.PUBLISHED) {
+                    return@mapNotNull null
+                }
+                if (policy == ContentImagePolicy.REQUIRED) {
+                    val hasEffectiveImage = when (item.sourceType) {
+                        CmsListItemSourceType.LINK -> !item.imagePath.isNullOrBlank()
+                        CmsListItemSourceType.ARTICLE -> item.effectiveImageResourceId != null
+                    }
+                    if (!hasEffectiveImage) return@mapNotNull null
+                }
+                item
             },
         )
     }
