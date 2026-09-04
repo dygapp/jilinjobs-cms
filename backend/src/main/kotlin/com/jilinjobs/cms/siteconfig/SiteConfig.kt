@@ -115,8 +115,9 @@ class SiteConfigService(
     fun update(key: String, value: String): SiteConfigItem {
         val normalizedKey = normalizeKey(key)
         val record = mapper.find(normalizedKey) ?: throw SiteConfigNotFoundException(normalizedKey)
-        val storedValue = normalizeStoredValue(record.valueType, normalizedKey, value)
-        validateValue(record.valueType, storedValue, record.required, normalizedKey)
+        val effectiveType = stableValueType(normalizedKey, record.valueType)
+        val storedValue = normalizeStoredValue(effectiveType, normalizedKey, value)
+        validateValue(effectiveType, storedValue, record.required, normalizedKey)
         mapper.update(normalizedKey, storedValue)
         return mapper.find(normalizedKey)!!.item()
     }
@@ -139,8 +140,10 @@ class SiteConfigService(
         val knownGroups = metadata.sitePropertyGroupDefinitions().mapTo(linkedSetOf()) { it.code }
         if (group !in knownGroups) throw SiteConfigValidationException("网站属性分组不存在：$group")
 
-        val type = draft.valueType.trim().uppercase()
-        if (type !in allowedTypes) throw SiteConfigValidationException("不支持的网站属性类型：$type")
+        val requestedType = draft.valueType.trim().uppercase()
+        if (requestedType !in allowedTypes) throw SiteConfigValidationException("不支持的网站属性类型：$requestedType")
+        val type = stableValueType(key, requestedType)
+        if (type != requestedType) throw SiteConfigValidationException("网站属性 $key 的类型固定为 $type")
         val value = normalizeStoredValue(type, key, draft.value)
         validateValue(type, value, draft.required, key)
         return draft.copy(key = key, name = name, groupCode = group, value = value, valueType = type, description = draft.description.trim())
@@ -153,6 +156,9 @@ class SiteConfigService(
         }
         return key
     }
+
+    private fun stableValueType(key: String, requestedType: String): String =
+        if (key in positiveIntegerKeys) "INTEGER" else requestedType
 
     private fun normalizeStoredValue(type: String, key: String, value: String): String =
         if (type == "INTEGER" && key in positiveIntegerKeys) value.trim() else value
