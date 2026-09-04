@@ -84,6 +84,7 @@ class SiteConfigService(
     private val metadata: CmsMetadataProperties,
 ) {
     private val allowedTypes = setOf("TEXT", "RESOURCE_PATH", "JSON", "URL", "BOOLEAN", "INTEGER")
+    private val positiveIntegerKeys = setOf("CAROUSEL_INTERVAL_SECONDS", "CAROUSEL_MAX_ITEMS")
 
     @Transactional(readOnly = true)
     fun list() = mapper.findAll().map { it.item() }
@@ -173,8 +174,8 @@ class SiteConfigService(
             }
             "INTEGER" -> {
                 val number = normalized.toLongOrNull() ?: throw SiteConfigValidationException("网站属性 $key 必须是整数")
-                if (key == "HOME_CAROUSEL_INTERVAL_SECONDS" && number <= 0) {
-                    throw SiteConfigValidationException("网站属性 $key 必须是大于 0 的整数秒")
+                if (key in positiveIntegerKeys && number <= 0) {
+                    throw SiteConfigValidationException("网站属性 $key 必须是大于 0 的整数")
                 }
             }
         }
