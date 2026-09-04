@@ -59,6 +59,15 @@ test('EU-30：Party canonical 历史文章、资源与 LINK/ARTICLE 混合轮播
   await expect(articleSlide).toHaveAttribute('target', '_blank')
   await expect(articleSlide).toHaveAttribute('rel', 'noopener noreferrer')
 
+  const articlePopup = page.waitForEvent('popup')
+  await articleSlide.click()
+  const themePage = await articlePopup
+  await expect(themePage.getByTestId('party-article-title')).toHaveText(articleItem.title)
+  await expect(themePage.getByTestId('party-article-body')).toBeVisible()
+  await expect(themePage.getByText('主题教育', { exact: true })).toBeVisible()
+  await themePage.screenshot({ path: testInfo.outputPath('eu30-party-carousel-article.png'), fullPage: true })
+  await themePage.close()
+
   const workSection = page.getByTestId('party-section-party-work')
   const workLink = workSection.getByText(representativeWorkTitle, { exact: true })
   await expect(workLink).toBeVisible()
@@ -77,5 +86,16 @@ test('EU-30：Party canonical 历史文章、资源与 LINK/ARTICLE 混合轮播
 
   await page.screenshot({ path: testInfo.outputPath('eu30-party-migrated-article.png'), fullPage: true })
   await page.goto('/party/')
+  await expect(workSection).toBeVisible()
+  await partyCarousel.getByRole('button', { name: new RegExp(articleItem.title) }).click()
+  await page.mouse.move(0, 0)
+  const activeImage = partyCarousel.locator('.party-carousel-item.active img')
+  await expect(activeImage).toHaveAttribute('alt', articleItem.title)
+  await expect.poll(() => activeImage.evaluate(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0)).toBe(true)
   await page.screenshot({ path: testInfo.outputPath('eu30-party-migrated-home.png'), fullPage: true })
+
+  await page.setViewportSize({ width: 375, height: 812 })
+  await expect(activeImage).toBeVisible()
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
+  await page.screenshot({ path: testInfo.outputPath('eu30-party-migrated-mobile.png'), fullPage: true })
 })
