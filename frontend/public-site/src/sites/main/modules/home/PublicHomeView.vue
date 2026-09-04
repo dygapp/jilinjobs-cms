@@ -1,16 +1,18 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { useContentCarousel } from '../../../../shared/carousel/useContentCarousel'
 import { MAIN_SITE_CONFIG_KEYS, useMainSiteContext } from '../../app/siteContext'
 import { getPublicAdvertisementSlot, type Advertisement } from '../../api/advertisements'
 import { listPublicArticles, type PublicArticleSummary } from '../../api/articles'
 import { getPublicColumnByAlias } from '../../api/columns'
-import { getPublicCmsListByCode, listPublicCmsListsByGroup, type CmsListItem } from '../../api/lists'
+import { getPublicCmsListByCode, listPublicCmsListsByGroup, publicListImageUrl, type CmsListItem } from '../../api/lists'
 import { setPageMeta } from '../../seo'
 
 type SiteLinkGroup = { name: string; links: CmsListItem[] }
 
 const HOME_NEWS_ITEM_LIMIT = 7
 const DEFAULT_CAROUSEL_INTERVAL_SECONDS = 4
+const DEFAULT_CAROUSEL_MAX_ITEMS = 5
 const PROMO_ROTATION_INTERVAL_MS = 4000
 const NOTICE_COLUMN_ALIAS = 'notice'
 const EMPLOYMENT_NEWS_COLUMN_ALIAS = 'employment-news'
@@ -27,8 +29,8 @@ const employmentArticles = ref<PublicArticleSummary[]>([])
 const recruitmentArticles = ref<PublicArticleSummary[]>([])
 const siteGroups = ref<SiteLinkGroup[]>([])
 const carouselItems = ref<CmsListItem[]>([])
-const activeCarouselIndex = ref(0)
 const carouselIntervalSeconds = ref(DEFAULT_CAROUSEL_INTERVAL_SECONDS)
+const carouselMaxItems = ref(DEFAULT_CAROUSEL_MAX_ITEMS)
 const promoAds = ref<Advertisement[]>([])
 const activePromoIndex = ref(0)
 const contactPhone = ref('')
@@ -37,30 +39,30 @@ const loading = ref(true)
 const error = ref('')
 const ncssLogo = '/static/home/ncss-logo.png'
 const phoneIcon = '/static/icons/phone.png'
-let carouselTimer: ReturnType<typeof setInterval> | null = null
 let promoTimer: ReturnType<typeof setInterval> | null = null
+
+const {
+  activeItem: carouselItem,
+  visibleItems: visibleCarouselItems,
+  pause: pauseCarousel,
+  resume: resumeCarousel,
+  select: selectCarousel,
+  markImageFailed: markCarouselImageFailed,
+  onFocusOut: carouselFocusOut,
+} = useContentCarousel({
+  items: carouselItems,
+  intervalSeconds: carouselIntervalSeconds,
+  maxItems: carouselMaxItems,
+})
 
 setPageMeta({ description: '吉林省高等学校毕业生就业信息网，提供就业资讯、政策法规、业务指南和公共服务入口。' })
 
 const shortcutItems = computed(() => items.value.filter(item => item.position === HOME_SHORTCUT_POSITION))
 const quickItems = computed(() => items.value.filter(item => item.position === HOME_QUICK_POSITION))
-const validCarouselItems = computed(() => carouselItems.value.filter(item => Boolean(item.imagePath)))
-const carouselItem = computed(() => validCarouselItems.value[activeCarouselIndex.value] || null)
 const isExternalArticle = (article: PublicArticleSummary) => article.articleType === 'EXTERNAL_LINK' && Boolean(article.externalUrl)
 const newWindow = (mode: string, url: string | null | undefined) => mode === 'NEW_WINDOW' || (mode === 'DEFAULT' && Boolean(url?.startsWith('http')))
 const activePromo = computed(() => promoAds.value[activePromoIndex.value] || null)
 const promoLinked = computed(() => Boolean(activePromo.value?.url) && activePromo.value?.openMode !== 'NO_LINK')
-
-function startCarouselRotation() {
-  if (carouselTimer) clearInterval(carouselTimer)
-  carouselTimer = null
-  activeCarouselIndex.value = 0
-  if (validCarouselItems.value.length > 1) {
-    carouselTimer = setInterval(() => {
-      activeCarouselIndex.value = (activeCarouselIndex.value + 1) % validCarouselItems.value.length
-    }, carouselIntervalSeconds.value * 1000)
-  }
-}
 
 function startPromoRotation() {
   if (promoTimer) clearInterval(promoTimer)
@@ -76,6 +78,20 @@ function startPromoRotation() {
 function positiveInteger(value: string | undefined, fallback: number) {
   const parsed = Number.parseInt(value || '', 10)
   return Number.isInteger(parsed) && parsed > 0 ? parsed : fallback
+}
+
+function carouselInternalRoute(item: CmsListItem) {
+  return item.sourceType === 'ARTICLE' && item.articleType === 'INTERNAL' && item.articleId != null
+    ? `/article/${item.articleId}`
+    : null
+}
+
+function carouselHref(item: CmsListItem) {
+  return carouselInternalRoute(item) ? null : item.url
+}
+
+function carouselImage(item: CmsListItem) {
+  return publicListImageUrl(item) || ''
 }
 
 const calendar = computed(() => {
@@ -124,10 +140,13 @@ onMounted(async () => {
       siteConfig.value[MAIN_SITE_CONFIG_KEYS.CAROUSEL_INTERVAL_SECONDS],
       DEFAULT_CAROUSEL_INTERVAL_SECONDS,
     )
+    carouselMaxItems.value = positiveInteger(
+      siteConfig.value[MAIN_SITE_CONFIG_KEYS.CAROUSEL_MAX_ITEMS],
+      DEFAULT_CAROUSEL_MAX_ITEMS,
+    )
     carouselItems.value = carouselList.items
     siteGroups.value = siteLinkLists.map(list => ({ name: list.name, links: list.items }))
     promoAds.value = promoSlot.advertisements
-    startCarouselRotation()
     startPromoRotation()
   } catch (e) {
     error.value = e instanceof Error ? e.message : '公开内容加载失败'
@@ -137,7 +156,6 @@ onMounted(async () => {
 })
 
 onUnmounted(() => {
-  if (carouselTimer) clearInterval(carouselTimer)
   if (promoTimer) clearInterval(promoTimer)
 })
 </script>
@@ -149,16 +167,42 @@ onUnmounted(() => {
 
     <div v-if="!loading && !error" class="site-width home-content" data-testid="public-content">
       <section class="home-primary-row">
-        <div class="home-carousel" data-testid="home-carousel-active" :data-carousel-item-id="carouselItem?.id || ''">
-          <a v-if="carouselItem?.url" :href="carouselItem.url" :target="newWindow(carouselItem.openMode, carouselItem.url) ? '_blank' : undefined" rel="noopener noreferrer">
-            <img :src="carouselItem.imagePath || ''" :alt="carouselItem.title || '首页轮播图'">
-            <span v-if="carouselItem.title" class="carousel-caption">{{ carouselItem.title }}</span>
-          </a>
-          <div v-else-if="carouselItem" style="position:relative;display:block;width:100%;height:100%">
-            <img :src="carouselItem.imagePath || ''" :alt="carouselItem.title || '首页轮播图'">
-            <span v-if="carouselItem.title" class="carousel-caption">{{ carouselItem.title }}</span>
+        <div
+          class="home-carousel"
+          data-testid="home-carousel-active"
+          :data-carousel-item-id="carouselItem?.id || ''"
+          @mouseenter="pauseCarousel('hover')"
+          @mouseleave="resumeCarousel('hover')"
+          @focusin="pauseCarousel('focus')"
+          @focusout="carouselFocusOut"
+        >
+          <Transition name="home-carousel-fade" mode="out-in">
+            <div v-if="carouselItem" :key="carouselItem.id" class="home-carousel-slide">
+              <router-link v-if="carouselInternalRoute(carouselItem)" :to="carouselInternalRoute(carouselItem)!">
+                <img :src="carouselImage(carouselItem)" :alt="carouselItem.title || '首页轮播图'" @error="markCarouselImageFailed(carouselItem.id)">
+                <span v-if="carouselItem.title" class="carousel-caption">{{ carouselItem.title }}</span>
+              </router-link>
+              <a v-else-if="carouselHref(carouselItem)" :href="carouselHref(carouselItem)!" :target="newWindow(carouselItem.openMode, carouselHref(carouselItem)) ? '_blank' : undefined" rel="noopener noreferrer">
+                <img :src="carouselImage(carouselItem)" :alt="carouselItem.title || '首页轮播图'" @error="markCarouselImageFailed(carouselItem.id)">
+                <span v-if="carouselItem.title" class="carousel-caption">{{ carouselItem.title }}</span>
+              </a>
+              <div v-else class="home-carousel-static">
+                <img :src="carouselImage(carouselItem)" :alt="carouselItem.title || '首页轮播图'" @error="markCarouselImageFailed(carouselItem.id)">
+                <span v-if="carouselItem.title" class="carousel-caption">{{ carouselItem.title }}</span>
+              </div>
+            </div>
+            <div v-else key="empty" class="visual-empty">轮播图</div>
+          </Transition>
+          <div v-if="visibleCarouselItems.length > 1" class="home-carousel-dots" aria-label="轮播页码">
+            <button
+              v-for="(item, index) in visibleCarouselItems"
+              :key="`home-carousel-dot-${item.id}`"
+              type="button"
+              :class="{ active: item.id === carouselItem?.id }"
+              :aria-label="`查看第 ${index + 1} 项：${item.title}`"
+              @click="selectCarousel(index)"
+            />
           </div>
-          <div v-else class="visual-empty">轮播图</div>
         </div>
 
         <section class="home-panel notice-panel news-column">
@@ -248,3 +292,60 @@ onUnmounted(() => {
     </div>
   </main>
 </template>
+
+<style scoped>
+.home-carousel {
+  height: auto;
+  aspect-ratio: 8 / 5;
+  position: relative;
+  overflow: hidden;
+}
+.home-carousel-slide,
+.home-carousel-slide > a,
+.home-carousel-static,
+.home-carousel .visual-empty {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.home-carousel-slide img,
+.home-carousel-static img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-carousel-dots {
+  position: absolute;
+  z-index: 3;
+  right: 12px;
+  bottom: 10px;
+  display: flex;
+  gap: 7px;
+}
+.home-carousel-dots button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 50%;
+  background: rgba(0,0,0,.35);
+  cursor: pointer;
+}
+.home-carousel-dots button.active {
+  background: #fff;
+}
+.home-carousel-fade-enter-active,
+.home-carousel-fade-leave-active {
+  transition: opacity .25s ease;
+}
+.home-carousel-fade-enter-from,
+.home-carousel-fade-leave-to {
+  opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-carousel-fade-enter-active,
+  .home-carousel-fade-leave-active {
+    transition: none;
+  }
+}
+</style>
