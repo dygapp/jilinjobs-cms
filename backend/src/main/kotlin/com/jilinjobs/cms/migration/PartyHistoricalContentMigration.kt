@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import org.springframework.web.multipart.MultipartFile
 import tools.jackson.databind.ObjectMapper
-import java.io.ByteArrayInputStream
 import java.io.File
 import java.io.InputStream
 import java.net.URI
@@ -28,6 +27,7 @@ import java.time.LocalDate
 
 private val PARTY_ALIASES = setOf("party-voice", "party-work", "party-rules", "party-study")
 private val SHA256 = Regex("[0-9a-f]{64}")
+private val MIGRATION_TOKEN = Regex("migration-(resource|attachment)://[0-9a-f]{64}")
 
 @Mapper
 interface ArticleLegacyMappingMapper {
@@ -79,10 +79,7 @@ data class PartyMigrationSource(
     val url: String,
 )
 
-data class PartyMigrationTarget(
-    val columnAlias: String,
-    val articleType: ArticleType,
-)
+data class PartyMigrationTarget(val columnAlias: String, val articleType: ArticleType)
 
 data class PartyMigrationContent(
     val title: String,
@@ -165,22 +162,15 @@ class PartyMigrationRecordImporter(
 
         val column = columnQuery.findByAlias(record.target.columnAlias)
             ?: return PartyRecordImportResult(record.source.legacyKey, PartyRecordImportStatus.INVALID, message = "目标栏目不存在：${record.target.columnAlias}")
-        if (!column.enabled) {
-            return PartyRecordImportResult(record.source.legacyKey, PartyRecordImportStatus.INVALID, message = "目标栏目已停用：${record.target.columnAlias}")
-        }
+        if (!column.enabled) return PartyRecordImportResult(record.source.legacyKey, PartyRecordImportStatus.INVALID, message = "目标栏目已停用：${record.target.columnAlias}")
 
+        // 在任何 Runtime 写入前先完成本条记录的全部 Snapshot 字节校验，避免“前几个文件已上传、后一个资源才发现损坏”的半写入状态。
+        val verifiedResources = record.resources.map { resource -> resource to verifiedSnapshotFile(snapshotRoot, resource) }
         var bodyHtml = record.content.bodyHtml
         val bodyImageIds = mutableListOf<Long>()
         val attachmentIds = mutableListOf<Long>()
-        for (resource in record.resources) {
-            val file = verifiedSnapshotFile(snapshotRoot, resource)
-            val uploaded = resourceService.upload(
-                SnapshotMultipartFile(
-                    originalFilename = sourceFilename(resource),
-                    contentType = resource.contentType,
-                    path = file,
-                ),
-            )
+        for ((resource, file) in verifiedResources) {
+            val uploaded = resourceService.upload(SnapshotMultipartFile(sourceFilename(resource), resource.contentType, file))
             when (resource.role) {
                 "BODY_IMAGE" -> {
                     bodyImageIds += uploaded.id
@@ -190,10 +180,9 @@ class PartyMigrationRecordImporter(
                     attachmentIds += uploaded.id
                     bodyHtml = bodyHtml.replace(resource.token, "/api/public/resources/${uploaded.id}/attachment")
                 }
-                else -> error("未知迁移资源角色：${resource.role}")
             }
         }
-        if (Regex("migration-(resource|attachment)://").containsMatchIn(bodyHtml)) {
+        if (MIGRATION_TOKEN.containsMatchIn(bodyHtml)) {
             return PartyRecordImportResult(record.source.legacyKey, PartyRecordImportStatus.INVALID, message = "正文仍存在未解析 migration resource token")
         }
 
@@ -233,15 +222,26 @@ class PartyMigrationRecordImporter(
 
     private fun validateRecord(record: PartyMigrationRecord) {
         require(record.target.columnAlias in PARTY_ALIASES) { "EU-29 Importer 不接受非 Party 栏目：${record.target.columnAlias}" }
-        require(record.source.system.isNotBlank() && record.source.legacyKey.isNotBlank()) { "legacy identity 不能为空" }
+        require(record.source.system.isNotBlank() && record.source.system.length <= 100) { "source system 不合法" }
+        require(record.source.legacyKey.isNotBlank() && record.source.legacyKey.length <= 255) { "legacy identity 不合法" }
+        require(record.source.typeCode.isNotBlank() && record.source.typeCode.length <= 100) { "typeCode 不合法" }
+        require(record.source.detailPath.length <= 500 && record.source.url.length <= 2000) { "legacy URL/path 超长" }
         require(record.sourceFingerprint.matches(SHA256)) { "source fingerprint 不合法" }
         require(record.evidence.sourceOrder > 0) { "sourceOrder 必须大于 0" }
-        require(record.content.title.isNotBlank()) { "标题不能为空" }
+        require(record.content.title.isNotBlank() && record.content.title.length <= 200) { "标题不合法" }
+        require(record.content.source.length <= 200) { "内容来源超长" }
+        record.resources.forEach { resource ->
+            require(resource.role in setOf("BODY_IMAGE", "ATTACHMENT")) { "未知迁移资源角色：${resource.role}" }
+            require(resource.token.matches(Regex("migration-(resource|attachment)://${resource.sha256}"))) { "迁移资源 token 与 SHA-256 不一致" }
+            require(resource.sizeBytes >= 0) { "资源大小不能为负数" }
+        }
         when (record.target.articleType) {
             ArticleType.INTERNAL -> require(record.content.externalUrl == null) { "INTERNAL 不能携带 externalUrl" }
             ArticleType.EXTERNAL_LINK -> {
                 require(record.content.bodyHtml.isEmpty() && record.resources.isEmpty()) { "EXTERNAL_LINK 不应包含正文或资源" }
-                val uri = record.content.externalUrl?.let { runCatching { URI(it) }.getOrNull() }
+                val value = record.content.externalUrl
+                require(value != null && value.length <= 2000) { "EXTERNAL_LINK URL 不能为空或超长" }
+                val uri = runCatching { URI(value) }.getOrNull()
                 require(uri != null && uri.scheme in setOf("http", "https") && !uri.host.isNullOrBlank()) { "EXTERNAL_LINK URL 不合法" }
             }
         }
@@ -323,9 +323,7 @@ private class SnapshotMultipartFile(
 fun main(args: Array<String>) {
     require(args.isNotEmpty()) { "用法：importPartyHistoricalContent <snapshot-root> [Spring Boot args...]" }
     val snapshotRoot = Path.of(args.first()).toAbsolutePath().normalize()
-    val context = SpringApplicationBuilder(CmsApplication::class.java)
-        .web(WebApplicationType.NONE)
-        .run(*args.drop(1).toTypedArray())
+    val context = SpringApplicationBuilder(CmsApplication::class.java).web(WebApplicationType.NONE).run(*args.drop(1).toTypedArray())
     try {
         val report = context.getBean(PartyHistoricalContentMigrationService::class.java).importSnapshot(snapshotRoot)
         println("EU29_IMPORT_REPORT ${context.getBean(ObjectMapper::class.java).writeValueAsString(report)}")
