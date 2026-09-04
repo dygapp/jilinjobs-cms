@@ -16,6 +16,10 @@ concurrency:
 
 permissions:
   contents: read
+  actions: read
+
+env:
+  EU29_REAL_PARTY: ${{ (github.event_name == 'pull_request' && github.event.pull_request.head.ref == 'feature/eu-29-party-history-migration') || (github.event_name == 'workflow_dispatch' && github.event.inputs.ref == 'feature/eu-29-party-history-migration') }}
 
 jobs:
   review-environment:
@@ -70,8 +74,8 @@ jobs:
 
       - name: 准备初始化静态资源包
         run: |
-          sudo rm -rf runtime-static
-          mkdir -p runtime-static
+          sudo rm -rf runtime-static runtime-uploads
+          mkdir -p runtime-static runtime-uploads
           cp -a site-baseline/static/. runtime-static/
           test -f runtime-static/health/baseline.png
           test -f runtime-static/home/header-banner.png
@@ -93,8 +97,10 @@ jobs:
             -e DB_USERNAME=root \
             -e DB_PASSWORD=root \
             -e CMS_STATIC_ROOT=/static-baseline \
+            -e CMS_STORAGE_ROOT=/uploads \
             -v "$GITHUB_WORKSPACE/backend/build/libs:/app:ro" \
             -v "$GITHUB_WORKSPACE/runtime-static:/static-baseline" \
+            -v "$GITHUB_WORKSPACE/runtime-uploads:/uploads" \
             eclipse-temurin:21-jre-alpine-3.23 \
             java -jar /app/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar
 
@@ -164,10 +170,10 @@ jobs:
           set -euo pipefail
           docker rm -f cms-backend || true
           docker run --rm --network host mysql:8.4 \
-            mysql -h127.0.0.1 -uroot -proot -e 'DROP DATABASE IF EXISTS jilinjobs_cms; CREATE DATABASE jilinjobs_cms CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;'
+            mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot -e 'DROP DATABASE IF EXISTS jilinjobs_cms; CREATE DATABASE jilinjobs_cms CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;'
 
-          sudo rm -rf runtime-static
-          mkdir -p runtime-static
+          sudo rm -rf runtime-static runtime-uploads
+          mkdir -p runtime-static runtime-uploads
           cp -a site-baseline/static/. runtime-static/
 
           docker run -d --name cms-backend --network host \
@@ -175,8 +181,10 @@ jobs:
             -e DB_USERNAME=root \
             -e DB_PASSWORD=root \
             -e CMS_STATIC_ROOT=/static-baseline \
+            -e CMS_STORAGE_ROOT=/uploads \
             -v "$GITHUB_WORKSPACE/backend/build/libs:/app:ro" \
             -v "$GITHUB_WORKSPACE/runtime-static:/static-baseline" \
+            -v "$GITHUB_WORKSPACE/runtime-uploads:/uploads" \
             eclipse-temurin:21-jre-alpine-3.23 \
             java -jar /app/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar
 
@@ -193,30 +201,103 @@ jobs:
           curl --fail --silent http://127.0.0.1:5173/static/brand/site-favicon.png > /dev/null
           test "$(find runtime-static -maxdepth 1 -type d -name 'verification-*' | wc -l)" -eq 0
 
-      - name: 准备 Human Review 示例内容
+      - name: 下载并导入 EU-29 真实党建历史 Snapshot
+        if: env.EU29_REAL_PARTY == 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          DB_USERNAME: root
+          DB_PASSWORD: root
+          CMS_STORAGE_ROOT: ${{ github.workspace }}/runtime-uploads
+          CMS_STATIC_ROOT: ${{ github.workspace }}/runtime-static
+        run: |
+          set -euo pipefail
+          pointer=.github/review/eu29-party-snapshot.json
+          artifact_id=$(jq -r '.artifactId' "$pointer")
+          expected_digest=$(jq -r '.artifactDigest' "$pointer")
+          expected_sha=${expected_digest#sha256:}
+
+          metadata=$(curl --fail --silent --show-error \
+            -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+            -H 'Accept: application/vnd.github+json' \
+            -H 'X-GitHub-Api-Version: 2022-11-28' \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/artifacts/${artifact_id}")
+          test "$(echo "$metadata" | jq -r '.expired')" = "false"
+          test "$(echo "$metadata" | jq -r '.digest')" = "$expected_digest"
+
+          curl --fail --location --silent --show-error --retry 5 --retry-delay 2 --retry-all-errors \
+            -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+            -H 'Accept: application/vnd.github+json' \
+            -H 'X-GitHub-Api-Version: 2022-11-28' \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/artifacts/${artifact_id}/zip" \
+            -o eu29-party-review-snapshot.zip
+          echo "${expected_sha}  eu29-party-review-snapshot.zip" | sha256sum -c -
+
+          rm -rf eu29-party-review-snapshot
+          mkdir -p eu29-party-review-snapshot
+          unzip -q eu29-party-review-snapshot.zip -d eu29-party-review-snapshot
+          snapshot_root="$GITHUB_WORKSPACE/eu29-party-review-snapshot/data-migrations/party/v1/generated"
+          test -f "$snapshot_root/articles.ndjson"
+          test -f "$snapshot_root/carousel.json"
+          test -f "$snapshot_root/reports/reconciliation.json"
+
+          node - "$pointer" "$snapshot_root" <<'NODE'
+          const fs = require('fs')
+          const [pointerPath, root] = process.argv.slice(2)
+          const pointer = JSON.parse(fs.readFileSync(pointerPath, 'utf8'))
+          const report = JSON.parse(fs.readFileSync(`${root}/reports/reconciliation.json`, 'utf8'))
+          const carousel = JSON.parse(fs.readFileSync(`${root}/carousel.json`, 'utf8'))
+          if (report.normalizedRecords !== pointer.articles || report.unresolved !== 0) throw new Error(JSON.stringify(report))
+          if (carousel.items.length !== pointer.carouselItems) throw new Error(`carousel=${carousel.items.length}`)
+          for (const [alias, expected] of Object.entries(pointer.columns)) {
+            const scope = report.scopes.find(item => item.columnAlias === alias)
+            if (!scope || scope.uniqueCount !== expected) throw new Error(`${alias}: ${scope?.uniqueCount} != ${expected}`)
+          }
+          NODE
+
+          (cd backend && gradle importPartyHistoricalContent --args="../eu29-party-review-snapshot/data-migrations/party/v1/generated" --no-daemon) | tee eu29-review-article-import.log
+          (cd backend && gradle importPartyCarousel --args="../eu29-party-review-snapshot/data-migrations/party/v1/generated" --no-daemon) | tee eu29-review-carousel-import.log
+
+          python3 - <<'PY'
+          import json, re
+          from pathlib import Path
+          pointer=json.loads(Path('.github/review/eu29-party-snapshot.json').read_text(encoding='utf-8'))
+          article_text=Path('eu29-review-article-import.log').read_text(encoding='utf-8')
+          article=json.loads(re.findall(r'EU29_IMPORT_REPORT (\{.*\})', article_text)[-1])
+          assert article['total']==pointer['articles'] and article['created']==pointer['articles'], article
+          assert article['skipped']==0 and article['conflicts']==0 and article['invalid']==0, article
+          carousel_text=Path('eu29-review-carousel-import.log').read_text(encoding='utf-8')
+          carousel=json.loads(re.findall(r'EU29_CAROUSEL_IMPORT_REPORT (\{.*\})', carousel_text)[-1])
+          assert carousel['total']==pointer['carouselItems'] and carousel['created']==pointer['carouselItems'], carousel
+          assert carousel['skipped']==0 and carousel['conflicts']==0 and carousel['invalid']==0, carousel
+          PY
+
+          docker run --rm --network host mysql:8.4 \
+            mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT c.alias,COUNT(a.id) FROM cms_column c LEFT JOIN cms_article a ON a.column_id=c.id AND a.status='PUBLISHED' WHERE c.alias IN ('party-voice','party-work','party-rules','party-study') GROUP BY c.alias ORDER BY c.alias" \
+            | tee eu29-review-column-counts.tsv
+          node - <<'NODE'
+          const fs=require('fs')
+          const pointer=require('./.github/review/eu29-party-snapshot.json')
+          const rows=fs.readFileSync('eu29-review-column-counts.tsv','utf8').trim().split(/\n/).map(line=>line.split('\t'))
+          if (rows.length !== 4) throw new Error(`Party column rows=${rows.length}`)
+          for (const [alias,count] of rows) if (Number(count)!==pointer.columns[alias]) throw new Error(`${alias}: ${count} != ${pointer.columns[alias]}`)
+          NODE
+
+      - name: 准备 Human Review 主站示例内容
         run: |
           set -euo pipefail
           columns=$(curl --fail --silent http://127.0.0.1:5173/api/admin/columns)
           notice_id=$(echo "$columns" | jq -r '.[] | select(.alias == "notice") | .id' | head -1)
           employment_id=$(echo "$columns" | jq -r '.[] | select(.alias == "employment-news") | .id' | head -1)
           recruitment_id=$(echo "$columns" | jq -r '.[] | select(.alias == "recruitment-announcement") | .id' | head -1)
-          party_voice_id=$(echo "$columns" | jq -r '.[] | select(.alias == "party-voice") | .id' | head -1)
-          party_work_id=$(echo "$columns" | jq -r '.[] | select(.alias == "party-work") | .id' | head -1)
-          party_rules_id=$(echo "$columns" | jq -r '.[] | select(.alias == "party-rules") | .id' | head -1)
-          party_study_id=$(echo "$columns" | jq -r '.[] | select(.alias == "party-study") | .id' | head -1)
           test -n "$notice_id"; test -n "$employment_id"; test -n "$recruitment_id"
-          test -n "$party_voice_id"; test -n "$party_work_id"; test -n "$party_rules_id"; test -n "$party_study_id"
-
-          lists=$(curl --fail --silent http://127.0.0.1:5173/api/admin/lists)
-          party_carousel_id=$(echo "$lists" | jq -r '.[] | select(.code == "PARTY_CAROUSEL") | .id' | head -1)
-          test -n "$party_carousel_id"
 
           create_article() {
             column_id="$1"; title="$2"; published="$3"; source="${4:-Human Admin Review Fixture}"
-            payload=$(jq -n --argjson columnId "$column_id" --arg title "$title" --arg published "$published" --arg source "$source" '{columnId:$columnId,title:$title,bodyHtml:"<p>人工评审示例内容，用于验证编辑、发布与公开展示闭环；该内容不属于历史迁移数据。</p><p>页面结构、栏目归属和跳转行为应与正式党员之家内容保持一致。</p>",source:$source,publishDate:$published,pinned:false,recommended:false,sortOrder:0,coverResourceId:null,bodyImageResourceIds:[],attachmentResourceIds:[]}')
+            payload=$(jq -n --argjson columnId "$column_id" --arg title "$title" --arg published "$published" --arg source "$source" '{columnId:$columnId,title:$title,bodyHtml:"<p>人工评审示例内容，用于验证编辑、发布与公开展示闭环。</p>",source:$source,publishDate:$published,pinned:false,recommended:false,sortOrder:0,coverResourceId:null,bodyImageResourceIds:[],attachmentResourceIds:[]}')
             article_id=$(curl --fail --silent -H 'Content-Type: application/json' -d "$payload" http://127.0.0.1:5173/api/admin/articles | jq -r '.id')
             curl --fail --silent -X POST "http://127.0.0.1:5173/api/admin/articles/${article_id}/publish" > /dev/null
-            echo "$article_id"
           }
 
           create_external_article() {
@@ -226,48 +307,89 @@ jobs:
             curl --fail --silent -X POST "http://127.0.0.1:5173/api/admin/articles/${article_id}/publish" > /dev/null
           }
 
-          create_carousel_item() {
-            title="$1"; sort_order="$2"; url="$3"
-            payload=$(jq -n --arg title "$title" --arg url "$url" --argjson sortOrder "$sort_order" '{title:$title,subtitle:"人工评审示例（非历史迁移内容）",url:$url,imagePath:"/static/home/carousel-01.jpg",openMode:"DEFAULT",sortOrder:$sortOrder,enabled:true,extraJson:null}')
-            curl --fail --silent -H 'Content-Type: application/json' -d "$payload" "http://127.0.0.1:5173/api/admin/lists/${party_carousel_id}/items" > /dev/null
-          }
-
-          create_article "$notice_id" '管理端人工评审：就业服务工作通知' '2026-08-28' > /dev/null
-          create_article "$notice_id" '管理端人工评审：毕业生就业手续办理提示' '2026-08-26' > /dev/null
-          create_article "$employment_id" '管理端人工评审：访企拓岗促就业专项行动' '2026-08-27' > /dev/null
+          create_article "$notice_id" '管理端人工评审：就业服务工作通知' '2026-08-28'
+          create_article "$notice_id" '管理端人工评审：毕业生就业手续办理提示' '2026-08-26'
+          create_article "$employment_id" '管理端人工评审：访企拓岗促就业专项行动' '2026-08-27'
           create_external_article "$recruitment_id" '管理端人工评审：高校毕业生专场招聘公告' '2026-08-28' 'https://example.com/review/recruitment-1'
           create_external_article "$recruitment_id" '管理端人工评审：重点单位招聘公告' '2026-08-24' 'https://example.com/review/recruitment-2'
 
-          party_voice_carousel_article_id=$(create_article "$party_voice_id" '党员之家人工评审示例：深入学习贯彻重要讲话精神' '2026-09-01' '党员之家 Human Review Fixture')
-          create_article "$party_voice_id" '党员之家人工评审示例：推动高校党建与就业服务融合发展' '2026-08-31' '党员之家 Human Review Fixture' > /dev/null
-          create_article "$party_voice_id" '党员之家人工评审示例：持续加强基层党组织建设' '2026-08-30' '党员之家 Human Review Fixture' > /dev/null
-          create_external_article "$party_voice_id" '党员之家人工评审示例外链：共产党员网' '2026-08-29' 'https://www.12371.cn/' '党员之家 Human Review Fixture'
+      - name: 准备非 EU-29 的党建示例内容
+        if: env.EU29_REAL_PARTY != 'true'
+        run: |
+          set -euo pipefail
+          columns=$(curl --fail --silent http://127.0.0.1:5173/api/admin/columns)
+          party_voice_id=$(echo "$columns" | jq -r '.[] | select(.alias == "party-voice") | .id' | head -1)
+          party_work_id=$(echo "$columns" | jq -r '.[] | select(.alias == "party-work") | .id' | head -1)
+          party_rules_id=$(echo "$columns" | jq -r '.[] | select(.alias == "party-rules") | .id' | head -1)
+          party_study_id=$(echo "$columns" | jq -r '.[] | select(.alias == "party-study") | .id' | head -1)
+          lists=$(curl --fail --silent http://127.0.0.1:5173/api/admin/lists)
+          party_carousel_id=$(echo "$lists" | jq -r '.[] | select(.code == "PARTY_CAROUSEL") | .id' | head -1)
+          test -n "$party_voice_id"; test -n "$party_work_id"; test -n "$party_rules_id"; test -n "$party_study_id"; test -n "$party_carousel_id"
 
-          party_work_carousel_article_id=$(create_article "$party_work_id" '党员之家人工评审示例：中心开展主题党日活动' '2026-09-02' '党员之家 Human Review Fixture')
-          create_article "$party_work_id" '党员之家人工评审示例：召开党建工作专题学习会' '2026-09-01' '党员之家 Human Review Fixture' > /dev/null
-          create_article "$party_work_id" '党员之家人工评审示例：推进党建业务融合重点任务' '2026-08-31' '党员之家 Human Review Fixture' > /dev/null
-          create_article "$party_work_id" '党员之家人工评审示例：开展党员志愿服务活动' '2026-08-30' '党员之家 Human Review Fixture' > /dev/null
-          create_article "$party_work_id" '党员之家人工评审示例：基层联系点调研交流' '2026-08-29' '党员之家 Human Review Fixture' > /dev/null
-          create_article "$party_work_id" '党员之家人工评审示例：支部集中学习研讨' '2026-08-28' '党员之家 Human Review Fixture' > /dev/null
+          create_article() {
+            column_id="$1"; title="$2"; published="$3"
+            payload=$(jq -n --argjson columnId "$column_id" --arg title "$title" --arg published "$published" '{columnId:$columnId,title:$title,bodyHtml:"<p>党员之家人工评审示例内容；该内容不属于历史迁移数据。</p>",source:"党员之家 Human Review Fixture",publishDate:$published,pinned:false,recommended:false,sortOrder:0,coverResourceId:null,bodyImageResourceIds:[],attachmentResourceIds:[]}')
+            article_id=$(curl --fail --silent -H 'Content-Type: application/json' -d "$payload" http://127.0.0.1:5173/api/admin/articles | jq -r '.id')
+            curl --fail --silent -X POST "http://127.0.0.1:5173/api/admin/articles/${article_id}/publish" > /dev/null
+            echo "$article_id"
+          }
 
-          party_rules_carousel_article_id=$(create_article "$party_rules_id" '党员之家人工评审示例：党规党章学习资料（一）' '2026-08-27' '党员之家 Human Review Fixture')
-          create_article "$party_rules_id" '党员之家人工评审示例：党规党章学习资料（二）' '2026-08-26' '党员之家 Human Review Fixture' > /dev/null
-          create_article "$party_rules_id" '党员之家人工评审示例：党规党章学习资料（三）' '2026-08-25' '党员之家 Human Review Fixture' > /dev/null
+          voice_id=$(create_article "$party_voice_id" '党员之家人工评审示例：深入学习贯彻重要讲话精神' '2026-09-01')
+          work_id=$(create_article "$party_work_id" '党员之家人工评审示例：中心开展主题党日活动' '2026-09-02')
+          rules_id=$(create_article "$party_rules_id" '党员之家人工评审示例：党规党章学习资料' '2026-08-27')
+          study_id=$(create_article "$party_study_id" '党员之家人工评审示例：理论学习专题' '2026-08-27')
+          for item in "示例轮播一:$voice_id:0" "示例轮播二:$work_id:10" "示例轮播三:$rules_id:20" "示例轮播四:$study_id:30"; do
+            IFS=: read -r title article_id sort_order <<< "$item"
+            payload=$(jq -n --arg title "$title" --arg url "/party/article/${article_id}" --argjson sortOrder "$sort_order" '{title:$title,subtitle:"人工评审示例（非历史迁移内容）",url:$url,imagePath:"/static/home/carousel-01.jpg",openMode:"DEFAULT",sortOrder:$sortOrder,enabled:true,extraJson:null}')
+            curl --fail --silent -H 'Content-Type: application/json' -d "$payload" "http://127.0.0.1:5173/api/admin/lists/${party_carousel_id}/items" > /dev/null
+          done
 
-          party_study_carousel_article_id=$(create_article "$party_study_id" '党员之家人工评审示例：理论学习专题（一）' '2026-08-27' '党员之家 Human Review Fixture')
-          create_article "$party_study_id" '党员之家人工评审示例：理论学习专题（二）' '2026-08-26' '党员之家 Human Review Fixture' > /dev/null
-          create_article "$party_study_id" '党员之家人工评审示例：理论学习专题（三）' '2026-08-25' '党员之家 Human Review Fixture' > /dev/null
-
-          create_carousel_item '党员之家人工评审示例轮播（一）' 0 "/party/article/${party_voice_carousel_article_id}"
-          create_carousel_item '党员之家人工评审示例轮播（二）' 10 "/party/article/${party_work_carousel_article_id}"
-          create_carousel_item '党员之家人工评审示例轮播（三）' 20 "/party/article/${party_rules_carousel_article_id}"
-          create_carousel_item '党员之家人工评审示例轮播（四）' 30 "/party/article/${party_study_carousel_article_id}"
-
-          curl --fail --silent 'http://127.0.0.1:5173/api/public/articles?page=0&size=50' | jq --exit-status '.total >= 20' > /dev/null
-          curl --fail --silent http://127.0.0.1:5173/api/public/lists/by-code/PARTY_CAROUSEL \
-            | jq --exit-status '(.items | length == 4) and all(.items[]; (.url // "") | test("^/party/article/[0-9]+$"))' > /dev/null
+      - name: 验证 Human Review Runtime 数据
+        run: |
+          set -euo pipefail
           curl --fail --silent http://127.0.0.1:5173/admin/articles | grep -qi '<html'
           curl --fail --silent http://127.0.0.1:5173/party/ | grep -qi '<html'
+          if [ "$EU29_REAL_PARTY" = "true" ]; then
+            pointer=.github/review/eu29-party-snapshot.json
+            expected=$(jq -r '.articles' "$pointer")
+            total=$(curl --fail --silent 'http://127.0.0.1:5173/api/public/articles?page=0&size=1' | jq -r '.total')
+            test "$total" -ge "$expected"
+            curl --fail --silent http://127.0.0.1:5173/api/public/lists/by-code/PARTY_CAROUSEL \
+              | jq --argjson expected "$(cat "$pointer")" --exit-status '
+                  (.items | length == $expected.carouselItems)
+                  and ([.items[].title] == $expected.carouselTitles)
+                  and all(.items[]; (.imagePath // "") | startswith("/static/migrated/party/carousel/"))
+                  and all(.items[]; .openMode == "NEW_WINDOW")' > /dev/null
+          else
+            curl --fail --silent http://127.0.0.1:5173/api/public/lists/by-code/PARTY_CAROUSEL \
+              | jq --exit-status '(.items | length == 4) and all(.items[]; (.url // "") | test("^/party/article/[0-9]+$"))' > /dev/null
+          fi
+
+      - name: 执行 EU-29 真实迁移 Runtime Browser 验证
+        if: env.EU29_REAL_PARTY == 'true'
+        run: |
+          docker run --rm --init --ipc=host --network host \
+            -e CI=true \
+            -e CI_EXTERNAL_WEB_SERVER=true \
+            -e PARTY_MIGRATION_RUNTIME=true \
+            -v "$GITHUB_WORKSPACE/frontend/public-site:/work" \
+            -w /work \
+            mcr.microsoft.com/playwright:v1.61.0-noble \
+            bash -lc 'npx playwright test tests/e2e/party-migration-runtime.spec.ts --project=chromium --reporter=line'
+
+      - name: 上传 EU-29 Human Review 证据
+        if: always() && env.EU29_REAL_PARTY == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: eu29-party-human-review-evidence
+          path: |
+            .github/review/eu29-party-snapshot.json
+            eu29-review-article-import.log
+            eu29-review-carousel-import.log
+            eu29-review-column-counts.tsv
+            frontend/public-site/test-results
+          if-no-files-found: warn
+          retention-days: 7
 
       - name: 下载 frpc
         run: |
@@ -301,22 +423,18 @@ jobs:
             ./frp/frpc -c ./frp/frpc.toml > frpc.log 2>&1 &
             FRPC_PID=$!
             sleep 5
-
             if kill -0 "$FRPC_PID" 2>/dev/null && grep -q "start proxy success" frpc.log; then
               echo "frpc 隧道已建立"
               exit 0
             fi
-
             cat frpc.log
             kill "$FRPC_PID" 2>/dev/null || true
             wait "$FRPC_PID" 2>/dev/null || true
-
             if grep -q "already exists" frpc.log && [ "$attempt" -lt 6 ]; then
               echo "固定评审代理尚未从上一实例释放，5 秒后重试（${attempt}/6）"
               sleep 5
               continue
             fi
-
             echo "frpc 隧道未建立"
             exit 1
           done
@@ -344,15 +462,22 @@ jobs:
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/public-institution.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/wechat-qr.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/admin/columns | jq --exit-status 'length > 0' > /dev/null
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors 'http://review.cc-lotus.info/api/public/articles?page=0&size=50' | jq --exit-status '.total >= 20' > /dev/null
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/public/lists/by-code/PARTY_CAROUSEL \
-            | jq --exit-status '(.items | length == 4) and all(.items[]; (.url // "") | test("^/party/article/[0-9]+$"))' > /dev/null
+          if [ "$EU29_REAL_PARTY" = "true" ]; then
+            curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/public/lists/by-code/PARTY_CAROUSEL \
+              | jq --exit-status '(.items | length == 4) and all(.items[]; (.imagePath // "") | startswith("/static/migrated/party/carousel/"))' > /dev/null
+          else
+            curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/public/lists/by-code/PARTY_CAROUSEL \
+              | jq --exit-status '(.items | length == 4)' > /dev/null
+          fi
 
       - name: 输出评审地址
         run: |
           echo "公开站人工评审地址：http://review.cc-lotus.info/"
           echo "中心党建人工评审地址：http://review.cc-lotus.info/party/"
           echo "管理端人工评审地址：http://review.cc-lotus.info/admin/"
+          if [ "$EU29_REAL_PARTY" = "true" ]; then
+            echo "EU-29：中心党建已使用真实历史迁移 Snapshot；主站其他栏目继续使用人工评审示例数据。"
+          fi
 
       - name: 保持环境运行
         run: |
