@@ -60,7 +60,12 @@ class PartyThemeEducationRecordImporter(
             ?: return PartyRecordImportResult(record.source.legacyKey, PartyRecordImportStatus.INVALID, message = "目标栏目不存在：${record.target.columnAlias}")
         if (!column.enabled) return PartyRecordImportResult(record.source.legacyKey, PartyRecordImportStatus.INVALID, message = "目标栏目已停用：${record.target.columnAlias}")
 
-        val verifiedResources = record.resources.map { resource -> resource to verifiedSnapshotFile(snapshotRoot, resource) }
+        // Canonical resources preserve source-reference occurrences. The same source image may
+        // therefore appear multiple times in resources[] with the same migration token. Runtime
+        // storage/Article associations are identity-based, so upload each stable token once and
+        // let the first replacement rewrite every matching body occurrence.
+        val verifiedResources = record.resources.distinctBy { it.token }
+            .map { resource -> resource to verifiedSnapshotFile(snapshotRoot, resource) }
         var bodyHtml = record.content.bodyHtml
         val bodyImageIds = mutableListOf<Long>()
         val attachmentIds = mutableListOf<Long>()
@@ -129,7 +134,12 @@ class PartyThemeEducationRecordImporter(
         record.resources.forEach { resource ->
             require(resource.role in setOf("BODY_IMAGE", "ATTACHMENT")) { "未知迁移资源角色：${resource.role}" }
             require(resource.sha256.matches(EU30_SHA256)) { "资源 SHA-256 不合法：${resource.snapshotPath}" }
-            require(resource.token.matches(Regex("migration-(resource|attachment)://${resource.sha256}"))) { "迁移资源 token 与 SHA-256 不一致" }
+            val expectedToken = when (resource.role) {
+                "BODY_IMAGE" -> "migration-resource://${resource.sha256}"
+                "ATTACHMENT" -> "migration-attachment://${resource.sha256}"
+                else -> error("unreachable")
+            }
+            require(resource.token == expectedToken) { "迁移资源 token 与角色/SHA-256 不一致" }
             require(resource.sizeBytes >= 0) { "资源大小不能为负数" }
         }
         when (record.target.articleType) {
