@@ -178,7 +178,12 @@ onUnmounted(() => {
         >
           <Transition name="home-carousel-fade" mode="out-in">
             <div v-if="carouselItem" :key="carouselItem.id" class="home-carousel-slide">
-              <router-link v-if="carouselInternalRoute(carouselItem)" :to="carouselInternalRoute(carouselItem)!">
+              <router-link
+                v-if="carouselInternalRoute(carouselItem)"
+                :to="carouselInternalRoute(carouselItem)!"
+                :target="newWindow(carouselItem.openMode, carouselInternalRoute(carouselItem)) ? '_blank' : undefined"
+                :rel="newWindow(carouselItem.openMode, carouselInternalRoute(carouselItem)) ? 'noopener noreferrer' : undefined"
+              >
                 <img :src="carouselImage(carouselItem)" :alt="carouselItem.title || '首页轮播图'" @error="markCarouselImageFailed(carouselItem.id)">
                 <span v-if="carouselItem.title" class="carousel-caption">{{ carouselItem.title }}</span>
               </router-link>
