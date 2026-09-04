@@ -1,0 +1,85 @@
+name: EU-29 Canonical Dataset Promotion
+
+on:
+  push:
+    branches:
+      - feature/eu-29-party-history-migration
+    paths:
+      - .github/workflows/eu29-promote-canonical.yml
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  promote:
+    name: Promote accepted EU-29 snapshot to canonical dataset
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Verify accepted artifact identity
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          digest="$(gh api repos/${{ github.repository }}/actions/artifacts/9921976616 --jq '.digest')"
+          test "$digest" = 'sha256:230ac0df997b3dc913ed38503a8289eae30d8bb0a455fd858e388ddc27066148'
+          echo "artifact digest verified: $digest"
+
+      - name: Download accepted Human Review snapshot
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/eu29-accepted
+          mkdir -p /tmp/eu29-accepted
+          gh run download 33831279817 \
+            --repo '${{ github.repository }}' \
+            --name eu29-party-migration-evidence \
+            --dir /tmp/eu29-accepted
+          test -f /tmp/eu29-accepted/data-migrations/party/v1/generated/articles.ndjson
+          test -f /tmp/eu29-accepted/data-migrations/party/v1/generated/carousel.json
+
+      - name: Promote without contacting legacy source
+        run: |
+          set -euo pipefail
+          python3 data-migrations/scripts/promote-eu29-canonical.py \
+            /tmp/eu29-accepted/data-migrations/party/v1/generated \
+            data-migrations/party/v1 \
+            --generated-at '2026-09-04T03:04:06.772Z' \
+            --artifact-digest 'sha256:230ac0df997b3dc913ed38503a8289eae30d8bb0a455fd858e388ddc27066148'
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('data-migrations/party/v1')
+          summary=json.load(open(root/'reports/canonical-promotion.json', encoding='utf-8'))
+          assert summary == {
+              'articles': 181,
+              'internal': 120,
+              'external': 61,
+              'uniqueArticleResources': 180,
+              'articleAssetFiles': 180,
+              'carouselItems': 4,
+              'carouselResources': 4,
+              'unresolved': 0,
+          }, summary
+          assert sum(1 for _ in (root/'index.ndjson').open(encoding='utf-8')) == 181
+          assert len(list((root/'articles').glob('*/article.json'))) == 181
+          assert len(list((root/'lists/PARTY_CAROUSEL/items').glob('*/item.json'))) == 4
+          print(json.dumps(summary, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Commit canonical dataset and remove one-shot workflow
+        run: |
+          set -euo pipefail
+          rm .github/workflows/eu29-promote-canonical.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data-migrations/party/v1 .github/workflows/eu29-promote-canonical.yml
+          git status --short
+          git commit -m 'data(migration): 固化 EU-29 canonical 历史数据'
+          git push origin HEAD:${GITHUB_REF_NAME}
