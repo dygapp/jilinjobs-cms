@@ -28,6 +28,7 @@ import java.time.LocalDate
 private val PARTY_ALIASES = setOf("party-voice", "party-work", "party-rules", "party-study")
 private val SHA256 = Regex("[0-9a-f]{64}")
 private val MIGRATION_TOKEN = Regex("migration-(resource|attachment)://[0-9a-f]{64}")
+private val CANONICAL_ASSET_REFERENCE = Regex("""(?i)(?:src|href)=[\"']assets/[^\"']+[\"']""")
 
 @Mapper
 interface ArticleLegacyMappingMapper {
@@ -118,6 +119,11 @@ data class PartyMigrationRecord(
     val evidence: PartyMigrationEvidence,
 )
 
+data class PartyCanonicalIndexEntry(
+    val legacyKey: String,
+    val path: String,
+)
+
 enum class PartyRecordImportStatus { CREATED, SKIPPED, CONFLICT, INVALID }
 
 data class PartyRecordImportResult(
@@ -174,16 +180,18 @@ class PartyMigrationRecordImporter(
             when (resource.role) {
                 "BODY_IMAGE" -> {
                     bodyImageIds += uploaded.id
-                    bodyHtml = bodyHtml.replace(resource.token, "/api/admin/resources/${uploaded.id}/content")
+                    val runtimePath = "/api/admin/resources/${uploaded.id}/content"
+                    bodyHtml = bodyHtml.replace(resource.token, runtimePath).replace(resource.snapshotPath, runtimePath)
                 }
                 "ATTACHMENT" -> {
                     attachmentIds += uploaded.id
-                    bodyHtml = bodyHtml.replace(resource.token, "/api/public/resources/${uploaded.id}/attachment")
+                    val runtimePath = "/api/public/resources/${uploaded.id}/attachment"
+                    bodyHtml = bodyHtml.replace(resource.token, runtimePath).replace(resource.snapshotPath, runtimePath)
                 }
             }
         }
-        if (MIGRATION_TOKEN.containsMatchIn(bodyHtml)) {
-            return PartyRecordImportResult(record.source.legacyKey, PartyRecordImportStatus.INVALID, message = "正文仍存在未解析 migration resource token")
+        if (MIGRATION_TOKEN.containsMatchIn(bodyHtml) || CANONICAL_ASSET_REFERENCE.containsMatchIn(bodyHtml)) {
+            return PartyRecordImportResult(record.source.legacyKey, PartyRecordImportStatus.INVALID, message = "正文仍存在未解析迁移资源引用")
         }
 
         val article = articleService.create(
@@ -280,8 +288,46 @@ class PartyHistoricalContentMigrationService(
     private val recordImporter: PartyMigrationRecordImporter,
 ) {
     fun importSnapshot(snapshotRoot: Path): PartySnapshotImportReport {
+        val canonicalIndex = snapshotRoot.resolve("index.ndjson")
+        val results = if (Files.isRegularFile(canonicalIndex)) {
+            importCanonical(snapshotRoot, canonicalIndex)
+        } else {
+            importLegacy(snapshotRoot)
+        }
+        return PartySnapshotImportReport(
+            total = results.size,
+            created = results.count { it.status == PartyRecordImportStatus.CREATED },
+            skipped = results.count { it.status == PartyRecordImportStatus.SKIPPED },
+            conflicts = results.count { it.status == PartyRecordImportStatus.CONFLICT },
+            invalid = results.count { it.status == PartyRecordImportStatus.INVALID },
+            results = results,
+        )
+    }
+
+    private fun importCanonical(snapshotRoot: Path, indexFile: Path): List<PartyRecordImportResult> {
+        val root = snapshotRoot.toAbsolutePath().normalize()
+        val results = mutableListOf<PartyRecordImportResult>()
+        Files.newBufferedReader(indexFile).useLines { lines ->
+            lines.filter { it.isNotBlank() }.forEachIndexed { index, line ->
+                val result = runCatching {
+                    val entry = objectMapper.readValue(line, PartyCanonicalIndexEntry::class.java)
+                    val articleFile = root.resolve(entry.path).normalize()
+                    require(articleFile.startsWith(root) && Files.isRegularFile(articleFile)) { "Canonical article 不存在或路径越界：${entry.path}" }
+                    val record = Files.newBufferedReader(articleFile).use { reader -> objectMapper.readValue(reader, PartyMigrationRecord::class.java) }
+                    require(record.source.legacyKey == entry.legacyKey) { "Canonical index legacyKey 与 article.json 不一致：${entry.legacyKey}" }
+                    recordImporter.importRecord(articleFile.parent, record)
+                }.getOrElse { error ->
+                    PartyRecordImportResult("index:${index + 1}", PartyRecordImportStatus.INVALID, message = error.message ?: error::class.java.simpleName)
+                }
+                results += result
+            }
+        }
+        return results
+    }
+
+    private fun importLegacy(snapshotRoot: Path): List<PartyRecordImportResult> {
         val file = snapshotRoot.resolve("articles.ndjson")
-        require(Files.isRegularFile(file)) { "缺少 Snapshot articles.ndjson：$file" }
+        require(Files.isRegularFile(file)) { "缺少 Canonical index.ndjson 或 legacy articles.ndjson：$snapshotRoot" }
         val results = mutableListOf<PartyRecordImportResult>()
         Files.newBufferedReader(file).useLines { lines ->
             lines.filter { it.isNotBlank() }.forEachIndexed { index, line ->
@@ -294,14 +340,7 @@ class PartyHistoricalContentMigrationService(
                 results += result
             }
         }
-        return PartySnapshotImportReport(
-            total = results.size,
-            created = results.count { it.status == PartyRecordImportStatus.CREATED },
-            skipped = results.count { it.status == PartyRecordImportStatus.SKIPPED },
-            conflicts = results.count { it.status == PartyRecordImportStatus.CONFLICT },
-            invalid = results.count { it.status == PartyRecordImportStatus.INVALID },
-            results = results,
-        )
+        return results
     }
 }
 
