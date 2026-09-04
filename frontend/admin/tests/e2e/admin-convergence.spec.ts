@@ -91,7 +91,7 @@ test('EU-21：导航位置、条目图标与树形主数据形成管理闭环', 
   await page.keyboard.press('Escape')
 })
 
-test('EU-21：通用列表只维护数据属性、图片契约并复用统一图片上传', async ({ page, request }) => {
+test('EU-30：通用列表维护 LINK / ARTICLE 投放并复用统一图片策略', async ({ page, request }) => {
   const response=await request.get('/api/admin/lists');expect(response.ok()).toBeTruthy()
   const definitions=await response.json() as Array<{id:number;code:string;imagePolicy:string}>
   expect(definitions.find(item=>item.code==='HOME_CAROUSEL')?.imagePolicy).toBe('REQUIRED')
@@ -111,6 +111,8 @@ test('EU-21：通用列表只维护数据属性、图片契约并复用统一图
   await carouselRow.getByRole('button',{name:'编辑'}).click()
   const dialog=page.getByRole('dialog',{name:'编辑列表项'})
   await expect(dialog.getByText('标题作为后台识别名称保留')).toBeVisible()
+  await expect(dialog.getByTestId('list-item-source-type')).toContainText('链接')
+  await expect(dialog.getByTestId('list-item-source-type')).toContainText('文章')
   await dialog.getByTestId('image-resource-upload').setInputFiles({
     name:'e2e-list-image.png',
     mimeType:'image/png',
@@ -122,23 +124,27 @@ test('EU-21：通用列表只维护数据属性、图片契约并复用统一图
   await page.getByTestId('cms-list-SITE_RELATED').click()
   await expect(page.getByTestId('active-list-image-policy')).toContainText('不使用图片')
   await page.getByTestId('add-cms-list-item').click()
-  await expect(page.getByRole('dialog',{name:'新增列表项'}).getByTestId('list-image-disabled')).toBeVisible()
-  await page.getByRole('dialog',{name:'新增列表项'}).getByRole('button',{name:'取消'}).click()
+  const noneDialog=page.getByRole('dialog',{name:'新增列表项'})
+  await expect(noneDialog.getByTestId('list-item-source-type')).toBeVisible()
+  await expect(noneDialog.getByTestId('list-item-source-type')).toContainText('链接')
+  await expect(noneDialog.getByTestId('list-item-source-type')).toContainText('文章')
+  await expect(noneDialog.getByTestId('image-resource-picker')).toHaveCount(0)
+  await noneDialog.getByRole('button',{name:'取消'}).click()
 })
 
-test('EU-21：列表图片策略在服务端约束列表项数据', async ({ request }, testInfo) => {
+test('EU-30：列表图片策略在服务端按 LINK / ARTICLE 数据来源约束', async ({ request }, testInfo) => {
   const suffix=`${Date.now()}-${testInfo.retry}`
   const requiredResponse=await request.post('/api/admin/lists',{data:{code:`E2E_REQUIRED_${suffix.replaceAll('-','_')}`,name:'E2E 图片必填',groupCode:'E2E',imagePolicy:'REQUIRED',description:'',sortOrder:990,enabled:true,system:false}})
   expect(requiredResponse.ok()).toBeTruthy()
   const requiredList=await requiredResponse.json() as {id:number}
-  const missingImage=await request.post(`/api/admin/lists/${requiredList.id}/items`,{data:{title:'无图项目',subtitle:null,url:null,imagePath:null,openMode:'DEFAULT',sortOrder:0,enabled:true,extraJson:null}})
+  const missingImage=await request.post(`/api/admin/lists/${requiredList.id}/items`,{data:{sourceType:'LINK',articleId:null,title:'无图项目',subtitle:null,url:null,imagePath:null,imageResourceId:null,openMode:'DEFAULT',sortOrder:0,enabled:true,extraJson:null}})
   expect(missingImage.ok()).toBeFalsy()
-  expect((await missingImage.json() as {message:string}).message).toContain('要求每个列表项设置图片')
+  expect((await missingImage.json() as {message:string}).message).toContain('链接型列表项设置图片')
 
   const noneResponse=await request.post('/api/admin/lists',{data:{code:`E2E_NONE_${suffix.replaceAll('-','_')}`,name:'E2E 不使用图片',groupCode:'E2E',imagePolicy:'NONE',description:'',sortOrder:991,enabled:true,system:false}})
   expect(noneResponse.ok()).toBeTruthy()
   const noneList=await noneResponse.json() as {id:number}
-  const unexpectedImage=await request.post(`/api/admin/lists/${noneList.id}/items`,{data:{title:'错误带图项目',subtitle:null,url:null,imagePath:'/static/home/carousel-01.jpg',openMode:'DEFAULT',sortOrder:0,enabled:true,extraJson:null}})
+  const unexpectedImage=await request.post(`/api/admin/lists/${noneList.id}/items`,{data:{sourceType:'LINK',articleId:null,title:'错误带图项目',subtitle:null,url:null,imagePath:'/static/home/carousel-01.jpg',imageResourceId:null,openMode:'DEFAULT',sortOrder:0,enabled:true,extraJson:null}})
   expect(unexpectedImage.ok()).toBeFalsy()
   expect((await unexpectedImage.json() as {message:string}).message).toContain('不使用图片')
 })
@@ -163,7 +169,7 @@ test('EU-21：宣传展示承载首页运营数据并保留 NO_LINK 行为', asy
   await page.keyboard.press('Escape')
 })
 
-test('EU-21：网站属性使用资源分组、整数展示参数并阻止非法值', async ({ page, request }) => {
+test('EU-30：网站属性使用统一轮播参数并阻止非法整数值', async ({ page, request }) => {
   const groupsResponse=await request.get('/api/admin/site-config/groups');expect(groupsResponse.ok()).toBeTruthy()
   const groups=await groupsResponse.json() as Array<{code:string;name:string;order:number}>
   expect(groups.map(group=>group.code)).toEqual(['BASIC','BRAND','CONTACT','FOOTER','PRESENTATION','GENERAL'])
@@ -179,14 +185,15 @@ test('EU-21：网站属性使用资源分组、整数展示参数并阻止非法
   await expect(page.getByTestId('site-property-group-PRESENTATION')).toContainText('展示设置')
   await page.getByTestId('site-property-group-PRESENTATION').click()
   await expect(page.getByTestId('site-property-group-context')).toContainText('展示设置')
-  await page.getByTestId('edit-site-config-value-HOME_CAROUSEL_INTERVAL_SECONDS').click()
+  await page.getByTestId('edit-site-config-value-CAROUSEL_INTERVAL_SECONDS').click()
   const intervalDialog=page.getByTestId('site-config-value-dialog')
-  const intervalEditor=intervalDialog.getByTestId('site-config-HOME_CAROUSEL_INTERVAL_SECONDS')
+  const intervalEditor=intervalDialog.getByTestId('site-config-CAROUSEL_INTERVAL_SECONDS')
   await expect(intervalEditor).toHaveValue('4')
   await intervalEditor.fill('4.5')
-  await intervalDialog.getByTestId('save-site-config-HOME_CAROUSEL_INTERVAL_SECONDS').click()
+  await intervalDialog.getByTestId('save-site-config-CAROUSEL_INTERVAL_SECONDS').click()
   await expect(page.getByText('整数属性必须填写整数',{exact:true})).toBeVisible()
   await intervalDialog.getByRole('button',{name:'取消'}).click()
+  await expect(page.getByTestId('edit-site-config-value-CAROUSEL_MAX_ITEMS')).toBeVisible()
 
   await page.getByTestId('site-property-group-all').click()
   await page.getByTestId(`edit-site-config-value-${key}`).click()
@@ -285,18 +292,18 @@ test('EU-16：文章筛选分页并保持后台发布到公开站闭环', async 
   await page.goto(`/article/${published.id}`);await expect(page.getByRole('heading',{name:published.title})).toBeVisible()
 })
 
-test('EU-21：首页轮播按网站属性中的切换间隔运行', async ({ page, request }, testInfo) => {
+test('EU-30：Main 轮播按统一网站属性中的切换间隔运行', async ({ page, request }, testInfo) => {
   const configResponse=await request.get('/api/admin/site-config');expect(configResponse.ok()).toBeTruthy()
   const config=await configResponse.json() as Array<{key:string;value:string}>
-  const originalInterval=config.find(item=>item.key==='HOME_CAROUSEL_INTERVAL_SECONDS')?.value || '4'
+  const originalInterval=config.find(item=>item.key==='CAROUSEL_INTERVAL_SECONDS')?.value || '4'
   const listsResponse=await request.get('/api/admin/lists');expect(listsResponse.ok()).toBeTruthy()
   const lists=await listsResponse.json() as Array<{id:number;code:string}>
   const carousel=lists.find(item=>item.code==='HOME_CAROUSEL');expect(carousel).toBeTruthy()
   const suffix=`${Date.now()}-${testInfo.retry}`
   let createdId:number|null=null
   try {
-    expect((await request.put('/api/admin/site-config/HOME_CAROUSEL_INTERVAL_SECONDS',{data:{value:'1'}})).ok()).toBeTruthy()
-    const created=await request.post(`/api/admin/lists/${carousel!.id}/items`,{data:{title:`轮播切换验证-${suffix}`,subtitle:null,url:null,imagePath:'/static/home/carousel-01.jpg',openMode:'DEFAULT',sortOrder:999,enabled:true,extraJson:null}})
+    expect((await request.put('/api/admin/site-config/CAROUSEL_INTERVAL_SECONDS',{data:{value:'1'}})).ok()).toBeTruthy()
+    const created=await request.post(`/api/admin/lists/${carousel!.id}/items`,{data:{sourceType:'LINK',articleId:null,title:`轮播切换验证-${suffix}`,subtitle:null,url:null,imagePath:'/static/home/carousel-01.jpg',imageResourceId:null,openMode:'DEFAULT',sortOrder:999,enabled:true,extraJson:null}})
     expect(created.ok()).toBeTruthy()
     createdId=(await created.json() as {id:number}).id
     await page.goto('/')
@@ -307,7 +314,7 @@ test('EU-21：首页轮播按网站属性中的切换间隔运行', async ({ pag
     await expect(active).not.toHaveAttribute('data-carousel-item-id',firstId!,{timeout:3500})
   } finally {
     if(createdId!=null)await request.delete(`/api/admin/lists/${carousel!.id}/items/${createdId}`)
-    await request.put('/api/admin/site-config/HOME_CAROUSEL_INTERVAL_SECONDS',{data:{value:originalInterval}})
+    await request.put('/api/admin/site-config/CAROUSEL_INTERVAL_SECONDS',{data:{value:originalInterval}})
   }
 })
 
