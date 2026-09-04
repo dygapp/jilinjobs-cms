@@ -48,6 +48,7 @@ ARTICLE 投放必须保持以下边界：
 - ARTICLE 只在关联文章处于 `PUBLISHED` 时对公开端有效；
 - 文章撤回后，投放自动从公开列表退出；重新发布后可按既有投放关系恢复；
 - Main 站内目标由前端生成 `/article/{id}`；Party 站内目标生成 `/party/article/{id}`；
+- 列表项既有打开方式仍然有效，ARTICLE 生成站内 canonical route 后也必须遵守 `DEFAULT / SAME_WINDOW / NEW_WINDOW`；
 - 不在 CmsList 中复制第二份文章正文，也不通过文章标题推断关联关系。
 
 ## 3. 图片数据需求
@@ -64,7 +65,8 @@ CmsList `imagePolicy` 继续表示数据要求，不表示视觉布局：
 - 可从正文图片中选择展示图片；
 - 可上传列表专用覆盖图片；
 - 列表专用覆盖图片以 CMS Resource ID 关联，不修改 Article 主题图片；
-- `REQUIRED` 且无法形成有效图片时，Backend / Admin 必须阻止形成无图投放。
+- 正文图片只是后台选择候选，不允许前台运行时隐式寻找“正文第一张”；
+- `REQUIRED` 且无法形成有效图片时，Backend / Admin 必须阻止形成无图投放；已存在的 ARTICLE 后续失去继承图片时必须自动退出 REQUIRED 公开列表，直到重新形成有效图片。
 
 `HOME_CAROUSEL` 与 `PARTY_CAROUSEL` 均为 `imagePolicy=REQUIRED`。
 
@@ -79,7 +81,8 @@ Main 与 Party 使用同一组网站属性：
 - 默认值：`4`；
 - 单位：秒；
 - 正常值必须大于 0；
-- 缺失、非法或不大于 0 时公开端 fallback 为 4 秒。
+- Backend 不接受新写入的 0、负数或非整数；
+- 缺失、非法历史值或不大于 0 时公开端 fallback 为 4 秒。
 
 `HOME_CAROUSEL_INTERVAL_SECONDS` 不再是现行 Runtime 属性，不得继续作为 Main-only 配置依赖。
 
@@ -88,8 +91,10 @@ Main 与 Party 使用同一组网站属性：
 - 分组：`PRESENTATION`；
 - 类型：`INTEGER`；
 - 默认值：`5`；
+- 必须大于 0，Backend 不接受新写入的 0、负数或非整数；
 - 表示单个轮播区域前台最多消费的有效项数量；
-- Backend 允许运营维护多于该数量的记录。
+- Backend 允许运营维护多于该数量的记录；
+- 缺失、非法历史值或不大于 0 时公开端 fallback 为 5。
 
 ## 5. Main / Party 共同行为
 
@@ -101,10 +106,11 @@ Main 与 Party 使用同一组网站属性：
 - 提供手动页码；
 - hover 时暂停；
 - focus 位于轮播内部时暂停；
-- 页面隐藏时暂停；
+- 页面初始即处于隐藏状态时不得启动自动切换，后续页面隐藏时继续暂停；
 - 暂停解除后从当前项继续，不重置到第一项；
 - `prefers-reduced-motion: reduce` 时关闭自动播放并关闭/移除切换动画，但手动页码继续可用；
 - 图片加载失败项退出本次有效集合，并由后续有效项补位；
+- 失败项剔除或最大数量变化时优先按列表项 ID 保持当前正在展示的内容，不因为数组下标位移无意跳转；
 - 全部图片失败时稳定进入空态；
 - EU-30 不新增 swipe；
 - EU-30 不引入第三方 Carousel 依赖。
@@ -134,8 +140,9 @@ EU-30 对原站轮播第二项进行反向追踪后确认：
 1. 先通过稳定 `sourceSystem + legacyKey` 解析迁移文章；
 2. 把轮播项落为 ARTICLE 投放；
 3. 保留原轮播 PNG 作为列表专用覆盖 Resource；
-4. 不使用标题匹配 Runtime 文章；
-5. 不长期依赖旧站详情 URL。
+4. 保留该投放原有 `NEW_WINDOW` 打开方式，但目标改为新系统 Party 文章 canonical route；
+5. 不使用标题匹配 Runtime 文章；
+6. 不长期依赖旧站详情 URL。
 
 ## 8. 迁移证据状态
 
@@ -152,14 +159,15 @@ EU-30 新增主题教育 2 条记录属于增量候选：
 ## 9. Acceptance Criteria
 
 - Runtime 不再依赖 `HOME_CAROUSEL_INTERVAL_SECONDS`；
-- Main / Party 均使用 `CAROUSEL_INTERVAL_SECONDS` 和 `CAROUSEL_MAX_ITEMS`；
+- Main / Party 均使用 `CAROUSEL_INTERVAL_SECONDS` 和 `CAROUSEL_MAX_ITEMS`，管理端拒绝非正整数；
 - CmsListItem 可维护 LINK / ARTICLE；
 - ARTICLE 投放不改变文章栏目归属；
 - ARTICLE 发布状态控制公开可见性；
-- REQUIRED ARTICLE 可继承文章图片或使用列表覆盖 Resource；
-- Main / Party 满足暂停恢复、visibility、reduced-motion、图片失败补位和手动页码行为；
+- ARTICLE canonical route 继续遵守列表项 `openMode`；
+- REQUIRED ARTICLE 可继承文章图片或使用列表覆盖 Resource，失去有效图片后不继续公开；
+- Main / Party 满足暂停恢复、初始及后续 visibility、reduced-motion、图片失败补位、当前项 identity 保持和手动页码行为；
 - Main / Party 保留独立视觉比例与主题样式；
 - `party-theme-education / 主题教育` 存在并属于 Party 内容作用域，但不进入 PartyHome 固定四栏目区域；
-- 历史轮播 position 2 使用 ARTICLE 稳定关系并保留原 PNG 覆盖图；
+- 历史轮播 position 2 使用 ARTICLE 稳定关系并保留原 PNG 覆盖图和 `NEW_WINDOW` 语义；
 - EU-29 acceptedSnapshot 与 EU-30 candidateExtension 的证据状态可独立审计；
 - EU-30 Human Review 通过前，不把增量迁移候选提前声明为最终 accepted。
