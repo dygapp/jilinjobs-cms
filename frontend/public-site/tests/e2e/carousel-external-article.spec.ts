@@ -22,6 +22,7 @@ async function createPlacement(
   articleId: number,
   imageResourceId: number,
   title: string,
+  expectedArticleUrl: string,
 ): Promise<Placement> {
   const list = await listByCode(request, code)
   const response = await request.post(`/api/admin/lists/${list.id}/items`, {
@@ -30,7 +31,7 @@ async function createPlacement(
       articleId,
       title,
       subtitle: null,
-      url: null,
+      url: 'https://example.invalid/list-owned-url-must-not-win',
       imagePath: null,
       imageResourceId,
       openMode: 'DEFAULT',
@@ -41,11 +42,11 @@ async function createPlacement(
   })
   expect(response.ok()).toBeTruthy()
   const item = await response.json() as { id: number; url: string | null; sourceType: string }
-  expect(item).toMatchObject({ sourceType: 'ARTICLE', url: null })
+  expect(item).toMatchObject({ sourceType: 'ARTICLE', url: expectedArticleUrl })
   return { listId: list.id, itemId: item.id }
 }
 
-test('EU-30：EXTERNAL_LINK ARTICLE 轮播使用文章当前外链而不是列表 URL', async ({ page, request }, testInfo) => {
+test('EU-30：EXTERNAL_LINK ARTICLE 轮播跟随文章当前外链而不是列表输入 URL', async ({ page, request }, testInfo) => {
   const suffix = `${Date.now()}-${testInfo.retry}`
   const columnsResponse = await request.get('/api/admin/columns')
   expect(columnsResponse.ok()).toBeTruthy()
@@ -60,44 +61,49 @@ test('EU-30：EXTERNAL_LINK ARTICLE 轮播使用文章当前外链而不是列�
   const image = await imageResponse.json() as { id: number }
 
   const title = `外链文章轮播-${suffix}`
-  const externalUrl = `https://example.com/eu30-carousel/${suffix}`
-  const articleResponse = await request.post('/api/admin/articles', {
-    data: {
-      columnId: theme!.id,
-      title,
-      bodyHtml: '',
-      source: 'EU-30 E2E',
-      articleType: 'EXTERNAL_LINK',
-      externalUrl,
-      publishDate: '2026-09-05',
-      pinned: false,
-      recommended: false,
-      sortOrder: 0,
-      coverResourceId: null,
-      bodyImageResourceIds: [],
-      attachmentResourceIds: [],
-    },
-  })
+  const originalExternalUrl = `https://example.com/eu30-carousel/original/${suffix}`
+  const updatedExternalUrl = `https://example.com/eu30-carousel/current/${suffix}`
+  const articleDraft = {
+    columnId: theme!.id,
+    title,
+    bodyHtml: '',
+    source: 'EU-30 E2E',
+    articleType: 'EXTERNAL_LINK',
+    externalUrl: originalExternalUrl,
+    publishDate: '2026-09-05',
+    pinned: false,
+    recommended: false,
+    sortOrder: 0,
+    coverResourceId: null,
+    bodyImageResourceIds: [],
+    attachmentResourceIds: [],
+  }
+  const articleResponse = await request.post('/api/admin/articles', { data: articleDraft })
   expect(articleResponse.ok()).toBeTruthy()
   const article = await articleResponse.json() as { id: number }
   expect((await request.post(`/api/admin/articles/${article.id}/publish`)).ok()).toBeTruthy()
 
   const placements: Placement[] = []
   try {
-    placements.push(await createPlacement(request, 'HOME_CAROUSEL', article.id, image.id, title))
-    placements.push(await createPlacement(request, 'PARTY_CAROUSEL', article.id, image.id, title))
+    placements.push(await createPlacement(request, 'HOME_CAROUSEL', article.id, image.id, title, originalExternalUrl))
+    placements.push(await createPlacement(request, 'PARTY_CAROUSEL', article.id, image.id, title, originalExternalUrl))
+
+    const updateArticle = await request.put(`/api/admin/articles/${article.id}`, {
+      data: { ...articleDraft, externalUrl: updatedExternalUrl },
+    })
+    expect(updateArticle.ok()).toBeTruthy()
 
     await page.emulateMedia({ reducedMotion: 'reduce' })
     await page.goto('/')
     const mainLink = page.getByTestId('home-carousel-active').getByRole('link', { name: new RegExp(title) })
-    await expect(mainLink).toHaveAttribute('href', externalUrl)
+    await expect(mainLink).toHaveAttribute('href', updatedExternalUrl)
     await expect(mainLink).toHaveAttribute('target', '_blank')
 
     await page.goto('/party/')
     const partyItem = page.getByTestId(`party-carousel-item-${placements[1].itemId}`)
     await expect(partyItem).toBeVisible()
     const partyLink = partyItem.getByRole('link', { name: new RegExp(title) })
-    await expect(partyLink).toHaveAttribute('href', externalUrl)
+    await expect(partyLink).toHaveAttribute('href', updatedExternalUrl)
     await expect(partyLink).toHaveAttribute('target', '_blank')
   } finally {
     for (const placement of placements) {
