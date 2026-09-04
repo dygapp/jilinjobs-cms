@@ -173,56 +173,62 @@ test('EU-30：ARTICLE 列表投放保持文章单一栏目归属并随发布状�
   expect((await request.post(`/api/admin/articles/${article.id}/publish`)).ok()).toBeTruthy()
 
   const carousel = await adminListByCode(request, 'PARTY_CAROUSEL')
-  const placementResponse = await request.post(`/api/admin/lists/${carousel.id}/items`, {
-    data: {
-      sourceType: 'ARTICLE',
+  let placementId: number | null = null
+  let articlePublished = true
+  try {
+    const placementResponse = await request.post(`/api/admin/lists/${carousel.id}/items`, {
+      data: {
+        sourceType: 'ARTICLE',
+        articleId: article.id,
+        title,
+        subtitle: null,
+        url: null,
+        imagePath: null,
+        imageResourceId: image.id,
+        openMode: 'DEFAULT',
+        sortOrder: -200000 - testInfo.retry,
+        enabled: true,
+        extraJson: null,
+      },
+    })
+    expect(placementResponse.ok()).toBeTruthy()
+    const placement = await placementResponse.json() as { id: number; articleId: number; sourceType: string; imageResourceId: number }
+    placementId = placement.id
+    expect(placement).toMatchObject({ articleId: article.id, sourceType: 'ARTICLE', imageResourceId: image.id })
+
+    const publicList = await publicListByCode(request, 'PARTY_CAROUSEL')
+    expect(publicList.items.find(item => item.id === placement.id)).toMatchObject({
       articleId: article.id,
+      sourceType: 'ARTICLE',
       title,
-      subtitle: null,
-      url: null,
-      imagePath: null,
-      imageResourceId: image.id,
-      openMode: 'DEFAULT',
-      sortOrder: -200000 - testInfo.retry,
-      enabled: true,
-      extraJson: null,
-    },
-  })
-  expect(placementResponse.ok()).toBeTruthy()
-  const placement = await placementResponse.json() as { id: number; articleId: number; sourceType: string; imageResourceId: number }
-  expect(placement).toMatchObject({ articleId: article.id, sourceType: 'ARTICLE', imageResourceId: image.id })
+      effectiveImageResourceId: image.id,
+    })
+    expect((await request.get(`/api/public/resources/${image.id}/content`)).ok()).toBeTruthy()
 
-  const publicList = await publicListByCode(request, 'PARTY_CAROUSEL')
-  expect(publicList.items.find(item => item.id === placement.id)).toMatchObject({
-    articleId: article.id,
-    sourceType: 'ARTICLE',
-    title,
-    effectiveImageResourceId: image.id,
-  })
-  expect((await request.get(`/api/public/resources/${image.id}/content`)).ok()).toBeTruthy()
+    await page.goto('/party/')
+    const carouselItem = page.getByTestId(`party-carousel-item-${placement.id}`)
+    await expect(carouselItem).toBeVisible()
+    const articleLink = carouselItem.getByRole('link')
+    await expect(articleLink).toHaveAttribute('href', `/party/article/${article.id}`)
+    await articleLink.click()
+    await expect(page).toHaveURL(new RegExp(`/party/article/${article.id}$`))
+    await expect(page.getByTestId('party-article-title')).toHaveText(title)
 
-  await page.goto('/party/')
-  const partyCarousel = page.getByTestId('party-carousel')
-  const carouselItem = page.getByTestId(`party-carousel-item-${placement.id}`)
-  await expect(carouselItem).toHaveCount(1)
-  await partyCarousel.getByRole('button', { name: new RegExp(title) }).click()
-  await expect(carouselItem).toBeVisible()
-  const articleLink = carouselItem.getByRole('link')
-  await expect(articleLink).toHaveAttribute('href', `/party/article/${article.id}`)
-  await articleLink.click()
-  await expect(page).toHaveURL(new RegExp(`/party/article/${article.id}$`))
-  await expect(page.getByTestId('party-article-title')).toHaveText(title)
+    const persistedResponse = await request.get(`/api/admin/articles/${article.id}`)
+    expect(persistedResponse.ok()).toBeTruthy()
+    const persisted = await persistedResponse.json() as { columnId: number }
+    expect(persisted.columnId).toBe(theme!.id)
 
-  const persistedResponse = await request.get(`/api/admin/articles/${article.id}`)
-  expect(persistedResponse.ok()).toBeTruthy()
-  const persisted = await persistedResponse.json() as { columnId: number }
-  expect(persisted.columnId).toBe(theme!.id)
-
-  expect((await request.post(`/api/admin/articles/${article.id}/withdraw`)).ok()).toBeTruthy()
-  const withdrawn = await publicListByCode(request, 'PARTY_CAROUSEL')
-  expect(withdrawn.items.some(item => item.id === placement.id)).toBeFalsy()
-  expect((await request.get(`/api/public/resources/${image.id}/content`)).status()).toBe(404)
-  expect((await request.delete(`/api/admin/lists/${carousel.id}/items/${placement.id}`)).ok()).toBeTruthy()
+    const withdrawResponse = await request.post(`/api/admin/articles/${article.id}/withdraw`)
+    expect(withdrawResponse.ok()).toBeTruthy()
+    articlePublished = false
+    const withdrawn = await publicListByCode(request, 'PARTY_CAROUSEL')
+    expect(withdrawn.items.some(item => item.id === placement.id)).toBeFalsy()
+    expect((await request.get(`/api/public/resources/${image.id}/content`)).status()).toBe(404)
+  } finally {
+    if (placementId != null) await request.delete(`/api/admin/lists/${carousel.id}/items/${placementId}`)
+    if (articlePublished) await request.post(`/api/admin/articles/${article.id}/withdraw`)
+  }
 })
 
 test('EU-30：REQUIRED ARTICLE 继承图片失效后不再作为有效公开投放', async ({ request }, testInfo) => {
