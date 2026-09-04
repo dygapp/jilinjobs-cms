@@ -185,10 +185,12 @@ CmsList 不提供 displayMode。CmsListItem 采用两种来源：
 
 - 使用 `articleId` 建立展示投放关系；
 - Backend 公开查询只输出关联 `PUBLISHED` Article 的有效项；
-- title、articleType、externalUrl 等有效公开数据来自关联文章当前值；
+- `title / articleType` 等文章派生字段以关联 Article 当前值为准；
+- 对 `INTERNAL` Article，公开 `CmsListItem.url` 为空，由 Main / Party 分别根据 `articleId` 生成自己的 canonical route；
+- 对 `EXTERNAL_LINK` Article，Backend 在解析公开列表项时把 **Article 当前 `externalUrl` 投影到通用 `CmsListItem.url` 字段**；公开 DTO 不额外增加 `externalUrl` 字段，前端只消费解析后的通用 `item.url`；
+- ARTICLE 持久化的列表项自身 `url` 不是目标地址 Authority，创建/更新时会归一为空；因此 Article 外链地址修改后，无需修改投放记录即可由下一次公开查询得到新 `item.url`；
 - Main INTERNAL 目标由前端生成 `/article/{id}`；
 - Party INTERNAL 目标由 Party 生成 `/party/article/{id}`；
-- EXTERNAL_LINK 使用 Article 外部 URL；
 - 列表覆盖图片以 `imageResourceId` 表达，公开端使用 `effectiveImageResourceId`，没有覆盖图时可继承文章可用图片；
 - 投放不修改 Article `columnId`。
 
@@ -266,6 +268,7 @@ party -> party.html
 - Main / Party 都受同一 `CAROUSEL_MAX_ITEMS` 控制；
 - reduced-motion 下等待超过 interval 不自动切换，但手动 dot 仍能切换；
 - ARTICLE 投放可进入 Main / Party canonical article route；
+- EXTERNAL_LINK ARTICLE 公开轮播使用 Backend 从 Article 当前外链解析到 `CmsListItem.url` 的地址，而不是列表项持久化 URL；
 - ARTICLE 加入列表后 Article `columnId` 不变；
 - Article withdraw 后对应公开列表项消失；
 - 列表专用 Resource 只在有效公开 ARTICLE 投放时公开；
