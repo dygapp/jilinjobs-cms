@@ -78,10 +78,19 @@ export function useContentCarousel<T extends CarouselIdentity>(options: ContentC
     schedule()
   }
 
-  watch([visibleItems, options.intervalSeconds, options.maxItems], () => {
-    if (activeIndex.value >= visibleItems.value.length) activeIndex.value = Math.max(0, visibleItems.value.length - 1)
+  watch(visibleItems, (items, previousItems) => {
+    const previousActiveId = previousItems[activeIndex.value]?.id
+    if (previousActiveId != null) {
+      const preservedIndex = items.findIndex(item => item.id === previousActiveId)
+      if (preservedIndex >= 0) activeIndex.value = preservedIndex
+      else if (activeIndex.value >= items.length) activeIndex.value = Math.max(0, items.length - 1)
+    } else if (activeIndex.value >= items.length) {
+      activeIndex.value = Math.max(0, items.length - 1)
+    }
     schedule()
   }, { deep: false })
+
+  watch(options.intervalSeconds, schedule)
 
   onMounted(() => {
     document.addEventListener('visibilitychange', onVisibilityChange)
