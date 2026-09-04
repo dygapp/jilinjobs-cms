@@ -126,11 +126,6 @@ function useArticleCover() {
   itemForm.imageResourceId = null
 }
 
-function useNoArticleImage() {
-  if (active.value?.imagePolicy === 'REQUIRED') return
-  itemForm.imageResourceId = null
-}
-
 async function uploadArticleImage(event: Event) {
   const input = event.target as HTMLInputElement
   const file = input.files?.[0]
@@ -238,7 +233,7 @@ const message = (error: unknown) => error instanceof Error ? error.message : '�
             <div v-if="selectedArticle" style="display:grid;gap:10px;width:100%">
               <div v-if="selectedArticle.coverResourceId" style="display:flex;align-items:center;gap:10px"><AdaptiveImagePreview :src="resourceContentUrl(selectedArticle.coverResourceId)" :alt="selectedArticle.title" adaptive style="width:120px;height:74px" /><el-button :type="itemForm.imageResourceId == null ? 'primary' : 'default'" @click="useArticleCover">使用文章主题图片</el-button></div>
               <div v-if="bodyImageCandidates.length"><div style="margin-bottom:6px;color:#606266">正文图片候选</div><div style="display:flex;gap:8px;flex-wrap:wrap"><button v-for="resourceId in bodyImageCandidates" :key="resourceId" type="button" :aria-label="`使用正文图片 ${resourceId}`" :style="{padding:'3px',border:itemForm.imageResourceId===resourceId?'2px solid var(--el-color-primary)':'1px solid #dcdfe6',background:'#fff',cursor:'pointer'}" @click="itemForm.imageResourceId=resourceId"><AdaptiveImagePreview :src="resourceContentUrl(resourceId)" :alt="`正文图片 ${resourceId}`" adaptive style="width:90px;height:58px" /></button></div></div>
-              <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><label class="upload-button"><span>{{uploading ? '上传中…' : '上传其他展示图片'}}</span><input type="file" accept="image/*" :disabled="uploading" @change="uploadArticleImage"></label><el-button v-if="active?.imagePolicy !== 'REQUIRED' && !selectedArticle.coverResourceId" @click="useNoArticleImage">不使用图片</el-button></div>
+              <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><label class="upload-button"><span>{{uploading ? '上传中…' : '上传其他展示图片'}}</span><input type="file" accept="image/*" :disabled="uploading" @change="uploadArticleImage"></label></div>
               <div v-if="effectiveArticleImageId" style="display:flex;align-items:center;gap:10px"><span>当前有效图片：</span><AdaptiveImagePreview :src="resourceContentUrl(effectiveArticleImageId)" :alt="selectedArticle.title" adaptive style="width:120px;height:74px" /><small>{{itemForm.imageResourceId ? '已固化列表覆盖图片' : '继承文章主题图片'}}</small></div>
               <el-alert v-else-if="active?.imagePolicy === 'REQUIRED'" title="当前文章没有主题图片；请选择正文图片或上传新的展示图片。" type="warning" :closable="false" show-icon />
             </div>
