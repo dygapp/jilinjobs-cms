@@ -2,7 +2,7 @@
 
 ## Status
 
-**CURRENT — implementation and verification convergence**
+**CURRENT — implementation complete, final verification / Human Review convergence**
 
 工作分支：`feature/eu-30-carousel-convergence`
 
@@ -36,6 +36,8 @@ ARTICLE 只是展示投放，不修改 Article 单一 `columnId`。
 
 ARTICLE 只在 `PUBLISHED` 时公开有效；撤回自动退出公开列表。
 
+列表项 `openMode` 是独立通用字段；ARTICLE 生成 Main `/article/{id}` 或 Party `/party/article/{id}` canonical route 后仍保留 `DEFAULT / SAME_WINDOW / NEW_WINDOW` 行为。
+
 ### 2.2 Image Policy
 
 列表 `imagePolicy` 继续是通用数据契约：
@@ -44,9 +46,9 @@ ARTICLE 只在 `PUBLISHED` 时公开有效；撤回自动退出公开列表。
 - OPTIONAL
 - REQUIRED
 
-ARTICLE 可继承文章主题图片、选择正文图片或使用列表专用 Resource 覆盖图。
+ARTICLE 可继承文章主题图片、选择正文图片或使用列表专用 Resource 覆盖图。物理字段为 `cms_list_item.image_resource_id`；公开 API 使用 `effectiveImageResourceId` 表达继承/覆盖解析后的有效图片。
 
-Main `HOME_CAROUSEL` 与 Party `PARTY_CAROUSEL` 均为 REQUIRED。
+Main `HOME_CAROUSEL` 与 Party `PARTY_CAROUSEL` 均为 REQUIRED。ARTICLE 后续失去继承封面且没有覆盖 Resource 时必须退出公开 REQUIRED 列表。
 
 ### 2.3 SiteProperty
 
@@ -54,6 +56,8 @@ Main `HOME_CAROUSEL` 与 Party `PARTY_CAROUSEL` 均为 REQUIRED。
 
 - `CAROUSEL_INTERVAL_SECONDS=4`
 - `CAROUSEL_MAX_ITEMS=5`
+
+两个属性均要求正整数；Backend 拒绝 0、负数和非整数新写入，Public 对缺失/异常历史值保留 4 / 5 fallback。
 
 旧 `HOME_CAROUSEL_INTERVAL_SECONDS` 不再是 Runtime 依赖。
 
@@ -65,10 +69,11 @@ Main `HOME_CAROUSEL` 与 Party `PARTY_CAROUSEL` 均为 REQUIRED。
 - 手动 dots；
 - hover pause；
 - focus pause；
-- visibility pause；
+- 初始及后续 visibility pause；
 - resume 不重置；
 - reduced-motion 关闭 autoplay 和 transition；
 - 图片失败退出有效集合并补位；
+- 有效集合变化时按 item ID 保持当前项，避免数组下标变化造成无意跳转；
 - EU-30 不实现 swipe；
 - 不引入第三方 Carousel。
 
@@ -90,7 +95,8 @@ EU-30 对 Party 历史轮播 position 2 反向取证后确认：
 - `unresolved=0`；
 - 不新增 PartyHome 第五个固定内容区；
 - position 2 指向 `content_id=154659859759104` 的 INTERNAL 文章；
-- 原轮播 PNG 保留为该 ARTICLE 投放的列表专用覆盖图。
+- 原轮播 PNG 保留为该 ARTICLE 投放的列表专用覆盖图；
+- 原列表项 `NEW_WINDOW` 语义继续保留，但目标改为新系统 Party canonical article route。
 
 EU-29 已接受 181 篇基线保持原 provenance；EU-30 的 2 条记录保留为 `candidateExtension / pending-human-review`，直到本 EU Human Review 通过。
 
@@ -100,18 +106,35 @@ EU-29 已接受 181 篇基线保持原 provenance；EU-30 的 2 条记录保留�
 
 - V19 数据模型与统一 SiteProperty migration；
 - `CmsListItem.sourceType / articleId / imageResourceId`；
-- public ARTICLE 过滤、有效图片和公开 Resource 权限；
+- public ARTICLE 发布状态过滤、REQUIRED 有效图片过滤和公开 Resource 权限；
 - Admin LINK / ARTICLE 选择、文章图片继承 / 正文图片候选 / 覆盖图上传；
 - `shared/carousel/useContentCarousel.ts`；
 - Main / Party 切换到共享生命周期；
-- `party-theme-education` Party Router scope；
+- 初始 hidden page timer 守卫；
+- 图片失败时先过滤再 max-items，并按 item identity 保持当前内容；
+- Main / Party INTERNAL ARTICLE canonical route 保留列表项 openMode；
+- Backend 对两个统一轮播属性执行正整数校验；
+- `party-theme-education` Party Router scope 与正确 `party` 父栏目；
 - EU-30 theme collector 与 durable candidate merge；
 - Historical Import V2；
 - Party Carousel V2 `sourceSystem + legacyKey -> article_id` 解析；
 - position 2 ARTICLE + Resource override；
 - Canonical Verification 支持 acceptedSnapshot + candidateExtension 双层证据；
 - Admin stale verification contract 已按 EU-30 更新；
-- Public `carousel-convergence.spec.ts` 专项 E2E。
+- Public `carousel-convergence.spec.ts`、`carousel-edge-cases.spec.ts` 专项 E2E；
+- Party canonical Runtime 测试支持 `[LINK, ARTICLE, LINK, LINK]` 并验证 position 2 Resource / canonical route / `NEW_WINDOW`。
+
+### 4.1 Convergence Findings Closed During Review
+
+实现后静态审查 / Current Evidence 复核发现并已经修复：
+
+1. V19 曾使用历史父 alias `party-building`，Fresh DB 会令主题教育成为顶级栏目；已改为当前 `party`；
+2. REQUIRED ARTICLE 在文章封面后续被移除时 Public API 曾仍返回无图投放；已在 Backend 过滤；
+3. 页面首次在 hidden tab 挂载时曾可能先启动 timer；已在 mount 初始化 visibility pause；
+4. Party 隐藏 slide 图片失败可能因只保留数字 index 导致当前项跳转；已改为按 item ID 保持；
+5. INTERNAL ARTICLE router-link 曾忽略列表项 openMode；Main / Party 已统一保留；
+6. SiteConfig 正整数校验曾只识别旧 `HOME_CAROUSEL_INTERVAL_SECONDS`；已切换到两个统一键；
+7. ARTICLE 专项 E2E 曾通过修改全局 `CAROUSEL_MAX_ITEMS` 保证可见并在一个成功 CI Artifact 中出现一次 retry；已改为通过测试 placement 排序进入可见集合并清理自身投放，不再修改全局 max-items；最终 Head 必须重新取得无未解释 retry 的 Current Evidence。
 
 ## 5. Verification Obligations
 
@@ -125,13 +148,17 @@ EU-29 已接受 181 篇基线保持原 provenance；EU-30 的 2 条记录保留�
 ### Browser
 
 - Main / Party 共用 interval/max-items；
+- 非正 interval/max 配置被 Backend 拒绝；
 - reduced-motion 不自动播放；
 - manual dot 仍有效；
-- ARTICLE Party canonical route；
+- ARTICLE Main / Party canonical route 与 openMode；
 - ARTICLE 不改变 columnId；
 - withdraw 后从公开 list 退出；
 - list override Resource 公开权限随有效 ARTICLE 状态；
-- 既有 Main / Party / Admin Browser Regression 无回归。
+- REQUIRED ARTICLE 失去继承图片后退出公开列表；
+- 隐藏图片失败后由后续项补位且当前项 identity 不跳；
+- 既有 Main / Party / Admin Browser Regression 无回归；
+- 最终 Playwright Artifact 不保留未解释 flaky retry。
 
 ### Canonical Fresh DB
 
@@ -153,24 +180,49 @@ EU-29 已接受 181 篇基线保持原 provenance；EU-30 的 2 条记录保留�
 
 - Main / Party Desktop + Mobile 轮播视觉没有不可接受回归；
 - dots / caption / pause / manual behavior 可接受；
-- Party position 2 正确进入主题教育站内文章；
+- Party position 2 正确进入主题教育站内文章，并保留期望打开方式；
 - 主题教育 2 条增量历史内容与原站证据一致；
 - 没有需要继续调整的 Authority-backed 高优先级问题。
 
 ## 6. Current Evidence Status
 
-- EU-30 theme collection Run `33880672887`：PASS；2 条，1 INTERNAL + 1 EXTERNAL_LINK，unresolved=0；已晋升为仓库 durable candidate。
-- 早期 CI 已证明 Backend / Main / Admin build 可通过；旧 Admin Browser 失败被分类为 Stale Verification Contract 并已更新。
-- 当前最终 Head 的 CI / Canonical / Review Environment 必须在所有文档与测试提交完成后重新取得；旧 Head 结果不能代替最终 Current Evidence。
+### Durable Input / Collection
+
+- EU-30 theme collection Run `33880672887`：PASS；2 条，1 INTERNAL + 1 EXTERNAL_LINK，unresolved=0；已晋升为 Consumer-owned 仓库 durable candidate，不再把临时 Artifact 作为长期迁移输入。
+- `data-migrations/party/v1/manifest.json` 保持 EU-29 `acceptedSnapshot=181` 与 EU-30 `candidateExtension=2 / runtimeDatasetArticles=183 / pending-human-review` 分层。
+
+### Ancestor Automated Evidence
+
+曾取得 Head `9bc0715a9e27fe9d8afd36ce5915bc05f6b36a64`：
+
+- CI Run #572 `33885904463`：SUCCESS；Backend / Public / Admin build 与 Integrated Browser 均成功；Playwright Artifact `9942003411`，digest `sha256:f6330cd1aaffe8c9178a57ea2905fa416f7f66e0c8a35eb55e73e8a3e6d840f0`。该 Artifact 后续复核发现 ARTICLE 专项测试第一次失败后 retry 成功，因此不能作为最终“无不稳定项”证据；测试已修正。
+- Canonical Migration Verification Run #36 `33885904469`：SUCCESS；Fresh DB、183 条当前 Runtime Dataset、4 条混合轮播、首次导入、二次幂等和 reconciliation 均通过；Artifact `9941917242`，digest `sha256:b65cc1b66e9ef1b5a849a1c26cf9f9380bafd77d4e5154ca0152547051fcadea`。
+
+上述均为祖先 Evidence，不描述为最终 Head Run。最终 Head 已继续发生 carousel lifecycle、openMode、config validation、tests 和 Authority 文档变化，因此需要重新取得相应 CI；Canonical claim 可在最新 Head 取得新 Run时直接使用新证据，否则必须按 Evidence Claim 规则比较并证明后续差异不影响 Migration / Canonical 数据、Importer、Flyway 与 Verification Workflow 后才允许复用。
+
+### Review Environment Stale Verification Contract
+
+Review Environment Run #502 / #503 已证明：构建和前置 AI / Browser Verification 可以通过，但 Workflow 后半段仍冻结 EU-29 旧断言并在“导入 Party canonical 历史数据”失败，具体陈旧点包括：
+
+- 只接受 manifest `accepted-canonical`，未识别 EU-30 `candidate-extension`；
+- 导入报告硬编码 181，而当前 Runtime Dataset 为 183；
+- 只对账原四栏目，未包含 `party-theme-education`；
+- Party Runtime 假定 4 条轮播全部为 LINK/static imagePath，未识别 position 2 ARTICLE + Resource。
+
+该失败分类为 **Stale Verification Contract**，不是产品实现失败。
+
+当前 ChatGPT GitHub Connector 对 `.github/workflows/review-environment.yml` 的写入接口只能整文件替换；该文件包含仓库既有 FRP 外网隧道配置，整文件写入触发当前平台安全检查。Repository Authority 与 GitHub 权限本身允许 AI 修改 Workflow，历史上也由 AI 维护；本阻塞属于 **Tooling / Connector Write Limitation**，不是项目要求的 Human Engineering Decision。不得通过低层 Git Object API 规避已触发的安全检查，也不得篡改 manifest / 产品行为去迎合旧 Workflow。
+
+因此最终 Review Environment / Human Review 尚未完成，EU-30 继续保持 CURRENT / Draft。
 
 ## 7. Exit Condition
 
 EU-30 仅在以下条件全部满足时关闭：
 
 1. Requirement / Specification / Technical Plan 与实现一致；
-2. 最新 Head CI PASS；
-3. 最新 Head Canonical Migration Verification PASS；
-4. Review Environment 基于最新 Head 成功部署；
+2. 最新 Head CI PASS，并完成 Playwright Artifact 复核；
+3. 最新 Head Canonical Migration Verification PASS，或对未受后续变更影响的 Canonical claim 完成严格 Evidence reuse 记录；
+4. Review Environment Stale Verification Contract 修正，并基于最新目标 Head 成功部署；
 5. AI / Browser Evidence 无未处理高优先级问题；
 6. Human Review PASS；
 7. Human Review 后将 EU-30 candidateExtension 的最终接受状态与 provenance 回写；
