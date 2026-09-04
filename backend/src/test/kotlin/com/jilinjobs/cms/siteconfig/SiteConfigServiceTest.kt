@@ -26,13 +26,29 @@ class SiteConfigServiceTest {
         assertEquals("6", service.update("CUSTOM_INTEGER", "6").value)
         assertEquals("1", service.update("CAROUSEL_INTERVAL_SECONDS", "1").value)
         assertEquals("2", service.update("CAROUSEL_MAX_ITEMS", "2").value)
+        assertEquals("5", service.update("CAROUSEL_MAX_ITEMS", " 5 ").value)
         assertThrows(SiteConfigValidationException::class.java) { service.update("SERVICE_URL", "javascript:alert(1)") }
         assertThrows(SiteConfigValidationException::class.java) { service.update("FEATURE_ENABLED", "yes") }
         assertThrows(SiteConfigValidationException::class.java) { service.update("CUSTOM_INTEGER", "4.5") }
         assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_INTERVAL_SECONDS", "0") }
         assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_INTERVAL_SECONDS", "-1") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_INTERVAL_SECONDS", "+5") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_INTERVAL_SECONDS", "5abc") }
         assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_MAX_ITEMS", "0") }
         assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_MAX_ITEMS", "-1") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_MAX_ITEMS", "1.5") }
+    }
+
+    @Test
+    fun `normalizes positive carousel integer values on definition writes`() {
+        val service = service(FakeSiteConfigMapper())
+        val created = service.create(SiteConfigDraft("CAROUSEL_MAX_ITEMS", "轮播最大展示数量", "GENERAL", " 05 ", "INTEGER", required = true))
+        assertEquals("05", created.value)
+        val updated = service.updateDefinition(
+            "CAROUSEL_MAX_ITEMS",
+            SiteConfigDraft("CAROUSEL_MAX_ITEMS", "轮播最大展示数量", "GENERAL", " 7 ", "INTEGER", required = true),
+        )
+        assertEquals("7", updated.value)
     }
 
     @Test
