@@ -50,7 +50,7 @@ function configItem(key: string, value: string): SiteConfigItem {
   return { key, name: key, groupCode: 'PRESENTATION', value, valueType: 'INTEGER', description: '', sortOrder: 0, required: true, system: true, enabled: true }
 }
 
-test('EU-30：统一轮播属性拒绝非正整数', async ({ request }) => {
+test('EU-30：统一轮播属性拒绝非正整数且稳定定义受 preset 保护', async ({ request }) => {
   const interval = await request.put('/api/admin/site-config/CAROUSEL_INTERVAL_SECONDS', { data: { value: '0' } })
   expect(interval.status()).toBe(400)
 
@@ -59,9 +59,14 @@ test('EU-30：统一轮播属性拒绝非正整数', async ({ request }) => {
 
   const response = await request.get('/api/admin/site-config')
   expect(response.ok()).toBeTruthy()
-  const config = await response.json() as Array<{ key: string; value: string }>
-  expect(Number(config.find(item => item.key === 'CAROUSEL_INTERVAL_SECONDS')?.value)).toBeGreaterThan(0)
-  expect(Number(config.find(item => item.key === 'CAROUSEL_MAX_ITEMS')?.value)).toBeGreaterThan(0)
+  const config = await response.json() as Array<{ key: string; value: string; valueType: string; preset: boolean }>
+  for (const key of ['CAROUSEL_INTERVAL_SECONDS', 'CAROUSEL_MAX_ITEMS']) {
+    const item = config.find(entry => entry.key === key)
+    expect(item).toMatchObject({ valueType: 'INTEGER', preset: true })
+    expect(Number(item?.value)).toBeGreaterThan(0)
+    const deleteResponse = await request.delete(`/api/admin/site-config/${key}`)
+    expect(deleteResponse.status()).toBe(400)
+  }
 })
 
 test('EU-30：公开轮播配置严格拒绝可被 parseInt 截断的历史非法值', () => {
