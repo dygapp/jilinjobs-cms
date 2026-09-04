@@ -139,7 +139,12 @@ function itemTarget(item: CmsListItem) {
                 :aria-hidden="index !== activeSlide"
                 :data-testid="`party-carousel-item-${item.id}`"
               >
-                <router-link v-if="carouselInternalRoute(item)" :to="carouselInternalRoute(item)!">
+                <router-link
+                  v-if="carouselInternalRoute(item)"
+                  :to="carouselInternalRoute(item)!"
+                  :target="item.openMode === 'NEW_WINDOW' ? '_blank' : undefined"
+                  :rel="item.openMode === 'NEW_WINDOW' ? 'noopener noreferrer' : undefined"
+                >
                   <img v-if="carouselImage(item)" :src="carouselImage(item)" :alt="item.title" @error="markCarouselImageFailed(item.id)">
                   <strong>{{ item.title }}</strong>
                 </router-link>
