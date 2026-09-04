@@ -3,7 +3,7 @@ id: technical-carousel-list-placement
 title: 轮播与列表内容投放技术方案
 type: technical-plan
 status: confirmed
-version: "V1.1"
+version: "V1.2"
 relations:
   upstream:
     - docs/requirements/information-publishing.md
@@ -13,7 +13,7 @@ relations:
     - docs/specifications/party.md
     - docs/work/frontend-follow-up-execution-units.md
 created_at: 2026-09-04
-updated_at: 2026-09-04
+updated_at: 2026-09-05
 ---
 
 # 轮播与列表内容投放技术方案
@@ -69,7 +69,7 @@ ARTICLE 项不改变文章所属栏目。文章撤回或未发布时，该项仍
 2. 文章没有封面但正文存在图片时，后台把正文图片作为候选，默认建议第一张；
 3. 用户选择正文图片后，应把所选 `CmsResource` ID 固化为列表项图片覆盖，不能在前台运行时动态寻找“正文第一张”；
 4. 用户也可以上传新的 CMS 图片资源作为列表项覆盖；
-5. 用户可以选择不使用图片。
+5. 文章没有封面且没有显式覆盖时可以形成无图 OPTIONAL 投放。当前数据模型中 `image_resource_id=null` 的稳定语义是“继承当前文章封面”，因此**不额外提供在文章已有封面时显式屏蔽该封面的第三种状态**。
 
 ### 5.3 REQUIRED
 
@@ -100,7 +100,7 @@ Main / Party 使用同一组 PRESENTATION 网站属性：
 - `CAROUSEL_INTERVAL_SECONDS`：自动切换间隔，整数秒，默认 `4`，必须大于 0；
 - `CAROUSEL_MAX_ITEMS`：单个轮播区域前台最多展示的有效项数，默认 `5`，必须大于 0。
 
-Backend 对以上两个属性的管理端写入执行正整数校验；`0`、负数和非整数不得作为新的持久配置保存。公开端仍保留缺失、非法历史值或异常数据的防御性 fallback：interval 回退 4 秒，max-items 回退 5。
+Backend 对以上两个属性的管理端写入执行正整数校验；`0`、负数和非整数不得作为新的持久配置保存。公开端仍保留缺失、非法历史值或异常数据的防御性 fallback：interval 回退 4 秒，max-items 回退 5。非法值必须按完整字符串判断，不能使用 `parseInt` / 宽松 `CAST` 把 `1.5`、`5abc` 等截断为有效正整数。
 
 `CAROUSEL_MAX_ITEMS` 只限制前台展示，不限制后台列表项数量。前台按既有排序和有效性过滤后取前 N 项；超出的启用记录继续保留，可以通过调整排序进入展示范围。
 
@@ -165,6 +165,8 @@ Importer 采用依赖顺序：
 
 第二轮播项继续使用 EU-29 已保存的原站首页轮播 PNG 作为覆盖图片，不因关联文章拥有正文图片而改选其他图片；原站该轮播项的 `NEW_WINDOW` 打开方式继续作为列表投放语义保留，但 URL 已改为新系统 `/party/article/{id}` canonical route。
 
+第二项是一个**已知、一次性的 accepted EU-29 → EU-30 数据纠正**。Importer 只有在既有 mapping fingerprint 精确等于已接受 EU-29 fingerprint、且输入精确等于当前 EU-30 position 2 fingerprint 时才允许原地 LINK→ARTICLE；任何其他同 stable identity fingerprint 漂移必须报告 `CONFLICT`，不得把这个兼容例外扩展成通用覆盖入口。
+
 ## 11. 验证要求
 
 EU-30 至少验证：
@@ -174,8 +176,10 @@ EU-30 至少验证：
 - 草稿/撤回 ARTICLE 项不公开；
 - 文章封面继承与正文图片/上传图片覆盖；
 - Main / Party 统一 interval/max 配置以及 Backend 对非正整数的拒绝；
+- 公开端对历史非法整数配置执行严格 fallback；
 - 0/1/N 项、手动分页、hover/focus/初始及后续 visibility/reduced-motion；
 - 图片失败补位、当前 item identity 保持和最大项数；
 - ARTICLE canonical route 与 `openMode`；
 - Main / Party build + Browser E2E；
-- EU-29 Canonical Dataset Fresh DB import、二次导入幂等、主题教育栏目和第二轮播项 ARTICLE 关联对账。
+- EU-29 Canonical Dataset Fresh DB import、二次导入幂等、主题教育栏目和第二轮播项 ARTICLE 关联对账；
+- 使用固定 accepted EU-29 commit 复现同库升级，并验证非预期 position 2 fingerprint 漂移会被拒绝为冲突。
