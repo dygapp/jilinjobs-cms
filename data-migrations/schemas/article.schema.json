@@ -6,70 +6,11 @@
   "additionalProperties": false,
   "required": ["source", "target", "content", "resources", "sourceFingerprint", "evidence"],
   "properties": {
-    "source": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["system", "legacyKey", "typeCode", "detailPath", "url"],
-      "properties": {
-        "system": { "type": "string", "minLength": 1 },
-        "legacyKey": { "type": "string", "minLength": 1 },
-        "contentId": { "type": ["string", "null"] },
-        "typeCode": { "type": "string", "minLength": 1 },
-        "detailPath": { "type": "string", "minLength": 1 },
-        "url": { "type": "string", "format": "uri" }
-      }
-    },
-    "target": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["columnAlias", "articleType"],
-      "properties": {
-        "columnAlias": { "type": "string", "minLength": 1 },
-        "articleType": { "enum": ["INTERNAL", "EXTERNAL_LINK"] }
-      }
-    },
-    "content": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["title", "source", "publishDate", "bodyHtml", "externalUrl"],
-      "properties": {
-        "title": { "type": "string", "minLength": 1, "maxLength": 200 },
-        "source": { "type": "string", "maxLength": 200 },
-        "publishDate": { "type": ["string", "null"], "format": "date" },
-        "bodyHtml": { "type": "string" },
-        "externalUrl": { "type": ["string", "null"], "format": "uri" }
-      }
-    },
-    "resources": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": ["role", "sourceUrl", "originalReference", "token", "snapshotPath", "sha256"],
-        "properties": {
-          "role": { "enum": ["BODY_IMAGE", "ATTACHMENT"] },
-          "sourceUrl": { "type": "string", "format": "uri" },
-          "originalReference": { "type": "string", "minLength": 1 },
-          "token": { "type": "string", "minLength": 1 },
-          "snapshotPath": { "type": "string", "minLength": 1 },
-          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
-          "contentType": { "type": ["string", "null"] },
-          "sizeBytes": { "type": "integer", "minimum": 0 }
-        }
-      }
-    },
-    "sourceFingerprint": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
-    "evidence": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["listPage", "listTitle", "listPublishDate"],
-      "properties": {
-        "listPage": { "type": "integer", "minimum": 1 },
-        "listTitle": { "type": "string", "minLength": 1 },
-        "listPublishDate": { "type": ["string", "null"], "format": "date" },
-        "detailPublishDate": { "type": ["string", "null"], "format": "date" },
-        "rawDetailPath": { "type": "string" }
-      }
-    }
+    "source": { "type":"object", "additionalProperties":false, "required":["system","legacyKey","typeCode","detailPath","url"], "properties": { "system":{"type":"string","minLength":1}, "legacyKey":{"type":"string","minLength":1}, "contentId":{"type":["string","null"]}, "typeCode":{"type":"string","minLength":1}, "detailPath":{"type":"string","minLength":1}, "url":{"type":"string","format":"uri"} } },
+    "target": { "type":"object", "additionalProperties":false, "required":["columnAlias","articleType"], "properties": { "columnAlias":{"type":"string","minLength":1}, "articleType":{"enum":["INTERNAL","EXTERNAL_LINK"]} } },
+    "content": { "type":"object", "additionalProperties":false, "required":["title","source","publishDate","bodyHtml","externalUrl"], "properties": { "title":{"type":"string","minLength":1,"maxLength":200}, "source":{"type":"string","maxLength":200}, "publishDate":{"type":["string","null"],"format":"date"}, "bodyHtml":{"type":"string"}, "externalUrl":{"type":["string","null"],"format":"uri"} } },
+    "resources": { "type":"array", "items": { "type":"object", "additionalProperties":false, "required":["role","sourceUrl","originalReference","token","snapshotPath","sha256"], "properties": { "role":{"enum":["BODY_IMAGE","ATTACHMENT"]}, "sourceUrl":{"type":"string","format":"uri"}, "originalReference":{"type":"string","minLength":1}, "token":{"type":"string","minLength":1}, "snapshotPath":{"type":"string","minLength":1}, "sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"}, "contentType":{"type":["string","null"]}, "sizeBytes":{"type":"integer","minimum":0} } } },
+    "sourceFingerprint": { "type":"string", "pattern":"^[0-9a-f]{64}$" },
+    "evidence": { "type":"object", "additionalProperties":false, "required":["listPage","listTitle","listPublishDate","sourceOrder"], "properties": { "listPage":{"type":"integer","minimum":1}, "listTitle":{"type":"string","minLength":1}, "listPublishDate":{"type":["string","null"],"format":"date"}, "sourceOrder":{"type":"integer","minimum":1}, "detailPublishDate":{"type":["string","null"],"format":"date"}, "rawDetailPath":{"type":"string"} } }
   }
 }

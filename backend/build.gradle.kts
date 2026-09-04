@@ -40,3 +40,10 @@ kotlin {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+tasks.register<JavaExec>("importPartyHistoricalContent") {
+    group = "migration"
+    description = "Import an EU-29 normalized Party historical-content snapshot"
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("com.jilinjobs.cms.migration.PartyHistoricalContentMigrationKt")
+}
