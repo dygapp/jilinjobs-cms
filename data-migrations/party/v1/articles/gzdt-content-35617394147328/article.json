@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:35617394147328",
+    "contentId": "35617394147328",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=35617394147328"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "中心党总支开展庆祝建党99周年主题党日活动",
+    "source": "党总支",
+    "publishDate": "2020-07-01",
+    "bodyHtml": "\n                    <p>为庆祝中国共产党99周年华诞，加强队伍党性教育，增强党员干部使命感和责任感，经过精心组织筹备，省高校毕业生就业指导中心党总支于2020年7月1日上午组织全体党员开展“庆祝建党99周年 重温入党誓词”主题党日活动。活动由总支组织委员宋姣主持，共二项内容。</p>\n\n<p>第一项内容：全体起立，唱《国际歌》</p>\n\n<p>第二项内容：全体党员重温入党誓词，在党旗下宣誓。</p>\n\n<p>通过活动，各位党员民警纷纷表示一定要继承先烈遗志，弘扬延安精神、传承红色基因，将对党忠诚、服务人民牢记于心，付诸于行。</p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "124faae7c8a2297e38b300ad6694e520b4b4ea6d09caae78c6476793abaf6e44",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "中心党总支开展庆祝建党99周年主题党日活动",
+    "listPublishDate": "2020-07-01",
+    "sourceOrder": 53,
+    "detailPublishDate": "2020-07-01",
+    "rawDetailPath": "raw/details/gzdt-35617394147328.html"
+  }
+}

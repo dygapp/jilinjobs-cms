@@ -1,0 +1,52 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737783123152",
+    "contentId": "28737783123152",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737783123152"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "省高校毕业生就业指导中心召开“两学一做”学习教育动员大会",
+    "source": "",
+    "publishDate": "2016-04-28",
+    "bodyHtml": "\n                    <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">省高校毕业生就业指导中心召开“两学一做”学习教育动员大会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2016-4-28 16:15:30</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 4月28日，我中心召开了“两学一做”学习教育动员部署大会。各党支部书记及全体党员和积极分子参加了会议。会议由党总支书记孙维才主持。会议共三项议程：</span></p><p><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 党总支书记孙维才介绍了4月26日召开的省教育厅直属机关及民办高校集中党课“两学一做”学习教育动员大会情况，并且重点传达了教育厅党组书记、高校工委书记孙维杰的重要讲话精神。</span></p><p><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 中心主任、党总支副书记郑志宏代表党总支对开展“两学一做”学习教育做了动员报告。他在报告中强调：中心的“两学一做”学习教育，除了做好“规定动作”外，“学与做”还要有创新，一是纳入中心的入党积极分子参加学习教育；二是纳入中心的流动党员参加学习教育；三是开展“转作风、强服务、树形象”主题实践活动，积极创造优质文明服务窗口，展现我们“两学一做”学习教育的亮点。</span></p><p><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 中心主任、党总支副书记郑志宏讲了党课，题目为“学习党内法规，守纪律讲规矩”。主题是党员如何自觉遵守“廉洁自律准则”，要求全体党员践行《中国共产党廉洁自律准则》，要在严格自律上作表率。一要认真对照检查。把自己摆进去对照检查，联系工作实际对照检查，补齐在认识、理解、情感、能力、作风等方面的短板。二要树牢道德高线。以《准则》为标尺，在廉洁自律上追求高标准，把《准则》作为修身之本、为政之道、成事之要，深刻认识公与私、廉与腐、俭与奢、苦与乐的关系，坚持廉洁从政、用权、修身、齐家，以更高标准，更严要求带头践行廉洁自律规范，永葆共产党人清正廉洁本色。</span></p><p><br></p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"assets/b7cc57d2bfbed90983fa00e51d367fb3935e0bbc6af789890f60235c521eb4c6.jpg\"></p><p><br></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"assets/1f977d4ece8983296f23405bd948f8a966a74a4036bc34c43096c61bd66343be.jpg\"></p><p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359753262147637508699013.jpg",
+      "originalReference": "/chistory/cms/imgs/6359753262147637508699013.jpg",
+      "token": "migration-resource://b7cc57d2bfbed90983fa00e51d367fb3935e0bbc6af789890f60235c521eb4c6",
+      "snapshotPath": "assets/b7cc57d2bfbed90983fa00e51d367fb3935e0bbc6af789890f60235c521eb4c6.jpg",
+      "sha256": "b7cc57d2bfbed90983fa00e51d367fb3935e0bbc6af789890f60235c521eb4c6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 123726
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359753262153887503212339.jpg",
+      "originalReference": "/chistory/cms/imgs/6359753262153887503212339.jpg",
+      "token": "migration-resource://1f977d4ece8983296f23405bd948f8a966a74a4036bc34c43096c61bd66343be",
+      "snapshotPath": "assets/1f977d4ece8983296f23405bd948f8a966a74a4036bc34c43096c61bd66343be.jpg",
+      "sha256": "1f977d4ece8983296f23405bd948f8a966a74a4036bc34c43096c61bd66343be",
+      "contentType": "image/jpeg",
+      "sizeBytes": 98002
+    }
+  ],
+  "sourceFingerprint": "aa1e4a15bf22ac635b979f863cd723c85164ac71f985717454f88e1789fb8d86",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "省高校毕业生就业指导中心召开“两学一做”学习教育动员大会",
+    "listPublishDate": "2016-04-28",
+    "sourceOrder": 88,
+    "detailPublishDate": "2016-04-28",
+    "rawDetailPath": "raw/details/gzdt-28737783123152.html"
+  }
+}

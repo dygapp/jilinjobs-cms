@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:d15445eb1d462444cba912af268a05db010c76fffe106bf613afe2831cec3f97",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/2025/03/26/ARTI1742959305801994.shtml",
+    "url": "https://www.12371.cn/2025/03/26/ARTI1742959305801994.shtml"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "八项规定何以深刻改变中国",
+    "source": "",
+    "publishDate": "2025-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2025/03/26/ARTI1742959305801994.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "0f9048b402f9f371b97e721bfb5d385e66b4ced3c906d7d1c19a5cb7869bc18e",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "八项规定何以深刻改变中国",
+    "listPublishDate": "2025-03-27",
+    "sourceOrder": 14
+  }
+}

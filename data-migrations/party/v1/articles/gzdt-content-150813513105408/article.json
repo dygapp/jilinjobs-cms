@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:150813513105408",
+    "contentId": "150813513105408",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=150813513105408"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于组织收看专家访谈讲座的通知",
+    "source": "流动党员支部",
+    "publishDate": "2023-03-06",
+    "bodyHtml": "\n                    <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:宋体\">&nbsp; 为深入学习贯彻党的二十大精神，人民教育社开展《如何引导青少年爱读书、读好书、善读书》专家访谈讲座，讲座时间：</span></span><span style=\"font-size:16.0pt\">3</span><span style=\"font-size:16.0pt\"><span style=\"font-family:宋体\">月</span></span><span style=\"font-size:16.0pt\">6</span><span style=\"font-size:16.0pt\"><span style=\"font-family:宋体\">日（今天）晚</span></span><span style=\"font-size:16.0pt\">18</span><span style=\"font-size:16.0pt\"><span style=\"font-family:宋体\">点</span></span><span style=\"font-size:16.0pt\">20</span><span style=\"font-size:16.0pt\"><span style=\"font-family:宋体\">分，请全体党员准时收看直播。</span></span></span></span></p>\n\n<p style=\"text-align:justify\">&nbsp;</p>\n\n<p style=\"text-align:justify\">&nbsp;</p>\n\n<p style=\"text-align:right\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"font-size:16.0pt\"><span style=\"font-family:宋体\">流动党员支部</span></span></span></span></p>\n\n<p style=\"text-align:right\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2023</span><span style=\"font-size:16.0pt\"><span style=\"font-family:宋体\">年</span></span><span style=\"font-size:16.0pt\">3</span><span style=\"font-size:16.0pt\"><span style=\"font-family:宋体\">月</span></span><span style=\"font-size:16.0pt\">6</span><span style=\"font-size:16.0pt\"><span style=\"font-family:宋体\">日</span></span></span></span></p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "630469cdeaf6f436320d783b110637f7e3d7db47e10cf504183774e89aacdfae",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "关于组织收看专家访谈讲座的通知",
+    "listPublishDate": "2023-03-06",
+    "sourceOrder": 3,
+    "detailPublishDate": "2023-03-06",
+    "rawDetailPath": "raw/details/gzdt-150813513105408.html"
+  }
+}

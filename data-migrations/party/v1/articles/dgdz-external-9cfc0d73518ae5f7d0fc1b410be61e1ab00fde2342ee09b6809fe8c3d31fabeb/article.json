@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "dgdz:external:9cfc0d73518ae5f7d0fc1b410be61e1ab00fde2342ee09b6809fe8c3d31fabeb",
+    "contentId": null,
+    "typeCode": "dgdz",
+    "detailPath": "/zhengce/202505/content_7024131.htm",
+    "url": "https://www.gov.cn/zhengce/202505/content_7024131.htm"
+  },
+  "target": {
+    "columnAlias": "party-rules",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中共中央 国务院印发党政机关厉行节约反对浪费条例",
+    "source": "",
+    "publishDate": "2025-05-19",
+    "bodyHtml": "",
+    "externalUrl": "https://www.gov.cn/zhengce/202505/content_7024131.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "eedb472adb4312662048516c20d3186db21106d42b1bd3969a4a11ef6caa25f1",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "中共中央 国务院印发党政机关厉行节约反对浪费条例",
+    "listPublishDate": "2025-05-19",
+    "sourceOrder": 4
+  }
+}

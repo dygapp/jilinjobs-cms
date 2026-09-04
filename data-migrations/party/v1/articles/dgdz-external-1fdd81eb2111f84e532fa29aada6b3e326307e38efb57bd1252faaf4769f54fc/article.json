@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "dgdz:external:1fdd81eb2111f84e532fa29aada6b3e326307e38efb57bd1252faaf4769f54fc",
+    "contentId": null,
+    "typeCode": "dgdz",
+    "detailPath": "/special/zggcdzc/zggcdzcqw/",
+    "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/"
+  },
+  "target": {
+    "columnAlias": "party-rules",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中国共产党章程（2022年修改）",
+    "source": "",
+    "publishDate": "2022-10-25",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/"
+  },
+  "resources": [],
+  "sourceFingerprint": "9eaebaed5dc9935ed1058cdce83799d32bffa322cceab89968f9027a58699eba",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "中国共产党章程（2022年修改）",
+    "listPublishDate": "2022-10-25",
+    "sourceOrder": 9
+  }
+}

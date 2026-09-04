@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737785217089",
+    "contentId": "28737785217089",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737785217089"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于学习《习近平扶贫论述摘编》的通知",
+    "source": "流动党员支部",
+    "publishDate": "2020-11-13",
+    "bodyHtml": "\n                    \n\n\n\n\n<p>流动党员：</p>\n<p>&nbsp; &nbsp; &nbsp; 定于11月13日下午，全体党员深入学习贯彻《习近平扶贫论述摘编》，全体党员要认真学习这些重要论述，深入学习贯彻习近平新时代中国特色社会主义思想和党</p>\n<p>的十九大精神，坚决打赢脱贫攻坚战，决胜全面建成小康社会。</p>\n<p>&nbsp; &nbsp; &nbsp; 学习形式为自学，请各位党员认真学习，并做好学习笔记。&nbsp;&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;流动党员支部&nbsp;&nbsp;</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2020年11月13日</p>\n\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "bbd1b6754fc88aa7dd5f7c19ae236fc19a0aef319f883bda3a900403fa1c0997",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "关于学习《习近平扶贫论述摘编》的通知",
+    "listPublishDate": "2020-11-13",
+    "sourceOrder": 41,
+    "detailPublishDate": "2020-11-13",
+    "rawDetailPath": "raw/details/gzdt-28737785217089.html"
+  }
+}

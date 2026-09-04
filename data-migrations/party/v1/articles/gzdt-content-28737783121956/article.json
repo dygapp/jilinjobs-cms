@@ -1,0 +1,62 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737783121956",
+    "contentId": "28737783121956",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737783121956"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "流动党员支部党史教育学习计划",
+    "source": "流动党员支部",
+    "publishDate": "2021-04-09",
+    "bodyHtml": "\n                    \n\n\n\n\n<p style=\"text-align:center\"><img src=\"assets/168d3bca13dce8e31e89aebd1a18fab180affb4766afe5cba7fdaa9820d3ac99.jpg\" alt=\"\" width=\"680\" height=\"962\"><img src=\"assets/48da645891969e97718e43e48246fb19cd64dd1f4c617ce8f79e64b3d6365d8f.jpg\" alt=\"\" width=\"680\" height=\"962\"><img src=\"assets/85e56520dc3c8955dac238e1e165115a41d33cb5704d36dab0afe54acd85d2e6.jpg\" alt=\"\" width=\"680\" height=\"962\"></p>\n\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210415112451.jpeg",
+      "originalReference": "/chistory/cms/editor/20210415112451.jpeg",
+      "token": "migration-resource://168d3bca13dce8e31e89aebd1a18fab180affb4766afe5cba7fdaa9820d3ac99",
+      "snapshotPath": "assets/168d3bca13dce8e31e89aebd1a18fab180affb4766afe5cba7fdaa9820d3ac99.jpg",
+      "sha256": "168d3bca13dce8e31e89aebd1a18fab180affb4766afe5cba7fdaa9820d3ac99",
+      "contentType": "image/jpeg",
+      "sizeBytes": 529620
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210415112505.jpeg",
+      "originalReference": "/chistory/cms/editor/20210415112505.jpeg",
+      "token": "migration-resource://48da645891969e97718e43e48246fb19cd64dd1f4c617ce8f79e64b3d6365d8f",
+      "snapshotPath": "assets/48da645891969e97718e43e48246fb19cd64dd1f4c617ce8f79e64b3d6365d8f.jpg",
+      "sha256": "48da645891969e97718e43e48246fb19cd64dd1f4c617ce8f79e64b3d6365d8f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 460395
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210415112521.jpeg",
+      "originalReference": "/chistory/cms/editor/20210415112521.jpeg",
+      "token": "migration-resource://85e56520dc3c8955dac238e1e165115a41d33cb5704d36dab0afe54acd85d2e6",
+      "snapshotPath": "assets/85e56520dc3c8955dac238e1e165115a41d33cb5704d36dab0afe54acd85d2e6.jpg",
+      "sha256": "85e56520dc3c8955dac238e1e165115a41d33cb5704d36dab0afe54acd85d2e6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 357383
+    }
+  ],
+  "sourceFingerprint": "ab3abca5da1db7c1f91e1c1eebd004735115fcfa9f66af163c130831214f502a",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "流动党员支部党史教育学习计划",
+    "listPublishDate": "2021-04-09",
+    "sourceOrder": 36,
+    "detailPublishDate": "2021-04-09",
+    "rawDetailPath": "raw/details/gzdt-28737783121956.html"
+  }
+}

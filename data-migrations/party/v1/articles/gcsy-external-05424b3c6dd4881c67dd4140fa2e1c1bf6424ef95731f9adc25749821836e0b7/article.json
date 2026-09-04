@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:05424b3c6dd4881c67dd4140fa2e1c1bf6424ef95731f9adc25749821836e0b7",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/2026/07/07/ARTI1783430396654756.shtml",
+    "url": "https://www.12371.cn/2026/07/07/ARTI1783430396654756.shtml"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中共中央组织部关于在防汛救灾工作中充分发挥基层党组织战斗堡垒作用和广大党员先锋模范作用的通知",
+    "source": "",
+    "publishDate": "2026-07-21",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2026/07/07/ARTI1783430396654756.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "5e534ca211d10ab34af2c36e88d2e21896cc25c51200a8d8cc2eda70f5402985",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "中共中央组织部关于在防汛救灾工作中充分发挥基层党组织战斗堡垒作用和广大党员先锋模范作用的通知",
+    "listPublishDate": "2026-07-21",
+    "sourceOrder": 5
+  }
+}

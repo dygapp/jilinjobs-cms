@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:2fd92c8f7961e8102027ef6f0c3cfbb276785073e3937c473df62862f0c7fcef",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/n1/2023/0425/c117092-32672722.html",
+    "url": "http://dangjian.people.com.cn/n1/2023/0425/c117092-32672722.html"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中央和国家机关各部门各单位深入开展学习贯彻习近平新时代中国特色社会主义思想主题教育—— 强化理论武装 深学细照笃行",
+    "source": "",
+    "publishDate": "2023-04-25",
+    "bodyHtml": "",
+    "externalUrl": "http://dangjian.people.com.cn/n1/2023/0425/c117092-32672722.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "56db0c36d2630b22c5f244009b1b5e0a2609e9b0d06ef9f4ae26cb8fc88c6edb",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "中央和国家机关各部门各单位深入开展学习贯彻习近平新时代中国特色社会主义思想主题教育—— 强化理论武装 深学细照笃行",
+    "listPublishDate": "2023-04-25",
+    "sourceOrder": 19
+  }
+}

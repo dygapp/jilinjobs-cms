@@ -1,0 +1,62 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:89622220652544",
+    "contentId": "89622220652544",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=89622220652544"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "党日活动：参观吉林省博物院“初心如磐 使命在肩——吉林省庆祝中国共产党成立100周年”主题展览",
+    "source": "中心党支部",
+    "publishDate": "2021-09-03",
+    "bodyHtml": "\n                    <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">&nbsp; &nbsp; 为庆祝中国共产党成立</span>100周年，深入学习贯彻习近平总书记“七一”重要讲话精神。进一步推进党史学习教育活动，传承红色基因，激励党员同志们坚定理想信念、强化使命担当，</span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">2021年9月3日下午</span></span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">中心党支部、教育宾馆支部联合开展九月份主题党日活动，全体党员、积极分子一起参观吉林省博物院（东北抗日联军纪念馆）</span>“初心如磐 使命在肩——吉林省庆祝中国共产党成立100周年”主题</span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">展览。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"413\" src=\"assets/ffff0a5b04b701391d1d8c3fd096c71fdaa46784fd8f272cff1d2b2a4c71b23b.jpg\" width=\"608\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">&nbsp; &nbsp; 主题展览馆内近</span>400张（套）图片、文物实物，浓缩展示了中国共产党的百年征程，</span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">在讲解员的引领下，党员们沿着红色足迹参观了</span>“</span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">光辉历程</span></span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\">”“思想伟力”“百年辉煌”“精神谱系”等展区。展览以中国共产党百年理论探索史、不懈奋斗史、为民造福史、红色血脉史为基础，真实展示了中国共产党百年光辉历史。</span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"413\" src=\"assets/4ce26e8416cc2716bf373ad7f1e2a1869e67b6f6dc8b7986cbabefdcd6899b77.jpg\" width=\"608\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">&nbsp; &nbsp; 初心不改，牢记使命。此次主题展览让我们了解了中国共产党波澜壮阔的百年历程，党员干部纷纷表示要保持革命精神、革命斗志，努力学习、不忘初心、砥砺前行，要在工作实践中把党的光辉历史中蕴含的智慧和力量，转化为推动工作动力，不断增强使命感、责任感，为推进高校创新服务事业发展</span></span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">做出应有贡献。</span> </span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"413\" src=\"assets/8a644d8bb5797b06139dd4be4e6ad7ef8361e50aa897667b7c2ed396f53a0530.jpg\" width=\"608\"></p>\n\n<p style=\"text-align:justify\">&nbsp;</p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/af6b458b-bed8-4143-8988-521a07a5a8ad.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/af6b458b-bed8-4143-8988-521a07a5a8ad.jpg",
+      "token": "migration-resource://ffff0a5b04b701391d1d8c3fd096c71fdaa46784fd8f272cff1d2b2a4c71b23b",
+      "snapshotPath": "assets/ffff0a5b04b701391d1d8c3fd096c71fdaa46784fd8f272cff1d2b2a4c71b23b.jpg",
+      "sha256": "ffff0a5b04b701391d1d8c3fd096c71fdaa46784fd8f272cff1d2b2a4c71b23b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 329412
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/faedba62-ab17-4a5e-8ca2-2e8415963c78.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/faedba62-ab17-4a5e-8ca2-2e8415963c78.jpg",
+      "token": "migration-resource://4ce26e8416cc2716bf373ad7f1e2a1869e67b6f6dc8b7986cbabefdcd6899b77",
+      "snapshotPath": "assets/4ce26e8416cc2716bf373ad7f1e2a1869e67b6f6dc8b7986cbabefdcd6899b77.jpg",
+      "sha256": "4ce26e8416cc2716bf373ad7f1e2a1869e67b6f6dc8b7986cbabefdcd6899b77",
+      "contentType": "image/jpeg",
+      "sizeBytes": 309303
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/83a619e5-f34f-4f7e-bd85-d22c66b437a1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/83a619e5-f34f-4f7e-bd85-d22c66b437a1.jpg",
+      "token": "migration-resource://8a644d8bb5797b06139dd4be4e6ad7ef8361e50aa897667b7c2ed396f53a0530",
+      "snapshotPath": "assets/8a644d8bb5797b06139dd4be4e6ad7ef8361e50aa897667b7c2ed396f53a0530.jpg",
+      "sha256": "8a644d8bb5797b06139dd4be4e6ad7ef8361e50aa897667b7c2ed396f53a0530",
+      "contentType": "image/jpeg",
+      "sizeBytes": 311435
+    }
+  ],
+  "sourceFingerprint": "bb9ae02cf2793f5738aaba8debb1ec51ee5030c80b64bf9cc7a7586c74978add",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "党日活动：参观吉林省博物院“初心如磐 使命在肩——吉林省庆祝中国共产党成立100周年”主题展览",
+    "listPublishDate": "2021-09-03",
+    "sourceOrder": 29,
+    "detailPublishDate": "2021-09-03",
+    "rawDetailPath": "raw/details/gzdt-89622220652544.html"
+  }
+}

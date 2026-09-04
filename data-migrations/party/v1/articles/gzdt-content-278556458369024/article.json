@@ -1,0 +1,42 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:278556458369024",
+    "contentId": "278556458369024",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=278556458369024"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省高等学校毕业生就业指导中心组织开展“忆党史峥嵘 铸信仰丰碑”观影主题党日活动",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2025-03-18",
+    "bodyHtml": "\n                    <p style=\"text-align:justify\">　　<span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">为推动党史学习教育走深走实，更好地引导党员干部深入了解党的历史，从中汲取智慧和力量，吉林省高等学校毕业生就业指导中心党总支响应厅直属机关党委部署，于2025年3月14日下午组织全体党员开展“忆党史峥嵘 铸信仰丰碑”主题党日活动，观看重大革命历史题材纪录电影《东北战场的抉择——七道江会议》。</span></span></span></span></p>\n\n<p style=\"text-align:justify\">　　<span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">这部影片充分挖掘我省“三地三摇篮”红色文化资源，用实景还原的创新拍摄方式，全景式展现了发生在我省白山市的一次党史军史上的重要会议——“七道江会议”的历史进程、此次会议对我军坚持南满斗争、保卫长白山根据地、粉碎敌人对临江的进攻有着决定性意义。该影片既是对陈云、肖劲光、肖华等革命先辈的深情缅怀和歌颂，也是对七道江会议一锤定音、开启“四保临江”战役，从而扭转东北战局这一重要历史进程的浓缩和再现。</span></span></span></span></p>\n\n<p style=\"text-align:justify\">　　<span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">这部纪录片气势磅礴，真实再现了革命先辈不怕牺牲、沉着机智、敢于决断的勇气和智慧。党员们都被革命先辈的英勇事迹打动，对影片给予高度评价，纷纷表示通过观看影片，更加明白了今天的幸福生活来之不易，一定要牢记初心使命，继承发扬先辈们不怕困难、勇往直前的大无畏精神，为吉林省高校毕业生就业工作高质量发展、为中国式现代化建设事业努力奋斗。</span></span></span></span></p>\n\n<p style=\"text-align:center\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\"><img alt=\"\" height=\"588\" src=\"assets/15c41498ac6c97d728ffd87b27b9095ee2f5aaa7c128d01a0776300b417d11d1.jpg\" width=\"980\"></span></span></span></span></p>\n\n<p style=\"text-align:justify\">&nbsp;</p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-18/411189cc-17a0-4958-b4be-4343112d34aa.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-18/411189cc-17a0-4958-b4be-4343112d34aa.jpg",
+      "token": "migration-resource://15c41498ac6c97d728ffd87b27b9095ee2f5aaa7c128d01a0776300b417d11d1",
+      "snapshotPath": "assets/15c41498ac6c97d728ffd87b27b9095ee2f5aaa7c128d01a0776300b417d11d1.jpg",
+      "sha256": "15c41498ac6c97d728ffd87b27b9095ee2f5aaa7c128d01a0776300b417d11d1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 189719
+    }
+  ],
+  "sourceFingerprint": "f62ab24f5ff27e2ff49830a586e21ef88d9942463fa43fdef121f06ab3824e35",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "吉林省高等学校毕业生就业指导中心组织开展“忆党史峥嵘 铸信仰丰碑”观影主题党日活动",
+    "listPublishDate": "2025-03-18",
+    "sourceOrder": 1,
+    "detailPublishDate": "2025-03-18",
+    "rawDetailPath": "raw/details/gzdt-278556458369024.html"
+  }
+}

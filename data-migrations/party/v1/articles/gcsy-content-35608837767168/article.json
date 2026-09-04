@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:content:35608837767168",
+    "contentId": "35608837767168",
+    "typeCode": "gcsy",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=35608837767168"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "习近平：历史使命越光荣奋斗目标越宏伟 越要增强忧患意识越要从严治党",
+    "source": "",
+    "publishDate": "2020-03-05",
+    "bodyHtml": "\n                    <p><span style=\"font-size:16px\"><span style=\"color:#333333\"><span style=\"font-family:&quot;Microsoft YaHei&quot;\"><span style=\"background-color:#ffffff\"><span style=\"color:navy\"><span style=\"font-family:楷体\">　10月8日，中共中央总书记、国家主席、中央军委主席习近平在党的群众路线教育实践活动总结大会上发表重要讲话。 新华社记者 李涛 摄</span></span></span></span></span></span></p>\n\n<p><span style=\"font-size:16px\"><span style=\"color:#333333\"><span style=\"font-family:&quot;Microsoft YaHei&quot;\"><span style=\"background-color:#ffffff\">　　新华网北京10月8日电&nbsp; 党的群众路线教育实践活动总结大会10月8日在北京召开，中共中央总书记、国家主席、中央军委主席习近平出席会议并发表重要讲话。他强调，风清则气正，气正则心齐，心齐则事成。教育实践活动使党在群众中的威信和形象进一步树立，党心民心进一步凝聚，形成了推动改革发展的强大正能量。实践证明，党的十八大作出的在全党深入开展党的群众路线教育实践活动的战略决策是完全正确的，党中央关于这次活动的一系列部署是完全正确的。这次活动为我们进行具有许多新的历史特点的伟大斗争作了思想上组织上作风上的重要准备，其重大意义必将随着时间的推移不断显现出来。</span></span></span></span></p>\n\n<p><span style=\"font-size:16px\"><span style=\"color:#333333\"><span style=\"font-family:&quot;Microsoft YaHei&quot;\"><span style=\"background-color:#ffffff\">　　习近平强调，历史使命越光荣，奋斗目标越宏伟，执政环境越复杂，我们就越要增强忧患意识，越要从严治党，使我们党永远立于不败之地。这次教育实践活动，对我们探索新形势下从严治党的特点和规律具有十分重要的牵引作用。从严治党必须具体地而不是抽象地、认真地而不是敷衍地落实到位，这是这次活动给我们提供的最深刻的启示。全党要以此为起点，在从严治党上继续探索、不断前进。</span></span></span></span></p>\n\n<p><span style=\"font-size:16px\"><span style=\"color:#333333\"><span style=\"font-family:&quot;Microsoft YaHei&quot;\"><span style=\"background-color:#ffffff\">[责任编辑： 刘晓朋 ]</span></span></span></span></p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "8ddd48ffb863e0a1770549dfe8449a8597600db0e06d837baed8106a3be38d7b",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "习近平：历史使命越光荣奋斗目标越宏伟 越要增强忧患意识越要从严治党",
+    "listPublishDate": "2020-03-05",
+    "sourceOrder": 39,
+    "detailPublishDate": "2020-03-05",
+    "rawDetailPath": "raw/details/gcsy-35608837767168.html"
+  }
+}

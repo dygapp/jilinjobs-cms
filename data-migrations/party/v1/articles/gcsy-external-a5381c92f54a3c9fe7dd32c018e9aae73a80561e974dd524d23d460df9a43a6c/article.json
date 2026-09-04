@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:a5381c92f54a3c9fe7dd32c018e9aae73a80561e974dd524d23d460df9a43a6c",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/s/cUlPtcoEDwk2_RZO3P6zjg",
+    "url": "https://mp.weixin.qq.com/s/cUlPtcoEDwk2_RZO3P6zjg"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "教育部召开党组扩大会，学习贯彻习近平总书记重要讲话和2025年全国两会精神",
+    "source": "",
+    "publishDate": "2025-03-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/cUlPtcoEDwk2_RZO3P6zjg"
+  },
+  "resources": [],
+  "sourceFingerprint": "6030224f5964eda930d8977e07485d407befc66f9d2264d07112802a7a4c8127",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "教育部召开党组扩大会，学习贯彻习近平总书记重要讲话和2025年全国两会精神",
+    "listPublishDate": "2025-03-13",
+    "sourceOrder": 16
+  }
+}

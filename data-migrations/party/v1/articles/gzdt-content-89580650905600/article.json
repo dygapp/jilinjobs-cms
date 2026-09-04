@@ -1,0 +1,62 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:89580650905600",
+    "contentId": "89580650905600",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=89580650905600"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "“庆祝中国共产党成立100周年”文艺汇演",
+    "source": "中心党总支",
+    "publishDate": "2021-07-01",
+    "bodyHtml": "\n                    <p><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">&nbsp; &nbsp; 1921到2021，在栉风沐雨中中国共产党已经走过了百年历程。今年，我们迎来了党的百年庆典。7月1日上午，吉林省高等学校毕业生就业指导中心党总支组织全体党员和职工以及长春教育宾馆全体党员联合举办文艺演出，用精彩纷呈的节目热烈庆祝党的百年华诞。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"372\" src=\"assets/1721f4fbfd59ff41de88f3a222b25e3720e6f565173fc637c9783a9abfd363c7.jpg\" width=\"600\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">&nbsp; &nbsp; 演出在舞蹈《党的光辉照我心》中拉开序幕。接下来，演员们表演了独唱《欢天喜地》、《为了谁》、《红旗飘飘》；诗朗诵《七月赞歌》《党啊，我亲爱的母亲》；大联唱《我和我的祖国</span>·十送红军 少年》、手语操《国家》等精彩节目，</span></span><span style=\"font-size:16.0000pt\"><span style=\"background-color:#ffffff\"><span style=\"font-family:仿宋\"><span style=\"color:#191919\"><span style=\"font-family:仿宋\">最后，演出在大合唱《唱支山歌给党听》和《没有共产党就没有新中国》中顺利落下帷幕。</span></span></span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:16.0000pt\"><span style=\"background-color:#ffffff\"><span style=\"font-family:仿宋\"><span style=\"color:#191919\"><span style=\"font-family:仿宋\">&nbsp; &nbsp; 中心的全体党员和职工通过这些精彩的节目演出，</span></span></span></span></span><span style=\"font-size:16.0000pt\"><span style=\"background-color:#ffffff\"><span style=\"font-family:仿宋\"><span style=\"color:#191919\"><span style=\"font-family:仿宋\">回顾中国共产党团结带领中国人民顽强拼搏的光辉历程，共忆建党百年百折不挠的峥嵘岁月</span></span></span></span></span><span style=\"font-size:16.0000pt\"><span style=\"background-color:#ffffff\"><span style=\"font-family:仿宋\"><span style=\"color:#191919\"><span style=\"font-family:仿宋\">，</span></span></span></span></span><span style=\"font-size:16.0000pt\"><span style=\"background-color:#ffffff\"><span style=\"font-family:仿宋\"><span style=\"color:#191919\"><span style=\"font-family:仿宋\">祝愿我们伟大的党永远年青，祝愿我们的祖国更加繁荣昌盛。</span></span></span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">&nbsp; &nbsp; “听党话，感党恩，跟党走”，今后，我们在党的领导下，将继续持之以恒，立足岗位，勇挑重担，砥砺前行。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"422\" src=\"assets/e030c014194e92071fc4c986bdb81b7dea5527b1065573aa9756d0f7bb9d70d0.jpg\" width=\"600\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"435\" src=\"assets/ab564e10086a0d922e7e23d39a4fb6cb92783618675b6a088518f68ce04d6d57.jpg\" width=\"600\"></p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/d54aa9ea-408d-4960-9fb7-e597222f31fc.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/d54aa9ea-408d-4960-9fb7-e597222f31fc.jpg",
+      "token": "migration-resource://1721f4fbfd59ff41de88f3a222b25e3720e6f565173fc637c9783a9abfd363c7",
+      "snapshotPath": "assets/1721f4fbfd59ff41de88f3a222b25e3720e6f565173fc637c9783a9abfd363c7.jpg",
+      "sha256": "1721f4fbfd59ff41de88f3a222b25e3720e6f565173fc637c9783a9abfd363c7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 108104
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/081df915-6c72-4473-bc45-06da840073e6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/081df915-6c72-4473-bc45-06da840073e6.jpg",
+      "token": "migration-resource://e030c014194e92071fc4c986bdb81b7dea5527b1065573aa9756d0f7bb9d70d0",
+      "snapshotPath": "assets/e030c014194e92071fc4c986bdb81b7dea5527b1065573aa9756d0f7bb9d70d0.jpg",
+      "sha256": "e030c014194e92071fc4c986bdb81b7dea5527b1065573aa9756d0f7bb9d70d0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 103297
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/ac59246e-d11a-4d11-81f3-874020a19827.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/ac59246e-d11a-4d11-81f3-874020a19827.jpg",
+      "token": "migration-resource://ab564e10086a0d922e7e23d39a4fb6cb92783618675b6a088518f68ce04d6d57",
+      "snapshotPath": "assets/ab564e10086a0d922e7e23d39a4fb6cb92783618675b6a088518f68ce04d6d57.jpg",
+      "sha256": "ab564e10086a0d922e7e23d39a4fb6cb92783618675b6a088518f68ce04d6d57",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90305
+    }
+  ],
+  "sourceFingerprint": "df9f38ac127de59dd7d4afe44725292731bf6e74e401f544d8a06eb16e994f61",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "“庆祝中国共产党成立100周年”文艺汇演",
+    "listPublishDate": "2021-07-01",
+    "sourceOrder": 32,
+    "detailPublishDate": "2021-07-01",
+    "rawDetailPath": "raw/details/gzdt-89580650905600.html"
+  }
+}

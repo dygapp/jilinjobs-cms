@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737785217095",
+    "contentId": "28737785217095",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737785217095"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于学习《习近平总书记教育重要论述讲义》的通知",
+    "source": "流动党员支部",
+    "publishDate": "2020-10-23",
+    "bodyHtml": "\n                    \n\n\n\n\n<p>流动党员：</p>\n<p>&nbsp; &nbsp; &nbsp; 根椐流动党员支部学习计划，本周学习内容：《习近平总书记教育重要论述讲义》导言---新时代建设教育强国的根本遵循。</p>\n<p>&nbsp; &nbsp; &nbsp; 学习形式：自学，各位党员要记好学习笔记。</p>\n<p>&nbsp; &nbsp; &nbsp; 特此通知。<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 流动党员支部<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2020年10月23日</p>\n\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "e28f39f2fe237be86ecab81c86a329a6285f716126c94b035ebc9bfa8ae55dfb",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "关于学习《习近平总书记教育重要论述讲义》的通知",
+    "listPublishDate": "2020-10-23",
+    "sourceOrder": 44,
+    "detailPublishDate": "2020-10-23",
+    "rawDetailPath": "raw/details/gzdt-28737785217095.html"
+  }
+}

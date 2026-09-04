@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:025c2c9169fc95522dbc8ca21c406d3d6a91790474af7c126c80366707434853",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/2026/07/19/ARTI1784427992716271.shtml",
+    "url": "https://www.12371.cn/2026/07/19/ARTI1784427992716271.shtml"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "把老百姓关切的事一件一件办好——习近平总书记赴上海考察纪实",
+    "source": "",
+    "publishDate": "2026-07-21",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2026/07/19/ARTI1784427992716271.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "549aa77b2d381aafbbe03c70c3546952d4d073961a33832e12123ad40c4bc1ec",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "把老百姓关切的事一件一件办好——习近平总书记赴上海考察纪实",
+    "listPublishDate": "2026-07-21",
+    "sourceOrder": 4
+  }
+}

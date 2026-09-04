@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:e2505dc84c017a639f5940e3d42686a0754ae3cbdcf10cdbb47e4d52f5a98a97",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/n1/2020/0421/c64094-31681454.html",
+    "url": "http://cpc.people.com.cn/n1/2020/0421/c64094-31681454.html"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平在陕西考察秦岭生态保护情况",
+    "source": "",
+    "publishDate": "2020-04-21",
+    "bodyHtml": "",
+    "externalUrl": "http://cpc.people.com.cn/n1/2020/0421/c64094-31681454.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "565480e52a9a9340e60f7493c59b26ee67bbc77f649369772ef718aaa5a78872",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "习近平在陕西考察秦岭生态保护情况",
+    "listPublishDate": "2020-04-21",
+    "sourceOrder": 33
+  }
+}

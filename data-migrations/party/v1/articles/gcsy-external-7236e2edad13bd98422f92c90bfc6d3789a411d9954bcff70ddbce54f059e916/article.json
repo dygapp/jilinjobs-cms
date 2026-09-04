@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:7236e2edad13bd98422f92c90bfc6d3789a411d9954bcff70ddbce54f059e916",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/gfbw/sy/tt_214026/16446442.html",
+    "url": "http://www.mod.gov.cn/gfbw/sy/tt_214026/16446442.html?t=1775107416572"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平在参加江苏代表团审议时强调 经济大省要在研究新情况解决新问题上下功夫出经验",
+    "source": "",
+    "publishDate": "2026-04-02",
+    "bodyHtml": "",
+    "externalUrl": "http://www.mod.gov.cn/gfbw/sy/tt_214026/16446442.html?t=1775107416572"
+  },
+  "resources": [],
+  "sourceFingerprint": "8b623285a8c60c59235dcedb8dd42d0f1c0f2c4213c5ab5cf5cec3206139358b",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "习近平在参加江苏代表团审议时强调 经济大省要在研究新情况解决新问题上下功夫出经验",
+    "listPublishDate": "2026-04-02",
+    "sourceOrder": 7
+  }
+}

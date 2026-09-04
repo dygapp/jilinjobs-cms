@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "dgdz:external:740247131e9e990c9a563ba528901d60586177846214e127664a09323caa1ca7",
+    "contentId": null,
+    "typeCode": "dgdz",
+    "detailPath": "/2024/02/19/ARTI1708338178405882.shtml",
+    "url": "https://www.12371.cn/2024/02/19/ARTI1708338178405882.shtml"
+  },
+  "target": {
+    "columnAlias": "party-rules",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中共中央印发《党史学习教育工作条例》",
+    "source": "",
+    "publishDate": "2024-02-21",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2024/02/19/ARTI1708338178405882.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "e91f693e5cf977d9dc9badcb109d47a8c9e1e03b549237cd25dea25269ceca47",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "中共中央印发《党史学习教育工作条例》",
+    "listPublishDate": "2024-02-21",
+    "sourceOrder": 6
+  }
+}

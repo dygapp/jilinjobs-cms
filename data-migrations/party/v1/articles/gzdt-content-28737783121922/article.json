@@ -1,0 +1,72 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737783121922",
+    "contentId": "28737783121922",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737783121922"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "党史学习教育----参观四平战役纪念馆 重温入党誓词",
+    "source": "党总支",
+    "publishDate": "2021-05-18",
+    "bodyHtml": "\n                    <p>&nbsp; &nbsp; &nbsp; &nbsp;按照省教育厅扎实做好党史学习教育的工作要求，贯彻习近平总书记在党史学习教育动员大会上的重要讲话精神和中央决策部署，切实落实好《吉林省高等学校毕业生就业指导中心党史学习教育工作方案》，中心党总支于2021年5月16日开展参观“四平战役纪念馆”主题党日活动，全体党员和积极分子在总支书记唐洪丰的带领下，来到四平战役纪念馆，重温入党誓词。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"600\" src=\"assets/a0208f1de6225c92f980b044e58fef333d1daf9cc308721cac975e4490784ec9.jpg\" width=\"800\"></p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; 四战四平是东北解放战争中一段重要的战事，是关东大地的历史名篇。历史在和战未定的徘徊中走进了1946年。这年3月，由于驻东北苏军北撤归国，使东北之争失去了外交制衡，国共军队爆发了新一轮更大规模的军事冲突。战火由南向北终于蔓延到扼守着东北腹心的咽喉要地四平街，并在这里缠绕成战争的死结。<img alt=\"\" height=\"748\" src=\"assets/519e5c1eaf7649fd779517cf5a07397076815e235dbef15d8eee993a52ce26ea.jpg\" width=\"800\"></p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp;四平战役一共打了四次。从1946年3月至1948年3月，国共双方在这座当时总人口只有10万人的城市，先后投入兵力40余万。双方不惜代价就这一军事重镇展开反复争夺，其中以四平保卫战、四平攻坚战作战时间长、投入兵力多、伤亡数量大、影响范围广而著称于世。毛泽东曾在四平保卫战中激励我军守城将士“化四平街为马德里”，此战被后人誉为“东方马德里之战”。整个四平战役，国民党军队伤亡5万余人，东北民主联军伤亡3万余人，英雄们用年轻的生命赋予四平这座城市以“英雄城”的美誉。</p>\n\n<p>学习党史，缅怀英烈；不忘初心，牢记使命。<strong>我们在这座英雄的纪念馆里，在庄严的党旗下，重温入党誓词。<img alt=\"\" height=\"600\" src=\"assets/2836dc0aabc5fa760dcb2041d327b9ffd369216400f5143d965cb0e5b045faa6.jpg\" width=\"800\"></strong></p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp;四平战役纪念馆建馆六十多年来，名称几易，馆舍几迁。四平战役撼天动地的炮火，依然通过四平战役纪念馆中的陈列，向我们讲述着那段浩气四塞的历史，让我们深知和平来之不易，更加坚毅向前。我们要紧密团结在以习近平总书记为核心的党中央周围，扎实工作，开拓创新，为实现伟大的中国梦而努力奋斗。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"600\" src=\"assets/d7e90a0be83a343ac14c8118c336b3ace6a7d49ff1f4661ed2a3a9c7a6792252.jpg\" width=\"800\"></p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210520095631.jpg",
+      "originalReference": "/chistory/cms/editor/20210520095631.jpg",
+      "token": "migration-resource://a0208f1de6225c92f980b044e58fef333d1daf9cc308721cac975e4490784ec9",
+      "snapshotPath": "assets/a0208f1de6225c92f980b044e58fef333d1daf9cc308721cac975e4490784ec9.jpg",
+      "sha256": "a0208f1de6225c92f980b044e58fef333d1daf9cc308721cac975e4490784ec9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 6234854
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210520095726.jpg",
+      "originalReference": "/chistory/cms/editor/20210520095726.jpg",
+      "token": "migration-resource://519e5c1eaf7649fd779517cf5a07397076815e235dbef15d8eee993a52ce26ea",
+      "snapshotPath": "assets/519e5c1eaf7649fd779517cf5a07397076815e235dbef15d8eee993a52ce26ea.jpg",
+      "sha256": "519e5c1eaf7649fd779517cf5a07397076815e235dbef15d8eee993a52ce26ea",
+      "contentType": "image/jpeg",
+      "sizeBytes": 4060499
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210520095757.jpg",
+      "originalReference": "/chistory/cms/editor/20210520095757.jpg",
+      "token": "migration-resource://2836dc0aabc5fa760dcb2041d327b9ffd369216400f5143d965cb0e5b045faa6",
+      "snapshotPath": "assets/2836dc0aabc5fa760dcb2041d327b9ffd369216400f5143d965cb0e5b045faa6.jpg",
+      "sha256": "2836dc0aabc5fa760dcb2041d327b9ffd369216400f5143d965cb0e5b045faa6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 1857158
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210520095846.jpg",
+      "originalReference": "/chistory/cms/editor/20210520095846.jpg",
+      "token": "migration-resource://d7e90a0be83a343ac14c8118c336b3ace6a7d49ff1f4661ed2a3a9c7a6792252",
+      "snapshotPath": "assets/d7e90a0be83a343ac14c8118c336b3ace6a7d49ff1f4661ed2a3a9c7a6792252.jpg",
+      "sha256": "d7e90a0be83a343ac14c8118c336b3ace6a7d49ff1f4661ed2a3a9c7a6792252",
+      "contentType": "image/jpeg",
+      "sizeBytes": 7058254
+    }
+  ],
+  "sourceFingerprint": "48ea181ffbdb8cd015e853cc40bd24c2846be31e3975e5fd27f5991a09dfd7ff",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "党史学习教育----参观四平战役纪念馆 重温入党誓词",
+    "listPublishDate": "2021-05-18",
+    "sourceOrder": 35,
+    "detailPublishDate": "2021-05-18",
+    "rawDetailPath": "raw/details/gzdt-28737783121922.html"
+  }
+}

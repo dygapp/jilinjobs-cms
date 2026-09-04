@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:a8c07bef5bc5b977e6a556a8f8039047d551a1f978d4fe24d7fac6e5bc0229f8",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/2025/03/21/ARTI1742564333009173.shtml",
+    "url": "https://www.12371.cn/2025/03/21/ARTI1742564333009173.shtml"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "如何开展深入贯彻中央八项规定精神学习教育？一图了解这些重点！",
+    "source": "",
+    "publishDate": "2025-03-24",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2025/03/21/ARTI1742564333009173.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "ca99a22f68221f642391cb7ec4ce3c9615a5446e259d82ec5711b1f9faf7689c",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "如何开展深入贯彻中央八项规定精神学习教育？一图了解这些重点！",
+    "listPublishDate": "2025-03-24",
+    "sourceOrder": 15
+  }
+}

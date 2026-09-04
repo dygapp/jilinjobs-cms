@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:a7c1c8d788cb4805f81c79b932d8289d507bad40a81958c4d9f3e72b92d6d593",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/n1/2023/0407/c64387-32659011.html",
+    "url": "http://cpc.people.com.cn/n1/2023/0407/c64387-32659011.html"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "紧紧锚定开展主题教育的目标任务",
+    "source": "",
+    "publishDate": "2023-04-07",
+    "bodyHtml": "",
+    "externalUrl": "http://cpc.people.com.cn/n1/2023/0407/c64387-32659011.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "9b7c9b1dd61c012bb839b555996be50b1b49f19a521b3e27c9496530daaace3f",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "紧紧锚定开展主题教育的目标任务",
+    "listPublishDate": "2023-04-07",
+    "sourceOrder": 17
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "listCode": "PARTY_CAROUSEL",
+  "sourceSystem": "legacy-jilinjobs",
+  "sourcePage": "https://24365.jl.smartedu.cn/dyzj",
+  "items": [
+    {
+      "legacyKey": "party-carousel:position:1",
+      "path": "items/party-carousel-position-1/item.json",
+      "sourceOrder": 1,
+      "sourceFingerprint": "22cccf1c2e22b5d4e38b269d85fd8a3b4c525e0b06eb10470d20aa3ecc942353"
+    },
+    {
+      "legacyKey": "party-carousel:position:2",
+      "path": "items/party-carousel-position-2/item.json",
+      "sourceOrder": 2,
+      "sourceFingerprint": "c2ad182b8b2dc981a3cbe3b0153a1e3e47604c1f01dd43e6d25971e1deed10dc"
+    },
+    {
+      "legacyKey": "party-carousel:position:3",
+      "path": "items/party-carousel-position-3/item.json",
+      "sourceOrder": 3,
+      "sourceFingerprint": "df657633c636cd99781552705f7b2b6459c5034a6b68e2137024ee9817e1b903"
+    },
+    {
+      "legacyKey": "party-carousel:position:4",
+      "path": "items/party-carousel-position-4/item.json",
+      "sourceOrder": 4,
+      "sourceFingerprint": "89f58529b9debf69abe525e7d2194ba374eaf99f436b9b37553c15e588556220"
+    }
+  ]
+}

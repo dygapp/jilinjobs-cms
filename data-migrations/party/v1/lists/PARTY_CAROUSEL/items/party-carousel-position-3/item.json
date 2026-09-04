@@ -1,0 +1,21 @@
+{
+  "legacyKey": "party-carousel:position:3",
+  "sourceOrder": 3,
+  "title": "习近平在广东考察时强调 坚定不移全面深化改革扩大高水平对外开放 在推进中国式现代化建设中走在前列",
+  "url": "http://ztjy.people.cn/n1/2023/0414/c457340-32664604.html",
+  "openMode": "NEW_WINDOW",
+  "sourceFingerprint": "df657633c636cd99781552705f7b2b6459c5034a6b68e2137024ee9817e1b903",
+  "image": {
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content1/2023-04-25/8f0e07b0-3d8a-4a48-85b1-94986c483247.png",
+    "originalReference": "/group1/cms/t_biz_attachment/content1/2023-04-25/8f0e07b0-3d8a-4a48-85b1-94986c483247.png",
+    "snapshotPath": "assets/fa8a56cce5c6172f3fb1db6e70c446f507f5a29293133dd5e12018517983915a.png",
+    "sha256": "fa8a56cce5c6172f3fb1db6e70c446f507f5a29293133dd5e12018517983915a",
+    "contentType": "image/png",
+    "sizeBytes": 155276
+  },
+  "evidence": {
+    "sourceHref": "http://ztjy.people.cn/n1/2023/0414/c457340-32664604.html",
+    "sourceImageReference": "/group1/cms/t_biz_attachment/content1/2023-04-25/8f0e07b0-3d8a-4a48-85b1-94986c483247.png",
+    "sourceTarget": "_blank"
+  }
+}

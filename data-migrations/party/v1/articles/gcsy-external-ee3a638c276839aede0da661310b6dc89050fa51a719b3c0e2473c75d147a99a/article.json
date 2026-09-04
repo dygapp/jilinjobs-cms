@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:ee3a638c276839aede0da661310b6dc89050fa51a719b3c0e2473c75d147a99a",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/n1/2023/0404/c64094-32657148.html",
+    "url": "http://cpc.people.com.cn/n1/2023/0404/c64094-32657148.html"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "扎实抓好主题教育 为奋进新征程凝心聚力",
+    "source": "",
+    "publishDate": "2023-04-07",
+    "bodyHtml": "",
+    "externalUrl": "http://cpc.people.com.cn/n1/2023/0404/c64094-32657148.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "0c0ccb5d7bb0420763c4dd9bca4b0dd7ece2b09d603d2389e23b0118db4d68d9",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "扎实抓好主题教育 为奋进新征程凝心聚力",
+    "listPublishDate": "2023-04-07",
+    "sourceOrder": 22
+  }
+}

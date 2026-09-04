@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:0618ee4ebdfa99740d23a40a13db15ae95dedb2bb276bdbd36946593415c1187",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/n1/2023/0407/c64387-32659010.html",
+    "url": "http://cpc.people.com.cn/n1/2023/0407/c64387-32659010.html"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中共中央发出关于印发《习近平新时代中国特色社会主义思想学习纲要（2023年版）》的通知",
+    "source": "",
+    "publishDate": "2023-04-07",
+    "bodyHtml": "",
+    "externalUrl": "http://cpc.people.com.cn/n1/2023/0407/c64387-32659010.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "19fe9e471f4a94c01760ebd5a7cf88d5f46300db08285b3d7ed6afe498a3962b",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "中共中央发出关于印发《习近平新时代中国特色社会主义思想学习纲要（2023年版）》的通知",
+    "listPublishDate": "2023-04-07",
+    "sourceOrder": 16
+  }
+}

@@ -1,32 +1,47 @@
 {
   "migrationId": "party-v1",
+  "formatVersion": 1,
+  "status": "accepted-canonical",
   "sourceSystem": "legacy-jilinjobs",
   "sourceOrigin": "https://24365.jl.smartedu.cn",
-  "status": "human-review-candidate",
   "sourceStrategy": "server-rendered-html-with-browser-cross-check",
-  "contentScope": [
-    { "typeCode": "gcsy", "columnAlias": "party-voice", "observedListCount": 40 },
-    { "typeCode": "gzdt", "columnAlias": "party-work", "observedListCount": 88 },
-    { "typeCode": "dgdz", "columnAlias": "party-rules", "observedListCount": 22 },
-    { "typeCode": "llxx", "columnAlias": "party-study", "observedListCount": 31 }
-  ],
-  "observedListedRecords": 181,
-  "candidateSnapshot": {
+  "acceptedSnapshot": {
     "generatedAt": "2026-09-04T03:04:06.772Z",
-    "workflowRunId": 33831279817,
-    "workflowRunNumber": 7,
-    "artifactId": 9921976616,
     "artifactDigest": "sha256:230ac0df997b3dc913ed38503a8289eae30d8bb0a455fd858e388ddc27066148",
+    "articles": 181,
     "internalArticles": 120,
     "externalArticles": 61,
-    "resources": 184,
+    "uniqueArticleResources": 180,
+    "articleAssetFiles": 180,
     "carouselItems": 4,
+    "carouselResources": 4,
     "unresolved": 0
   },
+  "contentScope": [
+    {
+      "typeCode": "gcsy",
+      "columnAlias": "party-voice",
+      "observedListCount": 40
+    },
+    {
+      "typeCode": "gzdt",
+      "columnAlias": "party-work",
+      "observedListCount": 88
+    },
+    {
+      "typeCode": "dgdz",
+      "columnAlias": "party-rules",
+      "observedListCount": 22
+    },
+    {
+      "typeCode": "llxx",
+      "columnAlias": "party-study",
+      "observedListCount": 31
+    }
+  ],
   "notes": [
-    "181 条是 2026-09-04T03:04:06.772Z 固定 Human Review 候选 Snapshot 的 source-listed 数量，不是对后续原站状态的永久声明。",
-    "Source Discovery 未观察到内容 XHR/fetch，且原始 Document HTML 已包含列表与详情正文，因此 Collector 使用服务端 HTML 主源并以 Browser DOM / Network Evidence 交叉验证。",
-    "EU-29 候选 Snapshot 已通过 Fresh MySQL、V18、首次导入、二次幂等导入、轮播字段/图片 SHA-256 和 Runtime Browser 验证。",
-    "候选基线冻结后，实时原站 Collect 只显式手工触发；后续新增内容应以增量 Snapshot 追加，不静默改变已接受候选数据。"
+    "Canonical dataset 是从已冻结并完成 Human Review 的 EU-29 Run #7 Artifact 无损重排产生，不重新访问原站。",
+    "文章采用 article-level self-contained unit；正文资源引用改为 article-relative assets/**。",
+    "后续增量直接修改 index.ndjson 与对应文章/列表项目录，不建立新的全量 Snapshot ZIP。"
   ]
 }

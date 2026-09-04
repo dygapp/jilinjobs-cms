@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:a97f9f87b9296e595794ec745f01d5c5cbb39d7bef6d88ce68b56f0af9553ce9",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/n1/2023/0405/c64387-32657893.html",
+    "url": "http://cpc.people.com.cn/n1/2023/0405/c64387-32657893.html"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "为奋进新征程凝心聚力",
+    "source": "",
+    "publishDate": "2023-04-05",
+    "bodyHtml": "",
+    "externalUrl": "http://cpc.people.com.cn/n1/2023/0405/c64387-32657893.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "52f0614e15dfa5818186feef78765951304bf42acc778f36d16294dfa712c613",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "为奋进新征程凝心聚力",
+    "listPublishDate": "2023-04-05",
+    "sourceOrder": 19
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "dgdz:external:756ee8d7e01ce0781996d0e7ea6fe97c890f6da206fecf868d208b2e67eaa5ec",
+    "contentId": null,
+    "typeCode": "dgdz",
+    "detailPath": "/2023/11/24/ARTI1700808662021936.shtml",
+    "url": "https://www.12371.cn/2023/11/24/ARTI1700808662021936.shtml"
+  },
+  "target": {
+    "columnAlias": "party-rules",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "事业单位工作人员处分规定",
+    "source": "",
+    "publishDate": "2024-11-27",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2023/11/24/ARTI1700808662021936.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "b0f73835d2f8c8bd9481044772b1156f29e7cbc5fbea16a4aeeb3f2e6807c225",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "事业单位工作人员处分规定",
+    "listPublishDate": "2024-11-27",
+    "sourceOrder": 5
+  }
+}

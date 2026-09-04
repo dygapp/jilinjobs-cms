@@ -1,0 +1,62 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:101215948013568",
+    "contentId": "101215948013568",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=101215948013568"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "“凝固的城市记忆--重温九一九长春抗战历史”七月党日活动",
+    "source": "中心党支部",
+    "publishDate": "2022-07-01",
+    "bodyHtml": "\n                    <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:16.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">&nbsp; 为庆祝中国共产党成立</span><span style=\"font-family:Calibri\">101</span><span style=\"font-family:宋体\">周年，</span></span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:Calibri\">2022</span><span style=\"font-family:宋体\">年</span><span style=\"font-family:Calibri\">6</span><span style=\"font-family:宋体\">月</span><span style=\"font-family:Calibri\">30</span><span style=\"font-family:宋体\">日下午，</span></span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:Calibri\"><span style=\"font-family:宋体\">中心党支部与浦东社区联合开展</span></span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">“凝固的城市记忆——重温九一九长春抗战历史”七月份党日活动。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"372\" src=\"assets/3d1ec637b1ab0c78cf2ce6302d6d6481194d1f4b00fbe829bff0001d4eb37f92.jpg\" width=\"496\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:16.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">&nbsp; 中心党员及积极分子与浦东路社区党员一起</span></span><span style=\"font-family:Calibri\"><span style=\"font-family:宋体\">参观长春南大营旧址陈列馆，</span></span><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">重温入党誓词</span></span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">，</span></span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:Calibri\"><span style=\"font-family:宋体\">缅怀革命先烈</span></span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"352\" src=\"assets/34b3e613c52fcfff568e8ddf6ab210abe6bee5b3e39e604d74fdf34d1fbc79e0.jpg\" width=\"496\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:16.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">&nbsp; 在长春南大营旧址陈列馆院内，全体</span></span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">党</span></span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">员认真聆听感人肺腑、催人奋进的历史故事，参观丰富翔实的文献资料、宝贵真实的战争器物，被革命先烈们英勇顽强、无限忠诚的革命精神所震撼。全体成员重温当年军民同仇敌忾、誓死抗敌的抗战历史，感受到了一次深刻的党性洗礼</span></span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">，</span></span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">铭记奋斗历程，感受涌动的初心。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"372\" src=\"assets/f3ed47f09122111367e2006b9360ea5f3ab788080bd2a84f101195a9d462e6e6.jpg\" width=\"496\"></p>\n\n<p>&nbsp;</p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/4d6f342a-6bb8-4183-8910-4b983d178361.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-13/4d6f342a-6bb8-4183-8910-4b983d178361.jpg",
+      "token": "migration-resource://3d1ec637b1ab0c78cf2ce6302d6d6481194d1f4b00fbe829bff0001d4eb37f92",
+      "snapshotPath": "assets/3d1ec637b1ab0c78cf2ce6302d6d6481194d1f4b00fbe829bff0001d4eb37f92.jpg",
+      "sha256": "3d1ec637b1ab0c78cf2ce6302d6d6481194d1f4b00fbe829bff0001d4eb37f92",
+      "contentType": "image/jpeg",
+      "sizeBytes": 298305
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/07550c8e-341f-44a8-9df1-3c1764bf0d4d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-13/07550c8e-341f-44a8-9df1-3c1764bf0d4d.jpg",
+      "token": "migration-resource://34b3e613c52fcfff568e8ddf6ab210abe6bee5b3e39e604d74fdf34d1fbc79e0",
+      "snapshotPath": "assets/34b3e613c52fcfff568e8ddf6ab210abe6bee5b3e39e604d74fdf34d1fbc79e0.jpg",
+      "sha256": "34b3e613c52fcfff568e8ddf6ab210abe6bee5b3e39e604d74fdf34d1fbc79e0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81451
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/2aeabb25-1ab5-4ea0-83ac-37eced5f7020.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-13/2aeabb25-1ab5-4ea0-83ac-37eced5f7020.jpg",
+      "token": "migration-resource://f3ed47f09122111367e2006b9360ea5f3ab788080bd2a84f101195a9d462e6e6",
+      "snapshotPath": "assets/f3ed47f09122111367e2006b9360ea5f3ab788080bd2a84f101195a9d462e6e6.jpg",
+      "sha256": "f3ed47f09122111367e2006b9360ea5f3ab788080bd2a84f101195a9d462e6e6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 74900
+    }
+  ],
+  "sourceFingerprint": "87572e0f995e988b5ee6931658c912d3b156141d068415b2abb4238e2752fdb1",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "“凝固的城市记忆--重温九一九长春抗战历史”七月党日活动",
+    "listPublishDate": "2022-07-01",
+    "sourceOrder": 13,
+    "detailPublishDate": "2022-07-01",
+    "rawDetailPath": "raw/details/gzdt-101215948013568.html"
+  }
+}

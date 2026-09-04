@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:c5deb66f848aab5d8cbe78c43a51dd4b7f8140c683083ec959b74751f43a6b4b",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/2020/10/29/ARTI1603964233795881.shtml",
+    "url": "https://www.12371.cn/2020/10/29/ARTI1603964233795881.shtml"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中国共产党第十九届中央委员会第五次全体会议公报",
+    "source": "",
+    "publishDate": "2020-10-29",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2020/10/29/ARTI1603964233795881.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "97da8d78fdb39c11d764b7157bd2e7aa1922caa8747db95609698a2b152b40bd",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "中国共产党第十九届中央委员会第五次全体会议公报",
+    "listPublishDate": "2020-10-29",
+    "sourceOrder": 30
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:b6a259409a800d479455e0cbcaa0735a8c43e8679c2ed559c2e4f126d8d5deb0",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/n1/2023/0408/c64387-32659715.html",
+    "url": "http://cpc.people.com.cn/n1/2023/0408/c64387-32659715.html"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "把理论学习、调查研究、推动发展、检视整改贯通起来",
+    "source": "",
+    "publishDate": "2023-04-08",
+    "bodyHtml": "",
+    "externalUrl": "http://cpc.people.com.cn/n1/2023/0408/c64387-32659715.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "b41f119da182c7c88bc384f33032ebcadd7b72739c86d1e8988e2df6c5f9bd15",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "把理论学习、调查研究、推动发展、检视整改贯通起来",
+    "listPublishDate": "2023-04-08",
+    "sourceOrder": 14
+  }
+}

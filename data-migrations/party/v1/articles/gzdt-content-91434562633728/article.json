@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:91434562633728",
+    "contentId": "91434562633728",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=91434562633728"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于收看《党的伟大成就》（杨凤城主讲）的通知",
+    "source": "流动党员支部",
+    "publishDate": "2021-10-24",
+    "bodyHtml": "\n                    <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">各位党员：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></span></p>\n\n<p style=\"text-align:justify\">　　<span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">中央组织部、中央广播电视总台联合录制了3期《党课开讲啦》节目。第3期《党的伟大成就》（杨凤城主讲）10月31日（星期日）晚8点档在中央电视台综合频道（CCTV-1）播出。按照省委组织部和省直机关工委的通知要求，请各位党员准时收看，并截图发送到微信群。</span></span></span></span></p>\n\n<p style=\"text-align:right\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">流动党员支部</span></span></span></span></p>\n\n<p style=\"text-align:right\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2021</span></span><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">年10月24日</span></span></span></span></p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "6017d69df9ce8a054decd598be6e5851e786fee9d9857fccdf19d395538287d5",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "关于收看《党的伟大成就》（杨凤城主讲）的通知",
+    "listPublishDate": "2021-10-24",
+    "sourceOrder": 26,
+    "detailPublishDate": "2021-10-24",
+    "rawDetailPath": "raw/details/gzdt-91434562633728.html"
+  }
+}

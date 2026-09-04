@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:5c28d40e4a6032b1020bf59ed440d7fcbc9c0afead94cb087719b0d1013cb6f3",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/n1/2023/0409/c64387-32659982.html",
+    "url": "http://cpc.people.com.cn/n1/2023/0409/c64387-32659982.html"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "把主题教育谋划好、组织好、落实好",
+    "source": "",
+    "publishDate": "2023-04-09",
+    "bodyHtml": "",
+    "externalUrl": "http://cpc.people.com.cn/n1/2023/0409/c64387-32659982.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "58a06d593aa86a517fecb235a05ba35713832cc915ed674fd55ce37240c366a2",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "把主题教育谋划好、组织好、落实好",
+    "listPublishDate": "2023-04-09",
+    "sourceOrder": 13
+  }
+}

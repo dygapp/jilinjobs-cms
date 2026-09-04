@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:2704fae9e0c225f5c704dac4ac5475433fbc8026ff5ef0e8db751a1926df28cf",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/2025/01/06/ARTI1736159124309349.shtml",
+    "url": "https://www.12371.cn/2025/01/06/ARTI1736159124309349.shtml"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平在二十届中央纪委四次全会上发表重要讲话强调 坚持用改革精神和严的标准管党治党 坚决打好反腐败斗争攻坚战持久战总体战",
+    "source": "",
+    "publishDate": "2025-01-08",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2025/01/06/ARTI1736159124309349.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "1c2ce6680316ec764a9a6e33d531a35ec55d8f3f096f24265928fa0492c477fe",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "习近平在二十届中央纪委四次全会上发表重要讲话强调 坚持用改革精神和严的标准管党治党 坚决打好反腐败斗争攻坚战持久战总体战",
+    "listPublishDate": "2025-01-08",
+    "sourceOrder": 6
+  }
+}

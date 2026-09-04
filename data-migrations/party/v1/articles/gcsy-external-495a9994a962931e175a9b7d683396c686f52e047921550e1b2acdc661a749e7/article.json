@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:495a9994a962931e175a9b7d683396c686f52e047921550e1b2acdc661a749e7",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/n1/2023/0414/c457340-32664604.html",
+    "url": "http://ztjy.people.cn/n1/2023/0414/c457340-32664604.html"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平在广东考察时强调 坚定不移全面深化改革扩大高水平对外开放 在推进中国式现代化建设中走在前列",
+    "source": "",
+    "publishDate": "2023-04-14",
+    "bodyHtml": "",
+    "externalUrl": "http://ztjy.people.cn/n1/2023/0414/c457340-32664604.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "7175307860d75e4fc59ebadcadad18a65d0f9dc70fa6348611b880d493aed5ef",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "习近平在广东考察时强调 坚定不移全面深化改革扩大高水平对外开放 在推进中国式现代化建设中走在前列",
+    "listPublishDate": "2023-04-14",
+    "sourceOrder": 21
+  }
+}

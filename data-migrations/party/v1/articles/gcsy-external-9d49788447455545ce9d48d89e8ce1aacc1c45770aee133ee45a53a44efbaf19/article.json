@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:9d49788447455545ce9d48d89e8ce1aacc1c45770aee133ee45a53a44efbaf19",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/2026/02/28/ARTI1772266603533597.shtml",
+    "url": "https://www.12371.cn/2026/02/28/ARTI1772266603533597.shtml"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平：让愿担当、敢担当、善担当蔚然成风",
+    "source": "",
+    "publishDate": "2026-03-13",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2026/02/28/ARTI1772266603533597.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "c268b4724dce368eb6dc82b87a258f170af185532dc3e56d7d5f64b8e868ebc5",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "习近平：让愿担当、敢担当、善担当蔚然成风",
+    "listPublishDate": "2026-03-13",
+    "sourceOrder": 9
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:89612294832128",
+    "contentId": "89612294832128",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=89612294832128"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "中心党总支委员会召开2021年度组织生活会",
+    "source": "中心党总支",
+    "publishDate": "2022-02-25",
+    "bodyHtml": "\n                    <p style=\"text-align:left\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:14.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">&nbsp; &nbsp; 按照教育厅直属机关党委关于召开</span>2021年度基层党组织组织生活会的部署要求，中心党总支于2022年2月25日下午召开总支委员会组织生活会，厅直属机关党委指派专门督导人员出席了会议。</span></span></span></span></p>\n\n<p style=\"text-align:left\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:14.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">&nbsp; &nbsp; 会前，为开好这次组织生活会，党总支认真组织全体党员系统学习习近平总书记系列讲话精神并开展交流研讨，全面开展谈心谈话，征求意见。对照党章党规条例和党史教育学习等方面情况，认真深入查摆问题，结合实际制定整改措施，坚持问题导向，抓实整改解决问题。</span></span></span></span></span></p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt=\"\" height=\"231\" src=\"assets/6d30c9b1133b8ba198ad99e5405a749cb464eea0561844923b63afb9d405a39d.jpg\" width=\"308\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt=\"\" height=\"231\" src=\"assets/6dc5ae0dcd0d95f995f455896612fd089e28e3d84af7b5406550e70d7abeae6c.jpg\" width=\"308\"></p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:left\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:14.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">&nbsp; 会上，党总支书记唐洪丰同志代表总支班子作了对照检查。唐洪丰书记、组织委员宋姣、纪检委员王颖、宣传委员陈淑敏分别作了个人对照检查。总支委员之间开展了严肃的批评和自我批评。</span></span></span></span></span></p>\n\n<p>&nbsp;</p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/bac47ea4-5823-4709-aaad-2f1ad20aa6e2.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/bac47ea4-5823-4709-aaad-2f1ad20aa6e2.jpg",
+      "token": "migration-resource://6d30c9b1133b8ba198ad99e5405a749cb464eea0561844923b63afb9d405a39d",
+      "snapshotPath": "assets/6d30c9b1133b8ba198ad99e5405a749cb464eea0561844923b63afb9d405a39d.jpg",
+      "sha256": "6d30c9b1133b8ba198ad99e5405a749cb464eea0561844923b63afb9d405a39d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 246302
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/5f1c1d57-e2bc-4618-b57c-bf5317cb4ff6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/5f1c1d57-e2bc-4618-b57c-bf5317cb4ff6.jpg",
+      "token": "migration-resource://6dc5ae0dcd0d95f995f455896612fd089e28e3d84af7b5406550e70d7abeae6c",
+      "snapshotPath": "assets/6dc5ae0dcd0d95f995f455896612fd089e28e3d84af7b5406550e70d7abeae6c.jpg",
+      "sha256": "6dc5ae0dcd0d95f995f455896612fd089e28e3d84af7b5406550e70d7abeae6c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 244162
+    }
+  ],
+  "sourceFingerprint": "fb082705cefd63a3ccf55b8637cefe3873cda8814316b429322de31d4e2d53e1",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "中心党总支委员会召开2021年度组织生活会",
+    "listPublishDate": "2022-02-25",
+    "sourceOrder": 20,
+    "detailPublishDate": "2022-02-25",
+    "rawDetailPath": "raw/details/gzdt-89612294832128.html"
+  }
+}

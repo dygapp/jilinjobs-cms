@@ -1,0 +1,372 @@
+[
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content1/2025-09-12/c337cedf-caa0-4365-ad22-1a391c286e98.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content1/2023-05-08/low/a0b72690-64a3-43aa-9c3a-d08cd3ca783f.png",
+    "declared": "application/octet-stream",
+    "detected": "image/png"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content1/2023-04-25/8f0e07b0-3d8a-4a48-85b1-94986c483247.png",
+    "declared": "application/octet-stream",
+    "detected": "image/png"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content1/2023-04-24/cfb8ebec-7d65-4383-b30d-389c5fccc7e8.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-13/10d1222e-f044-4bd4-93d6-99f0fd3604e4.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-13/1650f90b-53d6-4688-b335-fb18f2d06748.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-13/7c1a71cf-1aad-49a6-981b-e5c4c77a6879.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-13/d086dc51-9a5c-422d-865f-2ae1848272f5.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-13/fd2d7c33-3479-43b5-9b90-9cddd501d9b2.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-13/1e5739f5-e25b-496e-8b6d-352ccf6296ea.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-13/70c2804a-f4ae-4649-a8ba-48b4d6c9dff9.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-13/1d5ce114-2f01-4de3-b41d-87bda54966eb.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-13/821119ea-b522-42ee-bd29-b8bc4f149239.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-13/05fef57e-0248-4a94-80c6-3561db1cabd6.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-18/411189cc-17a0-4958-b4be-4343112d34aa.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-01-05/5468ef45-fff1-4ff4-8142-5e76a42a079e.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-01-05/3695aee3-53bb-48ad-916b-302de5546fa7.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-09-28/3ec3c12b-0e87-4d78-93d1-12c337dcff5c.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-09-28/22427976-bd0f-4c15-8972-8ccbb506f170.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-22/dea85efd-ef46-4985-a6ab-7ed227d1af6c.png",
+    "declared": "application/octet-stream",
+    "detected": "image/png"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-22/7ccdf808-bb18-4ef0-977d-5c9fc3b0c345.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-22/051c4e07-42db-4ec9-a7e8-380b927a724c.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/4d6f342a-6bb8-4183-8910-4b983d178361.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/07550c8e-341f-44a8-9df1-3c1764bf0d4d.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/2aeabb25-1ab5-4ea0-83ac-37eced5f7020.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-06-06/0d28cc66-fc20-48aa-9e41-749d07fadb04.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-06-06/21fda46f-d24d-411a-a88a-ddade3fa3f64.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-06-06/021c5d80-a31b-4ec8-a56e-8d30acdee1d3.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-24/0b200cfd-782d-4f5f-8910-8db9f93accc1.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-24/21250062-e8b0-4e7b-ad42-92b6320f36af.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-24/2fb2b184-b45f-42c8-9fa1-0fe73a326036.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/bac47ea4-5823-4709-aaad-2f1ad20aa6e2.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/5f1c1d57-e2bc-4618-b57c-bf5317cb4ff6.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/b85599cf-19c6-4e33-b35b-9670203fe323.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/c58406d8-4c3c-4694-a997-748121400db6.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/511116c6-a5fc-4d83-a7d2-3cb5845b9a7c.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/eb3c710b-04b2-427d-a8c0-c4197cdd360d.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/59d68686-0c67-4d4b-b6bb-88a7914a88d1.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/dfaa26d8-355d-4d66-97b9-0ecefcddbf44.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/af6b458b-bed8-4143-8988-521a07a5a8ad.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/faedba62-ab17-4a5e-8ca2-2e8415963c78.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/83a619e5-f34f-4f7e-bd85-d22c66b437a1.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/646bbbf3-0d28-44f4-91f7-8f604a07bb8e.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/f9013eb3-14f2-431e-b1a8-605d026d305e.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/9f6d1267-cc59-4a09-bb9c-9972793c74cb.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/af42a317-1a0f-45b2-904c-b637147b2c35.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/8f01620d-8aa1-4ec7-8cae-c13230345c87.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/d54aa9ea-408d-4960-9fb7-e597222f31fc.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/081df915-6c72-4473-bc45-06da840073e6.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/ac59246e-d11a-4d11-81f3-874020a19827.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/02500c47-7b45-4254-ad32-6e320055c4b1.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "RESOURCE_MEDIA_MISMATCH",
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/5c3a2faa-134f-450b-aac1-141213419169.jpg",
+    "declared": "application/octet-stream",
+    "detected": "image/jpeg"
+  },
+  {
+    "level": "warning",
+    "code": "EMPTY_RESOURCE_SKIPPED",
+    "role": "BODY_IMAGE",
+    "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360261976734375001773409.JPG"
+  }
+]

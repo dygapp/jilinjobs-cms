@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:7ded344c140bda7beb7af0b76a86eb6506d25eacb10a478277fb99307b087425",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/n1/2023/0320/c64387-32647367.html",
+    "url": "http://cpc.people.com.cn/n1/2023/0320/c64387-32647367.html"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中办印发《关于在全党大兴调查研究的工作方案》",
+    "source": "",
+    "publishDate": "2023-03-20",
+    "bodyHtml": "",
+    "externalUrl": "http://cpc.people.com.cn/n1/2023/0320/c64387-32647367.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "3c3589e4d5cbe9f30925a9e2cc5c882ee22951b2fd728f00f35fab997041b1e1",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "中办印发《关于在全党大兴调查研究的工作方案》",
+    "listPublishDate": "2023-03-20",
+    "sourceOrder": 20
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737783121948",
+    "contentId": "28737783121948",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737783121948"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "党课：做新时代“红船精神”传承者",
+    "source": "中心党支部",
+    "publishDate": "2020-11-03",
+    "bodyHtml": "\n                    \n\n\n\n\n<p>2020年10月30日，为深入宣传贯彻十九大报告、十九届四中、五中全会精神，根据中心党总支工作安排和部署，按照中心党支部学习计划，中心党支部书记李凌红以“做新时代“红船精神”传承者”为题讲党课，弘扬红船精神，号召大家争做新时代红船精神传承者，中心全体党员和积极分子参加。</p>\n<p style=\"text-align:center\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"assets/565a8f0a679ab0fdca0b5a1a8d06268c943eeeff8229791655cc6f3980fb90f8.jpg\" alt=\"\" width=\"448\" height=\"336\"></p>\n<p>2005年6月21日，习近平在《光明日报》上发表署名文章《弘扬“红船精神” 走在时代前列》，首次公开提出并系统阐述了“红船精神”的历史地位、深刻内涵和时代意义。</p>\n<p>2017年10月31日，党的十九大闭幕仅一周，习近平总书记带领中共中央政治局常委，专程从北京前往上海和浙江嘉兴，瞻仰一大会址、南湖红船。这一行动、体现了我党“不忘初心、牢记使命”，展现了我党对“为中国人民谋幸福，为中华民族谋复兴”这一初心和使命的坚持坚守。只有不忘初心、牢记使命、永远奋斗，才能让中国共产党永远年轻。习总书记再提“红船精神”，也是进一步强调十九大报告中所要求的“永不懈怠的精神状态和一往无前的奋斗姿态”。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>\n<p><strong><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"assets/2ecff7b330d3b68c9caf29ba106689fe8ba678af4adb5f8602f849b3e65bf2a9.png\" alt=\"\" width=\"448\" height=\"251\"><br></strong></p>\n<p><strong>什么是红船精神？</strong><strong>它对我党有何重要意义以及如何做好新时代红船精神传承者？</strong></p>\n<p><strong>从三个方面阐述红船精神的深刻内涵：</strong>开天辟地、敢为人先的首创精神；坚定理想、百折不挠的奋斗精神；立党为公、忠诚为民的奉献精神。</p>\n<p><strong>从三个方面阐述红船精神的重要意义：</strong>“红船精神”是思想武器。“红船精神”是精神支柱。“红船精神”是道德力量。</p>\n<p><strong>从四个方面阐述如何</strong><strong>弘扬“红船精神”</strong><strong>，</strong><strong>谱写新时代的新篇章，做新时代“红船精神”传承者</strong><strong>：</strong>首先要不忘初心，坚定信念。其次要赓续精神，汲取动力。再次要砥砺前行，善作善成。最后要忠诚核心，紧跟领袖。</p>\n<p>中国共产党近百年的奋斗史告诉我们，无论过去还是未来，“红船精神”都永不过时，红色基因都会代代传承、生生不息，它仍将是中国共产党引领中国人民决胜全面建成小康社会、实现中华民族伟大复兴中国梦的强大动力。历经苦难，百折不回，立党为公、忠诚为民，敢为人先，与时俱进，在考验与检阅中一路升华，在机遇和挑战中奋勇前行。“红船精神”永葆党的生机和活力，使党永远走在时代的前列。</p>\n<p>最后，李凌红书记号召全体党员要不忘初心牢记使命，以习近平新时代中国特色社会主义思想为指引，深入学习十九届四中、五中全会精神，深入学习习近平总书记视察吉林重要讲话重要指示精神，以习近平总书记教育重要论述讲义为重要抓手，开展调查研究，努力做好大学生就业创业工作，为吉林全面振兴全方位振兴做出更大贡献。</p>\n\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201103154128.jpg",
+      "originalReference": "/chistory/cms/editor/20201103154128.jpg",
+      "token": "migration-resource://565a8f0a679ab0fdca0b5a1a8d06268c943eeeff8229791655cc6f3980fb90f8",
+      "snapshotPath": "assets/565a8f0a679ab0fdca0b5a1a8d06268c943eeeff8229791655cc6f3980fb90f8.jpg",
+      "sha256": "565a8f0a679ab0fdca0b5a1a8d06268c943eeeff8229791655cc6f3980fb90f8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 3116779
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201103154152.png",
+      "originalReference": "/chistory/cms/editor/20201103154152.png",
+      "token": "migration-resource://2ecff7b330d3b68c9caf29ba106689fe8ba678af4adb5f8602f849b3e65bf2a9",
+      "snapshotPath": "assets/2ecff7b330d3b68c9caf29ba106689fe8ba678af4adb5f8602f849b3e65bf2a9.png",
+      "sha256": "2ecff7b330d3b68c9caf29ba106689fe8ba678af4adb5f8602f849b3e65bf2a9",
+      "contentType": "image/png",
+      "sizeBytes": 644190
+    }
+  ],
+  "sourceFingerprint": "cc258ab9e1390598b93b12453a25220a140009a489ddb4fd32d1158b73c6e0fa",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "党课：做新时代“红船精神”传承者",
+    "listPublishDate": "2020-11-03",
+    "sourceOrder": 43,
+    "detailPublishDate": "2020-11-03",
+    "rawDetailPath": "raw/details/gzdt-28737783121948.html"
+  }
+}

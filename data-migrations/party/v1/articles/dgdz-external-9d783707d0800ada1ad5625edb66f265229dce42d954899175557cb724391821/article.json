@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "dgdz:external:9d783707d0800ada1ad5625edb66f265229dce42d954899175557cb724391821",
+    "contentId": null,
+    "typeCode": "dgdz",
+    "detailPath": "/2023/12/27/ARTI1703689211048182.shtml",
+    "url": "https://www.12371.cn/2023/12/27/ARTI1703689211048182.shtml"
+  },
+  "target": {
+    "columnAlias": "party-rules",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中国共产党纪律处分条例",
+    "source": "",
+    "publishDate": "2024-01-08",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2023/12/27/ARTI1703689211048182.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "6234ab70f76bb3d681cc3b42ec34fd36f3faf996ffa3304447e947a038f89723",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "中国共产党纪律处分条例",
+    "listPublishDate": "2024-01-08",
+    "sourceOrder": 7
+  }
+}

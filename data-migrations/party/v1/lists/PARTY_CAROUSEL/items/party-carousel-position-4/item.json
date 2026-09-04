@@ -1,0 +1,21 @@
+{
+  "legacyKey": "party-carousel:position:4",
+  "sourceOrder": 4,
+  "title": "扎实抓好主题教育 为奋进新征程凝心聚力",
+  "url": "http://cpc.people.com.cn/n1/2023/0404/c64094-32657148.html",
+  "openMode": "NEW_WINDOW",
+  "sourceFingerprint": "89f58529b9debf69abe525e7d2194ba374eaf99f436b9b37553c15e588556220",
+  "image": {
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content1/2023-04-24/cfb8ebec-7d65-4383-b30d-389c5fccc7e8.jpg",
+    "originalReference": "/group1/cms/t_biz_attachment/content1/2023-04-24/cfb8ebec-7d65-4383-b30d-389c5fccc7e8.jpg",
+    "snapshotPath": "assets/a1f80f04ec14313dda1234ad5cf2e4b66bb76d11c960d0863679a52a544f74e6.jpg",
+    "sha256": "a1f80f04ec14313dda1234ad5cf2e4b66bb76d11c960d0863679a52a544f74e6",
+    "contentType": "image/jpeg",
+    "sizeBytes": 86465
+  },
+  "evidence": {
+    "sourceHref": "http://cpc.people.com.cn/n1/2023/0404/c64094-32657148.html",
+    "sourceImageReference": "/group1/cms/t_biz_attachment/content1/2023-04-24/cfb8ebec-7d65-4383-b30d-389c5fccc7e8.jpg",
+    "sourceTarget": "_blank"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:127472639180800",
+    "contentId": "127472639180800",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=127472639180800"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于认真组织收听收看习近平总书记在中国共产党第二十次全国代表大会上的报告的通知",
+    "source": "流动党员支部",
+    "publishDate": "2022-10-16",
+    "bodyHtml": "\n                    <p style=\"margin-left:64px; text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">各位党员：</span></span></span></span></p>\n\n<p style=\"margin-left:64px; text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">2022</span></span><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">年10月16日上午10时，中国共产党第二十次全</span></span></span></span></p>\n\n<p><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">国代表大会将在北京人民大会堂隆重召开，习近平总书记代表十九届中央委员会向大会作报告。按中心党总支的要求，请各位党员认真收听、收看，并留存收听收看的影像资料（注意是拍照片或短视频，不是截图）发送到群里。</span></span><br>\n&nbsp;</p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "70c0322870ae84d398d369f2d673626314868ccd5ef0897d001369b6542dc06a",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "关于认真组织收听收看习近平总书记在中国共产党第二十次全国代表大会上的报告的通知",
+    "listPublishDate": "2022-10-16",
+    "sourceOrder": 7,
+    "detailPublishDate": "2022-10-16",
+    "rawDetailPath": "raw/details/gzdt-127472639180800.html"
+  }
+}

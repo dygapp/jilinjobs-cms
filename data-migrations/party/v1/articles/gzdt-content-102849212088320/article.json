@@ -1,0 +1,62 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:102849212088320",
+    "contentId": "102849212088320",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=102849212088320"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省高校毕业生就业指导中心党总支联合浦东社区开展专题党课，深入学习贯彻落实吉林省第十二次党代会精神",
+    "source": "党总支",
+    "publishDate": "2022-07-21",
+    "bodyHtml": "\n                    <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:14.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">&nbsp; &nbsp;为贯彻落实省教育厅《关于深入学习宣传贯彻中国共产党吉林省第十二次党代会精神的通知》精神，吉林省高等学校毕业生就业指导中心党总支高度重视，精密组织，采取多种方式进行宣传学习。</span><span style=\"font-family:Calibri\">7</span><span style=\"font-family:宋体\">月</span><span style=\"font-family:Calibri\">20</span><span style=\"font-family:宋体\">日联合浦东社区党支部开展专题党课进行宣讲。党课由中心党支部书记李凌红主持，中心全体党员和浦东社区党员参加。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"269\" src=\"assets/1d6a1af4326ae4a44f9a2edc5efe26c131f189ebcc927ea1b551585b8abe0e5b.png\" width=\"422\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:14.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">&nbsp; &nbsp;这次党课中心特邀省委组织部专家做了题为《吉林省第十二次党代会精神解读》专题讲座。讲座从党代会《报告》的总体架构、起草形成过程、理解和领会党代会报告需突出三个着力点等八个方面做了详细讲解。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"269\" src=\"assets/9a50105c673d687b102b36ac9118605aae748e1e2fed46430b1b5f7974203209.jpg\" width=\"359\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:14.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">&nbsp; &nbsp;这次党课，把中心学习吉林省第十二次党代会报告精神推向高潮。党总支趁热打铁，下一步准备马上开展学习吉林省第十二次党代会精神交流座谈会，结合工作实际和建功十四五进行深入学习。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"277\" src=\"assets/db83b2e21b473dc32700ff34791c13b27dee8ea27d6b8cb49f3a3ab28eb7faf7.jpg\" width=\"369\"></p>\n\n<p>&nbsp;</p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-22/dea85efd-ef46-4985-a6ab-7ed227d1af6c.png",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-22/dea85efd-ef46-4985-a6ab-7ed227d1af6c.png",
+      "token": "migration-resource://1d6a1af4326ae4a44f9a2edc5efe26c131f189ebcc927ea1b551585b8abe0e5b",
+      "snapshotPath": "assets/1d6a1af4326ae4a44f9a2edc5efe26c131f189ebcc927ea1b551585b8abe0e5b.png",
+      "sha256": "1d6a1af4326ae4a44f9a2edc5efe26c131f189ebcc927ea1b551585b8abe0e5b",
+      "contentType": "image/png",
+      "sizeBytes": 184442
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-22/7ccdf808-bb18-4ef0-977d-5c9fc3b0c345.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-22/7ccdf808-bb18-4ef0-977d-5c9fc3b0c345.jpg",
+      "token": "migration-resource://9a50105c673d687b102b36ac9118605aae748e1e2fed46430b1b5f7974203209",
+      "snapshotPath": "assets/9a50105c673d687b102b36ac9118605aae748e1e2fed46430b1b5f7974203209.jpg",
+      "sha256": "9a50105c673d687b102b36ac9118605aae748e1e2fed46430b1b5f7974203209",
+      "contentType": "image/jpeg",
+      "sizeBytes": 40061
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-22/051c4e07-42db-4ec9-a7e8-380b927a724c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-22/051c4e07-42db-4ec9-a7e8-380b927a724c.jpg",
+      "token": "migration-resource://db83b2e21b473dc32700ff34791c13b27dee8ea27d6b8cb49f3a3ab28eb7faf7",
+      "snapshotPath": "assets/db83b2e21b473dc32700ff34791c13b27dee8ea27d6b8cb49f3a3ab28eb7faf7.jpg",
+      "sha256": "db83b2e21b473dc32700ff34791c13b27dee8ea27d6b8cb49f3a3ab28eb7faf7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 44032
+    }
+  ],
+  "sourceFingerprint": "647b44af23dd049cc5a7e38660af9a5947036fa1856d13961d4fa7f0d3652688",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "吉林省高校毕业生就业指导中心党总支联合浦东社区开展专题党课，深入学习贯彻落实吉林省第十二次党代会精神",
+    "listPublishDate": "2022-07-21",
+    "sourceOrder": 11,
+    "detailPublishDate": "2022-07-21",
+    "rawDetailPath": "raw/details/gzdt-102849212088320.html"
+  }
+}

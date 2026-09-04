@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:d64e36560cfdf0883e21059f617d4349b2492f5e3b2126ead1417725386c6d8f",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/n1/2023/0410/c64094-32660405.html",
+    "url": "http://cpc.people.com.cn/n1/2023/0410/c64094-32660405.html"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平总书记《论党的自我革命》等主题教育学习材料出版发行",
+    "source": "",
+    "publishDate": "2023-04-10",
+    "bodyHtml": "",
+    "externalUrl": "http://cpc.people.com.cn/n1/2023/0410/c64094-32660405.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "cbef9694054ddefc1c1f108483ffb0a2149c34cc7eed329e531c21e22345ec18",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "习近平总书记《论党的自我革命》等主题教育学习材料出版发行",
+    "listPublishDate": "2023-04-10",
+    "sourceOrder": 12
+  }
+}

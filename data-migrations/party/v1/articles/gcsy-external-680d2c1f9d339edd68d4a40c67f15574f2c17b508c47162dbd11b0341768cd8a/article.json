@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:680d2c1f9d339edd68d4a40c67f15574f2c17b508c47162dbd11b0341768cd8a",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/2026/03/31/ARTI1774941559957382.shtml",
+    "url": "https://www.12371.cn/2026/03/31/ARTI1774941559957382.shtml"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平：树立和践行正确政绩观",
+    "source": "",
+    "publishDate": "2026-04-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2026/03/31/ARTI1774941559957382.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "5c40b82c59aff1d619522e22465938a4b227b0b14b5fc3ed69b3f1916974611d",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "习近平：树立和践行正确政绩观",
+    "listPublishDate": "2026-04-02",
+    "sourceOrder": 8
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:0ffd54c416ee129197d7c1fc1adc2719dc150eb394875dd63856d18be6361104",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/zhengce/202510/content_7046050.htm",
+    "url": "https://www.gov.cn/zhengce/202510/content_7046050.htm"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中共中央关于制定国民经济和社会发展第十五个五年规划的建议",
+    "source": "",
+    "publishDate": "2026-02-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.gov.cn/zhengce/202510/content_7046050.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "812632052ae944ce7492022aa46ae7dc249e6d44a58de7a25854ef29394eaf03",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "中共中央关于制定国民经济和社会发展第十五个五年规划的建议",
+    "listPublishDate": "2026-02-02",
+    "sourceOrder": 12
+  }
+}

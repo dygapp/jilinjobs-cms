@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:e2520238935d80b3b86a87a18889470968d01d35032878985e88d6a059c0dfa7",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/2026/08/24/ARTI1787567682503194.shtml",
+    "url": "https://www.12371.cn/2026/08/24/ARTI1787567682503194.shtml"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平作出重要指示强调 巩固拓展树立和践行正确政绩观学习教育成果 努力创造经得起实践人民历史检验的实绩",
+    "source": "",
+    "publishDate": "2026-09-04",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2026/08/24/ARTI1787567682503194.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "a53be129709ecc97b63c04e6d963655d2a782b1e1af2c91be8c0fd44feb9b70f",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "习近平作出重要指示强调 巩固拓展树立和践行正确政绩观学习教育成果 努力创造经得起实践人民历史检验的实绩",
+    "listPublishDate": "2026-09-04",
+    "sourceOrder": 2
+  }
+}

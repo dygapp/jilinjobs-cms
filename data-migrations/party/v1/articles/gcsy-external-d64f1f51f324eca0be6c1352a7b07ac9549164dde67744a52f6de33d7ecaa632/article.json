@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:d64f1f51f324eca0be6c1352a7b07ac9549164dde67744a52f6de33d7ecaa632",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/szfzt/zcfg/swygwj/202512/t20251211_3517495.html",
+    "url": "http://www.jl.gov.cn/szfzt/zcfg/swygwj/202512/t20251211_3517495.html"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中共吉林省委关于制定吉林省国民经济和社会发展第十五个五年规划的建议",
+    "source": "",
+    "publishDate": "2026-02-02",
+    "bodyHtml": "",
+    "externalUrl": "http://www.jl.gov.cn/szfzt/zcfg/swygwj/202512/t20251211_3517495.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "58d6e37df1b0b1b8418ee4264668339cab16a40ea9d84c9c3669ffad9d3d86ff",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "中共吉林省委关于制定吉林省国民经济和社会发展第十五个五年规划的建议",
+    "listPublishDate": "2026-02-02",
+    "sourceOrder": 11
+  }
+}

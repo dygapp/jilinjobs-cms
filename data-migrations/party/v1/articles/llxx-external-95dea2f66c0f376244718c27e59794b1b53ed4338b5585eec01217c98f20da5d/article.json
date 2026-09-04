@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:95dea2f66c0f376244718c27e59794b1b53ed4338b5585eec01217c98f20da5d",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/2018/04/14/ARTI1523666290858609.shtml",
+    "url": "https://news.12371.cn/2018/04/14/ARTI1523666290858609.shtml"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中华人民共和国国家安全法",
+    "source": "",
+    "publishDate": "2026-05-29",
+    "bodyHtml": "",
+    "externalUrl": "https://news.12371.cn/2018/04/14/ARTI1523666290858609.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "642ec903ea8b1748c38d6f0e25412e0e30eebc14dd9ea1b009b899b0e4374172",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "中华人民共和国国家安全法",
+    "listPublishDate": "2026-05-29",
+    "sourceOrder": 2
+  }
+}

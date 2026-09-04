@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737785217101",
+    "contentId": "28737785217101",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737785217101"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于组织开展“解放思想再深入、全面振兴新突破”专题学习的通知",
+    "source": "流动党员支部",
+    "publishDate": "2020-05-26",
+    "bodyHtml": "\n                    \n\n\n\n\n<p>&nbsp; &nbsp; &nbsp; 为贯彻落实《关于组织开展“解放思想再深入、全面振兴新突破”专题学习的通知》要求，按照中心党总支统一安排部署，流动党员支部决定于5月27日-29日开展“解放思想、振兴吉林、积极抗疫”专题学习活动，具体要求如下：</p>\n<p>&nbsp;&nbsp; &nbsp;&nbsp;1.疫情期间，学习以自学方式进行，各位党员要高度重视，在规定时间高质量完成学习任务。</p>\n<p>&nbsp; &nbsp; &nbsp;2.专题学习期间，每位党员需交一篇学习笔记或学习心得，电子版即可。</p>\n<p>&nbsp;</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;流动党员支部</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2020年5月26日</p>\n\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "906aefa2e3543e40406388c1d585c891332a615353d4659a49f5d2485b01b9ed",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "关于组织开展“解放思想再深入、全面振兴新突破”专题学习的通知",
+    "listPublishDate": "2020-05-26",
+    "sourceOrder": 57,
+    "detailPublishDate": "2020-05-26",
+    "rawDetailPath": "raw/details/gzdt-28737785217101.html"
+  }
+}
