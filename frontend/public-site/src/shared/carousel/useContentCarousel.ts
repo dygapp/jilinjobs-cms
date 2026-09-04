@@ -85,6 +85,7 @@ export function useContentCarousel<T extends CarouselIdentity>(options: ContentC
 
   onMounted(() => {
     document.addEventListener('visibilitychange', onVisibilityChange)
+    onVisibilityChange()
     media = window.matchMedia('(prefers-reduced-motion: reduce)')
     onMotionChange(media)
     media.addEventListener?.('change', onMotionChange)
