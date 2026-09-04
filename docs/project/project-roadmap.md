@@ -24,8 +24,8 @@ baseline-2026-09-04-engineering-capability@5be2e6aad29b2be6b8535b3690daf3533ee22
 | 页面细节视觉收敛 | 已完成 | 栏目列表、文章详情、固定页面、页面组 / Tab、业务指南、页脚与外链文章行为完成自动化和人工视觉复核 |
 | 管理端工程分离与功能收敛 | 已完成当前阶段 | 双前端物理拆分、通用 CMS 模型、Admin Modular SPA / CMS Module 边界完成收敛；后续只按 Human Admin Review / 明确人工指令增量调整 |
 | 公开站 Multi-entry Modular SPA 与中心党建基础框架 | 已完成 | Entry 已从页面类型收敛为真实 Theme / Router Boundary；Main Site 已模块化并移除重复 Page Entry；Party Entry / Router / 红色主题基础框架已建立 |
-| 中心党建正式页面与内容收敛 | **当前** | EU-26～EU-28 已完成；当前进入 EU-29 历史内容迁移与最终 Review，保持真实四栏目、通用 CMS、Party canonical URL 与最终回归责任 |
-| EU-30 轮播图方案与实现收敛 | 后续已规划 | EU-29 关闭后专项复核 Main / Party 轮播方案、交互、响应式、数据边界与实现复杂度；当前只做占位规划，不预设必须重构或引入第三方组件 |
+| 中心党建正式页面与内容收敛 | 已完成 | EU-26～EU-29 全部关闭；真实四栏目、历史文章/资源/轮播已固化为仓库 canonical migration dataset，并完成最终 Human Review 与 Fresh DB 验证 |
+| EU-30 轮播图方案与实现收敛 | **当前** | 专项复核 Main / Party 轮播方案、交互、响应式、数据边界与实现复杂度；不预设必须重构或引入第三方组件 |
 | EU-31 浏览器兼容性与 Runtime Guard 收敛 | 后续已规划 | 在 EU-30 最终实现基础上建立 Public / Admin 双标准浏览器兼容契约、兼容构建目标、启动前检测与提示，并使用独立手工 Browser Compatibility Workflow 取得专项证据 |
 | 公开站点剩余内容与集成收敛 | 后续 | 完善固定页面正式内容、嵌入内容、网站导航预设基线、剩余公开页面内容与外部聚合数据来源 |
 | 真实第三方深度集成 | 条件性后续 | 根据第三方接口、认证、可靠性与 Product Intent 再进入 |
@@ -53,6 +53,7 @@ baseline-2026-09-04-engineering-capability@5be2e6aad29b2be6b8535b3690daf3533ee22
 | 2026-09-04 | `agentic-dev` baseline 更新到 `a0aece02414aa36ca7421db391cb3124ad0780f2`；相对 `b80b2b1b7cea38eed0aef9807879e2a0d56afd2f` 的新增提交仅涉及 `agentic-dev` 自身 Foundation v1 Closure、Project Roadmap、Consumer Adoption Handoff 与实验收尾记录，Consumer-local Method / Verification 语义无变化，仅更新精确 baseline 引用，不继承其项目状态 |
 | 2026-09-04 | `agentic-dev` baseline 更新到 Tag `baseline-2026-09-04-engineering-capability`（commit `5be2e6aad29b2be6b8535b3690daf3533ee22a46`）；相对 `a0aece02414aa36ca7421db391cb3124ad0780f2` 新增 Data Access Scope & Boundedness Control Engineering Discipline，并完成 `agentic-dev` 自身 Engineering Discipline Expansion v1 Closure。Consumer-local Method 正式固化该数据访问纪律；现有 Verification Strategy §2.4 已覆盖对应作用域、分页窗口与边界验证语义，因此不重复建立第二套验证契约，也不继承 `agentic-dev` 项目状态 |
 | 2026-09-04 | 固化 EU-29 之后的前端后续路线：先执行 EU-30 轮播图方案与实现收敛，再执行 EU-31 浏览器兼容性与 Runtime Guard 收敛；EU-30 当前只保留占位级规划，EU-31 已记录 Public / Admin 双标准、Public IE11 备用路径与独立兼容 Workflow 边界 |
+| 2026-09-04 | EU-29 历史内容迁移与最终 Human Review 关闭：181 篇历史文章（120 INTERNAL / 61 EXTERNAL_LINK）、184 个历史资源和 4 条中心党建轮播从已验收 Snapshot 无损晋升为 `data-migrations/party/v1` canonical dataset；Fresh DB 首次导入、二次幂等、资源 SHA 与 Runtime reconciliation 通过，Review Environment 改为长期直接消费仓库 canonical 数据 |
 
 ## 当前已固化结果
 
@@ -83,6 +84,7 @@ baseline-2026-09-04-engineering-capability@5be2e6aad29b2be6b8535b3690daf3533ee22
 - Party canonical URL 确认为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`；原站 `plist.html`、当前 `pdetail.html`、更早 `detail.html` 及 `content_id/typeCode` 参数变体只作为历史迁移输入；
 - 中心党建不拆成独立前端工程，不引入 Module Federation、`site` 字段或党建专属 Admin Module；只有真实独立生命周期或专属业务模型出现后再评估；
 - 党建 Flyway 只固化站点结构，历史文章、外链、正文资源与 legacy id/typeCode/detail path 映射继续通过独立内容迁移/采集机制处理；
+- EU-29 已将 Human Review 接受的历史迁移数据固化为仓库 `data-migrations/party/v1` canonical dataset；固定 Snapshot Run #7 / Artifact 仅作为 provenance，稳定导入、Canonical Verification 与 Review Environment 不再依赖其可用期；
 - 预置主导航“中心党建”已从 `PLACEHOLDER` 切换为当前窗口进入 `/party/` 的站内 `LINK`；Main 将 `/party/**` 视为跨 Entry document navigation，Party 将 `/party/**` 视为当前 Router 内部导航；
 - 当前技术命名统一使用 `party / Party`；仅 `/party/` 入口页使用 `party-home / PartyHome`（如 `PartyHomeView.vue`）。已执行 V13/V14 Migration 和当前 PR 分支名中的 `party-building` 属于历史/兼容标识，不回写历史；
 - 站点初始化基线由数据库基线 + 版本化初始化静态资源包组成；
@@ -128,38 +130,38 @@ EU-23 Public Frontend Authority & Architecture Convergence：已完成
 → EU-25 Party Site Entry & Foundation Shell：已完成
 ```
 
-## 当前阶段：中心党建正式页面与内容收敛
+## 已完成阶段：中心党建正式页面与内容收敛
 
-第一轮原站重新取证和 CMS 复用判断已经完成，当前持久执行路线以 `docs/work/party-convergence-execution-units.md` 为准：
+第一轮原站重新取证和 CMS 复用判断已经完成，本阶段持久执行记录以 `docs/work/party-convergence-execution-units.md` 为准：
 
 ```text
 EU-26 Party Evidence & Authority Convergence：已完成
 → EU-27 Party CMS Structure & Content Routing：已完成
 → EU-28 Party Home & Visual Fidelity Convergence：已完成
-→ EU-29 Party Historical Content Migration & Final Review：当前
+→ EU-29 Party Historical Content Migration & Final Review：已完成
 ```
 
-当前阶段约束：
+本阶段关闭结论：
 
-1. 原站 `/dyzj` 已确认“高层声音、工作动态、党规党章、理论学习”四条正式内容线；实现不得恢复 Foundation 虚构栏目；
+1. 原站 `/dyzj` 已确认“高层声音、工作动态、党规党章、理论学习”四条正式内容线；实现未恢复 Foundation 虚构栏目；
 2. 复用 Column + Article，父栏目 `party` 只承担 CMS 组织和 Party 作用域识别；
 3. `学习园地` 只作为 PartyHome 入口页固定布局分组；
 4. Party 列表/详情 canonical route 使用 `/party/column/{alias}`、`/party/article/{id}`；
-5. 新 Flyway 只建立栏目结构，历史运营文章和资源走独立迁移；
-6. EU-26～EU-28 已完成；当前只按 EU-29 的历史内容迁移、最终回归与 Review 责任继续收敛；
-7. EU-29 建立幂等内容迁移和 legacy URL 映射证据，最终 Human Review 通过后关闭党建阶段；
-8. Foundation 红色 Theme 不能替代最终视觉复刻证据。
+5. Flyway 只建立栏目结构，历史运营文章和资源由独立 canonical migration dataset 承载；
+6. EU-26～EU-29 已完成，党建正式页面与历史内容收敛阶段关闭；
+7. EU-29 已建立幂等内容迁移、legacy identity/fingerprint、canonical dataset 与最终 Human Review 证据；后续历史内容增量直接维护 canonical dataset；
+8. 最终视觉与真实历史 Runtime 数据均已取得对应 Human Review / Browser Evidence。
 
-## 已规划后续阶段：EU-30～EU-31
+## 当前及后续阶段：EU-30～EU-31
 
-EU-29 关闭后，不直接切换到一般“公开站点剩余内容与集成收敛”，而是先完成两个已确定的横向前端单元。详细规划见 `docs/work/frontend-follow-up-execution-units.md`。
+EU-29 已关闭；当前先完成两个已确定的横向前端单元，再进入一般“公开站点剩余内容与集成收敛”。详细规划见 `docs/work/frontend-follow-up-execution-units.md`。
 
 ```text
-EU-30 Carousel Architecture & Behavior Convergence
+EU-30 Carousel Architecture & Behavior Convergence：当前
 → EU-31 Browser Compatibility & Runtime Guard Convergence
 ```
 
-- **EU-30** 当前只做占位规划：先专项讨论 Main / Party 轮播的实现、数据、交互、响应式、无障碍与依赖方案，再决定是否需要重构。EU-29 不因为未来可能重构轮播而扩大当前迁移范围。
+- **EU-30** 当前开始：专项讨论 Main / Party 轮播的实现、数据、交互、响应式、无障碍与依赖方案，再决定是否需要重构；EU-29 已接受的历史轮播数据继续作为内容输入，不在此处改写迁移事实。
 - **EU-31** 在 EU-30 的最终实现基础上执行：Public Site 面向公众，尽可能向更低版本浏览器兼容；Admin 也采用显式较低版本兼容路线，但允许高于 Public。两端都建立 Pre-bootstrap Compatibility Guard 与低版本提示。
 - 完整 Browser Compatibility Matrix 使用独立、人工触发的专项 Workflow，不进入每次 PR / push 的默认 CI；日常 CI 只保留兼容 target 构建、Guard 测试、Chromium 功能回归等低成本守护。
 - 当前不要求 IE11。若系统上线后明确要求 IE11，只对 Public Site 启动新的兼容 Architecture / Requirement / Technical Plan，届时可评估 Vue 降级、独立 Legacy Public Frontend、SSR/static fallback 或其他有效方案；Admin 即使届时也不要求 IE11。
@@ -182,9 +184,8 @@ EU-30、EU-31 完成后，除党建专项外仍需：
 
 - 管理端工程分离、通用 CMS 与 Admin Modular SPA 当前阶段已经关闭，后续按明确 Review Finding 增量维护；
 - 公开站 Multi-entry Modular SPA 与中心党建基础框架阶段已经关闭，Main / Party Boundary 作为后续恢复基线；
-- 当前主动路线为 EU-29 中心党建历史内容迁移与最终 Review；
-- 党建完整内容和最终视觉不得因基础框架已经完成而提前声明完成；
-- EU-29 Human Review 关闭后切换到 EU-30 轮播图方案与实现收敛；
+- 中心党建正式页面与内容收敛 EU-26～EU-29 已关闭；
+- 当前主动路线为 EU-30 轮播图方案与实现收敛；
 - EU-30 关闭后切换到 EU-31 浏览器兼容性与 Runtime Guard 收敛；
 - EU-31 关闭后再切换到“公开站点剩余内容与集成收敛”；
 - EU-30 若改变轮播 DOM、CSS、交互、依赖或数据模型，EU-31 必须基于最终实现重新取得受影响的浏览器兼容证据；
