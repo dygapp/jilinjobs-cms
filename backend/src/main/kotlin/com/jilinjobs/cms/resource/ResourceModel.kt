@@ -34,6 +34,8 @@ interface ResourceRepository {
 
     fun findArticleResourceIds(articleId: Long, role: ArticleResourceRole): List<Long>
 
+    fun isPublishedImage(resourceId: Long): Boolean
+
     fun isPublishedBodyImage(resourceId: Long): Boolean
 
     fun isPublishedAttachment(resourceId: Long): Boolean
