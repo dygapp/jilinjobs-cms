@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:7595496c66874abfb4e9cf1801fd9c3b85c6b7e8b000e84977eb612ba1079930",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/2026/04/15/ARTI1776237955418692.shtml",
+    "url": "https://www.12371.cn/2026/04/15/ARTI1776237955418692.shtml"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平：推动全民阅读，建设书香社会",
+    "source": "",
+    "publishDate": "2026-04-22",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2026/04/15/ARTI1776237955418692.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "b6cff4146a618a9759a2b8a0dc555c51ec5f7e175c6ecce32a0a9d3b5add00ce",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "习近平：推动全民阅读，建设书香社会",
+    "listPublishDate": "2026-04-22",
+    "sourceOrder": 6
+  }
+}

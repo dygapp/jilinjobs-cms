@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:f20a1ba03e803537ddf8b59ffd903e323b0d3eeee64766e461aa787a17a0e645",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/n1/2023/0407/c64094-32659013.html",
+    "url": "http://cpc.people.com.cn/n1/2023/0407/c64094-32659013.html"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "《习近平新时代中国特色社会主义思想专题摘编》在全国出版发行",
+    "source": "",
+    "publishDate": "2023-04-07",
+    "bodyHtml": "",
+    "externalUrl": "http://cpc.people.com.cn/n1/2023/0407/c64094-32659013.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "e85a09ffe91109bbf15101740fd2eaaec8c4757626ba7a988ff6475417b8d9af",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "《习近平新时代中国特色社会主义思想专题摘编》在全国出版发行",
+    "listPublishDate": "2023-04-07",
+    "sourceOrder": 15
+  }
+}

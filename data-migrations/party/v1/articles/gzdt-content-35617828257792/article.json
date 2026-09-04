@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:35617828257792",
+    "contentId": "35617828257792",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=35617828257792"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "庆祝建国70周年中心全体员工合唱《我和我的祖国》",
+    "source": "",
+    "publishDate": "2019-09-30",
+    "bodyHtml": "\n                    <div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\n<video autoplay=\"autoplay\" controls=\"controls\" controlslist=\"nodownload\" loop=\"loop\" src=\"/group1/cms/ck/nullcontent/2021-07-16/3fc864b1-23d4-4f2a-a8d3-541160efd775.mp4\" style=\"height:auto; max-width:100%\">&nbsp;</video>\n</div>\n\n<p>&nbsp;</p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "c40eaec47978eba7e88c906970175cb21ced1d23201737f50b88b95ad0a9af6c",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "庆祝建国70周年中心全体员工合唱《我和我的祖国》",
+    "listPublishDate": "2019-09-30",
+    "sourceOrder": 65,
+    "detailPublishDate": "2019-09-30",
+    "rawDetailPath": "raw/details/gzdt-35617828257792.html"
+  }
+}

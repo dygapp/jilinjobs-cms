@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:127472555294720",
+    "contentId": "127472555294720",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=127472555294720"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于学习习近平在省部级主要领导干部“学习习近平总书记重要讲话精神，迎接党的二十大”专题研讨班重要讲话精神的通知",
+    "source": "流动党员支部",
+    "publishDate": "2022-08-05",
+    "bodyHtml": "\n                    <p style=\"margin-left:16px; margin-right:16px\"><span style=\"font-size:12pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"background-color:white\"><span style=\"font-family:仿宋\"><span style=\"color:#323b47\">各位党员：</span></span></span></span></span></span></p>\n\n<p style=\"margin-left:16px; margin-right:16px\"><span style=\"font-size:12pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"background-color:white\"><span style=\"font-family:仿宋\"><span style=\"color:#323b47\">根椐流动党员支部学习计划，本周学习内容：习近平在省部级主要领导干部“学习习近平总书记重要讲话精神，迎接党的二十大”专题研讨班重要讲话精神。习近平总书记强调，高举中国特色社会主义伟大旗帜 奋力谱写全面建设社会主义现代化国家崭新篇章。</span></span></span></span></span></span></p>\n\n<p style=\"margin-left:16px; margin-right:16px\"><span style=\"font-size:12pt\"><span style=\"font-family:Calibri,sans-serif\">　　<span style=\"font-size:16.0pt\"><span style=\"background-color:white\"><span style=\"font-family:仿宋\"><span style=\"color:#323b47\">学习形式：自学，各位党员要记好学习笔记。</span></span></span></span></span></span></p>\n\n<p>　　<span style=\"font-size:16.0pt\"><span style=\"background-color:white\"><span style=\"font-family:仿宋\"><span style=\"color:#323b47\">特此通知。</span></span></span></span></p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "8ff7dd6e0a7534da739a171298d11d76cf25f9ac6ad923317f2e76b408407b2a",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "关于学习习近平在省部级主要领导干部“学习习近平总书记重要讲话精神，迎接党的二十大”专题研讨班重要讲话精神的通知",
+    "listPublishDate": "2022-08-05",
+    "sourceOrder": 10,
+    "detailPublishDate": "2022-08-05",
+    "rawDetailPath": "raw/details/gzdt-127472555294720.html"
+  }
+}

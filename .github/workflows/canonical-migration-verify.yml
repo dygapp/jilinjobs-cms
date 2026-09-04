@@ -1,0 +1,255 @@
+name: Canonical Migration Verification
+
+on:
+  pull_request:
+    paths:
+      - 'data-migrations/**'
+      - 'backend/src/main/kotlin/com/jilinjobs/cms/migration/**'
+      - '.github/workflows/canonical-migration-verify.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  party-canonical:
+    name: Party canonical Fresh DB import
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_ROOT_HOST: '%'
+          MYSQL_DATABASE: jilinjobs_cms
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=12
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Validate canonical dataset structure and bytes
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, re
+          from pathlib import Path
+
+          root = Path('data-migrations/party/v1')
+          manifest = json.load(open(root / 'manifest.json', encoding='utf-8'))
+          assert manifest['status'] == 'accepted-canonical', manifest
+          accepted = manifest['acceptedSnapshot']
+          assert accepted['articles'] == 181
+          assert accepted['internalArticles'] == 120
+          assert accepted['externalArticles'] == 61
+          assert accepted['uniqueArticleResources'] == 180
+          assert accepted['carouselItems'] == 4
+          assert accepted['carouselResources'] == 4
+          assert accepted['unresolved'] == 0
+          assert accepted['artifactDigest'] == 'sha256:230ac0df997b3dc913ed38503a8289eae30d8bb0a455fd858e388ddc27066148'
+
+          def digest(path):
+              value = hashlib.sha256()
+              with path.open('rb') as stream:
+                  for chunk in iter(lambda: stream.read(1024 * 1024), b''):
+                      value.update(chunk)
+              return value.hexdigest()
+
+          rows = [json.loads(line) for line in (root / 'index.ndjson').read_text(encoding='utf-8').splitlines() if line.strip()]
+          assert len(rows) == 181
+          assert len({row['legacyKey'] for row in rows}) == 181
+          assert len({row['path'] for row in rows}) == 181
+          article_hashes = set()
+          article_types = {'INTERNAL': 0, 'EXTERNAL_LINK': 0}
+          by_alias = {}
+          for row in rows:
+              article_path = (root / row['path']).resolve()
+              assert root.resolve() in article_path.parents and article_path.is_file(), row
+              article = json.load(open(article_path, encoding='utf-8'))
+              assert article['source']['legacyKey'] == row['legacyKey']
+              assert article['sourceFingerprint'] == row['sourceFingerprint']
+              assert article['target']['columnAlias'] == row['columnAlias']
+              assert article['target']['articleType'] == row['articleType']
+              article_types[row['articleType']] += 1
+              by_alias[row['columnAlias']] = by_alias.get(row['columnAlias'], 0) + 1
+              resource_paths = {resource['snapshotPath'] for resource in article['resources']}
+              for resource in article['resources']:
+                  assert resource['snapshotPath'].startswith('assets/')
+                  path = article_path.parent / resource['snapshotPath']
+                  assert path.is_file(), path
+                  assert path.stat().st_size == resource['sizeBytes']
+                  assert digest(path) == resource['sha256']
+                  article_hashes.add(resource['sha256'])
+              for relative in re.findall(r'(?:src|href)=["\'](assets/[^"\']+)["\']', article['content']['bodyHtml']):
+                  assert relative in resource_paths, (row['legacyKey'], relative)
+          assert article_types == {'INTERNAL': 120, 'EXTERNAL_LINK': 61}, article_types
+          assert by_alias == {'party-voice': 40, 'party-work': 88, 'party-rules': 22, 'party-study': 31}, by_alias
+          assert len(article_hashes) == 180
+
+          carousel_root = root / 'lists/PARTY_CAROUSEL'
+          carousel = json.load(open(carousel_root / 'index.json', encoding='utf-8'))
+          assert carousel['listCode'] == 'PARTY_CAROUSEL'
+          assert len(carousel['items']) == 4
+          assert {item['sourceOrder'] for item in carousel['items']} == {1, 2, 3, 4}
+          carousel_hashes = set()
+          for reference in carousel['items']:
+              item_path = (carousel_root / reference['path']).resolve()
+              assert carousel_root.resolve() in item_path.parents and item_path.is_file(), reference
+              item = json.load(open(item_path, encoding='utf-8'))
+              assert item['legacyKey'] == reference['legacyKey']
+              assert item['sourceFingerprint'] == reference['sourceFingerprint']
+              assert item['sourceOrder'] == reference['sourceOrder']
+              image = item['image']
+              path = item_path.parent / image['snapshotPath']
+              assert path.is_file(), path
+              assert path.stat().st_size == image['sizeBytes']
+              assert digest(path) == image['sha256']
+              carousel_hashes.add(image['sha256'])
+          assert len(carousel_hashes) == 4
+          print(json.dumps({'articles': len(rows), 'articleResources': len(article_hashes), 'carouselItems': 4, 'carouselResources': 4}, ensure_ascii=False))
+          PY
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: '9.6.1'
+
+      - name: Verify backend and Flyway
+        working-directory: backend
+        run: gradle clean test classes --no-daemon
+
+      - name: Import canonical articles
+        working-directory: backend
+        env:
+          DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          DB_USERNAME: root
+          DB_PASSWORD: root
+          CMS_STORAGE_ROOT: ${{ github.workspace }}/canonical-runtime/uploads
+          CMS_STATIC_ROOT: ${{ github.workspace }}/canonical-runtime/static
+        run: |
+          mkdir -p "$GITHUB_WORKSPACE/canonical-runtime/uploads" "$GITHUB_WORKSPACE/canonical-runtime/static"
+          gradle importPartyHistoricalContent --args="../data-migrations/party/v1" --no-daemon | tee ../canonical-first-import.log
+
+      - name: Verify first article import
+        run: |
+          python3 - <<'PY'
+          import json, re
+          text=open('canonical-first-import.log', encoding='utf-8').read()
+          matches=re.findall(r'EU29_IMPORT_REPORT (\{.*\})', text)
+          assert matches, 'missing EU29_IMPORT_REPORT'
+          report=json.loads(matches[-1])
+          assert report['total']==181 and report['created']==181, report
+          assert report['skipped']==0 and report['conflicts']==0 and report['invalid']==0, report
+          PY
+
+      - name: Import canonical Party carousel
+        working-directory: backend
+        env:
+          DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          DB_USERNAME: root
+          DB_PASSWORD: root
+          CMS_STORAGE_ROOT: ${{ github.workspace }}/canonical-runtime/uploads
+          CMS_STATIC_ROOT: ${{ github.workspace }}/canonical-runtime/static
+        run: gradle importPartyCarousel --args="../data-migrations/party/v1" --no-daemon | tee ../canonical-first-carousel-import.log
+
+      - name: Verify first carousel import and runtime bytes
+        run: |
+          python3 - <<'PY'
+          import json, re
+          text=open('canonical-first-carousel-import.log', encoding='utf-8').read()
+          matches=re.findall(r'EU29_CAROUSEL_IMPORT_REPORT (\{.*\})', text)
+          assert matches, 'missing EU29_CAROUSEL_IMPORT_REPORT'
+          report=json.loads(matches[-1])
+          assert report['total']==4 and report['created']==4, report
+          assert report['skipped']==0 and report['conflicts']==0 and report['invalid']==0, report
+          PY
+          docker run --rm --network host mysql:8.4 mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT i.sort_order,i.title,COALESCE(i.image_path,''),COALESCE(m.image_sha256,'') FROM cms_list_item i JOIN cms_list l ON l.id=i.list_id JOIN cms_list_item_legacy_mapping m ON m.list_item_id=i.id WHERE l.code='PARTY_CAROUSEL' ORDER BY i.sort_order" \
+            | tee canonical-carousel-db.tsv
+          python3 - <<'PY'
+          import csv, hashlib, json
+          from pathlib import Path
+          root=Path('data-migrations/party/v1/lists/PARTY_CAROUSEL')
+          index=json.load(open(root/'index.json', encoding='utf-8'))
+          expected=[]
+          for ref in sorted(index['items'], key=lambda item:item['sourceOrder']):
+              item=json.load(open(root/ref['path'], encoding='utf-8'))
+              expected.append(item)
+          rows=list(csv.reader(open('canonical-carousel-db.tsv', encoding='utf-8'), delimiter='\t'))
+          assert len(rows)==4, rows
+          for item,row in zip(expected,rows):
+              order,title,image_path,image_sha=row
+              assert int(order)==item['sourceOrder']
+              assert title==item['title']
+              assert image_sha==item['image']['sha256']
+              file=Path('canonical-runtime/static') / image_path.removeprefix('/static/')
+              assert file.is_file(), file
+              assert hashlib.sha256(file.read_bytes()).hexdigest()==image_sha
+          PY
+
+      - name: Re-import canonical dataset to prove idempotency
+        working-directory: backend
+        env:
+          DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          DB_USERNAME: root
+          DB_PASSWORD: root
+          CMS_STORAGE_ROOT: ${{ github.workspace }}/canonical-runtime/uploads
+          CMS_STATIC_ROOT: ${{ github.workspace }}/canonical-runtime/static
+        run: |
+          gradle importPartyHistoricalContent --args="../data-migrations/party/v1" --no-daemon | tee ../canonical-second-import.log
+          gradle importPartyCarousel --args="../data-migrations/party/v1" --no-daemon | tee ../canonical-second-carousel-import.log
+
+      - name: Verify idempotency and Runtime reconciliation
+        run: |
+          python3 - <<'PY'
+          import json, re
+          text=open('canonical-second-import.log', encoding='utf-8').read()
+          report=json.loads(re.findall(r'EU29_IMPORT_REPORT (\{.*\})', text)[-1])
+          assert report['total']==181 and report['created']==0 and report['skipped']==181, report
+          assert report['conflicts']==0 and report['invalid']==0, report
+          text=open('canonical-second-carousel-import.log', encoding='utf-8').read()
+          carousel=json.loads(re.findall(r'EU29_CAROUSEL_IMPORT_REPORT (\{.*\})', text)[-1])
+          assert carousel['total']==4 and carousel['created']==0 and carousel['skipped']==4, carousel
+          assert carousel['conflicts']==0 and carousel['invalid']==0, carousel
+          PY
+          docker run --rm --network host mysql:8.4 mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT c.alias, COUNT(a.id), COUNT(m.id) FROM cms_column c LEFT JOIN cms_article a ON a.column_id=c.id AND a.status='PUBLISHED' LEFT JOIN cms_article_legacy_mapping m ON m.article_id=a.id WHERE c.alias IN ('party-voice','party-work','party-rules','party-study') GROUP BY c.alias ORDER BY c.alias" \
+            | tee canonical-db-counts.tsv
+          python3 - <<'PY'
+          import csv
+          expected={'party-rules':22,'party-study':31,'party-voice':40,'party-work':88}
+          rows=list(csv.reader(open('canonical-db-counts.tsv', encoding='utf-8'), delimiter='\t'))
+          assert len(rows)==4, rows
+          for alias,articles,mappings in rows:
+              assert int(articles)==expected[alias], (alias,articles)
+              assert int(mappings)==expected[alias], (alias,mappings)
+          PY
+          carousel_items=$(docker run --rm --network host mysql:8.4 mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -e "SELECT COUNT(*) FROM cms_list_item i JOIN cms_list l ON l.id=i.list_id WHERE l.code='PARTY_CAROUSEL'")
+          carousel_mappings=$(docker run --rm --network host mysql:8.4 mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -e "SELECT COUNT(*) FROM cms_list_item_legacy_mapping")
+          test "$carousel_items" -eq 4
+          test "$carousel_mappings" -eq 4
+
+      - name: Upload canonical verification evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: party-canonical-verification
+          path: |
+            canonical-first-import.log
+            canonical-first-carousel-import.log
+            canonical-second-import.log
+            canonical-second-carousel-import.log
+            canonical-db-counts.tsv
+            canonical-carousel-db.tsv
+          if-no-files-found: warn
+          retention-days: 7

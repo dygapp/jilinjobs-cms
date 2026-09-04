@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:095009a5f54b3d02dafea707fb2f4ef4b05a3c60b3aa9a2c1aae4816d516692f",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/n1/2021/0331/c436975-32066269.html",
+    "url": "http://dangshi.people.com.cn/n1/2021/0331/c436975-32066269.html"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平总书记在党史学习教育动员大会上的讲话",
+    "source": "",
+    "publishDate": "2021-03-31",
+    "bodyHtml": "",
+    "externalUrl": "http://dangshi.people.com.cn/n1/2021/0331/c436975-32066269.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "1f080f487ef640c9a685b5a42190e3df206d04822e8261433b039e4b91d33a93",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "习近平总书记在党史学习教育动员大会上的讲话",
+    "listPublishDate": "2021-03-31",
+    "sourceOrder": 29
+  }
+}

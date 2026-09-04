@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:91434923343872",
+    "contentId": "91434923343872",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=91434923343872"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于收看建党100周年特别节目的通知",
+    "source": "流动党员支部",
+    "publishDate": "2021-12-08",
+    "bodyHtml": "\n                    <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">各位党员：</span></span></span></span><br>\n　　<span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">中央组织部和中央广播电视总台联合录制的《榜样6》（建党100周年特别节目）将于2021年12月8日晚间8点档在中央电视台综合频道（CCTV-1）首播，并在共产党员网（www.12371.cn）、共产党员微信、全国党员干部现代远程教育专用频道等同步展播。共产党员网首页提供节目下载。</span></span></span></span><br>\n　　<span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">按照省直机关工委及中心党总支的通知要求，请各位党员认真学习收看、研讨交流，并上传收看照片。</span></span></span></span></p>\n\n<p style=\"text-align:right\"><br>\n<span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;流动党员支部</span></span></span></span></p>\n\n<p style=\"text-align:right\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2021</span></span><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">年12月8日</span></span></span></span></p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "26b3fad1d2f1267e6398dd41f92b8044ce0259794a6ab368694ddb18551e0158",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "关于收看建党100周年特别节目的通知",
+    "listPublishDate": "2021-12-08",
+    "sourceOrder": 22,
+    "detailPublishDate": "2021-12-08",
+    "rawDetailPath": "raw/details/gzdt-91434923343872.html"
+  }
+}

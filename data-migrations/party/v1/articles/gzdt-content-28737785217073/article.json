@@ -1,0 +1,62 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737785217073",
+    "contentId": "28737785217073",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737785217073"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "中心党支部开展“厉行节约 反对浪费 光盘有我”主题党日活动",
+    "source": "中心党支部",
+    "publishDate": "2020-08-28",
+    "bodyHtml": "\n                    \n\n\n\n\n<p>为贯彻落实省直机关工委《积极行动&nbsp;带头落实&nbsp;坚决制止餐饮浪费---致省直机关广大党员干部和职工的倡议书》精神，大力倡导勤俭节约、文明健康的生活方式，2020年8月28日中午，中心全体党员和职工在中心食堂组织开展“厉行节约&nbsp;反对浪费&nbsp;光盘有我”主题党日活动，大家一起为制止餐饮浪费，培养节约习惯做出庄严宣誓。</p>\n<p>按照中心党总支安排和部署，中心党支部积极行动，利用网络加强对《倡议书》内容的学习，以党小组会议形式，组织党员分享学习感受，立足中心职工自身工作实际，拓展勤俭节约外延，切实将厉行节约行动融入日常工作中的点点滴滴。</p>\n<p>通过主题党日活动，党员群众们纷纷表示，要坚持科学用餐，努力让“厉行节约 反对浪费”成为常态、落到实处，每个人做到从我做起，相互监督，坚决杜绝“舌尖上的浪费”，积极营造节约光荣的用餐环境，自觉养成良好习惯，弘扬中华民族勤俭节约的传统美德。</p>\n<p style=\"text-align:center\"><img src=\"assets/19d0d6a02d482435f258c9e3c2f898e4f8d7e447d448405489a3cbc541e75c73.jpg\" alt=\"\" width=\"368\" height=\"220\">&nbsp; &nbsp;<img src=\"assets/1a6f6b285d1fef97b553b8a4246918df280f67951491f0676532498b8f9e7229.jpg\" alt=\"\" width=\"365\" height=\"220\">&nbsp; &nbsp;<img src=\"assets/ceb1926b296049c4c7af2653dcf44af0126da47be118edc013384407ff29ed3b.jpg\" alt=\"\" width=\"362\" height=\"220\"></p>\n\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200929112852.jpg",
+      "originalReference": "/chistory/cms/editor/20200929112852.jpg",
+      "token": "migration-resource://19d0d6a02d482435f258c9e3c2f898e4f8d7e447d448405489a3cbc541e75c73",
+      "snapshotPath": "assets/19d0d6a02d482435f258c9e3c2f898e4f8d7e447d448405489a3cbc541e75c73.jpg",
+      "sha256": "19d0d6a02d482435f258c9e3c2f898e4f8d7e447d448405489a3cbc541e75c73",
+      "contentType": "image/jpeg",
+      "sizeBytes": 91230
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200929112916.jpg",
+      "originalReference": "/chistory/cms/editor/20200929112916.jpg",
+      "token": "migration-resource://1a6f6b285d1fef97b553b8a4246918df280f67951491f0676532498b8f9e7229",
+      "snapshotPath": "assets/1a6f6b285d1fef97b553b8a4246918df280f67951491f0676532498b8f9e7229.jpg",
+      "sha256": "1a6f6b285d1fef97b553b8a4246918df280f67951491f0676532498b8f9e7229",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90085
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200929112941.jpg",
+      "originalReference": "/chistory/cms/editor/20200929112941.jpg",
+      "token": "migration-resource://ceb1926b296049c4c7af2653dcf44af0126da47be118edc013384407ff29ed3b",
+      "snapshotPath": "assets/ceb1926b296049c4c7af2653dcf44af0126da47be118edc013384407ff29ed3b.jpg",
+      "sha256": "ceb1926b296049c4c7af2653dcf44af0126da47be118edc013384407ff29ed3b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 94710
+    }
+  ],
+  "sourceFingerprint": "5406c8e1c71443eeaf97e31d12407ff2ce4406c589b72c62a9dcadf8b36e647e",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "中心党支部开展“厉行节约 反对浪费 光盘有我”主题党日活动",
+    "listPublishDate": "2020-08-28",
+    "sourceOrder": 52,
+    "detailPublishDate": "2020-08-28",
+    "rawDetailPath": "raw/details/gzdt-28737785217073.html"
+  }
+}

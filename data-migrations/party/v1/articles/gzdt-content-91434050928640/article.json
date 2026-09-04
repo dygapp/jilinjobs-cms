@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:91434050928640",
+    "contentId": "91434050928640",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=91434050928640"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于撰写学习体会的通知",
+    "source": "流动党员支部",
+    "publishDate": "2021-06-21",
+    "bodyHtml": "\n                    <p style=\"margin-left:16px; margin-right:16px\"><span style=\"font-size:12pt\"><span style=\"background-color:white\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"background-color:white\"><span style=\"font-family:仿宋\"><span style=\"color:black\">各位流动党员：</span></span></span></span></span></span></span></p>\n\n<p style=\"margin-left:16px; margin-right:16px\">　　<span style=\"font-size:12pt\"><span style=\"background-color:white\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\"><span style=\"color:black\">按照“中共吉林省高等学校毕业生就业指导中心流动党员支部党史教育学习计划”要求，请流动党员明确学习重点，强化学习目标，进一步加强党性修养。要求每人撰写学习心得体会两篇，尽快将电子版发送至指定邮箱。（33058746@qq.com）</span></span></span></span></span></span></p>\n\n<p style=\"margin-left:16px; margin-right:16px; text-align:right\"><span style=\"font-size:12pt\"><span style=\"background-color:white\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"background-color:white\"><span style=\"font-family:仿宋\"><span style=\"color:black\">&nbsp; &nbsp; &nbsp;<br>\n&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span></span></span><br>\n<span style=\"font-size:16.0pt\"><span style=\"background-color:white\"><span style=\"font-family:仿宋\"><span style=\"color:black\">流动党员支部</span></span></span></span></span></span></span></p>\n\n<p style=\"margin-left:16px; margin-right:16px; text-align:right\"><span style=\"font-size:12pt\"><span style=\"background-color:white\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"background-color:white\"><span style=\"font-family:仿宋\"><span style=\"color:black\">2021年6月21日</span></span></span></span></span></span></span></p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "6b2b404bfd5d93b50eda539261aeabf5a1c0444159c7b60c84503f35c36bd5c3",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "关于撰写学习体会的通知",
+    "listPublishDate": "2021-06-21",
+    "sourceOrder": 33,
+    "detailPublishDate": "2021-06-21",
+    "rawDetailPath": "raw/details/gzdt-91434050928640.html"
+  }
+}

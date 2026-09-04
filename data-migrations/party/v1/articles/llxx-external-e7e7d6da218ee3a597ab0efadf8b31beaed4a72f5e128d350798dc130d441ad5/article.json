@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:e7e7d6da218ee3a597ab0efadf8b31beaed4a72f5e128d350798dc130d441ad5",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/n1/2023/0411/c64094-32661200.html",
+    "url": "http://cpc.people.com.cn/n1/2023/0411/c64094-32661200.html"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中共中央发出关于学习《习近平著作选读》第一卷、第二卷的通知",
+    "source": "",
+    "publishDate": "2023-04-11",
+    "bodyHtml": "",
+    "externalUrl": "http://cpc.people.com.cn/n1/2023/0411/c64094-32661200.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "3ce1398ee885b17b35e645103115252fc972699a5e2def39a7a72530d2350bb4",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "中共中央发出关于学习《习近平著作选读》第一卷、第二卷的通知",
+    "listPublishDate": "2023-04-11",
+    "sourceOrder": 11
+  }
+}

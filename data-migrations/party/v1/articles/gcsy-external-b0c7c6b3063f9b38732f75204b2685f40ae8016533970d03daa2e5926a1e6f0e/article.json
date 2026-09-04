@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:b0c7c6b3063f9b38732f75204b2685f40ae8016533970d03daa2e5926a1e6f0e",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/s/v_hUnyBr8GuHQEFekDELXA",
+    "url": "https://mp.weixin.qq.com/s/v_hUnyBr8GuHQEFekDELXA"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "十四届全国人大三次会议在京闭幕",
+    "source": "",
+    "publishDate": "2025-03-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/v_hUnyBr8GuHQEFekDELXA"
+  },
+  "resources": [],
+  "sourceFingerprint": "d3220409427e7c8d60f2d436805efaeeee10ed667c95650aa2fe4685f1be3186",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "十四届全国人大三次会议在京闭幕",
+    "listPublishDate": "2025-03-12",
+    "sourceOrder": 17
+  }
+}

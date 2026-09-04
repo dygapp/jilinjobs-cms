@@ -75,7 +75,7 @@
 .group-page-content>.rich-content strong{color:#323b47}
 .embed-placeholder{padding:50px 30px;border:1px dashed #a8b9d0;background:#f8fbff;text-align:center}
 .embed-placeholder h1{margin:0 0 12px;font-size:20px;color:#323b47}
-.public-state{min-height:200px;margin:0;padding:40px 30px;background:#fff;color:#8491a1}
+.public-state{min-height:200px;display:grid;place-items:center;margin:0;padding:40px 30px;background:#fff;color:#8491a1;text-align:center}
 .error-text{color:#b33}
 
 @media(max-width:760px){

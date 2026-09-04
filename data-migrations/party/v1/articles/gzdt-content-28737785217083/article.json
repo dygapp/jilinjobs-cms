@@ -1,0 +1,72 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737785217083",
+    "contentId": "28737785217083",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737785217083"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "中心党支部召开民主评议党员会议",
+    "source": "",
+    "publishDate": "2016-12-08",
+    "bodyHtml": "\n                    <div class=\"mainlist bor\">\n            <div><div id=\"tdNewsContent\"><p style=\";text-indent: 43px\"><span style=\"font-family: 宋体; font-size: medium;\">12月7日，我中心党支部召开了民主评议党员会议。中心党支部书记张旭光同志对支部“两学一做”学习教育情况，从思想、组织、作风、纪律、责任担当五方面做了全面总结。<br></span></p><p style=\";text-indent: 43px\"><span style=\"font-family: 宋体; font-size: medium;\"><br></span></p><p style=\"text-align: center; text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: medium;\"><br></span></p><p style=\"text-align: center\"><span style=\"font-family: 宋体; font-size: medium;\"><img title=\"1.JPG\" src=\"assets/fff1905861a75d3497b01aaba0ab37649351a5ac244cd07643d3da2770a22aff.jpg\"></span></p><p style=\"text-align: center; text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: medium;\"><br></span></p><p style=\";text-indent: 43px\"><span style=\"font-family: 宋体; font-size: medium;\">会上，全体党员按照“两学一做”学习教育的总体要求，分别做了总结发言，并进行了自评；发放了《民主评议党员测评表》，按照“优秀、合格、基本合格、不合格”四个等次，进行了党员组织评定。</span></p><p><span style=\"font-family: 宋体; font-size: medium;\"><br></span></p><p><span style=\"font-family: 宋体; font-size: medium;\"><br></span></p><p style=\"text-align: center\"><span style=\"font-family: 宋体; font-size: medium;\"><img title=\"2.JPG\" src=\"assets/0c81b18d5573f65ed5ab52a821a7e8de1479ebd63b27c012bda52608ff68b371.jpg\"></span></p><p style=\"text-align: center\"><span style=\"font-family: 宋体; font-size: medium;\"><img title=\"3.JPG\" src=\"assets/bb22e88cd8709c50f3cd5962ba2bf148395dca7621f4f88afbec2b384d5b0d68.jpg\"></span></p><p><span style=\"font-family: 宋体; font-size: medium;\"><br></span></p><p style=\";text-indent: 43px\"><span style=\"font-family: 宋体; font-size: medium;\">中心主任郑志宏同志，党总支书记孙维才同志以普通党员身份参加了会议，并分别进行了自许发言。</span></p><p><span style=\"font-family: 宋体; font-size: medium;\"><br></span></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体; font-size: medium;\"><br></span></p><p style=\"text-align: center\"><span style=\"font-family: 宋体; font-size: medium;\"><img title=\"4.JPG\" src=\"assets/7d263da3461795a9358f69e8f7c6562e6842bc2c769ee98d909cc219f728a9ef.jpg\"></span></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体; font-size: medium;\"><br></span></p><p style=\";text-indent: 43px\"><span style=\"font-family: 宋体; font-size: medium;\">会议由中心党支部书记张旭光主持，中心党支部20名党员参加会议。</span></p><p><span style=\"font-family: 宋体; font-size: medium;\">&nbsp;</span></p><p><span style=\"font-family: 宋体; font-size: medium;\"><br></span></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\"><span style=\"font-family: 宋体; font-size: medium;\">\n                        附件：\n                    </span></td>\n                    <td><span style=\"font-family: 宋体; font-size: medium;\">\n                        &nbsp;\n                    </span></td>\n                </tr>\n                <tr>\n                    <td><span style=\"font-family: 宋体; font-size: medium;\">\n                        &nbsp;\n                    </span></td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361680476009225003201060.JPG",
+      "originalReference": "/chistory/cms/imgs/6361680476009225003201060.JPG",
+      "token": "migration-resource://fff1905861a75d3497b01aaba0ab37649351a5ac244cd07643d3da2770a22aff",
+      "snapshotPath": "assets/fff1905861a75d3497b01aaba0ab37649351a5ac244cd07643d3da2770a22aff.jpg",
+      "sha256": "fff1905861a75d3497b01aaba0ab37649351a5ac244cd07643d3da2770a22aff",
+      "contentType": "image/jpeg",
+      "sizeBytes": 142845
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361680478467037504725409.JPG",
+      "originalReference": "/chistory/cms/imgs/6361680478467037504725409.JPG",
+      "token": "migration-resource://0c81b18d5573f65ed5ab52a821a7e8de1479ebd63b27c012bda52608ff68b371",
+      "snapshotPath": "assets/0c81b18d5573f65ed5ab52a821a7e8de1479ebd63b27c012bda52608ff68b371.jpg",
+      "sha256": "0c81b18d5573f65ed5ab52a821a7e8de1479ebd63b27c012bda52608ff68b371",
+      "contentType": "image/jpeg",
+      "sizeBytes": 114835
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361680478471725009711317.JPG",
+      "originalReference": "/chistory/cms/imgs/6361680478471725009711317.JPG",
+      "token": "migration-resource://bb22e88cd8709c50f3cd5962ba2bf148395dca7621f4f88afbec2b384d5b0d68",
+      "snapshotPath": "assets/bb22e88cd8709c50f3cd5962ba2bf148395dca7621f4f88afbec2b384d5b0d68.jpg",
+      "sha256": "bb22e88cd8709c50f3cd5962ba2bf148395dca7621f4f88afbec2b384d5b0d68",
+      "contentType": "image/jpeg",
+      "sizeBytes": 108181
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361680480318600002067639.JPG",
+      "originalReference": "/chistory/cms/imgs/6361680480318600002067639.JPG",
+      "token": "migration-resource://7d263da3461795a9358f69e8f7c6562e6842bc2c769ee98d909cc219f728a9ef",
+      "snapshotPath": "assets/7d263da3461795a9358f69e8f7c6562e6842bc2c769ee98d909cc219f728a9ef.jpg",
+      "sha256": "7d263da3461795a9358f69e8f7c6562e6842bc2c769ee98d909cc219f728a9ef",
+      "contentType": "image/jpeg",
+      "sizeBytes": 123597
+    }
+  ],
+  "sourceFingerprint": "b46ebb5271683c9d7c1419fd465d12f11a0a1385b49513ba10143a096e2c2c8f",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "中心党支部召开民主评议党员会议",
+    "listPublishDate": "2016-12-08",
+    "sourceOrder": 84,
+    "detailPublishDate": "2016-12-08",
+    "rawDetailPath": "raw/details/gzdt-28737785217083.html"
+  }
+}

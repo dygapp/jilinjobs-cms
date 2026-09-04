@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737785217099",
+    "contentId": "28737785217099",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737785217099"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "学习习近平总书记在全国抗击新冠肺炎表彰大会上的重要讲话",
+    "source": "流动党员支部",
+    "publishDate": "2020-09-11",
+    "bodyHtml": "\n                    <p>今天下午，全体党员学习习近平总书记在全国抗击新冠肺炎表彰大会上的重要讲话：弘扬伟大抗疫精神，凝心聚力推动发展。学习形式为自学，请各位党员认真学习，并做好学习笔记。</p>\n\n<p>见附件</p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;流动党员支部&nbsp;&nbsp;&nbsp;</p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2020年9月11日</p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "56891c124db27b65891d7b75285070af808e0494bfc17a426d07ec3d7c939bb7",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "学习习近平总书记在全国抗击新冠肺炎表彰大会上的重要讲话",
+    "listPublishDate": "2020-09-11",
+    "sourceOrder": 51,
+    "detailPublishDate": "2020-09-11",
+    "rawDetailPath": "raw/details/gzdt-28737785217099.html"
+  }
+}

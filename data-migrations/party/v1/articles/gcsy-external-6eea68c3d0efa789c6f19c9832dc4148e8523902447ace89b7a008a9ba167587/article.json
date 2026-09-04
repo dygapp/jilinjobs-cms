@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:6eea68c3d0efa789c6f19c9832dc4148e8523902447ace89b7a008a9ba167587",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/n1/2023/0425/c117092-32672727.html",
+    "url": "http://dangjian.people.com.cn/n1/2023/0425/c117092-32672727.html"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中央党校（国家行政学院）扎实推进习近平新时代中国特色社会主义思想进教材、进课堂、进头脑—— 让党的创新理论入脑入心（深度关注）",
+    "source": "",
+    "publishDate": "2023-04-25",
+    "bodyHtml": "",
+    "externalUrl": "http://dangjian.people.com.cn/n1/2023/0425/c117092-32672727.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "f4c4be1d683c7d1ebdef91aebb62dd52ff448661698df422b5bc9fd397aaaa88",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "中央党校（国家行政学院）扎实推进习近平新时代中国特色社会主义思想进教材、进课堂、进头脑—— 让党的创新理论入脑入心（深度关注）",
+    "listPublishDate": "2023-04-25",
+    "sourceOrder": 18
+  }
+}

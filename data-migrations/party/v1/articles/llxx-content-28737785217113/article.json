@@ -1,0 +1,42 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:content:28737785217113",
+    "contentId": "28737785217113",
+    "typeCode": "llxx",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737785217113"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "一图读懂《中国共产党党员教育管理工作条例》",
+    "source": "共产党员网",
+    "publishDate": "2019-05-22",
+    "bodyHtml": "\n                    <p style=\"text-align: left;\"><img alt=\"\" src=\"assets/da84ad583ebad0ab9d8abc7a665b85404bdd4c96f3736bd07c8d639813a18e40.jpg\"><br></p><div><div>\n\t\t\t\t\t\t\t\t\t<div></div>\n\t\t\t\t\t\t\t\t\t  \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t<div>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<i>发布时间：2019年05月22日 08:59      来源：共产党员网      编辑：阮玉秀</i>\n\t\t\t\t\t\t\t\t\t<span><a href=\"http://www.12371.cn/2019/05/22/ARTI1558486520963978.shtml#\">分享</a></span>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<a onclick=\"doPrint();\" href=\"javascript:void(0);\">打印</a>\n\t\t\t\t\t\t\t\t\t<div></div>\n\t\t\t\t\t\t\t\t\t<div><a href=\"http://www.12371.cn/2019/05/22/ARTI1558486520963978.shtml#\"></a></div>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t<div></div>\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t<div></div>\n\t\t\t\t\n\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t</div><p style=\"text-align: center;\"><br></p>\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "http://p1.img.cctvpic.com/photoAlbum/page/performance/img/2019/5/22/1558486423076_156.jpg",
+      "originalReference": "http://p1.img.cctvpic.com/photoAlbum/page/performance/img/2019/5/22/1558486423076_156.jpg",
+      "token": "migration-resource://da84ad583ebad0ab9d8abc7a665b85404bdd4c96f3736bd07c8d639813a18e40",
+      "snapshotPath": "assets/da84ad583ebad0ab9d8abc7a665b85404bdd4c96f3736bd07c8d639813a18e40.jpg",
+      "sha256": "da84ad583ebad0ab9d8abc7a665b85404bdd4c96f3736bd07c8d639813a18e40",
+      "contentType": "image/jpeg",
+      "sizeBytes": 7168851
+    }
+  ],
+  "sourceFingerprint": "4db1a8938c5be157d5ba378dd4b99919d8d0fd0e1e7c6c2b7290c07d7bfe0a18",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "一图读懂《中国共产党党员教育管理工作条例》",
+    "listPublishDate": "2019-05-22",
+    "sourceOrder": 31,
+    "detailPublishDate": "2019-05-22",
+    "rawDetailPath": "raw/details/llxx-28737785217113.html"
+  }
+}

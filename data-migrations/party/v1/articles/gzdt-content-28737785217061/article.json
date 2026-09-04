@@ -1,0 +1,62 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737785217061",
+    "contentId": "28737785217061",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737785217061"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省高等学校毕业生就业指导中心开展专题党课-学习贯彻习近平总书记视察吉林重要讲话重要指示精神",
+    "source": "党总支",
+    "publishDate": "2020-10-23",
+    "bodyHtml": "\n                    \n\n\n\n\n<p>为深入学习贯彻习近平总书记视察吉林重要讲话重要指示精神，按照省教育厅要求，吉林省高等学校毕业生就业指导中心于2020年9月27日开展专题党课，由中心总支书记、主任唐洪丰做了党课专题讲座。中心全体职工、教育宾馆全体党员参加了会议。</p>\n<p style=\"text-align:center\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"assets/714561dd7b4d371934148c80a77ac1df20655fb87b2f2635f5d5693554557ce3.jpg\" alt=\"\" width=\"432\" height=\"324\">&nbsp;</p>\n<p>党课会上，唐洪丰书记就习近平总书记到吉林考察的基本概况、习总书记发表的重要讲话和重要指示以及贯彻总书记重要讲话指示精神，谋划好下阶段毕业生就业工作三个方面，结合中心工作实际做了详细的解读。他指出：疫情之下，高校毕业生就业不易，习近平始终牵挂于心，并在多个场合、多次会议中部署做好高校毕业生就业工作。在交流时，他叮嘱道：“各级党委和政府要高度重视高校毕业生就业问题，高校毕业生要转变择业就业观念，只要有志向就会有事业，只要有本事就会有舞台。”</p>\n<p style=\"text-align:center\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"assets/7068f2d16dafc7a25deb60aeca065c39e3125abc1cfba6c12288d6c4c54a4d35.jpg\" alt=\"\" width=\"432\" height=\"324\"></p>\n<p>他要求党员充分发挥模范带头作用，深入学习总书记视察吉林讲话精神，进一步完善党建工作制度，加大制度执行力度，发挥组织作用，突出重点，打造亮点，切实增强党建工作质量和标准。中心下一步要积极联系有关部门，组织开展各类招聘活动。组织高校结合疫情和工作实际，开展分行业、分科类、跨区域专场招聘活动。大力开发省内毕业生就业市场，及时开展用人单位、毕业生需求分析和调研。加快就业信息化建设步伐，完成全省高校招聘活动全程信息化管理。构建我省全方位立体化大学生就业创业信息服务平台。</p>\n<p style=\"text-align:center\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"assets/710be542b158a12781b7df43271d83959e967395309c642a6d833effb9dacd4e.jpg\" alt=\"\" width=\"432\" height=\"324\"></p>\n<p>通过这次生动的专题党课，使全体党员对习近平总书记视察吉林讲话精神内涵和对吉林人民的深切关怀有了更深的体会。大家纷纷表示，一定响应总书记号召，保持清正廉洁，勤俭节约的良好风气，积极为做好全省高校毕业生就业指导工作而努力。</p>\n<p>&nbsp;</p>\n\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201103150801.jpg",
+      "originalReference": "/chistory/cms/editor/20201103150801.jpg",
+      "token": "migration-resource://714561dd7b4d371934148c80a77ac1df20655fb87b2f2635f5d5693554557ce3",
+      "snapshotPath": "assets/714561dd7b4d371934148c80a77ac1df20655fb87b2f2635f5d5693554557ce3.jpg",
+      "sha256": "714561dd7b4d371934148c80a77ac1df20655fb87b2f2635f5d5693554557ce3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 44800
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201103150908.jpg",
+      "originalReference": "/chistory/cms/editor/20201103150908.jpg",
+      "token": "migration-resource://7068f2d16dafc7a25deb60aeca065c39e3125abc1cfba6c12288d6c4c54a4d35",
+      "snapshotPath": "assets/7068f2d16dafc7a25deb60aeca065c39e3125abc1cfba6c12288d6c4c54a4d35.jpg",
+      "sha256": "7068f2d16dafc7a25deb60aeca065c39e3125abc1cfba6c12288d6c4c54a4d35",
+      "contentType": "image/jpeg",
+      "sizeBytes": 45579
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201103150928.jpg",
+      "originalReference": "/chistory/cms/editor/20201103150928.jpg",
+      "token": "migration-resource://710be542b158a12781b7df43271d83959e967395309c642a6d833effb9dacd4e",
+      "snapshotPath": "assets/710be542b158a12781b7df43271d83959e967395309c642a6d833effb9dacd4e.jpg",
+      "sha256": "710be542b158a12781b7df43271d83959e967395309c642a6d833effb9dacd4e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 61309
+    }
+  ],
+  "sourceFingerprint": "615638e093c5ca091ad5102abf7c7545f0f4bed98c15b0be9bedc7fcf5b09272",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "吉林省高等学校毕业生就业指导中心开展专题党课-学习贯彻习近平总书记视察吉林重要讲话重要指示精神",
+    "listPublishDate": "2020-10-23",
+    "sourceOrder": 45,
+    "detailPublishDate": "2020-10-23",
+    "rawDetailPath": "raw/details/gzdt-28737785217061.html"
+  }
+}

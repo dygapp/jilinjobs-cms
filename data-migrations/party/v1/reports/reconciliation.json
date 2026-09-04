@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-09-04T03:04:06.772Z",
+  "sourceSystem": "legacy-jilinjobs",
+  "sourceOrigin": "https://24365.jl.smartedu.cn",
+  "scopes": [
+    {
+      "typeCode": "gcsy",
+      "columnAlias": "party-voice",
+      "reportedTotal": 40,
+      "pageCount": 4,
+      "parsedCount": 40,
+      "uniqueCount": 40,
+      "internal": 11,
+      "external": 29
+    },
+    {
+      "typeCode": "gzdt",
+      "columnAlias": "party-work",
+      "reportedTotal": 88,
+      "pageCount": 9,
+      "parsedCount": 88,
+      "uniqueCount": 88,
+      "internal": 87,
+      "external": 1
+    },
+    {
+      "typeCode": "dgdz",
+      "columnAlias": "party-rules",
+      "reportedTotal": 22,
+      "pageCount": 3,
+      "parsedCount": 22,
+      "uniqueCount": 22,
+      "internal": 14,
+      "external": 8
+    },
+    {
+      "typeCode": "llxx",
+      "columnAlias": "party-study",
+      "reportedTotal": 31,
+      "pageCount": 4,
+      "parsedCount": 31,
+      "uniqueCount": 31,
+      "internal": 8,
+      "external": 23
+    }
+  ],
+  "listedRecords": 181,
+  "normalizedRecords": 181,
+  "internal": 120,
+  "external": 61,
+  "resources": 184,
+  "unresolved": 0,
+  "warnings": 53,
+  "home": {
+    "imageCandidates": 5,
+    "carouselItems": 4
+  }
+}

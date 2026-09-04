@@ -1,0 +1,24 @@
+.party-site-app{
+  --party-column-interaction-accent:#d00023;
+}
+
+.party-site-app .shared-column-breadcrumb a:hover{
+  color:var(--party-column-interaction-accent);
+}
+
+.party-site-app .shared-column-list-link:hover,
+.party-site-app .shared-column-list-link:hover .shared-column-list-title{
+  color:var(--party-column-interaction-accent);
+}
+
+.party-site-app .shared-column-page-button:hover:not(:disabled),
+.party-site-app .shared-column-page-jump-submit:hover{
+  border-color:var(--party-column-interaction-accent);
+  color:var(--party-column-interaction-accent);
+}
+
+.party-site-app .shared-column-page-button.active{
+  border-color:var(--party-column-interaction-accent);
+  background:var(--party-column-interaction-accent);
+  color:#fff;
+}

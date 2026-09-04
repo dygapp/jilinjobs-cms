@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "dgdz:content:28737785217107",
+    "contentId": "28737785217107",
+    "typeCode": "dgdz",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737785217107"
+  },
+  "target": {
+    "columnAlias": "party-rules",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "中国共产党廉洁自律准则",
+    "source": "共产党员网",
+    "publishDate": null,
+    "bodyHtml": "\n                    <p>　　中国共产党全体党员和各级党员领导干部必须坚定共产主义理想和中国特色社会主义信念，必须坚持全心全意为人民服务根本宗旨，必须继承发扬党的优良传统和作风，必须自觉培养高尚道德情操，努力弘扬中华民族传统美德，廉洁自律，接受监督，永葆党的先进性和纯洁性。</p><p>　<strong>　党员廉洁自律规范</strong></p><p>　　第一条　坚持公私分明，先公后私，克己奉公。</p><p>　　第二条　坚持崇廉拒腐，清白做人，干净做事。</p><p>　　第三条　坚持尚俭戒奢，艰苦朴素，勤俭节约。</p><p>　　第四条　坚持吃苦在前，享受在后，甘于奉献。</p><p>　　<strong>党员领导干部廉洁自律规范</strong></p><p>　　第五条　廉洁从政，自觉保持人民公仆本色。</p><p>　　第六条　廉洁用权，自觉维护人民根本利益。</p><p>　　第七条　廉洁修身，自觉提升思想道德境界。</p><p>\n\n\n\n\n\n\n\n\n\n</p><p>　　第八条　廉洁齐家，自觉带头树立良好家风。</p>\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "571fb14d8112035d68888d429f5ab179c35de769a8b64a56e6c18cfd99dcae02",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "中国共产党廉洁自律准则",
+    "listPublishDate": null,
+    "sourceOrder": 1,
+    "detailPublishDate": null,
+    "rawDetailPath": "raw/details/dgdz-28737785217107.html"
+  }
+}

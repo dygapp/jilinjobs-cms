@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:7be6e1ef48b0611565281b6199dd46da80b9f8d751ea6246c12dabfdfac84b56",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/n1/2023/0425/c117092-32672726.html",
+    "url": "http://dangjian.people.com.cn/n1/2023/0425/c117092-32672726.html"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "如何掌握调查研究这个基本功",
+    "source": "",
+    "publishDate": "2023-04-25",
+    "bodyHtml": "",
+    "externalUrl": "http://dangjian.people.com.cn/n1/2023/0425/c117092-32672726.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "188949153015df18de995dc718fffa91cf68f994e9480bd2a6f33cbd9dfa782f",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "如何掌握调查研究这个基本功",
+    "listPublishDate": "2023-04-25",
+    "sourceOrder": 9
+  }
+}

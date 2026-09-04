@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:2b0a44330e06c9b0aa33a32667985b47f890461b52463dcf3bf3bce0442a91de",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/2025/02/15/ARTI1739603447271475.shtml",
+    "url": "https://www.12371.cn/2025/02/15/ARTI1739603447271475.shtml"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平：健全全面从严治党体系",
+    "source": "",
+    "publishDate": "2025-02-17",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2025/02/15/ARTI1739603447271475.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "dc764be097b1c2edae9ee952bf7282ea9fb26f1b787a11f77a5193c79ebb3c96",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "习近平：健全全面从严治党体系",
+    "listPublishDate": "2025-02-17",
+    "sourceOrder": 3
+  }
+}

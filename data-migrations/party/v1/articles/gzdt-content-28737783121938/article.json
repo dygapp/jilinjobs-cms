@@ -1,0 +1,62 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737783121938",
+    "contentId": "28737783121938",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737783121938"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "省高校毕业生就业指导中心党总支开展“扶贫党日活动”",
+    "source": "",
+    "publishDate": "2017-11-14",
+    "bodyHtml": "\n                    <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">省高校毕业生就业指导中心党总支开展“扶贫党日活动”</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:党总支   发布时间:2017-11-14 13:31:23</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>\n    &nbsp;\n</p>\n<p style=\"text-indent: 43px;\">\n    <span style=\"color: black; font-family: 宋体; font-size: 21px;\">2017年11月14日，省高校毕业生就业指导中心主任、党总支副书记郑志宏同志率支部委员苗立海、李凌宏二位同志亲赴图们市石岘镇上龙城村，代表就业中心和教育宾馆全体党员对包保的三户困难户进行了慰问。</span>\n</p>\n<p style=\"text-indent: 43px;\">\n    <span style=\"color: black; font-family: 宋体; font-size: 21px;\">郑志宏主任分别走访了崔相烈、黄海龙、徐桂修包保的三户困难家庭，坐在炕头上，与他们亲切交流，了解他们的近况，倾听他们谈到在党和政府的帮扶下，近一年的生活状况和身体状况都得到了很大改善，感到非常高兴。</span>\n</p>\n<p style=\"text-indent: 43px;\">\n    <span style=\"font-family: 宋体; font-size: 21px;\">郑志宏主任向他们分别介绍了刚刚闭幕的党的十九大会议精神。习近平总书记强调，坚持以人民为中心，要让人民过上好日子，让全体人民共同富裕，在全面建成小康社会基础上，把中国建设成为社会主义现代化强国。郑志宏主任还代表全体党员分别给三户包保户送去慰问金，并表示，一定要配合好驻村书记，帮助解决他们的实际困难，争取早日脱贫。包保户十分感动，表示感受到了党的温暖和党组织的关怀，自己有信心战胜困难和疾病，不辜负党的期望和关怀。</span>\n</p>\n<p style=\"text-indent: 44px;\">\n    <span style=\"font-family: 宋体; font-size: 21px;\">这次活动对中心全体党员是一次政治教育，对深入学习贯彻党的十九大精神也是很好的推进。全体党员纷纷捐款的举动，对决胜全面小康，打赢脱贫攻坚战的思想是统一的，在“扶贫党日活动”中做出了表率作用。</span>\n</p>\n<p style=\"text-align: center;\">\n    &nbsp;\n</p>\n<p style=\"text-align: center;\">\n    <img title=\"1.jpg\" src=\"assets/2a15acf0da071e5883823c8c19d9051902cc9baf7f394ac7b220f0b9c195e55f.jpg\">\n</p>\n<p style=\"text-align: center;\">\n    <img title=\"2.jpg\" src=\"assets/423225916d286fa2fbfa7c7b15f8609c3fd18de38bffe5fab1fcd1b8f063a22d.jpg\">\n</p>\n<p style=\"text-align: center;\">\n    <img title=\"3.jpg\" src=\"assets/670a19d05648595f5f3f7f91951642b48e74eed9dbeaf0f29ddfbf45a8e917f5.jpg\">\n</p>\n<p style=\"text-align: center;\">\n    &nbsp;\n</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364627396862825001034691.jpg",
+      "originalReference": "/chistory/cms/imgs/6364627396862825001034691.jpg",
+      "token": "migration-resource://2a15acf0da071e5883823c8c19d9051902cc9baf7f394ac7b220f0b9c195e55f",
+      "snapshotPath": "assets/2a15acf0da071e5883823c8c19d9051902cc9baf7f394ac7b220f0b9c195e55f.jpg",
+      "sha256": "2a15acf0da071e5883823c8c19d9051902cc9baf7f394ac7b220f0b9c195e55f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 136788
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364627396875325003763170.jpg",
+      "originalReference": "/chistory/cms/imgs/6364627396875325003763170.jpg",
+      "token": "migration-resource://423225916d286fa2fbfa7c7b15f8609c3fd18de38bffe5fab1fcd1b8f063a22d",
+      "snapshotPath": "assets/423225916d286fa2fbfa7c7b15f8609c3fd18de38bffe5fab1fcd1b8f063a22d.jpg",
+      "sha256": "423225916d286fa2fbfa7c7b15f8609c3fd18de38bffe5fab1fcd1b8f063a22d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 179671
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364627396883137501505740.jpg",
+      "originalReference": "/chistory/cms/imgs/6364627396883137501505740.jpg",
+      "token": "migration-resource://670a19d05648595f5f3f7f91951642b48e74eed9dbeaf0f29ddfbf45a8e917f5",
+      "snapshotPath": "assets/670a19d05648595f5f3f7f91951642b48e74eed9dbeaf0f29ddfbf45a8e917f5.jpg",
+      "sha256": "670a19d05648595f5f3f7f91951642b48e74eed9dbeaf0f29ddfbf45a8e917f5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 120585
+    }
+  ],
+  "sourceFingerprint": "a647714e93bfeeb7018d00e642af33cdb5ab6d29531eb4b90396d78c6abff22e",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "省高校毕业生就业指导中心党总支开展“扶贫党日活动”",
+    "listPublishDate": "2017-11-14",
+    "sourceOrder": 81,
+    "detailPublishDate": "2017-11-14",
+    "rawDetailPath": "raw/details/gzdt-28737783121938.html"
+  }
+}

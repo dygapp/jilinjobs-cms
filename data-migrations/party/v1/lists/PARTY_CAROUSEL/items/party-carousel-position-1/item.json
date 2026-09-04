@@ -1,0 +1,21 @@
+{
+  "legacyKey": "party-carousel:position:1",
+  "sourceOrder": 1,
+  "title": "纪念中国人民抗日战争暨世界反法西斯战争胜利80周年大会在京隆重举行 习近平发表重要讲话并检阅受阅部队",
+  "url": "https://baijiahao.baidu.com/s?id=1842218267143614925&wfr=spider&for=pc",
+  "openMode": "NEW_WINDOW",
+  "sourceFingerprint": "22cccf1c2e22b5d4e38b269d85fd8a3b4c525e0b06eb10470d20aa3ecc942353",
+  "image": {
+    "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content1/2025-09-12/c337cedf-caa0-4365-ad22-1a391c286e98.jpg",
+    "originalReference": "/group1/cms/t_biz_attachment/content1/2025-09-12/c337cedf-caa0-4365-ad22-1a391c286e98.jpg",
+    "snapshotPath": "assets/57151972d8bfe2687422e53b5f8e473255f6a4c7840f897e09c0a19f63c7c1a2.jpg",
+    "sha256": "57151972d8bfe2687422e53b5f8e473255f6a4c7840f897e09c0a19f63c7c1a2",
+    "contentType": "image/jpeg",
+    "sizeBytes": 82351
+  },
+  "evidence": {
+    "sourceHref": "https://baijiahao.baidu.com/s?id=1842218267143614925&wfr=spider&for=pc",
+    "sourceImageReference": "/group1/cms/t_biz_attachment/content1/2025-09-12/c337cedf-caa0-4365-ad22-1a391c286e98.jpg",
+    "sourceTarget": "_blank"
+  }
+}

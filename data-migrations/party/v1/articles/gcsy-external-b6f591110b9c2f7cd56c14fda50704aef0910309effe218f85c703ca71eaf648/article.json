@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:b6f591110b9c2f7cd56c14fda50704aef0910309effe218f85c703ca71eaf648",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/n1/2023/0411/c164113-32661596.html",
+    "url": "http://cpc.people.com.cn/n1/2023/0411/c164113-32661596.html"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“坚持学思用贯通、知信行统一” 习近平指明开展主题教育的根本任务",
+    "source": "",
+    "publishDate": "2023-04-18",
+    "bodyHtml": "",
+    "externalUrl": "http://cpc.people.com.cn/n1/2023/0411/c164113-32661596.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "388f5dc14928a2232965faf7c138ade0fe6a0535872cdd2674cb0f3a6d7a21c5",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "“坚持学思用贯通、知信行统一” 习近平指明开展主题教育的根本任务",
+    "listPublishDate": "2023-04-18",
+    "sourceOrder": 20
+  }
+}

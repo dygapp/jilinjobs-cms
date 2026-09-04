@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:ecf0b3fcccd9c3d003f6a19ccf49f6fc9a0d8dde139bb8fa8a7aabdf46efcd14",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/politics/leaders/2020-07/22/c_1126272930.htm",
+    "url": "http://www.xinhuanet.com/politics/leaders/2020-07/22/c_1126272930.htm"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平赴吉林考察调研",
+    "source": "",
+    "publishDate": "2020-07-22",
+    "bodyHtml": "",
+    "externalUrl": "http://www.xinhuanet.com/politics/leaders/2020-07/22/c_1126272930.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "1f951e4402c76c51bce397e909764ff79251eb3b960d752d7c6b6b4699f0a6cb",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "习近平赴吉林考察调研",
+    "listPublishDate": "2020-07-22",
+    "sourceOrder": 32
+  }
+}

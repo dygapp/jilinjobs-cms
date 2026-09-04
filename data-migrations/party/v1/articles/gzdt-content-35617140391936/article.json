@@ -1,0 +1,62 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:35617140391936",
+    "contentId": "35617140391936",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=35617140391936"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "参观长春新区规划展览馆----深入学习贯彻习近平总书记视察吉林重要讲话重要指示精神",
+    "source": "中心党支部",
+    "publishDate": "2020-09-25",
+    "bodyHtml": "\n                    <p>2020年9月23日下午，根据中心党总支《学习贯彻习近平总书记视察吉林重要讲话重要指示精神教育培训方案》要求，按照党总支安排和部署，中心全体工作人员及教育宾馆党员一起参观长春新区规划展览馆。</p>\n\n<p>长春新区规划展览馆坐落于长春高新区北区，于2016年11月2日正式对外开放。长春新区规划展览馆主体建筑始建于2009年12月，原名为长东北核心区规划建设展览馆。2016年2月，随着长春新区的正式批复，新区各项规划及建设任务全面展开。</p>\n\n<p>长春规划展览馆由规划展览馆、博物馆、美术馆“三馆”融合组成，该展馆由中国工程院院士崔恺大师设计，重点展示了长春城市发展历史和城市规划愿景等内容。</p>\n\n<p>整个展区共分三层，分别强化“历史和人文、智慧发展、绿色发展”的展示主题，包括长春城市发展历史、城市规划以及2080年的长春模样。展示内容主要为品读长春历史、构建东北亚区域性中心城市、推动生态文明建设、探索城市未来四个部分，共22个展区。展馆集中展示新区各项规划及建设发展动态，打造全新的展示平台和窗口，以有效服务于新区的招商引资、项目建设等工作，推动新区各项事业的加快发展。</p>\n\n<p>沿着习近平总书记参观走过的足迹，讲解员向我们全面介绍了长春新区的发展机遇、战略规划、产业布局、项目最新进展、一带一路等方面内容。一幅幅照片，一个个展区，全面的展示了长春新区在新时代、新政策下的发展规划。整个参观过程中，给人留下最深印象的就是北湖发展区的沙盘模拟，精致的设计与高超的科学技术相结合展现出的效果让人震撼。</p>\n\n<p>在决胜全面建成小康社会、开启全面建设社会主义现代化国家新征程的关键节点，习近平总书记亲临吉林视察，看望慰问干部群众，为长春经济把脉，为吉林振兴指引方向，体现了对吉林这片土地的深厚感情，饱含着对吉林人民的深切关怀，寄托着对新时代吉林振兴的殷切期望，让我们感到无比温暖和巨大鼓舞，使我们增添了必胜信心和强大动力。</p>\n\n<p>通过参观，我们看到了长春的繁荣发展，看到了“老长春”变成了“新长春”，看到了“北方春城”日新月异的变化……感到兴奋和自豪，感受长春的高速发展，同时也激发了我们的学习热情。长春的发展建设离不开一代代人的不懈奋斗，作为新时代的基层单位的党员，我们有责任肩负起实现中国伟大复兴的使命，争取为祖国的发展、吉林振兴贡献自己的一份力量。</p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<img alt=\"\" height=\"262\" src=\"assets/e2f0952e488bcb07339eab02eaa58840139bee1267e4cf93ab9afaec78f3f9d1.jpg\" width=\"390\">&nbsp; &nbsp;<img alt=\"\" height=\"262\" src=\"assets/0a3d9a1cb0f5bdd7360ce9128fba910e6850b5c3b2fb4f27f21dc80eeeef8e1e.jpg\" width=\"372\">&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"262\" src=\"assets/ce615ddc8d0d4e585a617174a1a6ab202c119f8886a510e85395bd4dc526c965.jpg\" width=\"385\"></p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200929110659.jpg",
+      "originalReference": "/chistory/cms/editor/20200929110659.jpg",
+      "token": "migration-resource://e2f0952e488bcb07339eab02eaa58840139bee1267e4cf93ab9afaec78f3f9d1",
+      "snapshotPath": "assets/e2f0952e488bcb07339eab02eaa58840139bee1267e4cf93ab9afaec78f3f9d1.jpg",
+      "sha256": "e2f0952e488bcb07339eab02eaa58840139bee1267e4cf93ab9afaec78f3f9d1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 2305271
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200929111714.jpg",
+      "originalReference": "/chistory/cms/editor/20200929111714.jpg",
+      "token": "migration-resource://0a3d9a1cb0f5bdd7360ce9128fba910e6850b5c3b2fb4f27f21dc80eeeef8e1e",
+      "snapshotPath": "assets/0a3d9a1cb0f5bdd7360ce9128fba910e6850b5c3b2fb4f27f21dc80eeeef8e1e.jpg",
+      "sha256": "0a3d9a1cb0f5bdd7360ce9128fba910e6850b5c3b2fb4f27f21dc80eeeef8e1e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 1367725
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200929111835.jpg",
+      "originalReference": "/chistory/cms/editor/20200929111835.jpg",
+      "token": "migration-resource://ce615ddc8d0d4e585a617174a1a6ab202c119f8886a510e85395bd4dc526c965",
+      "snapshotPath": "assets/ce615ddc8d0d4e585a617174a1a6ab202c119f8886a510e85395bd4dc526c965.jpg",
+      "sha256": "ce615ddc8d0d4e585a617174a1a6ab202c119f8886a510e85395bd4dc526c965",
+      "contentType": "image/jpeg",
+      "sizeBytes": 1756886
+    }
+  ],
+  "sourceFingerprint": "48fb737c49053569b15c10fcc2631dda4459e94b931bcef756825721ae76a788",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "参观长春新区规划展览馆----深入学习贯彻习近平总书记视察吉林重要讲话重要指示精神",
+    "listPublishDate": "2020-09-25",
+    "sourceOrder": 49,
+    "detailPublishDate": "2020-09-25",
+    "rawDetailPath": "raw/details/gzdt-35617140391936.html"
+  }
+}

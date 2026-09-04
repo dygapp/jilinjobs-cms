@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "dgdz:external:28fe6c1525ed50f400e4fdfe3e790bcca40d73490b6e91fdc72c6a9a728be0e8",
+    "contentId": null,
+    "typeCode": "dgdz",
+    "detailPath": "/2023/02/02/ARTI1675298915332267.shtml",
+    "url": "https://www.12371.cn/2023/02/02/ARTI1675298915332267.shtml"
+  },
+  "target": {
+    "columnAlias": "party-rules",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "事业单位工作人员考核规定",
+    "source": "",
+    "publishDate": "2023-02-03",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2023/02/02/ARTI1675298915332267.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "7b81c53e1650837a78d40b2805175a31ef8b1a86e43b2bd4b1c393951ce6bbc9",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "事业单位工作人员考核规定",
+    "listPublishDate": "2023-02-03",
+    "sourceOrder": 8
+  }
+}

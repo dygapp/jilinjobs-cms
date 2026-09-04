@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:6da556e2b824e2540ccafd16b2cc9388b37a1226e7a972cbe9560578d1074006",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/2026/07/17/ARTI1784267090551795.shtml",
+    "url": "https://www.12371.cn/2026/07/17/ARTI1784267090551795.shtml"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平在2026世界人工智能大会暨人工智能全球治理高级别会议开幕式上的主旨讲话（全文）",
+    "source": "",
+    "publishDate": "2026-09-04",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2026/07/17/ARTI1784267090551795.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "0ea3e92de8e0018ee339455bfd5ded15118d927531711c0f8e5a02144c84dbdd",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "习近平在2026世界人工智能大会暨人工智能全球治理高级别会议开幕式上的主旨讲话（全文）",
+    "listPublishDate": "2026-09-04",
+    "sourceOrder": 1
+  }
+}

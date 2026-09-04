@@ -1,0 +1,62 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:89617778884608",
+    "contentId": "89617778884608",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=89617778884608"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "党课《论把握新发展阶段、贯彻新发展理念、构建新发展格局》",
+    "source": "中心党总支",
+    "publishDate": "2021-10-21",
+    "bodyHtml": "\n                    <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:14.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">&nbsp; &nbsp; 为深入学习贯彻习近平《论把握新发展阶段、贯彻新发展理念、构建新发展格局》</span></span></span><span style=\"font-size:14.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">这一著作</span></span></span><span style=\"font-size:14.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">的精神内涵和实质，按照省教育厅直属机关党委的部署要求，中心党总支</span></span></span><span style=\"font-size:14.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">于</span></span></span><span style=\"font-size:14.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">2021年10月21日组织开展</span></span></span><span style=\"font-size:14.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">专题</span></span></span><span style=\"font-size:14.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">党课</span></span></span><span style=\"font-size:14.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">。</span></span></span><span style=\"font-size:14.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">特邀马克思主义理论博士后、东北师范大学思想政治教育研究中心副主任、副教授、硕士生导师，兼任团省委</span>“吉林青年讲师团”党史学习教育宣讲团成员，马工程重点教材《习近平总书记教育重要论述讲义》编写组秘书长、吉林省中国共产党历史与理论研究会副秘书长张泽强做党课主讲人。</span></span><span style=\"font-size:14.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">中心全体职工和教育宾馆全体党员</span></span></span><span style=\"font-size:14.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">出席。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:14.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt=\"\" height=\"168\" src=\"assets/51123214d392097bf886b6509f775aaa857f4e5bb2da7aa898a19b73782bce05.jpg\" width=\"224\"></span></span></span></span></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt=\"\" height=\"168\" src=\"assets/95e95aaff37ae0849ab2610ee3238548ec72d451483419de1bf3a27d4baf013a.jpg\" width=\"224\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt=\"\" height=\"168\" src=\"assets/d4f96d36c78ba839c2d6d0070c14e764c092b7e5ccc04a894da826ddbc3b0f67.jpg\" width=\"224\"></p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/eb3c710b-04b2-427d-a8c0-c4197cdd360d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/eb3c710b-04b2-427d-a8c0-c4197cdd360d.jpg",
+      "token": "migration-resource://51123214d392097bf886b6509f775aaa857f4e5bb2da7aa898a19b73782bce05",
+      "snapshotPath": "assets/51123214d392097bf886b6509f775aaa857f4e5bb2da7aa898a19b73782bce05.jpg",
+      "sha256": "51123214d392097bf886b6509f775aaa857f4e5bb2da7aa898a19b73782bce05",
+      "contentType": "image/jpeg",
+      "sizeBytes": 25806
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/59d68686-0c67-4d4b-b6bb-88a7914a88d1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/59d68686-0c67-4d4b-b6bb-88a7914a88d1.jpg",
+      "token": "migration-resource://95e95aaff37ae0849ab2610ee3238548ec72d451483419de1bf3a27d4baf013a",
+      "snapshotPath": "assets/95e95aaff37ae0849ab2610ee3238548ec72d451483419de1bf3a27d4baf013a.jpg",
+      "sha256": "95e95aaff37ae0849ab2610ee3238548ec72d451483419de1bf3a27d4baf013a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 21838
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/dfaa26d8-355d-4d66-97b9-0ecefcddbf44.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/dfaa26d8-355d-4d66-97b9-0ecefcddbf44.jpg",
+      "token": "migration-resource://d4f96d36c78ba839c2d6d0070c14e764c092b7e5ccc04a894da826ddbc3b0f67",
+      "snapshotPath": "assets/d4f96d36c78ba839c2d6d0070c14e764c092b7e5ccc04a894da826ddbc3b0f67.jpg",
+      "sha256": "d4f96d36c78ba839c2d6d0070c14e764c092b7e5ccc04a894da826ddbc3b0f67",
+      "contentType": "image/jpeg",
+      "sizeBytes": 25993
+    }
+  ],
+  "sourceFingerprint": "13e0daf262d3431c4255456682b0df47e2e1c0887f15473e7374a631947922fc",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "党课《论把握新发展阶段、贯彻新发展理念、构建新发展格局》",
+    "listPublishDate": "2021-10-21",
+    "sourceOrder": 28,
+    "detailPublishDate": "2021-10-21",
+    "rawDetailPath": "raw/details/gzdt-89617778884608.html"
+  }
+}

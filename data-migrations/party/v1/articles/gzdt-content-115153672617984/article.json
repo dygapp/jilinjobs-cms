@@ -1,0 +1,52 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:115153672617984",
+    "contentId": "115153672617984",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=115153672617984"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于流动党员支部开展学习教育活动的通知",
+    "source": "",
+    "publishDate": "2022-09-27",
+    "bodyHtml": "\n                    <p style=\"text-align:center\"><img alt=\"\" height=\"960\" src=\"assets/e28a0f56120d02bed8efb2a72bd1bc5e94a611d3d2dca956834ca2af627a6d88.jpg\" width=\"669\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"960\" src=\"assets/f12df27d7b6a8c5d0bb7b34267e2260128992bea6215525e1453b7df254cd5f5.jpg\" width=\"648\"></p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-09-28/3ec3c12b-0e87-4d78-93d1-12c337dcff5c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-09-28/3ec3c12b-0e87-4d78-93d1-12c337dcff5c.jpg",
+      "token": "migration-resource://e28a0f56120d02bed8efb2a72bd1bc5e94a611d3d2dca956834ca2af627a6d88",
+      "snapshotPath": "assets/e28a0f56120d02bed8efb2a72bd1bc5e94a611d3d2dca956834ca2af627a6d88.jpg",
+      "sha256": "e28a0f56120d02bed8efb2a72bd1bc5e94a611d3d2dca956834ca2af627a6d88",
+      "contentType": "image/jpeg",
+      "sizeBytes": 68586
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-09-28/22427976-bd0f-4c15-8972-8ccbb506f170.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-09-28/22427976-bd0f-4c15-8972-8ccbb506f170.jpg",
+      "token": "migration-resource://f12df27d7b6a8c5d0bb7b34267e2260128992bea6215525e1453b7df254cd5f5",
+      "snapshotPath": "assets/f12df27d7b6a8c5d0bb7b34267e2260128992bea6215525e1453b7df254cd5f5.jpg",
+      "sha256": "f12df27d7b6a8c5d0bb7b34267e2260128992bea6215525e1453b7df254cd5f5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 40435
+    }
+  ],
+  "sourceFingerprint": "446bd6df81381a1a59bd77382917e4a768865a14bd8ae066ff9dc28f8bdda47f",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "关于流动党员支部开展学习教育活动的通知",
+    "listPublishDate": "2022-09-27",
+    "sourceOrder": 8,
+    "detailPublishDate": "2022-09-27",
+    "rawDetailPath": "raw/details/gzdt-115153672617984.html"
+  }
+}

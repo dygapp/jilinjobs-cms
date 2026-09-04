@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:0d95f0946f65738a15db122fbaf684ab7cea28063d91fb6659b84c5ff740ba0a",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/n1/2023/0401/c64094-32655693.html",
+    "url": "http://cpc.people.com.cn/n1/2023/0401/c64094-32655693.html"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "把学习贯彻新时代中国特色社会主义思想不断引向深入",
+    "source": "",
+    "publishDate": "2023-04-01",
+    "bodyHtml": "",
+    "externalUrl": "http://cpc.people.com.cn/n1/2023/0401/c64094-32655693.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "f8b7d404fd2b59efc37f9aa7401d620d31e28abdbec2bba417cbd8d23f98907d",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "把学习贯彻新时代中国特色社会主义思想不断引向深入",
+    "listPublishDate": "2023-04-01",
+    "sourceOrder": 23
+  }
+}

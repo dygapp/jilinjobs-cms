@@ -1,0 +1,52 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:89620633108480",
+    "contentId": "89620633108480",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=89620633108480"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "粽叶飘香迎端午，党建共筑暖人心",
+    "source": "中心党支部",
+    "publishDate": "2021-06-11",
+    "bodyHtml": "\n                    <p style=\"text-align:justify\"><span style=\"font-size:10pt\"><span style=\"font-family:&quot;Times New Roman&quot;\"><span style=\"font-size:15.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">&nbsp; &nbsp;为弘扬传统民俗文化，加强与基层党组织联系，增强党组织凝聚力，中心党支部联合教育宾馆党支部与浦东社区党委联合开展</span>“粽叶飘香迎端午，党建共</span></span><span style=\"font-size:15.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">筑</span></span></span><span style=\"font-size:15.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">暖人心</span>”实施“双百共建”推进行动。给辖区内重病、重残、特困、空巢、高龄老人等弱势群体送去鸡蛋、粽子等节日礼物，让大家过一个安康、祥和的端午节。</span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"480\" src=\"assets/9618e10622862c41a641f70dfc4be88ceace85252cf11600582aae1d29cff9ea.jpg\" width=\"640\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10pt\"><span style=\"font-family:&quot;Times New Roman&quot;\"><span style=\"font-size:15.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">&nbsp; &nbsp;6月11日上午，中心党支部、教育宾馆支部到浦东社区党委带着煮熟、浸透的粽子对辖区重病、重残、特困、空巢、高龄等家庭进行走访慰问，给他们送去浓浓的关爱和节日问候。走访慰问中，党员志愿者详细询问了困难家庭的生活状况和小心愿、小梦想，并为他们送去爱心粽子等礼品，同时带去党和政府的关怀和温暖，祝他们端午安康。让他们切实感受到社区大家庭的温暖和党组织的关爱。海口小区的张阿姨收到粽子后，感激的对工作人员说：“感谢大家对我们的照顾，这份粽子真是暖人心！”</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"480\" src=\"assets/403b0a343939320a5c107316b80095b287b11a5752e8283c5f0620757c153591.jpg\" width=\"640\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10pt\"><span style=\"font-family:&quot;Times New Roman&quot;\"><span style=\"font-size:15.0000pt\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">&nbsp; &nbsp;此次活动，送出粽子、鸡蛋等节日慰问礼品</span>30余份，充分体现党员队伍的先进性，既继承了传统文化，又强化了党员的服务意识，促使广大党员积极参与社区活动，认真履行党员职责，凝聚人心、温暖民心，进一步促进“双百共建”品牌建设。</span></span></span></span></p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/02500c47-7b45-4254-ad32-6e320055c4b1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/02500c47-7b45-4254-ad32-6e320055c4b1.jpg",
+      "token": "migration-resource://9618e10622862c41a641f70dfc4be88ceace85252cf11600582aae1d29cff9ea",
+      "snapshotPath": "assets/9618e10622862c41a641f70dfc4be88ceace85252cf11600582aae1d29cff9ea.jpg",
+      "sha256": "9618e10622862c41a641f70dfc4be88ceace85252cf11600582aae1d29cff9ea",
+      "contentType": "image/jpeg",
+      "sizeBytes": 335457
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/5c3a2faa-134f-450b-aac1-141213419169.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/5c3a2faa-134f-450b-aac1-141213419169.jpg",
+      "token": "migration-resource://403b0a343939320a5c107316b80095b287b11a5752e8283c5f0620757c153591",
+      "snapshotPath": "assets/403b0a343939320a5c107316b80095b287b11a5752e8283c5f0620757c153591.jpg",
+      "sha256": "403b0a343939320a5c107316b80095b287b11a5752e8283c5f0620757c153591",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88538
+    }
+  ],
+  "sourceFingerprint": "e94d0e42d16155a39d722dfd949dc61a965e1242838c972412230859108dd685",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "粽叶飘香迎端午，党建共筑暖人心",
+    "listPublishDate": "2021-06-11",
+    "sourceOrder": 34,
+    "detailPublishDate": "2021-06-11",
+    "rawDetailPath": "raw/details/gzdt-89620633108480.html"
+  }
+}

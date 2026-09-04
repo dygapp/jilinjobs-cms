@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "dgdz:external:efe2fda8ae10fb7ef236b7d35df8ae207c855f34a74b00b5fb0dbb4ce83a0b74",
+    "contentId": null,
+    "typeCode": "dgdz",
+    "detailPath": "/2026/05/18/ARTI1779102179030620.shtml",
+    "url": "https://www.12371.cn/2026/05/18/ARTI1779102179030620.shtml"
+  },
+  "target": {
+    "columnAlias": "party-rules",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中共中央办公厅印发《中国共产党发展党员工作细则》",
+    "source": "",
+    "publishDate": "2026-05-29",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2026/05/18/ARTI1779102179030620.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "cf678c806f5b6354dbbbee9cc0aa26ac22c63cb45a48bf6630ae2f222deb45dc",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "中共中央办公厅印发《中国共产党发展党员工作细则》",
+    "listPublishDate": "2026-05-29",
+    "sourceOrder": 2
+  }
+}

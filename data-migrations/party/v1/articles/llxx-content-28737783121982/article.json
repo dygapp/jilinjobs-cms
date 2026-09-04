@@ -1,0 +1,42 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:content:28737783121982",
+    "contentId": "28737783121982",
+    "typeCode": "llxx",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737783121982"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "《中国共产党党员教育管理工作条例》知识测试",
+    "source": "共产党员网",
+    "publishDate": "2019-06-03",
+    "bodyHtml": "\n                    <p style=\"text-align:center\"><img src=\"assets/38e41f306f2ea483cc753fecb4f4cf29017b7f4b85d75b91578ce0519ee1d821.jpg\"><br></p>\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "http://p4.img.cctvpic.com/photoAlbum/page/performance/img/2019/5/22/1558527451565_209.jpg",
+      "originalReference": "http://p4.img.cctvpic.com/photoAlbum/page/performance/img/2019/5/22/1558527451565_209.jpg",
+      "token": "migration-resource://38e41f306f2ea483cc753fecb4f4cf29017b7f4b85d75b91578ce0519ee1d821",
+      "snapshotPath": "assets/38e41f306f2ea483cc753fecb4f4cf29017b7f4b85d75b91578ce0519ee1d821.jpg",
+      "sha256": "38e41f306f2ea483cc753fecb4f4cf29017b7f4b85d75b91578ce0519ee1d821",
+      "contentType": "image/jpeg",
+      "sizeBytes": 116721
+    }
+  ],
+  "sourceFingerprint": "c6bdd4529692ab01b4f8e1ca85a4e2d9511c57e9cc01113d45160129de471a77",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "《中国共产党党员教育管理工作条例》知识测试",
+    "listPublishDate": "2019-06-03",
+    "sourceOrder": 30,
+    "detailPublishDate": "2019-06-03",
+    "rawDetailPath": "raw/details/llxx-28737783121982.html"
+  }
+}

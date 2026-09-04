@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:0f572dd8d8359d54e19cd57535c921dbe95c49190aa8901aa00b685b68eb02ac",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/2025/01/31/ARTI1738307451314107.shtml",
+    "url": "https://www.12371.cn/2025/01/31/ARTI1738307451314107.shtml"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平：注重家庭，注重家教，注重家风",
+    "source": "",
+    "publishDate": "2025-02-05",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2025/01/31/ARTI1738307451314107.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "c3f21cd0b4801522d2933fde72f90cb363f4625f43e351f2985fa59492f97be6",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "习近平：注重家庭，注重家教，注重家风",
+    "listPublishDate": "2025-02-05",
+    "sourceOrder": 4
+  }
+}

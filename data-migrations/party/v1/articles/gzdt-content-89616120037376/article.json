@@ -1,0 +1,42 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:89616120037376",
+    "contentId": "89616120037376",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=89616120037376"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "学习宣传党的十九届六中全会精神",
+    "source": "中心党总支",
+    "publishDate": "2021-11-22",
+    "bodyHtml": "\n                    <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"color:#000000\"><span style=\"font-family:仿宋\">&nbsp; &nbsp; 按照厅直属机关党委《关于认真传达学习党的十九届六中全会精神的通知》要求，中心党总支高度重视，积极筹备，及时开展传达学习。</span></span></span></span></span></span></p>\n\n<p style=\"text-align:left\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"color:#000000\"><span style=\"font-family:仿宋\">&nbsp; &nbsp; 中心党总支于</span></span></span></span><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"color:#000000\"><span style=\"font-family:仿宋\">2021年11月17日下午召开全体职工大会，传达厅里的通知和学习宣传六中全会精神。就业中心全体党员干部和普通职工以及教育宾馆全体党员参加了会议。</span></span></span></span></span></span><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"color:#000000\"><span style=\"font-family:仿宋\">会上，通过观看中央电视台的视频节目，完整学习了十九届六次全会公报。</span></span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"411\" src=\"assets/7708e403d74d95a94297699b7f4046a8a064636bab8ec6d85862bb146c92b4d6.jpg\" width=\"671\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"color:#000000\"><span style=\"font-family:仿宋\">&nbsp; &nbsp; 大会以后，以党小组形式召开专题学习讨论会，会上积极发言，会后认真撰写学习心得体会，在中心掀起学习十九届六中全会的热潮。</span></span></span></span></span></span></p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/b85599cf-19c6-4e33-b35b-9670203fe323.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/b85599cf-19c6-4e33-b35b-9670203fe323.jpg",
+      "token": "migration-resource://7708e403d74d95a94297699b7f4046a8a064636bab8ec6d85862bb146c92b4d6",
+      "snapshotPath": "assets/7708e403d74d95a94297699b7f4046a8a064636bab8ec6d85862bb146c92b4d6.jpg",
+      "sha256": "7708e403d74d95a94297699b7f4046a8a064636bab8ec6d85862bb146c92b4d6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 100294
+    }
+  ],
+  "sourceFingerprint": "bd3ba06bd8d8ebe3cce3842f1ee8d7cb83832b8da762b2190d7b4e54727238b3",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "学习宣传党的十九届六中全会精神",
+    "listPublishDate": "2021-11-22",
+    "sourceOrder": 24,
+    "detailPublishDate": "2021-11-22",
+    "rawDetailPath": "raw/details/gzdt-89616120037376.html"
+  }
+}

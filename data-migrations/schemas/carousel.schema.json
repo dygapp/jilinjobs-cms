@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jilinjobs.cn/schemas/migration/party-carousel-v1.json",
+  "title": "EU-29 Party Carousel Migration Snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["listCode", "sourceSystem", "sourcePage", "items"],
+  "properties": {
+    "listCode": { "const": "PARTY_CAROUSEL" },
+    "sourceSystem": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "sourcePage": { "type": "string", "format": "uri" },
+    "items": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["legacyKey", "sourceOrder", "title", "url", "openMode", "sourceFingerprint", "image", "evidence"],
+        "properties": {
+          "legacyKey": { "type": "string", "pattern": "^party-carousel:position:[1-4]$" },
+          "sourceOrder": { "type": "integer", "minimum": 1, "maximum": 4 },
+          "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+          "url": { "type": "string", "format": "uri" },
+          "openMode": { "enum": ["DEFAULT", "SAME_WINDOW", "NEW_WINDOW"] },
+          "sourceFingerprint": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "image": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["sourceUrl", "originalReference", "snapshotPath", "sha256", "contentType", "sizeBytes"],
+            "properties": {
+              "sourceUrl": { "type": "string", "format": "uri" },
+              "originalReference": { "type": "string", "minLength": 1 },
+              "snapshotPath": { "type": "string", "pattern": "^assets/carousel/" },
+              "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+              "contentType": { "type": "string", "pattern": "^image/" },
+              "sizeBytes": { "type": "integer", "minimum": 1 }
+            }
+          },
+          "evidence": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["sourceHref", "sourceImageReference", "sourceTarget"],
+            "properties": {
+              "sourceHref": { "type": "string" },
+              "sourceImageReference": { "type": "string" },
+              "sourceTarget": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:a5fb5130e5b85a447d971af4add6e1ce133bc8594ccc76c07cb0f92699fab816",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/n1/2020/0422/c40531-31682794.html",
+    "url": "http://theory.people.com.cn/n1/2020/0422/c40531-31682794.html"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深入把握精准施策的内涵要义",
+    "source": "",
+    "publishDate": "2020-04-23",
+    "bodyHtml": "",
+    "externalUrl": "http://theory.people.com.cn/n1/2020/0422/c40531-31682794.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "6ad1a47a3980b3167ba8646292ad0b1a9a17766ea69c63a33011b4b722d8c773",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "深入把握精准施策的内涵要义",
+    "listPublishDate": "2020-04-23",
+    "sourceOrder": 25
+  }
+}

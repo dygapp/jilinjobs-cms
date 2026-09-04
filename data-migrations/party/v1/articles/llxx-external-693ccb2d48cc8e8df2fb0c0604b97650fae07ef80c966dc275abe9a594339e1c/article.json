@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:693ccb2d48cc8e8df2fb0c0604b97650fae07ef80c966dc275abe9a594339e1c",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/n1/2020/0121/c40531-31558721.html",
+    "url": "http://theory.people.com.cn/n1/2020/0121/c40531-31558721.html"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "周学习日：学习文章《健全党的全面领导制度》--- 陈希",
+    "source": "",
+    "publishDate": "2020-09-04",
+    "bodyHtml": "",
+    "externalUrl": "http://theory.people.com.cn/n1/2020/0121/c40531-31558721.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "3d6b6273faada0a4cb1cb336e896b60a68ae9be1bb67adb0a06c474cff8922a7",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "周学习日：学习文章《健全党的全面领导制度》--- 陈希",
+    "listPublishDate": "2020-09-04",
+    "sourceOrder": 23
+  }
+}

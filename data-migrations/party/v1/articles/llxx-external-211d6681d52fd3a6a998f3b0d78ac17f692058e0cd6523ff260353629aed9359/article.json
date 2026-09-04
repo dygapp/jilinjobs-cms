@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:211d6681d52fd3a6a998f3b0d78ac17f692058e0cd6523ff260353629aed9359",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/n1/2023/0423/c117092-32670804.html",
+    "url": "http://dangjian.people.com.cn/n1/2023/0423/c117092-32670804.html"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“掌握调查研究这个基本功”，总书记这样言传身教",
+    "source": "",
+    "publishDate": "2023-04-23",
+    "bodyHtml": "",
+    "externalUrl": "http://dangjian.people.com.cn/n1/2023/0423/c117092-32670804.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "a063a6c5c3384694a3cde39e990b8c2e17bf306a2cae89500157adca4b1543fa",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "“掌握调查研究这个基本功”，总书记这样言传身教",
+    "listPublishDate": "2023-04-23",
+    "sourceOrder": 10
+  }
+}

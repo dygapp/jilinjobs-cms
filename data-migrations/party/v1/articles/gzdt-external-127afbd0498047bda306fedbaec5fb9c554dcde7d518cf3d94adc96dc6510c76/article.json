@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:external:127afbd0498047bda306fedbaec5fb9c554dcde7d518cf3d94adc96dc6510c76",
+    "contentId": null,
+    "typeCode": "gzdt",
+    "detailPath": "/zhengce/2020-01/05/content_5466685.htm",
+    "url": "http://www.gov.cn/zhengce/2020-01/05/content_5466685.htm"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "流动党员学习《中国共产党党和国家机关基层组织工作条例》",
+    "source": "",
+    "publishDate": "2020-04-14",
+    "bodyHtml": "",
+    "externalUrl": "http://www.gov.cn/zhengce/2020-01/05/content_5466685.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "37ad1ed12b72b967b53b53388a20b7f0bc3f180cb2110103c874306acbc05d23",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "流动党员学习《中国共产党党和国家机关基层组织工作条例》",
+    "listPublishDate": "2020-04-14",
+    "sourceOrder": 60
+  }
+}

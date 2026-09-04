@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:19307ea5deb4e78ed7534b854c74caf9e686d8083ea3121ae8bc0d46c6de8e22",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/s",
+    "url": "https://baijiahao.baidu.com/s?id=1842218267143614925&wfr=spider&for=pc"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "纪念中国人民抗日战争暨世界反法西斯战争胜利80周年大会在京隆重举行 习近平发表重要讲话并检阅受阅部队",
+    "source": "",
+    "publishDate": "2025-09-03",
+    "bodyHtml": "",
+    "externalUrl": "https://baijiahao.baidu.com/s?id=1842218267143614925&wfr=spider&for=pc"
+  },
+  "resources": [],
+  "sourceFingerprint": "c2db338e30d85fa1f7eaed446f61d18ad74ed22cec4574536902db5c946f03e6",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "纪念中国人民抗日战争暨世界反法西斯战争胜利80周年大会在京隆重举行 习近平发表重要讲话并检阅受阅部队",
+    "listPublishDate": "2025-09-03",
+    "sourceOrder": 13
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:829634629d4b9f5649beb02870c55866404eafd648a848161bb152ee1bee3935",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/2022/10/25/ARTI1666705047474465.shtml",
+    "url": "https://www.12371.cn/2022/10/25/ARTI1666705047474465.shtml"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平：高举中国特色社会主义伟大旗帜 为全面建设社会主义现代化国家而团结奋斗——在中国共产党第二十次全国代表大会上的报告",
+    "source": "",
+    "publishDate": "2022-10-25",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2022/10/25/ARTI1666705047474465.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "72cf87304c85a61e2741fb94f1247a2bf3e7830c6c081acfe10d89e7d34c1a77",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "习近平：高举中国特色社会主义伟大旗帜 为全面建设社会主义现代化国家而团结奋斗——在中国共产党第二十次全国代表大会上的报告",
+    "listPublishDate": "2022-10-25",
+    "sourceOrder": 24
+  }
+}

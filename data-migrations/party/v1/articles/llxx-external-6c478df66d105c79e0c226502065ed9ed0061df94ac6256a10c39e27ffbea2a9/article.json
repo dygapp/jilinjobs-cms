@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:6c478df66d105c79e0c226502065ed9ed0061df94ac6256a10c39e27ffbea2a9",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/special/lzggcdls/",
+    "url": "http://www.12371.cn/special/lzggcdls/"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平《论中国共产党历史》",
+    "source": "",
+    "publishDate": "2021-03-12",
+    "bodyHtml": "",
+    "externalUrl": "http://www.12371.cn/special/lzggcdls/"
+  },
+  "resources": [],
+  "sourceFingerprint": "8f7550a4366a07b432dc9cd1e47006b3d1c2e85dfb4bfd5ed49e3f50ae4a3458",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "习近平《论中国共产党历史》",
+    "listPublishDate": "2021-03-12",
+    "sourceOrder": 22
+  }
+}

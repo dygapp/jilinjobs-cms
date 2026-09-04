@@ -1,0 +1,82 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:89624600920064",
+    "contentId": "89624600920064",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=89624600920064"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "开展“情暖环卫满春城.炎炎夏日送清凉”主题党日活动",
+    "source": "中心党支部",
+    "publishDate": "2021-08-18",
+    "bodyHtml": "\n                    <p style=\"text-align:justify\"><span style=\"font-size:16px\"><span style=\"font-family:Calibri\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">&nbsp; &nbsp;为推进党史学习教育</span>“我为群众办实事”活动，<span style=\"font-family:Calibri\">8</span><span style=\"font-family:宋体\">月</span><span style=\"font-family:Calibri\">18</span><span style=\"font-family:宋体\">日上午</span><span style=\"font-family:Calibri\">10</span><span style=\"font-family:宋体\">点中心党支部与宾馆支部、经开环卫处联合开展“情暖环卫满春城</span><span style=\"font-family:Calibri\">.</span><span style=\"font-family:宋体\">炎炎夏日送清凉”主题党日活动。全体党员及积极分子参加。</span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"474\" src=\"assets/1494ed97d8f312a2f064912ea90cf857cc11b3107d3d8f54b1f9847914bd056e.jpg\" width=\"632\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:16px\"><span style=\"font-family:Calibri\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">&nbsp; &nbsp;党员同志们与环卫工人们一同沿着金川街（宾馆正门前路段）清理道路护栏卫生、打扫庭院周边绿化带卫生，助力疫情防控，打造宜居环境；普及垃圾分类小常识，共同提升居民文明素养；为环卫工人送去小风扇、饮料等慰问品，党群共建送温暖献爱心。</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:16px\"><span style=\"font-family:Calibri\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">&nbsp; &nbsp; &nbsp; </span></span></span></span>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<img alt=\"\" height=\"249\" src=\"assets/56c25e9085cc05838ee0c579690ad7d047df856146513a1429fc602c74a70fd9.jpg\" width=\"332\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt=\"\" height=\"249\" src=\"assets/c9587c587a43cac7b2a95e0bc13adffce563f775b1aea9531f566623786b49ce.jpg\" width=\"332\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:16px\"><span style=\"font-family:Calibri\"><span style=\"font-family:宋体\"><span style=\"font-family:宋体\">&nbsp; &nbsp;通过此次主题党日活动，密切了中心党支部与基层党组织、社区群众的沟通联络，进一步丰富</span> “我为群众办实事”活动内容，推动党史学习教育有效开展。</span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:16px\"><span style=\"font-family:Calibri\"><span style=\"font-family:宋体\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt=\"\" height=\"249\" src=\"assets/4132686002d93d56130bc76e025e877b0430b1019b0c1433e385ee9b5528e65c.jpg\" width=\"332\"></span></span></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt=\"\" height=\"249\" src=\"assets/dfc2a580ff095c88a85112fbf2523c6a20675647d1cae7b999f3f6fa32315b53.jpg\" width=\"367\"></p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/646bbbf3-0d28-44f4-91f7-8f604a07bb8e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/646bbbf3-0d28-44f4-91f7-8f604a07bb8e.jpg",
+      "token": "migration-resource://1494ed97d8f312a2f064912ea90cf857cc11b3107d3d8f54b1f9847914bd056e",
+      "snapshotPath": "assets/1494ed97d8f312a2f064912ea90cf857cc11b3107d3d8f54b1f9847914bd056e.jpg",
+      "sha256": "1494ed97d8f312a2f064912ea90cf857cc11b3107d3d8f54b1f9847914bd056e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 159291
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/f9013eb3-14f2-431e-b1a8-605d026d305e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/f9013eb3-14f2-431e-b1a8-605d026d305e.jpg",
+      "token": "migration-resource://56c25e9085cc05838ee0c579690ad7d047df856146513a1429fc602c74a70fd9",
+      "snapshotPath": "assets/56c25e9085cc05838ee0c579690ad7d047df856146513a1429fc602c74a70fd9.jpg",
+      "sha256": "56c25e9085cc05838ee0c579690ad7d047df856146513a1429fc602c74a70fd9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 63263
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/9f6d1267-cc59-4a09-bb9c-9972793c74cb.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/9f6d1267-cc59-4a09-bb9c-9972793c74cb.jpg",
+      "token": "migration-resource://c9587c587a43cac7b2a95e0bc13adffce563f775b1aea9531f566623786b49ce",
+      "snapshotPath": "assets/c9587c587a43cac7b2a95e0bc13adffce563f775b1aea9531f566623786b49ce.jpg",
+      "sha256": "c9587c587a43cac7b2a95e0bc13adffce563f775b1aea9531f566623786b49ce",
+      "contentType": "image/jpeg",
+      "sizeBytes": 58272
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/af42a317-1a0f-45b2-904c-b637147b2c35.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/af42a317-1a0f-45b2-904c-b637147b2c35.jpg",
+      "token": "migration-resource://4132686002d93d56130bc76e025e877b0430b1019b0c1433e385ee9b5528e65c",
+      "snapshotPath": "assets/4132686002d93d56130bc76e025e877b0430b1019b0c1433e385ee9b5528e65c.jpg",
+      "sha256": "4132686002d93d56130bc76e025e877b0430b1019b0c1433e385ee9b5528e65c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 60947
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-10/8f01620d-8aa1-4ec7-8cae-c13230345c87.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-10/8f01620d-8aa1-4ec7-8cae-c13230345c87.jpg",
+      "token": "migration-resource://dfc2a580ff095c88a85112fbf2523c6a20675647d1cae7b999f3f6fa32315b53",
+      "snapshotPath": "assets/dfc2a580ff095c88a85112fbf2523c6a20675647d1cae7b999f3f6fa32315b53.jpg",
+      "sha256": "dfc2a580ff095c88a85112fbf2523c6a20675647d1cae7b999f3f6fa32315b53",
+      "contentType": "image/jpeg",
+      "sizeBytes": 248907
+    }
+  ],
+  "sourceFingerprint": "a9948e0b4395cce1ddb563154d46325b14368e609d51f7b492dbf995532a1603",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "开展“情暖环卫满春城.炎炎夏日送清凉”主题党日活动",
+    "listPublishDate": "2021-08-18",
+    "sourceOrder": 30,
+    "detailPublishDate": "2021-08-18",
+    "rawDetailPath": "raw/details/gzdt-89624600920064.html"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737785217093",
+    "contentId": "28737785217093",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737785217093"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于学习《中国共产党第十九届中央委员会第五次全体会议公报》的通知",
+    "source": "流动党员支部",
+    "publishDate": "2020-11-06",
+    "bodyHtml": "\n                    \n\n\n\n\n<p>流动党员：</p>\n<p>&nbsp; &nbsp; &nbsp; 根椐流动党员支部学习计划，本周学习日学习中国共产党第十九届中央委员会第五次全体会议公报，请全体党员认真学习,按要求记录学习笔记。</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp;特此通知。<br><br>&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 流动党员支部<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2020年11月6日</p>\n\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "d1590e2400a3cd77f2f95d267a5781ff685d183e2a813d26ffc8425ec57e6362",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "关于学习《中国共产党第十九届中央委员会第五次全体会议公报》的通知",
+    "listPublishDate": "2020-11-06",
+    "sourceOrder": 42,
+    "detailPublishDate": "2020-11-06",
+    "rawDetailPath": "raw/details/gzdt-28737785217093.html"
+  }
+}

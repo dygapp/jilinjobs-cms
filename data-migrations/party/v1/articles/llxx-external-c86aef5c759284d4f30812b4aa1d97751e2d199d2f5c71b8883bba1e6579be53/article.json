@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:c86aef5c759284d4f30812b4aa1d97751e2d199d2f5c71b8883bba1e6579be53",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/2024/07/21/ARTI1721551217863166.shtml",
+    "url": "https://www.12371.cn/2024/07/21/ARTI1721551217863166.shtml"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中共中央关于进一步全面深化改革 推进中国式现代化的决定",
+    "source": "",
+    "publishDate": "2024-07-30",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2024/07/21/ARTI1721551217863166.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "3bb2327a084415aae4a606ffc1f1575af420ba570cae4af8c1f17b0e2d08e7d6",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "中共中央关于进一步全面深化改革 推进中国式现代化的决定",
+    "listPublishDate": "2024-07-30",
+    "sourceOrder": 7
+  }
+}

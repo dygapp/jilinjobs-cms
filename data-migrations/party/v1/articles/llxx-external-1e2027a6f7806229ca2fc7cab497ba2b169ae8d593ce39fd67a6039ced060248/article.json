@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:1e2027a6f7806229ca2fc7cab497ba2b169ae8d593ce39fd67a6039ced060248",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/n1/2023/0406/c64387-32658412.html",
+    "url": "http://cpc.people.com.cn/n1/2023/0406/c64387-32658412.html"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "牢牢把握“学思想、强党性、重实践、建新功”的总要求",
+    "source": "",
+    "publishDate": "2023-04-06",
+    "bodyHtml": "",
+    "externalUrl": "http://cpc.people.com.cn/n1/2023/0406/c64387-32658412.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "05b5c0857e3f45ab01b30da0649db302bb6ff13607027a348d28e16aa5b14ea8",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "牢牢把握“学思想、强党性、重实践、建新功”的总要求",
+    "listPublishDate": "2023-04-06",
+    "sourceOrder": 18
+  }
+}

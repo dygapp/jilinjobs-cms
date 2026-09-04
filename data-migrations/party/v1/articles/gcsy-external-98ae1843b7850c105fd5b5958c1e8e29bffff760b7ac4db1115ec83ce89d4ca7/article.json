@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:98ae1843b7850c105fd5b5958c1e8e29bffff760b7ac4db1115ec83ce89d4ca7",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/2020/10/20/ARTI1603160493021435.shtml",
+    "url": "https://www.12371.cn/2020/10/20/ARTI1603160493021435.shtml?from=groupmessage"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平：伟大抗美援朝精神是弥足珍贵的精神财富",
+    "source": "",
+    "publishDate": "2020-10-20",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2020/10/20/ARTI1603160493021435.shtml?from=groupmessage"
+  },
+  "resources": [],
+  "sourceFingerprint": "df79a58ef4832f3ced95e877a96841005b5a6cab6b4dbf2d5bad6b78b91dde42",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "习近平：伟大抗美援朝精神是弥足珍贵的精神财富",
+    "listPublishDate": "2020-10-20",
+    "sourceOrder": 31
+  }
+}

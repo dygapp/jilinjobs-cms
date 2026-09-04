@@ -1,0 +1,42 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737785217059",
+    "contentId": "28737785217059",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737785217059"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "中心党总支召开2020年度民主生活会",
+    "source": "中心党总支",
+    "publishDate": "2021-02-23",
+    "bodyHtml": "\n                    \n\n\n\n\n<p>按照教育厅党组和中心党总支民主生活会方案要求，省高校毕业生就业指导中心党总支经过充分准备和酝酿，召开了2020年度民主生活会。以教育厅副厅长许世彬、高校学生处处长宁保忠、厅纪检组金山堡老师组成的督导组列席会议。</p>\n<p>会上，中心党总支书、中心主任唐洪丰首先代表中心领导班子作了2020年度对照检查。他主要从2020年工作中取得的成绩、2020年工作中存在的问题和问题产生的根源、如何科学整改三个方面进行了汇报。</p>\n<p>班子对照检查之后，总支书记唐洪丰、组织委员宋姣、纪检委员王颖、宣传委员陈淑敏先后做了个人对照检查，并开展了相互批评和自我批评。</p>\n<p>高校学生处处长宁保忠代表督导组对民主生活会的质量给予高度肯定，同时提出三点希望：一是要围绕教育厅党组中心任务开展和谋划工作&nbsp;，确保方向、思路正确。二是要在制度上进一步下功夫，在就业指导的具体化上下功夫，充分调动高校的积极性，充分发出中心的声音。三是在重点任务上要有谋划，多下功夫，树立创新思维和创新意识。</p>\n<p>唐洪丰书记代表总支班子成员表态：一定按照督导组的意见改进工作，对班子成员之间提了意见建议要认真对待，高度重视，加强落实，紧紧围绕厅党组的中心任务落实好各项工作。</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src=\"assets/d25461c80d861c6ac9e6bef7bfe6069ee8ac9676d3f5d6511dd3a2bba8ec50e9.png\" alt=\"\" width=\"480\" height=\"348\"></p>\n<p>&nbsp;</p>\n\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210415134939.png",
+      "originalReference": "/chistory/cms/editor/20210415134939.png",
+      "token": "migration-resource://d25461c80d861c6ac9e6bef7bfe6069ee8ac9676d3f5d6511dd3a2bba8ec50e9",
+      "snapshotPath": "assets/d25461c80d861c6ac9e6bef7bfe6069ee8ac9676d3f5d6511dd3a2bba8ec50e9.png",
+      "sha256": "d25461c80d861c6ac9e6bef7bfe6069ee8ac9676d3f5d6511dd3a2bba8ec50e9",
+      "contentType": "image/png",
+      "sizeBytes": 217453
+    }
+  ],
+  "sourceFingerprint": "f9be893f8181da3c883e5e36df34bd5f35c9278da8523595700045a99909afdf",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "中心党总支召开2020年度民主生活会",
+    "listPublishDate": "2021-02-23",
+    "sourceOrder": 39,
+    "detailPublishDate": "2021-02-23",
+    "rawDetailPath": "raw/details/gzdt-28737785217059.html"
+  }
+}

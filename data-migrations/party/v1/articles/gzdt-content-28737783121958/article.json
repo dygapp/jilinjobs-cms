@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737783121958",
+    "contentId": "28737783121958",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737783121958"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于深入学习贯彻习近平总书记视察吉林重要讲话重要指示精神的通知",
+    "source": "流动党员支部",
+    "publishDate": "2020-09-24",
+    "bodyHtml": "\n                    \n\n\n\n\n<p>按照中心党总支工作安排和部署，近期，中心流动党员支部组织全体流动党员深入学习贯彻习近平总书记视察吉林重要讲话重要指示精神，全体党员要深刻认识习近平总书记视察吉林的重大意义，切实把思想和行动统一到总书记重要讲话重要指示精神上来，认真领会，乘势而上、主动作为，体现新担当，展现新作为，为全面振兴吉林努力工作。学习形式为自学，请各位流动党员认真学习，并做好学习笔记。<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;流动党员支部</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2020年9月24日</p>\n\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "838fca004ff1c71885aa82a7d70f9f9a28015e53d4dce3ad36fb27253b0950bb",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "关于深入学习贯彻习近平总书记视察吉林重要讲话重要指示精神的通知",
+    "listPublishDate": "2020-09-24",
+    "sourceOrder": 50,
+    "detailPublishDate": "2020-09-24",
+    "rawDetailPath": "raw/details/gzdt-28737783121958.html"
+  }
+}

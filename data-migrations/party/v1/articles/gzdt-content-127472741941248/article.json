@@ -1,0 +1,31 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:127472741941248",
+    "contentId": "127472741941248",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=127472741941248"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于学习《中共中央关于认真学习宣传贯彻党的二十大精神的决定》的通知",
+    "source": "流动党员支部",
+    "publishDate": "2022-08-05",
+    "bodyHtml": "\n                    <p style=\"margin-left:16px; margin-right:16px\"><span style=\"font-size:12pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"background-color:white\"><span style=\"font-family:仿宋\"><span style=\"color:#323b47\">位党员：</span></span></span></span></span></span></p>\n\n<p style=\"margin-left:16px; margin-right:16px\"><span style=\"background-color:white\"><span style=\"color:#323b47; font-family:仿宋; font-size:16pt\">根椐流动党员支部学习计划，本周学习内容：《中共中央关于认真学习宣传贯彻党的二十大精神的决定》</span><span style=\"font-family:Calibri, sans-serif\"><span style=\"font-size:16px\">。</span></span></span><span style=\"font-family:Calibri,sans-serif; font-size:16pt\"><span style=\"background-color:white\"><span style=\"font-family:仿宋\"><span style=\"color:#323b47\">学习形式：自学，各位党员要记好学习笔记。</span></span></span></span></p>\n\n<p>　　<span style=\"font-size:16.0pt\"><span style=\"background-color:white\"><span style=\"font-family:仿宋\"><span style=\"color:#323b47\">特此通知。</span></span></span></span><br>\n&nbsp;</p>\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "4c2c88b43e703719e006ade24d63201a80f1090913e5ae38487ad8e8b8e13c5e",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "关于学习《中共中央关于认真学习宣传贯彻党的二十大精神的决定》的通知",
+    "listPublishDate": "2022-08-05",
+    "sourceOrder": 9,
+    "detailPublishDate": "2022-08-05",
+    "rawDetailPath": "raw/details/gzdt-127472741941248.html"
+  }
+}

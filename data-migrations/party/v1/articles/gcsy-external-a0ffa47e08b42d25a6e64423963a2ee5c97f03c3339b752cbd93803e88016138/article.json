@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gcsy:external:a0ffa47e08b42d25a6e64423963a2ee5c97f03c3339b752cbd93803e88016138",
+    "contentId": null,
+    "typeCode": "gcsy",
+    "detailPath": "/2026/08/17/ARTI1786947892029840.shtml",
+    "url": "https://www.12371.cn/2026/08/17/ARTI1786947892029840.shtml"
+  },
+  "target": {
+    "columnAlias": "party-voice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "纪念江泽民同志诞辰100周年大会在京隆重举行 习近平发表重要讲话",
+    "source": "",
+    "publishDate": "2026-09-04",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2026/08/17/ARTI1786947892029840.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "e4a0010c738d955cf5a10cc6a95ed274f2a97ed56f39687ceb294b6888bd6f42",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "纪念江泽民同志诞辰100周年大会在京隆重举行 习近平发表重要讲话",
+    "listPublishDate": "2026-09-04",
+    "sourceOrder": 3
+  }
+}

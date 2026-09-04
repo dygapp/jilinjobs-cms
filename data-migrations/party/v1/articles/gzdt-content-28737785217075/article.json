@@ -1,0 +1,82 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "gzdt:content:28737785217075",
+    "contentId": "28737785217075",
+    "typeCode": "gzdt",
+    "detailPath": "/pdetail.html",
+    "url": "https://24365.jl.smartedu.cn/pdetail.html?content_id=28737785217075"
+  },
+  "target": {
+    "columnAlias": "party-work",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "中心党支部开展“提升环境卫生质量，倡导绿色网络环境”爱国卫生主题党日活动",
+    "source": "中心党支部",
+    "publishDate": "2020-06-05",
+    "bodyHtml": "\n                    \n\n\n\n\n<p>2020年6月5日，根据省直机关工委印发《关于落实&lt;在精神文明创建活动中深入开展爱国卫生运动的工作方案&gt;的通知》精神，按照中心党总支工作安排和部署，中心党支部与办公室联合开展“提升环境卫生质量，倡导绿色网络环境”爱国卫生主题党日活动。</p>\n<p style=\"text-align:center\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"assets/463865e051ff5768f9d5b8a569572cc68d38028f3b19e74a73f845553c69a43c.jpg\" alt=\"\" width=\"700\" height=\"525\"></p>\n<p>全体党员积极发挥党员先锋模范作用，与单位普通职工一起开展清理办公公共区域卫生活动，对中心办公楼一楼门厅玻璃门、玻璃隔断进行擦洗，对办公院落周边区域进行彻底清扫，以扎实推进爱国卫生运动，切实提升单位环境卫生质量。清扫之后，中心党支部与办公室联合对单位公共区域和个人办公环境进行了整体检查和验收，有力保障此项活动有序推进和取得实效。</p>\n<p style=\"text-align:center\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"assets/76db75e60d554d95f53385e7626ef3b3e64e31b61efe8456d9660ad1e6b402cc.jpg\" alt=\"\" width=\"700\" height=\"933\"></p>\n<p style=\"text-align:center\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"assets/d6eff6e817eeff73cb3b463f5024667c0c061f486d3fad502c1f7dcf2bbde70b.jpg\" alt=\"\" width=\"700\" height=\"933\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"assets/964b4c46ad95b57b38eca66e2b70bd9ada9b16e67cd6df08a85c8bdecb9d8b61.jpg\" alt=\"\" width=\"700\" height=\"604\"></p>\n<p>中心党支部6月1日-5日组织全体党员和普通职工对个人办公环境进行清理，6月5日开展“提升环境卫生质量，倡导绿色网络环境”爱国卫生主题党日活动，体现对此项工作高度重视，支委成员、党员干部各施其职，谋划精细，组织得力，落实充分。全体党员干部和职工群众能够响应号召，积极参与此次爱国卫生运动，努力创造健康优美环境，不断提升文明卫生素质，为中心做好疫情防控常态化提供了强大支撑。中心以此次爱国卫生运动的契机，决心以脚踏实地的行动和立杆见影的效果，促进我省高校毕业生就业工作，助力吉林振兴和发展。</p>\n<p style=\"text-align:center\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"assets/4da832afcff30d2aaeaab9fb14b0b4ffba7badb94bf078e9dd250a1b9ecf24ec.jpg\" alt=\"\" width=\"700\" height=\"525\"></p>\n\n\n                ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200609132639.jpg",
+      "originalReference": "/chistory/cms/editor/20200609132639.jpg",
+      "token": "migration-resource://463865e051ff5768f9d5b8a569572cc68d38028f3b19e74a73f845553c69a43c",
+      "snapshotPath": "assets/463865e051ff5768f9d5b8a569572cc68d38028f3b19e74a73f845553c69a43c.jpg",
+      "sha256": "463865e051ff5768f9d5b8a569572cc68d38028f3b19e74a73f845553c69a43c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 4599745
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200609135557.jpg",
+      "originalReference": "/chistory/cms/editor/20200609135557.jpg",
+      "token": "migration-resource://76db75e60d554d95f53385e7626ef3b3e64e31b61efe8456d9660ad1e6b402cc",
+      "snapshotPath": "assets/76db75e60d554d95f53385e7626ef3b3e64e31b61efe8456d9660ad1e6b402cc.jpg",
+      "sha256": "76db75e60d554d95f53385e7626ef3b3e64e31b61efe8456d9660ad1e6b402cc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 266550
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200609135622.jpg",
+      "originalReference": "/chistory/cms/editor/20200609135622.jpg",
+      "token": "migration-resource://d6eff6e817eeff73cb3b463f5024667c0c061f486d3fad502c1f7dcf2bbde70b",
+      "snapshotPath": "assets/d6eff6e817eeff73cb3b463f5024667c0c061f486d3fad502c1f7dcf2bbde70b.jpg",
+      "sha256": "d6eff6e817eeff73cb3b463f5024667c0c061f486d3fad502c1f7dcf2bbde70b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 148706
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200609135205.jpg",
+      "originalReference": "/chistory/cms/editor/20200609135205.jpg",
+      "token": "migration-resource://964b4c46ad95b57b38eca66e2b70bd9ada9b16e67cd6df08a85c8bdecb9d8b61",
+      "snapshotPath": "assets/964b4c46ad95b57b38eca66e2b70bd9ada9b16e67cd6df08a85c8bdecb9d8b61.jpg",
+      "sha256": "964b4c46ad95b57b38eca66e2b70bd9ada9b16e67cd6df08a85c8bdecb9d8b61",
+      "contentType": "image/jpeg",
+      "sizeBytes": 167320
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200609132827.jpg",
+      "originalReference": "/chistory/cms/editor/20200609132827.jpg",
+      "token": "migration-resource://4da832afcff30d2aaeaab9fb14b0b4ffba7badb94bf078e9dd250a1b9ecf24ec",
+      "snapshotPath": "assets/4da832afcff30d2aaeaab9fb14b0b4ffba7badb94bf078e9dd250a1b9ecf24ec.jpg",
+      "sha256": "4da832afcff30d2aaeaab9fb14b0b4ffba7badb94bf078e9dd250a1b9ecf24ec",
+      "contentType": "image/jpeg",
+      "sizeBytes": 4695281
+    }
+  ],
+  "sourceFingerprint": "a1ffa9f61c98960060ca9adce77149a9afd7f4f6f3e19b8d916b929e8b89d120",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "中心党支部开展“提升环境卫生质量，倡导绿色网络环境”爱国卫生主题党日活动",
+    "listPublishDate": "2020-06-05",
+    "sourceOrder": 55,
+    "detailPublishDate": "2020-06-05",
+    "rawDetailPath": "raw/details/gzdt-28737785217075.html"
+  }
+}

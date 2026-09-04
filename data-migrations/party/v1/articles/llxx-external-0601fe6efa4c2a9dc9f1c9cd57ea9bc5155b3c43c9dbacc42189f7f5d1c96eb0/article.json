@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "llxx:external:0601fe6efa4c2a9dc9f1c9cd57ea9bc5155b3c43c9dbacc42189f7f5d1c96eb0",
+    "contentId": null,
+    "typeCode": "llxx",
+    "detailPath": "/2024/07/21/ARTI1721551521177181.shtml",
+    "url": "https://www.12371.cn/2024/07/21/ARTI1721551521177181.shtml"
+  },
+  "target": {
+    "columnAlias": "party-study",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平：关于《中共中央关于进一步全面深化改革、推进中国式现代化的决定》的说明",
+    "source": "",
+    "publishDate": "2024-07-26",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2024/07/21/ARTI1721551521177181.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "25f7145bb9483fa3926ad3dcbf0cb32673eba92ac7eb8bea3048c9a561cc15cb",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "习近平：关于《中共中央关于进一步全面深化改革、推进中国式现代化的决定》的说明",
+    "listPublishDate": "2024-07-26",
+    "sourceOrder": 8
+  }
+}

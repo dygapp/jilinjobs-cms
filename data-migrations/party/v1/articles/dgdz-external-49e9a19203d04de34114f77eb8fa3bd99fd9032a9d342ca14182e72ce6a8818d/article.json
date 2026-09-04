@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "dgdz:external:49e9a19203d04de34114f77eb8fa3bd99fd9032a9d342ca14182e72ce6a8818d",
+    "contentId": null,
+    "typeCode": "dgdz",
+    "detailPath": "/s/fRwfj3W8IKjiVs0y03AhCw",
+    "url": "https://mp.weixin.qq.com/s/fRwfj3W8IKjiVs0y03AhCw"
+  },
+  "target": {
+    "columnAlias": "party-rules",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中共中央办公厅 国务院办公厅印发《整治形式主义为基层减负若干规定》",
+    "source": "",
+    "publishDate": "2025-08-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/fRwfj3W8IKjiVs0y03AhCw"
+  },
+  "resources": [],
+  "sourceFingerprint": "955bf774a8732c0b58089d1e9ab8dd1c741e403d19ab4ff9aff6c4f40481e7d6",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "中共中央办公厅 国务院办公厅印发《整治形式主义为基层减负若干规定》",
+    "listPublishDate": "2025-08-07",
+    "sourceOrder": 3
+  }
+}
