@@ -18,9 +18,6 @@ permissions:
   contents: read
   actions: read
 
-env:
-  EU29_REAL_PARTY: ${{ (github.event_name == 'pull_request' && github.event.pull_request.head.ref == 'feature/eu-29-party-history-migration') || (github.event_name == 'workflow_dispatch' && github.event.inputs.ref == 'feature/eu-29-party-history-migration') }}
-
 jobs:
   review-environment:
     name: 启动人工评审环境
@@ -201,74 +198,40 @@ jobs:
           curl --fail --silent http://127.0.0.1:5173/static/brand/site-favicon.png > /dev/null
           test "$(find runtime-static -maxdepth 1 -type d -name 'verification-*' | wc -l)" -eq 0
 
-      - name: 下载并导入 EU-29 真实党建历史 Snapshot
-        if: env.EU29_REAL_PARTY == 'true'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
-          DB_USERNAME: root
-          DB_PASSWORD: root
-          CMS_STORAGE_ROOT: ${{ github.workspace }}/runtime-uploads
-          CMS_STATIC_ROOT: ${{ github.workspace }}/runtime-static
+      - name: 导入 Party canonical 历史数据
         run: |
           set -euo pipefail
-          pointer=.github/review/eu29-party-snapshot.json
-          artifact_id=$(jq -r '.artifactId' "$pointer")
-          expected_digest=$(jq -r '.artifactDigest' "$pointer")
-          expected_sha=${expected_digest#sha256:}
+          canonical_root="$GITHUB_WORKSPACE/data-migrations/party/v1"
+          test -f "$canonical_root/manifest.json"
+          test -f "$canonical_root/index.ndjson"
+          test -f "$canonical_root/lists/PARTY_CAROUSEL/index.json"
+          jq --exit-status '
+            .status == "accepted-canonical"
+            and .acceptedSnapshot.articles == 181
+            and .acceptedSnapshot.internalArticles == 120
+            and .acceptedSnapshot.externalArticles == 61
+            and .acceptedSnapshot.carouselItems == 4
+            and .acceptedSnapshot.unresolved == 0
+            and .acceptedSnapshot.artifactDigest == "sha256:230ac0df997b3dc913ed38503a8289eae30d8bb0a455fd858e388ddc27066148"' "$canonical_root/manifest.json" > /dev/null
 
-          metadata=$(curl --fail --silent --show-error \
-            -H "Authorization: Bearer ${GITHUB_TOKEN}" \
-            -H 'Accept: application/vnd.github+json' \
-            -H 'X-GitHub-Api-Version: 2022-11-28' \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/artifacts/${artifact_id}")
-          test "$(echo "$metadata" | jq -r '.expired')" = "false"
-          test "$(echo "$metadata" | jq -r '.digest')" = "$expected_digest"
+          export DB_URL='jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true'
+          export DB_USERNAME=root
+          export DB_PASSWORD=root
+          export CMS_STORAGE_ROOT="$GITHUB_WORKSPACE/runtime-uploads"
+          export CMS_STATIC_ROOT="$GITHUB_WORKSPACE/runtime-static"
 
-          curl --fail --location --silent --show-error --retry 5 --retry-delay 2 --retry-all-errors \
-            -H "Authorization: Bearer ${GITHUB_TOKEN}" \
-            -H 'Accept: application/vnd.github+json' \
-            -H 'X-GitHub-Api-Version: 2022-11-28' \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/artifacts/${artifact_id}/zip" \
-            -o eu29-party-review-snapshot.zip
-          echo "${expected_sha}  eu29-party-review-snapshot.zip" | sha256sum -c -
-
-          rm -rf eu29-party-review-snapshot
-          mkdir -p eu29-party-review-snapshot
-          unzip -q eu29-party-review-snapshot.zip -d eu29-party-review-snapshot
-          snapshot_root="$GITHUB_WORKSPACE/eu29-party-review-snapshot/data-migrations/party/v1/generated"
-          test -f "$snapshot_root/articles.ndjson"
-          test -f "$snapshot_root/carousel.json"
-          test -f "$snapshot_root/reports/reconciliation.json"
-
-          node - "$pointer" "$snapshot_root" <<'NODE'
-          const fs = require('fs')
-          const [pointerPath, root] = process.argv.slice(2)
-          const pointer = JSON.parse(fs.readFileSync(pointerPath, 'utf8'))
-          const report = JSON.parse(fs.readFileSync(`${root}/reports/reconciliation.json`, 'utf8'))
-          const carousel = JSON.parse(fs.readFileSync(`${root}/carousel.json`, 'utf8'))
-          if (report.normalizedRecords !== pointer.articles || report.unresolved !== 0) throw new Error(JSON.stringify(report))
-          if (carousel.items.length !== pointer.carouselItems) throw new Error(`carousel=${carousel.items.length}`)
-          for (const [alias, expected] of Object.entries(pointer.columns)) {
-            const scope = report.scopes.find(item => item.columnAlias === alias)
-            if (!scope || scope.uniqueCount !== expected) throw new Error(`${alias}: ${scope?.uniqueCount} != ${expected}`)
-          }
-          NODE
-
-          (cd backend && gradle importPartyHistoricalContent --args="../eu29-party-review-snapshot/data-migrations/party/v1/generated" --no-daemon) | tee eu29-review-article-import.log
-          (cd backend && gradle importPartyCarousel --args="../eu29-party-review-snapshot/data-migrations/party/v1/generated" --no-daemon) | tee eu29-review-carousel-import.log
+          (cd backend && gradle importPartyHistoricalContent --args="../data-migrations/party/v1" --no-daemon) | tee eu29-review-article-import.log
+          (cd backend && gradle importPartyCarousel --args="../data-migrations/party/v1" --no-daemon) | tee eu29-review-carousel-import.log
 
           python3 - <<'PY'
           import json, re
           from pathlib import Path
-          pointer=json.loads(Path('.github/review/eu29-party-snapshot.json').read_text(encoding='utf-8'))
-          article_text=Path('eu29-review-article-import.log').read_text(encoding='utf-8')
-          article=json.loads(re.findall(r'EU29_IMPORT_REPORT (\{.*\})', article_text)[-1])
-          assert article['total']==pointer['articles'] and article['created']==pointer['articles'], article
+          expected=json.loads(Path('data-migrations/party/v1/manifest.json').read_text(encoding='utf-8'))['acceptedSnapshot']
+          article=json.loads(re.findall(r'EU29_IMPORT_REPORT (\{.*\})', Path('eu29-review-article-import.log').read_text(encoding='utf-8'))[-1])
+          assert article['total']==expected['articles'] and article['created']==expected['articles'], article
           assert article['skipped']==0 and article['conflicts']==0 and article['invalid']==0, article
-          carousel_text=Path('eu29-review-carousel-import.log').read_text(encoding='utf-8')
-          carousel=json.loads(re.findall(r'EU29_CAROUSEL_IMPORT_REPORT (\{.*\})', carousel_text)[-1])
-          assert carousel['total']==pointer['carouselItems'] and carousel['created']==pointer['carouselItems'], carousel
+          carousel=json.loads(re.findall(r'EU29_CAROUSEL_IMPORT_REPORT (\{.*\})', Path('eu29-review-carousel-import.log').read_text(encoding='utf-8'))[-1])
+          assert carousel['total']==expected['carouselItems'] and carousel['created']==expected['carouselItems'], carousel
           assert carousel['skipped']==0 and carousel['conflicts']==0 and carousel['invalid']==0, carousel
           PY
 
@@ -278,10 +241,11 @@ jobs:
             | tee eu29-review-column-counts.tsv
           node - <<'NODE'
           const fs=require('fs')
-          const pointer=require('./.github/review/eu29-party-snapshot.json')
+          const manifest=require('./data-migrations/party/v1/manifest.json')
+          const expected=Object.fromEntries(manifest.contentScope.map(scope=>[scope.columnAlias,scope.observedListCount]))
           const rows=fs.readFileSync('eu29-review-column-counts.tsv','utf8').trim().split(/\n/).map(line=>line.split('\t'))
           if (rows.length !== 4) throw new Error(`Party column rows=${rows.length}`)
-          for (const [alias,count] of rows) if (Number(count)!==pointer.columns[alias]) throw new Error(`${alias}: ${count} != ${pointer.columns[alias]}`)
+          for (const [alias,count] of rows) if (Number(count)!==expected[alias]) throw new Error(`${alias}: ${count} != ${expected[alias]}`)
           NODE
 
       - name: 准备 Human Review 主站示例内容
@@ -313,60 +277,30 @@ jobs:
           create_external_article "$recruitment_id" '管理端人工评审：高校毕业生专场招聘公告' '2026-08-28' 'https://example.com/review/recruitment-1'
           create_external_article "$recruitment_id" '管理端人工评审：重点单位招聘公告' '2026-08-24' 'https://example.com/review/recruitment-2'
 
-      - name: 准备非 EU-29 的党建示例内容
-        if: env.EU29_REAL_PARTY != 'true'
-        run: |
-          set -euo pipefail
-          columns=$(curl --fail --silent http://127.0.0.1:5173/api/admin/columns)
-          party_voice_id=$(echo "$columns" | jq -r '.[] | select(.alias == "party-voice") | .id' | head -1)
-          party_work_id=$(echo "$columns" | jq -r '.[] | select(.alias == "party-work") | .id' | head -1)
-          party_rules_id=$(echo "$columns" | jq -r '.[] | select(.alias == "party-rules") | .id' | head -1)
-          party_study_id=$(echo "$columns" | jq -r '.[] | select(.alias == "party-study") | .id' | head -1)
-          lists=$(curl --fail --silent http://127.0.0.1:5173/api/admin/lists)
-          party_carousel_id=$(echo "$lists" | jq -r '.[] | select(.code == "PARTY_CAROUSEL") | .id' | head -1)
-          test -n "$party_voice_id"; test -n "$party_work_id"; test -n "$party_rules_id"; test -n "$party_study_id"; test -n "$party_carousel_id"
-
-          create_article() {
-            column_id="$1"; title="$2"; published="$3"
-            payload=$(jq -n --argjson columnId "$column_id" --arg title "$title" --arg published "$published" '{columnId:$columnId,title:$title,bodyHtml:"<p>党员之家人工评审示例内容；该内容不属于历史迁移数据。</p>",source:"党员之家 Human Review Fixture",publishDate:$published,pinned:false,recommended:false,sortOrder:0,coverResourceId:null,bodyImageResourceIds:[],attachmentResourceIds:[]}')
-            article_id=$(curl --fail --silent -H 'Content-Type: application/json' -d "$payload" http://127.0.0.1:5173/api/admin/articles | jq -r '.id')
-            curl --fail --silent -X POST "http://127.0.0.1:5173/api/admin/articles/${article_id}/publish" > /dev/null
-            echo "$article_id"
-          }
-
-          voice_id=$(create_article "$party_voice_id" '党员之家人工评审示例：深入学习贯彻重要讲话精神' '2026-09-01')
-          work_id=$(create_article "$party_work_id" '党员之家人工评审示例：中心开展主题党日活动' '2026-09-02')
-          rules_id=$(create_article "$party_rules_id" '党员之家人工评审示例：党规党章学习资料' '2026-08-27')
-          study_id=$(create_article "$party_study_id" '党员之家人工评审示例：理论学习专题' '2026-08-27')
-          for item in "示例轮播一:$voice_id:0" "示例轮播二:$work_id:10" "示例轮播三:$rules_id:20" "示例轮播四:$study_id:30"; do
-            IFS=: read -r title article_id sort_order <<< "$item"
-            payload=$(jq -n --arg title "$title" --arg url "/party/article/${article_id}" --argjson sortOrder "$sort_order" '{title:$title,subtitle:"人工评审示例（非历史迁移内容）",url:$url,imagePath:"/static/home/carousel-01.jpg",openMode:"DEFAULT",sortOrder:$sortOrder,enabled:true,extraJson:null}')
-            curl --fail --silent -H 'Content-Type: application/json' -d "$payload" "http://127.0.0.1:5173/api/admin/lists/${party_carousel_id}/items" > /dev/null
-          done
-
       - name: 验证 Human Review Runtime 数据
         run: |
           set -euo pipefail
           curl --fail --silent http://127.0.0.1:5173/admin/articles | grep -qi '<html'
           curl --fail --silent http://127.0.0.1:5173/party/ | grep -qi '<html'
-          if [ "$EU29_REAL_PARTY" = "true" ]; then
-            pointer=.github/review/eu29-party-snapshot.json
-            expected=$(jq -r '.articles' "$pointer")
-            total=$(curl --fail --silent 'http://127.0.0.1:5173/api/public/articles?page=0&size=1' | jq -r '.total')
-            test "$total" -ge "$expected"
-            curl --fail --silent http://127.0.0.1:5173/api/public/lists/by-code/PARTY_CAROUSEL \
-              | jq --argjson expected "$(cat "$pointer")" --exit-status '
-                  (.items | length == $expected.carouselItems)
-                  and ([.items[].title] == $expected.carouselTitles)
-                  and all(.items[]; (.imagePath // "") | startswith("/static/migrated/party/carousel/"))
-                  and all(.items[]; .openMode == "NEW_WINDOW")' > /dev/null
-          else
-            curl --fail --silent http://127.0.0.1:5173/api/public/lists/by-code/PARTY_CAROUSEL \
-              | jq --exit-status '(.items | length == 4) and all(.items[]; (.url // "") | test("^/party/article/[0-9]+$"))' > /dev/null
-          fi
+          expected=$(jq -r '.acceptedSnapshot.articles' data-migrations/party/v1/manifest.json)
+          total=$(curl --fail --silent 'http://127.0.0.1:5173/api/public/articles?page=0&size=1' | jq -r '.total')
+          test "$total" -ge "$expected"
+          expected_titles=$(node - <<'NODE'
+          const fs=require('fs')
+          const root='data-migrations/party/v1/lists/PARTY_CAROUSEL'
+          const index=JSON.parse(fs.readFileSync(`${root}/index.json`,'utf8'))
+          const items=index.items.sort((a,b)=>a.sourceOrder-b.sourceOrder).map(ref=>JSON.parse(fs.readFileSync(`${root}/${ref.path}`,'utf8')).title)
+          process.stdout.write(JSON.stringify(items))
+          NODE
+          )
+          curl --fail --silent http://127.0.0.1:5173/api/public/lists/by-code/PARTY_CAROUSEL \
+            | jq --argjson expectedTitles "$expected_titles" --exit-status '
+                (.items | length == 4)
+                and ([.items[].title] == $expectedTitles)
+                and all(.items[]; (.imagePath // "") | startswith("/static/migrated/party/carousel/"))
+                and all(.items[]; .openMode == "NEW_WINDOW")' > /dev/null
 
-      - name: 执行 EU-29 真实迁移 Runtime Browser 验证
-        if: env.EU29_REAL_PARTY == 'true'
+      - name: 执行 Party canonical Runtime Browser 验证
         run: |
           docker run --rm --init --ipc=host --network host \
             -e CI=true \
@@ -377,13 +311,15 @@ jobs:
             mcr.microsoft.com/playwright:v1.61.0-noble \
             bash -lc 'npx playwright test tests/e2e/party-migration-runtime.spec.ts --project=chromium --reporter=line'
 
-      - name: 上传 EU-29 Human Review 证据
-        if: always() && env.EU29_REAL_PARTY == 'true'
+      - name: 上传 Party canonical Human Review 证据
+        if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: eu29-party-human-review-evidence
+          name: party-canonical-human-review-evidence
           path: |
-            .github/review/eu29-party-snapshot.json
+            data-migrations/party/v1/manifest.json
+            data-migrations/party/v1/index.ndjson
+            data-migrations/party/v1/reports/canonical-promotion.json
             eu29-review-article-import.log
             eu29-review-carousel-import.log
             eu29-review-column-counts.tsv
@@ -462,28 +398,19 @@ jobs:
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/public-institution.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/wechat-qr.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/admin/columns | jq --exit-status 'length > 0' > /dev/null
-          if [ "$EU29_REAL_PARTY" = "true" ]; then
-            curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/public/lists/by-code/PARTY_CAROUSEL \
-              | jq --exit-status '(.items | length == 4) and all(.items[]; (.imagePath // "") | startswith("/static/migrated/party/carousel/"))' > /dev/null
-          else
-            curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/public/lists/by-code/PARTY_CAROUSEL \
-              | jq --exit-status '(.items | length == 4)' > /dev/null
-          fi
+          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/public/lists/by-code/PARTY_CAROUSEL \
+            | jq --exit-status '(.items | length == 4) and all(.items[]; (.imagePath // "") | startswith("/static/migrated/party/carousel/"))' > /dev/null
 
       - name: 输出评审地址
         run: |
           echo "公开站人工评审地址：http://review.cc-lotus.info/"
           echo "中心党建人工评审地址：http://review.cc-lotus.info/party/"
           echo "管理端人工评审地址：http://review.cc-lotus.info/admin/"
-          if [ "$EU29_REAL_PARTY" = "true" ]; then
-            echo "EU-29：中心党建已使用真实历史迁移 Snapshot；主站其他栏目继续使用人工评审示例数据。"
-          fi
+          echo "中心党建：使用仓库已接受的 canonical 历史迁移数据；主站其他栏目继续使用人工评审示例数据。"
 
       - name: 保持环境运行
         run: |
-          if [ "$EU29_REAL_PARTY" = "true" ]; then
-            sleep 3300
-          elif [ "${{ github.event_name }}" = "pull_request" ]; then
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
             sleep 120
           else
             sleep 3300
