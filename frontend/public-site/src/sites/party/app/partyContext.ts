@@ -8,6 +8,7 @@ export type PartyColumnAlias = typeof PARTY_COLUMN_ALIASES[number]
 export type PartyHomeColumnAlias = typeof PARTY_HOME_COLUMN_ALIASES[number]
 
 let columnsPromise: Promise<Record<PartyColumnAlias, PublicColumn>> | null = null
+let homeColumnsPromise: Promise<Record<PartyHomeColumnAlias, PublicColumn>> | null = null
 
 export function isPartyColumnAlias(value: unknown): value is PartyColumnAlias {
   return typeof value === 'string' && (PARTY_COLUMN_ALIASES as readonly string[]).includes(value)
@@ -23,6 +24,18 @@ export function loadPartyColumns(): Promise<Record<PartyColumnAlias, PublicColum
       })
   }
   return columnsPromise
+}
+
+export function loadPartyHomeColumns(): Promise<Record<PartyHomeColumnAlias, PublicColumn>> {
+  if (!homeColumnsPromise) {
+    homeColumnsPromise = Promise.all(PARTY_HOME_COLUMN_ALIASES.map(alias => getPublicColumnByAlias(alias)))
+      .then(columns => Object.fromEntries(columns.map(column => [column.alias, column])) as Record<PartyHomeColumnAlias, PublicColumn>)
+      .catch(error => {
+        homeColumnsPromise = null
+        throw error
+      })
+  }
+  return homeColumnsPromise
 }
 
 export async function getPartyColumn(alias: PartyColumnAlias): Promise<PublicColumn> {
