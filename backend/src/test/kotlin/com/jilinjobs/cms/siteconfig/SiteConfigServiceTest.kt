@@ -14,16 +14,25 @@ class SiteConfigServiceTest {
 
     @Test
     fun `validates url boolean and integer property types`() {
-        val mapper = FakeSiteConfigMapper(record("SERVICE_URL", "URL", "/page/about"), record("FEATURE_ENABLED", "BOOLEAN", "true"), record("CAROUSEL_INTERVAL", "INTEGER", "4"), record("HOME_CAROUSEL_INTERVAL_SECONDS", "INTEGER", "4"))
+        val mapper = FakeSiteConfigMapper(
+            record("SERVICE_URL", "URL", "/page/about"),
+            record("FEATURE_ENABLED", "BOOLEAN", "true"),
+            record("CUSTOM_INTEGER", "INTEGER", "4"),
+            record("CAROUSEL_INTERVAL_SECONDS", "INTEGER", "4"),
+            record("CAROUSEL_MAX_ITEMS", "INTEGER", "5"),
+        )
         val service = service(mapper)
         assertEquals("https://example.com/path", service.update("SERVICE_URL", "https://example.com/path").value)
-        assertEquals("6", service.update("CAROUSEL_INTERVAL", "6").value)
-        assertEquals("1", service.update("HOME_CAROUSEL_INTERVAL_SECONDS", "1").value)
+        assertEquals("6", service.update("CUSTOM_INTEGER", "6").value)
+        assertEquals("1", service.update("CAROUSEL_INTERVAL_SECONDS", "1").value)
+        assertEquals("2", service.update("CAROUSEL_MAX_ITEMS", "2").value)
         assertThrows(SiteConfigValidationException::class.java) { service.update("SERVICE_URL", "javascript:alert(1)") }
         assertThrows(SiteConfigValidationException::class.java) { service.update("FEATURE_ENABLED", "yes") }
-        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_INTERVAL", "4.5") }
-        assertThrows(SiteConfigValidationException::class.java) { service.update("HOME_CAROUSEL_INTERVAL_SECONDS", "0") }
-        assertThrows(SiteConfigValidationException::class.java) { service.update("HOME_CAROUSEL_INTERVAL_SECONDS", "-1") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CUSTOM_INTEGER", "4.5") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_INTERVAL_SECONDS", "0") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_INTERVAL_SECONDS", "-1") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_MAX_ITEMS", "0") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_MAX_ITEMS", "-1") }
     }
 
     @Test
