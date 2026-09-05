@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test'
 
-const mainLinkBlue = 'rgb(0, 92, 212)'
+const mainLinkBlue = 'rgb(0, 106, 245)'
 const partyRed = 'rgb(208, 0, 35)'
 
 const mockArticles = Array.from({ length: 11 }, (_, index) => ({
@@ -14,7 +14,6 @@ const mockArticles = Array.from({ length: 11 }, (_, index) => ({
   externalUrl: null,
   publishDate: '2026-09-03',
   pinned: false,
-  recommended: false,
   sortOrder: 11 - index,
   coverResourceId: null,
 }))
