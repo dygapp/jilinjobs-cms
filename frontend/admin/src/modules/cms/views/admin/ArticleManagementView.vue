@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { computed, nextTick, onMounted, onUnmounted, reactive, ref } from 'vue'
+import { computed, onMounted, onUnmounted, reactive, ref } from 'vue'
 import { CloseBold, Edit, Refresh } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
 import AdminIconAction from '../../components/AdminIconAction.vue'
 import AdminPanelToggle from '../../components/AdminPanelToggle.vue'
+import RichTextEditor from '../../components/RichTextEditor.vue'
 import { listColumns, type CmsColumn } from '../../api/columns'
 import {
   createArticle,
@@ -40,7 +41,6 @@ const statusChangingId = ref<number | null>(null)
 const dialogVisible = ref(false)
 const editingId = ref<number | null>(null)
 const sideCollapsed = ref(false)
-const editorRef = ref<HTMLElement | null>(null)
 const columnTreeRef = ref<{ setCurrentKey: (key: number | null) => void } | null>(null)
 const resourceNames = reactive<Record<number, string>>({})
 const form = reactive<ArticleForm>(emptyForm())
@@ -179,8 +179,6 @@ async function openCreate() {
   editingId.value = null
   Object.assign(form, emptyForm(), { columnId: selectedColumnId.value })
   dialogVisible.value = true
-  await nextTick()
-  if (editorRef.value) editorRef.value.innerHTML = ''
 }
 
 async function openEdit(row: AdminArticleSummary) {
@@ -203,13 +201,11 @@ async function openEdit(row: AdminArticleSummary) {
     })
     await hydrateResourceNames([article.coverResourceId, ...article.bodyImageResourceIds, ...article.attachmentResourceIds])
     dialogVisible.value = true
-    await nextTick()
-    if (editorRef.value) editorRef.value.innerHTML = article.bodyHtml
   } catch (error) { ElMessage.error(toMessage(error)) }
 }
 
 async function save() {
-  if (form.articleType === 'INTERNAL') syncBody()
+  if (form.articleType === 'INTERNAL') form.bodyImageResourceIds = form.bodyImageResourceIds.filter(id => form.bodyHtml.includes(resourceContentUrl(id)))
   if (!form.title.trim()) { ElMessage.warning('请输入文章标题'); return }
   if (form.columnId == null) { ElMessage.warning('请选择所属栏目'); return }
   if (form.articleType === 'EXTERNAL_LINK' && !form.externalUrl?.trim()) { ElMessage.warning('请输入原文链接'); return }
@@ -258,27 +254,18 @@ async function changeStatus(row: AdminArticleSummary) {
   finally { statusChangingId.value = null }
 }
 
-function syncBody() {
-  const html = editorRef.value?.innerHTML ?? ''
-  form.bodyHtml = html
-  form.bodyImageResourceIds = form.bodyImageResourceIds.filter(id => html.includes(resourceContentUrl(id)))
-}
-
-function formatBody(command: 'bold' | 'italic') { editorRef.value?.focus(); document.execCommand(command); syncBody() }
-
-async function uploadBodyImage(event: Event) {
-  const file = firstFile(event)
-  if (!file) return
+async function uploadBodyImage(file: File): Promise<{ src: string; alt: string }> {
   uploading.value = true
   try {
     const resource = await uploadResource(file)
     resourceNames[resource.id] = resource.originalFilename
-    form.bodyImageResourceIds.push(resource.id)
-    editorRef.value?.insertAdjacentHTML('beforeend', `<p><img src="${resourceContentUrl(resource.id)}" alt="${escapeHtml(resource.originalFilename)}" style="max-width:100%"></p>`)
-    syncBody()
+    if (!form.bodyImageResourceIds.includes(resource.id)) form.bodyImageResourceIds.push(resource.id)
     ElMessage.success('正文图片已上传')
-  } catch (error) { ElMessage.error(toMessage(error)) }
-  finally { resetInput(event); uploading.value = false }
+    return { src: resourceContentUrl(resource.id), alt: resource.originalFilename }
+  } catch (error) {
+    ElMessage.error(toMessage(error))
+    throw error
+  } finally { uploading.value = false }
 }
 
 async function uploadCover(event: Event) {
@@ -328,7 +315,6 @@ function columnName(columnId: number): string { return columns.value.find(item =
 function statusName(status: ArticleStatus): string { return status === 'DRAFT' ? '草稿' : status === 'PUBLISHED' ? '已发布' : '已撤回' }
 function statusActionName(status: ArticleStatus): string { return status === 'PUBLISHED' ? '撤回' : status === 'WITHDRAWN' ? '重新发布' : '发布' }
 function resourceName(id: number): string { return resourceNames[id] ?? `资源 #${id}` }
-function escapeHtml(value: string): string { const entities: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }; return value.replace(/[&<>"]/g, char => entities[char] ?? char) }
 function toMessage(error: unknown): string { return error instanceof Error ? error.message : '操作失败' }
 </script>
 
@@ -396,10 +382,7 @@ function toMessage(error: unknown): string { return error instanceof Error ? err
         <el-form-item label="发布日期"><el-date-picker v-model="form.publishDate" data-testid="article-publish-date" type="date" value-format="YYYY-MM-DD" placeholder="选择发布日期" style="width:100%" /></el-form-item>
 
         <el-form-item v-if="form.articleType === 'INTERNAL'" label="正文">
-          <div class="editor-shell">
-            <div class="editor-toolbar"><el-button size="small" @click="formatBody('bold')"><strong>加粗</strong></el-button><el-button size="small" @click="formatBody('italic')"><em>斜体</em></el-button><label class="upload-button"><span>{{ uploading ? '上传中…' : '插入图片' }}</span><input data-testid="body-image-input" type="file" accept="image/*" :disabled="uploading" @change="uploadBodyImage"></label></div>
-            <div ref="editorRef" data-testid="article-body-editor" class="rich-editor" contenteditable="true" @input="syncBody" />
-          </div>
+          <RichTextEditor v-model="form.bodyHtml" test-id="article-body-editor" :upload-image="uploadBodyImage" :uploading="uploading" />
         </el-form-item>
 
         <el-form-item v-if="form.articleType === 'INTERNAL' && formCoverPolicy !== 'NONE'" label="封面图片" :required="formCoverPolicy === 'REQUIRED'">

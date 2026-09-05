@@ -3,7 +3,9 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "engines": { "node": ">=22.18.0" },
+  "engines": {
+    "node": ">=22.18.0"
+  },
   "scripts": {
     "dev": "vite --port 5174",
     "build": "vue-tsc --noEmit && vite build",
@@ -12,7 +14,16 @@
   "dependencies": {
     "element-plus": "2.14.4",
     "vue": "3.5.40",
-    "vue-router": "5.2.0"
+    "vue-router": "5.2.0",
+    "@tiptap/extension-bubble-menu": "3.31.2",
+    "@tiptap/extension-floating-menu": "3.31.2",
+    "@tiptap/extension-image": "3.31.2",
+    "@tiptap/extension-table": "3.31.2",
+    "@tiptap/extension-text-align": "3.31.2",
+    "@tiptap/extension-text-style": "3.31.2",
+    "@tiptap/pm": "3.31.2",
+    "@tiptap/starter-kit": "3.31.2",
+    "@tiptap/vue-3": "3.31.2"
   },
   "devDependencies": {
     "@playwright/test": "1.61.0",

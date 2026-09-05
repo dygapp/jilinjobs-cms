@@ -7,10 +7,10 @@
 - Requirement：`docs/requirements/rich-text-authoring.md`
 - Specification：`docs/specifications/rich-text-authoring.md`
 - Technical Plan：`docs/technical/rich-text-authoring-plan.md`
-- Dependency：EU-34 已完成并集成到 `main`
-- Status：**CANDIDATE — dependency not yet satisfied**
+- Dependency：EU-34 已完成、集成并通过 Post-Integration CI
+- Status：**READY — Readiness Check PASS**
 
-Identifier 只承担稳定追踪。当前 Unit 已由 `slice-work` 形成 Candidate，但在 EU-34 完成并以最新 `main` 重新执行 Readiness Check 前，不授予 Execute 权限。
+Identifier 只承担稳定追踪。本 Unit 已由 `slice-work` 形成 Candidate，并在 EU-34 完成后以新的 `main@e429631126ce8449f9939ed5d2edbeec7d9853cd` 重新执行 Readiness Check；所有 Gate 均已 PASS，因此获得 Execute 权限。
 
 ## 2. Intent
 
@@ -52,26 +52,46 @@ EU-34 已承担 RT-06～13 的 server safety foundation；EU-35 必须让 editor
 
 ### Authority / Scope — PASS
 
-Requirement / Specification / Technical Plan 已明确，Article/Page integration points 已在 `main@dc9fe22e...` 重新确认。
+Requirement / Specification / Technical Plan 已明确；Unit 边界保持为 Admin shared authoring，不扩展 DB、Page Resource domain、页面构建器或服务端安全策略。
 
-### Technology / Verification — PASS
+### Dependency — PASS
 
-Tiptap Vue 3 当前技术输入与验证责任已明确，Article Resource adapter 边界也已有现有实现证据。
+- EU-34 PR #67 已合并；
+- integration commit：`e429631126ce8449f9939ed5d2edbeec7d9853cd`；
+- main Post-Integration CI #697 / run `33968363838`：Backend、Public、Admin、Integrated Browser 全部 PASS。
 
-### Dependency — NOT YET PASS
+### Sanitizer / Editor Schema Alignment — PASS
 
-EU-35 依赖 EU-34 的 shared server policy 已完成并集成；当前该条件尚未满足。因此本 Unit 暂不晋升 Ready，不进入 Execute。
+当前 `RichTextHtmlPolicy` 已允许本 Unit 所需的 H2～H4、strong/em/u/strike、列表、blockquote/hr、link、image、table，以及 `font-size` / `font-family` / `color` / `background-color` / `text-align` 受控 style。EU-35 editor 输出保持为该 allow-list 的子集，不要求放宽服务端 policy。
 
-## 7. Promotion Condition
+### Article / Page Integration Points — PASS
 
-EU-34 合并且 Post-Integration Evidence PASS 后：
+在 `main@e4296311...` 重新核对：
 
-1. 在新的 `main` 上核对 sanitizer/editor schema alignment；
-2. 再次核对 Article/Page integration points；
-3. 确认 Tiptap current patch 并锁定 lockfile；
-4. 重新执行 Readiness Check。
+- Article INTERNAL 仍由 `ArticleManagementView.vue` 管理 `bodyHtml`、CMS Resource upload 与 `bodyImageResourceIds`；
+- Page RICH_TEXT 仍由 `PageManagementView.vue` 管理 `bodyHtml`，且没有 Page Resource association；
+- 两者当前仍各自使用 `contenteditable + execCommand`，正是本 Unit 的替换边界。
 
-全部 PASS 后，EU-35 才成为 Ready Execution Unit。
+### Technology / Version / Verification — PASS
+
+- 使用 Tiptap 3.x 官方 Vue 3 integration；
+- Execute 开始时 Current Evidence 指向 `3.31.2` patch line；实现固定精确版本，并生成 `package-lock.json`；
+- 使用 `StarterKit` + `TableKit` + `TextStyleKit` + Image + TextAlign 等规格所需开源 extension；
+- Tiptap 只负责 editor schema/commands；服务端 OWASP policy 继续承担最终安全 Authority；
+- Article/Page targeted Browser、managed image association、legacy open/save/reopen 与 full regression 已有明确验证路径。
+
+### Readiness Result — PASS
+
+所有 Promotion Condition 已满足。`EU-35` 现为 Ready Execution Unit，可进入 Execute。
+
+## 7. Execution Notes
+
+1. 建立 CMS-local `RichTextEditor`，消费者通过 `v-model` 交换 HTML；
+2. Article 通过 image adapter 复用现有 `/api/admin/resources`，插入 managed content URL，并继续由 Article consumer 维护 association；
+3. Page RICH_TEXT 不新增上传资源模型，仅允许安全 URL image insert；
+4. editor schema 不提供 H1、raw source、script/iframe/embed；
+5. paste 由 Tiptap schema normalization 收敛未知标签/属性/style，最终提交继续经过 EU-34 Backend policy；
+6. 旧测试若绑定旧 `contenteditable` DOM，只更新验证契约，不恢复旧实现。
 
 ## 8. Completion Gate
 
