@@ -46,10 +46,11 @@ test('EU-35：Article 与 Page 共用完整富文本工具栏且已有 HTML 可�
   await expect(articleEditor.locator('h2 strong')).toHaveCount(0)
   await articleDialog.getByTestId('article-body-editor-redo').click()
   await expect(articleEditor.locator('h2 strong')).toContainText('标题内容')
-  await articleEditor.click()
-  await page.keyboard.press('End')
 
-  await articleDialog.getByTestId('body-image-input').setInputFiles({ name: 'eu35.png', mimeType: 'image/png', buffer: ONE_PIXEL_PNG })
+  const chooserPromise = page.waitForEvent('filechooser')
+  await articleDialog.getByTestId('article-body-editor-image').click()
+  const chooser = await chooserPromise
+  await chooser.setFiles({ name: 'eu35.png', mimeType: 'image/png', buffer: ONE_PIXEL_PNG })
   await expect(articleEditor.locator('img')).toHaveCount(1)
   await articleDialog.getByTestId('save-article').click()
   await expect(articleDialog).toBeHidden()
@@ -92,6 +93,7 @@ test('EU-35：Article 与 Page 共用完整富文本工具栏且已有 HTML 可�
   page.once('dialog', dialog => dialog.accept('https://example.com/eu35'))
   await pageDialog.getByTestId('page-body-editor-link').click()
   await expect(pageEditor.locator('a')).toHaveAttribute('href', 'https://example.com/eu35')
+  await pageEditor.press('ArrowRight')
   await pageDialog.getByTestId('page-body-editor-table').click()
   await expect(pageEditor.locator('table')).toHaveCount(1)
   await pageDialog.getByTestId('page-body-editor-hr').click()
