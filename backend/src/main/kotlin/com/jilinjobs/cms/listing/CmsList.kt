@@ -239,6 +239,11 @@ class CmsListService(
         val list = requireList(listId)
         val current = mapper.findItem(id) ?: throw CmsListItemNotFoundException(id)
         if (current.listId != listId) throw CmsListValidationException("列表项不属于当前列表")
+        val currentSourceType = CmsListItemSourceType.valueOf(current.sourceType)
+        if (currentSourceType != draft.sourceType) throw CmsListValidationException("列表项数据类型创建后不可修改")
+        if (currentSourceType == CmsListItemSourceType.ARTICLE && current.articleId != draft.articleId) {
+            throw CmsListValidationException("文章型列表项的关联文章创建后不可修改")
+        }
         val policy = ContentImagePolicy.valueOf(list.imagePolicy)
         val normalized = normalizeItem(draft, policy)
         mapper.updateItem(normalized.record(listId, id))
