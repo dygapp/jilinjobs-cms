@@ -27,6 +27,15 @@ jobs:
       - name: Generate EU-35 source changes
         run: python3 .github/scripts/eu35-bootstrap.py
 
+      - name: Normalize generated text files
+        run: |
+          set -euo pipefail
+          sed -i 's/[[:space:]]\+$//' \
+            frontend/admin/src/modules/cms/components/RichTextEditor.vue \
+            frontend/admin/src/modules/cms/views/admin/ArticleManagementView.vue \
+            frontend/admin/src/modules/cms/views/admin/PageManagementView.vue \
+            frontend/admin/tests/e2e/rich-text-authoring.spec.ts
+
       - name: Install exact Tiptap dependencies and lock
         working-directory: frontend/admin
         run: npm install --no-audit --no-fund
