@@ -144,7 +144,6 @@ class ArticleService(
             article.title,
             article.publishDate,
             article.pinned,
-            article.recommended,
             article.sortOrder,
             column?.alias.orEmpty(),
             article.source,
