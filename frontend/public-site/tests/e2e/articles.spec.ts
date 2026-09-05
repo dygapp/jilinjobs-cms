@@ -52,7 +52,6 @@ test('文章草稿、文件资源与栏目内容依赖形成管理端闭环', as
   await expect(page.getByText('guide.pdf', { exact: true })).toBeVisible()
 
   await page.getByTestId('article-pinned').click()
-  await page.getByTestId('article-recommended').click()
   await page.getByTestId('save-article').click()
   await expect(page.getByRole('dialog', { name: '新增文章草稿' })).toBeHidden()
   const createdRow = page.getByRole('row').filter({ hasText: title })
@@ -159,7 +158,6 @@ test('EU-04 发布撤回重新发布驱动公开三级页面可见性', async ({
       source: '吉林就业公开来源',
       publishDate: '2026-08-20',
       pinned: true,
-      recommended: true,
       sortOrder: 50,
       coverResourceId: null,
       bodyImageResourceIds: [image.id],
@@ -207,7 +205,6 @@ test('EU-04 发布撤回重新发布驱动公开三级页面可见性', async ({
       source: '吉林就业公开来源',
       publishDate: '2026-08-20',
       pinned: true,
-      recommended: true,
       sortOrder: 50,
       coverResourceId: null,
       bodyImageResourceIds: [image.id],
@@ -282,7 +279,6 @@ test('EU-05 详情附件复制二维码与浏览量形成公开闭环', async ({
       source: '吉林就业',
       publishDate: '2026-08-20',
       pinned: false,
-      recommended: false,
       sortOrder: 10,
       coverResourceId: null,
       bodyImageResourceIds: [],
