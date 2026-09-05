@@ -11,8 +11,8 @@
 ## Status
 
 - Specification: Ready
-- Technical Planning: required before slicing
-- Execution Unit: not yet created
+- Technical Planning: Ready
+- Execution Unit: not yet created; enter `slice-work` only after this planning set is integrated
 
 ## Stable Contract Boundary
 
@@ -121,7 +121,7 @@ In particular:
 
 ## Acceptance Obligations
 
-Before this Specification can produce a Ready Execution Unit, Technical Planning shall define the smallest concrete convergence slice. That slice must be able to prove at least:
+After this planning set is integrated, `slice-work` may derive the smallest concrete convergence slice from this Ready Specification and Ready Technical Plan. Any resulting Candidate Execution Unit must be able to prove at least:
 
 1. no `/api/admin/**` client call remains in `frontend/public-site/src/**`;
 2. Public build succeeds after Admin-only API/model cleanup;
