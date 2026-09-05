@@ -6,13 +6,14 @@
 
 当前版本以原网站现有结构和视觉关系为主站公开基线，采用 Vue + Spring Boot 重建中心主站，并在同一公开站前端工程中建设具有独立红色视觉主题的“中心党建”特殊栏目/专题页面。管理端已经完成独立前端工程与 Modular SPA 收敛；公开站已经完成 **Multi-entry Modular SPA** 基础架构：Entry 只按真实 Theme / Router Boundary 划分，中心主站与中心党建分别拥有独立 App、Router、Banner 与内容主题，但继续共用 `frontend/public-site` 工程、Vue/Vite 技术栈、构建发布链路和 Spring Boot CMS Backend；主导航与 Footer 使用 Shared Shell Components 保持公共区域一致。
 
-中心党建 EU-26～EU-29 已完成正式页面与历史迁移收敛；**EU-30 Carousel Architecture & Behavior Convergence 已于 2026-09-05 完成最终 Human Review、canonical acceptance 与 post-promotion verification。当前没有新的编号 Execution Unit。** 后续工作统一回到 GitHub Issues #59 / #60 的未编号 Planning / Requirement Candidates，只有完成 Intent / Requirement Clarification、Specification、必要 Technical Planning / Research、Slice Work 与 Readiness Check 后才分配新的 EU 编号。
+中心党建 EU-26～EU-29、EU-30 Carousel Architecture & Behavior Convergence 以及 **EU-31 Database Migration Baseline Convergence 均已完成并收敛到 `main`。当前没有 Ready Execution Unit。** 后续工作统一回到 GitHub Issues #57 / #59 / #60 的 Planning / Requirement Candidates：候选先完成必要 Intent / Requirement Clarification、Ready Specification 与必要 Technical Planning / Research；随后由 `slice-work` 形成 Candidate Execution Unit 并可分配稳定 Identifier，只有 `readiness-check` PASS 后才成为 Ready Execution Unit。Roadmap 顺序、预编号或 Issue 标签本身不构成执行授权。
 
 当前权威需求：
 
 - `docs/requirements/information-publishing.md` V4.8
 - `docs/requirements/information-publishing-eu30-amendment.md` V4.9-EU30（EU-30 已完成，保留追溯）
 - `docs/requirements/party-positioning.md`
+- `docs/requirements/database-migration-baseline-convergence.md`（EU-31 已完成；其 accepted baseline / append-only 边界继续有效）
 
 当前 Specification：
 
@@ -22,6 +23,7 @@
 - `docs/specifications/public-shared-shell.md`
 - `docs/specifications/admin-site.md`
 - `docs/specifications/preset-site-structure.md`
+- `docs/specifications/database-migration-baseline-convergence.md`（EU-31 accepted baseline）
 
 当前 Architecture Decision：
 
@@ -32,6 +34,7 @@
 当前 Technical Plan / Governance：
 
 - `docs/technical/carousel-list-placement.md`（EU-30 已接受方案，保留追溯）
+- `docs/technical/database-migration-baseline-convergence.md`（EU-31 accepted baseline）
 - `docs/technical/cms-architecture.md`
 - `docs/technical/configuration-governance.md`
 - `docs/technical/backend-service.md`
@@ -44,13 +47,15 @@
 
 最近完成的执行单元：
 
+- `docs/work/eu31-database-migration-baseline-convergence.md`（COMPLETED）
 - `docs/work/eu30-carousel-convergence.md`（COMPLETED）
 - `docs/work/frontend-follow-up-execution-units.md`（历史预编号规划，仅追溯；不再作为后续执行顺序 Authority）
 
 当前后续规划入口：
 
-- GitHub Issue #59：数据库迁移 baseline convergence / Browser Compatibility 等后置规划候选；
-- GitHub Issue #60：EU-30 后续需求边界候选池。
+- GitHub Issue #59：EU-31 已完成后的 Browser Compatibility 等后置规划候选；
+- GitHub Issue #60：EU-30 后续需求边界候选池；
+- GitHub Issue #57：公开站导航查询 / 渲染架构相关讨论候选，不自动晋升为执行范围。
 
 中心党建阶段追溯：
 
@@ -64,7 +69,7 @@
 
 - `docs/work/admin-frontend-convergence-execution-units.md`
 
-管理端双前端拆分、通用 CMS 模型和 Admin Modular SPA 已完成当前阶段收敛；公开站 Multi-entry Modular SPA、中心党建正式页面与历史内容、EU-30 轮播架构与行为也已完成当前阶段收敛。下一步不得机械沿用旧规划中的“EU-31”，应从 Issues #59 / #60 选择候选并按 Consumer-local Method 形成新的 Ready Execution Unit。
+管理端双前端拆分、通用 CMS 模型和 Admin Modular SPA 已完成当前阶段收敛；公开站 Multi-entry Modular SPA、中心党建正式页面与历史内容、EU-30 轮播架构与行为、EU-31 数据库迁移基线也已完成当前阶段收敛。下一步不得从历史预编号路线直接开始实现，应从当前 Planning / Requirement Candidates 中选择目标并按 Consumer-local Method 形成 Candidate Execution Unit，通过 Readiness 后再进入 Execute。
 
 历史阶段文档继续保留用于追溯，但不再作为当前目标架构：
 
