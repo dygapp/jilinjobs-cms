@@ -1,0 +1,93 @@
+name: EU-36 Authority Sync
+
+on:
+  push:
+    branches:
+      - docs/eu36-readiness
+    paths:
+      - .github/workflows/eu36-authority-sync.yml
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: docs/eu36-readiness
+          fetch-depth: 0
+      - name: Patch current Authority
+        shell: python
+        run: |
+          from pathlib import Path
+
+          def replace_once(path, old, new):
+              p = Path(path)
+              text = p.read_text()
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f"{path}: expected exactly one match, found {count}: {old[:100]!r}")
+              p.write_text(text.replace(old, new, 1))
+
+          replace_once(
+              "AGENTS.md",
+              "**当前没有 Ready Execution Unit。** 后续只允许从本仓库 GitHub Issues #57 / #59 / #60 的剩余 Planning / Requirement Candidates 中选择目标，并按 `docs/project/development-method.md` 完成 Intent / Requirement Clarification、Specification 与必要 Technical Planning / Research；只有上游已经 Ready 时，`slice-work` 才形成 Candidate Execution Unit，并可为其分配稳定 Identifier；只有 `readiness-check` PASS 后才晋升为 Ready Execution Unit 并允许进入 Execute。",
+              "**Issue #60 / D1 已完成 Requirement / Specification / Technical Planning，并由 `slice-work` 形成 EU-36 — Public Frontend Source Isolation & Managed Resource Projection；Readiness Check 已 PASS，当前 EU-36 为 Ready Execution Unit，尚未进入 Execute。** EU-36 的 Execute 必须以 `docs/work/eu36-public-frontend-source-isolation.md` 为 Work Authority，并在 Fresh Context 中开始；EU-36 完成后，其他工作仍只允许从本仓库 GitHub Issues #57 / #59 / #60 的剩余 Planning / Requirement Candidates 中选择目标，并按 `docs/project/development-method.md` 完成 Intent / Requirement Clarification、Specification 与必要 Technical Planning / Research；只有上游已经 Ready 时，`slice-work` 才形成 Candidate Execution Unit，并可为其分配稳定 Identifier；只有 `readiness-check` PASS 后才晋升为 Ready Execution Unit 并允许进入 Execute。",
+          )
+
+          replace_once(
+              "README.md",
+              "中心党建 EU-26～EU-29、EU-30 Carousel Architecture & Behavior Convergence、EU-31 Database Migration Baseline Convergence，以及 Issue #60 / B1～B3 收敛形成的 **EU-32～EU-35 均已完成并收敛到 `main`。当前没有 Ready Execution Unit。** 后续工作统一回到 GitHub Issues #57 / #59 / #60 的剩余 Planning / Requirement Candidates：候选先完成必要 Intent / Requirement Clarification、Ready Specification 与必要 Technical Planning / Research；随后由 `slice-work` 形成 Candidate Execution Unit 并可分配稳定 Identifier，只有 `readiness-check` PASS 后才成为 Ready Execution Unit。Roadmap 顺序、预编号或 Issue 标签本身不构成执行授权。",
+              "中心党建 EU-26～EU-29、EU-30 Carousel Architecture & Behavior Convergence、EU-31 Database Migration Baseline Convergence，以及 Issue #60 / B1～B3 收敛形成的 **EU-32～EU-35 均已完成并收敛到 `main`。Issue #60 / D1 已完成 Planning Authority、`slice-work` 与 Readiness Check，并形成 EU-36 — Public Frontend Source Isolation & Managed Resource Projection；当前 EU-36 为 Ready Execution Unit，尚未进入 Execute。** EU-36 必须在 Fresh Context 中按 Work Authority 执行；完成后其他工作再统一回到 GitHub Issues #57 / #59 / #60 的剩余 Planning / Requirement Candidates。Roadmap 顺序、预编号或 Issue 标签本身不构成执行授权。",
+          )
+          replace_once(
+              "README.md",
+              "- `docs/requirements/rich-text-authoring.md`（EU-34 / EU-35 accepted）",
+              "- `docs/requirements/rich-text-authoring.md`（EU-34 / EU-35 accepted）\n- `docs/requirements/public-frontend-replaceability.md`（EU-36 Ready Authority）",
+          )
+          replace_once(
+              "README.md",
+              "- `docs/specifications/rich-text-authoring.md`（EU-34 / EU-35 accepted）",
+              "- `docs/specifications/rich-text-authoring.md`（EU-34 / EU-35 accepted）\n- `docs/specifications/public-frontend-replaceability.md`（EU-36 Ready Specification）",
+          )
+          replace_once(
+              "README.md",
+              "- `docs/technical/rich-text-authoring-plan.md`（EU-34 / EU-35 accepted technical plan）",
+              "- `docs/technical/rich-text-authoring-plan.md`（EU-34 / EU-35 accepted technical plan）\n- `docs/technical/public-frontend-replaceability.md`（EU-36 Ready Technical Plan）",
+          )
+          replace_once(
+              "README.md",
+              "最近完成的执行单元：\n\n- `docs/work/eu35-shared-rich-text-authoring.md`（COMPLETED）",
+              "当前 Ready Execution Unit：\n\n- `docs/work/eu36-public-frontend-source-isolation.md`（READY — Readiness Check PASS；尚未 Execute）\n\n最近完成的执行单元：\n\n- `docs/work/eu35-shared-rich-text-authoring.md`（COMPLETED）",
+          )
+          replace_once(
+              "README.md",
+              "下一步不得从历史预编号路线直接开始实现，应从当前剩余 Planning / Requirement Candidates 中选择目标并按 Consumer-local Method 形成 Candidate Execution Unit，通过 Readiness 后再进入 Execute。",
+              "当前下一步是 EU-36 的 Fresh-context Execute；不得把该 Ready Unit 扩大为技术栈替换、部署重构或内容迁移。EU-36 完成后，才从剩余 Planning / Requirement Candidates 中继续按 Consumer-local Method 形成后续 Candidate Execution Unit。",
+          )
+
+          replace_once(
+              "docs/project/project-roadmap.md",
+              "| EU-34～EU-35 Rich Text Safety & Shared Authoring | **已完成** | 服务端 HTML safety foundation + Article/Page 共用 Tiptap 富文本编辑能力完成并通过 Post-Integration Verification |\n| 后续 Planning / Requirement Candidates | **当前规划层** | Issues #57 / #59 / #60 中剩余候选尚未形成新的 Ready Execution Unit，需按当前方法从 Candidate 推进到 Ready Specification、Candidate Unit 与 Readiness Gate |",
+              "| EU-34～EU-35 Rich Text Safety & Shared Authoring | **已完成** | 服务端 HTML safety foundation + Article/Page 共用 Tiptap 富文本编辑能力完成并通过 Post-Integration Verification |\n| EU-36 Public Frontend Source Isolation & Managed Resource Projection | **READY — Readiness Check PASS** | Public source ownership、Backend managed Article Resource public projection 与 source-boundary guard 已完成切分和 Readiness；尚未进入 Execute |\n| 后续 Planning / Requirement Candidates | **规划层保留** | Issues #57 / #59 / #60 中除 D1 外的剩余候选尚未形成新的 Ready Execution Unit；EU-36 完成后再按当前方法逐项推进 |",
+          )
+          replace_once(
+              "docs/project/project-roadmap.md",
+              "| 2026-09-05 | Issue #60 / B3 先后形成 EU-34 / EU-35：服务端 Rich Text HTML safety foundation 与 Article/Page shared Tiptap authoring 均完成、集成并通过 Post-Integration CI |",
+              "| 2026-09-05 | Issue #60 / B3 先后形成 EU-34 / EU-35：服务端 Rich Text HTML safety foundation 与 Article/Page shared Tiptap authoring 均完成、集成并通过 Post-Integration CI |\n| 2026-09-06 | Issue #60 / D1 的 Public Frontend Replaceability Authority 经 PR #70 / #71 集成并通过 Post-Integration CI #719；`slice-work` 形成 EU-36，Readiness Check PASS，等待 Fresh-context Execute |",
+          )
+      - name: Verify and commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --check
+          git rm .github/workflows/eu36-authority-sync.yml
+          git diff --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add AGENTS.md README.md docs/project/project-roadmap.md .github/workflows/eu36-authority-sync.yml
+          git commit -m "docs(project): 晋升 EU-36 为 Ready Execution Unit"
+          git push origin HEAD:docs/eu36-readiness
