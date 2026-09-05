@@ -4,7 +4,7 @@
 
 `jilinjobs-cms` 是吉林省智慧就业云平台中“信息发布与网站服务”相关能力的独立 Consumer 项目。
 
-中心党建正式页面、真实栏目、历史内容迁移与最终 Review 已由 EU-26～EU-29 收敛完成；当前主动执行单元为 **EU-30 Carousel Architecture & Behavior Convergence**。本轮只按本仓库当前 Requirement、Specification、Technical Plan、Execution Unit、Verification Strategy、ADR 与可直接观察的 Repository / Runtime Evidence 推进 Main / Party 轮播方案和实现收敛，不得从其他项目、其他会话、个人记忆、惯例或实现便利性中推导、补充或扩大本项目的产品范围。现有通用 CMS 已证明足以承担轮播运营数据时继续复用，不因交互收敛自动新增轮播专属模型、后台模块或第三方框架。
+中心党建正式页面、真实栏目、历史内容迁移与最终 Review 已由 EU-26～EU-29 收敛完成；**EU-30 Carousel Architecture & Behavior Convergence 已于 2026-09-05 完成最终 Human Review、canonical acceptance 与 post-promotion verification。当前没有新的编号 Execution Unit。** 后续只允许从本仓库 GitHub Issues #59 / #60 的未编号 Planning / Requirement Candidates 中选择目标，并按 `docs/project/development-method.md` 完成 Intent / Requirement Clarification、Specification、必要 Technical Planning / Research、Slice Work 与 Readiness Check 后再生成新的 Execution Unit。不得从其他项目、其他会话、个人记忆、旧预编号路线、惯例或实现便利性中推导、补充或扩大本项目的产品范围。
 
 ## 文档语言与术语表达
 
