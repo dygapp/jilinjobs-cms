@@ -1,7 +1,7 @@
 import { expect, test, type APIRequestContext } from '@playwright/test'
 
 async function createArticle(request: APIRequestContext, columnId: number, title: string) {
-  const response = await request.post('/api/admin/articles', { data: { columnId, title, bodyHtml:`<p>${title} 正文</p>`, source:'Admin E2E', articleType:'INTERNAL', externalUrl:null, publishDate:'2026-08-29', pinned:false, recommended:false, sortOrder:0, coverResourceId:null, bodyImageResourceIds:[], attachmentResourceIds:[] } })
+  const response = await request.post('/api/admin/articles', { data: { columnId, title, bodyHtml:`<p>${title} 正文</p>`, source:'Admin E2E', articleType:'INTERNAL', externalUrl:null, publishDate:'2026-08-29', pinned:false, sortOrder:0, coverResourceId:null, bodyImageResourceIds:[], attachmentResourceIds:[] } })
   expect(response.ok()).toBeTruthy()
   return await response.json() as { id:number;title:string }
 }
@@ -113,6 +113,8 @@ test('EU-30：通用列表维护 LINK / ARTICLE 投放并复用统一图片策�
   await expect(dialog.getByText('标题作为后台识别名称保留')).toBeVisible()
   await expect(dialog.getByTestId('list-item-source-type')).toContainText('链接')
   await expect(dialog.getByTestId('list-item-source-type')).toContainText('文章')
+  await expect(dialog.getByTestId('list-item-source-type').locator('input').first()).toBeDisabled()
+  await expect(dialog.getByTestId('list-item-source-type-immutable-hint')).toBeVisible()
   await dialog.getByTestId('image-resource-upload').setInputFiles({
     name:'e2e-list-image.png',
     mimeType:'image/png',
@@ -130,6 +132,45 @@ test('EU-30：通用列表维护 LINK / ARTICLE 投放并复用统一图片策�
   await expect(noneDialog.getByTestId('list-item-source-type')).toContainText('文章')
   await expect(noneDialog.getByTestId('image-resource-picker')).toHaveCount(0)
   await noneDialog.getByRole('button',{name:'取消'}).click()
+})
+
+test('EU-30：列表项数据类型和 ARTICLE 关联文章创建后不可修改', async ({ page, request }, testInfo) => {
+  const suffix=`${Date.now()}-${testInfo.retry}`.replaceAll('-','_')
+  const columnsResponse=await request.get('/api/admin/columns');expect(columnsResponse.ok()).toBeTruthy()
+  const columns=await columnsResponse.json() as Array<{id:number}>
+  const columnId=columns[0]?.id;expect(columnId).toBeTruthy()
+  const articleA=await createArticle(request,columnId!,`关联文章A-${suffix}`)
+  const articleB=await createArticle(request,columnId!,`关联文章B-${suffix}`)
+  const listResponse=await request.post('/api/admin/lists',{data:{code:`E2E_IDENTITY_${suffix}`,name:`身份测试-${suffix}`,groupCode:'E2E',imagePolicy:'OPTIONAL',description:'',sortOrder:995,enabled:true,system:false}})
+  expect(listResponse.ok()).toBeTruthy()
+  const list=await listResponse.json() as {id:number;code:string}
+  try {
+    const linkResponse=await request.post(`/api/admin/lists/${list.id}/items`,{data:{sourceType:'LINK',articleId:null,title:'身份链接',subtitle:null,url:'/identity-link',imagePath:null,imageResourceId:null,openMode:'DEFAULT',sortOrder:0,enabled:true,extraJson:null}})
+    expect(linkResponse.ok()).toBeTruthy()
+    const link=await linkResponse.json() as {id:number}
+    const changeType=await request.put(`/api/admin/lists/${list.id}/items/${link.id}`,{data:{sourceType:'ARTICLE',articleId:articleA.id,title:'忽略',subtitle:null,url:null,imagePath:null,imageResourceId:null,openMode:'DEFAULT',sortOrder:0,enabled:true,extraJson:null}})
+    expect(changeType.ok()).toBeFalsy()
+    expect((await changeType.json() as {message:string}).message).toContain('数据类型创建后不可修改')
+
+    const articleItemResponse=await request.post(`/api/admin/lists/${list.id}/items`,{data:{sourceType:'ARTICLE',articleId:articleA.id,title:'',subtitle:null,url:null,imagePath:null,imageResourceId:null,openMode:'DEFAULT',sortOrder:1,enabled:true,extraJson:null}})
+    expect(articleItemResponse.ok()).toBeTruthy()
+    const articleItem=await articleItemResponse.json() as {id:number;title:string}
+    const changeArticle=await request.put(`/api/admin/lists/${list.id}/items/${articleItem.id}`,{data:{sourceType:'ARTICLE',articleId:articleB.id,title:'',subtitle:null,url:null,imagePath:null,imageResourceId:null,openMode:'DEFAULT',sortOrder:1,enabled:true,extraJson:null}})
+    expect(changeArticle.ok()).toBeFalsy()
+    expect((await changeArticle.json() as {message:string}).message).toContain('关联文章创建后不可修改')
+
+    await page.goto('/admin/lists')
+    await page.getByTestId(`cms-list-${list.code}`).click()
+    const articleRow=page.getByTestId('cms-list-item-table').getByRole('row').filter({hasText:articleItem.title})
+    await articleRow.getByRole('button',{name:'编辑'}).click()
+    const dialog=page.getByRole('dialog',{name:'编辑列表项'})
+    await expect(dialog.getByTestId('list-item-source-type').locator('input').first()).toBeDisabled()
+    await expect(dialog.getByTestId('list-item-article')).toHaveClass(/is-disabled/)
+    await expect(dialog.getByTestId('list-item-article-immutable-hint')).toBeVisible()
+    await dialog.getByRole('button',{name:'取消'}).click()
+  } finally {
+    await request.delete(`/api/admin/lists/${list.id}`)
+  }
 })
 
 test('EU-30：列表图片策略在服务端按 LINK / ARTICLE 数据来源约束', async ({ request }, testInfo) => {
@@ -252,6 +293,26 @@ test('EU-16：文章管理以栏目树组织内容且父栏目包含子栏目文
 
   await page.getByTestId('article-column-all').click()
   await expect(page.getByTestId('article-column-context')).toContainText('全部文章')
+})
+
+test('EU-16：文章类型创建后在管理端和 API 均不可修改', async ({ page, request }, testInfo) => {
+  const columnsResponse=await request.get('/api/admin/columns');expect(columnsResponse.ok()).toBeTruthy()
+  const columns=await columnsResponse.json() as Array<{id:number}>
+  const columnId=columns[0]?.id;expect(columnId).toBeTruthy()
+  const article=await createArticle(request,columnId!,`类型不可变-${Date.now()}-${testInfo.retry}`)
+
+  await page.goto('/admin/articles')
+  await page.getByTestId('article-filter-keyword').fill(article.title)
+  const row=page.getByTestId('article-table').getByRole('row').filter({hasText:article.title})
+  await row.getByRole('button',{name:'编辑'}).click()
+  const dialog=page.getByRole('dialog',{name:'编辑文章'})
+  await expect(dialog.getByTestId('article-type').locator('input').first()).toBeDisabled()
+  await expect(dialog.getByTestId('article-type-immutable-hint')).toBeVisible()
+  await dialog.getByRole('button',{name:'取消'}).click()
+
+  const update=await request.put(`/api/admin/articles/${article.id}`,{data:{columnId:columnId!,title:article.title,bodyHtml:'',source:'Admin E2E',articleType:'EXTERNAL_LINK',externalUrl:'https://example.com/type-change',publishDate:'2026-08-29',pinned:false,sortOrder:0,coverResourceId:null,bodyImageResourceIds:[],attachmentResourceIds:[]}})
+  expect(update.ok()).toBeFalsy()
+  expect((await update.json() as {message:string}).message).toContain('文章类型创建后不可修改')
 })
 
 test('EU-16：栏目封面策略允许草稿暂存并在发布时强制 REQUIRED', async ({ page, request }, testInfo) => {
