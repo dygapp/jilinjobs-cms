@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { computed, nextTick, onMounted, reactive, ref } from 'vue'
+import { computed, onMounted, reactive, ref } from 'vue'
 import { Delete, Edit } from '@element-plus/icons-vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import AdminIconAction from '../../components/AdminIconAction.vue'
 import AdminPanelToggle from '../../components/AdminPanelToggle.vue'
+import RichTextEditor from '../../components/RichTextEditor.vue'
 import {
   createPage,
   createPageGroup,
@@ -28,7 +29,6 @@ const selectedGroup = ref<'all' | 'ungrouped' | number>('all')
 const sideCollapsed = ref(false)
 const saving = ref(false)
 const loading = ref(false)
-const editorRef = ref<HTMLElement | null>(null)
 const pageForm = reactive<PageDraft>({ groupId: null, alias: '', name: '', bodyHtml: '', renderMode: 'RICH_TEXT', embedUrl: null, sortOrder: 0, enabled: true })
 const groupForm = reactive<PageGroupDraft>({ alias: '', name: '', sortOrder: 0, enabled: true })
 
@@ -82,8 +82,6 @@ async function openPage(row?: CmsPage) {
     enabled: row.enabled,
   } : { groupId: defaultGroupId, alias: '', name: '', bodyHtml: '', renderMode: 'RICH_TEXT', embedUrl: null, sortOrder: 0, enabled: true })
   pageVisible.value = true
-  await nextTick()
-  if (editorRef.value) editorRef.value.innerHTML = pageForm.renderMode === 'RICH_TEXT' ? pageForm.bodyHtml : ''
 }
 
 function openGroup(row?: CmsPageGroup) {
@@ -94,26 +92,11 @@ function openGroup(row?: CmsPageGroup) {
   groupVisible.value = true
 }
 
-function syncBody() {
-  if (pageForm.renderMode === 'RICH_TEXT') pageForm.bodyHtml = editorRef.value?.innerHTML ?? ''
-}
-
-function formatBody(command: 'bold' | 'italic') {
-  editorRef.value?.focus()
-  document.execCommand(command)
-  syncBody()
-}
-
-async function changeRenderMode() {
-  if (pageForm.renderMode === 'RICH_TEXT') {
-    pageForm.embedUrl = null
-    await nextTick()
-    if (editorRef.value) editorRef.value.innerHTML = pageForm.bodyHtml
-  }
+function changeRenderMode() {
+  if (pageForm.renderMode === 'RICH_TEXT') pageForm.embedUrl = null
 }
 
 async function savePage() {
-  syncBody()
   if (!pageForm.name.trim()) { ElMessage.warning('请输入单页名称'); return }
   if (!pageForm.alias.trim()) { ElMessage.warning('请输入公开标识'); return }
   if (pageForm.renderMode === 'INTERNAL_STATIC' && pageForm.embedUrl?.trim() && !pageForm.embedUrl.trim().startsWith('/')) {
@@ -232,7 +215,7 @@ function message(error: unknown) {
         <el-form-item label="公开标识" required><el-input v-model="pageForm.alias" :disabled="Boolean(editingPageModel?.preset)" placeholder="用于公开页面地址" /><div v-if="editingPageModel?.preset" data-testid="preset-page-alias-hint" style="color:#909399;font-size:12px">预置单页的公开标识不可修改。</div></el-form-item>
         <el-form-item label="呈现方式" required><el-select v-model="pageForm.renderMode" data-testid="page-render-mode" style="width:100%" @change="changeRenderMode"><el-option label="富文本" value="RICH_TEXT" /><el-option label="外部嵌入占位" value="EMBED_PLACEHOLDER" /><el-option label="站内特殊页面" value="INTERNAL_STATIC" /></el-select></el-form-item>
 
-        <el-form-item v-if="pageForm.renderMode === 'RICH_TEXT'" label="正文"><div class="editor-shell"><div class="editor-toolbar"><el-button size="small" @click="formatBody('bold')"><strong>加粗</strong></el-button><el-button size="small" @click="formatBody('italic')"><em>斜体</em></el-button></div><div ref="editorRef" data-testid="page-body-editor" class="rich-editor" contenteditable="true" @input="syncBody" /></div></el-form-item>
+        <el-form-item v-if="pageForm.renderMode === 'RICH_TEXT'" label="正文"><RichTextEditor v-model="pageForm.bodyHtml" test-id="page-body-editor" /></el-form-item>
 
         <template v-else>
           <el-form-item :label="pageForm.renderMode === 'INTERNAL_STATIC' ? '站内页面路径' : '嵌入地址'"><el-input v-model="pageForm.embedUrl" data-testid="page-embed-url" :placeholder="pageForm.renderMode === 'INTERNAL_STATIC' ? '/special/page-path' : 'https://外部内容地址'" /></el-form-item>
