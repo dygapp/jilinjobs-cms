@@ -4,7 +4,7 @@
 
 - Candidate source: Issue #60 / D1
 - Candidate audit: Issue #60 comment `5553137311`
-- Readiness: clarified and ready for specification
+- Readiness: clarified; downstream Specification / Technical Plan are Ready
 - Scope: Public Frontend engineering responsibility and replacement boundary only
 
 ## Intent
@@ -27,6 +27,7 @@ The goal is to make the stable public contract explicit before E1～E3 add more 
 10. The current Public architecture remains the accepted Multi-entry Modular SPA until a separate architecture decision changes it. D1 shall not silently convert the site to SSR/SSG/Hybrid or select a replacement framework.
 11. The convergence shall not change current user-visible Main/Party behavior, CMS product scope, Backend business semantics or Admin workflows.
 12. New generic adapters, framework layers, services or repository splits shall be introduced only when current evidence demonstrates they reduce a real replacement boundary coupling. D1 shall not add speculative abstraction solely for a hypothetical future rewrite.
+13. **Public response projection shall not require Public clients to understand Admin Resource routes.** When persisted Article rich text contains a managed body-image URL produced by Admin authoring, the Backend public projection shall expose that associated image through the accepted Public Resource route. Public rendering code shall not need `/api/admin/**` endpoint knowledge to display accepted managed Article content.
 
 ## Current evidence requiring convergence
 
@@ -35,7 +36,15 @@ Repository audit found Public source ownership leakage that violates the intende
 - `frontend/public-site/src/shared/api/articles.ts` contains Public article access together with `/api/admin/articles` CRUD and Admin Resource upload/read helpers;
 - `frontend/public-site/src/shared/api/columns.ts` contains Public column reads together with `/api/admin/columns` CRUD;
 - `frontend/public-site/src/shared/api/pages.ts` contains Public Page reads together with `/api/admin/pages` and `/api/admin/page-groups` writes;
-- `frontend/public-site/src/shared/api/staticResources.ts` is an Admin static-resource management client located entirely inside the Public package.
+- `frontend/public-site/src/shared/api/staticResources.ts` is an Admin static-resource management client located entirely inside the Public package;
+- `frontend/public-site/src/sites/main/api/staticResources.ts` re-exports that pure Admin client from the Main Public source tree.
+
+A follow-up Readiness audit also found a Public contract leak in managed Article images:
+
+- Admin authoring currently persists managed body-image references using `/api/admin/resources/{id}/content`;
+- `ArticleService.getPublic()` sanitizes `bodyHtml` but returns those URLs unchanged;
+- Public `publicBodyHtml()` therefore knows the Admin Resource route and rewrites it client-side to `/api/public/resources/{id}/content`;
+- the Article already carries `bodyImageResourceIds`, and Backend has a dedicated Public Resource endpoint, so this translation belongs to the Public response projection rather than the Public rendering implementation.
 
 Repository audit also found delivery/verification coupling that must be classified correctly rather than mistaken for domain coupling:
 
@@ -54,5 +63,6 @@ These are current implementation/delivery facts. The Requirement is to keep them
 - Browser Compatibility work from Issue #59.
 - Loading/Skeleton or Mobile Human Review work from Issue #60 C1/C2.
 - Performing E1/E2/E3 content migration in this requirement.
+- Changing the persisted Admin authoring representation of Article `bodyHtml` solely for D1; the required change is the Public projection boundary.
 - Redesigning Backend CMS domain APIs merely to make names aesthetically cleaner when no Public coupling problem is demonstrated.
 - Splitting repositories or introducing additional deployment services without current evidence.
