@@ -2,7 +2,9 @@ package com.jilinjobs.cms.migration
 
 import com.jilinjobs.cms.CmsApplication
 import com.jilinjobs.cms.listing.CmsListItemDraft
+import com.jilinjobs.cms.listing.CmsListItemRecord
 import com.jilinjobs.cms.listing.CmsListItemSourceType
+import com.jilinjobs.cms.listing.CmsListMapper
 import com.jilinjobs.cms.listing.CmsListService
 import com.jilinjobs.cms.resource.ResourceService
 import com.jilinjobs.cms.staticresource.StaticResourceService
@@ -101,6 +103,7 @@ class PartyCarouselPlacementImporter(
     private val mappingMapper: CmsListItemLegacyMappingMapper,
     private val correctionMapper: Eu30CarouselMappingMapper,
     private val articleMappingMapper: ArticleLegacyMappingMapper,
+    private val listMapper: CmsListMapper,
     private val listService: CmsListService,
     private val staticResourceService: StaticResourceService,
     private val resourceService: ResourceService,
@@ -127,15 +130,36 @@ class PartyCarouselPlacementImporter(
                 "legacy carousel identity 已导入，但 source fingerprint 已变化",
             )
         }
+        if (existing != null && !isAcceptedPosition2Runtime(listId, existing, item)) {
+            return PartyCarouselPlacementImportResult(
+                item.legacyKey,
+                PartyCarouselPlacementImportStatus.CONFLICT,
+                existing.listItemId,
+                "EU-29 已接受轮播项的 Runtime 状态已漂移，拒绝执行 LINK→ARTICLE 身份迁移",
+            )
+        }
 
         val draft = when (item.sourceType) {
             CmsListItemSourceType.LINK -> linkDraft(itemRoot, sourceSystem, sourcePage, item)
             CmsListItemSourceType.ARTICLE -> articleDraft(itemRoot, sourceSystem, sourcePage, item)
         }
-        val listItem = if (existing == null) {
-            listService.createItem(listId, draft)
+        val listItemId = if (existing == null) {
+            listService.createItem(listId, draft).id
         } else {
-            listService.updateItem(listId, existing.listItemId, draft)
+            // 仅 canonical 历史迁移可绕过交互式编辑的“来源身份不可变”约束。
+            // 上方已同时锁定 legacyKey / EU-29 fingerprint / Runtime 旧状态，普通 Admin/API 不会经过此路径。
+            val current = listMapper.findItem(existing.listItemId)
+            if (current == null || !isAcceptedPosition2Runtime(listId, existing, item, current)) {
+                return PartyCarouselPlacementImportResult(
+                    item.legacyKey,
+                    PartyCarouselPlacementImportStatus.CONFLICT,
+                    existing.listItemId,
+                    "EU-29 已接受轮播项在迁移写入前发生漂移，拒绝覆盖",
+                )
+            }
+            val updated = listMapper.updateItem(draft.migrationRecord(listId, existing.listItemId))
+            require(updated == 1) { "EU-29 position 2 Runtime 原位迁移失败" }
+            existing.listItemId
         }
 
         val mapping = CmsListItemLegacyMappingRecord(
@@ -146,13 +170,13 @@ class PartyCarouselPlacementImporter(
             sourceFingerprint = item.sourceFingerprint,
             imageSourceUrl = item.image.sourceUrl,
             imageSha256 = item.image.sha256,
-            listItemId = listItem.id,
+            listItemId = listItemId,
         )
         if (existing == null) mappingMapper.insert(mapping) else correctionMapper.update(mapping)
         return PartyCarouselPlacementImportResult(
             item.legacyKey,
             if (existing == null) PartyCarouselPlacementImportStatus.CREATED else PartyCarouselPlacementImportStatus.UPDATED,
-            listItem.id,
+            listItemId,
         )
     }
 
@@ -164,6 +188,44 @@ class PartyCarouselPlacementImporter(
             item.sourceType == CmsListItemSourceType.ARTICLE &&
             existing.sourceFingerprint == EU29_POSITION2_FINGERPRINT &&
             item.sourceFingerprint == EU30_POSITION2_FINGERPRINT
+
+    private fun isAcceptedPosition2Runtime(
+        listId: Long,
+        existing: CmsListItemLegacyMappingRecord,
+        item: PartyCarouselPlacementItem,
+        current: CmsListItemRecord? = listMapper.findItem(existing.listItemId),
+    ): Boolean {
+        if (current == null) return false
+        val extension = item.image.snapshotPath.substringAfterLast('.', "").lowercase()
+        val expectedImagePath = "/static/migrated/party/carousel/${item.image.sha256}.$extension"
+        return current.id == existing.listItemId &&
+            current.listId == listId &&
+            current.sourceType == CmsListItemSourceType.LINK.name &&
+            current.articleId == null &&
+            current.title == item.title &&
+            current.url == item.url &&
+            current.imagePath == expectedImagePath &&
+            current.imageResourceId == null &&
+            current.openMode == item.openMode &&
+            current.sortOrder == item.sourceOrder &&
+            current.enabled
+    }
+
+    private fun CmsListItemDraft.migrationRecord(listId: Long, id: Long) = CmsListItemRecord(
+        id = id,
+        listId = listId,
+        sourceType = sourceType.name,
+        articleId = articleId,
+        title = title,
+        subtitle = subtitle,
+        url = url,
+        imagePath = imagePath,
+        imageResourceId = imageResourceId,
+        openMode = openMode,
+        sortOrder = sortOrder,
+        enabled = enabled,
+        extraJson = extraJson,
+    )
 
     private fun linkDraft(
         itemRoot: Path,
