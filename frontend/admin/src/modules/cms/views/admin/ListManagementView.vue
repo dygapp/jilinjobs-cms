@@ -174,6 +174,9 @@ async function saveItem() {
 async function removeItem(row: CmsListItem) { if (!activeId.value) return; try { await ElMessageBox.confirm(`确定删除列表项“${row.title}”吗？`, '删除列表项', { type: 'warning' }); await deleteCmsListItem(activeId.value, row.id); await refreshItems() } catch (error) { if (error !== 'cancel' && error !== 'close') ElMessage.error(message(error)) } }
 function legacyPolicyName(policy: ContentImagePolicy) { return policy === 'NONE' ? '不使用图片' : policy === 'REQUIRED' ? '图片必填' : '图片可选' }
 function articleStatusLabel(status: string | null) { return status === 'PUBLISHED' ? '已发布' : status === 'WITHDRAWN' ? '已撤回' : '草稿' }
+function articleTypeLabel(articleType: string | null) { return articleType === 'EXTERNAL_LINK' ? '外链文章' : '站内文章' }
+function listItemSourceLabel(item: CmsListItem) { return item.sourceType === 'LINK' ? '链接' : articleTypeLabel(item.articleType) }
+function listItemSourceTagType(item: CmsListItem) { return item.sourceType === 'LINK' ? 'info' : item.articleType === 'EXTERNAL_LINK' ? 'warning' : 'success' }
 function articleSummary(article: CmsArticle): AdminArticleSummary { return { id: article.id, columnId: article.columnId, title: article.title, source: article.source, articleType: article.articleType, publishDate: article.publishDate, status: article.status, viewCount: article.viewCount, updatedAt: article.updatedAt } }
 const message = (error: unknown) => error instanceof Error ? error.message : '操作失败'
 </script>
@@ -195,9 +198,9 @@ const message = (error: unknown) => error instanceof Error ? error.message : '�
       <el-card class="admin-main-panel" shadow="never">
         <template #header><div class="admin-card-header"><div class="admin-card-header-title"><AdminPanelToggle :collapsed="sideCollapsed" label="列表导航" @toggle="sideCollapsed = !sideCollapsed" /><div><strong>{{active?.name || '请选择列表'}}</strong><span v-if="active" style="margin-left:8px;color:#909399">{{active.code}}</span><el-tag v-if="active?.preset" data-testid="active-list-preset" size="small" type="info" style="margin-left:8px">预置</el-tag><el-tag v-if="active" data-testid="active-list-image-requirement" size="small" style="margin-left:8px">图片：{{contentImagePolicyLabel(active.imagePolicy)}}</el-tag><span v-if="active" data-testid="active-list-image-policy" style="display:none">{{legacyPolicyName(active.imagePolicy)}}</span></div></div><el-button data-testid="add-cms-list-item" type="primary" :disabled="!active" @click="addItem">新增列表项</el-button></div></template>
         <el-table v-loading="loading" :data="items" row-key="id" data-testid="cms-list-item-table">
-          <el-table-column label="类型" width="90"><template #default="scope"><el-tag size="small" :type="asItem(scope.row).sourceType === 'ARTICLE' ? 'success' : 'info'">{{asItem(scope.row).sourceType === 'ARTICLE' ? '文章' : '链接'}}</el-tag></template></el-table-column>
+          <el-table-column label="数据来源" width="110"><template #default="scope"><el-tag size="small" :type="listItemSourceTagType(asItem(scope.row))">{{listItemSourceLabel(asItem(scope.row))}}</el-tag></template></el-table-column>
           <el-table-column prop="title" label="标题" min-width="200" show-overflow-tooltip />
-          <el-table-column label="目标" min-width="220" show-overflow-tooltip><template #default="scope"><span v-if="asItem(scope.row).sourceType === 'ARTICLE'">文章 #{{asItem(scope.row).articleId}} · {{articleStatusLabel(asItem(scope.row).articleStatus)}}</span><span v-else>{{asItem(scope.row).url || '—'}}</span></template></el-table-column>
+          <el-table-column label="目标" min-width="220" show-overflow-tooltip><template #default="scope"><span v-if="asItem(scope.row).sourceType === 'ARTICLE'">{{articleTypeLabel(asItem(scope.row).articleType)}} #{{asItem(scope.row).articleId}} · {{articleStatusLabel(asItem(scope.row).articleStatus)}}</span><span v-else>{{asItem(scope.row).url || '—'}}</span></template></el-table-column>
           <el-table-column v-if="active?.imagePolicy !== 'NONE'" label="图片" min-width="220"><template #default="scope"><div v-if="asItem(scope.row).sourceType === 'LINK' && asItem(scope.row).imagePath" style="display:flex;align-items:center;gap:10px"><AdaptiveImagePreview :src="asItem(scope.row).imagePath || ''" :alt="asItem(scope.row).title" adaptive style="width:68px;height:42px;flex:none" /><code style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{asItem(scope.row).imagePath}}</code></div><div v-else-if="asItem(scope.row).sourceType === 'ARTICLE' && asItem(scope.row).effectiveImageResourceId" style="display:flex;align-items:center;gap:10px"><AdaptiveImagePreview :src="resourceContentUrl(asItem(scope.row).effectiveImageResourceId!)" :alt="asItem(scope.row).title" adaptive style="width:68px;height:42px;flex:none" /><span>{{asItem(scope.row).imageResourceId ? '列表覆盖图片' : '继承文章主题图片'}}</span></div><span v-else>—</span></template></el-table-column>
           <el-table-column prop="sortOrder" label="排序" width="80" />
           <el-table-column label="状态" width="80"><template #default="scope">{{asItem(scope.row).enabled ? '启用' : '停用'}}</template></el-table-column>
@@ -210,7 +213,7 @@ const message = (error: unknown) => error instanceof Error ? error.message : '�
 
     <el-dialog v-model="itemDialog" :title="editingItem ? '编辑列表项' : '新增列表项'" width="760px">
       <el-form label-width="110px">
-        <el-form-item label="数据类型" required><el-radio-group v-model="itemForm.sourceType" data-testid="list-item-source-type" :disabled="editingItem != null" @change="sourceTypeChanged"><el-radio-button value="LINK">链接</el-radio-button><el-radio-button value="ARTICLE">文章</el-radio-button></el-radio-group><div v-if="editingItem != null" data-testid="list-item-source-type-immutable-hint" style="color:#909399;font-size:12px">列表项数据类型在创建后不可修改。</div></el-form-item>
+        <el-form-item label="数据来源" required><el-radio-group v-model="itemForm.sourceType" data-testid="list-item-source-type" :disabled="editingItem != null" @change="sourceTypeChanged"><el-radio-button value="LINK">直接链接</el-radio-button><el-radio-button value="ARTICLE">引用文章</el-radio-button></el-radio-group><div v-if="editingItem != null" data-testid="list-item-source-type-immutable-hint" style="color:#909399;font-size:12px">列表项数据来源在创建后不可修改。</div></el-form-item>
 
         <template v-if="itemForm.sourceType === 'LINK'">
           <el-form-item label="标题" required><el-input v-model="itemForm.title" /><div style="color:#909399;font-size:12px">标题作为后台识别名称保留；前台是否显示由具体页面设计决定。</div></el-form-item>
@@ -222,12 +225,12 @@ const message = (error: unknown) => error instanceof Error ? error.message : '�
         <template v-else>
           <el-form-item label="关联文章" required>
             <el-select v-model="itemForm.articleId" data-testid="list-item-article" filterable remote clearable :disabled="editingItem != null" :remote-method="searchArticles" :loading="articleSearching" placeholder="输入标题搜索文章" style="width:100%" @change="articleChanged">
-              <el-option v-for="article in articleOptions" :key="article.id" :label="`${article.title}（${articleStatusLabel(article.status)}）`" :value="article.id" />
+              <el-option v-for="article in articleOptions" :key="article.id" :label="`${article.title}（${articleTypeLabel(article.articleType)} · ${articleStatusLabel(article.status)}）`" :value="article.id" />
             </el-select>
             <div v-if="editingItem != null" data-testid="list-item-article-immutable-hint" style="color:#909399;font-size:12px">关联文章在列表项创建后不可修改；如需替换文章，请新建列表项。</div>
-            <div v-else style="color:#909399;font-size:12px">文章仍只属于原栏目；加入列表只是展示投放，不改变栏目和面包屑。</div>
+            <div v-else style="color:#909399;font-size:12px">文章仍只属于原栏目；列表只建立展示引用，不改变栏目归属。</div>
           </el-form-item>
-          <el-alert v-if="selectedArticle" :title="`当前文章：${selectedArticle.title}（${articleStatusLabel(selectedArticle.status)}）`" type="info" :closable="false" show-icon />
+          <el-alert v-if="selectedArticle" :title="`当前文章：${selectedArticle.title}（${articleTypeLabel(selectedArticle.articleType)} · ${articleStatusLabel(selectedArticle.status)}）`" type="info" :closable="false" show-icon />
           <el-form-item label="副标题"><el-input v-model="itemForm.subtitle" /></el-form-item>
 
           <el-form-item v-if="active?.imagePolicy !== 'NONE'" label="展示图片" :required="active?.imagePolicy === 'REQUIRED'">
