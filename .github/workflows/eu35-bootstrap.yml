@@ -1,0 +1,60 @@
+name: EU35 Bootstrap
+
+on:
+  push:
+    branches:
+      - feature/eu35-shared-rich-text-authoring
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout EU-35 branch
+        uses: actions/checkout@v7
+        with:
+          ref: feature/eu35-shared-rich-text-authoring
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Generate EU-35 source changes
+        run: python3 .github/scripts/eu35-bootstrap.py
+
+      - name: Install exact Tiptap dependencies and lock
+        working-directory: frontend/admin
+        run: npm install --no-audit --no-fund
+
+      - name: Build Admin
+        working-directory: frontend/admin
+        run: npm run build
+
+      - name: Verify generated boundaries
+        run: |
+          set -euo pipefail
+          test -f frontend/admin/package-lock.json
+          grep -q 'RichTextEditor' frontend/admin/src/modules/cms/views/admin/ArticleManagementView.vue
+          grep -q 'RichTextEditor' frontend/admin/src/modules/cms/views/admin/PageManagementView.vue
+          grep -q '3.31.2' frontend/admin/package-lock.json
+          ! grep -q 'document.execCommand' frontend/admin/src/modules/cms/views/admin/ArticleManagementView.vue
+          ! grep -q 'document.execCommand' frontend/admin/src/modules/cms/views/admin/PageManagementView.vue
+          ! grep -q 'contenteditable="true"' frontend/admin/src/modules/cms/views/admin/ArticleManagementView.vue
+          ! grep -q 'contenteditable="true"' frontend/admin/src/modules/cms/views/admin/PageManagementView.vue
+
+      - name: Commit implementation and remove bootstrap files
+        run: |
+          set -euo pipefail
+          rm .github/workflows/eu35-bootstrap.yml .github/scripts/eu35-bootstrap.py
+          git config user.name 'dygapp'
+          git config user.email 'dygapp@qq.com'
+          git add -A
+          git status --short
+          git diff --cached --check
+          git commit -m 'feat(admin): 收敛共享富文本编辑能力'
+          git push origin HEAD:feature/eu35-shared-rich-text-authoring
