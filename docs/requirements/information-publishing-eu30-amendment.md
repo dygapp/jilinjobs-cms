@@ -3,7 +3,7 @@ id: requirement-information-publishing-eu30-amendment
 title: 信息发布与网站服务需求 — EU-30 轮播修订
 type: business-requirement-amendment
 status: confirmed
-version: "V4.9-EU30"
+version: "V4.9-EU30-HR"
 classification:
   - l1-06
   - l2-28
@@ -16,21 +16,22 @@ relations:
     - docs/specifications/party.md
     - docs/technical/carousel-list-placement.md
 created_at: 2026-09-04
-updated_at: 2026-09-04
+updated_at: 2026-09-05
 ---
 
 # 信息发布与网站服务需求 — EU-30 轮播修订
 
 ## 1. 文档作用
 
-本文记录 EU-30 Human Discussion 已确认并进入实现的需求修订。
+本文记录 EU-30 Human Discussion / Human Review 已确认并进入实现的需求修订。
 
-在 EU-30 轮播范围内，本文对 `docs/requirements/information-publishing.md` V4.8 中以下旧表述形成**定向 supersede**：
+在 EU-30 范围内，本文对 `docs/requirements/information-publishing.md` V4.8 中以下旧表述形成**定向 supersede**：
 
 - `HOME_CAROUSEL_INTERVAL_SECONDS` 作为 Main-only 首页轮播属性；
 - 通用列表项只以自身标题 / URL / `imagePath` 表达目标内容；
 - 中心党建仅包含 `gcsy / gzdt / dgdz / llxx` 四个可访问内容栏目；
-- Party 轮播固定 5 秒或与 Main 分别维护行为参数。
+- Party 轮播固定 5 秒或与 Main 分别维护行为参数；
+- 文章必须保留独立“推荐”布尔属性，并把“推荐”作为全局公开文章排序层级。
 
 V4.8 其他未被本文明确修订的需求继续有效。后续对 `information-publishing.md` 做整版升级时，应把本文内容折叠回主需求文档，并删除已经被替代的旧描述。
 
@@ -156,7 +157,38 @@ EU-30 新增主题教育 2 条记录属于增量候选：
 - 保存采集 Run、Head SHA、legacy identity、fingerprint 和资源 SHA-256；
 - Fresh DB import、二次幂等和 Runtime 关联验证通过后，仍需 Human Review 才能把该增量标记为 accepted。
 
-## 9. Acceptance Criteria
+## 9. Human Review 内容运营收敛
+
+### 9.1 文章排序属性
+
+Human Review 重新评估“置顶 / 推荐 / 展示顺序”后确认：`推荐` 没有独立推荐专区、推荐标识、推荐工作流或其他独立消费场景，只是在全局文章查询中重复增加一级排序优先级。为避免多个近义排序开关造成运营歧义：
+
+- Article 不再维护全局 `recommended` 布尔属性；
+- 公开文章默认排序收敛为：`置顶 DESC → 展示顺序 DESC → 发布日期/实际发布时间 DESC → id DESC`；
+- `置顶`表达明确的栏目优先语义，`sortOrder`承担同级内容人工排序；
+- 若未来出现“首页推荐 / 专题推荐 / 人工推荐区”等独立展示需求，应使用 `CmsList + ARTICLE` 做明确投放，不重新给 Article 增加全局推荐状态。
+
+数据库通过后续 Flyway migration 删除历史 `recommended` 字段和对应索引维度；历史 migration 文件保持不可变。
+
+### 9.2 创建后不可修改的来源身份
+
+Human Review 确认以下字段决定对象的来源语义，创建后不得通过普通编辑改写：
+
+- Article：`articleType`（`INTERNAL / EXTERNAL_LINK`）；
+- CmsListItem：`sourceType`（`LINK / ARTICLE`）；
+- `sourceType=ARTICLE` 的 CmsListItem：`articleId`。
+
+管理端必须把上述字段在编辑态显示为只读/禁用；Backend 必须独立拒绝绕过 UI 的修改请求。若需要把列表项由 LINK 改为 ARTICLE、或把 ARTICLE 投放替换为另一篇文章，应删除原列表项并新建新的投放记录，使来源身份和审计语义清晰。
+
+本规则不机械扩展到普通可运营配置。文章栏目、标题、正文、图片、排序、打开方式、页面 `renderMode`、导航目标等仍按各自既有需求维护，除非后续 Requirement Change 明确把某字段提升为不可变身份。
+
+### 9.3 Party 内容页面主题一致性
+
+- Party 栏目列表页与文章详情页的 breadcrumb 使用同一字号、间距、颜色与交互主题；
+- Party 栏目分页控件的页码、跳转、每页条数下拉等全部交互态必须使用 Party 红色主题，不得泄漏 Main 蓝色主题；
+- 每页条数选择器应使用可主题化的共享控件，不依赖浏览器/操作系统不可控的原生 `<select>` 弹层选中色。
+
+## 10. Acceptance Criteria
 
 - Runtime 不再依赖 `HOME_CAROUSEL_INTERVAL_SECONDS`；
 - Main / Party 均使用 `CAROUSEL_INTERVAL_SECONDS` 和 `CAROUSEL_MAX_ITEMS`，管理端拒绝非正整数；
@@ -164,9 +196,12 @@ EU-30 新增主题教育 2 条记录属于增量候选：
 - ARTICLE 投放不改变文章栏目归属；
 - ARTICLE 发布状态控制公开可见性；
 - ARTICLE canonical route 继续遵守列表项 `openMode`；
+- Article `articleType` 创建后不可修改；CmsListItem `sourceType` 与 ARTICLE `articleId` 创建后不可修改，UI 与 Backend 同时强制；
+- Article 不再存在全局 `recommended` 属性，公开排序使用置顶、展示顺序和发布日期；独立推荐场景使用 CmsList ARTICLE 投放；
 - REQUIRED ARTICLE 可继承文章图片或使用列表覆盖 Resource，失去有效图片后不继续公开；
 - Main / Party 满足暂停恢复、初始及后续 visibility、reduced-motion、图片失败补位、当前项 identity 保持和手动页码行为；
 - Main / Party 保留独立视觉比例与主题样式；
+- Party 栏目/详情 breadcrumb 一致，栏目分页及每页条数选择器不存在 Main 蓝色主题泄漏；
 - `party-theme-education / 主题教育` 存在并属于 Party 内容作用域，但不进入 PartyHome 固定四栏目区域；
 - 历史轮播 position 2 使用 ARTICLE 稳定关系并保留原 PNG 覆盖图和 `NEW_WINDOW` 语义；
 - EU-29 acceptedSnapshot 与 EU-30 candidateExtension 的证据状态可独立审计；
