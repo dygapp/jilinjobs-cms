@@ -27,7 +27,21 @@ A Public implementation may be replaced without changing the following contracts
 - canonical migration datasets and stable legacy identities/fingerprints;
 - Main / Party content scopes.
 
-D1 does not declare every field currently returned by a Public endpoint permanently immutable. Field-level cleanup remains allowed when separately justified, but replacement implementations must depend on public response models, never Admin API clients.
+D1 does not declare every field currently returned by a Public endpoint permanently immutable. Field-level or projection cleanup remains allowed when separately justified, but replacement implementations must depend on public response models, never Admin API clients or Admin-only route knowledge.
+
+### Managed Article Resource projection
+
+Admin authoring may continue to persist managed Article body-image references in the current internal representation. That persistence representation is not a Public rendering contract.
+
+For a published Article response:
+
+1. the Backend shall sanitize `bodyHtml` according to the accepted rich-text safety policy;
+2. for resource IDs present in that Article's accepted `bodyImageResourceIds`, managed Admin content URLs in the sanitized HTML shall be projected to `/api/public/resources/{id}/content` before `PublicArticleDetail.bodyHtml` is returned;
+3. the projection shall be limited to the Article's associated body-image IDs and shall not rewrite arbitrary unrelated URLs;
+4. `PublicArticleDetail` response shape, Article identity, Resource identity and persisted `bodyHtml` contract remain unchanged;
+5. Public frontend code shall render the returned public projection without knowing or constructing `/api/admin/**` Resource routes.
+
+This is a responsibility correction, not a user-visible content change: the browser continues to request the same accepted published Resource through the Public Resource endpoint.
 
 ### Public URL contracts
 
@@ -55,12 +69,12 @@ Direct access/refresh shall continue to work for accepted routes. Main and Party
 Within that module:
 
 1. production source under `src/**` may call public runtime endpoints and load public/static assets;
-2. production source shall not call `/api/admin/**`;
+2. production source shall not call or require knowledge of `/api/admin/**` endpoints;
 3. Admin CRUD models, drafts, mutation functions and static-resource maintenance clients shall not live in Public production source unless a separately accepted public feature demonstrably requires them;
 4. shared Public API modules shall expose names/types reflecting public consumption rather than bundling unused Admin interfaces beside them;
 5. Main/Party/shared ownership may continue inside the Public module while both entries are implemented together; source organization is implementation detail, whereas Main/Party external identities remain stable.
 
-A static boundary check shall make accidental `/api/admin/**` reintroduction into Public production source fail verification.
+A static boundary check shall make accidental `/api/admin/**` endpoint knowledge reintroduction into Public production source fail verification.
 
 ## Delivery Boundary
 
@@ -94,7 +108,7 @@ D1 does not add a generic build/deploy framework now. CI/Review may continue to 
 
 The following tests/evidence express contracts a future implementation must continue satisfying:
 
-- public API / runtime data behavior;
+- public API / runtime data behavior, including managed Article body images resolving through Public Resource routes;
 - canonical public URL direct access;
 - Main/Party content-scope isolation;
 - observable public interaction/visual requirements already accepted by current Authority;
@@ -123,14 +137,15 @@ In particular:
 
 After this planning set is integrated, `slice-work` may derive the smallest concrete convergence slice from this Ready Specification and Ready Technical Plan. Any resulting Candidate Execution Unit must be able to prove at least:
 
-1. no `/api/admin/**` client call remains in `frontend/public-site/src/**`;
+1. no `/api/admin/**` endpoint/client knowledge remains in `frontend/public-site/src/**`;
 2. Public build succeeds after Admin-only API/model cleanup;
 3. existing Public Browser verification remains green with no user-visible behavior change;
 4. Admin build/verification remains green and continues owning its CRUD/resource clients;
-5. Backend/Public API contracts and Main/Party canonical routes are unchanged by source-ownership cleanup;
-6. a repository-level/static guard detects a future Public production-source dependency on `/api/admin/**`;
-7. no speculative framework/deployment abstraction or SSR/SSG decision is introduced;
-8. final diff remains attributable to Public responsibility isolation, its verification and Authority synchronization.
+5. `PublicArticleDetail.bodyHtml` projects associated managed body images to `/api/public/resources/{id}/content` in Backend while preserving persisted Article HTML, response shape, Resource identity and canonical routes;
+6. targeted Backend verification proves only associated body-image URLs are projected and arbitrary/unassociated URLs are not rewritten;
+7. a repository-level/static guard detects a future Public production-source dependency on `/api/admin/**`;
+8. no speculative framework/deployment abstraction or SSR/SSG decision is introduced;
+9. final diff remains attributable to Public responsibility isolation, its public Resource projection, verification and Authority synchronization.
 
 ## Deferred Decisions
 
