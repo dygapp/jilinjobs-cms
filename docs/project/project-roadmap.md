@@ -6,11 +6,11 @@
 
 ```text
 dygapp/agentic-dev
-Validation Baseline: master@394d1c3cde04b35940d5e33b7cbcaaf6557678ce
+Validation Baseline: master@d9fad0da83dbdb61cac5eb9778b0258c6861eef1
 Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be6b8535b3690daf3533ee22a46
 ```
 
-普通开发优先使用 Consumer-local：`AGENTS.md`、`docs/project/development-method.md`、当前 Requirement / Specification / Technical Plan。当前 Validation Baseline 相对正式 Capability Milestone 只增加 Stable Maintenance；本 Consumer 已选择性固化 Durable Evidence Promotion 与长生命周期 Review Environment owner / lease / stale-run 规则，没有新增 Method Stage、Engineering Discipline、Technology Profile 或 Task-oriented Skill。`agentic-dev` 自身 Project Roadmap、Foundation / Engineering Discipline Expansion 状态、PR / Issue / Experiment 事实不进入本 Roadmap。
+普通开发优先使用 Consumer-local：`AGENTS.md`、`docs/project/development-method.md`、当前 Requirement / Specification / Technical Plan。当前 Validation Baseline 相对上一 Consumer baseline只增加 1 个 Stable Maintenance 提交；本 Consumer 新选择性固化 Planning Candidate 与 Execution Unit 身份边界：Planning / Requirement Candidate 在 `slice-work` 前不具有 Execution Unit 身份，`slice-work` 在上游 Ready 后形成 Candidate Execution Unit 并可分配稳定 Identifier，只有 `readiness-check` PASS 后才成为 Ready Execution Unit；Identifier、Roadmap 顺序和 Issue 标签均不替代 Readiness 或 Execute 授权。此前固化的 Durable Evidence Promotion、长生命周期 Review Environment owner / lease / stale-run 规则与 Data Access Scope & Boundedness Control 继续有效；没有新增 Method Stage、Engineering Discipline、Technology Profile 或 Task-oriented Skill。`agentic-dev` 自身 Project Roadmap、Foundation / Engineering Discipline Expansion 状态、PR / Issue / Experiment 事实不进入本 Roadmap。
 
 ## 总体路线
 
@@ -27,8 +27,8 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | 公开站 Multi-entry Modular SPA 与中心党建基础框架 | 已完成 | Main / Party Theme + Router Boundary，Main 模块化，Party 独立 Entry / Router / Theme |
 | 中心党建正式页面与内容收敛 EU-26～EU-29 | 已完成 | 正式栏目、视觉、历史内容迁移、EU-29 accepted canonical dataset |
 | EU-30 Carousel Architecture & Behavior Convergence | 已完成 | LINK / ARTICLE 投放模型、统一轮播配置与生命周期、Article/List ownership-placement boundary、主题教育历史增量、position 2 ARTICLE 升级、最终 Human Review 与 accepted-canonical promotion 全部完成 |
-| EU-31 Database Migration Baseline Convergence | **当前执行单元 / Ready 收口中** | 经 Issues #59 / #60 完整 Readiness 后新分配；V1～V20 开发期 Flyway transcript 收敛为当前 schema + preset curated baseline，历史 Party migration knowledge 保留 |
-| EU-31 后续 Planning / Requirement Candidates | 规划层 | Issues #57 / #59 / #60 中剩余候选仍未编号，需重新完成 Intent / Specification / Slice / Readiness |
+| EU-31 Database Migration Baseline Convergence | **已完成** | V1～V20 开发期 Flyway transcript 已收敛为当前 schema + preset curated baseline，历史 Party migration knowledge 保留；后续 schema 恢复 append-only 演进 |
+| 后续 Planning / Requirement Candidates | **当前规划层** | Issues #57 / #59 / #60 中剩余候选尚未形成新的 Ready Execution Unit，需按当前方法从 Candidate 推进到 Ready Specification、Candidate Unit 与 Readiness Gate |
 | 真实第三方深度集成 | 条件性后续 | 根据接口、认证、可靠性与 Product Intent 再进入 Specification / Slice |
 
 ## 已完成里程碑
@@ -50,9 +50,10 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | 2026-09-04 | Validation Baseline 更新到 `agentic-dev master@394d1c3cde04b35940d5e33b7cbcaaf6557678ce`，选择性固化 Durable Evidence Promotion 与 Review Environment owner / lease / stale-run 规则 |
 | 2026-09-05 | EU-30 最终 Human Review PASS；`主题教育` 2 条历史增量被接受，当前 Party canonical Runtime Dataset 从 EU-29 provenance 181 篇扩展为 183 篇；EU-29 acceptedSnapshot 原样保留 |
 | 2026-09-05 | EU-30 acceptance promotion 后 CI #659、Canonical #123、EU-29→EU-30 Upgrade #71 全部 PASS；PR #58 随后已合并到 `main`，EU-30 canonical acceptance / Authority 正式收口 |
-| 2026-09-05 | 撤销原“EU-31 Browser Compatibility”预编号路线；数据库迁移 baseline、浏览器兼容、列表/资源治理与剩余公开站工作统一回到 Issues #59 / #60 的未编号 Planning / Requirement Candidates |
-| 2026-09-05 | 经 Issue #59 / #60 的 Intent / Requirement、Specification、Technical Planning、Slice 与 Readiness 审核，数据库迁移 baseline convergence 被选为下一独立执行单元并**重新分配** EU-31；该编号不继承旧 Browser Compatibility 规划 |
-| 2026-09-05 | EU-31 将 active Flyway V1～V20 收敛为 `V1__current_cms_schema.sql` + `V2__current_preset_data.sql`；Canonical Migration Verification #130 与 EU-30 Migration Upgrade Verification #78 PASS，证明 Fresh DB、183 篇 current Runtime Dataset、4 条 Party carousel、幂等导入及 EU-29→EU-30 position 2 兼容知识均保持有效 |
+| 2026-09-05 | 撤销原“EU-31 Browser Compatibility”预编号路线；数据库迁移 baseline、浏览器兼容、列表/资源治理与剩余公开站工作统一回到 Issues #59 / #60 的 Planning / Requirement Candidates |
+| 2026-09-05 | 数据库迁移 baseline convergence 在 Ready Specification / Technical Planning 后由 Slice Work 形成 Candidate EU-31，并经 Readiness Check PASS 晋升为 Ready Execution Unit；该编号不继承旧 Browser Compatibility 规划 |
+| 2026-09-05 | EU-31 将 active Flyway V1～V20 收敛为 `V1__current_cms_schema.sql` + `V2__current_preset_data.sql`；Canonical Migration Verification 与 EU-30 Migration Upgrade Verification PASS，证明 Fresh DB、183 篇 current Runtime Dataset、4 条 Party carousel、幂等导入及 EU-29→EU-30 position 2 兼容知识均保持有效；EU-31 已集成到 `main` |
+| 2026-09-05 | Validation Baseline 更新到 `agentic-dev master@d9fad0da83dbdb61cac5eb9778b0258c6861eef1`，选择性固化 Planning Candidate → Candidate Execution Unit → Ready Execution Unit 身份边界；Capability Milestone 保持不变 |
 
 ## 当前已固化结果
 
@@ -101,13 +102,13 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 
 ### EU-31 database migration baseline
 
-- EU-31 是在 EU-30 关闭后重新完成 Readiness 后新分配的编号，不继承历史“EU-31 Browser Compatibility”；
+- EU-31 是在 EU-30 关闭后重新完成上游 Specification / Technical Planning、Slice 与 Readiness 后形成并晋升的 Database Migration Baseline Convergence，不继承历史“EU-31 Browser Compatibility”；
 - 当前开发阶段没有必须从 V1～V20 原位升级的生产 / 持久数据库义务，因此允许 development baseline reset；
 - active Flyway 只保留 curated `V1__current_cms_schema.sql` 与 `V2__current_preset_data.sql`，Fresh DB 直接创建当前正式模型与当前正式 preset，不再先制造后删除已废弃结构；
 - schema 中长期保留 importer 所需的 `cms_article_legacy_mapping`、`cms_list_item_legacy_mapping`，Fresh DB 初始为空；
 - `data-migrations/party/v1/**`、stable identity、legacy mapping、fingerprint、canonical reports 与 importer 不由 Flyway baseline 接管，也未在 EU-31 中重写；
 - EU-29→EU-30 position 2 LINK→ARTICLE 只保留为 importer migration-only compatibility；Fresh DB 不预置旧 LINK 状态；
-- EU-31 合并后，新的 schema 变化必须从该 baseline 之后恢复正常 append-only Flyway 演进。
+- EU-31 已完成并集成；新的 schema 变化必须从该 accepted baseline 之后恢复正常 append-only Flyway 演进。
 
 ## 已完成阶段：管理端工程分离与功能收敛
 
@@ -150,33 +151,33 @@ EU-26 Party Evidence & Authority Convergence：已完成
 8. acceptance promotion 后 CI #659 / Canonical #123 / Upgrade #71 PASS；
 9. PR #58 已合并到 `main`，EU-30 canonical acceptance / Authority 关闭。
 
-## 当前阶段：EU-31 Database Migration Baseline Convergence
+## 已完成阶段：EU-31 Database Migration Baseline Convergence
 
-EU-30 合并后没有机械继承旧预编号路线。Issues #59 / #60 经重新分析后，Database Migration Baseline Convergence 具备：
+EU-30 合并后没有机械继承旧预编号路线。Issues #59 / #60 经重新分析后，Database Migration Baseline Convergence 按以下职责链形成并执行：
 
 ```text
 Intent / Requirement Clarification
-→ Specification
+→ Ready Specification
 → Technical Planning / migration lineage audit
-→ Slice Work
-→ Readiness Check
-→ EU-31 新编号分配
+→ Slice Work forms Candidate EU-31
+→ Readiness Check PASS
+→ Ready EU-31
+→ Execute / Converge / Integration
 ```
 
-当前 Authority：
+追溯 Authority：
 
 - `docs/requirements/database-migration-baseline-convergence.md`
 - `docs/specifications/database-migration-baseline-convergence.md`
 - `docs/technical/database-migration-baseline-convergence.md`
 - `docs/work/eu31-database-migration-baseline-convergence.md`
 - Issue #59 / #60
-- PR #61
 
-实现已完成，Canonical Migration Verification #130 与 EU-30 Migration Upgrade Verification #78 已 PASS；PR #61 在最终 CI / Authority 收口后进入 Ready for Review，**不得自动合并**。
+最终状态：实现与验证均已完成并集成到 `main`；Canonical Migration Verification、EU-30 Migration Upgrade Verification 与 CI 均提供了当前阶段所需证据。该阶段现已关闭，不再作为 Fresh Context 的当前 Execution Unit。
 
-## 后续未编号 Planning / Requirement Candidates
+## 当前阶段：后续 Planning / Requirement Candidates
 
-Issue #59 / #60 中除已晋升为 EU-31 的数据库 baseline 外，其余候选仍属于 Planning / Requirement Candidates；Issue #57 仍是可选导航架构讨论，不自动晋升。
+Issue #59 / #60 中除已完成 EU-31 的数据库 baseline 外，其余候选仍属于 Planning / Requirement Candidates；Issue #57 仍是可选导航架构讨论，不自动晋升。
 
 当前候选范围包括但不限于：
 
@@ -190,15 +191,17 @@ Issue #59 / #60 中除已晋升为 EU-31 的数据库 baseline 外，其余候�
 8. 正式内容进入 Runtime 后的桌面、移动端与主要浏览器回归；
 9. Issue #57 的 navigation location query generalization。
 
-这些候选不是已批准的 Implementation Scope。任何候选进入实现前仍必须重新完成：
+这些候选不是已批准的 Implementation Scope，也不因 Roadmap 顺序、Issue 编号或未来可能使用的 `EU-xx` 名称获得 Execution Unit 身份。任何候选进入实现前仍必须完成：
 
 ```text
-Intent / Requirement Clarification
-→ Specification
-→ 必要的 Technical Planning / Research
-→ Slice Work
+Planning / Requirement Candidate
+→ Intent / Requirement Clarification（按需）
+→ Ready Specification
+→ 必要的 Technical Planning / Research（完成或确认不需要）
+→ Slice Work forms Candidate Execution Unit(s)，可分配稳定 Identifier
 → Readiness Check
-→ 分配新的 Execution Unit 编号
+→ Ready Execution Unit
+→ Execute
 ```
 
 ## 阶段切换原则
@@ -207,9 +210,9 @@ Intent / Requirement Clarification
 - Public Multi-entry Modular SPA 与 Party Foundation 阶段已关闭；
 - Party EU-26～EU-29 已关闭；
 - EU-30 已完成 Human Review、canonical acceptance、post-promotion verification 并合并；
-- EU-31 是 Readiness 后重新分配的 Database Migration Baseline Convergence，不是历史预编号 Browser Compatibility；
-- EU-31 Feature PR 不自动合并；只有项目负责人明确指令后才能进入 Integration；
-- Issues #57 / #59 / #60 中剩余候选仍不得因 Roadmap、旧 Execution Plan 或历史编号直接进入实现；
+- EU-31 Database Migration Baseline Convergence 已完成并集成，不是历史预编号 Browser Compatibility；
+- 当前没有 Ready Execution Unit；Issues #57 / #59 / #60 中剩余候选不得因 Roadmap、旧 Execution Plan、预编号或 Issue 标签直接进入实现；
+- 未来候选可以在 `slice-work` 形成 Candidate Execution Unit 时获得稳定 Identifier，但只有 `readiness-check` PASS 后才能成为 Ready Execution Unit；
 - 若未来 Browser Compatibility 候选被正式切分，必须基于届时 current implementation 重新取得兼容证据，不继承 EU-30 的旧 DOM / CSS / dependency 假设；
 - 若未来继续数据库 schema 演进，应从 EU-31 accepted baseline 后 append-only 新 Flyway migration，不再改写 accepted baseline；
 - canonical historical dataset、legacy mapping、fingerprint、Importer、EU-29→EU-30 upgrade knowledge 与证据长期独立保留；
@@ -222,13 +225,10 @@ Intent / Requirement Clarification
 2. `README.md`
 3. `docs/project/project-roadmap.md`
 4. `docs/project/development-method.md`
-5. 当前 Requirement / Specification / Technical Plan
-6. 当前 EU-31：`docs/requirements/database-migration-baseline-convergence.md`
-7. 当前 EU-31：`docs/specifications/database-migration-baseline-convergence.md`
-8. 当前 EU-31：`docs/technical/database-migration-baseline-convergence.md`
-9. 当前 EU-31：`docs/work/eu31-database-migration-baseline-convergence.md`
-10. `docs/technical/verification-strategy.md`
-11. GitHub Issues #57 / #59 / #60（EU-31 以外的剩余 Planning / Requirement Candidates）
-12. 当前 Branch / PR / CI / Runtime Evidence
+5. 当前候选直接相关的 Requirement / Specification / Technical Plan（如已形成）
+6. `docs/technical/verification-strategy.md`
+7. GitHub Issues #57 / #59 / #60（当前 Planning / Requirement Candidates）
+8. 已完成 EU-31 追溯文档：`docs/requirements/database-migration-baseline-convergence.md`、`docs/specifications/database-migration-baseline-convergence.md`、`docs/technical/database-migration-baseline-convergence.md`、`docs/work/eu31-database-migration-baseline-convergence.md`（仅在相关工作需要时读取）
+9. 当前 Branch / PR / CI / Runtime Evidence
 
 不得使用其他聊天或其他项目状态补充未固化的 Consumer 产品事实。

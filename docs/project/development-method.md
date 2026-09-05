@@ -14,7 +14,7 @@ Validation Baseline Ref:
 master
 
 Validation Baseline Commit:
-394d1c3cde04b35940d5e33b7cbcaaf6557678ce
+d9fad0da83dbdb61cac5eb9778b0258c6861eef1
 
 Capability Milestone Tag:
 baseline-2026-09-04-engineering-capability
@@ -23,9 +23,16 @@ Capability Milestone Commit:
 5be2e6aad29b2be6b8535b3690daf3533ee22a46
 ```
 
-当前 Validation Baseline 以 `master@394d1c3cde04b35940d5e33b7cbcaaf6557678ce` 为精确方法来源；正式 Capability Milestone Tag 仍指向 `5be2e6aad29b2be6b8535b3690daf3533ee22a46`。相对该 Tag，`master` 只前进 1 个 Stable Maintenance 提交，没有增加 Method Stage、Engineering Discipline、Technology Profile、Task-oriented Skill 或 Skill Contract，也不改变本 Consumer 当前依赖版本或产品路线。
+当前 Validation Baseline 以 `master@d9fad0da83dbdb61cac5eb9778b0258c6861eef1` 为精确方法来源；正式 Capability Milestone Tag 仍指向 `5be2e6aad29b2be6b8535b3690daf3533ee22a46`。相对上一 Consumer baseline `master@394d1c3cde04b35940d5e33b7cbcaaf6557678ce`，`master` 只前进 1 个 Stable Maintenance 提交，没有增加 Method Stage、Engineering Discipline、Technology Profile、Task-oriented Skill 或 Skill Contract，也不改变本 Consumer 当前依赖版本或产品路线。
 
-本次从 Stable Maintenance 选择性固化两项具有持续约束价值的生命周期规则：
+本次从 Stable Maintenance 选择性固化 **Planning Candidate 与 Execution Unit 身份边界**：
+
+- Roadmap / Backlog / Issue 中的 Future Work、Planning Candidate、Requirement Candidate 在进入 `slice-work` 前不具有 Execution Unit 身份；不得由 `EU-xx`、顺序、标签或“下一单元”等名称反向推断已经完成切分或具备执行条件。
+- 只有 Specification 已经 Ready，且必要 Technical Planning 已完成或确认不需要时，`slice-work` 才形成 Candidate Execution Units；此时可以为 Candidate Unit 分配稳定 Identifier，用于追踪和依赖管理。
+- Candidate Unit 的 Identifier 不构成 Readiness PASS，也不授予 Execute 权限；只有 `readiness-check` 返回 PASS 后，该 Unit 才是 Ready Execution Unit，并可按当前 Repository Authority 进入 Execute。
+- `readiness-check` 的“可检查输入”是语义要求，不机械要求独立 Artifact 文件；但也不得从文件名、编号、Roadmap 顺序或 Issue 标签补造缺失的 Specification / Candidate Unit 事实。
+
+上一 Consumer baseline 已选择性固化并继续保留：
 
 - **Ephemeral Evidence Promotion**：Workflow Artifact、远程输出、临时 Snapshot 等执行证据，如果经过适当 Authority 接受并成为后续稳定迁移、评审或运行输入，必须显式晋升为 Consumer-owned、可持续维护、版本化或等价持久输入；保留来源 Run / Head / Artifact / digest 等 provenance / integrity，并在 Promotion 后对受影响最终状态重新取得 Current Evidence，长期消费者不得继续依赖会过期的临时 Artifact。
 - **Long-lived Review Environment Lifecycle**：长生命周期单实例 Review Environment 必须具有可观察 owner、lease 取得 / 续期 / 到期 / 释放与 stale-run 策略；自动 Verification 与有效 Human Review 可以具有不同租约生命周期；是否由新 Head 接管由 Consumer Policy 决定，不机械采用 `latest-head-wins`，不得在有效 Human Review lease 存续时无审计地摧毁环境。
@@ -78,15 +85,21 @@ Technology Profile 的适用顺序为：
 ```text
 Consumer Authority / Domain Context
         ↓
+Planning / Requirement Candidate
+        ↓
 Clarify Intent（仅在存在实质产品歧义时）
         ↓
-Specification
+Ready Specification
         ↓
-Technical Planning?（按需）
+Technical Planning?（按需，完成或确认不需要）
         ↓
 Slice Work
         ↓
+Candidate Execution Unit(s) + optional stable Identifier
+        ↓
 Readiness Check
+        ↓
+Ready Execution Unit
         ↓
 Fresh-context Execute
         ↓
@@ -102,6 +115,9 @@ Repository Policy / Human Authority
 - 阶段是工作状态，不要求每个阶段都创建文档。
 - Specification 聚焦 WHAT / WHY。
 - Technical Plan 只在跨 Execution Unit 的长期 HOW 协调具有持续价值时持久化。
+- Planning / Requirement Candidate 在 `slice-work` 前不具有 Execution Unit 身份；Roadmap 顺序、预编号、Issue 标签或名称不能替代上游 Readiness。
+- `slice-work` 只在 Specification Ready 且必要 Technical Planning 已完成或确认不需要后形成 Candidate Execution Unit；Candidate Unit 可以获得稳定 Identifier，但该 Identifier 不构成 Readiness PASS 或 Execute 授权。
+- `readiness-check` 对 Candidate Unit 执行统一 Gate；只有 PASS 后才成为 Ready Execution Unit。
 - Execution Unit 应纵向、范围明确、可独立验证、可追溯并适合 Fresh Context。
 - 实施文件、具体命令和局部施工步骤优先通过 JIT Plan 在执行时确定。
 - 通用 Method 的终点是 `Ready to Integrate`；实际 merge / release / deploy 仍服从本仓库授权和策略。
@@ -361,7 +377,9 @@ README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项�
 - 只加载当前工作真正需要的 Skill；
 - 不要求每个工作都走完整 Skill 清单；
 - Skill 不得覆盖 Consumer Authority；
-- `execute-unit` 在实现前读取当前适用的 Consumer-local Engineering Discipline / Technology Profile 规则，并在完成前执行 Final Diff Scope Check；涉及集合、列表、Top-N、分页或 snapshot 时，同时应用 Data Access Scope & Boundedness Control，不以页面显示数量、固定 window 或客户端过滤替代业务 scope；
+- `slice-work` 只消费 Ready Specification 与必要 Technical Plan；它形成 Candidate Execution Units，并可分配稳定 Identifier，但不得自行给出 Readiness PASS；
+- `readiness-check` 只读检查 Specification、Candidate Unit Set 与相关 Authority；编号、Roadmap 顺序或 Issue 标签不能替代可检查输入，也不能替代 Gate Verdict；
+- `execute-unit` 只执行已经通过 Readiness 的 Ready Execution Unit；在实现前读取当前适用的 Consumer-local Engineering Discipline / Technology Profile 规则，并在完成前执行 Final Diff Scope Check；涉及集合、列表、Top-N、分页或 snapshot 时，同时应用 Data Access Scope & Boundedness Control，不以页面显示数量、固定 window 或客户端过滤替代业务 scope；
 - 遇到实现阶段的意外失败时，使用系统化调试路径，而不是无证据试错；
 - 当失败来自 Test / Workflow assertion 等 Verification Artifact 时，`systematic-debug` 必须先核对其与当前 Authority 的一致性，允许并要求在证据支持时识别 Stale Verification Contract；
 - 当 GitHub Actions 的触发、CI 可观察性、Artifact、容器 Runtime、Human Review Baseline、timeout / cancellation、diagnostics 或祖先 Evidence reuse 会影响证据可靠性时，按需应用 `github-actions-verification`；
