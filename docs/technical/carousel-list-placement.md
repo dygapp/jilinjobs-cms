@@ -3,7 +3,7 @@ id: technical-carousel-list-placement
 title: 轮播与列表内容投放技术方案
 type: technical-plan
 status: confirmed
-version: "V1.2"
+version: "V1.3"
 relations:
   upstream:
     - docs/requirements/information-publishing.md
@@ -48,6 +48,18 @@ ARTICLE 项不改变文章所属栏目。文章撤回或未发布时，该项仍
 `openMode` 继续是 CmsListItem 的独立通用字段，ARTICLE 不因目标改为站内文章而丢失该语义。Main / Party 对 INTERNAL ARTICLE 生成各自 canonical route 后，仍按列表项 `DEFAULT / SAME_WINDOW / NEW_WINDOW` 决定目标窗口；EXTERNAL_LINK ARTICLE 使用文章当前外链地址并遵守同一打开方式规则。
 
 历史迁移数据不得保存未来 Runtime `articleId`。Canonical Migration Dataset 使用 `sourceSystem + legacyKey` 作为文章稳定引用，Importer 在文章导入并建立 `cms_article_legacy_mapping` 后再解析成实际 `articleId`。
+
+### 4.1 来源身份不可变
+
+`CmsListItem.sourceType` 决定列表项是独立 LINK 还是 Article Placement，属于创建时身份；ARTICLE 的 `articleId` 决定该投放引用哪篇文章，同样属于来源身份。普通编辑只允许修改展示属性，不允许把已有记录改造成另一种来源语义：
+
+- LINK 不得通过 update 直接变为 ARTICLE，ARTICLE 也不得直接变为 LINK；
+- ARTICLE 创建后不得通过 update 替换 `articleId`；
+- 需要切换来源类型或替换关联文章时，删除原列表项并创建新列表项；
+- Admin 编辑态禁用这些身份字段；Backend `updateItem` 独立执行相同校验，防止 API 绕过 UI；
+- `subtitle / imageResourceId / openMode / sortOrder / enabled / extraJson` 等展示属性继续允许按现有规则编辑。
+
+Article 本身同样把 `articleType` 视为创建时身份；`INTERNAL / EXTERNAL_LINK` 创建后不得普通编辑切换。栏目归属、标题、正文、来源、日期、图片、置顶和展示顺序仍属于可运营内容属性。
 
 ## 5. 通用图片处理流程
 
@@ -171,8 +183,9 @@ Importer 采用依赖顺序：
 
 EU-30 至少验证：
 
-- Flyway Fresh DB；
+- Flyway Fresh DB 与 V20 从既有数据库升级；
 - LINK / ARTICLE 两种列表项 CRUD 与 `imagePolicy` 三分支校验；
+- Article 类型、ListItem sourceType、ARTICLE articleId 在 Admin 和 Backend API 层均不可通过普通编辑修改；
 - 草稿/撤回 ARTICLE 项不公开；
 - 文章封面继承与正文图片/上传图片覆盖；
 - Main / Party 统一 interval/max 配置以及 Backend 对非正整数的拒绝；
@@ -180,6 +193,7 @@ EU-30 至少验证：
 - 0/1/N 项、手动分页、hover/focus/初始及后续 visibility/reduced-motion；
 - 图片失败补位、当前 item identity 保持和最大项数；
 - ARTICLE canonical route 与 `openMode`；
+- Party 栏目/详情 breadcrumb 计算样式一致，分页每页条数菜单的 selected/expanded/focus 状态使用 Party 红色主题；
 - Main / Party build + Browser E2E；
 - EU-29 Canonical Dataset Fresh DB import、二次导入幂等、主题教育栏目和第二轮播项 ARTICLE 关联对账；
 - 使用固定 accepted EU-29 commit 复现同库升级，并验证非预期 position 2 fingerprint 漂移会被拒绝为冲突。
