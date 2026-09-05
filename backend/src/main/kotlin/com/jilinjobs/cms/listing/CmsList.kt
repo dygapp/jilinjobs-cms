@@ -201,7 +201,7 @@ class CmsListService(
 
     @Transactional
     fun createList(draft: CmsListDraft): CmsListDefinition {
-        val normalized = normalizeList(draft)
+        val normalized = normalizeList(draft.copy(groupCode = "GENERAL"))
         if (mapper.findByCode(normalized.code) != null) throw CmsListValidationException("列表 Code 已存在：${normalized.code}")
         val record = normalized.record()
         mapper.insertList(record)
@@ -211,7 +211,7 @@ class CmsListService(
     @Transactional
     fun updateList(id: Long, draft: CmsListDraft): CmsListDefinition {
         val current = requireList(id)
-        val normalized = normalizeList(draft.copy(code = current.code))
+        val normalized = normalizeList(draft.copy(code = current.code, groupCode = current.groupCode))
         validateExistingItemsForPolicy(id, normalized.imagePolicy)
         mapper.updateList(normalized.record(id))
         return mapper.findById(id)!!.model()
