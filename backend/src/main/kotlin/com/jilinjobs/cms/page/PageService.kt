@@ -1,5 +1,6 @@
 package com.jilinjobs.cms.page
 
+import com.jilinjobs.cms.common.RichTextHtmlPolicy
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
@@ -53,7 +54,8 @@ class PageService(private val mapper: PageMapper) : PageLookup {
         val url=if(group==null) "/page/${page.alias}" else "/page/${group.alias}/${page.alias}"
         val publicGroup=group?.publicGroup()
         val crumbs=buildList { add(BreadcrumbItem("首页","/")); if(group!=null) add(BreadcrumbItem(group.name)); add(BreadcrumbItem(page.name,url)) }
-        return PublicPage(page.id,page.alias,page.name,page.bodyHtml,page.renderMode,page.embedUrl,url,publicGroup,crumbs)
+        val publicBodyHtml = if (page.renderMode == PageRenderMode.RICH_TEXT) RichTextHtmlPolicy.sanitize(page.bodyHtml) else page.bodyHtml
+        return PublicPage(page.id,page.alias,page.name,publicBodyHtml,page.renderMode,page.embedUrl,url,publicGroup,crumbs)
     }
 
     private fun CmsPageGroup.publicGroup():PublicPageGroup = PublicPageGroup(alias,name,mapper.findByGroup(id).map{it.model()}.filter{it.enabled}.map{ PublicPageMember(it.alias,it.name,"/page/$alias/${it.alias}",it.sortOrder) })
@@ -64,7 +66,8 @@ class PageService(private val mapper: PageMapper) : PageLookup {
         d.groupId?.let { mapper.findGroupById(it)?:throw PageValidationException("单页分组不存在：$it") }
         mapper.findPages().map{it.model()}.firstOrNull{it.groupId==d.groupId&&it.alias==a&&it.id!=currentId}?.let { throw PageValidationException("单页别名已存在：$a") }
         if(d.renderMode==PageRenderMode.INTERNAL_STATIC && !d.embedUrl.isNullOrBlank() && !d.embedUrl.startsWith("/")) throw PageValidationException("站内静态页面必须使用本站路径")
-        return d.copy(alias=a,name=n,embedUrl=d.embedUrl?.trim()?.takeIf{it.isNotBlank()})
+        val bodyHtml = if (d.renderMode == PageRenderMode.RICH_TEXT) RichTextHtmlPolicy.sanitize(d.bodyHtml) else d.bodyHtml
+        return d.copy(alias=a,name=n,bodyHtml=bodyHtml,embedUrl=d.embedUrl?.trim()?.takeIf{it.isNotBlank()})
     }
     private fun alias(raw:String):String { val a=raw.trim().lowercase(); if(!a.matches(Regex("[a-z0-9][a-z0-9-]{0,99}")))throw PageValidationException("别名只能使用小写字母、数字和连字符"); return a }
     private fun PageDraft.record(id:Long?=null)=PageRecord(id,groupId,alias,name,bodyHtml,renderMode.name,embedUrl,sortOrder,enabled)

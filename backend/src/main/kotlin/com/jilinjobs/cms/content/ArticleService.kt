@@ -3,6 +3,7 @@ package com.jilinjobs.cms.content
 import com.jilinjobs.cms.column.ColumnContentDependency
 import com.jilinjobs.cms.column.ColumnQuery
 import com.jilinjobs.cms.common.ContentImagePolicy
+import com.jilinjobs.cms.common.RichTextHtmlPolicy
 import com.jilinjobs.cms.resource.ArticleResourceAssociation
 import com.jilinjobs.cms.resource.ArticleResourceLinks
 import org.springframework.stereotype.Component
@@ -76,7 +77,7 @@ class ArticleService(
             article.columnId,
             column.name,
             article.title,
-            article.bodyHtml,
+            RichTextHtmlPolicy.sanitize(article.bodyHtml),
             article.source,
             article.publishDate,
             article.bodyImageResourceIds,
@@ -120,6 +121,7 @@ class ArticleService(
 
         return draft.copy(
             title = title,
+            bodyHtml = RichTextHtmlPolicy.sanitize(draft.bodyHtml),
             source = draft.source.trim(),
             externalUrl = null,
             bodyImageResourceIds = draft.bodyImageResourceIds.distinct(),
