@@ -1,12 +1,12 @@
 export type ArticleStatus='DRAFT'|'PUBLISHED'|'WITHDRAWN'
 export type ArticleType='INTERNAL'|'EXTERNAL_LINK'
-export interface CmsArticle{id:number;columnId:number;title:string;bodyHtml:string;source:string;articleType:ArticleType;externalUrl:string|null;publishDate:string|null;pinned:boolean;recommended:boolean;sortOrder:number;status:ArticleStatus;actualPublishedAt:string|null;viewCount:number;updatedAt:string;coverResourceId:number|null;bodyImageResourceIds:number[];attachmentResourceIds:number[]}
+export interface CmsArticle{id:number;columnId:number;title:string;bodyHtml:string;source:string;articleType:ArticleType;externalUrl:string|null;publishDate:string|null;pinned:boolean;sortOrder:number;status:ArticleStatus;actualPublishedAt:string|null;viewCount:number;updatedAt:string;coverResourceId:number|null;bodyImageResourceIds:number[];attachmentResourceIds:number[]}
 export interface AdminArticleSummary{id:number;columnId:number;title:string;source:string;articleType:ArticleType;publishDate:string|null;status:ArticleStatus;viewCount:number;updatedAt:string}
 export interface AdminArticlePage{items:AdminArticleSummary[];page:number;size:number;total:number}
 export interface AdminArticleQuery{keyword?:string;columnId?:number|null;status?:ArticleStatus|null;articleType?:ArticleType|null;page?:number;size?:number}
-export interface ArticleDraft{columnId:number;title:string;bodyHtml:string;source:string;articleType:ArticleType;externalUrl:string|null;publishDate:string|null;pinned:boolean;recommended:boolean;sortOrder:number;coverResourceId:number|null;bodyImageResourceIds:number[];attachmentResourceIds:number[]}
+export interface ArticleDraft{columnId:number;title:string;bodyHtml:string;source:string;articleType:ArticleType;externalUrl:string|null;publishDate:string|null;pinned:boolean;sortOrder:number;coverResourceId:number|null;bodyImageResourceIds:number[];attachmentResourceIds:number[]}
 export interface CmsResource{id:number;storageKey:string;originalFilename:string;contentType:string|null;sizeBytes:number}
-export interface PublicArticleSummary{id:number;columnId:number;columnName:string;columnAlias:string;title:string;source:string;articleType:ArticleType;externalUrl:string|null;publishDate:string|null;pinned:boolean;recommended:boolean;sortOrder:number}
+export interface PublicArticleSummary{id:number;columnId:number;columnName:string;columnAlias:string;title:string;source:string;articleType:ArticleType;externalUrl:string|null;publishDate:string|null;pinned:boolean;sortOrder:number}
 export interface PublicArticleDetail{id:number;columnId:number;columnName:string;columnAlias:string;title:string;bodyHtml:string;source:string;articleType:ArticleType;externalUrl:string|null;publishDate:string|null;bodyImageResourceIds:number[];attachments:PublicArticleAttachment[]}
 export interface PublicArticleAttachment{id:number;originalFilename:string;contentType:string|null;sizeBytes:number}
 export interface PublicArticlePage{items:PublicArticleSummary[];page:number;size:number;total:number}
