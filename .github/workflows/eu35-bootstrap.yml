@@ -79,6 +79,9 @@ jobs:
           ! grep -q 'contenteditable="true"' frontend/admin/src/modules/cms/views/admin/ArticleManagementView.vue
           ! grep -q 'contenteditable="true"' frontend/admin/src/modules/cms/views/admin/PageManagementView.vue
 
+      - name: Remove ephemeral install and build outputs
+        run: rm -rf frontend/admin/node_modules frontend/admin/dist
+
       - name: Collect generated diff scope
         run: |
           set -euo pipefail
