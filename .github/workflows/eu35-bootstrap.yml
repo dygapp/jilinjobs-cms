@@ -6,7 +6,7 @@ on:
       - feature/eu35-shared-rich-text-authoring
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   bootstrap:
@@ -18,6 +18,7 @@ jobs:
         with:
           ref: feature/eu35-shared-rich-text-authoring
           fetch-depth: 1
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -49,10 +50,6 @@ jobs:
 
           path = Path('frontend/admin/package-lock.json')
           text = path.read_text(encoding='utf-8')
-
-          # GitHub Actions checkout authentication may be visible to git-based npm
-          # resolution. A lockfile is durable source authority and must never persist
-          # URL userinfo or GitHub token-shaped credentials.
           text = re.sub(
               r'((?:git\+)?https://)[^/@\s"]+@github\.com/',
               r'\1github.com/',
@@ -61,10 +58,7 @@ jobs:
           path.write_text(text, encoding='utf-8')
 
           token = re.compile(r'(?:github_pat_|gh[pousr]_)[A-Za-z0-9_]{10,}')
-          matches = []
-          for number, line in enumerate(text.splitlines(), start=1):
-              if token.search(line):
-                  matches.append(number)
+          matches = [number for number, line in enumerate(text.splitlines(), start=1) if token.search(line)]
           if matches:
               raise SystemExit(f'package-lock still contains GitHub credential-shaped data at lines {matches}')
           PY
@@ -85,14 +79,67 @@ jobs:
           ! grep -q 'contenteditable="true"' frontend/admin/src/modules/cms/views/admin/ArticleManagementView.vue
           ! grep -q 'contenteditable="true"' frontend/admin/src/modules/cms/views/admin/PageManagementView.vue
 
-      - name: Commit implementation and remove bootstrap files
+      - name: Verify generated diff scope
         run: |
           set -euo pipefail
-          rm .github/workflows/eu35-bootstrap.yml .github/scripts/eu35-bootstrap.py
-          git config user.name 'dygapp'
-          git config user.email 'dygapp@qq.com'
-          git add -A
           git status --short
-          git diff --cached --check
-          git commit -m 'feat(admin): 收敛共享富文本编辑能力'
-          git push origin HEAD:feature/eu35-shared-rich-text-authoring
+          python3 - <<'PY'
+          import subprocess
+
+          expected = {
+              'frontend/admin/package.json',
+              'frontend/admin/package-lock.json',
+              'frontend/admin/src/modules/cms/components/RichTextEditor.vue',
+              'frontend/admin/src/modules/cms/views/admin/ArticleManagementView.vue',
+              'frontend/admin/src/modules/cms/views/admin/PageManagementView.vue',
+              'frontend/admin/tests/e2e/rich-text-authoring.spec.ts',
+          }
+          tracked = set(subprocess.check_output(['git', 'diff', '--name-only'], text=True).splitlines())
+          untracked = set(subprocess.check_output(['git', 'ls-files', '--others', '--exclude-standard'], text=True).splitlines())
+          actual = tracked | untracked
+          if actual != expected:
+              raise SystemExit(f'unexpected generated diff scope: expected={sorted(expected)} actual={sorted(actual)}')
+          PY
+
+      - name: Stage credential-free implementation artifact
+        run: |
+          set -euo pipefail
+          artifact="$RUNNER_TEMP/eu35-artifact"
+          mkdir -p "$artifact"
+          for path in \
+            frontend/admin/package.json \
+            frontend/admin/package-lock.json \
+            frontend/admin/src/modules/cms/components/RichTextEditor.vue \
+            frontend/admin/src/modules/cms/views/admin/ArticleManagementView.vue \
+            frontend/admin/src/modules/cms/views/admin/PageManagementView.vue \
+            frontend/admin/tests/e2e/rich-text-authoring.spec.ts
+          do
+            mkdir -p "$artifact/$(dirname "$path")"
+            cp "$path" "$artifact/$path"
+          done
+          ARTIFACT_DIR="$artifact" python3 - <<'PY'
+          from pathlib import Path
+          import os
+          import re
+
+          root = Path(os.environ['ARTIFACT_DIR'])
+          token = re.compile(r'(?:github_pat_|gh[pousr]_)[A-Za-z0-9_]{10,}')
+          userinfo = re.compile(r'(?:git\+)?https://[^/@\s"<>]+@github\.com/', re.I)
+          findings = []
+          for path in root.rglob('*'):
+              if not path.is_file():
+                  continue
+              text = path.read_text(encoding='utf-8')
+              if token.search(text) or userinfo.search(text):
+                  findings.append(str(path.relative_to(root)))
+          if findings:
+              raise SystemExit(f'credential-shaped data found in artifact: {findings}')
+          PY
+
+      - name: Upload EU-35 implementation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: eu35-implementation
+          path: ${{ runner.temp }}/eu35-artifact
+          if-no-files-found: error
+          retention-days: 1
