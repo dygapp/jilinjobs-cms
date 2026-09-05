@@ -51,12 +51,11 @@ const message = (error: unknown) => error instanceof Error ? error.message : '�
 
 <template>
   <main class="admin-shell">
-    <header class="page-header"><div><p class="eyebrow">站点设置</p><h1>网站属性</h1><p class="subtitle">维护站点身份信息与少量低风险站点级行为参数；预置属性定义不可删除，属性值仍可正常维护。</p></div><el-button data-testid="add-site-property" type="primary" @click="add">新增属性</el-button></header>
-    <el-alert title="网站属性用于运营可维护的站点级数据；预置只保护稳定属性定义，不限制运营值修改。数据库、上传安全限制等仍由工程/部署配置负责。" type="info" :closable="false" show-icon />
+    <header class="page-header"><div><p class="eyebrow">站点设置</p><h1>网站属性</h1><p class="subtitle">维护网站属性定义和当前运营值。</p></div><el-button data-testid="add-site-property" type="primary" @click="add">新增属性</el-button></header>
 
-    <div class="page-management-layout" :class="{ 'side-panel-collapsed': sideCollapsed }" style="margin-top:16px">
+    <div class="page-management-layout" :class="{ 'side-panel-collapsed': sideCollapsed }">
       <el-card class="page-group-panel" shadow="never">
-        <div class="page-group-heading"><strong>属性分组</strong><span>分组来自 CMS 资源元数据</span></div>
+        <div class="page-group-heading"><strong>属性分组</strong><span>选择分组筛选属性</span></div>
         <button class="page-group-item" :class="{ active: selectedGroup == null }" data-testid="site-property-group-all" type="button" @click="selectGroup(null)"><span>全部属性</span><small>{{ items.length }}</small></button>
         <button v-for="group in groups" :key="group.code" class="page-group-item" :class="{ active: selectedGroup === group.code }" :data-testid="`site-property-group-${group.code}`" type="button" @click="selectGroup(group.code)"><span>{{ group.name }}</span><small>{{ groupCount(group.code) }}</small></button>
       </el-card>
@@ -65,7 +64,7 @@ const message = (error: unknown) => error instanceof Error ? error.message : '�
         <div class="page-list-context" data-testid="site-property-group-context"><div><AdminPanelToggle :collapsed="sideCollapsed" label="属性分组" @toggle="sideCollapsed = !sideCollapsed" /><strong>{{ currentGroupName }}</strong><span>{{ selectedGroup == null ? '查看全部网站属性' : '当前属性分组' }}</span></div><small>共 {{ filteredItems.length }} 项</small></div>
         <el-table v-loading="loading" :data="filteredItems" row-key="key" data-testid="site-config-table">
           <el-table-column label="属性名称" min-width="150"><template #default="scope"><span>{{asConfig(scope.row).name}}</span><el-tag v-if="asConfig(scope.row).preset" :data-testid="`preset-site-config-${asConfig(scope.row).key}`" size="small" type="info" style="margin-left:8px">预置</el-tag></template></el-table-column>
-          <el-table-column prop="key" label="Key" min-width="190" /><el-table-column label="分组" width="130"><template #default="scope">{{ groupName(asConfig(scope.row).groupCode) }}</template></el-table-column><el-table-column label="类型" width="100"><template #default="scope">{{ typeName(asConfig(scope.row).valueType) }}</template></el-table-column>
+          <el-table-column prop="key" label="属性标识" min-width="190" /><el-table-column label="分组" width="130"><template #default="scope">{{ groupName(asConfig(scope.row).groupCode) }}</template></el-table-column><el-table-column label="类型" width="100"><template #default="scope">{{ typeName(asConfig(scope.row).valueType) }}</template></el-table-column>
           <el-table-column label="属性值" min-width="240"><template #default="scope"><div class="site-config-value-preview"><template v-if="asConfig(scope.row).valueType === 'RESOURCE_PATH' && asConfig(scope.row).value"><AdaptiveImagePreview :src="asConfig(scope.row).value" :alt="asConfig(scope.row).name" adaptive style="width:72px;height:44px;flex:none" /><code :title="asConfig(scope.row).value">{{asConfig(scope.row).value}}</code></template><el-tag v-else-if="asConfig(scope.row).valueType === 'BOOLEAN'" size="small" :type="asConfig(scope.row).value.toLowerCase() === 'true' ? 'success' : 'info'">{{asConfig(scope.row).value.toLowerCase() === 'true' ? '是' : '否'}}</el-tag><span v-else class="site-config-value-text" :title="asConfig(scope.row).value">{{asConfig(scope.row).value || '—'}}</span></div></template></el-table-column>
           <el-table-column label="操作" width="118" fixed="right"><template #default="scope"><div class="admin-table-actions"><AdminIconAction :testid="`edit-site-config-value-${asConfig(scope.row).key}`" label="编辑值" :icon="Edit" @click="openValueEditor(asConfig(scope.row))" /><AdminIconAction label="定义" :icon="Setting" @click="edit(asConfig(scope.row))" /><AdminIconAction v-if="!asConfig(scope.row).preset" label="删除" :icon="Delete" type="danger" @click="remove(asConfig(scope.row))" /></div></template></el-table-column>
         </el-table>
@@ -84,12 +83,12 @@ const message = (error: unknown) => error instanceof Error ? error.message : '�
 
     <el-dialog v-model="dialog" :title="editingKey ? '编辑网站属性' : '新增网站属性'" width="680px">
       <el-form label-width="100px">
-        <el-form-item label="Key"><el-input v-model="form.key" :disabled="Boolean(editingKey)" placeholder="例如 SUPPORT_EMAIL" /><div v-if="editingItem?.preset" data-testid="preset-site-config-key-hint" style="color:#909399;font-size:12px">预置网站属性的 Key 是稳定站点身份，不允许修改或删除。</div></el-form-item>
+        <el-form-item label="属性标识"><el-input v-model="form.key" :disabled="Boolean(editingKey)" placeholder="例如 SUPPORT_EMAIL" /><div v-if="editingItem?.preset" data-testid="preset-site-config-key-hint" style="color:#909399;font-size:12px">预置网站属性的标识不可修改或删除。</div></el-form-item>
         <el-form-item label="名称"><el-input v-model="form.name" /></el-form-item>
-        <el-form-item label="分组"><el-select v-model="form.groupCode" data-testid="site-property-group-select" style="width:100%"><el-option v-for="group in groups" :key="group.code" :label="group.name" :value="group.code" /></el-select><div style="color:#909399;font-size:12px">分组定义来自部署资源配置，不在 CMS 数据库中单独维护。</div></el-form-item>
+        <el-form-item label="分组"><el-select v-model="form.groupCode" data-testid="site-property-group-select" style="width:100%"><el-option v-for="group in groups" :key="group.code" :label="group.name" :value="group.code" /></el-select></el-form-item>
         <el-form-item label="类型"><el-select v-model="form.valueType" style="width:100%"><el-option v-for="item in types" :key="item.value" :label="item.label" :value="item.value" /></el-select></el-form-item>
         <el-form-item v-if="!editingKey" label="初始值"><ImageResourcePicker v-if="form.valueType === 'RESOURCE_PATH'" :model-value="form.value" :upload-directory="`uploads/site-properties/${form.key || 'NEW_PROPERTY'}`" adaptive-preview @update:model-value="value => form.value = value || ''" /><el-input v-else v-model="form.value" :type="form.valueType === 'JSON' ? 'textarea' : form.valueType === 'INTEGER' ? 'number' : 'text'" :rows="5" /></el-form-item>
-        <el-alert v-else title="属性值请使用列表中的“编辑值”操作维护；这里仅调整属性定义。修改类型前应确保当前值符合新类型。" type="info" :closable="false" style="margin-bottom:18px" />
+        <el-alert v-else title="属性值请通过列表中的“编辑值”修改；这里维护属性定义。修改类型前请确认当前值符合新类型。" type="info" :closable="false" style="margin-bottom:18px" />
         <el-form-item label="说明"><el-input v-model="form.description" type="textarea" /></el-form-item><el-form-item label="排序"><el-input-number v-model="form.sortOrder" /></el-form-item><el-form-item label="必填"><el-switch v-model="form.required" /></el-form-item><el-form-item label="启用"><el-switch v-model="form.enabled" /></el-form-item>
       </el-form>
       <template #footer><el-button @click="dialog=false">取消</el-button><el-button type="primary" :loading="Boolean(saving)" @click="saveDefinition">保存</el-button></template>

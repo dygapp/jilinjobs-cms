@@ -338,7 +338,7 @@ function toMessage(error: unknown): string { return error instanceof Error ? err
       <div>
         <p class="eyebrow">网站内容</p>
         <h1>文章管理</h1>
-        <p class="subtitle">按栏目结构维护站内文章和外链文章；父栏目同时查看全部下级栏目内容。</p>
+        <p class="subtitle">按栏目维护站内文章和外链文章。</p>
       </div>
       <el-button data-testid="add-article" type="primary" @click="openCreate">新增文章</el-button>
     </header>
@@ -390,7 +390,7 @@ function toMessage(error: unknown): string { return error instanceof Error ? err
       <el-form label-width="95px">
         <el-form-item label="文章标题" required><el-input v-model="form.title" data-testid="article-title" placeholder="请输入文章标题" maxlength="200" show-word-limit /></el-form-item>
         <el-form-item label="所属栏目" required><el-tree-select v-model="form.columnId" data-testid="article-column-tree-select" :data="columnSelectTree" check-strictly default-expand-all placeholder="请选择所属栏目" style="width:100%" /></el-form-item>
-        <el-form-item label="内容类型" required><el-radio-group v-model="form.articleType" data-testid="article-type" :disabled="editingId != null"><el-radio-button value="INTERNAL">站内文章</el-radio-button><el-radio-button value="EXTERNAL_LINK">外链文章</el-radio-button></el-radio-group><div v-if="editingId != null" data-testid="article-type-immutable-hint" style="color:#909399;font-size:12px">文章类型在创建后不可修改。</div></el-form-item>
+        <el-form-item label="内容类型" required><el-radio-group v-model="form.articleType" data-testid="article-type" :disabled="editingId != null"><el-radio-button value="INTERNAL">站内文章</el-radio-button><el-radio-button value="EXTERNAL_LINK">外链文章</el-radio-button></el-radio-group><div v-if="editingId != null" data-testid="article-type-immutable-hint" style="color:#909399;font-size:12px">创建后不可更改。</div></el-form-item>
         <el-form-item label="内容来源"><el-input v-model="form.source" data-testid="article-source" placeholder="请输入内容来源" maxlength="200" /></el-form-item>
         <el-form-item v-if="form.articleType === 'EXTERNAL_LINK'" label="原文链接" required><el-input v-model="form.externalUrl" data-testid="article-external-url" placeholder="https://来源网站/..." maxlength="2000" /></el-form-item>
         <el-form-item label="发布日期"><el-date-picker v-model="form.publishDate" data-testid="article-publish-date" type="date" value-format="YYYY-MM-DD" placeholder="选择发布日期" style="width:100%" /></el-form-item>
@@ -409,7 +409,6 @@ function toMessage(error: unknown): string { return error instanceof Error ? err
             <small v-if="formCoverPolicy === 'REQUIRED'" data-testid="article-cover-required" style="color:#909399">草稿可暂存，发布前必须设置封面。</small>
           </div>
         </el-form-item>
-        <el-alert v-else-if="form.articleType === 'INTERNAL'" data-testid="article-cover-disabled" title="当前栏目不使用文章封面图片。" type="info" :closable="false" show-icon />
 
         <el-form-item v-if="form.articleType === 'INTERNAL'" label="附件">
           <div class="attachments">
@@ -418,7 +417,7 @@ function toMessage(error: unknown): string { return error instanceof Error ? err
           </div>
         </el-form-item>
 
-        <el-form-item label="运营属性"><el-checkbox v-model="form.pinned" data-testid="article-pinned">置顶</el-checkbox><span class="sort-label">展示顺序</span><el-input-number v-model="form.sortOrder" data-testid="article-sort-order" :step="1" /><div style="color:#909399;font-size:12px">公开排序依次按置顶、展示顺序和发布日期；需要独立推荐展示时使用列表投放。</div></el-form-item>
+        <el-form-item label="运营属性"><el-checkbox v-model="form.pinned" data-testid="article-pinned">置顶</el-checkbox><span class="sort-label">展示顺序</span><el-input-number v-model="form.sortOrder" data-testid="article-sort-order" :step="1" /><div style="color:#909399;font-size:12px">公开排序优先级：置顶 → 展示顺序 → 发布日期。</div></el-form-item>
         <el-alert v-if="form.articleType === 'EXTERNAL_LINK'" title="外链文章只保存标题、日期、来源和原文链接等基础信息，公开访问时直接跳转来源网站。" type="info" :closable="false" show-icon />
         <el-alert v-else title="新建文章固定保存为草稿；普通编辑不会改变当前发布状态。" type="info" :closable="false" show-icon />
       </el-form>
