@@ -98,7 +98,6 @@ class PartyThemeEducationRecordImporter(
                 externalUrl = record.content.externalUrl,
                 publishDate = record.content.publishDate,
                 pinned = false,
-                recommended = false,
                 sortOrder = -record.evidence.sourceOrder,
                 coverResourceId = null,
                 bodyImageResourceIds = bodyImageIds,
