@@ -171,7 +171,7 @@ async function handleImageFile(event: Event) {
 
       <el-button-group>
         <el-button size="small" :data-testid="`${testId}-link`" @click="editLink">链接</el-button>
-        <el-button size="small" :data-testid="`${testId}-unlink`" @click="editor.chain().focus().unsetLink().run()">取消链接</el-button>
+        <el-button size="small" :data-testid="`${testId}-unlink`" @click="editor.chain().focus().unsetLink().run()">移除链接</el-button>
         <el-button size="small" :data-testid="`${testId}-image`" :loading="uploading" @click="requestImage">{{ uploadImage ? '插入图片' : '图片地址' }}</el-button>
       </el-button-group>
 
