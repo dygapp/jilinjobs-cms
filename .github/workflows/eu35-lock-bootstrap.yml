@@ -1,0 +1,39 @@
+name: EU-35 Lock Bootstrap
+
+on:
+  push:
+    branches:
+      - feature/eu35-shared-rich-text-authoring
+
+permissions:
+  contents: write
+
+jobs:
+  sync-lock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: feature/eu35-shared-rich-text-authoring
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: frontend/admin/package-lock.json
+
+      - name: Regenerate package lock
+        working-directory: frontend/admin
+        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+
+      - name: Commit lock and remove bootstrap workflow
+        run: |
+          git diff --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/admin/package.json frontend/admin/package-lock.json
+          git rm .github/workflows/eu35-lock-bootstrap.yml
+          git commit -m "chore(admin): 按正式环境刷新依赖锁文件"
+          git push origin HEAD:feature/eu35-shared-rich-text-authoring
