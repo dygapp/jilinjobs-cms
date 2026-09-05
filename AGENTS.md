@@ -4,7 +4,7 @@
 
 `jilinjobs-cms` 是吉林省智慧就业云平台中“信息发布与网站服务”相关能力的独立 Consumer 项目。
 
-中心党建正式页面、真实栏目、历史内容迁移与最终 Review 已由 EU-26～EU-29 收敛完成；**EU-30 Carousel Architecture & Behavior Convergence 已于 2026-09-05 完成最终 Human Review、canonical acceptance 与 post-promotion verification。当前没有新的编号 Execution Unit。** 后续只允许从本仓库 GitHub Issues #59 / #60 的未编号 Planning / Requirement Candidates 中选择目标，并按 `docs/project/development-method.md` 完成 Intent / Requirement Clarification、Specification、必要 Technical Planning / Research、Slice Work 与 Readiness Check 后再生成新的 Execution Unit。不得从其他项目、其他会话、个人记忆、旧预编号路线、惯例或实现便利性中推导、补充或扩大本项目的产品范围。
+中心党建正式页面、真实栏目、历史内容迁移与最终 Review 已由 EU-26～EU-29 收敛完成；EU-30 Carousel Architecture & Behavior Convergence 已完成最终 Human Review、canonical acceptance 与 post-promotion verification；**EU-31 Database Migration Baseline Convergence 已完成实现、验证并合并到 `main`。当前没有 Ready Execution Unit。** 后续只允许从本仓库 GitHub Issues #57 / #59 / #60 的 Planning / Requirement Candidates 中选择目标，并按 `docs/project/development-method.md` 完成 Intent / Requirement Clarification、Specification 与必要 Technical Planning / Research；只有上游已经 Ready 时，`slice-work` 才形成 Candidate Execution Unit，并可为其分配稳定 Identifier；只有 `readiness-check` PASS 后才晋升为 Ready Execution Unit 并允许进入 Execute。不得从其他项目、其他会话、个人记忆、旧预编号路线、惯例或实现便利性中推导、补充或扩大本项目的产品范围。
 
 ## 文档语言与术语表达
 
@@ -52,10 +52,10 @@
 
 - Repository：`dygapp/agentic-dev`
 - Validation Baseline Ref：`master`
-- Validation Baseline Commit：`394d1c3cde04b35940d5e33b7cbcaaf6557678ce`
+- Validation Baseline Commit：`d9fad0da83dbdb61cac5eb9778b0258c6861eef1`
 - Capability Milestone Tag：`baseline-2026-09-04-engineering-capability` → `5be2e6aad29b2be6b8535b3690daf3533ee22a46`
 
-当前 Validation Baseline 以 `agentic-dev` 已进入默认分支的精确 commit 为准。相对上一 Consumer baseline `baseline-2026-09-04-engineering-capability@5be2e6aad29b2be6b8535b3690daf3533ee22a46`，`master@394d1c3cde04b35940d5e33b7cbcaaf6557678ce` 只前进 1 个 Stable Maintenance 提交：没有增加 Method Stage、Engineering Discipline、Technology Profile、Task-oriented Skill 或新的 Skill Contract；本 Consumer 只选择性固化两项具有持续价值的外部生命周期规则：其一，临时 Workflow Artifact / 远程输出等执行证据在被适当 Authority 接受并成为后续稳定迁移、评审或运行输入时，必须显式晋升为 Consumer 可持续维护的持久输入，保留 provenance / integrity，并对 Promotion 后最终状态重新取得受影响 Current Evidence；其二，长生命周期单实例 Review Environment 必须定义可观察的 owner、lease、stale-run、释放 / 接管策略，区分自动 Verification 与有效 Human Review lease，不采用机械 `latest-head-wins`。`agentic-dev` 自身 Stable Maintenance、Issue #58、Eval、PR 与 Roadmap 状态不继承为 Consumer 项目事实。
+当前 Validation Baseline 以 `agentic-dev` 已进入默认分支的精确 commit 为准。相对上一 Consumer baseline `master@394d1c3cde04b35940d5e33b7cbcaaf6557678ce`，`master@d9fad0da83dbdb61cac5eb9778b0258c6861eef1` 只前进 1 个 Stable Maintenance 提交：没有增加 Method Stage、Engineering Discipline、Technology Profile、Task-oriented Skill 或新的 Skill Contract。本 Consumer 选择性固化 **Planning Candidate 与 Execution Unit 身份边界**：Planning / Requirement Candidate 在进入 `slice-work` 前不具有 Execution Unit 身份；Specification Ready 且必要 Technical Planning 已完成或确认不需要后，`slice-work` 形成 Candidate Execution Unit，并可以分配稳定 Identifier；Identifier 只承担追踪 / 依赖身份，不构成 Readiness PASS，也不授予 Execute 权限；只有 `readiness-check` PASS 后才成为 Ready Execution Unit。Roadmap 顺序、预编号、Issue 标签或名称中的 `EU-xx` 均不能替代该状态链。上一 baseline 已固化的 Ephemeral Evidence Promotion 与 Long-lived Review Environment owner / lease / stale-run 生命周期规则继续有效。`agentic-dev` 自身 Stable Maintenance、Issue #58、Eval、PR 与 Roadmap 状态不继承为 Consumer 项目事实。
 
 上一 Capability Milestone 已包含并继续保留 **Data Access Scope & Boundedness Control（数据访问作用域与有界性控制）** Engineering Discipline；本 Consumer 继续以现有 `docs/technical/verification-strategy.md` 的作用域查询、分页窗口与边界验证规则作为项目级验证实现。Technology Profile 与当前项目依赖不因本次 baseline 升级改变。
 
@@ -65,7 +65,7 @@
 docs/project/development-method.md
 ```
 
-后续普通开发应优先读取并遵循本仓库 `AGENTS.md`、`README.md`、`docs/project/development-method.md`、`docs/project/project-roadmap.md` 以及与当前工作相关的 Consumer Authority。除非项目负责人明确要求更新 `agentic-dev` baseline，或本仓库尚未固化某个必要的方法问题，否则不要求为普通开发重新跨仓库读取 `agentic-dev`。
+后续普通开发应优先读取并遵守本仓库 `AGENTS.md`、`README.md`、`docs/project/development-method.md`、`docs/project/project-roadmap.md` 以及与当前工作相关的 Consumer Authority。除非项目负责人明确要求更新 `agentic-dev` baseline，或本仓库尚未固化某个必要的方法问题，否则不要求为普通开发重新跨仓库读取 `agentic-dev`。
 
 当项目负责人明确要求升级 baseline 时，应：
 
@@ -82,6 +82,7 @@ docs/project/development-method.md
 - 阶段是工作状态，不为了表示阶段而机械创建 Artifact；
 - 规格说明（Specification）聚焦 WHAT / WHY；
 - 只有存在跨执行单元（Execution Units）的长期 HOW 协调价值时，才持久化技术计划（Technical Plan）；
+- Planning / Requirement Candidate 在 `slice-work` 前保持规划身份；`slice-work` 只在上游 Ready 后形成 Candidate Execution Unit，可分配稳定 Identifier；Identifier 不等于 Readiness 或 Execute 授权，只有 `readiness-check` PASS 后才成为 Ready Execution Unit；
 - 优先形成纵向、可独立验证、范围明确且 context-fit 的 Execution Unit；
 - 在条件允许时使用 Fresh Context；
 - 实施时选择当前证据支持的最低必要复杂度；没有当前 Requirement、Specification、Architecture、Verification、安全、性能、生命周期或真实多消费者证据支持的额外抽象、配置项、依赖、扩展点、框架层和未来分支默认不进入实现；必要的失败路径、安全措施、验证能力、行为保持型 preparatory refactor 与薄适配不属于“过度设计”；
