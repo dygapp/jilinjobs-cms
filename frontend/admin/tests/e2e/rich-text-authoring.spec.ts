@@ -68,6 +68,7 @@ test('EU-35：Article 与 Page 共用完整富文本工具栏且已有 HTML 可�
   await page.keyboard.press('Backspace')
   await expect(reopenedArticle.getByTestId('article-body-editor').locator('img')).toHaveCount(0)
   await reopenedArticle.getByTestId('save-article').click()
+  await expect(reopenedArticle).toBeHidden()
   const storedWithoutImage = await (await request.get(`/api/admin/articles/${article.id}`)).json() as { bodyImageResourceIds: number[] }
   expect(storedWithoutImage.bodyImageResourceIds).toEqual([])
 
@@ -125,6 +126,7 @@ test('EU-35：粘贴 schema 不保留未知节点且服务端安全边界继续�
   await expect(editor).toContainText('安全文字')
   await expect(editor.locator('script,iframe')).toHaveCount(0)
   await dialog.getByRole('button', { name: '保存' }).click()
+  await expect(dialog).toBeHidden()
   const pages = await (await request.get('/api/admin/pages')).json() as Array<{ alias: string; bodyHtml: string }>
   const saved = pages.find(item => item.alias === `eu35-paste-${suffix}`)
   expect(saved).toBeTruthy()
