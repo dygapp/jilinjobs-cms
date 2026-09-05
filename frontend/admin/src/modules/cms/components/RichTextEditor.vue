@@ -102,6 +102,8 @@ function editLink() {
 
 function requestImage() {
   if (props.uploadImage) {
+    const current = editor.value
+    if (current) current.chain().focus().setTextSelection(current.state.selection.to).run()
     fileInput.value?.click()
     return
   }
