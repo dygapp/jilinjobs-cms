@@ -28,6 +28,9 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | 中心党建正式页面与内容收敛 EU-26～EU-29 | 已完成 | 正式栏目、视觉、历史内容迁移、EU-29 accepted canonical dataset |
 | EU-30 Carousel Architecture & Behavior Convergence | 已完成 | LINK / ARTICLE 投放模型、统一轮播配置与生命周期、Article/List ownership-placement boundary、主题教育历史增量、position 2 ARTICLE 升级、最终 Human Review 与 accepted-canonical promotion 全部完成 |
 | EU-31 Database Migration Baseline Convergence | **已完成** | V1～V20 开发期 Flyway transcript 已收敛为当前 schema + preset curated baseline，历史 Party migration knowledge 保留；后续 schema 恢复 append-only 演进 |
+| EU-32 List Definition Group Governance | **已完成** | `groupCode` 保持内部结构元数据，ordinary Admin 不再暴露结构分组写权限 |
+| EU-33 Admin Guidance & Explanation Responsibility Governance | **已完成** | 管理界面保留操作必要信息，结构身份与实现背景退出普通运营提示 |
+| EU-34～EU-35 Rich Text Safety & Shared Authoring | **已完成** | 服务端 HTML safety foundation + Article/Page 共用 Tiptap 富文本编辑能力完成并通过 Post-Integration Verification |
 | 后续 Planning / Requirement Candidates | **当前规划层** | Issues #57 / #59 / #60 中剩余候选尚未形成新的 Ready Execution Unit，需按当前方法从 Candidate 推进到 Ready Specification、Candidate Unit 与 Readiness Gate |
 | 真实第三方深度集成 | 条件性后续 | 根据接口、认证、可靠性与 Product Intent 再进入 Specification / Slice |
 
@@ -54,6 +57,9 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | 2026-09-05 | 数据库迁移 baseline convergence 在 Ready Specification / Technical Planning 后由 Slice Work 形成 Candidate EU-31，并经 Readiness Check PASS 晋升为 Ready Execution Unit；该编号不继承旧 Browser Compatibility 规划 |
 | 2026-09-05 | EU-31 将 active Flyway V1～V20 收敛为 `V1__current_cms_schema.sql` + `V2__current_preset_data.sql`；Canonical Migration Verification 与 EU-30 Migration Upgrade Verification PASS，证明 Fresh DB、183 篇 current Runtime Dataset、4 条 Party carousel、幂等导入及 EU-29→EU-30 position 2 兼容知识均保持有效；EU-31 已集成到 `main` |
 | 2026-09-05 | Validation Baseline 更新到 `agentic-dev master@d9fad0da83dbdb61cac5eb9778b0258c6861eef1`，选择性固化 Planning Candidate → Candidate Execution Unit → Ready Execution Unit 身份边界；Capability Milestone 保持不变 |
+| 2026-09-05 | Issue #60 / B1 收敛为 EU-32，完成列表定义内部 `groupCode` 与 ordinary Admin 写权限边界治理并集成 |
+| 2026-09-05 | Issue #60 / B2 收敛为 EU-33，完成管理端用户提示、结构身份与实现解释责任治理并集成 |
+| 2026-09-05 | Issue #60 / B3 先后形成 EU-34 / EU-35：服务端 Rich Text HTML safety foundation 与 Article/Page shared Tiptap authoring 均完成、集成并通过 Post-Integration CI |
 
 ## 当前已固化结果
 
@@ -109,6 +115,14 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 - `data-migrations/party/v1/**`、stable identity、legacy mapping、fingerprint、canonical reports 与 importer 不由 Flyway baseline 接管，也未在 EU-31 中重写；
 - EU-29→EU-30 position 2 LINK→ARTICLE 只保留为 importer migration-only compatibility；Fresh DB 不预置旧 LINK 状态；
 - EU-31 已完成并集成；新的 schema 变化必须从该 accepted baseline 之后恢复正常 append-only Flyway 演进。
+
+### EU-32～EU-35 管理端治理与富文本能力
+
+- EU-32：`CmsList.groupCode` 继续作为内部结构元数据；ordinary Admin create 使用 `GENERAL`，update 保留已有结构分组，管理界面不再暴露分组输入；
+- EU-33：用户可见提示只承担当前操作所需信息；结构身份、实现原因和 Method/Requirement 解释不再作为普通运营提示重复暴露；
+- EU-34：Article/Page 共用服务端 HTML safety policy，写入与公开读取边界均执行安全收敛，legacy 内容不批量改写；
+- EU-35：Article/Page 共用 CMS-local Tiptap `RichTextEditor`，保留 Article managed Resource association 与 Page 既有边界；
+- EU-34 / EU-35 共同保持 `bodyHtml` 为唯一持久 HTML contract，不引入第二正文 Authority。
 
 ## 已完成阶段：管理端工程分离与功能收敛
 
@@ -177,7 +191,7 @@ Intent / Requirement Clarification
 
 ## 当前阶段：后续 Planning / Requirement Candidates
 
-Issue #59 / #60 中除已完成 EU-31 的数据库 baseline 外，其余候选仍属于 Planning / Requirement Candidates；Issue #57 仍是可选导航架构讨论，不自动晋升。
+Issues #59 / #60 中除已完成的 EU-31～EU-35 对应事项外，其余候选仍属于 Planning / Requirement Candidates；Issue #57 仍是可选导航架构讨论，不自动晋升。
 
 当前候选范围包括但不限于：
 
@@ -211,6 +225,7 @@ Planning / Requirement Candidate
 - Party EU-26～EU-29 已关闭；
 - EU-30 已完成 Human Review、canonical acceptance、post-promotion verification 并合并；
 - EU-31 Database Migration Baseline Convergence 已完成并集成，不是历史预编号 Browser Compatibility；
+- EU-32～EU-35 已按 Issue #60 / B1～B3 的实际 Requirement / Specification / Slice / Readiness 链完成并集成；
 - 当前没有 Ready Execution Unit；Issues #57 / #59 / #60 中剩余候选不得因 Roadmap、旧 Execution Plan、预编号或 Issue 标签直接进入实现；
 - 未来候选可以在 `slice-work` 形成 Candidate Execution Unit 时获得稳定 Identifier，但只有 `readiness-check` PASS 后才能成为 Ready Execution Unit；
 - 若未来 Browser Compatibility 候选被正式切分，必须基于届时 current implementation 重新取得兼容证据，不继承 EU-30 的旧 DOM / CSS / dependency 假设；
@@ -228,7 +243,7 @@ Planning / Requirement Candidate
 5. 当前候选直接相关的 Requirement / Specification / Technical Plan（如已形成）
 6. `docs/technical/verification-strategy.md`
 7. GitHub Issues #57 / #59 / #60（当前 Planning / Requirement Candidates）
-8. 已完成 EU-31 追溯文档：`docs/requirements/database-migration-baseline-convergence.md`、`docs/specifications/database-migration-baseline-convergence.md`、`docs/technical/database-migration-baseline-convergence.md`、`docs/work/eu31-database-migration-baseline-convergence.md`（仅在相关工作需要时读取）
+8. 已完成 EU-31～EU-35 的追溯文档仅在相关工作需要时读取；当前状态优先由本 Roadmap 与对应 Requirement / Specification / Work Artifact 恢复
 9. 当前 Branch / PR / CI / Runtime Evidence
 
 不得使用其他聊天或其他项目状态补充未固化的 Consumer 产品事实。

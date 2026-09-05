@@ -4,7 +4,7 @@
 
 `jilinjobs-cms` 是吉林省智慧就业云平台中“信息发布与网站服务”相关能力的独立 Consumer 项目。
 
-中心党建正式页面、真实栏目、历史内容迁移与最终 Review 已由 EU-26～EU-29 收敛完成；EU-30 Carousel Architecture & Behavior Convergence 已完成最终 Human Review、canonical acceptance 与 post-promotion verification；**EU-31 Database Migration Baseline Convergence 已完成实现、验证并合并到 `main`。当前没有 Ready Execution Unit。** 后续只允许从本仓库 GitHub Issues #57 / #59 / #60 的 Planning / Requirement Candidates 中选择目标，并按 `docs/project/development-method.md` 完成 Intent / Requirement Clarification、Specification 与必要 Technical Planning / Research；只有上游已经 Ready 时，`slice-work` 才形成 Candidate Execution Unit，并可为其分配稳定 Identifier；只有 `readiness-check` PASS 后才晋升为 Ready Execution Unit 并允许进入 Execute。不得从其他项目、其他会话、个人记忆、旧预编号路线、惯例或实现便利性中推导、补充或扩大本项目的产品范围。
+中心党建正式页面、真实栏目、历史内容迁移与最终 Review 已由 EU-26～EU-29 收敛完成；EU-30 Carousel Architecture & Behavior Convergence 与 EU-31 Database Migration Baseline Convergence 已完成；随后 Issue #60 / B1～B3 已依次收敛为 EU-32～EU-35：EU-32 List Definition Group Governance、EU-33 Admin Guidance & Explanation Responsibility Governance、EU-34 Rich Text HTML Safety Foundation、EU-35 Shared Rich Text Authoring 均已完成实现、集成并通过 Post-Integration Verification。**当前没有 Ready Execution Unit。** 后续只允许从本仓库 GitHub Issues #57 / #59 / #60 的剩余 Planning / Requirement Candidates 中选择目标，并按 `docs/project/development-method.md` 完成 Intent / Requirement Clarification、Specification 与必要 Technical Planning / Research；只有上游已经 Ready 时，`slice-work` 才形成 Candidate Execution Unit，并可为其分配稳定 Identifier；只有 `readiness-check` PASS 后才晋升为 Ready Execution Unit 并允许进入 Execute。不得从其他项目、其他会话、个人记忆、旧预编号路线、惯例或实现便利性中推导、补充或扩大本项目的产品范围。
 
 ## 文档语言与术语表达
 
