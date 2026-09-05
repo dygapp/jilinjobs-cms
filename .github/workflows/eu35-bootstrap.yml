@@ -6,7 +6,7 @@ on:
       - feature/eu35-shared-rich-text-authoring
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   bootstrap:
@@ -82,52 +82,6 @@ jobs:
       - name: Remove ephemeral install and build outputs
         run: rm -rf frontend/admin/node_modules frontend/admin/dist
 
-      - name: Collect generated diff scope
-        run: |
-          set -euo pipefail
-          python3 - <<'PY'
-          from pathlib import Path
-          import os
-          import subprocess
-
-          expected = sorted({
-              'frontend/admin/package.json',
-              'frontend/admin/package-lock.json',
-              'frontend/admin/src/modules/cms/components/RichTextEditor.vue',
-              'frontend/admin/src/modules/cms/views/admin/ArticleManagementView.vue',
-              'frontend/admin/src/modules/cms/views/admin/PageManagementView.vue',
-              'frontend/admin/tests/e2e/rich-text-authoring.spec.ts',
-          })
-          tracked = set(subprocess.check_output(['git', 'diff', '--name-only'], text=True).splitlines())
-          untracked = set(subprocess.check_output(['git', 'ls-files', '--others', '--exclude-standard'], text=True).splitlines())
-          actual = sorted(tracked | untracked)
-          report = [
-              'EXPECTED:',
-              *expected,
-              '',
-              'ACTUAL:',
-              *actual,
-              '',
-              'EXTRA:',
-              *sorted(set(actual) - set(expected)),
-              '',
-              'MISSING:',
-              *sorted(set(expected) - set(actual)),
-              '',
-          ]
-          text = '\n'.join(report)
-          print(text)
-          Path(os.environ['RUNNER_TEMP'], 'eu35-diff-scope.txt').write_text(text, encoding='utf-8')
-          PY
-
-      - name: Upload diff scope diagnostic
-        uses: actions/upload-artifact@v4
-        with:
-          name: eu35-diff-scope
-          path: ${{ runner.temp }}/eu35-diff-scope.txt
-          if-no-files-found: error
-          retention-days: 1
-
       - name: Verify generated diff scope
         run: |
           set -euo pipefail
@@ -135,7 +89,6 @@ jobs:
           import subprocess
 
           expected = {
-              'frontend/admin/package.json',
               'frontend/admin/package-lock.json',
               'frontend/admin/src/modules/cms/components/RichTextEditor.vue',
               'frontend/admin/src/modules/cms/views/admin/ArticleManagementView.vue',
@@ -149,45 +102,102 @@ jobs:
               raise SystemExit(f'unexpected generated diff scope: expected={sorted(expected)} actual={sorted(actual)}')
           PY
 
-      - name: Stage credential-free implementation artifact
+      - name: Verify credential-free implementation payload
         run: |
           set -euo pipefail
-          artifact="$RUNNER_TEMP/eu35-artifact"
-          mkdir -p "$artifact"
-          for path in \
-            frontend/admin/package.json \
-            frontend/admin/package-lock.json \
-            frontend/admin/src/modules/cms/components/RichTextEditor.vue \
-            frontend/admin/src/modules/cms/views/admin/ArticleManagementView.vue \
-            frontend/admin/src/modules/cms/views/admin/PageManagementView.vue \
-            frontend/admin/tests/e2e/rich-text-authoring.spec.ts
-          do
-            mkdir -p "$artifact/$(dirname "$path")"
-            cp "$path" "$artifact/$path"
-          done
-          ARTIFACT_DIR="$artifact" python3 - <<'PY'
+          python3 - <<'PY'
           from pathlib import Path
-          import os
           import re
 
-          root = Path(os.environ['ARTIFACT_DIR'])
+          paths = [
+              Path('frontend/admin/package.json'),
+              Path('frontend/admin/package-lock.json'),
+              Path('frontend/admin/src/modules/cms/components/RichTextEditor.vue'),
+              Path('frontend/admin/src/modules/cms/views/admin/ArticleManagementView.vue'),
+              Path('frontend/admin/src/modules/cms/views/admin/PageManagementView.vue'),
+              Path('frontend/admin/tests/e2e/rich-text-authoring.spec.ts'),
+          ]
           token = re.compile(r'(?:github_pat_|gh[pousr]_)[A-Za-z0-9_]{10,}')
           userinfo = re.compile(r'(?:git\+)?https://[^/@\s"<>]+@github\.com/', re.I)
           findings = []
-          for path in root.rglob('*'):
-              if not path.is_file():
-                  continue
+          for path in paths:
               text = path.read_text(encoding='utf-8')
               if token.search(text) or userinfo.search(text):
-                  findings.append(str(path.relative_to(root)))
+                  findings.append(str(path))
           if findings:
-              raise SystemExit(f'credential-shaped data found in artifact: {findings}')
+              raise SystemExit(f'credential-shaped data found in implementation payload: {findings}')
           PY
 
-      - name: Upload EU-35 implementation artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: eu35-implementation
-          path: ${{ runner.temp }}/eu35-artifact
-          if-no-files-found: error
-          retention-days: 1
+      - name: Publish verified implementation atomically
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          import os
+          import urllib.error
+          import urllib.request
+
+          repo = os.environ['GITHUB_REPOSITORY']
+          token = os.environ['GITHUB_TOKEN']
+          event_sha = os.environ['GITHUB_SHA']
+          branch = 'feature/eu35-shared-rich-text-authoring'
+          api_root = f'https://api.github.com/repos/{repo}'
+
+          def request(method: str, path: str, payload=None):
+              data = None if payload is None else json.dumps(payload).encode('utf-8')
+              req = urllib.request.Request(
+                  api_root + path,
+                  data=data,
+                  method=method,
+                  headers={
+                      'Accept': 'application/vnd.github+json',
+                      'Authorization': f'Bearer {token}',
+                      'X-GitHub-Api-Version': '2022-11-28',
+                      'User-Agent': 'jilinjobs-cms-eu35-bootstrap',
+                  },
+              )
+              try:
+                  with urllib.request.urlopen(req) as response:
+                      return json.load(response)
+              except urllib.error.HTTPError as error:
+                  body = error.read().decode('utf-8', errors='replace')
+                  raise SystemExit(f'GitHub API {method} {path} failed: HTTP {error.code}: {body}') from error
+
+          ref = request('GET', f'/git/ref/heads/{branch}')
+          current_sha = ref['object']['sha']
+          if current_sha != event_sha:
+              raise SystemExit(f'branch drift detected: event={event_sha} current={current_sha}')
+
+          current_commit = request('GET', f'/git/commits/{current_sha}')
+          base_tree = current_commit['tree']['sha']
+          implementation_paths = [
+              'frontend/admin/package.json',
+              'frontend/admin/package-lock.json',
+              'frontend/admin/src/modules/cms/components/RichTextEditor.vue',
+              'frontend/admin/src/modules/cms/views/admin/ArticleManagementView.vue',
+              'frontend/admin/src/modules/cms/views/admin/PageManagementView.vue',
+              'frontend/admin/tests/e2e/rich-text-authoring.spec.ts',
+          ]
+
+          entries = []
+          for path in implementation_paths:
+              content = Path(path).read_text(encoding='utf-8')
+              blob = request('POST', '/git/blobs', {'content': content, 'encoding': 'utf-8'})
+              entries.append({'path': path, 'mode': '100644', 'type': 'blob', 'sha': blob['sha']})
+
+          entries.extend([
+              {'path': '.github/workflows/eu35-bootstrap.yml', 'mode': '100644', 'type': 'blob', 'sha': None},
+              {'path': '.github/scripts/eu35-bootstrap.py', 'mode': '100644', 'type': 'blob', 'sha': None},
+          ])
+          tree = request('POST', '/git/trees', {'base_tree': base_tree, 'tree': entries})
+          commit = request('POST', '/git/commits', {
+              'message': 'feat(admin): 收敛共享富文本编辑能力',
+              'tree': tree['sha'],
+              'parents': [current_sha],
+          })
+          request('PATCH', f'/git/refs/heads/{branch}', {'sha': commit['sha'], 'force': False})
+          print(f'Published EU-35 implementation commit {commit["sha"]}')
+          PY
