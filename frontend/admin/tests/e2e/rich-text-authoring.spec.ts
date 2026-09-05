@@ -46,6 +46,8 @@ test('EU-35：Article 与 Page 共用完整富文本工具栏且已有 HTML 可�
   await expect(articleEditor.locator('h2 strong')).toHaveCount(0)
   await articleDialog.getByTestId('article-body-editor-redo').click()
   await expect(articleEditor.locator('h2 strong')).toContainText('标题内容')
+  await articleEditor.click()
+  await page.keyboard.press('End')
 
   await articleDialog.getByTestId('body-image-input').setInputFiles({ name: 'eu35.png', mimeType: 'image/png', buffer: ONE_PIXEL_PNG })
   await expect(articleEditor.locator('img')).toHaveCount(1)
@@ -54,7 +56,7 @@ test('EU-35：Article 与 Page 共用完整富文本工具栏且已有 HTML 可�
   const storedAfterImage = await (await request.get(`/api/admin/articles/${article.id}`)).json() as { bodyHtml: string; bodyImageResourceIds: number[] }
   expect(storedAfterImage.bodyHtml).toContain('<h2')
   expect(storedAfterImage.bodyImageResourceIds).toHaveLength(1)
-  expect(storedAfterImage.bodyHtml).toContain(`/api/public/resources/${storedAfterImage.bodyImageResourceIds[0]}/content`)
+  expect(storedAfterImage.bodyHtml).toContain(`/api/admin/resources/${storedAfterImage.bodyImageResourceIds[0]}/content`)
 
   await page.getByTestId('article-filter-keyword').fill(articleTitle)
   await page.getByTestId('article-table').getByRole('row').filter({ hasText: articleTitle }).getByRole('button', { name: '编辑' }).click()
