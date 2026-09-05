@@ -6,11 +6,12 @@
 
 当前版本以原网站现有结构和视觉关系为主站公开基线，采用 Vue + Spring Boot 重建中心主站，并在同一公开站前端工程中建设具有独立红色视觉主题的“中心党建”特殊栏目/专题页面。管理端已经完成独立前端工程与 Modular SPA 收敛；公开站已经完成 **Multi-entry Modular SPA** 基础架构：Entry 只按真实 Theme / Router Boundary 划分，中心主站与中心党建分别拥有独立 App、Router、Banner 与内容主题，但继续共用 `frontend/public-site` 工程、Vue/Vite 技术栈、构建发布链路和 Spring Boot CMS Backend；主导航与 Footer 使用 Shared Shell Components 保持公共区域一致。
 
-中心党建 Foundation Entry / Router / Shell 已完成，当前主动路线切换到**中心党建正式页面、真实栏目、内容迁移与视觉收敛**。2026-09-02 对原站 `https://24365.jl.smartedu.cn/dyzj` 重新取证后，已确认高层声音、工作动态、党规党章、理论学习四条内容线；当前优先复用现有通用 Column + Article，不新增党建专属 Admin Module 或多站点 CMS 模型。正式阶段按 EU-26～EU-29 推进，并保持历史运营内容与 Flyway 结构基线分离。
+中心党建 EU-26～EU-29 已完成正式页面与历史迁移收敛；**EU-30 Carousel Architecture & Behavior Convergence 已于 2026-09-05 完成最终 Human Review、canonical acceptance 与 post-promotion verification。当前没有新的编号 Execution Unit。** 后续工作统一回到 GitHub Issues #59 / #60 的未编号 Planning / Requirement Candidates，只有完成 Intent / Requirement Clarification、Specification、必要 Technical Planning / Research、Slice Work 与 Readiness Check 后才分配新的 EU 编号。
 
 当前权威需求：
 
 - `docs/requirements/information-publishing.md` V4.8
+- `docs/requirements/information-publishing-eu30-amendment.md` V4.9-EU30（EU-30 已完成，保留追溯）
 - `docs/requirements/party-positioning.md`
 
 当前 Specification：
@@ -30,6 +31,7 @@
 
 当前 Technical Plan / Governance：
 
+- `docs/technical/carousel-list-placement.md`（EU-30 已接受方案，保留追溯）
 - `docs/technical/cms-architecture.md`
 - `docs/technical/configuration-governance.md`
 - `docs/technical/backend-service.md`
@@ -40,7 +42,17 @@
 - `docs/technical/verification-strategy.md`
 - `docs/technical/preset-site-structure.md`
 
-当前执行单元：
+最近完成的执行单元：
+
+- `docs/work/eu30-carousel-convergence.md`（COMPLETED）
+- `docs/work/frontend-follow-up-execution-units.md`（历史预编号规划，仅追溯；不再作为后续执行顺序 Authority）
+
+当前后续规划入口：
+
+- GitHub Issue #59：数据库迁移 baseline convergence / Browser Compatibility 等后置规划候选；
+- GitHub Issue #60：EU-30 后续需求边界候选池。
+
+中心党建阶段追溯：
 
 - `docs/work/party-convergence-execution-units.md`
 
@@ -52,7 +64,7 @@
 
 - `docs/work/admin-frontend-convergence-execution-units.md`
 
-管理端双前端拆分、通用 CMS 模型和 Admin Modular SPA 已完成当前阶段收敛，后续只按 Human Admin Review / 明确人工指令增量调整；公开站 Multi-entry Modular SPA 与中心党建基础框架也已完成，当前主动路线是中心党建正式页面与内容收敛。
+管理端双前端拆分、通用 CMS 模型和 Admin Modular SPA 已完成当前阶段收敛；公开站 Multi-entry Modular SPA、中心党建正式页面与历史内容、EU-30 轮播架构与行为也已完成当前阶段收敛。下一步不得机械沿用旧规划中的“EU-31”，应从 Issues #59 / #60 选择候选并按 Consumer-local Method 形成新的 Ready Execution Unit。
 
 历史阶段文档继续保留用于追溯，但不再作为当前目标架构：
 
@@ -87,9 +99,11 @@ CMS 通用业务对象：
 
 公开站和管理端是同级独立 Vue / Vite 前端工程，共享 Spring Boot CMS Backend。公开站工程内部不把普通页面类型机械映射成独立 HTML Entry；主站 `/`、`/column/**`、`/article/**`、`/page/**` 统一属于 Main Site Entry，中心党建使用 Party Site Entry 和 `/party/**` URL namespace。两个公开 Entry 当前同构建、同部署；App、Router、Banner、内容 Frame 与主题内容模板按 Entry 隔离，Navigation/Footer 则复用 Shared Shell Components，通过主题变量切换主站蓝色与 Party 红色。
 
-中心党建正式内容继续复用通用 CMS：预置父栏目 `party` 组织 `party-voice / party-work / party-rules / party-study` 四个子栏目；四条内容线都使用通用 Article，并允许 INTERNAL / EXTERNAL_LINK 混合。`学习园地` 只是 PartyHome 入口页对党规党章与理论学习的固定视觉分组，不新增 CMS 类型。Party canonical URL 为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`。原站 `plist.html`、当前 `pdetail.html` 和更早 `detail.html` 地址及其 `content_id/typeCode` 参数变体只作为历史迁移映射输入，不延续为新版 Router 模型。
+中心党建正式内容继续复用通用 CMS：预置父栏目 `party` 组织 `party-voice / party-work / party-rules / party-study / party-theme-education` 五个子栏目；这些内容线都使用通用 Article，并允许 INTERNAL / EXTERNAL_LINK 混合。`学习园地` 只是 PartyHome 入口页对党规党章与理论学习的固定视觉分组，不新增 CMS 类型；`party-theme-education / 主题教育` 是正常 Party 内容栏目，但不新增 PartyHome 第五个固定内容区。Party canonical URL 为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`。原站 `plist.html`、当前 `pdetail.html` 和更早 `detail.html` 地址及其 `content_id/typeCode` 参数变体只作为历史迁移映射输入，不延续为新版 Router 模型。
 
-当前工程技术命名统一使用 `party / Party` 表示中心党建 Site/模块，`party-home / PartyHome` 只用于 `/party/` 入口页（如 `PartyHomeView.vue`）。已执行 V13/V14 Migration 和当前 PR 分支名中的 `party-building` 属于历史/兼容标识，不回写历史；当前源码目录、组件、测试、静态基线和 Party 专项 Authority 不再使用 `PartyBuilding / party-building` 作为现行命名。
+EU-29 `acceptedSnapshot` 保持 181 篇冻结 provenance；EU-30 接受 `主题教育` 2 条历史增量后，`data-migrations/party/v1` 当前 status = `accepted-canonical`，current Runtime Dataset = 183 篇。EU-29 原 accepted artifact digest 和 acceptedSnapshot 不因 EU-30 promotion 被重写。
+
+当前工程技术命名统一使用 `party / Party` 表示中心党建 Site/模块，`party-home / PartyHome` 只用于 `/party/` 入口页（如 `PartyHomeView.vue`）。已执行 V13/V14 Migration 和历史 PR / 分支中的 `party-building` 属于历史/兼容标识，不回写历史；当前源码目录、组件、测试、静态基线和 Party 专项 Authority 不再使用 `PartyBuilding / party-building` 作为现行命名。
 
 管理端当前是单一 Vue SPA，但源码按 `app/`、`shared/` 与 `modules/cms/` 分离：Shell 只聚合模块声明，CMS Module 自己声明 routes/navigation，并使用 Vue Router 动态 import 进行路由级懒加载。Module Federation、iframe 或其他运行时微前端机制不属于当前基础设施；未来只有出现真实独立发布、独立部署、跨团队或跨技术栈要求时再单独评估。
 
@@ -97,7 +111,9 @@ CMS 通用业务对象：
 
 首页 NCSS 区域属于主站固定工程集成，不要求后台管理。需要持续运营维护的数据优先使用 CMS 对象，避免在 SiteProperty JSON、导航和 Vue 常量中维护重复数据来源。中心党建已证明可以复用现有栏目/文章模型，不因公开前端存在独立 Entry 就预设新的党建专属 Admin Module。
 
-通用列表只保存标题、副标题、图片、URL、打开方式、排序等数据属性；前台具体页面根据自身设计决定消费哪些属性以及如何展示，不由 CMS 列表定义控制视觉模式。导航条目可维护可选图标，避免前台按排序位置推导图标。
+通用列表项支持 `LINK / ARTICLE`：LINK 保存标题、图片、URL 等自身数据；ARTICLE 引用已有文章与可选覆盖 Resource，不改变文章单一栏目归属。`ARTICLE + INTERNAL` 在管理端表达为“站内文章”，`ARTICLE + EXTERNAL_LINK` 表达为“外链文章”；EXTERNAL_LINK Article 通过 ARTICLE 投放时继续跟随 Article 当前标题与 external URL，不重复维护 URL。两种来源都保留打开方式、排序等投放属性；前台具体页面根据自身设计决定消费哪些属性以及如何展示，不由 CMS 列表定义控制视觉模式。导航条目可维护可选图标，避免前台按排序位置推导图标。
+
+Main / Party 轮播统一使用 `CAROUSEL_INTERVAL_SECONDS`、`CAROUSEL_MAX_ITEMS` 与共享 lifecycle，统一 hover/focus/visibility pause、reduced-motion、失败图片补位和 active identity 行为，但不统一 DOM 视觉组合、主题、Caption 或比例。长期原则为“统一行为规则和生命周期，不统一视觉表达”。
 
 网站规划基线中的关键结构对象使用只读 `preset` 标识保护：预置栏目、导航位置/条目、单页分组/单页、列表容器、宣传展示位和稳定网站属性定义不能被误删；具有稳定 Alias/Code/Key 的预置对象不能修改该身份字段。`preset` 不等于完全只读，名称、排序、启停以及正常运营字段仍按各自模型维护；Article、CmsListItem、Advertisement 等运营成员不因此变成预置内容。普通 Admin API 新增对象默认 `preset=false`，客户端不能自行设置或取消该标识。
 
@@ -150,6 +166,6 @@ frontend/
 
 完成状态必须由与目标提交和具体 Evidence Claim 匹配的 Current Evidence 支持。Backend、Public Site、Admin Site、Integrated Browser 与 Review Environment 的实时结果由 GitHub Actions 保存；README 不复制具体 Run 编号。
 
-中心党建正式收敛至少证明：四个真实栏目结构进入站点基线；PartyHome 入口、栏目、文章 canonical route 正常；INTERNAL / EXTERNAL_LINK 行为正确；非党建文章不能由 Party 详情套用党建模板；Main/Party 共享主导航和 Footer 结构无漂移且只存在主题色差异；一级导航 16px bold、二级菜单主题底色/白字符合原站证据；Main/Party favicon 都从版本化 PNG 正常加载；主站现有 canonical URL 和蓝白视觉无回归；历史运营文章不被误塞入 Flyway。最终党建 Visual Fidelity 必须由原站参考证据、AI Visual 与 Human Review 共同支持，不能由 Functional Browser PASS 单独声明。
+中心党建正式收敛已经证明：真实 Party 内容结构进入站点基线；PartyHome 入口、栏目、文章 canonical route 正常；INTERNAL / EXTERNAL_LINK 行为正确；非党建文章不能由 Party 详情套用党建模板；Main/Party 共享主导航和 Footer 结构无漂移且只存在主题表达差异；主站现有 canonical URL 和蓝白视觉无回归；历史运营文章未被误塞入 Flyway。Visual Fidelity 仍必须由原站参考证据、AI Visual 与 Human Review 共同支持，不能由 Functional Browser PASS 单独声明。
 
-祖先提交的 Runtime / Human Review Evidence 不机械继承。发生 CMS 模型、数据库、API 或公开站数据源/Entry/Router 调整后，应重新取得受影响 Evidence；Human Review 在自动验证和干净基线恢复后重新执行。
+祖先提交的 Runtime / Human Review Evidence 不机械继承。发生 CMS 模型、数据库、API 或公开站数据源/Entry/Router 调整后，应重新取得受影响 Evidence；仅对未改变相关 Runtime / content bytes 的纯 Authority / acceptance metadata 后继变更，才可按 `docs/technical/verification-strategy.md` 的 Evidence Impact 判断复用未受影响 Claim，并对发生变化的最终状态重新取得对应 Current Evidence。

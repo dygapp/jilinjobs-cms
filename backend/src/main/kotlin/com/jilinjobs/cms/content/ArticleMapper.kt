@@ -15,7 +15,7 @@ interface ArticleMapper {
     @Select(
         """
         SELECT id, column_id, title, body_html, source, article_type, external_url, publish_date,
-               pinned, recommended, sort_order, status, actual_published_at,
+               pinned, sort_order, status, actual_published_at,
                view_count, updated_at
         FROM cms_article
         ORDER BY updated_at DESC, id DESC
@@ -26,7 +26,7 @@ interface ArticleMapper {
     @Select(
         """
         SELECT id, column_id, title, body_html, source, article_type, external_url, publish_date,
-               pinned, recommended, sort_order, status, actual_published_at,
+               pinned, sort_order, status, actual_published_at,
                view_count, updated_at
         FROM cms_article
         WHERE id = #{id}
@@ -38,11 +38,11 @@ interface ArticleMapper {
         """
         INSERT INTO cms_article(
             column_id, title, body_html, source, article_type, external_url, publish_date,
-            pinned, recommended, sort_order, status
+            pinned, sort_order, status
         )
         VALUES(
             #{columnId}, #{title}, #{bodyHtml}, #{source}, #{articleType}, #{externalUrl}, #{publishDate},
-            #{pinned}, #{recommended}, #{sortOrder}, 'DRAFT'
+            #{pinned}, #{sortOrder}, 'DRAFT'
         )
         """,
     )
@@ -60,7 +60,6 @@ interface ArticleMapper {
             external_url = #{externalUrl},
             publish_date = #{publishDate},
             pinned = #{pinned},
-            recommended = #{recommended},
             sort_order = #{sortOrder}
         WHERE id = #{id}
         """,
@@ -84,13 +83,12 @@ interface ArticleMapper {
     @Select(
         """
         SELECT id, column_id, title, body_html, source, article_type, external_url, publish_date,
-               pinned, recommended, sort_order, status, actual_published_at,
+               pinned, sort_order, status, actual_published_at,
                view_count, updated_at
         FROM cms_article
         WHERE status = 'PUBLISHED'
           AND (#{columnId} IS NULL OR column_id = #{columnId})
         ORDER BY pinned DESC,
-                 recommended DESC,
                  sort_order DESC,
                  COALESCE(publish_date, DATE(actual_published_at)) DESC,
                  id DESC
@@ -116,7 +114,7 @@ interface ArticleMapper {
     @Select(
         """
         SELECT id, column_id, title, body_html, source, article_type, external_url, publish_date,
-               pinned, recommended, sort_order, status, actual_published_at,
+               pinned, sort_order, status, actual_published_at,
                view_count, updated_at
         FROM cms_article
         WHERE id = #{id} AND status = 'PUBLISHED'
@@ -147,7 +145,6 @@ data class ArticleRecord(
     var externalUrl: String? = null,
     var publishDate: LocalDate? = null,
     var pinned: Boolean = false,
-    var recommended: Boolean = false,
     var sortOrder: Int = 0,
     var status: String = ArticleStatus.DRAFT.name,
     var actualPublishedAt: LocalDateTime? = null,
@@ -190,7 +187,6 @@ class MyBatisArticleRepository(
         externalUrl = externalUrl,
         publishDate = publishDate,
         pinned = pinned,
-        recommended = recommended,
         sortOrder = sortOrder,
     )
 
@@ -204,7 +200,6 @@ class MyBatisArticleRepository(
         externalUrl = externalUrl,
         publishDate = publishDate,
         pinned = pinned,
-        recommended = recommended,
         sortOrder = sortOrder,
         status = ArticleStatus.valueOf(status),
         actualPublishedAt = actualPublishedAt,

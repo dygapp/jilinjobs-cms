@@ -1,0 +1,16 @@
+{
+  "migrationId": "party-eu30-theme-education",
+  "status": "candidate-review",
+  "sourceSystem": "legacy-jilinjobs",
+  "sourceOrigin": "https://24365.jl.smartedu.cn",
+  "sourceListUrl": "https://24365.jl.smartedu.cn/list.html?typeCode=zhutijiaoyu",
+  "typeCode": "zhutijiaoyu",
+  "columnAlias": "party-theme-education",
+  "reportedTotal": 2,
+  "listedRecords": 2,
+  "uniqueRecords": 2,
+  "internalArticles": 1,
+  "externalArticles": 1,
+  "unresolved": 0,
+  "issues": []
+}

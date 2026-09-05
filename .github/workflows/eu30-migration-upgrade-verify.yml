@@ -1,0 +1,227 @@
+name: EU-30 Migration Upgrade Verification
+
+on:
+  pull_request:
+    paths:
+      - 'data-migrations/**'
+      - 'backend/src/main/kotlin/com/jilinjobs/cms/migration/**'
+      - 'backend/src/main/kotlin/com/jilinjobs/cms/listing/**'
+      - 'backend/src/main/resources/db/migration/**'
+      - '.github/workflows/eu30-migration-upgrade-verify.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  eu29-to-eu30-upgrade:
+    name: EU-29 accepted runtime -> EU-30 candidate
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_ROOT_HOST: '%'
+          MYSQL_DATABASE: jilinjobs_cms
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=12
+
+    steps:
+      - name: Checkout EU-30 head
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 1
+
+      - name: Materialize pinned accepted EU-29 canonical baseline
+        run: |
+          set -euo pipefail
+          EU29_ACCEPTED_COMMIT=59c855f55899cd613fdee059b27db762ffa3b092
+          git fetch origin "$EU29_ACCEPTED_COMMIT" --depth=1
+          test "$(git rev-parse FETCH_HEAD)" = "$EU29_ACCEPTED_COMMIT"
+          mkdir -p eu29-accepted
+          git archive FETCH_HEAD data-migrations/party/v1 | tar -x -C eu29-accepted
+          test -f eu29-accepted/data-migrations/party/v1/manifest.json
+          test -f eu29-accepted/data-migrations/party/v1/lists/PARTY_CAROUSEL/items/party-carousel-position-2/item.json
+          jq --exit-status '
+            .status == "accepted-canonical"
+            and .acceptedSnapshot.articles == 181
+            and .acceptedSnapshot.carouselItems == 4' \
+            eu29-accepted/data-migrations/party/v1/manifest.json > /dev/null
+          jq --exit-status '
+            (.sourceType // "LINK") == "LINK"
+            and .legacyKey == "party-carousel:position:2"
+            and .sourceFingerprint == "c2ad182b8b2dc981a3cbe3b0153a1e3e47604c1f01dd43e6d25971e1deed10dc"' \
+            eu29-accepted/data-migrations/party/v1/lists/PARTY_CAROUSEL/items/party-carousel-position-2/item.json > /dev/null
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: '9.6.1'
+
+      - name: Import accepted EU-29 baseline
+        env:
+          DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          DB_USERNAME: root
+          DB_PASSWORD: root
+          CMS_STORAGE_ROOT: ${{ github.workspace }}/upgrade-runtime/uploads
+          CMS_STATIC_ROOT: ${{ github.workspace }}/upgrade-runtime/static
+        run: |
+          set -euo pipefail
+          mkdir -p upgrade-runtime/uploads upgrade-runtime/static
+          (cd backend && gradle importPartyHistoricalContent --args="../eu29-accepted/data-migrations/party/v1" --no-daemon) | tee eu29-upgrade-article-import.log
+          (cd backend && gradle importPartyCarousel --args="../eu29-accepted/data-migrations/party/v1" --no-daemon) | tee eu29-upgrade-carousel-import.log
+
+          python3 - <<'PY'
+          import json, re
+          article=json.loads(re.findall(r'EU29_IMPORT_REPORT (\{.*\})', open('eu29-upgrade-article-import.log', encoding='utf-8').read())[-1])
+          assert article['total']==181 and article['created']==181, article
+          assert article['skipped']==0 and article['conflicts']==0 and article['invalid']==0, article
+          carousel=json.loads(re.findall(r'EU29_CAROUSEL_IMPORT_REPORT (\{.*\})', open('eu29-upgrade-carousel-import.log', encoding='utf-8').read())[-1])
+          assert carousel['total']==4 and carousel['created']==4 and carousel['updated']==0, carousel
+          assert carousel['skipped']==0 and carousel['conflicts']==0 and carousel['invalid']==0, carousel
+          PY
+
+          docker run --rm --network host mysql:8.4 \
+            mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT i.id,i.source_type,COALESCE(i.article_id,''),COALESCE(i.image_path,''),COALESCE(i.image_resource_id,''),m.source_fingerprint,m.image_sha256 FROM cms_list_item i JOIN cms_list l ON l.id=i.list_id JOIN cms_list_item_legacy_mapping m ON m.list_item_id=i.id WHERE l.code='PARTY_CAROUSEL' AND m.legacy_key='party-carousel:position:2'" \
+            | tee eu29-position2-before.tsv
+          python3 - <<'PY'
+          import csv
+          row=next(csv.reader(open('eu29-position2-before.tsv', encoding='utf-8'), delimiter='\t'))
+          item_id,source_type,article_id,image_path,image_resource_id,fingerprint,image_sha=row
+          assert item_id and source_type=='LINK', row
+          assert not article_id and not image_resource_id, row
+          assert image_path.startswith('/static/migrated/party/carousel/'), row
+          assert fingerprint=='c2ad182b8b2dc981a3cbe3b0153a1e3e47604c1f01dd43e6d25971e1deed10dc', row
+          assert image_sha=='a00db48e094e24b778374ae621b6f150e235625c62f17efc860391223fac830b', row
+          open('eu29-position2-id.txt','w',encoding='utf-8').write(item_id)
+          PY
+
+      - name: Upgrade the same runtime to EU-30 candidate
+        env:
+          DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          DB_USERNAME: root
+          DB_PASSWORD: root
+          CMS_STORAGE_ROOT: ${{ github.workspace }}/upgrade-runtime/uploads
+          CMS_STATIC_ROOT: ${{ github.workspace }}/upgrade-runtime/static
+        run: |
+          set -euo pipefail
+          (cd backend && gradle importPartyHistoricalContent --args="../data-migrations/party/v1" --no-daemon) | tee eu30-upgrade-article-import.log
+          (cd backend && gradle importPartyCarousel --args="../data-migrations/party/v1" --no-daemon) | tee eu30-upgrade-carousel-import.log
+
+          python3 - <<'PY'
+          import json, re
+          article=json.loads(re.findall(r'EU29_IMPORT_REPORT (\{.*\})', open('eu30-upgrade-article-import.log', encoding='utf-8').read())[-1])
+          assert article['total']==183 and article['created']==2 and article['skipped']==181, article
+          assert article['conflicts']==0 and article['invalid']==0, article
+          created={result['legacyKey']:result for result in article['results'] if result['status']=='CREATED'}
+          assert 'zhutijiaoyu:content:154659859759104' in created, created
+          assert created['zhutijiaoyu:content:154659859759104']['articleId'], created
+
+          carousel=json.loads(re.findall(r'EU29_CAROUSEL_IMPORT_REPORT (\{.*\})', open('eu30-upgrade-carousel-import.log', encoding='utf-8').read())[-1])
+          assert carousel['total']==4 and carousel['created']==0 and carousel['updated']==1 and carousel['skipped']==3, carousel
+          assert carousel['conflicts']==0 and carousel['invalid']==0, carousel
+          position2=next(result for result in carousel['results'] if result['legacyKey']=='party-carousel:position:2')
+          assert position2['status']=='UPDATED', position2
+          PY
+
+          docker run --rm --network host mysql:8.4 \
+            mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT i.id,i.source_type,COALESCE(i.article_id,''),COALESCE(am.legacy_key,''),COALESCE(i.image_path,''),COALESCE(i.image_resource_id,''),COALESCE(r.storage_key,''),m.source_fingerprint,m.image_sha256 FROM cms_list_item i JOIN cms_list l ON l.id=i.list_id JOIN cms_list_item_legacy_mapping m ON m.list_item_id=i.id LEFT JOIN cms_article_legacy_mapping am ON am.article_id=i.article_id LEFT JOIN cms_resource r ON r.id=i.image_resource_id WHERE l.code='PARTY_CAROUSEL' AND m.legacy_key='party-carousel:position:2'" \
+            | tee eu30-position2-after.tsv
+          python3 - <<'PY'
+          import csv, hashlib
+          from pathlib import Path
+          before=open('eu29-position2-id.txt', encoding='utf-8').read().strip()
+          row=next(csv.reader(open('eu30-position2-after.tsv', encoding='utf-8'), delimiter='\t'))
+          item_id,source_type,article_id,article_legacy_key,image_path,image_resource_id,storage_key,fingerprint,image_sha=row
+          assert item_id==before, (item_id,before)
+          assert source_type=='ARTICLE' and article_id, row
+          assert article_legacy_key=='zhutijiaoyu:content:154659859759104', row
+          assert not image_path and image_resource_id and storage_key, row
+          assert fingerprint=='f8b5d8df87021373803639b174bf88e46ae6cef7f2599a205763b5887c78be84', row
+          assert image_sha=='a00db48e094e24b778374ae621b6f150e235625c62f17efc860391223fac830b', row
+          image=Path('upgrade-runtime/uploads') / storage_key
+          assert image.is_file(), image
+          assert hashlib.sha256(image.read_bytes()).hexdigest()==image_sha, image
+          PY
+
+      - name: Re-run EU-30 candidate to prove post-upgrade idempotency
+        env:
+          DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          DB_USERNAME: root
+          DB_PASSWORD: root
+          CMS_STORAGE_ROOT: ${{ github.workspace }}/upgrade-runtime/uploads
+          CMS_STATIC_ROOT: ${{ github.workspace }}/upgrade-runtime/static
+        run: |
+          set -euo pipefail
+          (cd backend && gradle importPartyHistoricalContent --args="../data-migrations/party/v1" --no-daemon) | tee eu30-upgrade-second-article-import.log
+          (cd backend && gradle importPartyCarousel --args="../data-migrations/party/v1" --no-daemon) | tee eu30-upgrade-second-carousel-import.log
+          python3 - <<'PY'
+          import json, re
+          article=json.loads(re.findall(r'EU29_IMPORT_REPORT (\{.*\})', open('eu30-upgrade-second-article-import.log', encoding='utf-8').read())[-1])
+          assert article['total']==183 and article['created']==0 and article['skipped']==183, article
+          assert article['conflicts']==0 and article['invalid']==0, article
+          carousel=json.loads(re.findall(r'EU29_CAROUSEL_IMPORT_REPORT (\{.*\})', open('eu30-upgrade-second-carousel-import.log', encoding='utf-8').read())[-1])
+          assert carousel['total']==4 and carousel['created']==0 and carousel['updated']==0 and carousel['skipped']==4, carousel
+          assert carousel['conflicts']==0 and carousel['invalid']==0, carousel
+          PY
+
+      - name: Reject unexpected position 2 fingerprint drift
+        env:
+          DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          DB_USERNAME: root
+          DB_PASSWORD: root
+          CMS_STORAGE_ROOT: ${{ github.workspace }}/upgrade-runtime/uploads
+          CMS_STATIC_ROOT: ${{ github.workspace }}/upgrade-runtime/static
+        run: |
+          set -euo pipefail
+          docker run --rm --network host mysql:8.4 \
+            mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -e \
+            "UPDATE cms_list_item_legacy_mapping SET source_fingerprint=REPEAT('f',64) WHERE legacy_key='party-carousel:position:2';"
+
+          set +e
+          (cd backend && gradle importPartyCarousel --args="../data-migrations/party/v1" --no-daemon) > eu30-position2-conflict.log 2>&1
+          status=$?
+          set -e
+          test "$status" -ne 0
+          python3 - <<'PY'
+          import json, re
+          text=open('eu30-position2-conflict.log', encoding='utf-8').read()
+          report=json.loads(re.findall(r'EU29_CAROUSEL_IMPORT_REPORT (\{.*\})', text)[-1])
+          assert report['total']==4 and report['conflicts']==1 and report['invalid']==0, report
+          position2=next(result for result in report['results'] if result['legacyKey']=='party-carousel:position:2')
+          assert position2['status']=='CONFLICT', position2
+          PY
+
+      - name: Upload upgrade verification evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: eu30-migration-upgrade-verification
+          path: |
+            eu29-upgrade-article-import.log
+            eu29-upgrade-carousel-import.log
+            eu29-position2-before.tsv
+            eu30-upgrade-article-import.log
+            eu30-upgrade-carousel-import.log
+            eu30-position2-after.tsv
+            eu30-upgrade-second-article-import.log
+            eu30-upgrade-second-carousel-import.log
+            eu30-position2-conflict.log
+          if-no-files-found: warn
+          retention-days: 7

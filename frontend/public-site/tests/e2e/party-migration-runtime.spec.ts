@@ -9,28 +9,64 @@ const carouselTitles = [
 ]
 const representativeWorkTitle = '吉林省高等学校毕业生就业指导中心组织开展“忆党史峥嵘 铸信仰丰碑”观影主题党日活动'
 
-test.skip(!enabled, '仅在 EU-29 真实迁移 Human Review Runtime 中执行')
+test.skip(!enabled, '仅在 Party canonical Human Review Runtime 中执行')
 
-test('EU-29：真实历史文章、正文资源与四条轮播在 Runtime 可用', async ({ page, request }, testInfo) => {
+test('EU-30：Party canonical 历史文章、资源与 LINK/ARTICLE 混合轮播在 Runtime 可用', async ({ page, request }, testInfo) => {
   const carouselResponse = await request.get('/api/public/lists/by-code/PARTY_CAROUSEL')
   expect(carouselResponse.ok()).toBeTruthy()
   const carousel = await carouselResponse.json() as {
-    items: Array<{ title: string; url: string | null; imagePath: string | null; openMode: string }>
+    items: Array<{
+      title: string
+      sourceType: 'LINK' | 'ARTICLE'
+      articleId: number | null
+      url: string | null
+      imagePath: string | null
+      effectiveImageResourceId: number | null
+      openMode: string
+    }>
   }
   expect(carousel.items).toHaveLength(4)
   expect(carousel.items.map(item => item.title)).toEqual(carouselTitles)
-  for (const item of carousel.items) {
+  expect(carousel.items.map(item => item.sourceType)).toEqual(['LINK', 'ARTICLE', 'LINK', 'LINK'])
+
+  for (const [index, item] of carousel.items.entries()) {
     expect(item.openMode).toBe('NEW_WINDOW')
-    expect(item.imagePath).toMatch(/^\/static\/migrated\/party\/carousel\/[0-9a-f]{64}\.(?:jpg|png|gif|webp)$/)
-    expect((await request.get(item.imagePath!)).ok()).toBeTruthy()
+    if (index === 1) {
+      expect(item.articleId).not.toBeNull()
+      expect(item.url).toBeNull()
+      expect(item.imagePath).toBeNull()
+      expect(item.effectiveImageResourceId).not.toBeNull()
+      expect((await request.get(`/api/public/resources/${item.effectiveImageResourceId}/content`)).ok()).toBeTruthy()
+    } else {
+      expect(item.articleId).toBeNull()
+      expect(item.imagePath).toMatch(/^\/static\/migrated\/party\/carousel\/[0-9a-f]{64}\.(?:jpg|png|gif|webp)$/)
+      expect((await request.get(item.imagePath!)).ok()).toBeTruthy()
+    }
   }
 
   await page.goto('/party/')
+  const partyCarousel = page.getByTestId('party-carousel')
   await expect(page.getByTestId('party-site')).toBeVisible()
-  await expect(page.getByTestId('party-carousel')).toBeVisible()
+  await expect(partyCarousel).toBeVisible()
   for (const title of carouselTitles) {
-    await expect(page.getByTestId('party-carousel').getByText(title, { exact: true })).toHaveCount(1)
+    await expect(partyCarousel.getByText(title, { exact: true })).toHaveCount(1)
   }
+
+  const articleItem = carousel.items[1]
+  await partyCarousel.getByRole('button', { name: new RegExp(articleItem.title) }).click()
+  const articleSlide = partyCarousel.getByText(articleItem.title, { exact: true }).locator('..')
+  await expect(articleSlide).toHaveAttribute('href', `/party/article/${articleItem.articleId}`)
+  await expect(articleSlide).toHaveAttribute('target', '_blank')
+  await expect(articleSlide).toHaveAttribute('rel', 'noopener noreferrer')
+
+  const articlePopup = page.waitForEvent('popup')
+  await articleSlide.click()
+  const themePage = await articlePopup
+  await expect(themePage.getByTestId('party-article-title')).toHaveText(articleItem.title)
+  await expect(themePage.getByTestId('party-article-body')).toBeVisible()
+  await expect(themePage.getByText('主题教育', { exact: true })).toBeVisible()
+  await themePage.screenshot({ path: testInfo.outputPath('eu30-party-carousel-article.png'), fullPage: true })
+  await themePage.close()
 
   const workSection = page.getByTestId('party-section-party-work')
   const workLink = workSection.getByText(representativeWorkTitle, { exact: true })
@@ -48,7 +84,18 @@ test('EU-29：真实历史文章、正文资源与四条轮播在 Runtime 可用
   expect(imageSrc).not.toContain('migration-resource://')
   expect((await request.get(imageSrc!)).ok()).toBeTruthy()
 
-  await page.screenshot({ path: testInfo.outputPath('eu29-party-migrated-article.png'), fullPage: true })
+  await page.screenshot({ path: testInfo.outputPath('eu30-party-migrated-article.png'), fullPage: true })
   await page.goto('/party/')
-  await page.screenshot({ path: testInfo.outputPath('eu29-party-migrated-home.png'), fullPage: true })
+  await expect(workSection).toBeVisible()
+  await partyCarousel.getByRole('button', { name: new RegExp(articleItem.title) }).click()
+  await page.mouse.move(0, 0)
+  const activeImage = partyCarousel.locator('.party-carousel-item.active img')
+  await expect(activeImage).toHaveAttribute('alt', articleItem.title)
+  await expect.poll(() => activeImage.evaluate(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0)).toBe(true)
+  await page.screenshot({ path: testInfo.outputPath('eu30-party-migrated-home.png'), fullPage: true })
+
+  await page.setViewportSize({ width: 375, height: 812 })
+  await expect(activeImage).toBeVisible()
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
+  await page.screenshot({ path: testInfo.outputPath('eu30-party-migrated-mobile.png'), fullPage: true })
 })

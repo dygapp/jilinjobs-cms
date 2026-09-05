@@ -63,10 +63,12 @@ function size(bytes: number) {
       <p v-if="loading" class="party-state">正在加载文章…</p>
       <template v-else-if="article">
         <nav class="party-breadcrumb" aria-label="当前位置">
+          <span class="party-breadcrumb-label">当前位置：</span>
           <router-link to="/party/">中心党建</router-link>
-          <span>›</span>
+          <span class="party-breadcrumb-separator">›</span>
           <router-link :to="`/party/column/${article.columnAlias}`">{{ article.columnName }}</router-link>
-          <span>›</span><span>详情</span>
+          <span class="party-breadcrumb-separator">›</span>
+          <span>详情</span>
         </nav>
 
         <article class="party-content-card party-article-card" data-testid="party-article-page">

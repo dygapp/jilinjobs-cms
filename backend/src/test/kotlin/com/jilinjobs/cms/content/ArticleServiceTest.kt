@@ -102,6 +102,26 @@ class ArticleServiceTest {
     }
 
     @Test
+    fun `文章类型创建后不可修改`() {
+        val repository = InMemoryArticleRepository()
+        val service = ArticleService(repository, FixedColumnQuery(), InMemoryArticleResourceAssociation())
+        val existing = service.create(sampleDraft())
+
+        val error = assertThrows(ArticleValidationException::class.java) {
+            service.update(
+                existing.id,
+                sampleDraft().copy(
+                    articleType = ArticleType.EXTERNAL_LINK,
+                    externalUrl = "https://example.com/changed-type",
+                ),
+            )
+        }
+
+        assertEquals("文章类型创建后不可修改", error.message)
+        assertEquals(ArticleType.INTERNAL, service.get(existing.id).articleType)
+    }
+
+    @Test
     fun `封面必填栏目允许无封面草稿但阻止发布`() {
         val service = ArticleService(InMemoryArticleRepository(), RequiredCoverColumnQuery(), InMemoryArticleResourceAssociation())
         val created = service.create(sampleDraft().copy(coverResourceId = null))
@@ -201,7 +221,6 @@ class ArticleServiceTest {
         externalUrl = null,
         publishDate = LocalDate.of(2026, 8, 20),
         pinned = true,
-        recommended = true,
         sortOrder = 20,
         coverResourceId = 11,
         bodyImageResourceIds = listOf(12),
@@ -276,7 +295,6 @@ private class InMemoryArticleRepository : ArticleRepository {
         externalUrl = externalUrl,
         publishDate = publishDate,
         pinned = pinned,
-        recommended = recommended,
         sortOrder = sortOrder,
         status = status,
         actualPublishedAt = actualPublishedAt,

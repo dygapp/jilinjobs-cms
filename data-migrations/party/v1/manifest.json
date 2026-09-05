@@ -48,11 +48,39 @@
       "typeCode": "llxx",
       "columnAlias": "party-study",
       "observedListCount": 31
+    },
+    {
+      "typeCode": "zhutijiaoyu",
+      "columnAlias": "party-theme-education",
+      "observedListCount": 2,
+      "status": "accepted"
     }
   ],
   "notes": [
     "Canonical dataset 是从已冻结并完成 Human Review 的 EU-29 Run #7 Artifact 无损重排产生，不重新访问原站。",
     "文章采用 article-level self-contained unit；正文资源引用改为 article-relative assets/**。",
-    "后续增量直接修改 index.ndjson 与对应文章/列表项目录，不建立新的全量 Snapshot ZIP。"
-  ]
+    "后续增量直接修改 index.ndjson 与对应文章/列表项目录，不建立新的全量 Snapshot ZIP。",
+    "EU-30 增量补采 legacy“主题教育2023”，新系统栏目名称收敛为“主题教育”；项目负责人于 2026-09-05 完成最终 Human Review 后接受本扩展，当前 183 篇 Runtime Dataset 为已接受 canonical 状态。"
+  ],
+  "candidateExtension": {
+    "id": "EU-30-theme-education",
+    "status": "accepted",
+    "generatedAt": "2026-09-04T13:54:51.329446+00:00",
+    "sourceWorkflowRunId": 33880672887,
+    "sourceHeadSha": "d0132be58a573cd8610cd6ba885c99f0bcfcd65d",
+    "addedArticles": 2,
+    "internalArticles": 1,
+    "externalArticles": 1,
+    "reportedTotal": 2,
+    "unresolved": 0,
+    "articleRefForCarouselPosition2": "zhutijiaoyu:content:154659859759104",
+    "runtimeDatasetArticles": 183,
+    "acceptedEu29Articles": 181,
+    "humanReview": "PASS",
+    "acceptedAt": "2026-09-05",
+    "acceptedHeadSha": "f47623876e6961655338fb6399482e8b363a3801",
+    "humanReviewRunId": 33945103502,
+    "humanReviewEvidenceArtifactId": 9963152822,
+    "humanReviewEvidenceDigest": "sha256:ec2d434c759236a07d6176792c7dfe58a714d9bd0d92cf7f0f502c99e4dedabb"
+  }
 }

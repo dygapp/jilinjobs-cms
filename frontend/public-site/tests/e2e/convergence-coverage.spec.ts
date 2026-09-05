@@ -21,7 +21,7 @@ async function baselineColumn(request: APIRequestContext, alias: string): Promis
 
 async function createAndPublishArticle(
   request: APIRequestContext,
-  input: { columnId: number; title: string; pinned?: boolean; recommended?: boolean; sortOrder?: number },
+  input: { columnId: number; title: string; pinned?: boolean; sortOrder?: number },
 ): Promise<CreatedArticle> {
   const createResponse = await request.post('/api/admin/articles', {
     data: {
@@ -31,7 +31,6 @@ async function createAndPublishArticle(
       source: 'Feature-wide convergence verification',
       publishDate: '2026-08-24',
       pinned: input.pinned ?? false,
-      recommended: input.recommended ?? false,
       sortOrder: input.sortOrder ?? 0,
       coverResourceId: null,
       bodyImageResourceIds: [],
@@ -74,11 +73,10 @@ test('Feature-wide closure：栏目内容超过单页容量时可以完整分页
   await expect(page.getByTestId(`column-article-${highest.id}`)).toBeVisible()
 })
 
-test('Feature-wide closure：首页通知公告按置顶推荐和展示顺序组织已发布内容', async ({ page, request }, testInfo) => {
+test('Feature-wide closure：首页通知公告按置顶和展示顺序组织已发布内容', async ({ page, request }, testInfo) => {
   const suffix = `${Date.now()}-${testInfo.retry}`
   const column = await baselineColumn(request, 'notice')
   const low = await createAndPublishArticle(request, { columnId: column.id, title: `普通低排序-${suffix}`, sortOrder: 10 })
-  const recommended = await createAndPublishArticle(request, { columnId: column.id, title: `推荐文章-${suffix}`, recommended: true, sortOrder: 0 })
   const high = await createAndPublishArticle(request, { columnId: column.id, title: `普通高排序-${suffix}`, sortOrder: 200 })
   const pinned = await createAndPublishArticle(request, { columnId: column.id, title: `置顶文章-${suffix}`, pinned: true, sortOrder: 0 })
 
@@ -86,8 +84,8 @@ test('Feature-wide closure：首页通知公告按置顶推荐和展示顺序组
   const group = page.locator('.notice-panel')
   await expect(group).toBeVisible()
   const texts = await group.locator('li a').allTextContents()
-  const selected = texts.filter(text => [pinned.title, recommended.title, high.title, low.title].includes(text))
-  expect(selected).toEqual([pinned.title, recommended.title, high.title, low.title])
+  const selected = texts.filter(text => [pinned.title, high.title, low.title].includes(text))
+  expect(selected).toEqual([pinned.title, high.title, low.title])
 })
 
 test('Feature-wide closure：招聘公告外链文章只保存基础信息并直接跳转原站', async ({ page, request }, testInfo) => {
@@ -105,7 +103,6 @@ test('Feature-wide closure：招聘公告外链文章只保存基础信息并直
       externalUrl,
       publishDate: '2026-08-28',
       pinned: true,
-      recommended: false,
       sortOrder: 9999,
       coverResourceId: null,
       bodyImageResourceIds: [],

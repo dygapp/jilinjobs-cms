@@ -1,24 +1,63 @@
 .party-site-app{
   --party-column-interaction-accent:#d00023;
+  --party-column-text:#515c6b;
+  --party-column-muted:#6c757d;
+  --party-column-separator:#9aa7b5;
 }
 
-.party-site-app .shared-column-breadcrumb a:hover{
+.party-site-app .shared-column-page-shell{
+  --shared-column-interaction-accent:var(--party-column-interaction-accent);
+}
+
+.party-site-app .party-page{
+  padding:0 0 46px;
+}
+
+.party-site-app .party-breadcrumb,
+.party-site-app .shared-column-breadcrumb{
+  min-height:57px;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:0;
+  color:var(--party-column-muted);
+  font-size:13px;
+  line-height:1.4;
+}
+
+.party-site-app .party-breadcrumb-label,
+.party-site-app .shared-column-breadcrumb-label{
+  color:var(--party-column-muted);
+}
+
+.party-site-app .party-breadcrumb a,
+.party-site-app .shared-column-breadcrumb a{
+  color:var(--party-column-text);
+  text-decoration:none;
+}
+
+.party-site-app .party-breadcrumb a:hover,
+.party-site-app .party-breadcrumb a:focus-visible,
+.party-site-app .shared-column-breadcrumb a:hover,
+.party-site-app .shared-column-breadcrumb a:focus-visible{
   color:var(--party-column-interaction-accent);
 }
 
-.party-site-app .shared-column-list-link:hover,
-.party-site-app .shared-column-list-link:hover .shared-column-list-title{
-  color:var(--party-column-interaction-accent);
+.party-site-app .party-breadcrumb-separator,
+.party-site-app .shared-column-breadcrumb-separator{
+  color:var(--party-column-separator);
 }
 
-.party-site-app .shared-column-page-button:hover:not(:disabled),
-.party-site-app .shared-column-page-jump-submit:hover{
-  border-color:var(--party-column-interaction-accent);
-  color:var(--party-column-interaction-accent);
-}
+@media(max-width:760px){
+  .party-site-app .party-page{
+    padding-bottom:20px;
+  }
 
-.party-site-app .shared-column-page-button.active{
-  border-color:var(--party-column-interaction-accent);
-  background:var(--party-column-interaction-accent);
-  color:#fff;
+  .party-site-app .party-breadcrumb,
+  .party-site-app .shared-column-breadcrumb{
+    min-height:48px;
+    padding:8px 0;
+    font-size:12px;
+  }
 }

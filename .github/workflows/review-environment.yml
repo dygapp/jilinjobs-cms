@@ -8,7 +8,7 @@ on:
         required: false
         default: main
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [opened, synchronize, reopened, labeled]
 
 concurrency:
   group: review-environment
@@ -21,6 +21,7 @@ permissions:
 jobs:
   review-environment:
     name: 启动人工评审环境
+    if: github.event.action != 'labeled' || github.event.label.name == 'human-review'
     runs-on: ubuntu-latest
     timeout-minutes: 60
     services:
@@ -206,7 +207,14 @@ jobs:
           test -f "$canonical_root/index.ndjson"
           test -f "$canonical_root/lists/PARTY_CAROUSEL/index.json"
           jq --exit-status '
-            .status == "accepted-canonical"
+            (.status == "accepted-canonical" or .status == "candidate-extension")
+            and (if .status == "candidate-extension" then
+              .candidateExtension.status == "pending-human-review"
+              and .candidateExtension.acceptedEu29Articles == .acceptedSnapshot.articles
+              and .candidateExtension.runtimeDatasetArticles == (.acceptedSnapshot.articles + .candidateExtension.addedArticles)
+              and .candidateExtension.reportedTotal == .candidateExtension.addedArticles
+              and .candidateExtension.unresolved == 0
+            else true end)
             and .acceptedSnapshot.articles == 181
             and .acceptedSnapshot.internalArticles == 120
             and .acceptedSnapshot.externalArticles == 61
@@ -219,33 +227,36 @@ jobs:
           export DB_PASSWORD=root
           export CMS_STORAGE_ROOT="$GITHUB_WORKSPACE/runtime-uploads"
           export CMS_STATIC_ROOT="$GITHUB_WORKSPACE/runtime-static"
-
           (cd backend && gradle importPartyHistoricalContent --args="../data-migrations/party/v1" --no-daemon) | tee eu29-review-article-import.log
           (cd backend && gradle importPartyCarousel --args="../data-migrations/party/v1" --no-daemon) | tee eu29-review-carousel-import.log
 
           python3 - <<'PY'
           import json, re
           from pathlib import Path
-          expected=json.loads(Path('data-migrations/party/v1/manifest.json').read_text(encoding='utf-8'))['acceptedSnapshot']
+          manifest=json.loads(Path('data-migrations/party/v1/manifest.json').read_text(encoding='utf-8'))
+          expected=manifest['acceptedSnapshot']
+          runtime_articles=manifest.get('candidateExtension', {}).get('runtimeDatasetArticles', expected['articles'])
           article=json.loads(re.findall(r'EU29_IMPORT_REPORT (\{.*\})', Path('eu29-review-article-import.log').read_text(encoding='utf-8'))[-1])
-          assert article['total']==expected['articles'] and article['created']==expected['articles'], article
+          assert article['total']==runtime_articles and article['created']==runtime_articles, article
           assert article['skipped']==0 and article['conflicts']==0 and article['invalid']==0, article
           carousel=json.loads(re.findall(r'EU29_CAROUSEL_IMPORT_REPORT (\{.*\})', Path('eu29-review-carousel-import.log').read_text(encoding='utf-8'))[-1])
           assert carousel['total']==expected['carouselItems'] and carousel['created']==expected['carouselItems'], carousel
-          assert carousel['skipped']==0 and carousel['conflicts']==0 and carousel['invalid']==0, carousel
+          assert carousel['updated']==0 and carousel['skipped']==0 and carousel['conflicts']==0 and carousel['invalid']==0, carousel
           PY
 
           docker run --rm --network host mysql:8.4 \
             mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
-            "SELECT c.alias,COUNT(a.id) FROM cms_column c LEFT JOIN cms_article a ON a.column_id=c.id AND a.status='PUBLISHED' WHERE c.alias IN ('party-voice','party-work','party-rules','party-study') GROUP BY c.alias ORDER BY c.alias" \
+            "SELECT c.alias,COUNT(a.id) FROM cms_column c LEFT JOIN cms_article a ON a.column_id=c.id AND a.status='PUBLISHED' WHERE c.parent_id=(SELECT id FROM cms_column WHERE alias='party') GROUP BY c.alias ORDER BY c.alias" \
             | tee eu29-review-column-counts.tsv
           node - <<'NODE'
           const fs=require('fs')
           const manifest=require('./data-migrations/party/v1/manifest.json')
           const expected=Object.fromEntries(manifest.contentScope.map(scope=>[scope.columnAlias,scope.observedListCount]))
-          const rows=fs.readFileSync('eu29-review-column-counts.tsv','utf8').trim().split(/\n/).map(line=>line.split('\t'))
-          if (rows.length !== 4) throw new Error(`Party column rows=${rows.length}`)
-          for (const [alias,count] of rows) if (Number(count)!==expected[alias]) throw new Error(`${alias}: ${count} != ${expected[alias]}`)
+          const rows=fs.readFileSync('eu29-review-column-counts.tsv','utf8').trim().split(/\n/).filter(Boolean).map(line=>line.split('\t'))
+          const actual=Object.fromEntries(rows.map(([alias,count])=>[alias,Number(count)]))
+          for (const [alias,count] of Object.entries(expected)) {
+            if (actual[alias] !== Number(count)) throw new Error(`${alias}: ${actual[alias]} != ${count}`)
+          }
           NODE
 
       - name: 准备 Human Review 主站示例内容
@@ -276,29 +287,90 @@ jobs:
           create_article "$employment_id" '管理端人工评审：访企拓岗促就业专项行动' '2026-08-27'
           create_external_article "$recruitment_id" '管理端人工评审：高校毕业生专场招聘公告' '2026-08-28' 'https://example.com/review/recruitment-1'
           create_external_article "$recruitment_id" '管理端人工评审：重点单位招聘公告' '2026-08-24' 'https://example.com/review/recruitment-2'
+          
+          # 显式人工评审数据，使主站也能观察多项自动/手动切换。
+          home_list_id=$(curl --fail --silent http://127.0.0.1:5173/api/admin/lists | jq --exit-status '.[] | select(.code == "HOME_CAROUSEL") | .id')
+          for position in 1 2; do
+            payload=$(jq -n --argjson position "$position" '{sourceType:"LINK",articleId:null,title:("主站轮播人工评审示例 " + ($position|tostring)),subtitle:null,url:"/column/notice",imagePath:(if $position == 1 then "/static/home/carousel-01.jpg" else "/static/home/recruitment-campaign.png" end),imageResourceId:null,openMode:"SAME_WINDOW",sortOrder:(-100 + $position),enabled:true,extraJson:null}')
+            curl --fail --silent -H 'Content-Type: application/json' -d "$payload" "http://127.0.0.1:5173/api/admin/lists/$home_list_id/items" | jq --exit-status '.id > 0' > /dev/null
+          done
 
       - name: 验证 Human Review Runtime 数据
         run: |
           set -euo pipefail
           curl --fail --silent http://127.0.0.1:5173/admin/articles | grep -qi '<html'
           curl --fail --silent http://127.0.0.1:5173/party/ | grep -qi '<html'
-          expected=$(jq -r '.acceptedSnapshot.articles' data-migrations/party/v1/manifest.json)
-          total=$(curl --fail --silent 'http://127.0.0.1:5173/api/public/articles?page=0&size=1' | jq -r '.total')
-          test "$total" -ge "$expected"
-          expected_titles=$(node - <<'NODE'
-          const fs=require('fs')
-          const root='data-migrations/party/v1/lists/PARTY_CAROUSEL'
-          const index=JSON.parse(fs.readFileSync(`${root}/index.json`,'utf8'))
-          const items=index.items.sort((a,b)=>a.sourceOrder-b.sourceOrder).map(ref=>JSON.parse(fs.readFileSync(`${root}/${ref.path}`,'utf8')).title)
-          process.stdout.write(JSON.stringify(items))
-          NODE
-          )
-          curl --fail --silent http://127.0.0.1:5173/api/public/lists/by-code/PARTY_CAROUSEL \
-            | jq --argjson expectedTitles "$expected_titles" --exit-status '
-                (.items | length == 4)
-                and ([.items[].title] == $expectedTitles)
-                and all(.items[]; (.imagePath // "") | startswith("/static/migrated/party/carousel/"))
-                and all(.items[]; .openMode == "NEW_WINDOW")' > /dev/null
+          cat > review-party-runtime.py <<'PY'
+          import hashlib, json, sys
+          from pathlib import Path
+          from urllib.parse import urlsplit
+          from urllib.request import urlopen
+          
+          base = sys.argv[1].rstrip('/')
+          root = Path('data-migrations/party/v1')
+          manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
+          
+          def read(path):
+              assert path.startswith('/') and not path.startswith('//'), path
+              with urlopen(base + path, timeout=30) as response:
+                  assert urlsplit(response.url).netloc == urlsplit(base).netloc, response.url
+                  return response.read()
+          
+          def get(path):
+              return json.loads(read(path))
+          
+          aliases = ['party'] + [scope['columnAlias'] for scope in manifest['contentScope']]
+          columns = {alias: get('/api/public/columns/by-alias/' + alias) for alias in aliases}
+          counts = {}
+          for scope in manifest['contentScope']:
+              alias = scope['columnAlias']
+              column = columns[alias]
+              assert column['parentId'] == columns['party']['id'], column
+              result = get(f"/api/public/articles?columnId={column['id']}&page=0&size=1")
+              assert result['total'] == scope['observedListCount'], (alias, result['total'])
+              counts[alias] = result['total']
+          
+          carousel_root = root / 'lists/PARTY_CAROUSEL'
+          index = json.loads((carousel_root / 'index.json').read_text(encoding='utf-8'))
+          expected = [json.loads((carousel_root / ref['path']).read_text(encoding='utf-8'))
+                      for ref in sorted(index['items'], key=lambda ref: ref['sourceOrder'])]
+          carousel = get('/api/public/lists/by-code/PARTY_CAROUSEL')
+          assert carousel['imagePolicy'] == 'REQUIRED', carousel
+          items = carousel['items']
+          assert len(items) == len(expected) == manifest['acceptedSnapshot']['carouselItems'], items
+          evidence = []
+          for item, source in zip(items, expected):
+              source_type = source.get('sourceType', 'LINK')
+              assert item['sourceType'] == source_type, item
+              assert item['title'] == source['title'], item
+              assert item['sortOrder'] == source['sourceOrder'], item
+              assert item['openMode'] == source['openMode'] == 'NEW_WINDOW', item
+              if source_type == 'ARTICLE':
+                  assert item['articleId'] and item['effectiveImageResourceId'], item
+                  assert item['imageResourceId'] == item['effectiveImageResourceId'], item
+                  assert item['imagePath'] is None and item['url'] is None, item
+                  assert item['articleType'] == 'INTERNAL' and item['articleStatus'] == 'PUBLISHED', item
+                  article = get(f"/api/public/articles/{item['articleId']}")
+                  assert article['columnId'] == columns['party-theme-education']['id'], article
+                  assert article['title'] == source['title'], article
+                  image_path = f"/api/public/resources/{item['effectiveImageResourceId']}/content"
+              else:
+                  assert item['articleId'] is None and item['effectiveImageResourceId'] is None, item
+                  assert item['url'] == source['url'], item
+                  image_path = item['imagePath']
+                  assert image_path.startswith('/static/migrated/party/carousel/'), item
+              content = read(image_path)
+              assert len(content) == source['image']['sizeBytes'], image_path
+              digest = hashlib.sha256(content).hexdigest()
+              assert digest == source['image']['sha256'], (image_path, digest)
+              evidence.append({'position': source['sourceOrder'], 'sourceType': source_type,
+                               'articleId': item['articleId'], 'imageResourceId': item['effectiveImageResourceId'],
+                               'imageSha256': digest})
+          
+          print(json.dumps({'base': base, 'status': manifest['status'], 'columns': counts,
+                            'carousel': evidence}, ensure_ascii=False))
+          PY
+          python3 review-party-runtime.py http://127.0.0.1:5173 | tee eu30-review-runtime.json
 
       - name: 执行 Party canonical Runtime Browser 验证
         run: |
@@ -323,6 +395,7 @@ jobs:
             eu29-review-article-import.log
             eu29-review-carousel-import.log
             eu29-review-column-counts.tsv
+            eu30-review-runtime.json
             frontend/public-site/test-results
           if-no-files-found: warn
           retention-days: 7
@@ -398,23 +471,56 @@ jobs:
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/public-institution.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/wechat-qr.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/admin/columns | jq --exit-status 'length > 0' > /dev/null
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/public/lists/by-code/PARTY_CAROUSEL \
-            | jq --exit-status '(.items | length == 4) and all(.items[]; (.imagePath // "") | startswith("/static/migrated/party/carousel/"))' > /dev/null
+          python3 review-party-runtime.py http://review.cc-lotus.info | tee eu30-review-external-runtime.json
+
+      - name: 记录评审环境归属与租约
+        env:
+          REVIEW_EVENT: ${{ github.event_name }}
+          REVIEW_ACTION: ${{ github.event.action }}
+          REVIEW_LABEL: ${{ github.event.label.name }}
+        run: |
+          set -euo pipefail
+          export REVIEW_HEAD_SHA=$(git rev-parse HEAD)
+          python3 - <<'PY'
+          import datetime, json, os
+          from pathlib import Path
+          human = os.environ['REVIEW_EVENT'] == 'workflow_dispatch' or (
+              os.environ['REVIEW_ACTION'] == 'labeled' and os.environ['REVIEW_LABEL'] == 'human-review')
+          seconds = 2700 if human else 120
+          now = datetime.datetime.now(datetime.timezone.utc)
+          owner = {'runId': os.environ['GITHUB_RUN_ID'], 'headSha': os.environ['REVIEW_HEAD_SHA'],
+                   'mode': 'human-review' if human else 'verification',
+                   'readyAt': now.isoformat(), 'expiresAt': (now + datetime.timedelta(seconds=seconds)).isoformat()}
+          Path('frontend/public-site/dist/review-environment.json').write_text(json.dumps(owner), encoding='utf-8')
+          with open(os.environ['GITHUB_ENV'], 'a') as env:
+              env.write(f'REVIEW_LEASE_SECONDS={seconds}\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+              summary.write(f"Review owner: {json.dumps(owner)}\n\n公开站：http://review.cc-lotus.info/\n\n中心党建：http://review.cc-lotus.info/party/\n\n管理端：http://review.cc-lotus.info/admin/\n")
+          print(json.dumps(owner))
+          PY
+          curl --fail --silent --show-error --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/review-environment.json -o review-external-owner.json
+          cmp frontend/public-site/dist/review-environment.json review-external-owner.json
+
+      - name: 上传外部访问与租约证据
+        uses: actions/upload-artifact@v7
+        with:
+          name: review-external-runtime-evidence
+          path: |
+            eu30-review-external-runtime.json
+            review-external-owner.json
+          if-no-files-found: error
+          retention-days: 7
 
       - name: 输出评审地址
         run: |
           echo "公开站人工评审地址：http://review.cc-lotus.info/"
           echo "中心党建人工评审地址：http://review.cc-lotus.info/party/"
           echo "管理端人工评审地址：http://review.cc-lotus.info/admin/"
-          echo "中心党建：使用仓库已接受的 canonical 历史迁移数据；主站其他栏目继续使用人工评审示例数据。"
+          echo "中心党建：使用仓库 EU-29 accepted 基线及 EU-30 待人工评审增量；主站其他栏目继续使用人工评审示例数据。"
 
       - name: 保持环境运行
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            sleep 120
-          else
-            sleep 3300
-          fi
+          sleep "$REVIEW_LEASE_SECONDS"
 
       - name: 清理环境
         if: always()

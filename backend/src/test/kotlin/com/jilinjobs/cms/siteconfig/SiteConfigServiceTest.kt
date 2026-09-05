@@ -14,16 +14,58 @@ class SiteConfigServiceTest {
 
     @Test
     fun `validates url boolean and integer property types`() {
-        val mapper = FakeSiteConfigMapper(record("SERVICE_URL", "URL", "/page/about"), record("FEATURE_ENABLED", "BOOLEAN", "true"), record("CAROUSEL_INTERVAL", "INTEGER", "4"), record("HOME_CAROUSEL_INTERVAL_SECONDS", "INTEGER", "4"))
+        val mapper = FakeSiteConfigMapper(
+            record("SERVICE_URL", "URL", "/page/about"),
+            record("FEATURE_ENABLED", "BOOLEAN", "true"),
+            record("CUSTOM_INTEGER", "INTEGER", "4"),
+            record("CAROUSEL_INTERVAL_SECONDS", "INTEGER", "4"),
+            record("CAROUSEL_MAX_ITEMS", "INTEGER", "5"),
+        )
         val service = service(mapper)
         assertEquals("https://example.com/path", service.update("SERVICE_URL", "https://example.com/path").value)
-        assertEquals("6", service.update("CAROUSEL_INTERVAL", "6").value)
-        assertEquals("1", service.update("HOME_CAROUSEL_INTERVAL_SECONDS", "1").value)
+        assertEquals("6", service.update("CUSTOM_INTEGER", "6").value)
+        assertEquals("1", service.update("CAROUSEL_INTERVAL_SECONDS", "1").value)
+        assertEquals("2", service.update("CAROUSEL_MAX_ITEMS", "2").value)
+        assertEquals("5", service.update("CAROUSEL_MAX_ITEMS", " 5 ").value)
         assertThrows(SiteConfigValidationException::class.java) { service.update("SERVICE_URL", "javascript:alert(1)") }
         assertThrows(SiteConfigValidationException::class.java) { service.update("FEATURE_ENABLED", "yes") }
-        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_INTERVAL", "4.5") }
-        assertThrows(SiteConfigValidationException::class.java) { service.update("HOME_CAROUSEL_INTERVAL_SECONDS", "0") }
-        assertThrows(SiteConfigValidationException::class.java) { service.update("HOME_CAROUSEL_INTERVAL_SECONDS", "-1") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CUSTOM_INTEGER", "4.5") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_INTERVAL_SECONDS", "0") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_INTERVAL_SECONDS", "-1") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_INTERVAL_SECONDS", "+5") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_INTERVAL_SECONDS", "5abc") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_MAX_ITEMS", "0") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_MAX_ITEMS", "-1") }
+        assertThrows(SiteConfigValidationException::class.java) { service.update("CAROUSEL_MAX_ITEMS", "1.5") }
+    }
+
+    @Test
+    fun `normalizes positive carousel integer values on definition writes`() {
+        val service = service(FakeSiteConfigMapper())
+        val created = service.create(SiteConfigDraft("CAROUSEL_MAX_ITEMS", "轮播最大展示数量", "GENERAL", " 05 ", "INTEGER", required = true))
+        assertEquals("05", created.value)
+        val updated = service.updateDefinition(
+            "CAROUSEL_MAX_ITEMS",
+            SiteConfigDraft("CAROUSEL_MAX_ITEMS", "轮播最大展示数量", "GENERAL", " 7 ", "INTEGER", required = true),
+        )
+        assertEquals("7", updated.value)
+    }
+
+    @Test
+    fun `carousel keys keep integer semantics even if definition update tries to change type`() {
+        val mapper = FakeSiteConfigMapper(record("CAROUSEL_INTERVAL_SECONDS", "INTEGER", "4"))
+        val service = service(mapper)
+        assertThrows(SiteConfigValidationException::class.java) {
+            service.updateDefinition(
+                "CAROUSEL_INTERVAL_SECONDS",
+                SiteConfigDraft("CAROUSEL_INTERVAL_SECONDS", "轮播切换间隔", "GENERAL", "4", "TEXT", required = true),
+            )
+        }
+
+        val driftedMapper = FakeSiteConfigMapper(record("CAROUSEL_MAX_ITEMS", "TEXT", "5"))
+        val driftedService = service(driftedMapper)
+        assertThrows(SiteConfigValidationException::class.java) { driftedService.update("CAROUSEL_MAX_ITEMS", "5abc") }
+        assertEquals("6", driftedService.update("CAROUSEL_MAX_ITEMS", " 6 ").value)
     }
 
     @Test

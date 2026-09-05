@@ -1,31 +1,51 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { listPublicArticles, type PublicArticleSummary } from '../../../../shared/api/articles'
-import { getPublicCmsListByCode, type CmsListItem } from '../../../../shared/api/lists'
+import { getPublicCmsListByCode, publicListImageUrl, type CmsListItem } from '../../../../shared/api/lists'
+import { listPublicSiteConfig } from '../../../../shared/api/siteConfig'
+import { useContentCarousel } from '../../../../shared/carousel/useContentCarousel'
 import { setPageMeta } from '../../../../shared/seo'
 import {
   PARTY_CAROUSEL_CODE,
-  PARTY_COLUMN_ALIASES,
-  loadPartyColumns,
-  type PartyColumnAlias,
+  PARTY_HOME_COLUMN_ALIASES,
+  loadPartyHomeColumns,
+  type PartyHomeColumnAlias,
 } from '../../app/partyContext'
 
 const SECTION_SIZE = 6
-const CAROUSEL_INTERVAL_MS = 5000
-const studyAliases: PartyColumnAlias[] = ['party-rules', 'party-study']
-const sectionArticles = ref<Record<PartyColumnAlias, PublicArticleSummary[]>>({
+const DEFAULT_CAROUSEL_INTERVAL_SECONDS = 4
+const DEFAULT_CAROUSEL_MAX_ITEMS = 5
+const CAROUSEL_INTERVAL_KEY = 'CAROUSEL_INTERVAL_SECONDS'
+const CAROUSEL_MAX_ITEMS_KEY = 'CAROUSEL_MAX_ITEMS'
+const studyAliases: PartyHomeColumnAlias[] = ['party-rules', 'party-study']
+const sectionArticles = ref<Record<PartyHomeColumnAlias, PublicArticleSummary[]>>({
   'party-voice': [],
   'party-work': [],
   'party-rules': [],
   'party-study': [],
 })
 const carouselItems = ref<CmsListItem[]>([])
-const activeSlide = ref(0)
+const carouselIntervalSeconds = ref(DEFAULT_CAROUSEL_INTERVAL_SECONDS)
+const carouselMaxItems = ref(DEFAULT_CAROUSEL_MAX_ITEMS)
 const loading = ref(true)
 const error = ref('')
-let carouselTimer: number | undefined
 
-const sectionTitles: Record<PartyColumnAlias, string> = {
+const {
+  activeIndex: activeSlide,
+  activeItem: activeCarouselItem,
+  visibleItems: visibleCarouselItems,
+  pause: pauseCarousel,
+  resume: resumeCarousel,
+  select: selectCarousel,
+  markImageFailed: markCarouselImageFailed,
+  onFocusOut: carouselFocusOut,
+} = useContentCarousel({
+  items: carouselItems,
+  intervalSeconds: carouselIntervalSeconds,
+  maxItems: carouselMaxItems,
+})
+
+const sectionTitles: Record<PartyHomeColumnAlias, string> = {
   'party-voice': '高层声音',
   'party-work': '工作动态',
   'party-rules': '党规党章',
@@ -38,22 +58,27 @@ setPageMeta({
 })
 
 onMounted(load)
-onUnmounted(stopCarousel)
 
 async function load() {
   loading.value = true
   error.value = ''
   try {
-    const columns = await loadPartyColumns()
-    const [carousel, ...articlePages] = await Promise.all([
+    const columnsPromise = loadPartyHomeColumns()
+    const [carousel, properties, columns] = await Promise.all([
       getPublicCmsListByCode(PARTY_CAROUSEL_CODE),
-      ...PARTY_COLUMN_ALIASES.map(alias => listPublicArticles(columns[alias].id, 0, SECTION_SIZE)),
+      listPublicSiteConfig(),
+      columnsPromise,
     ])
-    carouselItems.value = carousel.items.filter(item => item.enabled)
-    PARTY_COLUMN_ALIASES.forEach((alias, index) => {
+    const config = Object.fromEntries(properties.map(item => [item.key, item.value]))
+    const articlePages = await Promise.all(
+      PARTY_HOME_COLUMN_ALIASES.map(alias => listPublicArticles(columns[alias].id, 0, SECTION_SIZE)),
+    )
+    carouselIntervalSeconds.value = positiveInteger(config[CAROUSEL_INTERVAL_KEY], DEFAULT_CAROUSEL_INTERVAL_SECONDS)
+    carouselMaxItems.value = positiveInteger(config[CAROUSEL_MAX_ITEMS_KEY], DEFAULT_CAROUSEL_MAX_ITEMS)
+    carouselItems.value = carousel.items
+    PARTY_HOME_COLUMN_ALIASES.forEach((alias, index) => {
       sectionArticles.value[alias] = articlePages[index].items
     })
-    startCarousel()
   } catch (e) {
     error.value = e instanceof Error ? e.message : '党建内容加载失败'
   } finally {
@@ -61,26 +86,32 @@ async function load() {
   }
 }
 
-function startCarousel() {
-  stopCarousel()
-  activeSlide.value = 0
-  if (carouselItems.value.length <= 1) return
-  carouselTimer = window.setInterval(() => {
-    activeSlide.value = (activeSlide.value + 1) % carouselItems.value.length
-  }, CAROUSEL_INTERVAL_MS)
-}
-
-function stopCarousel() {
-  if (carouselTimer !== undefined) window.clearInterval(carouselTimer)
-  carouselTimer = undefined
+function positiveInteger(value: string | undefined, fallback: number) {
+  const parsed = Number.parseInt(value || '', 10)
+  return Number.isInteger(parsed) && parsed > 0 ? parsed : fallback
 }
 
 function isExternal(article: PublicArticleSummary) {
   return article.articleType === 'EXTERNAL_LINK' && Boolean(article.externalUrl)
 }
 
+function carouselInternalRoute(item: CmsListItem) {
+  return item.sourceType === 'ARTICLE' && item.articleType === 'INTERNAL' && item.articleId != null
+    ? `/party/article/${item.articleId}`
+    : null
+}
+
+function carouselHref(item: CmsListItem) {
+  return carouselInternalRoute(item) ? null : item.url
+}
+
+function carouselImage(item: CmsListItem) {
+  return publicListImageUrl(item) || ''
+}
+
 function itemTarget(item: CmsListItem) {
-  return item.openMode === 'NEW_WINDOW' ? '_blank' : undefined
+  const href = carouselHref(item)
+  return item.openMode === 'NEW_WINDOW' || (item.openMode === 'DEFAULT' && Boolean(href?.startsWith('http'))) ? '_blank' : undefined
 }
 </script>
 
@@ -91,33 +122,49 @@ function itemTarget(item: CmsListItem) {
       <p v-else-if="error" class="party-state party-state-error">{{ error }}</p>
       <template v-else>
         <section class="party-entry-top" aria-label="中心党建重点内容">
-          <div class="party-carousel" data-testid="party-carousel" @mouseenter="stopCarousel" @mouseleave="startCarousel">
-            <template v-if="carouselItems.length">
+          <div
+            class="party-carousel"
+            data-testid="party-carousel"
+            @mouseenter="pauseCarousel('hover')"
+            @mouseleave="resumeCarousel('hover')"
+            @focusin="pauseCarousel('focus')"
+            @focusout="carouselFocusOut"
+          >
+            <template v-if="visibleCarouselItems.length">
               <article
-                v-for="(item, index) in carouselItems"
+                v-for="(item, index) in visibleCarouselItems"
                 :key="item.id"
                 class="party-carousel-item"
                 :class="{ active: index === activeSlide }"
                 :aria-hidden="index !== activeSlide"
                 :data-testid="`party-carousel-item-${item.id}`"
               >
-                <a v-if="item.url" :href="item.url" :target="itemTarget(item)" :rel="itemTarget(item) ? 'noopener noreferrer' : undefined">
-                  <img v-if="item.imagePath" :src="item.imagePath" :alt="item.title">
+                <router-link
+                  v-if="carouselInternalRoute(item)"
+                  :to="carouselInternalRoute(item)!"
+                  :target="item.openMode === 'NEW_WINDOW' ? '_blank' : undefined"
+                  :rel="item.openMode === 'NEW_WINDOW' ? 'noopener noreferrer' : undefined"
+                >
+                  <img v-if="carouselImage(item)" :src="carouselImage(item)" :alt="item.title" @error="markCarouselImageFailed(item.id)">
+                  <strong>{{ item.title }}</strong>
+                </router-link>
+                <a v-else-if="carouselHref(item)" :href="carouselHref(item)!" :target="itemTarget(item)" :rel="itemTarget(item) ? 'noopener noreferrer' : undefined">
+                  <img v-if="carouselImage(item)" :src="carouselImage(item)" :alt="item.title" @error="markCarouselImageFailed(item.id)">
                   <strong>{{ item.title }}</strong>
                 </a>
                 <div v-else>
-                  <img v-if="item.imagePath" :src="item.imagePath" :alt="item.title">
+                  <img v-if="carouselImage(item)" :src="carouselImage(item)" :alt="item.title" @error="markCarouselImageFailed(item.id)">
                   <strong>{{ item.title }}</strong>
                 </div>
               </article>
-              <div v-if="carouselItems.length > 1" class="party-carousel-dots" aria-label="轮播页码">
+              <div v-if="visibleCarouselItems.length > 1" class="party-carousel-dots" aria-label="轮播页码">
                 <button
-                  v-for="(item, index) in carouselItems"
+                  v-for="(item, index) in visibleCarouselItems"
                   :key="`dot-${item.id}`"
                   type="button"
-                  :class="{ active: index === activeSlide }"
+                  :class="{ active: item.id === activeCarouselItem?.id }"
                   :aria-label="`查看第 ${index + 1} 项：${item.title}`"
-                  @click="activeSlide = index"
+                  @click="selectCarousel(index)"
                 />
               </div>
             </template>
@@ -185,3 +232,11 @@ function itemTarget(item: CmsListItem) {
     </div>
   </main>
 </template>
+
+<style scoped>
+@media (prefers-reduced-motion: reduce) {
+  .party-carousel-item {
+    transition: none;
+  }
+}
+</style>

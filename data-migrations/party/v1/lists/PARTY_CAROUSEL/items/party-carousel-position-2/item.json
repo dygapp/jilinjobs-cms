@@ -4,7 +4,7 @@
   "title": "吉林省高等学校毕业生就业指导中心学习贯彻习近平新时代中国特色社会主义思想主题教育",
   "url": "https://24365.jl.smartedu.cn/detail.html?content_id=154659859759104",
   "openMode": "NEW_WINDOW",
-  "sourceFingerprint": "c2ad182b8b2dc981a3cbe3b0153a1e3e47604c1f01dd43e6d25971e1deed10dc",
+  "sourceFingerprint": "f8b5d8df87021373803639b174bf88e46ae6cef7f2599a205763b5887c78be84",
   "image": {
     "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content1/2023-05-08/low/a0b72690-64a3-43aa-9c3a-d08cd3ca783f.png",
     "originalReference": "/group1/cms/t_biz_attachment/content1/2023-05-08/low/a0b72690-64a3-43aa-9c3a-d08cd3ca783f.png",
@@ -17,5 +17,10 @@
     "sourceHref": "detail.html?content_id=154659859759104",
     "sourceImageReference": "/group1/cms/t_biz_attachment/content1/2023-05-08/low/a0b72690-64a3-43aa-9c3a-d08cd3ca783f.png",
     "sourceTarget": "_blank"
+  },
+  "sourceType": "ARTICLE",
+  "articleRef": {
+    "sourceSystem": "legacy-jilinjobs",
+    "legacyKey": "zhutijiaoyu:content:154659859759104"
   }
 }

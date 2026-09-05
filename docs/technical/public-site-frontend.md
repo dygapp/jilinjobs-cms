@@ -13,6 +13,8 @@ frontend/public-site/
 └── src/
     ├── shared/
     │   ├── api/
+    │   ├── carousel/
+    │   │   └── useContentCarousel.ts
     │   ├── components/
     │   │   ├── PublicNavigation.vue
     │   │   └── PublicFooter.vue
@@ -38,9 +40,9 @@ frontend/public-site/
             └── styles/
 ```
 
-中心主站与中心党建当前同 package、同 Vite build、同部署、同 Spring Boot CMS Backend。两者分别拥有 App、Router、Banner、内容 Frame 与页面主题；Navigation/Footer 通过 Shared Shell Components 共享结构、交互和响应式，仅由 theme variables 切换蓝色/红色。
+中心主站与中心党建当前同 package、同 Vite build、同部署、同 Spring Boot CMS Backend。两者分别拥有 App、Router、Banner、内容 Frame 与页面主题；Navigation/Footer 通过 Shared Shell Components 共享结构、交互和响应式，仅由 theme variables 切换蓝色/红色。EU-30 进一步把已经证明稳定一致的轮播**行为生命周期**抽到 `shared/carousel`，但不共享 Site-specific Carousel DOM / CSS。
 
-不引入 Module Federation；不建立 `frontend/party` 独立工程。后续只有出现独立发布/部署、不同团队或技术栈、明显不同生命周期等真实需求时再重新评估工程拆分。
+不引入 Module Federation；不建立 `frontend/party` 独立工程；EU-30 不引入第三方 Carousel。后续只有出现独立发布/部署、不同团队或技术栈、明显不同生命周期等真实需求时再重新评估工程拆分。
 
 中心党建 Foundation 架构已经完成；正式党建前端实施细节由 `docs/technical/party-frontend.md` 接续，本文件继续承担 Main / Party 两个 Entry 的总体工程边界。
 
@@ -99,6 +101,7 @@ Party Entry 拥有独立红色内容主题、Banner 和页面 Frame；Navigation
 - 静态资源 URL helper；
 - SEO / metadata helper；
 - 无主题通用 utility；
+- `useContentCarousel.ts`：轮播有效项、当前项、timer、pause reasons、visibility、reduced-motion、图片失败剔除和最大项数量；
 - `PublicNavigation.vue`：统一一级/二级菜单、active、external/newWindow、Desktop/Mobile 交互；
 - `PublicFooter.vue`：统一机构信息、备案、事业单位图标、微信公众号二维码和响应式结构；
 - `public-shell.css`：共享 Navigation/Footer 结构样式以及蓝/红主题变量。
@@ -109,9 +112,10 @@ Party Entry 拥有独立红色内容主题、Banner 和页面 Frame；Navigation
 - Party Banner；
 - Page Frame；
 - 首页/专题内容布局；
+- Main / Party 轮播 DOM、比例、caption、dot 视觉和主题动画样式；
 - Site-specific 内容 Theme 和页面模板。
 
-共享的判断依据是稳定产品/技术职责，不是简单代码相似。若未来某 Entry 要求不同的菜单层级、Footer 信息架构或响应式行为，应先形成 Requirement Change，不通过 Site-local DOM/CSS 静默分叉 Shared Shell。
+共享的判断依据是稳定产品/技术职责，不是简单代码相似。若未来某 Entry 要求不同的菜单层级、Footer 信息架构或轮播基础行为，应先形成 Requirement Change，不通过 Site-local 逻辑静默分叉。
 
 ## 4. Main Site 数据装配
 
@@ -122,45 +126,108 @@ Main Site App 统一装配有界 Navigation + SiteProperty 快照；首页再按
 - `MAIN` → Shared Navigation；
 - `HOME_SHORTCUT` → 首屏右侧快捷入口，并直接使用 Navigation `iconPath`；
 - `HOME_QUICK` → 快速导航，并直接使用 Navigation `iconPath`；
-- `HOME_CAROUSEL` → 主轮播数据；
-- `HOME_CAROUSEL_INTERVAL_SECONDS` → 主轮播自动切换间隔；
+- `HOME_CAROUSEL` → 主轮播 CmsList；
+- `CAROUSEL_INTERVAL_SECONDS` → Main / Party 共用轮播自动切换间隔，默认 4 秒；
+- `CAROUSEL_MAX_ITEMS` → 单个轮播区域前台最大有效项，默认 5；
 - `SITE_LINKS` group → 网站导航 Tab；
 - `HOME_RECRUITMENT_PROMO` → 招聘活动宣传展示；
 - CONTACT_PHONE 等 → 网站属性；
 - NCSS → 本地固定常量 + 版本化静态资源。
 
-删除旧 JSON merge/fallback 逻辑，避免两个 Authority 同时生效。不得恢复 `top-nav-${index}`、`guide-${index}` 等按数据位置推导业务图标的逻辑。
+`HOME_CAROUSEL_INTERVAL_SECONDS` 已由 V19 原地收敛为 `CAROUSEL_INTERVAL_SECONDS`，Main 不再读取旧 key。删除旧 JSON merge/fallback 逻辑，避免两个 Authority 同时生效。不得恢复 `top-nav-${index}`、`guide-${index}` 等按数据位置推导业务图标的逻辑。
 
 Main Navigation 中“中心党建”预置项通过 V13 为 `LINK /party/`，默认当前窗口进入 Party Entry。
 
-## 5. Main Site 主轮播
+## 5. Shared Carousel 生命周期
 
-`HOME_CAROUSEL` 当前基线 `imagePolicy=REQUIRED`。页面仍对返回数据执行 `imagePath` 过滤作为 Runtime 防御，只将有图片的启用项加入 `validCarouselItems`。
+`useContentCarousel<T extends { id:number }>` 接收：
 
-状态：
+- `items: Ref<T[]>`；
+- `intervalSeconds: Ref<number>`；
+- `maxItems: Ref<number>`。
 
-- `activeCarouselIndex`：当前图片 index；
-- `carouselIntervalSeconds`：从 SiteProperty 读取，默认 4；
-- `carouselTimer`：仅在有效图片数量 > 1 时存在。
+内部状态：
 
-挂载后读取 `HOME_CAROUSEL_INTERVAL_SECONDS`，按正整数解析；异常或缺失时回退 4 秒。Backend 正常写入已经强制该系统属性 > 0，前端 fallback 只用于兼容历史/异常数据，不形成第二套可配置 Authority。
+- `activeIndex`：当前有效项 index；
+- `failedIds`：本次页面生命周期已加载失败图片 ID；
+- `pauseReasons`：允许 `hover / focus / visibility` 等原因叠加；
+- `reducedMotion`：由 `matchMedia('(prefers-reduced-motion: reduce)')` 驱动；
+- `timer`：仅在有效项 > 1、无暂停理由且非 reduced-motion 时存在。
 
-多图时 `setInterval` 按列表返回顺序循环修改 active index；单图不启动 timer；组件卸载时 clearInterval。URL 有值时图片按既有 openMode 形成链接；URL 为空只渲染图片。caption、动画、图片尺寸等保持页面工程设计。
+`visibleItems` 先剔除 failed IDs，再按 `CAROUSEL_MAX_ITEMS` 截断。有效项变化时必须 clamp `activeIndex`，避免失败当前项后落到越界 index。
+
+行为：
+
+- 0 项：`activeItem=null`，不启动 timer；
+- 1 项：静态，不启动 timer；
+- 多项：`setInterval` 循环切换；
+- `select(index)` 手动切换后重建 timer，但不改变其他 pause reason；
+- `pause(reason)` / `resume(reason)` 使用 Set，解除一个原因不得覆盖其他仍有效的暂停原因；
+- hover / focus / visibility 恢复时保留当前 index；
+- `focusout` 只有 focus 真正离开轮播容器才解除 focus pause；
+- 页面 `visibilitychange` hidden/visible 控制 visibility pause；
+- reduced-motion 直接不 schedule autoplay；
+- `markImageFailed(id)` 把失败项排除并由 watch 重新计算有效集合；
+- unmount 必须清 timer、visibility listener、MediaQuery listener。
+
+当前最低 interval Runtime 防御值为 1 秒；Backend 正常配置要求大于 0，默认 4 秒。
 
 ## 6. 列表与文章展示契约
 
-CmsList 不提供 displayMode/itemType。页面代码自行决定消费字段：
+CmsList 不提供 displayMode。CmsListItem 采用两种来源：
 
-- `HOME_CAROUSEL`：消费 imagePath 和可选 URL；
-- `SITE_LINKS`：当前基线 imagePolicy=NONE，页面使用 title + URL；未来若确认 Logo 方案，先调整列表图片数据策略和数据，再由页面读取 imagePath。
+### LINK
+
+- 使用列表项自身 `title / subtitle / url / imagePath`；
+- `HOME_CAROUSEL` LINK URL 为空时渲染静态图片，不产生伪链接。
+
+### ARTICLE
+
+- 使用 `articleId` 建立展示投放关系；
+- Backend 公开查询只输出关联 `PUBLISHED` Article 的有效项；
+- `title / articleType` 等文章派生字段以关联 Article 当前值为准；
+- 对 `INTERNAL` Article，公开 `CmsListItem.url` 为空，由 Main / Party 分别根据 `articleId` 生成自己的 canonical route；
+- 对 `EXTERNAL_LINK` Article，Backend 在解析公开列表项时把 **Article 当前 `externalUrl` 投影到通用 `CmsListItem.url` 字段**；公开 DTO 不额外增加 `externalUrl` 字段，前端只消费解析后的通用 `item.url`；
+- ARTICLE 持久化的列表项自身 `url` 不是目标地址 Authority，创建/更新时会归一为空；因此 Article 外链地址修改后，无需修改投放记录即可由下一次公开查询得到新 `item.url`；
+- Main INTERNAL 目标由前端生成 `/article/{id}`；
+- Party INTERNAL 目标由 Party 生成 `/party/article/{id}`；
+- 列表覆盖图片以 `imageResourceId` 表达，公开端使用 `effectiveImageResourceId`，没有覆盖图时可继承文章可用图片；
+- 投放不修改 Article `columnId`。
+
+页面消费：
+
+- `HOME_CAROUSEL`：消费有效 LINK / ARTICLE + 有效图片；
+- `PARTY_CAROUSEL`：同一 DTO / 生命周期，使用 Party route/theme；
+- `SITE_LINKS`：当前 imagePolicy=NONE，页面使用 title + URL。
 
 Public Article Summary 的可选 `coverResourceId` 只是可消费数据；具体栏目列表是否展示封面按页面设计决定，Column coverPolicy 不参与 DOM 模板分支。
 
-中心党建四条正式内容线同样复用 Public Article Summary / Detail；Party 页面按自身 alias 作用域和模板消费数据，不新增 PartyArticle DTO。
+中心党建当前五个允许内容栏目同样复用 Public Article Summary / Detail；PartyHome 固定内容区仍只查询 `party-voice / party-work / party-rules / party-study`，`party-theme-education` 只进入 Party 内容路由/历史迁移和可选投放。
 
 页面显示模式属于前端工程设计，不回写成 CMS 可配置展示模式。
 
-## 7. 工程资产与 Theme
+## 7. Site-specific Carousel 视觉
+
+Main：
+
+- `HOME_CAROUSEL` `imagePolicy=REQUIRED`；
+- 容器使用稳定 `aspect-ratio: 8 / 5`，使既有 Desktop 约 400×250 的比例自然延伸到移动端；
+- 图片 `object-fit: cover`；
+- 使用短 opacity fade；
+- dots 保持低侵入视觉，不增加大面积左右箭头；
+- reduced-motion media query 下 transition 为 none。
+
+Party：
+
+- `PARTY_CAROUSEL` `imagePolicy=REQUIRED`；
+- Desktop 约 585×329；
+- `<=900px` 使用 `aspect-ratio:585/329`；
+- opacity fade 和 Party dot 样式由 Party CSS 持有；
+- reduced-motion 下关闭 transition。
+
+EU-30 不实现 touch swipe。移动端使用现有可聚焦 dots 手动选择。
+
+## 8. 工程资产与 Theme
 
 Main：
 
@@ -180,9 +247,9 @@ Main / Party 公共 Navigation/Footer 属于 Shared Shell 工程资产。两者�
 
 `/static/icons/**` 可以保存版本化图标文件，但导航条目与图标的对应关系仍来自 Navigation `iconPath`。
 
-## 8. 构建与验证
+## 9. 构建与验证
 
-### 8.1 Public Frontend Build
+### 9.1 Public Frontend Build
 
 一次 `npm run build` 必须同时验证 Main 与 Party 两个 Entry 可成功构建。Vite multi-input 仅保留真实 Entry：
 
@@ -193,39 +260,45 @@ party -> party.html
 
 不得恢复以普通页面类型建立 HTML Entry 的模式。
 
-### 8.2 Main Site Regression
+### 9.2 EU-30 Browser Verification
 
-保持 `/`、`/column/**`、`/article/**`、`/page/**`、SEO、响应式和既有视觉 E2E。至少证明：
+在既有 Main/Party Regression 上增加：
 
-- `/page/**` 直接访问和刷新仍正常；
-- 主站顶部 Header、Shared Navigation/Footer 及首页主视觉无党建改造回归；
-- Main Router route-level lazy loading 正常；
-- Main Site Context 的站点级装配与首页 scoped data 查询无回退。
+- Fresh DB 中只有 `CAROUSEL_INTERVAL_SECONDS / CAROUSEL_MAX_ITEMS`，无旧 Main-only key；
+- Main / Party 都受同一 `CAROUSEL_MAX_ITEMS` 控制；
+- reduced-motion 下等待超过 interval 不自动切换，但手动 dot 仍能切换；
+- ARTICLE 投放可进入 Main / Party canonical article route；
+- EXTERNAL_LINK ARTICLE 公开轮播使用 Backend 从 Article 当前外链解析到 `CmsListItem.url` 的地址，而不是列表项持久化 URL；
+- ARTICLE 加入列表后 Article `columnId` 不变；
+- Article withdraw 后对应公开列表项消失；
+- 列表专用 Resource 只在有效公开 ARTICLE 投放时公开；
+- Main / Party responsive ratio 与无横向溢出保持；
+- 图片失败、单项、零项等生命周期边界至少通过针对性单元/Browser evidence 或代码路径验证。
 
-### 8.3 Party Formal Verification
+### 9.3 Migration Verification
 
-按 `docs/technical/party-frontend.md` 至少证明：
+Canonical Verification 必须：
 
-- `/party/`、`/party/column/**`、`/party/article/**` 直接访问和刷新；
-- Party App / Router / Banner / Content Theme 不依赖 Main Router 或 Main 私有 DOM/CSS；
-- Main / Party 使用同一 Navigation/Footer component marker，且只存在蓝/红主题差异；
-- 四个预置党建栏目与通用 Article 闭环；
-- INTERNAL / EXTERNAL_LINK 行为；
-- 非党建文章不能由 Party 详情正常呈现；
-- PartyHome/列表/详情 Browser E2E；
-- Main / Party favicon 使用同一版本化 PNG 并在运行时正常加载；
-- `/admin/`、`/api/**`、`/static/**` Gateway 无回归；
-- AI Visual + Human Review 用于最终视觉声明。
+- 保持 EU-29 `acceptedSnapshot` 181 篇原值与 provenance；
+- 单独识别 EU-30 `candidateExtension` 2 条；
+- Fresh DB 当前 Runtime dataset 导入 183 篇；
+- 第二次导入 183 篇全部 SKIPPED；
+- PARTY_CAROUSEL position 2 为 ARTICLE；
+- `sourceSystem + legacyKey` 解析到 Runtime article_id；
+- 原轮播 PNG 写为 `image_resource_id`，实际 storage bytes SHA-256 与 Canonical 一致；
+- 其他 LINK 项继续使用 static migrated path；
+- 二次 Carousel import 全部 SKIPPED。
 
-## 9. 实施顺序
+## 10. 实施顺序
 
-`docs/work/public-site-multi-entry-execution-units.md` 的 EU-23～EU-25 已完成并转为追溯。
+EU-23～EU-29 已完成并转为追溯；EU-30 对历史内容发现形成定向修订，不重新打开整个 EU-29。
 
-当前按照 `docs/work/party-convergence-execution-units.md` 执行：
+当前顺序：
 
-1. EU-26：原站证据与 Authority 收敛；
-2. EU-27：党建 CMS 结构与 Party 内容路由；
-3. EU-28：PartyHome 与视觉精度收敛；
-4. EU-29：历史内容迁移与最终 Review。
+1. EU-30：Carousel Architecture & Behavior Convergence；
+2. EU-30 Current Evidence：Backend / Main / Party / Admin / Canonical / Browser；
+3. EU-30 Human Review：轮播视觉、交互、主题教育增量内容与历史 position 2 ARTICLE 关系；
+4. Human Review PASS 后收敛 migration candidate 状态、Roadmap 和 PR；
+5. EU-31：Browser Compatibility & Runtime Guard Convergence。
 
-每个目标提交取得对应 Backend / Public / Admin / Integrated Browser Current Evidence；最终视觉声明必须额外满足 AI Visual / Human Review。
+最终视觉和历史增量接受声明必须额外满足 AI Visual / Human Review；PR #58 在人工合并指令前保持未合并。

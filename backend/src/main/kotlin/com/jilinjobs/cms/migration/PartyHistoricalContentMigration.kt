@@ -204,7 +204,6 @@ class PartyMigrationRecordImporter(
                 externalUrl = record.content.externalUrl,
                 publishDate = record.content.publishDate,
                 pinned = false,
-                recommended = false,
                 // 原站列表顺序是迁移时的权威排序证据；负值确保后续正常发布的 sortOrder=0 内容自然排在历史内容之前。
                 sortOrder = -record.evidence.sourceOrder,
                 coverResourceId = null,

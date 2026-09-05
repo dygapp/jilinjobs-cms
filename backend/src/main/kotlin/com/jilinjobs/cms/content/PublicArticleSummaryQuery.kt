@@ -19,7 +19,6 @@ data class PublicArticleSummaryQueryRow(
     var externalUrl: String? = null,
     var publishDate: LocalDate? = null,
     var pinned: Boolean = false,
-    var recommended: Boolean = false,
     var sortOrder: Int = 0,
     var coverResourceId: Long? = null,
 )
@@ -30,7 +29,7 @@ interface PublicArticleSummaryQueryMapper {
         """
         SELECT a.id, a.column_id, c.name AS column_name, c.alias AS column_alias,
                a.title, a.source, a.article_type, a.external_url, a.publish_date,
-               a.pinned, a.recommended, a.sort_order,
+               a.pinned, a.sort_order,
                (SELECT ar.resource_id
                   FROM cms_article_resource ar
                  WHERE ar.article_id = a.id AND ar.resource_role = 'COVER'
@@ -42,7 +41,6 @@ interface PublicArticleSummaryQueryMapper {
           AND (#{columnId} IS NULL OR a.column_id = #{columnId})
           AND (#{articleType} IS NULL OR a.article_type = #{articleType})
         ORDER BY a.pinned DESC,
-                 a.recommended DESC,
                  a.sort_order DESC,
                  COALESCE(a.publish_date, DATE(a.actual_published_at)) DESC,
                  a.id DESC
@@ -92,7 +90,6 @@ class PublicArticleSummaryQueryService(
                     title = row.title,
                     publishDate = row.publishDate,
                     pinned = row.pinned,
-                    recommended = row.recommended,
                     sortOrder = row.sortOrder,
                     columnAlias = row.columnAlias,
                     source = row.source,

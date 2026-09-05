@@ -30,6 +30,7 @@ const emit = defineEmits<{
 }>()
 
 const jumpPage = ref('')
+const sizeMenuOpen = ref(false)
 const pageCount = computed(() => Math.max(1, Math.ceil(props.total / props.size)))
 const hasPrevious = computed(() => props.page > 0)
 const hasNext = computed(() => props.page + 1 < pageCount.value)
@@ -42,6 +43,7 @@ const visiblePages = computed(() => {
 
 watch(() => [props.page, props.size], () => {
   jumpPage.value = ''
+  sizeMenuOpen.value = false
 })
 
 function isExternal(article: PublicArticleSummary) {
@@ -57,9 +59,15 @@ function go(nextPage: number) {
   emit('page-change', Math.min(Math.max(nextPage, 0), pageCount.value - 1))
 }
 
-function changeSize(event: Event) {
-  const nextSize = Number((event.target as HTMLSelectElement).value)
-  if (props.allowedSizes.includes(nextSize)) emit('size-change', nextSize)
+function selectSize(nextSize: number) {
+  if (props.allowedSizes.includes(nextSize) && nextSize !== props.size) emit('size-change', nextSize)
+  sizeMenuOpen.value = false
+}
+
+function closeSizeMenuOnFocusOut(event: FocusEvent) {
+  const container = event.currentTarget as HTMLElement
+  const next = event.relatedTarget as Node | null
+  if (!next || !container.contains(next)) sizeMenuOpen.value = false
 }
 
 function jump() {
@@ -142,9 +150,38 @@ function jump() {
                 @click="go(pageIndex)"
               >{{ pageIndex + 1 }}</button>
               <button class="shared-column-page-button shared-column-page-arrow page-button page-arrow" type="button" :disabled="!hasNext" aria-label="下一页" @click="go(page + 1)">›</button>
-              <select class="shared-column-page-size-select page-size-select" :value="size" aria-label="每页条数" @change="changeSize">
-                <option v-for="option in allowedSizes" :key="option" :value="option">{{ option }}条/页</option>
-              </select>
+              <div class="shared-column-page-size" @focusout="closeSizeMenuOnFocusOut" @keydown.esc="sizeMenuOpen = false">
+                <button
+                  class="shared-column-page-size-trigger page-size-select"
+                  type="button"
+                  aria-label="每页条数"
+                  aria-haspopup="listbox"
+                  :aria-expanded="sizeMenuOpen"
+                  :data-testid="`${testIdPrefix}-page-size-trigger`"
+                  @click="sizeMenuOpen = !sizeMenuOpen"
+                >
+                  <span>{{ size }}条/页</span><span class="shared-column-page-size-caret" aria-hidden="true">⌄</span>
+                </button>
+                <div
+                  v-if="sizeMenuOpen"
+                  class="shared-column-page-size-menu"
+                  role="listbox"
+                  aria-label="每页条数选项"
+                  :data-testid="`${testIdPrefix}-page-size-menu`"
+                >
+                  <button
+                    v-for="option in allowedSizes"
+                    :key="option"
+                    class="shared-column-page-size-option"
+                    :class="{ selected: option === size }"
+                    type="button"
+                    role="option"
+                    :aria-selected="option === size"
+                    :data-testid="`${testIdPrefix}-page-size-option-${option}`"
+                    @click="selectSize(option)"
+                  >{{ option }}条/页</button>
+                </div>
+              </div>
               <label class="shared-column-page-jump page-jump">
                 <span>跳至</span>
                 <input v-model="jumpPage" type="number" min="1" :max="pageCount" aria-label="跳转页码" @keyup.enter="jump">
@@ -161,12 +198,12 @@ function jump() {
 </template>
 
 <style>
-.shared-column-page-shell{min-height:520px;padding:0 0 30px;background:#f5f8fc}
+.shared-column-page-shell{--shared-column-interaction-accent:#006af5;min-height:520px;padding:0 0 30px;background:#f5f8fc}
 .shared-column-page-width{width:min(1200px,calc(100% - 32px));min-width:0;margin:0 auto}
 .shared-column-breadcrumb{min-height:57px;display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0;color:#6c757d;font-size:13px;line-height:1.4}
 .shared-column-breadcrumb-label{color:#6c757d}
 .shared-column-breadcrumb a{color:#515c6b;text-decoration:none}
-.shared-column-breadcrumb a:hover{color:#005cd4}
+.shared-column-breadcrumb a:hover,.shared-column-breadcrumb a:focus-visible{color:var(--shared-column-interaction-accent)}
 .shared-column-breadcrumb-separator{color:#9aa7b5}
 .shared-column-card{background:#fff;padding:20px 0;min-width:0}
 .shared-column-section-title{height:19px;display:flex;align-items:center;padding:0 30px;margin:0}
@@ -176,26 +213,35 @@ function jump() {
 .shared-column-list{border:1px solid #ebeef2;border-bottom:0}
 .shared-column-list article{height:81px;margin:0;padding:0;border-bottom:1px solid #ebeef2}
 .shared-column-list-link{height:80px;display:flex;align-items:center;padding:14px 28px;color:#323b47;text-decoration:none;overflow:hidden}
-.shared-column-list-link:hover{color:#005cd4;background:#fbfdff}
+.shared-column-list-link:hover,.shared-column-list-link:focus-visible{color:var(--shared-column-interaction-accent);background:#fbfdff}
 .shared-column-list-icon{flex:0 0 52px;width:52px;height:52px;margin-right:18px;background:url('/static/icons/list-item.png') center/52px 52px no-repeat}
 .shared-column-list-copy{min-width:0;display:flex;flex-direction:column;justify-content:center;gap:3px}
 .shared-column-list-title{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#323b47;font-size:16px;font-weight:700;line-height:24px}
-.shared-column-list-link:hover .shared-column-list-title{color:#005cd4}
+.shared-column-list-link:hover .shared-column-list-title,.shared-column-list-link:focus-visible .shared-column-list-title{color:var(--shared-column-interaction-accent)}
 .shared-column-list time{color:#515c6b;font-size:14px;line-height:18px}
 .shared-column-empty{min-height:80px;display:grid;place-items:center;margin:0;border-bottom:1px solid #ebeef2;color:#8491a1}
 .shared-column-pagination-wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:30px;min-height:32px;color:#515c6b;font-size:14px}
 .shared-column-pagination-summary{flex:0 0 auto;color:#8491a1}
 .shared-column-pagination{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap;margin:0}
 .shared-column-page-button{width:32px;height:32px;padding:0;border:1px solid #cbd7e3;border-radius:4px;background:#fff;color:#515c6b;cursor:pointer}
-.shared-column-page-button:hover:not(:disabled){border-color:#006af5;color:#006af5}
-.shared-column-page-button.active{border-color:#006af5;background:#006af5;color:#fff}
+.shared-column-page-button:hover:not(:disabled),.shared-column-page-button:focus-visible:not(:disabled){border-color:var(--shared-column-interaction-accent);color:var(--shared-column-interaction-accent);outline:none}
+.shared-column-page-button.active{border-color:var(--shared-column-interaction-accent);background:var(--shared-column-interaction-accent);color:#fff}
 .shared-column-page-button:disabled{opacity:.45;cursor:default}
 .shared-column-page-arrow{font-size:20px;line-height:28px}
-.shared-column-page-size-select{height:32px;padding:0 28px 0 10px;border:1px solid #cbd7e3;border-radius:4px;background:#fff;color:#515c6b}
+.shared-column-page-size{position:relative;height:32px}
+.shared-column-page-size-trigger{height:32px;min-width:92px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 9px 0 10px;border:1px solid #cbd7e3;border-radius:4px;background:#fff;color:#515c6b;cursor:pointer}
+.shared-column-page-size-trigger:hover,.shared-column-page-size-trigger:focus-visible,.shared-column-page-size-trigger[aria-expanded="true"]{border-color:var(--shared-column-interaction-accent);color:var(--shared-column-interaction-accent);outline:none}
+.shared-column-page-size-caret{font-size:12px;line-height:1;transform:translateY(-1px)}
+.shared-column-page-size-menu{position:absolute;z-index:30;right:0;bottom:calc(100% + 5px);min-width:100%;padding:4px;border:1px solid #dfe6ee;border-radius:5px;background:#fff;box-shadow:0 6px 18px rgba(35,52,70,.14)}
+.shared-column-page-size-option{width:100%;height:30px;padding:0 8px;border:0;border-radius:3px;background:#fff;color:#515c6b;text-align:left;white-space:nowrap;cursor:pointer}
+.shared-column-page-size-option:hover,.shared-column-page-size-option:focus-visible{background:#f4f7fa;color:var(--shared-column-interaction-accent);outline:none}
+.shared-column-page-size-option.selected{background:var(--shared-column-interaction-accent);color:#fff}
+.shared-column-page-size-option.selected:hover,.shared-column-page-size-option.selected:focus-visible{background:var(--shared-column-interaction-accent);color:#fff}
 .shared-column-page-jump{height:32px;display:flex;align-items:center;gap:6px;white-space:nowrap}
 .shared-column-page-jump input{width:42px;height:32px;padding:0 5px;border:1px solid #cbd7e3;border-radius:4px;text-align:center;color:#515c6b}
+.shared-column-page-jump input:hover,.shared-column-page-jump input:focus,.shared-column-page-jump input:focus-visible{border-color:var(--shared-column-interaction-accent);outline:none}
 .shared-column-page-jump-submit{height:32px;padding:0 9px;border:1px solid #cbd7e3;border-radius:4px;background:#fff;color:#515c6b;cursor:pointer}
-.shared-column-page-jump-submit:hover{border-color:#006af5;color:#006af5}
+.shared-column-page-jump-submit:hover,.shared-column-page-jump-submit:focus-visible{border-color:var(--shared-column-interaction-accent);color:var(--shared-column-interaction-accent);outline:none}
 .shared-column-state{min-height:200px;display:grid;place-items:center;margin:0;padding:40px 30px;background:#fff;color:#8491a1;text-align:center}
 .shared-column-state-error{color:#b33}
 @media(max-width:760px){
@@ -214,6 +260,6 @@ function jump() {
   .shared-column-pagination-wrap{align-items:flex-start;flex-direction:column;gap:12px}
   .shared-column-pagination{justify-content:flex-start;gap:6px}
   .shared-column-page-button{width:30px;height:30px}
-  .shared-column-page-size-select,.shared-column-page-jump,.shared-column-page-jump input,.shared-column-page-jump-submit{height:30px}
+  .shared-column-page-size,.shared-column-page-size-trigger,.shared-column-page-jump,.shared-column-page-jump input,.shared-column-page-jump-submit{height:30px}
 }
 </style>
