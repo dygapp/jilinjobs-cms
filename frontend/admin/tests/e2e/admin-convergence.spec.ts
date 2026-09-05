@@ -165,7 +165,7 @@ test('EU-30：列表项数据类型和 ARTICLE 关联文章创建后不可修改
     await articleRow.getByRole('button',{name:'编辑'}).click()
     const dialog=page.getByRole('dialog',{name:'编辑列表项'})
     await expect(dialog.getByTestId('list-item-source-type').locator('input').first()).toBeDisabled()
-    await expect(dialog.getByTestId('list-item-article')).toHaveClass(/is-disabled/)
+    await expect(dialog.getByTestId('list-item-article').locator('input').first()).toBeDisabled()
     await expect(dialog.getByTestId('list-item-article-immutable-hint')).toBeVisible()
     await dialog.getByRole('button',{name:'取消'}).click()
   } finally {
@@ -346,9 +346,16 @@ test('EU-16：文章筛选分页并保持后台发布到公开站闭环', async 
   const column=columns.find(item=>item.alias==='notice')??columns[0];expect(column).toBeTruthy()
   const prefix=`Admin分页-${Date.now()}-${testInfo.retry}`,created:Array<{id:number;title:string}>=[]
   for(let index=1;index<=12;index+=1)created.push(await createArticle(request,column.id,`${prefix}-${String(index).padStart(2,'0')}`))
-  await page.goto('/admin/articles');await page.getByTestId('article-filter-keyword').fill(prefix)
+  await page.goto('/admin/articles')
+  const filteredArticles=page.waitForResponse(response=>{
+    const url=new URL(response.url())
+    return url.pathname==='/api/admin/articles'&&url.searchParams.get('keyword')===prefix&&response.ok()
+  })
+  await page.getByTestId('article-filter-keyword').fill(prefix)
+  await filteredArticles
   await expect(page.getByTestId('article-table').locator('tbody tr')).toHaveCount(10)
-  await page.getByTestId('article-pagination').locator('.el-pager li').filter({hasText:'2'}).click();await expect(page.getByTestId('article-table').locator('tbody tr')).toHaveCount(2)
+  await page.getByTestId('article-pagination').locator('.el-pager li[aria-label="page 2"]').click()
+  await expect(page.getByTestId('article-table').locator('tbody tr')).toHaveCount(2)
   const published=created[0];expect((await request.post(`/api/admin/articles/${published.id}/publish`)).ok()).toBeTruthy();expect((await request.get(`/api/public/articles/${published.id}`)).ok()).toBeTruthy()
   await page.goto(`/article/${published.id}`);await expect(page.getByRole('heading',{name:published.title})).toBeVisible()
 })
