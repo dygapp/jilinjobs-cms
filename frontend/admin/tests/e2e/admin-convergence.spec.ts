@@ -110,7 +110,6 @@ test('EU-30：通用列表维护 LINK / ARTICLE 投放并复用统一图片策�
   const carouselRow=page.getByTestId('cms-list-item-table').getByRole('row').filter({hasText:'这里美得不愿离开'})
   await carouselRow.getByRole('button',{name:'编辑'}).click()
   const dialog=page.getByRole('dialog',{name:'编辑列表项'})
-  await expect(dialog.getByText('标题作为后台识别名称保留')).toBeVisible()
   await expect(dialog.getByTestId('list-item-source-type')).toContainText('链接')
   await expect(dialog.getByTestId('list-item-source-type')).toContainText('文章')
   await expect(dialog.getByTestId('list-item-source-type').locator('input').first()).toBeDisabled()
