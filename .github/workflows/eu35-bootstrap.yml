@@ -79,10 +79,55 @@ jobs:
           ! grep -q 'contenteditable="true"' frontend/admin/src/modules/cms/views/admin/ArticleManagementView.vue
           ! grep -q 'contenteditable="true"' frontend/admin/src/modules/cms/views/admin/PageManagementView.vue
 
+      - name: Collect generated diff scope
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import os
+          import subprocess
+
+          expected = sorted({
+              'frontend/admin/package.json',
+              'frontend/admin/package-lock.json',
+              'frontend/admin/src/modules/cms/components/RichTextEditor.vue',
+              'frontend/admin/src/modules/cms/views/admin/ArticleManagementView.vue',
+              'frontend/admin/src/modules/cms/views/admin/PageManagementView.vue',
+              'frontend/admin/tests/e2e/rich-text-authoring.spec.ts',
+          })
+          tracked = set(subprocess.check_output(['git', 'diff', '--name-only'], text=True).splitlines())
+          untracked = set(subprocess.check_output(['git', 'ls-files', '--others', '--exclude-standard'], text=True).splitlines())
+          actual = sorted(tracked | untracked)
+          report = [
+              'EXPECTED:',
+              *expected,
+              '',
+              'ACTUAL:',
+              *actual,
+              '',
+              'EXTRA:',
+              *sorted(set(actual) - set(expected)),
+              '',
+              'MISSING:',
+              *sorted(set(expected) - set(actual)),
+              '',
+          ]
+          text = '\n'.join(report)
+          print(text)
+          Path(os.environ['RUNNER_TEMP'], 'eu35-diff-scope.txt').write_text(text, encoding='utf-8')
+          PY
+
+      - name: Upload diff scope diagnostic
+        uses: actions/upload-artifact@v4
+        with:
+          name: eu35-diff-scope
+          path: ${{ runner.temp }}/eu35-diff-scope.txt
+          if-no-files-found: error
+          retention-days: 1
+
       - name: Verify generated diff scope
         run: |
           set -euo pipefail
-          git status --short
           python3 - <<'PY'
           import subprocess
 
