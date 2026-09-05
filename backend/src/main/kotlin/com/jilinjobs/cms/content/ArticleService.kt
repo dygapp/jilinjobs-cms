@@ -34,6 +34,7 @@ class ArticleService(
     @Transactional
     fun update(id: Long, draft: ArticleDraft): CmsArticle {
         val current = repository.findById(id) ?: throw ArticleNotFoundException(id)
+        if (current.articleType != draft.articleType) throw ArticleValidationException("文章类型创建后不可修改")
         val normalized = normalize(draft)
         if (current.status == ArticleStatus.PUBLISHED) validatePublicationCover(normalized.articleType, normalized.columnId, normalized.coverResourceId)
         val article = repository.update(id, normalized)
