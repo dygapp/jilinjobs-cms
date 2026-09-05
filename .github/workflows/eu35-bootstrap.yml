@@ -40,6 +40,35 @@ jobs:
         working-directory: frontend/admin
         run: npm install --no-audit --no-fund
 
+      - name: Remove transient GitHub credentials from lockfile
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('frontend/admin/package-lock.json')
+          text = path.read_text(encoding='utf-8')
+
+          # GitHub Actions checkout authentication may be visible to git-based npm
+          # resolution. A lockfile is durable source authority and must never persist
+          # URL userinfo or GitHub token-shaped credentials.
+          text = re.sub(
+              r'((?:git\+)?https://)[^/@\s"]+@github\.com/',
+              r'\1github.com/',
+              text,
+          )
+          path.write_text(text, encoding='utf-8')
+
+          token = re.compile(r'(?:github_pat_|gh[pousr]_)[A-Za-z0-9_]{10,}')
+          matches = []
+          for number, line in enumerate(text.splitlines(), start=1):
+              if token.search(line):
+                  matches.append(number)
+          if matches:
+              raise SystemExit(f'package-lock still contains GitHub credential-shaped data at lines {matches}')
+          PY
+
       - name: Build Admin
         working-directory: frontend/admin
         run: npm run build
