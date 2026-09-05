@@ -38,7 +38,6 @@ async function createArticle(request: APIRequestContext, columnId: number, title
       externalUrl: null,
       publishDate: '2026-09-03',
       pinned: false,
-      recommended: false,
       sortOrder: 900,
       coverResourceId: null,
       bodyImageResourceIds: [],
