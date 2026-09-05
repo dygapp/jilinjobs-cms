@@ -210,7 +210,7 @@ const message = (error: unknown) => error instanceof Error ? error.message : '�
 
     <el-dialog v-model="itemDialog" :title="editingItem ? '编辑列表项' : '新增列表项'" width="760px">
       <el-form label-width="110px">
-        <el-form-item label="数据类型" required><el-radio-group v-model="itemForm.sourceType" data-testid="list-item-source-type" @change="sourceTypeChanged"><el-radio-button value="LINK">链接</el-radio-button><el-radio-button value="ARTICLE">文章</el-radio-button></el-radio-group></el-form-item>
+        <el-form-item label="数据类型" required><el-radio-group v-model="itemForm.sourceType" data-testid="list-item-source-type" :disabled="editingItem != null" @change="sourceTypeChanged"><el-radio-button value="LINK">链接</el-radio-button><el-radio-button value="ARTICLE">文章</el-radio-button></el-radio-group><div v-if="editingItem != null" data-testid="list-item-source-type-immutable-hint" style="color:#909399;font-size:12px">列表项数据类型在创建后不可修改。</div></el-form-item>
 
         <template v-if="itemForm.sourceType === 'LINK'">
           <el-form-item label="标题" required><el-input v-model="itemForm.title" /><div style="color:#909399;font-size:12px">标题作为后台识别名称保留；前台是否显示由具体页面设计决定。</div></el-form-item>
@@ -221,10 +221,11 @@ const message = (error: unknown) => error instanceof Error ? error.message : '�
 
         <template v-else>
           <el-form-item label="关联文章" required>
-            <el-select v-model="itemForm.articleId" data-testid="list-item-article" filterable remote clearable :remote-method="searchArticles" :loading="articleSearching" placeholder="输入标题搜索文章" style="width:100%" @change="articleChanged">
+            <el-select v-model="itemForm.articleId" data-testid="list-item-article" filterable remote clearable :disabled="editingItem != null" :remote-method="searchArticles" :loading="articleSearching" placeholder="输入标题搜索文章" style="width:100%" @change="articleChanged">
               <el-option v-for="article in articleOptions" :key="article.id" :label="`${article.title}（${articleStatusLabel(article.status)}）`" :value="article.id" />
             </el-select>
-            <div style="color:#909399;font-size:12px">文章仍只属于原栏目；加入列表只是展示投放，不改变栏目和面包屑。</div>
+            <div v-if="editingItem != null" data-testid="list-item-article-immutable-hint" style="color:#909399;font-size:12px">关联文章在列表项创建后不可修改；如需替换文章，请新建列表项。</div>
+            <div v-else style="color:#909399;font-size:12px">文章仍只属于原栏目；加入列表只是展示投放，不改变栏目和面包屑。</div>
           </el-form-item>
           <el-alert v-if="selectedArticle" :title="`当前文章：${selectedArticle.title}（${articleStatusLabel(selectedArticle.status)}）`" type="info" :closable="false" show-icon />
           <el-form-item label="副标题"><el-input v-model="itemForm.subtitle" /></el-form-item>
