@@ -17,7 +17,7 @@ type Article = {
   attachmentResourceIds: number[]
 }
 
-type ArticlePage = { items: Array<{ id: number }> }
+type CmsColumn = { id: number; coverPolicy: 'NONE' | 'OPTIONAL' | 'REQUIRED' }
 type CmsPage = {
   id: number
   groupId: number | null
@@ -63,50 +63,49 @@ function expectSafe(html: string) {
   expect(html).not.toContain('<input')
 }
 
-function articleDraft(article: Article, bodyHtml: string) {
-  return {
-    columnId: article.columnId,
-    title: article.title,
-    bodyHtml,
-    source: article.source,
-    articleType: article.articleType,
-    externalUrl: article.externalUrl,
-    publishDate: article.publishDate,
-    pinned: article.pinned,
-    sortOrder: article.sortOrder,
-    coverResourceId: article.coverResourceId,
-    bodyImageResourceIds: article.bodyImageResourceIds,
-    attachmentResourceIds: article.attachmentResourceIds,
-  }
-}
+test('EU-34：绕过 Admin UI 的 Article API 仍执行写入与公开输出安全策略', async ({ request }, testInfo) => {
+  const columnsResponse = await request.get('/api/admin/columns')
+  expect(columnsResponse.ok()).toBeTruthy()
+  const columns = await columnsResponse.json() as CmsColumn[]
+  const column = columns.find(item => item.coverPolicy !== 'REQUIRED')
+  expect(column).toBeTruthy()
 
-test('EU-34：绕过 Admin UI 的 Article API 仍执行写入与公开输出安全策略', async ({ request }) => {
-  const listResponse = await request.get('/api/admin/articles?status=PUBLISHED&articleType=INTERNAL&page=0&size=50')
-  expect(listResponse.ok()).toBeTruthy()
-  const list = await listResponse.json() as ArticlePage
-  expect(list.items.length).toBeGreaterThan(0)
-
-  const detailResponse = await request.get(`/api/admin/articles/${list.items[0].id}`)
-  expect(detailResponse.ok()).toBeTruthy()
-  const original = await detailResponse.json() as Article
+  const createResponse = await request.post('/api/admin/articles', {
+    data: {
+      columnId: column!.id,
+      title: `EU-34 HTML Safety ${Date.now()}-${testInfo.retry}`,
+      bodyHtml: hostileHtml,
+      source: 'EU-34 verification',
+      articleType: 'INTERNAL',
+      externalUrl: null,
+      publishDate: '2026-09-05',
+      pinned: false,
+      sortOrder: 999,
+      coverResourceId: null,
+      bodyImageResourceIds: [],
+      attachmentResourceIds: [],
+    },
+  })
+  expect(createResponse.ok()).toBeTruthy()
+  const created = await createResponse.json() as Article
+  let published = false
 
   try {
-    const updateResponse = await request.put(`/api/admin/articles/${original.id}`, {
-      data: articleDraft(original, hostileHtml),
-    })
-    expect(updateResponse.ok()).toBeTruthy()
-    const updated = await updateResponse.json() as Article
-    expectSafe(updated.bodyHtml)
+    expectSafe(created.bodyHtml)
 
-    const publicResponse = await request.get(`/api/public/articles/${original.id}`)
+    const publishResponse = await request.post(`/api/admin/articles/${created.id}/publish`)
+    expect(publishResponse.ok()).toBeTruthy()
+    published = true
+
+    const publicResponse = await request.get(`/api/public/articles/${created.id}`)
     expect(publicResponse.ok()).toBeTruthy()
     const publicArticle = await publicResponse.json() as { bodyHtml: string }
     expectSafe(publicArticle.bodyHtml)
   } finally {
-    const restore = await request.put(`/api/admin/articles/${original.id}`, {
-      data: articleDraft(original, original.bodyHtml),
-    })
-    expect(restore.ok()).toBeTruthy()
+    if (published) {
+      const withdrawResponse = await request.post(`/api/admin/articles/${created.id}/withdraw`)
+      expect(withdrawResponse.ok()).toBeTruthy()
+    }
   }
 })
 
