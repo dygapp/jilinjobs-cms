@@ -2,313 +2,283 @@
 
 ## Status
 
-**CURRENT — implementation and post-incident machine verification converged; final Review Environment / Human Review pending**
+**COMPLETED — 2026-09-05 Human Review PASS；EU-30 canonical extension 已接受；PR #58 已进入 Ready for Review，最终合并仍需项目负责人明确指令。**
 
 工作分支：`feature/eu-30-carousel-convergence`
 
-Draft PR：#58 `feat: 收敛 EU-30 轮播架构与行为`
+PR：#58 `feat: 收敛 EU-30 轮播架构与行为`
 
-事故后全面复核：`docs/work/eu30-post-incident-review.md`
+关联 Authority：
 
-同库升级专项证据：`docs/work/eu30-migration-upgrade-verification.md`
+- Requirement：`docs/requirements/information-publishing-eu30-amendment.md`
+- Technical Plan：`docs/technical/carousel-list-placement.md`
+- Post-Incident Review：`docs/work/eu30-post-incident-review.md`
+- Upgrade Evidence：`docs/work/eu30-migration-upgrade-verification.md`
+- Verification Strategy：`docs/technical/verification-strategy.md`
 
-本文是 `docs/work/frontend-follow-up-execution-units.md` 中 EU-30 的当前执行状态。EU-31 仍是后续路线；EU-30 未经最终 Human Review 不关闭、不接受 candidateExtension、不切换 Roadmap 当前单元。
+`docs/work/frontend-follow-up-execution-units.md` 中对 EU-30 / EU-31 的旧预编号路线仅保留历史追溯价值，不再作为当前执行顺序 Authority。EU-30 关闭后不自动生成 EU-31；后续工作先回到 GitHub Issues #59 / #60 的未编号 Planning / Requirement Candidates，并按 Consumer-local Method 完成 Intent → Specification → Slice → Readiness 后再分配新的 Execution Unit 编号。
 
-## 1. Goal
+## 1. Intent
 
-把 Main Site 与中心党建 Party 的轮播从两个局部实现收敛为：
+EU-30 收敛主站与中心党建轮播的内容投放模型、配置语义和运行时行为，同时保持不同 Site 的视觉表达独立，并解决 EU-29 历史轮播与正式 Article 内容之间的关系。
 
-- 通用 `CmsListItem` 表达 LINK / ARTICLE 展示投放；
-- Article 保持唯一 `columnId`，列表只承担展示投放；
-- Main / Party 共用稳定的无主题轮播生命周期；
-- Main / Party 继续持有各自视觉 DOM / CSS / 比例；
-- 使用统一站点级轮播行为属性；
-- 修复 Party 历史轮播第二项与遗漏主题教育内容的真实关系；
-- 建立 Fresh DB、同库升级、Browser、Review Environment、Human Review 的可重复证据链。
+本单元不把轮播做成新的专属 CMS 内容类型，也不把 Main / Party 的视觉主题统一成同一套页面样式。
 
-不以“抽象更多”为目标，不引入第三方 Carousel，不提前执行 EU-31 完整浏览器兼容工作。
+## 2. Final architecture
 
-## 2. Confirmed Architecture
+### 2.1 Article 与 List 的职责
 
-### 2.1 CmsListItem source
+- `Article` 只持有一个 `columnId`，栏目继续表达内容归属 / 分类。
+- `CmsList` / `CmsListItem` 表达展示投放 / 运营编排，不改变 Article 的栏目归属。
+- `CmsListItem.sourceType`：
+  - `LINK`：直接维护标题、URL 和列表图片；
+  - `ARTICLE`：引用既有 Article，标题和目标由 Article 当前状态投影。
+- `ARTICLE + INTERNAL` 在 Admin 表达为“站内文章”。
+- `ARTICLE + EXTERNAL_LINK` 在 Admin 表达为“外链文章”。
+- 直接 URL 列表项在 Admin 表达为“链接 / 直接链接”。
+- EXTERNAL_LINK Article 通过 ARTICLE 投放时继续跟随 Article 当前标题和 `externalUrl`，不退化为独立 LINK，也不重复维护目标 URL。
 
-稳定来源只使用：
+### 2.2 Stable identity
 
-- `LINK`
-- `ARTICLE`
+普通 Admin / API 生命周期中：
 
-不使用 `MANUAL`。
+- `Article.articleType` 创建后不可修改；
+- `CmsListItem.sourceType` 创建后不可修改；
+- ARTICLE 列表项的 `articleId` 创建后不可替换；
+- 需要切换身份时建立新的内容 / 列表项，而不是改写已有身份。
 
-LINK 保存列表自身标题、URL、图片等投放数据。
+历史迁移存在一个严格受限的 compatibility 例外：EU-29 Party carousel position 2 在 legacy key、fingerprint、Runtime identity 等全部符合已接受基线时，migration-only path 可将原 LINK 原位升级为 ARTICLE；普通管理 API 不暴露该能力。
 
-ARTICLE 通过 `articleId` 引用已有 CMS Article：
+### 2.3 Image policy
 
-- 不改变 Article 原栏目、面包屑和发布生命周期；
-- 只有关联 Article 为 `PUBLISHED` 时进入公开列表；
-- 标题等文章派生数据使用 Article 当前值；
-- INTERNAL 的公开 `item.url=null`，Main / Party 根据 `articleId` 分别生成 `/article/{id}` / `/party/article/{id}`；
-- EXTERNAL_LINK 的 Article 当前 `externalUrl` 由 Backend 在公开查询时解析到通用 `CmsListItem.url`；Public DTO 不另建 `externalUrl`；
-- `openMode` 是列表投放属性，ARTICLE 同样保留；
-- 文章撤回后投放关系保留在后台，但公开自动退出；重新发布后恢复公开资格。
-
-### 2.2 Image policy
-
-`CmsList.imagePolicy`：
+列表定义使用：
 
 - `NONE`
 - `OPTIONAL`
 - `REQUIRED`
 
-ARTICLE：
+ARTICLE 列表项：
+
+- `imageResourceId = null` 时可继承 Article cover；
+- 独立 `imageResourceId` 作为列表投放图片 override；
+- `REQUIRED` 且最终无有效图片时，该项不构成有效公开投放。
+
+列表图片约束只描述数据要求，不决定具体公开页面的视觉布局。
 
-- `image_resource_id=null` 表示继承 Article 当前 cover；
-- 非 null 表示列表专用 Resource override；
-- 正文图片可以在 Admin 中作为编辑候选，选择后固化为 Resource override；
-- Runtime 不动态寻找正文第一张图片；
-- 当前模型不存在“Article 有 cover 但列表显式屏蔽 cover”的第三态；
-- REQUIRED ARTICLE 后续失去继承 cover 且没有 override 时直接退出公开列表。
+### 2.4 Shared carousel behavior
 
-Resource 公开访问仍要求有效公开关系，不因知道 Resource ID 就开放任意上传文件。
+Main / Party 共享：
 
-`HOME_CAROUSEL` 与 `PARTY_CAROUSEL` 均为 `REQUIRED`。
+- `CAROUSEL_INTERVAL_SECONDS`：正整数秒，默认 `4`；
+- `CAROUSEL_MAX_ITEMS`：正整数，默认 `5`；
+- 统一轮播生命周期；
+- `0` 项为空态；
+- `1` 项静态展示且无切换控制；
+- `>=2` 项自动轮播；
+- dots；
+- hover / focus / document visibility pause；
+- 页面初始隐藏时暂停；
+- `prefers-reduced-motion`；
+- 图片失败后移除并从后续有效项补位；
+- 数据变化时尽量按稳定 ID 保持 active item；
+- 不引入第三方 carousel；
+- 当前不新增 swipe 交互。
 
-### 2.3 SiteProperty
+共享原则：**统一行为规则和生命周期，不统一视觉表达。**
 
-统一稳定 Key：
+Main 与 Party 继续分别持有：
 
-- `CAROUSEL_INTERVAL_SECONDS=4`
-- `CAROUSEL_MAX_ITEMS=5`
+- DOM 视觉组合；
+- CSS / Theme；
+- Caption；
+- 比例：Main `8:5`，Party `585:329`。
 
-契约：
+## 3. Historical Party content convergence
 
-- Backend 新写入只接受完整十进制正整数；
-- 写入前 trim；
-- `+5 / 5abc / 1.5 / 0 / -1` 拒绝；
-- 稳定 Key 的语义固定为 INTEGER，不能通过 Definition 编辑改成 TEXT 绕过；
-- 两个定义均为 `preset=true`，不能删除；
-- Public 对缺失或历史非法值分别 fallback 4 / 5；
-- 旧 `HOME_CAROUSEL_INTERVAL_SECONDS` 不再是 Runtime 依赖。
+EU-29 已接受历史基线保持冻结 provenance：
 
-`CAROUSEL_MAX_ITEMS` 只限制公开展示，不限制 Admin 维护数量。失败图片先从有效集合剔除，再应用 max，因此后续排序项可以补位。
+- Articles：`181`
+- INTERNAL：`120`
+- EXTERNAL_LINK：`61`
+- Unique article resources：`180`
+- Carousel items：`4`
+- Carousel resources：`4`
+- unresolved：`0`
+- accepted artifact digest：`sha256:230ac0df997b3dc913ed38503a8289eae30d8bb0a455fd858e388ddc27066148`
 
-### 2.4 Shared lifecycle
+EU-30 反向追踪 Party carousel position 2 后补采 legacy `zhutijiaoyu / 主题教育2023`，新系统栏目名称收敛为：
 
-Main / Party 共用 `shared/carousel/useContentCarousel.ts`：
+- alias：`party-theme-education`
+- name：`主题教育`
+- records：`2`
+  - INTERNAL `1`
+  - EXTERNAL_LINK `1`
 
-- 0 项：稳定空态，无 timer；
-- 1 项：静态，无 timer、无无意义分页控件；
-- 2 项及以上：按统一 interval 循环自动切换；
-- 原生可聚焦 dots 手动切换；
-- hover pause；
-- focus-within pause；
-- 页面初始 hidden 和后续 visibility hidden 均暂停；
-- resume 保留当前项，不重置；
-- `prefers-reduced-motion: reduce` 禁用 autoplay 和非必要切换动画，但保留手动分页；
-- 图片失败退出有效集合并由后续项补位；
-- 有效集合变化按 item ID 尽量保持当前内容；
-- unmount 清理 timer / visibility / MediaQuery listener；
-- EU-30 不实现 swipe；
-- 不引入第三方 Carousel。
+该栏目是正常 Party 内容栏目，但**不成为 PartyHome 第五个固定内容区块**。
 
-### 2.5 Visual ownership
+2026-09-05 项目负责人完成最终 Human Review 并明确 PASS 后：
 
-Main：
+- `data-migrations/party/v1/manifest.json` root status 晋升为 `accepted-canonical`；
+- `candidateExtension.status` 晋升为 `accepted`；
+- 当前 canonical Runtime Dataset = `183` 篇；
+- EU-29 `acceptedSnapshot` 181 篇及原 digest 保持原样，作为冻结 provenance，不被 EU-30 重写。
 
-- 稳定 `8:5`；
-- `object-fit:cover`；
-- Main-owned DOM / caption / dots / fade。
+Party carousel position 2 当前 canonical 关系：
 
-Party：
+- source type：`ARTICLE`
+- article legacy key：`zhutijiaoyu:content:154659859759104`
+- Runtime Article：`183`
+- Runtime Resource override：`188`
+- image SHA-256：`a00db48e094e24b778374ae621b6f150e235625c62f17efc860391223fac830b`
+- open mode：`NEW_WINDOW`
 
-- Desktop 约 `585×329`；
-- Mobile `aspect-ratio:585/329`；
-- `object-fit:cover`；
-- Party-owned DOM / caption / dots / red theme；
-- 非活动 slide `visibility:hidden`；
-- reduced-motion transition none。
+position 1 / 3 / 4 保持 LINK；因此 canonical carousel 为：
 
-共享行为，不共享视觉组件。
+```text
+[LINK, ARTICLE, LINK, LINK]
+```
 
-## 3. Party Historical Correction
+## 4. Human Review findings closed in EU-30
 
-EU-29 accepted baseline 保持冻结 provenance：
+本轮最终 Human Review 前已完成：
 
-- 181 articles；
-- 120 INTERNAL；
-- 61 EXTERNAL_LINK；
-- 180 unique article resources；
-- 4 carousel items/resources；
-- unresolved=0；
-- artifact digest `sha256:230ac0df997b3dc913ed38503a8289eae30d8bb0a455fd858e388ddc27066148`。
+1. Party 栏目列表页与详情页 breadcrumb 统一；
+2. 公共栏目分页 page-size 从浏览器原生 select 收敛为可主题化控件，Party 使用红色交互态；
+3. Article 撤回按钮使用 `CloseBold`；发布 / 重新发布继续使用 `Refresh`；
+4. Article 类型创建后不可修改，并有 Backend 防绕过；
+5. 删除 Article 全局 `recommended`；公开排序收敛为 `pinned DESC → sort_order DESC → publish date DESC → id DESC`；
+6. 列表项数据来源创建后不可修改；ARTICLE 关联文章创建后不可替换；
+7. Admin 将 LINK / ARTICLE 明确表达为“数据来源”，并进一步区分“链接 / 站内文章 / 外链文章”；
+8. 历史 position 2 LINK → ARTICLE 保留迁移专用受限升级能力；
+9. Fresh DB 与 EU-29 → EU-30 同库升级均验证 V20 / migration lineage 正常。
 
-EU-30 新增 candidateExtension：
+本单元确认但不扩展处理的候选事项已进入后续 Planning / Requirement Candidates：
 
-- legacy `typeCode=zhutijiaoyu`；
-- 新栏目 `party-theme-education / 主题教育`；
-- 2 articles：1 INTERNAL + 1 EXTERNAL_LINK；
-- unresolved=0；
-- runtime dataset = 183；
-- 状态继续 `pending-human-review`。
+- 通用 CMS Resource 浏览 / 复用入口；
+- `CmsListItem.subtitle` 是否保留、改名或删除；
+- 更广的列表模型 / Admin UX 治理；
+- 数据库 Flyway 开发期 baseline convergence；
+- Browser Compatibility & Runtime Guard；
+- 其余公开站正式内容 / 集成工作。
 
-`party-theme-education`：
+这些事项不因 EU-30 关闭而自动获得 EU 编号。
 
-- 属于 Party 五栏目可访问作用域；
-- 不成为 PartyHome 第五个固定内容区；
-- PartyHome 只加载 `party-voice / party-work / party-rules / party-study`。
+## 5. Final evidence
 
-Party carousel position 2：
+### 5.1 Final functional Head before acceptance metadata promotion
 
-- stable legacy key `party-carousel:position:2`；
-- 改为 ARTICLE；
-- `articleRef.legacyKey=zhutijiaoyu:content:154659859759104`；
-- 原轮播 PNG 继续作为列表 Resource override；
-- `NEW_WINDOW` 继续保留；
-- 新版目标为 `/party/article/{runtimeArticleId}`；
-- 不使用标题、Runtime ID 或旧 URL 作为 durable identity。
+Head：`f47623876e6961655338fb6399482e8b363a3801`
 
-EU-29 → EU-30 的原地兼容只允许精确 fingerprint 转换：
+CI #658 / Run `33944523896`：SUCCESS
 
-`c2ad182b8b2dc981a3cbe3b0153a1e3e47604c1f01dd43e6d25971e1deed10dc`
+- Public：`48 passed / 3 expected skipped`
+- Admin：`35 passed`
+- retry：`0`
+- 专项 `list-source-semantics.spec.ts` PASS
+- Playwright artifact：`9962969270`
+- digest：`sha256:7da0924541cfd59467b3ef9f5c79044419df1a76f9cae336d899c02dd160e252`
 
-→
+Canonical #122 / Run `33944523899`：SUCCESS
 
-`f8b5d8df87021373803639b174bf88e46ae6cef7f2599a205763b5887c78be84`
+- Fresh DB 183 篇；
+- 五栏目 `40 / 88 / 22 / 31 / 2`；
+- `[LINK, ARTICLE, LINK, LINK]`；
+- 资源字节 / SHA、二次幂等、Runtime reconciliation PASS；
+- artifact：`9962928050`；
+- digest：`sha256:8d4c7ecad9e94e06598569c2b34bf1a335eb77f3e3ad161806052036a525ad74`。
 
-其他 drift 必须 CONFLICT。
+Upgrade #70 / Run `33944523904`：SUCCESS
 
-主题教育 INTERNAL 正文多次引用同一源图时，Canonical 保留 occurrence evidence；Importer 校验全部 occurrence 后按 stable migration token 去重 Runtime upload，当前目标文章只形成 1 条 BODY_IMAGE association。
+- pinned EU-29 accepted baseline → EU-30 same-runtime upgrade PASS；
+- position 2 Runtime ID 保持；
+- 二次幂等 PASS；
+- unexpected fingerprint drift 被拒绝；
+- artifact：`9962931008`；
+- digest：`sha256:7753492b082f12f133dbbd9185b7c178eb65af7877145b51853fa08e10e7c5b3`。
 
-## 4. Implemented Scope
+Review verification #594 / Run `33944523901`：SUCCESS
 
-当前实现包括：
+- AI / Browser；
+- clean Human baseline；
+- Party canonical import / Runtime / Browser；
+- FRP 与公网 Runtime；
+- external artifact：`9963054792`；
+- digest：`sha256:f3cd269a22c9803c95c5eb93aa36d405646491de369bf97fd6bdfa0ed3862a71`。
 
-- V19 List ARTICLE / Resource 字段、统一轮播配置、主题教育栏目；
-- `CmsListItem.sourceType / articleId / imageResourceId`；
-- Public ARTICLE 发布状态和 REQUIRED effective image 过滤；
-- Public Resource relation-based access；
-- Admin LINK / ARTICLE、文章搜索、cover inherit、正文候选、Resource override；
-- Main / Party Shared Carousel lifecycle；
-- Main / Party ARTICLE target/openMode；
-- EXTERNAL_LINK ARTICLE 当前地址动态解析；
-- Party 五栏目 Router scope / 四栏目 Home scope；
-- EU-30 theme durable candidate；
-- Historical Import V2 / Carousel Import V2；
-- Canonical Fresh DB verification；
-- pinned EU-29 → EU-30 same-runtime Upgrade Verification；
-- Review Environment acceptedSnapshot + candidateExtension / mixed carousel Runtime contract；
-- Main / Party / Admin Browser regression 与 EU-30 专项 E2E。
+### 5.2 Human Review acceptance
 
-## 5. Post-Incident Review
+Human Review #595 / Run `33945103502`
 
-详细 Finding 与分类见：
+- Head：`f47623876e6961655338fb6399482e8b363a3801`
+- mode：`human-review`
+- readyAt：`2026-09-05T04:45:10.333910Z`
+- expiresAt：`2026-09-05T05:30:10.333910Z`
+- external evidence artifact：`9963152822`
+- digest：`sha256:ec2d434c759236a07d6176792c7dfe58a714d9bd0d92cf7f0f502c99e4dedabb`
+- 项目负责人结论：**PASS**。
 
-`docs/work/eu30-post-incident-review.md`
+该 Human Review 已覆盖最终 Runtime / content bytes。后续 `cfe736b2…` 只晋升 manifest acceptance metadata，没有改变 Runtime 实现、文章正文、资源字节或轮播内容，因此 Human Review Claim 可按 Verification Strategy 的 Evidence Impact 规则复用；acceptance metadata 自身由晋升后的 Canonical / Upgrade / CI 重新验证。
 
-本轮事故后复核已经处理的主要缺口包括：
+### 5.3 Post-acceptance promotion verification
 
-1. 历史整数值被 `parseInt` / MySQL CAST 宽松截断；
-2. position 2 fingerprint 兼容口过宽；
-3. Upgrade Verification 错误依赖移动 `main`；
-4. 临时 Method Amendment 折回后仍标 CURRENT；
-5. durable candidate 晋升后一次性采集 Workflow 未清理；
-6. PartyHome 不必要加载第五个非首页栏目；
-7. OPTIONAL ARTICLE 文档声称了模型无法表达的显式无图第三态；
-8. Review 栏目 reconciliation 错误采用 closed-world；
-9. 主题教育重复 source image 被重复上传为 Runtime Resource；
-10. Backend 新写入整数表达与 Public strict read 不一致；
-11. 可编辑 `valueType` 可绕过稳定轮播 Key 整数语义；
-12. V19 `CAROUSEL_MAX_ITEMS` 遗漏 preset protection。
+Acceptance promotion commit：`cfe736b238bb9300fcfcd0ef2fa6c84d3170b30f`
 
-复核过程中还出现一次 EXTERNAL_LINK ARTICLE DTO 错误诊断；TypeScript build 立即失败，错误改动已撤回。真实契约已经写入 Public / Party Technical Plan，并由 Browser 回归验证。
+CI #659 / Run `33945906756`：SUCCESS
 
-## 6. Current Machine Evidence
+- Backend / Public / Admin build：PASS
+- Public Browser：`48 passed / 3 expected skipped`
+- Admin Browser：`35 passed`
+- retry：`0`
+- Playwright artifact：`9963370876`
+- digest：`sha256:3f86e472ee3c9c1adb5edcedcdcd5bacc434677677f6b4bdc13256b10a5029ab`
 
-### 6.1 CI #620
+Canonical #123 / Run `33945906761`：SUCCESS
 
-Evidence commit：`821a8a34f0f6063c747e6872d6091ed29014c299`
+- manifest status：`accepted-canonical`
+- acceptedSnapshot：`181`（保持冻结）
+- current Runtime Dataset：`183`
+- 首次导入：183 CREATED / 0 conflict / 0 invalid
+- carousel 首次导入：4 CREATED
+- 二次导入：183 SKIPPED；carousel 4 SKIPPED
+- 五栏目：`40 / 88 / 22 / 31 / 2`
+- position 2：ARTICLE / Article 183 / Resource 188 / 原 image SHA
+- artifact：`9963343009`
+- digest：`sha256:59c93423552f2b0a55007976da9af60366aa7b4e64e277f91cf4da996e9b44e7`
 
-Run：`33930893118` — PASS
+Upgrade #71 / Run `33945906755`：SUCCESS
 
-- Backend verify PASS；
-- Public build PASS；
-- Admin build PASS；
-- Integrated Browser PASS；
-- Public Playwright：47 passed / 3 expected skipped / **0 retry**；
-- Admin Playwright：32 passed / **0 retry**；
-- Playwright Artifact `9958570839`；
-- SHA-256 `a267c7204c2e03f54b074093619f73db380f01124cd8ad0244fab1091a337bf9`。
+- EU-29 frozen accepted runtime → accepted EU-30 dataset 同库升级 PASS；
+- post-upgrade idempotency PASS；
+- unexpected position 2 fingerprint drift 拒绝 PASS；
+- artifact：`9963347099`
+- digest：`sha256:f48480f475f0e183fca7643b36ab9cd84de0b92bc4151ed0db623153667be179`
 
-### 6.2 Canonical Migration Verification #84
+Review #596 因 singleton Review Environment / 已存在 Human Review lease 的并发规则排队，不作为 EU-30 关闭的必要新 Human Evidence。EU-30 使用 #595 的人工结论证明最终 Runtime / Visual Claim，并使用 #123 / #71 / #659 证明 acceptance metadata 晋升后的 current state。
 
-Run：`33930893082` — PASS
+## 6. Closeout decision
 
-- Fresh DB current dataset 183 CREATED；
-- carousel 4 CREATED；
-- second import articles 183 SKIPPED；
-- second carousel 4 SKIPPED；
-- Party scope 40 / 88 / 22 / 31 / 2；
-- position 2 ARTICLE / legacy mapping / override SHA 正确；
-- target theme article BODY_IMAGE Runtime association = 1；
-- Artifact `9958531465`；
-- SHA-256 `f70675aac4c126c72b95a68ab619e7946ab690ce8cb09422a7d23e6eb183a845`。
+EU-30 最终接受：
 
-### 6.3 EU-29 → EU-30 Upgrade Verification #32
+- 轮播内容投放模型：ACCEPTED；
+- Main / Party shared behavior + separate visual expression：ACCEPTED；
+- Article / List ownership-placement boundary：ACCEPTED；
+- Party `主题教育` 2 条历史增量：ACCEPTED CANONICAL；
+- Party position 2 ARTICLE upgrade：ACCEPTED；
+- EU-29 acceptedSnapshot provenance：PRESERVED；
+- Human Review：PASS；
+- Post-acceptance Fresh DB / Upgrade / Browser verification：PASS。
 
-Run：`33930893093` — PASS
+## 7. Exit checklist
 
-- pinned accepted EU-29 commit `59c855f...`；
-- EU-29 first import 181 + 4；
-- same DB EU-30 upgrade 2 CREATED + 181 SKIPPED；
-- position 2 保持原 list item ID，LINK → ARTICLE；
-- second EU-30 import fully idempotent；
-- unexpected fingerprint drift 导致 importer 非零退出、`conflicts=1 / position2=CONFLICT`；
-- Artifact `9958531784`；
-- SHA-256 `6f92d2dafddbada822a4bd5ea7e4a89cc8cc4611d73f2064f8e3ad12a81ce4c9`。
-
-### 6.4 Descendant docs-only Evidence Reuse
-
-`821a8a...` 后首先只有两项 Technical Plan docs-only 修订，用于澄清 EXTERNAL_LINK ARTICLE 的通用 `item.url` DTO 契约；随后又只更新本执行文档、事故后复核与升级证据记录。
-
-只要锁定最终 Head 前没有继续修改 Runtime Code、Requirement、Flyway、Migration Dataset、Importer、Workflow、Fixture、Test、静态资源或环境配置，上述 CI / Canonical / Upgrade 行为 Claim 可以按 `docs/technical/verification-strategy.md` 的 Descendant Commit Evidence Reuse 规则继续使用。Run 仍描述为 `821a8a...` Evidence Commit 的 Run，不伪装成后继 docs Head 自己执行。
-
-## 7. Review Environment / Human Review Boundary
-
-早期 Review #526 与更早 Run 只作为历史追溯；本事故后复核已继续改变实现和验证，因此不承担最终 Human Review Claim。
-
-最终还必须完成：
-
-1. 锁定最终 Branch Head，不再追加实现/Authority 改动；
-2. 该 Head 的普通 Review Environment 自动验证完成：build → Browser → clean reset → canonical import → Party Runtime Browser → FRP → external runtime → owner evidence；
-3. 自动 Review PASS 后，对完全相同 Head 申请 `human-review` 长租约；
-4. 项目负责人人工确认：
-   - Main Desktop / Mobile 轮播视觉；
-   - Main autoplay / manual / pause；
-   - Party Desktop / Mobile 585:329、caption、dots；
-   - Party position 2 正确进入主题教育站内文章并符合打开方式；
-   - 主题教育 2 条历史内容与原站证据一致；
-   - 没有 Authority-backed 高优先级视觉/内容/交互回归。
-
-Human Review PASS 前：
-
-- `candidateExtension.status=pending-human-review`；
-- PR #58 保持 Draft；
-- EU-30 保持 CURRENT；
-- Roadmap 不切换 EU-31；
-- 不执行最终 merge。
-
-## 8. Exit Condition
-
-EU-30 仅在以下条件全部满足后关闭：
-
-- [x] Requirement / Specification / Technical Plan / implementation 核心语义一致；
-- [x] 事故后复核无未处理的已确认实现 Finding；
-- [x] Backend / Public / Admin / Integrated Browser PASS 且无未解释 retry；
+- [x] Requirement / Technical Plan / Execution Authority 已收敛；
+- [x] Post-Incident Review 无未处理高优先级 Finding；
+- [x] Backend / Public / Admin / Integrated Browser PASS，无未解释 retry；
 - [x] Canonical Fresh DB / idempotency / Runtime reconciliation PASS；
-- [x] pinned EU-29 → EU-30 upgrade PASS；
-- [x] unexpected fingerprint drift CONFLICT negative test PASS；
-- [ ] 最终 Head Review Environment automatic verification PASS；
-- [ ] 最终 Head Human Review PASS；
-- [ ] Human Review 后接受 candidateExtension 并保留 EU-29 acceptedSnapshot provenance；
-- [ ] Roadmap 收口 EU-30 completed、EU-31 CURRENT；
-- [ ] PR 转 Ready for Review；
-- [ ] 最终 merge 取得项目负责人明确指令。
+- [x] EU-29 → EU-30 same-runtime Upgrade + unexpected fingerprint conflict PASS；
+- [x] Review Environment Runtime / Browser / external verification PASS；
+- [x] 最终 Human Review PASS；
+- [x] candidateExtension 已接受为 canonical current dataset，同时保留 EU-29 acceptedSnapshot provenance；
+- [x] acceptance metadata 晋升后的 CI / Canonical / Upgrade 重新验证 PASS；
+- [x] Project Roadmap 收口为 EU-30 completed；后续工作回到未编号 Planning / Requirement Candidates；
+- [x] PR #58 转 Ready for Review；
+- [ ] PR #58 合并：**仅在项目负责人明确发出合并指令后执行**。
