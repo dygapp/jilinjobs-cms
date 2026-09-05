@@ -115,9 +115,9 @@ async function changeRenderMode() {
 async function savePage() {
   syncBody()
   if (!pageForm.name.trim()) { ElMessage.warning('请输入单页名称'); return }
-  if (!pageForm.alias.trim()) { ElMessage.warning('请输入 Alias'); return }
+  if (!pageForm.alias.trim()) { ElMessage.warning('请输入公开标识'); return }
   if (pageForm.renderMode === 'INTERNAL_STATIC' && pageForm.embedUrl?.trim() && !pageForm.embedUrl.trim().startsWith('/')) {
-    ElMessage.warning('站内特殊页面路径必须以 / 开头')
+    ElMessage.warning('站内页面路径必须以 / 开头')
     return
   }
   saving.value = true
@@ -135,7 +135,7 @@ async function savePage() {
 }
 
 async function saveGroup() {
-  if (!groupForm.name.trim() || !groupForm.alias.trim()) { ElMessage.warning('分组名称和 Alias 不能为空'); return }
+  if (!groupForm.name.trim() || !groupForm.alias.trim()) { ElMessage.warning('分组名称和公开标识不能为空'); return }
   saving.value = true
   try {
     const saved = editingGroup.value == null ? await createPageGroup({ ...groupForm }) : await updatePageGroup(editingGroup.value, { ...groupForm })
@@ -175,7 +175,7 @@ function message(error: unknown) {
       <div>
         <p class="eyebrow">内容管理</p>
         <h1>单页管理</h1>
-        <p class="subtitle">维护独立单页、单页分组和呈现模式；预置单页保留稳定公开 Alias，且不可删除。</p>
+        <p class="subtitle">维护独立单页、单页分组和呈现方式。</p>
       </div>
       <div class="header-actions">
         <el-button data-testid="add-page-group" @click="openGroup()">新增分组</el-button>
@@ -207,7 +207,7 @@ function message(error: unknown) {
         <el-table v-loading="loading" :data="filteredPages" data-testid="page-table">
           <el-table-column label="单页名称" min-width="170"><template #default="scope"><span>{{asPage(scope.row).name}}</span><el-tag v-if="asPage(scope.row).preset" :data-testid="`preset-page-${asPage(scope.row).id}`" size="small" type="info" style="margin-left:8px">预置</el-tag></template></el-table-column>
           <el-table-column label="单页分组" min-width="140"><template #default="scope">{{ groupName(scope.row.groupId) }}</template></el-table-column>
-          <el-table-column prop="alias" label="Alias" min-width="140" />
+          <el-table-column prop="alias" label="公开标识" min-width="140" />
           <el-table-column label="呈现方式" min-width="150"><template #default="scope">{{ renderModeName(scope.row.renderMode) }}</template></el-table-column>
           <el-table-column label="状态" width="90"><template #default="scope">{{ scope.row.enabled ? '启用' : '停用' }}</template></el-table-column>
           <el-table-column label="操作" width="92" fixed="right"><template #default="scope"><div class="admin-table-actions"><AdminIconAction :testid="`edit-page-${scope.row.id}`" label="编辑" :icon="Edit" @click="openPage(asPage(scope.row))" /><AdminIconAction v-if="!asPage(scope.row).preset" label="删除" :icon="Delete" type="danger" @click="remove(asPage(scope.row))" /></div></template></el-table-column>
@@ -218,7 +218,7 @@ function message(error: unknown) {
     <el-dialog v-model="groupVisible" :title="editingGroup == null ? '新增单页分组' : '编辑单页分组'" width="560px">
       <el-form label-width="90px">
         <el-form-item label="名称" required><el-input v-model="groupForm.name" /></el-form-item>
-        <el-form-item label="Alias" required><el-input v-model="groupForm.alias" :disabled="Boolean(editingGroupModel?.preset)" placeholder="仅小写字母、数字和连字符" /><div v-if="editingGroupModel?.preset" data-testid="preset-page-group-alias-hint" style="color:#909399;font-size:12px">预置单页分组的 Alias 是稳定站点身份，不允许修改。</div></el-form-item>
+        <el-form-item label="公开标识" required><el-input v-model="groupForm.alias" :disabled="Boolean(editingGroupModel?.preset)" placeholder="仅小写字母、数字和连字符" /><div v-if="editingGroupModel?.preset" data-testid="preset-page-group-alias-hint" style="color:#909399;font-size:12px">预置单页分组的公开标识不可修改。</div></el-form-item>
         <el-form-item label="排序"><el-input-number v-model="groupForm.sortOrder" /></el-form-item>
         <el-form-item label="状态"><el-switch v-model="groupForm.enabled" /></el-form-item>
       </el-form>
@@ -229,16 +229,15 @@ function message(error: unknown) {
       <el-form label-width="110px">
         <el-form-item label="单页名称" required><el-input v-model="pageForm.name" /></el-form-item>
         <el-form-item label="单页分组"><el-select v-model="pageForm.groupId" clearable data-testid="page-group-select" style="width:100%" placeholder="独立单页"><el-option v-for="group in groups" :key="group.id" :label="group.name" :value="group.id" /></el-select></el-form-item>
-        <el-form-item label="Alias" required><el-input v-model="pageForm.alias" :disabled="Boolean(editingPageModel?.preset)" placeholder="稳定公开地址标识" /><div v-if="editingPageModel?.preset" data-testid="preset-page-alias-hint" style="color:#909399;font-size:12px">预置单页的 Alias 是稳定站点身份，不允许修改。</div></el-form-item>
+        <el-form-item label="公开标识" required><el-input v-model="pageForm.alias" :disabled="Boolean(editingPageModel?.preset)" placeholder="用于公开页面地址" /><div v-if="editingPageModel?.preset" data-testid="preset-page-alias-hint" style="color:#909399;font-size:12px">预置单页的公开标识不可修改。</div></el-form-item>
         <el-form-item label="呈现方式" required><el-select v-model="pageForm.renderMode" data-testid="page-render-mode" style="width:100%" @change="changeRenderMode"><el-option label="富文本" value="RICH_TEXT" /><el-option label="外部嵌入占位" value="EMBED_PLACEHOLDER" /><el-option label="站内特殊页面" value="INTERNAL_STATIC" /></el-select></el-form-item>
 
         <el-form-item v-if="pageForm.renderMode === 'RICH_TEXT'" label="正文"><div class="editor-shell"><div class="editor-toolbar"><el-button size="small" @click="formatBody('bold')"><strong>加粗</strong></el-button><el-button size="small" @click="formatBody('italic')"><em>斜体</em></el-button></div><div ref="editorRef" data-testid="page-body-editor" class="rich-editor" contenteditable="true" @input="syncBody" /></div></el-form-item>
 
         <template v-else>
-          <el-form-item :label="pageForm.renderMode === 'INTERNAL_STATIC' ? '站内实现路径' : '嵌入地址'"><el-input v-model="pageForm.embedUrl" data-testid="page-embed-url" :placeholder="pageForm.renderMode === 'INTERNAL_STATIC' ? '/special/page-path' : 'https://外部内容地址（当前仍可只保留占位）'" /></el-form-item>
+          <el-form-item :label="pageForm.renderMode === 'INTERNAL_STATIC' ? '站内页面路径' : '嵌入地址'"><el-input v-model="pageForm.embedUrl" data-testid="page-embed-url" :placeholder="pageForm.renderMode === 'INTERNAL_STATIC' ? '/special/page-path' : 'https://外部内容地址'" /></el-form-item>
           <el-form-item label="占位说明"><el-input v-model="pageForm.bodyHtml" data-testid="page-placeholder-body" type="textarea" :rows="6" placeholder="当前页面对外展示的占位或说明内容" /></el-form-item>
-          <el-alert v-if="pageForm.renderMode === 'INTERNAL_STATIC'" title="站内特殊页面是随前端工程部署的实现资产；这里只维护本站路径接缝，不允许上传任意 HTML/JS。" type="info" :closable="false" show-icon />
-          <el-alert v-else title="当前 Requirement 仍不接入真实第三方 iframe；可维护后续接入地址接缝，但公开页面继续按占位规则展示。" type="info" :closable="false" show-icon />
+          <el-alert v-if="pageForm.renderMode === 'EMBED_PLACEHOLDER'" title="当前只保存嵌入地址和占位说明，不直接加载第三方内容。" type="info" :closable="false" show-icon />
         </template>
 
         <el-form-item label="排序"><el-input-number v-model="pageForm.sortOrder" /></el-form-item>

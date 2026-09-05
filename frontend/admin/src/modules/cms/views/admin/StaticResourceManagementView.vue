@@ -92,8 +92,8 @@ async function confirmReplace() {
   if (!replaceTarget.value) { ElMessage.warning('请先选择要替换的资源'); return }
   if (!file.value) { ElMessage.warning('请选择新文件'); return }
   const warning = replaceTarget.value.protectedResource
-    ? '这是站点受保护资源。替换会立即影响当前公开站，且系统不会完整检查 CSS、富文本等全部引用。确认继续？'
-    : '替换会立即覆盖当前公开 URL 对应文件，系统不会完整检查引用。是否继续？'
+    ? '这是受保护资源。替换会立即影响当前公开站，系统不会自动检查所有页面引用。确认继续？'
+    : '替换会立即覆盖当前公开地址对应文件，系统不会自动检查所有页面引用。是否继续？'
   try {
     await ElMessageBox.confirm(warning, '替换静态资源', { type: 'warning', confirmButtonText: '确认替换' })
     await upload(true)
@@ -102,11 +102,11 @@ async function confirmReplace() {
 async function remove(row: StaticEntry) {
   if (row.directory) return
   if (row.protectedResource) {
-    ElMessage.warning('该资源由站点基线或当前 CMS 引用保护，不能普通删除；如需更新请使用替换操作')
+    ElMessage.warning('该资源受保护，不能直接删除；如需更新请使用替换操作')
     return
   }
   try {
-    await ElMessageBox.confirm('系统不会完整检查该资源是否正在被页面、CSS、JS 或静态页面引用。删除后将先进入回收区，是否继续？', '静态资源删除风险', { type: 'warning', confirmButtonText: '移入回收区' })
+    await ElMessageBox.confirm('系统不会自动检查所有页面是否仍在使用该资源。删除后将先进入回收区，是否继续？', '静态资源删除风险', { type: 'warning', confirmButtonText: '移入回收区' })
     await deleteStaticResource(row.path)
     await refresh()
   } catch (error) { if (error !== 'cancel' && error !== 'close') ElMessage.error(message(error)) }
@@ -129,11 +129,11 @@ function message(error: unknown) {
       <div>
         <p class="eyebrow">高风险站点能力</p>
         <h1>网站静态资源管理</h1>
-        <p class="subtitle">浏览和管理指定网站静态目录；上传同时校验扩展名与真实文件内容。</p>
+        <p class="subtitle">管理网站静态文件，并在替换或删除前确认公开页面影响。</p>
       </div>
     </header>
 
-    <el-alert title="系统会保护配置声明的站点基线资源和当前 CMS 数据直接引用的资源；其他资源仍不提供完整 CSS / JS / 富文本引用扫描。" type="warning" :closable="false" show-icon />
+    <el-alert title="受保护资源不能直接删除；替换或删除其他资源前，请确认没有页面仍在使用它。系统不会自动检查所有引用。" type="warning" :closable="false" show-icon />
 
     <el-card shadow="never" style="margin-top:16px">
       <div class="admin-toolbar">
@@ -154,7 +154,7 @@ function message(error: unknown) {
         <el-table-column prop="name" label="名称" min-width="180" />
         <el-table-column prop="path" label="路径" min-width="260" />
         <el-table-column label="类型" width="100"><template #default="scope">{{ scope.row.directory ? '目录' : '文件' }}</template></el-table-column>
-        <el-table-column label="保护" width="110"><template #default="scope"><el-tooltip v-if="scope.row.protectedResource" content="当前由站点基线或 CMS 数据引用保护，不能直接删除" placement="top"><el-tag type="warning" size="small">受保护</el-tag></el-tooltip><span v-else>-</span></template></el-table-column>
+        <el-table-column label="保护" width="110"><template #default="scope"><el-tooltip v-if="scope.row.protectedResource" content="受保护资源不能直接删除；如需更新请使用替换操作" placement="top"><el-tag type="warning" size="small">受保护</el-tag></el-tooltip><span v-else>-</span></template></el-table-column>
         <el-table-column prop="size" label="大小" width="110" />
         <el-table-column label="操作" width="124" fixed="right"><template #default="scope"><div class="admin-table-actions">
           <AdminIconAction v-if="scope.row.directory" label="进入" :icon="FolderOpened" @click="enter(asEntry(scope.row))" />

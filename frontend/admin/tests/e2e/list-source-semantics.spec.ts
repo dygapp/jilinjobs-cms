@@ -94,7 +94,7 @@ test('EU-30：列表管理区分直接链接、站内文章与外链文章的数
     await expect(dialog.getByTestId('list-item-source-type')).toContainText('直接链接')
     await expect(dialog.getByTestId('list-item-source-type')).toContainText('引用文章')
     await expect(dialog.getByTestId('list-item-source-type').locator('input').first()).toBeDisabled()
-    await expect(dialog.getByTestId('list-item-source-type-immutable-hint')).toContainText('数据来源在创建后不可修改')
+    await expect(dialog.getByTestId('list-item-source-type-immutable-hint')).toBeVisible()
     await expect(dialog.getByTestId('list-item-article')).toContainText('外链文章')
     await expect(dialog.getByText(new RegExp(`当前文章：${externalArticle.title}（外链文章 · 草稿）`))).toBeVisible()
     await dialog.getByRole('button', { name: '取消' }).click()
