@@ -1,0 +1,43 @@
+name: EU-40 Authority Wording Repair
+
+on:
+  push:
+    branches: [docs/eu40-post-integration-closure]
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: docs/eu40-post-integration-closure
+          fetch-depth: 0
+      - name: Repair Specification wording
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('docs/specifications/cms-site-package-boundary.md')
+          text = path.read_text(encoding='utf-8')
+          replacements = {
+              '当前 `site-baseline/static/**` 语义上属于 JilinJobs Site Package，但 EU-37～EU-39 没有改变其物理目录或 Runtime mount。': '当前 `site-baseline/static/**` 语义上属于 JilinJobs Site Package，但 EU-37～EU-40 没有改变其物理目录或 Runtime mount。',
+              '只有完成剩余 Site Package Runtime / asset / canonical compatibility 后，再评估 Public Renderer 是否具备低成本独立仓库条件；': '只有完成剩余 V2 responsibility / asset / canonical compatibility 后，再评估 Public Renderer 是否具备低成本独立仓库条件；',
+              'accepted 183 Runtime Articles / Party carousel / provenance 在新默认 composition 下的 compatibility；': 'accepted 183 Runtime Articles / Party carousel / provenance 在最终 Site Package lifecycle 下的 compatibility；',
+          }
+          for old, new in replacements.items():
+              assert text.count(old) == 1, (old, text.count(old))
+              text = text.replace(old, new)
+          path.write_text(text, encoding='utf-8')
+          PY
+          git diff --check
+      - name: Commit wording repair
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add docs/specifications/cms-site-package-boundary.md
+          git commit -m "docs(eu40): 校正 closure 边界措辞"
+          git push origin HEAD:docs/eu40-post-integration-closure
