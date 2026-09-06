@@ -60,3 +60,18 @@ tasks.register<JavaExec>("importPartyCarousel") {
     classpath = sourceSets["main"].runtimeClasspath
     mainClass.set("com.jilinjobs.cms.migration.PartyCarouselMigrationV2Kt")
 }
+
+tasks.register<JavaExec>("provisionSitePackage") {
+    group = "site-package"
+    description = "Provision a versioned Site Package into a CMS schema"
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("com.jilinjobs.cms.sitepackage.SitePackageProvisioningKt")
+}
+
+tasks.register<JavaExec>("verifySitePackageFoundation") {
+    group = "verification"
+    description = "Verify EU-37 Site Package foundation against a fresh schema-only MySQL database"
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("com.jilinjobs.cms.sitepackage.SitePackageFoundationVerificationKt")
+    dependsOn(tasks.named("testClasses"))
+}

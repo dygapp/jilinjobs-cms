@@ -17,6 +17,20 @@ jobs:
     name: Backend verify
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_ROOT_HOST: "%"
+          MYSQL_DATABASE: jilinjobs_site_package
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=12
     steps:
       - uses: actions/checkout@v7
       - name: Set up Java 21
@@ -31,6 +45,13 @@ jobs:
       - name: Test and package backend
         working-directory: backend
         run: gradle clean test bootJar --no-daemon
+      - name: Verify EU-37 Site Package foundation
+        working-directory: backend
+        env:
+          DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_site_package?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          DB_USERNAME: root
+          DB_PASSWORD: root
+        run: gradle verifySitePackageFoundation --no-daemon
       - name: Upload backend artifact
         uses: actions/upload-artifact@v7
         with:
