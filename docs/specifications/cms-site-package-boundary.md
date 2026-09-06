@@ -12,73 +12,71 @@
 ## Status
 
 - Specification: **ACCEPTED / ACTIVE**
-- Technical Planning: **ACTIVE** — initial plan 已完成，剩余 boundary 继续按 current evidence 收敛
+- Technical Planning: **ACTIVE**
 - Completed Execution Units: **EU-37 / EU-38 / EU-39 / EU-40**
-- Current Ready Execution Unit: **NONE**
+- Current Ready Execution Unit: **EU-41 — Site Bootstrap & Generic Schema Baseline Separation（IN EXECUTION）**
 - Issue #77: **OPEN**
 
 ## 1. Four-layer boundary
 
-项目长期按以下四层理解当前系统：
+项目长期按以下责任层理解当前系统：
 
 ```text
 Generic CMS Core
-        ↓ provides schema / domain / Admin / Public contracts
+        ↓ provides schema / domain / Admin / Public / provisioning capabilities
 JilinJobs Site Package
-        ↓ provisions stable site structure / config / site assets
+        ↓ stable structure + one-time fresh-site defaults + stable site assets
 Historical Content Migration
-        ↓ imports canonical operational content
+        ↓ imports canonical historical operational content
 Runtime CMS Data
         ↓ consumed through stable public contracts
 Replaceable Public Renderer
 ```
 
-这四层可以暂时保留在同一个 Git Repository 中。逻辑边界优先于物理拆仓。
+这些责任当前可以保留在同一个 Git Repository 中；逻辑 / lifecycle ownership 优先于物理拆仓。
 
 ## 2. Generic CMS Core contract
 
 Generic CMS Core 包含：
 
 - CMS 数据库 schema；
+- Backend Flyway **Schema evolution lineage**；
 - Column / Article / Page / Navigation / Listing / Advertisement / SiteConfig / Resource 等通用领域模型；
 - Admin API 与 Admin Frontend；
 - Public API / DTO / Resource projection；
 - `preset` 结构保护能力；
 - Site Provisioning 所需的最小通用校验 / 持久化能力；
+- site-neutral one-time bootstrap-state capability；
 - 通用 Verification Contract。
 
-Generic CMS Core 不应内建吉林就业网站专属事实，例如具体栏目 alias/name、导航树、外部业务 URL、联系电话、ICP备案、Logo/Banner 路径或具体 Site list code 必须存在。
+Generic CMS Core 不内建吉林就业网站专属事实，例如具体栏目 alias/name、导航树、外部业务 URL、联系电话、ICP备案、Logo/Banner 路径、具体 Site list code 或初始运营内容。
 
-`preset` 的语义为：**由某个受控 Site Provisioning 建立、具有稳定 identity 并受结构保护的对象**。它仍是通用 CMS 能力。
+`preset` 的语义为：**由受控 Site Provisioning 建立、具有稳定 identity 并受结构保护的对象**。具体哪些对象是 JilinJobs preset 由 Site Package 决定。
 
-EU-37 已证明 Site Provisioning 可以建立在 Generic Flyway V1 Schema 上，不要求 Site-specific V2 先存在。
+`cms_navigation.code` 是 Generic provisioning capability：nullable，普通 operator-created NavigationItem 不要求 code；具体 code value 属于 Site Package。
 
-EU-39 增加的 `cms_navigation.code` 也是 Generic CMS Core 的 provisioning capability：字段 nullable，普通 operator-created NavigationItem 不要求 code；具体 JilinJobs navigation code/value 只属于 Site Package。
+EU-41 进一步规定 Generic CMS 可以提供 `cms_site_bootstrap_state` 一类通用能力，但其 Schema 不得包含 JilinJobs `packageId` / bootstrap 内容或 Site-specific migration number。
 
 ## 3. JilinJobs Site Package contract
 
-Site Package 是吉林就业网站的版本化站点定义，不是 Historical Content Migration。
+Site Package 是吉林就业网站的版本化站点定义与 Fresh Site 安装 Authority，不是 Historical Content Migration。
 
-它至少需要表达：
+### 3.1 Stable structure
 
-- package identity / version；
-- stable object identity；
+长期 stable structure 当前包括：
+
 - Columns；
 - PageGroups / Pages；
 - NavigationLocations / NavigationItems；
 - CmsList definitions；
 - AdvertisementSlots；
-- SiteConfig definitions / accepted initial values；
-- stable site assets；
+- SiteConfig definitions / accepted values；
+- stable site assets（ownership 已确定，composition/physical location 属后续 Slice C）；
 - object relationships；
 - `preset` expectation；
-- provisioning order / dependencies；
-- integrity metadata；
-- upgrade / idempotency semantics。
+- package identity / version / integrity metadata。
 
-### Stable identity
-
-长期关系不得依赖 Runtime 自增 ID。当前已接受：
+长期关系不得依赖 Runtime 自增 ID。当前 accepted stable identities：
 
 - Column → `alias`；
 - PageGroup → `alias`；
@@ -89,92 +87,111 @@ Site Package 是吉林就业网站的版本化站点定义，不是 Historical C
 - AdvertisementSlot → `code`；
 - SiteConfig → `key` / `config_key`。
 
-EU-38 已使用除 NavigationItem 外的上述 stable identities 接管七类 structure definition。
+EU-38 / EU-39 已将当前 98 个 stable objects 表达在 `sites/jilinjobs/structure/**`。普通 Site Package runtime composition 对这些对象执行 stable identity reconcile。
 
-EU-39 current audit 已证明 NavigationItem 的名称、位置/父子关系、排序和 target 都是可变语义，不能可靠组成长期 composite identity。因此 NavigationItem 正式采用独立 stable `code`：
+### 3.2 One-time operational bootstrap
 
-- `code` 只承担 Site Provisioning identity；
-- package parent relation 使用 `parentCode`；
-- Column target 使用 Column alias；
-- Page target 使用 `groupAlias + alias`；
-- location 使用 NavigationLocation code；
-- ordinary operator-created navigation 允许 `code = NULL`；
-- stable code 不暴露为普通 Admin 可编辑产品字段，也不进入 Public canonical URL contract。
+Site Package 还可以包含 **Fresh Site 初始运营默认数据**，但该数据与 stable structure 的 ownership 不同。
 
-### Legacy V2 adoption
+当前 JilinJobs bootstrap 定义：
 
-Existing V1+V2 database 中的 40 条旧 preset navigation 没有 stable code。EU-39 接受以下升级规则：
+```text
+sites/jilinjobs/bootstrap/
+├─ manifest.json
+└─ initial-data.sql
+```
 
-1. 只观察 `preset=true AND code IS NULL` 的 legacy candidate；
-2. 按当前 accepted package semantics 解析 parent / target / location 后进行完整语义匹配；
-3. 必须恰好唯一匹配才允许原位写入 code；
-4. 0 个或多个匹配都必须失败；
-5. adoption 在 Site Package transaction 中执行，任何一条失败时整体回滚；
-6. 一旦取得 code，后续 reconcile 只按 code 定位，允许 package 管理的 rename / move / reorder / retarget。
+当前 bootstrap 精确包含：
 
-该规则只用于从 pre-identity accepted preset baseline 收敛到 stable identity，不把 mutable composite key 提升为长期 Authority。
+- `HOME_CAROUSEL`：1 条 `CmsListItem`；
+- `SITE_RELATED`：5 条 `CmsListItem`；
+- `HOME_RECRUITMENT_PROMO`：1 条 `Advertisement`。
 
-### Versioning
+Bootstrap contract：
 
-Site Package 使用明确 `packageId` / `schemaVersion` / package `version` / structure digest。Git commit 记录历史变更，Runtime Provisioning 通过 package manifest 校验目标 package integrity。
+1. 只在 Fresh JilinJobs Site 安装生命周期显式执行；
+2. 必须在 Generic CMS Schema ready 且 stable Site Package structure 已 provision 后执行；
+3. artifact 有独立 `bootstrapId` 与 SHA-256 integrity metadata；
+4. 不使用 Flyway `Vx` migration number；
+5. 内容始终面向当前兼容 CMS Schema 维护，Schema 改变时可以直接更新 current bootstrap artifact；
+6. 首次成功后记录 `packageId + bootstrapId + applied digest`；
+7. 后续普通 Runtime reconcile 不执行 bootstrap；
+8. 即使当前 bootstrap artifact 已更新，已完成 bootstrap 的 Existing Site 也不重新执行旧 bootstrap identity；
+9. bootstrap 创建的对象初始化后即成为普通 operator-managed Runtime Data，不获得 stable Site identity / preset ownership；
+10. operator edit/delete 必须保持，不得被 restart / reconcile / repeated bootstrap overwrite 或 resurrect。
 
-当前 Site Package schemaVersion = `1`；EU-38 / EU-39 对 structure type 的扩展保持 EU-37 `columns-only` Foundation contract 兼容。JilinJobs package version 当前为 `0.3.0-navigation-identity`。
+### 3.3 Site Package dependency contract
 
-当前阶段不要求设计通用插件系统或支持任意第三方 Site Package Marketplace。
+Site Package 可以依赖 CMS 提供的 Schema / Provisioning capability，但不得依赖 Backend Flyway migration ordering。
 
-## 4. Flyway / V2 boundary
+禁止长期 contract：
 
-Flyway 继续负责数据库 schema 演进，并允许保留真正属于 CMS Core 的数据库级初始化元数据。
+```text
+Core V1 → Site V2 → Core V3
+```
 
-EU-38 已完成 V2 的第一轮 current classification，并将具有现成 stable identity、可独立 reconcile 的七类 Site-specific preset structure 表达进 Site Package：
+接受的 contract：
 
-- Column；
-- PageGroup；
-- Page；
-- NavigationLocation；
-- SiteConfig；
-- CmsList definition；
-- AdvertisementSlot。
+```text
+Generic CMS current compatible schema/capabilities
+→ Site stable provision
+→ optional one-time Site bootstrap
+```
 
-EU-39 继续完成 NavigationItem identity/reconcile：
+未来如需要显式 compatibility version，应表达 CMS capability/schema contract version，而不是共享 migration sequence。
 
-- Flyway V3 只增加 nullable `cms_navigation.code` 与唯一索引；
-- 具体 40 条 JilinJobs navigation definition 位于 Site Package，不进入 V3；
-- Legacy V2 navigation 由 provisioner 无歧义原位 adoption；
-- CmsListItem / Advertisement 继续属于运营成员，不因为存在于 V2 就自动成为 preset structure；
-- Historical / operational content 继续进入 Canonical Migration，而不是 Site Package。
+## 4. Backend Flyway boundary
 
-`V2__current_preset_data.sql` 在 EU-38～EU-40 中均保持未修改。EU-40 已让正式 Repository Runtime / importer 路径通过 `cms.site-package.root` 显式执行 Site Package reconcile，但 V2 仍承担当前 compatibility initialization / operational seed responsibility，因此 **V2 responsibility 尚未移除**。
+EU-41 将 active Backend Flyway 收敛为纯 Generic CMS Schema lineage。
 
-后续若要移除 / 缩减 V2 的 Site-specific responsibility，必须显式证明 Fresh DB recovery、Existing DB compatibility、Site Package idempotency、Runtime equivalence、Review Environment reproducibility 与受影响 canonical migration compatibility；不得以“Site Package 已存在”为理由静默迁空 V2。
+### Current development baseline
 
-## 5. Static asset boundary
+```text
+V1__current_cms_schema.sql
+V2__site_provisioning_schema_capabilities.sql
+```
 
-当前 `site-baseline/static/**` 语义上属于 JilinJobs Site Package，但 EU-37～EU-40 没有改变其物理目录或 Runtime mount。
+- V1：当前 Generic CMS schema baseline；
+- V2：Generic Navigation stable identity + site-neutral bootstrap-state Schema capability；
+- JilinJobs columns / navigation rows / SiteConfig / list definitions / operational defaults 不进入 active Backend Flyway；
+- EU-41 集成后下一次 Generic CMS Schema change 从 V3 继续 append-only。
 
-长期要求：
+该变化属于 development baseline controlled replacement：EU-31 Requirement 已明确当前没有 production / persistent DB in-place upgrade requirement，pre-reset development databases 可以 recreate。EU-41 不为已退休的旧 development V1/V2/V3 history 设计 repair migration。
 
-- stable site assets 与当前 Public Renderer 源码分离；
-- Runtime 仍可由 Backend `/static/**` 提供；
-- Renderer 只依赖稳定 URL / Site data，不依赖资产在 Git 中的物理目录；
-- Historical article/body assets 继续跟随 Canonical Migration unit，不并入 Site Package；
-- Runtime uploads 继续与版本化 Site assets 分离。
+Site bootstrap 不重新编号为 Backend V2/V3，也不建立自己的 migration number sequence。
 
-是否把目录从 `site-baseline/` 改名 / 移到 `sites/jilinjobs/` 由后续 Slice C 根据真实 ownership ambiguity、diff 成本与 Runtime composition 证据决定，不构成 Requirement，也不因目录形式而自动执行。
+## 5. Historical Migration boundary
 
-## 6. Historical Migration boundary
+`data-migrations/**` 保持 Historical Content Migration 语义：
 
-`data-migrations/**` 保持现有 Historical Content Migration 语义。
+- canonical historical Articles / external links；
+- historical resources / attachments；
+- legacy identity / fingerprint / provenance；
+- historical operational list-member migration；
+- importer / reports。
 
-Main / Party Canonical Migration 可以依赖 Site Package 的 stable identities，但必须满足：
+Main / Party Canonical Migration 可以依赖 Site Package stable identities，但必须：
 
 - 不依赖 Runtime numeric ID；
 - 不依赖 Vue Router / component / Vite artifact；
-- Import 前应验证所需 target Site identity 存在；
-- Site Package 先 provisioning，Canonical Migration 后 import；
-- Site Package 升级不得静默破坏已有 Canonical identity。
+- Import 前目标 Site stable identity 已 provision；
+- 不把普通 Fresh Site bootstrap default 误当 historical provenance unit。
 
-EU-40 final Head 已通过 Canonical Migration Verification #153 与 EU-30 Migration Upgrade Verification #103，证明正式 importer 现在按“Flyway compatibility baseline → Site Package reconcile → Canonical import”顺序运行且保持 183 篇 Party Runtime Dataset、carousel、idempotency 与 upgrade compatibility；PR #86 合并后的 `main@b105e553db1ebbc12a2b6665385b94fb977bea06` 又通过 Site Package #20 与 CI #769。该证据关闭了 EU-40 的 Runtime/importer activation scope，但 operational seed Authority、stable assets 与最终 Slice D/E1～E3 re-entry 仍未关闭。
+EU-40 已证明 importer 可以显式组合 Site Package reconcile。EU-41 继续验证在 Backend Flyway 不再提供 JilinJobs data 的情况下，Party canonical Fresh import 与 EU-29→EU-30 upgrade 仍可仅依赖 Generic Schema + stable Site Package + Canonical Dataset 成立。
+
+## 6. Static asset boundary
+
+当前 `site-baseline/static/**` 语义上属于 JilinJobs Site Package，但 EU-41 不改变其物理目录或 Runtime mount。
+
+长期要求：
+
+- stable site assets 与 Public Renderer source 分离；
+- Runtime 仍可由 Backend `/static/**` 提供；
+- Renderer 只依赖稳定 URL / Site data；
+- Historical article/body assets 继续跟随 Canonical Migration unit；
+- Runtime uploads 与版本化 Site assets 分离。
+
+`initial-data.sql` 可以引用当前稳定 `/static/**` URL，但不因此取得对应 asset bytes 的长期 ownership；asset ownership/composition 继续由 Slice C 处理。
 
 ## 7. Public Renderer boundary
 
@@ -189,106 +206,133 @@ Replacement-stable dependencies：
 - Main / Party identities；
 - accepted visual / responsive / SEO obligations。
 
-Implementation-specific details：
+Vue / Vue Router / Vite / multi-entry build / current Playwright layout 属 implementation-specific details，不进入 Site Package / migration contract。
 
-- Vue；
-- Vue Router；
-- Vite；
-- `index.html` / `party.html`；
-- `dist/` layout；
-- current Playwright filesystem location。
-
-这些实现细节继续允许存在，但不得进入 Site Package / migration data contract。
-
-EU-40 不改变 Public/Admin contract；exact-head CI #768 与 Post-Integration CI #769 的 Site Package-enabled Web Runtime、Public/Admin build 与 Integrated Browser 已证明当前可见行为保持。
+EU-41 不改变 Public/Admin contracts 或 Product Intent；Fresh JilinJobs Runtime 通过显式 Site bootstrap 恢复当前初始可见数据。
 
 ## 8. Provisioning lifecycle
 
-长期目标生命周期：
+### 8.1 Generic CMS only
 
 ```text
 Fresh DB
-  ↓ Flyway Generic Schema
-Generic CMS Core ready
-  ↓ apply JilinJobs Site Package
+  ↓ Backend Flyway Generic Schema
+Generic CMS ready
+```
+
+该状态必须包含 **0 个 JilinJobs site-instance rows**。
+
+### 8.2 Fresh JilinJobs Site
+
+```text
+Fresh DB
+  ↓ Backend Flyway Generic Schema
+Generic CMS ready
+  ↓ JilinJobs stable Site Package reconcile
 Stable Site Structure ready
-  ↓ import Canonical Historical Content
+  ↓ one-time Site bootstrap
+Initial operational defaults ready
+  ↓ optional Canonical Historical Migration
 Runtime Content ready
-  ↓ run Public/Admin/Integration verification
+  ↓ Public/Admin/Integration verification
 Accepted Runtime
 ```
 
-EU-37～EU-40 已实现并验证的 Provisioning / composition contract 包括：
+### 8.3 Ordinary restart
 
-1. preflight validation；
-2. dependency-aware apply（已实现 domains）；
-3. stable identity reconciliation；
-4. idempotent second apply；
-5. `preset=false` ownership conflict / non-takeover contract；
-6. package path / SHA-256 integrity；
-7. deterministic verification；
-8. Fresh Generic Schema + Site Package 与 Legacy V1+V2(+V3 schema evolution) + Site Package stable-structure equivalence；
-9. NavigationItem Fresh create / Legacy in-place adoption / stable-code reconcile / ambiguous-adoption rollback；
-10. `cms.site-package.root` opt-in lifecycle 在 Flyway 后执行 reconcile；未配置 root 时 Generic CMS context 保持不启用；
-11. Repository Web Runtime、Canonical / Upgrade importer 与 Review Environment 复用同一 Site Package composition capability。
+```text
+Backend schema validation/evolution
+→ stable Site Package reconcile
+→ no bootstrap
+→ Runtime
+```
 
-仍未完成的 lifecycle responsibility：
+Repository Fresh CI / Review Environment 可以显式使用 `CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true`；普通 runtime 只配置 `cms.site-package.root` 时不得执行 bootstrap。
 
-- V2 中 operational seed 的长期 Authority classification 与 compatibility responsibility retirement；
-- stable Site Asset composition；
-- 完整 canonical historical migration lifecycle compatibility；
-- package definition 删除项的 deprovision semantics（当前默认不自动删除）。
+## 9. Bootstrap completion semantics
 
-当前项目仍以 Fresh DB 可重建为首要恢复路径，不要求为所有未来生产环境立即设计复杂在线 package rollback engine。
+当前通用 completion identity：
 
-## 9. Repository / directory boundary
+```text
+(package_id, bootstrap_id)
+```
+
+记录：
+
+- originally applied content SHA-256；
+- applied timestamp。
+
+语义：
+
+- no state → 校验 artifact digest → transactionally execute current bootstrap → insert state；
+- state exists → `ALREADY_APPLIED`，不再执行 SQL；
+- current artifact digest 与 originally applied digest 可以不同，用于反映 Fresh-install baseline 已演进；Existing Site 不因此被重新初始化；
+- bootstrap SQL 与 state insert 位于同一数据库事务边界，失败 rollback；
+- state 与 Flyway history 完全独立。
+
+## 10. Verification obligations
+
+EU-41 acceptance 至少证明：
+
+1. Backend active migration history 只包含 Generic CMS Schema migrations；
+2. Generic CMS Fresh DB 不含 JilinJobs instances；
+3. Fresh Site stable provision 创建当前 98 个 objects；
+4. first bootstrap 创建 6 ListItems + 1 Advertisement；
+5. second bootstrap 不复制；
+6. operator delete/edit 后 ordinary runtime reconcile 不 resurrect / overwrite；
+7. 再次显式 bootstrap request 仍由 completion state 拦截；
+8. bootstrap 不进入 `flyway_schema_history`；
+9. Public/Admin/Integrated Browser current behavior 保持；
+10. Canonical Migration / EU-30 Upgrade / Review Environment 在新 lifecycle 下可重复。
+
+Initial PR #88 Head `830f620cbe22c474ef27045db49aa9cc27e030c2` 的 Site Package Verification #21 已 PASS。Final acceptance 仍以 PR #88 final Head / full Actions / Authority review 为准。
+
+## 11. Repository / directory boundary
 
 本 Specification 不要求拆 Repository。
 
-当前状态：
+当前：
 
-- 代码 / 数据 ownership 已开始在同仓内清晰分类；
-- Site Package v1 已位于 `sites/jilinjobs/**`；
-- 当前 Public Renderer 继续与 CMS Core 同仓，但 source authority 已由 EU-36 隔离；
-- 只有完成剩余 V2 responsibility / asset / canonical compatibility 后，再评估 Public Renderer 是否具备低成本独立仓库条件；
-- Docs / Code 分仓、多代码仓 Workspace Composition 属独立后续 Architecture / Method Experiment。
+- Generic CMS Backend Schema lineage：`backend/src/main/resources/db/migration/**`；
+- JilinJobs stable structure：`sites/jilinjobs/structure/**`；
+- JilinJobs one-time current-schema defaults：`sites/jilinjobs/bootstrap/**`；
+- Historical canonical data：`data-migrations/**`；
+- stable asset physical location：仍为 `site-baseline/static/**`，后续 Slice C；
+- Public Renderer：`frontend/public-site/**`。
 
-如果未来拆仓，应把 CMS Core、Site Package、Public Renderer 视为平级组件，由独立 Workspace / Integration Authority 组合，而不是默认把 Public Renderer 作为 CMS Repo 的 Git Submodule 子模块。
+四类 source 可以同仓，但 lifecycle / Authority 不共享。
 
-## 10. Completed and remaining acceptance obligations
+## 12. Completed and remaining obligations
 
-### 已完成
+### 已完成并已集成
 
-1. Site Package 最小 manifest / schema / integrity contract；
-2. narrow provisioner、stable identity reconciliation、second apply idempotency、ownership conflict；
-3. Fresh Generic Schema 上可 provision；
-4. 七类 EU-38 stable preset domains 的 V2 classification 与 Site Package representation；
-5. NavigationItem stable `code`、40 条 JilinJobs navigation package representation 与 Legacy adoption / reconcile；
-6. Fresh / Legacy Site Package structural equivalence；
-7. operator-created NavigationItem 不接管、运营成员不迁移；
-8. `V2__current_preset_data.sql` 在 EU-40 保持不变；
-9. EU-39 final Head `b95285f5424d4df0b9f9943395e80332296754f7` 的 Site Package #15、CI #761、Canonical #152、Upgrade #102、Review Environment #678 全部 PASS；
-10. PR #84 已合并为 `main@36276ed65e6f3edbe96ffc18c01cf18ab924837b`，Post-Integration Site Package #16 与 CI #762 全部 PASS，EU-39 正式 COMPLETED；
-11. EU-40 final Head `b3e3dc8c4855c9e17b2dfa2f190a84d0305162e2` 的 Site Package #19、CI #768、Canonical #153、Upgrade #103、Review #683 全部 PASS；
-12. PR #86 已合并为 `main@b105e553db1ebbc12a2b6665385b94fb977bea06`，Post-Integration Site Package #20 与 CI #769 全部 PASS，EU-40 正式 COMPLETED。
+1. EU-37 Site Package contract / provisioner foundation；
+2. EU-38 七类 stable structure representation；
+3. EU-39 Navigation stable identity / transition adoption；
+4. EU-40 explicit Runtime/importer Site Package composition；
+5. EU-39 / EU-40 对应 final + post-integration evidence。
 
-### 剩余
+### EU-41 当前执行
 
-1. Operational Seed Classification & V2 Responsibility Retirement；
-2. static asset ownership 与 Runtime / CI / Review Environment composition；
-3. Party canonical dataset 的完整 Site Package lifecycle compatibility；
-4. accepted 183 Runtime Articles / Party carousel / provenance 在最终 Site Package lifecycle 下的 compatibility；
-5. E1～E3 dependency update 与 re-entry gate；
-6. 在完成四层 boundary 后的 Repository Split Readiness Assessment（独立评估，不自动拆仓）。
+1. Backend Schema-only Flyway lineage；
+2. one-time current-schema Site bootstrap；
+3. operational default no-takeover/no-resurrection；
+4. CI / Review / Canonical lifecycle convergence；
+5. Current Authority replacement。
 
-这些剩余项必须通过后续 current audit / `slice-work → readiness-check` 形成新的 Ready Execution Unit；本 Specification 不预先给它们分配 EU Identifier，也不继承 EU-40 的 Execute 授权。
+### EU-41 后剩余 Planning Candidates
+
+1. Site Asset Ownership & Runtime Composition（Slice C）；
+2. Canonical Migration Compatibility & E1～E3 re-entry（Slice D）；
+3. 四层 boundary 完成后的 Repository Split Readiness Assessment。
+
+这些剩余项仍必须重新执行 current audit / `slice-work → readiness-check`，不得自动继承 EU-41 Execute 授权。
 
 ## Deferred decisions
 
 - Public 技术栈替换；
 - SSR / SSG / Hybrid；
-- Repository split；
-- Git Submodule；
+- Repository split / Git Submodule；
 - Docs / Code 分仓；
 - Multi-repository Workspace implementation；
 - Generic multi-site SaaS / tenant model；
