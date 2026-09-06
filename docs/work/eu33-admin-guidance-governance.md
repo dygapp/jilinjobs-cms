@@ -7,9 +7,9 @@
 - Requirement：`docs/requirements/admin-guidance-governance.md`
 - Specification：`docs/specifications/admin-guidance-governance.md`
 - Technical Plan：不需要独立持久化；本 Unit 不存在跨 Unit 长期 HOW 协调
-- Status：**READY**
+- Status：**COMPLETED**
 
-`EU-33` 是在 Ready Requirement / Specification 后由 `slice-work` 形成的单一 Candidate Execution Unit。Identifier 仅用于稳定追踪；下述 Readiness Gate PASS 后，本 Unit 才晋升为 Ready Execution Unit。
+`EU-33` 由 Ready Requirement / Specification 经 `slice-work` 与 Readiness Gate 形成并获得 Execute 权限，现已完成实现、集成与 Post-Integration Verification。下述 Readiness / Completion Gate 作为执行过程追溯保留，不再表示当前执行状态。
 
 ## 2. Intent
 
@@ -130,13 +130,13 @@
 
 ## 8. Readiness Verdict
 
-**PASS — EU-33 is a Ready Execution Unit.**
+**PASS — EU-33 was promoted to a Ready Execution Unit.**
 
-可以进入 Execute。实施过程中若发现必须改变 Backend contract、权限或 Public behavior 的问题，应停止扩大本 Unit，并回到 Requirement Change / Planning Candidate，而不是在 EU-33 内顺带实现。
+该 Verdict 是历史 Execute 授权记录；当前状态见 Identity：`COMPLETED`。
 
 ## 9. Completion Gate
 
-EU-33 只有在以下条件全部满足后才能视为完成：
+EU-33 的 Completion Gate 已满足并完成集成；以下条目作为历史验收契约保留：
 
 - targeted Admin guidance E2E PASS；
 - existing Admin E2E PASS；
