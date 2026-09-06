@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import QRCode from 'qrcode'
-import { computed, ref, watch } from 'vue'
+import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { getPublicArticle, publicAttachmentUrl, publicBodyHtml, type PublicArticleDetail } from '../../api/articles'
+import { getPublicArticle, publicAttachmentUrl, type PublicArticleDetail } from '../../api/articles'
 import { setPageMeta, summarizeHtml } from '../../seo'
 
 const route = useRoute()
@@ -12,7 +12,6 @@ const error = ref('')
 const articleUrl = ref('')
 const qrCodeUrl = ref('')
 const copyMessage = ref('')
-const renderedBody = computed(() => article.value ? publicBodyHtml(article.value) : '')
 
 watch(() => route.params.id, async value => {
   const id = Number(value)
@@ -84,7 +83,7 @@ function size(bytes: number) {
               </div>
             </header>
 
-            <div class="article-body rich-content" data-testid="public-article-body" v-html="renderedBody" />
+            <div class="article-body rich-content" data-testid="public-article-body" v-html="article.bodyHtml" />
 
             <section v-if="article.attachments.length" class="article-attachments" data-testid="public-attachments">
               <h2>附件下载</h2>

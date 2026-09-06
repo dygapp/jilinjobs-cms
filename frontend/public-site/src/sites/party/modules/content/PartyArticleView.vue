@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import {
   getPublicArticle,
   publicAttachmentUrl,
-  publicBodyHtml,
   type PublicArticleDetail,
 } from '../../../../shared/api/articles'
 import { setPageMeta, summarizeHtml } from '../../../../shared/seo'
@@ -14,7 +13,6 @@ const route = useRoute()
 const article = ref<PublicArticleDetail | null>(null)
 const loading = ref(false)
 const error = ref('')
-const renderedBody = computed(() => article.value ? publicBodyHtml(article.value) : '')
 
 watch(() => route.params.id, load, { immediate: true })
 
@@ -79,7 +77,7 @@ function size(bytes: number) {
               <time v-if="article.publishDate">发布时间：{{ article.publishDate }}</time>
             </div>
           </header>
-          <div class="party-article-body" data-testid="party-article-body" v-html="renderedBody" />
+          <div class="party-article-body" data-testid="party-article-body" v-html="article.bodyHtml" />
           <section v-if="article.attachments.length" class="party-attachments">
             <h2>附件下载</h2>
             <a v-for="file in article.attachments" :key="file.id" :href="publicAttachmentUrl(file.id)">

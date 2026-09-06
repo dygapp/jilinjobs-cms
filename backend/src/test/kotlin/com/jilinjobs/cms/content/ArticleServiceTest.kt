@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Assertions.assertThrows
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -210,6 +211,36 @@ class ArticleServiceTest {
         service.withdraw(published.id)
         assertEquals(0, service.listPublic(columnId = 1, page = 0, size = 10).total)
         assertThrows(ArticleNotFoundException::class.java) { service.getPublic(published.id) }
+    }
+
+    @Test
+    fun `公开文章正文只投影已关联 managed 图片并保持管理端正文不变`() {
+        val repository = InMemoryArticleRepository()
+        val resources = InMemoryArticleResourceAssociation()
+        val service = ArticleService(repository, FixedColumnQuery(), resources)
+        val created = service.create(
+            sampleDraft().copy(
+                bodyHtml = """
+                    <p><img src="/api/admin/resources/12/content" alt="已关联图片"></p>
+                    <p><img src="/api/admin/resources/99/content" alt="未关联图片"></p>
+                    <p><img src="https://example.com/api/admin/resources/12/content" alt="外部图片"></p>
+                    <p><a href="/api/admin/articles/12">其他管理端文本</a></p>
+                """.trimIndent(),
+                bodyImageResourceIds = listOf(12),
+            ),
+        )
+        service.publish(created.id)
+        val persistedBeforePublicRead = service.get(created.id).bodyHtml
+
+        val detail = service.getPublic(created.id)
+
+        assertTrue(detail.bodyHtml.contains("src=\"/api/public/resources/12/content\""))
+        assertTrue(detail.bodyHtml.contains("src=\"/api/admin/resources/99/content\""))
+        assertTrue(detail.bodyHtml.contains("src=\"https://example.com/api/admin/resources/12/content\""))
+        assertTrue(detail.bodyHtml.contains("href=\"/api/admin/articles/12\""))
+        assertEquals(listOf(12L), detail.bodyImageResourceIds)
+        assertEquals(persistedBeforePublicRead, service.get(created.id).bodyHtml)
+        assertTrue(service.get(created.id).bodyHtml.contains("src=\"/api/admin/resources/12/content\""))
     }
 
     private fun sampleDraft(): ArticleDraft = ArticleDraft(
