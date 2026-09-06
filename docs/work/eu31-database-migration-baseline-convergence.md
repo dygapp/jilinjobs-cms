@@ -1,5 +1,11 @@
 # EU-31 数据库迁移基线收敛
 
+## 状态
+
+**COMPLETED**
+
+本 Work Artifact 保留 EU-31 的分配、范围与验证契约；当前完成状态以本文件、`README.md` 与 Project Roadmap 的一致记录为准。
+
 ## 分配说明
 
 EU-31 在 EU-30 完成后的规划与 Readiness Review 后重新分配，不继承历史未使用的 EU 编号草案。
