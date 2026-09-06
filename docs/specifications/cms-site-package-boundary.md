@@ -150,7 +150,7 @@ EU-39 继续完成 NavigationItem identity/reconcile：
 
 ## 5. Static asset boundary
 
-当前 `site-baseline/static/**` 语义上属于 JilinJobs Site Package，但 EU-37～EU-39 没有改变其物理目录或 Runtime mount。
+当前 `site-baseline/static/**` 语义上属于 JilinJobs Site Package，但 EU-37～EU-40 没有改变其物理目录或 Runtime mount。
 
 长期要求：
 
@@ -250,7 +250,7 @@ EU-37～EU-40 已实现并验证的 Provisioning / composition contract 包括�
 - 代码 / 数据 ownership 已开始在同仓内清晰分类；
 - Site Package v1 已位于 `sites/jilinjobs/**`；
 - 当前 Public Renderer 继续与 CMS Core 同仓，但 source authority 已由 EU-36 隔离；
-- 只有完成剩余 Site Package Runtime / asset / canonical compatibility 后，再评估 Public Renderer 是否具备低成本独立仓库条件；
+- 只有完成剩余 V2 responsibility / asset / canonical compatibility 后，再评估 Public Renderer 是否具备低成本独立仓库条件；
 - Docs / Code 分仓、多代码仓 Workspace Composition 属独立后续 Architecture / Method Experiment。
 
 如果未来拆仓，应把 CMS Core、Site Package、Public Renderer 视为平级组件，由独立 Workspace / Integration Authority 组合，而不是默认把 Public Renderer 作为 CMS Repo 的 Git Submodule 子模块。
@@ -277,7 +277,7 @@ EU-37～EU-40 已实现并验证的 Provisioning / composition contract 包括�
 1. Operational Seed Classification & V2 Responsibility Retirement；
 2. static asset ownership 与 Runtime / CI / Review Environment composition；
 3. Party canonical dataset 的完整 Site Package lifecycle compatibility；
-4. accepted 183 Runtime Articles / Party carousel / provenance 在新默认 composition 下的 compatibility；
+4. accepted 183 Runtime Articles / Party carousel / provenance 在最终 Site Package lifecycle 下的 compatibility；
 5. E1～E3 dependency update 与 re-entry gate；
 6. 在完成四层 boundary 后的 Repository Split Readiness Assessment（独立评估，不自动拆仓）。
 
