@@ -17,7 +17,8 @@
   - `EU-38 — Stable Site Structure Package Migration`
   - `EU-39 — Navigation Stable Identity & Site Package Reconcile`
   - `EU-40 — Explicit Site Package Runtime Composition Activation`
-- Current Ready Execution Unit: **EU-41 — Site Bootstrap & Generic Schema Baseline Separation（IN EXECUTION）**
+  - `EU-41 — Site Bootstrap & Generic Schema Baseline Separation`
+- Current Ready Execution Unit: **NONE**
 - Issue #77: **OPEN**
 
 ## Decision
@@ -32,11 +33,13 @@ EU-41 对 EU-40 后的 Operational Seed / V2 candidate 作出关键收敛：
 - historical/canonical data 继续由 `data-migrations/**` 管理；
 - Site Package 与 CMS 通过 Schema / Provisioning capability contract 组合，不共享 Flyway migration order。
 
+EU-41 已完成实现、exact-head Verification、Integration 与 Post-Integration Verification，该 Decision 已成为当前 accepted technical baseline。
+
 ## 1. Generic CMS Schema lineage
 
-### 1.1 Current EU-41 target
+### 1.1 Current accepted baseline
 
-Active Backend Flyway target：
+Active Backend Flyway：
 
 ```text
 backend/src/main/resources/db/migration/
@@ -198,7 +201,7 @@ Generic Schema
 
 Canonical importer 只需要 stable target identities，不需要执行 JilinJobs Main operational bootstrap。
 
-EU-41 必须重新证明：
+EU-41 已重新证明：
 
 - Party Fresh canonical import；
 - 183 article current Runtime Dataset；
@@ -276,16 +279,22 @@ Review reset 后再执行 Party canonical import，因此 Review lifecycle 与�
 - explicit repeated bootstrap also preserves modifications；
 - state row remains one。
 
-Initial PR #88 Head `830f620cbe22c474ef27045db49aa9cc27e030c2` 的 Site Package Verification #21 已 PASS。
+### Final execution evidence
 
-### Full gates before integration
+PR #88 final Head `a958c39a37892cf0fbcb41b8c883b2299d84f561`：
 
-- Site Package Verification；
-- Repository CI Backend / Public / Admin / Integrated Browser；
-- Canonical Migration Verification；
-- EU-30 Migration Upgrade Verification；
-- Review Environment；
-- final diff-scope / Authority review。
+- Site Package Verification #32 — PASS；
+- Repository CI #783 — PASS；
+- Canonical Migration Verification #165 — PASS；
+- EU-30 Migration Upgrade Verification #115 — PASS；
+- 人工评审环境 #696 — PASS。
+
+PR #88 已合并为 `main@6c88eea1762e8edf465833631cadff1e4c751d36`；Post-Integration：
+
+- Site Package Verification #33 — PASS；
+- CI #784 — PASS，包括 Backend / Public / Admin / Integrated Browser。
+
+上述 evidence 关闭了 EU-41 的 Generic Schema-only、Fresh bootstrap、no-resurrection、Canonical / Upgrade compatibility 与 Runtime behavior obligations。
 
 ## 8. Static asset boundary
 
@@ -297,9 +306,7 @@ EU-41 不处理 Slice C。
 
 ## 9. Rollback / compatibility boundary
 
-Feature Branch 合并前可以直接放弃。
-
-EU-41 合并后：
+EU-41 集成后的 accepted boundary：
 
 - pre-EU-41 development DB recreate；
 - current Fresh install 只使用新 Generic V1/V2 + Site Package；
@@ -311,14 +318,16 @@ EU-41 合并后：
 
 - Ready evidence：Issue #77 `#issuecomment-5560955644`；
 - Work artifact：`docs/work/eu41-site-bootstrap-generic-schema-baseline-separation.md`；
-- Branch：`feature/eu-41-site-bootstrap-baseline-separation`；
-- Draft PR：#88；
-- Initial targeted evidence：Site Package Verification #21 PASS；
-- final exact-head / integration evidence：pending。
+- Implementation PR：#88；
+- Final Head：`a958c39a37892cf0fbcb41b8c883b2299d84f561`；
+- Integration：`main@6c88eea1762e8edf465833631cadff1e4c751d36`；
+- Exact-head / Integration / Post-Integration evidence：**PASS**；
+- EU-41：**COMPLETED**；
+- Current Ready Execution Unit：**NONE**。
 
 ## 11. Remaining after EU-41
 
-EU-41 完成后 Issue #77 继续保留：
+Issue #77 继续保留：
 
 1. Slice C — Site Asset Ownership & Runtime Composition；
 2. Slice D — Canonical Migration Compatibility & E1～E3 re-entry；
