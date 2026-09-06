@@ -85,6 +85,7 @@ docs/project/development-method.md
 - Planning / Requirement Candidate 在 `slice-work` 前保持规划身份；`slice-work` 只在上游 Ready 后形成 Candidate Execution Unit，可分配稳定 Identifier；Identifier 不等于 Readiness 或 Execute 授权，只有 `readiness-check` PASS 后才成为 Ready Execution Unit；
 - 优先形成纵向、可独立验证、范围明确且 context-fit 的 Execution Unit；
 - 在条件允许时使用 Fresh Context；
+- Fresh Context 的会话切换提示词只承担 **Locator / Handoff** 职责，不并行维护第二份项目 Authority；凡可从当前 GitHub Repository、Roadmap、Consumer-local Method、Requirement / Specification / Technical Plan、Issue / PR / Actions 或 Runtime Evidence 恢复的事实、规则、状态和执行步骤，不得为了“交接完整”再次复制进提示词；完整规则见 `docs/project/development-method.md` §11.1；
 - 实施时选择当前证据支持的最低必要复杂度；没有当前 Requirement、Specification、Architecture、Verification、安全、性能、生命周期或真实多消费者证据支持的额外抽象、配置项、依赖、扩展点、框架层和未来分支默认不进入实现；必要的失败路径、安全措施、验证能力、行为保持型 preparatory refactor 与薄适配不属于“过度设计”；
 - 最终 Diff 的每个有意义区域必须能追溯到当前 Unit 实现、验证、Authority 同步、必要 preparatory refactor 或其直接 cleanup；相邻 typo、TODO、历史死代码、独立优化、全局格式化等默认留在当前 Diff 之外；
 - 当 Unit 涉及集合、列表或 snapshot 数据访问时，先确认真实 Consumer Scope、集合的稳定有界性或增长特征、Lifecycle / Freshness，再决定过滤、稳定排序、window / pagination、representation 与复用方式；页面最终展示数量、现有 `LIMIT/OFFSET` 或客户端过滤不能替代业务作用域，业务 scope 决定成员资格时应先形成 scope 再 window / paginate；只有当前 Authority 明确定义 global Top-N / ranking 本身为业务语义时例外；稳定有界的结构性共享快照可以按当前生命周期完整读取，不为形式统一机械分页；

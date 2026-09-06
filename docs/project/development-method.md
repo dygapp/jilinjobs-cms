@@ -402,6 +402,57 @@ README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项�
 
 不得依赖历史聊天或个人记忆补充未固化的项目事实。
 
+### 11.1 Fresh Context Handoff Prompt Contract（Prompt-as-Locator）
+
+Fresh Context 的 handoff prompt 是**定位器（Locator）**，不是第二份项目权威（Authority）、状态快照或方法副本。它的目标是让新会话知道“从哪个 Consumer Repository、哪个当前工作入口开始恢复”，而不是替 Repository 重新讲述项目。
+
+生成新的会话切换提示词时，默认只允许携带：
+
+- `Fresh Context` 声明；
+- Consumer Repository 标识；
+- 要求以当前 GitHub Repository 为唯一项目事实来源，并按 Repository Authority 恢复上下文；
+- 当前工作入口，例如某个 Issue、用户刚刚指定的目标或尚未固化但本次必须延续的最小意图；
+- Repository 尚无法推导、且项目负责人在当前会话新增加的会话级约束。
+
+以下内容只要能够从当前 Repository / GitHub 重新恢复，就**不得为了“交接完整”“防止遗漏”或“作为定位线索”再次复制进 handoff prompt**：
+
+- Repository Authority / Knowledge Boundary / GitHub 权限矩阵；
+- Consumer 当前 `agentic-dev` baseline、Capability Milestone 或 baseline upgrade 规则；
+- Development Method、Skill 流程、`slice-work` / `readiness-check` / Execute / Integration 规则；
+- Roadmap 当前状态、已完成 EU、当前 Ready EU、Planning Candidate 列表；
+- PR / Branch / Commit SHA / Actions Run / CI 结果等 GitHub 原生状态；
+- Requirement / Specification / Technical Plan / ADR / Work Artifact 的内容摘要；
+- 已经固化的 V2、Migration、Runtime、Architecture、Verification、E1～E3 prerequisite 等项目约束；
+- 下一步的详细执行步骤，只要这些步骤应由当前 Roadmap / Method / Authority 在新上下文中重新推导。
+
+生成 prompt 前执行一个删除测试：
+
+> **如果新会话通过读取当前 GitHub Repository 和 Current Evidence 能得到这句话，就从 handoff prompt 删除。**
+
+规则补充：
+
+- 不通过“这些历史状态只作为线索、需要重新核验”来为重复复制开例外；可恢复事实即使标注为线索，仍然会制造冗余和潜在双重 Authority。
+- 如果当前会话产生了一个**持续有效且后续必须依赖**的新规则、状态或决策，应优先先把它固化到适当 Consumer Authority，再生成最小 handoff prompt；不能长期依赖 prompt 保存它。
+- 如果新的用户意图只是下一会话的一次性目标、尚无必要进入长期 Authority，可以在 prompt 中最小携带；新会话确认它具有持续约束价值后，再按正常 Method 固化。
+- 不要求 handoff prompt 复述 Fresh Context 的完整恢复顺序；提示词只需要求读取 `AGENTS.md` / `README.md` 并按 Consumer-local Fresh Context 规则恢复，具体顺序由本节 Authority 负责。
+- 当项目负责人要求“生成新会话提示词”时，Agent 应以本契约为生成 Gate，而不是默认输出完整 conversation handoff summary。
+
+推荐的最小形态是：
+
+```text
+这是一个 Fresh Context。不要依赖其他聊天、历史会话或个人记忆；GitHub Repository 是唯一项目事实来源。
+
+继续：<consumer-repository>
+
+先读取当前 AGENTS.md、README.md，并按 Consumer-local Fresh Context 规则从 GitHub 恢复当前状态。
+
+当前工作入口：<issue / user-specified goal>。
+
+恢复后按当前 Repository Authority 与 Project Roadmap 继续。
+```
+
+模板只是结构示例，不要求逐字复制；如果其中某一项在当前场景没有必要，应继续删除，而不是为了模板完整保留。
+
 ## 12. baseline 升级规则
 
 只有项目负责人明确要求更新 `agentic-dev` baseline 时，才执行 baseline 升级。
