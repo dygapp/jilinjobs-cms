@@ -81,3 +81,10 @@ tasks.register<JavaExec>("verifyStableSiteStructure") {
     classpath = sourceSets["test"].runtimeClasspath
     mainClass.set("com.jilinjobs.cms.provisioning.StableSiteStructureVerificationKt")
 }
+
+tasks.register<JavaExec>("verifyRuntimeSitePackageComposition") {
+    group = "verification"
+    description = "Verify EU-40 opt-in Site Package runtime composition against the current V1+V2+V3 lifecycle"
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("com.jilinjobs.cms.provisioning.RuntimeSitePackageCompositionVerificationKt")
+}
