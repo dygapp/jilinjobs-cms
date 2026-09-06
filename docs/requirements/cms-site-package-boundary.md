@@ -4,9 +4,9 @@
 
 - Candidate source: GitHub Issue #77
 - Stage: Requirement Authority — ACTIVE / PARTIALLY IMPLEMENTED
-- Completed implementation: EU-37 / EU-38 / EU-39
+- Completed implementation: EU-37 / EU-38 / EU-39 / EU-40
 - Current Ready Execution Unit: NONE
-- Remaining scope after EU-39: V2/default Runtime composition convergence / Slice C / Slice D 继续保持 Planning / Requirement Candidate
+- Remaining scope after EU-40: Operational Seed Classification & V2 Responsibility Retirement / Slice C / Slice D 继续保持 Planning / Requirement Candidate
 - Scope: E1～E3 前置的 CMS 通用化、站点实例数据所有权与 Public Renderer 可替换边界
 
 ## Intent
@@ -71,8 +71,10 @@
 - EU-39 已把当前 40 条正式 preset NavigationItem 表达为 `sites/jilinjobs/structure/navigation-items.json`，并证明 Fresh create、Legacy V2 原位无歧义 adoption、second apply idempotency、stable-code rename/move/reorder/retarget restore 与 ambiguous-adoption transaction rollback；
 - EU-39 final implementation Head `b95285f5424d4df0b9f9943395e80332296754f7` 已通过 Site Package Verification #15、CI #761（Backend / Public / Admin / Integrated Browser）、Canonical #152、EU-30 Upgrade #102 与人工评审环境 #678；
 - PR #84 已合并为 `main@36276ed65e6f3edbe96ffc18c01cf18ab924837b`；Post-Integration Site Package Verification #16 与 CI #762（Backend / Public / Admin / Integrated Public/Admin Browser）全部 PASS，EU-39 正式 COMPLETED；
+- EU-40 已把 Site Package reconcile 激活为 `cms.site-package.root` opt-in Spring lifecycle，并让 Repository Runtime、Canonical / Upgrade importer 与 Review Environment 显式消费同一 JilinJobs Site Package；
+- EU-40 final Head `b3e3dc8c4855c9e17b2dfa2f190a84d0305162e2` 的 Site Package #19、CI #768、Canonical #153、Upgrade #103、Review #683 全部 PASS；PR #86 合并为 `main@b105e553db1ebbc12a2b6665385b94fb977bea06` 后，Post-Integration Site Package #20 与 CI #769 全部 PASS，EU-40 正式 COMPLETED；
 - operator-created NavigationItem 继续保持 `preset=false / code=NULL`，CmsListItem / Advertisement operational members 未被 Site Package 接管；
-- `V2__current_preset_data.sql` 在 EU-39 仍保持不变，因此默认 Runtime compatibility responsibility **尚未移除**；
+- `V2__current_preset_data.sql` 在 EU-40 仍保持不变；正式 Runtime / importer 已可显式组合 Site Package，但 V2 compatibility responsibility **尚未移除**，operational seed 的长期 Authority 仍待分类；
 - `site-baseline/static/**` 与完整 canonical migration compatibility / E1～E3 re-entry 仍属于 Issue #77 后续边界；
 - `data-migrations/README.md` 已明确 Historical Content Migration 与 Flyway / Site Baseline 分离。
 
@@ -94,14 +96,14 @@
 
 ## Current Follow-up Direction
 
-EU-37 / EU-38 / EU-39 已完成 Site Package Foundation、七类 stable structure 与 NavigationItem stable identity / reconcile，并均已集成到 `main` 取得 Post-Integration Current Evidence。当前没有 Ready Execution Unit。
+EU-37 / EU-38 / EU-39 / EU-40 已完成 Site Package Foundation、stable structure、Navigation stable identity / reconcile 与 explicit Runtime composition activation，并均已集成到 `main` 取得 Post-Integration Current Evidence。当前没有 Ready Execution Unit。
 
-Issue #77 在 EU-39 后剩余工作必须重新经过 current audit / slice-work / readiness-check，重点包括：
+Issue #77 在 EU-40 后剩余工作必须重新经过 current audit / slice-work / readiness-check，重点包括：
 
-1. `V2__current_preset_data.sql` 与默认 Runtime bootstrap 的剩余 responsibility 如何从 implicit Site bootstrap 显式收敛到 Site Package，并同时证明 Fresh / Existing DB、idempotency、Public/Admin 与 canonical compatibility；
+1. V2 中仍存在的 `CmsListItem` / `Advertisement` 等 operational seed 应如何分类长期 Authority，并在不破坏 Existing/Fresh/canonical behavior 的前提下收敛 V2 Site-specific compatibility responsibility；
 2. `site-baseline/static/**` 的 Site Package ownership 如何在 manifest / Runtime / CI / Review Environment 中显式组合，物理移动仅在有真实必要时执行；
-3. Party canonical migration、183 篇 current Runtime Dataset 与 accepted carousel state 如何证明对完整 Site Package lifecycle contract 兼容；
+3. Party canonical migration、183 篇 current Runtime Dataset 与 accepted carousel state 如何证明对最终 Site Package lifecycle contract 完整兼容；
 4. 完成上述 compatibility 后，如何解除 Issue #60 / E1～E3 的前置等待并重新进入 Planning；
 5. 四层 boundary 完成后再单独执行 Repository Split Readiness Assessment。
 
-这些剩余方向当前都不是 Ready Execution Unit，也不继承 EU-39 的 Identifier 或 Execute 授权。
+这些剩余方向当前都不是 Ready Execution Unit，也不继承 EU-40 的 Identifier 或 Execute 授权。

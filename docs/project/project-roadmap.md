@@ -34,7 +34,8 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | EU-36 Public Frontend Source Isolation & Managed Resource Projection | **已完成** | Public production source 已移除 Admin endpoint knowledge，managed Article body image 改由 Backend Public projection 暴露 Public Resource URL，source-boundary guard 与全链回归均已闭环 |
 | EU-37～EU-38 Site Package Foundation & Stable Structure Migration | **已完成** | Site Package v1 contract / provisioner foundation 已建立；七类具有 stable identity 的 JilinJobs preset structure 已迁入 `sites/jilinjobs/**` 并证明 Fresh V1 + Package 与 Legacy V1+V2 + Package structural equivalence |
 | EU-39 Navigation Stable Identity & Site Package Reconcile | **已完成** | NavigationItem 获得 provisioning-only stable `code`；40 条正式导航进入 Site Package；Fresh create、Legacy V2 原位 adoption、stable-code reconcile、PR #84 Integration 与 `main` Post-Integration Verification 全部 PASS |
-| Issue #77 CMS Core / Site Package / Public Renderer Boundary | **当前 Planning Priority / 部分完成** | EU-37 / EU-38 / EU-39 已完成；剩余 V2/default Runtime composition、Site Asset ownership/runtime composition、Canonical Migration lifecycle compatibility 与 E1～E3 re-entry 仍需重新 slice / readiness |
+| EU-40 Explicit Site Package Runtime Composition Activation | **已完成** | `cms.site-package.root` opt-in lifecycle、Repository Runtime、Canonical / Upgrade importer orchestration 与 Review Environment composition 已显式消费 Site Package；V2 compatibility responsibility 保留 |
+| Issue #77 CMS Core / Site Package / Public Renderer Boundary | **当前 Planning Priority / 部分完成** | EU-37～EU-40 已完成；剩余 Operational Seed Classification & V2 Responsibility Retirement、Site Asset ownership/runtime composition、Canonical Migration lifecycle compatibility 与 E1～E3 re-entry 仍需重新 slice / readiness |
 | Issue #60 E1～E3 Main Site Formal Content | **前置依赖等待** | 保留为 Planning Candidates；待 Issue #77 的 Site Package boundary / compatibility 收敛并取得兼容证据后重新进入 Planning |
 | 其他 Planning / Requirement Candidates | **规划层保留** | Issues #57 / #59 / #60 的 C1/C2、Browser Compatibility、Public Rendering Architecture 等仍按各自边界保留 |
 | 真实第三方深度集成 | 条件性后续 | 根据接口、认证、可靠性与 Product Intent 再进入 Specification / Slice |
@@ -71,6 +72,7 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | 2026-09-06 | Issue #77 / Slice A 形成 EU-37，建立 Site Package v1 manifest/schema、narrow provisioner、Fresh V1 MySQL proof 与 ownership/idempotency contract；PR #80 已集成并通过 Post-Integration CI |
 | 2026-09-06 | Issue #77 / Slice B stable-identity portion 形成 EU-38；Column、PageGroup、Page、NavigationLocation、SiteConfig、CmsList definition、AdvertisementSlot 共 58 个 stable preset objects 进入 Site Package；PR #81 exact-head 与 `main` Post-Integration Site Package/Repository CI 全部 PASS |
 | 2026-09-06 | Issue #77 / Slice B Navigation identity portion 形成 EU-39；NavigationItem 获得 stable `code`，40 条正式导航进入 Site Package；PR #84 final Head `b95285f…` exact-head Site Package #15、CI #761、Canonical #152、Upgrade #102、Review Environment #678 全部 PASS，并合并为 `main@36276ed65e6f3edbe96ffc18c01cf18ab924837b`；Post-Integration Site Package #16 与 CI #762 全部 PASS，EU-39 正式关闭 |
+| 2026-09-06 | Issue #77 / Slice B Runtime composition activation 形成 EU-40；PR #86 final Head `b3e3dc8c…` exact-head Site Package #19、CI #768、Canonical #153、Upgrade #103、Review Environment #683 全部 PASS，并合并为 `main@b105e553db1ebbc12a2b6665385b94fb977bea06`；Post-Integration Site Package #20 与 CI #769 全部 PASS。Site Package 已进入正式 Runtime/importer composition，但 V2 compatibility responsibility 仍保留，EU-40 正式关闭 |
 
 ## 当前已固化结果
 
@@ -235,7 +237,7 @@ Intent / Requirement Clarification
 
 最终状态：实现与验证均已完成并集成到 `main`；Canonical Migration Verification、EU-30 Migration Upgrade Verification 与 CI 均提供了当前阶段所需证据。该阶段现已关闭，不再作为 Fresh Context 的当前 Execution Unit。
 
-## 当前阶段：Issue #77 Site Package Boundary — EU-39 已完成
+## 当前阶段：Issue #77 Site Package Boundary — EU-40 已完成
 
 在开始 Issue #60 / E1～E3 前，当前仍优先处理 Issue #77，但不得把它恢复成“尚未开始”的 Planning 状态。
 
@@ -254,10 +256,11 @@ Planning / implementation Authority：
 1. Slice A → EU-37：Site Package Contract & Provisioner Foundation；
 2. Slice B stable-identity portion → EU-38：Stable Site Structure Package Migration；
 3. Slice B Navigation identity portion → EU-39：Navigation Stable Identity & Site Package Reconcile；PR #84 Integration 与 `main` Post-Integration Verification 已 PASS。
+4. Slice B Runtime composition activation → EU-40：Explicit Site Package Runtime Composition Activation；PR #86 Integration 与 `main` Post-Integration Verification 已 PASS，V2 compatibility responsibility 保留。
 
 当前没有 Ready Execution Unit。
 
-EU-39 后剩余 Planning：
+EU-40 后剩余 Planning：
 
 1. Slice B remainder：V2 / default Runtime composition responsibility convergence；
 2. Slice C：Site Asset Ownership & Runtime Composition；
@@ -291,7 +294,8 @@ Planning / Requirement Candidate
 - EU-36 已按 Issue #60 / D1 的 Requirement / Specification / Technical Plan / Slice / Readiness 链完成 Public source isolation 与 managed resource projection，并通过 Post-Integration Verification；
 - EU-37 / EU-38 已按 Issue #77 的 Planning Authority、current audit、Slice / Readiness 链完成 Site Package Foundation 与 stable structure migration，并通过 Post-Integration Verification；
 - EU-39 已按 Issue #77 Slice B remainder current audit、Requirement/Specification decision、Slice / Readiness 链完成 Navigation stable identity / Site Package reconcile，PR #84 与 `main` Post-Integration Verification 均 PASS，状态为 COMPLETED；
-- 当前没有 Ready Execution Unit；Issue #77 剩余项不得自动继承 EU-39 Execute 授权；
+- EU-40 已在重新 current audit / slice / readiness 后完成 explicit Site Package Runtime composition activation，PR #86 与 `main` Post-Integration Verification 均 PASS，状态为 COMPLETED；
+- 当前没有 Ready Execution Unit；Issue #77 剩余项不得自动继承 EU-40 Execute 授权；
 - Issue #60 / E1～E3 等待 Issue #77 的 Site Package boundary / compatibility 收敛后重新进入 Planning；
 - 未来候选可以在 `slice-work` 形成 Candidate Execution Unit 时获得稳定 Identifier，但只有 `readiness-check` PASS 后才能成为 Ready Execution Unit；
 - 若未来 Browser Compatibility 候选被正式切分，必须基于届时 current implementation 重新取得兼容证据，不继承 EU-30 的旧 DOM / CSS / dependency 假设；
