@@ -7,9 +7,9 @@
 - Requirement：`docs/requirements/list-definition-group-governance.md`
 - Specification：`docs/specifications/list-definition-group-governance.md`
 - Technical Plan：不需要独立持久化；本 Unit 没有跨 Unit 长期 HOW 协调
-- Status：**READY**
+- Status：**COMPLETED**
 
-`EU-32` 是在 Ready Specification 之后由 `slice-work` 形成的单一 Candidate Execution Unit；Identifier 只承担追踪身份。下述 Readiness Gate PASS 后，该 Unit 才晋升为 Ready Execution Unit。
+`EU-32` 由 Ready Specification 经 `slice-work` 与 Readiness Gate 形成并获得 Execute 权限，现已完成实现、集成与 Post-Integration Verification。下述 Readiness 内容作为执行前决策追溯保留，不再表示当前执行状态。
 
 ## 2. Scope
 
@@ -100,6 +100,6 @@ PASS / 不需要。Issue #60 已明确“groupCode 保持内部元数据、普�
 
 ## 7. Readiness Verdict
 
-**PASS — EU-32 is a Ready Execution Unit.**
+**PASS — EU-32 was promoted to a Ready Execution Unit.**
 
-允许进入 Fresh-context-compatible Execute。实现阶段仍须遵守 Surgical Diff、Current Evidence 与 Stale Verification Contract 规则。
+该 Verdict 是历史 Execute 授权记录；当前状态见 Identity：`COMPLETED`。

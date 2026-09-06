@@ -8,9 +8,9 @@
 - Specification：`docs/specifications/rich-text-authoring.md`
 - Technical Plan：`docs/technical/rich-text-authoring-plan.md`
 - Dependency：EU-34 已完成、集成并通过 Post-Integration CI
-- Status：**READY — Readiness Check PASS**
+- Status：**COMPLETED**
 
-Identifier 只承担稳定追踪。本 Unit 已由 `slice-work` 形成 Candidate，并在 EU-34 完成后以新的 `main@e429631126ce8449f9939ed5d2edbeec7d9853cd` 重新执行 Readiness Check；所有 Gate 均已 PASS，因此获得 Execute 权限。
+Identifier 只承担稳定追踪。本 Unit 已由 `slice-work` 形成 Candidate，并在 EU-34 完成后以新的 `main@e429631126ce8449f9939ed5d2edbeec7d9853cd` 重新执行 Readiness Check；所有 Gate 均 PASS 后获得 Execute 权限，现已完成实现、集成与 Post-Integration Verification。下述 Readiness / Completion Gate 作为执行过程追溯保留。
 
 ## 2. Intent
 
@@ -48,7 +48,7 @@ Identifier 只承担稳定追踪。本 Unit 已由 `slice-work` 形成 Candidate
 
 EU-34 已承担 RT-06～13 的 server safety foundation；EU-35 必须让 editor 输出成为该 policy 的受支持子集。
 
-## 6. Current Readiness Check
+## 6. Readiness Check（历史执行前记录）
 
 ### Authority / Scope — PASS
 
@@ -70,7 +70,7 @@ Requirement / Specification / Technical Plan 已明确；Unit 边界保持为 Ad
 
 - Article INTERNAL 仍由 `ArticleManagementView.vue` 管理 `bodyHtml`、CMS Resource upload 与 `bodyImageResourceIds`；
 - Page RICH_TEXT 仍由 `PageManagementView.vue` 管理 `bodyHtml`，且没有 Page Resource association；
-- 两者当前仍各自使用 `contenteditable + execCommand`，正是本 Unit 的替换边界。
+- 两者当时仍各自使用 `contenteditable + execCommand`，构成本 Unit 的替换边界。
 
 ### Technology / Version / Verification — PASS
 
@@ -82,7 +82,7 @@ Requirement / Specification / Technical Plan 已明确；Unit 边界保持为 Ad
 
 ### Readiness Result — PASS
 
-所有 Promotion Condition 已满足。`EU-35` 现为 Ready Execution Unit，可进入 Execute。
+所有 Promotion Condition 已满足。该记录是历史 Execute 授权；当前状态见 Identity：`COMPLETED`。
 
 ## 7. Execution Notes
 
@@ -95,6 +95,8 @@ Requirement / Specification / Technical Plan 已明确；Unit 边界保持为 Ad
 
 ## 8. Completion Gate
 
+EU-35 的 Completion Gate 已满足并完成集成；以下条目作为历史验收契约保留：
+
 - Article/Page 均消费同一 shared editor；
 - RT-02/RT-03 能力 Browser Evidence PASS；
 - Article managed image association 增删一致；
@@ -102,4 +104,4 @@ Requirement / Specification / Technical Plan 已明确；Unit 边界保持为 Ad
 - direct security contract 不因 editor 引入退化；
 - full CI/browser regression PASS；
 - PR 合并后 main Post-Integration CI PASS；
-- Issue #60 / B3 只有在 EU-34 与 EU-35 都完成后才标记完成。
+- Issue #60 / B3 在 EU-34 与 EU-35 都完成后标记完成。
