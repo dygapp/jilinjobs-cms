@@ -127,7 +127,13 @@ private fun verifyAssetManifestFailures(loader: SitePackageAssetManifestLoader, 
         loader.load(root)
     }
     expectAssetValidation("duplicate target") {
-        val root = mutated { manifest -> manifest.copy(assets = manifest.assets + manifest.assets.first().copy(source = manifest.assets[1].source)) }
+        val root = mutated { manifest ->
+            manifest.copy(
+                assets = manifest.assets.mapIndexed { index, asset ->
+                    if (index == 1) asset.copy(target = manifest.assets.first().target) else asset
+                },
+            )
+        }
         loader.load(root)
     }
     expectAssetValidation("path traversal") {
