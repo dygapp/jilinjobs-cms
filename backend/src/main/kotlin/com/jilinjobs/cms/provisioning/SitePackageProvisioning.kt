@@ -307,7 +307,7 @@ class SitePackageLoader(private val objectMapper: ObjectMapper) {
         val hasPage = item.targetPageAlias != null
         val hasUrl = item.targetUrl != null
         when (NavigationTargetType.valueOf(item.targetType)) {
-            NavigationTargetType.HOME, NavigationTargetType.PLACEHOLDER -> if (hasColumn || hasPage || hasUrl) invalidTarget(item)
+            NavigationTargetType.HOME, NavigationTargetType.PLACEHOLDER -> if (hasColumn || hasPage || hasUrl || item.targetPageGroupAlias != null) invalidTarget(item)
             NavigationTargetType.COLUMN -> if (!hasColumn || hasPage || hasUrl || item.targetPageGroupAlias != null) invalidTarget(item)
             NavigationTargetType.PAGE -> if (hasColumn || !hasPage || hasUrl) invalidTarget(item)
             NavigationTargetType.LINK -> if (hasColumn || hasPage || !hasUrl || item.targetPageGroupAlias != null) invalidTarget(item)
