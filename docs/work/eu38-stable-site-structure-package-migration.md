@@ -9,7 +9,8 @@
 - Technical Plan：`docs/technical/cms-site-package-boundary.md`
 - Execute baseline：`main@2b2d924a16c2f9df5f781b0a794a17c4f84d6b88`
 - Baseline Post-Integration CI：#741 / run `34019950248`，Backend / Public / Admin / Integrated Browser 全部 PASS
-- Status：**EXECUTING**
+- Implementation PR：#81
+- Status：**CONVERGING — final exact-head verification pending**
 
 ## 2. Intent
 
@@ -93,9 +94,34 @@ Flyway V1 + V2
 → prove operational members unchanged
 ```
 
-Repository regression 继续由现有 CI 承担；Site Package 专项验证由 `.github/workflows/site-package-verification.yml` 承担。
+Repository regression 继续由现有 CI 承担；Site Package 专项验证由 `.github/workflows/site-package-verification.yml` 承担，并只在 Site Package / provisioning / migration 相关路径变化时触发。
 
-## 8. Stop / return-to-planning conditions
+## 8. Execute / Convergence Evidence
+
+PR #81 首轮 Head `262ffc60a7b50cc126aee40c21e7e49c6dcefa31` 已取得 Current Evidence：
+
+- Site Package Verification #1 / run `34022487759`：PASS；
+  - EU-37 Foundation regression：PASS；
+  - EU-38 `verifyStableSiteStructure`：PASS；
+  - Fresh V1-only first apply 创建 58 个 stable preset objects；
+  - second apply 全部 unchanged；
+  - representative SiteConfig reconcile / restore：PASS；
+  - `preset=false` ownership conflict：PASS；
+  - Legacy V1+V2 apply / second apply：PASS；
+  - Fresh 与 Legacy structural snapshot 等价；
+  - legacy Navigation / ListItem / Advertisement operational snapshot 保持不变。
+- Repository CI #742 / run `34022487697`：PASS；
+  - Backend full test / bootJar：PASS；
+  - EU-37 Foundation verifier：PASS；
+  - Public build：PASS；
+  - Admin build：PASS；
+  - Integrated Public Browser：PASS；
+  - Integrated Admin Browser：PASS。
+- Final changed-file audit 未发现 `V2__current_preset_data.sql`、NavigationItem、ListItem、Advertisement、Public/Admin 产品源码或其他 Slice B/C/D 越界修改。
+
+随后仅对专项 workflow 的触发 paths 与本 Work Evidence 做收口性调整，因此 Head 已改变；上述 Evidence 不能替代最终 exact-head verification。
+
+## 9. Stop / return-to-planning conditions
 
 若实现必须：
 
