@@ -12,8 +12,8 @@ EU-31 在 EU-30 完成后的规划与 Readiness Review 后重新分配，不继�
 
 ## 关联规划
 
-- Issue #59：EU-30 后续规划候选
-- Issue #60：EU-30 收口后的下一执行切片评估
+- Issue #59：EU-30 后续规划候选；其中数据库迁移基线候选已由本 Unit 完成，Issue 继续承载 Browser Compatibility 后置候选。
+- Issue #60：EU-30 收口后的后续规划候选池；A1 已由本 Unit 完成。
 
 ## 权威输入
 
