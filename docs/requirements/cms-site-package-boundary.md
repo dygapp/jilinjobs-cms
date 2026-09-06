@@ -4,8 +4,8 @@
 
 - Candidate source: GitHub Issue #77
 - Stage: Requirement Authority — ACTIVE / PARTIALLY IMPLEMENTED
-- Completed implementation: EU-37 / EU-38
-- Current Ready Execution Unit: `EU-39 — Navigation Stable Identity & Site Package Reconcile`，实现与 exact-head verification 已完成，等待 Integration Gate
+- Completed implementation: EU-37 / EU-38 / EU-39
+- Current Ready Execution Unit: NONE
 - Remaining scope after EU-39: V2/default Runtime composition convergence / Slice C / Slice D 继续保持 Planning / Requirement Candidate
 - Scope: E1～E3 前置的 CMS 通用化、站点实例数据所有权与 Public Renderer 可替换边界
 
@@ -69,7 +69,8 @@
 - EU-38 已证明 Fresh `V1 + Site Package` 与 Legacy `V1+V2 + Site Package` 在上述 stable structural scope 上等价；
 - EU-39 current audit 已证明 NavigationItem 的 `name`、parent/location、sort 与 target 都属于可变字段，现有字段组合不能形成长期稳定且无歧义的 logical identity，因此正式引入 provisioning-only nullable stable `code`；
 - EU-39 已把当前 40 条正式 preset NavigationItem 表达为 `sites/jilinjobs/structure/navigation-items.json`，并证明 Fresh create、Legacy V2 原位无歧义 adoption、second apply idempotency、stable-code rename/move/reorder/retarget restore 与 ambiguous-adoption transaction rollback；
-- EU-39 exact-head implementation candidate `027e486fc9fd41da90430653d4816d311d212207` 已通过 Site Package Verification #9、CI #755（Backend / Public / Admin / Integrated Browser）、Canonical #146 与 EU-30 Upgrade #96；
+- EU-39 final implementation Head `b95285f5424d4df0b9f9943395e80332296754f7` 已通过 Site Package Verification #15、CI #761（Backend / Public / Admin / Integrated Browser）、Canonical #152、EU-30 Upgrade #102 与人工评审环境 #678；
+- PR #84 已合并为 `main@36276ed65e6f3edbe96ffc18c01cf18ab924837b`；Post-Integration Site Package Verification #16 与 CI #762（Backend / Public / Admin / Integrated Public/Admin Browser）全部 PASS，EU-39 正式 COMPLETED；
 - operator-created NavigationItem 继续保持 `preset=false / code=NULL`，CmsListItem / Advertisement operational members 未被 Site Package 接管；
 - `V2__current_preset_data.sql` 在 EU-39 仍保持不变，因此默认 Runtime compatibility responsibility **尚未移除**；
 - `site-baseline/static/**` 与完整 canonical migration compatibility / E1～E3 re-entry 仍属于 Issue #77 后续边界；
@@ -93,7 +94,7 @@
 
 ## Current Follow-up Direction
 
-EU-37 / EU-38 已完成 Foundation 与七类 stable structure；EU-39 已完成 NavigationItem stable identity / reconcile 的实现与集成前验证。PR #84 合并及 Post-Integration Verification 前，EU-39 状态仍为 `READY TO INTEGRATE`，不得提前声明 COMPLETED。
+EU-37 / EU-38 / EU-39 已完成 Site Package Foundation、七类 stable structure 与 NavigationItem stable identity / reconcile，并均已集成到 `main` 取得 Post-Integration Current Evidence。当前没有 Ready Execution Unit。
 
 Issue #77 在 EU-39 后剩余工作必须重新经过 current audit / slice-work / readiness-check，重点包括：
 
