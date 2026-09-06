@@ -10,7 +10,8 @@
 - Execute baseline：`main@2b2d924a16c2f9df5f781b0a794a17c4f84d6b88`
 - Baseline Post-Integration CI：#741 / run `34019950248`，Backend / Public / Admin / Integrated Browser 全部 PASS
 - Implementation PR：#81
-- Status：**CONVERGING — final exact-head verification pending**
+- Merge commit：`390f098ff9167ad8c238478572296f9cac1d0bd9`
+- Status：**COMPLETED**
 
 ## 2. Intent
 
@@ -73,6 +74,8 @@ Slice B current audit 证明完整 V2 不能安全作为一个执行单元整体
 - exact-head verification PASS 后才能进入 Ready to Integrate；
 - 合并后 `main` Post-Integration Verification PASS 后才能声明 COMPLETED。
 
+以上 Acceptance obligations 已全部满足。
+
 ## 7. Verification path
 
 专项 MySQL verifier：
@@ -119,17 +122,30 @@ PR #81 首轮 Head `262ffc60a7b50cc126aee40c21e7e49c6dcefa31` 已取得 Current 
   - Integrated Admin Browser：PASS。
 - Final changed-file audit 未发现 `V2__current_preset_data.sql`、NavigationItem、ListItem、Advertisement、Public/Admin 产品源码或其他 Slice B/C/D 越界修改。
 
-随后仅对专项 workflow 的触发 paths 与本 Work Evidence 做收口性调整，因此 Head 已改变；上述 Evidence 不能替代最终 exact-head verification。
+随后仅对专项 workflow 的触发 paths 与本 Work Evidence 做收口性调整，因此执行了最终 exact-head verification。
 
-## 9. Stop / return-to-planning conditions
+## 9. Final exact-head / integration evidence
 
-若实现必须：
+PR #81 final Head：`9e74605e11b0de66f91f50f69a4aff472d6824df`。
 
-- 给 NavigationItem 新增数据库 stable identity 字段；
-- 删除 / 重写 V2；
-- 把运营成员变成 preset structure；
-- 修改 Public/Admin 产品行为；
-- 搬迁全部静态资源；
-- 引入 multi-site / plugin framework；
+- Site Package Verification #3 / run `34022830505`：PASS；
+- Repository CI #744 / run `34022830542`：Backend / Public / Admin / Integrated Browser 全部 PASS；
+- final diff audit：PASS，未引入 V2 rewrite、NavigationItem ownership、运营成员迁移、static asset relocation 或 Public/Admin 产品行为修改；
+- PR #81 按 expected Head 合并；merge commit：`390f098ff9167ad8c238478572296f9cac1d0bd9`。
 
-则停止扩大 EU-38，返回 Issue #77 Planning。
+Post-Integration：
+
+- `main@390f098ff9167ad8c238478572296f9cac1d0bd9` Site Package Verification #4 / run `34023139466`：PASS；
+- CI #745 / run `34023139475`：Backend / EU-37 Foundation / Public / Admin / Integrated Browser 全部 PASS。
+
+因此 EU-38 满足 Completion Gate，状态正式为 **COMPLETED**。
+
+## 10. Remaining Issue #77 planning boundary
+
+EU-38 完成不代表 Issue #77 全部关闭。当前仍保留：
+
+- Slice B 剩余 NavigationItem stable identity / V2 runtime composition compatibility；
+- Slice C — Site Asset Ownership & Runtime Composition；
+- Slice D — Canonical Migration Compatibility & E1～E3 Re-entry。
+
+这些剩余项没有自动获得新的 EU Identifier 或 Execute 授权；必须按 Consumer-local Method 重新执行 current audit、slice-work 与 readiness-check。
