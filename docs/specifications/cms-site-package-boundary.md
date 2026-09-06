@@ -13,8 +13,8 @@
 
 - Specification: **ACCEPTED / ACTIVE**
 - Technical Planning: **ACTIVE** — initial plan 已完成，剩余 boundary 继续按 current evidence 收敛
-- Completed Execution Units: **EU-37 / EU-38**
-- Current Ready Execution Unit: **EU-39 — Navigation Stable Identity & Site Package Reconcile**，实现与 exact-head verification 已完成，等待 Integration Gate
+- Completed Execution Units: **EU-37 / EU-38 / EU-39**
+- Current Ready Execution Unit: **NONE**
 - Issue #77: **OPEN**
 
 ## 1. Four-layer boundary
@@ -174,7 +174,7 @@ Main / Party Canonical Migration 可以依赖 Site Package 的 stable identities
 - Site Package 先 provisioning，Canonical Migration 后 import；
 - Site Package 升级不得静默破坏已有 Canonical identity。
 
-EU-39 exact-head 已通过 Canonical Migration Verification #146 与 EU-30 Migration Upgrade Verification #96，证明新增 Navigation identity schema 与 package ownership 没有破坏当前 Party canonical import / idempotency / upgrade compatibility。但默认 Runtime composition 尚未切换到“显式 provision 后 import”，因此完整 Slice D lifecycle compatibility 仍未关闭。
+EU-39 final implementation Head 已通过 Canonical Migration Verification #152 与 EU-30 Migration Upgrade Verification #102，PR #84 合并后的 `main@36276ed65e6f3edbe96ffc18c01cf18ab924837b` 又通过 Site Package Verification #16 与 CI #762。该证据证明 Navigation identity schema / package ownership 没有破坏当前 Party canonical import、idempotency、upgrade compatibility 或 accepted Public/Admin Runtime behavior；但默认 Runtime composition 尚未切换到“显式 provision 后 import”，因此完整 Slice D lifecycle compatibility 仍未关闭。
 
 ## 7. Public Renderer boundary
 
@@ -200,7 +200,7 @@ Implementation-specific details：
 
 这些实现细节继续允许存在，但不得进入 Site Package / migration data contract。
 
-EU-39 不改变 Public Navigation DTO/URL behavior；CI #755 的 Public build 与 Integrated Browser 已证明当前可见行为保持。
+EU-39 不改变 Public Navigation DTO/URL behavior；exact-head CI #761 与 Post-Integration CI #762 的 Public build / Integrated Browser 已证明当前可见行为保持。
 
 ## 8. Provisioning lifecycle
 
@@ -255,7 +255,7 @@ EU-37～EU-39 已实现并验证的 Provisioning contract 包括：
 
 ## 10. Completed and remaining acceptance obligations
 
-### 已完成 / 已取得实现证据
+### 已完成
 
 1. Site Package 最小 manifest / schema / integrity contract；
 2. narrow provisioner、stable identity reconciliation、second apply idempotency、ownership conflict；
@@ -265,9 +265,8 @@ EU-37～EU-39 已实现并验证的 Provisioning contract 包括：
 6. Fresh / Legacy Site Package structural equivalence；
 7. operator-created NavigationItem 不接管、运营成员不迁移；
 8. `V2__current_preset_data.sql` 在 EU-39 保持不变；
-9. EU-39 implementation candidate `027e486fc9fd41da90430653d4816d311d212207` 的 Site Package #9、CI #755、Canonical #146、Upgrade #96 全部 PASS。
-
-EU-39 在 PR #84 合并与 Post-Integration Verification 前仍为 **READY TO INTEGRATE**，不是 COMPLETED。
+9. EU-39 final Head `b95285f5424d4df0b9f9943395e80332296754f7` 的 Site Package #15、CI #761、Canonical #152、Upgrade #102、Review Environment #678 全部 PASS；
+10. PR #84 已合并为 `main@36276ed65e6f3edbe96ffc18c01cf18ab924837b`，Post-Integration Site Package #16 与 CI #762 全部 PASS，EU-39 正式 COMPLETED。
 
 ### 剩余
 
