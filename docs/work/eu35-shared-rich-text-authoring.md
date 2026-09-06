@@ -48,7 +48,7 @@ Identifier 只承担稳定追踪。本 Unit 已由 `slice-work` 形成 Candidate
 
 EU-34 已承担 RT-06～13 的 server safety foundation；EU-35 必须让 editor 输出成为该 policy 的受支持子集。
 
-## 6. Current Readiness Check
+## 6. Readiness Check（历史执行前记录）
 
 ### Authority / Scope — PASS
 
@@ -70,7 +70,7 @@ Requirement / Specification / Technical Plan 已明确；Unit 边界保持为 Ad
 
 - Article INTERNAL 仍由 `ArticleManagementView.vue` 管理 `bodyHtml`、CMS Resource upload 与 `bodyImageResourceIds`；
 - Page RICH_TEXT 仍由 `PageManagementView.vue` 管理 `bodyHtml`，且没有 Page Resource association；
-- 两者当前仍各自使用 `contenteditable + execCommand`，正是本 Unit 的替换边界。
+- 两者当时仍各自使用 `contenteditable + execCommand`，构成本 Unit 的替换边界。
 
 ### Technology / Version / Verification — PASS
 
