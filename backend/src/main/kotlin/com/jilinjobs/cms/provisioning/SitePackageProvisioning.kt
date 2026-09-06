@@ -2,6 +2,8 @@ package com.jilinjobs.cms.provisioning
 
 import com.jilinjobs.cms.CmsApplication
 import com.jilinjobs.cms.common.ContentImagePolicy
+import com.jilinjobs.cms.navigation.NavigationOpenMode
+import com.jilinjobs.cms.navigation.NavigationTargetType
 import org.springframework.boot.WebApplicationType
 import org.springframework.boot.builder.SpringApplicationBuilder
 import org.springframework.stereotype.Service
@@ -16,6 +18,7 @@ import javax.sql.DataSource
 private val PACKAGE_ID = Regex("[a-z0-9][a-z0-9-]{0,63}")
 private val LOWER_ALIAS = Regex("[a-z0-9][a-z0-9-]{0,99}")
 private val STRUCTURE_CODE = Regex("[A-Za-z0-9][A-Za-z0-9_-]{0,99}")
+private val NAVIGATION_CODE = Regex("[a-z0-9][a-z0-9-]{0,99}")
 private val CONFIG_KEY = Regex("[A-Z0-9][A-Z0-9_]{0,99}")
 private val SHA256 = Regex("[0-9a-f]{64}")
 private const val SITE_PACKAGE_SCHEMA_VERSION = 1
@@ -23,6 +26,7 @@ private const val COLUMNS = "columns"
 private const val PAGE_GROUPS = "page-groups"
 private const val PAGES = "pages"
 private const val NAVIGATION_LOCATIONS = "navigation-locations"
+private const val NAVIGATION_ITEMS = "navigation-items"
 private const val SITE_CONFIG = "site-config"
 private const val LISTS = "lists"
 private const val ADVERTISEMENT_SLOTS = "advertisement-slots"
@@ -31,6 +35,7 @@ private val SUPPORTED_STRUCTURE_TYPES = setOf(
     PAGE_GROUPS,
     PAGES,
     NAVIGATION_LOCATIONS,
+    NAVIGATION_ITEMS,
     SITE_CONFIG,
     LISTS,
     ADVERTISEMENT_SLOTS,
@@ -89,6 +94,24 @@ data class SitePackageNavigationLocation(
     val preset: Boolean = true,
 )
 
+data class SitePackageNavigationItem(
+    val code: String = "",
+    val parentCode: String? = null,
+    val name: String = "",
+    val locationCode: String = "",
+    val category: String? = null,
+    val targetType: String = NavigationTargetType.LINK.name,
+    val targetColumnAlias: String? = null,
+    val targetPageGroupAlias: String? = null,
+    val targetPageAlias: String? = null,
+    val targetUrl: String? = null,
+    val openMode: String = NavigationOpenMode.DEFAULT.name,
+    val iconPath: String? = null,
+    val sortOrder: Int = 0,
+    val enabled: Boolean = true,
+    val preset: Boolean = true,
+)
+
 data class SitePackageConfig(
     val key: String = "",
     val propertyName: String = "",
@@ -131,12 +154,13 @@ data class SitePackageDefinition(
     val pageGroups: List<SitePackagePageGroup> = emptyList(),
     val pages: List<SitePackagePage> = emptyList(),
     val navigationLocations: List<SitePackageNavigationLocation> = emptyList(),
+    val navigationItems: List<SitePackageNavigationItem> = emptyList(),
     val siteConfig: List<SitePackageConfig> = emptyList(),
     val lists: List<SitePackageListDefinition> = emptyList(),
     val advertisementSlots: List<SitePackageAdvertisementSlot> = emptyList(),
 ) {
     val objectCount: Int
-        get() = columns.size + pageGroups.size + pages.size + navigationLocations.size +
+        get() = columns.size + pageGroups.size + pages.size + navigationLocations.size + navigationItems.size +
             siteConfig.size + lists.size + advertisementSlots.size
 }
 
@@ -158,13 +182,13 @@ class SitePackageLoader(private val objectMapper: ObjectMapper) {
         val root = packageRoot.toAbsolutePath().normalize()
         val manifest = objectMapper.readValue(safeFile(root, "manifest.json").toFile(), SitePackageManifest::class.java)
         validateManifest(manifest)
-
         val definition = SitePackageDefinition(
             manifest = manifest,
             columns = loadArray(root, manifest, COLUMNS, Array<SitePackageColumn>::class.java),
             pageGroups = loadArray(root, manifest, PAGE_GROUPS, Array<SitePackagePageGroup>::class.java),
             pages = loadArray(root, manifest, PAGES, Array<SitePackagePage>::class.java),
             navigationLocations = loadArray(root, manifest, NAVIGATION_LOCATIONS, Array<SitePackageNavigationLocation>::class.java),
+            navigationItems = loadArray(root, manifest, NAVIGATION_ITEMS, Array<SitePackageNavigationItem>::class.java),
             siteConfig = loadArray(root, manifest, SITE_CONFIG, Array<SitePackageConfig>::class.java),
             lists = loadArray(root, manifest, LISTS, Array<SitePackageListDefinition>::class.java),
             advertisementSlots = loadArray(root, manifest, ADVERTISEMENT_SLOTS, Array<SitePackageAdvertisementSlot>::class.java),
@@ -182,9 +206,7 @@ class SitePackageLoader(private val objectMapper: ObjectMapper) {
 
     private fun validateManifest(manifest: SitePackageManifest) {
         if (!manifest.packageId.matches(PACKAGE_ID)) throw SitePackageValidationException("packageId 不合法：${manifest.packageId}")
-        if (manifest.schemaVersion != SITE_PACKAGE_SCHEMA_VERSION) {
-            throw SitePackageValidationException("不支持的 Site Package schemaVersion：${manifest.schemaVersion}")
-        }
+        if (manifest.schemaVersion != SITE_PACKAGE_SCHEMA_VERSION) throw SitePackageValidationException("不支持的 Site Package schemaVersion：${manifest.schemaVersion}")
         if (manifest.version.isBlank() || manifest.version.length > 64) throw SitePackageValidationException("version 不合法")
         if (manifest.structure.isEmpty()) throw SitePackageValidationException("structure 不能为空")
         if (manifest.structure.map { it.type }.toSet().size != manifest.structure.size) throw SitePackageValidationException("structure type 不能重复")
@@ -233,13 +255,30 @@ class SitePackageLoader(private val objectMapper: ObjectMapper) {
             preset(it.preset, "NavigationLocation", it.code)
         }
 
+        unique(definition.navigationItems.map { it.code }, "NavigationItem code")
+        definition.navigationItems.forEach {
+            if (!it.code.matches(NAVIGATION_CODE)) throw SitePackageValidationException("NavigationItem code 不合法：${it.code}")
+            if (it.parentCode != null && !it.parentCode.matches(NAVIGATION_CODE)) throw SitePackageValidationException("NavigationItem parentCode 不合法：${it.code}")
+            name(it.name, "NavigationItem", it.code)
+            if (!it.locationCode.matches(STRUCTURE_CODE) || it.locationCode.length > 32) throw SitePackageValidationException("NavigationItem locationCode 不合法：${it.code}")
+            if (it.category != null && it.category.length > 50) throw SitePackageValidationException("NavigationItem category 过长：${it.code}")
+            if (runCatching { NavigationTargetType.valueOf(it.targetType) }.isFailure) throw SitePackageValidationException("NavigationItem targetType 不合法：${it.code}")
+            if (runCatching { NavigationOpenMode.valueOf(it.openMode) }.isFailure) throw SitePackageValidationException("NavigationItem openMode 不合法：${it.code}")
+            if (it.targetColumnAlias != null && !it.targetColumnAlias.matches(LOWER_ALIAS)) throw SitePackageValidationException("NavigationItem targetColumnAlias 不合法：${it.code}")
+            if (it.targetPageGroupAlias != null && !it.targetPageGroupAlias.matches(LOWER_ALIAS)) throw SitePackageValidationException("NavigationItem targetPageGroupAlias 不合法：${it.code}")
+            if (it.targetPageAlias != null && !it.targetPageAlias.matches(LOWER_ALIAS)) throw SitePackageValidationException("NavigationItem targetPageAlias 不合法：${it.code}")
+            if (it.targetUrl != null && it.targetUrl.length > 1000) throw SitePackageValidationException("NavigationItem targetUrl 过长：${it.code}")
+            if (it.iconPath != null && it.iconPath.length > 500) throw SitePackageValidationException("NavigationItem iconPath 过长：${it.code}")
+            validateNavigationTarget(it)
+            preset(it.preset, "NavigationItem", it.code)
+        }
+        orderedNavigationItems(definition.navigationItems)
+
         unique(definition.siteConfig.map { it.key }, "SiteConfig key")
         definition.siteConfig.forEach {
             if (!it.key.matches(CONFIG_KEY)) throw SitePackageValidationException("SiteConfig key 不合法：${it.key}")
             name(it.propertyName, "SiteConfig", it.key)
-            if (it.groupCode.isBlank() || it.groupCode.length > 50 || it.valueType.isBlank() || it.valueType.length > 32) {
-                throw SitePackageValidationException("SiteConfig metadata 不合法：${it.key}")
-            }
+            if (it.groupCode.isBlank() || it.groupCode.length > 50 || it.valueType.isBlank() || it.valueType.length > 32) throw SitePackageValidationException("SiteConfig metadata 不合法：${it.key}")
             description(it.description, "SiteConfig", it.key)
             preset(it.preset, "SiteConfig", it.key)
         }
@@ -262,6 +301,21 @@ class SitePackageLoader(private val objectMapper: ObjectMapper) {
             preset(it.preset, "AdvertisementSlot", it.code)
         }
     }
+
+    private fun validateNavigationTarget(item: SitePackageNavigationItem) {
+        val hasColumn = item.targetColumnAlias != null
+        val hasPage = item.targetPageAlias != null
+        val hasUrl = item.targetUrl != null
+        when (NavigationTargetType.valueOf(item.targetType)) {
+            NavigationTargetType.HOME, NavigationTargetType.PLACEHOLDER -> if (hasColumn || hasPage || hasUrl) invalidTarget(item)
+            NavigationTargetType.COLUMN -> if (!hasColumn || hasPage || hasUrl || item.targetPageGroupAlias != null) invalidTarget(item)
+            NavigationTargetType.PAGE -> if (hasColumn || !hasPage || hasUrl) invalidTarget(item)
+            NavigationTargetType.LINK -> if (hasColumn || hasPage || !hasUrl || item.targetPageGroupAlias != null) invalidTarget(item)
+        }
+    }
+
+    private fun invalidTarget(item: SitePackageNavigationItem): Nothing =
+        throw SitePackageValidationException("NavigationItem target contract 不合法：${item.code}")
 
     private fun unique(values: List<String>, label: String) {
         if (values.toSet().size != values.size) throw SitePackageValidationException("$label 重复")
@@ -312,6 +366,7 @@ class SitePackageProvisioner(private val loader: SitePackageLoader, private val 
                 definition.pageGroups.forEach { counts.add(reconcilePageGroup(connection, it)) }
                 definition.pages.forEach { counts.add(reconcilePage(connection, it)) }
                 definition.navigationLocations.forEach { counts.add(reconcileNavigationLocation(connection, it)) }
+                orderedNavigationItems(definition.navigationItems).forEach { counts.add(reconcileNavigationItem(connection, it)) }
                 definition.siteConfig.forEach { counts.add(reconcileSiteConfig(connection, it)) }
                 definition.lists.forEach { counts.add(reconcileList(connection, it)) }
                 definition.advertisementSlots.forEach { counts.add(reconcileAdSlot(connection, it)) }
@@ -352,6 +407,7 @@ class SitePackageProvisioner(private val loader: SitePackageLoader, private val 
             page(connection, page.groupAlias, page.alias)?.owned("Page", identity)
         }
         definition.navigationLocations.forEach { navLocation(connection, it.code)?.owned("NavigationLocation", it.code) }
+        definition.navigationItems.forEach { navigation(connection, it.code)?.owned("NavigationItem", it.code) }
         definition.siteConfig.forEach { siteConfig(connection, it.key)?.owned("SiteConfig", it.key) }
         definition.lists.forEach { list(connection, it.code)?.owned("CmsList", it.code) }
         definition.advertisementSlots.forEach { adSlot(connection, it.code)?.owned("AdvertisementSlot", it.code) }
@@ -417,34 +473,77 @@ class SitePackageProvisioner(private val loader: SitePackageLoader, private val 
     }
 
     private fun reconcileNavigationLocation(connection: Connection, target: SitePackageNavigationLocation): Result =
-        reconcileNamed(
-            connection,
-            "NavigationLocation",
-            target.code,
-            navLocation(connection, target.code),
-            target.name,
-            target.description,
-            target.sortOrder,
-            target.enabled,
-            target.systemFlag,
-            "cms_navigation_location",
-            "code",
-        )
+        reconcileNamed(connection, "NavigationLocation", target.code, navLocation(connection, target.code), target.name, target.description, target.sortOrder, target.enabled, target.systemFlag, "cms_navigation_location", "code")
+
+    private fun reconcileNavigationItem(connection: Connection, target: SitePackageNavigationItem): Result {
+        val parentId = target.parentCode?.let { code ->
+            val parent = navigation(connection, code) ?: throw SitePackageValidationException("NavigationItem parentCode 尚未 provision：${target.code} -> $code")
+            parent.owned("NavigationItem parent", code)
+            parent.id
+        }
+        val columnId = target.targetColumnAlias?.let { alias ->
+            val column = column(connection, alias) ?: throw SitePackageValidationException("NavigationItem targetColumnAlias 不存在：${target.code} -> $alias")
+            column.owned("Column target", alias)
+            column.id
+        }
+        val pageId = target.targetPageAlias?.let { alias ->
+            val page = page(connection, target.targetPageGroupAlias, alias)
+                ?: throw SitePackageValidationException("NavigationItem targetPage 不存在：${target.code} -> ${pageIdentity(target.targetPageGroupAlias, alias)}")
+            page.owned("Page target", pageIdentity(target.targetPageGroupAlias, alias))
+            page.id
+        }
+        val location = navLocation(connection, target.locationCode)
+            ?: throw SitePackageValidationException("NavigationItem locationCode 不存在：${target.code} -> ${target.locationCode}")
+        location.owned("NavigationLocation target", target.locationCode)
+
+        val existing = navigation(connection, target.code)
+        if (existing != null) {
+            existing.owned("NavigationItem", target.code)
+            if (existing.matches(target, parentId, columnId, pageId)) return Result.UNCHANGED
+            updateNavigation(connection, existing.id, target, parentId, columnId, pageId, keepCode = target.code)
+            return Result.UPDATED
+        }
+
+        val legacy = legacyNavigations(connection)
+        if (legacy.isNotEmpty()) {
+            val matches = legacy.filter { it.matches(target, parentId, columnId, pageId) }
+            if (matches.size != 1) {
+                throw SitePackageValidationException("Legacy NavigationItem 无法无歧义认领 stable code：${target.code}")
+            }
+            updateNavigation(connection, matches.single().id, target, parentId, columnId, pageId, keepCode = target.code)
+            return Result.UPDATED
+        }
+
+        connection.prepareStatement(
+            "INSERT INTO cms_navigation(code,parent_id,name,position,category,target_type,target_column_id,target_page_id,target_url,open_mode,icon_path,sort_order,enabled,preset) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,1)",
+        ).use {
+            it.setString(1, target.code); it.setObject(2, parentId); it.setString(3, target.name); it.setString(4, target.locationCode); it.setString(5, target.category)
+            it.setString(6, target.targetType); it.setObject(7, columnId); it.setObject(8, pageId); it.setString(9, target.targetUrl); it.setString(10, target.openMode)
+            it.setString(11, target.iconPath); it.setInt(12, target.sortOrder); it.setBoolean(13, target.enabled); it.executeUpdate()
+        }
+        return Result.CREATED
+    }
+
+    private fun updateNavigation(
+        connection: Connection,
+        id: Long,
+        target: SitePackageNavigationItem,
+        parentId: Long?,
+        columnId: Long?,
+        pageId: Long?,
+        keepCode: String,
+    ) {
+        connection.prepareStatement(
+            "UPDATE cms_navigation SET code=?,parent_id=?,name=?,position=?,category=?,target_type=?,target_column_id=?,target_page_id=?,target_url=?,open_mode=?,icon_path=?,sort_order=?,enabled=?,preset=1 WHERE id=?",
+        ).use {
+            it.setString(1, keepCode); it.setObject(2, parentId); it.setString(3, target.name); it.setString(4, target.locationCode); it.setString(5, target.category)
+            it.setString(6, target.targetType); it.setObject(7, columnId); it.setObject(8, pageId); it.setString(9, target.targetUrl); it.setString(10, target.openMode)
+            it.setString(11, target.iconPath); it.setInt(12, target.sortOrder); it.setBoolean(13, target.enabled); it.setLong(14, id); it.executeUpdate()
+        }
+    }
 
     private fun reconcileAdSlot(connection: Connection, target: SitePackageAdvertisementSlot): Result =
-        reconcileNamed(
-            connection,
-            "AdvertisementSlot",
-            target.code,
-            adSlot(connection, target.code),
-            target.name,
-            target.description,
-            target.sortOrder,
-            target.enabled,
-            target.systemFlag,
-            "cms_ad_slot",
-            "code",
-        )
+        reconcileNamed(connection, "AdvertisementSlot", target.code, adSlot(connection, target.code), target.name, target.description, target.sortOrder, target.enabled, target.systemFlag, "cms_ad_slot", "code")
 
     private fun reconcileNamed(
         connection: Connection,
@@ -507,16 +606,12 @@ class SitePackageProvisioner(private val loader: SitePackageLoader, private val 
 
     private fun column(connection: Connection, alias: String): ExistingColumn? = connection.prepareStatement("SELECT id,parent_id,name,cover_policy,sort_order,enabled,preset FROM cms_column WHERE alias=?").use { statement ->
         statement.setString(1, alias)
-        statement.executeQuery().use { result ->
-            if (!result.next()) null else ExistingColumn(result.getLong("id"), result.nullableLong("parent_id"), result.getString("name"), result.getString("cover_policy"), result.getInt("sort_order"), result.getBoolean("enabled"), result.getBoolean("preset"))
-        }
+        statement.executeQuery().use { result -> if (!result.next()) null else ExistingColumn(result.getLong("id"), result.nullableLong("parent_id"), result.getString("name"), result.getString("cover_policy"), result.getInt("sort_order"), result.getBoolean("enabled"), result.getBoolean("preset")) }
     }
 
     private fun pageGroup(connection: Connection, alias: String): ExistingPageGroup? = connection.prepareStatement("SELECT id,name,sort_order,enabled,preset FROM cms_page_group WHERE alias=?").use { statement ->
         statement.setString(1, alias)
-        statement.executeQuery().use { result ->
-            if (!result.next()) null else ExistingPageGroup(result.getLong("id"), result.getString("name"), result.getInt("sort_order"), result.getBoolean("enabled"), result.getBoolean("preset"))
-        }
+        statement.executeQuery().use { result -> if (!result.next()) null else ExistingPageGroup(result.getLong("id"), result.getString("name"), result.getInt("sort_order"), result.getBoolean("enabled"), result.getBoolean("preset")) }
     }
 
     private fun page(connection: Connection, groupAlias: String?, alias: String): ExistingPage? {
@@ -536,28 +631,35 @@ class SitePackageProvisioner(private val loader: SitePackageLoader, private val 
         }
     }
 
+    private fun navigation(connection: Connection, code: String): ExistingNavigation? = connection.prepareStatement(
+        "SELECT id,code,parent_id,name,position,category,target_type,target_column_id,target_page_id,target_url,open_mode,icon_path,sort_order,enabled,preset FROM cms_navigation WHERE code=?",
+    ).use { statement ->
+        statement.setString(1, code)
+        statement.executeQuery().use { result -> if (!result.next()) null else result.navigation() }
+    }
+
+    private fun legacyNavigations(connection: Connection): List<ExistingNavigation> = connection.prepareStatement(
+        "SELECT id,code,parent_id,name,position,category,target_type,target_column_id,target_page_id,target_url,open_mode,icon_path,sort_order,enabled,preset FROM cms_navigation WHERE code IS NULL AND preset=1 ORDER BY id",
+    ).use { statement ->
+        statement.executeQuery().use { result -> buildList { while (result.next()) add(result.navigation()) } }
+    }
+
     private fun navLocation(connection: Connection, code: String): ExistingNamed? = named(connection, "cms_navigation_location", "code", code)
     private fun adSlot(connection: Connection, code: String): ExistingNamed? = named(connection, "cms_ad_slot", "code", code)
 
     private fun named(connection: Connection, table: String, keyColumn: String, key: String): ExistingNamed? = connection.prepareStatement("SELECT name,description,sort_order,enabled,system_flag,preset FROM $table WHERE $keyColumn=?").use { statement ->
         statement.setString(1, key)
-        statement.executeQuery().use { result ->
-            if (!result.next()) null else ExistingNamed(result.getString("name"), result.getString("description"), result.getInt("sort_order"), result.getBoolean("enabled"), result.getBoolean("system_flag"), result.getBoolean("preset"))
-        }
+        statement.executeQuery().use { result -> if (!result.next()) null else ExistingNamed(result.getString("name"), result.getString("description"), result.getInt("sort_order"), result.getBoolean("enabled"), result.getBoolean("system_flag"), result.getBoolean("preset")) }
     }
 
     private fun siteConfig(connection: Connection, key: String): ExistingConfig? = connection.prepareStatement("SELECT property_name,group_code,config_value,value_type,description,sort_order,required,system_flag,enabled,preset FROM cms_site_config WHERE config_key=?").use { statement ->
         statement.setString(1, key)
-        statement.executeQuery().use { result ->
-            if (!result.next()) null else ExistingConfig(result.getString("property_name"), result.getString("group_code"), result.getString("config_value"), result.getString("value_type"), result.getString("description"), result.getInt("sort_order"), result.getBoolean("required"), result.getBoolean("system_flag"), result.getBoolean("enabled"), result.getBoolean("preset"))
-        }
+        statement.executeQuery().use { result -> if (!result.next()) null else ExistingConfig(result.getString("property_name"), result.getString("group_code"), result.getString("config_value"), result.getString("value_type"), result.getString("description"), result.getInt("sort_order"), result.getBoolean("required"), result.getBoolean("system_flag"), result.getBoolean("enabled"), result.getBoolean("preset")) }
     }
 
     private fun list(connection: Connection, code: String): ExistingList? = connection.prepareStatement("SELECT name,group_code,image_policy,description,sort_order,enabled,system_flag,preset FROM cms_list WHERE code=?").use { statement ->
         statement.setString(1, code)
-        statement.executeQuery().use { result ->
-            if (!result.next()) null else ExistingList(result.getString("name"), result.getString("group_code"), result.getString("image_policy"), result.getString("description"), result.getInt("sort_order"), result.getBoolean("enabled"), result.getBoolean("system_flag"), result.getBoolean("preset"))
-        }
+        statement.executeQuery().use { result -> if (!result.next()) null else ExistingList(result.getString("name"), result.getString("group_code"), result.getString("image_policy"), result.getString("description"), result.getInt("sort_order"), result.getBoolean("enabled"), result.getBoolean("system_flag"), result.getBoolean("preset")) }
     }
 
     private interface Owned { val preset: Boolean }
@@ -571,6 +673,28 @@ class SitePackageProvisioner(private val loader: SitePackageLoader, private val 
     private data class ExistingNamed(val name: String, val description: String, val sortOrder: Int, val enabled: Boolean, val systemFlag: Boolean, override val preset: Boolean) : Owned
     private data class ExistingConfig(val propertyName: String, val groupCode: String, val value: String, val valueType: String, val description: String, val sortOrder: Int, val required: Boolean, val systemFlag: Boolean, val enabled: Boolean, override val preset: Boolean) : Owned
     private data class ExistingList(val name: String, val groupCode: String, val imagePolicy: String, val description: String, val sortOrder: Int, val enabled: Boolean, val systemFlag: Boolean, override val preset: Boolean) : Owned
+    private data class ExistingNavigation(
+        val id: Long,
+        val code: String?,
+        val parentId: Long?,
+        val name: String,
+        val position: String,
+        val category: String?,
+        val targetType: String,
+        val targetColumnId: Long?,
+        val targetPageId: Long?,
+        val targetUrl: String?,
+        val openMode: String,
+        val iconPath: String?,
+        val sortOrder: Int,
+        val enabled: Boolean,
+        override val preset: Boolean,
+    ) : Owned {
+        fun matches(target: SitePackageNavigationItem, expectedParentId: Long?, expectedColumnId: Long?, expectedPageId: Long?): Boolean =
+            parentId == expectedParentId && name == target.name && position == target.locationCode && category == target.category &&
+                targetType == target.targetType && targetColumnId == expectedColumnId && targetPageId == expectedPageId && targetUrl == target.targetUrl &&
+                openMode == target.openMode && iconPath == target.iconPath && sortOrder == target.sortOrder && enabled == target.enabled
+    }
 
     private enum class Result { CREATED, UPDATED, UNCHANGED }
     private data class Counts(var created: Int = 0, var updated: Int = 0, var unchanged: Int = 0) {
@@ -578,6 +702,11 @@ class SitePackageProvisioner(private val loader: SitePackageLoader, private val 
     }
 }
 
+private fun ResultSet.navigation() = SitePackageProvisioner.ExistingNavigation(
+    getLong("id"), getString("code"), nullableLong("parent_id"), getString("name"), getString("position"), getString("category"),
+    getString("target_type"), nullableLong("target_column_id"), nullableLong("target_page_id"), getString("target_url"), getString("open_mode"), getString("icon_path"),
+    getInt("sort_order"), getBoolean("enabled"), getBoolean("preset"),
+)
 private fun ResultSet.nullableLong(column: String): Long? = getLong(column).let { if (wasNull()) null else it }
 private fun pageIdentity(groupAlias: String?, alias: String): String = "${groupAlias ?: "<root>"}:$alias"
 
@@ -596,6 +725,24 @@ private fun orderedColumns(columns: List<SitePackageColumn>): List<SitePackageCo
         ordered += column
     }
     columns.forEach { visit(it.alias) }
+    return ordered
+}
+
+private fun orderedNavigationItems(items: List<SitePackageNavigationItem>): List<SitePackageNavigationItem> {
+    val byCode = items.associateBy { it.code }
+    val visiting = mutableSetOf<String>()
+    val visited = mutableSetOf<String>()
+    val ordered = mutableListOf<SitePackageNavigationItem>()
+    fun visit(code: String) {
+        if (code in visited) return
+        if (!visiting.add(code)) throw SitePackageValidationException("NavigationItem parent relation 存在 cycle：$code")
+        val item = byCode.getValue(code)
+        item.parentCode?.takeIf { it in byCode }?.let(::visit)
+        visiting.remove(code)
+        visited.add(code)
+        ordered += item
+    }
+    items.forEach { visit(it.code) }
     return ordered
 }
 
