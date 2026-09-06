@@ -15,30 +15,46 @@ class SitePackageRuntimeCompositionConfiguration {
     @ConditionalOnProperty(prefix = "cms.site-package", name = ["root"])
     fun sitePackageRuntimeComposition(
         @Value("\${cms.site-package.root}") configuredRoot: String,
+        @Value("\${cms.static.root:./data/static}") configuredStaticRoot: String,
         provisioner: SitePackageProvisioner,
+        assetProjector: SitePackageAssetProjector,
     ): SitePackageRuntimeComposition {
         val root = configuredRoot.trim()
         require(root.isNotEmpty()) { "cms.site-package.root 不能为空" }
-        return SitePackageRuntimeComposition(Path.of(root).toAbsolutePath().normalize(), provisioner)
+        val staticRoot = configuredStaticRoot.trim()
+        require(staticRoot.isNotEmpty()) { "cms.static.root 不能为空" }
+        return SitePackageRuntimeComposition(
+            Path.of(root).toAbsolutePath().normalize(),
+            Path.of(staticRoot).toAbsolutePath().normalize(),
+            provisioner,
+            assetProjector,
+        )
     }
 }
 
 class SitePackageRuntimeComposition(
     val packageRoot: Path,
+    val staticRoot: Path,
     provisioner: SitePackageProvisioner,
+    assetProjector: SitePackageAssetProjector,
 ) {
     val report: SiteProvisioningReport = provisioner.apply(packageRoot)
+    val assetReport: SitePackageAssetProjectionReport = assetProjector.project(packageRoot, staticRoot)
 
     init {
         LOGGER.info(
-            "Site Package runtime composition applied: packageId={}, version={}, created={}, updated={}, unchanged={}, objects={}, root={}",
+            "Site Package runtime composition applied: packageId={}, version={}, created={}, updated={}, unchanged={}, objects={}, assetsCreated={}, assetsUnchanged={}, assets={}, root={}, staticRoot={}",
             report.packageId,
             report.version,
             report.created,
             report.updated,
             report.unchanged,
             report.objects,
+            assetReport.created,
+            assetReport.unchanged,
+            assetReport.assets,
             packageRoot,
+            staticRoot,
         )
     }
 

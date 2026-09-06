@@ -4,6 +4,7 @@ import com.jilinjobs.cms.CmsApplication
 import org.flywaydb.core.Flyway
 import org.springframework.boot.WebApplicationType
 import org.springframework.boot.builder.SpringApplicationBuilder
+import java.nio.file.Files
 import java.nio.file.Path
 import java.sql.DriverManager
 
@@ -12,6 +13,7 @@ fun main() {
     val dbUsername = System.getenv("SITE_PACKAGE_VERIFY_DB_USERNAME") ?: "root"
     val dbPassword = System.getenv("SITE_PACKAGE_VERIFY_DB_PASSWORD") ?: "root"
     val packageRoot = Path.of("../sites/jilinjobs").toAbsolutePath().normalize()
+    val staticRoot = Files.createTempDirectory("eu42-runtime-composition-static-")
 
     val flyway = Flyway.configure()
         .dataSource(dbUrl, dbUsername, dbPassword)
@@ -28,7 +30,7 @@ fun main() {
         "Generic CMS Flyway 不得创建 JilinJobs navigation rows"
     }
 
-    val first = startRuntimeCompositionContext(dbUrl, dbUsername, dbPassword, packageRoot)
+    val first = startRuntimeCompositionContext(dbUrl, dbUsername, dbPassword, packageRoot, staticRoot)
     try {
         val composition = first.getBean(SitePackageRuntimeComposition::class.java)
         require(composition.packageRoot == packageRoot)
@@ -36,6 +38,7 @@ fun main() {
             "首次 Runtime composition 应从 Generic Schema 创建完整 stable structure：${composition.report}"
         }
         require(composition.report.objects == 98)
+        require(composition.assetReport.created == 31 && composition.assetReport.unchanged == 0) { "首次 Runtime composition 应投影完整 stable assets：${composition.assetReport}" }
         require(countCodedPresetNavigation(dbUrl, dbUsername, dbPassword) == 40)
         require(operationalCounts(dbUrl, dbUsername, dbPassword) == (0 to 0)) {
             "普通 Runtime composition 不得隐式执行 Site bootstrap"
@@ -47,12 +50,13 @@ fun main() {
         first.close()
     }
 
-    val second = startRuntimeCompositionContext(dbUrl, dbUsername, dbPassword, packageRoot)
+    val second = startRuntimeCompositionContext(dbUrl, dbUsername, dbPassword, packageRoot, staticRoot)
     try {
         val composition = second.getBean(SitePackageRuntimeComposition::class.java)
         require(composition.report.created == 0 && composition.report.updated == 0 && composition.report.unchanged == 98) {
             "第二次 Runtime composition 必须幂等：${composition.report}"
         }
+        require(composition.assetReport.created == 0 && composition.assetReport.unchanged == 31) { "第二次 Runtime composition 必须保持 stable assets：${composition.assetReport}" }
         require(countCodedPresetNavigation(dbUrl, dbUsername, dbPassword) == 40)
         require(operationalCounts(dbUrl, dbUsername, dbPassword) == (0 to 0))
     } finally {
@@ -86,6 +90,7 @@ private fun startRuntimeCompositionContext(
     dbUsername: String,
     dbPassword: String,
     packageRoot: Path,
+    staticRoot: Path,
 ) = SpringApplicationBuilder(CmsApplication::class.java)
     .web(WebApplicationType.NONE)
     .run(
@@ -93,6 +98,7 @@ private fun startRuntimeCompositionContext(
         "--spring.datasource.username=$dbUsername",
         "--spring.datasource.password=$dbPassword",
         "--cms.site-package.root=$packageRoot",
+        "--cms.static.root=$staticRoot",
         "--spring.main.banner-mode=off",
     )
 

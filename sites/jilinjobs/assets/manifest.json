@@ -1,0 +1,161 @@
+{
+  "packageId": "jilinjobs",
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "source": "assets/brand/site-favicon.png",
+      "target": "/static/brand/site-favicon.png",
+      "sha256": "2931827105bb636e2d9c685a5c25fb33907589abffcd4455496f877bb27bd3bf"
+    },
+    {
+      "source": "assets/brand/smartedu-logo-icon.png",
+      "target": "/static/brand/smartedu-logo-icon.png",
+      "sha256": "7cab6cb3491998ad902237178e745f2ff6df2df567938ca5a45c009ff99f34e5"
+    },
+    {
+      "source": "assets/brand/smartedu-logo-text.png",
+      "target": "/static/brand/smartedu-logo-text.png",
+      "sha256": "f73cdb4cd7e64abfc130be4455ef7551b6f4e98e5b6aad6d9b72090671477747"
+    },
+    {
+      "source": "assets/footer/public-institution.png",
+      "target": "/static/footer/public-institution.png",
+      "sha256": "168c03deb4d1b5a0e6da8d3aafbe51ff135fbec87fb3adad5994936f3f78a4ce"
+    },
+    {
+      "source": "assets/footer/public-security-record.png",
+      "target": "/static/footer/public-security-record.png",
+      "sha256": "4b82756ed908e35273cd5359411eab857f66cbc31d291fb5c59f96c719352036"
+    },
+    {
+      "source": "assets/footer/wechat-qr.png",
+      "target": "/static/footer/wechat-qr.png",
+      "sha256": "56037e3e5a446e9c16f1e8a24a4455bb39a589ca761fb8ec25e13ddaf671a285"
+    },
+    {
+      "source": "assets/health/baseline.png",
+      "target": "/static/health/baseline.png",
+      "sha256": "431ced6916a2a21a156e38701afe55bbd7f88969fbbfc56d7fe099d47f265460"
+    },
+    {
+      "source": "assets/home/carousel-01.jpg",
+      "target": "/static/home/carousel-01.jpg",
+      "sha256": "e5b709726c6d735b4eedb8835a2f5801265d8782d203a026c857e0cd9da9e8b8"
+    },
+    {
+      "source": "assets/home/header-banner.png",
+      "target": "/static/home/header-banner.png",
+      "sha256": "ff4150cd8c1d87688c6f3d86eca0829c3ce82b852345534539f08a50737a52dc"
+    },
+    {
+      "source": "assets/home/ncss-logo.png",
+      "target": "/static/home/ncss-logo.png",
+      "sha256": "9c8f8a32b290a165c35475803bbd2f327c51c08b316f621b6d2f0dace49fa8f0"
+    },
+    {
+      "source": "assets/home/recruitment-campaign.png",
+      "target": "/static/home/recruitment-campaign.png",
+      "sha256": "4342d6148b8f356052729ce4b7ed29464f5f53a294b15abdf3d48081799221e8"
+    },
+    {
+      "source": "assets/icons/arrow-down.png",
+      "target": "/static/icons/arrow-down.png",
+      "sha256": "6398499c4539713a0591a9079ae1fc8bc061e5a80e5517108d3139e3f44bddef"
+    },
+    {
+      "source": "assets/icons/guide-01.png",
+      "target": "/static/icons/guide-01.png",
+      "sha256": "a59053a7f793d60736c00b1f2d5bb7b898e2dec9df5625f41586cd780c70a908"
+    },
+    {
+      "source": "assets/icons/guide-02.png",
+      "target": "/static/icons/guide-02.png",
+      "sha256": "b85e31a15c4db4c82a301ec16a7875787a0749679b61eba0dca3a16d5ad1eda3"
+    },
+    {
+      "source": "assets/icons/guide-03.png",
+      "target": "/static/icons/guide-03.png",
+      "sha256": "85f85cf6bae41f90fabd5db324f745b8743c08b5df3435c62e4770025f33b576"
+    },
+    {
+      "source": "assets/icons/guide-04.png",
+      "target": "/static/icons/guide-04.png",
+      "sha256": "241525c19d022893fe57e719fc6f5630f603cbf871f1e34c88dc56615fbcefa9"
+    },
+    {
+      "source": "assets/icons/guide-05.png",
+      "target": "/static/icons/guide-05.png",
+      "sha256": "6cd51f8786956f1f7dcf43d8e26636490487bbeff62c2b636363dbe42bddddc9"
+    },
+    {
+      "source": "assets/icons/guide-06.png",
+      "target": "/static/icons/guide-06.png",
+      "sha256": "ce3fa89b524bd645c46b456e4ea29fb4052a59d52d70bd0205da73243cf37460"
+    },
+    {
+      "source": "assets/icons/list-item.png",
+      "target": "/static/icons/list-item.png",
+      "sha256": "ede66407516317b3730e9659e81b3e8800325ba280efe26d05ce6fa59a82741d"
+    },
+    {
+      "source": "assets/icons/more.png",
+      "target": "/static/icons/more.png",
+      "sha256": "174f968eddd343cf15becb2be202c754a0f830b534858b0275aa632996b036ed"
+    },
+    {
+      "source": "assets/icons/phone.png",
+      "target": "/static/icons/phone.png",
+      "sha256": "a29482146c02bb27da09ff05afd149ab39ebca7ecee79c01d8ac3b053eef8e3a"
+    },
+    {
+      "source": "assets/icons/section-mark.png",
+      "target": "/static/icons/section-mark.png",
+      "sha256": "5355eef874ec2453de2bead8485dfc57aa6d1875746f896edf6535cb05d8b39e"
+    },
+    {
+      "source": "assets/icons/student.png",
+      "target": "/static/icons/student.png",
+      "sha256": "8b28ec779f243a09f11bca3c7fdcff9d46c6772499b4ca6154c621117da96d10"
+    },
+    {
+      "source": "assets/icons/top-nav-01.png",
+      "target": "/static/icons/top-nav-01.png",
+      "sha256": "244aacc1b27bb9c76e11e9c80f5294e1225cc425a188306d61344bb6a1689760"
+    },
+    {
+      "source": "assets/icons/top-nav-02.png",
+      "target": "/static/icons/top-nav-02.png",
+      "sha256": "24b0ac3dfb96913d58fde483c24b26fb27ae48440535609e609485cf1dffe933"
+    },
+    {
+      "source": "assets/icons/top-nav-03.png",
+      "target": "/static/icons/top-nav-03.png",
+      "sha256": "8833cc74c7a1504f5f6534cc15705534de9f853c8e945cf611db7220d50abe86"
+    },
+    {
+      "source": "assets/icons/top-nav-04.png",
+      "target": "/static/icons/top-nav-04.png",
+      "sha256": "6b32da2726e864161bddc049214a61c7dc2644d76ce726009a462a30208ff376"
+    },
+    {
+      "source": "assets/icons/top-nav-05.png",
+      "target": "/static/icons/top-nav-05.png",
+      "sha256": "28a2b2005e9d558567266d9b54f2a7e0a819afe3cfe47f3f1821034ffbe3fcce"
+    },
+    {
+      "source": "assets/party/ic-title-yellow.png",
+      "target": "/static/party/ic-title-yellow.png",
+      "sha256": "187493b0b6ac2d1b673b28d22a355d4539e35b91b85cbab49b68cf9986b67b40"
+    },
+    {
+      "source": "assets/party/party-header-banner.jpg",
+      "target": "/static/party/party-header-banner.jpg",
+      "sha256": "7444d50235d4c87a00d0221ac84551ea083c617bb8a15e58f58d002224bd27a3"
+    },
+    {
+      "source": "assets/party/section-marker.png",
+      "target": "/static/party/section-marker.png",
+      "sha256": "7e11fddb8e600534593c2afeb9af20226c4850cef58196eff1bb72fcca4be457"
+    }
+  ]
+}

@@ -345,3 +345,13 @@ Actions 中 queued / pending / in_progress 均为中间状态。
 - 达到有界观察退出条件并明确记录 `Executed but not fully verified`。
 
 Dispatch / rerun API 返回成功不等于验证完成。
+
+## EU-42 Site Package Asset Projection Verification
+
+Slice C 的稳定资源交付必须在 exact head 上同时证明：
+
+- `verifySitePackageAssets`：asset manifest identity / path / duplicate-target / SHA-256 fail-fast；fresh projection；重复 projection 幂等；缺失 target create-if-missing；operator replace 跨 projection / restart 保留；package target 普通删除拒绝而显式 replace 允许；`/static/uploads/**` 不被接管；代表性 Main / Party / brand 资源可由静态资源公开解析。
+- `verifyRuntimeSitePackageComposition`：普通 Runtime composition 同时收敛 stable structure 与 stable asset projection，且第二次启动保持幂等。
+- `Site Package Verification` workflow：覆盖 provisioning、stable structure、runtime composition、bootstrap separation 与 asset projection，并在 provisioning / static-resource / `sites/**` 变化时触发。
+- 主 `CI` Integrated Browser：从空 Runtime Static Root 启动 Backend，由 Site Package projection 恢复 `/static/**` 后再执行 Public / Admin 浏览器验证。
+- `人工评审环境`：初始化与 clean reset 均从空 Runtime Static Root 组合 Site Package，不得复制 legacy `site-baseline/static/**`。

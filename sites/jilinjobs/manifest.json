@@ -1,7 +1,7 @@
 {
   "packageId": "jilinjobs",
   "schemaVersion": 1,
-  "version": "0.3.0-navigation-identity",
+  "version": "0.4.0-site-assets",
   "structure": [
     {"type":"columns","path":"structure/columns.json","sha256":"3d1370bd476d915bfec1ca153c0e9121205d5318e50c7ad923a992299ac960a1"},
     {"type":"page-groups","path":"structure/page-groups.json","sha256":"613b9c1fca20ef21d96d66977e326247727a9bae6b1fcfe695981139cf5c4e7c"},
