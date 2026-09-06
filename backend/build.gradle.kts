@@ -47,11 +47,14 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
+val jilinjobsSitePackageRoot = file("../sites/jilinjobs").absolutePath
+
 tasks.register<JavaExec>("importPartyHistoricalContent") {
     group = "migration"
     description = "Import the canonical Party historical-content dataset, including EU-30 theme education"
     classpath = sourceSets["main"].runtimeClasspath
     mainClass.set("com.jilinjobs.cms.migration.PartyHistoricalContentMigrationV2Kt")
+    environment("CMS_SITE_PACKAGE_ROOT", jilinjobsSitePackageRoot)
 }
 
 tasks.register<JavaExec>("importPartyCarousel") {
@@ -59,6 +62,7 @@ tasks.register<JavaExec>("importPartyCarousel") {
     description = "Import the Party carousel canonical dataset with LINK / ARTICLE placement resolution"
     classpath = sourceSets["main"].runtimeClasspath
     mainClass.set("com.jilinjobs.cms.migration.PartyCarouselMigrationV2Kt")
+    environment("CMS_SITE_PACKAGE_ROOT", jilinjobsSitePackageRoot)
 }
 
 tasks.register<JavaExec>("provisionSitePackage") {
