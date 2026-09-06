@@ -6,7 +6,7 @@
 
 当前版本以原网站现有结构和视觉关系为主站公开基线，采用 Vue + Spring Boot 重建中心主站，并在同一公开站前端工程中建设具有独立红色视觉主题的“中心党建”特殊栏目/专题页面。管理端已经完成独立前端工程与 Modular SPA 收敛；公开站已经完成 **Multi-entry Modular SPA** 基础架构：Entry 只按真实 Theme / Router Boundary 划分，中心主站与中心党建分别拥有独立 App、Router、Banner 与内容主题，但继续共用 `frontend/public-site` 工程、Vue/Vite 技术栈、构建发布链路和 Spring Boot CMS Backend；主导航与 Footer 使用 Shared Shell Components 保持公共区域一致。
 
-中心党建 EU-26～EU-29、EU-30 Carousel Architecture & Behavior Convergence、EU-31 Database Migration Baseline Convergence，以及 Issue #60 / B1～B3 收敛形成的 **EU-32～EU-35 均已完成并收敛到 `main`。当前没有 Ready Execution Unit。** 后续工作统一回到 GitHub Issues #57 / #59 / #60 的剩余 Planning / Requirement Candidates：候选先完成必要 Intent / Requirement Clarification、Ready Specification 与必要 Technical Planning / Research；随后由 `slice-work` 形成 Candidate Execution Unit 并可分配稳定 Identifier，只有 `readiness-check` PASS 后才成为 Ready Execution Unit。Roadmap 顺序、预编号或 Issue 标签本身不构成执行授权。
+中心党建 EU-26～EU-29、EU-30 Carousel Architecture & Behavior Convergence、EU-31 Database Migration Baseline Convergence，以及 Issue #60 / B1～B3 收敛形成的 **EU-32～EU-35 均已完成并收敛到 `main`。Issue #60 / D1 已完成 Planning Authority、`slice-work` 与 Readiness Check，并形成 EU-36 — Public Frontend Source Isolation & Managed Resource Projection；当前 EU-36 为 Ready Execution Unit，尚未进入 Execute。** EU-36 必须在 Fresh Context 中按 Work Authority 执行；完成后其他工作再统一回到 GitHub Issues #57 / #59 / #60 的剩余 Planning / Requirement Candidates。Roadmap 顺序、预编号或 Issue 标签本身不构成执行授权。
 
 当前权威需求：
 
@@ -17,6 +17,7 @@
 - `docs/requirements/list-definition-group-governance.md`（EU-32 accepted）
 - `docs/requirements/admin-guidance-governance.md`（EU-33 accepted）
 - `docs/requirements/rich-text-authoring.md`（EU-34 / EU-35 accepted）
+- `docs/requirements/public-frontend-replaceability.md`（EU-36 Ready Authority）
 
 当前 Specification：
 
@@ -30,6 +31,7 @@
 - `docs/specifications/list-definition-group-governance.md`（EU-32 accepted）
 - `docs/specifications/admin-guidance-governance.md`（EU-33 accepted）
 - `docs/specifications/rich-text-authoring.md`（EU-34 / EU-35 accepted）
+- `docs/specifications/public-frontend-replaceability.md`（EU-36 Ready Specification）
 
 当前 Architecture Decision：
 
@@ -42,6 +44,7 @@
 - `docs/technical/carousel-list-placement.md`（EU-30 已接受方案，保留追溯）
 - `docs/technical/database-migration-baseline-convergence.md`（EU-31 accepted baseline）
 - `docs/technical/rich-text-authoring-plan.md`（EU-34 / EU-35 accepted technical plan）
+- `docs/technical/public-frontend-replaceability.md`（EU-36 Ready Technical Plan）
 - `docs/technical/cms-architecture.md`
 - `docs/technical/configuration-governance.md`
 - `docs/technical/backend-service.md`
@@ -51,6 +54,10 @@
 - `docs/technical/admin-frontend-integration.md`
 - `docs/technical/verification-strategy.md`
 - `docs/technical/preset-site-structure.md`
+
+当前 Ready Execution Unit：
+
+- `docs/work/eu36-public-frontend-source-isolation.md`（READY — Readiness Check PASS；尚未 Execute）
 
 最近完成的执行单元：
 
@@ -80,7 +87,7 @@
 
 - `docs/work/admin-frontend-convergence-execution-units.md`
 
-管理端双前端拆分、通用 CMS 模型和 Admin Modular SPA 已完成当前阶段收敛；公开站 Multi-entry Modular SPA、中心党建正式页面与历史内容、EU-30 轮播架构与行为、EU-31 数据库迁移基线，以及 EU-32～EU-35 的列表结构治理、管理端提示责任治理与富文本安全/编辑能力也已完成当前阶段收敛。下一步不得从历史预编号路线直接开始实现，应从当前剩余 Planning / Requirement Candidates 中选择目标并按 Consumer-local Method 形成 Candidate Execution Unit，通过 Readiness 后再进入 Execute。
+管理端双前端拆分、通用 CMS 模型和 Admin Modular SPA 已完成当前阶段收敛；公开站 Multi-entry Modular SPA、中心党建正式页面与历史内容、EU-30 轮播架构与行为、EU-31 数据库迁移基线，以及 EU-32～EU-35 的列表结构治理、管理端提示责任治理与富文本安全/编辑能力也已完成当前阶段收敛。当前下一步是 EU-36 的 Fresh-context Execute；不得把该 Ready Unit 扩大为技术栈替换、部署重构或内容迁移。EU-36 完成后，才从剩余 Planning / Requirement Candidates 中继续按 Consumer-local Method 形成后续 Candidate Execution Unit。
 
 历史阶段文档继续保留用于追溯，但不再作为当前目标架构：
 

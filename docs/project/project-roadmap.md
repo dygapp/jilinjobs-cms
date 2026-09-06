@@ -31,7 +31,8 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | EU-32 List Definition Group Governance | **已完成** | `groupCode` 保持内部结构元数据，ordinary Admin 不再暴露结构分组写权限 |
 | EU-33 Admin Guidance & Explanation Responsibility Governance | **已完成** | 管理界面保留操作必要信息，结构身份与实现背景退出普通运营提示 |
 | EU-34～EU-35 Rich Text Safety & Shared Authoring | **已完成** | 服务端 HTML safety foundation + Article/Page 共用 Tiptap 富文本编辑能力完成并通过 Post-Integration Verification |
-| 后续 Planning / Requirement Candidates | **当前规划层** | Issues #57 / #59 / #60 中剩余候选尚未形成新的 Ready Execution Unit，需按当前方法从 Candidate 推进到 Ready Specification、Candidate Unit 与 Readiness Gate |
+| EU-36 Public Frontend Source Isolation & Managed Resource Projection | **READY — Readiness Check PASS** | Public source ownership、Backend managed Article Resource public projection 与 source-boundary guard 已完成切分和 Readiness；尚未进入 Execute |
+| 后续 Planning / Requirement Candidates | **规划层保留** | Issues #57 / #59 / #60 中除 D1 外的剩余候选尚未形成新的 Ready Execution Unit；EU-36 完成后再按当前方法逐项推进 |
 | 真实第三方深度集成 | 条件性后续 | 根据接口、认证、可靠性与 Product Intent 再进入 Specification / Slice |
 
 ## 已完成里程碑
@@ -60,6 +61,7 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | 2026-09-05 | Issue #60 / B1 收敛为 EU-32，完成列表定义内部 `groupCode` 与 ordinary Admin 写权限边界治理并集成 |
 | 2026-09-05 | Issue #60 / B2 收敛为 EU-33，完成管理端用户提示、结构身份与实现解释责任治理并集成 |
 | 2026-09-05 | Issue #60 / B3 先后形成 EU-34 / EU-35：服务端 Rich Text HTML safety foundation 与 Article/Page shared Tiptap authoring 均完成、集成并通过 Post-Integration CI |
+| 2026-09-06 | Issue #60 / D1 的 Public Frontend Replaceability Authority 经 PR #70 / #71 集成并通过 Post-Integration CI #719；`slice-work` 形成 EU-36，Readiness Check PASS，等待 Fresh-context Execute |
 
 ## 当前已固化结果
 
