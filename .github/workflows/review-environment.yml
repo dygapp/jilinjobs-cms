@@ -113,7 +113,7 @@ jobs:
 
           docker run -d --name cms-frontend --network host \
             -v "$GITHUB_WORKSPACE/frontend/public-site/dist:/usr/share/nginx/html/public:ro" \
-            -v "$GITHUB_WORKSPACE/admin/dist:/usr/share/nginx/html/admin:ro" \
+            -v "$GITHUB_WORKSPACE/frontend/admin/dist:/usr/share/nginx/html/admin:ro" \
             -v "$GITHUB_WORKSPACE/frontend/nginx.e2e.conf:/etc/nginx/nginx.conf:ro" \
             nginx:1.29.8-alpine
 
