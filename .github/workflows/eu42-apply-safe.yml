@@ -1,5 +1,6 @@
 name: EU-42 Apply Safe
 
+# Retry from the latest repository head after connector-managed workflow updates.
 on:
   push:
     branches:
