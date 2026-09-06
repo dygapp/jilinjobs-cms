@@ -1,7 +1,8 @@
 ---
 title: Execution Continuity 规范
-status: 试行
-scope: Consumer-local Practice
+status: Consumer-local 已采用
+scope: Consumer-local Method
+evidence_lifecycle: docs/project/method-validation-evidence.md
 ---
 
 # Execution Continuity 规范
@@ -20,7 +21,7 @@ scope: Consumer-local Practice
 - 让人工主要参与 Product / Scope / Architecture / Security 等高影响决策、Human Review 和最终集成，而不是充当 AI 工作流调度员；
 - 与 `docs/project/review-feedback-cycle.md` 配合，在不降低验证质量的前提下同时缩短执行等待时间和人工沟通时间。
 
-本规范当前属于 Consumer-local Practice，在经过多个 Execution Unit 验证前，不作为 `agentic-dev` 通用方法。
+本规范已完成首轮多 Execution Unit 的 Consumer-local 实践验证，继续作为本项目采用的方法规则。若后续需要验证新的连续执行假设、反例或跨项目可复用性，应按 `docs/project/method-validation-evidence.md` 创建新的临时 Evidence Issue，不依赖已经完成收敛的历史 Issue。
 
 ## 2. 核心原则
 
@@ -246,14 +247,17 @@ Execution Continuity 只减少无必要停顿和汇报，不降低验证要求�
 
 如果大量细节已经固化到 PR、Issue、Roadmap、Execution Unit 或 Verification Evidence，应以 Repository 为持久载体，人工沟通只提供必要摘要。
 
-## 9. 试行评估
+## 9. 后续方法实验
 
-后续至少通过多个不同类型的 Execution Unit / Review Batch 观察：
+本规范的首轮 Consumer-local 验证已经完成，不再依赖某个固定 Issue 长期收集证据。
 
-- 单个 EU 的人工“继续”指令次数是否下降；
-- 人工需要阅读的阶段报告数量和长度是否下降；
-- 从 Finding 到可复核状态的总时间是否下降；
-- 是否出现因减少过程汇报而导致的 Scope 漂移、验证遗漏或决策越权；
-- Fresh Context / Repository Authority 是否仍能保证可恢复性和审计性。
+未来只有出现新的、可验证的假设时才启动新的实验，例如：
 
-只有在实践证明连续执行规则具有跨项目稳定价值后，再考虑向 `agentic-dev` 提交方法演进证据。
+- 某类长链任务是否仍存在不必要人工调度；
+- 新的自动化或 Review 机制是否改变合理沟通边界；
+- 连续执行是否产生新的 Scope 漂移、验证遗漏或决策越权反例；
+- 某个已经反馈 `agentic-dev` 的模式是否需要进一步跨项目证据。
+
+此时按 `docs/project/method-validation-evidence.md` 创建本轮独立临时 Evidence Issue，定义 Promotion / Close Criteria，并在收敛后完成 Consumer-local 固化、上游反馈或 Reject / Supersede，再关闭该 Issue。
+
+历史实验 Issue 仅作为 provenance，不继续承担活跃证据渠道职责。
