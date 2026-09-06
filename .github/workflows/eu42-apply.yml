@@ -1,0 +1,654 @@
+name: EU-42 Apply Implementation
+
+on:
+  push:
+    branches:
+      - feature/eu-42-site-asset-runtime-projection
+    paths:
+      - ".github/workflows/eu42-apply.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: feature/eu-42-site-asset-runtime-projection
+          fetch-depth: 0
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: "9.6.1"
+      - name: Apply EU-42 implementation
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git mv site-baseline/static sites/jilinjobs/assets
+
+          cat > sites/jilinjobs/assets/README.md <<'EOF'
+          # Site Package 稳定静态资源
+
+          本目录属于 `sites/jilinjobs` Site Package，保存中心主站与中心党建已经确认的稳定静态资源源文件。
+
+          `manifest.json` 为资源投影合同：每个条目声明 package-root 内的 `source`、公开 `/static/**` `target` 与源文件 SHA-256。Backend 启动时在 Site Package 校验通过后，将缺失资源以 create-if-missing 语义投影到 `CMS_STATIC_ROOT`；已经存在的目标文件不会被启动过程覆盖，因此后台明确替换后的运营版本可跨重启保留。
+
+          Site Package target 属于静态资源 protected-path 合同：普通删除被拒绝，明确 replace 仍然允许。
+
+          `/static/uploads/**` 是可变 Runtime Store，不属于本目录，也不会被 Site Package 接管。历史文章正文及迁移资源继续由 `data-migrations/**` 管理。
+
+          `health/baseline.png` 仅用于证明稳定资源投影链路，不作为前台业务素材。
+          EOF
+
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+
+          package_root = Path('sites/jilinjobs')
+          assets_root = package_root / 'assets'
+          entries = []
+          for path in sorted(p for p in assets_root.rglob('*') if p.is_file() and p.name not in {'README.md', 'PROVENANCE.md', 'manifest.json'}):
+              rel = path.relative_to(package_root).as_posix()
+              target = '/static/' + path.relative_to(assets_root).as_posix()
+              entries.append({
+                  'source': rel,
+                  'target': target,
+                  'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
+              })
+          (assets_root / 'manifest.json').write_text(
+              json.dumps({'packageId': 'jilinjobs', 'schemaVersion': 1, 'assets': entries}, ensure_ascii=False, indent=2) + '\n',
+              encoding='utf-8',
+          )
+          manifest_path = package_root / 'manifest.json'
+          text = manifest_path.read_text(encoding='utf-8')
+          text = text.replace('"version": "0.3.0-navigation-identity"', '"version": "0.4.0-site-assets"')
+          if '0.4.0-site-assets' not in text:
+              raise SystemExit('Site Package version anchor not found')
+          manifest_path.write_text(text, encoding='utf-8')
+          print(f'generated {len(entries)} Site Package asset entries')
+          PY
+
+          cat > backend/src/main/kotlin/com/jilinjobs/cms/provisioning/SitePackageAssets.kt <<'EOF'
+          package com.jilinjobs.cms.provisioning
+
+          import org.springframework.beans.factory.annotation.Value
+          import org.springframework.stereotype.Service
+          import tools.jackson.databind.ObjectMapper
+          import java.nio.file.Files
+          import java.nio.file.LinkOption
+          import java.nio.file.Path
+          import java.security.MessageDigest
+
+          private const val SITE_PACKAGE_ASSET_SCHEMA_VERSION = 1
+          private val ASSET_SHA256 = Regex("[0-9a-f]{64}")
+
+          data class SitePackageAssetManifest(
+              val packageId: String = "",
+              val schemaVersion: Int = 0,
+              val assets: List<SitePackageAsset> = emptyList(),
+          )
+
+          data class SitePackageAsset(
+              val source: String = "",
+              val target: String = "",
+              val sha256: String = "",
+          )
+
+          data class SitePackageAssetDefinition(
+              val packageId: String,
+              val packageRoot: Path,
+              val assets: List<SitePackageAsset>,
+          )
+
+          data class SitePackageAssetProjectionReport(
+              val packageId: String,
+              val created: Int,
+              val unchanged: Int,
+              val assets: Int,
+          )
+
+          @Service
+          class SitePackageAssetManifestLoader(
+              private val sitePackageLoader: SitePackageLoader,
+              private val objectMapper: ObjectMapper,
+          ) {
+              fun load(packageRoot: Path): SitePackageAssetDefinition {
+                  val root = packageRoot.toAbsolutePath().normalize()
+                  val packageManifest = sitePackageLoader.load(root).manifest
+                  val manifestPath = safeSource(root, "assets/manifest.json")
+                  val manifest = objectMapper.readValue(manifestPath.toFile(), SitePackageAssetManifest::class.java)
+                  if (manifest.schemaVersion != SITE_PACKAGE_ASSET_SCHEMA_VERSION) {
+                      throw SitePackageValidationException("不支持的 Site Package asset schemaVersion：${manifest.schemaVersion}")
+                  }
+                  if (manifest.packageId != packageManifest.packageId) {
+                      throw SitePackageValidationException("Site Package asset packageId 与主 manifest 不一致：${manifest.packageId}")
+                  }
+                  if (manifest.assets.isEmpty()) throw SitePackageValidationException("Site Package assets 不能为空")
+                  if (manifest.assets.map { it.source }.toSet().size != manifest.assets.size) {
+                      throw SitePackageValidationException("Site Package asset source 不能重复")
+                  }
+                  if (manifest.assets.map { it.target }.toSet().size != manifest.assets.size) {
+                      throw SitePackageValidationException("Site Package asset target 不能重复")
+                  }
+                  manifest.assets.forEach { asset ->
+                      if (!asset.source.startsWith("assets/")) {
+                          throw SitePackageValidationException("Site Package asset source 必须位于 assets/：${asset.source}")
+                      }
+                      if (asset.source == "assets/manifest.json") {
+                          throw SitePackageValidationException("Site Package asset manifest 不能投影自身")
+                      }
+                      val source = safeSource(root, asset.source)
+                      staticRelativePath(asset.target)
+                      if (!asset.sha256.matches(ASSET_SHA256)) {
+                          throw SitePackageValidationException("Site Package asset sha256 不合法：${asset.source}")
+                      }
+                      if (sha256(source) != asset.sha256) {
+                          throw SitePackageValidationException("Site Package asset digest 不一致：${asset.source}")
+                      }
+                  }
+                  return SitePackageAssetDefinition(packageManifest.packageId, root, manifest.assets)
+              }
+
+              private fun safeSource(root: Path, relativePath: String): Path {
+                  val normalizedText = relativePath.trim().replace('\\', '/')
+                  if (normalizedText.isBlank() || normalizedText.startsWith('/') || normalizedText.split('/').any { it.isBlank() || it == "." || it == ".." }) {
+                      throw SitePackageValidationException("Site Package asset source 路径不合法：$relativePath")
+                  }
+                  val source = root.resolve(normalizedText).normalize()
+                  if (!source.startsWith(root) || !Files.isRegularFile(source, LinkOption.NOFOLLOW_LINKS) || Files.isSymbolicLink(source)) {
+                      throw SitePackageValidationException("Site Package asset source 不存在、越界或为符号链接：$relativePath")
+                  }
+                  val realRoot = root.toRealPath()
+                  val realSource = source.toRealPath()
+                  if (!realSource.startsWith(realRoot)) {
+                      throw SitePackageValidationException("Site Package asset source 实际路径越界：$relativePath")
+                  }
+                  return source
+              }
+          }
+
+          @Service
+          class SitePackageAssetProjector(private val loader: SitePackageAssetManifestLoader) {
+              fun project(packageRoot: Path, staticRoot: Path): SitePackageAssetProjectionReport =
+                  project(loader.load(packageRoot), staticRoot)
+
+              fun project(definition: SitePackageAssetDefinition, configuredStaticRoot: Path): SitePackageAssetProjectionReport {
+                  val staticRoot = configuredStaticRoot.toAbsolutePath().normalize()
+                  Files.createDirectories(staticRoot)
+                  val realStaticRoot = staticRoot.toRealPath()
+                  var created = 0
+                  var unchanged = 0
+                  definition.assets.forEach { asset ->
+                      val relative = staticRelativePath(asset.target)
+                      val target = staticRoot.resolve(relative).normalize()
+                      if (!target.startsWith(staticRoot)) {
+                          throw SitePackageValidationException("Site Package asset target 越界：${asset.target}")
+                      }
+                      Files.createDirectories(target.parent)
+                      if (!target.parent.toRealPath().startsWith(realStaticRoot)) {
+                          throw SitePackageValidationException("Site Package asset target 实际路径越界：${asset.target}")
+                      }
+                      if (Files.exists(target, LinkOption.NOFOLLOW_LINKS)) {
+                          if (!Files.isRegularFile(target, LinkOption.NOFOLLOW_LINKS) || Files.isSymbolicLink(target)) {
+                              throw SitePackageValidationException("Site Package asset target 已被非普通文件占用：${asset.target}")
+                          }
+                          unchanged++
+                      } else {
+                          val source = definition.packageRoot.resolve(asset.source).normalize()
+                          Files.copy(source, target)
+                          created++
+                      }
+                  }
+                  return SitePackageAssetProjectionReport(definition.packageId, created, unchanged, definition.assets.size)
+              }
+          }
+
+          @Service
+          class SitePackageAssetCatalog(
+              @Value("\${cms.site-package.root:}") configuredRoot: String,
+              loader: SitePackageAssetManifestLoader,
+          ) {
+              val protectedPaths: Set<String> = configuredRoot.trim().takeIf { it.isNotEmpty() }
+                  ?.let { root -> loader.load(Path.of(root).toAbsolutePath().normalize()).assets }
+                  ?.mapTo(linkedSetOf()) { staticRelativePath(it.target) }
+                  ?: emptySet()
+          }
+
+          internal fun staticRelativePath(target: String): String {
+              val normalized = target.trim().replace('\\', '/')
+              if (!normalized.startsWith("/static/")) {
+                  throw SitePackageValidationException("Site Package asset target 必须位于 /static/**：$target")
+              }
+              val relative = normalized.removePrefix("/static/")
+              if (relative.isBlank() || relative.split('/').any { it.isBlank() || it == "." || it == ".." }) {
+                  throw SitePackageValidationException("Site Package asset target 路径不合法：$target")
+              }
+              if (relative == "uploads" || relative.startsWith("uploads/")) {
+                  throw SitePackageValidationException("Site Package 不得接管 /static/uploads/**：$target")
+              }
+              return relative
+          }
+
+          private fun sha256(path: Path): String {
+              val digest = MessageDigest.getInstance("SHA-256")
+              Files.newInputStream(path).use { input ->
+                  val buffer = ByteArray(8192)
+                  while (true) {
+                      val read = input.read(buffer)
+                      if (read < 0) break
+                      digest.update(buffer, 0, read)
+                  }
+              }
+              return digest.digest().joinToString("") { "%02x".format(it) }
+          }
+          EOF
+
+          cat > backend/src/main/kotlin/com/jilinjobs/cms/provisioning/SitePackageRuntimeComposition.kt <<'EOF'
+          package com.jilinjobs.cms.provisioning
+
+          import org.slf4j.LoggerFactory
+          import org.springframework.beans.factory.annotation.Value
+          import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty
+          import org.springframework.context.annotation.Bean
+          import org.springframework.context.annotation.Configuration
+          import org.springframework.context.annotation.DependsOn
+          import java.nio.file.Path
+
+          @Configuration(proxyBeanMethods = false)
+          class SitePackageRuntimeCompositionConfiguration {
+              @Bean
+              @DependsOn("flywayInitializer")
+              @ConditionalOnProperty(prefix = "cms.site-package", name = ["root"])
+              fun sitePackageRuntimeComposition(
+                  @Value("\${cms.site-package.root}") configuredRoot: String,
+                  @Value("\${cms.static.root:./data/static}") configuredStaticRoot: String,
+                  provisioner: SitePackageProvisioner,
+                  assetProjector: SitePackageAssetProjector,
+              ): SitePackageRuntimeComposition {
+                  val root = configuredRoot.trim()
+                  require(root.isNotEmpty()) { "cms.site-package.root 不能为空" }
+                  val staticRoot = configuredStaticRoot.trim()
+                  require(staticRoot.isNotEmpty()) { "cms.static.root 不能为空" }
+                  return SitePackageRuntimeComposition(
+                      Path.of(root).toAbsolutePath().normalize(),
+                      Path.of(staticRoot).toAbsolutePath().normalize(),
+                      provisioner,
+                      assetProjector,
+                  )
+              }
+          }
+
+          class SitePackageRuntimeComposition(
+              val packageRoot: Path,
+              val staticRoot: Path,
+              provisioner: SitePackageProvisioner,
+              assetProjector: SitePackageAssetProjector,
+          ) {
+              val report: SiteProvisioningReport = provisioner.apply(packageRoot)
+              val assetReport: SitePackageAssetProjectionReport = assetProjector.project(packageRoot, staticRoot)
+
+              init {
+                  LOGGER.info(
+                      "Site Package runtime composition applied: packageId={}, version={}, created={}, updated={}, unchanged={}, objects={}, assetsCreated={}, assetsUnchanged={}, assets={}, root={}, staticRoot={}",
+                      report.packageId,
+                      report.version,
+                      report.created,
+                      report.updated,
+                      report.unchanged,
+                      report.objects,
+                      assetReport.created,
+                      assetReport.unchanged,
+                      assetReport.assets,
+                      packageRoot,
+                      staticRoot,
+                  )
+              }
+
+              companion object {
+                  private val LOGGER = LoggerFactory.getLogger(SitePackageRuntimeComposition::class.java)
+              }
+          }
+          EOF
+
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('backend/src/main/kotlin/com/jilinjobs/cms/staticresource/StaticResource.kt')
+          text = path.read_text(encoding='utf-8')
+          anchor = 'import com.jilinjobs.cms.navigation.NavigationMapper\n'
+          replacement = anchor + 'import com.jilinjobs.cms.provisioning.SitePackageAssetCatalog\n'
+          if anchor not in text:
+              raise SystemExit('StaticResource import anchor missing')
+          text = text.replace(anchor, replacement, 1)
+          anchor = '    @Value("\\${cms.static.protected-resources:}") protectedResourcesText: String = "",\n) {'
+          replacement = '    @Value("\\${cms.static.protected-resources:}") protectedResourcesText: String = "",\n    private val sitePackageAssetCatalog: SitePackageAssetCatalog? = null,\n) {'
+          if anchor not in text:
+              raise SystemExit('StaticResource constructor anchor missing')
+          text = text.replace(anchor, replacement, 1)
+          anchor = '        addAll(configuredProtectedPaths)\n'
+          replacement = anchor + '        sitePackageAssetCatalog?.protectedPaths?.let(::addAll)\n'
+          if anchor not in text:
+              raise SystemExit('StaticResource protected anchor missing')
+          text = text.replace(anchor, replacement, 1)
+          path.write_text(text, encoding='utf-8')
+          PY
+
+          cat > backend/src/test/kotlin/com/jilinjobs/cms/provisioning/SitePackageAssetProjectionVerification.kt <<'EOF'
+          package com.jilinjobs.cms.provisioning
+
+          import com.jilinjobs.cms.CmsApplication
+          import com.jilinjobs.cms.staticresource.StaticResourceService
+          import com.jilinjobs.cms.staticresource.StaticResourceValidationException
+          import org.flywaydb.core.Flyway
+          import org.springframework.boot.WebApplicationType
+          import org.springframework.boot.builder.SpringApplicationBuilder
+          import org.springframework.web.multipart.MultipartFile
+          import tools.jackson.databind.ObjectMapper
+          import java.io.ByteArrayInputStream
+          import java.io.File
+          import java.io.InputStream
+          import java.nio.file.Files
+          import java.nio.file.Path
+          import java.nio.file.StandardCopyOption
+
+          fun main() {
+              val dbUrl = requireAssetEnv("SITE_PACKAGE_VERIFY_DB_URL")
+              val dbUsername = System.getenv("SITE_PACKAGE_VERIFY_DB_USERNAME") ?: "root"
+              val dbPassword = System.getenv("SITE_PACKAGE_VERIFY_DB_PASSWORD") ?: "root"
+              val packageRoot = Path.of("../sites/jilinjobs").toAbsolutePath().normalize()
+              val staticRoot = Files.createTempDirectory("eu42-runtime-static-")
+
+              Flyway.configure()
+                  .dataSource(dbUrl, dbUsername, dbPassword)
+                  .locations("classpath:db/migration")
+                  .cleanDisabled(false)
+                  .load()
+                  .also { it.clean(); it.migrate() }
+
+              val first = startAssetContext(dbUrl, dbUsername, dbPassword, packageRoot, staticRoot)
+              lateinit var replacement: ByteArray
+              lateinit var uploadBytes: ByteArray
+              try {
+                  val composition = first.getBean(SitePackageRuntimeComposition::class.java)
+                  require(composition.assetReport.assets == 31)
+                  require(composition.assetReport.created == 31 && composition.assetReport.unchanged == 0) {
+                      "fresh Runtime projection 应创建完整稳定资源：${composition.assetReport}"
+                  }
+                  val catalog = first.getBean(SitePackageAssetCatalog::class.java)
+                  require(catalog.protectedPaths.size == 31)
+                  require("home/header-banner.png" in catalog.protectedPaths)
+                  require("party/party-header-banner.jpg" in catalog.protectedPaths)
+                  require(catalog.protectedPaths.none { it == "uploads" || it.startsWith("uploads/") })
+
+                  val service = first.getBean(StaticResourceService::class.java)
+                  require(Files.isRegularFile(service.resolvePublic("home/header-banner.png")))
+                  require(Files.isRegularFile(service.resolvePublic("party/party-header-banner.jpg")))
+                  require(Files.isRegularFile(service.resolvePublic("brand/site-favicon.png")))
+                  val deleteError = runCatching { service.delete("home/header-banner.png") }.exceptionOrNull()
+                  require(deleteError is StaticResourceValidationException) { "Site Package stable target 必须阻止普通删除" }
+
+                  val original = Files.readAllBytes(staticRoot.resolve("health/baseline.png"))
+                  replacement = original + byteArrayOf(0x01)
+                  val replaced = service.upload("health/baseline.png", AssetBytesMultipartFile("baseline.png", replacement), true)
+                  require(replaced.protectedResource)
+                  require(Files.readAllBytes(staticRoot.resolve("health/baseline.png")).contentEquals(replacement))
+
+                  uploadBytes = original + byteArrayOf(0x02)
+                  val uploaded = service.upload("uploads/operator.png", AssetBytesMultipartFile("operator.png", uploadBytes), false)
+                  require(!uploaded.protectedResource)
+
+                  val projector = first.getBean(SitePackageAssetProjector::class.java)
+                  val secondProjection = projector.project(packageRoot, staticRoot)
+                  require(secondProjection.created == 0 && secondProjection.unchanged == 31) {
+                      "第二次 projection 必须幂等：$secondProjection"
+                  }
+                  require(Files.readAllBytes(staticRoot.resolve("health/baseline.png")).contentEquals(replacement)) {
+                      "operator 明确替换必须被 projection 保留"
+                  }
+                  require(Files.readAllBytes(staticRoot.resolve("uploads/operator.png")).contentEquals(uploadBytes)) {
+                      "/static/uploads/** 不得被 Site Package 接管"
+                  }
+
+                  Files.delete(staticRoot.resolve("footer/wechat-qr.png"))
+                  val repair = projector.project(packageRoot, staticRoot)
+                  require(repair.created == 1 && repair.unchanged == 30) { "缺失 package target 应按 create-if-missing 恢复：$repair" }
+                  require(Files.readAllBytes(staticRoot.resolve("health/baseline.png")).contentEquals(replacement))
+                  require(Files.readAllBytes(staticRoot.resolve("uploads/operator.png")).contentEquals(uploadBytes))
+
+                  verifyAssetManifestFailures(first.getBean(SitePackageAssetManifestLoader::class.java), first.getBean(ObjectMapper::class.java), packageRoot)
+              } finally {
+                  first.close()
+              }
+
+              val second = startAssetContext(dbUrl, dbUsername, dbPassword, packageRoot, staticRoot)
+              try {
+                  val composition = second.getBean(SitePackageRuntimeComposition::class.java)
+                  require(composition.assetReport.created == 0 && composition.assetReport.unchanged == 31) {
+                      "restart projection 必须保持现有 target：${composition.assetReport}"
+                  }
+                  require(Files.readAllBytes(staticRoot.resolve("health/baseline.png")).contentEquals(replacement))
+                  require(Files.readAllBytes(staticRoot.resolve("uploads/operator.png")).contentEquals(uploadBytes))
+                  val service = second.getBean(StaticResourceService::class.java)
+                  require(!service.list("uploads").single { it.name == "operator.png" }.protectedResource)
+              } finally {
+                  second.close()
+              }
+
+              println("EU42_SITE_PACKAGE_ASSET_PROJECTION_VERIFY PASS")
+          }
+
+          private fun startAssetContext(dbUrl: String, username: String, password: String, packageRoot: Path, staticRoot: Path) =
+              SpringApplicationBuilder(CmsApplication::class.java)
+                  .web(WebApplicationType.NONE)
+                  .run(
+                      "--spring.datasource.url=$dbUrl",
+                      "--spring.datasource.username=$username",
+                      "--spring.datasource.password=$password",
+                      "--cms.site-package.root=$packageRoot",
+                      "--cms.static.root=$staticRoot",
+                      "--spring.main.banner-mode=off",
+                  )
+
+          private fun verifyAssetManifestFailures(loader: SitePackageAssetManifestLoader, objectMapper: ObjectMapper, sourceRoot: Path) {
+              fun mutated(transform: (SitePackageAssetManifest) -> SitePackageAssetManifest): Path {
+                  val root = Files.createTempDirectory("eu42-invalid-package-")
+                  copyTree(sourceRoot, root)
+                  val path = root.resolve("assets/manifest.json")
+                  val manifest = objectMapper.readValue(path.toFile(), SitePackageAssetManifest::class.java)
+                  objectMapper.writeValue(path.toFile(), transform(manifest))
+                  return root
+              }
+              expectAssetValidation("digest mismatch") {
+                  val root = mutated { manifest -> manifest.copy(assets = manifest.assets.mapIndexed { index, asset -> if (index == 0) asset.copy(sha256 = "0".repeat(64)) else asset }) }
+                  loader.load(root)
+              }
+              expectAssetValidation("duplicate target") {
+                  val root = mutated { manifest -> manifest.copy(assets = manifest.assets + manifest.assets.first().copy(source = manifest.assets[1].source)) }
+                  loader.load(root)
+              }
+              expectAssetValidation("path traversal") {
+                  val root = mutated { manifest -> manifest.copy(assets = manifest.assets.mapIndexed { index, asset -> if (index == 0) asset.copy(source = "assets/../outside.png") else asset }) }
+                  loader.load(root)
+              }
+              expectAssetValidation("package identity") {
+                  val root = mutated { manifest -> manifest.copy(packageId = "other-site") }
+                  loader.load(root)
+              }
+          }
+
+          private fun copyTree(sourceRoot: Path, targetRoot: Path) {
+              Files.walk(sourceRoot).use { stream ->
+                  stream.forEach { source ->
+                      val target = targetRoot.resolve(sourceRoot.relativize(source).toString())
+                      if (Files.isDirectory(source)) Files.createDirectories(target)
+                      else Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING)
+                  }
+              }
+          }
+
+          private fun expectAssetValidation(label: String, action: () -> Unit) {
+              val error = runCatching(action).exceptionOrNull()
+              require(error is SitePackageValidationException) { "$label 应被 SitePackageValidationException 拒绝，实际：${error?.javaClass?.name}" }
+          }
+
+          private fun requireAssetEnv(name: String): String = System.getenv(name)?.takeIf { it.isNotBlank() }
+              ?: error("缺少验证环境变量：$name")
+
+          private class AssetBytesMultipartFile(private val filename: String, private val data: ByteArray) : MultipartFile {
+              override fun getName() = "file"
+              override fun getOriginalFilename() = filename
+              override fun getContentType(): String? = null
+              override fun isEmpty() = data.isEmpty()
+              override fun getSize() = data.size.toLong()
+              override fun getBytes() = data
+              override fun getInputStream(): InputStream = ByteArrayInputStream(data)
+              override fun transferTo(dest: File) { dest.parentFile?.mkdirs(); dest.writeBytes(data) }
+          }
+          EOF
+
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path('backend/src/test/kotlin/com/jilinjobs/cms/provisioning/RuntimeSitePackageCompositionVerification.kt')
+          text = path.read_text(encoding='utf-8')
+          text = text.replace('import java.nio.file.Path\n', 'import java.nio.file.Files\nimport java.nio.file.Path\n', 1)
+          text = text.replace('    val packageRoot = Path.of("../sites/jilinjobs").toAbsolutePath().normalize()\n', '    val packageRoot = Path.of("../sites/jilinjobs").toAbsolutePath().normalize()\n    val staticRoot = Files.createTempDirectory("eu42-runtime-composition-static-")\n', 1)
+          text = text.replace('startRuntimeCompositionContext(dbUrl, dbUsername, dbPassword, packageRoot)', 'startRuntimeCompositionContext(dbUrl, dbUsername, dbPassword, packageRoot, staticRoot)')
+          first_anchor = '        require(composition.report.objects == 98)\n'
+          first_replacement = first_anchor + '        require(composition.assetReport.created == 31 && composition.assetReport.unchanged == 0) { "首次 Runtime composition 应投影完整 stable assets：${composition.assetReport}" }\n'
+          if first_anchor not in text:
+              raise SystemExit('Runtime verification first anchor missing')
+          text = text.replace(first_anchor, first_replacement, 1)
+          second_anchor = '        require(countCodedPresetNavigation(dbUrl, dbUsername, dbPassword) == 40)\n        require(operationalCounts(dbUrl, dbUsername, dbPassword) == (0 to 0))\n'
+          second_replacement = '        require(composition.assetReport.created == 0 && composition.assetReport.unchanged == 31) { "第二次 Runtime composition 必须保持 stable assets：${composition.assetReport}" }\n' + second_anchor
+          if second_anchor not in text:
+              raise SystemExit('Runtime verification second anchor missing')
+          text = text.replace(second_anchor, second_replacement, 1)
+          signature = '    dbPassword: String,\n    packageRoot: Path,\n) = SpringApplicationBuilder(CmsApplication::class.java)'
+          replacement = '    dbPassword: String,\n    packageRoot: Path,\n    staticRoot: Path,\n) = SpringApplicationBuilder(CmsApplication::class.java)'
+          if signature not in text:
+              raise SystemExit('Runtime verification signature anchor missing')
+          text = text.replace(signature, replacement, 1)
+          arg_anchor = '        "--cms.site-package.root=$packageRoot",\n        "--spring.main.banner-mode=off",\n'
+          arg_replacement = '        "--cms.site-package.root=$packageRoot",\n        "--cms.static.root=$staticRoot",\n        "--spring.main.banner-mode=off",\n'
+          if arg_anchor not in text:
+              raise SystemExit('Runtime verification args anchor missing')
+          text = text.replace(arg_anchor, arg_replacement, 1)
+          path.write_text(text, encoding='utf-8')
+
+          build = Path('backend/build.gradle.kts')
+          text = build.read_text(encoding='utf-8')
+          anchor = '''tasks.register<JavaExec>("verifySiteBootstrapBaselineSeparation") {\n    group = "verification"\n    description = "Verify EU-41 Generic Schema lineage and one-time JilinJobs operational bootstrap separation"\n    classpath = sourceSets["test"].runtimeClasspath\n    mainClass.set("com.jilinjobs.cms.provisioning.SiteBootstrapBaselineSeparationVerificationKt")\n}\n'''
+          addition = anchor + '''\ntasks.register<JavaExec>("verifySitePackageAssets") {\n    group = "verification"\n    description = "Verify EU-42 Site Package asset integrity, create-if-missing projection, protected paths and runtime preservation"\n    classpath = sourceSets["test"].runtimeClasspath\n    mainClass.set("com.jilinjobs.cms.provisioning.SitePackageAssetProjectionVerificationKt")\n}\n'''
+          if anchor not in text:
+              raise SystemExit('build.gradle verification anchor missing')
+          build.write_text(text.replace(anchor, addition, 1), encoding='utf-8')
+          PY
+
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path('.github/workflows/site-package-verification.yml')
+          text = path.read_text(encoding='utf-8')
+          for marker in ['  push:', '  pull_request:']:
+              pass
+          old = '      - "backend/src/main/kotlin/com/jilinjobs/cms/provisioning/**"\n      - "backend/src/test/kotlin/com/jilinjobs/cms/provisioning/**"\n'
+          new = old + '      - "backend/src/main/kotlin/com/jilinjobs/cms/staticresource/**"\n      - "backend/src/test/kotlin/com/jilinjobs/cms/staticresource/**"\n'
+          if text.count(old) != 2:
+              raise SystemExit('site package workflow path anchors missing')
+          text = text.replace(old, new)
+          old_run = 'gradle verifySitePackageFoundation verifyStableSiteStructure verifyRuntimeSitePackageComposition verifySiteBootstrapBaselineSeparation --no-daemon'
+          new_run = 'gradle verifySitePackageFoundation verifyStableSiteStructure verifyRuntimeSitePackageComposition verifySiteBootstrapBaselineSeparation verifySitePackageAssets --no-daemon'
+          if old_run not in text:
+              raise SystemExit('site package workflow run anchor missing')
+          path.write_text(text.replace(old_run, new_run, 1), encoding='utf-8')
+
+          path = Path('.github/workflows/ci.yml')
+          text = path.read_text(encoding='utf-8')
+          step_anchor = '''      - name: Verify EU-41 Site bootstrap baseline separation\n        working-directory: backend\n        env:\n          SITE_PACKAGE_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/eu37_site_package?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true\n          SITE_PACKAGE_VERIFY_DB_USERNAME: root\n          SITE_PACKAGE_VERIFY_DB_PASSWORD: root\n        run: gradle verifySiteBootstrapBaselineSeparation --no-daemon\n'''
+          step_addition = step_anchor + '''      - name: Verify EU-42 Site Package asset projection\n        working-directory: backend\n        env:\n          SITE_PACKAGE_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/eu37_site_package?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true\n          SITE_PACKAGE_VERIFY_DB_USERNAME: root\n          SITE_PACKAGE_VERIFY_DB_PASSWORD: root\n        run: gradle verifySitePackageAssets --no-daemon\n'''
+          if step_anchor not in text:
+              raise SystemExit('CI backend anchor missing')
+          text = text.replace(step_anchor, step_addition, 1)
+          old_prepare = '''      - name: Prepare versioned static baseline\n        run: |\n          rm -rf runtime-static\n          mkdir -p runtime-static\n          cp -a site-baseline/static/. runtime-static/\n          test -f runtime-static/health/baseline.png\n'''
+          new_prepare = '''      - name: Prepare empty runtime static root\n        run: |\n          rm -rf runtime-static\n          mkdir -p runtime-static\n          test ! -e runtime-static/health/baseline.png\n'''
+          if old_prepare not in text:
+              raise SystemExit('CI static prepare anchor missing')
+          text = text.replace(old_prepare, new_prepare, 1)
+          text = text.replace('CMS_STATIC_ROOT=/static-baseline', 'CMS_STATIC_ROOT=/runtime-static')
+          text = text.replace(':/static-baseline"', ':/runtime-static"')
+          path.write_text(text, encoding='utf-8')
+
+          path = Path('.github/workflows/review-environment.yml')
+          text = path.read_text(encoding='utf-8')
+          old_prepare = '''      - name: 准备初始化静态资源包\n        run: |\n          sudo rm -rf runtime-static runtime-uploads\n          mkdir -p runtime-static runtime-uploads\n          cp -a site-baseline/static/. runtime-static/\n          test -f runtime-static/health/baseline.png\n          test -f runtime-static/home/header-banner.png\n          test -f runtime-static/home/carousel-01.jpg\n          test -f runtime-static/home/recruitment-campaign.png\n          test -f runtime-static/brand/smartedu-logo-text.png\n          test -f runtime-static/brand/site-favicon.png\n          test -f runtime-static/party/ic-title-yellow.png\n          test -f runtime-static/party/section-marker.png\n          test -f runtime-static/party/party-header-banner.jpg\n          test -f runtime-static/footer/public-security-record.png\n          test -f runtime-static/footer/public-institution.png\n          test -f runtime-static/footer/wechat-qr.png\n'''
+          new_prepare = '''      - name: 准备空 Runtime Static Root\n        run: |\n          sudo rm -rf runtime-static runtime-uploads\n          mkdir -p runtime-static runtime-uploads\n          test ! -e runtime-static/health/baseline.png\n'''
+          if old_prepare not in text:
+              raise SystemExit('Review initial static prepare anchor missing')
+          text = text.replace(old_prepare, new_prepare, 1)
+          reset_old = '''          sudo rm -rf runtime-static runtime-uploads\n          mkdir -p runtime-static runtime-uploads\n          cp -a site-baseline/static/. runtime-static/\n'''
+          reset_new = '''          sudo rm -rf runtime-static runtime-uploads\n          mkdir -p runtime-static runtime-uploads\n          test ! -e runtime-static/health/baseline.png\n'''
+          if reset_old not in text:
+              raise SystemExit('Review reset static anchor missing')
+          text = text.replace(reset_old, reset_new, 1)
+          text = text.replace('CMS_STATIC_ROOT=/static-baseline', 'CMS_STATIC_ROOT=/runtime-static')
+          text = text.replace(':/static-baseline"', ':/runtime-static"')
+          path.write_text(text, encoding='utf-8')
+          PY
+
+          cat >> docs/technical/cms-site-package-boundary.md <<'EOF'
+
+          ## Slice C：稳定资源 Ownership 与 Runtime Projection（EU-42）
+
+          - JilinJobs 稳定静态资源的唯一版本化 owner 为 `sites/jilinjobs/assets/**`；原 `site-baseline/static/**` ownership 不再存在。
+          - `sites/jilinjobs/assets/manifest.json` 声明 `packageId`、asset schemaVersion，以及每个稳定资源的 package-root `source`、公开 `/static/**` `target` 与 SHA-256。
+          - Backend 通过 site-neutral `SitePackageAssetManifestLoader` 校验 identity、路径边界、target 唯一性、`/static/uploads/**` 排除和源文件 digest；失败时拒绝启动对应 Site Package composition。
+          - `SitePackageAssetProjector` 仅对缺失 target 执行 create-if-missing；已存在普通文件永不由启动过程覆盖。显式后台 replace 因此可跨重启保留；未来 force-upgrade 不属于本 Slice。
+          - Site Package target 自动加入 `StaticResourceService` protected-path 集合：普通删除拒绝，显式 replace 保持允许；`/static/uploads/**` 继续属于可变 Runtime Store。
+          - CI / Review Environment 以空 `CMS_STATIC_ROOT` 启动，并由同一个 `CMS_SITE_PACKAGE_ROOT` 同时提供 structure、bootstrap 与 stable assets；不再执行独立静态 baseline copy。
+          EOF
+
+          cat >> docs/technical/verification-strategy.md <<'EOF'
+
+          ## EU-42 Site Package Asset Projection Verification
+
+          Slice C 的稳定资源交付必须在 exact head 上同时证明：
+
+          - `verifySitePackageAssets`：asset manifest identity / path / duplicate-target / SHA-256 fail-fast；fresh projection；重复 projection 幂等；缺失 target create-if-missing；operator replace 跨 projection / restart 保留；package target 普通删除拒绝而显式 replace 允许；`/static/uploads/**` 不被接管；代表性 Main / Party / brand 资源可由静态资源公开解析。
+          - `verifyRuntimeSitePackageComposition`：普通 Runtime composition 同时收敛 stable structure 与 stable asset projection，且第二次启动保持幂等。
+          - `Site Package Verification` workflow：覆盖 provisioning、stable structure、runtime composition、bootstrap separation 与 asset projection，并在 provisioning / static-resource / `sites/**` 变化时触发。
+          - 主 `CI` Integrated Browser：从空 Runtime Static Root 启动 Backend，由 Site Package projection 恢复 `/static/**` 后再执行 Public / Admin 浏览器验证。
+          - `人工评审环境`：初始化与 clean reset 均从空 Runtime Static Root 组合 Site Package，不得复制 legacy `site-baseline/static/**`。
+          EOF
+
+          rm -f .github/workflows/eu42-asset-digest.yml .github/workflows/eu42-apply.yml
+
+          test ! -e site-baseline/static
+          test -f sites/jilinjobs/assets/manifest.json
+          test -f sites/jilinjobs/assets/home/header-banner.png
+          test -f sites/jilinjobs/assets/party/party-header-banner.jpg
+          test "$(jq '.assets | length' sites/jilinjobs/assets/manifest.json)" -eq 31
+          ! grep -R "site-baseline/static" .github/workflows backend/src/main backend/src/test
+          grep -q 'verifySitePackageAssets' backend/build.gradle.kts
+          grep -q 'SitePackageAssetProjector' backend/src/main/kotlin/com/jilinjobs/cms/provisioning/SitePackageAssets.kt
+
+      - name: Compile and run backend unit tests
+        working-directory: backend
+        run: gradle clean test testClasses --no-daemon
+      - name: Commit implementation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "dygapp"
+          git config user.email "dygapp@qq.com"
+          git add -A
+          git diff --cached --check
+          git status --short
+          git commit -m "feat: project Site Package assets at runtime"
+          git push origin HEAD:feature/eu-42-site-asset-runtime-projection
