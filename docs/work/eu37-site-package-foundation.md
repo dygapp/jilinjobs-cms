@@ -10,9 +10,12 @@
 - Planning integration：PR #78
 - Execute baseline：`main@01073b131fef5c2e978060c55a4f50bcbc8b2fc4`
 - Baseline Post-Integration CI：#731 / run `34015839251`，Backend / Public / Admin / Integrated Browser PASS
-- Status：**EXECUTING**
+- Implementation PR：#79
+- Verified implementation Head：`0d52343079da5e75dfa88cb79544328e1314907c`
+- Implementation CI：#733 / run `34016519207`，Backend / Public / Admin / Integrated Browser PASS
+- Status：**READY TO INTEGRATE**
 
-EU-37 由 Issue #77 的 Slice Work 在 Planning Authority 集成后形成。Identifier 只承担追踪；Readiness Check 已在 Issue #77 记录为 PASS，因此本 Unit 获得 Execute 权限。
+EU-37 由 Issue #77 的 Slice Work 在 Planning Authority 集成后形成。Identifier 只承担追踪；Readiness Check 已在 Issue #77 记录为 PASS，因此本 Unit 获得 Execute 权限。当前实现与 exact-head 验证已闭环，但在 PR 合并并取得 `main` Post-Integration Verification 前不得标记 COMPLETED。
 
 ## 2. Intent
 
@@ -67,15 +70,15 @@ EU-37 是 Foundation proof，不迁移当前完整 JilinJobs Site baseline。
 
 | Obligation | EU-37 Evidence |
 |---|---|
-| package identity/version/integrity | manifest + loader preflight |
+| package identity/version/integrity | manifest + loader preflight + `SitePackageLoaderTest` |
 | stable Column identity | alias-based mapper/provisioner |
 | dependency resolution | parentAlias → parent runtime id |
 | controlled preset creation | insert writes `preset=true` |
 | operator data isolation | same-alias non-preset conflict + unrelated runtime preservation |
 | idempotent apply | second apply returns unchanged |
-| Fresh Generic Schema proof | MySQL + Flyway target=1 verification task |
-| no V2 responsibility migration | final diff audit |
-| no renderer/product behavior change | full repository CI / Integrated Browser |
+| Fresh Generic Schema proof | MySQL 8.4 + Flyway target=1 verification task |
+| no V2 responsibility migration | final changed-file / diff audit |
+| no renderer/product behavior change | CI #733 Public/Admin build + Integrated Browser PASS |
 
 ## 6. Readiness
 
@@ -93,7 +96,7 @@ Contract、preflight、persistence 与真实 Fresh-schema proof 必须共同存�
 
 ### Verification feasibility — PASS
 
-CI 可为 Backend job 提供独立 MySQL database，并通过 `spring.flyway.target=1` 保证验证数据库只包含 Generic Schema；测试 fixture 不进入正式 Runtime Authority。
+CI 为 Backend job 提供独立 MySQL database，并通过 `spring.flyway.target=1` 保证验证数据库只包含 Generic Schema；测试 fixture 不进入正式 Runtime Authority。
 
 ### Baseline — PASS
 
@@ -103,19 +106,120 @@ CI 可为 Backend job 提供独立 MySQL database，并通过 `spring.flyway.tar
 
 EU-37 不接管 V2 当前正式 baseline responsibility，不做数据删除或 binary relocation；失败可直接放弃 feature branch，不影响 accepted Runtime recovery path。
 
-## 7. Completion Gate
+## 7. Execute / Convergence Evidence
 
-- manifest / columns schemas 与 runtime preflight 一致；
-- invalid path/digest/duplicate/cycle 会失败；
-- Fresh V1-only schema 能 provision parent/child fixture；
-- package-created Column 为 `preset=true`；
-- second apply 无 insert/update；
-- same stable alias 的 `preset=false` object 不被接管；
-- unrelated operator-created Column second apply 后保持原值与 `preset=false`；
-- Backend unit tests PASS；
-- real MySQL Foundation verification PASS；
-- Backend full test + bootJar PASS；
-- Public/Admin builds 与 Integrated Browser regression PASS；
-- final diff 不包含 V2 baseline migration、正式 Site content、asset relocation、Public framework change 或 deferred architecture；
-- PR exact-head Current Evidence 完整；
-- 合并后需要 `main` Post-Integration Verification 才能标记 COMPLETED。
+### 7.1 Site Package contract 与 preflight — PASS
+
+Repository 新增：
+
+- `sites/schemas/manifest-v1.schema.json`；
+- `sites/schemas/columns-v1.schema.json`；
+- `SitePackageLoader`；
+- Foundation test fixture。
+
+`SitePackageLoaderTest` 自动验证：
+
+1. 合法 package + digest 可加载；
+2. 即便外部文件 digest 正确，`../` path traversal 仍被拒绝；
+3. digest mismatch 被拒绝；
+4. duplicate stable alias 被拒绝；
+5. cyclic parent relationship 被拒绝。
+
+CI #733 Backend `clean test bootJar` PASS，证明上述 preflight tests 与全量 Backend tests 同时通过。
+
+### 7.2 Controlled Provisioning — PASS
+
+`SitePackageProvisioner` 使用窄 `SitePackageColumnMapper`：
+
+- `alias` 是首轮 stable identity；
+- `parentAlias` 在 apply 前解析为 Runtime parent ID；
+- 新 package object 写入 `preset=true`；
+- existing preset 只 reconcile mutable fields，不改变 stable alias；
+- same alias 的 `preset=false` object 返回 conflict，不被 package 接管；
+- package 外 Runtime object 不执行 broad delete / reset；
+- package 缺失项不触发自动 deprovision。
+
+`SitePackageProvisionerTest` 覆盖 parent/child、second apply idempotency、non-preset collision 与 preset reconcile。
+
+### 7.3 Real MySQL V1-only Foundation Verification — PASS
+
+CI #733 Backend job 使用 MySQL 8.4 独立数据库 `jilinjobs_site_package`，执行：
+
+```text
+spring.flyway.target=1
+→ V1__current_cms_schema.sql
+→ Site Package Foundation first apply
+→ ordinary ColumnService creates operator fixture
+→ Site Package Foundation second apply
+```
+
+该验证没有应用 V2 Site baseline。CI 日志证明 Flyway 从 Empty Schema 只迁移到 `v1`。
+
+Foundation summary：
+
+```text
+first apply:
+  inserted = 2
+  updated = 0
+  unchanged = 0
+  conflicts = 0
+
+second apply:
+  inserted = 0
+  updated = 0
+  unchanged = 2
+  conflicts = 0
+
+operatorPreset = false
+```
+
+由此证明：Generic Schema 可以独立承载 Site Package provision；parent relationship 正确；package structure 获得 preset protection；second apply 幂等；普通 Runtime data 不被误提升为 preset。
+
+### 7.4 Repository Regression — PASS
+
+PR #79 implementation Head `0d52343079da5e75dfa88cb79544328e1314907c` 的 CI #733 / run `34016519207`：
+
+- Backend full tests + bootJar：PASS；
+- EU-37 real MySQL Foundation verification：PASS；
+- Public frontend build：PASS；
+- Admin frontend build：PASS；
+- Public Browser regression：PASS；
+- Admin Browser regression：PASS；
+- Integrated Browser verification：PASS。
+
+因此 EU-37 Foundation 没有改变当前 V2 正式站点 Runtime、Public Renderer、Admin 产品行为或 Gateway contract。
+
+### 7.5 Final Scope Audit — PASS
+
+PR #79 在 verified implementation Head 上的 changed-file audit 只包含：
+
+- Site Package production Foundation；
+- Site Package unit / real-DB verification；
+- test fixture；
+- generic Site Package JSON schemas / README；
+- Backend Gradle / CI verification entry；
+- 本 EU Work Authority。
+
+确认未修改：
+
+- `V2__current_preset_data.sql`；
+- 正式 JilinJobs Site baseline 数据；
+- `frontend/public-site/**` production source；
+- `frontend/admin/**` production source；
+- `site-baseline/static/**`；
+- `data-migrations/party/**` canonical dataset；
+- E1～E3 产品内容；
+- Repository split / Submodule / multi-site / plugin framework 等 deferred architecture。
+
+## 8. Integration Gate
+
+EU-37 implementation 已完成并取得 current implementation evidence，当前状态为 **READY TO INTEGRATE**。
+
+合并 PR #79 前必须继续满足：
+
+1. PR 最终 exact Head 的 Current CI PASS；
+2. 若仅新增本 Work Evidence 造成 Head 前移，必须重新取得该最终 Head 的 CI；
+3. final diff scope 继续不扩大；
+4. 按 Repository Authority 由人工决定是否合并。
+
+PR 合并后必须取得新 `main` Post-Integration CI，并同步 Roadmap / Issue #77；只有届时 EU-37 才可标记 **COMPLETED**，随后才能从最新 `main` 推进 Slice B。
