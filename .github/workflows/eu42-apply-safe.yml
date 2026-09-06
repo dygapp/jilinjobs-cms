@@ -1,6 +1,6 @@
 name: EU-42 Apply Safe
 
-# Retry from the latest repository head after connector-managed workflow updates.
+# Apply the already-validated implementation while isolating connector-managed workflow state.
 on:
   push:
     branches:
@@ -43,6 +43,10 @@ jobs:
               script.append(line[10:] if line.startswith('          ') else line)
           Path('/tmp/eu42-apply.sh').write_text('\n'.join(script) + '\n', encoding='utf-8')
           PY
+          # The implementation script also contains the intended final workflow edits.
+          # Recreate its original workflow anchor only in the runner worktree; the commit step
+          # restores .github/workflows to the connector-managed branch state before staging.
+          git show origin/main:.github/workflows/site-package-verification.yml > .github/workflows/site-package-verification.yml
           bash /tmp/eu42-apply.sh
       - name: Compile and run backend unit tests
         working-directory: backend
