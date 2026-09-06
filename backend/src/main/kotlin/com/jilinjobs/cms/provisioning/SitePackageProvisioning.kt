@@ -696,17 +696,18 @@ class SitePackageProvisioner(private val loader: SitePackageLoader, private val 
                 openMode == target.openMode && iconPath == target.iconPath && sortOrder == target.sortOrder && enabled == target.enabled
     }
 
+    private fun ResultSet.navigation() = ExistingNavigation(
+        getLong("id"), getString("code"), nullableLong("parent_id"), getString("name"), getString("position"), getString("category"),
+        getString("target_type"), nullableLong("target_column_id"), nullableLong("target_page_id"), getString("target_url"), getString("open_mode"), getString("icon_path"),
+        getInt("sort_order"), getBoolean("enabled"), getBoolean("preset"),
+    )
+
     private enum class Result { CREATED, UPDATED, UNCHANGED }
     private data class Counts(var created: Int = 0, var updated: Int = 0, var unchanged: Int = 0) {
         fun add(result: Result) = when (result) { Result.CREATED -> created++; Result.UPDATED -> updated++; Result.UNCHANGED -> unchanged++ }
     }
 }
 
-private fun ResultSet.navigation() = SitePackageProvisioner.ExistingNavigation(
-    getLong("id"), getString("code"), nullableLong("parent_id"), getString("name"), getString("position"), getString("category"),
-    getString("target_type"), nullableLong("target_column_id"), nullableLong("target_page_id"), getString("target_url"), getString("open_mode"), getString("icon_path"),
-    getInt("sort_order"), getBoolean("enabled"), getBoolean("preset"),
-)
 private fun ResultSet.nullableLong(column: String): Long? = getLong(column).let { if (wasNull()) null else it }
 private fun pageIdentity(groupAlias: String?, alias: String): String = "${groupAlias ?: "<root>"}:$alias"
 
