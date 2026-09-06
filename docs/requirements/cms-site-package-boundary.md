@@ -5,8 +5,8 @@
 - Candidate source: GitHub Issue #77
 - Stage: Requirement Authority — ACTIVE / PARTIALLY IMPLEMENTED
 - Completed implementation: EU-37 / EU-38
-- Current Ready Execution Unit: NONE
-- Remaining scope: Slice B remainder / Slice C / Slice D 继续保持 Planning / Requirement Candidate
+- Current Ready Execution Unit: `EU-39 — Navigation Stable Identity & Site Package Reconcile`，实现与 exact-head verification 已完成，等待 Integration Gate
+- Remaining scope after EU-39: V2/default Runtime composition convergence / Slice C / Slice D 继续保持 Planning / Requirement Candidate
 - Scope: E1～E3 前置的 CMS 通用化、站点实例数据所有权与 Public Renderer 可替换边界
 
 ## Intent
@@ -67,8 +67,12 @@
 - EU-37 已建立 Site Package v1 manifest/schema、narrow provisioner、Fresh V1 Generic Schema MySQL proof、second apply idempotency 与 ownership conflict contract；
 - EU-38 已将 Column、PageGroup、Page、NavigationLocation、SiteConfig、CmsList definition、AdvertisementSlot 七类具有 stable identity 的 JilinJobs preset structure 表达进 `sites/jilinjobs/**`；
 - EU-38 已证明 Fresh `V1 + Site Package` 与 Legacy `V1+V2 + Site Package` 在上述 stable structural scope 上等价；
-- `V2__current_preset_data.sql` 在 EU-38 中保持不变，因此默认 Runtime compatibility responsibility 尚未移除；
-- NavigationItem、CmsListItem / Advertisement operational members、`site-baseline/static/**` 与 canonical migration compatibility 仍属于 Issue #77 后续边界；
+- EU-39 current audit 已证明 NavigationItem 的 `name`、parent/location、sort 与 target 都属于可变字段，现有字段组合不能形成长期稳定且无歧义的 logical identity，因此正式引入 provisioning-only nullable stable `code`；
+- EU-39 已把当前 40 条正式 preset NavigationItem 表达为 `sites/jilinjobs/structure/navigation-items.json`，并证明 Fresh create、Legacy V2 原位无歧义 adoption、second apply idempotency、stable-code rename/move/reorder/retarget restore 与 ambiguous-adoption transaction rollback；
+- EU-39 exact-head implementation candidate `027e486fc9fd41da90430653d4816d311d212207` 已通过 Site Package Verification #9、CI #755（Backend / Public / Admin / Integrated Browser）、Canonical #146 与 EU-30 Upgrade #96；
+- operator-created NavigationItem 继续保持 `preset=false / code=NULL`，CmsListItem / Advertisement operational members 未被 Site Package 接管；
+- `V2__current_preset_data.sql` 在 EU-39 仍保持不变，因此默认 Runtime compatibility responsibility **尚未移除**；
+- `site-baseline/static/**` 与完整 canonical migration compatibility / E1～E3 re-entry 仍属于 Issue #77 后续边界；
 - `data-migrations/README.md` 已明确 Historical Content Migration 与 Flyway / Site Baseline 分离。
 
 ## Non-goals / Deferred
@@ -89,12 +93,14 @@
 
 ## Current Follow-up Direction
 
-EU-37 / EU-38 已完成 Requirement 的 Foundation 与 stable-identity structure portion。Issue #77 当前剩余工作必须重新经过 current audit / slice-work / readiness-check，重点包括：
+EU-37 / EU-38 已完成 Foundation 与七类 stable structure；EU-39 已完成 NavigationItem stable identity / reconcile 的实现与集成前验证。PR #84 合并及 Post-Integration Verification 前，EU-39 状态仍为 `READY TO INTEGRATE`，不得提前声明 COMPLETED。
 
-1. NavigationItem 是否可以用现有字段形成长期稳定 logical identity；若不能，才回到 Requirement / Specification 判断是否需要稳定 identity 字段；
-2. `V2__current_preset_data.sql` 与默认 Runtime bootstrap 的剩余 responsibility 如何在 Fresh / Existing DB compatibility 证据下显式收敛；
-3. `site-baseline/static/**` 的 Site Package ownership 如何在 manifest / Runtime / CI / Review Environment 中显式组合，物理移动仅在有真实必要时执行；
-4. Party canonical migration、183 篇 current Runtime Dataset 与 accepted carousel state 如何证明对 Site Package contract 兼容；
-5. 完成上述 compatibility 后，如何解除 Issue #60 / E1～E3 的前置等待并重新进入 Planning。
+Issue #77 在 EU-39 后剩余工作必须重新经过 current audit / slice-work / readiness-check，重点包括：
 
-这些方向当前都不是 Ready Execution Unit，也不预设新的 EU Identifier。
+1. `V2__current_preset_data.sql` 与默认 Runtime bootstrap 的剩余 responsibility 如何从 implicit Site bootstrap 显式收敛到 Site Package，并同时证明 Fresh / Existing DB、idempotency、Public/Admin 与 canonical compatibility；
+2. `site-baseline/static/**` 的 Site Package ownership 如何在 manifest / Runtime / CI / Review Environment 中显式组合，物理移动仅在有真实必要时执行；
+3. Party canonical migration、183 篇 current Runtime Dataset 与 accepted carousel state 如何证明对完整 Site Package lifecycle contract 兼容；
+4. 完成上述 compatibility 后，如何解除 Issue #60 / E1～E3 的前置等待并重新进入 Planning；
+5. 四层 boundary 完成后再单独执行 Repository Split Readiness Assessment。
+
+这些剩余方向当前都不是 Ready Execution Unit，也不继承 EU-39 的 Identifier 或 Execute 授权。
