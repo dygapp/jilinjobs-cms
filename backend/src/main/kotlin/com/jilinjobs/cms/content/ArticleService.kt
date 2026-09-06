@@ -77,7 +77,7 @@ class ArticleService(
             article.columnId,
             column.name,
             article.title,
-            RichTextHtmlPolicy.sanitize(article.bodyHtml),
+            projectPublicBodyHtml(RichTextHtmlPolicy.sanitize(article.bodyHtml), article.bodyImageResourceIds),
             article.source,
             article.publishDate,
             article.bodyImageResourceIds,
@@ -136,6 +136,14 @@ class ArticleService(
             throw ArticleValidationException("当前栏目要求文章设置封面图片，补充封面后才能发布")
         }
     }
+
+    private fun projectPublicBodyHtml(sanitizedHtml: String, bodyImageResourceIds: List<Long>): String =
+        bodyImageResourceIds.distinct().fold(sanitizedHtml) { html, resourceId ->
+            html.replace(
+                "src=\"/api/admin/resources/$resourceId/content\"",
+                "src=\"/api/public/resources/$resourceId/content\"",
+            )
+        }
 
     private fun summary(article: CmsArticle): PublicArticleSummary {
         val column = columnQuery.find(article.columnId)
