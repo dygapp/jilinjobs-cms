@@ -96,9 +96,12 @@ jobs:
             -e DB_PASSWORD=root \
             -e CMS_STATIC_ROOT=/static-baseline \
             -e CMS_STORAGE_ROOT=/uploads \
+            -e CMS_SITE_PACKAGE_ROOT=/site-package \
+            -e CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true \
             -v "$GITHUB_WORKSPACE/backend/build/libs:/app:ro" \
             -v "$GITHUB_WORKSPACE/runtime-static:/static-baseline" \
             -v "$GITHUB_WORKSPACE/runtime-uploads:/uploads" \
+            -v "$GITHUB_WORKSPACE/sites/jilinjobs:/site-package:ro" \
             eclipse-temurin:21-jre-alpine-3.23 \
             java -jar /app/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar
 
@@ -110,7 +113,7 @@ jobs:
 
           docker run -d --name cms-frontend --network host \
             -v "$GITHUB_WORKSPACE/frontend/public-site/dist:/usr/share/nginx/html/public:ro" \
-            -v "$GITHUB_WORKSPACE/frontend/admin/dist:/usr/share/nginx/html/admin:ro" \
+            -v "$GITHUB_WORKSPACE/admin/dist:/usr/share/nginx/html/admin:ro" \
             -v "$GITHUB_WORKSPACE/frontend/nginx.e2e.conf:/etc/nginx/nginx.conf:ro" \
             nginx:1.29.8-alpine
 
@@ -180,9 +183,12 @@ jobs:
             -e DB_PASSWORD=root \
             -e CMS_STATIC_ROOT=/static-baseline \
             -e CMS_STORAGE_ROOT=/uploads \
+            -e CMS_SITE_PACKAGE_ROOT=/site-package \
+            -e CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true \
             -v "$GITHUB_WORKSPACE/backend/build/libs:/app:ro" \
             -v "$GITHUB_WORKSPACE/runtime-static:/static-baseline" \
             -v "$GITHUB_WORKSPACE/runtime-uploads:/uploads" \
+            -v "$GITHUB_WORKSPACE/sites/jilinjobs:/site-package:ro" \
             eclipse-temurin:21-jre-alpine-3.23 \
             java -jar /app/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar
 
