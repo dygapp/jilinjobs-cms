@@ -1,12 +1,14 @@
 {
   "packageId": "jilinjobs",
   "schemaVersion": 1,
-  "version": "0.1.0-foundation",
+  "version": "0.2.0-stable-structure",
   "structure": [
-    {
-      "type": "columns",
-      "path": "structure/columns.json",
-      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
-    }
+    {"type":"columns","path":"structure/columns.json","sha256":"3d1370bd476d915bfec1ca153c0e9121205d5318e50c7ad923a992299ac960a1"},
+    {"type":"page-groups","path":"structure/page-groups.json","sha256":"613b9c1fca20ef21d96d66977e326247727a9bae6b1fcfe695981139cf5c4e7c"},
+    {"type":"pages","path":"structure/pages.json","sha256":"6e3832414f72ee32385bd5fd99678995f2e7199b5f37690a4b6a8dfcbc398b77"},
+    {"type":"navigation-locations","path":"structure/navigation-locations.json","sha256":"f242dca2f41595fc204e1cb5e8a6205094f5ce0e695110cc8d9a33f34ae6a23c"},
+    {"type":"site-config","path":"structure/site-config.json","sha256":"b4aa7dd8ec6829b169092e3d920bffc31b8d1428f7215f30e6e99a3775566499"},
+    {"type":"lists","path":"structure/lists.json","sha256":"4200c0bd1e38c07f78daba1908c05a51c2ddfce01fa410db22edd34dd61984fe"},
+    {"type":"advertisement-slots","path":"structure/advertisement-slots.json","sha256":"b6e8bd1d7cbfc9477bf1e2ae6880a1cc33023a35021bbd43e8671e81b43a4edd"}
   ]
 }
