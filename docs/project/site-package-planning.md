@@ -4,20 +4,15 @@
 
 Issue #77 仍是 Issue #60 / E1～E3 主站正式内容工作前的前置架构收敛入口。
 
-已集成：
+已完成并集成：
 
 - Slice A：**EU-37 — Site Package Contract & Provisioner Foundation**；
 - Slice B stable structure：**EU-38 — Stable Site Structure Package Migration**；
 - Slice B Navigation identity：**EU-39 — Navigation Stable Identity & Site Package Reconcile**；
-- Slice B Runtime composition：**EU-40 — Explicit Site Package Runtime Composition Activation**。
+- Slice B Runtime composition：**EU-40 — Explicit Site Package Runtime Composition Activation**；
+- Slice B operational bootstrap / schema separation：**EU-41 — Site Bootstrap & Generic Schema Baseline Separation**。
 
-当前 Ready / executing Unit：
-
-- **EU-41 — Site Bootstrap & Generic Schema Baseline Separation**；
-- Readiness Authority：Issue #77 `#issuecomment-5560955644`；
-- Branch：`feature/eu-41-site-bootstrap-baseline-separation`；
-- Draft PR：#88；
-- Execution base：`main@b20dd7a22daa5270692d3273d1c7309bfc050a69`。
+当前没有 Ready / executing Execution Unit。Issue #77 保持 OPEN。
 
 四层长期边界保持：Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer。
 
@@ -33,9 +28,9 @@ Issue #77 仍是 Issue #60 / E1～E3 主站正式内容工作前的前置架构�
 
 EU-40 final / post-integration evidence 已完成并集成。EU-40 有意保留旧 V2 compatibility baseline，为后续 operational seed classification 留出边界。
 
-## EU-41 — 当前执行范围
+### EU-41 — Site bootstrap / Generic Schema baseline separation
 
-EU-40 后 audit 已完成七条剩余 operational seed 分类：
+EU-40 后 audit 完成七条剩余 operational seed 分类：
 
 - 6 条 `CmsListItem`；
 - 1 条 `Advertisement`；
@@ -46,7 +41,7 @@ EU-40 后 audit 已完成七条剩余 operational seed 分类：
 
 用户进一步明确：Backend Schema migration 与 Site data initialization 必须走独立演进路线，不能通过共享 Flyway V1/V2/V3 排号继续形成隐性耦合。
 
-因此 EU-41 采用：
+EU-41 已实现并接受：
 
 ```text
 Generic CMS Backend
@@ -62,7 +57,7 @@ optional Historical Canonical Migration
 Runtime
 ```
 
-### Backend migration target
+Backend active migration target：
 
 ```text
 backend/src/main/resources/db/migration/
@@ -70,11 +65,11 @@ backend/src/main/resources/db/migration/
 └─ V2__site_provisioning_schema_capabilities.sql
 ```
 
-新的 V2 只承担 Generic Schema capabilities：Navigation stable identity + site-neutral bootstrap-state。JilinJobs data 不再占用 Backend migration number。
+新的 V2 只承担 Generic Schema capabilities：Navigation stable identity + site-neutral bootstrap-state。JilinJobs data 不再占用 Backend migration number。`V2__current_preset_data.sql` 已退出 active Flyway lineage。
 
-EU-41 集成后下一次 Generic Schema change 从 V3 继续 append-only。
+从 EU-41 accepted integration baseline 起，下一次 Generic Schema change 从 V3 继续 append-only。
 
-### Site bootstrap target
+Site bootstrap target：
 
 ```text
 sites/jilinjobs/bootstrap/
@@ -82,37 +77,42 @@ sites/jilinjobs/bootstrap/
 └─ initial-data.sql
 ```
 
-Bootstrap 没有 migration version sequence；artifact 始终适配 current compatible CMS Schema。
+Bootstrap 没有 migration version sequence；artifact 始终适配 current compatible CMS Schema。完成状态通过 generic `(packageId, bootstrapId)` state 记录，不使用 `flyway_schema_history`。完成后普通 Runtime reconcile 不再执行 bootstrap，因此 operator edit/delete 不会被 overwrite / resurrect。
 
-完成状态通过 generic `(packageId, bootstrapId)` state 记录，不使用 `flyway_schema_history`。完成后普通 Runtime reconcile 不再执行 bootstrap，因此 operator edit/delete 不会被 overwrite / resurrect。
+## EU-41 Verification / Integration Closure
 
-## EU-41 Verification Gate
+Readiness Authority：Issue #77 `#issuecomment-5560955644`。
 
-必须同时通过：
+Final implementation Head：`a958c39a37892cf0fbcb41b8c883b2299d84f561`。
 
-1. Generic CMS Fresh DB 无 JilinJobs instance data；
-2. stable Site Package first apply = current 98 objects；
-3. first bootstrap = 6 ListItems + 1 Advertisement；
-4. repeated bootstrap = already applied / no duplicate；
-5. operator edit/delete 后 ordinary restart 与 repeated explicit bootstrap 均 no overwrite / no resurrection；
-6. Site bootstrap 不进入 Backend Flyway history；
-7. Repository CI Public/Admin/Integrated Browser 行为保持；
-8. Canonical Migration Verification；
-9. EU-30 Migration Upgrade Verification；
-10. Review Environment Fresh lifecycle；
-11. final diff scope / Authority consistency。
+Exact-head evidence：
 
-PR #88 initial Head `830f620cbe22c474ef27045db49aa9cc27e030c2` 的 Site Package Verification #21 已 PASS。Final promotion / integration 仍以 PR final Head evidence 为准。
+- Site Package Verification #32 — **PASS**；
+- Repository CI #783 — **PASS**；
+- Canonical Migration Verification #165 — **PASS**；
+- EU-30 Migration Upgrade Verification #115 — **PASS**；
+- Review Environment #696 — **PASS**；
+- unresolved review threads — **NONE**；
+- Integration 前 base drift — **NONE**。
 
-## EU-41 后剩余 Planning 范围
+PR #88 已合并，Integration commit：`main@6c88eea1762e8edf465833631cadff1e4c751d36`。
 
-EU-41 完成后 Issue #77 剩余：
+Post-Integration evidence：
+
+- Site Package Verification #33 — **PASS**；
+- Repository CI #784 — **PASS**。
+
+因此 EU-41 状态为 **COMPLETED**。Operational Seed Classification & V2 Responsibility Retirement 已关闭，不再是后续 Planning Candidate。
+
+## 当前剩余 Planning 范围
+
+Issue #77 当前只保留：
 
 1. **Slice C — Site Asset Ownership & Runtime Composition**：让稳定 Site assets 的 package/manifest/runtime ownership 显式化；是否移动 `site-baseline/static/**` 只根据真实 ambiguity 决定。
 2. **Slice D — Canonical Migration Compatibility & E1～E3 Re-entry**：在最终 Site Package + asset lifecycle 上关闭 Party/Main canonical compatibility，并判断 Issue #60 / E1～E3 是否解除前置等待。
 3. **Repository Split Readiness Assessment**：仅在四层 boundary 完成后独立评估，不自动拆仓。
 
-上述均不是当前 Ready EU，不继承 EU-41 execute authority。
+上述均不是当前 Ready EU，不继承 EU-41 execute authority。下一步必须基于最新 `main` 重新执行 current audit / slice-work / readiness-check。
 
 ## 规划边界
 

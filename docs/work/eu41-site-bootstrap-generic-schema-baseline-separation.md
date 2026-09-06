@@ -14,9 +14,11 @@
 
 - Execution Unit: **EU-41**
 - Readiness: **PASS**
-- Implementation: **IN PROGRESS**
-- Branch: `feature/eu-41-site-bootstrap-baseline-separation`
-- Pull Request: #88
+- Implementation: **COMPLETED**
+- Implementation Branch: `feature/eu-41-site-bootstrap-baseline-separation`
+- Pull Request: #88 — MERGED
+- Final implementation Head: `a958c39a37892cf0fbcb41b8c883b2299d84f561`
+- Integration commit: `main@6c88eea1762e8edf465833631cadff1e4c751d36`
 
 ## Intent
 
@@ -117,7 +119,7 @@ EU-31 完成后曾恢复 append-only migration discipline，但 EU-31 Requiremen
 EU-41 使用该既有边界执行一次受控 baseline replacement：
 
 - 旧 Backend V2 site data migration 退出 active Flyway lineage；
-- 旧 Backend V3 navigation schema migration 被新的 Generic V2 取代；
+- 旧 Backend V3 navigation schema migration被新的 Generic V2 取代；
 - pre-EU-41 development database 必须 recreate；
 - EU-41 集成后，Backend migration 再次恢复 append-only，从下一 Generic Schema change 使用 V3。
 
@@ -145,23 +147,59 @@ EU-41 使用该既有边界执行一次受控 baseline replacement：
 8. Canonical Party import / EU-30 upgrade / Public / Admin / Integrated Browser / Review Environment 在新 lifecycle 下保持可重复。
 9. 无 User-visible Product Intent change。
 
-## Current implementation evidence
+## Verification and Integration Evidence
 
-PR #88 initial implementation 已建立：
+### Final exact-head
 
-- `backend/.../V2__site_provisioning_schema_capabilities.sql`；
-- `cms_site_bootstrap_state`；
-- `SitePackageBootstrapper` / explicit bootstrap runtime switch / CLI；
-- `sites/jilinjobs/bootstrap/manifest.json`；
-- `sites/jilinjobs/bootstrap/initial-data.sql`；
-- Fresh / repeat / no-resurrection targeted verification；
-- CI Fresh Runtime explicit bootstrap；
-- Review Environment Fresh Runtime explicit Site Package + bootstrap composition。
+Final implementation Head：`a958c39a37892cf0fbcb41b8c883b2299d84f561`。
 
-Initial Head `830f620cbe22c474ef27045db49aa9cc27e030c2` 的 Site Package Verification #21 已 PASS。后续 exact-head evidence 以 PR #88 final Head 与 Actions 为准。
+该 exact Head 已取得：
+
+- Site Package Verification #32 — **PASS**；
+- Repository CI #783 — **PASS**，包含 Backend verify、Site Package foundation、ordinary Runtime composition、EU-41 bootstrap separation、Public browser 与 Admin browser；
+- Canonical Migration Verification #165 — **PASS**；
+- EU-30 Migration Upgrade Verification #115 — **PASS**；
+- Review Environment #696 — **PASS**，包含 Fresh Site Package + bootstrap Runtime、AI/Public/Admin Browser、clean reset、Party canonical import/runtime、外部 Public/Party/Admin 访问与 lease lifecycle；
+- unresolved review threads — **NONE**；
+- Integration 前 `main` 保持 `b20dd7a22daa5270692d3273d1c7309bfc050a69`，无 base drift。
+
+### Integration
+
+PR #88 已按 exact Head `a958c39a…` 合并，Integration commit：
+
+`main@6c88eea1762e8edf465833631cadff1e4c751d36`
+
+### Post-Integration
+
+该 Integration commit 已取得：
+
+- Site Package Verification #33 — **PASS**；
+- Repository CI #784 — **PASS**，包含 Backend、Public、Admin 与 Integrated Browser。
+
+因此 EU-41 的 implementation、integration 与 Post-Integration Current Evidence 均已闭环，状态为 **COMPLETED**。
+
+## Accepted Result
+
+EU-41 完成后，当前长期责任边界为：
+
+```text
+Backend Flyway
+  = Generic CMS Schema evolution only
+
+JilinJobs Site Package / structure
+  = stable site structure / config definitions
+
+JilinJobs Site Package / bootstrap
+  = Fresh install one-time operational defaults
+
+Historical Canonical Migration
+  = historical operational content / provenance
+```
+
+`V2__current_preset_data.sql` 已退出 active Backend Flyway lineage。原七条初始运营数据不再占用 Backend migration version，也不被错误提升为 Historical Migration provenance；它们在 Fresh Site bootstrap 后立即进入普通运营生命周期，并由 bootstrap-state 保证不会在后续 restart 或再次显式 bootstrap 时覆盖 / resurrect operator state。
 
 ## Rollback boundary
 
-PR 合并前可直接放弃 Feature Branch。
+EU-41 已完成 Integration。由于当前仍处于明确允许 development DB recreation 的基线阶段，pre-EU-41 development databases 应重建；不提供旧 V1/V2/V3 development history 的 in-place repair。
 
-合并后，由于当前仍处于明确允许 development DB recreation 的基线阶段，pre-EU-41 development databases 应重建；不提供旧 V1/V2/V3 development history 的 in-place repair。Repository Authority 一旦接受 EU-41 新 baseline，后续 Generic CMS Schema migration 恢复 append-only discipline。
+从 `main@6c88eea1762e8edf465833631cadff1e4c751d36` 起，Backend Generic CMS Schema migration 再次恢复 append-only discipline；下一次 Generic Schema change 使用 V3 或更高后续版本。
