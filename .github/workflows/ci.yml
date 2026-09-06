@@ -52,6 +52,13 @@ jobs:
           SITE_PACKAGE_VERIFY_DB_USERNAME: root
           SITE_PACKAGE_VERIFY_DB_PASSWORD: root
         run: gradle verifySitePackageFoundation --no-daemon
+      - name: Verify EU-40 Runtime Site Package composition
+        working-directory: backend
+        env:
+          SITE_PACKAGE_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/eu37_site_package?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          SITE_PACKAGE_VERIFY_DB_USERNAME: root
+          SITE_PACKAGE_VERIFY_DB_PASSWORD: root
+        run: gradle verifyRuntimeSitePackageComposition --no-daemon
       - name: Upload backend artifact
         uses: actions/upload-artifact@v7
         with:
@@ -167,8 +174,10 @@ jobs:
             -e DB_USERNAME=root \
             -e DB_PASSWORD=root \
             -e CMS_STATIC_ROOT=/static-baseline \
+            -e CMS_SITE_PACKAGE_ROOT=/site-package \
             -v "$GITHUB_WORKSPACE/backend-artifact:/app:ro" \
             -v "$GITHUB_WORKSPACE/runtime-static:/static-baseline" \
+            -v "$GITHUB_WORKSPACE/sites/jilinjobs:/site-package:ro" \
             eclipse-temurin:21-jre-alpine-3.23 \
             java -jar /app/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar
           for i in $(seq 1 60); do
