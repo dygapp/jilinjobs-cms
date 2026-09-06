@@ -36,12 +36,13 @@ fun main() {
         // Fresh Generic Schema path intentionally excludes V2 site bootstrap but includes V3 Core schema evolution.
         resetDatabase(dataSource, target = "1")
         applyNavigationIdentitySchema(dataSource)
-        insertOperatorNavigation(dataSource, "fresh-operator")
         val freshFirst = provisioner.apply(packageRoot)
         require(freshFirst.created == 98 && freshFirst.updated == 0 && freshFirst.unchanged == 0) {
             "Fresh V1+V3 first apply 结果异常：$freshFirst"
         }
         val freshSnapshot = structuralSnapshot(dataSource)
+        // Operator navigation requires a provisioned NavigationLocation because cms_navigation.position has a FK.
+        insertOperatorNavigation(dataSource, "fresh-operator")
         val freshSecond = provisioner.apply(packageRoot)
         require(freshSecond.created == 0 && freshSecond.updated == 0 && freshSecond.unchanged == 98) {
             "Fresh second apply 必须幂等：$freshSecond"
