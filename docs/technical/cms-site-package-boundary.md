@@ -15,8 +15,8 @@
 - Completed Execution Units：
   - `EU-37 — Site Package Contract & Provisioner Foundation`
   - `EU-38 — Stable Site Structure Package Migration`
-- Current Ready Execution Unit：
-  - `EU-39 — Navigation Stable Identity & Site Package Reconcile` — implementation / exact-head verification PASS，等待 Integration Gate
+  - `EU-39 — Navigation Stable Identity & Site Package Reconcile`
+- Current Ready Execution Unit：**NONE**
 - Issue #77：**OPEN**。EU-39 之后的 V2/default Runtime composition、Slice C、Slice D 仍是 Planning / Requirement Candidates，必须重新经过 `slice-work → readiness-check` 才能进入 Execute。
 
 ## Decision
@@ -25,9 +25,9 @@
 
 当前不拆 Git Repository，不替换 Public 技术栈，也不把 Site Definition 简单移动到 `data-migrations/`。先在单仓内建立可验证的逻辑 / 数据 ownership；完成后再以实际剩余耦合作为 Repository Split Readiness 的输入。
 
-EU-37 / EU-38 已证明 Site Package contract、narrow provisioner 与七类 stable site structures 可以独立于 Site-specific Flyway SQL 表达；EU-39 进一步完成 NavigationItem stable identity / package reconcile。**这些结果仍没有移除 V2 的默认 Runtime compatibility responsibility**，因此 Issue #77 尚未完成。
+EU-37 / EU-38 已证明 Site Package contract、narrow provisioner 与七类 stable site structures 可以独立于 Site-specific Flyway SQL 表达；EU-39 进一步完成 NavigationItem stable identity / package reconcile，并已集成到 `main` 取得 Post-Integration Current Evidence。**这些结果仍没有移除 V2 的默认 Runtime compatibility responsibility**，因此 Issue #77 尚未完成。
 
-## 1. Current state after EU-37 / EU-38 / EU-39 implementation
+## 1. Current state after EU-37 / EU-38 / EU-39
 
 ### 1.1 Generic CMS Core
 
@@ -203,7 +203,7 @@ NavigationItem loader 明确拒绝半残 target contract：
 
 Site Definition 不并入 `data-migrations/**`。
 
-EU-39 implementation Head `027e486fc9fd41da90430653d4816d311d212207` 已通过 Canonical Migration Verification #146 与 EU-30 Migration Upgrade Verification #96，证明新增 V3 schema / Navigation identity 没有破坏当前 canonical import 与 migration-only upgrade compatibility。
+EU-39 final implementation Head `b95285f5424d4df0b9f9943395e80332296754f7` 已通过 Canonical Migration Verification #152 与 EU-30 Migration Upgrade Verification #102；PR #84 合并后的 `main@36276ed65e6f3edbe96ffc18c01cf18ab924837b` 又通过 Site Package Verification #16 与 Repository CI #762，证明新增 V3 schema / Navigation identity 没有破坏当前 canonical import、migration-only upgrade compatibility 或 accepted Runtime behavior。
 
 这只证明 EU-39 变更的兼容性，不等于 Slice D 全部关闭；默认 Runtime composition 尚未改为显式 Site Package lifecycle。
 
@@ -282,16 +282,22 @@ CI 可以继续在当前 monorepo 中：
 - run canonical migration verification；
 - run Public/Admin/Integrated Browser tests。
 
-`.github/workflows/site-package-verification.yml` 与 Repository CI 互补。EU-39 implementation Head 的验证：
+EU-39 final implementation Head `b95285f5424d4df0b9f9943395e80332296754f7`：
 
-- Site Package Verification #9 / `34035259823`：PASS；
-- CI #755 / `34035260072`：Backend / Public / Admin / Integrated Public Browser / Integrated Admin Browser 全部 PASS；
-- Canonical #146 / `34035259816`：PASS；
-- EU-30 Upgrade #96 / `34035259770`：PASS。
+- Site Package Verification #15：PASS；
+- CI #761：Backend / Public / Admin / Integrated Public Browser / Integrated Admin Browser 全部 PASS；
+- Canonical #152：PASS；
+- EU-30 Upgrade #102：PASS；
+- 人工评审环境 #678：PASS。
 
-人工评审环境 workflow 的自动排队不是 EU-39 产品 Human Review gate；本 EU 不含视觉 / Product Intent 变更，Integration Gate 使用上述自动 Current Evidence 与 final diff/Authority review。
+PR #84 合并后的 `main@36276ed65e6f3edbe96ffc18c01cf18ab924837b`：
 
-## 9. Completed / active slices
+- Site Package Verification #16：PASS；
+- CI #762：Backend / Public / Admin / Integrated Public Browser / Integrated Admin Browser 全部 PASS。
+
+EU-39 不包含视觉 / Product Intent 变化，上述 Current Evidence 与 final diff/Authority review 足以关闭本 Unit。
+
+## 9. Completed slices
 
 ### Slice A — Site Package Contract & Provisioner Foundation
 
@@ -315,9 +321,9 @@ EU-38：**COMPLETED**。
 
 ### Slice B remainder — Navigation identity portion
 
-EU-39：**READY TO INTEGRATE**。
+EU-39：**COMPLETED**。
 
-已完成实现与 exact-head verification：
+完成：
 
 - Navigation provisioning-only stable code；
 - 40 条 JilinJobs NavigationItem Site Package representation；
@@ -326,9 +332,8 @@ EU-39：**READY TO INTEGRATE**。
 - stable-code reconcile；
 - ambiguous adoption rollback；
 - operator data non-takeover；
-- Canonical / Upgrade / Repository regression。
-
-在 PR #84 合并与 `main` Post-Integration Verification 前不得标记 COMPLETED。
+- Canonical / Upgrade / Repository regression；
+- PR #84 Integration 与 `main` Post-Integration Verification。
 
 ## 10. Remaining planning slices
 
@@ -406,7 +411,7 @@ EU-37～EU-39 Evidence 只证明其各自范围；后续改变 Runtime compositi
 
 ## 13. Rollback / responsibility boundary
 
-当前 V2 仍保留 accepted compatibility responsibility，因此 EU-39 的 stable identity / Site Package navigation 可以在不破坏默认 Runtime 的前提下独立集成。
+当前 V2 仍保留 accepted compatibility responsibility，因此 EU-39 的 stable identity / Site Package navigation 已在不破坏默认 Runtime 的前提下独立集成。
 
 未来一旦开始移除 V2 的 Site-specific responsibility，集成前必须同时拥有：
 
