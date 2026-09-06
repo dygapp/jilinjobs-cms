@@ -45,20 +45,27 @@ jobs:
       - name: Test and package backend
         working-directory: backend
         run: gradle clean test bootJar --no-daemon
-      - name: Verify EU-37 Site Package foundation
+      - name: Verify Site Package foundation
         working-directory: backend
         env:
           SITE_PACKAGE_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/eu37_site_package?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
           SITE_PACKAGE_VERIFY_DB_USERNAME: root
           SITE_PACKAGE_VERIFY_DB_PASSWORD: root
         run: gradle verifySitePackageFoundation --no-daemon
-      - name: Verify EU-40 Runtime Site Package composition
+      - name: Verify Runtime Site Package composition
         working-directory: backend
         env:
           SITE_PACKAGE_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/eu37_site_package?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
           SITE_PACKAGE_VERIFY_DB_USERNAME: root
           SITE_PACKAGE_VERIFY_DB_PASSWORD: root
         run: gradle verifyRuntimeSitePackageComposition --no-daemon
+      - name: Verify EU-41 Site bootstrap baseline separation
+        working-directory: backend
+        env:
+          SITE_PACKAGE_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/eu37_site_package?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          SITE_PACKAGE_VERIFY_DB_USERNAME: root
+          SITE_PACKAGE_VERIFY_DB_PASSWORD: root
+        run: gradle verifySiteBootstrapBaselineSeparation --no-daemon
       - name: Upload backend artifact
         uses: actions/upload-artifact@v7
         with:
@@ -175,6 +182,7 @@ jobs:
             -e DB_PASSWORD=root \
             -e CMS_STATIC_ROOT=/static-baseline \
             -e CMS_SITE_PACKAGE_ROOT=/site-package \
+            -e CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true \
             -v "$GITHUB_WORKSPACE/backend-artifact:/app:ro" \
             -v "$GITHUB_WORKSPACE/runtime-static:/static-baseline" \
             -v "$GITHUB_WORKSPACE/sites/jilinjobs:/site-package:ro" \

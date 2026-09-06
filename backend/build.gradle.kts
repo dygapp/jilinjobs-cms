@@ -67,28 +67,42 @@ tasks.register<JavaExec>("importPartyCarousel") {
 
 tasks.register<JavaExec>("provisionSitePackage") {
     group = "provisioning"
-    description = "Apply a versioned Site Package to an initialized CMS schema"
+    description = "Reconcile versioned stable Site Package structure against an initialized CMS schema"
     classpath = sourceSets["main"].runtimeClasspath
     mainClass.set("com.jilinjobs.cms.provisioning.SitePackageProvisioningKt")
 }
 
+tasks.register<JavaExec>("bootstrapSitePackage") {
+    group = "provisioning"
+    description = "Install stable Site Package structure and one-time current-schema operational defaults"
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("com.jilinjobs.cms.provisioning.SitePackageBootstrapCli")
+}
+
 tasks.register<JavaExec>("verifySitePackageFoundation") {
     group = "verification"
-    description = "Verify EU-37 Site Package provisioning against a real MySQL V1 generic schema"
+    description = "Verify Site Package provisioning against a real MySQL V1 generic schema"
     classpath = sourceSets["test"].runtimeClasspath
     mainClass.set("com.jilinjobs.cms.provisioning.SitePackageFoundationVerificationKt")
 }
 
 tasks.register<JavaExec>("verifyStableSiteStructure") {
     group = "verification"
-    description = "Verify EU-38 stable Site Package structure against Fresh V1 and legacy V1+V2 databases"
+    description = "Verify stable Site Package structure against the current Generic CMS schema"
     classpath = sourceSets["test"].runtimeClasspath
     mainClass.set("com.jilinjobs.cms.provisioning.StableSiteStructureVerificationKt")
 }
 
 tasks.register<JavaExec>("verifyRuntimeSitePackageComposition") {
     group = "verification"
-    description = "Verify EU-40 opt-in Site Package runtime composition against the current V1+V2+V3 lifecycle"
+    description = "Verify ordinary Site Package runtime composition reconciles stable structure without operational bootstrap"
     classpath = sourceSets["test"].runtimeClasspath
     mainClass.set("com.jilinjobs.cms.provisioning.RuntimeSitePackageCompositionVerificationKt")
+}
+
+tasks.register<JavaExec>("verifySiteBootstrapBaselineSeparation") {
+    group = "verification"
+    description = "Verify EU-41 Generic Schema lineage and one-time JilinJobs operational bootstrap separation"
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("com.jilinjobs.cms.provisioning.SiteBootstrapBaselineSeparationVerificationKt")
 }
