@@ -220,6 +220,94 @@ PR #86 合并后的 `main@b105e553db1ebbc12a2b6665385b94fb977bea06`：
 
 EU-40 不包含视觉 / Product Intent 变化，上述 Current Evidence 与 final diff/Authority review 足以关闭本 Unit。
 
+## 5. Static asset boundary
+
+`site-baseline/static/**` 已与 Public Renderer 源码分离，并由 Backend `CMS_STATIC_ROOT` 暴露稳定 `/static/**` URL。
+
+语义上这些版本化稳定资源属于 JilinJobs Site Package ownership；EU-40 只激活 structure/runtime composition，没有移动二进制目录或改变现有 `CMS_STATIC_ROOT` mount。
+
+### Ownership first
+
+后续 Slice C 优先证明：
+
+- Site Package / manifest 能明确引用稳定 Site assets；
+- Runtime bootstrap、CI、Review Environment 知道这些 assets 属于哪一 Site Package；
+- `/static/**` URL contract 不变；
+- Public Renderer 不重新拥有这些文件。
+
+### Physical relocation only if justified
+
+只有完成上述 composition 后，`site-baseline/` 的物理位置仍持续制造真实 ownership ambiguity，才考虑迁移到 `sites/jilinjobs/static/**`。
+
+物理 relocation 不是四层边界成立的必要条件，也不能单独成为“通用化”目标。
+
+## 6. Runtime composition boundary
+
+EU-40 已建立 opt-in、可观察的 Spring composition capability：配置 `cms.site-package.root` 时，在 Flyway initializer 后复用 `SitePackageProvisioner`；未配置时 Generic CMS context 保持原行为。
+
+Repository-owned 正式消费顺序现在为：
+
+```text
+Flyway current schema / compatibility baseline
+→ configured JilinJobs Site Provisioning
+→ optional canonical historical migration / Web Runtime
+→ runtime verification
+→ Replaceable Public Renderer / Admin consumers
+```
+
+已验证：
+
+- current V1+V2+V3 首次 composition 原位 adoption 40 条 Legacy navigation，58 existing structures unchanged；
+- 第二次 context 98 objects unchanged；
+- `CmsListItem` / `Advertisement` operational seed 保持；
+- CI Web Runtime 使用只读 `sites/jilinjobs` mount + `CMS_SITE_PACKAGE_ROOT` 成功启动；
+- Canonical / Upgrade importer 通过 Consumer Gradle orchestration 提供同一 Site Package root；
+- Review Environment canonical lifecycle reproducibility PASS。
+
+EU-40 **不删除或迁空 V2**。下一步必须先完成 Operational Seed Classification，再决定 V2 compatibility responsibility retirement。
+
+## 7. Historical content compatibility
+
+Party `data-migrations/party/v1` 的 canonical dataset 不重写 provenance。
+
+EU-40 已证明正式 Canonical / Upgrade importer 会先执行 Site Package reconcile，并保持：
+
+- Party target Column aliases / List codes 继续由 stable Site identities 解析；
+- canonical importer 不依赖 V2 Runtime numeric IDs；
+- 183 篇 current Runtime Dataset 保持；
+- accepted Party carousel state 保持；
+- EU-29 acceptedSnapshot provenance 不改变。
+
+Slice D 仍需在 V2 responsibility 与 Site Asset ownership 最终收敛后确认 E1/E2/E3 只依赖 Site Package + CMS/Public contracts，再解除 Main formal content 的前置等待。
+
+## 8. Public Renderer / CI boundary
+
+当前 Vue/Vite Public Site 继续是 accepted renderer implementation，但不成为 Site Definition / Migration Authority。
+
+CI 可以继续在当前 monorepo 中：
+
+- build Backend；
+- build Public Renderer；
+- build Admin；
+- run Site Package targeted MySQL verification；
+- run canonical migration verification；
+- run Public/Admin/Integrated Browser tests。
+
+EU-40 final implementation Head `b3e3dc8c4855c9e17b2dfa2f190a84d0305162e2`：
+
+- Site Package Verification #19：PASS；
+- CI #768：Backend / EU-40 Runtime composition / Public / Admin / Integrated Public Browser / Integrated Admin Browser 全部 PASS；
+- Canonical #153：PASS；
+- EU-30 Upgrade #103：PASS；
+- 人工评审环境 #683：PASS。
+
+PR #86 合并后的 `main@b105e553db1ebbc12a2b6665385b94fb977bea06`：
+
+- Site Package Verification #20：PASS；
+- CI #769：Backend / EU-40 Runtime composition / Public / Admin / Site Package-enabled Web Runtime / Integrated Public Browser / Integrated Admin Browser 全部 PASS。
+
+EU-40 不包含视觉 / Product Intent 变化，上述 Current Evidence 与 final diff/Authority review 足以关闭本 Unit。
+
 ## 9. Completed slices
 
 ### Slice A — Site Package Contract & Provisioner Foundation
