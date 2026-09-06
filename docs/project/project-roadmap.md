@@ -31,8 +31,8 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | EU-32 List Definition Group Governance | **已完成** | `groupCode` 保持内部结构元数据，ordinary Admin 不再暴露结构分组写权限 |
 | EU-33 Admin Guidance & Explanation Responsibility Governance | **已完成** | 管理界面保留操作必要信息，结构身份与实现背景退出普通运营提示 |
 | EU-34～EU-35 Rich Text Safety & Shared Authoring | **已完成** | 服务端 HTML safety foundation + Article/Page 共用 Tiptap 富文本编辑能力完成并通过 Post-Integration Verification |
-| EU-36 Public Frontend Source Isolation & Managed Resource Projection | **READY — Readiness Check PASS** | Public source ownership、Backend managed Article Resource public projection 与 source-boundary guard 已完成切分和 Readiness；尚未进入 Execute |
-| 后续 Planning / Requirement Candidates | **规划层保留** | Issues #57 / #59 / #60 中除 D1 外的剩余候选尚未形成新的 Ready Execution Unit；EU-36 完成后再按当前方法逐项推进 |
+| EU-36 Public Frontend Source Isolation & Managed Resource Projection | **已完成** | Public production source 已移除 Admin endpoint knowledge，managed Article body image 改由 Backend Public projection 暴露 Public Resource URL，source-boundary guard 与全链回归均已闭环 |
+| 后续 Planning / Requirement Candidates | **规划层保留** | Issues #57 / #59 / #60 的剩余候选尚未形成新的 Ready Execution Unit；继续按当前方法逐项推进 |
 | 真实第三方深度集成 | 条件性后续 | 根据接口、认证、可靠性与 Product Intent 再进入 Specification / Slice |
 
 ## 已完成里程碑
@@ -61,7 +61,8 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | 2026-09-05 | Issue #60 / B1 收敛为 EU-32，完成列表定义内部 `groupCode` 与 ordinary Admin 写权限边界治理并集成 |
 | 2026-09-05 | Issue #60 / B2 收敛为 EU-33，完成管理端用户提示、结构身份与实现解释责任治理并集成 |
 | 2026-09-05 | Issue #60 / B3 先后形成 EU-34 / EU-35：服务端 Rich Text HTML safety foundation 与 Article/Page shared Tiptap authoring 均完成、集成并通过 Post-Integration CI |
-| 2026-09-06 | Issue #60 / D1 的 Public Frontend Replaceability Authority 经 PR #70 / #71 集成并通过 Post-Integration CI #719；`slice-work` 形成 EU-36，Readiness Check PASS，等待 Fresh-context Execute |
+| 2026-09-06 | Issue #60 / D1 的 Public Frontend Replaceability Authority 经 PR #70 / #71 集成并通过 Post-Integration CI #719；`slice-work` 形成 EU-36，Readiness Check PASS，进入 Fresh-context Execute |
+| 2026-09-06 | EU-36 完成 Public source isolation、Backend managed Article Resource public projection 与 source-boundary guard；PR #73 exact-head 全链验证、集成及 `main` Post-Integration CI #723 均 PASS，D1 implementation scope 正式关闭 |
 
 ## 当前已固化结果
 
@@ -125,6 +126,15 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 - EU-34：Article/Page 共用服务端 HTML safety policy，写入与公开读取边界均执行安全收敛，legacy 内容不批量改写；
 - EU-35：Article/Page 共用 CMS-local Tiptap `RichTextEditor`，保留 Article managed Resource association 与 Page 既有边界；
 - EU-34 / EU-35 共同保持 `bodyHtml` 为唯一持久 HTML contract，不引入第二正文 Authority。
+
+### EU-36 Public frontend source isolation
+
+- Public production source `frontend/public-site/src/**` 不再包含 `/api/admin/**` endpoint knowledge；
+- Article/Column/Page/static-resource 的 Admin CRUD / maintenance responsibility 已从 Public source 移除，Admin ownership 保留在独立 Admin frontend；
+- Article managed body image 的 Admin→Public Resource URL translation 由 Backend `ArticleService.getPublic()` 在 Public projection 中按 `bodyImageResourceIds` 精确完成；
+- persisted/Admin `bodyHtml` contract 不变，未关联 Resource、外部 URL 与其他 Admin 文本不做泛化改写；
+- Public package build 通过 source-boundary guard 防止 Admin endpoint knowledge 回流；
+- EU-36 已完成 exact-head CI、Public/Admin/Integrated Browser、Review Runtime 与 `main` Post-Integration Verification。
 
 ## 已完成阶段：管理端工程分离与功能收敛
 
@@ -193,7 +203,7 @@ Intent / Requirement Clarification
 
 ## 当前阶段：后续 Planning / Requirement Candidates
 
-Issues #59 / #60 中除已完成的 EU-31～EU-35 对应事项外，其余候选仍属于 Planning / Requirement Candidates；Issue #57 仍是可选导航架构讨论，不自动晋升。
+Issues #59 / #60 中除已完成的 EU-31～EU-36 对应事项外，其余候选仍属于 Planning / Requirement Candidates；Issue #57 仍是可选导航架构讨论，不自动晋升。
 
 当前候选范围包括但不限于：
 
@@ -228,6 +238,7 @@ Planning / Requirement Candidate
 - EU-30 已完成 Human Review、canonical acceptance、post-promotion verification 并合并；
 - EU-31 Database Migration Baseline Convergence 已完成并集成，不是历史预编号 Browser Compatibility；
 - EU-32～EU-35 已按 Issue #60 / B1～B3 的实际 Requirement / Specification / Slice / Readiness 链完成并集成；
+- EU-36 已按 Issue #60 / D1 的 Requirement / Specification / Technical Plan / Slice / Readiness 链完成 Public source isolation 与 managed resource projection，并通过 Post-Integration Verification；
 - 当前没有 Ready Execution Unit；Issues #57 / #59 / #60 中剩余候选不得因 Roadmap、旧 Execution Plan、预编号或 Issue 标签直接进入实现；
 - 未来候选可以在 `slice-work` 形成 Candidate Execution Unit 时获得稳定 Identifier，但只有 `readiness-check` PASS 后才能成为 Ready Execution Unit；
 - 若未来 Browser Compatibility 候选被正式切分，必须基于届时 current implementation 重新取得兼容证据，不继承 EU-30 的旧 DOM / CSS / dependency 假设；
@@ -245,7 +256,7 @@ Planning / Requirement Candidate
 5. 当前候选直接相关的 Requirement / Specification / Technical Plan（如已形成）
 6. `docs/technical/verification-strategy.md`
 7. GitHub Issues #57 / #59 / #60（当前 Planning / Requirement Candidates）
-8. 已完成 EU-31～EU-35 的追溯文档仅在相关工作需要时读取；当前状态优先由本 Roadmap 与对应 Requirement / Specification / Work Artifact 恢复
+8. 已完成 EU-31～EU-36 的追溯文档仅在相关工作需要时读取；当前状态优先由本 Roadmap 与对应 Requirement / Specification / Work Artifact 恢复
 9. 当前 Branch / PR / CI / Runtime Evidence
 
 不得使用其他聊天或其他项目状态补充未固化的 Consumer 产品事实。

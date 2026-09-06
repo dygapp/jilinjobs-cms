@@ -9,9 +9,12 @@
 - Technical Plan：`docs/technical/public-frontend-replaceability.md`
 - Planning baseline：`main@692b4daf0bddabb8ec558b23b543930d5f795b4e`
 - Planning integration evidence：PR #70 / PR #71 已集成；PR #71 Post-Integration CI #719 / run `33997632735` PASS
-- Status：**READY — Readiness Check PASS**
+- Execute baseline：`main@c3f506dc25d463a905832763d493ceddb7533ae0`
+- Implementation PR：#73；exact Head `620beaa94bbf55b33ea33602e85ded1307203387`
+- Implementation merge：`5e44b63e4908dace3094ad5d64ebbbcf974fd46f`
+- Status：**COMPLETED**
 
-Identifier 只承担稳定追踪。本 Unit 由 `slice-work` 在 D1 Requirement / Specification / Technical Plan 已 Ready、PR #71 的 managed resource projection contract gap 已修订并完成 Post-Integration Verification 后形成；随后以 `main@692b4daf0bddabb8ec558b23b543930d5f795b4e` 执行 Readiness Check，所有 Gate 均 PASS，因此获得 Execute 权限。
+Identifier 只承担稳定追踪。本 Unit 由 `slice-work` 在 D1 Requirement / Specification / Technical Plan 已 Ready、PR #71 的 managed resource projection contract gap 已修订并完成 Post-Integration Verification 后形成；随后以 `main@692b4daf0bddabb8ec558b23b543930d5f795b4e` 执行 Readiness Check，所有 Gate 均 PASS，因此获得 Execute 权限。EU-36 已在 Fresh Context 中从 `main@c3f506dc25d463a905832763d493ceddb7533ae0` 执行，并完成 exact-head Verification、Diff Audit、PR Integration 与 `main` Post-Integration Verification。
 
 ## 2. Intent
 
@@ -37,7 +40,7 @@ Identifier 只承担稳定追踪。本 Unit 由 `slice-work` 在 D1 Requirement 
 - `frontend/public-site/src/shared/api/articles.ts`：保留 Public DTO / Public Article / Public Resource consumer responsibility，删除 Admin Article CRUD、Admin Resource upload/read helpers、Admin-only drafts/models，以及依赖 Admin Resource route 的 client-side `publicBodyHtml()` translation；
 - `frontend/public-site/src/shared/api/columns.ts`：删除 Admin Column CRUD / Admin-only draft/model responsibility，保留 Public reads；
 - `frontend/public-site/src/shared/api/pages.ts`：删除 Admin Page / PageGroup CRUD / Admin-only models，保留 Public reads；
-- 删除 Public source 内 pure Admin static-resource maintenance client 及 Main 对它的无效 re-export；
+- 删除 Public source内 pure Admin static-resource maintenance client 及 Main 对它的无效 re-export；
 - 不为通过 guard 将 Admin helper 复制到 Public 其他位置。
 
 ### Boundary verification
@@ -132,7 +135,7 @@ Source cleanup 与 Backend projection 必须在同一 Unit 中完成：
 
 ### Readiness Result — PASS
 
-所有 Promotion Condition 已满足。`EU-36` 现为 **Ready Execution Unit**，可在 Fresh Context 中进入 Execute。
+所有 Promotion Condition 已满足。`EU-36` 在 Execute 前已成为 **Ready Execution Unit**。
 
 ## 7. Execution Notes
 
@@ -160,3 +163,19 @@ Source cleanup 与 Backend projection 必须在同一 Unit 中完成：
 - final diff 无 SSR/SSG、dependency upgrade、Gateway/deployment abstraction、migration 或无关 cleanup；
 - PR 合并后 `main` Post-Integration CI PASS；
 - Issue #60 / D1 在 EU-36 完成后才标记为完成，Issue #60 本身继续作为剩余 C/E candidates 的规划入口。
+
+## 9. Completion Evidence
+
+EU-36 Completion Gate 已由以下 Current Evidence 闭合：
+
+- implementation commit：`620beaa94bbf55b33ea33602e85ded1307203387`；PR #73 exact Head 与该 commit 一致；
+- PR CI #722 / run `34002111259`：Backend、Public、Admin、Integrated Browser 全部 PASS；Public build 的 `prebuild` guard 明确输出 `Public source boundary PASS: no /api/admin/ endpoint knowledge under src/**`；
+- Backend targeted test 证明：只投影当前 Article 已关联 managed body image；未关联 Resource、外部 URL 与其他 Admin 文本不被泛化改写；Public read 不改变 persisted/Admin `bodyHtml`；
+- Public Browser：48 passed / 3 skipped；既有 Article 黑盒闭环继续覆盖 managed image 从 Admin authoring/publish 到 Public `/api/public/resources/{id}/content` 渲染；
+- Admin Browser：43 / 43 passed；
+- Review Environment run `34002111319`：Backend/Public/Admin build、AI/Browser 评审、Party canonical Runtime Browser、外部公开站/管理端地址与租约证据均 PASS；
+- final implementation diff：11 个文件，仅覆盖 Backend Public projection、targeted test、Technical Plan 点名的 Public mixed API cleanup、Main/Party rendering cleanup 与 source-boundary guard；无 SSR/SSG、dependency upgrade、Gateway/Nginx/deployment、schema/data migration、视觉改版或无关 cleanup；
+- PR #73 merge commit：`5e44b63e4908dace3094ad5d64ebbbcf974fd46f`；
+- `main` Post-Integration CI #723 / run `34002385598`：Backend、Public、Admin、Integrated Browser 全部 PASS。
+
+因此 EU-36 已完成 Execute → Verification → Diff Audit → PR exact-head Verification → Integration → Post-Integration Verification。随本 Authority closeout 合并后，Issue #60 / D1 标记为完成；Issue #60 本身继续保留为剩余 C/E Planning / Requirement Candidates 的规划入口。本 Unit 不选择或启动后续 Execution Unit。
