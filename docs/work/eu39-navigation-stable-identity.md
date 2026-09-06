@@ -9,7 +9,8 @@
 - Technical Plan：`docs/technical/cms-site-package-boundary.md`
 - Execute baseline：`main@e0e0f19553244dcf30efdfa392ef2e750e5e2e65`
 - Implementation PR：#84
-- Status：**READY TO INTEGRATE**
+- Merge commit：`36276ed65e6f3edbe96ffc18c01cf18ab924837b`
+- Status：**COMPLETED**
 
 ## 2. Readiness decision
 
@@ -103,21 +104,24 @@ Site Package `schemaVersion` 保持 `1`，`navigation-items` 是新增可选 str
 - Canonical migration compatibility PASS；
 - EU-29→EU-30 migration upgrade compatibility PASS；
 - Backend / Public / Admin / Integrated Browser regression PASS；
-- final diff / Authority audit PASS 后才进入 Integration Gate。
+- final diff / Authority audit PASS；
+- PR Integration + `main` Post-Integration Verification PASS。
 
-## 9. Current implementation evidence
+## 9. Exact-head implementation evidence
 
-Implementation candidate Head：`027e486fc9fd41da90430653d4816d311d212207`。
+Final implementation Head：`b95285f5424d4df0b9f9943395e80332296754f7`。
 
-### Site Package Verification #9
+- Site Package Verification #15 / run `34035806532`：**PASS**；
+- CI #761 / run `34035806584`：Backend / Public / Admin / Integrated Browser **PASS**；
+- Canonical Migration Verification #152 / run `34035806465`：**PASS**；
+- EU-30 Migration Upgrade Verification #102 / run `34035806427`：**PASS**；
+- 人工评审环境 #678 / run `34035806511`：**PASS**；
+- final diff / Authority audit：**PASS**。
 
-Run `34035259823`：**PASS**。
+专项验证同时证明：
 
-证明：
-
-- EU-37 Foundation regression PASS；
 - JilinJobs package object count = 98，其中 NavigationItem = 40；
-- Fresh V1 + Navigation identity schema + Site Package first apply：98 created；
+- Fresh Generic Schema + Navigation identity schema + Site Package first apply：98 created；
 - Fresh second apply：98 unchanged；
 - Legacy V1+V2+V3 first apply：40 NavigationItem 原位 adoption + 58 existing structures unchanged；
 - Legacy navigation row count 不增加；
@@ -129,29 +133,18 @@ Run `34035259823`：**PASS**。
 - operator-created navigation 保持 `code=NULL / preset=false`；
 - ListItem / Advertisement operational members 保持不变。
 
-### Repository CI #755
+## 10. Integration and Post-Integration evidence
 
-Run `34035260072`：**PASS**。
+PR #84 已从锁定 final Head 合并，merge commit：
 
-- Backend test / package：PASS；
-- EU-37 Site Package Foundation：PASS；
-- Public build：PASS；
-- Admin build：PASS；
-- Integrated Public Browser：PASS；
-- Integrated Admin Browser：PASS。
+`36276ed65e6f3edbe96ffc18c01cf18ab924837b`
 
-### Canonical compatibility
+`main@36276ed65e6f3edbe96ffc18c01cf18ab924837b` Post-Integration：
 
-- Canonical Migration Verification #146 / run `34035259816`：**PASS**；
-- EU-30 Migration Upgrade Verification #96 / run `34035259770`：**PASS**。
+- Site Package Verification #16 / run `34036523856`：**PASS**；
+- CI #762 / run `34036523996`：Backend / Public / Admin / Integrated Public Browser / Integrated Admin Browser **PASS**。
 
-因此 V3 schema 与 Navigation Site Package ownership 没有破坏 183 篇 current Party Runtime Dataset、carousel canonical import、idempotency或 EU-29→EU-30 migration-only compatibility。
-
-## 10. Integration gate
-
-当前实现证据已满足技术 Acceptance；Authority / final diff 收敛完成后，本 PR 可以从 Draft 进入 Ready to Integrate。
-
-在 PR #84 合并及 `main` Post-Integration Verification PASS 前，本文件不得把 EU-39 标记为 `COMPLETED`。
+因此 EU-39 的实现、Integration 与 `main` Current Evidence 已闭环，状态正式晋升为 **COMPLETED**。
 
 ## 11. Remaining Issue #77 boundary after EU-39
 

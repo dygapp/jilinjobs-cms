@@ -33,8 +33,8 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | EU-34～EU-35 Rich Text Safety & Shared Authoring | **已完成** | 服务端 HTML safety foundation + Article/Page 共用 Tiptap 富文本编辑能力完成并通过 Post-Integration Verification |
 | EU-36 Public Frontend Source Isolation & Managed Resource Projection | **已完成** | Public production source 已移除 Admin endpoint knowledge，managed Article body image 改由 Backend Public projection 暴露 Public Resource URL，source-boundary guard 与全链回归均已闭环 |
 | EU-37～EU-38 Site Package Foundation & Stable Structure Migration | **已完成** | Site Package v1 contract / provisioner foundation 已建立；七类具有 stable identity 的 JilinJobs preset structure 已迁入 `sites/jilinjobs/**` 并证明 Fresh V1 + Package 与 Legacy V1+V2 + Package structural equivalence |
-| EU-39 Navigation Stable Identity & Site Package Reconcile | **Ready to Integrate** | NavigationItem 获得 provisioning-only stable `code`；40 条正式导航进入 Site Package；Fresh create、Legacy V2 原位 adoption、stable-code reconcile 与 exact-head compatibility verification 全部 PASS，PR #84 等待 Integration Gate |
-| Issue #77 CMS Core / Site Package / Public Renderer Boundary | **当前 Planning Priority / 部分完成** | EU-37 / EU-38 已完成，EU-39 已验证待集成；剩余 V2/default Runtime composition、Site Asset ownership/runtime composition、Canonical Migration lifecycle compatibility 与 E1～E3 re-entry 仍需重新 slice / readiness |
+| EU-39 Navigation Stable Identity & Site Package Reconcile | **已完成** | NavigationItem 获得 provisioning-only stable `code`；40 条正式导航进入 Site Package；Fresh create、Legacy V2 原位 adoption、stable-code reconcile、PR #84 Integration 与 `main` Post-Integration Verification 全部 PASS |
+| Issue #77 CMS Core / Site Package / Public Renderer Boundary | **当前 Planning Priority / 部分完成** | EU-37 / EU-38 / EU-39 已完成；剩余 V2/default Runtime composition、Site Asset ownership/runtime composition、Canonical Migration lifecycle compatibility 与 E1～E3 re-entry 仍需重新 slice / readiness |
 | Issue #60 E1～E3 Main Site Formal Content | **前置依赖等待** | 保留为 Planning Candidates；待 Issue #77 的 Site Package boundary / compatibility 收敛并取得兼容证据后重新进入 Planning |
 | 其他 Planning / Requirement Candidates | **规划层保留** | Issues #57 / #59 / #60 的 C1/C2、Browser Compatibility、Public Rendering Architecture 等仍按各自边界保留 |
 | 真实第三方深度集成 | 条件性后续 | 根据接口、认证、可靠性与 Product Intent 再进入 Specification / Slice |
@@ -70,7 +70,7 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | 2026-09-06 | 在进入 Issue #60 / E1～E3 前新增 Issue #77，明确 Generic CMS Core + JilinJobs Site Package + Historical Migration + Replaceable Public Renderer 四层边界为当前 Planning Priority；Repository split / Docs-Code split 保持 deferred |
 | 2026-09-06 | Issue #77 / Slice A 形成 EU-37，建立 Site Package v1 manifest/schema、narrow provisioner、Fresh V1 MySQL proof 与 ownership/idempotency contract；PR #80 已集成并通过 Post-Integration CI |
 | 2026-09-06 | Issue #77 / Slice B stable-identity portion 形成 EU-38；Column、PageGroup、Page、NavigationLocation、SiteConfig、CmsList definition、AdvertisementSlot 共 58 个 stable preset objects 进入 Site Package；PR #81 exact-head 与 `main` Post-Integration Site Package/Repository CI 全部 PASS |
-| 2026-09-06 | Issue #77 / Slice B remainder current audit 证明 NavigationItem 现有可变字段无法形成长期 stable identity；`slice-work → readiness-check` 形成 EU-39。实现 Head `027e486f…` 已通过 Site Package #9、CI #755、Canonical #146、Upgrade #96；PR #84 当前等待 final Authority / Integration Gate |
+| 2026-09-06 | Issue #77 / Slice B Navigation identity portion 形成 EU-39；NavigationItem 获得 stable `code`，40 条正式导航进入 Site Package；PR #84 final Head `b95285f…` exact-head Site Package #15、CI #761、Canonical #152、Upgrade #102、Review Environment #678 全部 PASS，并合并为 `main@36276ed65e6f3edbe96ffc18c01cf18ab924837b`；Post-Integration Site Package #16 与 CI #762 全部 PASS，EU-39 正式关闭 |
 
 ## 当前已固化结果
 
@@ -166,7 +166,7 @@ Replaceable Public Renderer
 - EU-37 已建立 Site Package v1 contract、schema、narrow provisioner、Fresh proof 与 idempotent / ownership conflict contract；
 - EU-38 已将 Column、PageGroup、Page、NavigationLocation、SiteConfig、CmsList definition、AdvertisementSlot 七类 stable preset structure 纳入 `sites/jilinjobs/**`；
 - EU-39 已为 NavigationItem 增加 provisioning-only nullable stable `code`，40 条正式 JilinJobs NavigationItem 已进入 Site Package；Fresh create、Legacy V2 原位无歧义 adoption、stable-code reconcile、ambiguous adoption rollback 与 operator data non-takeover 均已通过专项验证；
-- EU-39 exact-head implementation candidate 已通过 Site Package #9、CI #755、Canonical #146、EU-30 Upgrade #96，PR #84 尚待 Integration Gate；
+- EU-39 final Head `b95285f…` exact-head Site Package #15、CI #761、Canonical #152、EU-30 Upgrade #102 与 Review Environment #678 全部 PASS；PR #84 已合并为 `main@36276ed65e6f3edbe96ffc18c01cf18ab924837b`，Post-Integration Site Package #16 与 CI #762 全部 PASS；
 - V2 当前默认 Runtime compatibility baseline、stable Site Assets 与最终 Runtime/canonical composition 尚未完成 responsibility convergence；
 - Repository split、Git Submodule、Docs / Code 分仓与 multi-repo Workspace 暂不实施，待 Site Package boundary / compatibility 形成后单独做 Readiness Assessment。
 
@@ -235,7 +235,7 @@ Intent / Requirement Clarification
 
 最终状态：实现与验证均已完成并集成到 `main`；Canonical Migration Verification、EU-30 Migration Upgrade Verification 与 CI 均提供了当前阶段所需证据。该阶段现已关闭，不再作为 Fresh Context 的当前 Execution Unit。
 
-## 当前阶段：Issue #77 Site Package Boundary — EU-39 Ready to Integrate
+## 当前阶段：Issue #77 Site Package Boundary — EU-39 已完成
 
 在开始 Issue #60 / E1～E3 前，当前仍优先处理 Issue #77，但不得把它恢复成“尚未开始”的 Planning 状态。
 
@@ -252,11 +252,10 @@ Planning / implementation Authority：
 已完成：
 
 1. Slice A → EU-37：Site Package Contract & Provisioner Foundation；
-2. Slice B stable-identity portion → EU-38：Stable Site Structure Package Migration。
+2. Slice B stable-identity portion → EU-38：Stable Site Structure Package Migration；
+3. Slice B Navigation identity portion → EU-39：Navigation Stable Identity & Site Package Reconcile；PR #84 Integration 与 `main` Post-Integration Verification 已 PASS。
 
-当前 Ready to Integrate：
-
-3. Slice B Navigation identity portion → EU-39：Navigation Stable Identity & Site Package Reconcile。实现与 exact-head verification 已 PASS；PR #84 合并与 Post-Integration Verification 前不标记 COMPLETED。
+当前没有 Ready Execution Unit。
 
 EU-39 后剩余 Planning：
 
@@ -291,8 +290,8 @@ Planning / Requirement Candidate
 - EU-32～EU-35 已按 Issue #60 / B1～B3 的实际 Requirement / Specification / Slice / Readiness 链完成并集成；
 - EU-36 已按 Issue #60 / D1 的 Requirement / Specification / Technical Plan / Slice / Readiness 链完成 Public source isolation 与 managed resource projection，并通过 Post-Integration Verification；
 - EU-37 / EU-38 已按 Issue #77 的 Planning Authority、current audit、Slice / Readiness 链完成 Site Package Foundation 与 stable structure migration，并通过 Post-Integration Verification；
-- EU-39 已按 Issue #77 Slice B remainder current audit、Requirement/Specification decision、Slice / Readiness 链形成并完成实现与 exact-head verification；当前状态为 Ready to Integrate，不因验证通过而提前视为 COMPLETED；
-- 当前除 EU-39 Integration Gate 外没有新的 Ready Execution Unit；Issue #77 剩余项不得自动继承 EU-39 Execute 授权；
+- EU-39 已按 Issue #77 Slice B remainder current audit、Requirement/Specification decision、Slice / Readiness 链完成 Navigation stable identity / Site Package reconcile，PR #84 与 `main` Post-Integration Verification 均 PASS，状态为 COMPLETED；
+- 当前没有 Ready Execution Unit；Issue #77 剩余项不得自动继承 EU-39 Execute 授权；
 - Issue #60 / E1～E3 等待 Issue #77 的 Site Package boundary / compatibility 收敛后重新进入 Planning；
 - 未来候选可以在 `slice-work` 形成 Candidate Execution Unit 时获得稳定 Identifier，但只有 `readiness-check` PASS 后才能成为 Ready Execution Unit；
 - 若未来 Browser Compatibility 候选被正式切分，必须基于届时 current implementation 重新取得兼容证据，不继承 EU-30 的旧 DOM / CSS / dependency 假设；

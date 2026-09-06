@@ -6,7 +6,7 @@
 
 当前版本以原网站现有结构和视觉关系为主站公开基线，采用 Vue + Spring Boot 重建中心主站，并在同一公开站前端工程中建设具有独立红色视觉主题的“中心党建”特殊栏目/专题页面。管理端已经完成独立前端工程与 Modular SPA 收敛；公开站已经完成 **Multi-entry Modular SPA** 基础架构：Entry 只按真实 Theme / Router Boundary 划分，中心主站与中心党建分别拥有独立 App、Router、Banner 与内容主题，但继续共用 `frontend/public-site` 工程、Vue/Vite 技术栈、构建发布链路和 Spring Boot CMS Backend；主导航与 Footer 使用 Shared Shell Components 保持公共区域一致。
 
-中心党建 EU-26～EU-29、EU-30 Carousel Architecture & Behavior Convergence、EU-31 Database Migration Baseline Convergence、Issue #60 / B1～B3 收敛形成的 EU-32～EU-35，以及 Issue #60 / D1 收敛形成的 EU-36 均已完成并收敛到 `main`。**Issue #77 的 Site Package 前置架构收敛已进一步完成 EU-37 — Site Package Contract & Provisioner Foundation 与 EU-38 — Stable Site Structure Package Migration；当前没有 Ready Execution Unit。Issue #77 保持 OPEN，剩余 Navigation identity / V2 runtime composition compatibility、Site Asset Ownership & Runtime Composition、Canonical Migration Compatibility & E1～E3 Re-entry 仍为 Planning / Requirement Candidates。** 后续只有重新完成 current audit、Requirement / Specification / 必要 Technical Planning、`slice-work` 与 Readiness Check 的候选才能进入 Execute。Roadmap 顺序、预编号或 Issue 标签本身不构成执行授权。
+中心党建 EU-26～EU-29、EU-30 Carousel Architecture & Behavior Convergence、EU-31 Database Migration Baseline Convergence、Issue #60 / B1～B3 收敛形成的 EU-32～EU-35，以及 Issue #60 / D1 收敛形成的 EU-36 均已完成并收敛到 `main`。**Issue #77 的 Site Package 前置架构收敛已进一步完成 EU-37 — Site Package Contract & Provisioner Foundation、EU-38 — Stable Site Structure Package Migration 与 EU-39 — Navigation Stable Identity & Site Package Reconcile；三者均已集成到 `main` 并通过 Post-Integration Verification。当前没有 Ready Execution Unit。Issue #77 保持 OPEN，剩余 V2/default Runtime composition convergence、Site Asset Ownership & Runtime Composition、Canonical Migration Compatibility & E1～E3 Re-entry 仍为 Planning / Requirement Candidates。** 后续只有重新完成 current audit、Requirement / Specification / 必要 Technical Planning、`slice-work` 与 Readiness Check 的候选才能进入 Execute。Roadmap 顺序、预编号或 Issue 标签本身不构成执行授权。
 
 当前权威需求：
 
@@ -18,7 +18,7 @@
 - `docs/requirements/admin-guidance-governance.md`（EU-33 accepted）
 - `docs/requirements/rich-text-authoring.md`（EU-34 / EU-35 accepted）
 - `docs/requirements/public-frontend-replaceability.md`（EU-36 accepted）
-- `docs/requirements/cms-site-package-boundary.md`（Issue #77；EU-37 / EU-38 accepted scope 与后续边界 Authority）
+- `docs/requirements/cms-site-package-boundary.md`（Issue #77；EU-37 / EU-38 / EU-39 accepted scope 与后续边界 Authority）
 
 当前 Specification：
 
@@ -47,7 +47,7 @@
 - `docs/technical/database-migration-baseline-convergence.md`（EU-31 accepted baseline）
 - `docs/technical/rich-text-authoring-plan.md`（EU-34 / EU-35 accepted technical plan）
 - `docs/technical/public-frontend-replaceability.md`（EU-36 accepted technical plan）
-- `docs/technical/cms-site-package-boundary.md`（EU-37 / EU-38 已完成；Issue #77 剩余 Planning 继续使用）
+- `docs/technical/cms-site-package-boundary.md`（EU-37 / EU-38 / EU-39 已完成；Issue #77 剩余 Planning 继续使用）
 - `docs/technical/cms-architecture.md`
 - `docs/technical/configuration-governance.md`
 - `docs/technical/backend-service.md`
@@ -64,6 +64,7 @@
 
 最近完成的执行单元：
 
+- `docs/work/eu39-navigation-stable-identity.md`（COMPLETED）
 - `docs/work/eu38-stable-site-structure-package-migration.md`（COMPLETED）
 - `docs/work/eu37-site-package-provisioner-foundation.md`（COMPLETED）
 - `docs/work/eu36-public-frontend-source-isolation.md`（COMPLETED）
@@ -77,7 +78,7 @@
 
 当前后续规划入口：
 
-- GitHub Issue #77：当前 Site Package boundary 规划入口；EU-37 / EU-38 已完成，剩余 Slice B/C/D 继续按 current audit / slice / readiness 形成后续候选；
+- GitHub Issue #77：当前 Site Package boundary 规划入口；EU-37 / EU-38 / EU-39 已完成，剩余 V2/default Runtime composition、Slice C / Slice D 继续按 current audit / slice / readiness 形成后续候选；
 - GitHub Issue #60：EU-30 后续需求边界候选池；D1 / EU-36 已完成，E1～E3 等待 Issue #77 前置 compatibility 收敛，C1/C2 继续独立保留；
 - GitHub Issue #59：EU-31 已完成后的 Browser Compatibility 等后置规划候选；
 - GitHub Issue #57：公开站导航查询 / 渲染架构相关讨论候选，不自动晋升为执行范围。
@@ -94,7 +95,7 @@
 
 - `docs/work/admin-frontend-convergence-execution-units.md`
 
-管理端双前端拆分、通用 CMS 模型和 Admin Modular SPA 已完成当前阶段收敛；公开站 Multi-entry Modular SPA、中心党建正式页面与历史内容、EU-30 轮播架构与行为、EU-31 数据库迁移基线、EU-32～EU-35 的列表结构治理、管理端提示责任治理与富文本安全/编辑能力、EU-36 的 Public source ownership / managed resource projection，以及 EU-37 / EU-38 的 Site Package contract、provisioner foundation 与 stable site structure package migration 均已完成当前阶段收敛。当前不直接启动新的 Execution Unit；后续只从剩余 Planning / Requirement Candidates 中按 Consumer-local Method 重新形成 Candidate Execution Unit，并经 Readiness Check PASS 后进入 Execute。
+管理端双前端拆分、通用 CMS 模型和 Admin Modular SPA 已完成当前阶段收敛；公开站 Multi-entry Modular SPA、中心党建正式页面与历史内容、EU-30 轮播架构与行为、EU-31 数据库迁移基线、EU-32～EU-35 的列表结构治理、管理端提示责任治理与富文本安全/编辑能力、EU-36 的 Public source ownership / managed resource projection，以及 EU-37～EU-39 的 Site Package contract、provisioner foundation、stable site structure migration 与 Navigation stable identity/reconcile 均已完成当前阶段收敛。当前不直接启动新的 Execution Unit；后续只从剩余 Planning / Requirement Candidates 中按 Consumer-local Method 重新形成 Candidate Execution Unit，并经 Readiness Check PASS 后进入 Execute。
 
 历史阶段文档继续保留用于追溯，但不再作为当前目标架构：
 
@@ -147,7 +148,7 @@ Main / Party 轮播统一使用 `CAROUSEL_INTERVAL_SECONDS`、`CAROUSEL_MAX_ITEM
 
 网站规划基线中的关键结构对象使用只读 `preset` 标识保护：预置栏目、导航位置/条目、单页分组/单页、列表容器、宣传展示位和稳定网站属性定义不能被误删；具有稳定 Alias/Code/Key 的预置对象不能修改该身份字段。`preset` 不等于完全只读，名称、排序、启停以及正常运营字段仍按各自模型维护；Article、CmsListItem、Advertisement 等运营成员不因此变成预置内容。普通 Admin API 新增对象默认 `preset=false`，客户端不能自行设置或取消该标识。
 
-EU-37 / EU-38 已在 `sites/jilinjobs/**` 建立 Site Package v1 contract、narrow provisioner，并表达 Column、PageGroup、Page、NavigationLocation、SiteConfig、CmsList definition、AdvertisementSlot 七类 stable preset structure。Fresh Flyway V1 Generic Schema + Site Package 与 Legacy V1+V2 + Site Package 的上述 stable structural snapshot 已取得等价证据。当前 `V2__current_preset_data.sql` 仍保留默认兼容 baseline responsibility，NavigationItem、CmsListItem、Advertisement 运营成员与 `site-baseline/static/**` 尚未由后续 Runtime composition 收敛接管；不得把 EU-38 误解为整个 Issue #77 已完成。
+EU-37～EU-39 已在 `sites/jilinjobs/**` 建立 Site Package v1 contract、narrow provisioner，并表达 Column、PageGroup、Page、NavigationLocation、SiteConfig、CmsList definition、AdvertisementSlot 与 NavigationItem stable preset structure。NavigationItem 已使用 provisioning-only stable `code`，当前 40 条正式导航进入 Site Package，并完成 Fresh / Legacy adoption / stable-code reconcile 验证。当前 `V2__current_preset_data.sql` 仍保留默认兼容 baseline responsibility，CmsListItem、Advertisement 运营成员与 `site-baseline/static/**` 尚未由后续 Runtime composition 收敛接管；不得把 EU-39 误解为整个 Issue #77 已完成。
 
 工程基线静态资源继续位于 `/static/home`、`/static/brand`、`/static/footer`、`/static/icons` 等版本化目录；CMS 运行时上传统一进入 `/static/uploads/**`，由宣传展示/列表/导航图标/RESOURCE_PATH 网站属性等管理界面复用统一图片资源选择与上传能力。中心党建可可靠取得并验证的稳定视觉资源进入 `site-baseline/static/party/**`；历史党建文章正文资源继续属于独立内容迁移范围。公开站设计模板不得直接热链第三方图片、图标、字体等稳定展示资源（开源 JS/CSS 依赖和业务外链除外）。
 
