@@ -1,0 +1,29 @@
+[
+  {
+    "code": "MAIN",
+    "name": "主导航",
+    "description": "网站 Header 主导航及多级菜单",
+    "sortOrder": 10,
+    "enabled": true,
+    "systemFlag": true,
+    "preset": true
+  },
+  {
+    "code": "HOME_SHORTCUT",
+    "name": "首页快捷入口",
+    "description": "首页首屏右侧蓝色快捷入口",
+    "sortOrder": 20,
+    "enabled": true,
+    "systemFlag": true,
+    "preset": true
+  },
+  {
+    "code": "HOME_QUICK",
+    "name": "首页快速导航",
+    "description": "首页业务指南等快速导航入口",
+    "sortOrder": 30,
+    "enabled": true,
+    "systemFlag": true,
+    "preset": true
+  }
+]

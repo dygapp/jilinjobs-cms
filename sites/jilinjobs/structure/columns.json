@@ -1,1 +1,164 @@
-[]
+[
+  {
+    "alias": "notice",
+    "name": "通知公告",
+    "parentAlias": null,
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 10,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "employment-news",
+    "name": "就业动态",
+    "parentAlias": null,
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 20,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "policy",
+    "name": "政策法规",
+    "parentAlias": null,
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 30,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "typical",
+    "name": "典型事迹",
+    "parentAlias": null,
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 40,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "recruitment-announcement",
+    "name": "招聘公告",
+    "parentAlias": null,
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 50,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "party",
+    "name": "中心党建",
+    "parentAlias": null,
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 60,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "policy-month",
+    "name": "就业创业政策宣传月",
+    "parentAlias": "policy",
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 10,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "policy-outside",
+    "name": "省外政策",
+    "parentAlias": "policy",
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 20,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "policy-jilin",
+    "name": "省内政策",
+    "parentAlias": "policy",
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 30,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "policy-national",
+    "name": "国家政策",
+    "parentAlias": "policy",
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 40,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "typical-grassroots",
+    "name": "基层就业典型事迹",
+    "parentAlias": "typical",
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 10,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "typical-startup",
+    "name": "创业典型事迹",
+    "parentAlias": "typical",
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 20,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "typical-military",
+    "name": "军营战士典型事迹",
+    "parentAlias": "typical",
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 30,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "party-voice",
+    "name": "高层声音",
+    "parentAlias": "party",
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 10,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "party-work",
+    "name": "工作动态",
+    "parentAlias": "party",
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 20,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "party-rules",
+    "name": "党规党章",
+    "parentAlias": "party",
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 30,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "party-study",
+    "name": "理论学习",
+    "parentAlias": "party",
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 40,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "party-theme-education",
+    "name": "主题教育",
+    "parentAlias": "party",
+    "coverPolicy": "OPTIONAL",
+    "sortOrder": 50,
+    "enabled": true,
+    "preset": true
+  }
+]

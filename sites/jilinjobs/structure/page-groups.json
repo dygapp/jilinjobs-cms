@@ -1,0 +1,16 @@
+[
+  {
+    "alias": "guide",
+    "name": "业务指南",
+    "sortOrder": 10,
+    "enabled": true,
+    "preset": true
+  },
+  {
+    "alias": "jobs",
+    "name": "招聘信息",
+    "sortOrder": 20,
+    "enabled": true,
+    "preset": true
+  }
+]

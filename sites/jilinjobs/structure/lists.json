@@ -1,0 +1,57 @@
+[
+  {
+    "code": "HOME_CAROUSEL",
+    "name": "首页轮播",
+    "groupCode": "HOME",
+    "imagePolicy": "REQUIRED",
+    "description": "首页首屏轮播内容",
+    "sortOrder": 10,
+    "enabled": true,
+    "systemFlag": true,
+    "preset": true
+  },
+  {
+    "code": "SITE_RELATED",
+    "name": "相关网站服务",
+    "groupCode": "SITE_LINKS",
+    "imagePolicy": "NONE",
+    "description": "网站导航：相关网站服务",
+    "sortOrder": 10,
+    "enabled": true,
+    "systemFlag": true,
+    "preset": true
+  },
+  {
+    "code": "SITE_REGIONAL_GRADUATES",
+    "name": "各地毕业生",
+    "groupCode": "SITE_LINKS",
+    "imagePolicy": "NONE",
+    "description": "网站导航：各地毕业生",
+    "sortOrder": 20,
+    "enabled": true,
+    "systemFlag": true,
+    "preset": true
+  },
+  {
+    "code": "SITE_JILIN_UNIVERSITIES",
+    "name": "吉林省高校联盟",
+    "groupCode": "SITE_LINKS",
+    "imagePolicy": "NONE",
+    "description": "网站导航：吉林省高校联盟",
+    "sortOrder": 30,
+    "enabled": true,
+    "systemFlag": true,
+    "preset": true
+  },
+  {
+    "code": "PARTY_CAROUSEL",
+    "name": "中心党建轮播",
+    "groupCode": "PARTY",
+    "imagePolicy": "REQUIRED",
+    "description": "中心党建顶部图片轮播",
+    "sortOrder": 10,
+    "enabled": true,
+    "systemFlag": true,
+    "preset": true
+  }
+]

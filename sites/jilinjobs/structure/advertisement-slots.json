@@ -1,0 +1,11 @@
+[
+  {
+    "code": "HOME_RECRUITMENT_PROMO",
+    "name": "首页招聘活动展示位",
+    "description": "首页招聘活动宣传展示区域",
+    "sortOrder": 10,
+    "enabled": true,
+    "systemFlag": true,
+    "preset": true
+  }
+]
