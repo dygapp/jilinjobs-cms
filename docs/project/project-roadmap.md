@@ -35,8 +35,8 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | EU-37～EU-38 Site Package Foundation & Stable Structure Migration | **已完成** | Site Package v1 contract / provisioner foundation 已建立；七类具有 stable identity 的 JilinJobs preset structure 已迁入 `sites/jilinjobs/**` |
 | EU-39 Navigation Stable Identity & Site Package Reconcile | **已完成** | NavigationItem 获得 provisioning-only stable `code`；40 条正式导航进入 Site Package；Fresh create、Legacy adoption、stable-code reconcile 与集成验证完成 |
 | EU-40 Explicit Site Package Runtime Composition Activation | **已完成** | `cms.site-package.root` opt-in lifecycle、Repository Runtime、Canonical / Upgrade importer composition 已显式消费 Site Package；旧 V2 responsibility 有意留待后续分类 |
-| EU-41 Site Bootstrap & Generic Schema Baseline Separation | **当前 Ready / IN EXECUTION** | Backend Flyway 收敛为 Generic Schema-only lineage；七条 Fresh Site operational defaults 转为无 migration-number 的 one-time Site bootstrap；普通 Runtime 不接管运营数据 |
-| Issue #77 CMS Core / Site Package / Public Renderer Boundary | **当前 Planning Priority / 部分完成** | EU-37～EU-40 已完成，EU-41 正在执行；EU-41 后剩余 Site Asset ownership/runtime composition、Canonical Migration lifecycle compatibility 与 E1～E3 re-entry |
+| EU-41 Site Bootstrap & Generic Schema Baseline Separation | **已完成** | Backend Flyway 已收敛为 Generic Schema-only lineage；七条 Fresh Site operational defaults 已转为无 migration-number 的 one-time Site bootstrap；普通 Runtime / repeated bootstrap 不覆盖或复活 operator data |
+| Issue #77 CMS Core / Site Package / Public Renderer Boundary | **当前 Planning Priority / 部分完成** | EU-37～EU-41 已完成；当前没有 Ready EU，剩余 Site Asset ownership/runtime composition、Canonical Migration lifecycle compatibility 与 E1～E3 re-entry，之后再做 Repository Split Readiness Assessment |
 | Issue #60 E1～E3 Main Site Formal Content | **前置依赖等待** | 保留为 Planning Candidates；待 Issue #77 Site Package boundary / compatibility 收敛并取得兼容证据后重新进入 Planning |
 | 其他 Planning / Requirement Candidates | **规划层保留** | Issues #57 / #59 / #60 的 C1/C2、Browser Compatibility、Public Rendering Architecture 等仍按各自边界保留 |
 | 真实第三方深度集成 | 条件性后续 | 根据接口、认证、可靠性与 Product Intent 再进入 Specification / Slice |
@@ -74,7 +74,8 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | 2026-09-06 | Issue #77 / Slice B stable-identity portion 形成 EU-38；Column、PageGroup、Page、NavigationLocation、SiteConfig、CmsList definition、AdvertisementSlot 共 58 个 stable preset objects 进入 Site Package；PR #81 exact-head 与 `main` Post-Integration Site Package/Repository CI 全部 PASS |
 | 2026-09-06 | Issue #77 / Slice B Navigation identity portion 形成 EU-39；NavigationItem 获得 stable `code`，40 条正式导航进入 Site Package；PR #84 final Head `b95285f…` exact-head Site Package #15、CI #761、Canonical #152、Upgrade #102、Review Environment #678 全部 PASS，并合并为 `main@36276ed65e6f3edbe96ffc18c01cf18ab924837b`；Post-Integration Site Package #16 与 CI #762 全部 PASS，EU-39 正式关闭 |
 | 2026-09-06 | Issue #77 / Slice B Runtime composition activation 形成 EU-40；PR #86 final Head `b3e3dc8c…` exact-head Site Package #19、CI #768、Canonical #153、Upgrade #103、Review Environment #683 全部 PASS，并合并为 `main@b105e553db1ebbc12a2b6665385b94fb977bea06`；Post-Integration Site Package #20 与 CI #769 全部 PASS，EU-40 正式关闭 |
-| 2026-09-07 | Issue #77 Operational Seed audit 将旧 V2 剩余 6 `CmsListItem` + 1 `Advertisement` 分类为 Fresh Site initial operational defaults；用户明确 Backend Schema migration 与 Site data initialization 必须独立演进；Architecture Amendment 经 `slice-work → readiness-check` 形成 Ready EU-41，PR #88 进入执行 |
+| 2026-09-07 | Issue #77 Operational Seed audit 将旧 V2 剩余 6 `CmsListItem` + 1 `Advertisement` 分类为 Fresh Site initial operational defaults；用户明确 Backend Schema migration 与 Site data initialization 必须独立演进；Architecture Amendment 经 `slice-work → readiness-check` 形成 Ready EU-41 |
+| 2026-09-07 | EU-41 final Head `a958c39a…` 的 Site Package #32、CI #783、Canonical #165、Upgrade #115、Review #696 全部 PASS；PR #88 合并为 `main@6c88eea1762e8edf465833631cadff1e4c751d36`，Post-Integration Site Package #33 与 CI #784 PASS，Operational Seed / V2 responsibility retirement 正式关闭 |
 
 ## 当前已固化结果
 
@@ -107,7 +108,7 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 - `data-migrations/party/v1/manifest.json` 当前 status = `accepted-canonical`；current canonical Runtime Dataset = 183；EU-29 acceptedSnapshot 181 与 digest 保持原样作为 provenance；
 - Party canonical URL 为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`；legacy detail path 只作为迁移输入；
 - 历史运营文章、外链、正文资源、legacy identity / fingerprint 继续由独立 canonical migration dataset / importer 承载；Site Package stable structure 与 Generic Schema / Historical Migration 的长期责任已分离；
-- 历史内容迁移知识不得因数据库 schema / Site Package 调整而删除；EU-41 必须继续证明 canonical migration 只依赖 Generic Schema + stable Site identities，不依赖 Main Fresh operational bootstrap。
+- 历史内容迁移知识不得因数据库 schema / Site Package 调整而删除；EU-41 final Canonical #165、Upgrade #115 与 Review #696 已证明 canonical migration 只依赖 Generic Schema + stable Site identities，不依赖 Main Fresh operational bootstrap。
 
 ### EU-30 accepted architecture
 
@@ -126,9 +127,9 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 - EU-31 是在 EU-30 关闭后重新完成上游 Specification / Technical Planning、Slice 与 Readiness 后形成并晋升的 Database Migration Baseline Convergence，不继承历史“EU-31 Browser Compatibility”；
 - EU-31 明确当前开发阶段没有必须从旧 transcript 原位升级的生产 / 持久数据库义务，因此允许 development baseline reset；该 upgrade boundary 继续有效；
 - EU-31 当时建立 `V1__current_cms_schema.sql` + `V2__current_preset_data.sql`，EU-39 后增加旧 `V3__navigation_stable_identity.sql`；
-- Issue #77 / EU-41 当前修订该 active baseline：Backend Flyway 目标为 `V1__current_cms_schema.sql` + `V2__site_provisioning_schema_capabilities.sql`，只承担 Generic CMS Schema / provisioning capability；
+- Issue #77 / EU-41 已修订 active baseline：Backend Flyway 为 `V1__current_cms_schema.sql` + `V2__site_provisioning_schema_capabilities.sql`，只承担 Generic CMS Schema / provisioning capability；
 - JilinJobs stable structure 位于 `sites/jilinjobs/structure/**`；Fresh Site operational defaults 位于 `sites/jilinjobs/bootstrap/**`，无 Flyway migration number；
-- EU-41 集成后下一次 Generic CMS Schema change 从 Backend V3 继续 append-only；
+- 从 EU-41 accepted integration baseline 起，下一次 Generic CMS Schema change 从 Backend V3 继续 append-only；
 - `data-migrations/party/v1/**`、legacy mapping、fingerprint、canonical reports 与 importer 不由 Flyway baseline 或 Site bootstrap 接管。
 
 ### EU-32～EU-35 管理端治理与富文本能力
@@ -187,8 +188,9 @@ frontend/public-site/**
 - EU-37 建立 Site Package contract / provisioner foundation；
 - EU-38 / EU-39 将当前 98 个 stable site objects 纳入 Site Package，并建立 Navigation stable identity；
 - EU-40 激活正式 Runtime / importer Site Package composition；
-- EU-41 audit 将旧 V2 剩余 6 ListItems + 1 Advertisement 分类为 Fresh Site initial operational defaults；
-- EU-41 当前实现通过 generic bootstrap-state + no-version Site bootstrap 取代 shared Flyway data seed，普通 Runtime reconcile 不覆盖或复活 operator data；
+- EU-41 将旧 V2 剩余 6 ListItems + 1 Advertisement 分类为 Fresh Site initial operational defaults，并通过 generic bootstrap-state + no-version Site bootstrap 取代 shared Flyway data seed；
+- 普通 Runtime reconcile 与 repeated explicit bootstrap 均不覆盖或复活 operator data；
+- `V2__current_preset_data.sql` 已退出 active Backend Flyway；
 - `site-baseline/static/**` 的 stable Site Asset runtime ownership 仍待 Slice C；
 - final canonical lifecycle / E1～E3 re-entry 仍待 Slice D；
 - Repository split、Git Submodule、Docs / Code 分仓与 multi-repo Workspace 暂不实施，待四层 boundary 完成后单独评估。
@@ -233,7 +235,7 @@ EU-31 的历史 Authority：
 
 EU-31 本身已经完成；上述文档当前已明确标记 EU-41 对 active baseline shape 的后续修订，避免把 EU-31 当时的 Site-data-in-V2 形状误认为当前长期 Authority。
 
-## 当前阶段：Issue #77 Site Package Boundary — EU-41 IN EXECUTION
+## 当前阶段：Issue #77 Site Package Boundary — EU-41 COMPLETED
 
 当前 Planning / implementation Authority：
 
@@ -246,47 +248,36 @@ EU-31 本身已经完成；上述文档当前已明确标记 EU-41 对 active ba
 - `docs/work/eu39-navigation-stable-identity.md`
 - `docs/work/eu40-explicit-site-package-runtime-composition.md`
 - `docs/work/eu41-site-bootstrap-generic-schema-baseline-separation.md`
-- GitHub Issue #77 / PR #88。
+- GitHub Issue #77。
 
 已完成：
 
 1. EU-37：Site Package Contract & Provisioner Foundation；
 2. EU-38：Stable Site Structure Package Migration；
 3. EU-39：Navigation Stable Identity & Site Package Reconcile；
-4. EU-40：Explicit Site Package Runtime Composition Activation。
+4. EU-40：Explicit Site Package Runtime Composition Activation；
+5. EU-41：Site Bootstrap & Generic Schema Baseline Separation。
 
-当前 Ready / executing：
+EU-41 final Head `a958c39a37892cf0fbcb41b8c883b2299d84f561` 已通过 Site Package #32、CI #783、Canonical #165、Upgrade #115、Review #696；PR #88 合并为 `main@6c88eea1762e8edf465833631cadff1e4c751d36`，Post-Integration Site Package #33 与 CI #784 PASS。
 
-5. **EU-41 — Site Bootstrap & Generic Schema Baseline Separation**：Readiness PASS，PR #88 执行中。
+当前没有 Ready Execution Unit。
 
-EU-41 completion gate：
-
-1. Generic CMS Fresh DB 零 JilinJobs instance rows；
-2. Site Package stable first apply 98 objects；
-3. one-time bootstrap 6 ListItems + 1 Advertisement；
-4. repeat / ordinary restart no duplicate / no resurrection / no overwrite；
-5. Backend Flyway history 只含 Generic Schema；
-6. CI / Public / Admin / Integrated Browser PASS；
-7. Canonical Migration Verification PASS；
-8. EU-30 Migration Upgrade Verification PASS；
-9. Review Environment PASS；
-10. final diff / Authority consistency PASS。
-
-EU-41 后剩余 Planning：
+Issue #77 剩余 Planning：
 
 1. Slice C：Site Asset Ownership & Runtime Composition；
 2. Slice D：Canonical Migration Compatibility & E1～E3 Re-entry；
 3. 四层 boundary 完成后的 Repository Split Readiness Assessment。
 
+这些候选必须基于最新 `main` 重新执行 current audit / slice-work / readiness-check；不得自动继承 EU-41 Execute Authority。
+
 Issue #60 / E1、E2、E3 在本阶段保持 Planning Candidate，不提前执行。C1 / C2、Issue #59 Browser Compatibility 与 Issue #57 Public Rendering Architecture 继续独立保留，不因 Issue #77 自动扩大范围。
 
 ## 阶段切换原则
 
-- 管理端工程分离、Public Multi-entry、Party EU-26～EU-29、EU-30、EU-31、EU-32～EU-40 均已完成各自 accepted scope；
-- EU-31 的 development DB recreation boundary 继续有效，但其当时 active migration shape 已由当前 EU-41 Authority 明确修订；
-- EU-41 已经过 current audit / architecture clarification / slice-work / readiness-check，当前具有 Execute Authority；
-- EU-41 未完成 exact-head 与 Integration Gate 前不得写成 COMPLETED；
-- Issue #77 后续 Slice C / Slice D 不自动继承 EU-41 Execute Authority；
+- 管理端工程分离、Public Multi-entry、Party EU-26～EU-29、EU-30、EU-31、EU-32～EU-41 均已完成各自 accepted scope；
+- EU-31 的 development DB recreation boundary 继续有效，但其当时 active migration shape 已由 EU-41 accepted Authority 修订；
+- EU-41 已完成 current audit / architecture clarification / slice-work / readiness-check / Execute / exact-head Verification / Integration / Post-Integration Verification；
+- 当前没有 Ready Execution Unit；Issue #77 后续 Slice C / Slice D 不自动继承 EU-41 Execute Authority；
 - Issue #60 / E1～E3 等待 Issue #77 compatibility/re-entry gate；
 - 未来候选只有在 `readiness-check` PASS 后才能成为 Ready Execution Unit；
 - canonical historical dataset、legacy mapping、fingerprint、Importer、EU-29→EU-30 upgrade knowledge 与证据长期独立保留；
@@ -300,9 +291,9 @@ Issue #60 / E1、E2、E3 在本阶段保持 Planning Candidate，不提前执行
 3. `docs/project/project-roadmap.md`
 4. `docs/project/development-method.md`
 5. 当前阶段读取 `docs/project/site-package-planning.md`、`docs/requirements/cms-site-package-boundary.md`、`docs/specifications/cms-site-package-boundary.md`、`docs/technical/cms-site-package-boundary.md`
-6. 当前 Ready EU 读取 `docs/work/eu41-site-bootstrap-generic-schema-baseline-separation.md`
+6. 最近完成 EU 读取 `docs/work/eu41-site-bootstrap-generic-schema-baseline-separation.md`；当前没有 Ready EU
 7. `docs/technical/verification-strategy.md`
-8. GitHub Issue #77 / PR #88；Issue #60 用于 E1～E3 / C1/C2 等后续候选，Issues #57 / #59 继续保留各自讨论 / 后置候选
+8. GitHub Issue #77；Issue #60 用于 E1～E3 / C1/C2 等后续候选，Issues #57 / #59 继续保留各自讨论 / 后置候选
 9. 当前 Branch / PR / CI / Runtime Evidence
 
 不得使用其他聊天或其他项目状态补充未固化的 Consumer 产品事实。
