@@ -5,14 +5,12 @@ import org.flywaydb.core.Flyway
 import org.flywaydb.core.api.MigrationVersion
 import org.springframework.boot.WebApplicationType
 import org.springframework.boot.builder.SpringApplicationBuilder
-import java.nio.file.Files
 import java.nio.file.Path
-import java.security.MessageDigest
 import java.sql.Connection
 import javax.sql.DataSource
 
 fun main() {
-    val dbUrl = requireEu38Env("SITE_PACKAGE_VERIFY_DB_URL")
+    val dbUrl = requireEu39Env("SITE_PACKAGE_VERIFY_DB_URL")
     val dbUsername = System.getenv("SITE_PACKAGE_VERIFY_DB_USERNAME") ?: "root"
     val dbPassword = System.getenv("SITE_PACKAGE_VERIFY_DB_PASSWORD") ?: "root"
     val context = SpringApplicationBuilder(CmsApplication::class.java)
@@ -29,70 +27,69 @@ fun main() {
         val loader = context.getBean(SitePackageLoader::class.java)
         val provisioner = context.getBean(SitePackageProvisioner::class.java)
         val packageRoot = Path.of("../sites/jilinjobs").toAbsolutePath().normalize()
-
-        resetDatabase(dataSource, target = "1")
         val definition = loader.load(packageRoot)
-        require(definition.manifest.packageId == "jilinjobs")
-        require(definition.objectCount == 58) { "JilinJobs structural package object count 异常：${definition.objectCount}" }
-        require(definition.columns.size == 18)
-        require(definition.pageGroups.size == 2)
-        require(definition.pages.size == 16)
-        require(definition.navigationLocations.size == 3)
-        require(definition.siteConfig.size == 13)
-        require(definition.lists.size == 5)
-        require(definition.advertisementSlots.size == 1)
 
-        insertOperatorData(dataSource)
-        val first = provisioner.apply(packageRoot)
-        require(first.created == 58 && first.updated == 0 && first.unchanged == 0) {
-            "Fresh V1 first apply 结果异常：$first"
+        require(definition.manifest.packageId == "jilinjobs")
+        require(definition.objectCount == 98) { "JilinJobs Site Package object count 异常：${definition.objectCount}" }
+        require(definition.navigationItems.size == 40) { "NavigationItem package count 异常" }
+
+        // Fresh Generic Schema path intentionally excludes V2 site bootstrap but includes V3 Core schema evolution.
+        resetDatabase(dataSource, target = "1")
+        applyNavigationIdentitySchema(dataSource)
+        val freshFirst = provisioner.apply(packageRoot)
+        require(freshFirst.created == 98 && freshFirst.updated == 0 && freshFirst.unchanged == 0) {
+            "Fresh V1+V3 first apply 结果异常：$freshFirst"
         }
         val freshSnapshot = structuralSnapshot(dataSource)
-        val second = provisioner.apply(packageRoot)
-        require(second.created == 0 && second.updated == 0 && second.unchanged == 58) {
-            "Fresh V1 second apply 必须幂等：$second"
+        // Operator navigation requires a provisioned NavigationLocation because cms_navigation.position has a FK.
+        insertOperatorNavigation(dataSource, "fresh-operator")
+        val freshSecond = provisioner.apply(packageRoot)
+        require(freshSecond.created == 0 && freshSecond.updated == 0 && freshSecond.unchanged == 98) {
+            "Fresh second apply 必须幂等：$freshSecond"
         }
-        verifyOperatorDataUnchanged(dataSource)
+        verifyOperatorNavigation(dataSource, "fresh-operator")
 
-        val update = provisioner.apply(createSiteConfigUpdatePackage("吉林就业-EU38验证"))
-        require(update.created == 0 && update.updated == 1 && update.unchanged == 0) {
-            "SiteConfig representative reconcile 结果异常：$update"
-        }
-        require(siteConfigValue(dataSource, "SITE_SHORT_NAME") == "吉林就业-EU38验证")
-        val restore = provisioner.apply(packageRoot)
-        require(restore.created == 0 && restore.updated == 1 && restore.unchanged == 57) {
-            "正式 package 应恢复 representative update：$restore"
-        }
-        require(structuralSnapshot(dataSource) == freshSnapshot) { "恢复正式 package 后 structural snapshot 漂移" }
-
-        expectEu38Validation("new-domain ownership conflict") {
-            provisioner.apply(createListConflictPackage())
-        }
-
+        // Legacy V1+V2+V3 path adopts the current preset tree in place instead of duplicating it.
         resetDatabase(dataSource, target = null)
-        require(countRows(dataSource, "cms_navigation") > 0) { "Legacy V2 未建立 navigation compatibility snapshot" }
-        require(countRows(dataSource, "cms_list_item") > 0) { "Legacy V2 未保留 operational list members" }
-        require(countRows(dataSource, "cms_advertisement") > 0) { "Legacy V2 未保留 operational advertisements" }
-        val legacyOperationalBefore = operationalSnapshot(dataSource)
-        insertLegacyOperatorData(dataSource)
-
+        val legacyNavigationCount = countRows(dataSource, "cms_navigation")
+        require(legacyNavigationCount == 40) { "Legacy V2 navigation baseline 数量异常：$legacyNavigationCount" }
+        val operationalBefore = operationalSnapshot(dataSource)
+        insertOperatorNavigation(dataSource, "legacy-operator")
         val legacyApply = provisioner.apply(packageRoot)
-        require(legacyApply.created == 0 && legacyApply.updated == 0 && legacyApply.unchanged == 58) {
-            "V1+V2 compatibility apply 应安全 adopt 当前 preset baseline：$legacyApply"
+        require(legacyApply.created == 0 && legacyApply.updated == 40 && legacyApply.unchanged == 58) {
+            "Legacy stable-code adoption 结果异常：$legacyApply"
         }
+        require(countRows(dataSource, "cms_navigation") == legacyNavigationCount + 1) { "Legacy adoption 不得复制导航树" }
+        require(countCodedPresetNavigations(dataSource) == 40) { "Legacy preset navigation 必须全部获得 stable code" }
         val legacySecond = provisioner.apply(packageRoot)
-        require(legacySecond.created == 0 && legacySecond.updated == 0 && legacySecond.unchanged == 58) {
+        require(legacySecond.created == 0 && legacySecond.updated == 0 && legacySecond.unchanged == 98) {
             "Legacy second apply 必须幂等：$legacySecond"
         }
         require(structuralSnapshot(dataSource) == freshSnapshot) {
-            "V1-only + Site Package 与 V1+V2 + Site Package structural state 不等价"
+            "Fresh Generic Schema + Site Package 与 Legacy V1+V2+V3 + Site Package structural state 不等价"
         }
-        require(operationalSnapshot(dataSource) == legacyOperationalBefore) {
-            "Site Package 不得改写 V2 operational navigation/list/ad members"
-        }
-        verifyLegacyOperatorDataUnchanged(dataSource)
+        require(operationalSnapshot(dataSource) == operationalBefore) { "Navigation ownership 收敛不得改写 ListItem / Advertisement 运营成员" }
+        verifyOperatorNavigation(dataSource, "legacy-operator")
 
-        println("EU38_STABLE_SITE_STRUCTURE_VERIFY PASS")
+        // Once adopted, rename / move / reorder / retarget are reconciled by code rather than mutable fields.
+        mutateStableNavigation(dataSource)
+        val restore = provisioner.apply(packageRoot)
+        require(restore.created == 0 && restore.updated == 1 && restore.unchanged == 97) {
+            "Stable-code navigation restore 结果异常：$restore"
+        }
+        verifyRestoredNavigation(dataSource)
+
+        // A pre-identity Legacy preset that no longer matches the accepted baseline fails safely instead of duplicating.
+        resetDatabase(dataSource, target = null)
+        dataSource.connection.use { connection ->
+            connection.prepareStatement("UPDATE cms_navigation SET name='Legacy 已人工改名' WHERE parent_id IS NULL AND position='MAIN' AND name='网站首页' AND preset=1").use { it.executeUpdate() }
+        }
+        val beforeAmbiguousApply = countRows(dataSource, "cms_navigation")
+        expectEu39Validation("ambiguous legacy navigation adoption") { provisioner.apply(packageRoot) }
+        require(countRows(dataSource, "cms_navigation") == beforeAmbiguousApply) { "Ambiguous adoption 失败后不得新增导航" }
+        require(countCodedPresetNavigations(dataSource) == 0) { "Ambiguous adoption 必须整体回滚" }
+
+        println("EU39_NAVIGATION_STABLE_IDENTITY_VERIFY PASS")
     } finally {
         context.close()
     }
@@ -109,109 +106,64 @@ private fun resetDatabase(dataSource: DataSource, target: String?) {
     flyway.migrate()
 }
 
-private fun createSiteConfigUpdatePackage(value: String): Path {
-    val root = Files.createTempDirectory("eu38-config-update-")
-    val structure = root.resolve("structure")
-    Files.createDirectories(structure)
-    val config = structure.resolve("site-config.json")
-    Files.writeString(
-        config,
-        """
-        [
-          {
-            "key": "SITE_SHORT_NAME",
-            "propertyName": "网站简称",
-            "groupCode": "BASIC",
-            "value": "$value",
-            "valueType": "TEXT",
-            "description": "网站简称",
-            "sortOrder": 20,
-            "required": false,
-            "systemFlag": true,
-            "enabled": true,
-            "preset": true
-          }
-        ]
-        """.trimIndent() + "\n",
-    )
-    writeEu38Manifest(root, "site-config", "structure/site-config.json", sha256Eu38(config))
-    return root
-}
-
-private fun createListConflictPackage(): Path {
-    val root = Files.createTempDirectory("eu38-list-conflict-")
-    val structure = root.resolve("structure")
-    Files.createDirectories(structure)
-    val lists = structure.resolve("lists.json")
-    Files.writeString(
-        lists,
-        """
-        [
-          {
-            "code": "OPERATOR_LIST",
-            "name": "Attempted takeover",
-            "groupCode": "GENERAL",
-            "imagePolicy": "OPTIONAL",
-            "description": "",
-            "sortOrder": 1,
-            "enabled": true,
-            "systemFlag": false,
-            "preset": true
-          }
-        ]
-        """.trimIndent() + "\n",
-    )
-    writeEu38Manifest(root, "lists", "structure/lists.json", sha256Eu38(lists))
-    return root
-}
-
-private fun writeEu38Manifest(root: Path, type: String, path: String, digest: String) {
-    Files.writeString(
-        root.resolve("manifest.json"),
-        """{"packageId":"eu38-verifier","schemaVersion":1,"version":"1.0.0","structure":[{"type":"$type","path":"$path","sha256":"$digest"}]}""" + "\n",
-    )
-}
-
-private fun insertOperatorData(dataSource: DataSource) {
+private fun applyNavigationIdentitySchema(dataSource: DataSource) {
     dataSource.connection.use { connection ->
-        connection.prepareStatement(
-            "INSERT INTO cms_column(parent_id,alias,name,cover_policy,sort_order,enabled,preset) VALUES(NULL,'operator-owned-eu38','运营栏目 EU38','OPTIONAL',900,1,0)",
-        ).use { it.executeUpdate() }
-        connection.prepareStatement(
-            "INSERT INTO cms_list(code,name,group_code,image_policy,description,sort_order,enabled,system_flag,preset) VALUES('OPERATOR_LIST','运营列表','GENERAL','OPTIONAL','',900,1,0,0)",
-        ).use { it.executeUpdate() }
+        connection.createStatement().use { statement ->
+            statement.execute("ALTER TABLE cms_navigation ADD COLUMN code VARCHAR(100) NULL AFTER id")
+            statement.execute("CREATE UNIQUE INDEX uk_cms_navigation_code ON cms_navigation(code)")
+        }
     }
 }
 
-private fun verifyOperatorDataUnchanged(dataSource: DataSource) {
+private fun insertOperatorNavigation(dataSource: DataSource, name: String) {
     dataSource.connection.use { connection ->
-        connection.prepareStatement("SELECT name,preset FROM cms_column WHERE alias='operator-owned-eu38'").use { statement ->
+        connection.prepareStatement(
+            "INSERT INTO cms_navigation(code,parent_id,name,position,category,target_type,target_column_id,target_page_id,target_url,open_mode,icon_path,sort_order,enabled,preset) VALUES(NULL,NULL,?,'MAIN',NULL,'LINK',NULL,NULL,'https://operator.invalid/','DEFAULT',NULL,999,1,0)",
+        ).use { statement -> statement.setString(1, name); statement.executeUpdate() }
+    }
+}
+
+private fun verifyOperatorNavigation(dataSource: DataSource, name: String) {
+    dataSource.connection.use { connection ->
+        connection.prepareStatement("SELECT code,target_url,preset FROM cms_navigation WHERE name=?").use { statement ->
+            statement.setString(1, name)
             statement.executeQuery().use { result ->
-                require(result.next() && result.getString("name") == "运营栏目 EU38" && !result.getBoolean("preset"))
-            }
-        }
-        connection.prepareStatement("SELECT name,preset FROM cms_list WHERE code='OPERATOR_LIST'").use { statement ->
-            statement.executeQuery().use { result ->
-                require(result.next() && result.getString("name") == "运营列表" && !result.getBoolean("preset"))
+                require(result.next())
+                require(result.getString("code") == null)
+                require(result.getString("target_url") == "https://operator.invalid/")
+                require(!result.getBoolean("preset"))
             }
         }
     }
 }
 
-private fun insertLegacyOperatorData(dataSource: DataSource) {
+private fun mutateStableNavigation(dataSource: DataSource) {
     dataSource.connection.use { connection ->
         connection.prepareStatement(
-            "INSERT INTO cms_column(parent_id,alias,name,cover_policy,sort_order,enabled,preset) VALUES(NULL,'legacy-operator-eu38','Legacy 运营栏目','OPTIONAL',901,1,0)",
+            "UPDATE cms_navigation SET parent_id=(SELECT p.id FROM (SELECT id FROM cms_navigation WHERE code='main-guide') p),name='已改名',position='HOME_QUICK',target_type='LINK',target_column_id=NULL,target_url='https://changed.invalid/',sort_order=999 WHERE code='main-policy'",
         ).use { it.executeUpdate() }
     }
 }
 
-private fun verifyLegacyOperatorDataUnchanged(dataSource: DataSource) {
+private fun verifyRestoredNavigation(dataSource: DataSource) {
     dataSource.connection.use { connection ->
-        connection.prepareStatement("SELECT name,preset FROM cms_column WHERE alias='legacy-operator-eu38'").use { statement ->
+        connection.prepareStatement(
+            "SELECT n.name,n.position,n.parent_id,n.target_type,c.alias,n.target_url,n.sort_order,n.preset FROM cms_navigation n LEFT JOIN cms_column c ON c.id=n.target_column_id WHERE n.code='main-policy'",
+        ).use { statement ->
             statement.executeQuery().use { result ->
-                require(result.next() && result.getString("name") == "Legacy 运营栏目" && !result.getBoolean("preset"))
+                require(result.next())
+                require(result.getString("name") == "政策法规")
+                require(result.getString("position") == "MAIN")
+                require(result.getObject("parent_id") == null)
+                require(result.getString("target_type") == "COLUMN")
+                require(result.getString("alias") == "policy")
+                require(result.getString("target_url") == null)
+                require(result.getInt("sort_order") == 50)
+                require(result.getBoolean("preset"))
             }
+        }
+        connection.prepareStatement("SELECT COUNT(*) FROM cms_navigation WHERE code='main-policy'").use { statement ->
+            statement.executeQuery().use { result -> require(result.next() && result.getInt(1) == 1) }
         }
     }
 }
@@ -222,6 +174,7 @@ private fun structuralSnapshot(dataSource: DataSource): String {
         "SELECT alias,name,sort_order,enabled,preset FROM cms_page_group WHERE preset=1 ORDER BY alias",
         """SELECT COALESCE(g.alias,''),p.alias,p.name,p.body_html,p.render_mode,COALESCE(p.embed_url,''),p.sort_order,p.enabled,p.preset FROM cms_page p LEFT JOIN cms_page_group g ON g.id=p.group_id WHERE p.preset=1 ORDER BY COALESCE(g.alias,''),p.alias""",
         "SELECT code,name,description,sort_order,enabled,system_flag,preset FROM cms_navigation_location WHERE preset=1 ORDER BY code",
+        """SELECT n.code,n.name,n.position,COALESCE(p.code,''),n.target_type,COALESCE(c.alias,''),COALESCE(g.alias,''),COALESCE(pg.alias,''),COALESCE(n.target_url,''),n.open_mode,COALESCE(n.icon_path,''),n.sort_order,n.enabled,n.preset FROM cms_navigation n LEFT JOIN cms_navigation p ON p.id=n.parent_id LEFT JOIN cms_column c ON c.id=n.target_column_id LEFT JOIN cms_page pg ON pg.id=n.target_page_id LEFT JOIN cms_page_group g ON g.id=pg.group_id WHERE n.preset=1 ORDER BY n.code""",
         """SELECT config_key,property_name,group_code,config_value,value_type,description,sort_order,required,system_flag,enabled,preset FROM cms_site_config WHERE preset=1 ORDER BY config_key""",
         "SELECT code,name,group_code,image_policy,description,sort_order,enabled,system_flag,preset FROM cms_list WHERE preset=1 ORDER BY code",
         "SELECT code,name,description,sort_order,enabled,system_flag,preset FROM cms_ad_slot WHERE preset=1 ORDER BY code",
@@ -231,7 +184,6 @@ private fun structuralSnapshot(dataSource: DataSource): String {
 
 private fun operationalSnapshot(dataSource: DataSource): String {
     val queries = listOf(
-        """SELECT n.name,n.position,COALESCE(p.name,''),n.target_type,COALESCE(c.alias,''),COALESCE(pg.alias,''),COALESCE(n.target_url,''),n.open_mode,COALESCE(n.icon_path,''),n.sort_order,n.enabled,n.preset FROM cms_navigation n LEFT JOIN cms_navigation p ON p.id=n.parent_id LEFT JOIN cms_column c ON c.id=n.target_column_id LEFT JOIN cms_page pg ON pg.id=n.target_page_id ORDER BY n.id""",
         """SELECT l.code,i.source_type,i.title,COALESCE(i.url,''),COALESCE(i.image_path,''),i.open_mode,i.sort_order,i.enabled FROM cms_list_item i JOIN cms_list l ON l.id=i.list_id ORDER BY i.id""",
         """SELECT s.code,a.title,a.image_path,COALESCE(a.url,''),a.open_mode,a.sort_order,a.enabled FROM cms_advertisement a JOIN cms_ad_slot s ON s.id=a.slot_id ORDER BY a.id""",
     )
@@ -254,14 +206,6 @@ private fun canonicalQuery(connection: Connection, sql: String): String =
         }
     }
 
-private fun siteConfigValue(dataSource: DataSource, key: String): String? =
-    dataSource.connection.use { connection ->
-        connection.prepareStatement("SELECT config_value FROM cms_site_config WHERE config_key=?").use { statement ->
-            statement.setString(1, key)
-            statement.executeQuery().use { result -> if (result.next()) result.getString(1) else null }
-        }
-    }
-
 private fun countRows(dataSource: DataSource, table: String): Int =
     dataSource.connection.use { connection ->
         connection.prepareStatement("SELECT COUNT(*) FROM $table").use { statement ->
@@ -269,25 +213,19 @@ private fun countRows(dataSource: DataSource, table: String): Int =
         }
     }
 
-private fun expectEu38Validation(label: String, action: () -> Unit) {
+private fun countCodedPresetNavigations(dataSource: DataSource): Int =
+    dataSource.connection.use { connection ->
+        connection.prepareStatement("SELECT COUNT(*) FROM cms_navigation WHERE preset=1 AND code IS NOT NULL").use { statement ->
+            statement.executeQuery().use { result -> require(result.next()); result.getInt(1) }
+        }
+    }
+
+private fun expectEu39Validation(label: String, action: () -> Unit) {
     val error = runCatching(action).exceptionOrNull()
     require(error is SitePackageValidationException) {
         "$label 应被 SitePackageValidationException 拒绝，实际：${error?.javaClass?.name}"
     }
 }
 
-private fun requireEu38Env(name: String): String = System.getenv(name)?.takeIf { it.isNotBlank() }
+private fun requireEu39Env(name: String): String = System.getenv(name)?.takeIf { it.isNotBlank() }
     ?: error("缺少验证环境变量：$name")
-
-private fun sha256Eu38(path: Path): String {
-    val digest = MessageDigest.getInstance("SHA-256")
-    Files.newInputStream(path).use { input ->
-        val buffer = ByteArray(8192)
-        while (true) {
-            val read = input.read(buffer)
-            if (read < 0) break
-            digest.update(buffer, 0, read)
-        }
-    }
-    return digest.digest().joinToString("") { "%02x".format(it) }
-}
