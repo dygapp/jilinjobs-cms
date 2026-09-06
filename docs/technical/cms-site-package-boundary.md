@@ -16,8 +16,9 @@
   - `EU-37 — Site Package Contract & Provisioner Foundation`
   - `EU-38 — Stable Site Structure Package Migration`
   - `EU-39 — Navigation Stable Identity & Site Package Reconcile`
+  - `EU-40 — Explicit Site Package Runtime Composition Activation`
 - Current Ready Execution Unit：**NONE**
-- Issue #77：**OPEN**。EU-39 之后的 V2/default Runtime composition、Slice C、Slice D 仍是 Planning / Requirement Candidates，必须重新经过 `slice-work → readiness-check` 才能进入 Execute。
+- Issue #77：**OPEN**。EU-40 之后的 Operational Seed Classification & V2 Responsibility Retirement、Slice C、Slice D 仍是 Planning / Requirement Candidates，必须重新经过 `slice-work → readiness-check` 才能进入 Execute。
 
 ## Decision
 
@@ -25,9 +26,9 @@
 
 当前不拆 Git Repository，不替换 Public 技术栈，也不把 Site Definition 简单移动到 `data-migrations/`。先在单仓内建立可验证的逻辑 / 数据 ownership；完成后再以实际剩余耦合作为 Repository Split Readiness 的输入。
 
-EU-37 / EU-38 已证明 Site Package contract、narrow provisioner 与七类 stable site structures 可以独立于 Site-specific Flyway SQL 表达；EU-39 进一步完成 NavigationItem stable identity / package reconcile，并已集成到 `main` 取得 Post-Integration Current Evidence。**这些结果仍没有移除 V2 的默认 Runtime compatibility responsibility**，因此 Issue #77 尚未完成。
+EU-37～EU-39 已证明 Site Package contract、narrow provisioner、stable site structures 与 Navigation identity 可以独立表达；EU-40 进一步把 Site Package reconcile 激活为正式 Runtime / importer composition lifecycle，并已集成到 `main` 取得 Post-Integration Current Evidence。**V2 compatibility responsibility 仍未移除**，因此 Issue #77 尚未完成。
 
-## 1. Current state after EU-37 / EU-38 / EU-39
+## 1. Current state after EU-37 / EU-38 / EU-39 / EU-40
 
 ### 1.1 Generic CMS Core
 
@@ -114,15 +115,16 @@ JilinJobs package version 当前为 `0.3.0-navigation-identity`。
 
 ### 1.5 V2 remains compatibility baseline
 
-`backend/src/main/resources/db/migration/V2__current_preset_data.sql` 在 EU-38 / EU-39 都保持未修改。
+`backend/src/main/resources/db/migration/V2__current_preset_data.sql` 在 EU-38～EU-40 都保持未修改。
 
 因此当前仍是有意的过渡状态：
 
 - Site Package 已成为 58 个 EU-38 structures + 40 个 EU-39 NavigationItems 的独立 Authority 表达；
-- 默认 Fresh Runtime 仍可通过 V2 获得完整站点初始化数据；
+- EU-40 已让配置了 `cms.site-package.root` 的 Repository Runtime / importer 在 Flyway 后显式 reconcile Site Package；
+- V2 仍可提供 compatibility initialization / operational seed，尚未完成 responsibility retirement；
 - V3 只增加 Navigation stable identity schema，不把站点导航实例值写入 Flyway。
 
-不得误写成“V2 responsibility 已移除”。下一单元若要移交默认 Runtime responsibility，必须重新取得 Fresh / Existing / canonical / Public/Admin / Review Runtime 证据。
+不得误写成“V2 responsibility 已移除”。下一候选需要先分类 operational seed 的长期 Authority，再决定 V2 responsibility retirement，并重新取得受影响的 Fresh / Existing / canonical / Public/Admin / Review Runtime 证据。
 
 ## 2. Navigation adoption / reconciliation contract
 
@@ -187,7 +189,7 @@ NavigationItem loader 明确拒绝半残 target contract：
 - `cms_list_item`；
 - `cms_advertisement`。
 
-它们属于运营成员。EU-38 / EU-39 verifier 均保持相关 Legacy operational snapshot；Navigation stable identity 不把它们迁入 Site Package。
+它们属于运营成员。EU-38 / EU-39 verifier 与 EU-40 Runtime composition verifier 均保持相关 Legacy operational snapshot / count；显式 Site Package composition 不把它们迁入 stable Site Package structure。
 
 若未来 E1～E3 或 Runtime composition 对其出现新的初始化需求，必须重新区分“stable provisioning seed”与“historical / operational content”，不得仅因 V2 当前含有数据就升级为 preset ownership。
 
@@ -203,99 +205,20 @@ NavigationItem loader 明确拒绝半残 target contract：
 
 Site Definition 不并入 `data-migrations/**`。
 
-EU-39 final implementation Head `b95285f5424d4df0b9f9943395e80332296754f7` 已通过 Canonical Migration Verification #152 与 EU-30 Migration Upgrade Verification #102；PR #84 合并后的 `main@36276ed65e6f3edbe96ffc18c01cf18ab924837b` 又通过 Site Package Verification #16 与 Repository CI #762，证明新增 V3 schema / Navigation identity 没有破坏当前 canonical import、migration-only upgrade compatibility 或 accepted Runtime behavior。
+EU-40 final implementation Head `b3e3dc8c4855c9e17b2dfa2f190a84d0305162e2`：
 
-这只证明 EU-39 变更的兼容性，不等于 Slice D 全部关闭；默认 Runtime composition 尚未改为显式 Site Package lifecycle。
+- Site Package Verification #19：PASS；
+- CI #768：Backend / EU-40 Runtime composition / Public / Admin / Integrated Public Browser / Integrated Admin Browser 全部 PASS；
+- Canonical #153：PASS；
+- EU-30 Upgrade #103：PASS；
+- 人工评审环境 #683：PASS。
 
-## 5. Static asset boundary
+PR #86 合并后的 `main@b105e553db1ebbc12a2b6665385b94fb977bea06`：
 
-`site-baseline/static/**` 已与 Public Renderer 源码分离，并由 Backend `CMS_STATIC_ROOT` 暴露稳定 `/static/**` URL。
+- Site Package Verification #20：PASS；
+- CI #769：Backend / EU-40 Runtime composition / Public / Admin / Site Package-enabled Web Runtime / Integrated Public Browser / Integrated Admin Browser 全部 PASS。
 
-语义上这些版本化稳定资源属于 JilinJobs Site Package ownership，但 EU-37～EU-39 没有移动二进制目录，也没有改变 runtime mount。
-
-### Ownership first
-
-后续 Slice C 优先证明：
-
-- Site Package / manifest 能明确引用稳定 Site assets；
-- Runtime bootstrap、CI、Review Environment 知道这些 assets 属于哪一 Site Package；
-- `/static/**` URL contract 不变；
-- Public Renderer 不重新拥有这些文件。
-
-### Physical relocation only if justified
-
-只有完成上述 composition 后，`site-baseline/` 的物理位置仍持续制造真实 ownership ambiguity，才考虑迁移到 `sites/jilinjobs/static/**`。
-
-物理 relocation 不是四层边界成立的必要条件，也不能单独成为“通用化”目标。
-
-## 6. Runtime composition boundary
-
-当前默认 Runtime composition 尚未改为显式 Site Package bootstrap；V2 compatibility path 继续有效。
-
-长期目标仍是：
-
-```text
-Flyway Generic Schema
-→ JilinJobs Site Provisioning
-→ optional canonical historical migration
-→ runtime verification
-→ Replaceable Public Renderer / Admin consumers
-```
-
-EU-39 **不执行**这项切换。下一轮若要改变默认启动 / CI 数据准备顺序，必须同时覆盖：
-
-- Fresh DB；
-- Existing V1+V2 DB；
-- Site Package second apply；
-- existing coded / pre-code navigation compatibility；
-- current Public/Admin behavior；
-- canonical historical import compatibility；
-- Review Environment reproducibility。
-
-在这些证据闭环前不得删除或迁空 V2 当前责任。
-
-## 7. Historical content compatibility
-
-Party `data-migrations/party/v1` 的 canonical dataset 不重写 provenance。
-
-后续 Slice D 需要在新默认 composition 下进一步证明：
-
-- Party target Column aliases / List codes 由 Site Package stable contract 提供；
-- canonical importer 不依赖 V2 Runtime numeric IDs；
-- 183 篇 current Runtime Dataset 保持；
-- accepted Party carousel state 保持；
-- EU-29 acceptedSnapshot provenance 不改变；
-- E3 Main Migration 可以只依赖 Site Package + CMS/Public contracts，而不是当前 Vue source 或 V2 numeric IDs。
-
-E3 只有在上述 compatibility evidence 完成后重新进入执行规划。
-
-## 8. Public Renderer / CI boundary
-
-当前 Vue/Vite Public Site 继续是 accepted renderer implementation，但不成为 Site Definition / Migration Authority。
-
-CI 可以继续在当前 monorepo 中：
-
-- build Backend；
-- build Public Renderer；
-- build Admin；
-- run Site Package targeted MySQL verification；
-- run canonical migration verification；
-- run Public/Admin/Integrated Browser tests。
-
-EU-39 final implementation Head `b95285f5424d4df0b9f9943395e80332296754f7`：
-
-- Site Package Verification #15：PASS；
-- CI #761：Backend / Public / Admin / Integrated Public Browser / Integrated Admin Browser 全部 PASS；
-- Canonical #152：PASS；
-- EU-30 Upgrade #102：PASS；
-- 人工评审环境 #678：PASS。
-
-PR #84 合并后的 `main@36276ed65e6f3edbe96ffc18c01cf18ab924837b`：
-
-- Site Package Verification #16：PASS；
-- CI #762：Backend / Public / Admin / Integrated Public Browser / Integrated Admin Browser 全部 PASS。
-
-EU-39 不包含视觉 / Product Intent 变化，上述 Current Evidence 与 final diff/Authority review 足以关闭本 Unit。
+EU-40 不包含视觉 / Product Intent 变化，上述 Current Evidence 与 final diff/Authority review 足以关闭本 Unit。
 
 ## 9. Completed slices
 
@@ -335,25 +258,39 @@ EU-39：**COMPLETED**。
 - Canonical / Upgrade / Repository regression；
 - PR #84 Integration 与 `main` Post-Integration Verification。
 
+### Slice B Runtime composition activation
+
+EU-40：**COMPLETED**。
+
+完成：
+
+- `cms.site-package.root` opt-in lifecycle；
+- Flyway 后 Site Package reconcile；
+- Repository Web Runtime explicit composition；
+- Canonical / Upgrade importer explicit composition；
+- Review Environment reproducibility；
+- operational seed preservation；
+- PR #86 Integration 与 `main` Post-Integration Verification。
+
 ## 10. Remaining planning slices
 
 以下仍只是 planning slices，**不是 EU Identifier，也不构成 Execute 授权**。
 
-### Slice B remainder — V2/default Runtime composition convergence
+### Operational Seed Classification & V2 Responsibility Retirement
 
-目标：判断并实施 Site Package 何时、如何接管默认 Site bootstrap responsibility。
+目标：对 V2 中仍存在的 `CmsListItem` / `Advertisement` 等 initial operational seed 进行长期 Authority 分类，并在证据支持时收敛 / 移除 V2 Site-specific compatibility responsibility。
 
 Acceptance focus 至少包括：
 
-- Fresh Runtime 使用明确 composition；
-- Existing V1+V2 / V3 compatibility；
+- stable provisioning seed 与 historical / operational content 的明确分类；
+- Fresh / Existing DB recovery；
 - Site Package second apply；
 - V2 responsibility 显式收敛而非静默删除；
 - canonical import / 183 Articles / carousel compatibility；
 - Public/Admin/Integrated Browser unchanged；
 - Review Environment reproducibility。
 
-该候选不自动成为 EU-40；必须重新 current audit / slice / readiness。
+该候选不自动获得新的 EU Identifier；必须重新 current audit / slice / readiness。
 
 ### Slice C — Site Asset Ownership & Runtime Composition
 
@@ -407,11 +344,11 @@ Slice Work 可以根据最新 Repository audit 合并或重新切分相邻候选
 9. Integrated Browser / Review Environment；
 10. final diff / Authority audit。
 
-EU-37～EU-39 Evidence 只证明其各自范围；后续改变 Runtime composition、assets 或 canonical migration consumer 时，应重新取得受影响 Current Evidence。
+EU-37～EU-40 Evidence 只证明其各自范围；后续改变 V2 responsibility、assets 或 canonical migration re-entry 时，应重新取得受影响 Current Evidence。
 
 ## 13. Rollback / responsibility boundary
 
-当前 V2 仍保留 accepted compatibility responsibility，因此 EU-39 的 stable identity / Site Package navigation 已在不破坏默认 Runtime 的前提下独立集成。
+当前 V2 仍保留 accepted compatibility responsibility；EU-40 已证明显式 Site Package Runtime / importer composition 可以在不破坏当前 Runtime 的前提下独立集成，但这不等于 V2 retirement。
 
 未来一旦开始移除 V2 的 Site-specific responsibility，集成前必须同时拥有：
 

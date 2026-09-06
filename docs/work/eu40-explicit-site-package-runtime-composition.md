@@ -8,7 +8,9 @@
 - Specification：`docs/specifications/cms-site-package-boundary.md`
 - Technical Plan：`docs/technical/cms-site-package-boundary.md`
 - Execute baseline：`main@39836f720ae15c88c7bb8af333e1fcd18f642c95`
-- Status：**EXECUTING**
+- Implementation PR：#86
+- Merge commit：`b105e553db1ebbc12a2b6665385b94fb977bea06`
+- Status：**COMPLETED**
 
 ## 2. Readiness decision
 
@@ -79,7 +81,33 @@ Flyway current schema / compatibility baseline
 - final diff / Authority audit PASS；
 - PR Integration + main Post-Integration Verification PASS。
 
-## 7. Remaining boundary after EU-40
+## 7. Exact-head implementation evidence
+
+Final implementation Head：`b3e3dc8c4855c9e17b2dfa2f190a84d0305162e2`。
+
+- Site Package Verification #19 / run `34040583733`：**PASS**；
+- CI #768 / run `34040583771`：Backend / EU-40 Runtime composition / Public / Admin / Integrated Public Browser / Integrated Admin Browser **PASS**；
+- Canonical Migration Verification #153 / run `34040583631`：**PASS**；
+- EU-30 Migration Upgrade Verification #103 / run `34040583802`：**PASS**；
+- 人工评审环境 #683 / run `34040583621`：**PASS**；
+- final diff / Authority audit：**PASS**。
+
+专项验证证明 current V1+V2+V3 首次 composition 原位 adoption 40 条 Legacy navigation、58 existing structures unchanged；第二次 context 98 objects unchanged；V2 `CmsListItem` / `Advertisement` operational seed 保持；未配置 root 时 composition 不启用。
+
+## 8. Integration and Post-Integration evidence
+
+PR #86 已从锁定 final Head 合并，merge commit：
+
+`b105e553db1ebbc12a2b6665385b94fb977bea06`
+
+`main@b105e553db1ebbc12a2b6665385b94fb977bea06` Post-Integration：
+
+- Site Package Verification #20 / run `34041563058`：**PASS**；
+- CI #769 / run `34041563060`：Backend / EU-40 Runtime composition / Public / Admin / Site Package-enabled Web Runtime / Integrated Public Browser / Integrated Admin Browser **PASS**。
+
+因此 EU-40 的实现、Integration 与 `main` Current Evidence 已闭环，状态正式晋升为 **COMPLETED**。
+
+## 9. Remaining boundary after EU-40
 
 即使 EU-40 完成，Issue #77 仍保持 OPEN。后续至少包括：
 
