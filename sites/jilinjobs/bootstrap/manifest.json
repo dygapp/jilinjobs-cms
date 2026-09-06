@@ -1,0 +1,5 @@
+{
+  "bootstrapId": "initial-operational-data",
+  "script": "initial-data.sql",
+  "sha256": "a079bf84f3f8957b2afff6cae2d716d1b12aa1ecc909c1b554a2898a959c668f"
+}
