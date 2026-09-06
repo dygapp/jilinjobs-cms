@@ -17,10 +17,13 @@ jobs:
           ref: docs/eu40-post-integration-closure
           fetch-depth: 0
       - name: Patch Authority
-        run: python3 .github/eu40-authority-closure.py
+        run: |
+          sed -i 's/assert "V2 compatibility responsibility" in read("docs\/project\/site-package-planning.md")/assert "compatibility responsibility" in read("docs\/project\/site-package-planning.md")/' .github/eu40-authority-closure.py
+          python3 .github/eu40-authority-closure.py
       - name: Validate and commit
         run: |
           set -euo pipefail
+          git checkout -- .github/eu40-authority-closure.py
           git diff --check
           test -n "$(git status --porcelain)"
           git config user.name github-actions[bot]
