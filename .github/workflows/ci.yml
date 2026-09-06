@@ -66,6 +66,13 @@ jobs:
           SITE_PACKAGE_VERIFY_DB_USERNAME: root
           SITE_PACKAGE_VERIFY_DB_PASSWORD: root
         run: gradle verifySiteBootstrapBaselineSeparation --no-daemon
+      - name: Verify EU-42 Site Package asset projection
+        working-directory: backend
+        env:
+          SITE_PACKAGE_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/eu37_site_package?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          SITE_PACKAGE_VERIFY_DB_USERNAME: root
+          SITE_PACKAGE_VERIFY_DB_PASSWORD: root
+        run: gradle verifySitePackageAssets --no-daemon
       - name: Upload backend artifact
         uses: actions/upload-artifact@v7
         with:
@@ -158,12 +165,11 @@ jobs:
         with:
           name: admin-dist
           path: admin-dist
-      - name: Prepare versioned static baseline
+      - name: Prepare empty runtime static root
         run: |
           rm -rf runtime-static
           mkdir -p runtime-static
-          cp -a site-baseline/static/. runtime-static/
-          test -f runtime-static/health/baseline.png
+          test ! -e runtime-static/health/baseline.png
       - name: Pull predefined runtime images
         timeout-minutes: 12
         run: |
@@ -180,11 +186,11 @@ jobs:
             -e 'DB_URL=jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true' \
             -e DB_USERNAME=root \
             -e DB_PASSWORD=root \
-            -e CMS_STATIC_ROOT=/static-baseline \
+            -e CMS_STATIC_ROOT=/runtime-static \
             -e CMS_SITE_PACKAGE_ROOT=/site-package \
             -e CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true \
             -v "$GITHUB_WORKSPACE/backend-artifact:/app:ro" \
-            -v "$GITHUB_WORKSPACE/runtime-static:/static-baseline" \
+            -v "$GITHUB_WORKSPACE/runtime-static:/runtime-static" \
             -v "$GITHUB_WORKSPACE/sites/jilinjobs:/site-package:ro" \
             eclipse-temurin:21-jre-alpine-3.23 \
             java -jar /app/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar
