@@ -185,6 +185,7 @@ frontend/
 ```
 
 - Main Public Site base：`/`
+- Party Site base：`/party/`
 - PartyHome route：`/party/`（route name `party-home`）
 - Party column：`/party/column/{alias}`
 - Party article：`/party/article/{id}`
