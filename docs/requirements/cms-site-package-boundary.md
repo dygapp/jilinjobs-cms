@@ -3,7 +3,10 @@
 ## Status
 
 - Candidate source: GitHub Issue #77
-- Stage: Requirement Clarification — Ready for Specification
+- Stage: Requirement Authority — ACTIVE / PARTIALLY IMPLEMENTED
+- Completed implementation: EU-37 / EU-38
+- Current Ready Execution Unit: NONE
+- Remaining scope: Slice B remainder / Slice C / Slice D 继续保持 Planning / Requirement Candidate
 - Scope: E1～E3 前置的 CMS 通用化、站点实例数据所有权与 Public Renderer 可替换边界
 
 ## Intent
@@ -57,12 +60,15 @@
 
 ## Current Evidence
 
-当前 Repository 已存在足够证据证明该边界值得在 E1～E3 前处理：
+当前 Repository 已取得以下阶段性证据：
 
 - EU-36 已让 Public production source 退出 `/api/admin/**` endpoint knowledge，并明确 Public Renderer 是可替换实现；
 - `frontend/public-site` 已有独立 package、build 和 Browser Tests；
-- `V2__current_preset_data.sql` 同时包含通用 `preset` 使用和大量吉林就业站点实例事实；
-- `site-baseline/static/**` 已是站点级稳定资源包；
+- EU-37 已建立 Site Package v1 manifest/schema、narrow provisioner、Fresh V1 Generic Schema MySQL proof、second apply idempotency 与 ownership conflict contract；
+- EU-38 已将 Column、PageGroup、Page、NavigationLocation、SiteConfig、CmsList definition、AdvertisementSlot 七类具有 stable identity 的 JilinJobs preset structure 表达进 `sites/jilinjobs/**`；
+- EU-38 已证明 Fresh `V1 + Site Package` 与 Legacy `V1+V2 + Site Package` 在上述 stable structural scope 上等价；
+- `V2__current_preset_data.sql` 在 EU-38 中保持不变，因此默认 Runtime compatibility responsibility 尚未移除；
+- NavigationItem、CmsListItem / Advertisement operational members、`site-baseline/static/**` 与 canonical migration compatibility 仍属于 Issue #77 后续边界；
 - `data-migrations/README.md` 已明确 Historical Content Migration 与 Flyway / Site Baseline 分离。
 
 ## Non-goals / Deferred
@@ -81,13 +87,14 @@
 - 不顺带处理 C1 / C2、Browser Compatibility 或 Issue #57 的 Public Rendering Architecture 讨论；
 - 不在没有第二个真实 Site / Renderer Consumer 证据时引入过度通用的插件框架、部署框架或多站点产品模型。
 
-## Follow-up Direction
+## Current Follow-up Direction
 
-下一阶段应形成 Specification 与必要 Technical Plan，重点回答：
+EU-37 / EU-38 已完成 Requirement 的 Foundation 与 stable-identity structure portion。Issue #77 当前剩余工作必须重新经过 current audit / slice-work / readiness-check，重点包括：
 
-1. Site Package 的稳定 contract / identity / version / provisioning 语义；
-2. V2 中 Generic Core 与 JilinJobs Site Data 的精确分类；
-3. 静态资源与 Site Package 的组合方式；
-4. Fresh DB / idempotency / upgrade / rollback / verification 模型；
-5. 应如何切成纵向 Candidate Execution Units；
-6. Site Package 收敛完成后 E1～E3 如何重新进入 Planning。
+1. NavigationItem 是否可以用现有字段形成长期稳定 logical identity；若不能，才回到 Requirement / Specification 判断是否需要稳定 identity 字段；
+2. `V2__current_preset_data.sql` 与默认 Runtime bootstrap 的剩余 responsibility 如何在 Fresh / Existing DB compatibility 证据下显式收敛；
+3. `site-baseline/static/**` 的 Site Package ownership 如何在 manifest / Runtime / CI / Review Environment 中显式组合，物理移动仅在有真实必要时执行；
+4. Party canonical migration、183 篇 current Runtime Dataset 与 accepted carousel state 如何证明对 Site Package contract 兼容；
+5. 完成上述 compatibility 后，如何解除 Issue #60 / E1～E3 的前置等待并重新进入 Planning。
+
+这些方向当前都不是 Ready Execution Unit，也不预设新的 EU Identifier。

@@ -32,8 +32,9 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | EU-33 Admin Guidance & Explanation Responsibility Governance | **已完成** | 管理界面保留操作必要信息，结构身份与实现背景退出普通运营提示 |
 | EU-34～EU-35 Rich Text Safety & Shared Authoring | **已完成** | 服务端 HTML safety foundation + Article/Page 共用 Tiptap 富文本编辑能力完成并通过 Post-Integration Verification |
 | EU-36 Public Frontend Source Isolation & Managed Resource Projection | **已完成** | Public production source 已移除 Admin endpoint knowledge，managed Article body image 改由 Backend Public projection 暴露 Public Resource URL，source-boundary guard 与全链回归均已闭环 |
-| Issue #77 CMS Core / Site Package / Public Renderer Boundary | **当前 Planning Priority** | 在 E1～E3 前建立 Generic CMS Core、JilinJobs Site Package、Historical Migration、Replaceable Public Renderer 四层长期边界；当前仅 Planning Authority，尚无 Ready Execution Unit |
-| Issue #60 E1～E3 Main Site Formal Content | **前置依赖等待** | 保留为 Planning Candidates；待 Issue #77 的 Site Package 边界收敛并取得兼容证据后重新进入 Planning |
+| EU-37～EU-38 Site Package Foundation & Stable Structure Migration | **已完成** | Site Package v1 contract / provisioner foundation 已建立；七类具有 stable identity 的 JilinJobs preset structure 已迁入 `sites/jilinjobs/**` 并证明 Fresh V1 + Package 与 Legacy V1+V2 + Package structural equivalence |
+| Issue #77 CMS Core / Site Package / Public Renderer Boundary | **当前 Planning Priority / 部分完成** | EU-37 / EU-38 已完成；剩余 Navigation identity / V2 runtime composition compatibility、Site Asset ownership/runtime composition、Canonical Migration compatibility 与 E1～E3 re-entry 仍需重新 slice / readiness |
+| Issue #60 E1～E3 Main Site Formal Content | **前置依赖等待** | 保留为 Planning Candidates；待 Issue #77 的 Site Package boundary / compatibility 收敛并取得兼容证据后重新进入 Planning |
 | 其他 Planning / Requirement Candidates | **规划层保留** | Issues #57 / #59 / #60 的 C1/C2、Browser Compatibility、Public Rendering Architecture 等仍按各自边界保留 |
 | 真实第三方深度集成 | 条件性后续 | 根据接口、认证、可靠性与 Product Intent 再进入 Specification / Slice |
 
@@ -66,6 +67,8 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | 2026-09-06 | Issue #60 / D1 的 Public Frontend Replaceability Authority 经 PR #70 / #71 集成并通过 Post-Integration CI #719；`slice-work` 形成 EU-36，Readiness Check PASS，进入 Fresh-context Execute |
 | 2026-09-06 | EU-36 完成 Public source isolation、Backend managed Article Resource public projection 与 source-boundary guard；PR #73 exact-head 全链验证、集成及 `main` Post-Integration CI #723 均 PASS，D1 implementation scope 正式关闭 |
 | 2026-09-06 | 在进入 Issue #60 / E1～E3 前新增 Issue #77，明确 Generic CMS Core + JilinJobs Site Package + Historical Migration + Replaceable Public Renderer 四层边界为当前 Planning Priority；Repository split / Docs-Code split 保持 deferred |
+| 2026-09-06 | Issue #77 / Slice A 形成 EU-37，建立 Site Package v1 manifest/schema、narrow provisioner、Fresh V1 MySQL proof 与 ownership/idempotency contract；PR #80 已集成并通过 Post-Integration CI |
+| 2026-09-06 | Issue #77 / Slice B stable-identity portion 形成 EU-38；Column、PageGroup、Page、NavigationLocation、SiteConfig、CmsList definition、AdvertisementSlot 共 58 个 stable preset objects 进入 Site Package；PR #81 exact-head 与 `main` Post-Integration Site Package/Repository CI 全部 PASS |
 
 ## 当前已固化结果
 
@@ -97,7 +100,7 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 - EU-30 新增并接受 `party-theme-education / 主题教育`（legacy `zhutijiaoyu / 主题教育2023`）2 条历史记录；它属于 Party 内容作用域，但不成为 PartyHome 第五个固定内容区；
 - `data-migrations/party/v1/manifest.json` 当前 status = `accepted-canonical`；current canonical Runtime Dataset = 183；EU-29 acceptedSnapshot 181 与 digest 保持原样作为 provenance；
 - Party canonical URL 为 `/party/`、`/party/column/{alias}`、`/party/article/{id}`；legacy detail path 只作为迁移输入；
-- 当前实现中 Flyway 负责 current schema + preset baseline，历史运营文章、外链、正文资源、legacy identity / fingerprint 由独立 canonical migration dataset / importer 承载；Issue #77 将进一步把 Site-specific preset definition 从 Generic CMS Core 的长期责任中分离；
+- 历史运营文章、外链、正文资源、legacy identity / fingerprint 继续由独立 canonical migration dataset / importer 承载；EU-37 / EU-38 已把 Site Package contract 与七类 stable Site Definition 从 Generic Schema 的长期责任中分离出来，但 V2 当前兼容 responsibility 尚未移除；
 - 历史内容迁移知识不得因数据库 schema / Site Package 调整而删除；EU-31 已证明 canonical migration 与 schema baseline 可以独立维护。
 
 ### EU-30 accepted architecture
@@ -139,9 +142,9 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 - Public package build 通过 source-boundary guard 防止 Admin endpoint knowledge 回流；
 - EU-36 已完成 exact-head CI、Public/Admin/Integrated Browser、Review Runtime 与 `main` Post-Integration Verification。
 
-### Issue #77 planned four-layer boundary
+### Issue #77 four-layer boundary / EU-37～EU-38 progress
 
-当前已形成 Planning Authority，但尚未形成 Ready Execution Unit：
+四层长期边界保持：
 
 ```text
 Generic CMS Core
@@ -156,10 +159,13 @@ Replaceable Public Renderer
 ```
 
 - `preset` 保留为 Generic CMS 能力；
-- 具体栏目、导航、Page、List / Ad Slot、Site Config 实例值及稳定 Site Assets 转为 JilinJobs Site Package responsibility；
 - `data-migrations/**` 继续只承载 historical operational content；
 - 当前 Vue/Vite Public Site 继续是 accepted renderer implementation，但不成为 Site / Migration Authority；
-- Repository split、Git Submodule、Docs / Code 分仓与 multi-repo Workspace 暂不实施，待 Site Package 边界形成后单独做 Readiness Assessment。
+- EU-37 已建立 Site Package v1 contract、schema、narrow provisioner、Fresh V1 MySQL proof 与 idempotent / ownership conflict contract；
+- EU-38 已将 Column、PageGroup、Page、NavigationLocation、SiteConfig、CmsList definition、AdvertisementSlot 七类 stable preset structure 纳入 `sites/jilinjobs/**`；
+- Fresh V1 + Site Package 与 Legacy V1+V2 + Site Package 已证明上述 stable structural snapshot 等价；
+- V2 当前兼容 baseline、NavigationItem、operational members、stable Site Assets 与默认 Runtime composition 尚未完成后续 responsibility convergence；
+- Repository split、Git Submodule、Docs / Code 分仓与 multi-repo Workspace 暂不实施，待 Site Package boundary / compatibility 形成后单独做 Readiness Assessment。
 
 ## 已完成阶段：管理端工程分离与功能收敛
 
@@ -226,36 +232,40 @@ Intent / Requirement Clarification
 
 最终状态：实现与验证均已完成并集成到 `main`；Canonical Migration Verification、EU-30 Migration Upgrade Verification 与 CI 均提供了当前阶段所需证据。该阶段现已关闭，不再作为 Fresh Context 的当前 Execution Unit。
 
-## 当前阶段：Issue #77 Site Package Boundary Planning
+## 当前阶段：Issue #77 Site Package Boundary — EU-37 / EU-38 已完成
 
-在开始 Issue #60 / E1～E3 前，当前优先处理 Issue #77。
+在开始 Issue #60 / E1～E3 前，当前仍优先处理 Issue #77，但不得把它恢复成“尚未开始”的 Planning 状态。
 
-Planning Authority：
+Planning / implementation Authority：
 
 - `docs/project/site-package-planning.md`
 - `docs/requirements/cms-site-package-boundary.md`
 - `docs/specifications/cms-site-package-boundary.md`
 - `docs/technical/cms-site-package-boundary.md`
+- `docs/work/eu37-site-package-provisioner-foundation.md`
+- `docs/work/eu38-stable-site-structure-package-migration.md`
 
-当前方向：
+已完成：
 
-1. Generic CMS Core 只保留通用 schema / domain / Admin / Public contracts / `preset` 等能力；
-2. JilinJobs Site Package 承载具体栏目、导航、Page、List / Ad Slot、SiteConfig 初始值和稳定 Site Assets；
-3. Historical Content Migration 保持独立 canonical data 责任；
-4. Public Renderer 继续只消费稳定 Public/Site contracts；
-5. 先在单仓内建立 ownership 和 provisioning contract，不预设 Repository split；
-6. Technical Plan 已提出 A～D planning slices，但它们当前都不是 Execution Unit Identifier；必须在 Planning PR 集成后通过 `slice-work → readiness-check` 才能形成 Ready Execution Unit。
+1. Slice A → EU-37：Site Package Contract & Provisioner Foundation；
+2. Slice B stable-identity portion → EU-38：Stable Site Structure Package Migration。
+
+当前剩余 Planning：
+
+1. Slice B remainder：NavigationItem stable identity / reconcile strategy，以及 V2 / default Runtime composition responsibility；
+2. Slice C：Site Asset Ownership & Runtime Composition；
+3. Slice D：Canonical Migration Compatibility & E1～E3 Re-entry。
 
 Issue #60 / E1、E2、E3 在本阶段保持 Planning Candidate，不提前执行。C1 / C2、Issue #59 Browser Compatibility 与 Issue #57 Public Rendering Architecture 继续独立保留，不因 Issue #77 自动扩大范围。
 
-Repository split、Git Submodule、Docs / Code 分仓、multi-repo Workspace composition 只作为后续独立 Architecture / Method Assessment；Site Package 边界形成并取得真实 Evidence 前不实施。
+Repository split、Git Submodule、Docs / Code 分仓、multi-repo Workspace composition 只作为后续独立 Architecture / Method Assessment；Site Package boundary / Runtime / canonical compatibility 形成并取得真实 Evidence 前不实施。
 
-这些候选不是已批准的 Implementation Scope，也不因 Roadmap 顺序、Issue 编号或未来可能使用的 `EU-xx` 名称获得 Execution Unit 身份。进入实现前仍必须完成：
+这些剩余候选不是已批准的 Implementation Scope，也不因 Roadmap 顺序、Issue 编号或未来可能使用的 `EU-xx` 名称获得 Execution Unit 身份。进入实现前仍必须完成：
 
 ```text
 Planning / Requirement Candidate
 → Intent / Requirement Clarification（按需）
-→ Ready Specification
+→ Ready Specification / existing Authority re-check
 → 必要的 Technical Planning / Research（完成或确认不需要）
 → Slice Work forms Candidate Execution Unit(s)，可分配稳定 Identifier
 → Readiness Check
@@ -272,11 +282,12 @@ Planning / Requirement Candidate
 - EU-31 Database Migration Baseline Convergence 已完成并集成，不是历史预编号 Browser Compatibility；
 - EU-32～EU-35 已按 Issue #60 / B1～B3 的实际 Requirement / Specification / Slice / Readiness 链完成并集成；
 - EU-36 已按 Issue #60 / D1 的 Requirement / Specification / Technical Plan / Slice / Readiness 链完成 Public source isolation 与 managed resource projection，并通过 Post-Integration Verification；
-- 当前没有 Ready Execution Unit；Issue #77 是当前 Planning Priority，不得因已形成 Requirement / Specification / Technical Plan 就直接执行；
+- EU-37 / EU-38 已按 Issue #77 的 Planning Authority、current audit、Slice / Readiness 链完成 Site Package Foundation 与 stable structure migration，并通过 Post-Integration Verification；
+- 当前没有 Ready Execution Unit；Issue #77 仍是当前 Planning Priority，但剩余项不得自动继承 EU-37 / EU-38 的 Execute 授权；
 - Issue #60 / E1～E3 等待 Issue #77 的 Site Package boundary / compatibility 收敛后重新进入 Planning；
 - 未来候选可以在 `slice-work` 形成 Candidate Execution Unit 时获得稳定 Identifier，但只有 `readiness-check` PASS 后才能成为 Ready Execution Unit；
 - 若未来 Browser Compatibility 候选被正式切分，必须基于届时 current implementation 重新取得兼容证据，不继承 EU-30 的旧 DOM / CSS / dependency 假设；
-- EU-31 accepted Flyway baseline 继续有效；Issue #77 若需要调整 `V2__current_preset_data.sql` 的长期责任，必须显式处理 append-only / baseline authority 与 Existing DB upgrade，不得静默改写；
+- EU-31 accepted Flyway baseline 继续有效；EU-38 没有删除或重写 `V2__current_preset_data.sql`，未来若调整其长期责任必须显式处理 baseline authority 与 Existing DB compatibility；
 - canonical historical dataset、legacy mapping、fingerprint、Importer、EU-29→EU-30 upgrade knowledge 与证据长期独立保留；
 - 后续调整 Main / Party Router / Entry / Gateway / Visual 时，既有 Human Review Evidence 不机械继承，应按 Evidence Claim 重新取得受影响证据；
 - 最终 PR 不自动合并。
@@ -290,7 +301,7 @@ Planning / Requirement Candidate
 5. 当前阶段优先读取 `docs/project/site-package-planning.md`、`docs/requirements/cms-site-package-boundary.md`、`docs/specifications/cms-site-package-boundary.md`、`docs/technical/cms-site-package-boundary.md`
 6. `docs/technical/verification-strategy.md`
 7. GitHub Issue #77；Issue #60 用于 E1～E3 / C1/C2 等后续候选，Issues #57 / #59 继续保留各自讨论 / 后置候选
-8. 已完成 EU-31～EU-36 的追溯文档仅在相关工作需要时读取；当前状态优先由本 Roadmap 与对应 Requirement / Specification / Work Artifact 恢复
+8. EU-37 / EU-38 已完成追溯分别读取 `docs/work/eu37-site-package-provisioner-foundation.md`、`docs/work/eu38-stable-site-structure-package-migration.md`；其他已完成 EU 只在相关工作需要时读取
 9. 当前 Branch / PR / CI / Runtime Evidence
 
 不得使用其他聊天或其他项目状态补充未固化的 Consumer 产品事实。
