@@ -47,11 +47,14 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
+val jilinjobsSitePackageRoot = file("../sites/jilinjobs").absolutePath
+
 tasks.register<JavaExec>("importPartyHistoricalContent") {
     group = "migration"
     description = "Import the canonical Party historical-content dataset, including EU-30 theme education"
     classpath = sourceSets["main"].runtimeClasspath
     mainClass.set("com.jilinjobs.cms.migration.PartyHistoricalContentMigrationV2Kt")
+    environment("CMS_SITE_PACKAGE_ROOT", jilinjobsSitePackageRoot)
 }
 
 tasks.register<JavaExec>("importPartyCarousel") {
@@ -59,6 +62,7 @@ tasks.register<JavaExec>("importPartyCarousel") {
     description = "Import the Party carousel canonical dataset with LINK / ARTICLE placement resolution"
     classpath = sourceSets["main"].runtimeClasspath
     mainClass.set("com.jilinjobs.cms.migration.PartyCarouselMigrationV2Kt")
+    environment("CMS_SITE_PACKAGE_ROOT", jilinjobsSitePackageRoot)
 }
 
 tasks.register<JavaExec>("provisionSitePackage") {
@@ -80,4 +84,11 @@ tasks.register<JavaExec>("verifyStableSiteStructure") {
     description = "Verify EU-38 stable Site Package structure against Fresh V1 and legacy V1+V2 databases"
     classpath = sourceSets["test"].runtimeClasspath
     mainClass.set("com.jilinjobs.cms.provisioning.StableSiteStructureVerificationKt")
+}
+
+tasks.register<JavaExec>("verifyRuntimeSitePackageComposition") {
+    group = "verification"
+    description = "Verify EU-40 opt-in Site Package runtime composition against the current V1+V2+V3 lifecycle"
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("com.jilinjobs.cms.provisioning.RuntimeSitePackageCompositionVerificationKt")
 }
