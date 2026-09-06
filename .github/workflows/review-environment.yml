@@ -70,23 +70,11 @@ jobs:
           wait "$public_build_pid"
           wait "$admin_build_pid"
 
-      - name: 准备初始化静态资源包
+      - name: 准备空 Runtime Static Root
         run: |
           sudo rm -rf runtime-static runtime-uploads
           mkdir -p runtime-static runtime-uploads
-          cp -a site-baseline/static/. runtime-static/
-          test -f runtime-static/health/baseline.png
-          test -f runtime-static/home/header-banner.png
-          test -f runtime-static/home/carousel-01.jpg
-          test -f runtime-static/home/recruitment-campaign.png
-          test -f runtime-static/brand/smartedu-logo-text.png
-          test -f runtime-static/brand/site-favicon.png
-          test -f runtime-static/party/ic-title-yellow.png
-          test -f runtime-static/party/section-marker.png
-          test -f runtime-static/party/party-header-banner.jpg
-          test -f runtime-static/footer/public-security-record.png
-          test -f runtime-static/footer/public-institution.png
-          test -f runtime-static/footer/wechat-qr.png
+          test ! -e runtime-static/health/baseline.png
 
       - name: 启动 Backend 与双前端 Gateway
         run: |
@@ -94,12 +82,12 @@ jobs:
             -e 'DB_URL=jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true' \
             -e DB_USERNAME=root \
             -e DB_PASSWORD=root \
-            -e CMS_STATIC_ROOT=/static-baseline \
+            -e CMS_STATIC_ROOT=/runtime-static \
             -e CMS_STORAGE_ROOT=/uploads \
             -e CMS_SITE_PACKAGE_ROOT=/site-package \
             -e CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true \
             -v "$GITHUB_WORKSPACE/backend/build/libs:/app:ro" \
-            -v "$GITHUB_WORKSPACE/runtime-static:/static-baseline" \
+            -v "$GITHUB_WORKSPACE/runtime-static:/runtime-static" \
             -v "$GITHUB_WORKSPACE/runtime-uploads:/uploads" \
             -v "$GITHUB_WORKSPACE/sites/jilinjobs:/site-package:ro" \
             eclipse-temurin:21-jre-alpine-3.23 \
@@ -175,18 +163,18 @@ jobs:
 
           sudo rm -rf runtime-static runtime-uploads
           mkdir -p runtime-static runtime-uploads
-          cp -a site-baseline/static/. runtime-static/
+          test ! -e runtime-static/health/baseline.png
 
           docker run -d --name cms-backend --network host \
             -e 'DB_URL=jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true' \
             -e DB_USERNAME=root \
             -e DB_PASSWORD=root \
-            -e CMS_STATIC_ROOT=/static-baseline \
+            -e CMS_STATIC_ROOT=/runtime-static \
             -e CMS_STORAGE_ROOT=/uploads \
             -e CMS_SITE_PACKAGE_ROOT=/site-package \
             -e CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true \
             -v "$GITHUB_WORKSPACE/backend/build/libs:/app:ro" \
-            -v "$GITHUB_WORKSPACE/runtime-static:/static-baseline" \
+            -v "$GITHUB_WORKSPACE/runtime-static:/runtime-static" \
             -v "$GITHUB_WORKSPACE/runtime-uploads:/uploads" \
             -v "$GITHUB_WORKSPACE/sites/jilinjobs:/site-package:ro" \
             eclipse-temurin:21-jre-alpine-3.23 \
