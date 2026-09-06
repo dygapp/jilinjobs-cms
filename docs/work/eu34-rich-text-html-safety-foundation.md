@@ -7,9 +7,9 @@
 - Requirement：`docs/requirements/rich-text-authoring.md`
 - Specification：`docs/specifications/rich-text-authoring.md`
 - Technical Plan：`docs/technical/rich-text-authoring-plan.md`
-- Status：**READY**
+- Status：**COMPLETED**
 
-本 Unit 由 Ready Specification 经 `slice-work` 形成 Candidate，并在下述 Readiness Gate PASS 后晋升为 Ready Execution Unit。
+本 Unit 由 Ready Specification 经 `slice-work` 与 Readiness Gate 形成并获得 Execute 权限，现已完成实现、集成与 Post-Integration Verification。下述 Readiness / Completion Gate 作为执行过程追溯保留，不再表示当前执行状态。
 
 ## 2. Intent
 
@@ -78,11 +78,13 @@ Requirement / Specification 已 confirmed/ready，stored-XSS gap、历史兼容�
 
 ## 8. Readiness Verdict
 
-**PASS — EU-34 is a Ready Execution Unit.**
+**PASS — EU-34 was promoted to a Ready Execution Unit.**
 
-可以进入 Execute。若实施发现必须扩大允许 HTML/CSS 到当前 Requirement 未定义的 active/embed 能力，应回到 Requirement Change，而不是在本 Unit 内扩大范围。
+该 Verdict 是历史 Execute 授权记录；当前状态见 Identity：`COMPLETED`。
 
 ## 9. Completion Gate
+
+EU-34 的 Completion Gate 已满足并完成集成；以下条目作为历史验收契约保留：
 
 - sanitizer dependency 与 shared policy 已锁定；
 - hostile direct API cases PASS；
