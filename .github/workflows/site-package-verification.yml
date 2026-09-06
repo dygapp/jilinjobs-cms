@@ -3,7 +3,21 @@ name: Site Package Verification
 on:
   push:
     branches: [main]
+    paths:
+      - "backend/build.gradle.kts"
+      - "backend/src/main/kotlin/com/jilinjobs/cms/provisioning/**"
+      - "backend/src/test/kotlin/com/jilinjobs/cms/provisioning/**"
+      - "backend/src/main/resources/db/migration/**"
+      - "sites/**"
+      - ".github/workflows/site-package-verification.yml"
   pull_request:
+    paths:
+      - "backend/build.gradle.kts"
+      - "backend/src/main/kotlin/com/jilinjobs/cms/provisioning/**"
+      - "backend/src/test/kotlin/com/jilinjobs/cms/provisioning/**"
+      - "backend/src/main/resources/db/migration/**"
+      - "sites/**"
+      - ".github/workflows/site-package-verification.yml"
 
 permissions:
   contents: read
