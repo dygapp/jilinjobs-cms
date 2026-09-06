@@ -13,8 +13,8 @@
 
 - Specification: **ACCEPTED / ACTIVE**
 - Technical Planning: **ACTIVE**
-- Completed Execution Units: **EU-37 / EU-38 / EU-39 / EU-40**
-- Current Ready Execution Unit: **EU-41 — Site Bootstrap & Generic Schema Baseline Separation（IN EXECUTION）**
+- Completed Execution Units: **EU-37 / EU-38 / EU-39 / EU-40 / EU-41**
+- Current Ready Execution Unit: **NONE**
 - Issue #77: **OPEN**
 
 ## 1. Four-layer boundary
@@ -142,7 +142,7 @@ Generic CMS current compatible schema/capabilities
 
 ## 4. Backend Flyway boundary
 
-EU-41 将 active Backend Flyway 收敛为纯 Generic CMS Schema lineage。
+EU-41 已将 active Backend Flyway 收敛为纯 Generic CMS Schema lineage。
 
 ### Current development baseline
 
@@ -177,7 +177,7 @@ Main / Party Canonical Migration 可以依赖 Site Package stable identities，�
 - Import 前目标 Site stable identity 已 provision；
 - 不把普通 Fresh Site bootstrap default 误当 historical provenance unit。
 
-EU-40 已证明 importer 可以显式组合 Site Package reconcile。EU-41 继续验证在 Backend Flyway 不再提供 JilinJobs data 的情况下，Party canonical Fresh import 与 EU-29→EU-30 upgrade 仍可仅依赖 Generic Schema + stable Site Package + Canonical Dataset 成立。
+EU-40 已证明 importer 可以显式组合 Site Package reconcile。EU-41 已进一步验证在 Backend Flyway 不再提供 JilinJobs data 的情况下，Party canonical Fresh import 与 EU-29→EU-30 upgrade 仍可仅依赖 Generic Schema + stable Site Package + Canonical Dataset 成立。
 
 ## 6. Static asset boundary
 
@@ -208,7 +208,7 @@ Replacement-stable dependencies：
 
 Vue / Vue Router / Vite / multi-entry build / current Playwright layout 属 implementation-specific details，不进入 Site Package / migration contract。
 
-EU-41 不改变 Public/Admin contracts 或 Product Intent；Fresh JilinJobs Runtime 通过显式 Site bootstrap 恢复当前初始可见数据。
+EU-41 未改变 Public/Admin contracts 或 Product Intent；Fresh JilinJobs Runtime 通过显式 Site bootstrap 恢复当前初始可见数据。
 
 ## 8. Provisioning lifecycle
 
@@ -272,7 +272,7 @@ Repository Fresh CI / Review Environment 可以显式使用 `CMS_SITE_PACKAGE_BO
 
 ## 10. Verification obligations
 
-EU-41 acceptance 至少证明：
+EU-41 acceptance 已证明：
 
 1. Backend active migration history 只包含 Generic CMS Schema migrations；
 2. Generic CMS Fresh DB 不含 JilinJobs instances；
@@ -285,7 +285,7 @@ EU-41 acceptance 至少证明：
 9. Public/Admin/Integrated Browser current behavior 保持；
 10. Canonical Migration / EU-30 Upgrade / Review Environment 在新 lifecycle 下可重复。
 
-Initial PR #88 Head `830f620cbe22c474ef27045db49aa9cc27e030c2` 的 Site Package Verification #21 已 PASS。Final acceptance 仍以 PR #88 final Head / full Actions / Authority review 为准。
+PR #88 final Head `a958c39a37892cf0fbcb41b8c883b2299d84f561` 的 Site Package Verification #32、CI #783、Canonical Migration Verification #165、EU-30 Migration Upgrade Verification #115 与人工评审环境 #696 全部 PASS；PR #88 已合并为 `main@6c88eea1762e8edf465833631cadff1e4c751d36`，Post-Integration Site Package Verification #33 与 CI #784 全部 PASS。EU-41 Specification acceptance 已闭环。
 
 ## 11. Repository / directory boundary
 
@@ -310,17 +310,14 @@ Initial PR #88 Head `830f620cbe22c474ef27045db49aa9cc27e030c2` 的 Site Package 
 2. EU-38 七类 stable structure representation；
 3. EU-39 Navigation stable identity / transition adoption；
 4. EU-40 explicit Runtime/importer Site Package composition；
-5. EU-39 / EU-40 对应 final + post-integration evidence。
+5. EU-41 Backend Schema-only Flyway lineage + one-time current-schema Site bootstrap + operational default no-takeover/no-resurrection；
+6. EU-41 exact-head / Integration / Post-Integration evidence 已闭环。
 
-### EU-41 当前执行
+### 当前 Ready Execution Unit
 
-1. Backend Schema-only Flyway lineage；
-2. one-time current-schema Site bootstrap；
-3. operational default no-takeover/no-resurrection；
-4. CI / Review / Canonical lifecycle convergence；
-5. Current Authority replacement。
+**NONE**。EU-41 的 Execute Authority 已随完成而终止。
 
-### EU-41 后剩余 Planning Candidates
+### 剩余 Planning Candidates
 
 1. Site Asset Ownership & Runtime Composition（Slice C）；
 2. Canonical Migration Compatibility & E1～E3 re-entry（Slice D）；
