@@ -11,7 +11,8 @@
 - Planning integration：PR #78
 - Planning Post-Integration CI：#731 / run `34015839251`，Backend / Public / Admin / Integrated Browser 全部 PASS
 - Implementation PR：#80
-- Status：**READY TO INTEGRATE — final exact-head verification required after branch normalization**
+- Merge commit：`2b2d924a16c2f9df5f781b0a794a17c4f84d6b88`
+- Status：**COMPLETED**
 
 ## 2. Intent
 
@@ -122,14 +123,22 @@ EU-37 不移除任何 accepted V2 responsibility，不改变正式 Runtime 数�
 
 ## 9. Final Diff Boundary
 
-最终实施只允许包含：
+最终实施只包含：
 
-- Site Package v1 schema / `sites/jilinjobs` empty foundation shell；
+- Site Package v1 schema / `sites/jilinjobs` foundation shell；
 - narrow Site Package loader / Column provisioner；
 - CLI / Gradle entry；
 - Foundation verification 与 CI MySQL service；
 - 本 Work Authority。
 
-不得包含 V2 baseline rewrite、正式 JilinJobs Site data migration、Site asset relocation、Public/Admin product behavior change、Party canonical migration、E1～E3 或 Repository split。
+未包含 V2 baseline rewrite、正式 JilinJobs Site data migration、Site asset relocation、Public/Admin product behavior change、Party canonical migration、E1～E3 或 Repository split。
 
-Branch normalization 后 Head SHA 会改变，因此 CI #738 不替代最终 exact-head verification。只有规范化后的 PR #80 exact Head 再次取得 Backend / Foundation / Public / Admin / Integrated Browser PASS，才满足 Ready to Integrate 的最终 Current Evidence；合并后仍需 `main` Post-Integration CI PASS 才能声明 EU-37 COMPLETED。
+## 10. Final Integration Evidence
+
+PR #80 最终 exact Head：`11c69161aa7b9a79d40bfa0e2825c577e8b0e63b`。
+
+- exact-head CI #740 / run `34018158328`：Backend / Public / Admin / Integrated Browser 全部 PASS，Backend 中 `Verify EU-37 Site Package foundation` PASS；
+- PR #80 合并 commit：`2b2d924a16c2f9df5f781b0a794a17c4f84d6b88`；
+- `main` Post-Integration CI #741 / run `34019950248`：Backend / Public / Admin / Integrated Browser 全部 PASS，Foundation verifier 再次 PASS。
+
+因此 Completion Gate 全部闭环，EU-37 状态为 **COMPLETED**。后续 EU-38 对正式 stable structure 的迁移建立在本 Foundation 之上，并继续保留 V2 compatibility responsibility。
