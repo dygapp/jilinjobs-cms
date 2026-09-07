@@ -7,15 +7,21 @@
 - Phase: **Phase 2A — Backend Application / Core Boundary Foundation**
 - Candidate formed by: `slice-work`
 - Readiness: **PASS**
-- Execute state: **NOT STARTED**
+- Execute state: **IMPLEMENTED**
+- Verification: **PASS — pre-integration exact-head**
 - Planning baseline: `main@bfd0983e66d392de1722a703356ce581fd1a41ea`
 - Planning branch: `planning/phase2a-backend-application-core-boundary`
+- Execute baseline: `main@40c58d895bc8d193e0f4e71cce678eaaec741503`
+- Implementation branch: `feature/eu-46-backend-application-core-boundary`
+- Verification head: `1825aa0d9399f4b7bcb4dde165816ad916e8590f`
+- Pull Request: GitHub PR #105
 - Requirement: `docs/requirements/backend-application-core-boundary.md`
 - Specification: `docs/specifications/backend-application-core-boundary.md`
 - Technical Plan: `docs/technical/backend-application-core-boundary.md`
-- Execute Authority: **PENDING planning/readiness integration + Fresh Context base-drift revalidation**
+- Integration: **PENDING PR #105 merge at this archive snapshot**
+- Post-Integration Current Evidence: **PENDING GitHub Issue #92 record at this archive snapshot**
 
-EU-46 的 identifier 来自本次 Phase 2A `slice-work`。它不继承 EU-45 或更早 Unit 的 Execute Authority；当前 Planning branch 只形成并验证 Ready Unit，不能在 readiness change 集成前实施代码。
+EU-46 的 identifier 来自 Phase 2A `slice-work`。它不继承 EU-45 或更早 Unit 的 Execute Authority；Execute Authority 在 planning/readiness integration 后经 Fresh Context base-drift revalidation独立成立，并只覆盖本 Unit。本文归档快照记录 pre-integration implementation / verification；最终 merge 与 Post-Integration 状态以 GitHub PR #105、Actions 与 Issue #92 Current Evidence 为准，不向 Phase 2B / 2C、Phase 3 或 Issue #60 / E1～E3 传递 Execute Authority。
 
 ## 1. Dependency Closure
 
@@ -239,6 +245,42 @@ Rollback boundary：整个 EU-46 PR。
 
 ## 8. Readiness Decision
 
-**PASS — EU-46 is a Candidate Ready Execution Unit for planning/readiness integration.**
+**PASS — EU-46 became the Ready Execution Unit after planning/readiness integration and Fresh Context revalidation.**
 
-当前仍不能 Execute。只有本 planning/readiness change 完成 exact-head verification、合并到 `main`、取得 Post-Integration Current Evidence，并在新的 Fresh Context 中确认 EU-46 Readiness仍有效且无 base drift 后，EU-46 才获得 Execute Authority。
+Execute baseline 为 `main@40c58d895bc8d193e0f4e71cce678eaaec741503`；implementation 在该 baseline 无 drift 的前提下完成。
+
+## 9. Execute / Verification Record
+
+### 9.1 Implementation result
+
+- `backend/modules/cms-core` 成为 shared Generic CMS capability / Generic Flyway / `cms-metadata.yml` 的单一 build owner；
+- `backend/apps/cms-server` 持有 `CmsApplication`、HTTP transport、server-only compatibility CLI 与现有 Server verifier/test；
+- `backend/apps/content-migration` 持有独立 non-web Spring composition 与四个 Party migration implementation；四个 Party migration implementation、Generic Flyway SQL 与多数既有 source/test 以 0-change rename 保持语义；
+- root `backend/` 保留现有 build / import / provision / bootstrap / Site Package verifier task capability，Server JAR仍输出到 `backend/build/libs/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar`；
+- Canonical / EU-30 / Site Package workflow path filters同步到新 Core / Server / Migration ownership；
+- 新增 `Backend Application Boundary Verification`，对两个 BootJar packaged ownership 与 Migration non-web composition进行 focused proof；
+- `data-migrations/**`、frontend、sites bytes、DB schema semantics、API / product behavior均未改变。
+
+实现过程中由真实 CI 暴露并修复的 build/composition wiring 问题包括 Core validation API、Server verifier Flyway compile dependency、Migration Jackson auto-configuration，以及 Gradle 9.6 对 executable verifier-only test source set 的 no-discovered-tests检查；这些修复没有扩大本 Unit scope。
+
+### 9.2 Pre-integration exact-head evidence
+
+Verification head：`1825aa0d9399f4b7bcb4dde165816ad916e8590f`。
+
+Required evidence 全部 PASS：
+
+- Repository CI **#830** — PASS；
+- Canonical Migration Verification **#172** — PASS；
+- EU-30 Migration Upgrade Verification **#122** — PASS；
+- Site Package Verification **#43** — PASS；
+- Backend Application Boundary Verification **#1** — PASS。
+
+EU-30 Upgrade 证明同一 runtime 上 EU-29 accepted import → EU-30 candidate upgrade → second-run idempotency → position-2 fingerprint conflict 路径全部保持。Boundary verification证明 Server / Migration artifact ownership与独立 non-web Migration context成立。
+
+Review Environment 是 supporting runtime evidence；本 Unit无视觉/人工产品行为变化，因此它不替代也不阻塞上述 required exact-head Gate。
+
+### 9.3 Integration boundary
+
+PR #105 是整个 EU-46 rollback / integration boundary。合并前必须再次确认 `main` 仍为 Execute baseline、PR unresolved review threads = 0 且 final head required evidence仍匹配；合并后必须在 `main` 取得 Post-Integration CI / affected targeted workflow evidence，并在 Issue #92 记录 Current Evidence。
+
+EU-46 集成完成后 Current Ready Execution Unit 返回 **NONE**；下一 Gate 仅为 Phase 2B Planning Candidate，必须独立 Planning → `slice-work` → `readiness-check`，不得继承本 Unit Execute Authority。

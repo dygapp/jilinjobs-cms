@@ -5,17 +5,16 @@
 - Planning source：GitHub Issue #92
 - Related architecture authority：GitHub Issue #77
 - Downstream candidates：GitHub Issue #60 / E1～E3
-- Stage：**Planning Authority — ACTIVE / Phase 2A READY**
+- Stage：**Planning Authority — ACTIVE / Phase 2B PLANNING CANDIDATE**
 - Phase 0：**COMPLETED**
 - Phase 1 Repository Documentation Authority Convergence：**COMPLETED**
-- Phase 2A dependency closure / Requirement / Specification / Technical Planning / slice-work / readiness-check：**COMPLETED**
-- Current Ready Execution Unit：**EU-46 — Backend Application / Core Boundary Foundation**
-- EU-46 Readiness：**PASS**
-- EU-46 Execute：**NOT STARTED**
-- Next Gate：**planning/readiness integration → Fresh Context base-drift revalidation → EU-46 Execute**
+- Phase 2A Backend Application / Core Boundary Foundation：**COMPLETED via EU-46**
+- Current Ready Execution Unit：**NONE**
+- Next Gate：**Phase 2B dependency closure → Requirement / Specification / necessary Technical Planning → `slice-work` → `readiness-check`**
 - Phase 1 closure Authority：`docs/project/documentation-authority-convergence.md`
+- Phase 2A accepted Authority：`docs/requirements/backend-application-core-boundary.md` + `docs/specifications/backend-application-core-boundary.md` + `docs/technical/backend-application-core-boundary.md`
 
-本文固化 EU-42 之后、Issue #60 / E1～E3 重新进入正式规划之前的总体演进顺序。Phase / Planned Unit 名称只是 Planning identity；只有具体 Unit 经 `slice-work → readiness-check` PASS，并在 readiness change 集成后完成 Fresh Context revalidation，才授予对应 Execute 权限。
+本文固化 EU-42 之后、Issue #60 / E1～E3 重新进入正式规划之前的总体演进顺序。Phase / Planned Unit 名称只是 Planning identity；只有具体 Unit 经 `slice-work → readiness-check` PASS 才形成 Ready Execution Unit，且后续 Execute 仍需遵守 Fresh Context、base drift 与 Repository Authority Gate。
 
 ```text
 Planning / Requirement Candidate
@@ -27,7 +26,7 @@ Planning / Requirement Candidate
   → Fresh-context Execute
 ```
 
-EU-46 不继承 EU-45；Phase 2B / 2C、Phase 3 与 E1～E3 也不得继承 EU-46。
+EU-46 已完成且 Execute Authority终止。Phase 2B / 2C、Phase 3 与 E1～E3 不得继承 EU-46。
 
 ## 2. Why this planning layer exists
 
@@ -38,7 +37,7 @@ EU-42 后 audit 确认两个不能直接留给 E1～E3 的长期问题：
 1. Repository Documentation Authority 需要先完成 Current / superseded / Historical Work 收敛；
 2. Party-specific Historical Migration Application 仍与 Backend Server production classpath / Spring composition 共存，而未来 Main migration 需要 site-neutral、可复用且独立运行的 Generic Content Migration Application。
 
-第 1 项已由 Phase 1 / EU-43～EU-45 完成。第 2 项按 Phase 2A → 2B → 2C 分阶段处理，避免在同一个 refactor 中同时改变 application boundary 与 migration domain semantics。
+第 1 项已由 Phase 1 / EU-43～EU-45 完成。第 2 项中的 application/core isolation 已由 Phase 2A / EU-46 完成；接下来只从 Phase 2B 开始规划 Generic Content Migration capability，再在 Phase 2C 处理 Party-specific de-specialization，避免把 application boundary 与 migration domain semantics重新耦合到同一个变化中。
 
 ## 3. Overall sequence
 
@@ -47,9 +46,9 @@ Phase 0  Planning Authority Solidification — COMPLETED
         ↓
 Phase 1  Repository Documentation Authority Convergence — COMPLETED
         ↓
-Phase 2A Backend Application / Core Boundary Foundation — EU-46 READY
+Phase 2A Backend Application / Core Boundary Foundation — EU-46 COMPLETED
         ↓
-Phase 2B Generic Content Migration Application — PLANNING CANDIDATE
+Phase 2B Generic Content Migration Application — PLANNING CANDIDATE / CURRENT NEXT GATE
         ↓
 Phase 2C Party Migration De-specialization & Compatibility — PLANNING CANDIDATE
         ↓
@@ -60,7 +59,7 @@ Issue #60 / E1～E3
 后置：Phase 4 Repository Split Readiness Assessment
 ```
 
-Phase 2A 当前只有 EU-46 获得 Readiness PASS；后续阶段均没有 Execute Authority。
+当前 **Ready Execution Unit = NONE**。Phase 2B 尚未经过 `slice-work` / `readiness-check`，因此没有 Candidate/Ready EU 或 Execute Authority。
 
 ## 4. Phase 0 — COMPLETED
 
@@ -81,35 +80,35 @@ Phase 0 已完成：
 
 Phase 1 完成后 Current / archive 的物理边界已稳定，`docs/README.md` 是 Documentation Authority Map；archive 默认不参与 Fresh Context Current Authority 恢复。
 
-## 6. Phase 2A — Backend Application / Core Boundary Foundation
+## 6. Phase 2A — Backend Application / Core Boundary Foundation — COMPLETED
 
-### 6.1 Current Authority
+### 6.1 Accepted Authority
 
 - Requirement：`docs/requirements/backend-application-core-boundary.md`；
 - Specification：`docs/specifications/backend-application-core-boundary.md`；
 - Technical Plan：`docs/technical/backend-application-core-boundary.md`；
-- Ready Work artifact：`docs/work/current/eu46-backend-application-core-boundary-foundation.md`。
+- Completed Work artifact：`docs/work/archive/eu46-backend-application-core-boundary-foundation.md`。
 
 ### 6.2 Dependency closure result
 
-Current baseline `main@bfd0983e66d392de1722a703356ce581fd1a41ea` 的 inventory 确认：
+Planning baseline `main@bfd0983e66d392de1722a703356ce581fd1a41ea` 的 inventory确认：
 
-- Backend 仍是单 Gradle project；
-- `importPartyHistoricalContent` / `importPartyCarousel` 使用 `sourceSets["main"].runtimeClasspath`；
+- Backend 原为单 Gradle project；
+- `importPartyHistoricalContent` / `importPartyCarousel` 使用完整 `sourceSets["main"].runtimeClasspath`；
 - 四个 Party migration implementation 都以 `CmsApplication` 作为 Spring source；
 - `WebApplicationType.NONE` 只关闭 Web server，不限制 root component scan；
 - Migration 需要共享 Article/Column/List/Resource/StaticResource/MyBatis/transaction/SitePackage capability；
 - `CmsList.kt`、`Advertisement.kt`、`SiteConfig.kt`、`StaticResource.kt` 混合 Core service/persistence 与 Server REST transport；
 - Site Provisioning / Bootstrap maintenance CLI 与部分 verifier也直接依赖 `CmsApplication`；
 - CI / Review Environment稳定消费 `backend/build/libs/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar`；
-- Canonical / Upgrade / Review workflow直接消费当前 Party import task；
-- workflow path filters仍指向 monolithic source path。
+- Canonical / Upgrade / Review workflow直接消费 Party import task；
+- workflow path filters曾指向 monolithic source path。
 
-因此仅搬 migration 文件或在同一完整 runtime classpath增加第二个 BootJar都不能形成 2A boundary。
+因此仅搬 migration 文件或在同一完整 runtime classpath增加第二个 BootJar不能形成 2A boundary。
 
-### 6.3 Build-shape decision
+### 6.3 Accepted build shape
 
-Technical Planning 已完成 multi-project 与 lower-complexity source-set alternative 比较，选择：
+EU-46 实施标准 Gradle multi-project：
 
 ```text
 backend/
@@ -129,13 +128,13 @@ content-migration ────→ cms-core
 
 选择 multi-project 的理由是 dependency / runtime classpath / Spring composition isolation 可以通过标准 Gradle project dependency直接证明。source-set alternative无法避免 mixed transport split，还需额外维护 bespoke classpath/resource/test/BootJar wiring，因此对当前 Repository并不更低复杂度。
 
-### 6.4 2A ownership contract
+### 6.4 Accepted ownership contract
 
 `cms-core`：site-neutral domain / validation / persistence / Mapper / transaction / shared Resource / StaticResource service / Generic Flyway SQL / Site Package capability / CMS metadata。
 
-`cms-server`：`CmsApplication`、Admin/Public HTTP transport、MVC/static HTTP、server-only handler/startup；保持 current Server JAR external path/name。
+`cms-server`：`CmsApplication`、Admin/Public HTTP transport、MVC/static HTTP、server-only handler/startup，以及与现有运行入口兼容的 maintenance CLI；保持 current Server JAR external path/name。
 
-`content-migration`：独立 non-web Spring composition、四个 Party migration implementation、migration-only mapper/compatibility、CLI/import/report；不得依赖 Server app。
+`content-migration`：独立 non-web Spring composition、四个 Party migration implementation、migration-only compatibility / CLI/import/report；不得依赖 Server app。
 
 Product-level Generic CMS Core 不要求 Controller / MVC transport进入 shared build artifact。
 
@@ -143,14 +142,14 @@ Product-level Generic CMS Core 不要求 Controller / MVC transport进入 shared
 
 - Generic Flyway V1/V2保持 single Core resource authority；
 - `cms-metadata.yml` 保持 single shared authority；
-- 两个 app各自组合 datasource/MyBatis/Jackson/transaction；
+- 两个 app各自组合所需 datasource/MyBatis/Jackson/transaction；
 - Migration配置 Site Package root时继续保持 Generic Schema → stable Site Package reconcile / stable asset projection → canonical import；
 - one-time Site bootstrap仍只在现有 explicit property启用；普通 canonical import不隐式 bootstrap；
 - Database transaction不被夸大为 filesystem/resource side-effect rollback。
 
-### 6.6 Behavior-preservation contract
+### 6.6 Behavior-preservation result
 
-EU-46 不改变：
+EU-46 保持：
 
 - Admin/Public API / user-visible behavior；
 - Generic Flyway schema semantics；
@@ -161,36 +160,35 @@ EU-46 不改变：
 - EU-29 accepted → EU-30 current position-2 compatibility；
 - resource bytes / mappings / report labels / failure semantics。
 
-四个 Party migration files必须一起迁出 Server source ownership；不在 2A 泛化 Party domain。
+四个 Party migration files一起迁出 Server source ownership；Phase 2A 未泛化 Party domain。
 
-### 6.7 Verification Gate
+### 6.7 Verification result
 
-EU-46 required exact-head evidence：
+EU-46 pre-integration exact-head required evidence全部 PASS：
 
 1. Core / Server / Migration build + artifact/dependency proof；
-2. Server JAR normal runtime；
-3. Migration non-web context、no Server controller/classpath leakage；
+2. Server JAR packaging；
+3. Migration non-web context + no Server classpath leakage；
 4. Repository CI；
 5. Canonical Migration Verification；
 6. EU-30 Migration Upgrade Verification；
 7. Site Package Verification；
 8. workflow path filters / commands对新 source ownership有效；
-9. PR unresolved review threads = 0；
-10. Post-Integration CI / affected targeted workflow evidence + Fresh Context locator revalidation。
+9. focused Backend Application Boundary Verification。
 
-Review Environment可作为 supporting runtime evidence，但没有视觉产品变更，因此不替代上述 required evidence。
+详细 SHA / Run evidence由 PR #105、Actions与 `docs/work/archive/eu46-backend-application-core-boundary-foundation.md` 记录；最终 Post-Integration evidence由 Issue #92 Current Evidence承担。
 
-### 6.8 Readiness result
+Review Environment可作为 supporting runtime evidence，但没有视觉产品变更，因此不替代 required evidence。
 
-`slice-work` 形成单一 EU-46，而不是分别拆 Core / Server / Migration / workflow EU，因为这些边界必须原子一致；独立合并任一部分都会产生重复类、class path leakage 或 verification blind spot。
+### 6.8 Completion result
 
-Readiness：**PASS**。
+EU-46 是 Phase 2A 唯一 Ready/Execute Unit，已完成 implementation、required pre-integration verification与 integration closure。其 Execute Authority在完成后终止。
 
-本 planning/readiness change 集成前仍不得 Execute。集成后必须在新的 Fresh Context 中重新确认 base drift / Authority / Open PR / Actions。
+Phase 2A completion只建立 application / shared-core boundary；**不代表 Generic Content Migration Engine 已存在，也不代表 Party-specific migration semantics 已去专用化。**
 
 ## 7. Phase 2B — Generic Content Migration Application — PLANNING CANDIDATE
 
-只有 EU-46 完成后才允许重新开始 Planning。
+EU-46 完成后，Phase 2B 现在可以重新开始 Planning，但不能直接 Execute。
 
 目标链路：
 
@@ -206,9 +204,19 @@ Generic capability 可负责 canonical validation、path/digest safety、stable 
 
 不得内建 Party / JilinJobs / EU-29 / EU-30 identity。
 
+进入 Execute 前必须：
+
+1. 基于 EU-46 后实际 Repository 重新完成 dependency closure；
+2. 形成 Phase 2B Requirement / Specification 与必要 Technical Planning；
+3. 运行 `slice-work` 形成 Candidate Execution Unit；
+4. 运行 `readiness-check`；
+5. 只有 Readiness PASS 后才能形成 Ready Execution Unit，并在新的 Fresh Context 中取得其自身 Execute Authority。
+
 ## 8. Phase 2C — Party Migration De-specialization & Compatibility — PLANNING CANDIDATE
 
-后续把 Party-specific aliases、accepted fingerprints、carousel transition / upgrade-only policy收敛到 Party dataset/profile/compatibility authority，并通过同一 Generic Application保持 current 183 Articles、4 carousel与EU-29→EU-30 compatibility。
+在 Generic Engine boundary成立后，Party-specific aliases、accepted fingerprints、carousel transition / upgrade-only policy收敛到 Party dataset/profile/compatibility authority，并通过同一 Generic Application保持 current 183 Articles、4 carousel与EU-29→EU-30 compatibility。
+
+Phase 2C 不继承 Phase 2B 的 Execute Authority。
 
 ## 9. Phase 3 — Canonical Migration Compatibility & E1～E3 Re-entry Gate
 
@@ -232,13 +240,13 @@ Generic CMS Schema
 
 ## 11. Fresh Context Gate
 
-EU-46 readiness integration 后，新的 Execute 会话必须重新读取：
+EU-46 integration closure 后，新的 Issue #92 会话必须重新读取：
 
 1. current `main`、Open PR / Issue、最近相关 Actions；
 2. `AGENTS.md`、Root `README.md`、`docs/README.md`；
 3. Roadmap / Development Method；
 4. Issue #92 / #77；
-5. EU-46 Requirement / Specification / Technical Plan / Work artifact；
-6. Planning/readiness integration evidence。
+5. 本规划与 Phase 2B 当前新形成的 Requirement / Specification / Technical Authority（若存在）；
+6. GitHub Issue #92 Current Evidence。
 
-只有 EU-46 Readiness仍有效且没有 base drift / blocking parallel work时才能 Execute。不得把该 Authority扩展到 Phase 2B / 2C、Phase 3 或 Issue #60 / E1～E3。
+当前从 **Phase 2B Planning Candidate** 开始，不能读取 EU-46 archive record作为新 Execute Authority。只有新 Unit 经 `slice-work → readiness-check` PASS，并且新的 Fresh Context确认其 Readiness / baseline / Authority仍有效时，才允许 Execute。不得把 Phase 2B Planning身份扩展到 Phase 2C、Phase 3 或 Issue #60 / E1～E3。

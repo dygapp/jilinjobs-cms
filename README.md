@@ -33,18 +33,18 @@ Fresh Context 按以下入口恢复，避免把历史执行记录当作当前 Au
 
 - Phase 0 已完成；
 - Phase 1 Repository Documentation Authority Convergence 已完成；
-- Phase 2A dependency closure、Requirement / Specification / Technical Planning、`slice-work` 与 `readiness-check` 已形成 **EU-46 — Backend Application / Core Boundary Foundation**；
-- Current Ready Execution Unit：**EU-46**；Readiness：**PASS**；Execute：**NOT STARTED**；
-- EU-46 的 Execute Authority 只有在本 planning/readiness change 集成后，以新的 Fresh Context 重新确认 `main`、Open PR / Actions、Issue #92 / #77、EU-46 artifact 且无 base drift / Authority change 时才成立；
+- Phase 2A **EU-46 — Backend Application / Core Boundary Foundation** 已完成 implementation 与 required exact-head verification，并在本次 integration 后作为 completed work 归档；
+- Current Ready Execution Unit：**NONE**；
+- 下一 Gate 仅为 **Phase 2B — Generic Content Migration Application Planning Candidate**；必须重新完成 dependency closure、Requirement / Specification / 必要 Technical Planning、`slice-work` 与 `readiness-check`，不得从 EU-46 继承 Execute Authority；
 - Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层边界；
-- Phase 2B Generic Content Migration、Phase 2C Party de-specialization、Phase 3 与 Issue #60 / E1～E3 均继续 downstream，不继承 EU-46 或历史 Unit 的 Execute Authority。
+- Phase 2C Party de-specialization、Phase 3 与 Issue #60 / E1～E3 均继续 downstream；Phase 3 compatibility re-entry PASS 前不得进入 E1～E3 Execute。
 
-EU-46 Current Authority：
+Phase 2A accepted Authority 继续由以下 Current documents 说明长期 application/core contract；EU-46 执行记录已进入 archive：
 
 - `docs/requirements/backend-application-core-boundary.md`；
 - `docs/specifications/backend-application-core-boundary.md`；
 - `docs/technical/backend-application-core-boundary.md`；
-- `docs/work/current/eu46-backend-application-core-boundary-foundation.md`。
+- `docs/work/archive/eu46-backend-application-core-boundary-foundation.md`。
 
 已完成 Execution Unit 的详细记录位于 `docs/work/archive/`；完成记录中的旧 Status / Next Step 不构成新的 Execute Authority。
 
@@ -65,7 +65,10 @@ EU-46 Current Authority：
 - Consumer-local Development Method：`docs/project/development-method.md`；
 - Current Roadmap：`docs/project/project-roadmap.md`；
 - Verification Strategy：`docs/technical/verification-strategy.md`；
-- Backend build / source entry：`backend/build.gradle.kts`、`backend/src/`；
+- Backend build / ownership entry：`backend/build.gradle.kts`、`backend/settings.gradle.kts`、`backend/README.md`；
+- Generic CMS Core：`backend/modules/cms-core/`；
+- CMS Server：`backend/apps/cms-server/`；
+- Content Migration application：`backend/apps/content-migration/`；
 - Admin / Public build 与脚本：分别以 `frontend/admin/package.json`、`frontend/public-site/package.json` 为准。
 
 成功、完成、通过或修复声明必须具有与目标提交匹配的 Current Evidence；GitHub Actions、PR Review 与 Post-Integration Evidence 仍按 Consumer-local Method 执行。

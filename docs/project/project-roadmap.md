@@ -20,8 +20,8 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | EU-37～EU-42 Site Package Boundary | 已完成 | stable structure、Navigation identity、Runtime composition、one-time bootstrap、Generic Schema separation、stable assets 已闭环 |
 | Issue #92 Phase 0 | 已完成 | Planning Authority 与 bounded architecture-review evidence 已收口 |
 | Issue #92 Phase 1 | 已完成 | EU-43 / EU-44 / EU-45 完成 Current Authority semantic convergence 与 Documentation IA/archive closure |
-| Issue #92 Phase 2A Backend Application / Core Boundary | **READY** | **EU-46 — Backend Application / Core Boundary Foundation；Readiness PASS；Execute NOT STARTED** |
-| Issue #92 Phase 2B Generic Content Migration | Planning Candidate / downstream | 必须等待 EU-46 完成后重新 Planning / slice / readiness |
+| Issue #92 Phase 2A Backend Application / Core Boundary | **已完成** | **EU-46 — Backend Application / Core Boundary Foundation 完成；Server / Migration application 与 shared Core classpath boundary 已建立** |
+| Issue #92 Phase 2B Generic Content Migration | **Planning Candidate / current next gate** | 必须重新 dependency closure、Requirement / Specification / Technical Planning、`slice-work`、`readiness-check`；当前无 Ready EU |
 | Issue #92 Phase 2C Party Migration De-specialization | Planning Candidate / downstream | 必须等待 2B boundary 成立后独立规划 |
 | Issue #92 Phase 3 Compatibility / E1～E3 Re-entry | blocked / downstream | 完整链路重新对账后才能决定 re-entry PASS |
 | Issue #60 / E1～E3 Main Site Formal Content | blocked / downstream | Phase 3 PASS 前不得进入 Execute |
@@ -35,7 +35,8 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 - Generic CMS Schema、site-neutral domain / validation / persistence / API-supporting capability、provisioning capability 属于 Core；
 - Backend Flyway 只承担 Generic CMS Schema evolution，不内建 JilinJobs Site instance rows；
 - `preset`、stable identity、bootstrap-state、resource / article / list 等可以是 Generic capability，具体 Site identity / instance data 不属于 Core；
-- EU-41 accepted active Flyway 为 current Generic V1/V2；后续 Generic Schema change 从 V3 append-only。
+- EU-41 accepted active Flyway 为 current Generic V1/V2；后续 Generic Schema change 从 V3 append-only；
+- EU-46 后 shared build owner 为 `backend/modules/cms-core`；`cms-server` 与 `content-migration` 只单向依赖 Core，Core 不依赖任一 app。
 
 ### 2. JilinJobs Site Package
 
@@ -56,7 +57,8 @@ sites/jilinjobs/
 - `data-migrations/**` 承载 canonical historical data、resource、legacy identity / fingerprint、provenance 与 compatibility；
 - Historical Migration 不等于 Flyway，也不等于 Site Package structure/bootstrap/assets；
 - Party current canonical Runtime Dataset = 183 Articles；EU-29 frozen acceptedSnapshot = 181；4 条 accepted carousel 与 EU-29→EU-30 compatibility 必须持续可验证；
-- Canonical Dataset 依赖 stable Site identity，不依赖临时 Runtime DB id 或 Public Renderer internals。
+- Canonical Dataset 依赖 stable Site identity，不依赖临时 Runtime DB id 或 Public Renderer internals；
+- EU-46 后 Party migration implementation 当前位于独立 `backend/apps/content-migration` application；这只是 application boundary，不等于 Phase 2B Generic Migration Engine 或 Phase 2C Party de-specialization 已完成。
 
 ### 4. Replaceable Public Renderer
 
@@ -71,16 +73,20 @@ sites/jilinjobs/
 
 Documentation Authority Map：`docs/README.md`。
 
-Current Ready Execution Unit：**EU-46 — Backend Application / Core Boundary Foundation**。
+Current Ready Execution Unit：**NONE**。
 
-Current EU-46 Authority：
+Current next gate：**Phase 2B — Generic Content Migration Application Planning Candidate**。
+
+Phase 2B 当前没有 Candidate Execution Unit、Ready Execution Unit 或 Execute Authority。必须重新完成 dependency closure、Requirement / Specification / 必要 Technical Planning，之后由 `slice-work` 形成 Candidate EU，并经 `readiness-check` PASS 后才可能进入 Execute。
+
+Phase 2A accepted Authority继续作为长期 application/core contract：
 
 - Requirement：`docs/requirements/backend-application-core-boundary.md`；
 - Specification：`docs/specifications/backend-application-core-boundary.md`；
 - Technical Plan：`docs/technical/backend-application-core-boundary.md`；
-- Work artifact：`docs/work/current/eu46-backend-application-core-boundary-foundation.md`。
+- Completed Work artifact：`docs/work/archive/eu46-backend-application-core-boundary-foundation.md`。
 
-EU-46 Readiness：**PASS**；Execute：**NOT STARTED**。只有本 readiness change 集成后，在新的 Fresh Context 中重新读取最新 `main`、Issue #92 / #77、Open PR / Actions 与上述 Authority，并确认无 base drift / Authority change，才能进入 Execute。
+EU-43 / EU-44 / EU-45 / EU-46 的 Execute Authority均已终止。任何后续 Planning Candidate 不继承这些 Unit 的 Execute Authority。
 
 ### Phase 0 — Planning Authority Solidification — COMPLETED
 
@@ -94,18 +100,16 @@ Issue #92 / #77 / Roadmap / Site Package Planning 的总体路线已对齐。AR-
 
 Phase 1 classification contract `CURRENT / PARTIALLY_CURRENT / SUPERSEDED / HISTORICAL_EVIDENCE` 继续有效；archive 默认不参与 Fresh Context Current Authority 恢复。历史 work records 位于 `docs/work/archive/`。
 
-### Phase 2A — Backend Application / Core Boundary Foundation — EU-46 READY
+### Phase 2A — Backend Application / Core Boundary Foundation — COMPLETED
 
-目标依赖：
+EU-46 established：
 
 ```text
 cms-server app ───────────→ cms-core
 content-migration app ────→ cms-core
 ```
 
-Dependency closure 已确认当前两个 Party import task 共用完整 `main.runtimeClasspath`，四个 migration implementation 都以 `CmsApplication` 为 Spring source；`WebApplicationType.NONE` 不能隔离 Server component scan。
-
-Technical Planning 已按 Phase 0 obligation比较两个 build candidate，并选择标准 Gradle multi-project：
+Accepted physical topology：
 
 ```text
 backend/
@@ -116,24 +120,23 @@ backend/
     └── content-migration/
 ```
 
-选择依据不是 executable JAR 数量，而是 current code 已存在 mixed transport/service files，任何方案都必须做最小 transport split；单-project source-set alternative 还需要额外自定义 classpath/resource/test/BootJar wiring，并不更低复杂度。标准 project dependency 能直接证明 migration 不含 server classpath。
-
-EU-46 只做 behavior-preserving application/core foundation：
+Phase 2A implementation result：
 
 - Core 不依赖任一 app，两个 app 互不依赖；
-- Server 持有 HTTP/MVC/static HTTP/server-only composition；
-- Migration 持有 Party migration CLI/import/report/compatibility composition，并使用独立 non-web Spring root；
-- Generic Flyway SQL、CMS metadata、Site Package lifecycle保持 single shared authority；
-- Server JAR current repository consumer path/name保持；
+- Server 持有 `CmsApplication`、HTTP/MVC/static HTTP 与 server-only composition；
+- Migration 持有四个 Party migration implementation、独立 non-web Spring composition 与 CLI/import/report compatibility；
+- Generic Flyway V1/V2、`cms-metadata.yml`、Site Package lifecycle保持 single Core resource/capability authority；
+- root `backend` build/command compatibility与现有 Server JAR path保持；
 - Party 183 Articles、4 carousel、idempotency、fingerprint conflict、EU-29→EU-30 compatibility 与 resource integrity保持；
-- Canonical / Upgrade / Site Package / CI / Review workflow path/command wiring必须与 source move 原子同步；
-- 不泛化 Party migration、不进入 2B/2C、不拆 Git Repository。
+- Canonical / EU-30 Upgrade / Site Package path filters 已迁移到新 ownership；
+- focused Backend Application Boundary Verification证明 packaged ownership 与 Migration non-web composition；
+- 没有改变 `data-migrations/**`、Generic Schema semantics、Admin/Public API、frontend / Site Package bytes或产品行为。
 
-Readiness 已映射到 build/dependency proof、Server runtime、Migration non-web context、Canonical Migration Verification、EU-30 Upgrade Verification、Site Package Verification、Repository CI 与 Post-Integration Fresh Context evidence。
+Pre-integration exact-head evidence由 PR #105 / Actions 记录；Post-Integration evidence由 Issue #92 Current Evidence承担。EU-46 完成不自动授权 Phase 2B / 2C。
 
 ### Phase 2B — Generic Content Migration Application — PLANNING CANDIDATE
 
-在 EU-46 完成后才能重新规划。目标链路：
+现在只允许进入 Planning，不允许直接 Execute。目标链路：
 
 ```text
 Legacy Source
@@ -144,6 +147,8 @@ Legacy Source
 ```
 
 Generic Engine 负责 canonical validation、path/digest safety、stable migration identity/fingerprint、preflight、transaction/file-side-effect boundary、dependency order、import/reconciliation/report，但不得内建 Party / JilinJobs / EU-29 / EU-30 identity。
+
+Phase 2B 在形成 Requirement / Specification / Technical Authority、完成 dependency closure 后，必须通过 `slice-work` 与 `readiness-check` 独立形成新的 Ready Execution Unit；Roadmap 中的 Phase 名称不授予 Identifier 或 Execute Authority。
 
 ### Phase 2C — Party Migration De-specialization & Compatibility — PLANNING CANDIDATE
 
@@ -180,8 +185,8 @@ Consumer-local `evals/architecture/**` 当前结论保持 **ADJUST**：真实高
 1. 读取当前 `main`、Open PR / Issue 与最近相关 Actions；
 2. 完整读取 `AGENTS.md`、Root `README.md`、`docs/README.md`；
 3. 读取本 Roadmap 与 `docs/project/development-method.md`；
-4. 读取 Issue #92、Issue #77 与 EU-46 Requirement / Specification / Technical Plan / Work artifact；
-5. 重新确认 EU-46 Readiness、Execute baseline 与 base drift；
-6. 只有 Readiness仍有效时才进入 EU-46 Execute。
+4. 读取 Issue #92、Issue #77 与 `docs/project/pre-e1e3-convergence-plan.md` 当前状态；
+5. 若目标是继续 Issue #92，则从 Phase 2B **Planning Candidate** 恢复 dependency closure 与 Planning Authority，不读取 archive work artifact作为 Execute Authority；
+6. 只有新的 Candidate 经 `slice-work → readiness-check` PASS 形成 Ready Execution Unit 后，才允许进入后续 Execute。
 
-当前不得从 Roadmap、历史 EU、Phase 名称或 Issue 编号推导 Phase 2B / 2C、Phase 3 或 E1～E3 Execute Authority。
+当前不得从 Roadmap、EU-46 完成事实、Phase 名称或 Issue 编号推导 Phase 2B / 2C、Phase 3 或 E1～E3 Execute Authority。
