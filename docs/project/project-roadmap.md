@@ -275,10 +275,11 @@ Issue #60 / E1、E2、E3 在本阶段保持 Planning Candidate，不提前执行
 
 ## 阶段切换原则
 
-- 管理端工程分离、Public Multi-entry、Party EU-26～EU-29、EU-30、EU-31、EU-32～EU-41 均已完成各自 accepted scope；
+- 管理端工程分离、Public Multi-entry、Party EU-26～EU-29、EU-30、EU-31、EU-32～EU-42 均已完成各自 accepted scope；
 - EU-31 的 development DB recreation boundary 继续有效，但其当时 active migration shape 已由 EU-41 accepted Authority 修订；
 - EU-41 已完成 current audit / architecture clarification / slice-work / readiness-check / Execute / exact-head Verification / Integration / Post-Integration Verification；
-- 当前没有 Ready Execution Unit；Issue #77 后续 Slice C / Slice D 不自动继承 EU-41 Execute Authority；
+- EU-42 已完成 Slice C 的 current audit / readiness / Execute / exact-head Verification / Integration / Post-Integration Verification；
+- 当前没有 Ready Execution Unit；Issue #77 后续 Slice D 不自动继承 EU-42 Execute Authority；
 - Issue #60 / E1～E3 等待 Issue #77 compatibility/re-entry gate；
 - 未来候选只有在 `readiness-check` PASS 后才能成为 Ready Execution Unit；
 - canonical historical dataset、legacy mapping、fingerprint、Importer、EU-29→EU-30 upgrade knowledge 与证据长期独立保留；

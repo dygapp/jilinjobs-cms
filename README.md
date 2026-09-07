@@ -151,11 +151,11 @@ Main / Party 轮播统一使用 `CAROUSEL_INTERVAL_SECONDS`、`CAROUSEL_MAX_ITEM
 
 网站规划基线中的关键结构对象使用只读 `preset` 标识保护：预置栏目、导航位置/条目、单页分组/单页、列表容器、宣传展示位和稳定网站属性定义不能被误删；具有稳定 Alias/Code/Key 的预置对象不能修改该身份字段。`preset` 不等于完全只读，名称、排序、启停以及正常运营字段仍按各自模型维护；Article、CmsListItem、Advertisement 等运营成员不因此变成预置内容。普通 Admin API 新增对象默认 `preset=false`，客户端不能自行设置或取消该标识。
 
-EU-37～EU-41 已建立 Site Package contract、stable structure / Navigation identity、explicit Runtime composition 与 one-time Site bootstrap，并将 Backend Flyway 收敛为 Generic CMS Schema-only lineage。`V2__current_preset_data.sql` 已退出 active Flyway；原七条初始运营数据现由 `sites/jilinjobs/bootstrap/**` 在 Fresh Site 安装时一次性建立，之后成为普通 operator-managed Runtime data，普通 restart/reconcile 或再次显式 bootstrap 都不得覆盖或 resurrect operator 修改/删除。Historical canonical migration 继续独立承担历史运营内容与 provenance。`site-baseline/static/**` ownership/runtime composition 与最终 canonical lifecycle compatibility 仍待后续 Slice C / Slice D 收敛；不得把 EU-41 误解为整个 Issue #77 已完成。
+EU-37～EU-42 已建立 Site Package contract、stable structure / Navigation identity、explicit Runtime composition、one-time Site bootstrap 与 stable Site asset ownership / Runtime projection，并将 Backend Flyway 收敛为 Generic CMS Schema-only lineage。`V2__current_preset_data.sql` 已退出 active Flyway；原七条初始运营数据现由 `sites/jilinjobs/bootstrap/**` 在 Fresh Site 安装时一次性建立，之后成为普通 operator-managed Runtime data，普通 restart/reconcile 或再次显式 bootstrap 都不得覆盖或 resurrect operator 修改/删除。Historical canonical migration 继续独立承担历史运营内容与 provenance。稳定 Site asset 的唯一版本化 source owner 已为 `sites/jilinjobs/assets/**`；Slice C 已关闭，最终 canonical lifecycle compatibility 仍待 Slice D 收敛；不得把 EU-42 误解为整个 Issue #77 已完成。
 
-工程基线静态资源继续位于 `/static/home`、`/static/brand`、`/static/footer`、`/static/icons` 等版本化目录；CMS 运行时上传统一进入 `/static/uploads/**`，由宣传展示/列表/导航图标/RESOURCE_PATH 网站属性等管理界面复用统一图片资源选择与上传能力。中心党建可可靠取得并验证的稳定视觉资源进入 `site-baseline/static/party/**`；历史党建文章正文资源继续属于独立内容迁移范围。公开站设计模板不得直接热链第三方图片、图标、字体等稳定展示资源（开源 JS/CSS 依赖和业务外链除外）。
+稳定 Site Package 静态资源的版本化 source 统一位于 `sites/jilinjobs/assets/**`，Runtime 公开 target 继续使用 `/static/home`、`/static/brand`、`/static/footer`、`/static/icons` 等路径；CMS 运行时上传统一进入 `/static/uploads/**`，由宣传展示/列表/导航图标/RESOURCE_PATH 网站属性等管理界面复用统一图片资源选择与上传能力。中心党建可可靠取得并验证的稳定视觉资源位于 `sites/jilinjobs/assets/party/**`；历史党建文章正文资源继续属于独立内容迁移范围。公开站设计模板不得直接热链第三方图片、图标、字体等稳定展示资源（开源 JS/CSS 依赖和业务外链除外）。
 
-静态资源“受保护”状态由 Backend 负责：固定部署/工程基线来自 Spring 外部化配置，当前网站属性、列表、宣传展示和导航直接引用的资源由 Runtime 动态加入保护集合；该状态不是管理员人工维护的重要性等级。普通删除必须拒绝，明确替换仍允许。
+静态资源“受保护”状态由 Backend 负责：固定部署路径可以来自 Spring 外部化配置，Site Package stable targets 由 asset manifest/catalog 自动加入保护集合，当前网站属性、列表、宣传展示和导航直接引用的资源继续由 Runtime 动态加入；该状态不是管理员人工维护的重要性等级。普通删除必须拒绝，明确替换仍允许。
 
 配置责任长期遵循 `docs/technical/configuration-governance.md`：稳定领域/安全/页面模板契约保留代码常量；运营可维护数据进入 CMS / 网站属性；低频结构定义进入 CMS 资源元数据；部署实例差异进入 Spring 外部化配置；CI、FRP 和 Review 环境参数属于 CI / Deployment Variables。存在字面硬编码本身不构成缺陷，禁止为了“消除硬编码”机械增加系统配置。
 
