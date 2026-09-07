@@ -3,7 +3,7 @@ id: requirement-information-publishing
 title: 信息发布与网站服务需求
 type: business-requirement
 status: confirmed
-version: "V4.8"
+version: "V4.9"
 classification:
   - l1-06
   - l2-28
@@ -15,26 +15,28 @@ relations:
   related:
     - docs/specifications/party.md
 created_at: 2026-07-27
-updated_at: 2026-09-02
+updated_at: 2026-09-07
 ---
 
 # 信息发布与网站服务需求
 
 ## 1. 文档目的
 
-本文是 `jilinjobs-cms` 当前“信息发布与网站服务”业务需求基线，用于约束中心主站、中心党建公开站、CMS 通用模型、管理端、初始化数据、历史迁移与当前迭代范围。
+本文是 `jilinjobs-cms` 当前“信息发布与网站服务”单一 canonical 业务需求基线，用于约束中心主站、中心党建公开站、CMS 通用模型、管理端、Site Package、历史迁移与当前产品行为。
+
+V4.9 将 EU-30 已确认并完成 Human Review / implementation / migration promotion 的 Requirement Change 折回主需求，并同步 EU-41 / EU-42 已接受的 Generic Flyway、JilinJobs Site Package 与 stable Site asset ownership。`docs/requirements/information-publishing-eu30-amendment.md` 自 V4.9 起只保留 `SUPERSEDED / TRACEABILITY` 角色，不再需要与本文并行拼接才能恢复 Current Product Authority。
 
 当前网站参照基线为“吉林省高等学校毕业生就业信息网”。`www.jilinjobs.cn` 因上级统一规划跳转到 `24365.jl.smartedu.cn`；在需求分析、页面结构分析、视觉取证和内容采集过程中，两者视为同一原网站。其他域名原则上视为外部网站或外部系统。
 
-V4.8 在 V4.7 已完成中心党建独立 Site Entry / Router / Shell 基础框架后，依据原站 `https://24365.jl.smartedu.cn/dyzj` 的重新取证正式进入党建页面与内容收敛。原站明确存在“高层声音、工作动态、党规党章、理论学习”四条内容线，其中“学习园地”是首页对“党规党章 + 理论学习”的视觉分组，而不是独立内容类型；列表历史地址分别使用 `typeCode=gcsy/gzdt/dgdz/llxx`，当前原站生成的站内详情使用 `pdetail.html?content_id=...`，部分历史地址可携带 `typeCode`，更早历史内容还存在 `detail.html?content_id=...` 变体，同时大量内容直接跳转 12371、gov.cn、jl.gov.cn 等外部权威来源。现有通用 `Column + Article(INTERNAL / EXTERNAL_LINK)` 已足以承担这些数据，不新增党建专属 CMS 类型或 Admin Module。中心党建 canonical URL 统一进入 `/party/**`；历史 `plist.html / pdetail.html / detail.html` 及其参数变体只作为迁移映射证据，不继续作为新版 canonical URL。党建结构基线可通过新的 Flyway migration 固化，但历史运营文章与资源继续通过独立迁移/采集机制处理，不混入 Flyway。
+V4.8 在 V4.7 已完成中心党建独立 Site Entry / Router / Shell 基础框架后，依据原站 `https://24365.jl.smartedu.cn/dyzj` 的重新取证正式进入党建页面与内容收敛。原站确认“高层声音、工作动态、党规党章、理论学习”四条 PartyHome 固定内容线；“学习园地”是首页对“党规党章 + 理论学习”的视觉分组，而不是独立内容类型。EU-30 后又确认历史 `typeCode=zhutijiaoyu`，新版稳定栏目为 `party-theme-education / 主题教育`，属于 Party 内容作用域但不新增 PartyHome 第五个固定内容区。现有通用 `Column + Article(INTERNAL / EXTERNAL_LINK)` 足以承担这些数据，不新增党建专属 CMS 类型或 Admin Module。中心党建 canonical URL 统一进入 `/party/**`；历史 `plist.html / pdetail.html / detail.html` 及参数变体只作为迁移映射证据，不继续作为新版 canonical URL。
 
-V4.7 在 V4.6 基础上确认公开前端下一阶段演进：中心党建不再只作为主导航占位，而进入公开前端架构与基础页面框架范围。公开站采用按真实 Site / Theme Boundary 划分 Entry 的 Multi-entry Modular SPA：中心主站与中心党建在同一 `frontend/public-site` Vue / Vite 工程内分别拥有独立 App、Router、Shell 和主题样式，当前继续同构建、同部署并复用 Spring Boot CMS Backend。主站普通 `/page/**` 页面不再因为页面类型单独维护重复 HTML Entry。中心党建基础阶段只建立独立入口、红色主题基础 Shell 和可验证的基础页面框架；V4.8 接续其正式栏目、内容和视觉收敛。
+V4.7 确认公开前端按真实 Site / Theme Boundary 划分 Entry：中心主站与中心党建在同一 `frontend/public-site` Vue / Vite 工程内分别拥有独立 App、Router、Shell 和主题样式，当前继续同构建、同部署并复用 Spring Boot CMS Backend。主站普通 `/page/**` 页面不因为页面类型单独维护重复 HTML Entry。
 
-V4.6 在 V4.5 基础上进一步明确“站点级配置、内容图片数据要求、公开页面展示”三者边界：不新增独立“系统设置”模块；网站属性的可选分组由 Spring 配置资源元数据定义，CMS 数据只引用受控分组 code；网站属性新增 `INTEGER` 类型，并使用 `HOME_CAROUSEL_INTERVAL_SECONDS` 维护首页主轮播切换间隔等低风险站点级行为参数；Column 与 CmsList 分别增加 `NONE / OPTIONAL / REQUIRED` 图片数据策略，只表达内容数据是否允许/要求图片，不承担公开页面布局或展示模式。栏目 `REQUIRED` 允许文章先以无封面草稿暂存，但发布以及对已发布文章的后续编辑都必须继续满足封面要求。通用列表的 `REQUIRED / NONE` 由 Backend 对列表项数据强制校验。
+V4.6 曾引入 `INTEGER` SiteProperty、Column/CmsList 图片策略，并以 `HOME_CAROUSEL_INTERVAL_SECONDS` 表达当时 Main-only 轮播间隔；该旧 key 已被 EU-30 / V4.9 **supersede**，仅保留为历史演进说明。Current Runtime 统一使用 `CAROUSEL_INTERVAL_SECONDS` 与 `CAROUSEL_MAX_ITEMS`。
 
-V4.5 在 V4.4 基础上继续收敛 CMS 内容类型和管理端信息架构：产品界面将“固定页面”统一称为“单页”，“页面组”在管理语境称为“单页分组”；文章、单页、列表作为主要内容类型，栏目和导航作为内容结构，宣传展示作为运营展示，网站属性和静态资源归入站点设置。对于具有明确“容器 → 成员”关系的 CMS 模型，管理端优先采用左侧选择组织上下文、右侧维护成员的交互；单页管理使用“全部单页 / 独立单页 / 单页分组”组织内容。技术层 `Page / PageGroup` 及既有 API 不要求因此破坏性重命名。
+V4.5 确认产品界面将“固定页面”统一称为“单页”，“页面组”称为“单页分组”；文章、单页、列表作为主要内容类型，栏目和导航作为内容结构，宣传展示作为运营展示，网站属性和静态资源归入站点设置。技术层 `Page / PageGroup` 及既有 API 不要求因此破坏性重命名。
 
-V4.4 在 V4.3 基础上补充 2026-08-31 后续人工评审确认的 CMS 数据与展示边界及资源管理规则：产品界面将“广告管理”收敛为“宣传展示管理”；导航图标成为导航条目自身的可选数据属性；通用列表取消以 `LINK / IMAGE_LINK / TEXT` 组合类型控制字段和展示方式，前台页面设计决定消费哪些数据属性以及如何展示；宣传展示、通用列表、导航图标和 `RESOURCE_PATH` 网站属性统一复用静态图片选择/上传能力，CMS Runtime 上传统一进入 `/static/uploads/**`。V4.3 已确认的多图轮动、`NO_LINK` 和有效期规则继续有效。
+V4.4 确认产品界面使用“宣传展示管理”；导航图标成为 NavigationItem 自身可选数据；通用列表不以 `LINK / IMAGE_LINK / TEXT` 组合类型控制视觉；宣传展示、通用列表、导航图标和 `RESOURCE_PATH` SiteProperty 复用统一图片选择/上传能力，CMS Runtime 上传统一进入 `/static/uploads/**`。V4.3 已确认的多图轮动、`NO_LINK` 和有效期规则继续有效。
 
 ## 2. 建设目标
 
@@ -42,7 +44,7 @@ V4.4 在 V4.3 基础上补充 2026-08-31 后续人工评审确认的 CMS 数据�
 
 > **现网视觉与布局复刻 + 必要技术适配 + 可持续运营的通用 CMS 能力。**
 
-中心党建作为同一“信息发布与网站服务”范围内具有独立视觉主题的公开站点边界推进；当前在既有独立 Entry / Shell 基础上完成真实信息架构、栏目列表、文章详情、首页内容区块和视觉收敛。
+中心党建作为同一“信息发布与网站服务”范围内具有独立视觉主题的公开 Site Boundary，在独立 Entry / Shell 基础上承担真实信息架构、栏目列表、文章详情、首页内容区块和红色主题视觉。
 
 具体目标：
 
@@ -50,12 +52,12 @@ V4.4 在 V4.3 基础上补充 2026-08-31 后续人工评审确认的 CMS 数据�
 2. CMS 后台优先提供栏目、文章、单页、单页分组、导航、通用列表、宣传展示、网站属性、静态资源等通用业务能力；
 3. 公开站负责稳定页面结构、布局、视觉和稳定工程集成，通过 CMS 业务数据驱动需要运营维护的内容；
 4. 公开前端按真实 Site / Theme Boundary 建立清晰源码和 Runtime Entry 边界，不把普通页面类型机械拆成独立 HTML Entry；
-5. 中心党建与主站当前复用工程、技术栈、Backend 和发布链路，但分别持有 App、Router、Shell 与主题样式，避免视觉与样式所有权互相污染；
-6. 中心党建正式内容优先复用现有通用 CMS；只有出现真实专属工作流/数据模型需求时才新增党建管理能力；
+5. Main / Party 当前复用工程、技术栈、Backend 和发布链路，但分别持有 App、Router、Banner、内容 Frame 与主题表达，公共 Navigation/Footer 复用 Shared Shell Components；
+6. 中心党建正式内容复用通用 CMS；只有出现真实专属工作流/数据模型需求时才新增党建管理能力；
 7. 不为了“可配置”而把稳定、一次性、基本不需要运营调整的工程设计强行配置化；
 8. 使用 Vue / Spring Boot 重建，不复制旧网站前端代码；
-9. 站点结构与确定内容形成可重复初始化基线，测试数据与站点基线分离；
-10. 原站历史运营内容通过独立迁移机制处理，不混入 Flyway 初始化数据。
+9. Generic CMS Schema、JilinJobs stable structure、Fresh Site one-time defaults 与 stable Site assets 分别具有清晰版本化 owner，测试数据与站点基线分离；
+10. 原站历史运营内容及 provenance 通过 `data-migrations/**` 独立处理，不混入 Backend Flyway 或 stable Site assets。
 
 ## 3. 当前范围
 
@@ -64,28 +66,30 @@ V4.4 在 V4.3 基础上补充 2026-08-31 后续人工评审确认的 CMS 数据�
 - 中心主站公开前台；
 - 中心党建独立公开 Site Entry、Router、Header、Footer、页面 Frame 与正式红色主题；
 - 中心党建首页真实信息架构与原站已确认内容区块；
-- 中心党建“高层声音、工作动态、党规党章、理论学习”四条内容线；
+- 中心党建 `party-voice / party-work / party-rules / party-study / party-theme-education` 内容栏目；
+- PartyHome 固定顶部重点内容、高层声音、工作动态、学习园地结构；主题教育不作为第五个固定首页内容区；
 - 中心党建栏目列表页、站内文章详情页，以及外链文章直接进入来源网站的行为；
 - 中心党建 `/party/**` canonical URL、直接访问与刷新；
-- 主导航“中心党建”作为中心党建站点入口；
+- 主导航“中心党建”作为 Party Site 入口；
 - CMS 管理端；
 - 栏目、文章、单页、单页分组；
 - 导航位置、多级导航条目及可选导航图标；
-- 通用列表与列表项；
+- 通用列表与 `LINK / ARTICLE` 列表项；
 - 宣传展示位与展示内容；
 - 网站属性；
 - 网站静态资源管理和 CMS 图片资源选择/上传；
 - 固定首页模板及数据驱动内容；
 - 固定公开 URL、alias 与 canonical URL；
-- 初始化数据库基线与初始化静态资源包；
+- Generic CMS active schema baseline；
+- JilinJobs stable Site structure / one-time bootstrap / stable asset package；
 - 现网视觉与布局复刻；
 - 响应式、浏览器兼容和基础搜索引擎友好；
-- 可识别历史内容地址的迁移映射原则。
+- 可识别历史内容地址的迁移映射原则与 canonical migration provenance。
 
 ### 3.2 当前暂不实现
 
 - 尚未由原站证据证明需要的党建专属后台模块、独立权限体系或专属内容类型；
-- 将全部历史党建文章和图片直接写入 Flyway；历史运营内容继续走独立迁移/采集机制；
+- 将历史党建文章、正文图片、附件或历史运营列表成员写入 Backend Flyway / stable Site asset manifest；
 - 慧就业招聘信息、直播课程的真实 iframe、第三方认证、故障重试与可用性保障；
 - 用户、账号、角色、统一认证与完整权限体系；
 - 基于“普通管理员 / 超级管理员”等身份差异限制新增、删除、修改的逻辑；
@@ -94,7 +98,7 @@ V4.4 在 V4.3 基础上补充 2026-08-31 后续人工评审确认的 CMS 数据�
 - 多级审核；
 - 通用可视化 Page Builder；
 - 复杂流量统计与用户画像；
-- 多站点通用化平台能力；中心主站与中心党建两个已确认 Site Boundary 不等于建设任意多站点 CMS；
+- 任意多站点平台能力；Main / Party 两个已确认 Site Boundary 不等于建设通用多站点 CMS；
 - MQ、Redis、MinIO；
 - 生产发布与正式环境拓扑。
 
@@ -106,27 +110,29 @@ V4.4 在 V4.3 基础上补充 2026-08-31 后续人工评审确认的 CMS 数据�
 
 优先进入 CMS 的数据包括：经常增删改的数据、数量或顺序会变化的数据、存在上下线周期的数据、需要由运营人员维护的站点属性。
 
-优先保留为工程资产的内容包括：首页及页面稳定布局、固定 Shell、固定业务组件、基本不会变化的一次性外部平台集成、与程序实现强绑定且不需要运营维护的视觉资源或地址。
+优先保留为工程 / Site Package 资产的内容包括：首页及页面稳定布局、固定 Shell、固定业务组件、基本不会变化的一次性外部平台集成，以及不需要运营维护的稳定视觉资源。
 
 例如首页“国家大学生就业服务平台”区域属于固定工程集成；其 Logo、学生/企业入口和布局不要求提供后台管理。若未来发生真实产品需求变化，再按 Requirement Change 修改工程实现。
 
-中心主站与中心党建的 Header、Footer、Navigation Layout、页面 Frame、颜色变量和主题 CSS 默认属于各自公开 Site 的工程资产。存在两个视觉主题不自动要求建立两套 CMS 模型，也不自动要求把中心党建拆成独立前端工程。
+Main / Party 的 Banner、内容 Frame、颜色变量和主题模板属于各自公开 Site 工程资产；主导航和 Footer 的公共结构与交互复用 Shared Shell。存在两个视觉主题不自动要求建立两套 CMS 模型，也不自动要求拆成独立 Repository。
 
 ### 4.2 数据与展示职责分离
 
 CMS 负责维护“有什么业务数据”，公开站工程负责决定“这些数据在具体页面中如何展示”。不得为了让管理员控制页面视觉表现而将稳定页面设计方案反向建模成通用 CMS 展示模式。
 
-例如通用列表项可以同时具有标题、图片和 URL；某个页面可以只显示标题，另一个页面可以只显示 Logo，也可以显示 Logo + 标题。是否显示名称、图片尺寸、布局、轮播控件等由相应页面设计和前端实现确定，不需要在 CmsList 中设置 `displayMode`。
+例如 LINK 列表项可以同时具有标题、图片和 URL；某个页面可以只显示标题，另一个页面可以只显示 Logo，也可以显示 Logo + 标题。是否显示名称、图片尺寸、布局、轮播控件等由相应页面设计和前端实现确定，不需要在 CmsList 中设置 `displayMode`。
 
-Column `coverPolicy` 与 CmsList `imagePolicy` 仅属于“图片数据契约”：`NONE` 表示该对象的数据不使用对应图片字段，`OPTIONAL` 表示允许但不强制，`REQUIRED` 表示公开所需内容必须具有图片。它们不得被解释为“文字列表 / 图片列表 / 卡片列表”等展示模式，也不得控制图片尺寸、布局、caption、卡片方向等页面视觉。
+Column `coverPolicy` 与 CmsList `imagePolicy` 仅属于图片数据契约：`NONE` 表示不使用对应图片，`OPTIONAL` 表示允许但不强制，`REQUIRED` 表示公开所需内容必须形成有效图片。它们不得控制图片尺寸、布局、caption、卡片方向或其他视觉规则。
 
-页面对特定 CMS 数据的必要字段要求属于该页面的数据消费契约。例如首页轮播要求列表项具有有效图片，但不要求通用列表模型重新引入“图片轮播类型”。
+页面对特定 CMS 数据的必要字段要求属于该页面的数据消费契约。例如轮播要求有效图片，但不要求通用列表模型重新引入“轮播类型”。
 
 ### 4.3 避免重复 Authority
 
-同一业务数据只保留一个权威来源。不得同时通过网站属性 JSON、导航、前端常量维护同一组可运营数据。
+同一业务数据只保留一个权威来源。不得同时通过 SiteProperty JSON、导航、前端常量维护同一组可运营数据。
 
-复杂、可排序、可增删的业务集合不应长期存储为网站属性 JSON；JSON 仅保留为必要扩展类型，不代替正常 CMS 对象。
+复杂、可排序、可增删的业务集合不应长期存储为 SiteProperty JSON；JSON 仅保留为必要扩展类型，不代替正常 CMS 对象。
+
+Historical Migration 可以引用 stable Site identity，但不能成为 Site Definition；Public Renderer 可以消费 CMS / Site Data Contract，但不能成为产品数据 Authority。
 
 ### 4.4 内容类型与管理信息架构
 
@@ -143,13 +149,13 @@ CMS 主要内容类型按“文章 / 单页 / 列表”组织。栏目与导航�
 
 “站点设置”只是现有管理端信息架构分组，不新增独立“系统设置”业务模块。数据库连接、上传限制、环境地址等基础设施参数继续由工程/部署配置维护；只有确有运营维护价值的低风险站点属性进入 SiteProperty。
 
-中心党建正式页面继续复用现有通用 CMS。站点结构基线使用一个预置父栏目“中心党建”组织四个预置子栏目；文章仍由通用文章管理维护。不同公开 Site 的主题和 URL 由前端 Site Boundary 决定，不新增 `site` 字段、多站点 CMS 或党建 Admin Module。
+中心党建继续复用通用 CMS。stable Site structure 使用父栏目 `party` 组织 `party-voice / party-work / party-rules / party-study / party-theme-education` 五个子栏目；文章仍由通用文章管理维护。不同 Public Site 的主题和 URL 由前端 Site Boundary 决定，不新增 `site` 字段、多站点 CMS 或 Party Admin Module。
 
 ## 5. 内容模型
 
 ### 5.1 栏目与文章
 
-栏目承担“栏目 → 内容列表 → 文章详情”的传统信息发布结构，至少支持名称、稳定 alias、父子层级、排序、启停以及文章封面数据策略 `coverPolicy`。
+Column 承担“栏目 → 内容列表 → 文章详情”的传统信息发布结构，至少支持名称、稳定 alias、父子层级、排序、启停以及文章封面数据策略 `coverPolicy`。
 
 `coverPolicy` 支持：
 
@@ -157,27 +163,32 @@ CMS 主要内容类型按“文章 / 单页 / 列表”组织。栏目与导航�
 - `OPTIONAL`：站内文章可以有封面，也可以无封面；
 - `REQUIRED`：站内文章草稿允许先无封面暂存，但发布前必须设置封面；已经处于发布状态的文章后续编辑也必须继续满足该要求。
 
-外链文章仍只维护来源站点的基础链接信息，不保存本地封面、正文图片或附件，因此不按栏目封面策略强制本地图片。
+外链文章只维护来源站点的基础链接信息，不保存本地正文、封面、正文图片或附件，因此不按 Column `coverPolicy` 强制本地图片。
 
 主站栏目公开 URL：`/column/{alias}`。
 
-文章至少支持标题、主栏目、富文本正文、来源、发布日期、封面/缩略图、附件、置顶、推荐、排序、草稿/已发布/已撤回、实际发布时间和浏览量。公开文章摘要应保留可选封面资源引用，以便未来具体栏目页面在自身设计中选择消费图片；是否展示、以何种尺寸展示仍由页面模板决定。
+Article 至少支持标题、主栏目、富文本正文、来源、发布日期、封面/缩略图、附件、置顶、展示顺序、草稿/已发布/已撤回、实际发布时间和浏览量。公开 Article Summary 保留可选封面资源引用，是否展示以及展示尺寸仍由页面模板决定。
 
-文章区分“站内文章”和“外链文章”。外链文章只维护标题、发布日期、来源、原文链接及必要发布/排序属性，不复制外部正文、图片和附件；首页和栏目列表直接打开原文，新窗口为默认行为。主站站内文章 canonical URL 为 `/article/{id}`。
+Article 区分 `INTERNAL / EXTERNAL_LINK`；`articleType` 是创建时来源身份，创建后不得通过普通编辑切换。Admin 编辑态只读，Backend 必须独立拒绝绕过 UI 的来源类型修改。外链文章不复制外部正文、图片和附件；公开列表直接打开原文，默认新窗口。
+
+Article 不再维护全局 `recommended` 布尔属性。公开文章默认排序为：`置顶 DESC → 展示顺序 DESC → 发布日期/实际发布时间 DESC → id DESC`。如未来出现“首页推荐 / 专题推荐 / 人工推荐区”等独立展示需求，使用 `CmsList + ARTICLE` 明确投放，不恢复全局推荐状态。
+
+主站站内文章 canonical URL 为 `/article/{id}`。
 
 “招聘公告”栏目允许同时包含站内文章和外链文章；首页“招聘公告”区域只聚合已发布外链文章。
 
-中心党建站点结构使用以下预置栏目：
+中心党建 stable 栏目：
 
 - 父栏目：`中心党建`，alias `party`，只承担后台组织和 Party 作用域识别；
-- `高层声音`，alias `party-voice`，对应原站 `typeCode=gcsy`；
-- `工作动态`，alias `party-work`，对应原站 `typeCode=gzdt`；
-- `党规党章`，alias `party-rules`，对应原站 `typeCode=dgdz`；
-- `理论学习`，alias `party-study`，对应原站 `typeCode=llxx`。
+- `高层声音`，alias `party-voice`，legacy `typeCode=gcsy`；
+- `工作动态`，alias `party-work`，legacy `typeCode=gzdt`；
+- `党规党章`，alias `party-rules`，legacy `typeCode=dgdz`；
+- `理论学习`，alias `party-study`，legacy `typeCode=llxx`；
+- `主题教育`，alias `party-theme-education`，legacy `typeCode=zhutijiaoyu`。
 
-四个子栏目允许同时包含 `INTERNAL` 与 `EXTERNAL_LINK` 文章，以匹配原站站内详情与外部权威来源混合的真实数据。Party canonical 栏目 URL 为 `/party/column/{alias}`；Party 站内文章 canonical URL 为 `/party/article/{id}`。Party 前端只把属于上述党建栏目树的文章作为 Party 站内详情渲染，避免普通主站文章被 `/party/article/**` 错误套用党建主题。
+这些栏目允许同时包含 `INTERNAL` 与 `EXTERNAL_LINK` Article。Party canonical 栏目 URL 为 `/party/column/{alias}`；Party INTERNAL Article canonical URL 为 `/party/article/{id}`。Party 前端只把 Party 栏目树中的文章作为 Party 站内详情渲染，普通主站文章不得由 `/party/article/**` 套用 Party 模板。
 
-“学习园地”是 Party 首页对“党规党章 / 理论学习”的固定视觉分组，由 Party 页面工程表达，不新增 Column、CmsList 或 displayMode。
+`学习园地` 是 PartyHome 对“党规党章 / 理论学习”的固定视觉分组，不新增 Column、CmsList 或 displayMode；`主题教育` 是正常可访问内容栏目，但不新增 PartyHome 第五个固定内容区。
 
 ### 5.2 单页与单页分组
 
@@ -195,7 +206,7 @@ CMS 主要内容类型按“文章 / 单页 / 列表”组织。栏目与导航�
 
 导航位置是独立 CMS 业务对象，而不是编译期 Enum。至少维护 code、名称、说明、排序、启停和系统标识。
 
-站点初始化至少包含：
+JilinJobs stable Site structure 至少包含：
 
 - `MAIN`：主导航；
 - `HOME_SHORTCUT`：首页首屏右侧快捷入口；
@@ -207,227 +218,321 @@ CMS 主要内容类型按“文章 / 单页 / 列表”组织。栏目与导航�
 
 导航条目属于一个导航位置，支持父子层级、排序、启停、打开方式、可选图标及目标类型。目标至少支持 HOME、COLUMN、PAGE、LINK、PLACEHOLDER。
 
-导航图标属于导航条目自身的可选业务数据属性，使用 `/static/**` 图片资源。公开站不得根据导航数组下标、当前排序序号或类似 `top-nav-01 / guide-01` 的位置约定推导某条业务导航应使用哪个图标；管理员调整排序、插入或删除导航时，不得导致其他导航图标与语义错位。
+Navigation `iconPath` 是导航条目自身的可选业务数据，使用 `/static/**`。公开站不得根据导航数组下标、排序序号或类似 `top-nav-01 / guide-01` 的位置约定推导业务图标；调整排序、插入或删除导航不得导致图标与语义错位。
 
-CMS 管理端应允许从已整理的站点导航图标中选择，也允许上传自定义导航图标。现有版本化站点图标可以保留既有物理文件名，但系统必须有明确语义目录/映射，业务含义不依赖文件序号推导。
+CMS 管理端允许选择稳定 Site icons，也允许上传自定义导航图标。稳定资产物理文件名可以保留，但业务含义必须来自结构/语义映射，不依赖文件序号。
 
-父子导航必须处于同一位置；禁止形成循环；有下级菜单时不得直接删除父级。
+父子导航必须处于同一位置；禁止循环；有下级菜单时不得直接删除父级。
 
-主导航按现网结构初始化，包括网站首页、中心党建、招聘信息、业务指南、政策法规、就业指导、典型事迹、预决算公开、关于我们及其确认的二级菜单。“空中宣讲”不进入基线。中心党建主导航不再保持 `PLACEHOLDER`，以站内 `LINK` 指向 `/party/`，使用当前窗口进入中心党建独立 Site Entry。
+主导航按现网结构建立，包括网站首页、中心党建、招聘信息、业务指南、政策法规、就业指导、典型事迹、预决算公开、关于我们及确认的二级菜单。“空中宣讲”不进入基线。中心党建条目以站内 `LINK` 指向 `/party/` 并在当前窗口进入 Party Entry。
 
-Party 内部正式栏目入口由 Party 页面结构和党建栏目数据驱动，不要求把四个党建栏目复制到 Main `MAIN` 导航位置，也不新增第二套全局导航 Authority。
+Party 内部栏目入口由 Party 页面结构和 Column 数据驱动，不要求复制到 Main `MAIN` 导航位置，也不新增第二套全局 Navigation Authority。
 
-首页首屏右侧“就业信息填报、学历认证、全国征兵网、预决算公开、举报电话及邮箱”由 `HOME_SHORTCUT` 导航维护，其对应图标同样由导航数据维护，不再通过网站属性 JSON 或前端顺序维护。
+首页首屏右侧“就业信息填报、学历认证、全国征兵网、预决算公开、举报电话及邮箱”由 `HOME_SHORTCUT` 维护；业务指南快捷入口由 `HOME_QUICK` 维护；二者图标均由 NavigationItem 自身数据维护。
 
-业务指南快捷入口由 `HOME_QUICK` 导航维护，避免前端同时维护页面清单和图标对应关系。
+## 7. 通用列表与内容投放
 
-## 7. 通用列表
+CMS 提供通用列表与列表项，用于维护不属于导航、栏目归属或宣传展示位自身的可排序展示集合。
 
-CMS 提供通用列表与列表项，用于维护不属于导航、文章或宣传展示的可排序数据集合。
+列表至少维护 code、名称、分组、`imagePolicy`、说明、排序、启停和系统标识。列表不控制前台展示模式，不设置 `displayMode`，也不使用旧 `LINK / IMAGE_LINK / TEXT` 组合型 `itemType`。
 
-列表至少维护 code、名称、分组、图片数据策略 `imagePolicy`、说明、排序、启停和系统标识。列表不负责控制具体前台页面的展示方式，不设置 `displayMode`，也不再通过 `LINK / IMAGE_LINK / TEXT` 等 `itemType` 把 URL、图片等数据字段组合成固定套餐。
+CmsListItem 的来源身份只使用：
+
+1. `LINK`：列表项自身维护业务数据；
+2. `ARTICLE`：引用已有 Article，用于把文章投放到轮播等展示容器。
+
+LINK 至少满足：标题必填，作为后台管理识别名称并可供页面作为可访问性文本/替代文本；副标题可选；URL 可选且存在时必须是合法站内路径或 HTTP(S) 地址；图片是否允许/必填由所属列表 `imagePolicy` 决定；同时保留打开方式、排序、启停和必要扩展数据。页面可以按设计不显示标题或图片，但不得因此改变 CMS 数据契约。
+
+`sourceType` 是创建时身份；ARTICLE 的 `articleId` 同样是创建时来源身份。Admin 编辑态必须只读/禁用，Backend 必须独立拒绝 LINK↔ARTICLE 切换或 ARTICLE 更换关联文章。需要改变来源时删除原项并创建新项。
+
+ARTICLE placement 保持以下边界：
+
+- Article 仍只有一个 `columnId`；投放不改变栏目归属、栏目列表或详情面包屑；
+- 只有关联 Article 当前 `PUBLISHED` 时 placement 才公开；撤回后自动退出，重新发布后可按既有投放恢复；
+- Main INTERNAL target 为 `/article/{id}`；Party INTERNAL target 为 `/party/article/{id}`；EXTERNAL_LINK 使用 Article 当前 external URL；
+- target 继续遵守 CmsListItem `DEFAULT / SAME_WINDOW / NEW_WINDOW` `openMode`；
+- 不复制第二份文章正文，不通过文章标题推断关系。
 
 `imagePolicy` 支持：
 
-- `NONE`：列表项不保存图片数据；
-- `OPTIONAL`：列表项图片可选；
-- `REQUIRED`：每个列表项必须设置有效图片数据。
+- `NONE`：列表项不使用图片；
+- `OPTIONAL`：允许最终无图；
+- `REQUIRED`：公开投放必须形成有效图片。
 
-改变列表定义的图片策略时，不得制造已存在列表项与新策略冲突的数据：改为 `NONE` 前应先清除已有图片；改为 `REQUIRED` 前应先补齐所有列表项图片。Backend 必须继续对直接 API 调用执行同样校验。
+LINK 使用自身图片。ARTICLE 可以继承 Article 当前封面，也可以由后台从正文图片候选中选择或上传/选择 CMS Resource 形成列表专用覆盖；选中的正文图片必须把 Resource ID 固化为覆盖，不允许 Public Runtime 隐式寻找“正文第一张”。覆盖图片不修改 Article 封面/正文。
 
-列表项至少支持：
+REQUIRED ARTICLE 在保存时必须形成有效图片；既有 ARTICLE 后续因文章封面被移除且自身没有有效覆盖时，必须自动退出 REQUIRED 公开列表，直到重新形成有效图片。修改列表 imagePolicy 时不得制造已有 item 与新策略冲突；切换到 `NONE` 前先清除不允许的既有图片/覆盖，切换到 `REQUIRED` 前必须先确保既有项能形成有效图片。Backend 对直接 API 调用执行同一校验。
 
-- 标题：必填，作为后台管理识别名称，并可供页面用作可访问性文本/替代文本；前台页面可以按设计不显示该标题；
-- 副标题：可选；
-- URL：可选，存在时必须符合站内路径或 HTTP(S) 地址规则；
-- 图片：是否允许/必填由所属列表 `imagePolicy` 决定，存在时使用 `/static/**`；
-- 打开方式、排序、启停和必要扩展数据。
+`HOME_CAROUSEL` 与 `PARTY_CAROUSEL` 均为 `imagePolicy=REQUIRED`。`SITE_LINKS` 分组当前按文字链接展示、`imagePolicy=NONE`；未来需要 Logo 时通过数据策略和内容数据调整，不新增 display mode。
 
-上述字段相互独立。具体页面由自身设计决定读取哪些字段以及如何组合。例如友情链接当前可以只显示名称；若未来页面方案需要 Logo，可把对应列表的数据策略从 `NONE` 调整为 `OPTIONAL / REQUIRED` 并补充图片数据，无需增加 `LOGO_LINK / IMAGE_TEXT_LINK` 等列表类型或展示模式。
-
-首页轮播使用通用列表 `HOME_CAROUSEL`，其基线 `imagePolicy=REQUIRED`。URL 可选，有 URL 时图片可点击，没有 URL 时仅显示图片。页面是否显示标题、caption、轮播控件等属于公开站设计。
-
-网站导航区域中的友情链接/推荐网站组使用 `SITE_LINKS` 分组下的通用列表；当前基线按文字链接展示，对应列表 `imagePolicy=NONE`。未来视觉方案若真实需要 Logo，再通过数据策略与内容数据调整实现，不通过 `displayMode` 控制页面布局。
-
-不得继续使用 `HOME_BANNERS`、`SITE_LINK_GROUPS` 网站属性 JSON 作为运行时主数据源。
-
-原站 Party 首页顶部若存在独立于栏目置顶/推荐规则的人工编排展示，实施时可评估复用 CmsList；在取得足够视觉/运营证据前，不为了复刻首页外观预先增加“党建专题/轮播”新 CMS 类型。
+不得继续使用 `HOME_BANNERS`、`SITE_LINK_GROUPS` SiteProperty JSON 作为运行时主数据源。
 
 ## 8. 宣传展示
 
-CMS 提供宣传展示位和展示内容模型。展示位代表公开站稳定布局中预留的宣传、专题或活动图片区域。产品界面统一使用“宣传展示管理 / 展示位 / 展示内容”，避免“广告管理”对当前事业单位公共服务网站造成商业广告语义。技术实现为兼容已有数据库和 API，可以继续使用 Advertisement 相关内部标识。
+CMS 提供宣传展示位和展示内容模型。展示位代表公开站稳定布局中预留的宣传、专题或活动图片区域。产品界面统一使用“宣传展示管理 / 展示位 / 展示内容”；技术实现可继续保留 Advertisement 相关内部标识。
 
 展示内容支持标题、图片、目标 URL、打开方式、启停、展示顺序以及可选开始/结束时间。
 
-同一展示位允许维护多条展示内容。公开站对当前有效内容按展示顺序输出：只有 1 条时静态展示，存在 2 条及以上时轮动显示；当前运营通常建议同一位置不超过 3 张，但不作为第一阶段全局硬限制。
+同一展示位允许维护多条展示内容。公开站只消费当前有效内容并按展示顺序输出：1 条时静态展示，2 条及以上时可以轮动；当前运营通常建议不超过 3 张，但不作为全局硬限制。
 
-目标 URL 与点击行为相互独立。URL 可以为空；打开方式支持默认、当前窗口、新窗口以及 `NO_LINK`。`NO_LINK` 表示“仅展示图片、不发生跳转”，即使已经保存 URL 也不执行跳转，并且不得清空该 URL；管理员恢复其他打开方式后，应直接恢复原有目标地址的点击能力。
+URL 与点击行为相互独立。URL 可以为空；打开方式支持默认、当前窗口、新窗口以及 `NO_LINK`。`NO_LINK` 表示只展示、不跳转，即使已经保存 URL 也不得点击，同时不得清空 URL；恢复其他打开方式后继续使用原目标。
 
-展示内容的展示顺序用于同一展示位内多条内容的公开输出和轮动顺序；展示位自身的排序只用于多个展示位之间的管理/输出顺序，两者不得混用。
+展示内容 sortOrder 用于同一展示位成员顺序；展示位 sortOrder 只用于多个展示位之间的顺序。开始/结束时间控制公开有效期，过期不自动删除；管理端应表达“已停用 / 待生效 / 展示中 / 已过期”等状态。
 
-开始时间和结束时间用于控制公开有效期：未到开始时间时不公开，达到结束时间后停止公开；过期不自动删除记录，管理端仍可查看、修改、重新设置有效期或删除。管理端应根据启用状态与有效期计算“已停用、待生效、展示中、已过期”等展示状态。
+首页“招聘活动横幅”使用 `HOME_RECRUITMENT_PROMO`。首页主轮播使用 CmsList，不与 Advertisement 合并为一个业务对象。
 
-首页“招聘活动横幅”使用展示位 `HOME_RECRUITMENT_PROMO`，不再作为单一网站属性图片路径维护。
+## 9. 网站属性与统一轮播参数
 
-首页主轮播 `HOME_CAROUSEL` 仍属于通用有序内容列表；宣传展示位属于页面布局中的宣传展示区域。展示位内部多条内容可以轮动，但不因此与首页主轮播合并为同一业务对象。
+后台提供通用 SiteProperty 管理。属性至少维护 key、名称、分组、值、值类型、说明、排序、必填、系统标识和启停状态。
 
-## 9. 网站属性
+属性分组属于工程 metadata，不作为另一个可运营 CMS 对象。可选分组由 Spring 外部化配置资源定义并排序，当前至少包括 `BASIC / BRAND / CONTACT / FOOTER / PRESENTATION / GENERAL`；SiteProperty 只能引用已声明分组，Admin 不允许自由输入不存在的 group code。
 
-后台提供通用网站属性管理。网站属性至少维护 key、名称、分组、值、值类型、说明、排序、必填、系统标识和启停状态。
+值类型至少支持 `TEXT`、`RESOURCE_PATH`、`JSON`、`URL`、`BOOLEAN`、`INTEGER`。Backend 根据属性自身 `valueType` 验证，不使用编译期 key Enum 白名单限制可维护 key。
 
-网站属性分组本身属于工程元数据，不作为另一个可运营 CMS 对象存入数据库。可选分组由 Spring 可外部化配置资源统一定义并排序，当前至少包括 `BASIC / BRAND / CONTACT / FOOTER / PRESENTATION / GENERAL`；CMS 属性定义只能引用这些已声明分组。管理端应按该元数据提供左侧分组导航和受控分组选择，不允许自由输入不存在的分组 code。
+Main / Party 当前统一使用：
 
-第一版值类型至少支持 `TEXT`、`RESOURCE_PATH`、`JSON`、`URL`、`BOOLEAN`、`INTEGER`。后端根据属性自身 `valueType` 验证值，不使用编译期枚举白名单限制可维护 key。
+### `CAROUSEL_INTERVAL_SECONDS`
 
-网站属性用于站点名称/简称、品牌资源、页头页脚公共信息、地址/电话/办公时间、备案/版权，以及少量确有运营调整价值的低风险站点行为参数。`RESOURCE_PATH` 图片属性应复用统一图片资源选择/上传能力，而不是要求管理员手工录入静态路径。
+- `PRESENTATION` / `INTEGER`；
+- 默认 `4` 秒；
+- 新写入必须为大于 0 的整数；
+- 缺失、非法历史值或不大于 0 时 Public fallback 为 4 秒。
 
-首页主轮播自动切换间隔使用系统属性 `HOME_CAROUSEL_INTERVAL_SECONDS`，归入 `PRESENTATION` 分组，类型为 `INTEGER`，默认值 4，单位秒；该值必须为大于 0 的整数。公开站在轮播存在多张有效图片时按该值启动自动切换。它属于站点展示行为参数，不因此新增“系统设置”模块，也不把页面布局、图片尺寸或轮播组件样式配置化。
+### `CAROUSEL_MAX_ITEMS`
 
-`HOME_BANNERS`、`SERVICE_LINKS`、`SITE_LINK_GROUPS`、`HOME_PROMO_BANNER_PATH` 不再属于网站属性。`HOME_NCSS_LOGO_PATH` 取消 CMS 配置，NCSS 区域作为公开站工程资产固定集成。
+- `PRESENTATION` / `INTEGER`；
+- 默认 `5`；
+- 新写入必须为大于 0 的整数；
+- 表示单个轮播区域最多消费的有效项数，不限制 Backend 可维护记录数；
+- 缺失、非法历史值或不大于 0 时 Public fallback 为 5。
 
-当前阶段管理端可直接提供属性定义的新增、修改、删除以及属性值维护能力，不根据用户身份实施差异限制。
+旧 `HOME_CAROUSEL_INTERVAL_SECONDS` 已被 supersede，不承担 Current Runtime responsibility。
 
-## 10. 静态资源与工程资产
+SiteProperty 用于站点名称/简称、品牌资源、页头页脚公共信息、地址/电话/办公时间、备案/版权，以及少量确有运营调整价值的低风险站点行为参数。`RESOURCE_PATH` 图片属性复用统一图片资源选择/上传能力。
 
-网站提供独立静态资源管理，支持浏览目录/文件、上传、查看/下载、替换、删除到回收区、恢复及关键资源保护。
+`HOME_BANNERS`、`SERVICE_LINKS`、`SITE_LINK_GROUPS`、`HOME_PROMO_BANNER_PATH` 不再属于 Current SiteProperty 主数据；`HOME_NCSS_LOGO_PATH` 不使用 CMS 配置，NCSS 区域作为固定工程集成。
 
-### 10.1 工程基线与 Runtime 上传目录
+当前阶段管理端可直接维护属性定义和值，不根据用户身份实施差异限制。
 
-静态资源明确区分版本化工程基线和 CMS Runtime 上传：
+## 10. 静态资源、Site Package 与 Runtime 上传
+
+网站提供 StaticResource 浏览、上传、查看/下载、替换、回收、恢复及受保护资源安全能力。
+
+### 10.1 Stable Site assets 与 Runtime target
+
+JilinJobs stable Site asset 的唯一版本化 source owner 是：
+
+```text
+sites/jilinjobs/assets/**
+```
+
+Stable assets 通过 Site Package manifest/catalog 投影到既有公开 Runtime 路径，例如：
 
 ```text
 /static/
-├── brand/              # 工程基线
-├── footer/             # 工程基线
-├── health/             # 工程基线
-├── home/               # 工程基线
-├── icons/              # 工程基线 / 内置站点图标
-└── uploads/            # CMS Runtime 上传
-    ├── displays/
-    ├── lists/
-    ├── site-properties/
-    └── navigation-icons/
+├── brand/
+├── footer/
+├── health/
+├── home/
+├── icons/
+└── party/
 ```
 
-工程基线由 Git / `site-baseline` 管理，不因为 CMS 有上传能力就转换成普通运营资源。管理员日常上传不应混入 `home/brand/footer/icons` 等工程基线目录。
+公开 `/static/**` URL contract 不因 source owner 收敛而改变。稳定 Party Logo、背景、装饰图等进入 `sites/jilinjobs/assets/party/**` 等语义目录；历史文章正文图片仍属于 Historical Content Migration。
 
-宣传展示内容按展示位保存到 `/static/uploads/displays/{slotCode}/`；列表图片按列表保存到 `/static/uploads/lists/{listCode}/`；RESOURCE_PATH 网站属性保存到 `/static/uploads/site-properties/{key}/`；导航自定义图标保存到 `/static/uploads/navigation-icons/`。
+### 10.2 Runtime uploads
 
-上传文件名由系统生成稳定名称，避免直接以中文、同名或“最终版”等用户文件名作为正式资源地址。
+CMS Runtime 上传统一进入 `/static/uploads/**`，不属于 stable Site asset ownership：
 
-中心党建重新取证后确认的 Logo、背景、装饰图片等稳定视觉资源进入 `site-baseline/static/party/**` 或等价语义目录；历史文章正文图片继续属于内容迁移范围，不因为页面复刻需要而混入 Flyway。
+- `/static/uploads/displays/{slotCode}/`；
+- `/static/uploads/lists/{listCode}/`；
+- `/static/uploads/site-properties/{key}/`；
+- `/static/uploads/navigation-icons/`。
 
-### 10.2 统一图片选择/上传
+上传文件名由系统生成稳定名称。宣传展示、列表项、Navigation icon、`RESOURCE_PATH` SiteProperty 等图片字段复用同一选择/上传交互：当前预览、上传新图片、选择适用已有/内置图片、清除可选值。
 
-宣传展示、列表项、导航图标和 `RESOURCE_PATH` 网站属性等 CMS 图片字段应复用同一图片资源选择/上传交互，至少支持：当前图片预览、上传新图片、选择适用已有/内置图片、清除可选值。
+日常业务管理员不应被迫先进入 StaticResource 页面上传，再复制 `/static/...` 路径回业务表单。StaticResource 管理继续作为全局资源浏览、显式替换、回收和清理入口。
 
-日常业务管理员不应被迫先进入“静态资源”页面上传，再复制 `/static/...` 路径回业务表单。静态资源管理继续作为全局资源浏览、显式替换、回收和清理入口。
-
-改变 CMS 对象的图片引用不得自动物理删除旧图片，因为旧资源可能被其他位置引用。停止引用后，由静态资源管理按实际情况清理。
+改变 CMS 对象图片引用不得自动物理删除旧图片；停止引用后由 StaticResource 管理按实际情况清理。
 
 ### 10.3 安全与引用保护
 
-第一版不建设完整资源引用关系图。删除/替换必须提示系统不会扫描全部页面、CSS、JS、富文本或人工静态页面引用。
+上传与替换继续验证路径安全、扩展名、真实媒体内容。站内工程资产不允许 CMS 用户上传任意 HTML/JavaScript 并执行。
 
-关键资源保护属于数据/运行安全措施，不等同于权限系统。当前阶段即使没有认证授权，也继续保留必要的路径验证、真实媒体类型验证、删除确认和关键资源保护。启用的网站属性图片、列表图片、宣传展示图片和导航图标应纳入现有可识别引用保护范围。
+受保护状态由 Backend 计算，而不是管理员人工维护：
 
-站内特殊静态页面、固定 NCSS 集成、页面 Shell 等属于工程资产，不允许 CMS 用户上传任意 HTML/JavaScript 并执行。
+- Site Package stable asset manifest/catalog targets；
+- Spring 外部化配置声明的固定部署受保护资源；
+- 当前 SiteProperty、CmsList、Advertisement、Navigation 等可识别 Runtime 引用。
 
-## 11. 首页与公开站
+受保护资源普通删除必须拒绝，明确 replace 仍允许。第一阶段不宣称建立完整 CSS/JS/富文本引用关系图，Admin 对普通资源删除继续提示该限制。
 
-首页采用固定模板，不建设通用 Page Builder。布局、尺寸关系、组件结构和主要视觉层级由公开站工程按现网复刻。
+## 11. 首页、轮播与公开站
 
-主站首页运营数据优先来自 CMS：普通资讯来自栏目/文章；主导航与快捷入口来自导航；导航业务图标来自 Navigation `iconPath`；轮播内容来自 `HOME_CAROUSEL` 通用列表，自动切换间隔来自 `HOME_CAROUSEL_INTERVAL_SECONDS` 网站属性；友情链接来自通用列表；招聘活动横幅来自宣传展示位；站点名称、联系方式等来自网站属性；固定 NCSS 集成等一次性设计保留为工程资产。
+首页采用固定模板，不建设通用 Page Builder。布局、尺寸关系、组件结构和主要视觉层级由 Public Site 工程按现网复刻。
 
-前台不得为了方便重新硬编码一份 CMS 已经提供的业务数据。若某数据明确属于稳定工程设计，则允许保留代码/静态资产实现。
+主站首页运营数据优先来自 CMS：普通资讯来自 Column/Article；主导航与快捷入口来自 Navigation；业务图标来自 Navigation `iconPath`；轮播内容来自 `HOME_CAROUSEL`；统一行为参数来自 `CAROUSEL_INTERVAL_SECONDS / CAROUSEL_MAX_ITEMS`；友情链接来自 CmsList；招聘活动横幅来自 Advertisement；站点名称、联系方式等来自 SiteProperty；固定 NCSS 集成保留为工程资产。
 
-前台页面负责具体展示方式。通用列表是否显示图片/Logo/名称、宣传展示的区域尺寸、导航图标尺寸等由页面设计固化，不作为 CMS 管理端可配置视觉参数。栏目/列表图片数据策略同样不控制前台布局。
+主站首页第一版继续复刻 Header、主导航及二级菜单、轮播、通知公告、固定业务入口、招聘日历、就业动态、业务指南快捷入口、专题/宣传 Banner、招聘相关区域、招聘公告、NCSS 固定集成、网站导航/友情链接和 Footer。EU-44 不改变这些既有页面范围。
 
-主站首页第一版继续复刻：Header、主导航及二级菜单、轮播、通知公告、固定业务入口、招聘日历、就业动态、业务指南快捷入口、专题/宣传 Banner、招聘相关区域、招聘公告、NCSS 固定集成、网站导航/友情链接和 Footer。
+Public Site 不得重新硬编码 CMS 已经提供的业务数据；明确属于稳定工程设计的内容可以保留代码 / stable Site asset 实现。通用列表是否显示图片/Logo/名称、宣传展示区域尺寸、Navigation icon 尺寸等由页面设计固化，不作为 CMS 可配置视觉参数。
 
-中心党建使用独立公开 Site Shell 与红色主题，不复用主站 Header/Footer DOM 或主题 CSS。依据原站 `/dyzj` 取证，Party 首页至少形成：顶部重点内容区域、高层声音、工作动态、学习园地；学习园地内部包含党规党章与理论学习两组内容。高层声音、工作动态、党规党章、理论学习均由对应 Column + Article 数据驱动；学习园地只负责固定页面分组布局。
+### 11.1 Main / Party 共享 Carousel lifecycle
 
-中心党建 Header/Footer、页面 Frame、颜色、装饰和响应式属于 Party Site 工程资产；运营文章、来源、日期、外链目标等来自 CMS。正式视觉以原站证据 + AI Visual + Human Review 收敛，不以当前 Foundation CSS 作为最终 Authority。
+Main / Party 统一以下行为规则，但不统一 DOM、主题、caption 或比例：
+
+- 0 个有效项：稳定空态；
+- 1 个有效项：静态展示，不启动 timer；
+- 2 个及以上：按列表顺序循环自动切换；
+- 提供手动分页；
+- hover 暂停；
+- focus 位于轮播内部时暂停；
+- 页面初始隐藏时不得启动，后续 visibility hidden 时继续暂停；
+- 暂停解除后从当前项继续，不重置到第一项；
+- `prefers-reduced-motion: reduce` 时关闭自动播放和切换动画，手动分页仍可用；
+- 图片加载失败项退出当前有效集合，后续有效项补位；全部失败进入稳定空态；
+- 有效集合或 max-items 变化时优先按 item ID 保持当前内容，只有当前项失效才自然切换；
+- EU-30 不新增 swipe，不引入第三方 Carousel 依赖。
+
+`CAROUSEL_MAX_ITEMS` 在有效性和失败项处理后限制当前最多展示项数；Backend 允许维护更多记录，通过排序决定哪些项进入前 N。
+
+Main 当前稳定比例 `8:5`，图片 `object-fit: cover`；Party 保持 `585:329` 视觉比例。两者视觉主题、caption、dot 和 DOM 可以独立；切换动画为轻量 opacity fade，reduced-motion 时无动画。
+
+### 11.2 Party 内容页面主题
+
+PartyHome 固定呈现顶部重点内容、高层声音、工作动态、学习园地；学习园地内部包含党规党章与理论学习。`party-theme-education` 是正常 Party 内容栏目，但不新增固定首页第五区。
+
+Party 栏目列表与文章详情 breadcrumb 使用一致字号、间距、颜色和交互主题；栏目分页、跳转、每页条数等交互态使用 Party 红色主题，不泄漏 Main 蓝色主题。每页条数选择器使用可主题化控件，不依赖不可控的原生 `<select>` 弹层选中色。
+
+Party 正式视觉继续以原站证据 + AI Visual + Human Review 收敛，不以 Foundation CSS 作为最终视觉 Authority。
 
 ## 12. URL、页面上下文与模板
 
-公开 URL 与具体 HTML Entry 解耦。主站普通栏目 `/column/{alias}`，站内文章 `/article/{id}`，独立单页 `/page/{alias}`，单页分组成员 `/page/{groupAlias}/{alias}`；这些 URL 全部属于 Main Site Entry，不再为 `/page/**` 单独维持重复 Vue App Entry。
+公开 URL 与具体 HTML Entry 解耦。Main 普通栏目 `/column/{alias}`，INTERNAL Article `/article/{id}`，独立单页 `/page/{alias}`，单页分组成员 `/page/{groupAlias}/{alias}`；这些 URL 全部属于同一 Main Site Entry，`/page/**` 不再维持无业务价值的重复 Vue App / HTML Entry。
 
-中心党建 canonical namespace 为 `/party/**`：
+Main Site 源码继续保持当前 `app / shell / modules` 所有权边界；页面模块按 home / content / page / integration 等真实职责组织，并使用 route-level lazy loading，避免将所有页面同步绑定到首屏 bundle。
+
+Party canonical namespace：
 
 - 首页：`/party/`；
 - 栏目：`/party/column/{alias}`；
-- 站内文章：`/party/article/{id}`。
+- INTERNAL Article：`/party/article/{id}`。
 
-Party 栏目列表页与文章详情页必须由 Party Entry / Router / Shell 承载，保持红色主题和直接访问/刷新能力。Party 外链文章从列表直接打开原文，不进入本地详情模板。
+Party 栏目列表和文章详情由 Party Entry / Router / Shell 承载，保持红色主题和直接访问/刷新能力。Party EXTERNAL_LINK 从列表直接打开原文，不进入本地详情模板。
 
-原站 `/plist.html?typeCode=gcsy|gzdt|dgdz|llxx`、当前 `/pdetail.html?content_id=...`、更早 `/detail.html?content_id=...` 及已观察到的可选 `typeCode` 参数变体作为历史迁移映射输入，不作为新版 canonical URL；迁移实现可以按可获得的 legacy id/typeCode/detail path 建立重定向或映射表，但不得让新版路由继续依赖旧 query-string 页面模型。
+原站 `/plist.html?typeCode=...`、`/pdetail.html?content_id=...`、`/detail.html?content_id=...` 及已观察到的参数变体只作为 Historical Migration mapping input，不作为新版 canonical URL。迁移可保存 legacy id/typeCode/detail path 映射，但新版 Router 不依赖旧 query-string 页面模型。
 
-面包屑来自栏目/单页分组/单页或党建栏目/文章等业务关系，不从 URL、旧 typeCode 或某个导航入口机械推导。
+面包屑来自 Column / PageGroup / Page / Article 业务关系，不从 URL、legacy typeCode 或某个 Navigation 入口机械推导。Main 普通栏目列表、Article 详情、独立单页与业务指南单页分组继续以现网页面主要版式为复刻基准；Party 栏目与 Article 使用 Party 专属内容模板。
 
-普通栏目列表、文章详情、独立单页和业务指南单页分组继续以现网页面主要版式为复刻基准。党建栏目与文章使用 Party 专属页面模板。
+## 13. Generic Schema、Site provisioning 与 Historical Migration
 
-## 13. 初始化、测试与历史迁移
+当前站点构成必须按职责分离：
 
-站点初始化基线由数据库基线数据 + 初始化静态资源包共同组成。Flyway 初始化后应具有栏目、导航位置与导航树、导航图标、单页分组、单页、必要网站属性、通用列表、宣传展示位等真实站点骨架。
+```text
+Generic Backend Flyway Schema
+→ JilinJobs stable Site structure
+→ optional Fresh Site one-time bootstrap
+→ stable Site asset projection
+→ Historical Content Migration when required
+→ operator-managed Runtime
+→ Public Renderer
+```
 
-测试脚本只补充测试场景数据，不负责创建站点基础结构。历史文章与资源通过独立迁移机制处理，不混入 Flyway 基线。
+### 13.1 Generic Backend Flyway
 
-已经执行的 Flyway migration 不回改；模型调整通过新的后续 migration 收敛。V11 增加 Column/CmsList 图片数据策略并新增首页轮播间隔网站属性，不修改既有 V8/V9/V10 migration。中心党建入口继续使用既有 V13 将“中心党建”预置主导航调整为站内 `LINK /party/`，不得回改 V4/V13 初始化历史。
+Backend active Flyway 当前仅：
 
-新的党建结构 migration 只建立预置父栏目 `party` 及四个预置子栏目 `party-voice / party-work / party-rules / party-study`，并将它们标记为站点结构基线；不得把原站历史运营文章批量写入 Flyway。党建历史文章、外链记录、正文图片和 legacy URL 映射通过独立内容迁移/采集机制处理。
+```text
+V1__current_cms_schema.sql
+V2__site_provisioning_schema_capabilities.sql
+```
+
+只承担 Generic CMS Schema evolution 与 site-neutral provisioning capability，不注入 JilinJobs instance rows。EU-30 前 V11、Party V13/V14 等历史 migration number 只属于历史实现 / upgrade evidence，不定义 Current initialization lifecycle。
+
+### 13.2 JilinJobs Site Package
+
+- `sites/jilinjobs/structure/**`：stable Site structure；
+- `sites/jilinjobs/bootstrap/**`：Fresh Site one-time operational defaults；
+- `sites/jilinjobs/assets/**`：stable Site assets。
+
+Stable structure 可 reconcile；one-time bootstrap 成功后数据成为普通 operator-managed Runtime data，后续 restart/reconcile/repeated bootstrap 不得 overwrite 或 resurrect 管理员修改/删除。
+
+测试 fixture 只建立测试场景数据，不维护第二套站点基线。
+
+### 13.3 Historical Content Migration
+
+`data-migrations/**` 承担历史 Article、EXTERNAL_LINK、正文资源、附件、历史列表成员、legacy identity/fingerprint 和 provenance。Canonical Dataset 使用 stable Site identity，不依赖临时 Runtime DB id 或 Public Renderer 内部实现。
+
+当前 Party migration authority：
+
+- EU-29 frozen `acceptedSnapshot` = 181 Articles，原 artifact/provenance 不因后续 promotion 重写；
+- EU-30 接受 `party-theme-education` 2 条增量后，current canonical Runtime Dataset = 183 Articles；
+- 当前 4 个 carousel items 已接受；
+- 原轮播 position 2 通过 stable `sourceSystem + legacyKey` 解析主题教育 Article，使用 ARTICLE placement，保留原 PNG 作为列表专用覆盖 Resource 和 `NEW_WINDOW` 语义，target 为新版 Party canonical route；
+- EU-29 → EU-30 upgrade-only compatibility 保持可验证；
+- Historical Migration 不并入 Flyway、Site stable structure、bootstrap 或 stable asset manifest。
 
 ## 14. 权限规划边界
 
-后台最终复用智慧就业云平台统一账号和权限体系。未来可为栏目、导航、文章、单页、列表、宣传展示、网站属性、静态资源分别提供权限点，并可规划“普通管理员主要维护值/内容，超级管理员维护高风险定义”的差异。
+后台最终复用智慧就业云平台统一账号和权限体系。未来可为 Column、Navigation、Article、Page、CmsList、Advertisement、SiteProperty、StaticResource 分别提供权限点，并规划普通管理员 / 超级管理员的差异。
 
 **上述内容当前只作为未来规划，不属于当前阶段实现或验收条件。** 当前阶段不得为此引入临时登录、角色、超级管理员标识或前端假权限。
 
+`preset` 保护、删除确认、路径安全、真实媒体校验、来源身份 immutable 和受保护资源属于产品/数据安全契约，不等于当前已经实现用户权限体系。
+
 ## 15. 发布与公开规则
 
-文章状态保持：`草稿 → 已发布 → 已撤回 → 已发布`。编辑不自动改变状态；只有已发布文章进入正常公开发现范围；撤回后从首页和栏目列表退出；不存在、已删除或已撤回内容直接访问显示统一不可用提示。栏目封面策略为 `REQUIRED` 时，无封面草稿不得发布；已发布文章也不得通过普通编辑变成缺少必填封面的状态。
+Article 状态保持：`草稿 → 已发布 → 已撤回 → 已发布`。编辑不自动改变状态；只有 `PUBLISHED` 进入正常公开发现范围；撤回后从首页、栏目列表和 ARTICLE placements 的公开结果退出；重新发布后既有有效 placement 可以恢复。不存在、已删除或已撤回的内容直接访问时显示统一不可用提示。
 
-党建四个栏目沿用相同发布规则。外链文章公开时从 Party 首页/栏目列表直接进入来源网站；站内文章只在属于党建栏目树时允许由 `/party/article/{id}` 呈现。Main 与 Party 不因共用 Article 数据表而互相改变主题或 canonical URL。
+Column `coverPolicy=REQUIRED` 时，无封面草稿不得发布；已发布 Article 也不得通过普通编辑变成缺少必填封面的状态。
 
-导航、列表项、宣传展示内容、网站属性等公开数据只消费启用且满足自身有效条件的数据。宣传展示若配置开始/结束时间，则公开端只返回当前有效内容；同一展示位多条有效内容按展示顺序返回，`NO_LINK` 只影响点击行为，不影响其是否属于当前有效内容。
+Party EXTERNAL_LINK 公开时直接进入来源网站；INTERNAL 只有属于 Party 栏目树时允许由 `/party/article/{id}` 呈现。Main / Party 不因共用 Article 数据表而互相改变主题或 canonical URL。
+
+Navigation、CmsListItem、Advertisement、SiteProperty 等公开数据只消费启用且满足自身有效条件的数据。ARTICLE placement 还必须满足关联 Article `PUBLISHED` 与列表 imagePolicy；Advertisement 若配置开始/结束时间，只在当前有效期公开；`NO_LINK` 只影响点击行为，不改变当前有效内容身份。
 
 ## 16. 验收要点
 
-当前迭代至少验证：
+当前 canonical Requirement 至少要求持续满足：
 
-1. 管理端侧边栏按“内容管理 / 内容结构 / 运营展示 / 站点设置”组织现有八类 CMS 能力，分组不增加点击层级，也不新增独立“系统设置”模块；
-2. 产品界面使用“单页管理 / 单页 / 单页分组”，技术层 `Page / PageGroup` 和既有 API 可以保持兼容；
+1. 管理端侧边栏按“内容管理 / 内容结构 / 运营展示 / 站点设置”组织现有 CMS 能力，不新增独立“系统设置”模块；
+2. 产品界面使用“单页管理 / 单页 / 单页分组”，技术层 `Page / PageGroup` 和既有 API 保持兼容；
 3. 单页管理左侧提供“全部单页 / 独立单页 / 单页分组”，右侧按当前组织上下文展示成员；具体分组上下文新增时默认带入分组；
-4. 文章管理左侧栏目树作为文章组织上下文，父栏目能够聚合全部后代栏目文章；文章列表使用服务端摘要分页查询，不要求下载全部正文/资源详情后在浏览器筛选；栏目管理自身继续直接维护栏目树；
-5. 栏目支持 `NONE / OPTIONAL / REQUIRED` 封面数据策略；`REQUIRED` 允许无封面草稿暂存，但发布以及已发布文章编辑必须维持封面契约；公开文章摘要可以返回可选封面引用；
-6. 现网主导航和二级结构按基线初始化并支持树形管理；“中心党建”预置条目以当前窗口进入 `/party/` 的站内入口；
-7. 导航位置独立维护，管理列表只展示当前选中位置的导航树；导航位置左侧选择/操作体验与列表、宣传展示位保持一致；
-8. `HOME_SHORTCUT` 驱动首页五个首屏快捷入口，并由导航条目自身 `iconPath` 驱动图标；调整排序不得造成图标语义错位；
-9. `HOME_QUICK` 驱动业务指南快速入口及其图标，前端不重复硬编码成员列表或按数组下标拼接图标路径；
-10. 通用列表不再暴露 `LINK / IMAGE_LINK / TEXT` itemType；标题、副标题、图片、URL 等作为独立数据属性维护，具体展示方式由前台页面设计决定；
-11. 通用列表支持 `NONE / OPTIONAL / REQUIRED` 图片数据策略，Backend 对列表项创建、修改及策略变更保持数据一致性；
-12. 首页轮播由 `HOME_CAROUSEL` 通用列表驱动，基线要求列表项具有图片，URL 可以为空且为空时不产生伪链接；
-13. 首页轮播存在多张有效图片时按 `HOME_CAROUSEL_INTERVAL_SECONDS` 自动切换，该属性属于 `PRESENTATION` 分组、类型为正整数秒；
-14. 网站导航/友情链接由 `SITE_LINKS` 通用列表驱动，当前基线为文字链接且不使用图片；未来需要 Logo 时通过图片数据策略调整而不是新增展示模式；
-15. 首页招聘活动横幅由 `HOME_RECRUITMENT_PROMO` 宣传展示位驱动，同一展示位多条当前有效内容能够按展示顺序轮动；
-16. 宣传展示 `NO_LINK` 能在保留 URL 的情况下禁止点击，恢复其他打开方式后继续使用原 URL；有效期能够控制公开可见性且过期记录保留在后台；
-17. 管理端用户可见名称使用“宣传展示管理 / 展示位 / 展示内容”，内部兼容性技术标识不要求同步破坏性重命名；
-18. 宣传展示、通用列表、导航图标、RESOURCE_PATH 网站属性复用统一图片资源选择/上传能力，并写入约定 `/static/uploads/**` 目录；
-19. 现有站点导航图标完成语义整理，业务图标对应关系不再依赖物理序号推导；
-20. 网站属性分组来自 Spring 配置资源元数据，管理端按元数据分组浏览和选择；不存在的分组不得由 CMS 属性定义自由创建；
-21. 网站属性支持 `INTEGER` 等类型化值校验，不依赖编译期 key Enum；
-22. NCSS 首页区域使用固定工程集成，不提供 CMS 管理项；
-23. 当前阶段不存在基于用户角色/权限的功能限制实现；
-24. 主站 `/`、栏目、文章、单页、单页分组及其既有视觉主基线无回归，并且 `/page/**` 不再依赖无业务价值的重复 HTML Entry；
-25. 公开站源码形成 Main Site / Party Building Site 所有权边界；主站页面按 `home / content / page / integration` 等真实职责组织并使用 route-level lazy loading；
-26. `/party/`、`/party/column/{alias}`、`/party/article/{id}` 由独立 Party Entry / App / Router / Shell / 红色主题承载，直接访问和刷新均正常；党建样式不得污染主站，主站蓝白主题也不得作为党建 Shell 的隐式依赖；
-27. 党建站点结构基线包含父栏目“中心党建”和 `高层声音 / 工作动态 / 党规党章 / 理论学习` 四个预置子栏目，并与原站 `gcsy / gzdt / dgdz / llxx` 建立明确映射；
-28. 四个党建栏目使用通用 Column + Article，同一栏目可包含站内文章与外链文章；不新增党建专属 CMS 类型、`site` 字段、Admin Module 或第二套文章模型；
-29. Party 首页至少呈现原站已确认的顶部重点内容、高层声音、工作动态、学习园地结构，学习园地包含党规党章与理论学习；`学习园地` 只作为页面视觉分组，不新增 CMS 内容类型或重复 Authority；
-30. Party 外链文章直接打开原文；Party 站内文章使用党建详情模板，并拒绝把非党建文章作为 `/party/article/**` 正常详情呈现；栏目列表、文章详情、面包屑、来源、发布日期和不可用状态形成完整闭环；
-31. Flyway 干净初始化得到完整 CMS 站点骨架并通过后续 migration 完成既有模型升级、中心党建入口及党建栏目结构；Flyway 不批量注入党建历史运营文章和正文资源；
-32. 原站 `plist / pdetail / detail` 及 `content_id / typeCode` 参数变体被记录为历史迁移输入，但新版 canonical URL 不依赖旧路由模型；
-33. 静态资源真实媒体验证、路径安全、关键资源保护和回收恢复无回归，导航图标引用进入可识别关键资源保护；
-34. 党建正式视觉必须经过原站证据、自动功能验证、AI Visual 与 Human Review；Functional Browser PASS 单独不能证明最终 Visual Fidelity；
-35. Backend、Public Site、Admin Frontend 与 Browser Verification 形成 Current Evidence；
-36. Human Review Environment 能同时访问主站、中心党建正式页面与 `/admin/`，并在干净评审基线上完成党建视觉/内容复核。
+4. Article 管理左侧 Column tree 作为组织上下文，父栏目可聚合后代文章；列表使用服务端摘要分页查询，不要求浏览器下载全部正文后筛选；Column 管理自身继续直接维护栏目树；
+5. Column 支持 `NONE / OPTIONAL / REQUIRED` coverPolicy；REQUIRED 允许无封面 draft，但 publish/已发布 edit 必须满足封面契约；Public Article Summary 可返回可选封面引用；
+6. `Article.articleType` 创建后不可普通编辑；Article 不存在全局 `recommended`，独立推荐使用 `CmsList + ARTICLE`；
+7. NavigationLocation 独立维护；管理列表只展示当前选中位置的 Navigation tree；NavigationItem 图标属于自身数据，排序变化不得造成图标语义错位；
+8. `HOME_SHORTCUT` 与 `HOME_QUICK` 驱动对应 Main 首页入口及图标，前端不重复硬编码成员/图标关系；
+9. CmsList 不使用 displayMode 或旧组合型 itemType，图片策略保持 `NONE / OPTIONAL / REQUIRED`；LINK 标题必填且 URL 执行站内路径 / HTTP(S) 校验；
+10. CmsListItem current source model 为 `LINK / ARTICLE`；ARTICLE placement 不改变 Article 唯一栏目归属；
+11. `CmsListItem.sourceType` 与 ARTICLE `articleId` 创建后不可普通编辑，Admin 与 Backend 同时强制；
+12. ARTICLE 仅在关联 Article `PUBLISHED` 时公开；INTERNAL target 由 Main / Party 生成各自 canonical route，EXTERNAL_LINK 使用当前外链，并继续遵守 placement `openMode`；
+13. ARTICLE image 可继承 Article 封面或使用显式 CMS Resource override；正文图片选择必须固化 Resource ID，Public 不隐式取正文第一张；
+14. REQUIRED ARTICLE 失去 effective image 后不得继续公开；列表 imagePolicy 变更不得制造已有数据冲突；
+15. `HOME_CAROUSEL / PARTY_CAROUSEL` 均为 REQUIRED；`SITE_LINKS` 当前按文字链接消费；
+16. Main / Party 统一使用 `CAROUSEL_INTERVAL_SECONDS`（默认 4）与 `CAROUSEL_MAX_ITEMS`（默认 5），Backend 拒绝非正整数新值；
+17. Carousel 0/1/多项、manual paging、hover/focus/visibility pause、resume、reduced-motion、failed-image backfill、current item identity 行为符合 §11.1；
+18. Main 轮播保持 `8:5`，Party 保持 `585:329`；共享 lifecycle 不强制共享视觉 DOM/主题；
+19. 管理端用户可见名称使用“宣传展示管理 / 展示位 / 展示内容”；首页招聘活动横幅由 `HOME_RECRUITMENT_PROMO` AdvertisementSlot 驱动，多条当前有效内容按顺序轮动；
+20. Advertisement `NO_LINK` 保留 URL 但禁止点击，恢复其他 openMode 后 URL 继续可用；有效期控制公开可见性且过期记录保留；
+21. 宣传展示、CmsList、Navigation icon、RESOURCE_PATH SiteProperty 复用统一图片选择/上传，Runtime 上传进入 `/static/uploads/**`；
+22. SiteProperty group 来自 Spring metadata，支持 INTEGER 等 typed validation，不依赖编译期 key Enum；
+23. NCSS 首页区域使用固定工程集成，不提供 CMS 管理项；
+24. 当前阶段不存在基于用户角色/权限的功能限制实现；
+25. Main `/`、Column、Article、Page、PageGroup canonical URL 与蓝白视觉主基线无回归；`/page/**` 不维持重复 HTML Entry；Main 源码保持当前 ownership boundary 与 route-level lazy loading；
+26. `/party/`、`/party/column/{alias}`、`/party/article/{id}` 由 Party Entry / Router / Shell / 红色主题承载并支持直接访问/刷新；Main / Party Navigation 与 Footer 继续复用 Shared Shell Components，Site-specific 内容主题互不污染；
+27. Party stable structure 包含父栏目 `party` 与五个子栏目 `party-voice / party-work / party-rules / party-study / party-theme-education`；
+28. Party 五个栏目复用通用 Column + Article，允许 INTERNAL / EXTERNAL_LINK；不新增 Party 专属 CMS 类型、`site` 字段、Admin Module 或第二套 Article 模型；
+29. PartyHome 固定顶部重点内容、高层声音、工作动态、学习园地；学习园地含党规党章/理论学习；主题教育不新增第五个固定首页区；
+30. Party EXTERNAL_LINK 直接打开原文；Party INTERNAL 使用 Party 详情模板并拒绝非 Party Article；不存在/已删除/已撤回内容直接访问使用统一不可用提示；
+31. Party breadcrumb、分页、每页条数等内容页交互保持 Party 红色主题，不泄漏 Main 蓝色；
+32. Generic Backend active Flyway 仅 V1 schema + V2 site-neutral provisioning capability，不承担具体 JilinJobs instance rows；
+33. JilinJobs stable structure / one-time bootstrap / stable assets 分别由 `sites/jilinjobs/{structure,bootstrap,assets}/**` 持有；
+34. one-time bootstrap 后 operator data 不被普通 restart/reconcile/repeated bootstrap 覆盖或 resurrect；
+35. stable Site asset source 是 `sites/jilinjobs/assets/**`，公开 target 继续 `/static/**`；CMS Runtime uploads 继续 `/static/uploads/**`；
+36. Historical Content Migration 继续属于 `data-migrations/**`，不进入 Flyway 或 stable Site asset ownership；
+37. Party current canonical Runtime Dataset = 183 Articles，EU-29 frozen acceptedSnapshot = 181，4 个 accepted carousel items 与 EU-29→EU-30 compatibility 可独立审计；
+38. 原站 `plist / pdetail / detail` 与 `content_id / typeCode` 变体只作为迁移输入，新版 canonical URL 不依赖旧 Router 模型；
+39. StaticResource 真实媒体验证、路径安全、受保护资源与回收恢复无回归；stable manifest targets 和当前 CMS 引用能够进入保护集合；
+40. Party 正式视觉继续由原站证据、自动功能验证、AI Visual 与 Human Review 共同支撑，Functional Browser PASS 单独不等于 Visual Fidelity；
+41. Backend、Public Site、Admin Frontend、Site Package 与 Integrated Browser 的 Current Evidence 必须与实际目标提交和 Evidence Claim 匹配；
+42. Human Review Environment 在需要人工视觉/内容复核时能够同时访问 Main、Party 与 `/admin/`，且评审基线与自动测试数据隔离。

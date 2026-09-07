@@ -2,7 +2,7 @@
 id: requirement-information-publishing-eu30-amendment
 title: 信息发布与网站服务需求 — EU-30 轮播修订
 type: business-requirement-amendment
-status: confirmed
+status: superseded
 version: "V4.9-EU30-HR"
 classification:
   - l1-06
@@ -16,16 +16,18 @@ relations:
     - docs/specifications/party.md
     - docs/technical/carousel-list-placement.md
 created_at: 2026-09-04
-updated_at: 2026-09-05
+updated_at: 2026-09-07
 ---
 
 # 信息发布与网站服务需求 — EU-30 轮播修订
 
+> **Lifecycle：SUPERSEDED / TRACEABILITY。** EU-30 已确认并接受的现行产品语义已经由 `docs/requirements/information-publishing.md` V4.9 统一承担。本文保留原 Requirement Change、Human Review 与迁移演进的追溯语义，不再作为 Fresh Context 需要并行拼接的 Current Requirement；物理归档由 Phase 1B 另行处理。
+
 ## 1. 文档作用
 
-本文记录 EU-30 Human Discussion / Human Review 已确认并进入实现的需求修订。
+本文记录 EU-30 Human Discussion / Human Review 已确认并进入实现的需求修订，以及该修订在折回 canonical Requirement 前承担的定向 supersede 关系。
 
-在 EU-30 范围内，本文对 `docs/requirements/information-publishing.md` V4.8 中以下旧表述形成**定向 supersede**：
+EU-30 当时对 `docs/requirements/information-publishing.md` V4.8 中以下旧表述形成**定向 supersede**：
 
 - `HOME_CAROUSEL_INTERVAL_SECONDS` 作为 Main-only 首页轮播属性；
 - 通用列表项只以自身标题 / URL / `imagePath` 表达目标内容；
@@ -33,7 +35,7 @@ updated_at: 2026-09-05
 - Party 轮播固定 5 秒或与 Main 分别维护行为参数；
 - 文章必须保留独立“推荐”布尔属性，并把“推荐”作为全局公开文章排序层级。
 
-V4.8 其他未被本文明确修订的需求继续有效。后续对 `information-publishing.md` 做整版升级时，应把本文内容折叠回主需求文档，并删除已经被替代的旧描述。
+上述有效语义现已折回 `information-publishing.md` V4.9；V4.8 及本文之间的差异仅用于追溯 EU-30 Requirement Change，不再要求后续 Consumer 同时读取两份文档才能恢复 Current Product Authority。
 
 ## 2. 通用列表投放来源
 
@@ -85,7 +87,7 @@ Main 与 Party 使用同一组网站属性：
 - Backend 不接受新写入的 0、负数或非整数；
 - 缺失、非法历史值或不大于 0 时公开端 fallback 为 4 秒。
 
-`HOME_CAROUSEL_INTERVAL_SECONDS` 不再是现行 Runtime 属性，不得继续作为 Main-only 配置依赖。
+`HOME_CAROUSEL_INTERVAL_SECONDS` 已被 supersede，不再是现行 Runtime 属性，也不得继续作为 Main-only 配置依赖。
 
 ### `CAROUSEL_MAX_ITEMS`
 
@@ -147,15 +149,17 @@ EU-30 对原站轮播第二项进行反向追踪后确认：
 
 ## 8. 迁移证据状态
 
-EU-29 已通过 Human Review 的接受基线保持不变：181 篇文章、4 个轮播项及其原证据 provenance 不被 EU-30 重写。
+EU-29 已通过 Human Review 的冻结接受基线保持 181 篇文章；原 acceptedSnapshot 与 provenance 不因 EU-30 promotion 被重写。
 
-EU-30 新增主题教育 2 条记录属于增量候选：
+EU-30 新增 `party-theme-education` 2 条历史记录经过独立采集、Canonical Workspace、Fresh DB / idempotency / Runtime 关联验证和 Human Review 后已被接受。当前：
 
-- 写入 Consumer-owned、版本化 Canonical Workspace；
-- Manifest 明确区分 `acceptedSnapshot` 与 `candidateExtension`；
-- candidate 当前为 `pending-human-review`；
-- 保存采集 Run、Head SHA、legacy identity、fingerprint 和资源 SHA-256；
-- Fresh DB import、二次幂等和 Runtime 关联验证通过后，仍需 Human Review 才能把该增量标记为 accepted。
+- `data-migrations/party/v1` status = `accepted-canonical`；
+- Party current canonical Runtime Dataset = 183 篇文章；
+- 4 个 accepted carousel items 保持可审计；
+- EU-29 → EU-30 upgrade-only compatibility 继续保留为迁移兼容契约；
+- source Run / Head SHA / legacy identity / fingerprint / resource SHA-256 等 provenance 继续由 Canonical Migration Workspace / evidence 承担。
+
+这些历史运营内容与 provenance 继续属于 `data-migrations/**`，不并入 Backend Flyway 或 JilinJobs stable Site assets。
 
 ## 9. Human Review 内容运营收敛
 
@@ -168,7 +172,7 @@ Human Review 重新评估“置顶 / 推荐 / 展示顺序”后确认：`推荐
 - `置顶`表达明确的栏目优先语义，`sortOrder`承担同级内容人工排序；
 - 若未来出现“首页推荐 / 专题推荐 / 人工推荐区”等独立展示需求，应使用 `CmsList + ARTICLE` 做明确投放，不重新给 Article 增加全局推荐状态。
 
-数据库通过后续 Flyway migration 删除历史 `recommended` 字段和对应索引维度；历史 migration 文件保持不可变。
+数据库通过后续 migration 删除了历史 `recommended` 字段和对应索引维度；历史 migration 文件保持不可变，仅承担历史实现追溯。
 
 ### 9.2 创建后不可修改的来源身份
 
@@ -188,7 +192,9 @@ Human Review 确认以下字段决定对象的来源语义，创建后不得通�
 - Party 栏目分页控件的页码、跳转、每页条数下拉等全部交互态必须使用 Party 红色主题，不得泄漏 Main 蓝色主题；
 - 每页条数选择器应使用可主题化的共享控件，不依赖浏览器/操作系统不可控的原生 `<select>` 弹层选中色。
 
-## 10. Acceptance Criteria
+## 10. Accepted Change Criteria（追溯）
+
+EU-30 的 accepted Requirement Change 包括：
 
 - Runtime 不再依赖 `HOME_CAROUSEL_INTERVAL_SECONDS`；
 - Main / Party 均使用 `CAROUSEL_INTERVAL_SECONDS` 和 `CAROUSEL_MAX_ITEMS`，管理端拒绝非正整数；
@@ -204,5 +210,6 @@ Human Review 确认以下字段决定对象的来源语义，创建后不得通�
 - Party 栏目/详情 breadcrumb 一致，栏目分页及每页条数选择器不存在 Main 蓝色主题泄漏；
 - `party-theme-education / 主题教育` 存在并属于 Party 内容作用域，但不进入 PartyHome 固定四栏目区域；
 - 历史轮播 position 2 使用 ARTICLE 稳定关系并保留原 PNG 覆盖图和 `NEW_WINDOW` 语义；
-- EU-29 acceptedSnapshot 与 EU-30 candidateExtension 的证据状态可独立审计；
-- EU-30 Human Review 通过前，不把增量迁移候选提前声明为最终 accepted。
+- EU-29 acceptedSnapshot 与 EU-30 accepted extension / upgrade compatibility 可以独立审计。
+
+以上 current product semantics 已由 consolidated `information-publishing.md` V4.9 接管；本文后续只用于追溯 EU-30 的 Requirement Change 来源和 Human Review 依据。
