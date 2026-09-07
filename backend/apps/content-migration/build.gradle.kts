@@ -8,6 +8,7 @@ plugins {
 dependencies {
     implementation(project(":modules:cms-core"))
     implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-jackson")
     implementation("org.springframework:spring-web")
     implementation("org.mybatis.spring.boot:mybatis-spring-boot-starter:4.0.0")
     implementation("tools.jackson.module:jackson-module-kotlin")
