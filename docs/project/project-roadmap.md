@@ -23,7 +23,7 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | EU-32～EU-35 Admin Governance / Rich Text | 已完成 | List definition governance、Admin guidance responsibility、HTML safety、shared Tiptap authoring |
 | EU-36 Public Frontend Source Isolation | 已完成 | Public production source 退出 Admin endpoint knowledge，managed resource projection 由 Backend Public contract 承担 |
 | EU-37～EU-42 Site Package Boundary | 已完成当前 accepted scope | Site Package contract、stable structure、Navigation identity、Runtime composition、one-time bootstrap、Generic Schema separation、stable asset ownership 均闭环 |
-| Issue #92 E1～E3 前置 Repository Authority / Migration Architecture Convergence | **当前 Planning Priority / Phase 1 IN PROGRESS** | Phase 0 已完成；Phase 1 current audit、Authority Clarification 与 EU-43 semantic reconciliation 已完成；Current Ready Execution Unit = NONE；下一 Gate 为 Slice B Planning Candidate |
+| Issue #92 E1～E3 前置 Repository Authority / Migration Architecture Convergence | **当前 Planning Priority / Phase 1 IN PROGRESS** | Phase 0、Phase 1 audit 与 EU-43 已完成；Slice B 已形成 **EU-44 — Canonical Product Authority Consolidation — READY / NOT STARTED**；Current Ready Execution Unit = EU-44 |
 | Issue #60 / E1～E3 Main Site Formal Content | 前置依赖等待 | 等待 Issue #92 / #77 的 Documentation Authority、Historical Migration / Backend Application Boundary 与 final compatibility re-entry gate |
 | Repository Split Readiness Assessment | 后置 Planning Candidate | 只有四层 boundary 完成后独立评估；不自动拆仓，不默认阻塞 E1～E3 |
 | Issues #57 / #59 / #60 其他候选 | 规划层保留 | C1/C2、Browser Compatibility、Public Rendering Architecture 等保持独立，不因 Issue #92 自动扩大 |
@@ -105,7 +105,7 @@ Phase 0 已完成；当时没有形成实现 EU，也没有进入 Issue #60 / E1
 
 ### Phase 1 — Repository Documentation Authority Convergence — IN PROGRESS
 
-Phase 1 已完成 current audit、Authority Clarification、Ready Specification，以及 Slice A / EU-43 的 `slice-work → readiness-check → Execute → Integration → Post-Integration` 闭环。完整分类、dependency closure 与 slice result 以 `docs/project/documentation-authority-convergence.md` 为当前 Authority。当前 Ready Execution Unit：**NONE**。
+Phase 1 已完成 current audit、Authority Clarification、Ready Specification，以及 Slice A / EU-43 的 `slice-work → readiness-check → Execute → Integration → Post-Integration` 闭环。Slice B 已重新完成 dependency closure、`slice-work → readiness-check`，形成 **EU-44 — Canonical Product Authority Consolidation — READY / NOT STARTED**。完整分类、dependency closure 与 slice result 以 `docs/project/documentation-authority-convergence.md` 为当前 Authority。当前 Ready Execution Unit：**EU-44**。
 
 #### Unit 1A — Canonical Authority Audit & Reconciliation
 
@@ -120,21 +120,22 @@ Current audit 已按 `CURRENT / PARTIALLY_CURRENT / SUPERSEDED / HISTORICAL_EVID
 - `pre-e1e3-convergence-plan.md` AR-02-only / “暂不反馈 agentic-dev” experiment wording；
 - EU-30 Amendment 尚未折回主 Requirement。
 
-其中前五类四层 boundary / lifecycle / migration / asset / experiment currentness drift 已由 **EU-43 — Current Authority Semantic Reconciliation** 关闭；EU-30 Amendment consolidation 仍属于后继 Slice B。
+其中前五类四层 boundary / lifecycle / migration / asset / experiment currentness drift 已由 **EU-43 — Current Authority Semantic Reconciliation** 关闭；EU-30 Amendment consolidation 已通过 Slice B `slice-work → readiness-check` 形成 EU-44。
 
 `slice-work` 将 1A 拆为小型 dependency-ordered slices：
 
 1. **EU-43 — Current Authority Semantic Reconciliation — COMPLETED**：已关闭四层 boundary / lifecycle / migration / asset / verification 的 currentness drift；
-2. **Slice B — Canonical Product Requirement Consolidation — NEXT PLANNING GATE / Planning Candidate**：下一步折叠 `information-publishing-eu30-amendment.md` 与相关 CMS current docs，必须重新执行 `slice-work → readiness-check`；
-3. Phase 1B Information Architecture / Archive Migration 必须等待前述 semantic currentness 完成。
+2. **EU-44 — Canonical Product Authority Consolidation — READY / NOT STARTED**：原 Slice B；折叠 `information-publishing-eu30-amendment.md` 与相关 CMS current docs，精确 scope / acceptance / non-goals 见 EU-44 work artifact；
+3. Phase 1B Information Architecture / Archive Migration 必须等待 EU-44 完成。
 
-EU-43 work artifact：
+当前 work artifacts：
 
 ```text
 docs/work/eu43-current-authority-semantic-reconciliation.md
+docs/work/eu44-canonical-product-authority-consolidation.md
 ```
 
-EU-43 Execute Authority 已随完成终止；Slice B、Phase 1B、Phase 2 与 E1～E3 均不得继承。
+EU-43 Execute Authority 已随完成终止；EU-44 Readiness 只授权其 canonical Authority consolidation，Phase 1B、Phase 2 与 E1～E3 均不得继承。
 
 #### Planned Unit 1B — Documentation Information Architecture & Archive Migration
 
@@ -145,7 +146,7 @@ EU-43 Execute Authority 已随完成终止；Slice B、Phase 1B、Phase 2 与 E1
 - `archive/**` 默认不参与 Fresh Context Current Authority 恢复；
 - 更新全部 Current Authority 链接与必要子树 README。
 
-1B 当前仍是 Planning Candidate，不获得 EU-43 Execute Authority。
+1B 当前仍是 Planning Candidate，不获得 EU-44 Execute Authority。
 
 ### Phase 2 — Generic Historical Migration & Backend Application Boundary
 
@@ -278,7 +279,7 @@ bounded eval when justified
 | 2026-09-06 | EU-36 完成 Public source isolation；Issue #77 成为 E1～E3 前置四层边界入口 |
 | 2026-09-06～2026-09-07 | EU-37～EU-42 完成 Site Package contract、stable structure、Runtime composition、Schema/bootstrap separation 与 stable assets |
 | 2026-09-07 | Issue #92 / PR #93 完成 E1～E3 前置总体路线固化；AR-02 修订 Phase 2A；PR #94 完成 AR-04 blind paired eval 并将跨项目 Evidence 提交 agentic-dev Issue #71；Phase 0 收口 |
-| 2026-09-07 | Phase 1 current audit / Authority Clarification 完成；EU-43 完成 Current Authority Semantic Reconciliation 并取得集成后 Current Evidence；Current Ready Unit 回到 NONE，Slice B 成为下一 Planning Gate |
+| 2026-09-07 | Phase 1 current audit / Authority Clarification 完成；EU-43 完成 Current Authority Semantic Reconciliation 并取得集成后 Current Evidence；Slice B 已完成独立 `slice-work → readiness-check` 并形成 EU-44 READY / NOT STARTED |
 
 详细执行、exact-head、Integration 与 Post-Integration Evidence 继续以对应 `docs/work/**`、Issue comments、PR 与 Actions 为准。
 
@@ -304,6 +305,6 @@ bounded eval when justified
 8. GitHub Issue #92；涉及四层架构时同时读取 Issue #77；Issue #60 只用于 E1～E3 / C1/C2 等 downstream candidates
 9. 当前 Branch / PR / Actions / Runtime Evidence
 
-当前 Ready Execution Unit：**NONE**。
+当前 Ready Execution Unit：**EU-44 — Canonical Product Authority Consolidation — READY / NOT STARTED**。
 
-Phase 0 已完成；Phase 1 audit 与 Slice A / EU-43 已完成。下一实际步骤是从最新 `main` 重新恢复 Issue #92 与 Phase 1 Authority，对 **Slice B — Canonical Product Requirement Consolidation** 重新执行 `slice-work → readiness-check`。在形成新的 Ready Execution Unit 前不得进入 Slice B Execute、Phase 1B、Phase 2 或 Issue #60 / E1～E3。
+下一实际步骤是在新的 Fresh Context 从最新 `main` 重新核验 Issue #92、Phase 1 Authority、`docs/work/eu44-canonical-product-authority-consolidation.md`、Open PR 与 base drift；若 Readiness 仍有效，则执行 EU-44。EU-44 只授权 canonical Product / CMS / Backend Authority consolidation；不得进入 Phase 1B、Phase 2 或 Issue #60 / E1～E3。
