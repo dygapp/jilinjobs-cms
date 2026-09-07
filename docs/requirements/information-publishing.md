@@ -24,7 +24,7 @@ updated_at: 2026-09-07
 
 本文是 `jilinjobs-cms` 当前“信息发布与网站服务”单一 canonical 业务需求基线，用于约束中心主站、中心党建公开站、CMS 通用模型、管理端、Site Package、历史迁移与当前产品行为。
 
-V4.9 将 EU-30 已确认并完成 Human Review / implementation / migration promotion 的 Requirement Change 折回主需求，并同步 EU-41 / EU-42 已接受的 Generic Flyway、JilinJobs Site Package 与 stable Site asset ownership。`docs/requirements/information-publishing-eu30-amendment.md` 自 V4.9 起只保留 `SUPERSEDED / TRACEABILITY` 角色，不再需要与本文并行拼接才能恢复 Current Product Authority。
+V4.9 将 EU-30 已确认并完成 Human Review / implementation / migration promotion 的 Requirement Change 折回主需求，并同步 EU-41 / EU-42 已接受的 Generic Flyway、JilinJobs Site Package 与 stable Site asset ownership。`docs/requirements/archive/information-publishing-eu30-amendment.md` 自 V4.9 起只保留 `SUPERSEDED / TRACEABILITY` 角色，不再需要与本文并行拼接才能恢复 Current Product Authority。
 
 当前网站参照基线为“吉林省高等学校毕业生就业信息网”。`www.jilinjobs.cn` 因上级统一规划跳转到 `24365.jl.smartedu.cn`；在需求分析、页面结构分析、视觉取证和内容采集过程中，两者视为同一原网站。其他域名原则上视为外部网站或外部系统。
 
