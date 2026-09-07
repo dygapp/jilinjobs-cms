@@ -94,6 +94,8 @@ Issue #77 继续承担四层产品 / 技术边界；Issue #92 承担跨 Reposito
 - Eval 只产生附加 Review Evidence，不是 Method Stage / Readiness Gate；
 - 当前 Ready Execution Unit 继续为 **NONE**。
 
+AR-02 已完成 lower-cost / GPT-6 paired review 和人工语义评分；两次 Verdict 均为 `SUPPORTED_WITH_CHANGES`，共同 findings 已修订 Phase 2A。实验当前结论为 **ADJUST**：不进入普通 Development Method / Readiness Gate，本轮不继续 AR-03 GPT-6，只有后续真实高返工架构争议仍未解决时才按需启用单一 bounded scenario。
+
 ### Phase 1 — Repository Documentation Authority Convergence
 
 #### Planned Unit 1A — Canonical Authority Audit & Reconciliation
@@ -116,9 +118,18 @@ Issue #77 继续承担四层产品 / 技术边界；Issue #92 承担跨 Reposito
 
 ### Phase 2 — Generic Historical Migration & Backend Application Boundary
 
-#### Planned Unit 2A — Backend Minimal Multi-Module Foundation
+#### Planned Unit 2A — Backend Application / Core Boundary Foundation
 
-当前候选长期形态：
+2A 需要冻结的是 application lifecycle、Spring composition、compile/runtime dependency 与 artifact responsibility，不预先把某个 Gradle 目录形态当成 Requirement。
+
+目标依赖：
+
+```text
+cms-server app ──────────→ cms-core
+content-migration app ───→ cms-core
+```
+
+当前推荐 Architecture Candidate：
 
 ```text
 backend/
@@ -129,16 +140,21 @@ backend/
     └── content-migration/
 ```
 
-原因是 `cms-server` 与 Generic `content-migration` 需要两个独立 Spring Boot executable JAR 与不同 runtime lifecycle，同时共享 CMS Domain / persistence capability。
+但两个 executable JAR 本身不逻辑必然要求三个 Gradle project。Technical Planning 必须同时比较 `shared core source set + isolated server/migration source sets + independent BootJar` 的较低复杂度替代；如果能以少量、清晰、长期可维护的 wiring 达到同等 dependency / classpath / Spring composition / resource / test isolation，则允许选择。只在同一个完整 runtime classpath 上增加多个 main / BootJar 不满足长期边界。
 
-依赖方向：
+无论最终 build shape 如何，都必须：
 
-```text
-cms-server app ──────────→ cms-core
-content-migration app ───→ cms-core
-```
+- `cms-core` 不依赖任一 app，两个 app 互不依赖；
+- `cms-server` 持有 HTTP / MVC / static-resource / server-only startup composition；
+- `content-migration` 持有 CLI / import / report / migration compatibility composition；
+- migration app 不再通过完整 `CmsApplication` 根包扫描获得 Server composition；
+- 显式冻结 MyBatis mapper / resources、configuration properties、Jackson、transaction、Generic Flyway 单一 Authority、Site Package lifecycle 与 resource path；
+- 区分数据库 transaction 与 migration 文件副作用的 failure / rollback semantics；
+- 2A 只做行为保持型 application/core boundary，当前 Party migration entry / V1/V2 compatibility 不在本单元提前泛化；
+- CMS Core 内 content / column / listing / resource / navigation 等继续使用 package-level modularity；
+- 不扩展为一领域一 Gradle module、Clean Architecture、plugin framework 或 Git Repository split。
 
-CMS Core 内 content / column / listing / resource / navigation 等继续使用 package-level modularity；不为形式统一拆成一领域一个 Gradle module，不自动扩展为 Clean Architecture 或 Git Repository split。
+详细 ownership、composition、behavior-preservation 与 verification obligations 以 `docs/project/pre-e1e3-convergence-plan.md` 为准。
 
 #### Planned Unit 2B — Generic Content Migration Application
 
@@ -150,7 +166,7 @@ Legacy Source
   → CMS Runtime
 ```
 
-JVM application 负责 canonical format validation、path / digest safety、stable migration identity / fingerprint、preflight、transaction、dependency order、Article / Resource / ListItem import、legacy mapping、idempotency、conflict、reconciliation 与 report。
+JVM application 负责 canonical format validation、path / digest safety、stable migration identity / fingerprint、preflight、transaction / file-side-effect boundary、dependency order、Article / Resource / ListItem import、legacy mapping、idempotency、conflict、reconciliation 与 report。
 
 Generic Engine 不得内建 Party / JilinJobs / EU-29 / EU-30 identity。
 
@@ -190,18 +206,19 @@ evals/architecture/pre-e1e3-convergence-review.json
 evals/run_architecture_review.py
 ```
 
-当前原则：
+Corpus 保留 AR-01 / AR-02 / AR-03，但所有场景当前都不是默认高能力任务。当前执行原则：
 
-- `AR-01` Documentation Authority Architecture；
-- `AR-02` Backend Application / Gradle Module Boundary；
-- `AR-03` Generic Historical Migration Boundary；
-- 先使用较低成本模型 dry-run；
-- 首轮高能力模型只优先运行 AR-02 / AR-03；
+- 先由普通 Planning / review 确认存在真实 unresolved architecture ambiguity；
+- 只有问题返工成本高且现有证据仍不足时，选择**单一** bounded scenario；
+- 如需要模型对照，先 lower-cost baseline，再在相同 exact Head / context / prompt 下运行高能力模型；
 - 每个 scenario 独立 Fresh / ephemeral run，只复制显式 context paths；
 - assertions / expected behavior / historical results 不进入 runtime workspace；
-- process exit 0 不等于 PASS；必须人工语义评分；
+- process exit 0 不等于 PASS，必须人工语义评分；
 - GPT-6 review 只构成 Review Evidence，不覆盖 Repository Authority / readiness-check；
-- 本轮结束后根据实际价值决定 `RETAIN / ADJUST / DROP`；只有出现跨项目可复用证据才向 `dygapp/agentic-dev` 提交 Issue / Evidence。
+- 当前实验结论：**ADJUST**；本轮不继续 AR-03 GPT-6；
+- 当前只有一个 Consumer / 一个真实 paired scenario，暂不向 `dygapp/agentic-dev` 提交正式 Method 反馈。
+
+详细 evidence lifecycle、AR-02 paired result 与后续触发条件见 `evals/README.md` 和 Issue #92。
 
 ## 已完成里程碑摘要
 
@@ -213,7 +230,7 @@ evals/run_architecture_review.py
 | 2026-09-05 | EU-31～EU-35 完成 Database baseline、List/Admin governance、Rich Text safety / authoring |
 | 2026-09-06 | EU-36 完成 Public source isolation；Issue #77 成为 E1～E3 前置四层边界入口 |
 | 2026-09-06～2026-09-07 | EU-37～EU-42 完成 Site Package contract、stable structure、Runtime composition、Schema/bootstrap separation 与 stable assets |
-| 2026-09-07 | Issue #92 建立 E1～E3 前置 Repository Authority / Migration Architecture 总体收敛路线 |
+| 2026-09-07 | Issue #92 建立 E1～E3 前置 Repository Authority / Migration Architecture 总体收敛路线，并完成首个 AR-02 paired architecture review / Planning correction |
 
 详细执行、exact-head、Integration 与 Post-Integration Evidence 继续以对应 `docs/work/**`、Issue comments、PR 与 Actions 为准。
 
