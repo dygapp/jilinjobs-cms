@@ -15,6 +15,7 @@ dependencies {
     runtimeOnly("com.mysql:mysql-connector-j")
 
     testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation("org.flywaydb:flyway-core")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
