@@ -5,6 +5,7 @@
 - `docs/requirements/cms-site-package-boundary.md`
 - `docs/specifications/cms-site-package-boundary.md`
 - GitHub Issue #77
+- GitHub Issue #92（EU-42 后的跨边界 Phase 顺序）
 - `docs/technical/cms-architecture.md`
 - `docs/technical/public-frontend-replaceability.md`
 - `data-migrations/README.md`
@@ -12,29 +13,24 @@
 ## Status
 
 - Technical Planning: **ACTIVE / ACCEPTED**
-- Completed Execution Units:
-  - `EU-37 — Site Package Contract & Provisioner Foundation`
-  - `EU-38 — Stable Site Structure Package Migration`
-  - `EU-39 — Navigation Stable Identity & Site Package Reconcile`
-  - `EU-40 — Explicit Site Package Runtime Composition Activation`
-  - `EU-41 — Site Bootstrap & Generic Schema Baseline Separation`
-  - `EU-42 — Site Asset Package Ownership & Runtime Projection`
-- Current Ready Execution Unit: **NONE**
+- Completed Execution Units: **EU-37 / EU-38 / EU-39 / EU-40 / EU-41 / EU-42**
+- Current Phase 1 execution: **EU-43 — Current Authority Semantic Reconciliation**
 - Issue #77: **OPEN**
 
 ## Decision
 
-在 Issue #60 / E1～E3 前完成 **Generic CMS Core + JilinJobs Site Package + Historical Migration + Replaceable Public Renderer** 四层长期责任边界。
+在 Issue #60 / E1～E3 前保持 **Generic CMS Core + JilinJobs Site Package + Historical Migration + Replaceable Public Renderer** 四层长期责任边界。
 
-EU-41 对 EU-40 后的 Operational Seed / V2 candidate 作出关键收敛：
+EU-41 / EU-42 已把当前 accepted runtime foundation 收敛为：
 
 - Backend Flyway 是 **Generic CMS Schema-only migration lineage**；
 - stable JilinJobs site structure 由 `sites/jilinjobs/structure/**` 长期 reconcile；
-- Fresh JilinJobs 初始运营默认数据由 `sites/jilinjobs/bootstrap/**` 一次性建立，不是 migration；
+- Fresh JilinJobs 初始运营默认数据由 `sites/jilinjobs/bootstrap/**` 一次性建立；
+- stable JilinJobs assets 的唯一版本化 source owner 为 `sites/jilinjobs/assets/**`，Runtime target 保持 `/static/**`；
 - historical/canonical data 继续由 `data-migrations/**` 管理；
 - Site Package 与 CMS 通过 Schema / Provisioning capability contract 组合，不共享 Flyway migration order。
 
-EU-41 已完成实现、exact-head Verification、Integration 与 Post-Integration Verification，该 Decision 已成为当前 accepted technical baseline。EU-42 进一步把 stable Site asset source ownership 与 Runtime composition 收敛进同一 Site Package boundary，并已完成 exact-head / Integration / Post-Integration Verification。
+EU-37～EU-42 已完成对应实现与 Current Evidence。后续 application/migration boundary 与 final compatibility re-entry 不再以旧 Slice D 直接推进，而按 Issue #92 Phase 1 → Phase 2 → Phase 3 顺序执行。
 
 ## 1. Generic CMS Schema lineage
 
@@ -50,7 +46,7 @@ backend/src/main/resources/db/migration/
 
 V1 保持 current Generic CMS schema baseline。
 
-新的 Generic V2 只包含：
+Generic V2 只包含：
 
 - nullable `cms_navigation.code`；
 - `uk_cms_navigation_code`；
@@ -66,21 +62,21 @@ V1 保持 current Generic CMS schema baseline。
 
 EU-41 集成后，Backend 下一次 Schema evolution 从 V3 继续 append-only。
 
-### 1.2 Controlled baseline replacement
+### 1.2 Controlled baseline replacement / historical context
 
-EU-31 曾建立 V1 schema + V2 site data baseline，并在 EU-39 增加旧 V3 navigation identity。EU-41 因四层 boundary 收敛执行一次受控 development baseline replacement：
+EU-31 曾建立 development V1 schema + V2 site data baseline，EU-39 曾增加旧 V3 navigation identity。EU-41 因四层 boundary 收敛执行一次受控 development baseline replacement：
 
-- 删除旧 site-data V2；
-- 删除旧 navigation V3；
+- 退休旧 site-data V2；
+- 退休旧 navigation V3；
 - 使用新的 Generic V2 表达仍需要的通用 Schema capability；
 - pre-EU-41 development DB recreate；
 - 不提供旧 development history 的 in-place repair。
 
-该选择符合 EU-31 Requirement 的既有 upgrade boundary：当前没有 production / persistent database in-place upgrade requirement，development database 允许重建。
+该选择符合 EU-31 已确认 boundary：当前没有 production / persistent database in-place upgrade requirement，development database 允许重建。历史 V2/V3 只承担 historical implementation / compatibility evidence，不再参与 current runtime responsibility。
 
 ## 2. Stable Site Package structure
 
-`sites/jilinjobs/structure/**` 继续是长期 JilinJobs Site structure Authority。
+`sites/jilinjobs/structure/**` 是长期 JilinJobs Site structure Authority。
 
 当前 98 个 stable objects：
 
@@ -91,7 +87,7 @@ EU-31 曾建立 V1 schema + V2 site data baseline，并在 EU-39 增加旧 V3 na
 - CmsList definitions；
 - AdvertisementSlot。
 
-Provisioner 继续：
+Provisioner：
 
 - 按 stable identity create / reconcile；
 - 新建 package-owned row 为 `preset=true`；
@@ -99,9 +95,7 @@ Provisioner 继续：
 - second apply idempotent；
 - transactionally rollback failed apply。
 
-EU-41 Fresh path 不再需要 Legacy V2 adoption。Generic Flyway 完成后数据库中没有 JilinJobs rows，Site Package first apply 直接创建全部 98 个 stable objects，包括 40 条 coded NavigationItem。
-
-EU-39 Legacy adoption 规则保留为历史实现证据，但不再是 EU-41 后 active Fresh baseline lifecycle。
+Generic Flyway 完成后数据库中没有 JilinJobs rows，Site Package first apply 直接创建全部 98 个 stable objects，包括 40 条 coded NavigationItem。EU-39 Legacy adoption 规则保留为历史实现证据，不再是 current Fresh baseline lifecycle。
 
 ## 3. One-time Site bootstrap
 
@@ -113,23 +107,21 @@ sites/jilinjobs/bootstrap/
 └─ initial-data.sql
 ```
 
-`manifest.json` 当前声明：
+`manifest.json` 声明独立 `bootstrapId`、SQL artifact path 与 SHA-256 digest。
 
-- `bootstrapId = initial-operational-data`；
-- current SQL artifact path；
-- SHA-256 digest。
-
-`initial-data.sql` 精确创建原 V2 剩余的七条 operational defaults：
+`initial-data.sql` 精确创建原旧 V2 剩余的七条 operational defaults：
 
 - HOME_CAROUSEL：1；
 - SITE_RELATED：5；
 - HOME_RECRUITMENT_PROMO Advertisement：1。
 
+这里的“原旧 V2”仅说明 provenance；Current ownership 已属于 one-time Site bootstrap，不得据此恢复 Backend Flyway responsibility。
+
 ### 3.2 Bootstrap runtime contract
 
 `SitePackageBootstrapper`：
 
-1. 先复用 `SitePackageLoader` 验证 package identity / stable package integrity；
+1. 复用 `SitePackageLoader` 验证 package identity / stable package integrity；
 2. 解析 `bootstrap/manifest.json`；
 3. 检查 bootstrap id、bounded path、SHA-256；
 4. 查询 `(package_id, bootstrap_id)` completion state；
@@ -137,9 +129,7 @@ sites/jilinjobs/bootstrap/
 6. state 已存在时返回 `ALREADY_APPLIED`，不再次执行 SQL；
 7. SQL 或 state insert 失败时 rollback。
 
-完成状态记录 originally applied digest。Current bootstrap artifact 以后可以随 CMS Schema 更新；Existing Site 的 originally applied digest 可以与 current digest 不同，但 **同一 bootstrap identity 不重新执行**。
-
-该语义确保 current-schema bootstrap 能演进，又不会把 operator data 变成 reconciled package data。
+完成状态记录 originally applied digest。Current bootstrap artifact 可以随兼容 CMS Schema 更新；Existing Site 的 originally applied digest 可以与 current digest 不同，但 **同一 bootstrap identity 不重新执行**。
 
 ### 3.3 Runtime activation
 
@@ -149,7 +139,7 @@ sites/jilinjobs/bootstrap/
 CMS_SITE_PACKAGE_ROOT=/site-package
 ```
 
-只执行 stable structure reconcile。
+执行 stable structure reconcile 与 stable asset projection，不执行 one-time bootstrap。
 
 Fresh-install orchestration：
 
@@ -158,41 +148,34 @@ CMS_SITE_PACKAGE_ROOT=/site-package
 CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true
 ```
 
-Spring bean ordering：
+Spring lifecycle 的必要顺序：
 
 ```text
-Flyway initializer
-→ sitePackageRuntimeComposition
-→ sitePackageBootstrapRuntime
+Generic Flyway initializer
+→ stable Site Package composition
+→ one-time bootstrap (when explicitly enabled)
+→ Runtime
 ```
 
-bootstrap bean 依赖 `sitePackageRuntimeComposition`，因此 list definitions / AdvertisementSlot 等 stable dependencies 必须先存在。
-
-CLI `bootstrapSitePackage` 同样先 provision stable structure，再执行 bootstrap。
+bootstrap 必须发生在 stable list definitions / AdvertisementSlot 等依赖已经 provision 后。CLI `bootstrapSitePackage` 同样先 provision stable structure，再执行 bootstrap。
 
 ## 4. Operator ownership / no-resurrection
 
 七条 bootstrap rows 初始化后立即变成普通 Runtime Data：
 
-- CmsListItem 无 Site stable identity；
-- Advertisement 无 Site stable identity；
+- CmsListItem / Advertisement 无 Site stable identity；
 - 不设 `preset` ownership；
 - SitePackageProvisioner 不 reconcile；
 - ordinary restart 不执行 bootstrap；
 - repeated explicit bootstrap 由 completion state 拦截。
 
-因此：
+因此 operator edit/delete 必须保留；package structure upgrade 不覆盖；bootstrap artifact 后续更新也不使 Existing Site 重放同一 bootstrap identity。
 
-- operator edit → 保留；
-- operator delete → 保留删除；
-- package structure upgrade → 不覆盖；
-- bootstrap artifact 为后续 Fresh Schema 更新 → Existing Site 不重放。
-
-不需要为这七条 defaults 建立 Historical Migration provenance / fingerprint / adoption model。
+这些 defaults 不需要 Historical Migration provenance / fingerprint / adoption model。
 
 ## 5. Historical Canonical Migration boundary
 
-Party / Main Historical Migration 继续保持：
+Party / Main Historical Migration 当前组合为：
 
 ```text
 Generic Schema
@@ -200,43 +183,41 @@ Generic Schema
 → canonical importer
 ```
 
-Canonical importer 只需要 stable target identities，不需要执行 JilinJobs Main operational bootstrap。
+Canonical importer 只依赖 stable target identities，不接管 JilinJobs Main operational bootstrap，也不接管 stable Site asset manifest。
 
-EU-41 已重新证明：
+Current accepted compatibility evidence 已证明：
 
 - Party Fresh canonical import；
 - 183 article current Runtime Dataset；
 - Party carousel 4 items；
 - import idempotency；
-- EU-29 accepted → EU-30 candidate upgrade；
-- provenance / fingerprints unchanged。
+- EU-29 accepted → EU-30 current compatibility；
+- provenance / fingerprints / resource integrity 保持。
 
-Canonical / Upgrade Gradle tasks 继续通过 Repository-owned `CMS_SITE_PACKAGE_ROOT` 显式 provision stable structure；不设置 bootstrap-on-start。
+Phase 2 将进一步收敛 Backend Application / Generic Content Migration Application boundary；在该 Phase 完成前，不从当前 Party-specific Gradle task 反向定义长期 Generic architecture。
 
 ## 6. Repository Runtime / CI / Review composition
 
 ### 6.1 Integrated CI Fresh Runtime
 
-CI Backend container：
+Current Fresh JilinJobs verification lifecycle：
 
 ```text
 Generic Flyway
 → mounted /site-package stable reconcile
-→ bootstrap-on-start=true
-→ Public/Admin Browser verification
+→ bootstrap-on-start=true (Fresh Site scenarios)
+→ stable asset projection from the same Site Package root
+→ optional canonical import
+→ Public/Admin/Browser verification
 ```
 
-这样 Fresh CI 仍拥有 accepted homepage defaults，但 Flyway history 中不再有 JilinJobs data。
+Flyway history 中不得出现 JilinJobs instance data。
 
 ### 6.2 Review Environment
 
-Review Environment 的两个 Fresh database startup 均必须：
+Fresh Review startup / reset 必须从同一版本化 Site Package root 取得 structure、bootstrap 与 stable assets。Review reset 后如需要 Party canonical content，再执行独立 canonical import。
 
-- read-only mount `sites/jilinjobs` as `/site-package`；
-- set `CMS_SITE_PACKAGE_ROOT=/site-package`；
-- set `CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true`。
-
-Review reset 后再执行 Party canonical import，因此 Review lifecycle 与正式 Fresh lifecycle 一致。
+不允许测试代码自建 Site stable structure，也不允许复制第二份 static baseline 绕过 asset manifest/projection。
 
 ### 6.3 Generic Core proof
 
@@ -247,59 +228,48 @@ Review reset 后再执行 Party canonical import，因此 Review lifecycle 与�
 - CmsList / AdvertisementSlot site instances = 0；
 - CmsListItem / Advertisement operational defaults = 0。
 
-这是 EU-41 最关键的 CMS/Site physical data ownership evidence。
-
 ## 7. Verification strategy
 
-### Targeted MySQL
-
-`verifyStableSiteStructure`：
+`verifyStableSiteStructure` 至少覆盖：
 
 - Generic Fresh Schema has no Site rows；
 - Site first apply creates 98；
-- second apply 98 unchanged；
+- second apply unchanged；
 - operator navigation preserved；
 - stable-code mutation restored；
 - operational rows remain 0。
 
-`verifyRuntimeSitePackageComposition`：
+`verifyRuntimeSitePackageComposition` 至少覆盖：
 
 - Generic Flyway creates no Site data；
-- root-only Runtime creates/reconciles 98 stable objects；
+- root-only Runtime creates/reconciles stable objects；
 - root-only Runtime never bootstraps operational data；
 - second Runtime idempotent；
 - no-root Generic context enables neither Site composition nor bootstrap。
 
-`verifySiteBootstrapBaselineSeparation`：
+`verifySiteBootstrapBaselineSeparation` 至少覆盖：
 
 - Flyway history contains only Generic V1/V2；
 - Fresh bootstrap creates 6 ListItems + 1 Advertisement；
 - repeated bootstrap = ALREADY_APPLIED；
-- delete one ListItem / edit Advertisement；
-- ordinary Runtime preserves modifications；
+- operator delete/edit 后 ordinary Runtime preserves modifications；
 - explicit repeated bootstrap also preserves modifications；
 - state row remains one。
 
-### Final execution evidence
+EU-42 asset verification 至少覆盖：
 
-PR #88 final Head `a958c39a37892cf0fbcb41b8c883b2299d84f561`：
+- `sites/jilinjobs/assets/**` manifest package identity、bounded source/target 与 SHA-256；
+- empty Runtime Static Root create-if-missing projection；
+- existing regular target no overwrite；
+- stable target protected delete / explicit replace；
+- `/static/uploads/**` exclusion；
+- CI / Review 由同一 Site Package root composition。
 
-- Site Package Verification #32 — PASS；
-- Repository CI #783 — PASS；
-- Canonical Migration Verification #165 — PASS；
-- EU-30 Migration Upgrade Verification #115 — PASS；
-- 人工评审环境 #696 — PASS。
-
-PR #88 已合并为 `main@6c88eea1762e8edf465833631cadff1e4c751d36`；Post-Integration：
-
-- Site Package Verification #33 — PASS；
-- CI #784 — PASS，包括 Backend / Public / Admin / Integrated Browser。
-
-上述 evidence 关闭了 EU-41 的 Generic Schema-only、Fresh bootstrap、no-resurrection、Canonical / Upgrade compatibility 与 Runtime behavior obligations。
+Exact-head / Integration / Post-Integration evidence 由各 EU work artifact、PR 和 GitHub Actions 保存；历史 PASS 不自动替代未来 Head 的 Current Evidence。
 
 ## 8. Static asset boundary
 
-EU-42 accepted technical boundary：
+Current technical boundary：
 
 ```text
 sites/jilinjobs/assets/**
@@ -316,52 +286,37 @@ Public Renderer / Admin StaticResource
 关键策略：
 
 - stable source bytes 只存在于 `sites/jilinjobs/assets/**`；
+- 原 `site-baseline/static/**` 只属于 historical source path，不再是 Current owner；
 - projector 不覆盖 existing regular target，保留 operator explicit replace；
 - stable targets 进入 StaticResource protected-path，ordinary delete fail-fast；
 - `/static/uploads/**` 明确排除，继续作为 mutable Runtime Store；
 - Historical canonical assets 不进入 stable Site asset manifest；
-- CI / Review Environment 不复制第二份 baseline，而是从空 Runtime Static Root 观察 package projection；
+- CI / Review Environment 不复制第二份 baseline，而是从 empty Runtime Static Root 观察 package projection；
 - 当前没有 force-upgrade semantics；如未来出现受控 asset upgrade requirement，必须重新规划 overwrite / conflict / rollback contract。
 
 ## 9. Rollback / compatibility boundary
 
-EU-41 集成后的 accepted boundary：
+EU-41 以后 accepted boundary：
 
 - pre-EU-41 development DB recreate；
-- current Fresh install 只使用新 Generic V1/V2 + Site Package；
+- current Fresh install 只使用 Generic V1/V2 + Site Package；
 - Repository 不再支持旧 development V1/V2/V3 active lineage；
 - 后续 Generic Backend migration 从 V3 恢复 append-only；
 - Existing Runtime operator data 不通过 bootstrap replay 升级。
 
-## 10. Execution state
+## 10. Current execution / remaining sequence
 
-### EU-42 closure
+EU-37～EU-42 已完成。当前 Issue #92 Phase 1 正在执行 **EU-43 — Current Authority Semantic Reconciliation**；其 scope 仅为 documentation currentness，不改变上述 Runtime 技术基线。
 
-- Readiness evidence：Issue #77 `#issuecomment-5562811697`；
-- Work artifact：`docs/work/eu42-site-asset-runtime-projection.md`；
-- Implementation PR：#90；
-- Final Head：`37e03c3a5d7804804dcb3738a429e57e02b99e31`；
-- Exact-head：Site Package #34 / CI #787 / Review #698 — **PASS**；
-- Integration：`main@2c4af15df64342850391bbfe67de99b6404b3280`；
-- Post-Integration：Site Package #35 / CI #788 — **PASS**；
-- unresolved review threads：**NONE**；
-- EU-42：**COMPLETED**；
-- Current Ready Execution Unit：**NONE**。
+EU-43 完成后，后继工作仍需独立规划，顺序为：
 
-## 11. Remaining after EU-42
+```text
+Phase 1  remaining documentation convergence
+→ Phase 2  Generic Historical Migration & Backend Application Boundary
+→ Phase 3  Canonical Migration Compatibility & E1～E3 Re-entry Gate
+→ Issue #60 / E1～E3
+```
 
-Issue #77 继续保留：
+旧 “Slice D — direct next step” 已被 Issue #92 supersede。Repository Split Readiness Assessment 继续保持四层 boundary 完整闭环后的独立 Planning Candidate。
 
-1. Slice D — Canonical Migration Compatibility & E1～E3 re-entry；
-2. 四层 boundary 完成后的 Repository Split Readiness Assessment。
-
-这些均需重新经过 `slice-work → readiness-check`，不自动继承 EU-42 identifier / execute authority。
-
-## Slice C：稳定资源 Ownership 与 Runtime Projection（EU-42，已完成）
-
-- JilinJobs 稳定静态资源的唯一版本化 owner 为 `sites/jilinjobs/assets/**`；原 `site-baseline/static/**` ownership 不再存在。
-- `sites/jilinjobs/assets/manifest.json` 声明 `packageId`、asset schemaVersion，以及每个稳定资源的 package-root `source`、公开 `/static/**` `target` 与 SHA-256。
-- Backend 通过 site-neutral `SitePackageAssetManifestLoader` 校验 identity、路径边界、target 唯一性、`/static/uploads/**` 排除和源文件 digest；失败时拒绝启动对应 Site Package composition。
-- `SitePackageAssetProjector` 仅对缺失 target 执行 create-if-missing；已存在普通文件永不由启动过程覆盖。显式后台 replace 因此可跨重启保留；未来 force-upgrade 不属于本 Slice。
-- Site Package target 自动加入 `StaticResourceService` protected-path 集合：普通删除拒绝，显式 replace 保持允许；`/static/uploads/**` 继续属于可变 Runtime Store。
-- CI / Review Environment 以空 `CMS_STATIC_ROOT` 启动，并由同一个 `CMS_SITE_PACKAGE_ROOT` 同时提供 structure、bootstrap 与 stable assets；不再执行独立静态 baseline copy。
+任何后继 Unit 都必须重新经过 `slice-work → readiness-check`；EU-42 / EU-43 identifier 或历史 PASS 不授予后继 Execute Authority。
