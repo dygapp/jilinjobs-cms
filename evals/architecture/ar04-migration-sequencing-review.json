@@ -1,0 +1,35 @@
+{
+  "corpus": "ar04-migration-sequencing-blind-review",
+  "version": 1,
+  "purpose": "Retrospective blind discovery test for migration-extraction sequencing. The scenario does not grant Repository Authority, Readiness, or Execute permission.",
+  "scenarios": [
+    {
+      "id": "AR-04",
+      "title": "Content Migration Extraction Sequencing Blind Review",
+      "default_high_capability": false,
+      "context_paths": [
+        "evals/fixtures/architecture/ar04/candidate-plan.md",
+        "backend/settings.gradle.kts",
+        "backend/build.gradle.kts",
+        "backend/src/main/kotlin/com/jilinjobs/cms/CmsApplication.kt",
+        "backend/src/main/kotlin/com/jilinjobs/cms/migration"
+      ],
+      "prompt": "你正在做一次严格受限的 Backend / Content Migration architecture sequencing review。只使用当前工作目录中已经提供的文件；不要联网，不要读取当前工作目录之外的路径，不要寻找评分 assertions、provenance、当前项目规划或历史评审结果，不要修改文件，也不要重新设计整个 CMS。评审 `candidate-plan.md` 中提出的两阶段抽离方案是否能够以合理返工成本满足其已声明的 runtime lifecycle、Spring application composition、packaging artifact 与 ownership 目标。不要因为方案已经被写成两阶段就默认其阶段顺序正确，也不要因为存在 source set 或 multi-project 两种实现就预设其中某一种必然正确。请从实际 Gradle、Spring Boot、component scanning、service/persistence reuse、Flyway/MyBatis、transaction/resource side effects、classpath/artifact containment 与 migration lifecycle 的角度寻找隐藏耦合、顺序依赖和未来返工风险。如果方案可行，说明成立所需的具体条件；如果阶段顺序本身存在问题，明确指出问题来自哪里以及应该先冻结什么边界。不要默认扩展到 Git repository split、全面 Clean Architecture 或一领域一 Gradle module。最后严格使用以下结构输出：\nVerdict: SUPPORTED | SUPPORTED_WITH_CHANGES | BLOCKING_CONCERN\nBlocking Findings:\n- ...\nNon-blocking Risks:\n- ...\nRequired Plan Changes:\n- ...\nRejected Alternatives:\n- ...\nConfidence: HIGH | MEDIUM | LOW",
+      "assertions": [
+        "必须独立判断 Stage 1 是否真的可以在不先冻结 CMS application/core composition boundary 的情况下安全实施，而不是只复述候选方案",
+        "若识别核心缺口，应指出 contentMigration -> main 会把 migration tooling 绑定到同时承载 server application composition 的 main classpath，而不只是说未来可以模块化",
+        "必须检查两个独立 Spring Boot executable JAR 与单 Gradle project/source-set 方案之间的真实关系：两个 JAR 不逻辑必然要求 multi-project，但独立 composition/classpath boundary 必须被证明",
+        "必须检查 @SpringBootApplication 默认扫描、Bean/Mapper/configuration wiring 是否会使 migration app 意外依赖或加载 server-only composition",
+        "必须检查 Flyway、datasource、MyBatis、transaction 与 resource/file side effects 的 ownership/lifecycle，而不能把数据库事务默认等同于所有资源副作用原子性",
+        "必须判断先做 tools/source-set 再以后拆 apps/modules 是否可能造成重复搬迁或把错误依赖固化成公共 API",
+        "如果提出修正，不要求必须选择 multi-project；但必须先冻结 cms-server、content-migration 与共享 CMS capability 的依赖/composition 边界，再选择 Gradle 实现",
+        "不得把 Git repository split、全面 Clean Architecture 或 content/listing/resource 各拆 Gradle module 作为默认修复方案"
+      ],
+      "discovery_grading": {
+        "DETECTED": "明确质疑两阶段顺序本身，并指出在 Stage 1 前必须先冻结独立 application/composition/core dependency boundary；是否最终选择 multi-project 不是判定条件。",
+        "PARTIALLY_DETECTED": "识别 packaging/scan/classpath 等局部风险或建议未来模块化，但仍接受 Stage 1 先按 contentMigration -> main 实施，未指出 sequencing flaw。",
+        "MISSED": "基本接受两阶段方案，只给出实施细节/测试建议，未发现 Stage 1 会把 migration tool 绑定到 server main composition 的结构性风险。"
+      }
+    }
+  ]
+}

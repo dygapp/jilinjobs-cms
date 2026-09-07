@@ -2,6 +2,9 @@
 .vscode/
 *.log
 
+__pycache__/
+*.py[cod]
+
 backend/.gradle/
 backend/build/
 
@@ -12,5 +15,10 @@ frontend/**/test-results/
 
 evals/results/
 evals/workspace/
+evals/artifacts/
+
+# Legacy/local eval evidence archives created before evals/artifacts/ was standardized.
+/*eval-results.tar.gz
+/*paired-results.tar.gz
 
 uploads/
