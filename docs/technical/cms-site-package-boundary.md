@@ -18,6 +18,7 @@
   - `EU-39 — Navigation Stable Identity & Site Package Reconcile`
   - `EU-40 — Explicit Site Package Runtime Composition Activation`
   - `EU-41 — Site Bootstrap & Generic Schema Baseline Separation`
+  - `EU-42 — Site Asset Package Ownership & Runtime Projection`
 - Current Ready Execution Unit: **NONE**
 - Issue #77: **OPEN**
 
@@ -33,7 +34,7 @@ EU-41 对 EU-40 后的 Operational Seed / V2 candidate 作出关键收敛：
 - historical/canonical data 继续由 `data-migrations/**` 管理；
 - Site Package 与 CMS 通过 Schema / Provisioning capability contract 组合，不共享 Flyway migration order。
 
-EU-41 已完成实现、exact-head Verification、Integration 与 Post-Integration Verification，该 Decision 已成为当前 accepted technical baseline。
+EU-41 已完成实现、exact-head Verification、Integration 与 Post-Integration Verification，该 Decision 已成为当前 accepted technical baseline。EU-42 进一步把 stable Site asset source ownership 与 Runtime composition 收敛进同一 Site Package boundary，并已完成 exact-head / Integration / Post-Integration Verification。
 
 ## 1. Generic CMS Schema lineage
 
@@ -298,11 +299,29 @@ PR #88 已合并为 `main@6c88eea1762e8edf465833631cadff1e4c751d36`；Post-Integ
 
 ## 8. Static asset boundary
 
-EU-41 不处理 Slice C。
+EU-42 accepted technical boundary：
 
-`initial-data.sql` 仍引用 accepted `/static/home/carousel-01.jpg` 与 `/static/home/recruitment-campaign.png` URL。URL contract 可以跨 lifecycle 使用，但 binary asset 的 Site Package manifest/runtime ownership 仍由 Slice C 单独收敛。
+```text
+sites/jilinjobs/assets/**
+  ↓ assets/manifest.json: packageId + source + /static target + SHA-256
+SitePackageAssetManifestLoader
+  ↓ bounded / integrity validation
+SitePackageAssetProjector
+  ↓ create-if-missing only
+configured CMS_STATIC_ROOT
+  ↓ Backend /static/**
+Public Renderer / Admin StaticResource
+```
 
-不得因为 bootstrap 引用了 `/static/**` 就让 operational bootstrap 取得 asset binary ownership。
+关键策略：
+
+- stable source bytes 只存在于 `sites/jilinjobs/assets/**`；
+- projector 不覆盖 existing regular target，保留 operator explicit replace；
+- stable targets 进入 StaticResource protected-path，ordinary delete fail-fast；
+- `/static/uploads/**` 明确排除，继续作为 mutable Runtime Store；
+- Historical canonical assets 不进入 stable Site asset manifest；
+- CI / Review Environment 不复制第二份 baseline，而是从空 Runtime Static Root 观察 package projection；
+- 当前没有 force-upgrade semantics；如未来出现受控 asset upgrade requirement，必须重新规划 overwrite / conflict / rollback contract。
 
 ## 9. Rollback / compatibility boundary
 
@@ -316,26 +335,29 @@ EU-41 集成后的 accepted boundary：
 
 ## 10. Execution state
 
-- Ready evidence：Issue #77 `#issuecomment-5560955644`；
-- Work artifact：`docs/work/eu41-site-bootstrap-generic-schema-baseline-separation.md`；
-- Implementation PR：#88；
-- Final Head：`a958c39a37892cf0fbcb41b8c883b2299d84f561`；
-- Integration：`main@6c88eea1762e8edf465833631cadff1e4c751d36`；
-- Exact-head / Integration / Post-Integration evidence：**PASS**；
-- EU-41：**COMPLETED**；
+### EU-42 closure
+
+- Readiness evidence：Issue #77 `#issuecomment-5562811697`；
+- Work artifact：`docs/work/eu42-site-asset-runtime-projection.md`；
+- Implementation PR：#90；
+- Final Head：`37e03c3a5d7804804dcb3738a429e57e02b99e31`；
+- Exact-head：Site Package #34 / CI #787 / Review #698 — **PASS**；
+- Integration：`main@2c4af15df64342850391bbfe67de99b6404b3280`；
+- Post-Integration：Site Package #35 / CI #788 — **PASS**；
+- unresolved review threads：**NONE**；
+- EU-42：**COMPLETED**；
 - Current Ready Execution Unit：**NONE**。
 
-## 11. Remaining after EU-41
+## 11. Remaining after EU-42
 
 Issue #77 继续保留：
 
-1. Slice C — Site Asset Ownership & Runtime Composition；
-2. Slice D — Canonical Migration Compatibility & E1～E3 re-entry；
-3. 四层 boundary 完成后的 Repository Split Readiness Assessment。
+1. Slice D — Canonical Migration Compatibility & E1～E3 re-entry；
+2. 四层 boundary 完成后的 Repository Split Readiness Assessment。
 
-这些均需重新经过 `slice-work → readiness-check`，不自动继承 EU-41 identifier / execute authority。
+这些均需重新经过 `slice-work → readiness-check`，不自动继承 EU-42 identifier / execute authority。
 
-## Slice C：稳定资源 Ownership 与 Runtime Projection（EU-42）
+## Slice C：稳定资源 Ownership 与 Runtime Projection（EU-42，已完成）
 
 - JilinJobs 稳定静态资源的唯一版本化 owner 为 `sites/jilinjobs/assets/**`；原 `site-baseline/static/**` ownership 不再存在。
 - `sites/jilinjobs/assets/manifest.json` 声明 `packageId`、asset schemaVersion，以及每个稳定资源的 package-root `source`、公开 `/static/**` `target` 与 SHA-256。
