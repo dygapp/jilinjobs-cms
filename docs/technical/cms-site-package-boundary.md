@@ -14,7 +14,9 @@
 
 - Technical Planning: **ACTIVE / ACCEPTED**
 - Completed Execution Units: **EU-37 / EU-38 / EU-39 / EU-40 / EU-41 / EU-42**
-- Current Phase 1 execution: **EU-43 — Current Authority Semantic Reconciliation**
+- Repository Documentation Authority Convergence: **PHASE 1 COMPLETED（EU-43 / EU-44 / EU-45）**
+- Current Ready Execution Unit: **NONE**
+- Next cross-boundary Gate: **Issue #92 Phase 2 Planning Candidate**
 - Issue #77: **OPEN**
 
 ## Decision
@@ -30,7 +32,7 @@ EU-41 / EU-42 已把当前 accepted runtime foundation 收敛为：
 - historical/canonical data 继续由 `data-migrations/**` 管理；
 - Site Package 与 CMS 通过 Schema / Provisioning capability contract 组合，不共享 Flyway migration order。
 
-EU-37～EU-42 已完成对应实现与 Current Evidence。后续 application/migration boundary 与 final compatibility re-entry 不再以旧 Slice D 直接推进，而按 Issue #92 Phase 1 → Phase 2 → Phase 3 顺序执行。
+EU-37～EU-42 已完成对应实现与 Current Evidence；Issue #92 Phase 1 也已完成 Repository Documentation Authority Convergence。后续 application/migration boundary 与 final compatibility re-entry 不再以旧 Slice D 直接推进，而从 Phase 2 Planning Candidate 重新完成 Planning / Readiness。
 
 ## 1. Generic CMS Schema lineage
 
@@ -306,17 +308,16 @@ EU-41 以后 accepted boundary：
 
 ## 10. Current execution / remaining sequence
 
-EU-37～EU-42 已完成。当前 Issue #92 Phase 1 正在执行 **EU-43 — Current Authority Semantic Reconciliation**；其 scope 仅为 documentation currentness，不改变上述 Runtime 技术基线。
+EU-37～EU-42 与 Issue #92 Phase 1（EU-43 / EU-44 / EU-45）均已完成。当前 Ready Execution Unit：**NONE**。
 
-EU-43 完成后，后继工作仍需独立规划，顺序为：
+后继工作仍需独立规划，顺序为：
 
 ```text
-Phase 1  remaining documentation convergence
-→ Phase 2  Generic Historical Migration & Backend Application Boundary
+Phase 2  Generic Historical Migration & Backend Application Boundary（Planning Candidate）
 → Phase 3  Canonical Migration Compatibility & E1～E3 Re-entry Gate
 → Issue #60 / E1～E3
 ```
 
 旧 “Slice D — direct next step” 已被 Issue #92 supersede。Repository Split Readiness Assessment 继续保持四层 boundary 完整闭环后的独立 Planning Candidate。
 
-任何后继 Unit 都必须重新经过 `slice-work → readiness-check`；EU-42 / EU-43 identifier 或历史 PASS 不授予后继 Execute Authority。
+任何后继 Unit 都必须重新经过 dependency closure、必要 Planning、`slice-work → readiness-check`；EU-42～EU-45 identifier 或历史 PASS 不授予后继 Execute Authority。

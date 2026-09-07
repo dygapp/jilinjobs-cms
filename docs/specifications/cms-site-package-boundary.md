@@ -15,10 +15,12 @@
 - Specification: **ACCEPTED / ACTIVE**
 - Technical Planning: **ACTIVE**
 - Completed Execution Units: **EU-37 / EU-38 / EU-39 / EU-40 / EU-41 / EU-42**
-- Current Phase 1 execution: **EU-43 — Current Authority Semantic Reconciliation**
+- Repository Documentation Authority Convergence: **PHASE 1 COMPLETED（EU-43 / EU-44 / EU-45）**
+- Current Ready Execution Unit: **NONE**
+- Next cross-boundary Gate: **Issue #92 Phase 2 Planning Candidate**
 - Issue #77: **OPEN**
 
-EU-43 只修复 Current Authority currentness，不改变本文已接受的四层产品/技术合同；后续 migration/application boundary 与 compatibility re-entry 由 Issue #92 Phase 2 / Phase 3 继续收敛。
+Phase 1 只修复并重组 Repository Documentation Authority，不改变本文已接受的四层产品 / 技术合同。后续 migration/application boundary 与 compatibility re-entry 仍由 Issue #92 Phase 2 / Phase 3 独立规划；EU-42 / EU-43 / EU-44 / EU-45 的历史 Execute Authority 均不能延伸到后继阶段。
 
 ## 1. Four-layer boundary
 
@@ -320,23 +322,23 @@ EU-42 acceptance 进一步证明 stable Site assets 从 `sites/jilinjobs/assets/
 3. EU-39 Navigation stable identity / transition adoption；
 4. EU-40 explicit Runtime/importer Site Package composition；
 5. EU-41 Backend Schema-only Flyway lineage + one-time current-schema Site bootstrap + operational default no-takeover/no-resurrection；
-6. EU-42 stable Site asset package ownership、integrity manifest、Runtime projection、StaticResource protection 与 CI / Review empty-root composition。
+6. EU-42 stable Site asset package ownership、integrity manifest、Runtime projection、StaticResource protection 与 CI / Review empty-root composition；
+7. Issue #92 Phase 1 Repository Documentation Authority Convergence（EU-43 / EU-44 / EU-45）。
 
 ### 当前 Phase
 
-Issue #92 Phase 1 Documentation Authority Convergence 正在执行；当前具体 Ready/Execute Unit 为 EU-43 documentation-only semantic reconciliation。EU-43 不改变四层 runtime contract，也不授权 Phase 2 / Phase 3。
+Current Ready Execution Unit：**NONE**。Issue #92 下一自然 Gate 是 **Phase 2 — Generic Historical Migration & Backend Application Boundary 的 Planning Candidate**。Phase 2 尚未形成 Candidate Execution Unit，也没有 Readiness PASS 或 Execute Authority。
 
 ### 剩余 Planning / Re-entry 顺序
 
 旧 “Slice D — direct Canonical Compatibility” 不再是 EU-42 后的直接下一步。Current Authority 顺序为：
 
-1. Phase 1 Documentation Authority Convergence；
-2. Phase 2 Generic Historical Migration & Backend Application Boundary；
-3. Phase 3 Canonical Migration Compatibility & E1～E3 Re-entry Gate；
-4. Issue #60 / E1～E3；
-5. 四层 boundary 完成后独立进行 Repository Split Readiness Assessment。
+1. Phase 2 Generic Historical Migration & Backend Application Boundary；
+2. Phase 3 Canonical Migration Compatibility & E1～E3 Re-entry Gate；
+3. Issue #60 / E1～E3；
+4. 四层 boundary 完成后独立进行 Repository Split Readiness Assessment。
 
-这些后续项仍必须分别经过 Consumer-local `slice-work → readiness-check`，不得自动继承 EU-42/EU-43 Execute Authority。
+这些后续项仍必须分别经过 Consumer-local Planning / `slice-work → readiness-check`；不得自动继承 EU-42 / EU-43 / EU-44 / EU-45 Execute Authority。
 
 ## Deferred decisions
 

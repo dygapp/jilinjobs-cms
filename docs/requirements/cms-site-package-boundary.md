@@ -6,8 +6,9 @@
 - Stage: Requirement Authority — ACTIVE / ACCEPTED BOUNDARY
 - Completed implementation: EU-37 / EU-38 / EU-39 / EU-40 / EU-41 / EU-42
 - Current cross-boundary planning authority: GitHub Issue #92
-- Current execution: **EU-43 — Current Authority Semantic Reconciliation**（Phase 1A documentation-only）
-- Remaining scope after EU-42: 按 Issue #92 的 Phase 1 Documentation Authority → Phase 2 Historical Migration / Backend Application Boundary → Phase 3 Canonical Compatibility / E1～E3 Re-entry 顺序推进；Repository Split Readiness Assessment 继续后置
+- Repository Documentation Authority Convergence: **PHASE 1 COMPLETED（EU-43 / EU-44 / EU-45）**
+- Current Ready Execution Unit: **NONE**
+- Next cross-boundary Gate: **Issue #92 Phase 2 Planning Candidate**
 - Scope: E1～E3 前置的 CMS 通用化、站点实例数据所有权与 Public Renderer 可替换边界
 
 ## Intent
@@ -85,6 +86,7 @@
 - Canonical / Upgrade / Review evidence 已证明 183 篇 Party current canonical Runtime Dataset、4 条 accepted carousel、幂等导入与 EU-29→EU-30 upgrade compatibility 在新 lifecycle 下保持独立兼容；
 - EU-42 已将原 `site-baseline/static/**` 中 31 个稳定 Site assets 迁入 `sites/jilinjobs/assets/**`，并建立 package identity + source/target + SHA-256 integrity manifest、create-if-missing Runtime projection、StaticResource protected-path 与 `/static/uploads/**` exclusion；原目录只属于历史迁移来源描述，不再是 current source authority；
 - EU-37～EU-42 均已完成对应 exact-head、Integration 与 Post-Integration Current Evidence；当前 Roadmap / Issue #92 承担后续 Phase 顺序，不从本 Requirement 的历史 EU 编号推导 Execute Authority；
+- Issue #92 Phase 1 Repository Documentation Authority Convergence（EU-43 / EU-44 / EU-45）已完成物理 IA / archive 收敛；其 Integration 与 Post-Integration Evidence 由 EU-45 work record、PR / Actions 与 Issue #92 承担；
 - `data-migrations/README.md` 已明确 Historical Content Migration 与 Generic Flyway / Site Package stable structure/bootstrap/assets 分离。
 
 ## Non-goals / Deferred
@@ -106,15 +108,12 @@
 
 ## Current Follow-up Direction
 
-EU-37～EU-42 已关闭 Site Package Foundation、stable structure、Navigation stable identity / reconcile、explicit Runtime composition activation、Site bootstrap / Generic Schema baseline separation 与 stable Site asset ownership / Runtime projection 的当前 accepted scope。
+EU-37～EU-42 已关闭 Site Package Foundation、stable structure、Navigation stable identity / reconcile、explicit Runtime composition activation、Site bootstrap / Generic Schema baseline separation 与 stable Site asset ownership / Runtime projection 的当前 accepted scope。Issue #92 Phase 1 Documentation Authority Convergence 也已完成，当前没有 Ready / executing Execution Unit。
 
-EU-42 之后的剩余工作不再以旧 “Slice D 直接下一步” 表达。跨边界顺序由 Issue #92 当前 Planning Authority 统一控制：
+后续跨边界顺序由 Issue #92 当前 Planning Authority 统一控制：
 
 ```text
-Phase 1  Repository Documentation Authority Convergence
-         └─ EU-43 Current Authority Semantic Reconciliation（current execution）
-               ↓
-Phase 2  Generic Historical Migration & Backend Application Boundary
+Phase 2  Generic Historical Migration & Backend Application Boundary（Planning Candidate）
                ↓
 Phase 3  Canonical Migration Compatibility & E1～E3 Re-entry Gate
                ↓
@@ -125,4 +124,4 @@ Issue #60 / E1～E3
 
 Repository Split Readiness Assessment 继续保持后置 Planning Candidate；只有四层 boundary 完整闭环后独立评估，不自动拆仓，也不默认阻塞 E1～E3。
 
-上述后续 Phase / Candidate 均不继承 EU-42 或 EU-43 之外的 Execute Authority；每个具体候选仍必须按 Consumer-local Method 独立完成 `slice-work → readiness-check`。
+上述后续 Phase / Candidate 均不继承 EU-42～EU-45 的历史 Execute Authority；Phase 2 必须从 Planning Candidate 重新完成 dependency closure、必要 Planning、`slice-work → readiness-check` 后，才可能形成新的 Ready Execution Unit。
