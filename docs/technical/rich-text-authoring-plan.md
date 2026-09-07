@@ -8,12 +8,12 @@ relations:
   upstream:
     - docs/requirements/rich-text-authoring.md
     - docs/specifications/rich-text-authoring.md
-    - docs/technical/rich-text-authoring-research.md
+    - docs/technical/archive/rich-text-authoring-research.md
   execution_units:
-    - docs/work/eu34-rich-text-html-safety-foundation.md
-    - docs/work/eu35-shared-rich-text-authoring.md
+    - docs/work/archive/eu34-rich-text-html-safety-foundation.md
+    - docs/work/archive/eu35-shared-rich-text-authoring.md
 created_at: 2026-09-05
-updated_at: 2026-09-05
+updated_at: 2026-09-07
 ---
 
 # 富文本编辑与 HTML 安全技术计划
