@@ -1,0 +1,226 @@
+name: EU-42 Authority Closure
+
+on:
+  push:
+    branches:
+      - docs/eu-42-post-integration-closure
+    paths:
+      - ".github/workflows/eu42-authority-closure.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  close-authority:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: docs/eu-42-post-integration-closure
+          fetch-depth: 0
+      - name: Update EU-42 Consumer authority
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          def replace_one(path, old, new):
+              p = Path(path)
+              text = p.read_text(encoding='utf-8')
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f'{path}: expected exactly one match, found {count}: {old[:100]!r}')
+              p.write_text(text.replace(old, new, 1), encoding='utf-8')
+
+          def regex_one(path, pattern, replacement):
+              p = Path(path)
+              text = p.read_text(encoding='utf-8')
+              updated, count = re.subn(pattern, replacement, text, count=1, flags=re.S)
+              if count != 1:
+                  raise SystemExit(f'{path}: expected one regex match, found {count}: {pattern[:100]!r}')
+              p.write_text(updated, encoding='utf-8')
+
+          # AGENTS.md
+          replace_one(
+              'AGENTS.md',
+              'EU-40 — Explicit Site Package Runtime Composition Activation 与 EU-41 — Site Bootstrap & Generic Schema Baseline Separation；EU-37～EU-41 均已完成',
+              'EU-40 — Explicit Site Package Runtime Composition Activation、EU-41 — Site Bootstrap & Generic Schema Baseline Separation 与 EU-42 — Site Asset Package Ownership & Runtime Projection；EU-37～EU-42 均已完成',
+          )
+          replace_one(
+              'AGENTS.md',
+              'Operational Seed Classification & V2 Responsibility Retirement 已由 EU-41 关闭；剩余 Site Asset Ownership & Runtime Composition、Canonical Migration Compatibility & E1～E3 Re-entry，以及四层边界完成后的 Repository Split Readiness Assessment 仍只属于 Planning / Requirement Candidates。',
+              'Operational Seed Classification & V2 Responsibility Retirement 已由 EU-41 关闭，Site Asset Ownership & Runtime Composition 已由 EU-42 关闭；剩余 Canonical Migration Compatibility & E1～E3 Re-entry，以及四层边界完成后的 Repository Split Readiness Assessment 仍只属于 Planning / Requirement Candidates。',
+          )
+
+          # README.md
+          replace_one(
+              'README.md',
+              'EU-40 — Explicit Site Package Runtime Composition Activation 与 EU-41 — Site Bootstrap & Generic Schema Baseline Separation；EU-37～EU-41 均已集成到 `main` 并通过 Post-Integration Verification。',
+              'EU-40 — Explicit Site Package Runtime Composition Activation、EU-41 — Site Bootstrap & Generic Schema Baseline Separation 与 EU-42 — Site Asset Package Ownership & Runtime Projection；EU-37～EU-42 均已集成到 `main` 并通过 Post-Integration Verification。',
+          )
+          replace_one(
+              'README.md',
+              'Operational Seed Classification & V2 Responsibility Retirement 已由 EU-41 关闭，剩余 Site Asset Ownership & Runtime Composition、Canonical Migration Compatibility & E1～E3 Re-entry 以及四层边界完成后的 Repository Split Readiness Assessment 仍为 Planning / Requirement Candidates。',
+              'Operational Seed Classification & V2 Responsibility Retirement 已由 EU-41 关闭，Site Asset Ownership & Runtime Composition 已由 EU-42 关闭；剩余 Canonical Migration Compatibility & E1～E3 Re-entry 以及四层边界完成后的 Repository Split Readiness Assessment 仍为 Planning / Requirement Candidates。',
+          )
+          replace_one('README.md', '（Issue #77；EU-37～EU-41 accepted scope 与后续边界 Authority）', '（Issue #77；EU-37～EU-42 accepted scope 与后续边界 Authority）')
+          replace_one('README.md', '（EU-37～EU-41 已完成；Issue #77 剩余 Planning 继续使用）', '（EU-37～EU-42 已完成；Issue #77 剩余 Planning 继续使用）')
+          replace_one(
+              'README.md',
+              '最近完成的执行单元：\n\n- `docs/work/eu41-site-bootstrap-generic-schema-baseline-separation.md`（COMPLETED）',
+              '最近完成的执行单元：\n\n- `docs/work/eu42-site-asset-runtime-projection.md`（COMPLETED）\n- `docs/work/eu41-site-bootstrap-generic-schema-baseline-separation.md`（COMPLETED）',
+          )
+          replace_one(
+              'README.md',
+              'GitHub Issue #77：当前 Site Package boundary 规划入口；EU-37～EU-41 已完成，剩余 Slice C — Site Asset Ownership & Runtime Composition、Slice D — Canonical Migration Compatibility & E1～E3 Re-entry，以及四层边界完成后的 Repository Split Readiness Assessment 继续按 current audit / slice / readiness 形成后续候选；',
+              'GitHub Issue #77：当前 Site Package boundary 规划入口；EU-37～EU-42 已完成，Slice C 已由 EU-42 关闭；剩余 Slice D — Canonical Migration Compatibility & E1～E3 Re-entry，以及四层边界完成后的 Repository Split Readiness Assessment 继续按 current audit / slice / readiness 形成后续候选；',
+          )
+          replace_one(
+              'README.md',
+              '以及 EU-37～EU-41 的 Site Package contract、provisioner foundation、stable site structure migration、Navigation stable identity/reconcile、explicit Runtime composition activation 与 Site bootstrap / Generic Schema baseline separation 均已完成当前阶段收敛。',
+              '以及 EU-37～EU-42 的 Site Package contract、provisioner foundation、stable site structure migration、Navigation stable identity/reconcile、explicit Runtime composition activation、Site bootstrap / Generic Schema baseline separation 与 stable Site asset ownership / Runtime projection 均已完成当前阶段收敛。',
+          )
+
+          # Project Roadmap
+          replace_one(
+              'docs/project/project-roadmap.md',
+              '| EU-41 Site Bootstrap & Generic Schema Baseline Separation | **已完成** | Backend Flyway 已收敛为 Generic Schema-only lineage；七条 Fresh Site operational defaults 已转为无 migration-number 的 one-time Site bootstrap；普通 Runtime / repeated bootstrap 不覆盖或复活 operator data |\n| Issue #77 CMS Core / Site Package / Public Renderer Boundary | **当前 Planning Priority / 部分完成** | EU-37～EU-41 已完成；当前没有 Ready EU，剩余 Site Asset ownership/runtime composition、Canonical Migration lifecycle compatibility 与 E1～E3 re-entry，之后再做 Repository Split Readiness Assessment |',
+              '| EU-41 Site Bootstrap & Generic Schema Baseline Separation | **已完成** | Backend Flyway 已收敛为 Generic Schema-only lineage；七条 Fresh Site operational defaults 已转为无 migration-number 的 one-time Site bootstrap；普通 Runtime / repeated bootstrap 不覆盖或复活 operator data |\n| EU-42 Site Asset Package Ownership & Runtime Projection | **已完成** | 31 个稳定 Site assets 已迁入 `sites/jilinjobs/assets/**`；manifest SHA-256 integrity、create-if-missing Runtime projection、StaticResource protected-path 与 CI / Review empty-root composition 均已闭环 |\n| Issue #77 CMS Core / Site Package / Public Renderer Boundary | **当前 Planning Priority / 部分完成** | EU-37～EU-42 已完成；当前没有 Ready EU，Slice C 已关闭，剩余 Canonical Migration lifecycle compatibility 与 E1～E3 re-entry，之后再做 Repository Split Readiness Assessment |',
+          )
+          replace_one(
+              'docs/project/project-roadmap.md',
+              '| 2026-09-07 | EU-41 final Head `a958c39a…` 的 Site Package #32、CI #783、Canonical #165、Upgrade #115、Review #696 全部 PASS；PR #88 合并为 `main@6c88eea1762e8edf465833631cadff1e4c751d36`，Post-Integration Site Package #33 与 CI #784 PASS，Operational Seed / V2 responsibility retirement 正式关闭 |',
+              '| 2026-09-07 | EU-41 final Head `a958c39a…` 的 Site Package #32、CI #783、Canonical #165、Upgrade #115、Review #696 全部 PASS；PR #88 合并为 `main@6c88eea1762e8edf465833631cadff1e4c751d36`，Post-Integration Site Package #33 与 CI #784 PASS，Operational Seed / V2 responsibility retirement 正式关闭 |\n| 2026-09-07 | EU-42 final Head `37e03c3a…` 的 Site Package #34、CI #787、Review #698 全部 PASS；PR #90 合并为 `main@2c4af15df64342850391bbfe67de99b6404b3280`，Post-Integration Site Package #35 与 CI #788（含 empty-root Integrated Browser）全部 PASS，Slice C 正式关闭 |',
+          )
+          replace_one(
+              'docs/project/project-roadmap.md',
+              '- `site-baseline/static/**` 的 stable Site Asset runtime ownership 仍待 Slice C；',
+              '- stable Site Asset 已由 EU-42 迁入 `sites/jilinjobs/assets/**`，并由 integrity manifest + create-if-missing Runtime projection + protected-path contract 管理；原 `site-baseline/static/**` ownership 已退出；',
+          )
+          replace_one(
+              'docs/project/project-roadmap.md',
+              'Issue #77 剩余 Planning：\n\n1. Slice C：Site Asset Ownership & Runtime Composition；\n2. Slice D：Canonical Migration Compatibility & E1～E3 Re-entry；\n3. 四层 boundary 完成后的 Repository Split Readiness Assessment。\n\n这些候选必须基于最新 `main` 重新执行 current audit / slice-work / readiness-check；不得自动继承 EU-41 Execute Authority。',
+              'Issue #77 剩余 Planning：\n\n1. Slice D：Canonical Migration Compatibility & E1～E3 Re-entry；\n2. 四层 boundary 完成后的 Repository Split Readiness Assessment。\n\n这些候选必须基于最新 `main` 重新执行 current audit / slice-work / readiness-check；不得自动继承 EU-42 Execute Authority。',
+          )
+
+          # Project Site Package planning
+          replace_one(
+              'docs/project/site-package-planning.md',
+              '- Slice B operational bootstrap / schema separation：**EU-41 — Site Bootstrap & Generic Schema Baseline Separation**。',
+              '- Slice B operational bootstrap / schema separation：**EU-41 — Site Bootstrap & Generic Schema Baseline Separation**；\n- Slice C stable asset ownership / runtime projection：**EU-42 — Site Asset Package Ownership & Runtime Projection**。',
+          )
+          closure_section = '''## EU-42 Verification / Integration Closure\n\nReadiness Authority：Issue #77 `#issuecomment-5562811697`。\n\nFinal implementation Head：`37e03c3a5d7804804dcb3738a429e57e02b99e31`。\n\nExact-head evidence：\n\n- Site Package Verification #34 / run `34068025402` — **PASS**；\n- Repository CI #787 / run `34068025623` — **PASS**；\n- Review Environment #698 / run `34068025436` — **PASS**；\n- unresolved review threads — **NONE**；\n- Integration 前 base drift — **NONE**。\n\nPR #90 已按 exact Head 合并，Integration commit：`main@2c4af15df64342850391bbfe67de99b6404b3280`。\n\nPost-Integration evidence：\n\n- Site Package Verification #35 / run `34070361976` — **PASS**；\n- Repository CI #788 / run `34070361980` — **PASS**，包含 Backend、Public、Admin 与从空 Runtime Static Root 启动的 Integrated Browser。\n\n因此 EU-42 状态为 **COMPLETED**。Slice C — Site Asset Ownership & Runtime Composition 已关闭。当前没有 Ready / executing Execution Unit。\n\nEU-42 accepted boundary：\n\n- `sites/jilinjobs/assets/**` 是稳定 JilinJobs Site asset 的唯一版本化 source owner；\n- `assets/manifest.json` 把同一 Site Package identity 下的 source、公开 `/static/**` target 与 SHA-256 integrity 固化为机器可审计合同；\n- Runtime projection 只 create missing targets，不通过普通启动覆盖 operator 明确替换；\n- Site Package stable targets 自动进入 StaticResource protected-path，普通 delete 被拒绝，显式 replace 继续允许；\n- `/static/uploads/**` 与 Historical Canonical Migration assets 不被 Site Package stable asset ownership 接管；\n- CI / Review Environment 从空 Runtime Static Root 启动并由同一个 Site Package root 投影稳定资源，不再维护独立 static baseline copy。\n\n'''
+          replace_one(
+              'docs/project/site-package-planning.md',
+              '## 当前剩余 Planning 范围\n',
+              closure_section + '## 当前剩余 Planning 范围\n',
+          )
+          replace_one(
+              'docs/project/site-package-planning.md',
+              'Issue #77 当前只保留：\n\n1. **Slice C — Site Asset Ownership & Runtime Composition**：让稳定 Site assets 的 package/manifest/runtime ownership 显式化；是否移动 `site-baseline/static/**` 只根据真实 ambiguity 决定。\n2. **Slice D — Canonical Migration Compatibility & E1～E3 Re-entry**：在最终 Site Package + asset lifecycle 上关闭 Party/Main canonical compatibility，并判断 Issue #60 / E1～E3 是否解除前置等待。\n3. **Repository Split Readiness Assessment**：仅在四层 boundary 完成后独立评估，不自动拆仓。\n\n上述均不是当前 Ready EU，不继承 EU-41 execute authority。下一步必须基于最新 `main` 重新执行 current audit / slice-work / readiness-check。',
+              'Issue #77 当前只保留：\n\n1. **Slice D — Canonical Migration Compatibility & E1～E3 Re-entry**：在最终 Site Package + asset lifecycle 上关闭 Party/Main canonical compatibility，并判断 Issue #60 / E1～E3 是否解除前置等待。\n2. **Repository Split Readiness Assessment**：仅在四层 boundary 完成后独立评估，不自动拆仓。\n\n上述均不是当前 Ready EU，不继承 EU-42 execute authority。下一步必须基于最新 `main` 重新执行 current audit / slice-work / readiness-check。',
+          )
+
+          # Requirement
+          replace_one('docs/requirements/cms-site-package-boundary.md', '- Completed implementation: EU-37 / EU-38 / EU-39 / EU-40 / EU-41', '- Completed implementation: EU-37 / EU-38 / EU-39 / EU-40 / EU-41 / EU-42')
+          replace_one('docs/requirements/cms-site-package-boundary.md', '- Remaining scope after EU-41: Slice C / Slice D 继续保持 Planning / Requirement Candidate；四层 boundary 完成后再做 Repository Split Readiness Assessment', '- Remaining scope after EU-42: Slice D 继续保持 Planning / Requirement Candidate；四层 boundary 完成后再做 Repository Split Readiness Assessment')
+          replace_one(
+              'docs/requirements/cms-site-package-boundary.md',
+              '3. `site-baseline/static/**` 中稳定视觉资源应归属于具体 Site，而不是归属于 Vue Renderer 或通用 CMS Domain；其最终目录可以调整，但数据所有权必须明确。',
+              '3. 稳定视觉资源归属于具体 Site，而不是 Vue Renderer 或通用 CMS Domain；EU-42 已将其唯一版本化 source owner 收敛为 `sites/jilinjobs/assets/**`，公开 `/static/**` target URL 保持不变。',
+          )
+          replace_one(
+              'docs/requirements/cms-site-package-boundary.md',
+              '- `site-baseline/static/**` 与最终 asset composition / E1～E3 re-entry 仍属于 Issue #77 后续边界；',
+              '- EU-42 已将原 `site-baseline/static/**` 中 31 个稳定 Site assets 迁入 `sites/jilinjobs/assets/**`，并建立 package identity + source/target + SHA-256 integrity manifest、create-if-missing Runtime projection、StaticResource protected-path 与 `/static/uploads/**` exclusion；\n- PR #90 final Head `37e03c3a5d7804804dcb3738a429e57e02b99e31` 的 Site Package #34、CI #787、Review #698 全部 PASS；PR #90 合并为 `main@2c4af15df64342850391bbfe67de99b6404b3280` 后，Post-Integration Site Package #35 与 CI #788 全部 PASS；\n- Site Asset Ownership & Runtime Composition 已由 EU-42 关闭；E1～E3 re-entry 仍属于 Issue #77 后续 Slice D 边界；',
+          )
+          replace_one(
+              'docs/requirements/cms-site-package-boundary.md',
+              'EU-37 / EU-38 / EU-39 / EU-40 / EU-41 已完成 Site Package Foundation、stable structure、Navigation stable identity / reconcile、explicit Runtime composition activation 与 Site bootstrap / Generic Schema baseline separation，并均已集成到 `main` 取得 Post-Integration Current Evidence。',
+              'EU-37 / EU-38 / EU-39 / EU-40 / EU-41 / EU-42 已完成 Site Package Foundation、stable structure、Navigation stable identity / reconcile、explicit Runtime composition activation、Site bootstrap / Generic Schema baseline separation 与 stable Site asset ownership / Runtime projection，并均已集成到 `main` 取得 Post-Integration Current Evidence。',
+          )
+          replace_one(
+              'docs/requirements/cms-site-package-boundary.md',
+              'Issue #77 当前剩余 Planning Candidate 重点为：\n\n1. **Slice C — Site Asset Ownership & Runtime Composition**：`site-baseline/static/**` 的 Site Package ownership 如何在 manifest / Runtime / CI / Review Environment 中显式组合，物理移动仅在有真实必要时执行；\n2. **Slice D — Canonical Migration Compatibility & E1～E3 Re-entry**：Party canonical migration、183 篇 current Runtime Dataset 与 accepted carousel state 如何在最终 Site Package + asset lifecycle 下关闭完整 compatibility，并判断 Issue #60 / E1～E3 是否解除前置等待；\n3. **Repository Split Readiness Assessment**：仅在四层 boundary 完成后独立执行，不自动拆仓。\n\n上述方向当前都不是 Ready Execution Unit，也不继承 EU-41 的 Execute 授权。下一步必须基于最新 `main` 重新执行 current audit / slice-work / readiness-check。',
+              'Issue #77 当前剩余 Planning Candidate 重点为：\n\n1. **Slice D — Canonical Migration Compatibility & E1～E3 Re-entry**：Party canonical migration、183 篇 current Runtime Dataset 与 accepted carousel state 如何在最终 Site Package + asset lifecycle 下关闭完整 compatibility，并判断 Issue #60 / E1～E3 是否解除前置等待；\n2. **Repository Split Readiness Assessment**：仅在四层 boundary 完成后独立执行，不自动拆仓。\n\n上述方向当前都不是 Ready Execution Unit，也不继承 EU-42 的 Execute 授权。下一步必须基于最新 `main` 重新执行 current audit / slice-work / readiness-check。',
+          )
+
+          # Specification
+          replace_one('docs/specifications/cms-site-package-boundary.md', '- Completed Execution Units: **EU-37 / EU-38 / EU-39 / EU-40 / EU-41**', '- Completed Execution Units: **EU-37 / EU-38 / EU-39 / EU-40 / EU-41 / EU-42**')
+          replace_one('docs/specifications/cms-site-package-boundary.md', '- stable site assets（ownership 已确定，composition/physical location 属后续 Slice C）；', '- stable site assets（EU-42 accepted owner：`sites/jilinjobs/assets/**` + integrity manifest + Runtime projection）；')
+          regex_one(
+              'docs/specifications/cms-site-package-boundary.md',
+              r'## 6\. Static asset boundary\n.*?\n## 7\. Public Renderer boundary',
+              '''## 6. Static asset boundary\n\nEU-42 已关闭 stable Site asset 的 source ownership 与 Runtime composition：\n\n- 唯一版本化 source owner：`sites/jilinjobs/assets/**`；原 `site-baseline/static/**` 不再是并行 source authority；\n- `sites/jilinjobs/assets/manifest.json` 与主 Site Package 使用同一 `packageId`，并声明 schemaVersion、package-root source、公开 `/static/**` target 与 SHA-256；\n- manifest loader 必须拒绝 package identity mismatch、source/target duplicate、path traversal / symlink escape、digest mismatch 与 `/static/uploads/**` target；\n- `SitePackageAssetProjector` 只 create missing targets；现存普通 target 不由启动覆盖，因此 operator 显式 replace 可跨 projection/restart 保留；\n- stable target 纳入 `StaticResourceService` protected-path：普通 delete 拒绝，显式 replace 允许；\n- `/static/uploads/**` 继续是 mutable Runtime Store；Historical article/body/carousel migration assets 继续跟随 Canonical Migration unit；\n- CI / Review Environment 必须从空 Runtime Static Root 启动，并由同一个 mounted Site Package root 同时提供 structure、bootstrap 与 stable assets；不得重新引入独立 baseline copy。\n\nPublic `/static/**` URL、Main / Party visual identity 与 Renderer behavior 均保持不变；force-upgrade / overwrite-existing policy 不属于 EU-42。\n\n## 7. Public Renderer boundary''',
+          )
+          replace_one(
+              'docs/specifications/cms-site-package-boundary.md',
+              'PR #88 final Head `a958c39a37892cf0fbcb41b8c883b2299d84f561` 的 Site Package Verification #32、CI #783、Canonical Migration Verification #165、EU-30 Migration Upgrade Verification #115 与人工评审环境 #696 全部 PASS；PR #88 已合并为 `main@6c88eea1762e8edf465833631cadff1e4c751d36`，Post-Integration Site Package Verification #33 与 CI #784 全部 PASS。EU-41 Specification acceptance 已闭环。',
+              'PR #88 final Head `a958c39a37892cf0fbcb41b8c883b2299d84f561` 的 Site Package Verification #32、CI #783、Canonical Migration Verification #165、EU-30 Migration Upgrade Verification #115 与人工评审环境 #696 全部 PASS；PR #88 已合并为 `main@6c88eea1762e8edf465833631cadff1e4c751d36`，Post-Integration Site Package Verification #33 与 CI #784 全部 PASS。EU-41 Specification acceptance 已闭环。\n\nEU-42 final Head `37e03c3a5d7804804dcb3738a429e57e02b99e31` 的 Site Package Verification #34、CI #787 与 Review Environment #698 全部 PASS；PR #90 已合并为 `main@2c4af15df64342850391bbfe67de99b6404b3280`，Post-Integration Site Package Verification #35 与 CI #788（含 empty-root Integrated Browser）全部 PASS。EU-42 stable asset ownership / Runtime projection acceptance 已闭环。',
+          )
+          replace_one('docs/specifications/cms-site-package-boundary.md', '- stable asset physical location：仍为 `site-baseline/static/**`，后续 Slice C；', '- stable asset source owner：`sites/jilinjobs/assets/**`；Runtime target 继续为 `/static/**`；')
+          replace_one(
+              'docs/specifications/cms-site-package-boundary.md',
+              '5. EU-41 Backend Schema-only Flyway lineage + one-time current-schema Site bootstrap + operational default no-takeover/no-resurrection；\n6. EU-41 exact-head / Integration / Post-Integration evidence 已闭环。',
+              '5. EU-41 Backend Schema-only Flyway lineage + one-time current-schema Site bootstrap + operational default no-takeover/no-resurrection；\n6. EU-41 exact-head / Integration / Post-Integration evidence 已闭环；\n7. EU-42 stable Site asset package ownership、integrity manifest、Runtime projection、StaticResource protection 与 CI / Review empty-root composition；\n8. EU-42 exact-head / Integration / Post-Integration evidence 已闭环。',
+          )
+          replace_one('docs/specifications/cms-site-package-boundary.md', '**NONE**。EU-41 的 Execute Authority 已随完成而终止。', '**NONE**。EU-42 的 Execute Authority 已随完成而终止。')
+          replace_one(
+              'docs/specifications/cms-site-package-boundary.md',
+              '1. Site Asset Ownership & Runtime Composition（Slice C）；\n2. Canonical Migration Compatibility & E1～E3 re-entry（Slice D）；\n3. 四层 boundary 完成后的 Repository Split Readiness Assessment。\n\n这些剩余项仍必须重新执行 current audit / `slice-work → readiness-check`，不得自动继承 EU-41 Execute 授权。',
+              '1. Canonical Migration Compatibility & E1～E3 re-entry（Slice D）；\n2. 四层 boundary 完成后的 Repository Split Readiness Assessment。\n\n这些剩余项仍必须重新执行 current audit / `slice-work → readiness-check`，不得自动继承 EU-42 Execute 授权。',
+          )
+
+          # Technical Plan
+          replace_one(
+              'docs/technical/cms-site-package-boundary.md',
+              '  - `EU-41 — Site Bootstrap & Generic Schema Baseline Separation`\n- Current Ready Execution Unit: **NONE**',
+              '  - `EU-41 — Site Bootstrap & Generic Schema Baseline Separation`\n  - `EU-42 — Site Asset Package Ownership & Runtime Projection`\n- Current Ready Execution Unit: **NONE**',
+          )
+          replace_one(
+              'docs/technical/cms-site-package-boundary.md',
+              'EU-41 已完成实现、exact-head Verification、Integration 与 Post-Integration Verification，该 Decision 已成为当前 accepted technical baseline。',
+              'EU-41 已完成实现、exact-head Verification、Integration 与 Post-Integration Verification，该 Decision 已成为当前 accepted technical baseline。EU-42 进一步把 stable Site asset source ownership 与 Runtime composition 收敛进同一 Site Package boundary，并已完成 exact-head / Integration / Post-Integration Verification。',
+          )
+          regex_one(
+              'docs/technical/cms-site-package-boundary.md',
+              r'## 8\. Static asset boundary\n.*?\n## 9\. Rollback / compatibility boundary',
+              '''## 8. Static asset boundary\n\nEU-42 accepted technical boundary：\n\n```text\nsites/jilinjobs/assets/**\n  ↓ assets/manifest.json: packageId + source + /static target + SHA-256\nSitePackageAssetManifestLoader\n  ↓ bounded / integrity validation\nSitePackageAssetProjector\n  ↓ create-if-missing only\nconfigured CMS_STATIC_ROOT\n  ↓ Backend /static/**\nPublic Renderer / Admin StaticResource\n```\n\n关键策略：\n\n- stable source bytes 只存在于 `sites/jilinjobs/assets/**`；\n- projector 不覆盖 existing regular target，保留 operator explicit replace；\n- stable targets 进入 StaticResource protected-path，ordinary delete fail-fast；\n- `/static/uploads/**` 明确排除，继续作为 mutable Runtime Store；\n- Historical canonical assets 不进入 stable Site asset manifest；\n- CI / Review Environment 不复制第二份 baseline，而是从空 Runtime Static Root 观察 package projection；\n- 当前没有 force-upgrade semantics；如未来出现受控 asset upgrade requirement，必须重新规划 overwrite / conflict / rollback contract。\n\n## 9. Rollback / compatibility boundary''',
+          )
+          regex_one(
+              'docs/technical/cms-site-package-boundary.md',
+              r'## 10\. Execution state\n.*?\n## 11\. Remaining after EU-41',
+              '''## 10. Execution state\n\n### EU-42 closure\n\n- Readiness evidence：Issue #77 `#issuecomment-5562811697`；\n- Work artifact：`docs/work/eu42-site-asset-runtime-projection.md`；\n- Implementation PR：#90；\n- Final Head：`37e03c3a5d7804804dcb3738a429e57e02b99e31`；\n- Exact-head：Site Package #34 / CI #787 / Review #698 — **PASS**；\n- Integration：`main@2c4af15df64342850391bbfe67de99b6404b3280`；\n- Post-Integration：Site Package #35 / CI #788 — **PASS**；\n- unresolved review threads：**NONE**；\n- EU-42：**COMPLETED**；\n- Current Ready Execution Unit：**NONE**。\n\n## 11. Remaining after EU-42''',
+          )
+          replace_one(
+              'docs/technical/cms-site-package-boundary.md',
+              'Issue #77 继续保留：\n\n1. Slice C — Site Asset Ownership & Runtime Composition；\n2. Slice D — Canonical Migration Compatibility & E1～E3 re-entry；\n3. 四层 boundary 完成后的 Repository Split Readiness Assessment。\n\n这些均需重新经过 `slice-work → readiness-check`，不自动继承 EU-41 identifier / execute authority。',
+              'Issue #77 继续保留：\n\n1. Slice D — Canonical Migration Compatibility & E1～E3 re-entry；\n2. 四层 boundary 完成后的 Repository Split Readiness Assessment。\n\n这些均需重新经过 `slice-work → readiness-check`，不自动继承 EU-42 identifier / execute authority。',
+          )
+          replace_one('docs/technical/cms-site-package-boundary.md', '## Slice C：稳定资源 Ownership 与 Runtime Projection（EU-42）', '## Slice C：稳定资源 Ownership 与 Runtime Projection（EU-42，已完成）')
+
+          # EU-42 work record
+          Path('docs/work/eu42-site-asset-runtime-projection.md').write_text('''# EU-42 — Site Asset Package Ownership & Runtime Projection\n\n## Authority\n\n- Parent Planning Candidate: GitHub Issue #77 — CMS Core / Site Package / Public Renderer 边界收敛\n- Readiness: Issue #77 comment `#issuecomment-5562811697`\n- Execution base: `main@eaf89f13a7f5eeae498124082d00f88da4e2627c`\n- Requirement: `docs/requirements/cms-site-package-boundary.md`\n- Specification: `docs/specifications/cms-site-package-boundary.md`\n- Technical Plan: `docs/technical/cms-site-package-boundary.md`\n- Verification Authority: `docs/technical/verification-strategy.md`\n\n## Status\n\n- Execution Unit: **EU-42**\n- Readiness: **PASS**\n- Implementation: **COMPLETED**\n- Implementation Branch: `feature/eu-42-site-asset-runtime-projection`\n- Pull Request: #90 — MERGED\n- Final implementation Head: `37e03c3a5d7804804dcb3738a429e57e02b99e31`\n- Integration commit: `main@2c4af15df64342850391bbfe67de99b6404b3280`\n\n## Intent\n\n关闭稳定 JilinJobs Site assets 在版本化 source、Site Package integrity 与 Runtime `/static/**` composition 之间的双 Authority，使 structure、bootstrap 与 stable assets 都从同一个 Site Package root 进入 Repository Runtime。\n\n## Scope\n\n### Stable Site asset ownership\n\n- 将原 `site-baseline/static/**` 中稳定 Site asset bytes 迁入 `sites/jilinjobs/assets/**`；\n- 保持现有公开 `/static/**` target URL，不实施视觉改版或 Public URL rename；\n- 当前共 31 个稳定 binary assets 纳入 Site Package ownership。\n\n### Manifest / integrity contract\n\n`sites/jilinjobs/assets/manifest.json` 声明：\n\n- `packageId`；\n- asset `schemaVersion`；\n- package-root-bounded `source`；\n- Runtime `/static/**` `target`；\n- source SHA-256。\n\nLoader fail-fast 校验 package identity、duplicate source/target、path traversal、symlink escape、digest mismatch 与 `/static/uploads/**` exclusion。\n\n### Runtime projection\n\n`SitePackageAssetProjector`：\n\n- 仅在 target 缺失时创建；\n- existing regular file 保持不变；\n- repeated projection 幂等；\n- missing target 可恢复；\n- operator 通过管理能力显式 replace 后，projection / restart 不覆盖该 replacement。\n\n### StaticResource protection\n\n- Site Package stable target 自动进入 `StaticResourceService` protected-path；\n- ordinary delete 被拒绝；\n- explicit replace 继续允许；\n- `/static/uploads/**` 继续属于 mutable Runtime Store。\n\n### Repository composition\n\n- CI / Review Environment 从空 Runtime Static Root 启动；\n- `CMS_SITE_PACKAGE_ROOT` 同时提供 stable structure、Fresh bootstrap 与 stable assets；\n- 不再从 `site-baseline/static/**` 手工 copy 第二份 baseline。\n\n## Explicit non-goals\n\n- 不修改 Public Renderer source architecture 或 user-visible design；\n- 不进入 Slice D / Canonical Migration compatibility re-entry；\n- 不进入 Issue #60 / E1～E3；\n- 不接管 `/static/uploads/**`；\n- 不把 Historical Canonical Migration assets 迁入 stable Site asset package；\n- 不新增数据库 Schema；\n- 不定义 force-upgrade / overwrite-existing asset semantics；\n- 不拆 Repository 或引入 multi-site/plugin framework。\n\n## Acceptance\n\n1. stable Site asset bytes 只有一个版本化 source owner：`sites/jilinjobs/assets/**`。\n2. source / target / digest 与 package identity 可机器校验，越界、重复或 digest mismatch fail-fast。\n3. Fresh empty Runtime Static Root 能投影完整稳定资源。\n4. second projection / restart 幂等且不覆盖 existing target。\n5. operator explicit replace 可保持，ordinary delete 对 stable target 被阻止。\n6. `/static/uploads/**` 不受 stable Site asset projection / protection 接管。\n7. CI / Review Environment 不依赖 legacy static baseline copy。\n8. Public `/static/**`、Main / Party behavior、Admin 与 Integrated Browser 回归保持。\n9. 无 Slice D / E1～E3 范围扩张。\n\n## Verification and Integration Evidence\n\n### Final exact-head\n\nFinal implementation Head：`37e03c3a5d7804804dcb3738a429e57e02b99e31`。\n\n- Site Package Verification #34 / run `34068025402` — **PASS**；\n- Repository CI #787 / run `34068025623` — **PASS**；\n- Review Environment #698 / run `34068025436` — **PASS**；\n- unresolved review threads — **NONE**；\n- Integration 前 base drift — **NONE**。\n\n### Integration\n\nPR #90 已按 exact Head 合并：\n\n`main@2c4af15df64342850391bbfe67de99b6404b3280`\n\n### Post-Integration\n\n该 Integration commit 已取得：\n\n- Site Package Verification #35 / run `34070361976` — **PASS**；\n- Repository CI #788 / run `34070361980` — **PASS**：Backend / Public / Admin / Integrated Browser 全部成功；Integrated Browser 明确从 empty Runtime Static Root 启动并通过 Site Package projection 取得 `/static/**` 资源。\n\n因此 EU-42 implementation、integration 与 Post-Integration Current Evidence 已闭环，状态为 **COMPLETED**。\n\n## Accepted Result\n\nEU-42 完成后，Site Package stable asset 生命周期为：\n\n```text\nsites/jilinjobs/assets/**\n→ package-bound manifest / SHA-256 verification\n→ create-if-missing Runtime projection\n→ configured CMS_STATIC_ROOT\n→ Backend /static/**\n```\n\nVersioned stable assets 与 mutable Runtime uploads / Historical Migration assets 继续保持不同 ownership。普通 Runtime projection 不将版本化 source 解释为强制覆盖策略；明确的 operator replacement 可以保持。\n\n## Rollback boundary\n\nEU-42 不修改数据库 Schema，也不执行 destructive Runtime migration。实现已集成后，回滚应以 source/code revert 为单位；Existing Runtime Static Store 不要求 destructive rewrite。未来若需要版本化 asset 强制升级，必须重新形成独立 Requirement / conflict / rollback contract。\n\n## Remaining boundary\n\nIssue #77 保持 OPEN，但 EU-42 Execute Authority 随完成终止。当前没有 Ready Execution Unit。\n\n剩余仅为：\n\n1. Slice D — Canonical Migration Compatibility & E1～E3 Re-entry；\n2. 四层 boundary 完成后的 Repository Split Readiness Assessment。\n\n这些候选必须重新经过 current audit / `slice-work → readiness-check`；不得从 EU-42 自动进入 Slice D，也不得开始 Issue #60 / E1～E3。\n''', encoding='utf-8')
+          PY
+          git diff --check
+          git status --short
+      - name: Commit authority closure
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "dygapp"
+          git config user.email "dygapp@qq.com"
+          git add AGENTS.md README.md \
+            docs/project/project-roadmap.md \
+            docs/project/site-package-planning.md \
+            docs/requirements/cms-site-package-boundary.md \
+            docs/specifications/cms-site-package-boundary.md \
+            docs/technical/cms-site-package-boundary.md \
+            docs/work/eu42-site-asset-runtime-projection.md
+          git diff --cached --check
+          test "$(git diff --cached --name-only | wc -l)" -eq 8
+          git commit -m "docs: 收口 EU-42 Post-Integration Authority"
+          git push origin HEAD:docs/eu-42-post-integration-closure
