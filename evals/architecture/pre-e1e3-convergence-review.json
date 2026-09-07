@@ -1,7 +1,7 @@
 {
   "corpus": "pre-e1e3-convergence-architecture-review",
-  "version": 1,
-  "purpose": "Bounded review evidence for Phase 0 planning. This corpus does not grant Repository Authority or Execute permission.",
+  "version": 2,
+  "purpose": "Bounded optional review evidence for high-cost architecture ambiguity. This corpus does not grant Repository Authority, Readiness, or Execute permission.",
   "scenarios": [
     {
       "id": "AR-01",
@@ -40,7 +40,7 @@
     {
       "id": "AR-02",
       "title": "Backend Application and Gradle Module Boundary",
-      "default_high_capability": true,
+      "default_high_capability": false,
       "context_paths": [
         "AGENTS.md",
         "docs/project/pre-e1e3-convergence-plan.md",
@@ -52,22 +52,22 @@
         "backend/src/main/kotlin/com/jilinjobs/cms/CmsApplication.kt",
         "backend/src/main/kotlin/com/jilinjobs/cms/migration"
       ],
-      "prompt": "你正在做一次严格受限的 Backend application / build boundary 架构挑战评审。只使用当前工作目录中提供的文件；不要联网，不要读取当前工作目录之外的路径，不要修改文件，也不要重新设计整个 CMS。候选决策是：CMS Server 与 Generic Content Migration 必须成为两个独立 Spring Boot executable JAR，因此采用最小 Gradle multi-module 结构 `modules/cms-core` + `apps/cms-server` + `apps/content-migration`；CMS Core 内部 content/column/listing/resource 等仍保持 package-level modularity。请挑战该判断，重点评估：两个 executable JAR 是否真的需要 Gradle module boundary；source set + custom BootJar 是否有更低复杂度且长期同样清晰的可能；cms-core 应包含哪些 reusable capability，哪些 server-only composition 不应被 migration app 依赖；Spring component scan / configuration / Flyway / MyBatis / persistence wiring 的潜在耦合；是否会制造 circular dependency；如何保持 preparatory refactor 的最小范围；是否存在当前证据不支持的过度拆分。不要把 Git repository split、Clean Architecture 或一领域一 Gradle module 当作默认目标。最后严格使用以下结构输出：\nVerdict: SUPPORTED | SUPPORTED_WITH_CHANGES | BLOCKING_CONCERN\nBlocking Findings:\n- ...\nNon-blocking Risks:\n- ...\nRequired Plan Changes:\n- ...\nRejected Alternatives:\n- ...\nConfidence: HIGH | MEDIUM | LOW",
+      "prompt": "你正在做一次严格受限的 Backend application / build boundary 架构挑战评审。只使用当前工作目录中提供的文件；不要联网，不要读取当前工作目录之外的路径，不要修改文件，也不要重新设计整个 CMS。候选边界是：CMS Server 与 Generic Content Migration 需要独立 application lifecycle / Spring composition / deliverable artifact，并共享 site-neutral CMS Core；当前推荐方案是最小 Gradle multi-project `modules/cms-core` + `apps/cms-server` + `apps/content-migration`，但 source sets + independent BootJar 仍是必须显式比较的低复杂度替代。请挑战该判断，重点评估：multi-project 是否真的提供足够的 dependency/classpath/composition clarity；source set 方案是否可用少量长期可维护 wiring 达到同等隔离；cms-core 应包含哪些 reusable capability，哪些 server-only composition 不应被 migration app 依赖；Spring component scan / configuration / Flyway / MyBatis / persistence / resource wiring 的潜在耦合；是否会制造 circular dependency；如何保持 preparatory refactor 的最小范围；是否存在当前证据不支持的过度拆分。不要把 Git repository split、Clean Architecture 或一领域一 Gradle module 当作默认目标。最后严格使用以下结构输出：\nVerdict: SUPPORTED | SUPPORTED_WITH_CHANGES | BLOCKING_CONCERN\nBlocking Findings:\n- ...\nNon-blocking Risks:\n- ...\nRequired Plan Changes:\n- ...\nRejected Alternatives:\n- ...\nConfidence: HIGH | MEDIUM | LOW",
       "assertions": [
-        "明确判断两个独立 executable Spring Boot JAR 是否足以支持 Gradle module boundary",
+        "明确区分 independent executable/application boundary 与 Gradle multi-project 实现选择",
         "评估 cms-server -> cms-core 与 content-migration -> cms-core 的依赖方向",
         "检查 migration tool 是否会错误依赖 server application composition",
-        "检查 Spring component scan / configuration / Flyway / MyBatis / persistence wiring 风险",
+        "检查 Spring component scan / configuration / Flyway / MyBatis / persistence / resource wiring 风险",
         "不得默认建议 content/listing/navigation/resource 各拆独立 Gradle module",
-        "必须评估 source set + custom BootJar 作为较低复杂度替代方案是否仍满足长期 artifact/lifecycle boundary",
+        "必须评估 source set + independent BootJar 作为较低复杂度替代方案是否仍满足长期 artifact/lifecycle boundary",
         "不得自动扩大到 Git repository split 或全面 Clean Architecture 重构",
-        "如认为 multi-module 合理，应指出最小 preparatory refactor 边界和保持行为的验证重点"
+        "如认为 multi-project 合理，应指出最小 preparatory refactor 边界和保持行为的验证重点"
       ]
     },
     {
       "id": "AR-03",
       "title": "Generic Historical Migration Boundary",
-      "default_high_capability": true,
+      "default_high_capability": false,
       "context_paths": [
         "AGENTS.md",
         "docs/project/pre-e1e3-convergence-plan.md",
@@ -79,7 +79,7 @@
         "data-migrations/schemas",
         "backend/src/main/kotlin/com/jilinjobs/cms/migration"
       ],
-      "prompt": "你正在做一次严格受限的 Historical Migration architecture review。只使用当前工作目录中提供的文件；不要联网，不要读取工作目录之外的路径，不要修改任何文件，也不要重新设计整个 CMS。候选边界是：Python/Node 负责 `Legacy Source -> Canonical Dataset` 的采集、规范化、promotion、schema/hash/report；独立 JVM Generic Content Migration Spring Boot Application 负责 `Canonical Dataset -> CMS Runtime`，复用 CMS domain services；Party-specific aliases、accepted fingerprints、carousel legacy transition 等保留在 Party dataset/profile/compatibility authority，不进入 Generic Engine。请重点挑战：generic engine 的最小职责；Article/Resource/ListItem dependency order、transaction/preflight/idempotency/conflict/reconciliation；legacy mapping 是否属于 generic migration infrastructure；直接 Python DB import 或 Python API orchestration 是否更合理；Party-specific compatibility 如何退出 production Runtime 又不丢失 EU-29 -> EU-30 upgrade knowledge；未来 Main migration 是否能复用而不迫使 engine 内建多站点/plugin framework；Historical Migration 与 Site Package bootstrap/stable structure 是否仍保持清楚分离。最后严格使用以下结构输出：\nVerdict: SUPPORTED | SUPPORTED_WITH_CHANGES | BLOCKING_CONCERN\nBlocking Findings:\n- ...\nNon-blocking Risks:\n- ...\nRequired Plan Changes:\n- ...\nRejected Alternatives:\n- ...\nConfidence: HIGH | MEDIUM | LOW",
+      "prompt": "你正在做一次严格受限的 Historical Migration architecture review。只使用当前工作目录中提供的文件；不要联网，不要读取工作目录之外的路径，不要修改任何文件，也不要重新设计整个 CMS。候选边界是：Python/Node 负责 `Legacy Source -> Canonical Dataset` 的采集、规范化、promotion、schema/hash/report；独立 JVM Generic Content Migration Spring Boot Application 负责 `Canonical Dataset -> CMS Runtime`，复用 CMS domain services；Party-specific aliases、accepted fingerprints、carousel legacy transition 等保留在 Party dataset/profile/compatibility authority，不进入 Generic Engine。请重点挑战：generic engine 的最小职责；Article/Resource/ListItem dependency order、transaction/preflight/idempotency/conflict/reconciliation；legacy mapping 是否属于 generic migration infrastructure；直接 Python DB import 或 Python API orchestration是否更合理；Party-specific compatibility 如何退出 production Runtime 又不丢失 EU-29 -> EU-30 upgrade knowledge；未来 Main migration 是否能复用而不迫使 engine 内建多站点/plugin framework；Historical Migration 与 Site Package bootstrap/stable structure 是否仍保持清楚分离。最后严格使用以下结构输出：\nVerdict: SUPPORTED | SUPPORTED_WITH_CHANGES | BLOCKING_CONCERN\nBlocking Findings:\n- ...\nNon-blocking Risks:\n- ...\nRequired Plan Changes:\n- ...\nRejected Alternatives:\n- ...\nConfidence: HIGH | MEDIUM | LOW",
       "assertions": [
         "区分 Legacy Source -> Canonical Dataset 与 Canonical Dataset -> CMS Runtime 两个责任边界",
         "评估 JVM importer 复用 CMS domain services 与 Python direct DB/API alternatives 的真实取舍",
