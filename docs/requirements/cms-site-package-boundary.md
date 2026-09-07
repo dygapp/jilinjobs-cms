@@ -3,10 +3,11 @@
 ## Status
 
 - Candidate source: GitHub Issue #77
-- Stage: Requirement Authority — ACTIVE / PARTIALLY IMPLEMENTED
+- Stage: Requirement Authority — ACTIVE / ACCEPTED BOUNDARY
 - Completed implementation: EU-37 / EU-38 / EU-39 / EU-40 / EU-41 / EU-42
-- Current Ready Execution Unit: **NONE**
-- Remaining scope after EU-42: Slice D 继续保持 Planning / Requirement Candidate；四层 boundary 完成后再做 Repository Split Readiness Assessment
+- Current cross-boundary planning authority: GitHub Issue #92
+- Current execution: **EU-43 — Current Authority Semantic Reconciliation**（Phase 1A documentation-only）
+- Remaining scope after EU-42: 按 Issue #92 的 Phase 1 Documentation Authority → Phase 2 Historical Migration / Backend Application Boundary → Phase 3 Canonical Compatibility / E1～E3 Re-entry 顺序推进；Repository Split Readiness Assessment 继续后置
 - Scope: E1～E3 前置的 CMS 通用化、站点实例数据所有权与 Public Renderer 可替换边界
 
 ## Intent
@@ -34,7 +35,7 @@
 
 ### 2. JilinJobs Site Package / Provisioning
 
-1. 原 `V2__current_preset_data.sql` 中属于吉林就业网站实例的责任必须退出 Backend Flyway，并由独立 Site Package / Provisioning Authority 承载。
+1. 历史 `V2__current_preset_data.sql` 中属于吉林就业网站实例的责任已经退出 Backend Flyway；Current Authority 由独立 Site Package / Provisioning 承载。旧 V2 仅作为 historical implementation / compatibility evidence 保留，不得恢复为 current runtime responsibility。
 2. Site Package 至少能够表达当前站点所需的稳定结构 identity、父子 / 引用关系、默认运营字段、`preset` 身份及必要站点配置值。
 3. 稳定视觉资源归属于具体 Site，而不是 Vue Renderer 或通用 CMS Domain；EU-42 已将其唯一版本化 source owner 收敛为 `sites/jilinjobs/assets/**`，公开 `/static/**` target URL 保持不变。
 4. Site Provisioning 必须可在 Fresh Database 上重复、可验证地恢复当前正式站点稳定结构，并需要定义幂等 / 升级 / 冲突策略，不能依赖一次性人工 SQL 操作。
@@ -42,13 +43,15 @@
 6. **Fresh Site 初始运营默认数据属于 Site bootstrap，不属于 Backend Flyway migration，也不属于长期 stable-structure reconcile。** Bootstrap artifact 应面向当前 CMS Schema 维护，不建立与 Backend migration number 对应的 V1/V2/V3 序列。
 7. Site bootstrap 必须具有明确的一次性安装语义：完成后相关 `CmsListItem` / `Advertisement` 成为普通 operator-managed Runtime Data；管理员修改不得被后续 reconcile 覆盖，管理员删除不得被后续启动或显式重复 bootstrap resurrect。
 8. 一次性状态应通过 Generic CMS 提供的 site-neutral bootstrap-state capability 记录，而不是借用 `flyway_schema_history`；Site Package 与 CMS 的依赖应表达为 Schema / Provisioning capability compatibility，而不是共享迁移顺序。
+9. 当前 stable Site structure、one-time bootstrap 与 stable Site assets 的版本化 owner 分别为 `sites/jilinjobs/structure/**`、`sites/jilinjobs/bootstrap/**`、`sites/jilinjobs/assets/**`；三者可以共享 Site Package root，但 lifecycle / overwrite semantics 不得混同。
 
 ### 3. Historical Content Migration
 
-1. `data-migrations/**` 继续只承担历史运营内容迁移，不机械接收栏目、导航、PageGroup、Site Config 定义或 Fresh Site 普通默认运营数据。
+1. `data-migrations/**` 继续只承担历史运营内容迁移，不机械接收栏目、导航、PageGroup、Site Config 定义、Fresh Site 普通默认运营数据或 stable Site asset source ownership。
 2. Main / Party Canonical Migration Dataset 应引用稳定 Site identity（例如栏目 alias、list code），不得依赖临时 Runtime 数据库 ID 或当前 Vue 组件 / Router 内部实现。
 3. 更换 Public Renderer 不得要求重新迁移已经接受的 Canonical Content，仅因为框架、构建产物或组件结构发生变化。
 4. Fresh Site bootstrap 与 Historical Canonical Migration 必须是不同 lifecycle：前者建立当前站点的初始普通运营默认值，后者承载具有 provenance / fingerprint / source evidence 的历史内容迁移。
+5. Historical article/body/attachment/list-member assets 继续随 Canonical Migration unit 管理，不进入 `sites/jilinjobs/assets/**` stable Site asset manifest。
 
 ### 4. Replaceable Public Renderer
 
@@ -59,11 +62,12 @@
 
 ### 5. Integration / Verification
 
-1. Fresh Runtime 验证需要能够证明：Generic CMS Core → JilinJobs stable Site Provisioning → one-time Site bootstrap 可以恢复当前正式 Fresh Site 状态，再叠加 Party / Main Canonical Migration 后得到预期 Runtime 数据。
+1. Fresh Runtime 验证需要能够证明：Generic CMS Core → JilinJobs stable Site Provisioning → one-time Site bootstrap → stable asset projection 可以恢复当前正式 Fresh Site 状态，再按场景叠加 Party / Main Canonical Migration 后得到预期 Runtime 数据。
 2. Generic CMS-only Fresh Database 必须可独立成立且不包含任何 JilinJobs Site instance rows。
 3. Site bootstrap 必须证明 first apply、repeated apply、ordinary restart、operator mutation/deletion 后 no-overwrite / no-resurrection。
-4. 迁移站点 baseline 所产生的最终状态必须与当前已接受 `main` 行为对账；不得把“数据所有权移动”扩大为用户可见产品改版。
-5. CI / Review Environment 可以继续由当前单 Repository 编排；是否跨 Repository 组合属于后续独立架构决策。
+4. stable Site asset projection 必须从 `sites/jilinjobs/assets/**` manifest 校验 source/target/digest，并证明 create-if-missing、protected-path 与 `/static/uploads/**` exclusion。
+5. 迁移站点 baseline 所产生的最终状态必须与当前已接受 `main` 行为对账；不得把“数据所有权移动”扩大为用户可见产品改版。
+6. CI / Review Environment 可以继续由当前单 Repository 编排；是否跨 Repository 组合属于后续独立架构决策。
 
 ## Current Evidence
 
@@ -74,20 +78,14 @@
 - EU-37 已建立 Site Package v1 manifest/schema、narrow provisioner、Fresh V1 Generic Schema MySQL proof、second apply idempotency 与 ownership conflict contract；
 - EU-38 已将 Column、PageGroup、Page、NavigationLocation、SiteConfig、CmsList definition、AdvertisementSlot 七类具有 stable identity 的 JilinJobs preset structure 表达进 `sites/jilinjobs/**`；
 - EU-39 已为 NavigationItem 引入 provisioning-only nullable stable `code`，把当前 40 条正式 preset NavigationItem 表达为 `sites/jilinjobs/structure/navigation-items.json` 并完成 Legacy adoption / stable-code reconcile 过渡；
-- EU-39 final implementation Head `b95285f5424d4df0b9f9943395e80332296754f7` 已通过 Site Package Verification #15、CI #761、Canonical #152、EU-30 Upgrade #102 与人工评审环境 #678；PR #84 已合并为 `main@36276ed65e6f3edbe96ffc18c01cf18ab924837b`，Post-Integration Site Package #16 与 CI #762 全部 PASS；
 - EU-40 已把 Site Package reconcile 激活为 `cms.site-package.root` opt-in Spring lifecycle，并让 Repository Runtime、Canonical / Upgrade importer 与 Review Environment 显式消费同一 JilinJobs Site Package；
-- EU-40 final Head `b3e3dc8c4855c9e17b2dfa2f190a84d0305162e2` 的 Site Package #19、CI #768、Canonical #153、Upgrade #103、Review #683 全部 PASS；PR #86 合并为 `main@b105e553db1ebbc12a2b6665385b94fb977bea06` 后，Post-Integration Site Package #20 与 CI #769 全部 PASS，EU-40 正式 COMPLETED；
 - EU-40 后 audit 已确认原 V2 剩余 6 条 `CmsListItem` + 1 条 `Advertisement` 是 **initial operational defaults**：属于 Fresh JilinJobs site 初始状态，但初始化后由运营管理，不是 stable preset structure，也不是 Historical Canonical Migration；
-- Issue #77 comment `#issuecomment-5560955644` 已按该分类修订 Architecture，EU-41 Readiness PASS；
-- EU-41 final Head `a958c39a37892cf0fbcb41b8c883b2299d84f561` 的 Site Package #32、CI #783、Canonical #165、Upgrade #115 与 Review #696 全部 PASS；
-- PR #88 已合并为 `main@6c88eea1762e8edf465833631cadff1e4c751d36`；Post-Integration Site Package #33 与 CI #784 全部 PASS；
-- Backend active Flyway 已为 `V1__current_cms_schema.sql` + `V2__site_provisioning_schema_capabilities.sql`，仅承担 Generic CMS Schema / provisioning capabilities；`V2__current_preset_data.sql` 已退出 active lineage；
+- EU-41 已完成 Generic Schema-only Flyway lineage + current-schema one-time Site bootstrap：Backend active Flyway 为 `V1__current_cms_schema.sql` + `V2__site_provisioning_schema_capabilities.sql`，旧 `V2__current_preset_data.sql` / development V3 已退出 active lineage；
 - 七条 initial operational defaults 已进入 `sites/jilinjobs/bootstrap/**`，由 `cms_site_bootstrap_state` 提供一次性 completion state；targeted real-MySQL evidence 已证明 repeat guard 与 no-overwrite / no-resurrection；
-- Canonical #165、Upgrade #115 与 Review #696 已证明 183 篇 Party current canonical Runtime Dataset、4 条 accepted carousel、幂等导入与 EU-29→EU-30 upgrade knowledge 在新 lifecycle 下保持独立兼容；
-- EU-42 已将原 `site-baseline/static/**` 中 31 个稳定 Site assets 迁入 `sites/jilinjobs/assets/**`，并建立 package identity + source/target + SHA-256 integrity manifest、create-if-missing Runtime projection、StaticResource protected-path 与 `/static/uploads/**` exclusion；
-- PR #90 final Head `37e03c3a5d7804804dcb3738a429e57e02b99e31` 的 Site Package #34、CI #787、Review #698 全部 PASS；PR #90 合并为 `main@2c4af15df64342850391bbfe67de99b6404b3280` 后，Post-Integration Site Package #35 与 CI #788 全部 PASS；
-- Site Asset Ownership & Runtime Composition 已由 EU-42 关闭；E1～E3 re-entry 仍属于 Issue #77 后续 Slice D 边界；
-- `data-migrations/README.md` 已明确 Historical Content Migration 与 Flyway / Site Baseline 分离。
+- Canonical / Upgrade / Review evidence 已证明 183 篇 Party current canonical Runtime Dataset、4 条 accepted carousel、幂等导入与 EU-29→EU-30 upgrade compatibility 在新 lifecycle 下保持独立兼容；
+- EU-42 已将原 `site-baseline/static/**` 中 31 个稳定 Site assets 迁入 `sites/jilinjobs/assets/**`，并建立 package identity + source/target + SHA-256 integrity manifest、create-if-missing Runtime projection、StaticResource protected-path 与 `/static/uploads/**` exclusion；原目录只属于历史迁移来源描述，不再是 current source authority；
+- EU-37～EU-42 均已完成对应 exact-head、Integration 与 Post-Integration Current Evidence；当前 Roadmap / Issue #92 承担后续 Phase 顺序，不从本 Requirement 的历史 EU 编号推导 Execute Authority；
+- `data-migrations/README.md` 已明确 Historical Content Migration 与 Generic Flyway / Site Package stable structure/bootstrap/assets 分离。
 
 ## Non-goals / Deferred
 
@@ -108,13 +106,23 @@
 
 ## Current Follow-up Direction
 
-EU-37 / EU-38 / EU-39 / EU-40 / EU-41 / EU-42 已完成 Site Package Foundation、stable structure、Navigation stable identity / reconcile、explicit Runtime composition activation、Site bootstrap / Generic Schema baseline separation 与 stable Site asset ownership / Runtime projection，并均已集成到 `main` 取得 Post-Integration Current Evidence。
+EU-37～EU-42 已关闭 Site Package Foundation、stable structure、Navigation stable identity / reconcile、explicit Runtime composition activation、Site bootstrap / Generic Schema baseline separation 与 stable Site asset ownership / Runtime projection 的当前 accepted scope。
 
-当前没有 Ready Execution Unit。Operational Seed Classification & V2 Responsibility Retirement 已由 EU-41 关闭。
+EU-42 之后的剩余工作不再以旧 “Slice D 直接下一步” 表达。跨边界顺序由 Issue #92 当前 Planning Authority 统一控制：
 
-Issue #77 当前剩余 Planning Candidate 重点为：
+```text
+Phase 1  Repository Documentation Authority Convergence
+         └─ EU-43 Current Authority Semantic Reconciliation（current execution）
+               ↓
+Phase 2  Generic Historical Migration & Backend Application Boundary
+               ↓
+Phase 3  Canonical Migration Compatibility & E1～E3 Re-entry Gate
+               ↓
+Issue #60 / E1～E3
+```
 
-1. **Slice D — Canonical Migration Compatibility & E1～E3 Re-entry**：Party canonical migration、183 篇 current Runtime Dataset 与 accepted carousel state 如何在最终 Site Package + asset lifecycle 下关闭完整 compatibility，并判断 Issue #60 / E1～E3 是否解除前置等待；
-2. **Repository Split Readiness Assessment**：仅在四层 boundary 完成后独立执行，不自动拆仓。
+只有在 Phase 3 重新对账 Generic Schema → Site Package stable structure → one-time bootstrap → Generic Content Migration Application → Party Canonical Dataset → Runtime → Replaceable Public Renderer 的完整链路后，才能判断 E1～E3 re-entry 是否 PASS。
 
-上述方向当前都不是 Ready Execution Unit，也不继承 EU-42 的 Execute 授权。下一步必须基于最新 `main` 重新执行 current audit / slice-work / readiness-check。
+Repository Split Readiness Assessment 继续保持后置 Planning Candidate；只有四层 boundary 完整闭环后独立评估，不自动拆仓，也不默认阻塞 E1～E3。
+
+上述后续 Phase / Candidate 均不继承 EU-42 或 EU-43 之外的 Execute Authority；每个具体候选仍必须按 Consumer-local Method 独立完成 `slice-work → readiness-check`。

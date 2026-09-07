@@ -6,8 +6,10 @@
 - Phase: Phase 1A — Canonical Authority Audit & Reconciliation
 - Candidate formed by: `slice-work`
 - Readiness: **PASS**
-- Execute state: **READY / NOT STARTED**
+- Execute state: **IMPLEMENTED / IN REVIEW**
 - Planning baseline: `main@f8f4083d831b5a1bfffe494b541c7015dbdd3fe0`
+- Execute baseline: `main@8848d74967a638f9cda749085c16257326888d4e`
+- Implementation branch: `docs/eu-43-current-authority-reconciliation`
 - Specification / audit: `docs/project/documentation-authority-convergence.md`
 
 ## Objective
@@ -74,13 +76,20 @@
 ### Static / semantic
 
 - exact changed-file list；
-- compare against planning base；
+- compare against execute baseline；
 - stale responsibility scan：`V2__current_preset_data.sql`、`site-baseline/static`、“直接 Slice D”、AR-02-only/no-feedback wording；
 - current path verification：`sites/jilinjobs/structure`、`bootstrap`、`assets`、Generic active Flyway files。
 
 允许在明确的 **historical context** 中保留旧文件名/旧 migration number，但必须显式标注为 historical / superseded，不能让其承担 Current lifecycle。
 
-### Repository evidence
+### Current implementation evidence
+
+- Execute branch 从 exact `main@8848d74967a638f9cda749085c16257326888d4e` 创建；
+- Execute 前 Open PR = 0，base drift = none；
+- implementation compare 当前只触达 EU-43 Authority scope + 本 work artifact，不含 code/runtime/data changes；
+- PR exact-head CI / review threads / merge / post-integration evidence 仍待取得，因此当前不得声明 COMPLETED。
+
+### Repository evidence required for completion
 
 - PR exact-head CI；
 - unresolved review threads = 0；

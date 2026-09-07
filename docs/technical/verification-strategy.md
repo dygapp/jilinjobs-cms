@@ -6,21 +6,37 @@
 
 验证必须区分 Implementation Exists、Automated Completion Evidence、AI Visual Observation 与 Human Runtime Observation。没有当前提交对应、且与声明类型匹配的成功证据，不声明完成。
 
+当前 Fresh JilinJobs Runtime 的基线组合必须按真实 ownership 理解：
+
+```text
+Generic Backend Flyway
+→ JilinJobs Site Package stable structure reconcile
+→ stable Site asset projection
+→ optional one-time Site bootstrap（仅 Fresh Site install / 明确启用场景）
+→ optional Historical Canonical Migration
+→ Application / Browser / Human Review Runtime
+```
+
+Backend Flyway 不创建 JilinJobs instance rows；`sites/jilinjobs/{structure,bootstrap,assets}/**` 分别承担 stable structure、one-time defaults 与 stable Site asset source；`data-migrations/**` 独立承担 Historical Content Migration。测试代码不得重建这些 Authority。
+
 ## 2. 分层验证
 
 ### 2.1 Backend Verify
 
 独立执行 Java 21、Gradle、Kotlin/Spring Boot 编译、后端自动化测试和 bootJar。
 
-涉及数据库 Migration 的最终验证，在 Runtime 条件允许时至少覆盖一次：
+涉及 Generic CMS Schema Migration 的最终验证，在 Runtime 条件允许时至少覆盖一次：
 
 ```text
 Fresh Database
-→ Full Migration Chain
-→ Application Startup
+→ Full Active Generic Flyway Chain
+→ Generic CMS schema ready
+→ Application / required Site composition startup
 ```
 
 已有数据库上的增量验证、SQL 文件检查、编译或单元测试不能单独证明新环境初始化可用。
+
+当前 active Backend Flyway 为 `V1__current_cms_schema.sql` + `V2__site_provisioning_schema_capabilities.sql`；历史旧 V2/V3/V12 等 migration 只承担历史追溯，不得被测试当作 Current Fresh Site data lifecycle。
 
 ### 2.2 Frontend Verify
 
@@ -51,7 +67,20 @@ Profile 只提供默认风险映射；本仓库的 Requirement、Specification�
 
 Backend 和所有当前相关 Frontend Verify 都 PASS 后执行 Playwright / Browser Verification。
 
-E2E 必须消费真实 Flyway 初始化结果和版本化静态资源基线，不允许测试代码重新创建站点基础栏目、主菜单、页面组和固定页面。测试代码只补充当前验证需要的动态测试数据。
+E2E 必须消费真实 Current Runtime composition：
+
+```text
+Generic Flyway
+→ versioned JilinJobs Site Package root
+   ├─ structure reconcile
+   ├─ stable asset projection
+   └─ one-time bootstrap（若该场景要求 Fresh Site defaults）
+→ optional Canonical Migration
+```
+
+不允许测试代码重新创建站点基础栏目、主菜单、页面组、固定页面、stable assets 或 one-time default baseline。测试代码只补充当前验证需要的动态测试数据。
+
+Integrated Browser / Review Environment 的 Runtime static root 应能从空目录开始，由 `sites/jilinjobs/assets/**` manifest/projection 恢复 stable `/static/**` targets；不得复制 legacy `site-baseline/static/**` 形成第二份 Current source authority。`/static/uploads/**` 继续是 mutable Runtime Store。
 
 Functional Browser Verification 用于证明路由、交互、资源加载和已编码断言；它不能在缺少完整机器可判定容差时单独证明 Visual Fidelity。
 
@@ -85,6 +114,8 @@ External Dependency Problem
 - 如果同一产品语义在多个验证层重复硬编码，识别真正的契约所有者，删除无必要重复或共享同一权威来源；
 - 修正后重新运行当前有效验证，确认没有掩盖真实实现缺陷。
 
+特别地，若旧测试仍依赖 site-data Flyway、legacy `site-baseline` copy 或测试自建 Site structure，而 Current Authority 已要求 Generic Flyway + Site Package composition，应修正旧验证契约，不得恢复已退休的 ownership。
+
 Workflow 优先验证构建、运行环境、服务健康、HTTP/API 可达与正式测试套件，不把大量具体产品展示语义重复维护为第二套硬编码契约。
 
 ## 4. Current Evidence、Artifact 与后继提交
@@ -116,7 +147,7 @@ Workflow 优先验证构建、运行环境、服务健康、HTTP/API 可达与�
 
 Review Environment 使用 MySQL service、Backend runtime、版本化 Frontend artifact + Nginx、Playwright official runtime 和 FRP 临时外部 HTTP 地址。
 
-站点真实结构来自 Flyway + 版本化初始化静态资源包。自动测试数据不承担网站初始化职责。
+站点真实 Fresh baseline 来自 Generic Flyway + versioned JilinJobs Site Package composition：stable structure reconcile、stable asset projection，以及明确 Fresh Site 场景中的 one-time bootstrap。自动测试数据不承担网站初始化职责，legacy static baseline copy 也不再承担 Current source ownership。
 
 ### 5.1 Automated Verification 与 Human Review Baseline 隔离
 
@@ -125,8 +156,11 @@ Review Environment 使用 MySQL service、Backend runtime、版本化 Frontend a
 ```text
 Automated Verification
 → Collect Current Evidence
-→ Recreate Database / Restore Versioned Static Baseline
-→ Seed Explicit Human Review Fixtures
+→ Recreate Database / Empty Runtime Static Root
+→ Generic Flyway
+→ Restore Versioned Site Package Composition
+→ Apply explicit one-time bootstrap when required
+→ Seed Explicit Human Review Fixtures / Canonical content when required
 → Start / Expose Review Runtime
 → Verify Review Baseline and External Access
 ```
@@ -135,7 +169,8 @@ Automated Verification
 
 - 自动测试创建的菜单、栏目、文章、文件、缓存和会话不能因共用 Runtime 而默认进入 Human Review；
 - Human Review Fixture 必须显式准备，只保留确实用于人工观察的数据；
-- Reset 后重新验证测试数据已移除、版本化资源已恢复、人工 Fixture 已准备、服务健康且评审地址可访问；
+- Reset 后重新验证测试数据已移除、Site stable structure / assets 已由同一 versioned Site Package 恢复、必要 bootstrap /人工 Fixture 已准备、服务健康且评审地址可访问；
+- 不从 legacy `site-baseline/static/**` 复制第二份 current baseline；
 - Review Environment 的固定 FRP proxy / custom domain 是仓库级共享外部资源，所有会使用该资源的 PR 与手工触发路径必须进入同一 concurrency group；不同工作争用时默认排队，不因 ref 不同建立并行实例，也不把 `cancel-in-progress` 当作默认互斥策略。只有新 Run 确实取代旧工作且取消后的 FRP 释放闭环可靠时才允许取消；Run cancellation 与代理实际释放 / 新 Run 归属必须分别验证。
 
 ### 5.2 Bind Mount Ownership 与可重复恢复
@@ -145,10 +180,10 @@ Automated Verification
 - 写入 Runtime 的 UID / GID；
 - host 文件 ownership / permissions；
 - 清理动作使用的已授权身份；
-- Reset 后重新复制或重建版本化基线；
+- 清理后从 versioned Site Package 重新投影 stable assets / 恢复 required baseline；
 - 相同 Reset 是否可再次执行并得到同一状态。
 
-调用 `rm -rf` 本身不构成 Cleanup Evidence；应重新检查目标路径、预期基线内容和后续 Runtime 结果。
+调用 `rm -rf` 本身不构成 Cleanup Evidence；应重新检查目标路径、预期 Site Package composition 和后续 Runtime 结果。
 
 这些清理规则只适用于已授权的临时验证 / 评审环境，不扩展为 Production 或共享数据的破坏性清理授权。
 
@@ -211,24 +246,13 @@ Reference Evidence
 
 ### 7.1 Reference Evidence
 
-从当前原网站运行时直接取得必要证据，例如：
-
-- 完整页面截图；
-- DOM / computed style；
-- 真实静态资源 URL；
-- 页面宽度、颜色、间距、图片比例和响应式表现。
+从当前原网站运行时直接取得必要证据，例如：完整页面截图、DOM / computed style、真实静态资源 URL、页面宽度、颜色、间距、图片比例和响应式表现。
 
 不得凭聊天记忆、旧截图印象或实现便利性自行推断视觉事实。
 
 ### 7.2 AI Visual Comparison
 
-在 Human Review 前，优先使用 Review Runtime 完整截图与参考截图对照，消除明显的：
-
-- 大面积颜色偏差；
-- Header / Nav / Footer 结构偏差；
-- 主要区块比例和层级偏差；
-- 图片资源错误或缺失；
-- 明显裁切、溢出和响应式问题。
+在 Human Review 前，优先使用 Review Runtime 完整截图与参考截图对照，消除明显的大面积颜色、Header/Nav/Footer 结构、主要区块比例、资源、裁切/溢出/响应式偏差。
 
 AI Visual Comparison 是人工评审前的收敛手段，不替代 Human Visual Review。
 
@@ -242,7 +266,7 @@ AI Visual Comparison 是人工评审前的收敛手段，不替代 Human Visual 
 
 ## 8. 外部媒体与二进制输入验证
 
-如果外部站点、接口、附件或其他 Repository 提供的二进制/媒体资源将进入版本化站点基线、后台静态资源或目标 Runtime，应按当前风险核对真实内容：
+如果外部站点、接口、附件或其他 Repository 提供的二进制/媒体资源将进入版本化 Site Package assets、Canonical Migration assets、后台静态资源或目标 Runtime，应按当前风险核对真实内容：
 
 ```text
 Acquire
@@ -255,6 +279,8 @@ Acquire
 
 文件名、扩展名、URL 后缀和响应头不能单独证明内容类型。图片等资源在相关时应验证实际解码，并核对影响当前声明的尺寸/透明度等属性。格式不匹配时更正命名、转换或拒绝输入，禁止只改扩展名。规范化后重新验证生成物。
 
+stable Site asset promotion 后应同时验证 package source digest、manifest target 与 Runtime projection；Historical content asset 则继续验证 canonical migration-relative path / digest / Runtime rewrite，不混同两种 ownership。
+
 ## 9. 当前管理端收敛验证路径
 
 管理端工程分离与功能收敛阶段至少遵循：
@@ -262,11 +288,11 @@ Acquire
 1. Backend Verify；
 2. Public Site Frontend Verify；
 3. Admin Frontend Verify；
-4. 集成 Runtime 启动，验证 `/`、公开 canonical URL、`/admin/` 和 `/api/**` 路由；
+4. 按 Current Site Package composition 启动集成 Runtime，验证 `/`、公开 canonical URL、`/admin/` 和 `/api/**` 路由；
 5. Browser E2E 验证管理端自身核心流程；
 6. Browser E2E 验证后台变更到公开站展示的跨边界闭环；
 7. 收集当前 Head 的测试报告、trace / screenshot 等必要 Current Evidence；
-8. 自动验证后恢复数据库和版本化静态资源基线；
+8. 自动验证后 Recreate DB + Empty Runtime static root，并从 Generic Flyway + versioned Site Package 恢复干净 baseline；
 9. 注入明确的 Human Admin Review Fixture，并验证自动测试残留已清除；
 10. 验证外部 Review URL 的公开站与 `/admin/` 均可访问；
 11. 进入 Human Admin Review；
@@ -274,14 +300,14 @@ Acquire
 
 ### 9.1 V4.6 数据契约专项验证
 
-本轮图片数据策略与网站属性元数据必须至少形成以下机器证据：
+图片数据策略与网站属性元数据至少形成以下机器证据：
 
-- Backend 单元测试：SiteProperty metadata groups 能按 order 输出；未知 group 拒绝；INTEGER 校验；`CAROUSEL_INTERVAL_SECONDS` 拒绝 0/负数；
+- Backend 单元测试：SiteProperty metadata groups 能按 order 输出；未知 group 拒绝；INTEGER 校验；当前轮播 interval key 拒绝 0/负数；
 - Backend 单元测试：Column `NONE` 拒绝站内文章封面；`REQUIRED` 允许无封面 DRAFT 但阻止 publish；PUBLISHED Article update 不得删除 REQUIRED 封面；Public Summary 能返回封面引用；
 - Browser/API：HOME_CAROUSEL 定义为 REQUIRED，当前 SITE_LINKS 基线为 NONE；直接 API 对 REQUIRED 缺图与 NONE 带图均拒绝，证明约束不只存在于 UI；
-- Admin Browser：栏目 REQUIRED 策略、文章 REQUIRED 提示、列表 NONE/REQUIRED UI、SiteProperty 左侧 PRESENTATION 元数据分组和受控 group Select 可观察；
+- Admin Browser：栏目 REQUIRED 策略、文章 REQUIRED 提示、列表 NONE/REQUIRED UI、SiteProperty PRESENTATION 元数据分组和受控 group Select 可观察；
 - Admin Browser：INTEGER 非整数输入在 UI 被阻止；最终正整数约束仍由 Backend 证明；
-- Cross-boundary Browser：临时把 `CAROUSEL_INTERVAL_SECONDS` 改为 1 秒并为 HOME_CAROUSEL 增加第二张有效图片，打开真实公开首页后验证 `data-carousel-item-id` 在时限内实际变化；finally 删除测试项并恢复原配置。
+- Cross-boundary Browser：在受控 fixture 中修改当前 carousel interval 并增加第二张有效图片，验证真实公开首页 item identity 在时限内变化，finally 清理测试项并恢复配置。
 
 这些策略只验证“数据是否允许/要求图片”和轮播行为参数，不建立“图片策略决定页面布局”的断言；不得把数据契约误写成 `displayMode`。
 
@@ -293,15 +319,15 @@ Acquire
 - 文章栏目导航与网站属性分组面板至少各验证一次收起/展开；收起后右侧内容仍可操作且恢复按钮可见；
 - 表格图标操作必须保留 `aria-label`，Browser role/name 定位继续通过；至少对一个操作执行 hover 并验证 Tooltip 文本；
 - 网站属性 Table 不再包含常驻可编辑输入/图片上传器；点击“编辑值”后才出现类型化 Dialog；
-- `CAROUSEL_INTERVAL_SECONDS` 在值编辑 Dialog 中仍拒绝非整数；动态 JSON 属性在值编辑 Dialog 中仍拒绝非法 JSON；
+- carousel interval 在值编辑 Dialog 中仍拒绝非整数；动态 JSON 属性在值编辑 Dialog 中仍拒绝非法 JSON；
 - SiteProperty 定义 Dialog 与值编辑职责分离，新建定义仍允许初始值；
 - 不增加“后台显示风格”系统属性、用户配置 API、Profile 数据或其他与当前无账号基线冲突的持久化能力。
 
 ### 9.3 图片预览与配置治理专项验证
 
-统一图片预览与受保护资源配置整改至少验证：
+统一图片预览与受保护资源配置至少验证：
 
-- `cms.static.protected-resources` 的默认值能够保护工程基线资源，并允许通过 `CMS_STATIC_PROTECTED_RESOURCES` 进行部署覆盖；固定工程保护路径不得再次散落写入 `StaticResourceService`；
+- `cms.static.protected-resources` 的部署固定路径与 Site Package stable targets 共同进入保护集合；具体 stable JilinJobs asset source/target 由 `sites/jilinjobs/assets/**` manifest 持有，不再次散落硬编码在 `StaticResourceService`；
 - 当前启用的网站属性 `RESOURCE_PATH`、列表图片、宣传展示图片和导航图标仍由 Backend Runtime 动态加入受保护集合，不改为管理员人工维护的 `protected=true` 数据字段；
 - Admin 静态资源列表使用“受保护”语义，受保护资源普通删除入口禁用且 Backend 最终拒绝删除，明确替换行为仍可使用；
 - 网站属性、列表、宣传展示、导航和静态资源等需要辨识图片内容的位置复用统一自适应图片组件，不再各自维护白底 `<img>` 预览；
@@ -311,22 +337,24 @@ Acquire
 
 ## 10. AI Implementation Review
 
-最终 Completion Evidence 前，必须对本轮实现差异执行 Authority-oriented AI Review，至少检查：
+最终 Completion Evidence 前，必须对本轮实现差异执行 Authority-oriented AI Review，至少检查与当前 Unit 相关的：
 
-- Requirement V4.6、CMS Core / Admin / Public Specifications 与 Technical Plan 是否一致；
-- 未新增“系统设置”模块、认证/角色/权限或其他越界能力；
+- Requirement / Specification / Technical Plan 是否一致；
+- Backend 是否仍为数据约束最终层；
+- Public/Admin contract 是否被无意改变；
+- Generic Flyway、Site Package structure/bootstrap/assets、Historical Migration ownership 是否被错误混合；
+- 旧 migration / baseline path 若出现，是否明确是 historical/superseded context；
 - `ContentImagePolicy` 没有演变成展示模式；
-- Backend 是图片必填/禁用、属性分组、整数值等最终约束层；
-- 已发布 Article 不存在通过普通编辑绕开 REQUIRED 封面的状态漏洞；
+- 已发布 Article 不存在绕开 REQUIRED 封面的状态漏洞；
 - Public Summary 真正补齐 cover resource，而不只是 DTO 字段存在；
-- HOME_CAROUSEL interval 的配置、读取、实际 timer 行为和 cleanup fixture 一致；
+- carousel interval 的配置、读取、实际 timer 行为和 cleanup fixture 一致；
 - 管理端收起状态仅为前端界面状态，没有引入新的系统/用户配置模型；
-- 图标化操作保留可访问名称，网站属性值编辑从列表内联迁移到 Dialog 后没有削弱原有类型校验和 Backend 约束；
-- 固定工程受保护资源由 Spring 外部化配置拥有，CMS 当前引用资源继续由 Backend 动态计算，不能把两类保护来源混成管理员维护字段；
-- 图片缩略图统一复用自适应公共组件，Element Plus `el-image` 负责通用 Viewer 能力，没有重复实现预览 Dialog / Viewer；
-- 新发现的硬编码候选已按 `configuration-governance.md` 判断其责任层；稳定领域、安全和页面模板契约不得为了消除常量而错误配置化；
-- CI / Review / FRP 环境参数不得进入 CMS 网站属性；只有在确有环境差异需求时才迁移为 Repository / Environment / Deployment Variables；
-- V11/V12 等既有 migration 没有因纯管理端视觉或配置治理调整被回改；
+- 图标化操作保留可访问名称，网站属性值编辑职责没有削弱 Backend 类型约束；
+- 固定部署保护路径、Site Package stable targets、CMS Runtime current references 三类 protected-resource source 不被混成管理员维护字段；
+- 图片缩略图统一复用自适应公共组件，Element Plus `el-image` 负责通用 Viewer 能力；
+- 新发现的硬编码候选已按 `configuration-governance.md` 判断责任层；
+- CI / Review / FRP 环境参数不得进入 CMS 网站属性；
+- historical migration 不因纯文档/视觉调整被回改；
 - Implementation Minimality 没有引入无当前证据支持的抽象、配置、依赖、扩展点、框架层或未来设计；
 - Final Diff Scope 中每个有意义区域能追溯到当前 Unit、验证、Authority 同步、必要 preparatory refactor 或其直接 cleanup；
 - 无无关文件、临时文件、调试入口或测试残留进入 PR。
@@ -346,12 +374,15 @@ Actions 中 queued / pending / in_progress 均为中间状态。
 
 Dispatch / rerun API 返回成功不等于验证完成。
 
-## EU-42 Site Package Asset Projection Verification
+### 11.1 Site Package / Asset Projection Current Verification
 
-Slice C 的稳定资源交付必须在 exact head 上同时证明：
+当前 Site Package stable resource / lifecycle 相关变更在 exact head 上至少按实际影响证明：
 
-- `verifySitePackageAssets`：asset manifest identity / path / duplicate-target / SHA-256 fail-fast；fresh projection；重复 projection 幂等；缺失 target create-if-missing；operator replace 跨 projection / restart 保留；package target 普通删除拒绝而显式 replace 允许；`/static/uploads/**` 不被接管；代表性 Main / Party / brand 资源可由静态资源公开解析。
-- `verifyRuntimeSitePackageComposition`：普通 Runtime composition 同时收敛 stable structure 与 stable asset projection，且第二次启动保持幂等。
-- `Site Package Verification` workflow：覆盖 provisioning、stable structure、runtime composition、bootstrap separation 与 asset projection，并在 provisioning / static-resource / `sites/**` 变化时触发。
-- 主 `CI` Integrated Browser：从空 Runtime Static Root 启动 Backend，由 Site Package projection 恢复 `/static/**` 后再执行 Public / Admin 浏览器验证。
-- `人工评审环境`：初始化与 clean reset 均从空 Runtime Static Root 组合 Site Package，不得复制 legacy `site-baseline/static/**`。
+- `verifyStableSiteStructure`：Generic schema 无 Site rows、stable Site first/second apply、stable identity reconcile 与 operator ownership；
+- `verifyRuntimeSitePackageComposition`：普通 Runtime composition 收敛 stable structure + stable asset projection，且不隐式执行 one-time bootstrap；
+- `verifySiteBootstrapBaselineSeparation`：Generic active Flyway、one-time completion state、repeat guard、operator edit/delete no-overwrite / no-resurrection；
+- `verifySitePackageAssets`：asset manifest identity / path / duplicate-target / SHA-256 fail-fast、fresh projection、create-if-missing、operator replace persistence、protected delete、`/static/uploads/**` exclusion 与代表性 Main / Party / brand Runtime resource；
+- 主 `CI` Integrated Browser：从 empty Runtime Static Root 启动 Backend，由同一 Site Package root 恢复 structure / assets / required bootstrap 后执行 Public / Admin Browser verification；
+- `人工评审环境`：初始化与 clean reset 同样从 empty Runtime Static Root + Generic Flyway + Site Package composition 恢复，不得复制 legacy `site-baseline/static/**`。
+
+旧 EU-42 名称 / run 可以作为 historical evidence locator，但本节定义的是 Current Verification responsibility；未来 Head 必须按实际影响重新取得 Current Evidence。

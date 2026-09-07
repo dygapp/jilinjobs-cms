@@ -1,15 +1,17 @@
 # Historical Content Migration Workspace
 
-`data-migrations/` 承担历史运营内容迁移资产，与 Flyway、`site-baseline` 和运行时数据库保持职责分离。
+`data-migrations/` 承担历史运营内容迁移资产，与 Generic Backend Flyway、JilinJobs Site Package 和运行时数据库保持职责分离。
 
 本 README 是 Consumer Repository 内历史内容迁移数据组织的长期约定。Party / EU-29 是首个落地场景；后续主站历史文章、外链、运营列表等迁移应优先沿用本约定，而不是为每个站点重新设计一套 Snapshot 结构。
 
 ## 1. 边界
 
-- Flyway：稳定数据库结构、预置栏目 / 列表容器等结构基线。
-- `site-baseline/static/**`：稳定工程视觉资源。
-- `data-migrations/**`：历史文章、外链、正文资源、附件、运营列表成员的采集证据、标准化迁移数据、导入工具和迁移报告。
+- Backend Flyway：只承担 Generic CMS Schema evolution 与 site-neutral provisioning capability；不承担具体 JilinJobs 站点实例数据。
+- `sites/jilinjobs/structure/**`：稳定 JilinJobs Site structure；`sites/jilinjobs/bootstrap/**`：Fresh Site one-time operational defaults；`sites/jilinjobs/assets/**`：稳定 Site asset 的唯一版本化 source owner，Runtime target 继续为 `/static/**`。
+- `data-migrations/**`：历史文章、外链、正文资源、附件、历史运营列表成员的采集证据、标准化迁移数据、导入工具和迁移报告。
 - CMS Runtime Database：迁移后的运行时数据，不作为历史迁移源文件。
+
+Historical Migration 可以引用 Site Package 已 provision 的稳定 Column alias / List code 等 identity，但不得接管 Site stable structure、Fresh Site bootstrap 或 stable Site asset ownership。历史文章 / 正文 / 附件 / 历史轮播资源仍随对应 Canonical Migration unit 管理，不进入 stable Site asset manifest。
 
 本目录按未来可独立迁出仓库的方式组织；迁移数据仍与 `jilinjobs-cms` 同仓，以便 CMS Schema、Importer 与 Runtime Verification 在同一 CI 中闭环。
 
@@ -170,7 +172,7 @@ Importer 负责：
 
 ## 7. 运营列表 / 轮播
 
-轮播和其他运营列表成员也应采用与文章类似的可独立管理单元，而不是长期依赖一个整包资源目录。
+轮播和其他历史运营列表成员也应采用与文章类似的可独立管理单元，而不是长期依赖一个整包资源目录。
 
 推荐结构：
 
