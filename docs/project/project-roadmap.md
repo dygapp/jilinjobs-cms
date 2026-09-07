@@ -1,6 +1,6 @@
 # 项目演进路线与当前状态
 
-本文是 `jilinjobs-cms` Consumer Repository 的 Project Roadmap。它只维护当前演进状态、长期边界与下一 Planning Gate；详细 EU 历史、Verification 与阶段追溯由对应 `docs/work/**`、Issue / PR / Actions Evidence 承载。
+本文是 `jilinjobs-cms` Consumer Repository 的 Project Roadmap。它只维护当前演进状态、长期边界与下一 Planning Gate；详细 Execution Unit、Verification 与阶段追溯由 `docs/work/archive/**`、GitHub Issue / PR / Actions Current Evidence 承载。
 
 ## 方法基线
 
@@ -10,7 +10,7 @@ Validation Baseline: master@d9fad0da83dbdb61cac5eb9778b0258c6861eef1
 Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be6b8535b3690daf3533ee22a46
 ```
 
-普通开发优先读取 Consumer-local `AGENTS.md`、`README.md`、`docs/project/development-method.md`、本 Roadmap 与当前 Requirement / Specification / Technical Plan。Planning / Requirement Candidate 在 `slice-work` 前不具有 Execution Unit 身份；只有 `slice-work` 形成 Candidate Execution Unit 且 `readiness-check` PASS 后才允许进入 Execute。Roadmap 顺序、Issue 编号、未来 EU 名称或模型评审结果都不能替代 Readiness。
+普通开发优先读取 Consumer-local `AGENTS.md`、`README.md`、`docs/README.md`、`docs/project/development-method.md`、本 Roadmap 与当前 Requirement / Specification / Technical Plan。Planning / Requirement Candidate 在 `slice-work` 前不具有 Execution Unit 身份；只有 `slice-work` 形成 Candidate Execution Unit 且 `readiness-check` PASS 后才允许进入 Execute。Roadmap 顺序、Issue 编号、未来 EU 名称或模型评审结果都不能替代 Readiness。
 
 ## 总体路线
 
@@ -23,9 +23,10 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | EU-32～EU-35 Admin Governance / Rich Text | 已完成 | List definition governance、Admin guidance responsibility、HTML safety、shared Tiptap authoring |
 | EU-36 Public Frontend Source Isolation | 已完成 | Public production source 退出 Admin endpoint knowledge，managed resource projection 由 Backend Public contract 承担 |
 | EU-37～EU-42 Site Package Boundary | 已完成当前 accepted scope | Site Package contract、stable structure、Navigation identity、Runtime composition、one-time bootstrap、Generic Schema separation、stable asset ownership 均闭环 |
-| Issue #92 E1～E3 前置 Repository Authority / Migration Architecture Convergence | **当前 Planning Priority / Phase 1 IN PROGRESS** | Phase 0 与 Phase 1A audit / EU-43 / EU-44 已完成；Phase 1B dependency closure / `slice-work → readiness-check` 已形成 **EU-45 Ready / NOT STARTED**；下一 Gate = Fresh Context EU-45 Execute after base-drift revalidation |
-| Issue #60 / E1～E3 Main Site Formal Content | 前置依赖等待 | 等待 Issue #92 / #77 的 Documentation Authority、Historical Migration / Backend Application Boundary 与 final compatibility re-entry gate |
-| Repository Split Readiness Assessment | 后置 Planning Candidate | 只有四层 boundary 完成后独立评估；不自动拆仓，不默认阻塞 E1～E3 |
+| Issue #92 Phase 0～1 Repository Authority Convergence | **已完成** | Phase 0 Planning Authority 与 Phase 1 EU-43 / EU-44 / EU-45 均完成；Current Ready Execution Unit = **NONE** |
+| Issue #92 Phase 2 Generic Historical Migration & Backend Application Boundary | **下一 Planning Candidate** | 尚未形成 Candidate / Ready Execution Unit；必须独立完成 Planning / `slice-work → readiness-check` |
+| Issue #60 / E1～E3 Main Site Formal Content | 前置依赖等待 | 等待 Issue #92 Phase 2 与 Phase 3 final compatibility / re-entry gate |
+| Repository Split Readiness Assessment | 后置 Planning Candidate | 只有四层 boundary 与 compatibility 收口后独立评估；不自动拆仓，不默认阻塞 E1～E3 |
 | Issues #57 / #59 / #60 其他候选 | 规划层保留 | C1/C2、Browser Compatibility、Public Rendering Architecture 等保持独立，不因 Issue #92 自动扩大 |
 
 ## 当前已接受长期边界
@@ -75,101 +76,47 @@ sites/jilinjobs/
 
 ## 当前 Planning Priority — Issue #92
 
-总体规划文档：
+总体规划：`docs/project/pre-e1e3-convergence-plan.md`。
 
-```text
-docs/project/pre-e1e3-convergence-plan.md
-```
+Documentation Authority Map：`docs/README.md`。
 
-Phase 1 current audit / slice Authority：
+Phase 1 audit / classification / closure Authority：`docs/project/documentation-authority-convergence.md`。
 
-```text
-docs/project/documentation-authority-convergence.md
-```
-
-当前 Ready Execution Unit：
-
-```text
-docs/work/eu45-documentation-information-architecture.md
-```
+Current Ready Execution Unit：**NONE**。
 
 Issue #77 继续承担四层产品 / 技术边界；Issue #92 承担跨 Repository Documentation Governance、Historical Migration / Backend Application Boundary 与 Issue #60 re-entry 的总体顺序。
 
 ### Phase 0 — Planning Authority Solidification — COMPLETED
 
-Phase 0 已完成；当时没有形成实现 EU，也没有进入 Issue #60 / E1～E3。
+Phase 0 已完成 Issue #92 / #77 / Roadmap / Site Package Planning 的总体路线对齐，并通过 AR-02 / AR-04 bounded architecture review 校正 Phase 2A planning。模型 Review 只构成 Review Evidence，不替代 Repository Authority / Readiness；跨项目方法候选已通过 `dygapp/agentic-dev` Issue #71 反馈，不构成本 Consumer 的额外 Method Authority。
 
-已完成结果：
+### Phase 1 — Repository Documentation Authority Convergence — COMPLETED
 
-- Issue #92、Issue #77、本 Roadmap、`site-package-planning.md` 与总体规划已统一到新的 E1～E3 前置路线；
-- PR #93 已完成 Planning Authority 固化并集成；
-- AR-02 完成 `gpt-5.6-sol` / medium 与 `gpt-6-astra` / high paired review，两次 Verdict 均为 `SUPPORTED_WITH_CHANGES`，共同 findings 已修订 Phase 2A；
-- AR-04 使用缺陷发现前的冻结两阶段 migration extraction candidate 做 retrospective blind discovery；Sol 与 Astra 均为 `BLOCKING_CONCERN`、Human discovery = `DETECTED`、隐藏 assertions `8/8 PASS`；
-- AR-04 证明该已知 sequencing flaw 不需要 Astra 才能发现，当前实验策略收敛为 lower-cost capable review first、仅在 unresolved / conflicting / deliberate second opinion 时选择性升级 Astra；
-- PR #94 已固化 AR-04 corpus / evidence lifecycle 并集成；
-- 具有跨项目复用价值的模型路由 / blind paired eval Evidence 已提交到 `dygapp/agentic-dev` Issue #71；该 Issue 只是外部 Evidence，不构成本 Consumer 或 `agentic-dev` 的新 Method Authority。
+Phase 1 已完成从语义 Currentness 到物理 Documentation Information Architecture 的完整闭环：
 
-### Phase 1 — Repository Documentation Authority Convergence — IN PROGRESS
+1. **EU-43 — Current Authority Semantic Reconciliation — COMPLETED**：修复四层 lifecycle / ownership / currentness drift；
+2. **EU-44 — Canonical Product Authority Consolidation — COMPLETED**：`information-publishing.md` 成为 consolidated V4.9，EU-30 amendment 降为 `SUPERSEDED / TRACEABILITY`，CMS Core / Backend Authority 对齐 current Site/Schema ownership；
+3. **EU-45 — Documentation Information Architecture & Archive Migration — COMPLETED**：Root README 收敛为稳定入口，`docs/README.md` 成为 Authority Map，Requirements / Specifications / Technical 与 Work 建立 Current / archive 物理边界，supporting method note 移入 `docs/project/`，Current links / subtree README / gate locator 同步收口。
 
-Phase 1A 已完成 current audit、Authority Clarification、Ready Specification，以及 Slice A / EU-43 与 Slice B / EU-44 的 `slice-work → readiness-check → Execute → Integration → Post-Integration` 闭环。EU-44 已把 EU-30 accepted change 与 EU-41/EU-42 current ownership 折回 canonical Product / CMS / Backend Authority。
+Phase 1 分类 contract 继续有效：`CURRENT / PARTIALLY_CURRENT / SUPERSEDED / HISTORICAL_EVIDENCE`。只有 Phase 1 已明确为 `SUPERSEDED / HISTORICAL_EVIDENCE` 的文档进入 archive；`PARTIALLY_CURRENT` 且仍承担当前语义的文档继续留在 Current 根级。
 
-Phase 1B 已从当前 `main@9435fc4d2a34f83ec683457d32f326b954b6db76` 完成 dependency closure、Ready Specification、Technical Planning necessity 判断、`slice-work` 与 `readiness-check`，形成 **EU-45 — Documentation Information Architecture & Archive Migration**。Readiness = **PASS**，Execute = **NOT STARTED**。本 planning/readiness change 集成到 `main` 后，下一 Gate 是新的 Fresh Context 从集成 commit 重新核验 base drift 后执行 EU-45；不得从 EU-44 继承 Execute Authority。
-
-#### Unit 1A — Canonical Authority Audit & Reconciliation — COMPLETED
-
-Current audit 已按 `CURRENT / PARTIALLY_CURRENT / SUPERSEDED / HISTORICAL_EVIDENCE` 分类 Root README、Requirements、Specifications、Technical、Work、`data-migrations/**` 与必要 subtree README gap。
-
-审计确认的主要 currentness drift 已按 dependency 顺序关闭：
-
-- EU-41 后旧 `V2__current_preset_data.sql` / Flyway Site Data responsibility；
-- EU-42 后旧 `site-baseline/static/**` stable Site asset source ownership；
-- historical V12/V14/V15/V16 等实现历史被写成 Current lifecycle；
-- Issue #77 旧 Slice D direct-next-step wording；
-- `pre-e1e3-convergence-plan.md` AR-02-only / “暂不反馈 agentic-dev” experiment wording；
-- EU-30 Amendment 与 V4.8 主 Requirement 的并行 Current Authority。
-
-前五类由 **EU-43 — Current Authority Semantic Reconciliation** 关闭；最后一类由 **EU-44 — Canonical Product Authority Consolidation** 关闭。`information-publishing.md` 当前为 consolidated V4.9，EU-30 amendment 已降为 `SUPERSEDED / TRACEABILITY`。
-
-Phase 1A slice result：
-
-1. **EU-43 — Current Authority Semantic Reconciliation — COMPLETED**；
-2. **EU-44 — Canonical Product Authority Consolidation — COMPLETED**。
-
-当前 completed work artifacts：
+Completed work artifacts 位于：
 
 ```text
-docs/work/eu43-current-authority-semantic-reconciliation.md
-docs/work/eu44-canonical-product-authority-consolidation.md
+docs/work/archive/eu43-current-authority-semantic-reconciliation.md
+docs/work/archive/eu44-canonical-product-authority-consolidation.md
+docs/work/archive/eu45-documentation-information-architecture.md
 ```
 
-EU-43 / EU-44 Execute Authority 均已随完成终止；Phase 1B、Phase 2 与 E1～E3 均不得继承。
+`docs/**/archive/**` 与 `docs/work/archive/**` 默认不参与 Fresh Context Current Authority 恢复。EU-43 / EU-44 / EU-45 Execute Authority 均已随完成终止，不延伸到 Phase 2 或 E1～E3。
 
-#### Unit 1B — Documentation Information Architecture & Archive Migration — EU-45 READY / NOT STARTED
+### Phase 2 — Generic Historical Migration & Backend Application Boundary — PLANNING CANDIDATE
 
-Ready Unit：
-
-```text
-docs/work/eu45-documentation-information-architecture.md
-```
-
-Ready scope：
-
-- Root README 收敛为稳定项目入口；
-- `docs/README.md` 成为 Authority Map；
-- Requirements / Specifications / Technical 根级默认只保留 Current canonical Authority，并把 Phase 1A 已明确 `SUPERSEDED / HISTORICAL_EVIDENCE` 的文件移入对应 archive；
-- `work/` 建立 current / archive lifecycle；
-- `docs/agentic-dev-continuous-execution-mode.md` 作为 Current supporting method note 移入 `docs/project/`，不误归档为 Historical Work；
-- `archive/**` 默认不参与 Fresh Context Current Authority 恢复；
-- 更新全部 Current Authority 链接与 `backend/`、`frontend/`、`sites/`、`sites/jilinjobs/` 必要 subtree README；
-- 不修改 `data-migrations/**`、产品行为、runtime、schema、API 或 Phase 2 architecture。
-
-Phase 1B 因目录 move、Authority Map 与 link repair 必须原子一致，被切为单一 EU-45。额外持久 Technical Plan 不需要；目标 IA 已由 Phase 1 Planning Authority 固化。EU-45 只有在本 readiness change 集成后才具有 Execute Authority，且 Execute 前仍必须 Fresh Context base-drift revalidation。
-
-### Phase 2 — Generic Historical Migration & Backend Application Boundary
+Phase 2 目前只有 Planning Authority，没有 Candidate / Ready Execution Unit。下一会话必须先重新核验最新 `main`、Issue #92 / #77、Open PR / Actions 与当前 Authority，再从 Phase 2 dependency closure / Specification / Technical Planning 的实际下一步开始；不得把下述 Planned Unit 名称当成 Execute Authority。
 
 #### Planned Unit 2A — Backend Application / Core Boundary Foundation
 
-2A 需要冻结的是 application lifecycle、Spring composition、compile/runtime dependency 与 artifact responsibility，不预先把某个 Gradle 目录形态当成 Requirement。
+2A 需要冻结 application lifecycle、Spring composition、compile/runtime dependency 与 artifact responsibility，不预先把某个 Gradle 目录形态当成 Requirement。
 
 目标依赖：
 
@@ -239,51 +186,17 @@ Generic CMS Schema
   → Replaceable Public Renderer
 ```
 
-若 Current Evidence 已闭环全部 obligation，则直接记录 compatibility closure / E1～E3 re-entry PASS；只有发现具体 implementation gap 才通过 `slice-work` 形成新的 Candidate Execution Unit。
+若 Current Evidence 已闭环全部 obligation，则直接记录 compatibility closure / E1～E3 re-entry PASS；只有发现具体 implementation gap 才通过 `slice-work` 形成新的 Candidate Execution Unit。Phase 3 PASS 前不得进入 Issue #60 / E1～E3 Execute。
 
 ### Phase 4 — Repository Split Readiness Assessment
 
-继续 deferred，只有四层 boundary 完成后独立评估。Assessment 不等于自动拆仓。
+继续 deferred，只有四层 boundary 与 final compatibility 完成后独立评估。Assessment 不等于自动拆仓。
 
 ## Architecture Review Eval Experiment
 
-Consumer-local 实验入口：
+Consumer-local 实验入口仍位于 `evals/architecture/**`。当前结论保持 **ADJUST**：只在真实高返工成本架构问题具有独立挑战价值时使用 bounded eval；默认 lower-cost capable review first，只有 unresolved / conflicting / deliberate second opinion 时才升级 Astra。模型 review 只构成 Review Evidence，不覆盖 Repository Authority / readiness-check。
 
-```text
-evals/README.md
-evals/architecture/pre-e1e3-convergence-review.json
-evals/architecture/ar04-migration-sequencing-review.json
-evals/run_architecture_review.py
-evals/run_ar04_review.py
-```
-
-当前实验结论：**ADJUST**。
-
-当前执行原则：
-
-- 只在真实高返工成本架构问题确有独立挑战价值时使用 bounded eval；
-- 默认先运行 lower-cost capable model；
-- 只有第一轮仍存在 unresolved ambiguity、冲突证据，或明确需要额外独立 second opinion 时才升级 Astra；
-- 每个 scenario 独立 Fresh / ephemeral run，只复制显式 context paths；
-- assertions / expected behavior / provenance / historical results 不进入 runtime workspace；
-- process exit 0 不等于 PASS，必须人工语义评分；
-- 模型 review 只构成 Review Evidence，不覆盖 Repository Authority / readiness-check；
-- 不为了“完成 corpus”机械运行 AR-01 / AR-03，也不把 Astra 变成关键问题默认评审模型。
-
-当前证据包含两个真实 paired scenario：
-
-- AR-02：两模型均 `SUPPORTED_WITH_CHANGES`，Astra 有有限增量但无独占 blocking discovery；
-- AR-04：两模型均独立 `DETECTED` 已知 migration sequencing flaw，隐藏 assertions 均 `8/8 PASS`；Astra 未发现 Sol/medium 漏掉的 blocking flaw。
-
-因此当前 model-routing 候选策略为：
-
-```text
-bounded eval when justified
-→ lower-cost capable review first
-→ escalate only if unresolved / conflicting / deliberate second opinion
-```
-
-跨项目 Evidence 已提交 `dygapp/agentic-dev` Issue #71，由该仓库独立决定是否具备长期方法价值。完整 evidence lifecycle、paired results、usage 与 model observability limitation 见 `evals/README.md` 和 Issue #92。
+AR-02 与 AR-04 paired results、usage、model observability limitation 与跨项目反馈 lineage 见 `evals/README.md`、Issue #92 与 `dygapp/agentic-dev` Issue #71。
 
 ## 已完成里程碑摘要
 
@@ -295,11 +208,8 @@ bounded eval when justified
 | 2026-09-05 | EU-31～EU-35 完成 Database baseline、List/Admin governance、Rich Text safety / authoring |
 | 2026-09-06 | EU-36 完成 Public source isolation；Issue #77 成为 E1～E3 前置四层边界入口 |
 | 2026-09-06～2026-09-07 | EU-37～EU-42 完成 Site Package contract、stable structure、Runtime composition、Schema/bootstrap separation 与 stable assets |
-| 2026-09-07 | Issue #92 / PR #93 完成 E1～E3 前置总体路线固化；AR-02 修订 Phase 2A；PR #94 完成 AR-04 blind paired eval 并将跨项目 Evidence 提交 agentic-dev Issue #71；Phase 0 收口 |
-| 2026-09-07 | Phase 1A current audit / Authority Clarification、EU-43 Current Authority Semantic Reconciliation 与 EU-44 Canonical Product Authority Consolidation 完成并取得集成后 Current Evidence |
-| 2026-09-07 | Phase 1B dependency closure / `slice-work → readiness-check` 完成，形成 EU-45 Documentation Information Architecture & Archive Migration Ready Unit；等待本 readiness change 集成后由 Fresh Context Execute |
-
-详细执行、exact-head、Integration 与 Post-Integration Evidence 继续以对应 `docs/work/**`、Issue comments、PR 与 Actions 为准。
+| 2026-09-07 | Issue #92 Phase 0 完成；总体路线与 bounded architecture-review evidence 收口 |
+| 2026-09-07 | Phase 1 EU-43 / EU-44 / EU-45 完成 Repository Documentation Authority semantic + physical IA 收敛；Current Ready Execution Unit 返回 NONE |
 
 ## 其他 Planning Candidates
 
@@ -315,20 +225,14 @@ bounded eval when justified
 
 1. `AGENTS.md`
 2. `README.md`
-3. `docs/project/project-roadmap.md`
-4. `docs/project/development-method.md`
-5. `docs/project/pre-e1e3-convergence-plan.md`
-6. `docs/project/documentation-authority-convergence.md`
+3. `docs/README.md`
+4. `docs/project/project-roadmap.md`
+5. `docs/project/development-method.md`
+6. `docs/project/pre-e1e3-convergence-plan.md`
 7. 当前阶段直接相关 Requirement / Specification / Technical Plan / Execution Unit
 8. GitHub Issue #92；涉及四层架构时同时读取 Issue #77；Issue #60 只用于 E1～E3 / C1/C2 等 downstream candidates
 9. 当前 Branch / PR / Actions / Runtime Evidence
 
-Current Ready Execution Unit：**EU-45 — Documentation Information Architecture & Archive Migration**。
+Current Ready Execution Unit：**NONE**。
 
-Ready artifact：
-
-```text
-docs/work/eu45-documentation-information-architecture.md
-```
-
-下一实际步骤是在本 planning/readiness change 集成到 `main` 后开启新的 Fresh Context，从最新 `main`、Issue #92、EU-45 work artifact、Open PR / Actions 重新核验 base drift；若 Readiness 仍有效，则从集成 commit 进入 EU-45 Execute。当前 planning branch 不执行 Phase 1B 文件迁移，也不得进入 Phase 2 或 Issue #60 / E1～E3。
+下一实际步骤：从最新 `main` 重新恢复 Issue #92 / #77 与 Phase 2 Planning Authority，确认没有新的 drift 后，进入 **Phase 2 Planning Candidate** 的 dependency closure / Specification / Technical Planning。不得继承 EU-45 Execute Authority，也不得直接进入 Phase 2 Execute 或 Issue #60 / E1～E3。
