@@ -41,4 +41,5 @@ tasks.bootJar {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+    failOnNoDiscoveredTests = false
 }
