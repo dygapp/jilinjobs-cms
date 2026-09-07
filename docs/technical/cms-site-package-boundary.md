@@ -334,3 +334,12 @@ Issue #77 继续保留：
 3. 四层 boundary 完成后的 Repository Split Readiness Assessment。
 
 这些均需重新经过 `slice-work → readiness-check`，不自动继承 EU-41 identifier / execute authority。
+
+## Slice C：稳定资源 Ownership 与 Runtime Projection（EU-42）
+
+- JilinJobs 稳定静态资源的唯一版本化 owner 为 `sites/jilinjobs/assets/**`；原 `site-baseline/static/**` ownership 不再存在。
+- `sites/jilinjobs/assets/manifest.json` 声明 `packageId`、asset schemaVersion，以及每个稳定资源的 package-root `source`、公开 `/static/**` `target` 与 SHA-256。
+- Backend 通过 site-neutral `SitePackageAssetManifestLoader` 校验 identity、路径边界、target 唯一性、`/static/uploads/**` 排除和源文件 digest；失败时拒绝启动对应 Site Package composition。
+- `SitePackageAssetProjector` 仅对缺失 target 执行 create-if-missing；已存在普通文件永不由启动过程覆盖。显式后台 replace 因此可跨重启保留；未来 force-upgrade 不属于本 Slice。
+- Site Package target 自动加入 `StaticResourceService` protected-path 集合：普通删除拒绝，显式 replace 保持允许；`/static/uploads/**` 继续属于可变 Runtime Store。
+- CI / Review Environment 以空 `CMS_STATIC_ROOT` 启动，并由同一个 `CMS_SITE_PACKAGE_ROOT` 同时提供 structure、bootstrap 与 stable assets；不再执行独立静态 baseline copy。

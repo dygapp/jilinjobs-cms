@@ -106,3 +106,10 @@ tasks.register<JavaExec>("verifySiteBootstrapBaselineSeparation") {
     classpath = sourceSets["test"].runtimeClasspath
     mainClass.set("com.jilinjobs.cms.provisioning.SiteBootstrapBaselineSeparationVerificationKt")
 }
+
+tasks.register<JavaExec>("verifySitePackageAssets") {
+    group = "verification"
+    description = "Verify EU-42 Site Package asset integrity, create-if-missing projection, protected paths and runtime preservation"
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("com.jilinjobs.cms.provisioning.SitePackageAssetProjectionVerificationKt")
+}

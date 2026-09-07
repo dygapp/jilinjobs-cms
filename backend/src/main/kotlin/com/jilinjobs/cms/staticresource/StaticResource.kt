@@ -3,6 +3,7 @@ package com.jilinjobs.cms.staticresource
 import com.jilinjobs.cms.advertisement.AdvertisementMapper
 import com.jilinjobs.cms.listing.CmsListMapper
 import com.jilinjobs.cms.navigation.NavigationMapper
+import com.jilinjobs.cms.provisioning.SitePackageAssetCatalog
 import com.jilinjobs.cms.siteconfig.SiteConfigMapper
 import jakarta.servlet.http.HttpServletRequest
 import java.nio.charset.StandardCharsets
@@ -37,6 +38,7 @@ class StaticResourceService(
     private val advertisementMapper: AdvertisementMapper? = null,
     private val navigationMapper: NavigationMapper? = null,
     @Value("\${cms.static.protected-resources:}") protectedResourcesText: String = "",
+    private val sitePackageAssetCatalog: SitePackageAssetCatalog? = null,
 ) {
     private val root = Paths.get(rootText).toAbsolutePath().normalize().also { Files.createDirectories(it) }
     private val trashRoot = root.resolve(".trash").also { Files.createDirectories(it) }
@@ -150,6 +152,7 @@ class StaticResourceService(
 
     private fun protectedPaths(): Set<String> = buildSet {
         addAll(configuredProtectedPaths)
+        sitePackageAssetCatalog?.protectedPaths?.let(::addAll)
         siteConfigMapper.findAll().forEach { row ->
             if (row.enabled && row.valueType == "RESOURCE_PATH") normalizedConfiguredStaticPath(row.configValue)?.let(::add)
         }
