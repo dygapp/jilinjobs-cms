@@ -10,4 +10,7 @@ frontend/**/dist/
 frontend/**/playwright-report/
 frontend/**/test-results/
 
+evals/results/
+evals/workspace/
+
 uploads/
