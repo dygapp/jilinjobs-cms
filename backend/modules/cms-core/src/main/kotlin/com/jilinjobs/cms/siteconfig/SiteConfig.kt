@@ -1,0 +1,205 @@
+package com.jilinjobs.cms.siteconfig
+
+import java.net.URI
+import org.apache.ibatis.annotations.*
+import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
+import tools.jackson.databind.ObjectMapper
+
+data class SiteConfigItem(
+    val key: String,
+    val name: String,
+    val groupCode: String,
+    val value: String,
+    val valueType: String,
+    val description: String,
+    val sortOrder: Int,
+    val required: Boolean,
+    val system: Boolean,
+    val enabled: Boolean,
+    val preset: Boolean = false,
+)
+
+data class SiteConfigDraft(
+    val key: String,
+    val name: String,
+    val groupCode: String = "GENERAL",
+    val value: String = "",
+    val valueType: String = "TEXT",
+    val description: String = "",
+    val sortOrder: Int = 0,
+    val required: Boolean = false,
+    val system: Boolean = false,
+    val enabled: Boolean = true,
+)
+
+class SiteConfigValidationException(message: String) : RuntimeException(message)
+class SiteConfigNotFoundException(key: String) : RuntimeException("网站属性不存在：$key")
+
+data class SiteConfigRecord(
+    var configKey: String = "",
+    var propertyName: String = "",
+    var groupCode: String = "GENERAL",
+    var configValue: String = "",
+    var valueType: String = "TEXT",
+    var description: String = "",
+    var sortOrder: Int = 0,
+    var required: Boolean = false,
+    var systemFlag: Boolean = false,
+    var enabled: Boolean = true,
+    var preset: Boolean = false,
+)
+
+@Mapper
+interface SiteConfigMapper {
+    @Select("SELECT config_key,property_name,group_code,config_value,value_type,description,sort_order,required,system_flag,enabled,preset FROM cms_site_config ORDER BY group_code,sort_order,config_key")
+    fun findAll(): List<SiteConfigRecord>
+
+    @Select("SELECT config_key,property_name,group_code,config_value,value_type,description,sort_order,required,system_flag,enabled,preset FROM cms_site_config WHERE enabled=1 ORDER BY group_code,sort_order,config_key")
+    fun findEnabled(): List<SiteConfigRecord>
+
+    @Select("SELECT config_key,property_name,group_code,config_value,value_type,description,sort_order,required,system_flag,enabled,preset FROM cms_site_config WHERE config_key=#{key}")
+    fun find(@Param("key") key: String): SiteConfigRecord?
+
+    @Insert("INSERT INTO cms_site_config(config_key,property_name,group_code,config_value,value_type,description,sort_order,required,system_flag,enabled) VALUES(#{configKey},#{propertyName},#{groupCode},#{configValue},#{valueType},#{description},#{sortOrder},#{required},#{systemFlag},#{enabled})")
+    fun insert(record: SiteConfigRecord): Int
+
+    @Update("UPDATE cms_site_config SET property_name=#{propertyName},group_code=#{groupCode},config_value=#{configValue},value_type=#{valueType},description=#{description},sort_order=#{sortOrder},required=#{required},system_flag=#{systemFlag},enabled=#{enabled} WHERE config_key=#{configKey}")
+    fun updateDefinition(record: SiteConfigRecord): Int
+
+    @Update("UPDATE cms_site_config SET config_value=#{value} WHERE config_key=#{key}")
+    fun update(@Param("key") key: String, @Param("value") value: String): Int
+
+    @Delete("DELETE FROM cms_site_config WHERE config_key=#{key}")
+    fun delete(@Param("key") key: String): Int
+}
+
+@Service
+class SiteConfigService(
+    private val mapper: SiteConfigMapper,
+    private val objectMapper: ObjectMapper,
+    private val metadata: CmsMetadataProperties,
+) {
+    private val allowedTypes = setOf("TEXT", "RESOURCE_PATH", "JSON", "URL", "BOOLEAN", "INTEGER")
+    private val positiveIntegerKeys = setOf("CAROUSEL_INTERVAL_SECONDS", "CAROUSEL_MAX_ITEMS")
+
+    @Transactional(readOnly = true)
+    fun list() = mapper.findAll().map { it.item() }
+
+    @Transactional(readOnly = true)
+    fun listPublic() = mapper.findEnabled().map { it.item() }
+
+    fun groups(): List<SitePropertyGroupDefinition> = metadata.sitePropertyGroupDefinitions()
+
+    @Transactional
+    fun create(draft: SiteConfigDraft): SiteConfigItem {
+        val normalized = normalize(draft)
+        if (mapper.find(normalized.key) != null) throw SiteConfigValidationException("网站属性 Key 已存在：${normalized.key}")
+        val record = normalized.record()
+        mapper.insert(record)
+        return mapper.find(normalized.key)!!.item()
+    }
+
+    @Transactional
+    fun updateDefinition(key: String, draft: SiteConfigDraft): SiteConfigItem {
+        val normalizedKey = normalizeKey(key)
+        mapper.find(normalizedKey) ?: throw SiteConfigNotFoundException(normalizedKey)
+        mapper.updateDefinition(normalize(draft.copy(key = normalizedKey)).record())
+        return mapper.find(normalizedKey)!!.item()
+    }
+
+    @Transactional
+    fun update(key: String, value: String): SiteConfigItem {
+        val normalizedKey = normalizeKey(key)
+        val record = mapper.find(normalizedKey) ?: throw SiteConfigNotFoundException(normalizedKey)
+        val effectiveType = stableValueType(normalizedKey, record.valueType)
+        val storedValue = normalizeStoredValue(effectiveType, normalizedKey, value)
+        validateValue(effectiveType, storedValue, record.required, normalizedKey)
+        mapper.update(normalizedKey, storedValue)
+        return mapper.find(normalizedKey)!!.item()
+    }
+
+    @Transactional
+    fun delete(key: String) {
+        val normalizedKey = normalizeKey(key)
+        val current = mapper.find(normalizedKey) ?: throw SiteConfigNotFoundException(normalizedKey)
+        if (current.preset) throw SiteConfigValidationException("预置网站属性属于站点规划基线，不能删除定义")
+        mapper.delete(normalizedKey)
+    }
+
+    private fun normalize(draft: SiteConfigDraft): SiteConfigDraft {
+        val key = normalizeKey(draft.key)
+        val name = draft.name.trim()
+        if (name.isBlank()) throw SiteConfigValidationException("网站属性名称不能为空")
+        if (name.length > 100) throw SiteConfigValidationException("网站属性名称不能超过 100 个字符")
+
+        val group = draft.groupCode.trim().uppercase().ifBlank { "GENERAL" }
+        val knownGroups = metadata.sitePropertyGroupDefinitions().mapTo(linkedSetOf()) { it.code }
+        if (group !in knownGroups) throw SiteConfigValidationException("网站属性分组不存在：$group")
+
+        val requestedType = draft.valueType.trim().uppercase()
+        if (requestedType !in allowedTypes) throw SiteConfigValidationException("不支持的网站属性类型：$requestedType")
+        val type = stableValueType(key, requestedType)
+        if (type != requestedType) throw SiteConfigValidationException("网站属性 $key 的类型固定为 $type")
+        val value = normalizeStoredValue(type, key, draft.value)
+        validateValue(type, value, draft.required, key)
+        return draft.copy(key = key, name = name, groupCode = group, value = value, valueType = type, description = draft.description.trim())
+    }
+
+    private fun normalizeKey(raw: String): String {
+        val key = raw.trim().uppercase()
+        if (!key.matches(Regex("[A-Z][A-Z0-9_]{1,99}"))) {
+            throw SiteConfigValidationException("网站属性 Key 必须由大写字母、数字和下划线组成")
+        }
+        return key
+    }
+
+    private fun stableValueType(key: String, requestedType: String): String =
+        if (key in positiveIntegerKeys) "INTEGER" else requestedType
+
+    private fun normalizeStoredValue(type: String, key: String, value: String): String =
+        if (type == "INTEGER" && key in positiveIntegerKeys) value.trim() else value
+
+    private fun validateValue(type: String, value: String, required: Boolean, key: String) {
+        val normalized = value.trim()
+        if (required && normalized.isBlank()) throw SiteConfigValidationException("网站属性 $key 不能为空")
+        if (normalized.isBlank()) return
+
+        when (type) {
+            "JSON" -> {
+                val node = runCatching { objectMapper.readTree(value) }
+                    .getOrElse { throw SiteConfigValidationException("网站属性 $key 必须是合法 JSON") }
+                if (node == null || (!node.isArray && !node.isObject)) {
+                    throw SiteConfigValidationException("网站属性 $key 必须是 JSON 数组或对象")
+                }
+            }
+            "RESOURCE_PATH" -> if (!normalized.startsWith("/static/")) {
+                throw SiteConfigValidationException("网站属性 $key 必须使用 /static/ 资源路径")
+            }
+            "URL" -> validateUrl(normalized, key)
+            "BOOLEAN" -> if (normalized.lowercase() !in setOf("true", "false")) {
+                throw SiteConfigValidationException("网站属性 $key 必须是 true 或 false")
+            }
+            "INTEGER" -> {
+                if (key in positiveIntegerKeys && !normalized.matches(Regex("[0-9]+"))) {
+                    throw SiteConfigValidationException("网站属性 $key 必须是十进制正整数")
+                }
+                val number = normalized.toLongOrNull() ?: throw SiteConfigValidationException("网站属性 $key 必须是整数")
+                if (key in positiveIntegerKeys && number <= 0) {
+                    throw SiteConfigValidationException("网站属性 $key 必须是大于 0 的整数")
+                }
+            }
+        }
+    }
+
+    private fun validateUrl(value: String, key: String) {
+        if (value.startsWith("/") && !value.startsWith("//")) return
+        val uri = runCatching { URI(value) }.getOrElse { throw SiteConfigValidationException("网站属性 $key URL 格式不正确") }
+        if (uri.scheme?.lowercase() !in setOf("http", "https") || uri.host.isNullOrBlank()) {
+            throw SiteConfigValidationException("网站属性 $key 必须是站内路径或 HTTP(S) 地址")
+        }
+    }
+
+    private fun SiteConfigDraft.record() = SiteConfigRecord(key, name, groupCode, value, valueType, description, sortOrder, required, system, enabled)
+    private fun SiteConfigRecord.item() = SiteConfigItem(configKey, propertyName, groupCode, configValue, valueType, description, sortOrder, required, systemFlag, enabled, preset)
+}

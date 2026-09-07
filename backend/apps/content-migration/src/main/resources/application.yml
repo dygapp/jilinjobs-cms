@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: jilinjobs-cms-content-migration
+  main:
+    web-application-type: none
+  config:
+    import: optional:classpath:cms-metadata.yml
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+  flyway:
+    enabled: true
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+cms:
+  storage:
+    root: ${CMS_STORAGE_ROOT:./data/uploads}
+  static:
+    root: ${CMS_STATIC_ROOT:./data/static}
+    protected-resources: ${CMS_STATIC_PROTECTED_RESOURCES:health/baseline.png,home/ncss-logo.png}
