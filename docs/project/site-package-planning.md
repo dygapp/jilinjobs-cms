@@ -10,7 +10,8 @@ Issue #77 仍是 Issue #60 / E1～E3 主站正式内容工作前的前置架构�
 - Slice B stable structure：**EU-38 — Stable Site Structure Package Migration**；
 - Slice B Navigation identity：**EU-39 — Navigation Stable Identity & Site Package Reconcile**；
 - Slice B Runtime composition：**EU-40 — Explicit Site Package Runtime Composition Activation**；
-- Slice B operational bootstrap / schema separation：**EU-41 — Site Bootstrap & Generic Schema Baseline Separation**。
+- Slice B operational bootstrap / schema separation：**EU-41 — Site Bootstrap & Generic Schema Baseline Separation**；
+- Slice C stable asset ownership / runtime projection：**EU-42 — Site Asset Package Ownership & Runtime Projection**。
 
 当前没有 Ready / executing Execution Unit。Issue #77 保持 OPEN。
 
@@ -104,15 +105,46 @@ Post-Integration evidence：
 
 因此 EU-41 状态为 **COMPLETED**。Operational Seed Classification & V2 Responsibility Retirement 已关闭，不再是后续 Planning Candidate。
 
+## EU-42 Verification / Integration Closure
+
+Readiness Authority：Issue #77 `#issuecomment-5562811697`。
+
+Final implementation Head：`37e03c3a5d7804804dcb3738a429e57e02b99e31`。
+
+Exact-head evidence：
+
+- Site Package Verification #34 / run `34068025402` — **PASS**；
+- Repository CI #787 / run `34068025623` — **PASS**；
+- Review Environment #698 / run `34068025436` — **PASS**；
+- unresolved review threads — **NONE**；
+- Integration 前 base drift — **NONE**。
+
+PR #90 已按 exact Head 合并，Integration commit：`main@2c4af15df64342850391bbfe67de99b6404b3280`。
+
+Post-Integration evidence：
+
+- Site Package Verification #35 / run `34070361976` — **PASS**；
+- Repository CI #788 / run `34070361980` — **PASS**，包含 Backend、Public、Admin 与从空 Runtime Static Root 启动的 Integrated Browser。
+
+因此 EU-42 状态为 **COMPLETED**。Slice C — Site Asset Ownership & Runtime Composition 已关闭。当前没有 Ready / executing Execution Unit。
+
+EU-42 accepted boundary：
+
+- `sites/jilinjobs/assets/**` 是稳定 JilinJobs Site asset 的唯一版本化 source owner；
+- `assets/manifest.json` 把同一 Site Package identity 下的 source、公开 `/static/**` target 与 SHA-256 integrity 固化为机器可审计合同；
+- Runtime projection 只 create missing targets，不通过普通启动覆盖 operator 明确替换；
+- Site Package stable targets 自动进入 StaticResource protected-path，普通 delete 被拒绝，显式 replace 继续允许；
+- `/static/uploads/**` 与 Historical Canonical Migration assets 不被 Site Package stable asset ownership 接管；
+- CI / Review Environment 从空 Runtime Static Root 启动并由同一个 Site Package root 投影稳定资源，不再维护独立 static baseline copy。
+
 ## 当前剩余 Planning 范围
 
 Issue #77 当前只保留：
 
-1. **Slice C — Site Asset Ownership & Runtime Composition**：让稳定 Site assets 的 package/manifest/runtime ownership 显式化；是否移动 `site-baseline/static/**` 只根据真实 ambiguity 决定。
-2. **Slice D — Canonical Migration Compatibility & E1～E3 Re-entry**：在最终 Site Package + asset lifecycle 上关闭 Party/Main canonical compatibility，并判断 Issue #60 / E1～E3 是否解除前置等待。
-3. **Repository Split Readiness Assessment**：仅在四层 boundary 完成后独立评估，不自动拆仓。
+1. **Slice D — Canonical Migration Compatibility & E1～E3 Re-entry**：在最终 Site Package + asset lifecycle 上关闭 Party/Main canonical compatibility，并判断 Issue #60 / E1～E3 是否解除前置等待。
+2. **Repository Split Readiness Assessment**：仅在四层 boundary 完成后独立评估，不自动拆仓。
 
-上述均不是当前 Ready EU，不继承 EU-41 execute authority。下一步必须基于最新 `main` 重新执行 current audit / slice-work / readiness-check。
+上述均不是当前 Ready EU，不继承 EU-42 execute authority。下一步必须基于最新 `main` 重新执行 current audit / slice-work / readiness-check。
 
 ## 规划边界
 
