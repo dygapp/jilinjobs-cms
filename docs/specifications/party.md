@@ -52,8 +52,10 @@ Banner 仅承担视觉展示：必须使用非链接容器 + `<img>`，不得包
 
 公开站设计模板使用的稳定图片、图标、二维码、字体等展示资源，必须来自：
 
-1. 本项目版本化 `site-baseline/static/**`；或
+1. JilinJobs Site Package 的版本化 stable asset source `sites/jilinjobs/assets/**`，由 asset manifest 投影到公开 `/static/**` target；或
 2. 受控 CMS 静态资源路径 / Resource。
+
+`sites/jilinjobs/assets/**` 是当前 stable Site asset 的唯一版本化 source owner；`/static/**` 只是 Runtime/Public target namespace，`/static/uploads/**` 继续属于 mutable CMS Runtime Store。历史文章正文、附件和历史轮播资源继续跟随 `data-migrations/**` 的 Canonical Migration unit，不因 Party 页面使用而提升为 stable Site asset。
 
 除开源 JS/CSS 依赖外，模板不得通过 `img/src`、媒体 `src/poster`、CSS `url(http...)`、资源型常量等方式直接依赖第三方静态资源 URL。业务 `<a href>` 外链、文章外链和外部平台入口不属于此限制。
 
@@ -95,10 +97,10 @@ Article 继续只拥有一个 `columnId`。加入轮播或其他 CmsList 只建�
 - ARTICLE 项通过 `articleId` 引用既有文章；文章必须已发布才进入公开轮播，撤回后自动退出；
 - ARTICLE 项默认可继承文章主题图片，也允许选用正文图片或使用独立 CMS Resource 作为轮播覆盖图；覆盖图不修改 Article 主题图片；
 - ARTICLE 站内目标由 Party 公开端生成 `/party/article/{id}`，不在列表中长期固化 Runtime Article ID URL；
-- 轮播成员属于运营内容，不进入 Flyway；
+- 轮播成员属于运营内容，不进入 Generic Backend Flyway；历史轮播成员的 canonical provenance 由 Historical Migration 管理；
 - 不新增中心党建专属 Carousel 数据表或 Admin Module。
 
-历史 V14 曾初始化 `PARTY_HOME_CAROUSEL / 中心党建首页轮播`。该 Migration 已执行，不修改历史文件；V15 通过原列表 ID 原地重命名为 `PARTY_CAROUSEL / 中心党建轮播`，已有列表成员关系不受影响。
+历史 V14 曾初始化 `PARTY_HOME_CAROUSEL / 中心党建首页轮播`。该 Migration 属已完成 development history，不修改历史文件；V15 曾通过原列表 ID 原地重命名为 `PARTY_CAROUSEL / 中心党建轮播`。从 EU-41 current baseline 起，Fresh JilinJobs stable list container 由 Site Package stable structure 建立，历史 migration number 不再承担 Current provisioning lifecycle。
 
 EU-30 历史迁移中，position 2 必须使用稳定 `sourceSystem + legacyKey=zhutijiaoyu:content:154659859759104` 解析 Article Runtime ID，并把原轮播 PNG 作为 `imageResourceId` 覆盖图导入；不得使用文章标题猜测关系，也不得把历史 Runtime URL 继续作为新版站内目标。
 
@@ -193,15 +195,22 @@ Mobile 必须正常响应式，无固定 1200px 横向溢出；轮播保持约 `
 
 ## 7. 数据与历史迁移
 
-Flyway 只负责稳定结构：父栏目、当前五个子栏目、轮播容器及必要的稳定结构迁移；历史文章、正文图片、附件和轮播成员由独立迁移机制处理。
+当前 Fresh Site lifecycle 不再由 Party-specific Flyway data migrations 建立站点结构。责任顺序为：
 
-EU-29 已接受 Canonical 基线继续保持其来源与 Human Review 语义：181 篇文章、4 个轮播项及对应资源不因 EU-30 被改写为新的“原始 EU-29 证据”。
+```text
+Generic Backend Flyway schema/capabilities
+→ JilinJobs Site Package stable structure
+→ optional one-time Fresh Site bootstrap
+→ Historical Canonical Migration
+```
 
-EU-30 补采的 `zhutijiaoyu` 2 条记录作为增量候选写入同一版本化 Canonical Workspace，并保留 `sourceWorkflowRunId / sourceHeadSha / stable legacyKey / fingerprint / resource SHA-256`。在 EU-30 Human Review 完成前，Manifest 必须明确标记该层为 `candidate-extension / pending-human-review`，同时保留 EU-29 `acceptedSnapshot` 原值。
+Party 父栏目、五个子栏目、`PARTY_CAROUSEL` 容器等稳定结构由 `sites/jilinjobs/structure/**` provision / reconcile；历史文章、正文图片、附件和历史轮播成员继续由 `data-migrations/**` 独立处理。
+
+EU-29 `acceptedSnapshot` 保持 181 篇冻结 provenance；EU-30 已接受主题教育 2 条扩展后，当前 Party canonical Runtime Dataset = 183，4 条 accepted carousel，并保持 EU-29→EU-30 upgrade compatibility。旧 candidate / Human Review 状态只作为历史执行证据，不应被 Fresh Context 当作当前未决 acceptance。
 
 历史迁移必须保留可识别的 `content_id / typeCode / detail path` 证据并落入通用 Column / Article / CmsList / Resource 模型。长期 Runtime 关联使用数据库 ID；迁移解析使用稳定 `sourceSystem + legacyKey`，不得依赖过期 workflow artifact、标题匹配或旧 Runtime ID。
 
-已执行 V13/V14 的 Migration 文件名和历史 SQL 中可保留 `party_building / party-building` 作为不可改写历史；V16 将当前父栏目 alias 原地收敛为 `party`。当前源码、目录、测试和现行 Authority 不再使用 `PartyBuilding / party-building` 作为技术命名。
+历史 V13/V14/V15/V16 文件名和 SQL 中可保留 `party_building / party-building`、旧 list code 与 alias transition 作为不可改写历史；这些历史 migration 不再承担 current Fresh Site provisioning responsibility。当前源码、目录、测试和现行 Authority 不再使用 `PartyBuilding / party-building` 作为技术命名。
 
 ## 8. Acceptance Criteria
 
@@ -210,20 +219,20 @@ EU-30 补采的 `zhutijiaoyu` 2 条记录作为增量候选写入同一版本化
 - 当前技术命名以 `party / Party` 为通用标识，入口页使用 `party-home / PartyHome`；
 - 四个固定首页内容子栏目及其 legacy 映射明确；
 - `party-theme-education / 主题教育` 作为第五个 Party 内容栏目存在，但不新增 PartyHome 固定区块；
-- 主题教育历史补采数量为 2、`unresolved=0`，在 Human Review 前保持 candidate-extension 状态；
+- 当前 Party Canonical Dataset = 183 Articles，EU-29 frozen acceptedSnapshot = 181，4 条 accepted carousel 与 EU-29→EU-30 upgrade compatibility 可独立审计；
 - CmsList 稳定 code 为 `PARTY_CAROUSEL`，名称为“中心党建轮播”，旧 `PARTY_HOME_CAROUSEL` 不再作为当前运行时 code；
 - `PARTY_CAROUSEL` 支持 LINK / ARTICLE；ARTICLE 投放不改变文章单一栏目归属；
 - 历史轮播 position 2 解析到主题教育文章并保留原轮播 PNG 作为列表覆盖 Resource；
 - ARTICLE 撤回后自动退出公开轮播，重新发布后可按既有投放关系恢复；
 - Main / Party 共用 `CAROUSEL_INTERVAL_SECONDS` 和 `CAROUSEL_MAX_ITEMS`，不存在 Party 专属硬编码 5 秒行为；
 - hover/focus/页面隐藏暂停后恢复不重置，reduced-motion 关闭自动播放和动画，手动页码仍有效；
-- Banner 使用版本化 `/static/party/party-header-banner.jpg`，其字节 SHA-256 与原站一致；正式运行不访问原站 Banner URL；
+- Banner 使用版本化 `/static/party/party-header-banner.jpg`，其 source bytes 由 `sites/jilinjobs/assets/party/**` + asset manifest 持有，Runtime target 字节 SHA-256 与原站一致；正式运行不访问原站 Banner URL；
 - Banner DOM 不含 `<a>`，不可点击；
 - 公开站设计模板不存在未经允许的外部静态资源直接引用；
 - Main / Party Navigation 与 Footer 使用同一 Shared Components，仅主题色不同；
 - 主导航一级/二级菜单视觉符合原站主题规则：16px bold、主题底色、白字、深色 hover/active；
 - Main / Party Entry 的 favicon 均从版本化 `/static/brand/site-favicon.png` 正常加载；
+- Fresh Runtime 通过 Generic Flyway + JilinJobs Site Package composition 得到 stable Party structure，不依赖历史 Party Flyway data seed；
 - 中心党建入口页、五个允许栏目路由、文章功能和响应式通过 Browser Verification；
 - Canonical Fresh DB import、二次幂等、Runtime articleRef/resource 关联验证通过；
-- AI Visual Review 无未处理的 Authority-backed 高优先级差异；
-- EU-30 Human Review 通过后，方可把增量迁移候选从 pending-human-review 收敛为接受状态并结束 EU-30。
+- AI Visual Review / Human Review 的历史 accepted evidence 保持可追溯，后续影响相关 visual claim 的变更仍按 Verification Strategy 重新取得 Current Evidence。
