@@ -23,7 +23,7 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | EU-32～EU-35 Admin Governance / Rich Text | 已完成 | List definition governance、Admin guidance responsibility、HTML safety、shared Tiptap authoring |
 | EU-36 Public Frontend Source Isolation | 已完成 | Public production source 退出 Admin endpoint knowledge，managed resource projection 由 Backend Public contract 承担 |
 | EU-37～EU-42 Site Package Boundary | 已完成当前 accepted scope | Site Package contract、stable structure、Navigation identity、Runtime composition、one-time bootstrap、Generic Schema separation、stable asset ownership 均闭环 |
-| Issue #92 E1～E3 前置 Repository Authority / Migration Architecture Convergence | **当前 Planning Priority** | Phase 0 正在固化新的总体路线；当前没有 Ready Execution Unit |
+| Issue #92 E1～E3 前置 Repository Authority / Migration Architecture Convergence | **当前 Planning Priority** | Phase 0 已完成；下一实际步骤是 Phase 1 Documentation Authority 的 Planning / Authority Audit；当前没有 Ready Execution Unit |
 | Issue #60 / E1～E3 Main Site Formal Content | 前置依赖等待 | 等待 Issue #92 / #77 的 Documentation Authority、Historical Migration / Backend Application Boundary 与 final compatibility re-entry gate |
 | Repository Split Readiness Assessment | 后置 Planning Candidate | 只有四层 boundary 完成后独立评估；不自动拆仓，不默认阻塞 E1～E3 |
 | Issues #57 / #59 / #60 其他候选 | 规划层保留 | C1/C2、Browser Compatibility、Public Rendering Architecture 等保持独立，不因 Issue #92 自动扩大 |
@@ -83,20 +83,25 @@ docs/project/pre-e1e3-convergence-plan.md
 
 Issue #77 继续承担四层产品 / 技术边界；Issue #92 承担跨 Repository Documentation Governance、Historical Migration / Backend Application Boundary 与 Issue #60 re-entry 的总体顺序。
 
-### Phase 0 — Planning Authority Solidification
+### Phase 0 — Planning Authority Solidification — COMPLETED
 
-当前阶段。
+Phase 0 已完成，并保持 Current Ready Execution Unit = **NONE**。
 
-目标：
+已完成结果：
 
-- Issue #92、Issue #77、本 Roadmap、`site-package-planning.md` 与总体规划表达同一实际路线；
-- 固化一个最小、实验性 High-Capability Architecture Review Eval；
-- Eval 只产生附加 Review Evidence，不是 Method Stage / Readiness Gate；
-- 当前 Ready Execution Unit 继续为 **NONE**。
+- Issue #92、Issue #77、本 Roadmap、`site-package-planning.md` 与总体规划已统一到新的 E1～E3 前置路线；
+- PR #93 已完成 Planning Authority 固化并集成；
+- AR-02 完成 `gpt-5.6-sol` / medium 与 `gpt-6-astra` / high paired review，两次 Verdict 均为 `SUPPORTED_WITH_CHANGES`，共同 findings 已修订 Phase 2A；
+- AR-04 使用缺陷发现前的冻结两阶段 migration extraction candidate 做 retrospective blind discovery；Sol 与 Astra 均为 `BLOCKING_CONCERN`、Human discovery = `DETECTED`、隐藏 assertions `8/8 PASS`；
+- AR-04 证明该已知 sequencing flaw 不需要 Astra 才能发现，当前实验策略收敛为 lower-cost capable review first、仅在 unresolved / conflicting / deliberate second opinion 时选择性升级 Astra；
+- PR #94 已固化 AR-04 corpus / evidence lifecycle 并集成；
+- 具有跨项目复用价值的模型路由 / blind paired eval Evidence 已提交到 `dygapp/agentic-dev` Issue #71；该 Issue 只是外部 Evidence，不构成本 Consumer 或 `agentic-dev` 的新 Method Authority。
 
-AR-02 已完成 lower-cost / GPT-6 paired review 和人工语义评分；两次 Verdict 均为 `SUPPORTED_WITH_CHANGES`，共同 findings 已修订 Phase 2A。实验当前结论为 **ADJUST**：不进入普通 Development Method / Readiness Gate，本轮不继续 AR-03 GPT-6，只有后续真实高返工架构争议仍未解决时才按需启用单一 bounded scenario。
+Phase 0 没有形成实现 EU，也没有进入 Issue #60 / E1～E3。
 
-### Phase 1 — Repository Documentation Authority Convergence
+### Phase 1 — Repository Documentation Authority Convergence — NEXT PLANNING GATE
+
+下一实际步骤是从当前仓库重新恢复 Authority，先完成 Phase 1 的 current audit、Requirement / Authority Clarification 与必要 Specification / Technical Planning；不得直接把 Planned Unit 1A 当成 Ready Execution Unit。
 
 #### Planned Unit 1A — Canonical Authority Audit & Reconciliation
 
@@ -196,29 +201,45 @@ Generic CMS Schema
 
 继续 deferred，只有四层 boundary 完成后独立评估。Assessment 不等于自动拆仓。
 
-## High-Capability Architecture Review Eval Experiment
+## Architecture Review Eval Experiment
 
 Consumer-local 实验入口：
 
 ```text
 evals/README.md
 evals/architecture/pre-e1e3-convergence-review.json
+evals/architecture/ar04-migration-sequencing-review.json
 evals/run_architecture_review.py
+evals/run_ar04_review.py
 ```
 
-Corpus 保留 AR-01 / AR-02 / AR-03，但所有场景当前都不是默认高能力任务。当前执行原则：
+当前实验结论：**ADJUST**。
 
-- 先由普通 Planning / review 确认存在真实 unresolved architecture ambiguity；
-- 只有问题返工成本高且现有证据仍不足时，选择**单一** bounded scenario；
-- 如需要模型对照，先 lower-cost baseline，再在相同 exact Head / context / prompt 下运行高能力模型；
+当前执行原则：
+
+- 只在真实高返工成本架构问题确有独立挑战价值时使用 bounded eval；
+- 默认先运行 lower-cost capable model；
+- 只有第一轮仍存在 unresolved ambiguity、冲突证据，或明确需要额外独立 second opinion 时才升级 Astra；
 - 每个 scenario 独立 Fresh / ephemeral run，只复制显式 context paths；
-- assertions / expected behavior / historical results 不进入 runtime workspace；
+- assertions / expected behavior / provenance / historical results 不进入 runtime workspace；
 - process exit 0 不等于 PASS，必须人工语义评分；
-- GPT-6 review 只构成 Review Evidence，不覆盖 Repository Authority / readiness-check；
-- 当前实验结论：**ADJUST**；本轮不继续 AR-03 GPT-6；
-- 当前只有一个 Consumer / 一个真实 paired scenario，暂不向 `dygapp/agentic-dev` 提交正式 Method 反馈。
+- 模型 review 只构成 Review Evidence，不覆盖 Repository Authority / readiness-check；
+- 不为了“完成 corpus”机械运行 AR-01 / AR-03，也不把 Astra 变成关键问题默认评审模型。
 
-详细 evidence lifecycle、AR-02 paired result 与后续触发条件见 `evals/README.md` 和 Issue #92。
+当前证据包含两个真实 paired scenario：
+
+- AR-02：两模型均 `SUPPORTED_WITH_CHANGES`，Astra 有有限增量但无独占 blocking discovery；
+- AR-04：两模型均独立 `DETECTED` 已知 migration sequencing flaw，隐藏 assertions 均 `8/8 PASS`；Astra 未发现 Sol/medium 漏掉的 blocking flaw。
+
+因此当前 model-routing 候选策略为：
+
+```text
+bounded eval when justified
+→ lower-cost capable review first
+→ escalate only if unresolved / conflicting / deliberate second opinion
+```
+
+跨项目 Evidence 已提交 `dygapp/agentic-dev` Issue #71，由该仓库独立决定是否具备长期方法价值。完整 evidence lifecycle、paired results、usage 与 model observability limitation 见 `evals/README.md` 和 Issue #92。
 
 ## 已完成里程碑摘要
 
@@ -230,7 +251,7 @@ Corpus 保留 AR-01 / AR-02 / AR-03，但所有场景当前都不是默认高能
 | 2026-09-05 | EU-31～EU-35 完成 Database baseline、List/Admin governance、Rich Text safety / authoring |
 | 2026-09-06 | EU-36 完成 Public source isolation；Issue #77 成为 E1～E3 前置四层边界入口 |
 | 2026-09-06～2026-09-07 | EU-37～EU-42 完成 Site Package contract、stable structure、Runtime composition、Schema/bootstrap separation 与 stable assets |
-| 2026-09-07 | Issue #92 建立 E1～E3 前置 Repository Authority / Migration Architecture 总体收敛路线，并完成首个 AR-02 paired architecture review / Planning correction |
+| 2026-09-07 | Issue #92 / PR #93 完成 E1～E3 前置总体路线固化；AR-02 修订 Phase 2A；PR #94 完成 AR-04 blind paired eval 并将跨项目 Evidence 提交 agentic-dev Issue #71；Phase 0 收口 |
 
 详细执行、exact-head、Integration 与 Post-Integration Evidence 继续以对应 `docs/work/**`、Issue comments、PR 与 Actions 为准。
 
@@ -257,4 +278,4 @@ Corpus 保留 AR-01 / AR-02 / AR-03，但所有场景当前都不是默认高能
 
 当前 Ready Execution Unit：**NONE**。
 
-Phase 0 合并后的下一实际步骤应从 Issue #92 / Phase 1 的 current audit、Authority Clarification、必要 Specification / Technical Planning 与 `slice-work` 状态恢复；不得直接进入 Phase 1 implementation 或 Issue #60 / E1～E3 Execute。
+Phase 0 已完成。下一实际步骤应从 Issue #92 / Phase 1 的 current audit、Authority Clarification、必要 Specification / Technical Planning 与 `slice-work` 状态恢复；不得直接进入 Phase 1 implementation 或 Issue #60 / E1～E3 Execute。
