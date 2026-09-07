@@ -32,11 +32,19 @@ Fresh Context 按以下入口恢复，避免把历史执行记录当作当前 Au
 当前 Planning Priority：**GitHub Issue #92 — E1～E3 前置 Repository Authority 与 Migration Architecture 收敛路线**。
 
 - Phase 0 已完成；
-- Phase 1 Repository Documentation Authority Convergence 已完成 EU-43、EU-44 与 EU-45 的语义收敛、Documentation IA / archive migration 与 Current locator 收口；
-- Current Ready Execution Unit：**NONE**；
-- 下一自然 Gate：**Phase 2 — Generic Historical Migration & Backend Application Boundary 的 Planning Candidate**；必须重新执行其独立 Planning / `slice-work → readiness-check` 状态链后才可能取得 Execute Authority；
+- Phase 1 Repository Documentation Authority Convergence 已完成；
+- Phase 2A dependency closure、Requirement / Specification / Technical Planning、`slice-work` 与 `readiness-check` 已形成 **EU-46 — Backend Application / Core Boundary Foundation**；
+- Current Ready Execution Unit：**EU-46**；Readiness：**PASS**；Execute：**NOT STARTED**；
+- EU-46 的 Execute Authority 只有在本 planning/readiness change 集成后，以新的 Fresh Context 重新确认 `main`、Open PR / Actions、Issue #92 / #77、EU-46 artifact 且无 base drift / Authority change 时才成立；
 - Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层边界；
-- Issue #60 / E1～E3 继续保持 downstream / blocked，不得绕过 Issue #92 Phase 2 / Phase 3 gate 提前进入 Execute。
+- Phase 2B Generic Content Migration、Phase 2C Party de-specialization、Phase 3 与 Issue #60 / E1～E3 均继续 downstream，不继承 EU-46 或历史 Unit 的 Execute Authority。
+
+EU-46 Current Authority：
+
+- `docs/requirements/backend-application-core-boundary.md`；
+- `docs/specifications/backend-application-core-boundary.md`；
+- `docs/technical/backend-application-core-boundary.md`；
+- `docs/work/current/eu46-backend-application-core-boundary-foundation.md`。
 
 已完成 Execution Unit 的详细记录位于 `docs/work/archive/`；完成记录中的旧 Status / Next Step 不构成新的 Execute Authority。
 
