@@ -25,7 +25,7 @@ Main / Party 共同复用：
 - `shared/components/PublicFooter.vue`；
 - `shared/styles/public-shell.css`。
 
-当前 Party 源码目录为 `frontend/public-site/src/sites/party/`；入口组件为 `modules/home/PartyHomeView.vue`。不得重新引入 `party-building / PartyBuilding` 当前命名；已执行 Flyway 历史属于例外。
+当前 Party 源码目录为 `frontend/public-site/src/sites/party/`；入口组件为 `modules/home/PartyHomeView.vue`。不得重新引入 `party-building / PartyBuilding` 当前命名；已执行历史 migration 属于例外追溯。
 
 ## 2. 数据边界
 
@@ -36,9 +36,9 @@ Main / Party 共同复用：
 - 中心党建轮播：通用 CmsList，当前 code **`PARTY_CAROUSEL`**；
 - 轮播 item：通用 `LINK / ARTICLE`；
 - SiteConfig：`CAROUSEL_INTERVAL_SECONDS / CAROUSEL_MAX_ITEMS` 与 Main 共用；
-- 历史内容：EU-29 接受基线 + EU-30 主题教育候选扩展，不写入 Flyway 历史内容 SQL。
+- 历史内容：EU-29 frozen acceptedSnapshot + EU-30 accepted extension，当前 canonical Runtime Dataset = 183，不写入 Generic Backend Flyway。
 
-V14 已执行且曾创建 `PARTY_HOME_CAROUSEL`。不得修改 V14；V15 原地更新该列表的 code/name/description，保留列表 ID 和已有成员关系。V13/V14 中历史父栏目 alias `party-building` 不回写；V16 原地收敛当前 alias 为 `party`。EU-30 通过新 migration 增加 `party-theme-education` 和轮播通用引用字段，不改写历史 migration。
+历史 V14 曾创建 `PARTY_HOME_CAROUSEL`，V15 曾原地更新其 code/name/description；V13/V14 中历史父栏目 alias `party-building`、V16 alias transition 等 migration 文件均保持不可改写历史。**这些 migration 不再承担当前 Fresh Site provisioning responsibility。** 从 EU-41 current baseline 起，Party stable columns / list container 等由 `sites/jilinjobs/structure/**` provision / reconcile；Historical Migration 继续独立处理文章和历史轮播成员。
 
 ## 3. 路由
 
@@ -61,11 +61,15 @@ ARTICLE 轮播项不持久化 Party canonical URL：`INTERNAL` 由 PartyHome 根
 - SHA-256：`7444d50235d4c87a00d0221ac84551ea083c617bb8a15e58f58d002224bd27a3`；
 - 文件名虽为 `.png`，原始媒体字节实际为 JFIF/JPEG。
 
-正式运行使用版本化本地资源：
+正式运行继续使用公开路径：
 
 `/static/party/party-header-banner.jpg`
 
-仓库文件 `site-baseline/static/party/party-header-banner.jpg` 必须与原站证据 byte-for-byte 一致。不得重新编码、转 WebP/AVIF、重采样或在运行时直接访问原站 Banner URL。
+该 Runtime target 的版本化 source owner 为：
+
+`sites/jilinjobs/assets/party/party-header-banner.jpg`
+
+Asset manifest 必须校验该 source → `/static/party/party-header-banner.jpg` target 的 SHA-256；source bytes 必须与原站证据 byte-for-byte 一致。不得重新编码、转 WebP/AVIF、重采样或在运行时直接访问原站 Banner URL。
 
 Header 使用 `<div class="party-banner"><img ...></div>`：
 
@@ -76,7 +80,9 @@ Header 使用 `<div class="party-banner"><img ...></div>`：
 
 ### 4.1 外部静态资源契约
 
-公开站模板所需的稳定图片、图标、二维码、字体等展示资源只能来自版本化 `site-baseline/static/**` 或受控 CMS 静态资源路径 / Resource。
+公开站模板所需的稳定图片、图标、二维码、字体等展示资源只能来自 JilinJobs Site Package `sites/jilinjobs/assets/**` 投影后的版本化 `/static/**` target，或受控 CMS 静态资源路径 / Resource。
+
+`/static/uploads/**` 继续是 mutable CMS Runtime Store，不属于 stable Site asset manifest；历史文章正文 / 附件 / 历史轮播资源继续由 `data-migrations/**` 的 Canonical Migration unit 持有。
 
 除项目允许的开源 JS/CSS 依赖外，不允许在设计模板中直接使用：
 
@@ -90,11 +96,11 @@ Header 使用 `<div class="party-banner"><img ...></div>`：
 
 ### 4.2 Favicon
 
-Main 与 Party 两个 HTML Entry 使用同一个版本化 favicon：
+Main 与 Party 两个 HTML Entry 使用同一个公开 favicon target：
 
 `/static/brand/site-favicon.png`
 
-两个 Entry 都显式声明 `rel="icon"`（`sizes="128x128"`）和 `rel="shortcut icon"`。验证不能只检查仓库文件存在，还必须验证运行时 HTTP 返回 `image/png`、PNG signature 正确且两个 Entry 的 HTML link 声明可见。
+其版本化 source 由 `sites/jilinjobs/assets/brand/**` + asset manifest 管理。两个 Entry 都显式声明 `rel="icon"`（`sizes="128x128"`）和 `rel="shortcut icon"`。验证不能只检查 source 文件存在，还必须验证 Runtime HTTP 返回 `image/png`、PNG signature 正确且两个 Entry 的 HTML link 声明可见。
 
 ## 5. Shared Navigation / Footer
 
@@ -183,26 +189,28 @@ position 1 / 3 / 4 保持 LINK 语义和 migrated static image path。
 
 ## 9. 验证
 
-最终 Head 至少验证：
+当前 Fresh Runtime 至少验证：
 
-- Fresh Flyway 后父栏目当前 alias 为 `party`，存在五个允许 Party 子栏目，其中 `party-theme-education` 名称为“主题教育”；
-- PartyHome 固定四栏目关系不变，不额外出现第五个首页固定区；
-- Fresh Flyway 后存在 `PARTY_CAROUSEL / 中心党建轮播`，不存在当前 `PARTY_HOME_CAROUSEL`；
+- Generic Backend Flyway 完成后尚无 JilinJobs Site rows；
+- JilinJobs Site Package stable reconcile 后父栏目当前 alias 为 `party`，存在五个允许 Party 子栏目，其中 `party-theme-education` 名称为“主题教育”；
+- Site Package stable reconcile 后存在 `PARTY_CAROUSEL / 中心党建轮播`，不存在当前 `PARTY_HOME_CAROUSEL`；
 - Main / Party 使用相同 Navigation/Footer component marker 和 `useContentCarousel` 生命周期；
-- `CAROUSEL_INTERVAL_SECONDS=4 / CAROUSEL_MAX_ITEMS=5` 为 Fresh DB 基线，旧 Main-only key 不存在；
+- `CAROUSEL_INTERVAL_SECONDS=4 / CAROUSEL_MAX_ITEMS=5` 可从当前 Fresh Site composition 获得，旧 Main-only key 不存在；
 - reduced-motion 下超过 interval 不自动切换，dot 仍可手动切换；
 - ARTICLE 投放进入 `/party/article/{id}`，且 Article columnId 保持不变；
 - EXTERNAL_LINK ARTICLE 修改 Article 外链后，公开轮播下一次查询解析出的 `CmsListItem.url` 随 Article 当前地址变化；
 - Article withdraw 后 ARTICLE item 从公开 `PARTY_CAROUSEL` 消失，覆盖 Resource 不再公开；
-- Canonical Fresh DB import 当前导入 183 篇，EU-29 accepted 181 与 EU-30 candidate 2 可独立审计；
+- Canonical Fresh DB import 当前导入 183 篇，EU-29 frozen acceptedSnapshot 181 与 EU-30 accepted extension 2 可独立审计；
 - position 2 的 article legacy identity、Runtime article_id 和 Resource bytes SHA-256 一致；
 - 二次 articles / carousel import 幂等；
 - Desktop Main/Party 一级菜单均为 16px/700；二级菜单分别使用蓝/红主题底色、白色粗体和深色 hover/active；
-- `/static/party/party-header-banner.jpg` 可从版本化静态基线读取，Browser natural size 为 3072×512；
+- `sites/jilinjobs/assets/party/party-header-banner.jpg` 经 manifest 校验并投影为 `/static/party/party-header-banner.jpg`，Browser natural size 为 3072×512；
 - Banner `<img>` 使用本地 `/static/**` 路径，`.party-banner` 内无 `<a>`；
 - WebP/AVIF 派生 Banner 不再作为正式资源；
 - `/static/brand/site-favicon.png` 对 Main/Party Entry 均以 `image/png` 正常返回，并存在有效 favicon link 声明；
+- `/static/uploads/**` 不被 stable Site asset projection 接管；
 - 外部静态资源契约扫描无违规项；
 - 390px 无横向溢出；
-- Main / Admin 无功能回归；
-- Current Screenshot + AI Visual + Human Review 共同完成 EU-30 最终收敛。
+- Main / Admin 无功能回归。
+
+EU-30 的 Screenshot / AI Visual / Human Review 是历史 accepted evidence；后续只有变更影响其具体 visual/runtime claim 时，才按 `docs/technical/verification-strategy.md` 重新取得对应 Current Evidence。
