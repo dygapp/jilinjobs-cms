@@ -23,7 +23,7 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | EU-32～EU-35 Admin Governance / Rich Text | 已完成 | List definition governance、Admin guidance responsibility、HTML safety、shared Tiptap authoring |
 | EU-36 Public Frontend Source Isolation | 已完成 | Public production source 退出 Admin endpoint knowledge，managed resource projection 由 Backend Public contract 承担 |
 | EU-37～EU-42 Site Package Boundary | 已完成当前 accepted scope | Site Package contract、stable structure、Navigation identity、Runtime composition、one-time bootstrap、Generic Schema separation、stable asset ownership 均闭环 |
-| Issue #92 E1～E3 前置 Repository Authority / Migration Architecture Convergence | **当前 Planning Priority** | Phase 0 已完成；下一实际步骤是 Phase 1 Documentation Authority 的 Planning / Authority Audit；当前没有 Ready Execution Unit |
+| Issue #92 E1～E3 前置 Repository Authority / Migration Architecture Convergence | **当前 Planning Priority / Phase 1 IN PROGRESS** | Phase 0 已完成；Phase 1 current audit、Authority Clarification、slice-work 与 readiness 已完成；EU-43 已 READY，尚未 Execute |
 | Issue #60 / E1～E3 Main Site Formal Content | 前置依赖等待 | 等待 Issue #92 / #77 的 Documentation Authority、Historical Migration / Backend Application Boundary 与 final compatibility re-entry gate |
 | Repository Split Readiness Assessment | 后置 Planning Candidate | 只有四层 boundary 完成后独立评估；不自动拆仓，不默认阻塞 E1～E3 |
 | Issues #57 / #59 / #60 其他候选 | 规划层保留 | C1/C2、Browser Compatibility、Public Rendering Architecture 等保持独立，不因 Issue #92 自动扩大 |
@@ -81,11 +81,17 @@ sites/jilinjobs/
 docs/project/pre-e1e3-convergence-plan.md
 ```
 
+Phase 1 current audit / Ready Specification：
+
+```text
+docs/project/documentation-authority-convergence.md
+```
+
 Issue #77 继续承担四层产品 / 技术边界；Issue #92 承担跨 Repository Documentation Governance、Historical Migration / Backend Application Boundary 与 Issue #60 re-entry 的总体顺序。
 
 ### Phase 0 — Planning Authority Solidification — COMPLETED
 
-Phase 0 已完成，并保持 Current Ready Execution Unit = **NONE**。
+Phase 0 已完成；当时没有形成实现 EU，也没有进入 Issue #60 / E1～E3。
 
 已完成结果：
 
@@ -97,18 +103,36 @@ Phase 0 已完成，并保持 Current Ready Execution Unit = **NONE**。
 - PR #94 已固化 AR-04 corpus / evidence lifecycle 并集成；
 - 具有跨项目复用价值的模型路由 / blind paired eval Evidence 已提交到 `dygapp/agentic-dev` Issue #71；该 Issue 只是外部 Evidence，不构成本 Consumer 或 `agentic-dev` 的新 Method Authority。
 
-Phase 0 没有形成实现 EU，也没有进入 Issue #60 / E1～E3。
+### Phase 1 — Repository Documentation Authority Convergence — IN PROGRESS
 
-### Phase 1 — Repository Documentation Authority Convergence — NEXT PLANNING GATE
+Phase 1 已完成 current audit、Authority Clarification、Ready Specification、`slice-work` 与 EU-43 `readiness-check`。完整分类、dependency closure 与 slice result 以 `docs/project/documentation-authority-convergence.md` 为当前 Authority。
 
-下一实际步骤是从当前仓库重新恢复 Authority，先完成 Phase 1 的 current audit、Requirement / Authority Clarification 与必要 Specification / Technical Planning；不得直接把 Planned Unit 1A 当成 Ready Execution Unit。
+#### Unit 1A — Canonical Authority Audit & Reconciliation
 
-#### Planned Unit 1A — Canonical Authority Audit & Reconciliation
+Current audit 已按 `CURRENT / PARTIALLY_CURRENT / SUPERSEDED / HISTORICAL_EVIDENCE` 分类 Root README、Requirements、Specifications、Technical、Work、`data-migrations/**` 与必要 subtree README gap。
 
-- 审计 Root README、Requirements、Specifications、Technical、Work、`data-migrations/**` 与必要子树 README；
-- 分类 `CURRENT / PARTIALLY_CURRENT / SUPERSEDED / HISTORICAL_EVIDENCE`；
-- `PARTIALLY_CURRENT` 必须先把有效语义吸收回 canonical Authority，再允许 archive；
-- 修复 EU-41 / EU-42 后的 V2、旧 Site baseline、asset / migration ownership 等 Current-document drift。
+审计确认至少存在以下需要 semantic reconciliation 的 Current drift：
+
+- EU-41 后旧 `V2__current_preset_data.sql` / Flyway Site Data responsibility；
+- EU-42 后旧 `site-baseline/static/**` stable Site asset source ownership；
+- historical V12/V14/V15/V16 等实现历史被写成 Current lifecycle；
+- Issue #77 旧 Slice D direct-next-step wording；
+- `pre-e1e3-convergence-plan.md` AR-02-only / “暂不反馈 agentic-dev” experiment wording；
+- EU-30 Amendment 尚未折回主 Requirement。
+
+`slice-work` 将 1A 拆为小型 dependency-ordered slices：
+
+1. **EU-43 — Current Authority Semantic Reconciliation — READY**：先关闭四层 boundary / lifecycle / migration / asset / verification 的 currentness drift；
+2. **Slice B — Canonical Product Requirement Consolidation — Planning Candidate**：EU-43 后折叠 `information-publishing-eu30-amendment.md` 与相关 CMS current docs；
+3. Phase 1B Information Architecture / Archive Migration 必须等待前述 semantic currentness 完成。
+
+EU-43 work artifact：
+
+```text
+docs/work/eu43-current-authority-semantic-reconciliation.md
+```
+
+EU-43 不继承任何历史 EU 的 Execute Authority；其 Readiness PASS 仅覆盖该 work artifact 的精确 documentation-only scope。
 
 #### Planned Unit 1B — Documentation Information Architecture & Archive Migration
 
@@ -119,7 +143,7 @@ Phase 0 没有形成实现 EU，也没有进入 Issue #60 / E1～E3。
 - `archive/**` 默认不参与 Fresh Context Current Authority 恢复；
 - 更新全部 Current Authority 链接与必要子树 README。
 
-这些 Planned Unit 目前都不是 Candidate Execution Unit。
+1B 当前仍是 Planning Candidate，不获得 EU-43 Execute Authority。
 
 ### Phase 2 — Generic Historical Migration & Backend Application Boundary
 
@@ -252,6 +276,7 @@ bounded eval when justified
 | 2026-09-06 | EU-36 完成 Public source isolation；Issue #77 成为 E1～E3 前置四层边界入口 |
 | 2026-09-06～2026-09-07 | EU-37～EU-42 完成 Site Package contract、stable structure、Runtime composition、Schema/bootstrap separation 与 stable assets |
 | 2026-09-07 | Issue #92 / PR #93 完成 E1～E3 前置总体路线固化；AR-02 修订 Phase 2A；PR #94 完成 AR-04 blind paired eval 并将跨项目 Evidence 提交 agentic-dev Issue #71；Phase 0 收口 |
+| 2026-09-07 | Phase 1 current audit / Authority Clarification / slice-work / readiness 完成；EU-43 Current Authority Semantic Reconciliation = READY |
 
 详细执行、exact-head、Integration 与 Post-Integration Evidence 继续以对应 `docs/work/**`、Issue comments、PR 与 Actions 为准。
 
@@ -272,10 +297,11 @@ bounded eval when justified
 3. `docs/project/project-roadmap.md`
 4. `docs/project/development-method.md`
 5. `docs/project/pre-e1e3-convergence-plan.md`
-6. 当前阶段直接相关 Requirement / Specification / Technical Plan
-7. GitHub Issue #92；涉及四层架构时同时读取 Issue #77；Issue #60 只用于 E1～E3 / C1/C2 等 downstream candidates
-8. 当前 Branch / PR / Actions / Runtime Evidence
+6. `docs/project/documentation-authority-convergence.md`
+7. 当前阶段直接相关 Requirement / Specification / Technical Plan / Execution Unit
+8. GitHub Issue #92；涉及四层架构时同时读取 Issue #77；Issue #60 只用于 E1～E3 / C1/C2 等 downstream candidates
+9. 当前 Branch / PR / Actions / Runtime Evidence
 
-当前 Ready Execution Unit：**NONE**。
+当前 Ready Execution Unit：**EU-43 — Current Authority Semantic Reconciliation**。
 
-Phase 0 已完成。下一实际步骤应从 Issue #92 / Phase 1 的 current audit、Authority Clarification、必要 Specification / Technical Planning 与 `slice-work` 状态恢复；不得直接进入 Phase 1 implementation 或 Issue #60 / E1～E3 Execute。
+Phase 0 已完成，Phase 1 audit / slice-work / readiness 已完成。下一实际步骤是在新的 Fresh Context 中重新核验 `main`、EU-43 work artifact、Issue #92 Current Evidence 与 base drift；如果 Readiness 仍有效，则执行 EU-43。不得跳过 EU-43 直接进入 Slice B、Phase 1B、Phase 2 或 Issue #60 / E1～E3 Execute。
