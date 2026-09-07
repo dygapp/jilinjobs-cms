@@ -120,6 +120,8 @@ Main / Party 的 Banner、内容 Frame、颜色变量和主题模板属于各自
 
 CMS 负责维护“有什么业务数据”，公开站工程负责决定“这些数据在具体页面中如何展示”。不得为了让管理员控制页面视觉表现而将稳定页面设计方案反向建模成通用 CMS 展示模式。
 
+例如 LINK 列表项可以同时具有标题、图片和 URL；某个页面可以只显示标题，另一个页面可以只显示 Logo，也可以显示 Logo + 标题。是否显示名称、图片尺寸、布局、轮播控件等由相应页面设计和前端实现确定，不需要在 CmsList 中设置 `displayMode`。
+
 Column `coverPolicy` 与 CmsList `imagePolicy` 仅属于图片数据契约：`NONE` 表示不使用对应图片，`OPTIONAL` 表示允许但不强制，`REQUIRED` 表示公开所需内容必须形成有效图片。它们不得控制图片尺寸、布局、caption、卡片方向或其他视觉规则。
 
 页面对特定 CMS 数据的必要字段要求属于该页面的数据消费契约。例如轮播要求有效图片，但不要求通用列表模型重新引入“轮播类型”。
@@ -236,8 +238,10 @@ CMS 提供通用列表与列表项，用于维护不属于导航、栏目归属�
 
 CmsListItem 的来源身份只使用：
 
-1. `LINK`：自身维护标题、副标题、可选 URL、图片、打开方式、排序、启停和扩展数据；
+1. `LINK`：列表项自身维护业务数据；
 2. `ARTICLE`：引用已有 Article，用于把文章投放到轮播等展示容器。
+
+LINK 至少满足：标题必填，作为后台管理识别名称并可供页面作为可访问性文本/替代文本；副标题可选；URL 可选且存在时必须是合法站内路径或 HTTP(S) 地址；图片是否允许/必填由所属列表 `imagePolicy` 决定；同时保留打开方式、排序、启停和必要扩展数据。页面可以按设计不显示标题或图片，但不得因此改变 CMS 数据契约。
 
 `sourceType` 是创建时身份；ARTICLE 的 `articleId` 同样是创建时来源身份。Admin 编辑态必须只读/禁用，Backend 必须独立拒绝 LINK↔ARTICLE 切换或 ARTICLE 更换关联文章。需要改变来源时删除原项并创建新项。
 
@@ -257,7 +261,7 @@ ARTICLE placement 保持以下边界：
 
 LINK 使用自身图片。ARTICLE 可以继承 Article 当前封面，也可以由后台从正文图片候选中选择或上传/选择 CMS Resource 形成列表专用覆盖；选中的正文图片必须把 Resource ID 固化为覆盖，不允许 Public Runtime 隐式寻找“正文第一张”。覆盖图片不修改 Article 封面/正文。
 
-REQUIRED ARTICLE 在保存时必须形成有效图片；既有 ARTICLE 后续因文章封面被移除且自身没有有效覆盖时，必须自动退出 REQUIRED 公开列表，直到重新形成有效图片。修改列表 imagePolicy 时不得制造已有 item 与新策略冲突。
+REQUIRED ARTICLE 在保存时必须形成有效图片；既有 ARTICLE 后续因文章封面被移除且自身没有有效覆盖时，必须自动退出 REQUIRED 公开列表，直到重新形成有效图片。修改列表 imagePolicy 时不得制造已有 item 与新策略冲突；切换到 `NONE` 前先清除不允许的既有图片/覆盖，切换到 `REQUIRED` 前必须先确保既有项能形成有效图片。Backend 对直接 API 调用执行同一校验。
 
 `HOME_CAROUSEL` 与 `PARTY_CAROUSEL` 均为 `imagePolicy=REQUIRED`。`SITE_LINKS` 分组当前按文字链接展示、`imagePolicy=NONE`；未来需要 Logo 时通过数据策略和内容数据调整，不新增 display mode。
 
@@ -304,7 +308,9 @@ Main / Party 当前统一使用：
 
 旧 `HOME_CAROUSEL_INTERVAL_SECONDS` 已被 supersede，不承担 Current Runtime responsibility。
 
-`RESOURCE_PATH` 图片属性复用统一图片资源选择/上传能力。`HOME_BANNERS`、`SERVICE_LINKS`、`SITE_LINK_GROUPS`、`HOME_PROMO_BANNER_PATH` 不再属于 Current SiteProperty 主数据；`HOME_NCSS_LOGO_PATH` 不使用 CMS 配置，NCSS 区域作为固定工程集成。
+SiteProperty 用于站点名称/简称、品牌资源、页头页脚公共信息、地址/电话/办公时间、备案/版权，以及少量确有运营调整价值的低风险站点行为参数。`RESOURCE_PATH` 图片属性复用统一图片资源选择/上传能力。
+
+`HOME_BANNERS`、`SERVICE_LINKS`、`SITE_LINK_GROUPS`、`HOME_PROMO_BANNER_PATH` 不再属于 Current SiteProperty 主数据；`HOME_NCSS_LOGO_PATH` 不使用 CMS 配置，NCSS 区域作为固定工程集成。
 
 当前阶段管理端可直接维护属性定义和值，不根据用户身份实施差异限制。
 
@@ -345,6 +351,8 @@ CMS Runtime 上传统一进入 `/static/uploads/**`，不属于 stable Site asse
 
 上传文件名由系统生成稳定名称。宣传展示、列表项、Navigation icon、`RESOURCE_PATH` SiteProperty 等图片字段复用同一选择/上传交互：当前预览、上传新图片、选择适用已有/内置图片、清除可选值。
 
+日常业务管理员不应被迫先进入 StaticResource 页面上传，再复制 `/static/...` 路径回业务表单。StaticResource 管理继续作为全局资源浏览、显式替换、回收和清理入口。
+
 改变 CMS 对象图片引用不得自动物理删除旧图片；停止引用后由 StaticResource 管理按实际情况清理。
 
 ### 10.3 安全与引用保护
@@ -365,7 +373,9 @@ CMS Runtime 上传统一进入 `/static/uploads/**`，不属于 stable Site asse
 
 主站首页运营数据优先来自 CMS：普通资讯来自 Column/Article；主导航与快捷入口来自 Navigation；业务图标来自 Navigation `iconPath`；轮播内容来自 `HOME_CAROUSEL`；统一行为参数来自 `CAROUSEL_INTERVAL_SECONDS / CAROUSEL_MAX_ITEMS`；友情链接来自 CmsList；招聘活动横幅来自 Advertisement；站点名称、联系方式等来自 SiteProperty；固定 NCSS 集成保留为工程资产。
 
-Public Site 不得重新硬编码 CMS 已经提供的业务数据；明确属于稳定工程设计的内容可以保留代码 / stable Site asset 实现。
+主站首页第一版继续复刻 Header、主导航及二级菜单、轮播、通知公告、固定业务入口、招聘日历、就业动态、业务指南快捷入口、专题/宣传 Banner、招聘相关区域、招聘公告、NCSS 固定集成、网站导航/友情链接和 Footer。EU-44 不改变这些既有页面范围。
+
+Public Site 不得重新硬编码 CMS 已经提供的业务数据；明确属于稳定工程设计的内容可以保留代码 / stable Site asset 实现。通用列表是否显示图片/Logo/名称、宣传展示区域尺寸、Navigation icon 尺寸等由页面设计固化，不作为 CMS 可配置视觉参数。
 
 ### 11.1 Main / Party 共享 Carousel lifecycle
 
@@ -394,9 +404,13 @@ PartyHome 固定呈现顶部重点内容、高层声音、工作动态、学习�
 
 Party 栏目列表与文章详情 breadcrumb 使用一致字号、间距、颜色和交互主题；栏目分页、跳转、每页条数等交互态使用 Party 红色主题，不泄漏 Main 蓝色主题。每页条数选择器使用可主题化控件，不依赖不可控的原生 `<select>` 弹层选中色。
 
+Party 正式视觉继续以原站证据 + AI Visual + Human Review 收敛，不以 Foundation CSS 作为最终视觉 Authority。
+
 ## 12. URL、页面上下文与模板
 
-公开 URL 与具体 HTML Entry 解耦。Main 普通栏目 `/column/{alias}`，INTERNAL Article `/article/{id}`，独立单页 `/page/{alias}`，单页分组成员 `/page/{groupAlias}/{alias}`；这些 URL 全部属于 Main Site Entry。
+公开 URL 与具体 HTML Entry 解耦。Main 普通栏目 `/column/{alias}`，INTERNAL Article `/article/{id}`，独立单页 `/page/{alias}`，单页分组成员 `/page/{groupAlias}/{alias}`；这些 URL 全部属于同一 Main Site Entry，`/page/**` 不再维持无业务价值的重复 Vue App / HTML Entry。
+
+Main Site 源码继续保持当前 `app / shell / modules` 所有权边界；页面模块按 home / content / page / integration 等真实职责组织，并使用 route-level lazy loading，避免将所有页面同步绑定到首屏 bundle。
 
 Party canonical namespace：
 
@@ -408,7 +422,7 @@ Party 栏目列表和文章详情由 Party Entry / Router / Shell 承载，保�
 
 原站 `/plist.html?typeCode=...`、`/pdetail.html?content_id=...`、`/detail.html?content_id=...` 及已观察到的参数变体只作为 Historical Migration mapping input，不作为新版 canonical URL。迁移可保存 legacy id/typeCode/detail path 映射，但新版 Router 不依赖旧 query-string 页面模型。
 
-面包屑来自 Column / PageGroup / Page / Article 业务关系，不从 URL、legacy typeCode 或某个 Navigation 入口机械推导。
+面包屑来自 Column / PageGroup / Page / Article 业务关系，不从 URL、legacy typeCode 或某个 Navigation 入口机械推导。Main 普通栏目列表、Article 详情、独立单页与业务指南单页分组继续以现网页面主要版式为复刻基准；Party 栏目与 Article 使用 Party 专属内容模板。
 
 ## 13. Generic Schema、Site provisioning 与 Historical Migration
 
@@ -468,7 +482,7 @@ Stable structure 可 reconcile；one-time bootstrap 成功后数据成为普通 
 
 ## 15. 发布与公开规则
 
-Article 状态保持：`草稿 → 已发布 → 已撤回 → 已发布`。编辑不自动改变状态；只有 `PUBLISHED` 进入正常公开发现范围；撤回后从首页、栏目列表和 ARTICLE placements 的公开结果退出；重新发布后既有有效 placement 可以恢复。
+Article 状态保持：`草稿 → 已发布 → 已撤回 → 已发布`。编辑不自动改变状态；只有 `PUBLISHED` 进入正常公开发现范围；撤回后从首页、栏目列表和 ARTICLE placements 的公开结果退出；重新发布后既有有效 placement 可以恢复。不存在、已删除或已撤回的内容直接访问时显示统一不可用提示。
 
 Column `coverPolicy=REQUIRED` 时，无封面草稿不得发布；已发布 Article 也不得通过普通编辑变成缺少必填封面的状态。
 
@@ -482,34 +496,34 @@ Navigation、CmsListItem、Advertisement、SiteProperty 等公开数据只消费
 
 1. 管理端侧边栏按“内容管理 / 内容结构 / 运营展示 / 站点设置”组织现有 CMS 能力，不新增独立“系统设置”模块；
 2. 产品界面使用“单页管理 / 单页 / 单页分组”，技术层 `Page / PageGroup` 和既有 API 保持兼容；
-3. 单页管理左侧提供“全部单页 / 独立单页 / 单页分组”，右侧按当前组织上下文展示成员；
-4. Article 管理左侧 Column tree 作为组织上下文，父栏目可聚合后代文章；列表使用服务端摘要分页查询，不要求浏览器下载全部正文后筛选；
-5. Column 支持 `NONE / OPTIONAL / REQUIRED` coverPolicy；REQUIRED 允许无封面 draft，但 publish/已发布 edit 必须满足封面契约；
+3. 单页管理左侧提供“全部单页 / 独立单页 / 单页分组”，右侧按当前组织上下文展示成员；具体分组上下文新增时默认带入分组；
+4. Article 管理左侧 Column tree 作为组织上下文，父栏目可聚合后代文章；列表使用服务端摘要分页查询，不要求浏览器下载全部正文后筛选；Column 管理自身继续直接维护栏目树；
+5. Column 支持 `NONE / OPTIONAL / REQUIRED` coverPolicy；REQUIRED 允许无封面 draft，但 publish/已发布 edit 必须满足封面契约；Public Article Summary 可返回可选封面引用；
 6. `Article.articleType` 创建后不可普通编辑；Article 不存在全局 `recommended`，独立推荐使用 `CmsList + ARTICLE`；
-7. NavigationLocation 独立维护，NavigationItem 图标属于自身数据，排序变化不得造成图标语义错位；
+7. NavigationLocation 独立维护；管理列表只展示当前选中位置的 Navigation tree；NavigationItem 图标属于自身数据，排序变化不得造成图标语义错位；
 8. `HOME_SHORTCUT` 与 `HOME_QUICK` 驱动对应 Main 首页入口及图标，前端不重复硬编码成员/图标关系；
-9. CmsList 不使用 displayMode 或旧组合型 itemType，图片策略保持 `NONE / OPTIONAL / REQUIRED`；
+9. CmsList 不使用 displayMode 或旧组合型 itemType，图片策略保持 `NONE / OPTIONAL / REQUIRED`；LINK 标题必填且 URL 执行站内路径 / HTTP(S) 校验；
 10. CmsListItem current source model 为 `LINK / ARTICLE`；ARTICLE placement 不改变 Article 唯一栏目归属；
 11. `CmsListItem.sourceType` 与 ARTICLE `articleId` 创建后不可普通编辑，Admin 与 Backend 同时强制；
 12. ARTICLE 仅在关联 Article `PUBLISHED` 时公开；INTERNAL target 由 Main / Party 生成各自 canonical route，EXTERNAL_LINK 使用当前外链，并继续遵守 placement `openMode`；
 13. ARTICLE image 可继承 Article 封面或使用显式 CMS Resource override；正文图片选择必须固化 Resource ID，Public 不隐式取正文第一张；
-14. REQUIRED ARTICLE 失去 effective image 后不得继续公开；
+14. REQUIRED ARTICLE 失去 effective image 后不得继续公开；列表 imagePolicy 变更不得制造已有数据冲突；
 15. `HOME_CAROUSEL / PARTY_CAROUSEL` 均为 REQUIRED；`SITE_LINKS` 当前按文字链接消费；
 16. Main / Party 统一使用 `CAROUSEL_INTERVAL_SECONDS`（默认 4）与 `CAROUSEL_MAX_ITEMS`（默认 5），Backend 拒绝非正整数新值；
 17. Carousel 0/1/多项、manual paging、hover/focus/visibility pause、resume、reduced-motion、failed-image backfill、current item identity 行为符合 §11.1；
 18. Main 轮播保持 `8:5`，Party 保持 `585:329`；共享 lifecycle 不强制共享视觉 DOM/主题；
-19. 首页招聘活动横幅由 `HOME_RECRUITMENT_PROMO` AdvertisementSlot 驱动，多条当前有效内容按顺序轮动；
+19. 管理端用户可见名称使用“宣传展示管理 / 展示位 / 展示内容”；首页招聘活动横幅由 `HOME_RECRUITMENT_PROMO` AdvertisementSlot 驱动，多条当前有效内容按顺序轮动；
 20. Advertisement `NO_LINK` 保留 URL 但禁止点击，恢复其他 openMode 后 URL 继续可用；有效期控制公开可见性且过期记录保留；
 21. 宣传展示、CmsList、Navigation icon、RESOURCE_PATH SiteProperty 复用统一图片选择/上传，Runtime 上传进入 `/static/uploads/**`；
 22. SiteProperty group 来自 Spring metadata，支持 INTEGER 等 typed validation，不依赖编译期 key Enum；
 23. NCSS 首页区域使用固定工程集成，不提供 CMS 管理项；
 24. 当前阶段不存在基于用户角色/权限的功能限制实现；
-25. Main `/`、Column、Article、Page、PageGroup canonical URL 与蓝白视觉主基线无回归；
-26. `/party/`、`/party/column/{alias}`、`/party/article/{id}` 由 Party Entry / Router / Shell / 红色主题承载并支持直接访问/刷新；
+25. Main `/`、Column、Article、Page、PageGroup canonical URL 与蓝白视觉主基线无回归；`/page/**` 不维持重复 HTML Entry；Main 源码保持当前 ownership boundary 与 route-level lazy loading；
+26. `/party/`、`/party/column/{alias}`、`/party/article/{id}` 由 Party Entry / Router / Shell / 红色主题承载并支持直接访问/刷新；Main / Party Navigation 与 Footer 继续复用 Shared Shell Components，Site-specific 内容主题互不污染；
 27. Party stable structure 包含父栏目 `party` 与五个子栏目 `party-voice / party-work / party-rules / party-study / party-theme-education`；
 28. Party 五个栏目复用通用 Column + Article，允许 INTERNAL / EXTERNAL_LINK；不新增 Party 专属 CMS 类型、`site` 字段、Admin Module 或第二套 Article 模型；
 29. PartyHome 固定顶部重点内容、高层声音、工作动态、学习园地；学习园地含党规党章/理论学习；主题教育不新增第五个固定首页区；
-30. Party EXTERNAL_LINK 直接打开原文；Party INTERNAL 使用 Party 详情模板并拒绝非 Party Article；
+30. Party EXTERNAL_LINK 直接打开原文；Party INTERNAL 使用 Party 详情模板并拒绝非 Party Article；不存在/已删除/已撤回内容直接访问使用统一不可用提示；
 31. Party breadcrumb、分页、每页条数等内容页交互保持 Party 红色主题，不泄漏 Main 蓝色；
 32. Generic Backend active Flyway 仅 V1 schema + V2 site-neutral provisioning capability，不承担具体 JilinJobs instance rows；
 33. JilinJobs stable structure / one-time bootstrap / stable assets 分别由 `sites/jilinjobs/{structure,bootstrap,assets}/**` 持有；
