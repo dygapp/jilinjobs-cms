@@ -135,11 +135,15 @@ docs/
 
 ## 6. Phase 2 — Generic Historical Migration & Backend Application Boundary
 
-### Planned Unit 2A — Backend Minimal Multi-Module Foundation
+### Planned Unit 2A — Backend Application / Core Boundary Foundation
 
-当前 requirement 已明确 CMS Server 与 Migration Tooling 需要两个独立 Spring Boot executable JAR，因此 application lifecycle 应使用 Gradle module boundary，而 CMS Core 内部领域暂不机械升级为一领域一个 Gradle module。
+2A 的目标不是预先选择某种目录形式，而是先建立三个长期可验证的工程边界：
 
-目标形态：
+1. CMS Server 与 Historical / Generic Content Migration 使用不同 application lifecycle 与 Spring composition root；
+2. 两个 application 共享 site-neutral CMS Domain / persistence capability，但 compile/runtime dependency 只能单向指向共享 Core；
+3. Server application 不再包含 Party migration runtime responsibility，Migration application 也不再通过完整 Server application composition 获得依赖。
+
+当前**推荐 Architecture Candidate**是最小 Gradle multi-project：
 
 ```text
 backend/
@@ -157,13 +161,92 @@ cms-server app ──────────→ cms-core
 content-migration app ───→ cms-core
 ```
 
-约束：
+推荐 multi-project 的理由是标准 project dependency、独立 compile/runtime classpath、独立测试/打包任务与清晰 composition ownership，而不是“存在两个 executable JAR 就逻辑必然要求三个 Gradle project”。
 
-- `cms-server` 与 `content-migration` 分别产生 executable Spring Boot JAR；
-- `cms-core` 内 `content / column / listing / resource / navigation / ...` 继续采用 package-level modularity；
-- 不为了 multi-module 顺带改造成 Clean Architecture 或一领域一 module；
-- 本单元只完成行为保持型 application/core boundary，不同时泛化 Party migration behavior；
-- 当前 Public/Admin/API/Site Package/Flyway behavior 必须保持。
+Technical Planning 必须同时显式评估一个较低复杂度替代方案：在单 Gradle project 内使用共享 core source set + 独立 server / migration source sets，并分别配置依赖、resources、tests 与 `BootJar.mainClass`。如果该方案可以用少量、清晰、长期可维护的 Gradle wiring 满足同等 dependency / classpath / composition isolation，则允许选择它；只在同一个完整 `main.runtimeClasspath` 上增加多个 BootJar / main class 不构成有效替代，因为它只分离启动入口，不分离责任与运行时装配。
+
+最终 build shape 必须在 2A 的 Technical Planning / readiness 前冻结；当前 Planning 不把 multi-project 当成 Requirement 事实。
+
+#### 2A ownership contract
+
+`cms-core` 应是普通 reusable library，候选责任包括：
+
+- site-neutral domain model / validation；
+- Article / Column / List / Resource 等可复用查询与写入服务；
+- Generic persistence mapper / adapter 与 transaction capability；
+- Resource safety / storage 等两个 application 都真实需要的能力；
+- Generic CMS Schema 的唯一资源 Authority，以及经现有 Authority 接受的 site-neutral provisioning capability。
+
+`cms-server` 持有：
+
+- Server application composition root；
+- HTTP Controller；
+- MVC / static-resource / Web-only configuration；
+- Public / Admin API transport composition；
+- 普通 Server runtime startup hooks。
+
+`content-migration` 持有：
+
+- Migration application composition root；
+- CLI / command dispatch；
+- import orchestration、report、exit semantics；
+- migration-only compatibility behavior；
+- 2A 期间完整保留当前 Party historical / carousel migration 行为，待 2B / 2C 再泛化与去专用化。
+
+“Generic CMS 产品能力属于 Core”不等于 Controller / MVC / transport class 必须进入 `modules/cms-core` build artifact；产品边界与 build artifact ownership 必须区分。
+
+#### 2A Spring / persistence / resource contract
+
+当前 Party migration 使用：
+
+```text
+SpringApplicationBuilder(CmsApplication::class.java)
+    .web(WebApplicationType.NONE)
+```
+
+`WebApplicationType.NONE` 只关闭 Web server，不隔离根包 component scan、Server configuration 或 startup side effect。因此 2A 不允许仅移动源文件后继续依赖相同 `CmsApplication` composition 并声称边界完成。
+
+2A Technical Planning 至少必须冻结：
+
+- 两个 app 的独立 application / composition root；
+- core / server / migration configuration 的显式导入或受限 scan；
+- `@MapperScan` / mapper XML / mapper resource discovery；
+- configuration properties / Jackson / transaction manager ownership；
+- Generic Flyway SQL 的**单一** Authority，不允许两个 app 维护复制 migration lineage；
+- Server 与 Migration 分别是执行 Flyway、validate，还是要求外部 Schema ready；
+- `Generic Schema → Site Package reconcile → optional one-time bootstrap → Historical Migration` 的生命周期顺序；
+- shared `application.yml` / resource 的加载与覆盖规则；
+- Site Package root 等现有相对路径、Gradle `JavaExec` / verification task 路径在项目移动后的重新定位；
+- domain transaction 与 migration 文件写入的不同回滚语义：数据库 `@Transactional` 不自动回滚已写入文件，preflight / compensation / failure semantics 必须按真实副作用定义。
+
+允许暂时保留 migration 对 `MultipartFile` 等 Spring Web abstraction 的薄类型依赖，只要不因此加载完整 server Web composition；是否进一步抽出更薄 stream/input contract 只在拆分确有必要时处理，不借机扩大架构重构。
+
+#### 2A behavior-preservation boundary
+
+2A 是 preparatory refactor，不是 Generic Engine 实现：
+
+- 当前四个 `Party*Migration*` 文件及其 V1/V2 historical / carousel compatibility 语义先整体迁入 Migration application responsibility；
+- 必须保留当前多个 migration entry / task 能力；是否收敛成单一 launcher + subcommand 需要 Technical Planning 明确，不能在搬迁中隐式丢失入口；
+- 不改变 canonical schema、legacy identity / fingerprint、report、conflict、idempotency、LINK→ARTICLE upgrade-only policy；
+- 不为了 module 整洁放宽 ordinary Admin/API edit contract；
+- 不改 content / column / listing / resource 等领域 package 结构，除非是建立 application/core dependency boundary 的最低必要移动；
+- 不新增 persistence/API/SPI 子模块、plugin framework、Clean Architecture 或 Git Repository split。
+
+#### 2A verification obligations
+
+至少验证：
+
+- shared Core library 与两个 application artifact 均可独立构建；
+- `cms-server` executable 正常 `java -jar` 启动并保持 Public/Admin/API/Site Package/Flyway 当前行为；
+- `content-migration` executable / CLI 可以独立启动、无 HTTP server、正常退出；
+- Migration runtime 不发现 Server Controller / server-only startup hooks；
+- mapper、transaction、configuration properties、Jackson、Flyway / schema policy 与 shared resources 实际装配正确；
+- dependency direction / classpath 不允许 core 反向依赖 app，也不允许 migration 依赖 server；
+- Fresh DB 与既有 compatible DB 的 schema / Site Package lifecycle 不发生无意变化；
+- current canonical import、second import idempotency、changed-fingerprint conflict、183 Articles、4 carousel、EU-29→EU-30 compatibility 与 resource integrity 保持；
+- 受影响 Public/Admin/API / browser regression 重新取得 Current Evidence。
+
+上述边界在 `slice-work` / `readiness-check` 前仍需基于最新代码完成 dependency closure 与 resource inventory；AR-02 review 不是 Readiness PASS。
 
 ### Planned Unit 2B — Generic Content Migration Application
 
@@ -176,7 +259,7 @@ Generic capability 至少覆盖：
 - size / SHA-256 integrity；
 - stable migration identity / fingerprint；
 - preflight before writes；
-- transaction boundary；
+- transaction / file-side-effect boundary；
 - Article / Resource / ListItem 等依赖顺序；
 - legacy mapping；
 - first import；
@@ -278,24 +361,40 @@ evals/architecture/
 evals/run_architecture_review.py
 ```
 
-首轮 bounded scenarios：
+语料包含：
 
 - `AR-01` Documentation Authority Architecture；
 - `AR-02` Backend Application / Gradle Module Boundary；
 - `AR-03` Generic Historical Migration Boundary。
 
-默认策略：
+### Current experiment evidence
 
-1. 先使用较低成本模型执行 dry-run，验证场景题面、context isolation 与评分 assertions 本身可用；
-2. 首轮 GPT-6 优先只运行 `AR-02`、`AR-03`；
-3. `AR-01` 只有在普通 review 暴露真实争议时再升级高能力模型；
-4. 每个 scenario 独立 `codex exec --ephemeral --json`；
-5. Runtime 只获得声明的 `context_paths`，不得读取 assertions / expected behavior / 历史结果；
+Phase 0 已在 exact Planning Head `52d8d59094eb5f02a2780ccf131363adac08a1dc` 对 AR-02 做一次 bounded paired comparison：
+
+- lower-cost baseline：requested `gpt-5.6-sol` / medium；
+- high-capability review：requested `gpt-6-astra` / high；
+- 两次使用相同 context digest / prompt digest，stderr empty，return code 0；
+- 当前 Codex JSONL 不暴露可独立确认的实际 runtime model / effort，因此只能记录 requested model / effort，不能声称 runtime trace 已二次证明；
+- 两次 Human Semantic Verdict 均为 `SUPPORTED_WITH_CHANGES`，AR-02 八条 assertions 均 PASS；
+- 共同 findings 已用于修订本文件 2A；
+- GPT-6 提供少量有价值的增量细化，但没有发现 lower-cost review 完全遗漏的 blocking architecture flaw。
+
+完整人工评分与原始 evidence digest 见 Issue #92 的 AR-02 Evidence comment。
+
+当前实验结论：**ADJUST**。
+
+因此 Phase 0 后续策略调整为：
+
+1. High-capability review 不进入普通 Development Method、Readiness Gate 或每个 Execution Unit 的默认步骤；
+2. 只在高返工成本且普通 review 后仍存在真实 unresolved architecture ambiguity 时，选择单一 bounded scenario 做第二视角挑战；
+3. 本轮不为了实验形式继续执行 AR-03 GPT-6；AR-03 只在后续 Generic Migration Planning 真正出现争议时重新启用；
+4. `AR-01` 同样只在 Documentation Authority review 出现实际争议时升级；
+5. 每个 scenario 仍必须独立 `codex exec --ephemeral --json`，Runtime 只获得声明的 `context_paths`，不得读取 assertions / expected behavior / 历史结果；
 6. 禁止 Web research、仓库外搜索、代码修改与重新规划整个项目；
-7. process exit `0` 不等于 PASS；人工逐条评分；
+7. process exit `0` 不等于 PASS，必须人工逐条语义评分；
 8. GPT-6 输出只构成 Review Evidence，不替代 Repository Authority 与 readiness-check。
 
-Evidence 至少保存：
+Evidence contract 继续至少保存：
 
 - exact Planning Head；
 - scenario id；
@@ -307,9 +406,10 @@ Evidence 至少保存：
 - stderr；
 - return code；
 - 人工 assertion grading；
-- 是否导致 Planning Authority 实际修订。
+- 是否导致 Planning Authority 实际修订；
+- 如果 runtime trace 没有暴露 model / effort，则明确记录 `NOT OBSERVABLE`。
 
-实验结论分为：
+实验生命周期结论仍使用：
 
 ```text
 RETAIN
@@ -317,7 +417,7 @@ ADJUST
 DROP
 ```
 
-只有在本 Consumer 取得实际可复用证据后，才考虑向 `dygapp/agentic-dev` 提交 Issue / Evidence。Consumer 会话不得直接修改 `agentic-dev` Repository 文件、Branch、PR 或 Workflow。
+当前只有一个 Consumer / 一个真实 scenario 的对照证据，不足以形成跨项目 Method 结论，因此暂不向 `dygapp/agentic-dev` 提交正式反馈 Issue。若后续第二个真实场景再次证明稳定增量价值，或暴露可复用的 model-isolation / evidence-lifecycle 方法问题，再通过 Issue / Evidence 反馈；Consumer 会话不得直接修改 `agentic-dev` Repository 文件、Branch、PR 或 Workflow。
 
 ## 10. Fresh Context and gates
 
@@ -329,6 +429,6 @@ Phase 0 Exit Gate：
 
 1. Issue #92、Issue #77 与 Project Planning 文档表达同一实际路线；
 2. 旧 Slice D 不再被描述成无前置工作的直接下一步；
-3. High-Capability Review Eval 的 scope / isolation / evidence / grading 已固化；
+3. High-Capability Review Eval 的 scope / isolation / evidence / grading 已固化，并已对首个真实 paired scenario 完成人工语义评分与 Planning correction；
 4. Current Ready Execution Unit 仍为 NONE；
 5. 下一 Fresh Context 应从 Phase 1 的 current audit / Requirement / Specification / Technical Planning / slice-work 实际状态继续，而不是从聊天历史推断。
