@@ -4,9 +4,12 @@ on:
   pull_request:
     paths:
       - 'data-migrations/**'
-      - 'backend/src/main/kotlin/com/jilinjobs/cms/migration/**'
-      - 'backend/src/main/kotlin/com/jilinjobs/cms/listing/**'
-      - 'backend/src/main/resources/db/migration/**'
+      - 'backend/build.gradle.kts'
+      - 'backend/settings.gradle.kts'
+      - 'backend/modules/cms-core/build.gradle.kts'
+      - 'backend/modules/cms-core/src/main/**'
+      - 'backend/apps/content-migration/build.gradle.kts'
+      - 'backend/apps/content-migration/src/main/**'
       - '.github/workflows/eu30-migration-upgrade-verify.yml'
   workflow_dispatch:
 
