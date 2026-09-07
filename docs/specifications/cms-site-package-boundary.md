@@ -4,6 +4,7 @@
 
 - `docs/requirements/cms-site-package-boundary.md`
 - GitHub Issue #77
+- GitHub Issue #92（EU-42 后跨边界 Phase 顺序）
 - `docs/specifications/public-frontend-replaceability.md`
 - `docs/technical/cms-architecture.md`
 - `data-migrations/README.md`
@@ -14,8 +15,10 @@
 - Specification: **ACCEPTED / ACTIVE**
 - Technical Planning: **ACTIVE**
 - Completed Execution Units: **EU-37 / EU-38 / EU-39 / EU-40 / EU-41 / EU-42**
-- Current Ready Execution Unit: **NONE**
+- Current Phase 1 execution: **EU-43 — Current Authority Semantic Reconciliation**
 - Issue #77: **OPEN**
+
+EU-43 只修复 Current Authority currentness，不改变本文已接受的四层产品/技术合同；后续 migration/application boundary 与 compatibility re-entry 由 Issue #92 Phase 2 / Phase 3 继续收敛。
 
 ## 1. Four-layer boundary
 
@@ -175,7 +178,8 @@ Main / Party Canonical Migration 可以依赖 Site Package stable identities，�
 - 不依赖 Runtime numeric ID；
 - 不依赖 Vue Router / component / Vite artifact；
 - Import 前目标 Site stable identity 已 provision；
-- 不把普通 Fresh Site bootstrap default 误当 historical provenance unit。
+- 不把普通 Fresh Site bootstrap default 误当 historical provenance unit；
+- 不接管 `sites/jilinjobs/assets/**` stable Site asset source ownership。
 
 EU-40 已证明 importer 可以显式组合 Site Package reconcile。EU-41 已进一步验证在 Backend Flyway 不再提供 JilinJobs data 的情况下，Party canonical Fresh import 与 EU-29→EU-30 upgrade 仍可仅依赖 Generic Schema + stable Site Package + Canonical Dataset 成立。
 
@@ -183,7 +187,7 @@ EU-40 已证明 importer 可以显式组合 Site Package reconcile。EU-41 已�
 
 EU-42 已关闭 stable Site asset 的 source ownership 与 Runtime composition：
 
-- 唯一版本化 source owner：`sites/jilinjobs/assets/**`；原 `site-baseline/static/**` 不再是并行 source authority；
+- 唯一版本化 source owner：`sites/jilinjobs/assets/**`；原 `site-baseline/static/**` 只属于历史实现路径，不再是并行/current source authority；
 - `sites/jilinjobs/assets/manifest.json` 与主 Site Package 使用同一 `packageId`，并声明 schemaVersion、package-root source、公开 `/static/**` target 与 SHA-256；
 - manifest loader 必须拒绝 package identity mismatch、source/target duplicate、path traversal / symlink escape、digest mismatch 与 `/static/uploads/**` target；
 - `SitePackageAssetProjector` 只 create missing targets；现存普通 target 不由启动覆盖，因此 operator 显式 replace 可跨 projection/restart 保留；
@@ -232,6 +236,8 @@ Generic CMS ready
 Stable Site Structure ready
   ↓ one-time Site bootstrap
 Initial operational defaults ready
+  ↓ stable Site asset projection
+Stable Runtime asset targets ready
   ↓ optional Canonical Historical Migration
 Runtime Content ready
   ↓ Public/Admin/Integration verification
@@ -243,6 +249,7 @@ Accepted Runtime
 ```text
 Backend schema validation/evolution
 → stable Site Package reconcile
+→ stable asset projection (create-if-missing)
 → no bootstrap
 → Runtime
 ```
@@ -285,9 +292,9 @@ EU-41 acceptance 已证明：
 9. Public/Admin/Integrated Browser current behavior 保持；
 10. Canonical Migration / EU-30 Upgrade / Review Environment 在新 lifecycle 下可重复。
 
-PR #88 final Head `a958c39a37892cf0fbcb41b8c883b2299d84f561` 的 Site Package Verification #32、CI #783、Canonical Migration Verification #165、EU-30 Migration Upgrade Verification #115 与人工评审环境 #696 全部 PASS；PR #88 已合并为 `main@6c88eea1762e8edf465833631cadff1e4c751d36`，Post-Integration Site Package Verification #33 与 CI #784 全部 PASS。EU-41 Specification acceptance 已闭环。
+EU-42 acceptance 进一步证明 stable Site assets 从 `sites/jilinjobs/assets/**` manifest 投影到空 Runtime static root、source/target/digest 受校验、`/static/uploads/**` 排除且 stable target 受 protected-path contract 保护。
 
-EU-42 final Head `37e03c3a5d7804804dcb3738a429e57e02b99e31` 的 Site Package Verification #34、CI #787 与 Review Environment #698 全部 PASS；PR #90 已合并为 `main@2c4af15df64342850391bbfe67de99b6404b3280`，Post-Integration Site Package Verification #35 与 CI #788（含 empty-root Integrated Browser）全部 PASS。EU-42 stable asset ownership / Runtime projection acceptance 已闭环。
+历史 exact-head / Integration / Post-Integration Run 继续由对应 EU work artifact、PR 与 GitHub Actions 承担追溯；本文不把旧 Run 号当作未来 Head 的 Current Evidence。
 
 ## 11. Repository / directory boundary
 
@@ -313,20 +320,23 @@ EU-42 final Head `37e03c3a5d7804804dcb3738a429e57e02b99e31` 的 Site Package Ver
 3. EU-39 Navigation stable identity / transition adoption；
 4. EU-40 explicit Runtime/importer Site Package composition；
 5. EU-41 Backend Schema-only Flyway lineage + one-time current-schema Site bootstrap + operational default no-takeover/no-resurrection；
-6. EU-41 exact-head / Integration / Post-Integration evidence 已闭环；
-7. EU-42 stable Site asset package ownership、integrity manifest、Runtime projection、StaticResource protection 与 CI / Review empty-root composition；
-8. EU-42 exact-head / Integration / Post-Integration evidence 已闭环。
+6. EU-42 stable Site asset package ownership、integrity manifest、Runtime projection、StaticResource protection 与 CI / Review empty-root composition。
 
-### 当前 Ready Execution Unit
+### 当前 Phase
 
-**NONE**。EU-42 的 Execute Authority 已随完成而终止。
+Issue #92 Phase 1 Documentation Authority Convergence 正在执行；当前具体 Ready/Execute Unit 为 EU-43 documentation-only semantic reconciliation。EU-43 不改变四层 runtime contract，也不授权 Phase 2 / Phase 3。
 
-### 剩余 Planning Candidates
+### 剩余 Planning / Re-entry 顺序
 
-1. Canonical Migration Compatibility & E1～E3 re-entry（Slice D）；
-2. 四层 boundary 完成后的 Repository Split Readiness Assessment。
+旧 “Slice D — direct Canonical Compatibility” 不再是 EU-42 后的直接下一步。Current Authority 顺序为：
 
-这些剩余项仍必须重新执行 current audit / `slice-work → readiness-check`，不得自动继承 EU-42 Execute 授权。
+1. Phase 1 Documentation Authority Convergence；
+2. Phase 2 Generic Historical Migration & Backend Application Boundary；
+3. Phase 3 Canonical Migration Compatibility & E1～E3 Re-entry Gate；
+4. Issue #60 / E1～E3；
+5. 四层 boundary 完成后独立进行 Repository Split Readiness Assessment。
+
+这些后续项仍必须分别经过 Consumer-local `slice-work → readiness-check`，不得自动继承 EU-42/EU-43 Execute Authority。
 
 ## Deferred decisions
 
