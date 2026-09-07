@@ -6,10 +6,13 @@
 - Phase: Phase 1A — Canonical Authority Audit & Reconciliation
 - Candidate formed by: `slice-work`
 - Readiness: **PASS**
-- Execute state: **IMPLEMENTED / IN REVIEW**
+- Execute state: **COMPLETED**
 - Planning baseline: `main@f8f4083d831b5a1bfffe494b541c7015dbdd3fe0`
 - Execute baseline: `main@8848d74967a638f9cda749085c16257326888d4e`
 - Implementation branch: `docs/eu-43-current-authority-reconciliation`
+- Implementation PR: **#97**
+- Final implementation Head: `f9c8bef213b0a4b3b34d1054b7e42a71b1a4cdde`
+- Integration commit: `main@459e6c6a2030badf46b9146b2158816dea07358d`
 - Specification / audit: `docs/project/documentation-authority-convergence.md`
 
 ## Objective
@@ -69,7 +72,7 @@
 - Canonical Migration responsibility 没有被移入 Site Package/Flyway。
 - Diff 中没有 code/runtime/data changes。
 - Exact-head Repository CI PASS。
-- Merge 后 `main` post-integration CI PASS，且 Current Authority locator 重新读取无 drift。
+- Merge 后 `main` post-integration CI PASS，且 Current Authority locator 重新读取无 unresolved lifecycle drift。
 
 ## Verification
 
@@ -82,19 +85,24 @@
 
 允许在明确的 **historical context** 中保留旧文件名/旧 migration number，但必须显式标注为 historical / superseded，不能让其承担 Current lifecycle。
 
-### Current implementation evidence
+### Final implementation evidence
 
-- Execute branch 从 exact `main@8848d74967a638f9cda749085c16257326888d4e` 创建；
-- Execute 前 Open PR = 0，base drift = none；
-- implementation compare 当前只触达 EU-43 Authority scope + 本 work artifact，不含 code/runtime/data changes；
-- PR exact-head CI / review threads / merge / post-integration evidence 仍待取得，因此当前不得声明 COMPLETED。
+- Execute branch 从 exact `main@8848d74967a638f9cda749085c16257326888d4e` 创建；Execute 前 Open PR = 0，base drift = none；
+- PR #97 final Head：`f9c8bef213b0a4b3b34d1054b7e42a71b1a4cdde`；changed files = 13 documentation files only（12 个 scoped Current Authority + 本 work artifact），无 code/runtime/data/Flyway/Site Package/Canonical Dataset/workflow 变更；
+- PR #97 exact-head CI #808：**PASS**，包含 Backend、Public、Admin 与 empty-static-root Integrated Browser；
+- 自动触发的 Canonical Migration Verification #166、EU-30 Migration Upgrade Verification #116、Review Environment #713：**PASS**；这些是支持性 evidence，不扩大 EU-43 的最低验证合同；
+- unresolved review threads：**0**；
+- PR #97 已合并为 `main@459e6c6a2030badf46b9146b2158816dea07358d`；
+- Post-Integration CI #809：**PASS**，Backend、Public、Admin、Site Package foundation/runtime composition、EU-41 bootstrap separation、EU-42 asset projection 与 Integrated Browser 全部通过；
+- Integration 后重新读取 Fresh Context locator，仅发现 AGENTS / README / Roadmap / Phase 1 planning documents / 本 work artifact 仍保留 EU-43 Ready/In Review 的状态标签；该差异属于完成态同步，不改变 EU-43 已接受语义、产品行为或 Runtime。Closure state 同步将这些入口统一为 EU-43 COMPLETED、Current Ready Execution Unit = NONE、Slice B = 下一 Planning Gate / Planning Candidate。
 
-### Repository evidence required for completion
+### Repository evidence result
 
-- PR exact-head CI；
-- unresolved review threads = 0；
-- merge 后 main CI；
-- Issue #92 / Roadmap current state 回写。
+- PR exact-head CI：**PASS**；
+- unresolved review threads：**0**；
+- merge 后 main CI：**PASS**；
+- Current Authority semantic reconciliation：**PASS**；
+- completion-state locator synchronization：由 EU-43 closure state update 收口，不产生新的 Execute Authority。
 
 ## Rollback
 
@@ -102,4 +110,6 @@
 
 ## Handoff after completion
 
-EU-43 完成后 Current Ready Execution Unit 回到 **NONE**。后继 Slice B 必须重新执行 `slice-work → readiness-check`；不得继承 EU-43 Execute Authority。
+Current Ready Execution Unit：**NONE**。
+
+后继 **Slice B — Canonical Product Requirement Consolidation** 仍是 Planning Candidate，必须在新的 Current Repository state 上重新执行 `slice-work → readiness-check`；不得继承 EU-43 Execute Authority。Slice B 完成后才允许进入 Phase 1B，Phase 1 全部收口后才进入 Phase 2；Issue #60 / E1～E3 继续保持 downstream。

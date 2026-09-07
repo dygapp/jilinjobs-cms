@@ -6,7 +6,7 @@
 
 当前版本以原网站现有结构和视觉关系为主站公开基线，采用 Vue + Spring Boot 重建中心主站，并在同一公开站前端工程中建设具有独立红色视觉主题的“中心党建”特殊栏目/专题页面。管理端已经完成独立前端工程与 Modular SPA 收敛；公开站已经完成 **Multi-entry Modular SPA** 基础架构：Entry 只按真实 Theme / Router Boundary 划分，中心主站与中心党建分别拥有独立 App、Router、Banner 与内容主题，但继续共用 `frontend/public-site` 工程、Vue/Vite 技术栈、构建发布链路和 Spring Boot CMS Backend；主导航与 Footer 使用 Shared Shell Components 保持公共区域一致。
 
-中心党建 EU-26～EU-29、EU-30 Carousel Architecture & Behavior Convergence、EU-31 Database Migration Baseline Convergence、Issue #60 / B1～B3 收敛形成的 EU-32～EU-35，以及 Issue #60 / D1 收敛形成的 EU-36 均已完成并收敛到 `main`。**Issue #77 的 Site Package 前置架构收敛已进一步完成 EU-37 — Site Package Contract & Provisioner Foundation、EU-38 — Stable Site Structure Package Migration、EU-39 — Navigation Stable Identity & Site Package Reconcile、EU-40 — Explicit Site Package Runtime Composition Activation、EU-41 — Site Bootstrap & Generic Schema Baseline Separation 与 EU-42 — Site Asset Package Ownership & Runtime Projection；EU-37～EU-42 均已集成到 `main` 并通过 Post-Integration Verification。当前 Planning Priority 为 Issue #92。Phase 0 已完成；Phase 1 Repository Documentation Authority Convergence 已完成 current audit、Authority Clarification、`slice-work` 与 `readiness-check`，当前 Ready Execution Unit 为 EU-43 — Current Authority Semantic Reconciliation，Execute 尚未开始。** Issue #77 继续保持 OPEN 并承担四层 boundary；旧 Slice D 不再是 EU-42 后可直接执行的下一步。Issue #60 / E1～E3 必须等待 Issue #92 的 Phase 1 Documentation Authority、Phase 2 Historical Migration / Backend Application Boundary 与 Phase 3 final compatibility re-entry gate 完成。后继 Slice B、Phase 1B、Phase 2 和 E1～E3 不继承 EU-43 Execute Authority。
+中心党建 EU-26～EU-29、EU-30 Carousel Architecture & Behavior Convergence、EU-31 Database Migration Baseline Convergence、Issue #60 / B1～B3 收敛形成的 EU-32～EU-35，以及 Issue #60 / D1 收敛形成的 EU-36 均已完成并收敛到 `main`。**Issue #77 的 Site Package 前置架构收敛已进一步完成 EU-37 — Site Package Contract & Provisioner Foundation、EU-38 — Stable Site Structure Package Migration、EU-39 — Navigation Stable Identity & Site Package Reconcile、EU-40 — Explicit Site Package Runtime Composition Activation、EU-41 — Site Bootstrap & Generic Schema Baseline Separation 与 EU-42 — Site Asset Package Ownership & Runtime Projection；EU-37～EU-42 均已集成到 `main` 并通过 Post-Integration Verification。当前 Planning Priority 为 Issue #92。Phase 0 已完成；Phase 1 Repository Documentation Authority Convergence 已完成 current audit、Authority Clarification、`slice-work` / `readiness-check` 与 EU-43 — Current Authority Semantic Reconciliation 的实现、集成及 Post-Integration Evidence 收口。当前 Ready Execution Unit 为 NONE；下一 Planning Gate 是 Slice B — Canonical Product Requirement Consolidation，仍是 Planning Candidate，必须重新执行 `slice-work → readiness-check`。** Issue #77 继续保持 OPEN 并承担四层 boundary；旧 Slice D 不再是 EU-42 后可直接执行的下一步。Issue #60 / E1～E3 必须等待 Issue #92 的 Phase 1 Documentation Authority、Phase 2 Historical Migration / Backend Application Boundary 与 Phase 3 final compatibility re-entry gate 完成。Slice B、Phase 1B、Phase 2 和 E1～E3 不继承 EU-43 Execute Authority。
 
 当前权威需求：
 
@@ -67,10 +67,11 @@
 
 当前 Ready Execution Unit：
 
-- `docs/work/eu43-current-authority-semantic-reconciliation.md` — **READY / NOT STARTED**
+- **NONE**
 
 最近完成的执行单元：
 
+- `docs/work/eu43-current-authority-semantic-reconciliation.md`（COMPLETED）
 - `docs/work/eu42-site-asset-runtime-projection.md`（COMPLETED）
 - `docs/work/eu41-site-bootstrap-generic-schema-baseline-separation.md`（COMPLETED）
 - `docs/work/eu40-explicit-site-package-runtime-composition.md`（COMPLETED）
@@ -88,7 +89,7 @@
 
 当前后续规划入口：
 
-- GitHub Issue #92：当前 E1～E3 前置总体路线 Authority；Phase 1 audit / Authority Clarification / slice-work / readiness 已形成 EU-43，下一实际步骤是在 Fresh Context 核验 base drift 后执行 EU-43；其后的 Canonical Product Requirement Consolidation、Phase 1B Information Architecture、Phase 2/3 均须继续按 Consumer-local Method 独立收敛；
+- GitHub Issue #92：当前 E1～E3 前置总体路线 Authority；Phase 1 的 Slice A / EU-43 已完成并取得集成后 Current Evidence，当前没有 Ready Execution Unit；下一实际 Gate 是 Slice B — Canonical Product Requirement Consolidation 的独立 `slice-work → readiness-check`，其后的 Phase 1B Information Architecture、Phase 2/3 也须继续按 Consumer-local Method 独立收敛；
 - GitHub Issue #77：当前 Site Package / 四层 boundary Authority；EU-37～EU-42 已完成，后续 compatibility 与 migration/application boundary 按 Issue #92 的 Phase 顺序推进，不再把旧 Slice D 作为直接 Execute 入口；
 - GitHub Issue #60：EU-30 后续需求边界候选池；D1 / EU-36 已完成，E1～E3 等待 Issue #92 前置收敛，C1/C2 继续独立保留；
 - GitHub Issue #59：EU-31 已完成后的 Browser Compatibility 等后置规划候选；
@@ -106,7 +107,7 @@
 
 - `docs/work/admin-frontend-convergence-execution-units.md`
 
-管理端双前端拆分、通用 CMS 模型和 Admin Modular SPA 已完成当前阶段收敛；公开站 Multi-entry Modular SPA、中心党建正式页面与历史内容、EU-30 轮播架构与行为、EU-31 数据库迁移基线、EU-32～EU-35 的列表结构治理、管理端提示责任治理与富文本安全/编辑能力、EU-36 的 Public source ownership / managed resource projection，以及 EU-37～EU-42 的 Site Package contract、provisioner foundation、stable site structure migration、Navigation stable identity/reconcile、explicit Runtime composition activation、Site bootstrap / Generic Schema baseline separation 与 stable Site asset ownership / Runtime projection 均已完成当前阶段收敛。Phase 1 planning/readiness 现已形成唯一 Ready Unit EU-43；本 Planning Gate 不在同一上下文继续 Execute，后续 Fresh Context 应先重新核验 `main`、Issue #92、EU-43 work artifact 与 base drift，再在 Readiness 仍有效时执行 EU-43。
+管理端双前端拆分、通用 CMS 模型和 Admin Modular SPA 已完成当前阶段收敛；公开站 Multi-entry Modular SPA、中心党建正式页面与历史内容、EU-30 轮播架构与行为、EU-31 数据库迁移基线、EU-32～EU-35 的列表结构治理、管理端提示责任治理与富文本安全/编辑能力、EU-36 的 Public source ownership / managed resource projection，以及 EU-37～EU-42 的 Site Package contract、provisioner foundation、stable site structure migration、Navigation stable identity/reconcile、explicit Runtime composition activation、Site bootstrap / Generic Schema baseline separation 与 stable Site asset ownership / Runtime projection 均已完成当前阶段收敛。Phase 1 Slice A / EU-43 Current Authority Semantic Reconciliation 也已完成实现、集成与 Post-Integration Evidence 收口；当前 Ready Execution Unit 为 NONE。后续 Fresh Context 应从 Issue #92 恢复 Slice B Planning Candidate，并重新执行 `slice-work → readiness-check`，不得直接进入 Slice B Execute、Phase 1B、Phase 2 或 Issue #60 / E1～E3。
 
 历史阶段文档继续保留用于追溯，但不再作为当前目标架构：
 

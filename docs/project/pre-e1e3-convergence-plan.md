@@ -7,8 +7,10 @@
 - Downstream candidates：GitHub Issue #60 / E1～E3
 - Stage：**Planning Authority — ACTIVE / Phase 1 IN PROGRESS**
 - Phase 0：**COMPLETED**
-- Phase 1 current audit / Authority Clarification / slice-work / readiness：**COMPLETED**
-- Current execution：**EU-43 — Current Authority Semantic Reconciliation**
+- Phase 1 current audit / Authority Clarification：**COMPLETED**
+- Phase 1 Slice A / EU-43：**COMPLETED**
+- Current execution：**NONE**
+- Next Planning Gate：**Slice B — Canonical Product Requirement Consolidation / Planning Candidate**
 - Phase 1 audit / Ready Specification：`docs/project/documentation-authority-convergence.md`
 
 本文固化 EU-42 之后、Issue #60 / E1～E3 重新进入正式规划之前的总体演进顺序。本文中的 Phase / Planned Unit 名称都只是 Planning identity；只有经过 `slice-work → readiness-check` 的具体 Execution Unit 才授予 Execute 权限。
@@ -104,15 +106,15 @@ HISTORICAL_EVIDENCE
 - `PARTIALLY_CURRENT` 不能直接归档；必须先把仍有效语义吸收进 canonical Current Authority；
 - Requirement 的 archive 门槛最高，不能因为对应 EU 已完成就自动归档；
 - 不为目录整洁机械做全仓搬迁；
-- 当前 high-risk drift 包括 EU-41 后旧 Flyway Site Data responsibility、EU-42 后旧 `site-baseline/static/**` ownership、historical migration lifecycle 被描述为 Current、旧 Slice D direct-next-step，以及过期 architecture-review experiment status。
+- current audit 识别出的 high-risk drift 包括 EU-41 后旧 Flyway Site Data responsibility、EU-42 后旧 `site-baseline/static/**` ownership、historical migration lifecycle 被描述为 Current、旧 Slice D direct-next-step，以及过期 architecture-review experiment status；这些已由 EU-43 关闭；EU-30 Amendment consolidation 留给 Slice B。
 
 `slice-work` 将 1A 拆为 dependency-ordered slices：
 
-1. **EU-43 — Current Authority Semantic Reconciliation**：当前 Execute Unit，只修复四层 boundary / lifecycle / migration / asset / verification currentness；
-2. **Slice B — Canonical Product Requirement Consolidation**：Planning Candidate；EU-43 后再将 EU-30 Amendment 与 EU-41/EU-42 ownership 折回 canonical product/CMS Authority；
+1. **EU-43 — Current Authority Semantic Reconciliation — COMPLETED**：已修复四层 boundary / lifecycle / migration / asset / verification currentness；
+2. **Slice B — Canonical Product Requirement Consolidation — NEXT PLANNING GATE / Planning Candidate**：EU-43 后将 EU-30 Amendment 与 EU-41/EU-42 ownership 折回 canonical product/CMS Authority；必须重新执行 `slice-work → readiness-check`；
 3. Phase 1B 只有在前述 semantic currentness 完成后才进入。
 
-EU-43 不授权 Slice B / Phase 1B / Phase 2 / E1～E3。
+EU-43 Execute Authority 已随完成终止，不授权 Slice B / Phase 1B / Phase 2 / E1～E3。
 
 ### Planned Unit 1B — Documentation Information Architecture & Archive Migration
 
@@ -440,7 +442,7 @@ Current Phase 1 Gate：
 
 1. Phase 0 已完成，Issue #92、Issue #77 与 Project Planning 文档表达同一总体路线；
 2. 旧 Slice D 不再被描述成 EU-42 后无前置工作的直接下一步；
-3. Phase 1 current audit 已完成并形成 `docs/project/documentation-authority-convergence.md`；
-4. EU-43 只负责当前四层/lifecycle documentation semantic reconciliation；
-5. EU-43 完成后 Current Ready Execution Unit 回到 NONE，Slice B 必须重新执行 `slice-work → readiness-check`；
+3. Phase 1 current audit 与 Slice A / EU-43 已完成，Current Ready Execution Unit = NONE；
+4. 下一 Planning Gate 是 Slice B — Canonical Product Requirement Consolidation，必须重新执行 `slice-work → readiness-check`，不得继承 EU-43 Execute Authority；
+5. Slice B 完成后才允许进入 Phase 1B Information Architecture / Archive Migration；
 6. Phase 1 全部收口前不得进入 Phase 2，Phase 3 compatibility Gate 前不得进入 Issue #60 / E1～E3。
