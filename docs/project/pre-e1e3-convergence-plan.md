@@ -5,10 +5,13 @@
 - Planning source：GitHub Issue #92
 - Related architecture authority：GitHub Issue #77
 - Downstream candidates：GitHub Issue #60 / E1～E3
-- Stage：**Planning Authority — ACTIVE**
-- Current Ready Execution Unit：**NONE**
+- Stage：**Planning Authority — ACTIVE / Phase 1 IN PROGRESS**
+- Phase 0：**COMPLETED**
+- Phase 1 current audit / Authority Clarification / slice-work / readiness：**COMPLETED**
+- Current execution：**EU-43 — Current Authority Semantic Reconciliation**
+- Phase 1 audit / Ready Specification：`docs/project/documentation-authority-convergence.md`
 
-本文固化 EU-42 之后、Issue #60 / E1～E3 重新进入正式规划之前的总体演进顺序。本文中的 Phase / Planned Unit 名称都只是 Planning identity，不是 Execution Unit Identifier，也不授予 Execute 权限。
+本文固化 EU-42 之后、Issue #60 / E1～E3 重新进入正式规划之前的总体演进顺序。本文中的 Phase / Planned Unit 名称都只是 Planning identity；只有经过 `slice-work → readiness-check` 的具体 Execution Unit 才授予 Execute 权限。
 
 后续仍严格遵守：
 
@@ -31,14 +34,14 @@ EU-42 后 current audit 进一步确认两个不能直接留给 E1～E3 的长�
 1. Repository 文档中 Current Authority、阶段性 Amendment、历史 Work Record 与已 superseded 状态并列存在，Root README 也承担了过多 Roadmap / Authority index / history 职责；
 2. Party-specific Historical Migration Application 仍位于 Backend production `src/main`，而未来 Main migration 需要一个 site-neutral、可复用且独立运行的 Generic Content Migration Application。
 
-因此旧的“直接进入 Canonical Migration Compatibility & E1～E3 Re-entry”顺序已经不足，需要先完成 Documentation Authority 与 Historical Migration / Backend Application Boundary 收敛。
+因此旧的“直接进入 Canonical Migration Compatibility & E1～E3 Re-entry”顺序已经被 supersede，需要先完成 Documentation Authority 与 Historical Migration / Backend Application Boundary 收敛。
 
 ## 3. Overall sequence
 
 ```text
-Phase 0  Planning Authority Solidification
+Phase 0  Planning Authority Solidification — COMPLETED
                ↓
-Phase 1  Repository Documentation Authority Convergence
+Phase 1  Repository Documentation Authority Convergence — IN PROGRESS
                ↓
 Phase 2  Generic Historical Migration & Backend Application Boundary
                ↓
@@ -50,28 +53,34 @@ Phase 3  Canonical Migration Compatibility & E1～E3 Re-entry Gate
 Phase 4  Repository Split Readiness Assessment
 ```
 
-## 4. Phase 0 — Planning Authority Solidification
+## 4. Phase 0 — Planning Authority Solidification — COMPLETED
 
 目标：让后续 Fresh Context 可以只从 GitHub Repository 恢复新的实际路线，而不是从聊天记录恢复。
 
-Phase 0 包含：
+Phase 0 已完成：
 
-- Issue #92 作为跨 Issue 总体规划入口；
-- Issue #77 保持四层架构边界 Authority，但修正 Historical Migration 的剩余顺序；
-- Project Roadmap 与 `site-package-planning.md` 同步新的实际下一步；
-- 固化本计划；
-- 增加最小、实验性、可撤销的 High-Capability Architecture Review Eval；
-- Eval 只是附加 Review Evidence，不创建新的 Method Stage，不替代 readiness-check。
+- Issue #92 成为跨 Issue 总体规划入口；
+- Issue #77 保持四层架构边界 Authority，但 Historical Migration remaining path 对齐 Issue #92；
+- Project Roadmap 与 `site-package-planning.md` 同步新的实际路线；
+- 本计划进入 Repository；
+- 建立最小、实验性、可撤销的 bounded architecture-review eval；
+- AR-02 / AR-04 current evidence 已形成，模型输出只作为附加 Review Evidence，不创建新的 Method Stage，不替代 readiness-check。
 
-Phase 0 不形成实现 EU，不修改 CMS 产品行为，不进入 Issue #60 / E1～E3。
+Phase 0 没有形成实现 EU，也没有进入 Issue #60 / E1～E3。
 
-## 5. Phase 1 — Repository Documentation Authority Convergence
+## 5. Phase 1 — Repository Documentation Authority Convergence — IN PROGRESS
 
-### Planned Unit 1A — Canonical Authority Audit & Reconciliation
+Phase 1 的 current audit、分类规则、dependency closure 与 slice result 以：
 
-目标：先解决文档语义 Authority，再处理目录外观。
+```text
+docs/project/documentation-authority-convergence.md
+```
 
-范围：
+为当前 Authority。
+
+### Unit 1A — Canonical Authority Audit & Reconciliation
+
+Current audit 已覆盖：
 
 - Root `README.md`；
 - `docs/requirements/**`；
@@ -79,9 +88,9 @@ Phase 0 不形成实现 EU，不修改 CMS 产品行为，不进入 Issue #60 / 
 - `docs/technical/**`；
 - `docs/work/**`；
 - `data-migrations/**` 中当前边界说明；
-- 主要源码 / Site Package 子树 README。
+- 必要 subtree README gap。
 
-每份文档至少分类为：
+每份文档按以下角色分类：
 
 ```text
 CURRENT
@@ -93,15 +102,23 @@ HISTORICAL_EVIDENCE
 规则：
 
 - `PARTIALLY_CURRENT` 不能直接归档；必须先把仍有效语义吸收进 canonical Current Authority；
-- 修复 EU-41 / EU-42 后的 V2 responsibility、旧 `site-baseline/static/**` ownership、Historical Migration / Site Package responsibility 等 current-document drift；
 - Requirement 的 archive 门槛最高，不能因为对应 EU 已完成就自动归档；
-- 本单元不机械做全仓目录搬迁。
+- 不为目录整洁机械做全仓搬迁；
+- 当前 high-risk drift 包括 EU-41 后旧 Flyway Site Data responsibility、EU-42 后旧 `site-baseline/static/**` ownership、historical migration lifecycle 被描述为 Current、旧 Slice D direct-next-step，以及过期 architecture-review experiment status。
+
+`slice-work` 将 1A 拆为 dependency-ordered slices：
+
+1. **EU-43 — Current Authority Semantic Reconciliation**：当前 Execute Unit，只修复四层 boundary / lifecycle / migration / asset / verification currentness；
+2. **Slice B — Canonical Product Requirement Consolidation**：Planning Candidate；EU-43 后再将 EU-30 Amendment 与 EU-41/EU-42 ownership 折回 canonical product/CMS Authority；
+3. Phase 1B 只有在前述 semantic currentness 完成后才进入。
+
+EU-43 不授权 Slice B / Phase 1B / Phase 2 / E1～E3。
 
 ### Planned Unit 1B — Documentation Information Architecture & Archive Migration
 
 在 1A 完成 Current Authority 接管后再做物理整理。
 
-目标信息架构：
+目标信息架构候选：
 
 ```text
 docs/
@@ -132,6 +149,8 @@ docs/
 - 更新 Current Authority 链接；
 - `archive/**` 默认不参与 Fresh Context Current Authority 恢复；
 - Git history 与 Historical Work / Archive 负责追溯，不长期维护多份并列 Current 状态。
+
+1B 当前仍是 Planning Candidate，不继承 EU-43 Execute Authority。
 
 ## 6. Phase 2 — Generic Historical Migration & Backend Application Boundary
 
@@ -328,7 +347,7 @@ Gate 需要覆盖：
 
 - Fresh DB；
 - empty Runtime static root；
-- Site Package reconcile；
+- Site Package reconcile / stable asset projection；
 - one-time bootstrap；
 - canonical import；
 - repeated import；
@@ -350,85 +369,78 @@ Gate 需要覆盖：
 
 Assessment 不等于自动拆仓，也不默认阻塞 E1～E3。
 
-## 9. High-Capability Architecture Review Eval Experiment
-
-本轮把 GPT-6 review 作为一个小型实验穿插在 Phase 0 中，不预设长期保留。
+## 9. Architecture Review Eval Experiment
 
 Consumer-local Eval 入口：
 
 ```text
-evals/architecture/
+evals/README.md
+evals/architecture/pre-e1e3-convergence-review.json
+evals/architecture/ar04-migration-sequencing-review.json
 evals/run_architecture_review.py
+evals/run_ar04_review.py
 ```
-
-语料包含：
-
-- `AR-01` Documentation Authority Architecture；
-- `AR-02` Backend Application / Gradle Module Boundary；
-- `AR-03` Generic Historical Migration Boundary。
 
 ### Current experiment evidence
 
-Phase 0 已在 exact Planning Head `52d8d59094eb5f02a2780ccf131363adac08a1dc` 对 AR-02 做一次 bounded paired comparison：
+当前已有两个真实 paired scenario：
 
-- lower-cost baseline：requested `gpt-5.6-sol` / medium；
-- high-capability review：requested `gpt-6-astra` / high；
-- 两次使用相同 context digest / prompt digest，stderr empty，return code 0；
-- 当前 Codex JSONL 不暴露可独立确认的实际 runtime model / effort，因此只能记录 requested model / effort，不能声称 runtime trace 已二次证明；
-- 两次 Human Semantic Verdict 均为 `SUPPORTED_WITH_CHANGES`，AR-02 八条 assertions 均 PASS；
-- 共同 findings 已用于修订本文件 2A；
-- GPT-6 提供少量有价值的增量细化，但没有发现 lower-cost review 完全遗漏的 blocking architecture flaw。
+#### AR-02 — Backend Application / Gradle Module Boundary
 
-完整人工评分与原始 evidence digest 见 Issue #92 的 AR-02 Evidence comment。
+- exact Planning Head：`52d8d59094eb5f02a2780ccf131363adac08a1dc`；
+- lower-cost baseline requested `gpt-5.6-sol` / medium；
+- high-capability review requested `gpt-6-astra` / high；
+- 相同 bounded context / prompt；
+- 两次 Human Semantic Verdict 均为 `SUPPORTED_WITH_CHANGES`；
+- 八条 assertions 均 PASS；
+- 共同 findings 已用于修订 2A；
+- Astra 提供少量增量细化，但没有独占 blocking discovery；
+- Codex JSONL 未暴露可独立确认的 runtime model / effort，因此只记录 requested model / effort，不把它夸大为 runtime trace 已二次证明。
 
-当前实验结论：**ADJUST**。
+#### AR-04 — Migration Sequencing Blind Discovery
 
-因此 Phase 0 后续策略调整为：
+- 使用已知缺陷被发现前冻结的两阶段 migration extraction candidate，避免把答案或 assertions 泄漏给 runtime reviewer；
+- `gpt-5.6-sol` / medium 与 `gpt-6-astra` / high 均独立给出 `BLOCKING_CONCERN`；
+- Human discovery = `DETECTED`；
+- hidden assertions 两次均 `8/8 PASS`；
+- 两个模型都发现了 sequencing / application responsibility flaw，Astra 未发现 Sol/medium 漏掉的 blocking flaw。
 
-1. High-capability review 不进入普通 Development Method、Readiness Gate 或每个 Execution Unit 的默认步骤；
-2. 只在高返工成本且普通 review 后仍存在真实 unresolved architecture ambiguity 时，选择单一 bounded scenario 做第二视角挑战；
-3. 本轮不为了实验形式继续执行 AR-03 GPT-6；AR-03 只在后续 Generic Migration Planning 真正出现争议时重新启用；
-4. `AR-01` 同样只在 Documentation Authority review 出现实际争议时升级；
-5. 每个 scenario 仍必须独立 `codex exec --ephemeral --json`，Runtime 只获得声明的 `context_paths`，不得读取 assertions / expected behavior / 历史结果；
-6. 禁止 Web research、仓库外搜索、代码修改与重新规划整个项目；
-7. process exit `0` 不等于 PASS，必须人工逐条语义评分；
-8. GPT-6 输出只构成 Review Evidence，不替代 Repository Authority 与 readiness-check。
+AR-04 证明该已知高返工成本缺陷**不需要** Astra 才能被发现，因此当前实验结论保持：**ADJUST**。
 
-Evidence contract 继续至少保存：
-
-- exact Planning Head；
-- scenario id；
-- requested model / reasoning effort；
-- Codex CLI version；
-- context path list + digest；
-- exact command argv；
-- stdout JSONL；
-- stderr；
-- return code；
-- 人工 assertion grading；
-- 是否导致 Planning Authority 实际修订；
-- 如果 runtime trace 没有暴露 model / effort，则明确记录 `NOT OBSERVABLE`。
-
-实验生命周期结论仍使用：
+### Current routing candidate
 
 ```text
-RETAIN
-ADJUST
-DROP
+bounded eval when justified
+→ lower-cost capable review first
+→ escalate only if unresolved / conflicting / deliberate second opinion
 ```
 
-当前只有一个 Consumer / 一个真实 scenario 的对照证据，不足以形成跨项目 Method 结论，因此暂不向 `dygapp/agentic-dev` 提交正式反馈 Issue。若后续第二个真实场景再次证明稳定增量价值，或暴露可复用的 model-isolation / evidence-lifecycle 方法问题，再通过 Issue / Evidence 反馈；Consumer 会话不得直接修改 `agentic-dev` Repository 文件、Branch、PR 或 Workflow。
+规则：
+
+1. High-capability review 不进入普通 Development Method、Readiness Gate 或每个 Execution Unit 的默认步骤；
+2. 只在真实高返工成本架构问题确有独立挑战价值时使用 bounded eval；
+3. 默认先使用当前足够能力且成本较低的模型；第一轮仍有 unresolved ambiguity、冲突证据或明确需要独立 second opinion 时再升级 Astra；
+4. 不为了“完成 corpus”机械执行 AR-01 / AR-03；真实 planning 问题出现时才重新启用；
+5. 每个 scenario 独立 Fresh / ephemeral run，只复制显式 context paths；assertions / expected behavior / provenance / historical results 不进入 runtime workspace；
+6. 禁止模型 review 修改仓库或重规划整个项目；
+7. process exit `0` 不等于 PASS，必须人工逐条语义评分；
+8. 模型输出只构成 Review Evidence，不替代 Repository Authority 与 readiness-check。
+
+Evidence contract 继续至少保存：exact Planning Head、scenario id、requested model / effort、CLI version、context path list + digest、command argv、stdout JSONL、stderr、return code、人工 assertion grading、Planning Impact，以及 runtime model/effort 不可观察时的 `NOT OBSERVABLE` 标记。
+
+具有跨项目复用价值的 model-routing / blind paired-eval evidence 已提交到 `dygapp/agentic-dev` Issue #71。该反馈只构成外部 Evidence Candidate，不自动修改本 Consumer Method，也不授权当前 Consumer 修改 `agentic-dev` 文件、Branch、PR 或 Workflow。
 
 ## 10. Fresh Context and gates
 
-Phase 0 合并后，后续默认一个 Ready Execution Unit 使用一个新的 Fresh Context。
+默认一个 Ready Execution Unit 使用一个新的 Fresh Context。
 
 新会话提示词只承担 Locator / Handoff：声明 Fresh Context、目标 Repository、必要的前置读取与当前 Planning Issue；任务状态、Execution Unit、Readiness 与下一实际步骤都必须从 GitHub 当前 Authority 恢复，不能复制本计划的状态摘要进提示词。
 
-Phase 0 Exit Gate：
+Current Phase 1 Gate：
 
-1. Issue #92、Issue #77 与 Project Planning 文档表达同一实际路线；
-2. 旧 Slice D 不再被描述成无前置工作的直接下一步；
-3. High-Capability Review Eval 的 scope / isolation / evidence / grading 已固化，并已对首个真实 paired scenario 完成人工语义评分与 Planning correction；
-4. Current Ready Execution Unit 仍为 NONE；
-5. 下一 Fresh Context 应从 Phase 1 的 current audit / Requirement / Specification / Technical Planning / slice-work 实际状态继续，而不是从聊天历史推断。
+1. Phase 0 已完成，Issue #92、Issue #77 与 Project Planning 文档表达同一总体路线；
+2. 旧 Slice D 不再被描述成 EU-42 后无前置工作的直接下一步；
+3. Phase 1 current audit 已完成并形成 `docs/project/documentation-authority-convergence.md`；
+4. EU-43 只负责当前四层/lifecycle documentation semantic reconciliation；
+5. EU-43 完成后 Current Ready Execution Unit 回到 NONE，Slice B 必须重新执行 `slice-work → readiness-check`；
+6. Phase 1 全部收口前不得进入 Phase 2，Phase 3 compatibility Gate 前不得进入 Issue #60 / E1～E3。
