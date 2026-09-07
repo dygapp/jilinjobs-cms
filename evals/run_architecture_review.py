@@ -61,7 +61,7 @@ def run_text(command: list[str], *, cwd: Path = ROOT) -> str:
 def ensure_clean_git_head() -> str:
     head = run_text(["git", "rev-parse", "HEAD"])
     dirty = subprocess.run(
-        ["git", "status", "--porcelain", "--untracked-files=no"],
+        ["git", "status", "--porcelain", "--untracked-files=all"],
         cwd=ROOT,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
@@ -72,8 +72,8 @@ def ensure_clean_git_head() -> str:
         raise RuntimeError(dirty.stderr.strip() or "git status failed")
     if dirty.stdout.strip():
         raise RuntimeError(
-            "Tracked working tree is dirty. Commit the planning candidate first so the "
-            "eval can be tied to an exact HEAD."
+            "Working tree contains tracked or untracked changes. Commit or remove them "
+            "first so every copied context file is provably tied to the exact HEAD."
         )
     return head
 
@@ -254,7 +254,7 @@ def run_scenario(
             "--model",
             model,
             "-c",
-            f"model_reasoning_effort={effort}",
+            f'model_reasoning_effort="{effort}"',
             "--sandbox",
             "read-only",
             "--skip-git-repo-check",
