@@ -105,7 +105,14 @@ Repository Split Readiness Assessment（独立后置）
 
 ### Candidate A — Backend Application / Core Boundary
 
-当前候选长期形态：
+需要冻结的长期边界是：CMS Server 与 Content Migration 具有独立 application lifecycle / Spring composition / deliverable artifact，同时共享 site-neutral CMS Domain / persistence capability，并保持单向依赖：
+
+```text
+cms-server app ──────────→ cms-core
+content-migration app ───→ cms-core
+```
+
+当前推荐 build candidate 是：
 
 ```text
 backend/
@@ -116,12 +123,22 @@ backend/
     └── content-migration/
 ```
 
-理由不是目录形式，而是 CMS Server 与 Generic Content Migration 具有不同 main class、不同 executable JAR、不同 runtime lifecycle，却需要共享 CMS Domain / persistence capability。
+但 AR-02 paired architecture review 已确认：两个 executable JAR 本身不逻辑必然要求三个 Gradle project。Technical Planning 必须同时比较“shared core source set + isolated server/migration source sets + independent BootJar”这一较低复杂度替代；如果它能以少量明确 wiring 达到同等 compile/runtime classpath、Spring composition、resource 与 test isolation，则允许选择。只在同一个完整 runtime classpath 上增加多个 main/BootJar 不满足该边界。
 
-- `cms-server` 与 `content-migration` 单向依赖 `cms-core`；
+无论最终 build shape 如何，都必须满足：
+
+- `cms-core` 不依赖任何 app，两个 app 互不依赖；
+- `cms-server` 持有 HTTP/MVC/static-resource 与 server-only startup composition；
+- `content-migration` 持有 CLI/import/report/compatibility composition，并在 2A 行为保持阶段完整承接当前 Party migration responsibility；
+- migration app 不再通过 `CmsApplication` 根包扫描获得完整 Server composition；
+- MyBatis mapper、configuration properties、Jackson、transaction、Flyway/schema policy、Site Package lifecycle 与 resource ownership 显式定义；
+- Generic Flyway SQL 保持单一 Authority，不在两个 app 复制 lineage；
+- 数据库 transaction 不被错误扩大为文件副作用的自动 rollback guarantee；
+- 移动 Gradle project/source set 后重新验证现有相对 Site Package path、JavaExec / verification task 与资源加载路径；
 - CMS Core 内部 content / column / listing / resource / navigation 等继续以 package-level modularity 为主；
-- 不为了形式统一拆成一领域一个 Gradle module；
-- 不自动扩展为 Clean Architecture 或 Repository split。
+- 不为了形式统一拆成一领域一个 Gradle module，不自动扩展为 Clean Architecture 或 Repository split。
+
+2A 的完整 ownership、composition、行为保持与 verification obligations 以 `docs/project/pre-e1e3-convergence-plan.md` 为当前总体 Planning Authority；AR-02 Review Evidence 见 Issue #92。
 
 ### Candidate B — Generic Content Migration Application
 
@@ -131,7 +148,7 @@ backend/
 Canonical Migration Dataset → CMS Runtime
 ```
 
-Generic capability 包括 canonical format validation、path/digest safety、stable migration identity / fingerprint、preflight、transaction、dependency order、Article / Resource / ListItem import、legacy mapping、idempotency、conflict、reconciliation 与 report。
+Generic capability 包括 canonical format validation、path/digest safety、stable migration identity / fingerprint、preflight、transaction / file-side-effect boundary、dependency order、Article / Resource / ListItem import、legacy mapping、idempotency、conflict、reconciliation 与 report。
 
 辅助工具边界：
 
