@@ -3,6 +3,13 @@ import org.gradle.api.tasks.Delete
 import org.gradle.api.tasks.JavaExec
 import org.gradle.api.tasks.SourceSetContainer
 
+plugins {
+    id("org.springframework.boot") version "4.1.0" apply false
+    id("io.spring.dependency-management") version "1.1.7" apply false
+    kotlin("jvm") version "2.3.20" apply false
+    kotlin("plugin.spring") version "2.3.20" apply false
+}
+
 allprojects {
     group = "com.jilinjobs"
     version = "0.1.0-SNAPSHOT"
@@ -34,8 +41,9 @@ tasks.register("test") {
 
 tasks.register("bootJar") {
     group = "build"
-    description = "Build the CMS Server BootJar at the legacy backend artifact path"
-    dependsOn(":apps:cms-server:bootJar")
+    description = "Build both executable applications while preserving the legacy CMS Server artifact path"
+    dependsOn(":apps:cms-server:bootJar", ":apps:content-migration:bootJar")
+    finalizedBy("verifyBackendApplicationBoundary")
 }
 
 tasks.register<JavaExec>("importPartyHistoricalContent") {
