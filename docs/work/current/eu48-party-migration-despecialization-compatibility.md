@@ -25,7 +25,7 @@ EU-48 identifier由 Phase 2C `slice-work`形成。它不继承 EU-47 或更早 U
 3. Party current Carousel importer仍复制 Generic List逻辑，并 hardcode list code、legacy pattern、fixed count、Party static path与 accepted position-2 fingerprints。
 4. current Party Article canonical shape已可无损规范化为 Generic Article；carousel shape需要 bounded Party adapter处理 legacy `sourceType` default、`articleRef`与provenance fields。
 5. `manifest.json` / Article index / list index/items已经持有 current Party scope、identity与current fingerprints；Kotlin无需重复维护。
-6. 唯一无法从 current dataset推导的事实是 pinned EU-29 accepted position-2 → current position-2 transition；应新增 bounded Party compatibility authority。
+6. 唯一无法从 current dataset推导的事实是 pinned EU-29 accepted position-2 old-state transition permission / `fromFingerprint`；应新增 bounded Party compatibility authority，current target fingerprint/type/relation仍由 current canonical item持有。
 7. Generic Engine需要的唯一扩展是 site-neutral prepared-dataset entry / shared byte verifier / optional provenance-static-target metadata；不需要 policy framework、new app/module或 DB schema change。
 8. pinned EU-29 accepted commit `59c855f55899cd613fdee059b27db762ffa3b092` 与现有 EU-30 Upgrade workflow已经提供可重复的 old-runtime compatibility proof。
 9. Canonical / Upgrade / Generic / Boundary / Site Package / Repository CI均已有稳定 verification entry。
@@ -50,9 +50,9 @@ Phase 2C形成单一 Candidate：**EU-48 — Party Migration De-specialization &
 
 ### 3.1 Party compatibility authority
 
-新增 `data-migrations/party/v1/compatibility.json`，只持有 accepted old→current transition中无法从 current/pinned canonical data推导的事实。
+新增 `data-migrations/party/v1/compatibility.json`，只持有 accepted old→current transition中 current canonical dataset无法表达的最小历史事实：transition identity、accepted old `fromFingerprint` / source type与 preserve-runtime-id / old-state guard requirement。
 
-Current aliases/counts/current fingerprints继续由 manifest/index/items持有，不复制到 Kotlin常量。
+Current aliases/counts/current fingerprints、target source type、target Article relation与current image digest继续由 manifest/index/items持有，不复制到 Kotlin常量或 compatibility file。
 
 ### 3.2 Generic thin extension
 
@@ -72,16 +72,16 @@ Current aliases/counts/current fingerprints继续由 manifest/index/items持有�
 - Party manifest/index/item validation；
 - Article/List canonical shape normalization；
 - delegate steady-state Runtime mutation to Generic Engine；
-- existing Party command/Gradle task/report compatibility projection。
+- existing Party command/Gradle task/report compatibility projection；
+- stable Party carousel static projection rule可以保留在 bounded Party adapter source，不进入 Generic package或 compatibility authority。
 
 ### 3.4 Accepted compatibility transition
 
-只允许 compatibility authority列出的 exact position-2 LINK→ARTICLE update：
+只允许 compatibility authority列出的 exact position-2 old LINK state进入原位 update：
 
-- exact from/to fingerprint；
+- exact transition identity + `fromFingerprint` / old source type；
 - exact old Runtime guard；
-- current target Article stable mapping；
-- current image digest；
+- current target fingerprint / source type / Article stable mapping / image digest全部从 current canonical item读取并验证；
 - preserve list-item id；
 - any drift → CONFLICT；
 - update后 Generic classification = SKIP。
@@ -118,7 +118,7 @@ Current Party source content/resource bytes应保持；新增 compatibility auth
 ### A. Authority ownership
 
 - Party aliases/current identities/current fingerprints来自 dataset；
-- accepted old→current transition来自 compatibility authority；
+- accepted old-state transition permission / `fromFingerprint`来自 compatibility authority；current transition target事实来自 current canonical item；
 - Generic package无 Party hardcode。
 
 ### B. Generic adoption
