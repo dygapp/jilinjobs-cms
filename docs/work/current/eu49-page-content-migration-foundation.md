@@ -12,8 +12,9 @@
 - Identifier collision check: no current repository file / PR match for `EU-49` at planning time
 - Readiness: **PASS**
 - Planning baseline: `main@f42bacf4ab7719e3291288c77f0685b428b86141`
-- Execute state: **NOT STARTED**
-- Execute Authority: **PENDING planning integration + Fresh Context revalidation**
+- Execute baseline: `main@ad742086c340bb3735814ddfdc72c9b8d1709fa1`
+- Execute state: **IN PROGRESS**
+- Execute Authority: **ACTIVE — Fresh Context revalidation PASS**
 
 ## 1. Dependency closure
 
@@ -166,8 +167,8 @@ The Unit resolves a contradiction in accepted current ownership semantics and ad
 
 ## 8. Readiness decision
 
-**PASS — EU-49 is a valid Ready Execution Unit candidate once this Planning/Readiness change is integrated.**
+**PASS — EU-49 is a Ready Execution Unit.**
 
-Before Execute, a Fresh Context must re-read integrated `main`, Issue #60, this Requirement/Specification/Technical Plan/Work Authority, Open PR/Actions and confirm no base drift or Authority change. Only then does EU-49 receive its own Execute baseline. No earlier EU/Phase authority is inherited.
+Fresh Context Execute revalidation was completed against integrated `main@ad742086c340bb3735814ddfdc72c9b8d1709fa1`: Open PR = 0, latest integrated CI #863 / run `34195752551` = PASS, Issue #60 / #77 and the Requirement / Specification / Technical Plan remain aligned, and no base drift or Authority blocker was found. EU-49 therefore owns an independent Execute baseline at that commit; no earlier EU/Phase authority is inherited.
 
 E3 remains downstream Planning and receives no identifier or Execute Authority from this decision.
