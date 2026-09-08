@@ -32,7 +32,8 @@ CMS Runtime
 
 其中：
 
-- Party dataset/profile负责 Party facts；
+- Party dataset/profile负责 Party current facts；
+- Party compatibility authority只记录 accepted old-state transition中 current dataset无法表达的最小历史事实；
 - Party adapter负责读取 Party-specific shape、验证 Party scope、转换为 neutral canonical model并应用唯一 accepted compatibility transition；
 - Generic capability继续负责 site-neutral preflight、CREATE/SKIP/CONFLICT、Article/List Runtime mutation、resource handling、legacy mapping与report primitives；
 - Generic package不得读取 Party compatibility file或知道 Party identity。
@@ -53,7 +54,7 @@ Party code可以验证这些字段之间一致，但不得用 Kotlin allow-list�
 
 ### 2.2 Compatibility authority
 
-新增 `data-migrations/party/v1/compatibility.json`，格式保持 Party-specific、bounded、machine-readable。至少表达：
+新增 `data-migrations/party/v1/compatibility.json`，格式保持 Party-specific、bounded、machine-readable。最小表达：
 
 ```text
 compatibilityVersion
@@ -63,16 +64,14 @@ transitions[]
   sourceSystem
   legacyKey
   fromFingerprint
-  toFingerprint
   fromSourceType
-  toSourceType
   preserveRuntimeId
-  requiredOldRuntimeState
+  requiredOldRuntimeState / transitionVersion（如实现确有需要）
 ```
 
-当前只允许一个 accepted transition：EU-29 accepted position 2 LINK → current ARTICLE。没有 transition entry的 fingerprint变化全部保持 Generic CONFLICT。
+Current `toFingerprint`、to source type、target Article stable relation、current image digest/order/title等必须直接来自 current canonical item，不在 compatibility file复制。当前只允许一个 accepted transition：EU-29 accepted position 2 LINK → current ARTICLE。没有 transition entry的 fingerprint变化全部保持 Generic CONFLICT。
 
-`compatibility.json` 不定义 arbitrary expression / scripting / plugin hook。
+`compatibility.json` 不定义 arbitrary expression / scripting / plugin hook，也不承载 Generic static-path policy。
 
 ## 3. Party Article normalization
 
@@ -128,7 +127,7 @@ Generic list prepared model允许由 caller提供两个 site-neutral optional in
 
 `staticTarget`必须经过 Generic safe relative-path validation，不允许 absolute path、`..`、empty segment或跳出 configured static root。
 
-Party compatibility authority/adapter可以为 accepted carousel LINK image提供现有 `migrated/party/carousel/<sha256>.<ext>` target，从而保持 accepted path；该字面值不得进入 `migration/generic/**`。
+Party adapter可以用 bounded Party-owned deterministic rule提供现有 `migrated/party/carousel/<sha256>.<ext>` target，从而保持 accepted path；该稳定 projection规则可以留在 Party adapter source，不需要写入 compatibility authority，且字面值不得进入 `migration/generic/**`。
 
 ## 7. Steady-state import contract
 
@@ -158,17 +157,18 @@ Current `party-carousel` 在没有 accepted old transition需要执行时：
 
 当 current `party-carousel`检测到 mapping fingerprint与 current canonical不一致时：
 
-1. 先查找 compatibility authority是否存在 exact identity + fromFingerprint + toFingerprint transition；
+1. 先按 list/source/legacy identity + existing `fromFingerprint`查找 compatibility authority；
 2. 不存在 → CONFLICT；
 3. 存在 → 验证 old Runtime guard；
-4. 验证 current target Article mapping与current canonical image bytes；
-5. 所有 guard PASS才允许原位 update；
-6. update必须保持 existing list-item id；
-7. mapping/provenance更新到 current canonical；
-8. transition结果在 Party report中为 `UPDATED`；
-9. subsequent Generic steady-state classification必须为 SKIP。
+4. 从 current canonical item读取并验证 current target fingerprint、source type、target Article stable identity与image bytes；
+5. 验证 current target Article mapping；
+6. 所有 guard PASS才允许原位 update；
+7. update必须保持 existing list-item id；
+8. mapping/provenance更新到 current canonical；
+9. transition结果在 Party report中为 `UPDATED`；
+10. subsequent Generic steady-state classification必须为 SKIP。
 
-Compatibility update可以直接使用必要 Core read/write Mapper，但只能存在于 Party compatibility source中，并且只能由 exact profile transition授权。
+Compatibility update可以直接使用必要 Core read/write Mapper，但只能存在于 Party compatibility source中，并且只能由 exact historical transition授权。
 
 ## 9. Legacy baseline compatibility
 
@@ -219,7 +219,7 @@ migration/
 Final exact-head至少需要：
 
 1. **Party de-specialization focused verification**：
-   - current dataset facts来自 manifest/index/compatibility file；
+   - current dataset facts来自 manifest/index/items；accepted old transition事实来自 compatibility file；
    - Article/List current path委托 Generic pipeline；
    - Generic package source purity持续 PASS；
    - adapter path/digest/provenance normalization负例；
@@ -235,6 +235,7 @@ Focused verification还必须证明：
 
 - 删除/修改 compatibility transition → expected conflict；
 - wrong fromFingerprint / old runtime source type / list id / image digest / target article mapping → conflict / invalid，无 silent update；
+- changing current canonical target does not require duplicating `toFingerprint` in compatibility authority；
 - Generic raw changed fingerprint仍不可 update。
 
 ## 13. Non-goals
