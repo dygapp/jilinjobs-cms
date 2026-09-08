@@ -85,3 +85,38 @@ data class CmsListItemLegacyMappingRecord(
     var imageSha256: String = "",
     var listItemId: Long = 0,
 )
+
+@Mapper
+interface PageLegacyMappingMapper {
+    @Select(
+        """
+        SELECT id, source_system, legacy_key, source_url, source_fingerprint, page_id
+        FROM cms_page_legacy_mapping
+        WHERE source_system=#{sourceSystem} AND legacy_key=#{legacyKey}
+        """,
+    )
+    fun find(
+        @Param("sourceSystem") sourceSystem: String,
+        @Param("legacyKey") legacyKey: String,
+    ): PageLegacyMappingRecord?
+
+    @Insert(
+        """
+        INSERT INTO cms_page_legacy_mapping(
+            source_system, legacy_key, source_url, source_fingerprint, page_id
+        ) VALUES(
+            #{sourceSystem}, #{legacyKey}, #{sourceUrl}, #{sourceFingerprint}, #{pageId}
+        )
+        """,
+    )
+    fun insert(record: PageLegacyMappingRecord): Int
+}
+
+data class PageLegacyMappingRecord(
+    var id: Long? = null,
+    var sourceSystem: String = "",
+    var legacyKey: String = "",
+    var sourceUrl: String = "",
+    var sourceFingerprint: String = "",
+    var pageId: Long = 0,
+)
