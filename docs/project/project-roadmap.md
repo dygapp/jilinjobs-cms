@@ -148,9 +148,7 @@ EU-50 does **not** include Runtime product import or final Human Review. The cur
 
 #### EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review
 
-Candidate Artifact：
-
-`docs/work/current/eu51-main-canonical-import-review.md`
+EU-51 is a stable downstream Candidate formed by `slice-work` and tracked by this Roadmap plus the E3 Technical Plan. Since Readiness is still PENDING / BLOCKED, no `docs/work/current/` artifact exists for EU-51 yet.
 
 Scope after dependency closure：
 
