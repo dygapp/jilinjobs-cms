@@ -130,6 +130,12 @@ tasks.register<JavaExec>("verifySitePackageAssets") {
     configureServerVerification("com.jilinjobs.cms.provisioning.SitePackageAssetProjectionVerificationKt")
 }
 
+tasks.register<JavaExec>("verifyPageContentOwnership") {
+    group = "verification"
+    description = "Verify EU-49 Site Package Page structure does not reclaim operator-managed Page content"
+    configureServerVerification("com.jilinjobs.cms.provisioning.PageContentOwnershipVerificationKt")
+}
+
 tasks.register<JavaExec>("verifyContentMigrationBoundary") {
     group = "verification"
     description = "Verify Content Migration is non-web, excludes Server transport and composes Core/Flyway/Party capabilities"
@@ -140,6 +146,12 @@ tasks.register<JavaExec>("verifyGenericContentMigration") {
     group = "verification"
     description = "Verify site-neutral canonical migration preflight, execution, idempotency and failure semantics"
     configureMigrationVerification("com.jilinjobs.cms.GenericContentMigrationVerificationKt")
+}
+
+tasks.register<JavaExec>("verifyGenericPageContentMigration") {
+    group = "verification"
+    description = "Verify EU-49 site-neutral canonical Page apply, idempotency, conflict and resource semantics"
+    configureMigrationVerification("com.jilinjobs.cms.GenericPageContentMigrationVerificationKt")
 }
 
 tasks.register<JavaExec>("verifyPartyMigrationSourceAuthority") {
