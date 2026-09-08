@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "sourceSystem": "legacy-jilinjobs",
+  "sourceRoot": "https://24365.jl.smartedu.cn/",
+  "allowedHosts": ["24365.jl.smartedu.cn", "cms.jilinjobs.cn"],
+  "redirectProbes": [
+    "https://cms.jilinjobs.cn/",
+    "https://24365.jl.smartedu.cn/"
+  ],
+  "articleSurfaces": [
+    {"key":"notice","path":"/list.html?typeCode=notice","typeCode":"notice","columnAlias":"notice"},
+    {"key":"employment-news","path":"/list.html?typeCode=jydt","typeCode":"jydt","columnAlias":"employment-news"},
+    {"key":"recruitment-announcement","path":"/list.html?typeCode=recruit","typeCode":"recruit","columnAlias":"recruitment-announcement"},
+    {"key":"policy-month","path":"/jycyzcxcy","typeCode":"policy-month","columnAlias":"policy-month"},
+    {"key":"policy-outside","path":"/outside","typeCode":"policy-outside","columnAlias":"policy-outside"},
+    {"key":"policy-jilin","path":"/inside","typeCode":"policy-jilin","columnAlias":"policy-jilin"},
+    {"key":"policy-national","path":"/nation","typeCode":"policy-national","columnAlias":"policy-national"},
+    {"key":"typical-grassroots","path":"/jcjydxsj","typeCode":"typical-grassroots","columnAlias":"typical-grassroots"},
+    {"key":"typical-startup","path":"/cydxsj","typeCode":"typical-startup","columnAlias":"typical-startup"},
+    {"key":"typical-military","path":"/jyzsdxsj","typeCode":"typical-military","columnAlias":"typical-military"}
+  ],
+  "pageSurfaces": [
+    {"key":"about","path":"/about","title":"关于我们","target":{"groupAlias":null,"pageAlias":"about"},"selectors":[]},
+    {"key":"budget","path":"/detail.html?content_id=88853373272064","title":"预决算公开","target":{"groupAlias":null,"pageAlias":"budget"},"selectors":[".rich-text-wrap"]},
+    {"key":"teacher-library","path":"/detail.html?content_id=108411989540864","title":"就业创业师资库","target":{"groupAlias":null,"pageAlias":"teacher-library"},"selectors":[".rich-text-wrap"]},
+    {"key":"employment-report-contact","path":"/detail.html?content_id=162461430857728","title":"举报电话及邮箱","target":{"groupAlias":null,"pageAlias":"employment-report-contact"},"selectors":[".rich-text-wrap"]},
+    {"key":"guide-jypq","path":"/jiuyepaiqian","title":"就业派遣","target":{"groupAlias":"guide","pageAlias":"jypq"},"selectors":[]},
+    {"key":"guide-dagl","path":"/danganguanli","title":"档案管理","target":{"groupAlias":"guide","pageAlias":"dagl"},"selectors":[]},
+    {"key":"guide-dygl","path":"/liudongdangyuan","title":"流动党员","target":{"groupAlias":"guide","pageAlias":"dygl"},"selectors":[]},
+    {"key":"guide-xlrz","path":"/xuelirenzheng","title":"学历认证","target":{"groupAlias":"guide","pageAlias":"xlrz"},"selectors":[]},
+    {"key":"guide-contact","path":"/lianxiwomen","title":"联系我们","target":{"groupAlias":"guide","pageAlias":"contact"},"selectors":[]},
+    {"key":"guide-faq","path":"/changjianwenti","title":"常见问题","target":{"groupAlias":"guide","pageAlias":"faq"},"selectors":[]}
+  ],
+  "excludedStablePages": [
+    {"groupAlias":null,"pageAlias":"live-course","reason":"EMBED_PLACEHOLDER / external integration ownership"},
+    {"groupAlias":"jobs","pageAlias":"positions","reason":"EMBED_PLACEHOLDER / external recruitment platform ownership"},
+    {"groupAlias":"jobs","pageAlias":"recruitment","reason":"EMBED_PLACEHOLDER / external recruitment platform ownership"},
+    {"groupAlias":"jobs","pageAlias":"jobfair","reason":"EMBED_PLACEHOLDER / external recruitment platform ownership"},
+    {"groupAlias":"jobs","pageAlias":"presentation","reason":"EMBED_PLACEHOLDER / external recruitment platform ownership"},
+    {"groupAlias":"jobs","pageAlias":"jilin","reason":"EMBED_PLACEHOLDER / external recruitment platform ownership"}
+  ],
+  "home": {
+    "path": "/",
+    "carousel": {"listCode":"HOME_CAROUSEL","selectors":[".banner-wrap.first-box .swiper-container .swiper-wrapper > .swiper-slide > a.swiper-slide-a"]},
+    "siteLinkLists": [
+      {"listCode":"SITE_RELATED","selectors":[]},
+      {"listCode":"SITE_REGIONAL_GRADUATES","selectors":[]},
+      {"listCode":"SITE_JILIN_UNIVERSITIES","selectors":[]}
+    ]
+  }
+}
