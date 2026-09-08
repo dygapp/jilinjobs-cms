@@ -22,7 +22,7 @@
 | `docs/specifications/` | Current / Partially Current WHAT / WHY contracts | 读取当前任务相关项 |
 | `docs/technical/` | Current / Partially Current Technical Authority、plans、verification strategy | 读取当前任务相关项 |
 | `docs/architecture/` | 长期 Architecture Decisions / ADR | 按任务读取 |
-| `docs/work/current/` | 当前已通过 Readiness、仍处于 Execute / Verification / Integration 生命周期的 work artifact；也可保留与当前 Ready Unit直接相邻且明确 NOT READY 的 downstream Candidate | 存在 Ready / active unit 时读取 |
+| `docs/work/current/` | 当前已通过 Readiness、仍处于 Execute / Verification / Integration 生命周期的 work artifact | 存在 Ready / active unit 时读取 |
 | `docs/work/archive/` | 已完成 Execution Units、历史计划、执行与验证 evidence | 默认不读取 |
 | 各分类 `archive/` | `SUPERSEDED` / `HISTORICAL_EVIDENCE` 文档 | 默认不读取 |
 
@@ -58,7 +58,7 @@ Issue #60 当前状态：
 
 Current Ready Execution Unit：**EU-50 — Main Source Discovery & Accepted Snapshot Promotion**。
 
-Downstream Candidate：**EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review**，Readiness **PENDING / blocked by EU-50 accepted snapshot**。
+Downstream Candidate：**EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review**，Readiness **PENDING / blocked by EU-50 accepted snapshot**。由于尚未通过 Readiness，EU-51 只由 Technical Plan / Roadmap 跟踪，不进入 `docs/work/current/`。
 
 Current planning authority：
 
@@ -82,7 +82,6 @@ E3 current Authority：
 - `docs/specifications/main-historical-content-migration.md`
 - `docs/technical/main-historical-content-migration.md`
 - `docs/work/current/eu50-main-source-discovery-promotion.md`
-- `docs/work/current/eu51-main-canonical-import-review.md`
 
 EU-50 current Readiness只授权在其 Planning/Readiness状态集成后进入 **Fresh Context Execute-baseline recovery**，并不在 planning branch上直接建立 Execute baseline。新的 Execute context必须重新核验 integrated `main`、Issue #60/#77、Open PR/Actions、E3 Authority、EU-50 Current Work、source reachability与base drift；无 blocker 后才能开始 Main source collection / canonical promotion。
 
