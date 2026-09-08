@@ -15,6 +15,7 @@ const allowedContentHosts = new Set(config.allowedHosts || [new URL(config.sourc
 const auditCodes = new Set([
   'AMBIGUOUS_INTERNAL_HOST_EXTERNAL_LINK',
   'BODY_LINK_URL_INVALID',
+  'BODY_LINK_HOST_INVALID_REQUIRES_REVIEW',
   'JAVASCRIPT_BODY_LINK_REQUIRES_REVIEW',
   'LEGACY_DYNAMIC_ATTACHMENT_LINK_REQUIRES_REVIEW',
   'RELATIVE_BODY_LINK_REQUIRES_REVIEW',
@@ -44,6 +45,11 @@ function isRelativeReference(value) {
 
 function isLegacyDynamicAttachment(parsed) {
   return /\/common\/downloadfile\.aspx$/i.test(parsed.pathname) && parsed.searchParams.has('fileid')
+}
+
+function hasInvalidHostname(parsed) {
+  const hostname = String(parsed.hostname || '')
+  return !hostname || /[,\s_\\]/.test(hostname) || hostname.includes('..')
 }
 
 function malformedHtmlEvidence($) {
@@ -127,6 +133,18 @@ for (const reference of articleRefs) {
         sourceUrl,
         rawReference,
         message: String(error),
+      })
+      continue
+    }
+
+    if (hasInvalidHostname(parsed)) {
+      addAuditIssue('BODY_LINK_HOST_INVALID_REQUIRES_REVIEW', {
+        legacyKey,
+        evidenceKey: legacyKey,
+        sourceUrl,
+        rawReference,
+        hostname: parsed.hostname || null,
+        message: 'body link contains a malformed hostname and requires an explicit source-data decision',
       })
       continue
     }
