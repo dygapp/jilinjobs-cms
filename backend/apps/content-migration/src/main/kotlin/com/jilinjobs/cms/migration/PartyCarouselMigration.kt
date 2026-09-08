@@ -4,10 +4,6 @@ import com.jilinjobs.cms.CmsApplication
 import com.jilinjobs.cms.listing.CmsListItemDraft
 import com.jilinjobs.cms.listing.CmsListService
 import com.jilinjobs.cms.staticresource.StaticResourceService
-import org.apache.ibatis.annotations.Insert
-import org.apache.ibatis.annotations.Mapper
-import org.apache.ibatis.annotations.Param
-import org.apache.ibatis.annotations.Select
 import org.springframework.boot.WebApplicationType
 import org.springframework.boot.builder.SpringApplicationBuilder
 import org.springframework.stereotype.Service
@@ -26,46 +22,6 @@ private const val PARTY_CAROUSEL_CODE = "PARTY_CAROUSEL"
 private val CAROUSEL_SHA256 = Regex("[0-9a-f]{64}")
 private val CAROUSEL_IMAGE_EXTENSIONS = setOf("png", "jpg", "jpeg", "gif", "webp")
 private val CAROUSEL_OPEN_MODES = setOf("DEFAULT", "SAME_WINDOW", "NEW_WINDOW")
-
-@Mapper
-interface CmsListItemLegacyMappingMapper {
-    @Select(
-        """
-        SELECT id, source_system, legacy_key, source_url, source_fingerprint,
-               image_source_url, image_sha256, list_item_id
-        FROM cms_list_item_legacy_mapping
-        WHERE source_system=#{sourceSystem} AND legacy_key=#{legacyKey}
-        """,
-    )
-    fun find(
-        @Param("sourceSystem") sourceSystem: String,
-        @Param("legacyKey") legacyKey: String,
-    ): CmsListItemLegacyMappingRecord?
-
-    @Insert(
-        """
-        INSERT INTO cms_list_item_legacy_mapping(
-            source_system, legacy_key, source_url, source_fingerprint,
-            image_source_url, image_sha256, list_item_id
-        ) VALUES(
-            #{sourceSystem}, #{legacyKey}, #{sourceUrl}, #{sourceFingerprint},
-            #{imageSourceUrl}, #{imageSha256}, #{listItemId}
-        )
-        """,
-    )
-    fun insert(record: CmsListItemLegacyMappingRecord): Int
-}
-
-data class CmsListItemLegacyMappingRecord(
-    var id: Long? = null,
-    var sourceSystem: String = "",
-    var legacyKey: String = "",
-    var sourceUrl: String = "",
-    var sourceFingerprint: String = "",
-    var imageSourceUrl: String = "",
-    var imageSha256: String = "",
-    var listItemId: Long = 0,
-)
 
 data class PartyCarouselSnapshotImage(
     val sourceUrl: String,
