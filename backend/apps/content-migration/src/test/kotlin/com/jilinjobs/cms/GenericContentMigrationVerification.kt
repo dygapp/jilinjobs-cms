@@ -37,6 +37,7 @@ private enum class FixtureMode {
     TAMPERED_RESOURCE,
     UNRESOLVED_REFERENCE,
     MISSING_TARGET,
+    MISSING_LIST_TARGET,
     MISSING_DEPENDENCY,
     DUPLICATE_IDENTITY,
     INDEX_ITEM_MISMATCH,
@@ -73,6 +74,7 @@ fun main() {
         }
         val afterFirst = dataSource.connection.use(::snapshotCounts)
         require(afterFirst == RuntimeCounts(2, 2, 2, 2)) { "First import Runtime counts unexpected: $afterFirst" }
+        dataSource.connection.use(::verifyListPlacement)
 
         val second = service.importSnapshot(validRoot)
         require(second.phase == GenericMigrationPhase.EXECUTE && second.total == 4 && second.created == 0 && second.skipped == 4 && second.conflicts == 0 && second.invalid == 0) {
@@ -81,30 +83,42 @@ fun main() {
         require(dataSource.connection.use(::snapshotCounts) == afterFirst) { "Second import changed Runtime counts" }
 
         writeFixture(validRoot, FixtureMode.CONFLICT, objectMapper)
-        val output = ByteArrayOutputStream()
+        val commonArgs = arrayOf(
+            "--spring.datasource.url=$dbUrl",
+            "--spring.datasource.username=${System.getenv("GENERIC_MIGRATION_VERIFY_DB_USERNAME") ?: "root"}",
+            "--spring.datasource.password=${System.getenv("GENERIC_MIGRATION_VERIFY_DB_PASSWORD") ?: "root"}",
+            "--cms.storage.root=$storageRoot",
+            "--cms.static.root=$staticRoot",
+            "--spring.main.banner-mode=off",
+        )
+        val taskOutput = ByteArrayOutputStream()
         val originalOut = System.out
-        var cliFailure: Throwable? = null
+        var taskFailure: Throwable? = null
         try {
-            System.setOut(PrintStream(output, true, StandardCharsets.UTF_8))
-            cliFailure = runCatching {
-                runGenericCli(
-                    arrayOf(
-                        validRoot.toString(),
-                        "--spring.datasource.url=$dbUrl",
-                        "--spring.datasource.username=${System.getenv("GENERIC_MIGRATION_VERIFY_DB_USERNAME") ?: "root"}",
-                        "--spring.datasource.password=${System.getenv("GENERIC_MIGRATION_VERIFY_DB_PASSWORD") ?: "root"}",
-                        "--cms.storage.root=$storageRoot",
-                        "--cms.static.root=$staticRoot",
-                        "--spring.main.banner-mode=off",
-                    ),
-                )
+            System.setOut(PrintStream(taskOutput, true, StandardCharsets.UTF_8))
+            taskFailure = runCatching {
+                runGenericCli(arrayOf(validRoot.toString(), *commonArgs))
             }.exceptionOrNull()
         } finally {
             System.setOut(originalOut)
         }
-        require(cliFailure != null) { "Fingerprint conflict must produce non-success CLI semantics" }
-        require(output.toString(StandardCharsets.UTF_8).contains("CONTENT_MIGRATION_REPORT")) { "Generic CLI report label missing" }
-        require(dataSource.connection.use(::snapshotCounts) == afterFirst) { "Conflict preflight mutated Runtime data" }
+        require(taskFailure != null) { "Fingerprint conflict must produce non-success importCanonicalContent semantics" }
+        require(taskOutput.toString(StandardCharsets.UTF_8).contains("CONTENT_MIGRATION_REPORT")) { "Generic task report label missing" }
+        require(dataSource.connection.use(::snapshotCounts) == afterFirst) { "Task conflict preflight mutated Runtime data" }
+
+        val dispatcherOutput = ByteArrayOutputStream()
+        var dispatcherFailure: Throwable? = null
+        try {
+            System.setOut(PrintStream(dispatcherOutput, true, StandardCharsets.UTF_8))
+            dispatcherFailure = runCatching {
+                main(arrayOf("generic-content", validRoot.toString(), *commonArgs))
+            }.exceptionOrNull()
+        } finally {
+            System.setOut(originalOut)
+        }
+        require(dispatcherFailure != null) { "Fingerprint conflict must produce non-success generic-content command semantics" }
+        require(dispatcherOutput.toString(StandardCharsets.UTF_8).contains("CONTENT_MIGRATION_REPORT")) { "Generic dispatcher report label missing" }
+        require(dataSource.connection.use(::snapshotCounts) == afterFirst) { "Dispatcher conflict preflight mutated Runtime data" }
 
         val invalidModes = listOf(
             FixtureMode.PATH_TRAVERSAL,
@@ -112,6 +126,7 @@ fun main() {
             FixtureMode.TAMPERED_RESOURCE,
             FixtureMode.UNRESOLVED_REFERENCE,
             FixtureMode.MISSING_TARGET,
+            FixtureMode.MISSING_LIST_TARGET,
             FixtureMode.MISSING_DEPENDENCY,
             FixtureMode.DUPLICATE_IDENTITY,
             FixtureMode.INDEX_ITEM_MISMATCH,
@@ -175,6 +190,29 @@ private fun count(connection: Connection, table: String): Int =
         }
     }
 
+private fun verifyListPlacement(connection: Connection) {
+    connection.prepareStatement(
+        "SELECT source_type, article_id, image_path, image_resource_id FROM cms_list_item WHERE title=?",
+    ).use { statement ->
+        statement.setString(1, "Verification Link")
+        statement.executeQuery().use { result ->
+            require(result.next()) { "Verification LINK ListItem missing" }
+            require(result.getString("source_type") == "LINK")
+            require(result.getObject("article_id") == null)
+            require(result.getString("image_path")?.startsWith("/static/migrated/content/lists/VERIFY_FEATURED/") == true)
+            require(result.getObject("image_resource_id") == null)
+        }
+        statement.setString(1, "Verification Article")
+        statement.executeQuery().use { result ->
+            require(result.next()) { "Verification ARTICLE ListItem missing" }
+            require(result.getString("source_type") == "ARTICLE")
+            require(result.getObject("article_id") != null)
+            require(result.getObject("image_path") == null)
+            require(result.getObject("image_resource_id") != null)
+        }
+    }
+}
+
 private fun writeFixture(root: Path, mode: FixtureMode, objectMapper: ObjectMapper) {
     if (Files.exists(root)) root.toFile().deleteRecursively()
     Files.createDirectories(root)
@@ -231,6 +269,9 @@ private fun writeFixture(root: Path, mode: FixtureMode, objectMapper: ObjectMapp
     Files.write(internalFile.parent.resolve(attachmentPath), attachment)
     Files.writeString(internalFile, objectMapper.writeValueAsString(internal))
     Files.writeString(externalFile, objectMapper.writeValueAsString(external))
+    if (mode == FixtureMode.PATH_TRAVERSAL) {
+        Files.writeString(root.parent.resolve("outside.json"), objectMapper.writeValueAsString(internal))
+    }
 
     val articleEntries = mutableListOf(
         CanonicalArticleIndexEntry("article:internal", if (mode == FixtureMode.PATH_TRAVERSAL) "../outside.json" else "articles/internal/article.json"),
@@ -239,12 +280,14 @@ private fun writeFixture(root: Path, mode: FixtureMode, objectMapper: ObjectMapp
     if (mode == FixtureMode.DUPLICATE_IDENTITY) articleEntries += CanonicalArticleIndexEntry("article:internal", "articles/internal/article.json")
     Files.writeString(root.resolve("index.ndjson"), articleEntries.joinToString("\n") { objectMapper.writeValueAsString(it) } + "\n")
 
-    val listRoot = root.resolve("lists/VERIFY_FEATURED")
+    val listCode = if (mode == FixtureMode.MISSING_LIST_TARGET) "VERIFY_MISSING" else "VERIFY_FEATURED"
+    val listRoot = root.resolve("lists/$listCode")
     val linkFile = listRoot.resolve("items/link/item.json")
     val articleItemFile = listRoot.resolve("items/article/item.json")
     Files.createDirectories(linkFile.parent.resolve("assets"))
-    Files.createDirectories(articleItemFile.parent)
+    Files.createDirectories(articleItemFile.parent.resolve("assets"))
     Files.write(linkFile.parent.resolve("assets/card.png"), png)
+    Files.write(articleItemFile.parent.resolve("assets/article-card.png"), png)
     val linkFingerprint = digest("$sourceSystem-link-v1".toByteArray())
     val articleItemFingerprint = digest("$sourceSystem-article-item-v1".toByteArray())
     val linkItem = CanonicalListItemRecord(
@@ -264,12 +307,13 @@ private fun writeFixture(root: Path, mode: FixtureMode, objectMapper: ObjectMapp
         title = "Verification Article",
         articleReference = articleReference,
         sourceFingerprint = articleItemFingerprint,
+        image = CanonicalListImage("https://verification.invalid/article-card.png", "assets/article-card.png", pngSha, "image/png", png.size.toLong()),
     )
     Files.writeString(linkFile, objectMapper.writeValueAsString(linkItem))
     Files.writeString(articleItemFile, objectMapper.writeValueAsString(articleItem))
     val linkReferenceFingerprint = if (mode == FixtureMode.INDEX_ITEM_MISMATCH) digest("mismatch".toByteArray()) else linkFingerprint
     val listIndex = CanonicalListIndex(
-        listCode = "VERIFY_FEATURED",
+        listCode = listCode,
         sourceSystem = sourceSystem,
         sourcePage = "https://verification.invalid/list",
         items = listOf(
