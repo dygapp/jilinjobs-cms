@@ -5,10 +5,13 @@
 - Parent Planning Authority: GitHub Issue #60 / E3
 - Planning Authority: `docs/project/main-site-formal-content-plan.md`
 - Upstream: E1 external-link boundary; E2 Page formal-content boundary
-- Planning baseline: `main@f42bacf4ab7719e3291288c77f0685b428b86141`
+- Initial planning baseline: `main@f42bacf4ab7719e3291288c77f0685b428b86141`
+- Current E3 planning baseline: `main@e6fe7674398ad8c29fa7ff1d62eb500754a66cc8`
 - Requirement: **READY**
-- Specification: required before any E3 slice
-- Current Ready Execution Unit: **NONE**
+- Specification: **READY**
+- Technical Plan: **READY** — `docs/technical/main-historical-content-migration.md`
+- Current Ready Execution Unit: **EU-50**
+- Downstream Candidate: **EU-51 / Readiness PENDING on EU-50 accepted snapshot**
 
 ## 1. Intent
 
@@ -152,4 +155,4 @@ E3不新增Main-specific importer，除非真实source shape存在无法由bound
 
 E1/E2已能定义classification与target ownership；EU-47/E2 foundation定义Generic runtime migration contract；`data-migrations/README.md`定义canonical lifecycle。E3的Product Goal、source-discovery completeness、promotion、migration与verification obligations均可以在未知最终count的情况下明确。
 
-本 Requirement **READY**。Exact accepted snapshot/count属于后续Evidence，不是Requirement blocker；但E3 `slice-work`不得越过E2 foundation依赖和Ready Specification。
+本 Requirement **READY**。Exact accepted snapshot/count属于后续Evidence，不是EU-50 Readiness blocker。E2 / EU-49 已完成，Specification与Technical Plan已Ready，`slice-work`现形成EU-50 / EU-51；其中EU-50通过`readiness-check`，EU-51必须等待EU-50 accepted snapshot集成后再基于实际数据重新执行Readiness。
