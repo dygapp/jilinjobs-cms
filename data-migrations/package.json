@@ -10,7 +10,8 @@
     "inventory:main": "node tools/main-source-inventory.mjs",
     "collect:main": "node tools/main-source-collector.mjs",
     "audit:main": "node tools/main-candidate-audit.mjs",
-    "triage:main": "npm run audit:main && node tools/main-source-triage.mjs"
+    "triage:main": "npm run audit:main && node tools/main-source-triage.mjs",
+    "probe:main-gaps": "node tools/main-resource-gap-probe.mjs"
   },
   "dependencies": {
     "cheerio": "1.2.0"
