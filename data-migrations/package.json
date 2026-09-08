@@ -8,7 +8,8 @@
     "collect:party": "node tools/party-collector.mjs",
     "probe:main": "node tools/main-source-probe.mjs",
     "inventory:main": "node tools/main-source-inventory.mjs",
-    "collect:main": "node tools/main-source-collector.mjs"
+    "collect:main": "node tools/main-source-collector.mjs",
+    "triage:main": "node tools/main-source-triage.mjs"
   },
   "dependencies": {
     "cheerio": "1.2.0"
