@@ -20,9 +20,9 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | EU-37～EU-42 Site Package Boundary | 已完成 | stable structure、Navigation identity、Runtime composition、one-time bootstrap、Generic Schema separation、stable assets 已闭环 |
 | Issue #92 Phase 0～Phase 3 | **已完成 / CLOSED** | EU-43～EU-48 与 Phase 3 compatibility closure 完成；E1～E3 re-entry = PASS |
 | Issue #60 / E1 Main External-link Boundary | **Planning / Authority closure** | Requirement / Specification READY；current implementation audit 未发现独立 implementation gap；`slice-work = NO CANDIDATE EXECUTION UNIT` |
-| Issue #60 / E2 Main Single-page Formal Content | **READY EXECUTION UNIT** | **EU-49 — Page Operational Content Ownership & Migration Foundation** 已完成 Requirement / Specification / Technical Planning、`slice-work` 与 `readiness-check`；进入 Execute 前仍需 Fresh Context revalidation |
-| Issue #60 / E3 Main Historical Content Migration | **Downstream Planning Authority** | Requirement / Specification READY；依赖 EU-49 completion；当前不分配 EU Identifier、不允许 source collection / canonical promotion / Execute |
-| Repository Split Readiness Assessment | deferred | 四层 boundary 已闭环，但 Assessment 仍独立后置；不自动拆仓，也不阻塞 EU-49 |
+| Issue #60 / E2 Main Single-page Formal Content | **COMPLETED** | EU-49 已关闭 Page operational-content ownership gap，并建立 site-neutral Generic Page canonical migration foundation |
+| Issue #60 / E3 Main Historical Content Migration | **CURRENT PLANNING GATE** | Requirement / Specification READY；EU-49 prerequisite 已满足；下一步为 Fresh Context source-evidence recovery、dependency closure、`slice-work` / `readiness-check`；当前无 Identifier / Ready / Execute Authority |
+| Repository Split Readiness Assessment | deferred | 四层 boundary 已闭环，但 Assessment 仍独立后置；不自动拆仓，也不阻塞 E3 Planning |
 | Issues #57 / #59 / #60 其他候选 | 规划层保留 | C1/C2、Browser Compatibility、Public Rendering Architecture 等保持独立 |
 
 ## 当前已接受长期边界
@@ -32,8 +32,8 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 - Generic CMS Schema、site-neutral domain / validation / persistence / API-supporting capability、provisioning capability 属于 Core；
 - Backend Flyway 只承担 Generic CMS Schema evolution，不内建 JilinJobs Site instance rows；
 - `preset`、stable identity、bootstrap-state、resource / article / page / list 等可以是 Generic capability，具体 Site identity / instance data 不属于 Core；
-- EU-41 accepted active Flyway 为 current Generic V1/V2；后续 Generic Schema change 从 V3 append-only；
-- shared build owner 为 `backend/modules/cms-core`；`cms-server` 与 `content-migration` 只单向依赖 Core，Core 不依赖任一 app。
+- shared build owner 为 `backend/modules/cms-core`；`cms-server` 与 `content-migration` 只单向依赖 Core，Core 不依赖任一 app；
+- accepted active Generic Flyway lineage 现为 V1/V2/V3；后续 schema evolution继续 append-only。
 
 ### 2. JilinJobs Site Package
 
@@ -48,7 +48,7 @@ sites/jilinjobs/
 - one-time bootstrap 不 overwrite / resurrect 后续 operator changes；
 - stable assets 使用 manifest integrity + create-if-missing projection + protected-path；
 - `/static/uploads/**` 与 historical canonical assets 不属于 stable Site asset ownership；
-- Page stable identity / structure 可以由 Site Package 持有，但普通 reconcile 不应持续夺回已经进入 operator-managed lifecycle 的 Page 正文与呈现内容。EU-49 负责关闭当前这一 ownership gap。
+- Page stable identity / required structure由 Site Package持有；EU-49 已完成 ownership transfer，使 ordinary reconcile 不再覆盖 existing Page 的 operator-managed `bodyHtml / renderMode / embedUrl`。
 
 ### 3. Historical Content Migration
 
@@ -56,7 +56,7 @@ sites/jilinjobs/
 - Historical Migration 不等于 Flyway，也不等于 Site Package structure/bootstrap/assets；
 - Canonical Dataset 依赖 stable Site identity，不依赖临时 Runtime DB id 或 Public Renderer internals；
 - Historical Migration implementation 位于独立 `backend/apps/content-migration` non-web application，只依赖 `cms-core`；
-- Generic Content Migration 已提供 site-neutral Article / ListItem load、preflight、stable mapping、idempotency/conflict/report foundation；EU-49 只在真实 E2 consumer 证明需要的范围内补充 Page canonical migration capability，不引入 Main-specific policy 到 Generic Core。
+- Generic Content Migration 已提供 site-neutral Article / ListItem / Page load、preflight、stable mapping、guarded apply、idempotency/conflict/report foundation；Main-specific source facts / policy不得进入 Generic capability。
 
 ### 4. Replaceable Public Renderer
 
@@ -65,82 +65,67 @@ sites/jilinjobs/
 - Renderer 不成为 Site Definition、Canonical Migration、Flyway 或 CMS Domain Authority；
 - Main / Party canonical URL、产品 identity 与 accepted behavior 在后续内容建设中保持。
 
-## 当前 Planning / Execute Priority — Issue #60
+## Issue #60 — Main Site Remaining Product Content
 
-Planning baseline：`main@f42bacf4ab7719e3291288c77f0685b428b86141`。
-
-Issue #92 的 Phase 0～Phase 3 前置路线已经闭环并关闭；Issue #77 继续承担四层长期 Architecture Authority。Issue #60 现已完成 E1～E3 的第一轮 dependency closure：
-
-```text
-E1 External-link Boundary
-  └─ Authority closure / no implementation EU
-
-E2 Single-page Formal Content
-  └─ EU-49 Page Operational Content Ownership & Migration Foundation — READY
-       ↓ completion required
-E3 Historical Content Collection & Canonical Migration
-  └─ downstream Requirement / Specification READY only
-```
+Initial E1～E3 planning baseline：`main@f42bacf4ab7719e3291288c77f0685b428b86141`。
 
 ### E1 — Main External-link Ownership & Behavior Boundary
 
 Current Authority：
 
-- Requirement：`docs/requirements/main-external-link-boundary.md`；
-- Specification：`docs/specifications/main-external-link-boundary.md`。
+- `docs/requirements/main-external-link-boundary.md`
+- `docs/specifications/main-external-link-boundary.md`
 
-Repository audit 已确认 EXTERNAL_LINK Article、Navigation、CmsList LINK / ARTICLE、Advertisement / fixed external integration 与 Public Renderer 的 document navigation / open-mode 基础能力已经存在。当前缺口是 ownership / migration classification 的正式收敛，而不是新的 Runtime capability，因此不创建 E1 implementation Unit。
+Repository audit 已确认 EXTERNAL_LINK Article、Navigation、CmsList LINK / ARTICLE、Advertisement / fixed external integration 与 Public Renderer 的 document navigation / open-mode 基础能力已经存在。当前没有独立 Runtime implementation gap，因此 E1 以 Planning / Authority closure结束，不创建 implementation EU，也不向后续工作传递 Execute Authority。
 
-E1 closure 不授予后继 Unit Execute Authority；它只作为 E2 / E3 的 accepted boundary input。
+### E2 — Main Single-page Formal Content / EU-49
 
-### E2 — EU-49 Page Operational Content Ownership & Migration Foundation
+Current accepted contract：
 
-Current Authority：
+- `docs/requirements/main-single-page-formal-content.md`
+- `docs/specifications/main-single-page-formal-content.md`
+- `docs/technical/main-single-page-formal-content.md`
+- completed Work Evidence：`docs/work/archive/eu49-page-content-migration-foundation.md`
 
-- Requirement：`docs/requirements/main-single-page-formal-content.md`；
-- Specification：`docs/specifications/main-single-page-formal-content.md`；
-- Technical Plan：`docs/technical/main-single-page-formal-content.md`；
-- Current Work：`docs/work/current/eu49-page-content-migration-foundation.md`。
+EU-49 已通过 PR #112 完成：
 
-Readiness：**PASS**。
+1. existing Page ordinary reconcile 不再覆盖 operator-owned content fields；
+2. Fresh Page provisioning保持 package defaults；
+3. Core 提供窄的 Page content-only update boundary；
+4. Generic Content Migration增加 stable Page target / mapping / guarded first apply / SKIP / CONFLICT / resource projection；
+5. append-only Generic Flyway V3增加 site-neutral Page migration mapping；
+6. Generic / Party / Site Package / Backend boundary / Repository CI regressions保持 PASS。
 
-EU-49 的 bounded目标：
-
-1. 保持 Page stable identity / preset structure 由 Site Package 管理；
-2. 让 ordinary Site Package reconcile 对 existing Page 停止持续覆盖 `bodyHtml / renderMode / embedUrl` 等 operator-managed内容字段；
-3. 为 Generic Content Migration 增加 site-neutral Page canonical record / stable Page target / mapping / precondition fingerprint / CREATE-APPLY-SKIP-CONFLICT 语义；
-4. 使用 append-only Generic Flyway V3 增加 Page migration mapping schema；
-5. 保持现有 Admin / Public Page URL、Rich Text safety、Party migration、Article/List migration、Site Package 与 Public Renderer行为；
-6. 本 Unit 不采集 Main 原站正式 Page 正文，不创建 Main canonical dataset，不提前进入 E3。
-
-Planning / Readiness integration 后，EU-49 仍必须通过新的 Fresh Context 从 integrated `main` 重新核验：
-
-- Current Repository Authority；
-- Issue #60 / #77；
-- EU-49 Requirement / Specification / Technical Plan / Current Work；
-- Open PR / Issue 与最近相关 Actions；
-- integrated planning Head 与 current `main` 的 base drift。
-
-只有上述复核仍 PASS 且没有 blocker，才能建立 **EU-49 自身 Execute baseline**。不得继承 EU-48、Issue #92 Phase 3、E1 或 planning branch 的 Execute Authority。
+Integrated main：`18da735c654c1a5d1310fe6db7e8e98f6f7b0026`；Post-Integration CI #868 / run `34200526862` = **PASS**。EU-49 Execute Authority 已终止。
 
 ### E3 — Main Historical Content Collection & Canonical Migration
 
-Current downstream Authority：
+Current Authority：
 
-- Requirement：`docs/requirements/main-historical-content-migration.md`；
-- Specification：`docs/specifications/main-historical-content-migration.md`。
+- `docs/requirements/main-historical-content-migration.md`
+- `docs/specifications/main-historical-content-migration.md`
 
-E3 当前只冻结后续 source discovery、evidence promotion、accepted snapshot、Article / Page / List canonical organization、provenance、Fresh DB import / idempotency / reconciliation 与 Human Review contract。
+EU-49 foundation prerequisite 已满足。E3 下一步不是直接 Execute，而是基于 current Repository 与真实 source evidence重新恢复 Planning：
 
-在 EU-49 completion 前：
+- source discovery completeness / unresolved classification；
+- accepted source snapshot / provenance；
+- Article / EXTERNAL_LINK Article / resources；
+- formal Page content；
+- historical ListItem（仅当 source evidence证明属于迁移范围）；
+- canonical organization；
+- Fresh DB import、idempotency、conflict、reconciliation；
+- Human Review。
 
-- 不给 E3 分配 EU Identifier；
-- 不开始 Main source collection；
-- 不 promotion 临时 evidence 为 canonical dataset；
-- 不声明 E3 Ready / Execute；
-- 不预先锁定 Main Article / Page / List 数量。
+当前明确：
 
-EU-49 完成后，E3 必须基于届时真实 source evidence 再执行 `slice-work`，决定 source discovery / evidence promotion 与 canonical import / reconciliation / Human Review 是否需要一个或多个 Execution Units。
+- **Current Ready Execution Unit：NONE**；
+- E3 没有 Identifier；
+- E3 没有 Candidate / Ready Execution Unit；
+- E3 没有 Execute baseline / Execute Authority；
+- 没有开始 Main source collection / canonical promotion；
+- 没有冻结未经 repository evidence接受的 item count。
+
+下一自然 Gate：**E3 Fresh Context Planning / source-evidence recovery → necessary dependency closure → `slice-work` → `readiness-check`**。只有形成新的 Ready Execution Unit 后才能进入 Execute；不得继承 EU-49 或更早 Unit 的 Execute Authority。
 
 ## 其他开放方向
 
@@ -151,13 +136,14 @@ EU-49 完成后，E3 必须基于届时真实 source evidence 再执行 `slice-w
 - Issue #60 C2：Mobile Layout Human Review Candidate；
 - Repository Split Readiness Assessment：deferred / independent。
 
-上述候选均不改变 EU-49 当前 Readiness，也不从 EU-49 自动继承 Execute Authority。
+上述候选均不自动改变 E3 当前 Planning Gate，也不从任何已完成 Unit继承 Execute Authority。
 
 ## 历史收敛追溯
 
 - Issue #92 Phase 0～Phase 3：`docs/project/pre-e1e3-convergence-plan.md` + closed Issue #92；
 - Phase 1 Documentation Authority：EU-43 / EU-44 / EU-45 archive records；
 - Backend / Migration foundation：EU-46 / EU-47 / EU-48 archive records；
+- E2 Page migration foundation：EU-49 archive record；
 - Party canonical migration：对应 `data-migrations/party/**`、PR / Actions / Issue Current Evidence；
 - 详细 historical implementation / verification 不在本 Roadmap 重复维护。
 
@@ -168,9 +154,9 @@ EU-49 完成后，E3 必须基于届时真实 source evidence 再执行 `slice-w
 1. 读取当前 `main`、Open PR / Issue 与最近相关 Actions；
 2. 完整读取 `AGENTS.md`、Root `README.md`、`docs/README.md`；
 3. 读取本 Roadmap 与 `docs/project/development-method.md`；
-4. 读取 Issue #60、Issue #77 与当前 Ready Unit 的直接 Authority；
-5. 当前入口若仍为 EU-49，则完整读取 `docs/requirements/main-single-page-formal-content.md`、`docs/specifications/main-single-page-formal-content.md`、`docs/technical/main-single-page-formal-content.md`、`docs/work/current/eu49-page-content-migration-foundation.md`；
-6. 重新核验 EU-49 Readiness、planning integration结果与 base drift；只有仍 PASS 才建立本 Unit Execute baseline并进入 Execute；
-7. E3 继续保持 downstream Planning Authority，直到 EU-49 completion 后重新 slice/readiness。
+4. 读取 Issue #60、Issue #77 与当前 Planning Gate 的直接 Authority；
+5. 当前入口若仍为 E3，则完整读取 `docs/requirements/main-historical-content-migration.md` 与 `docs/specifications/main-historical-content-migration.md`；
+6. 重新核验 source-evidence availability、dependency closure 与实际 Repository 状态；
+7. 只有在 `slice-work`形成 Candidate 且 `readiness-check = PASS` 后，才建立新的 Ready Execution Unit与后续 Execute baseline。
 
-当前 Ready Execution Unit：**EU-49 — Page Operational Content Ownership & Migration Foundation**。Readiness PASS 不等于已经建立 Execute baseline。
+当前 Ready Execution Unit：**NONE**。

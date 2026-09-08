@@ -29,32 +29,35 @@ Fresh Context 按以下入口恢复，避免把历史执行记录当作当前 Au
 
 ## 当前 Planning Gate
 
-Issue #92 — E1～E3 前置 Repository Authority 与 Migration Architecture 收敛路线的 Phase 0～Phase 3 已完成；Phase 3 **Canonical Migration Compatibility & E1～E3 Re-entry = PASS**。Issue #60 / E1～E3 已进入正式 Planning，并完成当前 dependency closure：
+Issue #92 — E1～E3 前置 Repository Authority 与 Migration Architecture 收敛路线的 Phase 0～Phase 3 已完成；Phase 3 **Canonical Migration Compatibility & E1～E3 Re-entry = PASS**。Issue #60 / E1～E3 当前状态：
 
 ```text
 E1 Main External-link Ownership & Behavior Boundary
    └─ Planning / Authority closure；no implementation Unit
         ↓
 E2 Main Single-page Formal Content
-   └─ EU-49 Page Operational Content Ownership & Migration Foundation — READY
-        ↓
+   └─ EU-49 Page Operational Content Ownership & Migration Foundation — COMPLETED
+        ↓ foundation prerequisite satisfied
 E3 Main Historical Content Collection & Canonical Migration
-   └─ downstream Requirement / Specification ready；等待 EU-49 completion 后重新 slice
+   └─ CURRENT PLANNING GATE
+      Fresh Context source-evidence recovery → dependency closure → slice-work → readiness-check
 ```
 
 当前状态：
 
 - E1 Requirement / Specification：**READY / Planning closure**；当前 Repository audit 无 implementation gap，不创建 Execution Unit；
-- **Current Ready Execution Unit：EU-49 — Page Operational Content Ownership & Migration Foundation**；
-- EU-49 Readiness：**PASS**；Planning baseline = `main@f42bacf4ab7719e3291288c77f0685b428b86141`；
-- EU-49 Execute：**NOT STARTED**；本 Planning / Readiness integration 不自动建立 Execute baseline；
-- E3 Requirement / Specification：**READY as downstream contract**，但依赖 EU-49 foundation；当前不编号、不具备 Execute Authority，也不得提前开始 Main source collection / canonical promotion；
+- E2 / **EU-49：COMPLETED**；PR #112 已集成 Page operational-content ownership 与 site-neutral Generic Page canonical migration foundation；
+- EU-49 integrated main：`18da735c654c1a5d1310fe6db7e8e98f6f7b0026`；Post-Integration CI #868 / run `34200526862`：**PASS**；
+- EU-49 Execute Authority：**TERMINATED**；completed Work Evidence 位于 `docs/work/archive/eu49-page-content-migration-foundation.md`；
+- **Current Ready Execution Unit：NONE**；
+- E3 Requirement / Specification：**READY as Planning Authority**；EU-49 prerequisite 已满足，但当前没有 Identifier、Candidate / Ready Execution Unit、Execute baseline 或 Execute Authority；
+- 当前没有开始 Main source collection / canonical promotion，也没有冻结未经 Repository Evidence 接受的 Main Article / Page / List 数量；
 - Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层长期边界；
-- Repository Split Readiness Assessment 继续 deferred，不自动阻塞 E1～E3。
+- Repository Split Readiness Assessment 继续 deferred，不自动阻塞 E3 Planning。
 
-EU-49 Execute 前必须使用新的 Fresh Context，从 integrated `main` 重新核验 Repository Authority、Issue #60、EU-49 Requirement / Specification / Technical Plan / Work Authority、Open PR / Actions、Readiness 与 base drift；只有仍无 Authority change / blocker 时，才允许建立 EU-49 自身 Execute baseline。不得继承 EU-48、Phase 3 或 E1 的 Authority。
+下一自然 Gate 是 **Issue #60 / E3 Fresh Context Planning / source-evidence recovery**。恢复后只能按照 current Repository Authority 与真实 source evidence推进 dependency closure；只有 `slice-work`形成 Candidate 且 `readiness-check = PASS` 后，才建立新的 Ready Execution Unit并允许后续 Execute。不得继承 EU-49、EU-48、Phase 3 或 E1 的 Execute Authority。
 
-Current Main formal-content Planning Authority：
+Current Main formal-content Authority：
 
 - Overall plan：`docs/project/main-site-formal-content-plan.md`；
 - E1 Requirement：`docs/requirements/main-external-link-boundary.md`；
@@ -62,7 +65,7 @@ Current Main formal-content Planning Authority：
 - E2 Requirement：`docs/requirements/main-single-page-formal-content.md`；
 - E2 Specification：`docs/specifications/main-single-page-formal-content.md`；
 - E2 Technical Plan：`docs/technical/main-single-page-formal-content.md`；
-- EU-49 Work Authority：`docs/work/current/eu49-page-content-migration-foundation.md`；
+- EU-49 Completed Work Evidence：`docs/work/archive/eu49-page-content-migration-foundation.md`；
 - E3 Requirement：`docs/requirements/main-historical-content-migration.md`；
 - E3 Specification：`docs/specifications/main-historical-content-migration.md`。
 
