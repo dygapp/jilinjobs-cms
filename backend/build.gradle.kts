@@ -46,6 +46,14 @@ tasks.register("bootJar") {
     finalizedBy("verifyBackendApplicationBoundary")
 }
 
+tasks.register<JavaExec>("importCanonicalContent") {
+    group = "migration"
+    description = "Import a site-neutral canonical content migration snapshot"
+    dependsOn(":apps:content-migration:classes")
+    classpath = migrationSourceSets.getByName("main").runtimeClasspath
+    mainClass.set("com.jilinjobs.cms.migration.generic.GenericContentMigrationKt")
+}
+
 tasks.register<JavaExec>("importPartyHistoricalContent") {
     group = "migration"
     description = "Import the canonical Party historical-content dataset, including EU-30 theme education"
@@ -124,6 +132,14 @@ tasks.register<JavaExec>("verifyContentMigrationBoundary") {
     mainClass.set("com.jilinjobs.cms.ContentMigrationBoundaryVerificationKt")
 }
 
+tasks.register<JavaExec>("verifyGenericContentMigration") {
+    group = "verification"
+    description = "Verify site-neutral canonical migration preflight, execution, idempotency and failure semantics"
+    dependsOn(":apps:content-migration:testClasses")
+    classpath = migrationSourceSets.getByName("test").runtimeClasspath
+    mainClass.set("com.jilinjobs.cms.GenericContentMigrationVerificationKt")
+}
+
 tasks.register("verifyBackendApplicationBoundary") {
     group = "verification"
     description = "Inspect packaged Server and Migration BootJars for EU-46 application ownership boundaries"
@@ -151,6 +167,9 @@ tasks.register("verifyBackendApplicationBoundary") {
         require("BOOT-INF/classes/com/jilinjobs/cms/ContentMigrationApplication.class" in migrationEntries) { "Migration application class missing" }
         require(migrationEntries.any { it.startsWith("BOOT-INF/classes/com/jilinjobs/cms/migration/PartyHistoricalContentMigrationV2") }) {
             "Migration BootJar is missing Party migration classes"
+        }
+        require(migrationEntries.any { it.startsWith("BOOT-INF/classes/com/jilinjobs/cms/migration/generic/GenericContentMigration") }) {
+            "Migration BootJar is missing Generic content migration classes"
         }
         val forbiddenServerClasses = listOf(
             "BOOT-INF/classes/com/jilinjobs/cms/CmsApplication.class",

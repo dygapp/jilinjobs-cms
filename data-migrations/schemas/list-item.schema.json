@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jilinjobs.local/schemas/historical-list-item.schema.json",
+  "title": "Historical List Migration Item",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["legacyKey", "sourceOrder", "sourceType", "title", "sourceFingerprint"],
+  "properties": {
+    "legacyKey": { "type": "string", "minLength": 1, "maxLength": 255 },
+    "sourceOrder": { "type": "integer", "minimum": 1 },
+    "sourceType": { "enum": ["LINK", "ARTICLE"] },
+    "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "subtitle": { "type": ["string", "null"], "maxLength": 500 },
+    "url": { "type": ["string", "null"], "format": "uri" },
+    "articleReference": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["sourceSystem", "legacyKey"],
+      "properties": {
+        "sourceSystem": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "legacyKey": { "type": "string", "minLength": 1, "maxLength": 255 }
+      }
+    },
+    "openMode": { "enum": ["DEFAULT", "SAME_WINDOW", "NEW_WINDOW"] },
+    "enabled": { "type": "boolean" },
+    "sourceFingerprint": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "image": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["sourceUrl", "snapshotPath", "sha256", "sizeBytes"],
+      "properties": {
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "snapshotPath": { "type": "string", "minLength": 1 },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "contentType": { "type": ["string", "null"] },
+        "sizeBytes": { "type": "integer", "minimum": 1 }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "sourceType": { "const": "LINK" } } },
+      "then": { "required": ["url"], "properties": { "articleReference": { "type": "null" } } }
+    },
+    {
+      "if": { "properties": { "sourceType": { "const": "ARTICLE" } } },
+      "then": { "required": ["articleReference"], "properties": { "url": { "type": "null" } } }
+    }
+  ]
+}

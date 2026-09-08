@@ -6,10 +6,6 @@ import com.jilinjobs.cms.content.ArticleDraft
 import com.jilinjobs.cms.content.ArticleService
 import com.jilinjobs.cms.content.ArticleType
 import com.jilinjobs.cms.resource.ResourceService
-import org.apache.ibatis.annotations.Insert
-import org.apache.ibatis.annotations.Mapper
-import org.apache.ibatis.annotations.Param
-import org.apache.ibatis.annotations.Select
 import org.springframework.boot.WebApplicationType
 import org.springframework.boot.builder.SpringApplicationBuilder
 import org.springframework.stereotype.Service
@@ -29,47 +25,6 @@ private val PARTY_ALIASES = setOf("party-voice", "party-work", "party-rules", "p
 private val SHA256 = Regex("[0-9a-f]{64}")
 private val MIGRATION_TOKEN = Regex("migration-(resource|attachment)://[0-9a-f]{64}")
 private val CANONICAL_ASSET_REFERENCE = Regex("""(?i)(?:src|href)=[\"']assets/[^\"']+[\"']""")
-
-@Mapper
-interface ArticleLegacyMappingMapper {
-    @Select(
-        """
-        SELECT id, source_system, legacy_key, content_id, type_code, detail_path,
-               source_url, source_fingerprint, article_id
-        FROM cms_article_legacy_mapping
-        WHERE source_system=#{sourceSystem} AND legacy_key=#{legacyKey}
-        """,
-    )
-    fun find(
-        @Param("sourceSystem") sourceSystem: String,
-        @Param("legacyKey") legacyKey: String,
-    ): ArticleLegacyMappingRecord?
-
-    @Insert(
-        """
-        INSERT INTO cms_article_legacy_mapping(
-            source_system, legacy_key, content_id, type_code, detail_path,
-            source_url, source_fingerprint, article_id
-        ) VALUES(
-            #{sourceSystem}, #{legacyKey}, #{contentId}, #{typeCode}, #{detailPath},
-            #{sourceUrl}, #{sourceFingerprint}, #{articleId}
-        )
-        """,
-    )
-    fun insert(record: ArticleLegacyMappingRecord): Int
-}
-
-data class ArticleLegacyMappingRecord(
-    var id: Long? = null,
-    var sourceSystem: String = "",
-    var legacyKey: String = "",
-    var contentId: String? = null,
-    var typeCode: String = "",
-    var detailPath: String = "",
-    var sourceUrl: String = "",
-    var sourceFingerprint: String = "",
-    var articleId: Long = 0,
-)
 
 data class PartyMigrationSource(
     val system: String,
