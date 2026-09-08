@@ -1,0 +1,14 @@
+{
+  "compatibilityVersion": 1,
+  "transitions": [
+    {
+      "kind": "LIST_ITEM",
+      "listCode": "PARTY_CAROUSEL",
+      "sourceSystem": "legacy-jilinjobs",
+      "legacyKey": "party-carousel:position:2",
+      "fromFingerprint": "c2ad182b8b2dc981a3cbe3b0153a1e3e47604c1f01dd43e6d25971e1deed10dc",
+      "fromSourceType": "LINK",
+      "preserveRuntimeId": true
+    }
+  ]
+}

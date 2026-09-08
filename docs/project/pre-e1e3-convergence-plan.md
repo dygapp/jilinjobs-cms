@@ -5,19 +5,19 @@
 - Planning source：GitHub Issue #92
 - Related architecture authority：GitHub Issue #77
 - Downstream candidates：GitHub Issue #60 / E1～E3
-- Stage：**Planning Authority — ACTIVE / Phase 2C READY via EU-48**
+- Stage：**Planning Authority — ACTIVE / Phase 2C COMPLETED via EU-48**
 - Phase 0：**COMPLETED**
 - Phase 1 Repository Documentation Authority Convergence：**COMPLETED**
 - Phase 2A Backend Application / Core Boundary Foundation：**COMPLETED via EU-46**
 - Phase 2B Generic Content Migration Application：**COMPLETED via EU-47**
-- Phase 2C Party Migration De-specialization & Compatibility：**READY via EU-48**
-- Current Ready Execution Unit：**EU-48 — Party Migration De-specialization & Compatibility**
-- Readiness：**PASS**；Execute：**NOT STARTED**
-- Next Gate：**planning/readiness integration → Fresh Context EU-48 execute revalidation**
+- Phase 2C Party Migration De-specialization & Compatibility：**COMPLETED via EU-48**
+- Current Ready Execution Unit：**NONE**
+- EU-48 Execute Authority：**TERMINATED on completion**
+- Next Gate：**Phase 3 — Canonical Migration Compatibility & E1～E3 Re-entry planning / compatibility gate**
 - Phase 1 closure Authority：`docs/project/documentation-authority-convergence.md`
 - Phase 2A accepted Authority：`docs/requirements/backend-application-core-boundary.md` + `docs/specifications/backend-application-core-boundary.md` + `docs/technical/backend-application-core-boundary.md`
 - Phase 2B accepted Authority：`docs/requirements/generic-content-migration-application.md` + `docs/specifications/generic-content-migration-application.md` + `docs/technical/generic-content-migration-application.md` + `docs/work/archive/eu47-generic-content-migration-application-foundation.md`
-- Phase 2C Current Authority：`docs/requirements/party-migration-despecialization-compatibility.md` + `docs/specifications/party-migration-despecialization-compatibility.md` + `docs/technical/party-migration-despecialization-compatibility.md` + `docs/work/current/eu48-party-migration-despecialization-compatibility.md`
+- Phase 2C accepted Authority：`docs/requirements/party-migration-despecialization-compatibility.md` + `docs/specifications/party-migration-despecialization-compatibility.md` + `docs/technical/party-migration-despecialization-compatibility.md` + `docs/work/archive/eu48-party-migration-despecialization-compatibility.md`
 
 本文固化 EU-42 之后、Issue #60 / E1～E3 重新进入正式规划之前的总体演进顺序。Phase / Planned Unit 名称只是 Planning identity；只有具体 Unit 经 `slice-work → readiness-check` PASS 才形成 Ready Execution Unit，且后续 Execute 仍需遵守 Fresh Context、base drift 与 Repository Authority Gate。
 
@@ -31,7 +31,7 @@ Planning / Requirement Candidate
   → Fresh-context Execute
 ```
 
-EU-46 与 EU-47 均已完成且 Execute Authority终止。EU-48由 Phase 2C独立形成；它不继承 EU-47 或更早 Unit 的 Execute Authority，也不把任何 Execute Authority传给 Phase 3 / E1～E3。
+EU-46、EU-47、EU-48 均已完成且 Execute Authority终止。Phase 3 不继承任何已完成 Unit 的 Execute Authority；Issue #60 / E1～E3 继续在 Phase 3 re-entry PASS 前 blocked。
 
 ## 2. Why this planning layer exists
 
@@ -42,7 +42,7 @@ EU-42 后 audit 确认两个不能直接留给 E1～E3 的长期问题：
 1. Repository Documentation Authority 需要先完成 Current / superseded / Historical Work 收敛；
 2. Party-specific Historical Migration Application 仍与 Backend Server production classpath / Spring composition 共存，而未来 Main migration 需要 site-neutral、可复用且独立运行的 Generic Content Migration Application。
 
-第 1 项已由 Phase 1 / EU-43～EU-45 完成。第 2 项中的 application/core isolation 已由 Phase 2A / EU-46 完成；Phase 2B 已由 EU-47 建立 Generic Content Migration capability。Phase 2C / EU-48 继续处理 Party-specific de-specialization 与 accepted historical compatibility，使 Party current path成为 Generic capability 的真实 consumer，而不是继续保留一套 direct Party Runtime importer。
+第 1 项已由 Phase 1 / EU-43～EU-45 完成。第 2 项的 application/core isolation 已由 Phase 2A / EU-46 完成，Generic Content Migration capability 已由 Phase 2B / EU-47 建立，Party-specific de-specialization 与 accepted historical compatibility 已由 Phase 2C / EU-48 收敛。下一步仅允许进入 Phase 3 compatibility / E1～E3 re-entry Gate，重新对账完整链路并决定是否满足 re-entry；不因 Phase 2C 完成自动启动 E1～E3。
 
 ## 3. Overall sequence
 
@@ -55,16 +55,16 @@ Phase 2A Backend Application / Core Boundary Foundation — EU-46 COMPLETED
         ↓
 Phase 2B Generic Content Migration Application — EU-47 COMPLETED
         ↓
-Phase 2C Party Migration De-specialization & Compatibility — EU-48 READY / EXECUTE NOT STARTED
+Phase 2C Party Migration De-specialization & Compatibility — EU-48 COMPLETED
         ↓
-Phase 3  Canonical Migration Compatibility & E1～E3 Re-entry Gate
+Phase 3  Canonical Migration Compatibility & E1～E3 Re-entry Gate — CURRENT NEXT GATE
         ↓
 Issue #60 / E1～E3
 
 后置：Phase 4 Repository Split Readiness Assessment
 ```
 
-当前 **Ready Execution Unit = EU-48**。本 planning/readiness change集成后，下一 Gate只允许新的 Fresh Context重新核验 integrated `main`、Issue #92 / #77、EU-48 Authority、Open PR / Actions 与 base drift；无 Authority change / blocker时才建立 EU-48自身 Execute baseline。不得从当前 planning branch直接继承 Execute。
+当前 **Ready Execution Unit = NONE**。下一 Gate只允许从 current Repository Authority / Current Evidence恢复 Phase 3 compatibility/re-entry planning；不得从 EU-48或本阶段完成事实直接继承 Execute Authority。
 
 ## 4. Phase 0 — COMPLETED
 
@@ -139,7 +139,7 @@ content-migration ────→ cms-core
 
 `cms-server`：`CmsApplication`、Admin/Public HTTP transport、MVC/static HTTP、server-only handler/startup，以及与现有运行入口兼容的 maintenance CLI；保持 current Server JAR external path/name。
 
-`content-migration`：独立 non-web Spring composition、四个 Party migration implementation、migration-only compatibility / CLI/import/report；不得依赖 Server app。
+`content-migration`：独立 non-web Spring composition、Historical Migration implementation、migration-only compatibility / CLI/import/report；不得依赖 Server app。
 
 Product-level Generic CMS Core 不要求 Controller / MVC transport进入 shared build artifact。
 
@@ -162,10 +162,8 @@ EU-46 保持：
 - Party current canonical 183 Articles + 4 accepted carousel；
 - first/second import idempotency；
 - fingerprint conflict；
-- EU-29 accepted → EU-30 current position-2 compatibility；
+- EU-29 accepted → current position-2 compatibility；
 - resource bytes / mappings / report labels / failure semantics。
-
-四个 Party migration files一起迁出 Server source ownership；Phase 2A 未泛化 Party domain。
 
 ### 6.7 Verification result
 
@@ -182,8 +180,6 @@ EU-46 pre-integration exact-head required evidence全部 PASS：
 9. focused Backend Application Boundary Verification。
 
 详细 SHA / Run evidence由 PR #105、Actions与 `docs/work/archive/eu46-backend-application-core-boundary-foundation.md` 记录；最终 Post-Integration evidence由 Issue #92 Current Evidence承担。
-
-Review Environment可作为 supporting runtime evidence，但没有视觉产品变更，因此不替代 required evidence。
 
 ### 6.8 Completion result
 
@@ -228,70 +224,32 @@ Legacy Source
 
 Generic capability负责 canonical validation、path/digest safety、stable migration identity/fingerprint、preflight、transaction/file-side-effect boundary、dependency order、Article/Resource/ListItem import、legacy mapping、idempotency/conflict/reconciliation/report。
 
-不得内建 Party / JilinJobs / EU-29 / EU-30 identity。Party aliases、`PARTY_CAROUSEL`、fixed four items、accepted fingerprints、position-2 LINK→ARTICLE upgrade exception继续属于 Phase 2C Party compatibility authority。
+不得内建 Party / JilinJobs / EU-29 / EU-30 identity。Party aliases、`PARTY_CAROUSEL`、fixed four items、accepted fingerprints、position-2 LINK→ARTICLE upgrade exception在 EU-47 后仍属于 Party compatibility authority。
 
 ### 7.4 Slice / readiness result
 
-`slice-work` 形成单一 Candidate：**EU-47 — Generic Content Migration Application Foundation**。不拆成 schema/helper/importer/CLI多个 EU，因为 Generic schema必须与可执行 consumer、共同 preflight/report、focused verification及 Party regression在同一原子边界闭合，才能成为 Phase 2C可靠前置。
-
-`readiness-check`：**PASS**。
-
-EU-47 Execute scope包括：
-
-- neutral legacy mapping ownership relocation，不改 table/SQL semantics；
-- generic canonical models + generic list schemas；
-- load → structural/byte preflight → Runtime target/mapping/dependency preflight → execute → report；
-- Generic Article INTERNAL/EXTERNAL_LINK + BODY_IMAGE/ATTACHMENT；
-- Generic ListItem LINK/ARTICLE stable relation；
-- `generic-content` dispatcher、root `importCanonicalContent`、`CONTENT_MIGRATION_REPORT`；
-- synthetic Generic verification、Generic package purity proof与 focused workflow；
-- exact-head Canonical / EU-30 / Boundary / Site Package / CI regression。
-
-Phase 2B 明确不修改 `data-migrations/party/v1/**` accepted bytes，不切换 Party current commands到 Generic Engine，不实现 Party accepted fingerprint transition，不开始 Main Site canonical data collection/import，不修改 schema/API/frontend/Site Package，不升级 `agentic-dev` baseline。
+`slice-work` 形成单一 Candidate：**EU-47 — Generic Content Migration Application Foundation**。`readiness-check`：**PASS**。
 
 ### 7.5 Execute / Verification / Completion result
 
 Fresh Context在 planning/readiness integration 后重新核验 actual Repository state，并以 `main@5b2f128ae8eccba792402836bd1f8f63e798c82e` 建立 EU-47自身 Execute baseline；无 base drift / Authority blocker。
 
-EU-47 implementation已完成：
-
-- neutral Article/ListItem legacy Mapper迁到 shared migration ownership；
-- Generic canonical Article/List models与 list schemas已建立；
-- Generic loader / structural+byte preflight / Runtime target+mapping+dependency preflight / execute / report已建立；
-- Generic INTERNAL / EXTERNAL_LINK Article、BODY_IMAGE / ATTACHMENT、LINK / ARTICLE ListItem与 stable article dependency已建立；
-- LINK image使用 site-neutral deterministic static target，ARTICLE image使用 managed Resource；
-- `generic-content`、`importCanonicalContent`、`CONTENT_MIGRATION_REPORT`与 conflict/invalid non-success semantics已建立；
-- synthetic Fresh DB verifier与 Generic source purity workflow已建立；
-- `data-migrations/party/v1/**`、DB schema/Flyway、API、frontend、Site Package behavior未修改。
-
-Focused verification覆盖 first CREATE、second-import全 SKIP、changed fingerprint conflict、path traversal、missing/tampered resource、unresolved reference、missing Column/List/dependency、duplicate identity、index/item mismatch与 no-mutation preflight；同时验证 non-web composition、LINK static image与 ARTICLE managed image/Core projection contract。Canonical Migration、EU-30 Upgrade、Backend Boundary、Site Package与 Repository CI / Integrated Browser继续承担 Party / repository regression Gate。
+EU-47 implementation已完成：neutral Article/ListItem legacy Mapper shared ownership、Generic canonical Article/List models、loader / preflight / execute / report、INTERNAL / EXTERNAL_LINK Article、LINK / ARTICLE ListItem、stable dependency、Generic command/report与 synthetic verifier均已建立。`data-migrations/party/v1/**`、DB schema/Flyway、API、frontend、Site Package behavior未修改。
 
 最终 pre-integration exact-head evidence由 PR #107 / Actions记录；merge后 Post-Integration Current Evidence由 Issue #92 / #77记录。EU-47完成后 Execute Authority终止，不传递给后续 Phase。
 
-## 8. Phase 2C — Party Migration De-specialization & Compatibility — READY VIA EU-48
+## 8. Phase 2C — Party Migration De-specialization & Compatibility — COMPLETED VIA EU-48
 
-### 8.1 Dependency closure
+### 8.1 Accepted Authority
 
-Planning baseline：`main@bd5dbd84bafd7b731ca290bbd40fb135806cb086`。
+- Requirement：`docs/requirements/party-migration-despecialization-compatibility.md`；
+- Specification：`docs/specifications/party-migration-despecialization-compatibility.md`；
+- Technical Plan：`docs/technical/party-migration-despecialization-compatibility.md`；
+- Completed Work Artifact：`docs/work/archive/eu48-party-migration-despecialization-compatibility.md`。
 
-Current inventory确认：
+### 8.2 Accepted result
 
-- Party Article V1/V2仍直接调用 Core Article/Resource服务复制 Generic steady-state mutation，并以 Kotlin常量维护原四 aliases、`party-theme-education` / `zhutijiaoyu` special handling；
-- Party Carousel V2仍复制 Generic List create/skip/conflict，并 hardcode `PARTY_CAROUSEL`、position pattern/fixed count、Party static path与 accepted EU-29/EU-30 position-2 fingerprints；
-- `data-migrations/party/v1/manifest.json`、Article index与 list index/items已经持有 current sourceSystem、scope aliases/counts、stable identities、order、current fingerprints与current relation；
-- current Party Article canonical shape与 Generic Article contract语义兼容；Party carousel accepted shape需要 bounded adapter处理 legacy `sourceType` default、`articleRef`与provenance fields；
-- pinned EU-29 accepted commit `59c855f55899cd613fdee059b27db762ffa3b092` + current EU-30 Upgrade workflow完整证明唯一 accepted old→current position-2 LINK→ARTICLE transition；
-- 该 transition的 `fromFingerprint`无法从 current canonical files本身推导，必须晋升为 Party-owned compatibility authority；
-- EU-47 Generic Engine只需要 site-neutral prepared-dataset entry / shared byte verification / optional provenance + safe static target薄扩展，不需要 policy DSL、plugin framework、new app/module或 DB schema change。
-
-### 8.2 Current Authority
-
-- Requirement：`docs/requirements/party-migration-despecialization-compatibility.md` — **READY**；
-- Specification：`docs/specifications/party-migration-despecialization-compatibility.md` — **READY**；
-- Technical Plan：`docs/technical/party-migration-despecialization-compatibility.md` — **READY**；
-- Work Artifact：`docs/work/current/eu48-party-migration-despecialization-compatibility.md`。
-
-Accepted responsibility split：
+EU-48以独立 Execute baseline `main@4cd1d2ea7e9d1e584561f4b3b40a0d44d74b0169`完成：
 
 ```text
 Party canonical dataset / compatibility authority
@@ -303,33 +261,30 @@ Generic Content Migration capability
 CMS Runtime
 ```
 
-Party current aliases/current fingerprints由 manifest/index/items持有；新增 bounded `data-migrations/party/v1/compatibility.json`只持有无法由 current/pinned dataset自身推导的 accepted historical transition。Generic package继续禁止 Party identity / fingerprint / upgrade exception。
+- current Party aliases/counts/current fingerprints、target relation与current image facts继续由 `manifest.json` / Article index / list index-items持有；
+- 新增 `data-migrations/party/v1/compatibility.json`，只保存唯一 accepted old position-2 transition的 old-state identity / `fromFingerprint` / source type / preserve-runtime-id requirement；
+- Party Article/List accepted on-disk shape由 bounded adapter验证/normalization，并委托 Generic prepared dataset path承担 steady-state CREATE/SKIP/CONFLICT；
+- Generic Engine仅增加 site-neutral prepared entry、shared byte/path verifier、source provenance / safe static-target metadata；不获得 Party identity、general UPDATE或 plugin/policy framework；
+- compatibility layer只在 exact transition + old Runtime guard + current target dependency全部匹配时原位更新 position 2，保持 list-item Runtime id；任何 drift均 CONFLICT / no update；
+- external command、Gradle task、legacy report label与 current 183 Articles / 4 carousel行为保持；
+- no DB schema/Flyway/API/frontend/Site Package semantic change。
 
-### 8.3 Slice / readiness
+### 8.3 Verification / completion result
 
-`slice-work`形成单一 **EU-48 — Party Migration De-specialization & Compatibility**。
+Pre-integration exact-head required evidence全部 PASS：
 
-保持单一 Unit，因为 Party adapter依赖 Generic prepared entry；删除 direct importer前必须同时证明 current fresh import与 pinned EU-29 upgrade；compatibility policy只有与 current dataset/profile和 upgrade verification同一 integration boundary才能独立验收。拆分会留下 dual importer或 broken upgrade中间态。
+1. Party Migration De-specialization focused verification，包括真实 MySQL compatibility guard scenarios；
+2. Canonical Migration Verification，current 183 Articles + 4 carousel first/second import与 bytes/reconciliation；
+3. EU-30 Migration Upgrade Verification，pinned EU-29 → current exact one UPDATE、Runtime id preservation与post-upgrade idempotency；
+4. Generic Content Migration Verification；
+5. Backend Application Boundary Verification；
+6. Site Package Verification；
+7. Repository CI / Integrated feature + admin browser；
+8. unresolved review threads = 0。
 
-`readiness-check`：**PASS**。
+最终 exact-head / merge / Post-Integration run identity由 PR #109、Actions及 Issue #92/#77 Current Evidence记录。
 
-EU-48 scope冻结为：
-
-- additive Party compatibility authority；
-- bounded Party canonical adapter / facade；
-- steady-state Party Article/List path委托 Generic preflight/execute；
-- exact accepted position-2 compatibility guard/update，preserve Runtime item id；
-- existing Party command / Gradle task / report label compatibility；
-- new focused de-specialization verifier/workflow；
-- Canonical / EU-30 Upgrade / Generic / Boundary / Site Package / CI exact-head regression。
-
-非目标：Main Site migration、Phase 3 verdict、Issue #60 / E1～E3、DB schema/API/frontend/Site Package semantic change、generic policy framework、Repository split、`agentic-dev` baseline upgrade。
-
-### 8.4 Execute Gate
-
-EU-48 Execute：**NOT STARTED**。
-
-本 planning/readiness change集成到 `main` 前不得进入 Execute。集成后必须由新的 Fresh Context重新读取 current Repository Authority / `main` / Issue #92 / #77 / EU-48 Requirement-Spec-Tech-Work / Open PR / Actions，并核验 Readiness与base drift。只有仍无 Authority change / blocker时才建立 EU-48自身 Execute baseline。
+EU-48 completion后 Execute Authority终止；Phase 2C completion不自动授予 Phase 3或 Issue #60 / E1～E3 Execute Authority。
 
 ## 9. Phase 3 — Canonical Migration Compatibility & E1～E3 Re-entry Gate
 
@@ -340,12 +295,12 @@ Generic CMS Schema
 → JilinJobs Site Package stable structure
 → one-time Site bootstrap
 → Generic Content Migration Application
-→ Party Canonical Dataset
+→ Party Canonical Dataset / compatibility authority
 → Runtime
 → Replaceable Public Renderer
 ```
 
-全部 Current Evidence闭环时记录 compatibility closure / E1～E3 re-entry PASS；发现真实 implementation gap 时才重新 `slice-work`。Phase 3 PASS 前不得进入 Issue #60 / E1～E3 Execute。
+当前只进入 **Planning / Compatibility Gate**。必须基于 Phase 2A～2C accepted Authority 与 Post-Integration Current Evidence重新对账完整链路；全部 obligation闭环后才可记录 compatibility closure / E1～E3 re-entry PASS。发现真实 implementation gap 时才重新 `slice-work`。Phase 3 PASS 前不得进入 Issue #60 / E1～E3 Execute。
 
 ## 10. Phase 4 — Repository Split Readiness Assessment
 
@@ -359,6 +314,6 @@ Generic CMS Schema
 2. `AGENTS.md`、Root `README.md`、`docs/README.md`；
 3. Roadmap / Development Method；
 4. Issue #92 / #77；
-5. 本总体规划与 EU-48 Requirement / Specification / Technical Plan / Work Artifact / latest Current Evidence。
+5. 本总体规划、Phase 2A～2C accepted Authority与 latest Current Evidence。
 
-`docs/work/archive/eu47-generic-content-migration-application-foundation.md` 只承担 completed traceability，不构成 EU-48 Execute Authority。EU-48只有在本 planning/readiness change成功集成后，由后续 Fresh Context确认 integrated baseline / Authority / Open PR / Actions / base drift仍有效且无 blocker时，才允许建立自身 Execute baseline。不得提前进入 Phase 3 或 Issue #60 / E1～E3。
+Current Ready Execution Unit = **NONE**。下一实际入口仅为 Phase 3 Canonical Migration Compatibility & E1～E3 Re-entry planning / compatibility gate。`docs/work/archive/eu48-party-migration-despecialization-compatibility.md`只承担 completed traceability，不构成 Phase 3 Execute Authority。不得因 EU-48完成而提前进入 Issue #60 / E1～E3。
