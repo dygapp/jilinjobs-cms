@@ -62,7 +62,7 @@ jobs:
 
   probe:
     name: External Main source probe
-    if: github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && startsWith(github.head_ref, 'eu50-probe/'))
     needs: tooling
     runs-on: ubuntu-latest
     timeout-minutes: 30
