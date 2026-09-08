@@ -60,6 +60,14 @@ function escapeHtml(value) {
 function sourceExtension(url) {
   try { return path.extname(new URL(url).pathname).slice(1).toLowerCase() } catch { return '' }
 }
+function describeError(error) {
+  const base = String(error)
+  const cause = error?.cause
+  if (!cause) return base
+  const code = cause.code || cause.name || 'unknown'
+  const message = cause.message || String(cause)
+  return `${base}; cause=${code}: ${message}`
+}
 function validateFetchHost(url, allowlist, label) {
   const parsed = new URL(url)
   if (!['http:', 'https:'].includes(parsed.protocol)) throw new Error(`${label} scheme 不允许：${parsed.protocol}`)
@@ -82,8 +90,9 @@ async function fetchResponse(url, attempts = 3, resource = false) {
       else validateFetchHost(response.url, allowedContentHosts, 'Content redirect')
       return response
     } catch (error) {
-      lastError = error
-      observations.push({ kind: 'retry', resource, url: String(url), attempt, message: String(error) })
+      const message = describeError(error)
+      lastError = new Error(message)
+      observations.push({ kind: 'retry', resource, url: String(url), attempt, message })
       if (attempt < attempts) await sleep(attempt * 750)
     } finally {
       clearTimeout(timer)
@@ -302,7 +311,7 @@ async function buildInternalArticle(item) {
     return null
   }
 }
-function pageTargetKey(target) { return `${target.groupAlias || ''}\u0000${target.pageAlias}` }
+function pageTargetKey(target) { return `${target.groupAlias || ''}\u0000${target.pageAlias ?? target.alias}` }
 function targetPageDefinition(target) {
   return sitePages.find(page => pageTargetKey(page) === pageTargetKey(target)) || null
 }
