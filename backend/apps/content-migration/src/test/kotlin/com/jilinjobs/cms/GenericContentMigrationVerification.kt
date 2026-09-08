@@ -202,7 +202,7 @@ private fun verifyListPlacement(connection: Connection) {
             require(result.getString("image_path")?.startsWith("/static/migrated/content/lists/VERIFY_FEATURED/") == true)
             require(result.getObject("image_resource_id") == null)
         }
-        statement.setString(1, "Verification Article")
+        statement.setString(1, "Verification Internal")
         statement.executeQuery().use { result ->
             require(result.next()) { "Verification ARTICLE ListItem missing" }
             require(result.getString("source_type") == "ARTICLE")
