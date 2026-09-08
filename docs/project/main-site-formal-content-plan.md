@@ -133,9 +133,7 @@ EU-50 **does not yet have an Execute baseline on the planning branch**. The Plan
 
 ### EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review
 
-Current Candidate Artifact：
-
-`docs/work/current/eu51-main-canonical-import-review.md`
+EU-51 is a stable downstream Candidate formed by `slice-work`, tracked by this Planning Authority, the E3 Technical Plan and Roadmap. Because its `readiness-check` is PENDING / BLOCKED, it does not have a `docs/work/current/` artifact yet.
 
 `readiness-check = PENDING / BLOCKED` because EU-50 has not yet integrated the accepted canonical snapshot. Exact accepted identities/counts/digests/resources/exception set are required to define EU-51's verification expectations and cannot be invented in Planning.
 
