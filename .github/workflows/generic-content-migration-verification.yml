@@ -73,4 +73,4 @@ jobs:
           MIGRATION_VERIFY_DB_PASSWORD: root
           CMS_STORAGE_ROOT: ${{ github.workspace }}/generic-content-migration/boundary-uploads
           CMS_STATIC_ROOT: ${{ github.workspace }}/generic-content-migration/boundary-static
-        run: gradle verifyGenericContentMigration verifyContentMigrationBoundary --no-daemon
+        run: gradle verifyGenericContentMigration verifyGenericPageContentMigration verifyContentMigrationBoundary --no-daemon

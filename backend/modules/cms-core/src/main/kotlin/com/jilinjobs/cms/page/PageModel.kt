@@ -29,6 +29,12 @@ data class PageDraft(
     val enabled: Boolean = true,
 )
 
+data class PageContentDraft(
+    val bodyHtml: String = "",
+    val renderMode: PageRenderMode = PageRenderMode.RICH_TEXT,
+    val embedUrl: String? = null,
+)
+
 data class PublicPageMember(val alias: String, val name: String, val href: String, val sortOrder: Int)
 data class PublicPageGroup(val alias: String, val name: String, val members: List<PublicPageMember>)
 data class BreadcrumbItem(val title: String, val href: String? = null)

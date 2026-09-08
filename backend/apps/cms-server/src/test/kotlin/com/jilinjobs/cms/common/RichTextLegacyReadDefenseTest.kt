@@ -151,5 +151,9 @@ private class LegacyPageMapper(rawBodyHtml: String) : PageMapper {
         updateCount += 1
         error("public legacy read must not rewrite persistence")
     }
+    override fun updatePageContent(id: Long, bodyHtml: String, renderMode: String, embedUrl: String?): Int {
+        updateCount += 1
+        error("public legacy read must not rewrite persistence")
+    }
     override fun deletePage(id: Long): Int = error("not used")
 }

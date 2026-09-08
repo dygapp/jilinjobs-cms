@@ -136,7 +136,7 @@ data class CanonicalListItemRecord(
 
 enum class GenericMigrationStatus { CREATED, SKIPPED, CONFLICT, INVALID }
 enum class GenericMigrationPhase { PREFLIGHT, EXECUTE }
-enum class GenericMigrationKind { ARTICLE, LIST_ITEM, DATASET }
+enum class GenericMigrationKind { ARTICLE, LIST_ITEM, PAGE, DATASET }
 
 data class GenericMigrationResult(
     val kind: GenericMigrationKind,
@@ -185,8 +185,9 @@ data class LoadedListItem(
 data class LoadedDataset(
     val articles: List<LoadedArticle>,
     val listItems: List<LoadedListItem>,
+    val pages: List<LoadedPage> = emptyList(),
 ) {
-    val total: Int get() = articles.size + listItems.size
+    val total: Int get() = articles.size + listItems.size + pages.size
 }
 
 enum class PlanAction { CREATE, SKIP }
@@ -209,6 +210,7 @@ data class GenericImportPlan(
     val total: Int,
     val articles: List<ArticlePlan>,
     val listItems: List<ListItemPlan>,
+    val pages: List<PagePlan> = emptyList(),
 )
 
 data class PreflightOutcome(
@@ -264,13 +266,14 @@ object CanonicalFileVerifier {
 
 object CanonicalDatasetValidator {
     fun validate(dataset: LoadedDataset) {
-        require(dataset.total > 0) { "Canonical snapshot 至少需要一个 Article 或 ListItem" }
+        require(dataset.total > 0) { "Canonical snapshot 至少需要一个 Article、ListItem 或 Page" }
         val articleIdentities = dataset.articles.map { identity(it.record.source.system, it.record.source.legacyKey) }
         require(articleIdentities.size == articleIdentities.toSet().size) { "Canonical Article dataset 存在重复 stable identity" }
         val listIdentities = dataset.listItems.map { identity(it.sourceSystem, it.record.legacyKey) }
         require(listIdentities.size == listIdentities.toSet().size) { "Canonical ListItem dataset 存在重复 stable identity" }
         dataset.articles.forEach(::validateArticle)
         dataset.listItems.forEach(::validateListItem)
+        GenericPageCanonicalSupport.validate(dataset.pages)
     }
 
     private fun validateArticle(loaded: LoadedArticle) {
@@ -382,6 +385,7 @@ class CanonicalDatasetLoader(
         val dataset = LoadedDataset(
             articles = loadArticles(root).sortedWith(compareBy<LoadedArticle> { it.record.evidence.sourceOrder }.thenBy { identity(it.record.source.system, it.record.source.legacyKey) }),
             listItems = loadListItems(root).sortedWith(compareBy<LoadedListItem> { it.record.sourceOrder }.thenBy { identity(it.sourceSystem, it.record.legacyKey) }),
+            pages = GenericPageCanonicalSupport.load(root, objectMapper),
         )
         CanonicalDatasetValidator.validate(dataset)
         return dataset
@@ -460,6 +464,7 @@ class CanonicalMigrationPreflight(
     private val articleMapping: ArticleLegacyMappingMapper,
     private val listItemMapping: CmsListItemLegacyMappingMapper,
     private val staticResourceService: StaticResourceService,
+    private val pagePreflight: GenericPagePreflight,
 ) {
     fun preflight(dataset: LoadedDataset): PreflightOutcome {
         val failures = mutableListOf<GenericMigrationResult>()
@@ -521,11 +526,13 @@ class CanonicalMigrationPreflight(
                 }
             }
         }
+        val pageOutcome = pagePreflight.preflight(dataset.pages)
+        failures += pageOutcome.failures
 
         if (failures.isNotEmpty()) {
             return PreflightOutcome(null, report(GenericMigrationPhase.PREFLIGHT, dataset.total, failures))
         }
-        return PreflightOutcome(GenericImportPlan(dataset.total, articlePlans, listPlans), null)
+        return PreflightOutcome(GenericImportPlan(dataset.total, articlePlans, listPlans, pageOutcome.plans), null)
     }
 }
 
@@ -702,6 +709,7 @@ class GenericContentMigrationService(
     private val preflight: CanonicalMigrationPreflight,
     private val articleImporter: GenericArticleImporter,
     private val listItemImporter: GenericListItemImporter,
+    private val pageImporter: GenericPageImporter,
 ) {
     fun importSnapshot(snapshotRoot: Path): GenericContentMigrationReport {
         val dataset = runCatching { loader.load(snapshotRoot) }.getOrElse { error ->
@@ -727,6 +735,7 @@ class GenericContentMigrationService(
         val plan = requireNotNull(outcome.plan)
         val results = mutableListOf<GenericMigrationResult>()
         try {
+            plan.pages.forEach { results += pageImporter.execute(it) }
             plan.articles.forEach { results += articleImporter.execute(it) }
             plan.listItems.forEach { results += listItemImporter.execute(it) }
         } catch (error: RuntimeException) {

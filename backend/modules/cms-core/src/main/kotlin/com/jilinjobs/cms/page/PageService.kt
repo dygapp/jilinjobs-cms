@@ -25,6 +25,24 @@ class PageService(private val mapper: PageMapper) : PageLookup {
         if(current.preset&&d.alias!=current.alias)throw PageValidationException("预置单页的 Alias 属于稳定站点身份，不能修改")
         val r=d.record(id); mapper.updatePage(r); return mapper.findPageById(id)!!.model()
     }
+    @Transactional fun updateContent(id:Long,draft:PageContentDraft):CmsPage {
+        val current=mapper.findPageById(id)?:throw PageNotFoundException("单页不存在：$id")
+        val normalized=normalize(
+            PageDraft(
+                groupId=current.groupId,
+                alias=current.alias,
+                name=current.name,
+                bodyHtml=draft.bodyHtml,
+                renderMode=draft.renderMode,
+                embedUrl=draft.embedUrl,
+                sortOrder=current.sortOrder,
+                enabled=current.enabled,
+            ),
+            id,
+        )
+        mapper.updatePageContent(id, normalized.bodyHtml, normalized.renderMode.name, normalized.embedUrl)
+        return mapper.findPageById(id)!!.model()
+    }
     @Transactional fun deletePage(id:Long) { val current=mapper.findPageById(id)?:throw PageNotFoundException("单页不存在：$id"); if(current.preset)throw PageValidationException("预置单页属于网站规划基线，不能删除"); mapper.deletePage(id) }
 
     @Transactional(readOnly=true)
