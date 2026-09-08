@@ -112,8 +112,14 @@ private fun verifyGenericMigrationHistory(dbUrl: String, username: String, passw
                 val migrations = buildList {
                     while (result.next()) add(result.getString("version") to result.getString("description"))
                 }
-                require(migrations == listOf("1" to "current cms schema", "2" to "site provisioning schema capabilities")) {
-                    "Backend Flyway history 必须只包含 Generic CMS schema migration：$migrations"
+                require(
+                    migrations == listOf(
+                        "1" to "current cms schema",
+                        "2" to "site provisioning schema capabilities",
+                        "3" to "page content migration mapping",
+                    ),
+                ) {
+                    "Backend Flyway history 必须只包含 accepted Generic CMS schema migrations：$migrations"
                 }
             }
         }
