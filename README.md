@@ -33,13 +33,23 @@ Fresh Context 按以下入口恢复，避免把历史执行记录当作当前 Au
 
 - Phase 0 已完成；
 - Phase 1 Repository Documentation Authority Convergence 已完成；
-- Phase 2A **EU-46 — Backend Application / Core Boundary Foundation** 已完成 implementation 与 required exact-head verification，并在本次 integration 后作为 completed work 归档；
-- Current Ready Execution Unit：**NONE**；
-- 下一 Gate 仅为 **Phase 2B — Generic Content Migration Application Planning Candidate**；必须重新完成 dependency closure、Requirement / Specification / 必要 Technical Planning、`slice-work` 与 `readiness-check`，不得从 EU-46 继承 Execute Authority；
+- Phase 2A **EU-46 — Backend Application / Core Boundary Foundation** 已完成并归档；
+- Phase 2B 已完成 dependency closure、Requirement / Specification / Technical Planning、`slice-work` 与 `readiness-check`；
+- Current Ready Execution Unit：**EU-47 — Generic Content Migration Application Foundation**；
+- Readiness：**PASS**；Execute：**NOT STARTED**；
+- 下一 Gate 仅为：本 planning/readiness change 集成后，以新的 Fresh Context 从 integrated `main` 重新核验 Issue #92 / #77、EU-47 Authority、Open PR / Actions 与 base drift；只有仍无 drift / blocker 时才进入 EU-47 Execute；
+- EU-47 不继承 EU-46 或更早 Unit 的 Execute Authority，也不向 Phase 2C / Phase 3 / Issue #60 / E1～E3 传递 Execute Authority；
 - Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层边界；
-- Phase 2C Party de-specialization、Phase 3 与 Issue #60 / E1～E3 均继续 downstream；Phase 3 compatibility re-entry PASS 前不得进入 E1～E3 Execute。
+- Phase 2C Party de-specialization、Phase 3 与 Issue #60 / E1～E3 均继续 downstream / blocked。
 
-Phase 2A accepted Authority 继续由以下 Current documents 说明长期 application/core contract；EU-46 执行记录已进入 archive：
+Phase 2B Current Authority：
+
+- Requirement：`docs/requirements/generic-content-migration-application.md`；
+- Specification：`docs/specifications/generic-content-migration-application.md`；
+- Technical Plan：`docs/technical/generic-content-migration-application.md`；
+- Ready Work Artifact：`docs/work/current/eu47-generic-content-migration-application-foundation.md`。
+
+Phase 2A accepted Authority 继续说明长期 application/core contract：
 
 - `docs/requirements/backend-application-core-boundary.md`；
 - `docs/specifications/backend-application-core-boundary.md`；
