@@ -81,7 +81,7 @@ docs/project/development-method.md
 - 使用渐进式披露（Progressive Disclosure），只加载当前阶段真正需要的 Skills；
 - 阶段是工作状态，不为了表示阶段而机械创建 Artifact；
 - 规格说明（Specification）聚焦 WHAT / WHY；
-- 只有存在跨执行单元（Execution Units）的长期 HOW 协调具有持续价值时，才持久化技术计划（Technical Plan）；
+- 只有存在跨执行单元（Execution Units）的长期 HOW 协调价值时，才持久化技术计划（Technical Plan）；
 - Planning / Requirement Candidate 在 `slice-work` 前保持规划身份；`slice-work` 只在上游 Ready 后形成 Candidate Execution Unit，可分配稳定 Identifier；Identifier 不等于 Readiness 或 Execute 授权，只有 `readiness-check` PASS 后才成为 Ready Execution Unit；
 - 优先形成纵向、可独立验证、范围明确且 context-fit 的 Execution Unit；
 - 在条件允许时使用 Fresh Context；
