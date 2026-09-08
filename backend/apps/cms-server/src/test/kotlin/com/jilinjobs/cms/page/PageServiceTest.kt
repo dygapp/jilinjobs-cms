@@ -58,5 +58,11 @@ private class FakePageMapper : PageMapper {
     override fun findByGroup(groupId: Long): List<PageRecord> = pages.filter { it.groupId == groupId }.sortedWith(compareBy<PageRecord> { it.sortOrder }.thenBy { it.id })
     override fun insertPage(record: PageRecord): Int { record.id = nextPageId++; pages += record.copy(); return 1 }
     override fun updatePage(record: PageRecord): Int { val index = pages.indexOfFirst { it.id == record.id }; if (index < 0) return 0; pages[index] = record.copy(preset = pages[index].preset); return 1 }
+    override fun updatePageContent(id: Long, bodyHtml: String, renderMode: String, embedUrl: String?): Int {
+        val index = pages.indexOfFirst { it.id == id }
+        if (index < 0) return 0
+        pages[index] = pages[index].copy(bodyHtml = bodyHtml, renderMode = renderMode, embedUrl = embedUrl)
+        return 1
+    }
     override fun deletePage(id: Long): Int { val index = pages.indexOfFirst { it.id == id }; if (index < 0) return 0; pages.removeAt(index); return 1 }
 }
