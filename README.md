@@ -35,19 +35,19 @@ Fresh Context 按以下入口恢复，避免把历史执行记录当作当前 Au
 - Phase 1 Repository Documentation Authority Convergence 已完成；
 - Phase 2A **EU-46 — Backend Application / Core Boundary Foundation** 已完成并归档；
 - Phase 2B **EU-47 — Generic Content Migration Application Foundation** 已完成并归档；
-- Phase 2C 已完成 dependency closure、Requirement / Specification / Technical Planning、`slice-work` 与 `readiness-check`，形成 **EU-48 — Party Migration De-specialization & Compatibility**；
-- Current Ready Execution Unit：**EU-48 — Party Migration De-specialization & Compatibility**；
-- Readiness：**PASS**；Execute：**NOT STARTED**；
-- EU-48 不继承 EU-47 或更早 Unit 的 Execute Authority；只有本 planning/readiness change 集成到 `main` 后，在新的 Fresh Context重新核验 integrated `main`、Issue #92 / #77、EU-48 Authority、Open PR / Actions 与 base drift，且没有 Authority change / blocker时，才允许建立 EU-48自身 Execute baseline并进入 Execute；
-- Phase 3 与 Issue #60 / E1～E3 继续 downstream / blocked，不继承 EU-48 Execute Authority；
+- Phase 2C **EU-48 — Party Migration De-specialization & Compatibility** 已完成 implementation / verification，并在本 integration boundary 归档；
+- Current Ready Execution Unit：**NONE**；
+- EU-48 Execute Authority：**TERMINATED on completion**；
+- 下一 Gate 仅为：**Phase 3 — Canonical Migration Compatibility & E1～E3 Re-entry planning / compatibility gate**；必须从当前 Repository Authority 与 Current Evidence 独立恢复和判断，不继承 EU-48 或更早 Unit 的 Execute Authority；
+- Issue #60 / E1～E3 继续 **blocked / downstream**；Phase 3 re-entry PASS 前不得进入 Execute；
 - Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层边界。
 
-Phase 2C Current Authority：
+Phase 2C accepted Authority：
 
 - Requirement：`docs/requirements/party-migration-despecialization-compatibility.md`；
 - Specification：`docs/specifications/party-migration-despecialization-compatibility.md`；
 - Technical Plan：`docs/technical/party-migration-despecialization-compatibility.md`；
-- Ready Work Artifact：`docs/work/current/eu48-party-migration-despecialization-compatibility.md`。
+- Completed Work Artifact：`docs/work/archive/eu48-party-migration-despecialization-compatibility.md`。
 
 Phase 2B accepted Authority继续作为 Generic Migration长期 contract：
 
