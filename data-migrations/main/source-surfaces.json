@@ -3,6 +3,7 @@
   "sourceSystem": "legacy-jilinjobs",
   "sourceRoot": "https://24365.jl.smartedu.cn/",
   "allowedHosts": ["24365.jl.smartedu.cn", "cms.jilinjobs.cn"],
+  "allowedResourceHosts": ["24365.jl.smartedu.cn", "cms.jilinjobs.cn", "t1.chei.com.cn"],
   "redirectProbes": [
     "https://cms.jilinjobs.cn/",
     "https://24365.jl.smartedu.cn/"
