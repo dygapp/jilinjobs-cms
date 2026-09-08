@@ -53,8 +53,10 @@ Phase 1 使用四类语义角色：
 Issue #60 当前 dependency closure：
 
 - **E1 Main External-link Ownership & Behavior Boundary**：Planning / Authority closure；Requirement / Specification READY；无 implementation Unit；
-- **E2 Main Single-page Formal Content**：已形成 **EU-49 — Page Operational Content Ownership & Migration Foundation**，Readiness = PASS；
-- **E3 Main Historical Content Collection & Canonical Migration**：downstream Requirement / Specification READY，依赖 EU-49 completion，当前没有 EU Identifier / Execute Authority。
+- **E2 Main Single-page Formal Content**：**EU-49 已 COMPLETED**；Page operational-content ownership 与 site-neutral Generic Page migration foundation 已集成；
+- **E3 Main Historical Content Collection & Canonical Migration**：Requirement / Specification READY as Planning Authority；EU-49 prerequisite 已满足，但当前仍没有 EU Identifier、Ready 状态或 Execute Authority。
+
+Current Ready Execution Unit：**NONE**。
 
 Current planning authority：
 
@@ -65,18 +67,18 @@ E1：
 - `docs/requirements/main-external-link-boundary.md`
 - `docs/specifications/main-external-link-boundary.md`
 
-E2 / EU-49：
+E2 accepted current contract：
 
 - `docs/requirements/main-single-page-formal-content.md`
 - `docs/specifications/main-single-page-formal-content.md`
 - `docs/technical/main-single-page-formal-content.md`
-- `docs/work/current/eu49-page-content-migration-foundation.md`
+- completed Work Evidence：`docs/work/archive/eu49-page-content-migration-foundation.md`
 
-E3 downstream：
+E3 current Planning Authority：
 
 - `docs/requirements/main-historical-content-migration.md`
 - `docs/specifications/main-historical-content-migration.md`
 
-Fresh Context 若继续 EU-49，必须重新核验 integrated `main`、Issue #60 / #77、上述 EU-49 Authority、Open PR / Actions、Readiness 与 base drift；Readiness PASS 本身不等于已经建立 Execute baseline。不得提前进入 E3 source collection / canonical promotion。
+Fresh Context 若继续 Issue #60，必须重新核验 integrated `main`、Issue #60 / #77、E3 Requirement / Specification、Open PR / Actions 与真实 source-evidence availability。下一自然 Gate 是 **E3 Planning / source-evidence recovery**；随后按 Consumer-local Method完成必要 dependency closure、`slice-work` 与 `readiness-check`。在形成新的 Ready Execution Unit 之前，不得开始 Main source collection / canonical promotion / Execute，也不得把 EU-49 或任何更早 Unit 的 Execute Authority传递给 E3。
 
 `data-migrations/**` 是 Historical Content Migration 的 current data/provenance workspace，不属于 documentation archive；“历史内容”不等于 `HISTORICAL_EVIDENCE`。
