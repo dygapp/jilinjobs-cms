@@ -157,22 +157,22 @@ data class GenericContentMigrationReport(
     val results: List<GenericMigrationResult>,
 )
 
-private data class LoadedResource(
+data class LoadedResource(
     val canonical: CanonicalMigrationResource,
     val file: Path,
 )
 
-private data class LoadedArticle(
+data class LoadedArticle(
     val record: CanonicalArticleRecord,
     val resources: List<LoadedResource>,
 )
 
-private data class LoadedListImage(
+data class LoadedListImage(
     val canonical: CanonicalListImage,
     val file: Path,
 )
 
-private data class LoadedListItem(
+data class LoadedListItem(
     val listCode: String,
     val sourceSystem: String,
     val sourcePage: String?,
@@ -180,36 +180,36 @@ private data class LoadedListItem(
     val image: LoadedListImage?,
 )
 
-private data class LoadedDataset(
+data class LoadedDataset(
     val articles: List<LoadedArticle>,
     val listItems: List<LoadedListItem>,
 ) {
     val total: Int get() = articles.size + listItems.size
 }
 
-private enum class PlanAction { CREATE, SKIP }
+enum class PlanAction { CREATE, SKIP }
 
-private data class ArticlePlan(
+data class ArticlePlan(
     val loaded: LoadedArticle,
     val columnId: Long,
     val action: PlanAction,
     val existingArticleId: Long? = null,
 )
 
-private data class ListItemPlan(
+data class ListItemPlan(
     val loaded: LoadedListItem,
     val listId: Long,
     val action: PlanAction,
     val existingListItemId: Long? = null,
 )
 
-private data class GenericImportPlan(
+data class GenericImportPlan(
     val total: Int,
     val articles: List<ArticlePlan>,
     val listItems: List<ListItemPlan>,
 )
 
-private data class PreflightOutcome(
+data class PreflightOutcome(
     val plan: GenericImportPlan?,
     val report: GenericContentMigrationReport?,
 )
