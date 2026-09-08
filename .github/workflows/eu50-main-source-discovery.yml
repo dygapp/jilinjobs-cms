@@ -32,6 +32,7 @@ jobs:
           node --check tools/main-source-probe.mjs
           node --check tools/main-source-inventory.mjs
           node --check tools/main-source-collector.mjs
+          node --check tools/main-candidate-audit.mjs
           node --check tools/main-source-triage.mjs
           node - <<'NODE'
           const fs = require('fs')
