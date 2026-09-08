@@ -462,9 +462,9 @@ class SitePackageProvisioner(private val loader: SitePackageLoader, private val 
             return Result.CREATED
         }
         existing.owned("Page", identity)
-        if (existing.groupId == groupId && existing.name == target.name && existing.bodyHtml == target.bodyHtml && existing.renderMode == target.renderMode && existing.embedUrl == target.embedUrl && existing.sortOrder == target.sortOrder && existing.enabled == target.enabled) return Result.UNCHANGED
-        connection.prepareStatement("UPDATE cms_page SET group_id=?,name=?,body_html=?,render_mode=?,embed_url=?,sort_order=?,enabled=?,preset=1 WHERE id=?").use {
-            it.setObject(1, groupId); it.setString(2, target.name); it.setString(3, target.bodyHtml); it.setString(4, target.renderMode); it.setString(5, target.embedUrl); it.setInt(6, target.sortOrder); it.setBoolean(7, target.enabled); it.setLong(8, existing.id); it.executeUpdate()
+        if (existing.groupId == groupId && existing.name == target.name && existing.sortOrder == target.sortOrder && existing.enabled == target.enabled) return Result.UNCHANGED
+        connection.prepareStatement("UPDATE cms_page SET group_id=?,name=?,sort_order=?,enabled=?,preset=1 WHERE id=?").use {
+            it.setObject(1, groupId); it.setString(2, target.name); it.setInt(3, target.sortOrder); it.setBoolean(4, target.enabled); it.setLong(5, existing.id); it.executeUpdate()
         }
         return Result.UPDATED
     }
