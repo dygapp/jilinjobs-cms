@@ -22,6 +22,7 @@ const auditCodes = new Set([
   'UNMIGRATED_EMBEDDED_MEDIA_REQUIRES_REVIEW',
   'CSS_RESOURCE_REFERENCE_REQUIRES_REVIEW',
   'SRCSET_RESOURCE_REFERENCE_REQUIRES_REVIEW',
+  'MALFORMED_BODY_HTML_REQUIRES_REVIEW',
 ])
 
 const existing = new Set(
@@ -43,6 +44,23 @@ function isRelativeReference(value) {
 
 function isLegacyDynamicAttachment(parsed) {
   return /\/common\/downloadfile\.aspx$/i.test(parsed.pathname) && parsed.searchParams.has('fileid')
+}
+
+function malformedHtmlEvidence($) {
+  const findings = []
+  const validTagName = /^[a-z][a-z0-9:-]*$/i
+  const validAttributeName = /^[a-z_:][a-z0-9_:.-]*$/i
+
+  for (const element of $('*').toArray()) {
+    const tagName = String(element.tagName || element.name || '').toLowerCase()
+    const invalidAttributes = Object.keys(element.attribs || {}).filter(name => !validAttributeName.test(name))
+    if (validTagName.test(tagName) && invalidAttributes.length === 0) continue
+    findings.push({
+      tagName: tagName || null,
+      invalidAttributes,
+    })
+  }
+  return findings
 }
 
 for (const item of inventory) {
@@ -72,6 +90,18 @@ for (const reference of articleRefs) {
   const sourceUrl = article.source.url
   const bodyHtml = String(article?.content?.bodyHtml || '')
   const $ = cheerio.load(bodyHtml, null, false)
+
+  const malformed = malformedHtmlEvidence($)
+  if (malformed.length > 0) {
+    addAuditIssue('MALFORMED_BODY_HTML_REQUIRES_REVIEW', {
+      legacyKey,
+      evidenceKey: legacyKey,
+      sourceUrl,
+      malformedNodeCount: malformed.length,
+      examples: malformed.slice(0, 20),
+      message: 'parsed Legacy Source body contains malformed tag or attribute names and requires an explicit content decision',
+    })
+  }
 
   for (const anchor of $('a[href]').toArray()) {
     const rawReference = String($(anchor).attr('href') || '').trim()
