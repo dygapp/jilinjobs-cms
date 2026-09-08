@@ -12,12 +12,13 @@ E3 — Main Historical Content Collection & Canonical Migration 已在 `main@e6f
 - EU-50 `readiness-check`：**PASS**；
 - EU-51 `readiness-check`：**PENDING / blocked by EU-50 accepted snapshot**。
 
-当前 Unit：
+当前 active Unit：
 
-- `eu50-main-source-discovery-promotion.md` — **READY**；
-- `eu51-main-canonical-import-review.md` — **CANDIDATE / NOT READY**。
+- `eu50-main-source-discovery-promotion.md` — **READY**。
 
-EU-50 只负责 bounded Legacy Source discovery、completeness/classification、accepted snapshot promotion 与 offline verification；不承担 Runtime import 或最终 Human Review。EU-51 只有在 EU-50 的 repository-owned accepted Main canonical snapshot 集成后，才能基于实际 accepted counts/digests/exception set重新进行 Fresh Context `readiness-check`。
+EU-51 继续由 E3 Technical Plan / Roadmap 作为 downstream Candidate 跟踪；由于 Readiness 尚未 PASS，不进入 `docs/work/current/`。只有在 EU-50 的 repository-owned accepted Main canonical snapshot 集成后，才能基于实际 accepted counts/digests/exception set重新执行 Fresh Context `readiness-check`。
+
+EU-50 只负责 bounded Legacy Source discovery、completeness/classification、accepted snapshot promotion 与 offline verification；不承担 Runtime import 或最终 Human Review。
 
 **EU-50 当前尚未建立 Execute baseline。** 本 Planning/Readiness 状态必须先完成 PR Integration；随后从 integrated `main` 重新核验 Issue #60 / #77、Open PR / Actions、本 Unit Authority 与 base drift，才能建立 EU-50 独立 Execute baseline并开始 Main source collection / canonical promotion。不得继承 EU-49、EU-48、Phase 3 或 E1 的 Execute Authority。
 
