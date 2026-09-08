@@ -1,0 +1,43 @@
+name: Party Migration De-specialization Verification
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "backend/build.gradle.kts"
+      - "backend/apps/content-migration/**"
+      - "data-migrations/party/v1/manifest.json"
+      - "data-migrations/party/v1/index.ndjson"
+      - "data-migrations/party/v1/lists/**"
+      - "data-migrations/party/v1/compatibility.json"
+      - ".github/workflows/party-migration-despecialization-verification.yml"
+  pull_request:
+    paths:
+      - "backend/build.gradle.kts"
+      - "backend/apps/content-migration/**"
+      - "data-migrations/party/v1/manifest.json"
+      - "data-migrations/party/v1/index.ndjson"
+      - "data-migrations/party/v1/lists/**"
+      - "data-migrations/party/v1/compatibility.json"
+      - ".github/workflows/party-migration-despecialization-verification.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  party-migration-despecialization:
+    name: Party adapter and compatibility authority verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: "9.6.1"
+      - name: Verify Party authority separation and delegation
+        working-directory: backend
+        run: gradle verifyPartyMigrationDespecialization --no-daemon

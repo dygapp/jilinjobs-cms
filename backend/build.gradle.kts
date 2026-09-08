@@ -56,7 +56,7 @@ tasks.register<JavaExec>("importCanonicalContent") {
 
 tasks.register<JavaExec>("importPartyHistoricalContent") {
     group = "migration"
-    description = "Import the canonical Party historical-content dataset, including EU-30 theme education"
+    description = "Import the canonical Party historical-content dataset through the bounded Party adapter and Generic engine"
     dependsOn(":apps:content-migration:classes")
     classpath = migrationSourceSets.getByName("main").runtimeClasspath
     mainClass.set("com.jilinjobs.cms.migration.PartyHistoricalContentMigrationV2Kt")
@@ -65,7 +65,7 @@ tasks.register<JavaExec>("importPartyHistoricalContent") {
 
 tasks.register<JavaExec>("importPartyCarousel") {
     group = "migration"
-    description = "Import the Party carousel canonical dataset with LINK / ARTICLE placement resolution"
+    description = "Import the Party carousel canonical dataset through compatibility guards and the Generic engine"
     dependsOn(":apps:content-migration:classes")
     classpath = migrationSourceSets.getByName("main").runtimeClasspath
     mainClass.set("com.jilinjobs.cms.migration.PartyCarouselMigrationV2Kt")
@@ -138,6 +138,14 @@ tasks.register<JavaExec>("verifyGenericContentMigration") {
     dependsOn(":apps:content-migration:testClasses")
     classpath = migrationSourceSets.getByName("test").runtimeClasspath
     mainClass.set("com.jilinjobs.cms.GenericContentMigrationVerificationKt")
+}
+
+tasks.register<JavaExec>("verifyPartyMigrationDespecialization") {
+    group = "verification"
+    description = "Verify EU-48 Party authority separation, bounded compatibility and Generic steady-state delegation"
+    dependsOn(":apps:content-migration:testClasses")
+    classpath = migrationSourceSets.getByName("test").runtimeClasspath
+    mainClass.set("com.jilinjobs.cms.PartyMigrationDespecializationVerificationKt")
 }
 
 tasks.register("verifyBackendApplicationBoundary") {

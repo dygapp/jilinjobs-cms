@@ -178,6 +178,8 @@ data class LoadedListItem(
     val sourcePage: String?,
     val record: CanonicalListItemRecord,
     val image: LoadedListImage?,
+    val sourceProvenanceUrl: String? = null,
+    val staticTarget: String? = null,
 )
 
 data class LoadedDataset(
@@ -214,6 +216,162 @@ data class PreflightOutcome(
     val report: GenericContentMigrationReport?,
 )
 
+object CanonicalFileVerifier {
+    fun resolveRegularFile(root: Path, raw: String, label: String): Path {
+        require(raw.isNotBlank()) { "$label 不能为空" }
+        val normalizedRoot = root.toAbsolutePath().normalize()
+        val resolved = normalizedRoot.resolve(raw).normalize()
+        require(resolved.startsWith(normalizedRoot) && Files.isRegularFile(resolved)) { "$label 不存在或路径越界：$raw" }
+        return resolved
+    }
+
+    fun verifyFile(root: Path, raw: String, expectedSize: Long, expectedSha256: String, label: String): Path {
+        require(expectedSize >= 0) { "$label size 不能为负数" }
+        require(expectedSha256.matches(SHA256)) { "$label SHA-256 不合法：$raw" }
+        val file = resolveRegularFile(root, raw, label)
+        require(Files.size(file) == expectedSize) { "$label size 不一致：$raw" }
+        require(sha256Path(file) == expectedSha256) { "$label SHA-256 不一致：$raw" }
+        return file
+    }
+
+    fun validateStaticImageBytes(file: Path, raw: String) {
+        val extension = raw.substringAfterLast('.', "").lowercase()
+        val header = Files.newInputStream(file).use { it.readNBytes(16) }
+        val matches = when (extension) {
+            "png" -> header.startsWith(byteArrayOf(0x89.toByte(), 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a))
+            "jpg", "jpeg" -> header.size >= 2 && header[0] == 0xff.toByte() && header[1] == 0xd8.toByte()
+            "gif" -> header.asAscii(6) in setOf("GIF87a", "GIF89a")
+            "webp" -> header.asAscii(4) == "RIFF" && header.drop(8).take(4).toByteArray().toString(StandardCharsets.US_ASCII) == "WEBP"
+            "ico" -> header.startsWith(byteArrayOf(0x00, 0x00, 0x01, 0x00))
+            else -> false
+        }
+        require(matches) { "List image 实际内容与扩展名不一致：$raw" }
+    }
+
+    fun validateStaticTarget(raw: String): String {
+        require(raw.isNotBlank()) { "Static target 不能为空" }
+        require(!raw.startsWith('/') && !raw.startsWith('\\')) { "Static target 必须是相对路径" }
+        val normalized = raw.replace('\\', '/')
+        val segments = normalized.split('/')
+        require(segments.none { it.isBlank() || it == "." || it == ".." }) { "Static target 包含不安全路径段：$raw" }
+        require(!normalized.contains(':')) { "Static target 不允许盘符或 URI scheme：$raw" }
+        return normalized
+    }
+
+    private fun ByteArray.startsWith(prefix: ByteArray): Boolean = size >= prefix.size && prefix.indices.all { this[it] == prefix[it] }
+    private fun ByteArray.asAscii(length: Int): String = take(length).toByteArray().toString(StandardCharsets.US_ASCII)
+}
+
+object CanonicalDatasetValidator {
+    fun validate(dataset: LoadedDataset) {
+        require(dataset.total > 0) { "Canonical snapshot 至少需要一个 Article 或 ListItem" }
+        val articleIdentities = dataset.articles.map { identity(it.record.source.system, it.record.source.legacyKey) }
+        require(articleIdentities.size == articleIdentities.toSet().size) { "Canonical Article dataset 存在重复 stable identity" }
+        val listIdentities = dataset.listItems.map { identity(it.sourceSystem, it.record.legacyKey) }
+        require(listIdentities.size == listIdentities.toSet().size) { "Canonical ListItem dataset 存在重复 stable identity" }
+        dataset.articles.forEach(::validateArticle)
+        dataset.listItems.forEach(::validateListItem)
+    }
+
+    private fun validateArticle(loaded: LoadedArticle) {
+        val record = loaded.record
+        require(record.source.system.isNotBlank() && record.source.system.length <= 100) { "Article source system 不合法" }
+        require(record.source.legacyKey.isNotBlank() && record.source.legacyKey.length <= 255) { "Article legacy identity 不合法" }
+        require(record.source.typeCode.isNotBlank() && record.source.typeCode.length <= 100) { "Article typeCode 不合法" }
+        require(record.source.detailPath.isNotBlank() && record.source.detailPath.length <= 500) { "Article detailPath 不合法" }
+        validateHttpUrl(record.source.url, "Article source URL")
+        require(record.sourceFingerprint.matches(SHA256)) { "Article source fingerprint 不合法：${record.source.legacyKey}" }
+        require(record.target.columnAlias.isNotBlank() && record.target.columnAlias.length <= 100) { "Article target Column alias 不合法" }
+        require(record.content.title.isNotBlank() && record.content.title.length <= 200) { "Article title 不合法" }
+        require(record.content.source.length <= 200) { "Article content source 过长" }
+        require(record.evidence.sourceOrder > 0) { "Article sourceOrder 必须大于 0" }
+        when (record.target.articleType) {
+            ArticleType.INTERNAL -> require(record.content.externalUrl == null) { "INTERNAL Article 不能携带 externalUrl" }
+            ArticleType.EXTERNAL_LINK -> {
+                require(record.content.bodyHtml.isEmpty() && record.resources.isEmpty()) { "EXTERNAL_LINK Article 不应包含正文或资源" }
+                validateHttpUrl(requireNotNull(record.content.externalUrl) { "EXTERNAL_LINK URL 不能为空" }, "EXTERNAL_LINK URL")
+            }
+        }
+        require(loaded.resources.size == record.resources.distinctBy { it.token }.size) {
+            "Loaded Article resources 与 canonical token 集合不一致：${record.source.legacyKey}"
+        }
+        loaded.resources.forEach { loadedResource ->
+            val resource = loadedResource.canonical
+            require(resource.role in setOf("BODY_IMAGE", "ATTACHMENT")) { "未知 Article resource role：${resource.role}" }
+            require(resource.sha256.matches(SHA256)) { "Article resource SHA-256 不合法：${resource.snapshotPath}" }
+            require(resource.sizeBytes >= 0) { "Article resource size 不能为负数" }
+            require(resource.snapshotPath.isNotBlank()) { "Article resource snapshotPath 不能为空" }
+            require(resource.originalReference.isNotBlank()) { "Article resource originalReference 不能为空" }
+            validateHttpUrl(resource.sourceUrl, "Article resource source URL")
+            val expectedToken = when (resource.role) {
+                "BODY_IMAGE" -> "migration-resource://${resource.sha256}"
+                "ATTACHMENT" -> "migration-attachment://${resource.sha256}"
+                else -> error("unreachable")
+            }
+            require(resource.token == expectedToken) { "Article resource token 与 role/SHA-256 不一致" }
+            require(Files.isRegularFile(loadedResource.file)) { "Loaded Article resource 不存在：${resource.snapshotPath}" }
+            require(Files.size(loadedResource.file) == resource.sizeBytes) { "Loaded Article resource size 不一致：${resource.snapshotPath}" }
+            require(sha256Path(loadedResource.file) == resource.sha256) { "Loaded Article resource SHA-256 不一致：${resource.snapshotPath}" }
+        }
+        if (record.target.articleType == ArticleType.INTERNAL) {
+            val tokens = record.resources.map { it.token }.toSet()
+            MIGRATION_TOKEN.findAll(record.content.bodyHtml).forEach { match ->
+                require(match.value in tokens) { "Article body 存在未声明 migration token：${match.value}" }
+            }
+            val paths = record.resources.map { it.snapshotPath.replace('\\', '/') }.toSet()
+            CANONICAL_ASSET_REFERENCE.findAll(record.content.bodyHtml).forEach { match ->
+                require(match.groupValues[1] in paths) { "Article body 存在未声明 canonical asset reference：${match.groupValues[1]}" }
+            }
+        }
+    }
+
+    private fun validateListItem(loaded: LoadedListItem) {
+        require(loaded.listCode.matches(Regex("[A-Z][A-Z0-9_]{1,99}"))) { "List code 不合法：${loaded.listCode}" }
+        require(loaded.sourceSystem.isNotBlank() && loaded.sourceSystem.length <= 100) { "List source system 不合法" }
+        loaded.sourcePage?.takeIf(String::isNotBlank)?.let { validateHttpUrl(it, "List source page") }
+        loaded.sourceProvenanceUrl?.let { validateHttpUrl(it, "List source provenance URL") }
+        val record = loaded.record
+        require(record.legacyKey.isNotBlank() && record.legacyKey.length <= 255) { "List item legacy identity 不合法" }
+        require(record.sourceOrder > 0) { "List item sourceOrder 必须大于 0" }
+        require(record.title.isNotBlank() && record.title.length <= 200) { "List item title 不合法" }
+        require(record.openMode.uppercase() in OPEN_MODES) { "List item openMode 不合法：${record.openMode}" }
+        require(record.sourceFingerprint.matches(SHA256)) { "List item fingerprint 不合法：${record.legacyKey}" }
+        when (record.sourceType) {
+            CmsListItemSourceType.LINK -> {
+                require(record.articleReference == null) { "LINK ListItem 不能携带 articleReference" }
+                validateHttpUrl(requireNotNull(record.url) { "LINK ListItem URL 不能为空" }, "LINK ListItem URL")
+            }
+            CmsListItemSourceType.ARTICLE -> {
+                require(record.url == null) { "ARTICLE ListItem 不应携带 LINK URL" }
+                val reference = requireNotNull(record.articleReference) { "ARTICLE ListItem 必须携带 stable articleReference" }
+                require(reference.sourceSystem.isNotBlank() && reference.sourceSystem.length <= 100) { "ARTICLE reference sourceSystem 不合法" }
+                require(reference.legacyKey.isNotBlank() && reference.legacyKey.length <= 255) { "ARTICLE reference legacyKey 不合法" }
+            }
+        }
+        val image = loaded.image
+        require((image == null) == (record.image == null)) { "Loaded List image 与 canonical image 不一致：${record.legacyKey}" }
+        if (image != null) {
+            val canonical = image.canonical
+            require(canonical.sha256.matches(SHA256)) { "List image SHA-256 不合法：${canonical.snapshotPath}" }
+            require(canonical.sizeBytes > 0) { "List image 不能为空" }
+            require(canonical.contentType?.startsWith("image/") == true) { "List image contentType 必须为 image/*" }
+            validateHttpUrl(canonical.sourceUrl, "List image source URL")
+            val extension = canonical.snapshotPath.substringAfterLast('.', "").lowercase()
+            require(extension in STATIC_IMAGE_EXTENSIONS) { "List image 扩展名不支持：$extension" }
+            require(Files.isRegularFile(image.file)) { "Loaded List image 不存在：${canonical.snapshotPath}" }
+            require(Files.size(image.file) == canonical.sizeBytes) { "Loaded List image size 不一致：${canonical.snapshotPath}" }
+            require(sha256Path(image.file) == canonical.sha256) { "Loaded List image SHA-256 不一致：${canonical.snapshotPath}" }
+            CanonicalFileVerifier.validateStaticImageBytes(image.file, canonical.snapshotPath)
+        }
+        loaded.staticTarget?.let {
+            require(record.sourceType == CmsListItemSourceType.LINK && image != null) {
+                "Prepared static target 只允许用于带图片的 LINK ListItem"
+            }
+            CanonicalFileVerifier.validateStaticTarget(it)
+        }
+    }
+}
+
 @Service
 class CanonicalDatasetLoader(
     private val objectMapper: ObjectMapper,
@@ -221,17 +379,12 @@ class CanonicalDatasetLoader(
     fun load(snapshotRoot: Path): LoadedDataset {
         val root = snapshotRoot.toAbsolutePath().normalize()
         require(Files.isDirectory(root)) { "Canonical snapshot root 不存在：$root" }
-
-        val articles = loadArticles(root)
-        val listItems = loadListItems(root)
-        require(articles.isNotEmpty() || listItems.isNotEmpty()) { "Canonical snapshot 至少需要一个 Article 或 ListItem" }
-
-        requireUniqueArticleIdentities(articles)
-        requireUniqueListIdentities(listItems)
-        return LoadedDataset(
-            articles = articles.sortedWith(compareBy<LoadedArticle> { it.record.evidence.sourceOrder }.thenBy { identity(it.record.source.system, it.record.source.legacyKey) }),
-            listItems = listItems.sortedWith(compareBy<LoadedListItem> { it.record.sourceOrder }.thenBy { identity(it.sourceSystem, it.record.legacyKey) }),
+        val dataset = LoadedDataset(
+            articles = loadArticles(root).sortedWith(compareBy<LoadedArticle> { it.record.evidence.sourceOrder }.thenBy { identity(it.record.source.system, it.record.source.legacyKey) }),
+            listItems = loadListItems(root).sortedWith(compareBy<LoadedListItem> { it.record.sourceOrder }.thenBy { identity(it.sourceSystem, it.record.legacyKey) }),
         )
+        CanonicalDatasetValidator.validate(dataset)
+        return dataset
     }
 
     private fun loadArticles(root: Path): List<LoadedArticle> {
@@ -242,19 +395,18 @@ class CanonicalDatasetLoader(
             lines.filter(String::isNotBlank).forEachIndexed { index, line ->
                 val entry = runCatching { objectMapper.readValue(line, CanonicalArticleIndexEntry::class.java) }
                     .getOrElse { throw IllegalArgumentException("Article index 第 ${index + 1} 行无法解析：${it.message}") }
-                val articleFile = resolveRegularFile(root, entry.path, "Article index path")
+                val articleFile = CanonicalFileVerifier.resolveRegularFile(root, entry.path, "Article index path")
                 val record = Files.newBufferedReader(articleFile).use { reader ->
                     runCatching { objectMapper.readValue(reader, CanonicalArticleRecord::class.java) }
                         .getOrElse { throw IllegalArgumentException("Canonical Article 无法解析：${entry.path}: ${it.message}") }
                 }
                 require(record.source.legacyKey == entry.legacyKey) { "Article index legacyKey 与 article.json 不一致：${entry.legacyKey}" }
-                validateArticleShape(record)
-                val articleRoot = articleFile.parent
-                val resources = record.resources.map { resource ->
-                    validateResourceShape(resource)
-                    LoadedResource(resource, verifyFile(articleRoot, resource.snapshotPath, resource.sizeBytes, resource.sha256, "Article resource"))
+                val resources = record.resources.distinctBy { it.token }.map { resource ->
+                    LoadedResource(
+                        resource,
+                        CanonicalFileVerifier.verifyFile(articleFile.parent, resource.snapshotPath, resource.sizeBytes, resource.sha256, "Article resource"),
+                    )
                 }
-                validateArticleReferences(record)
                 loaded += LoadedArticle(record, resources)
             }
         }
@@ -274,12 +426,13 @@ class CanonicalDatasetLoader(
                         runCatching { objectMapper.readValue(reader, CanonicalListIndex::class.java) }
                             .getOrElse { throw IllegalArgumentException("List index 无法解析：${root.relativize(indexFile)}: ${it.message}") }
                     }
-                    validateListIndex(index)
                     require(listRoot.fileName.toString().equals(index.listCode, ignoreCase = true)) {
                         "List directory 与 listCode 不一致：${listRoot.fileName} / ${index.listCode}"
                     }
+                    val keys = index.items.map { it.legacyKey }
+                    require(keys.size == keys.toSet().size) { "List index 存在重复 legacy identity：${index.listCode}" }
                     index.items.sortedWith(compareBy<CanonicalListItemReference> { it.sourceOrder }.thenBy { it.legacyKey }).stream().map { reference ->
-                        val itemFile = resolveRegularFile(listRoot, reference.path, "List item path")
+                        val itemFile = CanonicalFileVerifier.resolveRegularFile(listRoot, reference.path, "List item path")
                         val record = Files.newBufferedReader(itemFile).use { reader ->
                             runCatching { objectMapper.readValue(reader, CanonicalListItemRecord::class.java) }
                                 .getOrElse { throw IllegalArgumentException("Canonical ListItem 无法解析：${root.relativize(itemFile)}: ${it.message}") }
@@ -287,11 +440,9 @@ class CanonicalDatasetLoader(
                         require(record.legacyKey == reference.legacyKey) { "List index legacyKey 与 item.json 不一致：${reference.legacyKey}" }
                         require(record.sourceOrder == reference.sourceOrder) { "List index sourceOrder 与 item.json 不一致：${reference.legacyKey}" }
                         require(record.sourceFingerprint == reference.sourceFingerprint) { "List index fingerprint 与 item.json 不一致：${reference.legacyKey}" }
-                        validateListItemShape(index.sourceSystem, record)
                         val image = record.image?.let { canonical ->
-                            validateListImageShape(canonical)
-                            val file = verifyFile(itemFile.parent, canonical.snapshotPath, canonical.sizeBytes, canonical.sha256, "List image")
-                            validateStaticImageBytes(file, canonical.snapshotPath)
+                            val file = CanonicalFileVerifier.verifyFile(itemFile.parent, canonical.snapshotPath, canonical.sizeBytes, canonical.sha256, "List image")
+                            CanonicalFileVerifier.validateStaticImageBytes(file, canonical.snapshotPath)
                             LoadedListImage(canonical, file)
                         }
                         LoadedListItem(index.listCode, index.sourceSystem, index.sourcePage, record, image)
@@ -300,136 +451,6 @@ class CanonicalDatasetLoader(
                 .toList()
         }
     }
-
-    private fun validateArticleShape(record: CanonicalArticleRecord) {
-        require(record.source.system.isNotBlank() && record.source.system.length <= 100) { "Article source system 不合法" }
-        require(record.source.legacyKey.isNotBlank() && record.source.legacyKey.length <= 255) { "Article legacy identity 不合法" }
-        require(record.source.typeCode.isNotBlank() && record.source.typeCode.length <= 100) { "Article typeCode 不合法" }
-        require(record.source.detailPath.isNotBlank() && record.source.detailPath.length <= 500) { "Article detailPath 不合法" }
-        validateHttpUrl(record.source.url, "Article source URL")
-        require(record.sourceFingerprint.matches(SHA256)) { "Article source fingerprint 不合法：${record.source.legacyKey}" }
-        require(record.target.columnAlias.isNotBlank() && record.target.columnAlias.length <= 100) { "Article target Column alias 不合法" }
-        require(record.content.title.isNotBlank() && record.content.title.length <= 200) { "Article title 不合法" }
-        require(record.content.source.length <= 200) { "Article content source 过长" }
-        require(record.evidence.sourceOrder > 0) { "Article sourceOrder 必须大于 0" }
-        when (record.target.articleType) {
-            ArticleType.INTERNAL -> require(record.content.externalUrl == null) { "INTERNAL Article 不能携带 externalUrl" }
-            ArticleType.EXTERNAL_LINK -> {
-                require(record.content.bodyHtml.isEmpty() && record.resources.isEmpty()) { "EXTERNAL_LINK Article 不应包含正文或资源" }
-                validateHttpUrl(requireNotNull(record.content.externalUrl) { "EXTERNAL_LINK URL 不能为空" }, "EXTERNAL_LINK URL")
-            }
-        }
-    }
-
-    private fun validateResourceShape(resource: CanonicalMigrationResource) {
-        require(resource.role in setOf("BODY_IMAGE", "ATTACHMENT")) { "未知 Article resource role：${resource.role}" }
-        require(resource.sha256.matches(SHA256)) { "Article resource SHA-256 不合法：${resource.snapshotPath}" }
-        require(resource.sizeBytes >= 0) { "Article resource size 不能为负数" }
-        require(resource.snapshotPath.isNotBlank()) { "Article resource snapshotPath 不能为空" }
-        require(resource.originalReference.isNotBlank()) { "Article resource originalReference 不能为空" }
-        validateHttpUrl(resource.sourceUrl, "Article resource source URL")
-        val expectedToken = when (resource.role) {
-            "BODY_IMAGE" -> "migration-resource://${resource.sha256}"
-            "ATTACHMENT" -> "migration-attachment://${resource.sha256}"
-            else -> error("unreachable")
-        }
-        require(resource.token == expectedToken) { "Article resource token 与 role/SHA-256 不一致" }
-    }
-
-    private fun validateArticleReferences(record: CanonicalArticleRecord) {
-        if (record.target.articleType != ArticleType.INTERNAL) return
-        val tokens = record.resources.map { it.token }.toSet()
-        MIGRATION_TOKEN.findAll(record.content.bodyHtml).forEach { match ->
-            require(match.value in tokens) { "Article body 存在未声明 migration token：${match.value}" }
-        }
-        val paths = record.resources.map { it.snapshotPath.replace('\\', '/') }.toSet()
-        CANONICAL_ASSET_REFERENCE.findAll(record.content.bodyHtml).forEach { match ->
-            require(match.groupValues[1] in paths) { "Article body 存在未声明 canonical asset reference：${match.groupValues[1]}" }
-        }
-    }
-
-    private fun validateListIndex(index: CanonicalListIndex) {
-        require(index.listCode.matches(Regex("[A-Z][A-Z0-9_]{1,99}"))) { "List code 不合法：${index.listCode}" }
-        require(index.sourceSystem.isNotBlank() && index.sourceSystem.length <= 100) { "List source system 不合法" }
-        val keys = index.items.map { it.legacyKey }
-        require(keys.size == keys.toSet().size) { "List index 存在重复 legacy identity：${index.listCode}" }
-        index.items.forEach { reference ->
-            require(reference.legacyKey.isNotBlank() && reference.legacyKey.length <= 255) { "List item legacy identity 不合法" }
-            require(reference.sourceOrder > 0) { "List item sourceOrder 必须大于 0" }
-            require(reference.sourceFingerprint.matches(SHA256)) { "List item fingerprint 不合法：${reference.legacyKey}" }
-        }
-    }
-
-    private fun validateListItemShape(sourceSystem: String, record: CanonicalListItemRecord) {
-        require(sourceSystem.isNotBlank() && sourceSystem.length <= 100) { "List source system 不合法" }
-        require(record.legacyKey.isNotBlank() && record.legacyKey.length <= 255) { "List item legacy identity 不合法" }
-        require(record.sourceOrder > 0) { "List item sourceOrder 必须大于 0" }
-        require(record.title.isNotBlank() && record.title.length <= 200) { "List item title 不合法" }
-        require(record.openMode.uppercase() in OPEN_MODES) { "List item openMode 不合法：${record.openMode}" }
-        require(record.sourceFingerprint.matches(SHA256)) { "List item fingerprint 不合法：${record.legacyKey}" }
-        when (record.sourceType) {
-            CmsListItemSourceType.LINK -> {
-                require(record.articleReference == null) { "LINK ListItem 不能携带 articleReference" }
-                validateHttpUrl(requireNotNull(record.url) { "LINK ListItem URL 不能为空" }, "LINK ListItem URL")
-            }
-            CmsListItemSourceType.ARTICLE -> {
-                require(record.url == null) { "ARTICLE ListItem 不应携带 LINK URL" }
-                val reference = requireNotNull(record.articleReference) { "ARTICLE ListItem 必须携带 stable articleReference" }
-                require(reference.sourceSystem.isNotBlank() && reference.sourceSystem.length <= 100) { "ARTICLE reference sourceSystem 不合法" }
-                require(reference.legacyKey.isNotBlank() && reference.legacyKey.length <= 255) { "ARTICLE reference legacyKey 不合法" }
-            }
-        }
-    }
-
-    private fun validateListImageShape(image: CanonicalListImage) {
-        require(image.sha256.matches(SHA256)) { "List image SHA-256 不合法：${image.snapshotPath}" }
-        require(image.sizeBytes > 0) { "List image 不能为空" }
-        require(image.contentType?.startsWith("image/") == true) { "List image contentType 必须为 image/*" }
-        validateHttpUrl(image.sourceUrl, "List image source URL")
-        val extension = image.snapshotPath.substringAfterLast('.', "").lowercase()
-        require(extension in STATIC_IMAGE_EXTENSIONS) { "List image 扩展名不支持：$extension" }
-    }
-
-    private fun requireUniqueArticleIdentities(articles: List<LoadedArticle>) {
-        val identities = articles.map { identity(it.record.source.system, it.record.source.legacyKey) }
-        require(identities.size == identities.toSet().size) { "Canonical Article dataset 存在重复 stable identity" }
-    }
-
-    private fun requireUniqueListIdentities(items: List<LoadedListItem>) {
-        val identities = items.map { identity(it.sourceSystem, it.record.legacyKey) }
-        require(identities.size == identities.toSet().size) { "Canonical ListItem dataset 存在重复 stable identity" }
-    }
-
-    private fun resolveRegularFile(root: Path, raw: String, label: String): Path {
-        require(raw.isNotBlank()) { "$label 不能为空" }
-        val resolved = root.resolve(raw).normalize()
-        require(resolved.startsWith(root) && Files.isRegularFile(resolved)) { "$label 不存在或路径越界：$raw" }
-        return resolved
-    }
-
-    private fun verifyFile(root: Path, raw: String, expectedSize: Long, expectedSha256: String, label: String): Path {
-        val file = resolveRegularFile(root.toAbsolutePath().normalize(), raw, label)
-        require(Files.size(file) == expectedSize) { "$label size 不一致：$raw" }
-        require(sha256(file) == expectedSha256) { "$label SHA-256 不一致：$raw" }
-        return file
-    }
-
-    private fun validateStaticImageBytes(file: Path, raw: String) {
-        val extension = raw.substringAfterLast('.', "").lowercase()
-        val header = Files.newInputStream(file).use { it.readNBytes(16) }
-        val matches = when (extension) {
-            "png" -> header.startsWith(byteArrayOf(0x89.toByte(), 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a))
-            "jpg", "jpeg" -> header.size >= 2 && header[0] == 0xff.toByte() && header[1] == 0xd8.toByte()
-            "gif" -> header.asAscii(6) in setOf("GIF87a", "GIF89a")
-            "webp" -> header.asAscii(4) == "RIFF" && header.drop(8).take(4).toByteArray().toString(StandardCharsets.US_ASCII) == "WEBP"
-            "ico" -> header.startsWith(byteArrayOf(0x00, 0x00, 0x01, 0x00))
-            else -> false
-        }
-        require(matches) { "List image 实际内容与扩展名不一致：$raw" }
-    }
-
-    private fun ByteArray.startsWith(prefix: ByteArray): Boolean = size >= prefix.size && prefix.indices.all { this[it] == prefix[it] }
-    private fun ByteArray.asAscii(length: Int): String = take(length).toByteArray().toString(StandardCharsets.US_ASCII)
 }
 
 @Service
@@ -479,13 +500,13 @@ class CanonicalMigrationPreflight(
                 }
             }
             if (record.sourceType == CmsListItemSourceType.LINK && loaded.image != null) {
-                val target = staticTarget(loaded.listCode, loaded.image.canonical)
+                val target = resolvedStaticTarget(loaded)
                 val existingFile = try {
                     staticResourceService.resolvePublic(target)
                 } catch (_: StaticResourceNotFoundException) {
                     null
                 }
-                if (existingFile != null && sha256(existingFile) != loaded.image.canonical.sha256) {
+                if (existingFile != null && sha256Path(existingFile) != loaded.image.canonical.sha256) {
                     failures += conflict(GenericMigrationKind.LIST_ITEM, loaded.sourceSystem, record.legacyKey, null, "Generic static image target 已存在但 bytes 不一致：$target")
                     return@mapNotNull null
                 }
@@ -524,7 +545,7 @@ class GenericArticleImporter(
         val bodyImages = mutableListOf<Long>()
         val attachments = mutableListOf<Long>()
         var bodyHtml = record.content.bodyHtml
-        plan.loaded.resources.distinctBy { it.canonical.token }.forEach { loaded ->
+        plan.loaded.resources.forEach { loaded ->
             val resource = loaded.canonical
             val uploaded = resourceService.upload(PathMultipartFile(sourceFilename(resource.sourceUrl, resource.sha256, resource.snapshotPath), resource.contentType, loaded.file))
             when (resource.role) {
@@ -599,7 +620,7 @@ class GenericListItemImporter(
         if (image != null) {
             when (record.sourceType) {
                 CmsListItemSourceType.LINK -> {
-                    val target = staticTarget(loaded.listCode, image.canonical)
+                    val target = resolvedStaticTarget(loaded)
                     val existing = try {
                         staticResourceService.resolvePublic(target)
                     } catch (_: StaticResourceNotFoundException) {
@@ -612,7 +633,7 @@ class GenericListItemImporter(
                             false,
                         )
                     } else {
-                        require(sha256(existing) == image.canonical.sha256) { "Static image target bytes changed after preflight：$target" }
+                        require(sha256Path(existing) == image.canonical.sha256) { "Static image target bytes changed after preflight：$target" }
                     }
                     imagePath = "/static/$target"
                 }
@@ -631,16 +652,19 @@ class GenericListItemImporter(
         } else {
             null
         }
-        val extraJson = objectMapper.writeValueAsString(
-            mapOf(
-                "migrationSourceSystem" to loaded.sourceSystem,
-                "migrationSourcePage" to loaded.sourcePage,
-                "legacyKey" to record.legacyKey,
-                "sourceFingerprint" to record.sourceFingerprint,
-                "imageSourceUrl" to image?.canonical?.sourceUrl,
-                "imageSha256" to image?.canonical?.sha256,
-            ),
+        val extra = linkedMapOf<String, Any?>(
+            "migrationSourceSystem" to loaded.sourceSystem,
+            "migrationSourcePage" to loaded.sourcePage,
+            "legacyKey" to record.legacyKey,
+            "sourceFingerprint" to record.sourceFingerprint,
+            "imageSourceUrl" to image?.canonical?.sourceUrl,
+            "imageSha256" to image?.canonical?.sha256,
         )
+        if (loaded.sourceProvenanceUrl != null || loaded.staticTarget != null) {
+            extra["sourceType"] = record.sourceType.name
+            extra["articleLegacyKey"] = record.articleReference?.legacyKey
+        }
+        val extraJson = objectMapper.writeValueAsString(extra)
         val created = listService.createItem(
             plan.listId,
             CmsListItemDraft(
@@ -661,7 +685,7 @@ class GenericListItemImporter(
             CmsListItemLegacyMappingRecord(
                 sourceSystem = loaded.sourceSystem,
                 legacyKey = record.legacyKey,
-                sourceUrl = record.url.orEmpty(),
+                sourceUrl = loaded.sourceProvenanceUrl ?: record.url ?: loaded.sourcePage.orEmpty(),
                 sourceFingerprint = record.sourceFingerprint,
                 imageSourceUrl = image?.canonical?.sourceUrl.orEmpty(),
                 imageSha256 = image?.canonical?.sha256.orEmpty(),
@@ -685,6 +709,17 @@ class GenericContentMigrationService(
                 GenericMigrationPhase.PREFLIGHT,
                 0,
                 listOf(invalid(GenericMigrationKind.DATASET, "dataset", "snapshot", error.message ?: error::class.java.simpleName)),
+            )
+        }
+        return importPreparedDataset(dataset)
+    }
+
+    fun importPreparedDataset(dataset: LoadedDataset): GenericContentMigrationReport {
+        runCatching { CanonicalDatasetValidator.validate(dataset) }.getOrElse { error ->
+            return report(
+                GenericMigrationPhase.PREFLIGHT,
+                dataset.total,
+                listOf(invalid(GenericMigrationKind.DATASET, "dataset", "prepared", error.message ?: error::class.java.simpleName)),
             )
         }
         val outcome = preflight.preflight(dataset)
@@ -738,7 +773,7 @@ private fun conflict(kind: GenericMigrationKind, sourceSystem: String, legacyKey
 
 private fun identity(sourceSystem: String, legacyKey: String) = "$sourceSystem\u0000$legacyKey"
 
-private fun sha256(path: Path): String = Files.newInputStream(path).use { input ->
+private fun sha256Path(path: Path): String = Files.newInputStream(path).use { input ->
     val digest = MessageDigest.getInstance("SHA-256")
     val buffer = ByteArray(8192)
     while (true) {
@@ -755,7 +790,11 @@ private fun validateHttpUrl(value: String, label: String) {
     require(uri != null && uri.scheme?.lowercase() in setOf("http", "https") && !uri.host.isNullOrBlank()) { "$label 不合法" }
 }
 
-private fun staticTarget(listCode: String, image: CanonicalListImage): String {
+private fun resolvedStaticTarget(loaded: LoadedListItem): String =
+    loaded.staticTarget?.let(CanonicalFileVerifier::validateStaticTarget)
+        ?: defaultStaticTarget(loaded.listCode, requireNotNull(loaded.image).canonical)
+
+private fun defaultStaticTarget(listCode: String, image: CanonicalListImage): String {
     val extension = image.snapshotPath.substringAfterLast('.', "").lowercase()
     require(extension in STATIC_IMAGE_EXTENSIONS) { "List image 扩展名不支持：$extension" }
     return "migrated/content/lists/${listCode.uppercase()}/${image.sha256}.$extension"
