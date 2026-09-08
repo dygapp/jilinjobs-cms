@@ -16,6 +16,7 @@ const auditCodes = new Set([
   'AMBIGUOUS_INTERNAL_HOST_EXTERNAL_LINK',
   'BODY_LINK_URL_INVALID',
   'BODY_LINK_HOST_INVALID_REQUIRES_REVIEW',
+  'BODY_CONTROL_CHARACTER_REQUIRES_REVIEW',
   'JAVASCRIPT_BODY_LINK_REQUIRES_REVIEW',
   'LEGACY_DYNAMIC_ATTACHMENT_LINK_REQUIRES_REVIEW',
   'RELATIVE_BODY_LINK_REQUIRES_REVIEW',
@@ -69,6 +70,21 @@ function malformedHtmlEvidence($) {
   return findings
 }
 
+function controlCharacterEvidence(value) {
+  const counts = new Map()
+  for (const character of value) {
+    const codePoint = character.codePointAt(0)
+    const invalid = character === '\uFFFD'
+      || codePoint === 0x7F
+      || (codePoint < 0x20 && !['\n', '\r', '\t'].includes(character))
+      || (codePoint >= 0x80 && codePoint <= 0x9F)
+    if (!invalid) continue
+    const key = `U+${codePoint.toString(16).toUpperCase().padStart(4, '0')}`
+    counts.set(key, (counts.get(key) || 0) + 1)
+  }
+  return Object.fromEntries(counts)
+}
+
 for (const item of inventory) {
   if (item.articleType !== 'EXTERNAL_LINK') continue
   let parsed
@@ -96,6 +112,17 @@ for (const reference of articleRefs) {
   const sourceUrl = article.source.url
   const bodyHtml = String(article?.content?.bodyHtml || '')
   const $ = cheerio.load(bodyHtml, null, false)
+
+  const controlCharacters = controlCharacterEvidence(bodyHtml)
+  if (Object.keys(controlCharacters).length > 0) {
+    addAuditIssue('BODY_CONTROL_CHARACTER_REQUIRES_REVIEW', {
+      legacyKey,
+      evidenceKey: legacyKey,
+      sourceUrl,
+      controlCharacters,
+      message: 'Legacy Source body contains replacement/control characters and requires an explicit content decision',
+    })
+  }
 
   const malformed = malformedHtmlEvidence($)
   if (malformed.length > 0) {
