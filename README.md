@@ -75,7 +75,7 @@ Current Main formal-content Authority：
 - E3 Specification：`docs/specifications/main-historical-content-migration.md`；
 - E3 Technical Plan：`docs/technical/main-historical-content-migration.md`；
 - EU-50 Current Work：`docs/work/current/eu50-main-source-discovery-promotion.md`；
-- EU-51 Candidate：`docs/work/current/eu51-main-canonical-import-review.md`。
+- EU-51 Candidate：由 E3 Technical Plan / Roadmap 跟踪；在 Readiness PASS 前不进入 `docs/work/current/`。
 
 Phase 2C accepted Authority：
 
