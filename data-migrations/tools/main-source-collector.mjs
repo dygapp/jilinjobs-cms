@@ -187,10 +187,22 @@ function cleanRichNode($, node, evidenceKey) {
   const forbidden = node.find('script,iframe,object,embed,form,input,button,textarea,select')
   if (forbidden.length > 0) addIssue('error', 'UNSUPPORTED_BODY_ELEMENT', { evidenceKey, count: forbidden.length })
   forbidden.remove()
-  node.find('[onload],[onclick],[onerror],[onmouseover],[onfocus]').each((_, element) => {
+
+  const removedEventAttributes = []
+  node.find('*').addBack().each((_, element) => {
     const current = $(element)
-    for (const name of Object.keys(element.attribs || {}).filter(name => name.toLowerCase().startsWith('on'))) current.removeAttr(name)
+    for (const name of Object.keys(element.attribs || {}).filter(name => name.toLowerCase().startsWith('on'))) {
+      removedEventAttributes.push({ tagName: String(element.tagName || element.name || '').toLowerCase() || null, attribute: name })
+      current.removeAttr(name)
+    }
   })
+  if (removedEventAttributes.length > 0) {
+    addIssue('error', 'EVENT_HANDLER_ATTRIBUTE_REMOVED', {
+      evidenceKey,
+      count: removedEventAttributes.length,
+      attributes: removedEventAttributes,
+    })
+  }
 }
 async function localizeBodyResources($, node, baseUrl, unitDir, evidenceKey, page = false) {
   const resources = []
