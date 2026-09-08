@@ -11,10 +11,12 @@
 
 ## Status
 
-- Specification: **READY as downstream contract**
-- Technical Planning: **REQUIRED before E3 execution slice**
-- Upstream implementation dependency: E2 Page migration foundation must be integrated
-- Current Ready Execution Unit: **NONE from E3**
+- Specification: **READY**
+- Technical Planning: **READY** — `docs/technical/main-historical-content-migration.md`
+- Upstream implementation dependency: **E2 / EU-49 SATISFIED**
+- `slice-work`: **EU-50 + EU-51 formed**
+- Current Ready Execution Unit from E3: **EU-50**
+- EU-51: **Candidate / Readiness PENDING on EU-50 accepted snapshot**
 
 ## 1. Pipeline
 
@@ -192,13 +194,18 @@ A mixed Main dataset can contain Article/Page/List units in one Generic prefligh
 
 ## 12. Slice sequencing
 
-E3 does **not** create a Candidate Execution Unit in the current planning change because its runtime dependency (E2 Page foundation) is not yet integrated and actual source collection technical details should be based on then-current source evidence.
+E2 / EU-49 is now integrated and Fresh Context source-evidence recovery has confirmed a real two-boundary split: the current Legacy Source is large, mixed and externally mutable, while Runtime import/final review must consume a frozen repository-owned dataset without external-source dependency.
 
-After E2 foundation completion, a Fresh Context should revalidate E3 and normally slice at least:
+`slice-work` therefore forms:
 
-1. bounded Main source discovery / accepted snapshot promotion;
-2. canonical import / reconciliation / Human Review closure;
+1. **EU-50 — Main Source Discovery & Accepted Snapshot Promotion**
+   - external Legacy Source access is allowed only in explicit discovery/collection;
+   - owns completeness/classification, resource collection and repository-owned accepted snapshot promotion;
+   - stops before Runtime product import/final Human Review;
+   - `readiness-check = PASS`.
+2. **EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review**
+   - consumes only EU-50's integrated accepted snapshot;
+   - owns Generic import, idempotency/conflict/reconciliation, Public/Admin verification and Human Review;
+   - `readiness-check = PENDING` until exact accepted snapshot identities/counts/digests/exceptions exist as durable Authority.
 
-They may be combined only if actual evidence shows one rollback/verification boundary is safer and small enough.
-
-No E3 identifier is reserved now.
+The two Units must not share Execute Authority. EU-50's Readiness PASS does not establish its Execute baseline on the planning branch; after this Planning/Readiness state is integrated, a Fresh Context must revalidate integrated `main`, Issue #60/#77, current Work Authority, Open PR/Actions and base drift before EU-50 Execute begins.
