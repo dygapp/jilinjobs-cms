@@ -37,15 +37,15 @@ Kotlin Party code不得再以常量列表复制 `manifest.json` 已持有的 Col
 
 ### 2.2 Compatibility-owned transition facts
 
-Phase 2C 应增加一个 Party-owned、repository-versioned compatibility authority（例如 `data-migrations/party/v1/compatibility.json`），只承载无法从 current canonical dataset本身推导的 accepted historical transition：
+Phase 2C 应增加一个 Party-owned、repository-versioned compatibility authority（例如 `data-migrations/party/v1/compatibility.json`），只承载 **current canonical dataset无法表达、但执行 accepted historical transition必须知道** 的最小事实：
 
-- stable list code / legacy identity；
-- accepted `fromFingerprint` 与 current `toFingerprint`；
-- accepted from/to source type；
-- transition前必须满足的 Runtime identity/state guard；
+- transition stable identity（list code / source system / legacy key）；
+- accepted old `fromFingerprint`；
+- accepted old source type；
 - preserved Runtime item identity requirement；
-- current canonical target relation；
-- legacy static resource projection / provenance中仍需保持的约束。
+- 必要的 old-state guard分类 / transition version。
+
+Current `toFingerprint`、to source type、target Article stable relation、current image digest/order/title等已经属于 current canonical item，不应在 compatibility authority再维护第二份值；执行 transition时必须直接从 current canonical item读取并交叉验证。Party-specific steady-state static projection path属于 bounded Party adapter实现责任，不作为历史 transition事实塞入 compatibility authority。
 
 该文件是 Party compatibility authority，不是 Generic schema，也不允许演化成跨站点 plugin policy language。
 
@@ -59,7 +59,7 @@ Phase 2C 应增加一个 Party-owned、repository-versioned compatibility author
    - separate source provenance URL；
    - safe optional static target override以保持 accepted public resource projection；
    但不得引入 Party name、alias、fingerprint、固定 list count或 public plugin SPI。
-5. Party adapter必须从 dataset / compatibility authority读取 scope与transition facts，不从 Kotlin literals维护第二份事实来源。
+5. Party adapter必须从 dataset / compatibility authority读取 scope与transition facts，不从 Kotlin literals维护第二份可变事实来源；稳定且属于 Party adapter自身责任的 projection规则可以作为 bounded implementation constant保留，不得提升为 Generic policy。
 6. Existing root Gradle tasks与 executable dispatcher命令保持兼容；Phase 2C不是命令行接口重命名工作。
 
 ## 4. Compatibility transition requirements
@@ -67,9 +67,9 @@ Phase 2C 应增加一个 Party-owned、repository-versioned compatibility author
 1. Generic mapping默认语义继续是 CREATE / SKIP / CONFLICT；Phase 2C 不修改 Generic Engine使任意 fingerprint变化可 UPDATE。
 2. 只有 Party compatibility authority显式列出的 transition可以执行原位 update。
 3. transition开始前必须验证：
-   - current mapping identity与 `fromFingerprint`匹配；
+   - current mapping identity与 compatibility authority 的 `fromFingerprint`匹配；
    - Runtime ListItem仍是 accepted old source type / list / stable id / enabled/order/title/url/image projection等必要 guard；
-   - current canonical item与 `toFingerprint`、target Article stable identity、image digest一致；
+   - current canonical item提供的 current fingerprint、target Article stable identity、image digest等 current target事实自洽；
    - target Article mapping已经可解析；
    - 任何 guard drift均返回 CONFLICT，不覆盖。
 4. accepted transition完成后：
@@ -110,7 +110,7 @@ Phase 2C 不得把 accepted compatibility解释为普通 operator data overwrite
 进入 Integration 前至少证明：
 
 1. source inspection证明 Party steady-state importer不再直接复制 Generic Article/List Runtime mutation logic；Generic package继续无 Party hardcode；
-2. Party scope aliases / current list identities / current fingerprints来自 repository dataset，accepted upgrade fingerprint pair来自 Party compatibility authority；
+2. Party scope aliases / current list identities / current fingerprints来自 repository dataset；accepted old `fromFingerprint` / old-state transition guard来自 Party compatibility authority，current transition target事实来自 current canonical item；
 3. Fresh DB current Party import得到 183 Articles + 4 carousel，first CREATE、second全 SKIP；
 4. current Party resource bytes与Runtime projection完整，Public/Admin browser regression PASS；
 5. current changed fingerprint仍 CONFLICT且不会被 compatibility policy误接受；
