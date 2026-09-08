@@ -29,18 +29,20 @@ Fresh Context 按以下入口恢复，避免把历史执行记录当作当前 Au
 
 ## 当前 Planning Gate
 
-当前 Planning Priority：**GitHub Issue #92 — E1～E3 前置 Repository Authority 与 Migration Architecture 收敛路线**。
+Issue #92 — E1～E3 前置 Repository Authority 与 Migration Architecture 收敛路线的 Phase 0～Phase 3 已完成；Phase 3 **Canonical Migration Compatibility & E1～E3 Re-entry = PASS**。
 
 - Phase 0 已完成；
 - Phase 1 Repository Documentation Authority Convergence 已完成；
 - Phase 2A **EU-46 — Backend Application / Core Boundary Foundation** 已完成并归档；
 - Phase 2B **EU-47 — Generic Content Migration Application Foundation** 已完成并归档；
-- Phase 2C **EU-48 — Party Migration De-specialization & Compatibility** 已完成 implementation / verification，并在本 integration boundary 归档；
+- Phase 2C **EU-48 — Party Migration De-specialization & Compatibility** 已完成并归档；
+- Phase 3 已基于 integrated Phase 2A～2C Authority 与 Current Evidence 完成完整链路 compatibility closure；未发现需要新增 Phase 3 implementation Unit 的 gap；
 - Current Ready Execution Unit：**NONE**；
-- EU-48 Execute Authority：**TERMINATED on completion**；
-- 下一 Gate 仅为：**Phase 3 — Canonical Migration Compatibility & E1～E3 Re-entry planning / compatibility gate**；必须从当前 Repository Authority 与 Current Evidence 独立恢复和判断，不继承 EU-48 或更早 Unit 的 Execute Authority；
-- Issue #60 / E1～E3 继续 **blocked / downstream**；Phase 3 re-entry PASS 前不得进入 Execute；
-- Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层边界。
+- Issue #60 / E1～E3：**re-entry PASS / Planning & Requirement Candidates**；允许重新进入 Requirement / Specification / 必要 Technical Planning，但没有 Execute Authority；
+- Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层长期边界；
+- Repository Split Readiness Assessment 继续 deferred，不自动阻塞 E1～E3。
+
+下一实际 Planning 入口由 **GitHub Issue #60** 的 E1～E3 candidate set 承担。任何候选仍必须独立完成 `Intent / Requirement → Ready Specification → 必要 Technical Planning → slice-work → Candidate Execution Unit → readiness-check`；Phase 3 PASS、Issue 顺序或未来 EU 名称都不能替代该状态链。
 
 Phase 2C accepted Authority：
 

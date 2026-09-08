@@ -23,9 +23,9 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | Issue #92 Phase 2A Backend Application / Core Boundary | **已完成** | **EU-46 — Backend Application / Core Boundary Foundation 完成；Server / Migration application 与 shared Core classpath boundary 已建立** |
 | Issue #92 Phase 2B Generic Content Migration | **已完成** | **EU-47 — Generic Content Migration Application Foundation 完成 Generic Canonical Dataset → CMS Runtime foundation** |
 | Issue #92 Phase 2C Party Migration De-specialization | **已完成** | **EU-48 — Party Migration De-specialization & Compatibility 完成 Party dataset/profile/compatibility authority + Generic Engine consumer 收敛，并保持 accepted EU-29→current transition** |
-| Issue #92 Phase 3 Compatibility / E1～E3 Re-entry | **Planning / compatibility gate — current next gate** | 完整链路重新对账后才能决定 re-entry PASS；当前无 Ready Execution Unit / Execute Authority |
-| Issue #60 / E1～E3 Main Site Formal Content | blocked / downstream | Phase 3 PASS 前不得进入 Execute |
-| Repository Split Readiness Assessment | deferred | 只在四层 boundary 完整闭环后独立评估；不自动拆仓 |
+| Issue #92 Phase 3 Compatibility / E1～E3 Re-entry | **已完成 / PASS** | **完整链路 compatibility closure 已完成；未发现需要新增 Phase 3 implementation Unit 的 gap；E1～E3 re-entry 仅解锁 Planning** |
+| Issue #60 / E1～E3 Main Site Formal Content | **Planning / Requirement Candidates** | re-entry PASS；当前无 Ready Execution Unit / Execute Authority，必须从正常 Requirement / Specification / slice / readiness 流程重新形成后续 Unit |
+| Repository Split Readiness Assessment | deferred | 四层 boundary 已闭环，但 Assessment 仍独立后置；不自动拆仓，也不默认阻塞 E1～E3 |
 | Issues #57 / #59 / #60 其他候选 | 规划层保留 | C1/C2、Browser Compatibility、Public Rendering Architecture 等保持独立 |
 
 ## 当前已接受长期边界
@@ -69,15 +69,17 @@ sites/jilinjobs/
 - Renderer 不成为 Site Definition、Canonical Migration、Flyway 或 CMS Domain Authority；
 - Main / Party canonical URL、产品 identity 与 accepted behavior在后续重构中保持。
 
-## 当前 Planning Priority — Issue #92
+## 当前 Planning Priority — Issue #60 / E1～E3
 
-总体规划：`docs/project/pre-e1e3-convergence-plan.md`。
+Issue #92 的 Phase 0～Phase 3 前置收敛已完成；Phase 3 re-entry verdict = **PASS**。Issue #77 继续承担四层长期架构 Authority。
+
+总体规划与 Phase 3 closure：`docs/project/pre-e1e3-convergence-plan.md`。
 
 Documentation Authority Map：`docs/README.md`。
 
 Current Ready Execution Unit：**NONE**。
 
-Current next gate：**Phase 3 — Canonical Migration Compatibility & E1～E3 Re-entry planning / compatibility gate**。Phase 3 必须从 current Repository Authority、Issue #92 / #77、Phase 2A～2C accepted Authority 与 Current Evidence独立恢复并完成 compatibility closure / re-entry verdict；不得从 EU-48 或更早 Unit 继承 Execute Authority。Issue #60 / E1～E3 在 re-entry PASS 前继续 blocked。
+Current next gate：从 **Issue #60 / E1～E3 Planning / Requirement Candidates** 独立恢复产品边界与依赖。Phase 3 PASS只解除“不得进入正式规划”的前置阻塞，不把 E1、E2、E3 任一候选自动提升为 Ready Specification、Execution Unit 或 Execute Authority。后续候选仍必须完成 `Intent / Requirement → Ready Specification → 必要 Technical Planning → slice-work → Candidate Execution Unit → readiness-check`。
 
 Phase 2C accepted Authority：
 
@@ -100,7 +102,7 @@ Phase 2A accepted Authority继续作为长期 application/core contract：
 - Technical Plan：`docs/technical/backend-application-core-boundary.md`；
 - Completed Work artifact：`docs/work/archive/eu46-backend-application-core-boundary-foundation.md`。
 
-EU-43 / EU-44 / EU-45 / EU-46 / EU-47 / EU-48 的 Execute Authority均已终止。任何后续 Planning / Compatibility Gate 不继承这些 Unit 的 Execute Authority。
+EU-43 / EU-44 / EU-45 / EU-46 / EU-47 / EU-48 的 Execute Authority均已终止。Phase 3 compatibility closure不创建新的 Execute Authority，Issue #60候选不继承任何已完成 Unit 的 Execute Authority。
 
 ### Phase 0 — Planning Authority Solidification — COMPLETED
 
@@ -214,9 +216,9 @@ Pre-integration exact-head verification覆盖 Party focused compatibility runtim
 
 EU-48 completion后 Execute Authority终止；Phase 2C completion只使四层历史迁移边界满足进入 Phase 3 compatibility/re-entry planning gate 的前置，不自动给 Phase 3 或 Issue #60 / E1～E3 Execute Authority。
 
-### Phase 3 — Canonical Migration Compatibility & E1～E3 Re-entry Gate
+### Phase 3 — Canonical Migration Compatibility & E1～E3 Re-entry Gate — COMPLETED / PASS
 
-最终重新对账：
+Phase 3 在 `main@03069f7dd3c211dd2886cfc668b67eef7cea7727` 的 integrated EU-48 boundary 上完成完整链路对账：
 
 ```text
 Generic CMS Schema
@@ -228,11 +230,22 @@ Generic CMS Schema
 → Replaceable Public Renderer
 ```
 
-当前仅进入 **Planning / Compatibility Gate**。必须基于 Phase 2A～2C accepted Authority 与实际 Current Evidence重新检查完整链路的 compatibility obligations；全部闭环后才可记录 E1～E3 re-entry PASS。发现具体 implementation gap 时才重新通过 `slice-work` 形成 Candidate EU。Phase 3 re-entry PASS 前不得进入 Issue #60 / E1～E3 Execute。
+Compatibility matrix：
+
+- **Generic CMS Schema / application-core boundary：PASS** — EU-41 / EU-46 accepted Authority继续成立；Backend Application Boundary与 Repository CI在 integrated boundary PASS；
+- **JilinJobs stable structure / bootstrap / stable assets：PASS** — EU-37～EU-42 accepted lifecycle保持，Site Package Verification在 integrated boundary PASS；
+- **Generic Content Migration as reusable site-neutral consumer path：PASS** — EU-47 Generic loader/preflight/Article/List/report与 package purity保持，Generic Content Migration Verification PASS；
+- **Party as real Generic consumer + historical compatibility：PASS** — EU-48 bounded adapter / compatibility authority已集成；Party focused、Canonical current 183+4与 pinned EU-29→current upgrade evidence闭合；
+- **Runtime / Replaceable Public Renderer：PASS** — current Admin/Public API与 Public source isolation未漂移，Repository CI的 Public build与 Integrated feature/admin browser PASS；
+- **Main E1～E3 target/canonical prerequisites：PASS** — Main stable Column aliases、List codes、Page/PageGroup identities已由 Site Package持有，`data-migrations/README.md`明确要求 Main historical migration复用同一 site-neutral canonical organization；E1～E3不需要另一套跨层 foundation。
+
+Final PR Head `d233b0ab5b004ee1b10921c53178c25df5a35f19` 与 squash integrated `main@03069f7d...` 的 tree均为 `70368107ace5ef5a3abadc2672861451a0b385d4`。因此未在 merge push重新触发的 Canonical Migration Verification #189 与 EU-30 Migration Upgrade Verification #139 可按 exact-tree claim继续作为同一产品/迁移状态的证据；merge push上实际重新运行的 Party、Generic、Backend Boundary、Site Package与 CI / Integrated Browser均 PASS。精确 Run identity保存在 Issue #92 / #77 Current Evidence。
+
+**Phase 3 verdict：PASS。** 未发现需要新增 Phase 3 implementation gap / Candidate EU。该 PASS只允许 Issue #60 / E1～E3重新进入正常 Planning / Requirement流程；不授予任何 Execute Authority，也不预先决定 E1/E2/E3 的具体 slice 或 EU 编号。
 
 ### Phase 4 — Repository Split Readiness Assessment
 
-继续 deferred。Assessment 不等于自动拆仓，也不默认阻塞 E1～E3。
+继续 deferred。四层 boundary已完整闭环，因此后续可以独立评估，但 Assessment 不等于自动拆仓，也不默认阻塞 E1～E3。
 
 ## Architecture Review Eval Experiment
 
@@ -245,8 +258,8 @@ Consumer-local `evals/architecture/**` 当前结论保持 **ADJUST**：真实高
 1. 读取当前 `main`、Open PR / Issue 与最近相关 Actions；
 2. 完整读取 `AGENTS.md`、Root `README.md`、`docs/README.md`；
 3. 读取本 Roadmap 与 `docs/project/development-method.md`；
-4. 读取 Issue #92、Issue #77 与 `docs/project/pre-e1e3-convergence-plan.md` 当前状态；
-5. 若目标是继续下一 Gate，则从 **Phase 3 Canonical Migration Compatibility & E1～E3 Re-entry planning / compatibility gate** 恢复，并读取 Phase 2A～2C accepted Authority与最新 Current Evidence；已归档 EU-48 work artifact只用于 traceability；
-6. 只有 Phase 3 compatibility/re-entry自身完成 Repository Authority要求的 Planning / Verification Gate 并明确形成后续 Ready Execution Unit / re-entry PASS 时，才允许进入对应后续动作。
+4. 读取当前 Planning target 对应 Issue 与直接 Authority；Issue #77继续作为四层长期边界，Issue #92只承担已完成前置路线的 traceability / Current Evidence；
+5. 若目标是继续 Main Site formal content，则从 **Issue #60 / E1～E3 Planning / Requirement Candidates** 恢复实际候选边界与依赖，不从 Phase 3 PASS推导 Ready Unit；
+6. 只有具体候选完成 Requirement / Specification / 必要 Technical Planning、`slice-work`形成 Candidate Execution Unit且`readiness-check` PASS后，才允许进入对应 Fresh-context Execute。
 
-当前不得从 EU-48完成事实、Phase名称、Issue编号或 Roadmap顺序推导 Phase 3 / Issue #60 / E1～E3 Execute Authority。
+当前 Ready Execution Unit仍为 **NONE**。Phase 3 re-entry PASS不是 Execute Authority。

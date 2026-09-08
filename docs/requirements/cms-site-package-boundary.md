@@ -5,10 +5,11 @@
 - Candidate source: GitHub Issue #77
 - Stage: Requirement Authority — ACTIVE / ACCEPTED BOUNDARY
 - Completed implementation: EU-37 / EU-38 / EU-39 / EU-40 / EU-41 / EU-42
-- Current cross-boundary planning authority: GitHub Issue #92
+- Cross-boundary convergence: Issue #92 Phase 0～Phase 3 **COMPLETED / E1～E3 RE-ENTRY PASS**
 - Repository Documentation Authority Convergence: **PHASE 1 COMPLETED（EU-43 / EU-44 / EU-45）**
+- Backend / Migration convergence: **Phase 2A EU-46 / Phase 2B EU-47 / Phase 2C EU-48 COMPLETED**
 - Current Ready Execution Unit: **NONE**
-- Next cross-boundary Gate: **Issue #92 Phase 2 Planning Candidate**
+- Next product planning Gate: **Issue #60 / E1～E3 Planning / Requirement Candidates**
 - Scope: E1～E3 前置的 CMS 通用化、站点实例数据所有权与 Public Renderer 可替换边界
 
 ## Intent
@@ -87,7 +88,9 @@
 - EU-42 已将原 `site-baseline/static/**` 中 31 个稳定 Site assets 迁入 `sites/jilinjobs/assets/**`，并建立 package identity + source/target + SHA-256 integrity manifest、create-if-missing Runtime projection、StaticResource protected-path 与 `/static/uploads/**` exclusion；原目录只属于历史迁移来源描述，不再是 current source authority；
 - EU-37～EU-42 均已完成对应 exact-head、Integration 与 Post-Integration Current Evidence；当前 Roadmap / Issue #92 承担后续 Phase 顺序，不从本 Requirement 的历史 EU 编号推导 Execute Authority；
 - Issue #92 Phase 1 Repository Documentation Authority Convergence（EU-43 / EU-44 / EU-45）已完成物理 IA / archive 收敛；其 Integration 与 Post-Integration Evidence 由 EU-45 work record、PR / Actions 与 Issue #92 承担；
-- `data-migrations/README.md` 已明确 Historical Content Migration 与 Generic Flyway / Site Package stable structure/bootstrap/assets 分离。
+- Phase 2A / EU-46 已建立 `cms-server` / `content-migration` → `cms-core` application boundary；Phase 2B / EU-47 已建立 site-neutral Generic Content Migration capability；Phase 2C / EU-48 已将 Party 收敛为 bounded compatibility authority + Generic Engine real consumer；
+- Phase 3 已基于 integrated EU-48 boundary 完成 Generic Schema → Site Package → bootstrap → Generic Migration → Party canonical/compatibility → Runtime → Replaceable Public Renderer 全链路 compatibility closure，并取得 E1～E3 re-entry PASS；未发现需要新增 Phase 3 implementation Unit 的 gap；
+- `data-migrations/README.md` 已明确 Historical Content Migration 与 Generic Flyway / Site Package stable structure/bootstrap/assets 分离，并规定后续 Main historical migration默认复用同一 canonical organization。
 
 ## Non-goals / Deferred
 
@@ -108,20 +111,24 @@
 
 ## Current Follow-up Direction
 
-EU-37～EU-42 已关闭 Site Package Foundation、stable structure、Navigation stable identity / reconcile、explicit Runtime composition activation、Site bootstrap / Generic Schema baseline separation 与 stable Site asset ownership / Runtime projection 的当前 accepted scope。Issue #92 Phase 1 Documentation Authority Convergence 也已完成，当前没有 Ready / executing Execution Unit。
+EU-37～EU-42 已关闭 Site Package Foundation、stable structure、Navigation stable identity / reconcile、explicit Runtime composition activation、Site bootstrap / Generic Schema baseline separation 与 stable Site asset ownership / Runtime projection。Issue #92 Phase 1～Phase 2C 已进一步完成 Documentation Authority、Backend Application/Core、Generic Content Migration 与 Party de-specialization；Phase 3 compatibility / E1～E3 re-entry 现已 **PASS**。当前没有 Ready / executing Execution Unit。
 
-后续跨边界顺序由 Issue #92 当前 Planning Authority 统一控制：
+当前跨边界前置路线已经闭环：
 
 ```text
-Phase 2  Generic Historical Migration & Backend Application Boundary（Planning Candidate）
+Phase 2A  Backend Application / Core Boundary — COMPLETED
                ↓
-Phase 3  Canonical Migration Compatibility & E1～E3 Re-entry Gate
+Phase 2B  Generic Content Migration Application — COMPLETED
                ↓
-Issue #60 / E1～E3
+Phase 2C  Party Migration De-specialization & Compatibility — COMPLETED
+               ↓
+Phase 3   Canonical Migration Compatibility & E1～E3 Re-entry — PASS
+               ↓
+Issue #60 / E1～E3 — Planning / Requirement Candidates
 ```
 
-只有在 Phase 3 重新对账 Generic Schema → Site Package stable structure → one-time bootstrap → Generic Content Migration Application → Party Canonical Dataset → Runtime → Replaceable Public Renderer 的完整链路后，才能判断 E1～E3 re-entry 是否 PASS。
+Phase 3 PASS只解除 E1～E3 的前置 planning block，不把 E1/E2/E3 自动提升为 Ready Specification、Execution Unit 或 Execute Authority。后续 Main formal content候选仍必须按 Consumer-local Method从 Intent / Requirement、Specification、必要 Technical Planning、`slice-work → readiness-check` 独立形成 Ready Unit。
 
-Repository Split Readiness Assessment 继续保持后置 Planning Candidate；只有四层 boundary 完整闭环后独立评估，不自动拆仓，也不默认阻塞 E1～E3。
+Repository Split Readiness Assessment 继续保持后置独立 Planning Candidate；四层 boundary已完整闭环，因此可在未来独立评估，但不自动拆仓，也不默认阻塞 E1～E3。
 
-上述后续 Phase / Candidate 均不继承 EU-42～EU-45 的历史 Execute Authority；Phase 2 必须从 Planning Candidate 重新完成 dependency closure、必要 Planning、`slice-work → readiness-check` 后，才可能形成新的 Ready Execution Unit。
+上述后续候选不继承 EU-37～EU-48 的历史 Execute Authority；Issue #77继续作为四层长期架构 Authority。
