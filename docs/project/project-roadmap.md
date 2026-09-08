@@ -59,7 +59,7 @@ sites/jilinjobs/
 - Party current canonical Runtime Dataset = 183 Articles；EU-29 frozen acceptedSnapshot = 181；4 条 accepted carousel 与 EU-29→EU-30 compatibility 必须持续可验证；
 - Canonical Dataset 依赖 stable Site identity，不依赖临时 Runtime DB id 或 Public Renderer internals；
 - EU-46 后 Party migration implementation 位于独立 `backend/apps/content-migration` application；
-- Phase 2B / EU-47 的 Ready scope只建立 site-neutral Generic Canonical Dataset → CMS Runtime capability，不迁移 Party current dataset/profile/compatibility；Party-specific aliases、accepted fingerprints与 EU-29→EU-30 transition仍属于后续 Phase 2C。
+- Phase 2B / EU-47 Ready scope只建立 site-neutral Generic Canonical Dataset → CMS Runtime capability，不迁移 Party current dataset/profile/compatibility；Party-specific aliases、accepted fingerprints与 EU-29→EU-30 transition仍属于后续 Phase 2C。
 
 ### 4. Replaceable Public Renderer
 
@@ -95,3 +95,119 @@ Phase 2A accepted Authority继续作为长期 application/core contract：
 - Completed Work artifact：`docs/work/archive/eu46-backend-application-core-boundary-foundation.md`。
 
 EU-43 / EU-44 / EU-45 / EU-46 的 Execute Authority均已终止。EU-47不继承这些 Unit 的 Execute Authority；EU-47未来取得的 Execute Authority也只覆盖本 Unit，不自动授权 Phase 2C、Phase 3或 Issue #60 / E1～E3。
+
+### Phase 0 — Planning Authority Solidification — COMPLETED
+
+Issue #92 / #77 / Roadmap / Site Package Planning 的总体路线已对齐。AR-02 / AR-04 证明 application/core boundary 必须先于 Gradle implementation choice冻结；模型 Review 只构成 Review Evidence，不替代 Repository Authority / readiness-check。
+
+### Phase 1 — Repository Documentation Authority Convergence — COMPLETED
+
+- EU-43 Current Authority Semantic Reconciliation：COMPLETED；
+- EU-44 Canonical Product Authority Consolidation：COMPLETED；
+- EU-45 Documentation Information Architecture & Archive Migration：COMPLETED。
+
+Phase 1 classification contract `CURRENT / PARTIALLY_CURRENT / SUPERSEDED / HISTORICAL_EVIDENCE` 继续有效；archive 默认不参与 Fresh Context Current Authority 恢复。历史 work records 位于 `docs/work/archive/`。
+
+### Phase 2A — Backend Application / Core Boundary Foundation — COMPLETED
+
+EU-46 established：
+
+```text
+cms-server app ───────────→ cms-core
+content-migration app ────→ cms-core
+```
+
+Accepted physical topology：
+
+```text
+backend/
+├── modules/
+│   └── cms-core/
+└── apps/
+    ├── cms-server/
+    └── content-migration/
+```
+
+Phase 2A implementation result：
+
+- Core 不依赖任一 app，两个 app 互不依赖；
+- Server 持有 `CmsApplication`、HTTP/MVC/static HTTP 与 server-only composition；
+- Migration 持有四个 Party migration implementation、独立 non-web Spring composition 与 CLI/import/report compatibility；
+- Generic Flyway V1/V2、`cms-metadata.yml`、Site Package lifecycle保持 single Core resource/capability authority；
+- root `backend` build/command compatibility与现有 Server JAR path保持；
+- Party 183 Articles、4 carousel、idempotency、fingerprint conflict、EU-29→EU-30 compatibility 与 resource integrity保持；
+- Canonical / EU-30 Upgrade / Site Package path filters 已迁移到新 ownership；
+- focused Backend Application Boundary Verification证明 packaged ownership 与 Migration non-web composition；
+- 没有改变 `data-migrations/**`、Generic Schema semantics、Admin/Public API、frontend / Site Package bytes或产品行为。
+
+Pre-integration exact-head evidence由 PR #105 / Actions 记录；Post-Integration evidence由 Issue #92 Current Evidence承担。EU-46 完成不自动授权 Phase 2B / 2C。
+
+### Phase 2B — Generic Content Migration Application — READY VIA EU-47
+
+EU-47 Current Authority：
+
+- Requirement：`docs/requirements/generic-content-migration-application.md`；
+- Specification：`docs/specifications/generic-content-migration-application.md`；
+- Technical Plan：`docs/technical/generic-content-migration-application.md`；
+- Ready Work artifact：`docs/work/current/eu47-generic-content-migration-application-foundation.md`。
+
+目标链路：
+
+```text
+Legacy Source
+→ collection / normalization / promotion
+→ Canonical Migration Dataset
+→ Generic JVM Content Migration Application
+→ CMS Runtime
+```
+
+Generic Engine负责 canonical validation、path/digest safety、stable migration identity/fingerprint、preflight、transaction/file-side-effect boundary、dependency order、Article/Resource/ListItem import、legacy mapping、idempotency/conflict/reconciliation/report，但不得内建 Party / JilinJobs / EU-29 / EU-30 identity。
+
+Dependency closure已确认 current Party importer中的 site-neutral capability与 Party-specific aliases、fixed carousel identity/count、accepted fingerprints、EU-29→EU-30 position-2 upgrade exception可以明确分层；existing Content Migration app、Core Resource/List/StaticResource capability与 current legacy mapping tables足够建立 Generic foundation，不需要新 application/module或 DB schema。
+
+`slice-work`形成 **EU-47 — Generic Content Migration Application Foundation**，`readiness-check` = **PASS**。EU-47只建立 Generic boundary与 synthetic focused verification；Party current commands / dataset / compatibility在本 Phase保持不变，等待 Phase 2C独立迁移。
+
+EU-47 当前 Execute = **NOT STARTED**；只有 planning/readiness integration 后新的 Fresh Context确认 integrated baseline与 Authority仍有效且无 blocker，才允许 Execute。
+
+### Phase 2C — Party Migration De-specialization & Compatibility — PLANNING CANDIDATE
+
+在 EU-47 Generic Engine boundary完成后，Party-specific aliases、accepted fingerprints、carousel legacy transition与upgrade-only policy由 Party dataset/profile/compatibility authority承载；同一 Generic Application必须保持 current 183 Articles、4 carousel及 accepted compatibility。
+
+Phase 2C 必须重新完成自身 Planning / `slice-work` / `readiness-check`，不得继承 EU-47 Execute Authority。
+
+### Phase 3 — Canonical Migration Compatibility & E1～E3 Re-entry Gate
+
+最终重新对账：
+
+```text
+Generic CMS Schema
+→ JilinJobs Site Package stable structure
+→ one-time Site bootstrap
+→ Generic Content Migration Application
+→ Party Canonical Dataset
+→ Runtime
+→ Replaceable Public Renderer
+```
+
+只有 Current Evidence 闭环全部 obligation 后才可记录 E1～E3 re-entry PASS；发现具体 implementation gap 时再通过 `slice-work` 形成新的 Candidate EU。Phase 3 PASS 前不得进入 Issue #60 / E1～E3 Execute。
+
+### Phase 4 — Repository Split Readiness Assessment
+
+继续 deferred。Assessment 不等于自动拆仓，也不默认阻塞 E1～E3。
+
+## Architecture Review Eval Experiment
+
+Consumer-local `evals/architecture/**` 当前结论保持 **ADJUST**：真实高返工成本架构问题可以使用 bounded independent review；默认 lower-cost capable review first，仅在 unresolved / conflicting / deliberate second opinion 时升级 Astra。模型 review 不覆盖 Repository Authority / readiness-check。
+
+## Fresh Context 恢复
+
+新的开发会话至少：
+
+1. 读取当前 `main`、Open PR / Issue 与最近相关 Actions；
+2. 完整读取 `AGENTS.md`、Root `README.md`、`docs/README.md`；
+3. 读取本 Roadmap 与 `docs/project/development-method.md`；
+4. 读取 Issue #92、Issue #77 与 `docs/project/pre-e1e3-convergence-plan.md` 当前状态；
+5. 若目标是执行 EU-47，则读取 `docs/requirements/generic-content-migration-application.md`、`docs/specifications/generic-content-migration-application.md`、`docs/technical/generic-content-migration-application.md` 与 `docs/work/current/eu47-generic-content-migration-application-foundation.md`；
+6. 只有 planning/readiness change已集成，且新的 Fresh Context确认 EU-47 Readiness、integrated baseline、Authority、Open PR / Actions与 base drift仍有效，才允许进入 Execute。
+
+当前不得从 Roadmap、EU-46完成事实、Phase名称、Issue编号或 planning branch本身推导 Phase 2C / Phase 3 / E1～E3 Execute Authority；EU-47也不继承任何历史 Unit的 Execute Authority。
