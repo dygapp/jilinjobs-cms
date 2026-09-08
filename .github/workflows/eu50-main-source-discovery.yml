@@ -1,0 +1,90 @@
+name: EU-50 Main Source Discovery
+
+on:
+  pull_request:
+    paths:
+      - 'data-migrations/main/**'
+      - 'data-migrations/tools/main-*.mjs'
+      - 'data-migrations/package.json'
+      - '.github/workflows/eu50-main-source-discovery.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tooling:
+    name: Offline collector tooling validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Install migration dependencies
+        working-directory: data-migrations
+        run: npm install --no-audit --no-fund
+      - name: Validate probe syntax and bounded source config
+        working-directory: data-migrations
+        run: |
+          node --check tools/main-source-probe.mjs
+          node - <<'NODE'
+          const fs = require('fs')
+          const config = JSON.parse(fs.readFileSync('main/source-surfaces.json', 'utf8'))
+          const columns = JSON.parse(fs.readFileSync('../sites/jilinjobs/structure/columns.json', 'utf8'))
+          const pages = JSON.parse(fs.readFileSync('../sites/jilinjobs/structure/pages.json', 'utf8'))
+          const lists = JSON.parse(fs.readFileSync('../sites/jilinjobs/structure/lists.json', 'utf8'))
+          const columnAliases = new Set(columns.map(item => item.alias))
+          const pageKeys = new Set(pages.map(item => `${item.groupAlias || ''}\u0000${item.alias}`))
+          const listCodes = new Set(lists.map(item => item.code))
+          if (config.sourceRoot !== 'https://24365.jl.smartedu.cn/') throw new Error(`unexpected sourceRoot=${config.sourceRoot}`)
+          if (!Array.isArray(config.allowedHosts) || !config.allowedHosts.includes('24365.jl.smartedu.cn')) throw new Error('source host allowlist missing')
+          for (const surface of config.articleSurfaces) {
+            if (!columnAliases.has(surface.columnAlias)) throw new Error(`unknown Column target ${surface.columnAlias}`)
+            if (!surface.path.startsWith('/')) throw new Error(`unbounded article path ${surface.path}`)
+          }
+          for (const surface of config.pageSurfaces) {
+            const key = `${surface.target.groupAlias || ''}\u0000${surface.target.pageAlias}`
+            if (!pageKeys.has(key)) throw new Error(`unknown Page target ${key}`)
+            if (!surface.path.startsWith('/')) throw new Error(`unbounded Page path ${surface.path}`)
+          }
+          for (const excluded of config.excludedStablePages || []) {
+            const key = `${excluded.groupAlias || ''}\u0000${excluded.pageAlias}`
+            if (!pageKeys.has(key)) throw new Error(`unknown excluded Page target ${key}`)
+          }
+          for (const definition of [config.home.carousel, ...(config.home.siteLinkLists || [])]) {
+            if (!listCodes.has(definition.listCode)) throw new Error(`unknown List target ${definition.listCode}`)
+          }
+          console.log(JSON.stringify({articleSurfaces: config.articleSurfaces.length, pageSurfaces: config.pageSurfaces.length, listSurfaces: 1 + config.home.siteLinkLists.length}))
+          NODE
+
+  probe:
+    name: External Main source probe
+    if: github.event_name == 'workflow_dispatch'
+    needs: tooling
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Install migration dependencies
+        working-directory: data-migrations
+        run: npm install --no-audit --no-fund
+      - name: Probe bounded Main source surfaces
+        working-directory: data-migrations
+        env:
+          MIGRATION_OUTPUT: main/v1/generated-probe
+        run: npm run probe:main
+      - name: Upload Main source probe evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: eu50-main-probe-${{ github.sha }}
+          path: data-migrations/main/v1/generated-probe
+          if-no-files-found: error
+          retention-days: 7
