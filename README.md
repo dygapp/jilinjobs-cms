@@ -29,20 +29,42 @@ Fresh Context 按以下入口恢复，避免把历史执行记录当作当前 Au
 
 ## 当前 Planning Gate
 
-Issue #92 — E1～E3 前置 Repository Authority 与 Migration Architecture 收敛路线的 Phase 0～Phase 3 已完成；Phase 3 **Canonical Migration Compatibility & E1～E3 Re-entry = PASS**。
+Issue #92 — E1～E3 前置 Repository Authority 与 Migration Architecture 收敛路线的 Phase 0～Phase 3 已完成；Phase 3 **Canonical Migration Compatibility & E1～E3 Re-entry = PASS**。Issue #60 / E1～E3 已进入正式 Planning，并完成当前 dependency closure：
 
-- Phase 0 已完成；
-- Phase 1 Repository Documentation Authority Convergence 已完成；
-- Phase 2A **EU-46 — Backend Application / Core Boundary Foundation** 已完成并归档；
-- Phase 2B **EU-47 — Generic Content Migration Application Foundation** 已完成并归档；
-- Phase 2C **EU-48 — Party Migration De-specialization & Compatibility** 已完成并归档；
-- Phase 3 已基于 integrated Phase 2A～2C Authority 与 Current Evidence 完成完整链路 compatibility closure；未发现需要新增 Phase 3 implementation Unit 的 gap；
-- Current Ready Execution Unit：**NONE**；
-- Issue #60 / E1～E3：**re-entry PASS / Planning & Requirement Candidates**；允许重新进入 Requirement / Specification / 必要 Technical Planning，但没有 Execute Authority；
+```text
+E1 Main External-link Ownership & Behavior Boundary
+   └─ Planning / Authority closure；no implementation Unit
+        ↓
+E2 Main Single-page Formal Content
+   └─ EU-49 Page Operational Content Ownership & Migration Foundation — READY
+        ↓
+E3 Main Historical Content Collection & Canonical Migration
+   └─ downstream Requirement / Specification ready；等待 EU-49 completion 后重新 slice
+```
+
+当前状态：
+
+- E1 Requirement / Specification：**READY / Planning closure**；当前 Repository audit 无 implementation gap，不创建 Execution Unit；
+- **Current Ready Execution Unit：EU-49 — Page Operational Content Ownership & Migration Foundation**；
+- EU-49 Readiness：**PASS**；Planning baseline = `main@f42bacf4ab7719e3291288c77f0685b428b86141`；
+- EU-49 Execute：**NOT STARTED**；本 Planning / Readiness integration 不自动建立 Execute baseline；
+- E3 Requirement / Specification：**READY as downstream contract**，但依赖 EU-49 foundation；当前不编号、不具备 Execute Authority，也不得提前开始 Main source collection / canonical promotion；
 - Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层长期边界；
 - Repository Split Readiness Assessment 继续 deferred，不自动阻塞 E1～E3。
 
-下一实际 Planning 入口由 **GitHub Issue #60** 的 E1～E3 candidate set 承担。任何候选仍必须独立完成 `Intent / Requirement → Ready Specification → 必要 Technical Planning → slice-work → Candidate Execution Unit → readiness-check`；Phase 3 PASS、Issue 顺序或未来 EU 名称都不能替代该状态链。
+EU-49 Execute 前必须使用新的 Fresh Context，从 integrated `main` 重新核验 Repository Authority、Issue #60、EU-49 Requirement / Specification / Technical Plan / Work Authority、Open PR / Actions、Readiness 与 base drift；只有仍无 Authority change / blocker 时，才允许建立 EU-49 自身 Execute baseline。不得继承 EU-48、Phase 3 或 E1 的 Authority。
+
+Current Main formal-content Planning Authority：
+
+- Overall plan：`docs/project/main-site-formal-content-plan.md`；
+- E1 Requirement：`docs/requirements/main-external-link-boundary.md`；
+- E1 Specification：`docs/specifications/main-external-link-boundary.md`；
+- E2 Requirement：`docs/requirements/main-single-page-formal-content.md`；
+- E2 Specification：`docs/specifications/main-single-page-formal-content.md`；
+- E2 Technical Plan：`docs/technical/main-single-page-formal-content.md`；
+- EU-49 Work Authority：`docs/work/current/eu49-page-content-migration-foundation.md`；
+- E3 Requirement：`docs/requirements/main-historical-content-migration.md`；
+- E3 Specification：`docs/specifications/main-historical-content-migration.md`。
 
 Phase 2C accepted Authority：
 
