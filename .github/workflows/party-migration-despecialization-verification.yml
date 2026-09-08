@@ -28,7 +28,21 @@ jobs:
   party-migration-despecialization:
     name: Party adapter and compatibility authority verify
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_ROOT_HOST: "%"
+          MYSQL_DATABASE: party_migration_verify
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=12
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-java@v5
@@ -38,6 +52,10 @@ jobs:
       - uses: gradle/actions/setup-gradle@v6
         with:
           gradle-version: "9.6.1"
-      - name: Verify Party authority separation and delegation
+      - name: Verify Party authority separation, compatibility guards and Generic delegation
         working-directory: backend
+        env:
+          PARTY_MIGRATION_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/party_migration_verify?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          PARTY_MIGRATION_VERIFY_DB_USERNAME: root
+          PARTY_MIGRATION_VERIFY_DB_PASSWORD: root
         run: gradle verifyPartyMigrationDespecialization --no-daemon

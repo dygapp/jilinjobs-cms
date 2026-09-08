@@ -94,6 +94,12 @@ fun JavaExec.configureServerVerification(mainClassName: String) {
     mainClass.set(mainClassName)
 }
 
+fun JavaExec.configureMigrationVerification(mainClassName: String) {
+    dependsOn(":apps:content-migration:testClasses")
+    classpath = migrationSourceSets.getByName("test").runtimeClasspath
+    mainClass.set(mainClassName)
+}
+
 tasks.register<JavaExec>("verifySitePackageFoundation") {
     group = "verification"
     description = "Verify Site Package provisioning against a real MySQL V1 generic schema"
@@ -127,25 +133,31 @@ tasks.register<JavaExec>("verifySitePackageAssets") {
 tasks.register<JavaExec>("verifyContentMigrationBoundary") {
     group = "verification"
     description = "Verify Content Migration is non-web, excludes Server transport and composes Core/Flyway/Party capabilities"
-    dependsOn(":apps:content-migration:testClasses")
-    classpath = migrationSourceSets.getByName("test").runtimeClasspath
-    mainClass.set("com.jilinjobs.cms.ContentMigrationBoundaryVerificationKt")
+    configureMigrationVerification("com.jilinjobs.cms.ContentMigrationBoundaryVerificationKt")
 }
 
 tasks.register<JavaExec>("verifyGenericContentMigration") {
     group = "verification"
     description = "Verify site-neutral canonical migration preflight, execution, idempotency and failure semantics"
-    dependsOn(":apps:content-migration:testClasses")
-    classpath = migrationSourceSets.getByName("test").runtimeClasspath
-    mainClass.set("com.jilinjobs.cms.GenericContentMigrationVerificationKt")
+    configureMigrationVerification("com.jilinjobs.cms.GenericContentMigrationVerificationKt")
 }
 
-tasks.register<JavaExec>("verifyPartyMigrationDespecialization") {
+tasks.register<JavaExec>("verifyPartyMigrationSourceAuthority") {
+    group = "verification"
+    description = "Verify EU-48 Party current authority stays dataset-owned and Generic package stays Party-free"
+    configureMigrationVerification("com.jilinjobs.cms.PartyMigrationDespecializationVerificationKt")
+}
+
+tasks.register<JavaExec>("verifyPartyMigrationCompatibilityRuntime") {
+    group = "verification"
+    description = "Verify EU-48 Party old-state compatibility guards, in-place transition and Generic post-transition SKIP"
+    configureMigrationVerification("com.jilinjobs.cms.PartyMigrationCompatibilityRuntimeVerificationKt")
+}
+
+tasks.register("verifyPartyMigrationDespecialization") {
     group = "verification"
     description = "Verify EU-48 Party authority separation, bounded compatibility and Generic steady-state delegation"
-    dependsOn(":apps:content-migration:testClasses")
-    classpath = migrationSourceSets.getByName("test").runtimeClasspath
-    mainClass.set("com.jilinjobs.cms.PartyMigrationDespecializationVerificationKt")
+    dependsOn("verifyPartyMigrationSourceAuthority", "verifyPartyMigrationCompatibilityRuntime")
 }
 
 tasks.register("verifyBackendApplicationBoundary") {
