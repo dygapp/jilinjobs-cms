@@ -30,6 +30,7 @@ jobs:
         working-directory: data-migrations
         run: |
           node --check tools/main-source-probe.mjs
+          node --check tools/main-source-inventory.mjs
           node - <<'NODE'
           const fs = require('fs')
           const config = JSON.parse(fs.readFileSync('main/source-surfaces.json', 'utf8'))
@@ -49,6 +50,8 @@ jobs:
             const key = `${surface.target.groupAlias || ''}\u0000${surface.target.pageAlias}`
             if (!pageKeys.has(key)) throw new Error(`unknown Page target ${key}`)
             if (!surface.path.startsWith('/')) throw new Error(`unbounded Page path ${surface.path}`)
+            if (!['RICH_TEXT', 'GUIDE_CARDS'].includes(surface.contentMode)) throw new Error(`unsupported Page contentMode ${surface.contentMode}`)
+            if (!Array.isArray(surface.selectors) || surface.selectors.length === 0) throw new Error(`missing Page selector ${surface.key}`)
           }
           for (const excluded of config.excludedStablePages || []) {
             const key = `${excluded.groupAlias || ''}\u0000${excluded.pageAlias}`
@@ -56,6 +59,7 @@ jobs:
           }
           for (const definition of [config.home.carousel, ...(config.home.siteLinkLists || [])]) {
             if (!listCodes.has(definition.listCode)) throw new Error(`unknown List target ${definition.listCode}`)
+            if (!Array.isArray(definition.selectors) || definition.selectors.length === 0) throw new Error(`missing List selector ${definition.listCode}`)
           }
           console.log(JSON.stringify({articleSurfaces: config.articleSurfaces.length, pageSurfaces: config.pageSurfaces.length, listSurfaces: 1 + config.home.siteLinkLists.length}))
           NODE
@@ -80,11 +84,18 @@ jobs:
         env:
           MIGRATION_OUTPUT: main/v1/generated-probe
         run: npm run probe:main
-      - name: Upload Main source probe evidence
+      - name: Inventory full Main article pagination
+        working-directory: data-migrations
+        env:
+          MIGRATION_OUTPUT: main/v1/generated-inventory
+        run: npm run inventory:main
+      - name: Upload Main source evidence candidate
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: eu50-main-probe-${{ github.sha }}
-          path: data-migrations/main/v1/generated-probe
+          name: eu50-main-source-evidence-${{ github.sha }}
+          path: |
+            data-migrations/main/v1/generated-probe
+            data-migrations/main/v1/generated-inventory
           if-no-files-found: error
           retention-days: 7
