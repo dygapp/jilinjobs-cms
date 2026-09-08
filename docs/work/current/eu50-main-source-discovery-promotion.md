@@ -11,12 +11,9 @@
 - Identifier: **EU-50**
 - Readiness: **PASS**
 - Planning baseline: `main@e6fe7674398ad8c29fa7ff1d62eb500754a66cc8`
-- Execute baseline: **`main@0c38bb0ca3d962b2b79b6c01d318ee292c680715`**
-- Execute state: **IN PROGRESS**
-- Execute Authority: **ACTIVE — Fresh Context revalidation passed on integrated Planning/Readiness state**
-- Implementation branch: `feature/eu-50-main-source-discovery-promotion`
-
-Fresh-context Execute recovery revalidated the integrated `main`, Open PR state, Post-Integration CI #879, Issue #60 / #77 Current Evidence, E3 Authority and this Work Artifact. No base drift or Authority blocker was found. This Execute Authority is limited to EU-50; it does not authorize EU-51 Runtime import/reconciliation/review.
+- Execute baseline: **NOT ESTABLISHED**
+- Execute state: **NOT STARTED**
+- Execute Authority: **NOT YET ACTIVATED — requires Fresh Context revalidation after Planning/Readiness integration**
 
 ## 1. Goal
 
@@ -168,9 +165,9 @@ EU-50 must not intentionally mutate a persistent Main Runtime CMS database as it
 
 ### Verdict
 
-**PASS — EU-50 is the Current Ready Execution Unit.**
+**PASS — EU-50 is the Current Ready Execution Unit once this Planning/Readiness state is integrated.**
 
-Fresh Context Execute revalidation has now passed on integrated `main@0c38bb0ca3d962b2b79b6c01d318ee292c680715`; this exact commit is the EU-50 Execute baseline.
+This Readiness PASS does not establish an Execute baseline from the planning branch. Execute may begin only after Planning/Readiness integration and Fresh Context revalidation of integrated `main`, Issue #60/#77, Open PR/Actions, this Unit Authority and base drift.
 
 ## 11. Downstream
 
