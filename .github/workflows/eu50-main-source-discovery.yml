@@ -8,20 +8,6 @@ on:
       - 'data-migrations/package.json'
       - '.github/workflows/eu50-main-source-discovery.yml'
   workflow_dispatch:
-    inputs:
-      mode:
-        description: 'External-source operation to run'
-        required: true
-        type: choice
-        default: probe
-        options:
-          - probe
-          - collect
-      promote:
-        description: 'Promote a clean collect candidate back to the selected EU-50 branch'
-        required: true
-        type: boolean
-        default: false
 
 permissions:
   contents: read
@@ -74,14 +60,12 @@ jobs:
           console.log(JSON.stringify({articleSurfaces: config.articleSurfaces.length, pageSurfaces: config.pageSurfaces.length, listSurfaces: 1 + config.home.siteLinkLists.length}))
           NODE
 
-  collect:
-    name: External Main source evidence candidate
+  probe:
+    name: External Main source probe
     if: github.event_name == 'workflow_dispatch'
     needs: tooling
     runs-on: ubuntu-latest
-    timeout-minutes: 90
-    permissions:
-      contents: read
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
       - name: Set up Node.js
@@ -91,66 +75,16 @@ jobs:
       - name: Install migration dependencies
         working-directory: data-migrations
         run: npm install --no-audit --no-fund
-      - name: Run bounded source operation
+      - name: Probe bounded Main source surfaces
         working-directory: data-migrations
         env:
-          MIGRATION_OUTPUT: main/v1/generated-${{ inputs.mode }}
-        run: |
-          if [ '${{ inputs.mode }}' = 'probe' ]; then
-            npm run probe:main
-          else
-            npm run collect:main
-          fi
-      - name: Upload Main source evidence candidate
+          MIGRATION_OUTPUT: main/v1/generated-probe
+        run: npm run probe:main
+      - name: Upload Main source probe evidence
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: eu50-main-${{ inputs.mode }}-${{ github.sha }}
-          path: data-migrations/main/v1/generated-${{ inputs.mode }}
+          name: eu50-main-probe-${{ github.sha }}
+          path: data-migrations/main/v1/generated-probe
           if-no-files-found: error
           retention-days: 7
-
-  promote:
-    name: Promote accepted Main canonical snapshot
-    if: github.event_name == 'workflow_dispatch' && inputs.mode == 'collect' && inputs.promote
-    needs: collect
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    permissions:
-      contents: write
-    steps:
-      - name: Guard EU-50 branch promotion
-        run: |
-          case '${{ github.ref_name }}' in
-            feature/eu-50-*) ;;
-            *) echo 'Promotion is restricted to an EU-50 feature branch' >&2; exit 1 ;;
-          esac
-      - uses: actions/checkout@v7
-        with:
-          ref: ${{ github.ref_name }}
-          fetch-depth: 0
-      - name: Download clean collection candidate
-        uses: actions/download-artifact@v8
-        with:
-          name: eu50-main-collect-${{ github.sha }}
-          path: data-migrations/main/v1/generated-collect
-      - name: Verify and stage accepted snapshot
-        working-directory: data-migrations
-        run: |
-          npm run verify:main -- main/v1/generated-collect/canonical
-          rm -rf main/v1/accepted
-          mkdir -p main/v1/accepted
-          cp -a main/v1/generated-collect/canonical/. main/v1/accepted/
-          npm run verify:main -- main/v1/accepted
-          rm -rf main/v1/generated-collect
-      - name: Commit promoted repository evidence
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data-migrations/main/v1/accepted
-          if git diff --cached --quiet; then
-            echo 'Accepted snapshot already matches the branch.'
-            exit 0
-          fi
-          git commit -m 'EU-50: promote accepted Main canonical snapshot'
-          git push origin HEAD:${{ github.ref_name }}
