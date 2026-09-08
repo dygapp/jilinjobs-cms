@@ -18,6 +18,13 @@ interface PageMapper {
     @Select("SELECT id, group_id, alias, name, body_html, render_mode, embed_url, sort_order, enabled, preset FROM cms_page WHERE group_id=#{groupId} ORDER BY sort_order,id") fun findByGroup(@Param("groupId") groupId: Long): List<PageRecord>
     @Insert("INSERT INTO cms_page(group_id,alias,name,body_html,render_mode,embed_url,sort_order,enabled) VALUES(#{groupId},#{alias},#{name},#{bodyHtml},#{renderMode},#{embedUrl},#{sortOrder},#{enabled})") @Options(useGeneratedKeys=true,keyProperty="id") fun insertPage(record: PageRecord): Int
     @Update("UPDATE cms_page SET group_id=#{groupId},alias=#{alias},name=#{name},body_html=#{bodyHtml},render_mode=#{renderMode},embed_url=#{embedUrl},sort_order=#{sortOrder},enabled=#{enabled} WHERE id=#{id}") fun updatePage(record: PageRecord): Int
+    @Update("UPDATE cms_page SET body_html=#{bodyHtml},render_mode=#{renderMode},embed_url=#{embedUrl} WHERE id=#{id}")
+    fun updatePageContent(
+        @Param("id") id: Long,
+        @Param("bodyHtml") bodyHtml: String,
+        @Param("renderMode") renderMode: String,
+        @Param("embedUrl") embedUrl: String?,
+    ): Int
     @Delete("DELETE FROM cms_page WHERE id=#{id}") fun deletePage(@Param("id") id: Long): Int
 }
 
