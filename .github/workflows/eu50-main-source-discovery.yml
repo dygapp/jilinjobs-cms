@@ -33,6 +33,7 @@ jobs:
           node --check tools/main-source-inventory.mjs
           node --check tools/main-source-collector.mjs
           node --check tools/main-candidate-audit.mjs
+          node --check tools/main-collection-problem-index.mjs
           node --check tools/main-source-triage.mjs
           node --check tools/main-resource-gap-probe.mjs
           node - <<'NODE'
@@ -70,7 +71,7 @@ jobs:
           NODE
 
   probe:
-    name: External Main source collection
+    name: External Main source full collection
     if: github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && startsWith(github.head_ref, 'eu50-probe/'))
     needs: tooling
     runs-on: ubuntu-latest
@@ -94,7 +95,7 @@ jobs:
         env:
           MIGRATION_OUTPUT: main/v1/generated-inventory
         run: npm run inventory:main
-      - name: Collect and triage Main canonical candidate
+      - name: Collect complete Main snapshot and classify problems
         working-directory: data-migrations
         env:
           MAIN_INVENTORY_ROOT: main/v1/generated-inventory
@@ -104,28 +105,25 @@ jobs:
           MAIN_MAX_SINGLE_RESOURCE_BYTES: '52428800'
           MAIN_MAX_TOTAL_RESOURCE_BYTES: '1073741824'
           MAIN_DETAIL_CONCURRENCY: '6'
+          MAIN_COLLECTION_ATTEMPT: '1'
+          MAIN_MAX_TARGET_ATTEMPTS: '3'
         run: |
           set +e
           npm run collect:main
           collector_status=$?
           set -e
           echo "collector_status=${collector_status}"
-          npm run triage:main
-      - name: Probe unresolved Main resource gaps
-        if: always()
-        working-directory: data-migrations
-        env:
-          MAIN_CANDIDATE_ROOT: main/v1/generated-candidate
-          MAIN_GAP_PROBE_MAX: '1000'
-          MAIN_GAP_PROBE_CONCURRENCY: '2'
-          MAIN_GAP_PROBE_TIMEOUT_MS: '15000'
-          MAIN_GAP_PROBE_DELAY_MS: '75'
-        run: npm run probe:main-gaps
-      - name: Upload Main source and canonical candidate evidence
+          test -f main/v1/generated-candidate/manifest.json
+          test -f main/v1/generated-candidate/reports/issues.json
+          test -f main/v1/generated-candidate/reports/reconciliation.json
+          npm run audit:main
+          npm run index:main-problems
+          echo "Full collection snapshot completed; classified data problems remain in the artifact for later bounded retry/triage."
+      - name: Upload Main full-pass collection evidence
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: eu50-main-candidate-${{ github.sha }}
+          name: eu50-main-full-pass-${{ github.event.pull_request.head.sha || github.sha }}
           path: |
             data-migrations/main/v1/generated-probe
             data-migrations/main/v1/generated-inventory
