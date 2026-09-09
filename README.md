@@ -29,7 +29,7 @@ Fresh Context 按以下入口恢复，避免把历史执行记录当作当前 Au
 
 ## 当前 Gate
 
-Issue #92 Phase 0～Phase 3 已完成；E1 Main External-link Boundary 以 Planning / Authority closure 收口；E2 已通过 EU-49 完成 Page operational-content ownership 与 site-neutral Generic Page canonical migration foundation。E3 已从 `main@e6fe7674398ad8c29fa7ff1d62eb500754a66cc8` 完成 Fresh Context source-evidence recovery、Technical Planning、`slice-work` 与当前可判定的 `readiness-check`。
+Issue #92 Phase 0～Phase 3 已完成；E1 Main External-link Boundary 以 Planning / Authority closure 收口；E2 已通过 EU-49 完成 Page operational-content ownership 与 site-neutral Generic Page canonical migration foundation；E3 的第一段执行 EU-50 已完成 bounded Legacy Main source discovery、Article-only eligibility 与 accepted current Article subset promotion，并集成到 `main`。
 
 ```text
 E1 Main External-link Ownership & Behavior Boundary
@@ -40,10 +40,10 @@ E2 Main Single-page Formal Content
         ↓
 E3 Main Historical Content Collection & Canonical Migration
    ├─ EU-50 Main Source Discovery & Accepted Snapshot Promotion
-   │    └─ readiness-check PASS
-   │         ↓ accepted repository-owned snapshot
+   │    └─ COMPLETED / integrated accepted current Article subset
+   │         ↓ dependency satisfied
    └─ EU-51 Main Canonical Import, Runtime Reconciliation & Human Review
-        └─ Candidate / Readiness PENDING until EU-50 integration
+        └─ Candidate / Readiness PENDING；no Execute Authority
 ```
 
 当前状态：
@@ -51,16 +51,16 @@ E3 Main Historical Content Collection & Canonical Migration
 - E1 Requirement / Specification：**READY / Planning closure**；无独立 implementation gap；
 - E2 / EU-49：**COMPLETED**；completed Work Evidence 位于 `docs/work/archive/eu49-page-content-migration-foundation.md`；
 - E3 Requirement / Specification / Technical Plan：**READY**；
-- `slice-work`：形成 **EU-50 + EU-51**；
-- **Current Ready Execution Unit：EU-50**；
-- EU-50 `readiness-check`：**PASS**，scope仅为bounded Legacy Source discovery / completeness/classification / accepted snapshot promotion / offline verification；
-- EU-50 当前 Planning branch **尚未建立 Execute baseline**；只有 Planning/Readiness 集成后从 integrated `main` Fresh Context revalidation 才能进入 Execute；
-- EU-51：**Candidate / NOT READY**；必须等待 EU-50 的 accepted Main canonical snapshot 集成后，再基于实际 accepted identities/counts/digests/resources/exception set重新执行 Readiness；
-- 当前仍没有把 Planning source observation count当成 accepted Main migration count；
+- EU-50：**COMPLETED**；PR #117 已集成，accepted current subset 为 3078 篇 Article（1577 INTERNAL + 1501 EXTERNAL_LINK），canonical resource 2603 files / 450,273,166 bytes，dataset digest 为 `sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`；
+- 6 篇 `SOURCE_RESOURCE_MISSING` Article 继续排除并等待客户确认；230 篇 problem Article 作为 durable deferred evidence 保留，**不属于当前 import input，也不阻断当前项目进程**；
+- EU-50 Execute Authority：**TERMINATED**；completed Work Evidence 位于 `docs/work/archive/eu50-main-source-discovery-promotion.md`；
+- **Current Ready Execution Unit：NONE**；
+- EU-51：**Candidate / NOT READY**；EU-50 accepted snapshot dependency 已满足，但必须从 integrated `main` 重新执行 downstream Readiness，不能继承 EU-50 Execute Authority；
+- Main Page / stable ListItem source findings 属于 JilinJobs Site Package follow-up，保持独立 Planning Gate，不因 EU-50 completion 自动进入 Execute；
 - Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层长期边界；
-- Repository Split Readiness Assessment、C1/C2、Issue #57/#59 保持独立候选，不阻塞 EU-50。
+- Repository Split Readiness Assessment、C1/C2、Issue #57/#59 保持独立候选。
 
-下一自然 Gate 是 **EU-50 Fresh Context Execute-baseline recovery**。在 Planning/Readiness change 完成 Integration 后，必须重新核验 integrated `main`、Issue #60/#77、Open PR / Actions、E3 Authority、EU-50 Current Work 与 base drift；只有 Authority仍有效且无 blocker 时，才能建立新的 Execute baseline并开始 Main source collection / canonical promotion。不得继承 EU-49、EU-48、Phase 3 或 E1 的 Execute Authority。
+下一自然 Gate 是 **Issue #60 / E3 的 Fresh Context downstream planning / readiness decision**：重新读取 integrated `main`、Issue #60/#77、E3 Authority、EU-50 archived evidence 与 current canonical dataset，在不处理 deferred problem Articles 的前提下判断 EU-51 与 Site Package follow-up 的依赖和 Readiness。只有新的 Execution Unit 通过 `readiness-check` 后才能建立 Execute Authority；不得因为 EU-50 已完成就直接进入 EU-51 Execute。
 
 Current Main formal-content Authority：
 
@@ -74,7 +74,7 @@ Current Main formal-content Authority：
 - E3 Requirement：`docs/requirements/main-historical-content-migration.md`；
 - E3 Specification：`docs/specifications/main-historical-content-migration.md`；
 - E3 Technical Plan：`docs/technical/main-historical-content-migration.md`；
-- EU-50 Current Work：`docs/work/current/eu50-main-source-discovery-promotion.md`；
+- EU-50 Completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`；
 - EU-51 Candidate：由 E3 Technical Plan / Roadmap 跟踪；在 Readiness PASS 前不进入 `docs/work/current/`。
 
 Phase 2C accepted Authority：
