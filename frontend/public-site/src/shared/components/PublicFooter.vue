@@ -52,14 +52,9 @@ const legacyClass = computed(() => props.theme === 'main' ? 'site-footer' : 'par
       </div>
 
       <aside class="shared-public-footer-badges" aria-label="网站官方信息">
-        <a
-          class="shared-public-institution-badge public-institution-badge"
-          href="https://bszs.conac.cn/sitename?method=show&id=275F0728763C767CE053022819ACA2F2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div class="shared-public-institution-badge public-institution-badge">
           <img :src="publicInstitutionBadge" alt="事业单位">
-        </a>
+        </div>
         <div class="shared-public-wechat-entry wechat-entry">
           <img :src="wechatQr" alt="吉林省大学生就业创业微信公众号二维码">
           <span>吉林省大学生就业创业</span>

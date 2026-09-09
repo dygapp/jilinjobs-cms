@@ -31,11 +31,9 @@ test('视觉基线：页脚备案、事业单位、公众号与 favicon 使用�
   await expect(page.locator('.public-security-record')).toContainText('吉公网安备 22010702000243号')
   await expect(page.locator('.public-security-record img')).toHaveAttribute('src', '/static/footer/public-security-record.png')
   await expect(page.locator('.public-institution-badge img')).toHaveAttribute('src', '/static/footer/public-institution.png')
-  await expect(page.locator('.public-institution-badge')).toHaveAttribute('href', 'https://bszs.conac.cn/sitename?method=show&id=275F0728763C767CE053022819ACA2F2')
-  await expect(page.locator('.public-institution-badge')).toHaveAttribute('target', '_blank')
-  await expect(page.locator('.public-institution-badge')).toHaveAttribute('rel', 'noopener noreferrer')
   await expect(page.locator('.wechat-entry img')).toHaveAttribute('src', '/static/footer/wechat-qr.png')
   await expect(page.locator('.wechat-entry')).toContainText('吉林省大学生就业创业')
+  await expect(page.locator('.public-institution-badge')).not.toHaveAttribute('href')
   await expect(page.locator('.wechat-entry')).not.toHaveAttribute('href')
   await expect(footer.locator('strong')).toHaveText(configuredCopyright!)
 

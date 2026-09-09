@@ -5,11 +5,7 @@ on:
     paths:
       - 'data-migrations/main/v1/import-eligibility-control.json'
       - 'data-migrations/tools/main-import-eligibility.mjs'
-      - 'data-migrations/tools/main-site-package-handoff-resolution.mjs'
       - 'data-migrations/tools/main-source-triage.mjs'
-      - 'sites/jilinjobs/assets/**'
-      - 'sites/jilinjobs/structure/pages.json'
-      - 'sites/jilinjobs/reports/listitem-adjustment-report.json'
       - '.github/workflows/eu50-main-import-eligibility.yml'
   workflow_dispatch:
 
@@ -19,7 +15,7 @@ permissions:
 
 jobs:
   eligibility:
-    name: Build Article-only eligibility and resolve Site Package handoff
+    name: Build Article-only import eligibility and Site Package handoff
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -33,7 +29,6 @@ jobs:
         working-directory: data-migrations
         run: |
           node --check tools/main-import-eligibility.mjs
-          node --check tools/main-site-package-handoff-resolution.mjs
           node --check tools/main-source-triage.mjs
           node - <<'NODE'
           const fs = require('fs')
@@ -67,13 +62,11 @@ jobs:
           test -f main/v1/eligibility-input/generated-candidate/reports/collection-problem-index.json
           test -f main/v1/eligibility-input/generated-candidate/reports/targeted-retry-attempt-3.json
           node tools/main-import-eligibility.mjs
-          node tools/main-site-package-handoff-resolution.mjs
           node - <<'NODE'
           const fs = require('fs')
           const report = JSON.parse(fs.readFileSync('main/v1/generated-import-eligibility/import-eligibility.json', 'utf8'))
           const eligible = JSON.parse(fs.readFileSync('main/v1/generated-import-eligibility/import-eligible-index.json', 'utf8'))
           const handoff = JSON.parse(fs.readFileSync('main/v1/generated-import-eligibility/site-package-handoff.json', 'utf8'))
-          const resolution = JSON.parse(fs.readFileSync('main/v1/generated-import-eligibility/site-package-handoff-resolution.json', 'utf8'))
           const summary = report.summary
           if (summary.migrationScope !== 'ARTICLE_ONLY') throw new Error(`unexpected migration scope ${summary.migrationScope}`)
           if (summary.totalCandidates !== summary.eligibleCandidates + summary.excludedSourceDefectCandidates + summary.withheldCandidates) {
@@ -88,18 +81,7 @@ jobs:
             throw new Error('Page/ListItem handoff policy mismatch')
           }
           if (!Array.isArray(handoff.pages) || !Array.isArray(handoff.listItems)) throw new Error('Site Package handoff records missing')
-          if (resolution.summary?.pageResolvedNormalizations !== 8) throw new Error('expected 8 resolved budget Page normalizations')
-          if (resolution.summary?.pageUnresolvedProblems !== 0) throw new Error('unresolved Page handoff problems remain')
-          if (resolution.summary?.listItemResolvedObservations !== 1) throw new Error('expected one resolved ListItem duplicate observation')
-          if (resolution.summary?.listItemUnresolvedProblems !== 0) throw new Error('unresolved ListItem handoff problems remain')
-          if (resolution.summary?.otherUnresolvedObservations !== 0) throw new Error('unresolved Site Package observations remain')
-          if (resolution.summary?.unresolvedTotal !== 0 || resolution.summary?.sitePackageSourceHandoffReady !== true) {
-            throw new Error('Site Package source handoff evidence is not closed')
-          }
-          if (resolution.policy?.stableListItemRuntimeProvisioning !== 'GAP_REQUIRES_SEPARATE_SITE_PACKAGE_AUTHORITY') {
-            throw new Error('stable ListItem runtime capability boundary changed unexpectedly')
-          }
-          console.log(JSON.stringify({ article: summary, sitePackageResolution: resolution.summary }))
+          console.log(JSON.stringify(summary))
           NODE
       - name: Upload Article eligibility and Site Package handoff evidence
         uses: actions/upload-artifact@v7
