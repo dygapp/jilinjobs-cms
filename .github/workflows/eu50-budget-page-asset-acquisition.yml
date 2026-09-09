@@ -1,0 +1,69 @@
+name: EU-50 Budget Page Asset Acquisition
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/eu50-budget-page-asset-acquisition.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    name: Acquire confirmed budget Page PDFs
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - name: Download confirmed Page PDF assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p budget-page-assets
+          cat > budget-page-assets/sources.tsv <<'EOF'
+          budget-2023.pdf	https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2023-02-27/8331fd04-91d2-4365-8576-44a7adb40d44.pdf
+          budget-2024.pdf	https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2024-03-12/d87173cd-8a3f-4667-a042-ece836a0f0ea.pdf
+          budget-2025.pdf	https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2025-03-07/ceb5b088-6158-4b73-b446-3cf650194866.pdf
+          budget-2026.pdf	https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2026-03-17/84773049-6580-4c9d-87ce-ab29f9576157.pdf
+          final-accounts-2022.pdf	https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2023-09-08/e74779f2-e551-43ad-a5f8-0a91020e8d00.pdf
+          final-accounts-2023.pdf	https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2024-09-12/f7b003d5-9074-4d26-ac58-827131c02f22.pdf
+          final-accounts-2024.pdf	https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2025-09-05/4851fa77-f787-4d7f-be10-34490a98df0f.pdf
+          final-accounts-2025.pdf	https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2026-09-04/75b071b2-c354-4690-bb8e-2bdc25e600bb.pdf
+          EOF
+          while IFS=$'\t' read -r name url; do
+            echo "acquire $name"
+            curl --fail --location --silent --show-error \
+              --connect-timeout 20 --max-time 120 \
+              --retry 1 --retry-delay 2 \
+              --output "budget-page-assets/$name" "$url"
+            test -s "budget-page-assets/$name"
+            magic="$(head -c 5 "budget-page-assets/$name")"
+            test "$magic" = '%PDF-'
+          done < budget-page-assets/sources.tsv
+          python - <<'PY'
+          import hashlib, json, pathlib
+          root = pathlib.Path('budget-page-assets')
+          urls = {}
+          for line in (root / 'sources.tsv').read_text().splitlines():
+              name, url = line.split('\t', 1)
+              urls[name] = url
+          records = []
+          for name, url in urls.items():
+              data = (root / name).read_bytes()
+              records.append({
+                  'file': name,
+                  'sourceUrl': url,
+                  'sizeBytes': len(data),
+                  'sha256': hashlib.sha256(data).hexdigest(),
+                  'pdfMagic': data.startswith(b'%PDF-'),
+              })
+          (root / 'manifest.json').write_text(json.dumps({'records': records}, ensure_ascii=False, indent=2) + '\n')
+          print(json.dumps(records, ensure_ascii=False))
+          PY
+      - name: Upload acquired Page assets
+        uses: actions/upload-artifact@v7
+        with:
+          name: eu50-budget-page-assets-${{ github.event.pull_request.head.sha }}
+          path: budget-page-assets
+          if-no-files-found: error
+          retention-days: 7
