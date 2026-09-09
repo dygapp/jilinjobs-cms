@@ -7,13 +7,14 @@
 - E1: **COMPLETED / Authority-only**
 - E2 / EU-49: **COMPLETED**
 - E3: **ACTIVE**
-- Current Execution Unit: **EU-50 — Main Source Discovery & Article Snapshot Promotion**
-- EU-51: **BLOCKED / no Execute Authority**
+- EU-50 — Main Source Discovery & Article Snapshot Promotion: **COMPLETED / Execute Authority TERMINATED**
+- EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review: **Candidate / NOT READY / no Execute Authority**
+- Current Ready Execution Unit: **NONE**
 - Ownership correction: **2026-09-09 — Main Page and stable ListItem content belong to JilinJobs Site Package**
 
 ## 1. Current planning boundary
 
-Issue #60 E1～E3 remains the Main formal-content planning authority, but the current product ownership boundary is now:
+Issue #60 E1～E3 remains the Main formal-content planning authority, but the current product ownership boundary is:
 
 ```text
 Main Article historical content
@@ -62,24 +63,36 @@ EU-49 is not reopened and its historical Execute Authority is not inherited.
 
 ## 5. E3 current split
 
-### EU-50 — Main Source Discovery & Article Snapshot Promotion
+### EU-50 — Main Source Discovery & Article Snapshot Promotion — COMPLETED
 
-EU-50 may contact the Legacy Source only in explicit collection/evidence runs. It owns:
+EU-50 completed the explicit external-source stage and integrated the accepted current Article subset through PR #117.
 
-- complete Main Article surface/pagination discovery;
-- INTERNAL / EXTERNAL_LINK Article classification;
-- Article body/resource collection;
-- retry/error classification and no-silent-repair evidence;
-- Article-only import eligibility / accepted snapshot promotion;
-- Page/List discovery only as bounded Site Package source handoff evidence.
+Accepted result:
 
-Page/List source findings must be retained and classified, but they do not enter `data-migrations/main/v1` Article import eligibility and do not block Article eligibility merely because Site Package follow-up is still pending.
+- total Article candidates: 3314；
+- current import-eligible: 3078 = 1577 INTERNAL + 1501 EXTERNAL_LINK；
+- source-defect excluded pending client confirmation: 6；
+- deferred problem Articles: 230；
+- current accepted resources: 2603 files / 450,273,166 bytes；
+- canonical dataset: `data-migrations/main/v1/**`；
+- dataset digest: `sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`；
+- Page/List discoveries preserved as Site Package handoff evidence；
+- no Runtime Main import was performed。
+
+Current Human Authority explicitly defers the 230 problem Articles and the separately excluded source-defect set until later review. They remain durable evidence, are not current import input, and do not block the current project sequence. EU-50 must not be reopened merely to repair/guess those records.
+
+EU-50 completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`。Execute Authority is terminated.
 
 ### EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review
 
-EU-51 remains blocked until EU-50 produces an accepted **Article-only** snapshot and its own Fresh Context readiness is established.
+EU-50 accepted Article snapshot dependency is now satisfied, but EU-51 remains a Candidate until a Fresh Context re-runs downstream dependency closure and `readiness-check` against the integrated canonical dataset.
 
-EU-51 must not import Main Page/List content through Historical Migration merely to bypass the Site Package boundary.
+EU-51 must not:
+
+- inherit EU-50 Execute Authority；
+- import deferred/source-defect Articles；
+- import Main Page/List content through Historical Migration merely to bypass the Site Package boundary；
+- begin Runtime mutation before Readiness PASS。
 
 ## 6. Site Package follow-up Gate
 
@@ -89,38 +102,41 @@ The ownership correction creates a separate Site Package planning finding:
 2. Main stable ListItem membership requires a new Site Package capability decision because v1 currently supports `lists` definitions but not stable `list-items` provisioning/reconcile.
 3. The existing one-time bootstrap ListItems cannot simply be relabelled stable without defining stable identity, ownership/adoption, reconcile, operator mutation and upgrade semantics.
 
-This finding does **not** expand EU-50 Execute Authority into CMS Core/Site Package provisioning implementation.
+This finding is not a hidden EU-50 continuation and does not gain Execute Authority from EU-50 completion.
 
 ## 7. Source-error boundary
 
-EU-50 keeps the explicit error policy:
+The accepted error policy remains:
 
 - only confirmed HTTP 404/410 resource absence may be classified `SOURCE_RESOURCE_MISSING`;
 - INTERNAL Articles whose every blocking issue is that class may be excluded pending client confirmation and must remain separately listed;
 - all other Article error types remain separately classified / human-reviewable;
 - transport/socket failures are never inferred to be missing-source evidence;
-- Page/List errors are preserved in Site Package handoff reports and are not silently repaired, discarded or converted into migration decisions.
+- Page/List errors are preserved in Site Package handoff reports and are not silently repaired, discarded or converted into migration decisions；
+- deferred problem Articles remain durable later-review evidence and are excluded from current import input。
 
 ## 8. Current Gate
 
-The immediate work sequence is:
+The current sequence is now:
 
 ```text
-EU-50 frozen source/retry evidence
-→ Article-only eligibility + Page/List Site Package handoff
-→ resolve remaining Article human-review classifications
-→ Article accepted snapshot promotion / EU-50 integration
-→ separate Site Package Planning for Page/List content capability
-→ only then re-evaluate EU-51 readiness from integrated Article snapshot
+EU-50 accepted current Article subset — INTEGRATED
+→ Current Ready Execution Unit = NONE
+→ Fresh Context downstream planning / dependency closure
+   ├─ EU-51 readiness against integrated Article dataset
+   └─ Site Package Page/List follow-up readiness
+→ only a new readiness-check PASS can grant Execute Authority
 ```
 
-No step in this plan grants EU-51 Execute Authority.
+The deferred Article/client-confirmation backlog is processed separately after the current task sequence and does not block this Gate.
+
+No step in this plan grants EU-51 Execute Authority automatically.
 
 ## 9. Non-goals
 
 - no Page/List migration fallback;
 - no speculative Main-specific Runtime importer;
-- no CMS Core stable ListItem redesign inside EU-50;
+- no CMS Core stable ListItem redesign inside Historical Migration;
 - no Public frontend technology change;
 - no Party canonical rewrite;
 - no `agentic-dev` baseline update.
