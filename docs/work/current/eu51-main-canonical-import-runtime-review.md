@@ -11,8 +11,9 @@
 - Candidate formed by: prior E3 `slice-work`
 - Readiness: **PASS**
 - Readiness baseline: `main@fd192460cb481645c1f1af435cbe5451145797d9`
-- Execute baseline: **PENDING — establish only after this Planning/Readiness state is integrated**
-- Execute state: **NOT STARTED**
+- Execute baseline: **`main@04090a3cc8dd9c85112488f036c4bc1a67003594`**
+- Execute state: **ACTIVE**
+- Execution branch: `feature/eu-51-main-canonical-import-runtime-review`
 - Current migration scope: **ARTICLE ONLY / accepted current subset only**
 - EU-50 dependency: **SATISFIED / Execute Authority TERMINATED**
 - Deferred problem Articles: **later separate review; not EU-51 import input**
@@ -184,8 +185,8 @@ Changes to Generic migration code are allowed only if execution proves a real si
 
 ## 11. Execute Gate
 
-This Work artifact establishes **Readiness only**. It does not establish an Execute baseline on the Planning/Readiness branch.
+Fresh-context recovery after Planning/Readiness integration is complete.
 
-After this state is integrated, a Fresh Context must re-read actual `main`, Issue #60 / #77, Open PR / Actions, E3 Authority, this Work artifact and the canonical manifest; it must verify no base/authority drift and then establish EU-51's independent Execute baseline.
+Execute baseline is **`main@04090a3cc8dd9c85112488f036c4bc1a67003594`**. The recovery re-read actual `main`, Issue #60 / #77, Open PR / Actions, E3 Authority, this Work artifact and `data-migrations/main/v1/manifest.json`; no base/authority/canonical drift was found. PR #121 exact-head CI #948 and Review Environment #832 both passed before integration, and Post-Integration CI #949 passed Backend / Admin / Public / Integrated Browser on the execute baseline.
 
-Until that recovery succeeds, no Runtime Main import is authorized. EU-51 does not inherit EU-50, EU-49, EU-48, Phase 3 or E1 Execute Authority.
+EU-51 Execute Authority is therefore **ACTIVE** on `feature/eu-51-main-canonical-import-runtime-review`. This authority is limited to the accepted 3078-Article current subset and the verification/orchestration boundary defined above. It does not inherit EU-50, EU-49, EU-48, Phase 3 or E1 authority and does not authorize Page/List Site Package work or deferred/source-defect Article handling.
