@@ -7,6 +7,17 @@
   "sourceArtifactDigest": "sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494",
   "sourceHead": "a96cee22449508f92f3c89789f99aad477286a66",
   "finalRetryAttempt": 3,
+  "acceptedPromotion": {
+    "commit": "3f34eb403b43fda734fffa014bac6afff5bc38fd",
+    "datasetDigest": "sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a",
+    "currentImportEligibleArticles": 3078,
+    "internalArticles": 1577,
+    "externalArticles": 1501,
+    "sourceDefectExcludedArticles": 6,
+    "deferredProblemArticles": 230,
+    "resourceFiles": 2603,
+    "resourceBytes": 450273166
+  },
   "policy": {
     "currentImport": "IMPORT_ELIGIBLE_INDEX_ONLY",
     "default": "WITHHOLD_UNRESOLVED_OR_UNAPPROVED_ERRORS_FROM_CURRENT_IMPORT",
