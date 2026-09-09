@@ -1,0 +1,207 @@
+name: EU-51 Main Imported Browser Verification
+
+on:
+  pull_request:
+    paths:
+      - 'data-migrations/main/v1/**'
+      - 'data-migrations/tools/main-verify-accepted-articles.mjs'
+      - 'data-migrations/tools/main-runtime-review-samples.py'
+      - 'frontend/public-site/**'
+      - 'frontend/admin/**'
+      - 'frontend/nginx.e2e.conf'
+      - 'backend/**'
+      - 'sites/jilinjobs/**'
+      - '.github/workflows/eu51-main-browser-verify.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  imported-main-browser:
+    name: Main imported Public/Admin/Integrated Browser
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_ROOT_HOST: '%'
+          MYSQL_DATABASE: jilinjobs_cms
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=12
+
+    env:
+      DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+      DB_USERNAME: root
+      DB_PASSWORD: root
+      CMS_STORAGE_ROOT: ${{ github.workspace }}/eu51-browser-runtime/uploads
+      CMS_STATIC_ROOT: ${{ github.workspace }}/eu51-browser-runtime/static
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: '9.6.1'
+
+      - name: Verify accepted Main canonical input
+        working-directory: data-migrations
+        env:
+          MAIN_CANONICAL_ROOT: main/v1
+        run: node tools/main-verify-accepted-articles.mjs | tee ../eu51-browser-offline-verify.log
+
+      - name: Build Runtime and both frontends
+        run: |
+          set -euo pipefail
+          (cd backend && gradle clean bootJar --no-daemon) & backend_pid=$!
+          (cd frontend/public-site && npm install --no-audit --no-fund && npm run build) & public_pid=$!
+          (cd frontend/admin && npm install --no-audit --no-fund && npm run build) & admin_pid=$!
+          wait "$backend_pid"
+          wait "$public_pid"
+          wait "$admin_pid"
+
+      - name: Prepare Fresh Runtime and provision Site Package
+        run: |
+          set -euo pipefail
+          rm -rf eu51-browser-runtime
+          mkdir -p eu51-browser-runtime/uploads eu51-browser-runtime/static
+          (cd backend && gradle provisionSitePackage --args="../sites/jilinjobs" --no-daemon) | tee eu51-browser-site-package.log
+
+      - name: Import accepted Main canonical Articles
+        run: |
+          set -euo pipefail
+          (cd backend && gradle importCanonicalContent --args="../data-migrations/main/v1" --no-daemon) | tee eu51-browser-import.log
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          line = next(line for line in reversed(Path('eu51-browser-import.log').read_text(encoding='utf-8').splitlines()) if line.startswith('CONTENT_MIGRATION_REPORT '))
+          report = json.loads(line.removeprefix('CONTENT_MIGRATION_REPORT '))
+          assert report['phase'] == 'EXECUTE', report
+          assert report['total'] == 3078 and report['created'] == 3078, report
+          assert report['skipped'] == 0 and report['conflicts'] == 0 and report['invalid'] == 0, report
+          print('EU51_BROWSER_IMPORT_VERIFY PASS')
+          PY
+
+      - name: Export imported Runtime identities for deterministic review sampling
+        run: |
+          set -euo pipefail
+          docker run --rm --network host mysql:8.4 \
+            mysql --default-character-set=utf8mb4 --raw -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT JSON_OBJECT('legacyKey',m.legacy_key,'fingerprint',m.source_fingerprint,'alias',c.alias,'articleType',a.article_type,'externalUrl',COALESCE(a.external_url,''),'runtimeId',a.id,'status',a.status,'sortOrder',a.sort_order,'publishDate',COALESCE(DATE_FORMAT(a.publish_date,'%Y-%m-%d'),''),'title',a.title,'source',a.source) FROM cms_article_legacy_mapping m JOIN cms_article a ON a.id=m.article_id JOIN cms_column c ON c.id=a.column_id WHERE m.source_system='legacy-jilinjobs' AND c.alias IN ('notice','employment-news','recruitment-announcement','policy-month','policy-outside','policy-jilin','policy-national','typical-grassroots','typical-startup','typical-military') ORDER BY m.legacy_key" \
+            > eu51-browser-runtime-articles.ndjson
+
+          docker run --rm --network host mysql:8.4 \
+            mysql --default-character-set=utf8mb4 --raw -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT JSON_OBJECT('legacyKey',m.legacy_key,'role',ar.resource_role,'sortOrder',ar.sort_order,'resourceId',r.id,'storageKey',r.storage_key,'sizeBytes',r.size_bytes) FROM cms_article_legacy_mapping m JOIN cms_article_resource ar ON ar.article_id=m.article_id JOIN cms_resource r ON r.id=ar.resource_id JOIN cms_article a ON a.id=m.article_id JOIN cms_column c ON c.id=a.column_id WHERE m.source_system='legacy-jilinjobs' AND c.alias IN ('notice','employment-news','recruitment-announcement','policy-month','policy-outside','policy-jilin','policy-national','typical-grassroots','typical-startup','typical-military') ORDER BY m.legacy_key,ar.resource_role,ar.sort_order,r.id" \
+            > eu51-browser-runtime-resources.ndjson
+
+      - name: Build deterministic bounded Main review set
+        run: |
+          python3 data-migrations/tools/main-runtime-review-samples.py \
+            --canonical-root data-migrations/main/v1 \
+            --runtime-articles eu51-browser-runtime-articles.ndjson \
+            --runtime-resources eu51-browser-runtime-resources.ndjson \
+            --output frontend/public-site/main-runtime-review-samples.json \
+            | tee eu51-browser-sample-selection.log
+          jq --exit-status '
+            .acceptedArticles == 3078
+            and (.targetAliases | length) == 10
+            and (.columnSamples | length) == 10
+            and .riskSamples.resourceRichInternal.articleType == "INTERNAL"
+            and .riskSamples.externalLink.articleType == "EXTERNAL_LINK"
+            and .riskSamples.oldestPublished.runtimeId > 0
+            and .riskSamples.newestPublished.runtimeId > 0' \
+            frontend/public-site/main-runtime-review-samples.json > /dev/null
+
+      - name: Start imported Main Backend and gateway
+        run: |
+          set -euo pipefail
+          docker run -d --name cms-backend --network host \
+            -e 'DB_URL=jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true' \
+            -e DB_USERNAME=root \
+            -e DB_PASSWORD=root \
+            -e CMS_STATIC_ROOT=/runtime-static \
+            -e CMS_STORAGE_ROOT=/uploads \
+            -e CMS_SITE_PACKAGE_ROOT=/site-package \
+            -e CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true \
+            -v "$GITHUB_WORKSPACE/backend/build/libs:/app:ro" \
+            -v "$GITHUB_WORKSPACE/eu51-browser-runtime/static:/runtime-static" \
+            -v "$GITHUB_WORKSPACE/eu51-browser-runtime/uploads:/uploads" \
+            -v "$GITHUB_WORKSPACE/sites/jilinjobs:/site-package:ro" \
+            eclipse-temurin:21-jre-alpine-3.23 \
+            java -jar /app/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar
+
+          for i in $(seq 1 60); do
+            if curl --fail --silent http://127.0.0.1:8080/api/admin/columns > /dev/null; then break; fi
+            if [ "$i" -eq 60 ]; then docker logs cms-backend; exit 1; fi
+            sleep 2
+          done
+
+          docker run -d --name cms-frontend --network host \
+            -v "$GITHUB_WORKSPACE/frontend/public-site/dist:/usr/share/nginx/html/public:ro" \
+            -v "$GITHUB_WORKSPACE/frontend/admin/dist:/usr/share/nginx/html/admin:ro" \
+            -v "$GITHUB_WORKSPACE/frontend/nginx.e2e.conf:/etc/nginx/nginx.conf:ro" \
+            nginx:1.29.8-alpine
+
+          for i in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:5173/ | grep -qi '<html' \
+              && curl --fail --silent http://127.0.0.1:5173/admin/ | grep -qi '<html'; then exit 0; fi
+            sleep 1
+          done
+          docker logs cms-frontend
+          exit 1
+
+      - name: Verify imported Main Public/Admin/Integrated Browser
+        timeout-minutes: 18
+        run: |
+          docker run --rm --init --ipc=host --network host \
+            -e CI=true \
+            -e CI_EXTERNAL_WEB_SERVER=true \
+            -e MAIN_MIGRATION_RUNTIME=true \
+            -e MAIN_MIGRATION_REVIEW_SAMPLES=/work/main-runtime-review-samples.json \
+            -v "$GITHUB_WORKSPACE/frontend/public-site:/work" \
+            -w /work \
+            mcr.microsoft.com/playwright:v1.61.0-noble \
+            bash -lc 'npm install --no-audit --no-fund && npx playwright test tests/e2e/main-migration-runtime.spec.ts --project=chromium --reporter=line'
+
+      - name: Upload imported Main Browser evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: eu51-main-imported-browser-evidence
+          path: |
+            data-migrations/main/v1/manifest.json
+            eu51-browser-offline-verify.log
+            eu51-browser-site-package.log
+            eu51-browser-import.log
+            eu51-browser-runtime-articles.ndjson
+            eu51-browser-runtime-resources.ndjson
+            eu51-browser-sample-selection.log
+            frontend/public-site/main-runtime-review-samples.json
+            frontend/public-site/test-results
+            frontend/public-site/playwright-report
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Cleanup imported Main Browser Runtime
+        if: always()
+        run: docker rm -f cms-backend cms-frontend || true
