@@ -5,7 +5,8 @@
 - `manifest.json`：package identity / version / component manifest；
 - `structure/`：stable Site structure **and stable Site content**；
 - `bootstrap/`：真正的一次性 Fresh Site ordinary defaults；
-- `assets/`：stable Site asset source 与 integrity metadata。
+- `assets/`：stable Site asset source 与 integrity metadata；
+- `reports/`：Site Package-owned content adjustment / decision provenance；可以被 source handoff verification 消费，但不是 Runtime provisioner 输入。
 
 ## Current ownership
 
@@ -20,6 +21,13 @@
 - historical Main INTERNAL / EXTERNAL_LINK Articles + Article resources/provenance → `../../data-migrations/**`。
 
 Legacy Source 中发现的 Main Page/ListItem 数据可以由 EU-50 作为 source handoff evidence 保留，但不得进入 Main Historical Migration import eligibility。
+
+当前 Main stable site-link ListItem 的人工确认调整结果固化于：
+
+- `reports/listitem-adjustment-report.json`：机器可读决策、provenance 与已解决 handoff observation；
+- `reports/listitem-adjustment-report.md`：人工可读调整报告。
+
+该报告不会因为单次网络探测失败、重定向或非 2xx/3xx 状态自动重写、删除列表数据。
 
 ## Current capability gap
 

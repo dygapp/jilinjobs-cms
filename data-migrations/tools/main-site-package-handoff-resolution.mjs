@@ -6,9 +6,11 @@ const outputRoot = path.resolve(process.env.MAIN_ELIGIBILITY_OUTPUT || 'main/v1/
 const sitePackageRoot = path.resolve(process.env.MAIN_SITE_PACKAGE_ROOT || '../sites/jilinjobs')
 
 const handoffPath = path.join(outputRoot, 'site-package-handoff.json')
+const listItemAdjustmentReportPath = path.join(sitePackageRoot, 'reports/listitem-adjustment-report.json')
 const handoff = JSON.parse(await readFile(handoffPath, 'utf8'))
 const pages = JSON.parse(await readFile(path.join(sitePackageRoot, 'structure/pages.json'), 'utf8'))
 const assetManifest = JSON.parse(await readFile(path.join(sitePackageRoot, 'assets/manifest.json'), 'utf8'))
+const listItemAdjustmentReport = JSON.parse(await readFile(listItemAdjustmentReportPath, 'utf8'))
 
 const budgetResolutionBySource = new Map([
   ['https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2023-02-27/8331fd04-91d2-4365-8576-44a7adb40d44.pdf', '/static/pages/budget/budget-2023.pdf'],
@@ -99,6 +101,33 @@ if (unresolvedPageProblems.length !== 0) {
   throw new Error(`unresolved Page source problems remain: ${JSON.stringify(unresolvedPageProblems.slice(0, 5))}`)
 }
 
+if (listItemAdjustmentReport.ownership !== 'SITE_PACKAGE') {
+  throw new Error('ListItem adjustment report ownership must be SITE_PACKAGE')
+}
+if (listItemAdjustmentReport.policy?.historicalMigrationImportEligible !== false) {
+  throw new Error('ListItem adjustment report must not become Historical Migration input')
+}
+if (listItemAdjustmentReport.policy?.runtimeProvisioningInput !== false) {
+  throw new Error('ListItem adjustment report must not become Runtime provisioning input')
+}
+if (Number(listItemAdjustmentReport.summary?.humanConfirmedAdjustments) !== (listItemAdjustmentReport.adjustments || []).length) {
+  throw new Error('ListItem adjustment report adjustment arithmetic mismatch')
+}
+
+const observationResolutionKey = item => [
+  item.identity || '',
+  item.listCode || '',
+  item.code || '',
+  item.classification || item.originalClassification || '',
+].join('\u0000')
+const configuredObservationResolutions = new Map()
+for (const resolution of listItemAdjustmentReport.resolvedHandoffObservations || []) {
+  const key = observationResolutionKey(resolution)
+  if (configuredObservationResolutions.has(key)) throw new Error(`duplicate ListItem observation resolution: ${key}`)
+  if (resolution.blocking !== false) throw new Error(`resolved ListItem observation must be non-blocking: ${key}`)
+  configuredObservationResolutions.set(key, resolution)
+}
+
 const unresolvedListItemProblems = (handoff.listItems || []).flatMap(item =>
   (item.problems || []).filter(problem => problem.blocking !== false).map(problem => ({
     listCode: item.listCode,
@@ -106,7 +135,32 @@ const unresolvedListItemProblems = (handoff.listItems || []).flatMap(item =>
     ...problem,
   })),
 )
-const unresolvedObservations = (handoff.observations || []).filter(problem => problem.blocking !== false)
+const resolvedListItemObservations = []
+const unresolvedObservations = []
+for (const problem of (handoff.observations || []).filter(item => item.blocking !== false)) {
+  const resolution = configuredObservationResolutions.get(observationResolutionKey(problem))
+  if (!resolution) {
+    unresolvedObservations.push(problem)
+    continue
+  }
+  resolvedListItemObservations.push({
+    ...problem,
+    originalClassification: problem.classification || problem.originalClassification || null,
+    classification: resolution.resolutionClassification,
+    resolutionClassification: resolution.resolutionClassification,
+    decision: resolution.decision,
+    adjustmentIds: resolution.adjustmentIds || [],
+    evidenceReport: 'sites/jilinjobs/reports/listitem-adjustment-report.json',
+    blocking: false,
+  })
+}
+if (resolvedListItemObservations.length !== configuredObservationResolutions.size) {
+  throw new Error(`expected ${configuredObservationResolutions.size} resolved ListItem observations, got ${resolvedListItemObservations.length}`)
+}
+
+const sitePackageSourceHandoffReady = unresolvedPageProblems.length === 0
+  && unresolvedListItemProblems.length === 0
+  && unresolvedObservations.length === 0
 
 const report = {
   generatedAt: new Date().toISOString(),
@@ -116,6 +170,9 @@ const report = {
     budgetPageAssets: 'PACKAGE_OWNED_STABLE_ASSETS',
     budgetPublicRoot: '/static/pages/budget/',
     legacyAbsoluteStorageLayoutRetained: false,
+    listItemAdjustmentEvidence: 'sites/jilinjobs/reports/listitem-adjustment-report.json',
+    stableListItemRuntimeProvisioning: 'GAP_REQUIRES_SEPARATE_SITE_PACKAGE_AUTHORITY',
+    sitePackageContentReadyMeaning: 'SOURCE_HANDOFF_CONTENT_DECISIONS_ONLY_NOT_RUNTIME_PROVISIONING',
     articleMigrationPolicyChanged: false,
   },
   summary: {
@@ -125,11 +182,14 @@ const report = {
     pageResolvedNormalizations: resolvedPageNormalizations.length,
     pageUnresolvedProblems: unresolvedPageProblems.length,
     listItemUnresolvedProblems: unresolvedListItemProblems.length,
+    listItemResolvedObservations: resolvedListItemObservations.length,
     otherUnresolvedObservations: unresolvedObservations.length,
     unresolvedTotal: unresolvedPageProblems.length + unresolvedListItemProblems.length + unresolvedObservations.length,
-    sitePackageContentReady: unresolvedPageProblems.length === 0 && unresolvedListItemProblems.length === 0 && unresolvedObservations.length === 0,
+    sitePackageSourceHandoffReady,
+    sitePackageContentReady: sitePackageSourceHandoffReady,
   },
   resolvedPageNormalizations,
+  resolvedListItemObservations,
   unresolvedPageProblems,
   unresolvedListItemProblems,
   unresolvedObservations,
@@ -144,12 +204,20 @@ const lines = [
   `- Resolved Page normalizations: ${report.summary.pageResolvedNormalizations}`,
   `- Unresolved Page problems: ${report.summary.pageUnresolvedProblems}`,
   `- Unresolved ListItem problems: ${report.summary.listItemUnresolvedProblems}`,
+  `- Resolved ListItem observations: ${report.summary.listItemResolvedObservations}`,
   `- Other unresolved observations: ${report.summary.otherUnresolvedObservations}`,
-  `- Site Package content ready: ${report.summary.sitePackageContentReady}`,
+  `- Source handoff evidence ready: ${report.summary.sitePackageSourceHandoffReady}`,
+  `- Stable ListItem Runtime provisioning: ${report.policy.stableListItemRuntimeProvisioning}`,
   '',
   '## Resolved Page decision',
   '',
   '- `main-page:budget`: 8 Legacy absolute attachment URLs normalized into 13-package-wide coherent `/static/pages/budget/**` attachment ownership. The complete Page attachment set is verified through the Site Package asset manifest and SHA-256.',
+  '',
+  '## Resolved ListItem observations',
+  '',
+  ...resolvedListItemObservations.map(item => `- ${item.originalClassification}: ${item.listCode || item.identity || '<unknown>'} → ${item.resolutionClassification} (${item.decision})`),
+  '',
+  'The durable ListItem decision report is `sites/jilinjobs/reports/listitem-adjustment-report.json`. This closes source handoff classification only; it does not implement stable ListItem Runtime provisioning.',
   '',
   '## Remaining observations',
   '',

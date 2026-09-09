@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "site": "jilinjobs",
+  "scope": "MAIN_STABLE_SITE_LINK_LISTITEM_ADJUSTMENTS",
+  "ownership": "SITE_PACKAGE",
+  "decisionDate": "2026-09-09",
+  "status": "CURRENT_EU50_DISCOVERED_LINK_SET_ADJUSTMENTS_RECORDED",
+  "purpose": "Durably record human-confirmed adjustments to Main stable site-link ListItem source data. This is Site Package decision/provenance evidence, not Historical Migration input and not Runtime ListItem provisioning.",
+  "policy": {
+    "preserveLegacySourceEvidence": true,
+    "silentRepairOrDiscardAllowed": false,
+    "networkReachabilityIsAdjustmentAuthority": false,
+    "humanConfirmedDecisionOverridesSingleProbeReachability": true,
+    "historicalMigrationImportEligible": false,
+    "stableListItemRuntimeProvisioning": "GAP_REQUIRES_SEPARATE_SITE_PACKAGE_AUTHORITY",
+    "runtimeProvisioningInput": false
+  },
+  "sourceEvidence": {
+    "frozenSource": {
+      "runId": 34303771704,
+      "artifactId": 10086056781,
+      "artifactName": "eu50-main-retry-attempt-3-a96cee22449508f92f3c89789f99aad477286a66",
+      "artifactDigest": "sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494",
+      "sourceHead": "a96cee22449508f92f3c89789f99aad477286a66"
+    },
+    "linkAudit": {
+      "runId": 34323764980,
+      "runNumber": 2,
+      "head": "547ac9453fd4ca6b85949810f3991d02f172e02f",
+      "artifactId": 10092940455,
+      "artifactName": "eu50-listitem-link-audit-547ac9453fd4ca6b85949810f3991d02f172e02f",
+      "artifactDigest": "sha256:b0cfd4549c700f0b84edf19bb620b2ebc4c2102b46f7a8dc727ee9d841b5fa16"
+    }
+  },
+  "summary": {
+    "auditedListCodes": [
+      "SITE_REGIONAL_GRADUATES",
+      "SITE_RELATED",
+      "SITE_JILIN_UNIVERSITIES"
+    ],
+    "sourceUniqueLinkCandidatesBeforeRestoration": 95,
+    "restoredCollapsedSourceOccurrences": 1,
+    "finalAuditedLinkOccurrences": 96,
+    "unchangedLinkOccurrences": 94,
+    "humanConfirmedAdjustments": 2,
+    "resolvedHandoffObservations": 1,
+    "perListFinalOccurrences": {
+      "SITE_REGIONAL_GRADUATES": 31,
+      "SITE_RELATED": 5,
+      "SITE_JILIN_UNIVERSITIES": 60
+    },
+    "reachabilityObservation": {
+      "httpOrCurlSuccessful2xx3xx": 30,
+      "probeFailureOrNon2xx3xx": 66,
+      "redirectedOrFinalUrlChanged": 25
+    },
+    "outsideLinkAuditScope": [
+      "HOME_CAROUSEL"
+    ]
+  },
+  "adjustments": [
+    {
+      "id": "SITE_REGIONAL_GRADUATES#18",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "sourceOrder": 18,
+      "legacyKey": "main-site-regional-graduates:url:e6a070c556609334ddc039b1eba8bf8099020f161ebe23b1e1e59e31a1c10333",
+      "title": "湖北省高等院校毕业生就业信息网",
+      "sourceUrl": "http://jyzdzx.scedu.net/",
+      "finalUrl": "https://www.hbbys.com.cn/",
+      "decision": "HUMAN_CONFIRMED_URL_REPLACEMENT",
+      "reason": "The Legacy Source occurrence shared a duplicate URL with the Sichuan occurrence; human confirmation supplied the correct Hubei target.",
+      "auditObservation": {
+        "curlExit": 28,
+        "httpStatus": "000",
+        "finalUrlObserved": "https://www.hbbys.com.cn/",
+        "result": "CONNECT_TIMEOUT",
+        "decisionImpact": "NONE_SINGLE_PROBE_REACHABILITY_IS_NOT_ADJUSTMENT_AUTHORITY"
+      }
+    },
+    {
+      "id": "SITE_REGIONAL_GRADUATES#22",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "sourceOrder": 22,
+      "legacyKey": "main-site-regional-graduates:source-order:22",
+      "title": "四川省高等院校毕业生就业信息网",
+      "sourceUrl": "http://jyzdzx.scedu.net",
+      "finalUrl": "https://bigdata.scbdc.edu.cn:8888/",
+      "decision": "HUMAN_CONFIRMED_RESTORE_COLLAPSED_OCCURRENCE_AND_URL_REPLACEMENT",
+      "reason": "The Legacy Source occurrence was collapsed by duplicate-URL identity; human confirmation preserves it as a separate Sichuan ListItem with the supplied target.",
+      "auditObservation": {
+        "curlExit": 28,
+        "httpStatus": "000",
+        "finalUrlObserved": "https://bigdata.scbdc.edu.cn:8888/",
+        "result": "DNS_OR_CONNECT_TIMEOUT",
+        "decisionImpact": "NONE_SINGLE_PROBE_REACHABILITY_IS_NOT_ADJUSTMENT_AUTHORITY"
+      }
+    }
+  ],
+  "resolvedHandoffObservations": [
+    {
+      "identity": "LIST:SITE_REGIONAL_GRADUATES:HOME_SITE_LINK_DUPLICATE_URL",
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "code": "HOME_SITE_LINK_DUPLICATE_URL",
+      "classification": "DUPLICATE_LIST_LINK_REQUIRES_REVIEW",
+      "resolutionClassification": "SITE_PACKAGE_LIST_LINK_DUPLICATE_RESOLVED_BY_HUMAN_DECISION",
+      "decision": "RESOLVED_BY_DISTINCT_HUMAN_CONFIRMED_TARGETS",
+      "adjustmentIds": [
+        "SITE_REGIONAL_GRADUATES#18",
+        "SITE_REGIONAL_GRADUATES#22"
+      ],
+      "blocking": false
+    }
+  ],
+  "notes": [
+    "The 96-link audit population excludes HOME_CAROUSEL. It is 95 unique discovered site-link candidates plus the restored Sichuan source occurrence.",
+    "The Site Package handoff candidate count also happens to be 96, but that population includes HOME_CAROUSEL and contains only the deduplicated 30 SITE_REGIONAL_GRADUATES candidates. The duplicate observation represents the missing occurrence and is resolved by this report.",
+    "No other ListItem URL is changed merely because the one-time reachability audit failed, redirected, or returned a non-2xx/3xx status."
+  ]
+}
