@@ -5,7 +5,7 @@
   "structure": [
     {"type":"columns","path":"structure/columns.json","sha256":"3d1370bd476d915bfec1ca153c0e9121205d5318e50c7ad923a992299ac960a1"},
     {"type":"page-groups","path":"structure/page-groups.json","sha256":"613b9c1fca20ef21d96d66977e326247727a9bae6b1fcfe695981139cf5c4e7c"},
-    {"type":"pages","path":"structure/pages.json","sha256":"6e3832414f72ee32385bd5fd99678995f2e7199b5f37690a4b6a8dfcbc398b77"},
+    {"type":"pages","path":"structure/pages.json","sha256":"355c68e2117fb2166c119205728058be4d345f81708fd02de1fb8dfba0136362"},
     {"type":"navigation-locations","path":"structure/navigation-locations.json","sha256":"f242dca2f41595fc204e1cb5e8a6205094f5ce0e695110cc8d9a33f34ae6a23c"},
     {"type":"navigation-items","path":"structure/navigation-items.json","sha256":"0c3a7e2ae8cae72dc9c83227670629bc8adbc05ba1e7268b00da07c304c01ead"},
     {"type":"site-config","path":"structure/site-config.json","sha256":"b4aa7dd8ec6829b169092e3d920bffc31b8d1428f7215f30e6e99a3775566499"},
