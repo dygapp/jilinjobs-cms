@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "site": "main",
+  "sourceRunId": 34303771704,
+  "sourceArtifactId": 10086056781,
+  "sourceArtifactName": "eu50-main-retry-attempt-3-a96cee22449508f92f3c89789f99aad477286a66",
+  "sourceArtifactDigest": "sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494",
+  "sourceHead": "a96cee22449508f92f3c89789f99aad477286a66",
+  "finalRetryAttempt": 3,
+  "policy": {
+    "currentImport": "IMPORT_ELIGIBLE_INDEX_ONLY",
+    "default": "WITHHOLD_UNRESOLVED_OR_UNAPPROVED_ERRORS",
+    "fullSnapshotPreserved": true,
+    "runtimeImportPerformedHere": false
+  }
+}

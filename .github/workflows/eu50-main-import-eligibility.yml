@@ -1,0 +1,76 @@
+name: EU-50 Main Import Eligibility
+
+on:
+  pull_request:
+    paths:
+      - 'data-migrations/main/v1/import-eligibility-control.json'
+      - 'data-migrations/tools/main-import-eligibility.mjs'
+      - '.github/workflows/eu50-main-import-eligibility.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  eligibility:
+    name: Build current import-eligible index
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Validate eligibility tooling and provenance
+        id: control
+        working-directory: data-migrations
+        run: |
+          node --check tools/main-import-eligibility.mjs
+          node - <<'NODE'
+          const fs = require('fs')
+          const control = JSON.parse(fs.readFileSync('main/v1/import-eligibility-control.json', 'utf8'))
+          if (Number(control.finalRetryAttempt) !== 3) throw new Error(`finalRetryAttempt must be 3, got ${control.finalRetryAttempt}`)
+          if (!Number.isInteger(Number(control.sourceRunId)) || Number(control.sourceRunId) <= 0) throw new Error('sourceRunId missing')
+          if (!control.sourceArtifactName) throw new Error('sourceArtifactName missing')
+          if (!control.sourceArtifactDigest?.startsWith('sha256:')) throw new Error('sourceArtifactDigest missing')
+          if (!control.sourceHead) throw new Error('sourceHead missing')
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `run_id=${Number(control.sourceRunId)}\n`)
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `artifact_name=${control.sourceArtifactName}\n`)
+          NODE
+      - name: Download final bounded-retry artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: ${{ steps.control.outputs.artifact_name }}
+          path: data-migrations/main/v1/eligibility-input
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: ${{ steps.control.outputs.run_id }}
+      - name: Build import eligibility whitelist
+        working-directory: data-migrations
+        env:
+          MAIN_CANDIDATE_ROOT: main/v1/eligibility-input/generated-candidate
+          MAIN_ELIGIBILITY_OUTPUT: main/v1/generated-import-eligibility
+          MAIN_ELIGIBILITY_CONTROL: main/v1/import-eligibility-control.json
+        run: |
+          test -f main/v1/eligibility-input/generated-candidate/index.ndjson
+          test -f main/v1/eligibility-input/generated-candidate/reports/collection-problem-index.json
+          test -f main/v1/eligibility-input/generated-candidate/reports/targeted-retry-attempt-3.json
+          node tools/main-import-eligibility.mjs
+          node - <<'NODE'
+          const fs = require('fs')
+          const report = JSON.parse(fs.readFileSync('main/v1/generated-import-eligibility/import-eligibility.json', 'utf8'))
+          const summary = report.summary
+          if (summary.totalCandidates !== summary.eligibleCandidates + summary.withheldCandidates) throw new Error('eligibility arithmetic mismatch')
+          if (summary.eligibleCandidates <= 0) throw new Error('no import-eligible candidates')
+          if (summary.finalRetry?.retryableTransient !== 0) throw new Error('retryable targets remain after final retry')
+          console.log(JSON.stringify(summary))
+          NODE
+      - name: Upload import eligibility evidence
+        uses: actions/upload-artifact@v7
+        with:
+          name: eu50-main-import-eligibility-${{ github.event.pull_request.head.sha || github.sha }}
+          path: data-migrations/main/v1/generated-import-eligibility
+          if-no-files-found: error
+          retention-days: 7
