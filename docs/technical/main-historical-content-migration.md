@@ -14,10 +14,11 @@
 - Technical Plan: **READY / ACTIVE**
 - Migration scope: **ARTICLE ONLY**
 - EU-50 — Main Source Discovery & Article Snapshot Promotion: **COMPLETED / Execute Authority TERMINATED**
-- EU-51 — Main Article Import, Runtime Reconciliation & Human Review: **Candidate / NOT READY / no Execute Authority**
-- Current Ready Execution Unit: **NONE**
+- EU-51 — Main Article Import, Runtime Reconciliation & Human Review: **READY / Readiness PASS / Execute baseline PENDING**
+- Current Ready Execution Unit: **EU-51**
+- EU-51 Readiness baseline: `main@fd192460cb481645c1f1af435cbe5451145797d9`
 - Page/List ownership: **JilinJobs Site Package**
-- Deferred problem Articles: **later review; excluded from current import and non-blocking to current progression**
+- Deferred problem Articles: **later review; excluded from EU-51 import and non-blocking to current progression**
 
 ## 1. Integrated evidence topology
 
@@ -45,7 +46,7 @@ Page/List Site Package handoff
     ↓ separate Site Package Planning/Readiness authority
 ```
 
-The accepted canonical root is now `data-migrations/main/v1/**`; downstream stable verification/import must consume repository-owned bytes and must not depend on expiring Actions artifacts or Legacy Source access.
+The accepted canonical root is `data-migrations/main/v1/**`; downstream stable verification/import consumes repository-owned bytes and must not depend on expiring Actions artifacts or Legacy Source access.
 
 ## 2. Why Main migration is Article-only
 
@@ -138,7 +139,7 @@ Accepted facts:
 - local resource files: **2603**;
 - local resource bytes: **450,273,166**;
 - dataset digest: `sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`;
-- integrated main: `05dfa604ccde45c8409cf6a456e4f201534dc602`.
+- integrated snapshot main: `05dfa604ccde45c8409cf6a456e4f201534dc602`.
 
 Promotion rules remain valid for future evidence-backed extension:
 
@@ -175,45 +176,75 @@ A real capability gap remains. A separate planning unit must decide at least:
 - transition from current one-time bootstrap defaults;
 - upgrade/idempotency/conflict verification.
 
-Neither path inherits EU-50 Execute Authority.
+Neither path is an EU-51 prerequisite and neither inherits Historical Migration Execute Authority.
 
-## 9. Verification closure
+## 9. EU-51 runtime composition
 
-Final EU-50 Head `8c2fdd6cdbbd4d1faf865d0ba4ca0f40a0096e84` passed:
+EU-51 reuses existing repository capabilities rather than introducing a Main-specific migration engine:
 
-- EU-50 Main Source Discovery #64 / run `34352898345`;
-- EU-50 Main Import Eligibility #30 / run `34352898410`;
-- Canonical Migration Verification #256 / run `34352898301`;
-- Generic Content Migration Verification #51 / run `34352898313`;
-- EU-30 Migration Upgrade Verification #206 / run `34352898498`;
-- CI #944 / run `34352898338`, including Backend / Admin / Public / Integrated Browser;
-- Review Environment #830 / run `34352898415`, including AI/Browser, external route verification, lease lifecycle and cleanup.
+- `provisionSitePackage` reconciles versioned JilinJobs stable structure against an initialized schema；
+- `importCanonicalContent` invokes the site-neutral Generic Content Migration entry point；
+- Generic preflight resolves Article targets by stable Column alias and fails closed when a target is absent/disabled；
+- Generic import validates stable identities, source fingerprints, paths, URLs and resource size/SHA-256；
+- Generic mapping/apply supports first-create, same-input SKIP/idempotency and explicit conflict/invalid refusal；
+- existing CI / Review Environment / browser infrastructure provides Runtime verification surfaces。
 
-Integrated `main@05dfa604ccde45c8409cf6a456e4f201534dc602` additionally passed:
+A Fresh DB contains Generic schema after Flyway, but JilinJobs Site Package rows are not implicitly guaranteed by the content-migration process. Therefore EU-51 must explicitly preserve this order:
 
-- Generic Content Migration Verification #52 / run `34354290017`;
-- CI #945 / run `34354289981`, including Backend / Admin / Public / Integrated Browser.
+```text
+Fresh MySQL
+→ Generic Flyway V1/V2/V3
+→ JilinJobs Site Package stable provisioning
+→ Main `data-migrations/main/v1` Generic import
+→ Runtime identity/count/resource reconciliation
+→ second identical import / idempotency
+→ Public/Admin/Integrated Browser verification
+→ bounded Human Review
+```
 
-This closes EU-50 implementation, verification and integration obligations. No Main Runtime import or EU-51 execution occurred.
+Current target reconciliation proves all ten canonical Main Article target aliases are present and enabled in `sites/jilinjobs/structure/columns.json`: `notice`, `employment-news`, `recruitment-announcement`, `policy-month`, `policy-outside`, `policy-jilin`, `policy-national`, `typical-grassroots`, `typical-startup`, `typical-military`.
 
-## 10. Side effects / rollback
+## 10. EU-51 verification obligations
 
-EU-50 accepted persistent side effects are limited to source tooling/workflows, evidence controls/reports and repository-owned current-subset Article canonical bytes.
+EU-51 execution must prove at least:
 
-No CMS Core schema/provisioning mutation and no persistent Main Runtime import was introduced.
+1. integrated canonical manifest/dataset digest/counts remain exact before Runtime mutation；
+2. the import set contains exactly 3078 accepted Articles and excludes 230 deferred + 6 source-defect records；
+3. Site Package provisioning establishes all ten required enabled target Columns；
+4. first import reports `total=3078`, `created=3078`, `conflicts=0`, `invalid=0` on Fresh Runtime；
+5. second identical import reports `created=0`, `skipped=3078`, `conflicts=0`, `invalid=0`；
+6. legacy mappings reconcile one-to-one with imported Article identities；
+7. Runtime counts reconcile by canonical target Column / Article type；
+8. imported local resource bytes/path/references reconcile to canonical size/SHA-256；
+9. EXTERNAL_LINK records retain external semantics and do not acquire inferred local body/resources；
+10. Public/Admin/Integrated Browser verification passes with imported Main content；
+11. bounded Human Review covers every target Column plus representative/high-risk INTERNAL / EXTERNAL_LINK / resource-bearing / rich-content records；
+12. stable execution performs no Legacy Source access；
+13. any discovered accepted-subset defect is preserved and routed explicitly, never silently repaired；
+14. Page/List and deferred/source-defect Article work remains outside the EU-51 diff/import set。
 
-Future correction or extension must be evidence-backed and preserve provenance/integrity; it must not silently overwrite current accepted fingerprints or discard deferred/source-defect evidence.
+## 11. Verification history / readiness
 
-## 11. Downstream Gate
+Final EU-50 Head `8c2fdd6cdbbd4d1faf865d0ba4ca0f40a0096e84` passed EU-50 Source Discovery #64、EU-50 Import Eligibility #30、Canonical Migration #256、Generic Content Migration #51、EU-30 Upgrade #206、CI #944 and Review Environment #830.
+
+Integrated snapshot `main@05dfa604ccde45c8409cf6a456e4f201534dc602` additionally passed Generic Content Migration #52 and CI #945.
+
+EU-51 downstream `readiness-check = PASS` on `main@fd192460cb481645c1f1af435cbe5451145797d9` because the accepted dataset dependency, stable targets, Generic import capability, Site Package provisioning and verification infrastructure are all available and the out-of-scope problem/Page/List sets are explicitly separable.
+
+## 12. Side effects / rollback
+
+EU-50 persistent side effects remain source tooling/workflows, evidence controls/reports and repository-owned current-subset Article canonical bytes.
+
+EU-51's planned Runtime side effect is the controlled import of the accepted 3078-Article dataset and referenced resources into a provisioned Runtime. It must be independently reproducible from repository-owned bytes; execution/reporting must make first-import versus idempotent rerun behavior explicit.
+
+Future canonical correction or extension remains evidence-backed and must not silently overwrite accepted fingerprints or discard deferred/source-defect evidence.
+
+## 13. Downstream Gate
 
 EU-50 accepted-snapshot dependency is **SATISFIED** and EU-50 Execute Authority is **TERMINATED**.
 
-Current Ready Execution Unit is **NONE**.
+Current Ready Execution Unit is **EU-51**. Current Work：`docs/work/current/eu51-main-canonical-import-runtime-review.md`。
 
-From a Fresh Context:
+EU-51 Readiness PASS is **not** an Execute baseline. This Planning/Readiness state must first be integrated. A new Fresh Context must then re-read actual `main`, Issue #60/#77, Open PR/Actions, E3 Authority, EU-51 Work and canonical manifest; after confirming no base/authority drift it may establish EU-51's independent Execute baseline.
 
-- EU-51 may be re-evaluated for the **integrated current Article subset only**;
-- deferred problem Articles remain later-review evidence and do not enter EU-51 by default;
-- Page/List follow-up remains a separate Site Package Planning/Readiness Gate;
-- neither downstream path inherits EU-50 Execute Authority;
-- no Runtime mutation begins until a new `readiness-check` passes.
+Deferred problem Articles remain later-review evidence and do not enter EU-51 by default. Page/List follow-up remains a separate Site Package Planning/Readiness Gate. No Runtime Main mutation begins on the Planning/Readiness branch.
