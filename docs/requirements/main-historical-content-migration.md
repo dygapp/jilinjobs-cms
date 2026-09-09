@@ -8,14 +8,16 @@
 - Specification: **READY**
 - Technical Plan: **READY**
 - EU-50 — Main Source Discovery & Article Snapshot Promotion: **COMPLETED / Execute Authority TERMINATED**
-- EU-51 — Main Article Import, Runtime Reconciliation & Human Review: **READY / Readiness PASS / Execute baseline PENDING**
-- Current Ready Execution Unit: **EU-51**
+- EU-51 — Main Article Import, Runtime Reconciliation & Human Review: **COMPLETED / Execute Authority TERMINATED**
+- Current Ready Execution Unit: **NONE**
 - Current migration scope: **ARTICLE ONLY**
 - Ownership correction: **Main Page and stable ListItem content belong to JilinJobs Site Package**
 
 ## 1. Intent
 
 E3 collects and promotes Main historical **Article** content from the current Legacy Source into a Consumer-owned, offline-verifiable Canonical Migration Dataset, then allows a separately authorized downstream Unit to import/reconcile the accepted dataset.
+
+The current accepted Article sequence has completed through EU-50 source promotion and EU-51 Runtime import/reconciliation/Human Review. This Requirement remains current for later evidence-backed correction or extension, but no active Execution Unit exists after EU-51 closure.
 
 E3 is not the ownership home for Main Page content or stable Main ListItem membership. EU-50 discovered those source surfaces because the same Legacy Source exposes them, but their output is Site Package source handoff evidence rather than Historical Migration input.
 
@@ -25,7 +27,7 @@ Legacy Source access is allowed only during explicit discovery/collection/retry 
 
 EU-50 evidence identified `https://24365.jl.smartedu.cn/` as the reachable Main content source and `cms.jilinjobs.cn` as a redirect/source host. These are source observations, not Runtime contracts.
 
-Stable verification/import consumes frozen repository-owned bytes and must not require Legacy Source network access.
+Stable verification/import consumes frozen repository-owned bytes and must not require Legacy Source network access. EU-51 satisfied this requirement without contacting Legacy Source.
 
 ## 3. Discovery scope
 
@@ -79,7 +81,7 @@ Page/List errors follow the same no-silent-loss rule but are routed to Site Pack
 
 ## 6. Accepted current Article snapshot
 
-EU-50 has promoted and integrated the accepted **current Article subset** under `data-migrations/main/v1/**`.
+EU-50 promoted and integrated the accepted **current Article subset** under `data-migrations/main/v1/**`.
 
 Current accepted facts:
 
@@ -129,19 +131,24 @@ For migration Articles:
 
 Page/List target identities remain Site Package identities and are only referenced by handoff evidence.
 
-## 9. Runtime import boundary
+## 9. Runtime import boundary and completed application
 
-E3 Runtime import is authorized only through a downstream Execution Unit that has passed Readiness and then established its own Execute baseline from integrated Authority.
+Runtime import is authorized only through a downstream Execution Unit that has passed Readiness and independently established Execute Authority from integrated current Authority.
 
-EU-51 has now passed Readiness on `main@fd192460cb481645c1f1af435cbe5451145797d9`, but its Execute baseline remains pending until the Planning/Readiness state is integrated and a new Fresh Context verifies current `main`, Authority, Actions and base drift.
+EU-51 satisfied that lifecycle independently:
 
-EU-51 imports only the integrated 3078-Article accepted current subset. Deferred problem Articles remain outside Runtime import until a later explicit review/decision promotes them.
+- Readiness baseline: `main@fd192460cb481645c1f1af435cbe5451145797d9`;
+- Execute baseline: `main@04090a3cc8dd9c85112488f036c4bc1a67003594`;
+- implementation PR #122 final Head: `5adae340edcf605e36779c831fb512c31342eec8`;
+- implementation integrated main: `fad4bfc17b762ec9612cf1e44a1c0af67e74a307`.
+
+EU-51 imported only the integrated 3078-Article accepted current subset through the existing Generic Content Migration capability after JilinJobs Site Package provisioning. It proved first-import correctness, stable mapping/resource reconciliation, same-input idempotency, Public/Admin/Integrated Browser behavior and bounded Human Review.
 
 The fact that Generic Content Migration can technically support Page/List mutations does not authorize Main Page/List migration. Product ownership takes precedence over generic technical capability.
 
 ## 10. Verification / acceptance closure
 
-EU-50 acceptance has proved:
+EU-50 acceptance proved:
 
 1. complete known Article surface/pagination traversal;
 2. INTERNAL / EXTERNAL_LINK ownership classification is deterministic and evidence-backed;
@@ -155,9 +162,37 @@ EU-50 acceptance has proved:
 10. stable/offline canonical verification does not contact Legacy Source;
 11. no Runtime Main import or EU-51 execution occurred during EU-50.
 
-Final PR Head `8c2fdd6cdbbd4d1faf865d0ba4ca0f40a0096e84` passed EU-50 Source Discovery #64、EU-50 Import Eligibility #30、Canonical Migration #256、Generic Content Migration #51、EU-30 Upgrade #206、CI #944 and Review Environment #830. Integrated main additionally passed Generic Content Migration #52 and CI #945.
+EU-51 acceptance additionally proved on exact Head `5adae340edcf605e36779c831fb512c31342eec8`:
 
-EU-51 Readiness additionally proves that all ten canonical target Column aliases exist/enabled in the JilinJobs Site Package and that the existing Generic importer, Site Package provisioning, CI/Review/browser capabilities can satisfy the downstream execution contract without inventing a Main-specific migration engine.
+1. all ten canonical target Column aliases are present/enabled after Site Package provisioning;
+2. first Generic import = 3078 CREATED, 0 conflict / invalid;
+3. 3078 stable mappings reconcile one-to-one with canonical identities/fingerprints;
+4. Runtime counts reconcile to 1577 INTERNAL + 1501 EXTERNAL_LINK and all ten target Columns;
+5. all 2603 resource files / 450,273,166 bytes reconcile to canonical size/SHA-256 and Runtime references;
+6. EXTERNAL_LINK semantics remain external and no local content is inferred;
+7. second identical import = 3078 SKIPPED, 0 CREATED / conflict / invalid, with no resource/mapping growth;
+8. no Page/List migration mapping is produced;
+9. Public/Admin/Integrated Browser verification passes against actual imported Main content;
+10. bounded Human Review returns **PASS** with no accepted-subset correctness blocker;
+11. no Legacy Source access or Main-specific migration engine is required.
+
+Exact-head workflow evidence:
+
+- EU-51 Main Canonical Runtime Verification #8 / run `34414803518` — **PASS**；
+- EU-51 Main Imported Browser Verification #4 / run `34414803509` — **PASS**；
+- Canonical Migration Verification #264 / run `34414803507` — **PASS**；
+- EU-30 Migration Upgrade Verification #214 / run `34414803594` — **PASS**；
+- CI #957 / run `34414803593` — **PASS**；
+- Standard Review Environment #840 / run `34414803462` — **PASS**。
+
+Browser evidence artifact `10128741919`, digest `sha256:83df3a2d37634e30403eba4777c5554c71723deca82f08ffad71330e1a6ca070`.
+
+Post-Integration CI #958 / run `34417382337` on `main@fad4bfc17b762ec9612cf1e44a1c0af67e74a307` — **PASS**, including Backend / Admin / Public / Integrated Browser.
+
+Completed Work Evidence:
+
+- EU-50: `docs/work/archive/eu50-main-source-discovery-promotion.md`;
+- EU-51: `docs/work/archive/eu51-main-canonical-import-runtime-review.md`.
 
 ## 11. Non-goals
 
@@ -169,10 +204,10 @@ EU-51 Readiness additionally proves that all ten canonical target Column aliases
 - no `agentic-dev` baseline update;
 - no forced repair of deferred problem Articles in the current task sequence.
 
-## 12. Downstream readiness
+## 12. Downstream state
 
-EU-50 accepted-snapshot dependency is **SATISFIED** and EU-50 Execute Authority is **TERMINATED**.
+EU-50 and EU-51 are both **COMPLETED** and their Execute Authorities are **TERMINATED**.
 
-EU-51 `readiness-check = PASS` on `main@fd192460cb481645c1f1af435cbe5451145797d9` and Current Ready Execution Unit is **EU-51**. Current Work：`docs/work/current/eu51-main-canonical-import-runtime-review.md`。
+Current Ready Execution Unit is **NONE**. No successor inherits E3 execution authority.
 
-EU-51 Readiness PASS does not establish Execute baseline on the Planning/Readiness branch. After this state is integrated, a new Fresh Context must establish EU-51's independent Execute baseline before any Runtime Main import. Site Package Page/List follow-up remains a separate Planning Gate. Neither path inherits EU-50 Execute Authority.
+The 230 deferred problem Articles and 6 source-defect Articles remain separate later/client-review evidence. Site Package Page/List follow-up remains a separate Planning Gate. Any future work must start from a new Fresh Context Planning/Readiness decision against current Repository Authority and Current Evidence.
