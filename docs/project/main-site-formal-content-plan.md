@@ -8,8 +8,9 @@
 - E2 / EU-49: **COMPLETED**
 - E3: **ACTIVE**
 - EU-50 — Main Source Discovery & Article Snapshot Promotion: **COMPLETED / Execute Authority TERMINATED**
-- EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review: **Candidate / NOT READY / no Execute Authority**
-- Current Ready Execution Unit: **NONE**
+- EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review: **READY / Readiness PASS / Execute baseline PENDING**
+- Current Ready Execution Unit: **EU-51**
+- EU-51 Readiness baseline: `main@fd192460cb481645c1f1af435cbe5451145797d9`
 - Ownership correction: **2026-09-09 — Main Page and stable ListItem content belong to JilinJobs Site Package**
 
 ## 1. Current planning boundary
@@ -83,16 +84,42 @@ Current Human Authority explicitly defers the 230 problem Articles and the separ
 
 EU-50 completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`。Execute Authority is terminated.
 
-### EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review
+### EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review — READY
 
-EU-50 accepted Article snapshot dependency is now satisfied, but EU-51 remains a Candidate until a Fresh Context re-runs downstream dependency closure and `readiness-check` against the integrated canonical dataset.
+EU-51 was already the downstream Candidate formed by E3 `slice-work`. Its only blocking dependency was the accepted EU-50 Article snapshot. That dependency is now satisfied and the Fresh Context downstream `readiness-check` has passed on `main@fd192460cb481645c1f1af435cbe5451145797d9`.
+
+Current Work：
+
+`docs/work/current/eu51-main-canonical-import-runtime-review.md`
+
+Readiness evidence confirms:
+
+- the accepted repository-owned Main dataset is stable/offline-verifiable and contains exactly 3078 current import Articles;
+- all ten canonical target Column aliases exist as enabled JilinJobs Site Package Columns;
+- existing Generic Content Migration supports Article validation/preflight/apply, stable mapping, fail-closed conflict/invalid handling and same-input idempotency;
+- existing repository tasks expose Site Package provisioning and site-neutral canonical import;
+- existing CI / Review Environment / browser infrastructure can carry Runtime and Human Review evidence;
+- deferred/source-defect Articles and Page/List Site Package work remain explicitly out of scope.
+
+Required Runtime ordering is:
+
+```text
+Fresh MySQL
+→ Generic Flyway V1/V2/V3
+→ JilinJobs Site Package stable provisioning
+→ Generic Main canonical import
+→ Runtime reconciliation + second-run idempotency
+→ Public/Admin/Integrated Browser verification
+→ bounded Human Review
+```
 
 EU-51 must not:
 
 - inherit EU-50 Execute Authority；
 - import deferred/source-defect Articles；
 - import Main Page/List content through Historical Migration merely to bypass the Site Package boundary；
-- begin Runtime mutation before Readiness PASS。
+- contact Legacy Source during stable import/verification；
+- begin Runtime mutation before its independent Execute baseline is established from an integrated Planning/Readiness state。
 
 ## 6. Site Package follow-up Gate
 
@@ -102,7 +129,7 @@ The ownership correction creates a separate Site Package planning finding:
 2. Main stable ListItem membership requires a new Site Package capability decision because v1 currently supports `lists` definitions but not stable `list-items` provisioning/reconcile.
 3. The existing one-time bootstrap ListItems cannot simply be relabelled stable without defining stable identity, ownership/adoption, reconcile, operator mutation and upgrade semantics.
 
-This finding is not a hidden EU-50 continuation and does not gain Execute Authority from EU-50 completion.
+This finding is not an EU-51 dependency and does not gain Execute Authority from EU-51 readiness.
 
 ## 7. Source-error boundary
 
@@ -113,7 +140,7 @@ The accepted error policy remains:
 - all other Article error types remain separately classified / human-reviewable;
 - transport/socket failures are never inferred to be missing-source evidence;
 - Page/List errors are preserved in Site Package handoff reports and are not silently repaired, discarded or converted into migration decisions；
-- deferred problem Articles remain durable later-review evidence and are excluded from current import input。
+- deferred problem Articles remain durable later-review evidence and are excluded from EU-51 import input。
 
 ## 8. Current Gate
 
@@ -121,16 +148,15 @@ The current sequence is now:
 
 ```text
 EU-50 accepted current Article subset — INTEGRATED
-→ Current Ready Execution Unit = NONE
-→ Fresh Context downstream planning / dependency closure
-   ├─ EU-51 readiness against integrated Article dataset
-   └─ Site Package Page/List follow-up readiness
-→ only a new readiness-check PASS can grant Execute Authority
+→ EU-51 readiness-check — PASS
+→ integrate EU-51 Planning/Readiness Authority
+→ Fresh Context Execute-baseline recovery
+→ only then may Runtime Main import begin
 ```
 
-The deferred Article/client-confirmation backlog is processed separately after the current task sequence and does not block this Gate.
+The deferred Article/client-confirmation backlog is processed separately after the current task sequence and does not block this Gate. Site Package Page/List follow-up remains an independent Planning/Readiness path.
 
-No step in this plan grants EU-51 Execute Authority automatically.
+EU-51 Readiness PASS does not by itself establish Execute Authority on the Planning/Readiness branch.
 
 ## 9. Non-goals
 
