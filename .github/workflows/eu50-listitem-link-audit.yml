@@ -1,9 +1,7 @@
 name: EU-50 ListItem Link Audit
 
 on:
-  pull_request:
-    paths:
-      - '.github/workflows/eu50-listitem-link-audit.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -129,7 +127,7 @@ jobs:
       - name: Upload link audit evidence
         uses: actions/upload-artifact@v7
         with:
-          name: eu50-listitem-link-audit-${{ github.event.pull_request.head.sha || github.sha }}
+          name: eu50-listitem-link-audit-${{ github.sha }}
           path: listitem-link-audit
           if-no-files-found: error
           retention-days: 7
