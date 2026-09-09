@@ -38,7 +38,7 @@ fun main() {
             "首次 Runtime composition 应从 Generic Schema 创建完整 stable structure：${composition.report}"
         }
         require(composition.report.objects == 98)
-        require(composition.assetReport.created == 31 && composition.assetReport.unchanged == 0) { "首次 Runtime composition 应投影完整 stable assets：${composition.assetReport}" }
+        require(composition.assetReport.created == 44 && composition.assetReport.unchanged == 0) { "首次 Runtime composition 应投影完整 stable assets：${composition.assetReport}" }
         require(countCodedPresetNavigation(dbUrl, dbUsername, dbPassword) == 40)
         require(operationalCounts(dbUrl, dbUsername, dbPassword) == (0 to 0)) {
             "普通 Runtime composition 不得隐式执行 Site bootstrap"
@@ -56,7 +56,7 @@ fun main() {
         require(composition.report.created == 0 && composition.report.updated == 0 && composition.report.unchanged == 98) {
             "第二次 Runtime composition 必须幂等：${composition.report}"
         }
-        require(composition.assetReport.created == 0 && composition.assetReport.unchanged == 31) { "第二次 Runtime composition 必须保持 stable assets：${composition.assetReport}" }
+        require(composition.assetReport.created == 0 && composition.assetReport.unchanged == 44) { "第二次 Runtime composition 必须保持 stable assets：${composition.assetReport}" }
         require(countCodedPresetNavigation(dbUrl, dbUsername, dbPassword) == 40)
         require(operationalCounts(dbUrl, dbUsername, dbPassword) == (0 to 0))
     } finally {
