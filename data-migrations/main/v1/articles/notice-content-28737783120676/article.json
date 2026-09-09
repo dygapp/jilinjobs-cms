@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120676",
+    "contentId": "28737783120676",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120676"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展”百日冲刺 决战就业“吉林省高校就业指导系列直播课程的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2021-03-29",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align: center;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"migration-resource://5358bdd0ce48ada3fcc66e3a3e39386ba8ab23336ef8291036bc81f2a90c97f8\" alt=\"\" width=\"1000\" height=\"1414\"><img src=\"migration-resource://f34bec00a5b6fae20e1e184109119923cdc9d4634198eecbbf82ade31fed8f73\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://4e8cf5d65469fc5da685512ced98a42c956e05e52b900c2e1d41dcf1a251b9c2\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://ecb9b29cffe12a250b63f6f9938b4c9fa5a2d049d4afbda54e50ebef33ade997\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://91db36c0c3af77560454803dbfb234262ed9d2b70deebccdc72f972a954a7b97\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210330090218.jpg",
+      "originalReference": "/chistory/cms/editor/20210330090218.jpg",
+      "token": "migration-resource://5358bdd0ce48ada3fcc66e3a3e39386ba8ab23336ef8291036bc81f2a90c97f8",
+      "snapshotPath": "assets/5358bdd0ce48ada3fcc66e3a3e39386ba8ab23336ef8291036bc81f2a90c97f8.jpg",
+      "sha256": "5358bdd0ce48ada3fcc66e3a3e39386ba8ab23336ef8291036bc81f2a90c97f8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 218616
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210330090232.jpg",
+      "originalReference": "/chistory/cms/editor/20210330090232.jpg",
+      "token": "migration-resource://f34bec00a5b6fae20e1e184109119923cdc9d4634198eecbbf82ade31fed8f73",
+      "snapshotPath": "assets/f34bec00a5b6fae20e1e184109119923cdc9d4634198eecbbf82ade31fed8f73.jpg",
+      "sha256": "f34bec00a5b6fae20e1e184109119923cdc9d4634198eecbbf82ade31fed8f73",
+      "contentType": "image/jpeg",
+      "sizeBytes": 210706
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210330090241.jpg",
+      "originalReference": "/chistory/cms/editor/20210330090241.jpg",
+      "token": "migration-resource://4e8cf5d65469fc5da685512ced98a42c956e05e52b900c2e1d41dcf1a251b9c2",
+      "snapshotPath": "assets/4e8cf5d65469fc5da685512ced98a42c956e05e52b900c2e1d41dcf1a251b9c2.jpg",
+      "sha256": "4e8cf5d65469fc5da685512ced98a42c956e05e52b900c2e1d41dcf1a251b9c2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 128703
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210330090248.jpg",
+      "originalReference": "/chistory/cms/editor/20210330090248.jpg",
+      "token": "migration-resource://ecb9b29cffe12a250b63f6f9938b4c9fa5a2d049d4afbda54e50ebef33ade997",
+      "snapshotPath": "assets/ecb9b29cffe12a250b63f6f9938b4c9fa5a2d049d4afbda54e50ebef33ade997.jpg",
+      "sha256": "ecb9b29cffe12a250b63f6f9938b4c9fa5a2d049d4afbda54e50ebef33ade997",
+      "contentType": "image/jpeg",
+      "sizeBytes": 329697
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210330090300.jpg",
+      "originalReference": "/chistory/cms/editor/20210330090300.jpg",
+      "token": "migration-resource://91db36c0c3af77560454803dbfb234262ed9d2b70deebccdc72f972a954a7b97",
+      "snapshotPath": "assets/91db36c0c3af77560454803dbfb234262ed9d2b70deebccdc72f972a954a7b97.jpg",
+      "sha256": "91db36c0c3af77560454803dbfb234262ed9d2b70deebccdc72f972a954a7b97",
+      "contentType": "image/jpeg",
+      "sizeBytes": 363660
+    }
+  ],
+  "sourceFingerprint": "608f67d5f36a2e94cafbc10d64c0c63f4dd9512ba8e4e11a049a360893686821",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "关于开展”百日冲刺 决战就业“吉林省高校就业指导系列直播课程的通知",
+    "listPublishDate": "2021-03-29",
+    "sourceOrder": 156,
+    "detailPublishDate": "2021-03-29"
+  }
+}

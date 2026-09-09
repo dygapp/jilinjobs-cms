@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4b798fc7cc47e2038150dff95ba60874836ea10ecf76ca24d00997b95ffb51e2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/rmharticle/30046749954",
+    "url": "https://www.peopleapp.com/rmharticle/30046749954"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业科技学院举办首届“生涯体验周”活动",
+    "source": "",
+    "publishDate": "2024-09-27",
+    "bodyHtml": "",
+    "externalUrl": "https://www.peopleapp.com/rmharticle/30046749954"
+  },
+  "resources": [],
+  "sourceFingerprint": "81f0bdb1f399d1ea0a7ccc6409e2356aee69a36ee646964cdfcb4d51835169ce",
+  "evidence": {
+    "listPage": 104,
+    "listTitle": "吉林农业科技学院举办首届“生涯体验周”活动",
+    "listPublishDate": "2024-09-27",
+    "sourceOrder": 1033
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:66d0c10dc61fcc409e336cd6a5a88b0b5389fefb500784f4b7e294bdc9c49ac0",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/xwzx/gggs/202010/t20201029_303343.html",
+    "url": "http://www.wangqing.gov.cn/xwzx/gggs/202010/t20201029_303343.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年汪清县教育系统事业单位公开招聘工作人员公告",
+    "source": "",
+    "publishDate": "2020-11-05",
+    "bodyHtml": "",
+    "externalUrl": "http://www.wangqing.gov.cn/xwzx/gggs/202010/t20201029_303343.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "6b6fc1f3f5e39eddbc741e00f11313426f3e4538c96778373123eeefcdc1a383",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "2020年汪清县教育系统事业单位公开招聘工作人员公告",
+    "listPublishDate": "2020-11-05",
+    "sourceOrder": 365
+  }
+}

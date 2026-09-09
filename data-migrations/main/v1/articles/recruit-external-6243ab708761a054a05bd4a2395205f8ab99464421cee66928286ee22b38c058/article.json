@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:6243ab708761a054a05bd4a2395205f8ab99464421cee66928286ee22b38c058",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/hu7jS8X3FXx4LJwPb3Ydqw",
+    "url": "https://mp.weixin.qq.com/s/hu7jS8X3FXx4LJwPb3Ydqw?scene=25&sessionid=-1368056810"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学传媒学院2025年 “实习+就业”专场双选会邀请函",
+    "source": "",
+    "publishDate": "2025-04-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/hu7jS8X3FXx4LJwPb3Ydqw?scene=25&sessionid=-1368056810"
+  },
+  "resources": [],
+  "sourceFingerprint": "85ecff91954f4ff903ca20acb9d6950c4e43d0e02a477e9bb3ef3c51c0e10901",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "长春师范大学传媒学院2025年 “实习+就业”专场双选会邀请函",
+    "listPublishDate": "2025-04-11",
+    "sourceOrder": 184
+  }
+}

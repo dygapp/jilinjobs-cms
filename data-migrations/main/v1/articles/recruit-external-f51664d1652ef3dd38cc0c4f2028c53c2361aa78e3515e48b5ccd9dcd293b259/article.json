@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:f51664d1652ef3dd38cc0c4f2028c53c2361aa78e3515e48b5ccd9dcd293b259",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/yerwV6xphkDJJgkGU5_BTQ",
+    "url": "https://mp.weixin.qq.com/s/yerwV6xphkDJJgkGU5_BTQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林铁道职业技术大学 ｜春季校园招聘会邀请函",
+    "source": "",
+    "publishDate": "2026-03-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/yerwV6xphkDJJgkGU5_BTQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "259a3a2bf46ad115525bec48ea20df751beadc29a009900bfd2f1e4faf4289fb",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "吉林铁道职业技术大学 ｜春季校园招聘会邀请函",
+    "listPublishDate": "2026-03-09",
+    "sourceOrder": 64
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ced71c3e0555bce9e3ca389f267639e37eae1552347fb5a79a5f1ec86367aa1b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/x_LD0jLmbHChDsPpmYistA",
+    "url": "https://mp.weixin.qq.com/s/x_LD0jLmbHChDsPpmYistA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学举办“聚力扩容提质 服务高质量发展”2026届毕业生艺术类专场招聘会",
+    "source": "",
+    "publishDate": "2026-05-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/x_LD0jLmbHChDsPpmYistA"
+  },
+  "resources": [],
+  "sourceFingerprint": "f8880fea7f18f2a3bf59dad71d668ee10f4b8df726678deda4a75ac882c4d304",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "延边大学举办“聚力扩容提质 服务高质量发展”2026届毕业生艺术类专场招聘会",
+    "listPublishDate": "2026-05-08",
+    "sourceOrder": 205
+  }
+}

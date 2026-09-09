@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "typical-military:content:110456360435712",
+    "contentId": "110456360435712",
+    "typeCode": "typical-military",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=110456360435712"
+  },
+  "target": {
+    "columnAlias": "typical-military",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "闪亮的日子 青春该有的模样——延边大学尹小双",
+    "source": "培训部",
+    "publishDate": "2021-12-31",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"824\" src=\"migration-resource://636d2f29c011ccd04d282a565ab61f676fd7b01c9bb5f091c23b0d43511c8f1d\" width=\"550\"></p>\n\n<p>　　<span style=\"font-size:12pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:15.0pt\"><span style=\"font-family:宋体\"><span style=\"color:#333333\">尹小双，女，汉族，中共预备党员。2015年入学于延边大学理学院数学系统计学专业。自入学以来我始终牢记“求真、至善、融合”的校训，积极参加学校组织的各项活动，曾获得延边大学军训优秀学员，延边大学优秀学生军训教官，特殊贡献奖等，于2018年9月参军入伍，曾有幸先后去80集团军总部和北陆总部参加过两次为期一周的学习，参加过中国巴基斯坦联合演习、潍北靶场外训、山丹演习、环城拉练等军事活动，在“神箭杯”练兵比武中荣获800米第二名。作为话务女兵，我第一个学出业务，拿到工号，并担任话务班副班长。曾被评为先进个人，四有优秀士兵，并荣获嘉奖。于2020年10月份退伍备战考研，已成功上岸，曾多次参与志愿者活动，以及实习工作，现在在国家统计局延边调查队做编外调查员。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"730\" src=\"migration-resource://f901ce6393060d42ad8310231518b34373f458580e084874ee35aba05b6aeb65\" width=\"550\"></p>\n\n<p>　　<span style=\"font-size:12pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:15.0pt\"><span style=\"font-family:宋体\"><span style=\"color:#333333\">这六年，是成长的六年，是奋斗的六年，要感谢学校、学院以及各位领导老师和同学们的支持，也感谢命运的眷顾，最庆幸的是，我没有放弃，一直在努力。我知道，所有的挫折和成绩都已经过去，我更需要把握现在和未来。我将以更加向上的姿态迎接下一次的挑战和磨砺，以更加饱满的热情来书写好的大学这一篇章。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\">&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-09-02/37fdf912-36c1-4b7c-a2d9-a3eab8504ad1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-09-02/37fdf912-36c1-4b7c-a2d9-a3eab8504ad1.jpg",
+      "token": "migration-resource://636d2f29c011ccd04d282a565ab61f676fd7b01c9bb5f091c23b0d43511c8f1d",
+      "snapshotPath": "assets/636d2f29c011ccd04d282a565ab61f676fd7b01c9bb5f091c23b0d43511c8f1d.jpg",
+      "sha256": "636d2f29c011ccd04d282a565ab61f676fd7b01c9bb5f091c23b0d43511c8f1d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 183907
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-09-02/9dc40cf3-fd9d-4663-aaa5-57284b70ae7e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-09-02/9dc40cf3-fd9d-4663-aaa5-57284b70ae7e.jpg",
+      "token": "migration-resource://f901ce6393060d42ad8310231518b34373f458580e084874ee35aba05b6aeb65",
+      "snapshotPath": "assets/f901ce6393060d42ad8310231518b34373f458580e084874ee35aba05b6aeb65.jpg",
+      "sha256": "f901ce6393060d42ad8310231518b34373f458580e084874ee35aba05b6aeb65",
+      "contentType": "image/jpeg",
+      "sizeBytes": 133206
+    }
+  ],
+  "sourceFingerprint": "0f381bf9c51d8ff33c96af76afce6a785941d11ca846267e33eae916b1165163",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "闪亮的日子 青春该有的模样——延边大学尹小双",
+    "listPublishDate": "2021-12-31",
+    "sourceOrder": 2,
+    "detailPublishDate": "2021-12-31"
+  }
+}

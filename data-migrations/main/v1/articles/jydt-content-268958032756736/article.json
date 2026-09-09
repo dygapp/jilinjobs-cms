@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268958032756736",
+    "contentId": "268958032756736",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268958032756736"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林财经大学2024年吉林省中小企业人才供需对接双选会举办",
+    "source": "",
+    "publishDate": "2024-11-11",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://8ede2703ca59ad95179698c1be2b6bb6c719af1d3dfb51b89f4f114a75d646c6\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/c1ce7149-5c39-420a-ad9c-4c584fdddf08.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/c1ce7149-5c39-420a-ad9c-4c584fdddf08.jpg",
+      "token": "migration-resource://8ede2703ca59ad95179698c1be2b6bb6c719af1d3dfb51b89f4f114a75d646c6",
+      "snapshotPath": "assets/8ede2703ca59ad95179698c1be2b6bb6c719af1d3dfb51b89f4f114a75d646c6.jpg",
+      "sha256": "8ede2703ca59ad95179698c1be2b6bb6c719af1d3dfb51b89f4f114a75d646c6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 386630
+    }
+  ],
+  "sourceFingerprint": "6f288a5e6244de0c35cd7f87539c250631c320378630b57552a42db49176b171",
+  "evidence": {
+    "listPage": 102,
+    "listTitle": "吉林财经大学2024年吉林省中小企业人才供需对接双选会举办",
+    "listPublishDate": "2024-11-11",
+    "sourceOrder": 1017,
+    "detailPublishDate": "2024-11-11"
+  }
+}

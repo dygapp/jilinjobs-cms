@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:45dd7b947991ae4fbf416b70a5046a20b63fbcd41f81fa68d876282e94a8e3b3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1381/30631.htm",
+    "url": "https://www.ccu.edu.cn/info/1381/30631.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学党委书记所永吉一行赴长春捷翼汽车科技股份有限公司开展校企合作交流",
+    "source": "",
+    "publishDate": "2025-11-21",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccu.edu.cn/info/1381/30631.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "add4789d7f189f38be36adeb77232c189dd42d5984520ad327aa8e484db99c04",
+  "evidence": {
+    "listPage": 58,
+    "listTitle": "长春大学党委书记所永吉一行赴长春捷翼汽车科技股份有限公司开展校企合作交流",
+    "listPublishDate": "2025-11-21",
+    "sourceOrder": 577
+  }
+}

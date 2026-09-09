@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120752",
+    "contentId": "28737783120752",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120752"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发“关于召开“高校扩招促进大学生就业创业工作十年成就经验报告会的通知”的通知",
+    "source": "",
+    "publishDate": "2013-10-24",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于转发“关于召开“高校扩招促进大学生就业创业工作十年成就经验报告会的通知”的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2013-10-24 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img src=\"migration-resource://94176acc272fb0c0dc9087571fc5e3ffaea79fdd5abe0d4f5fd8d0c89d559821\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://4e9903845841b4b389329c427b92f7c07eb9b69e4454e6ce00916ef7f274cea6\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://b46ca5f602b802ded5207735d35b93ba7a39317abec1d0d4474139a5530568eb\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://435e5edeaf4be916ec068dc73244827fc6a0a58f3f2756c3eb8c0609baaffe87\" border=\"0\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131024041649205.jpg",
+      "originalReference": "/chistory/cms/imgs/20131024041649205.jpg",
+      "token": "migration-resource://94176acc272fb0c0dc9087571fc5e3ffaea79fdd5abe0d4f5fd8d0c89d559821",
+      "snapshotPath": "assets/94176acc272fb0c0dc9087571fc5e3ffaea79fdd5abe0d4f5fd8d0c89d559821.jpg",
+      "sha256": "94176acc272fb0c0dc9087571fc5e3ffaea79fdd5abe0d4f5fd8d0c89d559821",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81017
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131024041656602.jpg",
+      "originalReference": "/chistory/cms/imgs/20131024041656602.jpg",
+      "token": "migration-resource://4e9903845841b4b389329c427b92f7c07eb9b69e4454e6ce00916ef7f274cea6",
+      "snapshotPath": "assets/4e9903845841b4b389329c427b92f7c07eb9b69e4454e6ce00916ef7f274cea6.jpg",
+      "sha256": "4e9903845841b4b389329c427b92f7c07eb9b69e4454e6ce00916ef7f274cea6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 44326
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131024041701358.jpg",
+      "originalReference": "/chistory/cms/imgs/20131024041701358.jpg",
+      "token": "migration-resource://b46ca5f602b802ded5207735d35b93ba7a39317abec1d0d4474139a5530568eb",
+      "snapshotPath": "assets/b46ca5f602b802ded5207735d35b93ba7a39317abec1d0d4474139a5530568eb.jpg",
+      "sha256": "b46ca5f602b802ded5207735d35b93ba7a39317abec1d0d4474139a5530568eb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 83739
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131024041705465.jpg",
+      "originalReference": "/chistory/cms/imgs/20131024041705465.jpg",
+      "token": "migration-resource://435e5edeaf4be916ec068dc73244827fc6a0a58f3f2756c3eb8c0609baaffe87",
+      "snapshotPath": "assets/435e5edeaf4be916ec068dc73244827fc6a0a58f3f2756c3eb8c0609baaffe87.jpg",
+      "sha256": "435e5edeaf4be916ec068dc73244827fc6a0a58f3f2756c3eb8c0609baaffe87",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77333
+    }
+  ],
+  "sourceFingerprint": "de41b7f42d33d8725659d605277013fbeef6e64a9b706752a92f711dd7544c28",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "关于转发“关于召开“高校扩招促进大学生就业创业工作十年成就经验报告会的通知”的通知",
+    "listPublishDate": "2013-10-24",
+    "sourceOrder": 342,
+    "detailPublishDate": "2013-10-24"
+  }
+}

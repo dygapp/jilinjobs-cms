@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86122023632896",
+    "contentId": "86122023632896",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86122023632896"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春大学举行职业规划与就业指导企业导师聘任仪式",
+    "source": "长春大学",
+    "publishDate": "2021-10-26",
+    "bodyHtml": "\n                        <p>10月25日，长春大学举行了职业规划与就业指导企业导师聘任仪式。党委书记孙爱军、校长李志瑶、副校长王剑飞出席仪式。仪式由王剑飞主持。</p>\n\n<p>此次受聘企业导师均是受到省委省政府邀请出席吉林省校友人才促进吉林振兴发展大会的长春大学优秀校友。</p>\n\n<p>聘任仪式上，孙爱军和李志瑶代表学校为校友们颁发了导师聘书。长春大学华东校友会会长赫铁楠代表校友发言。他表示，当前吉林全面振兴全方位振兴展现出美好的前景，作为受聘的职业规划与就业指导企业导师，将竭尽全力帮助在校生树立正确的职业观、择业观，助力毕业生实现更高质量的就业，诠释好企业家校友在吉林振兴发展中的角色，把母校“知行合一，诚信至善”的校训精神贯穿始终，为吉林人才兴省做出应有的贡献。</p>\n\n<p>各学院书记、院长、副书记及毕业班学生代表参加了聘任仪式。</p>\n\n<p><strong>(长春大学 毕莹）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "7f37e8dc47c39cc2484e2f8e08170c32e0bbc9279e801f748e53c5fd173b0f2a",
+  "evidence": {
+    "listPage": 132,
+    "listTitle": "长春大学举行职业规划与就业指导企业导师聘任仪式",
+    "listPublishDate": "2021-10-26",
+    "sourceOrder": 1315,
+    "detailPublishDate": "2021-10-26"
+  }
+}

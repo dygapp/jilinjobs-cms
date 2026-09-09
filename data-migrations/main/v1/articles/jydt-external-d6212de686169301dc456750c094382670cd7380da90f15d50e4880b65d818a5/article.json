@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d6212de686169301dc456750c094382670cd7380da90f15d50e4880b65d818a5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/6sCIiMKK29P0TUnVQbwHzA",
+    "url": "https://mp.weixin.qq.com/s/6sCIiMKK29P0TUnVQbwHzA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“护航毕业季”我省开展高校毕业生就业权益保护专题课",
+    "source": "",
+    "publishDate": "2026-05-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/6sCIiMKK29P0TUnVQbwHzA"
+  },
+  "resources": [],
+  "sourceFingerprint": "c8add34cd80cd8a4d22134ae5b05492a1b931dd9543f43944328ef483cf25191",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "“护航毕业季”我省开展高校毕业生就业权益保护专题课",
+    "listPublishDate": "2026-05-27",
+    "sourceOrder": 134
+  }
+}

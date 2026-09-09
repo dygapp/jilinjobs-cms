@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:964087ea56916c19427308f32a8a5c15a8922b71f927231b6aabe79592ee4b2c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/yubwPqS4wa1siFbsFhD5lA",
+    "url": "https://mp.weixin.qq.com/s/yubwPqS4wa1siFbsFhD5lA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "政校协同聚合力 访企拓岗促双赢 | 长春汽车职业技术大学党委副书记赵娜一行赴长春绿园经济开发区开展专项就业走访与合作洽谈",
+    "source": "",
+    "publishDate": "2025-12-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/yubwPqS4wa1siFbsFhD5lA"
+  },
+  "resources": [],
+  "sourceFingerprint": "acd5c8338309987198cc09e9fe45a8e4f18e4a470452dea27909f9e690af39cc",
+  "evidence": {
+    "listPage": 53,
+    "listTitle": "政校协同聚合力 访企拓岗促双赢 | 长春汽车职业技术大学党委副书记赵娜一行赴长春绿园经济开发区开展专项就业走访与合作洽谈",
+    "listPublishDate": "2025-12-22",
+    "sourceOrder": 529
+  }
+}

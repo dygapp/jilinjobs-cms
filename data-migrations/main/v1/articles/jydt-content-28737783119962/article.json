@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119962",
+    "contentId": "28737783119962",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119962"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省2017届高校毕业生就业洽谈月-涉农高校毕业生大型公益交流会在吉林农业大学举行",
+    "source": "",
+    "publishDate": "2016-11-13",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省2017届高校毕业生就业洽谈月-涉农高校毕业生大型公益交流会在吉林农业大学举行</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部、信息部   发布时间:2016-11-13 16:27:03</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\";text-indent: 37px\"><span style=\";font-family: 仿宋;font-size: 19px\">由吉林省教育厅主办，吉林农业大学承办的“吉林省2017届高校毕业生就业洽谈月-涉农高校毕业生大型公益交流会”于2016年11月12日在吉林农业大学体育馆举行。本次招聘会共邀请国内550多家企业参加，提供用人岗位17200个，吸引了全省相关高校超过1万名毕业生前来应聘。</span></p><p style=\";text-indent: 37px\"><span style=\";font-family: 仿宋;font-size: 19px\">为做好今年涉农高校毕业生的就业工作，省教育厅与吉林农业大学等高校多措并举，积极拓宽就业渠道，努力挖掘就业岗位。分赴浙江、江苏、上海、山东等12个省份，先后走访近200家企业，大力宣传和推介我省高校毕业生。此外，省教育厅与吉林农业大学等高校还积极开展就业创业校企对接活动。吉林农业大学与国内58家企业签订了“1+N企业课程进课堂”项目、“企业助力学生就业成长计划”项目,以及大学生就业创业基地合作协议，这些举措有效提高了学生就业能力，拓宽了就业渠道。</span></p><p style=\";line-height: 35px;text-indent: 40px\"><span style=\";font-family: 仿宋;font-size: 20px\">&nbsp;</span></p><p style=\"text-align: center\"><img title=\"3.jpg\" src=\"migration-resource://755dac780a283bec091f479265baf589a14b0cb7392ca8cfb01e4a6b37d2d2be\"></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361534244829687509930933.jpg",
+      "originalReference": "/chistory/cms/imgs/6361534244829687509930933.jpg",
+      "token": "migration-resource://755dac780a283bec091f479265baf589a14b0cb7392ca8cfb01e4a6b37d2d2be",
+      "snapshotPath": "assets/755dac780a283bec091f479265baf589a14b0cb7392ca8cfb01e4a6b37d2d2be.jpg",
+      "sha256": "755dac780a283bec091f479265baf589a14b0cb7392ca8cfb01e4a6b37d2d2be",
+      "contentType": "image/jpeg",
+      "sizeBytes": 41159
+    }
+  ],
+  "sourceFingerprint": "86de303ceea9f0b45e7563bfb5b42afd6b350ea5e777ee7ff265f785e84538af",
+  "evidence": {
+    "listPage": 152,
+    "listTitle": "吉林省2017届高校毕业生就业洽谈月-涉农高校毕业生大型公益交流会在吉林农业大学举行",
+    "listPublishDate": "2016-11-13",
+    "sourceOrder": 1520,
+    "detailPublishDate": "2016-11-13"
+  }
+}

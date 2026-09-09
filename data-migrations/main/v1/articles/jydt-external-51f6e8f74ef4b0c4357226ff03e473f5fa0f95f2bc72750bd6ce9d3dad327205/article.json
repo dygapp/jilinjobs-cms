@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:51f6e8f74ef4b0c4357226ff03e473f5fa0f95f2bc72750bd6ce9d3dad327205",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/4hqwikGYj2HP36jsEmO45g",
+    "url": "https://mp.weixin.qq.com/s/4hqwikGYj2HP36jsEmO45g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学人文信息学院赴长春净月高新技术产业开发区人力资源和社会保障局开展政校企合作洽谈",
+    "source": "",
+    "publishDate": "2026-05-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4hqwikGYj2HP36jsEmO45g"
+  },
+  "resources": [],
+  "sourceFingerprint": "f31911cd07dd169c15003f7e0f358e061f3843dc45d526c01ee7a5e92438ffc1",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "长春工业大学人文信息学院赴长春净月高新技术产业开发区人力资源和社会保障局开展政校企合作洽谈",
+    "listPublishDate": "2026-05-06",
+    "sourceOrder": 213
+  }
+}

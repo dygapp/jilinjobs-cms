@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:bf355faef2f6546fd0479409e0763547dc93a9d55c5c5130c12839576b313b46",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/chance/newsdetails.html",
+    "url": "https://m.bysjy.com.cn/student/chance/newsdetails.html?token=yxqqnn0100000012&notice_id=1140298"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "职引未来——2025年全国城市巡回招聘（吉林站）暨吉林省医药类毕业生春季大型就业洽谈会邀请函",
+    "source": "",
+    "publishDate": "2025-03-05",
+    "bodyHtml": "",
+    "externalUrl": "https://m.bysjy.com.cn/student/chance/newsdetails.html?token=yxqqnn0100000012&notice_id=1140298"
+  },
+  "resources": [],
+  "sourceFingerprint": "1d0f6cafa9b4a8b9cb4895e56b62679bb8c8e9bffe5eac648a1cfe3c4977803c",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "职引未来——2025年全国城市巡回招聘（吉林站）暨吉林省医药类毕业生春季大型就业洽谈会邀请函",
+    "listPublishDate": "2025-03-05",
+    "sourceOrder": 228
+  }
+}

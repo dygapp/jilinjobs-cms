@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122184",
+    "contentId": "28737783122184",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122184"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省与江苏省联合举办高校就业指导人员培训班",
+    "source": "",
+    "publishDate": "2013-08-27",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省与江苏省联合举办高校就业指导人员培训班</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2013-8-27 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"4\"></font>&nbsp;</p> <p><font size=\"4\">&nbsp;&nbsp;&nbsp; 为加强省际之间的交流与合作，提升两省高校就业指导人员的业务指导和工作水平，实现优质师资资源共享，由我省高校毕业生就业指导中心和江苏省高校招生就业指导服务中心共同举办的高校就业指导人员培训班，于8月22在省就业指导中心举行。共有来自两省26所高校的41名学生处长、就业中心主任及专兼职教师参加培训。围绕“双困生”培训课程体系建设、就业市场开发建设等内容，我省培训师方占仁和东北师范大学就业指导中心副主任刘海滨分别进行了授课讲解。这是我省首次与省外就业指导部门联合举办高校就业指导人员培训班，培训达到了预期效果。培训期间，还举行了两省高校就业指导人员座谈交流活动，我省高校毕业生就业指导中心书记朱军和江苏省高校招生就业指导服务中心主任助理马杰，分别介绍了两省就业工作情况，省内部分高校参加了座谈。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; 经初步商定，两省第二期培训班将择期在江苏举办，届时，我省将组织高校就业指导人员赴江苏省进行培训学习与交流。</font></p> <p align=\"center\"><font size=\"4\"><img border=\"0\" src=\"migration-resource://cde7489b04af44732ca3149120e2fa15d01a65afc5397b3c73066150789a599a\"></font></p> <p align=\"center\"><font size=\"2\"><strong>座谈会现场</strong></font></p> <p align=\"center\"><strong><font size=\"2\"></font></strong>&nbsp;</p> <p align=\"center\"><font size=\"4\"><img border=\"0\" src=\"migration-resource://77b7d423c899aed010c19f267d27b097ddfcab3ed0dcfff04ad09c9872ffd842\"></font></p> <p align=\"center\"><font size=\"4\"><font size=\"2\"><strong>培训现场</strong></font></font></p><font size=\"4\"> <p><br></p></font></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130827054221930.jpg",
+      "originalReference": "/chistory/cms/imgs/20130827054221930.jpg",
+      "token": "migration-resource://cde7489b04af44732ca3149120e2fa15d01a65afc5397b3c73066150789a599a",
+      "snapshotPath": "assets/cde7489b04af44732ca3149120e2fa15d01a65afc5397b3c73066150789a599a.jpg",
+      "sha256": "cde7489b04af44732ca3149120e2fa15d01a65afc5397b3c73066150789a599a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 54536
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130827054240108.jpg",
+      "originalReference": "/chistory/cms/imgs/20130827054240108.jpg",
+      "token": "migration-resource://77b7d423c899aed010c19f267d27b097ddfcab3ed0dcfff04ad09c9872ffd842",
+      "snapshotPath": "assets/77b7d423c899aed010c19f267d27b097ddfcab3ed0dcfff04ad09c9872ffd842.jpg",
+      "sha256": "77b7d423c899aed010c19f267d27b097ddfcab3ed0dcfff04ad09c9872ffd842",
+      "contentType": "image/jpeg",
+      "sizeBytes": 71296
+    }
+  ],
+  "sourceFingerprint": "6eefd1c711fd6321ee88ae823ac02fb64b3178c5f8a4cb3fe68c7e255d65c990",
+  "evidence": {
+    "listPage": 162,
+    "listTitle": "我省与江苏省联合举办高校就业指导人员培训班",
+    "listPublishDate": "2013-08-27",
+    "sourceOrder": 1615,
+    "detailPublishDate": "2013-08-27"
+  }
+}

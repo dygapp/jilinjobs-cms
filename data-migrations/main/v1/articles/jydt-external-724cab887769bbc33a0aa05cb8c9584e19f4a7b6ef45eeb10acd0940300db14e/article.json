@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:724cab887769bbc33a0aa05cb8c9584e19f4a7b6ef45eeb10acd0940300db14e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/fHBznORQ6QHeNz0zhsZnNg",
+    "url": "https://mp.weixin.qq.com/s/fHBznORQ6QHeNz0zhsZnNg?scene=25&sessionid="
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "全文来了！教育部部长怀进鹏在2026世界数字教育大会上的主旨演讲",
+    "source": "",
+    "publishDate": "2026-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/fHBznORQ6QHeNz0zhsZnNg?scene=25&sessionid="
+  },
+  "resources": [],
+  "sourceFingerprint": "31b26f5e37c626e20360e7228c193f4100b1b12d7dbc5474c0c1887a94d844f7",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "全文来了！教育部部长怀进鹏在2026世界数字教育大会上的主旨演讲",
+    "listPublishDate": "2026-05-15",
+    "sourceOrder": 175
+  }
+}

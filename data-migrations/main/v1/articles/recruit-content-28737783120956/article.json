@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783120956",
+    "contentId": "28737783120956",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120956"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "创业教育应贯穿学生各阶段",
+    "source": "",
+    "publishDate": "2014-06-16",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">创业教育应贯穿学生各阶段</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:    发布时间:2014-6-16 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-align: center;\"><span style=\"font-family: 宋体; font-size: 24px;\">创业教育应贯穿学生各阶段</span></p><p style=\"text-indent: 203px;\"><span style=\"font-family: 宋体;\"><span style=\"font-size: 16px;\">来源：经济日报</span></span></p><p><span style=\"font-size: 16px;\"><span style=\"font-family: 宋体;\">&nbsp;人力资源和社会保障部有关负责人日前表示，我国高校毕业生创业率约为1%，跟国外比起来偏低。国家计划从2014年到2017年，通过各项政策扶持和创业服务，来扶持80万以上的大学生实现创业。</span></span></p><p><span style=\"font-size: 16px;\"><span style=\"font-family: 宋体;\">&nbsp;&nbsp;&nbsp;&nbsp;为何大学生创业率多年来起色不大？对此，多数人将其归咎于高校创业教育纸上谈兵，创业师资缺乏实践素质，政府扶持政策不力，等等。但笔者以为这只看到了某一方面，还有一方面的原因在于，我国整个国民教育体系中创业教育缺失。</span></span></p><p><span style=\"font-size: 16px;\"><span style=\"font-family: 宋体;\">&nbsp;&nbsp;&nbsp;&nbsp;语言学家吕叔湘说过：“教育的性质类似农业，而绝对不像工业。”诚哉斯言，教育即培育和生长。创业教育关键在于在学生心中播撒创新创业的种子，激发起创造潜能，而不是像流水线一样，以同一个模子铸造产品。然而，我国创业教育引入迟、起步晚、发展慢，目前主要集中于高等教育阶段，基础教育阶段基本是一片空白。创业教育就像道德教育、安全教育一样，需要从小就在学生心中生根发芽，贯穿于教育各个阶段。反观一些发达国家的创业教育，已建立了完备成熟的体系，涵盖了从小学、初中、高中、大专直到本科、研究生教育全过程。</span></span></p><p><span style=\"font-size: 16px;\"><span style=\"font-family: 宋体;\">&nbsp;&nbsp;&nbsp;&nbsp;总之，没有从小就养成的创新意识、创新思维，一味地寄希望于通过大学阶段的政策宣传、理论灌输、技巧训练、创业演练来提高创业率，很难取得实效。只有将创业教育纳入整个国民教育体系，才可能会在潜移默化中点燃学生创新创业的激情，大学生们踊跃创业也就水到渠成、顺理成章了。</span></span></p><p><span style=\"font-family: 宋体; font-size: 16px;\">&nbsp;</span></p><p></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "2c34b3345b551abbddfd45d79048a751871965e20371ec8c0befca58fcfb7593",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "创业教育应贯穿学生各阶段",
+    "listPublishDate": "2014-06-16",
+    "sourceOrder": 417,
+    "detailPublishDate": "2014-06-16"
+  }
+}

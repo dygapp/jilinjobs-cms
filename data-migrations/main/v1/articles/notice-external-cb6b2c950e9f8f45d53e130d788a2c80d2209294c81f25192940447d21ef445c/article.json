@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:cb6b2c950e9f8f45d53e130d788a2c80d2209294c81f25192940447d21ef445c",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/g_ceHJ8O75eVuO9K3CTPDQ",
+    "url": "https://mp.weixin.qq.com/s/g_ceHJ8O75eVuO9K3CTPDQ"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省高等学校毕业生就业指导中心关于组织开展“服务吉林高质量发展”吉林省2026届普通高校毕业生秋季校园招聘活动的通知",
+    "source": "",
+    "publishDate": "2025-09-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/g_ceHJ8O75eVuO9K3CTPDQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "ea7ba3cbf9c9845b57c85b82d5b1c15bbd0204bd72fc7a959000c04240636f2c",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "吉林省高等学校毕业生就业指导中心关于组织开展“服务吉林高质量发展”吉林省2026届普通高校毕业生秋季校园招聘活动的通知",
+    "listPublishDate": "2025-09-02",
+    "sourceOrder": 30
+  }
+}

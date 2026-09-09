@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:353506cbb992ba7522a25f9af15f292e56fded4187cd603773db199806efafe6",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/2024/1018/c538a68329/page.htm",
+    "url": "https://www.caii.edu.cn/2024/1018/c538a68329/page.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春汽车职业技术大学举办“就”在金秋 “职”面未来2025届毕业生秋季首场校园招聘会",
+    "source": "",
+    "publishDate": "2024-10-18",
+    "bodyHtml": "",
+    "externalUrl": "https://www.caii.edu.cn/2024/1018/c538a68329/page.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "dbf087ac68e42b6f816aefaeb163f4d58548aa9416a230211d41571adcebb9c1",
+  "evidence": {
+    "listPage": 103,
+    "listTitle": "长春汽车职业技术大学举办“就”在金秋 “职”面未来2025届毕业生秋季首场校园招聘会",
+    "listPublishDate": "2024-10-18",
+    "sourceOrder": 1029
+  }
+}

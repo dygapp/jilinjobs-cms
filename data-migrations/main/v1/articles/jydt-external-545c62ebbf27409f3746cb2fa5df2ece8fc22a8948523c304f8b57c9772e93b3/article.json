@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:545c62ebbf27409f3746cb2fa5df2ece8fc22a8948523c304f8b57c9772e93b3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/gNGWgTp-gcQa_QtpijHO3w",
+    "url": "https://mp.weixin.qq.com/s/gNGWgTp-gcQa_QtpijHO3w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院与爱知介护、蔚来康养设计院携手共推认知症照护实践教学建设",
+    "source": "",
+    "publishDate": "2026-09-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gNGWgTp-gcQa_QtpijHO3w"
+  },
+  "resources": [],
+  "sourceFingerprint": "c2f03cab06467b8cb4df59b7dd2964fc57afd249af84da6509f10615e6388a26",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "长春人文学院与爱知介护、蔚来康养设计院携手共推认知症照护实践教学建设",
+    "listPublishDate": "2026-09-02",
+    "sourceOrder": 6
+  }
+}

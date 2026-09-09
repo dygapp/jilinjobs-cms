@@ -1,0 +1,141 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-jilin:content:159190880370688",
+    "contentId": "159190880370688",
+    "typeCode": "policy-jilin",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=159190880370688"
+  },
+  "target": {
+    "columnAlias": "policy-jilin",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于印发《松原市关于支持就业创业的 若干政策措施》的通知",
+    "source": "",
+    "publishDate": "2023-05-29",
+    "bodyHtml": "\n                        <p><img alt=\"\" height=\"1753\" src=\"migration-resource://b283caabb07df872535bd36fa04f6af8b236a97a9d0cef8c67b0f350ec76d262\" width=\"1240\"><img alt=\"\" height=\"1753\" src=\"migration-resource://061d82425e10513f8f936145ab056af00a57cf737f8474e3777c620ea5d95ee7\" width=\"1240\"><img alt=\"\" height=\"1753\" src=\"migration-resource://4e258cd097ee72ccd8dbed19f26fc2e5b2b420bb89a0a50ae6690e8c8275c195\" width=\"1240\"><img alt=\"\" height=\"1753\" src=\"migration-resource://7f273d4d00356aca3ec95449dfbbd9f5800570172b29a185a327bc30ebcdfbff\" width=\"1240\"><img alt=\"\" height=\"1753\" src=\"migration-resource://79a6932681d96314c4f744a6d81449a3d8c40a150ef9d7919b97012876ce24ba\" width=\"1240\"><img alt=\"\" height=\"1753\" src=\"migration-resource://6577635cff574e7dce6e0108ba4540e525947a056bd70b8184aee95e0de812eb\" width=\"1240\"><img alt=\"\" height=\"1753\" src=\"migration-resource://f8afd4ae3cc2e8140ed79cd50f55d28d30600798299a4618ab13c73ce347a95d\" width=\"1240\"><img alt=\"\" height=\"1753\" src=\"migration-resource://01193647fba76527379d929003839a990b8d3d99e000f56ba6567ff93f1f9ebe\" width=\"1240\"><img alt=\"\" height=\"1753\" src=\"migration-resource://5324894d33097ad83f043a4cc717c4950bcccd5c704237bd0620609bcb8e90c0\" width=\"1240\"><img alt=\"\" height=\"1753\" src=\"migration-resource://d0aa622eacbaa08cf08582b9e161f425d70bad1071061ad134dd488848665b44\" width=\"1240\"><img alt=\"\" height=\"1753\" src=\"migration-resource://c67a2516581c5cda572cb409b1fbfe1a95bf799721338c575713c6fc95eb8755\" width=\"1240\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/8c87c4d4-ade0-49cd-aa8a-4b76084a080a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/8c87c4d4-ade0-49cd-aa8a-4b76084a080a.jpg",
+      "token": "migration-resource://b283caabb07df872535bd36fa04f6af8b236a97a9d0cef8c67b0f350ec76d262",
+      "snapshotPath": "assets/b283caabb07df872535bd36fa04f6af8b236a97a9d0cef8c67b0f350ec76d262.jpg",
+      "sha256": "b283caabb07df872535bd36fa04f6af8b236a97a9d0cef8c67b0f350ec76d262",
+      "contentType": "image/jpeg",
+      "sizeBytes": 157673
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/27eb5be6-f909-46f0-a03a-b7eff3b85f78.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/27eb5be6-f909-46f0-a03a-b7eff3b85f78.jpg",
+      "token": "migration-resource://061d82425e10513f8f936145ab056af00a57cf737f8474e3777c620ea5d95ee7",
+      "snapshotPath": "assets/061d82425e10513f8f936145ab056af00a57cf737f8474e3777c620ea5d95ee7.jpg",
+      "sha256": "061d82425e10513f8f936145ab056af00a57cf737f8474e3777c620ea5d95ee7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 55295
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/5df639cb-dad5-4c28-b525-8993b654e273.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/5df639cb-dad5-4c28-b525-8993b654e273.jpg",
+      "token": "migration-resource://4e258cd097ee72ccd8dbed19f26fc2e5b2b420bb89a0a50ae6690e8c8275c195",
+      "snapshotPath": "assets/4e258cd097ee72ccd8dbed19f26fc2e5b2b420bb89a0a50ae6690e8c8275c195.jpg",
+      "sha256": "4e258cd097ee72ccd8dbed19f26fc2e5b2b420bb89a0a50ae6690e8c8275c195",
+      "contentType": "image/jpeg",
+      "sizeBytes": 217331
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/81214e53-4364-46c1-9868-bca38288dc7f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/81214e53-4364-46c1-9868-bca38288dc7f.jpg",
+      "token": "migration-resource://7f273d4d00356aca3ec95449dfbbd9f5800570172b29a185a327bc30ebcdfbff",
+      "snapshotPath": "assets/7f273d4d00356aca3ec95449dfbbd9f5800570172b29a185a327bc30ebcdfbff.jpg",
+      "sha256": "7f273d4d00356aca3ec95449dfbbd9f5800570172b29a185a327bc30ebcdfbff",
+      "contentType": "image/jpeg",
+      "sizeBytes": 231645
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/c5ba24a3-4c1e-4f02-92df-0ae4d35004f9.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/c5ba24a3-4c1e-4f02-92df-0ae4d35004f9.jpg",
+      "token": "migration-resource://79a6932681d96314c4f744a6d81449a3d8c40a150ef9d7919b97012876ce24ba",
+      "snapshotPath": "assets/79a6932681d96314c4f744a6d81449a3d8c40a150ef9d7919b97012876ce24ba.jpg",
+      "sha256": "79a6932681d96314c4f744a6d81449a3d8c40a150ef9d7919b97012876ce24ba",
+      "contentType": "image/jpeg",
+      "sizeBytes": 251188
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/5438318c-037c-4b7a-8a44-4b078820203a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/5438318c-037c-4b7a-8a44-4b078820203a.jpg",
+      "token": "migration-resource://6577635cff574e7dce6e0108ba4540e525947a056bd70b8184aee95e0de812eb",
+      "snapshotPath": "assets/6577635cff574e7dce6e0108ba4540e525947a056bd70b8184aee95e0de812eb.jpg",
+      "sha256": "6577635cff574e7dce6e0108ba4540e525947a056bd70b8184aee95e0de812eb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 246096
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/0053a886-fd8d-480d-adb8-89537c6420ce.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/0053a886-fd8d-480d-adb8-89537c6420ce.jpg",
+      "token": "migration-resource://f8afd4ae3cc2e8140ed79cd50f55d28d30600798299a4618ab13c73ce347a95d",
+      "snapshotPath": "assets/f8afd4ae3cc2e8140ed79cd50f55d28d30600798299a4618ab13c73ce347a95d.jpg",
+      "sha256": "f8afd4ae3cc2e8140ed79cd50f55d28d30600798299a4618ab13c73ce347a95d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 258169
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/921a8db8-fbed-4fd9-afad-484ff15b9bcd.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/921a8db8-fbed-4fd9-afad-484ff15b9bcd.jpg",
+      "token": "migration-resource://01193647fba76527379d929003839a990b8d3d99e000f56ba6567ff93f1f9ebe",
+      "snapshotPath": "assets/01193647fba76527379d929003839a990b8d3d99e000f56ba6567ff93f1f9ebe.jpg",
+      "sha256": "01193647fba76527379d929003839a990b8d3d99e000f56ba6567ff93f1f9ebe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 237142
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/3b249928-02f5-465c-837b-107f1091c3b0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/3b249928-02f5-465c-837b-107f1091c3b0.jpg",
+      "token": "migration-resource://5324894d33097ad83f043a4cc717c4950bcccd5c704237bd0620609bcb8e90c0",
+      "snapshotPath": "assets/5324894d33097ad83f043a4cc717c4950bcccd5c704237bd0620609bcb8e90c0.jpg",
+      "sha256": "5324894d33097ad83f043a4cc717c4950bcccd5c704237bd0620609bcb8e90c0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 63056
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/dff2dca8-5dac-40ba-8e2e-dbc3048a997c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/dff2dca8-5dac-40ba-8e2e-dbc3048a997c.jpg",
+      "token": "migration-resource://d0aa622eacbaa08cf08582b9e161f425d70bad1071061ad134dd488848665b44",
+      "snapshotPath": "assets/d0aa622eacbaa08cf08582b9e161f425d70bad1071061ad134dd488848665b44.jpg",
+      "sha256": "d0aa622eacbaa08cf08582b9e161f425d70bad1071061ad134dd488848665b44",
+      "contentType": "image/jpeg",
+      "sizeBytes": 208500
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/23e69932-d479-40b5-846b-d1aa0605104c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/23e69932-d479-40b5-846b-d1aa0605104c.jpg",
+      "token": "migration-resource://c67a2516581c5cda572cb409b1fbfe1a95bf799721338c575713c6fc95eb8755",
+      "snapshotPath": "assets/c67a2516581c5cda572cb409b1fbfe1a95bf799721338c575713c6fc95eb8755.jpg",
+      "sha256": "c67a2516581c5cda572cb409b1fbfe1a95bf799721338c575713c6fc95eb8755",
+      "contentType": "image/jpeg",
+      "sizeBytes": 79935
+    }
+  ],
+  "sourceFingerprint": "9790c29f393dcbeacce728ce098f54429c5bafd0cfa32cebeb215f9a73dbbfa5",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "关于印发《松原市关于支持就业创业的 若干政策措施》的通知",
+    "listPublishDate": "2023-05-29",
+    "sourceOrder": 19,
+    "detailPublishDate": "2023-05-29"
+  }
+}

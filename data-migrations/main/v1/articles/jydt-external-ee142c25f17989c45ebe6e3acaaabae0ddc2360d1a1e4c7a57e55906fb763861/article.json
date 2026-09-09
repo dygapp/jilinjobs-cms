@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ee142c25f17989c45ebe6e3acaaabae0ddc2360d1a1e4c7a57e55906fb763861",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1084/1718.htm",
+    "url": "https://xq.ccnc.edu.cn/info/1084/1718.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范高等专科学校校长姜国权带队赴长春市欣智教幼儿园开展“访企拓岗”专项行动",
+    "source": "",
+    "publishDate": "2026-04-27",
+    "bodyHtml": "",
+    "externalUrl": "https://xq.ccnc.edu.cn/info/1084/1718.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "2f69b96e94679c63cae4b69bcb2d716bf3952fb84495f1bdf85a4dfe26a23217",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "长春师范高等专科学校校长姜国权带队赴长春市欣智教幼儿园开展“访企拓岗”专项行动",
+    "listPublishDate": "2026-04-27",
+    "sourceOrder": 238
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f374c8a78ccc5c6c995769494a6d9366bf2f43d41c94cce935693eccdd9c38ad",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/anUWdNvWtNXtxFuul95bHQ",
+    "url": "https://mp.weixin.qq.com/s/anUWdNvWtNXtxFuul95bHQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学副校长王庆洲带队赴国家能源集团吉林电力有限公司开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/anUWdNvWtNXtxFuul95bHQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "9e324ac8143d5e16356220ff51a357bc03c7e529c4d61ca3bef5d1be90f99da0",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "东北电力大学副校长王庆洲带队赴国家能源集团吉林电力有限公司开展访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-30",
+    "sourceOrder": 346
+  }
+}

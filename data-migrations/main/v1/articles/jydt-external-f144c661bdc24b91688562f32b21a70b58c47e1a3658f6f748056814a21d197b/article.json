@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f144c661bdc24b91688562f32b21a70b58c47e1a3658f6f748056814a21d197b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/0GgIDUK4wyuYMO9F9rw9Gw",
+    "url": "https://mp.weixin.qq.com/s/0GgIDUK4wyuYMO9F9rw9Gw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林职业技术学院党委书记李光星带队赴延农动物医院开展访企拓岗活动",
+    "source": "",
+    "publishDate": "2025-07-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/0GgIDUK4wyuYMO9F9rw9Gw"
+  },
+  "resources": [],
+  "sourceFingerprint": "7c08169cf0159ec7420b0ffabaa8a428377274e01d66be1e445d15a0dbc8e08c",
+  "evidence": {
+    "listPage": 75,
+    "listTitle": "吉林职业技术学院党委书记李光星带队赴延农动物医院开展访企拓岗活动",
+    "listPublishDate": "2025-07-03",
+    "sourceOrder": 746
+  }
+}

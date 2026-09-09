@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:167134101520384",
+    "contentId": "167134101520384",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=167134101520384"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "贵州：省人民政府关于促进高质量充分就业的意见",
+    "source": "",
+    "publishDate": "2023-07-07",
+    "bodyHtml": "\n                        <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 为贯彻落实《国务院办公厅关于优化调整稳就业政策措施全力促发展惠民生的通知》（国办发〔2023〕11号）精神，深入实施就业优先战略，推动贵州省就业扩容提质，全力促发展惠民生，结合实际，省人民政府提出了关于促进高质量充分就业的意见。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 为进一步推动贵州省高校毕业生等青年留黔就业创业，省人民政府制定了关于进一步促进贵州省高校毕业生等青年就业创业的实施办法。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 为进一步完善全省就业公共服务体系，不断提升就业公共服务能力和水平，省人民政府制定了关于进一步健全贵州省就业公共服务体系的实施办法。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 为进一步提升贵州省就业援助针对性、有效性，促进失业人员就业创业，省人民政府制定了关于进一步做好贵州省失业人员就业援助的实施办法。</span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "8e21a5f2e6500d97ac82102c1f8c39312e98c7beea440591d1afc53f160789f6",
+  "evidence": {
+    "listPage": 114,
+    "listTitle": "贵州：省人民政府关于促进高质量充分就业的意见",
+    "listPublishDate": "2023-07-07",
+    "sourceOrder": 1132,
+    "detailPublishDate": "2023-07-07"
+  }
+}

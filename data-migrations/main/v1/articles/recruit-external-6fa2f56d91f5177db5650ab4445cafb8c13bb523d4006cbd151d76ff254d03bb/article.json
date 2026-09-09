@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:6fa2f56d91f5177db5650ab4445cafb8c13bb523d4006cbd151d76ff254d03bb",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/detail/news",
+    "url": "https://jy.neepu.edu.cn/detail/news?id=992525&type_id=17645"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 ‘就’在吉林”吉林省高校服务 新能源产业集群大型就业洽谈会 邀请函",
+    "source": "",
+    "publishDate": "2024-04-09",
+    "bodyHtml": "",
+    "externalUrl": "https://jy.neepu.edu.cn/detail/news?id=992525&type_id=17645"
+  },
+  "resources": [],
+  "sourceFingerprint": "8885e309c734f8acd3af9f02c9443124d22f7eaa785c9324ece5acf2268131b3",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "“创业奋斗 ‘就’在吉林”吉林省高校服务 新能源产业集群大型就业洽谈会 邀请函",
+    "listPublishDate": "2024-04-09",
+    "sourceOrder": 302
+  }
+}

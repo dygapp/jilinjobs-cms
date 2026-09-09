@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ba6a4decaa85a49b8acf777b25da2253de8dac5c17dff9691882fbd93e62a695",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/DUFrHRqu-mXO73mDO7_ajw",
+    "url": "https://mp.weixin.qq.com/s/DUFrHRqu-mXO73mDO7_ajw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院全面部署“三先三再”就业育人新举措",
+    "source": "",
+    "publishDate": "2025-11-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DUFrHRqu-mXO73mDO7_ajw"
+  },
+  "resources": [],
+  "sourceFingerprint": "0bb07a1273f1a2d34c2f58b2536ae5b5f4e5077501c6dedfd6335663e91f4bfd",
+  "evidence": {
+    "listPage": 59,
+    "listTitle": "长春人文学院全面部署“三先三再”就业育人新举措",
+    "listPublishDate": "2025-11-19",
+    "sourceOrder": 587
+  }
+}

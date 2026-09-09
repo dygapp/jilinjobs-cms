@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120336",
+    "contentId": "28737783120336",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120336"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "北航依托大学科技园促进学生就业创业",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">北航依托大学科技园促进学生就业创业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 新华网北京４月３日专电（记者李江涛）北京航空航天大学科技园“实习、实践、创业、就业”综合基地揭牌仪式于３日举行，基地将搭建企业与学生间的人才交流实践平台，促进大学生多元化实习就业，并开辟创业专用场地，鼓励大学生创业。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 北航科技园董事长呼文亮表示，为建设好综合基地，北航将利用科技园内的企业资源为学生提供丰富的实习岗位，签订实习协议，加深企业与学生之间的了解，促进就业；将把科技园作为学生社会实践的基地，聘请优秀企业家为学生提供创业、职业规划、就业等方面的专业指导与培训；将积极整合科技园园区企业、双高人才、中关村人才市场等优质资源，搜集企业信息，建立企业需求库，结合网络招聘与校园招聘等多种形式，定期为应届毕业生举办专场招聘会，为大学生拓宽就业渠道，创造更多的就业机会；将通过“北航创业计划大赛”发掘优秀项目，提供相应的场地和资金支持，促进和鼓励大学生创业，为大学生提供广阔的发展平台。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 为鼓励大学生创业，北航科技园以创业培训、创业辅导、创业计划大赛、“种子基金”平台等扶持手段，在园区内专设创业场地，提供政策、技术、设备等全方位服务，初期可容纳４０个创业团队。<br>&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "845ce7ea275b26714b39ef13de03d74c5b376684651647c6825e94711c7e5b38",
+  "evidence": {
+    "listPage": 199,
+    "listTitle": "北航依托大学科技园促进学生就业创业",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1982,
+    "detailPublishDate": "2009-04-04"
+  }
+}

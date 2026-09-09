@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122522",
+    "contentId": "28737783122522",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122522"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "就业代理毕业生办理落户手续管理办法",
+    "source": "",
+    "publishDate": "2009-02-20",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">就业代理毕业生办理落户手续管理办法</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-2-20 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">一、凡与吉林省高等学校毕业生就业指导中心(以下简称中心)<br>签订就业代理协议的毕业生，办理落户手续须提供下列材料：<br>1、就业代理协议书；<br>2、《报到证》原件及复印件；<br>3、毕业证书原件及复印件;<br>4、身份证复印件（背面注明姓名及常用联系方式）；<br>5、长春市内高校迁移：须提供常住人口（单位集体户口）登记表，不需要提供户口迁移证,同时须通知迁出地派出所及时为其办理户口解锁手续；<br>6、长春市外高校迁移：须提供户口迁移证和一张小二寸彩色照片（迁往地址：长春市经济技术开发区深圳街或浦东路派出所）；<br>7、复印件均需使用A4纸。<br>8、落户所需时间：60个工作日<br>注意,省外毕业生,以上材料需持原件</font></p> <p><font color=\"#444444\" size=\"2\">业务咨询电话：84657570 84657571</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "d3f71349acd9c6ad0ebfcb91e57d5c23d0ab07cc534966b7e2081bc26231bb0c",
+  "evidence": {
+    "listPage": 202,
+    "listTitle": "就业代理毕业生办理落户手续管理办法",
+    "listPublishDate": "2009-02-20",
+    "sourceOrder": 2018,
+    "detailPublishDate": "2009-02-20"
+  }
+}

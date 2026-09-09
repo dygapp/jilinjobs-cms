@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8751a1640d9cc63a729f47bf80f751eaffd954405da2c8d2e068e088c819c4eb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/app/news/shareNewsDetail",
+    "url": "https://www.cailianxinwen.com/app/news/shareNewsDetail?newsid=324701"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省教育厅举办“24365校园招聘服务”就业促进周吉林专场活动",
+    "source": "",
+    "publishDate": "2022-05-10",
+    "bodyHtml": "",
+    "externalUrl": "https://www.cailianxinwen.com/app/news/shareNewsDetail?newsid=324701"
+  },
+  "resources": [],
+  "sourceFingerprint": "6659f3eb343ef33dd6e6b07a69f8b3043e914d17c8c7a4d4910c2083ecd9468c",
+  "evidence": {
+    "listPage": 121,
+    "listTitle": "吉林省教育厅举办“24365校园招聘服务”就业促进周吉林专场活动",
+    "listPublishDate": "2022-05-10",
+    "sourceOrder": 1207
+  }
+}

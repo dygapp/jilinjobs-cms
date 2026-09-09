@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122404",
+    "contentId": "28737783122404",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122404"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "热水器排行，专业性品牌胜出",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">热水器排行，专业性品牌胜出</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;&nbsp;&nbsp; <font color=\"#444444\" size=\"2\">与2007年9月相比，<strong>海尔</strong>热水器关注度上升6.50个百分点，保持着行业领先地位。本次上榜的热水器品牌中，专业性品牌占据7席，综合性品牌占据3席，其合计占比为60.46%，高出综合性品牌24.32个百分点。专业热水器品牌<strong>万家乐</strong>、<strong>A.O.</strong><strong>史密斯</strong>分别升至第二、三名，<strong>阿里斯顿</strong>、<strong>林内</strong>、<strong>金友</strong>和<strong>樱花</strong>等专业热水器品牌均榜上有名，专业性品牌全面赶超综合性品牌。</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 热水器行业，品牌之间的梯度非常明显：<strong>海尔</strong>和<strong>万家乐</strong>是热水器行业的“第一集团军”， <strong>A.O.</strong><strong>史密斯</strong>和<strong>皇明</strong>构成“第二集团”，<strong>万和</strong>和<strong>阿里斯顿</strong>形成“第三集团”，<strong>林内</strong>、<strong>亿家能</strong>、<strong>金友</strong>和<strong>樱花</strong>与上述三大集团差距明显，处于“第四集团”。上述品牌的主要竞争对手主要是各自所处的集团内的其他品牌。</font></p> <p class=\"chart\" align=\"center\"><font color=\"#444444\" size=\"2\"><img alt=\"家电行业\" src=\"http://data.baidu.com/jiadian2/img/chart27.gif\"></font></p> <div class=\"chart\"><br><br></div> <p class=\"chart\" align=\"center\"><img alt=\"家电行业\" src=\"http://data.baidu.com/jiadian2/img/chart28.gif\"></p> <div class=\"chart\"><br></div></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "38be87eb4a6099511707ed984fbc1a7ed3b9dc814260d4db094eaf90b14aee66",
+  "evidence": {
+    "listPage": 183,
+    "listTitle": "热水器排行，专业性品牌胜出",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1828,
+    "detailPublishDate": "2009-04-05"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:6c42fc8da5d7f74d677b4c3ca5c338d2e3d1450fee6adb6f6fd2652ee7f7ae17",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/KOkywsG8xAnuseQGH9BE2Q",
+    "url": "https://mp.weixin.qq.com/s/KOkywsG8xAnuseQGH9BE2Q"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学2027届毕业生秋季校园招聘工作安排",
+    "source": "",
+    "publishDate": "2026-09-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/KOkywsG8xAnuseQGH9BE2Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "b48dab23be01af5be777530491fccfff54febc3de80daba8867474e757827bea",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "延边大学2027届毕业生秋季校园招聘工作安排",
+    "listPublishDate": "2026-09-01",
+    "sourceOrder": 16
+  }
+}

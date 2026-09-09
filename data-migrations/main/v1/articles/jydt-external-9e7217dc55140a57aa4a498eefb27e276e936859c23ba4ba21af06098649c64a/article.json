@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9e7217dc55140a57aa4a498eefb27e276e936859c23ba4ba21af06098649c64a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ctV44mUnNmOkG2cJBG-GXw",
+    "url": "https://mp.weixin.qq.com/s/ctV44mUnNmOkG2cJBG-GXw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "这个暑假，长春工业大学全力推进2027届毕业生高质量充分就业",
+    "source": "",
+    "publishDate": "2026-09-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ctV44mUnNmOkG2cJBG-GXw"
+  },
+  "resources": [],
+  "sourceFingerprint": "dbbe9c8d6ef7c2af765c14fa0ada73100e51cb0d9f8e082992d256e7fc0a1b00",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "这个暑假，长春工业大学全力推进2027届毕业生高质量充分就业",
+    "listPublishDate": "2026-09-04",
+    "sourceOrder": 5
+  }
+}

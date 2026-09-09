@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:d2b8425890c09b58d28c7a7ccc545af690fe49fa000fe8787ade68076cfaf776",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/zH_rG2sNFbpeMvZmt4julw",
+    "url": "https://mp.weixin.qq.com/s/zH_rG2sNFbpeMvZmt4julw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北五校就业协作体[吉林大学专场]吉林省高校2025届毕业生秋季双选会邀请函",
+    "source": "",
+    "publishDate": "2024-10-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/zH_rG2sNFbpeMvZmt4julw"
+  },
+  "resources": [],
+  "sourceFingerprint": "6b0702573fcc56363ac5d8e9b9bbd661ae3c12b37c30f5252016a16ff0bb59a2",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "东北五校就业协作体[吉林大学专场]吉林省高校2025届毕业生秋季双选会邀请函",
+    "listPublishDate": "2024-10-08",
+    "sourceOrder": 246
+  }
+}

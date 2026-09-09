@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:126358080487424",
+    "contentId": "126358080487424",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=126358080487424"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林工商学院开展新生职业生涯教育",
+    "source": "吉林工商学院",
+    "publishDate": "2022-10-30",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">吉林工商学院在抓好疫情防控工作同时，扎实开展2022级新生职业生涯教育，上好开学第一课，为新生顺利开启大学生活、树立正确的职业观、就业观和择业观打下坚实基础。</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">受疫情影响，学校2022级新生5000余人实行线上授课。按照省就业指导中心通知要求和学校工作安排，9月8日上午，组织全校2022级新生云端相见，线上收看《吉林省高校大学生职业生涯教育第一课》。主讲人张锐博士通过大量详实案例，深入浅出地为新生们讲解了做好生涯规划、树立就业意识的意义。引导学生把知识转化为能力，树立健康良好的心态和百折不挠逆流而上的精神，努力追求自己的梦想，努力成长为社会需要的人才。通过学习，同学们充分认识到大学生涯规划的重要性，收获良多，受益匪浅。在接下来的大学生活中，一定要珍惜宝贵时光，树立报国之志，练就实干本领，使自己成为一名对国家、社会有用的人才。金融学院22403班赵原同学表示，通过学习，认识到提升自己人格魅力、心理素质以及社交能力的重要性，要在大学期间合理安排学习，科学规划，努力做好结构优化，注意培养高端能力，找出最优大学之路。传媒艺术学院22405班郑婉婷同学表示，作为一名新生，刚刚入学感到不知所措。张锐老师的讲座如同一盏明灯，点亮了未来前行的方向。要努力把握时间，提升自己，实现多姿多彩的人生，创造一个属于自己的传奇！</span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"526\" src=\"migration-resource://4e31b51a16a8cecf22b0e802279929ae9c239471b3779a7140ccf92fec7eced9\" width=\"900\"></p>\n\n<p style=\"text-align:left\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">学校就业指导中心还根据秋季开学实际，制定新生就业教育方案，开展新生职业生涯教育和留省就业宣讲。各教学学院采取专业教育、研考公考经验分享、优秀毕业生事迹介绍等多种形式，引导新生尽快熟悉本专业特点和社会需求，激发学习热情，明确发展方向，开启精彩大学学习生涯。</span></span></span></span></p>\n\n<p style=\"text-align:right\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">（吉林工商学院 田佳）</span></span></strong></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-29/89413057-faf9-4180-b808-73dff65d566d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-29/89413057-faf9-4180-b808-73dff65d566d.jpg",
+      "token": "migration-resource://4e31b51a16a8cecf22b0e802279929ae9c239471b3779a7140ccf92fec7eced9",
+      "snapshotPath": "assets/4e31b51a16a8cecf22b0e802279929ae9c239471b3779a7140ccf92fec7eced9.jpg",
+      "sha256": "4e31b51a16a8cecf22b0e802279929ae9c239471b3779a7140ccf92fec7eced9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84516
+    }
+  ],
+  "sourceFingerprint": "268da206d884088780eabcb8128e299c880f4c7aa9802c34466c74b6cc6f85ed",
+  "evidence": {
+    "listPage": 118,
+    "listTitle": "吉林工商学院开展新生职业生涯教育",
+    "listPublishDate": "2022-10-30",
+    "sourceOrder": 1180,
+    "detailPublishDate": "2022-10-30"
+  }
+}

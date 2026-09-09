@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122334",
+    "contentId": "28737783122334",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122334"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "习近平会见韩国前总统金大中",
+    "source": "",
+    "publishDate": "2009-05-07",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">习近平会见韩国前总统金大中</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-5-7 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font size=\"2\">&nbsp;&nbsp;&nbsp; <img src=\"http://cpc.people.com.cn/mediafile/200905/06/F200905060803231948045332.jpg\"><br></font></p> <center><font color=\"#000000\" size=\"2\">&nbsp;&nbsp;&nbsp;5月5日，国家副主席习近平在北京人民大会堂会见韩国前总统金大中一行。新华社记者马占成摄<br>&nbsp;</font></center> <p><br><font size=\"2\">&nbsp;&nbsp;&nbsp; 中国国家副主席习近平５日在人民大会堂会见了韩国前总统金大中一行。双方就中韩关系、朝鲜半岛核问题等共同关心的问题交换了意见。</font></p> <p><font size=\"2\">　　金大中一行是应中国人民外交学会邀请来京访问的。外交学会会长杨文昌等会见时在座。 <br>&nbsp;&nbsp; <br>&nbsp;<br>&nbsp; <br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "a106b2f78e78cb6f6bfad909b93fe735af9e852b996f095f95b543b08bda3c8c",
+  "evidence": {
+    "listPage": 175,
+    "listTitle": "习近平会见韩国前总统金大中",
+    "listPublishDate": "2009-05-07",
+    "sourceOrder": 1743,
+    "detailPublishDate": "2009-05-07"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122208",
+    "contentId": "28737783122208",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122208"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2012年全省普通高校学生管理和就业工作调度会在省就业中心召开",
+    "source": "",
+    "publishDate": "2012-03-22",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2012年全省普通高校学生管理和就业工作调度会在省就业中心召开</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-3-22 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://2f888c57d8346ae2c373d001ba39d1ab3d2e8fd3a8f849b789a9108f7464dd15\"><br>2012年全省普通高校学生管理和就业工作调度会在省就业中心召开</p> <p align=\"center\">&nbsp;</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://cf7a36954a50fb9382cc0a8b1703468c72cf2a3b06dbd1c3a041a22420573451\"></p> <p align=\"center\">省教育厅高校学生处纪拓处长主持会议并做工作部署</p> <p align=\"center\">&nbsp;</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://402c17cccb26795d154b207960c8c59f0c710017a7e8991032e6304a0ee273fe\"></p> <p align=\"center\">全省58所高校的学生处和就业处(就业中心)的处长(主任)参加会议</p> <p align=\"center\">&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120322141140278.jpg",
+      "originalReference": "/chistory/cms/imgs/20120322141140278.jpg",
+      "token": "migration-resource://2f888c57d8346ae2c373d001ba39d1ab3d2e8fd3a8f849b789a9108f7464dd15",
+      "snapshotPath": "assets/2f888c57d8346ae2c373d001ba39d1ab3d2e8fd3a8f849b789a9108f7464dd15.jpg",
+      "sha256": "2f888c57d8346ae2c373d001ba39d1ab3d2e8fd3a8f849b789a9108f7464dd15",
+      "contentType": "image/jpeg",
+      "sizeBytes": 101258
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120322141220494.jpg",
+      "originalReference": "/chistory/cms/imgs/20120322141220494.jpg",
+      "token": "migration-resource://cf7a36954a50fb9382cc0a8b1703468c72cf2a3b06dbd1c3a041a22420573451",
+      "snapshotPath": "assets/cf7a36954a50fb9382cc0a8b1703468c72cf2a3b06dbd1c3a041a22420573451.jpg",
+      "sha256": "cf7a36954a50fb9382cc0a8b1703468c72cf2a3b06dbd1c3a041a22420573451",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75258
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120322141534969.jpg",
+      "originalReference": "/chistory/cms/imgs/20120322141534969.jpg",
+      "token": "migration-resource://402c17cccb26795d154b207960c8c59f0c710017a7e8991032e6304a0ee273fe",
+      "snapshotPath": "assets/402c17cccb26795d154b207960c8c59f0c710017a7e8991032e6304a0ee273fe.jpg",
+      "sha256": "402c17cccb26795d154b207960c8c59f0c710017a7e8991032e6304a0ee273fe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 96563
+    }
+  ],
+  "sourceFingerprint": "e9203baa659e415d6d8e1ef226c1230543ae03436840e55f148baebe476d66ce",
+  "evidence": {
+    "listPage": 164,
+    "listTitle": "2012年全省普通高校学生管理和就业工作调度会在省就业中心召开",
+    "listPublishDate": "2012-03-22",
+    "sourceOrder": 1638,
+    "detailPublishDate": "2012-03-22"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4dc7fd4fccd3b7c8182cbb29a6183695de8d0e52f0be3d86a02015dbb08b4cd0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/QIT-eCnRDZ5QpLSROnuPHw",
+    "url": "https://mp.weixin.qq.com/s/QIT-eCnRDZ5QpLSROnuPHw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春东方职业学院校领导赴通化东宝医药经营有限公司开展“优企引才”访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-03-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/QIT-eCnRDZ5QpLSROnuPHw"
+  },
+  "resources": [],
+  "sourceFingerprint": "794a78b2156ea7c12cd274619f23d89428c85f995bae31a15d2de564221e3c63",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "长春东方职业学院校领导赴通化东宝医药经营有限公司开展“优企引才”访企拓岗专项行动",
+    "listPublishDate": "2026-03-17",
+    "sourceOrder": 406
+  }
+}

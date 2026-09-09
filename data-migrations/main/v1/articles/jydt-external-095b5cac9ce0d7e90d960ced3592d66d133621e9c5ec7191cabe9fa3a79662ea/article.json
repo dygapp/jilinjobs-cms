@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:095b5cac9ce0d7e90d960ced3592d66d133621e9c5ec7191cabe9fa3a79662ea",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/NCG8WxYLQSFh7ntuHeSR8Q",
+    "url": "https://mp.weixin.qq.com/s/NCG8WxYLQSFh7ntuHeSR8Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院副校长付宏政考察吉林颐养集团",
+    "source": "",
+    "publishDate": "2025-07-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/NCG8WxYLQSFh7ntuHeSR8Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "5e6aa3f775134e5c21f7e6d15154a5e45006352da761c0277bf9b1f09713f08b",
+  "evidence": {
+    "listPage": 73,
+    "listTitle": "长春人文学院副校长付宏政考察吉林颐养集团",
+    "listPublishDate": "2025-07-18",
+    "sourceOrder": 725
+  }
+}

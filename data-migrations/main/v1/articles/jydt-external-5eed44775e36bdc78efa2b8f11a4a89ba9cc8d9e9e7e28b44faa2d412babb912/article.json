@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5eed44775e36bdc78efa2b8f11a4a89ba9cc8d9e9e7e28b44faa2d412babb912",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/nIGkLNPvqWBITs3nN_BMmQ",
+    "url": "https://mp.weixin.qq.com/s/nIGkLNPvqWBITs3nN_BMmQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“职”向文旅，“艺”展风华！这场招聘会在吉林艺术学院圆满举办！",
+    "source": "",
+    "publishDate": "2025-11-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/nIGkLNPvqWBITs3nN_BMmQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "588d45191caa949d2e895d03a717d6d40a38c12119bbc891745a2af3da3c49b7",
+  "evidence": {
+    "listPage": 62,
+    "listTitle": "“职”向文旅，“艺”展风华！这场招聘会在吉林艺术学院圆满举办！",
+    "listPublishDate": "2025-11-06",
+    "sourceOrder": 620
+  }
+}

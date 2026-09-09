@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:036a6a3b5f41232222017ac778dfc085cdce14f8874114760dee5a1bde3a8b76",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Ot0Rh4gjs5sdN-kTxAS9ew",
+    "url": "https://mp.weixin.qq.com/s/Ot0Rh4gjs5sdN-kTxAS9ew"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“聚力扩容提质 服务高质量发展”吉林工商学院2026届毕业生春季校园招聘会——粮食与营养类专场",
+    "source": "",
+    "publishDate": "2026-04-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Ot0Rh4gjs5sdN-kTxAS9ew"
+  },
+  "resources": [],
+  "sourceFingerprint": "58832c22cb97b70d5f6186761e55d90d134407e69bb5e63a620c05f0a568440e",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "“聚力扩容提质 服务高质量发展”吉林工商学院2026届毕业生春季校园招聘会——粮食与营养类专场",
+    "listPublishDate": "2026-04-20",
+    "sourceOrder": 277
+  }
+}

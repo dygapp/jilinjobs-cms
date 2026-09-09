@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:2984b08979772ca5ccb5d7709c7adfcc67caf8325b1e6782decb95cf50bb9306",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/12thsdzp",
+    "url": "https://ht.myjob500.com/12thsdzp"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "第十二届中央企业面向西藏青海新疆高校毕业生专场招聘活动",
+    "source": "",
+    "publishDate": "2022-11-02",
+    "bodyHtml": "",
+    "externalUrl": "https://ht.myjob500.com/12thsdzp"
+  },
+  "resources": [],
+  "sourceFingerprint": "84160dab00bf7149612b4c180d3af38d120f575dabbec40a7ffeaf09649e05f2",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "第十二届中央企业面向西藏青海新疆高校毕业生专场招聘活动",
+    "listPublishDate": "2022-11-02",
+    "sourceOrder": 335
+  }
+}

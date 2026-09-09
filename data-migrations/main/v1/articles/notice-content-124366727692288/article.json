@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:124366727692288",
+    "contentId": "124366727692288",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=124366727692288"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅关于开展2023届高校毕业生校园招聘月系列活动的通知",
+    "source": "教育部办公厅",
+    "publishDate": "2022-11-11",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"972\" src=\"migration-resource://15c8f23f5a491b53a3cb47a1e513eccf67a4b039061f47ba534e33eb9e4a7e5a\" width=\"740\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"971\" src=\"migration-resource://669c2726fc64de54c0686a9cd2868dae00ac9e606f20adfe53a9bdc6b2f407b2\" width=\"740\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"973\" src=\"migration-resource://bcff447fbe0df36c5f59b004ac19c2f58af405a09d7f01dbc483dbf74f290929\" width=\"740\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"960\" src=\"migration-resource://8d3ffd4940a8f682d29b8dc1a44508fcd0d1917e486b2b6d651dd27102d9823d\" width=\"740\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"968\" src=\"migration-resource://62e486c9ca9da86c9714b67f213e3b4d17f771bbeb8bee366893211d7a7b9708\" width=\"739\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"871\" src=\"migration-resource://e7a744e1dac2742cc2e7bd1f726cec7e33a91d53eaf4c1df2924a861d5823f5b\" width=\"736\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-18/144d445e-3bdb-490a-bbfa-85baedc2fc55.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-18/144d445e-3bdb-490a-bbfa-85baedc2fc55.jpg",
+      "token": "migration-resource://15c8f23f5a491b53a3cb47a1e513eccf67a4b039061f47ba534e33eb9e4a7e5a",
+      "snapshotPath": "assets/15c8f23f5a491b53a3cb47a1e513eccf67a4b039061f47ba534e33eb9e4a7e5a.jpg",
+      "sha256": "15c8f23f5a491b53a3cb47a1e513eccf67a4b039061f47ba534e33eb9e4a7e5a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 160647
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-18/1d017394-6197-472d-8f32-1f2ec0a510d4.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-18/1d017394-6197-472d-8f32-1f2ec0a510d4.jpg",
+      "token": "migration-resource://669c2726fc64de54c0686a9cd2868dae00ac9e606f20adfe53a9bdc6b2f407b2",
+      "snapshotPath": "assets/669c2726fc64de54c0686a9cd2868dae00ac9e606f20adfe53a9bdc6b2f407b2.jpg",
+      "sha256": "669c2726fc64de54c0686a9cd2868dae00ac9e606f20adfe53a9bdc6b2f407b2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 86913
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-18/afc99353-afe6-4890-9169-20311c05632b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-18/afc99353-afe6-4890-9169-20311c05632b.jpg",
+      "token": "migration-resource://bcff447fbe0df36c5f59b004ac19c2f58af405a09d7f01dbc483dbf74f290929",
+      "snapshotPath": "assets/bcff447fbe0df36c5f59b004ac19c2f58af405a09d7f01dbc483dbf74f290929.jpg",
+      "sha256": "bcff447fbe0df36c5f59b004ac19c2f58af405a09d7f01dbc483dbf74f290929",
+      "contentType": "image/jpeg",
+      "sizeBytes": 109373
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-18/040abbd3-8b2d-44b3-a116-6ed871bff8b6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-18/040abbd3-8b2d-44b3-a116-6ed871bff8b6.jpg",
+      "token": "migration-resource://8d3ffd4940a8f682d29b8dc1a44508fcd0d1917e486b2b6d651dd27102d9823d",
+      "snapshotPath": "assets/8d3ffd4940a8f682d29b8dc1a44508fcd0d1917e486b2b6d651dd27102d9823d.jpg",
+      "sha256": "8d3ffd4940a8f682d29b8dc1a44508fcd0d1917e486b2b6d651dd27102d9823d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 103766
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-18/056a923a-aef4-40e1-9a02-a6b7784fe0e0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-18/056a923a-aef4-40e1-9a02-a6b7784fe0e0.jpg",
+      "token": "migration-resource://62e486c9ca9da86c9714b67f213e3b4d17f771bbeb8bee366893211d7a7b9708",
+      "snapshotPath": "assets/62e486c9ca9da86c9714b67f213e3b4d17f771bbeb8bee366893211d7a7b9708.jpg",
+      "sha256": "62e486c9ca9da86c9714b67f213e3b4d17f771bbeb8bee366893211d7a7b9708",
+      "contentType": "image/jpeg",
+      "sizeBytes": 66280
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-18/e187aa61-11e3-4bc1-b3c4-cdf8efb0d93b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-18/e187aa61-11e3-4bc1-b3c4-cdf8efb0d93b.jpg",
+      "token": "migration-resource://e7a744e1dac2742cc2e7bd1f726cec7e33a91d53eaf4c1df2924a861d5823f5b",
+      "snapshotPath": "assets/e7a744e1dac2742cc2e7bd1f726cec7e33a91d53eaf4c1df2924a861d5823f5b.jpg",
+      "sha256": "e7a744e1dac2742cc2e7bd1f726cec7e33a91d53eaf4c1df2924a861d5823f5b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 13968
+    }
+  ],
+  "sourceFingerprint": "78bc95c6621231c8ac3996fd5f0e96c4fa696d54f55265db5e1df5f99ea5a9cf",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "教育部办公厅关于开展2023届高校毕业生校园招聘月系列活动的通知",
+    "listPublishDate": "2022-11-11",
+    "sourceOrder": 115,
+    "detailPublishDate": "2022-11-11"
+  }
+}

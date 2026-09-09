@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:31f680e8b384c1aeee9651defad779025b6241dac2cf8b7b6f3f697217c97eea",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/80AZWpLGvlmAPC_uGTw7rg",
+    "url": "https://mp.weixin.qq.com/s/80AZWpLGvlmAPC_uGTw7rg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学赴白山市开展“三访三促”专项活动",
+    "source": "",
+    "publishDate": "2026-06-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/80AZWpLGvlmAPC_uGTw7rg"
+  },
+  "resources": [],
+  "sourceFingerprint": "6ae97957c1a24b09e3043d1ae7acf51025047395175da768cbc56a0164fdf99b",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "长春工业大学赴白山市开展“三访三促”专项活动",
+    "listPublishDate": "2026-06-08",
+    "sourceOrder": 93
+  }
+}

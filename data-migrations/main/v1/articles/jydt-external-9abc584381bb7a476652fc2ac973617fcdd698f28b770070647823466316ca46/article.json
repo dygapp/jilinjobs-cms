@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9abc584381bb7a476652fc2ac973617fcdd698f28b770070647823466316ca46",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/4rmujlzsJTH92MKcJQplpA",
+    "url": "https://mp.weixin.qq.com/s/4rmujlzsJTH92MKcJQplpA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学校党委书记陈权率队赴吉林省通用机械（集团）有限责任公司访企拓岗",
+    "source": "",
+    "publishDate": "2025-05-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4rmujlzsJTH92MKcJQplpA"
+  },
+  "resources": [],
+  "sourceFingerprint": "8486e2f50332e33497e94587ead9dbbab545636a3a20f3f7fab19f8a953260f9",
+  "evidence": {
+    "listPage": 89,
+    "listTitle": "长春工业大学校党委书记陈权率队赴吉林省通用机械（集团）有限责任公司访企拓岗",
+    "listPublishDate": "2025-05-19",
+    "sourceOrder": 882
+  }
+}

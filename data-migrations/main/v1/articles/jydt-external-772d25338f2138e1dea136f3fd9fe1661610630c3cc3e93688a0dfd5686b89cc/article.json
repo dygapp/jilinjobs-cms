@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:772d25338f2138e1dea136f3fd9fe1661610630c3cc3e93688a0dfd5686b89cc",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/4851.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/4851.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学与吉林省安保集团有限责任公司举行校企合作座谈会",
+    "source": "",
+    "publishDate": "2025-07-07",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/4851.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "e1ad7a4596790e7725cc8ace39b969c09f04b1aba3a719a07b7c56adc73342af",
+  "evidence": {
+    "listPage": 74,
+    "listTitle": "长春工业大学与吉林省安保集团有限责任公司举行校企合作座谈会",
+    "listPublishDate": "2025-07-07",
+    "sourceOrder": 740
+  }
+}

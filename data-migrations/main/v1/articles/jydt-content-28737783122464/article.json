@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122464",
+    "contentId": "28737783122464",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122464"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "西宁成为首批国家级创业型城市",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">西宁成为首批国家级创业型城市</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 西宁市成为国家首批确定的国家级创业型城市之一，这意味着在创业、就业方面西宁市将得到国家更多、更优惠的政策支持。2009年至2010年，西宁市将建立健全五个体系，即建立创建工作组织领导体系、完善创业政策支持体系、健全创业培训体系、构建创业服务体系、健全创建工作考核体系。同时，将率先在创业、就业难点、重点上取得突破，完善相关政策，积极引导农民工返乡创业，鼓励更多大中专毕业生自主创业。 <br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "7bbc56699a367c5b10d54d8a23214e40c521f6a5d541f6889c8588adb71ef2cc",
+  "evidence": {
+    "listPage": 189,
+    "listTitle": "西宁成为首批国家级创业型城市",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1881,
+    "detailPublishDate": "2009-04-04"
+  }
+}

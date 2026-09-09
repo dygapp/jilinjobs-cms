@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:4e977766e3c59d913d73987605b551ffecb29d1d6acbaf64792a648eeb213d24",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/board/v5/6HXO2/608347859",
+    "url": "https://r.xiumi.us/board/v5/6HXO2/608347859?share_depth=1"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林警察学院2025届毕业生春季双选会 邀请函",
+    "source": "",
+    "publishDate": "2025-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://r.xiumi.us/board/v5/6HXO2/608347859?share_depth=1"
+  },
+  "resources": [],
+  "sourceFingerprint": "7937dca34598b0809a6a395da25c84fca23b9f0f4f1948289686a2d2cb25c3ce",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "吉林警察学院2025届毕业生春季双选会 邀请函",
+    "listPublishDate": "2025-03-27",
+    "sourceOrder": 206
+  }
+}

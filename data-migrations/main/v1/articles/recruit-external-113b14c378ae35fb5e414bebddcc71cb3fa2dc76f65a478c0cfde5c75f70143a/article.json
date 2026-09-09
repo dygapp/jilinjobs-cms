@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:113b14c378ae35fb5e414bebddcc71cb3fa2dc76f65a478c0cfde5c75f70143a",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/nqACHeApyGG7QHX2b3_Bhw",
+    "url": "https://mp.weixin.qq.com/s/nqACHeApyGG7QHX2b3_Bhw?scene=25&sessionid=-1368553277"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“服务吉林高质量发展”吉林司法警官职业学院2025届毕业生春季线上双选会邀请函",
+    "source": "",
+    "publishDate": "2025-04-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/nqACHeApyGG7QHX2b3_Bhw?scene=25&sessionid=-1368553277"
+  },
+  "resources": [],
+  "sourceFingerprint": "a0aebf72adf523104235d12c45b93ec7975d29debd92ce56f78effb5dcd2773c",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "“服务吉林高质量发展”吉林司法警官职业学院2025届毕业生春季线上双选会邀请函",
+    "listPublishDate": "2025-04-04",
+    "sourceOrder": 192
+  }
+}

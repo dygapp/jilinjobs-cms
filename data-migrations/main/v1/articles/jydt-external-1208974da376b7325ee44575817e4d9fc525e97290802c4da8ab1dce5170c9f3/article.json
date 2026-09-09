@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1208974da376b7325ee44575817e4d9fc525e97290802c4da8ab1dce5170c9f3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/QvbbBiUCeL9Ia5fkOc3JLA",
+    "url": "https://mp.weixin.qq.com/s/QvbbBiUCeL9Ia5fkOc3JLA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学2026年“寒假促就业暖心行动”系列活动掠影",
+    "source": "",
+    "publishDate": "2026-03-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/QvbbBiUCeL9Ia5fkOc3JLA"
+  },
+  "resources": [],
+  "sourceFingerprint": "ab402553783cf73747c12d455b52dabfc56d967ed1bcb6a73f853118b36143f6",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "北华大学2026年“寒假促就业暖心行动”系列活动掠影",
+    "listPublishDate": "2026-03-12",
+    "sourceOrder": 426
+  }
+}

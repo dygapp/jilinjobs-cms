@@ -1,0 +1,111 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122212",
+    "contentId": "28737783122212",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122212"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省第二届“大学生职业发展与就业指导”课程教学大赛及“大学生职业生涯规划”大赛获奖情况通报",
+    "source": "",
+    "publishDate": "2011-12-01",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省第二届“大学生职业发展与就业指导”课程教学大赛及“大学生职业生涯规划”大赛获奖情况通报</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-12-1 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://d5c8edd5c67f033169cd197fede819bc91ca32d30653df4ace84b52a4a001af3\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://f4f5170626e12c4710ce77a29e3f22bdb4adbc65538354fb48a727492aedd6c9\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://6d89291ef43ca7f632bf2307d4c105d76d51591082d7af5b55ce26e32d308318\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://a766b0fa7bd2fb9fa8f68191d6b374fabdba353be1e94d0ebd906dc33a5ab921\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://f654df904e5f9b091b8fc453c7047b39ab2613272d3ef1d87151d43b22595f8d\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://4585d5b327f8547fd3629bb29f2a2718a7cb0debcc215c19c17eabb9bfac30e1\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://2e6868f45da03b89ad597ab2f1b1f4eebbc1a02b77a39bd445133a8b792766a8\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://7d88507d9d415b5e31dd6512f9a8a8de97579806bc582ac34a44dd7df2f7523d\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111201110539513.jpg",
+      "originalReference": "/chistory/cms/imgs/20111201110539513.jpg",
+      "token": "migration-resource://d5c8edd5c67f033169cd197fede819bc91ca32d30653df4ace84b52a4a001af3",
+      "snapshotPath": "assets/d5c8edd5c67f033169cd197fede819bc91ca32d30653df4ace84b52a4a001af3.jpg",
+      "sha256": "d5c8edd5c67f033169cd197fede819bc91ca32d30653df4ace84b52a4a001af3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 87240
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111201110545465.jpg",
+      "originalReference": "/chistory/cms/imgs/20111201110545465.jpg",
+      "token": "migration-resource://f4f5170626e12c4710ce77a29e3f22bdb4adbc65538354fb48a727492aedd6c9",
+      "snapshotPath": "assets/f4f5170626e12c4710ce77a29e3f22bdb4adbc65538354fb48a727492aedd6c9.jpg",
+      "sha256": "f4f5170626e12c4710ce77a29e3f22bdb4adbc65538354fb48a727492aedd6c9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90731
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111201110551370.jpg",
+      "originalReference": "/chistory/cms/imgs/20111201110551370.jpg",
+      "token": "migration-resource://6d89291ef43ca7f632bf2307d4c105d76d51591082d7af5b55ce26e32d308318",
+      "snapshotPath": "assets/6d89291ef43ca7f632bf2307d4c105d76d51591082d7af5b55ce26e32d308318.jpg",
+      "sha256": "6d89291ef43ca7f632bf2307d4c105d76d51591082d7af5b55ce26e32d308318",
+      "contentType": "image/jpeg",
+      "sizeBytes": 79594
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111201110556461.jpg",
+      "originalReference": "/chistory/cms/imgs/20111201110556461.jpg",
+      "token": "migration-resource://a766b0fa7bd2fb9fa8f68191d6b374fabdba353be1e94d0ebd906dc33a5ab921",
+      "snapshotPath": "assets/a766b0fa7bd2fb9fa8f68191d6b374fabdba353be1e94d0ebd906dc33a5ab921.jpg",
+      "sha256": "a766b0fa7bd2fb9fa8f68191d6b374fabdba353be1e94d0ebd906dc33a5ab921",
+      "contentType": "image/jpeg",
+      "sizeBytes": 71856
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111201110603191.jpg",
+      "originalReference": "/chistory/cms/imgs/20111201110603191.jpg",
+      "token": "migration-resource://f654df904e5f9b091b8fc453c7047b39ab2613272d3ef1d87151d43b22595f8d",
+      "snapshotPath": "assets/f654df904e5f9b091b8fc453c7047b39ab2613272d3ef1d87151d43b22595f8d.jpg",
+      "sha256": "f654df904e5f9b091b8fc453c7047b39ab2613272d3ef1d87151d43b22595f8d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 78161
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111201110610492.jpg",
+      "originalReference": "/chistory/cms/imgs/20111201110610492.jpg",
+      "token": "migration-resource://4585d5b327f8547fd3629bb29f2a2718a7cb0debcc215c19c17eabb9bfac30e1",
+      "snapshotPath": "assets/4585d5b327f8547fd3629bb29f2a2718a7cb0debcc215c19c17eabb9bfac30e1.jpg",
+      "sha256": "4585d5b327f8547fd3629bb29f2a2718a7cb0debcc215c19c17eabb9bfac30e1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77808
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111201110616824.jpg",
+      "originalReference": "/chistory/cms/imgs/20111201110616824.jpg",
+      "token": "migration-resource://2e6868f45da03b89ad597ab2f1b1f4eebbc1a02b77a39bd445133a8b792766a8",
+      "snapshotPath": "assets/2e6868f45da03b89ad597ab2f1b1f4eebbc1a02b77a39bd445133a8b792766a8.jpg",
+      "sha256": "2e6868f45da03b89ad597ab2f1b1f4eebbc1a02b77a39bd445133a8b792766a8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 73679
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111201110621511.jpg",
+      "originalReference": "/chistory/cms/imgs/20111201110621511.jpg",
+      "token": "migration-resource://7d88507d9d415b5e31dd6512f9a8a8de97579806bc582ac34a44dd7df2f7523d",
+      "snapshotPath": "assets/7d88507d9d415b5e31dd6512f9a8a8de97579806bc582ac34a44dd7df2f7523d.jpg",
+      "sha256": "7d88507d9d415b5e31dd6512f9a8a8de97579806bc582ac34a44dd7df2f7523d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 56450
+    }
+  ],
+  "sourceFingerprint": "1fc74e46ab3fbaf0d84552c39369b01484dd461ddd58ebb51f5ecb960eb03d5a",
+  "evidence": {
+    "listPage": 165,
+    "listTitle": "吉林省第二届“大学生职业发展与就业指导”课程教学大赛及“大学生职业生涯规划”大赛获奖情况通报",
+    "listPublishDate": "2011-12-01",
+    "sourceOrder": 1642,
+    "detailPublishDate": "2011-12-01"
+  }
+}

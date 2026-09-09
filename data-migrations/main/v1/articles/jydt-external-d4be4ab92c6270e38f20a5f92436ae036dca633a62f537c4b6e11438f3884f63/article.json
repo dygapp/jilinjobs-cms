@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d4be4ab92c6270e38f20a5f92436ae036dca633a62f537c4b6e11438f3884f63",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/k_jRwyTDwb9hcSqdIMucRg",
+    "url": "https://mp.weixin.qq.com/s/k_jRwyTDwb9hcSqdIMucRg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学开展离校未就业毕业生专场直播带岗活动",
+    "source": "",
+    "publishDate": "2026-08-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/k_jRwyTDwb9hcSqdIMucRg"
+  },
+  "resources": [],
+  "sourceFingerprint": "01cce65674ca0c9b9980aadd0a102d59838ffb379b6e65a8168f553677f57946",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "北华大学开展离校未就业毕业生专场直播带岗活动",
+    "listPublishDate": "2026-08-06",
+    "sourceOrder": 22
+  }
+}

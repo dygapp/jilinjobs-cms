@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:528d99342c4545665a95872f0b387ce359966d3bcf1c4447cc1df88f165bfc52",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1045/6301.htm",
+    "url": "https://www.jlsfjy.cn/info/1045/6301.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“搭建校地联动桥梁，共探融通发展机遇” 吉林司法警官职业学院领导赴长春新区管委会开展校地合作调研",
+    "source": "",
+    "publishDate": "2025-06-23",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlsfjy.cn/info/1045/6301.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "0f8afbb897fae16c17ca2f7a60e16d8f2136588331394b30fb6865491f05709a",
+  "evidence": {
+    "listPage": 78,
+    "listTitle": "“搭建校地联动桥梁，共探融通发展机遇” 吉林司法警官职业学院领导赴长春新区管委会开展校地合作调研",
+    "listPublishDate": "2025-06-23",
+    "sourceOrder": 780
+  }
+}

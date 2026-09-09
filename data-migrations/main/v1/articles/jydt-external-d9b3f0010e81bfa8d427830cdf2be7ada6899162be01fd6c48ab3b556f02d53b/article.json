@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d9b3f0010e81bfa8d427830cdf2be7ada6899162be01fd6c48ab3b556f02d53b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/0dWNLYfbMCgCK2ue9OW4ww",
+    "url": "https://mp.weixin.qq.com/s/0dWNLYfbMCgCK2ue9OW4ww"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春理工大学副校长董立泉带队赴北京访企拓岗",
+    "source": "",
+    "publishDate": "2026-06-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/0dWNLYfbMCgCK2ue9OW4ww"
+  },
+  "resources": [],
+  "sourceFingerprint": "a901ce07d5a85f6336b80a7bf9d1198a0c57a97258e3159aa556fb1187e62bcd",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "长春理工大学副校长董立泉带队赴北京访企拓岗",
+    "listPublishDate": "2026-06-09",
+    "sourceOrder": 91
+  }
+}

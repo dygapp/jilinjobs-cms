@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:cdf3d1bba1ca496d0d86010b62e1d243dc589a54bc937a9236ae31b47618ec06",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/i080uHveLCEiQ1jIKQhSMg",
+    "url": "https://mp.weixin.qq.com/s/i080uHveLCEiQ1jIKQhSMg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学开展“寒假促就业暖心行动”直播带岗活动",
+    "source": "",
+    "publishDate": "2026-02-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/i080uHveLCEiQ1jIKQhSMg"
+  },
+  "resources": [],
+  "sourceFingerprint": "a51769312664c67ce45f2ea0570594d6481a5df0a94bcc608f4f43e4c30b5e33",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "北华大学开展“寒假促就业暖心行动”直播带岗活动",
+    "listPublishDate": "2026-02-04",
+    "sourceOrder": 69
+  }
+}

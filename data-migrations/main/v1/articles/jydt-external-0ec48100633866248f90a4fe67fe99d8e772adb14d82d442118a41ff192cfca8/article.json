@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0ec48100633866248f90a4fe67fe99d8e772adb14d82d442118a41ff192cfca8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/y6DlrnATx2e7ZPHjJ46L-w",
+    "url": "https://mp.weixin.qq.com/s/y6DlrnATx2e7ZPHjJ46L-w?scene=25&sessionid=-1366587043"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工程技术师范学院举行2025年度吉林省“百城千校万企”促就业行动暨全国工商联“产教融合实训基地”揭牌仪式",
+    "source": "",
+    "publishDate": "2025-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/y6DlrnATx2e7ZPHjJ46L-w?scene=25&sessionid=-1366587043"
+  },
+  "resources": [],
+  "sourceFingerprint": "e0d2e1f1870c54d06f79460ea9c95f067a9fb97bf595f451633e5f03ded400ae",
+  "evidence": {
+    "listPage": 93,
+    "listTitle": "吉林工程技术师范学院举行2025年度吉林省“百城千校万企”促就业行动暨全国工商联“产教融合实训基地”揭牌仪式",
+    "listPublishDate": "2025-04-21",
+    "sourceOrder": 930
+  }
+}

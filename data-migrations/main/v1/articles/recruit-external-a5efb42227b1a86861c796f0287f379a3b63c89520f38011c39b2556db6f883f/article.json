@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:a5efb42227b1a86861c796f0287f379a3b63c89520f38011c39b2556db6f883f",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/eZpty3Cbu06DpB0QdJilFw",
+    "url": "https://mp.weixin.qq.com/s/eZpty3Cbu06DpB0QdJilFw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省普通高校光电产业类毕业生就业洽谈会暨长春理工大学2025届毕业生秋季双选会",
+    "source": "",
+    "publishDate": "2024-09-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/eZpty3Cbu06DpB0QdJilFw"
+  },
+  "resources": [],
+  "sourceFingerprint": "be972fed15e473036f48badc08200a7849f6e062aed74c65e37ee6092fabfbdf",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "吉林省普通高校光电产业类毕业生就业洽谈会暨长春理工大学2025届毕业生秋季双选会",
+    "listPublishDate": "2024-09-26",
+    "sourceOrder": 248
+  }
+}

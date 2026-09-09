@@ -1,0 +1,101 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122768",
+    "contentId": "28737783122768",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122768"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于做好2017年全国计算机应用水平考试吉林省考区考务管理工作的通知",
+    "source": "",
+    "publishDate": "2017-01-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于做好2017年全国计算机应用水平考试吉林省考区考务管理工作的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2017-1-5 14:38:26</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img title=\"1.jpg\" src=\"migration-resource://4037a13335951d52cb635c25e6be7a7e871657c4b84e1ecc3baa2db3576fd46a\"></p><p style=\"text-align: center\"><img title=\"2.jpg\" src=\"migration-resource://68add612417bfeb44a66ee80e3a96b3fb288a74274ee648b29d10e8d1780c16c\"></p><p style=\"text-align: center\"><img title=\"3.jpg\" src=\"migration-resource://4761616176ea64712b745fcdd9c162adddc9d1df342a39a558b45c43d1d0d3c0\"></p><p style=\"text-align: center\"><img title=\"4.jpg\" src=\"migration-resource://28dffdcd647e8535ffde2d55b061af55e103692dd87fef3e2a53a331a85bb875\"></p><p style=\"text-align: center\"><img title=\"5.jpg\" src=\"migration-resource://dd7d1fc4f961f6d6c116b251b40fbd006e2ce4768ee9f7a12ca001b9f655b17b\"></p><p style=\"text-align: center\"><img title=\"6.jpg\" src=\"migration-resource://7c0d60a4716b6a247f865f78bc21457a4a5da52da0d4042e895a05a411c27ce2\"></p><p style=\"text-align: center\"><img title=\"7.jpg\" src=\"migration-resource://4111b48aa70beda65b4d343f9a3f27a3ef27fca9b84d3301d606489279991b1a\"></p><p style=\"text-align: center;\"><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361922398881250003375903.jpg",
+      "originalReference": "/chistory/cms/imgs/6361922398881250003375903.jpg",
+      "token": "migration-resource://4037a13335951d52cb635c25e6be7a7e871657c4b84e1ecc3baa2db3576fd46a",
+      "snapshotPath": "assets/4037a13335951d52cb635c25e6be7a7e871657c4b84e1ecc3baa2db3576fd46a.jpg",
+      "sha256": "4037a13335951d52cb635c25e6be7a7e871657c4b84e1ecc3baa2db3576fd46a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92891
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361922399026562504131737.jpg",
+      "originalReference": "/chistory/cms/imgs/6361922399026562504131737.jpg",
+      "token": "migration-resource://68add612417bfeb44a66ee80e3a96b3fb288a74274ee648b29d10e8d1780c16c",
+      "snapshotPath": "assets/68add612417bfeb44a66ee80e3a96b3fb288a74274ee648b29d10e8d1780c16c.jpg",
+      "sha256": "68add612417bfeb44a66ee80e3a96b3fb288a74274ee648b29d10e8d1780c16c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 98963
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361922399160937505388337.jpg",
+      "originalReference": "/chistory/cms/imgs/6361922399160937505388337.jpg",
+      "token": "migration-resource://4761616176ea64712b745fcdd9c162adddc9d1df342a39a558b45c43d1d0d3c0",
+      "snapshotPath": "assets/4761616176ea64712b745fcdd9c162adddc9d1df342a39a558b45c43d1d0d3c0.jpg",
+      "sha256": "4761616176ea64712b745fcdd9c162adddc9d1df342a39a558b45c43d1d0d3c0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93097
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361922399290625001659030.jpg",
+      "originalReference": "/chistory/cms/imgs/6361922399290625001659030.jpg",
+      "token": "migration-resource://28dffdcd647e8535ffde2d55b061af55e103692dd87fef3e2a53a331a85bb875",
+      "snapshotPath": "assets/28dffdcd647e8535ffde2d55b061af55e103692dd87fef3e2a53a331a85bb875.jpg",
+      "sha256": "28dffdcd647e8535ffde2d55b061af55e103692dd87fef3e2a53a331a85bb875",
+      "contentType": "image/jpeg",
+      "sizeBytes": 44313
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361922399425000002915630.jpg",
+      "originalReference": "/chistory/cms/imgs/6361922399425000002915630.jpg",
+      "token": "migration-resource://dd7d1fc4f961f6d6c116b251b40fbd006e2ce4768ee9f7a12ca001b9f655b17b",
+      "snapshotPath": "assets/dd7d1fc4f961f6d6c116b251b40fbd006e2ce4768ee9f7a12ca001b9f655b17b.jpg",
+      "sha256": "dd7d1fc4f961f6d6c116b251b40fbd006e2ce4768ee9f7a12ca001b9f655b17b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 73999
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361922399585937508156605.jpg",
+      "originalReference": "/chistory/cms/imgs/6361922399585937508156605.jpg",
+      "token": "migration-resource://7c0d60a4716b6a247f865f78bc21457a4a5da52da0d4042e895a05a411c27ce2",
+      "snapshotPath": "assets/7c0d60a4716b6a247f865f78bc21457a4a5da52da0d4042e895a05a411c27ce2.jpg",
+      "sha256": "7c0d60a4716b6a247f865f78bc21457a4a5da52da0d4042e895a05a411c27ce2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 66326
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361922399731250008912439.jpg",
+      "originalReference": "/chistory/cms/imgs/6361922399731250008912439.jpg",
+      "token": "migration-resource://4111b48aa70beda65b4d343f9a3f27a3ef27fca9b84d3301d606489279991b1a",
+      "snapshotPath": "assets/4111b48aa70beda65b4d343f9a3f27a3ef27fca9b84d3301d606489279991b1a.jpg",
+      "sha256": "4111b48aa70beda65b4d343f9a3f27a3ef27fca9b84d3301d606489279991b1a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 63176
+    }
+  ],
+  "sourceFingerprint": "9dd55360225a85bda86f1a5cc413644e3a7667adbb76894d3fb2230fb75e1495",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "关于做好2017年全国计算机应用水平考试吉林省考区考务管理工作的通知",
+    "listPublishDate": "2017-01-05",
+    "sourceOrder": 225,
+    "detailPublishDate": "2017-01-05"
+  }
+}

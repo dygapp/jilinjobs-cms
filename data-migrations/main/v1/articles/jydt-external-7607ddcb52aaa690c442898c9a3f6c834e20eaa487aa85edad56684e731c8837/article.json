@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7607ddcb52aaa690c442898c9a3f6c834e20eaa487aa85edad56684e731c8837",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1381/30641.htm",
+    "url": "https://www.ccu.edu.cn/info/1381/30641.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学举办“吉聚英才·暖心护航”吉林省2026届高校重点毕业生群体专场招聘会",
+    "source": "",
+    "publishDate": "2025-11-21",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccu.edu.cn/info/1381/30641.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "842d496994330704141105ee62401a5498181abea17ef9e83eeb2494d55fc5d7",
+  "evidence": {
+    "listPage": 58,
+    "listTitle": "长春大学举办“吉聚英才·暖心护航”吉林省2026届高校重点毕业生群体专场招聘会",
+    "listPublishDate": "2025-11-21",
+    "sourceOrder": 578
+  }
+}

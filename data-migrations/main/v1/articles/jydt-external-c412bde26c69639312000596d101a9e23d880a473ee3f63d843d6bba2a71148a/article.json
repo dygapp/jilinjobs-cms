@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c412bde26c69639312000596d101a9e23d880a473ee3f63d843d6bba2a71148a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Vq7weX1mIjCaZZ5k4oN0bw",
+    "url": "https://mp.weixin.qq.com/s/Vq7weX1mIjCaZZ5k4oN0bw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业科技学院校领导带队赴长春北湖科技园开展“优企引才”访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-03-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Vq7weX1mIjCaZZ5k4oN0bw"
+  },
+  "resources": [],
+  "sourceFingerprint": "3b45a7ae64b388efd0bdbe8d6ee8b71ba19e4d420679191454733d95226b6fb8",
+  "evidence": {
+    "listPage": 39,
+    "listTitle": "吉林农业科技学院校领导带队赴长春北湖科技园开展“优企引才”访企拓岗专项行动",
+    "listPublishDate": "2026-03-23",
+    "sourceOrder": 382
+  }
+}

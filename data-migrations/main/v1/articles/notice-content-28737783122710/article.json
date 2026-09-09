@@ -1,0 +1,111 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122710",
+    "contentId": "28737783122710",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122710"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2020年吉林省高校就业指导网络课程教学大赛的通知",
+    "source": "培训部",
+    "publishDate": "2020-03-24",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img src=\"migration-resource://63e842c84b7408f3cffb181764e801fd491eb6de00ccf8b066b3f81d4e78d586\" style=\"max-width:100%;\"><img src=\"migration-resource://6c19da1f933f825833477aff5742cc32f644fac175511e508c8f23f3efa866d1\" style=\"max-width: 100%;\"><img src=\"migration-resource://3f4425282c1abeef381ae449cf843df6b93379ac8aae59d0ac36b3388670d9ec\" style=\"max-width: 100%;\"><img src=\"migration-resource://66a0d0a02bc41e28ce3f8e0441f2e7d25d8c592caea95c449369cc9eee0aa66c\" style=\"max-width: 100%;\"><img src=\"migration-resource://0b1671dfb68b3156e9fa84c7ed7a0bcb360e719dd1eeb0d73418008edd336c18\" style=\"max-width: 100%;\"><img src=\"migration-resource://2165e4b1535770a5e6065ac4cbeef3437f45703673e3ca401e5edc72cceca959\" style=\"max-width: 100%;\"><img src=\"migration-resource://7ecf4e52269c63826f86044c8f2a065dc9b1ad1f416046d5bf604e2088c414b8\" style=\"max-width: 100%;\"><img src=\"migration-resource://2c8291c080a0cb3dd241281eb2814ded9703457f6c1ecc705e9728586abb0456\" style=\"max-width: 100%;\"><br></p>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/admin/cms/20200325091019.jpg",
+      "originalReference": "/chistory/admin/cms/20200325091019.jpg",
+      "token": "migration-resource://63e842c84b7408f3cffb181764e801fd491eb6de00ccf8b066b3f81d4e78d586",
+      "snapshotPath": "assets/63e842c84b7408f3cffb181764e801fd491eb6de00ccf8b066b3f81d4e78d586.jpg",
+      "sha256": "63e842c84b7408f3cffb181764e801fd491eb6de00ccf8b066b3f81d4e78d586",
+      "contentType": "image/jpeg",
+      "sizeBytes": 233904
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/admin/cms/20200325091023.jpg",
+      "originalReference": "/chistory/admin/cms/20200325091023.jpg",
+      "token": "migration-resource://6c19da1f933f825833477aff5742cc32f644fac175511e508c8f23f3efa866d1",
+      "snapshotPath": "assets/6c19da1f933f825833477aff5742cc32f644fac175511e508c8f23f3efa866d1.jpg",
+      "sha256": "6c19da1f933f825833477aff5742cc32f644fac175511e508c8f23f3efa866d1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 235855
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/admin/cms/20200325091027.jpg",
+      "originalReference": "/chistory/admin/cms/20200325091027.jpg",
+      "token": "migration-resource://3f4425282c1abeef381ae449cf843df6b93379ac8aae59d0ac36b3388670d9ec",
+      "snapshotPath": "assets/3f4425282c1abeef381ae449cf843df6b93379ac8aae59d0ac36b3388670d9ec.jpg",
+      "sha256": "3f4425282c1abeef381ae449cf843df6b93379ac8aae59d0ac36b3388670d9ec",
+      "contentType": "image/jpeg",
+      "sizeBytes": 222348
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/admin/cms/20200325091030.jpg",
+      "originalReference": "/chistory/admin/cms/20200325091030.jpg",
+      "token": "migration-resource://66a0d0a02bc41e28ce3f8e0441f2e7d25d8c592caea95c449369cc9eee0aa66c",
+      "snapshotPath": "assets/66a0d0a02bc41e28ce3f8e0441f2e7d25d8c592caea95c449369cc9eee0aa66c.jpg",
+      "sha256": "66a0d0a02bc41e28ce3f8e0441f2e7d25d8c592caea95c449369cc9eee0aa66c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 130339
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/admin/cms/20200325091033.jpg",
+      "originalReference": "/chistory/admin/cms/20200325091033.jpg",
+      "token": "migration-resource://0b1671dfb68b3156e9fa84c7ed7a0bcb360e719dd1eeb0d73418008edd336c18",
+      "snapshotPath": "assets/0b1671dfb68b3156e9fa84c7ed7a0bcb360e719dd1eeb0d73418008edd336c18.jpg",
+      "sha256": "0b1671dfb68b3156e9fa84c7ed7a0bcb360e719dd1eeb0d73418008edd336c18",
+      "contentType": "image/jpeg",
+      "sizeBytes": 213451
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/admin/cms/20200325091036.jpg",
+      "originalReference": "/chistory/admin/cms/20200325091036.jpg",
+      "token": "migration-resource://2165e4b1535770a5e6065ac4cbeef3437f45703673e3ca401e5edc72cceca959",
+      "snapshotPath": "assets/2165e4b1535770a5e6065ac4cbeef3437f45703673e3ca401e5edc72cceca959.jpg",
+      "sha256": "2165e4b1535770a5e6065ac4cbeef3437f45703673e3ca401e5edc72cceca959",
+      "contentType": "image/jpeg",
+      "sizeBytes": 260044
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/admin/cms/20200325091040.jpg",
+      "originalReference": "/chistory/admin/cms/20200325091040.jpg",
+      "token": "migration-resource://7ecf4e52269c63826f86044c8f2a065dc9b1ad1f416046d5bf604e2088c414b8",
+      "snapshotPath": "assets/7ecf4e52269c63826f86044c8f2a065dc9b1ad1f416046d5bf604e2088c414b8.jpg",
+      "sha256": "7ecf4e52269c63826f86044c8f2a065dc9b1ad1f416046d5bf604e2088c414b8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 238926
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/admin/cms/20200325091043.jpg",
+      "originalReference": "/chistory/admin/cms/20200325091043.jpg",
+      "token": "migration-resource://2c8291c080a0cb3dd241281eb2814ded9703457f6c1ecc705e9728586abb0456",
+      "snapshotPath": "assets/2c8291c080a0cb3dd241281eb2814ded9703457f6c1ecc705e9728586abb0456.jpg",
+      "sha256": "2c8291c080a0cb3dd241281eb2814ded9703457f6c1ecc705e9728586abb0456",
+      "contentType": "image/jpeg",
+      "sizeBytes": 79919
+    }
+  ],
+  "sourceFingerprint": "6953be59ce4fdb0996e8dc46ecf622e468d65f03171bf06f4e7ff933b0878954",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "关于举办2020年吉林省高校就业指导网络课程教学大赛的通知",
+    "listPublishDate": "2020-03-24",
+    "sourceOrder": 189,
+    "detailPublishDate": "2020-03-24"
+  }
+}

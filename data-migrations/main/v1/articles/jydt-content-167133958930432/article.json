@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:167133958930432",
+    "contentId": "167133958930432",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=167133958930432"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "甘肃：多措施并举拓宽毕业生就业路",
+    "source": "",
+    "publishDate": "2023-07-07",
+    "bodyHtml": "\n                        <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 2023年以来，甘肃省教育厅深入学习贯彻习近平总书记关于做好高校毕业生就业工作的重要指示批示精神，将高校毕业生就业工作摆在突出位置，坚持和高校一体联动抓就业、和行业企业一体协同促就业，努力促进高校毕业生高质量充分就业。</span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"367\" src=\"migration-resource://7614e8fa43f7e1ef243e4ae4a505551341f562ddbb3d8771ce7054245439bca1\" width=\"578\"></p>\n\n<p>&nbsp;</p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 为着力拓展就业空间，省教育厅联合有关部门、企事业单位，统筹协调政策性岗位和市场化岗位，全力拓展就业空间。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 一方面，省教育厅主动开拓省外就业市场，深入实施访企拓岗。督促甘肃省高校领导班子联系100家、二级院系领导班子走访10家以上单位；带队组织16所高校赴广东、40所高校赴新疆访企拓岗，走访企事业单位740家，签订校企就业合作协议65份，在102家企业建立就业实习基地。目前，全省高校累计走访单位1.27万家，开拓岗位1.3万个、岗位需求人数6.3万人次。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 另一方面，省教育厅商请教育部确定专升本计划2.23万名、特岗计划5000名、第二学士学位计划2370名，并联合省工信厅、省政府国资委动员省属企业挖掘岗位7000余个，配合组织、人社等部门积极释放政策性岗位。同时，联合有关部门举办省级大型校园招聘会25场，邀请企业3784家，提供就业岗位12.02万个。目前，全省高校累计组织校园招聘1.55万场，提供就业岗位58.9万个。</span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-12/f1936987-e714-4584-9861-b06e88c1c965.png",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-07-12/f1936987-e714-4584-9861-b06e88c1c965.png",
+      "token": "migration-resource://7614e8fa43f7e1ef243e4ae4a505551341f562ddbb3d8771ce7054245439bca1",
+      "snapshotPath": "assets/7614e8fa43f7e1ef243e4ae4a505551341f562ddbb3d8771ce7054245439bca1.png",
+      "sha256": "7614e8fa43f7e1ef243e4ae4a505551341f562ddbb3d8771ce7054245439bca1",
+      "contentType": "image/png",
+      "sizeBytes": 625058
+    }
+  ],
+  "sourceFingerprint": "b96e4856e4d154504b52b1773b093bfa3c29c1cda59ec343d60ac3c39816074b",
+  "evidence": {
+    "listPage": 114,
+    "listTitle": "甘肃：多措施并举拓宽毕业生就业路",
+    "listPublishDate": "2023-07-07",
+    "sourceOrder": 1133,
+    "detailPublishDate": "2023-07-07"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:aa704b9461a51d0ce7d013fd5585190da414a2edcebc112ea0504228f1403661",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/MHnWmQr0J3RXJ4CerpLsBA",
+    "url": "https://mp.weixin.qq.com/s/MHnWmQr0J3RXJ4CerpLsBA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【寒假促就业暖心行动】吉林工商学院访企拓岗篇",
+    "source": "",
+    "publishDate": "2026-02-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/MHnWmQr0J3RXJ4CerpLsBA"
+  },
+  "resources": [],
+  "sourceFingerprint": "650dc8ece375385e06dbf2cc237955ad7ac0768daffd120235cea8cdd8bba280",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "【寒假促就业暖心行动】吉林工商学院访企拓岗篇",
+    "listPublishDate": "2026-02-14",
+    "sourceOrder": 440
+  }
+}

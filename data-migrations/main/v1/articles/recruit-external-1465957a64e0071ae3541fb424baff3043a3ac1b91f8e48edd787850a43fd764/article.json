@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:1465957a64e0071ae3541fb424baff3043a3ac1b91f8e48edd787850a43fd764",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/GPnHzrn7tnpu79rhwZzFrA",
+    "url": "https://mp.weixin.qq.com/s/GPnHzrn7tnpu79rhwZzFrA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "邀请函“集聚高层次人才 服务高质量发展”吉林省普通高校光电产业类毕业生就业洽谈会暨长春理工大学2025届毕业生春季双选会",
+    "source": "",
+    "publishDate": "2025-03-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/GPnHzrn7tnpu79rhwZzFrA"
+  },
+  "resources": [],
+  "sourceFingerprint": "b1c2dedf02dbcfd9d3e34cfca323833a60d436f5264f4a28e316515c2dcd100b",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "邀请函“集聚高层次人才 服务高质量发展”吉林省普通高校光电产业类毕业生就业洽谈会暨长春理工大学2025届毕业生春季双选会",
+    "listPublishDate": "2025-03-08",
+    "sourceOrder": 223
+  }
+}

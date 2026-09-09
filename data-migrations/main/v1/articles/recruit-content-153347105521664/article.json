@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:153347105521664",
+    "contentId": "153347105521664",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=153347105521664"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林体育学院招聘硕博人才24人",
+    "source": "",
+    "publishDate": "2023-04-18",
+    "bodyHtml": "\n                        <p>2023年4月17日，吉林体育学院发布了《2023年吉林体育学院公开招聘高级人才公告（2号）》《2023年吉林体育学院公开招聘工作人员公告（3号）》，计划招聘16名博士、8名硕士，报名时间从公告发布之日起至5月5日，相关信息详见吉林体育学院网站：https://www.jlsu.edu.cn/。</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "0ce92a50bbdbd78addb6633fef5cad359c95218d45c280c8911586cff04628c2",
+  "evidence": {
+    "listPage": 32,
+    "listTitle": "吉林体育学院招聘硕博人才24人",
+    "listPublishDate": "2023-04-18",
+    "sourceOrder": 316,
+    "detailPublishDate": "2023-04-18"
+  }
+}

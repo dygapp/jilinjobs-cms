@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:413d82394fc55ecb002664b6bb0ddedf69c9a33a58b1a0e7c33acc7d982b6a83",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/kIhC8zzgyAvAgEr-5hAHOg",
+    "url": "https://mp.weixin.qq.com/s/kIhC8zzgyAvAgEr-5hAHOg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林师范大学2026年“寒假促就业暖心行动”",
+    "source": "",
+    "publishDate": "2026-01-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kIhC8zzgyAvAgEr-5hAHOg"
+  },
+  "resources": [],
+  "sourceFingerprint": "1fd47f155978af1a2fb83bd35574d0d41d8e99c2a5f3d5b5f7482c30a38b1a95",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "吉林师范大学2026年“寒假促就业暖心行动”",
+    "listPublishDate": "2026-01-29",
+    "sourceOrder": 80
+  }
+}

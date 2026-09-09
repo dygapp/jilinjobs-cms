@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9ce08c296b7e59f5117a788069ba788a33df82d2935138c6756c4fc6a5fcf6d0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/CqFjIwKNaikovdxX9abOUw",
+    "url": "https://mp.weixin.qq.com/s/CqFjIwKNaikovdxX9abOUw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学党委副书记于金欢带队赴汪清县开展“百校对百县”促就业专项行动",
+    "source": "",
+    "publishDate": "2025-07-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/CqFjIwKNaikovdxX9abOUw"
+  },
+  "resources": [],
+  "sourceFingerprint": "7636282c005edce255a14e18b8b9e047916e7fe06537d0ca583b44590c34a280",
+  "evidence": {
+    "listPage": 73,
+    "listTitle": "延边大学党委副书记于金欢带队赴汪清县开展“百校对百县”促就业专项行动",
+    "listPublishDate": "2025-07-10",
+    "sourceOrder": 730
+  }
+}

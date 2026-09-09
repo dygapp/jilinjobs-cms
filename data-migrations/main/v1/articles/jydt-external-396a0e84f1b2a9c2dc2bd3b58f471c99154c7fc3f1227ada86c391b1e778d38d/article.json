@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:396a0e84f1b2a9c2dc2bd3b58f471c99154c7fc3f1227ada86c391b1e778d38d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/S1LdZ3L_pRsMiLMZqat-9A",
+    "url": "https://mp.weixin.qq.com/s/S1LdZ3L_pRsMiLMZqat-9A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“吉聚英才 职引未来” 长白山职业技术学院2026届毕业生网络双选会成功举办，助力学子扎根吉林",
+    "source": "",
+    "publishDate": "2025-12-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/S1LdZ3L_pRsMiLMZqat-9A"
+  },
+  "resources": [],
+  "sourceFingerprint": "4d0640973ac3933f95e5181068129f8e5ffedac5c69f836f53cd6c50b8bf9a5f",
+  "evidence": {
+    "listPage": 54,
+    "listTitle": "“吉聚英才 职引未来” 长白山职业技术学院2026届毕业生网络双选会成功举办，助力学子扎根吉林",
+    "listPublishDate": "2025-12-18",
+    "sourceOrder": 535
+  }
+}

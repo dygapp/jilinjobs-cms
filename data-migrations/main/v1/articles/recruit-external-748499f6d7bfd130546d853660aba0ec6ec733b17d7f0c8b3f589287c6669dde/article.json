@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:748499f6d7bfd130546d853660aba0ec6ec733b17d7f0c8b3f589287c6669dde",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/zw_2395/gsgg/202010/t20201027_303222.html",
+    "url": "http://www.helong.gov.cn/zw_2395/gsgg/202010/t20201027_303222.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年和龙市教育系统事业单位公开招聘工作人员公告",
+    "source": "",
+    "publishDate": "2020-11-05",
+    "bodyHtml": "",
+    "externalUrl": "http://www.helong.gov.cn/zw_2395/gsgg/202010/t20201027_303222.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "155583085e90cadc6b2692b52d6a508ed8f774e36149dc9d722e8ec14d70ed33",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "2020年和龙市教育系统事业单位公开招聘工作人员公告",
+    "listPublishDate": "2020-11-05",
+    "sourceOrder": 370
+  }
+}

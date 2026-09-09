@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:806a92ad6ec3c5402e39a2a4e7a63dbc09433e781e98e4787a8638fd671964a5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1003/108192.htm",
+    "url": "https://news.ccu.edu.cn/info/1003/108192.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学与长春市南关区开展携企进校对接活动",
+    "source": "",
+    "publishDate": "2026-04-30",
+    "bodyHtml": "",
+    "externalUrl": "https://news.ccu.edu.cn/info/1003/108192.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "0e243a36ffc6ec5c4e410b791ad11927c1969d74aa1c26a0e1f7e132714e5fd7",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "长春大学与长春市南关区开展携企进校对接活动",
+    "listPublishDate": "2026-04-30",
+    "sourceOrder": 222
+  }
+}

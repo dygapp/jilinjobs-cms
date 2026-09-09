@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122068",
+    "contentId": "28737783122068",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122068"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2017届全省普通高校毕业生春季招聘活动--吉林省第二届高校毕业生“互联网+”网络视频招聘会成功举办",
+    "source": "",
+    "publishDate": "2017-04-28",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2017届全省普通高校毕业生春季招聘活动--吉林省第二届高校毕业生“互联网+”网络视频招聘会成功举办</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2017-4-28 16:09:57</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋;font-size: 21px\">2017年4月20日-27日，为深入贯彻落实全省普通高校毕业生就业创业工作会议精神，进一步拓宽就业渠道，充分挖掘岗位信息，为毕业生提供精准的就业服务，抓住毕业生离校前的有利时机，利用“互联网+就业”新模式，我省举办第二届高校毕业生“互联网+”网络视频招聘会。</span></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋;font-size: 21px\">本次招聘会共设师范、管理、财经三个专场，有近200人参加招聘会并注册，投递简历14120次，进行视频面试74人，产生视频数量223次。目前高校学生正处离校实习阶段，利用互联网视频技术，帮助毕业生足不出户与用人单位进行面对面的交流，极大方便了学生和企业，降低了毕业生求职和企业招聘的成本。今年我省计划共举办四次网络视频招聘会。</span></p><p style=\"text-align: center\"><img title=\"sp-1.JPG\" src=\"migration-resource://225b96b7d0d07d211bcf6340f0a712a824e6fa202f2cb87798645a60f3a334b6\"></p><p style=\"text-align: center\"><img title=\"sp-2.JPG\" src=\"migration-resource://3750a5d23c1921f7b5bed7bdec1aebb97477e7acf3450eb02e37aff71de990a1\"></p><p style=\"text-align: center;\"><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362985666802337505338778.JPG",
+      "originalReference": "/chistory/cms/imgs/6362985666802337505338778.JPG",
+      "token": "migration-resource://225b96b7d0d07d211bcf6340f0a712a824e6fa202f2cb87798645a60f3a334b6",
+      "snapshotPath": "assets/225b96b7d0d07d211bcf6340f0a712a824e6fa202f2cb87798645a60f3a334b6.jpg",
+      "sha256": "225b96b7d0d07d211bcf6340f0a712a824e6fa202f2cb87798645a60f3a334b6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 102882
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362985666811712501608766.JPG",
+      "originalReference": "/chistory/cms/imgs/6362985666811712501608766.JPG",
+      "token": "migration-resource://3750a5d23c1921f7b5bed7bdec1aebb97477e7acf3450eb02e37aff71de990a1",
+      "snapshotPath": "assets/3750a5d23c1921f7b5bed7bdec1aebb97477e7acf3450eb02e37aff71de990a1.jpg",
+      "sha256": "3750a5d23c1921f7b5bed7bdec1aebb97477e7acf3450eb02e37aff71de990a1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 125148
+    }
+  ],
+  "sourceFingerprint": "d7a400023d277e7a0ab8a5da84f2e7cb7a5f36da36669e68f45f2af04c0a904b",
+  "evidence": {
+    "listPage": 150,
+    "listTitle": "2017届全省普通高校毕业生春季招聘活动--吉林省第二届高校毕业生“互联网+”网络视频招聘会成功举办",
+    "listPublishDate": "2017-04-28",
+    "sourceOrder": 1498,
+    "detailPublishDate": "2017-04-28"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f94e4e32e4888119de63804e92d93d55c6ef0f6c440a8a032233400c27d72737",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/4lockrc-b_WzegSSld7MTw",
+    "url": "https://mp.weixin.qq.com/s/4lockrc-b_WzegSSld7MTw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春理工大学召开2025届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2025-06-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4lockrc-b_WzegSSld7MTw"
+  },
+  "resources": [],
+  "sourceFingerprint": "26b0fb024312ab02e4df5dbe4382927d42fbd3236a7fbc22fdbab34c2647226f",
+  "evidence": {
+    "listPage": 84,
+    "listTitle": "长春理工大学召开2025届毕业生就业工作推进会",
+    "listPublishDate": "2025-06-10",
+    "sourceOrder": 835
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:dd912ece8bbf69850a421937886f6a1bbfcca007a951b23776264148330fdeee",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/ZIqCDkwMGvhRZCQbNRXWNg",
+    "url": "https://mp.weixin.qq.com/s/ZIqCDkwMGvhRZCQbNRXWNg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“春风送岗 服务吉林” | 吉林外国语大学2025届毕业生春季网络招聘会邀请函",
+    "source": "",
+    "publishDate": "2025-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ZIqCDkwMGvhRZCQbNRXWNg"
+  },
+  "resources": [],
+  "sourceFingerprint": "a1ee1884da541f5767d92a594e6e3cf541a666357c2445bdfb077dfea2d47274",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "“春风送岗 服务吉林” | 吉林外国语大学2025届毕业生春季网络招聘会邀请函",
+    "listPublishDate": "2025-03-27",
+    "sourceOrder": 204
+  }
+}

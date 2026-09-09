@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:937d972c52f903208645a8103543cb2aca12efc4f1fc29095a7a15f6258a8343",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/XbzAlMU-TbEL07s4BTOi8Q",
+    "url": "https://mp.weixin.qq.com/s/XbzAlMU-TbEL07s4BTOi8Q"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "教育部：开展2025届高校毕业生“春季促就业攻坚行动”",
+    "source": "",
+    "publishDate": "2025-03-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/XbzAlMU-TbEL07s4BTOi8Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "240aaf6d7d194c0b07d678d7bf80d688e66b1d3e9539012dd89b7875bc5759c9",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "教育部：开展2025届高校毕业生“春季促就业攻坚行动”",
+    "listPublishDate": "2025-03-14",
+    "sourceOrder": 59
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:258cf987bc3ef16ea59236376157905ff1ab84766b06829ec37843a8d4bef718",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1021/5390.htm",
+    "url": "https://www.jlnku.edu.cn/info/1021/5390.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业科技学院举办“百校对百县”校政企合作对接会",
+    "source": "",
+    "publishDate": "2025-07-03",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlnku.edu.cn/info/1021/5390.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "61ad63ed4503f7c2797514427ef93c65266e41a2157aee256cbc7d2d6b204bd0",
+  "evidence": {
+    "listPage": 75,
+    "listTitle": "吉林农业科技学院举办“百校对百县”校政企合作对接会",
+    "listPublishDate": "2025-07-03",
+    "sourceOrder": 748
+  }
+}

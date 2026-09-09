@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123224",
+    "contentId": "28737783123224",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123224"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "广东省：中山市大学生创业优惠政策和贷款",
+    "source": "",
+    "publishDate": "2009-07-14",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">广东省：中山市大学生创业优惠政策和贷款</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-7-14 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 从广东省中山市人事部门获悉，为了促进中山市大学生创业，中山市出台一系列优惠政策，如：3年免交行政事业性收费，试行大学生注册资本“零首期”政策等。</font></p> <p><font size=\"2\"></font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 据了解，高校毕业生创办的高新技术企业、软件生产企业、小型微利企业或从事农林牧渔业，符合现行税法规定条件的，均可享受相关税收优惠。</font></p> <p><strong><font size=\"2\">&nbsp;&nbsp;&nbsp; 3年免交行政事业性收费</font></strong></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; “市人才交流管理中心要为自主创业的高校毕业生免费提供两年保存人事关系和档案服务及其他代理服务，目的就是让大学生轻装上阵。”中山市人事部门相关负责人表示，除国家限制的行业外，高校毕业生毕业两年内从事个体经营的，自其在工商部门首次注册登记之日起3年内免交登记类、证照类和管理类行政事业性收费。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 另外，自主创业的高校毕业生可享受小额担保贷款政策，贷款额度最高不超过5万元，对合伙经营或组织起来就业的，可按规定适当扩大贷款规模；从事政府规定微利项目的，可享受贴息扶持；同时，从市促进就业专项资金高校毕业生专款中提取300万元注入青年创业基金，用于鼓励高校毕业生自主创业。</font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：广州日报 </font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "2e62931073dfe9382d551f8f9ea2270be14070c91fdff27c74042916a7c675e4",
+  "evidence": {
+    "listPage": 51,
+    "listTitle": "广东省：中山市大学生创业优惠政策和贷款",
+    "listPublishDate": "2009-07-14",
+    "sourceOrder": 510,
+    "detailPublishDate": "2009-07-14"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3c7eb303c6c608b859e450c7741dc4241dd56d6b5aa7aaaa28cab64aa9a104f4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/eZ_ks3GtK55aUbKQH-gKlw",
+    "url": "https://mp.weixin.qq.com/s/eZ_ks3GtK55aUbKQH-gKlw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "政校企联动聚合力，数智赋能促就业丨长春汽车职业技术大学成功举办“服务吉林高质量发展2025年校园招聘会”",
+    "source": "",
+    "publishDate": "2025-06-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/eZ_ks3GtK55aUbKQH-gKlw"
+  },
+  "resources": [],
+  "sourceFingerprint": "05f8f6425ea6a94e3e8d3157f95bc018afe380c6da4bffba02692ff49948ac64",
+  "evidence": {
+    "listPage": 83,
+    "listTitle": "政校企联动聚合力，数智赋能促就业丨长春汽车职业技术大学成功举办“服务吉林高质量发展2025年校园招聘会”",
+    "listPublishDate": "2025-06-13",
+    "sourceOrder": 821
+  }
+}

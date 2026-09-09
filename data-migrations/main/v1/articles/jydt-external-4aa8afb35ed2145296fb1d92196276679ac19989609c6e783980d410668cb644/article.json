@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4aa8afb35ed2145296fb1d92196276679ac19989609c6e783980d410668cb644",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ri2qclZ34Zmc-AtfufJghg",
+    "url": "https://mp.weixin.qq.com/s/ri2qclZ34Zmc-AtfufJghg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促合作 产教融合谋新篇 —— 延边职业技术学院院长李铁锡率队走访延边可喜安系列企业及蒲公英公司",
+    "source": "",
+    "publishDate": "2026-04-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ri2qclZ34Zmc-AtfufJghg"
+  },
+  "resources": [],
+  "sourceFingerprint": "66be65f3b7f6735a4531bffeb58c542368302d7a834fb8355467d1a2581bdaaa",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "访企拓岗促合作 产教融合谋新篇 —— 延边职业技术学院院长李铁锡率队走访延边可喜安系列企业及蒲公英公司",
+    "listPublishDate": "2026-04-23",
+    "sourceOrder": 251
+  }
+}

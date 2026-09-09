@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737785217143",
+    "contentId": "28737785217143",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737785217143"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《关于举办“全国建筑与空间设计空间行业2012届高校毕业生网上招聘活动周”的通知》的通知",
+    "source": "",
+    "publishDate": "2011-11-29",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《关于举办“全国建筑与空间设计空间行业2012届高校毕业生网上招聘活动周”的通知》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-29 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://de5bf029cc94d5b74bad7d5d662d208f754736ed6a1ffe3428b3ea56412ae3bb\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://8d6f8bd05bbb42453118c706bf81b17138843ce93753f4b87ce781b1951a979e\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://3ab63da1bf5056bc98d487c4955e06b378837b51ba9258636b5a77480fda913b\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://8d525ad5e086b8b227ed1fb864898f96ebbe2806f45d1e0d39558de4cbc9edf7\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111129103500172.jpg",
+      "originalReference": "/chistory/cms/imgs/20111129103500172.jpg",
+      "token": "migration-resource://de5bf029cc94d5b74bad7d5d662d208f754736ed6a1ffe3428b3ea56412ae3bb",
+      "snapshotPath": "assets/de5bf029cc94d5b74bad7d5d662d208f754736ed6a1ffe3428b3ea56412ae3bb.jpg",
+      "sha256": "de5bf029cc94d5b74bad7d5d662d208f754736ed6a1ffe3428b3ea56412ae3bb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93948
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111129103507695.jpg",
+      "originalReference": "/chistory/cms/imgs/20111129103507695.jpg",
+      "token": "migration-resource://8d6f8bd05bbb42453118c706bf81b17138843ce93753f4b87ce781b1951a979e",
+      "snapshotPath": "assets/8d6f8bd05bbb42453118c706bf81b17138843ce93753f4b87ce781b1951a979e.jpg",
+      "sha256": "8d6f8bd05bbb42453118c706bf81b17138843ce93753f4b87ce781b1951a979e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 62418
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111129103514388.jpg",
+      "originalReference": "/chistory/cms/imgs/20111129103514388.jpg",
+      "token": "migration-resource://3ab63da1bf5056bc98d487c4955e06b378837b51ba9258636b5a77480fda913b",
+      "snapshotPath": "assets/3ab63da1bf5056bc98d487c4955e06b378837b51ba9258636b5a77480fda913b.jpg",
+      "sha256": "3ab63da1bf5056bc98d487c4955e06b378837b51ba9258636b5a77480fda913b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92483
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111129103521715.jpg",
+      "originalReference": "/chistory/cms/imgs/20111129103521715.jpg",
+      "token": "migration-resource://8d525ad5e086b8b227ed1fb864898f96ebbe2806f45d1e0d39558de4cbc9edf7",
+      "snapshotPath": "assets/8d525ad5e086b8b227ed1fb864898f96ebbe2806f45d1e0d39558de4cbc9edf7.jpg",
+      "sha256": "8d525ad5e086b8b227ed1fb864898f96ebbe2806f45d1e0d39558de4cbc9edf7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90448
+    }
+  ],
+  "sourceFingerprint": "3f024aba6c4f82faad592b97a9ad76c9f4db7c2be3433d8cc89c326358091147",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "转发《关于举办“全国建筑与空间设计空间行业2012届高校毕业生网上招聘活动周”的通知》的通知",
+    "listPublishDate": "2011-11-29",
+    "sourceOrder": 412,
+    "detailPublishDate": "2011-11-29"
+  }
+}

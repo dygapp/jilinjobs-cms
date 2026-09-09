@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:98446671364096",
+    "contentId": "98446671364096",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=98446671364096"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于印发《吉林省2022年农村义务教育阶段学校教师特设岗位计划实施方案》的通知",
+    "source": "吉林省教育厅",
+    "publishDate": "2022-06-28",
+    "bodyHtml": "\n                        <p><a href=\"migration-attachment://cbf1299d3f84abb92744007ee54505d6c92e34d617c5956b7a5d38b8cac3bc13\">关于印发《吉林省2022年农村义务教育阶段学校教师特设岗位计划实施方案》的通知</a></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "ATTACHMENT",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-06-28/6bc99192-ad6d-4376-988a-9037cc423287.pdf",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-06-28/6bc99192-ad6d-4376-988a-9037cc423287.pdf",
+      "token": "migration-attachment://cbf1299d3f84abb92744007ee54505d6c92e34d617c5956b7a5d38b8cac3bc13",
+      "snapshotPath": "assets/cbf1299d3f84abb92744007ee54505d6c92e34d617c5956b7a5d38b8cac3bc13.pdf",
+      "sha256": "cbf1299d3f84abb92744007ee54505d6c92e34d617c5956b7a5d38b8cac3bc13",
+      "contentType": "application/pdf",
+      "sizeBytes": 956635
+    }
+  ],
+  "sourceFingerprint": "c92e427ddd940445810b69a768f4679105c53e416173af93b08eeeef48e9f5ca",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "关于印发《吉林省2022年农村义务教育阶段学校教师特设岗位计划实施方案》的通知",
+    "listPublishDate": "2022-06-28",
+    "sourceOrder": 119,
+    "detailPublishDate": "2022-06-28"
+  }
+}

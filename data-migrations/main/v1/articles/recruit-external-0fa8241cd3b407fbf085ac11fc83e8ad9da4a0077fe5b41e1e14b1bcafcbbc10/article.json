@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:0fa8241cd3b407fbf085ac11fc83e8ad9da4a0077fe5b41e1e14b1bcafcbbc10",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/website/open/news/content/cb79f8fa58b91d3af6c9c991f63962d36867e51fe92426fb",
+    "url": "http://www.yjrc.net.cn/website/open/news/content/cb79f8fa58b91d3af6c9c991f63962d36867e51fe92426fb"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年延吉市教育系统事业单位公开招聘工作人员公告",
+    "source": "",
+    "publishDate": "2020-11-05",
+    "bodyHtml": "",
+    "externalUrl": "http://www.yjrc.net.cn/website/open/news/content/cb79f8fa58b91d3af6c9c991f63962d36867e51fe92426fb"
+  },
+  "resources": [],
+  "sourceFingerprint": "e1db7a5199233d630e330c6c98399109aee2ccb97709257634db6e639aa799b4",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "2020年延吉市教育系统事业单位公开招聘工作人员公告",
+    "listPublishDate": "2020-11-05",
+    "sourceOrder": 366
+  }
+}

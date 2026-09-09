@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fa9aff1a4a2669771783684280a94a52cac7f600642b0f55b3c5d27ed7a855a6",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Sod_3jsqC6WJfs_MVE8npA",
+    "url": "https://mp.weixin.qq.com/s/Sod_3jsqC6WJfs_MVE8npA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“莘莘学子松原行”助力松原职业技术学院毕业生高质量就业",
+    "source": "",
+    "publishDate": "2025-05-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Sod_3jsqC6WJfs_MVE8npA"
+  },
+  "resources": [],
+  "sourceFingerprint": "46cda385025579ceba4b0b74d383a60deb23bfbdfebd10d3194400e4d932f7b6",
+  "evidence": {
+    "listPage": 90,
+    "listTitle": "“莘莘学子松原行”助力松原职业技术学院毕业生高质量就业",
+    "listPublishDate": "2025-05-16",
+    "sourceOrder": 892
+  }
+}

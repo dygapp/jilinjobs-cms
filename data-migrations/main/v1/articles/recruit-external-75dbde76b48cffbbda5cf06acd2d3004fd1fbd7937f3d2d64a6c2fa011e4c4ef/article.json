@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:75dbde76b48cffbbda5cf06acd2d3004fd1fbd7937f3d2d64a6c2fa011e4c4ef",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/72M9XD9hIkt6-Lox4t-Vbg",
+    "url": "https://mp.weixin.qq.com/s/72M9XD9hIkt6-Lox4t-Vbg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省气象局2022年事业单位公开招聘应届高校毕业生公告（二）",
+    "source": "",
+    "publishDate": "2022-05-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/72M9XD9hIkt6-Lox4t-Vbg"
+  },
+  "resources": [],
+  "sourceFingerprint": "cda32b048540947cab603a65653190320f8b8b4bdb56757184004d5090880a31",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "吉林省气象局2022年事业单位公开招聘应届高校毕业生公告（二）",
+    "listPublishDate": "2022-05-10",
+    "sourceOrder": 348
+  }
+}

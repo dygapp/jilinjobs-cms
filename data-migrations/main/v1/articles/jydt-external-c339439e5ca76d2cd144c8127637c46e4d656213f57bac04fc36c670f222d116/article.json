@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c339439e5ca76d2cd144c8127637c46e4d656213f57bac04fc36c670f222d116",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/DvC1Ixwsci9pMK0SkIHC0Q",
+    "url": "https://mp.weixin.qq.com/s/DvC1Ixwsci9pMK0SkIHC0Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗‘就’在吉林”——长春电子科技学院成功举办2024届毕业生春季校园招聘会",
+    "source": "",
+    "publishDate": "2024-04-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DvC1Ixwsci9pMK0SkIHC0Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "4c0422033cb41330cdeadd99e2f88ecc12069922337bd0065cb1d6ee44415b9d",
+  "evidence": {
+    "listPage": 107,
+    "listTitle": "“创业奋斗‘就’在吉林”——长春电子科技学院成功举办2024届毕业生春季校园招聘会",
+    "listPublishDate": "2024-04-30",
+    "sourceOrder": 1062
+  }
+}

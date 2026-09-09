@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:245811403309056",
+    "contentId": "245811403309056",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=245811403309056"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2024年吉林省中小企业人才供需对接暨“直播带岗”招聘活动的通知",
+    "source": "吉林省促进中小企业发展服务中心 吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2024-09-13",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1415\" src=\"migration-resource://f32b84d0b46b7ae2aff6072a9cf0d9870e8bd0ae7615222d9a120a4dcb62f0ee\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1415\" src=\"migration-resource://19e76eb5a7411d0945f2ec43c6933cf1fff7e613456f0aaebf5c4784166a4485\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1415\" src=\"migration-resource://a81b9efb9f5df0cba9087a7ec9145d9184b9addf715faf6ec226ed102f9d69bb\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1415\" src=\"migration-resource://5e3fb51f670d92f8374ef4d406fd821cdbcc66524f32772e180795aaf2da11d0\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1415\" src=\"migration-resource://580270dcb7531cabf90e9dfe5381f640a8881714e34a483dbb5e0c7500fe528c\" width=\"1000\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-09-18/85cb71a6-f131-4b3b-bc2e-2e55e9aa6118.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-09-18/85cb71a6-f131-4b3b-bc2e-2e55e9aa6118.jpg",
+      "token": "migration-resource://f32b84d0b46b7ae2aff6072a9cf0d9870e8bd0ae7615222d9a120a4dcb62f0ee",
+      "snapshotPath": "assets/f32b84d0b46b7ae2aff6072a9cf0d9870e8bd0ae7615222d9a120a4dcb62f0ee.jpg",
+      "sha256": "f32b84d0b46b7ae2aff6072a9cf0d9870e8bd0ae7615222d9a120a4dcb62f0ee",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-09-18/28086bdd-37a7-4d95-aeb5-3590059f2bdc.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-09-18/28086bdd-37a7-4d95-aeb5-3590059f2bdc.jpg",
+      "token": "migration-resource://19e76eb5a7411d0945f2ec43c6933cf1fff7e613456f0aaebf5c4784166a4485",
+      "snapshotPath": "assets/19e76eb5a7411d0945f2ec43c6933cf1fff7e613456f0aaebf5c4784166a4485.jpg",
+      "sha256": "19e76eb5a7411d0945f2ec43c6933cf1fff7e613456f0aaebf5c4784166a4485",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-09-18/6727ddb8-5a9d-44f6-9e11-3fc758c39446.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-09-18/6727ddb8-5a9d-44f6-9e11-3fc758c39446.jpg",
+      "token": "migration-resource://a81b9efb9f5df0cba9087a7ec9145d9184b9addf715faf6ec226ed102f9d69bb",
+      "snapshotPath": "assets/a81b9efb9f5df0cba9087a7ec9145d9184b9addf715faf6ec226ed102f9d69bb.jpg",
+      "sha256": "a81b9efb9f5df0cba9087a7ec9145d9184b9addf715faf6ec226ed102f9d69bb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-09-18/5e4221d9-04ff-4ea6-a591-358276b524ad.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-09-18/5e4221d9-04ff-4ea6-a591-358276b524ad.jpg",
+      "token": "migration-resource://5e3fb51f670d92f8374ef4d406fd821cdbcc66524f32772e180795aaf2da11d0",
+      "snapshotPath": "assets/5e3fb51f670d92f8374ef4d406fd821cdbcc66524f32772e180795aaf2da11d0.jpg",
+      "sha256": "5e3fb51f670d92f8374ef4d406fd821cdbcc66524f32772e180795aaf2da11d0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 59137
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-09-18/6b76fc8b-266c-4b74-ae63-bdda0a1b2097.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-09-18/6b76fc8b-266c-4b74-ae63-bdda0a1b2097.jpg",
+      "token": "migration-resource://580270dcb7531cabf90e9dfe5381f640a8881714e34a483dbb5e0c7500fe528c",
+      "snapshotPath": "assets/580270dcb7531cabf90e9dfe5381f640a8881714e34a483dbb5e0c7500fe528c.jpg",
+      "sha256": "580270dcb7531cabf90e9dfe5381f640a8881714e34a483dbb5e0c7500fe528c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "8f783a18acf35a2c1646011a80470a7a3a2639a8319d07b19fed63b6f54a131f",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "关于举办2024年吉林省中小企业人才供需对接暨“直播带岗”招聘活动的通知",
+    "listPublishDate": "2024-09-13",
+    "sourceOrder": 75,
+    "detailPublishDate": "2024-09-13"
+  }
+}

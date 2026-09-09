@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:aadb969122f16213e07f325779aba103870f3484b468a3db2283f34ba85cb359",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/V0ODxH2KEcRsYQGSzYzSIw",
+    "url": "https://mp.weixin.qq.com/s/V0ODxH2KEcRsYQGSzYzSIw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "焦点访谈：精准有温度 护航就业路",
+    "source": "",
+    "publishDate": "2023-07-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/V0ODxH2KEcRsYQGSzYzSIw"
+  },
+  "resources": [],
+  "sourceFingerprint": "e3a7f7bc161d3f192149fbd7571c4b0f5b8777fefd5f6de8dc1044aff8275d98",
+  "evidence": {
+    "listPage": 113,
+    "listTitle": "焦点访谈：精准有温度 护航就业路",
+    "listPublishDate": "2023-07-13",
+    "sourceOrder": 1123
+  }
+}

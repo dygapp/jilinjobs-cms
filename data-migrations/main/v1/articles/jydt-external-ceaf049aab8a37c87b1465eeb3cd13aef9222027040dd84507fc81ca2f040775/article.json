@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ceaf049aab8a37c87b1465eeb3cd13aef9222027040dd84507fc81ca2f040775",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/articles/index.html",
+    "url": "https://article.xuexi.cn/articles/index.html?art_id=13279023073721057065&source=share&study_style_id=feeds_opaque&reco_id=10296b2d7c22c0a82324001n&share_to=wx_single&study_share_enable=1&study_comment_disable=0&ptype=0&item_id=13279023073721057065"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学举办2024届毕业生春季校园招聘会",
+    "source": "",
+    "publishDate": "2024-04-02",
+    "bodyHtml": "",
+    "externalUrl": "https://article.xuexi.cn/articles/index.html?art_id=13279023073721057065&source=share&study_style_id=feeds_opaque&reco_id=10296b2d7c22c0a82324001n&share_to=wx_single&study_share_enable=1&study_comment_disable=0&ptype=0&item_id=13279023073721057065"
+  },
+  "resources": [],
+  "sourceFingerprint": "25d3937a925e5267e448b4efefbf4693fe7621803fcd38271bea75f80e822779",
+  "evidence": {
+    "listPage": 110,
+    "listTitle": "北华大学举办2024届毕业生春季校园招聘会",
+    "listPublishDate": "2024-04-02",
+    "sourceOrder": 1093
+  }
+}

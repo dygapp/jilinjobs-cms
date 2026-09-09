@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123226",
+    "contentId": "28737783123226",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123226"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "西藏：今年将首次实行高校毕业生学费代偿政策",
+    "source": "",
+    "publishDate": "2009-07-14",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">西藏：今年将首次实行高校毕业生学费代偿政策</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-7-14 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 近日，记者从自治区教育厅学生资助管理中心了解到，为鼓励高校毕业生到基层就业，自今年起对到西藏基层单位就业(不含地市县所在地的乡镇)、服务期在五年以上(含五年)符合条件的高校毕业生，其学费将由自治区实行代偿。 </font></p> <p><font size=\"2\"></font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 就学费代偿的具体情况，西藏大学学工处一位负责人作了以下说明：在此项政策出台时，校方在学生中已做了大量的宣传工作，凡符合政策规定的2009级藏大毕业生，可在今年11月15日前将本人的就业协议书、学费或国家助学贷款代偿申请表及本人身份证复印件等材料寄回西藏大学学生资助中心，然后由西藏大学学生资助中心上报全国学生资助中心，对符合代偿政策的毕业生，其名单将在西藏大学学工部网站上公示，等公示监督期满后，其学费或国家助学贷款将会被分年度进行代偿。但如果有毕业生在基层服务期限未满五年出现脱岗或辞职的情况，已代偿金额将被全部追回。</font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：中国西藏新闻网 </font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "825a43371c523aed32b9d3cbc688fdfdb1f1adac1db1a08a713199ecc4f995c6",
+  "evidence": {
+    "listPage": 51,
+    "listTitle": "西藏：今年将首次实行高校毕业生学费代偿政策",
+    "listPublishDate": "2009-07-14",
+    "sourceOrder": 509,
+    "detailPublishDate": "2009-07-14"
+  }
+}

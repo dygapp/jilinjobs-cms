@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7c29706528eff60dd6172c3b2b45a6e1c06696b9e542f95baed705cf18089ee3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/2ieJf633zAcyiPhIZmtM2Q",
+    "url": "https://mp.weixin.qq.com/s/2ieJf633zAcyiPhIZmtM2Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗 | 长春东方职业学院校长郝炬赴吉林省颐乐康复中心走访调研 协同共育康养护新人才",
+    "source": "",
+    "publishDate": "2025-06-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/2ieJf633zAcyiPhIZmtM2Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "dd005dd89d55887572ca4eb2a9f92e1e6b60e2fe6b46a638dc525258a575c59d",
+  "evidence": {
+    "listPage": 82,
+    "listTitle": "访企拓岗 | 长春东方职业学院校长郝炬赴吉林省颐乐康复中心走访调研 协同共育康养护新人才",
+    "listPublishDate": "2025-06-16",
+    "sourceOrder": 814
+  }
+}

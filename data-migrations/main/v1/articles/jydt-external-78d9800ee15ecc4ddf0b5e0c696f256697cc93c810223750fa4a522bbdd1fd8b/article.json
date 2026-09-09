@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:78d9800ee15ecc4ddf0b5e0c696f256697cc93c810223750fa4a522bbdd1fd8b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/x5KZs4J1enfEFsXxVI1UTQ",
+    "url": "https://mp.weixin.qq.com/s/x5KZs4J1enfEFsXxVI1UTQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春早期教育职业学院党建引领双向赋能 校企联建共筑育人阵地",
+    "source": "",
+    "publishDate": "2026-05-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/x5KZs4J1enfEFsXxVI1UTQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "25aceec6e0ae2330f49b9824009978f0881f2282d7afdfe41f73554abb46a878",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "长春早期教育职业学院党建引领双向赋能 校企联建共筑育人阵地",
+    "listPublishDate": "2026-05-29",
+    "sourceOrder": 125
+  }
+}

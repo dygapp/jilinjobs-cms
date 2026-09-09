@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e2b64e7e53771d278ef9b7523b3fe59291550f72fef3a1eaa8741474e09d2e48",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1003/18373.htm",
+    "url": "https://news.ccu.edu.cn/info/1003/18373.htm?sessionid=-1367066828"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省2025年退役军人大学生校园专场招聘会在长春大学举办",
+    "source": "",
+    "publishDate": "2025-04-17",
+    "bodyHtml": "",
+    "externalUrl": "https://news.ccu.edu.cn/info/1003/18373.htm?sessionid=-1367066828"
+  },
+  "resources": [],
+  "sourceFingerprint": "2c643db3c6fd33f8c8a383a789a766ffc1bb003625f9ea03539b5c03b3b9725b",
+  "evidence": {
+    "listPage": 94,
+    "listTitle": "吉林省2025年退役军人大学生校园专场招聘会在长春大学举办",
+    "listPublishDate": "2025-04-17",
+    "sourceOrder": 939
+  }
+}

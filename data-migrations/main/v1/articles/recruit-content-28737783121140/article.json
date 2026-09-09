@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783121140",
+    "contentId": "28737783121140",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783121140"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2008年汽车厂商关注度",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2008年汽车厂商关注度</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 通过统计各大厂商旗下主要产品的关注度，可以较好地反映出消费者对各大厂商的整体品牌认知情况。数据显示， 2008年奇瑞汽车以13.42%的整体关注度领先于其他厂商，奇瑞QQ功不可没；上海大众、上海通用、一汽大众和一汽丰田等厂商综合实力较强，关注度较为接近；广州本田、东风日产等厂商各有优势，关注度稍稍落后。</font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://data.baidu.com/qiche5/img/chart6.gif\" border=\"0\"></font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 一、得益于奇瑞QQ的巨大成功，以及通过战略性品牌公关形成的当代自主品牌创新样板的效应，奇瑞汽车吸引了媒体、用户等多方面的关注，其整体关注度遥遥领先于其他厂商。但“成也萧何，败也萧何”，奇瑞QQ为奇瑞带来声誉的同时也让消费者将奇瑞与低端车型形成了较强的品牌联想，在消费结构升级、经济预期不好的情况下，低端消费车型更易受影响，进而影响奇瑞微型车销量，导致整个奇瑞汽车关注度的下滑。而车型集中于中高端的厂商如一汽大众、上海通用等则在消费结构升级、中高档轿车较强的需求刚性等因素影响下，关注度会逐渐上升，与奇瑞汽车的差距会逐渐缩小。</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 二、大众、通用关注度超越丰田。上海大众、一汽大众、上海通用和一汽丰田四大厂商旗下产品丰富，且主力产品均有用较高的关注度，而从销量情况看，四者销量也领先于其他各大厂商，除去奇瑞QQ的影响，关注度数据较好地反映了四者现在的市场地位。其中，作为中国老百姓最关注的日本厂商，丰田旗下相关品牌的关注度与其销量和市场地位存在一定差异4，这与丰田在网络营销上落后于主要竞争对手有一定关系。上海通用则凭借其在中国市场的多年投入，以及对中国消费者的深刻理解，在关注度上超越一汽丰田。</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 三、广州本田、东风日产等厂商各有优势，旗下均有优势产品备受关注。以广州本田为例，凭借简约、有效的车型系列，广州本田在中高级轿车、MPV 以及小型车三个细分市场中占有领先地位：雅阁在中高级轿车市场有较强的影响力，飞度/思迪组合与奥德赛在小型车和MPV 市场中居于领先地位。</font></p> <p><font color=\"#444444\" size=\"2\">此外，部分厂商旗下产品有较高的关注度，但其销量却不尽如人意，这主要是因为提高品牌知名度、获得更多关注只是营销的第一步，如何将对产品的关注成功转化为购买行为，也是部分厂商需要思考的问题。</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "9875ec04a6f430c524be7504c3d0cd8e493ee724963e6dc134b57cae8ab777c1",
+  "evidence": {
+    "listPage": 57,
+    "listTitle": "2008年汽车厂商关注度",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 569,
+    "detailPublishDate": "2009-04-05"
+  }
+}

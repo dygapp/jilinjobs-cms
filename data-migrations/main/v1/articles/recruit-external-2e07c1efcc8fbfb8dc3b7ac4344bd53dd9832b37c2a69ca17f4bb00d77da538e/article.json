@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:2e07c1efcc8fbfb8dc3b7ac4344bd53dd9832b37c2a69ca17f4bb00d77da538e",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/Q47iWaFsn4hbx-LhUXYTyw",
+    "url": "https://mp.weixin.qq.com/s/Q47iWaFsn4hbx-LhUXYTyw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“聚力扩容提质 服务高质量发展 —— 2026 年吉林省高校毕业生师范专场招聘会”暨吉林师范大学2026届毕业生春季双选会",
+    "source": "",
+    "publishDate": "2026-03-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Q47iWaFsn4hbx-LhUXYTyw"
+  },
+  "resources": [],
+  "sourceFingerprint": "0c04f6c1d7dafe6427b446fb91ba25eb85383d249e68f8f7a5e52becc585af84",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "“聚力扩容提质 服务高质量发展 —— 2026 年吉林省高校毕业生师范专场招聘会”暨吉林师范大学2026届毕业生春季双选会",
+    "listPublishDate": "2026-03-18",
+    "sourceOrder": 58
+  }
+}

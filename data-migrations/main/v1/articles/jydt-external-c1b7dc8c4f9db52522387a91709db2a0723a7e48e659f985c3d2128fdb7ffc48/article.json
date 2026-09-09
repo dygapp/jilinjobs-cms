@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c1b7dc8c4f9db52522387a91709db2a0723a7e48e659f985c3d2128fdb7ffc48",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/6r_oesBvRbqR2RrfQiRBvw",
+    "url": "https://mp.weixin.qq.com/s/6r_oesBvRbqR2RrfQiRBvw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "四平职业大学赴联勤保障部队第九六五医院开展访企拓岗活动",
+    "source": "",
+    "publishDate": "2026-03-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/6r_oesBvRbqR2RrfQiRBvw"
+  },
+  "resources": [],
+  "sourceFingerprint": "56f5a880f87713fa8b2bc32fca6807b7193176ffa60727147bca9b8944518c3a",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "四平职业大学赴联勤保障部队第九六五医院开展访企拓岗活动",
+    "listPublishDate": "2026-03-25",
+    "sourceOrder": 368
+  }
+}

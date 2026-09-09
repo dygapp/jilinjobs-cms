@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6fc996dcc8582942fb9e90446a59f072049e14414c621dfdc0c5f346e061ca97",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/4CdDhgHU6OAiEWxiRumDOQ",
+    "url": "https://mp.weixin.qq.com/s/4CdDhgHU6OAiEWxiRumDOQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院举办2025届毕业生就业暨2026届毕业生“实习+就业”双选会",
+    "source": "",
+    "publishDate": "2025-05-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4CdDhgHU6OAiEWxiRumDOQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "ec70a629445160d41e3504debf7e8ac687db1fee2b4126ba7e4e3c805be66e63",
+  "evidence": {
+    "listPage": 87,
+    "listTitle": "长春工程学院举办2025届毕业生就业暨2026届毕业生“实习+就业”双选会",
+    "listPublishDate": "2025-05-26",
+    "sourceOrder": 868
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123180",
+    "contentId": "28737783123180",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123180"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "北华大学举行工科类专场招聘会",
+    "source": "",
+    "publishDate": "2011-11-11",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">北华大学举行工科类专场招聘会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-11 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-align:center\"><img border=\"0\" src=\"http://www.jilinjobs.cn/uploadfile/201111/20111111152739615.jpg\"></p> <p>&nbsp;&nbsp;&nbsp; 11月9日，北华大学2012届毕业生供需见面洽谈月第二场招聘会在在大学生就业服务大厅举行。本次招聘会以工科类专业为主，共有天津电力公司、四川自贡硬质合金有限公司、厦门宏发汽车电子有限公司、山西鲁能晋北铝业有限公司、青海桥头铝电集团等60余家企业参会，提供岗位1045个，参会学生达2600多人次，意向签约57人。<br>&nbsp;&nbsp;&nbsp; 本次招聘会呈现出用人单位层次高、岗位需求多、现场签约快等特点，效果显著。</p> <p>&nbsp;</p> <p style=\"text-align:center\"><img border=\"0\" src=\"migration-resource://79528c8f4428a9031a5d959f14facc67474f56a0d1bbcd87ad5e4819e3fe93f1\"></p> <p align=\"center\">招聘会现场1</p> <p>&nbsp;</p> <p style=\"text-align:center\"><img border=\"0\" src=\"migration-resource://7d669f7965baf90eb6c98dfe7a044a479558524115dea512472b042e8ebdbd7e\"></p> <p align=\"center\">招聘会现场2</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2011111115283969.jpg",
+      "originalReference": "/chistory/cms/imgs/2011111115283969.jpg",
+      "token": "migration-resource://79528c8f4428a9031a5d959f14facc67474f56a0d1bbcd87ad5e4819e3fe93f1",
+      "snapshotPath": "assets/79528c8f4428a9031a5d959f14facc67474f56a0d1bbcd87ad5e4819e3fe93f1.jpg",
+      "sha256": "79528c8f4428a9031a5d959f14facc67474f56a0d1bbcd87ad5e4819e3fe93f1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 76958
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111111152859469.jpg",
+      "originalReference": "/chistory/cms/imgs/20111111152859469.jpg",
+      "token": "migration-resource://7d669f7965baf90eb6c98dfe7a044a479558524115dea512472b042e8ebdbd7e",
+      "snapshotPath": "assets/7d669f7965baf90eb6c98dfe7a044a479558524115dea512472b042e8ebdbd7e.jpg",
+      "sha256": "7d669f7965baf90eb6c98dfe7a044a479558524115dea512472b042e8ebdbd7e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 87470
+    }
+  ],
+  "sourceFingerprint": "85b5094acc4905561bf927dbc282536184455e915a3d3b8c2af884a2bdf1b578",
+  "evidence": {
+    "listPage": 45,
+    "listTitle": "北华大学举行工科类专场招聘会",
+    "listPublishDate": "2011-11-11",
+    "sourceOrder": 449,
+    "detailPublishDate": "2011-11-11"
+  }
+}

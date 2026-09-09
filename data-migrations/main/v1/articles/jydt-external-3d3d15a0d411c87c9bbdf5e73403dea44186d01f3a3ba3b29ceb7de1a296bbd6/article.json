@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3d3d15a0d411c87c9bbdf5e73403dea44186d01f3a3ba3b29ceb7de1a296bbd6",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5659.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5659.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学与上海蔚来汽车有限公司举行校企合作交流座谈会",
+    "source": "",
+    "publishDate": "2026-04-10",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5659.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "bbadfe62b8f7f06076bc72c8c666aebf905702e8d0a3882ca6ae3f03e8452df4",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "长春工业大学与上海蔚来汽车有限公司举行校企合作交流座谈会",
+    "listPublishDate": "2026-04-10",
+    "sourceOrder": 306
+  }
+}

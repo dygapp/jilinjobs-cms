@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d4f05047b63f784071f3b43c63095efe2dbfbb383c470fe83fc121e3b8a8eec5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/bVCiUi357httbnpWquEEnQ",
+    "url": "https://mp.weixin.qq.com/s/bVCiUi357httbnpWquEEnQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "415家优质企业，2.4万个就业岗位，吉林省普通高校光电产业类毕业生就业洽谈会在长春理工大学举行",
+    "source": "",
+    "publishDate": "2025-11-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/bVCiUi357httbnpWquEEnQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "fe14aa902e8e71e07ede52bf277c59b28f45a797cdeac48a7ae9f327395a410f",
+  "evidence": {
+    "listPage": 65,
+    "listTitle": "415家优质企业，2.4万个就业岗位，吉林省普通高校光电产业类毕业生就业洽谈会在长春理工大学举行",
+    "listPublishDate": "2025-11-03",
+    "sourceOrder": 641
+  }
+}

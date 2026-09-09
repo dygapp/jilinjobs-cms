@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:baa31bd5d893bb9f4c3bf81393cbbb9a5e12801591df55c72fa29f508607e8ee",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/tn-aWtMoKowQEJpTSMujuw",
+    "url": "https://mp.weixin.qq.com/s/tn-aWtMoKowQEJpTSMujuw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业大学举办2026届毕业生大型秋季招聘会",
+    "source": "",
+    "publishDate": "2025-10-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/tn-aWtMoKowQEJpTSMujuw"
+  },
+  "resources": [],
+  "sourceFingerprint": "74d003d4035c8279df52f36b17c5f447bb65606cac0e6ea1ccc29e738d6ab45e",
+  "evidence": {
+    "listPage": 66,
+    "listTitle": "吉林农业大学举办2026届毕业生大型秋季招聘会",
+    "listPublishDate": "2025-10-29",
+    "sourceOrder": 654
+  }
+}

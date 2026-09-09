@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c1d8885356dfbad9bcc966ab9e110c022aca24d0ea5f08869b0a260ab53e2467",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/BIkuvJF9CYiooD3wmRKsZw",
+    "url": "https://mp.weixin.qq.com/s/BIkuvJF9CYiooD3wmRKsZw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院举办“创业奋斗‘就’在吉林”服务大旅游产业集群毕业生专场招聘会",
+    "source": "",
+    "publishDate": "2024-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/BIkuvJF9CYiooD3wmRKsZw"
+  },
+  "resources": [],
+  "sourceFingerprint": "9787298877f765a262113bc860d47de713097103f2abb860f5cd1a5c419178dc",
+  "evidence": {
+    "listPage": 106,
+    "listTitle": "吉林工商学院举办“创业奋斗‘就’在吉林”服务大旅游产业集群毕业生专场招聘会",
+    "listPublishDate": "2024-05-15",
+    "sourceOrder": 1052
+  }
+}

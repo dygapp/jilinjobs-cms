@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:36d976daaf522b1a327dade122811f79c2b2595135b9f4b0c9457bdb997fddb4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/5KZDR6_ZEwtXrmTvJnsroA",
+    "url": "https://mp.weixin.qq.com/s/5KZDR6_ZEwtXrmTvJnsroA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工程技术师范学院举办“服务吉林高质量发展”2026届毕业生秋季校园招聘会",
+    "source": "",
+    "publishDate": "2025-11-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5KZDR6_ZEwtXrmTvJnsroA"
+  },
+  "resources": [],
+  "sourceFingerprint": "f11cd1055dc27011be9417c8df8576d313a19d8055705ca67ff32b85050e69ca",
+  "evidence": {
+    "listPage": 64,
+    "listTitle": "吉林工程技术师范学院举办“服务吉林高质量发展”2026届毕业生秋季校园招聘会",
+    "listPublishDate": "2025-11-03",
+    "sourceOrder": 637
+  }
+}

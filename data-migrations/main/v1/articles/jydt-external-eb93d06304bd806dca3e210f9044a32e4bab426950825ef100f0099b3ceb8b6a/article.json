@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:eb93d06304bd806dca3e210f9044a32e4bab426950825ef100f0099b3ceb8b6a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/2FwZzfczS21YosB9fVQw9w",
+    "url": "https://mp.weixin.qq.com/s/2FwZzfczS21YosB9fVQw9w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“吉地筑梦 职引未来” 服务吉林高质量发展——吉林外国语大学2025届毕业生春季校园招聘会即将开幕！",
+    "source": "",
+    "publishDate": "2025-05-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/2FwZzfczS21YosB9fVQw9w"
+  },
+  "resources": [],
+  "sourceFingerprint": "4b775fd33aa0d83a79577ad15c259a40faaa3e8352dfb805052349f7f21fd8e7",
+  "evidence": {
+    "listPage": 87,
+    "listTitle": "“吉地筑梦 职引未来” 服务吉林高质量发展——吉林外国语大学2025届毕业生春季校园招聘会即将开幕！",
+    "listPublishDate": "2025-05-28",
+    "sourceOrder": 863
+  }
+}

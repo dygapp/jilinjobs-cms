@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:32785f0d5444fa802b4606813dc7f707f7bb21b538d005504cb05327dde2d506",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/fnqc3K7BWuNV24GFCcldIA",
+    "url": "https://mp.weixin.qq.com/s/fnqc3K7BWuNV24GFCcldIA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "第二届全国建设行业人才（大学生专场）招聘会吉林省第六届建筑类人才供需洽谈会暨吉林建筑大学2027届毕业生秋季双选会邀请函",
+    "source": "",
+    "publishDate": "2026-08-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/fnqc3K7BWuNV24GFCcldIA"
+  },
+  "resources": [],
+  "sourceFingerprint": "669bc4bd0051f7f228e5a6f5a12641eb563edd739483536bfeffeb5b2ee07d0e",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "第二届全国建设行业人才（大学生专场）招聘会吉林省第六届建筑类人才供需洽谈会暨吉林建筑大学2027届毕业生秋季双选会邀请函",
+    "listPublishDate": "2026-08-31",
+    "sourceOrder": 17
+  }
+}

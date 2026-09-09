@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:efdc5372903c93c0c9a4a4b929df09db24f0946f98a9273eb82da8ad29e921a0",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/8UGs-HYxgsgPDkpmEeLQig",
+    "url": "https://mp.weixin.qq.com/s/8UGs-HYxgsgPDkpmEeLQig"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗‘就’在吉林”吉林省高校服务大旅游产业集群毕业生招聘会学生参会指南",
+    "source": "",
+    "publishDate": "2024-04-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/8UGs-HYxgsgPDkpmEeLQig"
+  },
+  "resources": [],
+  "sourceFingerprint": "f4781a4a3e7e0d5eec8d0b0db3942bf3591a037bbf42e56341d5a8fcab892c77",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "“创业奋斗‘就’在吉林”吉林省高校服务大旅游产业集群毕业生招聘会学生参会指南",
+    "listPublishDate": "2024-04-23",
+    "sourceOrder": 292
+  }
+}

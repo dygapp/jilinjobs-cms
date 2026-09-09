@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120286",
+    "contentId": "28737783120286",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120286"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "安徽：11项新政力促高校毕业生就业",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">安徽：11项新政力促高校毕业生就业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><br><font size=\"2\">&nbsp;&nbsp;&nbsp; 今年安徽省将继续组织实施并扩大 “选调生”、 “选聘生”、 “三支一扶”、招募医科类高校毕业生到乡镇卫生院工作等项目计划规模，其中 “三支一扶”项目计划增加到1000名。对在当地公共就业服务机构登记失业的自主创业高校毕业生，自筹资金不足的，可申请5万元以内、期限不超过两年的小额担保贷款。自主创业高校毕业生在工商行政管理部门登记注册，首次注册资金可放宽至1万元，其余可分期到位。对企业聘用非本地户籍的普通高校专科以上毕业生，公安部门取消落户限制。吸纳家庭困难高校毕业生就业的企业缴纳的5项社会保险费，2009年由财政从就业专项资金中按照当地标准给予社会保险补贴。 <br>&nbsp;</font></p> <p><font size=\"2\">　　此外，该省还将大力开发基层就业岗位吸纳高校毕业生；加大高校毕业生职业培训力度，提高毕业生就业能力；对骨干企业和科研项目单位吸纳和稳定高校毕业生给予政策扶持；完善离校未就业高校毕业生见习制度，鼓励见习单位优先录用见习毕业生；支持各类毕业生提升学历层次，延缓高校毕业生就业；将应届高校毕业生纳入就业资金扶持范围；强化高校毕业生就业服务和就业指导；强化对困难高校毕业生的就业援助。今年，安徽省还将扩大研究生招生规模和 “专升本”规模，扩大成人高等教育招生规模，其中 “专升本”计划增加到5080名，研究生招生规模比上年增加10%。</font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "84364d94e24d85acef11d8133432dfb02b6de2c1bfdc0d2ae4df7eb48c20dfcf",
+  "evidence": {
+    "listPage": 185,
+    "listTitle": "安徽：11项新政力促高校毕业生就业",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1847,
+    "detailPublishDate": "2009-04-05"
+  }
+}

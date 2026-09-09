@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ff40d8f1aee6e7c3fbb4ed81dc66a90d987d9eb975af5fa2e62a27cb79222bb4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/lPxB06PhvCKBcCBAC3QesQ",
+    "url": "https://mp.weixin.qq.com/s/lPxB06PhvCKBcCBAC3QesQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林水利电力职业学院党委书记王彧杲率队赴吉林通用机械（集团）开展“访企拓岗”调研",
+    "source": "",
+    "publishDate": "2025-05-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/lPxB06PhvCKBcCBAC3QesQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "96b6c5ad3b7a861ed2242b3c9e22570b156f0ee221e1a91e35e8cc162d7b0fda",
+  "evidence": {
+    "listPage": 87,
+    "listTitle": "吉林水利电力职业学院党委书记王彧杲率队赴吉林通用机械（集团）开展“访企拓岗”调研",
+    "listPublishDate": "2025-05-29",
+    "sourceOrder": 861
+  }
+}

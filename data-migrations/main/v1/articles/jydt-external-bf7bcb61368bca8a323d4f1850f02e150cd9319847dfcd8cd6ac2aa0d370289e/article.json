@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bf7bcb61368bca8a323d4f1850f02e150cd9319847dfcd8cd6ac2aa0d370289e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/articles/index.html",
+    "url": "https://article.xuexi.cn/articles/index.html?art_id=3486189336527545782&cdn=https%3A%2F%2Fregion-jilin-resource&item_id=3486189336527545782&study_style_id=feeds_opaque&t=1711198721571&pid=&ptype=-1&share_to=wx_feed&source=share"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务吉林高质量发展！延边大学2024届毕业生长春专场招聘会举行",
+    "source": "",
+    "publishDate": "2024-03-25",
+    "bodyHtml": "",
+    "externalUrl": "https://article.xuexi.cn/articles/index.html?art_id=3486189336527545782&cdn=https%3A%2F%2Fregion-jilin-resource&item_id=3486189336527545782&study_style_id=feeds_opaque&t=1711198721571&pid=&ptype=-1&share_to=wx_feed&source=share"
+  },
+  "resources": [],
+  "sourceFingerprint": "d3bfd98a411f286954823edbe744db917ba122a999f0a841e96dfaf666e791d2",
+  "evidence": {
+    "listPage": 111,
+    "listTitle": "服务吉林高质量发展！延边大学2024届毕业生长春专场招聘会举行",
+    "listPublishDate": "2024-03-25",
+    "sourceOrder": 1103
+  }
+}

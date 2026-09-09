@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:ce35bb71c91d0e624fd7ef6077b716734413a3f8da85d16d335cadc22230c815",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/y2IEEOwWgxBnm42Y6bLo6A",
+    "url": "https://mp.weixin.qq.com/s/y2IEEOwWgxBnm42Y6bLo6A"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2025年“五优”服务进校园春季巡回双选会-长春汽车职业技术大学专场",
+    "source": "",
+    "publishDate": "2025-03-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/y2IEEOwWgxBnm42Y6bLo6A"
+  },
+  "resources": [],
+  "sourceFingerprint": "082187acdf0e6105f6f1c8fce99982110a19ae0a019d9b964c75f3a72a1dc3cd",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "2025年“五优”服务进校园春季巡回双选会-长春汽车职业技术大学专场",
+    "listPublishDate": "2025-03-13",
+    "sourceOrder": 220
+  }
+}

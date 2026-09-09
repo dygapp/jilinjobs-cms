@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:93248387301376",
+    "contentId": "93248387301376",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=93248387301376"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展“战疫情 保发展”中小企业网上百日招聘活动（吉林专区）的通知",
+    "source": "",
+    "publishDate": "2022-05-30",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1255\" src=\"migration-resource://1043c0f95236dc2717ae144aec9e0e9945e5a645f377f6457bf5ad4b7d103a4b\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1333\" src=\"migration-resource://dbfff8186b3d33c7880f51b3a5f4233b27c11c78c0f7397592d448202a8ce49e\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1270\" src=\"migration-resource://2a3931f463c3f3814486ebac2914a359b250a9e310523446251371ec976af54c\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1297\" src=\"migration-resource://65d83d5b9e8c49bc4aede06ff41fc9c7084145f0cd47d53353c75fecafa4f32c\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1300\" src=\"migration-resource://709c94d710e8b6d30ad172f47aaa5b05e879f8490da01b092f91b942ef43d52c\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-30/7c190236-018c-4c58-853f-aa8ea8236bc7.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-30/7c190236-018c-4c58-853f-aa8ea8236bc7.jpg",
+      "token": "migration-resource://1043c0f95236dc2717ae144aec9e0e9945e5a645f377f6457bf5ad4b7d103a4b",
+      "snapshotPath": "assets/1043c0f95236dc2717ae144aec9e0e9945e5a645f377f6457bf5ad4b7d103a4b.jpg",
+      "sha256": "1043c0f95236dc2717ae144aec9e0e9945e5a645f377f6457bf5ad4b7d103a4b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 169645
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-30/6dead2ea-db4c-4001-b21a-81ebb645941c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-30/6dead2ea-db4c-4001-b21a-81ebb645941c.jpg",
+      "token": "migration-resource://dbfff8186b3d33c7880f51b3a5f4233b27c11c78c0f7397592d448202a8ce49e",
+      "snapshotPath": "assets/dbfff8186b3d33c7880f51b3a5f4233b27c11c78c0f7397592d448202a8ce49e.jpg",
+      "sha256": "dbfff8186b3d33c7880f51b3a5f4233b27c11c78c0f7397592d448202a8ce49e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 142857
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-30/ad6025fe-45a2-4412-9c4c-3a388931ddcd.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-30/ad6025fe-45a2-4412-9c4c-3a388931ddcd.jpg",
+      "token": "migration-resource://2a3931f463c3f3814486ebac2914a359b250a9e310523446251371ec976af54c",
+      "snapshotPath": "assets/2a3931f463c3f3814486ebac2914a359b250a9e310523446251371ec976af54c.jpg",
+      "sha256": "2a3931f463c3f3814486ebac2914a359b250a9e310523446251371ec976af54c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 192849
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-30/1d959b1d-1a07-4e92-9393-3f77894a6b68.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-30/1d959b1d-1a07-4e92-9393-3f77894a6b68.jpg",
+      "token": "migration-resource://65d83d5b9e8c49bc4aede06ff41fc9c7084145f0cd47d53353c75fecafa4f32c",
+      "snapshotPath": "assets/65d83d5b9e8c49bc4aede06ff41fc9c7084145f0cd47d53353c75fecafa4f32c.jpg",
+      "sha256": "65d83d5b9e8c49bc4aede06ff41fc9c7084145f0cd47d53353c75fecafa4f32c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 118995
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-30/a113215f-f43c-45f8-ad60-2526276ebd7e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-30/a113215f-f43c-45f8-ad60-2526276ebd7e.jpg",
+      "token": "migration-resource://709c94d710e8b6d30ad172f47aaa5b05e879f8490da01b092f91b942ef43d52c",
+      "snapshotPath": "assets/709c94d710e8b6d30ad172f47aaa5b05e879f8490da01b092f91b942ef43d52c.jpg",
+      "sha256": "709c94d710e8b6d30ad172f47aaa5b05e879f8490da01b092f91b942ef43d52c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 83095
+    }
+  ],
+  "sourceFingerprint": "8f65be3f2baa868f5d611dd053b1492032b894dc0ca50bd635b98050cf708555",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "关于开展“战疫情 保发展”中小企业网上百日招聘活动（吉林专区）的通知",
+    "listPublishDate": "2022-05-30",
+    "sourceOrder": 124,
+    "detailPublishDate": "2022-05-30"
+  }
+}

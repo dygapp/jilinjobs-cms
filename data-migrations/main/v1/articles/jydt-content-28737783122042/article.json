@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122042",
+    "contentId": "28737783122042",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122042"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2018年上半年全国计算机应用水平考试（NIT）吉林省考区上机考试工作全部结束",
+    "source": "",
+    "publishDate": "2018-06-25",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2018年上半年全国计算机应用水平考试（NIT）吉林省考区上机考试工作全部结束</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2018-6-25 9:47:43</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">截止2018年6月22日，全国计算机应用水平考试（NIT）吉林省考区上半年上机考试工作顺利结束。按照教育部全 国考试中心总体工作安排，上半年NIT考试分为4月和6月两个阶段，我省共有 15 个考点开考，共计231 场次，考生11475人次，巡考人员 24人次。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">加强考务管理依然是今年NIT考试工作的重点。省级承办机构把严肃考风考纪工作放在突出重要位置来抓，中心领导亲自带队到考场巡视。通过召开考点负责人参加的考前考务工作会，落实考点负责人对考点考试工作的主体责任，提前部署考务管理考核的相关准备工作。借鉴省教育考试院国二考试管理模式，增加考点备考完成工作确认环节。考场增加监控设施，保证考试过程可还原、可追溯，有效控制考生违纪和集体舞弊现象的发生，处理违纪考生7名。2018年NIT考试启用了新的考试系统，报名实行网上缴费，大大提高工作效率。在考试宣传过程中，突出NIT考试的过程式考核、内容的实用性和注重锻炼动手能力的优势，NIT考试逐步得到大学生和用人单位的认可，对推动大学生充分高质量就业起到积极的作用。</span></p><p><br></p><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://a2a813f0ba48f111c2fc03909723c1106b1fdc536b31451799d5731d661cb8a4\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://acb7e2fb449d052aadcaf218ef5a4ba88ba01674b1d37797ee7096dc3cf8b99d\"></p><p style=\"text-align: center;\"><img title=\"3.jpg\" src=\"migration-resource://8bae292ce4487084801698e6b8e0ef33664a86902afdff576f14a717c1afd67b\"></p><p style=\"text-align: center;\"><img title=\"4.jpg\" src=\"migration-resource://26a945b2be6441a7a236f1a9b55dfc83b306ec1ec2594342646349c413277cdc\"></p><p style=\"text-align: center;\"><img title=\"5.jpg\" src=\"migration-resource://7950d205ab746b55a5d685308fc5f336a45dcf1d25a93e80dbca3f88546a50f7\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366603533663162509207669.jpg",
+      "originalReference": "/chistory/cms/imgs/6366603533663162509207669.jpg",
+      "token": "migration-resource://a2a813f0ba48f111c2fc03909723c1106b1fdc536b31451799d5731d661cb8a4",
+      "snapshotPath": "assets/a2a813f0ba48f111c2fc03909723c1106b1fdc536b31451799d5731d661cb8a4.jpg",
+      "sha256": "a2a813f0ba48f111c2fc03909723c1106b1fdc536b31451799d5731d661cb8a4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 163073
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366603533678787504692810.jpg",
+      "originalReference": "/chistory/cms/imgs/6366603533678787504692810.jpg",
+      "token": "migration-resource://acb7e2fb449d052aadcaf218ef5a4ba88ba01674b1d37797ee7096dc3cf8b99d",
+      "snapshotPath": "assets/acb7e2fb449d052aadcaf218ef5a4ba88ba01674b1d37797ee7096dc3cf8b99d.jpg",
+      "sha256": "acb7e2fb449d052aadcaf218ef5a4ba88ba01674b1d37797ee7096dc3cf8b99d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131205
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366603533686600002435381.jpg",
+      "originalReference": "/chistory/cms/imgs/6366603533686600002435381.jpg",
+      "token": "migration-resource://8bae292ce4487084801698e6b8e0ef33664a86902afdff576f14a717c1afd67b",
+      "snapshotPath": "assets/8bae292ce4487084801698e6b8e0ef33664a86902afdff576f14a717c1afd67b.jpg",
+      "sha256": "8bae292ce4487084801698e6b8e0ef33664a86902afdff576f14a717c1afd67b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 114464
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366603533694412504879779.jpg",
+      "originalReference": "/chistory/cms/imgs/6366603533694412504879779.jpg",
+      "token": "migration-resource://26a945b2be6441a7a236f1a9b55dfc83b306ec1ec2594342646349c413277cdc",
+      "snapshotPath": "assets/26a945b2be6441a7a236f1a9b55dfc83b306ec1ec2594342646349c413277cdc.jpg",
+      "sha256": "26a945b2be6441a7a236f1a9b55dfc83b306ec1ec2594342646349c413277cdc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 108839
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366603533702225002622350.jpg",
+      "originalReference": "/chistory/cms/imgs/6366603533702225002622350.jpg",
+      "token": "migration-resource://7950d205ab746b55a5d685308fc5f336a45dcf1d25a93e80dbca3f88546a50f7",
+      "snapshotPath": "assets/7950d205ab746b55a5d685308fc5f336a45dcf1d25a93e80dbca3f88546a50f7.jpg",
+      "sha256": "7950d205ab746b55a5d685308fc5f336a45dcf1d25a93e80dbca3f88546a50f7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 149843
+    }
+  ],
+  "sourceFingerprint": "0ee224d03d91f239d7536a6550cfe13908158093c1f1cedc17ee81cb7c8b0dfc",
+  "evidence": {
+    "listPage": 147,
+    "listTitle": "2018年上半年全国计算机应用水平考试（NIT）吉林省考区上机考试工作全部结束",
+    "listPublishDate": "2018-06-25",
+    "sourceOrder": 1465,
+    "detailPublishDate": "2018-06-25"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:135961ce34a92978274f8ba1923edaa296a9d896e2e85243aeb16ae660790203",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/N4BM1_E938noHOZ-S1onUQ",
+    "url": "https://mp.weixin.qq.com/s/N4BM1_E938noHOZ-S1onUQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学党委副书记刘国宁带队赴辽宁省开展“招生—培养—就业”一体化促进专项调研",
+    "source": "",
+    "publishDate": "2026-06-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/N4BM1_E938noHOZ-S1onUQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "9656f0f28136fa711fdccd5ad58305e6d08ce51cd8061b7a0f1553b90c7160b6",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "长春师范大学党委副书记刘国宁带队赴辽宁省开展“招生—培养—就业”一体化促进专项调研",
+    "listPublishDate": "2026-06-10",
+    "sourceOrder": 90
+  }
+}

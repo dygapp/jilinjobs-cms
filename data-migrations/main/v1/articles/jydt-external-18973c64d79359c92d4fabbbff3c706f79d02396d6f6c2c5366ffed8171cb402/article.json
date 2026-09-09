@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:18973c64d79359c92d4fabbbff3c706f79d02396d6f6c2c5366ffed8171cb402",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5438.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5438.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学携手圣威雅特集团共建产教融合实践基地",
+    "source": "",
+    "publishDate": "2025-12-22",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5438.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "dd8b52164abe0a42f90756d82f261654e3fabe53cc191f7b1193e192090859d0",
+  "evidence": {
+    "listPage": 53,
+    "listTitle": "长春工业大学携手圣威雅特集团共建产教融合实践基地",
+    "listPublishDate": "2025-12-22",
+    "sourceOrder": 526
+  }
+}

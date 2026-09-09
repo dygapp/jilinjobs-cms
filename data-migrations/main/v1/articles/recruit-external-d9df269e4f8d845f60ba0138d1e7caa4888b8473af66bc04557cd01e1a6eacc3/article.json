@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:d9df269e4f8d845f60ba0138d1e7caa4888b8473af66bc04557cd01e1a6eacc3",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/QKH4FeRUXNHC69dRbTIYBA",
+    "url": "https://mp.weixin.qq.com/s/QKH4FeRUXNHC69dRbTIYBA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "邀请函 | 全国高校2025届毕业生教育人才招聘会",
+    "source": "",
+    "publishDate": "2024-11-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/QKH4FeRUXNHC69dRbTIYBA"
+  },
+  "resources": [],
+  "sourceFingerprint": "8ac9dcbf4cd1cd83b8d31d78399f9893b978226a76b4790ad5d186841b2c2c3d",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "邀请函 | 全国高校2025届毕业生教育人才招聘会",
+    "listPublishDate": "2024-11-11",
+    "sourceOrder": 234
+  }
+}

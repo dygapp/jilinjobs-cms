@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:eaa167d9c56617a4da3a4528dddf88248a44066ff46e560bed99c9344b0af9c4",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/zw/gggs/202010/t20201028_303301.html",
+    "url": "http://www.longjing.gov.cn/zw/gggs/202010/t20201028_303301.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年龙井市教育系统事业单位公开招聘工作人员公告",
+    "source": "",
+    "publishDate": "2020-11-05",
+    "bodyHtml": "",
+    "externalUrl": "http://www.longjing.gov.cn/zw/gggs/202010/t20201028_303301.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "c330a0a4135d59113dd5c7d130dfbeab7b5260ded7ad7cf042219efa857db713",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "2020年龙井市教育系统事业单位公开招聘工作人员公告",
+    "listPublishDate": "2020-11-05",
+    "sourceOrder": 364
+  }
+}

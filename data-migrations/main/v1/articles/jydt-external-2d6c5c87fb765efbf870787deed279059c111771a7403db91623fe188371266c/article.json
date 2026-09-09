@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2d6c5c87fb765efbf870787deed279059c111771a7403db91623fe188371266c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/7ev1tjEQMtvt0EUrgaxruA",
+    "url": "https://mp.weixin.qq.com/s/7ev1tjEQMtvt0EUrgaxruA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工程职业学院赴长春吉润净月医院开展走访座谈",
+    "source": "",
+    "publishDate": "2026-08-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/7ev1tjEQMtvt0EUrgaxruA"
+  },
+  "resources": [],
+  "sourceFingerprint": "be22c580e9100f883f33e6c53649e286e70e17391f87f2de68df32022d84e995",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "吉林工程职业学院赴长春吉润净月医院开展走访座谈",
+    "listPublishDate": "2026-08-18",
+    "sourceOrder": 14
+  }
+}

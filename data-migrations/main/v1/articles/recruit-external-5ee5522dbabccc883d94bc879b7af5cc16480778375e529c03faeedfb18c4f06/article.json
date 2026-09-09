@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:5ee5522dbabccc883d94bc879b7af5cc16480778375e529c03faeedfb18c4f06",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/-C2wXkNqMi6SzOK7G_P9nQ",
+    "url": "https://mp.weixin.qq.com/s/-C2wXkNqMi6SzOK7G_P9nQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林化工大学2027届毕业生秋季校园招聘活动邀请函",
+    "source": "",
+    "publishDate": "2026-09-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/-C2wXkNqMi6SzOK7G_P9nQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "45247859bd9f301a343b9e5f8a80dfdd1b5a6f674072245d423ca608907970c8",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "吉林化工大学2027届毕业生秋季校园招聘活动邀请函",
+    "listPublishDate": "2026-09-03",
+    "sourceOrder": 10
+  }
+}

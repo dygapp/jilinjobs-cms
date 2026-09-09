@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119980",
+    "contentId": "28737783119980",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119980"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅 商务部办公厅关于举办“电子商务行业面向2016届高校毕业生网上招聘活动”的通知",
+    "source": "",
+    "publishDate": "2016-06-07",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部办公厅 商务部办公厅关于举办“电子商务行业面向2016届高校毕业生网上招聘活动”的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2016-6-7 16:07:51</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-align: center\"><img title=\"0292.jpg\" src=\"migration-resource://8e46342dcef043f89d6b625389cbab023b896dd8682fe0c56f39624deeacc97c\"></p><p style=\"text-align: center\"><img title=\"0293.jpg\" src=\"migration-resource://20a3543a81e7110fa7159a8543ca7683759a49235ff96a97928f688b76b984b1\"></p><p style=\"text-align: center\"><img title=\"0294.jpg\" src=\"migration-resource://261276024f856599ee50815079b72c801ef6aa84f2c2246ad695305ddd525afd\"></p><p style=\"text-align: center;\"><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360091188673437502050240.jpg",
+      "originalReference": "/chistory/cms/imgs/6360091188673437502050240.jpg",
+      "token": "migration-resource://8e46342dcef043f89d6b625389cbab023b896dd8682fe0c56f39624deeacc97c",
+      "snapshotPath": "assets/8e46342dcef043f89d6b625389cbab023b896dd8682fe0c56f39624deeacc97c.jpg",
+      "sha256": "8e46342dcef043f89d6b625389cbab023b896dd8682fe0c56f39624deeacc97c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 102421
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360091188821875004562736.jpg",
+      "originalReference": "/chistory/cms/imgs/6360091188821875004562736.jpg",
+      "token": "migration-resource://20a3543a81e7110fa7159a8543ca7683759a49235ff96a97928f688b76b984b1",
+      "snapshotPath": "assets/20a3543a81e7110fa7159a8543ca7683759a49235ff96a97928f688b76b984b1.jpg",
+      "sha256": "20a3543a81e7110fa7159a8543ca7683759a49235ff96a97928f688b76b984b1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 106094
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360091188964062503561907.jpg",
+      "originalReference": "/chistory/cms/imgs/6360091188964062503561907.jpg",
+      "token": "migration-resource://261276024f856599ee50815079b72c801ef6aa84f2c2246ad695305ddd525afd",
+      "snapshotPath": "assets/261276024f856599ee50815079b72c801ef6aa84f2c2246ad695305ddd525afd.jpg",
+      "sha256": "261276024f856599ee50815079b72c801ef6aa84f2c2246ad695305ddd525afd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 73663
+    }
+  ],
+  "sourceFingerprint": "79e176cebe1ba53dd58827885579fbce1474bebe38c8dc5d8309691bb3d2de39",
+  "evidence": {
+    "listPage": 155,
+    "listTitle": "教育部办公厅 商务部办公厅关于举办“电子商务行业面向2016届高校毕业生网上招聘活动”的通知",
+    "listPublishDate": "2016-06-07",
+    "sourceOrder": 1542,
+    "detailPublishDate": "2016-06-07"
+  }
+}

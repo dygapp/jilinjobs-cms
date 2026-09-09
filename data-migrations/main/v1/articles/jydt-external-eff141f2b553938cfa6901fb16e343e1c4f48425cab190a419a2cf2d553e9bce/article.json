@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:eff141f2b553938cfa6901fb16e343e1c4f48425cab190a419a2cf2d553e9bce",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/article/6748078/6619221",
+    "url": "https://wap.peopleapp.com/article/6748078/6619221"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "千方百计帮助高校毕业生就业",
+    "source": "",
+    "publishDate": "2022-06-15",
+    "bodyHtml": "",
+    "externalUrl": "https://wap.peopleapp.com/article/6748078/6619221"
+  },
+  "resources": [],
+  "sourceFingerprint": "aa19b918d1800d577203780922ba2e79e239475b255d60560e4f2094f5311b66",
+  "evidence": {
+    "listPage": 120,
+    "listTitle": "千方百计帮助高校毕业生就业",
+    "listPublishDate": "2022-06-15",
+    "sourceOrder": 1199
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:af88db74ad5794a3d98fc92abab974583af45b956de21d316df3910c8b22a17b",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/WJGLSPXwwZScgXxL-6v9fw",
+    "url": "https://mp.weixin.qq.com/s/WJGLSPXwwZScgXxL-6v9fw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "127人！吉林省省直事业单位公开招聘",
+    "source": "",
+    "publishDate": "2022-06-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/WJGLSPXwwZScgXxL-6v9fw"
+  },
+  "resources": [],
+  "sourceFingerprint": "4c528042ce62c782c185deea79d8e95e0549fe186553e8d96b4124c3e7ba86af",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "127人！吉林省省直事业单位公开招聘",
+    "listPublishDate": "2022-06-15",
+    "sourceOrder": 346
+  }
+}

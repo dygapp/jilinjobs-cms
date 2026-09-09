@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:05efb941333b6fb2e5b0f7fbd6d369d43108f528c9a9378b53546cc301345383",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/RTeN2zh2xkAPR5vEhAPieg",
+    "url": "https://mp.weixin.qq.com/s/RTeN2zh2xkAPR5vEhAPieg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院校园开放日：企业家进校园+卡伦湖论坛+专场招聘会+校企合作推介会 多措并举促就业",
+    "source": "",
+    "publishDate": "2025-09-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/RTeN2zh2xkAPR5vEhAPieg"
+  },
+  "resources": [],
+  "sourceFingerprint": "3712a40acef12871d00b56d7e474f3d61f27d2270c5b12830bed4842433f6488",
+  "evidence": {
+    "listPage": 71,
+    "listTitle": "吉林工商学院校园开放日：企业家进校园+卡伦湖论坛+专场招聘会+校企合作推介会 多措并举促就业",
+    "listPublishDate": "2025-09-18",
+    "sourceOrder": 704
+  }
+}

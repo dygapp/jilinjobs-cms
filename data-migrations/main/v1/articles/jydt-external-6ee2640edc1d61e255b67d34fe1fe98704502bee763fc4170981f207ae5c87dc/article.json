@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6ee2640edc1d61e255b67d34fe1fe98704502bee763fc4170981f207ae5c87dc",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/wboto-ZcorpGDtoAvLWdag",
+    "url": "https://mp.weixin.qq.com/s/wboto-ZcorpGDtoAvLWdag"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "首届全国大学生职业规划大赛总决赛来了！大赛吉祥物、主题曲发布",
+    "source": "",
+    "publishDate": "2024-05-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wboto-ZcorpGDtoAvLWdag"
+  },
+  "resources": [],
+  "sourceFingerprint": "26398b77a40228d2212563c44f7f3698bd6e54fcd13e10f7e1bf9a4fd6fdd9a9",
+  "evidence": {
+    "listPage": 106,
+    "listTitle": "首届全国大学生职业规划大赛总决赛来了！大赛吉祥物、主题曲发布",
+    "listPublishDate": "2024-05-09",
+    "sourceOrder": 1057
+  }
+}

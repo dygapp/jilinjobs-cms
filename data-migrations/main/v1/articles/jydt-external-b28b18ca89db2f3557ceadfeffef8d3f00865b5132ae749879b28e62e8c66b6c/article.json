@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b28b18ca89db2f3557ceadfeffef8d3f00865b5132ae749879b28e62e8c66b6c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/oqyZvX6_bBpTUV5TkQKsxg",
+    "url": "https://mp.weixin.qq.com/s/oqyZvX6_bBpTUV5TkQKsxg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学赴蛟河市开展“百校对百县”促就业专项行动",
+    "source": "",
+    "publishDate": "2025-06-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/oqyZvX6_bBpTUV5TkQKsxg"
+  },
+  "resources": [],
+  "sourceFingerprint": "5f6706369a77a00018d16b11faf5867cf2487366dfe721616482b3d1d0270c9b",
+  "evidence": {
+    "listPage": 83,
+    "listTitle": "东北电力大学赴蛟河市开展“百校对百县”促就业专项行动",
+    "listPublishDate": "2025-06-12",
+    "sourceOrder": 826
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0466159866ba4ded37a4bcdfb1da425dd4476353d33455c21e08bcd431712701",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/2b8DR0p-98OyJptfpcNtaQ",
+    "url": "https://mp.weixin.qq.com/s/2b8DR0p-98OyJptfpcNtaQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "走进托育一线谋就业 锚定职场方向促成长|长春早期教育职业学院赴省内托育机构实地考察",
+    "source": "",
+    "publishDate": "2026-03-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/2b8DR0p-98OyJptfpcNtaQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "9c7070d7fad38fb2f15eabe32cca7cdb3376fed3d9a5f2163a5928f0559b9e00",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "走进托育一线谋就业 锚定职场方向促成长|长春早期教育职业学院赴省内托育机构实地考察",
+    "listPublishDate": "2026-03-24",
+    "sourceOrder": 372
+  }
+}

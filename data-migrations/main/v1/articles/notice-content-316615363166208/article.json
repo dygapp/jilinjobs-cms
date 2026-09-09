@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:316615363166208",
+    "contentId": "316615363166208",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=316615363166208"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展2026届全国高校毕业生“金秋启航”校园招聘月活动的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2025-09-30",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1275\" src=\"migration-resource://a2f08544b08e4fe41beb1a139ddf20c0610971c28aafd7b827e9956e9a8c5c5a\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1279\" src=\"migration-resource://e214708fb1ca09e9b84227b8aef46854aae743179d555fb21934f31e8e484f92\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1280\" src=\"migration-resource://9caf839616ae08e3181b79dd3f5a4359313285e2866d3395b86320af0d14a996\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1280\" src=\"migration-resource://d6a91d3d68db3382b87b3e7d8c50d23fba4c7836bb461340eda484827fb5932c\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1280\" src=\"migration-resource://da954de061285ea1a22a460867131ad1531be5cdbf05a02b96ff993f37f0d7a9\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-14/96fbcf9b-367a-47b1-94b8-6860298dc4ef.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-14/96fbcf9b-367a-47b1-94b8-6860298dc4ef.jpg",
+      "token": "migration-resource://a2f08544b08e4fe41beb1a139ddf20c0610971c28aafd7b827e9956e9a8c5c5a",
+      "snapshotPath": "assets/a2f08544b08e4fe41beb1a139ddf20c0610971c28aafd7b827e9956e9a8c5c5a.jpg",
+      "sha256": "a2f08544b08e4fe41beb1a139ddf20c0610971c28aafd7b827e9956e9a8c5c5a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-14/758f7c6f-79eb-4891-9a0a-b4179d610497.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-14/758f7c6f-79eb-4891-9a0a-b4179d610497.jpg",
+      "token": "migration-resource://e214708fb1ca09e9b84227b8aef46854aae743179d555fb21934f31e8e484f92",
+      "snapshotPath": "assets/e214708fb1ca09e9b84227b8aef46854aae743179d555fb21934f31e8e484f92.jpg",
+      "sha256": "e214708fb1ca09e9b84227b8aef46854aae743179d555fb21934f31e8e484f92",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-14/7a6f4b95-648a-4be5-83bd-51418d11c1e9.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-14/7a6f4b95-648a-4be5-83bd-51418d11c1e9.jpg",
+      "token": "migration-resource://9caf839616ae08e3181b79dd3f5a4359313285e2866d3395b86320af0d14a996",
+      "snapshotPath": "assets/9caf839616ae08e3181b79dd3f5a4359313285e2866d3395b86320af0d14a996.jpg",
+      "sha256": "9caf839616ae08e3181b79dd3f5a4359313285e2866d3395b86320af0d14a996",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-14/a326eab6-638f-4657-919a-c0a2ba8c41b0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-14/a326eab6-638f-4657-919a-c0a2ba8c41b0.jpg",
+      "token": "migration-resource://d6a91d3d68db3382b87b3e7d8c50d23fba4c7836bb461340eda484827fb5932c",
+      "snapshotPath": "assets/d6a91d3d68db3382b87b3e7d8c50d23fba4c7836bb461340eda484827fb5932c.jpg",
+      "sha256": "d6a91d3d68db3382b87b3e7d8c50d23fba4c7836bb461340eda484827fb5932c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-14/a6eabcfa-6dd3-4c40-9372-45c195d1a370.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-14/a6eabcfa-6dd3-4c40-9372-45c195d1a370.jpg",
+      "token": "migration-resource://da954de061285ea1a22a460867131ad1531be5cdbf05a02b96ff993f37f0d7a9",
+      "snapshotPath": "assets/da954de061285ea1a22a460867131ad1531be5cdbf05a02b96ff993f37f0d7a9.jpg",
+      "sha256": "da954de061285ea1a22a460867131ad1531be5cdbf05a02b96ff993f37f0d7a9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "6b6b0117d3a22aa3e448b16502a3b4c5240a71ec7672907465f264f80c452465",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "关于开展2026届全国高校毕业生“金秋启航”校园招聘月活动的通知",
+    "listPublishDate": "2025-09-30",
+    "sourceOrder": 28,
+    "detailPublishDate": "2025-09-30"
+  }
+}

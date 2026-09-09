@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:474218b77926fe4a34a09a272abbba4ec6c28aa2affa9863a4392a34f00ddd22",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/hlOQxvCXXHeZqPOsTWjhKA",
+    "url": "https://mp.weixin.qq.com/s/hlOQxvCXXHeZqPOsTWjhKA"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "《长春市高校毕业生租房和生活补贴暂行办法（试行）》政策解读",
+    "source": "",
+    "publishDate": "2023-07-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/hlOQxvCXXHeZqPOsTWjhKA"
+  },
+  "resources": [],
+  "sourceFingerprint": "c75973c8576059969130351708cdc137859ab695d1b5798c4552e69d669a3904",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "《长春市高校毕业生租房和生活补贴暂行办法（试行）》政策解读",
+    "listPublishDate": "2023-07-20",
+    "sourceOrder": 100
+  }
+}

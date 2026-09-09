@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783121034",
+    "contentId": "28737783121034",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783121034"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "今年参加“三支一扶”大学生两年后获公务员定向招考资格",
+    "source": "",
+    "publishDate": "2010-06-25",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">今年参加“三支一扶”大学生两年后获公务员定向招考资格</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2010-6-25 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 昨日，全省“三支一扶”计划实施工作会议在省人社厅召开。</font></p> <p><span style=\"FONT-SIZE: 14px\"><span style=\"FONT-FAMILY: Arial\"><font face=\"宋体\" color=\"#444444\" size=\"2\">　　据介绍，2010年招募的“三支一扶”大学生主要到省内各乡镇（街道）所属事业单位（重点是乡镇卫生院、学校和支农、扶贫单位），从事支医、支教、支农和扶贫工作，服务期限为2年。</font></span></span></p> <p><span style=\"FONT-SIZE: 14px\"><span style=\"FONT-FAMILY: Arial\"><font face=\"宋体\" color=\"#444444\" size=\"2\">　　为了鼓励大学生参加“三支一扶”，从2010年起，到乡镇事业单位服务的“三支一扶”大学生服务满1年后，在现岗位空缺情况下，经考核优秀，可与所在单位签订不少于3年的聘用合同。</font></span></span></p> <p><span style=\"FONT-SIZE: 14px\"><span style=\"FONT-FAMILY: Arial\"><font face=\"宋体\" color=\"#444444\" size=\"2\">　　从2012年起，全省每年安排一定比例的县、乡机关公务员招录计划用于定向招考服务期满考核合格的“三支一扶”大学生。同时，从2012年起，全省县以上相关事业单位公开招聘工作人员时，每年安排一定比例用于招考专业对口且具有两年以上基层工作经历的高校毕业生，在同等条件下要优先聘用服务期满考核合格的“三支一扶”大学生。 “三支一扶”大学生所服务的事业单位有职位空缺或有相对应的自然减员需补充人员时，要聘用服务期满考核优秀的“三支一扶”大学生。</font></span></span></p> <p><span style=\"FONT-SIZE: 14px\"><span style=\"FONT-FAMILY: Arial\"><font face=\"宋体\" color=\"#444444\" size=\"2\">　　另外，服务期满且考核合格的“三支一扶”大学生，3年内如报考硕士研究生初试总成绩加10分、同等条件下优先录取。</font></span></span></p> <p><span style=\"FONT-SIZE: 14px\"><span style=\"FONT-FAMILY: Arial\"><font face=\"宋体\" color=\"#444444\" size=\"2\">　　根据招募的日程安排，自即日起至7月18日，符合条件的高校毕业生，可登录吉林省人力资源和社会保障厅门户网站或吉林省公务员考试网下载《吉林省高校毕业生“三支一扶”计划登记表》进行报名，并将填写完整的《登记表》通过电子邮件的形式发到拟报岗位所在地市州、长白山管委会人力资源和社会保障部门电子邮箱。具体申报岗位及报名邮箱可登录吉林省人力资源和社会保障厅门户网站或吉林省公务员考试网进行查询。</font></span></span></p> <p><span style=\"FONT-SIZE: 14px\"><span style=\"FONT-FAMILY: Arial\"><font face=\"宋体\" color=\"#444444\" size=\"2\"><br>&nbsp;</font></span></span></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "0f39173ab17d9e441ef88a1b1af0d7d3aa5de53f8aae6ad74ec61b51639b51e5",
+  "evidence": {
+    "listPage": 48,
+    "listTitle": "今年参加“三支一扶”大学生两年后获公务员定向招考资格",
+    "listPublishDate": "2010-06-25",
+    "sourceOrder": 479,
+    "detailPublishDate": "2010-06-25"
+  }
+}

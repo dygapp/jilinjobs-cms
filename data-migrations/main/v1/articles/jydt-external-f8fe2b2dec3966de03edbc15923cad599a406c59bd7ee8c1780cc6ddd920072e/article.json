@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f8fe2b2dec3966de03edbc15923cad599a406c59bd7ee8c1780cc6ddd920072e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/rDwgBMp8aG2p2PHQ2TngNQ",
+    "url": "https://mp.weixin.qq.com/s/rDwgBMp8aG2p2PHQ2TngNQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学 “筑梦青春 扬帆起航” 就业体验周活动圆满落幕",
+    "source": "",
+    "publishDate": "2025-10-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/rDwgBMp8aG2p2PHQ2TngNQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "aeebe4b79da02a931bd3f1558b11cff69412ba84a8a6f1daf461d18c210dc0ae",
+  "evidence": {
+    "listPage": 68,
+    "listTitle": "延边大学 “筑梦青春 扬帆起航” 就业体验周活动圆满落幕",
+    "listPublishDate": "2025-10-17",
+    "sourceOrder": 679
+  }
+}

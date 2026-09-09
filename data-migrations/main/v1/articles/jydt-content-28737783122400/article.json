@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122400",
+    "contentId": "28737783122400",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122400"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "内蒙古：青年创业贷款3万以下可凭信誉担保",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">内蒙古：青年创业贷款3万以下可凭信誉担保</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 近日，团内蒙古自治区委、自治区农村信用联社联合下发文件，启动“青春建功新农村新牧区行动——青年能人兴业计划小额贷款项目”。</font></p> <p><font size=\"2\">　　根据文件，内蒙古各级农村合作金融机构对贷款额度在3万元以下的，采用农户小额信用贷款的形式，以创业青年的信誉为保证，无需任何抵押担保；对贷款额度在5万元以下的农牧区青年致富能手，经所在地的团组织审核把关后推荐到当地农村信用社，由信用社依照农户小额信用贷款和农户联保贷款的操作程序进行。同时，贷款利率在现有利率的基础上降低5％~10％。</font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "bc448c81083e5a37a8dcb3bf204dd96cb6f8afed14bb76acde347e977c2a9e85",
+  "evidence": {
+    "listPage": 183,
+    "listTitle": "内蒙古：青年创业贷款3万以下可凭信誉担保",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1830,
+    "detailPublishDate": "2009-04-05"
+  }
+}

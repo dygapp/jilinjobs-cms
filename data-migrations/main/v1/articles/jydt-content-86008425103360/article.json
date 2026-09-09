@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86008425103360",
+    "contentId": "86008425103360",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86008425103360"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春师专“创业有你 就在吉林”赫行教育集团专场招聘宣讲会火爆进行",
+    "source": "长春师范高等专科学校",
+    "publishDate": "2021-05-24",
+    "bodyHtml": "\n                        <p>5月24日，长春师范高等专科学校“创业有你 就在吉林”毕业生留省就业赫行教育集团专场招聘宣讲会在艺术中心如期举行。2021届、2022届部分毕业生共计320人参加宣讲会。</p>\n\n<p>赫行教育集团人事总监刘博进行宣讲，向在场的同学们介绍了赫行教育集团的成立背景、文化理念、发展历程、教育品牌、招聘信息等内容。</p>\n\n<p>我校毕业生现就职于赫行教育集团的陈伟元，为在场的学弟学妹们分享了自己在工作中成长、晋升经历，让大家对赫行教育集团的晋升机制有了更深入的了解和期待。</p>\n\n<p>宣讲结束后，有实习就业意向的150多名同学进行了初试，初试合格的同学将进行复试和三试。</p>\n\n<p>本次宣讲会帮助更多学生了解行业的人才发展需求、帮助学生进一步明晰个人的职业发展规划，为我校学生搭建了更好的留省就业平台。</p>\n\n<p><strong>（长春师范高等专科学校 王一竹）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "617b0177b08f51a75573d5a307eb6e18c98c776f295ee0775ed55b1a89b42ea5",
+  "evidence": {
+    "listPage": 133,
+    "listTitle": "长春师专“创业有你 就在吉林”赫行教育集团专场招聘宣讲会火爆进行",
+    "listPublishDate": "2021-05-24",
+    "sourceOrder": 1329,
+    "detailPublishDate": "2021-05-24"
+  }
+}

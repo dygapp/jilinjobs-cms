@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:97e5244ae3564005a6b8e5f361a65c8640f1c47ffb6e32871f50765d5bd06d19",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/wi4nVSkRJJXkzdL0XXetIA",
+    "url": "https://mp.weixin.qq.com/s/wi4nVSkRJJXkzdL0XXetIA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "丁薛祥在全国高校毕业生等青年就业创业工作视频会议上强调 促进高校毕业生高质量充分就业 更好服务大局、服务民生、服务发展",
+    "source": "",
+    "publishDate": "2026-03-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wi4nVSkRJJXkzdL0XXetIA"
+  },
+  "resources": [],
+  "sourceFingerprint": "40939a9a34138c85cc115b4c9d4acf59133a6392bddfc9fc151f5a6961ca7c52",
+  "evidence": {
+    "listPage": 39,
+    "listTitle": "丁薛祥在全国高校毕业生等青年就业创业工作视频会议上强调 促进高校毕业生高质量充分就业 更好服务大局、服务民生、服务发展",
+    "listPublishDate": "2026-03-20",
+    "sourceOrder": 386
+  }
+}

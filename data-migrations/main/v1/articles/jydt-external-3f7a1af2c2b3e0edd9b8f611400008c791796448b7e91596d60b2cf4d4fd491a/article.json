@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3f7a1af2c2b3e0edd9b8f611400008c791796448b7e91596d60b2cf4d4fd491a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1055/6690.htm",
+    "url": "https://www.jlict.edu.cn/info/1055/6690.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林化工大学校领导率队赴江苏、福建等地开展访企拓岗促就业专项调研",
+    "source": "",
+    "publishDate": "2026-02-09",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlict.edu.cn/info/1055/6690.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "86374001a3cd5d4136952cf267a6f8f966f145bec60afa35da5cc94b6230ed1b",
+  "evidence": {
+    "listPage": 46,
+    "listTitle": "吉林化工大学校领导率队赴江苏、福建等地开展访企拓岗促就业专项调研",
+    "listPublishDate": "2026-02-09",
+    "sourceOrder": 451
+  }
+}

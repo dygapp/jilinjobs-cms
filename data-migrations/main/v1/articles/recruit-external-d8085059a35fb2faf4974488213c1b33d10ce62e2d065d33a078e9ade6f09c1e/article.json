@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:d8085059a35fb2faf4974488213c1b33d10ce62e2d065d33a078e9ade6f09c1e",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/news.aspx",
+    "url": "http://www.jlgwyks.cn/news.aspx?id=1501"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2026 年度吉林省各级机关考试录用公务员公告",
+    "source": "",
+    "publishDate": "2026-02-02",
+    "bodyHtml": "",
+    "externalUrl": "http://www.jlgwyks.cn/news.aspx?id=1501"
+  },
+  "resources": [],
+  "sourceFingerprint": "cfc1a6c738debaf907727bce5b991c80cdd625838c15338d3b114c0091515ae9",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "2026 年度吉林省各级机关考试录用公务员公告",
+    "listPublishDate": "2026-02-02",
+    "sourceOrder": 75
+  }
+}

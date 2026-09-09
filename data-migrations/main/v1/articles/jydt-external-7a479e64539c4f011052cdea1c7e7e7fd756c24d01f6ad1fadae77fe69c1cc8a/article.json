@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7a479e64539c4f011052cdea1c7e7e7fd756c24d01f6ad1fadae77fe69c1cc8a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/PJEeycauXhBBJZ0eEq4-wQ",
+    "url": "https://mp.weixin.qq.com/s/PJEeycauXhBBJZ0eEq4-wQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "就业促进周系列活动 | “职”引未来 筑梦起航——学校召开优秀校友就业指导报告会",
+    "source": "",
+    "publishDate": "2024-05-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/PJEeycauXhBBJZ0eEq4-wQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "5296d52ea028206a57789fb2e6bf872aec1623650ed00edb2a9c3a2dc8fb5e0c",
+  "evidence": {
+    "listPage": 105,
+    "listTitle": "就业促进周系列活动 | “职”引未来 筑梦起航——学校召开优秀校友就业指导报告会",
+    "listPublishDate": "2024-05-30",
+    "sourceOrder": 1046
+  }
+}

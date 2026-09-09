@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:c85c49d2da5900685100ddcf5b16f049eafbe6462d50e61a3bfa9e0a4222b517",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/5D4MXhpkoerl6ubi8qV7aA",
+    "url": "https://mp.weixin.qq.com/s/5D4MXhpkoerl6ubi8qV7aA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省应用型人才就业双选会暨吉林工程技术师范学院2025届毕业生秋季校园招聘会邀请函",
+    "source": "",
+    "publishDate": "2024-10-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5D4MXhpkoerl6ubi8qV7aA"
+  },
+  "resources": [],
+  "sourceFingerprint": "0ee4b02dbb8f4a5c372454fb57ea4e908d00849da19b1945f0889fa23b4d7231",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "吉林省应用型人才就业双选会暨吉林工程技术师范学院2025届毕业生秋季校园招聘会邀请函",
+    "listPublishDate": "2024-10-10",
+    "sourceOrder": 243
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:72a9f2ddd1aaa6e7d28ff0c5e63de9ed468608b3dd59f4645d81ac400a2d12a0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/DOQftwnygDClw5anYvFVIA",
+    "url": "https://mp.weixin.qq.com/s/DOQftwnygDClw5anYvFVIA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教融合 共探“体育+文旅”新路径——长春早期教育职业学院赴天定山调研交流",
+    "source": "",
+    "publishDate": "2025-10-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DOQftwnygDClw5anYvFVIA"
+  },
+  "resources": [],
+  "sourceFingerprint": "43c88c7a664e202fdcd2ecdabbec4d00d5f3af2f224e10b6ae4691f2d8348997",
+  "evidence": {
+    "listPage": 69,
+    "listTitle": "深化产教融合 共探“体育+文旅”新路径——长春早期教育职业学院赴天定山调研交流",
+    "listPublishDate": "2025-10-14",
+    "sourceOrder": 683
+  }
+}

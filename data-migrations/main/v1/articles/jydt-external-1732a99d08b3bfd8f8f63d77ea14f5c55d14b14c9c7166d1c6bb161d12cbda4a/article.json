@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1732a99d08b3bfd8f8f63d77ea14f5c55d14b14c9c7166d1c6bb161d12cbda4a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/CI3y3Un6sij49OEgBiboaA",
+    "url": "https://mp.weixin.qq.com/s/CI3y3Un6sij49OEgBiboaA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业科技学院赴延边地区开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2025-06-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/CI3y3Un6sij49OEgBiboaA"
+  },
+  "resources": [],
+  "sourceFingerprint": "98e72c82ae7ac01b07f2d6e8d28956d5ab55cc9d342f07c110b8e528783020fa",
+  "evidence": {
+    "listPage": 85,
+    "listTitle": "吉林农业科技学院赴延边地区开展访企拓岗专项行动",
+    "listPublishDate": "2025-06-09",
+    "sourceOrder": 845
+  }
+}

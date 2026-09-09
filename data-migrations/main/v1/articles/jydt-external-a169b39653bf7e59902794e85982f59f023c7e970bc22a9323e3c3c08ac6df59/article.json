@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a169b39653bf7e59902794e85982f59f023c7e970bc22a9323e3c3c08ac6df59",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/n8oEvw4r0wzbsMl-YZVLRQ",
+    "url": "https://mp.weixin.qq.com/s/n8oEvw4r0wzbsMl-YZVLRQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林通用航空职业技术学院92名学子圆梦长春龙嘉国际机场",
+    "source": "",
+    "publishDate": "2026-08-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/n8oEvw4r0wzbsMl-YZVLRQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "e1783a11bb0b46d351e83e915e5b4363096f82fe80e3d0011a0b645af93fe199",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "吉林通用航空职业技术学院92名学子圆梦长春龙嘉国际机场",
+    "listPublishDate": "2026-08-07",
+    "sourceOrder": 19
+  }
+}

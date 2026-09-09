@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:21b32119c16ae1e2592bd12eb094c0469e48085929e6cd16e777e1cbee168d2d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/GmdC4Ax6VpGbj6j0J40etw",
+    "url": "https://mp.weixin.qq.com/s/GmdC4Ax6VpGbj6j0J40etw?scene=25&sessionid=-1366778856"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学举办2025届全国能源动力行业春季招聘会暨吉林省能源类高校毕业生就业洽谈会",
+    "source": "",
+    "publishDate": "2025-04-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/GmdC4Ax6VpGbj6j0J40etw?scene=25&sessionid=-1366778856"
+  },
+  "resources": [],
+  "sourceFingerprint": "17acf686d0f2cbcf2241998ca0d87df4dddf1ab726d7951aa71eacf15accdda5",
+  "evidence": {
+    "listPage": 94,
+    "listTitle": "东北电力大学举办2025届全国能源动力行业春季招聘会暨吉林省能源类高校毕业生就业洽谈会",
+    "listPublishDate": "2025-04-18",
+    "sourceOrder": 935
+  }
+}

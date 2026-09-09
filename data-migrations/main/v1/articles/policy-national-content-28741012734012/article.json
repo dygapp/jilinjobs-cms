@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-national:content:28741012734012",
+    "contentId": "28741012734012",
+    "typeCode": "policy-national",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28741012734012"
+  },
+  "target": {
+    "columnAlias": "policy-national",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅关于编制发布高校毕业生就业质量年度报告的通知（教学厅函【2013】25号）",
+    "source": "",
+    "publishDate": "2013-11-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    政策法规</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部办公厅关于编制发布高校毕业生就业质量年度报告的通知（教学厅函【2013】25号）</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:    发布时间:2013-11-6 0:00:00</font></span>\n                </div>\n         \n                <div id=\"PoliciesContent\"><p>&nbsp;</p><p style=\"text-align:center\"><img title=\"1.jpg\" style=\"float: none;\" src=\"http://192.168.1.201:800/EDJLPortalWeb/upload/6353825375706478233095070.jpg\"></p><p style=\"text-align:center\"><img title=\"2.jpg\" style=\"float: none;\" src=\"http://192.168.1.201:800/EDJLPortalWeb/upload/6353825375839285839718769.jpg\"></p><p style=\"text-align:center\"><img title=\"3.jpg\" style=\"float: none;\" src=\"http://192.168.1.201:800/EDJLPortalWeb/upload/6353825375985394194300192.jpg\"></p><p style=\"text-align:center\"><img title=\"4.jpg\" style=\"float: none;\" src=\"http://192.168.1.201:800/EDJLPortalWeb/upload/6353825376117001717694647.jpg\"></p><p></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "bc03728e43a3a568269126497a4e70fe659a97f226835c6ce44136887adcf678",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "教育部办公厅关于编制发布高校毕业生就业质量年度报告的通知（教学厅函【2013】25号）",
+    "listPublishDate": "2013-11-06",
+    "sourceOrder": 30,
+    "detailPublishDate": "2013-11-06"
+  }
+}

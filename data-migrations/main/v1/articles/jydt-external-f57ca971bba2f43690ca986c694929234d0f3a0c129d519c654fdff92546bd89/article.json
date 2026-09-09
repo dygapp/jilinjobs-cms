@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f57ca971bba2f43690ca986c694929234d0f3a0c129d519c654fdff92546bd89",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/h2NJVfl8P9nu65SwiH7BEg",
+    "url": "https://mp.weixin.qq.com/s/h2NJVfl8P9nu65SwiH7BEg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院召开2025届毕业生就业工作推进会暨第五次调度会",
+    "source": "",
+    "publishDate": "2025-06-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/h2NJVfl8P9nu65SwiH7BEg"
+  },
+  "resources": [],
+  "sourceFingerprint": "5f8fbeab02078de1db1ad0c64c11718407e537327aa4cce6cb80b533961d3b4b",
+  "evidence": {
+    "listPage": 79,
+    "listTitle": "吉林工商学院召开2025届毕业生就业工作推进会暨第五次调度会",
+    "listPublishDate": "2025-06-20",
+    "sourceOrder": 786
+  }
+}

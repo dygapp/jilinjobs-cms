@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:55c540e52f154a4c9c180047e1e048242e342c1867754c92d7f6626e1109abff",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/jIfmWpPGHyoDbNrqpD1-fg",
+    "url": "https://mp.weixin.qq.com/s/jIfmWpPGHyoDbNrqpD1-fg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“聚力扩容提质 服务高质量发展” 吉林建筑大学2026届毕业生 “百日冲刺”促就业专场招聘会邀请函",
+    "source": "",
+    "publishDate": "2026-06-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/jIfmWpPGHyoDbNrqpD1-fg"
+  },
+  "resources": [],
+  "sourceFingerprint": "dc51c38cd5e2de0a2742264b3b22a161f0918c9a9e70e3afee5f01e47a6a44c0",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "“聚力扩容提质 服务高质量发展” 吉林建筑大学2026届毕业生 “百日冲刺”促就业专场招聘会邀请函",
+    "listPublishDate": "2026-06-11",
+    "sourceOrder": 26
+  }
+}

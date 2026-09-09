@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:167133688397824",
+    "contentId": "167133688397824",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=167133688397824"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "陕西：全省高校毕业生就业工作视频调度会议召开",
+    "source": "",
+    "publishDate": "2023-07-07",
+    "bodyHtml": "\n                        <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 近日，陕西省高校毕业生就业工作视频调度会议召开。会议通报就业工作进展，分析研判形势，对全省高校毕业生就业工作进行再部署再安排。省委书记赵一德、省长赵刚作出批示。省委常委、常务副省长王晓讲话，副省长戴彬彬主持会议。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 会议强调，要深入学习贯彻习近平总书记关于就业工作的重要论述、来陕考察重要讲话重要指示，把抓好高校毕业生就业工作作为重要政治任务，紧抓当前关键期、冲刺期、决战期，确保完成既定目标任务。会议要求，一要提高政治站位，把准形势任务，在强化责任担当上再加力，二要聚焦重点群体，统筹精准施策，在扩大岗位供给上再加力，三要用心用情用力，提升就业质量，在强化服务保障上再加力，四要完善工作机制，加强协同联动，在守牢安全底线上再加力，进一步加快政策性岗位供给、拓展市场化就业岗位、加大自主创业支持力度，加强就业指导服务特别是离校未就业和困难群体毕业生就业服务，做好取消报到证后的高校毕业生去向登记与服务工作，出台新的政策措施，持续深化高等教育改革，加大财政经费保障，强化组织领导、进度管理、风险防控，交好全省高校毕业生就业工作答卷，为奋力谱写中国式现代化建设的陕西新篇章贡献力量。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 会上，省委教育工委（省教育厅）、省人社厅，西安市政府、西北政法大学和西安航空职业技术学院作了发言。省级相关部门、驻西安各高校负责同志在主会场参加会议，各市（区）负责同志及驻地高校负责同志在分会场参加会议。</span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "3ac49c0649f94257fba52a0a67ef9dc872995378dcf7be2ae2d3d89a226f38d9",
+  "evidence": {
+    "listPage": 114,
+    "listTitle": "陕西：全省高校毕业生就业工作视频调度会议召开",
+    "listPublishDate": "2023-07-07",
+    "sourceOrder": 1135,
+    "detailPublishDate": "2023-07-07"
+  }
+}

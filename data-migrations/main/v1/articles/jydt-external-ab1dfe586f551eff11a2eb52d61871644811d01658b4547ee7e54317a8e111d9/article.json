@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ab1dfe586f551eff11a2eb52d61871644811d01658b4547ee7e54317a8e111d9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/y3Hoy9-wtRf1aMQVNEPFkQ",
+    "url": "https://mp.weixin.qq.com/s/y3Hoy9-wtRf1aMQVNEPFkQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学校领导带队赴福建开展访企拓岗交流活动",
+    "source": "",
+    "publishDate": "2026-06-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/y3Hoy9-wtRf1aMQVNEPFkQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "b4108155c479d25c99cda27a678b929c1604c01ea1a0d1032c5b2fb813896f5c",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "北华大学校领导带队赴福建开展访企拓岗交流活动",
+    "listPublishDate": "2026-06-22",
+    "sourceOrder": 69
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:02c77eec8cd1e46eb6016f2b11685db6c3baf2fe956f84c0809a60ed60ecd1b9",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/zwgk/ggl/202606/t20260608_9645990.html",
+    "url": "https://jyt.jl.gov.cn/zwgk/ggl/202606/t20260608_9645990.html"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省2026年农村义务教育阶段学校特设岗位教师招聘办法",
+    "source": "",
+    "publishDate": "2026-06-09",
+    "bodyHtml": "",
+    "externalUrl": "https://jyt.jl.gov.cn/zwgk/ggl/202606/t20260608_9645990.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "43417ec74b2a4c57b074ed9474cb63781a96b8615e5893ed7eeb4fa47cb35630",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "吉林省2026年农村义务教育阶段学校特设岗位教师招聘办法",
+    "listPublishDate": "2026-06-09",
+    "sourceOrder": 2
+  }
+}

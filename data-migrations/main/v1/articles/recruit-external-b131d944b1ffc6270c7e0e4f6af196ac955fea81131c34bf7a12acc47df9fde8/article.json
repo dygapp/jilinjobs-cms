@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:b131d944b1ffc6270c7e0e4f6af196ac955fea81131c34bf7a12acc47df9fde8",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/gg/202605/t20260529_9638416.html",
+    "url": "https://hrss.jl.gov.cn/gg/202605/t20260529_9638416.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2026年吉林省高校毕业生“三支一扶”计划招募公告",
+    "source": "",
+    "publishDate": "2026-06-01",
+    "bodyHtml": "",
+    "externalUrl": "https://hrss.jl.gov.cn/gg/202605/t20260529_9638416.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "36a8de37dd341273f045e54a171e24932591def85e5f1d27979b5087befbf323",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "2026年吉林省高校毕业生“三支一扶”计划招募公告",
+    "listPublishDate": "2026-06-01",
+    "sourceOrder": 27
+  }
+}

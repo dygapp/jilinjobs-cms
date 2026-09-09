@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:993600e83b5bc62d1f4a1efa3fcbab0869f8274e96b22beb6fd8d8d3fcb835f2",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/v2re-pM-gttoQOah9mYk8w",
+    "url": "https://mp.weixin.qq.com/s/v2re-pM-gttoQOah9mYk8w?scene=25&sessionid=-1366263067"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "‘医’路同行，‘梅’好启航 梅河口康美职业技术学院春季招聘会正式启动",
+    "source": "",
+    "publishDate": "2025-04-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/v2re-pM-gttoQOah9mYk8w?scene=25&sessionid=-1366263067"
+  },
+  "resources": [],
+  "sourceFingerprint": "f2bdf4ad819cf39b6e2be5e9cef3b507743ce65c3922df4bca88dd572203ce7c",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "‘医’路同行，‘梅’好启航 梅河口康美职业技术学院春季招聘会正式启动",
+    "listPublishDate": "2025-04-10",
+    "sourceOrder": 186
+  }
+}

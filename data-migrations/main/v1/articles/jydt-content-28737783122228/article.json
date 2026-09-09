@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122228",
+    "contentId": "28737783122228",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122228"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "“2011年吉林省春季高校毕业生就业招聘会”圆满落幕",
+    "source": "",
+    "publishDate": "2011-03-30",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">“2011年吉林省春季高校毕业生就业招聘会”圆满落幕</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-3-30 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font color=\"#444444\" size=\"2\"><img style=\"FILTER: ; WIDTH: 738px; HEIGHT: 443px\" height=\"443\" alt=\"\" hspace=\"0\" src=\"migration-resource://a62a755306c5d09dc9bd5b646bbae232c7bfd22b8d41d4d5251858e5066bcf8f\" width=\"738\" border=\"0\"></font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 为拓宽我省高校毕业生就业渠道，搭建毕业生与用人单位信息交流平台，促进我省高校毕业生顺利实现就业，省高校毕业生就业指导中心于3月13日、19日、27日共举办了三场2011年吉林省春季高校毕业生就业招聘会。</font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"443\" src=\"migration-resource://bf83d672853bcb76dc652868457cbf24c1db1071fc17ec126bee38d932b1a0fc\" width=\"738\" border=\"0\"></font></p> <p><font color=\"#444444\" size=\"2\">　　　<br>&nbsp;&nbsp;&nbsp; 此次招聘会共有来自省内外400余家用人单位现场招聘，招聘的专业方向涉及销售、电气、机械、计算机、建工、中文、外语等近100个专业，此次招聘会提供就业岗位5000余个，超过8000名毕业生进场求职。面对众多的求职者，就业岗位依然显得“捉襟见肘”，就业形势仍不容乐观。<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110330094803169.jpg",
+      "originalReference": "/chistory/cms/imgs/20110330094803169.jpg",
+      "token": "migration-resource://a62a755306c5d09dc9bd5b646bbae232c7bfd22b8d41d4d5251858e5066bcf8f",
+      "snapshotPath": "assets/a62a755306c5d09dc9bd5b646bbae232c7bfd22b8d41d4d5251858e5066bcf8f.jpg",
+      "sha256": "a62a755306c5d09dc9bd5b646bbae232c7bfd22b8d41d4d5251858e5066bcf8f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93214
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110330094818425.jpg",
+      "originalReference": "/chistory/cms/imgs/20110330094818425.jpg",
+      "token": "migration-resource://bf83d672853bcb76dc652868457cbf24c1db1071fc17ec126bee38d932b1a0fc",
+      "snapshotPath": "assets/bf83d672853bcb76dc652868457cbf24c1db1071fc17ec126bee38d932b1a0fc.jpg",
+      "sha256": "bf83d672853bcb76dc652868457cbf24c1db1071fc17ec126bee38d932b1a0fc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 72741
+    }
+  ],
+  "sourceFingerprint": "8eb44dc64b2bffdf0d33ab851b50dc543de3c108fd208cef6f11e43069785eb6",
+  "evidence": {
+    "listPage": 166,
+    "listTitle": "“2011年吉林省春季高校毕业生就业招聘会”圆满落幕",
+    "listPublishDate": "2011-03-30",
+    "sourceOrder": 1657,
+    "detailPublishDate": "2011-03-30"
+  }
+}

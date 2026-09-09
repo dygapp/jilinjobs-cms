@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:57b12e7c3ba5315fe4dccd49bf07e83bf4f6de945dc95f0a6fbf609a7d914df4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/3rYM3tU7ggpm_D7Zf1dycw",
+    "url": "https://mp.weixin.qq.com/s/3rYM3tU7ggpm_D7Zf1dycw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业大学就业牵头吉林省服务大农业产业就业联盟高校赴沈阳市开展访企拓岗",
+    "source": "",
+    "publishDate": "2025-09-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/3rYM3tU7ggpm_D7Zf1dycw"
+  },
+  "resources": [],
+  "sourceFingerprint": "4d6b11de300ac574e1173eae83d1eab3857ab7c485094e0e279fd320f5601453",
+  "evidence": {
+    "listPage": 69,
+    "listTitle": "吉林农业大学就业牵头吉林省服务大农业产业就业联盟高校赴沈阳市开展访企拓岗",
+    "listPublishDate": "2025-09-29",
+    "sourceOrder": 690
+  }
+}

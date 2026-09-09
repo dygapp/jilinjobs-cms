@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cb9ec5dfb591311cfc6cf8348bd912cfd29c2a910f85670fa78c9b9275088bdd",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/aUVmvBvZEHns1XP6joYD8w",
+    "url": "https://mp.weixin.qq.com/s/aUVmvBvZEHns1XP6joYD8w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化校企合作 共育法治人才丨长春财经学院法学院走访吉林洪熙宸律师事务所",
+    "source": "",
+    "publishDate": "2026-02-05",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/aUVmvBvZEHns1XP6joYD8w"
+  },
+  "resources": [],
+  "sourceFingerprint": "ce3774b350db45cd8c0bd3c58bd3f99c10e5903d3fe41b11bdccff44b3a1b643",
+  "evidence": {
+    "listPage": 46,
+    "listTitle": "深化校企合作 共育法治人才丨长春财经学院法学院走访吉林洪熙宸律师事务所",
+    "listPublishDate": "2026-02-05",
+    "sourceOrder": 458
+  }
+}

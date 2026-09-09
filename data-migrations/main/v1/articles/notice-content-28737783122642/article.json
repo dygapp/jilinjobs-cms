@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122642",
+    "contentId": "28737783122642",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122642"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省高校就业指导教师培训班（总第二十五期）的通知",
+    "source": "培训部",
+    "publishDate": "2020-09-29",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align:center\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"migration-resource://fa1e6f1d6dcb0bf6709027813e7bb25bfdb17e1e3d63eda3191cb9bb8ab4a849\" alt=\"\" width=\"854\" height=\"1208\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"migration-resource://6c4505b6aa3d7ab38b46b2b2817872b476eb763c57b24be50fa255807d6e6858\" alt=\"\" width=\"854\" height=\"1208\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"migration-resource://33820a3d4aa9f12446229fbf06febade35806a7f5595d8afecf3f392d3738e33\" alt=\"\" width=\"854\" height=\"1208\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200929100909.jpg",
+      "originalReference": "/chistory/cms/editor/20200929100909.jpg",
+      "token": "migration-resource://fa1e6f1d6dcb0bf6709027813e7bb25bfdb17e1e3d63eda3191cb9bb8ab4a849",
+      "snapshotPath": "assets/fa1e6f1d6dcb0bf6709027813e7bb25bfdb17e1e3d63eda3191cb9bb8ab4a849.jpg",
+      "sha256": "fa1e6f1d6dcb0bf6709027813e7bb25bfdb17e1e3d63eda3191cb9bb8ab4a849",
+      "contentType": "image/jpeg",
+      "sizeBytes": 222462
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200929100944.jpg",
+      "originalReference": "/chistory/cms/editor/20200929100944.jpg",
+      "token": "migration-resource://6c4505b6aa3d7ab38b46b2b2817872b476eb763c57b24be50fa255807d6e6858",
+      "snapshotPath": "assets/6c4505b6aa3d7ab38b46b2b2817872b476eb763c57b24be50fa255807d6e6858.jpg",
+      "sha256": "6c4505b6aa3d7ab38b46b2b2817872b476eb763c57b24be50fa255807d6e6858",
+      "contentType": "image/jpeg",
+      "sizeBytes": 143049
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200929101009.jpg",
+      "originalReference": "/chistory/cms/editor/20200929101009.jpg",
+      "token": "migration-resource://33820a3d4aa9f12446229fbf06febade35806a7f5595d8afecf3f392d3738e33",
+      "snapshotPath": "assets/33820a3d4aa9f12446229fbf06febade35806a7f5595d8afecf3f392d3738e33.jpg",
+      "sha256": "33820a3d4aa9f12446229fbf06febade35806a7f5595d8afecf3f392d3738e33",
+      "contentType": "image/jpeg",
+      "sizeBytes": 170554
+    }
+  ],
+  "sourceFingerprint": "0d9fcd456bc1d8e124b9242843680f5b71f0ec7820206c72c3d66872aee6b0b0",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "关于举办吉林省高校就业指导教师培训班（总第二十五期）的通知",
+    "listPublishDate": "2020-09-29",
+    "sourceOrder": 168,
+    "detailPublishDate": "2020-09-29"
+  }
+}

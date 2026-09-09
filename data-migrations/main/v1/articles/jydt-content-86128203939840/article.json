@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86128203939840",
+    "contentId": "86128203939840",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86128203939840"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春医学高等专科学校举办2021级大学生职业生涯规划大赛",
+    "source": "长春医学高等专科学校",
+    "publishDate": "2021-11-25",
+    "bodyHtml": "\n                        <p>11月24日，长春医学高等专科学校就业协会举办了2021级大学生职业生涯规划大赛。招生就业处领导、各学院党总支副书记、就业指导课专兼职教师担任评委，全校2021级学生代表100余人现场观摩了比赛。</p>\n\n<p>比赛过程中，15位选手通过PPT演讲、职业角色模拟VCR、职业世界说明书展示了自我职业发展预期、设计蓝图和行动路径，展现了良好的职业规划意识、竞争意识和创新意识。</p>\n\n<p>就业指导课教师代表雷明对选手们的表现进行了点评。她希望2021级学生能够以赛促练，更加重视大学生职业发展教育，将自己的规划继续完善好、落实好，按照自己制定的目标去努力奋斗，实现职业理想。</p>\n\n<p>一直以来，学校高度重视大学生职业生涯规划和就业指导教育，通过课程、讲座、比赛等形式普及职业生涯规划知识，为提升学生的就业能力、提高就业质量打下了坚实的基础。</p>\n\n<p><strong>（长春医学高等专科学校 王刚）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "258ee914f8f72173cc5e4ed27a336eb5515a920435118c90315268538fe62861",
+  "evidence": {
+    "listPage": 127,
+    "listTitle": "长春医学高等专科学校举办2021级大学生职业生涯规划大赛",
+    "listPublishDate": "2021-11-25",
+    "sourceOrder": 1269,
+    "detailPublishDate": "2021-11-25"
+  }
+}

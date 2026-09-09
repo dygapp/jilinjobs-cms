@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8c7e07255161eb842d4f808a1fb04addf6d69175d70fd9d4ddb425fec9f4ec88",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/d__6ZcMWsYdiknNgSOqLhQ",
+    "url": "https://mp.weixin.qq.com/s/d__6ZcMWsYdiknNgSOqLhQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林化工大学战略合作推进会暨校企人才供需洽谈会举办",
+    "source": "",
+    "publishDate": "2025-10-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/d__6ZcMWsYdiknNgSOqLhQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "8e44aa26a491f25d8530c3c98665f37ab62282c93e0f2ca26d660c467c8bf0d7",
+  "evidence": {
+    "listPage": 66,
+    "listTitle": "吉林化工大学战略合作推进会暨校企人才供需洽谈会举办",
+    "listPublishDate": "2025-10-27",
+    "sourceOrder": 658
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122988",
+    "contentId": "28737783122988",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122988"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办“全国2012届高校毕业生重点行业网络招聘会”的通知",
+    "source": "",
+    "publishDate": "2011-11-07",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办“全国2012届高校毕业生重点行业网络招聘会”的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-7 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://af1483a4b727b82199b678130a08eafca6a6618d907edd1588328af1a589d5b5\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://ab8e73a676142e762608cbd4b9d5c0f117281f3737cdbe655e31fe8ce9ae82d9\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://ddb4904498bf1f77199b9ac2b1f6720fcf474006dce5232e2ad33e390ff02977\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111107135229941.jpg",
+      "originalReference": "/chistory/cms/imgs/20111107135229941.jpg",
+      "token": "migration-resource://af1483a4b727b82199b678130a08eafca6a6618d907edd1588328af1a589d5b5",
+      "snapshotPath": "assets/af1483a4b727b82199b678130a08eafca6a6618d907edd1588328af1a589d5b5.jpg",
+      "sha256": "af1483a4b727b82199b678130a08eafca6a6618d907edd1588328af1a589d5b5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95689
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111107135236568.jpg",
+      "originalReference": "/chistory/cms/imgs/20111107135236568.jpg",
+      "token": "migration-resource://ab8e73a676142e762608cbd4b9d5c0f117281f3737cdbe655e31fe8ce9ae82d9",
+      "snapshotPath": "assets/ab8e73a676142e762608cbd4b9d5c0f117281f3737cdbe655e31fe8ce9ae82d9.jpg",
+      "sha256": "ab8e73a676142e762608cbd4b9d5c0f117281f3737cdbe655e31fe8ce9ae82d9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 79302
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111107135242912.jpg",
+      "originalReference": "/chistory/cms/imgs/20111107135242912.jpg",
+      "token": "migration-resource://ddb4904498bf1f77199b9ac2b1f6720fcf474006dce5232e2ad33e390ff02977",
+      "snapshotPath": "assets/ddb4904498bf1f77199b9ac2b1f6720fcf474006dce5232e2ad33e390ff02977.jpg",
+      "sha256": "ddb4904498bf1f77199b9ac2b1f6720fcf474006dce5232e2ad33e390ff02977",
+      "contentType": "image/jpeg",
+      "sizeBytes": 70550
+    }
+  ],
+  "sourceFingerprint": "51e1993eff6646070de6b15a53899126a0b9ccc9e82f32037483544641c2258c",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "关于举办“全国2012届高校毕业生重点行业网络招聘会”的通知",
+    "listPublishDate": "2011-11-07",
+    "sourceOrder": 419,
+    "detailPublishDate": "2011-11-07"
+  }
+}

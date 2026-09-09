@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:e160ee66b4d1f3aae8ba448439aeae8c4fa879a314a483f05fb3a3c0090ef60c",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/J3Dd_aIGH0oR-OLaSfdg2A",
+    "url": "https://mp.weixin.qq.com/s/J3Dd_aIGH0oR-OLaSfdg2A"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "教育部提示，严防4类求职陷阱",
+    "source": "",
+    "publishDate": "2024-05-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/J3Dd_aIGH0oR-OLaSfdg2A"
+  },
+  "resources": [],
+  "sourceFingerprint": "216d184592f20c6c956016994b0806e4e37e7bd8813406cd0d5a7d7166678894",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "教育部提示，严防4类求职陷阱",
+    "listPublishDate": "2024-05-22",
+    "sourceOrder": 82
+  }
+}

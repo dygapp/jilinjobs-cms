@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:de86b74e081306981b1c89e511fbd23f1ab2377e3491a9fcbb4a04bbfe38b417",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/U0s6-Eg2JKL0RlzTDmn4TA",
+    "url": "https://mp.weixin.qq.com/s/U0s6-Eg2JKL0RlzTDmn4TA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【寒假促就业暖心行动】吉林工商学院求职讲座+线上双选会",
+    "source": "",
+    "publishDate": "2026-01-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/U0s6-Eg2JKL0RlzTDmn4TA"
+  },
+  "resources": [],
+  "sourceFingerprint": "2eb5b37d7c04f949222f0c39ed954a55266298735371e4d1927aa211f0bf4c3b",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "【寒假促就业暖心行动】吉林工商学院求职讲座+线上双选会",
+    "listPublishDate": "2026-01-21",
+    "sourceOrder": 96
+  }
+}

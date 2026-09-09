@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122120",
+    "contentId": "28737783122120",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122120"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "河南省大中专学生就业服务中心考察团到我省调研考察就业创业工作",
+    "source": "",
+    "publishDate": "2016-03-18",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">河南省大中专学生就业服务中心考察团到我省调研考察就业创业工作</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2016-3-18 14:30:31</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;</span></p><p><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 3月14日至16日，河南省大中专学生就业服务中心一行4人来我中心调研考察就业创业工作。</span></p><p><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 考察期间，两省关于就业创业工作召开了交流会议，吉林省就业中心主任郑志宏与河南考察团团长陈宗彬分别介绍了双方就业创业工作中的有关做法，中心党总支书记孙维才出席会议，中心副主任张旭光主持会议，中心有关部门负责人参会并介绍相关情况。考察团还观摩了我省大学生就业能力提升培训教学过程，并到吉林省大学生创业就业实训基地进行考察。</span></p><p><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 通过这次考察交流，使吉林、河南两省充分了解了双方在就业创业工作方面的经验和做法，也为两省进一步的合作与交流建立了良好的开端。</span></p><p><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 18px;\"><br></span></p><p style=\"text-align: center;\"><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 18px;\"><br></span></p><p style=\"text-align: center;\"><img title=\"_MG_1500.JPG\" src=\"migration-resource://cf888a62ffa68b171fc1a634d429cf901f9ed09767b55b72a7483cb19b6fc4ea\"></p><p style=\"text-align: center;\"><img title=\"_MG_1417.JPG\" src=\"migration-resource://4c8f7e8320767104f4dbcdffbb20344734980b8703ad62298f71108a34417f65\"></p><p style=\"text-align: center;\"><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 18px;\"></span></p><p></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359390833829937501101655.JPG",
+      "originalReference": "/chistory/cms/imgs/6359390833829937501101655.JPG",
+      "token": "migration-resource://cf888a62ffa68b171fc1a634d429cf901f9ed09767b55b72a7483cb19b6fc4ea",
+      "snapshotPath": "assets/cf888a62ffa68b171fc1a634d429cf901f9ed09767b55b72a7483cb19b6fc4ea.jpg",
+      "sha256": "cf888a62ffa68b171fc1a634d429cf901f9ed09767b55b72a7483cb19b6fc4ea",
+      "contentType": "image/jpeg",
+      "sizeBytes": 122975
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359390833839312502073471.JPG",
+      "originalReference": "/chistory/cms/imgs/6359390833839312502073471.JPG",
+      "token": "migration-resource://4c8f7e8320767104f4dbcdffbb20344734980b8703ad62298f71108a34417f65",
+      "snapshotPath": "assets/4c8f7e8320767104f4dbcdffbb20344734980b8703ad62298f71108a34417f65.jpg",
+      "sha256": "4c8f7e8320767104f4dbcdffbb20344734980b8703ad62298f71108a34417f65",
+      "contentType": "image/jpeg",
+      "sizeBytes": 148560
+    }
+  ],
+  "sourceFingerprint": "19146269767055ece42028162f0dc89ea8bf277706df85ae64c930d07b5ef5bd",
+  "evidence": {
+    "listPage": 155,
+    "listTitle": "河南省大中专学生就业服务中心考察团到我省调研考察就业创业工作",
+    "listPublishDate": "2016-03-18",
+    "sourceOrder": 1547,
+    "detailPublishDate": "2016-03-18"
+  }
+}

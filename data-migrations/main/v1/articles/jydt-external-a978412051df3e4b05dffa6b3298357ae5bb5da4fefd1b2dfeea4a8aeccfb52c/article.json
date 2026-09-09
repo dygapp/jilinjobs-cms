@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a978412051df3e4b05dffa6b3298357ae5bb5da4fefd1b2dfeea4a8aeccfb52c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/TgBOl1tY088jFmRrQTNQ3Q",
+    "url": "https://mp.weixin.qq.com/s/TgBOl1tY088jFmRrQTNQ3Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学旅游学院副董事长张海涛参加民办高校“十五五”高质量发展交流会并赴武汉中车智能运输系统有限公司开展访企拓岗",
+    "source": "",
+    "publishDate": "2026-04-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/TgBOl1tY088jFmRrQTNQ3Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "3ad71296ef9d14337a9b8b1489e3e1320b1983048005f665de73f376c38b1348",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "长春大学旅游学院副董事长张海涛参加民办高校“十五五”高质量发展交流会并赴武汉中车智能运输系统有限公司开展访企拓岗",
+    "listPublishDate": "2026-04-02",
+    "sourceOrder": 324
+  }
+}

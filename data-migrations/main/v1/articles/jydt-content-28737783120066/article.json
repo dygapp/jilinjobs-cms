@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120066",
+    "contentId": "28737783120066",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120066"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部全国中心张凤有主任一行来我省开展党的群众路线教育实践活动调研",
+    "source": "",
+    "publishDate": "2013-08-15",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部全国中心张凤有主任一行来我省开展党的群众路线教育实践活动调研</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2013-8-15 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p> <p><font size=\"4\">&nbsp;&nbsp;&nbsp; 8月13日，教育部全国高校学生信息咨询与就业指导中心张凤有主任一行，来我省开展党的群众路线教育实践活动基层调研。上午9时，调研座谈会在省高校毕业生就业指导中心六楼会议室举行。全国就业中心主任张凤有、中国大学生杂志常务副社长国乐、培训处处长杨洪涛、研究所所长余舰、吉林大学党委副书记韩晓峰、东北师范大学党委副书记李忠军、省教育厅高校学生处调研员蒋蔓萍、副处长陈梅、省高校毕业生就业指导中心领导班子及相关同志参加座谈。 <br>&nbsp;&nbsp;&nbsp; 张凤有主任首先介绍了全国中心开展党的群众路线教育实践活动的基本情况，并指出此次来吉林开展调研活动的任务，一是研究分析当前高校毕业生就业指导服务工作的新形势、新问题，二是听取对全国就业指导中心就业指导服务工作的意见和建议，三是听取对全国就业指导中心在作风建设以及开展教育活动的意见建议。<br>&nbsp;&nbsp;&nbsp; 座谈会上，蒋蔓萍向调研组汇报了我省上半年高校毕业生就业工作进展情况，郑志宏主任、朱军书记围绕党的群众路线实践教育主题和全国中心相关业务工作、服务基层、作风建设等内容作了发言，并提出意见和建议。<br>&nbsp;&nbsp;&nbsp; 吉林大学、东北师范大学校领导和就业部门负责人也作了发言，并就大学生就业服务工作提出意见和建议，对全国就业中心的“为民、务实、清廉”作风，给予了高度评价。<br>&nbsp;&nbsp;&nbsp; 张凤有主任作了简要总结，对大家提出的意见建议进行了归纳梳理，表示，结合党的群众路线教育实践活动开展，将更加扎扎实实推进全国高校毕业生就业工作，更好地服务高校，服务基层，推进作风建设。下午，张凤有主任一行还到东北师范大学进行调研。</font></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://f3bb420582483acd863a9bc98b2d0c371a3b84ac583aed59a82d2e388ccc7241\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://d9ff93e119f36ee069d2d71bf0fe868a940f2df7e81135556a08dda0cdbcfd20\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://0e99e2d757933597f46986e8a86136e554f947d63b4e35f5849bf603b53ad593\"></p> <p><br>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130815021200687.jpg",
+      "originalReference": "/chistory/cms/imgs/20130815021200687.jpg",
+      "token": "migration-resource://f3bb420582483acd863a9bc98b2d0c371a3b84ac583aed59a82d2e388ccc7241",
+      "snapshotPath": "assets/f3bb420582483acd863a9bc98b2d0c371a3b84ac583aed59a82d2e388ccc7241.jpg",
+      "sha256": "f3bb420582483acd863a9bc98b2d0c371a3b84ac583aed59a82d2e388ccc7241",
+      "contentType": "image/jpeg",
+      "sizeBytes": 64545
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130815021212251.jpg",
+      "originalReference": "/chistory/cms/imgs/20130815021212251.jpg",
+      "token": "migration-resource://d9ff93e119f36ee069d2d71bf0fe868a940f2df7e81135556a08dda0cdbcfd20",
+      "snapshotPath": "assets/d9ff93e119f36ee069d2d71bf0fe868a940f2df7e81135556a08dda0cdbcfd20.jpg",
+      "sha256": "d9ff93e119f36ee069d2d71bf0fe868a940f2df7e81135556a08dda0cdbcfd20",
+      "contentType": "image/jpeg",
+      "sizeBytes": 87274
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130815021224652.jpg",
+      "originalReference": "/chistory/cms/imgs/20130815021224652.jpg",
+      "token": "migration-resource://0e99e2d757933597f46986e8a86136e554f947d63b4e35f5849bf603b53ad593",
+      "snapshotPath": "assets/0e99e2d757933597f46986e8a86136e554f947d63b4e35f5849bf603b53ad593.jpg",
+      "sha256": "0e99e2d757933597f46986e8a86136e554f947d63b4e35f5849bf603b53ad593",
+      "contentType": "image/jpeg",
+      "sizeBytes": 87363
+    }
+  ],
+  "sourceFingerprint": "16bbe7f80f2597af4406c3f9d73afb91e262c402901f2c2b66a29432b33e925c",
+  "evidence": {
+    "listPage": 162,
+    "listTitle": "教育部全国中心张凤有主任一行来我省开展党的群众路线教育实践活动调研",
+    "listPublishDate": "2013-08-15",
+    "sourceOrder": 1616,
+    "detailPublishDate": "2013-08-15"
+  }
+}

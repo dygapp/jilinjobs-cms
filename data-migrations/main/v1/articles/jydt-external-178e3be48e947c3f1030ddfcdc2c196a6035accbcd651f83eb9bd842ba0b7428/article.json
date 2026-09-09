@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:178e3be48e947c3f1030ddfcdc2c196a6035accbcd651f83eb9bd842ba0b7428",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/HEKDczWA1S9IDiPlusn9JA",
+    "url": "https://mp.weixin.qq.com/s/HEKDczWA1S9IDiPlusn9JA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学召开2025届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2025-06-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/HEKDczWA1S9IDiPlusn9JA"
+  },
+  "resources": [],
+  "sourceFingerprint": "8d4a078e735b1a10bd4820cde9bbb899762eadcd287a3b4697a220ec54eb607f",
+  "evidence": {
+    "listPage": 83,
+    "listTitle": "北华大学召开2025届毕业生就业工作推进会",
+    "listPublishDate": "2025-06-12",
+    "sourceOrder": 827
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4e4539c356519b757f0b96f76ecca104627e9da3f278e98f83fcfa0102205e31",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kxwbbP_ItIufwRUN2as4-g",
+    "url": "https://mp.weixin.qq.com/s/kxwbbP_ItIufwRUN2as4-g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春早期教育职业学院助力人才培养与就业｜同长春市两家企业签合作协议",
+    "source": "",
+    "publishDate": "2025-03-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kxwbbP_ItIufwRUN2as4-g"
+  },
+  "resources": [],
+  "sourceFingerprint": "5d9fb0f85f8b54555d2edb65e9ac7d6f5f221ca3a9d4c3e664a2a4dbd742c1b1",
+  "evidence": {
+    "listPage": 99,
+    "listTitle": "长春早期教育职业学院助力人才培养与就业｜同长春市两家企业签合作协议",
+    "listPublishDate": "2025-03-17",
+    "sourceOrder": 984
+  }
+}

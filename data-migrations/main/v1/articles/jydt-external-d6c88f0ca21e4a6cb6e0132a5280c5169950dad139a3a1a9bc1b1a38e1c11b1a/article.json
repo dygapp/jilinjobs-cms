@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d6c88f0ca21e4a6cb6e0132a5280c5169950dad139a3a1a9bc1b1a38e1c11b1a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Bu0KSSGKoXzVunjfteIA0w",
+    "url": "https://mp.weixin.qq.com/s/Bu0KSSGKoXzVunjfteIA0w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校地企联动助力学子留延发展—延边州2025年秋季高校毕业生专场招聘会成功举办",
+    "source": "",
+    "publishDate": "2025-09-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Bu0KSSGKoXzVunjfteIA0w"
+  },
+  "resources": [],
+  "sourceFingerprint": "36f2751d6c5feb41f3d16229da1ee29ca3328696853aaedf30bb36d92e089ba5",
+  "evidence": {
+    "listPage": 69,
+    "listTitle": "校地企联动助力学子留延发展—延边州2025年秋季高校毕业生专场招聘会成功举办",
+    "listPublishDate": "2025-09-30",
+    "sourceOrder": 688
+  }
+}

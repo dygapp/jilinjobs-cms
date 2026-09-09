@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120448",
+    "contentId": "28737783120448",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120448"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "半年内就业可获培训补贴",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">半年内就业可获培训补贴</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 省劳动保障厅近日在其官方网站上发布了《江苏省贯彻落实特别职业培训计划实施方案》，今明两年，集中对困难企业在岗职工开展技能提升培训和转岗专业培训，对失去工作返乡的农民工开展职业技能培训或创业培训，对失业人员开展中短期技能培训，对新成长劳动力开展储备性技能培训。失去工作返乡的农民工、城镇失业人员、新成长劳动力培训合格后，6个月内实现就业的，将获全额培训补贴。</font></p> <p><font size=\"2\">　　对今明两年失去工作返回家乡的农民工，各级劳动保障部门将结合企业用工需求，重点围绕国家支持的铁路、交通、建设、电力等领域，开展有针对性的培训。其中，年龄在28周岁以下、学历在初中以上、有求学愿望的农民工，可免试进入技工院校2年制技工班就读，进行学籍注册登记，经考核合格后，颁发相应的职业资格证书和技工院校毕业证书，并按相关规定享受国家助学金政策。</font></p> <p><font size=\"2\">　　城镇中就业转失业人员（包括在城镇继续找工作的失业农民工），各地劳动保障部门将组织其参加3至6个月的再就业培训。进行失业登记的大学生，可参加其所学专业相关领域的技能培训，尤其是操作技能训练。对新成长劳动力如农村应届初、高中毕业生未能继续升学的人员，组织其参加6至12个月的劳动预备制培训，取得《就业培训结业证书》和《国家职业资格证书》的，给予定额培训补贴。</font></p> <p><font size=\"2\">　　对返乡农民工、城镇失业人员、新成长劳动力等参加职业培训后并取得相应技能证书，对6个月内没有实现就业的，按最高不超过职业培训补贴标准的60%给予补贴，对6个月内实现就业的，按职业培训补贴标准的100%给予补贴。<br>&nbsp;<br>&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "f9adc7ff5f56b88cadf1d59c3fdce61473a0cec8185eaeac887bcb5495cd5e6d",
+  "evidence": {
+    "listPage": 193,
+    "listTitle": "半年内就业可获培训补贴",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1926,
+    "detailPublishDate": "2009-04-04"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:684728bf64f23ee0df42e233b16b0d6baa3c4e41f8be937235da5a9ef0ed0943",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5439.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5439.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学举办第八届“五维”就创文化节开幕式暨“名企名家面对面”专场报告会",
+    "source": "",
+    "publishDate": "2025-12-22",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5439.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "1122622e1a0879031997f026d03fd5f4c6f4c1ced30d770ba686c055e22220c6",
+  "evidence": {
+    "listPage": 53,
+    "listTitle": "长春工业大学举办第八届“五维”就创文化节开幕式暨“名企名家面对面”专场报告会",
+    "listPublishDate": "2025-12-22",
+    "sourceOrder": 525
+  }
+}

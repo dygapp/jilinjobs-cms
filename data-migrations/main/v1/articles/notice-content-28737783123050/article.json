@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783123050",
+    "contentId": "28737783123050",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123050"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部关于做好2011年全国普通高等学校毕业生就业工作的通知",
+    "source": "",
+    "publishDate": "2010-12-02",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部关于做好2011年全国普通高等学校毕业生就业工作的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2010-12-2 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p>&nbsp;</p> <p><a href=\"http://www.moe.edu.cn/publicfiles/business/htmlfiles/moe/s3265/201011/xxgk_111911.html\"><font color=\"#444444\" size=\"2\">点击察看原文</font></a></p> <p>&nbsp;</p> <p>&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "6de48378a5f9620c7b28d79204d95f6969c9a87da84d3cd4a9ea9eaf15be4509",
+  "evidence": {
+    "listPage": 47,
+    "listTitle": "教育部关于做好2011年全国普通高等学校毕业生就业工作的通知",
+    "listPublishDate": "2010-12-02",
+    "sourceOrder": 463,
+    "detailPublishDate": "2010-12-02"
+  }
+}

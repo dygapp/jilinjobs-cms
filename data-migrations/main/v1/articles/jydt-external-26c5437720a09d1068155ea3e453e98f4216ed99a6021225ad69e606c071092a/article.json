@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:26c5437720a09d1068155ea3e453e98f4216ed99a6021225ad69e606c071092a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Cyq17IPKQGAdwqqDDz8mfQ",
+    "url": "https://mp.weixin.qq.com/s/Cyq17IPKQGAdwqqDDz8mfQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "凝心聚力绘蓝图，砥砺前行拓新程——吉林交通职业技术学院召开2025年度就业工作座谈会",
+    "source": "",
+    "publishDate": "2025-12-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Cyq17IPKQGAdwqqDDz8mfQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "aa4d6f2279291e61cbf08ccdd0b43fcc66238ac85f41da52c9bfdfbbcc496bee",
+  "evidence": {
+    "listPage": 55,
+    "listTitle": "凝心聚力绘蓝图，砥砺前行拓新程——吉林交通职业技术学院召开2025年度就业工作座谈会",
+    "listPublishDate": "2025-12-15",
+    "sourceOrder": 542
+  }
+}

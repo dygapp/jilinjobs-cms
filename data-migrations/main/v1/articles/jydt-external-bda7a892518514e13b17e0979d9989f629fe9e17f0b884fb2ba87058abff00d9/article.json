@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bda7a892518514e13b17e0979d9989f629fe9e17f0b884fb2ba87058abff00d9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/XKrI0CUp6E_4b1rphrkpMA",
+    "url": "https://mp.weixin.qq.com/s/XKrI0CUp6E_4b1rphrkpMA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学举行2026届毕业生秋季双选会（第二场）杭州市余杭区专场招聘活动",
+    "source": "",
+    "publishDate": "2025-10-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/XKrI0CUp6E_4b1rphrkpMA"
+  },
+  "resources": [],
+  "sourceFingerprint": "a0e4f0e3acfdf39b3b08c14065553a2668a88d5a9877f72db85ca48fd444f97e",
+  "evidence": {
+    "listPage": 67,
+    "listTitle": "长春师范大学举行2026届毕业生秋季双选会（第二场）杭州市余杭区专场招聘活动",
+    "listPublishDate": "2025-10-24",
+    "sourceOrder": 663
+  }
+}

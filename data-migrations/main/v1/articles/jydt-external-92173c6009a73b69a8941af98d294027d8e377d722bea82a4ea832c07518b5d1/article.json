@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:92173c6009a73b69a8941af98d294027d8e377d722bea82a4ea832c07518b5d1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/cc6sJYkAkav7n_YOSCsCpw",
+    "url": "https://mp.weixin.qq.com/s/cc6sJYkAkav7n_YOSCsCpw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校地合作谱新篇，携手共进绘蓝图——抚松县领导到访长白山职业技术学院",
+    "source": "",
+    "publishDate": "2025-06-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/cc6sJYkAkav7n_YOSCsCpw"
+  },
+  "resources": [],
+  "sourceFingerprint": "a86446a189149149b7f2630eec987e95d69f576bce867291454a35624f29cfc2",
+  "evidence": {
+    "listPage": 77,
+    "listTitle": "校地合作谱新篇，携手共进绘蓝图——抚松县领导到访长白山职业技术学院",
+    "listPublishDate": "2025-06-26",
+    "sourceOrder": 770
+  }
+}

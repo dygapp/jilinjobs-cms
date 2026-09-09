@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a0dd2e1809614c286ba032865ae7835e77c9c899eeb965f26fc253ca38536e4b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/vCkB6OCtV1yY0KBnymqwNA",
+    "url": "https://mp.weixin.qq.com/s/vCkB6OCtV1yY0KBnymqwNA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力扩容提质 服务高质量发展丨长春财经学院举办2026届毕业生春季校园招聘会（第一场）",
+    "source": "",
+    "publishDate": "2026-05-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vCkB6OCtV1yY0KBnymqwNA"
+  },
+  "resources": [],
+  "sourceFingerprint": "372dc8fc30a5c566187df9763624ca99052bb69087d70d41ff5c2f8c8de7696e",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "聚力扩容提质 服务高质量发展丨长春财经学院举办2026届毕业生春季校园招聘会（第一场）",
+    "listPublishDate": "2026-05-14",
+    "sourceOrder": 186
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1e36d8bb999438eed2316864d3d338d08d160aaebff074c32473ca228aa2b9e9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/a_UX2QGMUN9hW1JSRQe0Mw",
+    "url": "https://mp.weixin.qq.com/s/a_UX2QGMUN9hW1JSRQe0Mw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2026年“五优”服务进校园春季专场招聘会在长春科技学院举办",
+    "source": "",
+    "publishDate": "2026-04-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/a_UX2QGMUN9hW1JSRQe0Mw"
+  },
+  "resources": [],
+  "sourceFingerprint": "3ac3d7b41f55a34b67b1c1ee498094b9c35da4d45dc456347123eba35fcb2f1e",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "2026年“五优”服务进校园春季专场招聘会在长春科技学院举办",
+    "listPublishDate": "2026-04-20",
+    "sourceOrder": 270
+  }
+}

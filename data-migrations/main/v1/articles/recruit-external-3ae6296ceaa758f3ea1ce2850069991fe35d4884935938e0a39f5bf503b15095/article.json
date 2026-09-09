@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:3ae6296ceaa758f3ea1ce2850069991fe35d4884935938e0a39f5bf503b15095",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/U1rUBMyUw0W1eDcUsLVnKQ",
+    "url": "https://mp.weixin.qq.com/s/U1rUBMyUw0W1eDcUsLVnKQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“吉林省普通高校毕业生就业洽谈月”汽车行业毕业生就业洽谈会邀请函",
+    "source": "",
+    "publishDate": "2024-09-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/U1rUBMyUw0W1eDcUsLVnKQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "27c348893dc17a0c21b30b87700657fd464c60e69907fbe51d9c1acaac854d2a",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "“吉林省普通高校毕业生就业洽谈月”汽车行业毕业生就业洽谈会邀请函",
+    "listPublishDate": "2024-09-26",
+    "sourceOrder": 249
+  }
+}

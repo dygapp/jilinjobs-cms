@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122104",
+    "contentId": "28737783122104",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122104"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "“双困学生”培训师资培训班在吉林省大学生创业就业实训基地举行",
+    "source": "",
+    "publishDate": "2016-06-30",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">“双困学生”培训师资培训班在吉林省大学生创业就业实训基地举行</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2016-6-30 12:05:49</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><br></p><p style=\"text-indent:43px\"><span style=\"font-size:20px;font-family:宋体\">为做好“双困学生”就业能力提升培训工作，加强“双困学生”培训师资队伍建设，提高培训师教学水平，6月25日-26日，由吉林省高等学校毕业生就业指导中心主办的“双困学生”培训师资培训班在吉林省大学生创业就业实训基地举行。</span></p><p style=\"text-indent:43px\"><span style=\"font-size:20px;font-family:宋体\">本次培训为期两天，聘请方占仁博士作为此次培训的主讲培训师。课程围绕“双困学生”就业能力提升培训课程教学设计原理与方法和多对一面试的六步推进法两个主题进行，来自省内20所高校的38名参与“双困学生”培训工作的教师参加了培训。</span></p><p style=\"text-indent:43px\"><span style=\"font-size:20px;font-family:宋体\">此次培训贴近“双困学生”培训教学内容实际，收效显著，提升了“双困学生”培训师资队伍的整体教学水平，同时也提高了“双困学生”培训项目的教学质量。</span></p><p style=\"text-align: center\"><img src=\"migration-resource://353ee130369ff0568223b22d7b792f83eae6a9a6bebd775fa64e88ccd2646ce0\" style=\"\" title=\"111.jpg\"></p><p><br></p><p style=\"text-align: center\"><img src=\"migration-resource://848e9c2f41ab21a42991cb64d9b5891592d40dfcd44961b4012bf94b7b73ea0e\" style=\"\" title=\"222.jpg\"></p><p style=\"text-align: center;\"><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360288452082350009943645.jpg",
+      "originalReference": "/chistory/cms/imgs/6360288452082350009943645.jpg",
+      "token": "migration-resource://353ee130369ff0568223b22d7b792f83eae6a9a6bebd775fa64e88ccd2646ce0",
+      "snapshotPath": "assets/353ee130369ff0568223b22d7b792f83eae6a9a6bebd775fa64e88ccd2646ce0.jpg",
+      "sha256": "353ee130369ff0568223b22d7b792f83eae6a9a6bebd775fa64e88ccd2646ce0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 34534
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360288452088600004456970.jpg",
+      "originalReference": "/chistory/cms/imgs/6360288452088600004456970.jpg",
+      "token": "migration-resource://848e9c2f41ab21a42991cb64d9b5891592d40dfcd44961b4012bf94b7b73ea0e",
+      "snapshotPath": "assets/848e9c2f41ab21a42991cb64d9b5891592d40dfcd44961b4012bf94b7b73ea0e.jpg",
+      "sha256": "848e9c2f41ab21a42991cb64d9b5891592d40dfcd44961b4012bf94b7b73ea0e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 44941
+    }
+  ],
+  "sourceFingerprint": "d170ac3aeb98a5c727f96019abbcbb20d7dcf1a3f38072527b5e65d076f62695",
+  "evidence": {
+    "listPage": 154,
+    "listTitle": "“双困学生”培训师资培训班在吉林省大学生创业就业实训基地举行",
+    "listPublishDate": "2016-06-30",
+    "sourceOrder": 1535,
+    "detailPublishDate": "2016-06-30"
+  }
+}

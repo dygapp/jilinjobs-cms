@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7d0a31864b97c65b6ab5511fbb010d4fd903e8f116cde4fa7565a28d3876ed4d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/1I_1ZaTXV3uJFfM8-Ef7lw",
+    "url": "https://mp.weixin.qq.com/s/1I_1ZaTXV3uJFfM8-Ef7lw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗 | 长春财经学院走访吉林省广忠基础工程有限公司",
+    "source": "",
+    "publishDate": "2026-05-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1I_1ZaTXV3uJFfM8-Ef7lw"
+  },
+  "resources": [],
+  "sourceFingerprint": "7111618e961c150fbf6363d76806f990b712223677a41c2631223af7df9562aa",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "访企拓岗 | 长春财经学院走访吉林省广忠基础工程有限公司",
+    "listPublishDate": "2026-05-06",
+    "sourceOrder": 215
+  }
+}

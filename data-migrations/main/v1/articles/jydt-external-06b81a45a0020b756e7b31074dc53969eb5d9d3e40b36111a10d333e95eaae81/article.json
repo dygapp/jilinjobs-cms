@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:06b81a45a0020b756e7b31074dc53969eb5d9d3e40b36111a10d333e95eaae81",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/7w_OHPohuk6EqNG78kcjhA",
+    "url": "https://mp.weixin.qq.com/s/7w_OHPohuk6EqNG78kcjhA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业大学举办 “聚力扩容提质 服务高质量发展 —— 2026年吉林省高校毕业生涉农类专场招聘会”",
+    "source": "",
+    "publishDate": "2026-04-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/7w_OHPohuk6EqNG78kcjhA"
+  },
+  "resources": [],
+  "sourceFingerprint": "25b09deccded5868cb7559e946460233ff5093e55ac515c5c1e50c69bba12243",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "吉林农业大学举办 “聚力扩容提质 服务高质量发展 —— 2026年吉林省高校毕业生涉农类专场招聘会”",
+    "listPublishDate": "2026-04-24",
+    "sourceOrder": 249
+  }
+}

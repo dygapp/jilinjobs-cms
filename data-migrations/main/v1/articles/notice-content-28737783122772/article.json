@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122772",
+    "contentId": "28737783122772",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122772"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办高校职业规划课程教学TTT培训班的通知",
+    "source": "",
+    "publishDate": "2016-11-28",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办高校职业规划课程教学TTT培训班的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2016-11-28 16:21:12</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img title=\"1.jpg\" src=\"migration-resource://2685bb09592322097ef477334b7c07751bbde7e2e4012c400693b9d8027f150a\"></p><p style=\"text-align: center\"><img title=\"2.jpg\" src=\"migration-resource://2cc22f4b55a3afa6ce8841e5a71eeb726e096d5fd1dff8e97359fecdc3f6b12c\"></p><p style=\"text-align: center\"><img title=\"3.jpg\" src=\"migration-resource://e13e1f0cc44881ac180219fc494a8d91cf7a88d73bbe1e2ab06ceaa4d7742062\"></p><p style=\"text-align: center\"><img title=\"4.jpg\" src=\"migration-resource://9f968f7c0eb0154b4243d9aae5fa09cece36bfa640060aae7a2f474ed0fac066\"></p><p style=\"text-align: center\"><img title=\"5.jpg\" src=\"migration-resource://dd8ccbc1b90a5f945b0b83f8f2a1e0406aa75a86472be6db858c60e9cae845d2\"></p><p><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361714560690350003143007.jpg",
+      "originalReference": "/chistory/cms/imgs/6361714560690350003143007.jpg",
+      "token": "migration-resource://2685bb09592322097ef477334b7c07751bbde7e2e4012c400693b9d8027f150a",
+      "snapshotPath": "assets/2685bb09592322097ef477334b7c07751bbde7e2e4012c400693b9d8027f150a.jpg",
+      "sha256": "2685bb09592322097ef477334b7c07751bbde7e2e4012c400693b9d8027f150a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95435
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361714560834100009669595.jpg",
+      "originalReference": "/chistory/cms/imgs/6361714560834100009669595.jpg",
+      "token": "migration-resource://2cc22f4b55a3afa6ce8841e5a71eeb726e096d5fd1dff8e97359fecdc3f6b12c",
+      "snapshotPath": "assets/2cc22f4b55a3afa6ce8841e5a71eeb726e096d5fd1dff8e97359fecdc3f6b12c.jpg",
+      "sha256": "2cc22f4b55a3afa6ce8841e5a71eeb726e096d5fd1dff8e97359fecdc3f6b12c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84102
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361714560965350009169533.jpg",
+      "originalReference": "/chistory/cms/imgs/6361714560965350009169533.jpg",
+      "token": "migration-resource://e13e1f0cc44881ac180219fc494a8d91cf7a88d73bbe1e2ab06ceaa4d7742062",
+      "snapshotPath": "assets/e13e1f0cc44881ac180219fc494a8d91cf7a88d73bbe1e2ab06ceaa4d7742062.jpg",
+      "sha256": "e13e1f0cc44881ac180219fc494a8d91cf7a88d73bbe1e2ab06ceaa4d7742062",
+      "contentType": "image/jpeg",
+      "sizeBytes": 36830
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361714561109100006696122.jpg",
+      "originalReference": "/chistory/cms/imgs/6361714561109100006696122.jpg",
+      "token": "migration-resource://9f968f7c0eb0154b4243d9aae5fa09cece36bfa640060aae7a2f474ed0fac066",
+      "snapshotPath": "assets/9f968f7c0eb0154b4243d9aae5fa09cece36bfa640060aae7a2f474ed0fac066.jpg",
+      "sha256": "9f968f7c0eb0154b4243d9aae5fa09cece36bfa640060aae7a2f474ed0fac066",
+      "contentType": "image/jpeg",
+      "sizeBytes": 61383
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361714561248162503938630.jpg",
+      "originalReference": "/chistory/cms/imgs/6361714561248162503938630.jpg",
+      "token": "migration-resource://dd8ccbc1b90a5f945b0b83f8f2a1e0406aa75a86472be6db858c60e9cae845d2",
+      "snapshotPath": "assets/dd8ccbc1b90a5f945b0b83f8f2a1e0406aa75a86472be6db858c60e9cae845d2.jpg",
+      "sha256": "dd8ccbc1b90a5f945b0b83f8f2a1e0406aa75a86472be6db858c60e9cae845d2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 94316
+    }
+  ],
+  "sourceFingerprint": "dd7a27b4c7a1b8a3499c6128b3e7223a21b2e0157f98fb89c2484fd96da72cd0",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "关于举办高校职业规划课程教学TTT培训班的通知",
+    "listPublishDate": "2016-11-28",
+    "sourceOrder": 230,
+    "detailPublishDate": "2016-11-28"
+  }
+}

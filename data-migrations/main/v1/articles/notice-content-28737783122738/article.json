@@ -1,0 +1,131 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122738",
+    "contentId": "28737783122738",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122738"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展“2018届全省普通高校毕业生就业洽谈月活动”的通知",
+    "source": "",
+    "publishDate": "2017-11-08",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于开展“2018届全省普通高校毕业生就业洽谈月活动”的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2017-11-8 13:23:29</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"新文档 2017-11-08_1.jpg\" src=\"migration-resource://153f7d71700aa090d3d5b6502292daf6081905e6aa38b315c5bd4f5d60f557c0\"></p><p style=\"text-align: center;\"><img title=\"新文档 2017-11-08_2.jpg\" src=\"migration-resource://72dfde3f3f812c6d2cd333df20a8094ca4280981e8fe24c0a341a4eb526d980a\"></p><p style=\"text-align: center;\"><img title=\"新文档 2017-11-08_3.jpg\" src=\"migration-resource://0e17a69505daa1fc8eac1bea0efd47684d5edd48cb4de1b022d4318908387d97\"></p><p style=\"text-align: center;\"><img title=\"新文档 2017-11-08_4.jpg\" src=\"migration-resource://69b920be3e809255a7db16416a740b616cefb040bc908720ab896df67501abce\"></p><p style=\"text-align: center;\"><img title=\"新文档 2017-11-08_5.jpg\" src=\"migration-resource://38c69c5df5fe67c78d207b8a69cdf79a40d8e5615ead5e60828fd58b6e570fa7\"></p><p style=\"text-align: center;\"><img title=\"新文档 2017-11-08_6.jpg\" src=\"migration-resource://7d8203bcb23fe1f4528f63c5ed7954a9810488667f1bf001775db3489c142dda\"></p><p style=\"text-align: center;\"><img title=\"新文档 2017-11-08_7.jpg\" src=\"migration-resource://cd1dcc8dda0392c78968a5a5a654fd0440957fbc31d0fa8a50b12c4fa31c19c5\"></p><p style=\"text-align: center;\"><img title=\"新文档 2017-11-08_8.jpg\" src=\"migration-resource://7f18ca33216724e9c74b14c73e329a2f8dc35f05f6de7ff7e9aff9aada2330ca\"></p><p style=\"text-align: center;\"><img title=\"新文档 2017-11-08_9.jpg\" src=\"migration-resource://a89ee657ea2dce568c4e0a65e3cd600b753a1acc9a441641d6224303e1abf6ff\"></p><p style=\"text-align: center;\"><img title=\"新文档 2017-11-08_10.jpg\" src=\"migration-resource://f265173b98005409e0fcf03a3c680863fdbf95beb2a2554afcf5fe93c36c5711\"></p><p style=\"text-align: center;\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364574426245637507019485.jpg",
+      "originalReference": "/chistory/cms/imgs/6364574426245637507019485.jpg",
+      "token": "migration-resource://153f7d71700aa090d3d5b6502292daf6081905e6aa38b315c5bd4f5d60f557c0",
+      "snapshotPath": "assets/153f7d71700aa090d3d5b6502292daf6081905e6aa38b315c5bd4f5d60f557c0.jpg",
+      "sha256": "153f7d71700aa090d3d5b6502292daf6081905e6aa38b315c5bd4f5d60f557c0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 99872
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364574426256575002220546.jpg",
+      "originalReference": "/chistory/cms/imgs/6364574426256575002220546.jpg",
+      "token": "migration-resource://72dfde3f3f812c6d2cd333df20a8094ca4280981e8fe24c0a341a4eb526d980a",
+      "snapshotPath": "assets/72dfde3f3f812c6d2cd333df20a8094ca4280981e8fe24c0a341a4eb526d980a.jpg",
+      "sha256": "72dfde3f3f812c6d2cd333df20a8094ca4280981e8fe24c0a341a4eb526d980a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 205857
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364574426262825005733872.jpg",
+      "originalReference": "/chistory/cms/imgs/6364574426262825005733872.jpg",
+      "token": "migration-resource://0e17a69505daa1fc8eac1bea0efd47684d5edd48cb4de1b022d4318908387d97",
+      "snapshotPath": "assets/0e17a69505daa1fc8eac1bea0efd47684d5edd48cb4de1b022d4318908387d97.jpg",
+      "sha256": "0e17a69505daa1fc8eac1bea0efd47684d5edd48cb4de1b022d4318908387d97",
+      "contentType": "image/jpeg",
+      "sizeBytes": 199093
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364574426269075004949025.jpg",
+      "originalReference": "/chistory/cms/imgs/6364574426269075004949025.jpg",
+      "token": "migration-resource://69b920be3e809255a7db16416a740b616cefb040bc908720ab896df67501abce",
+      "snapshotPath": "assets/69b920be3e809255a7db16416a740b616cefb040bc908720ab896df67501abce.jpg",
+      "sha256": "69b920be3e809255a7db16416a740b616cefb040bc908720ab896df67501abce",
+      "contentType": "image/jpeg",
+      "sizeBytes": 99345
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364574426276887502691596.jpg",
+      "originalReference": "/chistory/cms/imgs/6364574426276887502691596.jpg",
+      "token": "migration-resource://38c69c5df5fe67c78d207b8a69cdf79a40d8e5615ead5e60828fd58b6e570fa7",
+      "snapshotPath": "assets/38c69c5df5fe67c78d207b8a69cdf79a40d8e5615ead5e60828fd58b6e570fa7.jpg",
+      "sha256": "38c69c5df5fe67c78d207b8a69cdf79a40d8e5615ead5e60828fd58b6e570fa7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92588
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364574426286262503663411.jpg",
+      "originalReference": "/chistory/cms/imgs/6364574426286262503663411.jpg",
+      "token": "migration-resource://7d8203bcb23fe1f4528f63c5ed7954a9810488667f1bf001775db3489c142dda",
+      "snapshotPath": "assets/7d8203bcb23fe1f4528f63c5ed7954a9810488667f1bf001775db3489c142dda.jpg",
+      "sha256": "7d8203bcb23fe1f4528f63c5ed7954a9810488667f1bf001775db3489c142dda",
+      "contentType": "image/jpeg",
+      "sizeBytes": 169248
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364574426294075001405982.jpg",
+      "originalReference": "/chistory/cms/imgs/6364574426294075001405982.jpg",
+      "token": "migration-resource://cd1dcc8dda0392c78968a5a5a654fd0440957fbc31d0fa8a50b12c4fa31c19c5",
+      "snapshotPath": "assets/cd1dcc8dda0392c78968a5a5a654fd0440957fbc31d0fa8a50b12c4fa31c19c5.jpg",
+      "sha256": "cd1dcc8dda0392c78968a5a5a654fd0440957fbc31d0fa8a50b12c4fa31c19c5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 63228
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364574426303450002377798.jpg",
+      "originalReference": "/chistory/cms/imgs/6364574426303450002377798.jpg",
+      "token": "migration-resource://7f18ca33216724e9c74b14c73e329a2f8dc35f05f6de7ff7e9aff9aada2330ca",
+      "snapshotPath": "assets/7f18ca33216724e9c74b14c73e329a2f8dc35f05f6de7ff7e9aff9aada2330ca.jpg",
+      "sha256": "7f18ca33216724e9c74b14c73e329a2f8dc35f05f6de7ff7e9aff9aada2330ca",
+      "contentType": "image/jpeg",
+      "sizeBytes": 183037
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364574426311262509120368.jpg",
+      "originalReference": "/chistory/cms/imgs/6364574426311262509120368.jpg",
+      "token": "migration-resource://a89ee657ea2dce568c4e0a65e3cd600b753a1acc9a441641d6224303e1abf6ff",
+      "snapshotPath": "assets/a89ee657ea2dce568c4e0a65e3cd600b753a1acc9a441641d6224303e1abf6ff.jpg",
+      "sha256": "a89ee657ea2dce568c4e0a65e3cd600b753a1acc9a441641d6224303e1abf6ff",
+      "contentType": "image/jpeg",
+      "sizeBytes": 110679
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364574426319075006862939.jpg",
+      "originalReference": "/chistory/cms/imgs/6364574426319075006862939.jpg",
+      "token": "migration-resource://f265173b98005409e0fcf03a3c680863fdbf95beb2a2554afcf5fe93c36c5711",
+      "snapshotPath": "assets/f265173b98005409e0fcf03a3c680863fdbf95beb2a2554afcf5fe93c36c5711.jpg",
+      "sha256": "f265173b98005409e0fcf03a3c680863fdbf95beb2a2554afcf5fe93c36c5711",
+      "contentType": "image/jpeg",
+      "sizeBytes": 107333
+    }
+  ],
+  "sourceFingerprint": "f5af79569e30a2c172b961e7a29899ccdc9ca347d473d24eba885b9eb4a76f9b",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "关于开展“2018届全省普通高校毕业生就业洽谈月活动”的通知",
+    "listPublishDate": "2017-11-08",
+    "sourceOrder": 208,
+    "detailPublishDate": "2017-11-08"
+  }
+}

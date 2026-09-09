@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:370e0d612f170b03dfd40f580cbe53b3dd185c6791a57d824c7a04a6aed82e32",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/www/detail",
+    "url": "http://smart.jilinjobs.cn/www/detail?id=5ef9678dc0126c6e750a1a34"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省气象局2020年公开招聘全日制普通应届高校毕业生公告（第三批）",
+    "source": "",
+    "publishDate": "2020-06-29",
+    "bodyHtml": "",
+    "externalUrl": "http://smart.jilinjobs.cn/www/detail?id=5ef9678dc0126c6e750a1a34"
+  },
+  "resources": [],
+  "sourceFingerprint": "1ac0e18b70a53f0865d61617ce3919c1dbd9aa9f93a2b6e70282bd13d1f3c402",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "吉林省气象局2020年公开招聘全日制普通应届高校毕业生公告（第三批）",
+    "listPublishDate": "2020-06-29",
+    "sourceOrder": 187
+  }
+}

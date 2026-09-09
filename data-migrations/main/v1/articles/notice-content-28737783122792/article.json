@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122792",
+    "contentId": "28737783122792",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122792"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省首届“互联网+”视频专场招聘会的通知",
+    "source": "",
+    "publishDate": "2016-09-21",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办吉林省首届“互联网+”视频专场招聘会的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2016-9-21 8:09:46</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img src=\"migration-resource://1bd90f5efff330a1736b58d0179b9b630e02e714fb84609ed0207d5b1c7520bc\" style=\"\" title=\"Scan0001.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://aba0be503a4748da5c957250908212927f1488f8081b8abf31c649ce4db65e97\" style=\"\" title=\"Scan0002.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://8141e6a448250dfb94f528c43d2309257b1802e48b328337bac68ef619cee1da\" style=\"\" title=\"Scan0003.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://8ec82f181cc9b1e755bf0c071aac291730e3ca09e4f185c8ec8b364976646846\" style=\"\" title=\"Scan0004.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://5120ae7abd6342037a59e5910ccd8b548a602d3c5de756c13e0f50beb57621ac\" style=\"\" title=\"Scan0005.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://2f1d276934f525c2cb00b616a63b2f4fbeaa48c4bcb8365adb8d87b3082b91b9\" style=\"\" title=\"Scan0006.jpg\"></p><p style=\"text-align: center;\"><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361004220237900001993012.jpg",
+      "originalReference": "/chistory/cms/imgs/6361004220237900001993012.jpg",
+      "token": "migration-resource://1bd90f5efff330a1736b58d0179b9b630e02e714fb84609ed0207d5b1c7520bc",
+      "snapshotPath": "assets/1bd90f5efff330a1736b58d0179b9b630e02e714fb84609ed0207d5b1c7520bc.jpg",
+      "sha256": "1bd90f5efff330a1736b58d0179b9b630e02e714fb84609ed0207d5b1c7520bc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 118817
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361004220309775007607220.jpg",
+      "originalReference": "/chistory/cms/imgs/6361004220309775007607220.jpg",
+      "token": "migration-resource://aba0be503a4748da5c957250908212927f1488f8081b8abf31c649ce4db65e97",
+      "snapshotPath": "assets/aba0be503a4748da5c957250908212927f1488f8081b8abf31c649ce4db65e97.jpg",
+      "sha256": "aba0be503a4748da5c957250908212927f1488f8081b8abf31c649ce4db65e97",
+      "contentType": "image/jpeg",
+      "sizeBytes": 119954
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361004220320712507106454.jpg",
+      "originalReference": "/chistory/cms/imgs/6361004220320712507106454.jpg",
+      "token": "migration-resource://8141e6a448250dfb94f528c43d2309257b1802e48b328337bac68ef619cee1da",
+      "snapshotPath": "assets/8141e6a448250dfb94f528c43d2309257b1802e48b328337bac68ef619cee1da.jpg",
+      "sha256": "8141e6a448250dfb94f528c43d2309257b1802e48b328337bac68ef619cee1da",
+      "contentType": "image/jpeg",
+      "sizeBytes": 61370
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361004220330087508078269.jpg",
+      "originalReference": "/chistory/cms/imgs/6361004220330087508078269.jpg",
+      "token": "migration-resource://8ec82f181cc9b1e755bf0c071aac291730e3ca09e4f185c8ec8b364976646846",
+      "snapshotPath": "assets/8ec82f181cc9b1e755bf0c071aac291730e3ca09e4f185c8ec8b364976646846.jpg",
+      "sha256": "8ec82f181cc9b1e755bf0c071aac291730e3ca09e4f185c8ec8b364976646846",
+      "contentType": "image/jpeg",
+      "sizeBytes": 118905
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361004220342587501806748.jpg",
+      "originalReference": "/chistory/cms/imgs/6361004220342587501806748.jpg",
+      "token": "migration-resource://5120ae7abd6342037a59e5910ccd8b548a602d3c5de756c13e0f50beb57621ac",
+      "snapshotPath": "assets/5120ae7abd6342037a59e5910ccd8b548a602d3c5de756c13e0f50beb57621ac.jpg",
+      "sha256": "5120ae7abd6342037a59e5910ccd8b548a602d3c5de756c13e0f50beb57621ac",
+      "contentType": "image/jpeg",
+      "sizeBytes": 122124
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361004220351962502778564.jpg",
+      "originalReference": "/chistory/cms/imgs/6361004220351962502778564.jpg",
+      "token": "migration-resource://2f1d276934f525c2cb00b616a63b2f4fbeaa48c4bcb8365adb8d87b3082b91b9",
+      "snapshotPath": "assets/2f1d276934f525c2cb00b616a63b2f4fbeaa48c4bcb8365adb8d87b3082b91b9.jpg",
+      "sha256": "2f1d276934f525c2cb00b616a63b2f4fbeaa48c4bcb8365adb8d87b3082b91b9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 48829
+    }
+  ],
+  "sourceFingerprint": "725c1238b2790c98d44d9613a044f0e39134a5bb6ae37c61438b43b04f1505bc",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "关于举办吉林省首届“互联网+”视频专场招聘会的通知",
+    "listPublishDate": "2016-09-21",
+    "sourceOrder": 241,
+    "detailPublishDate": "2016-09-21"
+  }
+}

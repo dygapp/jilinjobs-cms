@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122194",
+    "contentId": "28737783122194",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122194"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省下半年全国计算机应用技术证书（NIT）考试全面展开",
+    "source": "",
+    "publishDate": "2012-11-27",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省下半年全国计算机应用技术证书（NIT）考试全面展开</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-11-27 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p> <p align=\"center\">&nbsp;&nbsp;&nbsp; 2012年11月为吉林省全国计算机应用技术证书（NIT）考试月，全省共9个考试基地组织了考试。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://753ddae6ec8215a1f505a760cc6f85eaf4848c59f3b38dfafbbdb4c29854b7c5\"></p> <p>&nbsp;&nbsp;&nbsp; 11月11日，省高校毕业生就业指导中心朱军书记到长春工业大学软件职业技术学院NIT考试现场巡视，学院于德海副院长介绍学院NIT工作情况。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://664693e8fa14f60799b677e761f8e3228bd9a5198eed4e903dcc0ec36dfcab7f\"></p> <p>&nbsp;&nbsp;&nbsp; 11月11日，吉林农业工程职业技术学院组织NIT考试。学院领导高度重视, 韩志强副院长，成人教育处孙启民处长到考试现场检查工作。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://f2d6d4026b53672d7a351ee6b8832bf71424a025c2a105e673d133fbfbf79109\"></p> <p align=\"center\">吉林省经济管理干部学院NIT考试，组织规范，秩序井然。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://e081eadb0b6ffb7843b3c7d6a70b16f6627da30232e4ee88305807cc731639d9\"></p> <p align=\"center\">&nbsp;&nbsp;&nbsp; 11月18日，吉林省教育学院组织NIT考试，教务处宋爽处长，王雁苓副处长到考场巡查。</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121127031338427.jpg",
+      "originalReference": "/chistory/cms/imgs/20121127031338427.jpg",
+      "token": "migration-resource://753ddae6ec8215a1f505a760cc6f85eaf4848c59f3b38dfafbbdb4c29854b7c5",
+      "snapshotPath": "assets/753ddae6ec8215a1f505a760cc6f85eaf4848c59f3b38dfafbbdb4c29854b7c5.jpg",
+      "sha256": "753ddae6ec8215a1f505a760cc6f85eaf4848c59f3b38dfafbbdb4c29854b7c5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 60460
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121127031411437.jpg",
+      "originalReference": "/chistory/cms/imgs/20121127031411437.jpg",
+      "token": "migration-resource://664693e8fa14f60799b677e761f8e3228bd9a5198eed4e903dcc0ec36dfcab7f",
+      "snapshotPath": "assets/664693e8fa14f60799b677e761f8e3228bd9a5198eed4e903dcc0ec36dfcab7f.jpg",
+      "sha256": "664693e8fa14f60799b677e761f8e3228bd9a5198eed4e903dcc0ec36dfcab7f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 54450
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121127031441267.jpg",
+      "originalReference": "/chistory/cms/imgs/20121127031441267.jpg",
+      "token": "migration-resource://f2d6d4026b53672d7a351ee6b8832bf71424a025c2a105e673d133fbfbf79109",
+      "snapshotPath": "assets/f2d6d4026b53672d7a351ee6b8832bf71424a025c2a105e673d133fbfbf79109.jpg",
+      "sha256": "f2d6d4026b53672d7a351ee6b8832bf71424a025c2a105e673d133fbfbf79109",
+      "contentType": "image/jpeg",
+      "sizeBytes": 64549
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121127031503422.jpg",
+      "originalReference": "/chistory/cms/imgs/20121127031503422.jpg",
+      "token": "migration-resource://e081eadb0b6ffb7843b3c7d6a70b16f6627da30232e4ee88305807cc731639d9",
+      "snapshotPath": "assets/e081eadb0b6ffb7843b3c7d6a70b16f6627da30232e4ee88305807cc731639d9.jpg",
+      "sha256": "e081eadb0b6ffb7843b3c7d6a70b16f6627da30232e4ee88305807cc731639d9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 74638
+    }
+  ],
+  "sourceFingerprint": "4b589fe713cb8d065b689ec723b44edd0cdc37856b65384fd3876b431d76bed6",
+  "evidence": {
+    "listPage": 164,
+    "listTitle": "吉林省下半年全国计算机应用技术证书（NIT）考试全面展开",
+    "listPublishDate": "2012-11-27",
+    "sourceOrder": 1631,
+    "detailPublishDate": "2012-11-27"
+  }
+}

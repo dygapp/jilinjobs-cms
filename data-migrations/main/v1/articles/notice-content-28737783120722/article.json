@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120722",
+    "contentId": "28737783120722",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120722"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办创业课程实践教学FET高级培训班的通知",
+    "source": "",
+    "publishDate": "2016-10-19",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于举办创业课程实践教学FET高级培训班的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2016-10-19 15:21:59</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://4238b3ec289c96113cf657083b0372529f52dfad0f8164aab46737131d5c230d\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://0ead1b74343248b18c249b0e643dfb851c569f1e2747fca1ee80001c2879504d\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://5871baece6490e442cd44dc3bf0edc45bece03c757848314639644647ed79e6a\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=2deaa656-b6e2-479c-8270-2e353d630db9\">报名表.doc</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361248734000000003505739.jpg",
+      "originalReference": "/chistory/cms/imgs/6361248734000000003505739.jpg",
+      "token": "migration-resource://4238b3ec289c96113cf657083b0372529f52dfad0f8164aab46737131d5c230d",
+      "snapshotPath": "assets/4238b3ec289c96113cf657083b0372529f52dfad0f8164aab46737131d5c230d.jpg",
+      "sha256": "4238b3ec289c96113cf657083b0372529f52dfad0f8164aab46737131d5c230d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 169056
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361248734009375004477555.jpg",
+      "originalReference": "/chistory/cms/imgs/6361248734009375004477555.jpg",
+      "token": "migration-resource://0ead1b74343248b18c249b0e643dfb851c569f1e2747fca1ee80001c2879504d",
+      "snapshotPath": "assets/0ead1b74343248b18c249b0e643dfb851c569f1e2747fca1ee80001c2879504d.jpg",
+      "sha256": "0ead1b74343248b18c249b0e643dfb851c569f1e2747fca1ee80001c2879504d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 218229
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361248734020312503976788.jpg",
+      "originalReference": "/chistory/cms/imgs/6361248734020312503976788.jpg",
+      "token": "migration-resource://5871baece6490e442cd44dc3bf0edc45bece03c757848314639644647ed79e6a",
+      "snapshotPath": "assets/5871baece6490e442cd44dc3bf0edc45bece03c757848314639644647ed79e6a.jpg",
+      "sha256": "5871baece6490e442cd44dc3bf0edc45bece03c757848314639644647ed79e6a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 177594
+    }
+  ],
+  "sourceFingerprint": "fd7867dcbf7bd5ffef05e7d56356e740c79cf33f55a7722805e3309c73613e16",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "关于举办创业课程实践教学FET高级培训班的通知",
+    "listPublishDate": "2016-10-19",
+    "sourceOrder": 240,
+    "detailPublishDate": "2016-10-19"
+  }
+}

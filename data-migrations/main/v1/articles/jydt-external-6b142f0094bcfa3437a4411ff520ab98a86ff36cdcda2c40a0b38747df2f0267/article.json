@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6b142f0094bcfa3437a4411ff520ab98a86ff36cdcda2c40a0b38747df2f0267",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/aOZ_7K8Y0ImWoIlAaSZv7A",
+    "url": "https://mp.weixin.qq.com/s/aOZ_7K8Y0ImWoIlAaSZv7A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“长聚学子·春城暖才”进校园宣讲活动在长春人文学院举行",
+    "source": "",
+    "publishDate": "2025-10-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/aOZ_7K8Y0ImWoIlAaSZv7A"
+  },
+  "resources": [],
+  "sourceFingerprint": "57378ad46aa86cc1c8c7d783876039d32c9424435f332899c21d692b514fcd1b",
+  "evidence": {
+    "listPage": 66,
+    "listTitle": "“长聚学子·春城暖才”进校园宣讲活动在长春人文学院举行",
+    "listPublishDate": "2025-10-27",
+    "sourceOrder": 656
+  }
+}

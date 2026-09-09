@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e5cc282ac33945828644da53d42daecc51b0a96765b3a5f5dd3c35d329ad5570",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1025/5111.htm",
+    "url": "https://www.jlemcc.edu.cn/info/1025/5111.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省经济管理干部学院攻坚拓岗稳就业 协同育人提质效",
+    "source": "",
+    "publishDate": "2026-04-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlemcc.edu.cn/info/1025/5111.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "f70bd722f302eff94ef839763d0a19c9b596a8538376b33132e34bcd83fafb84",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "吉林省经济管理干部学院攻坚拓岗稳就业 协同育人提质效",
+    "listPublishDate": "2026-04-02",
+    "sourceOrder": 328
+  }
+}

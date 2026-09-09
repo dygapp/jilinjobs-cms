@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4596c0ef5c0232d0f2e0e8a79a6a19897f14f75ff18a484a8796427df9fd4ab4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/0Vx_ig3AHS2UyuYQKcIWdw",
+    "url": "https://mp.weixin.qq.com/s/0Vx_ig3AHS2UyuYQKcIWdw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院“荐才团”赴上喜大数据（长春）有限公司开展实地调研",
+    "source": "",
+    "publishDate": "2026-05-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/0Vx_ig3AHS2UyuYQKcIWdw"
+  },
+  "resources": [],
+  "sourceFingerprint": "a8b10d756b46878eec5ccf6fdfd5f88cc89b1a415a1f8d9a604002d25360ad73",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "长春人文学院“荐才团”赴上喜大数据（长春）有限公司开展实地调研",
+    "listPublishDate": "2026-05-09",
+    "sourceOrder": 203
+  }
+}

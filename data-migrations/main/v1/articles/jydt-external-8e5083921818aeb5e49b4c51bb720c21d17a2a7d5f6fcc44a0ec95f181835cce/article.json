@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8e5083921818aeb5e49b4c51bb720c21d17a2a7d5f6fcc44a0ec95f181835cce",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/CnaOzbjmjInzmHIa6exDaw",
+    "url": "https://mp.weixin.qq.com/s/CnaOzbjmjInzmHIa6exDaw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院党委书记柳轶带队到大连东软睿新科技集团访企拓岗",
+    "source": "",
+    "publishDate": "2025-06-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/CnaOzbjmjInzmHIa6exDaw"
+  },
+  "resources": [],
+  "sourceFingerprint": "f0e10acab2f30e654c453b587670fe8b4dca88a20fcf6e41797656184270f874",
+  "evidence": {
+    "listPage": 81,
+    "listTitle": "长春人文学院党委书记柳轶带队到大连东软睿新科技集团访企拓岗",
+    "listPublishDate": "2025-06-17",
+    "sourceOrder": 805
+  }
+}

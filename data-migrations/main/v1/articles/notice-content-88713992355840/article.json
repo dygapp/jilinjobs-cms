@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:88713992355840",
+    "contentId": "88713992355840",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=88713992355840"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于恢复对外办公的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2022-05-02",
+    "bodyHtml": "\n                        <p>&nbsp; &nbsp; &nbsp; 根据我省目前疫情防控情况，按照长春市逐步恢复正常生产生活秩序安排，吉林省高等学校毕业生就业指导中心自5月6日起恢复对外办公。</p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:right\">吉林省高等学校毕业生就业指导中心</p>\n\n<p style=\"text-align:right\">2022年5月2日&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "46dd9f879db051d30b3b64d48c9a1f8cf219551a57dace18237ed78cb6393f58",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "关于恢复对外办公的通知",
+    "listPublishDate": "2022-05-02",
+    "sourceOrder": 130,
+    "detailPublishDate": "2022-05-02"
+  }
+}

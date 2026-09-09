@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bf3f78270a836910417add8fcf223e2878a1f3aa529dc53cafa22391561e438b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/YLVg3viuIvhx_G51ljorpw",
+    "url": "https://mp.weixin.qq.com/s/YLVg3viuIvhx_G51ljorpw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "与三甲医院携手，共筑医教协同新高地——吉林职业技术学与延边中医医院 延吉市中医医院正式签约共建教学医院",
+    "source": "",
+    "publishDate": "2025-12-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/YLVg3viuIvhx_G51ljorpw"
+  },
+  "resources": [],
+  "sourceFingerprint": "e88c73518921e0892e066471229ccc52a48c66d3fbe88cc2c857762c33da1378",
+  "evidence": {
+    "listPage": 55,
+    "listTitle": "与三甲医院携手，共筑医教协同新高地——吉林职业技术学与延边中医医院 延吉市中医医院正式签约共建教学医院",
+    "listPublishDate": "2025-12-15",
+    "sourceOrder": 545
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122690",
+    "contentId": "28737783122690",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122690"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发开展高校就业指导教师挂职锻炼工作的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2021-03-16",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://a7a8667449c12c498f4ae43b625526ef0c1446e64160d052407d9f27a5a29962\" width=\"1000\"></p>\n\n<p style=\"text-align:left\"><span style=\"color:#000000\"><a href=\"http://smart.jilinjobs.cn/files/cms/content/20210317095817.pdf\" target=\"_blank\">附件：关于开展高校就业指导教师挂职锻炼工作的通知</a></span></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210317095756.jpg",
+      "originalReference": "/chistory/cms/editor/20210317095756.jpg",
+      "token": "migration-resource://a7a8667449c12c498f4ae43b625526ef0c1446e64160d052407d9f27a5a29962",
+      "snapshotPath": "assets/a7a8667449c12c498f4ae43b625526ef0c1446e64160d052407d9f27a5a29962.jpg",
+      "sha256": "a7a8667449c12c498f4ae43b625526ef0c1446e64160d052407d9f27a5a29962",
+      "contentType": "image/jpeg",
+      "sizeBytes": 185619
+    }
+  ],
+  "sourceFingerprint": "d528149839ede069e849df0cec96f875bc1317cce156b0491b155834516dd2c0",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "关于转发开展高校就业指导教师挂职锻炼工作的通知",
+    "listPublishDate": "2021-03-16",
+    "sourceOrder": 159,
+    "detailPublishDate": "2021-03-16"
+  }
+}

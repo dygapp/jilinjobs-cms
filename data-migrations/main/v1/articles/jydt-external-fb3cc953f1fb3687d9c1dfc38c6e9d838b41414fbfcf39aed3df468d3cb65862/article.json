@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fb3cc953f1fb3687d9c1dfc38c6e9d838b41414fbfcf39aed3df468d3cb65862",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/E49yrWgTIZlKmk5qDFejgw",
+    "url": "https://mp.weixin.qq.com/s/E49yrWgTIZlKmk5qDFejgw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教融合 共筑职教高地——吉林电子信息职业技术学院首届产教融合大会圆满召开",
+    "source": "",
+    "publishDate": "2026-06-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/E49yrWgTIZlKmk5qDFejgw"
+  },
+  "resources": [],
+  "sourceFingerprint": "1c42fd9ac03b237b1c013b5cd9b1f661d2eafc69c77824470ae1751e3b44e0cd",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "深化产教融合 共筑职教高地——吉林电子信息职业技术学院首届产教融合大会圆满召开",
+    "listPublishDate": "2026-06-29",
+    "sourceOrder": 62
+  }
+}

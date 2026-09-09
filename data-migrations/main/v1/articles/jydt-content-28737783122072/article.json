@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122072",
+    "contentId": "28737783122072",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122072"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "省高校毕业生就业指导中心工会举办“喜迎三·八妇女节”活动",
+    "source": "",
+    "publishDate": "2017-03-10",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">省高校毕业生就业指导中心工会举办“喜迎三·八妇女节”活动</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:中心工会委员会   发布时间:2017-3-10 15:28:49</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋;font-size: 21px\">为丰富中心女职工的文化生活，展示女职工积极向上的精神面貌，在中心领导班子的大力支持下，3月8日，中心工会举办了“喜迎三·八妇女节”活动。</span></p><p style=\"text-align: center\"><img title=\"9087402_093015015397_2.jpg\" src=\"migration-resource://2a82ab6b1f3733b7adc0ff316fb0945cedba771a83b3bdcb5750e47ab6305210\"></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋;font-size: 21px\">此次活动共进行了两项内容，一是组织了全体女职工观看电影；二是评选出“最美女工”、“最美妻子”、“最美妈妈”等荣誉称号，并颁发了证书。&nbsp;&nbsp;&nbsp; </span></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋;font-size: 21px\">活动的开展，充分体现了中心对女职工的人文关怀，增强了凝聚力，营造了健康生活、快乐工作的良好氛围。</span></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362475655205637503217756.jpg",
+      "originalReference": "/chistory/cms/imgs/6362475655205637503217756.jpg",
+      "token": "migration-resource://2a82ab6b1f3733b7adc0ff316fb0945cedba771a83b3bdcb5750e47ab6305210",
+      "snapshotPath": "assets/2a82ab6b1f3733b7adc0ff316fb0945cedba771a83b3bdcb5750e47ab6305210.jpg",
+      "sha256": "2a82ab6b1f3733b7adc0ff316fb0945cedba771a83b3bdcb5750e47ab6305210",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82412
+    }
+  ],
+  "sourceFingerprint": "20426fd12d6049097646b1bdff5d710ed48adfad62d95670acf691332ba811f2",
+  "evidence": {
+    "listPage": 151,
+    "listTitle": "省高校毕业生就业指导中心工会举办“喜迎三·八妇女节”活动",
+    "listPublishDate": "2017-03-10",
+    "sourceOrder": 1502,
+    "detailPublishDate": "2017-03-10"
+  }
+}

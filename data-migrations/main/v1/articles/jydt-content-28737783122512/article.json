@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122512",
+    "contentId": "28737783122512",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122512"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "全国首推“一元注册企业”称为推进全民创业",
+    "source": "",
+    "publishDate": "2009-02-24",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">全国首推“一元注册企业”称为推进全民创业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-2-24 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;&nbsp;&nbsp; </p> <p>&nbsp;&nbsp;&nbsp; 大学生创业网讯<span lang=\"EN-US\"> 6</span>日河北省工商局宣布：不论从事什么行业的合伙企业和个人独资企业，注册资金最低一元即可办理营业执照。据了解，<span lang=\"EN-US\">“</span>一元能注册企业<span lang=\"EN-US\">”</span>的省份，河北省为全国第一家。<span lang=\"EN-US\"> </span></p> <p><span lang=\"EN-US\">&nbsp;&nbsp;&nbsp;&nbsp;</span>根据安排，<!--?xml:namespace prefix = st1 ns = \"urn:schemas-microsoft-com:office:smarttags\" /--><st1:chsdate w:st=\"on\" isrocdate=\"False\" islunardate=\"False\" day=\"5\" month=\"2\" year=\"2009\"><span lang=\"EN-US\">2</span>月<span lang=\"EN-US\">5</span>日</st1:chsdate>，河北省工商局向全省各级工商部门印发了《关于<span lang=\"EN-US\">“</span>一元注册企业<span lang=\"EN-US\">”</span>的通知》。通知规定：<span lang=\"EN-US\">“</span>凡申办合伙企业、个人独资企业的，不受行业、资金限制，出资一元即可登记注册，且无需审验注册资金。<span lang=\"EN-US\">” </span></p> <p><span lang=\"EN-US\">&nbsp;&nbsp;&nbsp;&nbsp;</span>河北省工商局主管注册工作的副局长金洪钧说，在当前经济形势下，此举是为了进一步推进全民创业。<span lang=\"EN-US\"> </span></p> <p><span lang=\"EN-US\">&nbsp;&nbsp;&nbsp;&nbsp;</span>金洪钧同时指出，本次出台的政策，是一元可以注册企业，而不是一元可以注册公司。因为，公司注册要受《公司法》的限制。 </p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style=\"COLOR: black; FONT-FAMILY: 楷体_GB2312; mso-hansi-font-family: Verdana\"><font face=\"宋体\">来源：大学生创业网</font></span></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "42cda2177d1286ea68dd86aefba108a02f737dda88b55977423a4b861c122df0",
+  "evidence": {
+    "listPage": 201,
+    "listTitle": "全国首推“一元注册企业”称为推进全民创业",
+    "listPublishDate": "2009-02-24",
+    "sourceOrder": 2003,
+    "detailPublishDate": "2009-02-24"
+  }
+}

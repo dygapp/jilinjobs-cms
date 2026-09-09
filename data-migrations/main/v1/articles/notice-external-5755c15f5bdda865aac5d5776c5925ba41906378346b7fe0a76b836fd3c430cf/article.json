@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:5755c15f5bdda865aac5d5776c5925ba41906378346b7fe0a76b836fd3c430cf",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/SXk1A_KYbMrwm1QJVS3-rg",
+    "url": "https://mp.weixin.qq.com/s/SXk1A_KYbMrwm1QJVS3-rg"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "实用！高校毕业生档案这样转递→",
+    "source": "",
+    "publishDate": "2025-04-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/SXk1A_KYbMrwm1QJVS3-rg"
+  },
+  "resources": [],
+  "sourceFingerprint": "85494480c0cc9ed8526d6c0be57a161095747e9128e1503461f34103c2dd20f6",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "实用！高校毕业生档案这样转递→",
+    "listPublishDate": "2025-04-10",
+    "sourceOrder": 46
+  }
+}

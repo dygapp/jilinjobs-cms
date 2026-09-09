@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c0ba517c3e7bd8c8a7f899c1f3eda739c4ee8208b42bf40bf91c48ad61e66866",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Cbi3NGSvVoIF0VryKUkCTw",
+    "url": "https://mp.weixin.qq.com/s/Cbi3NGSvVoIF0VryKUkCTw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工程职业学院校领导带队赴东丰、伊通重点企业调研",
+    "source": "",
+    "publishDate": "2026-04-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Cbi3NGSvVoIF0VryKUkCTw"
+  },
+  "resources": [],
+  "sourceFingerprint": "caa1ce3394f6dc0361b24f7aafee51bf574b2969a01b4cab9fa4419640fd6c86",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "吉林工程职业学院校领导带队赴东丰、伊通重点企业调研",
+    "listPublishDate": "2026-04-13",
+    "sourceOrder": 296
+  }
+}

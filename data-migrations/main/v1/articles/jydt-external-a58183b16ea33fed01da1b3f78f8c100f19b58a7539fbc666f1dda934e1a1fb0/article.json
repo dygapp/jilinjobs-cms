@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a58183b16ea33fed01da1b3f78f8c100f19b58a7539fbc666f1dda934e1a1fb0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1003/104940.htm",
+    "url": "https://news.ccsfu.edu.cn/info/1003/104940.htm?sessionid=1464751437"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学开展“启航未来·职通梦想”就业指导服务月活动",
+    "source": "",
+    "publishDate": "2025-05-09",
+    "bodyHtml": "",
+    "externalUrl": "https://news.ccsfu.edu.cn/info/1003/104940.htm?sessionid=1464751437"
+  },
+  "resources": [],
+  "sourceFingerprint": "6b2505de277c29096bdaafe4b10d088b715ed4a6e1048109ddb3ce270770789f",
+  "evidence": {
+    "listPage": 92,
+    "listTitle": "长春师范大学开展“启航未来·职通梦想”就业指导服务月活动",
+    "listPublishDate": "2025-05-09",
+    "sourceOrder": 911
+  }
+}

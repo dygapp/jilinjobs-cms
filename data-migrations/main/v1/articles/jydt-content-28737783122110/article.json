@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122110",
+    "contentId": "28737783122110",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122110"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2016年吉林省大学生创新创业培训上半年培训工作圆满完成",
+    "source": "",
+    "publishDate": "2016-06-28",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2016年吉林省大学生创新创业培训上半年培训工作圆满完成</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2016-6-28 11:35:42</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-indent:40px;line-height:37px\"><span style=\"font-size:20px;font-family:宋体\">5</span><span style=\"font-size:20px;font-family:宋体\">月25日至6月6日，省高校就业指导中心与吉林农业科技学院在吉林省大学生创业就业实训基地联合举办了4期吉林省大学生创新创业培训，共有310名学生参加了此次培训，圆满的完成了培训项目上半年培训工作。</span></p><p style=\"text-indent:40px;line-height:37px\"><span style=\"font-size:20px;font-family:宋体\">培训期间，吉林省高等学校毕业生就业指导中心与吉林农业科技学院派出最强师资力量，分别从商机识别、资源整合、商业模式、沙盘模拟和专业创业培训等课程，对大学生创新创业素质和能力进行系统培训。</span></p><p style=\"text-indent:40px;line-height:37px\"><span style=\"font-size:20px;font-family:宋体\">培训工作取得了良好的效果，通过4期培训，学员们充分了解了作为创业者应该掌握的基本创业知识，增强了学员的创业信心。下半年的吉林省大学生创新创业培训工作将于9月1日开始。</span></p><p><span style=\"font-size:21px;font-family:仿宋\"><br clear=\"all\" style=\"page-break-before:always\"></span></p><p style=\"text-align: center\"><img src=\"migration-resource://82407529589a65792c89cdbd642721f4690760a11fcb334ed21f2b136c86d837\" style=\"\" title=\"1.jpg\"></p><p><br></p><p style=\"text-align: center\"><img src=\"migration-resource://47d0d04802dd3f872cd068be4dd30aaec004f7bda5917fd1183d88b2893e793a\" style=\"\" title=\"2.jpg\"></p><p style=\"text-align: center;\"><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360288338490162506273945.jpg",
+      "originalReference": "/chistory/cms/imgs/6360288338490162506273945.jpg",
+      "token": "migration-resource://82407529589a65792c89cdbd642721f4690760a11fcb334ed21f2b136c86d837",
+      "snapshotPath": "assets/82407529589a65792c89cdbd642721f4690760a11fcb334ed21f2b136c86d837.jpg",
+      "sha256": "82407529589a65792c89cdbd642721f4690760a11fcb334ed21f2b136c86d837",
+      "contentType": "image/jpeg",
+      "sizeBytes": 51680
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360288338497975004016516.jpg",
+      "originalReference": "/chistory/cms/imgs/6360288338497975004016516.jpg",
+      "token": "migration-resource://47d0d04802dd3f872cd068be4dd30aaec004f7bda5917fd1183d88b2893e793a",
+      "snapshotPath": "assets/47d0d04802dd3f872cd068be4dd30aaec004f7bda5917fd1183d88b2893e793a.jpg",
+      "sha256": "47d0d04802dd3f872cd068be4dd30aaec004f7bda5917fd1183d88b2893e793a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 36898
+    }
+  ],
+  "sourceFingerprint": "4f3fbb7c00a2a00d4891732c2316a44c75c46603dbd4243d681293474198625d",
+  "evidence": {
+    "listPage": 154,
+    "listTitle": "2016年吉林省大学生创新创业培训上半年培训工作圆满完成",
+    "listPublishDate": "2016-06-28",
+    "sourceOrder": 1537,
+    "detailPublishDate": "2016-06-28"
+  }
+}

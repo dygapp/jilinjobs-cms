@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122964",
+    "contentId": "28737783122964",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122964"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《关于举办“全国高校创新创业教育骨干师资培训班”的通知》的通知",
+    "source": "",
+    "publishDate": "2012-01-13",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《关于举办“全国高校创新创业教育骨干师资培训班”的通知》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-1-13 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://3c197a416b54c8b1c89c00fd1362f0b28096194e5b2a61d7052fdb76177ef4ec\"><img border=\"0\" src=\"migration-resource://c41d09424a4cab154cd7159e8768f44bd813b18b901603ed87b9e8ff56f4faa0\"><img border=\"0\" src=\"migration-resource://26bcfc781366ae82df971169723aca902ce92212685fb24be9dde2c186571fe6\"><img border=\"0\" src=\"http://192.168.1.251/uploadfile/201201/20120113143312723.jpg\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120113143258126.jpg",
+      "originalReference": "/chistory/cms/imgs/20120113143258126.jpg",
+      "token": "migration-resource://3c197a416b54c8b1c89c00fd1362f0b28096194e5b2a61d7052fdb76177ef4ec",
+      "snapshotPath": "assets/3c197a416b54c8b1c89c00fd1362f0b28096194e5b2a61d7052fdb76177ef4ec.jpg",
+      "sha256": "3c197a416b54c8b1c89c00fd1362f0b28096194e5b2a61d7052fdb76177ef4ec",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90501
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120113143304305.jpg",
+      "originalReference": "/chistory/cms/imgs/20120113143304305.jpg",
+      "token": "migration-resource://c41d09424a4cab154cd7159e8768f44bd813b18b901603ed87b9e8ff56f4faa0",
+      "snapshotPath": "assets/c41d09424a4cab154cd7159e8768f44bd813b18b901603ed87b9e8ff56f4faa0.jpg",
+      "sha256": "c41d09424a4cab154cd7159e8768f44bd813b18b901603ed87b9e8ff56f4faa0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 102303
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120113143309299.jpg",
+      "originalReference": "/chistory/cms/imgs/20120113143309299.jpg",
+      "token": "migration-resource://26bcfc781366ae82df971169723aca902ce92212685fb24be9dde2c186571fe6",
+      "snapshotPath": "assets/26bcfc781366ae82df971169723aca902ce92212685fb24be9dde2c186571fe6.jpg",
+      "sha256": "26bcfc781366ae82df971169723aca902ce92212685fb24be9dde2c186571fe6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81741
+    }
+  ],
+  "sourceFingerprint": "a07726badd1cd774e47af01dad9f89eb251cee8241be129e85b5f328e8b90b3f",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "转发《关于举办“全国高校创新创业教育骨干师资培训班”的通知》的通知",
+    "listPublishDate": "2012-01-13",
+    "sourceOrder": 405,
+    "detailPublishDate": "2012-01-13"
+  }
+}

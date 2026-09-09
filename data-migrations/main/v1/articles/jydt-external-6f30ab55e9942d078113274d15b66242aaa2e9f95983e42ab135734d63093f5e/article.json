@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6f30ab55e9942d078113274d15b66242aaa2e9f95983e42ab135734d63093f5e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/img/202401/t20240103_8860062.html",
+    "url": "http://jyt.jl.gov.cn/img/202401/t20240103_8860062.html"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "景俊海在“创业奋斗‘就’在吉林”大学生就业创业座谈会上向高校毕业生及各类人才发出邀请",
+    "source": "",
+    "publishDate": "2024-01-04",
+    "bodyHtml": "",
+    "externalUrl": "http://jyt.jl.gov.cn/img/202401/t20240103_8860062.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "17b37d1a2d22b7075e66721ff1213f26aca78def4da67e4e7a492f7f93d319bb",
+  "evidence": {
+    "listPage": 111,
+    "listTitle": "景俊海在“创业奋斗‘就’在吉林”大学生就业创业座谈会上向高校毕业生及各类人才发出邀请",
+    "listPublishDate": "2024-01-04",
+    "sourceOrder": 1108
+  }
+}

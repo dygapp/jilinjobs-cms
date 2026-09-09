@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122364",
+    "contentId": "28737783122364",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122364"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部人保部详解国家促进高校毕业生就业政策",
+    "source": "",
+    "publishDate": "2009-05-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部人保部详解国家促进高校毕业生就业政策</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-5-6 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 从教育部获悉，教育部、人力资源和社会保障部联合出台《国家促进普通高校毕业生就业政策百问》，对毕业生关心的政策问题作了详细全面的解答。 </font></p> <p><font size=\"2\">　　国家促进普通高校毕业生就业政策百问涉及高校毕业生关心的100个问题，政策内容包括：鼓励和引导高校毕业生到城乡基层就业，鼓励高校毕业生应征入伍报效祖国，积极聘用高校毕业生参与国家和地方重大科研项目，鼓励和支持高校毕业生到中小企业就业和自主创业等。 </font></p> <p><font size=\"2\">&nbsp;</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：中国教育新闻网—中国教育报<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "dab8b8596cc5dc00b9c7ce9b907d42a8a80c993da1c623bb83d02c05be22a610",
+  "evidence": {
+    "listPage": 177,
+    "listTitle": "教育部人保部详解国家促进高校毕业生就业政策",
+    "listPublishDate": "2009-05-06",
+    "sourceOrder": 1766,
+    "detailPublishDate": "2009-05-06"
+  }
+}

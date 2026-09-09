@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:aa3a5a8c992ef4ff921cf8da449841bc6168b6841fae8a6fa8483ae6a23ac2d6",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/g6PYPIdHeWwykrY5OJmdVQ",
+    "url": "https://mp.weixin.qq.com/s/g6PYPIdHeWwykrY5OJmdVQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "寒假促就业暖心行动 | 长春电子科技学院2026届毕业生寒假专场网络招聘会",
+    "source": "",
+    "publishDate": "2026-01-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/g6PYPIdHeWwykrY5OJmdVQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "d573cacc9866de2c81f4609da3cf9fbab031842cbc34e868eebb2a24ae8817ef",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "寒假促就业暖心行动 | 长春电子科技学院2026届毕业生寒假专场网络招聘会",
+    "listPublishDate": "2026-01-15",
+    "sourceOrder": 106
+  }
+}

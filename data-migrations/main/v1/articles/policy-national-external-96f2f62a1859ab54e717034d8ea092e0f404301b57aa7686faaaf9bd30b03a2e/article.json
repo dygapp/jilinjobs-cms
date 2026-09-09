@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-national:external:96f2f62a1859ab54e717034d8ea092e0f404301b57aa7686faaaf9bd30b03a2e",
+    "contentId": null,
+    "typeCode": "policy-national",
+    "detailPath": "/srcsite/A15/s3265/202211/t20221115_991578.html",
+    "url": "http://www.moe.gov.cn/srcsite/A15/s3265/202211/t20221115_991578.html?eqid=db21ff7c002af3cc000000036429945d"
+  },
+  "target": {
+    "columnAlias": "policy-national",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "教育部关于做好2023届全国普通高校毕业生就业创业工作的通知",
+    "source": "",
+    "publishDate": "2023-06-14",
+    "bodyHtml": "",
+    "externalUrl": "http://www.moe.gov.cn/srcsite/A15/s3265/202211/t20221115_991578.html?eqid=db21ff7c002af3cc000000036429945d"
+  },
+  "resources": [],
+  "sourceFingerprint": "c9fc4013c2f802dd7cfa67d8b7c7fad38d09b8e371b23c137039febcb37da944",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "教育部关于做好2023届全国普通高校毕业生就业创业工作的通知",
+    "listPublishDate": "2023-06-14",
+    "sourceOrder": 9
+  }
+}

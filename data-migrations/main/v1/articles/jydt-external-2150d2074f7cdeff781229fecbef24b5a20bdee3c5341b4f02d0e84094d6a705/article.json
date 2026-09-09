@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2150d2074f7cdeff781229fecbef24b5a20bdee3c5341b4f02d0e84094d6a705",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/vvKZui-ghwdde-gWZipNFw",
+    "url": "https://mp.weixin.qq.com/s/vvKZui-ghwdde-gWZipNFw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务新医药产业高校毕业生留吉就业创业专场招聘活动在白城举办",
+    "source": "",
+    "publishDate": "2024-05-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vvKZui-ghwdde-gWZipNFw"
+  },
+  "resources": [],
+  "sourceFingerprint": "4a565538e1c0bcb831d1d14b44f7a5ad7778465d1ce4f29577c8e9163c01db17",
+  "evidence": {
+    "listPage": 106,
+    "listTitle": "服务新医药产业高校毕业生留吉就业创业专场招聘活动在白城举办",
+    "listPublishDate": "2024-05-13",
+    "sourceOrder": 1055
+  }
+}

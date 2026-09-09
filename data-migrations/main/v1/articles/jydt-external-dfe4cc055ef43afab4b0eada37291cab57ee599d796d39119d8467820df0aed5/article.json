@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:dfe4cc055ef43afab4b0eada37291cab57ee599d796d39119d8467820df0aed5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/v_Ekm4bx8xGk8jv74HjrEw",
+    "url": "https://mp.weixin.qq.com/s/v_Ekm4bx8xGk8jv74HjrEw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学校长韩业一行赴企业开展“访企拓岗”专项行动",
+    "source": "",
+    "publishDate": "2025-06-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/v_Ekm4bx8xGk8jv74HjrEw"
+  },
+  "resources": [],
+  "sourceFingerprint": "a07fd4fef90d7a53cb8f4bc5b4e5043706100cfb413f6992910bde8664c8a8a7",
+  "evidence": {
+    "listPage": 81,
+    "listTitle": "长春大学校长韩业一行赴企业开展“访企拓岗”专项行动",
+    "listPublishDate": "2025-06-16",
+    "sourceOrder": 809
+  }
+}

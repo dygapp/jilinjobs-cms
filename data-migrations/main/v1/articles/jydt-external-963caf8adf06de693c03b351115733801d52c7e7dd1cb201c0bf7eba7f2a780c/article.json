@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:963caf8adf06de693c03b351115733801d52c7e7dd1cb201c0bf7eba7f2a780c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/okpT2A-i2akgkI1VhWBNew",
+    "url": "https://mp.weixin.qq.com/s/okpT2A-i2akgkI1VhWBNew"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春汽车职业技术大学与零跑汽车有限公司首届“领跑者”订单班正式启动",
+    "source": "",
+    "publishDate": "2026-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/okpT2A-i2akgkI1VhWBNew"
+  },
+  "resources": [],
+  "sourceFingerprint": "a3bcacd8dbcdf7e57e884c1d18e7722f8ded5fb859f68e83b10253aae7714598",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "长春汽车职业技术大学与零跑汽车有限公司首届“领跑者”订单班正式启动",
+    "listPublishDate": "2026-05-15",
+    "sourceOrder": 179
+  }
+}

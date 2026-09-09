@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:74dd35f0cbc3f47d1e51b918fd34780f90071eceaa41444070ff690c8a2405df",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kDM9DtP9eYglDV30kqdgnQ",
+    "url": "https://mp.weixin.qq.com/s/kDM9DtP9eYglDV30kqdgnQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "设计视界|访企拓岗促就业，协同育人谋共赢——吉林艺术学院走进长春文旅集团",
+    "source": "",
+    "publishDate": "2025-05-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kDM9DtP9eYglDV30kqdgnQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "2714eb8a8dc7076f73cef0f53e97a19edaf3c9bbd43eebce50df86d8dbb7bf9f",
+  "evidence": {
+    "listPage": 89,
+    "listTitle": "设计视界|访企拓岗促就业，协同育人谋共赢——吉林艺术学院走进长春文旅集团",
+    "listPublishDate": "2025-05-19",
+    "sourceOrder": 884
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:829d2cc86ca512b82dfc8eaa70d3bc08c1fedb50e3e883114699f7eb9cc20864",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/hjXi8cacD2juJIXXyv0K9g",
+    "url": "https://mp.weixin.qq.com/s/hjXi8cacD2juJIXXyv0K9g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院赴云图信息开展访企拓岗专项活动",
+    "source": "",
+    "publishDate": "2026-03-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/hjXi8cacD2juJIXXyv0K9g"
+  },
+  "resources": [],
+  "sourceFingerprint": "6179dd8007fff4bb6b4635f55e4611c731a6a40fd69804eac6c1a343e2136718",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "长春科技学院赴云图信息开展访企拓岗专项活动",
+    "listPublishDate": "2026-03-31",
+    "sourceOrder": 338
+  }
+}

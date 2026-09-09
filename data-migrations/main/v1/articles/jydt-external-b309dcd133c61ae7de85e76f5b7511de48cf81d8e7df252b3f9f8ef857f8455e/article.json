@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b309dcd133c61ae7de85e76f5b7511de48cf81d8e7df252b3f9f8ef857f8455e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/EXUsNhxcFu8y8OAbE1CpPg",
+    "url": "https://mp.weixin.qq.com/s/EXUsNhxcFu8y8OAbE1CpPg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业大学党委书记佟轶材带队开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-05-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/EXUsNhxcFu8y8OAbE1CpPg"
+  },
+  "resources": [],
+  "sourceFingerprint": "184dda7f326c9e5bffe3b19f31cab6a5a1dfd65e2d6d2ca01cd18337c32ba552",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "吉林农业大学党委书记佟轶材带队开展访企拓岗促就业专项行动",
+    "listPublishDate": "2026-05-22",
+    "sourceOrder": 153
+  }
+}

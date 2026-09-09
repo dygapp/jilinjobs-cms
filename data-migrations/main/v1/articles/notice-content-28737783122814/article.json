@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122814",
+    "contentId": "28737783122814",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122814"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发《开展2016年全国高校就业创业指导课程特色教材课题研究工作》的通知",
+    "source": "",
+    "publishDate": "2016-04-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于转发《开展2016年全国高校就业创业指导课程特色教材课题研究工作》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2016-4-6 15:01:31</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img src=\"migration-resource://bb7e327bac99c7917ad0ea4de14f35e1002eb3d846752099516ca55f77c38857\" title=\"111.jpg\"></p><p style=\"text-align: center;\"><br></p><p><br></p><p><br></p><p><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        <a href=\"../Common/DownLoadFile.aspx?fileid=75d99f2e-6612-4c51-af46-4cd3bcb07433\">关于开展2016年全国高校就业创业指导课程特色教材课题研究工作的通知.rar</a><br>\n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359555170865262507993078.jpg",
+      "originalReference": "/chistory/cms/imgs/6359555170865262507993078.jpg",
+      "token": "migration-resource://bb7e327bac99c7917ad0ea4de14f35e1002eb3d846752099516ca55f77c38857",
+      "snapshotPath": "assets/bb7e327bac99c7917ad0ea4de14f35e1002eb3d846752099516ca55f77c38857.jpg",
+      "sha256": "bb7e327bac99c7917ad0ea4de14f35e1002eb3d846752099516ca55f77c38857",
+      "contentType": "image/jpeg",
+      "sizeBytes": 265063
+    }
+  ],
+  "sourceFingerprint": "1a991f6c6f9769963666f85605c451189ce1fc501034398e8c4c67b4c623ade7",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "关于转发《开展2016年全国高校就业创业指导课程特色教材课题研究工作》的通知",
+    "listPublishDate": "2016-04-06",
+    "sourceOrder": 253,
+    "detailPublishDate": "2016-04-06"
+  }
+}

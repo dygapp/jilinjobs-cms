@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:dd184c3415d0fcc9ecbaadf26ba91e7f0c346265db718593f1a5d9d3b29eba65",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/vh512/share/12300159",
+    "url": "https://h.xinhuaxmt.com/vh512/share/12300159?d=134daea&channel=weixin&time=1733100205403"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "全国高校2025届毕业生教育人才招聘会在长春举行",
+    "source": "",
+    "publishDate": "2024-12-01",
+    "bodyHtml": "",
+    "externalUrl": "https://h.xinhuaxmt.com/vh512/share/12300159?d=134daea&channel=weixin&time=1733100205403"
+  },
+  "resources": [],
+  "sourceFingerprint": "83b071c12ea17d97d5a04355b34e2e97d4cb2550f3585a0d3d36c8c46af06bac",
+  "evidence": {
+    "listPage": 101,
+    "listTitle": "全国高校2025届毕业生教育人才招聘会在长春举行",
+    "listPublishDate": "2024-12-01",
+    "sourceOrder": 1008
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b54ce2909dabe5761ff168d671a9da77a952127094c8beecdcaa1aa0665433af",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/uXj1XWe4Ao9JbYEBpEnGuQ",
+    "url": "https://mp.weixin.qq.com/s/uXj1XWe4Ao9JbYEBpEnGuQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春中医药大学召开就业工作总结表彰大会暨2025年就业工作部署会",
+    "source": "",
+    "publishDate": "2025-06-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/uXj1XWe4Ao9JbYEBpEnGuQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "bc0a985d826fcfbcfabd9e5b9444727db4bbb21e7d05851aecd08cbb822a04b5",
+  "evidence": {
+    "listPage": 84,
+    "listTitle": "长春中医药大学召开就业工作总结表彰大会暨2025年就业工作部署会",
+    "listPublishDate": "2025-06-11",
+    "sourceOrder": 831
+  }
+}

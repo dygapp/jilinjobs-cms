@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:02590f91bbbaad794be1087af6c2180a3118a6b513010a927407341d7428460c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/8-vzpn1nGAIV6V2aLG4wkw",
+    "url": "https://mp.weixin.qq.com/s/8-vzpn1nGAIV6V2aLG4wkw?scene=25&sessionid=-1364954981"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学举办“医路药途，护梦启航”2025届 “医药护”毕业生专场招聘会",
+    "source": "",
+    "publishDate": "2025-05-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/8-vzpn1nGAIV6V2aLG4wkw?scene=25&sessionid=-1364954981"
+  },
+  "resources": [],
+  "sourceFingerprint": "e6fd1e514ba55e495fd227d009fa3d74b4accf6b8cab7d849dd4e36be60a7ecd",
+  "evidence": {
+    "listPage": 92,
+    "listTitle": "延边大学举办“医路药途，护梦启航”2025届 “医药护”毕业生专场招聘会",
+    "listPublishDate": "2025-05-06",
+    "sourceOrder": 915
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:175831154442240",
+    "contentId": "175831154442240",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=175831154442240"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "东北电力大学召开就业工作推进会",
+    "source": "东北电力大学",
+    "publishDate": "2023-03-31",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">3</span></span></span><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">月7日下午，东北电力大学召开2023届毕业生就业工作推进会，各学院党委书记、主管学生工作领导、毕业年级辅导员和招生就业处有关人员参加会议。会议由学校党委常委、统战部部长、招生就业处处长许波主持。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">会上，各学院主管学生工作领导分别汇报学院推进2023届毕业生就业工作的具体做法。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">许波首先介绍了学校近期就业工作的重点举措，结合当前毕业生阶段性就业情况，分析研判就业形势，提出毕业生就业工作中存在的问题，并对下一阶段工作进行全面部署：一是统一思想，提高政治站位，推动“一把手工程”落实落地。二是全面启动“春季促就业攻坚行动”，举办春季校园专场招聘会、开展访企拓岗促就业专项行动和就业困难毕业生帮扶等重点工作。三是校院联动举办“2023年就业创业宣传月”系列活动，做好就业创业政策宣传，开展形式多样的“就业育人”主题教育活动。最后，对2023届毕业生就业工作提出明确要求，要抓好责任落实，做好就业指导和服务工作，加强招聘活动的组织管理，打通就业信息精准发布渠道，强化就业风险防范意识，全力以赴做好2023届毕业生就业各项工作。</span></span></span></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "0a7d53527fdf943a57799553aaf172da86fec2063b95e00c5e00c11a2a3e9577",
+  "evidence": {
+    "listPage": 115,
+    "listTitle": "东北电力大学召开就业工作推进会",
+    "listPublishDate": "2023-03-31",
+    "sourceOrder": 1149,
+    "detailPublishDate": "2023-03-31"
+  }
+}

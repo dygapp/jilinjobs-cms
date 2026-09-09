@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:485836b39c9ba19f767b6273c1b08c60655e4cb580881e577e785081083b13ef",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/vjUCcY_KSZxrVN4jnQforQ",
+    "url": "https://mp.weixin.qq.com/s/vjUCcY_KSZxrVN4jnQforQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学举办中国长江三峡集团有限公司2026届春季招聘会和2027届“三峡班”招聘宣讲会",
+    "source": "",
+    "publishDate": "2026-04-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vjUCcY_KSZxrVN4jnQforQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "97a1f83fc8452e3709522810bb9b147bc0f6c4dbc6a13b7bf6b73703ef7bad3e",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "东北电力大学举办中国长江三峡集团有限公司2026届春季招聘会和2027届“三峡班”招聘宣讲会",
+    "listPublishDate": "2026-04-16",
+    "sourceOrder": 281
+  }
+}

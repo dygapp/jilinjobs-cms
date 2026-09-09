@@ -1,0 +1,121 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:218049196097536",
+    "contentId": "218049196097536",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=218049196097536"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于重点群体和自主就业退役士兵创业就业税收政策有关执行问题的公告",
+    "source": "",
+    "publishDate": "2024-04-18",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://c85ad655e801e996f87e300dd93d3634556c51fab3b87e7dd30d0ce9b761af6b\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://de49bd48988e761cc3cafd576bba6c12077b62d2358c75014af97478c67b56b6\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://df413f8d7cdc52ae4cbc84cd2fd3caf3c735fc298dfd7434b1c2b22f4c6db8f5\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://4b58a7203b6221a73392e37466e01d7995ade1fd6f6f48fc545c46de306b2e35\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://b7aa9f01b1464a852ae453671d30d85c29633b58969eed74e4e91834ef960256\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://84fa49fb8fb1a4ad7e30dddb56bb395666b652db1e468e928b8594ae166e62ad\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://3d12d3615fc004ca6da37c06897763f90a7e750eaba8b5f37568aa9b6b5f2bc5\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://6cecca988d7624b3b3e57a269640e1ac23f3b70e00943cf94a6708bf586e7497\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://58018449e5027ac4d2b6d2a9575be8d0584798ec1692e73da7b2d3a46c2f6913\" width=\"900\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-18/1cd0d9b9-f849-4703-a09c-e0b7b684b3d3.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-18/1cd0d9b9-f849-4703-a09c-e0b7b684b3d3.jpg",
+      "token": "migration-resource://c85ad655e801e996f87e300dd93d3634556c51fab3b87e7dd30d0ce9b761af6b",
+      "snapshotPath": "assets/c85ad655e801e996f87e300dd93d3634556c51fab3b87e7dd30d0ce9b761af6b.jpg",
+      "sha256": "c85ad655e801e996f87e300dd93d3634556c51fab3b87e7dd30d0ce9b761af6b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-18/abf42511-f84c-417a-aeae-21ab28d06bdd.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-18/abf42511-f84c-417a-aeae-21ab28d06bdd.jpg",
+      "token": "migration-resource://de49bd48988e761cc3cafd576bba6c12077b62d2358c75014af97478c67b56b6",
+      "snapshotPath": "assets/de49bd48988e761cc3cafd576bba6c12077b62d2358c75014af97478c67b56b6.jpg",
+      "sha256": "de49bd48988e761cc3cafd576bba6c12077b62d2358c75014af97478c67b56b6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-18/5e1849f9-365e-4fab-8617-5d8ef848912d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-18/5e1849f9-365e-4fab-8617-5d8ef848912d.jpg",
+      "token": "migration-resource://df413f8d7cdc52ae4cbc84cd2fd3caf3c735fc298dfd7434b1c2b22f4c6db8f5",
+      "snapshotPath": "assets/df413f8d7cdc52ae4cbc84cd2fd3caf3c735fc298dfd7434b1c2b22f4c6db8f5.jpg",
+      "sha256": "df413f8d7cdc52ae4cbc84cd2fd3caf3c735fc298dfd7434b1c2b22f4c6db8f5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-18/5b70bb64-c823-4b5b-839e-1db84bde7a45.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-18/5b70bb64-c823-4b5b-839e-1db84bde7a45.jpg",
+      "token": "migration-resource://4b58a7203b6221a73392e37466e01d7995ade1fd6f6f48fc545c46de306b2e35",
+      "snapshotPath": "assets/4b58a7203b6221a73392e37466e01d7995ade1fd6f6f48fc545c46de306b2e35.jpg",
+      "sha256": "4b58a7203b6221a73392e37466e01d7995ade1fd6f6f48fc545c46de306b2e35",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-18/79fbcad3-61a7-44ca-b53d-04db98e202ee.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-18/79fbcad3-61a7-44ca-b53d-04db98e202ee.jpg",
+      "token": "migration-resource://b7aa9f01b1464a852ae453671d30d85c29633b58969eed74e4e91834ef960256",
+      "snapshotPath": "assets/b7aa9f01b1464a852ae453671d30d85c29633b58969eed74e4e91834ef960256.jpg",
+      "sha256": "b7aa9f01b1464a852ae453671d30d85c29633b58969eed74e4e91834ef960256",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-18/a33dd6d2-dd9f-44a6-9167-6de229ea6995.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-18/a33dd6d2-dd9f-44a6-9167-6de229ea6995.jpg",
+      "token": "migration-resource://84fa49fb8fb1a4ad7e30dddb56bb395666b652db1e468e928b8594ae166e62ad",
+      "snapshotPath": "assets/84fa49fb8fb1a4ad7e30dddb56bb395666b652db1e468e928b8594ae166e62ad.jpg",
+      "sha256": "84fa49fb8fb1a4ad7e30dddb56bb395666b652db1e468e928b8594ae166e62ad",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-18/4174e411-1965-46ae-9bb2-b178c5c0715f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-18/4174e411-1965-46ae-9bb2-b178c5c0715f.jpg",
+      "token": "migration-resource://3d12d3615fc004ca6da37c06897763f90a7e750eaba8b5f37568aa9b6b5f2bc5",
+      "snapshotPath": "assets/3d12d3615fc004ca6da37c06897763f90a7e750eaba8b5f37568aa9b6b5f2bc5.jpg",
+      "sha256": "3d12d3615fc004ca6da37c06897763f90a7e750eaba8b5f37568aa9b6b5f2bc5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-18/8f761b70-ebe9-48ba-84be-427cfe105200.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-18/8f761b70-ebe9-48ba-84be-427cfe105200.jpg",
+      "token": "migration-resource://6cecca988d7624b3b3e57a269640e1ac23f3b70e00943cf94a6708bf586e7497",
+      "snapshotPath": "assets/6cecca988d7624b3b3e57a269640e1ac23f3b70e00943cf94a6708bf586e7497.jpg",
+      "sha256": "6cecca988d7624b3b3e57a269640e1ac23f3b70e00943cf94a6708bf586e7497",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-18/280d3f38-bc1d-48ca-a2f7-61c11124b4ba.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-18/280d3f38-bc1d-48ca-a2f7-61c11124b4ba.jpg",
+      "token": "migration-resource://58018449e5027ac4d2b6d2a9575be8d0584798ec1692e73da7b2d3a46c2f6913",
+      "snapshotPath": "assets/58018449e5027ac4d2b6d2a9575be8d0584798ec1692e73da7b2d3a46c2f6913.jpg",
+      "sha256": "58018449e5027ac4d2b6d2a9575be8d0584798ec1692e73da7b2d3a46c2f6913",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "d450ff60f8f516560b761fd52e1cf95ca564f43ec1f2fd57353773c45fe69cdc",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "关于重点群体和自主就业退役士兵创业就业税收政策有关执行问题的公告",
+    "listPublishDate": "2024-04-18",
+    "sourceOrder": 88,
+    "detailPublishDate": "2024-04-18"
+  }
+}

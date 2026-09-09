@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ea79c2dc9615efba40685dedcfb292fce8f16a89780a22263c77ea438b2dcfc2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/sAGf099iLksBSsHxhROiMg",
+    "url": "https://mp.weixin.qq.com/s/sAGf099iLksBSsHxhROiMg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教融合 共育福祉人才｜长春人文学院与华夏长寿签约启动订单班合作项目",
+    "source": "",
+    "publishDate": "2026-05-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/sAGf099iLksBSsHxhROiMg"
+  },
+  "resources": [],
+  "sourceFingerprint": "4fc758ffa9a0b68c88d467792ad69167c10dad488d4e7e06128fc51476df0cde",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "深化产教融合 共育福祉人才｜长春人文学院与华夏长寿签约启动订单班合作项目",
+    "listPublishDate": "2026-05-28",
+    "sourceOrder": 131
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122526",
+    "contentId": "28737783122526",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122526"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林农业科技学院举办 “优秀校友进校园专题访谈”活动",
+    "source": "培训部",
+    "publishDate": "2021-03-31",
+    "bodyHtml": "\n                        \n\n\n\n\n<p>为培养在校生就业创业意识，引导学生尽早树立生涯目标，3月29日吉林农业科技学院举办了“优秀校友进校园专题访谈”活动。学校党委副书记刘兆国、招生就业处处长张大德、各学院负责人、创新创业导师出席了活动。</p>\n<p>本次访谈活动邀请到陈凯和张新春两位优秀校友作为访谈嘉宾。他们通过分享个人的创业经历，启发学生的创业思维，引导学生们在就业、创业路上要提早规划，准确定位；同时要坚毅果敢，不怕失败，在不断的挫折中凝练成功的品格。对于想要就业的学生，两位校友还从企业出发，分享了自己的用人标准，强调人品和细节对于成功的重要性，并鼓励学生要对母校有感恩之心，要对社会有爱心。访谈结束后，两位校友还与现场观众进行了互动，解答了学生对创业、就业过程中的困惑和问题，得到学生们的一致认可。</p>\n<p>此次活动让学生们有了更加明晰的自我认知和职业认知，为学生们种下了职业规划的种子，帮助他们更有信心地面向未来，更好地实现人生理想。</p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "29b5dcc9ef784d8ed359483e4907e0b3da6b6cecff6d380b699b9d6a680398e2",
+  "evidence": {
+    "listPage": 137,
+    "listTitle": "吉林农业科技学院举办 “优秀校友进校园专题访谈”活动",
+    "listPublishDate": "2021-03-31",
+    "sourceOrder": 1363,
+    "detailPublishDate": "2021-03-31"
+  }
+}

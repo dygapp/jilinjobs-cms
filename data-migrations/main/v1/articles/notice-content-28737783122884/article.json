@@ -1,0 +1,131 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122884",
+    "contentId": "28737783122884",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122884"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展2013年全省普通高校毕业生就业工作评估专家进校实地考察的通知",
+    "source": "",
+    "publishDate": "2013-09-28",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于开展2013年全省普通高校毕业生就业工作评估专家进校实地考察的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2013-9-28 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img src=\"migration-resource://52dc1c8dcbbcb66135c21b9a8b2cd22e557e0f6b61aea7eda7919d1acdbcff56\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://92576334a4e5f0963a4db5d41bd786cb85568d528e974aac5a4bf4b1dbd8eb8d\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://11a071357ded4bfe8078b5c5efadf7b444b7ad7f4660bc68b262f826bcab0ac5\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://4056dbcb69095ef6b003ef589ee1a116eebc08e834a93ec8e575544e3f1417b9\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://5a0f8e5bb4eb74953b68c5ae9ad191490f0eaaa5a5e17d9a0e188c9e85fc8328\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://ddc563bd8a16ac5e6a5710c24e1623c981827759b8a14453ae508ac89a74ef22\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://2c9edbe0dfaebdd7c9300810f0302d5da4359215eef9187eee4c68ab41aea31f\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://387a9e585313ebe3fb1344e4cbc75f6c7faf9e9b24c8d41631d1528042a9b4d5\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://3c67168c67e150e8a34ef6c7c409e1777d1ef72e91c6759518d95dd1771c4a9d\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://aa853be7eeebf98d046a4c6f1ec365804898a11d27f0a0aef2931369cefe1d7f\" border=\"0\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130928052851832.jpg",
+      "originalReference": "/chistory/cms/imgs/20130928052851832.jpg",
+      "token": "migration-resource://52dc1c8dcbbcb66135c21b9a8b2cd22e557e0f6b61aea7eda7919d1acdbcff56",
+      "snapshotPath": "assets/52dc1c8dcbbcb66135c21b9a8b2cd22e557e0f6b61aea7eda7919d1acdbcff56.jpg",
+      "sha256": "52dc1c8dcbbcb66135c21b9a8b2cd22e557e0f6b61aea7eda7919d1acdbcff56",
+      "contentType": "image/jpeg",
+      "sizeBytes": 72420
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130928052905603.jpg",
+      "originalReference": "/chistory/cms/imgs/20130928052905603.jpg",
+      "token": "migration-resource://92576334a4e5f0963a4db5d41bd786cb85568d528e974aac5a4bf4b1dbd8eb8d",
+      "snapshotPath": "assets/92576334a4e5f0963a4db5d41bd786cb85568d528e974aac5a4bf4b1dbd8eb8d.jpg",
+      "sha256": "92576334a4e5f0963a4db5d41bd786cb85568d528e974aac5a4bf4b1dbd8eb8d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93328
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130930015126535.jpg",
+      "originalReference": "/chistory/cms/imgs/20130930015126535.jpg",
+      "token": "migration-resource://11a071357ded4bfe8078b5c5efadf7b444b7ad7f4660bc68b262f826bcab0ac5",
+      "snapshotPath": "assets/11a071357ded4bfe8078b5c5efadf7b444b7ad7f4660bc68b262f826bcab0ac5.jpg",
+      "sha256": "11a071357ded4bfe8078b5c5efadf7b444b7ad7f4660bc68b262f826bcab0ac5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 86828
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130930015136806.jpg",
+      "originalReference": "/chistory/cms/imgs/20130930015136806.jpg",
+      "token": "migration-resource://4056dbcb69095ef6b003ef589ee1a116eebc08e834a93ec8e575544e3f1417b9",
+      "snapshotPath": "assets/4056dbcb69095ef6b003ef589ee1a116eebc08e834a93ec8e575544e3f1417b9.jpg",
+      "sha256": "4056dbcb69095ef6b003ef589ee1a116eebc08e834a93ec8e575544e3f1417b9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 83536
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130930015142569.jpg",
+      "originalReference": "/chistory/cms/imgs/20130930015142569.jpg",
+      "token": "migration-resource://5a0f8e5bb4eb74953b68c5ae9ad191490f0eaaa5a5e17d9a0e188c9e85fc8328",
+      "snapshotPath": "assets/5a0f8e5bb4eb74953b68c5ae9ad191490f0eaaa5a5e17d9a0e188c9e85fc8328.jpg",
+      "sha256": "5a0f8e5bb4eb74953b68c5ae9ad191490f0eaaa5a5e17d9a0e188c9e85fc8328",
+      "contentType": "image/jpeg",
+      "sizeBytes": 85932
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130930042509517.jpg",
+      "originalReference": "/chistory/cms/imgs/20130930042509517.jpg",
+      "token": "migration-resource://ddc563bd8a16ac5e6a5710c24e1623c981827759b8a14453ae508ac89a74ef22",
+      "snapshotPath": "assets/ddc563bd8a16ac5e6a5710c24e1623c981827759b8a14453ae508ac89a74ef22.jpg",
+      "sha256": "ddc563bd8a16ac5e6a5710c24e1623c981827759b8a14453ae508ac89a74ef22",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93572
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130930042527254.jpg",
+      "originalReference": "/chistory/cms/imgs/20130930042527254.jpg",
+      "token": "migration-resource://2c9edbe0dfaebdd7c9300810f0302d5da4359215eef9187eee4c68ab41aea31f",
+      "snapshotPath": "assets/2c9edbe0dfaebdd7c9300810f0302d5da4359215eef9187eee4c68ab41aea31f.jpg",
+      "sha256": "2c9edbe0dfaebdd7c9300810f0302d5da4359215eef9187eee4c68ab41aea31f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92843
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130930015200892.jpg",
+      "originalReference": "/chistory/cms/imgs/20130930015200892.jpg",
+      "token": "migration-resource://387a9e585313ebe3fb1344e4cbc75f6c7faf9e9b24c8d41631d1528042a9b4d5",
+      "snapshotPath": "assets/387a9e585313ebe3fb1344e4cbc75f6c7faf9e9b24c8d41631d1528042a9b4d5.jpg",
+      "sha256": "387a9e585313ebe3fb1344e4cbc75f6c7faf9e9b24c8d41631d1528042a9b4d5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81892
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130928052942813.jpg",
+      "originalReference": "/chistory/cms/imgs/20130928052942813.jpg",
+      "token": "migration-resource://3c67168c67e150e8a34ef6c7c409e1777d1ef72e91c6759518d95dd1771c4a9d",
+      "snapshotPath": "assets/3c67168c67e150e8a34ef6c7c409e1777d1ef72e91c6759518d95dd1771c4a9d.jpg",
+      "sha256": "3c67168c67e150e8a34ef6c7c409e1777d1ef72e91c6759518d95dd1771c4a9d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 76237
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130928052947113.jpg",
+      "originalReference": "/chistory/cms/imgs/20130928052947113.jpg",
+      "token": "migration-resource://aa853be7eeebf98d046a4c6f1ec365804898a11d27f0a0aef2931369cefe1d7f",
+      "snapshotPath": "assets/aa853be7eeebf98d046a4c6f1ec365804898a11d27f0a0aef2931369cefe1d7f.jpg",
+      "sha256": "aa853be7eeebf98d046a4c6f1ec365804898a11d27f0a0aef2931369cefe1d7f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67554
+    }
+  ],
+  "sourceFingerprint": "7f118bf89d2e1ce2fb8840e740c9e70c93551a67034228d26d46926921a463bc",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "关于开展2013年全省普通高校毕业生就业工作评估专家进校实地考察的通知",
+    "listPublishDate": "2013-09-28",
+    "sourceOrder": 344,
+    "detailPublishDate": "2013-09-28"
+  }
+}

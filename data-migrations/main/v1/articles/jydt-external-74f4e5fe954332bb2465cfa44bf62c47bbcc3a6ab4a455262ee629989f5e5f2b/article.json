@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:74f4e5fe954332bb2465cfa44bf62c47bbcc3a6ab4a455262ee629989f5e5f2b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/gIqmoIuS6f9X8H-luv2_Yg",
+    "url": "https://mp.weixin.qq.com/s/gIqmoIuS6f9X8H-luv2_Yg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春金融高等专科学校校领导带队赴北科建长春北湖科技园开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2025-05-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gIqmoIuS6f9X8H-luv2_Yg"
+  },
+  "resources": [],
+  "sourceFingerprint": "d2e4a3f03fa61d3cae5bc2b7a4255af2e4d76efbd91f46073a922c1c400e4831",
+  "evidence": {
+    "listPage": 89,
+    "listTitle": "长春金融高等专科学校校领导带队赴北科建长春北湖科技园开展访企拓岗专项行动",
+    "listPublishDate": "2025-05-19",
+    "sourceOrder": 885
+  }
+}

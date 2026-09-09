@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119984",
+    "contentId": "28737783119984",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119984"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省第二期第四阶段高校创业教师高端培训在浙江义乌举行",
+    "source": "",
+    "publishDate": "2016-05-30",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省第二期第四阶段高校创业教师高端培训在浙江义乌举行</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2016-5-30 14:18:52</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><br></p><p style=\"text-indent:40px\"><span style=\"font-size:20px;font-family:宋体\"></span></p><p style=\"text-indent:40px\"><span style=\"font-size:20px;font-family:宋体\">5</span><span style=\"font-size:20px;font-family:宋体\">月20日-25日，由吉林省教育厅主办，吉林大学承办的吉林省第二期第四阶段高校创业教师高端培训在浙江义乌举行。省教育厅高校学生处调研员陈梅出席结业仪式并讲话，全省39所高校共60名就业创业指导教师参加培训。</span></p><p style=\"text-indent:40px\"><span style=\"font-size:20px;font-family:宋体\">北京万学教育集团联合创始人、全国高校创新创业投资服务联盟副秘书长张强、工信部全国互联网应用创新创业大赛专家委员会主任丘锡彬、北京理工大学高端创业课程主讲教师方铭洋，分别从“高校创业环境与体系构建、大学生创业知识、大学生创业核心能力训练、大学生创业团队的组建、商业系统与企业职能认知、创业项目商业计划的制定、大学生创业融资、高校融资辅助体系、大学生创业项目实施”等四大模块十六大步骤进行深入讲解。学员们还到义创空间、义乌工商职业技术学院创业园、中国网店第一村—义乌青岩刘村进行了实地参观考察学习。</span></p><p style=\"text-indent:40px\"><span style=\"font-size:20px;font-family:宋体\">结业仪式上，省内高校六位学员代表分别围绕“加强吉林省普通高校大众创业万众创新基地建设研究”、“应用型大学实施创新创业教育的发展路径探析”、“点燃大学生创新创业激情，提升大学生创新创业能力”、“当前我国大学生创新创业加速体系构建的思考”、“建设高校“众创空间”推进大学生自主创业”、“大学生创新创业教育课程体系的构建”六个题目进行了精彩的汇报和展示，学员代表分享了培训的收获感受。大家一致认为此次培训接地气、可操作性强，受益匪浅。</span></p><p style=\"text-indent:40px\"><span style=\"font-size:20px;font-family:宋体\"></span><br></p><p style=\"text-indent:40px\"><span style=\"font-size:20px;font-family:宋体\"><br></span></p><p style=\"text-indent: 40px; text-align: center;\"><span style=\"font-size:20px;font-family:宋体\"></span></p><p style=\"text-align: center\"><img src=\"migration-resource://bb460850098f2f12c0c3cce0e9b80547cb4379d03725a8bad23c5958b0aa4515\" style=\"\" title=\"1.JPG\"></p><p><br></p><p style=\"text-align: center\"><img src=\"migration-resource://ba51b970e00f90524020ec6d8cc417742782a77ec21e7cd80a55f819f3db2594\" style=\"\" title=\"2.JPG\"></p><p><br></p><p style=\"text-align: center\"><img src=\"migration-resource://17efad7efdd372c0c52557fe13e6e5a87df685f58da084f2ac6117ccb954899a\" style=\"\" title=\"3.jpg\"></p><p><br></p><p><br></p><p><br></p><p><br></p><p style=\"text-indent: 40px; text-align: center;\"><span style=\"font-size:20px;font-family:宋体\"><br></span><br></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360133803828425009765412.JPG",
+      "originalReference": "/chistory/cms/imgs/6360133803828425009765412.JPG",
+      "token": "migration-resource://bb460850098f2f12c0c3cce0e9b80547cb4379d03725a8bad23c5958b0aa4515",
+      "snapshotPath": "assets/bb460850098f2f12c0c3cce0e9b80547cb4379d03725a8bad23c5958b0aa4515.jpg",
+      "sha256": "bb460850098f2f12c0c3cce0e9b80547cb4379d03725a8bad23c5958b0aa4515",
+      "contentType": "image/jpeg",
+      "sizeBytes": 46095
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360133803840925003493890.JPG",
+      "originalReference": "/chistory/cms/imgs/6360133803840925003493890.JPG",
+      "token": "migration-resource://ba51b970e00f90524020ec6d8cc417742782a77ec21e7cd80a55f819f3db2594",
+      "snapshotPath": "assets/ba51b970e00f90524020ec6d8cc417742782a77ec21e7cd80a55f819f3db2594.jpg",
+      "sha256": "ba51b970e00f90524020ec6d8cc417742782a77ec21e7cd80a55f819f3db2594",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93487
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360133803847175007007216.jpg",
+      "originalReference": "/chistory/cms/imgs/6360133803847175007007216.jpg",
+      "token": "migration-resource://17efad7efdd372c0c52557fe13e6e5a87df685f58da084f2ac6117ccb954899a",
+      "snapshotPath": "assets/17efad7efdd372c0c52557fe13e6e5a87df685f58da084f2ac6117ccb954899a.jpg",
+      "sha256": "17efad7efdd372c0c52557fe13e6e5a87df685f58da084f2ac6117ccb954899a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 105660
+    }
+  ],
+  "sourceFingerprint": "934db071bd0fd56833b47930b4adaf8bda3454e769deb9a458c793cc4c45947c",
+  "evidence": {
+    "listPage": 155,
+    "listTitle": "吉林省第二期第四阶段高校创业教师高端培训在浙江义乌举行",
+    "listPublishDate": "2016-05-30",
+    "sourceOrder": 1544,
+    "detailPublishDate": "2016-05-30"
+  }
+}

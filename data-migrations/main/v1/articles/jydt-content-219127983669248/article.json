@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:219127983669248",
+    "contentId": "219127983669248",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=219127983669248"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春健康职业学院举办“创业奋斗‘就’在吉林” 2024年就业（实习）双选会",
+    "source": "长春健康职业学院",
+    "publishDate": "2024-04-20",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1060\" src=\"migration-resource://b27083c685f5de520fb56fb18f3868e90a27452a4761683c867bf80179f7373c\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1163\" src=\"migration-resource://2d7ebcff6537706ecbe8007183c4091df4d58a462ed302df259da47c09f1f7bc\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1216\" src=\"migration-resource://7c9aafb9be3d50c138ef315f1e20fa78422d7a52203875836f493a07ed3222d3\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1173\" src=\"migration-resource://8be0ddf7d0ea2348f6d5458080fae9ad26d0e7c63f7fca8128232809d842445d\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"713\" src=\"migration-resource://1577dbc88c054c30e8cd11da208b323c309cdfc26749ff191bc9bc728767be75\" width=\"900\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-24/941ecb88-8cfe-481d-9c0b-354f15e5c08a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-24/941ecb88-8cfe-481d-9c0b-354f15e5c08a.jpg",
+      "token": "migration-resource://b27083c685f5de520fb56fb18f3868e90a27452a4761683c867bf80179f7373c",
+      "snapshotPath": "assets/b27083c685f5de520fb56fb18f3868e90a27452a4761683c867bf80179f7373c.jpg",
+      "sha256": "b27083c685f5de520fb56fb18f3868e90a27452a4761683c867bf80179f7373c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 232413
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-24/a26a7fb6-3535-4a4d-868b-2e342b272b2c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-24/a26a7fb6-3535-4a4d-868b-2e342b272b2c.jpg",
+      "token": "migration-resource://2d7ebcff6537706ecbe8007183c4091df4d58a462ed302df259da47c09f1f7bc",
+      "snapshotPath": "assets/2d7ebcff6537706ecbe8007183c4091df4d58a462ed302df259da47c09f1f7bc.jpg",
+      "sha256": "2d7ebcff6537706ecbe8007183c4091df4d58a462ed302df259da47c09f1f7bc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 253670
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-24/8231a38d-3c26-4cf2-a72a-998845426194.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-24/8231a38d-3c26-4cf2-a72a-998845426194.jpg",
+      "token": "migration-resource://7c9aafb9be3d50c138ef315f1e20fa78422d7a52203875836f493a07ed3222d3",
+      "snapshotPath": "assets/7c9aafb9be3d50c138ef315f1e20fa78422d7a52203875836f493a07ed3222d3.jpg",
+      "sha256": "7c9aafb9be3d50c138ef315f1e20fa78422d7a52203875836f493a07ed3222d3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 270109
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-24/2b83d264-143e-4794-836d-2d56e02fe15b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-24/2b83d264-143e-4794-836d-2d56e02fe15b.jpg",
+      "token": "migration-resource://8be0ddf7d0ea2348f6d5458080fae9ad26d0e7c63f7fca8128232809d842445d",
+      "snapshotPath": "assets/8be0ddf7d0ea2348f6d5458080fae9ad26d0e7c63f7fca8128232809d842445d.jpg",
+      "sha256": "8be0ddf7d0ea2348f6d5458080fae9ad26d0e7c63f7fca8128232809d842445d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 237443
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-24/db2e2b2e-a86a-431e-9a98-83e20760371f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-24/db2e2b2e-a86a-431e-9a98-83e20760371f.jpg",
+      "token": "migration-resource://1577dbc88c054c30e8cd11da208b323c309cdfc26749ff191bc9bc728767be75",
+      "snapshotPath": "assets/1577dbc88c054c30e8cd11da208b323c309cdfc26749ff191bc9bc728767be75.jpg",
+      "sha256": "1577dbc88c054c30e8cd11da208b323c309cdfc26749ff191bc9bc728767be75",
+      "contentType": "image/jpeg",
+      "sizeBytes": 143576
+    }
+  ],
+  "sourceFingerprint": "8ba90a6c7d0678ec06cd5f45943e3f3436ed9657e45874b08a82178df6f08fa6",
+  "evidence": {
+    "listPage": 108,
+    "listTitle": "长春健康职业学院举办“创业奋斗‘就’在吉林” 2024年就业（实习）双选会",
+    "listPublishDate": "2024-04-20",
+    "sourceOrder": 1074,
+    "detailPublishDate": "2024-04-20"
+  }
+}

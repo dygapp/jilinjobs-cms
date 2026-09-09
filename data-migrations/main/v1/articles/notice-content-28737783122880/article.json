@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122880",
+    "contentId": "28737783122880",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122880"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发“关于做好2014年度《中国大学生就业》杂志征订工作的通知”的通知",
+    "source": "",
+    "publishDate": "2013-10-24",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发“关于做好2014年度《中国大学生就业》杂志征订工作的通知”的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2013-10-24 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img src=\"migration-resource://e8ebd95c1fae709765383658a4f5f384a77cf06fa14bf25e4b5197ad9221afdf\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://326637b13c06dd9be3e67887a62fcc7a5b733907440b6401950aada1eec6a49d\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://b5635e32ab3381e88b2f98db64fa0f5c388ccf2f0a31e89cff3f93510a2a7677\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://4b28332adecc368920c897e0252f507f2a60956aa89ac67eebfe309f89e7b712\" border=\"0\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131024041829469.jpg",
+      "originalReference": "/chistory/cms/imgs/20131024041829469.jpg",
+      "token": "migration-resource://e8ebd95c1fae709765383658a4f5f384a77cf06fa14bf25e4b5197ad9221afdf",
+      "snapshotPath": "assets/e8ebd95c1fae709765383658a4f5f384a77cf06fa14bf25e4b5197ad9221afdf.jpg",
+      "sha256": "e8ebd95c1fae709765383658a4f5f384a77cf06fa14bf25e4b5197ad9221afdf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 86659
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131024041835268.jpg",
+      "originalReference": "/chistory/cms/imgs/20131024041835268.jpg",
+      "token": "migration-resource://326637b13c06dd9be3e67887a62fcc7a5b733907440b6401950aada1eec6a49d",
+      "snapshotPath": "assets/326637b13c06dd9be3e67887a62fcc7a5b733907440b6401950aada1eec6a49d.jpg",
+      "sha256": "326637b13c06dd9be3e67887a62fcc7a5b733907440b6401950aada1eec6a49d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 49268
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131024041840626.jpg",
+      "originalReference": "/chistory/cms/imgs/20131024041840626.jpg",
+      "token": "migration-resource://b5635e32ab3381e88b2f98db64fa0f5c388ccf2f0a31e89cff3f93510a2a7677",
+      "snapshotPath": "assets/b5635e32ab3381e88b2f98db64fa0f5c388ccf2f0a31e89cff3f93510a2a7677.jpg",
+      "sha256": "b5635e32ab3381e88b2f98db64fa0f5c388ccf2f0a31e89cff3f93510a2a7677",
+      "contentType": "image/jpeg",
+      "sizeBytes": 99715
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131024041844150.jpg",
+      "originalReference": "/chistory/cms/imgs/20131024041844150.jpg",
+      "token": "migration-resource://4b28332adecc368920c897e0252f507f2a60956aa89ac67eebfe309f89e7b712",
+      "snapshotPath": "assets/4b28332adecc368920c897e0252f507f2a60956aa89ac67eebfe309f89e7b712.jpg",
+      "sha256": "4b28332adecc368920c897e0252f507f2a60956aa89ac67eebfe309f89e7b712",
+      "contentType": "image/jpeg",
+      "sizeBytes": 76854
+    }
+  ],
+  "sourceFingerprint": "821f1356a6fdb09f5253faed4cdaa70cfb177161039b432585b4f2b0bcce2fcd",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "转发“关于做好2014年度《中国大学生就业》杂志征订工作的通知”的通知",
+    "listPublishDate": "2013-10-24",
+    "sourceOrder": 341,
+    "detailPublishDate": "2013-10-24"
+  }
+}

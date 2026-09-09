@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122920",
+    "contentId": "28737783122920",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122920"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《关于举办第四届“蓝桥杯”全国软件专业人才设计与创业大赛的通知》的通知",
+    "source": "",
+    "publishDate": "2012-12-31",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《关于举办第四届“蓝桥杯”全国软件专业人才设计与创业大赛的通知》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-12-31 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://be0b49796d4006e33fa3232e861f89665625e5b3834f1260bac7c2c3ef511e89\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://45bf8a7fda899a5866d0e33a3f38226544b6e659ff0b0cabfc84e5c8c94c5e21\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://b1a4222b1d64932f678e65cd7763e30c424039605fdaf38eddfce4511224cdfe\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130106024458632.jpg",
+      "originalReference": "/chistory/cms/imgs/20130106024458632.jpg",
+      "token": "migration-resource://be0b49796d4006e33fa3232e861f89665625e5b3834f1260bac7c2c3ef511e89",
+      "snapshotPath": "assets/be0b49796d4006e33fa3232e861f89665625e5b3834f1260bac7c2c3ef511e89.jpg",
+      "sha256": "be0b49796d4006e33fa3232e861f89665625e5b3834f1260bac7c2c3ef511e89",
+      "contentType": "image/jpeg",
+      "sizeBytes": 87211
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121231234503595.jpg",
+      "originalReference": "/chistory/cms/imgs/20121231234503595.jpg",
+      "token": "migration-resource://45bf8a7fda899a5866d0e33a3f38226544b6e659ff0b0cabfc84e5c8c94c5e21",
+      "snapshotPath": "assets/45bf8a7fda899a5866d0e33a3f38226544b6e659ff0b0cabfc84e5c8c94c5e21.jpg",
+      "sha256": "45bf8a7fda899a5866d0e33a3f38226544b6e659ff0b0cabfc84e5c8c94c5e21",
+      "contentType": "image/jpeg",
+      "sizeBytes": 83420
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121231234512730.jpg",
+      "originalReference": "/chistory/cms/imgs/20121231234512730.jpg",
+      "token": "migration-resource://b1a4222b1d64932f678e65cd7763e30c424039605fdaf38eddfce4511224cdfe",
+      "snapshotPath": "assets/b1a4222b1d64932f678e65cd7763e30c424039605fdaf38eddfce4511224cdfe.jpg",
+      "sha256": "b1a4222b1d64932f678e65cd7763e30c424039605fdaf38eddfce4511224cdfe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82120
+    }
+  ],
+  "sourceFingerprint": "93ce2b27854ebfa59bf958d3f7795ef9ea5da7e2bbf9d09eb0cf17d160db3874",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "转发《关于举办第四届“蓝桥杯”全国软件专业人才设计与创业大赛的通知》的通知",
+    "listPublishDate": "2012-12-31",
+    "sourceOrder": 371,
+    "detailPublishDate": "2012-12-31"
+  }
+}

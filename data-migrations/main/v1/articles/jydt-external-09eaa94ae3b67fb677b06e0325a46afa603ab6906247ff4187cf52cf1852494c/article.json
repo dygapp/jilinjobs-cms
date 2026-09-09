@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:09eaa94ae3b67fb677b06e0325a46afa603ab6906247ff4187cf52cf1852494c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1025/5126.htm",
+    "url": "https://www.jlemcc.edu.cn/info/1025/5126.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "精准对接产业需求 全力护航留省就业——吉林省经济管理干部学院赴珲春海关开展“访企拓岗促就业”专项行动",
+    "source": "",
+    "publishDate": "2026-04-30",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlemcc.edu.cn/info/1025/5126.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "544673c6e214efa79367211f615ae046b8c4a45e5f1f5d76e6c42b363d441611",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "精准对接产业需求 全力护航留省就业——吉林省经济管理干部学院赴珲春海关开展“访企拓岗促就业”专项行动",
+    "listPublishDate": "2026-04-30",
+    "sourceOrder": 219
+  }
+}

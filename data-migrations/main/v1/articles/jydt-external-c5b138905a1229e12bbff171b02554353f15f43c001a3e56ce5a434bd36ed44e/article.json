@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c5b138905a1229e12bbff171b02554353f15f43c001a3e56ce5a434bd36ed44e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1003/9742.htm",
+    "url": "https://news.ccsfu.edu.cn/info/1003/9742.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "需求导向培养见实效 融合创新举措结硕果——长春师范大学举行2024年国际化英汉双语实习就业双选会",
+    "source": "",
+    "publishDate": "2024-04-29",
+    "bodyHtml": "",
+    "externalUrl": "https://news.ccsfu.edu.cn/info/1003/9742.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "b2a745f90528bac2ca62b696472b340d99b5c088652f83f32d88009f2c664ed9",
+  "evidence": {
+    "listPage": 107,
+    "listTitle": "需求导向培养见实效 融合创新举措结硕果——长春师范大学举行2024年国际化英汉双语实习就业双选会",
+    "listPublishDate": "2024-04-29",
+    "sourceOrder": 1064
+  }
+}

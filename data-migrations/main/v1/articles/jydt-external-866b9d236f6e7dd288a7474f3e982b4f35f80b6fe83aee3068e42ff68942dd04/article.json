@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:866b9d236f6e7dd288a7474f3e982b4f35f80b6fe83aee3068e42ff68942dd04",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/RcyUgz8rlRwi595iI5vyTg",
+    "url": "https://mp.weixin.qq.com/s/RcyUgz8rlRwi595iI5vyTg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化市委书记孙简到通化师范学院作就业创业报告",
+    "source": "",
+    "publishDate": "2025-03-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/RcyUgz8rlRwi595iI5vyTg"
+  },
+  "resources": [],
+  "sourceFingerprint": "794ce028826f6a77cdcaeb8e3d2737bec7f06dc519b51d299c13d414361ea2f6",
+  "evidence": {
+    "listPage": 99,
+    "listTitle": "通化市委书记孙简到通化师范学院作就业创业报告",
+    "listPublishDate": "2025-03-13",
+    "sourceOrder": 986
+  }
+}

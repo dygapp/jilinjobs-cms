@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122976",
+    "contentId": "28737783122976",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122976"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《关于开展“大学生就业创业优秀论文征文评比活动”的通知》的通知",
+    "source": "",
+    "publishDate": "2011-11-28",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《关于开展“大学生就业创业优秀论文征文评比活动”的通知》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-28 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://b26ff01cdcf0b7b382220b8e93e3143f616078625dbaeba3bfc6a562c963286d\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://ddb3d2ef67ff78bfeecb5dad905da160c06846330482932b428ba669a2d3a0e4\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://d885310dc8dd3cdb9ea3ad5a7f3d30796013794fd19e41351b49b4fb4db7e923\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://f63640e4ed8b8fab936fb83a648a216d28ecab7d09ef21a2314d75577faa6ca7\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://ed9b0fdd84a0dc8b22464622a036cbd02918f1345265c428d115c343e1c9ab28\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111128101915491.jpg",
+      "originalReference": "/chistory/cms/imgs/20111128101915491.jpg",
+      "token": "migration-resource://b26ff01cdcf0b7b382220b8e93e3143f616078625dbaeba3bfc6a562c963286d",
+      "snapshotPath": "assets/b26ff01cdcf0b7b382220b8e93e3143f616078625dbaeba3bfc6a562c963286d.jpg",
+      "sha256": "b26ff01cdcf0b7b382220b8e93e3143f616078625dbaeba3bfc6a562c963286d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75084
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111128101922327.jpg",
+      "originalReference": "/chistory/cms/imgs/20111128101922327.jpg",
+      "token": "migration-resource://ddb3d2ef67ff78bfeecb5dad905da160c06846330482932b428ba669a2d3a0e4",
+      "snapshotPath": "assets/ddb3d2ef67ff78bfeecb5dad905da160c06846330482932b428ba669a2d3a0e4.jpg",
+      "sha256": "ddb3d2ef67ff78bfeecb5dad905da160c06846330482932b428ba669a2d3a0e4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 85627
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111128101928101.jpg",
+      "originalReference": "/chistory/cms/imgs/20111128101928101.jpg",
+      "token": "migration-resource://d885310dc8dd3cdb9ea3ad5a7f3d30796013794fd19e41351b49b4fb4db7e923",
+      "snapshotPath": "assets/d885310dc8dd3cdb9ea3ad5a7f3d30796013794fd19e41351b49b4fb4db7e923.jpg",
+      "sha256": "d885310dc8dd3cdb9ea3ad5a7f3d30796013794fd19e41351b49b4fb4db7e923",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81218
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111128101933615.jpg",
+      "originalReference": "/chistory/cms/imgs/20111128101933615.jpg",
+      "token": "migration-resource://f63640e4ed8b8fab936fb83a648a216d28ecab7d09ef21a2314d75577faa6ca7",
+      "snapshotPath": "assets/f63640e4ed8b8fab936fb83a648a216d28ecab7d09ef21a2314d75577faa6ca7.jpg",
+      "sha256": "f63640e4ed8b8fab936fb83a648a216d28ecab7d09ef21a2314d75577faa6ca7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 72114
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111128101939824.jpg",
+      "originalReference": "/chistory/cms/imgs/20111128101939824.jpg",
+      "token": "migration-resource://ed9b0fdd84a0dc8b22464622a036cbd02918f1345265c428d115c343e1c9ab28",
+      "snapshotPath": "assets/ed9b0fdd84a0dc8b22464622a036cbd02918f1345265c428d115c343e1c9ab28.jpg",
+      "sha256": "ed9b0fdd84a0dc8b22464622a036cbd02918f1345265c428d115c343e1c9ab28",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77528
+    }
+  ],
+  "sourceFingerprint": "597b3c5bb95d295bd4d496670d497a06021a678c1cf93a5b16f2dde1a7b48eb7",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "转发《关于开展“大学生就业创业优秀论文征文评比活动”的通知》的通知",
+    "listPublishDate": "2011-11-28",
+    "sourceOrder": 413,
+    "detailPublishDate": "2011-11-28"
+  }
+}

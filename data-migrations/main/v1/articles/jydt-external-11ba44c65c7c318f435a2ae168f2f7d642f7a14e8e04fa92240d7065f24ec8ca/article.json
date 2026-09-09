@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:11ba44c65c7c318f435a2ae168f2f7d642f7a14e8e04fa92240d7065f24ec8ca",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/cOH0iExa10-8QOrc5N4Pmg",
+    "url": "https://mp.weixin.qq.com/s/cOH0iExa10-8QOrc5N4Pmg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林医药学院副校长徐冶带队赴延边州开展“访企拓岗”专项行动",
+    "source": "",
+    "publishDate": "2026-08-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/cOH0iExa10-8QOrc5N4Pmg"
+  },
+  "resources": [],
+  "sourceFingerprint": "d0169e07f7646179d210c84dbd59c96f0ef8f1d4bafa26f8859cb6f309ced286",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "吉林医药学院副校长徐冶带队赴延边州开展“访企拓岗”专项行动",
+    "listPublishDate": "2026-08-04",
+    "sourceOrder": 30
+  }
+}

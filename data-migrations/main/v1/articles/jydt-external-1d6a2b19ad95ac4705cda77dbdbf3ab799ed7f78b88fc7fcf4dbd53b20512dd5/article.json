@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1d6a2b19ad95ac4705cda77dbdbf3ab799ed7f78b88fc7fcf4dbd53b20512dd5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/8rDTVeRILQnJJ12LEW_4fA",
+    "url": "https://mp.weixin.qq.com/s/8rDTVeRILQnJJ12LEW_4fA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院召开2026届毕业生就业工作会议",
+    "source": "",
+    "publishDate": "2025-11-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/8rDTVeRILQnJJ12LEW_4fA"
+  },
+  "resources": [],
+  "sourceFingerprint": "0ef56afd926f3d78bb3d2443f85fa1494e7a9655002415f2b2d2b2ada13748bd",
+  "evidence": {
+    "listPage": 59,
+    "listTitle": "吉林工商学院召开2026届毕业生就业工作会议",
+    "listPublishDate": "2025-11-20",
+    "sourceOrder": 583
+  }
+}

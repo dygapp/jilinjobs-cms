@@ -1,0 +1,151 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120774",
+    "contentId": "28737783120774",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120774"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《关于组织申报第二期华图教育大学生创业基金项目的通知》的通知",
+    "source": "",
+    "publishDate": "2012-12-31",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《关于组织申报第二期华图教育大学生创业基金项目的通知》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-12-31 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://0a6a85f24b8750b6f734f01c349d5d6191677ce0910c5113879600aed898d3c6\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://c940e433d72b2644b8058e1902cc3a6a0af192804350ae964216d4f2615c3dd6\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://9168247d56e394c9837f0b47c4dd1c57bb4dae3943c41980a3445e52b957ec64\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://18a9882a496dffbbfa28bcf9424ccc22e4c79cbd659fa89f51951c1b90ebde93\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://a658d1540ff1aff03802347a5b9cb1afba62dabb7001e5c5685183ff383665ae\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://0a3a097af2e0d2579ff59299719d991f3189726c6d4e092b3d85e5bbb11250e4\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://662326aa5252745512f61b6e0cd80edafc5f73f19154a24a2c2d572b669f2148\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://8f8d5a008bad759174047743dbd7ec6e2098adccdce271b1f8f388573b7577fd\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://bc361e5fe6a162e978f3c0b92156d3f963737acc980dcbe9a6e23c8e5cb5d28e\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://ce4f2844bec5cc4722ead016fba281277c4c51ae3397128064a7089af8f8c293\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://1c60be0678f04b7fb7e2bed026207ab932e2da2c738fede26a3eb4a38847d974\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://7688f67e0e47a50106233309426232f8efc4b5f098263f61425e9b3f97f05546\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130106024535455.jpg",
+      "originalReference": "/chistory/cms/imgs/20130106024535455.jpg",
+      "token": "migration-resource://0a6a85f24b8750b6f734f01c349d5d6191677ce0910c5113879600aed898d3c6",
+      "snapshotPath": "assets/0a6a85f24b8750b6f734f01c349d5d6191677ce0910c5113879600aed898d3c6.jpg",
+      "sha256": "0a6a85f24b8750b6f734f01c349d5d6191677ce0910c5113879600aed898d3c6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 94835
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121231234903646.jpg",
+      "originalReference": "/chistory/cms/imgs/20121231234903646.jpg",
+      "token": "migration-resource://c940e433d72b2644b8058e1902cc3a6a0af192804350ae964216d4f2615c3dd6",
+      "snapshotPath": "assets/c940e433d72b2644b8058e1902cc3a6a0af192804350ae964216d4f2615c3dd6.jpg",
+      "sha256": "c940e433d72b2644b8058e1902cc3a6a0af192804350ae964216d4f2615c3dd6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 56923
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121231234916393.jpg",
+      "originalReference": "/chistory/cms/imgs/20121231234916393.jpg",
+      "token": "migration-resource://9168247d56e394c9837f0b47c4dd1c57bb4dae3943c41980a3445e52b957ec64",
+      "snapshotPath": "assets/9168247d56e394c9837f0b47c4dd1c57bb4dae3943c41980a3445e52b957ec64.jpg",
+      "sha256": "9168247d56e394c9837f0b47c4dd1c57bb4dae3943c41980a3445e52b957ec64",
+      "contentType": "image/jpeg",
+      "sizeBytes": 56944
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121231234920232.jpg",
+      "originalReference": "/chistory/cms/imgs/20121231234920232.jpg",
+      "token": "migration-resource://18a9882a496dffbbfa28bcf9424ccc22e4c79cbd659fa89f51951c1b90ebde93",
+      "snapshotPath": "assets/18a9882a496dffbbfa28bcf9424ccc22e4c79cbd659fa89f51951c1b90ebde93.jpg",
+      "sha256": "18a9882a496dffbbfa28bcf9424ccc22e4c79cbd659fa89f51951c1b90ebde93",
+      "contentType": "image/jpeg",
+      "sizeBytes": 28708
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121231234925428.jpg",
+      "originalReference": "/chistory/cms/imgs/20121231234925428.jpg",
+      "token": "migration-resource://a658d1540ff1aff03802347a5b9cb1afba62dabb7001e5c5685183ff383665ae",
+      "snapshotPath": "assets/a658d1540ff1aff03802347a5b9cb1afba62dabb7001e5c5685183ff383665ae.jpg",
+      "sha256": "a658d1540ff1aff03802347a5b9cb1afba62dabb7001e5c5685183ff383665ae",
+      "contentType": "image/jpeg",
+      "sizeBytes": 51004
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121231234929739.jpg",
+      "originalReference": "/chistory/cms/imgs/20121231234929739.jpg",
+      "token": "migration-resource://0a3a097af2e0d2579ff59299719d991f3189726c6d4e092b3d85e5bbb11250e4",
+      "snapshotPath": "assets/0a3a097af2e0d2579ff59299719d991f3189726c6d4e092b3d85e5bbb11250e4.jpg",
+      "sha256": "0a3a097af2e0d2579ff59299719d991f3189726c6d4e092b3d85e5bbb11250e4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 54367
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121231234935358.jpg",
+      "originalReference": "/chistory/cms/imgs/20121231234935358.jpg",
+      "token": "migration-resource://662326aa5252745512f61b6e0cd80edafc5f73f19154a24a2c2d572b669f2148",
+      "snapshotPath": "assets/662326aa5252745512f61b6e0cd80edafc5f73f19154a24a2c2d572b669f2148.jpg",
+      "sha256": "662326aa5252745512f61b6e0cd80edafc5f73f19154a24a2c2d572b669f2148",
+      "contentType": "image/jpeg",
+      "sizeBytes": 63312
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121231234940948.jpg",
+      "originalReference": "/chistory/cms/imgs/20121231234940948.jpg",
+      "token": "migration-resource://8f8d5a008bad759174047743dbd7ec6e2098adccdce271b1f8f388573b7577fd",
+      "snapshotPath": "assets/8f8d5a008bad759174047743dbd7ec6e2098adccdce271b1f8f388573b7577fd.jpg",
+      "sha256": "8f8d5a008bad759174047743dbd7ec6e2098adccdce271b1f8f388573b7577fd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 54055
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121231234944911.jpg",
+      "originalReference": "/chistory/cms/imgs/20121231234944911.jpg",
+      "token": "migration-resource://bc361e5fe6a162e978f3c0b92156d3f963737acc980dcbe9a6e23c8e5cb5d28e",
+      "snapshotPath": "assets/bc361e5fe6a162e978f3c0b92156d3f963737acc980dcbe9a6e23c8e5cb5d28e.jpg",
+      "sha256": "bc361e5fe6a162e978f3c0b92156d3f963737acc980dcbe9a6e23c8e5cb5d28e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 59483
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121231234949479.jpg",
+      "originalReference": "/chistory/cms/imgs/20121231234949479.jpg",
+      "token": "migration-resource://ce4f2844bec5cc4722ead016fba281277c4c51ae3397128064a7089af8f8c293",
+      "snapshotPath": "assets/ce4f2844bec5cc4722ead016fba281277c4c51ae3397128064a7089af8f8c293.jpg",
+      "sha256": "ce4f2844bec5cc4722ead016fba281277c4c51ae3397128064a7089af8f8c293",
+      "contentType": "image/jpeg",
+      "sizeBytes": 60513
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121231234955789.jpg",
+      "originalReference": "/chistory/cms/imgs/20121231234955789.jpg",
+      "token": "migration-resource://1c60be0678f04b7fb7e2bed026207ab932e2da2c738fede26a3eb4a38847d974",
+      "snapshotPath": "assets/1c60be0678f04b7fb7e2bed026207ab932e2da2c738fede26a3eb4a38847d974.jpg",
+      "sha256": "1c60be0678f04b7fb7e2bed026207ab932e2da2c738fede26a3eb4a38847d974",
+      "contentType": "image/jpeg",
+      "sizeBytes": 53886
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121231235001546.jpg",
+      "originalReference": "/chistory/cms/imgs/20121231235001546.jpg",
+      "token": "migration-resource://7688f67e0e47a50106233309426232f8efc4b5f098263f61425e9b3f97f05546",
+      "snapshotPath": "assets/7688f67e0e47a50106233309426232f8efc4b5f098263f61425e9b3f97f05546.jpg",
+      "sha256": "7688f67e0e47a50106233309426232f8efc4b5f098263f61425e9b3f97f05546",
+      "contentType": "image/jpeg",
+      "sizeBytes": 30146
+    }
+  ],
+  "sourceFingerprint": "b91feb6ab91c65288e0dfdc1ace571d9cc927011337de4bb8c8af87682a312d9",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "转发《关于组织申报第二期华图教育大学生创业基金项目的通知》的通知",
+    "listPublishDate": "2012-12-31",
+    "sourceOrder": 372,
+    "detailPublishDate": "2012-12-31"
+  }
+}

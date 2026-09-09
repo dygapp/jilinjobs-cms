@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122398",
+    "contentId": "28737783122398",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122398"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部：每年送20名防震救灾人才出国留学",
+    "source": "",
+    "publishDate": "2009-04-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部：每年送20名防震救灾人才出国留学</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-6 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p class=\"date\" align=\"left\"><font size=\"2\">&nbsp;&nbsp;&nbsp; 3月25日，教育部召开本年度第六次新闻发布会。在发布会上，教育部有关负责人介绍，汶川地震敲响抗震救灾人才短缺的警钟，每年为国家地震局培养20名防震救灾方面的专业人才，到世界先进国家去学习。</font></p> <p align=\"left\"><font size=\"2\">　　国家留学基金管理委员会秘书长刘京辉介绍，“去年四川大地震夺走了几万人的生命，我国在防震救灾方面的人才急缺，特别是与一些发达国家和地震多发国家还存在着一些差距，比如说日本。基于这些考虑，国家地震局提出，希望用国家的基金培养防震救灾方面的人才。经过双方的几次磋商，我们达成一致，今年开始，尽管基金委录取选拔的时间比较紧，但是为了国家的急需，我们从今年开始，为国家地震局每年培养20名防震救灾方面的专业人才，到世界先进国家去学习。”</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "b4648cebf72ff31778e00b7ecdf20f189f4793bae998c7324df017b733db099f",
+  "evidence": {
+    "listPage": 182,
+    "listTitle": "教育部：每年送20名防震救灾人才出国留学",
+    "listPublishDate": "2009-04-06",
+    "sourceOrder": 1813,
+    "detailPublishDate": "2009-04-06"
+  }
+}

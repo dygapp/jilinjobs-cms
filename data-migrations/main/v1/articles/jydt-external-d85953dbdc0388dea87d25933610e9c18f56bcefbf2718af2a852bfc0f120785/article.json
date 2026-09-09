@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d85953dbdc0388dea87d25933610e9c18f56bcefbf2718af2a852bfc0f120785",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/oLR6AHwt_8KjUkWC57g1FA",
+    "url": "https://mp.weixin.qq.com/s/oLR6AHwt_8KjUkWC57g1FA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院赴苏开展校企合作交流考察搭建产教融合新桥梁",
+    "source": "",
+    "publishDate": "2025-12-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/oLR6AHwt_8KjUkWC57g1FA"
+  },
+  "resources": [],
+  "sourceFingerprint": "e4510c4840c8b07e0bed33574b595ac3b64ba0ed5c2588762d47d8c1eef04a6d",
+  "evidence": {
+    "listPage": 55,
+    "listTitle": "长春科技学院赴苏开展校企合作交流考察搭建产教融合新桥梁",
+    "listPublishDate": "2025-12-15",
+    "sourceOrder": 544
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:75e422d692d2759c4783f79b3a30ddbf79b4eea9dfb89e5e396de751b5db26ef",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/wtX79nRCsXNpMnujBPbLOg",
+    "url": "https://mp.weixin.qq.com/s/wtX79nRCsXNpMnujBPbLOg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "无锡高新区（新吴区）人力资源和社会保障局走进延边大学开展校地座谈会",
+    "source": "",
+    "publishDate": "2026-04-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wtX79nRCsXNpMnujBPbLOg"
+  },
+  "resources": [],
+  "sourceFingerprint": "e0fc1946fe9c1412abfad03d5b19d55be76b2bf21f9840f5480e5835dc4edb10",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "无锡高新区（新吴区）人力资源和社会保障局走进延边大学开展校地座谈会",
+    "listPublishDate": "2026-04-13",
+    "sourceOrder": 301
+  }
+}

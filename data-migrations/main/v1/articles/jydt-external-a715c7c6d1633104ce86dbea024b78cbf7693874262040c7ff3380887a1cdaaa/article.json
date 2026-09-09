@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a715c7c6d1633104ce86dbea024b78cbf7693874262040c7ff3380887a1cdaaa",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ZeWXDt1d80GUo9jme1_t5g",
+    "url": "https://mp.weixin.qq.com/s/ZeWXDt1d80GUo9jme1_t5g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化医教协同 锤炼视光技能｜长春早期教育职业学院与长春一诺眼科共建实习就业基地",
+    "source": "",
+    "publishDate": "2026-06-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ZeWXDt1d80GUo9jme1_t5g"
+  },
+  "resources": [],
+  "sourceFingerprint": "41298f8a6eddb33db0dc18822501aa223d182adf0e16f5c5adef4bf19772ed61",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "深化医教协同 锤炼视光技能｜长春早期教育职业学院与长春一诺眼科共建实习就业基地",
+    "listPublishDate": "2026-06-26",
+    "sourceOrder": 66
+  }
+}

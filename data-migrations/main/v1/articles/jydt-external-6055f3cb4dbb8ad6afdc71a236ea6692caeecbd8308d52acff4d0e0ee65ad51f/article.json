@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6055f3cb4dbb8ad6afdc71a236ea6692caeecbd8308d52acff4d0e0ee65ad51f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/5l6qmi-hSCSCIgkbdr26xA",
+    "url": "https://mp.weixin.qq.com/s/5l6qmi-hSCSCIgkbdr26xA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学党委副书记、校长马秀颖赴吉林市调研并开展访企拓岗活动",
+    "source": "",
+    "publishDate": "2026-05-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5l6qmi-hSCSCIgkbdr26xA"
+  },
+  "resources": [],
+  "sourceFingerprint": "dcb3de968a906f275d43b53d79f2c2ba232033510b2de8c8458703dc052307ad",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "吉林财经大学党委副书记、校长马秀颖赴吉林市调研并开展访企拓岗活动",
+    "listPublishDate": "2026-05-25",
+    "sourceOrder": 143
+  }
+}

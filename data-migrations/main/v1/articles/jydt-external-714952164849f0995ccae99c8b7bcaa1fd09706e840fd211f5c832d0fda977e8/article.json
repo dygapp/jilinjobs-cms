@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:714952164849f0995ccae99c8b7bcaa1fd09706e840fd211f5c832d0fda977e8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/rQqkM6vQ2rCCl_idrgz4vw",
+    "url": "https://mp.weixin.qq.com/s/rQqkM6vQ2rCCl_idrgz4vw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗 协同育人丨长春财经学院赴上海功承瀛泰（长春）律师事务所走访交流",
+    "source": "",
+    "publishDate": "2026-08-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/rQqkM6vQ2rCCl_idrgz4vw"
+  },
+  "resources": [],
+  "sourceFingerprint": "a085bb7b8c75b6c50935e88b5f765d7ba227e533a6d32f9a1728ff583c1448a9",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "访企拓岗 协同育人丨长春财经学院赴上海功承瀛泰（长春）律师事务所走访交流",
+    "listPublishDate": "2026-08-04",
+    "sourceOrder": 27
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120192",
+    "contentId": "28737783120192",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120192"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "山东：济宁未就业毕业生创业可获5万无息贷款",
+    "source": "",
+    "publishDate": "2009-05-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">山东：济宁未就业毕业生创业可获5万无息贷款</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-5-6 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 29日，记者从山东省济宁市人事局获悉，为在全市广大高校毕业生中大力弘扬自主创业的时代精神，鼓励和支持广大毕业生干事创业，以创业带动就业，济宁市人事局将对济宁生源未就业高校毕业生进行免费创业培训。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 据介绍，该培训包括心态及团队培训、SYB培训（即自我创业评价、企业构思、市场评估、人员组织、企业法律形态、法律环境与创办责任、启动资金预测、利润计划、企业生存评估、企业开办）、创业模拟及政策咨询、管理教练课程等培训内容，培训对象为济宁生源未就业高校毕业生，旨在鼓励和支持广大毕业生积极创办各类民营企业，以创业带动就业，缓解当前大学生就业压力。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 记者了解到，凡是自主创业毕业生，可按其所办企业的类型或自谋职业的实际情况，办理税费减免有关手续。创业项目可申请全国YBC 创业资金，评审通过的拨发项目启动无息贷款5万元。凡新创建民营企业的，其注册资本可分期注入，分批到位。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 据悉，凡高校毕业生从事个体经营的，除国家限制的行业外，自工商行政管理机关批准其经营之日起，3年内免交个体工商户登记注册费、个体工商户管理费、集贸市场管理费、经济合同示范文本工本费等卫生、环保部门的各项行政事业性收费。对领办、创办民营企业的大中专毕业生，人才服务机构在3年内免收人事代理费。</font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：齐鲁晚报 <br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "e5275e2923425f428cf977c44d89816f32a389c16f11a1ea406bd229d025b6be",
+  "evidence": {
+    "listPage": 179,
+    "listTitle": "山东：济宁未就业毕业生创业可获5万无息贷款",
+    "listPublishDate": "2009-05-06",
+    "sourceOrder": 1781,
+    "detailPublishDate": "2009-05-06"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7e4f4b8ac624a135cb908e3f4d7b90e32990ee52dcb0cfa994050a61ad357d9e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/9T1de3Cd-o5GePAFTOqlmw",
+    "url": "https://mp.weixin.qq.com/s/9T1de3Cd-o5GePAFTOqlmw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业科技学院校长尹柏双带队开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-04-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/9T1de3Cd-o5GePAFTOqlmw"
+  },
+  "resources": [],
+  "sourceFingerprint": "6b011700d7eb41595147ba280b4ce46c05bf266351bf63a1263315a313887c61",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "吉林农业科技学院校长尹柏双带队开展访企拓岗专项行动",
+    "listPublishDate": "2026-04-23",
+    "sourceOrder": 254
+  }
+}

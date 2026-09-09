@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f1ad210cc864bd0308321985fd76ccf828c4eaaf7eb247c222b9a671ccdfed4c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/lujYsZ3VhpbbiGEmxWruwA",
+    "url": "https://mp.weixin.qq.com/s/lujYsZ3VhpbbiGEmxWruwA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省经济管理干部学院信息传媒学院走访吉林省羽冉科技有限公司",
+    "source": "",
+    "publishDate": "2026-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/lujYsZ3VhpbbiGEmxWruwA"
+  },
+  "resources": [],
+  "sourceFingerprint": "36e8db94bccd0eb3181849de6e60b3567031706f1322c9c8afe4421f9e257e1f",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "吉林省经济管理干部学院信息传媒学院走访吉林省羽冉科技有限公司",
+    "listPublishDate": "2026-05-15",
+    "sourceOrder": 181
+  }
+}

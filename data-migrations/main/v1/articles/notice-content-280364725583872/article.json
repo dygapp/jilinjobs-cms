@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:280364725583872",
+    "contentId": "280364725583872",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=280364725583872"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办全国信息通讯与互联网行业面向2025届高校毕业生春季招聘活动的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2025-03-25",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://3112ead5e01bc662bbc8575e174e34b6f3fa0a31c21f43e81594e89fb1e455ef\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://adf56bb270f024e1707f46a36ebf78d6a8f43abee38a5b8bcf7823949d94ad16\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://0c8729b0580cb0a9b98cde76647f8b5d8d029249714ef64d6c0b5eda01cf9327\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://a15468023e28f76e259643afd382ad8d0574d0a45d66451796b3f880c6f63278\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://633ed7268e33fbb4a05dd5596b1785f135d6c919f3ad3e1728ddf8c6519a41ec\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/9ef0b611-6bd8-4b1b-9f25-72dd6ab3471f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/9ef0b611-6bd8-4b1b-9f25-72dd6ab3471f.jpg",
+      "token": "migration-resource://3112ead5e01bc662bbc8575e174e34b6f3fa0a31c21f43e81594e89fb1e455ef",
+      "snapshotPath": "assets/3112ead5e01bc662bbc8575e174e34b6f3fa0a31c21f43e81594e89fb1e455ef.jpg",
+      "sha256": "3112ead5e01bc662bbc8575e174e34b6f3fa0a31c21f43e81594e89fb1e455ef",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/a35a74ac-c277-4c27-bff1-b467346c8ddd.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/a35a74ac-c277-4c27-bff1-b467346c8ddd.jpg",
+      "token": "migration-resource://adf56bb270f024e1707f46a36ebf78d6a8f43abee38a5b8bcf7823949d94ad16",
+      "snapshotPath": "assets/adf56bb270f024e1707f46a36ebf78d6a8f43abee38a5b8bcf7823949d94ad16.jpg",
+      "sha256": "adf56bb270f024e1707f46a36ebf78d6a8f43abee38a5b8bcf7823949d94ad16",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/7206120c-486a-45ee-9356-06f24c473f4d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/7206120c-486a-45ee-9356-06f24c473f4d.jpg",
+      "token": "migration-resource://0c8729b0580cb0a9b98cde76647f8b5d8d029249714ef64d6c0b5eda01cf9327",
+      "snapshotPath": "assets/0c8729b0580cb0a9b98cde76647f8b5d8d029249714ef64d6c0b5eda01cf9327.jpg",
+      "sha256": "0c8729b0580cb0a9b98cde76647f8b5d8d029249714ef64d6c0b5eda01cf9327",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/6cb6ac84-1f17-4965-a6c4-842e96af3f2c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/6cb6ac84-1f17-4965-a6c4-842e96af3f2c.jpg",
+      "token": "migration-resource://a15468023e28f76e259643afd382ad8d0574d0a45d66451796b3f880c6f63278",
+      "snapshotPath": "assets/a15468023e28f76e259643afd382ad8d0574d0a45d66451796b3f880c6f63278.jpg",
+      "sha256": "a15468023e28f76e259643afd382ad8d0574d0a45d66451796b3f880c6f63278",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/b183d032-138f-4553-90e9-0ed15076ad7a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/b183d032-138f-4553-90e9-0ed15076ad7a.jpg",
+      "token": "migration-resource://633ed7268e33fbb4a05dd5596b1785f135d6c919f3ad3e1728ddf8c6519a41ec",
+      "snapshotPath": "assets/633ed7268e33fbb4a05dd5596b1785f135d6c919f3ad3e1728ddf8c6519a41ec.jpg",
+      "sha256": "633ed7268e33fbb4a05dd5596b1785f135d6c919f3ad3e1728ddf8c6519a41ec",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    }
+  ],
+  "sourceFingerprint": "e585797c1f101b71161802bfffb9db95f09e5c3a6befae7895358137b3823bb1",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "关于举办全国信息通讯与互联网行业面向2025届高校毕业生春季招聘活动的通知",
+    "listPublishDate": "2025-03-25",
+    "sourceOrder": 54,
+    "detailPublishDate": "2025-03-25"
+  }
+}

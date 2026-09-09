@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122452",
+    "contentId": "28737783122452",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122452"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "扩内需促就业 数百事业单位中博会纳贤",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">扩内需促就业 数百事业单位中博会纳贤</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 中安在线3月25日讯(记者：黄娜娜)　距离第四届中博会召开仅有31天，记者从大会组委会获悉，在国际金融危机的大背景下，本届中博会以扩大内需、促进就业为重点，新增加搞活流通扩大消费政策说明会、人才招聘会等重大专题活动。</font></p> <p><font size=\"2\">　　据第四节中博会大会组委会副主任、常务副秘书长、省长助理邵国荷介绍，本届中博会是在当前国际金融危机的影响尚未见底，国家出台进一步扩大内需政策、保增长、保稳定、保就业的形式下召开的，积极应对危机、主动在危急中寻机、加速中部崛起是本届中博会的重要任务之一。为此，本届中博会紧紧围绕促进经济社会平稳较快发展这一主题，以扩大内需、促进就业为重点，新增一些重大主题活动。</font></p> <p><font size=\"2\">　　由商务部牵头举办的搞活流通扩大消费政策说明会，将就搞活流通和扩大消费出台一些含金量高的政策，以扩大内需。</font></p> <p><font size=\"2\">　　针对大学生就业难题，安徽省牵头于4月26日举办大型人才交流活动，安排众多具有一定影响的企业来与大学生对接，且数百个事业单位也拿出招聘供大学生选择。安徽省还将举办促进服务外包人才培训与就业对接会，以充分发挥合肥服务外包基地城市的品牌效应，拓展大学生就业渠道。<br>&nbsp;<br>&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "4091937d35890d40733efe29385f87066a4b4f8b07742dd5118953e8ad61a178",
+  "evidence": {
+    "listPage": 189,
+    "listTitle": "扩内需促就业 数百事业单位中博会纳贤",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1887,
+    "detailPublishDate": "2009-04-04"
+  }
+}

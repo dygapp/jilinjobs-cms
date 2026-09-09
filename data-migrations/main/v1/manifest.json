@@ -1,0 +1,34 @@
+{
+  "migrationId": "main-v1",
+  "formatVersion": 1,
+  "status": "accepted-current-subset",
+  "sourceSystem": "legacy-jilinjobs",
+  "sourceOrigin": "https://24365.jl.smartedu.cn/",
+  "acceptedSnapshot": {
+    "acceptedAt": "2026-09-09",
+    "currentImportEligibleArticles": 3078,
+    "internalArticles": 1577,
+    "externalArticles": 1501,
+    "resourceFiles": 2603,
+    "resourceBytes": 450273166,
+    "sourceDefectExcludedArticles": 6,
+    "deferredProblemArticles": 230,
+    "unscopedBlockingObservations": 0,
+    "datasetDigest": "sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a",
+    "digestScope": "index.ndjson + articles/** + reports/import-eligibility.json + reports/import-withheld.json + reports/source-defect-articles.json + reports/site-package-handoff.json + source-discovery/provenance.json",
+    "sourceWorkflowRunId": 34303771704,
+    "sourceArtifactId": 10086056781,
+    "sourceArtifactName": "eu50-main-retry-attempt-3-a96cee22449508f92f3c89789f99aad477286a66",
+    "sourceArtifactDigest": "sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494",
+    "sourceHeadSha": "a96cee22449508f92f3c89789f99aad477286a66"
+  },
+  "acceptance": {
+    "currentSubset": "PASS",
+    "deferredProblemArticles": "LATER_REVIEW_NOT_CURRENT_IMPORT",
+    "sourceDefectArticles": "EXCLUDED_PENDING_CLIENT_CONFIRMATION",
+    "authorityIssue": 60,
+    "authorityIssueCommentId": 5601906947,
+    "noSilentRepair": true,
+    "noSilentDiscard": true
+  }
+}

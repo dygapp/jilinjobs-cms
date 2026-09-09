@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f064bc5b0ca91d8419663d5e1cdcf7a67f8a2b181c25c44795e0b3d2fa8521c8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/lgxw2026/2b45ff6f703a4f4795c748b6001e031a.htm",
+    "url": "https://www.cust.edu.cn/lgxw2026/2b45ff6f703a4f4795c748b6001e031a.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "济南市“才聚泉城高校行”专场引才活动在长春理工大学举行",
+    "source": "",
+    "publishDate": "2026-05-08",
+    "bodyHtml": "",
+    "externalUrl": "https://www.cust.edu.cn/lgxw2026/2b45ff6f703a4f4795c748b6001e031a.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "a5bf35ac710031643dc87b525be68a2a735387594e19280667f12e3117091b21",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "济南市“才聚泉城高校行”专场引才活动在长春理工大学举行",
+    "listPublishDate": "2026-05-08",
+    "sourceOrder": 207
+  }
+}

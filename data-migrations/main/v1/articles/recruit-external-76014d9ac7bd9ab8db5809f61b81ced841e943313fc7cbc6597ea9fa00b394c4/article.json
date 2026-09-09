@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:76014d9ac7bd9ab8db5809f61b81ced841e943313fc7cbc6597ea9fa00b394c4",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/GCyWPUigkNuUQW6oQ49OyQ",
+    "url": "https://mp.weixin.qq.com/s/GCyWPUigkNuUQW6oQ49OyQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范高等专科学校寒假促就业暖心行动--服务不打烊，护航就业路！",
+    "source": "",
+    "publishDate": "2026-01-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/GCyWPUigkNuUQW6oQ49OyQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "d112f91b7a17a739bf26df8a5f07fe223a1f8af33f1dbb4f0a60bca8cf3ea85f",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "长春师范高等专科学校寒假促就业暖心行动--服务不打烊，护航就业路！",
+    "listPublishDate": "2026-01-23",
+    "sourceOrder": 83
+  }
+}

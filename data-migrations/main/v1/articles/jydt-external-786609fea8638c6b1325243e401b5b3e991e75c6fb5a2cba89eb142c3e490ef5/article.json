@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:786609fea8638c6b1325243e401b5b3e991e75c6fb5a2cba89eb142c3e490ef5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/2QCcZKFf0HBcysO39jBKEw",
+    "url": "https://mp.weixin.qq.com/s/2QCcZKFf0HBcysO39jBKEw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“引凤聚长 筑梦长春” ---长春市女企业家进校园宣讲招聘会走进吉林建筑大学",
+    "source": "",
+    "publishDate": "2025-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/2QCcZKFf0HBcysO39jBKEw"
+  },
+  "resources": [],
+  "sourceFingerprint": "c62a4ed677299eb8349cf242b93c6045cb0240f397e3451585f3b1451f516613",
+  "evidence": {
+    "listPage": 90,
+    "listTitle": "“引凤聚长 筑梦长春” ---长春市女企业家进校园宣讲招聘会走进吉林建筑大学",
+    "listPublishDate": "2025-05-15",
+    "sourceOrder": 894
+  }
+}

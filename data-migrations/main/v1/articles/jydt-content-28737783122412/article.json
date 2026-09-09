@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122412",
+    "contentId": "28737783122412",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122412"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "福建：09年起师范生民办校任教满5年可免交培养费",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">福建：09年起师范生民办校任教满5年可免交培养费</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 福建省教育厅近日下发通知，从2009年起，本省师范类本科毕业生到民办学校任教并签订就业协议的，工作满5年可免交培养补偿费。 </font></p> <p><font size=\"2\">　　此前，福建对师范类毕业生到公办学校以外的私立学校任教，是否要交纳培养补偿费并没有明确界定。去年，一些师范专业毕业生到厦门私立校任教，仍被要求交纳4000元补偿费。按照福建省教育厅出台的新规定，今后师范类本科毕业生到民办校任教，工作满5年就可免缴4000元培养补偿费，不满5年（不含见习期）则按每年800元逐年减免。</font></p> <p><font size=\"2\">　　福建同时还作出规定，对于待就业师范类毕业生，个人档案材料可免费存放到有关档案管理部门，也可经毕业学校就业管理部门同意免费存放学校两年。未就业期间，符合条件的毕业生可参加福建各设区市、县教师招考。</font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "9437633acf0ccd1ac987cf2378b083da36da5e4762fa118bc482ebf9de3b7568",
+  "evidence": {
+    "listPage": 183,
+    "listTitle": "福建：09年起师范生民办校任教满5年可免交培养费",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1825,
+    "detailPublishDate": "2009-04-05"
+  }
+}

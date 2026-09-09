@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:5720421410674276c8cc9a2497a3c7e40f9bad76170456acc7362ef3aea8bd48",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/90kh0lfpNWhwuTHubdFCCw",
+    "url": "https://mp.weixin.qq.com/s/90kh0lfpNWhwuTHubdFCCw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "招聘会|吉林工程技术师范学院2025届毕业生夏季招聘会（机械类专场）",
+    "source": "",
+    "publishDate": "2025-05-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/90kh0lfpNWhwuTHubdFCCw"
+  },
+  "resources": [],
+  "sourceFingerprint": "b910a3c6007bd8ea8cf24dadc0cd4c085dbb9a88b0064a36106b5df63bb5f3a2",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "招聘会|吉林工程技术师范学院2025届毕业生夏季招聘会（机械类专场）",
+    "listPublishDate": "2025-05-19",
+    "sourceOrder": 153
+  }
+}

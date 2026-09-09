@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783121096",
+    "contentId": "28737783121096",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783121096"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省2009年高考录取分数线公布",
+    "source": "",
+    "publishDate": "2009-06-23",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省2009年高考录取分数线公布</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-6-23 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 根据吉林省普通高校招生计划安排和考生高考(论坛)成绩的实际情况，经省招生委员会研究确定，吉林省2009年普通高校招生录取第一段各批次最低控制分数线确定如下：<br><br>　　1、文史类本科各批次录取最低控制分数线：<br><br>　　第一批：录取最低控制分数线为530分<br><br>　　普通本科（第二批）：录取最低控制分数线为466分<br><br>　　独立学院和民办本科（第三批）：录取最低控制分数线为386分<br><br>　　2、理工类本科各批次录取最低控制分数线：<br><br>　　第一批：录取最低控制分数线为539分<br><br>　　普通本科（第二批）：录取最低控制分数线为466分<br><br>　　独立学院和民办本科（第三批）：录取最低控制分数线为406分<br><br>　　3、体育类本科录取最低控制分数线：<br><br>　　文科体育类本科录取最低控制分数线为368分；独立学院和民办本科（第三批）录取最低控制分数线为348分<br><br>　　理科体育类本科录取最低控制分数线为310分；独立学院和民办本科（第三批）录取最低控制分数线为290分。<br><br>　　4、艺术类本科录取最低控制分数线：<br><br>　　教育部批准的面向全国招生的31所独立设置艺术院校（不作分省招生计划）和参照独立设置31所艺术院校的11所本科院校的艺术本科专业，由学校自行划定高考文化课成绩，确定拟录取名单和录取原则。其它艺术类院校及专业录取最低控制分数线如下：<br><br>　　文科艺术类本科最低控制分数线为280分<br><br>　　文科艺术类独立学院和民办本科最低控制分数线为232分<br><br>　　理科艺术类本科最低控制分数线为280分<br><br>　　理科艺术类独立学院和民办本科最低控制分数线为244分<br><br>　　5、公安、司法院校专科体检、面试最低控制分数线理科为300分；文科为&nbsp;300分<br><br>　　6、军事院校及国防定向生、公安、司法院校（专业）体检线<br><br>　　重点军事、公安、司法院校及重点高校的国防定向生体检线在第一批次最低控制分数线上根据各学校生源情况确定。<br><br>　　普通本科军事、公安、司法院校及普通本科高校的国防定向生体检线在普通本科最低控制分数线上根据各学校生源情况确定。<br><br>　　7、专科录取分数线<br><br>　　由于实行分两次填报志愿、两段录取，专科批次和民办专科批次在8月8日至8月10日填报志愿，参加第二次填报志愿和第二段录取的考生为第一段没有被录取的落选考生。因此，普通专科、独立学院和民办专科以及体育类专科的考生，待填报志愿后确定录取最低控制分数线。</font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\">来源：吉林省招生信息网</font></p> <p align=\"center\">&nbsp;</p> <p><font color=\"#444444\" size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "cc915dc83993a88d1b5a9888083d9e8d7c96303698de3daef97ff89516f40faf",
+  "evidence": {
+    "listPage": 54,
+    "listTitle": "吉林省2009年高考录取分数线公布",
+    "listPublishDate": "2009-06-23",
+    "sourceOrder": 531,
+    "detailPublishDate": "2009-06-23"
+  }
+}

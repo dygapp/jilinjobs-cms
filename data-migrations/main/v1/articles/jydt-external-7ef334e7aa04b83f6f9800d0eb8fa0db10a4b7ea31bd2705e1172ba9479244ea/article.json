@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7ef334e7aa04b83f6f9800d0eb8fa0db10a4b7ea31bd2705e1172ba9479244ea",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/JIfMVhWcM6RcYEPiFfQsNw",
+    "url": "https://mp.weixin.qq.com/s/JIfMVhWcM6RcYEPiFfQsNw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "《人民日报》：助力高校毕业生高质量充分就业",
+    "source": "",
+    "publishDate": "2025-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/JIfMVhWcM6RcYEPiFfQsNw"
+  },
+  "resources": [],
+  "sourceFingerprint": "db500c76af757b40bb36808e2d9b0148714913213fdcdf6974051cc746aec2c9",
+  "evidence": {
+    "listPage": 94,
+    "listTitle": "《人民日报》：助力高校毕业生高质量充分就业",
+    "listPublishDate": "2025-04-21",
+    "sourceOrder": 933
+  }
+}

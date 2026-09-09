@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:84992576c71a27fbab8f9e5712e580d5c0d1703bef27c40797ddd14bb6341245",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/ThehS_zmMxow6BtNJHcenw",
+    "url": "https://mp.weixin.qq.com/s/ThehS_zmMxow6BtNJHcenw?scene=25&sessionid=-1367361986"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2025年“长聚学子·春城暖才”进校园宣讲活动（长春工业大学）招聘岗位线上发布",
+    "source": "",
+    "publishDate": "2025-04-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ThehS_zmMxow6BtNJHcenw?scene=25&sessionid=-1367361986"
+  },
+  "resources": [],
+  "sourceFingerprint": "e041c050b7eba7eb2b8372f081c99540e8605a1d5c778791829f6d11f40d42a6",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "2025年“长聚学子·春城暖才”进校园宣讲活动（长春工业大学）招聘岗位线上发布",
+    "listPublishDate": "2025-04-15",
+    "sourceOrder": 178
+  }
+}

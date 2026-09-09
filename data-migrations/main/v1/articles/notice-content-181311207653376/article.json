@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:181311207653376",
+    "contentId": "181311207653376",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=181311207653376"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展2024届秋冬季“吉林省普通高校毕业生就业洽谈月”活动的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2023-09-28",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1313\" src=\"migration-resource://8e54c27d24fe646a6c9e6ae6082c2977e532d2cb1eacd13481624dce6e13e695\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1281\" src=\"migration-resource://a2dca763c923e37fb775431ad1ee888dcf2bb9215703df0e28e487b8f3a0edc3\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1288\" src=\"migration-resource://c3f32a46aad6fc007b3ef9d9805a7be65bd2767c24ca00c2b30a3f0e5abbf3f6\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1288\" src=\"migration-resource://345ccfdc70996794cb66ceab8977f2c26be8009ea152ad169b09fc77fcd6c6e0\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1275\" src=\"migration-resource://266cf264874f6b74735fee19d446362c5b2180aefcde09df8c8ceb11c73c0013\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-28/62887d30-21f7-4f68-83c2-db58fecadbf1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-28/62887d30-21f7-4f68-83c2-db58fecadbf1.jpg",
+      "token": "migration-resource://8e54c27d24fe646a6c9e6ae6082c2977e532d2cb1eacd13481624dce6e13e695",
+      "snapshotPath": "assets/8e54c27d24fe646a6c9e6ae6082c2977e532d2cb1eacd13481624dce6e13e695.jpg",
+      "sha256": "8e54c27d24fe646a6c9e6ae6082c2977e532d2cb1eacd13481624dce6e13e695",
+      "contentType": "image/jpeg",
+      "sizeBytes": 168063
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-28/7452ef34-1f23-4be0-865c-d0764b30b1af.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-28/7452ef34-1f23-4be0-865c-d0764b30b1af.jpg",
+      "token": "migration-resource://a2dca763c923e37fb775431ad1ee888dcf2bb9215703df0e28e487b8f3a0edc3",
+      "snapshotPath": "assets/a2dca763c923e37fb775431ad1ee888dcf2bb9215703df0e28e487b8f3a0edc3.jpg",
+      "sha256": "a2dca763c923e37fb775431ad1ee888dcf2bb9215703df0e28e487b8f3a0edc3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 192688
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-28/de1ff4c3-16b3-490a-8814-a1f453b50e6e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-28/de1ff4c3-16b3-490a-8814-a1f453b50e6e.jpg",
+      "token": "migration-resource://c3f32a46aad6fc007b3ef9d9805a7be65bd2767c24ca00c2b30a3f0e5abbf3f6",
+      "snapshotPath": "assets/c3f32a46aad6fc007b3ef9d9805a7be65bd2767c24ca00c2b30a3f0e5abbf3f6.jpg",
+      "sha256": "c3f32a46aad6fc007b3ef9d9805a7be65bd2767c24ca00c2b30a3f0e5abbf3f6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 196898
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-28/a3053364-0c16-4b12-8b3d-cddf88d300c6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-28/a3053364-0c16-4b12-8b3d-cddf88d300c6.jpg",
+      "token": "migration-resource://345ccfdc70996794cb66ceab8977f2c26be8009ea152ad169b09fc77fcd6c6e0",
+      "snapshotPath": "assets/345ccfdc70996794cb66ceab8977f2c26be8009ea152ad169b09fc77fcd6c6e0.jpg",
+      "sha256": "345ccfdc70996794cb66ceab8977f2c26be8009ea152ad169b09fc77fcd6c6e0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 185778
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-28/a290f718-505e-4320-afe2-6f2d7cc1dbc9.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-28/a290f718-505e-4320-afe2-6f2d7cc1dbc9.jpg",
+      "token": "migration-resource://266cf264874f6b74735fee19d446362c5b2180aefcde09df8c8ceb11c73c0013",
+      "snapshotPath": "assets/266cf264874f6b74735fee19d446362c5b2180aefcde09df8c8ceb11c73c0013.jpg",
+      "sha256": "266cf264874f6b74735fee19d446362c5b2180aefcde09df8c8ceb11c73c0013",
+      "contentType": "image/jpeg",
+      "sizeBytes": 143135
+    }
+  ],
+  "sourceFingerprint": "1bf6cc5f1d49292f7c0aab3abb3726ed8945e535b9c22324a248c148c724bc59",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "关于开展2024届秋冬季“吉林省普通高校毕业生就业洽谈月”活动的通知",
+    "listPublishDate": "2023-09-28",
+    "sourceOrder": 96,
+    "detailPublishDate": "2023-09-28"
+  }
+}

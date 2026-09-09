@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:476c2170b8b39f9cab49063306f3919eea6b87ca0bb109e46792ad8054749d7e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/s1FdTv_V4B2t9CuXPPlteA",
+    "url": "https://mp.weixin.qq.com/s/s1FdTv_V4B2t9CuXPPlteA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省经济管理干部学院副院长孙成雨带队赴长岭县开展“访企拓岗促就业”活动",
+    "source": "",
+    "publishDate": "2026-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/s1FdTv_V4B2t9CuXPPlteA"
+  },
+  "resources": [],
+  "sourceFingerprint": "c98522303097512df4c2c1e548d98dc3e883b998dab308741e53f2be49388359",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "吉林省经济管理干部学院副院长孙成雨带队赴长岭县开展“访企拓岗促就业”活动",
+    "listPublishDate": "2026-05-15",
+    "sourceOrder": 180
+  }
+}

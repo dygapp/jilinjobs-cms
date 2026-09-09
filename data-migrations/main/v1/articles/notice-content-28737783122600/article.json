@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122600",
+    "contentId": "28737783122600",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122600"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于报送吉林省高校就业创业宣传工作通讯员的通知",
+    "source": "",
+    "publishDate": "2015-05-08",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于报送吉林省高校就业创业宣传工作通讯员的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2015-5-8 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p>&nbsp;</p><p style=\"TEXT-ALIGN: center\"><img title=\"IMG_20150508_085546.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6356667459098437507388814.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"IMG_20150508_085644.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6356667459195312509459979.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"IMG_20150508_085659.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6356667459300000009273715.jpg\"></p><p></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "fa1e100193428428f8b4078587f7a5e5c7605f2cdac6fc988c27323cd744c038",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "关于报送吉林省高校就业创业宣传工作通讯员的通知",
+    "listPublishDate": "2015-05-08",
+    "sourceOrder": 280,
+    "detailPublishDate": "2015-05-08"
+  }
+}

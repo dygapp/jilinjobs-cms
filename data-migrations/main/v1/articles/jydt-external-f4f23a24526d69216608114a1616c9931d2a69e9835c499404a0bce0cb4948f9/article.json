@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f4f23a24526d69216608114a1616c9931d2a69e9835c499404a0bce0cb4948f9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/DGlYZExMBmS3xNdLTDvB6A",
+    "url": "https://mp.weixin.qq.com/s/DGlYZExMBmS3xNdLTDvB6A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“汇水聚力”服务吉林高质量发展2025年吉林省高校水利电力行业专场招聘会在吉林水利电力职业学院举办",
+    "source": "",
+    "publishDate": "2025-03-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DGlYZExMBmS3xNdLTDvB6A"
+  },
+  "resources": [],
+  "sourceFingerprint": "8c6211655534a5fde30051a5cc2cbfa5635589f532600ff24e75536b6ac14eb1",
+  "evidence": {
+    "listPage": 97,
+    "listTitle": "“汇水聚力”服务吉林高质量发展2025年吉林省高校水利电力行业专场招聘会在吉林水利电力职业学院举办",
+    "listPublishDate": "2025-03-24",
+    "sourceOrder": 970
+  }
+}

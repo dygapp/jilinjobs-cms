@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86128552067072",
+    "contentId": "86128552067072",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86128552067072"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林医药学院与北京生物制品研究所有限公司“联姻”",
+    "source": "吉林医药学院",
+    "publishDate": "2021-12-04",
+    "bodyHtml": "\n                        <p>12月3日，吉林医药学院与北京生物制品研究所有限公司人才合作签约暨大学生人才培养基地揭牌仪式举行。学校校领导、相关机关职能部门及二级学院党政负责人，北京生物制品研究所有限公司相关领导出席。</p>\n\n<p>副校长金连海主持签约仪式。北京生物制品研究所有限公司李雪岩介绍了公司发展现状及用人需求，期待校企双方深度合作，实现互利共赢。</p>\n\n<p>仪式上，副校长金连海与北京生物制品研究所有限公司经理史延青为吉林医药学院大学生人才培养基地揭牌，招生就业处副处长李永清与史延青签订了“就业基地合作协议书”，教务处处长刘冶与史延青签订了“实践教学协议书”。</p>\n\n<p><strong>(吉林医药学院 唐明玉）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "a7eb60cb30c9d2594a93580002e645ed00668f3a4580ee430bd46783b1f6a6b2",
+  "evidence": {
+    "listPage": 127,
+    "listTitle": "吉林医药学院与北京生物制品研究所有限公司“联姻”",
+    "listPublishDate": "2021-12-04",
+    "sourceOrder": 1264,
+    "detailPublishDate": "2021-12-04"
+  }
+}

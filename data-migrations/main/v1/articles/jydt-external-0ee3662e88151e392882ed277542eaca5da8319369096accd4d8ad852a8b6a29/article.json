@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0ee3662e88151e392882ed277542eaca5da8319369096accd4d8ad852a8b6a29",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/mgyJ7yTp2oVmzrcYxGvMjw",
+    "url": "https://mp.weixin.qq.com/s/mgyJ7yTp2oVmzrcYxGvMjw?scene=25&sessionid=-1369140667"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业｜长春工业大学人文信息学院赴北京市、天津市开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2025-03-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/mgyJ7yTp2oVmzrcYxGvMjw?scene=25&sessionid=-1369140667"
+  },
+  "resources": [],
+  "sourceFingerprint": "92d6ae616e8b0a6d102a18ef4c83e62955ba555cc209fb127818f0bdf05dba30",
+  "evidence": {
+    "listPage": 97,
+    "listTitle": "访企拓岗促就业｜长春工业大学人文信息学院赴北京市、天津市开展访企拓岗专项行动",
+    "listPublishDate": "2025-03-25",
+    "sourceOrder": 968
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:87f9a08e5bfb6b31046985608081ad6acf91cdc7c79cca53391b0aa0a9e4d13a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1011/73501.htm",
+    "url": "https://www.jlmu.cn/info/1011/73501.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林医药学院举行医药卫生类人才专场招聘会",
+    "source": "",
+    "publishDate": "2025-10-27",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlmu.cn/info/1011/73501.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "9f9ea14081f1a47c39e67819ed628505461997e79ad297bf3e49d8bdb4d6fc7d",
+  "evidence": {
+    "listPage": 66,
+    "listTitle": "吉林医药学院举行医药卫生类人才专场招聘会",
+    "listPublishDate": "2025-10-27",
+    "sourceOrder": 655
+  }
+}

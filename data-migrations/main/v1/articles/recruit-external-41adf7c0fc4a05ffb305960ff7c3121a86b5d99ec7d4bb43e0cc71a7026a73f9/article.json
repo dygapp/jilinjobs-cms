@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:41adf7c0fc4a05ffb305960ff7c3121a86b5d99ec7d4bb43e0cc71a7026a73f9",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/gI1svo-ZPNihhnrI167eMg",
+    "url": "https://mp.weixin.qq.com/s/gI1svo-ZPNihhnrI167eMg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "创业奋斗 “就”在吉林-吉林警察学院2024年校园招聘会",
+    "source": "",
+    "publishDate": "2024-04-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gI1svo-ZPNihhnrI167eMg"
+  },
+  "resources": [],
+  "sourceFingerprint": "c08e5719b730e877fd476051bfa654732fcd47e62fd9ab6783ee31801028e6eb",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "创业奋斗 “就”在吉林-吉林警察学院2024年校园招聘会",
+    "listPublishDate": "2024-04-16",
+    "sourceOrder": 300
+  }
+}

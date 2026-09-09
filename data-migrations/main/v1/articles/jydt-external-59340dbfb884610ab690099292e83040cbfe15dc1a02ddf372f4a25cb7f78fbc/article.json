@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:59340dbfb884610ab690099292e83040cbfe15dc1a02ddf372f4a25cb7f78fbc",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ucbXu9E1u9SUP3V3D_6MGQ",
+    "url": "https://mp.weixin.qq.com/s/ucbXu9E1u9SUP3V3D_6MGQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "政校企协同发力 全力促进2026届高校毕业生扎根留吉——2025年秋季访企拓岗专项行动启动",
+    "source": "",
+    "publishDate": "2025-10-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ucbXu9E1u9SUP3V3D_6MGQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "5e7e9db53d6fe0667001dbf417b90dd1f8f2384838518c698a556c6fb67cf9e5",
+  "evidence": {
+    "listPage": 69,
+    "listTitle": "政校企协同发力 全力促进2026届高校毕业生扎根留吉——2025年秋季访企拓岗专项行动启动",
+    "listPublishDate": "2025-10-11",
+    "sourceOrder": 685
+  }
+}

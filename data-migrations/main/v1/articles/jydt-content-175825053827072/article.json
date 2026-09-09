@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:175825053827072",
+    "contentId": "175825053827072",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=175825053827072"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林师范大学博达学院赴江苏访企拓岗",
+    "source": "吉林师范大学博达学院",
+    "publishDate": "2023-03-31",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">为深入学习贯彻党的二十大精神，落实党中央国务院“稳就业、保就业”决策部署，推进访企拓岗促就业专项行动， 2月22日至25日，吉林师范大学博达学院党委书记周树军、党委副书记李莹、就业创业工作处副处长刘庆斌等一行4人赴江苏省南京市、沛县、泗阳县访企拓岗。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">在南京市景枫万豪酒店，周树军一行与酒店人力资源部经理王筱璐举行座谈。周树军介绍了学校的基本情况、发展历程以及在专业建设、人才培养、产学研合作等方面取得的成效。他对企业的高质量发展表示高度肯定，对企业为博达学院毕业生实习、就业提供平台表示感谢。他表示，希望通过此次调研，双方充分发挥各自优势，搭建合作平台，做到供需精准对接、人才资源共建共享。为更多的毕业生提供实习就业机会。王筱璐介绍了酒店基本情况和学校往届毕业生工作情况，充分肯定了学校毕业生质量及职业素养，希望在今后能进一步加强合作，吸纳更多优秀毕业生加入。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"487\" src=\"migration-resource://a17b355d7f4214c63d9c4302de75a6694f43f76adfd0e96f7618e5becea61bc9\" width=\"650\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">在泗阳县桃州中学，周树军一行详细了解了桃州中学的发展现状和人才需求。详细听取了学校领导对教师人才需求、专业能力、职业发展等方面宝贵的意见和建议，对师范专业的就业需求有了进一步的认识。党委副书记李莹介绍了吉林师范大学博达学院发展形势、近几年取得的成绩以及2023届毕业生基本情况，双方就顶岗实习、学生就业等方面进行了充分沟通。在集团总校长王业科的陪同下，参观了毕业生在桃州中学的工作环境以及教师宿舍，并就当前工作、实习情况与学校30余名毕业生进行亲切交流。广大实习学生对母校领导和老师深入用人单位了解他们的实习情况，关心他们的工作和生活，感到非常开心和温暖，纷纷表示将继续认真实习、努力提升自己，为当地教育事业发展贡献“博达力量”，不辜负学校和老师的期望。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"430\" src=\"migration-resource://0780cc97883ee8116c4df9f253a7ab70666c48235ae5f678a86f62cc374d0369\" width=\"650\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">在沛县新华中学，学校领导对周树军一行的到来表示热烈欢迎，并对学校的师资队伍、办学成就等基本情况进行了介绍，对本校教师队伍中的优秀博达学子表示肯定和赞赏，希望双方进一步加强合作交流。周树军代表博达学院向沛县新华中学长期以来的关心支持表示感谢。周树军指出，此次走访调研活动，是深入贯彻落实党中央、国务院关于高校毕业生就业工作的决策部署，同时促进学校师范生培养，进一步提高人才质量的有效举措，也必将推动学校毕业生更高质量就业。希望双方进一步加大对接力度，实现优势互补、合作共赢。</span></span></span></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-29/df05d175-7d8d-4129-b9a4-82869ae1db62.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-29/df05d175-7d8d-4129-b9a4-82869ae1db62.jpg",
+      "token": "migration-resource://a17b355d7f4214c63d9c4302de75a6694f43f76adfd0e96f7618e5becea61bc9",
+      "snapshotPath": "assets/a17b355d7f4214c63d9c4302de75a6694f43f76adfd0e96f7618e5becea61bc9.jpg",
+      "sha256": "a17b355d7f4214c63d9c4302de75a6694f43f76adfd0e96f7618e5becea61bc9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 124848
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-29/a6efb561-41ad-4e39-a81d-012b67d266f1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-29/a6efb561-41ad-4e39-a81d-012b67d266f1.jpg",
+      "token": "migration-resource://0780cc97883ee8116c4df9f253a7ab70666c48235ae5f678a86f62cc374d0369",
+      "snapshotPath": "assets/0780cc97883ee8116c4df9f253a7ab70666c48235ae5f678a86f62cc374d0369.jpg",
+      "sha256": "0780cc97883ee8116c4df9f253a7ab70666c48235ae5f678a86f62cc374d0369",
+      "contentType": "image/jpeg",
+      "sizeBytes": 105001
+    }
+  ],
+  "sourceFingerprint": "f168091b48d74bc0dea55aaf3b3ddb56e92f39eb821fa8e2f180e9e3e533155a",
+  "evidence": {
+    "listPage": 117,
+    "listTitle": "吉林师范大学博达学院赴江苏访企拓岗",
+    "listPublishDate": "2023-03-31",
+    "sourceOrder": 1165,
+    "detailPublishDate": "2023-03-31"
+  }
+}

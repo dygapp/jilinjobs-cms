@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120062",
+    "contentId": "28737783120062",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120062"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省成功举办首届高校创业指导课程教学大赛",
+    "source": "",
+    "publishDate": "2013-11-26",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省成功举办首届高校创业指导课程教学大赛</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2013-11-26 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"4\"></font>&nbsp;</p> <p><font size=\"4\">&nbsp;&nbsp;&nbsp; 为推动全省高校重视并加强创业教育和创业指导服务工作，加快建立完善高校创新创业教育课程体系，提高创业指导教师教育教学水平，同时为积极响应并参与全国的赛事，11月16日至17日，我省在省高校毕业生就业指导中心六楼报告厅，成功举办了全省首届高校创业指导课程教学大赛决赛。大赛以“传创业梦想，促教学相长”为主题，旨在提高我省高校创业指导教师的教学水平，交流教学经验，展示教学效果。大赛自5月份启动以来，各高校高度重视，积极组织校内教师参加选拔赛。经过高校初赛、省级复赛，从29所高校的110位选手中评选出15名选手进入全省决赛。<br>&nbsp;&nbsp;&nbsp; 教育部全国高等学校学生信息咨询与就业指导中心就业服务开发与就业网络处处长方伟应邀莅临赛场指导，并对参赛选手现场教学等做了精彩点评。省教育厅高校学生处副处长陈梅、省高校毕业生就业指导中心领导班子全体成员到现场观看比赛，并为获奖选手颁奖。全省58所高校的就业指导教师及学生代表计120余人一同观看了比赛。15位选手通过现场教学、专家评委提问答辩、案例指导各环节，展示了自己的教学基本功和教学效果。经过两天的紧张比赛，最后在15名参赛选手中产生特等奖1名，一等奖3名，二等奖5名，三等奖6名，10所高校获优秀组织奖。</font></p> <p align=\"center\"><img src=\"migration-resource://23c644b85f4ce8ff3e499a06614fbcb15724d3f0ff9ff3f66aa9de5bede54f83\" border=\"0\"></p> <p align=\"center\"><strong>大赛现场，前排为大赛评委</strong></p> <p align=\"center\"><img src=\"migration-resource://4d4679789a0d03b4120d62ac6c00ffb5bf37a8166497b357d9195dc3e164b274\" border=\"0\"></p> <p align=\"center\"><strong>方伟处长为大赛作点评</strong></p> <p align=\"center\"><img src=\"migration-resource://adb84251b6c5c654db9cfcb60bc89cd5ca745b6c4dace873c9f89816c3965001\" border=\"0\"></p> <p align=\"center\"><strong>省就业指导中心主任郑志宏为大赛作小结</strong></p> <p align=\"center\"><img src=\"migration-resource://eec381c7c0cf57fbcb73dc627e36c125e6d4c12e192c75513146db298cab998d\" border=\"0\"></p> <p align=\"center\"><strong>省就业指导中心书记朱军宣布获奖名单</strong></p> <p>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p> <p><font size=\"4\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131126034609520.jpg",
+      "originalReference": "/chistory/cms/imgs/20131126034609520.jpg",
+      "token": "migration-resource://23c644b85f4ce8ff3e499a06614fbcb15724d3f0ff9ff3f66aa9de5bede54f83",
+      "snapshotPath": "assets/23c644b85f4ce8ff3e499a06614fbcb15724d3f0ff9ff3f66aa9de5bede54f83.jpg",
+      "sha256": "23c644b85f4ce8ff3e499a06614fbcb15724d3f0ff9ff3f66aa9de5bede54f83",
+      "contentType": "image/jpeg",
+      "sizeBytes": 60896
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131126034624120.jpg",
+      "originalReference": "/chistory/cms/imgs/20131126034624120.jpg",
+      "token": "migration-resource://4d4679789a0d03b4120d62ac6c00ffb5bf37a8166497b357d9195dc3e164b274",
+      "snapshotPath": "assets/4d4679789a0d03b4120d62ac6c00ffb5bf37a8166497b357d9195dc3e164b274.jpg",
+      "sha256": "4d4679789a0d03b4120d62ac6c00ffb5bf37a8166497b357d9195dc3e164b274",
+      "contentType": "image/jpeg",
+      "sizeBytes": 52964
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/201311260346495.jpg",
+      "originalReference": "/chistory/cms/imgs/201311260346495.jpg",
+      "token": "migration-resource://adb84251b6c5c654db9cfcb60bc89cd5ca745b6c4dace873c9f89816c3965001",
+      "snapshotPath": "assets/adb84251b6c5c654db9cfcb60bc89cd5ca745b6c4dace873c9f89816c3965001.jpg",
+      "sha256": "adb84251b6c5c654db9cfcb60bc89cd5ca745b6c4dace873c9f89816c3965001",
+      "contentType": "image/jpeg",
+      "sizeBytes": 52353
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131126034711872.jpg",
+      "originalReference": "/chistory/cms/imgs/20131126034711872.jpg",
+      "token": "migration-resource://eec381c7c0cf57fbcb73dc627e36c125e6d4c12e192c75513146db298cab998d",
+      "snapshotPath": "assets/eec381c7c0cf57fbcb73dc627e36c125e6d4c12e192c75513146db298cab998d.jpg",
+      "sha256": "eec381c7c0cf57fbcb73dc627e36c125e6d4c12e192c75513146db298cab998d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 53817
+    }
+  ],
+  "sourceFingerprint": "83e61c7c5554afdf9d01ea67db5ccab9c06c9c4e3526b733fe9b93b8d4ac6aa8",
+  "evidence": {
+    "listPage": 162,
+    "listTitle": "我省成功举办首届高校创业指导课程教学大赛",
+    "listPublishDate": "2013-11-26",
+    "sourceOrder": 1613,
+    "detailPublishDate": "2013-11-26"
+  }
+}

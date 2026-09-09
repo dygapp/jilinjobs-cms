@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8258ebc0760b64da554417460df1c12eac78e434eaa972889521d9fbfb8fbd45",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/app/news/shareNewsDetail",
+    "url": "https://www.cailianxinwen.com/app/news/shareNewsDetail?newsid=461203"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省财经类2025届毕业生供需洽谈会在吉林财经大学举办",
+    "source": "",
+    "publishDate": "2024-10-25",
+    "bodyHtml": "",
+    "externalUrl": "https://www.cailianxinwen.com/app/news/shareNewsDetail?newsid=461203"
+  },
+  "resources": [],
+  "sourceFingerprint": "b5752db9d5d00b271652f16696f4c6a2da472470f5824893c7ab87be8678f684",
+  "evidence": {
+    "listPage": 102,
+    "listTitle": "吉林省财经类2025届毕业生供需洽谈会在吉林财经大学举办",
+    "listPublishDate": "2024-10-25",
+    "sourceOrder": 1020
+  }
+}

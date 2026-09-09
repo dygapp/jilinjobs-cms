@@ -1,0 +1,121 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123144",
+    "contentId": "28737783123144",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123144"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省高等学校毕业生就业指导中心2015年度部门决算公示",
+    "source": "",
+    "publishDate": "2016-09-23",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省高等学校毕业生就业指导中心2015年度部门决算公示</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:办公室   发布时间:2016-9-23 8:33:17</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-align: center\"><img title=\"部门决算1.jpg\" src=\"migration-resource://eb4a1140a996a1fc426250424db00b5a2eaafd52cdb2f1b52a616f73592f2acb\"></p><p style=\"text-align: center\"><img title=\"部门决算2.jpg\" src=\"migration-resource://e1ffec6e09ed9e89f43ab082e4d44cc72f90d1fd85d7fe154bedf87811fc12ea\"></p><p style=\"text-align: center\"><img title=\"部门决算3.jpg\" src=\"migration-resource://11cc614334d39b35d548d8ae15180ab4af4d83da65ad8750c8d28ad8c213787d\"></p><p style=\"text-align: center\"><img title=\"部门决算4.jpg\" src=\"migration-resource://e0c2db423218aa2071d476f306e72e9eb2e0d9ca4edffdf46a2fd5d1d0721427\"></p><p style=\"text-align: center\"><img title=\"部门决算5.jpg\" src=\"migration-resource://63a66aa98bdc79f93757a31d830343bd573b986c328458fb804beb78b5d0218e\"></p><p style=\"text-align: center\"><img title=\"部门决算6.jpg\" src=\"migration-resource://b84fbdd9add6ac386850fa7e72fd6348aa4570b5af631b02cfe6faede374d2f4\"></p><p style=\"text-align: center\"><img title=\"部门决算7.jpg\" src=\"migration-resource://c81a505b2d6d22126517e657d6222d50e18f67c5775b28a1ebc77610e5e8c6b1\"></p><p style=\"text-align: center\"><img title=\"部门决算8.jpg\" src=\"migration-resource://46de711696cecbcedd6389070131a84df4c0ee3a80cedcd97e617b973aeb07de\"></p><p style=\"text-align: center\"><img title=\"部门决算9.jpg\" src=\"migration-resource://4b9847b0acf532dcece68dc3758300aa8ee9ab6119b8c3dbdae2beba142c2a00\"></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361021653914062504917140.jpg",
+      "originalReference": "/chistory/cms/imgs/6361021653914062504917140.jpg",
+      "token": "migration-resource://eb4a1140a996a1fc426250424db00b5a2eaafd52cdb2f1b52a616f73592f2acb",
+      "snapshotPath": "assets/eb4a1140a996a1fc426250424db00b5a2eaafd52cdb2f1b52a616f73592f2acb.jpg",
+      "sha256": "eb4a1140a996a1fc426250424db00b5a2eaafd52cdb2f1b52a616f73592f2acb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 42825
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361021654060937508902219.jpg",
+      "originalReference": "/chistory/cms/imgs/6361021654060937508902219.jpg",
+      "token": "migration-resource://e1ffec6e09ed9e89f43ab082e4d44cc72f90d1fd85d7fe154bedf87811fc12ea",
+      "snapshotPath": "assets/e1ffec6e09ed9e89f43ab082e4d44cc72f90d1fd85d7fe154bedf87811fc12ea.jpg",
+      "sha256": "e1ffec6e09ed9e89f43ab082e4d44cc72f90d1fd85d7fe154bedf87811fc12ea",
+      "contentType": "image/jpeg",
+      "sizeBytes": 53753
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361021654212500008873205.jpg",
+      "originalReference": "/chistory/cms/imgs/6361021654212500008873205.jpg",
+      "token": "migration-resource://11cc614334d39b35d548d8ae15180ab4af4d83da65ad8750c8d28ad8c213787d",
+      "snapshotPath": "assets/11cc614334d39b35d548d8ae15180ab4af4d83da65ad8750c8d28ad8c213787d.jpg",
+      "sha256": "11cc614334d39b35d548d8ae15180ab4af4d83da65ad8750c8d28ad8c213787d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95986
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361021654357812509629039.jpg",
+      "originalReference": "/chistory/cms/imgs/6361021654357812509629039.jpg",
+      "token": "migration-resource://e0c2db423218aa2071d476f306e72e9eb2e0d9ca4edffdf46a2fd5d1d0721427",
+      "snapshotPath": "assets/e0c2db423218aa2071d476f306e72e9eb2e0d9ca4edffdf46a2fd5d1d0721427.jpg",
+      "sha256": "e0c2db423218aa2071d476f306e72e9eb2e0d9ca4edffdf46a2fd5d1d0721427",
+      "contentType": "image/jpeg",
+      "sizeBytes": 128013
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361021654498437505398965.jpg",
+      "originalReference": "/chistory/cms/imgs/6361021654498437505398965.jpg",
+      "token": "migration-resource://63a66aa98bdc79f93757a31d830343bd573b986c328458fb804beb78b5d0218e",
+      "snapshotPath": "assets/63a66aa98bdc79f93757a31d830343bd573b986c328458fb804beb78b5d0218e.jpg",
+      "sha256": "63a66aa98bdc79f93757a31d830343bd573b986c328458fb804beb78b5d0218e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 103160
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361021654660937504869185.jpg",
+      "originalReference": "/chistory/cms/imgs/6361021654660937504869185.jpg",
+      "token": "migration-resource://b84fbdd9add6ac386850fa7e72fd6348aa4570b5af631b02cfe6faede374d2f4",
+      "snapshotPath": "assets/b84fbdd9add6ac386850fa7e72fd6348aa4570b5af631b02cfe6faede374d2f4.jpg",
+      "sha256": "b84fbdd9add6ac386850fa7e72fd6348aa4570b5af631b02cfe6faede374d2f4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 108816
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361021654818750008353497.jpg",
+      "originalReference": "/chistory/cms/imgs/6361021654818750008353497.jpg",
+      "token": "migration-resource://c81a505b2d6d22126517e657d6222d50e18f67c5775b28a1ebc77610e5e8c6b1",
+      "snapshotPath": "assets/c81a505b2d6d22126517e657d6222d50e18f67c5775b28a1ebc77610e5e8c6b1.jpg",
+      "sha256": "c81a505b2d6d22126517e657d6222d50e18f67c5775b28a1ebc77610e5e8c6b1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 119284
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361021654965625003338576.jpg",
+      "originalReference": "/chistory/cms/imgs/6361021654965625003338576.jpg",
+      "token": "migration-resource://46de711696cecbcedd6389070131a84df4c0ee3a80cedcd97e617b973aeb07de",
+      "snapshotPath": "assets/46de711696cecbcedd6389070131a84df4c0ee3a80cedcd97e617b973aeb07de.jpg",
+      "sha256": "46de711696cecbcedd6389070131a84df4c0ee3a80cedcd97e617b973aeb07de",
+      "contentType": "image/jpeg",
+      "sizeBytes": 102778
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361021655115625009080317.jpg",
+      "originalReference": "/chistory/cms/imgs/6361021655115625009080317.jpg",
+      "token": "migration-resource://4b9847b0acf532dcece68dc3758300aa8ee9ab6119b8c3dbdae2beba142c2a00",
+      "snapshotPath": "assets/4b9847b0acf532dcece68dc3758300aa8ee9ab6119b8c3dbdae2beba142c2a00.jpg",
+      "sha256": "4b9847b0acf532dcece68dc3758300aa8ee9ab6119b8c3dbdae2beba142c2a00",
+      "contentType": "image/jpeg",
+      "sizeBytes": 110576
+    }
+  ],
+  "sourceFingerprint": "e1e984206e1be376e2fd0307e87bb2b446ac12b880ace44bb1cb89761894fa50",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "吉林省高等学校毕业生就业指导中心2015年度部门决算公示",
+    "listPublishDate": "2016-09-23",
+    "sourceOrder": 413,
+    "detailPublishDate": "2016-09-23"
+  }
+}

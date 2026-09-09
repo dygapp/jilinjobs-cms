@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268961310605312",
+    "contentId": "268961310605312",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268961310605312"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "绍兴市上虞区与辽源职业技术学院签约设立人才引进工作站",
+    "source": "",
+    "publishDate": "2024-12-06",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://4a010ee041720d6ba7f2e74fc115ba253296e4d59c17638637d7fac890920d93\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/771e6957-5a9f-46ba-85d6-0d7d1b5ea0bd.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/771e6957-5a9f-46ba-85d6-0d7d1b5ea0bd.jpg",
+      "token": "migration-resource://4a010ee041720d6ba7f2e74fc115ba253296e4d59c17638637d7fac890920d93",
+      "snapshotPath": "assets/4a010ee041720d6ba7f2e74fc115ba253296e4d59c17638637d7fac890920d93.jpg",
+      "sha256": "4a010ee041720d6ba7f2e74fc115ba253296e4d59c17638637d7fac890920d93",
+      "contentType": "image/jpeg",
+      "sizeBytes": 405560
+    }
+  ],
+  "sourceFingerprint": "c163a81f3ccd2aab96e8768040050e08b9cf6b90a28e9d1ec8c3daf30f73c341",
+  "evidence": {
+    "listPage": 100,
+    "listTitle": "绍兴市上虞区与辽源职业技术学院签约设立人才引进工作站",
+    "listPublishDate": "2024-12-06",
+    "sourceOrder": 1000,
+    "detailPublishDate": "2024-12-06"
+  }
+}

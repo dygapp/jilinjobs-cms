@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0bb92d05aa94ec31f9c9bfca2b106d8009ab56cd608c7c64973d6ae623e9695d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/RbVTTnzbtISXlKmFG3c3WQ",
+    "url": "https://mp.weixin.qq.com/s/RbVTTnzbtISXlKmFG3c3WQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学纪委书记司学俭带队开展“优企引才”访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/RbVTTnzbtISXlKmFG3c3WQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "6c2fbb2359de4a3837f2de8037479c706009153c8cd1b4b3cebc281062ec1eee",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "延边大学纪委书记司学俭带队开展“优企引才”访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-16",
+    "sourceOrder": 414
+  }
+}

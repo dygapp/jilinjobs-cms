@@ -1,0 +1,111 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:145917902618624",
+    "contentId": "145917902618624",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=145917902618624"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展2023年“奋斗有我 就在吉林”互联网+就业创业系列直播课的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2023-03-14",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://712b9291e4f296a7f1f360e902175876d766ca884fd51673664ba326031211e7\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://71ec57dd85f46b0343493ecbe931764e02a5ffb6bfb96973e224852f01b00970\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://0a9ed6605851409e81cd1423506f845ad0b453b9ec3fd555d753b1b2a25673e9\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://f8c45467ddbc7498020bbe9cb0722caf5eb8fdec71bb54e5f0cfcc094730c421\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://2feb648efd24c87bc73aac8781e9b2e97b86d9d18a0028a46d459f67f29c0ba7\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://1aaece741d576dfe5436b0049e3b0e49d27bfc3307ae96f4f3158b3c711de025\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://92be137c9c5824b80f62b40d69b138fe24aa08754c56a1ebbe9bac75bddfe59d\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://d966c11b5b686f925d4e186abbb0c7feb0c19695a0d996240396c32c36fafc9e\" width=\"1000\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-03-17/fd38a6a5-f6d3-4082-a1ec-1ffe9489180f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-03-17/fd38a6a5-f6d3-4082-a1ec-1ffe9489180f.jpg",
+      "token": "migration-resource://712b9291e4f296a7f1f360e902175876d766ca884fd51673664ba326031211e7",
+      "snapshotPath": "assets/712b9291e4f296a7f1f360e902175876d766ca884fd51673664ba326031211e7.jpg",
+      "sha256": "712b9291e4f296a7f1f360e902175876d766ca884fd51673664ba326031211e7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 211775
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-03-17/0781e153-a421-4924-b311-b75bfee4e2a2.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-03-17/0781e153-a421-4924-b311-b75bfee4e2a2.jpg",
+      "token": "migration-resource://71ec57dd85f46b0343493ecbe931764e02a5ffb6bfb96973e224852f01b00970",
+      "snapshotPath": "assets/71ec57dd85f46b0343493ecbe931764e02a5ffb6bfb96973e224852f01b00970.jpg",
+      "sha256": "71ec57dd85f46b0343493ecbe931764e02a5ffb6bfb96973e224852f01b00970",
+      "contentType": "image/jpeg",
+      "sizeBytes": 184093
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-03-17/903e557b-91c1-4944-9911-e02360eace57.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-03-17/903e557b-91c1-4944-9911-e02360eace57.jpg",
+      "token": "migration-resource://0a9ed6605851409e81cd1423506f845ad0b453b9ec3fd555d753b1b2a25673e9",
+      "snapshotPath": "assets/0a9ed6605851409e81cd1423506f845ad0b453b9ec3fd555d753b1b2a25673e9.jpg",
+      "sha256": "0a9ed6605851409e81cd1423506f845ad0b453b9ec3fd555d753b1b2a25673e9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 59780
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-03-17/b6c69172-46de-4f4e-a0c9-efe1e87ed264.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-03-17/b6c69172-46de-4f4e-a0c9-efe1e87ed264.jpg",
+      "token": "migration-resource://f8c45467ddbc7498020bbe9cb0722caf5eb8fdec71bb54e5f0cfcc094730c421",
+      "snapshotPath": "assets/f8c45467ddbc7498020bbe9cb0722caf5eb8fdec71bb54e5f0cfcc094730c421.jpg",
+      "sha256": "f8c45467ddbc7498020bbe9cb0722caf5eb8fdec71bb54e5f0cfcc094730c421",
+      "contentType": "image/jpeg",
+      "sizeBytes": 154239
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-03-17/b749465b-6bc2-4253-a0ca-a7bd3fe4ebb9.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-03-17/b749465b-6bc2-4253-a0ca-a7bd3fe4ebb9.jpg",
+      "token": "migration-resource://2feb648efd24c87bc73aac8781e9b2e97b86d9d18a0028a46d459f67f29c0ba7",
+      "snapshotPath": "assets/2feb648efd24c87bc73aac8781e9b2e97b86d9d18a0028a46d459f67f29c0ba7.jpg",
+      "sha256": "2feb648efd24c87bc73aac8781e9b2e97b86d9d18a0028a46d459f67f29c0ba7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 324976
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-03-17/1066ef8f-d7dc-4fe7-aa33-dd6977589ece.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-03-17/1066ef8f-d7dc-4fe7-aa33-dd6977589ece.jpg",
+      "token": "migration-resource://1aaece741d576dfe5436b0049e3b0e49d27bfc3307ae96f4f3158b3c711de025",
+      "snapshotPath": "assets/1aaece741d576dfe5436b0049e3b0e49d27bfc3307ae96f4f3158b3c711de025.jpg",
+      "sha256": "1aaece741d576dfe5436b0049e3b0e49d27bfc3307ae96f4f3158b3c711de025",
+      "contentType": "image/jpeg",
+      "sizeBytes": 364636
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-03-17/0368d138-245b-4868-80c5-ede1bf5249d1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-03-17/0368d138-245b-4868-80c5-ede1bf5249d1.jpg",
+      "token": "migration-resource://92be137c9c5824b80f62b40d69b138fe24aa08754c56a1ebbe9bac75bddfe59d",
+      "snapshotPath": "assets/92be137c9c5824b80f62b40d69b138fe24aa08754c56a1ebbe9bac75bddfe59d.jpg",
+      "sha256": "92be137c9c5824b80f62b40d69b138fe24aa08754c56a1ebbe9bac75bddfe59d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 342879
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-03-17/c31cf9d6-86f0-43bd-bafc-c16518e7a687.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-03-17/c31cf9d6-86f0-43bd-bafc-c16518e7a687.jpg",
+      "token": "migration-resource://d966c11b5b686f925d4e186abbb0c7feb0c19695a0d996240396c32c36fafc9e",
+      "snapshotPath": "assets/d966c11b5b686f925d4e186abbb0c7feb0c19695a0d996240396c32c36fafc9e.jpg",
+      "sha256": "d966c11b5b686f925d4e186abbb0c7feb0c19695a0d996240396c32c36fafc9e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 211061
+    }
+  ],
+  "sourceFingerprint": "66420e3532c98732bb32d42b0094f85a495d6fbffa1f3e54177ae0256245360b",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "关于开展2023年“奋斗有我 就在吉林”互联网+就业创业系列直播课的通知",
+    "listPublishDate": "2023-03-14",
+    "sourceOrder": 111,
+    "detailPublishDate": "2023-03-14"
+  }
+}

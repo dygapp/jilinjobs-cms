@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c3c0ca24b3ac3097b73033bc52fe15ea96b88830cf305503b5a56276c5f717d1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/qUjj_Qaii4zMgQvJ2lRS_A",
+    "url": "https://mp.weixin.qq.com/s/qUjj_Qaii4zMgQvJ2lRS_A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业|长春电子科技学院赴鞍山、济南企业开展合作洽谈",
+    "source": "",
+    "publishDate": "2026-04-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/qUjj_Qaii4zMgQvJ2lRS_A"
+  },
+  "resources": [],
+  "sourceFingerprint": "fecf9282656e00285aa64210ab0cbb7a463c6aa84e980cbcbd3feebfb93a43ec",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "访企拓岗促就业|长春电子科技学院赴鞍山、济南企业开展合作洽谈",
+    "listPublishDate": "2026-04-14",
+    "sourceOrder": 288
+  }
+}

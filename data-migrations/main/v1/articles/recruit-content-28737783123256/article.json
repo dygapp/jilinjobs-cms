@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123256",
+    "contentId": "28737783123256",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123256"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "上海工商部门出台“八项新政”鼓励创业",
+    "source": "",
+    "publishDate": "2009-05-07",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">上海工商部门出台“八项新政”鼓励创业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-5-7 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 针对市场准入过程中费用高、环节多、周期长的“瓶颈”问题，上海工商部门9日出台“八项新政”，鼓励创业、促进就业。 </font></p> <p><font size=\"2\">　　据介绍，“八项新政”首先涉及一系列行政事业费用减免和注册资金缓缴。其中，个体经营者自工商部门登记之日起3年内，可免缴管理类、登记类、证照类等行政事业费用；毕业两年内的高校毕业生，投资设立注册资本50万元以下的有限责任公司，注册资本可“分期付款”，在两年内逐步缴足。 </font></p> <p><font size=\"2\">　　个体创业者注册登记场地限制多，会导致运营负担重。对此，“八项新政”适当放宽了相关限制。如，在不改变建筑结构、不影响建筑安全的前提下，新政策鼓励人们利用闲置厂房、仓库，建设创意产业集聚区，发展现代服务业。 </font></p> <p><font size=\"2\">　　此外，对于翻译、软件开发、电子商务、动漫设计等个人智力创作型企业，工商部门允许各区县政府提供集中场地，协助其办理登记。 </font></p> <p><font size=\"2\">上海工商部门近期还将深入大学校园，通过讲座、创业联系人等方式，为大学生创业给予现场指导和咨询服务。 </font></p> <p><font size=\"2\">&nbsp;</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：中青在线</font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "b86c764acb074bc978f231d917456982dc56dfc2e0bbca85a68664081a1d6103",
+  "evidence": {
+    "listPage": 55,
+    "listTitle": "上海工商部门出台“八项新政”鼓励创业",
+    "listPublishDate": "2009-05-07",
+    "sourceOrder": 543,
+    "detailPublishDate": "2009-05-07"
+  }
+}

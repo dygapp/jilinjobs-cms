@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123182",
+    "contentId": "28737783123182",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123182"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "北京师范大学2012年应用心理学专业职业生涯发展与辅导方向硕士研究生单独考试招生简章",
+    "source": "",
+    "publishDate": "2011-10-31",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">北京师范大学2012年应用心理学专业职业生涯发展与辅导方向硕士研究生单独考试招生简章</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-10-31 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://26f4af7b17114a0d258f1a7cc3c818bde8f7ce80c44b8e37d40daacbc2547d8d\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://7cd502cd81e76bc48bf7427c51c0ff5967d4778a2fdde091ab9bdbe3d49a105b\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://07dfc69582284f955b717e5e209cf0dfd11370f121795cb0966c3934fe003683\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://af987f1d75acd13a4332cd6ac8a844ab2f9c25582839fccd3e8d7b0a96d48794\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111031115146156.jpg",
+      "originalReference": "/chistory/cms/imgs/20111031115146156.jpg",
+      "token": "migration-resource://26f4af7b17114a0d258f1a7cc3c818bde8f7ce80c44b8e37d40daacbc2547d8d",
+      "snapshotPath": "assets/26f4af7b17114a0d258f1a7cc3c818bde8f7ce80c44b8e37d40daacbc2547d8d.jpg",
+      "sha256": "26f4af7b17114a0d258f1a7cc3c818bde8f7ce80c44b8e37d40daacbc2547d8d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 99721
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111031115158541.jpg",
+      "originalReference": "/chistory/cms/imgs/20111031115158541.jpg",
+      "token": "migration-resource://7cd502cd81e76bc48bf7427c51c0ff5967d4778a2fdde091ab9bdbe3d49a105b",
+      "snapshotPath": "assets/7cd502cd81e76bc48bf7427c51c0ff5967d4778a2fdde091ab9bdbe3d49a105b.jpg",
+      "sha256": "7cd502cd81e76bc48bf7427c51c0ff5967d4778a2fdde091ab9bdbe3d49a105b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 101853
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111031115208627.jpg",
+      "originalReference": "/chistory/cms/imgs/20111031115208627.jpg",
+      "token": "migration-resource://07dfc69582284f955b717e5e209cf0dfd11370f121795cb0966c3934fe003683",
+      "snapshotPath": "assets/07dfc69582284f955b717e5e209cf0dfd11370f121795cb0966c3934fe003683.jpg",
+      "sha256": "07dfc69582284f955b717e5e209cf0dfd11370f121795cb0966c3934fe003683",
+      "contentType": "image/jpeg",
+      "sizeBytes": 101942
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111031115551249.jpg",
+      "originalReference": "/chistory/cms/imgs/20111031115551249.jpg",
+      "token": "migration-resource://af987f1d75acd13a4332cd6ac8a844ab2f9c25582839fccd3e8d7b0a96d48794",
+      "snapshotPath": "assets/af987f1d75acd13a4332cd6ac8a844ab2f9c25582839fccd3e8d7b0a96d48794.jpg",
+      "sha256": "af987f1d75acd13a4332cd6ac8a844ab2f9c25582839fccd3e8d7b0a96d48794",
+      "contentType": "image/jpeg",
+      "sizeBytes": 45974
+    }
+  ],
+  "sourceFingerprint": "3a4468798270eda44e1991c333f151e8284625504abdbd7f2125592920911880",
+  "evidence": {
+    "listPage": 46,
+    "listTitle": "北京师范大学2012年应用心理学专业职业生涯发展与辅导方向硕士研究生单独考试招生简章",
+    "listPublishDate": "2011-10-31",
+    "sourceOrder": 453,
+    "detailPublishDate": "2011-10-31"
+  }
+}

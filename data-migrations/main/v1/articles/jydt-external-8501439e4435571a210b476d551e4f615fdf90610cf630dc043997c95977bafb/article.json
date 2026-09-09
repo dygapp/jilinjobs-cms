@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8501439e4435571a210b476d551e4f615fdf90610cf630dc043997c95977bafb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1086/85170.htm",
+    "url": "https://www.ccsfu.edu.cn/info/1086/85170.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学副校长白娥率队赴广西壮族自治区调研",
+    "source": "",
+    "publishDate": "2026-01-04",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccsfu.edu.cn/info/1086/85170.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "632a6ff6b1ac973b4c8dbefcef595b8d7da98110606a99cce27a721426364637",
+  "evidence": {
+    "listPage": 52,
+    "listTitle": "长春师范大学副校长白娥率队赴广西壮族自治区调研",
+    "listPublishDate": "2026-01-04",
+    "sourceOrder": 511
+  }
+}

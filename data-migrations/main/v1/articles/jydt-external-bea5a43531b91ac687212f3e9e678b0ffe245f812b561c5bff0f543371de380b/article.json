@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bea5a43531b91ac687212f3e9e678b0ffe245f812b561c5bff0f543371de380b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/I-oKPc9qSI1kmXiE8p-QLw",
+    "url": "https://mp.weixin.qq.com/s/I-oKPc9qSI1kmXiE8p-QLw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林师范大学开展校地企育人引才实践活动",
+    "source": "",
+    "publishDate": "2025-10-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/I-oKPc9qSI1kmXiE8p-QLw"
+  },
+  "resources": [],
+  "sourceFingerprint": "77bddf241d6fc01510131252cb6feee6679772f79b0796dd9b602ea1229826f8",
+  "evidence": {
+    "listPage": 67,
+    "listTitle": "吉林师范大学开展校地企育人引才实践活动",
+    "listPublishDate": "2025-10-23",
+    "sourceOrder": 666
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120606",
+    "contentId": "28737783120606",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120606"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省高校就业创业指导师培训班的通知",
+    "source": "",
+    "publishDate": "2015-05-26",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办吉林省高校就业创业指导师培训班的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2015-5-26 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center;\"><img title=\"IMG_20150529_085425.jpg\" src=\"migration-resource://ac8f7cb629b3799d849ff21f7f5a5d81f748c2d5d68b0f5a3ff9897d3aae2c3e\"></p><p style=\"text-align: center;\"><img title=\"IMG_20150529_085442.jpg\" src=\"migration-resource://54c7f915265cbd9c71768875b7d9091f8bf10d515facfa0ef2a88bde021b1226\"></p><p style=\"text-align: center;\"><img title=\"IMG_20150529_085534.jpg\" src=\"migration-resource://2338f2625a9d7113559d1233bd8190f8cb59753f9c67934d471fa0c060ee02bf\"></p><p style=\"text-align: center;\"><img title=\"IMG_20150529_085609.jpg\" src=\"migration-resource://b85e993ffd5d38592c508b06c4917fbfa7666064389d14fdc8709f706072c6c3\"></p><p style=\"text-align: center;\"></p><p style=\"text-align: center;\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356848675603037505657039.jpg",
+      "originalReference": "/chistory/cms/imgs/6356848675603037505657039.jpg",
+      "token": "migration-resource://ac8f7cb629b3799d849ff21f7f5a5d81f748c2d5d68b0f5a3ff9897d3aae2c3e",
+      "snapshotPath": "assets/ac8f7cb629b3799d849ff21f7f5a5d81f748c2d5d68b0f5a3ff9897d3aae2c3e.jpg",
+      "sha256": "ac8f7cb629b3799d849ff21f7f5a5d81f748c2d5d68b0f5a3ff9897d3aae2c3e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90331
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356848675609287509170364.jpg",
+      "originalReference": "/chistory/cms/imgs/6356848675609287509170364.jpg",
+      "token": "migration-resource://54c7f915265cbd9c71768875b7d9091f8bf10d515facfa0ef2a88bde021b1226",
+      "snapshotPath": "assets/54c7f915265cbd9c71768875b7d9091f8bf10d515facfa0ef2a88bde021b1226.jpg",
+      "sha256": "54c7f915265cbd9c71768875b7d9091f8bf10d515facfa0ef2a88bde021b1226",
+      "contentType": "image/jpeg",
+      "sizeBytes": 176807
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356848675613975005156272.jpg",
+      "originalReference": "/chistory/cms/imgs/6356848675613975005156272.jpg",
+      "token": "migration-resource://2338f2625a9d7113559d1233bd8190f8cb59753f9c67934d471fa0c060ee02bf",
+      "snapshotPath": "assets/2338f2625a9d7113559d1233bd8190f8cb59753f9c67934d471fa0c060ee02bf.jpg",
+      "sha256": "2338f2625a9d7113559d1233bd8190f8cb59753f9c67934d471fa0c060ee02bf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 137705
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356848675617100006912935.jpg",
+      "originalReference": "/chistory/cms/imgs/6356848675617100006912935.jpg",
+      "token": "migration-resource://b85e993ffd5d38592c508b06c4917fbfa7666064389d14fdc8709f706072c6c3",
+      "snapshotPath": "assets/b85e993ffd5d38592c508b06c4917fbfa7666064389d14fdc8709f706072c6c3.jpg",
+      "sha256": "b85e993ffd5d38592c508b06c4917fbfa7666064389d14fdc8709f706072c6c3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 155143
+    }
+  ],
+  "sourceFingerprint": "20cd4387edb6e80dd3e19776bab46f450fdbe75fe42410b9a871bc23e10c940a",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "关于举办吉林省高校就业创业指导师培训班的通知",
+    "listPublishDate": "2015-05-26",
+    "sourceOrder": 277,
+    "detailPublishDate": "2015-05-26"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b83277ddf73594990ece8490b9cf811b90ec58db5e3c463562b5a6ffd327c67f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/i1b_aEY3ex0UD_3NdB-ljg",
+    "url": "https://mp.weixin.qq.com/s/i1b_aEY3ex0UD_3NdB-ljg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化政校企协同 赋能高质量发展 —— 长春光华学院赴浙江开展政校企合作洽谈系列活动",
+    "source": "",
+    "publishDate": "2026-05-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/i1b_aEY3ex0UD_3NdB-ljg"
+  },
+  "resources": [],
+  "sourceFingerprint": "2d06a0d0d3ff3bc668aff8cd92abeffdd927ea548cb0dac172c04b995148ae6f",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "深化政校企协同 赋能高质量发展 —— 长春光华学院赴浙江开展政校企合作洽谈系列活动",
+    "listPublishDate": "2026-05-06",
+    "sourceOrder": 214
+  }
+}

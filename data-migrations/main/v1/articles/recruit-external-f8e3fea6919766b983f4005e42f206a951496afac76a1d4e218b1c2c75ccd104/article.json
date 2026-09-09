@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:f8e3fea6919766b983f4005e42f206a951496afac76a1d4e218b1c2c75ccd104",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/wmW9S1nNT_aRk8VM24z5Rg",
+    "url": "https://mp.weixin.qq.com/s/wmW9S1nNT_aRk8VM24z5Rg?scene=25&sessionid=-1365323411"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "精准化岗位供需对接 服务吉林高质量发展|吉林工商学院2025届毕业生春季大型校园招聘会邀请函",
+    "source": "",
+    "publishDate": "2025-04-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wmW9S1nNT_aRk8VM24z5Rg?scene=25&sessionid=-1365323411"
+  },
+  "resources": [],
+  "sourceFingerprint": "82154f027947c5910718eca5292525267052ba2a5a09ba8e08bedc4953bd9007",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "精准化岗位供需对接 服务吉林高质量发展|吉林工商学院2025届毕业生春季大型校园招聘会邀请函",
+    "listPublishDate": "2025-04-29",
+    "sourceOrder": 163
+  }
+}

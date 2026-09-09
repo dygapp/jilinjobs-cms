@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e6401065752c5d62089afdd3bd1a58e5c4c8cec02013dbb13cfd93a662208d2a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/QyHLn2JkvRZDOiXPkUDTFw",
+    "url": "https://mp.weixin.qq.com/s/QyHLn2JkvRZDOiXPkUDTFw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学旅游学院党委副书记高阳带队赴长春市文旅发展集团有限公司访企拓岗",
+    "source": "",
+    "publishDate": "2026-04-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/QyHLn2JkvRZDOiXPkUDTFw"
+  },
+  "resources": [],
+  "sourceFingerprint": "2753c93b88a438533701b588ce2ea8f33e90f455763e9f72346abe27b78417cc",
+  "evidence": {
+    "listPage": 32,
+    "listTitle": "长春大学旅游学院党委副书记高阳带队赴长春市文旅发展集团有限公司访企拓岗",
+    "listPublishDate": "2026-04-03",
+    "sourceOrder": 318
+  }
+}

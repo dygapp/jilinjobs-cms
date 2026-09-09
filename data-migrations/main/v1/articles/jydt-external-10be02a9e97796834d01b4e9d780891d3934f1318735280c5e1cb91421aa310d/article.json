@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:10be02a9e97796834d01b4e9d780891d3934f1318735280c5e1cb91421aa310d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1028/172542.htm",
+    "url": "https://www.jlju.edu.cn/info/1028/172542.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学积极开展“访企拓岗”专项行动 助力2026届毕业生高质量充分就业",
+    "source": "",
+    "publishDate": "2026-02-09",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1028/172542.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "4aca336e4fb717381c6840c166d6be7a0d331f41368e6ad1a9ef09188337afb2",
+  "evidence": {
+    "listPage": 46,
+    "listTitle": "吉林建筑大学积极开展“访企拓岗”专项行动 助力2026届毕业生高质量充分就业",
+    "listPublishDate": "2026-02-09",
+    "sourceOrder": 453
+  }
+}

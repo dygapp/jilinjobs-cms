@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:682eac67648ce27784d12de0ba81e4fcc1ebc34a299ff54127ca5ac7a4648bd2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/YVO9OaT1wseKC91zrvDdsA",
+    "url": "https://mp.weixin.qq.com/s/YVO9OaT1wseKC91zrvDdsA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业｜长春早期教育职业学院携手吉林省鼎元牙科科技 共绘口腔医学人才培养新蓝图",
+    "source": "",
+    "publishDate": "2026-03-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/YVO9OaT1wseKC91zrvDdsA"
+  },
+  "resources": [],
+  "sourceFingerprint": "392a6d52887c9d4d3c0508a92164fc33064f56fdb8ad49032f61aeeaffd08f03",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "访企拓岗促就业｜长春早期教育职业学院携手吉林省鼎元牙科科技 共绘口腔医学人才培养新蓝图",
+    "listPublishDate": "2026-03-24",
+    "sourceOrder": 373
+  }
+}

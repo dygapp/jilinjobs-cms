@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fef2b69a4a9496413a5a645db9d2e9159dcfdc30fc885f697d1212f57f960d89",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/vjhoAFmsSqE9_um_nIudIA",
+    "url": "https://mp.weixin.qq.com/s/vjhoAFmsSqE9_um_nIudIA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "这有一份《吉林省个体工商户和小微企业创业服务手册》，请查收！",
+    "source": "",
+    "publishDate": "2023-05-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vjhoAFmsSqE9_um_nIudIA"
+  },
+  "resources": [],
+  "sourceFingerprint": "95f29975135bb9ef38a49732afa21e8d62a8e3fdf760900235f16e0edfc65d41",
+  "evidence": {
+    "listPage": 115,
+    "listTitle": "这有一份《吉林省个体工商户和小微企业创业服务手册》，请查收！",
+    "listPublishDate": "2023-05-04",
+    "sourceOrder": 1142
+  }
+}

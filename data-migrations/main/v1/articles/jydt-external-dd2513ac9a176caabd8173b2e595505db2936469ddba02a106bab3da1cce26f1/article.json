@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:dd2513ac9a176caabd8173b2e595505db2936469ddba02a106bab3da1cce26f1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/zS3ZRsvEQe3peMXbhZofCQ",
+    "url": "https://mp.weixin.qq.com/s/zS3ZRsvEQe3peMXbhZofCQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化校企协同 拓宽就业通道 通化师范学院开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-02-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/zS3ZRsvEQe3peMXbhZofCQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "2a6d721a541cbe18ebb01518dd024de173e7c1e2dfbadd9c3bc35b30e486272b",
+  "evidence": {
+    "listPage": 45,
+    "listTitle": "深化校企协同 拓宽就业通道 通化师范学院开展访企拓岗专项行动",
+    "listPublishDate": "2026-02-12",
+    "sourceOrder": 446
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:11b586419fb904721620a564d3c83acaf0001ac2087b4dca7c06876173056b44",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/-KEjq_nZ0Yk6zm9-iQBjug",
+    "url": "https://mp.weixin.qq.com/s/-KEjq_nZ0Yk6zm9-iQBjug"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林司法警官职业学院“企业家校园开放日”活动成功举办",
+    "source": "",
+    "publishDate": "2026-05-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/-KEjq_nZ0Yk6zm9-iQBjug"
+  },
+  "resources": [],
+  "sourceFingerprint": "973e7df3f06b3703db28813f2f6829110fc2b1baa082c544b0a1fbac00a056be",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "吉林司法警官职业学院“企业家校园开放日”活动成功举办",
+    "listPublishDate": "2026-05-26",
+    "sourceOrder": 142
+  }
+}

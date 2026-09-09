@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122156",
+    "contentId": "28737783122156",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122156"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省两所高校团队获2014年度全国大学生创业基金全国总评审奖项",
+    "source": "",
+    "publishDate": "2015-01-19",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省两所高校团队获2014年度全国大学生创业基金全国总评审奖项</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2015-1-19 14:49:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 16px;\">&nbsp;&nbsp;&nbsp; 12月7日，由全国高等学校学生信息咨询与就业指导中心主办的2014年度全国大学生创业基金全国总评审在天津圆满落下帷幕。自2014年4月启动以来，全国共有31个省市、951所高校申报2251项大学生创业项目，经过近两个月的项目评审，遴选出70个创业项目进入全国总评审。</span></p><p><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 16px;\">&nbsp;&nbsp;&nbsp; 我省共有两所高校团队获得奖项，其中长春理工大学的“电视激光广播通信网络”团队荣获一等奖，获得基金30万元；长春工业大学的“Q＆C高级内衣定制有限责任公司”团队获得优秀奖。</span></p><p><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 16px;\">&nbsp;&nbsp;&nbsp; 此次活动将对我省高校大学生创业工作起到积极有力的推动作用。</span></p><p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "fcfa05c809a77a1009e6f049dd67fddaaac613fefc36016d3db7c6da1620f86e",
+  "evidence": {
+    "listPage": 158,
+    "listTitle": "我省两所高校团队获2014年度全国大学生创业基金全国总评审奖项",
+    "listPublishDate": "2015-01-19",
+    "sourceOrder": 1577,
+    "detailPublishDate": "2015-01-19"
+  }
+}

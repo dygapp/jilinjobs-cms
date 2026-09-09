@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:04a5b1cc8fde14b659e9c5a04afbfdc30352d0dbe4d41bb45e40fddda4d8e7e9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/mzOyBWKytPcquMSJPZf2ng",
+    "url": "https://mp.weixin.qq.com/s/mzOyBWKytPcquMSJPZf2ng"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院 | 吉林出入境边防检查总站边境管理处到生命科学学院召开专场宣讲会",
+    "source": "",
+    "publishDate": "2025-09-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/mzOyBWKytPcquMSJPZf2ng"
+  },
+  "resources": [],
+  "sourceFingerprint": "4b9906d05898a7dee32054aafeec6b86f462f20bdd35ffd01a9eed142aeb91a2",
+  "evidence": {
+    "listPage": 69,
+    "listTitle": "长春科技学院 | 吉林出入境边防检查总站边境管理处到生命科学学院召开专场宣讲会",
+    "listPublishDate": "2025-09-29",
+    "sourceOrder": 689
+  }
+}

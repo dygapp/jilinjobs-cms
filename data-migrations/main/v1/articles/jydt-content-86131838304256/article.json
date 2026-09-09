@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86131838304256",
+    "contentId": "86131838304256",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86131838304256"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "校企共建云实习模式长春财经学院会计学院开展线上专业实习",
+    "source": "长春财经学院",
+    "publishDate": "2022-04-12",
+    "bodyHtml": "\n                        <p>为确保疫情期间毕业生专业实习的需要，长春财经学院会计学院与金蝶产业学院携手共建云实习模式，3月14日-3月25日，组织财务管理专业2018级共141名学生进行为期两周的线上专业实习。</p>\n\n<p>依托产业学院，优化实习方案。在专业实习之前，会计学院组建校内外教师的专业实习团队，调研学生实习需求，多次开展线上会议研讨，商议初步工作方案。学院根据当前疫情形势，经过与教务处领导和企业方面反复沟通，最终决定依托金蝶产业学院、采用金蝶E云平台和财务决策平台的模式开展实习活动。随后会计学院与金蝶学院共同确定了本次实习的最终方案，学院邀请企业指导教师和会计学院教师共同完成专业实习的指导与授课任务。</p>\n\n<p>强化数据思维，增强财务技能。本次实习分为Python在财务管理中的应用和网中网财务决策两部分内容。实习过程充分采用金蝶E云平台和财务决策平台进行线上专业实训和线上企业实习。实习内容的设计紧紧围绕财务管理专业知识，吻合当前社会需求，注重培养和强化学生财务大数据思维和技能。动态检验学生实习效果，达到强化学生专业实习技能、夯实学生就业技能基础的培养目标。</p>\n\n<p><strong>（长春财经学院 吴兆书）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "54bd6c80d3a77cd686fda4916323e491c48fa598457fc97230ad137fbc5995d2",
+  "evidence": {
+    "listPage": 123,
+    "listTitle": "校企共建云实习模式长春财经学院会计学院开展线上专业实习",
+    "listPublishDate": "2022-04-12",
+    "sourceOrder": 1229,
+    "detailPublishDate": "2022-04-12"
+  }
+}

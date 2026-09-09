@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bd7249f56760493cf4b6e856e73bdc83fb3958d8ce652f54d7a915b4dbc52ed4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/XhBp3mGr4eOvQWTvS-53-Q",
+    "url": "https://mp.weixin.qq.com/s/XhBp3mGr4eOvQWTvS-53-Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化师范学院召开2025届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2025-06-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/XhBp3mGr4eOvQWTvS-53-Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "c8750f47df94899144c79e7815629b1ff6d7618d56faeb9c05d9234b57261ba4",
+  "evidence": {
+    "listPage": 79,
+    "listTitle": "通化师范学院召开2025届毕业生就业工作推进会",
+    "listPublishDate": "2025-06-19",
+    "sourceOrder": 789
+  }
+}

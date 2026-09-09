@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122186",
+    "contentId": "28737783122186",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122186"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "全国高校就业指导人员系统培训（中级）班在吉林市举办",
+    "source": "",
+    "publishDate": "2013-07-25",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">全国高校就业指导人员系统培训（中级）班在吉林市举办</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2013-7-25 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font size=\"4\"><strong></strong></font>&nbsp;</p> <p><font size=\"4\">&nbsp;&nbsp;&nbsp; 7月18日至22日，由我省承办的全国高校就业指导人员系统培训（中级）班在吉林市举办。来自黑龙江、辽宁、内蒙、广东、安徽、吉林6省区的222名高校就业指导人员参加培训，其中我省参培人数为112人，这是继2010年7月教育部全国高等学校学生信息咨询与就业指导中心在我省举办首次高校就业指导人员系统培训（中级）班后的第二次培训。教育部高校学生司就业处处长王林，全国高等学校学生信息咨询与就业指导中心培训处处长杨洪涛，省高校毕业生就业指导中心主任郑志宏、书记朱军、黑龙江省大中专学校学生信息咨询与就业指导中心副主任郭承哲、辽宁省大学生就业指导局副局长李海琼参加了开班仪式。王林处长作了“2013年高校毕业生就业形势与工作重点”的报告。四天培训结束后，对参培学员进行了闭卷考核。</font></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://b790b725f779ca130ab92df54c2861e6532a2f71405ff12b36103f9066bb7b51\"></p> <p align=\"center\"><strong>培训开班仪式</strong></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://4df9d96b0a30cf8a5d384a2869e0bd36a17209cef6f9babf2f888a00c243226e\"></p> <p align=\"center\"><strong>王林处长作毕业生就业形势与工作重点的报告</strong></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://0a0ebbb7208501655197be122e657d706b1860383f3e4ca36c4812a969207ecd\"></p> <p align=\"center\"><strong>杨洪涛处长对培训提出要求</strong></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://04d3a769f713fa822e998b9bd8bdc716d5b17d898e02737a29a220f273476ce6\"></p> <p align=\"center\"><strong>会场全景</strong></p> <p align=\"center\"><strong></strong>&nbsp;</p> <p align=\"center\"><strong></strong>&nbsp;</p> <p align=\"center\"><strong></strong>&nbsp;</p> <p align=\"center\">&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130725225827699.jpg",
+      "originalReference": "/chistory/cms/imgs/20130725225827699.jpg",
+      "token": "migration-resource://b790b725f779ca130ab92df54c2861e6532a2f71405ff12b36103f9066bb7b51",
+      "snapshotPath": "assets/b790b725f779ca130ab92df54c2861e6532a2f71405ff12b36103f9066bb7b51.jpg",
+      "sha256": "b790b725f779ca130ab92df54c2861e6532a2f71405ff12b36103f9066bb7b51",
+      "contentType": "image/jpeg",
+      "sizeBytes": 80785
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130725225858782.jpg",
+      "originalReference": "/chistory/cms/imgs/20130725225858782.jpg",
+      "token": "migration-resource://4df9d96b0a30cf8a5d384a2869e0bd36a17209cef6f9babf2f888a00c243226e",
+      "snapshotPath": "assets/4df9d96b0a30cf8a5d384a2869e0bd36a17209cef6f9babf2f888a00c243226e.jpg",
+      "sha256": "4df9d96b0a30cf8a5d384a2869e0bd36a17209cef6f9babf2f888a00c243226e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 45358
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130725225920126.jpg",
+      "originalReference": "/chistory/cms/imgs/20130725225920126.jpg",
+      "token": "migration-resource://0a0ebbb7208501655197be122e657d706b1860383f3e4ca36c4812a969207ecd",
+      "snapshotPath": "assets/0a0ebbb7208501655197be122e657d706b1860383f3e4ca36c4812a969207ecd.jpg",
+      "sha256": "0a0ebbb7208501655197be122e657d706b1860383f3e4ca36c4812a969207ecd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 57365
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130725225943191.jpg",
+      "originalReference": "/chistory/cms/imgs/20130725225943191.jpg",
+      "token": "migration-resource://04d3a769f713fa822e998b9bd8bdc716d5b17d898e02737a29a220f273476ce6",
+      "snapshotPath": "assets/04d3a769f713fa822e998b9bd8bdc716d5b17d898e02737a29a220f273476ce6.jpg",
+      "sha256": "04d3a769f713fa822e998b9bd8bdc716d5b17d898e02737a29a220f273476ce6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92537
+    }
+  ],
+  "sourceFingerprint": "cf3a9c738f0fc323dc0639d7c11347d6af1147692626cea61ca911167d9deb1d",
+  "evidence": {
+    "listPage": 162,
+    "listTitle": "全国高校就业指导人员系统培训（中级）班在吉林市举办",
+    "listPublishDate": "2013-07-25",
+    "sourceOrder": 1617,
+    "detailPublishDate": "2013-07-25"
+  }
+}

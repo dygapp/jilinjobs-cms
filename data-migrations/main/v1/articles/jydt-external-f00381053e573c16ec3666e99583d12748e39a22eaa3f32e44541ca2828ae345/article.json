@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f00381053e573c16ec3666e99583d12748e39a22eaa3f32e44541ca2828ae345",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/voeERlfm7fumudpciZpbUw",
+    "url": "https://mp.weixin.qq.com/s/voeERlfm7fumudpciZpbUw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学党委副书记刘国宁率队赴辽宁省调研",
+    "source": "",
+    "publishDate": "2025-11-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/voeERlfm7fumudpciZpbUw"
+  },
+  "resources": [],
+  "sourceFingerprint": "57d98f0b2fece4e2bc68ef2027fd273baa906b160b4e85dcf6db56386631b092",
+  "evidence": {
+    "listPage": 61,
+    "listTitle": "长春师范大学党委副书记刘国宁率队赴辽宁省调研",
+    "listPublishDate": "2025-11-10",
+    "sourceOrder": 606
+  }
+}

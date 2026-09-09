@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:228219313750016",
+    "contentId": "228219313750016",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=228219313750016"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2024年“一起益企”人才供需对接服务月活动的通知",
+    "source": "吉林省促进中小企业发展服务中心 吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2024-06-08",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1229\" src=\"migration-resource://185ebbdc88925c8a2985891c7a6f5078d74f6f06a87d50507997089957727301\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1229\" src=\"migration-resource://6215bd4d9856a509701423ddea6ca1131389b28a3fce8ba095d59f07235662e8\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1229\" src=\"migration-resource://066129ae2bb6a3abc8d42d1a33758cacf00d9c82b0c4ea16570f21c219d37172\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1229\" src=\"migration-resource://cf9e0ea8867d459dcf930e882325450dee4a50691e4171e436b3aaacdb0e95ee\" width=\"950\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-13/9b7e5651-640c-49f6-9f5b-ffedf64ff19d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-13/9b7e5651-640c-49f6-9f5b-ffedf64ff19d.jpg",
+      "token": "migration-resource://185ebbdc88925c8a2985891c7a6f5078d74f6f06a87d50507997089957727301",
+      "snapshotPath": "assets/185ebbdc88925c8a2985891c7a6f5078d74f6f06a87d50507997089957727301.jpg",
+      "sha256": "185ebbdc88925c8a2985891c7a6f5078d74f6f06a87d50507997089957727301",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-13/acd7f921-574e-4444-824a-041d52ee429b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-13/acd7f921-574e-4444-824a-041d52ee429b.jpg",
+      "token": "migration-resource://6215bd4d9856a509701423ddea6ca1131389b28a3fce8ba095d59f07235662e8",
+      "snapshotPath": "assets/6215bd4d9856a509701423ddea6ca1131389b28a3fce8ba095d59f07235662e8.jpg",
+      "sha256": "6215bd4d9856a509701423ddea6ca1131389b28a3fce8ba095d59f07235662e8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-13/97c39fd3-cbeb-455f-b419-02ed2b3d3989.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-13/97c39fd3-cbeb-455f-b419-02ed2b3d3989.jpg",
+      "token": "migration-resource://066129ae2bb6a3abc8d42d1a33758cacf00d9c82b0c4ea16570f21c219d37172",
+      "snapshotPath": "assets/066129ae2bb6a3abc8d42d1a33758cacf00d9c82b0c4ea16570f21c219d37172.jpg",
+      "sha256": "066129ae2bb6a3abc8d42d1a33758cacf00d9c82b0c4ea16570f21c219d37172",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-13/f796b7e8-7573-4cc9-a3f4-b34c7979a7cf.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-13/f796b7e8-7573-4cc9-a3f4-b34c7979a7cf.jpg",
+      "token": "migration-resource://cf9e0ea8867d459dcf930e882325450dee4a50691e4171e436b3aaacdb0e95ee",
+      "snapshotPath": "assets/cf9e0ea8867d459dcf930e882325450dee4a50691e4171e436b3aaacdb0e95ee.jpg",
+      "sha256": "cf9e0ea8867d459dcf930e882325450dee4a50691e4171e436b3aaacdb0e95ee",
+      "contentType": "image/jpeg",
+      "sizeBytes": 62062
+    }
+  ],
+  "sourceFingerprint": "e1a768765abac1aeff2360bf6e85d3df1122d217fc71d8a355c9fe9e8eea6705",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "关于举办2024年“一起益企”人才供需对接服务月活动的通知",
+    "listPublishDate": "2024-06-08",
+    "sourceOrder": 80,
+    "detailPublishDate": "2024-06-08"
+  }
+}

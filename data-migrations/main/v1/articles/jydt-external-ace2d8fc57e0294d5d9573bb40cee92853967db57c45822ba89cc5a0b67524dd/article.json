@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ace2d8fc57e0294d5d9573bb40cee92853967db57c45822ba89cc5a0b67524dd",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/sajahWVSPUSXRsXcs8EzrA",
+    "url": "https://mp.weixin.qq.com/s/sajahWVSPUSXRsXcs8EzrA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "产教融合锚定氢能赛道 高教力量赋能绿色发展 松原职业技术学院承办座谈会助力吉林打造绿色能源工厂",
+    "source": "",
+    "publishDate": "2026-03-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/sajahWVSPUSXRsXcs8EzrA"
+  },
+  "resources": [],
+  "sourceFingerprint": "5e1bf41ac3ae3b80238f81d6d1a5dfe4692cc696958ee737e73338b36aa47e24",
+  "evidence": {
+    "listPage": 39,
+    "listTitle": "产教融合锚定氢能赛道 高教力量赋能绿色发展 松原职业技术学院承办座谈会助力吉林打造绿色能源工厂",
+    "listPublishDate": "2026-03-20",
+    "sourceOrder": 387
+  }
+}

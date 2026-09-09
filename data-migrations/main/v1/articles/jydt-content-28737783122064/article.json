@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122064",
+    "contentId": "28737783122064",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122064"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省高等学校毕业生就业指导中心举办吉林省大学生就业能力提升培训项目师资培训班",
+    "source": "",
+    "publishDate": "2017-06-16",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省高等学校毕业生就业指导中心举办吉林省大学生就业能力提升培训项目师资培训班</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训二部   发布时间:2017-6-16 15:27:13</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>\n    &nbsp;\n</p>\n<p style=\"text-indent: 43px;\">\n    <span style=\"font-family: 宋体; font-size: 21px;\">为了进一步做好吉林省高校“双困生”就业能力提升培训工作，提升培训教师教学水平。2017年6月15日，省高等学校毕业生就业指导中心举办了吉林省大学生就业能力提升培训项目师资培训班。</span>\n</p>\n<p style=\"text-indent: 43px;\">\n    <span style=\"font-family: 宋体; font-size: 21px;\">参加培训的教师是吉林省教育厅高校学生处、吉林省高等学校毕业生就业指导中心，在省内各高校中选拔出来的优秀教师。通过对吉林省大学生就业能力提升培训课程各模块教学设计原理与方法的梳理，老师们对项目有了理解和认识，并掌握了新的教学方法，提高了授课技能。</span>\n</p>\n<p style=\"text-indent: 43px;\">\n    <span style=\"font-family: 宋体; font-size: 21px;\">省高等学校毕业生就业指导中心主任郑志宏参加开班仪式并讲话。</span>\n</p>\n<p style=\"text-align: center;\">\n    &nbsp;&nbsp;\n</p>\n<p style=\"text-align: center;\">\n    <img title=\"1.JPG\" src=\"migration-resource://448f4666d5354a20d2733a7fcb0d23d93ead766744a95d350e354477428cae19\">\n</p>\n<p style=\"text-align: center;\">\n    <img title=\"2.JPG\" src=\"migration-resource://0e68afde601697d2dea875388613ec3d6ca021218608ad0bdc7edfefc69b42fe\">\n</p>\n<p style=\"text-align: center;\">\n    <img title=\"3.JPG\" src=\"migration-resource://d98cc3ea3478cfa972d1a716f95b36d8e2fbf3e3f496dd7c818f580e5a7579d2\">\n</p>\n<p style=\"text-align: center;\">\n    &nbsp;\n</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363322367124312501242163.JPG",
+      "originalReference": "/chistory/cms/imgs/6363322367124312501242163.JPG",
+      "token": "migration-resource://448f4666d5354a20d2733a7fcb0d23d93ead766744a95d350e354477428cae19",
+      "snapshotPath": "assets/448f4666d5354a20d2733a7fcb0d23d93ead766744a95d350e354477428cae19.jpg",
+      "sha256": "448f4666d5354a20d2733a7fcb0d23d93ead766744a95d350e354477428cae19",
+      "contentType": "image/jpeg",
+      "sizeBytes": 102757
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363322367179000008141985.JPG",
+      "originalReference": "/chistory/cms/imgs/6363322367179000008141985.JPG",
+      "token": "migration-resource://0e68afde601697d2dea875388613ec3d6ca021218608ad0bdc7edfefc69b42fe",
+      "snapshotPath": "assets/0e68afde601697d2dea875388613ec3d6ca021218608ad0bdc7edfefc69b42fe.jpg",
+      "sha256": "0e68afde601697d2dea875388613ec3d6ca021218608ad0bdc7edfefc69b42fe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 141478
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363322367185250002655310.JPG",
+      "originalReference": "/chistory/cms/imgs/6363322367185250002655310.JPG",
+      "token": "migration-resource://d98cc3ea3478cfa972d1a716f95b36d8e2fbf3e3f496dd7c818f580e5a7579d2",
+      "snapshotPath": "assets/d98cc3ea3478cfa972d1a716f95b36d8e2fbf3e3f496dd7c818f580e5a7579d2.jpg",
+      "sha256": "d98cc3ea3478cfa972d1a716f95b36d8e2fbf3e3f496dd7c818f580e5a7579d2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 170331
+    }
+  ],
+  "sourceFingerprint": "cac71dabb8c2653410f2be7df4600423467e18cc422fe4038e962ec41eb75c76",
+  "evidence": {
+    "listPage": 150,
+    "listTitle": "吉林省高等学校毕业生就业指导中心举办吉林省大学生就业能力提升培训项目师资培训班",
+    "listPublishDate": "2017-06-16",
+    "sourceOrder": 1494,
+    "detailPublishDate": "2017-06-16"
+  }
+}

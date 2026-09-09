@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c7276c799b33ddf08105230989adf7a3514a35e35982cb2ad7cccf14aadef3ac",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/s72VwijYC0vVviPBeWcPzA",
+    "url": "https://mp.weixin.qq.com/s/s72VwijYC0vVviPBeWcPzA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "共探产教融合新路径丨金蝶软件吉林省公司销售总监张世霖一行到访长春财经学院",
+    "source": "",
+    "publishDate": "2026-03-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/s72VwijYC0vVviPBeWcPzA"
+  },
+  "resources": [],
+  "sourceFingerprint": "ff7b766a85081a3d4ec74141c0575f25bc45b68713a2ded4e9bd6fe519760154",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "共探产教融合新路径丨金蝶软件吉林省公司销售总监张世霖一行到访长春财经学院",
+    "listPublishDate": "2026-03-26",
+    "sourceOrder": 361
+  }
+}

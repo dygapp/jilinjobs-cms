@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3a24b05f8439b10227b86f6550a06d1c364b5e4a8649a6ac3ffc73e0f29b0f65",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/3qM1i3hghnhr71ax01Clgg",
+    "url": "https://mp.weixin.qq.com/s/3qM1i3hghnhr71ax01Clgg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“聚力扩容提质 服务高质量发展”2026年吉林省高校毕业生长春师范大学专场招聘会（第一场）在我校举行",
+    "source": "",
+    "publishDate": "2026-03-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/3qM1i3hghnhr71ax01Clgg"
+  },
+  "resources": [],
+  "sourceFingerprint": "97e0ef2ef0913212eb8a403a9b536d3d4a67e9fc802b092a87593d6609f232bd",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "“聚力扩容提质 服务高质量发展”2026年吉林省高校毕业生长春师范大学专场招聘会（第一场）在我校举行",
+    "listPublishDate": "2026-03-30",
+    "sourceOrder": 344
+  }
+}

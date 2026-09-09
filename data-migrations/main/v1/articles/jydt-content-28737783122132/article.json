@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122132",
+    "contentId": "28737783122132",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122132"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省2016届高校毕业生就业洽谈活动月理工类人才专场招聘会在长春工业大学举行",
+    "source": "",
+    "publishDate": "2015-11-15",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省2016届高校毕业生就业洽谈活动月理工类人才专场招聘会在长春工业大学举行</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2015-11-15 16:07:07</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 11月14日上午，由省教育厅主办，长春工业大学承办的省高校2016届毕业生就业洽谈活动月理工类人才专场招聘会在长春工业大学南湖校区体育馆举行。此次专场招聘会是全省今年就业季召开的首场规模最大的理工类招聘会。</span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 省教育厅副厅长岳强，省高校学生处处长蒋蔓萍，省高校毕业生就业指导中心书记孙维才、副主任张旭光，安徵芜湖经济技术开发区副主任纪良柱、人社局副局长张定兵，长春工业大学党政领导，辽宁大学、黑龙江大学等高校领导，用人单位和毕业生参加了大会。长春工业大学党委副书记李雁冰主持了大会。</span></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"><br></span></p><p style=\"text-align: center;\"><img title=\"省教育厅副厅长岳强实地考察招聘现场.jpg\" src=\"migration-resource://46e6deb6506453f0bb9135660e0eaf793faf3a2bd9e2783632ca71b652323f7e\"></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 16px;\">省教育厅副厅长岳强实地考察招聘现场</span><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"></span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 招聘会吸引了全国657家用人单位参会，涵盖了汽车、电气、化工、生物、IT、商贸、教育等行业，提供了1.7万余个岗位，得到了广大毕业生的关注，共有来自东北三省20余所高校的1万余名毕业生参会。招聘会现场异常火爆，部分用人单位招聘区更是门庭若市，是我省进一步加强大学生就业创业服务工作，积极开拓就业市场的一次成果展示。</span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 吉林电视台新闻联播、吉林教育电视台等多家媒体对此次招聘会进行了全程专题采访报道。</span></p><p style=\"text-align: center;\"></p><p style=\"text-align: center;\"><img title=\"2（省教育厅领导莅临招聘现场）.JPG\" src=\"migration-resource://ad35ee4be499f371b4ea531bfd19c0bc21948fb34f7dec3ff15310825f63656c\"></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 16px;\">省教育厅领导莅临招聘现场</span></p><p style=\"text-align: center;\"><img title=\"招聘会现场.jpg\" src=\"migration-resource://52c27708087db5f6454e4909b93bebe8bd65b5a84338f65a21a3a68878f404fe\"></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 16px;\">招聘会现场</span></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544630771875005499736.jpg",
+      "originalReference": "/chistory/cms/imgs/6358544630771875005499736.jpg",
+      "token": "migration-resource://46e6deb6506453f0bb9135660e0eaf793faf3a2bd9e2783632ca71b652323f7e",
+      "snapshotPath": "assets/46e6deb6506453f0bb9135660e0eaf793faf3a2bd9e2783632ca71b652323f7e.jpg",
+      "sha256": "46e6deb6506453f0bb9135660e0eaf793faf3a2bd9e2783632ca71b652323f7e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 120427
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544634434375003943925.JPG",
+      "originalReference": "/chistory/cms/imgs/6358544634434375003943925.JPG",
+      "token": "migration-resource://ad35ee4be499f371b4ea531bfd19c0bc21948fb34f7dec3ff15310825f63656c",
+      "snapshotPath": "assets/ad35ee4be499f371b4ea531bfd19c0bc21948fb34f7dec3ff15310825f63656c.jpg",
+      "sha256": "ad35ee4be499f371b4ea531bfd19c0bc21948fb34f7dec3ff15310825f63656c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 139356
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544634442187501686496.jpg",
+      "originalReference": "/chistory/cms/imgs/6358544634442187501686496.jpg",
+      "token": "migration-resource://52c27708087db5f6454e4909b93bebe8bd65b5a84338f65a21a3a68878f404fe",
+      "snapshotPath": "assets/52c27708087db5f6454e4909b93bebe8bd65b5a84338f65a21a3a68878f404fe.jpg",
+      "sha256": "52c27708087db5f6454e4909b93bebe8bd65b5a84338f65a21a3a68878f404fe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 202650
+    }
+  ],
+  "sourceFingerprint": "221b35944419fae9da319da26f1bca0c6822c5b02910f073e735672e8390c4dc",
+  "evidence": {
+    "listPage": 157,
+    "listTitle": "吉林省2016届高校毕业生就业洽谈活动月理工类人才专场招聘会在长春工业大学举行",
+    "listPublishDate": "2015-11-15",
+    "sourceOrder": 1562,
+    "detailPublishDate": "2015-11-15"
+  }
+}

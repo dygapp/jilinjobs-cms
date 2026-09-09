@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fac215ab0761232cd36f23fbc6fdb3b78eeabbe2e9da1c40c9aa8b61b71385c8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/BvKy58BNbQpzFWQ81t5qQA",
+    "url": "https://mp.weixin.qq.com/s/BvKy58BNbQpzFWQ81t5qQA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业｜长春工业大学人文信息学院与德恩双元教育集团达成战略合作",
+    "source": "",
+    "publishDate": "2026-05-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/BvKy58BNbQpzFWQ81t5qQA"
+  },
+  "resources": [],
+  "sourceFingerprint": "851ae5e7695d3a3501f02859e54f6ee6786b0b730292f1ac47b1672e0833fd99",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "访企拓岗促就业｜长春工业大学人文信息学院与德恩双元教育集团达成战略合作",
+    "listPublishDate": "2026-05-11",
+    "sourceOrder": 196
+  }
+}

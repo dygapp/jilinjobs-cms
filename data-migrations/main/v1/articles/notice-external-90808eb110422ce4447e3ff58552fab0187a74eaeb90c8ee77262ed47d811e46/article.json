@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:90808eb110422ce4447e3ff58552fab0187a74eaeb90c8ee77262ed47d811e46",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/QbnqXyC8C_i4Gxle8gBNuw",
+    "url": "https://mp.weixin.qq.com/s/QbnqXyC8C_i4Gxle8gBNuw"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "写在2025年全国教育工作会议召开之际：奋力谱写教育强国建设华丽篇章",
+    "source": "",
+    "publishDate": "2025-01-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/QbnqXyC8C_i4Gxle8gBNuw"
+  },
+  "resources": [],
+  "sourceFingerprint": "9975edd76cb0861f000803fe800579cdb8f95dfcbb033007b6f6b77b99e381a6",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "写在2025年全国教育工作会议召开之际：奋力谱写教育强国建设华丽篇章",
+    "listPublishDate": "2025-01-09",
+    "sourceOrder": 67
+  }
+}

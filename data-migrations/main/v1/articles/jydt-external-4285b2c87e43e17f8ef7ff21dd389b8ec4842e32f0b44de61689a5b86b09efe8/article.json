@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4285b2c87e43e17f8ef7ff21dd389b8ec4842e32f0b44de61689a5b86b09efe8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/1Gqe7y_GCfgZV4OcE8AYog",
+    "url": "https://mp.weixin.qq.com/s/1Gqe7y_GCfgZV4OcE8AYog"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春中医药大学党委书记江凤艳带队赴省内重点医疗机构开展访企拓岗",
+    "source": "",
+    "publishDate": "2026-05-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1Gqe7y_GCfgZV4OcE8AYog"
+  },
+  "resources": [],
+  "sourceFingerprint": "03e524a4e5231f7785fb461a9b44ba2823e1ce589b27b5ce5aa95ea7eb56ffc4",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "长春中医药大学党委书记江凤艳带队赴省内重点医疗机构开展访企拓岗",
+    "listPublishDate": "2026-05-19",
+    "sourceOrder": 166
+  }
+}

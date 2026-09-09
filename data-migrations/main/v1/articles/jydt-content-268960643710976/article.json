@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268960643710976",
+    "contentId": "268960643710976",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268960643710976"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "校企联动谋发展 访企拓岗共育人 白城医学高等专科学校开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2024-12-24",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://007529b0317dff19d37469ac4005ee3e00d3388b62710faba959920150eedfb9\" width=\"1587\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://d46dfedab139166d270ae3c049225177a1540047737440ce9e66e5063ca3046b\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/24ac6352-2a51-4be2-9fc3-d50916a80fbd.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/24ac6352-2a51-4be2-9fc3-d50916a80fbd.jpg",
+      "token": "migration-resource://007529b0317dff19d37469ac4005ee3e00d3388b62710faba959920150eedfb9",
+      "snapshotPath": "assets/007529b0317dff19d37469ac4005ee3e00d3388b62710faba959920150eedfb9.jpg",
+      "sha256": "007529b0317dff19d37469ac4005ee3e00d3388b62710faba959920150eedfb9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 390307
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/2466e502-b0d0-4bca-a89f-08ae1a0814b0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/2466e502-b0d0-4bca-a89f-08ae1a0814b0.jpg",
+      "token": "migration-resource://d46dfedab139166d270ae3c049225177a1540047737440ce9e66e5063ca3046b",
+      "snapshotPath": "assets/d46dfedab139166d270ae3c049225177a1540047737440ce9e66e5063ca3046b.jpg",
+      "sha256": "d46dfedab139166d270ae3c049225177a1540047737440ce9e66e5063ca3046b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 291674
+    }
+  ],
+  "sourceFingerprint": "55546f9ffce77132ef23b46c351281f46318fdf14d9ff65ae0f921b8b08f3f04",
+  "evidence": {
+    "listPage": 100,
+    "listTitle": "校企联动谋发展 访企拓岗共育人 白城医学高等专科学校开展访企拓岗专项行动",
+    "listPublishDate": "2024-12-24",
+    "sourceOrder": 999,
+    "detailPublishDate": "2024-12-24"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:95f2ae24db9eb8e2ff6380448f1a098df639d033d17c51da4efdbd871ae0f7b4",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/1iFl-wjAzUz0VwzUcr1dSw",
+    "url": "https://mp.weixin.qq.com/s/1iFl-wjAzUz0VwzUcr1dSw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "关于吉林市走进北华大学招聘活动的公告",
+    "source": "",
+    "publishDate": "2024-04-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1iFl-wjAzUz0VwzUcr1dSw"
+  },
+  "resources": [],
+  "sourceFingerprint": "db4c9aa5898b28e0b27b8a2f294e751b0763a62b6cc98dcfcbfd4fc4316c7dd0",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "关于吉林市走进北华大学招聘活动的公告",
+    "listPublishDate": "2024-04-16",
+    "sourceOrder": 299
+  }
+}

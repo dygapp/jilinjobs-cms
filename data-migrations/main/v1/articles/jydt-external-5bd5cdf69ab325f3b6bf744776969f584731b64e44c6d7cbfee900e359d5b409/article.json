@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5bd5cdf69ab325f3b6bf744776969f584731b64e44c6d7cbfee900e359d5b409",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/60IfPK-cueS4UVJ8Wx355Q",
+    "url": "https://mp.weixin.qq.com/s/60IfPK-cueS4UVJ8Wx355Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "白城医学高等专科学校党委书记高勇带队赴长春访企拓岗",
+    "source": "",
+    "publishDate": "2025-06-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/60IfPK-cueS4UVJ8Wx355Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "30cb273db08948236c2c7a654b43961839cebff0f1874afbdaaf7de14f3af703",
+  "evidence": {
+    "listPage": 85,
+    "listTitle": "白城医学高等专科学校党委书记高勇带队赴长春访企拓岗",
+    "listPublishDate": "2025-06-09",
+    "sourceOrder": 846
+  }
+}

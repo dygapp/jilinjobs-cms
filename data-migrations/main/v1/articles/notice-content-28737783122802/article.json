@@ -1,0 +1,121 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122802",
+    "contentId": "28737783122802",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122802"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于“2016年吉林省高校就业创业优秀论文征文评比活动”获奖结果的通报",
+    "source": "",
+    "publishDate": "2016-07-01",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于“2016年吉林省高校就业创业优秀论文征文评比活动”获奖结果的通报</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2016-7-1 9:11:05</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img src=\"migration-resource://02576ffeb1b161b9ced329ee4cd7541ebb0f2fa07941a7bcff592cc4e277f261\" style=\"\" title=\"1.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://1648f767c1340cb42eb45f7591c7bf76a590f0fe40f62fa1ecde4b5b345c9f9d\" style=\"\" title=\"2.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://7067bd7401965b6cdcfcc8b2e1a4fb774cb198d8e4dd4d1d7e869db240aeb909\" style=\"\" title=\"3.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://6a6126a27940138bbb79ac9d11569bd1b67460652a53fa69ab5b897705181e2c\" style=\"\" title=\"4.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://a8688142ffba49dbd496f554dded888d6b2739b27dfb7003e3c1fcaee2fa0354\" style=\"\" title=\"5.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://2d9cffb5123b574bcbe60dc491c0d22d7b6add3fa025432d944e459b1d563863\" style=\"\" title=\"6.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://f9b268f0e518ca5bc093e2cf6f9dbcefbf51b4910f29c1144e85d748b0692ceb\" style=\"\" title=\"7.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://46733a9c94b78a32f628ca06f9f814208a57494a69c631403ea77de586970f63\" style=\"\" title=\"8.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://c2d0051693ca7f4ef9a03beee6c428c025d82198a15fa357a7bad6b0e6e2f874\" style=\"\" title=\"9.jpg\"></p><p style=\"text-align: center;\"><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360322029142187502886480.jpg",
+      "originalReference": "/chistory/cms/imgs/6360322029142187502886480.jpg",
+      "token": "migration-resource://02576ffeb1b161b9ced329ee4cd7541ebb0f2fa07941a7bcff592cc4e277f261",
+      "snapshotPath": "assets/02576ffeb1b161b9ced329ee4cd7541ebb0f2fa07941a7bcff592cc4e277f261.jpg",
+      "sha256": "02576ffeb1b161b9ced329ee4cd7541ebb0f2fa07941a7bcff592cc4e277f261",
+      "contentType": "image/jpeg",
+      "sizeBytes": 122137
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360322029154687505614959.jpg",
+      "originalReference": "/chistory/cms/imgs/6360322029154687505614959.jpg",
+      "token": "migration-resource://1648f767c1340cb42eb45f7591c7bf76a590f0fe40f62fa1ecde4b5b345c9f9d",
+      "snapshotPath": "assets/1648f767c1340cb42eb45f7591c7bf76a590f0fe40f62fa1ecde4b5b345c9f9d.jpg",
+      "sha256": "1648f767c1340cb42eb45f7591c7bf76a590f0fe40f62fa1ecde4b5b345c9f9d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 60224
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360322029159375001600867.jpg",
+      "originalReference": "/chistory/cms/imgs/6360322029159375001600867.jpg",
+      "token": "migration-resource://7067bd7401965b6cdcfcc8b2e1a4fb774cb198d8e4dd4d1d7e869db240aeb909",
+      "snapshotPath": "assets/7067bd7401965b6cdcfcc8b2e1a4fb774cb198d8e4dd4d1d7e869db240aeb909.jpg",
+      "sha256": "7067bd7401965b6cdcfcc8b2e1a4fb774cb198d8e4dd4d1d7e869db240aeb909",
+      "contentType": "image/jpeg",
+      "sizeBytes": 83698
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360322029165625005114192.jpg",
+      "originalReference": "/chistory/cms/imgs/6360322029165625005114192.jpg",
+      "token": "migration-resource://6a6126a27940138bbb79ac9d11569bd1b67460652a53fa69ab5b897705181e2c",
+      "snapshotPath": "assets/6a6126a27940138bbb79ac9d11569bd1b67460652a53fa69ab5b897705181e2c.jpg",
+      "sha256": "6a6126a27940138bbb79ac9d11569bd1b67460652a53fa69ab5b897705181e2c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 97191
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360322029173437502856763.jpg",
+      "originalReference": "/chistory/cms/imgs/6360322029173437502856763.jpg",
+      "token": "migration-resource://a8688142ffba49dbd496f554dded888d6b2739b27dfb7003e3c1fcaee2fa0354",
+      "snapshotPath": "assets/a8688142ffba49dbd496f554dded888d6b2739b27dfb7003e3c1fcaee2fa0354.jpg",
+      "sha256": "a8688142ffba49dbd496f554dded888d6b2739b27dfb7003e3c1fcaee2fa0354",
+      "contentType": "image/jpeg",
+      "sizeBytes": 98433
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360322029184375007057824.jpg",
+      "originalReference": "/chistory/cms/imgs/6360322029184375007057824.jpg",
+      "token": "migration-resource://2d9cffb5123b574bcbe60dc491c0d22d7b6add3fa025432d944e459b1d563863",
+      "snapshotPath": "assets/2d9cffb5123b574bcbe60dc491c0d22d7b6add3fa025432d944e459b1d563863.jpg",
+      "sha256": "2d9cffb5123b574bcbe60dc491c0d22d7b6add3fa025432d944e459b1d563863",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84315
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360322029189062507341904.jpg",
+      "originalReference": "/chistory/cms/imgs/6360322029189062507341904.jpg",
+      "token": "migration-resource://f9b268f0e518ca5bc093e2cf6f9dbcefbf51b4910f29c1144e85d748b0692ceb",
+      "snapshotPath": "assets/f9b268f0e518ca5bc093e2cf6f9dbcefbf51b4910f29c1144e85d748b0692ceb.jpg",
+      "sha256": "f9b268f0e518ca5bc093e2cf6f9dbcefbf51b4910f29c1144e85d748b0692ceb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92082
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360322029200000002542965.jpg",
+      "originalReference": "/chistory/cms/imgs/6360322029200000002542965.jpg",
+      "token": "migration-resource://46733a9c94b78a32f628ca06f9f814208a57494a69c631403ea77de586970f63",
+      "snapshotPath": "assets/46733a9c94b78a32f628ca06f9f814208a57494a69c631403ea77de586970f63.jpg",
+      "sha256": "46733a9c94b78a32f628ca06f9f814208a57494a69c631403ea77de586970f63",
+      "contentType": "image/jpeg",
+      "sizeBytes": 101958
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360322029206250006056290.jpg",
+      "originalReference": "/chistory/cms/imgs/6360322029206250006056290.jpg",
+      "token": "migration-resource://c2d0051693ca7f4ef9a03beee6c428c025d82198a15fa357a7bad6b0e6e2f874",
+      "snapshotPath": "assets/c2d0051693ca7f4ef9a03beee6c428c025d82198a15fa357a7bad6b0e6e2f874.jpg",
+      "sha256": "c2d0051693ca7f4ef9a03beee6c428c025d82198a15fa357a7bad6b0e6e2f874",
+      "contentType": "image/jpeg",
+      "sizeBytes": 49072
+    }
+  ],
+  "sourceFingerprint": "5ed98244d11a59459f658e2f0b8273b1395f21d9d0ba2187bdefa0ead98fc378",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "关于“2016年吉林省高校就业创业优秀论文征文评比活动”获奖结果的通报",
+    "listPublishDate": "2016-07-01",
+    "sourceOrder": 246,
+    "detailPublishDate": "2016-07-01"
+  }
+}

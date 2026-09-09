@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a0cc77d035c90b6fd054c5bef6c1d4175546a34f5eb4c0ba2e9041642fc50845",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/dnueyCLSu8pdk0lIKMsyJw",
+    "url": "https://mp.weixin.qq.com/s/dnueyCLSu8pdk0lIKMsyJw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春光华学院举办“聚力扩容提质 服务高质量发展”2026届未就业毕业生专场招聘会",
+    "source": "",
+    "publishDate": "2026-05-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/dnueyCLSu8pdk0lIKMsyJw"
+  },
+  "resources": [],
+  "sourceFingerprint": "24ddcae6cb45d6d6f2b02b40a3879bf4801661a45da7371de81bb210252b5f75",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "长春光华学院举办“聚力扩容提质 服务高质量发展”2026届未就业毕业生专场招聘会",
+    "listPublishDate": "2026-05-28",
+    "sourceOrder": 130
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b264229000bb46e096ad0985c409f2d7033531da08781255997784a7b0bfd2be",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/gNVWMvU_2VWO4GOwI7ND3w",
+    "url": "https://mp.weixin.qq.com/s/gNVWMvU_2VWO4GOwI7ND3w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省经济管理干部学院赴吉林省民奥教育科技有限公司开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-03-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gNVWMvU_2VWO4GOwI7ND3w"
+  },
+  "resources": [],
+  "sourceFingerprint": "b6c8df63b372fdd9354c6d02661eed5fa7ebd133ba3725cfd79ebd549cd0cae4",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "吉林省经济管理干部学院赴吉林省民奥教育科技有限公司开展访企拓岗专项行动",
+    "listPublishDate": "2026-03-24",
+    "sourceOrder": 374
+  }
+}

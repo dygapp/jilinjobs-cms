@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122136",
+    "contentId": "28737783122136",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122136"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林农业大学举办2016届毕业生秋季供需见面洽谈会",
+    "source": "",
+    "publishDate": "2015-11-15",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林农业大学举办2016届毕业生秋季供需见面洽谈会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2015-11-15 15:59:01</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 2015年11月14日上午，吉林农业大学2016届毕业生秋季供需见面洽谈会在吉林农业大学体育馆举行。</span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 省教育厅副厅长岳强、省教育厅学生处处长蒋蔓萍、省高校毕业生就业指导中心主任郑志宏、书记孙维才、副主任张旭光等领导莅临现场指导工作。</span></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"><br></span></p><p style=\"text-align: center;\"><img title=\"吉林省教育厅副厅长岳强莅临供需见面会指导工作.JPG\" src=\"migration-resource://0e6772f58e1579e165da52e2bf183454a6fda9631ea9ed81923d47a206d307fb\"></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 16px;\">吉林省教育厅副厅长岳强莅临供需见面会指导工作</span><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"></span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 随着农业现代化的发展，农林牧渔、管理服务等相关专业人才需求的增加，吉林农大以其独特的专业优势，在就业市场保持了较强的竞争力。本次洽谈会共有465家用人单位报名参加。分别来自于北京、山东、上海等21个省份，提供用人岗位总数达12400多个，其中不乏百胜、中粮、杜邦、敖东等世界、中国500强企业，地方及行业龙头企业达到185家，为毕业生高数量、高质量就业创造了充分的机会。</span></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"><br></span></p><p style=\"text-align: center;\"><img title=\"供需见面会现场.JPG\" src=\"migration-resource://9a69cf52ea3dbe6460deeaf1e86fa801391a8b18100e6bb35058910831027e19\"></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 16px;\">供需见面会现场</span><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"></span></p><p></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544587217187507494864.JPG",
+      "originalReference": "/chistory/cms/imgs/6358544587217187507494864.JPG",
+      "token": "migration-resource://0e6772f58e1579e165da52e2bf183454a6fda9631ea9ed81923d47a206d307fb",
+      "snapshotPath": "assets/0e6772f58e1579e165da52e2bf183454a6fda9631ea9ed81923d47a206d307fb.jpg",
+      "sha256": "0e6772f58e1579e165da52e2bf183454a6fda9631ea9ed81923d47a206d307fb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 151792
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544589928125002345445.JPG",
+      "originalReference": "/chistory/cms/imgs/6358544589928125002345445.JPG",
+      "token": "migration-resource://9a69cf52ea3dbe6460deeaf1e86fa801391a8b18100e6bb35058910831027e19",
+      "snapshotPath": "assets/9a69cf52ea3dbe6460deeaf1e86fa801391a8b18100e6bb35058910831027e19.jpg",
+      "sha256": "9a69cf52ea3dbe6460deeaf1e86fa801391a8b18100e6bb35058910831027e19",
+      "contentType": "image/jpeg",
+      "sizeBytes": 173810
+    }
+  ],
+  "sourceFingerprint": "27d6c52389752b1c413298e96409c595fd113914b0ed9f0c3d23468cab7fed7a",
+  "evidence": {
+    "listPage": 156,
+    "listTitle": "吉林农业大学举办2016届毕业生秋季供需见面洽谈会",
+    "listPublishDate": "2015-11-15",
+    "sourceOrder": 1560,
+    "detailPublishDate": "2015-11-15"
+  }
+}

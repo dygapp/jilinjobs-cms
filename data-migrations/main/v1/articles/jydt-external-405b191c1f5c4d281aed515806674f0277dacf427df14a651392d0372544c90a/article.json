@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:405b191c1f5c4d281aed515806674f0277dacf427df14a651392d0372544c90a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/9-T01mdu56zbKthBF4vgoA",
+    "url": "https://mp.weixin.qq.com/s/9-T01mdu56zbKthBF4vgoA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院召开2026届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2026-01-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/9-T01mdu56zbKthBF4vgoA"
+  },
+  "resources": [],
+  "sourceFingerprint": "b1b2e3584e891d1320f88ac2fa6c77811120a21cb035fe8dc0ca9b6dd43f2d2c",
+  "evidence": {
+    "listPage": 49,
+    "listTitle": "长春人文学院召开2026届毕业生就业工作推进会",
+    "listPublishDate": "2026-01-20",
+    "sourceOrder": 485
+  }
+}

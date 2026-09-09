@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:0f9cd3c679298bb854b53b0e6be512ed51403afd426275abe2d8ca5e37bffde0",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/D06wqboVOdE5tHL1b-mllw",
+    "url": "https://mp.weixin.qq.com/s/D06wqboVOdE5tHL1b-mllw"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "教育部要求各地各高校千方百计促进高校毕业生就业，进一步严格规范做好就业统计工作",
+    "source": "",
+    "publishDate": "2022-06-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/D06wqboVOdE5tHL1b-mllw"
+  },
+  "resources": [],
+  "sourceFingerprint": "0358a251bd17faa7a69a2363dff72008f4c5b1c3ab161136533a6b07a9a2756b",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "教育部要求各地各高校千方百计促进高校毕业生就业，进一步严格规范做好就业统计工作",
+    "listPublishDate": "2022-06-09",
+    "sourceOrder": 123
+  }
+}

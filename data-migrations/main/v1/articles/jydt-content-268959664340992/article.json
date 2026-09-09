@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268959664340992",
+    "contentId": "268959664340992",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268959664340992"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春人文学院举办2025届毕业生秋季双选会",
+    "source": "",
+    "publishDate": "2024-11-29",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://c7f7c306582968a78237822280872748dab97ab4dce7f49ac354de65feca6cca\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/2eaf1c28-7c10-42e8-9f9a-d6db0136bd85.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/2eaf1c28-7c10-42e8-9f9a-d6db0136bd85.jpg",
+      "token": "migration-resource://c7f7c306582968a78237822280872748dab97ab4dce7f49ac354de65feca6cca",
+      "snapshotPath": "assets/c7f7c306582968a78237822280872748dab97ab4dce7f49ac354de65feca6cca.jpg",
+      "sha256": "c7f7c306582968a78237822280872748dab97ab4dce7f49ac354de65feca6cca",
+      "contentType": "image/jpeg",
+      "sizeBytes": 455746
+    }
+  ],
+  "sourceFingerprint": "1ba1f2d4117c0d32fd38a2916a449eb6ddfdfa078beddd86fab169d155db83cb",
+  "evidence": {
+    "listPage": 101,
+    "listTitle": "长春人文学院举办2025届毕业生秋季双选会",
+    "listPublishDate": "2024-11-29",
+    "sourceOrder": 1010,
+    "detailPublishDate": "2024-11-29"
+  }
+}

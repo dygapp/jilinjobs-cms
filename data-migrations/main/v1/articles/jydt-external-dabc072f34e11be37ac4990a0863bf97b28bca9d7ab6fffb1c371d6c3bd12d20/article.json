@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:dabc072f34e11be37ac4990a0863bf97b28bca9d7ab6fffb1c371d6c3bd12d20",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/qGcf42qu-4YxmOXQwBEaSg",
+    "url": "https://mp.weixin.qq.com/s/qGcf42qu-4YxmOXQwBEaSg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学副校长孙俊奇率队赴山东龙口开展校地企合作暨访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-08-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/qGcf42qu-4YxmOXQwBEaSg"
+  },
+  "resources": [],
+  "sourceFingerprint": "2bb97f4d9cc4257edf57e0c33e41a1149e2b2f1e771a637dcabbcf94dd85fbd5",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "延边大学副校长孙俊奇率队赴山东龙口开展校地企合作暨访企拓岗促就业专项行动",
+    "listPublishDate": "2026-08-04",
+    "sourceOrder": 33
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4a929feb02c95a907e758fab76b807520cefe5200deb2d1e2dac68f6241cd16b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1861/82341.htm",
+    "url": "https://www.jlmu.edu.cn/info/1861/82341.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林医药学院副校长徐冶带队赴白山市开展“访企拓岗”专项行动",
+    "source": "",
+    "publishDate": "2026-07-31",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlmu.edu.cn/info/1861/82341.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "841ab9c8541a8b44f137b196b7e921110114405435549d400b90d494ef684249",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "吉林医药学院副校长徐冶带队赴白山市开展“访企拓岗”专项行动",
+    "listPublishDate": "2026-07-31",
+    "sourceOrder": 34
+  }
+}

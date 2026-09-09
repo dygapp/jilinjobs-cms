@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:58ba35749179f34d5dbf2c5c35a90a658569bf20a0fcb88c91f4687b947add80",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/J1kq15jKaM4atglSVJxdIQ",
+    "url": "https://mp.weixin.qq.com/s/J1kq15jKaM4atglSVJxdIQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“职通未来·云端启航”｜通化医药健康职业学院即将举办2025届毕业生线上双选会",
+    "source": "",
+    "publishDate": "2025-03-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/J1kq15jKaM4atglSVJxdIQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "b9398424b39390d01132a454dad9dabf5170da18215c379d16fdcaf615481cbd",
+  "evidence": {
+    "listPage": 97,
+    "listTitle": "“职通未来·云端启航”｜通化医药健康职业学院即将举办2025届毕业生线上双选会",
+    "listPublishDate": "2025-03-28",
+    "sourceOrder": 961
+  }
+}

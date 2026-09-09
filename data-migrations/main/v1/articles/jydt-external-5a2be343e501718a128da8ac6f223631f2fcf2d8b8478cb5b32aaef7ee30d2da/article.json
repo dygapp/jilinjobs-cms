@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5a2be343e501718a128da8ac6f223631f2fcf2d8b8478cb5b32aaef7ee30d2da",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/T7qDVRepVqCaXNRc_Vakzg",
+    "url": "https://mp.weixin.qq.com/s/T7qDVRepVqCaXNRc_Vakzg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学旅游学院副校长贾烊带队赴吉林省、长春市两级服务贸易协会访企拓岗",
+    "source": "",
+    "publishDate": "2025-06-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/T7qDVRepVqCaXNRc_Vakzg"
+  },
+  "resources": [],
+  "sourceFingerprint": "9388d2ba10fb56b2ac300687473259f5bc25bddf5586462c39fe2d347c660c57",
+  "evidence": {
+    "listPage": 78,
+    "listTitle": "长春大学旅游学院副校长贾烊带队赴吉林省、长春市两级服务贸易协会访企拓岗",
+    "listPublishDate": "2025-06-25",
+    "sourceOrder": 774
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:13ac3c66d81e0929a129f62ca57ded0fd366d4aeba38cbf58e940f3a00a5b40d",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/wNwrteLsqLR_M2w-2cReXQ",
+    "url": "https://mp.weixin.qq.com/s/wNwrteLsqLR_M2w-2cReXQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "招聘会 | 2025年吉林省高校残疾人毕业生留吉就业专场招聘会即将开启",
+    "source": "",
+    "publishDate": "2025-05-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wNwrteLsqLR_M2w-2cReXQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "bfe8e45c32ad1346aedd4ad28e00251ed44da11ef3ac352878a945f063885604",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "招聘会 | 2025年吉林省高校残疾人毕业生留吉就业专场招聘会即将开启",
+    "listPublishDate": "2025-05-19",
+    "sourceOrder": 152
+  }
+}

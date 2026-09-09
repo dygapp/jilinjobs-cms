@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:212618258186240",
+    "contentId": "212618258186240",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=212618258186240"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办“东北振兴新形势与就业创业新思考”线上专题讲座的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2024-03-19",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1188\" src=\"migration-resource://c0ff36cc23abff829c22f979d10998a0ddde8cb38c8b8f792104e25e0c2da04b\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://c433b1e3c67d878c4d7cecf3e07d3419e1504a31c46b2417ac351f31f1e595fe\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://8526d03773b6ead8a8acc0d2b583610425ed06429b43b6c9249a1e528001489c\" width=\"1000\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-03-19/2933cdea-6730-4f45-8dbb-d7c82a5a1074.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-03-19/2933cdea-6730-4f45-8dbb-d7c82a5a1074.jpg",
+      "token": "migration-resource://c0ff36cc23abff829c22f979d10998a0ddde8cb38c8b8f792104e25e0c2da04b",
+      "snapshotPath": "assets/c0ff36cc23abff829c22f979d10998a0ddde8cb38c8b8f792104e25e0c2da04b.jpg",
+      "sha256": "c0ff36cc23abff829c22f979d10998a0ddde8cb38c8b8f792104e25e0c2da04b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 195110
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-03-19/0bd7d6f4-efdc-4407-b2e8-c31c3e75b92e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-03-19/0bd7d6f4-efdc-4407-b2e8-c31c3e75b92e.jpg",
+      "token": "migration-resource://c433b1e3c67d878c4d7cecf3e07d3419e1504a31c46b2417ac351f31f1e595fe",
+      "snapshotPath": "assets/c433b1e3c67d878c4d7cecf3e07d3419e1504a31c46b2417ac351f31f1e595fe.jpg",
+      "sha256": "c433b1e3c67d878c4d7cecf3e07d3419e1504a31c46b2417ac351f31f1e595fe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 147233
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-03-19/8824423d-3551-4ad0-a4d8-15ef5bac4052.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-03-19/8824423d-3551-4ad0-a4d8-15ef5bac4052.jpg",
+      "token": "migration-resource://8526d03773b6ead8a8acc0d2b583610425ed06429b43b6c9249a1e528001489c",
+      "snapshotPath": "assets/8526d03773b6ead8a8acc0d2b583610425ed06429b43b6c9249a1e528001489c.jpg",
+      "sha256": "8526d03773b6ead8a8acc0d2b583610425ed06429b43b6c9249a1e528001489c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 122211
+    }
+  ],
+  "sourceFingerprint": "56be658dade11a5956acc574e71cc0e8f0570abc0fd69dfe82b4173a60dc54e1",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "关于举办“东北振兴新形势与就业创业新思考”线上专题讲座的通知",
+    "listPublishDate": "2024-03-19",
+    "sourceOrder": 90,
+    "detailPublishDate": "2024-03-19"
+  }
+}

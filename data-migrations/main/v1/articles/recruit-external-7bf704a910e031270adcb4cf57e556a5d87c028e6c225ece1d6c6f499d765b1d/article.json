@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:7bf704a910e031270adcb4cf57e556a5d87c028e6c225ece1d6c6f499d765b1d",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/PsXW1zi6ACtH0C11djN-Hg",
+    "url": "https://mp.weixin.qq.com/s/PsXW1zi6ACtH0C11djN-Hg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "创业奋斗 “就”在吉林——长春市百万大学生留长工程2024年“五优”服务校园长春科技学院春季双选会方案（双阳区高校联盟专场）",
+    "source": "",
+    "publishDate": "2024-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/PsXW1zi6ACtH0C11djN-Hg"
+  },
+  "resources": [],
+  "sourceFingerprint": "ce5bca56de4ff944ea4c1eaa7361d78b66f3c8b235da14cb66bbc9e2dc4802af",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "创业奋斗 “就”在吉林——长春市百万大学生留长工程2024年“五优”服务校园长春科技学院春季双选会方案（双阳区高校联盟专场）",
+    "listPublishDate": "2024-05-15",
+    "sourceOrder": 274
+  }
+}

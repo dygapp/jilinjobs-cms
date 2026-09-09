@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:284170565730304",
+    "contentId": "284170565730304",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=284170565730304"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅 商务部办公厅关于举办电子商务行业面向2025届高校毕业生招聘活动的通知",
+    "source": "教育部办公厅",
+    "publishDate": "2025-04-18",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"5615\" src=\"migration-resource://6e6ec140212dca7b6091e498bf559386e112174d417fae288bbb40a8c24f1191\" width=\"794\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-18/5be43628-cba7-4332-8f9b-91145b0348ef.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-18/5be43628-cba7-4332-8f9b-91145b0348ef.jpeg",
+      "token": "migration-resource://6e6ec140212dca7b6091e498bf559386e112174d417fae288bbb40a8c24f1191",
+      "snapshotPath": "assets/6e6ec140212dca7b6091e498bf559386e112174d417fae288bbb40a8c24f1191.jpeg",
+      "sha256": "6e6ec140212dca7b6091e498bf559386e112174d417fae288bbb40a8c24f1191",
+      "contentType": "image/jpeg",
+      "sizeBytes": 431001
+    }
+  ],
+  "sourceFingerprint": "719ddda56fbe421b56874e0aada4bec7bc6dfedcca1ca17acd651178d3bd550d",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "教育部办公厅 商务部办公厅关于举办电子商务行业面向2025届高校毕业生招聘活动的通知",
+    "listPublishDate": "2025-04-18",
+    "sourceOrder": 41,
+    "detailPublishDate": "2025-04-18"
+  }
+}

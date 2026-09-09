@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:448ad492523ab38519589d1f71337d80ead74df662e5f7aae4199b0d4658be26",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/yVslh2UfhwMfisQ-EtauGQ",
+    "url": "https://mp.weixin.qq.com/s/yVslh2UfhwMfisQ-EtauGQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学关于寒假期间毕业生就业服务工作安排的通知",
+    "source": "",
+    "publishDate": "2026-01-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/yVslh2UfhwMfisQ-EtauGQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "76ba9f991fc58d9595c12d855fcdf5da626c3ee61722a34b0ff84ba6fdecc1ae",
+  "evidence": {
+    "listPage": 51,
+    "listTitle": "东北电力大学关于寒假期间毕业生就业服务工作安排的通知",
+    "listPublishDate": "2026-01-12",
+    "sourceOrder": 506
+  }
+}

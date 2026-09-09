@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122130",
+    "contentId": "28737783122130",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122130"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春中医药大学2016届毕业生冬季供需见面洽谈会举行",
+    "source": "",
+    "publishDate": "2015-11-22",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">长春中医药大学2016届毕业生冬季供需见面洽谈会举行</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2015-11-22 16:09:25</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 11月21日至22日，长春中医药大学召开了2016届毕业生冬季医学类、药学及人文管理类专场供需见面洽谈会。吉林省教育厅高校学生处处长蒋蔓萍、吉林省高等学校毕业生就业指导中心副主任张旭光莅临指导，长春中医药大学党政领导秦磊、宋柏林、周进、姜彤伟、陈长宝出席了洽谈会。</span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">　　参加洽谈会的有来自北京、重庆、上海、安徽、江苏、浙江、甘肃、辽宁、黑龙江以及省内各地区218家用人单位，包括甘肃省卫生厅招聘团、哈尔滨南岗区卫生局、通化市人社局招聘团；北京中医医院顺义医院、上海新起点康复医院、长春中医药大学附属医院；太极集团、扬子江药业集团、连云港正大天晴医药有限公司、施慧达药业集团（吉林）有限公司等大型医疗单位及百强药事企业，涵盖了医学、药学、管理类等相关专业，提供就业岗位3000余个。</span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">　　洽谈会期间，共有42家用人单位召开了专场洽谈会，201名毕业生达成了就业意向。</span></p><p style=\"text-align: center;\"></p><p style=\"text-align: center;\"><img title=\"洽谈会现场.jpg\" src=\"migration-resource://70919bc75662390bc1330aa9936a5f5e54fb9bb75513409a026bda3b41550840\"></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 16px;\">洽谈会现场</span></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544652279687507225262.jpg",
+      "originalReference": "/chistory/cms/imgs/6358544652279687507225262.jpg",
+      "token": "migration-resource://70919bc75662390bc1330aa9936a5f5e54fb9bb75513409a026bda3b41550840",
+      "snapshotPath": "assets/70919bc75662390bc1330aa9936a5f5e54fb9bb75513409a026bda3b41550840.jpg",
+      "sha256": "70919bc75662390bc1330aa9936a5f5e54fb9bb75513409a026bda3b41550840",
+      "contentType": "image/jpeg",
+      "sizeBytes": 214257
+    }
+  ],
+  "sourceFingerprint": "ac485789b4f3b4ba4a67f3ae410c819675c1614ff8caf608f0ae386ef43d1cae",
+  "evidence": {
+    "listPage": 156,
+    "listTitle": "长春中医药大学2016届毕业生冬季供需见面洽谈会举行",
+    "listPublishDate": "2015-11-22",
+    "sourceOrder": 1557,
+    "detailPublishDate": "2015-11-22"
+  }
+}

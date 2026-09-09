@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bd7f9f6ac6a6276d720b383f926ea8772c84538b9c4fc5e704ccd778271a8e9f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/8tadvuHTT4J2HEqLxVCHjQ",
+    "url": "https://mp.weixin.qq.com/s/8tadvuHTT4J2HEqLxVCHjQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省经济管理干部学院精准对接企业需求助力学子高质量就业 走进金河物流，深化校企合作",
+    "source": "",
+    "publishDate": "2026-04-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/8tadvuHTT4J2HEqLxVCHjQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "38ba8f298c8a9c7193c80aa6efc040868dc949f9eacb11f5f5f65d2ecc30600f",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "吉林省经济管理干部学院精准对接企业需求助力学子高质量就业 走进金河物流，深化校企合作",
+    "listPublishDate": "2026-04-02",
+    "sourceOrder": 329
+  }
+}

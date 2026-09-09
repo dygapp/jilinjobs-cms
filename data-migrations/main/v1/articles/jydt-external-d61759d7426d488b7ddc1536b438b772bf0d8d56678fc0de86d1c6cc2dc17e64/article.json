@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d61759d7426d488b7ddc1536b438b772bf0d8d56678fc0de86d1c6cc2dc17e64",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/X3kb1vsIMN18YsrhYjPDeA",
+    "url": "https://mp.weixin.qq.com/s/X3kb1vsIMN18YsrhYjPDeA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业大学举办2026年夏日攻坚招聘会暨2027届暑期实习生双选会",
+    "source": "",
+    "publishDate": "2026-06-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/X3kb1vsIMN18YsrhYjPDeA"
+  },
+  "resources": [],
+  "sourceFingerprint": "eee47f96d5c306ba9e1a9c9f8a7c8163f4d732645b7431263fc610aecc03f6da",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "吉林农业大学举办2026年夏日攻坚招聘会暨2027届暑期实习生双选会",
+    "listPublishDate": "2026-06-01",
+    "sourceOrder": 121
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122698",
+    "contentId": "28737783122698",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122698"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "开展基层群众评议机关作风工作的实施方案",
+    "source": "培训部",
+    "publishDate": "2020-09-21",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align:center\"><img src=\"migration-resource://702f3acf417e24f88b2dfe5dc845ac4d0875444ddb9529e45ff43f1e91691dde\" alt=\"\" width=\"993\" height=\"1404\"><img src=\"migration-resource://66282a4581c84a5e7d361068b81f10168dacf13b2554a3fcf17ae61dd1f26992\" alt=\"\" width=\"993\" height=\"1404\"><img src=\"migration-resource://d67a1f2d32c744b7ecb009fa0c272f4858291def3e98b797117ea79fcd1389dd\" alt=\"\" width=\"993\" height=\"1404\"><img src=\"migration-resource://0dbf7c1b4e6f9045d1336bfe85f90fe9c47650b1ceb0115197f1a331a8fc7f4a\" alt=\"\" width=\"993\" height=\"1404\"><img src=\"migration-resource://b087e5c1a69d6637de22065d373f9838c269c74915963ac404fb82328ceb1d51\" alt=\"\" width=\"993\" height=\"1404\"><img src=\"migration-resource://b2e71d25d736f64271e42fb669741274b6a096524283286eb35d8352053b89f2\" alt=\"\" width=\"993\" height=\"1404\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200921150254.jpg",
+      "originalReference": "/chistory/cms/editor/20200921150254.jpg",
+      "token": "migration-resource://702f3acf417e24f88b2dfe5dc845ac4d0875444ddb9529e45ff43f1e91691dde",
+      "snapshotPath": "assets/702f3acf417e24f88b2dfe5dc845ac4d0875444ddb9529e45ff43f1e91691dde.jpg",
+      "sha256": "702f3acf417e24f88b2dfe5dc845ac4d0875444ddb9529e45ff43f1e91691dde",
+      "contentType": "image/jpeg",
+      "sizeBytes": 252708
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200921150532.jpg",
+      "originalReference": "/chistory/cms/editor/20200921150532.jpg",
+      "token": "migration-resource://66282a4581c84a5e7d361068b81f10168dacf13b2554a3fcf17ae61dd1f26992",
+      "snapshotPath": "assets/66282a4581c84a5e7d361068b81f10168dacf13b2554a3fcf17ae61dd1f26992.jpg",
+      "sha256": "66282a4581c84a5e7d361068b81f10168dacf13b2554a3fcf17ae61dd1f26992",
+      "contentType": "image/jpeg",
+      "sizeBytes": 235083
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200921150547.jpg",
+      "originalReference": "/chistory/cms/editor/20200921150547.jpg",
+      "token": "migration-resource://d67a1f2d32c744b7ecb009fa0c272f4858291def3e98b797117ea79fcd1389dd",
+      "snapshotPath": "assets/d67a1f2d32c744b7ecb009fa0c272f4858291def3e98b797117ea79fcd1389dd.jpg",
+      "sha256": "d67a1f2d32c744b7ecb009fa0c272f4858291def3e98b797117ea79fcd1389dd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 275802
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200921150557.jpg",
+      "originalReference": "/chistory/cms/editor/20200921150557.jpg",
+      "token": "migration-resource://0dbf7c1b4e6f9045d1336bfe85f90fe9c47650b1ceb0115197f1a331a8fc7f4a",
+      "snapshotPath": "assets/0dbf7c1b4e6f9045d1336bfe85f90fe9c47650b1ceb0115197f1a331a8fc7f4a.jpg",
+      "sha256": "0dbf7c1b4e6f9045d1336bfe85f90fe9c47650b1ceb0115197f1a331a8fc7f4a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 103288
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200921150609.jpg",
+      "originalReference": "/chistory/cms/editor/20200921150609.jpg",
+      "token": "migration-resource://b087e5c1a69d6637de22065d373f9838c269c74915963ac404fb82328ceb1d51",
+      "snapshotPath": "assets/b087e5c1a69d6637de22065d373f9838c269c74915963ac404fb82328ceb1d51.jpg",
+      "sha256": "b087e5c1a69d6637de22065d373f9838c269c74915963ac404fb82328ceb1d51",
+      "contentType": "image/jpeg",
+      "sizeBytes": 86428
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200921150621.jpg",
+      "originalReference": "/chistory/cms/editor/20200921150621.jpg",
+      "token": "migration-resource://b2e71d25d736f64271e42fb669741274b6a096524283286eb35d8352053b89f2",
+      "snapshotPath": "assets/b2e71d25d736f64271e42fb669741274b6a096524283286eb35d8352053b89f2.jpg",
+      "sha256": "b2e71d25d736f64271e42fb669741274b6a096524283286eb35d8352053b89f2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 135549
+    }
+  ],
+  "sourceFingerprint": "d06442c006bc67963bd0ae0479a3e37744a954df5f1e6e526c13bc07c48e30a6",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "开展基层群众评议机关作风工作的实施方案",
+    "listPublishDate": "2020-09-21",
+    "sourceOrder": 171,
+    "detailPublishDate": "2020-09-21"
+  }
+}

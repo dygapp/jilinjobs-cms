@@ -1,0 +1,121 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:87441369219072",
+    "contentId": "87441369219072",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=87441369219072"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发开展2022年全国高校就业创业金课建设工作的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2022-04-26",
+    "bodyHtml": "\n                        <p>各普通高校：</p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp;教育部学生服务与素质发展中心下发了《关于开展2022年全国高校就业创业金课建设工作的通知》，现转发给你们，请各校重视此项工作，积极组织本校就业创业课程教学经验丰富的教师申报，于5月17日前将相关材料报省中心，省中心遴选后报教育部学生服务与素质发展中心。具体要求见附件。</p>\n\n<p>联系人：王崴</p>\n\n<p>邮箱：wangwei@jilinjobs.cn</p>\n\n<p>电话：15834550000</p>\n\n<p>附件：《关于开展2022年全国高校就业创业金课建设工作的通知》</p>\n\n<p style=\"margin-left:600px\">吉林省高等学校毕业生就业指导中心</p>\n\n<p style=\"margin-left:560px\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022年4月26日</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"996\" src=\"migration-resource://92e1177b3a86471f485a0d7612efb13892ccbc8a471f73942de97b53f22f2091\" width=\"783\"><img alt=\"\" height=\"1010\" src=\"migration-resource://7934986bdb2069dd66875caca3a4befd97afa2043f7c5cc1cbfce1964b553af6\" width=\"790\"><img alt=\"\" height=\"710\" src=\"migration-resource://60e6877f162abbf47807fb36a8ff78097bd96853fc99a13459c1a854c385437c\" width=\"790\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1021\" src=\"migration-resource://44223496125e7cda88b96306506f2c20fcbc8412afaf26ce07cfab2eaff8e3ac\" width=\"788\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1010\" src=\"migration-resource://3e17c2ed462554f949bb1cf3b9e06a91381de2349ae1c71946a7672a22100b6d\" width=\"784\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1025\" src=\"migration-resource://1908f756c42c470d20eee7a3ad33e24145950109e2df77c6728f6daef02ffdce\" width=\"789\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1031\" src=\"migration-resource://00e1f53c0d857aad33c31626f6f4377480fe462d368ff360f5b6e6ae8f05edc4\" width=\"789\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1027\" src=\"migration-resource://508ed32a59a43d4075164edb5321b147c334abe41da4ec5555abfa50cb844bb4\" width=\"787\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1028\" src=\"migration-resource://a725f86b6f7cdd1bcb6075f3482402c00b47e4c997fb405e1291b2f2986cab37\" width=\"788\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/3c53bb28-666f-479f-b354-53aca0c2ee2a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/3c53bb28-666f-479f-b354-53aca0c2ee2a.jpg",
+      "token": "migration-resource://92e1177b3a86471f485a0d7612efb13892ccbc8a471f73942de97b53f22f2091",
+      "snapshotPath": "assets/92e1177b3a86471f485a0d7612efb13892ccbc8a471f73942de97b53f22f2091.jpg",
+      "sha256": "92e1177b3a86471f485a0d7612efb13892ccbc8a471f73942de97b53f22f2091",
+      "contentType": "image/jpeg",
+      "sizeBytes": 110941
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/662cc9b6-0526-4949-b470-5f60fa194acf.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/662cc9b6-0526-4949-b470-5f60fa194acf.jpg",
+      "token": "migration-resource://7934986bdb2069dd66875caca3a4befd97afa2043f7c5cc1cbfce1964b553af6",
+      "snapshotPath": "assets/7934986bdb2069dd66875caca3a4befd97afa2043f7c5cc1cbfce1964b553af6.jpg",
+      "sha256": "7934986bdb2069dd66875caca3a4befd97afa2043f7c5cc1cbfce1964b553af6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 116651
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/6be29e93-be46-4c68-836d-cc185fcb01b4.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/6be29e93-be46-4c68-836d-cc185fcb01b4.jpg",
+      "token": "migration-resource://60e6877f162abbf47807fb36a8ff78097bd96853fc99a13459c1a854c385437c",
+      "snapshotPath": "assets/60e6877f162abbf47807fb36a8ff78097bd96853fc99a13459c1a854c385437c.jpg",
+      "sha256": "60e6877f162abbf47807fb36a8ff78097bd96853fc99a13459c1a854c385437c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 55086
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/0e75ccc4-4ceb-4e4a-891b-89b9538075be.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/0e75ccc4-4ceb-4e4a-891b-89b9538075be.jpg",
+      "token": "migration-resource://44223496125e7cda88b96306506f2c20fcbc8412afaf26ce07cfab2eaff8e3ac",
+      "snapshotPath": "assets/44223496125e7cda88b96306506f2c20fcbc8412afaf26ce07cfab2eaff8e3ac.jpg",
+      "sha256": "44223496125e7cda88b96306506f2c20fcbc8412afaf26ce07cfab2eaff8e3ac",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90203
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/87172680-c421-4a4b-9618-b5809966809e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/87172680-c421-4a4b-9618-b5809966809e.jpg",
+      "token": "migration-resource://3e17c2ed462554f949bb1cf3b9e06a91381de2349ae1c71946a7672a22100b6d",
+      "snapshotPath": "assets/3e17c2ed462554f949bb1cf3b9e06a91381de2349ae1c71946a7672a22100b6d.jpg",
+      "sha256": "3e17c2ed462554f949bb1cf3b9e06a91381de2349ae1c71946a7672a22100b6d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 74808
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/4265d166-bff6-4d44-81d0-944f65db7891.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/4265d166-bff6-4d44-81d0-944f65db7891.jpg",
+      "token": "migration-resource://1908f756c42c470d20eee7a3ad33e24145950109e2df77c6728f6daef02ffdce",
+      "snapshotPath": "assets/1908f756c42c470d20eee7a3ad33e24145950109e2df77c6728f6daef02ffdce.jpg",
+      "sha256": "1908f756c42c470d20eee7a3ad33e24145950109e2df77c6728f6daef02ffdce",
+      "contentType": "image/jpeg",
+      "sizeBytes": 38123
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/75b960c7-7f49-41d1-9be4-0fe6ea33942e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/75b960c7-7f49-41d1-9be4-0fe6ea33942e.jpg",
+      "token": "migration-resource://00e1f53c0d857aad33c31626f6f4377480fe462d368ff360f5b6e6ae8f05edc4",
+      "snapshotPath": "assets/00e1f53c0d857aad33c31626f6f4377480fe462d368ff360f5b6e6ae8f05edc4.jpg",
+      "sha256": "00e1f53c0d857aad33c31626f6f4377480fe462d368ff360f5b6e6ae8f05edc4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77286
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/b36186de-0041-4ae9-8c2f-90d603ac9a57.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/b36186de-0041-4ae9-8c2f-90d603ac9a57.jpg",
+      "token": "migration-resource://508ed32a59a43d4075164edb5321b147c334abe41da4ec5555abfa50cb844bb4",
+      "snapshotPath": "assets/508ed32a59a43d4075164edb5321b147c334abe41da4ec5555abfa50cb844bb4.jpg",
+      "sha256": "508ed32a59a43d4075164edb5321b147c334abe41da4ec5555abfa50cb844bb4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 53950
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/4b63d4a9-74ad-4ad6-87f7-f0dd01153245.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/4b63d4a9-74ad-4ad6-87f7-f0dd01153245.jpg",
+      "token": "migration-resource://a725f86b6f7cdd1bcb6075f3482402c00b47e4c997fb405e1291b2f2986cab37",
+      "snapshotPath": "assets/a725f86b6f7cdd1bcb6075f3482402c00b47e4c997fb405e1291b2f2986cab37.jpg",
+      "sha256": "a725f86b6f7cdd1bcb6075f3482402c00b47e4c997fb405e1291b2f2986cab37",
+      "contentType": "image/jpeg",
+      "sizeBytes": 49701
+    }
+  ],
+  "sourceFingerprint": "d0e2b7c86f9bb85cef04d22f623a79dc846894026cd792e22abaa28750e48637",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "关于转发开展2022年全国高校就业创业金课建设工作的通知",
+    "listPublishDate": "2022-04-26",
+    "sourceOrder": 132,
+    "detailPublishDate": "2022-04-26"
+  }
+}

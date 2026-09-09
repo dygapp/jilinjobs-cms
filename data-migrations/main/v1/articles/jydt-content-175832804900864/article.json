@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:175832804900864",
+    "contentId": "175832804900864",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=175832804900864"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春理工大学举办春季留省大型双选会",
+    "source": "长春理工大学",
+    "publishDate": "2023-03-31",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">为响应省委省政府做好毕业生留省就业工作号召，搭建政校企合作交流平台，3月16日，由长春理工大学与长春市人才服务局联合举办的“奋斗有我‘就’在吉林”春季促就业攻坚行动——长春理工大学2023届毕业生留省就业专场双选会举行。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">双选会邀请到长春市汽车产业、高端装备制造、生物医药、光电信息、新能源、文化旅游等相关产业的优质企业156家，提供岗位4000余个，千余名毕业生参与招聘。作为春季首场大型招聘活动，双选会受到了毕业生广泛关注，现场人头攒动，学生反响热烈。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"400\" src=\"migration-resource://43b348cfe17ddd2d5012053264bc47f5103754c8714842601cc235cc8ae7afa0\" width=\"600\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">校党委书记杨玉新、校长杨华民、校党委副书记刘瑛来到双选会现场，详细了解企业招聘需求和选才标准，并与现场毕业生亲切交谈，询问学生求职情况。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">长春市人才服务局对人才政策进行宣传推介，发放《长春市大学生政策口袋书》，并设置政策咨询展位为学生答疑解惑。学校就业创业指导中心在现场设置简历诊断台，为有需求的同学现场指导修改简历，助力毕业生提高求职成功率。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">在双选会当日，“春季促就业攻坚行动”政校企交流合作座谈会召开。长春市人才中心主任李博、大学生就业创业服务部部长许广华，长春市人才服务局青年人才服务处处长胡哲夫，校党委副书记刘瑛，就业创业指导中心主任贾彦彬，部分学院党委副书记及重点企业人力资源负责人参加座谈。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"400\" src=\"migration-resource://51e0e13a31fb1b99d49736f2b2f2729405b56ac7f6b5326106fde4312343264b\" width=\"600\"></p>\n\n<p style=\"text-align:center\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">座谈会上，刘瑛介绍了学校办学特色优势、科学研究、人才培养等相关情况，围绕长春市人才政策、促进大学生留省就业、政校企合作等方面提出了意见和建议。李博对</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">长春市人才工作的开展情况、人才政策的新变化和未来重点工作进行了说明。</span></span></span></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-29/b3aaddd6-efd7-444f-8c20-9e2ee9ddeb0e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-29/b3aaddd6-efd7-444f-8c20-9e2ee9ddeb0e.jpg",
+      "token": "migration-resource://43b348cfe17ddd2d5012053264bc47f5103754c8714842601cc235cc8ae7afa0",
+      "snapshotPath": "assets/43b348cfe17ddd2d5012053264bc47f5103754c8714842601cc235cc8ae7afa0.jpg",
+      "sha256": "43b348cfe17ddd2d5012053264bc47f5103754c8714842601cc235cc8ae7afa0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 51902
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-29/a65e3ed6-8326-401d-8e57-76fdc8f9ba8f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-29/a65e3ed6-8326-401d-8e57-76fdc8f9ba8f.jpg",
+      "token": "migration-resource://51e0e13a31fb1b99d49736f2b2f2729405b56ac7f6b5326106fde4312343264b",
+      "snapshotPath": "assets/51e0e13a31fb1b99d49736f2b2f2729405b56ac7f6b5326106fde4312343264b.jpg",
+      "sha256": "51e0e13a31fb1b99d49736f2b2f2729405b56ac7f6b5326106fde4312343264b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67239
+    }
+  ],
+  "sourceFingerprint": "5257dc30dab1a151f24f9759a3890df42aed8cbd90eb0bfebaa04e48393ce7c2",
+  "evidence": {
+    "listPage": 115,
+    "listTitle": "长春理工大学举办春季留省大型双选会",
+    "listPublishDate": "2023-03-31",
+    "sourceOrder": 1143,
+    "detailPublishDate": "2023-03-31"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:79db2e6aa86e40bc2473ce0cb75653910d93ddd7481b3f235b94fe4afd256e37",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/8hQbLAIHp4TNj4acEtLpxA",
+    "url": "https://mp.weixin.qq.com/s/8hQbLAIHp4TNj4acEtLpxA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2026年吉林省高校重点群体毕业生招聘会暨长春大学2026届毕业生春季双选会公告",
+    "source": "",
+    "publishDate": "2026-03-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/8hQbLAIHp4TNj4acEtLpxA"
+  },
+  "resources": [],
+  "sourceFingerprint": "05a5b8b7f15ab8a7f673488feedb88be2ef2ed80cd6e6e8f2d828d8de536b1e1",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "2026年吉林省高校重点群体毕业生招聘会暨长春大学2026届毕业生春季双选会公告",
+    "listPublishDate": "2026-03-24",
+    "sourceOrder": 53
+  }
+}

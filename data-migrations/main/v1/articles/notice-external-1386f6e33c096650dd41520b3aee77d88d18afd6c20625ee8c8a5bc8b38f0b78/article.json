@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:1386f6e33c096650dd41520b3aee77d88d18afd6c20625ee8c8a5bc8b38f0b78",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/GWMrWSp9znbAxk42KXAhig",
+    "url": "https://mp.weixin.qq.com/s/GWMrWSp9znbAxk42KXAhig"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "课程预告 | 教育部“互联网+就业指导”公益直播课：找到专业机会点，透视目标路径图——求职中的职业信息搜集",
+    "source": "",
+    "publishDate": "2025-03-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/GWMrWSp9znbAxk42KXAhig"
+  },
+  "resources": [],
+  "sourceFingerprint": "3818523cf93408d7f87918e8e9f2d083668cb254e7303aedbcc0ee04c9c671ca",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "课程预告 | 教育部“互联网+就业指导”公益直播课：找到专业机会点，透视目标路径图——求职中的职业信息搜集",
+    "listPublishDate": "2025-03-07",
+    "sourceOrder": 60
+  }
+}

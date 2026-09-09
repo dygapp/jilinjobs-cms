@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5944fd7130d45572442feb0a364b68d0e93aee25e7e617e2511f79879528c9fd",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ivuQ0mFrTSVdSJpF4hx_UQ",
+    "url": "https://mp.weixin.qq.com/s/ivuQ0mFrTSVdSJpF4hx_UQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【延大要闻】延边大学举办“职引未来 筑梦吉林”2025年吉林省高校毕业生专项招聘会（延边地区专场）",
+    "source": "",
+    "publishDate": "2025-10-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ivuQ0mFrTSVdSJpF4hx_UQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "a96747f2e4ce03490da35a143f40d89f1cafa22dfe81498938def665a0d4aec7",
+  "evidence": {
+    "listPage": 66,
+    "listTitle": "【延大要闻】延边大学举办“职引未来 筑梦吉林”2025年吉林省高校毕业生专项招聘会（延边地区专场）",
+    "listPublishDate": "2025-10-27",
+    "sourceOrder": 660
+  }
+}

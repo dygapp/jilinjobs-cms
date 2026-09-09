@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fba213b3dd74ea0f6038187ed2034ad0600a96a37ee2c17edcf843f9c347b222",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/yOoZoHPt0_HGo5T0Yhkh1A",
+    "url": "https://mp.weixin.qq.com/s/yOoZoHPt0_HGo5T0Yhkh1A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院寒假就业服务指南 ---- 服务“不断线”，就业“不停歇”",
+    "source": "",
+    "publishDate": "2026-01-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/yOoZoHPt0_HGo5T0Yhkh1A"
+  },
+  "resources": [],
+  "sourceFingerprint": "2e7193377fc4bf69c6c80a7927abbfa8ff6a9659edf5986dad26f17d834baa2a",
+  "evidence": {
+    "listPage": 51,
+    "listTitle": "长春工程学院寒假就业服务指南 ---- 服务“不断线”，就业“不停歇”",
+    "listPublishDate": "2026-01-14",
+    "sourceOrder": 501
+  }
+}

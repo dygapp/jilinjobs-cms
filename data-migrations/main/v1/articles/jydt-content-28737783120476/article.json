@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120476",
+    "contentId": "28737783120476",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120476"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "河北：河北省下拨首批6.9亿元专项资金推动就业",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">河北：河北省下拨首批6.9亿元专项资金推动就业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 新华网石家庄１月２４日电（记者曹国厂）河北省２００９年度首批６．９亿元就业专项补助资金日前下拨到各区市及扩权县，此举将为落实这个省促进就业的各项政策、确保就业形势基本稳定提供强有力保证。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 记者从２３日召开的２００８河北省国民经济形势新闻发布会上了解到，２００８年河北省城镇新增就业４８．２万人，年末城镇登记失业率３．９６％，控制在调控目标之内。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 据了解，河北省此次下拨的就业补助资金专项用于职业介绍补贴、职业培训补贴、社会保险补贴、公益性岗位补贴、职业技能鉴定补贴、特定就业政策补助、小额贷款担保基金、小额担保贷款贴息、扶持公共就业服务以及经河北省政府批准的促进就业工作方面资金补贴。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 另外，在下拨就业专项补助资金的同时，河北省政府要求全省县级以上人民政府要加大就业资金的筹集力度，确保满足就业工作的需要，同时要求各级加强就业再就业资金的监督管理，严格按照规定的范围、标准和程序使用，不得用于办公楼、培训基地、劳动力市场等各类基本建设支出，更不得用于平衡预算，确保切实发挥就业再就业资金的促进就业效应。<br>&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "d0ddd818429ab2df9295a53780d3c070582d2d18881ff0a830741e20717b55cb",
+  "evidence": {
+    "listPage": 192,
+    "listTitle": "河北：河北省下拨首批6.9亿元专项资金推动就业",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1912,
+    "detailPublishDate": "2009-04-04"
+  }
+}

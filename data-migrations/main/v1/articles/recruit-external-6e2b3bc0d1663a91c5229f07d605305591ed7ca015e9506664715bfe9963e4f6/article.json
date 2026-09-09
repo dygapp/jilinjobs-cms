@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:6e2b3bc0d1663a91c5229f07d605305591ed7ca015e9506664715bfe9963e4f6",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/afTOLGWmmfuwpi2bpBZvHQ",
+    "url": "https://mp.weixin.qq.com/s/afTOLGWmmfuwpi2bpBZvHQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春市高校综合类就业洽谈会暨长春大学2025届毕业生秋招第二场校园双选会",
+    "source": "",
+    "publishDate": "2024-10-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/afTOLGWmmfuwpi2bpBZvHQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "2925f907d2dd96a7857504d2e9d6a61cd1bd7ca4d351cbea726ad11a4e3115d0",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "长春市高校综合类就业洽谈会暨长春大学2025届毕业生秋招第二场校园双选会",
+    "listPublishDate": "2024-10-08",
+    "sourceOrder": 245
+  }
+}

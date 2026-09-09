@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122744",
+    "contentId": "28737783122744",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122744"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于参加教育部高校毕业生就业协会高校双创工作研讨会的通知",
+    "source": "",
+    "publishDate": "2017-08-18",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于参加教育部高校毕业生就业协会高校双创工作研讨会的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2017-8-18 14:31:44</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img src=\"migration-resource://90a37b0ae1b9f8f55b469ac49fc782a9c1560e22e313f9041d40dda052b2924e\" style=\"\" title=\"8.20会议通知3-1.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://ed02d25787ee28f39e67d7d488eb706eed3ee9509e5187270595b3e0c7ffd884\" style=\"\" title=\"8.20会议通知3-2.jpg\"></p><p style=\"text-align: center;\"><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363918191853125009118808.jpg",
+      "originalReference": "/chistory/cms/imgs/6363918191853125009118808.jpg",
+      "token": "migration-resource://90a37b0ae1b9f8f55b469ac49fc782a9c1560e22e313f9041d40dda052b2924e",
+      "snapshotPath": "assets/90a37b0ae1b9f8f55b469ac49fc782a9c1560e22e313f9041d40dda052b2924e.jpg",
+      "sha256": "90a37b0ae1b9f8f55b469ac49fc782a9c1560e22e313f9041d40dda052b2924e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 144358
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363918191917187507990445.jpg",
+      "originalReference": "/chistory/cms/imgs/6363918191917187507990445.jpg",
+      "token": "migration-resource://ed02d25787ee28f39e67d7d488eb706eed3ee9509e5187270595b3e0c7ffd884",
+      "snapshotPath": "assets/ed02d25787ee28f39e67d7d488eb706eed3ee9509e5187270595b3e0c7ffd884.jpg",
+      "sha256": "ed02d25787ee28f39e67d7d488eb706eed3ee9509e5187270595b3e0c7ffd884",
+      "contentType": "image/jpeg",
+      "sizeBytes": 100407
+    }
+  ],
+  "sourceFingerprint": "fd479d5ebc3f00d76a755dceef226354c56386fbb0f5c78e5ee7b8a6d3c9b06b",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "关于参加教育部高校毕业生就业协会高校双创工作研讨会的通知",
+    "listPublishDate": "2017-08-18",
+    "sourceOrder": 211,
+    "detailPublishDate": "2017-08-18"
+  }
+}

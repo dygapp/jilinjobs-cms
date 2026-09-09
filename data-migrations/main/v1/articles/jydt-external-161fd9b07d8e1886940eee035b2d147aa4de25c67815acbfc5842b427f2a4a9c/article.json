@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:161fd9b07d8e1886940eee035b2d147aa4de25c67815acbfc5842b427f2a4a9c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/vEGtgI4F2eH1l_YTZbmBjA",
+    "url": "https://mp.weixin.qq.com/s/vEGtgI4F2eH1l_YTZbmBjA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "教育部召开高校毕业生离校后就业工作推进会",
+    "source": "",
+    "publishDate": "2025-07-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vEGtgI4F2eH1l_YTZbmBjA"
+  },
+  "resources": [],
+  "sourceFingerprint": "7338da6e38fdb99eacf75d610d08ac5bf408956ca8825f82ca92710f687ef67c",
+  "evidence": {
+    "listPage": 73,
+    "listTitle": "教育部召开高校毕业生离校后就业工作推进会",
+    "listPublishDate": "2025-07-29",
+    "sourceOrder": 723
+  }
+}

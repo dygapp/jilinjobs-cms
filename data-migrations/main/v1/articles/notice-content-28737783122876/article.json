@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122876",
+    "contentId": "28737783122876",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122876"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于做好吉林省2013年下半年NIT考务工作的通知",
+    "source": "",
+    "publishDate": "2013-10-30",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于做好吉林省2013年下半年NIT考务工作的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2013-10-30 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img src=\"migration-resource://99395cf0b385643fa0f80dbe76e7caeaff09e37a53e991643b93b760d6b9319b\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://b2a2c0312b7a85e07cdd7733053acfc2600382d577422b5c87df43ec63376092\" border=\"0\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131030205957860.jpg",
+      "originalReference": "/chistory/cms/imgs/20131030205957860.jpg",
+      "token": "migration-resource://99395cf0b385643fa0f80dbe76e7caeaff09e37a53e991643b93b760d6b9319b",
+      "snapshotPath": "assets/99395cf0b385643fa0f80dbe76e7caeaff09e37a53e991643b93b760d6b9319b.jpg",
+      "sha256": "99395cf0b385643fa0f80dbe76e7caeaff09e37a53e991643b93b760d6b9319b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 72229
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131030210002387.jpg",
+      "originalReference": "/chistory/cms/imgs/20131030210002387.jpg",
+      "token": "migration-resource://b2a2c0312b7a85e07cdd7733053acfc2600382d577422b5c87df43ec63376092",
+      "snapshotPath": "assets/b2a2c0312b7a85e07cdd7733053acfc2600382d577422b5c87df43ec63376092.jpg",
+      "sha256": "b2a2c0312b7a85e07cdd7733053acfc2600382d577422b5c87df43ec63376092",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95057
+    }
+  ],
+  "sourceFingerprint": "09a7332a14de5a3b0588a18ab5f4a3da66c8946f207a8d7d129b533ad6292ebb",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "关于做好吉林省2013年下半年NIT考务工作的通知",
+    "listPublishDate": "2013-10-30",
+    "sourceOrder": 338,
+    "detailPublishDate": "2013-10-30"
+  }
+}

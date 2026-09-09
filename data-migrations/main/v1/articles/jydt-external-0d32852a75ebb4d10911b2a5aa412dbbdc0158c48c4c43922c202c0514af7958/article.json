@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0d32852a75ebb4d10911b2a5aa412dbbdc0158c48c4c43922c202c0514af7958",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/IYlSHVCwwwHkxpUxywDX2w",
+    "url": "https://mp.weixin.qq.com/s/IYlSHVCwwwHkxpUxywDX2w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学开展2026年暑假“访企拓岗促就业”专项行动",
+    "source": "",
+    "publishDate": "2026-08-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/IYlSHVCwwwHkxpUxywDX2w"
+  },
+  "resources": [],
+  "sourceFingerprint": "17b41b185e6e9fef88a61cfa2b9befb8e4770496871bb0d810935323e6cd870b",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "长春工业大学开展2026年暑假“访企拓岗促就业”专项行动",
+    "listPublishDate": "2026-08-10",
+    "sourceOrder": 16
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7005ecf2b1e9c389900237bfeca7c8647e0c91dbe2fde056ae6d42cd72c72bcc",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/sq9mPdi5SDAFCTq_9Jm6sQ",
+    "url": "https://mp.weixin.qq.com/s/sq9mPdi5SDAFCTq_9Jm6sQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "政策领航 产教赋能|长春早期教育职业学院体育学院赴龙头企业调研 共建人才培养新生态",
+    "source": "",
+    "publishDate": "2025-11-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/sq9mPdi5SDAFCTq_9Jm6sQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "330a49159f2d115070c20c6a7db23c73f63acaddcca983953cc9186be17d32e8",
+  "evidence": {
+    "listPage": 58,
+    "listTitle": "政策领航 产教赋能|长春早期教育职业学院体育学院赴龙头企业调研 共建人才培养新生态",
+    "listPublishDate": "2025-11-25",
+    "sourceOrder": 571
+  }
+}

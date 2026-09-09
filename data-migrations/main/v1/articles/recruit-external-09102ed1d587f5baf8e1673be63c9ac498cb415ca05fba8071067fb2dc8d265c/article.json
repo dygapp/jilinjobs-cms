@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:09102ed1d587f5baf8e1673be63c9ac498cb415ca05fba8071067fb2dc8d265c",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/6L0GKP21IdYkrbsaIczamw",
+    "url": "https://mp.weixin.qq.com/s/6L0GKP21IdYkrbsaIczamw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "职引未来——2024年大中城市巡回招聘（吉林站）暨“创业奋斗、就在吉林”“新医药、新康养”就业洽谈会",
+    "source": "",
+    "publishDate": "2024-04-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/6L0GKP21IdYkrbsaIczamw"
+  },
+  "resources": [],
+  "sourceFingerprint": "99a5089810159a85d98b957d31ab3193f87ec1a1831a4879f3e3d1bd6eebc41b",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "职引未来——2024年大中城市巡回招聘（吉林站）暨“创业奋斗、就在吉林”“新医药、新康养”就业洽谈会",
+    "listPublishDate": "2024-04-18",
+    "sourceOrder": 296
+  }
+}

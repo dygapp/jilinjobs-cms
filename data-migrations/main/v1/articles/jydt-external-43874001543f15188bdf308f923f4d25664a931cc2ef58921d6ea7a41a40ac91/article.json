@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:43874001543f15188bdf308f923f4d25664a931cc2ef58921d6ea7a41a40ac91",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/OluLRJrxQkYs0yTJc8rm0g",
+    "url": "https://mp.weixin.qq.com/s/OluLRJrxQkYs0yTJc8rm0g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学党委书记许适琳带队赴长春长光集团开展访企拓岗活动",
+    "source": "",
+    "publishDate": "2025-11-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/OluLRJrxQkYs0yTJc8rm0g"
+  },
+  "resources": [],
+  "sourceFingerprint": "2eeff07fa2a9150aa1e998a92cd04f017dc19e547746bd24fa80f5efbec3c3a0",
+  "evidence": {
+    "listPage": 64,
+    "listTitle": "北华大学党委书记许适琳带队赴长春长光集团开展访企拓岗活动",
+    "listPublishDate": "2025-11-03",
+    "sourceOrder": 639
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:85992927150080",
+    "contentId": "85992927150080",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=85992927150080"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于组织收看“创业有你‘就’在吉林” 助力新时代吉林振兴发展宣讲暨“百校千企” 云端引才合作对接会的预通知",
+    "source": "吉林省教育厅",
+    "publishDate": "2021-12-23",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1272\" src=\"migration-resource://4346482adb5b721ef39d1a8a884234aeba7723ff60d6368f6a9fc33c6229e3e6\" width=\"900\"><img alt=\"\" height=\"1272\" src=\"migration-resource://c73aa4280c96ee5892e6534bbd12ecd11155680dc71bbd79018dd7d543569bc5\" width=\"900\"><img alt=\"\" height=\"1272\" src=\"migration-resource://ed330afd03868f1e42fc3a7d3a3cb5e25395002ce57b7bb99f9f6ac7c1d664c8\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/fc3ce11f-80b0-4cd8-bc1c-234b7a9b259c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/fc3ce11f-80b0-4cd8-bc1c-234b7a9b259c.jpg",
+      "token": "migration-resource://4346482adb5b721ef39d1a8a884234aeba7723ff60d6368f6a9fc33c6229e3e6",
+      "snapshotPath": "assets/4346482adb5b721ef39d1a8a884234aeba7723ff60d6368f6a9fc33c6229e3e6.jpg",
+      "sha256": "4346482adb5b721ef39d1a8a884234aeba7723ff60d6368f6a9fc33c6229e3e6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 185074
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/ef5db29c-0feb-4499-965a-6ee085a2d462.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/ef5db29c-0feb-4499-965a-6ee085a2d462.jpg",
+      "token": "migration-resource://c73aa4280c96ee5892e6534bbd12ecd11155680dc71bbd79018dd7d543569bc5",
+      "snapshotPath": "assets/c73aa4280c96ee5892e6534bbd12ecd11155680dc71bbd79018dd7d543569bc5.jpg",
+      "sha256": "c73aa4280c96ee5892e6534bbd12ecd11155680dc71bbd79018dd7d543569bc5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 187551
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/5874c5c5-9445-4889-8e76-8121d277a6ae.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/5874c5c5-9445-4889-8e76-8121d277a6ae.jpg",
+      "token": "migration-resource://ed330afd03868f1e42fc3a7d3a3cb5e25395002ce57b7bb99f9f6ac7c1d664c8",
+      "snapshotPath": "assets/ed330afd03868f1e42fc3a7d3a3cb5e25395002ce57b7bb99f9f6ac7c1d664c8.jpg",
+      "sha256": "ed330afd03868f1e42fc3a7d3a3cb5e25395002ce57b7bb99f9f6ac7c1d664c8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 178347
+    }
+  ],
+  "sourceFingerprint": "e23e05e6f29dad5ba0bdd62a62658c1ab41f34bc6324f2209900bccb9f78a88d",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "关于组织收看“创业有你‘就’在吉林” 助力新时代吉林振兴发展宣讲暨“百校千企” 云端引才合作对接会的预通知",
+    "listPublishDate": "2021-12-23",
+    "sourceOrder": 140,
+    "detailPublishDate": "2021-12-23"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120684",
+    "contentId": "28737783120684",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120684"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2020年吉林省“吉人梦想杯”大学生职业生涯规划大赛指导教师线上培训班的通知",
+    "source": "培训部",
+    "publishDate": "2020-09-30",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align:center\"><img src=\"migration-resource://ccfc71027cd1b1c2703088726aedff8f18eb698a83bcfa3cf175557cdfe9b97e\" alt=\"\" width=\"654\" height=\"925\"><img src=\"migration-resource://55554ea32e1dd386e6e4f3996f56372449a74fd3126a2205673c5e238f38de57\" alt=\"\" width=\"654\" height=\"925\"><img src=\"migration-resource://571095473a10b4d28a0a3d4eba5f0990f5678e096c7ece41d1c1fdee56576ebd\" alt=\"\" width=\"654\" height=\"925\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200930115915.jpg",
+      "originalReference": "/chistory/cms/editor/20200930115915.jpg",
+      "token": "migration-resource://ccfc71027cd1b1c2703088726aedff8f18eb698a83bcfa3cf175557cdfe9b97e",
+      "snapshotPath": "assets/ccfc71027cd1b1c2703088726aedff8f18eb698a83bcfa3cf175557cdfe9b97e.jpg",
+      "sha256": "ccfc71027cd1b1c2703088726aedff8f18eb698a83bcfa3cf175557cdfe9b97e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 198830
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200930115935.jpg",
+      "originalReference": "/chistory/cms/editor/20200930115935.jpg",
+      "token": "migration-resource://55554ea32e1dd386e6e4f3996f56372449a74fd3126a2205673c5e238f38de57",
+      "snapshotPath": "assets/55554ea32e1dd386e6e4f3996f56372449a74fd3126a2205673c5e238f38de57.jpg",
+      "sha256": "55554ea32e1dd386e6e4f3996f56372449a74fd3126a2205673c5e238f38de57",
+      "contentType": "image/jpeg",
+      "sizeBytes": 157736
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200930115952.jpg",
+      "originalReference": "/chistory/cms/editor/20200930115952.jpg",
+      "token": "migration-resource://571095473a10b4d28a0a3d4eba5f0990f5678e096c7ece41d1c1fdee56576ebd",
+      "snapshotPath": "assets/571095473a10b4d28a0a3d4eba5f0990f5678e096c7ece41d1c1fdee56576ebd.jpg",
+      "sha256": "571095473a10b4d28a0a3d4eba5f0990f5678e096c7ece41d1c1fdee56576ebd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 108212
+    }
+  ],
+  "sourceFingerprint": "50ce440d8466691e30acc369bb315f276d9a45e007a8fa82d77b041b1d3b9e39",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "关于举办2020年吉林省“吉人梦想杯”大学生职业生涯规划大赛指导教师线上培训班的通知",
+    "listPublishDate": "2020-09-30",
+    "sourceOrder": 167,
+    "detailPublishDate": "2020-09-30"
+  }
+}

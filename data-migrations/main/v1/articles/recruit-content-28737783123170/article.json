@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123170",
+    "contentId": "28737783123170",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123170"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "河北省人力资源和社会保障厅关于做好省外2012届普通高校毕业生接收工作的函",
+    "source": "",
+    "publishDate": "2012-04-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">河北省人力资源和社会保障厅关于做好省外2012届普通高校毕业生接收工作的函</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-4-6 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://58c5464f11bf616085cff2da944d953a6ffca96c3fe7e862fe25ae7e0d891982\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://ca0ca983d2822eaae1138f2bc93bcfe37329215a868d4a4147bf47307d00dfe9\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://fc303d7e5cacd6e7b5f4c2d61aaa79eb9ca1573ff974224a3400bd8ac39bfe69\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://baa02a332d3e36ae6207bd8b77715f2cba64027e9d342960484aa574d930cc63\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120406093451990.jpg",
+      "originalReference": "/chistory/cms/imgs/20120406093451990.jpg",
+      "token": "migration-resource://58c5464f11bf616085cff2da944d953a6ffca96c3fe7e862fe25ae7e0d891982",
+      "snapshotPath": "assets/58c5464f11bf616085cff2da944d953a6ffca96c3fe7e862fe25ae7e0d891982.jpg",
+      "sha256": "58c5464f11bf616085cff2da944d953a6ffca96c3fe7e862fe25ae7e0d891982",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88769
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120406093458925.jpg",
+      "originalReference": "/chistory/cms/imgs/20120406093458925.jpg",
+      "token": "migration-resource://ca0ca983d2822eaae1138f2bc93bcfe37329215a868d4a4147bf47307d00dfe9",
+      "snapshotPath": "assets/ca0ca983d2822eaae1138f2bc93bcfe37329215a868d4a4147bf47307d00dfe9.jpg",
+      "sha256": "ca0ca983d2822eaae1138f2bc93bcfe37329215a868d4a4147bf47307d00dfe9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92946
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120406093504357.jpg",
+      "originalReference": "/chistory/cms/imgs/20120406093504357.jpg",
+      "token": "migration-resource://fc303d7e5cacd6e7b5f4c2d61aaa79eb9ca1573ff974224a3400bd8ac39bfe69",
+      "snapshotPath": "assets/fc303d7e5cacd6e7b5f4c2d61aaa79eb9ca1573ff974224a3400bd8ac39bfe69.jpg",
+      "sha256": "fc303d7e5cacd6e7b5f4c2d61aaa79eb9ca1573ff974224a3400bd8ac39bfe69",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90757
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2012040609351019.jpg",
+      "originalReference": "/chistory/cms/imgs/2012040609351019.jpg",
+      "token": "migration-resource://baa02a332d3e36ae6207bd8b77715f2cba64027e9d342960484aa574d930cc63",
+      "snapshotPath": "assets/baa02a332d3e36ae6207bd8b77715f2cba64027e9d342960484aa574d930cc63.jpg",
+      "sha256": "baa02a332d3e36ae6207bd8b77715f2cba64027e9d342960484aa574d930cc63",
+      "contentType": "image/jpeg",
+      "sizeBytes": 73434
+    }
+  ],
+  "sourceFingerprint": "b2ed67938a343cd4ba323f2d6da46d9138a0b05ec1d63eefba5a914e8ca13fb9",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "河北省人力资源和社会保障厅关于做好省外2012届普通高校毕业生接收工作的函",
+    "listPublishDate": "2012-04-06",
+    "sourceOrder": 435,
+    "detailPublishDate": "2012-04-06"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119986",
+    "contentId": "28737783119986",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119986"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省第三阶段高校创业教师高端培训在上海同济大学举行",
+    "source": "",
+    "publishDate": "2016-04-18",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省第三阶段高校创业教师高端培训在上海同济大学举行</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2016-4-18 16:09:51</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 16px;\">&nbsp;&nbsp;&nbsp; 4月11日-16日，由吉林省教育厅主办，吉林大学承办的吉林省第三阶段高校创业教师高端培训在上海同济大学举行。省高校毕业生就业指导中心主任郑志宏出席结业仪式，全省32所高校共50名就业创业指导教师参加培训。<br>&nbsp;&nbsp;&nbsp; 北京万学教育集团高级副总裁张强、工信部全国互联网应用创新创业大赛专家委员会主任丘锡彬、北京理工大学高端创业课程主讲教师方铭洋，分别从“大学生创业项目引导体系”、“大学生创业支持系统”、“大学生创业课程设置”“大学生创业项目实施”等四大模块进行深入讲解。学员们还到同济大学创业谷、上海市长阳谷创意产业园区进行了考察学习。<br>&nbsp;&nbsp;&nbsp; 结业仪式上，吉林大学李军凯等4位学员代表分别围绕“商业模式下的高校创业教师自我成长”、“吉林省创新创业案例资源系统设计”、“吉林省大学生创业能力培训项目研究”、“大学生创新创业教育课程的实践与思考”、“从匠人匠心看大学生创业价值观传递”五个题目进行了总结汇报。学员纷纷表示本次培训设计精心、课程精彩，受益匪浅。</span></p><p><span style=\"color: rgb(89, 89, 89); font-family: 宋体,SimSun; font-size: 16px;\"><br></span></p><p style=\"text-align: center;\"><span style=\"color: rgb(89, 89, 89); font-family: 宋体,SimSun; font-size: 16px;\"><br></span></p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://da936f2389492d078f1f2594ce7d4fe083604881f20b9827aca1a60da2ab96e8\"></p><p><br></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://5e4481c9f38f9e142188ce2b6a09d75687a6a1e76ac1b29e1c4501dd1fc19bfb\"></p><p style=\"text-align: center;\"><span style=\"color: rgb(89, 89, 89); font-family: 宋体,SimSun; font-size: 16px;\"></span></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359667923281250005840184.jpg",
+      "originalReference": "/chistory/cms/imgs/6359667923281250005840184.jpg",
+      "token": "migration-resource://da936f2389492d078f1f2594ce7d4fe083604881f20b9827aca1a60da2ab96e8",
+      "snapshotPath": "assets/da936f2389492d078f1f2594ce7d4fe083604881f20b9827aca1a60da2ab96e8.jpg",
+      "sha256": "da936f2389492d078f1f2594ce7d4fe083604881f20b9827aca1a60da2ab96e8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 100389
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359667923289062503582755.jpg",
+      "originalReference": "/chistory/cms/imgs/6359667923289062503582755.jpg",
+      "token": "migration-resource://5e4481c9f38f9e142188ce2b6a09d75687a6a1e76ac1b29e1c4501dd1fc19bfb",
+      "snapshotPath": "assets/5e4481c9f38f9e142188ce2b6a09d75687a6a1e76ac1b29e1c4501dd1fc19bfb.jpg",
+      "sha256": "5e4481c9f38f9e142188ce2b6a09d75687a6a1e76ac1b29e1c4501dd1fc19bfb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 176844
+    }
+  ],
+  "sourceFingerprint": "b305b90fa23d23288daaea30a2fa1059f288339b8b9765ef98f9563110d38174",
+  "evidence": {
+    "listPage": 155,
+    "listTitle": "吉林省第三阶段高校创业教师高端培训在上海同济大学举行",
+    "listPublishDate": "2016-04-18",
+    "sourceOrder": 1545,
+    "detailPublishDate": "2016-04-18"
+  }
+}

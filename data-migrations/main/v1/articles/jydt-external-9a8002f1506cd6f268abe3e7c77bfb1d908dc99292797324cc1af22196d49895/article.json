@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9a8002f1506cd6f268abe3e7c77bfb1d908dc99292797324cc1af22196d49895",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/17pH-SGT83h649A7BsNnoQ",
+    "url": "https://mp.weixin.qq.com/s/17pH-SGT83h649A7BsNnoQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“聚力扩容提质 服务高质量发展” 2026年吉林省高校毕业生长春健康职业学院专场招聘会成功举办",
+    "source": "",
+    "publishDate": "2026-04-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/17pH-SGT83h649A7BsNnoQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "c4d163880455ea711806176d8f9b65e50434e0dcafc91db9aa7a12b667c13a50",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "“聚力扩容提质 服务高质量发展” 2026年吉林省高校毕业生长春健康职业学院专场招聘会成功举办",
+    "listPublishDate": "2026-04-27",
+    "sourceOrder": 239
+  }
+}

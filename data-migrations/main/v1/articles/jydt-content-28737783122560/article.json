@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122560",
+    "contentId": "28737783122560",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122560"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春工程学院举办中建八局专场招聘会",
+    "source": "培训部",
+    "publishDate": "2020-10-09",
+    "bodyHtml": "\n                        \n\n\n\n\n<p>9月21日，长春工程学院举行了中国建筑第八工程局有限公司校园专场招聘会。学校领导、各学院领导及负责就业工作辅导员深入到招聘现场，与各公司代表深入交流，密切沟通；指导学生积极应聘，诚信就业。</p>\n<p>中国建筑第八工程局有限公司是世界500强排名18位、全球市值最大的投资建设集团——中国建筑集团有限公司的全资子公司，位居上海市百强企业第七位，上海市建筑企业第一位，综合实力位居中建集团子公司前列。</p>\n<p>本次招聘会共涵盖土木工程类、基础设施类、建筑设计类、机电安装类和职能管理类五大行业类别，囊括了土木工程、水利水电工程、工程造价、电气工程及其自动化、财务管理、环境工程、测绘工程等30余个专业，参加面试的毕业生500余人。中国建筑第八工程局有限公司和长春工程学院在长期合作中，建立了彼此信任的深厚感情，尤其在人才培养和学生就业方面实现了校企双赢。</p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "c137f7d33180b25128aead81b8f5507ed8a73372a37101f866c30f5eeb1485ae",
+  "evidence": {
+    "listPage": 141,
+    "listTitle": "长春工程学院举办中建八局专场招聘会",
+    "listPublishDate": "2020-10-09",
+    "sourceOrder": 1403,
+    "detailPublishDate": "2020-10-09"
+  }
+}

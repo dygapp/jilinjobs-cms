@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0ea8c6a38880a23f9b5b728230c050e43eec0331a14e673cdcaadf0a161ffa6b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/nANd2uyYbQkQcK0iW7XA6Q",
+    "url": "https://mp.weixin.qq.com/s/nANd2uyYbQkQcK0iW7XA6Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院副校长张代治带队赴浙开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-06-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/nANd2uyYbQkQcK0iW7XA6Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "ca6c96a642f9ac44cd389fbe2aade6e3154174a4ec59f956f63f441b055b4ba1",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "长春科技学院副校长张代治带队赴浙开展访企拓岗专项行动",
+    "listPublishDate": "2026-06-15",
+    "sourceOrder": 82
+  }
+}

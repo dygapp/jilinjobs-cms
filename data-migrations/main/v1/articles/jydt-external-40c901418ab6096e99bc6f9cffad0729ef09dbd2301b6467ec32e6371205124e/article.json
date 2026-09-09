@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:40c901418ab6096e99bc6f9cffad0729ef09dbd2301b6467ec32e6371205124e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/7q40X771mIyqyLV_01WftQ",
+    "url": "https://mp.weixin.qq.com/s/7q40X771mIyqyLV_01WftQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 ‘就’在吉林”——吉林省高校服务文创产业集群2024届毕业生春季供需洽谈周在吉林动画学院举行",
+    "source": "",
+    "publishDate": "2024-05-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/7q40X771mIyqyLV_01WftQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "232515c9da20676159165e6626f49dec0d3dd36a3c28fcb91ddb391fa2f794a1",
+  "evidence": {
+    "listPage": 106,
+    "listTitle": "“创业奋斗 ‘就’在吉林”——吉林省高校服务文创产业集群2024届毕业生春季供需洽谈周在吉林动画学院举行",
+    "listPublishDate": "2024-05-13",
+    "sourceOrder": 1056
+  }
+}

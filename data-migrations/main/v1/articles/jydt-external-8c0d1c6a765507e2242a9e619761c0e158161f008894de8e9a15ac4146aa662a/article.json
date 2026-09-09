@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8c0d1c6a765507e2242a9e619761c0e158161f008894de8e9a15ac4146aa662a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/2IeOWTscg-pLBkHKljt0Lw",
+    "url": "https://mp.weixin.qq.com/s/2IeOWTscg-pLBkHKljt0Lw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 ‘就’在吉林”长春市百万大学生留长工程2024年“五优”服务进校园暨学生实习就业双选会在我校圆满落幕",
+    "source": "",
+    "publishDate": "2024-05-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/2IeOWTscg-pLBkHKljt0Lw"
+  },
+  "resources": [],
+  "sourceFingerprint": "824ba760b988d2d21d03d32453e4620304f43a014d88828fc94af2eeaa969ac0",
+  "evidence": {
+    "listPage": 105,
+    "listTitle": "“创业奋斗 ‘就’在吉林”长春市百万大学生留长工程2024年“五优”服务进校园暨学生实习就业双选会在我校圆满落幕",
+    "listPublishDate": "2024-05-30",
+    "sourceOrder": 1047
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:660ccc4ff17ae8821f0e85c0e46f2edaec66486e795039374eaeba87d9a0a237",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/UddYtx4U6AblzUOI-Fl6ZQ",
+    "url": "https://mp.weixin.qq.com/s/UddYtx4U6AblzUOI-Fl6ZQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学召开吉林省“百校对百县”促就业专项行动座谈会",
+    "source": "",
+    "publishDate": "2025-06-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/UddYtx4U6AblzUOI-Fl6ZQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "a91916b6835184b1b9e078aad340f4d994c1563670d1695036517c7c64972f9d",
+  "evidence": {
+    "listPage": 81,
+    "listTitle": "北华大学召开吉林省“百校对百县”促就业专项行动座谈会",
+    "listPublishDate": "2025-06-16",
+    "sourceOrder": 810
+  }
+}

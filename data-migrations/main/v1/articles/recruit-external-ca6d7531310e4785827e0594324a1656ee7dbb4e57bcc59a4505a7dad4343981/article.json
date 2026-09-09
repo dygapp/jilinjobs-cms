@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:ca6d7531310e4785827e0594324a1656ee7dbb4e57bcc59a4505a7dad4343981",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/e4rjLg3Xncag37BaDqAUxA",
+    "url": "https://mp.weixin.qq.com/s/e4rjLg3Xncag37BaDqAUxA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学“职启新程 聘暖寒冬”寒假促就业系列活动之辅导员带岗直播",
+    "source": "",
+    "publishDate": "2026-01-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/e4rjLg3Xncag37BaDqAUxA"
+  },
+  "resources": [],
+  "sourceFingerprint": "a15f021010954550cbfaf05f8434902f692594b59d16d38953167b99c2411ad4",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "延边大学“职启新程 聘暖寒冬”寒假促就业系列活动之辅导员带岗直播",
+    "listPublishDate": "2026-01-22",
+    "sourceOrder": 90
+  }
+}

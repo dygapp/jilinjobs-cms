@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:0db9b3ab77c769e5a58effbacf785bf9f5ed9ad755a02879fbe43bc35e8269a7",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/LnOs6elT7yS9PuAOdG51kA",
+    "url": "https://mp.weixin.qq.com/s/LnOs6elT7yS9PuAOdG51kA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "寒假促就业暖心行动——长春财经学院第17届数字经济人才双选会",
+    "source": "",
+    "publishDate": "2026-01-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/LnOs6elT7yS9PuAOdG51kA"
+  },
+  "resources": [],
+  "sourceFingerprint": "5a4a3df2d684d1b7316ad08f6e051a6954c9d4f595e09b9d229d242648ffd5ab",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "寒假促就业暖心行动——长春财经学院第17届数字经济人才双选会",
+    "listPublishDate": "2026-01-16",
+    "sourceOrder": 104
+  }
+}

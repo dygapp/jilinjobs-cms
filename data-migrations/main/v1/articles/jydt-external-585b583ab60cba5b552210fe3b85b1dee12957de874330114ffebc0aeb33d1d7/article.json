@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:585b583ab60cba5b552210fe3b85b1dee12957de874330114ffebc0aeb33d1d7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/jnsB7Lwuvb_GxLhVa5rnOw",
+    "url": "https://mp.weixin.qq.com/s/jnsB7Lwuvb_GxLhVa5rnOw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业丨长春财经学院会计学院领导带队深入省内相关重点企业走访交流",
+    "source": "",
+    "publishDate": "2026-01-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/jnsB7Lwuvb_GxLhVa5rnOw"
+  },
+  "resources": [],
+  "sourceFingerprint": "eb4b45d78b590691b6cd5ed520a2d3702363572c992a2d78ea9dbe6469d9eada",
+  "evidence": {
+    "listPage": 47,
+    "listTitle": "访企拓岗促就业丨长春财经学院会计学院领导带队深入省内相关重点企业走访交流",
+    "listPublishDate": "2026-01-30",
+    "sourceOrder": 466
+  }
+}

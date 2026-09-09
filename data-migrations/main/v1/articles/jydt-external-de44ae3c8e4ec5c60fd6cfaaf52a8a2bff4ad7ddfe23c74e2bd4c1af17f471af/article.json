@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:de44ae3c8e4ec5c60fd6cfaaf52a8a2bff4ad7ddfe23c74e2bd4c1af17f471af",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Cq03UE7Q4s1Miwkp5pgZCg",
+    "url": "https://mp.weixin.qq.com/s/Cq03UE7Q4s1Miwkp5pgZCg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林科技职业技术学院2024届留吉系列招聘会暨“创业奋斗 ‘就’在吉林”“新医药、新康养、新服务、新电商”就业洽谈会火热召开",
+    "source": "",
+    "publishDate": "2024-05-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Cq03UE7Q4s1Miwkp5pgZCg"
+  },
+  "resources": [],
+  "sourceFingerprint": "65f6f3b129cfffcd40ddb14a6fd60a6261b5843a52db192c452df849e011ef45",
+  "evidence": {
+    "listPage": 106,
+    "listTitle": "吉林科技职业技术学院2024届留吉系列招聘会暨“创业奋斗 ‘就’在吉林”“新医药、新康养、新服务、新电商”就业洽谈会火热召开",
+    "listPublishDate": "2024-05-02",
+    "sourceOrder": 1059
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c14420adfcd6e9cf7b64e109bfc258ce290af5024d26f6440aae548816558c00",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/zeLhjscmCvgPXV4lBkp62A",
+    "url": "https://mp.weixin.qq.com/s/zeLhjscmCvgPXV4lBkp62A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林通用航空职业技术学院党委书记王洪福率队赴吉林长昱航空科技发展有限公司开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2025-06-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/zeLhjscmCvgPXV4lBkp62A"
+  },
+  "resources": [],
+  "sourceFingerprint": "17d2db665ca535aa28a452628fda0e6a99e2f5b1df9c0e01f3d2cb1e5e9c95d0",
+  "evidence": {
+    "listPage": 85,
+    "listTitle": "吉林通用航空职业技术学院党委书记王洪福率队赴吉林长昱航空科技发展有限公司开展访企拓岗促就业专项行动",
+    "listPublishDate": "2025-06-09",
+    "sourceOrder": 847
+  }
+}

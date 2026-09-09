@@ -1,0 +1,55 @@
+{
+  "migrationScope": "ARTICLE_ONLY",
+  "currentSubsetPromotionReady": true,
+  "allProblemArticlesResolved": false,
+  "counts": {
+    "totalArticles": 3314,
+    "currentImportEligibleArticles": 3078,
+    "sourceDefectExcludedArticles": 6,
+    "deferredProblemArticles": 230,
+    "unscopedBlockingObservations": 0
+  },
+  "finalRetry": {
+    "inputTargets": 416,
+    "resolvedCollected": 0,
+    "retryableTransient": 0,
+    "terminalSourceMissing": 0,
+    "terminalNonBlocking": 0,
+    "terminalRetryExhausted": 416,
+    "terminalClassified": 0,
+    "byClassification": {
+      "UNCLASSIFIED_RETRY_EXHAUSTED_REQUIRES_REVIEW": 416
+    },
+    "byOutcome": {
+      "TERMINAL_RETRY_EXHAUSTED": 416
+    }
+  },
+  "deferredProblemClassifications": {
+    "UNCLASSIFIED_RETRY_EXHAUSTED_REQUIRES_REVIEW": 529,
+    "MALFORMED_BODY_HTML_REQUIRES_REVIEW": 40,
+    "UNSUPPORTED_HTML_REQUIRES_REVIEW": 9,
+    "EMBEDDED_DATA_RESOURCE_REQUIRES_REVIEW": 6,
+    "JAVASCRIPT_BODY_LINK_REQUIRES_REVIEW": 3,
+    "RESOURCE_COLLECTION_FAILED": 3,
+    "BODY_CONTROL_CHARACTER_REQUIRES_REVIEW": 2,
+    "AMBIGUOUS_INTERNAL_HOST_EXTERNAL_LINK": 1,
+    "EVENT_HANDLER_ATTRIBUTE_REMOVED": 1,
+    "RESOURCE_TYPE_MISMATCH": 1,
+    "UNMIGRATED_EMBEDDED_MEDIA_REQUIRES_REVIEW": 1
+  },
+  "policy": {
+    "currentImport": "IMPORT_ELIGIBLE_INDEX_ONLY",
+    "deferredProblemArticles": "PRESERVE_AS_DURABLE_EVIDENCE_DO_NOT_BLOCK_CURRENT_SUBSET_PROMOTION",
+    "sourceDefectArticles": "EXCLUDE_PENDING_CLIENT_CONFIRMATION",
+    "noSilentRepair": true,
+    "noSilentDiscard": true
+  },
+  "provenance": {
+    "sourceRunId": 34303771704,
+    "sourceArtifactId": 10086056781,
+    "sourceArtifactName": "eu50-main-retry-attempt-3-a96cee22449508f92f3c89789f99aad477286a66",
+    "sourceArtifactDigest": "sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494",
+    "sourceHead": "a96cee22449508f92f3c89789f99aad477286a66",
+    "finalRetryAttempt": 3
+  }
+}

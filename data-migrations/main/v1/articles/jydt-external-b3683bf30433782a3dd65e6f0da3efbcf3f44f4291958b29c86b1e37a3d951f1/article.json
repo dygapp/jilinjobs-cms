@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b3683bf30433782a3dd65e6f0da3efbcf3f44f4291958b29c86b1e37a3d951f1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/49ttFBWxT9m49tLbYQEhgw",
+    "url": "https://mp.weixin.qq.com/s/49ttFBWxT9m49tLbYQEhgw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院赴中农阳光（吉林省）大数据集团有限公司开展访企调研活动",
+    "source": "",
+    "publishDate": "2026-08-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/49ttFBWxT9m49tLbYQEhgw"
+  },
+  "resources": [],
+  "sourceFingerprint": "3c6d9fd17150eda288a5facc086640288f230043d62784e0e0d98052e21e716e",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "吉林工商学院赴中农阳光（吉林省）大数据集团有限公司开展访企调研活动",
+    "listPublishDate": "2026-08-25",
+    "sourceOrder": 9
+  }
+}

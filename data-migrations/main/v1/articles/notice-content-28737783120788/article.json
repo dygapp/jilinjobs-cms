@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120788",
+    "contentId": "28737783120788",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120788"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《关于推广使用“职业发展教育支持系统”的通知》的通知",
+    "source": "",
+    "publishDate": "2012-02-21",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《关于推广使用“职业发展教育支持系统”的通知》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-2-21 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://652010f27f364000378e5a73f4762fc8dd8e87693863c764bd36be2251a5bf44\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120221104316308.jpg",
+      "originalReference": "/chistory/cms/imgs/20120221104316308.jpg",
+      "token": "migration-resource://652010f27f364000378e5a73f4762fc8dd8e87693863c764bd36be2251a5bf44",
+      "snapshotPath": "assets/652010f27f364000378e5a73f4762fc8dd8e87693863c764bd36be2251a5bf44.jpg",
+      "sha256": "652010f27f364000378e5a73f4762fc8dd8e87693863c764bd36be2251a5bf44",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95212
+    }
+  ],
+  "sourceFingerprint": "32b1d6a277042b32f71ee75f6bcd1ebc2ba0a6d687e90289184bc9b9fe8c12d0",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "转发《关于推广使用“职业发展教育支持系统”的通知》的通知",
+    "listPublishDate": "2012-02-21",
+    "sourceOrder": 404,
+    "detailPublishDate": "2012-02-21"
+  }
+}

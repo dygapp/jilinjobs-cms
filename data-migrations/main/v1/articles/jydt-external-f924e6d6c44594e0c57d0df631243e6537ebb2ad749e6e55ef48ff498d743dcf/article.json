@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f924e6d6c44594e0c57d0df631243e6537ebb2ad749e6e55ef48ff498d743dcf",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/_RM46thHoRhjLwkNozS9cQ",
+    "url": "https://mp.weixin.qq.com/s/_RM46thHoRhjLwkNozS9cQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "打通大湾区就业“最后一公里” —— 松原职业技术学院与深圳多家优质医疗机构共建人才培养基地",
+    "source": "",
+    "publishDate": "2026-06-05",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_RM46thHoRhjLwkNozS9cQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "11fd549124e269d3b8120d0a124de2cbdc35e177cb0f13e9e9346833ae6cb0e7",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "打通大湾区就业“最后一公里” —— 松原职业技术学院与深圳多家优质医疗机构共建人才培养基地",
+    "listPublishDate": "2026-06-05",
+    "sourceOrder": 99
+  }
+}

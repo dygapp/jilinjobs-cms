@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:4dbd15aa81172f7c30c5608c42eabf91c08ce3ee3c7b8538bf3ca502a34f04c0",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/Yku0QQ8Ype3dEKnw6_vUhQ",
+    "url": "https://mp.weixin.qq.com/s/Yku0QQ8Ype3dEKnw6_vUhQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“服务吉林高质量发展”长春大学旅游学院2026届毕业生秋季网络双选会邀请函",
+    "source": "",
+    "publishDate": "2025-10-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Yku0QQ8Ype3dEKnw6_vUhQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "3b772676fd82f13a09ddb6b093618c05da6a7e95f697659a552be80c4cf86e63",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "“服务吉林高质量发展”长春大学旅游学院2026届毕业生秋季网络双选会邀请函",
+    "listPublishDate": "2025-10-29",
+    "sourceOrder": 123
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:26733fd5512a4b47a7c2149dc0ee39947e7d92dad2fc18c2ff620a3241d3345e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/BJFYdg7S8kNyzsdo04p-mQ",
+    "url": "https://mp.weixin.qq.com/s/BJFYdg7S8kNyzsdo04p-mQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "携手央企大平台 共破人才短缺困局|长春早期教育职业学院与宝石花医疗共筑人才桥梁",
+    "source": "",
+    "publishDate": "2025-10-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/BJFYdg7S8kNyzsdo04p-mQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "6b1a4460b6328124ce495f2f5b0c3e383ebc0637a11e826f9518c85ebd1b726a",
+  "evidence": {
+    "listPage": 69,
+    "listTitle": "携手央企大平台 共破人才短缺困局|长春早期教育职业学院与宝石花医疗共筑人才桥梁",
+    "listPublishDate": "2025-10-14",
+    "sourceOrder": 682
+  }
+}

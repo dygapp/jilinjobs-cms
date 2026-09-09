@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:63428cfe704318b44a347ff67d2f2eb3122d89c776823aa1bafab563978a73fa",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/lR0SAJEEqguLtWa3BZflYA",
+    "url": "https://mp.weixin.qq.com/s/lR0SAJEEqguLtWa3BZflYA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化师范学院党委书记郑伟峰带队进行访企拓岗",
+    "source": "",
+    "publishDate": "2025-05-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/lR0SAJEEqguLtWa3BZflYA"
+  },
+  "resources": [],
+  "sourceFingerprint": "12bebeca1048ea377fa669399830734fed26f4ae221a383de6936969cd74a292",
+  "evidence": {
+    "listPage": 90,
+    "listTitle": "通化师范学院党委书记郑伟峰带队进行访企拓岗",
+    "listPublishDate": "2025-05-16",
+    "sourceOrder": 891
+  }
+}

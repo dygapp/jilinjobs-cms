@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:3bd8e35bdf0cde4e6d18001b3c64fa454e2aa968b23be4fcea8f569352faae1f",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/jk0OGKgUTns3bYxCNblAoQ",
+    "url": "https://mp.weixin.qq.com/s/jk0OGKgUTns3bYxCNblAoQ?scene=25&sessionid=-1368700758"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "招聘会|2025年吉林省“百城千校万企”促就业行动 暨服务吉林省高质量发展应用型人才春季招聘会",
+    "source": "",
+    "publishDate": "2025-04-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/jk0OGKgUTns3bYxCNblAoQ?scene=25&sessionid=-1368700758"
+  },
+  "resources": [],
+  "sourceFingerprint": "e9dc2728f394f372f6a91730e8def0503c18f379e2d5daeae3cfad54a77ac819",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "招聘会|2025年吉林省“百城千校万企”促就业行动 暨服务吉林省高质量发展应用型人才春季招聘会",
+    "listPublishDate": "2025-04-04",
+    "sourceOrder": 194
+  }
+}

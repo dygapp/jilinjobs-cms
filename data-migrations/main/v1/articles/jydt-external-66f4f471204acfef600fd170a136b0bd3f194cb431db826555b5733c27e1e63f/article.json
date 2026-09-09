@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:66f4f471204acfef600fd170a136b0bd3f194cb431db826555b5733c27e1e63f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/U3HXta5oU3Woc6rsQm1O6w",
+    "url": "https://mp.weixin.qq.com/s/U3HXta5oU3Woc6rsQm1O6w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "工会帮就业 “职”等你来 || 长春职业技术大学举办校园双选会，千余岗位助力学子逐梦",
+    "source": "",
+    "publishDate": "2026-06-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/U3HXta5oU3Woc6rsQm1O6w"
+  },
+  "resources": [],
+  "sourceFingerprint": "dfc4c6ba5d6938ca5c46bd30438bc36829e3bc7453fd8e0c946bd182feb953fa",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "工会帮就业 “职”等你来 || 长春职业技术大学举办校园双选会，千余岗位助力学子逐梦",
+    "listPublishDate": "2026-06-02",
+    "sourceOrder": 111
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f6b9e28069278d31552d72c592957274a3d44d8af9c1d62769480418bede40da",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/T-0Xh0tLRfkNst3X_Of_hg",
+    "url": "https://mp.weixin.qq.com/s/T-0Xh0tLRfkNst3X_Of_hg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林医药学院赴珲春市开展“百校对百县”促就业专项行动暨政校企对接活动",
+    "source": "",
+    "publishDate": "2025-06-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/T-0Xh0tLRfkNst3X_Of_hg"
+  },
+  "resources": [],
+  "sourceFingerprint": "a88470dae64fc8fdb8f795bba800e52f77ae3fe77ebd15ee6aececc5d9906f44",
+  "evidence": {
+    "listPage": 82,
+    "listTitle": "吉林医药学院赴珲春市开展“百校对百县”促就业专项行动暨政校企对接活动",
+    "listPublishDate": "2025-06-13",
+    "sourceOrder": 819
+  }
+}

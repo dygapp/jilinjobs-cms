@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119920",
+    "contentId": "28737783119920",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119920"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省举办“用创业思维指导大学生就业”专题讲座",
+    "source": "",
+    "publishDate": "2017-10-24",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省举办“用创业思维指导大学生就业”专题讲座</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2017-10-24 14:32:53</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"margin: 0px 0px 13px; text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">为提升高校就业指导教师教学能力和指导水平，创新我省高校就业指导课程体系。10月23日，省高校毕业生就业指导中心举办了“用创业思维指导大学生就业”专题讲座，来自全省高校135名教师参加了培训。</span></p><p style=\"margin: 0px 0px 13px; text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">讲座由中国就业培训技术指导中心全国特约职业培训师、美国GCDF认证全球职业规划师、教育部高校辅导员网络培训系列课程主讲培训师方占仁博士讲授。讲座内容为：“寻找商业机会”的思维指导大学生收集就业信息、“建立商业模式”的思维指导大学生进行职业生规划、用“广告思维”指导大学生撰写简历、用“营销思维”指导大学生参加并赢得面试，“撰写商业计划书”的思维指导大学生撰写就业计划书五个方面。传授给老师们，如何指导学生能够结合自身优势与资源，把“满足需求式”求职变为“创造需求式”求职，把“被动选择式”变为“主动选择式”就业；如何引用“注意力思维”和“差异化思维”写简历，从而达到获得面试机会和就业岗位的目的。</span></p><p style=\"margin: 0px 0px 13px; text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">培训结束，学员们一致表示收获颇丰，改变了以往对就业指导的理解，清楚的认识到指导学生成功就业，绝不是仅仅让学生找到工作，而是要有一系列的计划和打算，和与其相适应的策略和跟踪，是要以创新、创业的思维指导大学生就业。</span></p><p style=\"margin: 0px 0px 13px; text-align: center;\"><span style=\"font-family: 仿宋; font-size: 21px;\">&nbsp;</span></p><p style=\"text-align: center;\"><img title=\"用创业思维指导大学生就业新闻稿.jpg\" src=\"migration-resource://c7583cc7510e818f0893faf92668e25ddbf37cb82601313c5a69398597d2d854\"></p><p style=\"margin: 0px 0px 13px; text-align: center;\"><span style=\"font-family: 仿宋; font-size: 21px;\"></span></p><p style=\"margin: 0px 0px 13px; text-align: center;\"><span style=\"font-family: 仿宋; font-size: 21px;\">（省高校毕业生就业指导中心&nbsp; 宋姣&nbsp; 王崴 ）</span></p><p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364816739530075004596659.jpg",
+      "originalReference": "/chistory/cms/imgs/6364816739530075004596659.jpg",
+      "token": "migration-resource://c7583cc7510e818f0893faf92668e25ddbf37cb82601313c5a69398597d2d854",
+      "snapshotPath": "assets/c7583cc7510e818f0893faf92668e25ddbf37cb82601313c5a69398597d2d854.jpg",
+      "sha256": "c7583cc7510e818f0893faf92668e25ddbf37cb82601313c5a69398597d2d854",
+      "contentType": "image/jpeg",
+      "sizeBytes": 129186
+    }
+  ],
+  "sourceFingerprint": "06ae85fc4e1fcc51bce44d9537f50a7c4bc86f2323d878ad3649c75d65f26a4d",
+  "evidence": {
+    "listPage": 148,
+    "listTitle": "我省举办“用创业思维指导大学生就业”专题讲座",
+    "listPublishDate": "2017-10-24",
+    "sourceOrder": 1480,
+    "detailPublishDate": "2017-10-24"
+  }
+}

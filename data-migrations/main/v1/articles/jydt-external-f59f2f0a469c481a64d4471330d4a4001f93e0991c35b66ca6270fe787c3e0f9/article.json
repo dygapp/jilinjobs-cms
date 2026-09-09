@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f59f2f0a469c481a64d4471330d4a4001f93e0991c35b66ca6270fe787c3e0f9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/UNSDEvQwazE2eIJPgBYDzA",
+    "url": "https://mp.weixin.qq.com/s/UNSDEvQwazE2eIJPgBYDzA?scene=25&sessionid=-1368248644"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "教育部解读《关于加快构建普通高等学校毕业生高质量就业服务体系的意见》",
+    "source": "",
+    "publishDate": "2025-04-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/UNSDEvQwazE2eIJPgBYDzA?scene=25&sessionid=-1368248644"
+  },
+  "resources": [],
+  "sourceFingerprint": "8158ec41736ead1a21991da1fe2a2d5b98854b85e5215f6f034a93216819f778",
+  "evidence": {
+    "listPage": 95,
+    "listTitle": "教育部解读《关于加快构建普通高等学校毕业生高质量就业服务体系的意见》",
+    "listPublishDate": "2025-04-09",
+    "sourceOrder": 949
+  }
+}

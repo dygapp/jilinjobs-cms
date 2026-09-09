@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ed7c4ae1381e1173817d468bd5450b453c854bc6cf02197351c24bef4d7be47a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/x9vC6iVPblnmP_KLWMzEDw",
+    "url": "https://mp.weixin.qq.com/s/x9vC6iVPblnmP_KLWMzEDw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教融合 共育产业人才 | 长春工业大学人文信息学院机械与汽车工程学院荣获吉利汽车 2025 年度校企合作“青竹奖”",
+    "source": "",
+    "publishDate": "2026-04-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/x9vC6iVPblnmP_KLWMzEDw"
+  },
+  "resources": [],
+  "sourceFingerprint": "21bb345559cf870018f7f3e8f5d0def6123ccc87748047d64cf426088cc6963c",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "深化产教融合 共育产业人才 | 长春工业大学人文信息学院机械与汽车工程学院荣获吉利汽车 2025 年度校企合作“青竹奖”",
+    "listPublishDate": "2026-04-28",
+    "sourceOrder": 234
+  }
+}

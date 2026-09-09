@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3ad0b7f814974bf169c3c9bfb027087240e997665a9e3d8ce2959c19107822cf",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/atVgeNR_Ei9x_vlDy4dj_g",
+    "url": "https://mp.weixin.qq.com/s/atVgeNR_Ei9x_vlDy4dj_g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "新闻联播：毕业季 看就业⑤",
+    "source": "",
+    "publishDate": "2023-07-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/atVgeNR_Ei9x_vlDy4dj_g"
+  },
+  "resources": [],
+  "sourceFingerprint": "b1ed4d78f87b6d803447c53c160da03676cffb9fc4298c3c94021d508155b743",
+  "evidence": {
+    "listPage": 113,
+    "listTitle": "新闻联播：毕业季 看就业⑤",
+    "listPublishDate": "2023-07-13",
+    "sourceOrder": 1122
+  }
+}

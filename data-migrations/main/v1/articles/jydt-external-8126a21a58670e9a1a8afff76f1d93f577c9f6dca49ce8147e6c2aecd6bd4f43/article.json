@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8126a21a58670e9a1a8afff76f1d93f577c9f6dca49ce8147e6c2aecd6bd4f43",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/UPQ-DfQSBaeXCtfoSjrbYw",
+    "url": "https://mp.weixin.qq.com/s/UPQ-DfQSBaeXCtfoSjrbYw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春建筑学院党委副书记张冀男带队赴北京开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-06-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/UPQ-DfQSBaeXCtfoSjrbYw"
+  },
+  "resources": [],
+  "sourceFingerprint": "f2e98a66b51fcbb82aad4658ab2bb532559f34f58037cd1e9a213cb4cfe615be",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "长春建筑学院党委副书记张冀男带队赴北京开展访企拓岗促就业专项行动",
+    "listPublishDate": "2026-06-29",
+    "sourceOrder": 64
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120174",
+    "contentId": "28737783120174",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120174"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "山东设立省级创业投资引导基金鼓励大学生创业",
+    "source": "",
+    "publishDate": "2009-05-07",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">山东设立省级创业投资引导基金鼓励大学生创业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-5-7 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 从24日召开的山东省高校毕业生就业工作会议上了解到，为鼓励和支持高校毕业生自主创业，山东建立高校毕业生创业资金筹措和扶持激励机制，包括多渠道筹资设立省级创业投资引导基金，高校毕业生从事个体经营的、出资1元即可申报登记等扶持政策。 </font></p> <p><font size=\"2\">　　山东省委组织部副部长、省人事厅厅长焦连合介绍，2009年山东省内高校毕业生将达到46.5万人，加上山东生源省外院校毕业生回来就业和近两年沉淀的未就业高校毕业生，估计今年求职的毕业生将突破60万人，占城镇新增就业人数的70%。 </font></p> <p><font size=\"2\">　　焦连合说，自主创业是大学生就业的重要增长点。据调查，目前，应届毕业生中自主创业的比例不到1%，而发达国家大学生创业的比例一般达到20%以上。创业难度很大，潜力也很大，要加大政策扶持和服务力度，鼓励更多的毕业生走自主创业之路，发挥创业带动就业的倍增效应。 </font></p> <p><font size=\"2\">　　2009年，山东将多渠道筹资设立省级创业投资引导基金，通过采取阶段参股、跟进投资等方式，引导创业投资机构加大对高校毕业生创业的支持力度。各地也将根据实际情况安排部分资金，大力支持高校毕业生创业。在当地公共就业服务机构登记失业的高校毕业生自主创业时自筹资金不足的，可申请最高不超过5万元的小额担保贷款；对合伙经营和组织起来就业的，可按规定适当扩大贷款规模；对从事当地政府规定微利项目的，可按规定享受贴息扶持。 </font></p> <p><font size=\"2\">&nbsp;</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源： 中青在线<br>&nbsp;&nbsp; </font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "2056dd95ed77203be95b346891b5d7196209cfc5125921acd261450b4095bfb1",
+  "evidence": {
+    "listPage": 176,
+    "listTitle": "山东设立省级创业投资引导基金鼓励大学生创业",
+    "listPublishDate": "2009-05-07",
+    "sourceOrder": 1755,
+    "detailPublishDate": "2009-05-07"
+  }
+}

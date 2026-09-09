@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8f4746cf58894e5825a9155e00d4c65af247ec32f71facb4792d8155b2720efe",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/qWeNasYxYw8QywmBgwikYA",
+    "url": "https://mp.weixin.qq.com/s/qWeNasYxYw8QywmBgwikYA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学召开2026届毕业生就业工作会",
+    "source": "",
+    "publishDate": "2025-12-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/qWeNasYxYw8QywmBgwikYA"
+  },
+  "resources": [],
+  "sourceFingerprint": "151c7996962bb0082ef4b0d2cafa191951202bb06a0766107ecd9cde49b144b2",
+  "evidence": {
+    "listPage": 55,
+    "listTitle": "延边大学召开2026届毕业生就业工作会",
+    "listPublishDate": "2025-12-15",
+    "sourceOrder": 543
+  }
+}

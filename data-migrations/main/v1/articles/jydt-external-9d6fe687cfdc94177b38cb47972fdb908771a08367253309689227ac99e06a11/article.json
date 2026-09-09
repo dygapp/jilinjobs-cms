@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9d6fe687cfdc94177b38cb47972fdb908771a08367253309689227ac99e06a11",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzk0NDI5MTYyOQ==&mid=2247486060&idx=1&sn=d5417a2bbaf7b090882dca0d16a44dec&chksm=c327a02ef4502938ac9bd36297669f974427d2eace2908e7f53b8ba2dc3166a7846fd541260d&mpshare=1&scene=23&srcid=0413CwB2KpUpI9S5QxuH0amZ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“春暖护航，职向未来”长春科技学院、吉林职业技术学院2022届（综合类）网络招聘会",
+    "source": "",
+    "publishDate": "2022-04-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s?__biz=Mzk0NDI5MTYyOQ==&mid=2247486060&idx=1&sn=d5417a2bbaf7b090882dca0d16a44dec&chksm=c327a02ef4502938ac9bd36297669f974427d2eace2908e7f53b8ba2dc3166a7846fd541260d&mpshare=1&scene=23&srcid=0413CwB2KpUpI9S5QxuH0amZ"
+  },
+  "resources": [],
+  "sourceFingerprint": "155fa71766b5085547b2ed65ee886da31970fc644be7f9006d7ca6fcc35fd02a",
+  "evidence": {
+    "listPage": 122,
+    "listTitle": "“春暖护航，职向未来”长春科技学院、吉林职业技术学院2022届（综合类）网络招聘会",
+    "listPublishDate": "2022-04-14",
+    "sourceOrder": 1213
+  }
+}

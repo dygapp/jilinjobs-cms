@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b087c2b589424f12826b56be3b90f982000a7a3c1ccd14a69ca9d8d610d8ddf5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/YN7kbJF7o6rZR6BUbCXWpA",
+    "url": "https://mp.weixin.qq.com/s/YN7kbJF7o6rZR6BUbCXWpA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“服务吉林高质量发展”长春大学旅游学院2026届毕业生秋季网络双选会成功举办",
+    "source": "",
+    "publishDate": "2025-11-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/YN7kbJF7o6rZR6BUbCXWpA"
+  },
+  "resources": [],
+  "sourceFingerprint": "3613689556d9264e89592896133e8a7e2ed0d6bbcef5782719e0ca2691b2f10e",
+  "evidence": {
+    "listPage": 61,
+    "listTitle": "“服务吉林高质量发展”长春大学旅游学院2026届毕业生秋季网络双选会成功举办",
+    "listPublishDate": "2025-11-10",
+    "sourceOrder": 605
+  }
+}

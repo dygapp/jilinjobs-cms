@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122758",
+    "contentId": "28737783122758",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122758"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于组织开展2017届全省普通高校毕业生春季招聘活动的通知",
+    "source": "",
+    "publishDate": "2017-04-18",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于组织开展2017届全省普通高校毕业生春季招聘活动的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:信息部 发布时间:2017-4-18 14:06:23</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://ea1558df4228789a2d2c4d698fa580e64e75f6de97958fcda0c0f0052abcc26c\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://beec5c6927919aa6f27bc50e008b2a51835cff07afa65456961eed3e639c2d24\"></p>\n\n<p>&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=ef1d140d-1f69-4906-ba2a-ef5bd228a965\">有面儿2.0使用手册-求职者版.pdf</a><br>\n\t\t\t<a href=\"../Common/DownLoadFile.aspx?fileid=cfbf5c20-11d8-4b4a-9841-d7e80ab67051\">2017春季招聘活动---吉林省第二届高校毕业生网络视频招聘会.docx</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362812122777250003396073.jpg",
+      "originalReference": "/chistory/cms/imgs/6362812122777250003396073.jpg",
+      "token": "migration-resource://ea1558df4228789a2d2c4d698fa580e64e75f6de97958fcda0c0f0052abcc26c",
+      "snapshotPath": "assets/ea1558df4228789a2d2c4d698fa580e64e75f6de97958fcda0c0f0052abcc26c.jpg",
+      "sha256": "ea1558df4228789a2d2c4d698fa580e64e75f6de97958fcda0c0f0052abcc26c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 96507
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362812122921000005624489.jpg",
+      "originalReference": "/chistory/cms/imgs/6362812122921000005624489.jpg",
+      "token": "migration-resource://beec5c6927919aa6f27bc50e008b2a51835cff07afa65456961eed3e639c2d24",
+      "snapshotPath": "assets/beec5c6927919aa6f27bc50e008b2a51835cff07afa65456961eed3e639c2d24.jpg",
+      "sha256": "beec5c6927919aa6f27bc50e008b2a51835cff07afa65456961eed3e639c2d24",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90422
+    }
+  ],
+  "sourceFingerprint": "e869d3c1ba07ea4cebe02543351f625393530ea3382f6303189c0007a131d486",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "关于组织开展2017届全省普通高校毕业生春季招聘活动的通知",
+    "listPublishDate": "2017-04-18",
+    "sourceOrder": 219,
+    "detailPublishDate": "2017-04-18"
+  }
+}

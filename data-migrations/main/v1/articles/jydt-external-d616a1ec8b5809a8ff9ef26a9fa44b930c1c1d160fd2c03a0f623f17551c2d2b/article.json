@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d616a1ec8b5809a8ff9ef26a9fa44b930c1c1d160fd2c03a0f623f17551c2d2b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/paper_d/531879fb588b785c5af965f0f8cc1ee7",
+    "url": "https://share.app3.jyb.cn/paper_d/531879fb588b785c5af965f0f8cc1ee7?from=UC92azc3djZYbnBlb2NaNkRvdVR4Wk5qbFY3S1ZGRk9XNmpYazRQN3B0TGNOL0JQZExPaVAyV2IwdHVqN0piNQ=="
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "寒假春节期间各地各高校创新举措为毕业生提供就业服务",
+    "source": "",
+    "publishDate": "2025-02-26",
+    "bodyHtml": "",
+    "externalUrl": "https://share.app3.jyb.cn/paper_d/531879fb588b785c5af965f0f8cc1ee7?from=UC92azc3djZYbnBlb2NaNkRvdVR4Wk5qbFY3S1ZGRk9XNmpYazRQN3B0TGNOL0JQZExPaVAyV2IwdHVqN0piNQ=="
+  },
+  "resources": [],
+  "sourceFingerprint": "151e866acfe33270b57087610317bc31e75ede363374b09bb0fbcab1fe19e883",
+  "evidence": {
+    "listPage": 99,
+    "listTitle": "寒假春节期间各地各高校创新举措为毕业生提供就业服务",
+    "listPublishDate": "2025-02-26",
+    "sourceOrder": 990
+  }
+}

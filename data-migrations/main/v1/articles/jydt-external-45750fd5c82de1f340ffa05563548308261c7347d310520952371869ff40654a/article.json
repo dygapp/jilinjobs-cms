@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:45750fd5c82de1f340ffa05563548308261c7347d310520952371869ff40654a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1028/173232.htm",
+    "url": "https://www.jlju.edu.cn/info/1028/173232.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学副校长杨洪秀带队赴山东参加就业对接及调研活动",
+    "source": "",
+    "publishDate": "2026-04-27",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1028/173232.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "99381f2157306fefab5fdcad50b075ae6a8453a71a37ac9ba1dd3a5a6ae1684e",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "吉林建筑大学副校长杨洪秀带队赴山东参加就业对接及调研活动",
+    "listPublishDate": "2026-04-27",
+    "sourceOrder": 242
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b590dfe4e2745a559e81acf30cd016ead5f4e27fa77bbc17c44fa7e8825d57d2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Y1_A9mgX7maSH-1QnMuGfQ",
+    "url": "https://mp.weixin.qq.com/s/Y1_A9mgX7maSH-1QnMuGfQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "省高校毕业生就业创业政策解读会在长春中医药大学举行",
+    "source": "",
+    "publishDate": "2024-05-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Y1_A9mgX7maSH-1QnMuGfQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "d3a4b272e1af616288aabc4b1c7fc37072023c1edf230bf95b67112e7e2d8fb6",
+  "evidence": {
+    "listPage": 106,
+    "listTitle": "省高校毕业生就业创业政策解读会在长春中医药大学举行",
+    "listPublishDate": "2024-05-09",
+    "sourceOrder": 1058
+  }
+}

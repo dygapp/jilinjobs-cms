@@ -1,0 +1,101 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:349944535875584",
+    "contentId": "349944535875584",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=349944535875584"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "工信部、教育部等五部门办公厅关于开展中小企业人才服务专项行动的通知",
+    "source": "教育部办公厅",
+    "publishDate": "2026-04-16",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://a607c81e54adc566650ad1a9277cacc2ac76152ddd221daa9b41294fe9810a20\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://01a2e1a81fa0e0d48d83ac9cd2da5e3e130c35436b2e992b8e544e6d4ce1660f\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://95b349b20b83d1e204b605587f07979071021fb6ccafbd9472de691a5391a5e3\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://99dc7e0dbc736a8941bad689a11e5c8053a4fc569f03cf6de7dd03acb878f56c\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://10138b7295758cf19cd04f88d0c2447937b1226fc992f271e80479babdae6c8d\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://e1f1c6d0deb3addec12c7bfc7fa759b03e4b8d84f4ff20cb4a65a76a5e66ef40\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://b5f3854aad3270eae3dafc256a3f6433048b5b1fab124b0d79bdc112dbaf0436\" width=\"900\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-04-16/2eacb7ef-5d5c-4223-a381-8ea46f369280.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-04-16/2eacb7ef-5d5c-4223-a381-8ea46f369280.jpg",
+      "token": "migration-resource://a607c81e54adc566650ad1a9277cacc2ac76152ddd221daa9b41294fe9810a20",
+      "snapshotPath": "assets/a607c81e54adc566650ad1a9277cacc2ac76152ddd221daa9b41294fe9810a20.jpg",
+      "sha256": "a607c81e54adc566650ad1a9277cacc2ac76152ddd221daa9b41294fe9810a20",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-04-16/24d1ba81-03ee-4c21-9850-0089d75dae13.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-04-16/24d1ba81-03ee-4c21-9850-0089d75dae13.jpg",
+      "token": "migration-resource://01a2e1a81fa0e0d48d83ac9cd2da5e3e130c35436b2e992b8e544e6d4ce1660f",
+      "snapshotPath": "assets/01a2e1a81fa0e0d48d83ac9cd2da5e3e130c35436b2e992b8e544e6d4ce1660f.jpg",
+      "sha256": "01a2e1a81fa0e0d48d83ac9cd2da5e3e130c35436b2e992b8e544e6d4ce1660f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-04-16/970b68c2-cb26-4fe2-8d46-c9f5e4a2e626.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-04-16/970b68c2-cb26-4fe2-8d46-c9f5e4a2e626.jpg",
+      "token": "migration-resource://95b349b20b83d1e204b605587f07979071021fb6ccafbd9472de691a5391a5e3",
+      "snapshotPath": "assets/95b349b20b83d1e204b605587f07979071021fb6ccafbd9472de691a5391a5e3.jpg",
+      "sha256": "95b349b20b83d1e204b605587f07979071021fb6ccafbd9472de691a5391a5e3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-04-16/8365db16-1ca6-47da-9b89-230a51e09bb0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-04-16/8365db16-1ca6-47da-9b89-230a51e09bb0.jpg",
+      "token": "migration-resource://99dc7e0dbc736a8941bad689a11e5c8053a4fc569f03cf6de7dd03acb878f56c",
+      "snapshotPath": "assets/99dc7e0dbc736a8941bad689a11e5c8053a4fc569f03cf6de7dd03acb878f56c.jpg",
+      "sha256": "99dc7e0dbc736a8941bad689a11e5c8053a4fc569f03cf6de7dd03acb878f56c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-04-16/e405c633-849b-4d69-bf8c-fca0dee4b1bb.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-04-16/e405c633-849b-4d69-bf8c-fca0dee4b1bb.jpg",
+      "token": "migration-resource://10138b7295758cf19cd04f88d0c2447937b1226fc992f271e80479babdae6c8d",
+      "snapshotPath": "assets/10138b7295758cf19cd04f88d0c2447937b1226fc992f271e80479babdae6c8d.jpg",
+      "sha256": "10138b7295758cf19cd04f88d0c2447937b1226fc992f271e80479babdae6c8d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-04-16/d5dc43f5-0349-4803-9d83-a007da3a02ac.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-04-16/d5dc43f5-0349-4803-9d83-a007da3a02ac.jpg",
+      "token": "migration-resource://e1f1c6d0deb3addec12c7bfc7fa759b03e4b8d84f4ff20cb4a65a76a5e66ef40",
+      "snapshotPath": "assets/e1f1c6d0deb3addec12c7bfc7fa759b03e4b8d84f4ff20cb4a65a76a5e66ef40.jpg",
+      "sha256": "e1f1c6d0deb3addec12c7bfc7fa759b03e4b8d84f4ff20cb4a65a76a5e66ef40",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-04-16/c8b6e61e-00d4-4131-94ed-10a9280455ca.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-04-16/c8b6e61e-00d4-4131-94ed-10a9280455ca.jpg",
+      "token": "migration-resource://b5f3854aad3270eae3dafc256a3f6433048b5b1fab124b0d79bdc112dbaf0436",
+      "snapshotPath": "assets/b5f3854aad3270eae3dafc256a3f6433048b5b1fab124b0d79bdc112dbaf0436.jpg",
+      "sha256": "b5f3854aad3270eae3dafc256a3f6433048b5b1fab124b0d79bdc112dbaf0436",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "bb57f180e4c66e96879267133ad5e3664ca1c12941e6afed0ff1ac70672e96bb",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "工信部、教育部等五部门办公厅关于开展中小企业人才服务专项行动的通知",
+    "listPublishDate": "2026-04-16",
+    "sourceOrder": 8,
+    "detailPublishDate": "2026-04-16"
+  }
+}

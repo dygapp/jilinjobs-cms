@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0e487ce23a0a247c9da8463be9b55586ba5e88d88ecc260521f1223bb6f6fee3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/HWLMy6Swb_S7-3qLTOy7IA",
+    "url": "https://mp.weixin.qq.com/s/HWLMy6Swb_S7-3qLTOy7IA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业 校企协同育英才——长白山职业技术学院赴长春和润艺术酒店开展专项走访活动",
+    "source": "",
+    "publishDate": "2026-03-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/HWLMy6Swb_S7-3qLTOy7IA"
+  },
+  "resources": [],
+  "sourceFingerprint": "4337e1d0b811874545b81896e8ce4cbbc6ccee139fe92ff3026078f4c0c9be2a",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "访企拓岗促就业 校企协同育英才——长白山职业技术学院赴长春和润艺术酒店开展专项走访活动",
+    "listPublishDate": "2026-03-23",
+    "sourceOrder": 378
+  }
+}

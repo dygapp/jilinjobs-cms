@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:966cd7fd3b5983b130013568734f9e2d1815328b1cc1943055964eb5317c1e56",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/uDpB0vH_zGsZJRjFgBHtiw",
+    "url": "https://mp.weixin.qq.com/s/uDpB0vH_zGsZJRjFgBHtiw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“吉聚英才·暖心护航”吉林省2026届高校重点毕业生群体专场招聘会邀请函",
+    "source": "",
+    "publishDate": "2025-10-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/uDpB0vH_zGsZJRjFgBHtiw"
+  },
+  "resources": [],
+  "sourceFingerprint": "a52aa3209d9d5892d6192d3be22da7211775511003c0f18ab98bb3ed579bc5de",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "“吉聚英才·暖心护航”吉林省2026届高校重点毕业生群体专场招聘会邀请函",
+    "listPublishDate": "2025-10-15",
+    "sourceOrder": 129
+  }
+}

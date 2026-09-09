@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a7bd72de81ae03a49d9677dd7f3458425073bdbe5965cc6d6c9c7ed808e4d8a9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1011/10814.htm",
+    "url": "https://www.jlnu.edu.cn/info/1011/10814.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗，‘就’在吉林”四平市大学生就业创业宣讲推介会在吉林师范大学举行",
+    "source": "",
+    "publishDate": "2024-04-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlnu.edu.cn/info/1011/10814.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "b56465a233a897df762c30a1f23749a50d488564d9af6548756b1deca85a74ca",
+  "evidence": {
+    "listPage": 110,
+    "listTitle": "“创业奋斗，‘就’在吉林”四平市大学生就业创业宣讲推介会在吉林师范大学举行",
+    "listPublishDate": "2024-04-02",
+    "sourceOrder": 1096
+  }
+}

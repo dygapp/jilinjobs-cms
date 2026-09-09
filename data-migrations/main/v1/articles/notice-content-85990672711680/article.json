@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:85990672711680",
+    "contentId": "85990672711680",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=85990672711680"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省高校就业指导教师培训班的通知（总第二十九期）的通知",
+    "source": "培训部",
+    "publishDate": "2021-09-17",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1272\" src=\"migration-resource://7830d2c73f937b68fd658daa9dbd285669102e3c11f3585c014bf5c5a421fdf9\" width=\"900\"><img alt=\"\" height=\"1272\" src=\"migration-resource://3b68aee99d9a236e38dd8dfcde6cb12fd10b28dc1d5a3a70f50299f351159ff7\" width=\"900\"><img alt=\"\" height=\"1272\" src=\"migration-resource://417c4759bf4bdbd777a8ee00d0268242ba38fe2da5980bcddf998c2b9ba34ecb\" width=\"900\"><img alt=\"\" height=\"1272\" src=\"migration-resource://469547865ff50a700da0858fe1eff37d90cf81a11a1f31409eb7b9284ca7f5de\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/021ef2a1-878d-4316-b8f9-10c3476636ae.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/021ef2a1-878d-4316-b8f9-10c3476636ae.jpg",
+      "token": "migration-resource://7830d2c73f937b68fd658daa9dbd285669102e3c11f3585c014bf5c5a421fdf9",
+      "snapshotPath": "assets/7830d2c73f937b68fd658daa9dbd285669102e3c11f3585c014bf5c5a421fdf9.jpg",
+      "sha256": "7830d2c73f937b68fd658daa9dbd285669102e3c11f3585c014bf5c5a421fdf9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 179975
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/36b7180e-b2d1-4f1f-9391-0761b7214a4f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/36b7180e-b2d1-4f1f-9391-0761b7214a4f.jpg",
+      "token": "migration-resource://3b68aee99d9a236e38dd8dfcde6cb12fd10b28dc1d5a3a70f50299f351159ff7",
+      "snapshotPath": "assets/3b68aee99d9a236e38dd8dfcde6cb12fd10b28dc1d5a3a70f50299f351159ff7.jpg",
+      "sha256": "3b68aee99d9a236e38dd8dfcde6cb12fd10b28dc1d5a3a70f50299f351159ff7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 106443
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/7011219e-c412-4ae4-8a17-08ad4ca49a3d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/7011219e-c412-4ae4-8a17-08ad4ca49a3d.jpg",
+      "token": "migration-resource://417c4759bf4bdbd777a8ee00d0268242ba38fe2da5980bcddf998c2b9ba34ecb",
+      "snapshotPath": "assets/417c4759bf4bdbd777a8ee00d0268242ba38fe2da5980bcddf998c2b9ba34ecb.jpg",
+      "sha256": "417c4759bf4bdbd777a8ee00d0268242ba38fe2da5980bcddf998c2b9ba34ecb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 106998
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/c5d5f2f3-f2a2-4b48-8d75-57f3b540b64b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/c5d5f2f3-f2a2-4b48-8d75-57f3b540b64b.jpg",
+      "token": "migration-resource://469547865ff50a700da0858fe1eff37d90cf81a11a1f31409eb7b9284ca7f5de",
+      "snapshotPath": "assets/469547865ff50a700da0858fe1eff37d90cf81a11a1f31409eb7b9284ca7f5de.jpg",
+      "sha256": "469547865ff50a700da0858fe1eff37d90cf81a11a1f31409eb7b9284ca7f5de",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75016
+    }
+  ],
+  "sourceFingerprint": "8606bb56c23fc03c016f0ef3fea58f42ef7cf43fa0f5b2c0119ac2ff8bfb0afe",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "关于举办吉林省高校就业指导教师培训班的通知（总第二十九期）的通知",
+    "listPublishDate": "2021-09-17",
+    "sourceOrder": 147,
+    "detailPublishDate": "2021-09-17"
+  }
+}

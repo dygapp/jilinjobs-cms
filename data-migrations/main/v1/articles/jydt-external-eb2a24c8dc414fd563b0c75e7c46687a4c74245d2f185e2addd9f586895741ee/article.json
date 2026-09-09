@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:eb2a24c8dc414fd563b0c75e7c46687a4c74245d2f185e2addd9f586895741ee",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/d6OygipS_46UpsNWK2TiKg",
+    "url": "https://mp.weixin.qq.com/s/d6OygipS_46UpsNWK2TiKg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“长聚学子·春城暖才”进校园宣讲活动走进吉林艺术学院！",
+    "source": "",
+    "publishDate": "2025-06-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/d6OygipS_46UpsNWK2TiKg"
+  },
+  "resources": [],
+  "sourceFingerprint": "279f821baf83b79e5e823d16118800448753df208c0e1b4d8664ae5fadd009df",
+  "evidence": {
+    "listPage": 86,
+    "listTitle": "“长聚学子·春城暖才”进校园宣讲活动走进吉林艺术学院！",
+    "listPublishDate": "2025-06-03",
+    "sourceOrder": 853
+  }
+}

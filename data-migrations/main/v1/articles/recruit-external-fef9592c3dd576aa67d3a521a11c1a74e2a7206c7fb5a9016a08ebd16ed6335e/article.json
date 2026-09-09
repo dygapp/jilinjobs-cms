@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:fef9592c3dd576aa67d3a521a11c1a74e2a7206c7fb5a9016a08ebd16ed6335e",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/tTDy1oWrqX98GrKpu0yL3w",
+    "url": "https://mp.weixin.qq.com/s/tTDy1oWrqX98GrKpu0yL3w"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "赋能吉林制造，“理”享科技未来——第十五届吉林省理工类人才专场招聘会暨长春工业大学2025届毕业生春季双选会邀请函",
+    "source": "",
+    "publishDate": "2025-03-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/tTDy1oWrqX98GrKpu0yL3w"
+  },
+  "resources": [],
+  "sourceFingerprint": "b58e7801cb9bd0550b2ba926fe52e81f4845c8525cebeede38422bbfc889498c",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "赋能吉林制造，“理”享科技未来——第十五届吉林省理工类人才专场招聘会暨长春工业大学2025届毕业生春季双选会邀请函",
+    "listPublishDate": "2025-03-07",
+    "sourceOrder": 226
+  }
+}

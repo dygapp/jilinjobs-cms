@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:367150ea24f8f6d1680b78988a214e8140372ce5df0f243ffe0b550e5da04440",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/4281.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/4281.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "第十五届吉林省理工类人才招聘会在长春工业大学举行",
+    "source": "",
+    "publishDate": "2024-10-23",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/4281.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "7cbb89978e582eeb03d219175636318e7e03f3a9ab803ba622732290b00db4d1",
+  "evidence": {
+    "listPage": 103,
+    "listTitle": "第十五届吉林省理工类人才招聘会在长春工业大学举行",
+    "listPublishDate": "2024-10-23",
+    "sourceOrder": 1025
+  }
+}

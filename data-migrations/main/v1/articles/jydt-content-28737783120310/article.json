@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120310",
+    "contentId": "28737783120310",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120310"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "陕西：取消大中专毕业生落户限制",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">陕西：取消大中专毕业生落户限制</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 近日，陕西省出台了《关于促进普通高等学校毕业生就业工作的实施意见》，推出鼓励支持高校毕业生自主创业、省内一律取消大中专院校毕业生就业落户的限制政策等多项措施，促进普通高等学校毕业生就业。</font></p> <p><font size=\"2\">据了解，陕西省政府先期投入5000万元设立“高校毕业生创业基金”，用于扶持高校毕业生自主创业。在当地公共就业服务机构登记失业的高校毕业生，自主创业自筹资金不足的，可向当地银行申请不超过8万元的小额贷款，创业基金管理部门（全省各级人力资源和社会保障部门所属的小额贷款担保中心）提供担保。工商行政管理部门对高校毕业生自主创业、从事个体经营者，凡符合条件的，免除行政事业性收费；地税部门对从事个体经营的高校毕业生，其月营业额在5000元以下的，免征营业税。</font></p> <p><font size=\"2\">全省各市、县、区政府，省级各部门要对现行的高校毕业生就业政策进行清理、修订，取消一切不利于就业和人才流动的政策限制。省内一律取消大中专院校毕业生就业落户的限制政策。全省各级事业单位在招聘人员时，对本省生源毕业生不得设置生源地限制条件。</font></p> <p><font size=\"2\">对到中小企业和非公有制单位就业的高校毕业生，在专家选拔、人才流动、人员培训、户籍管理、职称评聘、技术创新、成果转化等方面，享有与国有企事业单位工作人员相同待遇。对在中小企业和非公有制单位从事科技工作的高校毕业生，申报国家和地方科研项目、科研成果或荣誉称号时，有关部门予以倾斜支持。</font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "b9ceed95dd55d23f1f175bf0b3a84f746673f34af68b5ba108a040f556807768",
+  "evidence": {
+    "listPage": 184,
+    "listTitle": "陕西：取消大中专毕业生落户限制",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1836,
+    "detailPublishDate": "2009-04-05"
+  }
+}

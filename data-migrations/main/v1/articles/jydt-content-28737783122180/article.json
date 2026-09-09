@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122180",
+    "contentId": "28737783122180",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122180"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "省市就业中心协作组稿工作要点",
+    "source": "",
+    "publishDate": "2013-12-03",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">省市就业中心协作组稿工作要点</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2013-12-3 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\">&nbsp;</p> <p align=\"center\"><img src=\"migration-resource://a20770e6dc4f2bdab40dd6c868d99749d728b19ab4f67700351182497fecf5b0\" border=\"0\"><img src=\"migration-resource://5d3db88b531a15be5e7abbdc05b243cd7dda77f55de9f41bb9a75e28ed8beeb6\" border=\"0\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131203222045213.jpg",
+      "originalReference": "/chistory/cms/imgs/20131203222045213.jpg",
+      "token": "migration-resource://a20770e6dc4f2bdab40dd6c868d99749d728b19ab4f67700351182497fecf5b0",
+      "snapshotPath": "assets/a20770e6dc4f2bdab40dd6c868d99749d728b19ab4f67700351182497fecf5b0.jpg",
+      "sha256": "a20770e6dc4f2bdab40dd6c868d99749d728b19ab4f67700351182497fecf5b0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 61114
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131203222049793.jpg",
+      "originalReference": "/chistory/cms/imgs/20131203222049793.jpg",
+      "token": "migration-resource://5d3db88b531a15be5e7abbdc05b243cd7dda77f55de9f41bb9a75e28ed8beeb6",
+      "snapshotPath": "assets/5d3db88b531a15be5e7abbdc05b243cd7dda77f55de9f41bb9a75e28ed8beeb6.jpg",
+      "sha256": "5d3db88b531a15be5e7abbdc05b243cd7dda77f55de9f41bb9a75e28ed8beeb6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 61456
+    }
+  ],
+  "sourceFingerprint": "2f811584052c773716e718d455d3e942ec833223c3977ce73a898208593dfba3",
+  "evidence": {
+    "listPage": 162,
+    "listTitle": "省市就业中心协作组稿工作要点",
+    "listPublishDate": "2013-12-03",
+    "sourceOrder": 1612,
+    "detailPublishDate": "2013-12-03"
+  }
+}

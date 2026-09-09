@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8274ba80f2b5355951030b6455f3671211ee0b46d779443a2cf34251904f3afa",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1028/171872.htm",
+    "url": "https://www.jlju.edu.cn/info/1028/171872.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学召开2026届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2025-12-25",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1028/171872.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "287469ad8edea70d9859f31896b37f26b9a24786a359e83021a6e19c82aa339c",
+  "evidence": {
+    "listPage": 52,
+    "listTitle": "吉林建筑大学召开2026届毕业生就业工作推进会",
+    "listPublishDate": "2025-12-25",
+    "sourceOrder": 515
+  }
+}

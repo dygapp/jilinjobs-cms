@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:96122ea4226532949da1266de7bcc63eaf0a22478ff956fb802562c7ed009b1b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/4swO4Xy0giEzEmgV3RjQVg",
+    "url": "https://mp.weixin.qq.com/s/4swO4Xy0giEzEmgV3RjQVg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教融合 共筑育人平台 | 吉林工程技术师范学院赴行业标杆企业拓岗促就业",
+    "source": "",
+    "publishDate": "2025-11-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4swO4Xy0giEzEmgV3RjQVg"
+  },
+  "resources": [],
+  "sourceFingerprint": "312efbb226631135d3914f237bf82cb5938deb89b1fffb29f2474e2f66e6cbfc",
+  "evidence": {
+    "listPage": 59,
+    "listTitle": "深化产教融合 共筑育人平台 | 吉林工程技术师范学院赴行业标杆企业拓岗促就业",
+    "listPublishDate": "2025-11-19",
+    "sourceOrder": 590
+  }
+}

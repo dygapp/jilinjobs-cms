@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122150",
+    "contentId": "28737783122150",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122150"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省第二届“梦想杯”大学生创业大赛宣讲活动顺利结束",
+    "source": "",
+    "publishDate": "2015-05-28",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省第二届“梦想杯”大学生创业大赛宣讲活动顺利结束</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2015-5-28 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><br></p><p>&nbsp;&nbsp;&nbsp; 5月28日晚19时30分，吉林省第二届“梦想杯”大学生创业大赛(以下简称大赛）宣讲报告会在长春医学高等专科学校收官。宣讲活动历时44天，参加宣讲高校50所，在全省高校反响热烈，收效显著。截至目前，全省已有15000余人、1845个团队报名参赛。</p><p>&nbsp;&nbsp;&nbsp; 按照大赛方案的工作安排，6月1日——6月30日进入大赛的初赛海选阶段，将选出50名“创客之星”和50名“创粉英雄”进入决赛。</p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><img title=\"1_副本.jpg\" src=\"migration-resource://cef2b9cfe5cbe65d46dc89b9debfce877acc90d09a88f475245f57c33dec62a8\"></p><p><br></p><p style=\"text-align: center;\"><img title=\"2_副本.jpg\" src=\"migration-resource://9c568bf8a56a57b5db567dd4d34351405734e11166fa0e85c354c8087a815226\"></p><p><br></p><p style=\"text-align: center;\"><img title=\"3_副本.jpg\" src=\"migration-resource://531d1141366b3f30d49b2d9bcf0fd8a3631b969b31d1a76ec91e9ced5ef98949\"></p><p><br></p><p style=\"text-align: center;\"><img title=\"4_副本.jpg\" src=\"migration-resource://eee0859ce50ab286b0aa6b4cd95780a82cc8c5fe2abe21c022b7981adcb7877e\"></p><p><br></p><p><br></p><p><br></p><p><br></p><p style=\"text-align: center;\">&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356842387685937506575420.jpg",
+      "originalReference": "/chistory/cms/imgs/6356842387685937506575420.jpg",
+      "token": "migration-resource://cef2b9cfe5cbe65d46dc89b9debfce877acc90d09a88f475245f57c33dec62a8",
+      "snapshotPath": "assets/cef2b9cfe5cbe65d46dc89b9debfce877acc90d09a88f475245f57c33dec62a8.jpg",
+      "sha256": "cef2b9cfe5cbe65d46dc89b9debfce877acc90d09a88f475245f57c33dec62a8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 66992
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356842387693750004317991.jpg",
+      "originalReference": "/chistory/cms/imgs/6356842387693750004317991.jpg",
+      "token": "migration-resource://9c568bf8a56a57b5db567dd4d34351405734e11166fa0e85c354c8087a815226",
+      "snapshotPath": "assets/9c568bf8a56a57b5db567dd4d34351405734e11166fa0e85c354c8087a815226.jpg",
+      "sha256": "9c568bf8a56a57b5db567dd4d34351405734e11166fa0e85c354c8087a815226",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67669
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356842387700000003533144.jpg",
+      "originalReference": "/chistory/cms/imgs/6356842387700000003533144.jpg",
+      "token": "migration-resource://531d1141366b3f30d49b2d9bcf0fd8a3631b969b31d1a76ec91e9ced5ef98949",
+      "snapshotPath": "assets/531d1141366b3f30d49b2d9bcf0fd8a3631b969b31d1a76ec91e9ced5ef98949.jpg",
+      "sha256": "531d1141366b3f30d49b2d9bcf0fd8a3631b969b31d1a76ec91e9ced5ef98949",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67120
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356842387704687508519052.jpg",
+      "originalReference": "/chistory/cms/imgs/6356842387704687508519052.jpg",
+      "token": "migration-resource://eee0859ce50ab286b0aa6b4cd95780a82cc8c5fe2abe21c022b7981adcb7877e",
+      "snapshotPath": "assets/eee0859ce50ab286b0aa6b4cd95780a82cc8c5fe2abe21c022b7981adcb7877e.jpg",
+      "sha256": "eee0859ce50ab286b0aa6b4cd95780a82cc8c5fe2abe21c022b7981adcb7877e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 56542
+    }
+  ],
+  "sourceFingerprint": "d71d63c63a97d126557d69dca2e256ddc7a06621be94ac69e6fd46df63bfa10f",
+  "evidence": {
+    "listPage": 157,
+    "listTitle": "吉林省第二届“梦想杯”大学生创业大赛宣讲活动顺利结束",
+    "listPublishDate": "2015-05-28",
+    "sourceOrder": 1570,
+    "detailPublishDate": "2015-05-28"
+  }
+}

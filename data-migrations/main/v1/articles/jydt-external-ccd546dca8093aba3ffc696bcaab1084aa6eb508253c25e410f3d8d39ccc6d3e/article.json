@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ccd546dca8093aba3ffc696bcaab1084aa6eb508253c25e410f3d8d39ccc6d3e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/szqRZ3NY05zAsJ1imy4UIQ",
+    "url": "https://mp.weixin.qq.com/s/szqRZ3NY05zAsJ1imy4UIQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "暑期就业服务\"不打烊\" 全力冲刺2025届毕业生就业工作——长春科技学院召开2025届毕业生暑假就业工作部署会",
+    "source": "",
+    "publishDate": "2025-07-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/szqRZ3NY05zAsJ1imy4UIQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "c0537e0c34d4492eb4d2048e3fe0f20398bf07d0ff151434706a59bed180fc2d",
+  "evidence": {
+    "listPage": 75,
+    "listTitle": "暑期就业服务\"不打烊\" 全力冲刺2025届毕业生就业工作——长春科技学院召开2025届毕业生暑假就业工作部署会",
+    "listPublishDate": "2025-07-04",
+    "sourceOrder": 744
+  }
+}

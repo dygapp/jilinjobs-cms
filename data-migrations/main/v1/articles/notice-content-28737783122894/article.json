@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122894",
+    "contentId": "28737783122894",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122894"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅关于加强高校毕业生就业信息服务工作的通知",
+    "source": "",
+    "publishDate": "2013-04-19",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部办公厅关于加强高校毕业生就业信息服务工作的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2013-4-19 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://f3413385625e40636ffdf12e5088dc727d02bbdf3e271115a940230674b0e191\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://8d944781c92f3bd73ebdaf2f66ba47e9c45646ead501fe12cd5aad46824d602a\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://4003967640e2874d89707369d5dacb8c4865f6fc084b82c5aface4e2e3bc6310\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://05420a06a7cdbdc385a2ada36bca6cf8f4caaa838deb552b11fcc128ec7696fb\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130419225038467.jpg",
+      "originalReference": "/chistory/cms/imgs/20130419225038467.jpg",
+      "token": "migration-resource://f3413385625e40636ffdf12e5088dc727d02bbdf3e271115a940230674b0e191",
+      "snapshotPath": "assets/f3413385625e40636ffdf12e5088dc727d02bbdf3e271115a940230674b0e191.jpg",
+      "sha256": "f3413385625e40636ffdf12e5088dc727d02bbdf3e271115a940230674b0e191",
+      "contentType": "image/jpeg",
+      "sizeBytes": 98453
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130419225044806.jpg",
+      "originalReference": "/chistory/cms/imgs/20130419225044806.jpg",
+      "token": "migration-resource://8d944781c92f3bd73ebdaf2f66ba47e9c45646ead501fe12cd5aad46824d602a",
+      "snapshotPath": "assets/8d944781c92f3bd73ebdaf2f66ba47e9c45646ead501fe12cd5aad46824d602a.jpg",
+      "sha256": "8d944781c92f3bd73ebdaf2f66ba47e9c45646ead501fe12cd5aad46824d602a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 94839
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130419225048364.jpg",
+      "originalReference": "/chistory/cms/imgs/20130419225048364.jpg",
+      "token": "migration-resource://4003967640e2874d89707369d5dacb8c4865f6fc084b82c5aface4e2e3bc6310",
+      "snapshotPath": "assets/4003967640e2874d89707369d5dacb8c4865f6fc084b82c5aface4e2e3bc6310.jpg",
+      "sha256": "4003967640e2874d89707369d5dacb8c4865f6fc084b82c5aface4e2e3bc6310",
+      "contentType": "image/jpeg",
+      "sizeBytes": 89758
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130419225053904.jpg",
+      "originalReference": "/chistory/cms/imgs/20130419225053904.jpg",
+      "token": "migration-resource://05420a06a7cdbdc385a2ada36bca6cf8f4caaa838deb552b11fcc128ec7696fb",
+      "snapshotPath": "assets/05420a06a7cdbdc385a2ada36bca6cf8f4caaa838deb552b11fcc128ec7696fb.jpg",
+      "sha256": "05420a06a7cdbdc385a2ada36bca6cf8f4caaa838deb552b11fcc128ec7696fb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 76391
+    }
+  ],
+  "sourceFingerprint": "2543c014f70d8fbbc339764783b2d2b10af8c3668a2a4f787405e791df8bb873",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "教育部办公厅关于加强高校毕业生就业信息服务工作的通知",
+    "listPublishDate": "2013-04-19",
+    "sourceOrder": 354,
+    "detailPublishDate": "2013-04-19"
+  }
+}

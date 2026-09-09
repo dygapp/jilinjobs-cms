@@ -1,0 +1,1000 @@
+{
+  "purpose": "Legacy Main Page/ListItem discovery evidence for Site Package content reconciliation/planning; not a Historical Migration Dataset",
+  "policy": {
+    "ownership": "SITE_PACKAGE",
+    "migrationImportEligible": false,
+    "preserveSourceEvidence": true,
+    "unresolvedProblemsRequireExplicitClassification": true,
+    "stableListItemProvisioningCapability": "GAP_REQUIRES_SEPARATE_SITE_PACKAGE_AUTHORITY"
+  },
+  "summary": {
+    "pages": 10,
+    "listItems": 96,
+    "pageProblemObservations": 8,
+    "listItemProblemObservations": 0,
+    "otherObservations": 1,
+    "blockingProblemObservations": 9
+  },
+  "pages": [
+    {
+      "candidateType": "PAGE",
+      "legacyKey": "main-page:about",
+      "path": "items/main-page-root-about/page.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "PAGE",
+      "legacyKey": "main-page:budget",
+      "path": "items/main-page-root-budget/page.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": [
+        {
+          "identity": "RESOURCE:https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2023-02-27/8331fd04-91d2-4365-8576-44a7adb40d44.pdf",
+          "candidateType": "OBSERVATION",
+          "legacyKey": "budget",
+          "title": null,
+          "sourceUrl": null,
+          "classification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "originalClassification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "disposition": "TERMINAL_CLASSIFIED_REVIEW",
+          "blocking": true,
+          "code": "ATTACHMENT_FETCH_FAILED",
+          "rawReference": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2023-02-27/8331fd04-91d2-4365-8576-44a7adb40d44.pdf",
+          "targetUrl": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2023-02-27/8331fd04-91d2-4365-8576-44a7adb40d44.pdf",
+          "message": "Error: Error: Resource host 未在 allowlist：zhjy.jilinjobs.cn:8080"
+        },
+        {
+          "identity": "RESOURCE:https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2023-09-08/e74779f2-e551-43ad-a5f8-0a91020e8d00.pdf",
+          "candidateType": "OBSERVATION",
+          "legacyKey": "budget",
+          "title": null,
+          "sourceUrl": null,
+          "classification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "originalClassification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "disposition": "TERMINAL_CLASSIFIED_REVIEW",
+          "blocking": true,
+          "code": "ATTACHMENT_FETCH_FAILED",
+          "rawReference": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2023-09-08/e74779f2-e551-43ad-a5f8-0a91020e8d00.pdf",
+          "targetUrl": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2023-09-08/e74779f2-e551-43ad-a5f8-0a91020e8d00.pdf",
+          "message": "Error: Error: Resource host 未在 allowlist：zhjy.jilinjobs.cn:8080"
+        },
+        {
+          "identity": "RESOURCE:https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2024-03-12/d87173cd-8a3f-4667-a042-ece836a0f0ea.pdf",
+          "candidateType": "OBSERVATION",
+          "legacyKey": "budget",
+          "title": null,
+          "sourceUrl": null,
+          "classification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "originalClassification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "disposition": "TERMINAL_CLASSIFIED_REVIEW",
+          "blocking": true,
+          "code": "ATTACHMENT_FETCH_FAILED",
+          "rawReference": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2024-03-12/d87173cd-8a3f-4667-a042-ece836a0f0ea.pdf",
+          "targetUrl": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2024-03-12/d87173cd-8a3f-4667-a042-ece836a0f0ea.pdf",
+          "message": "Error: Error: Resource host 未在 allowlist：zhjy.jilinjobs.cn:8080"
+        },
+        {
+          "identity": "RESOURCE:https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2024-09-12/f7b003d5-9074-4d26-ac58-827131c02f22.pdf",
+          "candidateType": "OBSERVATION",
+          "legacyKey": "budget",
+          "title": null,
+          "sourceUrl": null,
+          "classification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "originalClassification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "disposition": "TERMINAL_CLASSIFIED_REVIEW",
+          "blocking": true,
+          "code": "ATTACHMENT_FETCH_FAILED",
+          "rawReference": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2024-09-12/f7b003d5-9074-4d26-ac58-827131c02f22.pdf",
+          "targetUrl": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2024-09-12/f7b003d5-9074-4d26-ac58-827131c02f22.pdf",
+          "message": "Error: Error: Resource host 未在 allowlist：zhjy.jilinjobs.cn:8080"
+        },
+        {
+          "identity": "RESOURCE:https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2025-03-07/ceb5b088-6158-4b73-b446-3cf650194866.pdf",
+          "candidateType": "OBSERVATION",
+          "legacyKey": "budget",
+          "title": null,
+          "sourceUrl": null,
+          "classification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "originalClassification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "disposition": "TERMINAL_CLASSIFIED_REVIEW",
+          "blocking": true,
+          "code": "ATTACHMENT_FETCH_FAILED",
+          "rawReference": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2025-03-07/ceb5b088-6158-4b73-b446-3cf650194866.pdf",
+          "targetUrl": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2025-03-07/ceb5b088-6158-4b73-b446-3cf650194866.pdf",
+          "message": "Error: Error: Resource host 未在 allowlist：zhjy.jilinjobs.cn:8080"
+        },
+        {
+          "identity": "RESOURCE:https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2025-09-05/4851fa77-f787-4d7f-be10-34490a98df0f.pdf",
+          "candidateType": "OBSERVATION",
+          "legacyKey": "budget",
+          "title": null,
+          "sourceUrl": null,
+          "classification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "originalClassification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "disposition": "TERMINAL_CLASSIFIED_REVIEW",
+          "blocking": true,
+          "code": "ATTACHMENT_FETCH_FAILED",
+          "rawReference": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2025-09-05/4851fa77-f787-4d7f-be10-34490a98df0f.pdf",
+          "targetUrl": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2025-09-05/4851fa77-f787-4d7f-be10-34490a98df0f.pdf",
+          "message": "Error: Error: Resource host 未在 allowlist：zhjy.jilinjobs.cn:8080"
+        },
+        {
+          "identity": "RESOURCE:https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2026-03-17/84773049-6580-4c9d-87ce-ab29f9576157.pdf",
+          "candidateType": "OBSERVATION",
+          "legacyKey": "budget",
+          "title": null,
+          "sourceUrl": null,
+          "classification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "originalClassification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "disposition": "TERMINAL_CLASSIFIED_REVIEW",
+          "blocking": true,
+          "code": "ATTACHMENT_FETCH_FAILED",
+          "rawReference": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2026-03-17/84773049-6580-4c9d-87ce-ab29f9576157.pdf",
+          "targetUrl": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2026-03-17/84773049-6580-4c9d-87ce-ab29f9576157.pdf",
+          "message": "Error: Error: Resource host 未在 allowlist：zhjy.jilinjobs.cn:8080"
+        },
+        {
+          "identity": "RESOURCE:https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2026-09-04/75b071b2-c354-4690-bb8e-2bdc25e600bb.pdf",
+          "candidateType": "OBSERVATION",
+          "legacyKey": "budget",
+          "title": null,
+          "sourceUrl": null,
+          "classification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "originalClassification": "RESOURCE_HOST_OUTSIDE_APPROVED_BOUNDARY",
+          "disposition": "TERMINAL_CLASSIFIED_REVIEW",
+          "blocking": true,
+          "code": "ATTACHMENT_FETCH_FAILED",
+          "rawReference": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2026-09-04/75b071b2-c354-4690-bb8e-2bdc25e600bb.pdf",
+          "targetUrl": "https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2026-09-04/75b071b2-c354-4690-bb8e-2bdc25e600bb.pdf",
+          "message": "Error: Error: Resource host 未在 allowlist：zhjy.jilinjobs.cn:8080"
+        }
+      ]
+    },
+    {
+      "candidateType": "PAGE",
+      "legacyKey": "main-page:teacher-library",
+      "path": "items/main-page-root-teacher-library/page.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "PAGE",
+      "legacyKey": "main-page:employment-report-contact",
+      "path": "items/main-page-root-employment-report-contact/page.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "PAGE",
+      "legacyKey": "main-page:guide-jypq",
+      "path": "items/main-page-guide-jypq/page.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "PAGE",
+      "legacyKey": "main-page:guide-dagl",
+      "path": "items/main-page-guide-dagl/page.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "PAGE",
+      "legacyKey": "main-page:guide-dygl",
+      "path": "items/main-page-guide-dygl/page.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "PAGE",
+      "legacyKey": "main-page:guide-xlrz",
+      "path": "items/main-page-guide-xlrz/page.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "PAGE",
+      "legacyKey": "main-page:guide-contact",
+      "path": "items/main-page-guide-contact/page.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "PAGE",
+      "legacyKey": "main-page:guide-faq",
+      "path": "items/main-page-guide-faq/page.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    }
+  ],
+  "listItems": [
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "HOME_CAROUSEL",
+      "legacyKey": "main-home-carousel:position:1",
+      "path": "items/main-home-carousel-position-1/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:acea50d324e450177ce918e6a053e400b281fa1017b8cfdddf3744631d29ba2b",
+      "path": "items/main-site-jilin-universities-url-acea50d324e450177ce918e6a053e400b281fa1017b8cfdddf3744631d29ba2b/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:91ed33d1130a9012f31366b759a3dc4e82c9c8bbffb7694f425999566e533ebe",
+      "path": "items/main-site-jilin-universities-url-91ed33d1130a9012f31366b759a3dc4e82c9c8bbffb7694f425999566e533ebe/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:840811573f64e3bf919de5daf61e62375f25908e76e09a4d30d80dda0a57623b",
+      "path": "items/main-site-jilin-universities-url-840811573f64e3bf919de5daf61e62375f25908e76e09a4d30d80dda0a57623b/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:3b23d5863c66db0795fd0065337286a47c7df1ab96aeb90dceb35c8c58dedae4",
+      "path": "items/main-site-jilin-universities-url-3b23d5863c66db0795fd0065337286a47c7df1ab96aeb90dceb35c8c58dedae4/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:0002a05a98f5bb6fdc42c496542e224120f0cae85bebc439581fdbc07a92656d",
+      "path": "items/main-site-jilin-universities-url-0002a05a98f5bb6fdc42c496542e224120f0cae85bebc439581fdbc07a92656d/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:140f532c3940ac358706b482384d8fbc2bf9af0deec496354f941239631ba3d3",
+      "path": "items/main-site-jilin-universities-url-140f532c3940ac358706b482384d8fbc2bf9af0deec496354f941239631ba3d3/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:0f83713aeedda262a6982303f2c4f7e6fdec5448151b7756a1d096b1762e87d2",
+      "path": "items/main-site-jilin-universities-url-0f83713aeedda262a6982303f2c4f7e6fdec5448151b7756a1d096b1762e87d2/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:3a28a6fb8fad3785b319d309584fd5542914352dba90b5ea774fbe1354fe4a65",
+      "path": "items/main-site-jilin-universities-url-3a28a6fb8fad3785b319d309584fd5542914352dba90b5ea774fbe1354fe4a65/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:75d00ce6eb33863116ce8dfc07c1570b95f7d81a5a58f6db7d3fdef42426bb67",
+      "path": "items/main-site-jilin-universities-url-75d00ce6eb33863116ce8dfc07c1570b95f7d81a5a58f6db7d3fdef42426bb67/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:e0b6d3759e2ce334dabdadb6c885aeee7a24b35d58818c319df34b756d8374d2",
+      "path": "items/main-site-jilin-universities-url-e0b6d3759e2ce334dabdadb6c885aeee7a24b35d58818c319df34b756d8374d2/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:a43d37582e31815a1b81bbf2b27dd282d1fc0800bdc3163a61c9dc0b68f9ac1b",
+      "path": "items/main-site-jilin-universities-url-a43d37582e31815a1b81bbf2b27dd282d1fc0800bdc3163a61c9dc0b68f9ac1b/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:e77036585508f42076aae78e14a5c306210cfbdfa4d26fb9fbb7061ac5d99a03",
+      "path": "items/main-site-jilin-universities-url-e77036585508f42076aae78e14a5c306210cfbdfa4d26fb9fbb7061ac5d99a03/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:ae4954f863eddaf6b3483512117e55f31ad1b5ef847cc9fde2a13d6edeaf7f53",
+      "path": "items/main-site-jilin-universities-url-ae4954f863eddaf6b3483512117e55f31ad1b5ef847cc9fde2a13d6edeaf7f53/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:092b75f96a189a2235febe21e6c72dddc9c0fbac8dd257d5e4afd044594ddfcf",
+      "path": "items/main-site-jilin-universities-url-092b75f96a189a2235febe21e6c72dddc9c0fbac8dd257d5e4afd044594ddfcf/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:0d2628b094b11ede625fee20d0e0518f5a451e39133974f770b4dba3da9cda38",
+      "path": "items/main-site-jilin-universities-url-0d2628b094b11ede625fee20d0e0518f5a451e39133974f770b4dba3da9cda38/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:7fecac3ed4bf36bf9e9032fe628c7252799cb48ef8d2fe8f39c2d2626924da1e",
+      "path": "items/main-site-jilin-universities-url-7fecac3ed4bf36bf9e9032fe628c7252799cb48ef8d2fe8f39c2d2626924da1e/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:9cac6cce760a0926e9945eb3b5cc1f72d61a42e44b81b97f9bfbd19d6b070b44",
+      "path": "items/main-site-jilin-universities-url-9cac6cce760a0926e9945eb3b5cc1f72d61a42e44b81b97f9bfbd19d6b070b44/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:6dbbf7718ba902679181132b017af23a235e333ae3160b0840ded69b3f83b337",
+      "path": "items/main-site-jilin-universities-url-6dbbf7718ba902679181132b017af23a235e333ae3160b0840ded69b3f83b337/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:4ff8454f1e47640eeb1ff672548d1d19d2fe35c4e012901509ef4753d906743d",
+      "path": "items/main-site-jilin-universities-url-4ff8454f1e47640eeb1ff672548d1d19d2fe35c4e012901509ef4753d906743d/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:5ee4839922bb1e31a6a9901dc97dab70aeb41237bcd2ae3a76ba8e70af211382",
+      "path": "items/main-site-jilin-universities-url-5ee4839922bb1e31a6a9901dc97dab70aeb41237bcd2ae3a76ba8e70af211382/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:2651e5e5114f6807b9b0f75bef43504eac5cd560da2021b555d3dbfc364d1a4e",
+      "path": "items/main-site-jilin-universities-url-2651e5e5114f6807b9b0f75bef43504eac5cd560da2021b555d3dbfc364d1a4e/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:707d0aa4d0808ed1539447afcd7eddde802ba4c04f4f034e893d12869e09edb5",
+      "path": "items/main-site-jilin-universities-url-707d0aa4d0808ed1539447afcd7eddde802ba4c04f4f034e893d12869e09edb5/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:ca8322a2f0e84f67f422e7679d85d8cc6511ea902330e679d5d726a8ff194884",
+      "path": "items/main-site-jilin-universities-url-ca8322a2f0e84f67f422e7679d85d8cc6511ea902330e679d5d726a8ff194884/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:7cb5dae21ba1a8f0b6bb25cf27d4e071f0786592e90cec1d9163ea5db0ab1f3e",
+      "path": "items/main-site-jilin-universities-url-7cb5dae21ba1a8f0b6bb25cf27d4e071f0786592e90cec1d9163ea5db0ab1f3e/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:ae299637c1d80876ce4da914733e2eba0abdaace648360e2f3ca3b9f3642463c",
+      "path": "items/main-site-jilin-universities-url-ae299637c1d80876ce4da914733e2eba0abdaace648360e2f3ca3b9f3642463c/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:f3ed8ece611c21d1c594467ef84959c22fe94acb612103564df3cd3df89209f9",
+      "path": "items/main-site-jilin-universities-url-f3ed8ece611c21d1c594467ef84959c22fe94acb612103564df3cd3df89209f9/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:440ff90fa01b0e46825de5813dd88999696c67b048aa1672054c19182508298b",
+      "path": "items/main-site-jilin-universities-url-440ff90fa01b0e46825de5813dd88999696c67b048aa1672054c19182508298b/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:3ba9fde0544abb95b6f7e68f932d8778b5607ed3be3bcd7cf88e7e8a3d709082",
+      "path": "items/main-site-jilin-universities-url-3ba9fde0544abb95b6f7e68f932d8778b5607ed3be3bcd7cf88e7e8a3d709082/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:72364f0b3e481ee633349fdf19cec77bcdd5fdc15514641c55f056b1b475d3eb",
+      "path": "items/main-site-jilin-universities-url-72364f0b3e481ee633349fdf19cec77bcdd5fdc15514641c55f056b1b475d3eb/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:1c0d401576147b464be2c9778fd7100f3b2104cc5a6a06ce2e710ee6c41ef5dd",
+      "path": "items/main-site-jilin-universities-url-1c0d401576147b464be2c9778fd7100f3b2104cc5a6a06ce2e710ee6c41ef5dd/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:f173c9d665fbde36b5b13655bf7c95ab4abc1cbd36d70e4612f544df470dd80e",
+      "path": "items/main-site-jilin-universities-url-f173c9d665fbde36b5b13655bf7c95ab4abc1cbd36d70e4612f544df470dd80e/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:36dfdfca5d918dccfd1e95aa2574fcf50eae9d980fad641f1c70bca9158c1825",
+      "path": "items/main-site-jilin-universities-url-36dfdfca5d918dccfd1e95aa2574fcf50eae9d980fad641f1c70bca9158c1825/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:032983945ee15e64da020a83950cfe622348a716587c54271cb1849b0a47267c",
+      "path": "items/main-site-jilin-universities-url-032983945ee15e64da020a83950cfe622348a716587c54271cb1849b0a47267c/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:20030dfa743f96e98993ee5f54e1ca049183b54ade37100a4b9c152b30a3adf5",
+      "path": "items/main-site-jilin-universities-url-20030dfa743f96e98993ee5f54e1ca049183b54ade37100a4b9c152b30a3adf5/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:29964414d5f228d2c50f59d6192578811cb30280152eeec592aa1c4520880a93",
+      "path": "items/main-site-jilin-universities-url-29964414d5f228d2c50f59d6192578811cb30280152eeec592aa1c4520880a93/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:9fe5d9b0d56e19c44c934c3c264714c288fc716b3cb21699e031c95cfc95d663",
+      "path": "items/main-site-jilin-universities-url-9fe5d9b0d56e19c44c934c3c264714c288fc716b3cb21699e031c95cfc95d663/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:009c2d90d2cabddadaaca6d9b3c9c872cda8c3d257736825b4d56e5e8904f0a3",
+      "path": "items/main-site-jilin-universities-url-009c2d90d2cabddadaaca6d9b3c9c872cda8c3d257736825b4d56e5e8904f0a3/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:8d7d7352fae51d390c072e3c15c6972f021b4370928d59a7d0d31af03519c284",
+      "path": "items/main-site-jilin-universities-url-8d7d7352fae51d390c072e3c15c6972f021b4370928d59a7d0d31af03519c284/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:4f3f88df85086074cf193f8c7459a53726fb2eebbd6584289eb6997ca2da6b1a",
+      "path": "items/main-site-jilin-universities-url-4f3f88df85086074cf193f8c7459a53726fb2eebbd6584289eb6997ca2da6b1a/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:ce4a088ca18dd74b06a948da01138c50e6211eaef129f5e91398317a2a1778bd",
+      "path": "items/main-site-jilin-universities-url-ce4a088ca18dd74b06a948da01138c50e6211eaef129f5e91398317a2a1778bd/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:9930c7f6ff5f1e51a96da12592bd769b412bc2a99993b49e733b1658dce1ded2",
+      "path": "items/main-site-jilin-universities-url-9930c7f6ff5f1e51a96da12592bd769b412bc2a99993b49e733b1658dce1ded2/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:d03418173582171cac384c8bc789a7bb16b27fc881ee0dcd37de5adc051e47fb",
+      "path": "items/main-site-jilin-universities-url-d03418173582171cac384c8bc789a7bb16b27fc881ee0dcd37de5adc051e47fb/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:f80b2913e68b2e0593ff39127678ba0e6f3caa78dab5369bf6f499e0fddbac11",
+      "path": "items/main-site-jilin-universities-url-f80b2913e68b2e0593ff39127678ba0e6f3caa78dab5369bf6f499e0fddbac11/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:0e62f545af9e6ff2f22bfa382a92fd81a17be9c698a8ae6a707a36a2f7abeed5",
+      "path": "items/main-site-jilin-universities-url-0e62f545af9e6ff2f22bfa382a92fd81a17be9c698a8ae6a707a36a2f7abeed5/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:d411e128bab7f581182ef8cf4ee75c5faaa7094cf4d3cec78bb784994d1857e6",
+      "path": "items/main-site-jilin-universities-url-d411e128bab7f581182ef8cf4ee75c5faaa7094cf4d3cec78bb784994d1857e6/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:17ed6a56e33e714babf80d011bb1a916391feb0719143ba40d81b952bc63e54c",
+      "path": "items/main-site-jilin-universities-url-17ed6a56e33e714babf80d011bb1a916391feb0719143ba40d81b952bc63e54c/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:f67d2724305d123faa3c86879e4d469c38541ac32cdf5658898ae9ba7ba84b31",
+      "path": "items/main-site-jilin-universities-url-f67d2724305d123faa3c86879e4d469c38541ac32cdf5658898ae9ba7ba84b31/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:5a54347b165d23e858316b63cc0729f943f102a8d0ca1edf6b05d84dfc7bb6ff",
+      "path": "items/main-site-jilin-universities-url-5a54347b165d23e858316b63cc0729f943f102a8d0ca1edf6b05d84dfc7bb6ff/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:e091586395a42bac07cfb807afd03e85cb42b57703bb05e5f247d56b4777df6c",
+      "path": "items/main-site-jilin-universities-url-e091586395a42bac07cfb807afd03e85cb42b57703bb05e5f247d56b4777df6c/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:a2bf3fcb0c52383604a3e9c0cbc0505ebcecad015870f58e9903f755799123bc",
+      "path": "items/main-site-jilin-universities-url-a2bf3fcb0c52383604a3e9c0cbc0505ebcecad015870f58e9903f755799123bc/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:b245f58f576dc0588490681bf9b58e722b6de61a520f0586af7ff30bd0fa3bcc",
+      "path": "items/main-site-jilin-universities-url-b245f58f576dc0588490681bf9b58e722b6de61a520f0586af7ff30bd0fa3bcc/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:6a1f3896cfb810498086778161cb43cb8e237e1508ac45fdca98bcb014f99d60",
+      "path": "items/main-site-jilin-universities-url-6a1f3896cfb810498086778161cb43cb8e237e1508ac45fdca98bcb014f99d60/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:c606041ec5e8918b688aeb28cd76b7747b9b7a9be3d7f3fce60eb98539fd9a6e",
+      "path": "items/main-site-jilin-universities-url-c606041ec5e8918b688aeb28cd76b7747b9b7a9be3d7f3fce60eb98539fd9a6e/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:9a250023a6bc78ced4959d4d1078a27dcdebe7eaf3a431c83f15c016a4cfc458",
+      "path": "items/main-site-jilin-universities-url-9a250023a6bc78ced4959d4d1078a27dcdebe7eaf3a431c83f15c016a4cfc458/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:0af138070a1f3c2826347937f50e7d23413b829037433d0ddf86058ed6e02a78",
+      "path": "items/main-site-jilin-universities-url-0af138070a1f3c2826347937f50e7d23413b829037433d0ddf86058ed6e02a78/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:6d61467ff18ed902ab708554d4916fd44609ee7456e4cc227a28e0e4b843b596",
+      "path": "items/main-site-jilin-universities-url-6d61467ff18ed902ab708554d4916fd44609ee7456e4cc227a28e0e4b843b596/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:6da62a7e4dd32c7fd13cc848e2b22a8f26f87b2fdfbcf0ff29c98921cd4d83e3",
+      "path": "items/main-site-jilin-universities-url-6da62a7e4dd32c7fd13cc848e2b22a8f26f87b2fdfbcf0ff29c98921cd4d83e3/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:fbea94d5068309163b733c2e84395aa0d5b8c639db3b7d34db7bc69d4810670b",
+      "path": "items/main-site-jilin-universities-url-fbea94d5068309163b733c2e84395aa0d5b8c639db3b7d34db7bc69d4810670b/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:6919b5fe7ae61c3650cc47af94336e1085810311ab6af0e7f5c04505b6ef4cc0",
+      "path": "items/main-site-jilin-universities-url-6919b5fe7ae61c3650cc47af94336e1085810311ab6af0e7f5c04505b6ef4cc0/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_JILIN_UNIVERSITIES",
+      "legacyKey": "main-site-jilin-universities:url:a730b5dea19a680eba841608d002d1b53cc41d7e3f317204ccf775122250bcf7",
+      "path": "items/main-site-jilin-universities-url-a730b5dea19a680eba841608d002d1b53cc41d7e3f317204ccf775122250bcf7/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:f650d60503384c40cc5fc029cf2646305b3fcdef9cde9c6650f28a38a52412f0",
+      "path": "items/main-site-regional-graduates-url-f650d60503384c40cc5fc029cf2646305b3fcdef9cde9c6650f28a38a52412f0/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:13e0ed931a7d27c179ada424d77443318d3dd2668298657cb36c5064781d87ae",
+      "path": "items/main-site-regional-graduates-url-13e0ed931a7d27c179ada424d77443318d3dd2668298657cb36c5064781d87ae/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:25af2c00885ac31b3c0e5082a4b0ae164b885fb2746ce10ecb6b31a3c5583328",
+      "path": "items/main-site-regional-graduates-url-25af2c00885ac31b3c0e5082a4b0ae164b885fb2746ce10ecb6b31a3c5583328/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:7ef2c3290a4f95b140131d6f12923e8fb6cb44d00ff6ee2c8c75d64013ba233c",
+      "path": "items/main-site-regional-graduates-url-7ef2c3290a4f95b140131d6f12923e8fb6cb44d00ff6ee2c8c75d64013ba233c/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:d2bb02c5d3c1b7c361f2beba1a780298e968867a3a6ca9a463486209a3706ecd",
+      "path": "items/main-site-regional-graduates-url-d2bb02c5d3c1b7c361f2beba1a780298e968867a3a6ca9a463486209a3706ecd/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:b62db29abe51ecb7c166a30a9527807ebc2fbbfb1a670d26e9e794e4c30bcb11",
+      "path": "items/main-site-regional-graduates-url-b62db29abe51ecb7c166a30a9527807ebc2fbbfb1a670d26e9e794e4c30bcb11/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:e750ed6c04f929a07c5717368ea03886caa126c17f856b19da7d2807aea1f267",
+      "path": "items/main-site-regional-graduates-url-e750ed6c04f929a07c5717368ea03886caa126c17f856b19da7d2807aea1f267/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:2d152c4bfc0671bc7f6278a2346753c799db1c3b5428476393b241fbbc1ec243",
+      "path": "items/main-site-regional-graduates-url-2d152c4bfc0671bc7f6278a2346753c799db1c3b5428476393b241fbbc1ec243/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:4ffe784e289f9a002dc6be07ef587b6e640881657fd17bc881d434780c503aca",
+      "path": "items/main-site-regional-graduates-url-4ffe784e289f9a002dc6be07ef587b6e640881657fd17bc881d434780c503aca/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:8ee6131c5acf31a3fd9ef3471366f94fe51910be1800e80a9fba1f3e9f11b357",
+      "path": "items/main-site-regional-graduates-url-8ee6131c5acf31a3fd9ef3471366f94fe51910be1800e80a9fba1f3e9f11b357/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:732270483e8ce93cf6bb4a948c8680444bedda0c7598756280c07c782c04616f",
+      "path": "items/main-site-regional-graduates-url-732270483e8ce93cf6bb4a948c8680444bedda0c7598756280c07c782c04616f/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:b1d8cf72d3728cdeae0cf4f17cc33e19e1524873241903bb864cbc5e51726540",
+      "path": "items/main-site-regional-graduates-url-b1d8cf72d3728cdeae0cf4f17cc33e19e1524873241903bb864cbc5e51726540/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:ac3cc38124188a1b4d433be24138058f492b590578fb35ae99530cbb7b5c3a38",
+      "path": "items/main-site-regional-graduates-url-ac3cc38124188a1b4d433be24138058f492b590578fb35ae99530cbb7b5c3a38/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:521a91dd7fdb2ca29cb06c76e14777974489c6267696d298d6cd2cfb40c6dd63",
+      "path": "items/main-site-regional-graduates-url-521a91dd7fdb2ca29cb06c76e14777974489c6267696d298d6cd2cfb40c6dd63/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:91a0643eb359a6ba35f3104b1e28e33001b1ff03e6831f142923745ec3b4e291",
+      "path": "items/main-site-regional-graduates-url-91a0643eb359a6ba35f3104b1e28e33001b1ff03e6831f142923745ec3b4e291/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:625b5177891e24110e908a78f7916bb23b12e4bd716e0bf0d8e38b34ad469991",
+      "path": "items/main-site-regional-graduates-url-625b5177891e24110e908a78f7916bb23b12e4bd716e0bf0d8e38b34ad469991/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:b2d67ecde7d47ee107b1c0e46d99ed2034f5e8da63c6b585fe22dca13fe67dbf",
+      "path": "items/main-site-regional-graduates-url-b2d67ecde7d47ee107b1c0e46d99ed2034f5e8da63c6b585fe22dca13fe67dbf/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:e6a070c556609334ddc039b1eba8bf8099020f161ebe23b1e1e59e31a1c10333",
+      "path": "items/main-site-regional-graduates-url-e6a070c556609334ddc039b1eba8bf8099020f161ebe23b1e1e59e31a1c10333/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:19d4e307952defd17cb310f4198aa86f128b4d7a470acf407c186ff07ee60d74",
+      "path": "items/main-site-regional-graduates-url-19d4e307952defd17cb310f4198aa86f128b4d7a470acf407c186ff07ee60d74/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:b22b904b4fe612e1169b6895a7990d7d77530dbe09b0bc5dae0c2e06e4fa9543",
+      "path": "items/main-site-regional-graduates-url-b22b904b4fe612e1169b6895a7990d7d77530dbe09b0bc5dae0c2e06e4fa9543/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:65c673bb5d11e511a7f55d3d9e7aa2dc6ed30d1fb9a4b96ec154cffb84796a72",
+      "path": "items/main-site-regional-graduates-url-65c673bb5d11e511a7f55d3d9e7aa2dc6ed30d1fb9a4b96ec154cffb84796a72/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:fc59540bce3e667c4b0341c88a964c55b524ca1ec2efea93988fb6b83b36bca8",
+      "path": "items/main-site-regional-graduates-url-fc59540bce3e667c4b0341c88a964c55b524ca1ec2efea93988fb6b83b36bca8/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:03b974522643a30c3acba2fd4b67e5d482e8b955a3580b2bce454bba83d7496f",
+      "path": "items/main-site-regional-graduates-url-03b974522643a30c3acba2fd4b67e5d482e8b955a3580b2bce454bba83d7496f/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:ed2352ef86776209b6e6e26567973f26e9567542470b9af6cd283f73678b47d9",
+      "path": "items/main-site-regional-graduates-url-ed2352ef86776209b6e6e26567973f26e9567542470b9af6cd283f73678b47d9/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:f1d43412523d69fc98980f4ff4c0fb74533b3e3ecf0e3f396e2df8451dc534e2",
+      "path": "items/main-site-regional-graduates-url-f1d43412523d69fc98980f4ff4c0fb74533b3e3ecf0e3f396e2df8451dc534e2/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:121ed3b6d47c7542eb4576da743877de8842625a06cea72191120b14f3dfef4b",
+      "path": "items/main-site-regional-graduates-url-121ed3b6d47c7542eb4576da743877de8842625a06cea72191120b14f3dfef4b/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:667c8937c357d97a192e6a4ceb9c2ef14214992098a47fa4ebec8e21976eda35",
+      "path": "items/main-site-regional-graduates-url-667c8937c357d97a192e6a4ceb9c2ef14214992098a47fa4ebec8e21976eda35/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:e20db40662cda5d44649358891d15ed762909cbd8829b09436701fd11d605548",
+      "path": "items/main-site-regional-graduates-url-e20db40662cda5d44649358891d15ed762909cbd8829b09436701fd11d605548/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:3c40b950e0344b7609dc5757769acadfb64c8eb1e1c3d0fdad0720b3a26c46c0",
+      "path": "items/main-site-regional-graduates-url-3c40b950e0344b7609dc5757769acadfb64c8eb1e1c3d0fdad0720b3a26c46c0/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_REGIONAL_GRADUATES",
+      "legacyKey": "main-site-regional-graduates:url:037bf5befb5a53378872a42c90c63544fce4696f301826fcc80acb5fca3ec514",
+      "path": "items/main-site-regional-graduates-url-037bf5befb5a53378872a42c90c63544fce4696f301826fcc80acb5fca3ec514/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_RELATED",
+      "legacyKey": "main-site-related:url:4625038596be1c8cb8d10d4c5ffda2340c4514acf1bfa3d83e77f9b77e019ff6",
+      "path": "items/main-site-related-url-4625038596be1c8cb8d10d4c5ffda2340c4514acf1bfa3d83e77f9b77e019ff6/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_RELATED",
+      "legacyKey": "main-site-related:url:24e21a7a37d899e1760f4b74563b63a02ceba1b6d9889ca6d21d3aa92ad0ec76",
+      "path": "items/main-site-related-url-24e21a7a37d899e1760f4b74563b63a02ceba1b6d9889ca6d21d3aa92ad0ec76/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_RELATED",
+      "legacyKey": "main-site-related:url:b48e75c65f2c07d976f51ee705836cfe87fe6a6696e85237fdaaa140658c20b2",
+      "path": "items/main-site-related-url-b48e75c65f2c07d976f51ee705836cfe87fe6a6696e85237fdaaa140658c20b2/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_RELATED",
+      "legacyKey": "main-site-related:url:bc1aee4ac0879fc2a8b1e9e270d2dad2077a1e9f9e7b5f33d617158697d52647",
+      "path": "items/main-site-related-url-bc1aee4ac0879fc2a8b1e9e270d2dad2077a1e9f9e7b5f33d617158697d52647/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    },
+    {
+      "candidateType": "LIST_ITEM",
+      "listCode": "SITE_RELATED",
+      "legacyKey": "main-site-related:url:9d0ea2c50ddc790ea0bb4986b0d4b6d2e8e53e76e5ff9dcc99eb66ee47cfce5b",
+      "path": "items/main-site-related-url-9d0ea2c50ddc790ea0bb4986b0d4b6d2e8e53e76e5ff9dcc99eb66ee47cfce5b/item.json",
+      "disposition": "SITE_PACKAGE_SOURCE_HANDOFF",
+      "problems": []
+    }
+  ],
+  "observations": [
+    {
+      "identity": "LIST:SITE_REGIONAL_GRADUATES:HOME_SITE_LINK_DUPLICATE_URL",
+      "candidateType": "LIST_ITEM",
+      "legacyKey": null,
+      "title": null,
+      "sourceUrl": null,
+      "classification": "DUPLICATE_LIST_LINK_REQUIRES_REVIEW",
+      "originalClassification": "DUPLICATE_LIST_LINK_REQUIRES_REVIEW",
+      "disposition": "TERMINAL_CLASSIFIED_REVIEW",
+      "blocking": true,
+      "code": "HOME_SITE_LINK_DUPLICATE_URL",
+      "rawReference": null,
+      "targetUrl": null,
+      "message": null,
+      "handoffScope": "LIST_ITEM_UNMAPPED",
+      "listCode": "SITE_REGIONAL_GRADUATES"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:69c4ee6a499ff281e21117e260d6469dc59b173323500a66b5db73a8c84b0015",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/fpES6F_VfvPuN1NQRMt5dg",
+    "url": "https://mp.weixin.qq.com/s/fpES6F_VfvPuN1NQRMt5dg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学党委书记杜锐带队开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-05-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/fpES6F_VfvPuN1NQRMt5dg"
+  },
+  "resources": [],
+  "sourceFingerprint": "292e93638fe27b569cb9ef95d759ff54521eeb5a01884ec4f0ddba52013738da",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "延边大学党委书记杜锐带队开展访企拓岗促就业专项行动",
+    "listPublishDate": "2026-05-19",
+    "sourceOrder": 167
+  }
+}

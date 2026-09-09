@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:92d9149d55305a35da51f25f4a42a0890da812354a75839107ef6e62c75d8270",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/3sxBwLtIdjfYj3PlAwJsdQ",
+    "url": "https://mp.weixin.qq.com/s/3sxBwLtIdjfYj3PlAwJsdQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春金融高等专科学校吕鹰飞校长带队赴中国邮政长春市分公司 开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-04-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/3sxBwLtIdjfYj3PlAwJsdQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "4378f8d3ec4b101191fe82d751a91a41990aa191aa14a86ca38f7f436ec1cef5",
+  "evidence": {
+    "listPage": 32,
+    "listTitle": "长春金融高等专科学校吕鹰飞校长带队赴中国邮政长春市分公司 开展访企拓岗专项行动",
+    "listPublishDate": "2026-04-07",
+    "sourceOrder": 313
+  }
+}

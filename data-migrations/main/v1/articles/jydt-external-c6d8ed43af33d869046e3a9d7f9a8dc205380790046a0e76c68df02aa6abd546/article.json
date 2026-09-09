@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c6d8ed43af33d869046e3a9d7f9a8dc205380790046a0e76c68df02aa6abd546",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/RupuSFQBsC2JFEqMV7N2bA",
+    "url": "https://mp.weixin.qq.com/s/RupuSFQBsC2JFEqMV7N2bA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春财经学院举办2025届毕业生春季校园招聘会暨第15届数字经济人才双选会",
+    "source": "",
+    "publishDate": "2025-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/RupuSFQBsC2JFEqMV7N2bA"
+  },
+  "resources": [],
+  "sourceFingerprint": "301f4342850343c081b7074230d43a74650d46d1cafc12479d75809fa5b02db6",
+  "evidence": {
+    "listPage": 90,
+    "listTitle": "长春财经学院举办2025届毕业生春季校园招聘会暨第15届数字经济人才双选会",
+    "listPublishDate": "2025-05-15",
+    "sourceOrder": 897
+  }
+}

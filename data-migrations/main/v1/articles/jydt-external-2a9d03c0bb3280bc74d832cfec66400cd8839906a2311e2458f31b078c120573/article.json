@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2a9d03c0bb3280bc74d832cfec66400cd8839906a2311e2458f31b078c120573",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/yw5jY9pOZhBXniaxsQVjew",
+    "url": "https://mp.weixin.qq.com/s/yw5jY9pOZhBXniaxsQVjew"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促合作 产教协同起新程——吉林水利电力职业学院与中国水利水电第六工程局有限公司签订校企合作协议",
+    "source": "",
+    "publishDate": "2026-03-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/yw5jY9pOZhBXniaxsQVjew"
+  },
+  "resources": [],
+  "sourceFingerprint": "38b8d7521c30059953606a7b66243ed059922407c7ac199dd8f1b2591b75d3b6",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "访企拓岗促合作 产教协同起新程——吉林水利电力职业学院与中国水利水电第六工程局有限公司签订校企合作协议",
+    "listPublishDate": "2026-03-13",
+    "sourceOrder": 420
+  }
+}

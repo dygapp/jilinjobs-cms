@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6ed0549dc9ef2fddc02ba04dec8aa6bf9677b93f0513c8967cbbb7b11cbab5e1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/lvt43zT0ANMnLmYqDpHw0A",
+    "url": "https://mp.weixin.qq.com/s/lvt43zT0ANMnLmYqDpHw0A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学举办全国建筑地产行业面向2025届毕业生春季招聘活动“高校服务吉林高质量发展”留吉就业政校企合作专场招聘会",
+    "source": "",
+    "publishDate": "2025-05-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/lvt43zT0ANMnLmYqDpHw0A"
+  },
+  "resources": [],
+  "sourceFingerprint": "c7b37ed8a661999c16c053d049bf4b8da675079b831b02e25a8a0c202132da34",
+  "evidence": {
+    "listPage": 89,
+    "listTitle": "吉林建筑大学举办全国建筑地产行业面向2025届毕业生春季招聘活动“高校服务吉林高质量发展”留吉就业政校企合作专场招聘会",
+    "listPublishDate": "2025-05-16",
+    "sourceOrder": 888
+  }
+}

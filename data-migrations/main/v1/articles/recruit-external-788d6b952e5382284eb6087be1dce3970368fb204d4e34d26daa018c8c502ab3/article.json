@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:788d6b952e5382284eb6087be1dce3970368fb204d4e34d26daa018c8c502ab3",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/vjF7pTm4AU5DoBKeCmUcHA",
+    "url": "https://mp.weixin.qq.com/s/vjF7pTm4AU5DoBKeCmUcHA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院2026届毕业生春季校园双选会邀请函",
+    "source": "",
+    "publishDate": "2026-04-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vjF7pTm4AU5DoBKeCmUcHA"
+  },
+  "resources": [],
+  "sourceFingerprint": "9435d4d839d00cea2df7934b46de56507a28b8069b57e345f59087acacf163a1",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "长春工程学院2026届毕业生春季校园双选会邀请函",
+    "listPublishDate": "2026-04-14",
+    "sourceOrder": 43
+  }
+}

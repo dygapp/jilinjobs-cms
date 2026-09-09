@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122966",
+    "contentId": "28737783122966",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122966"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发教育部2012届高校毕业生大型网络招聘活动计划的通知",
+    "source": "",
+    "publishDate": "2011-12-29",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于转发教育部2012届高校毕业生大型网络招聘活动计划的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-12-29 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://65be2f4120eed0cb02e854aa084b20c5dbba908748d19a423406f5aa6af45970\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://cc122021f363f00d654de099eec3f93dbdff64c99f290b808c7348efc832e459\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://d9cdd55ac8eb4a5953b8f2bd17682f940055ae217d2d50015c00922f2ca7b410\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://a924d63864c062938170a6033fff838f03ec370bb38c4cc0318e1c8fcf699bdb\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111229094327965.jpg",
+      "originalReference": "/chistory/cms/imgs/20111229094327965.jpg",
+      "token": "migration-resource://65be2f4120eed0cb02e854aa084b20c5dbba908748d19a423406f5aa6af45970",
+      "snapshotPath": "assets/65be2f4120eed0cb02e854aa084b20c5dbba908748d19a423406f5aa6af45970.jpg",
+      "sha256": "65be2f4120eed0cb02e854aa084b20c5dbba908748d19a423406f5aa6af45970",
+      "contentType": "image/jpeg",
+      "sizeBytes": 61896
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111229094337833.jpg",
+      "originalReference": "/chistory/cms/imgs/20111229094337833.jpg",
+      "token": "migration-resource://cc122021f363f00d654de099eec3f93dbdff64c99f290b808c7348efc832e459",
+      "snapshotPath": "assets/cc122021f363f00d654de099eec3f93dbdff64c99f290b808c7348efc832e459.jpg",
+      "sha256": "cc122021f363f00d654de099eec3f93dbdff64c99f290b808c7348efc832e459",
+      "contentType": "image/jpeg",
+      "sizeBytes": 71781
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111229094401928.jpg",
+      "originalReference": "/chistory/cms/imgs/20111229094401928.jpg",
+      "token": "migration-resource://d9cdd55ac8eb4a5953b8f2bd17682f940055ae217d2d50015c00922f2ca7b410",
+      "snapshotPath": "assets/d9cdd55ac8eb4a5953b8f2bd17682f940055ae217d2d50015c00922f2ca7b410.jpg",
+      "sha256": "d9cdd55ac8eb4a5953b8f2bd17682f940055ae217d2d50015c00922f2ca7b410",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84098
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111229094409499.jpg",
+      "originalReference": "/chistory/cms/imgs/20111229094409499.jpg",
+      "token": "migration-resource://a924d63864c062938170a6033fff838f03ec370bb38c4cc0318e1c8fcf699bdb",
+      "snapshotPath": "assets/a924d63864c062938170a6033fff838f03ec370bb38c4cc0318e1c8fcf699bdb.jpg",
+      "sha256": "a924d63864c062938170a6033fff838f03ec370bb38c4cc0318e1c8fcf699bdb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 70462
+    }
+  ],
+  "sourceFingerprint": "218c48f49055ce58a8fb808d20218ae1f17055b14d13046f7eae28d00ad506de",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "关于转发教育部2012届高校毕业生大型网络招聘活动计划的通知",
+    "listPublishDate": "2011-12-29",
+    "sourceOrder": 406,
+    "detailPublishDate": "2011-12-29"
+  }
+}

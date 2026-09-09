@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5e0699a51056539438cf22090dc53349d00d53e9cf5dafc167732bf6375609a4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/HYNLPxD1ANw43kDP1JA6mQ",
+    "url": "https://mp.weixin.qq.com/s/HYNLPxD1ANw43kDP1JA6mQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春财经学院管理学院赴吉林省空天经济研究院调研",
+    "source": "",
+    "publishDate": "2026-05-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/HYNLPxD1ANw43kDP1JA6mQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "d212bd3cf99604d3a11f526ce9336448a8b14cd244dd9eaa8a9bca6b37a94340",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "长春财经学院管理学院赴吉林省空天经济研究院调研",
+    "listPublishDate": "2026-05-14",
+    "sourceOrder": 187
+  }
+}

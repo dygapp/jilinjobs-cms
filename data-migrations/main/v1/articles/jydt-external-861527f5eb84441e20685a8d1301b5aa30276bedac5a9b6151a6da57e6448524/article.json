@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:861527f5eb84441e20685a8d1301b5aa30276bedac5a9b6151a6da57e6448524",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/eiZFtV0XyQ4rJ8M-ETDNMA",
+    "url": "https://mp.weixin.qq.com/s/eiZFtV0XyQ4rJ8M-ETDNMA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "留在家乡，见证四平发展——创业奋斗“就”在吉林“统战在行动”专场招聘会暨铁东区宣讲推介会侧记",
+    "source": "",
+    "publishDate": "2024-04-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/eiZFtV0XyQ4rJ8M-ETDNMA"
+  },
+  "resources": [],
+  "sourceFingerprint": "7f07192fcbea08b93269149994ce96e770aaf449075ecb6f9bc287dbd03513f9",
+  "evidence": {
+    "listPage": 109,
+    "listTitle": "留在家乡，见证四平发展——创业奋斗“就”在吉林“统战在行动”专场招聘会暨铁东区宣讲推介会侧记",
+    "listPublishDate": "2024-04-15",
+    "sourceOrder": 1081
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123238",
+    "contentId": "28737783123238",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123238"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2009年吉林省NIT考试工作会议专题（三）",
+    "source": "",
+    "publishDate": "2009-06-24",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2009年吉林省NIT考试工作会议专题（三）</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-6-24 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://192.168.0.172/uploadfile/200906/20090624151800531.jpg\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://192.168.0.172/uploadfile/200906/20090624151856803.jpg\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://192.168.0.172/uploadfile/200906/20090624151923312.jpg\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://192.168.0.172/uploadfile/200906/20090624151952284.jpg\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://192.168.0.172/uploadfile/200906/20090624151957211.jpg\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\">部分考试机构代表在会上发言，介绍NIT考试工作经验</font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"></font>&nbsp;</p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://192.168.0.172/uploadfile/200906/20090624152729743.jpg\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://192.168.0.172/uploadfile/200906/20090624152735714.jpg\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://192.168.0.172/uploadfile/200906/200906241527399.jpg\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://192.168.0.172/uploadfile/200906/20090624152743771.jpg\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://192.168.0.172/uploadfile/200906/20090624152830139.jpg\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://192.168.0.172/uploadfile/200906/20090624152835457.jpg\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\">分组讨论气氛热烈，省就业中心朱军书记出席并听取代表意见</font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "8460c357e14ac4ef9a7d68d07eb7e584198c5a734daaeb7d94e8a78b19d19689",
+  "evidence": {
+    "listPage": 53,
+    "listTitle": "2009年吉林省NIT考试工作会议专题（三）",
+    "listPublishDate": "2009-06-24",
+    "sourceOrder": 529,
+    "detailPublishDate": "2009-06-24"
+  }
+}

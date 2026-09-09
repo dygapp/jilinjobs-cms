@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:692107ede73d7bd3aaa3cf9a8569b48ad0a86f9d288fba74955109c64215a8b2",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/XjdK5J-nTxpXEv-c7MAAxg",
+    "url": "https://mp.weixin.qq.com/s/XjdK5J-nTxpXEv-c7MAAxg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通知 | 关于举办“创业奋斗‘就’在吉林”吉林省2024届毕业生应用型人才专场招聘会的通知",
+    "source": "",
+    "publishDate": "2024-05-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/XjdK5J-nTxpXEv-c7MAAxg"
+  },
+  "resources": [],
+  "sourceFingerprint": "c663820df9cdcc12b00bb9839930eecd581ac8ba88165e70a487a6022c5722d7",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "通知 | 关于举办“创业奋斗‘就’在吉林”吉林省2024届毕业生应用型人才专场招聘会的通知",
+    "listPublishDate": "2024-05-08",
+    "sourceOrder": 280
+  }
+}

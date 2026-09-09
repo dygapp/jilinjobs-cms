@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cf5c9611c598d35f9dc7cdf731743c9bac501b3265ae5229b26744b527334e8d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/C4zsRrGwuIuymiqhbn0l-A",
+    "url": "https://mp.weixin.qq.com/s/C4zsRrGwuIuymiqhbn0l-A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业---吉林工程技术师范学院党委书记刘剑桥带队赴吉通汽车零部件有限公司走访交流",
+    "source": "",
+    "publishDate": "2025-05-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/C4zsRrGwuIuymiqhbn0l-A"
+  },
+  "resources": [],
+  "sourceFingerprint": "9c1143a87b9f0ed2732bd9046f041b6a86f09674d9eecdbd7ed3f4f7ad1689f3",
+  "evidence": {
+    "listPage": 87,
+    "listTitle": "访企拓岗促就业---吉林工程技术师范学院党委书记刘剑桥带队赴吉通汽车零部件有限公司走访交流",
+    "listPublishDate": "2025-05-28",
+    "sourceOrder": 862
+  }
+}

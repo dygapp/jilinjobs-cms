@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122812",
+    "contentId": "28737783122812",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122812"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发教育部办公厅关于做好全国普通高校未就业毕业生统计服务和精准就业服务的通知",
+    "source": "",
+    "publishDate": "2016-04-18",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发教育部办公厅关于做好全国普通高校未就业毕业生统计服务和精准就业服务的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场开发部   发布时间:2016-4-18 14:52:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img src=\"migration-resource://8ba7ecec6c9be8c803851f46c2ad631eb675c1a3c82c1fa2ecbccde620ddb550\" style=\"\" title=\"1.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://52759cbf57d9d46f2c2d027146e0b545efcdc90eb911f190cbd6e5ac0be863f3\" style=\"\" title=\"2.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://6f218eb859570b4361645dc92fc60c973c8623fb196401f5e725b344a602262c\" style=\"\" title=\"3.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://0995cf5aee23aa4bda2266ed799fb7ecf89cbec5a7b85e3ce13f6f9d9ebd0989\" style=\"\" title=\"4.jpg\"></p><p style=\"text-align: center;\"><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        <a href=\"../Common/DownLoadFile.aspx?fileid=7b3aebbf-2223-462b-b9e4-01933895661e\">教育部办公厅关于做好全国普通高校未就业毕业生统计服务工作的通知.pdf</a><br><a href=\"../Common/DownLoadFile.aspx?fileid=9a8cfcd8-1abd-40d5-921f-ce03c5c35e76\">教育部办公厅关于开展全国普通高校毕业生精准就业服务工作的通知.pdf</a><br>\n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359658793859375001139473.jpg",
+      "originalReference": "/chistory/cms/imgs/6359658793859375001139473.jpg",
+      "token": "migration-resource://8ba7ecec6c9be8c803851f46c2ad631eb675c1a3c82c1fa2ecbccde620ddb550",
+      "snapshotPath": "assets/8ba7ecec6c9be8c803851f46c2ad631eb675c1a3c82c1fa2ecbccde620ddb550.jpg",
+      "sha256": "8ba7ecec6c9be8c803851f46c2ad631eb675c1a3c82c1fa2ecbccde620ddb550",
+      "contentType": "image/jpeg",
+      "sizeBytes": 70321
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359658793953125005752148.jpg",
+      "originalReference": "/chistory/cms/imgs/6359658793953125005752148.jpg",
+      "token": "migration-resource://52759cbf57d9d46f2c2d027146e0b545efcdc90eb911f190cbd6e5ac0be863f3",
+      "snapshotPath": "assets/52759cbf57d9d46f2c2d027146e0b545efcdc90eb911f190cbd6e5ac0be863f3.jpg",
+      "sha256": "52759cbf57d9d46f2c2d027146e0b545efcdc90eb911f190cbd6e5ac0be863f3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 106207
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359658794048437504594068.jpg",
+      "originalReference": "/chistory/cms/imgs/6359658794048437504594068.jpg",
+      "token": "migration-resource://6f218eb859570b4361645dc92fc60c973c8623fb196401f5e725b344a602262c",
+      "snapshotPath": "assets/6f218eb859570b4361645dc92fc60c973c8623fb196401f5e725b344a602262c.jpg",
+      "sha256": "6f218eb859570b4361645dc92fc60c973c8623fb196401f5e725b344a602262c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 106902
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359658794156250006164466.jpg",
+      "originalReference": "/chistory/cms/imgs/6359658794156250006164466.jpg",
+      "token": "migration-resource://0995cf5aee23aa4bda2266ed799fb7ecf89cbec5a7b85e3ce13f6f9d9ebd0989",
+      "snapshotPath": "assets/0995cf5aee23aa4bda2266ed799fb7ecf89cbec5a7b85e3ce13f6f9d9ebd0989.jpg",
+      "sha256": "0995cf5aee23aa4bda2266ed799fb7ecf89cbec5a7b85e3ce13f6f9d9ebd0989",
+      "contentType": "image/jpeg",
+      "sizeBytes": 60246
+    }
+  ],
+  "sourceFingerprint": "cdaccf7f50afb0181c8de389f0f57b0d1e7036480cd6f32540c406da8394e576",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "转发教育部办公厅关于做好全国普通高校未就业毕业生统计服务和精准就业服务的通知",
+    "listPublishDate": "2016-04-18",
+    "sourceOrder": 252,
+    "detailPublishDate": "2016-04-18"
+  }
+}

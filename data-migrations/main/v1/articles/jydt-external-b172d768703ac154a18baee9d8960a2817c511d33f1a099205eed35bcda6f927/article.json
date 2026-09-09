@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b172d768703ac154a18baee9d8960a2817c511d33f1a099205eed35bcda6f927",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/GICAu8R9_ToBFAWxXI6p1Q",
+    "url": "https://mp.weixin.qq.com/s/GICAu8R9_ToBFAWxXI6p1Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化师范学院召开2025届毕业生就业创业工作总结表彰暨2026届毕业生就业创业工作部署会",
+    "source": "",
+    "publishDate": "2025-11-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/GICAu8R9_ToBFAWxXI6p1Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "ea2d0d9684bcdfda946fb972cd804e971646512682a164eaaa533c7cf2de5059",
+  "evidence": {
+    "listPage": 62,
+    "listTitle": "通化师范学院召开2025届毕业生就业创业工作总结表彰暨2026届毕业生就业创业工作部署会",
+    "listPublishDate": "2025-11-07",
+    "sourceOrder": 615
+  }
+}

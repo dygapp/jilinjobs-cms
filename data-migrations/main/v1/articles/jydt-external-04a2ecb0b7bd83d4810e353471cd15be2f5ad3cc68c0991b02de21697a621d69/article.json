@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:04a2ecb0b7bd83d4810e353471cd15be2f5ad3cc68c0991b02de21697a621d69",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/swQYOfRmlXvve_My2407Nw",
+    "url": "https://mp.weixin.qq.com/s/swQYOfRmlXvve_My2407Nw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "寒假促就业暖心行动｜北华大学开展公务员考试辅导公益培训活动",
+    "source": "",
+    "publishDate": "2026-01-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/swQYOfRmlXvve_My2407Nw"
+  },
+  "resources": [],
+  "sourceFingerprint": "f349aab35e16cf1f054eebe350f264cca1ee1b193cf24772c4db22f8219b5478",
+  "evidence": {
+    "listPage": 48,
+    "listTitle": "寒假促就业暖心行动｜北华大学开展公务员考试辅导公益培训活动",
+    "listPublishDate": "2026-01-26",
+    "sourceOrder": 478
+  }
+}

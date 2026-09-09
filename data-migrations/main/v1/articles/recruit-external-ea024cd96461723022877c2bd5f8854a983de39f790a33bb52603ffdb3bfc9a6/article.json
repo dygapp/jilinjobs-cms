@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:ea024cd96461723022877c2bd5f8854a983de39f790a33bb52603ffdb3bfc9a6",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/jobfair/fairdetails.html",
+    "url": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=HawEbj9u4ZHC37Bz3gd5Lt"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "正大集团“百城万岗·筑梦未来”专场活动",
+    "source": "",
+    "publishDate": "2022-11-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=HawEbj9u4ZHC37Bz3gd5Lt"
+  },
+  "resources": [],
+  "sourceFingerprint": "69b554a0f984e2203bed3a2a85f5e382328cd9589b5f4856fa03629052db6400",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "正大集团“百城万岗·筑梦未来”专场活动",
+    "listPublishDate": "2022-11-02",
+    "sourceOrder": 336
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:85993065562112",
+    "contentId": "85993065562112",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=85993065562112"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展“奋斗有我 就在吉林”吉林省高校就业创业系列直播课的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2022-03-07",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://a85ace7ec03efb542da6f8593001605d68b07ad40800016ffd5d6dfc4b25e38b\" width=\"1000\"><img alt=\"\" height=\"1414\" src=\"migration-resource://8c3e95a11f6faf58888c0a9e3251ae077fe062cace89f67721cb6018409869c3\" width=\"1000\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/883c328a-d896-4b80-9f43-21cd8e038f5f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/883c328a-d896-4b80-9f43-21cd8e038f5f.jpg",
+      "token": "migration-resource://a85ace7ec03efb542da6f8593001605d68b07ad40800016ffd5d6dfc4b25e38b",
+      "snapshotPath": "assets/a85ace7ec03efb542da6f8593001605d68b07ad40800016ffd5d6dfc4b25e38b.jpg",
+      "sha256": "a85ace7ec03efb542da6f8593001605d68b07ad40800016ffd5d6dfc4b25e38b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 198369
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/c8f2a79a-4297-421f-a3dc-55154f16fc7b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/c8f2a79a-4297-421f-a3dc-55154f16fc7b.jpg",
+      "token": "migration-resource://8c3e95a11f6faf58888c0a9e3251ae077fe062cace89f67721cb6018409869c3",
+      "snapshotPath": "assets/8c3e95a11f6faf58888c0a9e3251ae077fe062cace89f67721cb6018409869c3.jpg",
+      "sha256": "8c3e95a11f6faf58888c0a9e3251ae077fe062cace89f67721cb6018409869c3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 195817
+    }
+  ],
+  "sourceFingerprint": "edea2da001a2ae7260ab9a99830cf163b9ab64c4a2adfe9b3b9ff573ca842643",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "关于开展“奋斗有我 就在吉林”吉林省高校就业创业系列直播课的通知",
+    "listPublishDate": "2022-03-07",
+    "sourceOrder": 139,
+    "detailPublishDate": "2022-03-07"
+  }
+}

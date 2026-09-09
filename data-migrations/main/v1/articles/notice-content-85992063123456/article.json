@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:85992063123456",
+    "contentId": "85992063123456",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=85992063123456"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于组织毕业生参加吉林省高校毕业生云服务活动的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2021-11-17",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://583d5934da143d17e9f58c500618b44675a381e79b6c0f7693b49b308f533cf8\" width=\"1000\"><img alt=\"\" height=\"1414\" src=\"migration-resource://e5f375cd20d5ba55a84f94657bf45496e4e7fbdb1f9a0ad0b23589af3969b126\" width=\"1000\"><img alt=\"\" height=\"1414\" src=\"migration-resource://afb86e91da10bbd2e42934ea836bcfd5796de2fd3f4604690dc1e628675eb0f5\" width=\"1000\"><img alt=\"\" height=\"1414\" src=\"migration-resource://e85f5a848ce4e6965d70f0b3f6c52576ac65a304725eccea37f23749dfc0c08e\" width=\"1000\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/cf3d61b4-7d41-4c4d-905b-22689833b385.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/cf3d61b4-7d41-4c4d-905b-22689833b385.jpg",
+      "token": "migration-resource://583d5934da143d17e9f58c500618b44675a381e79b6c0f7693b49b308f533cf8",
+      "snapshotPath": "assets/583d5934da143d17e9f58c500618b44675a381e79b6c0f7693b49b308f533cf8.jpg",
+      "sha256": "583d5934da143d17e9f58c500618b44675a381e79b6c0f7693b49b308f533cf8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 183901
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/4963ee09-03b2-47c6-a585-1dc815c6629a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/4963ee09-03b2-47c6-a585-1dc815c6629a.jpg",
+      "token": "migration-resource://e5f375cd20d5ba55a84f94657bf45496e4e7fbdb1f9a0ad0b23589af3969b126",
+      "snapshotPath": "assets/e5f375cd20d5ba55a84f94657bf45496e4e7fbdb1f9a0ad0b23589af3969b126.jpg",
+      "sha256": "e5f375cd20d5ba55a84f94657bf45496e4e7fbdb1f9a0ad0b23589af3969b126",
+      "contentType": "image/jpeg",
+      "sizeBytes": 168370
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/7e33f000-32f0-4568-b67e-0f40b62dee3c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/7e33f000-32f0-4568-b67e-0f40b62dee3c.jpg",
+      "token": "migration-resource://afb86e91da10bbd2e42934ea836bcfd5796de2fd3f4604690dc1e628675eb0f5",
+      "snapshotPath": "assets/afb86e91da10bbd2e42934ea836bcfd5796de2fd3f4604690dc1e628675eb0f5.jpg",
+      "sha256": "afb86e91da10bbd2e42934ea836bcfd5796de2fd3f4604690dc1e628675eb0f5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 185582
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/20a66091-d43e-435d-a5c4-4bee9dad6cbb.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/20a66091-d43e-435d-a5c4-4bee9dad6cbb.jpg",
+      "token": "migration-resource://e85f5a848ce4e6965d70f0b3f6c52576ac65a304725eccea37f23749dfc0c08e",
+      "snapshotPath": "assets/e85f5a848ce4e6965d70f0b3f6c52576ac65a304725eccea37f23749dfc0c08e.jpg",
+      "sha256": "e85f5a848ce4e6965d70f0b3f6c52576ac65a304725eccea37f23749dfc0c08e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 100401
+    }
+  ],
+  "sourceFingerprint": "c1845ae32fef6904366ff8ed65aa0fec137a1e762602db09e13887ce9e90b432",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "关于组织毕业生参加吉林省高校毕业生云服务活动的通知",
+    "listPublishDate": "2021-11-17",
+    "sourceOrder": 143,
+    "detailPublishDate": "2021-11-17"
+  }
+}

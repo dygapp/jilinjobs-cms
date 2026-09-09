@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123290",
+    "contentId": "28737783123290",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123290"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "新疆：放宽大学毕业生落户政策",
+    "source": "",
+    "publishDate": "2009-02-23",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">新疆：放宽大学毕业生落户政策</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-2-23 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 随着国家政策向西部倾斜战略的实施，作为西部和新疆发展重点的乌鲁木齐市，为给2010年率先实现小康创造良好的人才环境，乌鲁木齐市决定放宽外地生源大学本科、大专毕业生在乌鲁木齐落户的政策。无固定住所的大学毕业生也可在乌鲁木齐市落户了。 <br>　　记者日前从新疆维吾尔自治区乌鲁木齐市公安局获悉，今后，凡在乌鲁木齐市工作满两年，按时缴纳养老保险金的外地生源大学本科毕业生，免缴城市增容费准予在乌鲁木齐市落户；工作满五年，按时缴纳养老保险金的外地生源大学专科毕业生，免缴城市增容费准予在乌鲁木齐市落户。对于以上人员，乌鲁木齐市将实行敞开迁入制度。据了解，乌鲁木齐市出台该措施，是为了进一步促进大中专毕业生就业工作。 <br>　　据悉，敞开迁入制度，即符合上述条件的人员均可申请在乌鲁木齐市落户，在该市无固定住所的，其户口落入“乌鲁木齐市人才服务中心毕业生集体户”，实行统一管理；在该市有固定住所的，其户口落在居住地派出所，办理家庭户口。有固定住所户口迁出制度是指户口落入集体户的人员，有了固定住所后，应将户口迁入固定住所的派出所，办理家庭户。 <br>　　据该市公安局户政处工作人员介绍，符合条件的大学生申请落户时，凭缴纳养老保险金凭证、毕业证、户口迁移证或户籍证明，到乌鲁木齐市公安局申请办理落户手续或办理户口准迁手续。</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "b5e93612c0aad73b04aeb0c94d8f5a926ff1d0ce7d7a42dfadfb71c5c237310e",
+  "evidence": {
+    "listPage": 60,
+    "listTitle": "新疆：放宽大学毕业生落户政策",
+    "listPublishDate": "2009-02-23",
+    "sourceOrder": 595,
+    "detailPublishDate": "2009-02-23"
+  }
+}

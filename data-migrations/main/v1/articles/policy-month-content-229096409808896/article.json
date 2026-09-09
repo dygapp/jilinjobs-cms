@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-month:content:229096409808896",
+    "contentId": "229096409808896",
+    "typeCode": "policy-month",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=229096409808896"
+  },
+  "target": {
+    "columnAlias": "policy-month",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "普通高校学生应征入伍政策公告",
+    "source": "教育部高校学生司",
+    "publishDate": "2024-06-18",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1344\" src=\"migration-resource://8bf8b6218f5c85e889e4131f6a2610150fda5856b4c7c5a6a0ed57969b55246f\" width=\"950\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/3bae99d4-bf09-4b8e-aec3-31c877671256.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/3bae99d4-bf09-4b8e-aec3-31c877671256.jpg",
+      "token": "migration-resource://8bf8b6218f5c85e889e4131f6a2610150fda5856b4c7c5a6a0ed57969b55246f",
+      "snapshotPath": "assets/8bf8b6218f5c85e889e4131f6a2610150fda5856b4c7c5a6a0ed57969b55246f.jpg",
+      "sha256": "8bf8b6218f5c85e889e4131f6a2610150fda5856b4c7c5a6a0ed57969b55246f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    }
+  ],
+  "sourceFingerprint": "1826832dae049461c65643c8b752da009ea7d834190d27bcf7fbf2d8777e361c",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "普通高校学生应征入伍政策公告",
+    "listPublishDate": "2024-06-18",
+    "sourceOrder": 3,
+    "detailPublishDate": "2024-06-18"
+  }
+}

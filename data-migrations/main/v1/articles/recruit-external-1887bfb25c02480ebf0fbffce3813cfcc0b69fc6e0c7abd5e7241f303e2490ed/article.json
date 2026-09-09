@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:1887bfb25c02480ebf0fbffce3813cfcc0b69fc6e0c7abd5e7241f303e2490ed",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/lA2ex6ke995nWf0s3X5T8w",
+    "url": "https://mp.weixin.qq.com/s/lA2ex6ke995nWf0s3X5T8w?scene=25&sessionid=-1366034058"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "关于举办东北师范大学2025届毕业生应用型人才专场招聘会的通知",
+    "source": "",
+    "publishDate": "2025-04-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/lA2ex6ke995nWf0s3X5T8w?scene=25&sessionid=-1366034058"
+  },
+  "resources": [],
+  "sourceFingerprint": "8f7d8426ba9ce6dadab4606aef93802582eaec793f4a2ec3be74b72f66161f8f",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "关于举办东北师范大学2025届毕业生应用型人才专场招聘会的通知",
+    "listPublishDate": "2025-04-23",
+    "sourceOrder": 169
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d1fbfcd730ea0617c13c7884001dc6e76a5398575a005268e93148c6f74c6813",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/7wWphXWkTqJEMI2_Zk6Z7w",
+    "url": "https://mp.weixin.qq.com/s/7wWphXWkTqJEMI2_Zk6Z7w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春金融高等专科学校举办“服务吉林高质量发展”2025届毕业生春季校园双选会",
+    "source": "",
+    "publishDate": "2025-05-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/7wWphXWkTqJEMI2_Zk6Z7w"
+  },
+  "resources": [],
+  "sourceFingerprint": "edd4e3030efeaa5212331bee44308ecd87aa6b4c8d5cf17cfa99ac907a819127",
+  "evidence": {
+    "listPage": 88,
+    "listTitle": "长春金融高等专科学校举办“服务吉林高质量发展”2025届毕业生春季校园双选会",
+    "listPublishDate": "2025-05-20",
+    "sourceOrder": 878
+  }
+}

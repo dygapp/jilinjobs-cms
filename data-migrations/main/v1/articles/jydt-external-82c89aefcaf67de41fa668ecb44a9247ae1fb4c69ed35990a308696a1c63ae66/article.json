@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:82c89aefcaf67de41fa668ecb44a9247ae1fb4c69ed35990a308696a1c63ae66",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/JBazuMocS-d6w6iqbvQTyA",
+    "url": "https://mp.weixin.qq.com/s/JBazuMocS-d6w6iqbvQTyA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林铁道职业技术大学校领导带队赴长春市轨道交通集团访企拓岗 深化校企协同育人",
+    "source": "",
+    "publishDate": "2026-03-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/JBazuMocS-d6w6iqbvQTyA"
+  },
+  "resources": [],
+  "sourceFingerprint": "b3411dc7d988f7bd7c5694a17e3307e40b2cee4999fa43a0cbfa495e69b1615c",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "吉林铁道职业技术大学校领导带队赴长春市轨道交通集团访企拓岗 深化校企协同育人",
+    "listPublishDate": "2026-03-12",
+    "sourceOrder": 424
+  }
+}

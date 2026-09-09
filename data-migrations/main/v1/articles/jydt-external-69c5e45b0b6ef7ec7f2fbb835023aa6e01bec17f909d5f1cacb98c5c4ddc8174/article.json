@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:69c5e45b0b6ef7ec7f2fbb835023aa6e01bec17f909d5f1cacb98c5c4ddc8174",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ekr840_tgAIF-90WXFPOCA",
+    "url": "https://mp.weixin.qq.com/s/ekr840_tgAIF-90WXFPOCA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "第三届延边州“‘就’在吉林，‘路’在延边 ”政校企促就业创业系列活动开幕式在吉林职业技术学院举行",
+    "source": "",
+    "publishDate": "2024-06-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ekr840_tgAIF-90WXFPOCA"
+  },
+  "resources": [],
+  "sourceFingerprint": "7fbe0cc9346b022224e4b08c91e944fd5a0f898693f76a8c84667baf4d0e5d04",
+  "evidence": {
+    "listPage": 105,
+    "listTitle": "第三届延边州“‘就’在吉林，‘路’在延边 ”政校企促就业创业系列活动开幕式在吉林职业技术学院举行",
+    "listPublishDate": "2024-06-01",
+    "sourceOrder": 1042
+  }
+}

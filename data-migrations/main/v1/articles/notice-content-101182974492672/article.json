@@ -1,0 +1,151 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:101182974492672",
+    "contentId": "101182974492672",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=101182974492672"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于召开 “吉林民企高校携手促就业行动”启动大会视频会议的通知",
+    "source": "",
+    "publishDate": "2022-07-11",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"917\" src=\"migration-resource://1d76063dd2735bf274b4dd441af88cbd56ba14f5abfaa1b7e781e698578db04e\" width=\"791\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"985\" src=\"migration-resource://451f1a410976ad61988e7eb2cd72ac8874667b4ec7a825329b66fa022d437d0c\" width=\"789\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"992\" src=\"migration-resource://73fa7c4746f7cfa84996dc975b60c52d3d9179490d5df785277ac4f85a02493a\" width=\"789\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1000\" src=\"migration-resource://18357c14485dec091710462bbd7f1fc756a8c8daf21ec072f25b81bd70ee44a4\" width=\"788\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1004\" src=\"migration-resource://615b306a5fb5e5c7da419d7695b20a77be70a621451e27eb75b586d2879932e3\" width=\"788\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"987\" src=\"migration-resource://403e8d56c4329c6cd00fe7a5eb1bc364b6e6f0abbc12f468321579bba2b240f5\" width=\"786\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1006\" src=\"migration-resource://f0417f5805baede555a06fd1c991a2163ed3bc1ed4699c60ae66a908c2f67a47\" width=\"786\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1011\" src=\"migration-resource://95500f6201079ce3dbc1bb5fcc6e5e8e0a0ad60d486319ef815cf34c41c30d5b\" width=\"789\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"999\" src=\"migration-resource://d7a31878c23109829de1b0f87846c7265df9dc7a5242c5f7b37fec8d44fd38f2\" width=\"788\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1025\" src=\"migration-resource://b4569399a848e80a243399823f9007be366f7c4dbd626607a941b02a2ee78fd0\" width=\"790\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1009\" src=\"migration-resource://753f8d4265a892b401426f824682bdfc84b1f846d0414376d8dee5a6fb0d1bcd\" width=\"788\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"991\" src=\"migration-resource://eab7e66ea3bd84e3ea4ee9d211d0b4e5bdc70c89346aad0c24d7733f79e88f4e\" width=\"788\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/eb6766bb-003b-47d3-be44-ddb74473eaa4.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-13/eb6766bb-003b-47d3-be44-ddb74473eaa4.jpg",
+      "token": "migration-resource://1d76063dd2735bf274b4dd441af88cbd56ba14f5abfaa1b7e781e698578db04e",
+      "snapshotPath": "assets/1d76063dd2735bf274b4dd441af88cbd56ba14f5abfaa1b7e781e698578db04e.jpg",
+      "sha256": "1d76063dd2735bf274b4dd441af88cbd56ba14f5abfaa1b7e781e698578db04e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81140
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/ea079a04-1fc9-455d-9603-a340f165660f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-13/ea079a04-1fc9-455d-9603-a340f165660f.jpg",
+      "token": "migration-resource://451f1a410976ad61988e7eb2cd72ac8874667b4ec7a825329b66fa022d437d0c",
+      "snapshotPath": "assets/451f1a410976ad61988e7eb2cd72ac8874667b4ec7a825329b66fa022d437d0c.jpg",
+      "sha256": "451f1a410976ad61988e7eb2cd72ac8874667b4ec7a825329b66fa022d437d0c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 72558
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/2f86e6ad-0575-45c1-be3c-b353168cc1dc.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-13/2f86e6ad-0575-45c1-be3c-b353168cc1dc.jpg",
+      "token": "migration-resource://73fa7c4746f7cfa84996dc975b60c52d3d9179490d5df785277ac4f85a02493a",
+      "snapshotPath": "assets/73fa7c4746f7cfa84996dc975b60c52d3d9179490d5df785277ac4f85a02493a.jpg",
+      "sha256": "73fa7c4746f7cfa84996dc975b60c52d3d9179490d5df785277ac4f85a02493a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95615
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/4c3b5169-e518-402e-a9c4-155dff211ccf.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-13/4c3b5169-e518-402e-a9c4-155dff211ccf.jpg",
+      "token": "migration-resource://18357c14485dec091710462bbd7f1fc756a8c8daf21ec072f25b81bd70ee44a4",
+      "snapshotPath": "assets/18357c14485dec091710462bbd7f1fc756a8c8daf21ec072f25b81bd70ee44a4.jpg",
+      "sha256": "18357c14485dec091710462bbd7f1fc756a8c8daf21ec072f25b81bd70ee44a4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 63920
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/e9569068-3411-45f3-8827-4bb564729f8e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-13/e9569068-3411-45f3-8827-4bb564729f8e.jpg",
+      "token": "migration-resource://615b306a5fb5e5c7da419d7695b20a77be70a621451e27eb75b586d2879932e3",
+      "snapshotPath": "assets/615b306a5fb5e5c7da419d7695b20a77be70a621451e27eb75b586d2879932e3.jpg",
+      "sha256": "615b306a5fb5e5c7da419d7695b20a77be70a621451e27eb75b586d2879932e3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 60531
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/4fb8eca8-7fd5-4d21-8604-0110958dd4fb.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-13/4fb8eca8-7fd5-4d21-8604-0110958dd4fb.jpg",
+      "token": "migration-resource://403e8d56c4329c6cd00fe7a5eb1bc364b6e6f0abbc12f468321579bba2b240f5",
+      "snapshotPath": "assets/403e8d56c4329c6cd00fe7a5eb1bc364b6e6f0abbc12f468321579bba2b240f5.jpg",
+      "sha256": "403e8d56c4329c6cd00fe7a5eb1bc364b6e6f0abbc12f468321579bba2b240f5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 31080
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/8c27b68f-83c4-4912-897f-a27175914108.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-13/8c27b68f-83c4-4912-897f-a27175914108.jpg",
+      "token": "migration-resource://f0417f5805baede555a06fd1c991a2163ed3bc1ed4699c60ae66a908c2f67a47",
+      "snapshotPath": "assets/f0417f5805baede555a06fd1c991a2163ed3bc1ed4699c60ae66a908c2f67a47.jpg",
+      "sha256": "f0417f5805baede555a06fd1c991a2163ed3bc1ed4699c60ae66a908c2f67a47",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77916
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/90556518-1096-4f36-90a0-3fccb69b7145.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-13/90556518-1096-4f36-90a0-3fccb69b7145.jpg",
+      "token": "migration-resource://95500f6201079ce3dbc1bb5fcc6e5e8e0a0ad60d486319ef815cf34c41c30d5b",
+      "snapshotPath": "assets/95500f6201079ce3dbc1bb5fcc6e5e8e0a0ad60d486319ef815cf34c41c30d5b.jpg",
+      "sha256": "95500f6201079ce3dbc1bb5fcc6e5e8e0a0ad60d486319ef815cf34c41c30d5b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81300
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/4c7bfffe-1325-40b4-8586-cb6b3458eb74.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-13/4c7bfffe-1325-40b4-8586-cb6b3458eb74.jpg",
+      "token": "migration-resource://d7a31878c23109829de1b0f87846c7265df9dc7a5242c5f7b37fec8d44fd38f2",
+      "snapshotPath": "assets/d7a31878c23109829de1b0f87846c7265df9dc7a5242c5f7b37fec8d44fd38f2.jpg",
+      "sha256": "d7a31878c23109829de1b0f87846c7265df9dc7a5242c5f7b37fec8d44fd38f2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 62530
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/f3ce0bee-3f42-49ff-ae5b-42eeed571517.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-13/f3ce0bee-3f42-49ff-ae5b-42eeed571517.jpg",
+      "token": "migration-resource://b4569399a848e80a243399823f9007be366f7c4dbd626607a941b02a2ee78fd0",
+      "snapshotPath": "assets/b4569399a848e80a243399823f9007be366f7c4dbd626607a941b02a2ee78fd0.jpg",
+      "sha256": "b4569399a848e80a243399823f9007be366f7c4dbd626607a941b02a2ee78fd0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 65884
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/e0abdbc9-775c-4a87-aec4-a6bfe4b73ec0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-13/e0abdbc9-775c-4a87-aec4-a6bfe4b73ec0.jpg",
+      "token": "migration-resource://753f8d4265a892b401426f824682bdfc84b1f846d0414376d8dee5a6fb0d1bcd",
+      "snapshotPath": "assets/753f8d4265a892b401426f824682bdfc84b1f846d0414376d8dee5a6fb0d1bcd.jpg",
+      "sha256": "753f8d4265a892b401426f824682bdfc84b1f846d0414376d8dee5a6fb0d1bcd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 39917
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-13/c1d2e003-0445-4723-a1ea-a3da549dee09.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-13/c1d2e003-0445-4723-a1ea-a3da549dee09.jpg",
+      "token": "migration-resource://eab7e66ea3bd84e3ea4ee9d211d0b4e5bdc70c89346aad0c24d7733f79e88f4e",
+      "snapshotPath": "assets/eab7e66ea3bd84e3ea4ee9d211d0b4e5bdc70c89346aad0c24d7733f79e88f4e.jpg",
+      "sha256": "eab7e66ea3bd84e3ea4ee9d211d0b4e5bdc70c89346aad0c24d7733f79e88f4e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 24953
+    }
+  ],
+  "sourceFingerprint": "9260d62e9058473d66937f86aefabd07800b998e95924aff6e190f0482f7cbe5",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "关于召开 “吉林民企高校携手促就业行动”启动大会视频会议的通知",
+    "listPublishDate": "2022-07-11",
+    "sourceOrder": 118,
+    "detailPublishDate": "2022-07-11"
+  }
+}

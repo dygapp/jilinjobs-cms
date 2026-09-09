@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:6836196164617860bd0aca6a87982191ad740052988d891c8d5e16684a3caf84",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/l4LnCDsrTikhQNkDwCcsqw",
+    "url": "https://mp.weixin.qq.com/s/l4LnCDsrTikhQNkDwCcsqw?scene=25&sessionid=-1366104966"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "邀请函 | “先生向北 青春聚吉”大学生留吉发展专场招聘会",
+    "source": "",
+    "publishDate": "2025-04-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/l4LnCDsrTikhQNkDwCcsqw?scene=25&sessionid=-1366104966"
+  },
+  "resources": [],
+  "sourceFingerprint": "fc98bd27404a4cc6d98091cc0539fa535480f03a5055ba133a7ff58ddc502cd6",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "邀请函 | “先生向北 青春聚吉”大学生留吉发展专场招聘会",
+    "listPublishDate": "2025-04-23",
+    "sourceOrder": 170
+  }
+}

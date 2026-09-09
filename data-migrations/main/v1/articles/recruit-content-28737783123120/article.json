@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123120",
+    "contentId": "28737783123120",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123120"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "新疆和田面向吉林省引进人才信息",
+    "source": "市场部",
+    "publishDate": "2021-05-18",
+    "bodyHtml": "\n                        <p><a name=\"_Toc31283_WPSOffice_Level1\"></a><a name=\"_Toc32702_WPSOffice_Level1\"></a><a name=\"_Toc21982_WPSOffice_Level1\"></a><a name=\"_Toc22847_WPSOffice_Level1\"></a>一、报名条件</p>\n\n<p>全日制本科及以上学历，中共党员（含预备党员），专业不限，原则上35周岁以下（1985年5月以后出生）。</p>\n\n<p>二、报名时间</p>\n\n<p>2021年5月15日—6月30日</p>\n\n<ul>\n\t<li>报名方式</li>\n</ul>\n\n<p>&nbsp;&nbsp;&nbsp; 报名人员自行下载填写报名表，将报名表、学籍在线验证报告（学信网下载）和相关资质证书照片发至报名邮箱（htzzbgwyJL@163.com）。</p>\n\n<p>四、薪酬待遇</p>\n\n<p>本次引进人才，均纳入正式编制。本科学历每月7500元左右，研究生学历每月8000—9000元。引进后，按1人1套拎包入住标准提供住房保障，单位有集体食堂，报销大学学费，按规定享受探亲假。</p>\n\n<p>五、咨询电话</p>\n\n<p>联系人：蔡老师（18096838755）</p>\n\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 徐老师（18220055082）</p>\n\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 初老师（18799562709）</p>\n\n<p>附件：报名表</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "9aaebbef0f69bbe09189a9adaf3b5dde91d615a433839621d60abbd1ffbf6727",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "新疆和田面向吉林省引进人才信息",
+    "listPublishDate": "2021-05-18",
+    "sourceOrder": 355,
+    "detailPublishDate": "2021-05-18"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6d6780eb1f64b9ef6216d58eafa894ceddc177e66e59234ba0c02a37d9ddb913",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Y5PetpbPTgLlepe7d5DpmQ",
+    "url": "https://mp.weixin.qq.com/s/Y5PetpbPTgLlepe7d5DpmQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "牵手北京华生康复医院 长春早期教育职业学院打造康养人才“临床-教学-就业”直通车",
+    "source": "",
+    "publishDate": "2026-01-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Y5PetpbPTgLlepe7d5DpmQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "f423216ffc449098ac1002ebc50b2d6002ce34f43148d660d15844b6387980a0",
+  "evidence": {
+    "listPage": 49,
+    "listTitle": "牵手北京华生康复医院 长春早期教育职业学院打造康养人才“临床-教学-就业”直通车",
+    "listPublishDate": "2026-01-19",
+    "sourceOrder": 488
+  }
+}

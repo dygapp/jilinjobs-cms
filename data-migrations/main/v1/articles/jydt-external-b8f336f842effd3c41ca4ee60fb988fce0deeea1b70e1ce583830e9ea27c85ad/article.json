@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b8f336f842effd3c41ca4ee60fb988fce0deeea1b70e1ce583830e9ea27c85ad",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/TfG-xQJl_urFbnk1UebzHg",
+    "url": "https://mp.weixin.qq.com/s/TfG-xQJl_urFbnk1UebzHg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林医药学院校领导带队赴长春市开展政校企合作",
+    "source": "",
+    "publishDate": "2026-05-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/TfG-xQJl_urFbnk1UebzHg"
+  },
+  "resources": [],
+  "sourceFingerprint": "e7138b2e13f1fd3081df3dd89df83102e26ad16b18b0cf36ccce4ab0ad55d12e",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "吉林医药学院校领导带队赴长春市开展政校企合作",
+    "listPublishDate": "2026-05-22",
+    "sourceOrder": 150
+  }
+}

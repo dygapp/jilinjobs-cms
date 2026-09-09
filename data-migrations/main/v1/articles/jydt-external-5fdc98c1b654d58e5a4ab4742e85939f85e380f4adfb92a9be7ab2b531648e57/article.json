@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5fdc98c1b654d58e5a4ab4742e85939f85e380f4adfb92a9be7ab2b531648e57",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/pgz166ECbJayn54Z8MC9IQ",
+    "url": "https://mp.weixin.qq.com/s/pgz166ECbJayn54Z8MC9IQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 ‘就’在通化”宣讲引才活动在长春中医药大学举行",
+    "source": "",
+    "publishDate": "2024-04-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/pgz166ECbJayn54Z8MC9IQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "dbd55aaef3fbd2daaa5543d822efb0b03677a0ade643aac11cfd1b9bdff3123a",
+  "evidence": {
+    "listPage": 108,
+    "listTitle": "“创业奋斗 ‘就’在通化”宣讲引才活动在长春中医药大学举行",
+    "listPublishDate": "2024-04-16",
+    "sourceOrder": 1079
+  }
+}

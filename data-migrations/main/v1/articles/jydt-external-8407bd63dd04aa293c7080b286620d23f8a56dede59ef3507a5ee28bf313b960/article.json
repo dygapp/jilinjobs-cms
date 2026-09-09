@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8407bd63dd04aa293c7080b286620d23f8a56dede59ef3507a5ee28bf313b960",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/1SyTElUjJLY3sE6BgZc4BQ",
+    "url": "https://mp.weixin.qq.com/s/1SyTElUjJLY3sE6BgZc4BQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学党委副书记仲秋野赴浙江省北京市开展访企拓岗活动",
+    "source": "",
+    "publishDate": "2025-07-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1SyTElUjJLY3sE6BgZc4BQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "5b780cd926b00877c38ed4dbe57950e52d225017498313e156a50069657701ff",
+  "evidence": {
+    "listPage": 74,
+    "listTitle": "北华大学党委副书记仲秋野赴浙江省北京市开展访企拓岗活动",
+    "listPublishDate": "2025-07-10",
+    "sourceOrder": 731
+  }
+}

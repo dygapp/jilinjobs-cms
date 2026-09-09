@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f4374950a69669dfbd41bad913f3e30c179601a2d0f0cfc49fc8d42edb7f1f9b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/6HQusT23FdFGgF4_tKZiPg",
+    "url": "https://mp.weixin.qq.com/s/6HQusT23FdFGgF4_tKZiPg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学举办中国核电2026届校园招聘宣讲会",
+    "source": "",
+    "publishDate": "2025-09-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/6HQusT23FdFGgF4_tKZiPg"
+  },
+  "resources": [],
+  "sourceFingerprint": "3f9442184b8267e66e5957cdc7cb45d26737a14fbfd716c3bca686017139f9c5",
+  "evidence": {
+    "listPage": 71,
+    "listTitle": "东北电力大学举办中国核电2026届校园招聘宣讲会",
+    "listPublishDate": "2025-09-22",
+    "sourceOrder": 702
+  }
+}

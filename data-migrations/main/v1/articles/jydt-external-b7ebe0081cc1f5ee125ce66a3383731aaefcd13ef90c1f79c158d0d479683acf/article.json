@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b7ebe0081cc1f5ee125ce66a3383731aaefcd13ef90c1f79c158d0d479683acf",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Bjt4HNq8R-_iIkyNEYVNNg",
+    "url": "https://mp.weixin.qq.com/s/Bjt4HNq8R-_iIkyNEYVNNg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化医药健康职业学院赴辉南县开展“优企引才”定向访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-03-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Bjt4HNq8R-_iIkyNEYVNNg"
+  },
+  "resources": [],
+  "sourceFingerprint": "d5b6e30cfdff5dfecc746c8278e6ff6a5d39473f9c2cee49531f5b624c35f9de",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "通化医药健康职业学院赴辉南县开展“优企引才”定向访企拓岗专项行动",
+    "listPublishDate": "2026-03-25",
+    "sourceOrder": 365
+  }
+}

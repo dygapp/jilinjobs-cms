@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f09214b6c9c7519f5cfa8dea3150dd2f59e957a51e217b244d30f359c1a580c9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/AeMmtMx76XKM1a7KkXEfOg",
+    "url": "https://mp.weixin.qq.com/s/AeMmtMx76XKM1a7KkXEfOg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林化工大学校长艾学忠率队赴吉林重点企业访企拓岗",
+    "source": "",
+    "publishDate": "2026-04-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/AeMmtMx76XKM1a7KkXEfOg"
+  },
+  "resources": [],
+  "sourceFingerprint": "d737f124d717bae2fbbdbba24c1d20a6857e5c520b9edb1ae5d718faf599644a",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "吉林化工大学校长艾学忠率队赴吉林重点企业访企拓岗",
+    "listPublishDate": "2026-04-03",
+    "sourceOrder": 322
+  }
+}

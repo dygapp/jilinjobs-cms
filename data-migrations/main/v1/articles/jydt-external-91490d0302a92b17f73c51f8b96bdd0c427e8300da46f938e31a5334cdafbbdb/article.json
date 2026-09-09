@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:91490d0302a92b17f73c51f8b96bdd0c427e8300da46f938e31a5334cdafbbdb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/oa_vV-EoV26LtKA7FBERwQ",
+    "url": "https://mp.weixin.qq.com/s/oa_vV-EoV26LtKA7FBERwQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林延鼎发展集团有限公司到延边大学开展校企座谈会",
+    "source": "",
+    "publishDate": "2025-11-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/oa_vV-EoV26LtKA7FBERwQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "d947f811e6281229e82ced07a53162aa905d615a46d591d0046e71a7d8f1c9a7",
+  "evidence": {
+    "listPage": 64,
+    "listTitle": "吉林延鼎发展集团有限公司到延边大学开展校企座谈会",
+    "listPublishDate": "2025-11-04",
+    "sourceOrder": 634
+  }
+}

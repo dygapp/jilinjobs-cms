@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f4349e4d7edcb101c49b72685971854ee08c70e8ee84e5c2bf3ee6f5e466b5c3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/aTX8_F1fX9hDz5aKLWL1WQ",
+    "url": "https://mp.weixin.qq.com/s/aTX8_F1fX9hDz5aKLWL1WQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林医药学院召开2025届毕业生就业工作第五次推进会",
+    "source": "",
+    "publishDate": "2025-06-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/aTX8_F1fX9hDz5aKLWL1WQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "7cb77cdfacc6b8d1155c0b2f3cef3c99947bfe4349b384cff11f23fd88b4278a",
+  "evidence": {
+    "listPage": 82,
+    "listTitle": "吉林医药学院召开2025届毕业生就业工作第五次推进会",
+    "listPublishDate": "2025-06-13",
+    "sourceOrder": 818
+  }
+}

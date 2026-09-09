@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122806",
+    "contentId": "28737783122806",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122806"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于联合开展全省普通高校毕业生就业创业服务月活动的通知",
+    "source": "",
+    "publishDate": "2016-06-22",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于联合开展全省普通高校毕业生就业创业服务月活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2016-6-22 16:26:38</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img title=\"关于联合开展全省普通高校毕业生就业创业服务月活动的通知-01.jpg\" src=\"migration-resource://fb6a4c45eaac20f09f5748ad85e7ea82e5639bbe8a6bf6b31abd629295b07325\"></p><p style=\"text-align: center\"><img title=\"关于联合开展全省普通高校毕业生就业创业服务月活动的通知-02.jpg\" src=\"migration-resource://22314fac910c610424ee590180d32edc6c672f79662ec36a955ba379321fae96\"></p><p style=\"text-align: center\"><img title=\"关于联合开展全省普通高校毕业生就业创业服务月活动的通知-03.jpg\" src=\"migration-resource://1d190c81e5df61a6943032d68ccd491a81daba0cc5157b9becc8126b0c795ffc\"></p><p style=\"text-align: center;\"><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360220963212687501572909.jpg",
+      "originalReference": "/chistory/cms/imgs/6360220963212687501572909.jpg",
+      "token": "migration-resource://fb6a4c45eaac20f09f5748ad85e7ea82e5639bbe8a6bf6b31abd629295b07325",
+      "snapshotPath": "assets/fb6a4c45eaac20f09f5748ad85e7ea82e5639bbe8a6bf6b31abd629295b07325.jpg",
+      "sha256": "fb6a4c45eaac20f09f5748ad85e7ea82e5639bbe8a6bf6b31abd629295b07325",
+      "contentType": "image/jpeg",
+      "sizeBytes": 80989
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360220963359562505557988.jpg",
+      "originalReference": "/chistory/cms/imgs/6360220963359562505557988.jpg",
+      "token": "migration-resource://22314fac910c610424ee590180d32edc6c672f79662ec36a955ba379321fae96",
+      "snapshotPath": "assets/22314fac910c610424ee590180d32edc6c672f79662ec36a955ba379321fae96.jpg",
+      "sha256": "22314fac910c610424ee590180d32edc6c672f79662ec36a955ba379321fae96",
+      "contentType": "image/jpeg",
+      "sizeBytes": 76851
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360220963509562502299729.jpg",
+      "originalReference": "/chistory/cms/imgs/6360220963509562502299729.jpg",
+      "token": "migration-resource://1d190c81e5df61a6943032d68ccd491a81daba0cc5157b9becc8126b0c795ffc",
+      "snapshotPath": "assets/1d190c81e5df61a6943032d68ccd491a81daba0cc5157b9becc8126b0c795ffc.jpg",
+      "sha256": "1d190c81e5df61a6943032d68ccd491a81daba0cc5157b9becc8126b0c795ffc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 47664
+    }
+  ],
+  "sourceFingerprint": "caf0723228d642cce26eb0ddc0b814a90640c7f2d4d7893a2ed808a89b17f0c8",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "关于联合开展全省普通高校毕业生就业创业服务月活动的通知",
+    "listPublishDate": "2016-06-22",
+    "sourceOrder": 248,
+    "detailPublishDate": "2016-06-22"
+  }
+}

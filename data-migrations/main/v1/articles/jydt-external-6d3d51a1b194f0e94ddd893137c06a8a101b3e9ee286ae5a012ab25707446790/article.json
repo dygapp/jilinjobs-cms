@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6d3d51a1b194f0e94ddd893137c06a8a101b3e9ee286ae5a012ab25707446790",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/vsLPbDvx2R6ulbyONwX9uQ",
+    "url": "https://mp.weixin.qq.com/s/vsLPbDvx2R6ulbyONwX9uQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗强合作 情系学子暖滨城——长白山职业技术学院护理系大连走访纪实",
+    "source": "",
+    "publishDate": "2026-01-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vsLPbDvx2R6ulbyONwX9uQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "a14c3d5fdcda38fcbd3e62409f7e6fb87db33b99388c922cd439a10215fe0900",
+  "evidence": {
+    "listPage": 49,
+    "listTitle": "访企拓岗强合作 情系学子暖滨城——长白山职业技术学院护理系大连走访纪实",
+    "listPublishDate": "2026-01-23",
+    "sourceOrder": 482
+  }
+}

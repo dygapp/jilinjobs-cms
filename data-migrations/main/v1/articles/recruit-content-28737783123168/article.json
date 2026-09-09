@@ -1,0 +1,161 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123168",
+    "contentId": "28737783123168",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123168"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省高校毕业生就业政策宣传报道资料",
+    "source": "",
+    "publishDate": "2012-06-15",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省高校毕业生就业政策宣传报道资料</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-6-15 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://b766f7e084657c584b2a01a24a0955ae89ef098cba22d8ddeeddabfcae4255d9\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://21a1c01940fb4f7e15a3bbcc9a917d01b06847f66fadb0783f9a7c99fa6132a5\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://1b90bb3b3ce8835fed1840c0e9966e1ece541b9b084640846c7b99ac04a3446c\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://85bc121939ff3e884cf0288010442ef767f8c2c221bd167afd8b47d1dfe1612e\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://850cd44094074bcd09e9d16714ca630f3e6c570a508fdcd42aeae116f6b7d4f4\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://7fccb8af178417272b14f533b22218f0216169ed64c249889bf2a6a4ec0b3622\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://ee8c5a218fd84ba05e0df1239abcee636a464ac64bc220d52355e4ddeb75a13f\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://d725ef64d009744e30852328e7371910ec8bde944ec36f2ec15f34562fedbc62\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://fa25f2d5858a3a2064505036a083f5d17443cf210d84b1721889c2d89ea5b92e\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://d58ea2cf47582a6128dee5f53ec3bdf78cc4cc8f4b957ea52ce68fae7bb7a580\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://8ec6588b2df58eb2995619095624edd9ecb19a521f4896e3b6252df4710850dd\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://917c7664c7448c8922349d0e4d8a5840aeb2c08f70faf5bedd4decc7ffd8fe98\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://f82b6e47d21513247a6a46e8e7f3dc19fb81c5e522755ee22b33f38ee676e6f8\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120710131546111.jpg",
+      "originalReference": "/chistory/cms/imgs/20120710131546111.jpg",
+      "token": "migration-resource://b766f7e084657c584b2a01a24a0955ae89ef098cba22d8ddeeddabfcae4255d9",
+      "snapshotPath": "assets/b766f7e084657c584b2a01a24a0955ae89ef098cba22d8ddeeddabfcae4255d9.jpg",
+      "sha256": "b766f7e084657c584b2a01a24a0955ae89ef098cba22d8ddeeddabfcae4255d9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 74111
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120710131553581.jpg",
+      "originalReference": "/chistory/cms/imgs/20120710131553581.jpg",
+      "token": "migration-resource://21a1c01940fb4f7e15a3bbcc9a917d01b06847f66fadb0783f9a7c99fa6132a5",
+      "snapshotPath": "assets/21a1c01940fb4f7e15a3bbcc9a917d01b06847f66fadb0783f9a7c99fa6132a5.jpg",
+      "sha256": "21a1c01940fb4f7e15a3bbcc9a917d01b06847f66fadb0783f9a7c99fa6132a5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 79008
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120710131558501.jpg",
+      "originalReference": "/chistory/cms/imgs/20120710131558501.jpg",
+      "token": "migration-resource://1b90bb3b3ce8835fed1840c0e9966e1ece541b9b084640846c7b99ac04a3446c",
+      "snapshotPath": "assets/1b90bb3b3ce8835fed1840c0e9966e1ece541b9b084640846c7b99ac04a3446c.jpg",
+      "sha256": "1b90bb3b3ce8835fed1840c0e9966e1ece541b9b084640846c7b99ac04a3446c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93930
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120710131602131.jpg",
+      "originalReference": "/chistory/cms/imgs/20120710131602131.jpg",
+      "token": "migration-resource://85bc121939ff3e884cf0288010442ef767f8c2c221bd167afd8b47d1dfe1612e",
+      "snapshotPath": "assets/85bc121939ff3e884cf0288010442ef767f8c2c221bd167afd8b47d1dfe1612e.jpg",
+      "sha256": "85bc121939ff3e884cf0288010442ef767f8c2c221bd167afd8b47d1dfe1612e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 98108
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120710131608802.jpg",
+      "originalReference": "/chistory/cms/imgs/20120710131608802.jpg",
+      "token": "migration-resource://850cd44094074bcd09e9d16714ca630f3e6c570a508fdcd42aeae116f6b7d4f4",
+      "snapshotPath": "assets/850cd44094074bcd09e9d16714ca630f3e6c570a508fdcd42aeae116f6b7d4f4.jpg",
+      "sha256": "850cd44094074bcd09e9d16714ca630f3e6c570a508fdcd42aeae116f6b7d4f4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 100899
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120710131613297.jpg",
+      "originalReference": "/chistory/cms/imgs/20120710131613297.jpg",
+      "token": "migration-resource://7fccb8af178417272b14f533b22218f0216169ed64c249889bf2a6a4ec0b3622",
+      "snapshotPath": "assets/7fccb8af178417272b14f533b22218f0216169ed64c249889bf2a6a4ec0b3622.jpg",
+      "sha256": "7fccb8af178417272b14f533b22218f0216169ed64c249889bf2a6a4ec0b3622",
+      "contentType": "image/jpeg",
+      "sizeBytes": 98632
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120710131618574.jpg",
+      "originalReference": "/chistory/cms/imgs/20120710131618574.jpg",
+      "token": "migration-resource://ee8c5a218fd84ba05e0df1239abcee636a464ac64bc220d52355e4ddeb75a13f",
+      "snapshotPath": "assets/ee8c5a218fd84ba05e0df1239abcee636a464ac64bc220d52355e4ddeb75a13f.jpg",
+      "sha256": "ee8c5a218fd84ba05e0df1239abcee636a464ac64bc220d52355e4ddeb75a13f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 97184
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120710131622966.jpg",
+      "originalReference": "/chistory/cms/imgs/20120710131622966.jpg",
+      "token": "migration-resource://d725ef64d009744e30852328e7371910ec8bde944ec36f2ec15f34562fedbc62",
+      "snapshotPath": "assets/d725ef64d009744e30852328e7371910ec8bde944ec36f2ec15f34562fedbc62.jpg",
+      "sha256": "d725ef64d009744e30852328e7371910ec8bde944ec36f2ec15f34562fedbc62",
+      "contentType": "image/jpeg",
+      "sizeBytes": 97519
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120710131627469.jpg",
+      "originalReference": "/chistory/cms/imgs/20120710131627469.jpg",
+      "token": "migration-resource://fa25f2d5858a3a2064505036a083f5d17443cf210d84b1721889c2d89ea5b92e",
+      "snapshotPath": "assets/fa25f2d5858a3a2064505036a083f5d17443cf210d84b1721889c2d89ea5b92e.jpg",
+      "sha256": "fa25f2d5858a3a2064505036a083f5d17443cf210d84b1721889c2d89ea5b92e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95382
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120710131632245.jpg",
+      "originalReference": "/chistory/cms/imgs/20120710131632245.jpg",
+      "token": "migration-resource://d58ea2cf47582a6128dee5f53ec3bdf78cc4cc8f4b957ea52ce68fae7bb7a580",
+      "snapshotPath": "assets/d58ea2cf47582a6128dee5f53ec3bdf78cc4cc8f4b957ea52ce68fae7bb7a580.jpg",
+      "sha256": "d58ea2cf47582a6128dee5f53ec3bdf78cc4cc8f4b957ea52ce68fae7bb7a580",
+      "contentType": "image/jpeg",
+      "sizeBytes": 99287
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120710131637981.jpg",
+      "originalReference": "/chistory/cms/imgs/20120710131637981.jpg",
+      "token": "migration-resource://8ec6588b2df58eb2995619095624edd9ecb19a521f4896e3b6252df4710850dd",
+      "snapshotPath": "assets/8ec6588b2df58eb2995619095624edd9ecb19a521f4896e3b6252df4710850dd.jpg",
+      "sha256": "8ec6588b2df58eb2995619095624edd9ecb19a521f4896e3b6252df4710850dd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 96004
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120710131643207.jpg",
+      "originalReference": "/chistory/cms/imgs/20120710131643207.jpg",
+      "token": "migration-resource://917c7664c7448c8922349d0e4d8a5840aeb2c08f70faf5bedd4decc7ffd8fe98",
+      "snapshotPath": "assets/917c7664c7448c8922349d0e4d8a5840aeb2c08f70faf5bedd4decc7ffd8fe98.jpg",
+      "sha256": "917c7664c7448c8922349d0e4d8a5840aeb2c08f70faf5bedd4decc7ffd8fe98",
+      "contentType": "image/jpeg",
+      "sizeBytes": 97142
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120710131647204.jpg",
+      "originalReference": "/chistory/cms/imgs/20120710131647204.jpg",
+      "token": "migration-resource://f82b6e47d21513247a6a46e8e7f3dc19fb81c5e522755ee22b33f38ee676e6f8",
+      "snapshotPath": "assets/f82b6e47d21513247a6a46e8e7f3dc19fb81c5e522755ee22b33f38ee676e6f8.jpg",
+      "sha256": "f82b6e47d21513247a6a46e8e7f3dc19fb81c5e522755ee22b33f38ee676e6f8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 91533
+    }
+  ],
+  "sourceFingerprint": "e67b8e0c2eaf1288c6d47cbf33bce00ba0fef534eea854c459786b79034afda1",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "吉林省高校毕业生就业政策宣传报道资料",
+    "listPublishDate": "2012-06-15",
+    "sourceOrder": 434,
+    "detailPublishDate": "2012-06-15"
+  }
+}

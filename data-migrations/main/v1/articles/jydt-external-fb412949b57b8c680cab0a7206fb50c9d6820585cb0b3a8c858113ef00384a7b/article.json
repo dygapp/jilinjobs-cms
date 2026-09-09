@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fb412949b57b8c680cab0a7206fb50c9d6820585cb0b3a8c858113ef00384a7b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/LjuyEtePqKVuNqQD2DdaQQ",
+    "url": "https://mp.weixin.qq.com/s/LjuyEtePqKVuNqQD2DdaQQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促发展 协同育人谱新篇 | 长春早期教育职业学院赴两所优质机构达成深度合作共识",
+    "source": "",
+    "publishDate": "2026-07-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/LjuyEtePqKVuNqQD2DdaQQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "0d3b8ee6d67eec001f120ae1fdb2eac4393403f6b550a5f9ed8982cd2fe92e52",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "访企拓岗促发展 协同育人谱新篇 | 长春早期教育职业学院赴两所优质机构达成深度合作共识",
+    "listPublishDate": "2026-07-14",
+    "sourceOrder": 47
+  }
+}

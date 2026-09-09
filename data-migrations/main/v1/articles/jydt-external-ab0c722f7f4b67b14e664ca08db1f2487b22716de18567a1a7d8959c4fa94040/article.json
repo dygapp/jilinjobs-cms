@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ab0c722f7f4b67b14e664ca08db1f2487b22716de18567a1a7d8959c4fa94040",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/2025/0328/c538a69355/page.htm",
+    "url": "https://www.caii.edu.cn/2025/0328/c538a69355/page.htm?sessionid=-1369613460"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春汽车职业技术大学与宁波市北仑区人社局开展“奔甬而来 职达北仑” 政校企就业合作活动",
+    "source": "",
+    "publishDate": "2025-04-01",
+    "bodyHtml": "",
+    "externalUrl": "https://www.caii.edu.cn/2025/0328/c538a69355/page.htm?sessionid=-1369613460"
+  },
+  "resources": [],
+  "sourceFingerprint": "6fb46629dc0061e51b3fd3ad63da7ee65c377d772e446986f0149aa350823b76",
+  "evidence": {
+    "listPage": 96,
+    "listTitle": "长春汽车职业技术大学与宁波市北仑区人社局开展“奔甬而来 职达北仑” 政校企就业合作活动",
+    "listPublishDate": "2025-04-01",
+    "sourceOrder": 957
+  }
+}

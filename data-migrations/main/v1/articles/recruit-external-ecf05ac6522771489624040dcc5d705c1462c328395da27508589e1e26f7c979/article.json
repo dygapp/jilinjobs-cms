@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:ecf05ac6522771489624040dcc5d705c1462c328395da27508589e1e26f7c979",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/8DADc0HiO2ZhtAZQfLvNbw",
+    "url": "https://mp.weixin.qq.com/s/8DADc0HiO2ZhtAZQfLvNbw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学寒假促就业暖心行动视频双选会参与指南",
+    "source": "",
+    "publishDate": "2026-02-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/8DADc0HiO2ZhtAZQfLvNbw"
+  },
+  "resources": [],
+  "sourceFingerprint": "5c54f0652adacab4e8a94699a82bc4d0be456cd38ef352ccab158354fe6ae873",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "延边大学寒假促就业暖心行动视频双选会参与指南",
+    "listPublishDate": "2026-02-02",
+    "sourceOrder": 73
+  }
+}

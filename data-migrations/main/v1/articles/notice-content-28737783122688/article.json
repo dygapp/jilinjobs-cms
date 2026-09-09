@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122688",
+    "contentId": "28737783122688",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122688"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发开展2021年高校职业生涯咨询特色工作室推选工作的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2021-03-16",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://e96edfe70748826a57f3c8d2bca7fbebe176892557d4e52b350f3e763448ee3c\" width=\"1000\"></p>\n\n<p style=\"text-align:left\"><span style=\"color:#000000\"><a href=\"http://smart.jilinjobs.cn/files/cms/content/20210317085647.pdf\" target=\"_blank\">附件：关于开展2021年高校职业生涯咨询特色工作室推选工作的通知</a></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210317085608.jpg",
+      "originalReference": "/chistory/cms/editor/20210317085608.jpg",
+      "token": "migration-resource://e96edfe70748826a57f3c8d2bca7fbebe176892557d4e52b350f3e763448ee3c",
+      "snapshotPath": "assets/e96edfe70748826a57f3c8d2bca7fbebe176892557d4e52b350f3e763448ee3c.jpg",
+      "sha256": "e96edfe70748826a57f3c8d2bca7fbebe176892557d4e52b350f3e763448ee3c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 214778
+    }
+  ],
+  "sourceFingerprint": "3257e02102a1fa6385e5fba40771d4968d71b09769bc4a61685de4babaeff6be",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "关于转发开展2021年高校职业生涯咨询特色工作室推选工作的通知",
+    "listPublishDate": "2021-03-16",
+    "sourceOrder": 160,
+    "detailPublishDate": "2021-03-16"
+  }
+}

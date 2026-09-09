@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:4c4d54f9eb49efae1930112c10ec7432ceb460b0546f655e21ee18e3e3f90ee1",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/8tq8LzAZy5COM4gLUimD7g",
+    "url": "https://mp.weixin.qq.com/s/8tq8LzAZy5COM4gLUimD7g"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“服务吉林高质量发展” 长春人文学院2025届毕业生春季网络招聘会邀请函",
+    "source": "",
+    "publishDate": "2025-03-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/8tq8LzAZy5COM4gLUimD7g"
+  },
+  "resources": [],
+  "sourceFingerprint": "b0b9fb063f87961b7bd8a80a15de52b0dd0315e7c9831d3909fba303c5ddffe9",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "“服务吉林高质量发展” 长春人文学院2025届毕业生春季网络招聘会邀请函",
+    "listPublishDate": "2025-03-18",
+    "sourceOrder": 212
+  }
+}

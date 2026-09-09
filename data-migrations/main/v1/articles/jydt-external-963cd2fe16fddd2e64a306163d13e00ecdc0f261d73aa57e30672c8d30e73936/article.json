@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:963cd2fe16fddd2e64a306163d13e00ecdc0f261d73aa57e30672c8d30e73936",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/wVWB0HoAsk2iqDhgW518DA",
+    "url": "https://mp.weixin.qq.com/s/wVWB0HoAsk2iqDhgW518DA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范高等专科学校召开2026年春季学期就业工作部署会",
+    "source": "",
+    "publishDate": "2026-03-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wVWB0HoAsk2iqDhgW518DA"
+  },
+  "resources": [],
+  "sourceFingerprint": "3211381babd2d5e50218163e07732884e3162187c784c93282e7f1b1e47b3ac8",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "长春师范高等专科学校召开2026年春季学期就业工作部署会",
+    "listPublishDate": "2026-03-16",
+    "sourceOrder": 418
+  }
+}

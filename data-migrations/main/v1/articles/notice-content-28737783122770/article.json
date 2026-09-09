@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122770",
+    "contentId": "28737783122770",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122770"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办京津冀地区面向2017届高校毕业生网上双选月活动的通知",
+    "source": "",
+    "publishDate": "2016-12-01",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办京津冀地区面向2017届高校毕业生网上双选月活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2016-12-1 14:25:54</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img title=\"1.jpg\" src=\"migration-resource://e28c3241cb3ffeca6b1a7f86535ccee935d788c3d664e97b94237d4755809e90\"></p><p style=\"text-align: center\"><img title=\"2.jpg\" src=\"migration-resource://96964a3c3e791bf8e7a0527b93136c1bd974634aaacbdc375005b70ca3aa7adf\"></p><p style=\"text-align: center\"><img title=\"3.jpg\" src=\"migration-resource://33e6e7b6ce9932226a95d7d30d8800a5910d945497cb8ae0cc91451b8664376a\"></p><p style=\"text-align: center\"><img title=\"4.jpg\" src=\"migration-resource://143c3b235f5f446325174610c742b661f5e8ad979ca742ad60177ddbd26d3610\"></p><p><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361619922875562507553876.jpg",
+      "originalReference": "/chistory/cms/imgs/6361619922875562507553876.jpg",
+      "token": "migration-resource://e28c3241cb3ffeca6b1a7f86535ccee935d788c3d664e97b94237d4755809e90",
+      "snapshotPath": "assets/e28c3241cb3ffeca6b1a7f86535ccee935d788c3d664e97b94237d4755809e90.jpg",
+      "sha256": "e28c3241cb3ffeca6b1a7f86535ccee935d788c3d664e97b94237d4755809e90",
+      "contentType": "image/jpeg",
+      "sizeBytes": 104538
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361619922991187506866845.jpg",
+      "originalReference": "/chistory/cms/imgs/6361619922991187506866845.jpg",
+      "token": "migration-resource://96964a3c3e791bf8e7a0527b93136c1bd974634aaacbdc375005b70ca3aa7adf",
+      "snapshotPath": "assets/96964a3c3e791bf8e7a0527b93136c1bd974634aaacbdc375005b70ca3aa7adf.jpg",
+      "sha256": "96964a3c3e791bf8e7a0527b93136c1bd974634aaacbdc375005b70ca3aa7adf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 101512
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361619923111500002165721.jpg",
+      "originalReference": "/chistory/cms/imgs/6361619923111500002165721.jpg",
+      "token": "migration-resource://33e6e7b6ce9932226a95d7d30d8800a5910d945497cb8ae0cc91451b8664376a",
+      "snapshotPath": "assets/33e6e7b6ce9932226a95d7d30d8800a5910d945497cb8ae0cc91451b8664376a.jpg",
+      "sha256": "33e6e7b6ce9932226a95d7d30d8800a5910d945497cb8ae0cc91451b8664376a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82151
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361619923241187507436414.jpg",
+      "originalReference": "/chistory/cms/imgs/6361619923241187507436414.jpg",
+      "token": "migration-resource://143c3b235f5f446325174610c742b661f5e8ad979ca742ad60177ddbd26d3610",
+      "snapshotPath": "assets/143c3b235f5f446325174610c742b661f5e8ad979ca742ad60177ddbd26d3610.jpg",
+      "sha256": "143c3b235f5f446325174610c742b661f5e8ad979ca742ad60177ddbd26d3610",
+      "contentType": "image/jpeg",
+      "sizeBytes": 40136
+    }
+  ],
+  "sourceFingerprint": "cae102b9df9ec29e0bbe88af241467ff9c3a6ba7161476e7e98006235a5193b0",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "关于举办京津冀地区面向2017届高校毕业生网上双选月活动的通知",
+    "listPublishDate": "2016-12-01",
+    "sourceOrder": 228,
+    "detailPublishDate": "2016-12-01"
+  }
+}

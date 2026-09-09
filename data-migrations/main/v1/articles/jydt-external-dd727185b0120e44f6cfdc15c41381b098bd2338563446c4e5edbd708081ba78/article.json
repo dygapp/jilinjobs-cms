@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:dd727185b0120e44f6cfdc15c41381b098bd2338563446c4e5edbd708081ba78",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/iPcqVI93jJH3n6KzyxuXOQ",
+    "url": "https://mp.weixin.qq.com/s/iPcqVI93jJH3n6KzyxuXOQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学人文信息学院成功举办吉林教育电视台重点合作单位授牌仪式暨《就业吉林》2026启航仪式",
+    "source": "",
+    "publishDate": "2026-06-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/iPcqVI93jJH3n6KzyxuXOQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "12daa9efff1d7df88da02fd8c333388390da12175e7e3d196cf89d6a50daa53d",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "长春工业大学人文信息学院成功举办吉林教育电视台重点合作单位授牌仪式暨《就业吉林》2026启航仪式",
+    "listPublishDate": "2026-06-04",
+    "sourceOrder": 103
+  }
+}

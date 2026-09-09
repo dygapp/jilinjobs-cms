@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cf5e5dbaa386d5444f244de89373eddead1381f28c38fa8ffcf7498980f0fd58",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xQWhbW-JTKCv35HjKCJLbg",
+    "url": "https://mp.weixin.qq.com/s/xQWhbW-JTKCv35HjKCJLbg?scene=25&sessionid=-617920340"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中国广核集团来校举办2025届毕业生春季招聘暨2026届“订单+联合”培养班宣讲会",
+    "source": "",
+    "publishDate": "2025-03-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xQWhbW-JTKCv35HjKCJLbg?scene=25&sessionid=-617920340"
+  },
+  "resources": [],
+  "sourceFingerprint": "0c3f6c329fe206abbb38429691a18a508aec7c95e1a007bf9d4fdac0c1214d01",
+  "evidence": {
+    "listPage": 97,
+    "listTitle": "中国广核集团来校举办2025届毕业生春季招聘暨2026届“订单+联合”培养班宣讲会",
+    "listPublishDate": "2025-03-28",
+    "sourceOrder": 963
+  }
+}

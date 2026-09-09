@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d121e64beec8ceb6bfe045faff20ee6d9e7be8c0e8cf333f15ddbeeebdf75ef4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/_cnvLdY3J55CS0IhQ0mjog",
+    "url": "https://mp.weixin.qq.com/s/_cnvLdY3J55CS0IhQ0mjog"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "新华保险吉林分公司走进延边大学开展校企座谈会",
+    "source": "",
+    "publishDate": "2026-05-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_cnvLdY3J55CS0IhQ0mjog"
+  },
+  "resources": [],
+  "sourceFingerprint": "52c3c3c727a98aa9d857004fe49ae41fd41c413d14d24287f6df0a8f04c820a4",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "新华保险吉林分公司走进延边大学开展校企座谈会",
+    "listPublishDate": "2026-05-11",
+    "sourceOrder": 201
+  }
+}

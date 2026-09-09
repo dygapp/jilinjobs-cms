@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:045573652747335f65b948f4794b5e59daff6d93afe56ea1177be03f6e23bdb0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/aXdfdb0cxaOW5WFZbM2GCA",
+    "url": "https://mp.weixin.qq.com/s/aXdfdb0cxaOW5WFZbM2GCA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春职业技术大学党委书记董妍带队赴理想汽车、中科星图考察调研",
+    "source": "",
+    "publishDate": "2026-07-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/aXdfdb0cxaOW5WFZbM2GCA"
+  },
+  "resources": [],
+  "sourceFingerprint": "c773d7c2cc138dc7d8aeb6417ee49db0eede3f9b29526b0f8b5b6d5727e148b9",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "长春职业技术大学党委书记董妍带队赴理想汽车、中科星图考察调研",
+    "listPublishDate": "2026-07-22",
+    "sourceOrder": 41
+  }
+}

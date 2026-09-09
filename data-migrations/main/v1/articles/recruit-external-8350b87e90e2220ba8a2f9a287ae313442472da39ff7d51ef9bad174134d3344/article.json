@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:8350b87e90e2220ba8a2f9a287ae313442472da39ff7d51ef9bad174134d3344",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/_SOpiNKzgQkHs41eSE8Tog",
+    "url": "https://mp.weixin.qq.com/s/_SOpiNKzgQkHs41eSE8Tog"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2025届秋冬季“吉林省普通高校毕业生就业洽谈月”-涉农类高校毕业生就业洽谈会邀请函",
+    "source": "",
+    "publishDate": "2024-09-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_SOpiNKzgQkHs41eSE8Tog"
+  },
+  "resources": [],
+  "sourceFingerprint": "9acfff516434817f9334eeebf1ea89d14f303b1a52a7d2d07312499c799b4241",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "2025届秋冬季“吉林省普通高校毕业生就业洽谈月”-涉农类高校毕业生就业洽谈会邀请函",
+    "listPublishDate": "2024-09-28",
+    "sourceOrder": 247
+  }
+}

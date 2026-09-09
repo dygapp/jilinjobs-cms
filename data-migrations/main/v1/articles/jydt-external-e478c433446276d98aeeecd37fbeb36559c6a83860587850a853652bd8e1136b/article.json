@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e478c433446276d98aeeecd37fbeb36559c6a83860587850a853652bd8e1136b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/rOa4336lfJf7bbpnebnGTQ",
+    "url": "https://mp.weixin.qq.com/s/rOa4336lfJf7bbpnebnGTQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "松原职业技术学院举办2025年“吉聚松职，赋能吉林高质量发展”校园实习就业双选会",
+    "source": "",
+    "publishDate": "2025-06-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/rOa4336lfJf7bbpnebnGTQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "95b7b72320fe74680724162eb0b20cb45b6bcaf701ebd8a144166abe26e5ce74",
+  "evidence": {
+    "listPage": 86,
+    "listTitle": "松原职业技术学院举办2025年“吉聚松职，赋能吉林高质量发展”校园实习就业双选会",
+    "listPublishDate": "2025-06-03",
+    "sourceOrder": 851
+  }
+}

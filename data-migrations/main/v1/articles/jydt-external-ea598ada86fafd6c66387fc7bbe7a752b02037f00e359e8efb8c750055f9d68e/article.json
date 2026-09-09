@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ea598ada86fafd6c66387fc7bbe7a752b02037f00e359e8efb8c750055f9d68e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/oQgvP1FRK0PpmMmuj6VdVQ",
+    "url": "https://mp.weixin.qq.com/s/oQgvP1FRK0PpmMmuj6VdVQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企精准对接 择才共育英才|长春早期教育职业学院举办四平诺雅口腔专场面试",
+    "source": "",
+    "publishDate": "2026-04-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/oQgvP1FRK0PpmMmuj6VdVQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "c4aa5eb5ba8b1c3edd45c3403e60b45234939cff2f8e3c7450692f46497b2894",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "校企精准对接 择才共育英才|长春早期教育职业学院举办四平诺雅口腔专场面试",
+    "listPublishDate": "2026-04-13",
+    "sourceOrder": 294
+  }
+}

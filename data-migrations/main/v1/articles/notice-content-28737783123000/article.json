@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783123000",
+    "contentId": "28737783123000",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123000"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅关于举办全国大中型企业与2012届高校毕业生网上双选周活动的通知",
+    "source": "",
+    "publishDate": "2011-09-26",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部办公厅关于举办全国大中型企业与2012届高校毕业生网上双选周活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-9-26 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://8d49a674b877cd96739ffd3bd5cde058bc18fed08bc21d7e401832599e8a8086\"><img border=\"0\" src=\"migration-resource://90268746357b39af462d0a5e8e813f9af1ae95d7d91f9952f7483335aa997090\"><img border=\"0\" src=\"migration-resource://0fbe5b9d8e918e539aa05001e14f95fffa7965683043d47b81314221b9fcda16\"><img border=\"0\" src=\"migration-resource://b28fbef9dc61e5950a47c62278a85a0d298f113e7955b1eb6f57da23e2b44a20\"><img border=\"0\" src=\"migration-resource://8dd2165d65f37f03731ee0578af0f8d76b2c365f1acb753fcb16bc27101d219e\"><img border=\"0\" src=\"migration-resource://0b2875f5edbad4fb8733a9874272ad89e32fb6461ee95cb656046650b7683fcf\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110926134017721.jpg",
+      "originalReference": "/chistory/cms/imgs/20110926134017721.jpg",
+      "token": "migration-resource://8d49a674b877cd96739ffd3bd5cde058bc18fed08bc21d7e401832599e8a8086",
+      "snapshotPath": "assets/8d49a674b877cd96739ffd3bd5cde058bc18fed08bc21d7e401832599e8a8086.jpg",
+      "sha256": "8d49a674b877cd96739ffd3bd5cde058bc18fed08bc21d7e401832599e8a8086",
+      "contentType": "image/jpeg",
+      "sizeBytes": 36781
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110926134022546.jpg",
+      "originalReference": "/chistory/cms/imgs/20110926134022546.jpg",
+      "token": "migration-resource://90268746357b39af462d0a5e8e813f9af1ae95d7d91f9952f7483335aa997090",
+      "snapshotPath": "assets/90268746357b39af462d0a5e8e813f9af1ae95d7d91f9952f7483335aa997090.jpg",
+      "sha256": "90268746357b39af462d0a5e8e813f9af1ae95d7d91f9952f7483335aa997090",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93667
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110926134026119.jpg",
+      "originalReference": "/chistory/cms/imgs/20110926134026119.jpg",
+      "token": "migration-resource://0fbe5b9d8e918e539aa05001e14f95fffa7965683043d47b81314221b9fcda16",
+      "snapshotPath": "assets/0fbe5b9d8e918e539aa05001e14f95fffa7965683043d47b81314221b9fcda16.jpg",
+      "sha256": "0fbe5b9d8e918e539aa05001e14f95fffa7965683043d47b81314221b9fcda16",
+      "contentType": "image/jpeg",
+      "sizeBytes": 89405
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2011092613403156.jpg",
+      "originalReference": "/chistory/cms/imgs/2011092613403156.jpg",
+      "token": "migration-resource://b28fbef9dc61e5950a47c62278a85a0d298f113e7955b1eb6f57da23e2b44a20",
+      "snapshotPath": "assets/b28fbef9dc61e5950a47c62278a85a0d298f113e7955b1eb6f57da23e2b44a20.jpg",
+      "sha256": "b28fbef9dc61e5950a47c62278a85a0d298f113e7955b1eb6f57da23e2b44a20",
+      "contentType": "image/jpeg",
+      "sizeBytes": 25768
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110926134035233.jpg",
+      "originalReference": "/chistory/cms/imgs/20110926134035233.jpg",
+      "token": "migration-resource://8dd2165d65f37f03731ee0578af0f8d76b2c365f1acb753fcb16bc27101d219e",
+      "snapshotPath": "assets/8dd2165d65f37f03731ee0578af0f8d76b2c365f1acb753fcb16bc27101d219e.jpg",
+      "sha256": "8dd2165d65f37f03731ee0578af0f8d76b2c365f1acb753fcb16bc27101d219e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 60211
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2011092613403946.jpg",
+      "originalReference": "/chistory/cms/imgs/2011092613403946.jpg",
+      "token": "migration-resource://0b2875f5edbad4fb8733a9874272ad89e32fb6461ee95cb656046650b7683fcf",
+      "snapshotPath": "assets/0b2875f5edbad4fb8733a9874272ad89e32fb6461ee95cb656046650b7683fcf.jpg",
+      "sha256": "0b2875f5edbad4fb8733a9874272ad89e32fb6461ee95cb656046650b7683fcf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 52353
+    }
+  ],
+  "sourceFingerprint": "f0f3b031b411de24337d4197ecad64a36ee062c52617c856dcb6c1592867f0c1",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "教育部办公厅关于举办全国大中型企业与2012届高校毕业生网上双选周活动的通知",
+    "listPublishDate": "2011-09-26",
+    "sourceOrder": 426,
+    "detailPublishDate": "2011-09-26"
+  }
+}

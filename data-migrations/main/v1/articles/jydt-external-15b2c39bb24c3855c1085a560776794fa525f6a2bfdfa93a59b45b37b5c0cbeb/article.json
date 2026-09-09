@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:15b2c39bb24c3855c1085a560776794fa525f6a2bfdfa93a59b45b37b5c0cbeb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/k3ZYfKVhRKXc3TichWa_9Q",
+    "url": "https://mp.weixin.qq.com/s/k3ZYfKVhRKXc3TichWa_9Q?scene=25&sessionid=-1366325067"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春中医药大学举办职引未来——2025年全国城市巡回招聘（吉林站）暨吉林省医药类毕业生春季大型就业洽谈会",
+    "source": "",
+    "publishDate": "2025-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/k3ZYfKVhRKXc3TichWa_9Q?scene=25&sessionid=-1366325067"
+  },
+  "resources": [],
+  "sourceFingerprint": "e103db7e5059c3e2a0f76c54fd858d2ef673b589fc99d9e1618a833aaac3373f",
+  "evidence": {
+    "listPage": 93,
+    "listTitle": "长春中医药大学举办职引未来——2025年全国城市巡回招聘（吉林站）暨吉林省医药类毕业生春季大型就业洽谈会",
+    "listPublishDate": "2025-04-21",
+    "sourceOrder": 928
+  }
+}

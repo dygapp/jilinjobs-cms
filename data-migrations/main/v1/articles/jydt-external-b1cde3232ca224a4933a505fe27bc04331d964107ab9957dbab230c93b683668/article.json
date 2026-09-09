@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b1cde3232ca224a4933a505fe27bc04331d964107ab9957dbab230c93b683668",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/gS5oeExqYtJK7d97TqIXuA",
+    "url": "https://mp.weixin.qq.com/s/gS5oeExqYtJK7d97TqIXuA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春中医药大学举办职引未来—2026年全国城市联合招聘（吉林站）暨“聚力扩容提质 服务高质量发展”医药类毕业生春季大型就业洽谈会",
+    "source": "",
+    "publishDate": "2026-04-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gS5oeExqYtJK7d97TqIXuA"
+  },
+  "resources": [],
+  "sourceFingerprint": "12543e754cad4c16e4d11b0b3bf05e4b87bd62fc2383b3013ed8c3b1789cda63",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "长春中医药大学举办职引未来—2026年全国城市联合招聘（吉林站）暨“聚力扩容提质 服务高质量发展”医药类毕业生春季大型就业洽谈会",
+    "listPublishDate": "2026-04-27",
+    "sourceOrder": 244
+  }
+}

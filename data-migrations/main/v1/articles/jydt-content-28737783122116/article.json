@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122116",
+    "contentId": "28737783122116",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122116"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅 国资委办公厅关于举办战略性新兴产业面向应届高校毕业生网上招聘活动的通知",
+    "source": "",
+    "publishDate": "2016-06-07",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部办公厅 国资委办公厅关于举办战略性新兴产业面向应届高校毕业生网上招聘活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2016-6-7 15:56:16</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-align: center\"><img title=\"0288.jpg\" src=\"migration-resource://8bfc0ffd350700b1d632697d81bc03a142467ea598e3c48329d1a5939983de30\"></p><p style=\"text-align: center\"><img title=\"0289.jpg\" src=\"migration-resource://e78428369e7d7a08978895c1bf6b61606d7ddbe77fe4f34f18f3750e17330548\"></p><p style=\"text-align: center\"><img title=\"0290.jpg\" src=\"migration-resource://598399e9de86a412dca070a962567820bfa5e52ce2181cdaa6b52b225576edaa\"></p><p style=\"text-align: center\"><img title=\"0291.jpg\" src=\"migration-resource://b875a5e7d49e75ce639fc03fcef5c567e81ebd60fdfe3b22936bddcc1aa650e3\"></p><p style=\"text-align: center;\"><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360091180432812506524442.jpg",
+      "originalReference": "/chistory/cms/imgs/6360091180432812506524442.jpg",
+      "token": "migration-resource://8bfc0ffd350700b1d632697d81bc03a142467ea598e3c48329d1a5939983de30",
+      "snapshotPath": "assets/8bfc0ffd350700b1d632697d81bc03a142467ea598e3c48329d1a5939983de30.jpg",
+      "sha256": "8bfc0ffd350700b1d632697d81bc03a142467ea598e3c48329d1a5939983de30",
+      "contentType": "image/jpeg",
+      "sizeBytes": 106112
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360091180581250004738767.jpg",
+      "originalReference": "/chistory/cms/imgs/6360091180581250004738767.jpg",
+      "token": "migration-resource://e78428369e7d7a08978895c1bf6b61606d7ddbe77fe4f34f18f3750e17330548",
+      "snapshotPath": "assets/e78428369e7d7a08978895c1bf6b61606d7ddbe77fe4f34f18f3750e17330548.jpg",
+      "sha256": "e78428369e7d7a08978895c1bf6b61606d7ddbe77fe4f34f18f3750e17330548",
+      "contentType": "image/jpeg",
+      "sizeBytes": 102141
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360091180721875009508692.jpg",
+      "originalReference": "/chistory/cms/imgs/6360091180721875009508692.jpg",
+      "token": "migration-resource://598399e9de86a412dca070a962567820bfa5e52ce2181cdaa6b52b225576edaa",
+      "snapshotPath": "assets/598399e9de86a412dca070a962567820bfa5e52ce2181cdaa6b52b225576edaa.jpg",
+      "sha256": "598399e9de86a412dca070a962567820bfa5e52ce2181cdaa6b52b225576edaa",
+      "contentType": "image/jpeg",
+      "sizeBytes": 85089
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360091180864062508507863.jpg",
+      "originalReference": "/chistory/cms/imgs/6360091180864062508507863.jpg",
+      "token": "migration-resource://b875a5e7d49e75ce639fc03fcef5c567e81ebd60fdfe3b22936bddcc1aa650e3",
+      "snapshotPath": "assets/b875a5e7d49e75ce639fc03fcef5c567e81ebd60fdfe3b22936bddcc1aa650e3.jpg",
+      "sha256": "b875a5e7d49e75ce639fc03fcef5c567e81ebd60fdfe3b22936bddcc1aa650e3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 55737
+    }
+  ],
+  "sourceFingerprint": "6785dcb48277f114889ad1e6f9c61545e8fd8ca04759ba59d63b735e6c6a3b73",
+  "evidence": {
+    "listPage": 155,
+    "listTitle": "教育部办公厅 国资委办公厅关于举办战略性新兴产业面向应届高校毕业生网上招聘活动的通知",
+    "listPublishDate": "2016-06-07",
+    "sourceOrder": 1541,
+    "detailPublishDate": "2016-06-07"
+  }
+}

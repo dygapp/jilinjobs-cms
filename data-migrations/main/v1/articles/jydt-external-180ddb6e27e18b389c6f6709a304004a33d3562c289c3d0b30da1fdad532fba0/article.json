@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:180ddb6e27e18b389c6f6709a304004a33d3562c289c3d0b30da1fdad532fba0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/yn8heS2ZKnEqnHDoGjCkjQ",
+    "url": "https://mp.weixin.qq.com/s/yn8heS2ZKnEqnHDoGjCkjQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【就业指导】|| 不知道“五险一金”是什么？看这篇就够了",
+    "source": "",
+    "publishDate": "2025-08-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/yn8heS2ZKnEqnHDoGjCkjQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "38e4eebb1df48152c09319b5e145c1cdf19c5b62409171759d2b4bae189ac74f",
+  "evidence": {
+    "listPage": 72,
+    "listTitle": "【就业指导】|| 不知道“五险一金”是什么？看这篇就够了",
+    "listPublishDate": "2025-08-06",
+    "sourceOrder": 720
+  }
+}

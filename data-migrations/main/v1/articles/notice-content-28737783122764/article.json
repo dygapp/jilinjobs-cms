@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122764",
+    "contentId": "28737783122764",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122764"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "3月24日上午9点至11点30分咨询电话暂停服务",
+    "source": "",
+    "publishDate": "2017-03-24",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">3月24日上午9点至11点30分咨询电话暂停服务</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:综合部   发布时间:2017-3-24 9:16:15</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\";text-align: left\"><span style=\";font-family: 宋体\">广大毕业生</span><span style=\"font-family:Calibri\">:</span></p><p style=\";text-align: left\"><span style=\"font-family:Calibri\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style=\";font-family: 宋体\">因筹备</span><span style=\"font-family:Calibri\">2017</span><span style=\";font-family: 宋体\">年吉林省普通高校专升本教育考试相关工作，</span><span style=\"font-family:Calibri\">3</span><span style=\";font-family: 宋体\">月</span><span style=\"font-family:Calibri\">24</span><span style=\";font-family: 宋体\">日上午</span><span style=\"font-family:Calibri\">9</span><span style=\";font-family: 宋体\">点至</span><span style=\"font-family:Calibri\">11</span><span style=\";font-family: 宋体\">点</span><span style=\"font-family:Calibri\">30</span><span style=\";font-family: 宋体\">分咨询电话暂停服务，特此通知。</span></p><p style=\";text-align: left\"><span style=\"font-family:Calibri\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p><p style=\";text-align: left\"><span style=\"font-family:Calibri\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style=\";font-family: 宋体\">吉林省高等学校毕业生就业指导中心</span></p><p style=\";text-align: left\"><span style=\"font-family:Calibri\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><span style=\"font-family:Calibri\">2017</span><span style=\";font-family: 宋体\">年</span><span style=\"font-family:Calibri\">3</span><span style=\";font-family: 宋体\">月</span><span style=\"font-family:Calibri\">24</span><span style=\";font-family: 宋体\">日</span></p><p><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "75313e6c8158bf53afa0e2e702a9afddf1cff3a5a5dc1d20ccc2230fd8630e26",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "3月24日上午9点至11点30分咨询电话暂停服务",
+    "listPublishDate": "2017-03-24",
+    "sourceOrder": 223,
+    "detailPublishDate": "2017-03-24"
+  }
+}

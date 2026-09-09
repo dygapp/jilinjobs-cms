@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:85994ba41f3c76eab887cf6f78d3165028e971b6f5d47c1b67a846de58384fbe",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/YZ0DDxtUPCCdNShFlopg4w",
+    "url": "https://mp.weixin.qq.com/s/YZ0DDxtUPCCdNShFlopg4w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林通用航空职业技术学院与龙嘉机场要客服务部携手推进校企合作",
+    "source": "",
+    "publishDate": "2026-04-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/YZ0DDxtUPCCdNShFlopg4w"
+  },
+  "resources": [],
+  "sourceFingerprint": "f7323c2b68e59c41fcb9d3465adbc9b7f6ed67da4138c0bc01b08bf7a3036597",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "吉林通用航空职业技术学院与龙嘉机场要客服务部携手推进校企合作",
+    "listPublishDate": "2026-04-08",
+    "sourceOrder": 309
+  }
+}

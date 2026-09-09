@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bf3549870f0c8f324c180277654ab139749100d7a9b73aab7064206e968edadf",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/4N1uUF5kW0chrgg2zmdZaA",
+    "url": "https://mp.weixin.qq.com/s/4N1uUF5kW0chrgg2zmdZaA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林电子信息职业技术学院举办“职引未来 筑梦吉林”吉林省高校毕业生秋季系列招聘活动吉林市专场招聘会",
+    "source": "",
+    "publishDate": "2024-10-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4N1uUF5kW0chrgg2zmdZaA"
+  },
+  "resources": [],
+  "sourceFingerprint": "28fbb9aac8aaffd1ccd8e5b26352b97ed76a185bfe79b36cb3fcef0807ccbd95",
+  "evidence": {
+    "listPage": 103,
+    "listTitle": "吉林电子信息职业技术学院举办“职引未来 筑梦吉林”吉林省高校毕业生秋季系列招聘活动吉林市专场招聘会",
+    "listPublishDate": "2024-10-13",
+    "sourceOrder": 1030
+  }
+}

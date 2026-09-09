@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:4e13e80ff111e41700d12f32eb230b4da6d4a9232cadd8f349ba1829b139b423",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/N3vGegX2GcnfQUKOip-drQ",
+    "url": "https://mp.weixin.qq.com/s/N3vGegX2GcnfQUKOip-drQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“服务吉林高质量发展” 长春金融高等专科学校2026届毕业生秋季校园双选会邀请函",
+    "source": "",
+    "publishDate": "2025-10-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/N3vGegX2GcnfQUKOip-drQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "9fd4e978636f5a1b29d9e51711778c83a5d9eda874732bb247eec213fb073fd7",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "“服务吉林高质量发展” 长春金融高等专科学校2026届毕业生秋季校园双选会邀请函",
+    "listPublishDate": "2025-10-17",
+    "sourceOrder": 127
+  }
+}

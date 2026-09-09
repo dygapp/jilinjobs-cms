@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:21078aa3a93d93bf3efb93f9be3feee24d47de3602d0f7bdfd9a8d1df32ae52b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/X2-ApUIqFdvP7QIN3jRuWA",
+    "url": "https://mp.weixin.qq.com/s/X2-ApUIqFdvP7QIN3jRuWA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学党委书记刘多赴长春市教育局调研",
+    "source": "",
+    "publishDate": "2025-05-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/X2-ApUIqFdvP7QIN3jRuWA"
+  },
+  "resources": [],
+  "sourceFingerprint": "faf3beb9d2347a2aeaa4e3ef8f23642026b62e7db21598ef55544e3435ae9f03",
+  "evidence": {
+    "listPage": 90,
+    "listTitle": "长春师范大学党委书记刘多赴长春市教育局调研",
+    "listPublishDate": "2025-05-14",
+    "sourceOrder": 898
+  }
+}

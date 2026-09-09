@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3d0a8927749f8e710e187b8d37c1d235067e970719fc246c56aad64ce39c2a84",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/HkULBw4G6nv4qLQ88p4EEA",
+    "url": "https://mp.weixin.qq.com/s/HkULBw4G6nv4qLQ88p4EEA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "职院动态丨校企联动促就业——长白山职业技术学院2025年线上校园招聘活动圆满落幕",
+    "source": "",
+    "publishDate": "2025-12-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/HkULBw4G6nv4qLQ88p4EEA"
+  },
+  "resources": [],
+  "sourceFingerprint": "8be358ec44e9b649ee83e8f8d7da2301528ed822846aeaabe6da5d0e3f747b1f",
+  "evidence": {
+    "listPage": 53,
+    "listTitle": "职院动态丨校企联动促就业——长白山职业技术学院2025年线上校园招聘活动圆满落幕",
+    "listPublishDate": "2025-12-22",
+    "sourceOrder": 524
+  }
+}

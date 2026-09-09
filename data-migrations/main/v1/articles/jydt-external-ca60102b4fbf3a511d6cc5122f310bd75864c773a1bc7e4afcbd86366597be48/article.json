@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ca60102b4fbf3a511d6cc5122f310bd75864c773a1bc7e4afcbd86366597be48",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/qeU7PYT-pI78YEnc_m9mjg",
+    "url": "https://mp.weixin.qq.com/s/qeU7PYT-pI78YEnc_m9mjg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院与浙江华策影视集团举行校企合作座谈会暨签约揭牌仪式",
+    "source": "",
+    "publishDate": "2026-06-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/qeU7PYT-pI78YEnc_m9mjg"
+  },
+  "resources": [],
+  "sourceFingerprint": "8d80f182d944d4bb6c185f14f61fc526d537f44ac67e58e352752b4c67e2f3f7",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "长春科技学院与浙江华策影视集团举行校企合作座谈会暨签约揭牌仪式",
+    "listPublishDate": "2026-06-22",
+    "sourceOrder": 71
+  }
+}

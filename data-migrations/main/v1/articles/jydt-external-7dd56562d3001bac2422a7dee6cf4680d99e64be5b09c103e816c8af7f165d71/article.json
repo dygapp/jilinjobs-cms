@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7dd56562d3001bac2422a7dee6cf4680d99e64be5b09c103e816c8af7f165d71",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/CsRVY80ZW30scogVccNU1w",
+    "url": "https://mp.weixin.qq.com/s/CsRVY80ZW30scogVccNU1w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学珲春校区举办2026届毕业生专场招聘会",
+    "source": "",
+    "publishDate": "2026-04-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/CsRVY80ZW30scogVccNU1w"
+  },
+  "resources": [],
+  "sourceFingerprint": "17d61388c7d59c03a92a232093d58093ef5aabc0507647ab296ca7829143e658",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "延边大学珲春校区举办2026届毕业生专场招聘会",
+    "listPublishDate": "2026-04-29",
+    "sourceOrder": 232
+  }
+}

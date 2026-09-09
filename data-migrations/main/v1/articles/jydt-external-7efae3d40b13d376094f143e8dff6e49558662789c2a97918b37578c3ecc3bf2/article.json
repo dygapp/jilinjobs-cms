@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7efae3d40b13d376094f143e8dff6e49558662789c2a97918b37578c3ecc3bf2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/FTQf28DX_vvPcvtCR2sqSw",
+    "url": "https://mp.weixin.qq.com/s/FTQf28DX_vvPcvtCR2sqSw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林电子信息职业技术学院校长曾繁明率队赴中国黄金集团夹皮沟矿业有限公司访企拓岗",
+    "source": "",
+    "publishDate": "2025-05-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/FTQf28DX_vvPcvtCR2sqSw"
+  },
+  "resources": [],
+  "sourceFingerprint": "9981f950a93153db4c6920bddf2335ab580e48ca3d5fb28f0e0a73343294f5cb",
+  "evidence": {
+    "listPage": 87,
+    "listTitle": "吉林电子信息职业技术学院校长曾繁明率队赴中国黄金集团夹皮沟矿业有限公司访企拓岗",
+    "listPublishDate": "2025-05-27",
+    "sourceOrder": 864
+  }
+}

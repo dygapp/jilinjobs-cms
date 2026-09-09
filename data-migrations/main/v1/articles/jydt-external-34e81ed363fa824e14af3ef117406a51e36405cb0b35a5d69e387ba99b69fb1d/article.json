@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:34e81ed363fa824e14af3ef117406a51e36405cb0b35a5d69e387ba99b69fb1d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1007/10553.htm",
+    "url": "https://www.ccit.edu.cn/info/1007/10553.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院校领导带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-02-10",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccit.edu.cn/info/1007/10553.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "2f49d95c2ea8b0a9f619bc7598856ad957a15b6f12d4c7301081632f450c2ca1",
+  "evidence": {
+    "listPage": 45,
+    "listTitle": "长春工程学院校领导带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "listPublishDate": "2026-02-10",
+    "sourceOrder": 450
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:973f284f86d3c714317be6923c8ba326674fc140a1ba5d74de8e1d72cb20e309",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/BQhLlgK7t4bU8GBdE5OdlQ",
+    "url": "https://mp.weixin.qq.com/s/BQhLlgK7t4bU8GBdE5OdlQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【邀请函】服务吉林高质量发展系列活动——延边大学2025届毕业生理工类专场招聘会（延吉校区站）",
+    "source": "",
+    "publishDate": "2025-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/BQhLlgK7t4bU8GBdE5OdlQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "9ac80b438886d9f7588904a29f37e9ca6d5f57d74848bf225bab7e778621da2a",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "【邀请函】服务吉林高质量发展系列活动——延边大学2025届毕业生理工类专场招聘会（延吉校区站）",
+    "listPublishDate": "2025-03-27",
+    "sourceOrder": 203
+  }
+}

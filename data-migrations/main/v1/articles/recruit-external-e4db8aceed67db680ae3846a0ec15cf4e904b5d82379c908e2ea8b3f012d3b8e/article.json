@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:e4db8aceed67db680ae3846a0ec15cf4e904b5d82379c908e2ea8b3f012d3b8e",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/51OxasywUJvbplcFKS0Deg",
+    "url": "https://mp.weixin.qq.com/s/51OxasywUJvbplcFKS0Deg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "重磅校招！近200家国企7000+岗位组团来袭！邀全球英才建“圳”未来！",
+    "source": "",
+    "publishDate": "2022-09-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/51OxasywUJvbplcFKS0Deg"
+  },
+  "resources": [],
+  "sourceFingerprint": "8d76233f0696e64f483ad8dfaf6082d52a5bd2ef45edb1f361fe5c2a4bfff0a2",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "重磅校招！近200家国企7000+岗位组团来袭！邀全球英才建“圳”未来！",
+    "listPublishDate": "2022-09-16",
+    "sourceOrder": 337
+  }
+}

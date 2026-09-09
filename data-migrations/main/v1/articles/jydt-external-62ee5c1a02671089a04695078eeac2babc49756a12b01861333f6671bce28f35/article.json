@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:62ee5c1a02671089a04695078eeac2babc49756a12b01861333f6671bce28f35",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/o2vejkGa4ruOZLm04Mx1eg",
+    "url": "https://mp.weixin.qq.com/s/o2vejkGa4ruOZLm04Mx1eg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春职业技术大学党委书记董妍率队赴华南、华东地区访企拓岗",
+    "source": "",
+    "publishDate": "2025-07-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/o2vejkGa4ruOZLm04Mx1eg"
+  },
+  "resources": [],
+  "sourceFingerprint": "2d9eebaed06234fd8104e04bf1dc6ede44339301d963786324c7ca512864d520",
+  "evidence": {
+    "listPage": 76,
+    "listTitle": "长春职业技术大学党委书记董妍率队赴华南、华东地区访企拓岗",
+    "listPublishDate": "2025-07-01",
+    "sourceOrder": 756
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123138",
+    "contentId": "28737783123138",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123138"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于天津市接收2011年外地高校毕业生有关问题的函",
+    "source": "",
+    "publishDate": "2011-05-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于天津市接收2011年外地高校毕业生有关问题的函</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-5-6 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img height=\"820\" src=\"migration-resource://f40b60de4a31903db6532fc61be842956eeaa7beb3303a7c79534ac204553ff5\" width=\"615\" border=\"0\"></p> <p align=\"center\"><img height=\"820\" src=\"migration-resource://081674fb8f3c85ca9ab22db36b8e660b24f4fead1e3108b196940a22dfe160fe\" width=\"615\" border=\"0\"></p> <p align=\"center\"><img height=\"820\" src=\"migration-resource://7af65c8cc47a08e0d1b3d9d0edea2804ffaf854262f91ad93b9a2673d4732f1c\" width=\"615\" border=\"0\"></p> <p align=\"center\"><img height=\"820\" src=\"migration-resource://6809a3b7fc084d46a7cff3ff6e306b1d2b7038903091d9b33a8d413cf3b8e5eb\" width=\"615\" border=\"0\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110506151433539.jpg",
+      "originalReference": "/chistory/cms/imgs/20110506151433539.jpg",
+      "token": "migration-resource://f40b60de4a31903db6532fc61be842956eeaa7beb3303a7c79534ac204553ff5",
+      "snapshotPath": "assets/f40b60de4a31903db6532fc61be842956eeaa7beb3303a7c79534ac204553ff5.jpg",
+      "sha256": "f40b60de4a31903db6532fc61be842956eeaa7beb3303a7c79534ac204553ff5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 85728
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110506151444424.jpg",
+      "originalReference": "/chistory/cms/imgs/20110506151444424.jpg",
+      "token": "migration-resource://081674fb8f3c85ca9ab22db36b8e660b24f4fead1e3108b196940a22dfe160fe",
+      "snapshotPath": "assets/081674fb8f3c85ca9ab22db36b8e660b24f4fead1e3108b196940a22dfe160fe.jpg",
+      "sha256": "081674fb8f3c85ca9ab22db36b8e660b24f4fead1e3108b196940a22dfe160fe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95143
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110506151456222.jpg",
+      "originalReference": "/chistory/cms/imgs/20110506151456222.jpg",
+      "token": "migration-resource://7af65c8cc47a08e0d1b3d9d0edea2804ffaf854262f91ad93b9a2673d4732f1c",
+      "snapshotPath": "assets/7af65c8cc47a08e0d1b3d9d0edea2804ffaf854262f91ad93b9a2673d4732f1c.jpg",
+      "sha256": "7af65c8cc47a08e0d1b3d9d0edea2804ffaf854262f91ad93b9a2673d4732f1c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 79515
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110506151506202.jpg",
+      "originalReference": "/chistory/cms/imgs/20110506151506202.jpg",
+      "token": "migration-resource://6809a3b7fc084d46a7cff3ff6e306b1d2b7038903091d9b33a8d413cf3b8e5eb",
+      "snapshotPath": "assets/6809a3b7fc084d46a7cff3ff6e306b1d2b7038903091d9b33a8d413cf3b8e5eb.jpg",
+      "sha256": "6809a3b7fc084d46a7cff3ff6e306b1d2b7038903091d9b33a8d413cf3b8e5eb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 68631
+    }
+  ],
+  "sourceFingerprint": "c19ebe620217947820d340b50e6c78eea012fe67be76154c2d9659f46c8bd9ca",
+  "evidence": {
+    "listPage": 46,
+    "listTitle": "关于天津市接收2011年外地高校毕业生有关问题的函",
+    "listPublishDate": "2011-05-06",
+    "sourceOrder": 458,
+    "detailPublishDate": "2011-05-06"
+  }
+}

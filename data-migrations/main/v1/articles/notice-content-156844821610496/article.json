@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:156844821610496",
+    "contentId": "156844821610496",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=156844821610496"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于做好取消普通高等学校毕业生就业报到证有关衔接工作的通知",
+    "source": "",
+    "publishDate": "2023-05-05",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"803\" src=\"migration-resource://17e8de117bf96bd42c40a358151344ff5f0c196a41008e8ddae7c0813a37ae88\" width=\"568\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"808\" src=\"migration-resource://16cf180f34ddb21a7c7c5760557d2a76ae97d2ca258dd19ef3e6fd2332a63adf\" width=\"569\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"799\" src=\"migration-resource://6a4198fd2ca73f54717b18aac86a9d609a32058030417ce62e7d638082e2996a\" width=\"566\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"798\" src=\"migration-resource://31bdc4aaf67caea4c71c3ac0cab151ee9e7d3a722a790009f2eed838c2107816\" width=\"564\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-16/8d7a5a43-d305-4b1e-8aac-786e9422af55.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-16/8d7a5a43-d305-4b1e-8aac-786e9422af55.jpg",
+      "token": "migration-resource://17e8de117bf96bd42c40a358151344ff5f0c196a41008e8ddae7c0813a37ae88",
+      "snapshotPath": "assets/17e8de117bf96bd42c40a358151344ff5f0c196a41008e8ddae7c0813a37ae88.jpg",
+      "sha256": "17e8de117bf96bd42c40a358151344ff5f0c196a41008e8ddae7c0813a37ae88",
+      "contentType": "image/jpeg",
+      "sizeBytes": 33820
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-16/fef15f49-12de-4ee2-bf34-c7f4104883a5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-16/fef15f49-12de-4ee2-bf34-c7f4104883a5.jpg",
+      "token": "migration-resource://16cf180f34ddb21a7c7c5760557d2a76ae97d2ca258dd19ef3e6fd2332a63adf",
+      "snapshotPath": "assets/16cf180f34ddb21a7c7c5760557d2a76ae97d2ca258dd19ef3e6fd2332a63adf.jpg",
+      "sha256": "16cf180f34ddb21a7c7c5760557d2a76ae97d2ca258dd19ef3e6fd2332a63adf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 49426
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-16/e0908283-40c9-4076-8822-f86943be30e2.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-16/e0908283-40c9-4076-8822-f86943be30e2.jpg",
+      "token": "migration-resource://6a4198fd2ca73f54717b18aac86a9d609a32058030417ce62e7d638082e2996a",
+      "snapshotPath": "assets/6a4198fd2ca73f54717b18aac86a9d609a32058030417ce62e7d638082e2996a.jpg",
+      "sha256": "6a4198fd2ca73f54717b18aac86a9d609a32058030417ce62e7d638082e2996a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 50417
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-16/de68717f-673f-4a31-93c4-a9fff8432343.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-16/de68717f-673f-4a31-93c4-a9fff8432343.jpg",
+      "token": "migration-resource://31bdc4aaf67caea4c71c3ac0cab151ee9e7d3a722a790009f2eed838c2107816",
+      "snapshotPath": "assets/31bdc4aaf67caea4c71c3ac0cab151ee9e7d3a722a790009f2eed838c2107816.jpg",
+      "sha256": "31bdc4aaf67caea4c71c3ac0cab151ee9e7d3a722a790009f2eed838c2107816",
+      "contentType": "image/jpeg",
+      "sizeBytes": 40366
+    }
+  ],
+  "sourceFingerprint": "a05e69a72002e57d52aa66b06d2f6b798c89459593fa9489495d919ffcd5061c",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "关于做好取消普通高等学校毕业生就业报到证有关衔接工作的通知",
+    "listPublishDate": "2023-05-05",
+    "sourceOrder": 107,
+    "detailPublishDate": "2023-05-05"
+  }
+}

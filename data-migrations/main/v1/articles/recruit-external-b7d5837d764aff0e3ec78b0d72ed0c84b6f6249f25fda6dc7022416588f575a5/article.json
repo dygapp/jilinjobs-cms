@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:b7d5837d764aff0e3ec78b0d72ed0c84b6f6249f25fda6dc7022416588f575a5",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/tzgg/202006/t20200630_789937.html",
+    "url": "http://www.jlhitech.gov.cn/tzgg/202006/t20200630_789937.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年吉林汇德投资有限公司招聘公告",
+    "source": "",
+    "publishDate": "2020-07-01",
+    "bodyHtml": "",
+    "externalUrl": "http://www.jlhitech.gov.cn/tzgg/202006/t20200630_789937.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "9a13197a9278c101589a93f3dbdfe802ddb2d7e39dbcc5489ba241662d261173",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "2020年吉林汇德投资有限公司招聘公告",
+    "listPublishDate": "2020-07-01",
+    "sourceOrder": 392
+  }
+}

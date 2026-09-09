@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:dca9a2b8367f157816565a19d93ba3799c0aaa5a21615c7f99441208fb38f8f6",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/ywdt/tzgg/202605/t20260519_3488063.html",
+    "url": "http://ccrs.changchun.gov.cn/ywdt/tzgg/202605/t20260519_3488063.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2026年长春市市直事业单位公开招聘高层次人才公告（4号）",
+    "source": "",
+    "publishDate": "2026-05-20",
+    "bodyHtml": "",
+    "externalUrl": "http://ccrs.changchun.gov.cn/ywdt/tzgg/202605/t20260519_3488063.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "95427cbc0cf6881a64b8f815a65993e40822999e952823d28b5e4626d65bf5d0",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "2026年长春市市直事业单位公开招聘高层次人才公告（4号）",
+    "listPublishDate": "2026-05-20",
+    "sourceOrder": 30
+  }
+}

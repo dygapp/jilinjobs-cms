@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:84b2c14cee39928ed04af25014f8a248bb16c2ec010b007cb64342d112980d99",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/M8CfxDG_wLTlrK1DwR0ARQ",
+    "url": "https://mp.weixin.qq.com/s/M8CfxDG_wLTlrK1DwR0ARQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师专召开2025届毕业生 “百日冲刺”就业工作推进会",
+    "source": "",
+    "publishDate": "2025-06-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/M8CfxDG_wLTlrK1DwR0ARQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "b2f022180131de37f86878d88a3bdae7f12f549adab7274c5887f937c5dd85e3",
+  "evidence": {
+    "listPage": 83,
+    "listTitle": "长春师专召开2025届毕业生 “百日冲刺”就业工作推进会",
+    "listPublishDate": "2025-06-12",
+    "sourceOrder": 828
+  }
+}

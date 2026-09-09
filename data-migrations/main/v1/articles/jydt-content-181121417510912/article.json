@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:181121417510912",
+    "contentId": "181121417510912",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=181121417510912"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "“一起益企”吉林省中小企业人才供需对接活动——吉林农业大学专场招聘会成功举办",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2023-09-27",
+    "bodyHtml": "\n                        <p style=\"text-align:left\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:14.0pt\"><span style=\"font-family:宋体\">为促进</span></span><span style=\"font-size:14.0pt\"><span style=\"font-family:Calibri\">2024</span></span><span style=\"font-size:14.0pt\"><span style=\"font-family:宋体\">届毕业生高质量充分就业，</span></span><span style=\"font-size:14.0pt\"><span style=\"font-family:Calibri\">9</span></span><span style=\"font-size:14.0pt\"><span style=\"font-family:宋体\">月</span></span><span style=\"font-size:14.0pt\"><span style=\"font-family:Calibri\">22</span></span><span style=\"font-size:14.0pt\"><span style=\"font-family:宋体\">日，吉林省高等学校毕业生就业指导中心、吉林省促进中小企业发展服务中心、吉林农业大学、吉林省人力资源服务有限责任公司在吉林农业大学联合举办</span></span><span style=\"font-size:14.0pt\"><span style=\"font-family:Calibri\">2023</span></span><span style=\"font-size:14.0pt\"><span style=\"font-family:宋体\">年“一起益企”吉林省中小企业人才供需对接活动——吉林农业大学专场招聘会。吉林省高等学校毕业生就业指导中心主任唐洪丰、吉林省促进中小企业发展服务中心副主任张东武、吉林省人力资源服务有限责任公司副总经理弓龙植出席了本次活动。</span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"495\" src=\"migration-resource://f83244359c04e80c9ef31c00568d87fe5aecdd36bb480978bb7f8943cc40b3e8\" width=\"900\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:14.0pt\"><span style=\"font-family:宋体\">此次活动，共有长春城开农投畜牧发展有限公司、康宁杰瑞（吉林）生物科技有限公司、长春博众汽车零部件有限责任公司等</span></span><span style=\"font-size:14.0pt\"><span style=\"font-family:Calibri\">23</span></span><span style=\"font-size:14.0pt\"><span style=\"font-family:宋体\">家省内优质用人单位来校招聘，提供岗位</span></span><span style=\"font-size:14.0pt\"><span style=\"font-family:Calibri\">300</span></span><span style=\"font-size:14.0pt\"><span style=\"font-family:宋体\">多个，吉林农业大学</span></span><span style=\"font-size:14.0pt\"><span style=\"font-family:Calibri\">300</span></span><span style=\"font-size:14.0pt\"><span style=\"font-family:宋体\">余名毕业生参会。会上，用人单位与毕业生充分交流，积极互动，气氛热烈，部分同学与用人单位达成就业意向。</span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"595\" src=\"migration-resource://c919a6e82153caed8de9e04299e9c43c571e668f335a9cf298806b8db35eb7e2\" width=\"900\"></p>\n\n<p style=\"text-align:left\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:14.0pt\"><span style=\"font-family:宋体\">本次活动的开展，进一步提升了毕业生与省内优质用人单位对接的精准度，巩固了毕业生留省就业信心，下一步将进一步拓展省内就业市场，发挥高校人才智力优势，搭建高质量毕业生留省就业平台，为吉林振兴发展贡献力量。</span></span></span></span></p>\n\n<p style=\"text-align:justify\">&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-27/8d0baa06-fd4d-4a4f-b1b6-1541afe7e5b1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-27/8d0baa06-fd4d-4a4f-b1b6-1541afe7e5b1.jpg",
+      "token": "migration-resource://f83244359c04e80c9ef31c00568d87fe5aecdd36bb480978bb7f8943cc40b3e8",
+      "snapshotPath": "assets/f83244359c04e80c9ef31c00568d87fe5aecdd36bb480978bb7f8943cc40b3e8.jpg",
+      "sha256": "f83244359c04e80c9ef31c00568d87fe5aecdd36bb480978bb7f8943cc40b3e8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 145454
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-27/dc1278bd-b567-4915-af0a-488fcc955200.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-27/dc1278bd-b567-4915-af0a-488fcc955200.jpg",
+      "token": "migration-resource://c919a6e82153caed8de9e04299e9c43c571e668f335a9cf298806b8db35eb7e2",
+      "snapshotPath": "assets/c919a6e82153caed8de9e04299e9c43c571e668f335a9cf298806b8db35eb7e2.jpg",
+      "sha256": "c919a6e82153caed8de9e04299e9c43c571e668f335a9cf298806b8db35eb7e2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 163785
+    }
+  ],
+  "sourceFingerprint": "3dccca124c5a90c81c8afa39f7909dbe35bf7da8b86f4a9529aad0b8eadaa37c",
+  "evidence": {
+    "listPage": 112,
+    "listTitle": "“一起益企”吉林省中小企业人才供需对接活动——吉林农业大学专场招聘会成功举办",
+    "listPublishDate": "2023-09-27",
+    "sourceOrder": 1112,
+    "detailPublishDate": "2023-09-27"
+  }
+}

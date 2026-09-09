@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86128340254720",
+    "contentId": "86128340254720",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86128340254720"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "东北电力大学2022届毕业生“就业超市”正式启动",
+    "source": "",
+    "publishDate": "2021-11-25",
+    "bodyHtml": "\n                        <p>11月24日，学校2022届毕业生“就业超市”正式启动，为企业和学生提供便利招聘对接服务，着力促成未就业毕业生和用人单位的精准化匹配，满足毕业生多元化的就业需求。&nbsp;</p>\n\n<p>“就业超市”吸引了众多毕业生前往求职，他们穿梭于企业展板间浏览相关招聘信息，主动与现场工作人员进行交谈，询问了解企业招聘流程及招聘岗位信息等情况，现场工作人员向同学们作了详细的说明和讲解。</p>\n\n<p>同时学校围绕学生就业需求，向毕业生发放就业指导宣传手册，鼓励毕业生找准定位，把握机遇，主动出击，早日就业。</p>\n\n<p>鉴于目前疫情防控形势，学校将进一步强化就业市场建设，持续提供就业岗位，打造“线上+线下”相融合的就业服务体系，把“精准服务”落实落细，确保疫情防控期间就业服务不打烊，招聘活动不停歇，扎实有序推进毕业生就业工作。</p>\n\n<p><strong>（东北电力大学 王硕鹏）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "d4a95b9a5307e9815a520f93986d0438e0603caf8c2518612e3cbe879305c0b8",
+  "evidence": {
+    "listPage": 127,
+    "listTitle": "东北电力大学2022届毕业生“就业超市”正式启动",
+    "listPublishDate": "2021-11-25",
+    "sourceOrder": 1267,
+    "detailPublishDate": "2021-11-25"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bbde94ee33f02562db5b1723d21c272d4cd9842b1521492d1ca3bf01ca90ba6b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/1m6uIX0J57RgdKiQVF5XMA",
+    "url": "https://mp.weixin.qq.com/s/1m6uIX0J57RgdKiQVF5XMA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院董事长张电达一行走访北京卓翼智能科技有限公司",
+    "source": "",
+    "publishDate": "2026-06-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1m6uIX0J57RgdKiQVF5XMA"
+  },
+  "resources": [],
+  "sourceFingerprint": "3bb2056ecd20a2c2877b24c8186e07681a8e8d851b6a0692c19f4186333c0274",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "长春科技学院董事长张电达一行走访北京卓翼智能科技有限公司",
+    "listPublishDate": "2026-06-01",
+    "sourceOrder": 117
+  }
+}

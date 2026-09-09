@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122594",
+    "contentId": "28737783122594",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122594"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发《开展大学生创业优秀论文征集颁奖活动》的通知",
+    "source": "",
+    "publishDate": "2015-06-17",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于转发《开展大学生创业优秀论文征集颁奖活动》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2015-6-17 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center;\">&nbsp;<img title=\"关于转发《开展大学生创业优秀论文征集颁奖活动》的通知.jpg\" src=\"http://www.jilinjobs.cn//Common/GetFileByServer.aspx?FileName=6357014807696875007175426.jpg\"></p><p style=\"text-align: center;\"><img title=\"关于转发《开展大学生创业优秀论文征集颁奖活动》的通知(附件) (1).jpg\" src=\"migration-resource://e8040a23668f3d57c03b83d2e0ad65561459a8afae8ef59cf2cee013a9368000\"></p><p style=\"text-align: center;\"><img title=\"关于转发《开展大学生创业优秀论文征集颁奖活动》的通知(附件) (2).jpg\" src=\"migration-resource://db2ee99b8d6c222150bcf7c87e22c0ff31cdb527590c6631dfb396c86a34b791\"></p><p style=\"text-align: center;\"><img title=\"关于转发《开展大学生创业优秀论文征集颁奖活动》的通知(附件) (3).jpg\" src=\"migration-resource://5369df1bbdb7fc20ae005b947e8426afb4edb92c77611cd6766f152e88ec4bf4\"></p><p style=\"text-align: center;\">&nbsp;</p><p>&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357014807375000004359203.jpg",
+      "originalReference": "/chistory/cms/imgs/6357014807375000004359203.jpg",
+      "token": "migration-resource://e8040a23668f3d57c03b83d2e0ad65561459a8afae8ef59cf2cee013a9368000",
+      "snapshotPath": "assets/e8040a23668f3d57c03b83d2e0ad65561459a8afae8ef59cf2cee013a9368000.jpg",
+      "sha256": "e8040a23668f3d57c03b83d2e0ad65561459a8afae8ef59cf2cee013a9368000",
+      "contentType": "image/jpeg",
+      "sizeBytes": 162819
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357014807517187505360032.jpg",
+      "originalReference": "/chistory/cms/imgs/6357014807517187505360032.jpg",
+      "token": "migration-resource://db2ee99b8d6c222150bcf7c87e22c0ff31cdb527590c6631dfb396c86a34b791",
+      "snapshotPath": "assets/db2ee99b8d6c222150bcf7c87e22c0ff31cdb527590c6631dfb396c86a34b791.jpg",
+      "sha256": "db2ee99b8d6c222150bcf7c87e22c0ff31cdb527590c6631dfb396c86a34b791",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82741
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357014807609375008274775.jpg",
+      "originalReference": "/chistory/cms/imgs/6357014807609375008274775.jpg",
+      "token": "migration-resource://5369df1bbdb7fc20ae005b947e8426afb4edb92c77611cd6766f152e88ec4bf4",
+      "snapshotPath": "assets/5369df1bbdb7fc20ae005b947e8426afb4edb92c77611cd6766f152e88ec4bf4.jpg",
+      "sha256": "5369df1bbdb7fc20ae005b947e8426afb4edb92c77611cd6766f152e88ec4bf4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 101592
+    }
+  ],
+  "sourceFingerprint": "afc30be5cad04c1a4a1405bde56efaace24ca7236d7667b7a40424f01af567e5",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "关于转发《开展大学生创业优秀论文征集颁奖活动》的通知",
+    "listPublishDate": "2015-06-17",
+    "sourceOrder": 274,
+    "detailPublishDate": "2015-06-17"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123292",
+    "contentId": "28737783123292",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123292"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "中国高等教育学历认证简介",
+    "source": "",
+    "publishDate": "2009-02-16",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">中国高等教育学历认证简介</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-2-16 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#5b5b5b\">&nbsp;&nbsp;&nbsp; </font></p> <p><font color=\"#5b5b5b\">&nbsp;&nbsp;&nbsp; 吉林省高等学校毕业生就业指导中心（以下简称中心）于2002年1月经教育部全国高等学校学生信息咨询与就业指导中心授权，作为吉林省内唯一的学历认证代理机构，开展高等教育学历认证服务。中心为出国留学、职称评定、人事录用、职务晋升、资格认证、工资晋级、求职就业、考试升学、资格公证、证书丢失等提供学历证明，出具教育部统一印制、统一编号的《中国高等教育学历认证报告》。任何单位或个人均可提出认证申请，认证只需申请一次，同时提供书面和网上两种形式的认证结果，用户可凭认证报告上的证书编号及报告编号在中国高等教育学生信息网（</font><a href=\"http://www.chsi.com.cn\"><font color=\"#5b5b5b\">http://www.chsi.com.cn</font></a><font color=\"#5b5b5b\">）上查询。</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "fce4171b5af123ace643c95f1eaa344895d72f777bb4ff7c220228c1a2b92195",
+  "evidence": {
+    "listPage": 60,
+    "listTitle": "中国高等教育学历认证简介",
+    "listPublishDate": "2009-02-16",
+    "sourceOrder": 600,
+    "detailPublishDate": "2009-02-16"
+  }
+}

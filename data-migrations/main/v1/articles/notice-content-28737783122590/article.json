@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122590",
+    "contentId": "28737783122590",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122590"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2015年离校未就业高校毕业生网上招聘活动的通知",
+    "source": "",
+    "publishDate": "2015-07-29",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办2015年离校未就业高校毕业生网上招聘活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2015-7-29 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"TEXT-ALIGN: center\">&nbsp;</p><p style=\"TEXT-ALIGN: center\"><img title=\"1.jpg\" src=\"migration-resource://fff3bd91fb1fb85408924b43223f0c2141ee2b5241ae91da99263a44fdb7e9de\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"2.jpg\" src=\"migration-resource://44db3f35c42feff4fef1c28cfc93f30b4c16ae8e83c70d28050da2dcaf6dca0a\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"3.jpg\" src=\"migration-resource://6777a53da3452d9000d8e557cce72707a3d1e1aa151d7b7a7282d8b477decc8d\"></p><p style=\"TEXT-ALIGN: center\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357376359012500001848994.jpg",
+      "originalReference": "/chistory/cms/imgs/6357376359012500001848994.jpg",
+      "token": "migration-resource://fff3bd91fb1fb85408924b43223f0c2141ee2b5241ae91da99263a44fdb7e9de",
+      "snapshotPath": "assets/fff3bd91fb1fb85408924b43223f0c2141ee2b5241ae91da99263a44fdb7e9de.jpg",
+      "sha256": "fff3bd91fb1fb85408924b43223f0c2141ee2b5241ae91da99263a44fdb7e9de",
+      "contentType": "image/jpeg",
+      "sizeBytes": 48498
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357376359087500003478123.jpg",
+      "originalReference": "/chistory/cms/imgs/6357376359087500003478123.jpg",
+      "token": "migration-resource://44db3f35c42feff4fef1c28cfc93f30b4c16ae8e83c70d28050da2dcaf6dca0a",
+      "snapshotPath": "assets/44db3f35c42feff4fef1c28cfc93f30b4c16ae8e83c70d28050da2dcaf6dca0a.jpg",
+      "sha256": "44db3f35c42feff4fef1c28cfc93f30b4c16ae8e83c70d28050da2dcaf6dca0a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 59302
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357376359089062509248878.jpg",
+      "originalReference": "/chistory/cms/imgs/6357376359089062509248878.jpg",
+      "token": "migration-resource://6777a53da3452d9000d8e557cce72707a3d1e1aa151d7b7a7282d8b477decc8d",
+      "snapshotPath": "assets/6777a53da3452d9000d8e557cce72707a3d1e1aa151d7b7a7282d8b477decc8d.jpg",
+      "sha256": "6777a53da3452d9000d8e557cce72707a3d1e1aa151d7b7a7282d8b477decc8d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 26982
+    }
+  ],
+  "sourceFingerprint": "fa19c2d37c5230d70a3c0799b7e465b19c1215994046d8630ef5e0c8cd99de83",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "关于举办2015年离校未就业高校毕业生网上招聘活动的通知",
+    "listPublishDate": "2015-07-29",
+    "sourceOrder": 272,
+    "detailPublishDate": "2015-07-29"
+  }
+}

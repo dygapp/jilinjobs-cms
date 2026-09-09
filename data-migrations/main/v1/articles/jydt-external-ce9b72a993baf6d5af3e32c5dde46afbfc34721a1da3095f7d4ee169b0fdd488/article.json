@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ce9b72a993baf6d5af3e32c5dde46afbfc34721a1da3095f7d4ee169b0fdd488",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1042/94483.htm",
+    "url": "https://www.jlbtc.edu.cn/info/1042/94483.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院赴吉林极兔供应链管理有限公司开展“优企引才”访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-20",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlbtc.edu.cn/info/1042/94483.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "cb5ec0da5ae40a9b149085abd4d2bd0f40f52a3a2465a2e129fed9096cf0e3a9",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "吉林工商学院赴吉林极兔供应链管理有限公司开展“优企引才”访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-20",
+    "sourceOrder": 391
+  }
+}

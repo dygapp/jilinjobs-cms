@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:a86a941daa0bae5d4d56bfc37836708f1672e4050397b9833c366cad33642873",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/rRKPpWmte1r7xagOAVS2aA",
+    "url": "https://mp.weixin.qq.com/s/rRKPpWmte1r7xagOAVS2aA?scene=25&sessionid=-1367692740"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学“服务吉林高质量发展”2025届毕业生IT类专场招聘会邀请函",
+    "source": "",
+    "publishDate": "2025-04-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/rRKPpWmte1r7xagOAVS2aA?scene=25&sessionid=-1367692740"
+  },
+  "resources": [],
+  "sourceFingerprint": "dc58f5d11143332b8f8060a6673f34db654243cfd5d1cd80d83fa408c15cd886",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "长春工业大学“服务吉林高质量发展”2025届毕业生IT类专场招聘会邀请函",
+    "listPublishDate": "2025-04-14",
+    "sourceOrder": 181
+  }
+}

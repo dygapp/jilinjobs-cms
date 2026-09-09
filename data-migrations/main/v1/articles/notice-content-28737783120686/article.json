@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120686",
+    "contentId": "28737783120686",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120686"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2020吉林省高校ICT数字人才专场招聘会的通知",
+    "source": "市场开发部",
+    "publishDate": "2020-09-24",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1256\" src=\"migration-resource://1a7e1389010989dd26849cc5c2bead5853f258d4d55e47e3d6796e40607debc3\" width=\"888\"><img alt=\"\" height=\"1255\" src=\"migration-resource://894dbae5ac4578686146a28960cd736fa7101d3608d60fcf2c0db48ebe235eab\" width=\"888\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200924101458.jpg",
+      "originalReference": "/chistory/cms/editor/20200924101458.jpg",
+      "token": "migration-resource://1a7e1389010989dd26849cc5c2bead5853f258d4d55e47e3d6796e40607debc3",
+      "snapshotPath": "assets/1a7e1389010989dd26849cc5c2bead5853f258d4d55e47e3d6796e40607debc3.jpg",
+      "sha256": "1a7e1389010989dd26849cc5c2bead5853f258d4d55e47e3d6796e40607debc3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 166516
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200924101723.jpg",
+      "originalReference": "/chistory/cms/editor/20200924101723.jpg",
+      "token": "migration-resource://894dbae5ac4578686146a28960cd736fa7101d3608d60fcf2c0db48ebe235eab",
+      "snapshotPath": "assets/894dbae5ac4578686146a28960cd736fa7101d3608d60fcf2c0db48ebe235eab.jpg",
+      "sha256": "894dbae5ac4578686146a28960cd736fa7101d3608d60fcf2c0db48ebe235eab",
+      "contentType": "image/jpeg",
+      "sizeBytes": 160646
+    }
+  ],
+  "sourceFingerprint": "0af86ee44a0004e1e57c7e27ca1d6a8413455c7ac0008be38f63985caa1d2c58",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "关于举办2020吉林省高校ICT数字人才专场招聘会的通知",
+    "listPublishDate": "2020-09-24",
+    "sourceOrder": 170,
+    "detailPublishDate": "2020-09-24"
+  }
+}

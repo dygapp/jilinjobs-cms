@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:50cf7b923e9cc7631cef1c9a2aa88a28d5c3b64be83ecc7be7dc4d9810bd6e6e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/4686.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/4686.htm?sessionid=1464950181"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“才聚浙江2025大中城市联合招聘高校毕业生—吉林站”专场招聘会在长春工业大学举行",
+    "source": "",
+    "publishDate": "2025-05-12",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/4686.htm?sessionid=1464950181"
+  },
+  "resources": [],
+  "sourceFingerprint": "5be0015c181860bf7df025e43f6392a2eff2cc6b45d6605c72217a240ef9a9a1",
+  "evidence": {
+    "listPage": 91,
+    "listTitle": "“才聚浙江2025大中城市联合招聘高校毕业生—吉林站”专场招聘会在长春工业大学举行",
+    "listPublishDate": "2025-05-12",
+    "sourceOrder": 908
+  }
+}

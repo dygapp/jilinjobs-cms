@@ -1,0 +1,111 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:349945137758208",
+    "contentId": "349945137758208",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=349945137758208"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "人力资源社会保障部办公厅 教育部办公厅关于开展“就业公共服务进校园百日行动”的通知",
+    "source": "教育部办公厅",
+    "publishDate": "2026-04-06",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://f205c029a0a2c7bf4af35bd003bfe6fbe279823134feae8a42cdbbb89f9f04f7\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://8c27b9162a57e308198aaec625ce52bc1ae1a04d9410fc8897019f44c39a6e4e\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://1b1ba0fd554ad1e0b99e16f46fb475fce5e3a1f86fa458101dd7246a78d168a9\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://937ff9b9215108894b7e6b08758827be777254e88cdced822c046395d01cd9e4\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://6cd6bcb2d16d17eb0293dece6570ceb9e03624c4bd034263873df090abb4c139\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://5bea71537de51ecf7c7d3d7a526412cb0f8d327f1e433befb71e86fe3ccbce89\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://bb51f56086914a41e3559e233a1f3d5199c30e323f1c55cafcb3a31925fde63f\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://3414f610aea39934508d48f2cdf709a522423a622349a530accb4f4653271178\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-04-16/c46ca65b-a16f-4b53-afdc-de0129484260.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-04-16/c46ca65b-a16f-4b53-afdc-de0129484260.jpg",
+      "token": "migration-resource://f205c029a0a2c7bf4af35bd003bfe6fbe279823134feae8a42cdbbb89f9f04f7",
+      "snapshotPath": "assets/f205c029a0a2c7bf4af35bd003bfe6fbe279823134feae8a42cdbbb89f9f04f7.jpg",
+      "sha256": "f205c029a0a2c7bf4af35bd003bfe6fbe279823134feae8a42cdbbb89f9f04f7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-04-16/eebfa05a-3ba9-424e-a8a7-ca56356079b1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-04-16/eebfa05a-3ba9-424e-a8a7-ca56356079b1.jpg",
+      "token": "migration-resource://8c27b9162a57e308198aaec625ce52bc1ae1a04d9410fc8897019f44c39a6e4e",
+      "snapshotPath": "assets/8c27b9162a57e308198aaec625ce52bc1ae1a04d9410fc8897019f44c39a6e4e.jpg",
+      "sha256": "8c27b9162a57e308198aaec625ce52bc1ae1a04d9410fc8897019f44c39a6e4e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-04-16/4073d770-c564-48de-a69a-a2d705e76aa5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-04-16/4073d770-c564-48de-a69a-a2d705e76aa5.jpg",
+      "token": "migration-resource://1b1ba0fd554ad1e0b99e16f46fb475fce5e3a1f86fa458101dd7246a78d168a9",
+      "snapshotPath": "assets/1b1ba0fd554ad1e0b99e16f46fb475fce5e3a1f86fa458101dd7246a78d168a9.jpg",
+      "sha256": "1b1ba0fd554ad1e0b99e16f46fb475fce5e3a1f86fa458101dd7246a78d168a9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-04-16/e6a44003-c4e2-4241-bf44-7b0d1bb3d0f2.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-04-16/e6a44003-c4e2-4241-bf44-7b0d1bb3d0f2.jpg",
+      "token": "migration-resource://937ff9b9215108894b7e6b08758827be777254e88cdced822c046395d01cd9e4",
+      "snapshotPath": "assets/937ff9b9215108894b7e6b08758827be777254e88cdced822c046395d01cd9e4.jpg",
+      "sha256": "937ff9b9215108894b7e6b08758827be777254e88cdced822c046395d01cd9e4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-04-16/5177fb14-d6de-4be5-99b1-5b867fa092b6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-04-16/5177fb14-d6de-4be5-99b1-5b867fa092b6.jpg",
+      "token": "migration-resource://6cd6bcb2d16d17eb0293dece6570ceb9e03624c4bd034263873df090abb4c139",
+      "snapshotPath": "assets/6cd6bcb2d16d17eb0293dece6570ceb9e03624c4bd034263873df090abb4c139.jpg",
+      "sha256": "6cd6bcb2d16d17eb0293dece6570ceb9e03624c4bd034263873df090abb4c139",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-04-16/dfc84691-c4df-455e-9ed4-f7e696d2199b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-04-16/dfc84691-c4df-455e-9ed4-f7e696d2199b.jpg",
+      "token": "migration-resource://5bea71537de51ecf7c7d3d7a526412cb0f8d327f1e433befb71e86fe3ccbce89",
+      "snapshotPath": "assets/5bea71537de51ecf7c7d3d7a526412cb0f8d327f1e433befb71e86fe3ccbce89.jpg",
+      "sha256": "5bea71537de51ecf7c7d3d7a526412cb0f8d327f1e433befb71e86fe3ccbce89",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-04-16/dd77a79f-5e7b-407c-b6be-a347e44de301.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-04-16/dd77a79f-5e7b-407c-b6be-a347e44de301.jpg",
+      "token": "migration-resource://bb51f56086914a41e3559e233a1f3d5199c30e323f1c55cafcb3a31925fde63f",
+      "snapshotPath": "assets/bb51f56086914a41e3559e233a1f3d5199c30e323f1c55cafcb3a31925fde63f.jpg",
+      "sha256": "bb51f56086914a41e3559e233a1f3d5199c30e323f1c55cafcb3a31925fde63f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-04-16/769a8599-55a3-491d-a0c0-434a8b6fb4ee.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-04-16/769a8599-55a3-491d-a0c0-434a8b6fb4ee.jpg",
+      "token": "migration-resource://3414f610aea39934508d48f2cdf709a522423a622349a530accb4f4653271178",
+      "snapshotPath": "assets/3414f610aea39934508d48f2cdf709a522423a622349a530accb4f4653271178.jpg",
+      "sha256": "3414f610aea39934508d48f2cdf709a522423a622349a530accb4f4653271178",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "a667a2f71f690fbeb5b978c4aa067fb025cec9126bd3fb8fe2fa1e82a99acbfd",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "人力资源社会保障部办公厅 教育部办公厅关于开展“就业公共服务进校园百日行动”的通知",
+    "listPublishDate": "2026-04-06",
+    "sourceOrder": 9,
+    "detailPublishDate": "2026-04-06"
+  }
+}

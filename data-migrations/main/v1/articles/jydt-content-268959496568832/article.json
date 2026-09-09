@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268959496568832",
+    "contentId": "268959496568832",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268959496568832"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林建筑科技学院打造“云端就业桥”",
+    "source": "",
+    "publishDate": "2024-11-08",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://2703615cffba3095bda0c87d9163152c20885b966057899b02afa6015ec8c825\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/eac955b4-b237-4312-a3f3-f077360c0907.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/eac955b4-b237-4312-a3f3-f077360c0907.jpg",
+      "token": "migration-resource://2703615cffba3095bda0c87d9163152c20885b966057899b02afa6015ec8c825",
+      "snapshotPath": "assets/2703615cffba3095bda0c87d9163152c20885b966057899b02afa6015ec8c825.jpg",
+      "sha256": "2703615cffba3095bda0c87d9163152c20885b966057899b02afa6015ec8c825",
+      "contentType": "image/jpeg",
+      "sizeBytes": 373160
+    }
+  ],
+  "sourceFingerprint": "d331edffba3ececd4c488bf0b6eec1064be948d4b6a4e8f12423d9d5493154f7",
+  "evidence": {
+    "listPage": 102,
+    "listTitle": "吉林建筑科技学院打造“云端就业桥”",
+    "listPublishDate": "2024-11-08",
+    "sourceOrder": 1018,
+    "detailPublishDate": "2024-11-08"
+  }
+}

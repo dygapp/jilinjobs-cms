@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0d71e5e8a203a300faf849b39bf9af8c11b5cc256162867f806e25c069917843",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ll9d6eJ-f9AWayhc1beGOg",
+    "url": "https://mp.weixin.qq.com/s/ll9d6eJ-f9AWayhc1beGOg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林铁道职业技术大学 | 召开2025年就业工作“亮马比拼”活动第二阶段总结会议",
+    "source": "",
+    "publishDate": "2025-06-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ll9d6eJ-f9AWayhc1beGOg"
+  },
+  "resources": [],
+  "sourceFingerprint": "36cffbc78e878c71e40a720f8dad85ef483918da5379c11b0968722da0536fe5",
+  "evidence": {
+    "listPage": 80,
+    "listTitle": "吉林铁道职业技术大学 | 召开2025年就业工作“亮马比拼”活动第二阶段总结会议",
+    "listPublishDate": "2025-06-18",
+    "sourceOrder": 799
+  }
+}

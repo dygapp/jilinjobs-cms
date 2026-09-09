@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:c4370bb02ea25fba04f753e428627548c8cbe5f38c55d51605758e6762db92f6",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/u6Zn_YxCKAkGXtc1Xxal3w",
+    "url": "https://mp.weixin.qq.com/s/u6Zn_YxCKAkGXtc1Xxal3w"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "招聘会 | 创业奋斗 “就”在吉林 吉林省文旅行业暨吉林市全领域大学生就业招聘会邀请函",
+    "source": "",
+    "publishDate": "2024-05-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/u6Zn_YxCKAkGXtc1Xxal3w"
+  },
+  "resources": [],
+  "sourceFingerprint": "5e02472ef49f0176c47ee0ef8ad42f37217d6f758ae2e09c765dd177f2a0a7a1",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "招聘会 | 创业奋斗 “就”在吉林 吉林省文旅行业暨吉林市全领域大学生就业招聘会邀请函",
+    "listPublishDate": "2024-05-01",
+    "sourceOrder": 284
+  }
+}

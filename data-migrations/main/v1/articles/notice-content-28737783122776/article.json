@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122776",
+    "contentId": "28737783122776",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122776"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于召开2016下半年全国计算机应用水平考试吉林省考区考务暨系统培训会议的通知",
+    "source": "",
+    "publishDate": "2016-11-08",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于召开2016下半年全国计算机应用水平考试吉林省考区考务暨系统培训会议的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:信息部 发布时间:2016-11-8 8:37:19</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://e4d30ce443be978b4e82e25b922ee05572ce651e97c89e9c1f0402fd4f44bf08\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://a8399b964fc198d723c72be884c3de571d9f55e45faee1a2a6d4ad3df16594bf\"></p>\n\n<p>&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=350a4d0b-ecf7-4987-bd23-102bc7d5cc58\">参会回执.docx</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361419112274587506757828.jpg",
+      "originalReference": "/chistory/cms/imgs/6361419112274587506757828.jpg",
+      "token": "migration-resource://e4d30ce443be978b4e82e25b922ee05572ce651e97c89e9c1f0402fd4f44bf08",
+      "snapshotPath": "assets/e4d30ce443be978b4e82e25b922ee05572ce651e97c89e9c1f0402fd4f44bf08.jpg",
+      "sha256": "e4d30ce443be978b4e82e25b922ee05572ce651e97c89e9c1f0402fd4f44bf08",
+      "contentType": "image/jpeg",
+      "sizeBytes": 89730
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361419112394900002056705.jpg",
+      "originalReference": "/chistory/cms/imgs/6361419112394900002056705.jpg",
+      "token": "migration-resource://a8399b964fc198d723c72be884c3de571d9f55e45faee1a2a6d4ad3df16594bf",
+      "snapshotPath": "assets/a8399b964fc198d723c72be884c3de571d9f55e45faee1a2a6d4ad3df16594bf.jpg",
+      "sha256": "a8399b964fc198d723c72be884c3de571d9f55e45faee1a2a6d4ad3df16594bf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 57017
+    }
+  ],
+  "sourceFingerprint": "26a663c3ca95d56ab81c02c20ba70bdff2ba1677780d48179be99845b2a1a570",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "关于召开2016下半年全国计算机应用水平考试吉林省考区考务暨系统培训会议的通知",
+    "listPublishDate": "2016-11-08",
+    "sourceOrder": 231,
+    "detailPublishDate": "2016-11-08"
+  }
+}

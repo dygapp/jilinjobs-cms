@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d60c1dc3917ee0b0084a3798e4cced5713f441a186e20db4cedb522286de62dd",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/-k8Q-fPvh2Xz01p_YV45FA",
+    "url": "https://mp.weixin.qq.com/s/-k8Q-fPvh2Xz01p_YV45FA?scene=25&sessionid=-1365429465"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林铁道职业技术大学举办2025届毕业生春季校园招聘会",
+    "source": "",
+    "publishDate": "2025-04-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/-k8Q-fPvh2Xz01p_YV45FA?scene=25&sessionid=-1365429465"
+  },
+  "resources": [],
+  "sourceFingerprint": "f1bfa432fd56f072f5a2dbdea92aa9a7bc524e4b889c74697a38026d19779e36",
+  "evidence": {
+    "listPage": 93,
+    "listTitle": "吉林铁道职业技术大学举办2025届毕业生春季校园招聘会",
+    "listPublishDate": "2025-04-28",
+    "sourceOrder": 921
+  }
+}

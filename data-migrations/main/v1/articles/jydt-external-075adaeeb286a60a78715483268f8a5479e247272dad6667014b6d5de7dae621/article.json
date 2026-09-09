@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:075adaeeb286a60a78715483268f8a5479e247272dad6667014b6d5de7dae621",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1026/172942.htm",
+    "url": "https://www.jlju.edu.cn/info/1026/172942.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学举办“聚力扩容提质 服务高质量发展”吉林省第五届建筑类人才供需洽谈会暨2026届毕业生春季双选会",
+    "source": "",
+    "publishDate": "2026-03-30",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1026/172942.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "95951f3d83c1e261a60cc714a5e2903a39cbcb573c18b8b3f0cff5b9dbd51ffd",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "吉林建筑大学举办“聚力扩容提质 服务高质量发展”吉林省第五届建筑类人才供需洽谈会暨2026届毕业生春季双选会",
+    "listPublishDate": "2026-03-30",
+    "sourceOrder": 345
+  }
+}

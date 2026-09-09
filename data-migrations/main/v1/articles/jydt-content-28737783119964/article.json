@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119964",
+    "contentId": "28737783119964",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119964"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林农业大学成功举办就业创业校企合作对接会",
+    "source": "",
+    "publishDate": "2016-11-12",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林农业大学成功举办就业创业校企合作对接会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部、信息部   发布时间:2016-11-12 10:33:27</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\";font-family: 仿宋;font-size: 21px\">&nbsp;</span></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋;font-size: 21px\">2016</span><span style=\";font-family: 仿宋;font-size: 21px\">年11月11日，吉林农业大学在学校图书馆报告厅举办了校企对接会暨“1+N企业课程进课堂”、企业助力学生就业成长计划、大学生就业创业基地三个项目的签约仪式。学校与来自全国9个省份58家企业签订不同内容的合作协议，与通威股份、百胜餐饮等25家企业签订了“1+N企业课程进课堂”项目合作协议；与沈阳顺风实业集团、浙江威尔达化工有限公司等7家企业签订了“企业助力学生就业成长计划”项目合作协议；与华西希望特驱集团、广东温氏集团等26家企业签订了大学生就业创业基地合作协议。</span></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋;font-size: 21px\">学校推出的“1+N企业课程进课堂”项目，是主动调整就业创业指导课程教学内容，在课程中融入必要的企业课程，选聘企业相关人员担任课程讲师，承担行业发展趋势、社会需求状况、职业适应力、毕业生求职实务、创业辅导等部分课程内容教学，进入课堂进行授课。同时企业作为学校的就业创业指导实践教学基地，接收学生或专业教师进企业进行专业考察、培训交流和挂职锻炼。旨在全面提升学生就业创业能力和专业素养，提升企业社会声誉，增强学生职业适应力，有效契合市场需求。</span></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋;font-size: 21px\">学校还同时推出了“企业助力学生就业成长计划”，由企业设立助力学生就业成长资金，帮助学生从低年级开始全面提升综合素质，培养学生就业创业能力，助力学生全面成长，激励成长成才。会上，7家企业计划在四年时间投入资金总额达292万元用于该项目。</span></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋;font-size: 21px\">这些项目的实施，是吉林农业大学为进一步深化校企合作，推动学校教育教学改革，探索人才培养新模式，努力提升农业高校人才培养质量、毕业生就业质量，实现校企横向联合、资源共享、共同发展的一次创新之举。同时也是更充分地实现大学人才培养使命的有益尝试。项目的实施为学生实习、就业创业搭建了良好的平台，实现学校、企业和学生“三赢”的目标，有助于学校的良性可持续发展。 </span></p><p><span style=\";font-family: 仿宋;font-size: 21px\">&nbsp;</span></p><p style=\"text-align: center\"><img title=\"111111111111111111.jpg\" src=\"migration-resource://4a62b00b7ae4af2b8b5e59433724f873f147d0c54c4f231e38d456731d97ad96\"></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361506204912500005156678.jpg",
+      "originalReference": "/chistory/cms/imgs/6361506204912500005156678.jpg",
+      "token": "migration-resource://4a62b00b7ae4af2b8b5e59433724f873f147d0c54c4f231e38d456731d97ad96",
+      "snapshotPath": "assets/4a62b00b7ae4af2b8b5e59433724f873f147d0c54c4f231e38d456731d97ad96.jpg",
+      "sha256": "4a62b00b7ae4af2b8b5e59433724f873f147d0c54c4f231e38d456731d97ad96",
+      "contentType": "image/jpeg",
+      "sizeBytes": 105558
+    }
+  ],
+  "sourceFingerprint": "46b5be4070dff9d4dcb272bce1274f10bb321bccd90a90bf06210278d6bcf6c0",
+  "evidence": {
+    "listPage": 153,
+    "listTitle": "吉林农业大学成功举办就业创业校企合作对接会",
+    "listPublishDate": "2016-11-12",
+    "sourceOrder": 1522,
+    "detailPublishDate": "2016-11-12"
+  }
+}

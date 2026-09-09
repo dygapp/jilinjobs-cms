@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:09ea70a9c544d75ba8684b9f6edfddae3307c27dcb34099d4b0a74429a981be4",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/s-w3anTw14nPzXFXpW4HoA",
+    "url": "https://mp.weixin.qq.com/s/s-w3anTw14nPzXFXpW4HoA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "寒假促就业暖心行动 | 吉林动画学院2026届毕业生网络招聘等你来！",
+    "source": "",
+    "publishDate": "2026-01-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/s-w3anTw14nPzXFXpW4HoA"
+  },
+  "resources": [],
+  "sourceFingerprint": "6800ae54b9add841101a476802872557bb2a75e128ac205a56a4ba67512fe5fb",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "寒假促就业暖心行动 | 吉林动画学院2026届毕业生网络招聘等你来！",
+    "listPublishDate": "2026-01-15",
+    "sourceOrder": 105
+  }
+}

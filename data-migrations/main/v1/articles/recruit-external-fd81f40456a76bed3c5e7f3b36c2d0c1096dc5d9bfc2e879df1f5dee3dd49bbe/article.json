@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:fd81f40456a76bed3c5e7f3b36c2d0c1096dc5d9bfc2e879df1f5dee3dd49bbe",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/WuTYnajTnFlnnr5iPdB27w",
+    "url": "https://mp.weixin.qq.com/s/WuTYnajTnFlnnr5iPdB27w"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "四平职业大学寒假促就业暖心行动来啦！这份求职助力指南请查收",
+    "source": "",
+    "publishDate": "2026-02-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/WuTYnajTnFlnnr5iPdB27w"
+  },
+  "resources": [],
+  "sourceFingerprint": "e5155efed63c8fea6592f898434c53393d4c282931cd1f78cc7684142366b895",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "四平职业大学寒假促就业暖心行动来啦！这份求职助力指南请查收",
+    "listPublishDate": "2026-02-02",
+    "sourceOrder": 70
+  }
+}

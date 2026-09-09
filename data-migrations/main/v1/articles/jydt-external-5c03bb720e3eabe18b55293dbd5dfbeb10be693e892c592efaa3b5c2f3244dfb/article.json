@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5c03bb720e3eabe18b55293dbd5dfbeb10be693e892c592efaa3b5c2f3244dfb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/lx9ctKu7SWWiXOA6skEIsQ",
+    "url": "https://mp.weixin.qq.com/s/lx9ctKu7SWWiXOA6skEIsQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院副校长张代治一行赴沈阳走访辽宁中医药大学附属医院第四医院和沈阳维康医院",
+    "source": "",
+    "publishDate": "2026-01-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/lx9ctKu7SWWiXOA6skEIsQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "135fb7f6ebf0f07b3481046ba4607c93b2dfa44fcd3fd86d4bfa895a4beb23fa",
+  "evidence": {
+    "listPage": 49,
+    "listTitle": "长春科技学院副校长张代治一行赴沈阳走访辽宁中医药大学附属医院第四医院和沈阳维康医院",
+    "listPublishDate": "2026-01-20",
+    "sourceOrder": 486
+  }
+}

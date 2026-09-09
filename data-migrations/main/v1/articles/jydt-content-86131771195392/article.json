@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86131771195392",
+    "contentId": "86131771195392",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86131771195392"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春科技学院加强服务科学施策推进毕业生更快更多更好就业",
+    "source": "长春科技学院",
+    "publishDate": "2022-04-12",
+    "bodyHtml": "\n                        <p>长春科技学院牢固树立“坚持就是胜利”的必胜信念，在全力以赴做好疫情防控工作的同时，针对疫情防控特殊时期给就业工作带来的严重冲击和不利影响，着眼毕业生充分高质量就业，加强服务指导，科学务实施策，多渠道多形式开展就业工作，推进毕业生更快更多更好就业。</p>\n\n<p>按照“就业服务不打烊，纾困帮扶向未来，筑梦吉林做贡献”的就业工作理念，积极为毕业生提供充分就业渠道。3月15日，学校联合慧就业平台，组织举办了“奋斗有我‘就’在吉林”2022届春季大型网络视频招聘会，共有近100家企业参加，其中吉林省企业40余家，提供就业岗位近6000个，毕业生投递简历287份，部分毕业生还与用人单位达成了初步就业意向。同时，就业部门充分发挥“长春科技学院就业在线”微信公众号的功能作用，采取分学院、分区域、分专业、分意向的方法，每天为毕业生精准推送就业招聘信息，受到了毕业生的欢迎和好评。很多毕业生通过参加网络招聘会和对推送的用人单位优中选优、综合比较，找到了满意的工作，实现了就业愿望。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"321\" src=\"migration-resource://6d56c364ff8ab33f621e95caa55d02d9c90832856af89ee40eec0558785bafbe\" width=\"552\"></p>\n\n<p>为加强疫情期间毕业生就业指导服务，学校积极组织毕业生参加教育部“互联网+就业指导”公益直播课，以此提升毕业生职业规划和求职就业竞争力。3月18日，结合北森生涯疫情防控期间开展的“荧光行动”，及时开通线上课堂，为在校生和毕业生免费提供涵盖“心态管理、自我认知、职业探索、简历指导、面试技巧”等多个模块20节课程内容，贯穿从大一学生到应届毕业生各个层次。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"500\" src=\"migration-resource://f9ad2c0c971d6dd26a34fe179f6179e61429cb21a44c7acc406ff32845893552\" width=\"398\">&nbsp; &nbsp;<img alt=\"\" height=\"500\" src=\"migration-resource://71fc192ebcd7862acd6175e5f47c8de7430d0d5968a0a5f18ea25d83d0b48967\" width=\"380\"></p>\n\n<p>作为疫情期间就业指导开展的有效辅助手段，“荧光行动”开设的网上课程，为学生提供一对一“生涯职业规划咨询”通道，细心、深度、专业地为学生答疑解惑，帮助毕业生化解求职、创业、升学中的各种难题，缓解疫情防控期间给就业指导带来的诸多不便和毕业生就业压力，不断提升毕业生就业创业自信心和求职技巧能力，助力毕业生尽快、充分就业，将新冠疫情对毕业生就业影响降到最低程度。</p>\n\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>（长春科技学院 徐媛媛）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/ba73ef0f-ca50-493a-8d21-151f1c146c49.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/ba73ef0f-ca50-493a-8d21-151f1c146c49.jpg",
+      "token": "migration-resource://6d56c364ff8ab33f621e95caa55d02d9c90832856af89ee40eec0558785bafbe",
+      "snapshotPath": "assets/6d56c364ff8ab33f621e95caa55d02d9c90832856af89ee40eec0558785bafbe.jpg",
+      "sha256": "6d56c364ff8ab33f621e95caa55d02d9c90832856af89ee40eec0558785bafbe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 41978
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/cd105aa4-80e9-4c1f-afbc-dcddbb2fe5b2.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/cd105aa4-80e9-4c1f-afbc-dcddbb2fe5b2.jpg",
+      "token": "migration-resource://f9ad2c0c971d6dd26a34fe179f6179e61429cb21a44c7acc406ff32845893552",
+      "snapshotPath": "assets/f9ad2c0c971d6dd26a34fe179f6179e61429cb21a44c7acc406ff32845893552.jpg",
+      "sha256": "f9ad2c0c971d6dd26a34fe179f6179e61429cb21a44c7acc406ff32845893552",
+      "contentType": "image/jpeg",
+      "sizeBytes": 133973
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/0ab511b0-7975-4837-ad36-7aef797332e7.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/0ab511b0-7975-4837-ad36-7aef797332e7.jpg",
+      "token": "migration-resource://71fc192ebcd7862acd6175e5f47c8de7430d0d5968a0a5f18ea25d83d0b48967",
+      "snapshotPath": "assets/71fc192ebcd7862acd6175e5f47c8de7430d0d5968a0a5f18ea25d83d0b48967.jpg",
+      "sha256": "71fc192ebcd7862acd6175e5f47c8de7430d0d5968a0a5f18ea25d83d0b48967",
+      "contentType": "image/jpeg",
+      "sizeBytes": 83908
+    }
+  ],
+  "sourceFingerprint": "60d8fce2201708f65eb8bff20a80d6b4a91c9c9c8b460e644e8665e4f10909b8",
+  "evidence": {
+    "listPage": 123,
+    "listTitle": "长春科技学院加强服务科学施策推进毕业生更快更多更好就业",
+    "listPublishDate": "2022-04-12",
+    "sourceOrder": 1230,
+    "detailPublishDate": "2022-04-12"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:6399e978f0e16a57b2b28ffb1b059b341d3040ba19972e2950d19b5e1ae2e28b",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/1fsBX_qlehJ7CD_lDhH7Og",
+    "url": "https://mp.weixin.qq.com/s/1fsBX_qlehJ7CD_lDhH7Og?scene=25&sessionid=-1368440642"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“扬帆起航 筑梦白山松水”长春科技学院&吉林职业技术学院2025届毕业生春季网络招聘会",
+    "source": "",
+    "publishDate": "2025-04-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1fsBX_qlehJ7CD_lDhH7Og?scene=25&sessionid=-1368440642"
+  },
+  "resources": [],
+  "sourceFingerprint": "888cc6d19a1be2f5615898247e16042260135abda2f2acb858829bbfb37453cb",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "“扬帆起航 筑梦白山松水”长春科技学院&吉林职业技术学院2025届毕业生春季网络招聘会",
+    "listPublishDate": "2025-04-08",
+    "sourceOrder": 190
+  }
+}

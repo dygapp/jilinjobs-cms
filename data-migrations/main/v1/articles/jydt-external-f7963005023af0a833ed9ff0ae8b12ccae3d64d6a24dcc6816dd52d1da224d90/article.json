@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f7963005023af0a833ed9ff0ae8b12ccae3d64d6a24dcc6816dd52d1da224d90",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xbFYB7xgEfuv_GcqqS2mWg",
+    "url": "https://mp.weixin.qq.com/s/xbFYB7xgEfuv_GcqqS2mWg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长白山管委会与通化师范学院举行合作签约仪式",
+    "source": "",
+    "publishDate": "2025-12-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xbFYB7xgEfuv_GcqqS2mWg"
+  },
+  "resources": [],
+  "sourceFingerprint": "eb9431441162d9bdfa1075d9bcc117c164e81169b75024c0d96c70d9f2117ef8",
+  "evidence": {
+    "listPage": 54,
+    "listTitle": "长白山管委会与通化师范学院举行合作签约仪式",
+    "listPublishDate": "2025-12-18",
+    "sourceOrder": 538
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120288",
+    "contentId": "28737783120288",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120288"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2008年盛大依旧处于领先位置；腾讯发展迅速，成最大赢家",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2008年盛大依旧处于领先位置；腾讯发展迅速，成最大赢家</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 作为中国网络游戏的领头羊，盛大以17.60%的关注度领先于其他运营商，这与盛大在运营能力和对上游游戏供应的控制能力方面的优势是分不开的。通过投资或收购上游游戏供应商、与领先的游戏公司进行战略合作等方式，盛大已经打造出比较完整的自主研发、投资开发和游戏代理相结合的游戏供应链，并对游戏进行集中运营、统一管理，比较能够保证游戏更新的数量和质量。盛大多年积累的人气和口碑，以及统一平台较强的粘性也是盛大继续领先的保证。</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 腾讯是2008年网游市场的最大赢家，整体关注度达到14.65%。腾讯的成功可以从两方面解读：在内容上，地下城与勇士、穿越火线两款游戏给腾讯带来了极高的人气和关注度，游戏的高品质和创新是这两款游戏大获成功的主要因素之一；在平台上，腾讯QQ具有对网民的高覆盖率、完善的社区产品和忠诚的用户群等优势，这都使腾讯游戏在吸引并留住玩家上事半功倍。</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 除盛大、腾讯外，其他运营商关注度均不到10%，其中，第九城市、久游网、完美时空、光宇华夏和中华网的关注度在5%以上。</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 总的来看，前十运营商的关注度之和接近80%，进一步显示出网游行业关注度越来越向强势运营商集中的趋势，这表明，运营商品牌在未来的竞争中也将发挥越来越重要的作用。 </font></p> <p align=\"center\"><font color=\"#444444\"><img src=\"http://data.baidu.com/youxi2/img/yx03.gif\" border=\"0\"></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "3993904b078a21cef340d077441c86b31cdfb2dd8536fb8c269f7c4970c95888",
+  "evidence": {
+    "listPage": 185,
+    "listTitle": "2008年盛大依旧处于领先位置；腾讯发展迅速，成最大赢家",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1846,
+    "detailPublishDate": "2009-04-05"
+  }
+}

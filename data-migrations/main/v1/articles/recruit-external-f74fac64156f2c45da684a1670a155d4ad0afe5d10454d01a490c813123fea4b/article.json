@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:f74fac64156f2c45da684a1670a155d4ad0afe5d10454d01a490c813123fea4b",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/DvkpDTOmF7-wg3U_W2XGCQ",
+    "url": "https://mp.weixin.qq.com/s/DvkpDTOmF7-wg3U_W2XGCQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "全国高校2025届毕业生文旅艺术行业人才招聘会吉林艺术学院专场",
+    "source": "",
+    "publishDate": "2025-03-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DvkpDTOmF7-wg3U_W2XGCQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "1a7b1855a6854f9202bce2846839959657250c3241779232c49e80da28fb88f3",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "全国高校2025届毕业生文旅艺术行业人才招聘会吉林艺术学院专场",
+    "listPublishDate": "2025-03-13",
+    "sourceOrder": 219
+  }
+}

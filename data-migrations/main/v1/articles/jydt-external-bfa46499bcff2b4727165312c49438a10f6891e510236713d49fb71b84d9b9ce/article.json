@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bfa46499bcff2b4727165312c49438a10f6891e510236713d49fb71b84d9b9ce",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Gd13i0f2M3MTyNW2pSxG_A",
+    "url": "https://mp.weixin.qq.com/s/Gd13i0f2M3MTyNW2pSxG_A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2025年秋季“二分明月・才聚扬城”专场招聘会在吉林师范大学举行",
+    "source": "",
+    "publishDate": "2025-10-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Gd13i0f2M3MTyNW2pSxG_A"
+  },
+  "resources": [],
+  "sourceFingerprint": "14f1961183bc5646e4aba1c00636f0725481583ad42a7b44fed9415e797d5bd5",
+  "evidence": {
+    "listPage": 66,
+    "listTitle": "2025年秋季“二分明月・才聚扬城”专场招聘会在吉林师范大学举行",
+    "listPublishDate": "2025-10-29",
+    "sourceOrder": 653
+  }
+}

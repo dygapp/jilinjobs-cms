@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:6e490c46002814b8458a602094e5f898e1427ecf436535ea8e10ff72f4f272a5",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/FFr0JgUbGwf9O7xEJuUUQA",
+    "url": "https://mp.weixin.qq.com/s/FFr0JgUbGwf9O7xEJuUUQA"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中共吉林省委 吉林省人民政府印发《关于促进高校毕业生就业创业若干措施》的通知",
+    "source": "",
+    "publishDate": "2024-04-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/FFr0JgUbGwf9O7xEJuUUQA"
+  },
+  "resources": [],
+  "sourceFingerprint": "e47cc4d637e1bd185b94e248a54bfe4a9376de4ad4149730f0a7c23756f0c43d",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "中共吉林省委 吉林省人民政府印发《关于促进高校毕业生就业创业若干措施》的通知",
+    "listPublishDate": "2024-04-26",
+    "sourceOrder": 86
+  }
+}

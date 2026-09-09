@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122478",
+    "contentId": "28737783122478",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122478"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "毕业生档案管理办法",
+    "source": "",
+    "publishDate": "2009-02-19",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">毕业生档案管理办法</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-2-19 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 一、档案接收<br>&nbsp;&nbsp;&nbsp; 1．凡参加吉林省高等学校毕业生就业指导中心(以下简称中心)就业代理的毕业生档案由档案所在单位密封完整统一转递至中心综合业务部；<br>&nbsp;&nbsp;&nbsp; 2．省外高校回省就业的毕业生档案由毕业学校转递至中心综合业务部。</font></p><font color=\"#444444\"> <p><br><font size=\"2\">&nbsp;&nbsp;&nbsp; 二、档案查询及出具相关证明<br>&nbsp;&nbsp;&nbsp; 毕业生凭《就业代理协议书》或《报到证》，用人单位凭档案查询介绍信到我中心查询档案及申请出具相关证明。</font></p> <p><br><font size=\"2\">&nbsp;&nbsp;&nbsp; 三、档案借阅<br>&nbsp;&nbsp;&nbsp; 用人单位借阅档案须出具介绍信和借阅人有效身份证件，借出的档案须密封后按期归还。</font></p> </font><p><font color=\"#444444\"><br><font size=\"2\">&nbsp;&nbsp;&nbsp; 四、档案转出<br>&nbsp;&nbsp;&nbsp; 办理毕业生档案转出须出具就业《报到证》或接收单位人事部门调档函同时需出示调档人有效身份证件（如代办取档手续需提供档案所有人开据的授权书及身份证复印件），并提供档案转递详细地址。</font></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "f8ca9960fee20eaf4d4de0d0bdc705f7ede9adc854521af4b41a7053368b7c3c",
+  "evidence": {
+    "listPage": 202,
+    "listTitle": "毕业生档案管理办法",
+    "listPublishDate": "2009-02-19",
+    "sourceOrder": 2019,
+    "detailPublishDate": "2009-02-19"
+  }
+}

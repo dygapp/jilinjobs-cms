@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:fd7d1d9b467f03307fe7688cccc30f55a588ca683b6309d89d66d61df3128d1b",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/2020/0802/3327.html",
+    "url": "http://www.jleea.com.cn/2020/0802/3327.html"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "关于2020年吉林省“专升本”考试 有关事项的通知",
+    "source": "",
+    "publishDate": "2020-08-02",
+    "bodyHtml": "",
+    "externalUrl": "http://www.jleea.com.cn/2020/0802/3327.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "8a66b2c44dea39d17359f7031479b5f6f554fa4fd3fff79a0056a970c97e14c7",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "关于2020年吉林省“专升本”考试 有关事项的通知",
+    "listPublishDate": "2020-08-02",
+    "sourceOrder": 178
+  }
+}

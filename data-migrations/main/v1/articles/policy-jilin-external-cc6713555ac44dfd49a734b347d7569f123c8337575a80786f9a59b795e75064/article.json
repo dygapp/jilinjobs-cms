@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-jilin:external:cc6713555ac44dfd49a734b347d7569f123c8337575a80786f9a59b795e75064",
+    "contentId": null,
+    "typeCode": "policy-jilin",
+    "detailPath": "/s/gigQZB-MJ0eQPrTPO1k3xA",
+    "url": "https://mp.weixin.qq.com/s/gigQZB-MJ0eQPrTPO1k3xA"
+  },
+  "target": {
+    "columnAlias": "policy-jilin",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林市为域外应届高校毕业生提供“求职一张床”免费住宿服务的公告",
+    "source": "",
+    "publishDate": "2024-04-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gigQZB-MJ0eQPrTPO1k3xA"
+  },
+  "resources": [],
+  "sourceFingerprint": "6c8ced8005c543353cd3ae7eb7a1a52cb99cf1b2a2dcebe6cca7446e1a2443d3",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "吉林市为域外应届高校毕业生提供“求职一张床”免费住宿服务的公告",
+    "listPublishDate": "2024-04-30",
+    "sourceOrder": 6
+  }
+}

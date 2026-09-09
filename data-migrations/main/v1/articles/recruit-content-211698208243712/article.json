@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:211698208243712",
+    "contentId": "211698208243712",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=211698208243712"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "富奥公司2024年高校毕业生岗位需求表",
+    "source": "",
+    "publishDate": "2024-03-14",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://0a3a7e4045df4f97cf1c38b2d82ff2812ccd59c97c795b21a11178cbf1d49d84\" width=\"800\"></p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://b059f0a48354f7a3a8917b1fdd8adbb30997eb5965ee2a101332ecbf30b1a9d6\" width=\"800\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://3e8ea429ee55cc5c695b05a2e334b269cdbfc517f73b910bd4beac95d9cb2da2\" width=\"800\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-03-14/2e0b4590-0e06-49f6-b636-cc6760f6da7c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-03-14/2e0b4590-0e06-49f6-b636-cc6760f6da7c.jpg",
+      "token": "migration-resource://0a3a7e4045df4f97cf1c38b2d82ff2812ccd59c97c795b21a11178cbf1d49d84",
+      "snapshotPath": "assets/0a3a7e4045df4f97cf1c38b2d82ff2812ccd59c97c795b21a11178cbf1d49d84.jpg",
+      "sha256": "0a3a7e4045df4f97cf1c38b2d82ff2812ccd59c97c795b21a11178cbf1d49d84",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-03-14/9e180947-39b3-465c-a283-031b17391b39.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-03-14/9e180947-39b3-465c-a283-031b17391b39.jpg",
+      "token": "migration-resource://b059f0a48354f7a3a8917b1fdd8adbb30997eb5965ee2a101332ecbf30b1a9d6",
+      "snapshotPath": "assets/b059f0a48354f7a3a8917b1fdd8adbb30997eb5965ee2a101332ecbf30b1a9d6.jpg",
+      "sha256": "b059f0a48354f7a3a8917b1fdd8adbb30997eb5965ee2a101332ecbf30b1a9d6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-03-14/fe3fc327-53bc-4439-a6ff-b7d93cbcc489.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-03-14/fe3fc327-53bc-4439-a6ff-b7d93cbcc489.jpg",
+      "token": "migration-resource://3e8ea429ee55cc5c695b05a2e334b269cdbfc517f73b910bd4beac95d9cb2da2",
+      "snapshotPath": "assets/3e8ea429ee55cc5c695b05a2e334b269cdbfc517f73b910bd4beac95d9cb2da2.jpg",
+      "sha256": "3e8ea429ee55cc5c695b05a2e334b269cdbfc517f73b910bd4beac95d9cb2da2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 63800
+    }
+  ],
+  "sourceFingerprint": "9014936aa74c8a66c5b0cbd18b02407c6e21622ff575531ca38e0cc82f62e201",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "富奥公司2024年高校毕业生岗位需求表",
+    "listPublishDate": "2024-03-14",
+    "sourceOrder": 307,
+    "detailPublishDate": "2024-03-14"
+  }
+}

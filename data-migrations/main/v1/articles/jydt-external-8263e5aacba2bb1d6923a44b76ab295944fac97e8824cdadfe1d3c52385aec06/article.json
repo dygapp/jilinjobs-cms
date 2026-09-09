@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8263e5aacba2bb1d6923a44b76ab295944fac97e8824cdadfe1d3c52385aec06",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/g58SaXcib-kTvFRxl5UZMA",
+    "url": "https://mp.weixin.qq.com/s/g58SaXcib-kTvFRxl5UZMA?scene=25&sessionid=-1365237985"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "珲春市委市政府到吉林工商学院开展“珲春有约・职等你来”2025年专场宣讲招聘活动",
+    "source": "",
+    "publishDate": "2025-04-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/g58SaXcib-kTvFRxl5UZMA?scene=25&sessionid=-1365237985"
+  },
+  "resources": [],
+  "sourceFingerprint": "652480cbe61890c2508edcf12ff22478003f3352b340f30754801a7a9b7b84f7",
+  "evidence": {
+    "listPage": 92,
+    "listTitle": "珲春市委市政府到吉林工商学院开展“珲春有约・职等你来”2025年专场宣讲招聘活动",
+    "listPublishDate": "2025-04-29",
+    "sourceOrder": 918
+  }
+}

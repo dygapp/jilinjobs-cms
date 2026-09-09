@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122378",
+    "contentId": "28737783122378",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122378"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "山丹县鼓励引导毕业生灵活就业",
+    "source": "",
+    "publishDate": "2009-04-12",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">山丹县鼓励引导毕业生灵活就业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-12 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 新华网甘肃频道4月12日消息 据甘肃日报报道&nbsp; 本报山丹讯 山丹县积极采取高校毕业生就业应对措施，实施毕业生到农村基层、企业、机关事业单位、公益性岗位、项目建设人才库自主创业和异地就业行动，力促大中专毕业生就业。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 该县先后选拔“三支一扶”高校毕业生33名。选拔进村社区工作高校毕业生32名，选拔4名高校毕业生到村任职，积极争取省市安置计划，安排40名普通高校师范类毕业生到农村中小学任教，40名普通高校医学类毕业生到乡镇卫生院或乡镇计生服务所工作。与此同时，选派和吸纳205名毕业生到县内各类企业就业，考录机关事业单位工作人员48名，公益性社会服务岗位安置15名高校毕业生，提供小额贷款贴息扶持、减免行政事业性收费政策等，鼓励引导毕业生灵活就业537名，较好地解决了大学生就业问题。 (胡秉珍) </font></p> <p><font size=\"2\">&nbsp;<br>&nbsp;<br>&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "49660d88e4846d45c0a04e44c95fc6f2769b3478bf21263112356e6799dc679b",
+  "evidence": {
+    "listPage": 180,
+    "listTitle": "山丹县鼓励引导毕业生灵活就业",
+    "listPublishDate": "2009-04-12",
+    "sourceOrder": 1792,
+    "detailPublishDate": "2009-04-12"
+  }
+}

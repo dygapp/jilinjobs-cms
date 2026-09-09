@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4369f6d347060ddf3aec0a875f8bef0285c2acf9f144148c6b7ede364eca3bbb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/-b4SS23X6lMLh-l6ayl5HQ",
+    "url": "https://mp.weixin.qq.com/s/-b4SS23X6lMLh-l6ayl5HQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院与吉林市中医院聚力打造中医药育人合作新高地",
+    "source": "",
+    "publishDate": "2026-04-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/-b4SS23X6lMLh-l6ayl5HQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "22c431f5bcafc6217dee19fc10dcdae98f65d24af35a447dbaf1f9166bda665b",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "长春科技学院与吉林市中医院聚力打造中医药育人合作新高地",
+    "listPublishDate": "2026-04-30",
+    "sourceOrder": 218
+  }
+}

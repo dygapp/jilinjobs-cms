@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d89f896e2b2946fc0a7b1b76a6e3b866329fdddd99033f638aba9cff17dce74a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/htgU5loKPuvGGizwXS5iYg",
+    "url": "https://mp.weixin.qq.com/s/htgU5loKPuvGGizwXS5iYg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林化工学院联合洞头人力资源与社会保障局开展职业体验暨访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2025-06-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/htgU5loKPuvGGizwXS5iYg"
+  },
+  "resources": [],
+  "sourceFingerprint": "b57a1963bfdeb414a21038902ecc9ba214287b0cb9f0cfdeaaa439c92bb83f66",
+  "evidence": {
+    "listPage": 80,
+    "listTitle": "吉林化工学院联合洞头人力资源与社会保障局开展职业体验暨访企拓岗专项行动",
+    "listPublishDate": "2025-06-18",
+    "sourceOrder": 796
+  }
+}

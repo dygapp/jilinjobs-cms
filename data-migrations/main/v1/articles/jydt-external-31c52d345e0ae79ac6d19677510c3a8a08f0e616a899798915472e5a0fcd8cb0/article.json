@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:31c52d345e0ae79ac6d19677510c3a8a08f0e616a899798915472e5a0fcd8cb0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1062/5893.htm",
+    "url": "https://www.ccu.edu.cn/info/1062/5893.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学举办长春市高校音乐类就业洽谈会暨音乐学院2025届毕业生校园双选会",
+    "source": "",
+    "publishDate": "2024-12-24",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccu.edu.cn/info/1062/5893.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "ad3da0b2097c77c6950980cc0c2d2ff953c9b75aa7b1a10993be6ad08fd4a5a1",
+  "evidence": {
+    "listPage": 100,
+    "listTitle": "长春大学举办长春市高校音乐类就业洽谈会暨音乐学院2025届毕业生校园双选会",
+    "listPublishDate": "2024-12-24",
+    "sourceOrder": 998
+  }
+}

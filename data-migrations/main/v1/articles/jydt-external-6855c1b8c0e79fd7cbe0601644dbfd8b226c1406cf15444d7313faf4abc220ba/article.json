@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6855c1b8c0e79fd7cbe0601644dbfd8b226c1406cf15444d7313faf4abc220ba",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/zqZHPaFlhruvgHYWXxaJdg",
+    "url": "https://mp.weixin.qq.com/s/zqZHPaFlhruvgHYWXxaJdg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "松原职业技术学院农牧科技分院赴黑龙江、吉林重点企业开展访企拓岗专项调研",
+    "source": "",
+    "publishDate": "2026-05-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/zqZHPaFlhruvgHYWXxaJdg"
+  },
+  "resources": [],
+  "sourceFingerprint": "6650da3dd8792b742c6f68dde4d568aeb0f4a73193a35305d210da56edbfb6e1",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "松原职业技术学院农牧科技分院赴黑龙江、吉林重点企业开展访企拓岗专项调研",
+    "listPublishDate": "2026-05-14",
+    "sourceOrder": 185
+  }
+}

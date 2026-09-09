@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a72c5da05bde3fdc3fd7b5ccacebafc5fa95fd6245af03f6aeee6345734de214",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/cd-lWPd5HkQjYFh_2Jwhcw",
+    "url": "https://mp.weixin.qq.com/s/cd-lWPd5HkQjYFh_2Jwhcw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学举办“聚力扩容提质 服务高质量发展”——东北电力大学2026年春季校园双选会",
+    "source": "",
+    "publishDate": "2026-04-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/cd-lWPd5HkQjYFh_2Jwhcw"
+  },
+  "resources": [],
+  "sourceFingerprint": "0a52a72c0eaf2bf20e91cfa579129d8aff80cb543a5a061f473d74d519bd9a24",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "东北电力大学举办“聚力扩容提质 服务高质量发展”——东北电力大学2026年春季校园双选会",
+    "listPublishDate": "2026-04-30",
+    "sourceOrder": 223
+  }
+}

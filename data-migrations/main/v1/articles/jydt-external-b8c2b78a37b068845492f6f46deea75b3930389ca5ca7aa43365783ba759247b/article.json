@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b8c2b78a37b068845492f6f46deea75b3930389ca5ca7aa43365783ba759247b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/3ElW66tSPY1CyqeJlrHzVg",
+    "url": "https://mp.weixin.qq.com/s/3ElW66tSPY1CyqeJlrHzVg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边州政法机关与延边大学签订战略合作框架协议",
+    "source": "",
+    "publishDate": "2024-04-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/3ElW66tSPY1CyqeJlrHzVg"
+  },
+  "resources": [],
+  "sourceFingerprint": "f964f02bb889076a95c04cf2a64227862f26435ed397e12d1772f90984774fa2",
+  "evidence": {
+    "listPage": 109,
+    "listTitle": "延边州政法机关与延边大学签订战略合作框架协议",
+    "listPublishDate": "2024-04-07",
+    "sourceOrder": 1088
+  }
+}

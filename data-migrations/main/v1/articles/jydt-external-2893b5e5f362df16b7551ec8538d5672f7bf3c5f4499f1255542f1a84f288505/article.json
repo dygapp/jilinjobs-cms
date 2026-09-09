@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2893b5e5f362df16b7551ec8538d5672f7bf3c5f4499f1255542f1a84f288505",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1002/52941.htm",
+    "url": "https://news.ccmc.edu.cn/info/1002/52941.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春医学高等专科学校扎实推进访企拓岗专项行动，助力吉林健康产业升级",
+    "source": "",
+    "publishDate": "2025-11-07",
+    "bodyHtml": "",
+    "externalUrl": "https://news.ccmc.edu.cn/info/1002/52941.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "0629e1c093f927d9012a7d8d3174eb4779bb4d5457d28e7b9541079669107382",
+  "evidence": {
+    "listPage": 62,
+    "listTitle": "长春医学高等专科学校扎实推进访企拓岗专项行动，助力吉林健康产业升级",
+    "listPublishDate": "2025-11-07",
+    "sourceOrder": 612
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122598",
+    "contentId": "28737783122598",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122598"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发《举办高校就业指导人员系统培训（中级）班》的通知",
+    "source": "",
+    "publishDate": "2015-06-10",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于转发《举办高校就业指导人员系统培训（中级）班》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2015-6-10 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://92e0196e20400b101a131a49f8c5d62aad60de729b966360e82a4bf350be53db\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://683a16caa43ea085f17d6ef4dc3c508ee97660817c5280ca53d797ce2c102b7c\"></p><p style=\"text-align: center;\"><img title=\"3.jpg\" src=\"migration-resource://4ecd1b62122ef41a744227e786a6965a579f2cdeeace6043d4a1e54bb24fc205\"></p><p style=\"text-align: center;\"><img title=\"4.jpg\" src=\"migration-resource://2ca33a7f5afd3b82cc13d5bd53a2527e4f827d2cd7602fca6b357fa179ade50d\"></p><p style=\"text-align: center;\"><img title=\"5.jpg\" src=\"migration-resource://a6c7b21d8711ec60b272027b6b67bfe36a2e1dc64615db2cb56c03fa7ed99257\"></p><p style=\"text-align: center;\"><img title=\"6.jpg\" src=\"migration-resource://996afee5a699e59f89b6d95a7eaa865ba79672b7827aa2484d266dcbeae2706f\"></p><p style=\"text-align: center;\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        <a href=\"../Common/DownLoadFile.aspx?fileid=971c508a-f77a-423e-a760-134aff33f345\">附件：报名表.rar</a><br>\n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356955047310937501065673.jpg",
+      "originalReference": "/chistory/cms/imgs/6356955047310937501065673.jpg",
+      "token": "migration-resource://92e0196e20400b101a131a49f8c5d62aad60de729b966360e82a4bf350be53db",
+      "snapshotPath": "assets/92e0196e20400b101a131a49f8c5d62aad60de729b966360e82a4bf350be53db.jpg",
+      "sha256": "92e0196e20400b101a131a49f8c5d62aad60de729b966360e82a4bf350be53db",
+      "contentType": "image/jpeg",
+      "sizeBytes": 85168
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356955047367187508936606.jpg",
+      "originalReference": "/chistory/cms/imgs/6356955047367187508936606.jpg",
+      "token": "migration-resource://683a16caa43ea085f17d6ef4dc3c508ee97660817c5280ca53d797ce2c102b7c",
+      "snapshotPath": "assets/683a16caa43ea085f17d6ef4dc3c508ee97660817c5280ca53d797ce2c102b7c.jpg",
+      "sha256": "683a16caa43ea085f17d6ef4dc3c508ee97660817c5280ca53d797ce2c102b7c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 161056
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356955047373437505423281.jpg",
+      "originalReference": "/chistory/cms/imgs/6356955047373437505423281.jpg",
+      "token": "migration-resource://4ecd1b62122ef41a744227e786a6965a579f2cdeeace6043d4a1e54bb24fc205",
+      "snapshotPath": "assets/4ecd1b62122ef41a744227e786a6965a579f2cdeeace6043d4a1e54bb24fc205.jpg",
+      "sha256": "4ecd1b62122ef41a744227e786a6965a579f2cdeeace6043d4a1e54bb24fc205",
+      "contentType": "image/jpeg",
+      "sizeBytes": 163000
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356955047381250007680710.jpg",
+      "originalReference": "/chistory/cms/imgs/6356955047381250007680710.jpg",
+      "token": "migration-resource://2ca33a7f5afd3b82cc13d5bd53a2527e4f827d2cd7602fca6b357fa179ade50d",
+      "snapshotPath": "assets/2ca33a7f5afd3b82cc13d5bd53a2527e4f827d2cd7602fca6b357fa179ade50d.jpg",
+      "sha256": "2ca33a7f5afd3b82cc13d5bd53a2527e4f827d2cd7602fca6b357fa179ade50d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 125690
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356955047389062509938140.jpg",
+      "originalReference": "/chistory/cms/imgs/6356955047389062509938140.jpg",
+      "token": "migration-resource://a6c7b21d8711ec60b272027b6b67bfe36a2e1dc64615db2cb56c03fa7ed99257",
+      "snapshotPath": "assets/a6c7b21d8711ec60b272027b6b67bfe36a2e1dc64615db2cb56c03fa7ed99257.jpg",
+      "sha256": "a6c7b21d8711ec60b272027b6b67bfe36a2e1dc64615db2cb56c03fa7ed99257",
+      "contentType": "image/jpeg",
+      "sizeBytes": 158303
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356955056737500002068887.jpg",
+      "originalReference": "/chistory/cms/imgs/6356955056737500002068887.jpg",
+      "token": "migration-resource://996afee5a699e59f89b6d95a7eaa865ba79672b7827aa2484d266dcbeae2706f",
+      "snapshotPath": "assets/996afee5a699e59f89b6d95a7eaa865ba79672b7827aa2484d266dcbeae2706f.jpg",
+      "sha256": "996afee5a699e59f89b6d95a7eaa865ba79672b7827aa2484d266dcbeae2706f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 121256
+    }
+  ],
+  "sourceFingerprint": "e92c88fb3d6f04426b80cba883e4a873c368ccde9d8a7e26ca40b2d31858fa28",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "关于转发《举办高校就业指导人员系统培训（中级）班》的通知",
+    "listPublishDate": "2015-06-10",
+    "sourceOrder": 276,
+    "detailPublishDate": "2015-06-10"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:167135617761280",
+    "contentId": "167135617761280",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=167135617761280"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "江苏：开发11万个政策性岗位力促高校毕业生就业",
+    "source": "",
+    "publishDate": "2023-07-07",
+    "bodyHtml": "\n                        <p><span style=\"font-size:18px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">&nbsp; &nbsp; &nbsp; &nbsp; 从江苏人社系统稳就业工作推进会上获悉，江苏今年以来累计开发国有企业、事业单位、城乡社区、基层项目、科研助理等11万个政策性岗位，全力以赴助推高校毕业生就业。</span></span></p>\n\n<p><span style=\"font-size:18px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">&nbsp; &nbsp; &nbsp; &nbsp; 江苏把高校毕业生就业作为重中之重，大力筹岗拓岗，重点开发科技部门1.1万个科研助理岗位、民政部门2200多个城乡社区岗位等；聚焦人工智能、生物技术、新能源等新兴产业领域，深度挖掘科研类、技术技能类、管理类、社会服务类优质就业见习岗位，评定一批省级见习示范基地并给予激励，提高见习岗位吸引力和留用率；年内面向青年群体，开展补贴类职业技能培训5万人次以上。</span></span></p>\n\n<p><span style=\"font-size:18px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">&nbsp; &nbsp; &nbsp; &nbsp; 江苏联手头部互联网职场企业开设就业旗舰店，运用大数据算法精准画像、精准匹配，力争在9月底前每周全省采集不少于1万个高质量社会化岗位，做到毕业生求职招聘“不停歇”，时时有信息、周周有专场、月月有活动。</span></span></p>\n\n<p><span style=\"font-size:18px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">&nbsp; &nbsp; &nbsp; &nbsp; 据江苏省人力资源和社会保障厅副厅长张宏伟介绍，江苏坚持就业帮扶精准到人，为离校未就业毕业生逐一建立实名管理台账，并根据毕业生就业意愿分类回流至学习地、户籍地和常住地就业公共服务机构，由其为毕业生提供精细化的职业指导、岗位推荐和培训见习等“不断线”跟踪帮扶，不漏一人、不虚一策。</span></span></p>\n\n<p><span style=\"font-size:18px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">&nbsp; &nbsp; &nbsp; &nbsp; 江苏重点关注脱贫家庭、低收入家庭、零就业家庭、残疾等困难毕业生，对市场化渠道难以就业的毕业生，通过公益性、政策性岗位予以托底安置。</span></span></p>\n\n<p><span style=\"font-size:18px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">&nbsp; &nbsp; &nbsp; &nbsp; 江苏今年以来就业形势保持总体平稳，上半年预计全省城镇新增就业72万人以上，同比增长4%左右，占全国总量的十分之一以上。</span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "f07212896806b179b508ac2153b8f23b207216842d0d71fb8614df122e1af4dd",
+  "evidence": {
+    "listPage": 113,
+    "listTitle": "江苏：开发11万个政策性岗位力促高校毕业生就业",
+    "listPublishDate": "2023-07-07",
+    "sourceOrder": 1126,
+    "detailPublishDate": "2023-07-07"
+  }
+}

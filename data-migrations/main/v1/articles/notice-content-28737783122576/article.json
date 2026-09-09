@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122576",
+    "contentId": "28737783122576",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122576"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办新生代领袖峰会暨全球青年领导力联盟东北社区首届公益论坛的通知",
+    "source": "",
+    "publishDate": "2015-11-10",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于举办新生代领袖峰会暨全球青年领导力联盟东北社区首届公益论坛的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2015-11-10 14:12:20</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://6588be0ee0a19233e5b3a8b0aae4258a7202aa3b8858082180a7a98c34d9aa7f\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://26da13d31a2f9feef8c93f5081db6f6a3ada059edbe1772f9b804ae8439e52a4\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://bea5d796f43680d8558db2e2468ea1cb26920c4a889efd575e108f9ee6077729\"></p>\n\n<p>&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=79f58498-538f-42ba-bec7-d94a7f0e0f6a\">附件1.doc</a><br>\n\t\t\t<a href=\"../Common/DownLoadFile.aspx?fileid=1383e35f-70ae-4390-afcb-a98d88e3e43b\">附件2回执表.doc</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358276159203125002526254.jpg",
+      "originalReference": "/chistory/cms/imgs/6358276159203125002526254.jpg",
+      "token": "migration-resource://6588be0ee0a19233e5b3a8b0aae4258a7202aa3b8858082180a7a98c34d9aa7f",
+      "snapshotPath": "assets/6588be0ee0a19233e5b3a8b0aae4258a7202aa3b8858082180a7a98c34d9aa7f.jpg",
+      "sha256": "6588be0ee0a19233e5b3a8b0aae4258a7202aa3b8858082180a7a98c34d9aa7f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 96442
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358276159326562508581793.jpg",
+      "originalReference": "/chistory/cms/imgs/6358276159326562508581793.jpg",
+      "token": "migration-resource://26da13d31a2f9feef8c93f5081db6f6a3ada059edbe1772f9b804ae8439e52a4",
+      "snapshotPath": "assets/26da13d31a2f9feef8c93f5081db6f6a3ada059edbe1772f9b804ae8439e52a4.jpg",
+      "sha256": "26da13d31a2f9feef8c93f5081db6f6a3ada059edbe1772f9b804ae8439e52a4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 68309
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358276159454687501623240.jpg",
+      "originalReference": "/chistory/cms/imgs/6358276159454687501623240.jpg",
+      "token": "migration-resource://bea5d796f43680d8558db2e2468ea1cb26920c4a889efd575e108f9ee6077729",
+      "snapshotPath": "assets/bea5d796f43680d8558db2e2468ea1cb26920c4a889efd575e108f9ee6077729.jpg",
+      "sha256": "bea5d796f43680d8558db2e2468ea1cb26920c4a889efd575e108f9ee6077729",
+      "contentType": "image/jpeg",
+      "sizeBytes": 46459
+    }
+  ],
+  "sourceFingerprint": "259db52326777234e6b6d216e7be742ac832145cbfb6b18aac412da66c55138d",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "关于举办新生代领袖峰会暨全球青年领导力联盟东北社区首届公益论坛的通知",
+    "listPublishDate": "2015-11-10",
+    "sourceOrder": 264,
+    "detailPublishDate": "2015-11-10"
+  }
+}

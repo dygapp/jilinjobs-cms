@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:f2c4c6cacd28f8e7ac41e238b5defde55ec4d8f8b7d4099062e4d7e24fe941d3",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/wE8cdqqKjR_ptVw6KsH7nA",
+    "url": "https://mp.weixin.qq.com/s/wE8cdqqKjR_ptVw6KsH7nA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北师范大学2026届毕业生教育行业专场招聘会邀请函",
+    "source": "",
+    "publishDate": "2026-03-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wE8cdqqKjR_ptVw6KsH7nA"
+  },
+  "resources": [],
+  "sourceFingerprint": "a923165474d22c8ab607c7a9b9331febd572913a4a9837304420a4951e890da3",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "东北师范大学2026届毕业生教育行业专场招聘会邀请函",
+    "listPublishDate": "2026-03-13",
+    "sourceOrder": 62
+  }
+}

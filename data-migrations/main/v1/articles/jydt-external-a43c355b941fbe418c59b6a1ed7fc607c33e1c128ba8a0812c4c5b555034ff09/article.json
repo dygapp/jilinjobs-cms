@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a43c355b941fbe418c59b6a1ed7fc607c33e1c128ba8a0812c4c5b555034ff09",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xTHIAL9jIAJOV0bYUD82Pw",
+    "url": "https://mp.weixin.qq.com/s/xTHIAL9jIAJOV0bYUD82Pw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "白城师范学院赴洮南市开展“百校对百县”促就业专项行动暨政校企对接活动",
+    "source": "",
+    "publishDate": "2025-06-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xTHIAL9jIAJOV0bYUD82Pw"
+  },
+  "resources": [],
+  "sourceFingerprint": "372b7532c9d200a8b02d1da3fb1dcefc2113cda70141464f5d85a6afdeb24236",
+  "evidence": {
+    "listPage": 77,
+    "listTitle": "白城师范学院赴洮南市开展“百校对百县”促就业专项行动暨政校企对接活动",
+    "listPublishDate": "2025-06-27",
+    "sourceOrder": 769
+  }
+}

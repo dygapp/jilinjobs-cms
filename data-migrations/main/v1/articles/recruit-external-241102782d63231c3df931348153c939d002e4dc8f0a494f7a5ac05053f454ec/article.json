@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:241102782d63231c3df931348153c939d002e4dc8f0a494f7a5ac05053f454ec",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/JA-mbDoDVto_x0L8C7Rpbg",
+    "url": "https://mp.weixin.qq.com/s/JA-mbDoDVto_x0L8C7Rpbg?poc_token=HFUv2mejcp4vyCoJD2kbbkz3Bj5eEBYkxOjF7L_5"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "四平地区2025届高校毕业生“服务吉林高质量发展”专场招聘会暨吉林师范大学2025届毕业生春季双选会",
+    "source": "",
+    "publishDate": "2025-03-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/JA-mbDoDVto_x0L8C7Rpbg?poc_token=HFUv2mejcp4vyCoJD2kbbkz3Bj5eEBYkxOjF7L_5"
+  },
+  "resources": [],
+  "sourceFingerprint": "afae6c5c40adef825420ac922690b75e2ce57d9aab6f2b7a9ea2e6399eb5b285",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "四平地区2025届高校毕业生“服务吉林高质量发展”专场招聘会暨吉林师范大学2025届毕业生春季双选会",
+    "listPublishDate": "2025-03-18",
+    "sourceOrder": 215
+  }
+}

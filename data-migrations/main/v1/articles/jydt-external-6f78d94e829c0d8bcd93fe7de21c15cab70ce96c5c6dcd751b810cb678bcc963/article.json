@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6f78d94e829c0d8bcd93fe7de21c15cab70ce96c5c6dcd751b810cb678bcc963",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/IK-qCOQ2RJehzvRGRBW1bA",
+    "url": "https://mp.weixin.qq.com/s/IK-qCOQ2RJehzvRGRBW1bA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学党委副书记于金欢带队开展2026届毕业生就业工作专项调研",
+    "source": "",
+    "publishDate": "2026-05-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/IK-qCOQ2RJehzvRGRBW1bA"
+  },
+  "resources": [],
+  "sourceFingerprint": "7d5e2f7af9106727b1be55564a1d3b2c8b7da3dddadaa991a429e3ef165262e5",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "延边大学党委副书记于金欢带队开展2026届毕业生就业工作专项调研",
+    "listPublishDate": "2026-05-06",
+    "sourceOrder": 217
+  }
+}

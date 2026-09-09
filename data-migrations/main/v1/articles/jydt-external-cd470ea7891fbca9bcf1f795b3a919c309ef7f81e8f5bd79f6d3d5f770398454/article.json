@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cd470ea7891fbca9bcf1f795b3a919c309ef7f81e8f5bd79f6d3d5f770398454",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/9KGuwpZvUoKb5B1TqbbCaA",
+    "url": "https://mp.weixin.qq.com/s/9KGuwpZvUoKb5B1TqbbCaA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学校长马秀颖带队赴吉林省水务集团有限公司访企拓岗",
+    "source": "",
+    "publishDate": "2026-05-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/9KGuwpZvUoKb5B1TqbbCaA"
+  },
+  "resources": [],
+  "sourceFingerprint": "95183c5d274e41c39e74ee49f181dc086e785cd315513e371779f0555dab0f86",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "吉林财经大学校长马秀颖带队赴吉林省水务集团有限公司访企拓岗",
+    "listPublishDate": "2026-05-11",
+    "sourceOrder": 198
+  }
+}

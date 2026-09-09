@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:332019022200832",
+    "contentId": "332019022200832",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=332019022200832"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省2026届高校毕业生“寒假促就业暖心行动”专场网络招聘活动的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2026-01-07",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://d4e1e088a13eb377456e6848605482ef8537a8eced1c697c96d77fbdb8f177a8\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://eab790bed5d688153142023fb1927ce36d7e8dd0f5996f4b6fac2de21cd85ca6\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://347c95d566eb48beb1cbea91fca4fa65262bf26359a019a332e678bc602b4e9f\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://c345ac0a60a9e113f786ab8c2bc993a43479ed5782604fd0a3f885d7c57323e1\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://84e7b14123d707d3a1bf1ca66ccfc5043a83d060ed607302c6a01fbd1ad9c9c7\" width=\"1000\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-01-08/230f9803-90af-48f8-ad68-34cbc82899db.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-01-08/230f9803-90af-48f8-ad68-34cbc82899db.jpg",
+      "token": "migration-resource://d4e1e088a13eb377456e6848605482ef8537a8eced1c697c96d77fbdb8f177a8",
+      "snapshotPath": "assets/d4e1e088a13eb377456e6848605482ef8537a8eced1c697c96d77fbdb8f177a8.jpg",
+      "sha256": "d4e1e088a13eb377456e6848605482ef8537a8eced1c697c96d77fbdb8f177a8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-01-08/f6bb3d5e-23cc-4805-b42b-d6f2c3168f88.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-01-08/f6bb3d5e-23cc-4805-b42b-d6f2c3168f88.jpg",
+      "token": "migration-resource://eab790bed5d688153142023fb1927ce36d7e8dd0f5996f4b6fac2de21cd85ca6",
+      "snapshotPath": "assets/eab790bed5d688153142023fb1927ce36d7e8dd0f5996f4b6fac2de21cd85ca6.jpg",
+      "sha256": "eab790bed5d688153142023fb1927ce36d7e8dd0f5996f4b6fac2de21cd85ca6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-01-08/e901a9c3-3040-4117-9a35-46a07f7ae753.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-01-08/e901a9c3-3040-4117-9a35-46a07f7ae753.jpg",
+      "token": "migration-resource://347c95d566eb48beb1cbea91fca4fa65262bf26359a019a332e678bc602b4e9f",
+      "snapshotPath": "assets/347c95d566eb48beb1cbea91fca4fa65262bf26359a019a332e678bc602b4e9f.jpg",
+      "sha256": "347c95d566eb48beb1cbea91fca4fa65262bf26359a019a332e678bc602b4e9f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-01-08/aa7543b2-0b06-424a-bf1e-0655de8c411e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-01-08/aa7543b2-0b06-424a-bf1e-0655de8c411e.jpg",
+      "token": "migration-resource://c345ac0a60a9e113f786ab8c2bc993a43479ed5782604fd0a3f885d7c57323e1",
+      "snapshotPath": "assets/c345ac0a60a9e113f786ab8c2bc993a43479ed5782604fd0a3f885d7c57323e1.jpg",
+      "sha256": "c345ac0a60a9e113f786ab8c2bc993a43479ed5782604fd0a3f885d7c57323e1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-01-08/1ea587b8-2550-4756-a3be-d618bc0f2ee0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-01-08/1ea587b8-2550-4756-a3be-d618bc0f2ee0.jpg",
+      "token": "migration-resource://84e7b14123d707d3a1bf1ca66ccfc5043a83d060ed607302c6a01fbd1ad9c9c7",
+      "snapshotPath": "assets/84e7b14123d707d3a1bf1ca66ccfc5043a83d060ed607302c6a01fbd1ad9c9c7.jpg",
+      "sha256": "84e7b14123d707d3a1bf1ca66ccfc5043a83d060ed607302c6a01fbd1ad9c9c7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "88135c6bb29ef30ec8dc826b4ffce4a7a2743e6397d847cbe85bc8305e18702d",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "关于举办吉林省2026届高校毕业生“寒假促就业暖心行动”专场网络招聘活动的通知",
+    "listPublishDate": "2026-01-07",
+    "sourceOrder": 11,
+    "detailPublishDate": "2026-01-07"
+  }
+}

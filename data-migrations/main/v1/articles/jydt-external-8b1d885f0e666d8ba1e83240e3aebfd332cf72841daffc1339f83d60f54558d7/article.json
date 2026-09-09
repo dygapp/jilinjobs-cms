@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8b1d885f0e666d8ba1e83240e3aebfd332cf72841daffc1339f83d60f54558d7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/YasWwAFa6sb1-fAPjFIt7g",
+    "url": "https://mp.weixin.qq.com/s/YasWwAFa6sb1-fAPjFIt7g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长科资讯｜职业技术学院赴长春市口腔医院开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-01-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/YasWwAFa6sb1-fAPjFIt7g"
+  },
+  "resources": [],
+  "sourceFingerprint": "79aed1e7bb5ae3ea22a5f887b92756b95c4abcf77a9c6d23840e4ee109e80a8b",
+  "evidence": {
+    "listPage": 50,
+    "listTitle": "长科资讯｜职业技术学院赴长春市口腔医院开展访企拓岗促就业专项行动",
+    "listPublishDate": "2026-01-16",
+    "sourceOrder": 494
+  }
+}

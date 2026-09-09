@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d0fd6e6bfbd7a48cc32b4d5e233318d33cb06744f6ca27ffaff0c94edac146f6",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xPhIdl5yELdcwOnhEZ7NOg",
+    "url": "https://mp.weixin.qq.com/s/xPhIdl5yELdcwOnhEZ7NOg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院赴苏州校企洽谈会深化产教融合助力毕业生高质量就业",
+    "source": "",
+    "publishDate": "2025-09-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xPhIdl5yELdcwOnhEZ7NOg"
+  },
+  "resources": [],
+  "sourceFingerprint": "a3ebec1f6024589144f0a5f8d21fbf4ef64551ced1e0bc986081057f157e254f",
+  "evidence": {
+    "listPage": 70,
+    "listTitle": "长春科技学院赴苏州校企洽谈会深化产教融合助力毕业生高质量就业",
+    "listPublishDate": "2025-09-25",
+    "sourceOrder": 695
+  }
+}

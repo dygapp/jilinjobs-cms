@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:5d39735cb3faa7701c40b150437afecf9aa524ebe2934d9bad6e4c10bdc875a0",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/c5WgtLCCHc6xFT_631cAqQ",
+    "url": "https://mp.weixin.qq.com/s/c5WgtLCCHc6xFT_631cAqQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "邀请函︱“聚力扩容提质 服务高质量发展”吉林工业职业技术学院2026届毕业生视频双选会",
+    "source": "",
+    "publishDate": "2026-04-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/c5WgtLCCHc6xFT_631cAqQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "79440cac7f6f70f44c32e706ae7e3664a4a9296fc6354dbe43f37f05d0a26673",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "邀请函︱“聚力扩容提质 服务高质量发展”吉林工业职业技术学院2026届毕业生视频双选会",
+    "listPublishDate": "2026-04-08",
+    "sourceOrder": 47
+  }
+}

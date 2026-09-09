@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122290",
+    "contentId": "28737783122290",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122290"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "胡锦涛离京出席G8同发展中国家领导人对话会议",
+    "source": "",
+    "publishDate": "2009-07-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">胡锦涛离京出席G8同发展中国家领导人对话会议</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-7-6 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img height=\"300\" src=\"http://cpc.people.com.cn/mediafile/200907/05/F200907051012533244480532.jpg\" width=\"500\" border=\"0\"></p> <p align=\"left\"><font color=\"#444444\" size=\"2\">　　应意大利共和国总统纳波利塔诺、总理贝卢斯科尼、葡萄牙共和国总统席尔瓦的邀请，国家主席胡锦涛于５日乘专机离开北京，前往出席在意大利拉奎拉举行的八国集团同发展中国家领导人对话会议，并对意大利、葡萄牙进行国事访问。<br><br>　　陪同胡锦涛主席出访的有：中共中央书记处书记、中央办公厅主任令计划，中共中央书记处书记、中央政策研究室主任王沪宁，国务委员戴秉国，外交部部长杨洁篪，国家发展和改革委员会主任张平，商务部部长陈德铭，外交部副部长何亚非，胡锦涛主席办公室主任陈世炬，外交部部长助理吴红波。</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "c33d603892f1e9cebbeafd8e99da5bdd576d28cb8375b0765f7e0e67dcbdaa5c",
+  "evidence": {
+    "listPage": 170,
+    "listTitle": "胡锦涛离京出席G8同发展中国家领导人对话会议",
+    "listPublishDate": "2009-07-06",
+    "sourceOrder": 1695,
+    "detailPublishDate": "2009-07-06"
+  }
+}

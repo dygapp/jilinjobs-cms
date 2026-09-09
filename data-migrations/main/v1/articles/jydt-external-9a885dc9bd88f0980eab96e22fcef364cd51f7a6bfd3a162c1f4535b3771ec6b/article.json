@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9a885dc9bd88f0980eab96e22fcef364cd51f7a6bfd3a162c1f4535b3771ec6b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/d9bg6dyVLGenJ4oICV86eA",
+    "url": "https://mp.weixin.qq.com/s/d9bg6dyVLGenJ4oICV86eA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春财经学院会计学院走访光大银行长春高新支行与一众财税服务有限公司",
+    "source": "",
+    "publishDate": "2026-02-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/d9bg6dyVLGenJ4oICV86eA"
+  },
+  "resources": [],
+  "sourceFingerprint": "4b8ba709af1fe29d1ccb969edbdfa243d461c0a66551ef4acfe51deb14d81091",
+  "evidence": {
+    "listPage": 45,
+    "listTitle": "长春财经学院会计学院走访光大银行长春高新支行与一众财税服务有限公司",
+    "listPublishDate": "2026-02-10",
+    "sourceOrder": 448
+  }
+}

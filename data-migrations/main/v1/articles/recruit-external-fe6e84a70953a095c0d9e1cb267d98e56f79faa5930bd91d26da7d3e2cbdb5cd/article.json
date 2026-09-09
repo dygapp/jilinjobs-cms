@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:fe6e84a70953a095c0d9e1cb267d98e56f79faa5930bd91d26da7d3e2cbdb5cd",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/5P5YKlfeKwPVf5-novTUkg",
+    "url": "https://mp.weixin.qq.com/s/5P5YKlfeKwPVf5-novTUkg?scene=25&sessionid=-1366214936"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务吉林高质量发展|“珲春有约·职等你来”2025年吉林工商学院专场招聘会邀请函",
+    "source": "",
+    "publishDate": "2025-04-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5P5YKlfeKwPVf5-novTUkg?scene=25&sessionid=-1366214936"
+  },
+  "resources": [],
+  "sourceFingerprint": "545760581b0bd47cb1f74f182c07056ff4831ba7740f954e375735062ec3d20f",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "服务吉林高质量发展|“珲春有约·职等你来”2025年吉林工商学院专场招聘会邀请函",
+    "listPublishDate": "2025-04-22",
+    "sourceOrder": 171
+  }
+}

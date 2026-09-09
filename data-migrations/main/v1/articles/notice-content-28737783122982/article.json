@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122982",
+    "contentId": "28737783122982",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122982"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发教育部办公厅关于举办全国教育系统2012届高校毕业生网上招聘周活动的通知",
+    "source": "",
+    "publishDate": "2011-11-10",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发教育部办公厅关于举办全国教育系统2012届高校毕业生网上招聘周活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-10 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://f223936bfd4dda7d1d42d58cda914f4615b509dc67c04fc82bb99ed17aa5238b\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111110115747765.jpg",
+      "originalReference": "/chistory/cms/imgs/20111110115747765.jpg",
+      "token": "migration-resource://f223936bfd4dda7d1d42d58cda914f4615b509dc67c04fc82bb99ed17aa5238b",
+      "snapshotPath": "assets/f223936bfd4dda7d1d42d58cda914f4615b509dc67c04fc82bb99ed17aa5238b.jpg",
+      "sha256": "f223936bfd4dda7d1d42d58cda914f4615b509dc67c04fc82bb99ed17aa5238b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67640
+    }
+  ],
+  "sourceFingerprint": "e3123f0ce60d5af8e6b6769a5b2dea6b2ea4b3e6f87c36490eab7f8dccf985d7",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "转发教育部办公厅关于举办全国教育系统2012届高校毕业生网上招聘周活动的通知",
+    "listPublishDate": "2011-11-10",
+    "sourceOrder": 418,
+    "detailPublishDate": "2011-11-10"
+  }
+}

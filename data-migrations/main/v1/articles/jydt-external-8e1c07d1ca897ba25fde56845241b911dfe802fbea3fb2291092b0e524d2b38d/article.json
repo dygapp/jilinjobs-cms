@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8e1c07d1ca897ba25fde56845241b911dfe802fbea3fb2291092b0e524d2b38d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/S6RxBeYIpomFekTdnJKeQA",
+    "url": "https://mp.weixin.qq.com/s/S6RxBeYIpomFekTdnJKeQA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“才汇经管 职引新程” ——吉林省经济管理干部学院2026届毕业生校园双选会（综合场）成功举办",
+    "source": "",
+    "publishDate": "2025-10-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/S6RxBeYIpomFekTdnJKeQA"
+  },
+  "resources": [],
+  "sourceFingerprint": "1569e6aa5c905523791fdad68a115bf3ef5ea1d51c5587b8d1566f5630c9c6a7",
+  "evidence": {
+    "listPage": 68,
+    "listTitle": "“才汇经管 职引新程” ——吉林省经济管理干部学院2026届毕业生校园双选会（综合场）成功举办",
+    "listPublishDate": "2025-10-17",
+    "sourceOrder": 675
+  }
+}

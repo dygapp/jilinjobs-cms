@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:222988467208192",
+    "contentId": "222988467208192",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=222988467208192"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于 2023-2024 年度“高校毕业生基层就业卓越奖学（教）金”推荐名单的公示",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2024-05-15",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"868\" src=\"migration-resource://74ab22eaf9fe5a42005f09de4e83c75a23e0246305d3e82c04284b3a03ff4dcf\" width=\"786\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-05-15/49d05d2a-ba89-4a45-8019-3a22da9804cc.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-05-15/49d05d2a-ba89-4a45-8019-3a22da9804cc.jpg",
+      "token": "migration-resource://74ab22eaf9fe5a42005f09de4e83c75a23e0246305d3e82c04284b3a03ff4dcf",
+      "snapshotPath": "assets/74ab22eaf9fe5a42005f09de4e83c75a23e0246305d3e82c04284b3a03ff4dcf.jpg",
+      "sha256": "74ab22eaf9fe5a42005f09de4e83c75a23e0246305d3e82c04284b3a03ff4dcf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 56520
+    }
+  ],
+  "sourceFingerprint": "6641d1209923614632cb9b761f2146297e01b594d32bc1f6f50ee0bef292f8b5",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "关于 2023-2024 年度“高校毕业生基层就业卓越奖学（教）金”推荐名单的公示",
+    "listPublishDate": "2024-05-15",
+    "sourceOrder": 84,
+    "detailPublishDate": "2024-05-15"
+  }
+}

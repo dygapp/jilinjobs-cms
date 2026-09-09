@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bba5cdd29fbb9ae16059ab026aeb4d1eca94e836e2be2e55ed19af51c8fa7840",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/XMsXTbM8ARmrHtsz4iqC0g",
+    "url": "https://mp.weixin.qq.com/s/XMsXTbM8ARmrHtsz4iqC0g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院党委书记崔高嵩等领导一行赴延边州开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2025-10-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/XMsXTbM8ARmrHtsz4iqC0g"
+  },
+  "resources": [],
+  "sourceFingerprint": "0da0a3bd0443b5121ee1b2caf666f2254b61ebffadff290811291d0a5b4c8bbc",
+  "evidence": {
+    "listPage": 65,
+    "listTitle": "长春科技学院党委书记崔高嵩等领导一行赴延边州开展访企拓岗促就业专项行动",
+    "listPublishDate": "2025-10-31",
+    "sourceOrder": 643
+  }
+}

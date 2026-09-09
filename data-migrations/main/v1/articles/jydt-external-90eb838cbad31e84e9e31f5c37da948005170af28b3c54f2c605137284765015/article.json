@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:90eb838cbad31e84e9e31f5c37da948005170af28b3c54f2c605137284765015",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/B84nRDiF",
+    "url": "https://d.eqxiu.com/s/B84nRDiF?eqrcode=1&share_level=3&from_user=20220327346eaa34&from_id=ff82de70-8&share_time=1648720575473&adpop=1"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "奋斗有我“就”在吉林 全省师范类专场网络双选会",
+    "source": "",
+    "publishDate": "2022-03-31",
+    "bodyHtml": "",
+    "externalUrl": "https://d.eqxiu.com/s/B84nRDiF?eqrcode=1&share_level=3&from_user=20220327346eaa34&from_id=ff82de70-8&share_time=1648720575473&adpop=1"
+  },
+  "resources": [],
+  "sourceFingerprint": "307f672bbef0270e35fd18537c3999dd628493b9eb7b960b9eb6afe751398f38",
+  "evidence": {
+    "listPage": 125,
+    "listTitle": "奋斗有我“就”在吉林 全省师范类专场网络双选会",
+    "listPublishDate": "2022-03-31",
+    "sourceOrder": 1243
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123146",
+    "contentId": "28737783123146",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123146"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省普通高校毕业生就业信息举报中心开通",
+    "source": "",
+    "publishDate": "2016-06-29",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省普通高校毕业生就业信息举报中心开通</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2016-6-29 15:43:06</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>\n    <span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp;&nbsp; 吉林省普通高校毕业生就业信息举报中心已经开通，毕业生就业信息应由学生本人实名注册填报，请广大毕业生登陆</span><a class=\"auto-style2\" style=\"color: rgb(0, 102, 255); font-family: 宋体,SimSun; font-size: 18px; text-decoration: underline;\" href=\"http://www.jilinjobs.cn:89/\" target=\"_blank\"><span style=\"color: rgb(0, 102, 255); font-family: 宋体,SimSun; font-size: 18px;\">“吉林省大学生就业数据网报系统”</span></a><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 18px;\">核实自己的就业信息，发现问题请及时向我们反馈，对虚假信息要如实举报投诉，严禁恶意举报。我们将保障举报者个人信息无泄漏，并对举报信息做出及时反馈！</span><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"><span style=\"color: rgb(255, 0, 0); font-family: 宋体,SimSun; font-size: 18px;\"></span><span style=\"color: rgb(38, 38, 38); font-family: 宋体,SimSun; font-size: 18px;\"></span></span>\n</p>\n<p>\n    <span style=\"color: rgb(84, 141, 212); font-family: 宋体,SimSun; font-size: 18px;\"><br></span>\n</p>\n<p style=\"text-align: center;\">\n    <span style=\"color: rgb(84, 141, 212); font-family: 宋体,SimSun; font-size: 18px;\"><a class=\"auto-style2\" href=\"http://www.jilinjobs.cn:8011/\" target=\"_blank\"><span style=\"color: rgb(0, 102, 255); font-family: 宋体,SimSun; font-size: 18px;\">“点击进入吉林省普通高校毕业生就业信息举报中心”</span></a></span>\n</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "b597f541b9cc3a1abace503c762fdb49556a3f77a98c7091d69e5f1f5b02012e",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "吉林省普通高校毕业生就业信息举报中心开通",
+    "listPublishDate": "2016-06-29",
+    "sourceOrder": 414,
+    "detailPublishDate": "2016-06-29"
+  }
+}

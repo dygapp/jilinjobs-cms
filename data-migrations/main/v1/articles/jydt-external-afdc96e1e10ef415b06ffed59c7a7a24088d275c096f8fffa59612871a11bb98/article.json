@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:afdc96e1e10ef415b06ffed59c7a7a24088d275c096f8fffa59612871a11bb98",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/sfeY5NW8JNmjSKndNu2XhA",
+    "url": "https://mp.weixin.qq.com/s/sfeY5NW8JNmjSKndNu2XhA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学举办“服务吉林高质量发展”——2025届毕业生春季校园招聘会暨政校合作平台揭牌仪式",
+    "source": "",
+    "publishDate": "2025-03-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/sfeY5NW8JNmjSKndNu2XhA"
+  },
+  "resources": [],
+  "sourceFingerprint": "4cf6146484866cabada52e067bc74eec236416dc5ecb573f8aaf5d69e46cfebd",
+  "evidence": {
+    "listPage": 96,
+    "listTitle": "北华大学举办“服务吉林高质量发展”——2025届毕业生春季校园招聘会暨政校合作平台揭牌仪式",
+    "listPublishDate": "2025-03-31",
+    "sourceOrder": 960
+  }
+}

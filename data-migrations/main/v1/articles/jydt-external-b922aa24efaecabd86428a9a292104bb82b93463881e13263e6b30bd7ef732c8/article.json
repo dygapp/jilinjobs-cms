@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b922aa24efaecabd86428a9a292104bb82b93463881e13263e6b30bd7ef732c8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/X6H20hgJiu5FjB7c6PB8Bg",
+    "url": "https://mp.weixin.qq.com/s/X6H20hgJiu5FjB7c6PB8Bg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【就业指导】|| 上课&实习两不误？远程实习让你高效“卷”出经验值",
+    "source": "",
+    "publishDate": "2025-08-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/X6H20hgJiu5FjB7c6PB8Bg"
+  },
+  "resources": [],
+  "sourceFingerprint": "7cccd5d324de0a70b1a4dd115bd4183df0b6948c80a1d62b4a159158b6203c48",
+  "evidence": {
+    "listPage": 71,
+    "listTitle": "【就业指导】|| 上课&实习两不误？远程实习让你高效“卷”出经验值",
+    "listPublishDate": "2025-08-29",
+    "sourceOrder": 709
+  }
+}

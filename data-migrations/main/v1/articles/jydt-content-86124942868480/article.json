@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86124942868480",
+    "contentId": "86124942868480",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86124942868480"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春大学同欧亚集团开展校企合作对接活动",
+    "source": "长春大学",
+    "publishDate": "2021-11-10",
+    "bodyHtml": "\n                        <p>为进一步深化产教融合、校企合作，9月8日上午，长春大学同欧亚集团校企对接合作活动在欧亚集团举行。欧亚集团党委副书记张立丽，学校副校长陈煜平、就业创业指导中心、政策法规办公室、创新创业教育学院、美术学院负责人，及欧亚集团相关负责人共同出席了活动。</p>\n\n<p>&nbsp;</p>\n\n<p>会上，双方就校企战略合作框架协议签约、“长春大学-欧亚集团‘龙兴杯’文化创意设计大赛”、欧亚汇集外墙墙绘设计方案等事宜进行了商议。</p>\n\n<p>陈煜平强调，长春大学同欧亚集团的多方面合作，在促进产教融合、毕业生就业、提高学校服务区域经济发展能力等方面提供了动能，期待合作共赢。</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "64a31c72c9a2433dcebe45d3c65192355c7b24079f12b38c33e88e12c075e971",
+  "evidence": {
+    "listPage": 130,
+    "listTitle": "长春大学同欧亚集团开展校企合作对接活动",
+    "listPublishDate": "2021-11-10",
+    "sourceOrder": 1296,
+    "detailPublishDate": "2021-11-10"
+  }
+}

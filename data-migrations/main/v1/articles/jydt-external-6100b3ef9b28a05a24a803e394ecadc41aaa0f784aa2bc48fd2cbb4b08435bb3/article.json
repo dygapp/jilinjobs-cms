@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6100b3ef9b28a05a24a803e394ecadc41aaa0f784aa2bc48fd2cbb4b08435bb3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/umlVsrhiNCD0JC1r2GM9-g",
+    "url": "https://mp.weixin.qq.com/s/umlVsrhiNCD0JC1r2GM9-g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春光华学院与宁波市鄞州区成功举办校地对接双选会",
+    "source": "",
+    "publishDate": "2026-03-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/umlVsrhiNCD0JC1r2GM9-g"
+  },
+  "resources": [],
+  "sourceFingerprint": "4b0b36bed5fa06d1c95848005d9c5e667cec54ded92705f0dd6c415b56f34e82",
+  "evidence": {
+    "listPage": 39,
+    "listTitle": "长春光华学院与宁波市鄞州区成功举办校地对接双选会",
+    "listPublishDate": "2026-03-20",
+    "sourceOrder": 389
+  }
+}

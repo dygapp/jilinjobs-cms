@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120072",
+    "contentId": "28737783120072",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120072"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省召开2013年“双困学生”培训新增计划工作部署会议",
+    "source": "",
+    "publishDate": "2013-05-23",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省召开2013年“双困学生”培训新增计划工作部署会议</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2013-5-23 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://4a73be3d616b886047df0268ed993c3ae28362c5ad1c333673f514147a832226\"></p> <p align=\"center\"><strong>纪拓处长（左二）、郑志宏主任（右二）、朱军书记（左一）、张跃副主任（右一）</strong></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://7387957ce3652a2ea3ddd92783be882c084915de8e01d533007cc5ee422b626f\"></p> <p align=\"center\"><strong>纪拓处长对培训工作提出要求</strong></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://101f38c351b15b33c50eb1fc0e360b763685e2e0bc66e17c17cdefb5fa663b40\"></p> <p align=\"center\"><strong>郑志宏主任对培训工作进行部署</strong></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://15b8d64ac90b59b2f8bee432204f85e10877e04aeb5cc4a32dca5704bfacca48\"></p> <p align=\"center\"><strong>会议现场</strong></p> <p align=\"left\"><font size=\"4\">&nbsp;&nbsp;&nbsp; 5月21日上午，全省高校“双困学生”就业能力拓展培训新增计划部署工作会议在省高等学校毕业生就业指导中心召开。省教育厅高校学生处处长纪拓、省高校毕业生就业指导中心主任郑志宏、书记朱军、副主任张跃以及33所受援助的高校就业工作负责人及项目工作人员参加了会议。会议的主要任务是落实高校“双困”毕业生就业帮扶新的三年计划，由年培训5000人提高到1.5万人。会议由朱军书记主持,郑志宏主任对下一阶段培训工作任务进行了部署；纪拓处长结合全省高校毕业生就业工作的新形势，对培训工作提出了五点要求：一是克服困难，提高做好培训工作责任意识，二是强化管理，严格做好培训推荐组织工作，三是定期反馈，健全培训的跟踪调查机制；四是高度重视，推进培训工作深入开展；五是凝练经验，拓展就业帮扶的工作思路。培训部胡丽敏部长对培训计划的分配及培训中的具体问题作了说明。会议还对我省即将开展的首届创业指导课程教学大赛及《中国大学生就业》杂志征订工作做了动员与部署。</font></p> <p align=\"left\"><font size=\"4\"></font>&nbsp;</p> <p align=\"left\">&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130523051026648.jpg",
+      "originalReference": "/chistory/cms/imgs/20130523051026648.jpg",
+      "token": "migration-resource://4a73be3d616b886047df0268ed993c3ae28362c5ad1c333673f514147a832226",
+      "snapshotPath": "assets/4a73be3d616b886047df0268ed993c3ae28362c5ad1c333673f514147a832226.jpg",
+      "sha256": "4a73be3d616b886047df0268ed993c3ae28362c5ad1c333673f514147a832226",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77406
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130523051109219.jpg",
+      "originalReference": "/chistory/cms/imgs/20130523051109219.jpg",
+      "token": "migration-resource://7387957ce3652a2ea3ddd92783be882c084915de8e01d533007cc5ee422b626f",
+      "snapshotPath": "assets/7387957ce3652a2ea3ddd92783be882c084915de8e01d533007cc5ee422b626f.jpg",
+      "sha256": "7387957ce3652a2ea3ddd92783be882c084915de8e01d533007cc5ee422b626f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77990
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130523051142732.jpg",
+      "originalReference": "/chistory/cms/imgs/20130523051142732.jpg",
+      "token": "migration-resource://101f38c351b15b33c50eb1fc0e360b763685e2e0bc66e17c17cdefb5fa663b40",
+      "snapshotPath": "assets/101f38c351b15b33c50eb1fc0e360b763685e2e0bc66e17c17cdefb5fa663b40.jpg",
+      "sha256": "101f38c351b15b33c50eb1fc0e360b763685e2e0bc66e17c17cdefb5fa663b40",
+      "contentType": "image/jpeg",
+      "sizeBytes": 70034
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130523051222500.jpg",
+      "originalReference": "/chistory/cms/imgs/20130523051222500.jpg",
+      "token": "migration-resource://15b8d64ac90b59b2f8bee432204f85e10877e04aeb5cc4a32dca5704bfacca48",
+      "snapshotPath": "assets/15b8d64ac90b59b2f8bee432204f85e10877e04aeb5cc4a32dca5704bfacca48.jpg",
+      "sha256": "15b8d64ac90b59b2f8bee432204f85e10877e04aeb5cc4a32dca5704bfacca48",
+      "contentType": "image/jpeg",
+      "sizeBytes": 71363
+    }
+  ],
+  "sourceFingerprint": "aff0e1c9f262e20704945e6d0b9615148e501869c14cb576968eb5ea18a7de7d",
+  "evidence": {
+    "listPage": 162,
+    "listTitle": "我省召开2013年“双困学生”培训新增计划工作部署会议",
+    "listPublishDate": "2013-05-23",
+    "sourceOrder": 1620,
+    "detailPublishDate": "2013-05-23"
+  }
+}

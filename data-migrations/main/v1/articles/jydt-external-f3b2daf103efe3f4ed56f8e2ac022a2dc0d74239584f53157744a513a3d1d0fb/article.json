@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f3b2daf103efe3f4ed56f8e2ac022a2dc0d74239584f53157744a513a3d1d0fb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/7HYjpNehropWIj8VoiU8Hg",
+    "url": "https://mp.weixin.qq.com/s/7HYjpNehropWIj8VoiU8Hg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化师范学院举办2026届毕业生春季校园专项招聘会",
+    "source": "",
+    "publishDate": "2026-03-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/7HYjpNehropWIj8VoiU8Hg"
+  },
+  "resources": [],
+  "sourceFingerprint": "9932e06db0e7d7069073ea4ea87f7f86bd12b7480570015f075189f3ca7fb697",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "通化师范学院举办2026届毕业生春季校园专项招聘会",
+    "listPublishDate": "2026-03-12",
+    "sourceOrder": 425
+  }
+}

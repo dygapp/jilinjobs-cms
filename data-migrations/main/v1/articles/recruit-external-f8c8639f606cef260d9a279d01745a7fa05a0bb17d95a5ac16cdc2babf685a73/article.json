@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:f8c8639f606cef260d9a279d01745a7fa05a0bb17d95a5ac16cdc2babf685a73",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/2-TLcIGByM0dC-Z1fhB3xw",
+    "url": "https://mp.weixin.qq.com/s/2-TLcIGByM0dC-Z1fhB3xw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【大学生实习岗位招聘】“一起益企” 人才供需对接服务月活动招聘岗位发布（九）",
+    "source": "",
+    "publishDate": "2024-07-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/2-TLcIGByM0dC-Z1fhB3xw"
+  },
+  "resources": [],
+  "sourceFingerprint": "90a2a1e967ace660fba80d0b5e75d67a9ddaf2b9feb29ba6bf457f8b39a6f2de",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "【大学生实习岗位招聘】“一起益企” 人才供需对接服务月活动招聘岗位发布（九）",
+    "listPublishDate": "2024-07-16",
+    "sourceOrder": 258
+  }
+}

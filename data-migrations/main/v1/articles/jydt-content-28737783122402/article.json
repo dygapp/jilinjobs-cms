@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122402",
+    "contentId": "28737783122402",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122402"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "重庆：力保毕业生就业率达85%",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">重庆：力保毕业生就业率达85%</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 今年，重庆市将进一步扩大高校毕业生到基层的选拔数量，同时启动实施国有大中型企业人才储备计划，使国有大中型企业全年录用应届高校毕业生总数达到1.3万名，比去年翻一番。常务副市长黄奇帆日前宣布，重庆市将采取多项措施促进高校毕业生就业，确保今年全市高校毕业生初次就业率不低于68%、年终就业率不低于85%。</font></p> <p><font size=\"2\">　　今年，重庆市共有普通高校毕业生12.9万人，毕业生总数比去年增加1.8万人，就业形势严峻。近日，重庆市委、市政府专门研究制定了促进高校毕业生就业的10项措施。（记者 余继军） </font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "f05fa25a686242e2d044e84fdad6a9cdc18ceaf1a147a67f3de878c9ee9cfd2f",
+  "evidence": {
+    "listPage": 183,
+    "listTitle": "重庆：力保毕业生就业率达85%",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1829,
+    "detailPublishDate": "2009-04-05"
+  }
+}

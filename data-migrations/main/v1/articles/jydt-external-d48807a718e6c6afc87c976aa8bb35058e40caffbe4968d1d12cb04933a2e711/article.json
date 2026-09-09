@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d48807a718e6c6afc87c976aa8bb35058e40caffbe4968d1d12cb04933a2e711",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/MRqQrp1f37nsOEe2qETSAQ",
+    "url": "https://mp.weixin.qq.com/s/MRqQrp1f37nsOEe2qETSAQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学副校长刘岩带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/MRqQrp1f37nsOEe2qETSAQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "5d5544cd73ac1900d0189c6351a28512261f4a67fa0dd72489cb73c6b2451a91",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "延边大学副校长刘岩带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-16",
+    "sourceOrder": 413
+  }
+}

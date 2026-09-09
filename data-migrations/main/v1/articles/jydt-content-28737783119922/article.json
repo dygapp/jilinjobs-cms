@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119922",
+    "contentId": "28737783119922",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119922"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省“商域精英”人才公益培育计划20天集中培训圆满结束",
+    "source": "",
+    "publishDate": "2017-08-12",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省“商域精英”人才公益培育计划20天集中培训圆满结束</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训二部   发布时间:2017-8-12 9:00:13</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"line-height: 150%; text-indent: 37px;\"><span style=\"line-height: 150%; font-family: 宋体; font-size: 19px;\">8月11日，吉林省“商域精英”人才公益培育计划集中培训结课仪式在吉林省高等学校毕业生就业指导中心举行。吉林省教育厅高校学生处处长陈梅、吉林省高等学校毕业生就业指导中心主任郑志宏、吉林省商域阳光咨询有限责任公司董事长童怀波、国家高级企业培训师，高级企业咨询管理顾问马玉田、吉林省众为教育信息咨询有限公司董事长冷雪冰、长春广播电视台娱乐频道责任编辑孙东新、全球吉商联合会副秘书长尤天资、长电企业集团人力资源总监王东晖出席活动。282名培训学员参加结课仪式。</span></p><p style=\"line-height: 40px; text-indent: 37px;\"><span style=\"font-family: 宋体; font-size: 19px;\">结课仪式上，郑志宏主任做了讲话，他对参与此次培训的老师和社会各界人士表示了感谢；对282名学员的优异表现给予肯定并对他们寄以厚望，希望他们能为吉林省经济发展贡献自己的一份力量。</span></p><p style=\"line-height: 40px; text-indent: 37px;\"><span style=\"font-family: 宋体; font-size: 19px;\">吉林省教育厅高校学生处处长陈梅向学生代表颁发结业证书。</span></p><p style=\"line-height: 40px; text-indent: 37px;\"><span style=\"font-family: 宋体; font-size: 19px;\">吉林省商域阳光咨询有限责任公司董事长童怀波对集中培训做了回顾。吉林省众为教育信息咨询有限公司董事长冷雪冰、长电企业集团人力资源总监王东晖作为企业家导师和培训师代表分别在结课仪式上发言。优秀学员代表对本次集中培训发表感想，对参与培训工作的领导和老师表示感谢。</span></p><p style=\"line-height: 40px; text-indent: 37px;\"><span style=\"font-family: 宋体; font-size: 19px;\">本次结课仪式结束后学员们将进入为期半年的企业实习阶段。</span></p><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.JPG\" src=\"migration-resource://c146aaf144104d91fb69b31dbd1e470e2929ab632a91a01a3d394ef145977b07\"></p><p style=\"text-align: center;\"><img title=\"2.JPG\" src=\"migration-resource://5a90fe9497dc92a4ac355de75083361aa83bafa5616e5197a8a299ed0619e4d2\"></p><p style=\"text-align: center;\"><img title=\"3.JPG\" src=\"migration-resource://226dd886cbc0aba78c06ea7359346831c64c073242138ccd62f8c90c94218645\"></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363849253259025004011019.JPG",
+      "originalReference": "/chistory/cms/imgs/6363849253259025004011019.JPG",
+      "token": "migration-resource://c146aaf144104d91fb69b31dbd1e470e2929ab632a91a01a3d394ef145977b07",
+      "snapshotPath": "assets/c146aaf144104d91fb69b31dbd1e470e2929ab632a91a01a3d394ef145977b07.jpg",
+      "sha256": "c146aaf144104d91fb69b31dbd1e470e2929ab632a91a01a3d394ef145977b07",
+      "contentType": "image/jpeg",
+      "sizeBytes": 148388
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363849253323087507180828.JPG",
+      "originalReference": "/chistory/cms/imgs/6363849253323087507180828.JPG",
+      "token": "migration-resource://5a90fe9497dc92a4ac355de75083361aa83bafa5616e5197a8a299ed0619e4d2",
+      "snapshotPath": "assets/5a90fe9497dc92a4ac355de75083361aa83bafa5616e5197a8a299ed0619e4d2.jpg",
+      "sha256": "5a90fe9497dc92a4ac355de75083361aa83bafa5616e5197a8a299ed0619e4d2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 78374
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363849253329337506395981.JPG",
+      "originalReference": "/chistory/cms/imgs/6363849253329337506395981.JPG",
+      "token": "migration-resource://226dd886cbc0aba78c06ea7359346831c64c073242138ccd62f8c90c94218645",
+      "snapshotPath": "assets/226dd886cbc0aba78c06ea7359346831c64c073242138ccd62f8c90c94218645.jpg",
+      "sha256": "226dd886cbc0aba78c06ea7359346831c64c073242138ccd62f8c90c94218645",
+      "contentType": "image/jpeg",
+      "sizeBytes": 129784
+    }
+  ],
+  "sourceFingerprint": "d71a8cdc64bca0dd1e6b1cdd2f5e0c69343c086cc3dfbd0d0554470f26e8a0e8",
+  "evidence": {
+    "listPage": 149,
+    "listTitle": "吉林省“商域精英”人才公益培育计划20天集中培训圆满结束",
+    "listPublishDate": "2017-08-12",
+    "sourceOrder": 1484,
+    "detailPublishDate": "2017-08-12"
+  }
+}

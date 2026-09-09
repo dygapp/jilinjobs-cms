@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:dc4c4240a940884683d404c302d431fe6a03771d272ba1751f35d15204d8f810",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/bV9GVsX64IdAmPUFMLnhRA",
+    "url": "https://mp.weixin.qq.com/s/bV9GVsX64IdAmPUFMLnhRA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林交通职业技术学院举办“服务吉林高质量发展”2026届毕业生秋冬季招聘会",
+    "source": "",
+    "publishDate": "2025-11-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/bV9GVsX64IdAmPUFMLnhRA"
+  },
+  "resources": [],
+  "sourceFingerprint": "647fe0921e214c4231d6209a744ce2e560f13f21587db1dd5ec45705048c9e5a",
+  "evidence": {
+    "listPage": 59,
+    "listTitle": "吉林交通职业技术学院举办“服务吉林高质量发展”2026届毕业生秋冬季招聘会",
+    "listPublishDate": "2025-11-20",
+    "sourceOrder": 584
+  }
+}

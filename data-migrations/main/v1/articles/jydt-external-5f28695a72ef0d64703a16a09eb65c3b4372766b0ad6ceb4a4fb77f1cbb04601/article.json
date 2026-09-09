@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5f28695a72ef0d64703a16a09eb65c3b4372766b0ad6ceb4a4fb77f1cbb04601",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/qYjCFJ8erH7Mb5UaPE74YA",
+    "url": "https://mp.weixin.qq.com/s/qYjCFJ8erH7Mb5UaPE74YA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "光电产业类毕业生就业洽谈会火爆，1156人次初步达成就业意向！",
+    "source": "",
+    "publishDate": "2025-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/qYjCFJ8erH7Mb5UaPE74YA"
+  },
+  "resources": [],
+  "sourceFingerprint": "32d8d650f4245dabaf95e31d0dade8df579725ac20bf10d4bdb22d974ded73ab",
+  "evidence": {
+    "listPage": 97,
+    "listTitle": "光电产业类毕业生就业洽谈会火爆，1156人次初步达成就业意向！",
+    "listPublishDate": "2025-03-27",
+    "sourceOrder": 966
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:85d2a7d916155b7b145161d08f585f3567006297b52b7294269edb7fac0db7a4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/R-z3WaUrgxM2pPnyWc7Rcw",
+    "url": "https://mp.weixin.qq.com/s/R-z3WaUrgxM2pPnyWc7Rcw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长科资讯 | 校企携手签约共筑产学研合作新篇",
+    "source": "",
+    "publishDate": "2026-01-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/R-z3WaUrgxM2pPnyWc7Rcw"
+  },
+  "resources": [],
+  "sourceFingerprint": "313f1d1fc350b9786b83fb1fa5b032cd1f43faeab3f1325d442e707477d604f7",
+  "evidence": {
+    "listPage": 50,
+    "listTitle": "长科资讯 | 校企携手签约共筑产学研合作新篇",
+    "listPublishDate": "2026-01-16",
+    "sourceOrder": 495
+  }
+}

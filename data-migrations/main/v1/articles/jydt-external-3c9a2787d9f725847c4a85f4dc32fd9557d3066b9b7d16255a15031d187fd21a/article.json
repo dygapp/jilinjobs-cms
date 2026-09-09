@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3c9a2787d9f725847c4a85f4dc32fd9557d3066b9b7d16255a15031d187fd21a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/4QKmy1l8vjX4Y3JPmyevyQ",
+    "url": "https://mp.weixin.qq.com/s/4QKmy1l8vjX4Y3JPmyevyQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范高等专科学校成功举办“振兴吉林、逐梦启航”2025届毕业生等青年校园“双选会",
+    "source": "",
+    "publishDate": "2025-06-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4QKmy1l8vjX4Y3JPmyevyQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "83ae28fa7706acee883a77d2fbdbdb4ee427d8e3edd3dcfb28fbd371fd053e2a",
+  "evidence": {
+    "listPage": 82,
+    "listTitle": "长春师范高等专科学校成功举办“振兴吉林、逐梦启航”2025届毕业生等青年校园“双选会",
+    "listPublishDate": "2025-06-16",
+    "sourceOrder": 812
+  }
+}

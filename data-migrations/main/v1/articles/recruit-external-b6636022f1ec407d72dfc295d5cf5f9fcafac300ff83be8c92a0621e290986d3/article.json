@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:b6636022f1ec407d72dfc295d5cf5f9fcafac300ff83be8c92a0621e290986d3",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/-W_HSiuv3pasXx_jyDymXQ",
+    "url": "https://mp.weixin.qq.com/s/-W_HSiuv3pasXx_jyDymXQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2021年空军直接选拔招录普通高等学校应届毕业生公告发布",
+    "source": "",
+    "publishDate": "2021-03-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/-W_HSiuv3pasXx_jyDymXQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "dfed65c78f3565962f463743e61d8c3cfd295693019a451e0ba127993f2c44e8",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "2021年空军直接选拔招录普通高等学校应届毕业生公告发布",
+    "listPublishDate": "2021-03-26",
+    "sourceOrder": 356
+  }
+}

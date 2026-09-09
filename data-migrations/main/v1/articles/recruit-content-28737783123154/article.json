@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123154",
+    "contentId": "28737783123154",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123154"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部：招聘不得将院校作为限制性条件",
+    "source": "",
+    "publishDate": "2014-06-13",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部：招聘不得将院校作为限制性条件</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:    发布时间:2014-6-13 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"background: rgb(246, 252, 255); text-align: center; line-height: 28px; margin-top: auto; margin-bottom: auto;\"><strong><span style=\"color: rgb(3, 0, 92); font-family: 宋体; font-size: 24px;\">教育部：招聘不得将院校作为限制性条件</span></strong></p><p style=\"background: rgb(246, 252, 255); text-align: center;\"><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 12px;\">来源：</span><span style=\"color: rgb(222, 0, 0); font-family: 宋体; font-size: 12px;\">光明日报</span></p><p style=\"background: rgb(246, 252, 255); text-align: left; line-height: 24px; margin-top: auto; margin-bottom: auto;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(51, 51, 51); font-family: 宋体;\">&nbsp;</span>　 </span><span style=\"color: rgb(51, 51, 51); font-family: 仿宋; font-size: 19px;\">教育部官网日前发布2014年国家鼓励高校毕业生就业创业新政策，其中强调，各地区、各有关部门要积极采取措施，促进就业公平。用人单位招聘不得设置民族、种族、性别、宗教信仰等歧视性条件，不得将院校作为限制性条件。省会及以下城市用人单位招聘应届毕业生不得将户籍作为限制性条件。</span></p><p style=\"background: rgb(246, 252, 255); line-height: 28px;\"><span style=\"color: rgb(51, 51, 51); font-family: 仿宋; font-size: 19px;\">　　新政策强调，各地区、各有关部门要消除高校毕业生在不同地区、不同类型单位之间流动就业的制度性障碍。省会及以下城市要放开对吸收高校毕业生落户的限制，简化有关手续，应届毕业生凭《普通高等学校毕业证书》《全国普通高等学校毕业生就业报到证》以及与用人单位签订的《就业协议书》或劳动（聘用）合同办理落户手续；非应届毕业生凭与用人单位签订的劳动（聘用）合同和《普通高等学校毕业证书》办理落户手续。</span></p><p><span style=\"font-size: 19px;\"><span style=\"font-family: Times New Roman;\">&nbsp;</span></span></p><p></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "197244ae16657995040cfbee589077c27d610216bec88c052b6f1e7457d273b8",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "教育部：招聘不得将院校作为限制性条件",
+    "listPublishDate": "2014-06-13",
+    "sourceOrder": 418,
+    "detailPublishDate": "2014-06-13"
+  }
+}

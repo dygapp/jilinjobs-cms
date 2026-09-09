@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:2a16b6369b9e8505b96e08427e95ef854880a4ee08c521c2134c270219f8b991",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/4ndFZmT4uAAilb2nmOET3w",
+    "url": "https://mp.weixin.qq.com/s/4ndFZmT4uAAilb2nmOET3w"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“助梦启航 职等你来”2025年吉林省国家助学贷款大学生就业实习专场供需洽谈双选会",
+    "source": "",
+    "publishDate": "2025-04-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4ndFZmT4uAAilb2nmOET3w"
+  },
+  "resources": [],
+  "sourceFingerprint": "e862eecc5934718f47cd1c6c8cfe83183471acaf88d1968fa836ff8d482d2cfc",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "“助梦启航 职等你来”2025年吉林省国家助学贷款大学生就业实习专场供需洽谈双选会",
+    "listPublishDate": "2025-04-24",
+    "sourceOrder": 166
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123280",
+    "contentId": "28737783123280",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123280"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "网上调剂操作流程",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">网上调剂操作流程</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;&nbsp; &nbsp;1、登录：考生凭网报时注册的用户名和密码登录\"中国研究生招生信息网\"的网上调剂系统。如果忘记了用户名或密码，请使用“找回密码”功能，输入相关信息来找回用户名或密码（调剂系统开通后方可找回用户名）；<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;2、查询：考生填报前请认真阅读各招生单位在其院校信息栏目里公布的调剂要求，登录调剂系统后查询各招生单位的专业缺额信息；<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;3、报名：通过调剂系统选择已发布缺额的招生单位和专业，填报调剂志愿（可同时填报两个志愿）；<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;4、复试：提交调剂志愿后，招生单位将反馈是否参加复试的通知。请考生及时登录调剂系统，查看志愿状态和招生单位的复试通知。如果收到复试通知，请考生按照招生单位的调剂要求办理相关手续并通过调剂系统回复是否同意参加复试；<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;5、待录取：考生在复试结束后，如果符合录取条件，将收到招生单位发送的“待录取通知”；考生必须在招生单位要求的时限内答复是否接受待录取，否则招生单位可随时取消“待录取”；一旦考生同意“待录取”，在未征得该招生单位允许的情况下，不能再接受其它单位“待录取”。<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;6、复试没有通过：此类考生仍可以继续参加调剂志愿的填报；<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;7、注意事项：考生填报调剂志愿的时候，联系方式尤为重要，是招生单位主动联系的一个重要方式，请认真填写随时可联系的电话。</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "a5452a71a3a3fd0253e060d51ec26ab788d3c6b5712fb38caa8c615bcf97ccf0",
+  "evidence": {
+    "listPage": 58,
+    "listTitle": "网上调剂操作流程",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 571,
+    "detailPublishDate": "2009-04-04"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:126356316766208",
+    "contentId": "126356316766208",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=126356316766208"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春人文学院组织参加师资培训",
+    "source": "长春人文学院",
+    "publishDate": "2022-10-30",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"450\" src=\"migration-resource://914076426f01885776df16403d696f285d0cf26920d90a427bc0ce681d12a93b\" width=\"600\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:12pt\"><span style=\"background-color:white\"><span style=\"font-family:宋体\"><span style=\"color:black\">为进一步贯彻落实国务院及教育部就业创业工作相关通知精神，拓宽就业创业教师教学思路，转变教学观念，创新教学模式，提升教学水平，打造就业创业名师队伍，8月1-4日，长春人文学院就业创业处组织辅导员及就业创业教师，参加省高校毕业生就业指导中心举办的吉林省2022年职业发展与就业创业金课建设及高质量教学博览师资培训班。</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:12pt\"><span style=\"background-color:white\"><span style=\"font-family:宋体\"><span style=\"color:black\">本次培训以线上直播授课形式进行，历时4天，聘请到了教育部全国高校就业创业指导教师培训特聘专家、国家级金课《大学生职业发展与就业指导》课程负责人等8位名师，从生涯发展课程建设实践与思考、职业规划课程教学分享与突破、职规与就业指导课程教学设计创新实践、生涯发展类金课的内容与方法设计、观念驱动式生涯发展教育理念与课程建设、创新创业金课设计与实践、创业课程教学与金课建设等8个主题进行了精彩的课程讲授和经验分享。</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:12pt\"><span style=\"background-color:white\"><span style=\"font-family:宋体\"><span style=\"color:black\">长春人文学院共有28名教师全程参加了培训并取得证书，此次培训师资力量强，课程内容丰富，教学理论和方法新，进一步拓宽了参培人员就业创业教学思路，为以后做好就业创业工作增加了底蕴。</span></span></span></span></p>\n\n<p style=\"text-align:right\"><span style=\"font-size:12pt\"><span style=\"background-color:white\"><span style=\"font-family:宋体\"><strong><span style=\"color:black\">（长春人文学院 杨雪）</span></strong></span></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-29/48e3e677-7044-4c79-989b-75e657d62f40.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-29/48e3e677-7044-4c79-989b-75e657d62f40.jpg",
+      "token": "migration-resource://914076426f01885776df16403d696f285d0cf26920d90a427bc0ce681d12a93b",
+      "snapshotPath": "assets/914076426f01885776df16403d696f285d0cf26920d90a427bc0ce681d12a93b.jpg",
+      "sha256": "914076426f01885776df16403d696f285d0cf26920d90a427bc0ce681d12a93b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 399951
+    }
+  ],
+  "sourceFingerprint": "8e73d6637a413251c55de6a2ce9fa6227c2cb92ce8464ca7e7ee7615124f40fc",
+  "evidence": {
+    "listPage": 119,
+    "listTitle": "长春人文学院组织参加师资培训",
+    "listPublishDate": "2022-10-30",
+    "sourceOrder": 1187,
+    "detailPublishDate": "2022-10-30"
+  }
+}

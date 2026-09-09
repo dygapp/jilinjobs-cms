@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0f26e6c0f3ab756d6fffb04febaa3b5629a7037a55fa6c4e1bd88a7d4532de50",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/gVQ7sDMwZ2NQC48Wh0V8SQ",
+    "url": "https://mp.weixin.qq.com/s/gVQ7sDMwZ2NQC48Wh0V8SQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "白城师范学院副校长张海龙一行赴贵阳市进行访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-08-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gVQ7sDMwZ2NQC48Wh0V8SQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "8873c488cb41cabf68812710c69a7239ee28a8814f22e463c01c23f377918000",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "白城师范学院副校长张海龙一行赴贵阳市进行访企拓岗专项行动",
+    "listPublishDate": "2026-08-28",
+    "sourceOrder": 8
+  }
+}

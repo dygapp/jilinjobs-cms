@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120798",
+    "contentId": "28737783120798",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120798"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省人民政府办公厅关于召开全省普通高校毕业生就业工作视频会议的通知",
+    "source": "",
+    "publishDate": "2011-06-27",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省人民政府办公厅关于召开全省普通高校毕业生就业工作视频会议的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-6-27 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://64de7cf645163e0164c110b8373c1458259fdf828bbeff366b7191441c085a48\"><img border=\"0\" src=\"migration-resource://e96be2a589e1dbb65829cbda2f1312790b2b618a44a7199152bafc2d3931cdf3\"><img border=\"0\" src=\"migration-resource://7bf808e07a6bb160f9ffb6a4cf39b9a32049067c2256700a2fc0d24eecd501ff\"><img border=\"0\" src=\"http://www.jilinjobs.cn/uploadfile/201106/20110627092643815.jpg\"><img border=\"0\" src=\"migration-resource://8c560f907026d4a630c160a028720471d8d3ce03f83ed099a3766ab75e688d72\"><img border=\"0\" src=\"migration-resource://d0219d6e2fcf13e83ee0acb6aefebf9a9bf75fd17c89355c1fc9b92bf884281b\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2011062709263166.jpg",
+      "originalReference": "/chistory/cms/imgs/2011062709263166.jpg",
+      "token": "migration-resource://64de7cf645163e0164c110b8373c1458259fdf828bbeff366b7191441c085a48",
+      "snapshotPath": "assets/64de7cf645163e0164c110b8373c1458259fdf828bbeff366b7191441c085a48.jpg",
+      "sha256": "64de7cf645163e0164c110b8373c1458259fdf828bbeff366b7191441c085a48",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88200
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110627092635748.jpg",
+      "originalReference": "/chistory/cms/imgs/20110627092635748.jpg",
+      "token": "migration-resource://e96be2a589e1dbb65829cbda2f1312790b2b618a44a7199152bafc2d3931cdf3",
+      "snapshotPath": "assets/e96be2a589e1dbb65829cbda2f1312790b2b618a44a7199152bafc2d3931cdf3.jpg",
+      "sha256": "e96be2a589e1dbb65829cbda2f1312790b2b618a44a7199152bafc2d3931cdf3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81671
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110627092639555.jpg",
+      "originalReference": "/chistory/cms/imgs/20110627092639555.jpg",
+      "token": "migration-resource://7bf808e07a6bb160f9ffb6a4cf39b9a32049067c2256700a2fc0d24eecd501ff",
+      "snapshotPath": "assets/7bf808e07a6bb160f9ffb6a4cf39b9a32049067c2256700a2fc0d24eecd501ff.jpg",
+      "sha256": "7bf808e07a6bb160f9ffb6a4cf39b9a32049067c2256700a2fc0d24eecd501ff",
+      "contentType": "image/jpeg",
+      "sizeBytes": 83575
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110627092705371.jpg",
+      "originalReference": "/chistory/cms/imgs/20110627092705371.jpg",
+      "token": "migration-resource://8c560f907026d4a630c160a028720471d8d3ce03f83ed099a3766ab75e688d72",
+      "snapshotPath": "assets/8c560f907026d4a630c160a028720471d8d3ce03f83ed099a3766ab75e688d72.jpg",
+      "sha256": "8c560f907026d4a630c160a028720471d8d3ce03f83ed099a3766ab75e688d72",
+      "contentType": "image/jpeg",
+      "sizeBytes": 85014
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110627092712502.jpg",
+      "originalReference": "/chistory/cms/imgs/20110627092712502.jpg",
+      "token": "migration-resource://d0219d6e2fcf13e83ee0acb6aefebf9a9bf75fd17c89355c1fc9b92bf884281b",
+      "snapshotPath": "assets/d0219d6e2fcf13e83ee0acb6aefebf9a9bf75fd17c89355c1fc9b92bf884281b.jpg",
+      "sha256": "d0219d6e2fcf13e83ee0acb6aefebf9a9bf75fd17c89355c1fc9b92bf884281b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 69308
+    }
+  ],
+  "sourceFingerprint": "ce520338d3baec1e38b1ce1fc4038eb86fd9c15be1b80f5fb5f15c996f96f88b",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "吉林省人民政府办公厅关于召开全省普通高校毕业生就业工作视频会议的通知",
+    "listPublishDate": "2011-06-27",
+    "sourceOrder": 434,
+    "detailPublishDate": "2011-06-27"
+  }
+}

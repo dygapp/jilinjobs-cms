@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:05aaac342155fa5ddb41190848944de52ed21fa8ab6360dac967a7cdf201103b",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/jobfair/fairdetails.html",
+    "url": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=CT34HYzK6162q4AGH4ha89"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“交通强国 筑梦启航”轨道交通行业七校2023届毕业生网络双选会",
+    "source": "",
+    "publishDate": "2022-12-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=CT34HYzK6162q4AGH4ha89"
+  },
+  "resources": [],
+  "sourceFingerprint": "fd5f838e02ee8bb4e7b53dadcca4c3d769ea7c212509b709a1ee19ba92a26c9b",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "“交通强国 筑梦启航”轨道交通行业七校2023届毕业生网络双选会",
+    "listPublishDate": "2022-12-02",
+    "sourceOrder": 324
+  }
+}

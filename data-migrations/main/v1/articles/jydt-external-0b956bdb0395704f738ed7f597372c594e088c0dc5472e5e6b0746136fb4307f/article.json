@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0b956bdb0395704f738ed7f597372c594e088c0dc5472e5e6b0746136fb4307f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/9Zvuxq3Hl2-hgqlYnqe7BA",
+    "url": "https://mp.weixin.qq.com/s/9Zvuxq3Hl2-hgqlYnqe7BA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春早期教育职业学院校企携手，共拓口腔医学技术人才培养新航道！",
+    "source": "",
+    "publishDate": "2026-07-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/9Zvuxq3Hl2-hgqlYnqe7BA"
+  },
+  "resources": [],
+  "sourceFingerprint": "137c4daba5b4c7ed02b00a2fe26837adfca453d92a27149304be3698b776dbf1",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "长春早期教育职业学院校企携手，共拓口腔医学技术人才培养新航道！",
+    "listPublishDate": "2026-07-13",
+    "sourceOrder": 50
+  }
+}

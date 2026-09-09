@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d9e4641ffdce8f2da2b0ce8d37ed8b0982340d2652c93112f93fc1a3c94f8616",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/4UBUbjIYPRJ84F9mfB_2FQ",
+    "url": "https://mp.weixin.qq.com/s/4UBUbjIYPRJ84F9mfB_2FQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林师范大学校长杨小天带队开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-05-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4UBUbjIYPRJ84F9mfB_2FQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "baf59c39b26f6ed8032af907627cf0f1c49479305e408a51d786fd01d5a256fd",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "吉林师范大学校长杨小天带队开展访企拓岗专项行动",
+    "listPublishDate": "2026-05-13",
+    "sourceOrder": 191
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cd5070a6c81e411676e5f7e5aa6ff99ce35bd834b1f0a06070a584cf90b68a6c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1028/173762.htm",
+    "url": "https://www.jlju.edu.cn/info/1028/173762.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“聚力扩容提质 服务高质量发展”吉林建筑大学“拓岗”宣传推介会暨第三届“聚才引智 筑梦净月”长春市净月区政校协企合作专场招聘会",
+    "source": "",
+    "publishDate": "2026-05-20",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1028/173762.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "66c43029fb7d05a1c88c41eeb387f6e67864448456280af1878c92ffe6f33e6a",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "“聚力扩容提质 服务高质量发展”吉林建筑大学“拓岗”宣传推介会暨第三届“聚才引智 筑梦净月”长春市净月区政校协企合作专场招聘会",
+    "listPublishDate": "2026-05-20",
+    "sourceOrder": 158
+  }
+}

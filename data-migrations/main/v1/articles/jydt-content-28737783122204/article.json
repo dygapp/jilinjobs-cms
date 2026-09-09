@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122204",
+    "contentId": "28737783122204",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122204"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省高校学生就业能力拓展培训工作总结会",
+    "source": "",
+    "publishDate": "2012-03-23",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省高校学生就业能力拓展培训工作总结会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-3-23 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"justify\">&nbsp;</p> <p align=\"justify\">&nbsp; 3月12日上午，在教育宾馆三楼会议室召开吉林省高校学生就业能力拓展培训工作总结会。省教育厅高校学生处处长纪拓，省高校毕业生就业指导中心主任郑志宏、书记朱军、副主任张跃参加会议，培训师代表、学员代表以及来自省内28所相关高校的就业部门处长、主任及参与双困生培训组织工作的具体工作人员共计60人出席会议。会议由朱军书记主持。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://35903d44eb8399010560447e8722cd51224760c989cfb5e4b119c2410b6ac9b6\"></p> <p align=\"justify\">&nbsp;</p> <p align=\"justify\"><br>&nbsp;&nbsp; 会上，首先观摩了《提高高校“双困学生”就业能力三年行动计划》宣传片。郑志宏主任对三年来项目实施的情况做了总结，长春理工大学、长春师范学院、吉林工商学院、吉林工业职业技术学院四所高校围绕双困生培训组织工作及学校对贫困生群体开展的帮扶工作做了经验介绍与汇报，培训师代表方占仁博士对双困生培训项目课程体系及教学方法、师资团队等状况进行了介绍，来自吉林农业大学、长春工程学院的两名学员代表畅谈了参加培训的心得体会与收获。最后，省教育厅高校学生处纪拓处长对做好2012年双困生培训工作提出了意见要求。</p> <p align=\"justify\">&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120323161045801.jpg",
+      "originalReference": "/chistory/cms/imgs/20120323161045801.jpg",
+      "token": "migration-resource://35903d44eb8399010560447e8722cd51224760c989cfb5e4b119c2410b6ac9b6",
+      "snapshotPath": "assets/35903d44eb8399010560447e8722cd51224760c989cfb5e4b119c2410b6ac9b6.jpg",
+      "sha256": "35903d44eb8399010560447e8722cd51224760c989cfb5e4b119c2410b6ac9b6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 58053
+    }
+  ],
+  "sourceFingerprint": "ad7fd094c34ad6b745ec34e4b65bc66ce720b5a2809dc8b85b4b51f94f19dea9",
+  "evidence": {
+    "listPage": 164,
+    "listTitle": "吉林省高校学生就业能力拓展培训工作总结会",
+    "listPublishDate": "2012-03-23",
+    "sourceOrder": 1637,
+    "detailPublishDate": "2012-03-23"
+  }
+}

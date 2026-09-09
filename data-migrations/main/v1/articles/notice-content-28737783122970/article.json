@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122970",
+    "contentId": "28737783122970",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122970"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《关于“举办企业人才需求----高校教师职场必修课”专题培训班》的通知",
+    "source": "",
+    "publishDate": "2011-12-22",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《关于“举办企业人才需求----高校教师职场必修课”专题培训班》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-12-22 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://c6d93ac13d35f146a5d8514e4a71ac458d2049f920683da6e00b99fcf4a21652\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://d1fb35beb2bba39d6980808a2864545aabdea6de4f2dd9a5baea8ad74ed7a7e7\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://629380fb51de9b6ab6c49aa405d0006eaad7ba265d2a7a5f7983f21e126c5b55\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://d15c932899ae55262301e47113c8a2b37b08c13006c830c6d54db2dba0c71b6b\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://27d450eb4945878f0bd9223a803dbe88f9382b709b023c248e82ca67a4a0ba12\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://4ce350a9224731fcb29050986490e9370ea5017c5f71fb117793ad4f3e055cee\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111222144518951.jpg",
+      "originalReference": "/chistory/cms/imgs/20111222144518951.jpg",
+      "token": "migration-resource://c6d93ac13d35f146a5d8514e4a71ac458d2049f920683da6e00b99fcf4a21652",
+      "snapshotPath": "assets/c6d93ac13d35f146a5d8514e4a71ac458d2049f920683da6e00b99fcf4a21652.jpg",
+      "sha256": "c6d93ac13d35f146a5d8514e4a71ac458d2049f920683da6e00b99fcf4a21652",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93729
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2011122214452555.jpg",
+      "originalReference": "/chistory/cms/imgs/2011122214452555.jpg",
+      "token": "migration-resource://d1fb35beb2bba39d6980808a2864545aabdea6de4f2dd9a5baea8ad74ed7a7e7",
+      "snapshotPath": "assets/d1fb35beb2bba39d6980808a2864545aabdea6de4f2dd9a5baea8ad74ed7a7e7.jpg",
+      "sha256": "d1fb35beb2bba39d6980808a2864545aabdea6de4f2dd9a5baea8ad74ed7a7e7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90811
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111222144531379.jpg",
+      "originalReference": "/chistory/cms/imgs/20111222144531379.jpg",
+      "token": "migration-resource://629380fb51de9b6ab6c49aa405d0006eaad7ba265d2a7a5f7983f21e126c5b55",
+      "snapshotPath": "assets/629380fb51de9b6ab6c49aa405d0006eaad7ba265d2a7a5f7983f21e126c5b55.jpg",
+      "sha256": "629380fb51de9b6ab6c49aa405d0006eaad7ba265d2a7a5f7983f21e126c5b55",
+      "contentType": "image/jpeg",
+      "sizeBytes": 72221
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2011122214453649.jpg",
+      "originalReference": "/chistory/cms/imgs/2011122214453649.jpg",
+      "token": "migration-resource://d15c932899ae55262301e47113c8a2b37b08c13006c830c6d54db2dba0c71b6b",
+      "snapshotPath": "assets/d15c932899ae55262301e47113c8a2b37b08c13006c830c6d54db2dba0c71b6b.jpg",
+      "sha256": "d15c932899ae55262301e47113c8a2b37b08c13006c830c6d54db2dba0c71b6b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 68525
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111226145316748.jpg",
+      "originalReference": "/chistory/cms/imgs/20111226145316748.jpg",
+      "token": "migration-resource://27d450eb4945878f0bd9223a803dbe88f9382b709b023c248e82ca67a4a0ba12",
+      "snapshotPath": "assets/27d450eb4945878f0bd9223a803dbe88f9382b709b023c248e82ca67a4a0ba12.jpg",
+      "sha256": "27d450eb4945878f0bd9223a803dbe88f9382b709b023c248e82ca67a4a0ba12",
+      "contentType": "image/jpeg",
+      "sizeBytes": 89704
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2011122614532585.jpg",
+      "originalReference": "/chistory/cms/imgs/2011122614532585.jpg",
+      "token": "migration-resource://4ce350a9224731fcb29050986490e9370ea5017c5f71fb117793ad4f3e055cee",
+      "snapshotPath": "assets/4ce350a9224731fcb29050986490e9370ea5017c5f71fb117793ad4f3e055cee.jpg",
+      "sha256": "4ce350a9224731fcb29050986490e9370ea5017c5f71fb117793ad4f3e055cee",
+      "contentType": "image/jpeg",
+      "sizeBytes": 73929
+    }
+  ],
+  "sourceFingerprint": "e4f9bd422c7ac62cda6bbb7249f89c1646d68913ee0f54693b6906ee11bc2f29",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "转发《关于“举办企业人才需求----高校教师职场必修课”专题培训班》的通知",
+    "listPublishDate": "2011-12-22",
+    "sourceOrder": 408,
+    "detailPublishDate": "2011-12-22"
+  }
+}

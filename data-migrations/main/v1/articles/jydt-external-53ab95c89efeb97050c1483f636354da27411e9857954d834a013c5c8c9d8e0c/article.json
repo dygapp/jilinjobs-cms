@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:53ab95c89efeb97050c1483f636354da27411e9857954d834a013c5c8c9d8e0c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/bJQjv2Nxe_vCi9ysN4Dmlg",
+    "url": "https://mp.weixin.qq.com/s/bJQjv2Nxe_vCi9ysN4Dmlg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学举办“职引未来 筑梦吉林”2025年吉林省高校毕业生专项招聘会",
+    "source": "",
+    "publishDate": "2025-10-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/bJQjv2Nxe_vCi9ysN4Dmlg"
+  },
+  "resources": [],
+  "sourceFingerprint": "6a85d358f4e38192a1a943214a0bbb6ae45c14188ba8ab7dce20a0fbe8433dbb",
+  "evidence": {
+    "listPage": 65,
+    "listTitle": "吉林财经大学举办“职引未来 筑梦吉林”2025年吉林省高校毕业生专项招聘会",
+    "listPublishDate": "2025-10-31",
+    "sourceOrder": 647
+  }
+}

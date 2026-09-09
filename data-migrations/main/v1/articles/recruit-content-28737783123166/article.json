@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123166",
+    "contentId": "28737783123166",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123166"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2012年征兵宣传专栏",
+    "source": "",
+    "publishDate": "2012-10-11",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2012年征兵宣传专栏</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-10-11 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://cb364782b6ec95c103f1375dd449d528d2899131d6d6c5fd04cf6f4e03aa4aac\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://433334ffcafb37ed8d084369247205454b89f50354a89401844433bb9e7ea12b\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://c336b82b63f3628b6444ed909d79839696b0122a020e625db4ef3ddc5de8559b\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://204c790236974be6a362ec481654e80613949a6bb9332d49632663cb09e83a1d\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://2c3d8d381411fa8e59b58057f20e2341761dc5fbff1b88b1371c956b152b363d\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121011202751154.jpg",
+      "originalReference": "/chistory/cms/imgs/20121011202751154.jpg",
+      "token": "migration-resource://cb364782b6ec95c103f1375dd449d528d2899131d6d6c5fd04cf6f4e03aa4aac",
+      "snapshotPath": "assets/cb364782b6ec95c103f1375dd449d528d2899131d6d6c5fd04cf6f4e03aa4aac.jpg",
+      "sha256": "cb364782b6ec95c103f1375dd449d528d2899131d6d6c5fd04cf6f4e03aa4aac",
+      "contentType": "image/jpeg",
+      "sizeBytes": 101474
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121011202800975.jpg",
+      "originalReference": "/chistory/cms/imgs/20121011202800975.jpg",
+      "token": "migration-resource://433334ffcafb37ed8d084369247205454b89f50354a89401844433bb9e7ea12b",
+      "snapshotPath": "assets/433334ffcafb37ed8d084369247205454b89f50354a89401844433bb9e7ea12b.jpg",
+      "sha256": "433334ffcafb37ed8d084369247205454b89f50354a89401844433bb9e7ea12b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 99808
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121011202938568.jpg",
+      "originalReference": "/chistory/cms/imgs/20121011202938568.jpg",
+      "token": "migration-resource://c336b82b63f3628b6444ed909d79839696b0122a020e625db4ef3ddc5de8559b",
+      "snapshotPath": "assets/c336b82b63f3628b6444ed909d79839696b0122a020e625db4ef3ddc5de8559b.jpg",
+      "sha256": "c336b82b63f3628b6444ed909d79839696b0122a020e625db4ef3ddc5de8559b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 74683
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121011202945588.jpg",
+      "originalReference": "/chistory/cms/imgs/20121011202945588.jpg",
+      "token": "migration-resource://204c790236974be6a362ec481654e80613949a6bb9332d49632663cb09e83a1d",
+      "snapshotPath": "assets/204c790236974be6a362ec481654e80613949a6bb9332d49632663cb09e83a1d.jpg",
+      "sha256": "204c790236974be6a362ec481654e80613949a6bb9332d49632663cb09e83a1d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95292
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121011202951584.jpg",
+      "originalReference": "/chistory/cms/imgs/20121011202951584.jpg",
+      "token": "migration-resource://2c3d8d381411fa8e59b58057f20e2341761dc5fbff1b88b1371c956b152b363d",
+      "snapshotPath": "assets/2c3d8d381411fa8e59b58057f20e2341761dc5fbff1b88b1371c956b152b363d.jpg",
+      "sha256": "2c3d8d381411fa8e59b58057f20e2341761dc5fbff1b88b1371c956b152b363d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75690
+    }
+  ],
+  "sourceFingerprint": "52e597f8ffd3a74620b491f3b08c646b0089897fbbac76814beda3d1d85fe5ca",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "2012年征兵宣传专栏",
+    "listPublishDate": "2012-10-11",
+    "sourceOrder": 429,
+    "detailPublishDate": "2012-10-11"
+  }
+}

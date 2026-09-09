@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119904",
+    "contentId": "28737783119904",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119904"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "“吉人梦想杯”大学生创就业大赛CEO特训营激活大学生创就业热情",
+    "source": "",
+    "publishDate": "2018-06-23",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">“吉人梦想杯”大学生创就业大赛CEO特训营激活大学生创就业热情</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2018-6-23 16:59:37</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">6</span><span style=\"font-family: 宋体; font-size: 21px;\">月21日、22日，吉林省第五届“吉人梦想杯”大学生创就业大赛CEO特训营暨初赛启动仪式在胜利公园举行。来自全省高校的470名参赛学生代表为自己创就业梦想接受特训。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">为了切实做好此次特训营，让大学生们燃起创业就业的斗志和热情，本次特训营特别聘请专业特训企业，为学生们带来为期两天的循环特训。大赛组委会还对初赛细则和评分规则进行了详细的讲解说明。通过建立分组、团队融冰等环节，大家迅速打成一片，集思广益，为自己的团队出力。此后，大学生们还一起参加了“激情60秒”、“挑战150”、“动力圈”等精心设计的活动，特训场地上呐喊声、助威声、喝彩声不断，场面热烈。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">来自吉林动画学院的张同学说：“今天天气炎热，我们都晒黑了，真是汗流浃背，但是很有收获，今天的培训让我更懂得了团队合作的重要性，单打独斗是行不通的，需要团队合作，需要分工配合，我很期待自己在大赛中的表现。” </span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">接下来，初赛环节还将陆续举办线上直播活动，开展线下企划案撰写、面试技巧、新媒体视频拍摄及推广等课程的辅导。</span></p><p>&nbsp;</p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><img title=\"1.JPG\" src=\"migration-resource://e923b3099d489861789cb390f00427e334a2158cdbbf4d3511e6ba0b79c59978\"></p><p style=\"text-align: center;\"><img title=\"2.JPG\" src=\"migration-resource://4b4cd5f365eb0dd304bddeab8f8919107a7ed6c289d3082c5e95cb8c6121163f\"></p><p style=\"text-align: center;\"><img title=\"3.JPG\" src=\"migration-resource://6273429a1b03d6a7cd838b4fbf4b91af5abd5df6d7dc61b35660b31091b4a9d4\"></p><p style=\"text-align: center;\"><img title=\"4.JPG\" src=\"migration-resource://2eeba5fa077e029aa46d68cd746b47f63c0bec8c82833990e7a509a3f04c57f6\"></p><p style=\"text-align: center;\"><img title=\"5.jpg\" src=\"migration-resource://f8369e051d679912023c54a73a5018f70da40d3c0ff426c60b79ce1fd450c619\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366554285749100009490995.JPG",
+      "originalReference": "/chistory/cms/imgs/6366554285749100009490995.JPG",
+      "token": "migration-resource://e923b3099d489861789cb390f00427e334a2158cdbbf4d3511e6ba0b79c59978",
+      "snapshotPath": "assets/e923b3099d489861789cb390f00427e334a2158cdbbf4d3511e6ba0b79c59978.jpg",
+      "sha256": "e923b3099d489861789cb390f00427e334a2158cdbbf4d3511e6ba0b79c59978",
+      "contentType": "image/jpeg",
+      "sizeBytes": 241840
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366554285766287508205382.JPG",
+      "originalReference": "/chistory/cms/imgs/6366554285766287508205382.JPG",
+      "token": "migration-resource://4b4cd5f365eb0dd304bddeab8f8919107a7ed6c289d3082c5e95cb8c6121163f",
+      "snapshotPath": "assets/4b4cd5f365eb0dd304bddeab8f8919107a7ed6c289d3082c5e95cb8c6121163f.jpg",
+      "sha256": "4b4cd5f365eb0dd304bddeab8f8919107a7ed6c289d3082c5e95cb8c6121163f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 305171
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366554285774100005947952.JPG",
+      "originalReference": "/chistory/cms/imgs/6366554285774100005947952.JPG",
+      "token": "migration-resource://6273429a1b03d6a7cd838b4fbf4b91af5abd5df6d7dc61b35660b31091b4a9d4",
+      "snapshotPath": "assets/6273429a1b03d6a7cd838b4fbf4b91af5abd5df6d7dc61b35660b31091b4a9d4.jpg",
+      "sha256": "6273429a1b03d6a7cd838b4fbf4b91af5abd5df6d7dc61b35660b31091b4a9d4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 268074
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366554285783475006919768.JPG",
+      "originalReference": "/chistory/cms/imgs/6366554285783475006919768.JPG",
+      "token": "migration-resource://2eeba5fa077e029aa46d68cd746b47f63c0bec8c82833990e7a509a3f04c57f6",
+      "snapshotPath": "assets/2eeba5fa077e029aa46d68cd746b47f63c0bec8c82833990e7a509a3f04c57f6.jpg",
+      "sha256": "2eeba5fa077e029aa46d68cd746b47f63c0bec8c82833990e7a509a3f04c57f6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 193645
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366554285791287504662339.jpg",
+      "originalReference": "/chistory/cms/imgs/6366554285791287504662339.jpg",
+      "token": "migration-resource://f8369e051d679912023c54a73a5018f70da40d3c0ff426c60b79ce1fd450c619",
+      "snapshotPath": "assets/f8369e051d679912023c54a73a5018f70da40d3c0ff426c60b79ce1fd450c619.jpg",
+      "sha256": "f8369e051d679912023c54a73a5018f70da40d3c0ff426c60b79ce1fd450c619",
+      "contentType": "image/jpeg",
+      "sizeBytes": 194679
+    }
+  ],
+  "sourceFingerprint": "8f84d0501acdc74187ff05a2d9952355fd327dd4c99915952ba98240bdda537e",
+  "evidence": {
+    "listPage": 147,
+    "listTitle": "“吉人梦想杯”大学生创就业大赛CEO特训营激活大学生创就业热情",
+    "listPublishDate": "2018-06-23",
+    "sourceOrder": 1466,
+    "detailPublishDate": "2018-06-23"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:79ac81791cd06f6833bd88f7cc1ffd413d38b6d1f9fc4140e55bc426ea3e8693",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/XFpXURytg77gQh8hE5FbTg",
+    "url": "https://mp.weixin.qq.com/s/XFpXURytg77gQh8hE5FbTg"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2026年吉林省高校“政校企协同促就业”专项行动走进敦化",
+    "source": "",
+    "publishDate": "2026-04-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/XFpXURytg77gQh8hE5FbTg"
+  },
+  "resources": [],
+  "sourceFingerprint": "73fcfa9866e21a3cc652e0496c0cf9d04756c3ec686c604339f6d57d845d2ee1",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "2026年吉林省高校“政校企协同促就业”专项行动走进敦化",
+    "listPublishDate": "2026-04-30",
+    "sourceOrder": 4
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783123004",
+    "contentId": "28737783123004",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123004"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办“2011年全国园林花卉行业用人单位与高校毕业生网上招聘周”活动的通知",
+    "source": "",
+    "publishDate": "2011-08-16",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办“2011年全国园林花卉行业用人单位与高校毕业生网上招聘周”活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-8-16 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://b90bc2dbf52fb11ee53359b5de20bf29ddf96fab11a64ce04e2a488bfe2a6d7d\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://18238d11c17de0d37e99de4a57bc6af405679e802b29b0986a7059e579dd72a5\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://87545abe1af03f4a47256a05c43125c951a5364e9b2e7c7211604b5b42adda5f\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110816124248692.jpg",
+      "originalReference": "/chistory/cms/imgs/20110816124248692.jpg",
+      "token": "migration-resource://b90bc2dbf52fb11ee53359b5de20bf29ddf96fab11a64ce04e2a488bfe2a6d7d",
+      "snapshotPath": "assets/b90bc2dbf52fb11ee53359b5de20bf29ddf96fab11a64ce04e2a488bfe2a6d7d.jpg",
+      "sha256": "b90bc2dbf52fb11ee53359b5de20bf29ddf96fab11a64ce04e2a488bfe2a6d7d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 80545
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110816124300797.jpg",
+      "originalReference": "/chistory/cms/imgs/20110816124300797.jpg",
+      "token": "migration-resource://18238d11c17de0d37e99de4a57bc6af405679e802b29b0986a7059e579dd72a5",
+      "snapshotPath": "assets/18238d11c17de0d37e99de4a57bc6af405679e802b29b0986a7059e579dd72a5.jpg",
+      "sha256": "18238d11c17de0d37e99de4a57bc6af405679e802b29b0986a7059e579dd72a5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75092
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110816124308202.jpg",
+      "originalReference": "/chistory/cms/imgs/20110816124308202.jpg",
+      "token": "migration-resource://87545abe1af03f4a47256a05c43125c951a5364e9b2e7c7211604b5b42adda5f",
+      "snapshotPath": "assets/87545abe1af03f4a47256a05c43125c951a5364e9b2e7c7211604b5b42adda5f.jpg",
+      "sha256": "87545abe1af03f4a47256a05c43125c951a5364e9b2e7c7211604b5b42adda5f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 61748
+    }
+  ],
+  "sourceFingerprint": "b27abfa22ad1551d7ca07df44814db0de4897cd472d72806388aefd03fee1983",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "关于举办“2011年全国园林花卉行业用人单位与高校毕业生网上招聘周”活动的通知",
+    "listPublishDate": "2011-08-16",
+    "sourceOrder": 430,
+    "detailPublishDate": "2011-08-16"
+  }
+}

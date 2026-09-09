@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122134",
+    "contentId": "28737783122134",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122134"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林动画学院举办2016届毕业生供需见面会",
+    "source": "",
+    "publishDate": "2015-11-15",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林动画学院举办2016届毕业生供需见面会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2015-11-15 15:53:47</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 2015年11月14日上午，吉林动画学院举办了2016届毕业生供需见面会。&nbsp; </span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 吉林省教育厅副厅长岳强一行莅临供需见面会现场。在吉林动画学院董事长、校长郑立国的陪同下，岳强副厅长在见面会现场与毕业生及用人单位工作人员进行了深入交流。</span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 此次招聘会以艺术学、文学、工学和管理学4个学科门楼为主，邀请到了北京、上海、广东、福建、江苏、江西山东、四川、黑龙江、辽宁等13个省市的300家用人单位，共提供人才需求岗位5243个。招聘现场异常火爆，还吸引了很多低年级在校生参加，让他们有机会了解行业发展情况，规划自身学业，认清就业形势，明确学习目标，增强学习的紧迫感，珍惜学习机会和就业机会，为今后的成功就业奠定基础。</span></p><p style=\"text-align: center;\"></p><p style=\"text-align: center;\"><img title=\"吉林省教育厅副厅长岳强莅临供需见面会现场.JPG\" src=\"migration-resource://db5b3d63f384119f0f3c45dfa08f67acd24f99b9ea7a2cedf2bcd5ba147d4973\"></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 16px;\">吉林省教育厅副厅长岳强莅临供需见面会现场</span></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544559006250003846391.JPG",
+      "originalReference": "/chistory/cms/imgs/6358544559006250003846391.JPG",
+      "token": "migration-resource://db5b3d63f384119f0f3c45dfa08f67acd24f99b9ea7a2cedf2bcd5ba147d4973",
+      "snapshotPath": "assets/db5b3d63f384119f0f3c45dfa08f67acd24f99b9ea7a2cedf2bcd5ba147d4973.jpg",
+      "sha256": "db5b3d63f384119f0f3c45dfa08f67acd24f99b9ea7a2cedf2bcd5ba147d4973",
+      "contentType": "image/jpeg",
+      "sizeBytes": 157407
+    }
+  ],
+  "sourceFingerprint": "085a872ccb2a21a9a4661ba7fd305ecb71981bc142a4ffdf66290af0fa1e20db",
+  "evidence": {
+    "listPage": 157,
+    "listTitle": "吉林动画学院举办2016届毕业生供需见面会",
+    "listPublishDate": "2015-11-15",
+    "sourceOrder": 1561,
+    "detailPublishDate": "2015-11-15"
+  }
+}

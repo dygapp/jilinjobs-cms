@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f95f40f55b749b9066700a78c2b7e114fc378d4d61289263a6ba87cda73a362c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/J3PtW2ESt4VXSGzM4yft1Q",
+    "url": "https://mp.weixin.qq.com/s/J3PtW2ESt4VXSGzM4yft1Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【服务吉林高质量发展】吉林司法警官职业学院2025届毕业生专场招聘会成功举办",
+    "source": "",
+    "publishDate": "2025-05-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/J3PtW2ESt4VXSGzM4yft1Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "38a2d023fa014d8dc3f89c5cd7720d3459d853e3b50ef5172d14ecf7a67b9337",
+  "evidence": {
+    "listPage": 86,
+    "listTitle": "【服务吉林高质量发展】吉林司法警官职业学院2025届毕业生专场招聘会成功举办",
+    "listPublishDate": "2025-05-30",
+    "sourceOrder": 857
+  }
+}

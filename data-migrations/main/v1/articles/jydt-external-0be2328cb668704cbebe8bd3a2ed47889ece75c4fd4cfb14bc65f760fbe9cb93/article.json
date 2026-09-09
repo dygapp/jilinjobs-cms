@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0be2328cb668704cbebe8bd3a2ed47889ece75c4fd4cfb14bc65f760fbe9cb93",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/JcaLovE_H_g8ku6qashAtQ",
+    "url": "https://mp.weixin.qq.com/s/JcaLovE_H_g8ku6qashAtQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院与中粮家佳康（吉林）有限公司举行校企合作签约仪式",
+    "source": "",
+    "publishDate": "2026-05-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/JcaLovE_H_g8ku6qashAtQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "80d5f7ac307997bcaa9421a27e229a3bd8c592e919db9360ccbec7d8207f08c6",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "长春科技学院与中粮家佳康（吉林）有限公司举行校企合作签约仪式",
+    "listPublishDate": "2026-05-28",
+    "sourceOrder": 128
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:175828423966720",
+    "contentId": "175828423966720",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=175828423966720"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林农业科技学院与苏州东太湖度假区签署校地校企合作框架协议",
+    "source": "吉林农业科技学院",
+    "publishDate": "2023-03-31",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">2</span></span></span><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">月16日，吉林农业科技学院与苏州市东太湖度假区签署了校地、校企合作框架协议。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"390\" src=\"migration-resource://a73a4e415c6a676c0c0f75c430d026497baf6787f888202087a7b7caf696f6a7\" width=\"650\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">签约仪式上，吉林农业科技学院招生就业处处长张大德代表学校与东太湖度假区签订校地合作协议。学校生物与制药工程学院、电气与信息工程学院、机械与土木工程学院代表分别与苏州莱克施德药业有限公司、格来纳塑料科技（苏州）有限公司、苏州纵苇自动化有限公司代表为“一校一企”就业见习基地揭牌。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">张大德表示，近年来学校高度重视校政企合作，在开源拓岗行动中，坚持“充分走出去”的原则，全力探索，拓宽校企沟通渠道，搭建“零距离”合作平台，为企业输送优质、对口生源。学校将以此次合作为契机，进一步加强在学生就业和人才交流上的良好互动，强化校地资源优势的深度开发，推动实现全方位、多层次、宽领域的发展共赢。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">东太湖度假区相关领导指出，这次政校企签约合作是三方共谋发展的里程碑。当地打造的“一企一校”就业实习基地是“乐业东太湖”就业服务工作中的一项重要举措，旨在为学生提供职前培训、实习场所，让学生提前了解企业工作环境，提前熟悉工作流程，提前适应工作，最终成功就业，有利于企业挑选心仪人才，实现学校、学生、企业三方共赢。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"390\" src=\"migration-resource://f682007419ba0f0b95e9185627ab9960adaf31b68c5da31f7ec6f464995ff87d\" width=\"650\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">自2020年12月，吉林农业科技学院与东太湖度假区初次进行校地对接以来，双方建立了友好的合作关系。目前已有多位优秀毕业生到东太湖度假区就业，为此次合作活动奠定了良好的基础，期间双方多次沟通，达成了校地校企合作意向。</span></span></span></span></span></p>\n\n<p><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">吉林农业科技学院生物与制药工程学院党总支书记孟岩、电气与信息工程学院党总支副书记刘雪松、招生就业处副科长李立国及苏州吴江区人力资源和社会保障局、东太湖度假区组织人事和社会保障局相关负责人共同参加了本次签约仪式。</span></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-29/e8c1e7e5-9bb6-471f-aa0d-96b730e7a942.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-29/e8c1e7e5-9bb6-471f-aa0d-96b730e7a942.jpg",
+      "token": "migration-resource://a73a4e415c6a676c0c0f75c430d026497baf6787f888202087a7b7caf696f6a7",
+      "snapshotPath": "assets/a73a4e415c6a676c0c0f75c430d026497baf6787f888202087a7b7caf696f6a7.jpg",
+      "sha256": "a73a4e415c6a676c0c0f75c430d026497baf6787f888202087a7b7caf696f6a7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 57330
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-29/6a04abdd-3211-44ee-9ce8-03aa4660550d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-29/6a04abdd-3211-44ee-9ce8-03aa4660550d.jpg",
+      "token": "migration-resource://f682007419ba0f0b95e9185627ab9960adaf31b68c5da31f7ec6f464995ff87d",
+      "snapshotPath": "assets/f682007419ba0f0b95e9185627ab9960adaf31b68c5da31f7ec6f464995ff87d.jpg",
+      "sha256": "f682007419ba0f0b95e9185627ab9960adaf31b68c5da31f7ec6f464995ff87d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81565
+    }
+  ],
+  "sourceFingerprint": "9b6dfbad390d429e727c227422e8e3106e3be5cedddc08c1176069ad82b4ff2f",
+  "evidence": {
+    "listPage": 116,
+    "listTitle": "吉林农业科技学院与苏州东太湖度假区签署校地校企合作框架协议",
+    "listPublishDate": "2023-03-31",
+    "sourceOrder": 1154,
+    "detailPublishDate": "2023-03-31"
+  }
+}

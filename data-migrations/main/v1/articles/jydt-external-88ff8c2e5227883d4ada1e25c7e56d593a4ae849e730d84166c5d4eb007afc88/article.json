@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:88ff8c2e5227883d4ada1e25c7e56d593a4ae849e730d84166c5d4eb007afc88",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/lgxw/de4463a7ed4b4899a1d530ec47088dcc.htm",
+    "url": "https://www.cust.edu.cn/lgxw/de4463a7ed4b4899a1d530ec47088dcc.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "四平市在长春理工大学举行“创业奋斗 ‘就’在吉林”大学生就业创业宣讲推介会",
+    "source": "",
+    "publishDate": "2024-04-07",
+    "bodyHtml": "",
+    "externalUrl": "https://www.cust.edu.cn/lgxw/de4463a7ed4b4899a1d530ec47088dcc.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "3ef48b6be4f64a8ca7ada63bbc33f820b776b22fdc500928bb1b272e3646b418",
+  "evidence": {
+    "listPage": 109,
+    "listTitle": "四平市在长春理工大学举行“创业奋斗 ‘就’在吉林”大学生就业创业宣讲推介会",
+    "listPublishDate": "2024-04-07",
+    "sourceOrder": 1089
+  }
+}

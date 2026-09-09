@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119998",
+    "contentId": "28737783119998",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119998"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林财经大学举办吉林省2016届财经类毕业生供需洽谈会",
+    "source": "",
+    "publishDate": "2015-11-16",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林财经大学举办吉林省2016届财经类毕业生供需洽谈会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2015-11-16 15:51:40</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 11月15日上午，由吉林省教育厅主办、吉林财经大学承办的“吉林省2016届财经类毕业生供需洽谈会”在吉林财经大学大学生活动中心隆重举行。省教育厅副厅长岳强、省教育厅学生处处长蒋蔓萍、省高校毕业生就业指导中心主任郑志宏、书记孙维才、副主任张旭光，吉林财经大学党委书记周知民、党委副书记邹永亮等领导出席了大会。 </span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 本次供需洽谈会吸引了省内外180余家用人单位到场参会，作为一年一度的大型财经类招聘会，本次洽谈会的参会单位以吉林省内企事业单位为主，同时邀请到大连开发区人才中心和浙江省商务厅人才中心两家人才机构的招聘团以及上海捷普、上海迪士尼度假区、江苏仲泰业投资有限公司、百胜餐饮（沈阳）有限公司、大连简伯特等几十家外地企业参会，为毕业生提供约4000多个就业岗位。</span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp;&nbsp; 2016年，受到国际经济持续低迷和国内经济增速放缓的影响，就业形势依然严峻。在这种环境下，省教育厅积极组织省内高校集体拓展省外就业市场，鼓励和支持高校与发达地区开展符合当地经济需要的校企合作、联合办学等方式，受到当地政府用人单位的普遍赞同，并以此为契机加快高校教育教学改革，转变人才培养模式；尽快与社会经济需求相匹配将是今后高校发展的重要方向。</span></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"><br></span></p><p style=\"text-align: center;\"><img title=\"省教育厅副厅长岳强（左一）在学校党委书记周知民（右一）、党委副书记邹永亮（右二）和招生就业处处长王利国（左二）陪同下亲临招聘会现场视察指导工作.JPG\" src=\"migration-resource://c476bf78d34381b8cf032990224344bb3ce683e02e9e8be0eb86792199c3ae53\"></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 16px;\">省教育厅副厅长岳强（左一）在学校党委书记周知民（右一）、党委副书记邹永亮（右二）和招生就业处处长王利国（左二）陪同下亲临招聘会现场视察指导工作</span><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"></span></p><p></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544545846875008217060.JPG",
+      "originalReference": "/chistory/cms/imgs/6358544545846875008217060.JPG",
+      "token": "migration-resource://c476bf78d34381b8cf032990224344bb3ce683e02e9e8be0eb86792199c3ae53",
+      "snapshotPath": "assets/c476bf78d34381b8cf032990224344bb3ce683e02e9e8be0eb86792199c3ae53.jpg",
+      "sha256": "c476bf78d34381b8cf032990224344bb3ce683e02e9e8be0eb86792199c3ae53",
+      "contentType": "image/jpeg",
+      "sizeBytes": 201154
+    }
+  ],
+  "sourceFingerprint": "13d4f9084fc9a420c40ac0652f756e24bab8b08024f93b26b25d62e93ed78d05",
+  "evidence": {
+    "listPage": 156,
+    "listTitle": "吉林财经大学举办吉林省2016届财经类毕业生供需洽谈会",
+    "listPublishDate": "2015-11-16",
+    "sourceOrder": 1559,
+    "detailPublishDate": "2015-11-16"
+  }
+}

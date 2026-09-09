@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0cd99a363430f00327f44aba66f1b1b8fcc6452226a360b44235a61347b2c3c4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1007/10861.htm",
+    "url": "https://www.ccit.edu.cn/info/1007/10861.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院与中国能建科技公司开展校企合作暨定制班签约仪式",
+    "source": "",
+    "publishDate": "2026-06-30",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccit.edu.cn/info/1007/10861.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "7dcd76e9086d2683ba268871905cfd3171bb8e431b737bdb2c288302eb7fbcd2",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "长春工程学院与中国能建科技公司开展校企合作暨定制班签约仪式",
+    "listPublishDate": "2026-06-30",
+    "sourceOrder": 61
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268960945700864",
+    "contentId": "268960945700864",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268960945700864"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林科技职业技术学院千方百计实现毕业生高质量充分就业",
+    "source": "",
+    "publishDate": "2024-12-03",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://10c7ab867492c2d1d756674e2dcab90a7bb1805f4b86ab0771e112ab560875d7\" width=\"1587\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://fd681b21c19ca421ff2a24b2f74bd840bca473b3641cfca1239d5a2ec131906f\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/889c7742-f1fb-48c2-9a3c-3a939b59e913.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/889c7742-f1fb-48c2-9a3c-3a939b59e913.jpg",
+      "token": "migration-resource://10c7ab867492c2d1d756674e2dcab90a7bb1805f4b86ab0771e112ab560875d7",
+      "snapshotPath": "assets/10c7ab867492c2d1d756674e2dcab90a7bb1805f4b86ab0771e112ab560875d7.jpg",
+      "sha256": "10c7ab867492c2d1d756674e2dcab90a7bb1805f4b86ab0771e112ab560875d7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 456844
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/15e6153a-fd0a-4e3f-b423-5032d9860e9e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/15e6153a-fd0a-4e3f-b423-5032d9860e9e.jpg",
+      "token": "migration-resource://fd681b21c19ca421ff2a24b2f74bd840bca473b3641cfca1239d5a2ec131906f",
+      "snapshotPath": "assets/fd681b21c19ca421ff2a24b2f74bd840bca473b3641cfca1239d5a2ec131906f.jpg",
+      "sha256": "fd681b21c19ca421ff2a24b2f74bd840bca473b3641cfca1239d5a2ec131906f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 197531
+    }
+  ],
+  "sourceFingerprint": "61a03a026f3bcad47db6d59fcd81988f2ac11c86fd21803a5eef36c299d8fe4f",
+  "evidence": {
+    "listPage": 101,
+    "listTitle": "吉林科技职业技术学院千方百计实现毕业生高质量充分就业",
+    "listPublishDate": "2024-12-03",
+    "sourceOrder": 1005,
+    "detailPublishDate": "2024-12-03"
+  }
+}

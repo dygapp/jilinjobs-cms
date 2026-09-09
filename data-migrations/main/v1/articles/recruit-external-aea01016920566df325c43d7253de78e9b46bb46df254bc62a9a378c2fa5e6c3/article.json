@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:aea01016920566df325c43d7253de78e9b46bb46df254bc62a9a378c2fa5e6c3",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/FD0YEG-7ZFncDeI0KGKV9w",
+    "url": "https://mp.weixin.qq.com/s/FD0YEG-7ZFncDeI0KGKV9w"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“服务吉林高质量发展”吉林西部应用型人才供需洽谈会暨白城师范学院2026届毕业生秋季供需洽谈会邀请函",
+    "source": "",
+    "publishDate": "2025-10-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/FD0YEG-7ZFncDeI0KGKV9w"
+  },
+  "resources": [],
+  "sourceFingerprint": "7610dae1139ade75de7914041a52481588d33882e25abdb5118772b899b824c5",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "“服务吉林高质量发展”吉林西部应用型人才供需洽谈会暨白城师范学院2026届毕业生秋季供需洽谈会邀请函",
+    "listPublishDate": "2025-10-14",
+    "sourceOrder": 130
+  }
+}

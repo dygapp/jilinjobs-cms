@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:caeea3fdc6565844b7fcebe76c01550dde6a6145377f5b4091b9203407024db8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1003/17223.htm",
+    "url": "https://news.ccu.edu.cn/info/1003/17223.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学举办特殊教育学院2025届毕业生专场招聘会",
+    "source": "",
+    "publishDate": "2025-03-20",
+    "bodyHtml": "",
+    "externalUrl": "https://news.ccu.edu.cn/info/1003/17223.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "d7483e6c803387bdc46b3d22d5c336d14017b161a0f38e610672916212e35b36",
+  "evidence": {
+    "listPage": 98,
+    "listTitle": "长春大学举办特殊教育学院2025届毕业生专场招聘会",
+    "listPublishDate": "2025-03-20",
+    "sourceOrder": 976
+  }
+}

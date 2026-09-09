@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b09d9766a203707a86b3ab50d4780b07d2e20997e2bef19982009bb111504654",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/jyxw/122575.jhtml",
+    "url": "https://jlartcareer.hjiuye.com/jyxw/122575.jhtml"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林出入境边防检查总站走进吉林艺术学院开展招录宣讲活动",
+    "source": "",
+    "publishDate": "2025-10-14",
+    "bodyHtml": "",
+    "externalUrl": "https://jlartcareer.hjiuye.com/jyxw/122575.jhtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "2dcc84c4115c9cd575299f1ce72a116427301b2223495175a53a54cbf6d3c492",
+  "evidence": {
+    "listPage": 69,
+    "listTitle": "吉林出入境边防检查总站走进吉林艺术学院开展招录宣讲活动",
+    "listPublishDate": "2025-10-14",
+    "sourceOrder": 684
+  }
+}

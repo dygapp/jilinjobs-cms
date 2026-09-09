@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7fcf840222fdfde41f3452269a0d2fdb62c3743cb436a3db73c65c9a14dee00e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/HYHq2LtOmOcyz1ijRcUQtA",
+    "url": "https://mp.weixin.qq.com/s/HYHq2LtOmOcyz1ijRcUQtA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春汽车职业技术大学党委副书记赵娜一行赴恒兴集团开展“优企引才”定向访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/HYHq2LtOmOcyz1ijRcUQtA"
+  },
+  "resources": [],
+  "sourceFingerprint": "b52a88d41c820c537adbf2795577ef7e700db72f9efaf46715a793996889d74c",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "长春汽车职业技术大学党委副书记赵娜一行赴恒兴集团开展“优企引才”定向访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-23",
+    "sourceOrder": 379
+  }
+}

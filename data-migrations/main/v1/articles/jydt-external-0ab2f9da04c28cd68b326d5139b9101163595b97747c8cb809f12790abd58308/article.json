@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0ab2f9da04c28cd68b326d5139b9101163595b97747c8cb809f12790abd58308",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1115/76465.htm",
+    "url": "https://www.neepu.edu.cn/info/1115/76465.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“携企带岗进校园 基层就业启新程”主题系列活动在东北电力大学举行",
+    "source": "",
+    "publishDate": "2026-06-15",
+    "bodyHtml": "",
+    "externalUrl": "https://www.neepu.edu.cn/info/1115/76465.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "bc0ff1af96a5e388cfb9b6d875c2e8810c25edd47388f89dd687d6dd56db0f11",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "“携企带岗进校园 基层就业启新程”主题系列活动在东北电力大学举行",
+    "listPublishDate": "2026-06-15",
+    "sourceOrder": 80
+  }
+}

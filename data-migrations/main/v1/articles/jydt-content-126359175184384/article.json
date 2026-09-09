@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:126359175184384",
+    "contentId": "126359175184384",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=126359175184384"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春中医药大学创新创业学院获评吉林省首批“省级创新创业学院”",
+    "source": "长春中医药大学",
+    "publishDate": "2022-10-30",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">8</span></span><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">月6日，吉林省教育厅印发《关于公布首批省级创新创业学院、省级创新创业教育实践基地名单的通知》，长春中医药大学创新创业学院获评吉林省首批“省级创新创业学院”。</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">近年来，学校始终高度重视创新创业教育，认真贯彻落实国务院、教育部及吉林省关于深化创新创业教育改革的有关要求，主动适应健康服务业和吉林省地方经济社会发展，发挥中医药学科优势，采取多种措施，扎实推进创新创业工作开展。学校不断完善“双创支持保障体系、双创教学体系、实践教育体系、众创空间建设体系、师资队伍建设体系、双创文化建设体系”，构建了“分层递进、多元联动”一体化的创新创业教育体系，进一步提升大学生创新创业能力。</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">学校将以此次评审为契机，进一步加强创新创业教育，不断完善创新创业生态体系建设，促进人才培养质量全面提升。</span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"589\" src=\"migration-resource://1ae7c9b24050d2d0e5d2323557c7c56ee3bca2934f679f781654a35052d5fbca\" width=\"600\"></p>\n\n<p style=\"text-align:right\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><strong><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">（长春中医药大学 邵欣）</span></span></strong></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-29/80de2b20-9fb0-454b-b4c3-87a536f6deba.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-29/80de2b20-9fb0-454b-b4c3-87a536f6deba.jpg",
+      "token": "migration-resource://1ae7c9b24050d2d0e5d2323557c7c56ee3bca2934f679f781654a35052d5fbca",
+      "snapshotPath": "assets/1ae7c9b24050d2d0e5d2323557c7c56ee3bca2934f679f781654a35052d5fbca.jpg",
+      "sha256": "1ae7c9b24050d2d0e5d2323557c7c56ee3bca2934f679f781654a35052d5fbca",
+      "contentType": "image/jpeg",
+      "sizeBytes": 116505
+    }
+  ],
+  "sourceFingerprint": "e5c09bb10562c0d7953bd858a0fcfc9bca544d76ff81b5c8435924cc1683de01",
+  "evidence": {
+    "listPage": 118,
+    "listTitle": "长春中医药大学创新创业学院获评吉林省首批“省级创新创业学院”",
+    "listPublishDate": "2022-10-30",
+    "sourceOrder": 1173,
+    "detailPublishDate": "2022-10-30"
+  }
+}

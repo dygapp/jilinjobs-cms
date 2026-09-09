@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bb42dc87f6141297c692f3b29f8d3ce491c5650405459d1ee97124c57007844f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/V3rhFVprRlhvcSQyffCTTw",
+    "url": "https://mp.weixin.qq.com/s/V3rhFVprRlhvcSQyffCTTw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学法学院赴吉林华烁律师事务所开展“访企拓岗促就业”专题交流活动",
+    "source": "",
+    "publishDate": "2026-02-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/V3rhFVprRlhvcSQyffCTTw"
+  },
+  "resources": [],
+  "sourceFingerprint": "b502a68272f28cc2b9d7d77499076c01fbf8829f446ce8910bab04343b433e85",
+  "evidence": {
+    "listPage": 45,
+    "listTitle": "延边大学法学院赴吉林华烁律师事务所开展“访企拓岗促就业”专题交流活动",
+    "listPublishDate": "2026-02-14",
+    "sourceOrder": 441
+  }
+}

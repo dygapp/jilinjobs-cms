@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120282",
+    "contentId": "28737783120282",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120282"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "山东：截至到09年3月济南七成见习大学生成功就业",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">山东：截至到09年3月济南七成见习大学生成功就业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 去年以来，济南市全面推行高校毕业生就业见习制度，截至目前，已发展见习基地100多家，安排就业见习高校毕业生3000多人,70％以上成功就业。</font></p> <p><font size=\"2\">　　从2005年起，济南市开始试点部分未就业毕业生到部分企事业单位实习制度，去年起在全市范围内推广。济南市明确，每年组织一定数量的毕业生参加为期6个月的就业见习，见习期间，按当年度最低工资标准，给予每人每月基本生活补助，并购买人身意外伤害保险和住院医疗保险，所需经费由市级财政和见习单位按1∶1的比例分担。</font></p> <p><font size=\"2\">　　目前，济南市100多家高校毕业生就业见习基地涵盖机械、汽车、通讯、电子、电力、农林等多个行业。各见习单位都将见习毕业生视为本单位正式员工加强日常管理，并将技能培训作为重中之重，毕业生到岗后都进行岗前培训，指定经验丰富的师傅“一对一”“手把手”地向见习毕业生传授技能，并进行多岗位锻炼。</font></p> <p><font size=\"2\">　　为依法保护毕业生的合法权益，济南市对就业见习基地实施跟踪服务、动态管理，基地挂牌期限一般确定为3年，期满经考核合格的可继续保留；达不到要求的，或在见习过程中违反规定、毕业生投诉较多的予以摘牌。</font></p> <p><font size=\"2\">　　通过实行高校毕业生就业见习制度，提高了毕业生的技能水平和社会适应能力，便利了基层单位选人用人。有的见习毕生生在见习期间成为单位骨干，被留在见习单位；有的见习期满成功应聘，顺利找到工作；有的在见习单位学到了一技之长，走向自主创业。</font></p> <p><font size=\"2\">　　据了解，济南市计划三年内再建设300家见习基地，组织1万名高校毕业生参加见习，最大限度地促进高校毕业生顺利就业。（记者 王志）</font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "2887fd7cc17b3ceb9962e46579b47182cf089848684ba1142bfc7b5dc678882b",
+  "evidence": {
+    "listPage": 185,
+    "listTitle": "山东：截至到09年3月济南七成见习大学生成功就业",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1849,
+    "detailPublishDate": "2009-04-05"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5e9eacdc80511b71e63aeae44e467cc5c6cbab35ffab38c4e33dc11b20f54667",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/6ZmM5eUl0j4vsvfGLylETQ",
+    "url": "https://mp.weixin.qq.com/s/6ZmM5eUl0j4vsvfGLylETQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "松原职业技术学院积极开展访企拓岗行动，助力学生高质量就业",
+    "source": "",
+    "publishDate": "2025-03-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/6ZmM5eUl0j4vsvfGLylETQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "8a72b3443cdac46e0e7a192feeff2f93ad48bcffba860d8ad4c7609f027c1e26",
+  "evidence": {
+    "listPage": 98,
+    "listTitle": "松原职业技术学院积极开展访企拓岗行动，助力学生高质量就业",
+    "listPublishDate": "2025-03-21",
+    "sourceOrder": 973
+  }
+}

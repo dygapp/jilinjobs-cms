@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e86fc48910e39d64c7eafd7054a602ffdb7391292e87887cc6a37bed421c3d44",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/OTK1th2BJhu4YWALfT0XhA",
+    "url": "https://mp.weixin.qq.com/s/OTK1th2BJhu4YWALfT0XhA?scene=25&sessionid=-1367276368"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院赴集安市开展校地合作对接交流活动",
+    "source": "",
+    "publishDate": "2025-04-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/OTK1th2BJhu4YWALfT0XhA?scene=25&sessionid=-1367276368"
+  },
+  "resources": [],
+  "sourceFingerprint": "f2fdd82e9513c3618031c56ca180220dbbd787db738c4de7d154dd4a03897363",
+  "evidence": {
+    "listPage": 95,
+    "listTitle": "吉林工商学院赴集安市开展校地合作对接交流活动",
+    "listPublishDate": "2025-04-16",
+    "sourceOrder": 943
+  }
+}

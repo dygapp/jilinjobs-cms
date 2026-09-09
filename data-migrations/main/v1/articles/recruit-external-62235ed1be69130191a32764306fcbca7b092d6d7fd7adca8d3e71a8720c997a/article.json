@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:62235ed1be69130191a32764306fcbca7b092d6d7fd7adca8d3e71a8720c997a",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/ywdt/tzgg/202603/t20260313_3473388.html",
+    "url": "http://ccrs.changchun.gov.cn/ywdt/tzgg/202603/t20260313_3473388.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春市面向2026年普通高校毕业生开展“强医计划”招聘事业单位工作人员公告",
+    "source": "",
+    "publishDate": "2026-03-31",
+    "bodyHtml": "",
+    "externalUrl": "http://ccrs.changchun.gov.cn/ywdt/tzgg/202603/t20260313_3473388.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "4d728dc37b9fb7724d92434390147be7462fb3f0ebb4b90a0f9f23bd9239e352",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "长春市面向2026年普通高校毕业生开展“强医计划”招聘事业单位工作人员公告",
+    "listPublishDate": "2026-03-31",
+    "sourceOrder": 50
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c707cb4afd745294a55956175cc4b90b891c64a911031d7c13c1a8d06dc5b159",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/wcTLVcofcI6EdDq8D_g6Jg",
+    "url": "https://mp.weixin.qq.com/s/wcTLVcofcI6EdDq8D_g6Jg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力扩容提质 服务高质量发展｜北华大学举办吉林省2026年重点群体毕业生专场招聘会",
+    "source": "",
+    "publishDate": "2026-03-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wcTLVcofcI6EdDq8D_g6Jg"
+  },
+  "resources": [],
+  "sourceFingerprint": "c9b12ecd175db29e281b5b47ad164a7aaa783ef193433352112d96c65730d7c5",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "聚力扩容提质 服务高质量发展｜北华大学举办吉林省2026年重点群体毕业生专场招聘会",
+    "listPublishDate": "2026-03-26",
+    "sourceOrder": 364
+  }
+}

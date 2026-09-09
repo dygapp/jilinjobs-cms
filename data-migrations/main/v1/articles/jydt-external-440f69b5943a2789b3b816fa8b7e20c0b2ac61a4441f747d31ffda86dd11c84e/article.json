@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:440f69b5943a2789b3b816fa8b7e20c0b2ac61a4441f747d31ffda86dd11c84e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/DW45VVIAYQHg6Fs489ujfQ",
+    "url": "https://mp.weixin.qq.com/s/DW45VVIAYQHg6Fs489ujfQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业科技学院副校长赵悦带队赴北京开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-04-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DW45VVIAYQHg6Fs489ujfQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "338097f4d5d6a491ef7eb172e6bae7d32083f834affbb6a23af606ab96289aae",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "吉林农业科技学院副校长赵悦带队赴北京开展访企拓岗专项行动",
+    "listPublishDate": "2026-04-29",
+    "sourceOrder": 231
+  }
+}

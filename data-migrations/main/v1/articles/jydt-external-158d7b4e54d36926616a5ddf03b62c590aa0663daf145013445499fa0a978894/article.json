@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:158d7b4e54d36926616a5ddf03b62c590aa0663daf145013445499fa0a978894",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/h4mYMspI5jLkXbprj2Eqbg",
+    "url": "https://mp.weixin.qq.com/s/h4mYMspI5jLkXbprj2Eqbg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "云端启航 职引未来——松原查干湖机场与吉林通航职院共绘产教融合新蓝图",
+    "source": "",
+    "publishDate": "2025-06-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/h4mYMspI5jLkXbprj2Eqbg"
+  },
+  "resources": [],
+  "sourceFingerprint": "3595da015e9fbfae6534412f906bbc31eda77daa96bb1f1d6e8108751089895a",
+  "evidence": {
+    "listPage": 85,
+    "listTitle": "云端启航 职引未来——松原查干湖机场与吉林通航职院共绘产教融合新蓝图",
+    "listPublishDate": "2025-06-09",
+    "sourceOrder": 848
+  }
+}

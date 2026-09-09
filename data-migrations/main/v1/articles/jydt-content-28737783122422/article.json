@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122422",
+    "contentId": "28737783122422",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122422"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "多普达、联想稳中有升，CECT和中天跌幅较大",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">多普达、联想稳中有升，CECT和中天跌幅较大</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 自第一季度开始，多普达即入围手机关注度排行的五甲之列，前三季度关注表现平稳，第四季度关注度比例有所提升，由前三季度的3.5%左右升至4%。季度关注度占比同样增加的还有联想，虽然在第一季度痛失国产手机领头羊位置，但联想不断向电视、智能及3G手机发力，让其关注度占比稳中有升，到第四季度紧逼天语。</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 苹果手机的关注度一直居第六的位置，第二季度末3G版IPHONE推出前的大量宣传，明显提升了其网民关注度占比，但在排位上一直处于多普达之下。</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; CECT和中天的关注度占比较低，从季度变化上看，两者都在走下坡路。“山寨机”的兴起，对以价格为卖点的国产手机品牌的生存无疑是雪上加霜。</font></p> <p class=\"f12\" align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://data.baidu.com/mobile3/img/chart23.gif\"><br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "753e4c841a8c08dc9d9934f7182ea146b91f27bc87e44cc6a7e7580467a44d91",
+  "evidence": {
+    "listPage": 183,
+    "listTitle": "多普达、联想稳中有升，CECT和中天跌幅较大",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1822,
+    "detailPublishDate": "2009-04-05"
+  }
+}

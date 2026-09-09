@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e157d1a39798662cfe81fde1d4e54d24cb3323b7d07fe54ef8608fc72c598af8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/D41eMekjOXgehIHgnTQiOQ",
+    "url": "https://mp.weixin.qq.com/s/D41eMekjOXgehIHgnTQiOQ?scene=25&sessionid=1469307376"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "就业赋能东北振兴结硕果 校企融合释放人才强动能“千校万企供需对接会”暨东北地区2025届高校毕业生人才双选会圆满落幕",
+    "source": "",
+    "publishDate": "2025-05-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/D41eMekjOXgehIHgnTQiOQ?scene=25&sessionid=1469307376"
+  },
+  "resources": [],
+  "sourceFingerprint": "fcf6b5c6cdec4c47771ef40cec47498f5f2a9843c0dd8036b160fffc8e89a00c",
+  "evidence": {
+    "listPage": 87,
+    "listTitle": "就业赋能东北振兴结硕果 校企融合释放人才强动能“千校万企供需对接会”暨东北地区2025届高校毕业生人才双选会圆满落幕",
+    "listPublishDate": "2025-05-26",
+    "sourceOrder": 867
+  }
+}

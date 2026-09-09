@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a61313b7432d8a370e13bb80ace81ca01a57038874837aec8ea7e2f267d5cff4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/eheJ5_kQBpXIsG7Emr60Fw",
+    "url": "https://mp.weixin.qq.com/s/eheJ5_kQBpXIsG7Emr60Fw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学举办“吉聚英才·暖心护航” 吉林省2026届高校重点群体毕业生专场招聘会暨“宏志助航”专场招聘会",
+    "source": "",
+    "publishDate": "2025-11-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/eheJ5_kQBpXIsG7Emr60Fw"
+  },
+  "resources": [],
+  "sourceFingerprint": "23d8181248429d0af726d60856bf5c1dde14da6b365ee7e6233f41721d43b663",
+  "evidence": {
+    "listPage": 57,
+    "listTitle": "吉林财经大学举办“吉聚英才·暖心护航” 吉林省2026届高校重点群体毕业生专场招聘会暨“宏志助航”专场招聘会",
+    "listPublishDate": "2025-11-27",
+    "sourceOrder": 569
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122898",
+    "contentId": "28737783122898",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122898"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2013届全省普通高校毕业生春季招聘活动的通知",
+    "source": "",
+    "publishDate": "2013-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办2013届全省普通高校毕业生春季招聘活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2013-4-4 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://7966585230e6cf9afef7cd774895e8663456b0c84aa7885c50fe87d10f8f6eaa\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://a4f19102cc5b6859a148e077ca1e985f0cf878da9b173ee4e7c02bb27bd8a0b3\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://a41a046ba96841324627702d6b929d93735e6789c8980e266d0ef6d4cde771f3\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2013040401584353.jpg",
+      "originalReference": "/chistory/cms/imgs/2013040401584353.jpg",
+      "token": "migration-resource://7966585230e6cf9afef7cd774895e8663456b0c84aa7885c50fe87d10f8f6eaa",
+      "snapshotPath": "assets/7966585230e6cf9afef7cd774895e8663456b0c84aa7885c50fe87d10f8f6eaa.jpg",
+      "sha256": "7966585230e6cf9afef7cd774895e8663456b0c84aa7885c50fe87d10f8f6eaa",
+      "contentType": "image/jpeg",
+      "sizeBytes": 65402
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130404015849160.jpg",
+      "originalReference": "/chistory/cms/imgs/20130404015849160.jpg",
+      "token": "migration-resource://a4f19102cc5b6859a148e077ca1e985f0cf878da9b173ee4e7c02bb27bd8a0b3",
+      "snapshotPath": "assets/a4f19102cc5b6859a148e077ca1e985f0cf878da9b173ee4e7c02bb27bd8a0b3.jpg",
+      "sha256": "a4f19102cc5b6859a148e077ca1e985f0cf878da9b173ee4e7c02bb27bd8a0b3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 62686
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2013040401585531.jpg",
+      "originalReference": "/chistory/cms/imgs/2013040401585531.jpg",
+      "token": "migration-resource://a41a046ba96841324627702d6b929d93735e6789c8980e266d0ef6d4cde771f3",
+      "snapshotPath": "assets/a41a046ba96841324627702d6b929d93735e6789c8980e266d0ef6d4cde771f3.jpg",
+      "sha256": "a41a046ba96841324627702d6b929d93735e6789c8980e266d0ef6d4cde771f3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 70448
+    }
+  ],
+  "sourceFingerprint": "261bde065fef09ee681ab98658fe51ae6f20cc9e8e76f87990461e1470d49b6e",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "关于举办2013届全省普通高校毕业生春季招聘活动的通知",
+    "listPublishDate": "2013-04-04",
+    "sourceOrder": 357,
+    "detailPublishDate": "2013-04-04"
+  }
+}

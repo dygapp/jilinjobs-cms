@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c9c0722968990d73045691ae5faae7962ab47f2c3df603a801fe81febbca3d65",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/N-Lz1iDUaWLIHr95raewPg",
+    "url": "https://mp.weixin.qq.com/s/N-Lz1iDUaWLIHr95raewPg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学“寒假促就业暖心行动”：就业服务“不降温”“不断线”，暖心护航毕业生求职路",
+    "source": "",
+    "publishDate": "2026-03-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/N-Lz1iDUaWLIHr95raewPg"
+  },
+  "resources": [],
+  "sourceFingerprint": "a3432b584a572baacf7b9ed85c653f0bb7c254f287fc9b3f03df3f62239d7046",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "延边大学“寒假促就业暖心行动”：就业服务“不降温”“不断线”，暖心护航毕业生求职路",
+    "listPublishDate": "2026-03-06",
+    "sourceOrder": 433
+  }
+}

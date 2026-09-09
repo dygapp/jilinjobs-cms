@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9eb39e8e35501e427af1c5005036529b4ed8c2a17385b95457974b437f64d8c9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1101/14970.htm",
+    "url": "https://www.ccit.edu.cn/info/1101/14970.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院领导带队赴国有大型企业开展校企合作调研",
+    "source": "",
+    "publishDate": "2025-12-05",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccit.edu.cn/info/1101/14970.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "a0aab7320098e7fc3a32ae95eb48e47f64b67335e6a01ea129786fa4b3c1726d",
+  "evidence": {
+    "listPage": 56,
+    "listTitle": "长春工程学院领导带队赴国有大型企业开展校企合作调研",
+    "listPublishDate": "2025-12-05",
+    "sourceOrder": 558
+  }
+}

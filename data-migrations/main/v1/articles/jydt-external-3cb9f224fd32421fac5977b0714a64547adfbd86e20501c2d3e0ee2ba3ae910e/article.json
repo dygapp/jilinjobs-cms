@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3cb9f224fd32421fac5977b0714a64547adfbd86e20501c2d3e0ee2ba3ae910e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/i9MC-xtWq02ugUcjchEy8g",
+    "url": "https://mp.weixin.qq.com/s/i9MC-xtWq02ugUcjchEy8g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业丨长春财经学院教育学院走访吉林省宇宸融智数据信息有限公司",
+    "source": "",
+    "publishDate": "2026-02-05",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/i9MC-xtWq02ugUcjchEy8g"
+  },
+  "resources": [],
+  "sourceFingerprint": "ab7fc12a6dddb5b88eb329b733e7c593fdedbb7620f71eb733c466ceb05c2579",
+  "evidence": {
+    "listPage": 46,
+    "listTitle": "访企拓岗促就业丨长春财经学院教育学院走访吉林省宇宸融智数据信息有限公司",
+    "listPublishDate": "2026-02-05",
+    "sourceOrder": 459
+  }
+}

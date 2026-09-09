@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9690f90597d38babd8dfbe9f9e78d7d0d5dfcda5d4e695d3acd865d7b99e0f34",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ZaN5_5SZqfkPFUtua0yDoQ",
+    "url": "https://mp.weixin.qq.com/s/ZaN5_5SZqfkPFUtua0yDoQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "白城师范学院成功举办白城市企业家、行业精英、劳模工匠进校园促就业宣讲活动",
+    "source": "",
+    "publishDate": "2025-06-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ZaN5_5SZqfkPFUtua0yDoQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "e9b6f2a3d1bd708249b8a2e037d245f9795aaad757b49daa8fe174c75b9e73f0",
+  "evidence": {
+    "listPage": 79,
+    "listTitle": "白城师范学院成功举办白城市企业家、行业精英、劳模工匠进校园促就业宣讲活动",
+    "listPublishDate": "2025-06-23",
+    "sourceOrder": 781
+  }
+}

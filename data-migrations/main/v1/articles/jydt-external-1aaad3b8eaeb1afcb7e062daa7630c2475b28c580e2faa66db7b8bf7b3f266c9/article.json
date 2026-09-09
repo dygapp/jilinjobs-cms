@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1aaad3b8eaeb1afcb7e062daa7630c2475b28c580e2faa66db7b8bf7b3f266c9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/pKybiECKVllWCeaJj3PzhA",
+    "url": "https://mp.weixin.qq.com/s/pKybiECKVllWCeaJj3PzhA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗 | 吉林工程职业学院领导赴四平市晟平文旅康养集团有限公司调研",
+    "source": "",
+    "publishDate": "2026-04-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/pKybiECKVllWCeaJj3PzhA"
+  },
+  "resources": [],
+  "sourceFingerprint": "0383cc505ac7e3d4ea698595c375a80c582cb76239358211b5ac078f598ac481",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "访企拓岗 | 吉林工程职业学院领导赴四平市晟平文旅康养集团有限公司调研",
+    "listPublishDate": "2026-04-20",
+    "sourceOrder": 271
+  }
+}

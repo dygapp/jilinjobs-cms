@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119990",
+    "contentId": "28737783119990",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119990"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省第二期高校创业教师高端培训班在中国人民大学举行",
+    "source": "",
+    "publishDate": "2016-02-23",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省第二期高校创业教师高端培训班在中国人民大学举行</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2016-2-23 11:14:25</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><br></p><p style=\"text-indent: 42px;line-height: 32px\"><span style=\"font-size:21px;font-family:仿宋\">2016</span><span style=\"font-size:21px;font-family:仿宋\">年1月11日-16日，由吉林省教育厅主办，吉林大学承办的吉林省第二期高校创业教师高端培训班在中国人民大学举行。省高校毕业生就业指导中心主任郑志宏、吉林大学就业创业服务中心主任钟新出席培训班开班和结业仪式。全省35所高校共50名就业创业指导教师参加培训。中国教育报记者进行了现场采访并做了特别报道。</span></p><p><span style=\"font-size:21px;font-family:仿宋\">&nbsp; &nbsp; 此次培训与北京万学教育集团合作，万学集团董事长张锐、高级副总裁张强亲自担任培训教师。培训围绕“高校创业环境与体系构建、大学生创业知识、大学生创业核心能力训练、大学生创业团队的组建、商业系统与企业职能认知、创业项目商业计划的制定、大学生创业融资、高校融资辅助体系、大学生创业项目实施”等9个主题开展学习和交流。 培训期间，学员们还考察了北京中关村大街的创业企业，使学员们深刻感受创业的环境和氛围。大家一致认为，此次培训接地气，可操作性强，收获很大，</span><span style=\"font-size:21px;font-family:仿宋;color:#333333\">提高了创业指导教师的教学实践能力和创业指导水平，推动了我省高校创新创业教育工作的深入开展。</span></p><p style=\"text-align: center;\"><span style=\"font-size:21px;font-family:仿宋;color:#333333\"></span></p><p style=\"text-align: center\"><img src=\"migration-resource://de2e6252751fc0d1441bd738ea31d214b264cd3aa9310bdaa8d8fb0c2d89f259\" style=\"\" title=\"1.JPG\"></p><p><br></p><p style=\"text-align: center\"><img src=\"migration-resource://4db4681297acb12263305f9a6dd79ca89d331d53a44f5947daf1f9ac9ec73574\" style=\"\" title=\"2.JPG\"></p><p style=\"text-align: center;\"><span style=\"font-size:21px;font-family:仿宋;color:#333333\"><br></span><br></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359182292643750009438247.JPG",
+      "originalReference": "/chistory/cms/imgs/6359182292643750009438247.JPG",
+      "token": "migration-resource://de2e6252751fc0d1441bd738ea31d214b264cd3aa9310bdaa8d8fb0c2d89f259",
+      "snapshotPath": "assets/de2e6252751fc0d1441bd738ea31d214b264cd3aa9310bdaa8d8fb0c2d89f259.jpg",
+      "sha256": "de2e6252751fc0d1441bd738ea31d214b264cd3aa9310bdaa8d8fb0c2d89f259",
+      "contentType": "image/jpeg",
+      "sizeBytes": 225685
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359182292662500002381879.JPG",
+      "originalReference": "/chistory/cms/imgs/6359182292662500002381879.JPG",
+      "token": "migration-resource://4db4681297acb12263305f9a6dd79ca89d331d53a44f5947daf1f9ac9ec73574",
+      "snapshotPath": "assets/4db4681297acb12263305f9a6dd79ca89d331d53a44f5947daf1f9ac9ec73574.jpg",
+      "sha256": "4db4681297acb12263305f9a6dd79ca89d331d53a44f5947daf1f9ac9ec73574",
+      "contentType": "image/jpeg",
+      "sizeBytes": 198937
+    }
+  ],
+  "sourceFingerprint": "f0a9ed4d122ff3d802645c24d0629d8b428cca4d24c6eb5c43b9c5f4aab238ff",
+  "evidence": {
+    "listPage": 155,
+    "listTitle": "吉林省第二期高校创业教师高端培训班在中国人民大学举行",
+    "listPublishDate": "2016-02-23",
+    "sourceOrder": 1548,
+    "detailPublishDate": "2016-02-23"
+  }
+}

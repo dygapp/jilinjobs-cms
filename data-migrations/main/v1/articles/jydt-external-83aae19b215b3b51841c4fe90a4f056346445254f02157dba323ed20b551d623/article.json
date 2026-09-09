@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:83aae19b215b3b51841c4fe90a4f056346445254f02157dba323ed20b551d623",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/UwZzvynqwjpPz7jddCIGvg",
+    "url": "https://mp.weixin.qq.com/s/UwZzvynqwjpPz7jddCIGvg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学举办“赓续劳模精神·强国复兴有我 ——大国工匠进校园”主题报告会",
+    "source": "",
+    "publishDate": "2025-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/UwZzvynqwjpPz7jddCIGvg"
+  },
+  "resources": [],
+  "sourceFingerprint": "45a4b69c23590f85abf6d87d57f88c073d246258b9de9624e485127f2a0743c7",
+  "evidence": {
+    "listPage": 90,
+    "listTitle": "延边大学举办“赓续劳模精神·强国复兴有我 ——大国工匠进校园”主题报告会",
+    "listPublishDate": "2025-05-15",
+    "sourceOrder": 895
+  }
+}

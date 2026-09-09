@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122746",
+    "contentId": "28737783122746",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122746"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2017年吉林省“吉创杯”高校就业指导课程教学大赛的通知",
+    "source": "",
+    "publishDate": "2017-08-11",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于举办2017年吉林省“吉创杯”高校就业指导课程教学大赛的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2017-8-11 8:12:40</span></p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://0fff388176c1f9694d6225111c3c4a60015284624bfae2a11fcdb0d344573e26\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://666f0b4a4f5f2c7450f1d56fb6f6b3f3017a5b3bbe348df0335e94ad149ca5f1\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://63499cd2f841e92103f6d348a62ecaddf5d7baec478023051100fadc4c721e68\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://faea1948807ff6ba134f9ab3bf839a58cd97c93d5cb6b44a3a2dd37ba13e5eee\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://e609839784d15759638a06211804c90ebe5084133721932bc175b3ef463f747c\"></p>\n\n<p>&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=4ff62227-4479-4bf2-b9fd-d49f811a92f9\">附件：参赛选手报名表.docx</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363803598429337508486371.jpg",
+      "originalReference": "/chistory/cms/imgs/6363803598429337508486371.jpg",
+      "token": "migration-resource://0fff388176c1f9694d6225111c3c4a60015284624bfae2a11fcdb0d344573e26",
+      "snapshotPath": "assets/0fff388176c1f9694d6225111c3c4a60015284624bfae2a11fcdb0d344573e26.jpg",
+      "sha256": "0fff388176c1f9694d6225111c3c4a60015284624bfae2a11fcdb0d344573e26",
+      "contentType": "image/jpeg",
+      "sizeBytes": 126016
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363803598487150008142856.png",
+      "originalReference": "/chistory/cms/imgs/6363803598487150008142856.png",
+      "token": "migration-resource://666f0b4a4f5f2c7450f1d56fb6f6b3f3017a5b3bbe348df0335e94ad149ca5f1",
+      "snapshotPath": "assets/666f0b4a4f5f2c7450f1d56fb6f6b3f3017a5b3bbe348df0335e94ad149ca5f1.jpg",
+      "sha256": "666f0b4a4f5f2c7450f1d56fb6f6b3f3017a5b3bbe348df0335e94ad149ca5f1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 42005
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363803598496525009114672.png",
+      "originalReference": "/chistory/cms/imgs/6363803598496525009114672.png",
+      "token": "migration-resource://63499cd2f841e92103f6d348a62ecaddf5d7baec478023051100fadc4c721e68",
+      "snapshotPath": "assets/63499cd2f841e92103f6d348a62ecaddf5d7baec478023051100fadc4c721e68.jpg",
+      "sha256": "63499cd2f841e92103f6d348a62ecaddf5d7baec478023051100fadc4c721e68",
+      "contentType": "image/jpeg",
+      "sizeBytes": 65006
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363803598504337506857242.png",
+      "originalReference": "/chistory/cms/imgs/6363803598504337506857242.png",
+      "token": "migration-resource://faea1948807ff6ba134f9ab3bf839a58cd97c93d5cb6b44a3a2dd37ba13e5eee",
+      "snapshotPath": "assets/faea1948807ff6ba134f9ab3bf839a58cd97c93d5cb6b44a3a2dd37ba13e5eee.jpg",
+      "sha256": "faea1948807ff6ba134f9ab3bf839a58cd97c93d5cb6b44a3a2dd37ba13e5eee",
+      "contentType": "image/jpeg",
+      "sizeBytes": 57917
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363803598510587501370567.jpg",
+      "originalReference": "/chistory/cms/imgs/6363803598510587501370567.jpg",
+      "token": "migration-resource://e609839784d15759638a06211804c90ebe5084133721932bc175b3ef463f747c",
+      "snapshotPath": "assets/e609839784d15759638a06211804c90ebe5084133721932bc175b3ef463f747c.jpg",
+      "sha256": "e609839784d15759638a06211804c90ebe5084133721932bc175b3ef463f747c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81992
+    }
+  ],
+  "sourceFingerprint": "ce4dc5e8108790152dfadc7792a8d0fd6e025355a8f1962909cac67c251dd1d9",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "关于举办2017年吉林省“吉创杯”高校就业指导课程教学大赛的通知",
+    "listPublishDate": "2017-08-11",
+    "sourceOrder": 212,
+    "detailPublishDate": "2017-08-11"
+  }
+}

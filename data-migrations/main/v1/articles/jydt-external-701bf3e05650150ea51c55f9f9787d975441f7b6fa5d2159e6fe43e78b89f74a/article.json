@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:701bf3e05650150ea51c55f9f9787d975441f7b6fa5d2159e6fe43e78b89f74a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1042/94403.htm",
+    "url": "https://www.jlbtc.edu.cn/info/1042/94403.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院副校长赵佳带队赴吉林省超星信息技术有限公司开展“优企引才”访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-18",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlbtc.edu.cn/info/1042/94403.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "41daf80c83bbe6524832ac9044922353cfb006541fa8772b2ea9040e5424a6eb",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "吉林工商学院副校长赵佳带队赴吉林省超星信息技术有限公司开展“优企引才”访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-18",
+    "sourceOrder": 401
+  }
+}

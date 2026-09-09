@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c70fc07246a29367ca32f6419f73ed15dcb298cd600da3eec59fce74ef5fafb1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/LvXKjtWDma49a_gr4EeyLg",
+    "url": "https://mp.weixin.qq.com/s/LvXKjtWDma49a_gr4EeyLg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教融合 共育数智英才 │ 长春健康职业学院与多家企业共建校企办事处携手开设订单班",
+    "source": "",
+    "publishDate": "2026-04-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/LvXKjtWDma49a_gr4EeyLg"
+  },
+  "resources": [],
+  "sourceFingerprint": "462fb61927c3e70c672190231ba8ebf29fc979b28844605bd86a60df5675507a",
+  "evidence": {
+    "listPage": 32,
+    "listTitle": "深化产教融合 共育数智英才 │ 长春健康职业学院与多家企业共建校企办事处携手开设订单班",
+    "listPublishDate": "2026-04-03",
+    "sourceOrder": 317
+  }
+}

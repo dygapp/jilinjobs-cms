@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c700f453e5806f5d10fe534475e205b5e2b2b582cceeb994c802ebf58884e2a4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/txwxwHVZSsEKHSDH3VM9vQ",
+    "url": "https://mp.weixin.qq.com/s/txwxwHVZSsEKHSDH3VM9vQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业丨长春财经学院走访吉之禾农业科技（长春）有限公司",
+    "source": "",
+    "publishDate": "2026-02-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/txwxwHVZSsEKHSDH3VM9vQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "7e9cc0cf6bcde94e4e1bcba2e4ab03b716f93b9530b503adf7ebcfbf0fdb0fd6",
+  "evidence": {
+    "listPage": 47,
+    "listTitle": "访企拓岗促就业丨长春财经学院走访吉之禾农业科技（长春）有限公司",
+    "listPublishDate": "2026-02-04",
+    "sourceOrder": 462
+  }
+}

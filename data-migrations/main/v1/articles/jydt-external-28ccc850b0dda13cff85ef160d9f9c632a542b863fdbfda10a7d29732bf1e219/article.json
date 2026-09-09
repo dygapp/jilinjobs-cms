@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:28ccc850b0dda13cff85ef160d9f9c632a542b863fdbfda10a7d29732bf1e219",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/app/news/shareNewsDetail",
+    "url": "https://www.cailianxinwen.com/app/news/shareNewsDetail?newsid=460399"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "提供岗位超万个！吉林省涉农高校毕业生就业洽谈会举行",
+    "source": "",
+    "publishDate": "2024-10-19",
+    "bodyHtml": "",
+    "externalUrl": "https://www.cailianxinwen.com/app/news/shareNewsDetail?newsid=460399"
+  },
+  "resources": [],
+  "sourceFingerprint": "98f6dddf645963bcc98d5311116addd424235b92cff2964607c56a44b40a3b09",
+  "evidence": {
+    "listPage": 103,
+    "listTitle": "提供岗位超万个！吉林省涉农高校毕业生就业洽谈会举行",
+    "listPublishDate": "2024-10-19",
+    "sourceOrder": 1028
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120232",
+    "contentId": "28737783120232",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120232"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "外地企业专挖高级人才 仅两成岗位面向应届生",
+    "source": "",
+    "publishDate": "2009-04-12",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">外地企业专挖高级人才 仅两成岗位面向应届生</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-12 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 本报讯（记者 朱华）昨日，由长沙人事局、台州人事局共同举办的“信心湖南，创业湖南”（长沙）大型人才交流会暨“聚才台州，创业台州”（长沙）大型人才交流会在贺龙体育场举行。据悉，该活动是今年以来，外地来长规模最大的招聘团体。<br>　　<br>　　昨日的人才交流会上共吸引了浙江台州的吉利汽车、钱江摩托等200余家单位，提供8000个岗位。记者在现场看到，台州企业大部分以中小民营企业为主，提供的岗位以机械制造居多，其中八成岗位提出了经验要求，主要面向“学历高、有经验”的技术型中高级人才。另一方面，记者也发现了应届毕业生求职心切和企业需求少的冲突。“我还年轻，很愿意去外地拼搏。”来自中南大学的柳同学表达了大多数应届毕业生的心声，但尴尬的是，台州企业提供了仅不到两成的应届毕业生岗位。<br>　　<br>　　长沙人才市场负责人介绍，计划于今年举行4场大型的外地团体招聘会，下一场就是4月25日来长的沈阳招聘团体。<br>　　<br>　　又讯（记者朱华通讯员钟永胜朱文敏）昨日下午，赴厦门参加“第四届台湾地区专业人才暨大学毕业生大陆就业洽谈会”的长沙团返回，据市人才服务中心主任谭明江介绍，已经有27名台湾的中高级人才与长沙的单位企业达成初步意向，市人事局还与台湾泛亚人力资源集团达成了人才合作协议。<br></font></p> <p><font size=\"2\"><br>&nbsp;</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "aa56642fe6ae212d4beb399d8f4d386c95226304aa288b7f4865ae1f52d83fee",
+  "evidence": {
+    "listPage": 180,
+    "listTitle": "外地企业专挖高级人才 仅两成岗位面向应届生",
+    "listPublishDate": "2009-04-12",
+    "sourceOrder": 1798,
+    "detailPublishDate": "2009-04-12"
+  }
+}

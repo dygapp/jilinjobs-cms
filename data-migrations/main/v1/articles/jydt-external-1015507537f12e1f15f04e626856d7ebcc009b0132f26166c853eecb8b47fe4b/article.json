@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1015507537f12e1f15f04e626856d7ebcc009b0132f26166c853eecb8b47fe4b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/vR6Go-1B-R1-ruuKqmJbTA",
+    "url": "https://mp.weixin.qq.com/s/vR6Go-1B-R1-ruuKqmJbTA?scene=25&sessionid=1464991222"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学党委书记王玉柱一行赴长春开展“访企拓岗促就业”活动并看望校友",
+    "source": "",
+    "publishDate": "2025-05-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vR6Go-1B-R1-ruuKqmJbTA?scene=25&sessionid=1464991222"
+  },
+  "resources": [],
+  "sourceFingerprint": "c996fe4c02a8391df7c5f4643bb6ced157baddc6ddc0f92d94d90b2028064648",
+  "evidence": {
+    "listPage": 91,
+    "listTitle": "北华大学党委书记王玉柱一行赴长春开展“访企拓岗促就业”活动并看望校友",
+    "listPublishDate": "2025-05-12",
+    "sourceOrder": 907
+  }
+}

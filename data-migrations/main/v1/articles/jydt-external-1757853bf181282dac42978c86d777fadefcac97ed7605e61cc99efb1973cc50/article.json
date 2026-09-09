@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1757853bf181282dac42978c86d777fadefcac97ed7605e61cc99efb1973cc50",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kqU-FefCBv_Wt2zTMotk8Q",
+    "url": "https://mp.weixin.qq.com/s/kqU-FefCBv_Wt2zTMotk8Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院与白山市中医院签约共建实践教学基地",
+    "source": "",
+    "publishDate": "2026-06-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kqU-FefCBv_Wt2zTMotk8Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "09a424c80c77f30ae28d281bc273bc39dd88f9789d82eebfbe129f2d37c13016",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "长春科技学院与白山市中医院签约共建实践教学基地",
+    "listPublishDate": "2026-06-17",
+    "sourceOrder": 77
+  }
+}

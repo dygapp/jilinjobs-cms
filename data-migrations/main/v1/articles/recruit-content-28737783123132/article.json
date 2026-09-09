@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123132",
+    "contentId": "28737783123132",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123132"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "中央某部委驻新疆机构招考公告",
+    "source": "",
+    "publishDate": "2020-04-09",
+    "bodyHtml": "\n                        <p>&nbsp;</p><p>一、用人单位：中央某部委驻新疆机构&nbsp;<br>二、单位性质：政法机关。&nbsp;<br>三、招聘岗位：公务员，人民警察岗位。&nbsp;<br>四．工作地点：新疆。&nbsp;</p><p>&nbsp;<br>五、我们的优势<br>1、公务员编制，薪资待遇高于其他公务员，6000起。&nbsp;<br>2、带薪年休假．每年免费体检等。<br>3、食堂，运动场，班车接送等，一应俱全。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>六．招考条件：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>1、大学本科学历，专业不限，28周岁以下（研究生可放宽至35岁）。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>2、2020年应届毕业生。俄语，英语，土耳其语，阿拉伯语，乌尔都语，波斯语专业和“汉考民（回考民）”为2017年以后毕业生。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>七．招考程序：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>1、提供个人简历，应包括：姓名，性别，身份证号，联系方式，报考意向（自冶区机关、全疆各地州市），可以同时选择多个报考意向，可以选择服从调剂。<br>2、参加新疆公务员统一考试，符合招考体检、考察要求。&nbsp;<br><br>八、报名方式<br>咨询电话：13669997969（微信同号），<br>联系人：王警官。&nbsp;<br>简历投递邮箱：police415_12339@qq.com<br><br>九、说明事项&nbsp;&nbsp;<br>一、针对不同的岗位，专业条件有所不同。我们后期将与考生联系。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>二、南疆四地州招录专业更广，薪资待遇更具吸引力！&nbsp;&nbsp;<br></p>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "03fef006d2bb122622bdceff50af8b2d94f2d3f7e564eda201a651a0129f7d53",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "中央某部委驻新疆机构招考公告",
+    "listPublishDate": "2020-04-09",
+    "sourceOrder": 404,
+    "detailPublishDate": "2020-04-09"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f4518b3ba808a76d54aaca8611d214411ead90f9b4366c67a4987643b8a4ffe6",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/QFS5rTlcHdrZkS0V2RbK6Q",
+    "url": "https://mp.weixin.qq.com/s/QFS5rTlcHdrZkS0V2RbK6Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学举办首届校企合作暨人才供需论坛",
+    "source": "",
+    "publishDate": "2025-11-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/QFS5rTlcHdrZkS0V2RbK6Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "681ebe38e4244320d8d94d9059fb71c072b9a0a7adac22cdf15514b76849d174",
+  "evidence": {
+    "listPage": 57,
+    "listTitle": "长春师范大学举办首届校企合作暨人才供需论坛",
+    "listPublishDate": "2025-11-28",
+    "sourceOrder": 567
+  }
+}

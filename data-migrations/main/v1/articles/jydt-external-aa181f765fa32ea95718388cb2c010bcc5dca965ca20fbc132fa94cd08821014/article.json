@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:aa181f765fa32ea95718388cb2c010bcc5dca965ca20fbc132fa94cd08821014",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ZoDxzR1ViFqzs1BufRH3LA",
+    "url": "https://mp.weixin.qq.com/s/ZoDxzR1ViFqzs1BufRH3LA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "筑梦春城，青春有我！ “长聚学子·春城暖才”进校园宣讲活动走进长春大学旅游学院",
+    "source": "",
+    "publishDate": "2025-11-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ZoDxzR1ViFqzs1BufRH3LA"
+  },
+  "resources": [],
+  "sourceFingerprint": "5ef5162159bd423e35acd52727c4ea629041b0d99cbbaf16240a75fd8b68edc8",
+  "evidence": {
+    "listPage": 57,
+    "listTitle": "筑梦春城，青春有我！ “长聚学子·春城暖才”进校园宣讲活动走进长春大学旅游学院",
+    "listPublishDate": "2025-11-27",
+    "sourceOrder": 568
+  }
+}

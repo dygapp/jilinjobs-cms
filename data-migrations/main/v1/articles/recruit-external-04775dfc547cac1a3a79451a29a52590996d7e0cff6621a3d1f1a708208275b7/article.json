@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:04775dfc547cac1a3a79451a29a52590996d7e0cff6621a3d1f1a708208275b7",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/f6rHV6Anix7juaajKIDkQg",
+    "url": "https://mp.weixin.qq.com/s/f6rHV6Anix7juaajKIDkQg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "暖冬聚力·“程”就未来——长春工程学院2026年“寒假促就业暖心行动”",
+    "source": "",
+    "publishDate": "2026-01-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/f6rHV6Anix7juaajKIDkQg"
+  },
+  "resources": [],
+  "sourceFingerprint": "fcad12f29a17e398f414eedc77c479c87325b5e57bea2941a82774d6f5aa146e",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "暖冬聚力·“程”就未来——长春工程学院2026年“寒假促就业暖心行动”",
+    "listPublishDate": "2026-01-30",
+    "sourceOrder": 78
+  }
+}

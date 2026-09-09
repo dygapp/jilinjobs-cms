@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120714",
+    "contentId": "28737783120714",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120714"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办高校创新创业教育师资培训班的通知",
+    "source": "",
+    "publishDate": "2017-06-16",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于举办高校创新创业教育师资培训班的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2017-6-16 15:43:25</span></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://74ef28ecac4e92ec260bacd55d703fe4ec0acd7b7c8a836b251f20e183c43cfb\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://79632cdb2e794c3ba4f717f4da2a9e2ce0ea652c288939c922809abcbb7f1405\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://ef0b24734947550f9781691603cb1a8bc21dfff8cbebaf157e1acb334a63cdbf\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://8879cc621ad9e40127e6a62eed90754a0cbdb8b931e9889320b82e174e18f62a\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://5d771517f9e7c5d69a1cc41c1ab94e207e9fe7f8a72c59c09be2a74969c903cd\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://ca9b8858f26c75c2b6f9e19ffbb7a60e739fd5ed4f76402ca6f00ca3d2ddc044\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=617357d5-f539-45ec-b794-bd65818f2ea8\">报名表.doc</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363322482730562501724312.jpg",
+      "originalReference": "/chistory/cms/imgs/6363322482730562501724312.jpg",
+      "token": "migration-resource://74ef28ecac4e92ec260bacd55d703fe4ec0acd7b7c8a836b251f20e183c43cfb",
+      "snapshotPath": "assets/74ef28ecac4e92ec260bacd55d703fe4ec0acd7b7c8a836b251f20e183c43cfb.jpg",
+      "sha256": "74ef28ecac4e92ec260bacd55d703fe4ec0acd7b7c8a836b251f20e183c43cfb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 152991
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363545001935312507370802.jpg",
+      "originalReference": "/chistory/cms/imgs/6363545001935312507370802.jpg",
+      "token": "migration-resource://79632cdb2e794c3ba4f717f4da2a9e2ce0ea652c288939c922809abcbb7f1405",
+      "snapshotPath": "assets/79632cdb2e794c3ba4f717f4da2a9e2ce0ea652c288939c922809abcbb7f1405.jpg",
+      "sha256": "79632cdb2e794c3ba4f717f4da2a9e2ce0ea652c288939c922809abcbb7f1405",
+      "contentType": "image/jpeg",
+      "sizeBytes": 152296
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363322482749312503667943.jpg",
+      "originalReference": "/chistory/cms/imgs/6363322482749312503667943.jpg",
+      "token": "migration-resource://ef0b24734947550f9781691603cb1a8bc21dfff8cbebaf157e1acb334a63cdbf",
+      "snapshotPath": "assets/ef0b24734947550f9781691603cb1a8bc21dfff8cbebaf157e1acb334a63cdbf.jpg",
+      "sha256": "ef0b24734947550f9781691603cb1a8bc21dfff8cbebaf157e1acb334a63cdbf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 114975
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363322482760250003167177.jpg",
+      "originalReference": "/chistory/cms/imgs/6363322482760250003167177.jpg",
+      "token": "migration-resource://8879cc621ad9e40127e6a62eed90754a0cbdb8b931e9889320b82e174e18f62a",
+      "snapshotPath": "assets/8879cc621ad9e40127e6a62eed90754a0cbdb8b931e9889320b82e174e18f62a.jpg",
+      "sha256": "8879cc621ad9e40127e6a62eed90754a0cbdb8b931e9889320b82e174e18f62a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 147711
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363322482766500002382330.jpg",
+      "originalReference": "/chistory/cms/imgs/6363322482766500002382330.jpg",
+      "token": "migration-resource://5d771517f9e7c5d69a1cc41c1ab94e207e9fe7f8a72c59c09be2a74969c903cd",
+      "snapshotPath": "assets/5d771517f9e7c5d69a1cc41c1ab94e207e9fe7f8a72c59c09be2a74969c903cd.jpg",
+      "sha256": "5d771517f9e7c5d69a1cc41c1ab94e207e9fe7f8a72c59c09be2a74969c903cd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 166605
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363322482774312509124900.jpg",
+      "originalReference": "/chistory/cms/imgs/6363322482774312509124900.jpg",
+      "token": "migration-resource://ca9b8858f26c75c2b6f9e19ffbb7a60e739fd5ed4f76402ca6f00ca3d2ddc044",
+      "snapshotPath": "assets/ca9b8858f26c75c2b6f9e19ffbb7a60e739fd5ed4f76402ca6f00ca3d2ddc044.jpg",
+      "sha256": "ca9b8858f26c75c2b6f9e19ffbb7a60e739fd5ed4f76402ca6f00ca3d2ddc044",
+      "contentType": "image/jpeg",
+      "sizeBytes": 59324
+    }
+  ],
+  "sourceFingerprint": "98f5631aae6d92c01fd31f4e4d2bc09416e859e5ef34ce444f19f362b5352963",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "关于举办高校创新创业教育师资培训班的通知",
+    "listPublishDate": "2017-06-16",
+    "sourceOrder": 215,
+    "detailPublishDate": "2017-06-16"
+  }
+}

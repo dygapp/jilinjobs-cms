@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:317194f32c3965bc19b5dab30a274d3dc172342b55952de997d17a0c120ba886",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/NypK-RHjjuDoJ7tQoqTrCg",
+    "url": "https://mp.weixin.qq.com/s/NypK-RHjjuDoJ7tQoqTrCg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“聚力扩容提质 服务高质量发展” 吉林司法警官职业学院2026届毕业生专场招聘会成功举办",
+    "source": "",
+    "publishDate": "2026-06-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/NypK-RHjjuDoJ7tQoqTrCg"
+  },
+  "resources": [],
+  "sourceFingerprint": "454f4b46031f76229071e619e36546a050f8ea35d1baec73f0c6ea4e8e5e36df",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "“聚力扩容提质 服务高质量发展” 吉林司法警官职业学院2026届毕业生专场招聘会成功举办",
+    "listPublishDate": "2026-06-02",
+    "sourceOrder": 110
+  }
+}

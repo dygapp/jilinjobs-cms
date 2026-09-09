@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6e2dfbcbcf3a0fc4bc4ef5affb38461a7c72994a81ed278d699df8777ac82b45",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/h5/detail/normal/6565780361544704",
+    "url": "http://app.people.cn/h5/detail/normal/6565780361544704"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省打出“组合拳”，为毕业生留省铺“新路”",
+    "source": "",
+    "publishDate": "2025-11-07",
+    "bodyHtml": "",
+    "externalUrl": "http://app.people.cn/h5/detail/normal/6565780361544704"
+  },
+  "resources": [],
+  "sourceFingerprint": "13494393592832a661e37860cf696a3e7b6ba7a4a26979f56e5bd2d956ddbd7c",
+  "evidence": {
+    "listPage": 62,
+    "listTitle": "吉林省打出“组合拳”，为毕业生留省铺“新路”",
+    "listPublishDate": "2025-11-07",
+    "sourceOrder": 611
+  }
+}

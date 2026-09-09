@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b7bc1f7412ea9ec916a67c044b66f2ca50de943cc66ef282e4102807e2e8a149",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1055/6758.htm",
+    "url": "https://www.jlict.edu.cn/info/1055/6758.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "浙江国邦药业有限公司到吉林化工大学开展校企合作交流",
+    "source": "",
+    "publishDate": "2026-05-12",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlict.edu.cn/info/1055/6758.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "2c4d0cd0a79e92e57663932504a678ef5c428a2d60d3a82305b34b07c05e60df",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "浙江国邦药业有限公司到吉林化工大学开展校企合作交流",
+    "listPublishDate": "2026-05-12",
+    "sourceOrder": 193
+  }
+}

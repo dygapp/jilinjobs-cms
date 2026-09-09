@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4653c2d0d0f54af910497b6cf82ed20e31207079dd0003fe0bb459bb957ff109",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kbIFUVqKGzBYfz7ZRepurQ",
+    "url": "https://mp.weixin.qq.com/s/kbIFUVqKGzBYfz7ZRepurQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "怀进鹏向第二届全国大学生职业规划大赛发表视频致辞",
+    "source": "",
+    "publishDate": "2025-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kbIFUVqKGzBYfz7ZRepurQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "ce7975811488c4e9cf5ea8490c531db638596a760038742646c9c4cebe25acad",
+  "evidence": {
+    "listPage": 94,
+    "listTitle": "怀进鹏向第二届全国大学生职业规划大赛发表视频致辞",
+    "listPublishDate": "2025-04-21",
+    "sourceOrder": 934
+  }
+}

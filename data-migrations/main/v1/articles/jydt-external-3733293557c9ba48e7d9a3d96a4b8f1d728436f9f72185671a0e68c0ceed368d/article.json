@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3733293557c9ba48e7d9a3d96a4b8f1d728436f9f72185671a0e68c0ceed368d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/nMzZUCCO4O62XNXl1hJzhA",
+    "url": "https://mp.weixin.qq.com/s/nMzZUCCO4O62XNXl1hJzhA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院赴长春垠禄酒店访企拓岗",
+    "source": "",
+    "publishDate": "2025-10-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/nMzZUCCO4O62XNXl1hJzhA"
+  },
+  "resources": [],
+  "sourceFingerprint": "fe7601af8190a88a5e3ea48caa0461039aa5a591f2f5daa37d78b13245f796ce",
+  "evidence": {
+    "listPage": 67,
+    "listTitle": "吉林工商学院赴长春垠禄酒店访企拓岗",
+    "listPublishDate": "2025-10-23",
+    "sourceOrder": 665
+  }
+}

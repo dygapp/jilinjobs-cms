@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d888c61b6752af89b42e54637f30c96f2fb3f90cbc9716d36c624a8041714053",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kV5Gzz6jMqJ7miWnFJ1RbQ",
+    "url": "https://mp.weixin.qq.com/s/kV5Gzz6jMqJ7miWnFJ1RbQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校地携手引才路 供需对接结硕果——2025浙江长兴引才双选会走进长春工业大学",
+    "source": "",
+    "publishDate": "2025-11-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kV5Gzz6jMqJ7miWnFJ1RbQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "4dc026655c9dab3e93f1d6cdf4b1bd31fa1ae7310f4750f227104bbe770c676e",
+  "evidence": {
+    "listPage": 58,
+    "listTitle": "校地携手引才路 供需对接结硕果——2025浙江长兴引才双选会走进长春工业大学",
+    "listPublishDate": "2025-11-21",
+    "sourceOrder": 574
+  }
+}

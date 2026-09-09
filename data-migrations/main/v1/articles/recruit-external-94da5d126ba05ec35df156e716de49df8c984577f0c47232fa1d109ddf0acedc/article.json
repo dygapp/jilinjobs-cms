@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:94da5d126ba05ec35df156e716de49df8c984577f0c47232fa1d109ddf0acedc",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/zwgk/gsgg/202006/t20200629_617756.html",
+    "url": "http://www.fusong.gov.cn/zwgk/gsgg/202006/t20200629_617756.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年抚松县事业单位面向社会公开招聘工作人员公告",
+    "source": "",
+    "publishDate": "2020-06-29",
+    "bodyHtml": "",
+    "externalUrl": "http://www.fusong.gov.cn/zwgk/gsgg/202006/t20200629_617756.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "f98bff8301b9353287035b3a2eeeb231328b53a4df76b02adfa2d92a33a03152",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "2020年抚松县事业单位面向社会公开招聘工作人员公告",
+    "listPublishDate": "2020-06-29",
+    "sourceOrder": 399
+  }
+}

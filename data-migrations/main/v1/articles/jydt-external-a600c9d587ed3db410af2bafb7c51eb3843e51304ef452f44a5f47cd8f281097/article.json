@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a600c9d587ed3db410af2bafb7c51eb3843e51304ef452f44a5f47cd8f281097",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/jydt/gjssdt/202207/t20220708_8505606.html",
+    "url": "http://jyt.jl.gov.cn/jydt/gjssdt/202207/t20220708_8505606.html"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2022年吉林省教育信息化工作会议召开",
+    "source": "",
+    "publishDate": "2022-07-08",
+    "bodyHtml": "",
+    "externalUrl": "http://jyt.jl.gov.cn/jydt/gjssdt/202207/t20220708_8505606.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "f909a75546293aafa43082a1ee76429aec9accdc4d46ce3e2a424bf74758f8dc",
+  "evidence": {
+    "listPage": 120,
+    "listTitle": "2022年吉林省教育信息化工作会议召开",
+    "listPublishDate": "2022-07-08",
+    "sourceOrder": 1196
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122716",
+    "contentId": "28737783122716",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122716"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "人社部 教育部 财政部 交通运输部 国家卫健委 关于做好疫情防控期间有关就业工作的通知",
+    "source": "",
+    "publishDate": "2020-02-07",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">人社部 教育部 财政部 交通运输部 国家卫健委 关于做好疫情防控期间有关就业工作的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:吉林省高等学校毕业生就业指导中心   发布时间:2020-2-7 16:09:07</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://1c6364a1db90c160135c5978150edc0c3dba8a35130dab2d979605ed4de25f20\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://7a7657b5618e1fa891726d6b0eccc9f949802e18daf77f266f5137f273266974\"></p><p style=\"text-align: center;\"><img title=\"3.jpg\" src=\"migration-resource://4ee7b44ebbc964e6226e5614d082b3a640d365a8ed0d627cd87f30125a29d9a0\"></p><p style=\"text-align: center;\"><img title=\"4.jpg\" src=\"migration-resource://00352d98aaa371c7e301ed7008b298b813e9cf481b7d1f12e5fce8ea62b6fd88\"></p><p style=\"text-align: center;\"><img title=\"5.jpg\" src=\"migration-resource://ed85db14144e9c21a00a8bf85cca5fc57456e6b2ca3bef0a7690f5d624ea78d4\"></p><p style=\"text-align: center;\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6371668859275000007945514.jpg",
+      "originalReference": "/chistory/cms/imgs/6371668859275000007945514.jpg",
+      "token": "migration-resource://1c6364a1db90c160135c5978150edc0c3dba8a35130dab2d979605ed4de25f20",
+      "snapshotPath": "assets/1c6364a1db90c160135c5978150edc0c3dba8a35130dab2d979605ed4de25f20.jpg",
+      "sha256": "1c6364a1db90c160135c5978150edc0c3dba8a35130dab2d979605ed4de25f20",
+      "contentType": "image/jpeg",
+      "sizeBytes": 160814
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6371668859284375008917330.jpg",
+      "originalReference": "/chistory/cms/imgs/6371668859284375008917330.jpg",
+      "token": "migration-resource://7a7657b5618e1fa891726d6b0eccc9f949802e18daf77f266f5137f273266974",
+      "snapshotPath": "assets/7a7657b5618e1fa891726d6b0eccc9f949802e18daf77f266f5137f273266974.jpg",
+      "sha256": "7a7657b5618e1fa891726d6b0eccc9f949802e18daf77f266f5137f273266974",
+      "contentType": "image/jpeg",
+      "sizeBytes": 228629
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6371668859293750005187318.jpg",
+      "originalReference": "/chistory/cms/imgs/6371668859293750005187318.jpg",
+      "token": "migration-resource://4ee7b44ebbc964e6226e5614d082b3a640d365a8ed0d627cd87f30125a29d9a0",
+      "snapshotPath": "assets/4ee7b44ebbc964e6226e5614d082b3a640d365a8ed0d627cd87f30125a29d9a0.jpg",
+      "sha256": "4ee7b44ebbc964e6226e5614d082b3a640d365a8ed0d627cd87f30125a29d9a0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 199567
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6371668859303125006159134.jpg",
+      "originalReference": "/chistory/cms/imgs/6371668859303125006159134.jpg",
+      "token": "migration-resource://00352d98aaa371c7e301ed7008b298b813e9cf481b7d1f12e5fce8ea62b6fd88",
+      "snapshotPath": "assets/00352d98aaa371c7e301ed7008b298b813e9cf481b7d1f12e5fce8ea62b6fd88.jpg",
+      "sha256": "00352d98aaa371c7e301ed7008b298b813e9cf481b7d1f12e5fce8ea62b6fd88",
+      "contentType": "image/jpeg",
+      "sizeBytes": 220261
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6371668859310937503901705.jpg",
+      "originalReference": "/chistory/cms/imgs/6371668859310937503901705.jpg",
+      "token": "migration-resource://ed85db14144e9c21a00a8bf85cca5fc57456e6b2ca3bef0a7690f5d624ea78d4",
+      "snapshotPath": "assets/ed85db14144e9c21a00a8bf85cca5fc57456e6b2ca3bef0a7690f5d624ea78d4.jpg",
+      "sha256": "ed85db14144e9c21a00a8bf85cca5fc57456e6b2ca3bef0a7690f5d624ea78d4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 166489
+    }
+  ],
+  "sourceFingerprint": "32d6279993463c3da848ac351d457b64cc5f9ae47949a98321b82d9174c1e8bb",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "人社部 教育部 财政部 交通运输部 国家卫健委 关于做好疫情防控期间有关就业工作的通知",
+    "listPublishDate": "2020-02-07",
+    "sourceOrder": 193,
+    "detailPublishDate": "2020-02-07"
+  }
+}

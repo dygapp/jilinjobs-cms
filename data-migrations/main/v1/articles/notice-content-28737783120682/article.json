@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120682",
+    "contentId": "28737783120682",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120682"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办教育部“24365校园招聘服务”全国化学化工行业专场招聘会的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2020-12-31",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align: center;\"><img src=\"migration-resource://d283a014e142a6dc4f0175d2de74b636f64e8889beb5ac448ec1cf75592ba75e\" alt=\"\" width=\"1000\" height=\"1265\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://be8af665f6d34c109f74950d168b542f78ffdba289f57cf9c4f15e299ce268ce\" alt=\"\" width=\"1000\" height=\"1253\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://36745188250f52885a41731963a18d6702cc330d97dd37e34a621bfe7f1c364e\" alt=\"\" width=\"1000\" height=\"1331\"></p>\n<p style=\"text-align: center;\">&nbsp;</p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210105103520.jpg",
+      "originalReference": "/chistory/cms/editor/20210105103520.jpg",
+      "token": "migration-resource://d283a014e142a6dc4f0175d2de74b636f64e8889beb5ac448ec1cf75592ba75e",
+      "snapshotPath": "assets/d283a014e142a6dc4f0175d2de74b636f64e8889beb5ac448ec1cf75592ba75e.jpg",
+      "sha256": "d283a014e142a6dc4f0175d2de74b636f64e8889beb5ac448ec1cf75592ba75e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 229477
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210105103529.jpg",
+      "originalReference": "/chistory/cms/editor/20210105103529.jpg",
+      "token": "migration-resource://be8af665f6d34c109f74950d168b542f78ffdba289f57cf9c4f15e299ce268ce",
+      "snapshotPath": "assets/be8af665f6d34c109f74950d168b542f78ffdba289f57cf9c4f15e299ce268ce.jpg",
+      "sha256": "be8af665f6d34c109f74950d168b542f78ffdba289f57cf9c4f15e299ce268ce",
+      "contentType": "image/jpeg",
+      "sizeBytes": 255456
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210105103537.jpg",
+      "originalReference": "/chistory/cms/editor/20210105103537.jpg",
+      "token": "migration-resource://36745188250f52885a41731963a18d6702cc330d97dd37e34a621bfe7f1c364e",
+      "snapshotPath": "assets/36745188250f52885a41731963a18d6702cc330d97dd37e34a621bfe7f1c364e.jpg",
+      "sha256": "36745188250f52885a41731963a18d6702cc330d97dd37e34a621bfe7f1c364e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 201390
+    }
+  ],
+  "sourceFingerprint": "4ac74f02ffb22f0cdef4cf133eadb1ca613369b9ccba7d9f24f13d32516482bb",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "关于举办教育部“24365校园招聘服务”全国化学化工行业专场招聘会的通知",
+    "listPublishDate": "2020-12-31",
+    "sourceOrder": 164,
+    "detailPublishDate": "2020-12-31"
+  }
+}

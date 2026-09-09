@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:896f379fcdb8c4bffd11121f2c7ad275dcac4d450a42be905a9e7def2f03c29b",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/jiaoshi/20200717/60749_1.html",
+    "url": "http://m.jl.zgsydw.com/jiaoshi/20200717/60749_1.html?from=singlemessage"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年长春市宽城区招聘聘用制教师公告",
+    "source": "",
+    "publishDate": "2020-07-21",
+    "bodyHtml": "",
+    "externalUrl": "http://m.jl.zgsydw.com/jiaoshi/20200717/60749_1.html?from=singlemessage"
+  },
+  "resources": [],
+  "sourceFingerprint": "2189e549750c4edd6bee8af6824f356df5c8383c802ffe2d199e8f9eea41d962",
+  "evidence": {
+    "listPage": 39,
+    "listTitle": "2020年长春市宽城区招聘聘用制教师公告",
+    "listPublishDate": "2020-07-21",
+    "sourceOrder": 387
+  }
+}

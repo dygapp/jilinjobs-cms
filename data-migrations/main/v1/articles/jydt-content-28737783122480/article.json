@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122480",
+    "contentId": "28737783122480",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122480"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "云南：多项措施助高校毕业生实现就业",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">云南：多项措施助高校毕业生实现就业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 记者4月3日从云南省有关部门获悉，云南省今年有近9万高校学生毕业，比去年增加9000人，加上历届未就业的毕业生近4万人，今年需就业的高校毕业生达到13万人，创历史新高。<br>&nbsp;&nbsp;&nbsp; 云南省委、省政府要求各地、各部门、各高校，要加大对中央及省各项促就业政策措施地落实力度，继续引导高校毕业生面向基层就业，进一步挖掘就业岗位。<br>加大鼓励高校等事业单位扩大招聘人数，鼓励各招聘单位通过调剂年度计划指标，增加今年的招聘指标；高职院校的优秀毕业生可留校聘任作为实习实训指导教师；要最大限度开发科研助理岗位，鼓励科研项目单位积极吸纳高校毕业生就业；积极鼓励高校毕业生自主创业，提供资金支持和跟踪服务；努力扩大高校毕业生继续升学比例，增加高校今年硕士研究生招生名额，鼓励和支持大学毕业生报考研究生和第二学位学生；建立一批高校毕业生就业见习基地；把困难毕业生作为帮扶对象，优先向用人单位推荐，确保其就业。（记者杨牧源、何春好）<br></font></p> <p><font size=\"2\">&nbsp;</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "73481ffc4d89288645c691bd892f86232a00db136d3a943aed074b34cab14ec9",
+  "evidence": {
+    "listPage": 188,
+    "listTitle": "云南：多项措施助高校毕业生实现就业",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1875,
+    "detailPublishDate": "2009-04-04"
+  }
+}

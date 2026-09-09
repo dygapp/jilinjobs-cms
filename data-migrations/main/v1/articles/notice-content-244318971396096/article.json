@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:244318971396096",
+    "contentId": "244318971396096",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=244318971396096"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省促进中小企业发展服务中心关于举办2024年“一起益企”秋季中小企业公益人才招聘会的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2024-09-03",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1344\" src=\"migration-resource://30545b90e9f95dec7df5cf2597301330ceb672d5e2aab4e9c7636e5a76f09c6a\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1344\" src=\"migration-resource://2eb0bd0619ce64d73d7a9750dad9b2f475bb0cc764dd96acc80805e9a7ca6ffd\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1344\" src=\"migration-resource://0b837232d2022bef082b8bad27e99eb9d89c5e4d847876b939ae79cee2324aae\" width=\"950\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-09-10/ed8cef0a-7137-4b7e-8f83-f413a2113d0d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-09-10/ed8cef0a-7137-4b7e-8f83-f413a2113d0d.jpg",
+      "token": "migration-resource://30545b90e9f95dec7df5cf2597301330ceb672d5e2aab4e9c7636e5a76f09c6a",
+      "snapshotPath": "assets/30545b90e9f95dec7df5cf2597301330ceb672d5e2aab4e9c7636e5a76f09c6a.jpg",
+      "sha256": "30545b90e9f95dec7df5cf2597301330ceb672d5e2aab4e9c7636e5a76f09c6a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 230656
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-09-10/ac56d695-e50e-47c4-97cf-d5a606747104.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-09-10/ac56d695-e50e-47c4-97cf-d5a606747104.jpg",
+      "token": "migration-resource://2eb0bd0619ce64d73d7a9750dad9b2f475bb0cc764dd96acc80805e9a7ca6ffd",
+      "snapshotPath": "assets/2eb0bd0619ce64d73d7a9750dad9b2f475bb0cc764dd96acc80805e9a7ca6ffd.jpg",
+      "sha256": "2eb0bd0619ce64d73d7a9750dad9b2f475bb0cc764dd96acc80805e9a7ca6ffd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 224368
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-09-10/d7a45d44-30c6-457f-bc0f-ac7cc1e268e8.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-09-10/d7a45d44-30c6-457f-bc0f-ac7cc1e268e8.jpg",
+      "token": "migration-resource://0b837232d2022bef082b8bad27e99eb9d89c5e4d847876b939ae79cee2324aae",
+      "snapshotPath": "assets/0b837232d2022bef082b8bad27e99eb9d89c5e4d847876b939ae79cee2324aae.jpg",
+      "sha256": "0b837232d2022bef082b8bad27e99eb9d89c5e4d847876b939ae79cee2324aae",
+      "contentType": "image/jpeg",
+      "sizeBytes": 100296
+    }
+  ],
+  "sourceFingerprint": "29011369983abf3ee0b7923b9f5d7bcca925d89136e72e4a0525198470f3debb",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "吉林省促进中小企业发展服务中心关于举办2024年“一起益企”秋季中小企业公益人才招聘会的通知",
+    "listPublishDate": "2024-09-03",
+    "sourceOrder": 77,
+    "detailPublishDate": "2024-09-03"
+  }
+}

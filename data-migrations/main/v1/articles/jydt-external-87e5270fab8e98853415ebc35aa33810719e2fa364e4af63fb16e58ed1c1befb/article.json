@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:87e5270fab8e98853415ebc35aa33810719e2fa364e4af63fb16e58ed1c1befb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/meWPbO-QeIbgigFai4Mxqw",
+    "url": "https://mp.weixin.qq.com/s/meWPbO-QeIbgigFai4Mxqw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学法学院赴吉林孚达律师事务所开展“访企拓岗促就业”专项活动",
+    "source": "",
+    "publishDate": "2026-02-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/meWPbO-QeIbgigFai4Mxqw"
+  },
+  "resources": [],
+  "sourceFingerprint": "bcdeab9fd8cea58fea2a66ca07695b50f01595dafc54c3564dd9ad861cbcb487",
+  "evidence": {
+    "listPage": 45,
+    "listTitle": "延边大学法学院赴吉林孚达律师事务所开展“访企拓岗促就业”专项活动",
+    "listPublishDate": "2026-02-14",
+    "sourceOrder": 442
+  }
+}

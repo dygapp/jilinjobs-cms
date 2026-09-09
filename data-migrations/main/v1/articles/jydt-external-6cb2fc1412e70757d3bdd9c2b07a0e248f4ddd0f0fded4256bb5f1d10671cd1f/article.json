@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6cb2fc1412e70757d3bdd9c2b07a0e248f4ddd0f0fded4256bb5f1d10671cd1f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/WITCzKez_vd1hykU_ARmWQ",
+    "url": "https://mp.weixin.qq.com/s/WITCzKez_vd1hykU_ARmWQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2025年“长聚学子·春城暖才”进校园宣讲活动走进长春金融高等专科学校",
+    "source": "",
+    "publishDate": "2025-05-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/WITCzKez_vd1hykU_ARmWQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "b067443295a4328631fd7e72f43c776c173cbb9ab5872852f8001ac91b5a3308",
+  "evidence": {
+    "listPage": 88,
+    "listTitle": "2025年“长聚学子·春城暖才”进校园宣讲活动走进长春金融高等专科学校",
+    "listPublishDate": "2025-05-20",
+    "sourceOrder": 877
+  }
+}

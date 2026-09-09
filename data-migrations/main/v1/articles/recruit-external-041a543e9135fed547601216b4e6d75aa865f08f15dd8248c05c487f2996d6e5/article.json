@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:041a543e9135fed547601216b4e6d75aa865f08f15dd8248c05c487f2996d6e5",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s",
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5OTk4MDY4Mw==&mid=2653077175&idx=2&sn=64941d7fe86d3647430a0885d3e9a635&chksm=bce525538b92ac45b8e8aab02937780dabaaa5a97fce51a9a7abfcffbdbe65322e51c922242e&mpshare=1&scene=1&srcid=&sharer_sharetime=1591966963829&sharer_shareid=3b9e97c00d45c58ae27892be478bd10c&key=fd81c654fdd961995dfe35b5808713ce274cfe2d84a70777151597013a57bc747d2ae790a3193c7277c659f25061acc413d011b8054ddaac667f855269eb033fb1c2021c0dd41501a9df5a8af81f6d24&ascene=1&uin=MTc3NzgwNzQzMA%3D%3D&devicetype=Windows+10+x64&version=62090070&lang=zh_CN&exportkey=A22mRasEBxUoK37%2BifGktC4%3D&pass_ticket=LxMQi4STWG%2BncRgU2U%2Bw82iow7viW4PxWGN2z4sb7ftL46a9QyRsT%2FJptNwJrdQW"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省国有企业2020年度定向招聘高校毕业生的公告",
+    "source": "",
+    "publishDate": "2020-06-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s?__biz=MjM5OTk4MDY4Mw==&mid=2653077175&idx=2&sn=64941d7fe86d3647430a0885d3e9a635&chksm=bce525538b92ac45b8e8aab02937780dabaaa5a97fce51a9a7abfcffbdbe65322e51c922242e&mpshare=1&scene=1&srcid=&sharer_sharetime=1591966963829&sharer_shareid=3b9e97c00d45c58ae27892be478bd10c&key=fd81c654fdd961995dfe35b5808713ce274cfe2d84a70777151597013a57bc747d2ae790a3193c7277c659f25061acc413d011b8054ddaac667f855269eb033fb1c2021c0dd41501a9df5a8af81f6d24&ascene=1&uin=MTc3NzgwNzQzMA%3D%3D&devicetype=Windows+10+x64&version=62090070&lang=zh_CN&exportkey=A22mRasEBxUoK37%2BifGktC4%3D&pass_ticket=LxMQi4STWG%2BncRgU2U%2Bw82iow7viW4PxWGN2z4sb7ftL46a9QyRsT%2FJptNwJrdQW"
+  },
+  "resources": [],
+  "sourceFingerprint": "868d498ffe76284f26373af54a802fe7c3b686aee24188b8f318f52327bc9324",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "吉林省国有企业2020年度定向招聘高校毕业生的公告",
+    "listPublishDate": "2020-06-16",
+    "sourceOrder": 402
+  }
+}

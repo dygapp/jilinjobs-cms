@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5e3c4f5a1f955b82a1c94716b377de2f27f6b31122049019d82c76d94b522069",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/U184vPNuj0Z7vYRM2Moxjg",
+    "url": "https://mp.weixin.qq.com/s/U184vPNuj0Z7vYRM2Moxjg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“先生向北 青春聚吉”2025年吉林省高校毕业生留吉就业专场招聘会在长春科技学院成功举办",
+    "source": "",
+    "publishDate": "2025-12-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/U184vPNuj0Z7vYRM2Moxjg"
+  },
+  "resources": [],
+  "sourceFingerprint": "c017c2d7c26f3537cdd08bcf5c1f59b5324cf141988a223e035bb5feea96afac",
+  "evidence": {
+    "listPage": 57,
+    "listTitle": "“先生向北 青春聚吉”2025年吉林省高校毕业生留吉就业专场招聘会在长春科技学院成功举办",
+    "listPublishDate": "2025-12-01",
+    "sourceOrder": 563
+  }
+}

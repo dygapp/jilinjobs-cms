@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:083057190627750f5d5d3ac3f395a495d84e586596c1b4f74b9517c89fb1818b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/0X_cJIyzx5_kkyhw2vtDFA",
+    "url": "https://mp.weixin.qq.com/s/0X_cJIyzx5_kkyhw2vtDFA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "企业出题 院校答卷 —— 吉林通用航空职业技术学院赴济青烟三市走访，以产业刚需反向定制低空复合型人才",
+    "source": "",
+    "publishDate": "2026-07-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/0X_cJIyzx5_kkyhw2vtDFA"
+  },
+  "resources": [],
+  "sourceFingerprint": "17d17365bd255bd3705b03b25a3bb98a6c25f8600209e8c8dd1009c16c2ce422",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "企业出题 院校答卷 —— 吉林通用航空职业技术学院赴济青烟三市走访，以产业刚需反向定制低空复合型人才",
+    "listPublishDate": "2026-07-28",
+    "sourceOrder": 36
+  }
+}

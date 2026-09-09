@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:356cf88cf9b0e7f8d9519a46d6d1cf29dbaf909f4fb7276257f7fc2b18436ad7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/PLZib6ztARiCJc0E48EH9Q",
+    "url": "https://mp.weixin.qq.com/s/PLZib6ztARiCJc0E48EH9Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业大学党委书记张殿锋赴伊通满族自治县开展“百校对百县”对接暨访企拓岗活动",
+    "source": "",
+    "publishDate": "2025-06-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/PLZib6ztARiCJc0E48EH9Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "eba7c308d816525ad466f010b3b7566ca91edb77213dcce22282166007be936a",
+  "evidence": {
+    "listPage": 79,
+    "listTitle": "吉林农业大学党委书记张殿锋赴伊通满族自治县开展“百校对百县”对接暨访企拓岗活动",
+    "listPublishDate": "2025-06-23",
+    "sourceOrder": 784
+  }
+}

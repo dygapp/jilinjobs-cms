@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1d30460af8698782ce54b6e29115d057bd358cd651f5d45b4335daf95c1dbb1d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/t4SkdpQfO_s5O9oMFYh8Qw",
+    "url": "https://mp.weixin.qq.com/s/t4SkdpQfO_s5O9oMFYh8Qw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "持续开展访企拓岗 促进高质量充分就业 ——长春科技学院党委常委孙大伟开展访企拓岗促就业系列活动",
+    "source": "",
+    "publishDate": "2025-07-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/t4SkdpQfO_s5O9oMFYh8Qw"
+  },
+  "resources": [],
+  "sourceFingerprint": "43b8b599643f87e149bc8704086d35061fe8df584ce7b47883b6ecf53557b0c8",
+  "evidence": {
+    "listPage": 73,
+    "listTitle": "持续开展访企拓岗 促进高质量充分就业 ——长春科技学院党委常委孙大伟开展访企拓岗促就业系列活动",
+    "listPublishDate": "2025-07-17",
+    "sourceOrder": 726
+  }
+}

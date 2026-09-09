@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6b5e88c782e1da11741fb51fcef574803dbbbde97352d620032f0ac07f86f6bc",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/yzPEEsSmj-LMrP-xXnJ_lA",
+    "url": "https://mp.weixin.qq.com/s/yzPEEsSmj-LMrP-xXnJ_lA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范高等专科学校举行“校企合作”暨“百校对百县”促就业项目签约仪式",
+    "source": "",
+    "publishDate": "2025-07-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/yzPEEsSmj-LMrP-xXnJ_lA"
+  },
+  "resources": [],
+  "sourceFingerprint": "f72d926cb4dbb2efc0b4449abd798c9ee285b87627529b13df154bee4fab4e95",
+  "evidence": {
+    "listPage": 74,
+    "listTitle": "长春师范高等专科学校举行“校企合作”暨“百校对百县”促就业项目签约仪式",
+    "listPublishDate": "2025-07-07",
+    "sourceOrder": 737
+  }
+}

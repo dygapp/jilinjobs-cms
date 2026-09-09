@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:7d1abd6ff5e1bf3ad9edc5799c9f4326f9d12a08ff5c9cac83504994478569b0",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/q5zPxwU8isULEkjT7dWoKw",
+    "url": "https://mp.weixin.qq.com/s/q5zPxwU8isULEkjT7dWoKw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务吉林高质量发展 长春工业大学2026年寒假促就业暖心线上双选会邀请函",
+    "source": "",
+    "publishDate": "2026-01-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/q5zPxwU8isULEkjT7dWoKw"
+  },
+  "resources": [],
+  "sourceFingerprint": "1875f9be892c3a989c5fd667363fb51a0e13d5f73086db141b94ae7f1b9f5c7f",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "服务吉林高质量发展 长春工业大学2026年寒假促就业暖心线上双选会邀请函",
+    "listPublishDate": "2026-01-15",
+    "sourceOrder": 109
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d96a8373bd4f23e9ad3ba2d2ddac28b3490c11231e0ec07db9d496e88304329b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/7ZmAge4OSpfI9UL2kXdDug",
+    "url": "https://mp.weixin.qq.com/s/7ZmAge4OSpfI9UL2kXdDug"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院举办“福满吉林 ‘祉’引未来”2026届毕业生秋季双选会",
+    "source": "",
+    "publishDate": "2025-10-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/7ZmAge4OSpfI9UL2kXdDug"
+  },
+  "resources": [],
+  "sourceFingerprint": "3e13f1626da9d290a8df1e1f2a7e53d4cad71235913b83c1c960d6319e462747",
+  "evidence": {
+    "listPage": 68,
+    "listTitle": "长春人文学院举办“福满吉林 ‘祉’引未来”2026届毕业生秋季双选会",
+    "listPublishDate": "2025-10-17",
+    "sourceOrder": 676
+  }
+}

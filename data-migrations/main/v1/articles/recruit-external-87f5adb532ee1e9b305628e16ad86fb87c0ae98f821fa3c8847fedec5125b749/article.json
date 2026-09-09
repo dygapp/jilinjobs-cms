@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:87f5adb532ee1e9b305628e16ad86fb87c0ae98f821fa3c8847fedec5125b749",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/zwgk/tzgg/202110/t20211023_556694.html",
+    "url": "http://www.huinanxian.gov.cn/zwgk/tzgg/202110/t20211023_556694.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2021年辉南县事业单位公开招聘教师岗位工作人员公告（9号）",
+    "source": "",
+    "publishDate": "2021-10-25",
+    "bodyHtml": "",
+    "externalUrl": "http://www.huinanxian.gov.cn/zwgk/tzgg/202110/t20211023_556694.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "11e700b6056dbf4d908c651ed4b9c38a4892e6bc9acea34a0be2ff803b044743",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "2021年辉南县事业单位公开招聘教师岗位工作人员公告（9号）",
+    "listPublishDate": "2021-10-25",
+    "sourceOrder": 352
+  }
+}

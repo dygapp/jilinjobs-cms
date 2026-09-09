@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:787fe6e23300bb8464898a3ba2badb4c01a5c2cb8cfc9f869c74ff97e4a7bceb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5657.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5657.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学举办装备制造类专业毕业生就业双选会",
+    "source": "",
+    "publishDate": "2026-04-10",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5657.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "18bd182b5b77333ce5de6cec3708cb7d28c7c459a8a2e134b7d2c9d95affc3ee",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "长春工业大学举办装备制造类专业毕业生就业双选会",
+    "listPublishDate": "2026-04-10",
+    "sourceOrder": 302
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122406",
+    "contentId": "28737783122406",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122406"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "俄罗斯留学签证注意事项及所需文件",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">俄罗斯留学签证注意事项及所需文件</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>　　注意事项</p> <p>　　1. 多次签证有效期间内， 每次在俄罗斯停留的时间不可超过90天。 <br>　　2. 其他俄罗斯有关签发的签证，我处不予延期。 <br>　　3. 如因故未领到签证，外交部和公司邀请函原件不予退还。 <br>　　4. 如签证申请表填写不完整，我处不办理签证。 <br>　　5. 如有需要，可能要求申请人提供补充文件或面试。 <br>　　6. 如几人被同时邀请，则每位申请人均应提供一份完整的文件。 <br>　　7. 申请人应本人来申请签证或提供公证的委托书。 </p> <p><br>　　留学签证所需文件</p> <p>　　1. 有效护照及护照主页复印件 <br>　　2. 1张照片（1寸或2寸均可） <br>　　3. 签证申请表（应回答表内所有的问题） <br>　　4. 俄罗斯内务部签发的邀请函原件 <br>　　5. 俄罗斯邀请学院（大学）的有效邀请函原件及其复印件 <br>　　6. 申请人与该学院（大学）的有效合同原件及其复印件 <br>　　7. 申请人毕业证书复印件 <br>　　8. 证明有足够支付能力的银行存款证明 <br>　　9. 有效健康证明书、爱滋病检疫报告（如在俄罗斯停留的时间超过90天）</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "d5da5ea14939618eb95940fce34c898b0f574afa5402818e4238cc588e111258",
+  "evidence": {
+    "listPage": 190,
+    "listTitle": "俄罗斯留学签证注意事项及所需文件",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1900,
+    "detailPublishDate": "2009-04-04"
+  }
+}

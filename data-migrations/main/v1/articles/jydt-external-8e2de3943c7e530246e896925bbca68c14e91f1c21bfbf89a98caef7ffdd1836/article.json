@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8e2de3943c7e530246e896925bbca68c14e91f1c21bfbf89a98caef7ffdd1836",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/R6ZYulQ5C5fDRMTGh0Zg_Q",
+    "url": "https://mp.weixin.qq.com/s/R6ZYulQ5C5fDRMTGh0Zg_Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林师范大学开展“百校对百县”促就业专项行动",
+    "source": "",
+    "publishDate": "2025-06-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/R6ZYulQ5C5fDRMTGh0Zg_Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "130fcce1cff4af900a5f01a71326203d7e8114c109a6a9f1d833b19e2f9f6ce0",
+  "evidence": {
+    "listPage": 77,
+    "listTitle": "吉林师范大学开展“百校对百县”促就业专项行动",
+    "listPublishDate": "2025-06-30",
+    "sourceOrder": 763
+  }
+}

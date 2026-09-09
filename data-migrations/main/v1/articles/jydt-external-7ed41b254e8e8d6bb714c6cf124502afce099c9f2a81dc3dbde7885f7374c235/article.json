@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7ed41b254e8e8d6bb714c6cf124502afce099c9f2a81dc3dbde7885f7374c235",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/YJVRSEpu-iFKO6dhhVtFTw",
+    "url": "https://mp.weixin.qq.com/s/YJVRSEpu-iFKO6dhhVtFTw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "签约副理事长单位 考察示范基地|长春早期教育职业学院赴浙江赋能人才培养升级",
+    "source": "",
+    "publishDate": "2025-11-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/YJVRSEpu-iFKO6dhhVtFTw"
+  },
+  "resources": [],
+  "sourceFingerprint": "2246a7233f18eec701564e73c6e88bd8593c4ca25f9fee0eb457c0c3c289577e",
+  "evidence": {
+    "listPage": 60,
+    "listTitle": "签约副理事长单位 考察示范基地|长春早期教育职业学院赴浙江赋能人才培养升级",
+    "listPublishDate": "2025-11-18",
+    "sourceOrder": 592
+  }
+}

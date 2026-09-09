@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:23e3ed1cfac37bd552ee5ee261c4e71cafc0b6fd87aa0a660580d8d04c00b13f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Bbsq9Pc0XjolRRvS4NpUjw",
+    "url": "https://mp.weixin.qq.com/s/Bbsq9Pc0XjolRRvS4NpUjw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林动画学院举行校企人才培养战略合作授牌仪式暨大学生就业创业导师聘任仪式",
+    "source": "",
+    "publishDate": "2025-10-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Bbsq9Pc0XjolRRvS4NpUjw"
+  },
+  "resources": [],
+  "sourceFingerprint": "7136b3a25f6b9cdebe81f22382c38e6c6bdcd1a3060d9d5717ba4a1c4d45e756",
+  "evidence": {
+    "listPage": 68,
+    "listTitle": "吉林动画学院举行校企人才培养战略合作授牌仪式暨大学生就业创业导师聘任仪式",
+    "listPublishDate": "2025-10-20",
+    "sourceOrder": 671
+  }
+}

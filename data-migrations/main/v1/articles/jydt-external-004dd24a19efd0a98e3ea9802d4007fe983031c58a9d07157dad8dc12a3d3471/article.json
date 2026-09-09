@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:004dd24a19efd0a98e3ea9802d4007fe983031c58a9d07157dad8dc12a3d3471",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/5tbZEgW20CfOZ7E-ed8IKw",
+    "url": "https://mp.weixin.qq.com/s/5tbZEgW20CfOZ7E-ed8IKw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院校领导带队赴深圳开展访企拓岗促就业专项活动",
+    "source": "",
+    "publishDate": "2026-03-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5tbZEgW20CfOZ7E-ed8IKw"
+  },
+  "resources": [],
+  "sourceFingerprint": "df99ec98cea0474438acb87df68863bdba68dbc016b806654e8bcaa83ed138b6",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "长春工程学院校领导带队赴深圳开展访企拓岗促就业专项活动",
+    "listPublishDate": "2026-03-09",
+    "sourceOrder": 430
+  }
+}

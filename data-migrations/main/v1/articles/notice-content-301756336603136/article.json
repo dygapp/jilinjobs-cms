@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:301756336603136",
+    "contentId": "301756336603136",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=301756336603136"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办“百校对百县”促就业行动暨吉林省2025届离校未就业高校毕业生网络专场招聘活动的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2025-07-24",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://99b4f91b78661c61e0dcd28b70dbd76ee14a319043416130cd7685aeea4517bf\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://81a8a982a73b61364e12b7a271dd70f0e930bb1f3370d1dc9b4017f8af7be9ab\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://ecf40375765be8355b11a7395253d9b32f2d4c07ce5659a0446fd77bf65f0429\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://b3e30940d70a7d230c8c375075560aa2b7eac5f30d46d78a97e38cc3d4b3728d\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://7c20b93be44d1996ab1e287ebc02a60c7d57999b18f28938c3072d6ce450eab6\" width=\"1000\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-07-24/c1bbfd63-1dae-4aa2-856d-be6041ca3efb.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-07-24/c1bbfd63-1dae-4aa2-856d-be6041ca3efb.jpg",
+      "token": "migration-resource://99b4f91b78661c61e0dcd28b70dbd76ee14a319043416130cd7685aeea4517bf",
+      "snapshotPath": "assets/99b4f91b78661c61e0dcd28b70dbd76ee14a319043416130cd7685aeea4517bf.jpg",
+      "sha256": "99b4f91b78661c61e0dcd28b70dbd76ee14a319043416130cd7685aeea4517bf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-07-24/8ebf6482-60ed-4e8d-b82d-a66e08edf471.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-07-24/8ebf6482-60ed-4e8d-b82d-a66e08edf471.jpg",
+      "token": "migration-resource://81a8a982a73b61364e12b7a271dd70f0e930bb1f3370d1dc9b4017f8af7be9ab",
+      "snapshotPath": "assets/81a8a982a73b61364e12b7a271dd70f0e930bb1f3370d1dc9b4017f8af7be9ab.jpg",
+      "sha256": "81a8a982a73b61364e12b7a271dd70f0e930bb1f3370d1dc9b4017f8af7be9ab",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-07-24/dc53a0ae-c8bc-48e2-91bf-bfc8a6372a5a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-07-24/dc53a0ae-c8bc-48e2-91bf-bfc8a6372a5a.jpg",
+      "token": "migration-resource://ecf40375765be8355b11a7395253d9b32f2d4c07ce5659a0446fd77bf65f0429",
+      "snapshotPath": "assets/ecf40375765be8355b11a7395253d9b32f2d4c07ce5659a0446fd77bf65f0429.jpg",
+      "sha256": "ecf40375765be8355b11a7395253d9b32f2d4c07ce5659a0446fd77bf65f0429",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-07-24/3edcc2d3-2c46-42a4-a377-090cc4189db4.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-07-24/3edcc2d3-2c46-42a4-a377-090cc4189db4.jpg",
+      "token": "migration-resource://b3e30940d70a7d230c8c375075560aa2b7eac5f30d46d78a97e38cc3d4b3728d",
+      "snapshotPath": "assets/b3e30940d70a7d230c8c375075560aa2b7eac5f30d46d78a97e38cc3d4b3728d.jpg",
+      "sha256": "b3e30940d70a7d230c8c375075560aa2b7eac5f30d46d78a97e38cc3d4b3728d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-07-24/10dab9ac-9874-468f-995f-0272de2fefe5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-07-24/10dab9ac-9874-468f-995f-0272de2fefe5.jpg",
+      "token": "migration-resource://7c20b93be44d1996ab1e287ebc02a60c7d57999b18f28938c3072d6ce450eab6",
+      "snapshotPath": "assets/7c20b93be44d1996ab1e287ebc02a60c7d57999b18f28938c3072d6ce450eab6.jpg",
+      "sha256": "7c20b93be44d1996ab1e287ebc02a60c7d57999b18f28938c3072d6ce450eab6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "69a4aee77eb944e45b2a9a63f9c53adeed62d4a7942fd8375bddfb43a67c1a78",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "关于举办“百校对百县”促就业行动暨吉林省2025届离校未就业高校毕业生网络专场招聘活动的通知",
+    "listPublishDate": "2025-07-24",
+    "sourceOrder": 32,
+    "detailPublishDate": "2025-07-24"
+  }
+}

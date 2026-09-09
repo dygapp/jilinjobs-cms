@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:91b14b3b6e6ae445d20bbaf82b3855d4daea95bd65884ba933704d8e25b6df76",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Kt69Uw9ydr6uCyj9DGFekA",
+    "url": "https://mp.weixin.qq.com/s/Kt69Uw9ydr6uCyj9DGFekA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“职引未来 筑梦吉林”服务吉林高质量发展——2025年吉林省高校毕业生专项招聘行动（师范专场）在吉林师范大学举行",
+    "source": "",
+    "publishDate": "2025-11-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Kt69Uw9ydr6uCyj9DGFekA"
+  },
+  "resources": [],
+  "sourceFingerprint": "021e0cce7100dfae639456196c0beaeffc84fd80199961eabca2a86559d6f2f7",
+  "evidence": {
+    "listPage": 61,
+    "listTitle": "“职引未来 筑梦吉林”服务吉林高质量发展——2025年吉林省高校毕业生专项招聘行动（师范专场）在吉林师范大学举行",
+    "listPublishDate": "2025-11-10",
+    "sourceOrder": 609
+  }
+}

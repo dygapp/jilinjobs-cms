@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:b820a8b8134267d50fc6096e8d35ea9f62a5cfb2978cd767ee1bd2707975975c",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/boX_OCz7jB8qb1KVCIUoLQ",
+    "url": "https://mp.weixin.qq.com/s/boX_OCz7jB8qb1KVCIUoLQ"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "提升高校学生就业能力，教育部“双千”计划来了",
+    "source": "",
+    "publishDate": "2025-03-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/boX_OCz7jB8qb1KVCIUoLQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "bd7020bef796eb9a7958afe82cb6c098b40abdfda175e177b897ced54629e1a6",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "提升高校学生就业能力，教育部“双千”计划来了",
+    "listPublishDate": "2025-03-17",
+    "sourceOrder": 58
+  }
+}

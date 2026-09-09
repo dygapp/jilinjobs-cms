@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:4a4be330a21b8d084390d5e649ada3cbf3ff94eed3e8bfd3fb7a0d9c1c956b24",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/gg/202601/t20260129_9410018.html",
+    "url": "https://hrss.jl.gov.cn/gg/202601/t20260129_9410018.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2026年吉林省省直事业单位公开招聘工作人员（含专项招聘高校毕业生）公告（1号）",
+    "source": "",
+    "publishDate": "2026-02-02",
+    "bodyHtml": "",
+    "externalUrl": "https://hrss.jl.gov.cn/gg/202601/t20260129_9410018.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "791b44b31e52722901717eec9c5bb37e78d8d13a808ca2b7916f06b297d826b6",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "2026年吉林省省直事业单位公开招聘工作人员（含专项招聘高校毕业生）公告（1号）",
+    "listPublishDate": "2026-02-02",
+    "sourceOrder": 74
+  }
+}

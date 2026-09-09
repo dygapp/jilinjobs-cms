@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122144",
+    "contentId": "28737783122144",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122144"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省高校就业创业指导教师培训圆满结束",
+    "source": "",
+    "publishDate": "2015-07-01",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省高校就业创业指导教师培训圆满结束</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2015-7-1 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"font-size: 20px;\">&nbsp;&nbsp;&nbsp; 为加强我省高校就业创业指导师资队伍建设，提高高校就业创业指导教师教学水平，省高校毕业生就业指导中心于6月份举办了3期吉林省高校就业创业指导师培训班，总计培训172人，涵盖全省60所高校。<br>&nbsp;&nbsp;&nbsp; 通过培训结束的调查问卷结果显示，参培教师一致认为，此次培训组织及时，课程安排合理，实用性强，受益匪浅。</span></p><p style=\"text-align: center;\"><img title=\"四班教室（中心三楼301）正在在上课  (9).JPG\" src=\"migration-resource://636a6c361697d532071077bacec16db79d2011a4391ae583eeb1175a159dc3de\"></p><p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357134511470325006242029.JPG",
+      "originalReference": "/chistory/cms/imgs/6357134511470325006242029.JPG",
+      "token": "migration-resource://636a6c361697d532071077bacec16db79d2011a4391ae583eeb1175a159dc3de",
+      "snapshotPath": "assets/636a6c361697d532071077bacec16db79d2011a4391ae583eeb1175a159dc3de.jpg",
+      "sha256": "636a6c361697d532071077bacec16db79d2011a4391ae583eeb1175a159dc3de",
+      "contentType": "image/jpeg",
+      "sizeBytes": 169971
+    }
+  ],
+  "sourceFingerprint": "158b58912501c9478e18786962ba312f256a22be6176a927257713db59fd6da8",
+  "evidence": {
+    "listPage": 157,
+    "listTitle": "吉林省高校就业创业指导教师培训圆满结束",
+    "listPublishDate": "2015-07-01",
+    "sourceOrder": 1568,
+    "detailPublishDate": "2015-07-01"
+  }
+}

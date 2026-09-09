@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c37ed363fe261d881850e92b2017c8ef4d8b2531457b7965443b26ad4936b58c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/5Y-XaqLGT_W2W2PaggvrzQ",
+    "url": "https://mp.weixin.qq.com/s/5Y-XaqLGT_W2W2PaggvrzQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春金融高等专科学校召开2025年学生就业工作委员会第二次会议暨2026届毕业生就业创业工作部署会",
+    "source": "",
+    "publishDate": "2025-12-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5Y-XaqLGT_W2W2PaggvrzQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "06adf517eb52969d0c948a2b691a34366f4a5db997c40e930e27e531ec90c375",
+  "evidence": {
+    "listPage": 55,
+    "listTitle": "长春金融高等专科学校召开2025年学生就业工作委员会第二次会议暨2026届毕业生就业创业工作部署会",
+    "listPublishDate": "2025-12-12",
+    "sourceOrder": 548
+  }
+}

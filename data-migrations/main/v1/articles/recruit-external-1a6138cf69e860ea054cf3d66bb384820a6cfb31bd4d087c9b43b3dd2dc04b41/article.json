@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:1a6138cf69e860ea054cf3d66bb384820a6cfb31bd4d087c9b43b3dd2dc04b41",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/zw_1910/tzgg/202010/t20201013_169253.html",
+    "url": "http://www.hunchun.gov.cn/zw_1910/tzgg/202010/t20201013_169253.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年珲春市事业单位公开招聘工作人员（含专项招聘高校毕业生）面试通知",
+    "source": "",
+    "publishDate": "2020-11-05",
+    "bodyHtml": "",
+    "externalUrl": "http://www.hunchun.gov.cn/zw_1910/tzgg/202010/t20201013_169253.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "3db0fda87b0ed1032d08f6040eb7491e42e86d73344cbcd4886b21372d4cdbec",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "2020年珲春市事业单位公开招聘工作人员（含专项招聘高校毕业生）面试通知",
+    "listPublishDate": "2020-11-05",
+    "sourceOrder": 367
+  }
+}

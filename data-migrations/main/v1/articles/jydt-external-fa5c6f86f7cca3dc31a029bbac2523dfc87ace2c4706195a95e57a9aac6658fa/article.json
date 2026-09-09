@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fa5c6f86f7cca3dc31a029bbac2523dfc87ace2c4706195a95e57a9aac6658fa",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/j0cst3DABUyr5iBtcZ8c-g",
+    "url": "https://mp.weixin.qq.com/s/j0cst3DABUyr5iBtcZ8c-g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "共商产教融合 聚力低空运营——吉林通用航空职业技术学院与京东集团开展校企合作专项洽谈",
+    "source": "",
+    "publishDate": "2026-05-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/j0cst3DABUyr5iBtcZ8c-g"
+  },
+  "resources": [],
+  "sourceFingerprint": "d3b3509bdf558333a837b01099a713f618e05ee59914aa21c38a2b3eb09d274e",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "共商产教融合 聚力低空运营——吉林通用航空职业技术学院与京东集团开展校企合作专项洽谈",
+    "listPublishDate": "2026-05-19",
+    "sourceOrder": 164
+  }
+}

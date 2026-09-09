@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8a0b6b39da40bbceba86dd71b0fb4d50dd39013d9a1f7fe91aab3be8cbdc1503",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Zxjlf-LWQkFnoG8Ys3V8dQ",
+    "url": "https://mp.weixin.qq.com/s/Zxjlf-LWQkFnoG8Ys3V8dQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化医药健康职业学院与修正药业集团共商产教融合，聚力打造通化医药人才培养新平台",
+    "source": "",
+    "publishDate": "2025-11-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Zxjlf-LWQkFnoG8Ys3V8dQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "10097f7eaa3b14d8d46fb89ec5af60ecfe76a728738557fb96eadaef3a86607e",
+  "evidence": {
+    "listPage": 64,
+    "listTitle": "通化医药健康职业学院与修正药业集团共商产教融合，聚力打造通化医药人才培养新平台",
+    "listPublishDate": "2025-11-03",
+    "sourceOrder": 635
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a1b28b47a695cb0ece819123295bfa84bd96619a40b678b40af14f7130a87d14",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ABW8miWBfUIjxRuMa7G3Yw",
+    "url": "https://mp.weixin.qq.com/s/ABW8miWBfUIjxRuMa7G3Yw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力扩容提质 服务高质量发展 | 长春汽车职业技术大学成功举办2026年校园双选会",
+    "source": "",
+    "publishDate": "2026-06-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ABW8miWBfUIjxRuMa7G3Yw"
+  },
+  "resources": [],
+  "sourceFingerprint": "2b8f177e0d19356e77bc9808ba57e2a94907e60157a2447a6c67c237f261a322",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "聚力扩容提质 服务高质量发展 | 长春汽车职业技术大学成功举办2026年校园双选会",
+    "listPublishDate": "2026-06-29",
+    "sourceOrder": 65
+  }
+}

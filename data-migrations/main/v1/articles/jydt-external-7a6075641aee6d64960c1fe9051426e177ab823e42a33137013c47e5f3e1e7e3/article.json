@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7a6075641aee6d64960c1fe9051426e177ab823e42a33137013c47e5f3e1e7e3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/bM76U_keSAo5wyn4ZQ2wfA",
+    "url": "https://mp.weixin.qq.com/s/bM76U_keSAo5wyn4ZQ2wfA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 ‘就’在吉林”医药卫生人才专场招聘会在白城医学高等专科学校成功举办",
+    "source": "",
+    "publishDate": "2024-04-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/bM76U_keSAo5wyn4ZQ2wfA"
+  },
+  "resources": [],
+  "sourceFingerprint": "39a8ecc4eefecbd332d2fff0b48242cd21da482a44264f79962b32809bfeb4dd",
+  "evidence": {
+    "listPage": 109,
+    "listTitle": "“创业奋斗 ‘就’在吉林”医药卫生人才专场招聘会在白城医学高等专科学校成功举办",
+    "listPublishDate": "2024-04-15",
+    "sourceOrder": 1084
+  }
+}

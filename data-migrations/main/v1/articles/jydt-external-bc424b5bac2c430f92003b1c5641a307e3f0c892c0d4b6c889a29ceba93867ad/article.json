@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bc424b5bac2c430f92003b1c5641a307e3f0c892c0d4b6c889a29ceba93867ad",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Rz_R7DtTEgLnpy7pHFxlGQ",
+    "url": "https://mp.weixin.qq.com/s/Rz_R7DtTEgLnpy7pHFxlGQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "松原职业技术学院再度举办毕业生就业创业校园专场招聘会",
+    "source": "",
+    "publishDate": "2025-06-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Rz_R7DtTEgLnpy7pHFxlGQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "5e5156f0822736b91cb1ba0644f0584cac8f0fd19834d00519f2b687107c7b11",
+  "evidence": {
+    "listPage": 80,
+    "listTitle": "松原职业技术学院再度举办毕业生就业创业校园专场招聘会",
+    "listPublishDate": "2025-06-18",
+    "sourceOrder": 798
+  }
+}

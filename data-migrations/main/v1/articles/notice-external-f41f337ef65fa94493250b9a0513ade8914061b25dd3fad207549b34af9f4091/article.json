@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:f41f337ef65fa94493250b9a0513ade8914061b25dd3fad207549b34af9f4091",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/www/detail",
+    "url": "http://smart.jilinjobs.cn/www/detail?id=5f1168a2588fcd6e83d64f3d"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "关于印发《吉林省2020年农村义务教育阶段学校特设岗位教师招聘办法》的通知",
+    "source": "",
+    "publishDate": "2020-07-17",
+    "bodyHtml": "",
+    "externalUrl": "http://smart.jilinjobs.cn/www/detail?id=5f1168a2588fcd6e83d64f3d"
+  },
+  "resources": [],
+  "sourceFingerprint": "97067f9a824ea37a8718546b319898ad7dae9a892f13fb06f7ba41b6c197eaf5",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "关于印发《吉林省2020年农村义务教育阶段学校特设岗位教师招聘办法》的通知",
+    "listPublishDate": "2020-07-17",
+    "sourceOrder": 182
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:628008a57f70b689f3f0b48dd4943402162a008e98e8ee6fd8b7b5d322635512",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/wggay_xdam7izo-9nj6k0A",
+    "url": "https://mp.weixin.qq.com/s/wggay_xdam7izo-9nj6k0A"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春农商银行招聘",
+    "source": "",
+    "publishDate": "2022-06-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wggay_xdam7izo-9nj6k0A"
+  },
+  "resources": [],
+  "sourceFingerprint": "35bcb14e2679208667b59a3ab278bb338b2016b3bd4adca7212c5c14853ecb45",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "长春农商银行招聘",
+    "listPublishDate": "2022-06-16",
+    "sourceOrder": 345
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:459d7e2c182c3a6312232c8941e38c1c2185522a7f04ef216b66e69ffaa79546",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/_Fku-S1T1FvssjWicEwM6Q",
+    "url": "https://mp.weixin.qq.com/s/_Fku-S1T1FvssjWicEwM6Q?scene=25&sessionid=-1368159376"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务吉林高质量发展系列活动 “吉聚人才 职引未来” —长春工业大学北湖东区联合体专场招聘会邀请函",
+    "source": "",
+    "publishDate": "2025-04-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_Fku-S1T1FvssjWicEwM6Q?scene=25&sessionid=-1368159376"
+  },
+  "resources": [],
+  "sourceFingerprint": "a247224f26b00bc678ce5ef6e5bfaa5bec74b86ec199793693d4b8ae111a65ff",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "服务吉林高质量发展系列活动 “吉聚人才 职引未来” —长春工业大学北湖东区联合体专场招聘会邀请函",
+    "listPublishDate": "2025-04-10",
+    "sourceOrder": 187
+  }
+}

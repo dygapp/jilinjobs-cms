@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2d9ac1fb086e3cd646f24ac0932c0fb0e77bc0a10dbe30eb19f34fcfb28e7fd9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/_wyFH44r7jnFT8sItUc8iQ",
+    "url": "https://mp.weixin.qq.com/s/_wyFH44r7jnFT8sItUc8iQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业 协同育人谱新篇——长春电子科技学院党委书记汪洋带队赴企业开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-04-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_wyFH44r7jnFT8sItUc8iQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "921c1995efbcf7ef05f71ede690829e4ee5f531291da1ff2d56916ccd2a43c8a",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "访企拓岗促就业 协同育人谱新篇——长春电子科技学院党委书记汪洋带队赴企业开展访企拓岗促就业专项行动",
+    "listPublishDate": "2026-04-29",
+    "sourceOrder": 227
+  }
+}

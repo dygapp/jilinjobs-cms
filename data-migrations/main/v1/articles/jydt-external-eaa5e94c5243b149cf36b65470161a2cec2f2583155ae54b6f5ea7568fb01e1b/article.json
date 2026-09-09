@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:eaa5e94c5243b149cf36b65470161a2cec2f2583155ae54b6f5ea7568fb01e1b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/cn1hWqQcS54PpJRrLhbH9Q",
+    "url": "https://mp.weixin.qq.com/s/cn1hWqQcS54PpJRrLhbH9Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春财经学院召开2026届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2026-03-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/cn1hWqQcS54PpJRrLhbH9Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "1bfecee95aa8c7ca1eece371bda38c84b5cf35ed84d1692518c077db3a6c472a",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "长春财经学院召开2026届毕业生就业工作推进会",
+    "listPublishDate": "2026-03-16",
+    "sourceOrder": 417
+  }
+}

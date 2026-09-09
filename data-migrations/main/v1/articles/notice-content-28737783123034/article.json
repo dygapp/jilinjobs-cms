@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783123034",
+    "contentId": "28737783123034",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123034"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅、人力资源社会保障部办公厅关于2011年联合举办高校毕业生网上招聘活动的通知",
+    "source": "",
+    "publishDate": "2011-03-22",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部办公厅、人力资源社会保障部办公厅关于2011年联合举办高校毕业生网上招聘活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-3-22 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img height=\"876\" src=\"migration-resource://14f8d8cb2c40d53c2df6a9f80e0176bb44ef66ff9b1e6e8b5bc04c467f1b60f0\" width=\"615\" border=\"0\"><img height=\"876\" src=\"migration-resource://8af0c4a3e9bbc993d4e4f9e7ef0c3149bd5055dd09dae21a3602250cd9d1a0e1\" width=\"615\" border=\"0\"><img height=\"876\" src=\"migration-resource://e5bbe5f762719d675b12a7a6729d6995686cc2bb8b4aceee9a347accbbde51c2\" width=\"615\" border=\"0\"><img height=\"876\" src=\"migration-resource://939ed3ced77327137a793fcb7b35146893231c5a87364cf9429836fa110724ec\" width=\"615\" border=\"0\"><img height=\"876\" src=\"migration-resource://e8b47736822e1ed782e867f1190a37c982095db66d38f729c4360811335f6e41\" width=\"615\" border=\"0\"><img height=\"876\" src=\"migration-resource://9bf32de1b5a3f3f4c8e9bf0680955931117617cf703d654d1dabe8d85a1e2db0\" width=\"615\" border=\"0\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110322090950540.jpg",
+      "originalReference": "/chistory/cms/imgs/20110322090950540.jpg",
+      "token": "migration-resource://14f8d8cb2c40d53c2df6a9f80e0176bb44ef66ff9b1e6e8b5bc04c467f1b60f0",
+      "snapshotPath": "assets/14f8d8cb2c40d53c2df6a9f80e0176bb44ef66ff9b1e6e8b5bc04c467f1b60f0.jpg",
+      "sha256": "14f8d8cb2c40d53c2df6a9f80e0176bb44ef66ff9b1e6e8b5bc04c467f1b60f0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 69384
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110322090959776.jpg",
+      "originalReference": "/chistory/cms/imgs/20110322090959776.jpg",
+      "token": "migration-resource://8af0c4a3e9bbc993d4e4f9e7ef0c3149bd5055dd09dae21a3602250cd9d1a0e1",
+      "snapshotPath": "assets/8af0c4a3e9bbc993d4e4f9e7ef0c3149bd5055dd09dae21a3602250cd9d1a0e1.jpg",
+      "sha256": "8af0c4a3e9bbc993d4e4f9e7ef0c3149bd5055dd09dae21a3602250cd9d1a0e1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 63265
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110322091007697.jpg",
+      "originalReference": "/chistory/cms/imgs/20110322091007697.jpg",
+      "token": "migration-resource://e5bbe5f762719d675b12a7a6729d6995686cc2bb8b4aceee9a347accbbde51c2",
+      "snapshotPath": "assets/e5bbe5f762719d675b12a7a6729d6995686cc2bb8b4aceee9a347accbbde51c2.jpg",
+      "sha256": "e5bbe5f762719d675b12a7a6729d6995686cc2bb8b4aceee9a347accbbde51c2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 70915
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110322091019458.jpg",
+      "originalReference": "/chistory/cms/imgs/20110322091019458.jpg",
+      "token": "migration-resource://939ed3ced77327137a793fcb7b35146893231c5a87364cf9429836fa110724ec",
+      "snapshotPath": "assets/939ed3ced77327137a793fcb7b35146893231c5a87364cf9429836fa110724ec.jpg",
+      "sha256": "939ed3ced77327137a793fcb7b35146893231c5a87364cf9429836fa110724ec",
+      "contentType": "image/jpeg",
+      "sizeBytes": 89203
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110322091047893.jpg",
+      "originalReference": "/chistory/cms/imgs/20110322091047893.jpg",
+      "token": "migration-resource://e8b47736822e1ed782e867f1190a37c982095db66d38f729c4360811335f6e41",
+      "snapshotPath": "assets/e8b47736822e1ed782e867f1190a37c982095db66d38f729c4360811335f6e41.jpg",
+      "sha256": "e8b47736822e1ed782e867f1190a37c982095db66d38f729c4360811335f6e41",
+      "contentType": "image/jpeg",
+      "sizeBytes": 66288
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110322091059736.jpg",
+      "originalReference": "/chistory/cms/imgs/20110322091059736.jpg",
+      "token": "migration-resource://9bf32de1b5a3f3f4c8e9bf0680955931117617cf703d654d1dabe8d85a1e2db0",
+      "snapshotPath": "assets/9bf32de1b5a3f3f4c8e9bf0680955931117617cf703d654d1dabe8d85a1e2db0.jpg",
+      "sha256": "9bf32de1b5a3f3f4c8e9bf0680955931117617cf703d654d1dabe8d85a1e2db0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 44010
+    }
+  ],
+  "sourceFingerprint": "b3fa29798b8ecbf5f353467009c4c61cafd0bf7a1736437d55a6739e4a594747",
+  "evidence": {
+    "listPage": 45,
+    "listTitle": "教育部办公厅、人力资源社会保障部办公厅关于2011年联合举办高校毕业生网上招聘活动的通知",
+    "listPublishDate": "2011-03-22",
+    "sourceOrder": 448,
+    "detailPublishDate": "2011-03-22"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:84311e96821c51b3e77d31c9b2c15e95e053bc853233bfc1a5a2942818ce2ed8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/gh8dEcQDcCHkege6R8QBHw",
+    "url": "https://mp.weixin.qq.com/s/gh8dEcQDcCHkege6R8QBHw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范高等专科学校召开2026届毕业生就业工作部署会",
+    "source": "",
+    "publishDate": "2025-11-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gh8dEcQDcCHkege6R8QBHw"
+  },
+  "resources": [],
+  "sourceFingerprint": "ec65bce2460cd055b9a394299774ead76c06508cbecaa606fbbd8597f85080b8",
+  "evidence": {
+    "listPage": 59,
+    "listTitle": "长春师范高等专科学校召开2026届毕业生就业工作部署会",
+    "listPublishDate": "2025-11-20",
+    "sourceOrder": 585
+  }
+}

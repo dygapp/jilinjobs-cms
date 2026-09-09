@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:00d9fadcb53ee0490ef804ca5b18dd965e2b648e9638f59484be158944eb10a7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/EjV06mMwjhecWhMxiTxvJw",
+    "url": "https://mp.weixin.qq.com/s/EjV06mMwjhecWhMxiTxvJw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "农技赋能 职引未来∣吉林工程职业学院举行服务吉林高质量发展涉农类专场招聘会",
+    "source": "",
+    "publishDate": "2025-05-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/EjV06mMwjhecWhMxiTxvJw"
+  },
+  "resources": [],
+  "sourceFingerprint": "19946de794b586ae64196a202d3f41d26bfa81eec342e6d0be51d3fa4192050b",
+  "evidence": {
+    "listPage": 88,
+    "listTitle": "农技赋能 职引未来∣吉林工程职业学院举行服务吉林高质量发展涉农类专场招聘会",
+    "listPublishDate": "2025-05-20",
+    "sourceOrder": 879
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:75114179dc55599aa3569c1443137077b75fea7f069d20d4f8e83798f336ebed",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/AlvovWuCvIREkvjJGtkE3w",
+    "url": "https://mp.weixin.qq.com/s/AlvovWuCvIREkvjJGtkE3w"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力扩容提质 服务高质量发展 —吉林省高校毕业生涉农类专场招聘暨吉林工程职业学院2026年春季\"百企入校\"人才双选会",
+    "source": "",
+    "publishDate": "2026-05-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/AlvovWuCvIREkvjJGtkE3w"
+  },
+  "resources": [],
+  "sourceFingerprint": "47d9a7c94233ea368bc00f989ddb5c9c68d59e3f4f10a9944b63b0e56991720a",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "聚力扩容提质 服务高质量发展 —吉林省高校毕业生涉农类专场招聘暨吉林工程职业学院2026年春季\"百企入校\"人才双选会",
+    "listPublishDate": "2026-05-07",
+    "sourceOrder": 34
+  }
+}

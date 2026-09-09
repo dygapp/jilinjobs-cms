@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:04b11c958c12434c5376e1e292432b53276f918eb5d0787a301f97a1c498721e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Mp-dWf6PWCGTE-6WPxCJ7Q",
+    "url": "https://mp.weixin.qq.com/s/Mp-dWf6PWCGTE-6WPxCJ7Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长白山职业技术学院丨精准对接强合作 访企拓岗促共赢——健康水学院赴延边州开展矿泉水企业走访调研",
+    "source": "",
+    "publishDate": "2026-01-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Mp-dWf6PWCGTE-6WPxCJ7Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "ac14b5420111a1ad6567d320e4a7b69336c1b706125c2ce5dba86e61534d487a",
+  "evidence": {
+    "listPage": 48,
+    "listTitle": "长白山职业技术学院丨精准对接强合作 访企拓岗促共赢——健康水学院赴延边州开展矿泉水企业走访调研",
+    "listPublishDate": "2026-01-26",
+    "sourceOrder": 480
+  }
+}

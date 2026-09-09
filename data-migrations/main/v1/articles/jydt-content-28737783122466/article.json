@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122466",
+    "contentId": "28737783122466",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122466"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "银川市：创业培训不“走过场”走展台",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">银川市：创业培训不“走过场”走展台</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 【解说】３月３１日上午，一场名为\"自强闯出新天地·巧手绘就新生活\"的创业培训成果展示会在宁夏银川市金凤区举行。模特手中精美的串珠工艺品、巧妙的手工掐丝画，以及新颖的发型和美甲设计吸引了不少市民前来观看。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 【同期】宁夏银川市金凤区创业办公室主任　章玉明 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 我们创业成果（展示）有一个特色，我们一改过去用展板展示的那种老模式。我们用更加生动的（方式），现场的成果展示，模特走秀，还有一些实物的展览销售，经验的介绍，更生动地向广大群众介绍创业的成果。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 【解说】据了解，银川市金凤区根据辖区下岗、失业妇女较多的特点，有针对性地举办了插花培训、手工编制培训、美容美发培训和餐饮服务培训等投资少、风险小、从业灵活、适合妇女操作的创业项目培训班。通过创业经验交流、现场观摩、外出参观等多种形式，引导、帮助创业者实实在在地提高创业能力和水平，让创业培训不走过场不走形式。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 新华社记者李佳银川报道。<br>&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "77add2ca4e2dec49da5b2b26290e4ebf504a825088ec41d4d79b625d2b984f18",
+  "evidence": {
+    "listPage": 188,
+    "listTitle": "银川市：创业培训不“走过场”走展台",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1880,
+    "detailPublishDate": "2009-04-04"
+  }
+}

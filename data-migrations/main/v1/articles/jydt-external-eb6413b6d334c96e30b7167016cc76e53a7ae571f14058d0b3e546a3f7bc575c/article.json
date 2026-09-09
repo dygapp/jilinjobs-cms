@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:eb6413b6d334c96e30b7167016cc76e53a7ae571f14058d0b3e546a3f7bc575c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/lgxw2026/8fed86b83e1e46bd8e5ce8fd71825ef2.htm",
+    "url": "https://www.cust.edu.cn/lgxw2026/8fed86b83e1e46bd8e5ce8fd71825ef2.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春理工大学举办“文心筑梦、职启新程”2026届文科类毕业生就业洽谈会",
+    "source": "",
+    "publishDate": "2026-05-21",
+    "bodyHtml": "",
+    "externalUrl": "https://www.cust.edu.cn/lgxw2026/8fed86b83e1e46bd8e5ce8fd71825ef2.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "171c5d2436c45d3b47feef0b25b127d624b0f14df35c6a3f1cca12013866746d",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "长春理工大学举办“文心筑梦、职启新程”2026届文科类毕业生就业洽谈会",
+    "listPublishDate": "2026-05-21",
+    "sourceOrder": 157
+  }
+}

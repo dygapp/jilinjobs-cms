@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f4e45c74af05db37ccece5542e8b858ef23f7496ec4ef69b6b16990ca6a3c0fb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/K4ZucsiUaGSJkQTOdQKF2Q",
+    "url": "https://mp.weixin.qq.com/s/K4ZucsiUaGSJkQTOdQKF2Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2025年“长聚学子·春城暖才”宣讲活动走进吉林财经大学",
+    "source": "",
+    "publishDate": "2025-05-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/K4ZucsiUaGSJkQTOdQKF2Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "8356f50d5ff316606b12b3fad780c71d3555a6fd81b582bbd6f12ed740b9fa35",
+  "evidence": {
+    "listPage": 91,
+    "listTitle": "2025年“长聚学子·春城暖才”宣讲活动走进吉林财经大学",
+    "listPublishDate": "2025-05-13",
+    "sourceOrder": 903
+  }
+}

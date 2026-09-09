@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e3999e683c3f908834a01293ec6cee05473715c7e89aeb24f765143eb0c6afb1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/yp14FVV9SZugpIOark4VHw",
+    "url": "https://mp.weixin.qq.com/s/yp14FVV9SZugpIOark4VHw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促合作 协同育人谋新篇丨长春财经学院赴明泽学校开展考察交流活动",
+    "source": "",
+    "publishDate": "2026-05-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/yp14FVV9SZugpIOark4VHw"
+  },
+  "resources": [],
+  "sourceFingerprint": "149bde6952e7388b9a7ccf486e85b8920537d01a2ab3d24176eba7c36624f515",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "访企拓岗促合作 协同育人谋新篇丨长春财经学院赴明泽学校开展考察交流活动",
+    "listPublishDate": "2026-05-29",
+    "sourceOrder": 123
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:90667604787200",
+    "contentId": "90667604787200",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=90667604787200"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展吉林省第五届大学生就业创业人物事迹征集活动的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2022-05-16",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"913\" src=\"migration-resource://7da7e3c6c818b0249d1f0c3e643d2681b261531af9adb13f903ad978a9fa717b\" width=\"790\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"919\" src=\"migration-resource://0aa883d80c4ec4c6a2bb572b8472f68acddc09e1e2610f56191472559c786784\" width=\"789\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"921\" src=\"migration-resource://5141336e3fa827e6e46db3fe218c7a464a8599526fef03f488717901e3a5a468\" width=\"790\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"911\" src=\"migration-resource://a8c7b9c324b4c5631710d3c4d82ca8580e045f646f6810167fd580cc03267ca9\" width=\"790\"></p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-16/1da36955-6eec-47fc-9d41-af5feeae49d7.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-16/1da36955-6eec-47fc-9d41-af5feeae49d7.jpg",
+      "token": "migration-resource://7da7e3c6c818b0249d1f0c3e643d2681b261531af9adb13f903ad978a9fa717b",
+      "snapshotPath": "assets/7da7e3c6c818b0249d1f0c3e643d2681b261531af9adb13f903ad978a9fa717b.jpg",
+      "sha256": "7da7e3c6c818b0249d1f0c3e643d2681b261531af9adb13f903ad978a9fa717b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 76678
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-16/ac0073e8-2176-4091-ac01-38b6e418dcf8.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-16/ac0073e8-2176-4091-ac01-38b6e418dcf8.jpg",
+      "token": "migration-resource://0aa883d80c4ec4c6a2bb572b8472f68acddc09e1e2610f56191472559c786784",
+      "snapshotPath": "assets/0aa883d80c4ec4c6a2bb572b8472f68acddc09e1e2610f56191472559c786784.jpg",
+      "sha256": "0aa883d80c4ec4c6a2bb572b8472f68acddc09e1e2610f56191472559c786784",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92397
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-16/25cc7408-8ed6-4661-b5b7-95fe0574bdff.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-16/25cc7408-8ed6-4661-b5b7-95fe0574bdff.jpg",
+      "token": "migration-resource://5141336e3fa827e6e46db3fe218c7a464a8599526fef03f488717901e3a5a468",
+      "snapshotPath": "assets/5141336e3fa827e6e46db3fe218c7a464a8599526fef03f488717901e3a5a468.jpg",
+      "sha256": "5141336e3fa827e6e46db3fe218c7a464a8599526fef03f488717901e3a5a468",
+      "contentType": "image/jpeg",
+      "sizeBytes": 68255
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-16/a70395de-22bf-43b1-9afd-0e9a55fbfb43.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-16/a70395de-22bf-43b1-9afd-0e9a55fbfb43.jpg",
+      "token": "migration-resource://a8c7b9c324b4c5631710d3c4d82ca8580e045f646f6810167fd580cc03267ca9",
+      "snapshotPath": "assets/a8c7b9c324b4c5631710d3c4d82ca8580e045f646f6810167fd580cc03267ca9.jpg",
+      "sha256": "a8c7b9c324b4c5631710d3c4d82ca8580e045f646f6810167fd580cc03267ca9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 40595
+    }
+  ],
+  "sourceFingerprint": "95a437e8ac5f88f8f0bf5f84d7f56872d03c562fa707d6e5116656543d3a1973",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "关于开展吉林省第五届大学生就业创业人物事迹征集活动的通知",
+    "listPublishDate": "2022-05-16",
+    "sourceOrder": 127,
+    "detailPublishDate": "2022-05-16"
+  }
+}

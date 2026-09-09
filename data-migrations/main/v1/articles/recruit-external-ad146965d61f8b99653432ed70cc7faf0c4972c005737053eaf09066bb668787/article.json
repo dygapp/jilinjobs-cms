@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:ad146965d61f8b99653432ed70cc7faf0c4972c005737053eaf09066bb668787",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/art/2021/10/21/art_1229092282_59045112.html",
+    "url": "http://www.ninghai.gov.cn/art/2021/10/21/art_1229092282_59045112.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2022年宁海县教育局下属事业单位招聘高学历和高层次人才的公告",
+    "source": "",
+    "publishDate": "2021-10-25",
+    "bodyHtml": "",
+    "externalUrl": "http://www.ninghai.gov.cn/art/2021/10/21/art_1229092282_59045112.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "b6e3a55389afb56c02c4f04e5d2fd63917bca4299e448c798901be7403ef6e01",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "2022年宁海县教育局下属事业单位招聘高学历和高层次人才的公告",
+    "listPublishDate": "2021-10-25",
+    "sourceOrder": 353
+  }
+}

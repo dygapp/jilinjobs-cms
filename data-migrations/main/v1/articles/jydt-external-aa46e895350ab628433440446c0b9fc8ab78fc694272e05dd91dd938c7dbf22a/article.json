@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:aa46e895350ab628433440446c0b9fc8ab78fc694272e05dd91dd938c7dbf22a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/_l3rDj1qglLRDNKxHrvjUg",
+    "url": "https://mp.weixin.qq.com/s/_l3rDj1qglLRDNKxHrvjUg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "第三届全国大学生职业规划大赛（吉林赛区）颁奖典礼成功举办",
+    "source": "",
+    "publishDate": "2026-03-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_l3rDj1qglLRDNKxHrvjUg"
+  },
+  "resources": [],
+  "sourceFingerprint": "5e1e3996ec4ced177ca8166baaffdeb69ddf369503986e5dadc88c55619a68b9",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "第三届全国大学生职业规划大赛（吉林赛区）颁奖典礼成功举办",
+    "listPublishDate": "2026-03-11",
+    "sourceOrder": 428
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:39eef53063344bdb83c7fe033240561753c88dd45ee53c7e98d6248722039cda",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/-93ihCaAKad79yvd9nfCxQ",
+    "url": "https://mp.weixin.qq.com/s/-93ihCaAKad79yvd9nfCxQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "精准对接促就业 多方合力育英才——吉林交通职业技术学院秋季招聘活动成效显著",
+    "source": "",
+    "publishDate": "2025-11-05",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/-93ihCaAKad79yvd9nfCxQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "8e54c6b69dbe8b6904f5a120c837a364004fdfda82fd1cff2cc6977a988fca2b",
+  "evidence": {
+    "listPage": 63,
+    "listTitle": "精准对接促就业 多方合力育英才——吉林交通职业技术学院秋季招聘活动成效显著",
+    "listPublishDate": "2025-11-05",
+    "sourceOrder": 626
+  }
+}

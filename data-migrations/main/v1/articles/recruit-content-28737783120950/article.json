@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783120950",
+    "contentId": "28737783120950",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120950"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "江门市事业单位进校园现场招聘公告（2016年第四季度）",
+    "source": "",
+    "publishDate": "2016-11-01",
+    "bodyHtml": "\n                        暂无内容\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "ad86ebe13ce5db526c5bef0ae14774fc1a8244e327b02395a4357281591789d6",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "江门市事业单位进校园现场招聘公告（2016年第四季度）",
+    "listPublishDate": "2016-11-01",
+    "sourceOrder": 411,
+    "detailPublishDate": "2016-11-01"
+  }
+}

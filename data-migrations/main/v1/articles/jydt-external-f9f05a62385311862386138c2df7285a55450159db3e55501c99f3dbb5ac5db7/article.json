@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f9f05a62385311862386138c2df7285a55450159db3e55501c99f3dbb5ac5db7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/KgRyjR04qxfcWMU76J6beQ",
+    "url": "https://mp.weixin.qq.com/s/KgRyjR04qxfcWMU76J6beQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学党委书记张炳辉带队赴吉林省投资集团有限公司访企拓岗并签署战略合作协议",
+    "source": "",
+    "publishDate": "2026-05-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/KgRyjR04qxfcWMU76J6beQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "007f0f1e5f1d902591d303d2f79c51e298554e04fe23374db9fb15598f2114f7",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "吉林财经大学党委书记张炳辉带队赴吉林省投资集团有限公司访企拓岗并签署战略合作协议",
+    "listPublishDate": "2026-05-14",
+    "sourceOrder": 189
+  }
+}

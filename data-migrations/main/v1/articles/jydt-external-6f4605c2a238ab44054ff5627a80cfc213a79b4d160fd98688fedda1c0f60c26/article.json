@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6f4605c2a238ab44054ff5627a80cfc213a79b4d160fd98688fedda1c0f60c26",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/yCCVe1jZmCvNgczRrP2B7g",
+    "url": "https://mp.weixin.qq.com/s/yCCVe1jZmCvNgczRrP2B7g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学副校长张学武带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/yCCVe1jZmCvNgczRrP2B7g"
+  },
+  "resources": [],
+  "sourceFingerprint": "84ae9f048456f505fcccd2e5037bcfc0354c41d1c866445b1d26c49dc51bf966",
+  "evidence": {
+    "listPage": 39,
+    "listTitle": "延边大学副校长张学武带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-23",
+    "sourceOrder": 384
+  }
+}

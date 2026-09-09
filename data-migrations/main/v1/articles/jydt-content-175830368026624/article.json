@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:175830368026624",
+    "contentId": "175830368026624",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=175830368026624"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林化工学院启动新学期“访企拓岗促就业”专项行动",
+    "source": "吉林化工学院",
+    "publishDate": "2023-03-31",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">为深入贯彻党中央、国务院关于高校毕业生就业工作的决策部署，落实教育部、省教育厅关于开展“访企拓岗促就业”专项行动工作要求，对接企业用人需求，拓宽毕业生就业渠道和资源，3月9日，吉林化工学院党委书记胡越平，党委副书记李士阳，副院长艾学忠等一行5人抵达浙江省温州市，开启学校新一轮“访企拓岗促就业”专项行动。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"335\" src=\"migration-resource://b1fb69439f16476f9a72f681c429adec6595468b3a283f93279fec3da2d986fa\" width=\"650\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">胡越平一行在5天时间里行经温州、宁波、无锡等地，先后走访了人本集团有限公司、浙江伊利康生物技术有限公司、镇海石化建安工程股份有限公司、无锡戴卡轮毂制造有限公司、杜邦兴达（无锡）单丝有限公司、吉利星驱科技有限公司等多家企业，达成人才供需合作意向，同时与宁波镇海区、无锡惠山区等地政府人社部门达成政校合作意向。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"394\" src=\"migration-resource://a36a1d54338237f5a69b31608aaa72dc313a7cbf3f6190eebfe62d7a73c9edfb\" width=\"650\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">在各地调研期间，胡越平等还与各地政、企部门就人才培养、科研合作、产教融合等事宜进行了深入磋商交流。温州、宁波、无锡等地人社部门正在征集用人单位招聘岗位，于近期组团来校开展人才招聘活动，预计吸引企业70余家。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">下一步，学校将连续组织由校领导带队，有关职能部门和教学院组成的“访企拓岗促就业”团队，继续将毕业生就业工作推向深入。</span></span></span></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-29/51e615fd-737c-4ee1-9ca4-28c30c80b373.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-29/51e615fd-737c-4ee1-9ca4-28c30c80b373.jpg",
+      "token": "migration-resource://b1fb69439f16476f9a72f681c429adec6595468b3a283f93279fec3da2d986fa",
+      "snapshotPath": "assets/b1fb69439f16476f9a72f681c429adec6595468b3a283f93279fec3da2d986fa.jpg",
+      "sha256": "b1fb69439f16476f9a72f681c429adec6595468b3a283f93279fec3da2d986fa",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84542
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-29/86411ce8-cb5c-4dec-a102-405e0f5e3e05.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-29/86411ce8-cb5c-4dec-a102-405e0f5e3e05.jpg",
+      "token": "migration-resource://a36a1d54338237f5a69b31608aaa72dc313a7cbf3f6190eebfe62d7a73c9edfb",
+      "snapshotPath": "assets/a36a1d54338237f5a69b31608aaa72dc313a7cbf3f6190eebfe62d7a73c9edfb.jpg",
+      "sha256": "a36a1d54338237f5a69b31608aaa72dc313a7cbf3f6190eebfe62d7a73c9edfb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 104441
+    }
+  ],
+  "sourceFingerprint": "2f10e4d48dbf58a72c55e29f8af804696b1bba2d12dd777014df5f584087d22c",
+  "evidence": {
+    "listPage": 116,
+    "listTitle": "吉林化工学院启动新学期“访企拓岗促就业”专项行动",
+    "listPublishDate": "2023-03-31",
+    "sourceOrder": 1152,
+    "detailPublishDate": "2023-03-31"
+  }
+}

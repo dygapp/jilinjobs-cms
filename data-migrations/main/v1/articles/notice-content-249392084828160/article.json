@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:249392084828160",
+    "contentId": "249392084828160",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=249392084828160"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省高校生涯教育与就业指导体系建设培训班的通知",
+    "source": "",
+    "publishDate": "2024-09-30",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://e056f66e6b36e454415e68b029af3d9cee663fe20e9cb08bf709c2bbd1c9d746\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://2b7feebfe7f05fd428d37c6cdc0f539539dd07c2d779914f63c09c4328ef92be\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://7a12e4684a4fca99ac067f8ed48a2c81dfb243f7eb852447f7b812f9a75c76de\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://b63464b036c541be1a52cd4a5b568240b2a625b483b7475a724ee1382a1381c0\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://419efbb311908a5465e12486db88380469921c5961a1fa89ded57092ba11bbd9\" width=\"900\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-08/a80455fb-9846-4897-89ad-4af0707f552a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-08/a80455fb-9846-4897-89ad-4af0707f552a.jpg",
+      "token": "migration-resource://e056f66e6b36e454415e68b029af3d9cee663fe20e9cb08bf709c2bbd1c9d746",
+      "snapshotPath": "assets/e056f66e6b36e454415e68b029af3d9cee663fe20e9cb08bf709c2bbd1c9d746.jpg",
+      "sha256": "e056f66e6b36e454415e68b029af3d9cee663fe20e9cb08bf709c2bbd1c9d746",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-08/8bc4c1d8-4040-485a-a941-a27be5143735.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-08/8bc4c1d8-4040-485a-a941-a27be5143735.jpg",
+      "token": "migration-resource://2b7feebfe7f05fd428d37c6cdc0f539539dd07c2d779914f63c09c4328ef92be",
+      "snapshotPath": "assets/2b7feebfe7f05fd428d37c6cdc0f539539dd07c2d779914f63c09c4328ef92be.jpg",
+      "sha256": "2b7feebfe7f05fd428d37c6cdc0f539539dd07c2d779914f63c09c4328ef92be",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-08/c1dee3b1-ed9c-4e38-a03a-964056229d95.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-08/c1dee3b1-ed9c-4e38-a03a-964056229d95.jpg",
+      "token": "migration-resource://7a12e4684a4fca99ac067f8ed48a2c81dfb243f7eb852447f7b812f9a75c76de",
+      "snapshotPath": "assets/7a12e4684a4fca99ac067f8ed48a2c81dfb243f7eb852447f7b812f9a75c76de.jpg",
+      "sha256": "7a12e4684a4fca99ac067f8ed48a2c81dfb243f7eb852447f7b812f9a75c76de",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-08/e1f23eac-a65a-4d1c-b32a-d953299509bc.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-08/e1f23eac-a65a-4d1c-b32a-d953299509bc.jpg",
+      "token": "migration-resource://b63464b036c541be1a52cd4a5b568240b2a625b483b7475a724ee1382a1381c0",
+      "snapshotPath": "assets/b63464b036c541be1a52cd4a5b568240b2a625b483b7475a724ee1382a1381c0.jpg",
+      "sha256": "b63464b036c541be1a52cd4a5b568240b2a625b483b7475a724ee1382a1381c0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-08/955a1784-c2c9-44f7-a73d-e8e664ee6ffa.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-08/955a1784-c2c9-44f7-a73d-e8e664ee6ffa.jpg",
+      "token": "migration-resource://419efbb311908a5465e12486db88380469921c5961a1fa89ded57092ba11bbd9",
+      "snapshotPath": "assets/419efbb311908a5465e12486db88380469921c5961a1fa89ded57092ba11bbd9.jpg",
+      "sha256": "419efbb311908a5465e12486db88380469921c5961a1fa89ded57092ba11bbd9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    }
+  ],
+  "sourceFingerprint": "47f3c5310849b397164b74f5ca9ca9674ea292f8ee29c412d60456a44abb92ff",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "关于举办吉林省高校生涯教育与就业指导体系建设培训班的通知",
+    "listPublishDate": "2024-09-30",
+    "sourceOrder": 71,
+    "detailPublishDate": "2024-09-30"
+  }
+}

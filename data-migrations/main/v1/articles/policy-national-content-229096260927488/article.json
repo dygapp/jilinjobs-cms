@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-national:content:229096260927488",
+    "contentId": "229096260927488",
+    "typeCode": "policy-national",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=229096260927488"
+  },
+  "target": {
+    "columnAlias": "policy-national",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "普通高校毕业生基层就业政策公告",
+    "source": "教育部高校学生司",
+    "publishDate": "2024-06-18",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1344\" src=\"migration-resource://d868bdd10160104a2e91c6f1b1553e1b8579c4121fbd48ecc90bbbfa95ccb947\" width=\"950\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/94563ef3-1413-4be2-8fc2-9403bf6a0027.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/94563ef3-1413-4be2-8fc2-9403bf6a0027.jpg",
+      "token": "migration-resource://d868bdd10160104a2e91c6f1b1553e1b8579c4121fbd48ecc90bbbfa95ccb947",
+      "snapshotPath": "assets/d868bdd10160104a2e91c6f1b1553e1b8579c4121fbd48ecc90bbbfa95ccb947.jpg",
+      "sha256": "d868bdd10160104a2e91c6f1b1553e1b8579c4121fbd48ecc90bbbfa95ccb947",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    }
+  ],
+  "sourceFingerprint": "cff1657f81c518bcdb98e51e2d5c8ea93c6b0da3d8acf98ba11a4c4d8867206c",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "普通高校毕业生基层就业政策公告",
+    "listPublishDate": "2024-06-18",
+    "sourceOrder": 6,
+    "detailPublishDate": "2024-06-18"
+  }
+}

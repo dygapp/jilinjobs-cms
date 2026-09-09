@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:9f91713a9e164e68327a0184cf032871c5196c86cd608e2bd94e7e57ee02f6b6",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/a7g5oCSZL1hC3tdxha5DzQ",
+    "url": "https://mp.weixin.qq.com/s/a7g5oCSZL1hC3tdxha5DzQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 就在吉林” 吉林工程技术师范学院 2024届毕业生经济与管理类专场招聘会",
+    "source": "",
+    "publishDate": "2024-04-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/a7g5oCSZL1hC3tdxha5DzQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "256feabed0759ecf4ffd3fd9f530e537c5632d996d4da94851ae6915f0c75220",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "“创业奋斗 就在吉林” 吉林工程技术师范学院 2024届毕业生经济与管理类专场招聘会",
+    "listPublishDate": "2024-04-29",
+    "sourceOrder": 286
+  }
+}

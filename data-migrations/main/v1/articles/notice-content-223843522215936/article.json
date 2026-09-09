@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:223843522215936",
+    "contentId": "223843522215936",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=223843522215936"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "停电通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2024-05-20",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"850\" src=\"migration-resource://72f213c793624edfc8c3111397b27a6239e441845e7cf3ca651ec641e1be8714\" width=\"1000\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-05-20/0f900276-3e62-4c84-9e61-275371d11e52.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-05-20/0f900276-3e62-4c84-9e61-275371d11e52.jpg",
+      "token": "migration-resource://72f213c793624edfc8c3111397b27a6239e441845e7cf3ca651ec641e1be8714",
+      "snapshotPath": "assets/72f213c793624edfc8c3111397b27a6239e441845e7cf3ca651ec641e1be8714.jpg",
+      "sha256": "72f213c793624edfc8c3111397b27a6239e441845e7cf3ca651ec641e1be8714",
+      "contentType": "image/jpeg",
+      "sizeBytes": 126829
+    }
+  ],
+  "sourceFingerprint": "b39836ed846e1ad6029ff0de7948795ae354ba9a279ff761e5dae3d522d1317d",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "停电通知",
+    "listPublishDate": "2024-05-20",
+    "sourceOrder": 83,
+    "detailPublishDate": "2024-05-20"
+  }
+}

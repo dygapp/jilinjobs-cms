@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9ec9225c552521e5f056227f2d9d1eb6be9d24b89ce3092f2f8a2fd2d52fe66f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/SY2q3ZKEF6Kw0fF7Xuz6EA",
+    "url": "https://mp.weixin.qq.com/s/SY2q3ZKEF6Kw0fF7Xuz6EA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院召开2026届毕业生就业工作推进会部署寒假任务筑牢高质量就业根基",
+    "source": "",
+    "publishDate": "2025-12-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/SY2q3ZKEF6Kw0fF7Xuz6EA"
+  },
+  "resources": [],
+  "sourceFingerprint": "0b54e34e8a4d32a77c8e0091e75d2145434acb94fae20dbc05d200cf6402f401",
+  "evidence": {
+    "listPage": 54,
+    "listTitle": "长春科技学院召开2026届毕业生就业工作推进会部署寒假任务筑牢高质量就业根基",
+    "listPublishDate": "2025-12-17",
+    "sourceOrder": 539
+  }
+}

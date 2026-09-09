@@ -1,0 +1,151 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122676",
+    "contentId": "28737783122676",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122676"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2021年吉林省第七届“吉人梦想杯”大学生就业创业大赛的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2021-05-11",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://0b29dbe14ef5f52777e53078c1856ee0bc45382356aca432ee25dd2320b2734c\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://cc13cad8b6bf90cbac8b2b51a9535a3872d33b7890bc363180399a706871e57c\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://06e486fc22e29b4b6a8e8049ae39e5b3ebe42de187f617c368ddaea552c4899d\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://0ed77a994c4f3b64f6f79e82d4bb799461426688497d9cb47495155cbfc03379\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://3f814dcef42c7f8434dd348db750d61dc9fdba30b2a2ba8bd2c0b43e23ccc6a4\" width=\"1000\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://d1c61b71e5622b6d480a344be1052ed5f6b8e83e8c14b20c9680492181f56fdf\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://8fbbb8173fd9b87e91b3265c26e1a5c8ff7206a07e8c44db26a347d2798e9a9b\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://c61e181317f4018df842ab6da37e0c48b11e596f9311a71bb7ba95e229088679\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://4245aba24f4f5b04ed37152ec562e95fe35bababa4d9751045e3d4a79308023c\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://0dbcf851f5950475c959b4445f1aaca582f08c781a66b1f9ea96b118fb1ecf15\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://7404072a3e1857ab8539991972899294ba595f6ac857717a7e48534251793833\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://deef71870af67a5eabfdb03e896f85421e588e8c27f3557c4bc8412a293ff210\" width=\"1000\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210512111210.jpg",
+      "originalReference": "/chistory/cms/editor/20210512111210.jpg",
+      "token": "migration-resource://0b29dbe14ef5f52777e53078c1856ee0bc45382356aca432ee25dd2320b2734c",
+      "snapshotPath": "assets/0b29dbe14ef5f52777e53078c1856ee0bc45382356aca432ee25dd2320b2734c.jpg",
+      "sha256": "0b29dbe14ef5f52777e53078c1856ee0bc45382356aca432ee25dd2320b2734c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 212314
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210512111218.jpg",
+      "originalReference": "/chistory/cms/editor/20210512111218.jpg",
+      "token": "migration-resource://cc13cad8b6bf90cbac8b2b51a9535a3872d33b7890bc363180399a706871e57c",
+      "snapshotPath": "assets/cc13cad8b6bf90cbac8b2b51a9535a3872d33b7890bc363180399a706871e57c.jpg",
+      "sha256": "cc13cad8b6bf90cbac8b2b51a9535a3872d33b7890bc363180399a706871e57c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 205204
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210512111225.jpg",
+      "originalReference": "/chistory/cms/editor/20210512111225.jpg",
+      "token": "migration-resource://06e486fc22e29b4b6a8e8049ae39e5b3ebe42de187f617c368ddaea552c4899d",
+      "snapshotPath": "assets/06e486fc22e29b4b6a8e8049ae39e5b3ebe42de187f617c368ddaea552c4899d.jpg",
+      "sha256": "06e486fc22e29b4b6a8e8049ae39e5b3ebe42de187f617c368ddaea552c4899d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 285215
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210512111232.jpg",
+      "originalReference": "/chistory/cms/editor/20210512111232.jpg",
+      "token": "migration-resource://0ed77a994c4f3b64f6f79e82d4bb799461426688497d9cb47495155cbfc03379",
+      "snapshotPath": "assets/0ed77a994c4f3b64f6f79e82d4bb799461426688497d9cb47495155cbfc03379.jpg",
+      "sha256": "0ed77a994c4f3b64f6f79e82d4bb799461426688497d9cb47495155cbfc03379",
+      "contentType": "image/jpeg",
+      "sizeBytes": 282612
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210512111238.jpg",
+      "originalReference": "/chistory/cms/editor/20210512111238.jpg",
+      "token": "migration-resource://3f814dcef42c7f8434dd348db750d61dc9fdba30b2a2ba8bd2c0b43e23ccc6a4",
+      "snapshotPath": "assets/3f814dcef42c7f8434dd348db750d61dc9fdba30b2a2ba8bd2c0b43e23ccc6a4.jpg",
+      "sha256": "3f814dcef42c7f8434dd348db750d61dc9fdba30b2a2ba8bd2c0b43e23ccc6a4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 226391
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210512111302.jpg",
+      "originalReference": "/chistory/cms/editor/20210512111302.jpg",
+      "token": "migration-resource://d1c61b71e5622b6d480a344be1052ed5f6b8e83e8c14b20c9680492181f56fdf",
+      "snapshotPath": "assets/d1c61b71e5622b6d480a344be1052ed5f6b8e83e8c14b20c9680492181f56fdf.jpg",
+      "sha256": "d1c61b71e5622b6d480a344be1052ed5f6b8e83e8c14b20c9680492181f56fdf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 258230
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210512111312.jpg",
+      "originalReference": "/chistory/cms/editor/20210512111312.jpg",
+      "token": "migration-resource://8fbbb8173fd9b87e91b3265c26e1a5c8ff7206a07e8c44db26a347d2798e9a9b",
+      "snapshotPath": "assets/8fbbb8173fd9b87e91b3265c26e1a5c8ff7206a07e8c44db26a347d2798e9a9b.jpg",
+      "sha256": "8fbbb8173fd9b87e91b3265c26e1a5c8ff7206a07e8c44db26a347d2798e9a9b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 237198
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210512111319.jpg",
+      "originalReference": "/chistory/cms/editor/20210512111319.jpg",
+      "token": "migration-resource://c61e181317f4018df842ab6da37e0c48b11e596f9311a71bb7ba95e229088679",
+      "snapshotPath": "assets/c61e181317f4018df842ab6da37e0c48b11e596f9311a71bb7ba95e229088679.jpg",
+      "sha256": "c61e181317f4018df842ab6da37e0c48b11e596f9311a71bb7ba95e229088679",
+      "contentType": "image/jpeg",
+      "sizeBytes": 208563
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210512111331.jpg",
+      "originalReference": "/chistory/cms/editor/20210512111331.jpg",
+      "token": "migration-resource://4245aba24f4f5b04ed37152ec562e95fe35bababa4d9751045e3d4a79308023c",
+      "snapshotPath": "assets/4245aba24f4f5b04ed37152ec562e95fe35bababa4d9751045e3d4a79308023c.jpg",
+      "sha256": "4245aba24f4f5b04ed37152ec562e95fe35bababa4d9751045e3d4a79308023c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 97614
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210512111338.jpg",
+      "originalReference": "/chistory/cms/editor/20210512111338.jpg",
+      "token": "migration-resource://0dbcf851f5950475c959b4445f1aaca582f08c781a66b1f9ea96b118fb1ecf15",
+      "snapshotPath": "assets/0dbcf851f5950475c959b4445f1aaca582f08c781a66b1f9ea96b118fb1ecf15.jpg",
+      "sha256": "0dbcf851f5950475c959b4445f1aaca582f08c781a66b1f9ea96b118fb1ecf15",
+      "contentType": "image/jpeg",
+      "sizeBytes": 126936
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210512111345.jpg",
+      "originalReference": "/chistory/cms/editor/20210512111345.jpg",
+      "token": "migration-resource://7404072a3e1857ab8539991972899294ba595f6ac857717a7e48534251793833",
+      "snapshotPath": "assets/7404072a3e1857ab8539991972899294ba595f6ac857717a7e48534251793833.jpg",
+      "sha256": "7404072a3e1857ab8539991972899294ba595f6ac857717a7e48534251793833",
+      "contentType": "image/jpeg",
+      "sizeBytes": 128175
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210512111355.jpg",
+      "originalReference": "/chistory/cms/editor/20210512111355.jpg",
+      "token": "migration-resource://deef71870af67a5eabfdb03e896f85421e588e8c27f3557c4bc8412a293ff210",
+      "snapshotPath": "assets/deef71870af67a5eabfdb03e896f85421e588e8c27f3557c4bc8412a293ff210.jpg",
+      "sha256": "deef71870af67a5eabfdb03e896f85421e588e8c27f3557c4bc8412a293ff210",
+      "contentType": "image/jpeg",
+      "sizeBytes": 160554
+    }
+  ],
+  "sourceFingerprint": "f0556ac84e00df106fd5ed7005b44205184aad76ace9d9f820aa2d3c6b345816",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "关于举办2021年吉林省第七届“吉人梦想杯”大学生就业创业大赛的通知",
+    "listPublishDate": "2021-05-11",
+    "sourceOrder": 152,
+    "detailPublishDate": "2021-05-11"
+  }
+}

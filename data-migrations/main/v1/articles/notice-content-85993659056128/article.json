@@ -1,0 +1,111 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:85993659056128",
+    "contentId": "85993659056128",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=85993659056128"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅关于开展2022年高校毕业生就业创业政策宣传月活动的通知",
+    "source": "教育部办公厅",
+    "publishDate": "2022-03-26",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://a1b7fac2646be5d3f9a26f6193dacac847a36269ded10419ff2376d15e969cf3\" width=\"792\"><img alt=\"\" height=\"1088\" src=\"migration-resource://ae59ffa7a2f9d8d056dcc2f6956dfe88613aa0c3ef2abf27446dea41e9dc79a4\" width=\"792\"><img alt=\"\" height=\"1084\" src=\"migration-resource://bf0d78727ce4135007b54c18656859d70c423c70ab767c56efc84f0695db2563\" width=\"795\"><img alt=\"\" height=\"1114\" src=\"migration-resource://900459f7906ad25d4d52a24dcd7a98cb2c097b5279cc99ab5b51d7b555e43900\" width=\"791\"><img alt=\"\" height=\"1144\" src=\"migration-resource://3edc09c7dd63f9149bec93c168c69831b43f73d81f840979d6bd3554c03b67dd\" width=\"795\"><img alt=\"\" height=\"1131\" src=\"migration-resource://3d1def86fadd867273bd88ff2e96b0ce33343a6320f62ea4a9fd03343fae80f7\" width=\"800\"><img alt=\"\" height=\"1131\" src=\"migration-resource://74d742772942939085ce745062577a164f7852c91815bc21813034f291bd58cd\" width=\"800\"><img alt=\"\" height=\"1131\" src=\"migration-resource://8d756515dcb311e1a81cd3b09f3fb7bccd0f336458faa52327300184261fcf8a\" width=\"800\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/88ac9cd0-6014-4a6a-b6a8-881cae113110.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/88ac9cd0-6014-4a6a-b6a8-881cae113110.jpg",
+      "token": "migration-resource://a1b7fac2646be5d3f9a26f6193dacac847a36269ded10419ff2376d15e969cf3",
+      "snapshotPath": "assets/a1b7fac2646be5d3f9a26f6193dacac847a36269ded10419ff2376d15e969cf3.jpg",
+      "sha256": "a1b7fac2646be5d3f9a26f6193dacac847a36269ded10419ff2376d15e969cf3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 164651
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/888c0a18-cb5b-4433-8614-8c2ea9f2c039.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/888c0a18-cb5b-4433-8614-8c2ea9f2c039.jpg",
+      "token": "migration-resource://ae59ffa7a2f9d8d056dcc2f6956dfe88613aa0c3ef2abf27446dea41e9dc79a4",
+      "snapshotPath": "assets/ae59ffa7a2f9d8d056dcc2f6956dfe88613aa0c3ef2abf27446dea41e9dc79a4.jpg",
+      "sha256": "ae59ffa7a2f9d8d056dcc2f6956dfe88613aa0c3ef2abf27446dea41e9dc79a4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 204303
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/f0b7fcc3-0b59-4e11-b783-0c388916bbc8.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/f0b7fcc3-0b59-4e11-b783-0c388916bbc8.jpg",
+      "token": "migration-resource://bf0d78727ce4135007b54c18656859d70c423c70ab767c56efc84f0695db2563",
+      "snapshotPath": "assets/bf0d78727ce4135007b54c18656859d70c423c70ab767c56efc84f0695db2563.jpg",
+      "sha256": "bf0d78727ce4135007b54c18656859d70c423c70ab767c56efc84f0695db2563",
+      "contentType": "image/jpeg",
+      "sizeBytes": 215182
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/4f8c5f15-73e3-45d9-a2ad-186a3b7abd7d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/4f8c5f15-73e3-45d9-a2ad-186a3b7abd7d.jpg",
+      "token": "migration-resource://900459f7906ad25d4d52a24dcd7a98cb2c097b5279cc99ab5b51d7b555e43900",
+      "snapshotPath": "assets/900459f7906ad25d4d52a24dcd7a98cb2c097b5279cc99ab5b51d7b555e43900.jpg",
+      "sha256": "900459f7906ad25d4d52a24dcd7a98cb2c097b5279cc99ab5b51d7b555e43900",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82729
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/e00efab5-4e38-4665-8d82-731be23c3221.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/e00efab5-4e38-4665-8d82-731be23c3221.jpg",
+      "token": "migration-resource://3edc09c7dd63f9149bec93c168c69831b43f73d81f840979d6bd3554c03b67dd",
+      "snapshotPath": "assets/3edc09c7dd63f9149bec93c168c69831b43f73d81f840979d6bd3554c03b67dd.jpg",
+      "sha256": "3edc09c7dd63f9149bec93c168c69831b43f73d81f840979d6bd3554c03b67dd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 44679
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/bc76886f-bff8-4853-af47-4f8435cba09a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/bc76886f-bff8-4853-af47-4f8435cba09a.jpg",
+      "token": "migration-resource://3d1def86fadd867273bd88ff2e96b0ce33343a6320f62ea4a9fd03343fae80f7",
+      "snapshotPath": "assets/3d1def86fadd867273bd88ff2e96b0ce33343a6320f62ea4a9fd03343fae80f7.jpg",
+      "sha256": "3d1def86fadd867273bd88ff2e96b0ce33343a6320f62ea4a9fd03343fae80f7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 388162
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/1db62a0a-a925-455e-bad3-5f36771165b7.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/1db62a0a-a925-455e-bad3-5f36771165b7.jpg",
+      "token": "migration-resource://74d742772942939085ce745062577a164f7852c91815bc21813034f291bd58cd",
+      "snapshotPath": "assets/74d742772942939085ce745062577a164f7852c91815bc21813034f291bd58cd.jpg",
+      "sha256": "74d742772942939085ce745062577a164f7852c91815bc21813034f291bd58cd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 338324
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/c16cbdcf-dba7-46df-836d-148c015cda02.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/c16cbdcf-dba7-46df-836d-148c015cda02.jpg",
+      "token": "migration-resource://8d756515dcb311e1a81cd3b09f3fb7bccd0f336458faa52327300184261fcf8a",
+      "snapshotPath": "assets/8d756515dcb311e1a81cd3b09f3fb7bccd0f336458faa52327300184261fcf8a.jpg",
+      "sha256": "8d756515dcb311e1a81cd3b09f3fb7bccd0f336458faa52327300184261fcf8a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 391725
+    }
+  ],
+  "sourceFingerprint": "4c3b3c316078c1baf2e40b6a5116037a2fdcd2bc5c8aee5402d4bd26d2de93c5",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "教育部办公厅关于开展2022年高校毕业生就业创业政策宣传月活动的通知",
+    "listPublishDate": "2022-03-26",
+    "sourceOrder": 136,
+    "detailPublishDate": "2022-03-26"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:88b4817bf124b1cb2a862fe877bbd9f9cf7769ae461494f221e5493c8a973bb4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/85aZ36IDOGB8EpOfZMS2eg",
+    "url": "https://mp.weixin.qq.com/s/85aZ36IDOGB8EpOfZMS2eg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工程职业学院“梅花订单班”正式开班",
+    "source": "",
+    "publishDate": "2026-04-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/85aZ36IDOGB8EpOfZMS2eg"
+  },
+  "resources": [],
+  "sourceFingerprint": "b04ee34a788b4c2be66082ee8a9614b5776d6fa4ced7b6944db4b3930a57a5e6",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "吉林工程职业学院“梅花订单班”正式开班",
+    "listPublishDate": "2026-04-02",
+    "sourceOrder": 327
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122596",
+    "contentId": "28737783122596",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122596"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于进一步做好吉林省2015年上半年全国计算机应用技术证书考试考务工作的通知",
+    "source": "",
+    "publishDate": "2015-06-12",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于进一步做好吉林省2015年上半年全国计算机应用技术证书考试考务工作的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2015-6-12 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p>&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://25a2db901dbc1a91d782895b365229cf182ac9db25f715aa68e1a6b5062ef0df\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://513a4646d57ebd81fa635b6f1b01bb13152a22bb6607f473f86867e47963ecfb\"></p><p style=\"text-align: center;\"><img title=\"3.jpg\" src=\"migration-resource://31fa31c4df5b5ddef5241fa68530a4daf8ecb43b6713f25787c89390389d9bf2\"></p><p>&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356971355154687508179066.jpg",
+      "originalReference": "/chistory/cms/imgs/6356971355154687508179066.jpg",
+      "token": "migration-resource://25a2db901dbc1a91d782895b365229cf182ac9db25f715aa68e1a6b5062ef0df",
+      "snapshotPath": "assets/25a2db901dbc1a91d782895b365229cf182ac9db25f715aa68e1a6b5062ef0df.jpg",
+      "sha256": "25a2db901dbc1a91d782895b365229cf182ac9db25f715aa68e1a6b5062ef0df",
+      "contentType": "image/jpeg",
+      "sizeBytes": 121952
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356971355164062502909078.jpg",
+      "originalReference": "/chistory/cms/imgs/6356971355164062502909078.jpg",
+      "token": "migration-resource://513a4646d57ebd81fa635b6f1b01bb13152a22bb6607f473f86867e47963ecfb",
+      "snapshotPath": "assets/513a4646d57ebd81fa635b6f1b01bb13152a22bb6607f473f86867e47963ecfb.jpg",
+      "sha256": "513a4646d57ebd81fa635b6f1b01bb13152a22bb6607f473f86867e47963ecfb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 129004
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6356971355167187505450587.jpg",
+      "originalReference": "/chistory/cms/imgs/6356971355167187505450587.jpg",
+      "token": "migration-resource://31fa31c4df5b5ddef5241fa68530a4daf8ecb43b6713f25787c89390389d9bf2",
+      "snapshotPath": "assets/31fa31c4df5b5ddef5241fa68530a4daf8ecb43b6713f25787c89390389d9bf2.jpg",
+      "sha256": "31fa31c4df5b5ddef5241fa68530a4daf8ecb43b6713f25787c89390389d9bf2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 87183
+    }
+  ],
+  "sourceFingerprint": "dc87666fccf16b1d4e6d045e1abf4d6088e5513468c9cf4c5e8b71e225c1d2bb",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "关于进一步做好吉林省2015年上半年全国计算机应用技术证书考试考务工作的通知",
+    "listPublishDate": "2015-06-12",
+    "sourceOrder": 275,
+    "detailPublishDate": "2015-06-12"
+  }
+}

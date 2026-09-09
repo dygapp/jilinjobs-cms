@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e066d4ae6b25f22d6e833d62497b43d9076d2cc3480eab1de5fdca223dfc0383",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/1PwiSp8jTXMcinSUOW2G3Q",
+    "url": "https://mp.weixin.qq.com/s/1PwiSp8jTXMcinSUOW2G3Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院赴长春欧亚集团股份有限公司开展访企调研活动",
+    "source": "",
+    "publishDate": "2025-11-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1PwiSp8jTXMcinSUOW2G3Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "7d5a9489f047ba36a8e80b6301165491dd146ce7daabe4764751c94d6441d84c",
+  "evidence": {
+    "listPage": 63,
+    "listTitle": "吉林工商学院赴长春欧亚集团股份有限公司开展访企调研活动",
+    "listPublishDate": "2025-11-06",
+    "sourceOrder": 622
+  }
+}

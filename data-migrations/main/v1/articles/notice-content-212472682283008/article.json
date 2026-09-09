@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:212472682283008",
+    "contentId": "212472682283008",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=212472682283008"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展2024年“创业奋斗 就在吉林”互联网+就业创业系列直播课的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2024-03-18",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://f0a81cff7eaff60b05095c9f8a09093e3b0f263531d124b15a2ccc2e34ca4817\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://d7592a1c8a122f4a56045e47f9a34d03dda55a303c181606aaf39550a7df2893\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"813\" src=\"migration-resource://755ff11c942b68a6708cd3bcbe3b724138dbed7dadac868119dea7b3a9899836\" width=\"1150\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-03-19/8842a1fb-b1a3-4635-9cc1-782a7187e29f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-03-19/8842a1fb-b1a3-4635-9cc1-782a7187e29f.jpg",
+      "token": "migration-resource://f0a81cff7eaff60b05095c9f8a09093e3b0f263531d124b15a2ccc2e34ca4817",
+      "snapshotPath": "assets/f0a81cff7eaff60b05095c9f8a09093e3b0f263531d124b15a2ccc2e34ca4817.jpg",
+      "sha256": "f0a81cff7eaff60b05095c9f8a09093e3b0f263531d124b15a2ccc2e34ca4817",
+      "contentType": "image/jpeg",
+      "sizeBytes": 171396
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-03-19/90048a81-4047-45ac-8676-db70d7ddf721.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-03-19/90048a81-4047-45ac-8676-db70d7ddf721.jpg",
+      "token": "migration-resource://d7592a1c8a122f4a56045e47f9a34d03dda55a303c181606aaf39550a7df2893",
+      "snapshotPath": "assets/d7592a1c8a122f4a56045e47f9a34d03dda55a303c181606aaf39550a7df2893.jpg",
+      "sha256": "d7592a1c8a122f4a56045e47f9a34d03dda55a303c181606aaf39550a7df2893",
+      "contentType": "image/jpeg",
+      "sizeBytes": 160208
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-03-19/84b8f92b-5b3b-4303-8735-20e7216dd33a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-03-19/84b8f92b-5b3b-4303-8735-20e7216dd33a.jpg",
+      "token": "migration-resource://755ff11c942b68a6708cd3bcbe3b724138dbed7dadac868119dea7b3a9899836",
+      "snapshotPath": "assets/755ff11c942b68a6708cd3bcbe3b724138dbed7dadac868119dea7b3a9899836.jpg",
+      "sha256": "755ff11c942b68a6708cd3bcbe3b724138dbed7dadac868119dea7b3a9899836",
+      "contentType": "image/jpeg",
+      "sizeBytes": 182499
+    }
+  ],
+  "sourceFingerprint": "227a1e4a27252017b53428703ae1d9fe721d81dd7a29cfe9c49031d8cffaac39",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "关于开展2024年“创业奋斗 就在吉林”互联网+就业创业系列直播课的通知",
+    "listPublishDate": "2024-03-18",
+    "sourceOrder": 91,
+    "detailPublishDate": "2024-03-18"
+  }
+}

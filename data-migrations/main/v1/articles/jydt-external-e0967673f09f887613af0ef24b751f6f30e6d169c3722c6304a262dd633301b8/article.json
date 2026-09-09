@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e0967673f09f887613af0ef24b751f6f30e6d169c3722c6304a262dd633301b8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/H0ibAww4vC8wv9UDoqV_fA",
+    "url": "https://mp.weixin.qq.com/s/H0ibAww4vC8wv9UDoqV_fA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林动画学院举办“联合创业 融合发展” 留省就业创业宣讲会 助力青年扎根吉林边疆筑梦蓝海",
+    "source": "",
+    "publishDate": "2026-03-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/H0ibAww4vC8wv9UDoqV_fA"
+  },
+  "resources": [],
+  "sourceFingerprint": "6783927727ed842c6e572f6270a1f1a0becf1c33ed0e1cc942818565ca5c6317",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "吉林动画学院举办“联合创业 融合发展” 留省就业创业宣讲会 助力青年扎根吉林边疆筑梦蓝海",
+    "listPublishDate": "2026-03-17",
+    "sourceOrder": 410
+  }
+}

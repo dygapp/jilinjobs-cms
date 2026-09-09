@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6c2170957773578d3fcc4230a71bd8023eef9926a551c465f021c1bad75b9e72",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/rtmF2oFWpclWHzyAGQbVTw",
+    "url": "https://mp.weixin.qq.com/s/rtmF2oFWpclWHzyAGQbVTw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林医药学院党委书记孙继民带队赴长春访企拓岗",
+    "source": "",
+    "publishDate": "2026-08-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/rtmF2oFWpclWHzyAGQbVTw"
+  },
+  "resources": [],
+  "sourceFingerprint": "71341c324a7945ca8c89a81a0eb5ebd44b70ebe1777c5507eb1763404db0263e",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "吉林医药学院党委书记孙继民带队赴长春访企拓岗",
+    "listPublishDate": "2026-08-10",
+    "sourceOrder": 17
+  }
+}

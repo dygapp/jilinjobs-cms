@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122538",
+    "contentId": "28737783122538",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122538"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林化工学院召开2021年留省就业工作会议",
+    "source": "培训部",
+    "publishDate": "2021-03-15",
+    "bodyHtml": "\n                        \n\n\n\n\n<p>3月11日，吉林化工学院2021年留省就业工作会议在机关楼第一会议室召开。各教学院党委书记、院长、党委副书记、教务处、学生工作部、招生就业处负责人及相关人员参加会议，会议由学校党委副书记尉民主持。</p>\n<p>会上，学校招生就业处传达了3月3日召开的全省就业处长工作会议精神，对“留省”就业工作任务进行了解读。对学校2021届毕业生就业现状进行分析，提出存在的问题及解决对策，并对本学期下一步就业工作进行部署。</p>\n<p>学校党委副书记尉民要求各教学院扎实落实全省就业处长工作会议精神，强调就业是民生之本，关系到每名学生的未来。并从四个方面提出新学期就业工作要点：第一，进一步摸清现状，制定科学合理的工作计划，提升服务水平，做到精准服务学生；第二，迅速开拓省内就业资源，主动服务地方经济建设；第三，加强就业考核力度，优化就业考核方案；第四，强化就业指导，实现“一人一策”，根据学生意愿有针对性地推荐就业。</p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "657f29d7110dcdbdb0cc3fa9a5e0d91ee7e3b8a03260e78913a7c0ba0ba5f238",
+  "evidence": {
+    "listPage": 138,
+    "listTitle": "吉林化工学院召开2021年留省就业工作会议",
+    "listPublishDate": "2021-03-15",
+    "sourceOrder": 1378,
+    "detailPublishDate": "2021-03-15"
+  }
+}

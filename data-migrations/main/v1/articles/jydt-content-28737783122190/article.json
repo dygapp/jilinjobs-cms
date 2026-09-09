@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122190",
+    "contentId": "28737783122190",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122190"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2012年度高校毕业生就业创业课题结题鉴定会在北京召开",
+    "source": "",
+    "publishDate": "2013-05-07",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2012年度高校毕业生就业创业课题结题鉴定会在北京召开</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2013-5-7 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img border=\"0\" src=\"http://www.jilinjobs.cn/uploadfile/201305/20130507023919335.jpg\"></p> <p><font size=\"4\">&nbsp;&nbsp;&nbsp; 4月25日，由全国高等学校学生信息咨询与就业指导中心主持的2012年度高校毕业生就业创业课题结题鉴定会在北京召开。</font></p> <p><font size=\"4\">&nbsp;&nbsp;&nbsp; 全国就业指导中心主任张凤有、副主任张继栋，以及就业创业课题组结题鉴定专家出席会议，14个就业创业课题组负责人及主要成员参加汇报并现场答辩。会议由全国就业指导中心研究所所长余舰主持，张凤有主任讲话，张继栋副主任做课题结题总结并向课题组颁发结题证书。 高校毕业生就业创业课题研究工作由全国就业指导中心联合中国下一代教育基金会于2012年2月正式启动，该项工作在全国发布13个就业创业系列课题，136家单位进行课题申报，经专家评审确定12家课题立项单位和3家课题委托单位。我省申报由郑志宏主任任课题负责人的《高校就业困难学生帮扶长效机制研究》获批。经现场汇报答辩，14项课题顺利完成研究工作，准予结题，其中2项课题鉴定为优秀，12项课题鉴定为合格。</font></p> <p><font size=\"4\"></font>&nbsp;</p> <p><font size=\"4\"></font>&nbsp;</p> <p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "0221bb2d9bf802e5d028db2908c4654d45489a78cc7ee06a88bb44e969d61b05",
+  "evidence": {
+    "listPage": 163,
+    "listTitle": "2012年度高校毕业生就业创业课题结题鉴定会在北京召开",
+    "listPublishDate": "2013-05-07",
+    "sourceOrder": 1623,
+    "detailPublishDate": "2013-05-07"
+  }
+}

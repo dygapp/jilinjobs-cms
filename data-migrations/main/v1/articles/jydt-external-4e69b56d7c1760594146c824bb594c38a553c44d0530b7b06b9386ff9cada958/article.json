@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4e69b56d7c1760594146c824bb594c38a553c44d0530b7b06b9386ff9cada958",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/L1sS-NfTUZAoVRy8nKk6jw",
+    "url": "https://mp.weixin.qq.com/s/L1sS-NfTUZAoVRy8nKk6jw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 ‘就’在吉林”吉林省高校服务“464”新格局暨吉林外国语大学2024届毕业生春季招聘会举行",
+    "source": "",
+    "publishDate": "2024-06-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/L1sS-NfTUZAoVRy8nKk6jw"
+  },
+  "resources": [],
+  "sourceFingerprint": "290081798610a22bbc1668b12c63e89bfc7a228affe8895ba0a826dc3089dcd4",
+  "evidence": {
+    "listPage": 105,
+    "listTitle": "“创业奋斗 ‘就’在吉林”吉林省高校服务“464”新格局暨吉林外国语大学2024届毕业生春季招聘会举行",
+    "listPublishDate": "2024-06-01",
+    "sourceOrder": 1043
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1ba3600c8995f6456067ac2e923c58a875ed88e356208d7c69d8e692af2b5149",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/vXgtC6GAK3e5ntl4pJidKg",
+    "url": "https://mp.weixin.qq.com/s/vXgtC6GAK3e5ntl4pJidKg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【就业指导】|| @高校毕业生 就业创业政策大礼包请查收！",
+    "source": "",
+    "publishDate": "2025-08-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vXgtC6GAK3e5ntl4pJidKg"
+  },
+  "resources": [],
+  "sourceFingerprint": "97f43b5c5582f62effabf5ce30e9f314d6d203bc377b868f9521827a8c967c14",
+  "evidence": {
+    "listPage": 72,
+    "listTitle": "【就业指导】|| @高校毕业生 就业创业政策大礼包请查收！",
+    "listPublishDate": "2025-08-14",
+    "sourceOrder": 715
+  }
+}

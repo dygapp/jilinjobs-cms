@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122832",
+    "contentId": "28737783122832",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122832"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《关于举办全国高校就业指导骨干教师高级研修班的通知》的通知",
+    "source": "",
+    "publishDate": "2014-07-02",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《关于举办全国高校就业指导骨干教师高级研修班的通知》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训一部   发布时间:2014-7-2 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"TEXT-ALIGN: center\">&nbsp;<img title=\"1.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6353988667482733603026828.jpg\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        <a href=\"../Common/DownLoadFile.aspx?fileid=b24ab761-99ab-43e8-811e-c287638b031b\">关于举办全国高校就业指导骨干教师高级研修班的通知+附件.rar</a><br>\n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "6fa7a913016b763363acb85cd9efd7cace8090bfaaca5bbe91fbac3ebcf006df",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "转发《关于举办全国高校就业指导骨干教师高级研修班的通知》的通知",
+    "listPublishDate": "2014-07-02",
+    "sourceOrder": 305,
+    "detailPublishDate": "2014-07-02"
+  }
+}

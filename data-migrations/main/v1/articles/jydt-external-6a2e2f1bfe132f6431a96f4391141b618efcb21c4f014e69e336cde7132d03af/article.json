@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6a2e2f1bfe132f6431a96f4391141b618efcb21c4f014e69e336cde7132d03af",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xF6eiIJvGlPZNRDLu28B4Q",
+    "url": "https://mp.weixin.qq.com/s/xF6eiIJvGlPZNRDLu28B4Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "盛效儒到延边大学（珲春校区）宣介",
+    "source": "",
+    "publishDate": "2025-03-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xF6eiIJvGlPZNRDLu28B4Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "1dd3515b2e50e398ffd3efe242cd42e0f987235b24e00fb2b3db2471d859c66d",
+  "evidence": {
+    "listPage": 99,
+    "listTitle": "盛效儒到延边大学（珲春校区）宣介",
+    "listPublishDate": "2025-03-17",
+    "sourceOrder": 982
+  }
+}

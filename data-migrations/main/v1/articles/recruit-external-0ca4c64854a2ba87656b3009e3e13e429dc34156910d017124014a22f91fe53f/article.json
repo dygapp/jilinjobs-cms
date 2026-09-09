@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:0ca4c64854a2ba87656b3009e3e13e429dc34156910d017124014a22f91fe53f",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/2YhmbPPj2kFssxoaUVpoJQ",
+    "url": "https://mp.weixin.qq.com/s/2YhmbPPj2kFssxoaUVpoJQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "请您查收！白城医学高等专科学校服务吉林高质量发展校园招聘会邀请函",
+    "source": "",
+    "publishDate": "2025-03-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/2YhmbPPj2kFssxoaUVpoJQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "a1a8bc4cd564d2267e17809e20db955d18c5b091ced489d84d2dd9b41929c787",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "请您查收！白城医学高等专科学校服务吉林高质量发展校园招聘会邀请函",
+    "listPublishDate": "2025-03-24",
+    "sourceOrder": 207
+  }
+}

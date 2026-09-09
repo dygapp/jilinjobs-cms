@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:90a7c0ff465568ea268604ff01993056dc527405ed4a5f3e6974bbf44cd64bec",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/N1r0RNEAiG8bMQ96tj8TvQ",
+    "url": "https://mp.weixin.qq.com/s/N1r0RNEAiG8bMQ96tj8TvQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春电子科技学院党委副书记王耀远带队开展2025年“浙江行”访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2025-10-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/N1r0RNEAiG8bMQ96tj8TvQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "d2af7de4a141c48749e02c46cfd64147f01d50914d92bdd604f7494bad3068b4",
+  "evidence": {
+    "listPage": 66,
+    "listTitle": "长春电子科技学院党委副书记王耀远带队开展2025年“浙江行”访企拓岗促就业专项行动",
+    "listPublishDate": "2025-10-29",
+    "sourceOrder": 651
+  }
+}

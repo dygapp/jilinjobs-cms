@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:175829199912960",
+    "contentId": "175829199912960",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=175829199912960"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "访企拓岗促就业 合作共赢谱新篇 吉林化工学院领导走访华南校友会",
+    "source": "吉林化工学院",
+    "publishDate": "2023-03-31",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">3</span></span></span><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">月14日，吉林化工学院党委书记胡越平、党委副书记李士阳、副院长艾学忠等一行走访学校华南校友会。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"487\" src=\"migration-resource://5abd8c629685f8f3a0025301bc28a50ffbfe72a8f5762435e22cd7ac18456bba\" width=\"650\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">胡越平一行先后走访03级自动化专业校友姜海峰创办的深圳市嘉力电气技术有限公司；95级化学工程专业校友宋海军创办的北京熙捷科技有限公司；98级工贸专业校友王军创办的深圳华创深大投资有限公司；91级有机专业校友史春梅开创的深圳市越海全球物流有限公司等多家企业，达成人才供需合作意向。与李华平校友创办的福州埃迪特新材料集团达成“吉林化工学院-埃迪特新材料重点实验室”投资意向；与深圳华创深大达成“吉林化工学院-深圳科创平台”合作意向；与陈刚校友达成“碳纤维油剂生产技术支撑”项目合作。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">座谈会上，胡越平介绍了学校的发展建设情况，取得的成绩和未来发展愿景。代表全校师生对疫情防控期间校友们心系母校、千里驰援表示衷心的感谢，并授予华南校友会“疫情防控捐赠突出贡献集体”荣誉称号。校友和学校既是一个情感共同体，更是一个发展共同体，希望校友一如既往地关心支持学校的建设，与学校携手前行、共同发展。同时，胡越平等与校友就“聘请创业导师”“校企协同育人”“专业设置调整”等提高学校教学质量、提高学生就业能力的相关工作进行了深入交流。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">学校党政办公室、合作发展办公室负责人参与了走访活动。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"364\" src=\"migration-resource://045371b432716dc164e8ddd87f7cc22f0acd8d6410008738bcde9c4c19282039\" width=\"650\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-29/08794016-6134-48e1-9fb4-e094c514aec5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-29/08794016-6134-48e1-9fb4-e094c514aec5.jpg",
+      "token": "migration-resource://5abd8c629685f8f3a0025301bc28a50ffbfe72a8f5762435e22cd7ac18456bba",
+      "snapshotPath": "assets/5abd8c629685f8f3a0025301bc28a50ffbfe72a8f5762435e22cd7ac18456bba.jpg",
+      "sha256": "5abd8c629685f8f3a0025301bc28a50ffbfe72a8f5762435e22cd7ac18456bba",
+      "contentType": "image/jpeg",
+      "sizeBytes": 151573
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-29/464010e7-ed47-4307-ab71-ea07f090ae88.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-29/464010e7-ed47-4307-ab71-ea07f090ae88.jpg",
+      "token": "migration-resource://045371b432716dc164e8ddd87f7cc22f0acd8d6410008738bcde9c4c19282039",
+      "snapshotPath": "assets/045371b432716dc164e8ddd87f7cc22f0acd8d6410008738bcde9c4c19282039.jpg",
+      "sha256": "045371b432716dc164e8ddd87f7cc22f0acd8d6410008738bcde9c4c19282039",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67891
+    }
+  ],
+  "sourceFingerprint": "7eb3a9ce255d3cbb923dd5c022fd868a7fcc2764ffe3daf21805b947530be875",
+  "evidence": {
+    "listPage": 116,
+    "listTitle": "访企拓岗促就业 合作共赢谱新篇 吉林化工学院领导走访华南校友会",
+    "listPublishDate": "2023-03-31",
+    "sourceOrder": 1153,
+    "detailPublishDate": "2023-03-31"
+  }
+}

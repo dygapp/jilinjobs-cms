@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2c455d35d120e7c652f2eed726e8e0987277b33b38fffa5e0e651a5a125ad7b4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xe3cpKr7DBP9rltq5pI5dQ",
+    "url": "https://mp.weixin.qq.com/s/xe3cpKr7DBP9rltq5pI5dQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院举办“聚力扩容提质 服务高质量发展”吉林工商学院2026届毕业生春季校园招聘会——工科类特色专场",
+    "source": "",
+    "publishDate": "2026-05-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xe3cpKr7DBP9rltq5pI5dQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "2b266e391435396ecb79a62e5d8242e880d111e554e06b4fc9a8c64a0b8322f6",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "吉林工商学院举办“聚力扩容提质 服务高质量发展”吉林工商学院2026届毕业生春季校园招聘会——工科类特色专场",
+    "listPublishDate": "2026-05-18",
+    "sourceOrder": 168
+  }
+}

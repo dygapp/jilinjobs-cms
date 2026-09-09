@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:a18b66f7f06ddf8a84d17e53538c1c828fb494bfbc907b7873d5f47565e3c9a9",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/qyzp2018/202208/t20220824_8550005.html",
+    "url": "http://gzw.jl.gov.cn/qyzp2018/202208/t20220824_8550005.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省省属国有企业2022年度秋季定向招聘高校毕业生的公告",
+    "source": "",
+    "publishDate": "2022-08-24",
+    "bodyHtml": "",
+    "externalUrl": "http://gzw.jl.gov.cn/qyzp2018/202208/t20220824_8550005.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "c592b3c470cac75c9205131ca937a043b3d44d405274c831b09efbfe995bb4fb",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "吉林省省属国有企业2022年度秋季定向招聘高校毕业生的公告",
+    "listPublishDate": "2022-08-24",
+    "sourceOrder": 338
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bd59cc98ead63da73a3528be0c4645a8c9050840a6ef64eff7a4d9492104b5ca",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/GQp8cO1AUdUDfm0woW0toA",
+    "url": "https://mp.weixin.qq.com/s/GQp8cO1AUdUDfm0woW0toA?scene=25&sessionid=-1365645608"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化师范学院举办2025届毕业生春季校园招聘会",
+    "source": "",
+    "publishDate": "2025-04-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/GQp8cO1AUdUDfm0woW0toA?scene=25&sessionid=-1365645608"
+  },
+  "resources": [],
+  "sourceFingerprint": "c14677882860e1eb8edffb81c76d71e100297df418e39bb07047cec0ea2d8b65",
+  "evidence": {
+    "listPage": 93,
+    "listTitle": "通化师范学院举办2025届毕业生春季校园招聘会",
+    "listPublishDate": "2025-04-27",
+    "sourceOrder": 924
+  }
+}

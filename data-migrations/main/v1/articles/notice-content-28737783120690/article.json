@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120690",
+    "contentId": "28737783120690",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120690"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展2020届全省高校毕业生就业状况调查的通知",
+    "source": "市场部",
+    "publishDate": "2020-08-20",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align:center\"><img src=\"migration-resource://2c87cfaeb79176865f43a9138d83a9b02e97fe40592644185b7a7fc8c2175259\" alt=\"\" width=\"800\" height=\"1131\"><img src=\"migration-resource://4369a61c5639352e38b0578ac55f803d5d924a8118800ffdef73f8747bb63272\" alt=\"\" width=\"800\" height=\"1131\"><img src=\"migration-resource://d53e4bf012b14523cd65f9358c9b7b3e1ff6a498f5a112c9ab54bdb1c1a0b513\" alt=\"\" width=\"800\" height=\"1131\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200824122344.jpg",
+      "originalReference": "/chistory/cms/editor/20200824122344.jpg",
+      "token": "migration-resource://2c87cfaeb79176865f43a9138d83a9b02e97fe40592644185b7a7fc8c2175259",
+      "snapshotPath": "assets/2c87cfaeb79176865f43a9138d83a9b02e97fe40592644185b7a7fc8c2175259.jpg",
+      "sha256": "2c87cfaeb79176865f43a9138d83a9b02e97fe40592644185b7a7fc8c2175259",
+      "contentType": "image/jpeg",
+      "sizeBytes": 225102
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200828084445.jpg",
+      "originalReference": "/chistory/cms/editor/20200828084445.jpg",
+      "token": "migration-resource://4369a61c5639352e38b0578ac55f803d5d924a8118800ffdef73f8747bb63272",
+      "snapshotPath": "assets/4369a61c5639352e38b0578ac55f803d5d924a8118800ffdef73f8747bb63272.jpg",
+      "sha256": "4369a61c5639352e38b0578ac55f803d5d924a8118800ffdef73f8747bb63272",
+      "contentType": "image/jpeg",
+      "sizeBytes": 1252426
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200824122511.jpg",
+      "originalReference": "/chistory/cms/editor/20200824122511.jpg",
+      "token": "migration-resource://d53e4bf012b14523cd65f9358c9b7b3e1ff6a498f5a112c9ab54bdb1c1a0b513",
+      "snapshotPath": "assets/d53e4bf012b14523cd65f9358c9b7b3e1ff6a498f5a112c9ab54bdb1c1a0b513.jpg",
+      "sha256": "d53e4bf012b14523cd65f9358c9b7b3e1ff6a498f5a112c9ab54bdb1c1a0b513",
+      "contentType": "image/jpeg",
+      "sizeBytes": 139896
+    }
+  ],
+  "sourceFingerprint": "372b37baaad8214881638d6614e34f51d6843d4e89b735ff2f533a838c458a8c",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "关于开展2020届全省高校毕业生就业状况调查的通知",
+    "listPublishDate": "2020-08-20",
+    "sourceOrder": 176,
+    "detailPublishDate": "2020-08-20"
+  }
+}

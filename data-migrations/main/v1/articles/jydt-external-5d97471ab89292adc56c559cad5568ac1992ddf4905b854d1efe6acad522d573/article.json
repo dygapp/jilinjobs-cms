@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5d97471ab89292adc56c559cad5568ac1992ddf4905b854d1efe6acad522d573",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/_fSxte6rFSuUQUDy8s1-Aw",
+    "url": "https://mp.weixin.qq.com/s/_fSxte6rFSuUQUDy8s1-Aw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春金融高等专科学校党委书记王登攀带队赴抚松县开展专项交流活动",
+    "source": "",
+    "publishDate": "2026-06-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_fSxte6rFSuUQUDy8s1-Aw"
+  },
+  "resources": [],
+  "sourceFingerprint": "ed5bd807962b28dd0acc53b25816741b0946338cc02153b60295aef91686cc0b",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "长春金融高等专科学校党委书记王登攀带队赴抚松县开展专项交流活动",
+    "listPublishDate": "2026-06-15",
+    "sourceOrder": 81
+  }
+}

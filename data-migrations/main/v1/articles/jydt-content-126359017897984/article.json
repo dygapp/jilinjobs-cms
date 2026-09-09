@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:126359017897984",
+    "contentId": "126359017897984",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=126359017897984"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春工业大学成功举办“慧就业 云求职”秋季网络双选会",
+    "source": "长春工业大学",
+    "publishDate": "2022-10-30",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">为贯彻落实党中央关于就业工作的决策部署，切实做好2023届毕业生就业工作，为用人单位提供精准人才对接服务，确保做到疫情防控常态化下校园招聘活动“不断线”，长春工业大学于9月29日成功举办“慧就业‘云’求职”2023届毕业生秋季网络双选会。</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">根据疫情防控要求，本次双选会从信息匹配、简历投递到面试环节都通过线上完成，求职者和用人单位可以足不出户就完成求职签约全过程。</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">网络双选会的召开是满足后疫情期间各类用人单位复工复产迫切用人需求的重要途径，是落实毕业生就业工作服务不断线、就业不停歇要求的充分体现。长春工业大学每天不间断地联络用人单位，并根据用人单位需求有针对性地推荐合适的毕业生，为学生抢占就业市场先机。</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">据不完全统计，本次网络双选会吸引了来自全国的172家用人单位报名参加，提供岗位数量781个，参会学生共计1252人。为2023届毕业生搭建了优质的供需对接平台。</span></span></span></span></p>\n\n<p style=\"text-align:right\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><strong><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">（长春工业大学 齐宁宁）</span></span></strong></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "c89302f5804e17bb14a35e1f8e41eaf00c609900ce9d786fd2a7dcc18ac351ce",
+  "evidence": {
+    "listPage": 118,
+    "listTitle": "长春工业大学成功举办“慧就业 云求职”秋季网络双选会",
+    "listPublishDate": "2022-10-30",
+    "sourceOrder": 1174,
+    "detailPublishDate": "2022-10-30"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b7161fc090d17ad4dbc6682c9df1bc79daffd1c6c462b6cc981e30af305ed604",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/E_DDrNI7XFH_BE1Lj7ZJzQ",
+    "url": "https://mp.weixin.qq.com/s/E_DDrNI7XFH_BE1Lj7ZJzQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春金融高等专科学校校长吕鹰飞带队赴九台农村商业银行吉林大路支行开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-04-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/E_DDrNI7XFH_BE1Lj7ZJzQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "478f99a739ba100b3bf80e265054a0711793d188d5e0241e74a8e44f488a629f",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "长春金融高等专科学校校长吕鹰飞带队赴九台农村商业银行吉林大路支行开展访企拓岗专项行动",
+    "listPublishDate": "2026-04-23",
+    "sourceOrder": 253
+  }
+}

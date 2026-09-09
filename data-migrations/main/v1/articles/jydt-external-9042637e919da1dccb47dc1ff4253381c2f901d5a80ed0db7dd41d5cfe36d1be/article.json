@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9042637e919da1dccb47dc1ff4253381c2f901d5a80ed0db7dd41d5cfe36d1be",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/MGBq9m8jTxQu2EFaxk7lEA",
+    "url": "https://mp.weixin.qq.com/s/MGBq9m8jTxQu2EFaxk7lEA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院党委书记柳轶带队赴吉林颐养集团开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-04-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/MGBq9m8jTxQu2EFaxk7lEA"
+  },
+  "resources": [],
+  "sourceFingerprint": "aac2fc0307d12c38690ea7dd29fe46307c2cd94a61a73e09c7ae3a18f8ab2b4e",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "长春人文学院党委书记柳轶带队赴吉林颐养集团开展访企拓岗专项行动",
+    "listPublishDate": "2026-04-22",
+    "sourceOrder": 259
+  }
+}

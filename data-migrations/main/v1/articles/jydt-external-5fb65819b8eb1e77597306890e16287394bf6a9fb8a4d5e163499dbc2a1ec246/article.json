@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5fb65819b8eb1e77597306890e16287394bf6a9fb8a4d5e163499dbc2a1ec246",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/mQ9Gqwmm4H7C_hc3AaV_hQ",
+    "url": "https://mp.weixin.qq.com/s/mQ9Gqwmm4H7C_hc3AaV_hQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业科技学院党委副书记许洪波带队赴广东访企拓岗",
+    "source": "",
+    "publishDate": "2026-01-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/mQ9Gqwmm4H7C_hc3AaV_hQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "5cc151f9d5d8561d9e5fd93f861aeab6857e6db19a655390faa838cecfeef887",
+  "evidence": {
+    "listPage": 48,
+    "listTitle": "吉林农业科技学院党委副书记许洪波带队赴广东访企拓岗",
+    "listPublishDate": "2026-01-26",
+    "sourceOrder": 476
+  }
+}

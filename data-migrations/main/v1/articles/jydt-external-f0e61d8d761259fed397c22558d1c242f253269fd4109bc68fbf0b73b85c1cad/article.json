@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f0e61d8d761259fed397c22558d1c242f253269fd4109bc68fbf0b73b85c1cad",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/6fH42b7zjTi84HOhg1EdFQ",
+    "url": "https://mp.weixin.qq.com/s/6fH42b7zjTi84HOhg1EdFQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "创业奋斗 “就”在吉林｜白山市助力践行“两山”理念试验区建设宣介招聘会在吉林农业大学举行",
+    "source": "",
+    "publishDate": "2024-04-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/6fH42b7zjTi84HOhg1EdFQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "7118f1a03b02c571f8c4f8090ef68ced4ce4957c3534bad90455f662dcdbfa97",
+  "evidence": {
+    "listPage": 108,
+    "listTitle": "创业奋斗 “就”在吉林｜白山市助力践行“两山”理念试验区建设宣介招聘会在吉林农业大学举行",
+    "listPublishDate": "2024-04-18",
+    "sourceOrder": 1078
+  }
+}

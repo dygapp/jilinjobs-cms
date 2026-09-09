@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:179989729263616",
+    "contentId": "179989729263616",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=179989729263616"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于邀请参加“吉聚人才就在吉林”大型公益招聘活动启动仪式的函",
+    "source": "吉林省人才交流开发中心",
+    "publishDate": "2023-09-21",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1272\" src=\"migration-resource://f3aeab7df5b9e079f672f6949692282997601c873ebbd19d45f343ecec85adb4\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1272\" src=\"migration-resource://0ebf01f15f7e36de09bc245b2a48bd5334e4c89b7e5d58e21af86f1c2f458f4a\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1272\" src=\"migration-resource://b282f4b542c3085ea88a525209c050f444b441becc65943b15bb96e4cde62cd3\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1272\" src=\"migration-resource://4605e5bf4fdb18e2265c94d1bbcb28646c07b3dfb41dd220ccbd5cc7f476281e\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1272\" src=\"migration-resource://c502e69af8d65538322664af8ba88740952780737b85f686c452122c3b301a24\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1272\" src=\"migration-resource://eb9ba6f92d2bd5cb20ffa0dc9c67ca0a8e2f6991c8c919059046ac92fc9b6332\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-21/f0cb7584-0119-4fed-81c7-c41eec993af1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-21/f0cb7584-0119-4fed-81c7-c41eec993af1.jpg",
+      "token": "migration-resource://f3aeab7df5b9e079f672f6949692282997601c873ebbd19d45f343ecec85adb4",
+      "snapshotPath": "assets/f3aeab7df5b9e079f672f6949692282997601c873ebbd19d45f343ecec85adb4.jpg",
+      "sha256": "f3aeab7df5b9e079f672f6949692282997601c873ebbd19d45f343ecec85adb4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 170418
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-21/1b8857ed-b984-492f-bc1d-93a76dc305f0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-21/1b8857ed-b984-492f-bc1d-93a76dc305f0.jpg",
+      "token": "migration-resource://0ebf01f15f7e36de09bc245b2a48bd5334e4c89b7e5d58e21af86f1c2f458f4a",
+      "snapshotPath": "assets/0ebf01f15f7e36de09bc245b2a48bd5334e4c89b7e5d58e21af86f1c2f458f4a.jpg",
+      "sha256": "0ebf01f15f7e36de09bc245b2a48bd5334e4c89b7e5d58e21af86f1c2f458f4a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 178115
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-21/eff79fdc-cf3a-43a6-8644-0cf9d8ab190a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-21/eff79fdc-cf3a-43a6-8644-0cf9d8ab190a.jpg",
+      "token": "migration-resource://b282f4b542c3085ea88a525209c050f444b441becc65943b15bb96e4cde62cd3",
+      "snapshotPath": "assets/b282f4b542c3085ea88a525209c050f444b441becc65943b15bb96e4cde62cd3.jpg",
+      "sha256": "b282f4b542c3085ea88a525209c050f444b441becc65943b15bb96e4cde62cd3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81285
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-21/2dfcb369-8525-4fb0-84c2-e841e30e8544.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-21/2dfcb369-8525-4fb0-84c2-e841e30e8544.jpg",
+      "token": "migration-resource://4605e5bf4fdb18e2265c94d1bbcb28646c07b3dfb41dd220ccbd5cc7f476281e",
+      "snapshotPath": "assets/4605e5bf4fdb18e2265c94d1bbcb28646c07b3dfb41dd220ccbd5cc7f476281e.jpg",
+      "sha256": "4605e5bf4fdb18e2265c94d1bbcb28646c07b3dfb41dd220ccbd5cc7f476281e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 185732
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-21/3663cfb0-542a-429d-91cb-74759cf83cae.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-21/3663cfb0-542a-429d-91cb-74759cf83cae.jpg",
+      "token": "migration-resource://c502e69af8d65538322664af8ba88740952780737b85f686c452122c3b301a24",
+      "snapshotPath": "assets/c502e69af8d65538322664af8ba88740952780737b85f686c452122c3b301a24.jpg",
+      "sha256": "c502e69af8d65538322664af8ba88740952780737b85f686c452122c3b301a24",
+      "contentType": "image/jpeg",
+      "sizeBytes": 168216
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-21/8b206f8f-b04f-42b1-986c-d8491f2a52df.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-21/8b206f8f-b04f-42b1-986c-d8491f2a52df.jpg",
+      "token": "migration-resource://eb9ba6f92d2bd5cb20ffa0dc9c67ca0a8e2f6991c8c919059046ac92fc9b6332",
+      "snapshotPath": "assets/eb9ba6f92d2bd5cb20ffa0dc9c67ca0a8e2f6991c8c919059046ac92fc9b6332.jpg",
+      "sha256": "eb9ba6f92d2bd5cb20ffa0dc9c67ca0a8e2f6991c8c919059046ac92fc9b6332",
+      "contentType": "image/jpeg",
+      "sizeBytes": 102858
+    }
+  ],
+  "sourceFingerprint": "f96d7afe62e1da00d7f99acb8155f38e110d437376e16457ae29b5538adbed24",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "关于邀请参加“吉聚人才就在吉林”大型公益招聘活动启动仪式的函",
+    "listPublishDate": "2023-09-21",
+    "sourceOrder": 308,
+    "detailPublishDate": "2023-09-21"
+  }
+}

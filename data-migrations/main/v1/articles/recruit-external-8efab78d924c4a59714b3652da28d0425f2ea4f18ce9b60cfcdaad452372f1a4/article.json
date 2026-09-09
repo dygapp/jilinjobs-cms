@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:8efab78d924c4a59714b3652da28d0425f2ea4f18ce9b60cfcdaad452372f1a4",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/py6ZJceLw2uN6buSPH6Y2Q",
+    "url": "https://mp.weixin.qq.com/s/py6ZJceLw2uN6buSPH6Y2Q"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院“聚力扩容提质 服务高质量发展”2027届毕业生秋季网络招聘会",
+    "source": "",
+    "publishDate": "2026-09-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/py6ZJceLw2uN6buSPH6Y2Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "ee9bf3a5c13a5117de7d6d049a3fd50f79a344cef155f0b5d483f4ba849799cb",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "长春科技学院“聚力扩容提质 服务高质量发展”2027届毕业生秋季网络招聘会",
+    "listPublishDate": "2026-09-07",
+    "sourceOrder": 6
+  }
+}

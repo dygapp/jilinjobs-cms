@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268960098435072",
+    "contentId": "268960098435072",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268960098435072"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春工业大学人文信息学院承办吉林省第六届应用型本科院校网络视频双选会",
+    "source": "",
+    "publishDate": "2024-11-29",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://248633266ed235e1042c90caa1916a93e30e45b825ce248d4595957356f377d8\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/1d571b37-0a57-4aef-b175-f22ff3d13409.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/1d571b37-0a57-4aef-b175-f22ff3d13409.jpg",
+      "token": "migration-resource://248633266ed235e1042c90caa1916a93e30e45b825ce248d4595957356f377d8",
+      "snapshotPath": "assets/248633266ed235e1042c90caa1916a93e30e45b825ce248d4595957356f377d8.jpg",
+      "sha256": "248633266ed235e1042c90caa1916a93e30e45b825ce248d4595957356f377d8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 394123
+    }
+  ],
+  "sourceFingerprint": "5cba2b4d9fd24ed5ba80943d64bc5b68151b9cb2e1ac6e72cb08c4261232cb73",
+  "evidence": {
+    "listPage": 101,
+    "listTitle": "长春工业大学人文信息学院承办吉林省第六届应用型本科院校网络视频双选会",
+    "listPublishDate": "2024-11-29",
+    "sourceOrder": 1009,
+    "detailPublishDate": "2024-11-29"
+  }
+}

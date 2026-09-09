@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-jilin:content:221493699051520",
+    "contentId": "221493699051520",
+    "typeCode": "policy-jilin",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=221493699051520"
+  },
+  "target": {
+    "columnAlias": "policy-jilin",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省人才口袋书",
+    "source": "",
+    "publishDate": "2024-05-07",
+    "bodyHtml": "\n                        <p>请点击附件查看详情。</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "0fa10b04d6d46b59de0f9d9e8ceebb9869ea04bba1b433e8a47360b86b03b10d",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "吉林省人才口袋书",
+    "listPublishDate": "2024-05-07",
+    "sourceOrder": 4,
+    "detailPublishDate": "2024-05-07"
+  }
+}

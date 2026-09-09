@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122220",
+    "contentId": "28737783122220",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122220"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "济南市特困家庭应届高校毕业生可领求职补贴",
+    "source": "",
+    "publishDate": "2011-11-01",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">济南市特困家庭应届高校毕业生可领求职补贴</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-1 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 新华网济南9月18日电（记者 钱荣）记者从济南市人力资源和社会保障局获悉，济南市将对符合条件的特困家庭应届高校毕业生给予每人500元的一次性求职补贴。　</font></p> <p><font color=\"#444444\" size=\"2\">　　据了解，从2010年起，济南市就开始对特困家庭应届高校毕业生发放一次性求职补贴。根据相关政策规定，享受补贴的特困生必须具备以下三个条件：济南本市户籍家庭贫困，持有《城市居民最低生活保障证》《济南市特困职工优待证》《山东省农村最低生活保障证》的家庭；2011年省外院校济南生源回济未就业应届毕业的专科及以上学历高校毕业生，其中，升学、出国、参军、指令性就业、暂无就业意愿的除外；毕业生就业报到证派遣到市或县（市）区就业主管部门，并进行失业登记。</font></p> <p><font color=\"#444444\" size=\"2\">　　除对特困家庭应届高校毕业生给予一次性求职补贴外，济南市今年还实行就业、失业登记，已在网上报到的未就业高校毕业生及时免费办理就业（失业）登记后，还可按相关政策享受创业补贴、职业技能培训补贴。<br>&nbsp;<br>&nbsp;</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "13e3d823c3c670b1ecc92e076e42959833c036689557c1c6fcf612927889a320",
+  "evidence": {
+    "listPage": 166,
+    "listTitle": "济南市特困家庭应届高校毕业生可领求职补贴",
+    "listPublishDate": "2011-11-01",
+    "sourceOrder": 1651,
+    "detailPublishDate": "2011-11-01"
+  }
+}

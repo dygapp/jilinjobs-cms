@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:c4c515bbe638dd96bdda018a9547f144dfccab07d5df267ae487860a910a29a0",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/_W6r9bk0zsUwjHQaw737Sw",
+    "url": "https://mp.weixin.qq.com/s/_W6r9bk0zsUwjHQaw737Sw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北五校2025届毕业生春季双选会邀请函及具体安排【吉林大学专场】",
+    "source": "",
+    "publishDate": "2025-03-05",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_W6r9bk0zsUwjHQaw737Sw"
+  },
+  "resources": [],
+  "sourceFingerprint": "d2ad6c9b40bf8470855f752303364e0cf942bc837fc1f18b989e9d7bd2e134b4",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "东北五校2025届毕业生春季双选会邀请函及具体安排【吉林大学专场】",
+    "listPublishDate": "2025-03-05",
+    "sourceOrder": 230
+  }
+}

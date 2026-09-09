@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86131077038080",
+    "contentId": "86131077038080",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86131077038080"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春汽车工业高等专科学校举办“2022届毕业生春季空中双选会”",
+    "source": "长春汽车工业高等专科学校",
+    "publishDate": "2022-04-12",
+    "bodyHtml": "\n                        <p>为贯彻落实党中央、国务院“稳就业”“保就业”决策部署，沉着应对新冠疫情给就业工作带来的挑战，保障就业服务不断线，校园招聘不停歇，千方百计促进2022届高校毕业生更加充分更高质量就业，3月18日-3月19日，长春汽车工业高等专科学校成功举办“2022届毕业生春季空中双选会”。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"500\" src=\"migration-resource://3e961cbed63743320c7bc736aeb67bb242cf3a5460cb1f96d3dfa9bdd9aafa33\" width=\"268\">&nbsp; &nbsp;&nbsp;<img alt=\"\" height=\"450\" src=\"migration-resource://cf232eb99ec4a0e828a749ec0f6942f879105c883b00db6baef97d120d943ea7\" width=\"337\"></p>\n\n<p>本次空中双选会精准邀请了与学校毕业生意向契合的105家企业参加招聘，共提供8133个岗位，为各专业毕业生提供了广泛的选择空间和充裕的就业岗位。</p>\n\n<p>学校169名毕业生报名参加，浏览量达到3766人次，58人与企业达成意向，同时还有部分企业将筛选简历，后续与毕业生确定面试。</p>\n\n<p>为了突破时间空间等限制，同时抢抓春招黄金时机，本学期开学以来，学校采取“线上+线下”的招聘方式。组织返校的毕业生参加校内外专场招聘，未返校的毕业生主要以空中双选会和线上专场的形式解决就业。今后招生就业处将继续优化资源,在疫情防控期间多措并举，办好各类线上招聘活动，为毕业生提供优质、充足、可靠的就业岗位，在重点区域、重大工程、重大项目中加强人才供需对接，助力2022届毕业生实现更高质量和更充分就业。</p>\n\n<p><strong>（长春汽车工业高等专科学校 翟雨来）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/ade1e9b5-420f-4657-bcd8-a2db29569379.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/ade1e9b5-420f-4657-bcd8-a2db29569379.jpg",
+      "token": "migration-resource://3e961cbed63743320c7bc736aeb67bb242cf3a5460cb1f96d3dfa9bdd9aafa33",
+      "snapshotPath": "assets/3e961cbed63743320c7bc736aeb67bb242cf3a5460cb1f96d3dfa9bdd9aafa33.jpg",
+      "sha256": "3e961cbed63743320c7bc736aeb67bb242cf3a5460cb1f96d3dfa9bdd9aafa33",
+      "contentType": "image/jpeg",
+      "sizeBytes": 60816
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/4f58fb16-3de7-4350-950a-d6dc6f2002fe.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/4f58fb16-3de7-4350-950a-d6dc6f2002fe.jpg",
+      "token": "migration-resource://cf232eb99ec4a0e828a749ec0f6942f879105c883b00db6baef97d120d943ea7",
+      "snapshotPath": "assets/cf232eb99ec4a0e828a749ec0f6942f879105c883b00db6baef97d120d943ea7.jpg",
+      "sha256": "cf232eb99ec4a0e828a749ec0f6942f879105c883b00db6baef97d120d943ea7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 116196
+    }
+  ],
+  "sourceFingerprint": "0cb10f2f1888ca784b8b2469f8961f72cacafaa0c106bfb0bb1147471f4ca720",
+  "evidence": {
+    "listPage": 124,
+    "listTitle": "长春汽车工业高等专科学校举办“2022届毕业生春季空中双选会”",
+    "listPublishDate": "2022-04-12",
+    "sourceOrder": 1235,
+    "detailPublishDate": "2022-04-12"
+  }
+}

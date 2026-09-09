@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122722",
+    "contentId": "28737783122722",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122722"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2019年吉林省普通高等学校‘专升本’教育考试课程大纲（试行）",
+    "source": "",
+    "publishDate": "2019-01-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2019年吉林省普通高等学校‘专升本’教育考试课程大纲（试行）</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:教育厅高校学生处   发布时间:2019-1-4 15:13:33</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p>&nbsp;请点击附件下载！！</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        <a href=\"../Common/DownLoadFile.aspx?fileid=963ce4a1-38fc-45be-b2d8-77ba63ac388f\">2019年吉林省普通高等学校‘专升本’教育考试课程大纲（试行）.pdf</a><br>\n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "cfb23b0606e61728bb1598852daa53682729fa588410d2624e1588f677940c29",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "2019年吉林省普通高等学校‘专升本’教育考试课程大纲（试行）",
+    "listPublishDate": "2019-01-04",
+    "sourceOrder": 197,
+    "detailPublishDate": "2019-01-04"
+  }
+}

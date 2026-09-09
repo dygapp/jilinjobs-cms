@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:a2dc1cc4bd61982c637d42cf0204dc500b49f167bfd244d70a9c2601a452fb53",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/rqogcLFo6E7-YeYbPUtZ9A",
+    "url": "https://mp.weixin.qq.com/s/rqogcLFo6E7-YeYbPUtZ9A"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗‘就’在吉林”长春工业大学人文信息学院2024年春季就业实习双选会邀请函",
+    "source": "",
+    "publishDate": "2024-05-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/rqogcLFo6E7-YeYbPUtZ9A"
+  },
+  "resources": [],
+  "sourceFingerprint": "b47f64fbff294cc2a9ee9c176b95d9166d594d0f33d4b6f99916361b0080ba85",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "“创业奋斗‘就’在吉林”长春工业大学人文信息学院2024年春季就业实习双选会邀请函",
+    "listPublishDate": "2024-05-11",
+    "sourceOrder": 275
+  }
+}

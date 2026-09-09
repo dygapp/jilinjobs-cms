@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:dd74d973f26d2e20d95c56906a175b65553150824181e715e26e6963247604fe",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kKhKadaxZu3IA0ZEYo1XoQ",
+    "url": "https://mp.weixin.qq.com/s/kKhKadaxZu3IA0ZEYo1XoQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林警察学院成功举办2026届毕业生秋季双选会",
+    "source": "",
+    "publishDate": "2025-11-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kKhKadaxZu3IA0ZEYo1XoQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "05d7061861efa75f6cbbdd8b434273c19ca526ba001338b83845d47c5e92b233",
+  "evidence": {
+    "listPage": 60,
+    "listTitle": "吉林警察学院成功举办2026届毕业生秋季双选会",
+    "listPublishDate": "2025-11-17",
+    "sourceOrder": 597
+  }
+}

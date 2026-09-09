@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:6e2180006013996e4815d87680728aeb3eeb2f1dfa5ffdfd764ec8ad5ec07dab",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/1Ow9-5ddbfaoT4h4idivSA",
+    "url": "https://mp.weixin.qq.com/s/1Ow9-5ddbfaoT4h4idivSA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【邀请函】长春工程学院2025年春季双选会",
+    "source": "",
+    "publishDate": "2025-03-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1Ow9-5ddbfaoT4h4idivSA"
+  },
+  "resources": [],
+  "sourceFingerprint": "b4d368cc8b7759f63e15fb719fd88ec8a555a6c4da9b95b3c1d1a5b9093aa63f",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "【邀请函】长春工程学院2025年春季双选会",
+    "listPublishDate": "2025-03-07",
+    "sourceOrder": 224
+  }
+}

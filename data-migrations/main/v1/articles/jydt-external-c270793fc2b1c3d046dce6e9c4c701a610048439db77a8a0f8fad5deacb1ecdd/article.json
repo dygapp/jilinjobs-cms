@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c270793fc2b1c3d046dce6e9c4c701a610048439db77a8a0f8fad5deacb1ecdd",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/bTnhTdLWPhb_WOu6JJX5aA",
+    "url": "https://mp.weixin.qq.com/s/bTnhTdLWPhb_WOu6JJX5aA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林交通职业技术学院院长别惠彬率队赴浙江省、江苏省开展“访企拓岗”活动",
+    "source": "",
+    "publishDate": "2025-07-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/bTnhTdLWPhb_WOu6JJX5aA"
+  },
+  "resources": [],
+  "sourceFingerprint": "0c0c09245592818cd6f17b26e3aefd64e24cabc7d7750ded47c312a752f18bdc",
+  "evidence": {
+    "listPage": 73,
+    "listTitle": "吉林交通职业技术学院院长别惠彬率队赴浙江省、江苏省开展“访企拓岗”活动",
+    "listPublishDate": "2025-07-14",
+    "sourceOrder": 728
+  }
+}

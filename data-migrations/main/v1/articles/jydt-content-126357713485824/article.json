@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:126357713485824",
+    "contentId": "126357713485824",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=126357713485824"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "通化师范学院召开大学生“感知吉林”工程活动实施工作推进会",
+    "source": "通化师范学院",
+    "publishDate": "2022-10-30",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"392\" src=\"migration-resource://56c9b5257c837f504fafd281483c718ed5bc4caa59839cfb29d59c533e8e807f\" width=\"600\"></p>\n\n<p style=\"text-align:left\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">为深入贯彻落实习近平总书记视察吉林重要讲话重要指示精神，落实省委省政府人才兴省战略部署，加大留省就业推介力度，按照省政府统一部署，通化师范学院启动大学生“感知吉林”工程活动，9月20日，学校召开大学生“感知吉林”工程活动实施工作推进会，相关职能部门负责人参加会议，党委副书记郭璟瑞主持会议。</span></span></span></span></p>\n\n<p style=\"text-align:left\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">会议以“感知吉林”为主题，坚持事业留人、待遇留人、环境留人、情感留人工作导向，要求将宣传引导贯穿大学生在校学习全过程，对“感知吉林”工程活动进行具体任务分解，对下一步工作做了安排部署。</span></span></span></span></p>\n\n<p style=\"text-align:left\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">郭璟瑞在总结讲话中指出，各相关单位要把此项活动与稳定和扩大毕业生就业紧密结合起来，与促进毕业生留吉就业创业结合起来，引导大学生扎根吉林，为新时代吉林全面振兴全方位振兴贡献力量。</span></span></span></span></p>\n\n<p style=\"text-align:right\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><strong><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">（通化师范学院 马千惠）</span></span></strong></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-29/6fd4ee9c-1ad4-478a-b7d8-3eb8d7c5b084.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-29/6fd4ee9c-1ad4-478a-b7d8-3eb8d7c5b084.jpg",
+      "token": "migration-resource://56c9b5257c837f504fafd281483c718ed5bc4caa59839cfb29d59c533e8e807f",
+      "snapshotPath": "assets/56c9b5257c837f504fafd281483c718ed5bc4caa59839cfb29d59c533e8e807f.jpg",
+      "sha256": "56c9b5257c837f504fafd281483c718ed5bc4caa59839cfb29d59c533e8e807f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 168050
+    }
+  ],
+  "sourceFingerprint": "ccfb60f9e3694ffc17c0a4454af989061a3c86d09f4ce742b791c952f817d033",
+  "evidence": {
+    "listPage": 119,
+    "listTitle": "通化师范学院召开大学生“感知吉林”工程活动实施工作推进会",
+    "listPublishDate": "2022-10-30",
+    "sourceOrder": 1182,
+    "detailPublishDate": "2022-10-30"
+  }
+}

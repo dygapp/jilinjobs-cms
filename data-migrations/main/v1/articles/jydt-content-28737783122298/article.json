@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122298",
+    "contentId": "28737783122298",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122298"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "青年网络创业大赛在广州开幕",
+    "source": "",
+    "publishDate": "2009-06-26",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">青年网络创业大赛在广州开幕</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-6-26 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; “炫纺SOHO”青年网络创业大赛日前在广州开幕。大赛前三名奖金分别达10万元、8万元和5万元，加上最佳创意奖、优质服务奖等，总奖金超过33万元。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 据悉，大赛将以淘宝网和沃客网作为活动平台。由淘宝网开设大赛专区，参赛者开设网络商店；沃客网发布大赛权威信息，并承载活动各项流程操作。大学生或有志于创业的社会青年，可个人或组队参赛，以沃客网统计的网店销售业绩作为参赛评比标准。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 该大赛由团广州市委和广州纺织工贸企业集团等单位共同发起，旨在引导青年树立正确的创业观、提升自身创业能力。</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "f3d1705ce580b45e73675793daf569b27e37ba8d1fe3a8f9f23b27ce9d67e55f",
+  "evidence": {
+    "listPage": 171,
+    "listTitle": "青年网络创业大赛在广州开幕",
+    "listPublishDate": "2009-06-26",
+    "sourceOrder": 1705,
+    "detailPublishDate": "2009-06-26"
+  }
+}

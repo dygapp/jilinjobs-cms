@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5246fcb53701c24b4645c25ebe6193af33624a801584b2dc75b29066a3c03ea0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/lgxw2026/aecb15a9be1044e48acdc44c3c844d1a.htm",
+    "url": "https://www.cust.edu.cn/lgxw2026/aecb15a9be1044e48acdc44c3c844d1a.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春理工大学毕业生代表赴连云港参加“百所高校学子地方行”活动",
+    "source": "",
+    "publishDate": "2026-05-27",
+    "bodyHtml": "",
+    "externalUrl": "https://www.cust.edu.cn/lgxw2026/aecb15a9be1044e48acdc44c3c844d1a.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "8e7fd16b12e1df061cf16d37813d9bd4a0f91b067a9b87bae674aec6dcfe07be",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "长春理工大学毕业生代表赴连云港参加“百所高校学子地方行”活动",
+    "listPublishDate": "2026-05-27",
+    "sourceOrder": 135
+  }
+}

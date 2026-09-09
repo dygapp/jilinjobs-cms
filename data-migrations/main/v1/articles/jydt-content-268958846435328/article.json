@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268958846435328",
+    "contentId": "268958846435328",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268958846435328"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林化工学院走访吉化北方化学工业有限公司",
+    "source": "",
+    "publishDate": "2024-12-03",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://d8051c83ebab0f37b72fe6cfc809dc3fac4dd1340793533c0e73c306c270e497\" width=\"1587\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://f7a317f43e622c0d86fa3b796d2407f9d2830593f5176e2c91b4fe7b5711caae\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/dba1051c-4b77-4be8-b2e0-ac5b6758d08c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/dba1051c-4b77-4be8-b2e0-ac5b6758d08c.jpg",
+      "token": "migration-resource://d8051c83ebab0f37b72fe6cfc809dc3fac4dd1340793533c0e73c306c270e497",
+      "snapshotPath": "assets/d8051c83ebab0f37b72fe6cfc809dc3fac4dd1340793533c0e73c306c270e497.jpg",
+      "sha256": "d8051c83ebab0f37b72fe6cfc809dc3fac4dd1340793533c0e73c306c270e497",
+      "contentType": "image/jpeg",
+      "sizeBytes": 384160
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/fe343037-fc87-49b3-aeb5-eb049d1176ac.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/fe343037-fc87-49b3-aeb5-eb049d1176ac.jpg",
+      "token": "migration-resource://f7a317f43e622c0d86fa3b796d2407f9d2830593f5176e2c91b4fe7b5711caae",
+      "snapshotPath": "assets/f7a317f43e622c0d86fa3b796d2407f9d2830593f5176e2c91b4fe7b5711caae.jpg",
+      "sha256": "f7a317f43e622c0d86fa3b796d2407f9d2830593f5176e2c91b4fe7b5711caae",
+      "contentType": "image/jpeg",
+      "sizeBytes": 106203
+    }
+  ],
+  "sourceFingerprint": "7c2e6aadf55e38a0f60f41bccbd4297bded537cb6eb0ebbc9af90539fedd4f0a",
+  "evidence": {
+    "listPage": 101,
+    "listTitle": "吉林化工学院走访吉化北方化学工业有限公司",
+    "listPublishDate": "2024-12-03",
+    "sourceOrder": 1007,
+    "detailPublishDate": "2024-12-03"
+  }
+}

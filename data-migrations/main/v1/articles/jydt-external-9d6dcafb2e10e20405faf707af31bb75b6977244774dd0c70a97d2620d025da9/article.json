@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9d6dcafb2e10e20405faf707af31bb75b6977244774dd0c70a97d2620d025da9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/fRMdr9bam-IOO3V74PhdoQ",
+    "url": "https://mp.weixin.qq.com/s/fRMdr9bam-IOO3V74PhdoQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "赋能民航未来！吉林科技职业技术学院牵手国企吉林空港深化合作，产教融合再启新篇",
+    "source": "",
+    "publishDate": "2025-12-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/fRMdr9bam-IOO3V74PhdoQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "b4c4096f7e62a041713b6d634c9416cd77ce3b428df28b125e352f88a1ad73f2",
+  "evidence": {
+    "listPage": 52,
+    "listTitle": "赋能民航未来！吉林科技职业技术学院牵手国企吉林空港深化合作，产教融合再启新篇",
+    "listPublishDate": "2025-12-23",
+    "sourceOrder": 520
+  }
+}

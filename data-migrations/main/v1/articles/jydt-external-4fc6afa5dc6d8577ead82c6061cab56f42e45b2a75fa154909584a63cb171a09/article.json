@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4fc6afa5dc6d8577ead82c6061cab56f42e45b2a75fa154909584a63cb171a09",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/hr5B7n7pUwvITuEeiz74PQ",
+    "url": "https://mp.weixin.qq.com/s/hr5B7n7pUwvITuEeiz74PQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林科技职业技术学院 × 零跑汽车 “青苗计划” 落地，产教融合再启新篇",
+    "source": "",
+    "publishDate": "2025-12-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/hr5B7n7pUwvITuEeiz74PQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "a1380ddef1fa0d6ab292039bf1a67d0278747ede1a148d1e3634da14b30acf4a",
+  "evidence": {
+    "listPage": 53,
+    "listTitle": "吉林科技职业技术学院 × 零跑汽车 “青苗计划” 落地，产教融合再启新篇",
+    "listPublishDate": "2025-12-23",
+    "sourceOrder": 521
+  }
+}

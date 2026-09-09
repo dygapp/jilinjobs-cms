@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122090",
+    "contentId": "28737783122090",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122090"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于2016年第三届“梦想杯”大学生创业大赛获奖结果的通报",
+    "source": "",
+    "publishDate": "2016-11-16",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于2016年第三届“梦想杯”大学生创业大赛获奖结果的通报</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2016-11-16 14:44:47</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://b8614bec9943392bf2275eaa4a24169ba5dd34bcb3c3511e198bdc4eac4f0ab8\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://ddb119be4232f0ba213b17ca574e9ea8412adda5eb765562990353f53438433d\"></p><p style=\"text-align: center;\"><img title=\"3.jpg\" src=\"migration-resource://dda3843bfb4189206b495761360fd353b4fbbdd61c27f2023933f2aa6bd3afb7\"></p><p style=\"text-align: center;\"><img title=\"4.jpg\" src=\"migration-resource://68989500c3aaaf1542018384c831825f5d45f9b814a40f074cce5e2af2ac771e\"></p><p style=\"text-align: center;\"><img title=\"5.jpg\" src=\"migration-resource://f7dbbe0d49681fc6cab26ed770c8c459fccc04b3956787d7933f42df81a3165a\"></p><p style=\"text-align: center;\">&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361499071098950009943012.jpg",
+      "originalReference": "/chistory/cms/imgs/6361499071098950009943012.jpg",
+      "token": "migration-resource://b8614bec9943392bf2275eaa4a24169ba5dd34bcb3c3511e198bdc4eac4f0ab8",
+      "snapshotPath": "assets/b8614bec9943392bf2275eaa4a24169ba5dd34bcb3c3511e198bdc4eac4f0ab8.jpg",
+      "sha256": "b8614bec9943392bf2275eaa4a24169ba5dd34bcb3c3511e198bdc4eac4f0ab8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 113956
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361499071241137504240355.jpg",
+      "originalReference": "/chistory/cms/imgs/6361499071241137504240355.jpg",
+      "token": "migration-resource://ddb119be4232f0ba213b17ca574e9ea8412adda5eb765562990353f53438433d",
+      "snapshotPath": "assets/ddb119be4232f0ba213b17ca574e9ea8412adda5eb765562990353f53438433d.jpg",
+      "sha256": "ddb119be4232f0ba213b17ca574e9ea8412adda5eb765562990353f53438433d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 62343
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361499071386450009698016.jpg",
+      "originalReference": "/chistory/cms/imgs/6361499071386450009698016.jpg",
+      "token": "migration-resource://dda3843bfb4189206b495761360fd353b4fbbdd61c27f2023933f2aa6bd3afb7",
+      "snapshotPath": "assets/dda3843bfb4189206b495761360fd353b4fbbdd61c27f2023933f2aa6bd3afb7.jpg",
+      "sha256": "dda3843bfb4189206b495761360fd353b4fbbdd61c27f2023933f2aa6bd3afb7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 119871
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361499071541137506723838.jpg",
+      "originalReference": "/chistory/cms/imgs/6361499071541137506723838.jpg",
+      "token": "migration-resource://68989500c3aaaf1542018384c831825f5d45f9b814a40f074cce5e2af2ac771e",
+      "snapshotPath": "assets/68989500c3aaaf1542018384c831825f5d45f9b814a40f074cce5e2af2ac771e.jpg",
+      "sha256": "68989500c3aaaf1542018384c831825f5d45f9b814a40f074cce5e2af2ac771e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 85413
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361499071691137503465580.jpg",
+      "originalReference": "/chistory/cms/imgs/6361499071691137503465580.jpg",
+      "token": "migration-resource://f7dbbe0d49681fc6cab26ed770c8c459fccc04b3956787d7933f42df81a3165a",
+      "snapshotPath": "assets/f7dbbe0d49681fc6cab26ed770c8c459fccc04b3956787d7933f42df81a3165a.jpg",
+      "sha256": "f7dbbe0d49681fc6cab26ed770c8c459fccc04b3956787d7933f42df81a3165a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88995
+    }
+  ],
+  "sourceFingerprint": "634863c919bfd87fe872aa6693163ccbda5da3a57aa9fc689cec1c5f05ceb27f",
+  "evidence": {
+    "listPage": 152,
+    "listTitle": "关于2016年第三届“梦想杯”大学生创业大赛获奖结果的通报",
+    "listPublishDate": "2016-11-16",
+    "sourceOrder": 1519,
+    "detailPublishDate": "2016-11-16"
+  }
+}

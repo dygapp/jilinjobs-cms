@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122808",
+    "contentId": "28737783122808",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122808"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发《举办全国高校就业指导人员培训（中级）班》的通知",
+    "source": "",
+    "publishDate": "2016-06-15",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于转发《举办全国高校就业指导人员培训（中级）班》的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2016-6-15 18:11:27</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://d6aeef3e533b6476eeea5fa8f902798ef43c9850ba0d36cda36824359b6891f1\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=fdabb483-b1e2-4dbd-bde2-b32217c09fb1\">报名表.doc</a><br>\n\t\t\t<a href=\"../Common/DownLoadFile.aspx?fileid=b7ea0500-dc00-4102-9052-1cc6480b2e48\">教毕指（2016）54号 关于举办高校就业指导人员培训（中级）班的通知（吉林延吉）.rar</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360161112398950002802085.jpg",
+      "originalReference": "/chistory/cms/imgs/6360161112398950002802085.jpg",
+      "token": "migration-resource://d6aeef3e533b6476eeea5fa8f902798ef43c9850ba0d36cda36824359b6891f1",
+      "snapshotPath": "assets/d6aeef3e533b6476eeea5fa8f902798ef43c9850ba0d36cda36824359b6891f1.jpg",
+      "sha256": "d6aeef3e533b6476eeea5fa8f902798ef43c9850ba0d36cda36824359b6891f1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 141670
+    }
+  ],
+  "sourceFingerprint": "c61631add22fa2532d4cb7bb072a0557094ccca04a5df6678b5bc75331f410f7",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "关于转发《举办全国高校就业指导人员培训（中级）班》的通知",
+    "listPublishDate": "2016-06-15",
+    "sourceOrder": 249,
+    "detailPublishDate": "2016-06-15"
+  }
+}

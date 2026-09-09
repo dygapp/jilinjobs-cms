@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122268",
+    "contentId": "28737783122268",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122268"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "福建省：厦门市出台优惠政策帮助大学生创业",
+    "source": "",
+    "publishDate": "2009-07-14",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">福建省：厦门市出台优惠政策帮助大学生创业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-7-14 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 日前，福建省厦门市工商局日前出台创业优惠政策，帮助大学生创业迈出第一步。</font></p> <p><font size=\"2\"></font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 针对很多人对于起步阶段的相应政策和相关手续不了解的情况，厦门市工商部门特意编印了一个大学生创业企业登记服务指南。 根据相关规定，毕业2年以内的普通高校毕业生，凡在厦门从事个体经营的，自工商部门首次注册登记之日起，3年内将免收相关的行业性收费。如果大学生到农村从事教育、医疗、农业技术推广行业的，注册资金最低注册资本为3万元，允许在3年内分期到位</font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：福建台</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "446d971342df5426182f788ff64ed683294fabde0eaf77b6d65391bf316af434",
+  "evidence": {
+    "listPage": 169,
+    "listTitle": "福建省：厦门市出台优惠政策帮助大学生创业",
+    "listPublishDate": "2009-07-14",
+    "sourceOrder": 1685,
+    "detailPublishDate": "2009-07-14"
+  }
+}

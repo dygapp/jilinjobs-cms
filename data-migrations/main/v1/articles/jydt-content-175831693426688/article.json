@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:175831693426688",
+    "contentId": "175831693426688",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=175831693426688"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林财经大学举办春季促就业攻坚行动专场双选会",
+    "source": "吉林财经大学",
+    "publishDate": "2023-03-31",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">为深入贯彻落实党中央、国务院关于稳就业、保就业的决策部署，认真落实好教育部《关于开展2023届高校毕业生春季促就业攻坚行动的通知》要求，扎实推进省委省政府人才兴省决策部署，促进毕业生留省就业，3月22日，吉林财经大学举办了“奋斗有我 ‘就’在吉林”春季促就业攻坚行动专场双选会。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"433\" src=\"migration-resource://e96875d6d06c37c4a5e3cf53e62f6b81f0109bd5d0bd1c05cebbbd2a6b6fc57f\" width=\"650\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">教育厅一级巡视员许世彬、省高校毕业生就业指导服务中心主任唐洪丰到现场指导，校党委副书记刘鹤陪同参加，校党委副书记、校长童猛到招聘会现场了解情况。与会领导就用人需求、人才培养等方面与用人单位深入交流，同时鼓励毕业生积极投递简历，抓住契机，展示风采，为家乡建设贡献青春力量。本次双选会采取“线上+线下”相结合模式，就业工作领导小组、各学院学工负责人及毕业班辅导员在学校会议室实时观看招聘单位和毕业生参会情况，通过网络招聘平台第一时间了解线上招聘会实时数据。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">本次双选会紧扣地方发展战略，以留省就业为主题，吸引了中信建投证券股份有限公司吉林分公司、吉林银行股份有限公司、四平市中心人民医院、吉林省顺丰速递有限公司等55家优质用人单位入校招聘，吸引92家企业线上招聘，省内企业达到80%以上，提供就业岗位8000余个，吸引了校内1000余名毕业生参加，共投递简历2000余份。招聘会现场人潮涌动，气氛热烈，毕业生认真了解用人单位信息和人才需求，就行业发展、晋升通道等方面与用人单位积极互动。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"433\" src=\"migration-resource://15e0b58eb5cdfcc957f4dab566c9b715b9fe8c44ed87178ec7a513ebe3979e5c\" width=\"650\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">3</span></span></span><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">月以来，吉林财经大学与中铁城建集团有限公司、山东电力建设第三工程有限公司、中铁十九局集团有限公司等用人单位举办多场线下校园专场宣讲会。学校领导赴松原市，与松原市人民政府签署校地战略合作协议，并到用人单位开展访企拓岗活动。下一步，吉林财经大学将以此次双选会为契机，深入开展访企拓岗专项行动，不断加强与用人单位的联系，为用人单位和毕业生搭建快速、高效的沟通桥梁，抢抓就业工作的“关键期”和“冲刺期”，确保圆满完成2023届毕业生就业工作各项目标任务，为就业大局稳定做出积极贡献。</span></span></span></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-29/07992137-32c4-43dd-985a-c2effd7b5547.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-29/07992137-32c4-43dd-985a-c2effd7b5547.jpg",
+      "token": "migration-resource://e96875d6d06c37c4a5e3cf53e62f6b81f0109bd5d0bd1c05cebbbd2a6b6fc57f",
+      "snapshotPath": "assets/e96875d6d06c37c4a5e3cf53e62f6b81f0109bd5d0bd1c05cebbbd2a6b6fc57f.jpg",
+      "sha256": "e96875d6d06c37c4a5e3cf53e62f6b81f0109bd5d0bd1c05cebbbd2a6b6fc57f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95398
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-29/f079cc05-ecbb-4919-95aa-4ee140612418.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-29/f079cc05-ecbb-4919-95aa-4ee140612418.jpg",
+      "token": "migration-resource://15e0b58eb5cdfcc957f4dab566c9b715b9fe8c44ed87178ec7a513ebe3979e5c",
+      "snapshotPath": "assets/15e0b58eb5cdfcc957f4dab566c9b715b9fe8c44ed87178ec7a513ebe3979e5c.jpg",
+      "sha256": "15e0b58eb5cdfcc957f4dab566c9b715b9fe8c44ed87178ec7a513ebe3979e5c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82011
+    }
+  ],
+  "sourceFingerprint": "6b53748b979f0328bb7524d4f461a54e5ec74cc6da214de3a1e08c4598920da4",
+  "evidence": {
+    "listPage": 115,
+    "listTitle": "吉林财经大学举办春季促就业攻坚行动专场双选会",
+    "listPublishDate": "2023-03-31",
+    "sourceOrder": 1147,
+    "detailPublishDate": "2023-03-31"
+  }
+}

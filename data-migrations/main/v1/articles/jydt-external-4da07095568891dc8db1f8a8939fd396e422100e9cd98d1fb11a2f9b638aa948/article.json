@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4da07095568891dc8db1f8a8939fd396e422100e9cd98d1fb11a2f9b638aa948",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Vw_pSloWvFA41fzYNgN6eQ",
+    "url": "https://mp.weixin.qq.com/s/Vw_pSloWvFA41fzYNgN6eQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗｜吉林体育学院邵桂华校长带队访企拓岗深化校企合作",
+    "source": "",
+    "publishDate": "2025-06-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Vw_pSloWvFA41fzYNgN6eQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "8bd8f1e7bfcf5f0df5d021ce0766f71e1b31fc416e54869598fee552cb949c5a",
+  "evidence": {
+    "listPage": 82,
+    "listTitle": "访企拓岗｜吉林体育学院邵桂华校长带队访企拓岗深化校企合作",
+    "listPublishDate": "2025-06-13",
+    "sourceOrder": 817
+  }
+}

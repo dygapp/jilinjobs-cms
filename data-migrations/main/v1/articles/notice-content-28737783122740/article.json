@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122740",
+    "contentId": "28737783122740",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122740"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于实施高校毕业生基层公共服务项目的通知",
+    "source": "",
+    "publishDate": "2017-10-31",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于实施高校毕业生基层公共服务项目的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:    发布时间:2017-10-31 13:36:30</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"新文档 2017-10-31_1.jpg\" src=\"migration-resource://902e191837a9c40589cb430557ebca65afd71f550343db4b6e9becd601d1642e\"></p><p style=\"text-align: center;\"><img title=\"新文档 2017-10-31_2.jpg\" src=\"migration-resource://b831b312d4d5c07d91e1268fa074ebe018d8fa9c805f4f88daa9506aaeee0c8e\"></p><p style=\"text-align: center;\"><img title=\"新文档 2017-10-31_3.jpg\" src=\"migration-resource://6edda43e233c8e0f00b0753127ee8e85d3b3a04bfbca8c2ccd6f688e73e263bd\"></p><p style=\"text-align: center;\"><img title=\"新文档 2017-10-31_4.jpg\" src=\"migration-resource://b97ba1bb09fe789046c8f13c90943bc1761d33c933f0e7444d4c070630359fe2\"></p><p style=\"text-align: center;\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364505384843212502217716.jpg",
+      "originalReference": "/chistory/cms/imgs/6364505384843212502217716.jpg",
+      "token": "migration-resource://902e191837a9c40589cb430557ebca65afd71f550343db4b6e9becd601d1642e",
+      "snapshotPath": "assets/902e191837a9c40589cb430557ebca65afd71f550343db4b6e9becd601d1642e.jpg",
+      "sha256": "902e191837a9c40589cb430557ebca65afd71f550343db4b6e9becd601d1642e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 143407
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364505384905712506575324.jpg",
+      "originalReference": "/chistory/cms/imgs/6364505384905712506575324.jpg",
+      "token": "migration-resource://b831b312d4d5c07d91e1268fa074ebe018d8fa9c805f4f88daa9506aaeee0c8e",
+      "snapshotPath": "assets/b831b312d4d5c07d91e1268fa074ebe018d8fa9c805f4f88daa9506aaeee0c8e.jpg",
+      "sha256": "b831b312d4d5c07d91e1268fa074ebe018d8fa9c805f4f88daa9506aaeee0c8e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 171027
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364505384911962503061998.jpg",
+      "originalReference": "/chistory/cms/imgs/6364505384911962503061998.jpg",
+      "token": "migration-resource://6edda43e233c8e0f00b0753127ee8e85d3b3a04bfbca8c2ccd6f688e73e263bd",
+      "snapshotPath": "assets/6edda43e233c8e0f00b0753127ee8e85d3b3a04bfbca8c2ccd6f688e73e263bd.jpg",
+      "sha256": "6edda43e233c8e0f00b0753127ee8e85d3b3a04bfbca8c2ccd6f688e73e263bd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 157478
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364505384921337502090182.jpg",
+      "originalReference": "/chistory/cms/imgs/6364505384921337502090182.jpg",
+      "token": "migration-resource://b97ba1bb09fe789046c8f13c90943bc1761d33c933f0e7444d4c070630359fe2",
+      "snapshotPath": "assets/b97ba1bb09fe789046c8f13c90943bc1761d33c933f0e7444d4c070630359fe2.jpg",
+      "sha256": "b97ba1bb09fe789046c8f13c90943bc1761d33c933f0e7444d4c070630359fe2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 66611
+    }
+  ],
+  "sourceFingerprint": "369f0a7d7892002322b25242ae9883997fd7d23a5714298b2363a226c000cb9f",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "关于实施高校毕业生基层公共服务项目的通知",
+    "listPublishDate": "2017-10-31",
+    "sourceOrder": 209,
+    "detailPublishDate": "2017-10-31"
+  }
+}

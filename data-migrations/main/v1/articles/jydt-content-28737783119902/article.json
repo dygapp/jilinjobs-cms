@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119902",
+    "contentId": "28737783119902",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119902"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "“创业起飞·梦圆吉林”吉人回乡大讲堂如期举行",
+    "source": "",
+    "publishDate": "2018-06-30",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">“创业起飞·梦圆吉林”吉人回乡大讲堂如期举行</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2018-6-30 17:13:01</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">6月30日，吉林省第五届“吉人梦想杯”大学生创就业大赛CEO特训营——“创业起飞·梦圆吉林”吉人回乡大讲堂在长春市吉人创咖举行，181名参赛大学生参加活动。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">本次活动邀请了行业专家五洲禧年华（北京）文化传媒有限公司CEO李儒奇、吉林省企业家文艺家联合会副秘书长、金桔文化传媒新媒体运营总监王雨进行了精彩的分享。李儒奇曾成功融资数千万，其创办的五洲禧年华公司已经发展成为国内拥有中华节日主题IP知识产权最多的公司。在此次大讲堂上，李儒奇讲解了 “吉人创咖商业计划书” 撰写的流程和要点。王雨是新媒体SSC教学数据应用模型的创始人，也是职前SPA综合应用系统的创始人，他重点阐释了面试技巧和新媒体视频拍摄及推广，令现场大学生们受益匪浅。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">一下午的活动，知识点频出，含金量满满，参加现场学习的大学生们不时低头记笔记，表情认真又专注。为了实现自己更高的人生价值，为了对家乡经济有所贡献，每个人都奋力学习，唯恐落后。这种自强拼搏的精神贯穿了此次“吉人回乡大讲堂”的始终，令人动容，更令人鼓舞。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">在线下活动开展的同时，线上进行了同期直播。不能到达现场学习的参赛大学生们可以第一时间在线上同步学习。通化师范学院的参赛大学生就由指导教师统一组织，集体进行了在线视频学习。</span></p><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.png\" src=\"migration-resource://6735efd9d01ce56d52c45209137a65e551c37b3a1d41a5bbf67325fb5b2bf647\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://f9ecbacfd5d989f19db36d252e74293fbe12f06e4ebdca88cd425fcad28d8f3d\"></p><p style=\"text-align: center;\"><img title=\"3.png\" src=\"migration-resource://d3a2b47c4d4dbbc8c155131807c597db8b7f49eaba49338ec95e23e7b85788a7\"></p><p style=\"text-align: center;\"><img title=\"4.jpg\" src=\"migration-resource://fc168785ca1ca54c2df09c880829349a14283a4674ea69a1392d6937a821a03a\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366614124522537504669683.png",
+      "originalReference": "/chistory/cms/imgs/6366614124522537504669683.png",
+      "token": "migration-resource://6735efd9d01ce56d52c45209137a65e551c37b3a1d41a5bbf67325fb5b2bf647",
+      "snapshotPath": "assets/6735efd9d01ce56d52c45209137a65e551c37b3a1d41a5bbf67325fb5b2bf647.jpg",
+      "sha256": "6735efd9d01ce56d52c45209137a65e551c37b3a1d41a5bbf67325fb5b2bf647",
+      "contentType": "image/jpeg",
+      "sizeBytes": 161497
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366614124530350002412253.jpg",
+      "originalReference": "/chistory/cms/imgs/6366614124530350002412253.jpg",
+      "token": "migration-resource://f9ecbacfd5d989f19db36d252e74293fbe12f06e4ebdca88cd425fcad28d8f3d",
+      "snapshotPath": "assets/f9ecbacfd5d989f19db36d252e74293fbe12f06e4ebdca88cd425fcad28d8f3d.jpg",
+      "sha256": "f9ecbacfd5d989f19db36d252e74293fbe12f06e4ebdca88cd425fcad28d8f3d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 185467
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366614124538162509154824.png",
+      "originalReference": "/chistory/cms/imgs/6366614124538162509154824.png",
+      "token": "migration-resource://d3a2b47c4d4dbbc8c155131807c597db8b7f49eaba49338ec95e23e7b85788a7",
+      "snapshotPath": "assets/d3a2b47c4d4dbbc8c155131807c597db8b7f49eaba49338ec95e23e7b85788a7.jpg",
+      "sha256": "d3a2b47c4d4dbbc8c155131807c597db8b7f49eaba49338ec95e23e7b85788a7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 162330
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366614124547537501126640.jpg",
+      "originalReference": "/chistory/cms/imgs/6366614124547537501126640.jpg",
+      "token": "migration-resource://fc168785ca1ca54c2df09c880829349a14283a4674ea69a1392d6937a821a03a",
+      "snapshotPath": "assets/fc168785ca1ca54c2df09c880829349a14283a4674ea69a1392d6937a821a03a.jpg",
+      "sha256": "fc168785ca1ca54c2df09c880829349a14283a4674ea69a1392d6937a821a03a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 188572
+    }
+  ],
+  "sourceFingerprint": "21d1f6c8686a4e4a5e4b4cf3a3c49666288ff32408b8e7cc43c2d86eab607a04",
+  "evidence": {
+    "listPage": 147,
+    "listTitle": "“创业起飞·梦圆吉林”吉人回乡大讲堂如期举行",
+    "listPublishDate": "2018-06-30",
+    "sourceOrder": 1463,
+    "detailPublishDate": "2018-06-30"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:81ac6ae8f1421e42a32d197d30a9e62559da6754ac25d639293b303bdfe40dd9",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/szfzt/tzcj/tzdt/202502/t20250210_3361643.html",
+    "url": "https://www.jl.gov.cn/szfzt/tzcj/tzdt/202502/t20250210_3361643.html"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "奋力谱写中国式现代化吉林新篇章 ——习近平总书记在听取吉林省委和省政府工作汇报时的重要讲话催人奋进",
+    "source": "",
+    "publishDate": "2025-02-10",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jl.gov.cn/szfzt/tzcj/tzdt/202502/t20250210_3361643.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "1da442d23f54e4536e15600e3134ce121422433df30ea9a21bc1d7da0dc90f4b",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "奋力谱写中国式现代化吉林新篇章 ——习近平总书记在听取吉林省委和省政府工作汇报时的重要讲话催人奋进",
+    "listPublishDate": "2025-02-10",
+    "sourceOrder": 65
+  }
+}

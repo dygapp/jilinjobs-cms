@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:fb2548ae61bd954bf86a7b246cff0530ac0b960c6787723f724da01fb4577715",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/PMBINuvnno95bpwM6VuPAQ",
+    "url": "https://mp.weixin.qq.com/s/PMBINuvnno95bpwM6VuPAQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【邀请函】第三届“‘就’在吉林，‘路’在延边 ”高校毕业生“政校企”联合双选会",
+    "source": "",
+    "publishDate": "2024-05-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/PMBINuvnno95bpwM6VuPAQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "74add8ab49122fdc83e04e0e47370e87262ca2c2ca550a434ef98882515832a3",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "【邀请函】第三届“‘就’在吉林，‘路’在延边 ”高校毕业生“政校企”联合双选会",
+    "listPublishDate": "2024-05-22",
+    "sourceOrder": 272
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:126358330048512",
+    "contentId": "126358330048512",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=126358330048512"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林建筑大学召开2023届毕业生就业工作会议",
+    "source": "吉林建筑大学",
+    "publishDate": "2022-10-30",
+    "bodyHtml": "\n                        <p><span style=\"font-size:12pt\"><span style=\"background-color:white\"><span style=\"font-family:宋体\"><span style=\"color:black\">10</span><span style=\"color:black\">月25日，吉林建筑大学召开2023届毕业生就业工作会议。各学院党委书记、副书记、学生工作负责人、毕业班辅导员、招生与就业工作处相关工作人员参加会议。会议由学校党委副书记陈士玉主持。</span></span></span></span></p>\n\n<p><span style=\"font-size:12pt\"><span style=\"background-color:white\"><span style=\"font-family:宋体\"><span style=\"color:black\">会上，各学院分别从毕业生目前在校情况、签约情况、计划考研情况以及当前就业工作面临的困难等几个方面进行了汇报。大学生就业指导中心主任周景民就学校目前就业工作进展情况进行了总结，并就当前就业形势及存在的问题进行了说明，对下一阶段毕业生就业工作进行了安排。</span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"402\" src=\"migration-resource://0984b916f5f898613ce070c878ea67aeaa77b46593f0c60606ac59ecfcffed90\" width=\"599\"></p>\n\n<p><span style=\"font-size:12pt\"><span style=\"background-color:white\"><span style=\"font-family:宋体\"><span style=\"color:black\">陈士玉提出，各学院要高度重视、班子要专题研讨毕业生就业工作；学校要继续加大对各基层学院就业工作支持，包括就业工作人员和经费的落实；各学院要将就业工作真正纳入学生工作管理体系，统筹协调，创建学校就业工作新格局。</span></span></span></span></p>\n\n<p style=\"text-align:right\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><strong><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">（吉林建筑大学 徐嘉琦）</span></span></strong></span></span></p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-29/62a37f64-4f00-4810-a629-b969d21b1812.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-29/62a37f64-4f00-4810-a629-b969d21b1812.jpg",
+      "token": "migration-resource://0984b916f5f898613ce070c878ea67aeaa77b46593f0c60606ac59ecfcffed90",
+      "snapshotPath": "assets/0984b916f5f898613ce070c878ea67aeaa77b46593f0c60606ac59ecfcffed90.jpg",
+      "sha256": "0984b916f5f898613ce070c878ea67aeaa77b46593f0c60606ac59ecfcffed90",
+      "contentType": "image/jpeg",
+      "sizeBytes": 63029
+    }
+  ],
+  "sourceFingerprint": "f34b8dc32c13bdd25a74e271c5b8c720f8d66e010b6ba89ade447eeb83407ec8",
+  "evidence": {
+    "listPage": 118,
+    "listTitle": "吉林建筑大学召开2023届毕业生就业工作会议",
+    "listPublishDate": "2022-10-30",
+    "sourceOrder": 1178,
+    "detailPublishDate": "2022-10-30"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:395720bd523898d9764e2f3f1516901622d21bf4f876c9d13c8e0c4fc6a719c1",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/GJdwui3I13MyYO4oXanReQ",
+    "url": "https://mp.weixin.qq.com/s/GJdwui3I13MyYO4oXanReQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2024年“一起益企”秋季中小企业公益人才招聘会",
+    "source": "",
+    "publishDate": "2024-09-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/GJdwui3I13MyYO4oXanReQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "765a003fce45bcbd5119dcaff154184f2491bd43b7f6b44a3a2ea1dac812f657",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "2024年“一起益企”秋季中小企业公益人才招聘会",
+    "listPublishDate": "2024-09-08",
+    "sourceOrder": 256
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2b2d76a6382ae24aa057b6f182702d81342166c098cefca5ad113b7dd9880326",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/5bNO96UatJxHLLQOs3D6CQ",
+    "url": "https://mp.weixin.qq.com/s/5bNO96UatJxHLLQOs3D6CQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化校企协同助推数媒学子精准就业信息 吉林省经济管理干部学院赴吉林省阿尔法健康产业集团有限公司走访调研",
+    "source": "",
+    "publishDate": "2026-05-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5bNO96UatJxHLLQOs3D6CQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "d98c1d99543903d75f6041c9f25b331abdc53a71b09837fa336a2dfd66db66a0",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "深化校企协同助推数媒学子精准就业信息 吉林省经济管理干部学院赴吉林省阿尔法健康产业集团有限公司走访调研",
+    "listPublishDate": "2026-05-25",
+    "sourceOrder": 145
+  }
+}

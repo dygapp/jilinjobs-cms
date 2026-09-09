@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ba9a24663727a1636fb4bd7ed977431babaed47b64b011cc0d125f2521dd6818",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/18rmKwgI_3saqJzqLctYFQ",
+    "url": "https://mp.weixin.qq.com/s/18rmKwgI_3saqJzqLctYFQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学校长付跃刚带队赴东莞市开展“访企拓岗促就业”专项行动",
+    "source": "",
+    "publishDate": "2026-04-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/18rmKwgI_3saqJzqLctYFQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "eab42ee1eb1074add04be6ba6c3da250a15204c5cf11bae682c66dbe5a3c6a58",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "长春工业大学校长付跃刚带队赴东莞市开展“访企拓岗促就业”专项行动",
+    "listPublishDate": "2026-04-22",
+    "sourceOrder": 262
+  }
+}

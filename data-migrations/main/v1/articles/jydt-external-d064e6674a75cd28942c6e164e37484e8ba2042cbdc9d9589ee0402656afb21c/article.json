@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d064e6674a75cd28942c6e164e37484e8ba2042cbdc9d9589ee0402656afb21c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/enr_vjlzLfnZZImX0KR7WA",
+    "url": "https://mp.weixin.qq.com/s/enr_vjlzLfnZZImX0KR7WA?scene=25&sessionid=-1369083779"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "先生向北 青春聚吉 | 民建“百企千岗”校园专场招聘会在长春理工大学举行",
+    "source": "",
+    "publishDate": "2025-04-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/enr_vjlzLfnZZImX0KR7WA?scene=25&sessionid=-1369083779"
+  },
+  "resources": [],
+  "sourceFingerprint": "fa4c955b3a192115f321bdc37abfd21b203f71f0eef0483da81215e3292e38ea",
+  "evidence": {
+    "listPage": 96,
+    "listTitle": "先生向北 青春聚吉 | 民建“百企千岗”校园专场招聘会在长春理工大学举行",
+    "listPublishDate": "2025-04-03",
+    "sourceOrder": 953
+  }
+}

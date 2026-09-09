@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86128489152512",
+    "contentId": "86128489152512",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86128489152512"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春中医药大学入选全国100个普通高校毕业生就业创业工作典型案例",
+    "source": "长春中医药大学",
+    "publishDate": "2021-11-27",
+    "bodyHtml": "\n                        <p>11月26日，教育部发布了《关于全国高校毕业生就业创业工作典型案例名单的公告》，公布了100个典型案例名单，长春中医药大学是入选学校中的唯一一所中医药院校和吉林省唯一一所省属院校。</p>\n\n<p>多年来，学校党委高度重视就业工作，深入实施校院两级就业工作“一把手”工程，扎实推进就业创业工作，取得明显成效。先后被教育部评为全国毕业生就业典型经验高校（50强）和全国创新创业典型经验高校（50强）。</p>\n\n<p>学校将以此次入选全国普通高校毕业生就业创业工作典型案例为契机，结合高等教育发展形势需要，把握中医药大健康产业发展机遇，积极应对就业工作新形势、新挑战，进一步总结经验、对标高位、打造品牌，全面促进毕业生更加充分更高质量就业，更好地服务行业和地方经济社会发展，进一步推动学校特色高水平大学建设。</p>\n\n<p><strong>&nbsp;</strong><strong>（长春中医药大学 邵欣）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "d8ba8594209bab3160dc4745e4430f84da51576e8d9846b831890493ff0a17ca",
+  "evidence": {
+    "listPage": 127,
+    "listTitle": "长春中医药大学入选全国100个普通高校毕业生就业创业工作典型案例",
+    "listPublishDate": "2021-11-27",
+    "sourceOrder": 1265,
+    "detailPublishDate": "2021-11-27"
+  }
+}

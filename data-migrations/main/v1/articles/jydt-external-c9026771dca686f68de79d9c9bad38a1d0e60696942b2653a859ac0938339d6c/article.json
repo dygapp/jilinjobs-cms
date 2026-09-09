@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c9026771dca686f68de79d9c9bad38a1d0e60696942b2653a859ac0938339d6c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xkY_Qh8s6FCdcbg4SGZ3Eg",
+    "url": "https://mp.weixin.qq.com/s/xkY_Qh8s6FCdcbg4SGZ3Eg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院与北京软通动力教育科技有限公司召开产教融合交流会",
+    "source": "",
+    "publishDate": "2026-07-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xkY_Qh8s6FCdcbg4SGZ3Eg"
+  },
+  "resources": [],
+  "sourceFingerprint": "840c3e172547af679bf25a7709dd77010348921b241daac58dbf5c46c6d5117f",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "长春科技学院与北京软通动力教育科技有限公司召开产教融合交流会",
+    "listPublishDate": "2026-07-24",
+    "sourceOrder": 37
+  }
+}

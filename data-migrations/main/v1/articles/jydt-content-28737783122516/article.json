@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122516",
+    "contentId": "28737783122516",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122516"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "NIT考试常见问题及应急事件解决预案",
+    "source": "",
+    "publishDate": "2009-02-23",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">NIT考试常见问题及应急事件解决预案</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-2-23 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><div align=\"center\"> <table cellspacing=\"0\" cellpadding=\"0\" width=\"592\" border=\"1\"> <tbody> <tr> <td width=\"91\"> <p align=\"center\">开考</p> <p align=\"center\">前一天</p></td> <td valign=\"top\" width=\"242\"> <p>相关软件及素材安装出现问题</p></td> <td valign=\"top\" width=\"259\"> <p>联系省高校就业指导中心培训考试部</p></td></tr> <tr> <td width=\"91\" rowspan=\"2\"> <p align=\"center\">考前准备</p> <p align=\"center\">&nbsp;</p></td> <td valign=\"top\" width=\"242\"> <p>考场设备出现问题</p></td> <td valign=\"top\" width=\"259\"> <p>迅速联系技术人员排除</p> <p>临时转移考场</p> <p>向省就业中心报告</p> <p>向考生宣布延后考试时间</p></td></tr> <tr> <td valign=\"top\" width=\"242\"> <p>考生考场编排错误</p></td> <td valign=\"top\" width=\"259\"> <p>安置到备用考场并登记</p></td></tr> <tr> <td width=\"91\" rowspan=\"6\"> <p align=\"center\">开考后</p> <p align=\"center\">&nbsp;</p></td> <td valign=\"top\" width=\"242\"> <p>考试机系统故障</p></td> <td valign=\"top\" width=\"259\"> <p>重新安排考试机</p> <p>或由监考人员负责对原考试进行系统还原。</p></td></tr> <tr> <td valign=\"top\" width=\"242\"> <p>监考人员出现身体状况不适</p></td> <td valign=\"top\" width=\"259\"> <p>由其他工作人员交接继续监考</p></td></tr> <tr> <td valign=\"top\" width=\"242\"> <p>考生出现身体状况不适</p></td> <td valign=\"top\" width=\"259\"> <p>由专门工作人员送医务室</p> <p>严重时联系救护单位</p></td></tr> <tr> <td valign=\"top\" width=\"242\"> <p>考场设备故障</p></td> <td valign=\"top\" width=\"259\"> <p>转移至备用考试机或备用考场</p></td></tr> <tr> <td valign=\"top\" width=\"242\"> <p>考生不服从监考人员管理</p></td> <td valign=\"top\" width=\"259\"> <p>终止该考生考试资格</p> <p>登记考生行为并由监考人员签字</p> <p>严重可通知公安机关</p></td></tr> <tr> <td valign=\"top\" width=\"242\"> <p>考场紧急事件</p></td> <td valign=\"top\" width=\"259\"> <p>终止考试安排疏散并求助有关部门</p></td></tr> <tr> <td width=\"91\"> <p align=\"center\">考试结束</p></td> <td valign=\"top\" width=\"242\"> <p>考试机故障数据无法回收</p></td> <td valign=\"top\" width=\"259\"> <p>封存该考试机</p> <p>联系承办机构请求技术支持</p></td></tr></tbody></table></div></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "42e97a0378b68e2e6f91d0238e797fc2c6d6eb6681bc2a8bcf07e856f83e85a8",
+  "evidence": {
+    "listPage": 201,
+    "listTitle": "NIT考试常见问题及应急事件解决预案",
+    "listPublishDate": "2009-02-23",
+    "sourceOrder": 2009,
+    "detailPublishDate": "2009-02-23"
+  }
+}

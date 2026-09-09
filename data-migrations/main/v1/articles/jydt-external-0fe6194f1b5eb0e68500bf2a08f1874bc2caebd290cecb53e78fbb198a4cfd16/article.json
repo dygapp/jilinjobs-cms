@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0fe6194f1b5eb0e68500bf2a08f1874bc2caebd290cecb53e78fbb198a4cfd16",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/f2k28TUD4m_o_EDuPW0m5g",
+    "url": "https://mp.weixin.qq.com/s/f2k28TUD4m_o_EDuPW0m5g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "百企入校 “职”引未来——我省高校毕业生涉农类专场招聘会在吉林工程职业学院举行",
+    "source": "",
+    "publishDate": "2026-05-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/f2k28TUD4m_o_EDuPW0m5g"
+  },
+  "resources": [],
+  "sourceFingerprint": "72809d021d6b5ba34cf5df7f549d7c33efa801421db2031ccecc98977ee43212",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "百企入校 “职”引未来——我省高校毕业生涉农类专场招聘会在吉林工程职业学院举行",
+    "listPublishDate": "2026-05-18",
+    "sourceOrder": 172
+  }
+}

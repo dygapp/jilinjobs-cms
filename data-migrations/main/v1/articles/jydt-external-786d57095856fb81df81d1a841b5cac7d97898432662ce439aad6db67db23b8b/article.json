@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:786d57095856fb81df81d1a841b5cac7d97898432662ce439aad6db67db23b8b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/7tVnH1Wk07Tb1OoP0fO1Kw",
+    "url": "https://mp.weixin.qq.com/s/7tVnH1Wk07Tb1OoP0fO1Kw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学副校长陶建钟带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/7tVnH1Wk07Tb1OoP0fO1Kw"
+  },
+  "resources": [],
+  "sourceFingerprint": "4156d4ad758b5c5357a9689f2e2a943a36bd3e341a418e05902ffef1c52f43c0",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "延边大学副校长陶建钟带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-18",
+    "sourceOrder": 403
+  }
+}

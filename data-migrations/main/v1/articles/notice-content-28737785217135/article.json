@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737785217135",
+    "contentId": "28737785217135",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737785217135"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办创新创业产业融合“十三五”规划课题发布会暨全国大学生双创“互联网+”系列项目落地仪式的通知",
+    "source": "",
+    "publishDate": "2016-12-22",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于举办创新创业产业融合“十三五”规划课题发布会暨全国大学生双创“互联网+”系列项目落地仪式的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:信息部 发布时间:2016-12-22 11:04:15</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://c75746a9ae32fa0520ef14719ec0d63b0c419f1f884a16abe152196e3e461c1b\" width=\"650\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://107a592a7d2fd15ed89512d4f81158bc341e24dcf949b6bd2d1e9787266fceff\" width=\"650\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://03c6529b46e2fecc37700929214d2e1ae8788398e0ec8983c82c41823fd7b605\" width=\"650\"></p>\n\n<p>&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=85fbda4a-7781-4128-8c5d-aaad3c03f93a\">附件1：关于创新创业产业融合“十三五”规划课程申报的通知.rar</a><br>\n\t\t\t<a href=\"../Common/DownLoadFile.aspx?fileid=546e487c-6c9b-4ecb-a12a-c99c594080ce\">附件2：会议流程.docx</a><br>\n\t\t\t<a href=\"../Common/DownLoadFile.aspx?fileid=4c17471b-6a82-4599-bb03-1ff9228c01e6\">附件3：参会回执.docx</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361800153765637503859658.jpg",
+      "originalReference": "/chistory/cms/imgs/6361800153765637503859658.jpg",
+      "token": "migration-resource://c75746a9ae32fa0520ef14719ec0d63b0c419f1f884a16abe152196e3e461c1b",
+      "snapshotPath": "assets/c75746a9ae32fa0520ef14719ec0d63b0c419f1f884a16abe152196e3e461c1b.jpg",
+      "sha256": "c75746a9ae32fa0520ef14719ec0d63b0c419f1f884a16abe152196e3e461c1b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 94071
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361800153906262508629584.jpg",
+      "originalReference": "/chistory/cms/imgs/6361800153906262508629584.jpg",
+      "token": "migration-resource://107a592a7d2fd15ed89512d4f81158bc341e24dcf949b6bd2d1e9787266fceff",
+      "snapshotPath": "assets/107a592a7d2fd15ed89512d4f81158bc341e24dcf949b6bd2d1e9787266fceff.jpg",
+      "sha256": "107a592a7d2fd15ed89512d4f81158bc341e24dcf949b6bd2d1e9787266fceff",
+      "contentType": "image/jpeg",
+      "sizeBytes": 61289
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361800154026575003928460.jpg",
+      "originalReference": "/chistory/cms/imgs/6361800154026575003928460.jpg",
+      "token": "migration-resource://03c6529b46e2fecc37700929214d2e1ae8788398e0ec8983c82c41823fd7b605",
+      "snapshotPath": "assets/03c6529b46e2fecc37700929214d2e1ae8788398e0ec8983c82c41823fd7b605.jpg",
+      "sha256": "03c6529b46e2fecc37700929214d2e1ae8788398e0ec8983c82c41823fd7b605",
+      "contentType": "image/jpeg",
+      "sizeBytes": 28535
+    }
+  ],
+  "sourceFingerprint": "8f05de9e3be2c942821aee88224268498a31090badb0c354c9542eb6f87ff28a",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "关于举办创新创业产业融合“十三五”规划课题发布会暨全国大学生双创“互联网+”系列项目落地仪式的通知",
+    "listPublishDate": "2016-12-22",
+    "sourceOrder": 226,
+    "detailPublishDate": "2016-12-22"
+  }
+}

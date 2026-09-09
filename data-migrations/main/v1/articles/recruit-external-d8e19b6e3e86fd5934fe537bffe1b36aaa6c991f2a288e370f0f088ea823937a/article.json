@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:d8e19b6e3e86fd5934fe537bffe1b36aaa6c991f2a288e370f0f088ea823937a",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/zS-BAJfN8PnxEd8sNYJ7Sg",
+    "url": "https://mp.weixin.qq.com/s/zS-BAJfN8PnxEd8sNYJ7Sg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "财经英才汇智兴吉地 服务吉林高质量发展 吉林省财经类2026届毕业生秋季供需洽谈会邀请函",
+    "source": "",
+    "publishDate": "2025-09-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/zS-BAJfN8PnxEd8sNYJ7Sg"
+  },
+  "resources": [],
+  "sourceFingerprint": "024c06628e9197ac2c1af2abfd835b7a942aea06217b9748e222ba70e3b10789",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "财经英才汇智兴吉地 服务吉林高质量发展 吉林省财经类2026届毕业生秋季供需洽谈会邀请函",
+    "listPublishDate": "2025-09-03",
+    "sourceOrder": 145
+  }
+}

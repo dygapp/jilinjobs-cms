@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1afcfe638226fed8ca73a55fd7c9c4c96451b3b99e6d7f2af2e6aad1ef8f2705",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1115/60155.htm",
+    "url": "https://www.neepu.edu.cn/info/1115/60155.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学成功举办“创业奋斗 ‘就’在吉林”吉林省高校服务新能源产业集群大型就业洽谈会",
+    "source": "",
+    "publishDate": "2024-04-22",
+    "bodyHtml": "",
+    "externalUrl": "https://www.neepu.edu.cn/info/1115/60155.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "6318c060c9d3ec78146285a32c5a795eba62be5f67061c9536827082d8b8419b",
+  "evidence": {
+    "listPage": 108,
+    "listTitle": "东北电力大学成功举办“创业奋斗 ‘就’在吉林”吉林省高校服务新能源产业集群大型就业洽谈会",
+    "listPublishDate": "2024-04-22",
+    "sourceOrder": 1073
+  }
+}

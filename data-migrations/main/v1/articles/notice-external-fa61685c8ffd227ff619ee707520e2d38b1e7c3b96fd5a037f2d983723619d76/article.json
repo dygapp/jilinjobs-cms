@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:fa61685c8ffd227ff619ee707520e2d38b1e7c3b96fd5a037f2d983723619d76",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/6sSrfD9E7YWuW6Ff-KU-_w",
+    "url": "https://mp.weixin.qq.com/s/6sSrfD9E7YWuW6Ff-KU-_w"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省高等学校毕业生就业指导中心召开2026届高校毕业生就业监测工作视频会议",
+    "source": "",
+    "publishDate": "2026-04-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/6sSrfD9E7YWuW6Ff-KU-_w"
+  },
+  "resources": [],
+  "sourceFingerprint": "c336a994db744958a48c8f246fb9efdaec356bfc55cf7f11d91336c9ec879587",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "吉林省高等学校毕业生就业指导中心召开2026届高校毕业生就业监测工作视频会议",
+    "listPublishDate": "2026-04-22",
+    "sourceOrder": 7
+  }
+}

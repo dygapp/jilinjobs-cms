@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a277ea7e3b3c2afd044c18742a4f6eb5e0bc713ed42d4f86bff3d22f6641b83b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/_K6E5sQ1TGe5iEzCVIl5kg",
+    "url": "https://mp.weixin.qq.com/s/_K6E5sQ1TGe5iEzCVIl5kg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院召开新学期2025届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2025-03-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_K6E5sQ1TGe5iEzCVIl5kg"
+  },
+  "resources": [],
+  "sourceFingerprint": "c06e94d9714794af0b7f4843d1ec769b223ddab39042015e0d544caf683e3d8c",
+  "evidence": {
+    "listPage": 98,
+    "listTitle": "长春科技学院召开新学期2025届毕业生就业工作推进会",
+    "listPublishDate": "2025-03-19",
+    "sourceOrder": 977
+  }
+}

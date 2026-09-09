@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2dab1f1926674ad7d0088a6a0e6bddcf1f717270e96e758d0b9fb270852fa134",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/wF4AILcgmAdP3IdmmE1p7w",
+    "url": "https://mp.weixin.qq.com/s/wF4AILcgmAdP3IdmmE1p7w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "省教育厅：深化教育综合改革 加快推进教育强省建设 为吉林全面振兴取得新突破提供基础性、战略性支撑",
+    "source": "",
+    "publishDate": "2024-12-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wF4AILcgmAdP3IdmmE1p7w"
+  },
+  "resources": [],
+  "sourceFingerprint": "d7f51aae9a9d115059768840a65aed3f4e0e293280136fc6ec9500323f1736dc",
+  "evidence": {
+    "listPage": 101,
+    "listTitle": "省教育厅：深化教育综合改革 加快推进教育强省建设 为吉林全面振兴取得新突破提供基础性、战略性支撑",
+    "listPublishDate": "2024-12-04",
+    "sourceOrder": 1004
+  }
+}

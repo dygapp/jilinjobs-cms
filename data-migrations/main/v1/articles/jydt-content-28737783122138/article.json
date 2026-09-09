@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122138",
+    "contentId": "28737783122138",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122138"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林地区2016届高校毕业生首场供需见面洽谈会圆满落幕",
+    "source": "",
+    "publishDate": "2015-10-17",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林地区2016届高校毕业生首场供需见面洽谈会圆满落幕</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2015-10-17 15:35:13</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 10月16日上午，由吉林省教育厅主办、吉林省高等学校毕业生就业指导中心与吉林市的八所高校共同承办的吉林地区2016届高校毕业生首场供需见面洽谈会在北华大学大学生就业服务大厅举行。吉林省教育厅高校学生处副处长陈梅出席招聘会。北华大学党委副书记詹丽萍、纪委书记徐国成莅临洽谈会现场指导工作。</span></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"><br></span></p><p style=\"text-align: center;\"><img title=\"北华大学就业工作处处长王怀忠（左一）、北华大学纪委书记徐国成（左二）、吉林省教育厅高校学生处调研员陈梅（中）、北华大学党委副书记詹丽萍（右一）、吉林省高等学校毕业生就业指导中心杨烁（右二）.JPG\" src=\"migration-resource://c1257f9c4e1d5cdbc9bf48d778c19001bb67a4a87af559bf7ec46f7e5da3965b\"></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun;\">北华大学就业工作处处长王怀忠（左一）、北华大学纪委书记徐国成（左二）、吉林省教育厅高校学生处调研员陈梅（中）、北华大学党委副书记詹丽萍（右一）、吉林省高等学校毕业生就业指导中心杨烁（右二）</span><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"></span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 本次招聘会拉开了吉林地区2016届高校毕业生供需见面洽谈月的大幕。据统计，现场参加的应届毕业生约有4500余人，用人单位为学生提供2532个就业岗位，意向签约近750余人，实际签约100余人。</span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"><br></span></p><p style=\"text-align: center;\"><img title=\"供需见面洽谈会现场.JPG\" src=\"migration-resource://61f1af0f5af7f52bf5a167a0f8208929c25ce2ae7a2293ebf27fd41554853be3\"></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun;\">供需见面洽谈会现场</span><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"></span></p><p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544501009375004164814.JPG",
+      "originalReference": "/chistory/cms/imgs/6358544501009375004164814.JPG",
+      "token": "migration-resource://c1257f9c4e1d5cdbc9bf48d778c19001bb67a4a87af559bf7ec46f7e5da3965b",
+      "snapshotPath": "assets/c1257f9c4e1d5cdbc9bf48d778c19001bb67a4a87af559bf7ec46f7e5da3965b.jpg",
+      "sha256": "c1257f9c4e1d5cdbc9bf48d778c19001bb67a4a87af559bf7ec46f7e5da3965b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 222325
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544504612500008723274.JPG",
+      "originalReference": "/chistory/cms/imgs/6358544504612500008723274.JPG",
+      "token": "migration-resource://61f1af0f5af7f52bf5a167a0f8208929c25ce2ae7a2293ebf27fd41554853be3",
+      "snapshotPath": "assets/61f1af0f5af7f52bf5a167a0f8208929c25ce2ae7a2293ebf27fd41554853be3.jpg",
+      "sha256": "61f1af0f5af7f52bf5a167a0f8208929c25ce2ae7a2293ebf27fd41554853be3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 224609
+    }
+  ],
+  "sourceFingerprint": "408c43864231546ab37030571838620da9cc2d00c20d9dc4380023998afab7eb",
+  "evidence": {
+    "listPage": 157,
+    "listTitle": "吉林地区2016届高校毕业生首场供需见面洽谈会圆满落幕",
+    "listPublishDate": "2015-10-17",
+    "sourceOrder": 1565,
+    "detailPublishDate": "2015-10-17"
+  }
+}

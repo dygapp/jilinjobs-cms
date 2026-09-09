@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:407d70c8b3c2e2dc78486092d74fb0f6dcd6c2384ee44812d072e190e74832b3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1003/21003.htm",
+    "url": "http://news.ccu.edu.cn/info/1003/21003.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学赴睿立实业集团开展“访企拓岗”专项行动",
+    "source": "",
+    "publishDate": "2025-06-30",
+    "bodyHtml": "",
+    "externalUrl": "http://news.ccu.edu.cn/info/1003/21003.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "90a6a6968bb8f9302a7cb39048d5894e059cdde0b7feef450478adcaca54be68",
+  "evidence": {
+    "listPage": 77,
+    "listTitle": "长春大学赴睿立实业集团开展“访企拓岗”专项行动",
+    "listPublishDate": "2025-06-30",
+    "sourceOrder": 761
+  }
+}

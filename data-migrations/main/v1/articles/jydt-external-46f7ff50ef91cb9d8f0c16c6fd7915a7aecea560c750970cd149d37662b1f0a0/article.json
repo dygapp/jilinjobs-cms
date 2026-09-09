@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:46f7ff50ef91cb9d8f0c16c6fd7915a7aecea560c750970cd149d37662b1f0a0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/bNS_MOEY9e7NWJpgthiU6g",
+    "url": "https://mp.weixin.qq.com/s/bNS_MOEY9e7NWJpgthiU6g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春财经学院赴合作小学开展访企拓岗暨人才培养方案调研交流",
+    "source": "",
+    "publishDate": "2026-06-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/bNS_MOEY9e7NWJpgthiU6g"
+  },
+  "resources": [],
+  "sourceFingerprint": "87ed0672ad74a2787b78f70ad373a4ac8f73342c6604d52ef3fdbf2be449ee4e",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "长春财经学院赴合作小学开展访企拓岗暨人才培养方案调研交流",
+    "listPublishDate": "2026-06-29",
+    "sourceOrder": 63
+  }
+}

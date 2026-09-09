@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:2105c9b9dea317e041bd2ebd2a1a70a910872110cf9155c12b6ea72742bba32a",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/jLxOW1c4-TpqyzJMH15k9w",
+    "url": "https://mp.weixin.qq.com/s/jLxOW1c4-TpqyzJMH15k9w"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春汽车职业技术大学2025年校园招聘会企业邀请函",
+    "source": "",
+    "publishDate": "2025-05-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/jLxOW1c4-TpqyzJMH15k9w"
+  },
+  "resources": [],
+  "sourceFingerprint": "85509b815ecd2880a35991c9729feeff8c9a8eb485c259c9233f3e4ca8cd29a0",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "长春汽车职业技术大学2025年校园招聘会企业邀请函",
+    "listPublishDate": "2025-05-13",
+    "sourceOrder": 156
+  }
+}

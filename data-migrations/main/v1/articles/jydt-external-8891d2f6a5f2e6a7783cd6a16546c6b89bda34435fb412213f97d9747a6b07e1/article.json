@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8891d2f6a5f2e6a7783cd6a16546c6b89bda34435fb412213f97d9747a6b07e1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1381/36671.htm",
+    "url": "https://www.ccu.edu.cn/info/1381/36671.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学开展暑期“访企拓岗”促就业系列活动",
+    "source": "",
+    "publishDate": "2026-09-07",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccu.edu.cn/info/1381/36671.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "25a753addb5fc250514ea4ef0df90fec69b9fb48d95eb9b60204d39e9666cb05",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "长春大学开展暑期“访企拓岗”促就业系列活动",
+    "listPublishDate": "2026-09-07",
+    "sourceOrder": 2
+  }
+}

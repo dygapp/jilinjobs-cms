@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:a2797207cc4faa63dd2546117855e8bbed0c56817d913bf4f3ffa3024049204c",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/B7fkrAN6URNPHqEq1j5JKQ",
+    "url": "https://mp.weixin.qq.com/s/B7fkrAN6URNPHqEq1j5JKQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗‘就’在吉林”2024年长春医学高等专科学校人才专场招聘会",
+    "source": "",
+    "publishDate": "2024-04-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/B7fkrAN6URNPHqEq1j5JKQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "503059d934948fb76091da3344944f3ec548b7b49ab5578b69e5d0675675c471",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "“创业奋斗‘就’在吉林”2024年长春医学高等专科学校人才专场招聘会",
+    "listPublishDate": "2024-04-26",
+    "sourceOrder": 288
+  }
+}

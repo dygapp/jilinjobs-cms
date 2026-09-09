@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:245998731427840",
+    "contentId": "245998731427840",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=245998731427840"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展2025届秋冬季“吉林省普通高校毕业生就业洽谈月”活动的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2024-09-19",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1344\" src=\"migration-resource://55c6feb0cc8c25f08ae9f794bfb3e25cb8b618d641906c6de12eb56ed3f8af0e\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1344\" src=\"migration-resource://4c5c2491e1bc024c7f65127ebff3267d6148e86b65587b71c59252ee564463c7\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1344\" src=\"migration-resource://b8eb58d0e3c9eee3b7ef0a395a3fa91ba5f72f03a2cbf827b6547b3c7cdd5408\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1344\" src=\"migration-resource://82b4d3af280f56b3c3ed57bbcd3d48b80c3198af0854c0be9d3a3a1971a34809\" width=\"950\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-09-19/c9f01be9-ff86-4b32-b076-2212e97bbec2.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-09-19/c9f01be9-ff86-4b32-b076-2212e97bbec2.jpg",
+      "token": "migration-resource://55c6feb0cc8c25f08ae9f794bfb3e25cb8b618d641906c6de12eb56ed3f8af0e",
+      "snapshotPath": "assets/55c6feb0cc8c25f08ae9f794bfb3e25cb8b618d641906c6de12eb56ed3f8af0e.jpg",
+      "sha256": "55c6feb0cc8c25f08ae9f794bfb3e25cb8b618d641906c6de12eb56ed3f8af0e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-09-19/51d90e5f-2112-4757-b9c9-c51ab17fc904.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-09-19/51d90e5f-2112-4757-b9c9-c51ab17fc904.jpg",
+      "token": "migration-resource://4c5c2491e1bc024c7f65127ebff3267d6148e86b65587b71c59252ee564463c7",
+      "snapshotPath": "assets/4c5c2491e1bc024c7f65127ebff3267d6148e86b65587b71c59252ee564463c7.jpg",
+      "sha256": "4c5c2491e1bc024c7f65127ebff3267d6148e86b65587b71c59252ee564463c7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-09-19/03ec2d7d-f8e3-49f7-95c3-20e5cd5d3384.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-09-19/03ec2d7d-f8e3-49f7-95c3-20e5cd5d3384.jpg",
+      "token": "migration-resource://b8eb58d0e3c9eee3b7ef0a395a3fa91ba5f72f03a2cbf827b6547b3c7cdd5408",
+      "snapshotPath": "assets/b8eb58d0e3c9eee3b7ef0a395a3fa91ba5f72f03a2cbf827b6547b3c7cdd5408.jpg",
+      "sha256": "b8eb58d0e3c9eee3b7ef0a395a3fa91ba5f72f03a2cbf827b6547b3c7cdd5408",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-09-19/0767f47a-74d1-46c4-afe6-fb8cef4ed085.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-09-19/0767f47a-74d1-46c4-afe6-fb8cef4ed085.jpg",
+      "token": "migration-resource://82b4d3af280f56b3c3ed57bbcd3d48b80c3198af0854c0be9d3a3a1971a34809",
+      "snapshotPath": "assets/82b4d3af280f56b3c3ed57bbcd3d48b80c3198af0854c0be9d3a3a1971a34809.jpg",
+      "sha256": "82b4d3af280f56b3c3ed57bbcd3d48b80c3198af0854c0be9d3a3a1971a34809",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "3413eebe0e8db4192f035a81629efab4db318c50c57cd8df25d34bead6ba7ffd",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "关于开展2025届秋冬季“吉林省普通高校毕业生就业洽谈月”活动的通知",
+    "listPublishDate": "2024-09-19",
+    "sourceOrder": 74,
+    "detailPublishDate": "2024-09-19"
+  }
+}

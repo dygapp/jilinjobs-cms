@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119938",
+    "contentId": "28737783119938",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119938"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省举办高校生涯规划培训班",
+    "source": "",
+    "publishDate": "2017-06-08",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省举办高校生涯规划培训班</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2017-6-8 14:10:02</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"line-height: 40px; text-indent: 40px;\"><span style=\"font-family: 宋体; font-size: 20px;\">6月5日-7日，省高校毕业生就业指导中心与新精英生涯（北京）教育科技有限公司联合举办“高校生涯规划培训班”，来自全省41所高校60名高校就业部门负责人、业务骨干及就业指导课程专（兼）职教师参加了培训。</span></p><p style=\"line-height: 40px; text-indent: 40px;\"><span style=\"font-family: 宋体; font-size: 20px;\">课程由教育部就业指导教师特聘培训专家，国内知名职业发展专家、新精英生涯高校产品化研发总监、新精英生涯 UCC项目培训师国家认证《生涯规划师》导师李春雨；国家认证《生涯规划师》课程培训讲师、新精英资深生涯咨询师督导马华兴，采用独特的生涯规划师和高校教师职场培训体系，通过专业的系统性培训和指导，以了解基本生涯理论体系、工具与模型，理解生涯规划的理念，掌握基于这些理论而衍生出的生涯工具为基础。能够根据外在的一些生涯表现，诊断并识别大学生常见生涯问题类型为基础设置，在咨询、授课和研发上进行相关培养。</span></p><p style=\"line-height: 40px; text-indent: 40px;\"><span style=\"font-family: 宋体; font-size: 20px;\">通过调查问卷结果反馈，三天的培训，让学员们系统的学习了生涯规划的理论知识、工具模型、实践方法，剖析了职业生涯困惑产生的原因,并掌握了解决方案,有效的完成了“自助助人”的学习和成长过程，对理论的把握更加扎实和系统，对实践具有重要的指导意义。</span></p><p style=\"text-align: center;\"><img title=\"6.5-6.7.jpg\" src=\"migration-resource://a113629d28dc82cda8309dfa60b4079f43897bc0c885feded6928ac6c4340ce5\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363667503364062501025416.jpg",
+      "originalReference": "/chistory/cms/imgs/6363667503364062501025416.jpg",
+      "token": "migration-resource://a113629d28dc82cda8309dfa60b4079f43897bc0c885feded6928ac6c4340ce5",
+      "snapshotPath": "assets/a113629d28dc82cda8309dfa60b4079f43897bc0c885feded6928ac6c4340ce5.jpg",
+      "sha256": "a113629d28dc82cda8309dfa60b4079f43897bc0c885feded6928ac6c4340ce5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 158817
+    }
+  ],
+  "sourceFingerprint": "a2f5b491e2644f3bb6ba6f215521228292e9489b1c816f0b2d5002e64f845231",
+  "evidence": {
+    "listPage": 150,
+    "listTitle": "我省举办高校生涯规划培训班",
+    "listPublishDate": "2017-06-08",
+    "sourceOrder": 1496,
+    "detailPublishDate": "2017-06-08"
+  }
+}

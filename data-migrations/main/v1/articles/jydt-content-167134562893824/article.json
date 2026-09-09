@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:167134562893824",
+    "contentId": "167134562893824",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=167134562893824"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "云南：出台17条措施推动高校毕业生等青年就业创业",
+    "source": "",
+    "publishDate": "2023-07-07",
+    "bodyHtml": "\n                        <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 近日，云南省印发《关于进一步推动高校毕业生等青年就业创业17条措施》，包括激励企业吸纳、公共部门岗位招录（聘）、支持基层就业创业、前推就业指导、精准就业帮扶等5个方面共17条措施，进一步释放政策红利，千方百计帮助高校毕业生等青年就业创业。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp;《17条措施》提出，鼓励支持高校毕业生返乡创业做电商，给予最高3万元创业补贴。对在口岸、抵边地区从事跨境电商创业的，提供创业培训、贷款支持、导师帮扶和奖补兑现等服务。首次面向在校大学生提供免费创业培训、发放创业培训补贴，加大“在校学生创业孵化园”扶持力度。实施“彩云雁归”创业计划，给予最高200万元的资金补助，吸引扶持高校毕业生等重点群体返乡创业。实施“学历证书+若干职业技能证书”多证结合制度，面向在校学生大规模开展职业技能等级评价，将服务云南省高原特色现代农业、先进制造业、生物医药等12个重点产业培训项目纳入补贴目录，为高校毕业生求职创业赋能。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 今年以来，云南省人社部门提前谋划、主动作为，不断强化政策支撑，积极稳岗拓岗，多措并举促进高校毕业生等青年群体就业创业。截至6月底，共组织大中城市联合招聘、春风行动等各类招聘3170余场次，提供岗位超过56万个。培训年度高校毕业生25412人次。兑付11.8万名特殊困难高校毕业生求职创业补贴1.18亿元。</span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "1905583f2f09beba4cdb6eb78aac1e6f32e2e3257757f785c245f670f56df900",
+  "evidence": {
+    "listPage": 113,
+    "listTitle": "云南：出台17条措施推动高校毕业生等青年就业创业",
+    "listPublishDate": "2023-07-07",
+    "sourceOrder": 1129,
+    "detailPublishDate": "2023-07-07"
+  }
+}

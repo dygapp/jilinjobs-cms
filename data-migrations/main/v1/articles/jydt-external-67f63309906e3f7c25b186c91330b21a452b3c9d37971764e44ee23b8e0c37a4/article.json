@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:67f63309906e3f7c25b186c91330b21a452b3c9d37971764e44ee23b8e0c37a4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/F569bppMOaqFKsnvfnaBCA",
+    "url": "https://mp.weixin.qq.com/s/F569bppMOaqFKsnvfnaBCA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范高等专科学校成功举办 2026、2027 届毕业生等青年校园“双选会”",
+    "source": "",
+    "publishDate": "2026-06-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/F569bppMOaqFKsnvfnaBCA"
+  },
+  "resources": [],
+  "sourceFingerprint": "5488b1f18537931aa170ae0290d20c5991d3e890bd7106fada06c6aafb5a602a",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "长春师范高等专科学校成功举办 2026、2027 届毕业生等青年校园“双选会”",
+    "listPublishDate": "2026-06-08",
+    "sourceOrder": 95
+  }
+}

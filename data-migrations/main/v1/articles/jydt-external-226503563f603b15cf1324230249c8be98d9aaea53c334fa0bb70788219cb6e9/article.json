@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:226503563f603b15cf1324230249c8be98d9aaea53c334fa0bb70788219cb6e9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/QW-V9dWMQS5eQfBWcnrnsg",
+    "url": "https://mp.weixin.qq.com/s/QW-V9dWMQS5eQfBWcnrnsg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "寒假促就业暖心行动｜长春大学旅游学院党委书记范琳琳带队赴上海考察调研、访企拓岗",
+    "source": "",
+    "publishDate": "2026-01-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/QW-V9dWMQS5eQfBWcnrnsg"
+  },
+  "resources": [],
+  "sourceFingerprint": "5af8813da34c814820514537a7d5e19b64f98b924189f31ff66d05163b21a776",
+  "evidence": {
+    "listPage": 47,
+    "listTitle": "寒假促就业暖心行动｜长春大学旅游学院党委书记范琳琳带队赴上海考察调研、访企拓岗",
+    "listPublishDate": "2026-01-29",
+    "sourceOrder": 470
+  }
+}

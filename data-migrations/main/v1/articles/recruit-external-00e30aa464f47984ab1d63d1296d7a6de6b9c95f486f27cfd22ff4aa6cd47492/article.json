@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:00e30aa464f47984ab1d63d1296d7a6de6b9c95f486f27cfd22ff4aa6cd47492",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/bu9jLhC55jY6jWklE3Pbcg",
+    "url": "https://mp.weixin.qq.com/s/bu9jLhC55jY6jWklE3Pbcg?scene=25&sessionid=-1365184323"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "邀请函 | 吉林工程职业学院2025届毕业生双选会邀请函",
+    "source": "",
+    "publishDate": "2025-04-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/bu9jLhC55jY6jWklE3Pbcg?scene=25&sessionid=-1365184323"
+  },
+  "resources": [],
+  "sourceFingerprint": "188ab4de53bb5e533cb56cb21d9a536607218b7daad6db8d6054d7c17edb3c96",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "邀请函 | 吉林工程职业学院2025届毕业生双选会邀请函",
+    "listPublishDate": "2025-04-29",
+    "sourceOrder": 162
+  }
+}

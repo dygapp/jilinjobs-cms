@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ba744bda8efb92c75dc5ccfcb0894782ea1c3360868183446ce65f0943d15998",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/ncss/jydt/yw/202312/20231205/2293174053.html",
+    "url": "https://www.ncss.cn/ncss/jydt/yw/202312/20231205/2293174053.html"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "教育部印发通知部署做好2024届全国普通高校毕业生就业创业工作",
+    "source": "",
+    "publishDate": "2023-12-05",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ncss.cn/ncss/jydt/yw/202312/20231205/2293174053.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "4ab09dbf6c12edcad7cfc11c6a006d7d73805356124523a0937b576ac3c5e9f2",
+  "evidence": {
+    "listPage": 112,
+    "listTitle": "教育部印发通知部署做好2024届全国普通高校毕业生就业创业工作",
+    "listPublishDate": "2023-12-05",
+    "sourceOrder": 1111
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:1fd4da6c1af2a601a0a0c948efee5ee1b9eeb5640294ca15f0e9ab9e20d4a109",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/76sV6OUrKdhHOIh6KAeX7g",
+    "url": "https://mp.weixin.qq.com/s/76sV6OUrKdhHOIh6KAeX7g"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“服务吉林高质量发展”︱吉林工业职业技术学院2026届毕业生视频双选会邀请函",
+    "source": "",
+    "publishDate": "2025-10-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/76sV6OUrKdhHOIh6KAeX7g"
+  },
+  "resources": [],
+  "sourceFingerprint": "b48b09444197d2048154a457efcb7b23fce747d491a9329f4145f7b23b3b5aec",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "“服务吉林高质量发展”︱吉林工业职业技术学院2026届毕业生视频双选会邀请函",
+    "listPublishDate": "2025-10-22",
+    "sourceOrder": 124
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8aec6cc7372d47d288e5307d84cfdddd31a824e1b1b1190f0c742989f3477967",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/8iaxldciroRnlaRpGzRaqA",
+    "url": "https://mp.weixin.qq.com/s/8iaxldciroRnlaRpGzRaqA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学珲春校区与延边州妇联共同举办“巾帼护航·引凤聚延”双进活动",
+    "source": "",
+    "publishDate": "2025-11-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/8iaxldciroRnlaRpGzRaqA"
+  },
+  "resources": [],
+  "sourceFingerprint": "b6e684cd77c72f263953ceb28a77988db3906c13d1340bd25cbe9a514f1be897",
+  "evidence": {
+    "listPage": 60,
+    "listTitle": "延边大学珲春校区与延边州妇联共同举办“巾帼护航·引凤聚延”双进活动",
+    "listPublishDate": "2025-11-19",
+    "sourceOrder": 591
+  }
+}

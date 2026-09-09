@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:96fdd9ce47a81e70703e574e626e85a5147ff323f5f04c7201feadc8f9885571",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/NEhAGkR4WKHhbvCVVi2K-g",
+    "url": "https://mp.weixin.qq.com/s/NEhAGkR4WKHhbvCVVi2K-g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学党委副书记张玉红带队开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2025-06-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/NEhAGkR4WKHhbvCVVi2K-g"
+  },
+  "resources": [],
+  "sourceFingerprint": "ba763952c7fbe0d77cfa2712399f495c021bd5bb247ade0844706b15b769effe",
+  "evidence": {
+    "listPage": 81,
+    "listTitle": "延边大学党委副书记张玉红带队开展访企拓岗专项行动",
+    "listPublishDate": "2025-06-17",
+    "sourceOrder": 801
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86008255234048",
+    "contentId": "86008255234048",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86008255234048"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "“蒲根筑梦 ‘就’在吉林”通化师范学院2021年留省就业线上专场招聘会圆满结束",
+    "source": "通化师范学院",
+    "publishDate": "2021-05-21",
+    "bodyHtml": "\n                        <p>为深入贯彻省委省政府人才兴省战略决策部署，积极响应省委书记景俊海在“创业有你 ‘就’在吉林”—助力新时代吉林振兴发展首场宣讲报告会上的号召，全面落实教育部2021届高校毕业生就业促进周系列活动，做好百日冲刺，决战就业工作。我校于5月21日成功举办了“蒲根筑梦 ‘就’在吉林”通化师范学院2021年留省就业线上专场招聘会。学校党委高度重视，校党委副书记杨秀祖亲临网络招聘现场，详细询问了招聘进展情况，这次招聘会重点面向省内单位征集人才需求，旨在促进更多的毕业生扎根吉林、扎根基层，到中小企业和艰苦地区就业创业，同时也是学校全面落实“蒲公英基层就业计划”重要举措之一。</p>\n\n<p>本场双选会共邀请25家吉林省内用人单位参会，提供岗位80个，招聘毕业生968人。网络专场招聘会吸引了大量各级各类人才留吉、回吉就业创业，我校2021届毕业生留省就业人数为1274人，切实满足了省内企事业单位对人才的需求，为吉林省地方经济的健康发展提供了人才支撑。</p>\n\n<p><strong>（通化师范学院 丛俊日）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "b7fe8dd2356d709e248b674af7f474440179d1915272e66f52505a62cb5f6f38",
+  "evidence": {
+    "listPage": 134,
+    "listTitle": "“蒲根筑梦 ‘就’在吉林”通化师范学院2021年留省就业线上专场招聘会圆满结束",
+    "listPublishDate": "2021-05-21",
+    "sourceOrder": 1331,
+    "detailPublishDate": "2021-05-21"
+  }
+}

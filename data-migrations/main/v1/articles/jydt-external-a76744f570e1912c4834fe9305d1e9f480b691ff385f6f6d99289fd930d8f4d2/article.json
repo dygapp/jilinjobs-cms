@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a76744f570e1912c4834fe9305d1e9f480b691ff385f6f6d99289fd930d8f4d2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/LNtgnRFdqRtVELhPtyBJoA",
+    "url": "https://mp.weixin.qq.com/s/LNtgnRFdqRtVELhPtyBJoA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春财经学院副校长王占礼一行赴金恒集团考察交流",
+    "source": "",
+    "publishDate": "2026-03-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/LNtgnRFdqRtVELhPtyBJoA"
+  },
+  "resources": [],
+  "sourceFingerprint": "5e2b5ee4bf1aabb172f74342045523d870469812d79bcafacbdc876099d1240d",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "长春财经学院副校长王占礼一行赴金恒集团考察交流",
+    "listPublishDate": "2026-03-25",
+    "sourceOrder": 367
+  }
+}

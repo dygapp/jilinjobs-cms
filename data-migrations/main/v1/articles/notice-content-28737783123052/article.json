@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783123052",
+    "contentId": "28737783123052",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123052"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《教育部关于做好2011年全国普通高等学校毕业生就业工作的通知》",
+    "source": "",
+    "publishDate": "2010-12-02",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《教育部关于做好2011年全国普通高等学校毕业生就业工作的通知》</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2010-12-2 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p><font color=\"#444444\" size=\"2\">各市、州、长白山管委会教育局、各普通高等院校：<br>&nbsp;&nbsp;&nbsp; 现将《教育部关于做好2011年全国普通高等学校毕业生就业工作的通知》转发给你们，请各地、各高校认真学习，结合实际情况贯彻落实。针对《通知》中提出的各项要求，我厅将结合本省实际提出具体的贯彻意见，会同相关部门制定相应的政策措施，提出工作要求，建立督查机制，加大宣传工作力度，进一步完善高校毕业生就业指导服务体系建设，力争实现《通知》中提出的“保持高校毕业生初次就业率基本稳定，就业人数持续增加，到基层就业和自主创业人数进一步增长”的年度工作目标。我省贯彻意见另行发文。<br>&nbsp;&nbsp;&nbsp; 附件：</font><a href=\"http://www.moe.edu.cn/publicfiles/business/htmlfiles/moe/s3265/201011/xxgk_111911.html\"><font color=\"#444444\" size=\"2\">教育部关于做好2011年全国普通高等学校毕业生就业工作的通知<br></font></a><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 注：附件内容请各高校登陆教育部门户网站（</font><a href=\"http://www.moe.edu.cn/\"><font color=\"#444444\" size=\"2\">www.moe.edu.cn</font></a><font color=\"#444444\" size=\"2\">）和吉林省高校毕业生就业信息网（</font><a href=\"http://www.jilinjobs.cn/\"><font color=\"#444444\" size=\"2\">www.jilinjobs.cn</font></a><font color=\"#444444\" size=\"2\">）下载。</font></p> <p align=\"right\"><br><font color=\"#444444\" size=\"2\">二〇一〇年十二月二日</font></p> <p align=\"right\"><font color=\"#444444\" size=\"2\">吉林省教育厅&nbsp;&nbsp;&nbsp; </font></p> <p><font color=\"#444444\" size=\"2\"></font>&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "2458393cbd0ede349e4ed97f4c7a529ae25a24fe22ac76e5b5fba09e3e928a1e",
+  "evidence": {
+    "listPage": 47,
+    "listTitle": "转发《教育部关于做好2011年全国普通高等学校毕业生就业工作的通知》",
+    "listPublishDate": "2010-12-02",
+    "sourceOrder": 462,
+    "detailPublishDate": "2010-12-02"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:46216719f3d1de717fc3ee7805be736fa98d476d426406e5d587bd925a862ea2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzAxMzg2ODE0NA==&mid=100001078&idx=1&sn=7b6eda1dc37e86f87cf59a2011031979&chksm=1b9d48292ceac13f8d78de7949a3105b42a1af11c2aad6df27f166c1784d85b2c8bbfb4fc97b&mpshare=1&scene=23&srcid=0430KC0oRNki6hFRpNLyD7eV&sharer_sharetime=1619766881263&sharer_shareid=574f395a51b6c54cc59c0dc6ece05e10"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "创业有你 ‘就’在吉林 我们在行动",
+    "source": "",
+    "publishDate": "2021-04-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s?__biz=MzAxMzg2ODE0NA==&mid=100001078&idx=1&sn=7b6eda1dc37e86f87cf59a2011031979&chksm=1b9d48292ceac13f8d78de7949a3105b42a1af11c2aad6df27f166c1784d85b2c8bbfb4fc97b&mpshare=1&scene=23&srcid=0430KC0oRNki6hFRpNLyD7eV&sharer_sharetime=1619766881263&sharer_shareid=574f395a51b6c54cc59c0dc6ece05e10"
+  },
+  "resources": [],
+  "sourceFingerprint": "a69650ed531693b7c5ae29b14ed8e55d8d23e507d8e7581ae0958c6050aff787",
+  "evidence": {
+    "listPage": 135,
+    "listTitle": "创业有你 ‘就’在吉林 我们在行动",
+    "listPublishDate": "2021-04-30",
+    "sourceOrder": 1346
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:413e14962aa01859ea28c099587762ae3741aa397543331bafaaf702f079eec9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/yAtMOnHzs3YdS8byJaWHHw",
+    "url": "https://mp.weixin.qq.com/s/yAtMOnHzs3YdS8byJaWHHw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "毕业生离校，就业服务“不断线”",
+    "source": "",
+    "publishDate": "2025-08-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/yAtMOnHzs3YdS8byJaWHHw"
+  },
+  "resources": [],
+  "sourceFingerprint": "66486fe7e46145c4d50cd76c240640f040021c1f09088dc879483804f67f6c17",
+  "evidence": {
+    "listPage": 72,
+    "listTitle": "毕业生离校，就业服务“不断线”",
+    "listPublishDate": "2025-08-27",
+    "sourceOrder": 712
+  }
+}

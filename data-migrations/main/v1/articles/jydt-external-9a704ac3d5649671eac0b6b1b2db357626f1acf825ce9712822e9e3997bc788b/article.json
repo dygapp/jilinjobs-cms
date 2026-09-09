@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9a704ac3d5649671eac0b6b1b2db357626f1acf825ce9712822e9e3997bc788b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/jCYr0XFl2qrESO5Gb57yNw",
+    "url": "https://mp.weixin.qq.com/s/jCYr0XFl2qrESO5Gb57yNw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学举办国网内蒙古东部电力有限公司2026届校园招聘宣讲会",
+    "source": "",
+    "publishDate": "2025-09-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/jCYr0XFl2qrESO5Gb57yNw"
+  },
+  "resources": [],
+  "sourceFingerprint": "957340aa87cb14514fb304ca84f29fd0a6834f0f368c0eb6954f9ddee3089c21",
+  "evidence": {
+    "listPage": 70,
+    "listTitle": "东北电力大学举办国网内蒙古东部电力有限公司2026届校园招聘宣讲会",
+    "listPublishDate": "2025-09-22",
+    "sourceOrder": 700
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9b8201c7bec35b4bc8a142747f22668c5038a56b96bc5af48c42efff69363cd7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kDuUWJc5KL_wcAzEQ8ZjVg",
+    "url": "https://mp.weixin.qq.com/s/kDuUWJc5KL_wcAzEQ8ZjVg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春金融高等专科学校吕鹰飞校长带队赴企业开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-06-05",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kDuUWJc5KL_wcAzEQ8ZjVg"
+  },
+  "resources": [],
+  "sourceFingerprint": "6525011447427a3b8c59cbbcd3a4b872d5c6b31813f5f7b359f08486b8aabd6e",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "长春金融高等专科学校吕鹰飞校长带队赴企业开展访企拓岗专项行动",
+    "listPublishDate": "2026-06-05",
+    "sourceOrder": 101
+  }
+}

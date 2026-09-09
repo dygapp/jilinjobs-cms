@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:045b31d504c52fa01d919a34fa755db1d14ab16e1834564ed97556718b16d9ea",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kQh6-1Q_OWycAfI-wAK5Hw",
+    "url": "https://mp.weixin.qq.com/s/kQh6-1Q_OWycAfI-wAK5Hw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "提供岗位信息超1964万条！各地各高校“秋季校园招聘月”系列活动火热进行中",
+    "source": "",
+    "publishDate": "2024-12-05",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kQh6-1Q_OWycAfI-wAK5Hw"
+  },
+  "resources": [],
+  "sourceFingerprint": "9dd58c39017f3c7d5c6ee5eb71d3ecb590afa04f05bb84dc7398252809dfabac",
+  "evidence": {
+    "listPage": 101,
+    "listTitle": "提供岗位信息超1964万条！各地各高校“秋季校园招聘月”系列活动火热进行中",
+    "listPublishDate": "2024-12-05",
+    "sourceOrder": 1003
+  }
+}

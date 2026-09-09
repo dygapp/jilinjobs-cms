@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:af3533aef2243b91c070a6873f59fc6ade2e9aea9f34d6c5db5a8e3fc094dbb5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/eCmVAfAIYlH_rGAb5DYAnA",
+    "url": "https://mp.weixin.qq.com/s/eCmVAfAIYlH_rGAb5DYAnA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗·就在吉林”吉林省应用型人才服务“四大集群·六新产业”暨吉林工程技术师范学院2024届毕业生就业双选会成功举办",
+    "source": "",
+    "publishDate": "2024-05-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/eCmVAfAIYlH_rGAb5DYAnA"
+  },
+  "resources": [],
+  "sourceFingerprint": "435ddec1c17d47d3e8061c92ead8953a12262f10986e8ab990a76f96bf0b0606",
+  "evidence": {
+    "listPage": 106,
+    "listTitle": "“创业奋斗·就在吉林”吉林省应用型人才服务“四大集群·六新产业”暨吉林工程技术师范学院2024届毕业生就业双选会成功举办",
+    "listPublishDate": "2024-05-01",
+    "sourceOrder": 1060
+  }
+}

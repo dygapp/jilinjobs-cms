@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122076",
+    "contentId": "28737783122076",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122076"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "中心召开会议传达学习全省教育工作会议等有关会议精神",
+    "source": "",
+    "publishDate": "2017-02-24",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">中心召开会议传达学习全省教育工作会议等有关会议精神</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2017-2-24 13:09:39</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\";text-align: center\"><strong><span style=\";font-family: 宋体;font-size: 29px\">&nbsp;</span></strong></p><p style=\";text-align: left;text-indent: 44px\"><span style=\";font-family: 仿宋_GB2312;font-size: 21px\">2</span><span style=\";font-family: 仿宋_GB2312;font-size: 21px\">月22日，省高校毕业生就业指导中心召开全体中层干部会议。中心主任郑志宏同志传达了，全省高校思想政治工作会议、2017年全省教育工作会议和省教育厅（高校工委）党风廉政建设工作会议精神。</span></p><p style=\";text-align: left;text-indent: 44px\"><span style=\";font-family: 仿宋_GB2312;font-size: 21px\"><br></span></p><p style=\"text-align: center\"><img title=\"IMG_8004.JPG\" src=\"migration-resource://3c91a12978a01ee18dac8090c884ac535609f6246d0c77454292de24b7a6e5b8\"></p><p style=\";text-align: left;text-indent: 44px\"><span style=\";font-family: 仿宋_GB2312;font-size: 21px\"></span><br></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋_GB2312;font-size: 21px\">郑志宏主任结合2017年全省教育工作会议和省教育厅（高校工委）党风廉政建设工作会议精神，就如何做好2017年就业中心工作进行了部署。他指出，要</span><span style=\";font-family: 仿宋_GB2312;font-size: 21px\">按照省教育厅2017年全省教育工作会议和党风廉政建设工作会议的工作部署，全面加强党风廉政建设和基层党建工作，努力拓宽就业渠道，大力开展创新创业实践活动，改进培训模式，着力提升就业创业指导服务水平，做到精准服务，</span><span style=\";font-family: 仿宋_GB2312;font-size: 21px\">创新思路，突出重点，着重实效，稳中求进，全力推进各项工作。</span></p><p style=\";text-align: left;text-indent: 44px\"><span style=\";font-family: 仿宋_GB2312;font-size: 21px\">&nbsp;</span></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362353862596350005364306.JPG",
+      "originalReference": "/chistory/cms/imgs/6362353862596350005364306.JPG",
+      "token": "migration-resource://3c91a12978a01ee18dac8090c884ac535609f6246d0c77454292de24b7a6e5b8",
+      "snapshotPath": "assets/3c91a12978a01ee18dac8090c884ac535609f6246d0c77454292de24b7a6e5b8.jpg",
+      "sha256": "3c91a12978a01ee18dac8090c884ac535609f6246d0c77454292de24b7a6e5b8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 121602
+    }
+  ],
+  "sourceFingerprint": "3e8fc089d6bca136eebc032d3e7d13384ae66a6238b449123979badefcb19823",
+  "evidence": {
+    "listPage": 151,
+    "listTitle": "中心召开会议传达学习全省教育工作会议等有关会议精神",
+    "listPublishDate": "2017-02-24",
+    "sourceOrder": 1505,
+    "detailPublishDate": "2017-02-24"
+  }
+}

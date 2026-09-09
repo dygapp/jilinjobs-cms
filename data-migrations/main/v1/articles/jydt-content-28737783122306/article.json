@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122306",
+    "contentId": "28737783122306",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122306"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "广西：高校毕业生可在9省区内享受免费就业服务",
+    "source": "",
+    "publishDate": "2009-06-12",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">广西：高校毕业生可在9省区内享受免费就业服务</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-6-12 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 广西人事部门8日启动了面向广西高校毕业生的就业创业一站式服务，其中包括向毕业生发放跨9省区的免费就业服务卡、定期举办招聘会、免费提供就业信息查询和评测服务等。 </font></p> <p><font size=\"2\"></font></p> <p><font size=\"2\">　　为扩大就业范围，实现跨区域求职就业，广西人才交流服务中心向广西部分高校优秀贫困毕业生免费发放2000张泛珠三角9省区人才市场毕业生就业免费服务卡。持“高校毕业生就业一卡通”的毕业生可以在广西、广东、福建、江西、湖南、海南、四川、贵州、云南等9个省区任意的省级人才市场免费享受两年的档案托管、落户等人事代理，参加现场交流会，在人才网发布求职信息，参加各类培训班以及在人才市场出版的相关媒体上刊登求职信息等5项服务。 </font></p> <p><font size=\"2\">　　另据了解，广西人才交流中心投入50万元建设了高校毕业生就业信息查询室和测评中心，毕业生可在此查询全国各地的招聘信息、阅读就业知识、交流就业心得、网上投递求职简历、进行网络面试等，每年可为毕业生提供就业信息查询和就业指导服务13万人次以上。 </font></p> <p><font size=\"2\">　　此外，广西人事部门还通过加强就业培训、组织专场招聘会等多项措施促进大学生就业。2009年5月底，广西高校毕业生就业签约率由一季度的20％左右上升到48.4％，居全国前列。</font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：新华网 </font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "53851bd903140c9b6361da97314bfebde1a7e6516f695c62144309aa986fcf29",
+  "evidence": {
+    "listPage": 172,
+    "listTitle": "广西：高校毕业生可在9省区内享受免费就业服务",
+    "listPublishDate": "2009-06-12",
+    "sourceOrder": 1718,
+    "detailPublishDate": "2009-06-12"
+  }
+}

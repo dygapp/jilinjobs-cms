@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:283e44b2160d3fd930f8672028fec77703ef5657bf4ef52d2328b9750c62337a",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/emEdWwSIafZzfn3XGjiyLQ",
+    "url": "https://mp.weixin.qq.com/s/emEdWwSIafZzfn3XGjiyLQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【邀请函】服务吉林高质量发展|吉林工商学院2025届毕业生春季双选会",
+    "source": "",
+    "publishDate": "2025-03-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/emEdWwSIafZzfn3XGjiyLQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "6280dca2c8ac0528bd598f99a3e5cf4041c13630b5a5b0421016b04e25c81b8a",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "【邀请函】服务吉林高质量发展|吉林工商学院2025届毕业生春季双选会",
+    "listPublishDate": "2025-03-24",
+    "sourceOrder": 209
+  }
+}

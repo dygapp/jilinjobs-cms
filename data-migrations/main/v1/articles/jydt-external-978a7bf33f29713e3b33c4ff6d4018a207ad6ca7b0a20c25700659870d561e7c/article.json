@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:978a7bf33f29713e3b33c4ff6d4018a207ad6ca7b0a20c25700659870d561e7c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/W7y2hTcvgknDtsIcDYYvRQ",
+    "url": "https://mp.weixin.qq.com/s/W7y2hTcvgknDtsIcDYYvRQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学学校党委副书记刘鹤带队赴吉林大学智能制造研究院访企拓岗",
+    "source": "",
+    "publishDate": "2025-05-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/W7y2hTcvgknDtsIcDYYvRQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "2f92e869e9cd100040ce59db95285d91f9faf98187535ce504ebf27ffc03af9c",
+  "evidence": {
+    "listPage": 88,
+    "listTitle": "吉林财经大学学校党委副书记刘鹤带队赴吉林大学智能制造研究院访企拓岗",
+    "listPublishDate": "2025-05-20",
+    "sourceOrder": 876
+  }
+}

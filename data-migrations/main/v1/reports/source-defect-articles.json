@@ -1,0 +1,203 @@
+[
+  {
+    "candidateType": "ARTICLE",
+    "legacyKey": "notice:content:168074965696512",
+    "path": "articles/notice-content-168074965696512/article.json",
+    "title": "教育部高校学生司关于征集第三期供需对接就业育人项目的函",
+    "sourceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=168074965696512",
+    "decision": "EXCLUDE_PENDING_CLIENT_CONFIRMATION",
+    "reason": "SOURCE_RESOURCE_MISSING",
+    "problems": [
+      {
+        "identity": "RESOURCE:https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-17/26acd044-e31e-4825-8016-6d8e16f15e11.jpg",
+        "candidateType": "ARTICLE",
+        "legacyKey": "notice:content:168074965696512",
+        "title": "教育部高校学生司关于征集第三期供需对接就业育人项目的函",
+        "sourceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=168074965696512",
+        "classification": "SOURCE_RESOURCE_MISSING",
+        "originalClassification": "SOURCE_RESOURCE_MISSING",
+        "disposition": "TERMINAL_CLIENT_CONFIRMATION",
+        "blocking": true,
+        "code": "BODY_IMAGE_FETCH_FAILED",
+        "rawReference": "/group1/cms/ck/nullcontent/2023-07-17/26acd044-e31e-4825-8016-6d8e16f15e11.jpg",
+        "targetUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-17/26acd044-e31e-4825-8016-6d8e16f15e11.jpg",
+        "message": "Error: Error: HTTP 404 Not Found"
+      }
+    ]
+  },
+  {
+    "candidateType": "ARTICLE",
+    "legacyKey": "notice:content:167315658276864",
+    "path": "articles/notice-content-167315658276864/article.json",
+    "title": "2023年《大学新生应征入伍宣传单》",
+    "sourceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=167315658276864",
+    "decision": "EXCLUDE_PENDING_CLIENT_CONFIRMATION",
+    "reason": "SOURCE_RESOURCE_MISSING",
+    "problems": [
+      {
+        "identity": "RESOURCE:https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-13/4f25b497-82ec-4ef0-9e25-52468a77777f.jpg",
+        "candidateType": "ARTICLE",
+        "legacyKey": "notice:content:167315658276864",
+        "title": "2023年《大学新生应征入伍宣传单》",
+        "sourceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=167315658276864",
+        "classification": "SOURCE_RESOURCE_MISSING",
+        "originalClassification": "SOURCE_RESOURCE_MISSING",
+        "disposition": "TERMINAL_CLIENT_CONFIRMATION",
+        "blocking": true,
+        "code": "BODY_IMAGE_FETCH_FAILED",
+        "rawReference": "/group1/cms/ck/nullcontent/2023-07-13/4f25b497-82ec-4ef0-9e25-52468a77777f.jpg",
+        "targetUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-13/4f25b497-82ec-4ef0-9e25-52468a77777f.jpg",
+        "message": "Error: Error: HTTP 404 Not Found"
+      },
+      {
+        "identity": "RESOURCE:https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-13/800f287b-2b3c-4c35-9d75-db6b375d8701.jpg",
+        "candidateType": "ARTICLE",
+        "legacyKey": "notice:content:167315658276864",
+        "title": "2023年《大学新生应征入伍宣传单》",
+        "sourceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=167315658276864",
+        "classification": "SOURCE_RESOURCE_MISSING",
+        "originalClassification": "SOURCE_RESOURCE_MISSING",
+        "disposition": "TERMINAL_CLIENT_CONFIRMATION",
+        "blocking": true,
+        "code": "BODY_IMAGE_FETCH_FAILED",
+        "rawReference": "/group1/cms/ck/nullcontent/2023-07-13/800f287b-2b3c-4c35-9d75-db6b375d8701.jpg",
+        "targetUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-13/800f287b-2b3c-4c35-9d75-db6b375d8701.jpg",
+        "message": "Error: Error: HTTP 404 Not Found"
+      }
+    ]
+  },
+  {
+    "candidateType": "ARTICLE",
+    "legacyKey": "notice:content:166040961040384",
+    "path": "articles/notice-content-166040961040384/article.json",
+    "title": "关于举办2023届毕业生离校未就业毕业生招聘活动的通知",
+    "sourceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=166040961040384",
+    "decision": "EXCLUDE_PENDING_CLIENT_CONFIRMATION",
+    "reason": "SOURCE_RESOURCE_MISSING",
+    "problems": [
+      {
+        "identity": "RESOURCE:https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-06/b4fce2f1-5dbc-452b-a7bb-fee4f677fe8d.jpg",
+        "candidateType": "ARTICLE",
+        "legacyKey": "notice:content:166040961040384",
+        "title": "关于举办2023届毕业生离校未就业毕业生招聘活动的通知",
+        "sourceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=166040961040384",
+        "classification": "SOURCE_RESOURCE_MISSING",
+        "originalClassification": "SOURCE_RESOURCE_MISSING",
+        "disposition": "TERMINAL_CLIENT_CONFIRMATION",
+        "blocking": true,
+        "code": "BODY_IMAGE_FETCH_FAILED",
+        "rawReference": "/group1/cms/ck/nullcontent/2023-07-06/b4fce2f1-5dbc-452b-a7bb-fee4f677fe8d.jpg",
+        "targetUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-06/b4fce2f1-5dbc-452b-a7bb-fee4f677fe8d.jpg",
+        "message": "Error: Error: HTTP 404 Not Found"
+      },
+      {
+        "identity": "RESOURCE:https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-06/c24a3cbc-a547-4e36-b844-1ba7f495855c.jpg",
+        "candidateType": "ARTICLE",
+        "legacyKey": "notice:content:166040961040384",
+        "title": "关于举办2023届毕业生离校未就业毕业生招聘活动的通知",
+        "sourceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=166040961040384",
+        "classification": "SOURCE_RESOURCE_MISSING",
+        "originalClassification": "SOURCE_RESOURCE_MISSING",
+        "disposition": "TERMINAL_CLIENT_CONFIRMATION",
+        "blocking": true,
+        "code": "BODY_IMAGE_FETCH_FAILED",
+        "rawReference": "/group1/cms/ck/nullcontent/2023-07-06/c24a3cbc-a547-4e36-b844-1ba7f495855c.jpg",
+        "targetUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-06/c24a3cbc-a547-4e36-b844-1ba7f495855c.jpg",
+        "message": "Error: Error: HTTP 404 Not Found"
+      },
+      {
+        "identity": "RESOURCE:https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-06/c7dfca85-17c6-4e67-a8f8-67adf707fd4b.jpg",
+        "candidateType": "ARTICLE",
+        "legacyKey": "notice:content:166040961040384",
+        "title": "关于举办2023届毕业生离校未就业毕业生招聘活动的通知",
+        "sourceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=166040961040384",
+        "classification": "SOURCE_RESOURCE_MISSING",
+        "originalClassification": "SOURCE_RESOURCE_MISSING",
+        "disposition": "TERMINAL_CLIENT_CONFIRMATION",
+        "blocking": true,
+        "code": "BODY_IMAGE_FETCH_FAILED",
+        "rawReference": "/group1/cms/ck/nullcontent/2023-07-06/c7dfca85-17c6-4e67-a8f8-67adf707fd4b.jpg",
+        "targetUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-06/c7dfca85-17c6-4e67-a8f8-67adf707fd4b.jpg",
+        "message": "Error: Error: HTTP 404 Not Found"
+      }
+    ]
+  },
+  {
+    "candidateType": "ARTICLE",
+    "legacyKey": "jydt:content:170036276789248",
+    "path": "articles/jydt-content-170036276789248/article.json",
+    "title": "重庆&四川： 举办成渝地区双城经济圈创新创业能力提升培训班",
+    "sourceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=170036276789248",
+    "decision": "EXCLUDE_PENDING_CLIENT_CONFIRMATION",
+    "reason": "SOURCE_RESOURCE_MISSING",
+    "problems": [
+      {
+        "identity": "RESOURCE:https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-28/0ca8c268-9cb2-4215-b552-017e19ec896e.png",
+        "candidateType": "ARTICLE",
+        "legacyKey": "jydt:content:170036276789248",
+        "title": "重庆&四川： 举办成渝地区双城经济圈创新创业能力提升培训班",
+        "sourceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=170036276789248",
+        "classification": "SOURCE_RESOURCE_MISSING",
+        "originalClassification": "SOURCE_RESOURCE_MISSING",
+        "disposition": "TERMINAL_CLIENT_CONFIRMATION",
+        "blocking": true,
+        "code": "BODY_IMAGE_FETCH_FAILED",
+        "rawReference": "/group1/cms/ck/nullcontent/2023-07-28/0ca8c268-9cb2-4215-b552-017e19ec896e.png",
+        "targetUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-28/0ca8c268-9cb2-4215-b552-017e19ec896e.png",
+        "message": "Error: Error: HTTP 404 Not Found"
+      }
+    ]
+  },
+  {
+    "candidateType": "ARTICLE",
+    "legacyKey": "jydt:content:170036106903552",
+    "path": "articles/jydt-content-170036106903552/article.json",
+    "title": "广西：2023年广西计划提供不少于100万个高校毕业生就业岗位",
+    "sourceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=170036106903552",
+    "decision": "EXCLUDE_PENDING_CLIENT_CONFIRMATION",
+    "reason": "SOURCE_RESOURCE_MISSING",
+    "problems": [
+      {
+        "identity": "RESOURCE:https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-28/f577c4a1-5835-4445-bec8-a5787b497541.png",
+        "candidateType": "ARTICLE",
+        "legacyKey": "jydt:content:170036106903552",
+        "title": "广西：2023年广西计划提供不少于100万个高校毕业生就业岗位",
+        "sourceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=170036106903552",
+        "classification": "SOURCE_RESOURCE_MISSING",
+        "originalClassification": "SOURCE_RESOURCE_MISSING",
+        "disposition": "TERMINAL_CLIENT_CONFIRMATION",
+        "blocking": true,
+        "code": "BODY_IMAGE_FETCH_FAILED",
+        "rawReference": "/group1/cms/ck/nullcontent/2023-07-28/f577c4a1-5835-4445-bec8-a5787b497541.png",
+        "targetUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-28/f577c4a1-5835-4445-bec8-a5787b497541.png",
+        "message": "Error: Error: HTTP 404 Not Found"
+      }
+    ]
+  },
+  {
+    "candidateType": "ARTICLE",
+    "legacyKey": "jydt:content:164602490929152",
+    "path": "articles/jydt-content-164602490929152/article.json",
+    "title": "2023届毕业生毕业去向登记确认操作指南",
+    "sourceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=164602490929152",
+    "decision": "EXCLUDE_PENDING_CLIENT_CONFIRMATION",
+    "reason": "SOURCE_RESOURCE_MISSING",
+    "problems": [
+      {
+        "identity": "RESOURCE:https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-06-28/bf100645-d756-40f1-bd5c-0e8df8553f7e.jpg",
+        "candidateType": "ARTICLE",
+        "legacyKey": "jydt:content:164602490929152",
+        "title": "2023届毕业生毕业去向登记确认操作指南",
+        "sourceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=164602490929152",
+        "classification": "SOURCE_RESOURCE_MISSING",
+        "originalClassification": "SOURCE_RESOURCE_MISSING",
+        "disposition": "TERMINAL_CLIENT_CONFIRMATION",
+        "blocking": true,
+        "code": "BODY_IMAGE_FETCH_FAILED",
+        "rawReference": "/group1/cms/ck/nullcontent/2023-06-28/bf100645-d756-40f1-bd5c-0e8df8553f7e.jpg",
+        "targetUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-06-28/bf100645-d756-40f1-bd5c-0e8df8553f7e.jpg",
+        "message": "Error: Error: HTTP 404 Not Found"
+      }
+    ]
+  }
+]

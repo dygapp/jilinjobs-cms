@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8f6c45343a4229df9c90a02ad175ff141515bde686a24d29596b6787c4ac54ea",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Vm0ir4QpDIM9uqIJbbSWaQ",
+    "url": "https://mp.weixin.qq.com/s/Vm0ir4QpDIM9uqIJbbSWaQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院赴青岛访企拓岗",
+    "source": "",
+    "publishDate": "2026-07-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Vm0ir4QpDIM9uqIJbbSWaQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "6d16cecb3c0190221f7b2c31c69c39904eab78f969681bc22ea6c0966c60802f",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "长春科技学院赴青岛访企拓岗",
+    "listPublishDate": "2026-07-09",
+    "sourceOrder": 51
+  }
+}

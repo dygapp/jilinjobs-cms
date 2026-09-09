@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:100318683627520",
+    "contentId": "100318683627520",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=100318683627520"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省教育厅发布企业人才需求信息",
+    "source": "吉林省教育厅",
+    "publishDate": "2022-07-08",
+    "bodyHtml": "\n                        <p><span style=\"font-size:20px\">各高校：</span><br>\n　　<span style=\"font-size:20px\">为贯彻落实省委省政府关于人才兴省决策部署及省领导相关指示批示精神，落实“创业有你&nbsp;就在吉林”“奋斗有我&nbsp;就在吉林”工作要求。吉林省教育厅已向各市州征集用人单位高校毕业生用人需求。现将各市州提供的企业人才需求汇总表发送至群共享，请各高校积极宣传，发送给未就业毕业生，望周知。</span></p>\n\n<p>&nbsp;</p>\n\n<p><span style=\"font-size:20px\"><a href=\"migration-attachment://189cc03747998e98c29b256b9414dd7f7f9bfae0de65ba6d4a2ce91b6128390e\" target=\"_blank\">市（州）企业人才需求汇总表</a></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "ATTACHMENT",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-08/1675d4d6-c2be-47f2-b654-12c3d06890ab.xlsx",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-08/1675d4d6-c2be-47f2-b654-12c3d06890ab.xlsx",
+      "token": "migration-attachment://189cc03747998e98c29b256b9414dd7f7f9bfae0de65ba6d4a2ce91b6128390e",
+      "snapshotPath": "assets/189cc03747998e98c29b256b9414dd7f7f9bfae0de65ba6d4a2ce91b6128390e.xlsx",
+      "sha256": "189cc03747998e98c29b256b9414dd7f7f9bfae0de65ba6d4a2ce91b6128390e",
+      "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sizeBytes": 50837
+    }
+  ],
+  "sourceFingerprint": "412f2ef2eb78a00cdad2ff736869769771735321b32438aefdaef5b86da8d525",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "吉林省教育厅发布企业人才需求信息",
+    "listPublishDate": "2022-07-08",
+    "sourceOrder": 343,
+    "detailPublishDate": "2022-07-08"
+  }
+}

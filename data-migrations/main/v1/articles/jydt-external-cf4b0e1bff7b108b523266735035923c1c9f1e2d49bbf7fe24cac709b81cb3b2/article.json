@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cf4b0e1bff7b108b523266735035923c1c9f1e2d49bbf7fe24cac709b81cb3b2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/EeltS1mGRbEY_Q3SVhcyDg",
+    "url": "https://mp.weixin.qq.com/s/EeltS1mGRbEY_Q3SVhcyDg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "覆盖3大专业 深度就业合作|长春早期教育职业学院签约津冀两地3家企业",
+    "source": "",
+    "publishDate": "2026-05-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/EeltS1mGRbEY_Q3SVhcyDg"
+  },
+  "resources": [],
+  "sourceFingerprint": "e8e159ed872521a5fd5b1b46aa4657ba47e4c66e4289bcff6732b09309bebe0b",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "覆盖3大专业 深度就业合作|长春早期教育职业学院签约津冀两地3家企业",
+    "listPublishDate": "2026-05-20",
+    "sourceOrder": 159
+  }
+}

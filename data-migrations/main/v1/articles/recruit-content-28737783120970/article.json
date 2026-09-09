@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783120970",
+    "contentId": "28737783120970",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120970"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "山东烟台市民提供创业好点子可获无息贷款",
+    "source": "",
+    "publishDate": "2012-08-10",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">山东烟台市民提供创业好点子可获无息贷款</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2012-8-10 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\">&nbsp;&nbsp;&nbsp;<font size=\"2\"> 创业又有利好消息!8月5日到9月5日间,市就业办将开展“创意成就梦想”大学生创业项目有奖征集活动。市民可以登录烟台就业网(</font><a href=\"http://www.ytld.gov.cn/\"><font color=\"#0066cc\" size=\"2\">http://www.ytld.gov.cn</font></a><font size=\"2\">)自助报名,通过审核后将获得现金奖励,并被优先推荐申请无息贷款。</font> <p><font size=\"2\">　　如果你对自己的创业项目有信心,就可以在8月5日到9月5日间,拨打市就业办电话0535-6905298咨询。8月5日前,烟台就业网将开通“烟台市‘创意成就梦想’大学生创业项目有奖征集活动平台”,市民可以登录平台自助报名。</font></p> <p><font size=\"2\">　　烟台市就业办工作人员介绍,如果创业项目还没有投入运营的,报名者应出具详细的《创业计划书》报名。如果已经投入运营,推介方应具备该项目的所有权、经营权、代理权和推介权,并已切身从事该项目两年以上。</font></p> <p><font size=\"2\">　　这次有奖征集还有别的要求:创业项目属于科技创新、专利技术或实用新型的,应具有相关部门出具的专利证书或其他资质证书；须具备较短的准备周期和资金回收周期,投资额度在5-20万元,重点以新兴行业为主,具有一定的市场前景,并适合初创业人员从事。</font></p> <p><font size=\"2\">　　报名成功后,专家将对你的创业项目进行评估审核,通过后将被正式纳入市级创业项目库。项目推介者将获得500元的资金奖励,还可优先推荐申请烟台市YBC办公室3-5万元“无息、无担保、无抵押”贷款扶持和创业导师一对一跟踪辅导。</font></p> <p><font size=\"2\">　　烟台市就业办还将为符合政策规定的创业项目,优先发放小额担保贴息贷款、一次性创业补贴、社会保险和岗位开发补贴、创业场所租赁补贴等政策扶持。</font></p> <p><span class=\"article-resouce\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：<span class=\"font12\">齐鲁晚报</span></font></span></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "4d82c1ef8a8b99d1d54ad9a4bf83e5fc13f71bb175eb3718a594486550f7c9ce",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "山东烟台市民提供创业好点子可获无息贷款",
+    "listPublishDate": "2012-08-10",
+    "sourceOrder": 430,
+    "detailPublishDate": "2012-08-10"
+  }
+}

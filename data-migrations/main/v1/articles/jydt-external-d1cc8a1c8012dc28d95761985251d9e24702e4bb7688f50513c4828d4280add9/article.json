@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d1cc8a1c8012dc28d95761985251d9e24702e4bb7688f50513c4828d4280add9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/V5rS9NPumomgf-OoG_1g-w",
+    "url": "https://mp.weixin.qq.com/s/V5rS9NPumomgf-OoG_1g-w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企聚力 共谋发展｜吉林师范大学赴四平市精细化学品有限公司深度洽谈合作",
+    "source": "",
+    "publishDate": "2025-10-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/V5rS9NPumomgf-OoG_1g-w"
+  },
+  "resources": [],
+  "sourceFingerprint": "996c4fdcdeb69909ccf07fca803e76aef96f00de6d271bc64873f65565ec653d",
+  "evidence": {
+    "listPage": 69,
+    "listTitle": "校企聚力 共谋发展｜吉林师范大学赴四平市精细化学品有限公司深度洽谈合作",
+    "listPublishDate": "2025-10-15",
+    "sourceOrder": 681
+  }
+}

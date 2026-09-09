@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:82fd26ca4b26dcbe844f2a97047eddd532276e9a2d0b0d03b592014926cae49d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/yqTq4Uy6xuo96B9-RVINSA",
+    "url": "https://mp.weixin.qq.com/s/yqTq4Uy6xuo96B9-RVINSA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林动画学院举行“2025届秋冬季吉林省高校毕业生就业创业洽谈月——文化创意类毕业生就业创业洽谈会”",
+    "source": "",
+    "publishDate": "2024-09-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/yqTq4Uy6xuo96B9-RVINSA"
+  },
+  "resources": [],
+  "sourceFingerprint": "2a17aa8369b5ca3a6a5074a8a831552dd4ef2fc63d80d7d63884dc8dad4a3969",
+  "evidence": {
+    "listPage": 104,
+    "listTitle": "吉林动画学院举行“2025届秋冬季吉林省高校毕业生就业创业洽谈月——文化创意类毕业生就业创业洽谈会”",
+    "listPublishDate": "2024-09-26",
+    "sourceOrder": 1034
+  }
+}

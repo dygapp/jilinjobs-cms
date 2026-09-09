@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:c4cd4b40bf7ff5a45b3c9fe7bfa9b679b8ea045c6331b014b47aeaec5cf847f1",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/gsgg/202604/t20260407_770033.html",
+    "url": "http://rsj.tonghua.gov.cn/gsgg/202604/t20260407_770033.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2026年通化市事业单位面向通化师范学院等院校公开招聘工作人员（含专项招聘高校毕业生）公告",
+    "source": "",
+    "publishDate": "2026-04-08",
+    "bodyHtml": "",
+    "externalUrl": "http://rsj.tonghua.gov.cn/gsgg/202604/t20260407_770033.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "847853fd2608aa2a7e3a32b77382872a8926d9bed9388259b328b1196bcdadd3",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "2026年通化市事业单位面向通化师范学院等院校公开招聘工作人员（含专项招聘高校毕业生）公告",
+    "listPublishDate": "2026-04-08",
+    "sourceOrder": 48
+  }
+}

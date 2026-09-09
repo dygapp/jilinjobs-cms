@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122724",
+    "contentId": "28737783122724",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122724"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "省教育厅与省人社厅联合举办“搭建就业平台 助力精准扶贫”吉林省高校‘双困生’专场招聘会",
+    "source": "",
+    "publishDate": "2018-11-27",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">省教育厅与省人社厅联合举办“搭建就业平台   助力精准扶贫”吉林省高校‘双困生’专场招聘会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2018-11-27 16:36:50</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"margin: 0px 0px 13px; text-align: justify; text-indent: 43px; -ms-text-justify: inter-ideograph;\"><span style=\"font-family: 仿宋; font-size: 21px;\">为贯彻落实教育部、省委省政府关于做好困难学生就业帮扶有关文件精神，进一步做好双困生就业指导帮扶工作，推进“吉人生根”工程，让更多大学生留省就业。吉林省教育厅联合省人力资源和社会保障厅举办吉林省高校‘双困生’专场招聘会。此次活动由省教育厅、省人社厅主办，省高校毕业生就业指导中心与省吉林省人才交流开发中心联合省内20余所高校共同协办。</span></p><p style=\"margin: 0px 0px 13px; text-align: justify; text-indent: 43px; -ms-text-justify: inter-ideograph;\"><span style=\"font-family: 仿宋; font-size: 21px;\">为做好民生实事，省教育厅联合省人社厅做好双困生就业帮扶工作。省教育厅特聘请省内就业创业指导方面专家，创新教学内容与方法，将知识教授与实习实训、择业面试等深度融合，每年对省内近万名大学生开展就业能力提升拓展培训。为做好此次活动，省人社厅精心选取省内优质企业160余家，提供就业岗位及勤工助学岗位近千余个，帮助高校毕业生特别是困难学生实现精准就业。</span></p><p style=\"margin: 0px 0px 13px; text-align: justify; text-indent: 43px; -ms-text-justify: inter-ideograph;\"><span style=\"font-family: 仿宋; font-size: 21px;\">活动时间：2018年11月28日8：30—11：30，地点：吉林省人才市场一楼交流大厅。参会乘车路线：9、25、62、104、155、221、228、230、239、240、258、263、265、266、270、286、325、362、363等路公交车到建设广场或公交医院，轻轨到解放桥下车即可，地铁二号线到建设广场站D出口出门左侧即到。</span></p><p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "44df80d12450c52cdeef60a85de38b6e334bd7d42761e012ac90e8e2a3a01ba5",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "省教育厅与省人社厅联合举办“搭建就业平台 助力精准扶贫”吉林省高校‘双困生’专场招聘会",
+    "listPublishDate": "2018-11-27",
+    "sourceOrder": 199,
+    "detailPublishDate": "2018-11-27"
+  }
+}

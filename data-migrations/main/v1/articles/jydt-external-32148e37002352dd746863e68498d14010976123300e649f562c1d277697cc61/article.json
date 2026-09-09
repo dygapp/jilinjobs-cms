@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:32148e37002352dd746863e68498d14010976123300e649f562c1d277697cc61",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/tlz5v2lID7DSOYI9Kgj6Tw",
+    "url": "https://mp.weixin.qq.com/s/tlz5v2lID7DSOYI9Kgj6Tw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "智驱未来，职启新程 || 长春职业技术大学2026年实习就业双选会圆满落幕",
+    "source": "",
+    "publishDate": "2026-06-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/tlz5v2lID7DSOYI9Kgj6Tw"
+  },
+  "resources": [],
+  "sourceFingerprint": "0f9de54489945f1e4e754f32cb293b5323d8c6c74a653df23e3c04580df783ec",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "智驱未来，职启新程 || 长春职业技术大学2026年实习就业双选会圆满落幕",
+    "listPublishDate": "2026-06-10",
+    "sourceOrder": 89
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:413e9d8f9444571b75dad09df14a14c01e235df3c12683bce65a8c49d2f1d962",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/r8T-ivh_knNBXfoO_0izTw",
+    "url": "https://mp.weixin.qq.com/s/r8T-ivh_knNBXfoO_0izTw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学召开2025届毕业生第四次就业工作推进会",
+    "source": "",
+    "publishDate": "2025-06-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/r8T-ivh_knNBXfoO_0izTw"
+  },
+  "resources": [],
+  "sourceFingerprint": "71ec46fe9ba082fe2012fcdc8c58574467e74069b7db8a5edcb295d826658281",
+  "evidence": {
+    "listPage": 83,
+    "listTitle": "吉林建筑大学召开2025届毕业生第四次就业工作推进会",
+    "listPublishDate": "2025-06-12",
+    "sourceOrder": 825
+  }
+}

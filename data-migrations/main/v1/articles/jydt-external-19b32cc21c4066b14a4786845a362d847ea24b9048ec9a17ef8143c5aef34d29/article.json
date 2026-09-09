@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:19b32cc21c4066b14a4786845a362d847ea24b9048ec9a17ef8143c5aef34d29",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/cmZewJO8VD_QMgthLoRmwQ",
+    "url": "https://mp.weixin.qq.com/s/cmZewJO8VD_QMgthLoRmwQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "梅河口康美职业技术学院召开2025届毕业生就业工作推进会议，百日冲刺号角全面吹响",
+    "source": "",
+    "publishDate": "2025-06-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/cmZewJO8VD_QMgthLoRmwQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "d7387c2e6c451f0f8a37f19407b0a50669d7bac6869a2910dc92f4d3ddcb45cb",
+  "evidence": {
+    "listPage": 80,
+    "listTitle": "梅河口康美职业技术学院召开2025届毕业生就业工作推进会议，百日冲刺号角全面吹响",
+    "listPublishDate": "2025-06-18",
+    "sourceOrder": 800
+  }
+}

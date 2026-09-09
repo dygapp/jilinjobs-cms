@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ab970eea5b2458ba54de8e94a60214ca41a554b11181cdf14f32cd009114e05f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/t56NjfYUnyGte_IuMxOpGw",
+    "url": "https://mp.weixin.qq.com/s/t56NjfYUnyGte_IuMxOpGw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业大学牵头吉林省服务大农业产业就业联盟高校赴山东省开展访企拓岗活动",
+    "source": "",
+    "publishDate": "2025-12-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/t56NjfYUnyGte_IuMxOpGw"
+  },
+  "resources": [],
+  "sourceFingerprint": "cd048e834026f26c8272145f49bbbe751933f4b55eaf1d2a8b4738b31ce96069",
+  "evidence": {
+    "listPage": 57,
+    "listTitle": "吉林农业大学牵头吉林省服务大农业产业就业联盟高校赴山东省开展访企拓岗活动",
+    "listPublishDate": "2025-12-02",
+    "sourceOrder": 561
+  }
+}

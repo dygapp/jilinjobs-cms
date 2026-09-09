@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b24def1c9f58aa541dc1c085ef0f6d1a6249951ddbc1932fd714132f20a3d214",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s",
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5OTMxMjM5OA==&mid=2651088573&idx=5&sn=81a65806d0965405c8b93ef1350149bb&chksm=bccdabdc8bba22ca2a97abaf290f87e10e54f6af67f032c22cf0f5a48c6c18f168f14dc02ceb&mpshare=1&scene=1&srcid=0413Xj7cN0FJkD9gyMJcSxMa&sharer_sharetime"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省高等学校毕业生就业指导中心举办“就业战疫，师生同行”公益就业咨询活动",
+    "source": "",
+    "publishDate": "2022-04-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s?__biz=MjM5OTMxMjM5OA==&mid=2651088573&idx=5&sn=81a65806d0965405c8b93ef1350149bb&chksm=bccdabdc8bba22ca2a97abaf290f87e10e54f6af67f032c22cf0f5a48c6c18f168f14dc02ceb&mpshare=1&scene=1&srcid=0413Xj7cN0FJkD9gyMJcSxMa&sharer_sharetime"
+  },
+  "resources": [],
+  "sourceFingerprint": "f8bfb19dd16e9d23d630eb95d0652ac5752c658ff13de2914e761ed2411c77cc",
+  "evidence": {
+    "listPage": 122,
+    "listTitle": "吉林省高等学校毕业生就业指导中心举办“就业战疫，师生同行”公益就业咨询活动",
+    "listPublishDate": "2022-04-13",
+    "sourceOrder": 1215
+  }
+}

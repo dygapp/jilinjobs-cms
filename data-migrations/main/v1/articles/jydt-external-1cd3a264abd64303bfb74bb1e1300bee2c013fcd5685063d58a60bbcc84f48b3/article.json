@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1cd3a264abd64303bfb74bb1e1300bee2c013fcd5685063d58a60bbcc84f48b3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/HmJqI0rkdAQYmkhu_zb12g",
+    "url": "https://mp.weixin.qq.com/s/HmJqI0rkdAQYmkhu_zb12g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【就业指导】|| @青年人：想创业，“五个有”",
+    "source": "",
+    "publishDate": "2025-08-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/HmJqI0rkdAQYmkhu_zb12g"
+  },
+  "resources": [],
+  "sourceFingerprint": "0098fb4d9fa158ef1bcbb8d306e502e6581efbf80156d4cf1dd043350a7e38e2",
+  "evidence": {
+    "listPage": 72,
+    "listTitle": "【就业指导】|| @青年人：想创业，“五个有”",
+    "listPublishDate": "2025-08-12",
+    "sourceOrder": 717
+  }
+}

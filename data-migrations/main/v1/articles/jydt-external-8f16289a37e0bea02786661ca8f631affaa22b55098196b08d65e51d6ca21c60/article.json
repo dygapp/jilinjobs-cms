@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8f16289a37e0bea02786661ca8f631affaa22b55098196b08d65e51d6ca21c60",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/jjvo1wRqzRSDmj_QDyNNPQ",
+    "url": "https://mp.weixin.qq.com/s/jjvo1wRqzRSDmj_QDyNNPQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学举办2026届毕业生工科类专场招聘会",
+    "source": "",
+    "publishDate": "2026-04-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/jjvo1wRqzRSDmj_QDyNNPQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "b93185bcc160841977dc2f338d0980e7723455a2099f5b60a2dc99e5d302a261",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "北华大学举办2026届毕业生工科类专场招聘会",
+    "listPublishDate": "2026-04-28",
+    "sourceOrder": 235
+  }
+}

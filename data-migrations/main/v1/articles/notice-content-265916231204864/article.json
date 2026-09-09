@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:265916231204864",
+    "contentId": "265916231204864",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=265916231204864"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "致全省高校毕业生的一封信",
+    "source": "",
+    "publishDate": "2024-12-26",
+    "bodyHtml": "\n                        <p><img alt=\"\" height=\"1273\" src=\"migration-resource://30b9e6e5d68cf7c7948c76cd945fb05b791f79a55322c46ed649aeb2c77f5adf\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-07/fa20f8fa-9069-4656-a7fb-1cfef3967bbe.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-07/fa20f8fa-9069-4656-a7fb-1cfef3967bbe.jpg",
+      "token": "migration-resource://30b9e6e5d68cf7c7948c76cd945fb05b791f79a55322c46ed649aeb2c77f5adf",
+      "snapshotPath": "assets/30b9e6e5d68cf7c7948c76cd945fb05b791f79a55322c46ed649aeb2c77f5adf.jpg",
+      "sha256": "30b9e6e5d68cf7c7948c76cd945fb05b791f79a55322c46ed649aeb2c77f5adf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 524288
+    }
+  ],
+  "sourceFingerprint": "7010f8e54cbe8d4d314e8468fd1ec377fd61814ecd11e83941790e50a954628b",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "致全省高校毕业生的一封信",
+    "listPublishDate": "2024-12-26",
+    "sourceOrder": 68,
+    "detailPublishDate": "2024-12-26"
+  }
+}

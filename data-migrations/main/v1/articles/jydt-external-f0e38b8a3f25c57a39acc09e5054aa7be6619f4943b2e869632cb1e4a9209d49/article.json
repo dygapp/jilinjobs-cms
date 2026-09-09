@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f0e38b8a3f25c57a39acc09e5054aa7be6619f4943b2e869632cb1e4a9209d49",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/vup9iiHKKaBfQKDfoMxX0A",
+    "url": "https://mp.weixin.qq.com/s/vup9iiHKKaBfQKDfoMxX0A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深耕产教融合 聚力促进就业｜长春早期教育职业学院密集开展校企走访调研 助推产业学院落地见效",
+    "source": "",
+    "publishDate": "2026-06-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vup9iiHKKaBfQKDfoMxX0A"
+  },
+  "resources": [],
+  "sourceFingerprint": "42dad46faa4422ab3f13f0e15cb5a1d258d3db0b62e6213d5c1a3d8c10a6970a",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "深耕产教融合 聚力促进就业｜长春早期教育职业学院密集开展校企走访调研 助推产业学院落地见效",
+    "listPublishDate": "2026-06-02",
+    "sourceOrder": 115
+  }
+}

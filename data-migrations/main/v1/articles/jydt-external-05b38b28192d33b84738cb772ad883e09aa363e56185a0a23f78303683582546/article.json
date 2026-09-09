@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:05b38b28192d33b84738cb772ad883e09aa363e56185a0a23f78303683582546",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1025/5119.htm",
+    "url": "https://www.jlemcc.edu.cn/info/1025/5119.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "医校携手暖夕阳，匠心共育向未来 吉林省经济管理干部学院赴长春仁大医养中心开启访企拓岗",
+    "source": "",
+    "publishDate": "2026-04-17",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlemcc.edu.cn/info/1025/5119.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "e6836bf94f0b4bdcefea7b60d45f2f3b9086352f53257c2d4eb6e915dec1a8bb",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "医校携手暖夕阳，匠心共育向未来 吉林省经济管理干部学院赴长春仁大医养中心开启访企拓岗",
+    "listPublishDate": "2026-04-17",
+    "sourceOrder": 279
+  }
+}

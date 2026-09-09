@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122858",
+    "contentId": "28737783122858",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122858"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "工业和信息化部办公厅 教育部办公厅关于联合举办2014年全国中小企业网上百日招聘高校毕业生活动的通知",
+    "source": "",
+    "publishDate": "2014-03-14",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">工业和信息化部办公厅 教育部办公厅关于联合举办2014年全国中小企业网上百日招聘高校毕业生活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2014-3-14 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img src=\"migration-resource://6a8e09ac582683bc8eaca0e67c657e17b836b3bf7d1437f23faf431b09fccc1d\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://532b58df6d518a97b82b20054ac24cc3d69d4008649900394a15d28026baf372\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://36a8127862a585e761af173861aae909c6d645d1b11c7c23dd0616d89cbadd4a\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://a0bb415b71f381eeecee3faa5b4fce88480c5c55e523addca71de8f26c29270b\" border=\"0\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2014031421304042.jpg",
+      "originalReference": "/chistory/cms/imgs/2014031421304042.jpg",
+      "token": "migration-resource://6a8e09ac582683bc8eaca0e67c657e17b836b3bf7d1437f23faf431b09fccc1d",
+      "snapshotPath": "assets/6a8e09ac582683bc8eaca0e67c657e17b836b3bf7d1437f23faf431b09fccc1d.jpg",
+      "sha256": "6a8e09ac582683bc8eaca0e67c657e17b836b3bf7d1437f23faf431b09fccc1d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 83482
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140314213049264.jpg",
+      "originalReference": "/chistory/cms/imgs/20140314213049264.jpg",
+      "token": "migration-resource://532b58df6d518a97b82b20054ac24cc3d69d4008649900394a15d28026baf372",
+      "snapshotPath": "assets/532b58df6d518a97b82b20054ac24cc3d69d4008649900394a15d28026baf372.jpg",
+      "sha256": "532b58df6d518a97b82b20054ac24cc3d69d4008649900394a15d28026baf372",
+      "contentType": "image/jpeg",
+      "sizeBytes": 97798
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140314213057989.jpg",
+      "originalReference": "/chistory/cms/imgs/20140314213057989.jpg",
+      "token": "migration-resource://36a8127862a585e761af173861aae909c6d645d1b11c7c23dd0616d89cbadd4a",
+      "snapshotPath": "assets/36a8127862a585e761af173861aae909c6d645d1b11c7c23dd0616d89cbadd4a.jpg",
+      "sha256": "36a8127862a585e761af173861aae909c6d645d1b11c7c23dd0616d89cbadd4a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 94033
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140314213107798.jpg",
+      "originalReference": "/chistory/cms/imgs/20140314213107798.jpg",
+      "token": "migration-resource://a0bb415b71f381eeecee3faa5b4fce88480c5c55e523addca71de8f26c29270b",
+      "snapshotPath": "assets/a0bb415b71f381eeecee3faa5b4fce88480c5c55e523addca71de8f26c29270b.jpg",
+      "sha256": "a0bb415b71f381eeecee3faa5b4fce88480c5c55e523addca71de8f26c29270b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 74017
+    }
+  ],
+  "sourceFingerprint": "3fd83f2e347e1248220a7c8f2ba6628befcf7c5dbf52f8e2a5579ffa7dc24d7a",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "工业和信息化部办公厅 教育部办公厅关于联合举办2014年全国中小企业网上百日招聘高校毕业生活动的通知",
+    "listPublishDate": "2014-03-14",
+    "sourceOrder": 324,
+    "detailPublishDate": "2014-03-14"
+  }
+}

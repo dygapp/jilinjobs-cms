@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a11f0b021ccda92bae027d953d9ebfc0ccef83b5f024e554bc0ef4907edd4f72",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/5Rfr9EwfyryCiD5qyD5A_g",
+    "url": "https://mp.weixin.qq.com/s/5Rfr9EwfyryCiD5qyD5A_g?scene=25&sessionid=-1365055771"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学举办延边州招才引智工程引进优秀高校毕业生宣讲会",
+    "source": "",
+    "publishDate": "2025-04-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5Rfr9EwfyryCiD5qyD5A_g?scene=25&sessionid=-1365055771"
+  },
+  "resources": [],
+  "sourceFingerprint": "933d1f0c5e817949214e23a84a286a2de672d1a3815569c8e97885af910cd691",
+  "evidence": {
+    "listPage": 92,
+    "listTitle": "延边大学举办延边州招才引智工程引进优秀高校毕业生宣讲会",
+    "listPublishDate": "2025-04-30",
+    "sourceOrder": 916
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:96129c209c2c8c6947e614bb5d557b0bb630ba1263eda5072d2c28f4e9c5f1d7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ZRQuAAglIdgWHshwEa8f0A",
+    "url": "https://mp.weixin.qq.com/s/ZRQuAAglIdgWHshwEa8f0A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "怀进鹏赴吉林调研",
+    "source": "",
+    "publishDate": "2025-06-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ZRQuAAglIdgWHshwEa8f0A"
+  },
+  "resources": [],
+  "sourceFingerprint": "ddc747e42e2529744da4f631ccc9481a025b75d908c7f134eb08ed1c9667176e",
+  "evidence": {
+    "listPage": 83,
+    "listTitle": "怀进鹏赴吉林调研",
+    "listPublishDate": "2025-06-13",
+    "sourceOrder": 822
+  }
+}

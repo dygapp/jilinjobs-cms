@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:280365115654144",
+    "contentId": "280365115654144",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=280365115654144"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办全国商贸服务与生活消费行业面向2025届高校毕业生春季招聘活动的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2025-03-25",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://0c950e4b581b0f0014598e77efff2dbf411b6fd4ef5f99b5f442e3cc3109150b\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://1c3a0b31b4b5333a0c428ec755c2abac10e778f06f106cee277d67558eb9d839\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://383e2b4057536ea94e855321a3d07fde568f492563cf64fc0a21d3eb42bdc105\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://6519f000df7d1280c94013e2e90d43ce5b6fd5e0bb606bec63f126229c82d41d\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://1f03ba8ac1c18c56143fe524bb3d7eb2cf58f9c6f3e4a67d3a579abdc8dbfdcd\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/446d3ec1-9188-4b69-9bca-b47e6e617ea0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/446d3ec1-9188-4b69-9bca-b47e6e617ea0.jpg",
+      "token": "migration-resource://0c950e4b581b0f0014598e77efff2dbf411b6fd4ef5f99b5f442e3cc3109150b",
+      "snapshotPath": "assets/0c950e4b581b0f0014598e77efff2dbf411b6fd4ef5f99b5f442e3cc3109150b.jpg",
+      "sha256": "0c950e4b581b0f0014598e77efff2dbf411b6fd4ef5f99b5f442e3cc3109150b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/7c1b65cc-98ae-40a2-8e2b-85a2b4f360bb.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/7c1b65cc-98ae-40a2-8e2b-85a2b4f360bb.jpg",
+      "token": "migration-resource://1c3a0b31b4b5333a0c428ec755c2abac10e778f06f106cee277d67558eb9d839",
+      "snapshotPath": "assets/1c3a0b31b4b5333a0c428ec755c2abac10e778f06f106cee277d67558eb9d839.jpg",
+      "sha256": "1c3a0b31b4b5333a0c428ec755c2abac10e778f06f106cee277d67558eb9d839",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/71da51b2-deca-47cc-9204-232a3b0c934c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/71da51b2-deca-47cc-9204-232a3b0c934c.jpg",
+      "token": "migration-resource://383e2b4057536ea94e855321a3d07fde568f492563cf64fc0a21d3eb42bdc105",
+      "snapshotPath": "assets/383e2b4057536ea94e855321a3d07fde568f492563cf64fc0a21d3eb42bdc105.jpg",
+      "sha256": "383e2b4057536ea94e855321a3d07fde568f492563cf64fc0a21d3eb42bdc105",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/42a9ee3e-b7ca-422e-a617-a904775dd597.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/42a9ee3e-b7ca-422e-a617-a904775dd597.jpg",
+      "token": "migration-resource://6519f000df7d1280c94013e2e90d43ce5b6fd5e0bb606bec63f126229c82d41d",
+      "snapshotPath": "assets/6519f000df7d1280c94013e2e90d43ce5b6fd5e0bb606bec63f126229c82d41d.jpg",
+      "sha256": "6519f000df7d1280c94013e2e90d43ce5b6fd5e0bb606bec63f126229c82d41d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/7565f3c6-61dc-4a6c-a4d6-cbd10d1230e2.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/7565f3c6-61dc-4a6c-a4d6-cbd10d1230e2.jpg",
+      "token": "migration-resource://1f03ba8ac1c18c56143fe524bb3d7eb2cf58f9c6f3e4a67d3a579abdc8dbfdcd",
+      "snapshotPath": "assets/1f03ba8ac1c18c56143fe524bb3d7eb2cf58f9c6f3e4a67d3a579abdc8dbfdcd.jpg",
+      "sha256": "1f03ba8ac1c18c56143fe524bb3d7eb2cf58f9c6f3e4a67d3a579abdc8dbfdcd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    }
+  ],
+  "sourceFingerprint": "c54e42adad4c859f743f52cf92e06e766e242b4362eef5674d5da972e91b3582",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "关于举办全国商贸服务与生活消费行业面向2025届高校毕业生春季招聘活动的通知",
+    "listPublishDate": "2025-03-25",
+    "sourceOrder": 53,
+    "detailPublishDate": "2025-03-25"
+  }
+}

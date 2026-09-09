@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:ed10ef32480f2fd1ed1a2ccabca34df4a92c39ffb0c73737d88c6ce7b698dc5a",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/SvLZke8PrFLqksT6WqavOw",
+    "url": "https://mp.weixin.qq.com/s/SvLZke8PrFLqksT6WqavOw"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“服务吉林高质量发展”吉林省2026届高校毕业生秋冬季百场大型校园招聘活动火热举办",
+    "source": "",
+    "publishDate": "2025-10-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/SvLZke8PrFLqksT6WqavOw"
+  },
+  "resources": [],
+  "sourceFingerprint": "03cbaef91cc33ce4f12c91c8d0b51987b54dfe354d471dbdb0a67127d564adbe",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "“服务吉林高质量发展”吉林省2026届高校毕业生秋冬季百场大型校园招聘活动火热举办",
+    "listPublishDate": "2025-10-23",
+    "sourceOrder": 21
+  }
+}

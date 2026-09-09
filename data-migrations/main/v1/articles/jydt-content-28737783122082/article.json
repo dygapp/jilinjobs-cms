@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122082",
+    "contentId": "28737783122082",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122082"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省第二期第八阶段高校就业创业教育教师高端培训班在陕西西安举办",
+    "source": "",
+    "publishDate": "2016-11-28",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省第二期第八阶段高校就业创业教育教师高端培训班在陕西西安举办</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2016-11-28 11:17:04</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋;font-size: 21px\">11</span><span style=\";font-family: 仿宋;font-size: 21px\">月20日-26日，由吉林省教育厅主办，吉林大学、东北师范大学承办的吉林省第二期第八阶段高校就业创业教育教师高端培训班在陕西省西安市电子科技大学举办。省教育厅高校学生处处长陈梅出席结业仪式并讲话，全省47所高校99名就业创业指导教师参加培训。</span></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋;font-size: 21px\">北京万学教育集团联合创始人、教育部全国互联网+创新创业大赛评审专家组长张强、教育部中国互联网+创新创业大赛专家评委、“创青春”创业大赛专家评委丘锡彬、中国人民大学、四川大学、吉林大学等多所著名高校创业导师方铭洋，分别从“创新创业深度教育与孵化系统、创新创业十位一体完备驱动平台系统、高校创新创业大赛深度解析、高校创新创业大赛精细指导步骤”等内容进行深入讲解。西安电子科技大学创新创业指导委员会委员夏永林教授、2016互联网+全国金奖项目“天眼卫士”指导老师孙伟副教授分别进行了获奖项目经验分享。学员们还到西安电子科技大学空间科学与技术学院无人机实验室、空间科学与技术学院创意工程坊、TI工程实践教育实训基地、通信与信息工程专业实验教学中心进行了实地参观考察学习。</span></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋;font-size: 21px\">结业仪式上，省内高校两名学员代表分别围绕“大学生创业实践平台建设研究”和“ 国外高校创业教育的借鉴研究”进行了精彩的汇报和展示，四名学员代表分享了培训的收获感受。大家一致认为，此次培训理论与实践紧密结合、可操作性强，受益匪浅。</span></p><p><br></p><p style=\"text-align: center\"><img title=\"1.JPG\" src=\"migration-resource://eb0ab5fc3f3c0266f651258f154e2bebb165d7a5037030151a431a61e6122714\"></p><p style=\"text-align: center\"><img title=\"2.JPG\" src=\"migration-resource://d45bb71c1472597a790b53a89484a091d310aeadcc2dfda99a7a1cd6784e2577\"></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361592867700000001592310.JPG",
+      "originalReference": "/chistory/cms/imgs/6361592867700000001592310.JPG",
+      "token": "migration-resource://eb0ab5fc3f3c0266f651258f154e2bebb165d7a5037030151a431a61e6122714",
+      "snapshotPath": "assets/eb0ab5fc3f3c0266f651258f154e2bebb165d7a5037030151a431a61e6122714.jpg",
+      "sha256": "eb0ab5fc3f3c0266f651258f154e2bebb165d7a5037030151a431a61e6122714",
+      "contentType": "image/jpeg",
+      "sizeBytes": 118590
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361592867709375002564126.JPG",
+      "originalReference": "/chistory/cms/imgs/6361592867709375002564126.JPG",
+      "token": "migration-resource://d45bb71c1472597a790b53a89484a091d310aeadcc2dfda99a7a1cd6784e2577",
+      "snapshotPath": "assets/d45bb71c1472597a790b53a89484a091d310aeadcc2dfda99a7a1cd6784e2577.jpg",
+      "sha256": "d45bb71c1472597a790b53a89484a091d310aeadcc2dfda99a7a1cd6784e2577",
+      "contentType": "image/jpeg",
+      "sizeBytes": 206187
+    }
+  ],
+  "sourceFingerprint": "54a0743a60749774f8831cc9c00d8f7d425f8753cba9dccb51af234e3f23ff47",
+  "evidence": {
+    "listPage": 152,
+    "listTitle": "吉林省第二期第八阶段高校就业创业教育教师高端培训班在陕西西安举办",
+    "listPublishDate": "2016-11-28",
+    "sourceOrder": 1512,
+    "detailPublishDate": "2016-11-28"
+  }
+}

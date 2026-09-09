@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:b16a591875f9d03f8deaaf367ee6416f173ca3c745a890e8e85209f749437e14",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/A9ilAT634xPnSMASNYorkA",
+    "url": "https://mp.weixin.qq.com/s/A9ilAT634xPnSMASNYorkA"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "春招就位！国企岗位直达2026届毕业生",
+    "source": "",
+    "publishDate": "2026-04-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/A9ilAT634xPnSMASNYorkA"
+  },
+  "resources": [],
+  "sourceFingerprint": "e2d8c0192fcb7e04a08391253b62845840bc02df47ad6f7c0693880a8390c03f",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "春招就位！国企岗位直达2026届毕业生",
+    "listPublishDate": "2026-04-24",
+    "sourceOrder": 5
+  }
+}

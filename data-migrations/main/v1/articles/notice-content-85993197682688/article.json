@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:85993197682688",
+    "contentId": "85993197682688",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=85993197682688"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "国家邮政局办公室 教育部办公厅关于开展2022年又整快递业面向高校毕业生的网络招聘活动的通知",
+    "source": "国家邮政局办公室 教育部办公厅",
+    "publishDate": "2022-03-10",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://fc2b54372304124e7116efc36aea448b3282572602c50686c9072d06dbb5b3ec\" width=\"1000\"><img alt=\"\" height=\"1414\" src=\"migration-resource://a346c9b5afe083fb1a877454d3c37f3fb7112c0195d03bc4d61def4e25ee2387\" width=\"1000\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/95c73b9d-a571-4797-8f51-cb93310734b7.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/95c73b9d-a571-4797-8f51-cb93310734b7.jpg",
+      "token": "migration-resource://fc2b54372304124e7116efc36aea448b3282572602c50686c9072d06dbb5b3ec",
+      "snapshotPath": "assets/fc2b54372304124e7116efc36aea448b3282572602c50686c9072d06dbb5b3ec.jpg",
+      "sha256": "fc2b54372304124e7116efc36aea448b3282572602c50686c9072d06dbb5b3ec",
+      "contentType": "image/jpeg",
+      "sizeBytes": 191481
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/d557ba55-4610-4a00-a127-91518009035a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/d557ba55-4610-4a00-a127-91518009035a.jpg",
+      "token": "migration-resource://a346c9b5afe083fb1a877454d3c37f3fb7112c0195d03bc4d61def4e25ee2387",
+      "snapshotPath": "assets/a346c9b5afe083fb1a877454d3c37f3fb7112c0195d03bc4d61def4e25ee2387.jpg",
+      "sha256": "a346c9b5afe083fb1a877454d3c37f3fb7112c0195d03bc4d61def4e25ee2387",
+      "contentType": "image/jpeg",
+      "sizeBytes": 182672
+    }
+  ],
+  "sourceFingerprint": "3ad5ac52b810fd1521ddc59fdb9e2ee89555eb99347f7544edcc66aefb2337c6",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "国家邮政局办公室 教育部办公厅关于开展2022年又整快递业面向高校毕业生的网络招聘活动的通知",
+    "listPublishDate": "2022-03-10",
+    "sourceOrder": 138,
+    "detailPublishDate": "2022-03-10"
+  }
+}

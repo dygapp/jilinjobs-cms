@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122584",
+    "contentId": "28737783122584",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122584"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展吉林省高校就业创业教育情况调查的通知",
+    "source": "",
+    "publishDate": "2015-05-11",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于开展吉林省高校就业创业教育情况调查的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2015-5-11 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p>&nbsp;</p><p style=\"text-align: center;\"><img title=\"关于开展吉林省高校就业创业教育情况的通知 (1).jpg\" src=\"http://www.jilinjobs.cn:80//upload/6356695377568750009022987.jpg\"></p><p style=\"text-align: center;\"><img title=\"关于开展吉林省高校就业创业教育情况的通知 (2).jpg\" src=\"http://www.jilinjobs.cn:80//upload/6356695377670312507080060.jpg\"></p><p><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        <a href=\"../Common/DownLoadFile.aspx?fileid=f60106b4-cdb8-430d-abdc-5ffa53e63328\">附件：表一、表二.rar</a><br>\n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "aad97a98eb75633bfb75d84bbd05cbe0613e7c4c7df108f07eef474f7f44dea3",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "关于开展吉林省高校就业创业教育情况调查的通知",
+    "listPublishDate": "2015-05-11",
+    "sourceOrder": 278,
+    "detailPublishDate": "2015-05-11"
+  }
+}

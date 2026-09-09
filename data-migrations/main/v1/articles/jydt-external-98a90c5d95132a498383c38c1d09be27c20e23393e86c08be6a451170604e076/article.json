@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:98a90c5d95132a498383c38c1d09be27c20e23393e86c08be6a451170604e076",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1026/173792.htm",
+    "url": "https://www.jlju.edu.cn/info/1026/173792.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学党委书记李雁冰带队赴上海、成都开展就业对接交流活动",
+    "source": "",
+    "publishDate": "2026-05-22",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1026/173792.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "dc7da51ee6ea5f97de26fce3cecc8b0e08ef1e5257d73c75e36d099b1b4a91e1",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "吉林建筑大学党委书记李雁冰带队赴上海、成都开展就业对接交流活动",
+    "listPublishDate": "2026-05-22",
+    "sourceOrder": 152
+  }
+}

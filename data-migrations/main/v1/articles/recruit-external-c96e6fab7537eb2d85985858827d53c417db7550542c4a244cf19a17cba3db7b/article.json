@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:c96e6fab7537eb2d85985858827d53c417db7550542c4a244cf19a17cba3db7b",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/esd/zwgk/ggl/202006/t20200629_617773.html",
+    "url": "http://jywza.cbs.gov.cn/esd/zwgk/ggl/202006/t20200629_617773.html?bsh_bid=5523113792"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年白山市江源区事业单位公开招聘 工作人员公告",
+    "source": "",
+    "publishDate": "2020-06-30",
+    "bodyHtml": "",
+    "externalUrl": "http://jywza.cbs.gov.cn/esd/zwgk/ggl/202006/t20200629_617773.html?bsh_bid=5523113792"
+  },
+  "resources": [],
+  "sourceFingerprint": "9780990d56da6c3bec572f534ff45a0b414a0a3a8313d3bb182afd8d94949601",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "2020年白山市江源区事业单位公开招聘 工作人员公告",
+    "listPublishDate": "2020-06-30",
+    "sourceOrder": 396
+  }
+}

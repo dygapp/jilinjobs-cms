@@ -1,0 +1,101 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120766",
+    "contentId": "28737783120766",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120766"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于做好2012年全国高校毕业生入伍预征督查工作的通知",
+    "source": "",
+    "publishDate": "2012-05-18",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于做好2012年全国高校毕业生入伍预征督查工作的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-5-18 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://20c6378d616d79b0b688dd56de77bfae5f0e6bb00e012824e139d52f1fe63fe0\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://8db9f3232854cdc37718f6d320c52b8149d9b3b8d0aca15c7c0bb9aba9b92ca1\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://5d1b8a9b7f070d1726f38ef640492718b26b0a009d1eda04e9d804ed7124e5b2\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://2629e0a21eafa75a1c359399853869df06ffa6ef6a13d456d832cd4655e3a388\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://332386bf90dc05ecfca37f679bfc3bbf4757b22ea42b801eb6dc8feeeb76de7f\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://6215f3667dfd7dfdcbf9d5359fe8960224c1bdfd6bf6009c1d73fd39fd9e4800\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://ff5728e1f1d827f219cefc39cd8fbfbbaf137c5a5edc7851cdb0e6c00f9aa646\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120518164702997.jpg",
+      "originalReference": "/chistory/cms/imgs/20120518164702997.jpg",
+      "token": "migration-resource://20c6378d616d79b0b688dd56de77bfae5f0e6bb00e012824e139d52f1fe63fe0",
+      "snapshotPath": "assets/20c6378d616d79b0b688dd56de77bfae5f0e6bb00e012824e139d52f1fe63fe0.jpg",
+      "sha256": "20c6378d616d79b0b688dd56de77bfae5f0e6bb00e012824e139d52f1fe63fe0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 69642
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120518164708586.jpg",
+      "originalReference": "/chistory/cms/imgs/20120518164708586.jpg",
+      "token": "migration-resource://8db9f3232854cdc37718f6d320c52b8149d9b3b8d0aca15c7c0bb9aba9b92ca1",
+      "snapshotPath": "assets/8db9f3232854cdc37718f6d320c52b8149d9b3b8d0aca15c7c0bb9aba9b92ca1.jpg",
+      "sha256": "8db9f3232854cdc37718f6d320c52b8149d9b3b8d0aca15c7c0bb9aba9b92ca1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75386
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2012051816471382.jpg",
+      "originalReference": "/chistory/cms/imgs/2012051816471382.jpg",
+      "token": "migration-resource://5d1b8a9b7f070d1726f38ef640492718b26b0a009d1eda04e9d804ed7124e5b2",
+      "snapshotPath": "assets/5d1b8a9b7f070d1726f38ef640492718b26b0a009d1eda04e9d804ed7124e5b2.jpg",
+      "sha256": "5d1b8a9b7f070d1726f38ef640492718b26b0a009d1eda04e9d804ed7124e5b2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 86681
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120518164717318.jpg",
+      "originalReference": "/chistory/cms/imgs/20120518164717318.jpg",
+      "token": "migration-resource://2629e0a21eafa75a1c359399853869df06ffa6ef6a13d456d832cd4655e3a388",
+      "snapshotPath": "assets/2629e0a21eafa75a1c359399853869df06ffa6ef6a13d456d832cd4655e3a388.jpg",
+      "sha256": "2629e0a21eafa75a1c359399853869df06ffa6ef6a13d456d832cd4655e3a388",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75578
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120518164722789.jpg",
+      "originalReference": "/chistory/cms/imgs/20120518164722789.jpg",
+      "token": "migration-resource://332386bf90dc05ecfca37f679bfc3bbf4757b22ea42b801eb6dc8feeeb76de7f",
+      "snapshotPath": "assets/332386bf90dc05ecfca37f679bfc3bbf4757b22ea42b801eb6dc8feeeb76de7f.jpg",
+      "sha256": "332386bf90dc05ecfca37f679bfc3bbf4757b22ea42b801eb6dc8feeeb76de7f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 97141
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120518164727159.jpg",
+      "originalReference": "/chistory/cms/imgs/20120518164727159.jpg",
+      "token": "migration-resource://6215f3667dfd7dfdcbf9d5359fe8960224c1bdfd6bf6009c1d73fd39fd9e4800",
+      "snapshotPath": "assets/6215f3667dfd7dfdcbf9d5359fe8960224c1bdfd6bf6009c1d73fd39fd9e4800.jpg",
+      "sha256": "6215f3667dfd7dfdcbf9d5359fe8960224c1bdfd6bf6009c1d73fd39fd9e4800",
+      "contentType": "image/jpeg",
+      "sizeBytes": 76890
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120518164732615.jpg",
+      "originalReference": "/chistory/cms/imgs/20120518164732615.jpg",
+      "token": "migration-resource://ff5728e1f1d827f219cefc39cd8fbfbbaf137c5a5edc7851cdb0e6c00f9aa646",
+      "snapshotPath": "assets/ff5728e1f1d827f219cefc39cd8fbfbbaf137c5a5edc7851cdb0e6c00f9aa646.jpg",
+      "sha256": "ff5728e1f1d827f219cefc39cd8fbfbbaf137c5a5edc7851cdb0e6c00f9aa646",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81964
+    }
+  ],
+  "sourceFingerprint": "b8ecad48556df01bcf86a826baac255d4dd71a394e2e762177b6aae379cbcce9",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "关于做好2012年全国高校毕业生入伍预征督查工作的通知",
+    "listPublishDate": "2012-05-18",
+    "sourceOrder": 395,
+    "detailPublishDate": "2012-05-18"
+  }
+}

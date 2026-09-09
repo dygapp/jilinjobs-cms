@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4c48f08b7ffe9663511ec5ec82b7ca6eb0814d443db047866a17ab2e96696da6",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/A6gxAMEruXXkCHvM3QCP0g",
+    "url": "https://mp.weixin.qq.com/s/A6gxAMEruXXkCHvM3QCP0g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边州“携企带岗进校园”延边大学招聘会暨政校企合作签约仪式举行",
+    "source": "",
+    "publishDate": "2026-06-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/A6gxAMEruXXkCHvM3QCP0g"
+  },
+  "resources": [],
+  "sourceFingerprint": "af8e0ceb1cf2631f7324323e0ebffc4d6684fed0de4934830ceac035fec62fe8",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "延边州“携企带岗进校园”延边大学招聘会暨政校企合作签约仪式举行",
+    "listPublishDate": "2026-06-01",
+    "sourceOrder": 122
+  }
+}

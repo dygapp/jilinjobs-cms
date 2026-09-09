@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:749298c1759e7f2bd989b18629f228468a70c8edcbe9b99138cc970e70fee67e",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/ls/w6pu0b1P",
+    "url": "https://lps.eqxiul.com/ls/w6pu0b1P?share_level=4&from_user=47729703-7b03-40db-83f0-a9e5ea38453d&from_id=317f2aca-2&share_time=1612419313240"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中国图们江区域（珲春）国际合作示范区优秀高校毕业生自主招聘",
+    "source": "",
+    "publishDate": "2021-02-04",
+    "bodyHtml": "",
+    "externalUrl": "https://lps.eqxiul.com/ls/w6pu0b1P?share_level=4&from_user=47729703-7b03-40db-83f0-a9e5ea38453d&from_id=317f2aca-2&share_time=1612419313240"
+  },
+  "resources": [],
+  "sourceFingerprint": "6010fd6b11a23fba200fa2ad621066c19af7b0fee174e8baabc8403c17d5f5c7",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "中国图们江区域（珲春）国际合作示范区优秀高校毕业生自主招聘",
+    "listPublishDate": "2021-02-04",
+    "sourceOrder": 359
+  }
+}

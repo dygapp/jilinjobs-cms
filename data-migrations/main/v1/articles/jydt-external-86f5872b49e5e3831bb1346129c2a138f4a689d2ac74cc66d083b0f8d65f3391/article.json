@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:86f5872b49e5e3831bb1346129c2a138f4a689d2ac74cc66d083b0f8d65f3391",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/0gE0Mw2LX_K8o9J7siIqcA",
+    "url": "https://mp.weixin.qq.com/s/0gE0Mw2LX_K8o9J7siIqcA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "经管引企聚贤才校企同心助就业吉林省经济管理干部学院成功举办2026届毕业生招聘会",
+    "source": "",
+    "publishDate": "2025-11-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/0gE0Mw2LX_K8o9J7siIqcA"
+  },
+  "resources": [],
+  "sourceFingerprint": "2fd111b5360842562f8b49ea47678bf4b7112746b7a1b6b69128406f5e556a93",
+  "evidence": {
+    "listPage": 62,
+    "listTitle": "经管引企聚贤才校企同心助就业吉林省经济管理干部学院成功举办2026届毕业生招聘会",
+    "listPublishDate": "2025-11-06",
+    "sourceOrder": 619
+  }
+}

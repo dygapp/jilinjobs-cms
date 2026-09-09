@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b5df7078ff9e5e2f1d7d8824d12679c93e92936e5435f650201b7d0fbc0c0be2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1055/6661.htm",
+    "url": "https://www.jlict.edu.cn/info/1055/6661.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林化工大学2026届毕业生就业工作推进会召开",
+    "source": "",
+    "publishDate": "2025-12-11",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlict.edu.cn/info/1055/6661.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "7c1dfddee68eac781c779a9391414153ab5f6fdbf5d4f58c129c092bec549ed9",
+  "evidence": {
+    "listPage": 56,
+    "listTitle": "吉林化工大学2026届毕业生就业工作推进会召开",
+    "listPublishDate": "2025-12-11",
+    "sourceOrder": 552
+  }
+}

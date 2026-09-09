@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:f336176c29be4a5d1c5d639585c8463b49189ae2db9e0096c59da9f9bfe25ca6",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/0AX94p54d9cHbR9zlkZs2g",
+    "url": "https://mp.weixin.qq.com/s/0AX94p54d9cHbR9zlkZs2g"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务吉林高质量发展丨2025年吉林农业科技学院春季招聘会邀请函",
+    "source": "",
+    "publishDate": "2025-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/0AX94p54d9cHbR9zlkZs2g"
+  },
+  "resources": [],
+  "sourceFingerprint": "f8112c049a78da3e73a5bb7092fd77299ec3240d5217f0d19428625fd60e0a13",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "服务吉林高质量发展丨2025年吉林农业科技学院春季招聘会邀请函",
+    "listPublishDate": "2025-04-21",
+    "sourceOrder": 174
+  }
+}

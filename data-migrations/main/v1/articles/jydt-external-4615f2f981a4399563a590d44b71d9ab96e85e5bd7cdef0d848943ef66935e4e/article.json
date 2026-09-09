@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4615f2f981a4399563a590d44b71d9ab96e85e5bd7cdef0d848943ef66935e4e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Z-NzpsE7BE_pGU6MwK7woQ",
+    "url": "https://mp.weixin.qq.com/s/Z-NzpsE7BE_pGU6MwK7woQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "共建教学医院与实训基地|长春早期教育职业学院与合颌科技（北京）有限公司签署合作协议",
+    "source": "",
+    "publishDate": "2025-11-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Z-NzpsE7BE_pGU6MwK7woQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "868728bb677f846435482fce08243110c2ba0b074329275ad4c9303688310732",
+  "evidence": {
+    "listPage": 57,
+    "listTitle": "共建教学医院与实训基地|长春早期教育职业学院与合颌科技（北京）有限公司签署合作协议",
+    "listPublishDate": "2025-11-26",
+    "sourceOrder": 570
+  }
+}

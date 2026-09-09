@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:583ab8924d983b2c11e4069c6a7da920b2b18626eec8c2f82c0c39bacf483c77",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/zifLGSXF7C_JoclzI74JmQ",
+    "url": "https://mp.weixin.qq.com/s/zifLGSXF7C_JoclzI74JmQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院党委书记柳轶带队赴泰康之家·沈园走访调研",
+    "source": "",
+    "publishDate": "2026-07-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/zifLGSXF7C_JoclzI74JmQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "55416c225eff6df6348ce81bf5af3ad5b97788b6f610f0450a97565dbca1d765",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "长春人文学院党委书记柳轶带队赴泰康之家·沈园走访调研",
+    "listPublishDate": "2026-07-24",
+    "sourceOrder": 39
+  }
+}

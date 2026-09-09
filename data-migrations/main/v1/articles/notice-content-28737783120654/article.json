@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120654",
+    "contentId": "28737783120654",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120654"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于延长下岗失业人员再就业有关税收政策的通知",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于延长下岗失业人员再就业有关税收政策的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p><font size=\"2\">各省、自治区、直辖市、计划单列市财政厅(局)、国家税务局、地方税务局，新疆生产建设兵团财务局：</font></p> <p><font size=\"2\">为进一步促进下岗失业人员再就业，根据《国务院关于做好当前经济形势下就业工作的通知》(国发[2009]4号)精神，现就延长下岗失业人员再就业有关税收政策问题通知如下：</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 一、对持《再就业优惠证》人员从事个体经营的，3年内按每户每年8000元为限额依次扣减其当年实际应缴纳的营业税、城市维护建设税、教育费附加和个人所得税。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 二、对符合条件的企业在新增加的岗位中，当年新招用持《再就业优惠证》人员，与其签订1年以上期限劳动合同并缴纳社会保险费的，3年内按实际招用人数予以定额依次扣减营业税、城市维护建设税、教育费附加和企业所得税。定额标准为每人每年4000元，可上下浮动20%。由各省、自治区、直辖市人民政府根据本地区实际情况在此幅度内确定具体定额标准，并报财政部和国家税务总局备案。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 三、上述税收优惠政策的审批期限为2009年1月1日至2009年12月31日。具体操作办法继续按照《财政部国家税务总局关于下岗失业人员再就业有关税收政策问题的通知》(财税[2005]186号)和《国家税务总局劳动和社会保障部关于下岗失业人员再就业有关税收政策具体实施意见的通知》(国税发[2006]8号)的相关规定执行。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 请遵照执行。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;财政部 国家税务总局</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二○○九年三月三日<br>&nbsp;<br></font></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "22a2e84f5a9e477f402e5f3e027e934c261afadb0ac7ae62e8a8679f523af245",
+  "evidence": {
+    "listPage": 55,
+    "listTitle": "关于延长下岗失业人员再就业有关税收政策的通知",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 546,
+    "detailPublishDate": "2009-04-04"
+  }
+}

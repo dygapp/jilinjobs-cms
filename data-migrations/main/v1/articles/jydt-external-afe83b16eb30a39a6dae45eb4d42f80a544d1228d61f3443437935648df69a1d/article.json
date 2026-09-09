@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:afe83b16eb30a39a6dae45eb4d42f80a544d1228d61f3443437935648df69a1d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/0rK5k4VNjl9Prd6gokb1Aw",
+    "url": "https://mp.weixin.qq.com/s/0rK5k4VNjl9Prd6gokb1Aw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【延大要闻】吉林省统一战线“创业奋斗‘就’在吉林”——“巾帼奋斗在吉林”宣讲招聘会活动在我校开展",
+    "source": "",
+    "publishDate": "2024-04-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/0rK5k4VNjl9Prd6gokb1Aw"
+  },
+  "resources": [],
+  "sourceFingerprint": "d090b1fc78443c9a2bab42039557e522d2687ec2c9241f8f74781687adbf2564",
+  "evidence": {
+    "listPage": 109,
+    "listTitle": "【延大要闻】吉林省统一战线“创业奋斗‘就’在吉林”——“巾帼奋斗在吉林”宣讲招聘会活动在我校开展",
+    "listPublishDate": "2024-04-15",
+    "sourceOrder": 1083
+  }
+}

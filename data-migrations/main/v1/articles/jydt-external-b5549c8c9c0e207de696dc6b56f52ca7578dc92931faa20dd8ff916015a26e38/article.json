@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b5549c8c9c0e207de696dc6b56f52ca7578dc92931faa20dd8ff916015a26e38",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/8My5cAhuxMsRv6yn3KgrnA",
+    "url": "https://mp.weixin.qq.com/s/8My5cAhuxMsRv6yn3KgrnA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学党委副书记仲秋野率队赴江苏开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-04-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/8My5cAhuxMsRv6yn3KgrnA"
+  },
+  "resources": [],
+  "sourceFingerprint": "89a52f9cd0afb405b097b7561ec4f128984eea01ae5aaf4dafa7d79b24f22932",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "北华大学党委副书记仲秋野率队赴江苏开展访企拓岗专项行动",
+    "listPublishDate": "2026-04-15",
+    "sourceOrder": 286
+  }
+}

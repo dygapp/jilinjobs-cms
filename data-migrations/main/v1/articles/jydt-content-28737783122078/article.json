@@ -1,0 +1,101 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122078",
+    "contentId": "28737783122078",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122078"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2017年全国国家级经济技术开发区高校毕业生网络招聘会的通知",
+    "source": "",
+    "publishDate": "2017-01-09",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办2017年全国国家级经济技术开发区高校毕业生网络招聘会的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2017-1-9 9:31:06</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://4f06c22288e98c7ab87c64246a4c0cf7e935fea5ae7759ab77e36ee1f86e8efc\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://a2313c5605c4c46a931bc35b04a8479d49d7cb90a80978775a6c972963eea13e\"></p><p style=\"text-align: center;\"><img title=\"3.jpg\" src=\"migration-resource://eb1b16a7adf56fc3595455cea1a019f174ec1356eafed53add240d1e1f796675\"></p><p style=\"text-align: center;\"><img title=\"4.jpg\" src=\"migration-resource://1bf0c1a352b51b5e97ed4c9412dcc7d9fd3c8d474bc832093f714df3ff6af1dc\"></p><p style=\"text-align: center;\"><img title=\"5.jpg\" src=\"migration-resource://716fa36beff1fce3c97c6cd424068dd18f8d6e70df4c12b01d24ecef87a92935\"></p><p style=\"text-align: center;\"><img title=\"6.jpg\" src=\"migration-resource://db074a09f147cf2bbc51f18b63e87083c9db4aca0bfc9e526a766afccb6affd3\"></p><p style=\"text-align: center;\"><img title=\"7.jpg\" src=\"migration-resource://8d285d668f34d51d800594930a15ff396a78cb4331e44f3b964ae04227468b1f\"></p><p></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361955111074512507031393.jpg",
+      "originalReference": "/chistory/cms/imgs/6361955111074512507031393.jpg",
+      "token": "migration-resource://4f06c22288e98c7ab87c64246a4c0cf7e935fea5ae7759ab77e36ee1f86e8efc",
+      "snapshotPath": "assets/4f06c22288e98c7ab87c64246a4c0cf7e935fea5ae7759ab77e36ee1f86e8efc.jpg",
+      "sha256": "4f06c22288e98c7ab87c64246a4c0cf7e935fea5ae7759ab77e36ee1f86e8efc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88731
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361955111435450001928024.jpg",
+      "originalReference": "/chistory/cms/imgs/6361955111435450001928024.jpg",
+      "token": "migration-resource://a2313c5605c4c46a931bc35b04a8479d49d7cb90a80978775a6c972963eea13e",
+      "snapshotPath": "assets/a2313c5605c4c46a931bc35b04a8479d49d7cb90a80978775a6c972963eea13e.jpg",
+      "sha256": "a2313c5605c4c46a931bc35b04a8479d49d7cb90a80978775a6c972963eea13e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 99131
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361955111577637509927195.jpg",
+      "originalReference": "/chistory/cms/imgs/6361955111577637509927195.jpg",
+      "token": "migration-resource://eb1b16a7adf56fc3595455cea1a019f174ec1356eafed53add240d1e1f796675",
+      "snapshotPath": "assets/eb1b16a7adf56fc3595455cea1a019f174ec1356eafed53add240d1e1f796675.jpg",
+      "sha256": "eb1b16a7adf56fc3595455cea1a019f174ec1356eafed53add240d1e1f796675",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84478
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361955111718262505697120.jpg",
+      "originalReference": "/chistory/cms/imgs/6361955111718262505697120.jpg",
+      "token": "migration-resource://1bf0c1a352b51b5e97ed4c9412dcc7d9fd3c8d474bc832093f714df3ff6af1dc",
+      "snapshotPath": "assets/1bf0c1a352b51b5e97ed4c9412dcc7d9fd3c8d474bc832093f714df3ff6af1dc.jpg",
+      "sha256": "1bf0c1a352b51b5e97ed4c9412dcc7d9fd3c8d474bc832093f714df3ff6af1dc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 72071
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361955111855762508710383.jpg",
+      "originalReference": "/chistory/cms/imgs/6361955111855762508710383.jpg",
+      "token": "migration-resource://716fa36beff1fce3c97c6cd424068dd18f8d6e70df4c12b01d24ecef87a92935",
+      "snapshotPath": "assets/716fa36beff1fce3c97c6cd424068dd18f8d6e70df4c12b01d24ecef87a92935.jpg",
+      "sha256": "716fa36beff1fce3c97c6cd424068dd18f8d6e70df4c12b01d24ecef87a92935",
+      "contentType": "image/jpeg",
+      "sizeBytes": 86366
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361955112002637503695462.jpg",
+      "originalReference": "/chistory/cms/imgs/6361955112002637503695462.jpg",
+      "token": "migration-resource://db074a09f147cf2bbc51f18b63e87083c9db4aca0bfc9e526a766afccb6affd3",
+      "snapshotPath": "assets/db074a09f147cf2bbc51f18b63e87083c9db4aca0bfc9e526a766afccb6affd3.jpg",
+      "sha256": "db074a09f147cf2bbc51f18b63e87083c9db4aca0bfc9e526a766afccb6affd3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 62368
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361955112147950004451296.jpg",
+      "originalReference": "/chistory/cms/imgs/6361955112147950004451296.jpg",
+      "token": "migration-resource://8d285d668f34d51d800594930a15ff396a78cb4331e44f3b964ae04227468b1f",
+      "snapshotPath": "assets/8d285d668f34d51d800594930a15ff396a78cb4331e44f3b964ae04227468b1f.jpg",
+      "sha256": "8d285d668f34d51d800594930a15ff396a78cb4331e44f3b964ae04227468b1f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 74484
+    }
+  ],
+  "sourceFingerprint": "c8ab53e16e37b736f82c6f24094b2b6e202dcb047331dc57f701720991c135e4",
+  "evidence": {
+    "listPage": 151,
+    "listTitle": "关于举办2017年全国国家级经济技术开发区高校毕业生网络招聘会的通知",
+    "listPublishDate": "2017-01-09",
+    "sourceOrder": 1506,
+    "detailPublishDate": "2017-01-09"
+  }
+}

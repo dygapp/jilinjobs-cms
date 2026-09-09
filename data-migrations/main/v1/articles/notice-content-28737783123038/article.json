@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783123038",
+    "contentId": "28737783123038",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123038"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于召开《就业工作简报》通讯员培训会的通知",
+    "source": "",
+    "publishDate": "2011-03-15",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于召开《就业工作简报》通讯员培训会的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-3-15 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img height=\"656\" src=\"migration-resource://db672e9e0974075cc95cc90484e031dde778c8944fddfdb4e614f809f14b2fd6\" width=\"536\" border=\"0\"><img height=\"656\" src=\"migration-resource://88884fba94b6bc3efa16613dd5aa969dcea099b9b18d1a1495d904a164156de4\" width=\"536\" border=\"0\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110315162019857.jpg",
+      "originalReference": "/chistory/cms/imgs/20110315162019857.jpg",
+      "token": "migration-resource://db672e9e0974075cc95cc90484e031dde778c8944fddfdb4e614f809f14b2fd6",
+      "snapshotPath": "assets/db672e9e0974075cc95cc90484e031dde778c8944fddfdb4e614f809f14b2fd6.jpg",
+      "sha256": "db672e9e0974075cc95cc90484e031dde778c8944fddfdb4e614f809f14b2fd6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 49053
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110315162027807.jpg",
+      "originalReference": "/chistory/cms/imgs/20110315162027807.jpg",
+      "token": "migration-resource://88884fba94b6bc3efa16613dd5aa969dcea099b9b18d1a1495d904a164156de4",
+      "snapshotPath": "assets/88884fba94b6bc3efa16613dd5aa969dcea099b9b18d1a1495d904a164156de4.jpg",
+      "sha256": "88884fba94b6bc3efa16613dd5aa969dcea099b9b18d1a1495d904a164156de4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 27713
+    }
+  ],
+  "sourceFingerprint": "a5aae809286d4e599872e88950e2e9a92d31223b03cc5f4b0f87b6ade941ec45",
+  "evidence": {
+    "listPage": 46,
+    "listTitle": "关于召开《就业工作简报》通讯员培训会的通知",
+    "listPublishDate": "2011-03-15",
+    "sourceOrder": 451,
+    "detailPublishDate": "2011-03-15"
+  }
+}

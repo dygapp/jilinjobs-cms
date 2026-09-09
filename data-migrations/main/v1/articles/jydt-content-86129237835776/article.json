@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86129237835776",
+    "contentId": "86129237835776",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86129237835776"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "举办“校园招聘活动月”活动",
+    "source": "吉林建筑科技学院",
+    "publishDate": "2021-12-11",
+    "bodyHtml": "\n                        <p>为有效提升毕业生就业数量和质量，更好推动“创业有你‘就’在吉林”倡议贯彻落实，吉林建筑科技学院举办了“校园招聘活动月”活动。</p>\n\n<p>学校以“百家名企进校园”为引领、以“专场招聘+综合招聘”为平台、以“校园市场+社会力量”为模式，发掘东北三省、京津唐、环渤海、长三角地区的就业市场资源，建立了有百余家名企参与的就业“星级客户群”，已先后成功邀请近60家企业来校开展专场招聘会。大批建筑类毕业生签约中国建筑、中国中冶等世界500强央企、国企。</p>\n\n<p>除了线下专场招聘，学校还以号召毕业生留省就业、振兴吉林经济建设为核心，于12月10日联合智联招聘线上平台举办了“千校万岗‘就’在吉林”吉林建筑科技学院2022届毕业生网络空中双选会，参会企业将近200家，提供岗位5000余个。</p>\n\n<p>活动月期间，学校就业指导教研室开展了“大学生职业生涯规划大赛”“简历模板展示”“就业直通车”等活动。此外，招就处还面向家庭困难、就业困难的“双困学生”给予了重点指导和推荐。</p>\n\n<p>为更精准地推送就业信息，招生与就业工作处运用“互联网+就业”的方式，以微信公众号、QQ群、微信群、毕业生就业信息网站为载体，利用新媒体手段在校园招聘月推送就业信息达千余条。&nbsp;&nbsp;&nbsp;</p>\n\n<p><strong>（吉林建筑科技学院 田佳欣）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "500afc2ee4032eca78d0a2453cf8836c35f53b7cf7780cdca76d4fa2a68fce63",
+  "evidence": {
+    "listPage": 126,
+    "listTitle": "举办“校园招聘活动月”活动",
+    "listPublishDate": "2021-12-11",
+    "sourceOrder": 1256,
+    "detailPublishDate": "2021-12-11"
+  }
+}

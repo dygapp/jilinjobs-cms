@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122484",
+    "contentId": "28737783122484",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122484"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "沧州市女性就业创业服务中心昨成立",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">沧州市女性就业创业服务中心昨成立</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 昨天上午，沧州市女性就业创业服务中心成立。市委副书记潘冬青、副市长辛书华出席成立仪式并为中心揭牌。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 市女性就业创业服务中心是我市首家专业为女性就业创业提供平台的民办服务机构，由市妇联联合女企业家共同集资３５万元，将原来的市妇儿活动中心进行改建而成，是全省妇联系统第一家正式 女性就业创业服务机构。服务中心主要开展月嫂、家政保洁、医疗陪护、婴幼儿护理及早期教育等服务项目，采取完全市场化机制运行，在安置下岗失业妇女的基础上，达到“安置一个人，温暖两个家”的目标。目前，服务中心第一批学员已开始培训。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 辛书华在讲话中要求，女性就业创业服务中心要充分利用我市现有女性就业创业培训 资源，尽力开发、创造妇女就业岗位，优先为下岗女工、零就业家庭妇女、农村妇女特别是返乡女农民工等困难妇女安置工作，切实把服务中心办成广大妇女“精神的家园，事业的依托”。各有关部门要充分发挥职能作用，从政策上倾斜、制度上保障、资金上支持妇女就业创业工作，共同推进女性就业创业工作，积极打造我市女性就业创业服务品牌，为广大女性提供实实在在的服务。 </font></p> <p><font size=\"2\">&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "f6eeaf9d12dc182a39021a42d61aa654317a9e09cb7d95700e4a8a1d5bf992b3",
+  "evidence": {
+    "listPage": 188,
+    "listTitle": "沧州市女性就业创业服务中心昨成立",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1873,
+    "detailPublishDate": "2009-04-04"
+  }
+}

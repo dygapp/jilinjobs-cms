@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:081df5f162bafa14186113cab232f89719defafae9ec32bb7ac28db4167ebe3a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/PO5qLqtufKvje6SqVhPnFA",
+    "url": "https://mp.weixin.qq.com/s/PO5qLqtufKvje6SqVhPnFA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚焦前沿育新机 共谱高教发展新篇章——长春科技学院深度参与第63届中国高等教育博览会",
+    "source": "",
+    "publishDate": "2025-05-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/PO5qLqtufKvje6SqVhPnFA"
+  },
+  "resources": [],
+  "sourceFingerprint": "c3e2d9576e9fd7c0a1e45e7489bbaba28b1425c5dbad1c30f33005f22448d0cf",
+  "evidence": {
+    "listPage": 86,
+    "listTitle": "聚焦前沿育新机 共谱高教发展新篇章——长春科技学院深度参与第63届中国高等教育博览会",
+    "listPublishDate": "2025-05-29",
+    "sourceOrder": 860
+  }
+}

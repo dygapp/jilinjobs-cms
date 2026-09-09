@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8a79d19f923efc629940fd984022d76010abecda85b36652446743b46d48ff4a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/82ISmLarpc2Me3WpX78siA",
+    "url": "https://mp.weixin.qq.com/s/82ISmLarpc2Me3WpX78siA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "20万+岗位，国家大学生就业服务平台上新5场招聘会",
+    "source": "",
+    "publishDate": "2025-04-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/82ISmLarpc2Me3WpX78siA"
+  },
+  "resources": [],
+  "sourceFingerprint": "5c2f14afec16493c1191feb1a8e2cfab53ea5f27a4a0807b241ba93cdf59a8bc",
+  "evidence": {
+    "listPage": 94,
+    "listTitle": "20万+岗位，国家大学生就业服务平台上新5场招聘会",
+    "listPublishDate": "2025-04-18",
+    "sourceOrder": 937
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:280382469586944",
+    "contentId": "280382469586944",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=280382469586944"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展吉林省高校大学生重点群体“暖途护航”就业行动月的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2025-03-26",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1264\" src=\"migration-resource://dc0d352a05287aa573a2e1307a7f3a76d6b9feb96d600bdaaaf20f8133147843\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1274\" src=\"migration-resource://9144974b3eac32d11f214e1ef36f52854c05f634b73ba4b1d9604f95e625a72e\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1276\" src=\"migration-resource://9bb6320e1abc388c1a426c1dfce7f42031d85122e03e9fd64fca307bfe595ceb\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1268\" src=\"migration-resource://84002e293f13814484b0c55ba85a4657a69a7cc19d9923e86ba0287f74a28631\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1272\" src=\"migration-resource://ca68cdd50ca25998efb9f4c02343d83a52caefb99eb1338c6ea6c3d8e3fc6b1e\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1275\" src=\"migration-resource://6ca56ea5f31483c0860c8515a4f0def3b828d4434fc26e6c25988f5b7b583514\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://b9ad50783779d654e5897a65537524ca68cc613a4feaf9aa5bcd106331868aec\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/e528de0e-80f7-46c1-9100-15f269480989.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/e528de0e-80f7-46c1-9100-15f269480989.jpg",
+      "token": "migration-resource://dc0d352a05287aa573a2e1307a7f3a76d6b9feb96d600bdaaaf20f8133147843",
+      "snapshotPath": "assets/dc0d352a05287aa573a2e1307a7f3a76d6b9feb96d600bdaaaf20f8133147843.jpg",
+      "sha256": "dc0d352a05287aa573a2e1307a7f3a76d6b9feb96d600bdaaaf20f8133147843",
+      "contentType": "image/jpeg",
+      "sizeBytes": 222492
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/0c3dd096-bddb-47c6-bfe3-d203db24f26c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/0c3dd096-bddb-47c6-bfe3-d203db24f26c.jpg",
+      "token": "migration-resource://9144974b3eac32d11f214e1ef36f52854c05f634b73ba4b1d9604f95e625a72e",
+      "snapshotPath": "assets/9144974b3eac32d11f214e1ef36f52854c05f634b73ba4b1d9604f95e625a72e.jpg",
+      "sha256": "9144974b3eac32d11f214e1ef36f52854c05f634b73ba4b1d9604f95e625a72e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 161805
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/eda5dd03-e2f6-4d7a-982d-5f3a0ae4d9dd.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/eda5dd03-e2f6-4d7a-982d-5f3a0ae4d9dd.jpg",
+      "token": "migration-resource://9bb6320e1abc388c1a426c1dfce7f42031d85122e03e9fd64fca307bfe595ceb",
+      "snapshotPath": "assets/9bb6320e1abc388c1a426c1dfce7f42031d85122e03e9fd64fca307bfe595ceb.jpg",
+      "sha256": "9bb6320e1abc388c1a426c1dfce7f42031d85122e03e9fd64fca307bfe595ceb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 206092
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/fa9598e9-1100-4184-a403-d0a295f15e50.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/fa9598e9-1100-4184-a403-d0a295f15e50.jpg",
+      "token": "migration-resource://84002e293f13814484b0c55ba85a4657a69a7cc19d9923e86ba0287f74a28631",
+      "snapshotPath": "assets/84002e293f13814484b0c55ba85a4657a69a7cc19d9923e86ba0287f74a28631.jpg",
+      "sha256": "84002e293f13814484b0c55ba85a4657a69a7cc19d9923e86ba0287f74a28631",
+      "contentType": "image/jpeg",
+      "sizeBytes": 103259
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/87d399db-7189-4cc3-8d12-89e0d51d6c48.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/87d399db-7189-4cc3-8d12-89e0d51d6c48.jpg",
+      "token": "migration-resource://ca68cdd50ca25998efb9f4c02343d83a52caefb99eb1338c6ea6c3d8e3fc6b1e",
+      "snapshotPath": "assets/ca68cdd50ca25998efb9f4c02343d83a52caefb99eb1338c6ea6c3d8e3fc6b1e.jpg",
+      "sha256": "ca68cdd50ca25998efb9f4c02343d83a52caefb99eb1338c6ea6c3d8e3fc6b1e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 175626
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/58514758-835f-4910-bb3c-e6d7b15f75c6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/58514758-835f-4910-bb3c-e6d7b15f75c6.jpg",
+      "token": "migration-resource://6ca56ea5f31483c0860c8515a4f0def3b828d4434fc26e6c25988f5b7b583514",
+      "snapshotPath": "assets/6ca56ea5f31483c0860c8515a4f0def3b828d4434fc26e6c25988f5b7b583514.jpg",
+      "sha256": "6ca56ea5f31483c0860c8515a4f0def3b828d4434fc26e6c25988f5b7b583514",
+      "contentType": "image/jpeg",
+      "sizeBytes": 224826
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/18195062-9fa7-49de-9d35-f880be30ca65.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/18195062-9fa7-49de-9d35-f880be30ca65.jpg",
+      "token": "migration-resource://b9ad50783779d654e5897a65537524ca68cc613a4feaf9aa5bcd106331868aec",
+      "snapshotPath": "assets/b9ad50783779d654e5897a65537524ca68cc613a4feaf9aa5bcd106331868aec.jpg",
+      "sha256": "b9ad50783779d654e5897a65537524ca68cc613a4feaf9aa5bcd106331868aec",
+      "contentType": "image/jpeg",
+      "sizeBytes": 248451
+    }
+  ],
+  "sourceFingerprint": "260f8c9c6cf33e4214ead6ff9fc56b818ed7f9d91178714d5662ef1826713435",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "关于开展吉林省高校大学生重点群体“暖途护航”就业行动月的通知",
+    "listPublishDate": "2025-03-26",
+    "sourceOrder": 51,
+    "detailPublishDate": "2025-03-26"
+  }
+}

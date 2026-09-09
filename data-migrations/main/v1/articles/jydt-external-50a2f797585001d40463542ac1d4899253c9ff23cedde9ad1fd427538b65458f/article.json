@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:50a2f797585001d40463542ac1d4899253c9ff23cedde9ad1fd427538b65458f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/jygg1/3247.jhtml",
+    "url": "https://www.jlsy.edu.cn/jygg1/3247.jhtml"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗‘就’在吉林”吉林水利电力职业学院2024届春季校园招聘会",
+    "source": "",
+    "publishDate": "2024-04-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlsy.edu.cn/jygg1/3247.jhtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "ffac7e398d91fe4ca7d5e67c7ac701608f38024e847f9dbbf7c6da254c345584",
+  "evidence": {
+    "listPage": 110,
+    "listTitle": "“创业奋斗‘就’在吉林”吉林水利电力职业学院2024届春季校园招聘会",
+    "listPublishDate": "2024-04-02",
+    "sourceOrder": 1091
+  }
+}

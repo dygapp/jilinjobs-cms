@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123214",
+    "contentId": "28737783123214",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123214"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "科研项目吸纳高校毕业生就业",
+    "source": "",
+    "publishDate": "2009-11-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">科研项目吸纳高校毕业生就业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-11-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">国务院办公厅《关于加强普通高等学校毕业生就业工作的通知》（国发办［2009］3号）要求，承担国家和地方重大科研项目的单位要积极聘用优秀高校毕业生参与研究，其劳务性费用和有关社会保险费补按规定从项目经费中列支，具体办法由科技、教育、财政等部门研究制定。高校毕业生参与项目研究期间，其户口、档案可存放在项目单位所在地或入学前家庭所在地人才交流中心。聘用期满，根据工作需要可以续聘或到其他岗位就业，就业后工龄与参与项目研究期间工作时间合并计算，社会保险缴费年连续计算。科技部、教育部、财政部、人社部、国家科学基金委根据国务院文件出台关于鼓励科研项目单位吸纳和稳定高校毕业生就业的若干意见。</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "21a4c52aa6cd19055bb74342251650e05c7c3cc964b4895099fdf5ba7ce160fd",
+  "evidence": {
+    "listPage": 51,
+    "listTitle": "科研项目吸纳高校毕业生就业",
+    "listPublishDate": "2009-11-04",
+    "sourceOrder": 503,
+    "detailPublishDate": "2009-11-04"
+  }
+}

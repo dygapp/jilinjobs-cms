@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8b85ee6c7de5c5849579ced6ff594688bdb915a3d9bf5dcd6d3d9d436ca40844",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5660.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5660.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学举办第三届北湖东区联合体专场招聘会",
+    "source": "",
+    "publishDate": "2026-04-13",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5660.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "06ab03840442b6b6888cf80a052c76758a79348bfc4c4a34251d65d61d8fcd5f",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "长春工业大学举办第三届北湖东区联合体专场招聘会",
+    "listPublishDate": "2026-04-13",
+    "sourceOrder": 299
+  }
+}

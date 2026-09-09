@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:be3a14f8a581ccb0a6fe8da899e3e755a7a31b19104f34db3380a859c9749ec7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1011/11040.htm",
+    "url": "https://www.jlnu.edu.cn/info/1011/11040.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "四平地区2025届毕业生专场招聘会暨吉林师范大学2025届毕业生秋季双选会成功举行",
+    "source": "",
+    "publishDate": "2024-11-12",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlnu.edu.cn/info/1011/11040.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "e8c589dfd5332d5e95ac370ae7dc5cf75e4264f6cb6fe7a22cfce6d83a52a1d3",
+  "evidence": {
+    "listPage": 102,
+    "listTitle": "四平地区2025届毕业生专场招聘会暨吉林师范大学2025届毕业生秋季双选会成功举行",
+    "listPublishDate": "2024-11-12",
+    "sourceOrder": 1016
+  }
+}

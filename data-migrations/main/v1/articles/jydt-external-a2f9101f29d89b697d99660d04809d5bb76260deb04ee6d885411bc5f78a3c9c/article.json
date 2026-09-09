@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a2f9101f29d89b697d99660d04809d5bb76260deb04ee6d885411bc5f78a3c9c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/sBmYmryQuBAfAxSzEKpoSA",
+    "url": "https://mp.weixin.qq.com/s/sBmYmryQuBAfAxSzEKpoSA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企携手共育人才 产教融合赋能发展——长春医学高等专科学校召开健康学院实践教学基地建设工作会议",
+    "source": "",
+    "publishDate": "2026-06-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/sBmYmryQuBAfAxSzEKpoSA"
+  },
+  "resources": [],
+  "sourceFingerprint": "a4cdfbcc970f2b11ef7b61db0fec6e574ad3cd115df98010137b4f29fc2eb93c",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "校企携手共育人才 产教融合赋能发展——长春医学高等专科学校召开健康学院实践教学基地建设工作会议",
+    "listPublishDate": "2026-06-02",
+    "sourceOrder": 112
+  }
+}

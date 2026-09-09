@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9395061e97a19139e356d3e4ce340e4244521b69b5c4e7064bb5c856afebabd1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/-zCj9H0Hw7lEImiso1Cl4w",
+    "url": "https://mp.weixin.qq.com/s/-zCj9H0Hw7lEImiso1Cl4w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【就业指导】|| 个人创业“一件事”高效办！好消息一图了解",
+    "source": "",
+    "publishDate": "2025-08-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/-zCj9H0Hw7lEImiso1Cl4w"
+  },
+  "resources": [],
+  "sourceFingerprint": "24dfcdcd9ab590984e9d6afa6d4d17ae8205d9837816b16715da516c8a34e5dd",
+  "evidence": {
+    "listPage": 72,
+    "listTitle": "【就业指导】|| 个人创业“一件事”高效办！好消息一图了解",
+    "listPublishDate": "2025-08-28",
+    "sourceOrder": 711
+  }
+}

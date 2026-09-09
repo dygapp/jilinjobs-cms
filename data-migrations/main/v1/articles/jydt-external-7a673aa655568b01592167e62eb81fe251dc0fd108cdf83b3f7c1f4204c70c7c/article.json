@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7a673aa655568b01592167e62eb81fe251dc0fd108cdf83b3f7c1f4204c70c7c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/B65AI-7Zs_LRgu6kpnyMbA",
+    "url": "https://mp.weixin.qq.com/s/B65AI-7Zs_LRgu6kpnyMbA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学旅游学院举办长三角优质企业校企洽谈暨专场宣讲会",
+    "source": "",
+    "publishDate": "2026-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/B65AI-7Zs_LRgu6kpnyMbA"
+  },
+  "resources": [],
+  "sourceFingerprint": "de1f6606875380c7955ee39196b3554c48c8e7a2866921d1dde42ea0d2d92545",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "长春大学旅游学院举办长三角优质企业校企洽谈暨专场宣讲会",
+    "listPublishDate": "2026-04-21",
+    "sourceOrder": 265
+  }
+}

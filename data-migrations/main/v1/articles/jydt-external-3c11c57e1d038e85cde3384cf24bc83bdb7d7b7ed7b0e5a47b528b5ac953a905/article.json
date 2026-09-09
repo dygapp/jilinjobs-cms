@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3c11c57e1d038e85cde3384cf24bc83bdb7d7b7ed7b0e5a47b528b5ac953a905",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1101/14453.htm",
+    "url": "https://www.ccit.edu.cn/info/1101/14453.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院举办2025届毕业生春季双选会",
+    "source": "",
+    "publishDate": "2025-03-28",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccit.edu.cn/info/1101/14453.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "397caf3ef7ec792b197c909de3f211b1b5e2bc3e893e41d58c37e8c262c64788",
+  "evidence": {
+    "listPage": 97,
+    "listTitle": "长春工程学院举办2025届毕业生春季双选会",
+    "listPublishDate": "2025-03-28",
+    "sourceOrder": 964
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120158",
+    "contentId": "28737783120158",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120158"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2010高考志愿选择解析:新闻、法学就业压力大",
+    "source": "",
+    "publishDate": "2009-05-08",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2010高考志愿选择解析:新闻、法学就业压力大</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-5-8 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 2009届大学毕业生进入了求职高峰期，哪些专业就业压力大？哪些专业社会需求减少？近日，记者采访了南京高校界相关人士，对09届毕业生专业冷热进行了分析。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 根据江苏省就业指导中心提供的信息，由于专业对口的用人单位受编制、计划、招考等影响，或数年前的培养规模已超出社会需求，导致此类专业毕业生就业率长期偏低。比较典型的有临床医学类、法学类、新闻传播学类、师范类等。相关人士称，多数院校的传统特色专业就业情况相对较好，而部分新开专业、尤其是与原有特色专业关联度较低的专业，往往成为提高该校毕业生就业率的瓶颈。如南京航空航天大学的航空航天类专业毕业生受到国家发展航空利好政策影响，毕业生就业一直供不应求，而该校艺术类专业毕业生的就业压力就较大。</font></p> <p><font size=\"2\">　　据了解，今年是江苏省师范类毕业生与非师范类毕业生就业完全并轨、师范类毕业生进入市场双选的第四年。目前，师范类毕业生就业压力相比其他专业压力大。据分析，影响师范类毕业生就业的因素很多，其中一个重要原因是师范类毕业生虽已进入市场双选，但需方仍未走出计划分配的模式，即广大的中小学校仍无用人自主权，无法实现真正意义上的双向选择。</font></p> <p><font size=\"2\">　　南京理工大学就业指导中心相关人士指出，实事求是地说，大学生找个工作并不难，难的是找一个理想的工作。此外，高校毕业生就业结构性矛盾依然存在。从地区看，东部省市吸纳了全国50％以上的高校毕业生，而西部不足20％；从学历看，高职高专毕业生仍然是就业的难点和重点；从学科专业看，工科和应用性较强的学科专业就业形势较好，而一些文科专业就业出现困难。</font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "0e4b35eb3d68532bb0e0c90d6f128991f8cb9409a466b16607549d516a011fc0",
+  "evidence": {
+    "listPage": 174,
+    "listTitle": "2010高考志愿选择解析:新闻、法学就业压力大",
+    "listPublishDate": "2009-05-08",
+    "sourceOrder": 1734,
+    "detailPublishDate": "2009-05-08"
+  }
+}

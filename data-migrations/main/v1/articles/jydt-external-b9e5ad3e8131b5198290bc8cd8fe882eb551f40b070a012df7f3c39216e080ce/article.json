@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b9e5ad3e8131b5198290bc8cd8fe882eb551f40b070a012df7f3c39216e080ce",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/H8yKfP1zxJ6_0OptOjv7eA",
+    "url": "https://mp.weixin.qq.com/s/H8yKfP1zxJ6_0OptOjv7eA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省高校重点群体“暖途护航”就业行动月：聚焦重点群体，精准施策显实效",
+    "source": "",
+    "publishDate": "2025-05-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/H8yKfP1zxJ6_0OptOjv7eA"
+  },
+  "resources": [],
+  "sourceFingerprint": "61ca7bd9ec541e1d0d6bb4d96c13319b9896770f04f7bcdcea0a735b13d668ec",
+  "evidence": {
+    "listPage": 92,
+    "listTitle": "吉林省高校重点群体“暖途护航”就业行动月：聚焦重点群体，精准施策显实效",
+    "listPublishDate": "2025-05-08",
+    "sourceOrder": 912
+  }
+}

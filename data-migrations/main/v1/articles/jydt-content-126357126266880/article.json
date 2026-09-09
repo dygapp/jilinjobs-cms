@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:126357126266880",
+    "contentId": "126357126266880",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=126357126266880"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林动画学院开展访企拓岗促就业系列活动",
+    "source": "吉林动画学院",
+    "publishDate": "2022-10-30",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">为贯彻落实吉林省教育厅关于“开展访企拓岗促就业专项行动”工作部署，进一步加强校企在人才培养、产教融合、平台共建等方面的合作，为毕业生提供更多优质就业岗位，吉林动画学院由校院两级一把手牵头开展了访企拓岗促就业系列活动，学校董事长、校长、党委书记以及校级领导班子成员分别对接动画艺术学院、游戏学院、漫画学院等8个学院进行线下走访以及线上视频座谈会，各学院院长、副院长以及各系主任等广泛参与了此项活动。</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">学校领导与企业相关负责人针对用人需求情况、人才培养方向、学科专业调整、就业指导服务等问题进行了深入的交流。成都夏尔天逸科技有限公司招聘负责人陈经理表示，基于目前整个游戏行业的情况，用人需求集中在游戏动作、特效相关岗位，对3D场景、角色设计岗位用人需求也较大，但对2D原画角色和场景相关岗位人才需求量较小。维塔士电脑软件（成都）有限公司校企合作部韩经理也表示，在过去的一年半时间内，校企沟通也探索到了一些模式，也希望后续能在课程建设、项目合作、暑期教师到企业互访交流、企业专业培训课程交流等方面进一步建立联系。漫画学院院长张晓叶表示，通过与企业的沟通与交流，深入了解了用人单位对毕业生的知识、能力、素质要求，了解了企业所在行业的发展趋势和人才需求形势，共同查找了学校学科专业设置、人才培养、就业服务等方面存在的短板，未来将充分听取用人单位的意见建议，为学校学科专业调整、人才培养方案制定、招生计划安排和就业指导服务提供依据，不断增强人才培养的针对性和适应性。</span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"459\" src=\"migration-resource://94108eb08b9a103f9df932e44eca64ee2df2a1cddb1ea3fb2d07ed6434056d22\" width=\"600\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"450\" src=\"migration-resource://0d94138873b21f7fd2776203502bdd5d2f906b7acb1e5d5805e209c6d7107fc8\" width=\"600\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">通过开展访企拓岗促就业系列活动进一步调动了学校全员参与就业工作的积极性，特别是各学院专业教师也积极参与对接用人单位，收集岗位需求信息，为毕业生开拓就业岗位。此次访企拓岗促就业系列活动不仅加强了学校与企业间的沟通联系，同时也让学校了解了当前行业发展趋势以及人才需求情况，为学校就业工作打下了良好的基础。</span></span></span></span></p>\n\n<p style=\"text-align:right\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">（吉林动画学院 刘昊）</span></span></strong></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-29/1da89fcc-ffd1-4b94-8f57-275b6d17c8d5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-29/1da89fcc-ffd1-4b94-8f57-275b6d17c8d5.jpg",
+      "token": "migration-resource://94108eb08b9a103f9df932e44eca64ee2df2a1cddb1ea3fb2d07ed6434056d22",
+      "snapshotPath": "assets/94108eb08b9a103f9df932e44eca64ee2df2a1cddb1ea3fb2d07ed6434056d22.jpg",
+      "sha256": "94108eb08b9a103f9df932e44eca64ee2df2a1cddb1ea3fb2d07ed6434056d22",
+      "contentType": "image/jpeg",
+      "sizeBytes": 91817
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-29/6638adf3-3f9f-4538-87d0-956f9c832418.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-29/6638adf3-3f9f-4538-87d0-956f9c832418.jpg",
+      "token": "migration-resource://0d94138873b21f7fd2776203502bdd5d2f906b7acb1e5d5805e209c6d7107fc8",
+      "snapshotPath": "assets/0d94138873b21f7fd2776203502bdd5d2f906b7acb1e5d5805e209c6d7107fc8.jpg",
+      "sha256": "0d94138873b21f7fd2776203502bdd5d2f906b7acb1e5d5805e209c6d7107fc8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 50808
+    }
+  ],
+  "sourceFingerprint": "b044586d4061c15978055905ecfb4954b3ddd4ae6186ba9e15a47ba51b496a18",
+  "evidence": {
+    "listPage": 119,
+    "listTitle": "吉林动画学院开展访企拓岗促就业系列活动",
+    "listPublishDate": "2022-10-30",
+    "sourceOrder": 1184,
+    "detailPublishDate": "2022-10-30"
+  }
+}

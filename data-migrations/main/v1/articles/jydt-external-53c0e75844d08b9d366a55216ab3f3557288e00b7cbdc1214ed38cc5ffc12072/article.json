@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:53c0e75844d08b9d366a55216ab3f3557288e00b7cbdc1214ed38cc5ffc12072",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/H03v2DohGvKW_EcfxgKa6g",
+    "url": "https://mp.weixin.qq.com/s/H03v2DohGvKW_EcfxgKa6g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院参加聚势新启程 AI漫剧人才基地共建活动",
+    "source": "",
+    "publishDate": "2026-05-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/H03v2DohGvKW_EcfxgKa6g"
+  },
+  "resources": [],
+  "sourceFingerprint": "3bbe91650b463bf89d88812be0bc2878d97bf708dcceeb6adb6cb9e0493dec93",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "长春科技学院参加聚势新启程 AI漫剧人才基地共建活动",
+    "listPublishDate": "2026-05-20",
+    "sourceOrder": 161
+  }
+}

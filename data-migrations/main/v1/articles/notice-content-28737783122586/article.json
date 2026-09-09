@@ -1,0 +1,131 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122586",
+    "contentId": "28737783122586",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122586"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发《2015年大学生就业创业指导服务国际学校研讨会》的通知",
+    "source": "",
+    "publishDate": "2015-09-29",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于转发《2015年大学生就业创业指导服务国际学校研讨会》的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2015-9-29 14:46:46</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://b0b5d4175f7c8cbe0464dfe5fad6c823ca0247dfee76056713f724592871fde7\"><img alt=\"\" height=\"921\" src=\"migration-resource://f8fc1035c160b2efcc2cd91a0b2ee49879f6389431a0205040e336304fee90aa\" width=\"662\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://82f0e3bf288249db7ee44df40ac02be4ab39eab58707894c7fa4e9e46850b5b1\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://ae96d17b88522f9be045f8ce2c8ffdd2f33e0ff8ea5e39a1e143a0ac44a48150\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://81f903699127a69a70324cec47f58837aad62458a31f1b474fc6fe0320208eec\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://0f3925570642f13f0e395b4d884331453c21930880e2525d030902c2188f2b7c\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://2553e7766ad6e276182eb8fa74924a266755d4e41ab1d4d972739d4dcccc692d\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://31f7a689e577ae71817545e0405f38d203f3f0a28fc732c8be8768251a2e381a\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://32de3d9b25a76a405b369571a5cca11e081adda8623424c6a51be1d63413eb1f\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://b247fdaa7697e60bd5a025fedd08f6dbe471119385198ce66502e1685ee1c19b\"></p>\n\n<p>&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=e45b1bc6-eea6-42cb-806e-36f04e642477\">报名表word版.docx</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357991796125825003228630.jpg",
+      "originalReference": "/chistory/cms/imgs/6357991796125825003228630.jpg",
+      "token": "migration-resource://b0b5d4175f7c8cbe0464dfe5fad6c823ca0247dfee76056713f724592871fde7",
+      "snapshotPath": "assets/b0b5d4175f7c8cbe0464dfe5fad6c823ca0247dfee76056713f724592871fde7.jpg",
+      "sha256": "b0b5d4175f7c8cbe0464dfe5fad6c823ca0247dfee76056713f724592871fde7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 161493
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357913488810200007221247.jpg",
+      "originalReference": "/chistory/cms/imgs/6357913488810200007221247.jpg",
+      "token": "migration-resource://f8fc1035c160b2efcc2cd91a0b2ee49879f6389431a0205040e336304fee90aa",
+      "snapshotPath": "assets/f8fc1035c160b2efcc2cd91a0b2ee49879f6389431a0205040e336304fee90aa.jpg",
+      "sha256": "f8fc1035c160b2efcc2cd91a0b2ee49879f6389431a0205040e336304fee90aa",
+      "contentType": "image/jpeg",
+      "sizeBytes": 97249
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357913488921137501548308.jpg",
+      "originalReference": "/chistory/cms/imgs/6357913488921137501548308.jpg",
+      "token": "migration-resource://82f0e3bf288249db7ee44df40ac02be4ab39eab58707894c7fa4e9e46850b5b1",
+      "snapshotPath": "assets/82f0e3bf288249db7ee44df40ac02be4ab39eab58707894c7fa4e9e46850b5b1.jpg",
+      "sha256": "82f0e3bf288249db7ee44df40ac02be4ab39eab58707894c7fa4e9e46850b5b1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 98530
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357913489021137505376135.jpg",
+      "originalReference": "/chistory/cms/imgs/6357913489021137505376135.jpg",
+      "token": "migration-resource://ae96d17b88522f9be045f8ce2c8ffdd2f33e0ff8ea5e39a1e143a0ac44a48150",
+      "snapshotPath": "assets/ae96d17b88522f9be045f8ce2c8ffdd2f33e0ff8ea5e39a1e143a0ac44a48150.jpg",
+      "sha256": "ae96d17b88522f9be045f8ce2c8ffdd2f33e0ff8ea5e39a1e143a0ac44a48150",
+      "contentType": "image/jpeg",
+      "sizeBytes": 106832
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357913489116450004218055.jpg",
+      "originalReference": "/chistory/cms/imgs/6357913489116450004218055.jpg",
+      "token": "migration-resource://81f903699127a69a70324cec47f58837aad62458a31f1b474fc6fe0320208eec",
+      "snapshotPath": "assets/81f903699127a69a70324cec47f58837aad62458a31f1b474fc6fe0320208eec.jpg",
+      "sha256": "81f903699127a69a70324cec47f58837aad62458a31f1b474fc6fe0320208eec",
+      "contentType": "image/jpeg",
+      "sizeBytes": 58464
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357913489208637501303312.jpg",
+      "originalReference": "/chistory/cms/imgs/6357913489208637501303312.jpg",
+      "token": "migration-resource://0f3925570642f13f0e395b4d884331453c21930880e2525d030902c2188f2b7c",
+      "snapshotPath": "assets/0f3925570642f13f0e395b4d884331453c21930880e2525d030902c2188f2b7c.jpg",
+      "sha256": "0f3925570642f13f0e395b4d884331453c21930880e2525d030902c2188f2b7c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 113886
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357913489303950009145232.jpg",
+      "originalReference": "/chistory/cms/imgs/6357913489303950009145232.jpg",
+      "token": "migration-resource://2553e7766ad6e276182eb8fa74924a266755d4e41ab1d4d972739d4dcccc692d",
+      "snapshotPath": "assets/2553e7766ad6e276182eb8fa74924a266755d4e41ab1d4d972739d4dcccc692d.jpg",
+      "sha256": "2553e7766ad6e276182eb8fa74924a266755d4e41ab1d4d972739d4dcccc692d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93829
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357913489400825002216397.jpg",
+      "originalReference": "/chistory/cms/imgs/6357913489400825002216397.jpg",
+      "token": "migration-resource://31f7a689e577ae71817545e0405f38d203f3f0a28fc732c8be8768251a2e381a",
+      "snapshotPath": "assets/31f7a689e577ae71817545e0405f38d203f3f0a28fc732c8be8768251a2e381a.jpg",
+      "sha256": "31f7a689e577ae71817545e0405f38d203f3f0a28fc732c8be8768251a2e381a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81191
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357913489500825006044225.jpg",
+      "originalReference": "/chistory/cms/imgs/6357913489500825006044225.jpg",
+      "token": "migration-resource://32de3d9b25a76a405b369571a5cca11e081adda8623424c6a51be1d63413eb1f",
+      "snapshotPath": "assets/32de3d9b25a76a405b369571a5cca11e081adda8623424c6a51be1d63413eb1f.jpg",
+      "sha256": "32de3d9b25a76a405b369571a5cca11e081adda8623424c6a51be1d63413eb1f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 114645
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357913489600825009872052.jpg",
+      "originalReference": "/chistory/cms/imgs/6357913489600825009872052.jpg",
+      "token": "migration-resource://b247fdaa7697e60bd5a025fedd08f6dbe471119385198ce66502e1685ee1c19b",
+      "snapshotPath": "assets/b247fdaa7697e60bd5a025fedd08f6dbe471119385198ce66502e1685ee1c19b.jpg",
+      "sha256": "b247fdaa7697e60bd5a025fedd08f6dbe471119385198ce66502e1685ee1c19b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 52505
+    }
+  ],
+  "sourceFingerprint": "71f05d0f6065aacfb44c5ccb2affe99367a21511d719adae3c18227e97e47668",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "关于转发《2015年大学生就业创业指导服务国际学校研讨会》的通知",
+    "listPublishDate": "2015-09-29",
+    "sourceOrder": 269,
+    "detailPublishDate": "2015-09-29"
+  }
+}

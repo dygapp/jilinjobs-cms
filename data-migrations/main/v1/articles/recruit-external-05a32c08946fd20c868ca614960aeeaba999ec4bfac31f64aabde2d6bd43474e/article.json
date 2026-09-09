@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:05a32c08946fd20c868ca614960aeeaba999ec4bfac31f64aabde2d6bd43474e",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/lmtYZdiWs6bbjbGe1Sfspw",
+    "url": "https://mp.weixin.qq.com/s/lmtYZdiWs6bbjbGe1Sfspw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春医学高等专科学校“寒假促就业暖心行动”线上活动正式开启",
+    "source": "",
+    "publishDate": "2026-01-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/lmtYZdiWs6bbjbGe1Sfspw"
+  },
+  "resources": [],
+  "sourceFingerprint": "9bd95589d745307cb89dbbc0247c03af5294a3e756a07390105fabe4e310f30e",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "长春医学高等专科学校“寒假促就业暖心行动”线上活动正式开启",
+    "listPublishDate": "2026-01-23",
+    "sourceOrder": 84
+  }
+}

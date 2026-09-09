@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:f7b28fe146227b259cdcc7402316ec108f5d39e3e8dcf6edc80b32770271b570",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/jobfair/fairdetails.html",
+    "url": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=RXEWyyXGykSXxGkMzbzjfR"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "信息通讯与互联网行业2022年校园招聘月专场空中双选会",
+    "source": "",
+    "publishDate": "2022-12-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=RXEWyyXGykSXxGkMzbzjfR"
+  },
+  "resources": [],
+  "sourceFingerprint": "16583d504f1b366de08061bc5457bcc3535e707d5d17364ddaca850d53ead7fe",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "信息通讯与互联网行业2022年校园招聘月专场空中双选会",
+    "listPublishDate": "2022-12-02",
+    "sourceOrder": 322
+  }
+}

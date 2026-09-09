@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123274",
+    "contentId": "28737783123274",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123274"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "网上调剂注意事项",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">网上调剂注意事项</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;&nbsp;&nbsp; 1、在报名的过程中，考生首先可以通过缺额信息查询来查询各招生单位各专业缺额人数或缺额状态（只有招生单位公布缺额时才能查询到），考生可参考各招生单位缺额状态和发布的调剂方法，并结合自己的实际情况，进行调剂志愿填报。没有上线的考生不可以进行调剂志愿的填报。<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;2、如果填报调剂志愿不成功，那么系统会给出相应的不能报名原因的提示。错误的原因大致有如下几种：<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;（1）分数未达到所报招生单位的分区分数线<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;（2）法硕和MBA专业不允许跨专业调剂<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;（3）分数只够一级学科内调剂，不能跨一级学科调剂<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;（4）跨一级学科调剂，但分数未达到该一级学科所在门类所报招生单位的分区分数线<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;（5）法律硕士（法学）专业学位只能从第一志愿报考法学一级学科的考生调剂<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;3、在填报调剂志愿的时候，每个考生可以填报2个志愿，这两个志愿是平行的，由于填报志愿和修改志愿都需要在上次填报或修改之后的48小时，所以希望每一位考生在填写调剂志愿的时候认真负责<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp; 4、考生在复试结束后，如果符合录取条件，将收到招生单位发送的“待录取通知”；考生必须在招生单位要求的时限内答复是否接受待录取，否则招生单位可随时取消“待录取”；一旦考生同意“待录取”，在未征得该招生单位允许的情况下，不能再接受其它单位“待录取”。</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "d2da2df5c5cce92d37ae3acb5f83ffe6accca6f5ee9cd6f1ed201dde7f0f592e",
+  "evidence": {
+    "listPage": 58,
+    "listTitle": "网上调剂注意事项",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 573,
+    "detailPublishDate": "2009-04-04"
+  }
+}

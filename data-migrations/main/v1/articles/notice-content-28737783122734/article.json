@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122734",
+    "contentId": "28737783122734",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122734"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于组织开展东北地区高校毕业生网上招聘月活动的通知",
+    "source": "",
+    "publishDate": "2018-06-01",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于组织开展东北地区高校毕业生网上招聘月活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2018-6-1 10:50:44</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://f8fdda579f06a753290c2409d2d0b9abdf775ab306384e64cfe6d393d65bb86f\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://ed4fcc896a29d4b0b06294218eb46ef3083645b6b08a30d8328bd05ca4867fc7\"></p><p style=\"text-align: center;\"><img title=\"3.jpg\" src=\"migration-resource://357a4ca90f8b2eafd73bc91a64d5d6a966a4ed499c250f127bc03a7b442cc50f\"></p><p style=\"text-align: center;\"><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366343987448437508929451.jpg",
+      "originalReference": "/chistory/cms/imgs/6366343987448437508929451.jpg",
+      "token": "migration-resource://f8fdda579f06a753290c2409d2d0b9abdf775ab306384e64cfe6d393d65bb86f",
+      "snapshotPath": "assets/f8fdda579f06a753290c2409d2d0b9abdf775ab306384e64cfe6d393d65bb86f.jpg",
+      "sha256": "f8fdda579f06a753290c2409d2d0b9abdf775ab306384e64cfe6d393d65bb86f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 182086
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366343987509375006044426.jpg",
+      "originalReference": "/chistory/cms/imgs/6366343987509375006044426.jpg",
+      "token": "migration-resource://ed4fcc896a29d4b0b06294218eb46ef3083645b6b08a30d8328bd05ca4867fc7",
+      "snapshotPath": "assets/ed4fcc896a29d4b0b06294218eb46ef3083645b6b08a30d8328bd05ca4867fc7.jpg",
+      "sha256": "ed4fcc896a29d4b0b06294218eb46ef3083645b6b08a30d8328bd05ca4867fc7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 207007
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366343987518750002314414.jpg",
+      "originalReference": "/chistory/cms/imgs/6366343987518750002314414.jpg",
+      "token": "migration-resource://357a4ca90f8b2eafd73bc91a64d5d6a966a4ed499c250f127bc03a7b442cc50f",
+      "snapshotPath": "assets/357a4ca90f8b2eafd73bc91a64d5d6a966a4ed499c250f127bc03a7b442cc50f.jpg",
+      "sha256": "357a4ca90f8b2eafd73bc91a64d5d6a966a4ed499c250f127bc03a7b442cc50f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 151657
+    }
+  ],
+  "sourceFingerprint": "1093ed8bfdd89560eb92509a02d613d3168c25f16cab269af5f54fe55f7acb98",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "关于组织开展东北地区高校毕业生网上招聘月活动的通知",
+    "listPublishDate": "2018-06-01",
+    "sourceOrder": 205,
+    "detailPublishDate": "2018-06-01"
+  }
+}

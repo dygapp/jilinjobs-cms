@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:35c1460de96d510fcdc7e907308f22a3e43a160d0aa8f1817b8d05e0f6550f7c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/m4U9rOLKcfslh2brUsFhiw",
+    "url": "https://mp.weixin.qq.com/s/m4U9rOLKcfslh2brUsFhiw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学与中国电力工程顾问集团东北电力设计院有限公司举行校企合作签约仪式",
+    "source": "",
+    "publishDate": "2025-07-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/m4U9rOLKcfslh2brUsFhiw"
+  },
+  "resources": [],
+  "sourceFingerprint": "61ff5badb85c0d61eb54aecf816afe2a7fd15a4ed08804d12f3ff1df42561828",
+  "evidence": {
+    "listPage": 75,
+    "listTitle": "吉林财经大学与中国电力工程顾问集团东北电力设计院有限公司举行校企合作签约仪式",
+    "listPublishDate": "2025-07-04",
+    "sourceOrder": 745
+  }
+}

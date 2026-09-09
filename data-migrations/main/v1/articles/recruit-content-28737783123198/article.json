@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123198",
+    "contentId": "28737783123198",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123198"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "《就业工作简报》征集稿件及对编辑部工作做调整的通告",
+    "source": "",
+    "publishDate": "2010-11-11",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">《就业工作简报》征集稿件及对编辑部工作做调整的通告</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2010-11-11 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">各普通高校：<br>&nbsp;&nbsp;&nbsp; 全省2011年高校毕业生就业洽谈招聘会已经开始。为全面总结宣传各高校2011年洽谈会工作经验及成果，推动高校就业工作深入开展，《就业工作简报》2010年第4期（总第11期）将对洽谈活动进行全面宣传报道，并于12月底出刊。本刊编辑部特向各高校征集稿件。请各高校围绕本年度洽谈会的举办及学校近期就业工作情况，积极踊跃撰稿、投稿。稿件要求文字简练、内容翔实、表述清晰、特点突出。消息动态稿文字以不超出800字为宜，经验交流、就业理论指导文章以不超出2000字为宜。<br>&nbsp;&nbsp;&nbsp; 另因省中心就业指导业务的拓展和培训（特别是“双困生”培训）工作任务的繁重，为集中精力全面做好全省高校毕业生就业指导师资及双困生培训工作。现对《就业工作简报》编辑部工作做如下调整：省中心培训部部长胡丽敏同志不再兼任《就业工作简报》编辑部主任工作，由省中心信息部部长张旭光同志兼任《就业工作简报》编辑部主任。各高校通讯员可将稿件传递发送至编辑部邮箱</font><a href=\"mailto:565606678@qq.com\"><font color=\"#444444\" size=\"2\">565606678@qq.com</font></a><font color=\"#444444\" size=\"2\">、</font><a href=\"mailto:5817862@qq.com\"><font color=\"#444444\" size=\"2\">5817862@qq.com</font></a><font color=\"#444444\" size=\"2\">、</font><a href=\"mailto:365846027@qq.com\"><font color=\"#444444\" size=\"2\">365846027@qq.com</font></a><font color=\"#444444\" size=\"2\">。<br>特此通告。</font></p> <p align=\"right\"><font color=\"#444444\" size=\"2\">吉林省高等学校毕业生就业指导中心<br>2010年11月5日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "a71c9dda40168007bd58215d2d64eeb0960d3db1427614d0dee91fe1f5d437d6",
+  "evidence": {
+    "listPage": 48,
+    "listTitle": "《就业工作简报》征集稿件及对编辑部工作做调整的通告",
+    "listPublishDate": "2010-11-11",
+    "sourceOrder": 475,
+    "detailPublishDate": "2010-11-11"
+  }
+}

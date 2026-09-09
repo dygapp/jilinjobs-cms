@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:017f2ecd325a456b330536f159b88e254ac1ad2c3f8d9c73327b0f7069577838",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/C25YqSbUzqC7u4aoIKqxyw",
+    "url": "https://mp.weixin.qq.com/s/C25YqSbUzqC7u4aoIKqxyw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "毕业生邀请函|吉林省普通高校外语外贸类毕业生就业洽谈会 暨吉林外国语大学2025届毕业生秋季校园招聘会",
+    "source": "",
+    "publishDate": "2024-10-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/C25YqSbUzqC7u4aoIKqxyw"
+  },
+  "resources": [],
+  "sourceFingerprint": "04cdb1465e3ab39aa99704bb1ba74a69f2f23a4019e403e33cce98b1eea43b2a",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "毕业生邀请函|吉林省普通高校外语外贸类毕业生就业洽谈会 暨吉林外国语大学2025届毕业生秋季校园招聘会",
+    "listPublishDate": "2024-10-24",
+    "sourceOrder": 237
+  }
+}

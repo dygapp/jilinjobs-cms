@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:6464dddeea024fc678a603e92c0d7debb7af0f534900228636634ef34ca0a569",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/Enjp91ZdkdA70BknMv5j9g",
+    "url": "https://mp.weixin.qq.com/s/Enjp91ZdkdA70BknMv5j9g"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【招聘】“一起益企” 人才供需对接服务月活动招聘岗位发布（三）",
+    "source": "",
+    "publishDate": "2024-06-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Enjp91ZdkdA70BknMv5j9g"
+  },
+  "resources": [],
+  "sourceFingerprint": "018a99eee39d4931d88cf95a121eff31e387b5702266f1d9c847744cf600b4c7",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "【招聘】“一起益企” 人才供需对接服务月活动招聘岗位发布（三）",
+    "listPublishDate": "2024-06-26",
+    "sourceOrder": 263
+  }
+}

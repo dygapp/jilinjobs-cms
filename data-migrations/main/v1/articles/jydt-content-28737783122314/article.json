@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122314",
+    "contentId": "28737783122314",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122314"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "胡锦涛向墨西哥总统卡尔德龙致慰问电",
+    "source": "",
+    "publishDate": "2009-05-07",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">胡锦涛向墨西哥总统卡尔德龙致慰问电</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-5-7 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 人民网北京4月28日电&nbsp; 近日墨西哥部分地区暴发猪流感疫情，一些受感染者死亡。国家主席胡锦涛今天就此致电墨西哥总统卡尔德龙，代表中国政府和人民并以个人名义，向卡尔德龙总统、墨西哥政府和人民表示诚挚的慰问。</font></p> <p><font size=\"2\">　　胡锦涛在慰问电中说，在此艰难时刻，中国人民感同身受。中方愿同墨方加强合作，并提供必要帮助，共同应对人类公共卫生安全挑战。我相信，在总统先生和墨西哥政府的领导下，墨西哥人民一定能够战胜这场疫情灾害，早日恢复正常生产生活秩序。<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "54bf90772e5eac57259f2a97905fed618100b4552025253b0b644a86f699db28",
+  "evidence": {
+    "listPage": 175,
+    "listTitle": "胡锦涛向墨西哥总统卡尔德龙致慰问电",
+    "listPublishDate": "2009-05-07",
+    "sourceOrder": 1745,
+    "detailPublishDate": "2009-05-07"
+  }
+}

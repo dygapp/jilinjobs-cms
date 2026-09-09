@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:afd7a82e993358839eec0e46932837bac6217d19ff43cad0fc650be6cc052151",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/53ZF0PESVPk48jxlODH9mQ",
+    "url": "https://mp.weixin.qq.com/s/53ZF0PESVPk48jxlODH9mQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春医学高等专科学校副校长刘洋带领健康学院赴北京开展实习就业合作调研",
+    "source": "",
+    "publishDate": "2026-05-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/53ZF0PESVPk48jxlODH9mQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "c7bef32a95fca7f5dd634a9dbb55369e502001a7761764450c31974ac515801c",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "长春医学高等专科学校副校长刘洋带领健康学院赴北京开展实习就业合作调研",
+    "listPublishDate": "2026-05-06",
+    "sourceOrder": 210
+  }
+}

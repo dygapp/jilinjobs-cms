@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:283459333406720",
+    "contentId": "283459333406720",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=283459333406720"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办全国建筑地产行业面向2025届高校毕业生春季招聘活动的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2025-04-11",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://e10de8d41492b2adfbc58368aa52db5af8843b72318c76818abfa50c59f9b8f1\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://bcbae48bb47a2e5a48deb0967efaf4b4e7c3fd14ed656c67511c48bf25c0090e\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://44501d537ce805bd7e8177d4ef3a8fe8e67b2a3a4076b442efa47bdc73ac9f42\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://eae2061383c66a436b446065aeac39ebdb1dcf17f79b2869992af5197a311df7\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://1502cf210567126e8f97f42914574219d5f414aeaa7971b6e843ae1133b24f38\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/f73b0baf-ca87-4652-bb83-f5920bc5f27e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/f73b0baf-ca87-4652-bb83-f5920bc5f27e.jpg",
+      "token": "migration-resource://e10de8d41492b2adfbc58368aa52db5af8843b72318c76818abfa50c59f9b8f1",
+      "snapshotPath": "assets/e10de8d41492b2adfbc58368aa52db5af8843b72318c76818abfa50c59f9b8f1.jpg",
+      "sha256": "e10de8d41492b2adfbc58368aa52db5af8843b72318c76818abfa50c59f9b8f1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/17bd42c9-01aa-4613-b833-f39ad79cb7a5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/17bd42c9-01aa-4613-b833-f39ad79cb7a5.jpg",
+      "token": "migration-resource://bcbae48bb47a2e5a48deb0967efaf4b4e7c3fd14ed656c67511c48bf25c0090e",
+      "snapshotPath": "assets/bcbae48bb47a2e5a48deb0967efaf4b4e7c3fd14ed656c67511c48bf25c0090e.jpg",
+      "sha256": "bcbae48bb47a2e5a48deb0967efaf4b4e7c3fd14ed656c67511c48bf25c0090e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/f2079313-fb52-4af0-b9a5-b22d94d5e194.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/f2079313-fb52-4af0-b9a5-b22d94d5e194.jpg",
+      "token": "migration-resource://44501d537ce805bd7e8177d4ef3a8fe8e67b2a3a4076b442efa47bdc73ac9f42",
+      "snapshotPath": "assets/44501d537ce805bd7e8177d4ef3a8fe8e67b2a3a4076b442efa47bdc73ac9f42.jpg",
+      "sha256": "44501d537ce805bd7e8177d4ef3a8fe8e67b2a3a4076b442efa47bdc73ac9f42",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/484d04f5-b3b3-4697-b01f-c4ed9fee10bd.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/484d04f5-b3b3-4697-b01f-c4ed9fee10bd.jpg",
+      "token": "migration-resource://eae2061383c66a436b446065aeac39ebdb1dcf17f79b2869992af5197a311df7",
+      "snapshotPath": "assets/eae2061383c66a436b446065aeac39ebdb1dcf17f79b2869992af5197a311df7.jpg",
+      "sha256": "eae2061383c66a436b446065aeac39ebdb1dcf17f79b2869992af5197a311df7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/c4f36306-62fd-49a9-8776-ee64525af475.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/c4f36306-62fd-49a9-8776-ee64525af475.jpg",
+      "token": "migration-resource://1502cf210567126e8f97f42914574219d5f414aeaa7971b6e843ae1133b24f38",
+      "snapshotPath": "assets/1502cf210567126e8f97f42914574219d5f414aeaa7971b6e843ae1133b24f38.jpg",
+      "sha256": "1502cf210567126e8f97f42914574219d5f414aeaa7971b6e843ae1133b24f38",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "24392b2bf9ee6024065582f6ae6b49c6d878a964f0f49a464c78643680302cc7",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "关于举办全国建筑地产行业面向2025届高校毕业生春季招聘活动的通知",
+    "listPublishDate": "2025-04-11",
+    "sourceOrder": 44,
+    "detailPublishDate": "2025-04-11"
+  }
+}

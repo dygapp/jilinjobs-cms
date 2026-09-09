@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120678",
+    "contentId": "28737783120678",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120678"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展吉林省高校职业发展与就业指导课程建设情况调查统计工作的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2021-03-18",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align:center\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"migration-resource://ab7692d79a6c4e6d876c7a6e9884b4271433dbecda5ac257f2030660657ab351\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://1eb94e7be2e8c7e2ce741f06ceebf58c5b8e4b94ed5d9050dc7926aeb270014a\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://7582f8021b08fcc369270e26f6bc9c010285d77fe1ea86d806cbab1c6e3e7171\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://d946df08219037270812653fddf085fcb8e2c3986ffcf5998444227867ffd8b6\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210318144241.jpg",
+      "originalReference": "/chistory/cms/editor/20210318144241.jpg",
+      "token": "migration-resource://ab7692d79a6c4e6d876c7a6e9884b4271433dbecda5ac257f2030660657ab351",
+      "snapshotPath": "assets/ab7692d79a6c4e6d876c7a6e9884b4271433dbecda5ac257f2030660657ab351.jpg",
+      "sha256": "ab7692d79a6c4e6d876c7a6e9884b4271433dbecda5ac257f2030660657ab351",
+      "contentType": "image/jpeg",
+      "sizeBytes": 203019
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210318144254.jpg",
+      "originalReference": "/chistory/cms/editor/20210318144254.jpg",
+      "token": "migration-resource://1eb94e7be2e8c7e2ce741f06ceebf58c5b8e4b94ed5d9050dc7926aeb270014a",
+      "snapshotPath": "assets/1eb94e7be2e8c7e2ce741f06ceebf58c5b8e4b94ed5d9050dc7926aeb270014a.jpg",
+      "sha256": "1eb94e7be2e8c7e2ce741f06ceebf58c5b8e4b94ed5d9050dc7926aeb270014a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 109103
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210318144300.jpg",
+      "originalReference": "/chistory/cms/editor/20210318144300.jpg",
+      "token": "migration-resource://7582f8021b08fcc369270e26f6bc9c010285d77fe1ea86d806cbab1c6e3e7171",
+      "snapshotPath": "assets/7582f8021b08fcc369270e26f6bc9c010285d77fe1ea86d806cbab1c6e3e7171.jpg",
+      "sha256": "7582f8021b08fcc369270e26f6bc9c010285d77fe1ea86d806cbab1c6e3e7171",
+      "contentType": "image/jpeg",
+      "sizeBytes": 210193
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210318144310.jpg",
+      "originalReference": "/chistory/cms/editor/20210318144310.jpg",
+      "token": "migration-resource://d946df08219037270812653fddf085fcb8e2c3986ffcf5998444227867ffd8b6",
+      "snapshotPath": "assets/d946df08219037270812653fddf085fcb8e2c3986ffcf5998444227867ffd8b6.jpg",
+      "sha256": "d946df08219037270812653fddf085fcb8e2c3986ffcf5998444227867ffd8b6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 179936
+    }
+  ],
+  "sourceFingerprint": "234e6436e708517776f24e63287cfe54d14899ef29c0ff53a0e48cf911c1d03b",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "关于开展吉林省高校职业发展与就业指导课程建设情况调查统计工作的通知",
+    "listPublishDate": "2021-03-18",
+    "sourceOrder": 158,
+    "detailPublishDate": "2021-03-18"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120786",
+    "contentId": "28737783120786",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120786"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "紧急通知（高校学生处）",
+    "source": "",
+    "publishDate": "2012-03-14",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">紧急通知（高校学生处）</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-3-14 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p><font size=\"2\">各普通高校：<br>&nbsp;&nbsp;&nbsp; 根据人力资源和社会保障部办公厅《关于开展全国毕业生就业工作联合督查的通知》，本月下旬，国务院就业工作部际联席组成部门将派出联合督查组来我省，就高校毕业生就业工作进行督查。按照教育部学生司和我厅领导的意见，请各学校就近年毕业生离校前的就业工作进行一次全面自查，并就督查组关注的有关问题，做出简要汇报，形成书面材料上报，以备督查组检查。<br>一、内容<br>&nbsp;&nbsp;&nbsp; 1.2012届毕业生就业工作进展情况<br>&nbsp;&nbsp;&nbsp; 2.学校拓宽就业领域，开发就业市场情况<br>&nbsp;&nbsp;&nbsp; 3.组织毕业生离校前参加职业培训、技能鉴定、就业见习情况（包括人数、有无补贴、见习基地数、留用数）。<br>&nbsp;&nbsp;&nbsp; 4.创业教育及毕业生自主创业情况。<br>&nbsp;&nbsp;&nbsp; 5.毕业生离校前的就业指导和就业服务情况。<br>&nbsp;&nbsp;&nbsp; 6.科研项目吸纳高校毕业生就业及相关政策落实情况。<br>&nbsp;&nbsp;&nbsp; 7.动员大学生应征入伍及相关政策落实情况。<br>&nbsp;&nbsp;&nbsp; 8.毕业生就业工作存在的突出问题及对策建议。<br>二、要求<br>&nbsp;&nbsp;&nbsp;&nbsp;1.有则汇报、无则不报，各校自认有特色的可以反映。<br>&nbsp;&nbsp;&nbsp; 2.就实避虚，直奔主题。<br>&nbsp;&nbsp;&nbsp; 3.简明扼要，点到即可。<br>&nbsp;&nbsp;&nbsp; 4.字数控制在1500字以内。<br>&nbsp;&nbsp;&nbsp; 5.交稿时间为3月19日11:00时。<br>&nbsp;&nbsp;&nbsp; 6.交稿方式：QQ上传，省中心吴强QQ号：460521094<br>三、特别提示<br>&nbsp;&nbsp;&nbsp; 督查组拟深入我省高校实地督查，具体学校目前尚不能确定，请各高校有所准备，听候通知。</font></p> <p align=\"right\"><font size=\"2\">省教育厅高校学生处</font></p> <p align=\"right\"><font size=\"2\">二〇一二年三月十四日</font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "c3db2b0884964756888a1efc33a4f93b4421231fc58f0f193d120508fa6dcd60",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "紧急通知（高校学生处）",
+    "listPublishDate": "2012-03-14",
+    "sourceOrder": 400,
+    "detailPublishDate": "2012-03-14"
+  }
+}

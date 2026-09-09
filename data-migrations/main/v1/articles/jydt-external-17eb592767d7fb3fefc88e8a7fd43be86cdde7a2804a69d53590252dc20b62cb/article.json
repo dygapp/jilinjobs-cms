@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:17eb592767d7fb3fefc88e8a7fd43be86cdde7a2804a69d53590252dc20b62cb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/szh6_DNY9QZ3mACl3Iq-ew",
+    "url": "https://mp.weixin.qq.com/s/szh6_DNY9QZ3mACl3Iq-ew"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“聚力扩容提质 服务高质量发展”2026年吉林省高校毕业生吉林艺术学院专场招聘会成功举办",
+    "source": "",
+    "publishDate": "2026-04-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/szh6_DNY9QZ3mACl3Iq-ew"
+  },
+  "resources": [],
+  "sourceFingerprint": "d59f68d6e177a86a8e780835f5649ec9b7be02c17c81fa728c3895ebe786e8fa",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "“聚力扩容提质 服务高质量发展”2026年吉林省高校毕业生吉林艺术学院专场招聘会成功举办",
+    "listPublishDate": "2026-04-10",
+    "sourceOrder": 305
+  }
+}

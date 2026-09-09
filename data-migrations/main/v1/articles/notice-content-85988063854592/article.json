@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:85988063854592",
+    "contentId": "85988063854592",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=85988063854592"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于吉林省第四届大学生就业创业人物事迹征集结果的通知",
+    "source": "培训部",
+    "publishDate": "2021-06-29",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1272\" src=\"migration-resource://8c981a6137cfaf7d5c89f5e3b2b9c57692219d809c8d7f31f07d992e7b50c20d\" width=\"900\"><img alt=\"\" height=\"1272\" src=\"migration-resource://7d6e4b836282335dc273b26cfc0f64134e867a9d419c63ad59b57afbeeca30b7\" width=\"900\"><img alt=\"\" height=\"1272\" src=\"migration-resource://c705ae46a8980fabd657f6cb4ae6781243110edc8716d45fa21d617b4def4336\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/91c1320f-3e78-47d1-9d92-4d268eecae93.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/91c1320f-3e78-47d1-9d92-4d268eecae93.jpg",
+      "token": "migration-resource://8c981a6137cfaf7d5c89f5e3b2b9c57692219d809c8d7f31f07d992e7b50c20d",
+      "snapshotPath": "assets/8c981a6137cfaf7d5c89f5e3b2b9c57692219d809c8d7f31f07d992e7b50c20d.jpg",
+      "sha256": "8c981a6137cfaf7d5c89f5e3b2b9c57692219d809c8d7f31f07d992e7b50c20d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 185602
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/234a22f3-18a0-4194-894d-0a547ae44568.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/234a22f3-18a0-4194-894d-0a547ae44568.jpg",
+      "token": "migration-resource://7d6e4b836282335dc273b26cfc0f64134e867a9d419c63ad59b57afbeeca30b7",
+      "snapshotPath": "assets/7d6e4b836282335dc273b26cfc0f64134e867a9d419c63ad59b57afbeeca30b7.jpg",
+      "sha256": "7d6e4b836282335dc273b26cfc0f64134e867a9d419c63ad59b57afbeeca30b7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 59327
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/8cabde7d-bd72-44bf-a897-1f14eab00ecc.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/8cabde7d-bd72-44bf-a897-1f14eab00ecc.jpg",
+      "token": "migration-resource://c705ae46a8980fabd657f6cb4ae6781243110edc8716d45fa21d617b4def4336",
+      "snapshotPath": "assets/c705ae46a8980fabd657f6cb4ae6781243110edc8716d45fa21d617b4def4336.jpg",
+      "sha256": "c705ae46a8980fabd657f6cb4ae6781243110edc8716d45fa21d617b4def4336",
+      "contentType": "image/jpeg",
+      "sizeBytes": 106999
+    }
+  ],
+  "sourceFingerprint": "0b188dfb45250eebbe016a725602236e23729ba288d656d05b73b3b090dd6d30",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "关于吉林省第四届大学生就业创业人物事迹征集结果的通知",
+    "listPublishDate": "2021-06-29",
+    "sourceOrder": 151,
+    "detailPublishDate": "2021-06-29"
+  }
+}

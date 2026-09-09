@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:da78b5de0b5261d92c5922808bf4df6a80b3892e69678df47c8d1fd4838a7bb6",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1026/169682.htm",
+    "url": "https://www.jlju.edu.cn/info/1026/169682.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学党委书记李雁冰率队赴佛山、东莞访企拓岗",
+    "source": "",
+    "publishDate": "2025-06-24",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1026/169682.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "4e76af0a7616e5afd5a23c7dee3bfbd40f097236f99da3c13c97dad1c1c700ad",
+  "evidence": {
+    "listPage": 78,
+    "listTitle": "吉林建筑大学党委书记李雁冰率队赴佛山、东莞访企拓岗",
+    "listPublishDate": "2025-06-24",
+    "sourceOrder": 777
+  }
+}

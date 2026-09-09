@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-national:content:162283686756352",
+    "contentId": "162283686756352",
+    "typeCode": "policy-national",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=162283686756352"
+  },
+  "target": {
+    "columnAlias": "policy-national",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅关于建立高校毕业生毕业去向登记制度的通知",
+    "source": "",
+    "publishDate": "2023-06-15",
+    "bodyHtml": "\n                        <p><img alt=\"\" height=\"2327\" src=\"migration-resource://83a67f494a1e882959fd77d0408960961664f941ea3b9747901d182ccc13176c\" width=\"1638\"><img alt=\"\" height=\"2339\" src=\"migration-resource://0f975a00100a16112efb6abcf7c8a64134b46f8defd0990d661dc9d44b92b6ad\" width=\"1654\"><img alt=\"\" height=\"2339\" src=\"migration-resource://007c45eed7eabe3638099fe60a175121107924ef56308d5c5460e4b587fe37cc\" width=\"1654\"><img alt=\"\" height=\"2339\" src=\"migration-resource://84510947efd9c67c2733963fe8faa946aa978c3299d4335cb9708c763a5670cb\" width=\"1654\"><img alt=\"\" height=\"2339\" src=\"migration-resource://3f078a17198aa18016b4a450bc3f53e4d003d71ea559fdc8f3ab1609f297b3fa\" width=\"1654\"><img alt=\"\" height=\"2339\" src=\"migration-resource://17c6f5a931e1e182febd5e736ae3c2fc4d551ca9e7a7e76fd38af6428951ab9d\" width=\"1654\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-06-15/7c16af0c-965d-435a-822e-aabc9bf0fcb8.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-06-15/7c16af0c-965d-435a-822e-aabc9bf0fcb8.jpg",
+      "token": "migration-resource://83a67f494a1e882959fd77d0408960961664f941ea3b9747901d182ccc13176c",
+      "snapshotPath": "assets/83a67f494a1e882959fd77d0408960961664f941ea3b9747901d182ccc13176c.jpg",
+      "sha256": "83a67f494a1e882959fd77d0408960961664f941ea3b9747901d182ccc13176c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 246989
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-06-15/b2743b8d-f805-401a-bfd2-45f8f1ac8fb6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-06-15/b2743b8d-f805-401a-bfd2-45f8f1ac8fb6.jpg",
+      "token": "migration-resource://0f975a00100a16112efb6abcf7c8a64134b46f8defd0990d661dc9d44b92b6ad",
+      "snapshotPath": "assets/0f975a00100a16112efb6abcf7c8a64134b46f8defd0990d661dc9d44b92b6ad.jpg",
+      "sha256": "0f975a00100a16112efb6abcf7c8a64134b46f8defd0990d661dc9d44b92b6ad",
+      "contentType": "image/jpeg",
+      "sizeBytes": 326102
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-06-15/985ee725-4816-4800-8ada-95e5dc635e68.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-06-15/985ee725-4816-4800-8ada-95e5dc635e68.jpg",
+      "token": "migration-resource://007c45eed7eabe3638099fe60a175121107924ef56308d5c5460e4b587fe37cc",
+      "snapshotPath": "assets/007c45eed7eabe3638099fe60a175121107924ef56308d5c5460e4b587fe37cc.jpg",
+      "sha256": "007c45eed7eabe3638099fe60a175121107924ef56308d5c5460e4b587fe37cc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 352116
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-06-15/e861dbf9-7926-4d25-b1d8-6ee42c55b37a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-06-15/e861dbf9-7926-4d25-b1d8-6ee42c55b37a.jpg",
+      "token": "migration-resource://84510947efd9c67c2733963fe8faa946aa978c3299d4335cb9708c763a5670cb",
+      "snapshotPath": "assets/84510947efd9c67c2733963fe8faa946aa978c3299d4335cb9708c763a5670cb.jpg",
+      "sha256": "84510947efd9c67c2733963fe8faa946aa978c3299d4335cb9708c763a5670cb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 333909
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-06-15/7bc8c33f-9d6b-46f7-9625-50cca654f8b8.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-06-15/7bc8c33f-9d6b-46f7-9625-50cca654f8b8.jpg",
+      "token": "migration-resource://3f078a17198aa18016b4a450bc3f53e4d003d71ea559fdc8f3ab1609f297b3fa",
+      "snapshotPath": "assets/3f078a17198aa18016b4a450bc3f53e4d003d71ea559fdc8f3ab1609f297b3fa.jpg",
+      "sha256": "3f078a17198aa18016b4a450bc3f53e4d003d71ea559fdc8f3ab1609f297b3fa",
+      "contentType": "image/jpeg",
+      "sizeBytes": 116061
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-06-15/5d5005e7-3d38-408d-a214-deb472b93797.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-06-15/5d5005e7-3d38-408d-a214-deb472b93797.jpg",
+      "token": "migration-resource://17c6f5a931e1e182febd5e736ae3c2fc4d551ca9e7a7e76fd38af6428951ab9d",
+      "snapshotPath": "assets/17c6f5a931e1e182febd5e736ae3c2fc4d551ca9e7a7e76fd38af6428951ab9d.jpg",
+      "sha256": "17c6f5a931e1e182febd5e736ae3c2fc4d551ca9e7a7e76fd38af6428951ab9d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 89119
+    }
+  ],
+  "sourceFingerprint": "a2fbe3022574f00e7f70f5247b6fca61dd4d6a4f46e0ac63c63cf1e8525e3da1",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "教育部办公厅关于建立高校毕业生毕业去向登记制度的通知",
+    "listPublishDate": "2023-06-15",
+    "sourceOrder": 7,
+    "detailPublishDate": "2023-06-15"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:87442396823552",
+    "contentId": "87442396823552",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=87442396823552"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发开展2022年高校职业生涯咨询特色工作室建设工作的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2022-04-26",
+    "bodyHtml": "\n                        <p>各普通高校：</p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp;教育部学生服务与素质发展中心下发了《关于开展2022年高校职业生涯咨询特色工作室建设工作的通知》，现转发给你们，请各高校按照要求积极申报，于5月17日前向省中心提交推荐材料，省中心遴选后统一报送教育部学生服务与素质发展中心。具体要求见附件。</p>\n\n<p>联系人：秦宁</p>\n\n<p>邮箱：qinning@jilinjobs.cn</p>\n\n<p>电话：13596126121</p>\n\n<p>附件：《关于开展2022年高校职业生涯咨询特色工作室建设工作的通知》</p>\n\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 吉林省高等学校毕业生就业指导中心</p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2022年4月26日&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1011\" src=\"migration-resource://4596b7223532477f0365564881d5b9dfa31b34716292be899a19859c07252717\" width=\"788\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1003\" src=\"migration-resource://b7a63ad8b239378f561f0f55507af2543ce418082222ad0f4d996b4188337c40\" width=\"786\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"678\" src=\"migration-resource://4dfda4230b882ff3472f68c39e40d1cf9645c93507434707c26af1f5487a4dc6\" width=\"786\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"978\" src=\"migration-resource://49c2d9f7d31f519323c98adf4f5d63ce2a9d9ac00aef4b510d9fa141d32d30d3\" width=\"786\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1013\" src=\"migration-resource://02f7c45226e4b3a9d4956d112da4f51cddee85742b4e3ae0ee6078e86127e811\" width=\"788\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1023\" src=\"migration-resource://b5402f0f692830e60f52fea3600f0ad579dcab4d6058b0ad87555ae39d2f6521\" width=\"788\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/8418c303-3c55-43e2-9ae3-c6d465625b7e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/8418c303-3c55-43e2-9ae3-c6d465625b7e.jpg",
+      "token": "migration-resource://4596b7223532477f0365564881d5b9dfa31b34716292be899a19859c07252717",
+      "snapshotPath": "assets/4596b7223532477f0365564881d5b9dfa31b34716292be899a19859c07252717.jpg",
+      "sha256": "4596b7223532477f0365564881d5b9dfa31b34716292be899a19859c07252717",
+      "contentType": "image/jpeg",
+      "sizeBytes": 100018
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/ac2f0ac9-9520-41ce-a39b-a3fb49a37219.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/ac2f0ac9-9520-41ce-a39b-a3fb49a37219.jpg",
+      "token": "migration-resource://b7a63ad8b239378f561f0f55507af2543ce418082222ad0f4d996b4188337c40",
+      "snapshotPath": "assets/b7a63ad8b239378f561f0f55507af2543ce418082222ad0f4d996b4188337c40.jpg",
+      "sha256": "b7a63ad8b239378f561f0f55507af2543ce418082222ad0f4d996b4188337c40",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92443
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/1b31dd6b-afdb-4a92-a349-bec73737d9b8.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/1b31dd6b-afdb-4a92-a349-bec73737d9b8.jpg",
+      "token": "migration-resource://4dfda4230b882ff3472f68c39e40d1cf9645c93507434707c26af1f5487a4dc6",
+      "snapshotPath": "assets/4dfda4230b882ff3472f68c39e40d1cf9645c93507434707c26af1f5487a4dc6.jpg",
+      "sha256": "4dfda4230b882ff3472f68c39e40d1cf9645c93507434707c26af1f5487a4dc6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 47729
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/9af190b6-45e4-48e1-b73f-7b69e7232797.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/9af190b6-45e4-48e1-b73f-7b69e7232797.jpg",
+      "token": "migration-resource://49c2d9f7d31f519323c98adf4f5d63ce2a9d9ac00aef4b510d9fa141d32d30d3",
+      "snapshotPath": "assets/49c2d9f7d31f519323c98adf4f5d63ce2a9d9ac00aef4b510d9fa141d32d30d3.jpg",
+      "sha256": "49c2d9f7d31f519323c98adf4f5d63ce2a9d9ac00aef4b510d9fa141d32d30d3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67228
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/c63fcf73-569c-468b-a800-d5406f59cf15.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/c63fcf73-569c-468b-a800-d5406f59cf15.jpg",
+      "token": "migration-resource://02f7c45226e4b3a9d4956d112da4f51cddee85742b4e3ae0ee6078e86127e811",
+      "snapshotPath": "assets/02f7c45226e4b3a9d4956d112da4f51cddee85742b4e3ae0ee6078e86127e811.jpg",
+      "sha256": "02f7c45226e4b3a9d4956d112da4f51cddee85742b4e3ae0ee6078e86127e811",
+      "contentType": "image/jpeg",
+      "sizeBytes": 35722
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/d510ccae-9ec8-4d6b-9bcd-0b630687bfe0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/d510ccae-9ec8-4d6b-9bcd-0b630687bfe0.jpg",
+      "token": "migration-resource://b5402f0f692830e60f52fea3600f0ad579dcab4d6058b0ad87555ae39d2f6521",
+      "snapshotPath": "assets/b5402f0f692830e60f52fea3600f0ad579dcab4d6058b0ad87555ae39d2f6521.jpg",
+      "sha256": "b5402f0f692830e60f52fea3600f0ad579dcab4d6058b0ad87555ae39d2f6521",
+      "contentType": "image/jpeg",
+      "sizeBytes": 49818
+    }
+  ],
+  "sourceFingerprint": "19d73d8f8a85637ad8e4e678545357981ceedcdd85721e41a6d1ce4be7ceca29",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "关于转发开展2022年高校职业生涯咨询特色工作室建设工作的通知",
+    "listPublishDate": "2022-04-26",
+    "sourceOrder": 131,
+    "detailPublishDate": "2022-04-26"
+  }
+}

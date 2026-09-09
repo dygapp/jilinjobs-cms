@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123148",
+    "contentId": "28737783123148",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123148"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省高校毕业生网络招聘系统正式开通",
+    "source": "",
+    "publishDate": "2016-06-17",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省高校毕业生网络招聘系统正式开通</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2016-6-17 11:48:16</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>\n    &nbsp;&nbsp;&nbsp; 为了给用人单位和毕业生搭建高效、便捷的对接交流平台，向企业和学生推送精准的就业服务，吉林省高等学校毕业生就业指导中心在吉林省高等学校毕业生就业信息网（www.jilinjobs.cn）专门开设了网络招聘页面，免费在线发布岗位、求职信息。\n</p>\n<p>\n    &nbsp;&nbsp;&nbsp; 用人单位发布需求信息请先在线注册，审核通过后自主发布招聘信息。\n</p>\n<p>\n    &nbsp;&nbsp;&nbsp; 学生发布求职信息请使用吉林省高校就业数据网报系统账号登录，完善个人简历后即可在线投递简历。\n</p>\n<p>\n    &nbsp;\n</p>\n<p style=\"text-align: center;\">\n    （扫二维码进入招聘系统）\n</p>\n<p style=\"text-align: center\">\n  <a href=\"http://www.jilinjobs.cn:7000\" target=\"_blank\">\n &nbsp;<img width=\"225\" height=\"216\" title=\"liantu.png\" style=\"width: 225px; height: 216px;\" src=\"migration-resource://d3cc880f7d4422e06cc965615016cd0afcc0b267279b69c9b0bc2a681251dff4\"></a>\n</p>\n<p>\n    <br>\n</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360176103482487503948650.png",
+      "originalReference": "/chistory/cms/imgs/6360176103482487503948650.png",
+      "token": "migration-resource://d3cc880f7d4422e06cc965615016cd0afcc0b267279b69c9b0bc2a681251dff4",
+      "snapshotPath": "assets/d3cc880f7d4422e06cc965615016cd0afcc0b267279b69c9b0bc2a681251dff4.jpg",
+      "sha256": "d3cc880f7d4422e06cc965615016cd0afcc0b267279b69c9b0bc2a681251dff4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 65888
+    }
+  ],
+  "sourceFingerprint": "b5c922f03b05041adee62de0d6b72603ac8303f687a338d39bf1debdf89283b2",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "吉林省高校毕业生网络招聘系统正式开通",
+    "listPublishDate": "2016-06-17",
+    "sourceOrder": 415,
+    "detailPublishDate": "2016-06-17"
+  }
+}

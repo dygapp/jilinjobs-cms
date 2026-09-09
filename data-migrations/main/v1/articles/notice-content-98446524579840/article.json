@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:98446524579840",
+    "contentId": "98446524579840",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=98446524579840"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于印发《吉林省2022年农村义务教育阶段学校特设岗位教师招聘办法》的通知",
+    "source": "吉林省教育厅",
+    "publishDate": "2022-06-28",
+    "bodyHtml": "\n                        <p><a href=\"migration-attachment://b3c0c1259fc348d4aeb6b5d7bea71bb9ef837e0f2438d0157e40f697fb69d770\">关于印发《吉林省2022年农村义务教育阶段学校特设岗位教师招聘办法》的通知</a></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "ATTACHMENT",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-06-28/2a57501f-fa45-46fb-9994-2610ae86a140.pdf",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-06-28/2a57501f-fa45-46fb-9994-2610ae86a140.pdf",
+      "token": "migration-attachment://b3c0c1259fc348d4aeb6b5d7bea71bb9ef837e0f2438d0157e40f697fb69d770",
+      "snapshotPath": "assets/b3c0c1259fc348d4aeb6b5d7bea71bb9ef837e0f2438d0157e40f697fb69d770.pdf",
+      "sha256": "b3c0c1259fc348d4aeb6b5d7bea71bb9ef837e0f2438d0157e40f697fb69d770",
+      "contentType": "application/pdf",
+      "sizeBytes": 1357514
+    }
+  ],
+  "sourceFingerprint": "8ef9f90ac96ae596ad6b0a1d417b93c5f4339888837e22ba2858a25e019b92df",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "关于印发《吉林省2022年农村义务教育阶段学校特设岗位教师招聘办法》的通知",
+    "listPublishDate": "2022-06-28",
+    "sourceOrder": 120,
+    "detailPublishDate": "2022-06-28"
+  }
+}

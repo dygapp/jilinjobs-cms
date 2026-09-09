@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120728",
+    "contentId": "28737783120728",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120728"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展“2016年吉林省高校就业创业优秀论文征文评比活动”的通知",
+    "source": "",
+    "publishDate": "2015-12-31",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于开展“2016年吉林省高校就业创业优秀论文征文评比活动”的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2015-12-31 11:42:05</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img src=\"migration-resource://c0a90af798de4d7bf5b35905829981023b5ca7280e978195b83035888d8b4daf\" style=\"\" title=\"1.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://beffadc272b5ab3330a61c69ed84b45eded0baa96f30484871e54c28c71c2722\" style=\"\" title=\"2.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://1a9db39f9adcaeda59f4066d78c1f640d76754d5d07b2e029f82d13e71e28d13\" style=\"\" title=\"3.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://8fb007b22ce9c5dec7221cb0688cc60413a8431462e40f9942363761185cf209\" style=\"\" title=\"4.jpg\"></p><p style=\"text-align: center;\"><span style=\"font-size: 24px;\"></span><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358785746061062507096492.jpg",
+      "originalReference": "/chistory/cms/imgs/6358785746061062507096492.jpg",
+      "token": "migration-resource://c0a90af798de4d7bf5b35905829981023b5ca7280e978195b83035888d8b4daf",
+      "snapshotPath": "assets/c0a90af798de4d7bf5b35905829981023b5ca7280e978195b83035888d8b4daf.jpg",
+      "sha256": "c0a90af798de4d7bf5b35905829981023b5ca7280e978195b83035888d8b4daf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 261125
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358785746073562509824970.jpg",
+      "originalReference": "/chistory/cms/imgs/6358785746073562509824970.jpg",
+      "token": "migration-resource://beffadc272b5ab3330a61c69ed84b45eded0baa96f30484871e54c28c71c2722",
+      "snapshotPath": "assets/beffadc272b5ab3330a61c69ed84b45eded0baa96f30484871e54c28c71c2722.jpg",
+      "sha256": "beffadc272b5ab3330a61c69ed84b45eded0baa96f30484871e54c28c71c2722",
+      "contentType": "image/jpeg",
+      "sizeBytes": 152746
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358785746081375007567541.jpg",
+      "originalReference": "/chistory/cms/imgs/6358785746081375007567541.jpg",
+      "token": "migration-resource://1a9db39f9adcaeda59f4066d78c1f640d76754d5d07b2e029f82d13e71e28d13",
+      "snapshotPath": "assets/1a9db39f9adcaeda59f4066d78c1f640d76754d5d07b2e029f82d13e71e28d13.jpg",
+      "sha256": "1a9db39f9adcaeda59f4066d78c1f640d76754d5d07b2e029f82d13e71e28d13",
+      "contentType": "image/jpeg",
+      "sizeBytes": 203126
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358785746089187505310112.jpg",
+      "originalReference": "/chistory/cms/imgs/6358785746089187505310112.jpg",
+      "token": "migration-resource://8fb007b22ce9c5dec7221cb0688cc60413a8431462e40f9942363761185cf209",
+      "snapshotPath": "assets/8fb007b22ce9c5dec7221cb0688cc60413a8431462e40f9942363761185cf209.jpg",
+      "sha256": "8fb007b22ce9c5dec7221cb0688cc60413a8431462e40f9942363761185cf209",
+      "contentType": "image/jpeg",
+      "sizeBytes": 174139
+    }
+  ],
+  "sourceFingerprint": "3db20ad6d3704b6aa363b02e2e8820d6ce599ac85be1d21b992ced86bb69db40",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "关于开展“2016年吉林省高校就业创业优秀论文征文评比活动”的通知",
+    "listPublishDate": "2015-12-31",
+    "sourceOrder": 258,
+    "detailPublishDate": "2015-12-31"
+  }
+}

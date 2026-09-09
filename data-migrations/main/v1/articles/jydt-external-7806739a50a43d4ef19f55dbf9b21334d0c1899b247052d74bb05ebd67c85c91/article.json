@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7806739a50a43d4ef19f55dbf9b21334d0c1899b247052d74bb05ebd67c85c91",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/NAgmxPqMKC4YUxzhaH2Q5Q",
+    "url": "https://mp.weixin.qq.com/s/NAgmxPqMKC4YUxzhaH2Q5Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林医药学院举办2025届毕业生招聘会",
+    "source": "",
+    "publishDate": "2025-06-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/NAgmxPqMKC4YUxzhaH2Q5Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "d8e6c7d6c2497397516c0db7efa89495a1404bed558b8aca80757f54cb4a9948",
+  "evidence": {
+    "listPage": 82,
+    "listTitle": "吉林医药学院举办2025届毕业生招聘会",
+    "listPublishDate": "2025-06-16",
+    "sourceOrder": 811
+  }
+}

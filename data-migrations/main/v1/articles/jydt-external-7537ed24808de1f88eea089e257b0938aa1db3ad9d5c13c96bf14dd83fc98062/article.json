@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7537ed24808de1f88eea089e257b0938aa1db3ad9d5c13c96bf14dd83fc98062",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/RjMhKeFhzhbg-Knd1ytCPA",
+    "url": "https://mp.weixin.qq.com/s/RjMhKeFhzhbg-Knd1ytCPA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林动画学院走进长春市双新智创网络科技有限公司",
+    "source": "",
+    "publishDate": "2026-08-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/RjMhKeFhzhbg-Knd1ytCPA"
+  },
+  "resources": [],
+  "sourceFingerprint": "095fb5b6775e8301fd40f07fbc2a0e419a221f50057043f7e4acbdb15f12f923",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "吉林动画学院走进长春市双新智创网络科技有限公司",
+    "listPublishDate": "2026-08-04",
+    "sourceOrder": 28
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:9303fa89543000ca0689b435f33e3136f06174d9acabd404bd5d1d0e36a34b73",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/S6jgM7s9-_qbLd0HobI74w",
+    "url": "https://mp.weixin.qq.com/s/S6jgM7s9-_qbLd0HobI74w"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“聚力扩容提质 服务高质量发展” 2026年吉林省西部应用型人才专场招聘会暨白城师范学院2026届毕业生双选会（春季场）邀请函",
+    "source": "",
+    "publishDate": "2026-03-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/S6jgM7s9-_qbLd0HobI74w"
+  },
+  "resources": [],
+  "sourceFingerprint": "0b3de2333525ce99fb994a0a9734810d17879e53eaf273364beede6e76440c47",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "“聚力扩容提质 服务高质量发展” 2026年吉林省西部应用型人才专场招聘会暨白城师范学院2026届毕业生双选会（春季场）邀请函",
+    "listPublishDate": "2026-03-17",
+    "sourceOrder": 59
+  }
+}

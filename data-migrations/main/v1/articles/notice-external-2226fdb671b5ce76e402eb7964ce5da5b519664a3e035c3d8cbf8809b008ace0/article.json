@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:2226fdb671b5ce76e402eb7964ce5da5b519664a3e035c3d8cbf8809b008ace0",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/E8-3pkeypmxbQfgNYkVazg",
+    "url": "https://mp.weixin.qq.com/s/E8-3pkeypmxbQfgNYkVazg"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2026年吉林省高校“政校企协同促就业”专项行动首场活动在松原市拉开帷幕",
+    "source": "",
+    "publishDate": "2026-04-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/E8-3pkeypmxbQfgNYkVazg"
+  },
+  "resources": [],
+  "sourceFingerprint": "b7a307916bdfd9109a7b96e860764b11392e03fc4c17c649ea1ce3846ad11473",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "2026年吉林省高校“政校企协同促就业”专项行动首场活动在松原市拉开帷幕",
+    "listPublishDate": "2026-04-22",
+    "sourceOrder": 6
+  }
+}

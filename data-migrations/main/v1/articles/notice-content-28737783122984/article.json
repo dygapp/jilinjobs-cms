@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122984",
+    "contentId": "28737783122984",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122984"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅关于举办全国教育系统2012届高校毕业生网上招聘周活动的通知",
+    "source": "",
+    "publishDate": "2011-11-10",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部办公厅关于举办全国教育系统2012届高校毕业生网上招聘周活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-10 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://edc56806a27767d48b9d536b87fe265fbf816878266d09f7f1e80a4a9bba9ff1\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://b0c5313068a8268926b4a0dfb3669ec654ecc31c266c9f98deb70cb1170e8549\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://71327c0f20449a8da42f455ed62b23cab339b91c1b9e3b821959cc17871c4df9\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://06db89fbf2be003c0f4ff754d66b9d33315b95e2cccf40a2d1ceabced3dab81e\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://4ac15a5091c048a9a3deebc8d8c30545dd2d744b040c418a56abaae699036d77\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://71713d7e7be952a22a8e67176c5b2c8c8d9b59c630eda61c459d466dbda7e7e5\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111110115535756.jpg",
+      "originalReference": "/chistory/cms/imgs/20111110115535756.jpg",
+      "token": "migration-resource://edc56806a27767d48b9d536b87fe265fbf816878266d09f7f1e80a4a9bba9ff1",
+      "snapshotPath": "assets/edc56806a27767d48b9d536b87fe265fbf816878266d09f7f1e80a4a9bba9ff1.jpg",
+      "sha256": "edc56806a27767d48b9d536b87fe265fbf816878266d09f7f1e80a4a9bba9ff1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81528
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111110115542430.jpg",
+      "originalReference": "/chistory/cms/imgs/20111110115542430.jpg",
+      "token": "migration-resource://b0c5313068a8268926b4a0dfb3669ec654ecc31c266c9f98deb70cb1170e8549",
+      "snapshotPath": "assets/b0c5313068a8268926b4a0dfb3669ec654ecc31c266c9f98deb70cb1170e8549.jpg",
+      "sha256": "b0c5313068a8268926b4a0dfb3669ec654ecc31c266c9f98deb70cb1170e8549",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95344
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111110115549825.jpg",
+      "originalReference": "/chistory/cms/imgs/20111110115549825.jpg",
+      "token": "migration-resource://71327c0f20449a8da42f455ed62b23cab339b91c1b9e3b821959cc17871c4df9",
+      "snapshotPath": "assets/71327c0f20449a8da42f455ed62b23cab339b91c1b9e3b821959cc17871c4df9.jpg",
+      "sha256": "71327c0f20449a8da42f455ed62b23cab339b91c1b9e3b821959cc17871c4df9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 80559
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111110115556499.jpg",
+      "originalReference": "/chistory/cms/imgs/20111110115556499.jpg",
+      "token": "migration-resource://06db89fbf2be003c0f4ff754d66b9d33315b95e2cccf40a2d1ceabced3dab81e",
+      "snapshotPath": "assets/06db89fbf2be003c0f4ff754d66b9d33315b95e2cccf40a2d1ceabced3dab81e.jpg",
+      "sha256": "06db89fbf2be003c0f4ff754d66b9d33315b95e2cccf40a2d1ceabced3dab81e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67546
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111110115603559.jpg",
+      "originalReference": "/chistory/cms/imgs/20111110115603559.jpg",
+      "token": "migration-resource://4ac15a5091c048a9a3deebc8d8c30545dd2d744b040c418a56abaae699036d77",
+      "snapshotPath": "assets/4ac15a5091c048a9a3deebc8d8c30545dd2d744b040c418a56abaae699036d77.jpg",
+      "sha256": "4ac15a5091c048a9a3deebc8d8c30545dd2d744b040c418a56abaae699036d77",
+      "contentType": "image/jpeg",
+      "sizeBytes": 69731
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111110115610517.jpg",
+      "originalReference": "/chistory/cms/imgs/20111110115610517.jpg",
+      "token": "migration-resource://71713d7e7be952a22a8e67176c5b2c8c8d9b59c630eda61c459d466dbda7e7e5",
+      "snapshotPath": "assets/71713d7e7be952a22a8e67176c5b2c8c8d9b59c630eda61c459d466dbda7e7e5.jpg",
+      "sha256": "71713d7e7be952a22a8e67176c5b2c8c8d9b59c630eda61c459d466dbda7e7e5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67832
+    }
+  ],
+  "sourceFingerprint": "a4be776dc85d3826122b309d70b1c2fb322ebd5395ca7a9290d46d01846574a4",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "教育部办公厅关于举办全国教育系统2012届高校毕业生网上招聘周活动的通知",
+    "listPublishDate": "2011-11-10",
+    "sourceOrder": 417,
+    "detailPublishDate": "2011-11-10"
+  }
+}

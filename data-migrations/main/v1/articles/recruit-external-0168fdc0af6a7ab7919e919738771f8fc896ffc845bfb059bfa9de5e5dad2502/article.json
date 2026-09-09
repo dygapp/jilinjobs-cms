@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:0168fdc0af6a7ab7919e919738771f8fc896ffc845bfb059bfa9de5e5dad2502",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/L8UsK-U8DxTrWqvbhUs-yA",
+    "url": "https://mp.weixin.qq.com/s/L8UsK-U8DxTrWqvbhUs-yA?scene=25&sessionid=-1366472681"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "春招正当时 | 长春师范大学2025春季传媒学院行业专场招聘会预热启动",
+    "source": "",
+    "publishDate": "2025-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/L8UsK-U8DxTrWqvbhUs-yA?scene=25&sessionid=-1366472681"
+  },
+  "resources": [],
+  "sourceFingerprint": "d4657af16d662ac8882ca309c059778df470076359d1cffcb62c2630f335c5da",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "春招正当时 | 长春师范大学2025春季传媒学院行业专场招聘会预热启动",
+    "listPublishDate": "2025-04-21",
+    "sourceOrder": 173
+  }
+}

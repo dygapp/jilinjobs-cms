@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:bf85fb1d49d90c6c9cde693a1a4860c429aea775fe1da893dc4f12f217b7368f",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/jobfair/fairdetails.html",
+    "url": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=MKKfwXmgt68fBsSCoaf4zz"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "第二届全国农林校企人才大会战系列专场招聘活动",
+    "source": "",
+    "publishDate": "2022-11-14",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=MKKfwXmgt68fBsSCoaf4zz"
+  },
+  "resources": [],
+  "sourceFingerprint": "a339b3c4980a8774ae0bf8bb37ae4dd6d3fef8178ca88136e7ab0c764b0aab9f",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "第二届全国农林校企人才大会战系列专场招聘活动",
+    "listPublishDate": "2022-11-14",
+    "sourceOrder": 326
+  }
+}

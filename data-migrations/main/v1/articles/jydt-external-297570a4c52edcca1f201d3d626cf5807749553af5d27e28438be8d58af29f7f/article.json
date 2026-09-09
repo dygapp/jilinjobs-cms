@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:297570a4c52edcca1f201d3d626cf5807749553af5d27e28438be8d58af29f7f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/LwRyhYQGcPSqaUt_uZ44Bw",
+    "url": "https://mp.weixin.qq.com/s/LwRyhYQGcPSqaUt_uZ44Bw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "医教协同拓新局 校企合作育英才——松原职业技术学院与前郭县脑科医院共建心理健康教育与护理实践双平台",
+    "source": "",
+    "publishDate": "2026-04-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/LwRyhYQGcPSqaUt_uZ44Bw"
+  },
+  "resources": [],
+  "sourceFingerprint": "0537b7341c82b921773cbe798d7f85349bcf633f270441dcd23bb87ede185ce9",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "医教协同拓新局 校企合作育英才——松原职业技术学院与前郭县脑科医院共建心理健康教育与护理实践双平台",
+    "listPublishDate": "2026-04-22",
+    "sourceOrder": 256
+  }
+}

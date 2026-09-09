@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123126",
+    "contentId": "28737783123126",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123126"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "新疆和田面向吉林省引进高层次管理人才信息",
+    "source": "市场部",
+    "publishDate": "2020-08-25",
+    "bodyHtml": "\n                        <p>一、报名条件</p>\n\n<p>全日制研究生学历毕业生，中共党员（含预备党员），专业不限，男女不限，35周岁以下。</p>\n\n<p>二、报名时间</p>\n\n<p>2020年8月25日—9月5日。</p>\n\n<p>三、报名方式</p>\n\n<p>报名人员自行下载填写报名表，将报名表、学籍在线验证报告（学信网下载）和相关资质证书照片发至指定邮箱。报名邮箱892613149@qq.com。报名不收取任何费用。</p>\n\n<p>四、薪酬待遇</p>\n\n<p>&nbsp; &nbsp;1.纳入正式编制。</p>\n\n<p>&nbsp; &nbsp;2.硕士研究生每月7600元以上，博士研究生8300元以上，每年享受相应奖励性工资、绩效工资和津补贴。</p>\n\n<p>&nbsp; &nbsp;3. 按1人1套标准安排周转住房，均为单身公寓，配有基本的家具家电、日常生活用品，可拎包入住。</p>\n\n<p>&nbsp; &nbsp;4. 单位有集体食堂，报销最高学历在读期间的学费，按规定享受探亲假。</p>\n\n<p>&nbsp; &nbsp;5. 符合急需紧缺人才引进条件的，同时享受安家费、购房补贴等紧缺人才引进待遇。</p>\n\n<ul>\n\t<li>咨询电话</li>\n</ul>\n\n<p>联&nbsp;系&nbsp;人：&nbsp;&nbsp;李老师，联系电话：18935796777</p>\n\n<p>陈老师，联系电话：13999059498</p>\n\n<p>刘老师，联系电话：15276002225</p>\n\n<p>初老师，联系电话：15620613242</p>\n\n<p><strong>附 &nbsp;件</strong>：报名表</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "f3d5632afe2172fb42959f61dce45e083e0eb48d531e0d7a5e78b803b62dea14",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "新疆和田面向吉林省引进高层次管理人才信息",
+    "listPublishDate": "2020-08-25",
+    "sourceOrder": 375,
+    "detailPublishDate": "2020-08-25"
+  }
+}

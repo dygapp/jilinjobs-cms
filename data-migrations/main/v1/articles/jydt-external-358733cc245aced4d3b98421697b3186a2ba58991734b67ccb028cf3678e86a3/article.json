@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:358733cc245aced4d3b98421697b3186a2ba58991734b67ccb028cf3678e86a3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Pyl84V5TWH0ExVoIHSkz7A",
+    "url": "https://mp.weixin.qq.com/s/Pyl84V5TWH0ExVoIHSkz7A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院举办“福祉星光·人文起航”2025毕业嘉年华",
+    "source": "",
+    "publishDate": "2025-06-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Pyl84V5TWH0ExVoIHSkz7A"
+  },
+  "resources": [],
+  "sourceFingerprint": "d20658f03ac5ca5d27d4399a53b5509451a0220fe3ed104dac6cb79d7194eb0d",
+  "evidence": {
+    "listPage": 77,
+    "listTitle": "长春人文学院举办“福祉星光·人文起航”2025毕业嘉年华",
+    "listPublishDate": "2025-06-27",
+    "sourceOrder": 767
+  }
+}

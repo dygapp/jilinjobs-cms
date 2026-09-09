@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122828",
+    "contentId": "28737783122828",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122828"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办“2014年全国信息技术行业高校毕业生网上招聘周活动”的通知",
+    "source": "",
+    "publishDate": "2014-08-20",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办“2014年全国信息技术行业高校毕业生网上招聘周活动”的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:    发布时间:2014-8-20 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p>\n    &nbsp;\n</p>\n<p>\n    <img title=\"285588691.jpg\" style=\"float: none;\" src=\"http://www.jilinjobs.cn/ueditor/net/upload/2014-08-21/52e76d92-7233-48ef-bbbb-4fddb744d873.jpg\">\n</p>\n<p>\n    <img title=\"2855901194.jpg\" style=\"float: none;\" src=\"http://www.jilinjobs.cn/ueditor/net/upload/2014-08-21/7c1e1c2b-21f1-4233-9e63-c042d9308977.jpg\">\n</p>\n<p>\n    &nbsp;\n</p>\n<p>\n    &nbsp;\n</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "fbdf91f3d8ef2862d819dd2e60a48ca74a28cad58d5d2fa16311c4e595e5f8d0",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "关于举办“2014年全国信息技术行业高校毕业生网上招聘周活动”的通知",
+    "listPublishDate": "2014-08-20",
+    "sourceOrder": 304,
+    "detailPublishDate": "2014-08-20"
+  }
+}

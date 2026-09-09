@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:76173dfa3226747d1b496cde8c65fafbf1068ae96af945c1471e257026edb382",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/0vuD2IMH-nG0qXcs7KspXg",
+    "url": "https://mp.weixin.qq.com/s/0vuD2IMH-nG0qXcs7KspXg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学2027届毕业生秋季校园招聘全面启动",
+    "source": "",
+    "publishDate": "2026-09-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/0vuD2IMH-nG0qXcs7KspXg"
+  },
+  "resources": [],
+  "sourceFingerprint": "afa8261b51343aff35d8cf99ccfdb75cc40c607679cca0ac11f37134e9dfc795",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "吉林建筑大学2027届毕业生秋季校园招聘全面启动",
+    "listPublishDate": "2026-09-02",
+    "sourceOrder": 13
+  }
+}

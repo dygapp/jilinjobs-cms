@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:59d0840a1ebb5cc7b65b1182158f57d000785b36b040b8295c793076cb7b010f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/6wJUx4GWa2WTjV_Idg88JA",
+    "url": "https://mp.weixin.qq.com/s/6wJUx4GWa2WTjV_Idg88JA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学赴东北亚教育集团开展校企走访交流暨人才就业培养研讨活动",
+    "source": "",
+    "publishDate": "2026-06-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/6wJUx4GWa2WTjV_Idg88JA"
+  },
+  "resources": [],
+  "sourceFingerprint": "d942036e322dbafd55c2ee03d557ea0a0a6ee1c06ee94744347d6f7c0eead8cd",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "吉林建筑大学赴东北亚教育集团开展校企走访交流暨人才就业培养研讨活动",
+    "listPublishDate": "2026-06-03",
+    "sourceOrder": 105
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cab6118da4b17d8be14f68583ee90e1fd95615fbcaef1ae8c93f245eb5caa6b8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/VEhZa39-LgS_dolAMtbXLw",
+    "url": "https://mp.weixin.qq.com/s/VEhZa39-LgS_dolAMtbXLw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教融合 赋能兴边富民 —— 延边职业技术学院院长李铁锡率队走访吉林青年兴边富民孵化器、龙井圣水龙山酒店",
+    "source": "",
+    "publishDate": "2026-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/VEhZa39-LgS_dolAMtbXLw"
+  },
+  "resources": [],
+  "sourceFingerprint": "a7289f7a9fdec4c634b51e80c01e9745992a95628c28429702b37837a70b82f2",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "深化产教融合 赋能兴边富民 —— 延边职业技术学院院长李铁锡率队走访吉林青年兴边富民孵化器、龙井圣水龙山酒店",
+    "listPublishDate": "2026-03-27",
+    "sourceOrder": 350
+  }
+}

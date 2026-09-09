@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:469ac730cb7abe484ab4911747a13b8fb3329af39dde8836418821a03b3e1b8d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/p0KWD5fuHwJzJnow-We8Mw",
+    "url": "https://mp.weixin.qq.com/s/p0KWD5fuHwJzJnow-We8Mw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春早期教育职业学院开展企业实地走访交流活动",
+    "source": "",
+    "publishDate": "2025-12-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/p0KWD5fuHwJzJnow-We8Mw"
+  },
+  "resources": [],
+  "sourceFingerprint": "8db3e366df8b6bc1c1c41e464ed83edf6f5ddf6c8e0aa76a566c066641358258",
+  "evidence": {
+    "listPage": 53,
+    "listTitle": "长春早期教育职业学院开展企业实地走访交流活动",
+    "listPublishDate": "2025-12-19",
+    "sourceOrder": 530
+  }
+}

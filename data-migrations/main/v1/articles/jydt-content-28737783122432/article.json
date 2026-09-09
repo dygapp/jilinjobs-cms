@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122432",
+    "contentId": "28737783122432",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122432"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "邯郸市委多渠道支持和鼓励青年创业",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">邯郸市委多渠道支持和鼓励青年创业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 为激发广大青年的创业热情，鼓励和引导青年积极投身经济建设，河北省团邯郸市委进一步深化青年创业行动，通过“一个平台，两只翅膀”的助推系统来支持和鼓励青年创业腾飞。　</font></p> <p><font size=\"2\">　　“一个平台”，即开展青年创业项目选拔赛，提供青年创业平台。以“激情创业、启航梦想”为主题，开展青年优秀创业项目选拔大赛，对优秀创业项目给予创业资金扶持，为项目和资金对接提供了平台。同时，还协调政府有关部门开通服务创业“绿色通道”，提供政策、信息、维权的平台，优化创业环境，服务青年成功创业。　</font></p> <p><font size=\"2\">　　“两只翅膀”，即资金的“翅膀”和智力的“翅膀”。一是提供创业资金支持，团市委筹集了200万元资金成立“青年创业基金”，专门用于支持青年创业。同时，还协调各商业银行等金融单位共同参与，为其提供创业贷款，降低创业门槛，支持青年创业。二是提供创业指导，团市委协调部分热心扶持青年创业的优秀青年企业家，对有志创业青年采取“一帮一”的形式提供创业培训、专业咨询和创业指导，增强青年创业能力，提高青年创业成功率。　</font></p> <p><font size=\"2\">&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "7c1017614bc97f6d6a794928616581a02666bfc4771ffa15486bb166f560464b",
+  "evidence": {
+    "listPage": 190,
+    "listTitle": "邯郸市委多渠道支持和鼓励青年创业",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1896,
+    "detailPublishDate": "2009-04-04"
+  }
+}

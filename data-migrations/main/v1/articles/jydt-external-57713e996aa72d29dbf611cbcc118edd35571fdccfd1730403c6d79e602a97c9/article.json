@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:57713e996aa72d29dbf611cbcc118edd35571fdccfd1730403c6d79e602a97c9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/71YBTyb-oTQgc2lmtMi0Mg",
+    "url": "https://mp.weixin.qq.com/s/71YBTyb-oTQgc2lmtMi0Mg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "松原职业技术学院与长岭县开展“百校对百县”校企合作对接活动",
+    "source": "",
+    "publishDate": "2025-06-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/71YBTyb-oTQgc2lmtMi0Mg"
+  },
+  "resources": [],
+  "sourceFingerprint": "1804980d142358118a7461304eb4851743543bc50249050beb2388db7a5ba72d",
+  "evidence": {
+    "listPage": 77,
+    "listTitle": "松原职业技术学院与长岭县开展“百校对百县”校企合作对接活动",
+    "listPublishDate": "2025-06-27",
+    "sourceOrder": 766
+  }
+}

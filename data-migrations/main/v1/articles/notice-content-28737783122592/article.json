@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122592",
+    "contentId": "28737783122592",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122592"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于组织开展东北三省面向高校毕业生网上招聘月活动的通知",
+    "source": "",
+    "publishDate": "2015-06-29",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于组织开展东北三省面向高校毕业生网上招聘月活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:    发布时间:2015-6-29 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center;\"><img title=\"sfz056.jpg\" src=\"migration-resource://4ccfa7eb32b0e6cd4e3a4998752a96fb966cd29e57ca5271a537d2ba013fc9fe\"></p><p style=\"text-align: center;\"><img title=\"sfz057.jpg\" src=\"migration-resource://74f2ac885b64cb4d2952958a9076455bedfb685e34c7751af7e4eff2ced74668\"></p><p style=\"text-align: center;\"><img title=\"sfz058.jpg\" src=\"migration-resource://6be7ab5dbec72cf6305c9f45a6bb0de3e2ad3817670402ca3523dbf2ac38a860\"></p><p style=\"text-align: center;\"><img title=\"sfz059.jpg\" src=\"migration-resource://e4e48fd30784b4797c241ba9b4d9f574ee03d4a4661c9c9f41b7ded88a5d5a65\"></p><p>&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357116959946887503835167.jpg",
+      "originalReference": "/chistory/cms/imgs/6357116959946887503835167.jpg",
+      "token": "migration-resource://4ccfa7eb32b0e6cd4e3a4998752a96fb966cd29e57ca5271a537d2ba013fc9fe",
+      "snapshotPath": "assets/4ccfa7eb32b0e6cd4e3a4998752a96fb966cd29e57ca5271a537d2ba013fc9fe.jpg",
+      "sha256": "4ccfa7eb32b0e6cd4e3a4998752a96fb966cd29e57ca5271a537d2ba013fc9fe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88851
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357116960037512506691179.jpg",
+      "originalReference": "/chistory/cms/imgs/6357116960037512506691179.jpg",
+      "token": "migration-resource://74f2ac885b64cb4d2952958a9076455bedfb685e34c7751af7e4eff2ced74668",
+      "snapshotPath": "assets/74f2ac885b64cb4d2952958a9076455bedfb685e34c7751af7e4eff2ced74668.jpg",
+      "sha256": "74f2ac885b64cb4d2952958a9076455bedfb685e34c7751af7e4eff2ced74668",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93331
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357116960115637506818712.jpg",
+      "originalReference": "/chistory/cms/imgs/6357116960115637506818712.jpg",
+      "token": "migration-resource://6be7ab5dbec72cf6305c9f45a6bb0de3e2ad3817670402ca3523dbf2ac38a860",
+      "snapshotPath": "assets/6be7ab5dbec72cf6305c9f45a6bb0de3e2ad3817670402ca3523dbf2ac38a860.jpg",
+      "sha256": "6be7ab5dbec72cf6305c9f45a6bb0de3e2ad3817670402ca3523dbf2ac38a860",
+      "contentType": "image/jpeg",
+      "sizeBytes": 65260
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357116960190637505189583.jpg",
+      "originalReference": "/chistory/cms/imgs/6357116960190637505189583.jpg",
+      "token": "migration-resource://e4e48fd30784b4797c241ba9b4d9f574ee03d4a4661c9c9f41b7ded88a5d5a65",
+      "snapshotPath": "assets/e4e48fd30784b4797c241ba9b4d9f574ee03d4a4661c9c9f41b7ded88a5d5a65.jpg",
+      "sha256": "e4e48fd30784b4797c241ba9b4d9f574ee03d4a4661c9c9f41b7ded88a5d5a65",
+      "contentType": "image/jpeg",
+      "sizeBytes": 50543
+    }
+  ],
+  "sourceFingerprint": "f94c6aa8b2274506d8399ee4b9367a1c9ed2d9c38c7b9a8c5a8a0eb5198a2f19",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "关于组织开展东北三省面向高校毕业生网上招聘月活动的通知",
+    "listPublishDate": "2015-06-29",
+    "sourceOrder": 273,
+    "detailPublishDate": "2015-06-29"
+  }
+}

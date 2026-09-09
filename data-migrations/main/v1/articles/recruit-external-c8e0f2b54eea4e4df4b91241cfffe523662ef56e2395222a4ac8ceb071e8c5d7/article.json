@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:c8e0f2b54eea4e4df4b91241cfffe523662ef56e2395222a4ac8ceb071e8c5d7",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/eP35GgmBNGTvkf-5cdrCtA",
+    "url": "https://mp.weixin.qq.com/s/eP35GgmBNGTvkf-5cdrCtA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业大学2027届毕业生秋季校园招聘活动安排",
+    "source": "",
+    "publishDate": "2026-09-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/eP35GgmBNGTvkf-5cdrCtA"
+  },
+  "resources": [],
+  "sourceFingerprint": "06ecef8ffb00b54abbdc09017c16e33f2e2b78d4339e5efe978b6d7fa9800102",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "吉林农业大学2027届毕业生秋季校园招聘活动安排",
+    "listPublishDate": "2026-09-03",
+    "sourceOrder": 8
+  }
+}

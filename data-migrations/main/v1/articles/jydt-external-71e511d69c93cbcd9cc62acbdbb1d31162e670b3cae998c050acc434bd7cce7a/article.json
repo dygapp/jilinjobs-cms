@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:71e511d69c93cbcd9cc62acbdbb1d31162e670b3cae998c050acc434bd7cce7a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/EBe2HxJIHloyW8bCEF3oHQ",
+    "url": "https://mp.weixin.qq.com/s/EBe2HxJIHloyW8bCEF3oHQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院董事长张电达一行赴普兰店区开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-06-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/EBe2HxJIHloyW8bCEF3oHQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "074cf2f619fa7725354b601763e9d1265a06061bfad1ea3057362c5acd92cd1b",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "长春科技学院董事长张电达一行赴普兰店区开展访企拓岗专项行动",
+    "listPublishDate": "2026-06-18",
+    "sourceOrder": 75
+  }
+}

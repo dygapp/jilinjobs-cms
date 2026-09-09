@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9b80853cad76dd08450c5f421045d3903372ecf782d4848d92cca5fe9dad76ce",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/mXoNk3qqaZ00c48mZa2T0A",
+    "url": "https://mp.weixin.qq.com/s/mXoNk3qqaZ00c48mZa2T0A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春职业技术大学举办“数智赋能就业，匠心筑梦前程”实习就业双选会",
+    "source": "",
+    "publishDate": "2026-06-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/mXoNk3qqaZ00c48mZa2T0A"
+  },
+  "resources": [],
+  "sourceFingerprint": "ee403bcb4ec88465aeba24819037c70a32217ec9079bf7b6db4c0fdc8689c1aa",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "长春职业技术大学举办“数智赋能就业，匠心筑梦前程”实习就业双选会",
+    "listPublishDate": "2026-06-15",
+    "sourceOrder": 86
+  }
+}

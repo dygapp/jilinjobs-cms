@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:12f73ece128e9cd5d3deaab5065127f38df9ce0111fcf02022292421118d765a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/4YA7zkoJVR5rPsccgcVY_A",
+    "url": "https://mp.weixin.qq.com/s/4YA7zkoJVR5rPsccgcVY_A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院校领导带队赴博远•祥祉圆养老养生产业园考察交流",
+    "source": "",
+    "publishDate": "2025-12-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4YA7zkoJVR5rPsccgcVY_A"
+  },
+  "resources": [],
+  "sourceFingerprint": "7c7d80118bd24058ba5b8c0ac9da0d8487e11f4b8bfba8afbbcfe531f065f72f",
+  "evidence": {
+    "listPage": 52,
+    "listTitle": "长春人文学院校领导带队赴博远•祥祉圆养老养生产业园考察交流",
+    "listPublishDate": "2025-12-29",
+    "sourceOrder": 514
+  }
+}

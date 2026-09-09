@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783121108",
+    "contentId": "28737783121108",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783121108"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "09高考：就业最受影响的14个专业",
+    "source": "",
+    "publishDate": "2009-05-08",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">09高考：就业最受影响的14个专业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-5-8 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 银行专业<br><br>　　金融危机影响下，高考报考该选择什么专业？哪些专业四年之后好就业？哪些专业又是热门专业？其实，所谓的“热门”都是动态的，招生时是热门，四年后毕业时很可能已经成了冷门。小编特别搜集整理了“金融风暴下最不好就业的14大专业”，仅供报考参考。<br><br>　　金融风暴过后，影响最大的就是银行业。银行不再是风光无限的行情，裁员大潮滚滚而至，别说是刚毕业的大学生了，就算是成色再老，经验丰富的老员工，这时候也只能动用自己十八般武艺，暂别银行业，为养家糊口另谋高就了。不过，国内银行相对独立于国际市场，所以国际金融危机对其影响相对要小。<br><br>　　建筑专业<br><br>　　你还真以为学了建筑就能风风光光的搞设计？告诉你大部分毕业只能跟着施工单位外出施工，干着形形色色的打杂工作，工资还不算低，就是比较辛苦，竞争也比较大，谁叫每年都有几十万这个专业的毕业生咧？<br><br>　　往年这个时候，工民建就业形势非常好，基本上没等双选会结束个个都“名花有主”，但今年形势急转直下。<br><br>　　房地产行业<br><br>　　金融风波引发的房地产行业的不景气，也让当年奔着房地产牛市学了这一行业的大学生遗憾了。<br><br>　　电信行业<br><br>　　3G的推出和电信业的重组无疑给本来就已经属于高薪行业的通讯业带来更广阔的前景。但是3G的推出和电信行业的兴旺跟这个专业没有直接的关系，极少极少的部分人能进国家几个电信部门。设备制造商招这个专业的人也只有少部分人干设计，而且一旦产品定型，那么你就只能干干售后服务的事了，工资没有你想象的那么理想。<br><br>　　计算机专业<br><br>　　现在最没前途的专业，并不是说计算机没有前途，我是说这个由中国高校大面积催生的专业泛滥成灾，大部分高校的计算机专业的学生出来找不到工作，只能改行。或者忍气吞声的干个单位网管。<br><br>　　别觉得粘了IT就很前卫，我认识的朋友学的这个专业，大部分在电脑城做生意，或者改行了。<br><br>　　电力专业<br><br>　　搞技术出身就业不成问题，说什么高薪？除了你家里关系比较硬，可以进电力部门的，其他都是苦出身。<br><br>　　本人就是这个专业，所以实话实说，这个专业刚毕业可能比较辛苦一点，等自己慢慢熬到能做电气设计了就能看见光明了，薪水还行，属于中等偏上。<br><br>　　电子商务专业<br><br>　　这个专业蒙蔽了很多人，以为这个新兴的专业一定能吃香，其实大部分高校自己都没搞明白电子商务是什么，就开设的专业。结果一毕业要么转行，要么失业，典型的垃圾专业。现在经济不景气了，电子商务行业都迎接了自己的寒冬，更别提要庇护此专业下的无辜大学生了。</font></p> <p><font size=\"2\"><br>&nbsp;</font></p><!--advertisement code begin--><!--advertisement code end--></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "ed463b70af00ee528b581c523b004b62213a615da1bea5eaf39034e7e90a734e",
+  "evidence": {
+    "listPage": 54,
+    "listTitle": "09高考：就业最受影响的14个专业",
+    "listPublishDate": "2009-05-08",
+    "sourceOrder": 540,
+    "detailPublishDate": "2009-05-08"
+  }
+}

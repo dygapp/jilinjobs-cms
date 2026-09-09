@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e38ee1af0e5a8981c72cb9f85d97c872d6964fd424a66fe5322c9e4eca4898c5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/StaNejowwtxT5GEsVd3gAg",
+    "url": "https://mp.weixin.qq.com/s/StaNejowwtxT5GEsVd3gAg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省高校服务大农业产业集群毕业生专场双选会在吉林工程职业学院举行",
+    "source": "",
+    "publishDate": "2024-05-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/StaNejowwtxT5GEsVd3gAg"
+  },
+  "resources": [],
+  "sourceFingerprint": "78e1c0ad0a8e3227517c081071c706ce6ab9870ab402156a37cb6d838a313cfc",
+  "evidence": {
+    "listPage": 106,
+    "listTitle": "吉林省高校服务大农业产业集群毕业生专场双选会在吉林工程职业学院举行",
+    "listPublishDate": "2024-05-13",
+    "sourceOrder": 1054
+  }
+}

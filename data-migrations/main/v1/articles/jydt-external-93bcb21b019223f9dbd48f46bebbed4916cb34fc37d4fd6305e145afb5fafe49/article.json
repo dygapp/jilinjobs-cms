@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:93bcb21b019223f9dbd48f46bebbed4916cb34fc37d4fd6305e145afb5fafe49",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/EQQke3y5OROZteL4YoqLaw",
+    "url": "https://mp.weixin.qq.com/s/EQQke3y5OROZteL4YoqLaw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学举行2026届毕业生秋冬季双选会（第四场）",
+    "source": "",
+    "publishDate": "2025-11-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/EQQke3y5OROZteL4YoqLaw"
+  },
+  "resources": [],
+  "sourceFingerprint": "8f6e8600ec04aad54a837a4fc78b0526a34c0de004e481a2b336a50b9839dccc",
+  "evidence": {
+    "listPage": 58,
+    "listTitle": "长春师范大学举行2026届毕业生秋冬季双选会（第四场）",
+    "listPublishDate": "2025-11-25",
+    "sourceOrder": 572
+  }
+}

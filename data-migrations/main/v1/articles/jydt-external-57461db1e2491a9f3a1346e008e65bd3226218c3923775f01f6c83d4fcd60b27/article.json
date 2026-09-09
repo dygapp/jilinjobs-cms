@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:57461db1e2491a9f3a1346e008e65bd3226218c3923775f01f6c83d4fcd60b27",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/gEym0ed16ynzmvIJjVYPKw",
+    "url": "https://mp.weixin.qq.com/s/gEym0ed16ynzmvIJjVYPKw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春东方职业学院成功举办“职引东方·筑梦未来”2025年服务吉林高质量发展校园招聘会",
+    "source": "",
+    "publishDate": "2025-06-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gEym0ed16ynzmvIJjVYPKw"
+  },
+  "resources": [],
+  "sourceFingerprint": "0ad1acb32d0238e3a7963ff0369d192e66edab5e42b8ac5a80b6e3ce2ff813ce",
+  "evidence": {
+    "listPage": 78,
+    "listTitle": "长春东方职业学院成功举办“职引东方·筑梦未来”2025年服务吉林高质量发展校园招聘会",
+    "listPublishDate": "2025-06-25",
+    "sourceOrder": 773
+  }
+}

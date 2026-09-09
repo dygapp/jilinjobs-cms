@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:931af90db7f0f8ff5469b5b7edb86cf7ba9d5eb6ee73a3794111c30664f15521",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/jobfair/fairdetails.html",
+    "url": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=WoVECYAsyGvMJ9oV348ca2"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2023届装备制造行业专场大型网络招聘会",
+    "source": "",
+    "publishDate": "2022-11-14",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=WoVECYAsyGvMJ9oV348ca2"
+  },
+  "resources": [],
+  "sourceFingerprint": "08f452b8606467afdcc990f0421ba6ebe50b46ede92594f32cb7f6eaf27ec1c1",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "2023届装备制造行业专场大型网络招聘会",
+    "listPublishDate": "2022-11-14",
+    "sourceOrder": 328
+  }
+}

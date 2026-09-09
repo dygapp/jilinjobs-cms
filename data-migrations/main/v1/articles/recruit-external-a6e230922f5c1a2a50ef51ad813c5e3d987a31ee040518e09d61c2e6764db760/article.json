@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:a6e230922f5c1a2a50ef51ad813c5e3d987a31ee040518e09d61c2e6764db760",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/fxZz96kMDUrmkxXditpOnw",
+    "url": "https://mp.weixin.qq.com/s/fxZz96kMDUrmkxXditpOnw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春光华学院2026届寒假促就业“暖心行动”线上双选会",
+    "source": "",
+    "publishDate": "2026-01-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/fxZz96kMDUrmkxXditpOnw"
+  },
+  "resources": [],
+  "sourceFingerprint": "5217544432aaf5a8df27d04325c1c5a6286d2a0b8ed3d472635e869103d08955",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "长春光华学院2026届寒假促就业“暖心行动”线上双选会",
+    "listPublishDate": "2026-01-23",
+    "sourceOrder": 86
+  }
+}

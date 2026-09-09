@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:86a4c7ac73f6c28b04771d3644aa1bee2c4a4260388988cd2339e2dedda088f9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/news/article.html",
+    "url": "https://app.xinhuanet.com/news/article.html?articleId=ac1731861e42e49638fd5d9263067c74&timestamp=76141"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "政策扩岗+就业补贴 各地发力促进高校毕业生就业",
+    "source": "",
+    "publishDate": "2025-07-09",
+    "bodyHtml": "",
+    "externalUrl": "https://app.xinhuanet.com/news/article.html?articleId=ac1731861e42e49638fd5d9263067c74&timestamp=76141"
+  },
+  "resources": [],
+  "sourceFingerprint": "be43813c9b73f4ce8b9745349ce77819ed0a96daa75671232a80cc26ab482151",
+  "evidence": {
+    "listPage": 74,
+    "listTitle": "政策扩岗+就业补贴 各地发力促进高校毕业生就业",
+    "listPublishDate": "2025-07-09",
+    "sourceOrder": 734
+  }
+}

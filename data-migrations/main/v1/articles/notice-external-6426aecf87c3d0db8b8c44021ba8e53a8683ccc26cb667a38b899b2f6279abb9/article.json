@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:6426aecf87c3d0db8b8c44021ba8e53a8683ccc26cb667a38b899b2f6279abb9",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/tFJ63j-uEV2Q71ANyvDtpA",
+    "url": "https://mp.weixin.qq.com/s/tFJ63j-uEV2Q71ANyvDtpA"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "速递！中办、国办印发《关于加快构建普通高等学校毕业生高质量就业服务体系的意见》",
+    "source": "",
+    "publishDate": "2025-04-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/tFJ63j-uEV2Q71ANyvDtpA"
+  },
+  "resources": [],
+  "sourceFingerprint": "940b2f98395d8481c215d0e726c1a81094dbd593b37b5e85ed31f2dbd9bcd262",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "速递！中办、国办印发《关于加快构建普通高等学校毕业生高质量就业服务体系的意见》",
+    "listPublishDate": "2025-04-10",
+    "sourceOrder": 45
+  }
+}

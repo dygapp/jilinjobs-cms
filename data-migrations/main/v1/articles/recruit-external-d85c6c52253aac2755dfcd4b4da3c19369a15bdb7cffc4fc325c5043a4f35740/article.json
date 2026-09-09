@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:d85c6c52253aac2755dfcd4b4da3c19369a15bdb7cffc4fc325c5043a4f35740",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/jobfair/fairdetails.html",
+    "url": "https://job.ncss.cn/student/jobfair/fairdetails.html?fairId=7QdgToR7f7gPBAaFGaVozM"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2022年新闻出版行业专场网络双选会",
+    "source": "",
+    "publishDate": "2022-12-02",
+    "bodyHtml": "",
+    "externalUrl": "https://job.ncss.cn/student/jobfair/fairdetails.html?fairId=7QdgToR7f7gPBAaFGaVozM"
+  },
+  "resources": [],
+  "sourceFingerprint": "a38f684aacf75a3fd75574b292823b428eec1722b5c69c753ce7baee6d66975d",
+  "evidence": {
+    "listPage": 32,
+    "listTitle": "2022年新闻出版行业专场网络双选会",
+    "listPublishDate": "2022-12-02",
+    "sourceOrder": 319
+  }
+}

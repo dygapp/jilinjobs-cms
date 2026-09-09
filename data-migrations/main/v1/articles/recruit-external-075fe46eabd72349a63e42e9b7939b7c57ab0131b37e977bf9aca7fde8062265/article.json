@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:075fe46eabd72349a63e42e9b7939b7c57ab0131b37e977bf9aca7fde8062265",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/VfQA9M7CFsnrUT4xcEpLRA",
+    "url": "https://mp.weixin.qq.com/s/VfQA9M7CFsnrUT4xcEpLRA?scene=25&sessionid=-1365611309"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工程技术师范学院2025届毕业生春季专场招聘会邀请函",
+    "source": "",
+    "publishDate": "2025-04-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/VfQA9M7CFsnrUT4xcEpLRA?scene=25&sessionid=-1365611309"
+  },
+  "resources": [],
+  "sourceFingerprint": "3a4649f62ea76c897f284e47fb7af17bbf84c923e999c772a47a9a569205987c",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "吉林工程技术师范学院2025届毕业生春季专场招聘会邀请函",
+    "listPublishDate": "2025-04-27",
+    "sourceOrder": 165
+  }
+}

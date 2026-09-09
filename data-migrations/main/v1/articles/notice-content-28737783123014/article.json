@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783123014",
+    "contentId": "28737783123014",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123014"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于参加全省普通高校毕业生就业工作视频会议的通知",
+    "source": "",
+    "publishDate": "2011-06-27",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于参加全省普通高校毕业生就业工作视频会议的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-6-27 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p><font size=\"2\">各普通高等学校：<br>&nbsp;&nbsp;&nbsp; 省政府定于2011年6月28日15时召开全省普通高校毕业生就业工作视频会议。省政府领导同志将出席会议并讲话。根据省政府办公厅要求，现将参会有关事项通知如下：<br></font><font size=\"2\"><strong>1.会议主要内容：<br></strong>&nbsp;&nbsp;&nbsp; 贯彻落实全国普通高校毕业生就业工作视频会议精神，交流经验，安排部署下步工作。<br></font><font size=\"2\"><strong>2.会议地点：<br></strong>&nbsp;&nbsp;&nbsp; 主会场设在省政府111会议室，各地分会场设在当地政府视频会议室。<br></font><font size=\"2\"><strong>3.参加人员：<br></strong>&nbsp;&nbsp;&nbsp; 请全省各高校主要负责人一人到省政府主会场参加会议，入场证于6月27日下午5时前在省高校毕业生就业指导中心508房间领取。外地高校参加会议人员入场证可于28日13：30直接到会场领取。<br></font><font size=\"2\"><strong>4.有关要求：<br></strong>&nbsp;&nbsp;&nbsp; 请各高校于6月27日下午3时前将参会人员名单（单位、姓名、职务、联系方式）传真至省高校毕业生就业指导中心。传真：0431-84636128。参会人员不得无故缺席或随意替代，并于6月28日13时45分前持入场证进入会场。<br>&nbsp;&nbsp;&nbsp; <strong><font size=\"3\">注：会议时间改为2011年6月28日14:00。<br></font></strong>&nbsp;&nbsp;&nbsp; 附：吉林省人民政府办公厅关于召开全省普通高校毕业生就业工作视频会议的通知</font></p> <p align=\"right\"><font size=\"2\">吉林省教育厅 <br>&nbsp;2011年6月27日</font></p> <p align=\"right\"><font size=\"2\"></font>&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "e40cae8ed5998dc154aedad1fb57680efcc9a18eb548f750fb52cfd9e0ba9b7d",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "关于参加全省普通高校毕业生就业工作视频会议的通知",
+    "listPublishDate": "2011-06-27",
+    "sourceOrder": 433,
+    "detailPublishDate": "2011-06-27"
+  }
+}

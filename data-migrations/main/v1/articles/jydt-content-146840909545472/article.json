@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:146840909545472",
+    "contentId": "146840909545472",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=146840909545472"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省大学生就业创业协会第二次会员大会暨换届选举大会在吉林建筑大学召开",
+    "source": "吉林省大学生就业创业协会",
+    "publishDate": "2023-02-27",
+    "bodyHtml": "\n                        <p><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri\"><span style=\"font-size:16.0000pt\"><span style=\"font-family:仿宋\"><span style=\"font-family:仿宋\">&nbsp; &nbsp;&nbsp;<span style=\"font-family:Comic Sans MS,cursive\"><span style=\"font-size:18px\">2月25日，吉林省大学生就业创业协会第二次会员大会暨换届选举大会在吉林建筑大学召开，吉林省教育厅党组书记、厅长、省委教育工委副书记张洪彬</span></span></span></span></span><span style=\"font-family:Comic Sans MS,cursive\"><span style=\"font-size:18px\">，省教育厅一级巡视员许世彬出席会议。</span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"533\" src=\"migration-resource://5229982771be6993f8700f960d58e9c83c5d528082feeef4183b353e71296a2f\" width=\"800\"></p>\n\n<p><span style=\"font-family:Comic Sans MS,cursive\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp;协会成立十年来，始终坚持以习近平新时代中国特色社会主义思想为指导，以服务高校、服务大学生就业创业为宗旨，积极搭建政府与高校、高校与企业、高校与高校的沟通交流平台，深入推进就业育人支持体系建设，大力引导高校毕业生留省就业创业。在就业创业理论研究、市场开发合作、教育实践、政策宣传等方面都取得了一系列丰硕成果，为我省大学生就业创业工作做出了重要贡献。</span></span></p>\n\n<p><span style=\"font-family:Comic Sans MS,cursive\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp;会上，吉林省大学生就业创业协会副会长、原吉林大学党委副书记韩晓峰作第一届协会工作报告，通过了新修订的《吉林省大学生就业创业协会章程》，选举产生第二届协会理事会。</span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"533\" src=\"migration-resource://d00f5d2ffd7ee185fc4e8871a10d6de1f740745a206bbd79bb319438722fb6ee\" width=\"800\"></p>\n\n<p style=\"margin-left:11px; text-align:justify\"><span style=\"font-family:Comic Sans MS,cursive\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp;最后，新当选的协会会长李雁冰讲话。他对今年高校毕业生整体情况和面临的就业形势进行了分析研判，从强化协会标准化建设、发挥高端智库功能、构建双循环<span style=\"color:#000000\">就业市场、创新就业育人实践活动、提升服务水平等五个方面，对下一步协会工作做出了安排部署。</span></span></span></p>\n\n<p style=\"margin-left:11px; text-align:justify\"><span style=\"font-family:Comic Sans MS,cursive\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp;协会新一届理事会和所有成员单位，将坚持以习近平新时代中国特色社会主义思想为统领，深刻学习领会党的二十大精神，认真贯彻落实党中央、国务院决策部署和全省大学生就业创业工作会议精神，与全省高校一道，千方百计扩大就业容量，努力提升就业创业质量，全力促进高校毕业生高质量充分就业,不断开创就业工作新局面，为在中国式现代化进程中推动吉林全面振兴取得新突破做出更大贡献！</span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"533\" src=\"migration-resource://c33d42f992156fac6b36ba4f8090c26252c5a5a28dd37d3aeb48e6243af7dc17\" width=\"800\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-family:Comic Sans MS,cursive\"><span style=\"font-size:18px\"><span style=\"color:#000000\">&nbsp; &nbsp; &nbsp; 吉林省社会组织管</span>理局、吉林省教育厅高等教育处、高校学生处、高校就业指导中心等部门负责人，全省66个会员单位的代表参加会议。</span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-03-22/e46b7778-09bf-4367-9c1b-dfc1838c6d73.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-03-22/e46b7778-09bf-4367-9c1b-dfc1838c6d73.jpg",
+      "token": "migration-resource://5229982771be6993f8700f960d58e9c83c5d528082feeef4183b353e71296a2f",
+      "snapshotPath": "assets/5229982771be6993f8700f960d58e9c83c5d528082feeef4183b353e71296a2f.jpg",
+      "sha256": "5229982771be6993f8700f960d58e9c83c5d528082feeef4183b353e71296a2f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 9354322
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-03-22/92cfda8a-1378-4a72-a0cd-b434fe07d229.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-03-22/92cfda8a-1378-4a72-a0cd-b434fe07d229.jpg",
+      "token": "migration-resource://d00f5d2ffd7ee185fc4e8871a10d6de1f740745a206bbd79bb319438722fb6ee",
+      "snapshotPath": "assets/d00f5d2ffd7ee185fc4e8871a10d6de1f740745a206bbd79bb319438722fb6ee.jpg",
+      "sha256": "d00f5d2ffd7ee185fc4e8871a10d6de1f740745a206bbd79bb319438722fb6ee",
+      "contentType": "image/jpeg",
+      "sizeBytes": 3816195
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-03-22/f6983c3d-4353-4b84-be00-25311a89f2ef.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-03-22/f6983c3d-4353-4b84-be00-25311a89f2ef.jpg",
+      "token": "migration-resource://c33d42f992156fac6b36ba4f8090c26252c5a5a28dd37d3aeb48e6243af7dc17",
+      "snapshotPath": "assets/c33d42f992156fac6b36ba4f8090c26252c5a5a28dd37d3aeb48e6243af7dc17.jpg",
+      "sha256": "c33d42f992156fac6b36ba4f8090c26252c5a5a28dd37d3aeb48e6243af7dc17",
+      "contentType": "image/jpeg",
+      "sizeBytes": 4409196
+    }
+  ],
+  "sourceFingerprint": "63caeebe838b3d8326cbf7f11628795c1e2833bd25c5cb2b2061b2371b951769",
+  "evidence": {
+    "listPage": 117,
+    "listTitle": "吉林省大学生就业创业协会第二次会员大会暨换届选举大会在吉林建筑大学召开",
+    "listPublishDate": "2023-02-27",
+    "sourceOrder": 1168,
+    "detailPublishDate": "2023-02-27"
+  }
+}

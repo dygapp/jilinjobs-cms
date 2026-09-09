@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268958378770432",
+    "contentId": "268958378770432",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268958378770432"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林工商学院召开2024届毕业生就业工作总结暨2025届毕业生就业工作部署会",
+    "source": "",
+    "publishDate": "2024-12-06",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://59ccc99fd1ffb68e63f522f9befadd3ccfe4a5631f16ff644826070cc5a7e7d3\" width=\"1587\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://4ccf73454c89c2ddf8f06471f1b8c8b494e9821057b68af3d5f6063683198a97\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/716cf11d-e79e-43b8-b89b-6ab6de3ff01c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/716cf11d-e79e-43b8-b89b-6ab6de3ff01c.jpg",
+      "token": "migration-resource://59ccc99fd1ffb68e63f522f9befadd3ccfe4a5631f16ff644826070cc5a7e7d3",
+      "snapshotPath": "assets/59ccc99fd1ffb68e63f522f9befadd3ccfe4a5631f16ff644826070cc5a7e7d3.jpg",
+      "sha256": "59ccc99fd1ffb68e63f522f9befadd3ccfe4a5631f16ff644826070cc5a7e7d3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 408886
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/8378cd98-2599-4b69-9b24-a0fdeff94017.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/8378cd98-2599-4b69-9b24-a0fdeff94017.jpg",
+      "token": "migration-resource://4ccf73454c89c2ddf8f06471f1b8c8b494e9821057b68af3d5f6063683198a97",
+      "snapshotPath": "assets/4ccf73454c89c2ddf8f06471f1b8c8b494e9821057b68af3d5f6063683198a97.jpg",
+      "sha256": "4ccf73454c89c2ddf8f06471f1b8c8b494e9821057b68af3d5f6063683198a97",
+      "contentType": "image/jpeg",
+      "sizeBytes": 222397
+    }
+  ],
+  "sourceFingerprint": "48c6d7b32d31fb1da18992b423cc7c5f0d694bc9cfe7c0212f7ffc7a507a9033",
+  "evidence": {
+    "listPage": 101,
+    "listTitle": "吉林工商学院召开2024届毕业生就业工作总结暨2025届毕业生就业工作部署会",
+    "listPublishDate": "2024-12-06",
+    "sourceOrder": 1002,
+    "detailPublishDate": "2024-12-06"
+  }
+}

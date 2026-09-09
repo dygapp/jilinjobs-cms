@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0b66e7965e69bbeaf0a8675e39e76e9c43463d677b3f3dd37169157c0e22cef3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/wR949ozHM1DGAuEvkuJPRg",
+    "url": "https://mp.weixin.qq.com/s/wR949ozHM1DGAuEvkuJPRg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企携手拓就业路 | 通化医药健康职业学院成功开展毕业生专场招聘会",
+    "source": "",
+    "publishDate": "2025-06-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wR949ozHM1DGAuEvkuJPRg"
+  },
+  "resources": [],
+  "sourceFingerprint": "05d506b5a11ed9d232c5ee0d0fe6245e7e32182dd1d8ad35d790f75d59568c7e",
+  "evidence": {
+    "listPage": 85,
+    "listTitle": "校企携手拓就业路 | 通化医药健康职业学院成功开展毕业生专场招聘会",
+    "listPublishDate": "2025-06-03",
+    "sourceOrder": 850
+  }
+}

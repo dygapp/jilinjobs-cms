@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5c66c2720218fd77c6dc003aadcd0e140703c05c775400b47c24b53c2957b69c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/O2vCj8bPEtnjNa7HKJZKwg",
+    "url": "https://mp.weixin.qq.com/s/O2vCj8bPEtnjNa7HKJZKwg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院校领导深入博远·祥祉圆养老养生产业园调研",
+    "source": "",
+    "publishDate": "2026-03-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/O2vCj8bPEtnjNa7HKJZKwg"
+  },
+  "resources": [],
+  "sourceFingerprint": "8909da178e51aedc1b2d749049b202194fabdf9bf3396a566bbad9e7f5efb7e7",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "长春人文学院校领导深入博远·祥祉圆养老养生产业园调研",
+    "listPublishDate": "2026-03-17",
+    "sourceOrder": 407
+  }
+}

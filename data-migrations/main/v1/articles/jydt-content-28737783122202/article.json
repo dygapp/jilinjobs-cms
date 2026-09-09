@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122202",
+    "contentId": "28737783122202",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122202"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "全省普通高等学校应届毕业生入伍预征工作会议在省教育宾馆召开",
+    "source": "",
+    "publishDate": "2012-05-18",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">全省普通高等学校应届毕业生入伍预征工作会议在省教育宾馆召开</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-5-18 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://91e994db7716a9883b8ce56a7b4da0b68ea5603645810e64b3d9faa6d2376315\"></p> <p align=\"center\">5月17日，全省普通高等学校应届毕业生入伍预征工作会议在省教育宾馆召开。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://0a6bac9a337e7af427378bd932d21390fe3a1c8f7509b618a0a47e3c07aa3b75\"></p> <p align=\"center\">省教育厅孙维杰副厅长出席会议并讲话。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://28ec51be18a54e36e169b7364388a87ae63518f1fe8bea414f41543253810761\"></p> <p align=\"center\">吉林省军区副参谋长、省政府征兵办公室主任肖国明大校出席会议并讲话。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://439f6b85d6109ab713b6b40780653c131b58e297b32fc0d88ec00ede565d38b2\"></p> <p align=\"justify\">&nbsp;&nbsp; 省内各普通高校分管校领导，高校学生处、就业处，武装部负责人及各市（州）、县（市、区）兵役机关分管预征工作的负责人共197人参加会议。</p> <p align=\"justify\">&nbsp;&nbsp; 会议传达了全国普通高等学校应届毕业生入伍预征工作会议精神，总结了2011年全省高校应届毕业生入伍预征工作情况，部署了2012年高校毕业生预征工作任务，明确了做好今年高校毕业生入伍预征工作的具体要求，标志着我省普通高校应届毕业生入伍预征工作全面启动。</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120518171310419.jpg",
+      "originalReference": "/chistory/cms/imgs/20120518171310419.jpg",
+      "token": "migration-resource://91e994db7716a9883b8ce56a7b4da0b68ea5603645810e64b3d9faa6d2376315",
+      "snapshotPath": "assets/91e994db7716a9883b8ce56a7b4da0b68ea5603645810e64b3d9faa6d2376315.jpg",
+      "sha256": "91e994db7716a9883b8ce56a7b4da0b68ea5603645810e64b3d9faa6d2376315",
+      "contentType": "image/jpeg",
+      "sizeBytes": 83317
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120518171348767.jpg",
+      "originalReference": "/chistory/cms/imgs/20120518171348767.jpg",
+      "token": "migration-resource://0a6bac9a337e7af427378bd932d21390fe3a1c8f7509b618a0a47e3c07aa3b75",
+      "snapshotPath": "assets/0a6bac9a337e7af427378bd932d21390fe3a1c8f7509b618a0a47e3c07aa3b75.jpg",
+      "sha256": "0a6bac9a337e7af427378bd932d21390fe3a1c8f7509b618a0a47e3c07aa3b75",
+      "contentType": "image/jpeg",
+      "sizeBytes": 63515
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120518171420766.jpg",
+      "originalReference": "/chistory/cms/imgs/20120518171420766.jpg",
+      "token": "migration-resource://28ec51be18a54e36e169b7364388a87ae63518f1fe8bea414f41543253810761",
+      "snapshotPath": "assets/28ec51be18a54e36e169b7364388a87ae63518f1fe8bea414f41543253810761.jpg",
+      "sha256": "28ec51be18a54e36e169b7364388a87ae63518f1fe8bea414f41543253810761",
+      "contentType": "image/jpeg",
+      "sizeBytes": 66383
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2012051817144678.jpg",
+      "originalReference": "/chistory/cms/imgs/2012051817144678.jpg",
+      "token": "migration-resource://439f6b85d6109ab713b6b40780653c131b58e297b32fc0d88ec00ede565d38b2",
+      "snapshotPath": "assets/439f6b85d6109ab713b6b40780653c131b58e297b32fc0d88ec00ede565d38b2.jpg",
+      "sha256": "439f6b85d6109ab713b6b40780653c131b58e297b32fc0d88ec00ede565d38b2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 80163
+    }
+  ],
+  "sourceFingerprint": "2e99abb6c73b39da55b8a98b944c501c3485d86ef323009a22cc9540a512d06c",
+  "evidence": {
+    "listPage": 164,
+    "listTitle": "全省普通高等学校应届毕业生入伍预征工作会议在省教育宾馆召开",
+    "listPublishDate": "2012-05-18",
+    "sourceOrder": 1635,
+    "detailPublishDate": "2012-05-18"
+  }
+}

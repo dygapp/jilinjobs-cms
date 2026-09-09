@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:15a395b9ce21c7e2acd4e24b57c8d70160ae87178d1a40531e55e838031ff4a2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/mpdL9twe8_BxRj8wp01JXg",
+    "url": "https://mp.weixin.qq.com/s/mpdL9twe8_BxRj8wp01JXg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【寒假促就业暖心行动】@毕业生 这些地方能获取就业信息和就业指导服务",
+    "source": "",
+    "publishDate": "2026-01-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/mpdL9twe8_BxRj8wp01JXg"
+  },
+  "resources": [],
+  "sourceFingerprint": "1e6123facb2de3436d90b43b739ecd10448ac685ee3407e911d8a57149f07cb4",
+  "evidence": {
+    "listPage": 51,
+    "listTitle": "【寒假促就业暖心行动】@毕业生 这些地方能获取就业信息和就业指导服务",
+    "listPublishDate": "2026-01-14",
+    "sourceOrder": 503
+  }
+}

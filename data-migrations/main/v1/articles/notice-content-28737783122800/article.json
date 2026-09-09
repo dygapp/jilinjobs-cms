@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122800",
+    "contentId": "28737783122800",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122800"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅关于促进2016届尚未就业高校毕业生就业创业的通知",
+    "source": "",
+    "publishDate": "2016-07-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部办公厅关于促进2016届尚未就业高校毕业生就业创业的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2016-7-5 16:34:20</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img src=\"migration-resource://9e1a524ae02d97d710c2b9818ee8c7f03b134b6a718437c34760963cf1dbdb06\" style=\"\" title=\"img001.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://a5faac72d11e78ed275f5724e90e3e2d48a1cddf820fcbfae888142c4ffb3e38\" style=\"\" title=\"img002.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://d24563792c9ffb1a1d8beab9fadcff25db5be5b0261b059eb2ebe35793fbeb32\" style=\"\" title=\"img003.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://2e7ce812d3ac5c6f7ddb04c2eddd0a8ddee52a410c820b55b49a743faea74717\" style=\"\" title=\"img004.jpg\"></p><p style=\"text-align: center;\"><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360333327718750009897701.jpg",
+      "originalReference": "/chistory/cms/imgs/6360333327718750009897701.jpg",
+      "token": "migration-resource://9e1a524ae02d97d710c2b9818ee8c7f03b134b6a718437c34760963cf1dbdb06",
+      "snapshotPath": "assets/9e1a524ae02d97d710c2b9818ee8c7f03b134b6a718437c34760963cf1dbdb06.jpg",
+      "sha256": "9e1a524ae02d97d710c2b9818ee8c7f03b134b6a718437c34760963cf1dbdb06",
+      "contentType": "image/jpeg",
+      "sizeBytes": 109075
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360333327729687505098762.jpg",
+      "originalReference": "/chistory/cms/imgs/6360333327729687505098762.jpg",
+      "token": "migration-resource://a5faac72d11e78ed275f5724e90e3e2d48a1cddf820fcbfae888142c4ffb3e38",
+      "snapshotPath": "assets/a5faac72d11e78ed275f5724e90e3e2d48a1cddf820fcbfae888142c4ffb3e38.jpg",
+      "sha256": "a5faac72d11e78ed275f5724e90e3e2d48a1cddf820fcbfae888142c4ffb3e38",
+      "contentType": "image/jpeg",
+      "sizeBytes": 125366
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360333327740625004597996.jpg",
+      "originalReference": "/chistory/cms/imgs/6360333327740625004597996.jpg",
+      "token": "migration-resource://d24563792c9ffb1a1d8beab9fadcff25db5be5b0261b059eb2ebe35793fbeb32",
+      "snapshotPath": "assets/d24563792c9ffb1a1d8beab9fadcff25db5be5b0261b059eb2ebe35793fbeb32.jpg",
+      "sha256": "d24563792c9ffb1a1d8beab9fadcff25db5be5b0261b059eb2ebe35793fbeb32",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131527
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360333327748437502340566.jpg",
+      "originalReference": "/chistory/cms/imgs/6360333327748437502340566.jpg",
+      "token": "migration-resource://2e7ce812d3ac5c6f7ddb04c2eddd0a8ddee52a410c820b55b49a743faea74717",
+      "snapshotPath": "assets/2e7ce812d3ac5c6f7ddb04c2eddd0a8ddee52a410c820b55b49a743faea74717.jpg",
+      "sha256": "2e7ce812d3ac5c6f7ddb04c2eddd0a8ddee52a410c820b55b49a743faea74717",
+      "contentType": "image/jpeg",
+      "sizeBytes": 109629
+    }
+  ],
+  "sourceFingerprint": "72a303dad5d8d82038d5deb0356dc58e952bc4c9f98f9974597da97b96a75110",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "教育部办公厅关于促进2016届尚未就业高校毕业生就业创业的通知",
+    "listPublishDate": "2016-07-05",
+    "sourceOrder": 245,
+    "detailPublishDate": "2016-07-05"
+  }
+}

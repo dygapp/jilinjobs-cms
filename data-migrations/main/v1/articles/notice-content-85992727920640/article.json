@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:85992727920640",
+    "contentId": "85992727920640",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=85992727920640"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于组织吉林省“百校千企”大型省内专场网络招聘会的通知",
+    "source": "吉林省教育厅高校学生处",
+    "publishDate": "2021-12-23",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1272\" src=\"migration-resource://247208bd6320517d8768bfb4dfbb8d23dc5c2bb574ccddc9e2c92ecd806fb6db\" width=\"900\"><img alt=\"\" height=\"1272\" src=\"migration-resource://5aa588794d5f3d4226b3c1a4ff2d0ac490cce40f8aa7af37b9471f2ba61b1532\" width=\"900\"><img alt=\"\" height=\"1272\" src=\"migration-resource://8bb240e6ad68905efd47c68478d5cccb5f14fcc05a63c8d3c03180a79704cce0\" width=\"900\"><img alt=\"\" height=\"1272\" src=\"migration-resource://aea12f019b3c04015e34410e2ab7663020cc89355406ff305775d55eed60d819\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/d2c3f97f-e03d-4cf7-86bd-4e834d24710b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/d2c3f97f-e03d-4cf7-86bd-4e834d24710b.jpg",
+      "token": "migration-resource://247208bd6320517d8768bfb4dfbb8d23dc5c2bb574ccddc9e2c92ecd806fb6db",
+      "snapshotPath": "assets/247208bd6320517d8768bfb4dfbb8d23dc5c2bb574ccddc9e2c92ecd806fb6db.jpg",
+      "sha256": "247208bd6320517d8768bfb4dfbb8d23dc5c2bb574ccddc9e2c92ecd806fb6db",
+      "contentType": "image/jpeg",
+      "sizeBytes": 172866
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/8a0d1235-03dc-473e-8ac2-b19d6f6e8953.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/8a0d1235-03dc-473e-8ac2-b19d6f6e8953.jpg",
+      "token": "migration-resource://5aa588794d5f3d4226b3c1a4ff2d0ac490cce40f8aa7af37b9471f2ba61b1532",
+      "snapshotPath": "assets/5aa588794d5f3d4226b3c1a4ff2d0ac490cce40f8aa7af37b9471f2ba61b1532.jpg",
+      "sha256": "5aa588794d5f3d4226b3c1a4ff2d0ac490cce40f8aa7af37b9471f2ba61b1532",
+      "contentType": "image/jpeg",
+      "sizeBytes": 181572
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/66579b14-8632-44a1-9aaa-1b1c63b415f4.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/66579b14-8632-44a1-9aaa-1b1c63b415f4.jpg",
+      "token": "migration-resource://8bb240e6ad68905efd47c68478d5cccb5f14fcc05a63c8d3c03180a79704cce0",
+      "snapshotPath": "assets/8bb240e6ad68905efd47c68478d5cccb5f14fcc05a63c8d3c03180a79704cce0.jpg",
+      "sha256": "8bb240e6ad68905efd47c68478d5cccb5f14fcc05a63c8d3c03180a79704cce0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 197162
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/4ce53100-d10b-4817-afbf-5d656a1353e2.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/4ce53100-d10b-4817-afbf-5d656a1353e2.jpg",
+      "token": "migration-resource://aea12f019b3c04015e34410e2ab7663020cc89355406ff305775d55eed60d819",
+      "snapshotPath": "assets/aea12f019b3c04015e34410e2ab7663020cc89355406ff305775d55eed60d819.jpg",
+      "sha256": "aea12f019b3c04015e34410e2ab7663020cc89355406ff305775d55eed60d819",
+      "contentType": "image/jpeg",
+      "sizeBytes": 42867
+    }
+  ],
+  "sourceFingerprint": "9a1199724933e1f7b9dc78c44e769d8a09c89ebdf64663fc6d3bafb810c0c10e",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "关于组织吉林省“百校千企”大型省内专场网络招聘会的通知",
+    "listPublishDate": "2021-12-23",
+    "sourceOrder": 141,
+    "detailPublishDate": "2021-12-23"
+  }
+}

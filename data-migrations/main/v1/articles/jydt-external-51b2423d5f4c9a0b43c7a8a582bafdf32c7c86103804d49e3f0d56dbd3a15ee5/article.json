@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:51b2423d5f4c9a0b43c7a8a582bafdf32c7c86103804d49e3f0d56dbd3a15ee5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/jH3jWc6ZELm8xA0kDB8-Rw",
+    "url": "https://mp.weixin.qq.com/s/jH3jWc6ZELm8xA0kDB8-Rw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "逐梦启航 智绘未来---吉林省经济管理干部学院2026届毕业生校园招聘会成功举办",
+    "source": "",
+    "publishDate": "2025-11-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/jH3jWc6ZELm8xA0kDB8-Rw"
+  },
+  "resources": [],
+  "sourceFingerprint": "a96ea6dda5d33c746430b95759b40c910a34ee0fec36ca171392d9d698a6ecf2",
+  "evidence": {
+    "listPage": 63,
+    "listTitle": "逐梦启航 智绘未来---吉林省经济管理干部学院2026届毕业生校园招聘会成功举办",
+    "listPublishDate": "2025-11-04",
+    "sourceOrder": 629
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119954",
+    "contentId": "28737783119954",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119954"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2016年我省举办多期高校就业指导教师培训班",
+    "source": "",
+    "publishDate": "2016-12-01",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2016年我省举办多期高校就业指导教师培训班</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2016-12-1 14:59:45</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋_GB2312;font-size: 21px\">为加强我省高校就业指导师资队伍建设，完善高校就业指导课程体系，提升高校就业指导教师教学水平，省高校毕业生就业指导中心将我省“大学生就业能力提升培训项目”课程引入高校就业指导课程体系。于2016年9月-11月，连续举办了9期高校就业指导教师培训班，来自全省60所高校的572名就业指导教师参加了培训。</span></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋_GB2312;font-size: 21px\">此次培训，分别从生涯规划的三大理论、职业生涯规划的内涵和步骤、职业世界分类、岗位胜任力模型、生涯人物访谈设计、生涯决策的内涵与影响因素、生涯决策的工具与技巧、大学生职业生涯规划常见问题、大学生职业生涯规划主题班会选题设计与组织、就业指导理论与发展、就业指导教师的定位与成长、精准指导与咨询技巧、案例解析与训练等内容进行了深入讲解。&nbsp;&nbsp; </span></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋_GB2312;font-size: 21px\">通过培训结果反馈，参培学员一致表示，培训课程创新、内容实用、层次清晰、贴近实战，改变了以往对高校就业指导课程的认识，掌握了就业指导课程的教学方法和技巧，明确了高校就业指导课程设计的方向和思路。</span></p><p><br></p><p style=\"text-align: center\"><img title=\"1.jpg\" src=\"migration-resource://97bbda0d773fd2a615d43d9766aaa8d16b409c5f81af284fd89331ce1717c172\"></p><p style=\"text-align: center\"><img title=\"2.jpg\" src=\"migration-resource://27d3fcb68b377d9c1f66517762fe590300ccc96fe58945fc2656493e3cb91ad8\"></p><p style=\"text-align: center\"><img title=\"3.jpg\" src=\"migration-resource://63d837204915ab7a4d35523e1f4d5961e1b86d3f301ae535220f97ea1fc057d6\"></p><p style=\"text-align: center;\"><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361663326260937502850559.jpg",
+      "originalReference": "/chistory/cms/imgs/6361663326260937502850559.jpg",
+      "token": "migration-resource://97bbda0d773fd2a615d43d9766aaa8d16b409c5f81af284fd89331ce1717c172",
+      "snapshotPath": "assets/97bbda0d773fd2a615d43d9766aaa8d16b409c5f81af284fd89331ce1717c172.jpg",
+      "sha256": "97bbda0d773fd2a615d43d9766aaa8d16b409c5f81af284fd89331ce1717c172",
+      "contentType": "image/jpeg",
+      "sizeBytes": 172142
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361663326331250005235522.jpg",
+      "originalReference": "/chistory/cms/imgs/6361663326331250005235522.jpg",
+      "token": "migration-resource://27d3fcb68b377d9c1f66517762fe590300ccc96fe58945fc2656493e3cb91ad8",
+      "snapshotPath": "assets/27d3fcb68b377d9c1f66517762fe590300ccc96fe58945fc2656493e3cb91ad8.jpg",
+      "sha256": "27d3fcb68b377d9c1f66517762fe590300ccc96fe58945fc2656493e3cb91ad8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 178079
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361663326339062502978093.jpg",
+      "originalReference": "/chistory/cms/imgs/6361663326339062502978093.jpg",
+      "token": "migration-resource://63d837204915ab7a4d35523e1f4d5961e1b86d3f301ae535220f97ea1fc057d6",
+      "snapshotPath": "assets/63d837204915ab7a4d35523e1f4d5961e1b86d3f301ae535220f97ea1fc057d6.jpg",
+      "sha256": "63d837204915ab7a4d35523e1f4d5961e1b86d3f301ae535220f97ea1fc057d6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 211912
+    }
+  ],
+  "sourceFingerprint": "ab5cca9ae6ba2b39124eb9ff8fdad112840a5650bd2b86b026a429b068a871a9",
+  "evidence": {
+    "listPage": 152,
+    "listTitle": "2016年我省举办多期高校就业指导教师培训班",
+    "listPublishDate": "2016-12-01",
+    "sourceOrder": 1511,
+    "detailPublishDate": "2016-12-01"
+  }
+}

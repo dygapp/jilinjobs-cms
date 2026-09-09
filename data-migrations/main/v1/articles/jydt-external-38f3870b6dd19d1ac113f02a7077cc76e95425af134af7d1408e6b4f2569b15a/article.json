@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:38f3870b6dd19d1ac113f02a7077cc76e95425af134af7d1408e6b4f2569b15a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/SQAYEHv7sHomLoXyQon3xA",
+    "url": "https://mp.weixin.qq.com/s/SQAYEHv7sHomLoXyQon3xA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企合作拓新路 精准育人助“双碳” —— 松原职业技术学院赴氢能重点企业开展专题调研",
+    "source": "",
+    "publishDate": "2026-05-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/SQAYEHv7sHomLoXyQon3xA"
+  },
+  "resources": [],
+  "sourceFingerprint": "90342ca8b1f106ad49c23f93c9c592ffa58ef4b64cf5a13683efa5bb5175c917",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "校企合作拓新路 精准育人助“双碳” —— 松原职业技术学院赴氢能重点企业开展专题调研",
+    "listPublishDate": "2026-05-14",
+    "sourceOrder": 184
+  }
+}

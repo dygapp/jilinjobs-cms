@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:c197ab885f62e24aa8626aabf48ba5b563123b66651d4dfb592d2766358b7d28",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/X9KqmiqU0yBaYnWt3nzZzA",
+    "url": "https://mp.weixin.qq.com/s/X9KqmiqU0yBaYnWt3nzZzA?scene=25&sessionid=-1368955733"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学外国语学院外语专场招聘会邀请函",
+    "source": "",
+    "publishDate": "2025-03-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/X9KqmiqU0yBaYnWt3nzZzA?scene=25&sessionid=-1368955733"
+  },
+  "resources": [],
+  "sourceFingerprint": "4885edf4ed9d941f4180e27dc3c536914b0104ecd806cab3ed502e32aaeaab40",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "长春师范大学外国语学院外语专场招聘会邀请函",
+    "listPublishDate": "2025-03-31",
+    "sourceOrder": 198
+  }
+}

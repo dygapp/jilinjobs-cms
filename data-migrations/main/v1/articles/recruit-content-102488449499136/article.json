@@ -1,0 +1,101 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:102488449499136",
+    "contentId": "102488449499136",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=102488449499136"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "绿园企业开发岗位统计表",
+    "source": "",
+    "publishDate": "2022-07-20",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><a href=\"migration-attachment://70a457370ff7f1ed49fe2d6897144474cebfd083893676e2b6a71e5f6d94101d\">绿园区企业开发岗位统计表(凯百达客车配件)</a></p>\n\n<p style=\"text-align:center\"><a href=\"migration-attachment://e110432f18cdc4e95ac8a9d1610876135747fb3f4aa671113b221ec564686552\">绿园区企业开发岗位统计表(蓝青蛙1)</a></p>\n\n<p style=\"text-align:center\"><a href=\"migration-attachment://9e68406d7eba49c1333f434aa12bba0d990e21ddfcabc0728f346952b6aa2a13\">绿园区企业开发岗位统计表(研奥电气)(2)</a></p>\n\n<p style=\"text-align:center\"><a href=\"migration-attachment://3c24697f196d2b0dc21a6a891a5cb69e87386182e3833aa187b94033f9a2450b\">绿园区企业开发岗位统计表(长春市汇融密封材料有限公司)</a></p>\n\n<p style=\"text-align:center\"><a href=\"migration-attachment://285e081cdb42fdff4292b82230872c428eaddf18f789d2f1007c44d17ca56712\">绿园区企业开发岗位统计表(中泰)</a></p>\n\n<p style=\"text-align:center\"><a href=\"migration-attachment://96ef1a81b75b90035d8aab2db91ff7707e96015a6672d5fe6b77282ec88b23b4\">绿园区企业开发岗位统计表(中研)</a></p>\n\n<p style=\"text-align:center\"><a href=\"migration-attachment://a98d5f4c25cf3447622a3b42f7f02f7455825a0f1f2dfb1ea0c33d7fad4ef911\">绿园区企业开发岗位统计表-优立科</a></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "ATTACHMENT",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-20/10c5fc6f-5a91-45c3-9732-17e96ae39a47.xlsx",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-20/10c5fc6f-5a91-45c3-9732-17e96ae39a47.xlsx",
+      "token": "migration-attachment://70a457370ff7f1ed49fe2d6897144474cebfd083893676e2b6a71e5f6d94101d",
+      "snapshotPath": "assets/70a457370ff7f1ed49fe2d6897144474cebfd083893676e2b6a71e5f6d94101d.xlsx",
+      "sha256": "70a457370ff7f1ed49fe2d6897144474cebfd083893676e2b6a71e5f6d94101d",
+      "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sizeBytes": 11186
+    },
+    {
+      "role": "ATTACHMENT",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-20/8ba82226-57d8-483f-976f-bdbf0c9dffee.xlsx",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-20/8ba82226-57d8-483f-976f-bdbf0c9dffee.xlsx",
+      "token": "migration-attachment://e110432f18cdc4e95ac8a9d1610876135747fb3f4aa671113b221ec564686552",
+      "snapshotPath": "assets/e110432f18cdc4e95ac8a9d1610876135747fb3f4aa671113b221ec564686552.xlsx",
+      "sha256": "e110432f18cdc4e95ac8a9d1610876135747fb3f4aa671113b221ec564686552",
+      "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sizeBytes": 11141
+    },
+    {
+      "role": "ATTACHMENT",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-20/ee2b8383-b45e-49a1-8a2b-857a96cdfc88.xlsx",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-20/ee2b8383-b45e-49a1-8a2b-857a96cdfc88.xlsx",
+      "token": "migration-attachment://9e68406d7eba49c1333f434aa12bba0d990e21ddfcabc0728f346952b6aa2a13",
+      "snapshotPath": "assets/9e68406d7eba49c1333f434aa12bba0d990e21ddfcabc0728f346952b6aa2a13.xlsx",
+      "sha256": "9e68406d7eba49c1333f434aa12bba0d990e21ddfcabc0728f346952b6aa2a13",
+      "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sizeBytes": 12554
+    },
+    {
+      "role": "ATTACHMENT",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-20/b7dbfdd9-0d79-4d00-94bf-ff5821781d3b.xlsx",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-20/b7dbfdd9-0d79-4d00-94bf-ff5821781d3b.xlsx",
+      "token": "migration-attachment://3c24697f196d2b0dc21a6a891a5cb69e87386182e3833aa187b94033f9a2450b",
+      "snapshotPath": "assets/3c24697f196d2b0dc21a6a891a5cb69e87386182e3833aa187b94033f9a2450b.xlsx",
+      "sha256": "3c24697f196d2b0dc21a6a891a5cb69e87386182e3833aa187b94033f9a2450b",
+      "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sizeBytes": 11139
+    },
+    {
+      "role": "ATTACHMENT",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-20/89f4fd7b-0f1c-4f3d-a6d0-9e2c8e226712.xlsx",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-20/89f4fd7b-0f1c-4f3d-a6d0-9e2c8e226712.xlsx",
+      "token": "migration-attachment://285e081cdb42fdff4292b82230872c428eaddf18f789d2f1007c44d17ca56712",
+      "snapshotPath": "assets/285e081cdb42fdff4292b82230872c428eaddf18f789d2f1007c44d17ca56712.xlsx",
+      "sha256": "285e081cdb42fdff4292b82230872c428eaddf18f789d2f1007c44d17ca56712",
+      "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sizeBytes": 11409
+    },
+    {
+      "role": "ATTACHMENT",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-20/ea521459-7678-4973-a5f3-42f6ec9e33c3.xlsx",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-20/ea521459-7678-4973-a5f3-42f6ec9e33c3.xlsx",
+      "token": "migration-attachment://96ef1a81b75b90035d8aab2db91ff7707e96015a6672d5fe6b77282ec88b23b4",
+      "snapshotPath": "assets/96ef1a81b75b90035d8aab2db91ff7707e96015a6672d5fe6b77282ec88b23b4.xlsx",
+      "sha256": "96ef1a81b75b90035d8aab2db91ff7707e96015a6672d5fe6b77282ec88b23b4",
+      "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sizeBytes": 11191
+    },
+    {
+      "role": "ATTACHMENT",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-20/a9afcfb4-c5cc-4f94-bfb2-25cdd86d4657.xlsx",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-20/a9afcfb4-c5cc-4f94-bfb2-25cdd86d4657.xlsx",
+      "token": "migration-attachment://a98d5f4c25cf3447622a3b42f7f02f7455825a0f1f2dfb1ea0c33d7fad4ef911",
+      "snapshotPath": "assets/a98d5f4c25cf3447622a3b42f7f02f7455825a0f1f2dfb1ea0c33d7fad4ef911.xlsx",
+      "sha256": "a98d5f4c25cf3447622a3b42f7f02f7455825a0f1f2dfb1ea0c33d7fad4ef911",
+      "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sizeBytes": 11331
+    }
+  ],
+  "sourceFingerprint": "31dbc6d68f9b4d4638a3615807fa00fe5b528ededee5120cb72b8ec3fd4c3406",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "绿园企业开发岗位统计表",
+    "listPublishDate": "2022-07-20",
+    "sourceOrder": 340,
+    "detailPublishDate": "2022-07-20"
+  }
+}

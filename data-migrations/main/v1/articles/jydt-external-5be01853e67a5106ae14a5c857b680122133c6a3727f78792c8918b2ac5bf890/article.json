@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5be01853e67a5106ae14a5c857b680122133c6a3727f78792c8918b2ac5bf890",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/qjVvnEWhuvuSb2RSiW6t-Q",
+    "url": "https://mp.weixin.qq.com/s/qjVvnEWhuvuSb2RSiW6t-Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教协同 赋能智慧早教——长春早期教育职业学院与科大讯飞共建“讯飞人工智能产业学院”",
+    "source": "",
+    "publishDate": "2026-04-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/qjVvnEWhuvuSb2RSiW6t-Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "bfa99df4f69ee133265713e935a8c030de75a04a548807bf08fd22fcb66d0bb6",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "深化产教协同 赋能智慧早教——长春早期教育职业学院与科大讯飞共建“讯飞人工智能产业学院”",
+    "listPublishDate": "2026-04-24",
+    "sourceOrder": 245
+  }
+}

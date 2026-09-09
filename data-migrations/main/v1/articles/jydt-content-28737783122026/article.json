@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122026",
+    "contentId": "28737783122026",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122026"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "许世彬总督学到省高校毕业生就业指导中心调研工作",
+    "source": "",
+    "publishDate": "2019-01-03",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">许世彬总督学到省高校毕业生就业指导中心调研工作</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:吉林省高等学校毕业生就业指导中心   发布时间:2019-1-3 14:33:16</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-indent: 43px;\"><span style=\"color: black; font-family: 仿宋; font-size: 21px;\">新年伊始，省政府教育督导团总督学许世彬到省高校毕业生就业指导中心调研工作，省教育厅高校学生处副处长宁宝忠陪同调研。</span></p><p style=\"text-indent: 43px;\"><span style=\"color: black; font-family: 仿宋; font-size: 21px;\">许世彬总督学分别到中心一站式办公大厅、各部室，及教育宾馆看望员工，与员工们亲切交流，并现场询问了解工作开展情况。</span></p><p style=\"text-indent: 43px;\"><span style=\"color: black; font-family: 仿宋; font-size: 21px;\">中心副主任张旭光代表中心班子汇报了中心整体工作情况。党总支书记孙维才着重汇报了“双困生”培训、“扶贫”、“流动党员”等重点工作。</span></p><p style=\"text-indent: 43px;\"><span style=\"color: black; font-family: 仿宋; font-size: 21px;\">许世彬总督学在听取了中心工作汇报后指出，要增强安全意识，逐步建立监管机制，建立大的安全体系，包括思想安全、财产安全、日常生活安全、依法管理安全等，按部就班，定期做好安全检查。要把中心工作作风坚持好，结合教育部、教育厅主要工作，把2018年工作总结好。要按照既定方针，不松劲，充分调动积极性，发挥攻坚克难的精神，与学生处同频共振，做好2019年各项工作。</span></p><p style=\"text-indent: 43px;\"><span style=\"color: black; font-family: 仿宋; font-size: 21px;\">&nbsp;</span></p><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"用1.JPG\" src=\"migration-resource://54c558146f044744b4f604228875aa5cfee0ad33ba97e46e1350434189368f55\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6368212287929050005389410.JPG",
+      "originalReference": "/chistory/cms/imgs/6368212287929050005389410.JPG",
+      "token": "migration-resource://54c558146f044744b4f604228875aa5cfee0ad33ba97e46e1350434189368f55",
+      "snapshotPath": "assets/54c558146f044744b4f604228875aa5cfee0ad33ba97e46e1350434189368f55.jpg",
+      "sha256": "54c558146f044744b4f604228875aa5cfee0ad33ba97e46e1350434189368f55",
+      "contentType": "image/jpeg",
+      "sizeBytes": 136326
+    }
+  ],
+  "sourceFingerprint": "a1c7521b1aba45e26b0a07a50860992af4e3ac1ffa663a90a5438ba67977a5ff",
+  "evidence": {
+    "listPage": 146,
+    "listTitle": "许世彬总督学到省高校毕业生就业指导中心调研工作",
+    "listPublishDate": "2019-01-03",
+    "sourceOrder": 1451,
+    "detailPublishDate": "2019-01-03"
+  }
+}

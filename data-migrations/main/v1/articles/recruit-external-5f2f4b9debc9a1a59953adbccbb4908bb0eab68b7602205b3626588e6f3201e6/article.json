@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:5f2f4b9debc9a1a59953adbccbb4908bb0eab68b7602205b3626588e6f3201e6",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/8v2NGX9_2aLcZ8SQKsq3fA",
+    "url": "https://mp.weixin.qq.com/s/8v2NGX9_2aLcZ8SQKsq3fA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中央网信办网络安全应急指挥中心2020年度面向全国高校毕业生公开招聘公告",
+    "source": "",
+    "publishDate": "2020-04-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/8v2NGX9_2aLcZ8SQKsq3fA"
+  },
+  "resources": [],
+  "sourceFingerprint": "801e675711726c03183e0431ae72c7ae157ef779a9ab5f4df98a951ff603ecf6",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "中央网信办网络安全应急指挥中心2020年度面向全国高校毕业生公开招聘公告",
+    "listPublishDate": "2020-04-24",
+    "sourceOrder": 403
+  }
+}

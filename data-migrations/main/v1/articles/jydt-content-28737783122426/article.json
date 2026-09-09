@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122426",
+    "contentId": "28737783122426",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122426"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "福州：给自主创业和灵活就业的大学毕业生落户",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">福州：给自主创业和灵活就业的大学毕业生落户</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 福州市公安局近日推出新规定，为大学毕业生提供落户服务：自主创业、灵活就业的大学毕业生持毕业证、户口迁移证、人才市场派遣公司的证明等材料，可以直接在福州市公安机关办理落户手续。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 　福州市公安局政治部副主任刘明介绍，２００８年以来，共有３０００多名福建省内的大学毕业生经政府人事部门批准，以人才派遣方式在福州市海峡人才市场办理了毕业生接收手续。目前，还有１０００多名毕业生未落户，其人事档案暂由海峡人才市场管理，他们的户口既没有留在学校，也未迁回原籍。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 　刘明说：“由于户口未落，这些大学毕业生在办理驾照、申请营业执照等方面受到许多限制。”</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 　近日，福州市公安局出台新规定，对毕业后未签订劳动合同的自主创业、灵活就业的大学生，以人才派遣的方式办理就业登记手续，将其户口落户在海峡人才市场的集体户上，解除大学毕业生的后顾之忧，以鼓励和扶持他们更好地自主创业、灵活就业。</font></p> <p><font size=\"2\">&nbsp;</font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "3268b228c3bdaf883c4269e481bcf7de7ef2820adabda90df9f478ea9e19fd15",
+  "evidence": {
+    "listPage": 182,
+    "listTitle": "福州：给自主创业和灵活就业的大学毕业生落户",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1820,
+    "detailPublishDate": "2009-04-05"
+  }
+}

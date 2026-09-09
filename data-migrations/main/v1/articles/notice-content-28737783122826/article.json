@@ -1,0 +1,131 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122826",
+    "contentId": "28737783122826",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122826"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于做好2016届全省普通高等学校毕业生就业创业工作的通知",
+    "source": "",
+    "publishDate": "2015-12-22",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于做好2016届全省普通高等学校毕业生就业创业工作的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2015-12-22 9:06:06</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img src=\"migration-resource://2b2518c3f16b18f25a1179ff8ca34077e33f1ca662801212c36a03f1aa579656\" style=\"\" title=\"关于做好2016届全省普通高等学校毕业生就业创业工作的通知-01.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://65c60432155a1d32f755d29bf01f9c20570a612d7d38b2f1c6b60e2c02862766\" style=\"\" title=\"关于做好2016届全省普通高等学校毕业生就业创业工作的通知-02.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://787c3d3b9bdc5f856c74dbe69af8fb4c04809cecd23ccd28df89147d9d2339ee\" style=\"\" title=\"关于做好2016届全省普通高等学校毕业生就业创业工作的通知-03.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://87d15e24e11887f3e39d85cff56e081a007971d7c310bc2d725c505f8b77a3ee\" style=\"\" title=\"关于做好2016届全省普通高等学校毕业生就业创业工作的通知-04.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://e7f91ec4446136a192ec925328b27bd0188d0bbf0577e02cd53d07b7914c5258\" style=\"\" title=\"关于做好2016届全省普通高等学校毕业生就业创业工作的通知-05.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://bd3190399fefc3a1d9771b48ba0658eee0367ec1d926fe1ff11056509c52abcc\" style=\"\" title=\"关于做好2016届全省普通高等学校毕业生就业创业工作的通知-06.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://5e15e45b4a639f664e5227c44dba78a5ba744bca084b231a26d520ed7d33e462\" style=\"\" title=\"关于做好2016届全省普通高等学校毕业生就业创业工作的通知-07.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://b37d4f66d19f7ab86bf5b7d02a79dd123d60927abbfacef3ccac6c59daaf6d66\" style=\"\" title=\"关于做好2016届全省普通高等学校毕业生就业创业工作的通知-08.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://96b2c816d17b031c96b555e037debf77ae6d65fe32b1b1c436d8235acc6082ec\" style=\"\" title=\"关于做好2016届全省普通高等学校毕业生就业创业工作的通知-09.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://e887bef8124d795e7a7e1b5e2ac086133f901ad549ba884a0339c54b4d358502\" style=\"\" title=\"关于做好2016届全省普通高等学校毕业生就业创业工作的通知-10.jpg\"></p><p style=\"text-align: center;\"><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358646198357812506923032.jpg",
+      "originalReference": "/chistory/cms/imgs/6358646198357812506923032.jpg",
+      "token": "migration-resource://2b2518c3f16b18f25a1179ff8ca34077e33f1ca662801212c36a03f1aa579656",
+      "snapshotPath": "assets/2b2518c3f16b18f25a1179ff8ca34077e33f1ca662801212c36a03f1aa579656.jpg",
+      "sha256": "2b2518c3f16b18f25a1179ff8ca34077e33f1ca662801212c36a03f1aa579656",
+      "contentType": "image/jpeg",
+      "sizeBytes": 69869
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358646198446875002251626.jpg",
+      "originalReference": "/chistory/cms/imgs/6358646198446875002251626.jpg",
+      "token": "migration-resource://65c60432155a1d32f755d29bf01f9c20570a612d7d38b2f1c6b60e2c02862766",
+      "snapshotPath": "assets/65c60432155a1d32f755d29bf01f9c20570a612d7d38b2f1c6b60e2c02862766.jpg",
+      "sha256": "65c60432155a1d32f755d29bf01f9c20570a612d7d38b2f1c6b60e2c02862766",
+      "contentType": "image/jpeg",
+      "sizeBytes": 103463
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358646198545312502850209.jpg",
+      "originalReference": "/chistory/cms/imgs/6358646198545312502850209.jpg",
+      "token": "migration-resource://787c3d3b9bdc5f856c74dbe69af8fb4c04809cecd23ccd28df89147d9d2339ee",
+      "snapshotPath": "assets/787c3d3b9bdc5f856c74dbe69af8fb4c04809cecd23ccd28df89147d9d2339ee.jpg",
+      "sha256": "787c3d3b9bdc5f856c74dbe69af8fb4c04809cecd23ccd28df89147d9d2339ee",
+      "contentType": "image/jpeg",
+      "sizeBytes": 100733
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358646198643750003448791.jpg",
+      "originalReference": "/chistory/cms/imgs/6358646198643750003448791.jpg",
+      "token": "migration-resource://87d15e24e11887f3e39d85cff56e081a007971d7c310bc2d725c505f8b77a3ee",
+      "snapshotPath": "assets/87d15e24e11887f3e39d85cff56e081a007971d7c310bc2d725c505f8b77a3ee.jpg",
+      "sha256": "87d15e24e11887f3e39d85cff56e081a007971d7c310bc2d725c505f8b77a3ee",
+      "contentType": "image/jpeg",
+      "sizeBytes": 102252
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358646198737500003763294.jpg",
+      "originalReference": "/chistory/cms/imgs/6358646198737500003763294.jpg",
+      "token": "migration-resource://e7f91ec4446136a192ec925328b27bd0188d0bbf0577e02cd53d07b7914c5258",
+      "snapshotPath": "assets/e7f91ec4446136a192ec925328b27bd0188d0bbf0577e02cd53d07b7914c5258.jpg",
+      "sha256": "e7f91ec4446136a192ec925328b27bd0188d0bbf0577e02cd53d07b7914c5258",
+      "contentType": "image/jpeg",
+      "sizeBytes": 101732
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358646198854687506305508.jpg",
+      "originalReference": "/chistory/cms/imgs/6358646198854687506305508.jpg",
+      "token": "migration-resource://bd3190399fefc3a1d9771b48ba0658eee0367ec1d926fe1ff11056509c52abcc",
+      "snapshotPath": "assets/bd3190399fefc3a1d9771b48ba0658eee0367ec1d926fe1ff11056509c52abcc.jpg",
+      "sha256": "bd3190399fefc3a1d9771b48ba0658eee0367ec1d926fe1ff11056509c52abcc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 104897
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358646198959375006119243.jpg",
+      "originalReference": "/chistory/cms/imgs/6358646198959375006119243.jpg",
+      "token": "migration-resource://5e15e45b4a639f664e5227c44dba78a5ba744bca084b231a26d520ed7d33e462",
+      "snapshotPath": "assets/5e15e45b4a639f664e5227c44dba78a5ba744bca084b231a26d520ed7d33e462.jpg",
+      "sha256": "5e15e45b4a639f664e5227c44dba78a5ba744bca084b231a26d520ed7d33e462",
+      "contentType": "image/jpeg",
+      "sizeBytes": 107347
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358646199059375009947071.jpg",
+      "originalReference": "/chistory/cms/imgs/6358646199059375009947071.jpg",
+      "token": "migration-resource://b37d4f66d19f7ab86bf5b7d02a79dd123d60927abbfacef3ccac6c59daaf6d66",
+      "snapshotPath": "assets/b37d4f66d19f7ab86bf5b7d02a79dd123d60927abbfacef3ccac6c59daaf6d66.jpg",
+      "sha256": "b37d4f66d19f7ab86bf5b7d02a79dd123d60927abbfacef3ccac6c59daaf6d66",
+      "contentType": "image/jpeg",
+      "sizeBytes": 106171
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358646199170312504274132.jpg",
+      "originalReference": "/chistory/cms/imgs/6358646199170312504274132.jpg",
+      "token": "migration-resource://96b2c816d17b031c96b555e037debf77ae6d65fe32b1b1c436d8235acc6082ec",
+      "snapshotPath": "assets/96b2c816d17b031c96b555e037debf77ae6d65fe32b1b1c436d8235acc6082ec.jpg",
+      "sha256": "96b2c816d17b031c96b555e037debf77ae6d65fe32b1b1c436d8235acc6082ec",
+      "contentType": "image/jpeg",
+      "sizeBytes": 102169
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358646199287500006816346.jpg",
+      "originalReference": "/chistory/cms/imgs/6358646199287500006816346.jpg",
+      "token": "migration-resource://e887bef8124d795e7a7e1b5e2ac086133f901ad549ba884a0339c54b4d358502",
+      "snapshotPath": "assets/e887bef8124d795e7a7e1b5e2ac086133f901ad549ba884a0339c54b4d358502.jpg",
+      "sha256": "e887bef8124d795e7a7e1b5e2ac086133f901ad549ba884a0339c54b4d358502",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88522
+    }
+  ],
+  "sourceFingerprint": "3249251d535038762b1a50e162afe63e29f4d8b9c65063e29e0a6aa874b660bb",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "关于做好2016届全省普通高等学校毕业生就业创业工作的通知",
+    "listPublishDate": "2015-12-22",
+    "sourceOrder": 259,
+    "detailPublishDate": "2015-12-22"
+  }
+}

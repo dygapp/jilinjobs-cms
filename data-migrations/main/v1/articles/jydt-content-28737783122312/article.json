@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122312",
+    "contentId": "28737783122312",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122312"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "江西出台帮扶政策鼓励大学生创业",
+    "source": "",
+    "publishDate": "2009-06-08",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">江西出台帮扶政策鼓励大学生创业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-6-8 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 近日从江西省教育厅获悉，江西省政府出台一系列优惠和帮扶政策，鼓励大学生自主创业。 </font></p> <p><font size=\"2\">　　江西规定，毕业两年内的普通高校毕业生自主创业，凡从事个体经营的（除部分特殊行业外），自其在工商部门首次注册登记之日起，3年内按规定可免收26项行政事业性收费，包括工商行政管理部门收取的个体工商户注册登记费、税务部门收取的税务登记证工本费等。</font></p> <p><font size=\"2\">　　按照规定，江西自主创业的高校毕业生，已进行就业登记并参加社会保险的，可按灵活就业人员待遇给予社会保险补贴，补贴的缴费基数按当地上年度在岗职工平均工资的60%计算，养老保险补贴12%，医疗保险补贴3%，失业保险补贴1%，期限最长不超过3年。高校毕业生自主创业的，可申请不超过5万元的小额担保贷款；对合伙经营和组织起来创业并经工商管理部门注册登记的，贷款规模可扩大到20万元，期限可放宽至两年。</font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来源：中国教育新闻网—中国教育报 </font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "bdcf85dc12a20819d13f333508f002c3245fa07c4be6dd21ecbe893a83dbe8af",
+  "evidence": {
+    "listPage": 173,
+    "listTitle": "江西出台帮扶政策鼓励大学生创业",
+    "listPublishDate": "2009-06-08",
+    "sourceOrder": 1721,
+    "detailPublishDate": "2009-06-08"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:91e560c13ba021741dd167b7870293a5fcdecaa88f280fe5bafd58ea7a9fd13d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/M37PW6Zg02EUi7C1-UiZjw",
+    "url": "https://mp.weixin.qq.com/s/M37PW6Zg02EUi7C1-UiZjw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2026年吉林省高校“政校企协同促就业”专项行动走进通化",
+    "source": "",
+    "publishDate": "2026-05-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/M37PW6Zg02EUi7C1-UiZjw"
+  },
+  "resources": [],
+  "sourceFingerprint": "4b9462ad77191321ca95e9b75ce31f303eac5fd260339be1990de9bd15297981",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "2026年吉林省高校“政校企协同促就业”专项行动走进通化",
+    "listPublishDate": "2026-05-26",
+    "sourceOrder": 140
+  }
+}

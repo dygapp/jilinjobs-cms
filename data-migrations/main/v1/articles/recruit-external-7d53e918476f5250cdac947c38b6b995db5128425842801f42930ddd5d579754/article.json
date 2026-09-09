@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:7d53e918476f5250cdac947c38b6b995db5128425842801f42930ddd5d579754",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/tzgg/898.jhtml",
+    "url": "http://job.ccit.edu.cn/tzgg/898.jhtml?sessionid=-1365099540"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院2025届毕业生就业暨2026届毕业生“实习+就业”双选会邀请函",
+    "source": "",
+    "publishDate": "2025-04-30",
+    "bodyHtml": "",
+    "externalUrl": "http://job.ccit.edu.cn/tzgg/898.jhtml?sessionid=-1365099540"
+  },
+  "resources": [],
+  "sourceFingerprint": "b8d0f5171f37b813d11962033526ee1e58a7b15664390f5f621f1f8c51e20e0c",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "长春工程学院2025届毕业生就业暨2026届毕业生“实习+就业”双选会邀请函",
+    "listPublishDate": "2025-04-30",
+    "sourceOrder": 161
+  }
+}

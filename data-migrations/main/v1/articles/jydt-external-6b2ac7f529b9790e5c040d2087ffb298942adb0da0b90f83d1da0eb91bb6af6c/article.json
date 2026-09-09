@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6b2ac7f529b9790e5c040d2087ffb298942adb0da0b90f83d1da0eb91bb6af6c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Fq-XwJbFLs_fythF3t3FGQ",
+    "url": "https://mp.weixin.qq.com/s/Fq-XwJbFLs_fythF3t3FGQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春金融高等专科学校党委副书记肖心明带队赴抚松县开展“百校对百县”促就业专项行动",
+    "source": "",
+    "publishDate": "2025-07-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Fq-XwJbFLs_fythF3t3FGQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "9cfd68a40ae2e7b4937fabfebf4f53da35b87713b18747b706b416b81d178482",
+  "evidence": {
+    "listPage": 74,
+    "listTitle": "长春金融高等专科学校党委副书记肖心明带队赴抚松县开展“百校对百县”促就业专项行动",
+    "listPublishDate": "2025-07-10",
+    "sourceOrder": 732
+  }
+}

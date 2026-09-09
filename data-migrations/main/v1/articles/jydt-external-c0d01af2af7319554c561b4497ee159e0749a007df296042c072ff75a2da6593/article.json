@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c0d01af2af7319554c561b4497ee159e0749a007df296042c072ff75a2da6593",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/GAn_VVAoOKQbrrKqXVTXwA",
+    "url": "https://mp.weixin.qq.com/s/GAn_VVAoOKQbrrKqXVTXwA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院赴吉林省安保集团开展访企拓岗调研活动",
+    "source": "",
+    "publishDate": "2025-06-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/GAn_VVAoOKQbrrKqXVTXwA"
+  },
+  "resources": [],
+  "sourceFingerprint": "bbc163abe87a6b55c1dc46c9e26480a883d1cbbe9221cacd3f757d156e9de877",
+  "evidence": {
+    "listPage": 80,
+    "listTitle": "吉林工商学院赴吉林省安保集团开展访企拓岗调研活动",
+    "listPublishDate": "2025-06-18",
+    "sourceOrder": 797
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a4ffa36bffdc97fd702aaec4569263bee4fa9568503b30eff13aaf5c61ed8a3a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kPYHZ1xPP5tE8RVSRmoOOQ",
+    "url": "https://mp.weixin.qq.com/s/kPYHZ1xPP5tE8RVSRmoOOQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务吉林高质量发展丨吉林省高校旅游管理类专业暨长春大学旅游学院四大专业集群学生实习就业双选会在净月潭举办",
+    "source": "",
+    "publishDate": "2025-05-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kPYHZ1xPP5tE8RVSRmoOOQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "63c75878a764c8257130a70c0910b57163b39bf32d818dcba7ed4cc6a383344b",
+  "evidence": {
+    "listPage": 89,
+    "listTitle": "服务吉林高质量发展丨吉林省高校旅游管理类专业暨长春大学旅游学院四大专业集群学生实习就业双选会在净月潭举办",
+    "listPublishDate": "2025-05-20",
+    "sourceOrder": 881
+  }
+}

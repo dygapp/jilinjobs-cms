@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268958196334592",
+    "contentId": "268958196334592",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268958196334592"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "东北电力大学举办国家电网公司2025年艰苦边远地区订单培养宣讲会",
+    "source": "",
+    "publishDate": "2025-01-02",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://d1b4bbd3fe4930ddb76aab87637745cf6696ed0187c993f877f5b12e91156c4e\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/354cf9c5-2a5f-4fb0-9f65-d2875a7b1a16.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/354cf9c5-2a5f-4fb0-9f65-d2875a7b1a16.jpg",
+      "token": "migration-resource://d1b4bbd3fe4930ddb76aab87637745cf6696ed0187c993f877f5b12e91156c4e",
+      "snapshotPath": "assets/d1b4bbd3fe4930ddb76aab87637745cf6696ed0187c993f877f5b12e91156c4e.jpg",
+      "sha256": "d1b4bbd3fe4930ddb76aab87637745cf6696ed0187c993f877f5b12e91156c4e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 359690
+    }
+  ],
+  "sourceFingerprint": "200112a87c1592b1f4b7587ffc3a7598be7bd72ccd056fd7c893dd3a5154933e",
+  "evidence": {
+    "listPage": 100,
+    "listTitle": "东北电力大学举办国家电网公司2025年艰苦边远地区订单培养宣讲会",
+    "listPublishDate": "2025-01-02",
+    "sourceOrder": 997,
+    "detailPublishDate": "2025-01-02"
+  }
+}

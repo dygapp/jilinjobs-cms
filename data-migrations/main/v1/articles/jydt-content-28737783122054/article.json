@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122054",
+    "contentId": "28737783122054",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122054"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "省高校毕业生就业指导中心工会举办健康知识讲座",
+    "source": "",
+    "publishDate": "2017-09-01",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">省高校毕业生就业指导中心工会举办健康知识讲座</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:中心工会   发布时间:2017-9-1 15:24:21</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-indent: 44px;\"><span style=\"font-family: 宋体; font-size: 21px;\">9月1日，省高校毕业生就业指导中心工会与长春教育宾馆工会联合举办健康知识讲座，邀请了长春中医药大学附属医院二部专家董玉福老师，为近60名工会成员做了精彩的讲解。</span></p><p style=\"text-indent: 44px;\"><span style=\"font-family: 宋体; font-size: 21px;\">此次讲座以“生活习惯和体质健康”为主题，针对职工体检状况进行分析，从当前常见高发疾病的预防和治疗，季节饮食的养生和保健，及日常健康的拿法和运动等方面进行了细致的讲授。</span></p><p style=\"text-indent: 44px;\"><span style=\"font-family: 宋体; font-size: 21px;\">讲座结束，杨玲大夫还为大家进行了个体健康咨询与解答。</span></p><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"4A7A3BCFFF57D6D24BE9728E58000AD0.png\" src=\"migration-resource://77c99403c2227415c6cf5b4d733067c6f2f9893bf9c7d83209177972fef86b83\"></p><p style=\"text-align: center;\"><img title=\"D1D19F650FC9209027A093CD4D7EE523.png\" src=\"migration-resource://7720b2346b04be716a6374f23a349c3365628f4c8d1c0512f834f6e78a506dd7\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363987633839062509274043.png",
+      "originalReference": "/chistory/cms/imgs/6363987633839062509274043.png",
+      "token": "migration-resource://77c99403c2227415c6cf5b4d733067c6f2f9893bf9c7d83209177972fef86b83",
+      "snapshotPath": "assets/77c99403c2227415c6cf5b4d733067c6f2f9893bf9c7d83209177972fef86b83.jpg",
+      "sha256": "77c99403c2227415c6cf5b4d733067c6f2f9893bf9c7d83209177972fef86b83",
+      "contentType": "image/jpeg",
+      "sizeBytes": 159033
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363987633900000006389018.png",
+      "originalReference": "/chistory/cms/imgs/6363987633900000006389018.png",
+      "token": "migration-resource://7720b2346b04be716a6374f23a349c3365628f4c8d1c0512f834f6e78a506dd7",
+      "snapshotPath": "assets/7720b2346b04be716a6374f23a349c3365628f4c8d1c0512f834f6e78a506dd7.jpg",
+      "sha256": "7720b2346b04be716a6374f23a349c3365628f4c8d1c0512f834f6e78a506dd7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 192825
+    }
+  ],
+  "sourceFingerprint": "3170804eabcbdc5513bae8b92beea922c8b5a888608c065e6b0ee9eab9361230",
+  "evidence": {
+    "listPage": 149,
+    "listTitle": "省高校毕业生就业指导中心工会举办健康知识讲座",
+    "listPublishDate": "2017-09-01",
+    "sourceOrder": 1482,
+    "detailPublishDate": "2017-09-01"
+  }
+}

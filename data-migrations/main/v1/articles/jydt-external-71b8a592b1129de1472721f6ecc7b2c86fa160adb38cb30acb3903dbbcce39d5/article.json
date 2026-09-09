@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:71b8a592b1129de1472721f6ecc7b2c86fa160adb38cb30acb3903dbbcce39d5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/JmVVsCbUzeSXDtSvtqXNhQ",
+    "url": "https://mp.weixin.qq.com/s/JmVVsCbUzeSXDtSvtqXNhQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林医药学院组队赴通化市开展政校企合作",
+    "source": "",
+    "publishDate": "2026-05-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/JmVVsCbUzeSXDtSvtqXNhQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "75e2b90fd540a75a8fd892f9d4b69d427f4e16d62c8865ffb5ae3c00d4d215dc",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "吉林医药学院组队赴通化市开展政校企合作",
+    "listPublishDate": "2026-05-20",
+    "sourceOrder": 162
+  }
+}

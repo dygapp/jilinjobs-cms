@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6e588f24ac30b61e2549e355f62ce6beced5d2a98a789472f7806376f8152473",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/AP_7byLkYg_S2rQYdR7y5g",
+    "url": "https://mp.weixin.qq.com/s/AP_7byLkYg_S2rQYdR7y5g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉聚英才 · 筑梦青春 | 四平职业大学成功举办2025年就业实习校园双选会",
+    "source": "",
+    "publishDate": "2025-05-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/AP_7byLkYg_S2rQYdR7y5g"
+  },
+  "resources": [],
+  "sourceFingerprint": "9954390352f2f968d4ac8177ac1cc2c1ceda61788f0d8e90684061388c5182f1",
+  "evidence": {
+    "listPage": 87,
+    "listTitle": "吉聚英才 · 筑梦青春 | 四平职业大学成功举办2025年就业实习校园双选会",
+    "listPublishDate": "2025-05-23",
+    "sourceOrder": 869
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122490",
+    "contentId": "28737783122490",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122490"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "国办：困难高校毕业生可享受适当求职补贴",
+    "source": "",
+    "publishDate": "2009-03-30",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">国办：困难高校毕业生可享受适当求职补贴</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-3-30 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 新华社北京２月１５日专电（记者杜宇）国办日前发出的《关于加强普通高等学校毕业生就业工作的通知》要求，对困难家庭的高校毕业生，高校可根据实际情况给予适当的求职补贴。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;《通知》要求，强化对困难高校毕业生的就业援助。各级机关考录公务员、事业单位招聘工作人员时，免收困难家庭高校毕业生的报名费和体检费。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;对离校后未就业回到原籍的高校毕业生，各地公共就业服务机构要摸清底数，免费提供政策咨询、职业指导、职业介绍和人事档案托管等服务，并组织他们参加就业见习、职业技能培训等促进就业的活动。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;对登记失业的高校毕业生，各地要将他们纳入当地失业人员扶持政策体系。对就业困难的高校毕业生和零就业家庭的高校毕业生，实施一对一职业指导、向用人单位重点推荐、公益性岗位安置等帮扶措施，按规定落实社会保险补贴、公益性岗位补贴等就业援助政策。</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "98c718e4ba14d3fb7853c37dfbafbc1829e63ad21688b97eccb4f54fd2049161",
+  "evidence": {
+    "listPage": 200,
+    "listTitle": "国办：困难高校毕业生可享受适当求职补贴",
+    "listPublishDate": "2009-03-30",
+    "sourceOrder": 1999,
+    "detailPublishDate": "2009-03-30"
+  }
+}

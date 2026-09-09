@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ed847ce1644cff6cfa33e02538925afe25af1e4fa293f159dd3c685f6b4bf74b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/XZ3bXUKRy8pM1-lhQMK4LQ",
+    "url": "https://mp.weixin.qq.com/s/XZ3bXUKRy8pM1-lhQMK4LQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "企拓岗促就业 校企联动育新人丨长春财经学院赴企业调研交流",
+    "source": "",
+    "publishDate": "2026-08-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/XZ3bXUKRy8pM1-lhQMK4LQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "661504e418e14f89a0f9a826def3c2566a89d04d8748e53fb6ff467f1ab54e70",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "企拓岗促就业 校企联动育新人丨长春财经学院赴企业调研交流",
+    "listPublishDate": "2026-08-19",
+    "sourceOrder": 12
+  }
+}

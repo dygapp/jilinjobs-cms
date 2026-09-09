@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:efc714626db18dfb22211ba78aeadfa0c4b7d21ad355c53380f94b3273328630",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Prn_4C0wrFs07ZgD0L34Rg",
+    "url": "https://mp.weixin.qq.com/s/Prn_4C0wrFs07ZgD0L34Rg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企合作 | 吉林通用航空职业技术学院党委书记王洪福一行赴吉林市低空飞行服务中心参观调研",
+    "source": "",
+    "publishDate": "2025-12-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Prn_4C0wrFs07ZgD0L34Rg"
+  },
+  "resources": [],
+  "sourceFingerprint": "f407f0e7131d95688f314028f6409bac600cf5e4222def65814ab7b023bd85c0",
+  "evidence": {
+    "listPage": 53,
+    "listTitle": "校企合作 | 吉林通用航空职业技术学院党委书记王洪福一行赴吉林市低空飞行服务中心参观调研",
+    "listPublishDate": "2025-12-22",
+    "sourceOrder": 528
+  }
+}

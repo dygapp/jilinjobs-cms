@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:75ab409db5291b13353661eb4c296a4f57399b2ba916f7442abbaa14a618e2fd",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kkcqsd-PXMKIos7lge8yPg",
+    "url": "https://mp.weixin.qq.com/s/kkcqsd-PXMKIos7lge8yPg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企携手 共谱新篇 | 吉林师范大学博达学院与福建亿学教育科技集团有限公司签署校企合作协议",
+    "source": "",
+    "publishDate": "2026-02-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kkcqsd-PXMKIos7lge8yPg"
+  },
+  "resources": [],
+  "sourceFingerprint": "6f5357c0c6a4da31c97716aab1558872204651e099783556ae252823d027b070",
+  "evidence": {
+    "listPage": 45,
+    "listTitle": "校企携手 共谱新篇 | 吉林师范大学博达学院与福建亿学教育科技集团有限公司签署校企合作协议",
+    "listPublishDate": "2026-02-12",
+    "sourceOrder": 445
+  }
+}

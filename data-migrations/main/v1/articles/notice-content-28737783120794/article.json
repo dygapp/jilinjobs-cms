@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120794",
+    "contentId": "28737783120794",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120794"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于组织开展2012年全省高校毕业生就业洽谈月活动的通知",
+    "source": "",
+    "publishDate": "2011-11-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于组织开展2012年全省高校毕业生就业洽谈月活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-4 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://662a617804efc566a0e379aa04d92eecd0730ca351f337ba6b046ea5c4fd96c9\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://76935d6f62fb92a225af59152f72a9ce83a66a0f2ff0bd49f72175039ff14954\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://8cb106dd99e774bba5468dd15d1df48032a95ac64a9d6edb977e7ab7e7b22506\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111104162418329.jpg",
+      "originalReference": "/chistory/cms/imgs/20111104162418329.jpg",
+      "token": "migration-resource://662a617804efc566a0e379aa04d92eecd0730ca351f337ba6b046ea5c4fd96c9",
+      "snapshotPath": "assets/662a617804efc566a0e379aa04d92eecd0730ca351f337ba6b046ea5c4fd96c9.jpg",
+      "sha256": "662a617804efc566a0e379aa04d92eecd0730ca351f337ba6b046ea5c4fd96c9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 89073
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111104162426657.jpg",
+      "originalReference": "/chistory/cms/imgs/20111104162426657.jpg",
+      "token": "migration-resource://76935d6f62fb92a225af59152f72a9ce83a66a0f2ff0bd49f72175039ff14954",
+      "snapshotPath": "assets/76935d6f62fb92a225af59152f72a9ce83a66a0f2ff0bd49f72175039ff14954.jpg",
+      "sha256": "76935d6f62fb92a225af59152f72a9ce83a66a0f2ff0bd49f72175039ff14954",
+      "contentType": "image/jpeg",
+      "sizeBytes": 89074
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2011110416260566.jpg",
+      "originalReference": "/chistory/cms/imgs/2011110416260566.jpg",
+      "token": "migration-resource://8cb106dd99e774bba5468dd15d1df48032a95ac64a9d6edb977e7ab7e7b22506",
+      "snapshotPath": "assets/8cb106dd99e774bba5468dd15d1df48032a95ac64a9d6edb977e7ab7e7b22506.jpg",
+      "sha256": "8cb106dd99e774bba5468dd15d1df48032a95ac64a9d6edb977e7ab7e7b22506",
+      "contentType": "image/jpeg",
+      "sizeBytes": 40972
+    }
+  ],
+  "sourceFingerprint": "6dfb99fd6cb6e8771a4a08bb4928d36a62d94f8dc81c7d7001aee000f75ae60f",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "关于组织开展2012年全省高校毕业生就业洽谈月活动的通知",
+    "listPublishDate": "2011-11-04",
+    "sourceOrder": 421,
+    "detailPublishDate": "2011-11-04"
+  }
+}

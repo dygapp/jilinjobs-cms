@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:283459801071616",
+    "contentId": "283459801071616",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=283459801071616"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办全国交通运输与邮政快递行业面向2025届高校毕业生招聘活动的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2025-04-09",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://a8767a0a62e4293b60b4b866f57bd7e449f4f50b2d188c008dce001cf486cf56\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://8dbde2c2b710e09704fc9855b3aec0da53a9fff3f27300051b44cdf2f9f53d6b\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://3aa058dfcd2361cbb680f54879bb2715965aaff8f092bd2b4e38d9efd42b907d\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://30df774b5b21f18dbd8049d673e6b32c56184a65b8c038abb7b911f5142c4c67\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://60876453e3476636610091b278fda05267265b8c0a0f415b8b6c33c67fc65e88\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/02950e1e-6c7a-4d17-b856-faa542481c4e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/02950e1e-6c7a-4d17-b856-faa542481c4e.jpg",
+      "token": "migration-resource://a8767a0a62e4293b60b4b866f57bd7e449f4f50b2d188c008dce001cf486cf56",
+      "snapshotPath": "assets/a8767a0a62e4293b60b4b866f57bd7e449f4f50b2d188c008dce001cf486cf56.jpg",
+      "sha256": "a8767a0a62e4293b60b4b866f57bd7e449f4f50b2d188c008dce001cf486cf56",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/360d00ff-9223-4bec-b3cc-f69024f06779.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/360d00ff-9223-4bec-b3cc-f69024f06779.jpg",
+      "token": "migration-resource://8dbde2c2b710e09704fc9855b3aec0da53a9fff3f27300051b44cdf2f9f53d6b",
+      "snapshotPath": "assets/8dbde2c2b710e09704fc9855b3aec0da53a9fff3f27300051b44cdf2f9f53d6b.jpg",
+      "sha256": "8dbde2c2b710e09704fc9855b3aec0da53a9fff3f27300051b44cdf2f9f53d6b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/4b747729-13a3-4ca4-aeaa-1c46e765b8a6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/4b747729-13a3-4ca4-aeaa-1c46e765b8a6.jpg",
+      "token": "migration-resource://3aa058dfcd2361cbb680f54879bb2715965aaff8f092bd2b4e38d9efd42b907d",
+      "snapshotPath": "assets/3aa058dfcd2361cbb680f54879bb2715965aaff8f092bd2b4e38d9efd42b907d.jpg",
+      "sha256": "3aa058dfcd2361cbb680f54879bb2715965aaff8f092bd2b4e38d9efd42b907d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/3fafd0d1-3257-451d-b7f6-0d83b0edda88.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/3fafd0d1-3257-451d-b7f6-0d83b0edda88.jpg",
+      "token": "migration-resource://30df774b5b21f18dbd8049d673e6b32c56184a65b8c038abb7b911f5142c4c67",
+      "snapshotPath": "assets/30df774b5b21f18dbd8049d673e6b32c56184a65b8c038abb7b911f5142c4c67.jpg",
+      "sha256": "30df774b5b21f18dbd8049d673e6b32c56184a65b8c038abb7b911f5142c4c67",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/9fdd3bf4-d8aa-4121-b7dc-c5e1b64a1b3c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/9fdd3bf4-d8aa-4121-b7dc-c5e1b64a1b3c.jpg",
+      "token": "migration-resource://60876453e3476636610091b278fda05267265b8c0a0f415b8b6c33c67fc65e88",
+      "snapshotPath": "assets/60876453e3476636610091b278fda05267265b8c0a0f415b8b6c33c67fc65e88.jpg",
+      "sha256": "60876453e3476636610091b278fda05267265b8c0a0f415b8b6c33c67fc65e88",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    }
+  ],
+  "sourceFingerprint": "e95e932472f02a328def19cc0cd08bc2e9a6160c3c108760380fc6c16f97bd5a",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "关于举办全国交通运输与邮政快递行业面向2025届高校毕业生招聘活动的通知",
+    "listPublishDate": "2025-04-09",
+    "sourceOrder": 48,
+    "detailPublishDate": "2025-04-09"
+  }
+}

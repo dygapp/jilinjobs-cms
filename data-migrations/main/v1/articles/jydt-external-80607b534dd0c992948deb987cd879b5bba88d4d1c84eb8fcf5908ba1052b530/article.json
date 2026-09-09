@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:80607b534dd0c992948deb987cd879b5bba88d4d1c84eb8fcf5908ba1052b530",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/P0ydQJ66-VH3ZKsGJkoXtg",
+    "url": "https://mp.weixin.qq.com/s/P0ydQJ66-VH3ZKsGJkoXtg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "大连市技师学院赴延边大学开展合作交流座谈会",
+    "source": "",
+    "publishDate": "2026-04-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/P0ydQJ66-VH3ZKsGJkoXtg"
+  },
+  "resources": [],
+  "sourceFingerprint": "f2afb67dc9f7539ff9b89af496a10bc39ac1899960b92b25787de0efe8bb3915",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "大连市技师学院赴延边大学开展合作交流座谈会",
+    "listPublishDate": "2026-04-02",
+    "sourceOrder": 331
+  }
+}

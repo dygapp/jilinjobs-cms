@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:158648454103040",
+    "contentId": "158648454103040",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=158648454103040"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展“冲出犹疑 就在前方”吉林省高校毕业生离校前的一堂就业课的通知",
+    "source": "培训部",
+    "publishDate": "2023-05-26",
+    "bodyHtml": "\n                        <p><img alt=\"\" height=\"909\" src=\"migration-resource://9a3d99feeed5485c3a6ed5424d38c270a51b2e706c1f4c7c37679274ede5a1a7\" width=\"649\"><img alt=\"\" height=\"908\" src=\"migration-resource://d0b6905934857faa061e893416f83b4d7d1067e488de7b505950c9b1519bf54f\" width=\"643\"><img alt=\"\" height=\"908\" src=\"migration-resource://da4193088e0a9a9d9275634104d8d2c8dc3bb059a2bbe1d193b19423f2514ce9\" width=\"644\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-26/2c09fffe-1386-4e48-8d8c-43206e386d08.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-26/2c09fffe-1386-4e48-8d8c-43206e386d08.jpg",
+      "token": "migration-resource://9a3d99feeed5485c3a6ed5424d38c270a51b2e706c1f4c7c37679274ede5a1a7",
+      "snapshotPath": "assets/9a3d99feeed5485c3a6ed5424d38c270a51b2e706c1f4c7c37679274ede5a1a7.jpg",
+      "sha256": "9a3d99feeed5485c3a6ed5424d38c270a51b2e706c1f4c7c37679274ede5a1a7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 48562
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-26/7ae1fed2-cb6f-4f1f-8e47-789b0f25950e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-26/7ae1fed2-cb6f-4f1f-8e47-789b0f25950e.jpg",
+      "token": "migration-resource://d0b6905934857faa061e893416f83b4d7d1067e488de7b505950c9b1519bf54f",
+      "snapshotPath": "assets/d0b6905934857faa061e893416f83b4d7d1067e488de7b505950c9b1519bf54f.jpg",
+      "sha256": "d0b6905934857faa061e893416f83b4d7d1067e488de7b505950c9b1519bf54f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 34392
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-26/6de79681-0fc3-4f1b-8ce3-0b2a23548116.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-26/6de79681-0fc3-4f1b-8ce3-0b2a23548116.jpg",
+      "token": "migration-resource://da4193088e0a9a9d9275634104d8d2c8dc3bb059a2bbe1d193b19423f2514ce9",
+      "snapshotPath": "assets/da4193088e0a9a9d9275634104d8d2c8dc3bb059a2bbe1d193b19423f2514ce9.jpg",
+      "sha256": "da4193088e0a9a9d9275634104d8d2c8dc3bb059a2bbe1d193b19423f2514ce9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75056
+    }
+  ],
+  "sourceFingerprint": "fde271ca1c9cb7da20e5954188541f33230daa9ccacb64792d180c639381bf13",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "关于开展“冲出犹疑 就在前方”吉林省高校毕业生离校前的一堂就业课的通知",
+    "listPublishDate": "2023-05-26",
+    "sourceOrder": 105,
+    "detailPublishDate": "2023-05-26"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737785217125",
+    "contentId": "28737785217125",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737785217125"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2013年全国普通高校毕业生就业工作推进会（网络视频会议）在省教育信息中心召开",
+    "source": "",
+    "publishDate": "2013-04-11",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2013年全国普通高校毕业生就业工作推进会（网络视频会议）在省教育信息中心召开</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2013-4-11 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font color=\"#444444\" size=\"2\"><img border=\"0\" src=\"migration-resource://95558df345f5487508fff6ef9326bc922caf8cd1128dcd14f0013f6866894445\"></font></p> <p align=\"left\"><font color=\"#444444\" size=\"2\">4月10日，2013年全国普通高校毕业生就业工作推进会（网络视频会议）在省教育信息中心召开，省教育厅副厅长孙维杰出席会议。 </font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img border=\"0\" src=\"migration-resource://586be504b04ce4e295e5a92737de08d1c4857e51919dfdd0f7a116c0ecb91aa3\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\">视频会现场<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130411222733914.jpg",
+      "originalReference": "/chistory/cms/imgs/20130411222733914.jpg",
+      "token": "migration-resource://95558df345f5487508fff6ef9326bc922caf8cd1128dcd14f0013f6866894445",
+      "snapshotPath": "assets/95558df345f5487508fff6ef9326bc922caf8cd1128dcd14f0013f6866894445.jpg",
+      "sha256": "95558df345f5487508fff6ef9326bc922caf8cd1128dcd14f0013f6866894445",
+      "contentType": "image/jpeg",
+      "sizeBytes": 85493
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130411222822651.jpg",
+      "originalReference": "/chistory/cms/imgs/20130411222822651.jpg",
+      "token": "migration-resource://586be504b04ce4e295e5a92737de08d1c4857e51919dfdd0f7a116c0ecb91aa3",
+      "snapshotPath": "assets/586be504b04ce4e295e5a92737de08d1c4857e51919dfdd0f7a116c0ecb91aa3.jpg",
+      "sha256": "586be504b04ce4e295e5a92737de08d1c4857e51919dfdd0f7a116c0ecb91aa3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 91128
+    }
+  ],
+  "sourceFingerprint": "bb423838692c3c61a1726c08c34e1b8d0faa4d842b9ed558fa111ad2c992d307",
+  "evidence": {
+    "listPage": 163,
+    "listTitle": "2013年全国普通高校毕业生就业工作推进会（网络视频会议）在省教育信息中心召开",
+    "listPublishDate": "2013-04-11",
+    "sourceOrder": 1624,
+    "detailPublishDate": "2013-04-11"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:366072721063936",
+    "contentId": "366072721063936",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=366072721063936"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省2026届高校毕业生“暑假就业促进月”专场网络招聘活动的通知",
+    "source": "市场部",
+    "publishDate": "2026-07-14",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1274\" src=\"migration-resource://f73eb5702ddf63984ff0a04bd5b9253b2c43843c24b7218b571b0178fd152c40\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1274\" src=\"migration-resource://1393c0c6553be89e48bf92abbc92a7357cf0f4f862b3ea9972ee6c574ed5cfb1\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1274\" src=\"migration-resource://019000118f89c9f4609f8408eabfdd918967661f70755e8c623bfb3da5d5af41\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1274\" src=\"migration-resource://bb6c26a205242c6bdbf33b9563102f00d2f55c6f0321f8832ee9061a9841d3a3\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1274\" src=\"migration-resource://1f4f24309a1a9d1777467642c6fc25eaf5d13386e154d1a1558b297976650e59\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-07-14/5c069db9-9a11-4cbc-a3af-dd19f6ebae7a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-07-14/5c069db9-9a11-4cbc-a3af-dd19f6ebae7a.jpg",
+      "token": "migration-resource://f73eb5702ddf63984ff0a04bd5b9253b2c43843c24b7218b571b0178fd152c40",
+      "snapshotPath": "assets/f73eb5702ddf63984ff0a04bd5b9253b2c43843c24b7218b571b0178fd152c40.jpg",
+      "sha256": "f73eb5702ddf63984ff0a04bd5b9253b2c43843c24b7218b571b0178fd152c40",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-07-14/0fcb6d98-2929-4c47-9f45-8e7a38ed1309.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-07-14/0fcb6d98-2929-4c47-9f45-8e7a38ed1309.jpg",
+      "token": "migration-resource://1393c0c6553be89e48bf92abbc92a7357cf0f4f862b3ea9972ee6c574ed5cfb1",
+      "snapshotPath": "assets/1393c0c6553be89e48bf92abbc92a7357cf0f4f862b3ea9972ee6c574ed5cfb1.jpg",
+      "sha256": "1393c0c6553be89e48bf92abbc92a7357cf0f4f862b3ea9972ee6c574ed5cfb1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-07-14/423630e8-6d65-4d59-91ed-d8fa25c765f4.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-07-14/423630e8-6d65-4d59-91ed-d8fa25c765f4.jpg",
+      "token": "migration-resource://019000118f89c9f4609f8408eabfdd918967661f70755e8c623bfb3da5d5af41",
+      "snapshotPath": "assets/019000118f89c9f4609f8408eabfdd918967661f70755e8c623bfb3da5d5af41.jpg",
+      "sha256": "019000118f89c9f4609f8408eabfdd918967661f70755e8c623bfb3da5d5af41",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-07-14/6b8380c7-8ffd-4ebb-993e-c93a1c63079b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-07-14/6b8380c7-8ffd-4ebb-993e-c93a1c63079b.jpg",
+      "token": "migration-resource://bb6c26a205242c6bdbf33b9563102f00d2f55c6f0321f8832ee9061a9841d3a3",
+      "snapshotPath": "assets/bb6c26a205242c6bdbf33b9563102f00d2f55c6f0321f8832ee9061a9841d3a3.jpg",
+      "sha256": "bb6c26a205242c6bdbf33b9563102f00d2f55c6f0321f8832ee9061a9841d3a3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-07-14/d09b6954-5f35-4bbd-addb-b4de4e3083a6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-07-14/d09b6954-5f35-4bbd-addb-b4de4e3083a6.jpg",
+      "token": "migration-resource://1f4f24309a1a9d1777467642c6fc25eaf5d13386e154d1a1558b297976650e59",
+      "snapshotPath": "assets/1f4f24309a1a9d1777467642c6fc25eaf5d13386e154d1a1558b297976650e59.jpg",
+      "sha256": "1f4f24309a1a9d1777467642c6fc25eaf5d13386e154d1a1558b297976650e59",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "788b9c10aa127220912311c4286d840f3f39a9c2f230932ee82d9a8a0c202068",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "关于举办吉林省2026届高校毕业生“暑假就业促进月”专场网络招聘活动的通知",
+    "listPublishDate": "2026-07-14",
+    "sourceOrder": 1,
+    "detailPublishDate": "2026-07-14"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:368945ba0e053e650e6652562c4e5b1f5a827095d7e6a22ba814dd1674788d82",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/-q8eBr9MOfPF-iKdCAlOOg",
+    "url": "https://mp.weixin.qq.com/s/-q8eBr9MOfPF-iKdCAlOOg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2025届吉林省高校毕业生就业创业洽谈月—— 文化创意类毕业生就业创业洽谈会邀请函",
+    "source": "",
+    "publishDate": "2024-09-05",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/-q8eBr9MOfPF-iKdCAlOOg"
+  },
+  "resources": [],
+  "sourceFingerprint": "f2fb284cdf0dc7bb67fe075dcea635d782597dc7ae3eef941069bbd9f817f116",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "2025届吉林省高校毕业生就业创业洽谈月—— 文化创意类毕业生就业创业洽谈会邀请函",
+    "listPublishDate": "2024-09-05",
+    "sourceOrder": 257
+  }
+}

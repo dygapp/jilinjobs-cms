@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737785217121",
+    "contentId": "28737785217121",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737785217121"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林工程技术师范学院2016届毕业生冬季供需见面洽谈会胜利召开",
+    "source": "",
+    "publishDate": "2015-11-30",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林工程技术师范学院2016届毕业生冬季供需见面洽谈会胜利召开</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2015-11-30 15:56:12</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 11月29日上午，由吉林工程技术师范学院主办的“2016届毕业生冬季供需见面暨校企合作洽谈会”在吉林工程技术师范学院大学生饮食服务中心召开。吉林省教育厅高校学生处处长蒋曼萍莅临现场指导工作，吉林工程技术师范学院党委书记王建华、副校长刘君义、党委常委冯超带领各教学分院院长、党总支书记、党总支副书记及相关部门负责人参会并与用人单位进行了广泛交流。 </span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp;&nbsp; 此次洽谈会吸引了济南市技师学院、鞍山市职教城管理委员会、中国能源建设集团东北电力第三工程有限公司等近三百家企事业单位，共提供就业岗位2669个，意向签约600余人。</span></p><p style=\"text-align: center;\"><img title=\"2015113016411304.jpg\" src=\"migration-resource://d639d2296ba9ff20c462bfebb9f532ae05c4b4c582987cce65b3d13b1cbdca74\"></p><p style=\"text-align: center;\"><img title=\"201512111148455.jpg\" src=\"migration-resource://8c47e18eb70d905e9acd15b88a0c4250993b7d8f8143fc639152aaf600dd7e3e\"></p><p style=\"text-align: center;\"><img title=\"2015113016423992.jpg\" src=\"migration-resource://fd393b6fb016f27a34b5956594d0f3279da5e7afab4912214d1327d10c9ae5df\"></p><p style=\"text-align: center;\"><img title=\"2015113016437917.jpg\" src=\"migration-resource://818e71db12e503c30b7ffaaf71479ce73cf642ab1beddff46f34c9d2e5627387\"></p><p></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544573351562508153758.jpg",
+      "originalReference": "/chistory/cms/imgs/6358544573351562508153758.jpg",
+      "token": "migration-resource://d639d2296ba9ff20c462bfebb9f532ae05c4b4c582987cce65b3d13b1cbdca74",
+      "snapshotPath": "assets/d639d2296ba9ff20c462bfebb9f532ae05c4b4c582987cce65b3d13b1cbdca74.jpg",
+      "sha256": "d639d2296ba9ff20c462bfebb9f532ae05c4b4c582987cce65b3d13b1cbdca74",
+      "contentType": "image/jpeg",
+      "sizeBytes": 301470
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544573357812507368911.jpg",
+      "originalReference": "/chistory/cms/imgs/6358544573357812507368911.jpg",
+      "token": "migration-resource://8c47e18eb70d905e9acd15b88a0c4250993b7d8f8143fc639152aaf600dd7e3e",
+      "snapshotPath": "assets/8c47e18eb70d905e9acd15b88a0c4250993b7d8f8143fc639152aaf600dd7e3e.jpg",
+      "sha256": "8c47e18eb70d905e9acd15b88a0c4250993b7d8f8143fc639152aaf600dd7e3e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 409432
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544573367187508340727.jpg",
+      "originalReference": "/chistory/cms/imgs/6358544573367187508340727.jpg",
+      "token": "migration-resource://fd393b6fb016f27a34b5956594d0f3279da5e7afab4912214d1327d10c9ae5df",
+      "snapshotPath": "assets/fd393b6fb016f27a34b5956594d0f3279da5e7afab4912214d1327d10c9ae5df.jpg",
+      "sha256": "fd393b6fb016f27a34b5956594d0f3279da5e7afab4912214d1327d10c9ae5df",
+      "contentType": "image/jpeg",
+      "sizeBytes": 364202
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544573375000006083297.jpg",
+      "originalReference": "/chistory/cms/imgs/6358544573375000006083297.jpg",
+      "token": "migration-resource://818e71db12e503c30b7ffaaf71479ce73cf642ab1beddff46f34c9d2e5627387",
+      "snapshotPath": "assets/818e71db12e503c30b7ffaaf71479ce73cf642ab1beddff46f34c9d2e5627387.jpg",
+      "sha256": "818e71db12e503c30b7ffaaf71479ce73cf642ab1beddff46f34c9d2e5627387",
+      "contentType": "image/jpeg",
+      "sizeBytes": 217341
+    }
+  ],
+  "sourceFingerprint": "8fa610944065660b4f51780ac4aeacbe6e6009f9cb8605745c8fb1f406d72bb9",
+  "evidence": {
+    "listPage": 156,
+    "listTitle": "吉林工程技术师范学院2016届毕业生冬季供需见面洽谈会胜利召开",
+    "listPublishDate": "2015-11-30",
+    "sourceOrder": 1556,
+    "detailPublishDate": "2015-11-30"
+  }
+}

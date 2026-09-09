@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:b94623ea042612a01683ffa118fbb7afb1d49a81190ce510c61849a25e1bbd1a",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/Ep01bTb8QxtuHh6lPVR7lg",
+    "url": "https://mp.weixin.qq.com/s/Ep01bTb8QxtuHh6lPVR7lg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“扬帆春招择业筑梦”长春科技学院&吉林职业技术学院2025届毕业生春季网络招聘会",
+    "source": "",
+    "publishDate": "2025-03-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Ep01bTb8QxtuHh6lPVR7lg"
+  },
+  "resources": [],
+  "sourceFingerprint": "6f8834fc35af0ab70e2afccef7d877a3117424953ca29f51ea8c7c8fa4416ab6",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "“扬帆春招择业筑梦”长春科技学院&吉林职业技术学院2025届毕业生春季网络招聘会",
+    "listPublishDate": "2025-03-13",
+    "sourceOrder": 221
+  }
+}

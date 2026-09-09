@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d95ed4fefffaab6ed0585fc959009f0add044dc9215dbdcc81e9f7c10ecb53c8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/cP3kEn6MJn6uBzKgj_BcUg",
+    "url": "https://mp.weixin.qq.com/s/cP3kEn6MJn6uBzKgj_BcUg?scene=25&sessionid=1464815686"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务吉林高质量发展——吉林省高校服务文创产业集群2025届毕业生春季供需洽谈周在吉林动画学院启幕",
+    "source": "",
+    "publishDate": "2025-05-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/cP3kEn6MJn6uBzKgj_BcUg?scene=25&sessionid=1464815686"
+  },
+  "resources": [],
+  "sourceFingerprint": "8839a8b363e64a44aa05456dfd11d9510000777e777c380b464b7d11150d6d0c",
+  "evidence": {
+    "listPage": 91,
+    "listTitle": "服务吉林高质量发展——吉林省高校服务文创产业集群2025届毕业生春季供需洽谈周在吉林动画学院启幕",
+    "listPublishDate": "2025-05-12",
+    "sourceOrder": 910
+  }
+}

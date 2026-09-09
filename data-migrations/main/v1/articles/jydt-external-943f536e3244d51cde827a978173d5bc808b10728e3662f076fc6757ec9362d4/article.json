@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:943f536e3244d51cde827a978173d5bc808b10728e3662f076fc6757ec9362d4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5213.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5213.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学与吉翼具身智能机器人有限公司、长春捷翼汽车科技股份有限公司签署战略合作协议",
+    "source": "",
+    "publishDate": "2025-11-10",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5213.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "7023df70fec151ad38c06725ee93f5cc5b2e118acbf80ba4ee80c40ee577d5e4",
+  "evidence": {
+    "listPage": 61,
+    "listTitle": "长春工业大学与吉翼具身智能机器人有限公司、长春捷翼汽车科技股份有限公司签署战略合作协议",
+    "listPublishDate": "2025-11-10",
+    "sourceOrder": 607
+  }
+}

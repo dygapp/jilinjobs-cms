@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122050",
+    "contentId": "28737783122050",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122050"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省参加2017年全国高校毕业生就业创业研讨会并做经验交流发言",
+    "source": "",
+    "publishDate": "2017-11-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省参加2017年全国高校毕业生就业创业研讨会并做经验交流发言</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2017-11-4 16:18:45</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://934dc9995cab6a08594a57c1973f000c49564ce31b1e00e61fac8633565736bf\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://18d625554b76ed9bccb2aadc2dac16072c2b831abd66568ea1d8a0497de806b0\"></p><p style=\"line-height: 41px; text-indent: 40px;\"><span style=\"font-family: 仿宋; font-size: 20px;\">11月2日-3日，2017年高校毕业生就业创业研讨会在湖南长沙召开。会议由教育部全国高等学校学生信息咨询与就业指导中心主办，湖南省大中专学校学生信息咨询与就业指导中心、湖南省普通高等学校毕业生就业促进会承办。教育部高校学生司副司长马春晖，教育部高等教育司副司长范海林，高校学生司就业处处长王林、全国高等学校学生信息咨询与就业指导中心副主任石鹏建等相关领导出席研讨会并讲话。</span></p><p style=\"line-height: 41px; text-indent: 40px;\"><span style=\"font-family: 仿宋; font-size: 20px;\">吉林省高等学校毕业生就业指导中心主任郑志宏以“大学生就业创业指导服务工作精准化建设研究”为主题做了精彩的报告。就吉林省精准化建设模式中已经深入实践并取得阶段性成果的精准化双困学生帮扶工作、精准化就业市场工作、精准化师资培训工作三方面进行了重点阐述。 </span></p><p style=\"line-height: 41px; text-indent: 40px;\"><span style=\"font-family: 仿宋; font-size: 20px;\">全国来自各省、自治区、直辖市高校负责毕业生就业创业工作负责人、骨干教师、两岸高校专家学者，以及科技、教育、互联网等企业界人士，近千人参加会议。</span></p><p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364826038050387503626597.jpg",
+      "originalReference": "/chistory/cms/imgs/6364826038050387503626597.jpg",
+      "token": "migration-resource://934dc9995cab6a08594a57c1973f000c49564ce31b1e00e61fac8633565736bf",
+      "snapshotPath": "assets/934dc9995cab6a08594a57c1973f000c49564ce31b1e00e61fac8633565736bf.jpg",
+      "sha256": "934dc9995cab6a08594a57c1973f000c49564ce31b1e00e61fac8633565736bf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 170077
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364826038059762504598412.jpg",
+      "originalReference": "/chistory/cms/imgs/6364826038059762504598412.jpg",
+      "token": "migration-resource://18d625554b76ed9bccb2aadc2dac16072c2b831abd66568ea1d8a0497de806b0",
+      "snapshotPath": "assets/18d625554b76ed9bccb2aadc2dac16072c2b831abd66568ea1d8a0497de806b0.jpg",
+      "sha256": "18d625554b76ed9bccb2aadc2dac16072c2b831abd66568ea1d8a0497de806b0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 188376
+    }
+  ],
+  "sourceFingerprint": "0b75b2b987892e8121b8bc3ca598119218dc36cdc0c10e3f5090075fd1b968d2",
+  "evidence": {
+    "listPage": 148,
+    "listTitle": "我省参加2017年全国高校毕业生就业创业研讨会并做经验交流发言",
+    "listPublishDate": "2017-11-04",
+    "sourceOrder": 1479,
+    "detailPublishDate": "2017-11-04"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86126954037248",
+    "contentId": "86126954037248",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86126954037248"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春大学旅游学院举办 “梦想杯”求职模拟面试大赛",
+    "source": "长春大学旅游学院",
+    "publishDate": "2021-11-10",
+    "bodyHtml": "\n                        <p>近日，长春大学旅游学院第一届“梦想杯”求职模拟面试大赛举行。大赛由大学生就业指导中心主办，就业指导教研室承办。党委副书记、副校长马维东，校长助理、学生工作处处长高阳，各学院党总支书记和大学生就业指导中心全体教师出席本次活动。上海链家高级招聘专家宫楠、王畅，大学生就业指导中心主任姚玉新、就业指导教研室主任张丹鹤作为评委出席活动，来自各学院的135名学生参加活动。</p>\n\n<p>马维东在致辞中指出，学校要依托此次大赛，以赛促教，通过竞赛的方式引导大学生树立正确的求职观和就业观，激发大学生积极就业的意愿，培养大学生的就业综合能力，提升大学生求职面试技巧，并预祝参赛选手取得优异成绩。</p>\n\n<p>本届大赛通过海选、初赛、复赛等环节，经过激烈角逐，共有8名选手晋级决赛。决赛包括VCR展示、简历评分、现场自我介绍、模拟面试问答四个环节，评委们根据选手表现给予指导与点评，最终比赛评选出一等奖1名，二等奖3名，三等奖4名。</p>\n\n<p>本届求职模拟面试大赛旨在引导学生树立正确职业目标，提升职业形象，提高求职择业技能。大赛的成功举办，让同学们感受了面试的氛围，提升了同学们的应聘求职能力，为同学们能在今后激烈的职场竞争中脱颖而出打下了坚实的基础。通过本次比赛，在学校营造出人人皆可成才，人人尽展其才的良好就业指导环境，为实现“更充分更高质量”的就业目标作出贡献。</p>\n\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>（长春大学旅游学院 张丹鹤 王娟）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "b572c8036edf49107ce1702d4be13183426f3e5a63e31f51715d374d7ddcc0d8",
+  "evidence": {
+    "listPage": 129,
+    "listTitle": "长春大学旅游学院举办 “梦想杯”求职模拟面试大赛",
+    "listPublishDate": "2021-11-10",
+    "sourceOrder": 1284,
+    "detailPublishDate": "2021-11-10"
+  }
+}

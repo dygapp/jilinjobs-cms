@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6e89e175d6056c0a9d8436e64cb3af65d18e6f2fdca0bf91001bccac7898f30f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/czEKnXvWSD7iFbBYwq3FPg",
+    "url": "https://mp.weixin.qq.com/s/czEKnXvWSD7iFbBYwq3FPg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北师范大学举办全国高校2026届毕业生教育人才招聘会",
+    "source": "",
+    "publishDate": "2025-11-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/czEKnXvWSD7iFbBYwq3FPg"
+  },
+  "resources": [],
+  "sourceFingerprint": "889474afcf7c873d145d25b521b0e2fb3d7384ac312b9df04352b85d5ff497cd",
+  "evidence": {
+    "listPage": 58,
+    "listTitle": "东北师范大学举办全国高校2026届毕业生教育人才招聘会",
+    "listPublishDate": "2025-11-25",
+    "sourceOrder": 573
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:09c925c6438314d194b97dc1f68ca1ac5b4b2a493b27202bb2ed78593e6935ac",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/x_d7xD03sXEObINGUvoThA",
+    "url": "https://mp.weixin.qq.com/s/x_d7xD03sXEObINGUvoThA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院校长张兴海率儿童福祉学院一行赴吉林省孤儿学校调研交流",
+    "source": "",
+    "publishDate": "2025-06-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/x_d7xD03sXEObINGUvoThA"
+  },
+  "resources": [],
+  "sourceFingerprint": "e1aa5f9ed4110d246bf9ffaa7335689e7770103851d6b70cd799c213a5378ab9",
+  "evidence": {
+    "listPage": 84,
+    "listTitle": "长春人文学院校长张兴海率儿童福祉学院一行赴吉林省孤儿学校调研交流",
+    "listPublishDate": "2025-06-11",
+    "sourceOrder": 834
+  }
+}

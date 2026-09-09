@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:12f3830a23a6a00ef3e9d4b39b3440d40678e7fb552b5403a1dbc6026c69e6e7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/94yHkdKyGfvSinUb_nRfJg",
+    "url": "https://mp.weixin.qq.com/s/94yHkdKyGfvSinUb_nRfJg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业 精准对接启新程 | 长春工业大学人文信息学院开展专项走访活动",
+    "source": "",
+    "publishDate": "2026-04-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/94yHkdKyGfvSinUb_nRfJg"
+  },
+  "resources": [],
+  "sourceFingerprint": "4c5462de59a5248d5182fbce734fb620046e6e38c1d421230c32c44988d63a29",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "访企拓岗促就业 精准对接启新程 | 长春工业大学人文信息学院开展专项走访活动",
+    "listPublishDate": "2026-04-29",
+    "sourceOrder": 225
+  }
+}

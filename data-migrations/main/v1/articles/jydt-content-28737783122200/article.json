@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122200",
+    "contentId": "28737783122200",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122200"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省在“金桥•蓝郎”杯全国第二届大学生职业生涯规划大赛全国总决赛荣获多个奖项",
+    "source": "",
+    "publishDate": "2012-05-29",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省在“金桥•蓝郎”杯全国第二届大学生职业生涯规划大赛全国总决赛荣获多个奖项</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-5-29 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p> <p align=\"justify\">&nbsp;&nbsp;&nbsp;5月18-21日，“金桥•蓝郎”杯全国第二届大学生职业生涯规划大赛全国总决赛在中国农业大学圆满落下帷幕。我省荣获优秀组织省市奖，长春理工大学的杨洪章荣获一等奖，吉林财经大学董先巍获三等奖及最佳社会贡献奖，长春理工大学郭欣获优秀指导教师奖。省高校毕业生就业指导中心书记朱军带队参赛并上台领取优秀组织省市奖。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://48bacc6af3f5a81ed51982e0d444d332d8e26d25ed62ceda5a2a00f921319e3e\"></p> <p align=\"center\">图为颁奖典礼会场，全国高等学校学生信息咨询与就业指导中心副主任张继栋(右四），省高校毕业生就业指导中心书记朱军（右三）。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://f102c7bd0fd7cbdc41ccc67bc1ac8a269e3e1f6a8e9d62c70ecbfbe49e5b8b4e\"></p> <p align=\"center\">图为吉林省参赛代表队，右四为长春理工大学党委副书记万春明。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://fa7c7cff4e328a731d633e710940011fbd879f1a9391a32bc1d09edf10bc9697\"></p> <p align=\"center\">图为颁奖典礼会场，一等奖获得者杨洪章（左一），优秀指导教师郭欣（左二），三等奖和最佳社会贡献奖董先巍（左四）。</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120529165526508.jpg",
+      "originalReference": "/chistory/cms/imgs/20120529165526508.jpg",
+      "token": "migration-resource://48bacc6af3f5a81ed51982e0d444d332d8e26d25ed62ceda5a2a00f921319e3e",
+      "snapshotPath": "assets/48bacc6af3f5a81ed51982e0d444d332d8e26d25ed62ceda5a2a00f921319e3e.jpg",
+      "sha256": "48bacc6af3f5a81ed51982e0d444d332d8e26d25ed62ceda5a2a00f921319e3e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 54209
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120529165600531.jpg",
+      "originalReference": "/chistory/cms/imgs/20120529165600531.jpg",
+      "token": "migration-resource://f102c7bd0fd7cbdc41ccc67bc1ac8a269e3e1f6a8e9d62c70ecbfbe49e5b8b4e",
+      "snapshotPath": "assets/f102c7bd0fd7cbdc41ccc67bc1ac8a269e3e1f6a8e9d62c70ecbfbe49e5b8b4e.jpg",
+      "sha256": "f102c7bd0fd7cbdc41ccc67bc1ac8a269e3e1f6a8e9d62c70ecbfbe49e5b8b4e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 55305
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120529165625797.jpg",
+      "originalReference": "/chistory/cms/imgs/20120529165625797.jpg",
+      "token": "migration-resource://fa7c7cff4e328a731d633e710940011fbd879f1a9391a32bc1d09edf10bc9697",
+      "snapshotPath": "assets/fa7c7cff4e328a731d633e710940011fbd879f1a9391a32bc1d09edf10bc9697.jpg",
+      "sha256": "fa7c7cff4e328a731d633e710940011fbd879f1a9391a32bc1d09edf10bc9697",
+      "contentType": "image/jpeg",
+      "sizeBytes": 45671
+    }
+  ],
+  "sourceFingerprint": "7743a69ca888c63ffc8f5d342e0d4eea03c2e34afe19202466a345060470b4e6",
+  "evidence": {
+    "listPage": 164,
+    "listTitle": "我省在“金桥•蓝郎”杯全国第二届大学生职业生涯规划大赛全国总决赛荣获多个奖项",
+    "listPublishDate": "2012-05-29",
+    "sourceOrder": 1633,
+    "detailPublishDate": "2012-05-29"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:167135898796032",
+    "contentId": "167135898796032",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=167135898796032"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "安徽：各地多措并举促进高校毕业生就业",
+    "source": "",
+    "publishDate": "2023-07-07",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"331\" src=\"migration-resource://39df9510e6c723bef58a8bb89aaf7a2979777369380ce503a514dc9854966530\" width=\"590\"></p>\n\n<p>&nbsp;</p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 省市联动，精准推送信息；重点产业优质岗位，现场精准对接。在近日举行的“合肥请您来，20万个岗位供您选”第三期高校毕业生现场对接会上，220家企事业单位提供了1万多个就业岗位，涵盖了集成电路、节能环保、智能家电、高端装备制造以及现代服务业等。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 截至目前，合肥市的三场对接会共吸引近2.3万名高校毕业生到场应聘，9400多人达成就业意向。为了让高校毕业生“好就业、就好业”，今年以来安徽省开展了“校园招聘月”“暖心促就业”“百日冲刺”等一系列活动。截至目前，已举办省级综合类、医药类、财经类等线下校园招聘活动21场，校园就业市场6300多场，提供了139.59万个岗位。为了让高校毕业生更好地适应入职企业的技能要求，芜湖市启动了提升大学毕业生实践技能的“扬帆计划”，遴选出奇瑞汽车、三只松鼠等100多家产业龙头企业为在校大学生提供实习技能培训。进入企业实习的大学生除企业相关保障之外，每月还能领到政府发放的1000元实习补贴。阜阳市实施了2023年百万就业见习岗位募集计划，重点开发了一批科研类、技能类、管理类岗位，帮助高校毕业生尽快熟悉岗位，顺利就业。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 安徽省人社厅近日发布了《致2023届高校毕业生的一封信》，对高校毕业生求职、创业、参加就业技能培训以及谨防求职陷阱等提供了详细的信息服务，为广大青年学子营造安心就业、暖心陪伴的良好氛围，让江淮大地成为高校毕业生等青年人成长成才、筑梦圆梦的沃土。</span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-12/a1f6c81f-fb1c-49ed-8b98-431e80138a6c.png",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-07-12/a1f6c81f-fb1c-49ed-8b98-431e80138a6c.png",
+      "token": "migration-resource://39df9510e6c723bef58a8bb89aaf7a2979777369380ce503a514dc9854966530",
+      "snapshotPath": "assets/39df9510e6c723bef58a8bb89aaf7a2979777369380ce503a514dc9854966530.png",
+      "sha256": "39df9510e6c723bef58a8bb89aaf7a2979777369380ce503a514dc9854966530",
+      "contentType": "image/png",
+      "sizeBytes": 532415
+    }
+  ],
+  "sourceFingerprint": "c2614121745e87eec34c8f6bbd9efed720e37009e5ea7e47385c07b7a3d6881d",
+  "evidence": {
+    "listPage": 113,
+    "listTitle": "安徽：各地多措并举促进高校毕业生就业",
+    "listPublishDate": "2023-07-07",
+    "sourceOrder": 1125,
+    "detailPublishDate": "2023-07-07"
+  }
+}

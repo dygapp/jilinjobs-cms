@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2511e5004bf1864f0675998907ae238bed75a3ef97fbb1f67d40ee66f52fed47",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/jZA0T3Cenz3cZogrKwNYgA",
+    "url": "https://mp.weixin.qq.com/s/jZA0T3Cenz3cZogrKwNYgA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "双轮驱动促融合 共育技能新人才|长春早教学院同日达成两项产教合作",
+    "source": "",
+    "publishDate": "2025-11-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/jZA0T3Cenz3cZogrKwNYgA"
+  },
+  "resources": [],
+  "sourceFingerprint": "8617d62b4b032303c2da7f06e7a3eb834f606eb7ed32ffbd18095fcdec62ee6f",
+  "evidence": {
+    "listPage": 60,
+    "listTitle": "双轮驱动促融合 共育技能新人才|长春早教学院同日达成两项产教合作",
+    "listPublishDate": "2025-11-17",
+    "sourceOrder": 599
+  }
+}

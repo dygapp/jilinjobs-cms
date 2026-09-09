@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0f5005e63216b500267c36f41da3c04401516afc8ebbffcc32716e37615b5f53",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/QUKXVOa6YnMzxZHGotGaRw",
+    "url": "https://mp.weixin.qq.com/s/QUKXVOa6YnMzxZHGotGaRw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春光华学院举办2026届毕业生秋季校园双选会",
+    "source": "",
+    "publishDate": "2025-10-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/QUKXVOa6YnMzxZHGotGaRw"
+  },
+  "resources": [],
+  "sourceFingerprint": "bfb26f6e1e34c17d829591ca735ef3340d98d6706666c10c05844918259d529d",
+  "evidence": {
+    "listPage": 67,
+    "listTitle": "长春光华学院举办2026届毕业生秋季校园双选会",
+    "listPublishDate": "2025-10-24",
+    "sourceOrder": 662
+  }
+}

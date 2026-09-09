@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:a6f49e868725103e94a08ecb8e43ac8237752ff597f40932535a47c5b99b5038",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/oRjU9JyRs0SfCUoV0bfFCg",
+    "url": "https://mp.weixin.qq.com/s/oRjU9JyRs0SfCUoV0bfFCg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业科技学院2025届毕业生秋季校园招聘会邀请函",
+    "source": "",
+    "publishDate": "2024-09-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/oRjU9JyRs0SfCUoV0bfFCg"
+  },
+  "resources": [],
+  "sourceFingerprint": "b4b8a0db6c93687954d14afc9ef10fe4b530f755aec5498e8aa2b57cb1605de4",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "吉林农业科技学院2025届毕业生秋季校园招聘会邀请函",
+    "listPublishDate": "2024-09-23",
+    "sourceOrder": 253
+  }
+}

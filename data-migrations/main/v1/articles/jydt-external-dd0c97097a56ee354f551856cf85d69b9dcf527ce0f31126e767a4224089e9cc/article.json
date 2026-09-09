@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:dd0c97097a56ee354f551856cf85d69b9dcf527ce0f31126e767a4224089e9cc",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/hr23uTCbriJku3kbikQK7A",
+    "url": "https://mp.weixin.qq.com/s/hr23uTCbriJku3kbikQK7A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗深化合作 产教融合赋能发展——长春大学旅游学院副董事长张海涛率队赴一汽富华生态股份有限公司开展校企合作交流",
+    "source": "",
+    "publishDate": "2026-04-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/hr23uTCbriJku3kbikQK7A"
+  },
+  "resources": [],
+  "sourceFingerprint": "a63a1196f6366fa05f4324aa8bf0a072f6828bd4dd8964c344c03c410dbe8072",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "访企拓岗深化合作 产教融合赋能发展——长春大学旅游学院副董事长张海涛率队赴一汽富华生态股份有限公司开展校企合作交流",
+    "listPublishDate": "2026-04-24",
+    "sourceOrder": 246
+  }
+}

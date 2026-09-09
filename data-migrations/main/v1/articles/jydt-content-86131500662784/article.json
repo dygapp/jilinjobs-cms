@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86131500662784",
+    "contentId": "86131500662784",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86131500662784"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林动画学院启动就业活动月",
+    "source": "吉林动画学院",
+    "publishDate": "2022-04-12",
+    "bodyHtml": "\n                        <p>面对严峻复杂的就业形势，吉林动画学院深入践行“五负责”办学宗旨，贯彻落实党中央、国务院稳就业保就业决策部署，进一步促进2022届毕业生实现精准就业、高质量就业，于3月至4月开展2022年就业活动月，全员通力合作，发挥各学院自主管理特色优势，推进毕业生实现更加充分更高质量就业。</p>\n\n<p>此次就业活动月以春季网络招聘会、直播宣讲招聘、“就业育人”主题教育以及包干制精准帮扶、精准推荐岗位为主要内容。3月25日，在学校自主研发平台“互创世界”上举办“春风带岗，职等你来”吉林动画学院2022届毕业生春季网络招聘会，本次招聘会按照学校专业设置共分动漫游专区、影视传媒类专区、设计类专区、计算机民航综合管理类专区，参会企业227家，提供岗位2000余个。本次招聘会加大了对省内企业的邀请力度，为促进毕业生留省就业提供了优质资源。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"447\" src=\"migration-resource://9510eb5d5aea01c1a3cae71f7d34954390b1907a2dad4104a6d3d88ec8adf986\" width=\"800\"></p>\n\n<p>学校积极拓展市场化岗位，强化文创行业优势，邀请企业通过腾讯会议等平台开展企业直播宣讲招聘活动，根据招聘岗位精准推荐学生参与企业直播宣讲招聘，促进学生精准就业，截至目前已有20家企业、600余名毕业生参与了直播宣讲招聘活动。</p>\n\n<p>在就业活动月期间，学校充分利用教育部24365公益直播课程平台、新职业网、学职平台等各类就业指导平台内容资源，引导学生树立正确的就业择业观念，邀请企业HR、专业领域优秀人才、优秀校友等开展线上就业指导讲座，为毕业生答疑解惑。校院两级领导、辅导员以及工作室专业教师施行包干制精准帮扶，为毕业生精准推荐就业岗位。</p>\n\n<p>通过开展2022年就业活动月，切实帮助毕业生解决当前遇到的就业困难，精准推荐毕业生大量优质岗位资源，营造了良好的就业氛围，为实现毕业生精准就业、高质量就业提供了保障。此外，面对突如其来的疫情，学校就业工作转为线上常态化开展，确保24小时不断线，推出线上一对一就业咨询，全力为毕业生就业保驾护航。</p>\n\n<p><strong>（吉林动画学院 刘昊）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/1a691eb9-d140-4f5d-a91c-8691b78a6fdb.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/1a691eb9-d140-4f5d-a91c-8691b78a6fdb.jpg",
+      "token": "migration-resource://9510eb5d5aea01c1a3cae71f7d34954390b1907a2dad4104a6d3d88ec8adf986",
+      "snapshotPath": "assets/9510eb5d5aea01c1a3cae71f7d34954390b1907a2dad4104a6d3d88ec8adf986.jpg",
+      "sha256": "9510eb5d5aea01c1a3cae71f7d34954390b1907a2dad4104a6d3d88ec8adf986",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131865
+    }
+  ],
+  "sourceFingerprint": "b936855da16530e1ce9e47c079d2ee0ca462e394f832efcd4506af05a38d544e",
+  "evidence": {
+    "listPage": 124,
+    "listTitle": "吉林动画学院启动就业活动月",
+    "listPublishDate": "2022-04-12",
+    "sourceOrder": 1232,
+    "detailPublishDate": "2022-04-12"
+  }
+}

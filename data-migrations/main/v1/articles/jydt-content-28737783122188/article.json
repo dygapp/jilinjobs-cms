@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122188",
+    "contentId": "28737783122188",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122188"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "省高校毕业生就业指导中心开展全省59所高校大学生就业管理平台培训工作",
+    "source": "",
+    "publishDate": "2013-05-14",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">省高校毕业生就业指导中心开展全省59所高校大学生就业管理平台培训工作</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2013-5-14 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"4\">&nbsp;&nbsp;&nbsp; </font></p> <p><font size=\"4\"></font>&nbsp;</p> <p><font size=\"4\">&nbsp;&nbsp;&nbsp; 4月22日-5月8日，省高校毕业生就业指导中心对全省59所高校开展了“大学生就业管理平台培训”。培训由市场开发部组织实施，信息管理部授课指导，来自全省高校120余名具体工作人员参加培训。培训地点分别设在北华大学、吉林师范大学、长白山职业技术学院、白城师范学院及省高校毕业生就业指导中心。本次培训为完善我省高校毕业生就业状况报告、公布、督查和评估制度，发挥毕业生就业导向效力，促进毕业生充分就业，起到了有力的推动作用。</font></p> <p>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "ce07be82998a24dd3351a4b78ca4c88d6122989259fae1d7e281e7fa8833480d",
+  "evidence": {
+    "listPage": 163,
+    "listTitle": "省高校毕业生就业指导中心开展全省59所高校大学生就业管理平台培训工作",
+    "listPublishDate": "2013-05-14",
+    "sourceOrder": 1622,
+    "detailPublishDate": "2013-05-14"
+  }
+}

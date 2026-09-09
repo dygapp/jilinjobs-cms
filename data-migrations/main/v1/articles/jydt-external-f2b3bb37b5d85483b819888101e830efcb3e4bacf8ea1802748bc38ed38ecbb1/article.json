@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f2b3bb37b5d85483b819888101e830efcb3e4bacf8ea1802748bc38ed38ecbb1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/zFDbnwE-FY3y01INdbKRxQ",
+    "url": "https://mp.weixin.qq.com/s/zFDbnwE-FY3y01INdbKRxQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学举办“服务吉林高质量发展”2025届装备制造类专业毕业生就业双选会",
+    "source": "",
+    "publishDate": "2025-06-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/zFDbnwE-FY3y01INdbKRxQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "4be73cb45364da33ea337594ece80655054a384051742b51c5b8e60dcca60baa",
+  "evidence": {
+    "listPage": 85,
+    "listTitle": "长春工业大学举办“服务吉林高质量发展”2025届装备制造类专业毕业生就业双选会",
+    "listPublishDate": "2025-06-09",
+    "sourceOrder": 843
+  }
+}

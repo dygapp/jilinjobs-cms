@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5592564bb34cca9ef7782a4454151818406229ea84fc9cc3b1460812555ca7a7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/CmdDuxRJgAKOIUYI2D1yWw",
+    "url": "https://mp.weixin.qq.com/s/CmdDuxRJgAKOIUYI2D1yWw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗‘就’在吉林” 白城师范学院2024届毕业生春季线下双选会在行健体育馆如期举行",
+    "source": "",
+    "publishDate": "2024-04-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/CmdDuxRJgAKOIUYI2D1yWw"
+  },
+  "resources": [],
+  "sourceFingerprint": "e7955cc1e16dc268f336ab330dcf8a512affa4028a8cdd8f94274c211b6d44c8",
+  "evidence": {
+    "listPage": 109,
+    "listTitle": "“创业奋斗‘就’在吉林” 白城师范学院2024届毕业生春季线下双选会在行健体育馆如期举行",
+    "listPublishDate": "2024-04-14",
+    "sourceOrder": 1085
+  }
+}

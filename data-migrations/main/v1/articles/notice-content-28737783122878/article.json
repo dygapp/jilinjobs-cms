@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122878",
+    "contentId": "28737783122878",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122878"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于联合举办高校就业指导工作人员培训班的通知",
+    "source": "",
+    "publishDate": "2013-10-25",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于联合举办高校就业指导工作人员培训班的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2013-10-25 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img src=\"migration-resource://e40bd930902847e07ec96fcd402acf3aa814d5a59ffcb604912edff944dbf5d6\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://637b0d92a41dcd4441d40b614bb6fab5db0e687ca55d8725a791451900057f6c\" border=\"0\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131025034555732.jpg",
+      "originalReference": "/chistory/cms/imgs/20131025034555732.jpg",
+      "token": "migration-resource://e40bd930902847e07ec96fcd402acf3aa814d5a59ffcb604912edff944dbf5d6",
+      "snapshotPath": "assets/e40bd930902847e07ec96fcd402acf3aa814d5a59ffcb604912edff944dbf5d6.jpg",
+      "sha256": "e40bd930902847e07ec96fcd402acf3aa814d5a59ffcb604912edff944dbf5d6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90549
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/201310250346009.jpg",
+      "originalReference": "/chistory/cms/imgs/201310250346009.jpg",
+      "token": "migration-resource://637b0d92a41dcd4441d40b614bb6fab5db0e687ca55d8725a791451900057f6c",
+      "snapshotPath": "assets/637b0d92a41dcd4441d40b614bb6fab5db0e687ca55d8725a791451900057f6c.jpg",
+      "sha256": "637b0d92a41dcd4441d40b614bb6fab5db0e687ca55d8725a791451900057f6c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90239
+    }
+  ],
+  "sourceFingerprint": "f1398aaf38f0e36bc016b13ca3d45c7a7b8398f757d8bbf38e9b2f66cbb15369",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "关于联合举办高校就业指导工作人员培训班的通知",
+    "listPublishDate": "2013-10-25",
+    "sourceOrder": 340,
+    "detailPublishDate": "2013-10-25"
+  }
+}

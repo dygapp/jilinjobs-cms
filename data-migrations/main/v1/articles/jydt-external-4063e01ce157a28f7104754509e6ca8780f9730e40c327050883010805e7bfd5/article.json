@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4063e01ce157a28f7104754509e6ca8780f9730e40c327050883010805e7bfd5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/W41zNLZJKz0G2EaeWeWvLQ",
+    "url": "https://mp.weixin.qq.com/s/W41zNLZJKz0G2EaeWeWvLQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教融合，共育时代英才：吉林职业技术学院校长柳森一行赴企业开展访企拓岗活动",
+    "source": "",
+    "publishDate": "2025-07-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/W41zNLZJKz0G2EaeWeWvLQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "13b6d234c996b19f3cc3039383fdb2e2b2ca70f5d73157feea31bf18b37f3e50",
+  "evidence": {
+    "listPage": 74,
+    "listTitle": "深化产教融合，共育时代英才：吉林职业技术学院校长柳森一行赴企业开展访企拓岗活动",
+    "listPublishDate": "2025-07-07",
+    "sourceOrder": 738
+  }
+}

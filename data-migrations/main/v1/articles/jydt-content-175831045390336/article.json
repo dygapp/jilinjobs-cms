@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:175831045390336",
+    "contentId": "175831045390336",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=175831045390336"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林建筑大学召开就业工作推进会",
+    "source": "吉林建筑大学",
+    "publishDate": "2023-03-31",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">3</span></span></span><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">月1日，吉林建筑大学召开2023届毕业生就业工作推进会，各学院党委书记、党委副书记、全体2023届毕业班辅导员及招生与就业工作处相关人员参加会议。会议由学校党委副书记陈士玉主持。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"406\" src=\"migration-resource://2a55b2224eeee66c9249a096725604f160a395b29dc561318a6d9b1527dc07ac\" width=\"650\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">会上，招生与就业工作处副处长王春来从开展各类招聘活动、就业帮扶、精准就业情况三个方面回顾了上一阶段的就业工作开展情况,通报了截至目前各学院2023届毕业生就业情况,结合当前就业现状和就业形势，提出了下一步工作设想。会上详细解读了《吉林建筑大学2023届毕业生就业工作方案》《吉林建筑大学2023年“访企拓岗”工作方案》，对2023届毕业生就业工作进行推进和部署。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">陈士玉在会上强调，各学院要高度重视学生就业工作，把握一切机遇，推动学生就业，并对进一步做好2023届毕业生就业工作提出四点要求：一是要精准把握当前就业形势，了解行业、地区发展现状，密切关注学生求职心理，及时回应学生求职诉求。二是要有责任感和使命感，提高站位，积极推进留省就业工作。三是高度关注和精准统计毕业生就业去向落实情况，确保数据时效性。四是攻坚克难，要持续加大对就业工作的支持力度，全面推进2023届毕业生更加充分、更高质量就业。</span></span></span></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-29/1c6ac421-2ec0-4a3e-87fa-0f8fa6245865.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-29/1c6ac421-2ec0-4a3e-87fa-0f8fa6245865.jpg",
+      "token": "migration-resource://2a55b2224eeee66c9249a096725604f160a395b29dc561318a6d9b1527dc07ac",
+      "snapshotPath": "assets/2a55b2224eeee66c9249a096725604f160a395b29dc561318a6d9b1527dc07ac.jpg",
+      "sha256": "2a55b2224eeee66c9249a096725604f160a395b29dc561318a6d9b1527dc07ac",
+      "contentType": "image/jpeg",
+      "sizeBytes": 98711
+    }
+  ],
+  "sourceFingerprint": "51648d3de01fadb451b3192960258d66e56d47681766673b2e3c301bce52a751",
+  "evidence": {
+    "listPage": 115,
+    "listTitle": "吉林建筑大学召开就业工作推进会",
+    "listPublishDate": "2023-03-31",
+    "sourceOrder": 1150,
+    "detailPublishDate": "2023-03-31"
+  }
+}

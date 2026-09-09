@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120702",
+    "contentId": "28737783120702",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120702"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发开展第三届“闪亮的日子——青春该有的模样”大学生就业创业人物事迹征集的通知",
+    "source": "培训部",
+    "publishDate": "2020-05-08",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://bbbc457d3d713de7259bfb645ec389bc4aded5592426892cac960a334f28f837\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://07ce2108a812291414a5e12dd16473b508fb84ea181decaac2aa6a7b0857c04b\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/admin/cms/20200509094709.jpg",
+      "originalReference": "/chistory/admin/cms/20200509094709.jpg",
+      "token": "migration-resource://bbbc457d3d713de7259bfb645ec389bc4aded5592426892cac960a334f28f837",
+      "snapshotPath": "assets/bbbc457d3d713de7259bfb645ec389bc4aded5592426892cac960a334f28f837.jpg",
+      "sha256": "bbbc457d3d713de7259bfb645ec389bc4aded5592426892cac960a334f28f837",
+      "contentType": "image/jpeg",
+      "sizeBytes": 135805
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/admin/cms/20200509094615.jpg",
+      "originalReference": "/chistory/admin/cms/20200509094615.jpg",
+      "token": "migration-resource://07ce2108a812291414a5e12dd16473b508fb84ea181decaac2aa6a7b0857c04b",
+      "snapshotPath": "assets/07ce2108a812291414a5e12dd16473b508fb84ea181decaac2aa6a7b0857c04b.jpg",
+      "sha256": "07ce2108a812291414a5e12dd16473b508fb84ea181decaac2aa6a7b0857c04b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 50777
+    }
+  ],
+  "sourceFingerprint": "c2d1501ef87c61580e37b9828034570827ead592dc709532f6edff32aad3beb6",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "关于转发开展第三届“闪亮的日子——青春该有的模样”大学生就业创业人物事迹征集的通知",
+    "listPublishDate": "2020-05-08",
+    "sourceOrder": 188,
+    "detailPublishDate": "2020-05-08"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8e90d6ff8b95b7bd0418f9789436c37bb069d82ea3964ff9df6c0fe5411fb1f4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/BQDqZFPPVOEW8VTghqoHSA",
+    "url": "https://mp.weixin.qq.com/s/BQDqZFPPVOEW8VTghqoHSA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学“招生-培养-就业”一体化促进专项行动的深度实践",
+    "source": "",
+    "publishDate": "2026-03-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/BQDqZFPPVOEW8VTghqoHSA"
+  },
+  "resources": [],
+  "sourceFingerprint": "a99c521c46dee11d20ff82bb06170287dc81162e56055f10f0aac63bd81af82e",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "长春师范大学“招生-培养-就业”一体化促进专项行动的深度实践",
+    "listPublishDate": "2026-03-06",
+    "sourceOrder": 435
+  }
+}

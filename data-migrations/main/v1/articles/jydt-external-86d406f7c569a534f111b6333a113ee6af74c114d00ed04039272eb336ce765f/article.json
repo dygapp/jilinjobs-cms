@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:86d406f7c569a534f111b6333a113ee6af74c114d00ed04039272eb336ce765f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1042/93283.htm",
+    "url": "https://www.jlbtc.edu.cn/info/1042/93283.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院召开2026届毕业生就业工作推进会暨第一次调度会",
+    "source": "",
+    "publishDate": "2025-12-25",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlbtc.edu.cn/info/1042/93283.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "b243fe3eeeea5c926d53160ed60117dbc5c98dd2231fc45207d6d05eb357e449",
+  "evidence": {
+    "listPage": 52,
+    "listTitle": "吉林工商学院召开2026届毕业生就业工作推进会暨第一次调度会",
+    "listPublishDate": "2025-12-25",
+    "sourceOrder": 516
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:38d1c806f52b4e7639b59d85320f801a22f37021b4179e9296b368a29cf41b6e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/EBdtF_YUdCn5GSWkpfa-aw",
+    "url": "https://mp.weixin.qq.com/s/EBdtF_YUdCn5GSWkpfa-aw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "订单班50人定向培养 双园联动共筑育人路|长春早期教育职业学院学前教育专业彰显办学硬实力",
+    "source": "",
+    "publishDate": "2026-04-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/EBdtF_YUdCn5GSWkpfa-aw"
+  },
+  "resources": [],
+  "sourceFingerprint": "62ad707aa702290f8b7ba806e3546c5ab2d995d6f51a1a7c40bb8494ccd2e7e3",
+  "evidence": {
+    "listPage": 32,
+    "listTitle": "订单班50人定向培养 双园联动共筑育人路|长春早期教育职业学院学前教育专业彰显办学硬实力",
+    "listPublishDate": "2026-04-03",
+    "sourceOrder": 316
+  }
+}

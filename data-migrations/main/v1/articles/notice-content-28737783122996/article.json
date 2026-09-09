@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122996",
+    "contentId": "28737783122996",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122996"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省第二届“大学生职业发展与就业指导”课程教学大赛决赛的通知",
+    "source": "",
+    "publishDate": "2011-10-11",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办吉林省第二届“大学生职业发展与就业指导”课程教学大赛决赛的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-10-11 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://a3af304d0b3bda6d5fddeed9eab6f0f788c384348f388a0201a9ac7b47751789\"><img border=\"0\" src=\"migration-resource://5175825650355cc03e33de9fa1fa0c3a8e8f2eed89a11c5dd8daa48c8e9d41a6\"><img border=\"0\" src=\"migration-resource://b2ed47b2047c124663ec5db18b1ae76d62d0e65ad7a9c2934f24f3d2eeacf59c\"><img border=\"0\" src=\"migration-resource://df94d414f3f8a2bd278aa5cae50be07759579b3ea91393634d6cb2d6138cbbf3\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111011140357292.jpg",
+      "originalReference": "/chistory/cms/imgs/20111011140357292.jpg",
+      "token": "migration-resource://a3af304d0b3bda6d5fddeed9eab6f0f788c384348f388a0201a9ac7b47751789",
+      "snapshotPath": "assets/a3af304d0b3bda6d5fddeed9eab6f0f788c384348f388a0201a9ac7b47751789.jpg",
+      "sha256": "a3af304d0b3bda6d5fddeed9eab6f0f788c384348f388a0201a9ac7b47751789",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90978
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111011140402929.jpg",
+      "originalReference": "/chistory/cms/imgs/20111011140402929.jpg",
+      "token": "migration-resource://5175825650355cc03e33de9fa1fa0c3a8e8f2eed89a11c5dd8daa48c8e9d41a6",
+      "snapshotPath": "assets/5175825650355cc03e33de9fa1fa0c3a8e8f2eed89a11c5dd8daa48c8e9d41a6.jpg",
+      "sha256": "5175825650355cc03e33de9fa1fa0c3a8e8f2eed89a11c5dd8daa48c8e9d41a6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 91231
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111011140520936.jpg",
+      "originalReference": "/chistory/cms/imgs/20111011140520936.jpg",
+      "token": "migration-resource://b2ed47b2047c124663ec5db18b1ae76d62d0e65ad7a9c2934f24f3d2eeacf59c",
+      "snapshotPath": "assets/b2ed47b2047c124663ec5db18b1ae76d62d0e65ad7a9c2934f24f3d2eeacf59c.jpg",
+      "sha256": "b2ed47b2047c124663ec5db18b1ae76d62d0e65ad7a9c2934f24f3d2eeacf59c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 43798
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111011140526457.jpg",
+      "originalReference": "/chistory/cms/imgs/20111011140526457.jpg",
+      "token": "migration-resource://df94d414f3f8a2bd278aa5cae50be07759579b3ea91393634d6cb2d6138cbbf3",
+      "snapshotPath": "assets/df94d414f3f8a2bd278aa5cae50be07759579b3ea91393634d6cb2d6138cbbf3.jpg",
+      "sha256": "df94d414f3f8a2bd278aa5cae50be07759579b3ea91393634d6cb2d6138cbbf3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 101336
+    }
+  ],
+  "sourceFingerprint": "15a3acf9328f35a4452342c32e43cad694f25504a3f77d725c636167b31ad02c",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "关于举办吉林省第二届“大学生职业发展与就业指导”课程教学大赛决赛的通知",
+    "listPublishDate": "2011-10-11",
+    "sourceOrder": 424,
+    "detailPublishDate": "2011-10-11"
+  }
+}

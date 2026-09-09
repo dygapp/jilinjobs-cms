@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122018",
+    "contentId": "28737783122018",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122018"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省成功举办全国高校就业指导人员培训（中级）班",
+    "source": "",
+    "publishDate": "2019-09-24",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省成功举办全国高校就业指导人员培训（中级）班</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2019-9-24 11:06:07</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://ab4df74d045e0eb5339dc2e992fc8a3751846eae5ce579031f56d1d91a272d98\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://74325a1df39c7517d48c97b327642451d3972efe7275f1b5664ff6e576cebeab\"></p><p style=\"text-align: center;\"><img title=\"3.jpg\" src=\"migration-resource://03745987d85e3d5fe52eac2bce3283fa1b6934e2f6066f129be6bc55cd4bae24\"></p><p style=\"line-height: 35px; text-indent: 40px;\"><span style=\"color: black; font-family: 宋体; font-size: 20px;\">9月16日-20日，由全国高等学校学生信息咨询与就业指导中心主办，吉林省高等学校毕业生就业指导中心、黑龙江省大学生就业创业指导中心、辽宁省大学生就业创业中心联合承办的全国高校就业指导人员培训（中级）班在吉林省珲春市成功举办。省高校毕业生就业指导中心副主任张旭光在开班仪式上致辞，黑龙江省大学生就业创业指导中心副主任郭承哲、辽宁省大学生就业创业中心副主任李颖出席开班仪式，东北三省共计141名教师参加培训</span><span style=\"color: black; font-family: 宋体; font-size: 20px;\">。</span></p><p style=\"text-align: left; line-height: 35px; text-indent: 40px;\"><span style=\"color: black; font-family: 宋体; font-size: 20px;\">新精英生涯研发总监李春雨、南京航空航天大学副教授沈雪萍、南开大学副教授蒋建荣、北京神州泰岳教育科技有限公司总裁吴斌等多名国内知名专家，从高校职业辅导体系建设、大学生职业辅导理论、职业咨询与辅导实务、职业测评应用、就业指导课程教学、大学生创业教育等内容进行了细致讲授。</span></p><p style=\"text-align: left; line-height: 35px; text-indent: 43px;\"><span style=\"color: black; font-family: 宋体; font-size: 20px;\">参加培训的学员涵盖了高校就业工作管理人员、专兼职教师和辅导员等多个层次。培训结束，学员们一致反馈课程内容设计贴合工作需要、可操作性强。通过学习，使大家了解到职业生涯规划的本质内涵，更加充分地认识到高校就业指导工作的重要性和紧迫性。</span></p><p style=\"text-align: left; line-height: 35px; text-indent: 43px;\"><span style=\"color: black; font-family: 宋体; font-size: 20px;\">此次培训班的成功举办，进一步规范了东北三省高校就业指导课程体系建设，全面提升了高校就业指导教师的教学水平和指导能力。</span></p><p style=\"text-align: right; line-height: 35px; text-indent: 40px;\"><strong><span style=\"color: black; font-family: 宋体; font-size: 20px;\">（省高校毕业生就业指导中心&nbsp; 宋姣&nbsp; 王崴）</span></strong></p><p><span style=\"font-family: Calibri;\">&nbsp;</span></p><p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6370492011428862508461276.jpg",
+      "originalReference": "/chistory/cms/imgs/6370492011428862508461276.jpg",
+      "token": "migration-resource://ab4df74d045e0eb5339dc2e992fc8a3751846eae5ce579031f56d1d91a272d98",
+      "snapshotPath": "assets/ab4df74d045e0eb5339dc2e992fc8a3751846eae5ce579031f56d1d91a272d98.jpg",
+      "sha256": "ab4df74d045e0eb5339dc2e992fc8a3751846eae5ce579031f56d1d91a272d98",
+      "contentType": "image/jpeg",
+      "sizeBytes": 143967
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6370492011442925005418999.jpg",
+      "originalReference": "/chistory/cms/imgs/6370492011442925005418999.jpg",
+      "token": "migration-resource://74325a1df39c7517d48c97b327642451d3972efe7275f1b5664ff6e576cebeab",
+      "snapshotPath": "assets/74325a1df39c7517d48c97b327642451d3972efe7275f1b5664ff6e576cebeab.jpg",
+      "sha256": "74325a1df39c7517d48c97b327642451d3972efe7275f1b5664ff6e576cebeab",
+      "contentType": "image/jpeg",
+      "sizeBytes": 208144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6370492011450737503161570.jpg",
+      "originalReference": "/chistory/cms/imgs/6370492011450737503161570.jpg",
+      "token": "migration-resource://03745987d85e3d5fe52eac2bce3283fa1b6934e2f6066f129be6bc55cd4bae24",
+      "snapshotPath": "assets/03745987d85e3d5fe52eac2bce3283fa1b6934e2f6066f129be6bc55cd4bae24.jpg",
+      "sha256": "03745987d85e3d5fe52eac2bce3283fa1b6934e2f6066f129be6bc55cd4bae24",
+      "contentType": "image/jpeg",
+      "sizeBytes": 217830
+    }
+  ],
+  "sourceFingerprint": "aaf983782c9f59f3b92145609669d7e8a4555d0d60f61016d45b3f3b1e54464f",
+  "evidence": {
+    "listPage": 145,
+    "listTitle": "我省成功举办全国高校就业指导人员培训（中级）班",
+    "listPublishDate": "2019-09-24",
+    "sourceOrder": 1442,
+    "detailPublishDate": "2019-09-24"
+  }
+}

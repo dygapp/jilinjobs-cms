@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:6ec39c37c1c2c41367d8dd7a262b93fe08604221fa097aae7b6ac9ea27f1acab",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/J1WADB5Sr6vR_Gixkyc_JA",
+    "url": "https://mp.weixin.qq.com/s/J1WADB5Sr6vR_Gixkyc_JA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院2027届毕业生秋季校园招聘工作安排通知",
+    "source": "",
+    "publishDate": "2026-09-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/J1WADB5Sr6vR_Gixkyc_JA"
+  },
+  "resources": [],
+  "sourceFingerprint": "1963f2b1aa62261767ecf7555bf60509afa83589f3cb8be3ebe5d194683cdc95",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "吉林工商学院2027届毕业生秋季校园招聘工作安排通知",
+    "listPublishDate": "2026-09-03",
+    "sourceOrder": 9
+  }
+}

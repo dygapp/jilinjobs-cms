@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e32018800d3c6ad4785b6cb065d055e4d4358e26f7b2a2168e46b7a343e6c328",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/HH793zkVlDaYc8CgjVsMmg",
+    "url": "https://mp.weixin.qq.com/s/HH793zkVlDaYc8CgjVsMmg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春中医药大学召开就业工作总结表彰大会暨2026年就业工作部署会",
+    "source": "",
+    "publishDate": "2026-04-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/HH793zkVlDaYc8CgjVsMmg"
+  },
+  "resources": [],
+  "sourceFingerprint": "5a0e51e731df5f380f7558ca8d77cd7db95632c3b6d167bda59581e15a31549b",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "长春中医药大学召开就业工作总结表彰大会暨2026年就业工作部署会",
+    "listPublishDate": "2026-04-10",
+    "sourceOrder": 307
+  }
+}

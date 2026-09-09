@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3273cb88eda1f7693368fca8830b673b85057a705f3a2c3de55d6f640ab7c48c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/detail/news",
+    "url": "http://ybdx.bysjy.com.cn/detail/news?id=773923&type_id=3474"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学举办“奋斗有我 ‘就’在吉林” 2023届吉林省普通高校毕业生就业创业洽谈月延边地区分会场暨延边州专场招聘会",
+    "source": "",
+    "publishDate": "2022-11-21",
+    "bodyHtml": "",
+    "externalUrl": "http://ybdx.bysjy.com.cn/detail/news?id=773923&type_id=3474"
+  },
+  "resources": [],
+  "sourceFingerprint": "7e2d478d1c331b8994ad6e05995ee81ef4f928c76b8380a7ded3924fd09650e4",
+  "evidence": {
+    "listPage": 117,
+    "listTitle": "延边大学举办“奋斗有我 ‘就’在吉林” 2023届吉林省普通高校毕业生就业创业洽谈月延边地区分会场暨延边州专场招聘会",
+    "listPublishDate": "2022-11-21",
+    "sourceOrder": 1169
+  }
+}

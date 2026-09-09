@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120746",
+    "contentId": "28737783120746",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120746"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2014届吉林省助学贷款高校毕业生专场招聘会的通知",
+    "source": "",
+    "publishDate": "2013-12-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办2014届吉林省助学贷款高校毕业生专场招聘会的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2013-12-4 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img src=\"migration-resource://9c10aa5834683858387e91b713a58255953c9f16a8e0adc0e9508c887d981f82\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://f46cf5c3b568f579dbd28181a44f6c8540979ae443ce0da7672fb00672561583\" border=\"0\"></p> <p>&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131204203422502.jpg",
+      "originalReference": "/chistory/cms/imgs/20131204203422502.jpg",
+      "token": "migration-resource://9c10aa5834683858387e91b713a58255953c9f16a8e0adc0e9508c887d981f82",
+      "snapshotPath": "assets/9c10aa5834683858387e91b713a58255953c9f16a8e0adc0e9508c887d981f82.jpg",
+      "sha256": "9c10aa5834683858387e91b713a58255953c9f16a8e0adc0e9508c887d981f82",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67332
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131204203429308.jpg",
+      "originalReference": "/chistory/cms/imgs/20131204203429308.jpg",
+      "token": "migration-resource://f46cf5c3b568f579dbd28181a44f6c8540979ae443ce0da7672fb00672561583",
+      "snapshotPath": "assets/f46cf5c3b568f579dbd28181a44f6c8540979ae443ce0da7672fb00672561583.jpg",
+      "sha256": "f46cf5c3b568f579dbd28181a44f6c8540979ae443ce0da7672fb00672561583",
+      "contentType": "image/jpeg",
+      "sizeBytes": 96334
+    }
+  ],
+  "sourceFingerprint": "012d5c8527dbc3f92a9325bac0c83e412f2b1d7b9de94dca16ec1481d0b40d83",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "关于举办2014届吉林省助学贷款高校毕业生专场招聘会的通知",
+    "listPublishDate": "2013-12-04",
+    "sourceOrder": 333,
+    "detailPublishDate": "2013-12-04"
+  }
+}

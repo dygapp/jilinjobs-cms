@@ -1,0 +1,101 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123130",
+    "contentId": "28737783123130",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123130"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省气象局2020年公开招聘全日制普通应届高校毕业生公告（第三批）",
+    "source": "市场部",
+    "publishDate": "2020-06-29",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"864\" src=\"migration-resource://64b946d0681133d8bd73d1e142ddfcb39eb3b0abfe114d848fb69a6493a122fe\" width=\"603\"><img alt=\"\" height=\"829\" src=\"migration-resource://d7653243782ddebae5c2b65f2a4b477840569fbde0889ca1cd12fc69b8be21e5\" width=\"605\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"840\" src=\"migration-resource://602867f15ca2a8ee72cfebff0e54dddc1c521c277024c369d604e23f0ec411b1\" width=\"593\"><img alt=\"\" height=\"828\" src=\"migration-resource://5d347fa6a7499a8544c8d61a9ad24395f660286e1fe94ffd95c44679131f322e\" width=\"584\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"813\" src=\"migration-resource://07b3dfbd1fa30217c210eb92d10d5ba783afdead36266ab3e0ebbb5124165d6c\" width=\"555\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"845\" src=\"migration-resource://c5c1dc02368a06b758289a1454e5ee0af8d8f88e757313f953e8d8498644d40c\" width=\"592\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"848\" src=\"migration-resource://d112ec0156424686a9697a36c8dac4de91a93b374609df43f5c4e8d4d78f566d\" width=\"592\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200629134142.png",
+      "originalReference": "/chistory/cms/editor/20200629134142.png",
+      "token": "migration-resource://64b946d0681133d8bd73d1e142ddfcb39eb3b0abfe114d848fb69a6493a122fe",
+      "snapshotPath": "assets/64b946d0681133d8bd73d1e142ddfcb39eb3b0abfe114d848fb69a6493a122fe.png",
+      "sha256": "64b946d0681133d8bd73d1e142ddfcb39eb3b0abfe114d848fb69a6493a122fe",
+      "contentType": "image/png",
+      "sizeBytes": 194743
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200629134213.png",
+      "originalReference": "/chistory/cms/editor/20200629134213.png",
+      "token": "migration-resource://d7653243782ddebae5c2b65f2a4b477840569fbde0889ca1cd12fc69b8be21e5",
+      "snapshotPath": "assets/d7653243782ddebae5c2b65f2a4b477840569fbde0889ca1cd12fc69b8be21e5.png",
+      "sha256": "d7653243782ddebae5c2b65f2a4b477840569fbde0889ca1cd12fc69b8be21e5",
+      "contentType": "image/png",
+      "sizeBytes": 186772
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200629134558.png",
+      "originalReference": "/chistory/cms/editor/20200629134558.png",
+      "token": "migration-resource://602867f15ca2a8ee72cfebff0e54dddc1c521c277024c369d604e23f0ec411b1",
+      "snapshotPath": "assets/602867f15ca2a8ee72cfebff0e54dddc1c521c277024c369d604e23f0ec411b1.png",
+      "sha256": "602867f15ca2a8ee72cfebff0e54dddc1c521c277024c369d604e23f0ec411b1",
+      "contentType": "image/png",
+      "sizeBytes": 208455
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200629134240.png",
+      "originalReference": "/chistory/cms/editor/20200629134240.png",
+      "token": "migration-resource://5d347fa6a7499a8544c8d61a9ad24395f660286e1fe94ffd95c44679131f322e",
+      "snapshotPath": "assets/5d347fa6a7499a8544c8d61a9ad24395f660286e1fe94ffd95c44679131f322e.png",
+      "sha256": "5d347fa6a7499a8544c8d61a9ad24395f660286e1fe94ffd95c44679131f322e",
+      "contentType": "image/png",
+      "sizeBytes": 137321
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200629134925.png",
+      "originalReference": "/chistory/cms/editor/20200629134925.png",
+      "token": "migration-resource://07b3dfbd1fa30217c210eb92d10d5ba783afdead36266ab3e0ebbb5124165d6c",
+      "snapshotPath": "assets/07b3dfbd1fa30217c210eb92d10d5ba783afdead36266ab3e0ebbb5124165d6c.png",
+      "sha256": "07b3dfbd1fa30217c210eb92d10d5ba783afdead36266ab3e0ebbb5124165d6c",
+      "contentType": "image/png",
+      "sizeBytes": 156587
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200629135000.png",
+      "originalReference": "/chistory/cms/editor/20200629135000.png",
+      "token": "migration-resource://c5c1dc02368a06b758289a1454e5ee0af8d8f88e757313f953e8d8498644d40c",
+      "snapshotPath": "assets/c5c1dc02368a06b758289a1454e5ee0af8d8f88e757313f953e8d8498644d40c.png",
+      "sha256": "c5c1dc02368a06b758289a1454e5ee0af8d8f88e757313f953e8d8498644d40c",
+      "contentType": "image/png",
+      "sizeBytes": 152204
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200629135016.png",
+      "originalReference": "/chistory/cms/editor/20200629135016.png",
+      "token": "migration-resource://d112ec0156424686a9697a36c8dac4de91a93b374609df43f5c4e8d4d78f566d",
+      "snapshotPath": "assets/d112ec0156424686a9697a36c8dac4de91a93b374609df43f5c4e8d4d78f566d.png",
+      "sha256": "d112ec0156424686a9697a36c8dac4de91a93b374609df43f5c4e8d4d78f566d",
+      "contentType": "image/png",
+      "sizeBytes": 155774
+    }
+  ],
+  "sourceFingerprint": "1eb578c26564d1cfbb36b022ef3bceab0badb837007130992964f2b84af2f9c0",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "吉林省气象局2020年公开招聘全日制普通应届高校毕业生公告（第三批）",
+    "listPublishDate": "2020-06-29",
+    "sourceOrder": 397,
+    "detailPublishDate": "2020-06-29"
+  }
+}

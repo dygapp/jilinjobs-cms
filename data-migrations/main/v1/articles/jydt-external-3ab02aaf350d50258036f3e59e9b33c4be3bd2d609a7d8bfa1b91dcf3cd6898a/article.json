@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3ab02aaf350d50258036f3e59e9b33c4be3bd2d609a7d8bfa1b91dcf3cd6898a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/06puTwRKip6qS96dho39ow",
+    "url": "https://mp.weixin.qq.com/s/06puTwRKip6qS96dho39ow"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院赴长春北湖悦榕鸿居酒店开展访企拓岗调研活动",
+    "source": "",
+    "publishDate": "2025-06-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/06puTwRKip6qS96dho39ow"
+  },
+  "resources": [],
+  "sourceFingerprint": "77223ab93ffa86aa27911f345bb62cc96b5ddd0fcb10e994f5e649a108a076c5",
+  "evidence": {
+    "listPage": 79,
+    "listTitle": "吉林工商学院赴长春北湖悦榕鸿居酒店开展访企拓岗调研活动",
+    "listPublishDate": "2025-06-19",
+    "sourceOrder": 790
+  }
+}

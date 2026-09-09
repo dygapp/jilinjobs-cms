@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-jilin:external:0d3af55941720b890c6802388c513080fa9e1e1c8f488f5c1dec0a23452c5ea8",
+    "contentId": null,
+    "typeCode": "policy-jilin",
+    "detailPath": "/s/7hS8oo0_v-wyJhILmrENyQ",
+    "url": "https://mp.weixin.qq.com/s/7hS8oo0_v-wyJhILmrENyQ"
+  },
+  "target": {
+    "columnAlias": "policy-jilin",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省促进高校毕业生就业创业最新政策电子口袋书",
+    "source": "",
+    "publishDate": "2025-06-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/7hS8oo0_v-wyJhILmrENyQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "d1a833540210642f55570c1de095903cd79780dfe37c5d004885cd21b39623d2",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "吉林省促进高校毕业生就业创业最新政策电子口袋书",
+    "listPublishDate": "2025-06-04",
+    "sourceOrder": 1
+  }
+}

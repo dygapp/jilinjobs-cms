@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9156751e83280da803477df814ac72561685fd3a611fbfd6cbdb28e14bb9df87",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/sHuhgbVtHdJarfsOJaXHBQ",
+    "url": "https://mp.weixin.qq.com/s/sHuhgbVtHdJarfsOJaXHBQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "找工作，这12场招聘活动别错过！",
+    "source": "",
+    "publishDate": "2025-01-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/sHuhgbVtHdJarfsOJaXHBQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "f62a544062dff64817de20e8ad414ef456984cd6d38ae3baf1d375fe8fee83c0",
+  "evidence": {
+    "listPage": 100,
+    "listTitle": "找工作，这12场招聘活动别错过！",
+    "listPublishDate": "2025-01-21",
+    "sourceOrder": 993
+  }
+}

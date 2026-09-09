@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120278",
+    "contentId": "28737783120278",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120278"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2008年百度网游行业指数呈上升趋势，受金融危机影响较小",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2008年百度网游行业指数呈上升趋势，受金融危机影响较小</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 2008年，百度网游指数呈上升趋势，从年初的150万左右升至年末250万左右，而在金融危机影响较为严重的下半年，网游指数仍保持了上升趋势。分析认为，百度指数的大幅上升与2008年网游市场高速增长、网游玩家规模扩大有直接关系。GPC（中国版协游戏工委）与IDC的联合调查表明 ：2008年，中国网络游戏用户数达到4936万，比2007年增加了22.9％；网络游戏市场实际销售收入为183.8亿元人民币，比2007年增长了76.6%。 </font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 从各方面因素看，我国网游市场仍可能保持快速增长。由于搜索引擎是网游玩家、尤其新玩家获取各类信息的主要渠道之一，这种增长也将体现在百度指数上：</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 首先，我国网民数量已跃居全球第一，但网络普及率仍低于发达国家水平，互联网普及率会快速提高，而作为互联网主要娱乐之一的网络游戏，将会拥有更多的玩家，这些新玩家的需求在一定程度上会通过搜索引擎表达；</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 其次，随着游戏产品数量和质量的提升，会刺激更多用户参与，这些用户也会通过各种有效渠道获取游戏资讯；</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 第三，由于各种因素影响，在美国和其他发达国家备受欢迎的Xbox、PS3和WII等游戏机并未正式在中国推出，导致大多数中国游戏玩家只有网游一种选择；而网络游戏作为一种费用低廉的娱乐方式，经济环境变化等对网络游戏的影响也相对较小； </font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 此外，由于互联网的快速普及和电脑软硬件价格的快速下降，四级城市及农村地区的网络游戏市场仍有较大潜力可挖。 </font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://data.baidu.com/youxi2/img/yx02.gif\" border=\"0\"></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "e54bef674dad620b2c611fadc14f6aee5885b22b321109e062d4d57ff21fee14",
+  "evidence": {
+    "listPage": 186,
+    "listTitle": "2008年百度网游行业指数呈上升趋势，受金融危机影响较小",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1851,
+    "detailPublishDate": "2009-04-05"
+  }
+}

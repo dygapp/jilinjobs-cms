@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a6d6447d81c8eb0b82d6c2fb9ea009cda3085fde4900847c2d6b429a6d609ef3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/wsr3kRLqH86B5v5vgT7BgQ",
+    "url": "https://mp.weixin.qq.com/s/wsr3kRLqH86B5v5vgT7BgQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院召开2025届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2025-06-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wsr3kRLqH86B5v5vgT7BgQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "4b8fd5fecf07ec24ef31b111f161887c6c6fc19e33428fda8d35cb9698ba9e3c",
+  "evidence": {
+    "listPage": 80,
+    "listTitle": "长春人文学院召开2025届毕业生就业工作推进会",
+    "listPublishDate": "2025-06-19",
+    "sourceOrder": 792
+  }
+}

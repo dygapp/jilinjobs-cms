@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2dccb6ed1dfee3d780d46ce392fee6de3939d90711660d0a7256b242076ba01a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/3hj1-Q7whcHeEONRY5566A",
+    "url": "https://mp.weixin.qq.com/s/3hj1-Q7whcHeEONRY5566A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春医学高等专科学校【三下乡特辑】“星火仁心”实践团基层服务纪实",
+    "source": "",
+    "publishDate": "2025-07-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/3hj1-Q7whcHeEONRY5566A"
+  },
+  "resources": [],
+  "sourceFingerprint": "5a798f890ee1be5d2430e01282855a43af7ead2aafcb075757df1c640cc59f81",
+  "evidence": {
+    "listPage": 73,
+    "listTitle": "长春医学高等专科学校【三下乡特辑】“星火仁心”实践团基层服务纪实",
+    "listPublishDate": "2025-07-21",
+    "sourceOrder": 724
+  }
+}

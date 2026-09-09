@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d4e7ef80c4e2ea9fab9ce62cff3ef94be4a97ef4870aeafebfb5d68400316b41",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/6tlGhda4USEcg1aaiM6k6A",
+    "url": "https://mp.weixin.qq.com/s/6tlGhda4USEcg1aaiM6k6A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务吉林高质量发展|金专秋季校园双选会为毕业生铺就高质量就业路",
+    "source": "",
+    "publishDate": "2025-10-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/6tlGhda4USEcg1aaiM6k6A"
+  },
+  "resources": [],
+  "sourceFingerprint": "b67a272cf2810799d3175fb938b2a6f298e2558c90ec7eb4d4fe52a28b041102",
+  "evidence": {
+    "listPage": 65,
+    "listTitle": "服务吉林高质量发展|金专秋季校园双选会为毕业生铺就高质量就业路",
+    "listPublishDate": "2025-10-30",
+    "sourceOrder": 650
+  }
+}

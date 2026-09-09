@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:cc032b5c9f1dbe9ff085ab1a6889760650b6f64c2a4ea9d0e6d4875ebfd48b42",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/m8mGw3JH4wFG2KJjybwGTg",
+    "url": "https://mp.weixin.qq.com/s/m8mGw3JH4wFG2KJjybwGTg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗‘就’在吉林”吉林省高校服务“四六四”产业新格局财经类毕业生双选会邀请函",
+    "source": "",
+    "publishDate": "2024-04-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/m8mGw3JH4wFG2KJjybwGTg"
+  },
+  "resources": [],
+  "sourceFingerprint": "c5b48ee315d9317a1e4814cb55994709afcda95035e6837d174040d6eac38639",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "“创业奋斗‘就’在吉林”吉林省高校服务“四六四”产业新格局财经类毕业生双选会邀请函",
+    "listPublishDate": "2024-04-08",
+    "sourceOrder": 303
+  }
+}

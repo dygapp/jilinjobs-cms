@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122256",
+    "contentId": "28737783122256",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122256"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林工程技术师范学院2010届毕业生就业洽谈会圆满成功",
+    "source": "",
+    "publishDate": "2009-11-30",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林工程技术师范学院2010届毕业生就业洽谈会圆满成功</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-11-30 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"356\" src=\"http://www.jilinjobs.cn/uploadfile/200911/20091130160428816.jpg\" width=\"600\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\">吉林工程技术师范学院2010届毕业生就业大市场</font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"></font>&nbsp;</p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"455\" src=\"http://www.jilinjobs.cn/uploadfile/200911/2009113016050690.jpg\" width=\"600\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\">王建华院长向新闻媒体介绍2010年毕业生就业情况</font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"></font>&nbsp;</p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"400\" src=\"http://www.jilinjobs.cn/uploadfile/200911/20091130160545638.jpg\" width=\"600\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\">毕业生就业洽谈现场火爆</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "b031d2bd3e2e790aeca37a344a1b1d7b62d32109c8b1b7cb0b5e519cc4da47d2",
+  "evidence": {
+    "listPage": 168,
+    "listTitle": "吉林工程技术师范学院2010届毕业生就业洽谈会圆满成功",
+    "listPublishDate": "2009-11-30",
+    "sourceOrder": 1678,
+    "detailPublishDate": "2009-11-30"
+  }
+}

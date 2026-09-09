@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:49be153b719259c4629c69b5d3eb24741ce8116cfcbf13efc8be86a156f16440",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/3t3Q08EslGMpYmZp8wuB7g",
+    "url": "https://mp.weixin.qq.com/s/3t3Q08EslGMpYmZp8wuB7g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化校企合作，共筑就业桥梁 | 长春建筑学院赴吉林省宝宏药业有限公司开展访企拓岗专项活动",
+    "source": "",
+    "publishDate": "2026-03-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/3t3Q08EslGMpYmZp8wuB7g"
+  },
+  "resources": [],
+  "sourceFingerprint": "605dc03864f302b215decf70efcb5f8ea2b0d5087cbcbd086c412fe735164c4d",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "深化校企合作，共筑就业桥梁 | 长春建筑学院赴吉林省宝宏药业有限公司开展访企拓岗专项活动",
+    "listPublishDate": "2026-03-12",
+    "sourceOrder": 423
+  }
+}

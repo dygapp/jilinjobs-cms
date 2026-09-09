@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268960777912320",
+    "contentId": "268960777912320",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268960777912320"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "白城医学高等专科学校举办全国大学生职业规划大赛校级决赛",
+    "source": "",
+    "publishDate": "2024-12-03",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://fb204da2301e8ade2107dc72b4177e263fe96419caa57393a873be63195b651e\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/dde5a616-64c0-4623-a3b8-93ca842a9f9e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/dde5a616-64c0-4623-a3b8-93ca842a9f9e.jpg",
+      "token": "migration-resource://fb204da2301e8ade2107dc72b4177e263fe96419caa57393a873be63195b651e",
+      "snapshotPath": "assets/fb204da2301e8ade2107dc72b4177e263fe96419caa57393a873be63195b651e.jpg",
+      "sha256": "fb204da2301e8ade2107dc72b4177e263fe96419caa57393a873be63195b651e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 387016
+    }
+  ],
+  "sourceFingerprint": "86ab7f53cd144c06677653d00a9420ada7342186d74ba0c9ffc00c2dc1c10ef5",
+  "evidence": {
+    "listPage": 101,
+    "listTitle": "白城医学高等专科学校举办全国大学生职业规划大赛校级决赛",
+    "listPublishDate": "2024-12-03",
+    "sourceOrder": 1006,
+    "detailPublishDate": "2024-12-03"
+  }
+}

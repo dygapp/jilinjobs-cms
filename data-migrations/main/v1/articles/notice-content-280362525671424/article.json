@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:280362525671424",
+    "contentId": "280362525671424",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=280362525671424"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办“面向东北地区2025届高校毕业生春季线上专场招聘会”的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2025-03-20",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://9472b4c89b6f42d76efd83dfbe7919510c6915faaa10051e237cc8886fe8f15e\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/f7f04274-64e7-4f23-91a3-cb73abf95564.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/f7f04274-64e7-4f23-91a3-cb73abf95564.jpg",
+      "token": "migration-resource://9472b4c89b6f42d76efd83dfbe7919510c6915faaa10051e237cc8886fe8f15e",
+      "snapshotPath": "assets/9472b4c89b6f42d76efd83dfbe7919510c6915faaa10051e237cc8886fe8f15e.jpg",
+      "sha256": "9472b4c89b6f42d76efd83dfbe7919510c6915faaa10051e237cc8886fe8f15e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    }
+  ],
+  "sourceFingerprint": "d994b3fa16b6db9c4610b548d12f8df747a784ebbbef8c45288ee3145650e83b",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "关于举办“面向东北地区2025届高校毕业生春季线上专场招聘会”的通知",
+    "listPublishDate": "2025-03-20",
+    "sourceOrder": 57,
+    "detailPublishDate": "2025-03-20"
+  }
+}

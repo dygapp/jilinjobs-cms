@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122714",
+    "contentId": "28737783122714",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122714"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于贯彻落实全国教育系统新冠肺炎疫情防控视频会议精神的通知",
+    "source": "",
+    "publishDate": "2020-02-10",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于贯彻落实全国教育系统新冠肺炎疫情防控视频会议精神的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:吉林省高等学校毕业生就业指导中心   发布时间:2020-2-10 17:08:13</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://0f21c8e72d826bdbca9625b50e9ac6861eeaa3537007faec20356de1f1acc8ad\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://55cb7ce23b4191f20168749f61770ada3325df78dc621188f03902232bb050f9\"></p><p style=\"text-align: center;\"><img title=\"3.jpg\" src=\"migration-resource://73ee9ac824c422cc4b1a8cd30f5138a5a0a8cca5e8a54efd40a6bccfa2d31c8f\"></p><p style=\"text-align: center;\"><img title=\"4.jpg\" src=\"migration-resource://55bfeca3d810bc8ca42deb1361cc40db5bf5328778f181a100de90ef6f0d3435\"></p><p style=\"text-align: center;\"><img title=\"5.jpg\" src=\"migration-resource://7185d7c6216546133d600c81790950dbe1bc6f8221955d8d660d4dbd41289f8f\"></p><p style=\"text-align: center;\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6371695132273437501311730.jpg",
+      "originalReference": "/chistory/cms/imgs/6371695132273437501311730.jpg",
+      "token": "migration-resource://0f21c8e72d826bdbca9625b50e9ac6861eeaa3537007faec20356de1f1acc8ad",
+      "snapshotPath": "assets/0f21c8e72d826bdbca9625b50e9ac6861eeaa3537007faec20356de1f1acc8ad.jpg",
+      "sha256": "0f21c8e72d826bdbca9625b50e9ac6861eeaa3537007faec20356de1f1acc8ad",
+      "contentType": "image/jpeg",
+      "sizeBytes": 57231
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6371695132343750003696693.jpg",
+      "originalReference": "/chistory/cms/imgs/6371695132343750003696693.jpg",
+      "token": "migration-resource://55cb7ce23b4191f20168749f61770ada3325df78dc621188f03902232bb050f9",
+      "snapshotPath": "assets/55cb7ce23b4191f20168749f61770ada3325df78dc621188f03902232bb050f9.jpg",
+      "sha256": "55cb7ce23b4191f20168749f61770ada3325df78dc621188f03902232bb050f9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 87190
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6371695132351562501439264.jpg",
+      "originalReference": "/chistory/cms/imgs/6371695132351562501439264.jpg",
+      "token": "migration-resource://73ee9ac824c422cc4b1a8cd30f5138a5a0a8cca5e8a54efd40a6bccfa2d31c8f",
+      "snapshotPath": "assets/73ee9ac824c422cc4b1a8cd30f5138a5a0a8cca5e8a54efd40a6bccfa2d31c8f.jpg",
+      "sha256": "73ee9ac824c422cc4b1a8cd30f5138a5a0a8cca5e8a54efd40a6bccfa2d31c8f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95919
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6371695132359375003883662.jpg",
+      "originalReference": "/chistory/cms/imgs/6371695132359375003883662.jpg",
+      "token": "migration-resource://55bfeca3d810bc8ca42deb1361cc40db5bf5328778f181a100de90ef6f0d3435",
+      "snapshotPath": "assets/55bfeca3d810bc8ca42deb1361cc40db5bf5328778f181a100de90ef6f0d3435.jpg",
+      "sha256": "55bfeca3d810bc8ca42deb1361cc40db5bf5328778f181a100de90ef6f0d3435",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95298
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6371695132364062504167742.jpg",
+      "originalReference": "/chistory/cms/imgs/6371695132364062504167742.jpg",
+      "token": "migration-resource://7185d7c6216546133d600c81790950dbe1bc6f8221955d8d660d4dbd41289f8f",
+      "snapshotPath": "assets/7185d7c6216546133d600c81790950dbe1bc6f8221955d8d660d4dbd41289f8f.jpg",
+      "sha256": "7185d7c6216546133d600c81790950dbe1bc6f8221955d8d660d4dbd41289f8f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 59309
+    }
+  ],
+  "sourceFingerprint": "0867256d5eaca223e5409965c73fce4dd1c892ea2d2a06891fc0682ea6507131",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "关于贯彻落实全国教育系统新冠肺炎疫情防控视频会议精神的通知",
+    "listPublishDate": "2020-02-10",
+    "sourceOrder": 192,
+    "detailPublishDate": "2020-02-10"
+  }
+}

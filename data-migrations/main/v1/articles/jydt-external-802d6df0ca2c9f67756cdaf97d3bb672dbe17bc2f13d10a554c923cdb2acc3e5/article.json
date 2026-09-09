@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:802d6df0ca2c9f67756cdaf97d3bb672dbe17bc2f13d10a554c923cdb2acc3e5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/q4a-YGhYtbt9eGPb8IhmzQ",
+    "url": "https://mp.weixin.qq.com/s/q4a-YGhYtbt9eGPb8IhmzQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "AI赋能智慧早幼教 长春早教学院与科大讯飞达成合作共识",
+    "source": "",
+    "publishDate": "2025-11-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/q4a-YGhYtbt9eGPb8IhmzQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "3c5713f7d180b7075efac452e2b8099b04f8125067d0a238128b96306bf8b995",
+  "evidence": {
+    "listPage": 60,
+    "listTitle": "AI赋能智慧早幼教 长春早教学院与科大讯飞达成合作共识",
+    "listPublishDate": "2025-11-17",
+    "sourceOrder": 598
+  }
+}

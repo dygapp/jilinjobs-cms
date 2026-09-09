@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:59fd438d1a3b21a1dd9bd89cfc51f9df91ea89f58df4f1c8bc7631cfbdc98911",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/qJRcZwRYsfS1Pl1uMHSzhQ",
+    "url": "https://mp.weixin.qq.com/s/qJRcZwRYsfS1Pl1uMHSzhQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促转型 校企协同育新人——松原职业技术学院赴杭州统一AI考察交流",
+    "source": "",
+    "publishDate": "2026-04-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/qJRcZwRYsfS1Pl1uMHSzhQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "b8aac56da8dd2d9f991901388703155d590d619beb6ee529037642a638c1caf5",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "访企拓岗促转型 校企协同育新人——松原职业技术学院赴杭州统一AI考察交流",
+    "listPublishDate": "2026-04-08",
+    "sourceOrder": 310
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d76bcfbc7fb01501c7bd87489830c55a474f14cfd8056ffb8753a5e30187b082",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/jyxw/63220.jhtml",
+    "url": "http://job.jlufe.hjiuye.com/jyxw/63220.jhtml"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学举办“创业奋斗‘就’在吉林”吉林省 高校服务大旅游产业集群毕业生招聘会",
+    "source": "",
+    "publishDate": "2024-04-28",
+    "bodyHtml": "",
+    "externalUrl": "http://job.jlufe.hjiuye.com/jyxw/63220.jhtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "7f89cb96869aa118621832a2f89e14369193e4407ee40f6a14d0f39ab4f40a15",
+  "evidence": {
+    "listPage": 107,
+    "listTitle": "吉林财经大学举办“创业奋斗‘就’在吉林”吉林省 高校服务大旅游产业集群毕业生招聘会",
+    "listPublishDate": "2024-04-28",
+    "sourceOrder": 1067
+  }
+}

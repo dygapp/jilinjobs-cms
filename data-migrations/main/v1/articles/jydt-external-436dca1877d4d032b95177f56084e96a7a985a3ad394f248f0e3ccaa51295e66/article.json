@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:436dca1877d4d032b95177f56084e96a7a985a3ad394f248f0e3ccaa51295e66",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/jeTg0irEQfH3Gm60aUHE-g",
+    "url": "https://mp.weixin.qq.com/s/jeTg0irEQfH3Gm60aUHE-g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工程技术师范学院召开2026届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2025-11-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/jeTg0irEQfH3Gm60aUHE-g"
+  },
+  "resources": [],
+  "sourceFingerprint": "e3e55d877daa891453e78343d517a36e8941a8bdfbcf95864adf468164d2c749",
+  "evidence": {
+    "listPage": 62,
+    "listTitle": "吉林工程技术师范学院召开2026届毕业生就业工作推进会",
+    "listPublishDate": "2025-11-07",
+    "sourceOrder": 616
+  }
+}

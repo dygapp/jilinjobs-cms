@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:652bffd4caa1a0adbaf180ee04916b655bc5594ccfae0bd1899d7446cca17371",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/W0nPH-rEMJLsZa70NxHBVg",
+    "url": "https://mp.weixin.qq.com/s/W0nPH-rEMJLsZa70NxHBVg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中食嘉谷集团一行到访松原职业技术学院",
+    "source": "",
+    "publishDate": "2026-05-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/W0nPH-rEMJLsZa70NxHBVg"
+  },
+  "resources": [],
+  "sourceFingerprint": "32b126e3dcdeead6086beac2ff00942f52caf28e610479ed1ce1407beb175bad",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "中食嘉谷集团一行到访松原职业技术学院",
+    "listPublishDate": "2026-05-29",
+    "sourceOrder": 124
+  }
+}

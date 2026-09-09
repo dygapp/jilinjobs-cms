@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:00c1099c8ec52cd5ee35cea7a88f385e38dc5a9c1102ae178bc0d246abac99af",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/UYnII3Q5Vn_8PkTaXsUCTA",
+    "url": "https://mp.weixin.qq.com/s/UYnII3Q5Vn_8PkTaXsUCTA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学2025届毕业生春季校园招聘活动全面开启",
+    "source": "",
+    "publishDate": "2025-03-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/UYnII3Q5Vn_8PkTaXsUCTA"
+  },
+  "resources": [],
+  "sourceFingerprint": "ee40474478bcb47ba9f609866f88a8676782bd08af7c6135a0ad1ad1509174ac",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "北华大学2025届毕业生春季校园招聘活动全面开启",
+    "listPublishDate": "2025-03-07",
+    "sourceOrder": 225
+  }
+}

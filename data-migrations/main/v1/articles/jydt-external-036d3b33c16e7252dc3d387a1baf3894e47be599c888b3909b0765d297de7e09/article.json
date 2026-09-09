@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:036d3b33c16e7252dc3d387a1baf3894e47be599c888b3909b0765d297de7e09",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/CFFBB3f9bo2cObFT9oj5YQ",
+    "url": "https://mp.weixin.qq.com/s/CFFBB3f9bo2cObFT9oj5YQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林铁道职业技术大学召开2026届毕业生就业工作会议",
+    "source": "",
+    "publishDate": "2025-11-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/CFFBB3f9bo2cObFT9oj5YQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "91cb2751e07ed710f329df42d8892348fafba988dfb4f67794afbd2a6a475621",
+  "evidence": {
+    "listPage": 61,
+    "listTitle": "吉林铁道职业技术大学召开2026届毕业生就业工作会议",
+    "listPublishDate": "2025-11-10",
+    "sourceOrder": 608
+  }
+}

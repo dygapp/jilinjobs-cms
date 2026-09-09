@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:99768ce448777cff2ed50a69609d7d1db8f5b89402accdb8c3863dd1166b140f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/GHAu3sQHFF_9Z6OZlCDsvA",
+    "url": "https://mp.weixin.qq.com/s/GHAu3sQHFF_9Z6OZlCDsvA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林电子信息职业技术学院召开招生就业工作会议",
+    "source": "",
+    "publishDate": "2025-11-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/GHAu3sQHFF_9Z6OZlCDsvA"
+  },
+  "resources": [],
+  "sourceFingerprint": "5112c099f91d4302f543055d7fc23e599d6a4fb030a80c6ab1121fca90c65fe3",
+  "evidence": {
+    "listPage": 58,
+    "listTitle": "吉林电子信息职业技术学院召开招生就业工作会议",
+    "listPublishDate": "2025-11-21",
+    "sourceOrder": 576
+  }
+}

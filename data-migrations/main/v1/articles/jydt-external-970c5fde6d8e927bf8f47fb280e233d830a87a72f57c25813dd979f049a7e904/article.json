@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:970c5fde6d8e927bf8f47fb280e233d830a87a72f57c25813dd979f049a7e904",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/IkMLgtrFDKPoVHpfbpscjA",
+    "url": "https://mp.weixin.qq.com/s/IkMLgtrFDKPoVHpfbpscjA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春财经学院走访吉林微思智能科技有限公司",
+    "source": "",
+    "publishDate": "2026-03-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/IkMLgtrFDKPoVHpfbpscjA"
+  },
+  "resources": [],
+  "sourceFingerprint": "b83a65bbea0ee0aa764b4b05f6d57a3a9818fda63e207e212ea0b7023e09d22b",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "长春财经学院走访吉林微思智能科技有限公司",
+    "listPublishDate": "2026-03-30",
+    "sourceOrder": 342
+  }
+}

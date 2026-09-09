@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:d11e2fee19804ce5805cc59fc844ad4c10b1ec89dcb31ab44116e7df326914fb",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/RkGdLGN53pk7-3v5xYZJHQ",
+    "url": "https://mp.weixin.qq.com/s/RkGdLGN53pk7-3v5xYZJHQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "春风送岗 启航未来！长春光华学院“春风行动”就业服务温暖上线",
+    "source": "",
+    "publishDate": "2026-03-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/RkGdLGN53pk7-3v5xYZJHQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "71ce3a0d04e3fada7eab1ace86bf2992bd9750be7dd7e1a0586c9c372a337374",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "春风送岗 启航未来！长春光华学院“春风行动”就业服务温暖上线",
+    "listPublishDate": "2026-03-19",
+    "sourceOrder": 54
+  }
+}

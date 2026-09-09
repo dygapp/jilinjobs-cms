@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122700",
+    "contentId": "28737783122700",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122700"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展2020年第四届高校就业创业优秀论文征集活动的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2020-09-16",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align:center\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"migration-resource://c27703ef363a4cd557340b5d0602fe7885d9d798c9f09b780d299585a9b6cb6a\" alt=\"\" width=\"677\" height=\"960\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://5cc69def013f52592065b81110c2dc806c35fbf4864bf3e2986d4085f07f1148\" alt=\"\" width=\"689\" height=\"960\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://7bbce39524615f8baf64c5776f636e3b5858f42c42f87c3884ef8ea2cf5710fb\" alt=\"\" width=\"682\" height=\"960\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200917135333.jpg",
+      "originalReference": "/chistory/cms/editor/20200917135333.jpg",
+      "token": "migration-resource://c27703ef363a4cd557340b5d0602fe7885d9d798c9f09b780d299585a9b6cb6a",
+      "snapshotPath": "assets/c27703ef363a4cd557340b5d0602fe7885d9d798c9f09b780d299585a9b6cb6a.jpg",
+      "sha256": "c27703ef363a4cd557340b5d0602fe7885d9d798c9f09b780d299585a9b6cb6a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 79136
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200917135401.jpg",
+      "originalReference": "/chistory/cms/editor/20200917135401.jpg",
+      "token": "migration-resource://5cc69def013f52592065b81110c2dc806c35fbf4864bf3e2986d4085f07f1148",
+      "snapshotPath": "assets/5cc69def013f52592065b81110c2dc806c35fbf4864bf3e2986d4085f07f1148.jpg",
+      "sha256": "5cc69def013f52592065b81110c2dc806c35fbf4864bf3e2986d4085f07f1148",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88224
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200917135411.jpg",
+      "originalReference": "/chistory/cms/editor/20200917135411.jpg",
+      "token": "migration-resource://7bbce39524615f8baf64c5776f636e3b5858f42c42f87c3884ef8ea2cf5710fb",
+      "snapshotPath": "assets/7bbce39524615f8baf64c5776f636e3b5858f42c42f87c3884ef8ea2cf5710fb.jpg",
+      "sha256": "7bbce39524615f8baf64c5776f636e3b5858f42c42f87c3884ef8ea2cf5710fb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 63702
+    }
+  ],
+  "sourceFingerprint": "b3632465c3ca081de851203d5267da17a2abb068b0dbb05f896f6f296ca4327e",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "关于开展2020年第四届高校就业创业优秀论文征集活动的通知",
+    "listPublishDate": "2020-09-16",
+    "sourceOrder": 173,
+    "detailPublishDate": "2020-09-16"
+  }
+}

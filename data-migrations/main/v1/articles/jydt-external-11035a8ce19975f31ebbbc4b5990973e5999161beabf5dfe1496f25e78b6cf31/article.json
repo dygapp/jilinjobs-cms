@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:11035a8ce19975f31ebbbc4b5990973e5999161beabf5dfe1496f25e78b6cf31",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/SFGP5f1L-1xRswQPBW6joQ",
+    "url": "https://mp.weixin.qq.com/s/SFGP5f1L-1xRswQPBW6joQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "精准对接人才需求|长春早期教育职业学院与黄伟义齿共建口腔医学技术实习就业基地",
+    "source": "",
+    "publishDate": "2025-11-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/SFGP5f1L-1xRswQPBW6joQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "f725e1ad987ab63217a1874a91c9842affadbbe4a1b769f7861ef2b2f52c9285",
+  "evidence": {
+    "listPage": 60,
+    "listTitle": "精准对接人才需求|长春早期教育职业学院与黄伟义齿共建口腔医学技术实习就业基地",
+    "listPublishDate": "2025-11-18",
+    "sourceOrder": 593
+  }
+}

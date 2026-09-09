@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8609c69013aea08470ea017b60dec6dfa75eace6884e1c2f6773a66b317f223d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/PiZCb6gx8GhIsCX2-fB8uA",
+    "url": "https://mp.weixin.qq.com/s/PiZCb6gx8GhIsCX2-fB8uA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春职业技术大学举办2025年实习就业双选会",
+    "source": "",
+    "publishDate": "2025-06-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/PiZCb6gx8GhIsCX2-fB8uA"
+  },
+  "resources": [],
+  "sourceFingerprint": "3ad9b518e1ac187b7f3352cc66518daeb86da61cccbf674f2e2f986707b89916",
+  "evidence": {
+    "listPage": 81,
+    "listTitle": "长春职业技术大学举办2025年实习就业双选会",
+    "listPublishDate": "2025-06-17",
+    "sourceOrder": 806
+  }
+}

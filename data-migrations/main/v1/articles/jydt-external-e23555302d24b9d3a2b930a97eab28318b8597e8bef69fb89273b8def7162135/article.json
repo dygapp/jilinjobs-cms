@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e23555302d24b9d3a2b930a97eab28318b8597e8bef69fb89273b8def7162135",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1055/6755.htm",
+    "url": "https://www.jlict.edu.cn/info/1055/6755.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林化工大学校领导赴深圳市、大连市访企拓岗",
+    "source": "",
+    "publishDate": "2026-05-06",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlict.edu.cn/info/1055/6755.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "4663667fa776c3afb0fe3cecd1b1de4b7acaf170ffa2424b1e00ed544ba30b4c",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "吉林化工大学校领导赴深圳市、大连市访企拓岗",
+    "listPublishDate": "2026-05-06",
+    "sourceOrder": 216
+  }
+}

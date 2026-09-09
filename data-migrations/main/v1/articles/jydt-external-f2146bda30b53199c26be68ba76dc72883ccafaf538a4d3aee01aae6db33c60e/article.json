@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f2146bda30b53199c26be68ba76dc72883ccafaf538a4d3aee01aae6db33c60e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ChnUgyOUvR7cqELupkdifQ",
+    "url": "https://mp.weixin.qq.com/s/ChnUgyOUvR7cqELupkdifQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春建筑学院党委副书记张冀男带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ChnUgyOUvR7cqELupkdifQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "c468a968994ce1c4a4afee07611c27ac88f1f802f1540dab3e6b55e6e6e6d2f1",
+  "evidence": {
+    "listPage": 39,
+    "listTitle": "长春建筑学院党委副书记张冀男带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-23",
+    "sourceOrder": 381
+  }
+}

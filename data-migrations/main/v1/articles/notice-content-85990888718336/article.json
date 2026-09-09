@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:85990888718336",
+    "contentId": "85990888718336",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=85990888718336"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省高校创新创业课程教学能力提升师资培训班的通知",
+    "source": "培训部",
+    "publishDate": "2021-09-17",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1272\" src=\"migration-resource://12c51deeed766c86c84f65210fd1574df27be53dcf65907dda377b4b5d965496\" width=\"900\"><img alt=\"\" height=\"1272\" src=\"migration-resource://c0355d47c4585c08402599f61b19e19c294089747f4fa9eafa8d9f330ed9c4c0\" width=\"900\"><img alt=\"\" height=\"1272\" src=\"migration-resource://bbcd0b7df824e850cd745d1873b4d3c6a57543eec38940f15afdddc1c04bfee1\" width=\"900\"><img alt=\"\" height=\"1272\" src=\"migration-resource://6b19db2c15c716d6dae62ae7e79e639a7e2eaa657eaa6d3ab3cd76d78320c289\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/d94bb4c4-a993-4b99-8211-0d2777e55237.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/d94bb4c4-a993-4b99-8211-0d2777e55237.jpg",
+      "token": "migration-resource://12c51deeed766c86c84f65210fd1574df27be53dcf65907dda377b4b5d965496",
+      "snapshotPath": "assets/12c51deeed766c86c84f65210fd1574df27be53dcf65907dda377b4b5d965496.jpg",
+      "sha256": "12c51deeed766c86c84f65210fd1574df27be53dcf65907dda377b4b5d965496",
+      "contentType": "image/jpeg",
+      "sizeBytes": 188984
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/9086902c-6b03-42ab-a75e-39ba432a0d61.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/9086902c-6b03-42ab-a75e-39ba432a0d61.jpg",
+      "token": "migration-resource://c0355d47c4585c08402599f61b19e19c294089747f4fa9eafa8d9f330ed9c4c0",
+      "snapshotPath": "assets/c0355d47c4585c08402599f61b19e19c294089747f4fa9eafa8d9f330ed9c4c0.jpg",
+      "sha256": "c0355d47c4585c08402599f61b19e19c294089747f4fa9eafa8d9f330ed9c4c0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 141544
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/e32fc59a-020f-4220-a9b4-24719b8b9c24.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/e32fc59a-020f-4220-a9b4-24719b8b9c24.jpg",
+      "token": "migration-resource://bbcd0b7df824e850cd745d1873b4d3c6a57543eec38940f15afdddc1c04bfee1",
+      "snapshotPath": "assets/bbcd0b7df824e850cd745d1873b4d3c6a57543eec38940f15afdddc1c04bfee1.jpg",
+      "sha256": "bbcd0b7df824e850cd745d1873b4d3c6a57543eec38940f15afdddc1c04bfee1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 105275
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/7ba3937c-7df1-4993-b6f9-57a24123844d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/7ba3937c-7df1-4993-b6f9-57a24123844d.jpg",
+      "token": "migration-resource://6b19db2c15c716d6dae62ae7e79e639a7e2eaa657eaa6d3ab3cd76d78320c289",
+      "snapshotPath": "assets/6b19db2c15c716d6dae62ae7e79e639a7e2eaa657eaa6d3ab3cd76d78320c289.jpg",
+      "sha256": "6b19db2c15c716d6dae62ae7e79e639a7e2eaa657eaa6d3ab3cd76d78320c289",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77181
+    }
+  ],
+  "sourceFingerprint": "97b161f3df87eacfee5aec6ee625ea7452b7fb2b2d00ffe19b5543c5a060e6a6",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "关于举办吉林省高校创新创业课程教学能力提升师资培训班的通知",
+    "listPublishDate": "2021-09-17",
+    "sourceOrder": 146,
+    "detailPublishDate": "2021-09-17"
+  }
+}

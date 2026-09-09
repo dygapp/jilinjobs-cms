@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:05c5f434691a98d419b7cf7f5681906b46ca24f6a7603f7408ca38efa6993378",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/esFZfsvOMD_5SNx1dzLtyw",
+    "url": "https://mp.weixin.qq.com/s/esFZfsvOMD_5SNx1dzLtyw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "才聚光华，“职”引未来；智汇经开，服务发展——长春光华学院2025届毕业生校园招聘会",
+    "source": "",
+    "publishDate": "2025-05-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/esFZfsvOMD_5SNx1dzLtyw"
+  },
+  "resources": [],
+  "sourceFingerprint": "3187bdc2cb9686278d2a75304341b715cbb1f5c93993bc433a44a79b853aaa28",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "才聚光华，“职”引未来；智汇经开，服务发展——长春光华学院2025届毕业生校园招聘会",
+    "listPublishDate": "2025-05-09",
+    "sourceOrder": 158
+  }
+}

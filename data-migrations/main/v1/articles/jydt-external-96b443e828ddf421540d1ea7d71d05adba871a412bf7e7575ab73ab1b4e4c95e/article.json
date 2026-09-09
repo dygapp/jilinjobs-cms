@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:96b443e828ddf421540d1ea7d71d05adba871a412bf7e7575ab73ab1b4e4c95e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzAxMzg2ODE0NA==&mid=100001042&idx=1&sn=403ba438f313dff5fd2c0903128d97ea&chksm=1b9d480d2ceac11ba4c5bb9508395319524909b3930f530ce72d4f19123f5271815c4bc3196d&mpshare=1&scene=23&srcid=0430Vept5x0mo3vw6p4jxkjd&sharer_sharetime=1619766860826&sharer_shareid=574f395a51b6c54cc59c0dc6ece05e10"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "创业有你 ‘就’在吉林 ——助力新时代吉林振兴发展”宣传推介活动 我们在行动",
+    "source": "",
+    "publishDate": "2021-04-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s?__biz=MzAxMzg2ODE0NA==&mid=100001042&idx=1&sn=403ba438f313dff5fd2c0903128d97ea&chksm=1b9d480d2ceac11ba4c5bb9508395319524909b3930f530ce72d4f19123f5271815c4bc3196d&mpshare=1&scene=23&srcid=0430Vept5x0mo3vw6p4jxkjd&sharer_sharetime=1619766860826&sharer_shareid=574f395a51b6c54cc59c0dc6ece05e10"
+  },
+  "resources": [],
+  "sourceFingerprint": "8676e1629ee86ae2002421800f280d46f058558ed2b2664b50230cffdf39522c",
+  "evidence": {
+    "listPage": 135,
+    "listTitle": "创业有你 ‘就’在吉林 ——助力新时代吉林振兴发展”宣传推介活动 我们在行动",
+    "listPublishDate": "2021-04-30",
+    "sourceOrder": 1347
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8b32366ff83e100677f7230f9b42deb0714ed8af1b5029ee9925190c4b6d26ee",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Xb57oqbsynzh0nefGh1MWQ",
+    "url": "https://mp.weixin.qq.com/s/Xb57oqbsynzh0nefGh1MWQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春理工大学校长郝群率团开展“优企引才”定向访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-02-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Xb57oqbsynzh0nefGh1MWQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "9567c143dbd0762e809e3e1f1870f9d15166d53532324262255fbea5ec988ec9",
+  "evidence": {
+    "listPage": 46,
+    "listTitle": "长春理工大学校长郝群率团开展“优企引才”定向访企拓岗促就业专项行动",
+    "listPublishDate": "2026-02-09",
+    "sourceOrder": 454
+  }
+}

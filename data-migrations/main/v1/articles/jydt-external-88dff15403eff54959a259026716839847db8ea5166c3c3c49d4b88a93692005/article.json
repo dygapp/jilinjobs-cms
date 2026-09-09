@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:88dff15403eff54959a259026716839847db8ea5166c3c3c49d4b88a93692005",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/BrWyRZNVsB9r48W7-Nn0mw",
+    "url": "https://mp.weixin.qq.com/s/BrWyRZNVsB9r48W7-Nn0mw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "10余家企业共商人才培养｜长春早教学院举办校企合作座谈会",
+    "source": "",
+    "publishDate": "2025-10-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/BrWyRZNVsB9r48W7-Nn0mw"
+  },
+  "resources": [],
+  "sourceFingerprint": "e817a4c3d6c163ce88bcc47fc12f7a3371b617f9ef7db8f194435be69105eeb5",
+  "evidence": {
+    "listPage": 65,
+    "listTitle": "10余家企业共商人才培养｜长春早教学院举办校企合作座谈会",
+    "listPublishDate": "2025-10-30",
+    "sourceOrder": 648
+  }
+}

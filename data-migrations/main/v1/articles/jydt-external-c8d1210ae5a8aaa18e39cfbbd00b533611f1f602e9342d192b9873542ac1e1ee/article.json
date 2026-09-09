@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c8d1210ae5a8aaa18e39cfbbd00b533611f1f602e9342d192b9873542ac1e1ee",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/-xc3roEoe_74gFXiXWh3oQ",
+    "url": "https://mp.weixin.qq.com/s/-xc3roEoe_74gFXiXWh3oQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学党委副书记张玉红、副校长刘岩带队开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/-xc3roEoe_74gFXiXWh3oQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "69835ece4c5c8f935cf380f4b41a76b7109bc45e10262b22138dd8c7c8b026b4",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "延边大学党委副书记张玉红、副校长刘岩带队开展访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-13",
+    "sourceOrder": 421
+  }
+}

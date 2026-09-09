@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120274",
+    "contentId": "28737783120274",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120274"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "全国将于三年内建立5000个女大学生创业基地",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">全国将于三年内建立5000个女大学生创业基地</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 3月27日，全国妇联宣布，为促进女大学生创业就业，全国妇联联合教育部、人力资源和社会保障部等多部门，将于三年内在全国建立5000个“女大学生创业实践基地”，预计为10万女大学生提供就业指导和帮助。目前,京津两地妇联已为两地女大学生联系了1432个就业实践岗位。</font></p> <p><font size=\"2\">　　全国妇联发展部部长崔卫燕介绍，受国际金融危机的影响，女大学生就业面临更加严峻的困难。此次全国妇联联合多部门共同开展全国女大学生创业导师行动，将在三年内建立5000个“女大学生创业实践基地”。这是国内首次专门为女大学生设立的实践基地。</font></p> <p><font size=\"2\">　　另据北京市妇联相关负责人介绍，北京地区现已有北京大学、中国人民大学、北京科技大学、北京外国语大学、中华女子学院5所院校参与了该项行动。目前，京津妇联已联系了30家企业，可为两地女大学生提供1432个就业实践岗位。</font></p> <p><font size=\"2\">　　据北京科技大学负责参与“女大学生创业实践基地”的张晓媛老师介绍，目前全国的行动都刚启动，他们学校正在与一些企业商谈合作意向。</font></p> <p><font size=\"2\">　　张晓媛称，由于企业的信息是面向参与该行动的所有高校，一些企业反映如果采取学生报名方式，压力会非常大，因此经初步协商后，学校将不会采取学生报名的形式，而是由学校各院系有组织有计划地选拔推荐适合各个岗位的学生，因此有需求的学生可到所属院系咨询。（记者 陈荞）</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 摘自：中国教育新闻网 </font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "2920f18541a0822b64c7c6b720f089096d18128ea2b30f79b9c49691f6e8180b",
+  "evidence": {
+    "listPage": 186,
+    "listTitle": "全国将于三年内建立5000个女大学生创业基地",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1853,
+    "detailPublishDate": "2009-04-05"
+  }
+}

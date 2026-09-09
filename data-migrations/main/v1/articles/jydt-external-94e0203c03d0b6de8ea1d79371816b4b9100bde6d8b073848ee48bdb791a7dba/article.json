@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:94e0203c03d0b6de8ea1d79371816b4b9100bde6d8b073848ee48bdb791a7dba",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/gDZJbNqeB_wfSwEb0mWomg",
+    "url": "https://mp.weixin.qq.com/s/gDZJbNqeB_wfSwEb0mWomg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促发展 协同育人谱新篇——长春早期教育职业学院赴两所优质幼儿园开展实习调研",
+    "source": "",
+    "publishDate": "2026-07-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gDZJbNqeB_wfSwEb0mWomg"
+  },
+  "resources": [],
+  "sourceFingerprint": "5545a30639f170a2ee674065c74fc51d2eecfa302be117f2f8d69856f428b6fe",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "访企拓岗促发展 协同育人谱新篇——长春早期教育职业学院赴两所优质幼儿园开展实习调研",
+    "listPublishDate": "2026-07-13",
+    "sourceOrder": 49
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0c6e5b91f6aade104f8b37ea3434f343d2a082576981cca70205754ae32ba8b0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/bX5EZBcMcEP0eqh6tYnUkA",
+    "url": "https://mp.weixin.qq.com/s/bX5EZBcMcEP0eqh6tYnUkA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "政校企协同聚力 松原职业技术学院数智产业学院启航",
+    "source": "",
+    "publishDate": "2026-07-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/bX5EZBcMcEP0eqh6tYnUkA"
+  },
+  "resources": [],
+  "sourceFingerprint": "8f2287aedbbe8bf12e86c431cfa8099fe8ded762e4116cef058c325e8bd6cf16",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "政校企协同聚力 松原职业技术学院数智产业学院启航",
+    "listPublishDate": "2026-07-08",
+    "sourceOrder": 54
+  }
+}

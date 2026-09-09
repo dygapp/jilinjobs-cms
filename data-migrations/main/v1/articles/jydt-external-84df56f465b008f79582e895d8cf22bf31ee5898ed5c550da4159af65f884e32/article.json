@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:84df56f465b008f79582e895d8cf22bf31ee5898ed5c550da4159af65f884e32",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/uRc_wfTmUkL_qrT1xgP4KA",
+    "url": "https://mp.weixin.qq.com/s/uRc_wfTmUkL_qrT1xgP4KA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院与上海盛美半导体举行校企合作签约仪式 搭建集成电路产业人才共育平台",
+    "source": "",
+    "publishDate": "2026-07-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/uRc_wfTmUkL_qrT1xgP4KA"
+  },
+  "resources": [],
+  "sourceFingerprint": "41e390921a6fdce4a588f11d23fc5812197704050864251b31523e47e9d978a0",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "长春人文学院与上海盛美半导体举行校企合作签约仪式 搭建集成电路产业人才共育平台",
+    "listPublishDate": "2026-07-03",
+    "sourceOrder": 56
+  }
+}

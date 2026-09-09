@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268946926239744",
+    "contentId": "268946926239744",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268946926239744"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省涉农高校赴河南省开展访企拓岗活动",
+    "source": "",
+    "publishDate": "2024-11-18",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://5f7faeea4b51460b64d0bf922737be53fb96a8af31a06f444f623c326bbafb6c\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/332b531f-f2a9-4f8a-aca6-daea0df1f7d7.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/332b531f-f2a9-4f8a-aca6-daea0df1f7d7.jpg",
+      "token": "migration-resource://5f7faeea4b51460b64d0bf922737be53fb96a8af31a06f444f623c326bbafb6c",
+      "snapshotPath": "assets/5f7faeea4b51460b64d0bf922737be53fb96a8af31a06f444f623c326bbafb6c.jpg",
+      "sha256": "5f7faeea4b51460b64d0bf922737be53fb96a8af31a06f444f623c326bbafb6c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 181631
+    }
+  ],
+  "sourceFingerprint": "f23336f9022ea0f0d31895cadfb511ddeada9cbb52de2d6981fd5235cf9f9b08",
+  "evidence": {
+    "listPage": 102,
+    "listTitle": "吉林省涉农高校赴河南省开展访企拓岗活动",
+    "listPublishDate": "2024-11-18",
+    "sourceOrder": 1015,
+    "detailPublishDate": "2024-11-18"
+  }
+}

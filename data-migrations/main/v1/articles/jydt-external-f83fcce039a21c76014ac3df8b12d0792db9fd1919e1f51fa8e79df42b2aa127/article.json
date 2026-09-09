@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f83fcce039a21c76014ac3df8b12d0792db9fd1919e1f51fa8e79df42b2aa127",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/v5sSpifliCKXTQFsIb1lPg",
+    "url": "https://mp.weixin.qq.com/s/v5sSpifliCKXTQFsIb1lPg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学举办2025年实习生博览会暨暑期实习生双选会",
+    "source": "",
+    "publishDate": "2025-06-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/v5sSpifliCKXTQFsIb1lPg"
+  },
+  "resources": [],
+  "sourceFingerprint": "93a6db813cd420adcae58ec6c969f8b53771afb00b7dcafebbd325006d5d983a",
+  "evidence": {
+    "listPage": 81,
+    "listTitle": "长春大学举办2025年实习生博览会暨暑期实习生双选会",
+    "listPublishDate": "2025-06-17",
+    "sourceOrder": 807
+  }
+}
