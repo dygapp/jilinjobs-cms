@@ -1,12 +1,6 @@
 name: EU-50 Main Targeted Retry
 
 on:
-  pull_request:
-    paths:
-      - 'data-migrations/main/v1/retry-control.json'
-      - 'data-migrations/tools/main-targeted-retry.mjs'
-      - 'data-migrations/package.json'
-      - '.github/workflows/eu50-main-targeted-retry.yml'
   workflow_dispatch:
 
 permissions:
@@ -16,7 +10,6 @@ permissions:
 jobs:
   retry:
     name: Bounded targeted retry
-    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && startsWith(github.head_ref, 'eu50-probe/'))
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -45,8 +38,15 @@ jobs:
           fs.appendFileSync(output, `run_id=${Number(control.sourceRunId)}\n`)
           fs.appendFileSync(output, `artifact_name=${control.sourceArtifactName}\n`)
           fs.appendFileSync(output, `source_head=${control.sourceHead}\n`)
+          fs.appendFileSync(output, `closed=${control.closed === true ? 'true' : 'false'}\n`)
           NODE
+      - name: Report closed retry budget
+        if: steps.control.outputs.closed == 'true'
+        working-directory: data-migrations
+        run: |
+          echo 'EU-50 automatic targeted retry budget is closed; no network retry is authorized.'
       - name: Download parent collection artifact
+        if: steps.control.outputs.closed != 'true'
         uses: actions/download-artifact@v7
         with:
           name: ${{ steps.control.outputs.artifact_name }}
@@ -55,6 +55,7 @@ jobs:
           repository: ${{ github.repository }}
           run-id: ${{ steps.control.outputs.run_id }}
       - name: Retry only prior transient targets
+        if: steps.control.outputs.closed != 'true'
         working-directory: data-migrations
         env:
           MAIN_CANDIDATE_ROOT: main/v1/retry-input/generated-candidate
@@ -68,9 +69,10 @@ jobs:
           test -f main/v1/retry-input/generated-candidate/reports/collection-problem-index.json
           npm run retry:main
       - name: Upload targeted retry evidence
+        if: steps.control.outputs.closed != 'true'
         uses: actions/upload-artifact@v7
         with:
-          name: eu50-main-retry-attempt-${{ steps.control.outputs.attempt }}-${{ github.event.pull_request.head.sha || github.sha }}
+          name: eu50-main-retry-attempt-${{ steps.control.outputs.attempt }}-${{ github.sha }}
           path: data-migrations/main/v1/retry-input
           if-no-files-found: error
           retention-days: 7

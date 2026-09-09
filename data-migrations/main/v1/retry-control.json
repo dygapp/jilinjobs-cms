@@ -3,6 +3,14 @@
   "site": "main",
   "attempt": 3,
   "maxAttempts": 3,
+  "closed": true,
+  "closedBy": {
+    "runId": 34303771704,
+    "artifactId": 10086056781,
+    "artifactName": "eu50-main-retry-attempt-3-a96cee22449508f92f3c89789f99aad477286a66",
+    "artifactDigest": "sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494",
+    "head": "a96cee22449508f92f3c89789f99aad477286a66"
+  },
   "sourceRunId": 34303336462,
   "sourceArtifactId": 10085827879,
   "sourceArtifactName": "eu50-main-retry-attempt-2-2fe9ca43559c4ca41528ee8485efbcfe037fb231",
@@ -13,6 +21,7 @@
     "networkAttemptsPerTargetThisIteration": 1,
     "fullCollectionRerun": false,
     "recognizedErrorsStopRetry": true,
-    "retryExhaustedClassification": "UNCLASSIFIED_RETRY_EXHAUSTED_REQUIRES_REVIEW"
+    "retryExhaustedClassification": "UNCLASSIFIED_RETRY_EXHAUSTED_REQUIRES_REVIEW",
+    "automaticRetryAfterClosure": false
   }
 }
