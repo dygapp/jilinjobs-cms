@@ -14,8 +14,8 @@
 - Specification: **READY / ACTIVE**
 - Current migration scope: **ARTICLE ONLY**
 - EU-50 — Main Source Discovery & Article Snapshot Promotion: **COMPLETED / Execute Authority TERMINATED**
-- EU-51 — Main Article Import, Runtime Reconciliation & Human Review: **Candidate / NOT READY / no Execute Authority**
-- Current Ready Execution Unit: **NONE**
+- EU-51 — Main Article Import, Runtime Reconciliation & Human Review: **READY / Readiness PASS / Execute baseline PENDING**
+- Current Ready Execution Unit: **EU-51**
 
 ## 1. Pipeline
 
@@ -26,7 +26,7 @@ Legacy Main Source
 → Article-only eligibility + explicit deferred/error classification [EU-50 COMPLETED]
 → Page/List Site Package handoff                         [EU-50 COMPLETED]
 → accepted current Article subset promotion              [EU-50 COMPLETED / INTEGRATED]
-→ Generic Article migration                              [downstream only / NOT READY]
+→ Generic Article migration                              [EU-51 READY / Execute baseline PENDING]
 ```
 
 Only source-discovery stages may access Legacy Source. Downstream verification/import must use repository-owned canonical bytes.
@@ -140,7 +140,7 @@ Current accepted subset:
 - local resource files: 2603；
 - resource bytes: 450,273,166；
 - dataset digest: `sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`；
-- integrated main: `05dfa604ccde45c8409cf6a456e4f201534dc602`。
+- integrated snapshot main: `05dfa604ccde45c8409cf6a456e4f201534dc602`。
 
 `import-eligible-index.json` contains an `articles` collection only. The 6 source-defect and 230 deferred records remain outside the current canonical Article tree/index and remain durable evidence.
 
@@ -165,7 +165,7 @@ Later source drift or later approval of deferred Articles must produce an eviden
 
 Page/List source drift is handled under Site Package follow-up authority, not by changing Main migration semantics.
 
-## 10. Verification closure
+## 10. Verification closure / downstream contract
 
 ### EU-50 final exact-head evidence
 
@@ -181,12 +181,31 @@ Final Head `8c2fdd6cdbbd4d1faf865d0ba4ca0f40a0096e84`:
 
 ### Integrated-main evidence
 
-Integrated `main@05dfa604ccde45c8409cf6a456e4f201534dc602`:
+Integrated snapshot `main@05dfa604ccde45c8409cf6a456e4f201534dc602`:
 
 - Generic Content Migration Verification #52 / run `34354290017` — **PASS**；
 - CI #945 / run `34354289981` — **PASS**，包含 Backend / Admin / Public / Integrated Browser。
 
-EU-50 acceptance obligations are closed. Runtime Main import, migrated-content Human Review and final E3 closure remain downstream concerns.
+EU-50 acceptance obligations are closed.
+
+EU-51 downstream Readiness on `main@fd192460cb481645c1f1af435cbe5451145797d9` additionally confirms:
+
+- all ten Main target Column aliases are stable/enabled Site Package Columns；
+- Generic Article migration already provides fail-closed preflight/apply, stable mapping and same-input idempotency；
+- Site Package provisioning and Generic import entry points already exist；
+- Runtime verification can be composed without a Main-specific migration engine。
+
+EU-51 execution must use the explicit Fresh Runtime chain:
+
+```text
+Flyway
+→ JilinJobs Site Package stable provisioning
+→ Generic Main canonical first import
+→ Runtime reconciliation
+→ second identical import / idempotency
+→ Public/Admin/Integrated Browser
+→ bounded Human Review
+```
 
 ## 11. Slice sequencing
 
@@ -195,16 +214,16 @@ EU-50 acceptance obligations are closed. Runtime Main import, migrated-content H
    - accepted current Article subset integrated；
    - Execute Authority **TERMINATED**。
 2. **EU-51 — Main Article Import, Runtime Reconciliation & Human Review**
-   - downstream Candidate only；
-   - EU-50 dataset dependency **SATISFIED**；
-   - `readiness-check = PENDING / NOT RUN after integration`；
-   - no Execute Authority。
+   - **READY / Readiness PASS**；
+   - Readiness baseline `main@fd192460cb481645c1f1af435cbe5451145797d9`；
+   - Current Work `docs/work/current/eu51-main-canonical-import-runtime-review.md`；
+   - Execute baseline **PENDING until Planning/Readiness integration + Fresh Context recovery**。
 3. **Deferred problem Article review**
    - later explicit review/decision work；
-   - not current import input and not a blocker to current progression。
+   - not EU-51 import input and not a blocker to current progression。
 4. **Site Package Page/List follow-up**
    - separate planning gate；
    - owns accepted Page content and stable Main ListItem capability/content；
    - does not inherit EU-50/EU-51 authority。
 
-No Unit inherits Execute Authority from another.
+No Unit inherits Execute Authority from another. EU-51 Readiness PASS does not authorize Runtime import on the Planning/Readiness branch.
