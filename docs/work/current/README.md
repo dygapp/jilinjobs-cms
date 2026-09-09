@@ -1,26 +1,21 @@
 # Current Work
 
-当前 Ready Execution Unit：**EU-50 — Main Source Discovery & Accepted Snapshot Promotion**。
+Current Ready Execution Unit：**NONE**。
 
-E3 — Main Historical Content Collection & Canonical Migration 已在 `main@e6fe7674398ad8c29fa7ff1d62eb500754a66cc8` 完成 Fresh Context Planning / source-evidence recovery、必要 Technical Planning、`slice-work` 与当前可判定的 `readiness-check`：
+E3 — Main Historical Content Collection & Canonical Migration 当前状态：
 
-- E3 Requirement：**READY**；
-- E3 Specification：**READY**；
-- Technical Plan：`../../technical/main-historical-content-migration.md` — **READY**；
-- 当前 source evidence 证明 Legacy Main Source 可达、规模大且包含 internal/external、Page 与资源等混合形态，因此保留两个独立 rollback / verification boundary；
-- `slice-work` 形成两个 Candidate Execution Units：EU-50 与 EU-51；
-- EU-50 `readiness-check`：**PASS**；
-- EU-51 `readiness-check`：**PENDING / blocked by EU-50 accepted snapshot**。
+- E3 Requirement：**READY / ACTIVE**；
+- E3 Specification：**READY / ACTIVE**；
+- Technical Plan：`../../technical/main-historical-content-migration.md` — **READY / ACTIVE**；
+- EU-50 — Main Source Discovery & Accepted Snapshot Promotion：**COMPLETED / Execute Authority TERMINATED**；completed evidence 位于 `../archive/eu50-main-source-discovery-promotion.md`；
+- EU-50 accepted current Article subset 已集成到 `data-migrations/main/v1/**`；
+- EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review：**Candidate / NOT READY**；EU-50 dependency 已满足，但 post-integration `readiness-check` 尚未运行；
+- Main Page / stable ListItem source handoff 属于独立 Site Package Planning/Readiness path；
+- 230 篇 deferred problem Articles 与 6 篇 source-defect Articles 保持后置单独处理，不属于 current import input，也不阻断当前项目进程。
 
-当前 active Unit：
+`docs/work/current/` 当前不包含 active Execution Unit artifact。新的 Work artifact 只有在当前 Authority 完成必要 dependency closure / `slice-work` 且 `readiness-check` PASS 后才能进入本目录。
 
-- `eu50-main-source-discovery-promotion.md` — **READY**。
-
-EU-51 继续由 E3 Technical Plan / Roadmap 作为 downstream Candidate 跟踪；由于 Readiness 尚未 PASS，不进入 `docs/work/current/`。只有在 EU-50 的 repository-owned accepted Main canonical snapshot 集成后，才能基于实际 accepted counts/digests/exception set重新执行 Fresh Context `readiness-check`。
-
-EU-50 只负责 bounded Legacy Source discovery、completeness/classification、accepted snapshot promotion 与 offline verification；不承担 Runtime import 或最终 Human Review。
-
-**EU-50 当前尚未建立 Execute baseline。** 本 Planning/Readiness 状态必须先完成 PR Integration；随后从 integrated `main` 重新核验 Issue #60 / #77、Open PR / Actions、本 Unit Authority 与 base drift，才能建立 EU-50 独立 Execute baseline并开始 Main source collection / canonical promotion。不得继承 EU-49、EU-48、Phase 3 或 E1 的 Execute Authority。
+下一自然 Gate 是从 integrated `main` Fresh Context 恢复 Issue #60 / #77、E3 Authority、EU-50 archived evidence 与 accepted canonical dataset，重新判断 downstream Planning / Readiness。不得继承 EU-50、EU-49、EU-48、Phase 3 或 E1 的 Execute Authority，也不得因为 canonical dataset 已存在就直接开始 EU-51 Runtime import。
 
 E2 / EU-49 completed evidence继续位于：
 
