@@ -161,7 +161,6 @@ function detectMedia(bytes, url, declaredContentType, contentDisposition = null)
     if (declaredContentType === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') return { contentType: declaredContentType, extension: 'xlsx' }
     return { contentType: declaredContentType || 'application/zip', extension: null }
   }
-  if (attachmentExtensions.has(ext)) return { contentType: declaredContentType || 'application/octet-stream', extension: ext }
   return { contentType: declaredContentType || null, extension: null }
 }
 async function fetchResource(rawReference, baseUrl) {
