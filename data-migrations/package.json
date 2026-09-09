@@ -11,6 +11,7 @@
     "collect:main": "node tools/main-source-collector.mjs",
     "audit:main": "node tools/main-candidate-audit.mjs",
     "index:main-problems": "node tools/main-collection-problem-index.mjs",
+    "retry:main": "node tools/main-targeted-retry.mjs",
     "triage:main": "npm run audit:main && node tools/main-source-triage.mjs",
     "probe:main-gaps": "node tools/main-resource-gap-probe.mjs"
   },

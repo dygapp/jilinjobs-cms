@@ -34,6 +34,7 @@ jobs:
           node --check tools/main-source-collector.mjs
           node --check tools/main-candidate-audit.mjs
           node --check tools/main-collection-problem-index.mjs
+          node --check tools/main-targeted-retry.mjs
           node --check tools/main-source-triage.mjs
           node --check tools/main-resource-gap-probe.mjs
           node - <<'NODE'
@@ -72,7 +73,7 @@ jobs:
 
   probe:
     name: External Main source full collection
-    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && startsWith(github.head_ref, 'eu50-probe/'))
+    if: github.event_name == 'workflow_dispatch'
     needs: tooling
     runs-on: ubuntu-latest
     timeout-minutes: 90
@@ -123,7 +124,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: eu50-main-full-pass-${{ github.event.pull_request.head.sha || github.sha }}
+          name: eu50-main-full-pass-${{ github.sha }}
           path: |
             data-migrations/main/v1/generated-probe
             data-migrations/main/v1/generated-inventory

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "site": "main",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "sourceRunId": 34301430971,
+  "sourceArtifactId": 10085586726,
+  "sourceArtifactName": "eu50-main-full-pass-f3e24201a58514b1b7f6a28be24dd3367e7cf2c1",
+  "sourceArtifactDigest": "sha256:caf9159045e90829dce711ee868c361fece590d7ce34ddf14b70ec40215992fb",
+  "sourceHead": "f3e24201a58514b1b7f6a28be24dd3367e7cf2c1",
+  "policy": {
+    "retryScope": "ONLY_PREVIOUS_TRANSIENT_TARGETS",
+    "networkAttemptsPerTargetThisIteration": 1,
+    "fullCollectionRerun": false,
+    "recognizedErrorsStopRetry": true,
+    "retryExhaustedClassification": "UNCLASSIFIED_RETRY_EXHAUSTED_REQUIRES_REVIEW"
+  }
+}

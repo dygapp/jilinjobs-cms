@@ -1,0 +1,76 @@
+name: EU-50 Main Targeted Retry
+
+on:
+  pull_request:
+    paths:
+      - 'data-migrations/main/v1/retry-control.json'
+      - 'data-migrations/tools/main-targeted-retry.mjs'
+      - 'data-migrations/package.json'
+      - '.github/workflows/eu50-main-targeted-retry.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  retry:
+    name: Bounded targeted retry
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && startsWith(github.head_ref, 'eu50-probe/'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Install migration dependencies
+        working-directory: data-migrations
+        run: npm install --no-audit --no-fund
+      - name: Validate targeted retry tooling and control
+        id: control
+        working-directory: data-migrations
+        run: |
+          node --check tools/main-targeted-retry.mjs
+          node - <<'NODE'
+          const fs = require('fs')
+          const control = JSON.parse(fs.readFileSync('main/v1/retry-control.json', 'utf8'))
+          if (![2, 3].includes(Number(control.attempt))) throw new Error(`attempt must be 2 or 3, got ${control.attempt}`)
+          if (!Number.isInteger(Number(control.sourceRunId)) || Number(control.sourceRunId) <= 0) throw new Error('sourceRunId missing')
+          if (!control.sourceArtifactName) throw new Error('sourceArtifactName missing')
+          if (!control.sourceHead) throw new Error('sourceHead missing')
+          const output = process.env.GITHUB_OUTPUT
+          fs.appendFileSync(output, `attempt=${Number(control.attempt)}\n`)
+          fs.appendFileSync(output, `run_id=${Number(control.sourceRunId)}\n`)
+          fs.appendFileSync(output, `artifact_name=${control.sourceArtifactName}\n`)
+          fs.appendFileSync(output, `source_head=${control.sourceHead}\n`)
+          NODE
+      - name: Download parent collection artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: ${{ steps.control.outputs.artifact_name }}
+          path: data-migrations/main/v1/retry-input
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: ${{ steps.control.outputs.run_id }}
+      - name: Retry only prior transient targets
+        working-directory: data-migrations
+        env:
+          MAIN_CANDIDATE_ROOT: main/v1/retry-input/generated-candidate
+          MAIN_PROBLEM_INDEX: main/v1/retry-input/generated-candidate/reports/collection-problem-index.json
+          MAIN_RETRY_ATTEMPT: ${{ steps.control.outputs.attempt }}
+          MAIN_RETRY_CONCURRENCY: '2'
+          MAIN_RETRY_TIMEOUT_MS: '20000'
+          MAIN_MAX_SINGLE_RESOURCE_BYTES: '52428800'
+        run: |
+          test -f main/v1/retry-input/generated-candidate/index.ndjson
+          test -f main/v1/retry-input/generated-candidate/reports/collection-problem-index.json
+          npm run retry:main
+      - name: Upload targeted retry evidence
+        uses: actions/upload-artifact@v7
+        with:
+          name: eu50-main-retry-attempt-${{ steps.control.outputs.attempt }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: data-migrations/main/v1/retry-input
+          if-no-files-found: error
+          retention-days: 7
