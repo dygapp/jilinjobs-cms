@@ -94,14 +94,17 @@ test.describe('EU-51 imported Main canonical Runtime', () => {
       expect(sample.articleType).toBe('INTERNAL')
       await gotoReviewPage(page, `/article/${sample.runtimeId}`)
       await expect(page.getByTestId('public-article-title')).toHaveText(sample.title)
-      await expect(page.getByTestId('public-article-body')).toBeVisible()
-      if (sample.bodyLength > 0) await expect(page.getByTestId('public-article-body')).not.toBeEmpty()
+      const body = page.getByTestId('public-article-body')
+      await expect(body).toBeVisible()
+      if (sample.bodyLength > 0) {
+        expect((await body.evaluate((element) => element.innerHTML)).trim().length).toBeGreaterThan(0)
+      }
 
       for (const image of sample.bodyImages) {
         const response = await request.get(`/api/public/resources/${image.runtimeId}/content`)
         expect(response.ok()).toBeTruthy()
         expect((await response.body()).byteLength).toBe(image.sizeBytes)
-        await expect(page.getByTestId('public-article-body').locator(`img[src="/api/public/resources/${image.runtimeId}/content"]`)).toBeVisible()
+        await expect(body.locator(`img[src="/api/public/resources/${image.runtimeId}/content"]`)).toBeVisible()
       }
 
       for (const attachment of sample.attachments) {
