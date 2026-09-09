@@ -9,8 +9,12 @@
   "finalRetryAttempt": 3,
   "policy": {
     "currentImport": "IMPORT_ELIGIBLE_INDEX_ONLY",
-    "default": "WITHHOLD_UNRESOLVED_OR_UNAPPROVED_ERRORS",
+    "default": "WITHHOLD_UNRESOLVED_OR_UNAPPROVED_ERRORS_FROM_CURRENT_IMPORT",
+    "deferredProblemArticles": "PRESERVE_AS_DURABLE_EVIDENCE_DO_NOT_BLOCK_CURRENT_SUBSET_PROMOTION",
+    "sourceDefectArticles": "EXCLUDE_PENDING_CLIENT_CONFIRMATION",
     "fullSnapshotPreserved": true,
+    "noSilentRepair": true,
+    "noSilentDiscard": true,
     "runtimeImportPerformedHere": false
   }
 }
