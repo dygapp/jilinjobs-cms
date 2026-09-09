@@ -63,8 +63,9 @@ test.describe('EU-51 imported Main canonical Runtime', () => {
   })
 
   test('all ten Main target Columns render their deterministic first accepted Article', async ({ page }, testInfo) => {
+    test.setTimeout(120_000)
     for (const sample of evidence.columnSamples) {
-      await page.goto(`/column/${sample.columnAlias}`)
+      await gotoReviewPage(page, `/column/${sample.columnAlias}`)
       await expect(page.getByTestId('column-page')).toBeVisible()
       const article = page.getByTestId(`column-article-${sample.runtimeId}`)
       await expect(article).toBeVisible()
@@ -82,6 +83,7 @@ test.describe('EU-51 imported Main canonical Runtime', () => {
   })
 
   test('resource-bearing and rich INTERNAL samples render through public Runtime resources', async ({ page, request }, testInfo) => {
+    test.setTimeout(120_000)
     const candidates = uniqueSamples([
       evidence.riskSamples.resourceRichInternal,
       evidence.riskSamples.bodyImageInternal,
@@ -90,7 +92,7 @@ test.describe('EU-51 imported Main canonical Runtime', () => {
     ])
     for (const sample of candidates) {
       expect(sample.articleType).toBe('INTERNAL')
-      await page.goto(`/article/${sample.runtimeId}`)
+      await gotoReviewPage(page, `/article/${sample.runtimeId}`)
       await expect(page.getByTestId('public-article-title')).toHaveText(sample.title)
       await expect(page.getByTestId('public-article-body')).toBeVisible()
       if (sample.bodyLength > 0) await expect(page.getByTestId('public-article-body')).not.toBeEmpty()
@@ -115,6 +117,7 @@ test.describe('EU-51 imported Main canonical Runtime', () => {
   })
 
   test('oldest/newest boundary samples remain publicly addressable with accepted metadata', async ({ page, request }, testInfo) => {
+    test.setTimeout(90_000)
     for (const [role, sample] of [
       ['oldest', evidence.riskSamples.oldestPublished],
       ['newest', evidence.riskSamples.newestPublished],
@@ -127,13 +130,14 @@ test.describe('EU-51 imported Main canonical Runtime', () => {
       expect(runtime.articleType).toBe(sample.articleType)
       expect(runtime.externalUrl).toBe(sample.externalUrl)
 
-      await page.goto(`/column/${sample.columnAlias}`)
+      await gotoReviewPage(page, `/column/${sample.columnAlias}`)
       await expect(page.getByTestId('column-page')).toBeVisible()
       await screenshot(page, testInfo, `boundary-${role}-${sample.columnAlias}`)
     }
   })
 
   test('Admin can locate and open imported INTERNAL and EXTERNAL_LINK Articles without changing migration identity', async ({ page }, testInfo) => {
+    test.setTimeout(90_000)
     const internal = evidence.riskSamples.resourceRichInternal
     const external = evidence.riskSamples.externalLink
 
@@ -149,7 +153,7 @@ test.describe('EU-51 imported Main canonical Runtime', () => {
 })
 
 async function verifyAdminArticle(page: Page, sample: ReviewArticle) {
-  await page.goto('/admin/articles')
+  await gotoReviewPage(page, '/admin/articles')
   await expect(page.getByRole('heading', { name: '文章管理' })).toBeVisible()
   await page.getByTestId('article-filter-keyword').fill(sample.title)
   const row = page.getByRole('row').filter({ hasText: sample.title })
@@ -171,6 +175,14 @@ async function closeAdminDialog(page: Page) {
   const dialog = page.getByRole('dialog', { name: '编辑文章' })
   await dialog.getByRole('button', { name: '取消' }).click()
   await expect(dialog).toBeHidden()
+}
+
+async function gotoReviewPage(page: Page, url: string) {
+  // Accepted Legacy content may intentionally retain non-blocking external absolute
+  // resources. Review the Runtime application as soon as its DOM is available;
+  // locator assertions below prove the target UI instead of waiting for every
+  // third-party subresource to finish loading.
+  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45_000 })
 }
 
 function uniqueSamples(samples: Array<ReviewArticle | null>): ReviewArticle[] {
