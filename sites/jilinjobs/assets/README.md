@@ -9,3 +9,5 @@ Site Package target 属于静态资源 protected-path 合同：普通删除被�
 `/static/uploads/**` 是可变 Runtime Store，不属于本目录，也不会被 Site Package 接管。历史文章正文及迁移资源继续由 `data-migrations/**` 管理。
 
 `health/baseline.png` 仅用于证明稳定资源投影链路，不作为前台业务素材。
+
+`pages/**` 保存 stable Page 正文直接引用的 Site Package 静态文件；例如 `pages/budget/**` 统一承载“预决算公开”附件，公开路径为 `/static/pages/budget/**`，不继承 Legacy CMS 的上传目录结构。
