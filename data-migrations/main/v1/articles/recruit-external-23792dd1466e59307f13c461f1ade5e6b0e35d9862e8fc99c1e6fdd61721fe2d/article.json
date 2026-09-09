@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:23792dd1466e59307f13c461f1ade5e6b0e35d9862e8fc99c1e6fdd61721fe2d",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/gsgg/202008/t20200812_484609.html",
+    "url": "http://rsj.tonghua.gov.cn/gsgg/202008/t20200812_484609.html?from=singlemessage"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年通化市二道江区事业单位专项招聘工作人员公告（1号）",
+    "source": "",
+    "publishDate": "2020-08-12",
+    "bodyHtml": "",
+    "externalUrl": "http://rsj.tonghua.gov.cn/gsgg/202008/t20200812_484609.html?from=singlemessage"
+  },
+  "resources": [],
+  "sourceFingerprint": "73813774836248de5f924b640fa18dce04ef1ce36ee9bac3225da130c6ac9c39",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "2020年通化市二道江区事业单位专项招聘工作人员公告（1号）",
+    "listPublishDate": "2020-08-12",
+    "sourceOrder": 378
+  }
+}

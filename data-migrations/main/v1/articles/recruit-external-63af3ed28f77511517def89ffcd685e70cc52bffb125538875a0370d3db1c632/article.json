@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:63af3ed28f77511517def89ffcd685e70cc52bffb125538875a0370d3db1c632",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/BGJzZBJSsVs5oDBiscs3CA",
+    "url": "https://mp.weixin.qq.com/s/BGJzZBJSsVs5oDBiscs3CA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“服务吉林高质量发展”吉林省第三届建筑类人才供需洽谈会 暨吉林建筑大学2025届毕业生春季双选会",
+    "source": "",
+    "publishDate": "2025-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/BGJzZBJSsVs5oDBiscs3CA"
+  },
+  "resources": [],
+  "sourceFingerprint": "2545e715ba211f58b2730b531f570edf1b389acd859a4bb1b594674843dbb6a2",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "“服务吉林高质量发展”吉林省第三届建筑类人才供需洽谈会 暨吉林建筑大学2025届毕业生春季双选会",
+    "listPublishDate": "2025-03-27",
+    "sourceOrder": 201
+  }
+}

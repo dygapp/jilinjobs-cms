@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9a228fe016716f8b5d8fc959b5f3f4ccac1bd8571175665d090003699cb1e08f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/X-djISUUK8EWMHewAFznyA",
+    "url": "https://mp.weixin.qq.com/s/X-djISUUK8EWMHewAFznyA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企合作 | 访企拓岗“访”出新机遇 校企合作“拓”出新天地 ——吉林通用航空职业技术学院领导带队赴松原查干湖机场开展专项调研",
+    "source": "",
+    "publishDate": "2025-06-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/X-djISUUK8EWMHewAFznyA"
+  },
+  "resources": [],
+  "sourceFingerprint": "0df0ef0c895887f1eadaee70655e756310858b233e7bf4c021820d0c140cedce",
+  "evidence": {
+    "listPage": 80,
+    "listTitle": "校企合作 | 访企拓岗“访”出新机遇 校企合作“拓”出新天地 ——吉林通用航空职业技术学院领导带队赴松原查干湖机场开展专项调研",
+    "listPublishDate": "2025-06-19",
+    "sourceOrder": 793
+  }
+}

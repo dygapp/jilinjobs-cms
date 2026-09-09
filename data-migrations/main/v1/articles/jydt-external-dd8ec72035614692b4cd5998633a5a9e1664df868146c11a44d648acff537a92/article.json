@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:dd8ec72035614692b4cd5998633a5a9e1664df868146c11a44d648acff537a92",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kUsITptjRNQBBwNcpFeT8g",
+    "url": "https://mp.weixin.qq.com/s/kUsITptjRNQBBwNcpFeT8g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春建筑学院党委副书记张冀男带队赴中建八局东北公司吉林分公司开展访企拓岗专项活动",
+    "source": "",
+    "publishDate": "2026-04-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kUsITptjRNQBBwNcpFeT8g"
+  },
+  "resources": [],
+  "sourceFingerprint": "8d8fb83d64122c96485be54d107fa87ad3fea74b7d0e60b9d91a666ffc9938a1",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "长春建筑学院党委副书记张冀男带队赴中建八局东北公司吉林分公司开展访企拓岗专项活动",
+    "listPublishDate": "2026-04-01",
+    "sourceOrder": 334
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:e21722bb46320bf6961c4c9d1d8249c3515d10315c82edfaa95b7ef2c5ca272c",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/9YMiFhm-61akVfmKyh-UWg",
+    "url": "https://mp.weixin.qq.com/s/9YMiFhm-61akVfmKyh-UWg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "寒假促就业暖心行动 | 长春大学旅游学院2026届毕业生寒假专场网络招聘会",
+    "source": "",
+    "publishDate": "2026-01-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/9YMiFhm-61akVfmKyh-UWg"
+  },
+  "resources": [],
+  "sourceFingerprint": "22cbe4fc65b87d23d646339dbe7ec2709d75e55a7c7a72dd3e9bfe97803c2706",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "寒假促就业暖心行动 | 长春大学旅游学院2026届毕业生寒假专场网络招聘会",
+    "listPublishDate": "2026-01-13",
+    "sourceOrder": 111
+  }
+}

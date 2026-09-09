@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:051209bff0a2a172a41bcbeae6c7ebf7a9c009b91b45af9b461623b168b2f762",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/5nPo-gSifPwuFwFt72C5Jw",
+    "url": "https://mp.weixin.qq.com/s/5nPo-gSifPwuFwFt72C5Jw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学2026届毕业生“研后专场”网络双选会邀请函",
+    "source": "",
+    "publishDate": "2026-01-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5nPo-gSifPwuFwFt72C5Jw"
+  },
+  "resources": [],
+  "sourceFingerprint": "70278475ba6a5a4da042451346b88d419422a1d584248c067d2292761d20e3d5",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "长春师范大学2026届毕业生“研后专场”网络双选会邀请函",
+    "listPublishDate": "2026-01-15",
+    "sourceOrder": 107
+  }
+}

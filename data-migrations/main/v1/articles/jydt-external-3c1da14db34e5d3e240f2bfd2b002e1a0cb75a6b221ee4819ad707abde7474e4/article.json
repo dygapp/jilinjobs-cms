@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3c1da14db34e5d3e240f2bfd2b002e1a0cb75a6b221ee4819ad707abde7474e4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/_oQGe8FQJeHHotUMCgPiag",
+    "url": "https://mp.weixin.qq.com/s/_oQGe8FQJeHHotUMCgPiag"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗｜吉林动画学院走进博大集团产业园",
+    "source": "",
+    "publishDate": "2026-04-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_oQGe8FQJeHHotUMCgPiag"
+  },
+  "resources": [],
+  "sourceFingerprint": "f64de2a47d8b3cb84040ffa0667f2f0b0f64579310e4c491e696545e34a6346b",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "访企拓岗｜吉林动画学院走进博大集团产业园",
+    "listPublishDate": "2026-04-29",
+    "sourceOrder": 230
+  }
+}

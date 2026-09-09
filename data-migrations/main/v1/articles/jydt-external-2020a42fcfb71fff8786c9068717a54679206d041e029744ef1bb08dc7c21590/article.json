@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2020a42fcfb71fff8786c9068717a54679206d041e029744ef1bb08dc7c21590",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ONVDoyklbCWGsSThbZxKEQ",
+    "url": "https://mp.weixin.qq.com/s/ONVDoyklbCWGsSThbZxKEQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化师范学院成功举办“创业奋斗 '就'在吉林”2024届毕业生春季校园双选会",
+    "source": "",
+    "publishDate": "2024-04-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ONVDoyklbCWGsSThbZxKEQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "e5910e6b14f9b5209e48b2c460cfa31f4f5cb95a1a1a67a9130090932f75de48",
+  "evidence": {
+    "listPage": 107,
+    "listTitle": "通化师范学院成功举办“创业奋斗 '就'在吉林”2024届毕业生春季校园双选会",
+    "listPublishDate": "2024-04-27",
+    "sourceOrder": 1068
+  }
+}

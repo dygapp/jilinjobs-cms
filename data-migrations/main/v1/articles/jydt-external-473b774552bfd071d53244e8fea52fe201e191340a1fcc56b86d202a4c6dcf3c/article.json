@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:473b774552bfd071d53244e8fea52fe201e191340a1fcc56b86d202a4c6dcf3c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/DSPVXclA-Aan-Y9g2M7v7A",
+    "url": "https://mp.weixin.qq.com/s/DSPVXclA-Aan-Y9g2M7v7A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延吉市司法局走进延边大学开展校地座谈会暨延边大学“大学生就业创业公共法律服务工作站”授牌仪式",
+    "source": "",
+    "publishDate": "2026-04-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DSPVXclA-Aan-Y9g2M7v7A"
+  },
+  "resources": [],
+  "sourceFingerprint": "02b948ddc996cea907da9e2a25bc13f66f57636b8d3b0184262649f56c404dc2",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "延吉市司法局走进延边大学开展校地座谈会暨延边大学“大学生就业创业公共法律服务工作站”授牌仪式",
+    "listPublishDate": "2026-04-16",
+    "sourceOrder": 282
+  }
+}

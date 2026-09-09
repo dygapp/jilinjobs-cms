@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:af7bcbe0c3f94411b19ad3dd47f948546d90a6ef6b53fffb3ab46a461842de23",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/8OWW8UTz1OBxMtDI2fCwwQ",
+    "url": "https://mp.weixin.qq.com/s/8OWW8UTz1OBxMtDI2fCwwQ?scene=25&sessionid=-1367768128"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“才聚文旅 职引未来”全国高校2025届毕业生文旅艺术行业人才招聘会吉林艺术学院专场，4月15日正式开启，寻找最闪亮的你",
+    "source": "",
+    "publishDate": "2025-04-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/8OWW8UTz1OBxMtDI2fCwwQ?scene=25&sessionid=-1367768128"
+  },
+  "resources": [],
+  "sourceFingerprint": "b64b7b56c39719fb4a41d4f601d7db22fa5173b3c0fa7d5100cdeaf7f394d70d",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "“才聚文旅 职引未来”全国高校2025届毕业生文旅艺术行业人才招聘会吉林艺术学院专场，4月15日正式开启，寻找最闪亮的你",
+    "listPublishDate": "2025-04-14",
+    "sourceOrder": 182
+  }
+}

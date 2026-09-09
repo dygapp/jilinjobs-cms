@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fa141a77ecb747ea7f3f79d66c8a322fc2b5ddf058abbdf40b57d4ee59d78fd7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/biRgh3DHQkWxMKxAfmZiYA",
+    "url": "https://mp.weixin.qq.com/s/biRgh3DHQkWxMKxAfmZiYA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学党委副书记于金欢带队参加“千校万企供需对接会”（东北地区专场）暨东北地区2025届高校毕业生人才双选会",
+    "source": "",
+    "publishDate": "2025-05-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/biRgh3DHQkWxMKxAfmZiYA"
+  },
+  "resources": [],
+  "sourceFingerprint": "3b3cb1e7ee59f85a9023829390060a065d035ee07047fe4a019eb4f8f4ac51ba",
+  "evidence": {
+    "listPage": 86,
+    "listTitle": "延边大学党委副书记于金欢带队参加“千校万企供需对接会”（东北地区专场）暨东北地区2025届高校毕业生人才双选会",
+    "listPublishDate": "2025-05-30",
+    "sourceOrder": 856
+  }
+}

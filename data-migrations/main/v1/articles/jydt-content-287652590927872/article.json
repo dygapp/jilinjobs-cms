@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:287652590927872",
+    "contentId": "287652590927872",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=287652590927872"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省高校大学生重点群体“暖途护航”就业行动月：聚焦重点群体，精准施策显实效",
+    "source": "实习实训部",
+    "publishDate": "2025-05-07",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://b32f1f2bb13a9cb5389b01e9757da0d2e8a3e79e7dea6f0e510762ed881d7f9b\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://4afa48d64e4f7d9c8fe06047beb0259677a5754d424ef3e5cfe506c3cfc50496\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://84b63a04885ea623d7408951f0540dbe10c5be6c91d38f78d7e40c7d48e6cf1a\" width=\"900\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-05-07/281f08a2-d70e-4b74-b52a-12229cb25622.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-05-07/281f08a2-d70e-4b74-b52a-12229cb25622.jpg",
+      "token": "migration-resource://b32f1f2bb13a9cb5389b01e9757da0d2e8a3e79e7dea6f0e510762ed881d7f9b",
+      "snapshotPath": "assets/b32f1f2bb13a9cb5389b01e9757da0d2e8a3e79e7dea6f0e510762ed881d7f9b.jpg",
+      "sha256": "b32f1f2bb13a9cb5389b01e9757da0d2e8a3e79e7dea6f0e510762ed881d7f9b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-05-07/360db093-60ef-413e-8975-4400531a1f39.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-05-07/360db093-60ef-413e-8975-4400531a1f39.jpg",
+      "token": "migration-resource://4afa48d64e4f7d9c8fe06047beb0259677a5754d424ef3e5cfe506c3cfc50496",
+      "snapshotPath": "assets/4afa48d64e4f7d9c8fe06047beb0259677a5754d424ef3e5cfe506c3cfc50496.jpg",
+      "sha256": "4afa48d64e4f7d9c8fe06047beb0259677a5754d424ef3e5cfe506c3cfc50496",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-05-07/5851c715-8159-4d9e-bbcc-10d31de40976.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-05-07/5851c715-8159-4d9e-bbcc-10d31de40976.jpg",
+      "token": "migration-resource://84b63a04885ea623d7408951f0540dbe10c5be6c91d38f78d7e40c7d48e6cf1a",
+      "snapshotPath": "assets/84b63a04885ea623d7408951f0540dbe10c5be6c91d38f78d7e40c7d48e6cf1a.jpg",
+      "sha256": "84b63a04885ea623d7408951f0540dbe10c5be6c91d38f78d7e40c7d48e6cf1a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    }
+  ],
+  "sourceFingerprint": "9c1a44d33d51a335e04fad54174d7aa2d2329944c93c54e6f432ad671e3891fe",
+  "evidence": {
+    "listPage": 92,
+    "listTitle": "吉林省高校大学生重点群体“暖途护航”就业行动月：聚焦重点群体，精准施策显实效",
+    "listPublishDate": "2025-05-07",
+    "sourceOrder": 914,
+    "detailPublishDate": "2025-05-07"
+  }
+}

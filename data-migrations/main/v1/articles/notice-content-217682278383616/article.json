@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:217682278383616",
+    "contentId": "217682278383616",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=217682278383616"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅关于开展2024届高校毕业生春季促就业攻坚行动的通知",
+    "source": "",
+    "publishDate": "2024-03-15",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://4f71e3c5cdde5233bba218d60bc0f4951de193a371174f3fbdfc52a9c2758ca5\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1275\" src=\"migration-resource://88eaa00ed0d967de5711dc805e627bb1b8705721bba216436ff97a7de5c41d0e\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://5d082ae04e3c0c680b877e898b5359f2d89168a684f97028c27916a0095823a7\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1275\" src=\"migration-resource://300c481c6cf76b3dba50a141fecefdb1f8607a5f3524d7fa9f2c191b3b1371f7\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://ef5f221500c5592e691fd60b69c01e35af371d98b3366f9d08e4b37e1fdbeb90\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1275\" src=\"migration-resource://4d6e7f8f597862781940cbc48235e1016ec0fd5bb7633cb9ee5b4e41843a61d2\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-16/02beb550-b9c5-4215-8834-daeb39ad24cf.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-16/02beb550-b9c5-4215-8834-daeb39ad24cf.jpg",
+      "token": "migration-resource://4f71e3c5cdde5233bba218d60bc0f4951de193a371174f3fbdfc52a9c2758ca5",
+      "snapshotPath": "assets/4f71e3c5cdde5233bba218d60bc0f4951de193a371174f3fbdfc52a9c2758ca5.jpg",
+      "sha256": "4f71e3c5cdde5233bba218d60bc0f4951de193a371174f3fbdfc52a9c2758ca5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-16/d3be3f7f-59da-4672-9acb-51616499a788.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-16/d3be3f7f-59da-4672-9acb-51616499a788.jpg",
+      "token": "migration-resource://88eaa00ed0d967de5711dc805e627bb1b8705721bba216436ff97a7de5c41d0e",
+      "snapshotPath": "assets/88eaa00ed0d967de5711dc805e627bb1b8705721bba216436ff97a7de5c41d0e.jpg",
+      "sha256": "88eaa00ed0d967de5711dc805e627bb1b8705721bba216436ff97a7de5c41d0e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-16/a728407b-98cb-475a-b65f-2f3bc4326709.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-16/a728407b-98cb-475a-b65f-2f3bc4326709.jpg",
+      "token": "migration-resource://5d082ae04e3c0c680b877e898b5359f2d89168a684f97028c27916a0095823a7",
+      "snapshotPath": "assets/5d082ae04e3c0c680b877e898b5359f2d89168a684f97028c27916a0095823a7.jpg",
+      "sha256": "5d082ae04e3c0c680b877e898b5359f2d89168a684f97028c27916a0095823a7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-16/0ab7826e-d428-45d4-bab1-335d664f9fb0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-16/0ab7826e-d428-45d4-bab1-335d664f9fb0.jpg",
+      "token": "migration-resource://300c481c6cf76b3dba50a141fecefdb1f8607a5f3524d7fa9f2c191b3b1371f7",
+      "snapshotPath": "assets/300c481c6cf76b3dba50a141fecefdb1f8607a5f3524d7fa9f2c191b3b1371f7.jpg",
+      "sha256": "300c481c6cf76b3dba50a141fecefdb1f8607a5f3524d7fa9f2c191b3b1371f7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-16/69256218-4fd1-42fb-8538-d3f37eca5c67.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-16/69256218-4fd1-42fb-8538-d3f37eca5c67.jpg",
+      "token": "migration-resource://ef5f221500c5592e691fd60b69c01e35af371d98b3366f9d08e4b37e1fdbeb90",
+      "snapshotPath": "assets/ef5f221500c5592e691fd60b69c01e35af371d98b3366f9d08e4b37e1fdbeb90.jpg",
+      "sha256": "ef5f221500c5592e691fd60b69c01e35af371d98b3366f9d08e4b37e1fdbeb90",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-16/56f5cccd-1c55-448d-a23f-6d063e6030b7.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-16/56f5cccd-1c55-448d-a23f-6d063e6030b7.jpg",
+      "token": "migration-resource://4d6e7f8f597862781940cbc48235e1016ec0fd5bb7633cb9ee5b4e41843a61d2",
+      "snapshotPath": "assets/4d6e7f8f597862781940cbc48235e1016ec0fd5bb7633cb9ee5b4e41843a61d2.jpg",
+      "sha256": "4d6e7f8f597862781940cbc48235e1016ec0fd5bb7633cb9ee5b4e41843a61d2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 33248
+    }
+  ],
+  "sourceFingerprint": "458a6859dba8ee0255d7149c408ecf997f30944dacdc77c6ddb89819cf504bb6",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "教育部办公厅关于开展2024届高校毕业生春季促就业攻坚行动的通知",
+    "listPublishDate": "2024-03-15",
+    "sourceOrder": 92,
+    "detailPublishDate": "2024-03-15"
+  }
+}

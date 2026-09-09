@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86132903657472",
+    "contentId": "86132903657472",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86132903657472"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春大学疫情期间创新开展就业服务",
+    "source": "长春大学",
+    "publishDate": "2022-04-12",
+    "bodyHtml": "\n                        <p>疫情期间，为进一步推进2022届毕业生就业工作，降低疫情因素对毕业生就业工作的影响，长春大学创新开展就业服务工作。通过建立“长大就业信息速递” QQ群、就业咨询微信群、线上直播等形式，定期发送就业招聘信息，开设就业指导直播课程，开展就业咨询，编制《就业战“疫”服务指南（第二版）》，促进毕业生顺利就业。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"500\" src=\"migration-resource://f27b469501447a55b8479b13c147ab58f614ef05aa640394bd2f2061dce845c6\" width=\"245\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt=\"\" height=\"500\" src=\"migration-resource://9c2eeea0b54bce3a7145b10e23367449a2a85372ed81077c36bd9bcaa02171cf\" width=\"486\"></p>\n\n<p>全面将指导和服务线上化、全程化，现已开通2000人信息群1个，微信群5个，已有1882名未就业毕业生进入服务网络，3月10日以来，向毕业生累计发送就业信息532条。就业创业指导教师每日14小时在线，累计提供咨询213人次，实现疫情期间“点对点”就业服务。</p>\n\n<p>与此同时，不断强化网络招聘组织力度，召开长春市高校综合类就业网络洽谈会暨长春大学2022届毕业生春季校园网络双选会，组织毕业生参加省内网络双选会6场，召开专场网络宣讲会43场。累计提供企业资源303家，提供岗位需求25976个，毕业生简历投递2894份，全力保障疫情期间毕业生充分就业。</p>\n\n<p><strong>（长春大学 王志宇）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/52a920d3-9706-4ff7-9171-54ac8e37c0b1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/52a920d3-9706-4ff7-9171-54ac8e37c0b1.jpg",
+      "token": "migration-resource://f27b469501447a55b8479b13c147ab58f614ef05aa640394bd2f2061dce845c6",
+      "snapshotPath": "assets/f27b469501447a55b8479b13c147ab58f614ef05aa640394bd2f2061dce845c6.jpg",
+      "sha256": "f27b469501447a55b8479b13c147ab58f614ef05aa640394bd2f2061dce845c6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 197840
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/2213eb3c-adb4-49ab-8199-6f825d7863d8.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/2213eb3c-adb4-49ab-8199-6f825d7863d8.jpg",
+      "token": "migration-resource://9c2eeea0b54bce3a7145b10e23367449a2a85372ed81077c36bd9bcaa02171cf",
+      "snapshotPath": "assets/9c2eeea0b54bce3a7145b10e23367449a2a85372ed81077c36bd9bcaa02171cf.jpg",
+      "sha256": "9c2eeea0b54bce3a7145b10e23367449a2a85372ed81077c36bd9bcaa02171cf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 175524
+    }
+  ],
+  "sourceFingerprint": "18ce9222507dbfe2c72d273299048f582d246c7b4e8c544a493d1589594716b9",
+  "evidence": {
+    "listPage": 123,
+    "listTitle": "长春大学疫情期间创新开展就业服务",
+    "listPublishDate": "2022-04-12",
+    "sourceOrder": 1221,
+    "detailPublishDate": "2022-04-12"
+  }
+}

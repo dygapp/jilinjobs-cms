@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a821beff0f5df532f3b5b5cc142c23e41a39f2ce46509efead78c7be6ec8734b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/S069QqJqduptLxwMlebQBw",
+    "url": "https://mp.weixin.qq.com/s/S069QqJqduptLxwMlebQBw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "筑巢引凤丨“通过汽开区的这场招聘会，我决定留在吉林工作！”——汽开区“创业奋斗‘就’在吉林”大型招聘活动圆满落幕",
+    "source": "",
+    "publishDate": "2024-05-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/S069QqJqduptLxwMlebQBw"
+  },
+  "resources": [],
+  "sourceFingerprint": "76cc9f2a160ab530a512eda97b693d16db76ce8e45cc7854972c92627f53897b",
+  "evidence": {
+    "listPage": 105,
+    "listTitle": "筑巢引凤丨“通过汽开区的这场招聘会，我决定留在吉林工作！”——汽开区“创业奋斗‘就’在吉林”大型招聘活动圆满落幕",
+    "listPublishDate": "2024-05-30",
+    "sourceOrder": 1048
+  }
+}

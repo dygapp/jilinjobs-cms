@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:d6742fe8a89e64f2439f3a04280af4904df81efcb34a056717fb6f8d55a83631",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/VfxTY_Q2oaKIkzffgxKigg",
+    "url": "https://mp.weixin.qq.com/s/VfxTY_Q2oaKIkzffgxKigg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“聚焦应用型人才·服务吉林高质量发展”吉林省经济管理干部学院春季线上就业双选活动周",
+    "source": "",
+    "publishDate": "2025-03-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/VfxTY_Q2oaKIkzffgxKigg"
+  },
+  "resources": [],
+  "sourceFingerprint": "1e91c90ed1c0903b254af6388aaec141d6bdc7be2964bf141943f0fc4f8e4b64",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "“聚焦应用型人才·服务吉林高质量发展”吉林省经济管理干部学院春季线上就业双选活动周",
+    "listPublishDate": "2025-03-19",
+    "sourceOrder": 211
+  }
+}

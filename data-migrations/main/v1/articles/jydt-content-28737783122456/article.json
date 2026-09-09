@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122456",
+    "contentId": "28737783122456",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122456"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "南京市长江河道管理处官员获刑 九成受贿在年关",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">南京市长江河道管理处官员获刑 九成受贿在年关</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><br><font size=\"2\">&nbsp;&nbsp;&nbsp; 江苏省南京市长江河道管理处原副主任刘雨泉受贿一案，近日在南京市下关区法院作出宣判，他因受贿罪被判处有期徒刑八年，没收财产人民币10万元，扣押的35万元赃款予以没收，上缴国库。庭审结束时，刘雨泉告诫参加本次庭审旁听的近百名公务员“要把握住自己，特别是在逢年过节等特殊时期”。据了解，起诉书指控刘雨泉的17笔受贿犯罪事实中，有15笔都发生在春节期间。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 经查:2001年至2007年间，刘雨泉利用其担任南京市长江河道管理处副主任等职务便利，在承接的湖北黄冈护岸工程、扬子石化-巴斯夫吹砂回填工程、长江南京河段二期整治工程等工程中，为分包商蒋某、供材商谢某等个人或所属单位谋取利益，先后17次收受他人给予的贿赂共计人民币35万元。<br>&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "0d302c66144286e737db5633631201370fe8e1e92da6d6306e17ee9f3ec111f6",
+  "evidence": {
+    "listPage": 189,
+    "listTitle": "南京市长江河道管理处官员获刑 九成受贿在年关",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1885,
+    "detailPublishDate": "2009-04-04"
+  }
+}

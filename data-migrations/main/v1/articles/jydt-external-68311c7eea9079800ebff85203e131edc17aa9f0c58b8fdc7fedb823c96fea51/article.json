@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:68311c7eea9079800ebff85203e131edc17aa9f0c58b8fdc7fedb823c96fea51",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1028/172832.htm",
+    "url": "https://www.jlju.edu.cn/info/1028/172832.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学赴中交二航局吉林建设有限公司开展“优企引才”定向访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-03-23",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1028/172832.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "ce5a0389976d37357f0f5e165d1ea246143dee7ff55a96beb43677e2fdc4c3af",
+  "evidence": {
+    "listPage": 39,
+    "listTitle": "吉林建筑大学赴中交二航局吉林建设有限公司开展“优企引才”定向访企拓岗专项行动",
+    "listPublishDate": "2026-03-23",
+    "sourceOrder": 383
+  }
+}

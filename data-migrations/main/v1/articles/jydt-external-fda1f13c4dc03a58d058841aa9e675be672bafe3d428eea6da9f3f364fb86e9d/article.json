@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fda1f13c4dc03a58d058841aa9e675be672bafe3d428eea6da9f3f364fb86e9d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/PIySoIP0QVoHCCWLDvj_PA",
+    "url": "https://mp.weixin.qq.com/s/PIySoIP0QVoHCCWLDvj_PA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "精准施策 全力攻坚——长春东方职业学院召开2025届毕业生促就业专项工作第四次会议",
+    "source": "",
+    "publishDate": "2025-07-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/PIySoIP0QVoHCCWLDvj_PA"
+  },
+  "resources": [],
+  "sourceFingerprint": "68ab45f7c896fedb3f3e770acb7dbeb7420a4d423c570fa650349f776bb3bef5",
+  "evidence": {
+    "listPage": 75,
+    "listTitle": "精准施策 全力攻坚——长春东方职业学院召开2025届毕业生促就业专项工作第四次会议",
+    "listPublishDate": "2025-07-02",
+    "sourceOrder": 750
+  }
+}

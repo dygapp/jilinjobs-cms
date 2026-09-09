@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d4d0b2a444b6a96026efb4fc4962a62a660d693b6efb7c582ab63afe13068e70",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/0fxMy2glmQCi7QF_A1w95g",
+    "url": "https://mp.weixin.qq.com/s/0fxMy2glmQCi7QF_A1w95g?scene=25&sessionid=-1367834133"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“就”在白城 “职”引未来2025年“成就梦想 绽放青春”宣讲会在白城师范学院举行",
+    "source": "",
+    "publishDate": "2025-04-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/0fxMy2glmQCi7QF_A1w95g?scene=25&sessionid=-1367834133"
+  },
+  "resources": [],
+  "sourceFingerprint": "fc19ebab141f967375fa245aa10b497c463b1bd23cc6b2c15f03afa6fd1f5cfd",
+  "evidence": {
+    "listPage": 95,
+    "listTitle": "“就”在白城 “职”引未来2025年“成就梦想 绽放青春”宣讲会在白城师范学院举行",
+    "listPublishDate": "2025-04-14",
+    "sourceOrder": 946
+  }
+}

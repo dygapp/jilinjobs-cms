@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0f679c8e746aae06183bc407ea780e22853fcd1781e8bf1e13eaac77cc70e860",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/V5x5DzGCzmGI2GaXLR8r5Q",
+    "url": "https://mp.weixin.qq.com/s/V5x5DzGCzmGI2GaXLR8r5Q?scene=1&click_id=168806445"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春医学高等专科学校开展政校企座谈及优质医卫单位实地走访活动",
+    "source": "",
+    "publishDate": "2026-06-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/V5x5DzGCzmGI2GaXLR8r5Q?scene=1&click_id=168806445"
+  },
+  "resources": [],
+  "sourceFingerprint": "d9f49476f294fe9a911d2634dad1b4e40f0ee30b6aeef2a7a7ddfbaf6bc98bc7",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "长春医学高等专科学校开展政校企座谈及优质医卫单位实地走访活动",
+    "listPublishDate": "2026-06-22",
+    "sourceOrder": 73
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bf8bc6714f0508c840bc33067ae34c3cc726ab417072097ef783c4fbb8bb8b7a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5588.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5588.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "宁波市优质企业到长春工业大学开展招聘活动",
+    "source": "",
+    "publishDate": "2026-03-18",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5588.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "e8d10cd8978c0ffbe944747a2509b70cc78a80ad6496fb4cf9920297c4270ce8",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "宁波市优质企业到长春工业大学开展招聘活动",
+    "listPublishDate": "2026-03-18",
+    "sourceOrder": 402
+  }
+}

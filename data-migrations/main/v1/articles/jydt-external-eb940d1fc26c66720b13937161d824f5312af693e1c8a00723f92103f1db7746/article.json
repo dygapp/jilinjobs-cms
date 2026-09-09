@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:eb940d1fc26c66720b13937161d824f5312af693e1c8a00723f92103f1db7746",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1042/94473.htm",
+    "url": "https://www.jlbtc.edu.cn/info/1042/94473.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院赴长春欧亚集团欧亚车百大楼有限公司开展“优企引才”访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-20",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlbtc.edu.cn/info/1042/94473.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "4a89047f4598de9427a1af5916bb594188e7c3822b89bc1d50f5772574a38e67",
+  "evidence": {
+    "listPage": 39,
+    "listTitle": "吉林工商学院赴长春欧亚集团欧亚车百大楼有限公司开展“优企引才”访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-20",
+    "sourceOrder": 390
+  }
+}

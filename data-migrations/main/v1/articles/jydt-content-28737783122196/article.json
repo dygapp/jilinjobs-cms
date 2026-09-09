@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122196",
+    "contentId": "28737783122196",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122196"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省全国计算机应用技术证书考试（NIT）工作会议在省高校毕业生就业指导中心召开",
+    "source": "",
+    "publishDate": "2012-11-27",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省全国计算机应用技术证书考试（NIT）工作会议在省高校毕业生就业指导中心召开</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-11-27 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://4ee9127d9d7b876674160013acf1bee573f996e5548c08c754a63341228e59f8\"></p> <p>&nbsp;&nbsp;&nbsp; 11月23日，我省召开吉林省全国计算机应用技术证书考试（NIT）工作会议。全省28个NIT考试基地主管NIT工作的副院长、处长及具体工作人员参加了会议。全省共7个考试基地被评为先进集体，34名成绩突出的NIT工作人员被评为先进工作者。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://692d8b50a6e0c7d5dd393bf21192918e01b1df3a026a64321d35ec7abb35b01c\"></p> <p>&nbsp;&nbsp;&nbsp; 省高校毕业生就业指导中心郑志宏主任对吉林省NIT工作的整体情况做了总结，并对今后我省NIT工作的发展提出要求和希望。</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121127031905486.jpg",
+      "originalReference": "/chistory/cms/imgs/20121127031905486.jpg",
+      "token": "migration-resource://4ee9127d9d7b876674160013acf1bee573f996e5548c08c754a63341228e59f8",
+      "snapshotPath": "assets/4ee9127d9d7b876674160013acf1bee573f996e5548c08c754a63341228e59f8.jpg",
+      "sha256": "4ee9127d9d7b876674160013acf1bee573f996e5548c08c754a63341228e59f8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75754
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121127032100486.jpg",
+      "originalReference": "/chistory/cms/imgs/20121127032100486.jpg",
+      "token": "migration-resource://692d8b50a6e0c7d5dd393bf21192918e01b1df3a026a64321d35ec7abb35b01c",
+      "snapshotPath": "assets/692d8b50a6e0c7d5dd393bf21192918e01b1df3a026a64321d35ec7abb35b01c.jpg",
+      "sha256": "692d8b50a6e0c7d5dd393bf21192918e01b1df3a026a64321d35ec7abb35b01c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 49854
+    }
+  ],
+  "sourceFingerprint": "0cff40e51fff466a1b4ad97736d5d9977ec1a37c89addcb2996695ec2817fd77",
+  "evidence": {
+    "listPage": 163,
+    "listTitle": "吉林省全国计算机应用技术证书考试（NIT）工作会议在省高校毕业生就业指导中心召开",
+    "listPublishDate": "2012-11-27",
+    "sourceOrder": 1630,
+    "detailPublishDate": "2012-11-27"
+  }
+}

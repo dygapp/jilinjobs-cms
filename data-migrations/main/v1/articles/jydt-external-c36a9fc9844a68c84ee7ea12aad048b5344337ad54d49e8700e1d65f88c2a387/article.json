@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c36a9fc9844a68c84ee7ea12aad048b5344337ad54d49e8700e1d65f88c2a387",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/fFYkJLDxR_gcCGke6Jxbxw",
+    "url": "https://mp.weixin.qq.com/s/fFYkJLDxR_gcCGke6Jxbxw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春建筑学院城建学院赴吉林省锐帆科技开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-03-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/fFYkJLDxR_gcCGke6Jxbxw"
+  },
+  "resources": [],
+  "sourceFingerprint": "5bf58aaf796913cdb777dbe8dd63722b2401f56306cab6f35a19d52e3c61c657",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "长春建筑学院城建学院赴吉林省锐帆科技开展访企拓岗专项行动",
+    "listPublishDate": "2026-03-23",
+    "sourceOrder": 380
+  }
+}

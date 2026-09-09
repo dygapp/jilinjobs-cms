@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737785217117",
+    "contentId": "28737785217117",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737785217117"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2018年吉林省大学生农业方向创业班开班仪式顺利召开",
+    "source": "",
+    "publishDate": "2018-05-18",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2018年吉林省大学生农业方向创业班开班仪式顺利召开</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训二部   发布时间:2018-5-18 9:53:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-indent: 40px;\"><span style=\"font-family: 宋体; font-size: 20px;\">为了贯彻落实党的十九大“以人民为中心”的思想和《国务院办公厅关于深化高等学校创新创业教育改革的实施意见》文件精神。全面提高吉林省涉农类专业大学生的创业就业能力，提升我省高等学校毕业生就业质量，开辟我省创业就业新的思路2018年5月16日，吉林省高等学校毕业生就业指导中心和长春科技学院在长春科技学院大学生创业就业实训基地，召开了2018年吉林省大学生农业方向创业班开班仪式。参加开班仪式的有长春科技学院副校长欧阳军、校长助理毕庆三、吉林省高等学校毕业生就业指导中心办公室主任苗立海和来自省内32所高等学校的72名学员。</span></p><p style=\"text-indent: 40px;\"><span style=\"font-family: 宋体; font-size: 20px;\">本次创业班培训受到了省就业指导中心和长春科技学院领导的高度重视。双方本着“充分发挥双方资源优势、创新就业创业基地建设新模式的原则”共建吉林省大学生创业就业实训基地。基地主要在种植业和养殖业方面为省内高校，特别是农业院校大学生开展创业就业实践服务。基地建成后将进一步发挥国家级创业孵化基地的示范和引领作用，同时也为我省探索一条政府职能部门与高等院校合作共建基地新模式，加快教育体制改革的步伐。</span></p><p>&nbsp;</p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://25862a20a6bb3c53dac0cbfca96f0981c443a4028978e89031c7431473fac43a\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://82c1de5ea5cbb2376b169134f7f5b5351c61fb486eab4c264a051e0550d2eae3\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366223412920650009289839.jpg",
+      "originalReference": "/chistory/cms/imgs/6366223412920650009289839.jpg",
+      "token": "migration-resource://25862a20a6bb3c53dac0cbfca96f0981c443a4028978e89031c7431473fac43a",
+      "snapshotPath": "assets/25862a20a6bb3c53dac0cbfca96f0981c443a4028978e89031c7431473fac43a.jpg",
+      "sha256": "25862a20a6bb3c53dac0cbfca96f0981c443a4028978e89031c7431473fac43a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 46128
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366223412934712506247563.jpg",
+      "originalReference": "/chistory/cms/imgs/6366223412934712506247563.jpg",
+      "token": "migration-resource://82c1de5ea5cbb2376b169134f7f5b5351c61fb486eab4c264a051e0550d2eae3",
+      "snapshotPath": "assets/82c1de5ea5cbb2376b169134f7f5b5351c61fb486eab4c264a051e0550d2eae3.jpg",
+      "sha256": "82c1de5ea5cbb2376b169134f7f5b5351c61fb486eab4c264a051e0550d2eae3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 40846
+    }
+  ],
+  "sourceFingerprint": "a72e6fa2f04fdb5daebd16b14d3d5ab13f4763639dedef705c35fca48b12e6dc",
+  "evidence": {
+    "listPage": 147,
+    "listTitle": "2018年吉林省大学生农业方向创业班开班仪式顺利召开",
+    "listPublishDate": "2018-05-18",
+    "sourceOrder": 1469,
+    "detailPublishDate": "2018-05-18"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:852d9c173f4b5350431bbda1473489184582b52696f7b0e1c86d74e5f4071eeb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/AfMSI11fHPG0F2uxxsWr-A",
+    "url": "https://mp.weixin.qq.com/s/AfMSI11fHPG0F2uxxsWr-A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "相约高博会 | “千校万企供需对接会”（东北地区专场）暨东北地区2025届高校毕业生人才双选会举行",
+    "source": "",
+    "publishDate": "2025-05-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/AfMSI11fHPG0F2uxxsWr-A"
+  },
+  "resources": [],
+  "sourceFingerprint": "a0928bd1e09c85b7b6f33866844f7ca415b945004f5b4e885be250f9b0c10ca7",
+  "evidence": {
+    "listPage": 87,
+    "listTitle": "相约高博会 | “千校万企供需对接会”（东北地区专场）暨东北地区2025届高校毕业生人才双选会举行",
+    "listPublishDate": "2025-05-26",
+    "sourceOrder": 866
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:00253f20653ee3ac072fd941db338f464848b2446222f80a6fa8f356f733f78b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/zKsoV_RiZy6C1kQ8b5yPOw",
+    "url": "https://mp.weixin.qq.com/s/zKsoV_RiZy6C1kQ8b5yPOw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院与永康市深化校地合作 共筑人才引育新高地",
+    "source": "",
+    "publishDate": "2026-03-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/zKsoV_RiZy6C1kQ8b5yPOw"
+  },
+  "resources": [],
+  "sourceFingerprint": "9c3fe5901a819a4a24b4a14ff1188b04a94ba91773eb1d806fd68db0cef617c9",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "长春人文学院与永康市深化校地合作 共筑人才引育新高地",
+    "listPublishDate": "2026-03-26",
+    "sourceOrder": 360
+  }
+}

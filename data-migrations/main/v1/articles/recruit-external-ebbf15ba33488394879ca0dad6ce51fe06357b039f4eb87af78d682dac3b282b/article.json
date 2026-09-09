@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:ebbf15ba33488394879ca0dad6ce51fe06357b039f4eb87af78d682dac3b282b",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/jobfair/fairdetails.html",
+    "url": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=EzmABGzcVgMmLuugqezApS"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2022年全国中小企业网上百日招聘高校毕业生活动",
+    "source": "",
+    "publishDate": "2022-11-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=EzmABGzcVgMmLuugqezApS"
+  },
+  "resources": [],
+  "sourceFingerprint": "96e933efb1d89318cce9a530c58a4192748c27bed8c8c568135f170bf5d13864",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "2022年全国中小企业网上百日招聘高校毕业生活动",
+    "listPublishDate": "2022-11-02",
+    "sourceOrder": 333
+  }
+}

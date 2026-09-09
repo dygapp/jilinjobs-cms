@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:824d6c031d03b6e67575ceecd23726794eeb8ebc24be52d0417b4e163c2ac5c2",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/gsgg/202008/t20200812_484624.html",
+    "url": "http://www.jilinja.gov.cn/gsgg/202008/t20200812_484624.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年集安市事业单位公开招聘工作人员公告（1号）",
+    "source": "",
+    "publishDate": "2020-08-12",
+    "bodyHtml": "",
+    "externalUrl": "http://www.jilinja.gov.cn/gsgg/202008/t20200812_484624.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "e1d7e41d18de9bf191bda06e0b06dec1d9df5aa0e9dd5f4ddc815d284cb6b62e",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "2020年集安市事业单位公开招聘工作人员公告（1号）",
+    "listPublishDate": "2020-08-12",
+    "sourceOrder": 377
+  }
+}

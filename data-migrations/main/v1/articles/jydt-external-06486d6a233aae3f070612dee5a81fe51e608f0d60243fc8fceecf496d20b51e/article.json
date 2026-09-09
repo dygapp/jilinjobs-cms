@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:06486d6a233aae3f070612dee5a81fe51e608f0d60243fc8fceecf496d20b51e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/_Ue-sDwbYEkZT2KcInSBhg",
+    "url": "https://mp.weixin.qq.com/s/_Ue-sDwbYEkZT2KcInSBhg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化师范学院开展2026年“寒假促就业暖心行动”",
+    "source": "",
+    "publishDate": "2026-02-05",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_Ue-sDwbYEkZT2KcInSBhg"
+  },
+  "resources": [],
+  "sourceFingerprint": "2632cd6e66fd5e9aa9f184cf226368cb94290f0aa00cca0b78b17a7c102a3745",
+  "evidence": {
+    "listPage": 47,
+    "listTitle": "通化师范学院开展2026年“寒假促就业暖心行动”",
+    "listPublishDate": "2026-02-05",
+    "sourceOrder": 461
+  }
+}

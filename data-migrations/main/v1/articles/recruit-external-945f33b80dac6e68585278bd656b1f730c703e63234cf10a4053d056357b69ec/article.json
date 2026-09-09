@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:945f33b80dac6e68585278bd656b1f730c703e63234cf10a4053d056357b69ec",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/Ovg4HSVGm-Phs5z5D2cs3w",
+    "url": "https://mp.weixin.qq.com/s/Ovg4HSVGm-Phs5z5D2cs3w?scene=25&sessionid=-1369651153&poc_token=HLtAHGijp0QjEvGwrpL8r3HbEZdu5cTiIv4-wOBy"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“春启新程，职引未来” 长春电子科技学院2025届毕业生网络双选会",
+    "source": "",
+    "publishDate": "2025-04-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Ovg4HSVGm-Phs5z5D2cs3w?scene=25&sessionid=-1369651153&poc_token=HLtAHGijp0QjEvGwrpL8r3HbEZdu5cTiIv4-wOBy"
+  },
+  "resources": [],
+  "sourceFingerprint": "fa9f76c80618cc2b90a1b2e770c559f58d11c2a119db13569a6398ace4390633",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "“春启新程，职引未来” 长春电子科技学院2025届毕业生网络双选会",
+    "listPublishDate": "2025-04-02",
+    "sourceOrder": 196
+  }
+}

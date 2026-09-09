@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:85993285763072",
+    "contentId": "85993285763072",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=85993285763072"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于疫情期间暂停办公的通知",
+    "source": "",
+    "publishDate": "2022-03-11",
+    "bodyHtml": "\n                        <p>按照长春市疫情防控指挥部和吉林省教育厅疫情防控组的相关要求，吉林省高等学校毕业生就业指导中心自3月14日起停止对外办公，恢复对外办公时间另行通知，给您带来不便之处，敬请谅解。</p>\n\n<p>&nbsp;</p>\n\n<p>吉林省高等学校毕业生就业指导中心</p>\n\n<p>2022年3月11日&nbsp; &nbsp; &nbsp; &nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "e0fb6429b35064ab9b0a7cf93687a0c3b4573500d0af40c5c1c9ae1371f27068",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "关于疫情期间暂停办公的通知",
+    "listPublishDate": "2022-03-11",
+    "sourceOrder": 137,
+    "detailPublishDate": "2022-03-11"
+  }
+}

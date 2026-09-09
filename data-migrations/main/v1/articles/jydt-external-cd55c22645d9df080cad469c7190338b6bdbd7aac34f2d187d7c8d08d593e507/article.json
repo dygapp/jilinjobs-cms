@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cd55c22645d9df080cad469c7190338b6bdbd7aac34f2d187d7c8d08d593e507",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Icayr_pscIyyYWp61vajtw",
+    "url": "https://mp.weixin.qq.com/s/Icayr_pscIyyYWp61vajtw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "松原职业技术学院与长岭飞行营地成功举行校企合作洽谈",
+    "source": "",
+    "publishDate": "2026-06-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Icayr_pscIyyYWp61vajtw"
+  },
+  "resources": [],
+  "sourceFingerprint": "4acbc38db37dd3dfca656d706859461af91e211b9ad3a92f614eaf49065c718e",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "松原职业技术学院与长岭飞行营地成功举行校企合作洽谈",
+    "listPublishDate": "2026-06-09",
+    "sourceOrder": 92
+  }
+}

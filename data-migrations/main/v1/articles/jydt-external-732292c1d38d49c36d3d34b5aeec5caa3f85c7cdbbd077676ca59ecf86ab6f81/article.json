@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:732292c1d38d49c36d3d34b5aeec5caa3f85c7cdbbd077676ca59ecf86ab6f81",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1381/36661.htm",
+    "url": "https://www.ccu.edu.cn/info/1381/36661.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学召开深化产教融合交流会",
+    "source": "",
+    "publishDate": "2026-09-07",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccu.edu.cn/info/1381/36661.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "40de3b234635c978b400362e61160df06a0af7120d33216824c818c934533b16",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "长春大学召开深化产教融合交流会",
+    "listPublishDate": "2026-09-07",
+    "sourceOrder": 3
+  }
+}

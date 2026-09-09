@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:217534703894528",
+    "contentId": "217534703894528",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=217534703894528"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "梅河口康美职业技术学院举办 “创业奋斗‘就’在吉林” 2024届高校毕业生政校企联合双选会",
+    "source": "",
+    "publishDate": "2024-04-15",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://b7177af0af89dbbf0ff12ee96fac1885559b9ef861addcb6816ae78ea5c0e105\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://ae0bea4d59af0c706e97a7910e4358dffbaecfb7fb8094c3fb047ae2bc3b90ab\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://48a6170bd0694e4f54e16a77a346c3087da11e84d066d1a04a66e210101f0cb5\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://d9b2a24d8ec43f31287a744b792ff1e1ed051a63b8096c1ff1968f04da6a837e\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://124e504b5364fcd37f35329d03d183f41241d43181bc98173fb9f9dbc32f82f9\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://185307dd4dc3e314ec509297239c1e74af09859bb505ff59d37fde509602dc90\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/a3842e27-4cb7-46c1-a914-919dfc71d1d9.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/a3842e27-4cb7-46c1-a914-919dfc71d1d9.jpg",
+      "token": "migration-resource://b7177af0af89dbbf0ff12ee96fac1885559b9ef861addcb6816ae78ea5c0e105",
+      "snapshotPath": "assets/b7177af0af89dbbf0ff12ee96fac1885559b9ef861addcb6816ae78ea5c0e105.jpg",
+      "sha256": "b7177af0af89dbbf0ff12ee96fac1885559b9ef861addcb6816ae78ea5c0e105",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/d5b6ce71-9894-4aed-ac13-29f63a0d75fa.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/d5b6ce71-9894-4aed-ac13-29f63a0d75fa.jpg",
+      "token": "migration-resource://ae0bea4d59af0c706e97a7910e4358dffbaecfb7fb8094c3fb047ae2bc3b90ab",
+      "snapshotPath": "assets/ae0bea4d59af0c706e97a7910e4358dffbaecfb7fb8094c3fb047ae2bc3b90ab.jpg",
+      "sha256": "ae0bea4d59af0c706e97a7910e4358dffbaecfb7fb8094c3fb047ae2bc3b90ab",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/c747cfbe-a7b3-472f-9cef-1646530a6d9e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/c747cfbe-a7b3-472f-9cef-1646530a6d9e.jpg",
+      "token": "migration-resource://48a6170bd0694e4f54e16a77a346c3087da11e84d066d1a04a66e210101f0cb5",
+      "snapshotPath": "assets/48a6170bd0694e4f54e16a77a346c3087da11e84d066d1a04a66e210101f0cb5.jpg",
+      "sha256": "48a6170bd0694e4f54e16a77a346c3087da11e84d066d1a04a66e210101f0cb5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/33e2f3af-74ed-492b-a41a-e036747accd5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/33e2f3af-74ed-492b-a41a-e036747accd5.jpg",
+      "token": "migration-resource://d9b2a24d8ec43f31287a744b792ff1e1ed051a63b8096c1ff1968f04da6a837e",
+      "snapshotPath": "assets/d9b2a24d8ec43f31287a744b792ff1e1ed051a63b8096c1ff1968f04da6a837e.jpg",
+      "sha256": "d9b2a24d8ec43f31287a744b792ff1e1ed051a63b8096c1ff1968f04da6a837e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/373b54a7-e6c5-42ab-bc53-b15426646015.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/373b54a7-e6c5-42ab-bc53-b15426646015.jpg",
+      "token": "migration-resource://124e504b5364fcd37f35329d03d183f41241d43181bc98173fb9f9dbc32f82f9",
+      "snapshotPath": "assets/124e504b5364fcd37f35329d03d183f41241d43181bc98173fb9f9dbc32f82f9.jpg",
+      "sha256": "124e504b5364fcd37f35329d03d183f41241d43181bc98173fb9f9dbc32f82f9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/6b0e35b3-d8f4-4293-9d16-890e0b757b8e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/6b0e35b3-d8f4-4293-9d16-890e0b757b8e.jpg",
+      "token": "migration-resource://185307dd4dc3e314ec509297239c1e74af09859bb505ff59d37fde509602dc90",
+      "snapshotPath": "assets/185307dd4dc3e314ec509297239c1e74af09859bb505ff59d37fde509602dc90.jpg",
+      "sha256": "185307dd4dc3e314ec509297239c1e74af09859bb505ff59d37fde509602dc90",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    }
+  ],
+  "sourceFingerprint": "82b7f3fd360cc9c100ab6790c3c51fa554f09da1b263d4ca807b0bf1b6a78ce4",
+  "evidence": {
+    "listPage": 108,
+    "listTitle": "梅河口康美职业技术学院举办 “创业奋斗‘就’在吉林” 2024届高校毕业生政校企联合双选会",
+    "listPublishDate": "2024-04-15",
+    "sourceOrder": 1080,
+    "detailPublishDate": "2024-04-15"
+  }
+}

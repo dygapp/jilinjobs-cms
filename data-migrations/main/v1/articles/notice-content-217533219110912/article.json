@@ -1,0 +1,131 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:217533219110912",
+    "contentId": "217533219110912",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=217533219110912"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "商务部办公厅 教育部办公厅 人力资源社会保障部办公厅 关于举办2024年全国国家级经济技术开发区高校毕业生网络招聘会活动的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2024-04-15",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://49a8ce484b8bd012700f9568c0e291ac4a08f7e18c1f0f0feb475b9c3ea3bb47\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://aeb66271e3f40f0d34a69e6b125d76e00e97af8585aa4ebbb52b4227cce0f2d9\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://d4f1a7019effe69e108ade139ba8a31ffec0158fdb0ddaee854ba0ff3155ffd5\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://53a90370321e8c4d5eca1da15242ae4259b7f7dccadb2aa0ed1972a457eb08ad\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://8d5471787ab3bdd6975821b82a983025db397c4ca901391ad778096c4806dcda\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://914034643c704ae79a14389f3390251265436997acb3747bd7aa84d000cc0056\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://fd876da2da7413d1da7170971be8c6f6e80a5c2a5fa5315e5533f538ab0bc93c\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://c723fdc80eb4974c92837f6407eb6404c3643ec592d3795863aa7bc57bfd3b1c\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://670aacecee6fd3efadc8b51bd52b0c2ae5fdddf351e8702449df2bda32a56fd5\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://13e5a5093d10373247e5824f300fb79328467a5bbad156887f29465634df7bf2\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/eb3bdc11-c328-4c8c-bd64-b8853fedfe0b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/eb3bdc11-c328-4c8c-bd64-b8853fedfe0b.jpg",
+      "token": "migration-resource://49a8ce484b8bd012700f9568c0e291ac4a08f7e18c1f0f0feb475b9c3ea3bb47",
+      "snapshotPath": "assets/49a8ce484b8bd012700f9568c0e291ac4a08f7e18c1f0f0feb475b9c3ea3bb47.jpg",
+      "sha256": "49a8ce484b8bd012700f9568c0e291ac4a08f7e18c1f0f0feb475b9c3ea3bb47",
+      "contentType": "image/jpeg",
+      "sizeBytes": 182983
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/bec41625-af2c-4d55-b56f-f7b13fdc799b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/bec41625-af2c-4d55-b56f-f7b13fdc799b.jpg",
+      "token": "migration-resource://aeb66271e3f40f0d34a69e6b125d76e00e97af8585aa4ebbb52b4227cce0f2d9",
+      "snapshotPath": "assets/aeb66271e3f40f0d34a69e6b125d76e00e97af8585aa4ebbb52b4227cce0f2d9.jpg",
+      "sha256": "aeb66271e3f40f0d34a69e6b125d76e00e97af8585aa4ebbb52b4227cce0f2d9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/bfa35376-b63f-4cf6-ae1c-ef6ee445bbc5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/bfa35376-b63f-4cf6-ae1c-ef6ee445bbc5.jpg",
+      "token": "migration-resource://d4f1a7019effe69e108ade139ba8a31ffec0158fdb0ddaee854ba0ff3155ffd5",
+      "snapshotPath": "assets/d4f1a7019effe69e108ade139ba8a31ffec0158fdb0ddaee854ba0ff3155ffd5.jpg",
+      "sha256": "d4f1a7019effe69e108ade139ba8a31ffec0158fdb0ddaee854ba0ff3155ffd5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/d526ee6e-b766-42f1-9cd1-06a337326c55.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/d526ee6e-b766-42f1-9cd1-06a337326c55.jpg",
+      "token": "migration-resource://53a90370321e8c4d5eca1da15242ae4259b7f7dccadb2aa0ed1972a457eb08ad",
+      "snapshotPath": "assets/53a90370321e8c4d5eca1da15242ae4259b7f7dccadb2aa0ed1972a457eb08ad.jpg",
+      "sha256": "53a90370321e8c4d5eca1da15242ae4259b7f7dccadb2aa0ed1972a457eb08ad",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/a6288e0f-1d69-4f86-8091-f1f9209bd395.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/a6288e0f-1d69-4f86-8091-f1f9209bd395.jpg",
+      "token": "migration-resource://8d5471787ab3bdd6975821b82a983025db397c4ca901391ad778096c4806dcda",
+      "snapshotPath": "assets/8d5471787ab3bdd6975821b82a983025db397c4ca901391ad778096c4806dcda.jpg",
+      "sha256": "8d5471787ab3bdd6975821b82a983025db397c4ca901391ad778096c4806dcda",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/a1c871b0-2b43-47a8-9662-db1fee41da3d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/a1c871b0-2b43-47a8-9662-db1fee41da3d.jpg",
+      "token": "migration-resource://914034643c704ae79a14389f3390251265436997acb3747bd7aa84d000cc0056",
+      "snapshotPath": "assets/914034643c704ae79a14389f3390251265436997acb3747bd7aa84d000cc0056.jpg",
+      "sha256": "914034643c704ae79a14389f3390251265436997acb3747bd7aa84d000cc0056",
+      "contentType": "image/jpeg",
+      "sizeBytes": 60277
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/baba394a-7db3-4cfc-ad02-cf1d8ce580c1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/baba394a-7db3-4cfc-ad02-cf1d8ce580c1.jpg",
+      "token": "migration-resource://fd876da2da7413d1da7170971be8c6f6e80a5c2a5fa5315e5533f538ab0bc93c",
+      "snapshotPath": "assets/fd876da2da7413d1da7170971be8c6f6e80a5c2a5fa5315e5533f538ab0bc93c.jpg",
+      "sha256": "fd876da2da7413d1da7170971be8c6f6e80a5c2a5fa5315e5533f538ab0bc93c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 31031
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/e04418a3-8c33-430f-a17e-181141730b58.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/e04418a3-8c33-430f-a17e-181141730b58.jpg",
+      "token": "migration-resource://c723fdc80eb4974c92837f6407eb6404c3643ec592d3795863aa7bc57bfd3b1c",
+      "snapshotPath": "assets/c723fdc80eb4974c92837f6407eb6404c3643ec592d3795863aa7bc57bfd3b1c.jpg",
+      "sha256": "c723fdc80eb4974c92837f6407eb6404c3643ec592d3795863aa7bc57bfd3b1c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/9e9856c2-ac3e-4a15-adbd-278c6698de11.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/9e9856c2-ac3e-4a15-adbd-278c6698de11.jpg",
+      "token": "migration-resource://670aacecee6fd3efadc8b51bd52b0c2ae5fdddf351e8702449df2bda32a56fd5",
+      "snapshotPath": "assets/670aacecee6fd3efadc8b51bd52b0c2ae5fdddf351e8702449df2bda32a56fd5.jpg",
+      "sha256": "670aacecee6fd3efadc8b51bd52b0c2ae5fdddf351e8702449df2bda32a56fd5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-04-15/b0ec8df0-2260-4d28-8e20-4ef8be8cc9fe.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-04-15/b0ec8df0-2260-4d28-8e20-4ef8be8cc9fe.jpg",
+      "token": "migration-resource://13e5a5093d10373247e5824f300fb79328467a5bbad156887f29465634df7bf2",
+      "snapshotPath": "assets/13e5a5093d10373247e5824f300fb79328467a5bbad156887f29465634df7bf2.jpg",
+      "sha256": "13e5a5093d10373247e5824f300fb79328467a5bbad156887f29465634df7bf2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 36000
+    }
+  ],
+  "sourceFingerprint": "d27f8502af36f147954e9d5761aeb5d21cce7ae3060f49f9b5d065bf63b044c9",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "商务部办公厅 教育部办公厅 人力资源社会保障部办公厅 关于举办2024年全国国家级经济技术开发区高校毕业生网络招聘会活动的通知",
+    "listPublishDate": "2024-04-15",
+    "sourceOrder": 89,
+    "detailPublishDate": "2024-04-15"
+  }
+}

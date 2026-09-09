@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:1665db4b335c0b9ba5b208066d36c56af81cdc2fa8ca119691ab77f19b97b4ac",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/FPN87K1T-qdj_dMmZoCz2A",
+    "url": "https://mp.weixin.qq.com/s/FPN87K1T-qdj_dMmZoCz2A"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学2026年“寒假促进就业暖心行动”就业工作安排",
+    "source": "",
+    "publishDate": "2026-01-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/FPN87K1T-qdj_dMmZoCz2A"
+  },
+  "resources": [],
+  "sourceFingerprint": "3e6b07d625cee0fbb33dbd806ce8455ed4f71dbc6a67163c9115e3728c63215a",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "长春大学2026年“寒假促进就业暖心行动”就业工作安排",
+    "listPublishDate": "2026-01-29",
+    "sourceOrder": 81
+  }
+}

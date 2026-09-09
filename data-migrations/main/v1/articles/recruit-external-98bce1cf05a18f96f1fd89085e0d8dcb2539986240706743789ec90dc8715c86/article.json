@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:98bce1cf05a18f96f1fd89085e0d8dcb2539986240706743789ec90dc8715c86",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/FG8Ght4Dd1oyl8YMsW2_SQ",
+    "url": "https://mp.weixin.qq.com/s/FG8Ght4Dd1oyl8YMsW2_SQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林西部地区应用型人才暨白城师范学院2025届毕业生就业洽谈会邀请函",
+    "source": "",
+    "publishDate": "2024-09-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/FG8Ght4Dd1oyl8YMsW2_SQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "112fc23c92c6dcf0473d27f6deae69b3d8ffde5d70d03669a505bf283a5a6a46",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "吉林西部地区应用型人才暨白城师范学院2025届毕业生就业洽谈会邀请函",
+    "listPublishDate": "2024-09-26",
+    "sourceOrder": 250
+  }
+}

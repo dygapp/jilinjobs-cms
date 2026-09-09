@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c53a15b1156ca4c0537e64482cad853f073da77b71517023f3549f73a73067b7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/bz8oEU8_2hIVTcayuy5SFA",
+    "url": "https://mp.weixin.qq.com/s/bz8oEU8_2hIVTcayuy5SFA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省2024年旅游类专业学生专场双选会在长春大学旅游学院如期举行",
+    "source": "",
+    "publishDate": "2024-04-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/bz8oEU8_2hIVTcayuy5SFA"
+  },
+  "resources": [],
+  "sourceFingerprint": "e1642d7c99b664e4f6e67d7dc9ec5d3dab57a3d248f317fb751aaabeac7ac883",
+  "evidence": {
+    "listPage": 107,
+    "listTitle": "吉林省2024年旅游类专业学生专场双选会在长春大学旅游学院如期举行",
+    "listPublishDate": "2024-04-23",
+    "sourceOrder": 1070
+  }
+}

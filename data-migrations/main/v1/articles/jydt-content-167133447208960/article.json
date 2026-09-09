@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:167133447208960",
+    "contentId": "167133447208960",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=167133447208960"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "海南：启动毕业生就业“百日冲刺”行动",
+    "source": "",
+    "publishDate": "2023-07-07",
+    "bodyHtml": "\n                        <p><span style=\"font-size:18px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">&nbsp; &nbsp; &nbsp;近日，海南省印发了<strong>《海南省2023届高校毕业生就业“百日冲刺”行动方案》</strong>（以下简称《方案》），明确通过开展“百日冲刺”行动，引导毕业生主动求职，帮助更多毕业生落实就业去向，多措并举促进2023届高校毕业生顺利就业、尽早就业。</span></span></p>\n\n<p><span style=\"font-size:18px\"><span style=\"font-family:Arial,Helvetica,sans-serif\"><strong>&nbsp; &nbsp; &nbsp;《方案》明确</strong>，各高校、三亚崖州湾科技城管理局要提高访企拓岗促就业专项行动成效，提升校园招聘供需匹配度，发挥“互联网+就业”资源优势，开展中小微企业吸纳毕业生就业政策落实行动，针对未落实去向毕业生的情况，有针对性地拓展市场性岗位，更好地匹配毕业生的就业需求。</span></span></p>\n\n<p><span style=\"font-size:18px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">&nbsp; &nbsp; &nbsp; &nbsp;针对部分毕业生“求稳”和“慢就业”等心态，开展有针对性的就业指导和形式多样的主题教育活动，帮助毕业生树立积极正向的就业观，组织未落实就业去向的毕业生“走出去”，了解相关行业和用人单位，激发求职动力。持续开展“万企进校园”活动，保持校园招聘的热度和学生参与度。</span></span></p>\n\n<p><span style=\"font-size:18px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">&nbsp; &nbsp; &nbsp; “百日冲刺”期间，各高校重点对求职受阻和困难家庭毕业生开展就业帮扶，至少为每一名就业困难群体毕业生精准推送3个以上岗位。鼓励教师陪同学生投递简历，帮助学生分析诊断求职中的问题，完善个人简历，合理选择就业目标，提升求职技能和就业能力。</span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "b86292d2bebb08008cd745a33916209d37fd4a15ca4725270558c8e1d9be6389",
+  "evidence": {
+    "listPage": 114,
+    "listTitle": "海南：启动毕业生就业“百日冲刺”行动",
+    "listPublishDate": "2023-07-07",
+    "sourceOrder": 1137,
+    "detailPublishDate": "2023-07-07"
+  }
+}

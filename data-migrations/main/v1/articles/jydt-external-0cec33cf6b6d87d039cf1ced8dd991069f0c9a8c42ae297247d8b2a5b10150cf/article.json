@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0cec33cf6b6d87d039cf1ced8dd991069f0c9a8c42ae297247d8b2a5b10150cf",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Rh2BRXZSQOXEInOt9RVZVg",
+    "url": "https://mp.weixin.qq.com/s/Rh2BRXZSQOXEInOt9RVZVg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“深化校企合作，厚植产教融合”——白山市人社局与长白山职业技术学院共同开展访企拓岗行动",
+    "source": "",
+    "publishDate": "2025-06-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Rh2BRXZSQOXEInOt9RVZVg"
+  },
+  "resources": [],
+  "sourceFingerprint": "eeccd5d47c8c3b13a9a68ef96e074a328817dd77a1e4ea85bd22be42e0abc48f",
+  "evidence": {
+    "listPage": 78,
+    "listTitle": "“深化校企合作，厚植产教融合”——白山市人社局与长白山职业技术学院共同开展访企拓岗行动",
+    "listPublishDate": "2025-06-26",
+    "sourceOrder": 771
+  }
+}

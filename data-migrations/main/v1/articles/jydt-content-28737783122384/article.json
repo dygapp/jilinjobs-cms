@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122384",
+    "contentId": "28737783122384",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122384"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省三年内为每个行政村配一名",
+    "source": "",
+    "publishDate": "2009-04-12",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省三年内为每个行政村配一名</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-12 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 新华网吉林频道２月１７日电（记者姚湜）记者从１７日召开的吉林省就业工作会议上了解到，吉林省将出台一系列优惠政策鼓励和引导高校毕业生到城乡基层就业，拟从今年起利用三年时间，使每个行政村均有\"大学生村官\"。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 据悉，吉林省拟在今年启动实施\"一村一名大学生\"工程，先行试点，用三年时间在每个行政村安排一名高校毕业生协助村委会工作。在村工作期间，每人每月补助不低于７００元的生活费，并按规定参加有关社会保险，所需资金由省财政和当地政府共同负担。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 同时，在城镇基层，吉林省计划启动实施\"大学生充实社区服务\"项目，利用两年时间向每个社区选派一至两名高校毕业生从事社会管理和公共服务工作。聘用期间，每人每月按照不低于当地最低工资标准补助生活费。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 另外，吉林省还拟对到农村乡（镇）以下学校和医院从教、从医的高校毕业生给予优惠政策：与县级教育、医疗行政部门签订任职协议书的，按国家有关规定代偿学费或助学贷款。对于面向基层农村和城市社区就业、参加\"三支一扶\"项目的高校毕业生，视基层工作年限在公务员考录时给予不同程度的加分，报考研究生适当给予优惠，并在同等条件下优先录取。（完）</font></p> <p><br><font size=\"2\">&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "b227560d5719006c6a80b2d03c43107d8ebaf15026d7e7c85877589199644254",
+  "evidence": {
+    "listPage": 179,
+    "listTitle": "吉林省三年内为每个行政村配一名",
+    "listPublishDate": "2009-04-12",
+    "sourceOrder": 1789,
+    "detailPublishDate": "2009-04-12"
+  }
+}

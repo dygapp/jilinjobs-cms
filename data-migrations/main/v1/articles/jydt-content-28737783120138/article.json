@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120138",
+    "contentId": "28737783120138",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120138"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "上海大学生创业高学历者居多 65%为硕士、博士",
+    "source": "",
+    "publishDate": "2009-06-26",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">上海大学生创业高学历者居多 65%为硕士、博士</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-6-26 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 在沪开幕的2009全球创业周中国站系列活动传出利好消息。记者今天上午获悉，截至目前，上海市大学生科技创业基金会累计受理创业项目申请1313项，经严格审核共批准资助大学生创业项目356项，目前已有272家完成工商注册。创业企业共获得各类政府基金资助93项，资金总额1865万元，另有20多家企业获得市场化资金支持3523.6万元。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 在科技成果转化方面，创业基金所资助的创业项目共申请发明及专利194项，软件著作权65项，成果转化认定15项，质量体系认证5项，测试报告27项，其他资质和奖励证书28项，并有29家企业获得上海市科技创新资金资助，16家企业获得国家科技部中小企业科技创新基金资助，8家企业获得国家科技部创新基金大学生创业项目资助。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 在所有创业企业中，信息技术类企业约占45%，新材料、生物医药行业约占13%，机械制造类企业约占12%，服务咨询类企业约占13%，其他行业(包含现代农业、环保行业等)约占13%。大学生创业者所涉足的行业与上海的重点产业基本吻合。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 此外，本市的大学毕业生创业带动就业效应逐渐显现。创业企业为1905人提供了就业岗位，其中本科以上学历1413人。在创业者中有65%为硕士、博士，61%为非上海生源。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 为更准确反映大学生创业企业的实际情况和孵化效果，市大学生科技创业基金会还请来专业投资咨询公司，根据企业信息动态跟踪管理系统及企业实地调研情况，对大学生创业企业进行了打分与分类。经严格评估后发现，经营很好且发展潜力大的A类企业占28%，这个比例比去年末的调查足足上升了13个百分点。 </font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "7902ab964b1829da41f797ac255b0a95fa3742fbd90f473a8ef84d5e182546f3",
+  "evidence": {
+    "listPage": 171,
+    "listTitle": "上海大学生创业高学历者居多 65%为硕士、博士",
+    "listPublishDate": "2009-06-26",
+    "sourceOrder": 1708,
+    "detailPublishDate": "2009-06-26"
+  }
+}

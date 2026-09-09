@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122794",
+    "contentId": "28737783122794",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122794"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于继续举办吉林省高校就业指导教师培训班的通知",
+    "source": "",
+    "publishDate": "2016-09-19",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于继续举办吉林省高校就业指导教师培训班的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2016-9-19 8:04:47</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://fd66358484c5098897c7ed20927b5d2b6ec47bb922e1e18ed903d19a49944f7d\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://5b77692ccaea388a8d6ad0b42abb1a4e71330bcabd3d3eac3af9142b6a7131be\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://e0e2ea373ce9cb2617a80d779acd2192522787da9dcd638cec9e0c1d9dcdec0d\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://28143b55b24bcb1ba64693257bb0517fcb76aeaea13dc68b7466bc67e12bd67c\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=6117a446-6012-4c03-8a76-43c83861dc71\">报名表.docx</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360986910395712506502074.jpg",
+      "originalReference": "/chistory/cms/imgs/6360986910395712506502074.jpg",
+      "token": "migration-resource://fd66358484c5098897c7ed20927b5d2b6ec47bb922e1e18ed903d19a49944f7d",
+      "snapshotPath": "assets/fd66358484c5098897c7ed20927b5d2b6ec47bb922e1e18ed903d19a49944f7d.jpg",
+      "sha256": "fd66358484c5098897c7ed20927b5d2b6ec47bb922e1e18ed903d19a49944f7d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 143592
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360986910470712504872945.jpg",
+      "originalReference": "/chistory/cms/imgs/6360986910470712504872945.jpg",
+      "token": "migration-resource://5b77692ccaea388a8d6ad0b42abb1a4e71330bcabd3d3eac3af9142b6a7131be",
+      "snapshotPath": "assets/5b77692ccaea388a8d6ad0b42abb1a4e71330bcabd3d3eac3af9142b6a7131be.jpg",
+      "sha256": "5b77692ccaea388a8d6ad0b42abb1a4e71330bcabd3d3eac3af9142b6a7131be",
+      "contentType": "image/jpeg",
+      "sizeBytes": 164396
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360986910481650009074006.jpg",
+      "originalReference": "/chistory/cms/imgs/6360986910481650009074006.jpg",
+      "token": "migration-resource://e0e2ea373ce9cb2617a80d779acd2192522787da9dcd638cec9e0c1d9dcdec0d",
+      "snapshotPath": "assets/e0e2ea373ce9cb2617a80d779acd2192522787da9dcd638cec9e0c1d9dcdec0d.jpg",
+      "sha256": "e0e2ea373ce9cb2617a80d779acd2192522787da9dcd638cec9e0c1d9dcdec0d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 107002
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360986910489462506816577.jpg",
+      "originalReference": "/chistory/cms/imgs/6360986910489462506816577.jpg",
+      "token": "migration-resource://28143b55b24bcb1ba64693257bb0517fcb76aeaea13dc68b7466bc67e12bd67c",
+      "snapshotPath": "assets/28143b55b24bcb1ba64693257bb0517fcb76aeaea13dc68b7466bc67e12bd67c.jpg",
+      "sha256": "28143b55b24bcb1ba64693257bb0517fcb76aeaea13dc68b7466bc67e12bd67c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 55819
+    }
+  ],
+  "sourceFingerprint": "2ca777bfe8c658970565c03ee4be33b7ff5c914521a98afd2022a2b8bc7f78e5",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "关于继续举办吉林省高校就业指导教师培训班的通知",
+    "listPublishDate": "2016-09-19",
+    "sourceOrder": 242,
+    "detailPublishDate": "2016-09-19"
+  }
+}

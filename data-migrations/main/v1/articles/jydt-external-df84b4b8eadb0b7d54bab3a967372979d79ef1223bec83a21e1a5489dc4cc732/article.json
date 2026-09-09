@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:df84b4b8eadb0b7d54bab3a967372979d79ef1223bec83a21e1a5489dc4cc732",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1028/173022.htm",
+    "url": "https://www.jlju.edu.cn/info/1028/173022.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学开展“优企引才”定向访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-04-03",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1028/173022.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "7b056f93ac522c8f2fd2bfe24e666165cc2509e031af414f1d425c1e3d44aded",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "吉林建筑大学开展“优企引才”定向访企拓岗促就业专项行动",
+    "listPublishDate": "2026-04-03",
+    "sourceOrder": 323
+  }
+}

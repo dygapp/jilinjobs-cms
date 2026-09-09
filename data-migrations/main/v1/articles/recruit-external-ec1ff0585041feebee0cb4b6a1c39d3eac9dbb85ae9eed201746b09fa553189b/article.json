@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:ec1ff0585041feebee0cb4b6a1c39d3eac9dbb85ae9eed201746b09fa553189b",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/9ZgT3tOAdoStqIHGrC86hg",
+    "url": "https://mp.weixin.qq.com/s/9ZgT3tOAdoStqIHGrC86hg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "四平地区2025届毕业生专场招聘会暨吉林师范大学2025届毕业生秋季双选会邀请函",
+    "source": "",
+    "publishDate": "2024-10-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/9ZgT3tOAdoStqIHGrC86hg"
+  },
+  "resources": [],
+  "sourceFingerprint": "ceded78f4ca12cdb34c59f259db83631b79f0cc0c677366319eb9db7e3101289",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "四平地区2025届毕业生专场招聘会暨吉林师范大学2025届毕业生秋季双选会邀请函",
+    "listPublishDate": "2024-10-22",
+    "sourceOrder": 239
+  }
+}

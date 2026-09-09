@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:6a11fd90dccffc54e870381106745c4d75b88cbbe10104061436ed3cb99d3748",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/cRjXZ1DfI8cG8Q2lrBTfAA",
+    "url": "https://mp.weixin.qq.com/s/cRjXZ1DfI8cG8Q2lrBTfAA"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中共中央 国务院关于实施就业优先战略促进高质量充分就业的意见",
+    "source": "",
+    "publishDate": "2024-09-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/cRjXZ1DfI8cG8Q2lrBTfAA"
+  },
+  "resources": [],
+  "sourceFingerprint": "5c371254f143774112e1e60a47cf428015a1bb74edd5bd8fa55fb8837926b8eb",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "中共中央 国务院关于实施就业优先战略促进高质量充分就业的意见",
+    "listPublishDate": "2024-09-27",
+    "sourceOrder": 73
+  }
+}

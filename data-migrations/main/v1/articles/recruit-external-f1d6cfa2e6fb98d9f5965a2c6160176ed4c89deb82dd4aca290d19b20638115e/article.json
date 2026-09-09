@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:f1d6cfa2e6fb98d9f5965a2c6160176ed4c89deb82dd4aca290d19b20638115e",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/frontend/student/default/chance/largemeetingdetails/",
+    "url": "https://m.bysjy.com.cn/frontend/student/default/chance/largemeetingdetails/?token=yxqqnn0100000019&fair_id=20629"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学2025届秋冬季教育行业毕业生就业洽谈会邀请函",
+    "source": "",
+    "publishDate": "2024-10-11",
+    "bodyHtml": "",
+    "externalUrl": "https://m.bysjy.com.cn/frontend/student/default/chance/largemeetingdetails/?token=yxqqnn0100000019&fair_id=20629"
+  },
+  "resources": [],
+  "sourceFingerprint": "3401c7d8c4b592179221f3117411352fb52c3cdaf622a36fd9d0868769e3f73f",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "长春师范大学2025届秋冬季教育行业毕业生就业洽谈会邀请函",
+    "listPublishDate": "2024-10-11",
+    "sourceOrder": 242
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:53ffbdf94f22d11cdb2e334b68221c5236ca9ec2e5a0e30d541811c3f2bb6789",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ZTOrQOMvRDTlkm0lMJiUmg",
+    "url": "https://mp.weixin.qq.com/s/ZTOrQOMvRDTlkm0lMJiUmg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化校政企三方联动 赋能就业高质量发展——吉林外国语大学成功开展“百校对百县”就业专项对接活动",
+    "source": "",
+    "publishDate": "2026-07-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ZTOrQOMvRDTlkm0lMJiUmg"
+  },
+  "resources": [],
+  "sourceFingerprint": "74d7b87b3e31ad97a00d90e761f81ba908302e1a24e9e08377be558add1d2c53",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "深化校政企三方联动 赋能就业高质量发展——吉林外国语大学成功开展“百校对百县”就业专项对接活动",
+    "listPublishDate": "2026-07-02",
+    "sourceOrder": 58
+  }
+}

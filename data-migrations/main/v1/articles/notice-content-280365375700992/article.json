@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:280365375700992",
+    "contentId": "280365375700992",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=280365375700992"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办全国材料化工行业面向2025届高校毕业生春季招聘活动的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2025-03-25",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://96417994e013d31b943cb52441e9ac74d25b9ec896fb3f0df0a8b6fdba354456\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://dfc79898ea06c6922f27e82cae0cead726ea4c9735dcb30a02ed190df6925a62\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://f7ac0028e02e92fd46fd329519ae0fded4e0dec76b383cc18433c03063306c2f\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://71155aac91618d6de722666c3f4d4a9069714fe946fcbbbf4f518172ba583614\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://0ee2876707fe8ce421169e054a6b42ce57d01e46f5d398d952934392cb266972\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/865b1109-4930-467e-83ba-9888e62739d1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/865b1109-4930-467e-83ba-9888e62739d1.jpg",
+      "token": "migration-resource://96417994e013d31b943cb52441e9ac74d25b9ec896fb3f0df0a8b6fdba354456",
+      "snapshotPath": "assets/96417994e013d31b943cb52441e9ac74d25b9ec896fb3f0df0a8b6fdba354456.jpg",
+      "sha256": "96417994e013d31b943cb52441e9ac74d25b9ec896fb3f0df0a8b6fdba354456",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/820bf396-34b3-414f-899e-cd3eae35c376.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/820bf396-34b3-414f-899e-cd3eae35c376.jpg",
+      "token": "migration-resource://dfc79898ea06c6922f27e82cae0cead726ea4c9735dcb30a02ed190df6925a62",
+      "snapshotPath": "assets/dfc79898ea06c6922f27e82cae0cead726ea4c9735dcb30a02ed190df6925a62.jpg",
+      "sha256": "dfc79898ea06c6922f27e82cae0cead726ea4c9735dcb30a02ed190df6925a62",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/b03b748c-480b-4f80-b77b-8b5120f6b2b0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/b03b748c-480b-4f80-b77b-8b5120f6b2b0.jpg",
+      "token": "migration-resource://f7ac0028e02e92fd46fd329519ae0fded4e0dec76b383cc18433c03063306c2f",
+      "snapshotPath": "assets/f7ac0028e02e92fd46fd329519ae0fded4e0dec76b383cc18433c03063306c2f.jpg",
+      "sha256": "f7ac0028e02e92fd46fd329519ae0fded4e0dec76b383cc18433c03063306c2f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/a575f43d-87d4-4789-94e4-3702d60fb1cd.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/a575f43d-87d4-4789-94e4-3702d60fb1cd.jpg",
+      "token": "migration-resource://71155aac91618d6de722666c3f4d4a9069714fe946fcbbbf4f518172ba583614",
+      "snapshotPath": "assets/71155aac91618d6de722666c3f4d4a9069714fe946fcbbbf4f518172ba583614.jpg",
+      "sha256": "71155aac91618d6de722666c3f4d4a9069714fe946fcbbbf4f518172ba583614",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/f7c837df-ad2d-433a-b891-138298f3109e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/f7c837df-ad2d-433a-b891-138298f3109e.jpg",
+      "token": "migration-resource://0ee2876707fe8ce421169e054a6b42ce57d01e46f5d398d952934392cb266972",
+      "snapshotPath": "assets/0ee2876707fe8ce421169e054a6b42ce57d01e46f5d398d952934392cb266972.jpg",
+      "sha256": "0ee2876707fe8ce421169e054a6b42ce57d01e46f5d398d952934392cb266972",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    }
+  ],
+  "sourceFingerprint": "01c509f12c1b708a6b1da6cc91e57287e4058f4be2a4d11391a6b1212759e630",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "关于举办全国材料化工行业面向2025届高校毕业生春季招聘活动的通知",
+    "listPublishDate": "2025-03-25",
+    "sourceOrder": 52,
+    "detailPublishDate": "2025-03-25"
+  }
+}

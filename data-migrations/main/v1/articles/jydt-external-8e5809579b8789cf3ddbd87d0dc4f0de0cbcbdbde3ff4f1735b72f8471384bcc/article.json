@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8e5809579b8789cf3ddbd87d0dc4f0de0cbcbdbde3ff4f1735b72f8471384bcc",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5175.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5175.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学与淄博市人社局进行校地人才合作洽谈",
+    "source": "",
+    "publishDate": "2025-11-04",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5175.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "d5203faf70b2da27505d0370175206fe21ce7928017440ac0ebab8416ff70aae",
+  "evidence": {
+    "listPage": 64,
+    "listTitle": "长春工业大学与淄博市人社局进行校地人才合作洽谈",
+    "listPublishDate": "2025-11-04",
+    "sourceOrder": 632
+  }
+}

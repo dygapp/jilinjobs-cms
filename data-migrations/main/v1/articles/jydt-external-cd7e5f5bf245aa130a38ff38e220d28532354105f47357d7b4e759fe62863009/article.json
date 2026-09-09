@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cd7e5f5bf245aa130a38ff38e220d28532354105f47357d7b4e759fe62863009",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/YRB6bYiJpGdJW5RwZ9FDMw",
+    "url": "https://mp.weixin.qq.com/s/YRB6bYiJpGdJW5RwZ9FDMw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林外国语大学“寒假促就业暖心行动” 2026年寒假就业服务专属指南",
+    "source": "",
+    "publishDate": "2026-01-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/YRB6bYiJpGdJW5RwZ9FDMw"
+  },
+  "resources": [],
+  "sourceFingerprint": "f718fa0f97276e8a6c416a1452bab28929a39dc9f64848e37571c0e68cae7191",
+  "evidence": {
+    "listPage": 51,
+    "listTitle": "吉林外国语大学“寒假促就业暖心行动” 2026年寒假就业服务专属指南",
+    "listPublishDate": "2026-01-14",
+    "sourceOrder": 504
+  }
+}

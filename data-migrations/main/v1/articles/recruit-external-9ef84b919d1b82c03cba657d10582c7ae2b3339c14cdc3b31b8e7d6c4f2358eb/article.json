@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:9ef84b919d1b82c03cba657d10582c7ae2b3339c14cdc3b31b8e7d6c4f2358eb",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/jobfair/fairdetails.html",
+    "url": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=9qWexThvpJcmu2X8b8qPa4"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“健康中国 筑梦未来”全国中医药院校2023届毕业生秋冬季线上供需共享双选会",
+    "source": "",
+    "publishDate": "2022-11-14",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=9qWexThvpJcmu2X8b8qPa4"
+  },
+  "resources": [],
+  "sourceFingerprint": "746f54f2b4faf59c6bb87aeec304a6a51b71a1b64f917b286c528f769f828393",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "“健康中国 筑梦未来”全国中医药院校2023届毕业生秋冬季线上供需共享双选会",
+    "listPublishDate": "2022-11-14",
+    "sourceOrder": 327
+  }
+}

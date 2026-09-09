@@ -1,0 +1,121 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:179480039538688",
+    "contentId": "179480039538688",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=179480039538688"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于做好2024年度从普通高等学校应届毕业生中选拔海军飞行学员工作的通知",
+    "source": "中国海军招飞网",
+    "publishDate": "2023-09-18",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1271\" src=\"migration-resource://ba126713f09e05f4df3b00fa5b6d93ed4f4fdef9109e0e60e38779d279aca034\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1271\" src=\"migration-resource://862808eafd3cd6d93edbe2d80ec43ca44000cb509d72792712f3cf9abbd0270d\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1271\" src=\"migration-resource://619bf2bfba8b801b32ec5f71e8b44cb4422441d2162202f1686aa19860feff08\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1271\" src=\"migration-resource://b1ddffb80952e0134150f1d7aa2bad247e5ef43b3b2aa923b7f4580eb14483ab\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1271\" src=\"migration-resource://29904a0a8b6f1e1adcc2dc5eda3ace24d30b0b341e21c54a96391439b75e71de\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1271\" src=\"migration-resource://134f698450b0244dcc16e257a3bdabe4361e3b5984272e459c5d44df5c13b75a\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1271\" src=\"migration-resource://231ee56303a773a0347c782653b13ab5300f6aaa23e6b261aec9e328a044d115\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1271\" src=\"migration-resource://933a8b3198ae3c06603e79ceb576c9d6ad7b8e91185232b8046940899e539c52\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1271\" src=\"migration-resource://cfd07624c685c5c4c80a681692329557ef71b201fd07b0f0c2f4fd6471ac89aa\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-18/b192cfb4-49a5-4135-b35e-15ac8e9c0504.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-18/b192cfb4-49a5-4135-b35e-15ac8e9c0504.jpg",
+      "token": "migration-resource://ba126713f09e05f4df3b00fa5b6d93ed4f4fdef9109e0e60e38779d279aca034",
+      "snapshotPath": "assets/ba126713f09e05f4df3b00fa5b6d93ed4f4fdef9109e0e60e38779d279aca034.jpg",
+      "sha256": "ba126713f09e05f4df3b00fa5b6d93ed4f4fdef9109e0e60e38779d279aca034",
+      "contentType": "image/jpeg",
+      "sizeBytes": 189293
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-18/37077125-392f-4a7b-a77c-db5a41802c98.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-18/37077125-392f-4a7b-a77c-db5a41802c98.jpg",
+      "token": "migration-resource://862808eafd3cd6d93edbe2d80ec43ca44000cb509d72792712f3cf9abbd0270d",
+      "snapshotPath": "assets/862808eafd3cd6d93edbe2d80ec43ca44000cb509d72792712f3cf9abbd0270d.jpg",
+      "sha256": "862808eafd3cd6d93edbe2d80ec43ca44000cb509d72792712f3cf9abbd0270d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 193712
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-18/d23f40dd-0945-4cb3-99d2-75b4f1f10a59.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-18/d23f40dd-0945-4cb3-99d2-75b4f1f10a59.jpg",
+      "token": "migration-resource://619bf2bfba8b801b32ec5f71e8b44cb4422441d2162202f1686aa19860feff08",
+      "snapshotPath": "assets/619bf2bfba8b801b32ec5f71e8b44cb4422441d2162202f1686aa19860feff08.jpg",
+      "sha256": "619bf2bfba8b801b32ec5f71e8b44cb4422441d2162202f1686aa19860feff08",
+      "contentType": "image/jpeg",
+      "sizeBytes": 206338
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-18/62fccee9-e3b2-48c7-bc82-8eaf0ad6956f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-18/62fccee9-e3b2-48c7-bc82-8eaf0ad6956f.jpg",
+      "token": "migration-resource://b1ddffb80952e0134150f1d7aa2bad247e5ef43b3b2aa923b7f4580eb14483ab",
+      "snapshotPath": "assets/b1ddffb80952e0134150f1d7aa2bad247e5ef43b3b2aa923b7f4580eb14483ab.jpg",
+      "sha256": "b1ddffb80952e0134150f1d7aa2bad247e5ef43b3b2aa923b7f4580eb14483ab",
+      "contentType": "image/jpeg",
+      "sizeBytes": 199628
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-18/225047de-a97e-4146-a1c9-3639439e9fa3.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-18/225047de-a97e-4146-a1c9-3639439e9fa3.jpg",
+      "token": "migration-resource://29904a0a8b6f1e1adcc2dc5eda3ace24d30b0b341e21c54a96391439b75e71de",
+      "snapshotPath": "assets/29904a0a8b6f1e1adcc2dc5eda3ace24d30b0b341e21c54a96391439b75e71de.jpg",
+      "sha256": "29904a0a8b6f1e1adcc2dc5eda3ace24d30b0b341e21c54a96391439b75e71de",
+      "contentType": "image/jpeg",
+      "sizeBytes": 103266
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-18/a434709b-62c9-4af4-8c47-b39ca4c70ec5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-18/a434709b-62c9-4af4-8c47-b39ca4c70ec5.jpg",
+      "token": "migration-resource://134f698450b0244dcc16e257a3bdabe4361e3b5984272e459c5d44df5c13b75a",
+      "snapshotPath": "assets/134f698450b0244dcc16e257a3bdabe4361e3b5984272e459c5d44df5c13b75a.jpg",
+      "sha256": "134f698450b0244dcc16e257a3bdabe4361e3b5984272e459c5d44df5c13b75a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 199206
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-18/7402ef9d-f8b5-4e8f-b75d-71a8e228d77e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-18/7402ef9d-f8b5-4e8f-b75d-71a8e228d77e.jpg",
+      "token": "migration-resource://231ee56303a773a0347c782653b13ab5300f6aaa23e6b261aec9e328a044d115",
+      "snapshotPath": "assets/231ee56303a773a0347c782653b13ab5300f6aaa23e6b261aec9e328a044d115.jpg",
+      "sha256": "231ee56303a773a0347c782653b13ab5300f6aaa23e6b261aec9e328a044d115",
+      "contentType": "image/jpeg",
+      "sizeBytes": 190853
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-18/95417729-4d03-4e9b-9c2b-fc69dc0713df.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-18/95417729-4d03-4e9b-9c2b-fc69dc0713df.jpg",
+      "token": "migration-resource://933a8b3198ae3c06603e79ceb576c9d6ad7b8e91185232b8046940899e539c52",
+      "snapshotPath": "assets/933a8b3198ae3c06603e79ceb576c9d6ad7b8e91185232b8046940899e539c52.jpg",
+      "sha256": "933a8b3198ae3c06603e79ceb576c9d6ad7b8e91185232b8046940899e539c52",
+      "contentType": "image/jpeg",
+      "sizeBytes": 186174
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-18/21dd53a8-121a-4855-aa94-019b7552ecd1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-18/21dd53a8-121a-4855-aa94-019b7552ecd1.jpg",
+      "token": "migration-resource://cfd07624c685c5c4c80a681692329557ef71b201fd07b0f0c2f4fd6471ac89aa",
+      "snapshotPath": "assets/cfd07624c685c5c4c80a681692329557ef71b201fd07b0f0c2f4fd6471ac89aa.jpg",
+      "sha256": "cfd07624c685c5c4c80a681692329557ef71b201fd07b0f0c2f4fd6471ac89aa",
+      "contentType": "image/jpeg",
+      "sizeBytes": 181658
+    }
+  ],
+  "sourceFingerprint": "76903821a14ac61e0f78733c594b24f94077f6bf2e7bbd98b1ae55287c591be1",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "关于做好2024年度从普通高等学校应届毕业生中选拔海军飞行学员工作的通知",
+    "listPublishDate": "2023-09-18",
+    "sourceOrder": 97,
+    "detailPublishDate": "2023-09-18"
+  }
+}

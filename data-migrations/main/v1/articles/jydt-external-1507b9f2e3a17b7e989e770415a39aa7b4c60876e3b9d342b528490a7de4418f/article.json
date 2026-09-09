@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1507b9f2e3a17b7e989e770415a39aa7b4c60876e3b9d342b528490a7de4418f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/KLqtoZcVb9P3GS9Wb7341A",
+    "url": "https://mp.weixin.qq.com/s/KLqtoZcVb9P3GS9Wb7341A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林通用航空职业技术学院召开2026届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2026-03-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/KLqtoZcVb9P3GS9Wb7341A"
+  },
+  "resources": [],
+  "sourceFingerprint": "481674ca675942e60e4537a042d94ee53647af44b964b756966e6c9554f9c97d",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "吉林通用航空职业技术学院召开2026届毕业生就业工作推进会",
+    "listPublishDate": "2026-03-06",
+    "sourceOrder": 438
+  }
+}

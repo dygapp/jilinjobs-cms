@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ff70aa2062c542f61b00a7fa4866613dc155a119a75827607360a176cb7346c9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1086/78970.htm",
+    "url": "https://www.ccsfu.edu.cn/info/1086/78970.htm?sessionid=-1365758443"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学举办“先生向北 青春聚吉”大学生留吉发展宣讲报告会",
+    "source": "",
+    "publishDate": "2025-04-25",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccsfu.edu.cn/info/1086/78970.htm?sessionid=-1365758443"
+  },
+  "resources": [],
+  "sourceFingerprint": "b47ba51625d76a5721133b89246132039f250aac7287ba1441c065b5b4a40def",
+  "evidence": {
+    "listPage": 93,
+    "listTitle": "长春师范大学举办“先生向北 青春聚吉”大学生留吉发展宣讲报告会",
+    "listPublishDate": "2025-04-25",
+    "sourceOrder": 926
+  }
+}

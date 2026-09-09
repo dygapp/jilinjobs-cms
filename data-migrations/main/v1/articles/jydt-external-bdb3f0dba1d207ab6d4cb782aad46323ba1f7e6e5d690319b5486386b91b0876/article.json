@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bdb3f0dba1d207ab6d4cb782aad46323ba1f7e6e5d690319b5486386b91b0876",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/XHuw6Ke8hYESO6eBS34U7Q",
+    "url": "https://mp.weixin.qq.com/s/XHuw6Ke8hYESO6eBS34U7Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教融合 共育汽检英才——吉林交通职业技术学院与广电计量检测集团股份有限公司成功举办校企合作洽谈会",
+    "source": "",
+    "publishDate": "2026-04-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/XHuw6Ke8hYESO6eBS34U7Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "4cd709c041cea6cc32091dbc6013e4305ae93dc1c49e56e1dc80f8dcf2ad8d73",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "深化产教融合 共育汽检英才——吉林交通职业技术学院与广电计量检测集团股份有限公司成功举办校企合作洽谈会",
+    "listPublishDate": "2026-04-27",
+    "sourceOrder": 240
+  }
+}

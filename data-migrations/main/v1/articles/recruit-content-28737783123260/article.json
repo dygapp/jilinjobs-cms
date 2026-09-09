@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123260",
+    "contentId": "28737783123260",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123260"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "河北：河北出台新政策，高校毕业生可先落户后就业",
+    "source": "",
+    "publishDate": "2009-05-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">河北：河北出台新政策，高校毕业生可先落户后就业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-5-6 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 河北省日前出台新的户籍改革政策，毕业未满三年的大专以上学历毕业生，与人才交流中心签订代理协议的，可于择业前在设区城市市区办理落户手续，实行高校毕业生先落户后就业政策。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 据了解，高校毕业生和农民工是当前社会关注的热点，也是城镇人口增长的主要来源。考虑到目前高校毕业生择业难，并实行户口可在学校保留两年的政策等情况，河北省新出台的《关于进一步深化户籍管理制度改革的意见》，专门明确了毕业未满三年的大专以上学历毕业生先落户后就业的政策。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 另据了解，对取得一定职业资格、先进称号、作出突出贡献或稳定就业并有稳定住所的人员，也进一步放宽了落户条件。同时还在农民工资格鉴定、评比等方面作出了规定，使其进城落户更具可操作性。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：新华社 <br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "28f6631f76e6db20c74d086bd14e38b1a94423f355d22c8dc437db268099e100",
+  "evidence": {
+    "listPage": 55,
+    "listTitle": "河北：河北出台新政策，高校毕业生可先落户后就业",
+    "listPublishDate": "2009-05-06",
+    "sourceOrder": 544,
+    "detailPublishDate": "2009-05-06"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122496",
+    "contentId": "28737783122496",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122496"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "全国政协十一届二次会议首份提案关注就业问题",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">全国政协十一届二次会议首份提案关注就业问题</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 新华网北京3月2日电（记者夏宇　朱剑敏）据全国政协十一届二次会议提案组3月2日提供的资料显示，由致公党中央提交的“关于解决国际金融危机影响下我国就业问题的提案”已被列为本次政协会议的第一号提案。　</font></p> <p><font size=\"2\">　　这份编号为“0001”的提案指出，由于受国际金融危机影响，目前中国国内经济增长速度趋缓使得就业供求关系结构性矛盾突出，解决高校毕业生和农民工就业问题已成为促进就业的重中之重。　</font></p> <p><font size=\"2\">　　针对上述问题，提案建议，国家首先应在长期战略上确立以城乡统筹就业为核心的长期产业发展政策，确立以灵活就业和就地就业为重点的短期扶持政策，促进大学生和农民工就业。此外，提案还在细化与就业相关的法律法规等方面提出了建议。　</font></p> <p><font size=\"2\">　　据大会提案组办公室工作人员介绍，截至3月2日17时，大会已收到提案296件。其中，财贸金融、城乡建设、政治法律、医药卫生、人事福利、教育等方面是委员们关注的热点。　</font></p> <p><font size=\"2\">　　大会规定，3月9日14时为提交提案的截止时间。<br>&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "c2b9ffccd37231a9112a0eee4d58ca5376234e1d166d71f1fa5aba4557c76d94",
+  "evidence": {
+    "listPage": 187,
+    "listTitle": "全国政协十一届二次会议首份提案关注就业问题",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1868,
+    "detailPublishDate": "2009-04-04"
+  }
+}

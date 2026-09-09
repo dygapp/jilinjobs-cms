@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:abda182a89d03cb8da2010c92b2fb24244f9ca0eb85e843bfc261a18f3ceccf9",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/vR9oHQzixPFqn7LakWYOAA",
+    "url": "https://mp.weixin.qq.com/s/vR9oHQzixPFqn7LakWYOAA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“服务吉林高质量发展” 吉林建筑大学2026届毕业生 “寒假暖心促就业”网络专场双选会邀请函",
+    "source": "",
+    "publishDate": "2026-01-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vR9oHQzixPFqn7LakWYOAA"
+  },
+  "resources": [],
+  "sourceFingerprint": "0d61fb770e20061d55d923716447094f223f3a350cf1ebb7b1a4dc34d405448d",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "“服务吉林高质量发展” 吉林建筑大学2026届毕业生 “寒假暖心促就业”网络专场双选会邀请函",
+    "listPublishDate": "2026-01-15",
+    "sourceOrder": 108
+  }
+}

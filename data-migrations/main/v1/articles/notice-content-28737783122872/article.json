@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122872",
+    "contentId": "28737783122872",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122872"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省首届高校创业指导课程教学大赛决赛的通知",
+    "source": "",
+    "publishDate": "2013-11-08",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办吉林省首届高校创业指导课程教学大赛决赛的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2013-11-8 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img src=\"migration-resource://03d9d7e365a3cb5e9fa80713f9cd71f8efe30da34a75b0b57ca140dbe6a29183\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://a2775650f887c73276ce113e01dcf94f1c834f43fbc00fdb524af4a3a41d416a\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://b14e19efbe12c653611689383017c5bda6dba349bb2a11980faa048d332dbdbc\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://8f1851f7a43996cd5001295d7c1d77f878abaf6fe2772b593f3f0cab5bb0366b\" border=\"0\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131108210340526.jpg",
+      "originalReference": "/chistory/cms/imgs/20131108210340526.jpg",
+      "token": "migration-resource://03d9d7e365a3cb5e9fa80713f9cd71f8efe30da34a75b0b57ca140dbe6a29183",
+      "snapshotPath": "assets/03d9d7e365a3cb5e9fa80713f9cd71f8efe30da34a75b0b57ca140dbe6a29183.jpg",
+      "sha256": "03d9d7e365a3cb5e9fa80713f9cd71f8efe30da34a75b0b57ca140dbe6a29183",
+      "contentType": "image/jpeg",
+      "sizeBytes": 74326
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131108210346205.jpg",
+      "originalReference": "/chistory/cms/imgs/20131108210346205.jpg",
+      "token": "migration-resource://a2775650f887c73276ce113e01dcf94f1c834f43fbc00fdb524af4a3a41d416a",
+      "snapshotPath": "assets/a2775650f887c73276ce113e01dcf94f1c834f43fbc00fdb524af4a3a41d416a.jpg",
+      "sha256": "a2775650f887c73276ce113e01dcf94f1c834f43fbc00fdb524af4a3a41d416a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88095
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131108210351913.jpg",
+      "originalReference": "/chistory/cms/imgs/20131108210351913.jpg",
+      "token": "migration-resource://b14e19efbe12c653611689383017c5bda6dba349bb2a11980faa048d332dbdbc",
+      "snapshotPath": "assets/b14e19efbe12c653611689383017c5bda6dba349bb2a11980faa048d332dbdbc.jpg",
+      "sha256": "b14e19efbe12c653611689383017c5bda6dba349bb2a11980faa048d332dbdbc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 59008
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131108210355908.jpg",
+      "originalReference": "/chistory/cms/imgs/20131108210355908.jpg",
+      "token": "migration-resource://8f1851f7a43996cd5001295d7c1d77f878abaf6fe2772b593f3f0cab5bb0366b",
+      "snapshotPath": "assets/8f1851f7a43996cd5001295d7c1d77f878abaf6fe2772b593f3f0cab5bb0366b.jpg",
+      "sha256": "8f1851f7a43996cd5001295d7c1d77f878abaf6fe2772b593f3f0cab5bb0366b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81189
+    }
+  ],
+  "sourceFingerprint": "da37c7fc0ce5abdbfa277ec6470bded3ff63e886f0e361f851487a1d75ef1376",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "关于举办吉林省首届高校创业指导课程教学大赛决赛的通知",
+    "listPublishDate": "2013-11-08",
+    "sourceOrder": 335,
+    "detailPublishDate": "2013-11-08"
+  }
+}

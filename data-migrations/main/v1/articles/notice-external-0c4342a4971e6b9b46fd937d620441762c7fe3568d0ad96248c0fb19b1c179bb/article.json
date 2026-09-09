@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:0c4342a4971e6b9b46fd937d620441762c7fe3568d0ad96248c0fb19b1c179bb",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/elEZPy84-M481rjueyg7iQ",
+    "url": "https://mp.weixin.qq.com/s/elEZPy84-M481rjueyg7iQ"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平：促进高质量充分就业",
+    "source": "",
+    "publishDate": "2024-11-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/elEZPy84-M481rjueyg7iQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "dc2d474955c71652ffb494924d2eff972e3a5ecbf2b9b8fb3719d229f256c96e",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "习近平：促进高质量充分就业",
+    "listPublishDate": "2024-11-01",
+    "sourceOrder": 70
+  }
+}

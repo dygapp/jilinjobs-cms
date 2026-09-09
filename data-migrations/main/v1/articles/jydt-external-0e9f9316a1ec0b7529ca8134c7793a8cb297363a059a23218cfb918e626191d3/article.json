@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0e9f9316a1ec0b7529ca8134c7793a8cb297363a059a23218cfb918e626191d3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1071/5648.htm",
+    "url": "https://www.jlart.edu.cn/info/1071/5648.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“暖心拓岗”筑桥梁 校企协同促就业吉林艺术学院领导带队赴吉林省吉商商会访企拓岗",
+    "source": "",
+    "publishDate": "2026-01-23",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlart.edu.cn/info/1071/5648.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "357602a2043f14e5ebc5ba00f88d79538268aac02515ff1c42924de1a76617d7",
+  "evidence": {
+    "listPage": 49,
+    "listTitle": "“暖心拓岗”筑桥梁 校企协同促就业吉林艺术学院领导带队赴吉林省吉商商会访企拓岗",
+    "listPublishDate": "2026-01-23",
+    "sourceOrder": 483
+  }
+}

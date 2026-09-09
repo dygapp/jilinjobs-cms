@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86131393708032",
+    "contentId": "86131393708032",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86131393708032"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "白城医学高等专科学校为毕业生提供不断线就业服务",
+    "source": "白城医学高等专科学校",
+    "publishDate": "2022-04-12",
+    "bodyHtml": "\n                        <p>面对来势汹汹的新冠肺炎疫情，白城医学高等专科学校于3月9日开始了封校管理，并对在校生和教职员工采取严格的疫情管控措施。针对我省当前的疫情防控形势，学校党委立即做出将毕业生就业工作全面转入线上的决策部署，努力为毕业生提供不断线的就业服务，确保毕业生就业工作平稳有序推进。</p>\n\n<p>3月10日，学校组织召开全校2022年就业工作视频会，传达教育部和省教育厅相关会议精神，安排部署就业工作，迅速完善和调整校院两级就业工作领导小组组成人员及工作职责，压实“一把手”责任，落实就业包保任务，全面启动就业工作。</p>\n\n<p>学校于3月16日-31日期间，举办“奋斗有我‘就’在吉林”2022年春季毕业生空中双选会，邀请167家用人单位参会，为毕业生提供479个职位、3000余个就业岗位。3月17日学校还组织毕业生参加了由学校协办、省内8家医药类高校参加的吉林省医药毕业生“创业有你‘就’在吉林”线上大型公益洽谈会。学校还将在3月31日-4月15日期间，与东北地区20所医药高校联合举办“东北三省医药类高校2022届毕业生空中双选会”，旨在为毕业生提供更多的就业岗位，尽早实现就业。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"604\" src=\"migration-resource://b9f208c17e20822c9ad3fd8d25302b2cd1d02e451445b50ba0ff4ac966dff22e\" width=\"326\"></p>\n\n<p>另一方面，为缓解疫情给毕业生带来的心理影响，学校开通了“400心理咨询热线”，由专业的心理咨询教师24小时提供心理咨询服务。学校还与北森生涯研究院联合开展“烛光行动”，开通线上课堂，为学生提供心态管理、自我认知、职业探索、简历指导、面试技巧等课程，同时开通线上一对一职业生涯规划咨询通道，细心、深度、专业地为学生答疑解惑。</p>\n\n<p>下一步，学校将进一步强化就业指导与服务，主动出击，开拓就业市场，克服疫情所带来的种种困难，多措并举为毕业生提供更多更优质的就业岗位，全力确保毕业生平稳就业。</p>\n\n<p><strong>（白城医学高等专科学校 季伟达）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/9af3c240-f1f2-45bf-84eb-6cc7a4e79fae.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/9af3c240-f1f2-45bf-84eb-6cc7a4e79fae.jpg",
+      "token": "migration-resource://b9f208c17e20822c9ad3fd8d25302b2cd1d02e451445b50ba0ff4ac966dff22e",
+      "snapshotPath": "assets/b9f208c17e20822c9ad3fd8d25302b2cd1d02e451445b50ba0ff4ac966dff22e.jpg",
+      "sha256": "b9f208c17e20822c9ad3fd8d25302b2cd1d02e451445b50ba0ff4ac966dff22e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 36118
+    }
+  ],
+  "sourceFingerprint": "c53932473b43364934f497a3466295d5269b550599f07fd78822fc1366824d06",
+  "evidence": {
+    "listPage": 124,
+    "listTitle": "白城医学高等专科学校为毕业生提供不断线就业服务",
+    "listPublishDate": "2022-04-12",
+    "sourceOrder": 1233,
+    "detailPublishDate": "2022-04-12"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:53ffafe822f39982332ad07e8366af12922d9e7bc5f9cf9be75db09855b1fd16",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xcbmnPZCOhEAy5E5RuuuDQ",
+    "url": "https://mp.weixin.qq.com/s/xcbmnPZCOhEAy5E5RuuuDQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业 校企合作谋发展——长春职业技术大学深入长三角地区开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2025-11-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xcbmnPZCOhEAy5E5RuuuDQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "5c2578da6ba8b8f7f3ce3ee3943549fba91b45b253b1e97ec99e71218f9c5552",
+  "evidence": {
+    "listPage": 60,
+    "listTitle": "访企拓岗促就业 校企合作谋发展——长春职业技术大学深入长三角地区开展访企拓岗专项行动",
+    "listPublishDate": "2025-11-18",
+    "sourceOrder": 594
+  }
+}

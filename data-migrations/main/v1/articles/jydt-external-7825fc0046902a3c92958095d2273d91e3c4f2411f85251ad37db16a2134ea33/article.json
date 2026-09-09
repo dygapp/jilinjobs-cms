@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7825fc0046902a3c92958095d2273d91e3c4f2411f85251ad37db16a2134ea33",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1101/14986.htm",
+    "url": "https://www.ccit.edu.cn/info/1101/14986.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院校领导带队赴云南开展校企合作交流调研",
+    "source": "",
+    "publishDate": "2025-12-09",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccit.edu.cn/info/1101/14986.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "b0e43fbb9eb1b3936a934ae7b8bf33a1f8cd85756ad346e5017a41896c5248b4",
+  "evidence": {
+    "listPage": 56,
+    "listTitle": "长春工程学院校领导带队赴云南开展校企合作交流调研",
+    "listPublishDate": "2025-12-09",
+    "sourceOrder": 555
+  }
+}

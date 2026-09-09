@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5255f6fc402422c384149f381c5063df236e5345781e1a24cf50b083800f9be7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/RfVHd4KfeZOoG6y_Akt7pA",
+    "url": "https://mp.weixin.qq.com/s/RfVHd4KfeZOoG6y_Akt7pA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【寒假促就业暖心行动】吉林工商学院@求职者：提升防范意识 远离求职陷阱",
+    "source": "",
+    "publishDate": "2026-01-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/RfVHd4KfeZOoG6y_Akt7pA"
+  },
+  "resources": [],
+  "sourceFingerprint": "26b03a06aef4be9073ed27c54dce373751010aba1ce960bdff15c8bdcaca028b",
+  "evidence": {
+    "listPage": 51,
+    "listTitle": "【寒假促就业暖心行动】吉林工商学院@求职者：提升防范意识 远离求职陷阱",
+    "listPublishDate": "2026-01-09",
+    "sourceOrder": 507
+  }
+}

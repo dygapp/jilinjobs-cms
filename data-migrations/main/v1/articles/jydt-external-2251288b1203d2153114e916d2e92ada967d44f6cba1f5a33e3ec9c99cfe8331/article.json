@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2251288b1203d2153114e916d2e92ada967d44f6cba1f5a33e3ec9c99cfe8331",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/cYv4d5pu010k9mPi35BcMA",
+    "url": "https://mp.weixin.qq.com/s/cYv4d5pu010k9mPi35BcMA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "华大集团回访长春职业技术大学 共推医药健康产业学院建设落地见效",
+    "source": "",
+    "publishDate": "2026-04-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/cYv4d5pu010k9mPi35BcMA"
+  },
+  "resources": [],
+  "sourceFingerprint": "0aab34e5b4aa4710ce3023b8c2026fa9d5900ff7645d3546c8dc097facac8981",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "华大集团回访长春职业技术大学 共推医药健康产业学院建设落地见效",
+    "listPublishDate": "2026-04-23",
+    "sourceOrder": 252
+  }
+}

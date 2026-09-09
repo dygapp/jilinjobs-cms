@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9071e57cbdc685515f93a24c3b2f3794cd83c922c9d4f46dd73c114bc4be0935",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/-XCrPlGRSHjDDScyxsSl7A",
+    "url": "https://mp.weixin.qq.com/s/-XCrPlGRSHjDDScyxsSl7A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学举行吉林省2026届普通高校毕业生秋季校园招聘活动暨长春师范大学2026届毕业生秋季双选会",
+    "source": "",
+    "publishDate": "2025-10-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/-XCrPlGRSHjDDScyxsSl7A"
+  },
+  "resources": [],
+  "sourceFingerprint": "40fa4c044772f61d7c0c5341055df0d8085a988e14450375e645821b10000264",
+  "evidence": {
+    "listPage": 68,
+    "listTitle": "长春师范大学举行吉林省2026届普通高校毕业生秋季校园招聘活动暨长春师范大学2026届毕业生秋季双选会",
+    "listPublishDate": "2025-10-15",
+    "sourceOrder": 680
+  }
+}

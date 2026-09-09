@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:18cb286d4db34af7502e965a141591450bfa46e6645105082b6a1d4c1a78288e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/0QnzwJBHsF1cGH7vXbh0gQ",
+    "url": "https://mp.weixin.qq.com/s/0QnzwJBHsF1cGH7vXbh0gQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "松原职业技术学院农牧科技分院赴浩淞农业集团走访调研 共商校企合作新篇章",
+    "source": "",
+    "publishDate": "2026-01-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/0QnzwJBHsF1cGH7vXbh0gQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "a656781b80bed0cbdeb45ab73cd9b3e65d99a0cf21486a490d01d3742bd398e5",
+  "evidence": {
+    "listPage": 47,
+    "listTitle": "松原职业技术学院农牧科技分院赴浩淞农业集团走访调研 共商校企合作新篇章",
+    "listPublishDate": "2026-01-30",
+    "sourceOrder": 468
+  }
+}

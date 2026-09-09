@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:97396d9a84e3b12aed67f76147ec9a73d4d17983199f4974829e99fad4ea5c2a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1101/13926.htm",
+    "url": "https://www.ccit.edu.cn/info/1101/13926.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院举办“创业奋斗 ‘就’在吉林——2024届&2025届毕业生‘实习+就业’双选会”",
+    "source": "",
+    "publishDate": "2024-06-01",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccit.edu.cn/info/1101/13926.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "9da581f212e63d8d91adf6c594afe875b185132b87730ef37eeccedb19c382dd",
+  "evidence": {
+    "listPage": 104,
+    "listTitle": "长春工程学院举办“创业奋斗 ‘就’在吉林——2024届&2025届毕业生‘实习+就业’双选会”",
+    "listPublishDate": "2024-06-01",
+    "sourceOrder": 1040
+  }
+}

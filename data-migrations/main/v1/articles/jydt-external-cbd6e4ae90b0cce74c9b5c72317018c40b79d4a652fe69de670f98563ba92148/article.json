@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cbd6e4ae90b0cce74c9b5c72317018c40b79d4a652fe69de670f98563ba92148",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/hzafR40tnWmSD8FsjwYrrQ",
+    "url": "https://mp.weixin.qq.com/s/hzafR40tnWmSD8FsjwYrrQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院赴京开展访企拓岗达成多项校企合作意向",
+    "source": "",
+    "publishDate": "2026-03-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/hzafR40tnWmSD8FsjwYrrQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "4adeb7fc03046252d51ea0ac8f8ce381939c4ab4573997c5511591e297812073",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "长春人文学院赴京开展访企拓岗达成多项校企合作意向",
+    "listPublishDate": "2026-03-12",
+    "sourceOrder": 422
+  }
+}

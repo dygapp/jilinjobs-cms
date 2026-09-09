@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8d183206f3663fd42a6dce2dff4e3606991610c059e8badaec5df4dfb0da9954",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/FTfBB1Z219nEqvJA0Cci4g",
+    "url": "https://mp.weixin.qq.com/s/FTfBB1Z219nEqvJA0Cci4g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长白山职业技术学院丨冬燃新篇，合作共赢！冰雪产业人才培养再添新动能",
+    "source": "",
+    "publishDate": "2025-11-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/FTfBB1Z219nEqvJA0Cci4g"
+  },
+  "resources": [],
+  "sourceFingerprint": "befd36b600ddb0bda36de31112b9710da0187101182daa9086b9c471abf81812",
+  "evidence": {
+    "listPage": 59,
+    "listTitle": "长白山职业技术学院丨冬燃新篇，合作共赢！冰雪产业人才培养再添新动能",
+    "listPublishDate": "2025-11-19",
+    "sourceOrder": 586
+  }
+}

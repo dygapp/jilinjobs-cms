@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:399ba4fd2ab7040f5d7e089852b1873f34ce4ed7612776c2f9e8fb6b50e01d75",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Z4v-omU9WdxgJk5TN6jKaA",
+    "url": "https://mp.weixin.qq.com/s/Z4v-omU9WdxgJk5TN6jKaA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学召开2026届毕业生就业工作部署会&吉林地区2026届毕业生就业洽谈会",
+    "source": "",
+    "publishDate": "2025-10-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Z4v-omU9WdxgJk5TN6jKaA"
+  },
+  "resources": [],
+  "sourceFingerprint": "c548a9c7f7befe153b1cf5d9d6494e53083af62dc92079a5831f782952d4ff14",
+  "evidence": {
+    "listPage": 67,
+    "listTitle": "北华大学召开2026届毕业生就业工作部署会&吉林地区2026届毕业生就业洽谈会",
+    "listPublishDate": "2025-10-22",
+    "sourceOrder": 667
+  }
+}

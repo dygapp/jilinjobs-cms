@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122614",
+    "contentId": "28737783122614",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122614"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2014年吉林省就业质量报告",
+    "source": "",
+    "publishDate": "2015-02-17",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2014年吉林省就业质量报告</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场开发部   发布时间:2015-2-17 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"TEXT-ALIGN: left\"><span style=\"FONT-SIZE: 16px\">&nbsp;</span></p><p style=\"TEXT-ALIGN: left\"><span style=\"FONT-SIZE: 16px\"></span>&nbsp;</p><p style=\"TEXT-ALIGN: left\"><strong><span style=\"FONT-SIZE: 16px; COLOR: #205867\">2014年吉林省就业质量报告请点击附件查看！</span></strong></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        <a href=\"../Common/DownLoadFile.aspx?fileid=a9af1e3a-c282-4222-93d2-e08e27db5eaa\">《2014年吉林省就业质量报告》.pdf</a><br>\n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "fecf72d98aa6152af87eac7dc5a563eb6028c7d6092e53ef4b73789bc8494619",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "2014年吉林省就业质量报告",
+    "listPublishDate": "2015-02-17",
+    "sourceOrder": 287,
+    "detailPublishDate": "2015-02-17"
+  }
+}

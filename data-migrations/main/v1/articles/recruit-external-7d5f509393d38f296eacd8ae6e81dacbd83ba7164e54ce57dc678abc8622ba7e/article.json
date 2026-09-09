@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:7d5f509393d38f296eacd8ae6e81dacbd83ba7164e54ce57dc678abc8622ba7e",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/jobfair/fairdetails.html",
+    "url": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=3XyvVJ8RUz8dhzfLAE6ssv"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "全国高校2023届毕业生教育人才招聘会",
+    "source": "",
+    "publishDate": "2022-11-14",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=3XyvVJ8RUz8dhzfLAE6ssv"
+  },
+  "resources": [],
+  "sourceFingerprint": "2b32e50cac13741029d309096efda5e013f619b462a6585bc92e2c28a8bbcc42",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "全国高校2023届毕业生教育人才招聘会",
+    "listPublishDate": "2022-11-14",
+    "sourceOrder": 329
+  }
+}

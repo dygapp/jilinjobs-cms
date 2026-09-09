@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:109896525692928",
+    "contentId": "109896525692928",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=109896525692928"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展吉林省高校大学生生涯教育第一课的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2022-08-30",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1272\" src=\"migration-resource://3a71b09380c07da84c236064696d6694f485da6e5a99f21cdf0a02cc20f5ada7\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://83a2b0966da6c7b70cce671c47a1d82d0c23c95a8837071ce3f47e84872834d8\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://e72fe90d6e0f07246c89bcd81fe666251cfb712816a461571a07cc64465803ea\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-08-30/e0f226af-8c24-402f-9611-af9f5af5428a.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-08-30/e0f226af-8c24-402f-9611-af9f5af5428a.jpeg",
+      "token": "migration-resource://3a71b09380c07da84c236064696d6694f485da6e5a99f21cdf0a02cc20f5ada7",
+      "snapshotPath": "assets/3a71b09380c07da84c236064696d6694f485da6e5a99f21cdf0a02cc20f5ada7.jpeg",
+      "sha256": "3a71b09380c07da84c236064696d6694f485da6e5a99f21cdf0a02cc20f5ada7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 173026
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-08-30/dcaffba2-3d6f-4dff-8e8d-0dcd20f1eeeb.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-08-30/dcaffba2-3d6f-4dff-8e8d-0dcd20f1eeeb.jpeg",
+      "token": "migration-resource://83a2b0966da6c7b70cce671c47a1d82d0c23c95a8837071ce3f47e84872834d8",
+      "snapshotPath": "assets/83a2b0966da6c7b70cce671c47a1d82d0c23c95a8837071ce3f47e84872834d8.jpeg",
+      "sha256": "83a2b0966da6c7b70cce671c47a1d82d0c23c95a8837071ce3f47e84872834d8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 138745
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-08-30/f603a962-287d-4cac-83d7-8e35753a1150.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-08-30/f603a962-287d-4cac-83d7-8e35753a1150.jpeg",
+      "token": "migration-resource://e72fe90d6e0f07246c89bcd81fe666251cfb712816a461571a07cc64465803ea",
+      "snapshotPath": "assets/e72fe90d6e0f07246c89bcd81fe666251cfb712816a461571a07cc64465803ea.jpeg",
+      "sha256": "e72fe90d6e0f07246c89bcd81fe666251cfb712816a461571a07cc64465803ea",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92384
+    }
+  ],
+  "sourceFingerprint": "13caca4484a5bc1a1a244555813dab44f7a4cc12e52c03b4d0848742f05b86c0",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "关于开展吉林省高校大学生生涯教育第一课的通知",
+    "listPublishDate": "2022-08-30",
+    "sourceOrder": 116,
+    "detailPublishDate": "2022-08-30"
+  }
+}

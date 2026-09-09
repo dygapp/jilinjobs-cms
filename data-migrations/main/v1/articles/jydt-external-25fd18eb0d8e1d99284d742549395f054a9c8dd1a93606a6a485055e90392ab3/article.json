@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:25fd18eb0d8e1d99284d742549395f054a9c8dd1a93606a6a485055e90392ab3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1055/6723.htm",
+    "url": "https://www.jlict.edu.cn/info/1055/6723.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "宁波石化经济技术开发区来吉林化工大学开展政校企交流及专场招聘",
+    "source": "",
+    "publishDate": "2026-04-17",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlict.edu.cn/info/1055/6723.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "ef73b150ba46541e371cb4adf6e9820477c4347dc6fbf971b51fd59020bf3051",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "宁波石化经济技术开发区来吉林化工大学开展政校企交流及专场招聘",
+    "listPublishDate": "2026-04-17",
+    "sourceOrder": 280
+  }
+}

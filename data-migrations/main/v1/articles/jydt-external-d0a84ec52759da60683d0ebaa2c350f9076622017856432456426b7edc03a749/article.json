@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d0a84ec52759da60683d0ebaa2c350f9076622017856432456426b7edc03a749",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/57oEfpqiTWW0259tIvUyHg",
+    "url": "https://mp.weixin.qq.com/s/57oEfpqiTWW0259tIvUyHg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春金融高等专科学校吕鹰飞校长带队赴长春市施耐利机器人系统有限公司开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-02-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/57oEfpqiTWW0259tIvUyHg"
+  },
+  "resources": [],
+  "sourceFingerprint": "5efed7ae67b496e52c76f3d966ab6e3819d40f0ced28f48921e69ba336d259c1",
+  "evidence": {
+    "listPage": 45,
+    "listTitle": "长春金融高等专科学校吕鹰飞校长带队赴长春市施耐利机器人系统有限公司开展访企拓岗专项行动",
+    "listPublishDate": "2026-02-13",
+    "sourceOrder": 443
+  }
+}

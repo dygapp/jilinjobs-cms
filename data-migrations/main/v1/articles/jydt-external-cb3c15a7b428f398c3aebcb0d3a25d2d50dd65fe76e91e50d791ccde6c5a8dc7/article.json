@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cb3c15a7b428f398c3aebcb0d3a25d2d50dd65fe76e91e50d791ccde6c5a8dc7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/dZG7nRZcx8oGsBd8txw7ng",
+    "url": "https://mp.weixin.qq.com/s/dZG7nRZcx8oGsBd8txw7ng"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学举办“高校服务吉林高质量发展”2025届毕业生“百日冲刺”促就业专场招聘会",
+    "source": "",
+    "publishDate": "2025-06-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/dZG7nRZcx8oGsBd8txw7ng"
+  },
+  "resources": [],
+  "sourceFingerprint": "c392a77e61d303e8d0dbc45ad6e73a8ad9cdbb619f568c6cd28e5b1458803852",
+  "evidence": {
+    "listPage": 80,
+    "listTitle": "吉林建筑大学举办“高校服务吉林高质量发展”2025届毕业生“百日冲刺”促就业专场招聘会",
+    "listPublishDate": "2025-06-18",
+    "sourceOrder": 795
+  }
+}

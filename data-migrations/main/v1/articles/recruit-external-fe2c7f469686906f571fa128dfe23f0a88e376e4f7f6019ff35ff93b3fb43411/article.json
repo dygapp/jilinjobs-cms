@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:fe2c7f469686906f571fa128dfe23f0a88e376e4f7f6019ff35ff93b3fb43411",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/H6fos0Gd5057TWpWFmKVlw",
+    "url": "https://mp.weixin.qq.com/s/H6fos0Gd5057TWpWFmKVlw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“五优”服务进校园秋季巡回双选会暨吉林省2026届高校毕业生汽车产业就业洽谈会邀请函",
+    "source": "",
+    "publishDate": "2025-10-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/H6fos0Gd5057TWpWFmKVlw"
+  },
+  "resources": [],
+  "sourceFingerprint": "79c139fe8104e148e58977635440d94695edb743c7e0c050d2c64e10eac3715a",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "“五优”服务进校园秋季巡回双选会暨吉林省2026届高校毕业生汽车产业就业洽谈会邀请函",
+    "listPublishDate": "2025-10-17",
+    "sourceOrder": 128
+  }
+}

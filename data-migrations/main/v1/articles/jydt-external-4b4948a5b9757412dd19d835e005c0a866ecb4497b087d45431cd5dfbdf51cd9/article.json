@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4b4948a5b9757412dd19d835e005c0a866ecb4497b087d45431cd5dfbdf51cd9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/5qpNUfDhdqaQ9nhQhW38Ig",
+    "url": "https://mp.weixin.qq.com/s/5qpNUfDhdqaQ9nhQhW38Ig"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林通用航空职业技术学院召开2025届毕业生就业工作会议",
+    "source": "",
+    "publishDate": "2025-06-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5qpNUfDhdqaQ9nhQhW38Ig"
+  },
+  "resources": [],
+  "sourceFingerprint": "2da5dfdc16c14455bfcbb80251958837edf9e8077b6b4c4eeccbbc3de07e8234",
+  "evidence": {
+    "listPage": 78,
+    "listTitle": "吉林通用航空职业技术学院召开2025届毕业生就业工作会议",
+    "listPublishDate": "2025-06-23",
+    "sourceOrder": 778
+  }
+}

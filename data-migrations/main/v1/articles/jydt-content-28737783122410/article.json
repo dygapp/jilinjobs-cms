@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122410",
+    "contentId": "28737783122410",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122410"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "专家解析：考研复试分数线划分四大原则",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">专家解析：考研复试分数线划分四大原则</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\">&nbsp;&nbsp;&nbsp;&nbsp;一、体现了择优录取、宁缺毋滥的招生原则 <br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;进入复试的最低分数线是按照国家招生政策和原则，根据全国硕士研究生招生总规模和考生总体成绩确定的。 在此基础上，各招生单位将按照差额复试的要求，确定参加复试考生名单。<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;二、体现了统筹兼顾、协调发展的原则<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;根据我国东西部地区经济、教育发展不平衡的现实状况，对报考西部地区和少数民族地区的考生以及少数民族考生采取适度照顾的政策。对矿业、地质等11个艰苦专业继续采取适当照顾政策。<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;三、体现全面考核、综合评定的原则<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;确定进入复试最低分数线，对考生不但有总分的要求，而且有单科的成绩要求，以体现对考生知识结构的全面考察。<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;四、体现突出综合能力和综合素质的原则<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;教育部规定，各招生单位都要从制度、程序和内容上强化复试工作，复试重点将进一步考察考生的综合素质和能力是否符合研究生培养要求。</div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "1482087647c1e799611ee4e15894a7937b0f6f1d24a590034c2397c8897a0335",
+  "evidence": {
+    "listPage": 183,
+    "listTitle": "专家解析：考研复试分数线划分四大原则",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1826,
+    "detailPublishDate": "2009-04-05"
+  }
+}

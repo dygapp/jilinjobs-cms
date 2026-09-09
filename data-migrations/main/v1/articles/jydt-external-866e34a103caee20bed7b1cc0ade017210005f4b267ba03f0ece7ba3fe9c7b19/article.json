@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:866e34a103caee20bed7b1cc0ade017210005f4b267ba03f0ece7ba3fe9c7b19",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ylXl9OqhSQsLOmER3GyFGQ",
+    "url": "https://mp.weixin.qq.com/s/ylXl9OqhSQsLOmER3GyFGQ?scene=25&sessionid=-1366656262"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑科技学院举办“服务吉林高质量发展”2025届毕业生校园双选会",
+    "source": "",
+    "publishDate": "2025-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ylXl9OqhSQsLOmER3GyFGQ?scene=25&sessionid=-1366656262"
+  },
+  "resources": [],
+  "sourceFingerprint": "290413cf31b46933843075488748aeea9a30edfba84a6ed40548a84bc1865573",
+  "evidence": {
+    "listPage": 94,
+    "listTitle": "吉林建筑科技学院举办“服务吉林高质量发展”2025届毕业生校园双选会",
+    "listPublishDate": "2025-04-21",
+    "sourceOrder": 932
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fe1b7fbdedb1cd52229fe392f6dd7937b7da0cac7d37a6cfdb42ed6d192dcf3e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/owTAzHEvsE11ucCzcRyYHQ",
+    "url": "https://mp.weixin.qq.com/s/owTAzHEvsE11ucCzcRyYHQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春早期教育职业学院赴延吉蒲公英孵化基地调研|多渠道赋能学生就业新方向",
+    "source": "",
+    "publishDate": "2025-03-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/owTAzHEvsE11ucCzcRyYHQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "8b16a6fff4cc73c04828a8045b306bc63bc3b103167dbd0c75531ce4f454a781",
+  "evidence": {
+    "listPage": 98,
+    "listTitle": "长春早期教育职业学院赴延吉蒲公英孵化基地调研|多渠道赋能学生就业新方向",
+    "listPublishDate": "2025-03-21",
+    "sourceOrder": 972
+  }
+}

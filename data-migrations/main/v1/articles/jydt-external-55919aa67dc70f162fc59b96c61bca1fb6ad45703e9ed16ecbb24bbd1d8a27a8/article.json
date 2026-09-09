@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:55919aa67dc70f162fc59b96c61bca1fb6ad45703e9ed16ecbb24bbd1d8a27a8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/XxwwYt9Oeh_4XO-Oa4MFgA",
+    "url": "https://mp.weixin.qq.com/s/XxwwYt9Oeh_4XO-Oa4MFgA?scene=25&sessionid=-1366856750"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院召开“精准化岗位供需对接 服务吉林高质量发展”2025届毕业生春季双选会",
+    "source": "",
+    "publishDate": "2025-04-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/XxwwYt9Oeh_4XO-Oa4MFgA?scene=25&sessionid=-1366856750"
+  },
+  "resources": [],
+  "sourceFingerprint": "532cf33ec3c3fb496583b2e7667c431c4d47c3e11ab06caac57e2cabf30af80a",
+  "evidence": {
+    "listPage": 94,
+    "listTitle": "吉林工商学院召开“精准化岗位供需对接 服务吉林高质量发展”2025届毕业生春季双选会",
+    "listPublishDate": "2025-04-18",
+    "sourceOrder": 936
+  }
+}

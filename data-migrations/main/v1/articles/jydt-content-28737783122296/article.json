@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122296",
+    "contentId": "28737783122296",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122296"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "“武汉青年创业担保基金”启动 无抵押可贷款5万元",
+    "source": "",
+    "publishDate": "2009-06-26",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">“武汉青年创业担保基金”启动 无抵押可贷款5万元</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-6-26 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 昨（25）日，由共青团武汉市委携手企业共同设立的“武汉青年创业担保基金”正式启动。今后，青年创业者将新增“绿色小额贷款通道”，申领小额贷款将更顺畅快捷。</font></p> <p><font size=\"2\">　　在全民创业的大环境下，团市委青年发展部在工作过程中，发现不少青年创业者拥有好的创业项目，但苦于没有符合条件的担保人和抵押财产，在小额贷款申报时遇到难题。经过几个月筹备，武汉青年企业家协会、艳阳天、武汉信用风险投资管理有限公司三方发起成立该基金，资金规模设定为100万元，首期10万元由艳阳天捐赠。</font></p> <p><font size=\"2\">　　符合条件的青年创业者，在该基金的支持下青年创业小额贷款（3万元至5万元）可以实现无担保、无抵押、无利息。如创业者贷款发生逾期，则由武汉青年创业担保基金代偿。</font></p> <p><font size=\"2\">　　即日起，凡年龄在18岁到35岁之间，符合小额贷款申请基本条件的武汉市创业青年，可携带有关证件和材料，前往武汉青年创业培训中心的小额贷款申请窗口（武汉市青少年宫老行政楼1楼）咨询，电话：85769943。</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "6292a764bd0d3f0d82abefcd40ceadec61505849b6634458d2ed352a102873b2",
+  "evidence": {
+    "listPage": 171,
+    "listTitle": "“武汉青年创业担保基金”启动 无抵押可贷款5万元",
+    "listPublishDate": "2009-06-26",
+    "sourceOrder": 1706,
+    "detailPublishDate": "2009-06-26"
+  }
+}

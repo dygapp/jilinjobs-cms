@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122408",
+    "contentId": "28737783122408",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122408"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "诺基亚稳坐半壁江山，摩托罗拉持续下滑",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">诺基亚稳坐半壁江山，摩托罗拉持续下滑</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 季度数据显示，主流品牌关注度比较稳定，其中诺基亚品牌关注度份额维持在50%附近，牢牢占据半壁江山。</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 三星手机关注度排名列第二，但与诺基亚的差距甚大，关注度份额在10%附近。但从季度变化上看，三星的关注度占比在逐步扩大，由第一季度的10.88%上升为第四季度的13.17%。Top4品牌中，2008年三星推出的新品最多，据ZDC的统计数据，三星08年新上市的机型多达46款，而诺基亚08年新上市机型为32款。</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 摩托罗拉和索尼爱立信的关注度呈交错状态，第一季度摩托罗拉关注度在索尼爱立信之上，主要是由于网上热炒摩托罗拉手机业务从集团拆分事件。继Razr之后，摩托罗拉未有受到热烈追捧的主打产品，占有率持续下滑，摩托罗拉的财报显示，其手机全球占有率从08年第一季度的9.4%，下降至第三季度的8.3%。第四季度摩托罗拉推出奢华手机AURA，但并没有挽回其关注度持续下跌的颓势。</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 随着音乐手机逐渐成为“红海”，索尼爱立信继续向拍照、智能方向拓展，从季度数据来看，索尼爱立信产品战略调整的效应尚未显现，关注度占比一直维持在9%左右。</font></p> <p class=\"f12\" align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://data.baidu.com/mobile3/img/chart22.gif\"></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "66c8fef8209a55153d79350eebe386152604caa687715b6422cf5dfcf18e18f7",
+  "evidence": {
+    "listPage": 183,
+    "listTitle": "诺基亚稳坐半壁江山，摩托罗拉持续下滑",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1827,
+    "detailPublishDate": "2009-04-05"
+  }
+}

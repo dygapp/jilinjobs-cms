@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:52425d2d5ecbffdcf6b7b5ee1c486d6e5baa16721cae8a13bbc0d79d9e9f851a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kkMsHFpIQEEovcEJQbYVxA",
+    "url": "https://mp.weixin.qq.com/s/kkMsHFpIQEEovcEJQbYVxA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学召开就业工作推进会",
+    "source": "",
+    "publishDate": "2025-06-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kkMsHFpIQEEovcEJQbYVxA"
+  },
+  "resources": [],
+  "sourceFingerprint": "b3e60ea7f9679347c71a48f7b1a04373f08e657d0c03651676e23ecdbd5a7098",
+  "evidence": {
+    "listPage": 83,
+    "listTitle": "延边大学召开就业工作推进会",
+    "listPublishDate": "2025-06-12",
+    "sourceOrder": 824
+  }
+}

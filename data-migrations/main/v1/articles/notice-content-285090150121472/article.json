@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:285090150121472",
+    "contentId": "285090150121472",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=285090150121472"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办全国法律行业面向2025届高校毕业生春季招聘活动的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2025-04-23",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://f3116a9af4757f638739ca2e8c70e2a71c2d60f1d0694364f002d4a852d86d92\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://1ae92099cec60401aa882a4081b3580217e6f6f92ad91420c6f8ebb8b7c02747\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://992f1d7a706ce954a9c4faf9b86156445e40a19fd98be97c7c09726315c95c81\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://92121ec4571cfd4a2876ac7de0357f41a33e29650befc2b3b3467821607336ee\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://3e14fd36ddd2aec9b58bb463ab9d03d9bd2f8e7ba9d4adaf07c98eb2a3306343\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-23/0f74ce8c-a056-416a-bd56-a5e37a022e3c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-23/0f74ce8c-a056-416a-bd56-a5e37a022e3c.jpg",
+      "token": "migration-resource://f3116a9af4757f638739ca2e8c70e2a71c2d60f1d0694364f002d4a852d86d92",
+      "snapshotPath": "assets/f3116a9af4757f638739ca2e8c70e2a71c2d60f1d0694364f002d4a852d86d92.jpg",
+      "sha256": "f3116a9af4757f638739ca2e8c70e2a71c2d60f1d0694364f002d4a852d86d92",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-23/7a5cc3d7-1081-4bfb-94ca-0f6f9620d310.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-23/7a5cc3d7-1081-4bfb-94ca-0f6f9620d310.jpg",
+      "token": "migration-resource://1ae92099cec60401aa882a4081b3580217e6f6f92ad91420c6f8ebb8b7c02747",
+      "snapshotPath": "assets/1ae92099cec60401aa882a4081b3580217e6f6f92ad91420c6f8ebb8b7c02747.jpg",
+      "sha256": "1ae92099cec60401aa882a4081b3580217e6f6f92ad91420c6f8ebb8b7c02747",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-23/051b35f0-674d-4354-8574-bc30067b18d6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-23/051b35f0-674d-4354-8574-bc30067b18d6.jpg",
+      "token": "migration-resource://992f1d7a706ce954a9c4faf9b86156445e40a19fd98be97c7c09726315c95c81",
+      "snapshotPath": "assets/992f1d7a706ce954a9c4faf9b86156445e40a19fd98be97c7c09726315c95c81.jpg",
+      "sha256": "992f1d7a706ce954a9c4faf9b86156445e40a19fd98be97c7c09726315c95c81",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-23/16d5755c-cbe2-41e4-a31d-78b633eddd81.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-23/16d5755c-cbe2-41e4-a31d-78b633eddd81.jpg",
+      "token": "migration-resource://92121ec4571cfd4a2876ac7de0357f41a33e29650befc2b3b3467821607336ee",
+      "snapshotPath": "assets/92121ec4571cfd4a2876ac7de0357f41a33e29650befc2b3b3467821607336ee.jpg",
+      "sha256": "92121ec4571cfd4a2876ac7de0357f41a33e29650befc2b3b3467821607336ee",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-23/39ab6fa6-edff-4226-8fa6-e243b7dcc1b6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-23/39ab6fa6-edff-4226-8fa6-e243b7dcc1b6.jpg",
+      "token": "migration-resource://3e14fd36ddd2aec9b58bb463ab9d03d9bd2f8e7ba9d4adaf07c98eb2a3306343",
+      "snapshotPath": "assets/3e14fd36ddd2aec9b58bb463ab9d03d9bd2f8e7ba9d4adaf07c98eb2a3306343.jpg",
+      "sha256": "3e14fd36ddd2aec9b58bb463ab9d03d9bd2f8e7ba9d4adaf07c98eb2a3306343",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "8583e228290460ed4ce723cbdcddad1a3090972795f1e5a905dfd06aa31ed875",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "关于举办全国法律行业面向2025届高校毕业生春季招聘活动的通知",
+    "listPublishDate": "2025-04-23",
+    "sourceOrder": 39,
+    "detailPublishDate": "2025-04-23"
+  }
+}

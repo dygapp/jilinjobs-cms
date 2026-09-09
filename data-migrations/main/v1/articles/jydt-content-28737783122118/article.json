@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122118",
+    "contentId": "28737783122118",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122118"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省公开招聘2013届免费师范毕业生专场招聘会在吉林省高校毕业生就业指导中心举行",
+    "source": "",
+    "publishDate": "2012-12-02",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省公开招聘2013届免费师范毕业生专场招聘会在吉林省高校毕业生就业指导中心举行</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-12-2 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://90ccc2aa446d9d506fd967bbec7f89be3234bd14a03f9d60c0254c0c0c4d24e7\"></p> <p align=\"center\">12月1-2日，吉林省公开招聘2013届免费师范毕业生专场招聘会在吉林省高校毕业生就业指导中心举行。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://66969cadc05f000c8321f1f02805220189922e1c2c8ec2b31eb1883b1411ff45\"></p> <p align=\"center\">省教育厅高校学生处纪拓处长到会指导工作。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://8d8b567490feb248900a4b7a8b921e2eb127984a0ea899d0516bf22e7674d929\"></p> <p align=\"center\">招聘会现场</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121202231226252.jpg",
+      "originalReference": "/chistory/cms/imgs/20121202231226252.jpg",
+      "token": "migration-resource://90ccc2aa446d9d506fd967bbec7f89be3234bd14a03f9d60c0254c0c0c4d24e7",
+      "snapshotPath": "assets/90ccc2aa446d9d506fd967bbec7f89be3234bd14a03f9d60c0254c0c0c4d24e7.jpg",
+      "sha256": "90ccc2aa446d9d506fd967bbec7f89be3234bd14a03f9d60c0254c0c0c4d24e7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 78518
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121202231452325.jpg",
+      "originalReference": "/chistory/cms/imgs/20121202231452325.jpg",
+      "token": "migration-resource://66969cadc05f000c8321f1f02805220189922e1c2c8ec2b31eb1883b1411ff45",
+      "snapshotPath": "assets/66969cadc05f000c8321f1f02805220189922e1c2c8ec2b31eb1883b1411ff45.jpg",
+      "sha256": "66969cadc05f000c8321f1f02805220189922e1c2c8ec2b31eb1883b1411ff45",
+      "contentType": "image/jpeg",
+      "sizeBytes": 64102
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121202231525366.jpg",
+      "originalReference": "/chistory/cms/imgs/20121202231525366.jpg",
+      "token": "migration-resource://8d8b567490feb248900a4b7a8b921e2eb127984a0ea899d0516bf22e7674d929",
+      "snapshotPath": "assets/8d8b567490feb248900a4b7a8b921e2eb127984a0ea899d0516bf22e7674d929.jpg",
+      "sha256": "8d8b567490feb248900a4b7a8b921e2eb127984a0ea899d0516bf22e7674d929",
+      "contentType": "image/jpeg",
+      "sizeBytes": 50957
+    }
+  ],
+  "sourceFingerprint": "995cd606780323d8b38f8a0ada09764c65b92259c195ed2c862bc6680b311f01",
+  "evidence": {
+    "listPage": 163,
+    "listTitle": "吉林省公开招聘2013届免费师范毕业生专场招聘会在吉林省高校毕业生就业指导中心举行",
+    "listPublishDate": "2012-12-02",
+    "sourceOrder": 1628,
+    "detailPublishDate": "2012-12-02"
+  }
+}

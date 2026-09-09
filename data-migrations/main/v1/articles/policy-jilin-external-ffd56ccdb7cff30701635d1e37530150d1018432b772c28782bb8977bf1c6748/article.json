@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-jilin:external:ffd56ccdb7cff30701635d1e37530150d1018432b772c28782bb8977bf1c6748",
+    "contentId": null,
+    "typeCode": "policy-jilin",
+    "detailPath": "/zw_33994/zfwj/zcjd/202307/t20230719_3209089.html",
+    "url": "http://www.changchun.gov.cn/zw_33994/zfwj/zcjd/202307/t20230719_3209089.html"
+  },
+  "target": {
+    "columnAlias": "policy-jilin",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "关于对《长春市高校毕业生租房和生活补贴 暂行办法（试行）》的政策解读",
+    "source": "",
+    "publishDate": "2023-08-09",
+    "bodyHtml": "",
+    "externalUrl": "http://www.changchun.gov.cn/zw_33994/zfwj/zcjd/202307/t20230719_3209089.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "7d0858545a05d4675ba25efbbf7d4c8df94f7543ad5856423d6c249a13c767b8",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "关于对《长春市高校毕业生租房和生活补贴 暂行办法（试行）》的政策解读",
+    "listPublishDate": "2023-08-09",
+    "sourceOrder": 8
+  }
+}

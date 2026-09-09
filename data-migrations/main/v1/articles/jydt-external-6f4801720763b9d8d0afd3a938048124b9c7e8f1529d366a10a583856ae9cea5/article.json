@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6f4801720763b9d8d0afd3a938048124b9c7e8f1529d366a10a583856ae9cea5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/l64q1dagbUQfU1L0nfrWoQ",
+    "url": "https://mp.weixin.qq.com/s/l64q1dagbUQfU1L0nfrWoQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学招生就业处举办“百校对百县”系列活动——2025年暑期“智汇汪清 职通家乡”就业夏令营暨企业开放日活动",
+    "source": "",
+    "publishDate": "2025-08-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/l64q1dagbUQfU1L0nfrWoQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "81e7f78889f3e8bdc9e03a278721adbc55104e2880c69879fcceb2bf70b017e3",
+  "evidence": {
+    "listPage": 73,
+    "listTitle": "延边大学招生就业处举办“百校对百县”系列活动——2025年暑期“智汇汪清 职通家乡”就业夏令营暨企业开放日活动",
+    "listPublishDate": "2025-08-06",
+    "sourceOrder": 722
+  }
+}

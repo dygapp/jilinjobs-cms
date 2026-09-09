@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:153565815406592",
+    "contentId": "153565815406592",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=153565815406592"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办“创业奋斗 就在吉林”吉林省高校就业创业指导教师培训班（总第三十一期）的通知",
+    "source": "",
+    "publishDate": "2023-04-24",
+    "bodyHtml": "\n                        <p><img alt=\"\" height=\"2339\" src=\"migration-resource://7a3f11e84bdf88edbef9126711cde5990174871bc92dae03f6cf52c4d25d5284\" width=\"1654\"><img alt=\"\" height=\"2339\" src=\"migration-resource://0f415891d6dd2087fbb9f719f40d5515f405d5bd5653dad0936660227d138d61\" width=\"1654\"><img alt=\"\" height=\"2339\" src=\"migration-resource://16824cd02192510e992de701255669957b90981ed8c463397380885ce35e44f9\" width=\"1654\"><img alt=\"\" height=\"2339\" src=\"migration-resource://a4e580ce3110766bf5f50a912d0ffaeccedea5f07b4ce82eb29485926be9a8b2\" width=\"1654\"><img alt=\"\" height=\"2339\" src=\"migration-resource://b0bd896996a0e7730cb485033aa971a13755a55ca5cdd5920454d96e31feef11\" width=\"1654\"><img alt=\"\" height=\"2339\" src=\"migration-resource://e51a78a9e8c7547ce899ceb5fc2386e55260118fb350e62c63439b90d8250a23\" width=\"1654\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-04-28/fb74a327-e3bc-4cb9-9a9e-d4b637423126.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-04-28/fb74a327-e3bc-4cb9-9a9e-d4b637423126.jpg",
+      "token": "migration-resource://7a3f11e84bdf88edbef9126711cde5990174871bc92dae03f6cf52c4d25d5284",
+      "snapshotPath": "assets/7a3f11e84bdf88edbef9126711cde5990174871bc92dae03f6cf52c4d25d5284.jpg",
+      "sha256": "7a3f11e84bdf88edbef9126711cde5990174871bc92dae03f6cf52c4d25d5284",
+      "contentType": "image/jpeg",
+      "sizeBytes": 225668
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-04-28/a593396a-8640-40e0-b190-eca3cc24f8c7.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-04-28/a593396a-8640-40e0-b190-eca3cc24f8c7.jpg",
+      "token": "migration-resource://0f415891d6dd2087fbb9f719f40d5515f405d5bd5653dad0936660227d138d61",
+      "snapshotPath": "assets/0f415891d6dd2087fbb9f719f40d5515f405d5bd5653dad0936660227d138d61.jpg",
+      "sha256": "0f415891d6dd2087fbb9f719f40d5515f405d5bd5653dad0936660227d138d61",
+      "contentType": "image/jpeg",
+      "sizeBytes": 193001
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-04-28/32652d8a-bb54-458e-b7a9-d92381cf4661.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-04-28/32652d8a-bb54-458e-b7a9-d92381cf4661.jpg",
+      "token": "migration-resource://16824cd02192510e992de701255669957b90981ed8c463397380885ce35e44f9",
+      "snapshotPath": "assets/16824cd02192510e992de701255669957b90981ed8c463397380885ce35e44f9.jpg",
+      "sha256": "16824cd02192510e992de701255669957b90981ed8c463397380885ce35e44f9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 106643
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-04-28/4b397682-9c4b-4217-b2fa-a9099232235d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-04-28/4b397682-9c4b-4217-b2fa-a9099232235d.jpg",
+      "token": "migration-resource://a4e580ce3110766bf5f50a912d0ffaeccedea5f07b4ce82eb29485926be9a8b2",
+      "snapshotPath": "assets/a4e580ce3110766bf5f50a912d0ffaeccedea5f07b4ce82eb29485926be9a8b2.jpg",
+      "sha256": "a4e580ce3110766bf5f50a912d0ffaeccedea5f07b4ce82eb29485926be9a8b2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 139792
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-04-28/3d9a8544-0d0b-44a7-8c85-1f5f3e96b2f5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-04-28/3d9a8544-0d0b-44a7-8c85-1f5f3e96b2f5.jpg",
+      "token": "migration-resource://b0bd896996a0e7730cb485033aa971a13755a55ca5cdd5920454d96e31feef11",
+      "snapshotPath": "assets/b0bd896996a0e7730cb485033aa971a13755a55ca5cdd5920454d96e31feef11.jpg",
+      "sha256": "b0bd896996a0e7730cb485033aa971a13755a55ca5cdd5920454d96e31feef11",
+      "contentType": "image/jpeg",
+      "sizeBytes": 320274
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-04-28/5dd119b5-5200-4888-93b0-7c0058f1c8b1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-04-28/5dd119b5-5200-4888-93b0-7c0058f1c8b1.jpg",
+      "token": "migration-resource://e51a78a9e8c7547ce899ceb5fc2386e55260118fb350e62c63439b90d8250a23",
+      "snapshotPath": "assets/e51a78a9e8c7547ce899ceb5fc2386e55260118fb350e62c63439b90d8250a23.jpg",
+      "sha256": "e51a78a9e8c7547ce899ceb5fc2386e55260118fb350e62c63439b90d8250a23",
+      "contentType": "image/jpeg",
+      "sizeBytes": 139140
+    }
+  ],
+  "sourceFingerprint": "49756c420d48d664722f5ecc300b3901a223ed5f6698389621af00d8a50461e8",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "关于举办“创业奋斗 就在吉林”吉林省高校就业创业指导教师培训班（总第三十一期）的通知",
+    "listPublishDate": "2023-04-24",
+    "sourceOrder": 108,
+    "detailPublishDate": "2023-04-24"
+  }
+}

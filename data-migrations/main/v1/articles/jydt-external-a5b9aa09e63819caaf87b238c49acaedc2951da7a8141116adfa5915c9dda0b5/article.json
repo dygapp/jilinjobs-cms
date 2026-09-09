@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a5b9aa09e63819caaf87b238c49acaedc2951da7a8141116adfa5915c9dda0b5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/2KKo6_RrEWTEEL7S3CPu4Q",
+    "url": "https://mp.weixin.qq.com/s/2KKo6_RrEWTEEL7S3CPu4Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力扩容提质 服务高质量发展—— 长春电子科技学院2026年春季实习就业双选会圆满落幕",
+    "source": "",
+    "publishDate": "2026-05-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/2KKo6_RrEWTEEL7S3CPu4Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "38d0b367e6221bda3346311faf767af1e3d4d8064bbda6b1c0ceedc7b05289de",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "聚力扩容提质 服务高质量发展—— 长春电子科技学院2026年春季实习就业双选会圆满落幕",
+    "listPublishDate": "2026-05-27",
+    "sourceOrder": 137
+  }
+}

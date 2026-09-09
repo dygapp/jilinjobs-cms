@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122752",
+    "contentId": "28737783122752",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122752"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于召开吉林省第四届“梦想杯”大学生创业大赛指导教师培训会的通知",
+    "source": "",
+    "publishDate": "2017-06-14",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于召开吉林省第四届“梦想杯”大学生创业大赛指导教师培训会的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2017-6-14 15:49:22</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://372db29499cbb57e4410b5c0aada8b02245a37bc77a1e285a98ac20a98c3207d\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://f82fa17cbd22d659644ded85521b435086c2c13156e509a45747e79870de185c\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://c7f6ba3c40f3d8f39d54e97da8573081b011c88eaee7e8062130959ab1e9e93c\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=59a06c17-0794-4ebe-b955-66a86c5283a7\">第四届梦想杯创业大赛培训回执表.doc</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363305462379687502468396.jpg",
+      "originalReference": "/chistory/cms/imgs/6363305462379687502468396.jpg",
+      "token": "migration-resource://372db29499cbb57e4410b5c0aada8b02245a37bc77a1e285a98ac20a98c3207d",
+      "snapshotPath": "assets/372db29499cbb57e4410b5c0aada8b02245a37bc77a1e285a98ac20a98c3207d.jpg",
+      "sha256": "372db29499cbb57e4410b5c0aada8b02245a37bc77a1e285a98ac20a98c3207d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 164040
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363305462389062507738384.jpg",
+      "originalReference": "/chistory/cms/imgs/6363305462389062507738384.jpg",
+      "token": "migration-resource://f82fa17cbd22d659644ded85521b435086c2c13156e509a45747e79870de185c",
+      "snapshotPath": "assets/f82fa17cbd22d659644ded85521b435086c2c13156e509a45747e79870de185c.jpg",
+      "sha256": "f82fa17cbd22d659644ded85521b435086c2c13156e509a45747e79870de185c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 130018
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363305462540625007709371.jpg",
+      "originalReference": "/chistory/cms/imgs/6363305462540625007709371.jpg",
+      "token": "migration-resource://c7f6ba3c40f3d8f39d54e97da8573081b011c88eaee7e8062130959ab1e9e93c",
+      "snapshotPath": "assets/c7f6ba3c40f3d8f39d54e97da8573081b011c88eaee7e8062130959ab1e9e93c.jpg",
+      "sha256": "c7f6ba3c40f3d8f39d54e97da8573081b011c88eaee7e8062130959ab1e9e93c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 36069
+    }
+  ],
+  "sourceFingerprint": "cb2601b305691a8c03f7e78d8767b869055688e75f5bc0dbd357f243f643a5f6",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "关于召开吉林省第四届“梦想杯”大学生创业大赛指导教师培训会的通知",
+    "listPublishDate": "2017-06-14",
+    "sourceOrder": 216,
+    "detailPublishDate": "2017-06-14"
+  }
+}

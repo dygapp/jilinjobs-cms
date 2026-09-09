@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:66494a161d5dea914f010a4ab7a6ffd989ef66007e246f52f7bbda96833e369d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/JLRLMQUnnpEETDfwTrRYZw",
+    "url": "https://mp.weixin.qq.com/s/JLRLMQUnnpEETDfwTrRYZw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学召开2026年寒假“就业冬令营”社会实践活动（长春新东方站）开营动员会",
+    "source": "",
+    "publishDate": "2026-01-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/JLRLMQUnnpEETDfwTrRYZw"
+  },
+  "resources": [],
+  "sourceFingerprint": "a1fe8e3eda6f6889b614fa2f92d71e70b3dd6dcd3f36cd94fd4140674b29a025",
+  "evidence": {
+    "listPage": 50,
+    "listTitle": "延边大学召开2026年寒假“就业冬令营”社会实践活动（长春新东方站）开营动员会",
+    "listPublishDate": "2026-01-14",
+    "sourceOrder": 499
+  }
+}

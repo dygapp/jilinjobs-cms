@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122166",
+    "contentId": "28737783122166",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122166"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省高校学生就业能力拓展培训首期少数民族班开班",
+    "source": "",
+    "publishDate": "2014-06-16",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省高校学生就业能力拓展培训首期少数民族班开班</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训二部   发布时间:2014-6-16 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p>&nbsp;</p><p><span style=\"FONT-SIZE: 16px; FONT-FAMILY: 宋体,SimSun\">&nbsp;&nbsp;&nbsp; 5月26日，省高校学生就业能力拓展培训第一期少数民族学生就业能力提升培训班在吉林财经大学开班。此次培训为期4天，共培训藏族学员38人。<br>&nbsp;&nbsp;&nbsp; 根据年初制定的2014年吉林省高校学生就业能力拓展培训计划，全年将举办主要针对藏族和维族学生的4期少数民族班，培训人数200人。通过成立培训课程研发小组，围绕着少数民族大学生就业实际，结合少数民族学生特点，以提升就业能力为主，设计四天的培训课程，包括拓展训练、自我管理、面试技巧与求职礼仪、时间管理与沟通技巧。<br>&nbsp;&nbsp;&nbsp; 培训结束后，对学生作了问卷调查，调查结果显示：绝大多数参培学生认为培训内容对其将来的职场生涯非常有用，并希望多组织类似的培训。<br>&nbsp;&nbsp;&nbsp; 少数民族学生群体是高校就业困难群体的重要组成部分，他们受生活区域、生活习惯、宗教信仰、少数民族政策等因素的影响，在对培训内容的需求方面具有特殊性。今后我省将不断完善教学内容，改进教学方法，拓宽少数民族学生群体受益面，进一步增强培训效果。</span></p><p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "11fb0b1370649e781b5808a052a918ce15cf69812f21710de94647284876b4e5",
+  "evidence": {
+    "listPage": 160,
+    "listTitle": "我省高校学生就业能力拓展培训首期少数民族班开班",
+    "listPublishDate": "2014-06-16",
+    "sourceOrder": 1593,
+    "detailPublishDate": "2014-06-16"
+  }
+}

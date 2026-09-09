@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119960",
+    "contentId": "28737783119960",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119960"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省举办创业课程实践教学FET高级培训班",
+    "source": "",
+    "publishDate": "2016-11-18",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省举办创业课程实践教学FET高级培训班</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2016-11-18 16:43:46</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-indent: 40px; line-height: 150%; text-align: center;\"><span style=\"font-size:20px;line-height: 150%;font-family:宋体\"></span></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋_GB2312;font-size: 21px\">为贯彻落实《国务院办公厅关于深化高等学校创新创业教育改革的实施意见》精神，提高高校就业创业指导工作水平，加强高校就业创业指导师资队伍建设，提升高校就业创业指导教师创业指导理论与实践指导水平。11月14日-17日，吉林省高等学校毕业生就业指导中心与中创师培教育科技（北京）有限公司合作举办了“创业课程实践教学FET高级培训班”，来自全省56所高校的60名就业创业指导教师参加了培训。</span></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋_GB2312;font-size: 21px\">创业课程实践教学FET高级培训课程是以建构学习理论、互动参与式教学、协作学习型组织和实践教学法等全球领先的教育教学理念与理论进行培训课程的顶层设计和内容体系研发。中青创想教育科技（北京）有限公司董事长、国际创业导师协会理事徐俊祥和中青创想公司特约培训师——首都师范大学管理学院副院长张琪，依据实践教学法与互动参与式课堂教学基本原理，在创业基础课程教学大纲框架下，以案例分析、头脑风暴、小组协作、情景模拟、行动教学和实践教法六类教法为重点，从课程模式，内容教学法，创新创造、创业过程教学设计与示范，商业模式设计与创新，创业计划与实践演练，企业生存、成长教学设计与教法示范，试讲演练与答疑等内容进行了深度讲解。</span></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋_GB2312;font-size: 21px\">此次培训，参培教师一致表示，对高校创业课程有了进一步认识，掌握了创业课程教法的先进理念和六种实践教法设计与实施技能，颠覆了传统课堂模式，实现了理论与实践相结合的教学效果。</span><br></p><p style=\"text-indent:37px;line-height:150%\"><span style=\"font-size:20px;line-height:150%;font-family:宋体\"><br></span></p><p style=\"text-indent: 37px; line-height: 150%; text-align: center;\"><span style=\"font-size:20px;line-height:150%;font-family:宋体\"></span></p><p style=\"text-align: center\"><img title=\"合影.jpg\" src=\"migration-resource://ed111b39f4bbbb324f24d95ce96d992986d35e76f59687bdae8d2cc921e7e252\"></p><p style=\"text-indent: 37px; line-height: 150%; text-align: center;\"><span style=\"font-size:20px;line-height:150%;font-family:宋体\"></span><br></p><p style=\"text-indent: 37px; line-height: 150%;\"><br></p><p style=\"text-indent: 37px; line-height: 150%;\"><br></p><p style=\"text-indent: 37px; line-height: 150%;\"><br></p><p><br></p><p><br></p><p><br></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361508432487500002389616.jpg",
+      "originalReference": "/chistory/cms/imgs/6361508432487500002389616.jpg",
+      "token": "migration-resource://ed111b39f4bbbb324f24d95ce96d992986d35e76f59687bdae8d2cc921e7e252",
+      "snapshotPath": "assets/ed111b39f4bbbb324f24d95ce96d992986d35e76f59687bdae8d2cc921e7e252.jpg",
+      "sha256": "ed111b39f4bbbb324f24d95ce96d992986d35e76f59687bdae8d2cc921e7e252",
+      "contentType": "image/jpeg",
+      "sizeBytes": 140369
+    }
+  ],
+  "sourceFingerprint": "da8f5fb127da0aa953c8b831642b756359a5f9aa8ecd2da7f3112d482299a6fe",
+  "evidence": {
+    "listPage": 152,
+    "listTitle": "我省举办创业课程实践教学FET高级培训班",
+    "listPublishDate": "2016-11-18",
+    "sourceOrder": 1518,
+    "detailPublishDate": "2016-11-18"
+  }
+}

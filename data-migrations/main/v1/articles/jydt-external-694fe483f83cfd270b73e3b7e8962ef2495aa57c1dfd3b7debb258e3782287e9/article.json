@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:694fe483f83cfd270b73e3b7e8962ef2495aa57c1dfd3b7debb258e3782287e9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/d6rve233T2Ze8W_CtPCMQg",
+    "url": "https://mp.weixin.qq.com/s/d6rve233T2Ze8W_CtPCMQg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院“福祉+”模式赋能困难群体就业",
+    "source": "",
+    "publishDate": "2025-06-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/d6rve233T2Ze8W_CtPCMQg"
+  },
+  "resources": [],
+  "sourceFingerprint": "93ab75d379c2113ac6c10ac6cecad0df92ce58e492fb2fcfeb87126c65f711b6",
+  "evidence": {
+    "listPage": 86,
+    "listTitle": "长春人文学院“福祉+”模式赋能困难群体就业",
+    "listPublishDate": "2025-06-03",
+    "sourceOrder": 854
+  }
+}

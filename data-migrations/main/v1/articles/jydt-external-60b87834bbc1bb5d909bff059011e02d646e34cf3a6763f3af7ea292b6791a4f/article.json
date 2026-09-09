@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:60b87834bbc1bb5d909bff059011e02d646e34cf3a6763f3af7ea292b6791a4f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/pQU4jN6IL1UXC0kcxtVuUQ",
+    "url": "https://mp.weixin.qq.com/s/pQU4jN6IL1UXC0kcxtVuUQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院校领导带队赴长春万达茂开展调研",
+    "source": "",
+    "publishDate": "2026-01-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/pQU4jN6IL1UXC0kcxtVuUQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "48dade03458fa622557d1e16d31dd505f51a4899f6b5d140c3134bb083230ff5",
+  "evidence": {
+    "listPage": 49,
+    "listTitle": "长春人文学院校领导带队赴长春万达茂开展调研",
+    "listPublishDate": "2026-01-19",
+    "sourceOrder": 490
+  }
+}

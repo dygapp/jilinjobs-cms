@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:318b1da4002e7c1fd28974e92e0838fad3074db988161e139ee077aa83cab5c1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/N2UyXu2HHgdXZWWe2gsjww",
+    "url": "https://mp.weixin.qq.com/s/N2UyXu2HHgdXZWWe2gsjww"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "职引未来·逐梦长职 || 聚力扩容提质，服务高质量发展——长春职业技术大学举办专场校园双选会",
+    "source": "",
+    "publishDate": "2026-06-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/N2UyXu2HHgdXZWWe2gsjww"
+  },
+  "resources": [],
+  "sourceFingerprint": "65741f2db21d75a102dcd24ae734110961b374ba0567ccff662cbae6d82fb2f9",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "职引未来·逐梦长职 || 聚力扩容提质，服务高质量发展——长春职业技术大学举办专场校园双选会",
+    "listPublishDate": "2026-06-04",
+    "sourceOrder": 102
+  }
+}

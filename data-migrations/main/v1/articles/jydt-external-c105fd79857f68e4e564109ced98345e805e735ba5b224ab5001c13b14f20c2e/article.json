@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c105fd79857f68e4e564109ced98345e805e735ba5b224ab5001c13b14f20c2e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/VuDKsfiSdZvhBkzy8rEd_w",
+    "url": "https://mp.weixin.qq.com/s/VuDKsfiSdZvhBkzy8rEd_w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林动画学院举行“2026届吉林省高校毕业生就业创业洽谈月——文化创意类毕业生就业创业洽谈会”",
+    "source": "",
+    "publishDate": "2025-10-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/VuDKsfiSdZvhBkzy8rEd_w"
+  },
+  "resources": [],
+  "sourceFingerprint": "98bd2b90a8fe89e6b2cc59bba18afdf62313e1b16e302c853194950718b1e643",
+  "evidence": {
+    "listPage": 68,
+    "listTitle": "吉林动画学院举行“2026届吉林省高校毕业生就业创业洽谈月——文化创意类毕业生就业创业洽谈会”",
+    "listPublishDate": "2025-10-20",
+    "sourceOrder": 672
+  }
+}

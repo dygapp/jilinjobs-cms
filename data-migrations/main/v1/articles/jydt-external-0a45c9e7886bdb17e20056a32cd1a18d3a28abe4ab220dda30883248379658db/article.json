@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0a45c9e7886bdb17e20056a32cd1a18d3a28abe4ab220dda30883248379658db",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/zbY5MA7cBQsDVF6WBFRGmA",
+    "url": "https://mp.weixin.qq.com/s/zbY5MA7cBQsDVF6WBFRGmA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林电子信息职业技术学院校长曾繁明一行赴京杭甬开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/zbY5MA7cBQsDVF6WBFRGmA"
+  },
+  "resources": [],
+  "sourceFingerprint": "5b4e8dbfb2c4783a18fda9ea368f21ad7ee4ce05ed00b7fa3d8ff76d038a98ad",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "吉林电子信息职业技术学院校长曾繁明一行赴京杭甬开展访企拓岗专项行动",
+    "listPublishDate": "2026-04-21",
+    "sourceOrder": 267
+  }
+}

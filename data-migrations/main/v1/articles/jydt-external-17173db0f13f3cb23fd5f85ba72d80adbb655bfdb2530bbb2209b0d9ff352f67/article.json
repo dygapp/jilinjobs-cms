@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:17173db0f13f3cb23fd5f85ba72d80adbb655bfdb2530bbb2209b0d9ff352f67",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/awDXiUtdtNry0j23LurbBQ",
+    "url": "https://mp.weixin.qq.com/s/awDXiUtdtNry0j23LurbBQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化校地融通办学 共育特教技能人才——长春早期教育职业学院赴四平特殊教育学校开展专项调研",
+    "source": "",
+    "publishDate": "2026-07-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/awDXiUtdtNry0j23LurbBQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "5d4557c2f7583ed7e1c0172ebf4c311244f75ac07d952492fd7a9b2920474850",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "深化校地融通办学 共育特教技能人才——长春早期教育职业学院赴四平特殊教育学校开展专项调研",
+    "listPublishDate": "2026-07-02",
+    "sourceOrder": 59
+  }
+}

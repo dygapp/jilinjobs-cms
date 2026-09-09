@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:25afc592dbbafcde542efe03bb5fd187de1fe82c354c373a8c14167140359093",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/0zQQTdbYKbWKNQcy4hyDxQ",
+    "url": "https://mp.weixin.qq.com/s/0zQQTdbYKbWKNQcy4hyDxQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "春风送岗 职等你来|长春大学旅游学院2025届毕业生春季网络双选会邀请函",
+    "source": "",
+    "publishDate": "2025-03-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/0zQQTdbYKbWKNQcy4hyDxQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "0d9672ce66c9c0c6d7b087b36b1817835767e94c7ca417d2cb6443d1216ac66f",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "春风送岗 职等你来|长春大学旅游学院2025届毕业生春季网络双选会邀请函",
+    "listPublishDate": "2025-03-31",
+    "sourceOrder": 197
+  }
+}

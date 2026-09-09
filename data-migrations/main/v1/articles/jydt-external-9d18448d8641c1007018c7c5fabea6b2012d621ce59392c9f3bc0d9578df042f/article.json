@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9d18448d8641c1007018c7c5fabea6b2012d621ce59392c9f3bc0d9578df042f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/LXVw5MGtgD_i4qxUHgaFMA",
+    "url": "https://mp.weixin.qq.com/s/LXVw5MGtgD_i4qxUHgaFMA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业校企协同谋发展——吉林铁道职业技术大学副校长马卫强带队走访吉林市江机民科实业有限公司",
+    "source": "",
+    "publishDate": "2026-04-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/LXVw5MGtgD_i4qxUHgaFMA"
+  },
+  "resources": [],
+  "sourceFingerprint": "c8b89d3f92e5d55387d6d6fa78c064338f5681725e7b373eaa1ba0eb0b8aa3fc",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "访企拓岗促就业校企协同谋发展——吉林铁道职业技术大学副校长马卫强带队走访吉林市江机民科实业有限公司",
+    "listPublishDate": "2026-04-20",
+    "sourceOrder": 272
+  }
+}

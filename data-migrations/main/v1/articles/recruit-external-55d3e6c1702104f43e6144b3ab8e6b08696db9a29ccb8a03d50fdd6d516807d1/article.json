@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:55d3e6c1702104f43e6144b3ab8e6b08696db9a29ccb8a03d50fdd6d516807d1",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/xxgk/zwxxgk/gg/202007/t20200723_452960.html",
+    "url": "http://www.dongfeng.gov.cn/xxgk/zwxxgk/gg/202007/t20200723_452960.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年东丰县事业单位专项招聘工作人员公告",
+    "source": "",
+    "publishDate": "2020-07-23",
+    "bodyHtml": "",
+    "externalUrl": "http://www.dongfeng.gov.cn/xxgk/zwxxgk/gg/202007/t20200723_452960.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "1dfd96da9d529b670459318ac131771227a32655590c4bab81fa24887e25c837",
+  "evidence": {
+    "listPage": 39,
+    "listTitle": "2020年东丰县事业单位专项招聘工作人员公告",
+    "listPublishDate": "2020-07-23",
+    "sourceOrder": 384
+  }
+}

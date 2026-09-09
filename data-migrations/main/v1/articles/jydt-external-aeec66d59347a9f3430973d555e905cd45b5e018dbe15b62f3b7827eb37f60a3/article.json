@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:aeec66d59347a9f3430973d555e905cd45b5e018dbe15b62f3b7827eb37f60a3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/gqF9uj30-2XRAPj3LkmzTg",
+    "url": "https://mp.weixin.qq.com/s/gqF9uj30-2XRAPj3LkmzTg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院与梅河口市中医院教学医院签约揭牌 共启中医药人才培养新航程",
+    "source": "",
+    "publishDate": "2026-04-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gqF9uj30-2XRAPj3LkmzTg"
+  },
+  "resources": [],
+  "sourceFingerprint": "8631f4995fc0989a439cb993d9910c1813308dd3d29ea9cc6ecd658577442762",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "长春科技学院与梅河口市中医院教学医院签约揭牌 共启中医药人才培养新航程",
+    "listPublishDate": "2026-04-29",
+    "sourceOrder": 229
+  }
+}

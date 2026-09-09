@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f63d2a000e658782bd026bfc352788690422fc4ae447e5db9b623a09b92c80fb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/bNfnD7ma-V-UT-U3nw7K8A",
+    "url": "https://mp.weixin.qq.com/s/bNfnD7ma-V-UT-U3nw7K8A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林医药学院组队赴梅河口市召开政校合作人才供需会",
+    "source": "",
+    "publishDate": "2026-05-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/bNfnD7ma-V-UT-U3nw7K8A"
+  },
+  "resources": [],
+  "sourceFingerprint": "0827a2a747aafc6122c24b9d1c6d5bcdd212c6041c65164ca73e7bce995b8403",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "吉林医药学院组队赴梅河口市召开政校合作人才供需会",
+    "listPublishDate": "2026-05-21",
+    "sourceOrder": 154
+  }
+}

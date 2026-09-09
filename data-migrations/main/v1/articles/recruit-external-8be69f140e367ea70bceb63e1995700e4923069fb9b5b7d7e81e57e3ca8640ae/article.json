@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:8be69f140e367ea70bceb63e1995700e4923069fb9b5b7d7e81e57e3ca8640ae",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/UBSMrI8TFQJgU2NON7pAQQ",
+    "url": "https://mp.weixin.qq.com/s/UBSMrI8TFQJgU2NON7pAQQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“服务吉林高质量发展” 长春市高校综合类就业洽谈会暨长春大学2026届毕业生秋招校园双选会",
+    "source": "",
+    "publishDate": "2025-09-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/UBSMrI8TFQJgU2NON7pAQQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "52d05bb0cdde2b3e984e25f3caee65684ec14d616ab66ef41a0600acd6b0ebd5",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "“服务吉林高质量发展” 长春市高校综合类就业洽谈会暨长春大学2026届毕业生秋招校园双选会",
+    "listPublishDate": "2025-09-12",
+    "sourceOrder": 144
+  }
+}

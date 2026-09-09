@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:167134965547008",
+    "contentId": "167134965547008",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=167134965547008"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "上海：2023届高校毕业生就业推进 工作会召开",
+    "source": "",
+    "publishDate": "2023-07-07",
+    "bodyHtml": "\n                        <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 为深入贯彻党中央、国务院和上海市委、市政府关于“稳就业”“保就业”的决策部署，抓住2023届高校毕业生就业冲刺阶段的关键时刻，推动高校毕业生就业工作部署再落实、再落地，促进全市高校毕业生更加充分就业，7月3日下午，2023届上海高校毕业生就业工作推进会召开。上海市教卫工作党委书记沈炜，市教卫工作党委副书记、市教委主任周亚明，市教委副主任王浩，本市各高校党委书记、校长和分管校领导，市教委相关职能部门、市学生事务中心负责同志参加会议。会议由周亚明主持。</span></span></p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"363\" src=\"migration-resource://81481c429183ead00d4ca321e054d9c07d587df9bb197b5806f98cf157ff492d\" width=\"593\"></p>\n\n<p>&nbsp;</p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 沈炜就当前做好冲刺阶段高校毕业生工作作出具体部署，并就压实各高校主体责任提出明确要求：一是站位再提高，充分认识做好冲刺和收尾阶段毕业生就业工作的重要意义，抢抓最后窗口期，用好用足高校毕业生的就业政策，及时采取有效措施，千方百计促进毕业生就业创业，重点做好就业困难学生精准帮扶工作。二是措施再落地，发力强化毕业生就业工作力度和进度，全面落实就业工作“一把手”工程，对本校毕业生就业工作做到心里有“三本账”，要切实把思想和行动统一到党中央、国务院关于“稳就业”“保就业”的决策部署上来，利用最后不到2个月的时间全力冲刺。三是责任再压实，尽最大努力做好高校毕业生就业。要树立树牢“促就业就是保民生、抓就业就是讲政治”理念，要广泛调动资源，结合学校特色，发掘一批稳定吸纳本校毕业生就业的优质企业和单位，全力以赴地做好冲刺阶段毕业生就业各项工作；要加强宣传引导，引导毕业生树立正确的职业观、就业观和择业观，深入发掘、宣传毕业生就业创业涌现的优秀典型。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 沈炜强调，高校毕业生就业事关民生福祉、社会稳定和高质量发展。高校毕业生就业工作一头连着千家万户的切身利益，一头连着改革发展稳定的大局。我们要切实把这项民生领域重中之重的工作落细落实落到位，全力以赴促进毕业生更加充分、更高质量就业创业，确保全市高校毕业生就业工作大局稳定。</span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-12/a23d9947-8428-483f-a623-efcbf596c5c8.png",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-07-12/a23d9947-8428-483f-a623-efcbf596c5c8.png",
+      "token": "migration-resource://81481c429183ead00d4ca321e054d9c07d587df9bb197b5806f98cf157ff492d",
+      "snapshotPath": "assets/81481c429183ead00d4ca321e054d9c07d587df9bb197b5806f98cf157ff492d.png",
+      "sha256": "81481c429183ead00d4ca321e054d9c07d587df9bb197b5806f98cf157ff492d",
+      "contentType": "image/png",
+      "sizeBytes": 415925
+    }
+  ],
+  "sourceFingerprint": "96a852a3c5365f28ad00a8795122d1ff92a7399cd0ae7ac15822aa6a54908720",
+  "evidence": {
+    "listPage": 113,
+    "listTitle": "上海：2023届高校毕业生就业推进 工作会召开",
+    "listPublishDate": "2023-07-07",
+    "sourceOrder": 1128,
+    "detailPublishDate": "2023-07-07"
+  }
+}

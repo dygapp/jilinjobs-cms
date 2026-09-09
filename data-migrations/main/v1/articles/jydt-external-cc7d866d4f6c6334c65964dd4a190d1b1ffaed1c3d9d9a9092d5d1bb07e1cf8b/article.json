@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cc7d866d4f6c6334c65964dd4a190d1b1ffaed1c3d9d9a9092d5d1bb07e1cf8b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5194.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5194.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学召开2025年就业工作会",
+    "source": "",
+    "publishDate": "2025-11-04",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5194.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "2b9021ae7693f7e2784ab91967777bb069eb2c68b45d1ea21de2efe8002dc25a",
+  "evidence": {
+    "listPage": 64,
+    "listTitle": "长春工业大学召开2025年就业工作会",
+    "listPublishDate": "2025-11-04",
+    "sourceOrder": 631
+  }
+}

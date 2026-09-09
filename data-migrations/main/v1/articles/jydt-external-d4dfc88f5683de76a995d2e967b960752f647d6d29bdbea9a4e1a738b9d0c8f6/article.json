@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d4dfc88f5683de76a995d2e967b960752f647d6d29bdbea9a4e1a738b9d0c8f6",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/IKFmR_xR_UtrwxSXgV-7HA",
+    "url": "https://mp.weixin.qq.com/s/IKFmR_xR_UtrwxSXgV-7HA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春职业技术大学党委书记董妍率队赴全球鹰无人机有限公司访企拓岗",
+    "source": "",
+    "publishDate": "2026-03-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/IKFmR_xR_UtrwxSXgV-7HA"
+  },
+  "resources": [],
+  "sourceFingerprint": "9e65b93c202fe810718f676ffe8461dddded3174e18a6f32791454f9fcbdb8f5",
+  "evidence": {
+    "listPage": 39,
+    "listTitle": "长春职业技术大学党委书记董妍率队赴全球鹰无人机有限公司访企拓岗",
+    "listPublishDate": "2026-03-20",
+    "sourceOrder": 388
+  }
+}

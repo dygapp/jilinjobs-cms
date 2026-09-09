@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cc1a31425ff09c3ded2634b61a89b699ad5f6d5efe5a7b5e2a64d6ec7ec90018",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/qUiQ8uXrwdb-IwFKkUb2lA",
+    "url": "https://mp.weixin.qq.com/s/qUiQ8uXrwdb-IwFKkUb2lA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学党委书记张静辉、校长蔡国伟赴国家能源集团长源电力股份有限公司访企拓岗",
+    "source": "",
+    "publishDate": "2025-06-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/qUiQ8uXrwdb-IwFKkUb2lA"
+  },
+  "resources": [],
+  "sourceFingerprint": "cdb85cf54a04446e871c68dd6d9b9781002c2259c831f8cce349481799080820",
+  "evidence": {
+    "listPage": 84,
+    "listTitle": "东北电力大学党委书记张静辉、校长蔡国伟赴国家能源集团长源电力股份有限公司访企拓岗",
+    "listPublishDate": "2025-06-10",
+    "sourceOrder": 836
+  }
+}

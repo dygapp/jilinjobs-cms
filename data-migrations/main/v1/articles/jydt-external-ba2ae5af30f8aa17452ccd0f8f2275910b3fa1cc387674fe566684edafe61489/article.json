@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ba2ae5af30f8aa17452ccd0f8f2275910b3fa1cc387674fe566684edafe61489",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/dcAGdEuUjgyjGVSzu6ikUQ",
+    "url": "https://mp.weixin.qq.com/s/dcAGdEuUjgyjGVSzu6ikUQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“吉”汇贤朋 “化”绘新章——2025年吉林化工大学首届秋季校园招聘会成功举办",
+    "source": "",
+    "publishDate": "2025-09-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/dcAGdEuUjgyjGVSzu6ikUQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "a6364d53b38ff529cba816de33f1a79ef6a3cdd23745d12115c7c697bbd63cf6",
+  "evidence": {
+    "listPage": 70,
+    "listTitle": "“吉”汇贤朋 “化”绘新章——2025年吉林化工大学首届秋季校园招聘会成功举办",
+    "listPublishDate": "2025-09-28",
+    "sourceOrder": 692
+  }
+}

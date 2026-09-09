@@ -3,6 +3,7 @@
   "sourceSystem": "legacy-jilinjobs",
   "sourceRoot": "https://24365.jl.smartedu.cn/",
   "allowedHosts": ["24365.jl.smartedu.cn", "cms.jilinjobs.cn"],
+  "allowedResourceHosts": ["24365.jl.smartedu.cn", "cms.jilinjobs.cn", "t1.chei.com.cn"],
   "redirectProbes": [
     "https://cms.jilinjobs.cn/",
     "https://24365.jl.smartedu.cn/"
@@ -20,16 +21,16 @@
     {"key":"typical-military","path":"/jyzsdxsj","typeCode":"typical-military","columnAlias":"typical-military"}
   ],
   "pageSurfaces": [
-    {"key":"about","path":"/about","title":"关于我们","target":{"groupAlias":null,"pageAlias":"about"},"selectors":[]},
-    {"key":"budget","path":"/detail.html?content_id=88853373272064","title":"预决算公开","target":{"groupAlias":null,"pageAlias":"budget"},"selectors":[".rich-text-wrap"]},
-    {"key":"teacher-library","path":"/detail.html?content_id=108411989540864","title":"就业创业师资库","target":{"groupAlias":null,"pageAlias":"teacher-library"},"selectors":[".rich-text-wrap"]},
-    {"key":"employment-report-contact","path":"/detail.html?content_id=162461430857728","title":"举报电话及邮箱","target":{"groupAlias":null,"pageAlias":"employment-report-contact"},"selectors":[".rich-text-wrap"]},
-    {"key":"guide-jypq","path":"/jiuyepaiqian","title":"就业派遣","target":{"groupAlias":"guide","pageAlias":"jypq"},"selectors":[]},
-    {"key":"guide-dagl","path":"/danganguanli","title":"档案管理","target":{"groupAlias":"guide","pageAlias":"dagl"},"selectors":[]},
-    {"key":"guide-dygl","path":"/liudongdangyuan","title":"流动党员","target":{"groupAlias":"guide","pageAlias":"dygl"},"selectors":[]},
-    {"key":"guide-xlrz","path":"/xuelirenzheng","title":"学历认证","target":{"groupAlias":"guide","pageAlias":"xlrz"},"selectors":[]},
-    {"key":"guide-contact","path":"/lianxiwomen","title":"联系我们","target":{"groupAlias":"guide","pageAlias":"contact"},"selectors":[]},
-    {"key":"guide-faq","path":"/changjianwenti","title":"常见问题","target":{"groupAlias":"guide","pageAlias":"faq"},"selectors":[]}
+    {"key":"about","path":"/about","title":"关于我们","target":{"groupAlias":null,"pageAlias":"about"},"contentMode":"RICH_TEXT","selectors":[".rich-text-wrap"]},
+    {"key":"budget","path":"/detail.html?content_id=88853373272064","title":"预决算公开","target":{"groupAlias":null,"pageAlias":"budget"},"contentMode":"RICH_TEXT","selectors":[".rich-text-wrap"]},
+    {"key":"teacher-library","path":"/detail.html?content_id=108411989540864","title":"就业创业师资库","target":{"groupAlias":null,"pageAlias":"teacher-library"},"contentMode":"RICH_TEXT","selectors":[".rich-text-wrap"]},
+    {"key":"employment-report-contact","path":"/detail.html?content_id=162461430857728","title":"举报电话及邮箱","target":{"groupAlias":null,"pageAlias":"employment-report-contact"},"contentMode":"RICH_TEXT","selectors":[".rich-text-wrap"]},
+    {"key":"guide-jypq","path":"/jiuyepaiqian","title":"就业派遣","target":{"groupAlias":"guide","pageAlias":"jypq"},"contentMode":"GUIDE_CARDS","selectors":["#blueTabContent"]},
+    {"key":"guide-dagl","path":"/danganguanli","title":"档案管理","target":{"groupAlias":"guide","pageAlias":"dagl"},"contentMode":"GUIDE_CARDS","selectors":["#blueTabContent"]},
+    {"key":"guide-dygl","path":"/liudongdangyuan","title":"流动党员","target":{"groupAlias":"guide","pageAlias":"dygl"},"contentMode":"GUIDE_CARDS","selectors":["#blueTabContent"]},
+    {"key":"guide-xlrz","path":"/xuelirenzheng","title":"学历认证","target":{"groupAlias":"guide","pageAlias":"xlrz"},"contentMode":"GUIDE_CARDS","selectors":["#blueTabContent"]},
+    {"key":"guide-contact","path":"/lianxiwomen","title":"联系我们","target":{"groupAlias":"guide","pageAlias":"contact"},"contentMode":"GUIDE_CARDS","selectors":["#blueTabContent"]},
+    {"key":"guide-faq","path":"/changjianwenti","title":"常见问题","target":{"groupAlias":"guide","pageAlias":"faq"},"contentMode":"GUIDE_CARDS","selectors":["#blueTabContent"]}
   ],
   "excludedStablePages": [
     {"groupAlias":null,"pageAlias":"live-course","reason":"EMBED_PLACEHOLDER / external integration ownership"},
@@ -41,11 +42,11 @@
   ],
   "home": {
     "path": "/",
-    "carousel": {"listCode":"HOME_CAROUSEL","selectors":[".banner-wrap.first-box .swiper-container .swiper-wrapper > .swiper-slide > a.swiper-slide-a"]},
+    "carousel": {"listCode":"HOME_CAROUSEL","selectors":[".banner-wrap .swiper-container .swiper-wrapper > .swiper-slide > a.swiper-slide-a"]},
     "siteLinkLists": [
-      {"listCode":"SITE_RELATED","selectors":[]},
-      {"listCode":"SITE_REGIONAL_GRADUATES","selectors":[]},
-      {"listCode":"SITE_JILIN_UNIVERSITIES","selectors":[]}
+      {"listCode":"SITE_RELATED","selectors":["#w_others a[href]"]},
+      {"listCode":"SITE_REGIONAL_GRADUATES","selectors":["#w_biyesheng a[href]"]},
+      {"listCode":"SITE_JILIN_UNIVERSITIES","selectors":["#w_gaoxiao a[href]"]}
     ]
   }
 }

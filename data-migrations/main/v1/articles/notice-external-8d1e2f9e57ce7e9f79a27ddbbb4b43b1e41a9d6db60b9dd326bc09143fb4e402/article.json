@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:8d1e2f9e57ce7e9f79a27ddbbb4b43b1e41a9d6db60b9dd326bc09143fb4e402",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/srcsite/A15/s3265/202403/t20240320_1121304.html",
+    "url": "http://www.moe.gov.cn/srcsite/A15/s3265/202403/t20240320_1121304.html"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "教育部办公厅关于开展2024届高校毕业生 春季促就业攻坚行动的通知",
+    "source": "",
+    "publishDate": "2024-03-12",
+    "bodyHtml": "",
+    "externalUrl": "http://www.moe.gov.cn/srcsite/A15/s3265/202403/t20240320_1121304.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "14fb3504536a91ab4c375cf17bc0ff2b8ff3e01bba909c0cfc86874e292394f6",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "教育部办公厅关于开展2024届高校毕业生 春季促就业攻坚行动的通知",
+    "listPublishDate": "2024-03-12",
+    "sourceOrder": 94
+  }
+}

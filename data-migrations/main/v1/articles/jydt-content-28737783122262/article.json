@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122262",
+    "contentId": "28737783122262",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122262"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "首批大学生科技创业引导项目启动",
+    "source": "",
+    "publishDate": "2009-09-08",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">首批大学生科技创业引导项目启动</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-9-8 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p class=\"clickeye_content\"><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 吉林省首批大学生科技创业引导项目启动仪式昨天在长春举行。19支大学生创业团队共获得103万元创业资金扶持。副省长陈晓光参加启动仪式并为大学生创业团队颁发了资助证书。</font></p> <p class=\"clickeye_content\"><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 窦贺南是吉林大学药学院2009级毕业生，前不久刚刚创办了自己的公司，但很快就遇到资金不足的难题。就在他一筹莫展时，省科技厅“大学生科技创业引导项目”给他送去了7万元的创业资金，公司效益很快转好。窦贺南感慨地说，大学生创业大都会遇到资金短缺的瓶颈，在创业初期更是如此。这时候非常需要有人能拉一把，而政府恰恰在这个时候伸出了援手，这对于企业的成长帮助非常大。</font></p> <p class=\"clickeye_content\"><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 启动仪式上，陈晓光说，大学生自主创业的热情很高，今年启动大学生科技创业引导资金项目以来，共有38个大学生创业团队提出申请，通过审核的有19个。下一步我省将加大对大学生科技创业的扶持力度，同时降低大学毕业生申报项目的门槛，力争将研究生、应届毕业生全部纳入扶持范围，帮助更多有创业梦想的大学生圆梦。</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "bfac1c5e8efdc2a9c0c6afd8eaac0a81bc0cc30dbba3f3d844b8e8514313538a",
+  "evidence": {
+    "listPage": 169,
+    "listTitle": "首批大学生科技创业引导项目启动",
+    "listPublishDate": "2009-09-08",
+    "sourceOrder": 1683,
+    "detailPublishDate": "2009-09-08"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ed7500538853018c06b111894c67af4a571fd00860cac48f2ab2014e8840b1d4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/9Kqy7avUEthP5LmCY7XCFg",
+    "url": "https://mp.weixin.qq.com/s/9Kqy7avUEthP5LmCY7XCFg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "白城医学高等专科学校党委副书记、校长张余威带队赴长春、四平地区开展访企拓岗",
+    "source": "",
+    "publishDate": "2025-05-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/9Kqy7avUEthP5LmCY7XCFg"
+  },
+  "resources": [],
+  "sourceFingerprint": "00d048664bf94715bc7f9236cc0f8b164e713045f9521c0061ce30814c0a397f",
+  "evidence": {
+    "listPage": 88,
+    "listTitle": "白城医学高等专科学校党委副书记、校长张余威带队赴长春、四平地区开展访企拓岗",
+    "listPublishDate": "2025-05-20",
+    "sourceOrder": 880
+  }
+}

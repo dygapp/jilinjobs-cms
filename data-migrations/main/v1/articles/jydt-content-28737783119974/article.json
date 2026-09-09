@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119974",
+    "contentId": "28737783119974",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119974"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省首届“互联网+”在线视频专场招聘会顺利结束",
+    "source": "",
+    "publishDate": "2016-09-23",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省首届“互联网+”在线视频专场招聘会顺利结束</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2016-9-23 15:51:02</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\";text-indent: 43px\"><span style=\"color: rgb(63, 63, 63); font-family: 宋体,SimSun; font-size: 20px;\">2016年9月22日，吉林省高等学校毕业生就业中心举办了全省首届“互联网+”在线视频专场招聘会。本次招聘会参会企业共有100家，提供岗位需求信息316条，全省2017届高校毕业生参会748人，在线投递简历1280份，通过手机APP视频面试毕业生52人，共面试127人次。</span></p><p style=\";text-indent: 43px\"><span style=\"color: rgb(63, 63, 63); font-family: 宋体,SimSun; font-size: 20px;\">我省不断完善以校园为主体的高校就业市场，采取线上线下相结合，多渠道挖掘就业信息，充分发挥网络平台优势，利用手机微信、APP等现代信息技术手段，拓宽毕业生就业渠道，搭建更精准的就业服务平台，为毕业生精准推送就业信息。此次网络视频招聘会是吉林省高校毕业生就业信息网在线招聘平台开通以来，又一次大胆尝试，毕业生利用视频通信技术实现足不出户、不用奔波便可和用人单位进行面试沟通，节约了大量的时间和空间成本。我省将继续利用互联网信息技术手段，发挥互联网+就业的倍增效应，促进全省普通高校毕业生充分高质量地就业创业。</span></p><p style=\";text-indent: 43px\"><span style=\"color: rgb(63, 63, 63); font-family: 宋体,SimSun; font-size: 20px;\"><br></span></p><p style=\"text-align: center; text-indent: 43px;\"><span style=\"color: rgb(63, 63, 63); font-family: 宋体,SimSun; font-size: 20px;\"><br></span></p><p style=\"text-align: center\"><img title=\"企业.jpg\" src=\"migration-resource://4d3d5571e71dae20228b7b6bfe319a74a092c275737484329689fc44eb214f2d\"></p><p style=\"text-align: center\"><img title=\"黑色衣服 陈佳伟灰色衣服  王强.jpg\" src=\"migration-resource://e198dd08a21035117df73310a4d937e835800a4f36c003a54b1833f9b6876b8a\"></p><p style=\"text-align: center\"><img title=\"王强.jpg\" src=\"migration-resource://7cd44d8493022e7916ab9dbb6527dd2ad81038d7c23dd99db08b2e1cce28bd73\"></p><p style=\"text-align: center\"><img title=\"袁换美.jpg\" src=\"migration-resource://a6cf1c794fd68a5a80043c59fa2b2a1bf9dd2864e40a295e174607dbb72d4232\"></p><p style=\"text-align: center\"><img title=\"QQ截图20160923161613.jpg\" src=\"migration-resource://0e2a863131fc6dab9e9c176f2b09ea0e98a8f6de44799e9f0390589d100779dd\"></p><p><br></p><p style=\"text-align: center; text-indent: 43px;\"><span style=\"color: rgb(63, 63, 63); font-family: 宋体,SimSun; font-size: 20px;\"></span><br></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361024394706250007276231.jpg",
+      "originalReference": "/chistory/cms/imgs/6361024394706250007276231.jpg",
+      "token": "migration-resource://4d3d5571e71dae20228b7b6bfe319a74a092c275737484329689fc44eb214f2d",
+      "snapshotPath": "assets/4d3d5571e71dae20228b7b6bfe319a74a092c275737484329689fc44eb214f2d.jpg",
+      "sha256": "4d3d5571e71dae20228b7b6bfe319a74a092c275737484329689fc44eb214f2d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 115105
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361024275617187506534499.jpg",
+      "originalReference": "/chistory/cms/imgs/6361024275617187506534499.jpg",
+      "token": "migration-resource://e198dd08a21035117df73310a4d937e835800a4f36c003a54b1833f9b6876b8a",
+      "snapshotPath": "assets/e198dd08a21035117df73310a4d937e835800a4f36c003a54b1833f9b6876b8a.jpg",
+      "sha256": "e198dd08a21035117df73310a4d937e835800a4f36c003a54b1833f9b6876b8a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 115169
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361024275625000004277069.jpg",
+      "originalReference": "/chistory/cms/imgs/6361024275625000004277069.jpg",
+      "token": "migration-resource://7cd44d8493022e7916ab9dbb6527dd2ad81038d7c23dd99db08b2e1cce28bd73",
+      "snapshotPath": "assets/7cd44d8493022e7916ab9dbb6527dd2ad81038d7c23dd99db08b2e1cce28bd73.jpg",
+      "sha256": "7cd44d8493022e7916ab9dbb6527dd2ad81038d7c23dd99db08b2e1cce28bd73",
+      "contentType": "image/jpeg",
+      "sizeBytes": 108028
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361024275629687509262977.jpg",
+      "originalReference": "/chistory/cms/imgs/6361024275629687509262977.jpg",
+      "token": "migration-resource://a6cf1c794fd68a5a80043c59fa2b2a1bf9dd2864e40a295e174607dbb72d4232",
+      "snapshotPath": "assets/a6cf1c794fd68a5a80043c59fa2b2a1bf9dd2864e40a295e174607dbb72d4232.jpg",
+      "sha256": "a6cf1c794fd68a5a80043c59fa2b2a1bf9dd2864e40a295e174607dbb72d4232",
+      "contentType": "image/jpeg",
+      "sizeBytes": 129188
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361024354425000005605298.jpg",
+      "originalReference": "/chistory/cms/imgs/6361024354425000005605298.jpg",
+      "token": "migration-resource://0e2a863131fc6dab9e9c176f2b09ea0e98a8f6de44799e9f0390589d100779dd",
+      "snapshotPath": "assets/0e2a863131fc6dab9e9c176f2b09ea0e98a8f6de44799e9f0390589d100779dd.jpg",
+      "sha256": "0e2a863131fc6dab9e9c176f2b09ea0e98a8f6de44799e9f0390589d100779dd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 104774
+    }
+  ],
+  "sourceFingerprint": "67848dfd935757b4c8b775f2f519143dfe0d7c4c5fca98ce8b31e3cf726a7b0b",
+  "evidence": {
+    "listPage": 154,
+    "listTitle": "吉林省首届“互联网+”在线视频专场招聘会顺利结束",
+    "listPublishDate": "2016-09-23",
+    "sourceOrder": 1531,
+    "detailPublishDate": "2016-09-23"
+  }
+}

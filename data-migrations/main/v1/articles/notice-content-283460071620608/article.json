@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:283460071620608",
+    "contentId": "283460071620608",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=283460071620608"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办全国能源动力行业面向2025届高校毕业生春季招聘活动的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2025-04-09",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://7ba182b9e1230f890de7cbef5f86d108f8a3a4c64e3e0cbde50ba721b22c35dd\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://f69b11bc2388d3dd15f273b9c915ed49fabb01fcc675ee38e4afebd26b4a66ff\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://087f73bf9ab97e943ed0cb71ffa9d77b0a7031e5b6b827fecf1b115867c40c05\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://a1a5505f1ea81d8ff92eb64283acfc1695f9a748615de85c77c6454d0d55c7ca\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://584b5ccbfa2c52c4ddab72ab912238cfe7e3fd7386574a43fdf19206caf45b0e\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://3024c59f707e3068c6b036b887ceabe891ecad1e31dd350734bbe097ee5416ae\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/8fc0ab01-96f8-4d2a-8ebd-42a0c604456b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/8fc0ab01-96f8-4d2a-8ebd-42a0c604456b.jpg",
+      "token": "migration-resource://7ba182b9e1230f890de7cbef5f86d108f8a3a4c64e3e0cbde50ba721b22c35dd",
+      "snapshotPath": "assets/7ba182b9e1230f890de7cbef5f86d108f8a3a4c64e3e0cbde50ba721b22c35dd.jpg",
+      "sha256": "7ba182b9e1230f890de7cbef5f86d108f8a3a4c64e3e0cbde50ba721b22c35dd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/b3fb8eb8-6999-4bc3-935f-753a10ae1895.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/b3fb8eb8-6999-4bc3-935f-753a10ae1895.jpg",
+      "token": "migration-resource://f69b11bc2388d3dd15f273b9c915ed49fabb01fcc675ee38e4afebd26b4a66ff",
+      "snapshotPath": "assets/f69b11bc2388d3dd15f273b9c915ed49fabb01fcc675ee38e4afebd26b4a66ff.jpg",
+      "sha256": "f69b11bc2388d3dd15f273b9c915ed49fabb01fcc675ee38e4afebd26b4a66ff",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/a396c318-05f9-4f95-b0b4-67d8df0c0fc2.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/a396c318-05f9-4f95-b0b4-67d8df0c0fc2.jpg",
+      "token": "migration-resource://087f73bf9ab97e943ed0cb71ffa9d77b0a7031e5b6b827fecf1b115867c40c05",
+      "snapshotPath": "assets/087f73bf9ab97e943ed0cb71ffa9d77b0a7031e5b6b827fecf1b115867c40c05.jpg",
+      "sha256": "087f73bf9ab97e943ed0cb71ffa9d77b0a7031e5b6b827fecf1b115867c40c05",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/268f6959-f850-4a55-9f69-5918da86a887.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/268f6959-f850-4a55-9f69-5918da86a887.jpg",
+      "token": "migration-resource://a1a5505f1ea81d8ff92eb64283acfc1695f9a748615de85c77c6454d0d55c7ca",
+      "snapshotPath": "assets/a1a5505f1ea81d8ff92eb64283acfc1695f9a748615de85c77c6454d0d55c7ca.jpg",
+      "sha256": "a1a5505f1ea81d8ff92eb64283acfc1695f9a748615de85c77c6454d0d55c7ca",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/c682bb8c-dd21-4f5c-bb06-d92f34e9e43d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/c682bb8c-dd21-4f5c-bb06-d92f34e9e43d.jpg",
+      "token": "migration-resource://584b5ccbfa2c52c4ddab72ab912238cfe7e3fd7386574a43fdf19206caf45b0e",
+      "snapshotPath": "assets/584b5ccbfa2c52c4ddab72ab912238cfe7e3fd7386574a43fdf19206caf45b0e.jpg",
+      "sha256": "584b5ccbfa2c52c4ddab72ab912238cfe7e3fd7386574a43fdf19206caf45b0e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-14/6a9daafc-3b5f-4112-9814-5bd6e767d189.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-14/6a9daafc-3b5f-4112-9814-5bd6e767d189.jpg",
+      "token": "migration-resource://3024c59f707e3068c6b036b887ceabe891ecad1e31dd350734bbe097ee5416ae",
+      "snapshotPath": "assets/3024c59f707e3068c6b036b887ceabe891ecad1e31dd350734bbe097ee5416ae.jpg",
+      "sha256": "3024c59f707e3068c6b036b887ceabe891ecad1e31dd350734bbe097ee5416ae",
+      "contentType": "image/jpeg",
+      "sizeBytes": 57201
+    }
+  ],
+  "sourceFingerprint": "d26e51912cc02a526c773b85ab6166b56910c0502782a198efc9c2b20250f4be",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "关于举办全国能源动力行业面向2025届高校毕业生春季招聘活动的通知",
+    "listPublishDate": "2025-04-09",
+    "sourceOrder": 47,
+    "detailPublishDate": "2025-04-09"
+  }
+}

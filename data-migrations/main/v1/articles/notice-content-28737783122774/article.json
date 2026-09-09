@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122774",
+    "contentId": "28737783122774",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122774"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省高校创业指导基础课程教学培训班的通知",
+    "source": "",
+    "publishDate": "2016-11-28",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办吉林省高校创业指导基础课程教学培训班的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2016-11-28 16:19:27</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img title=\"新文档 3_1.jpg\" src=\"migration-resource://eef17129be5b7346429b0e8e852e84f773237bbc54b3abf37aa1b153b22f8da4\"></p><p style=\"text-align: center\"><img title=\"2.jpg\" src=\"migration-resource://6a69596d1b367bd52b3333d1b73e8cc97d08d6f5a51ff51972477e1223053fe5\"></p><p style=\"text-align: center\"><img title=\"3.jpg\" src=\"migration-resource://037d1daf37e93f9faf3e1c995090673c92827d2d22fdce7275d1bcbc164d529e\"></p><p style=\"text-align: center\"><img title=\"4.jpg\" src=\"migration-resource://3dec87a822d74a1863fa14941f602c07dd0012ac1746f93c324d81fd7b91d1a1\"></p><p><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361773295475762502450446.jpg",
+      "originalReference": "/chistory/cms/imgs/6361773295475762502450446.jpg",
+      "token": "migration-resource://eef17129be5b7346429b0e8e852e84f773237bbc54b3abf37aa1b153b22f8da4",
+      "snapshotPath": "assets/eef17129be5b7346429b0e8e852e84f773237bbc54b3abf37aa1b153b22f8da4.jpg",
+      "sha256": "eef17129be5b7346429b0e8e852e84f773237bbc54b3abf37aa1b153b22f8da4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 101007
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361714584096600002368015.jpg",
+      "originalReference": "/chistory/cms/imgs/6361714584096600002368015.jpg",
+      "token": "migration-resource://6a69596d1b367bd52b3333d1b73e8cc97d08d6f5a51ff51972477e1223053fe5",
+      "snapshotPath": "assets/6a69596d1b367bd52b3333d1b73e8cc97d08d6f5a51ff51972477e1223053fe5.jpg",
+      "sha256": "6a69596d1b367bd52b3333d1b73e8cc97d08d6f5a51ff51972477e1223053fe5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88029
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361714584229412509395370.jpg",
+      "originalReference": "/chistory/cms/imgs/6361714584229412509395370.jpg",
+      "token": "migration-resource://037d1daf37e93f9faf3e1c995090673c92827d2d22fdce7275d1bcbc164d529e",
+      "snapshotPath": "assets/037d1daf37e93f9faf3e1c995090673c92827d2d22fdce7275d1bcbc164d529e.jpg",
+      "sha256": "037d1daf37e93f9faf3e1c995090673c92827d2d22fdce7275d1bcbc164d529e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 68753
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361714584368475006637878.jpg",
+      "originalReference": "/chistory/cms/imgs/6361714584368475006637878.jpg",
+      "token": "migration-resource://3dec87a822d74a1863fa14941f602c07dd0012ac1746f93c324d81fd7b91d1a1",
+      "snapshotPath": "assets/3dec87a822d74a1863fa14941f602c07dd0012ac1746f93c324d81fd7b91d1a1.jpg",
+      "sha256": "3dec87a822d74a1863fa14941f602c07dd0012ac1746f93c324d81fd7b91d1a1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 125977
+    }
+  ],
+  "sourceFingerprint": "65f2fed44648e1db69e3e4d477be68621385e26d409bbaa421e7c2ddbb08d982",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "关于举办吉林省高校创业指导基础课程教学培训班的通知",
+    "listPublishDate": "2016-11-28",
+    "sourceOrder": 229,
+    "detailPublishDate": "2016-11-28"
+  }
+}

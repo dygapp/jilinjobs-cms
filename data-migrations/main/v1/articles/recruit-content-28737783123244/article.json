@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123244",
+    "contentId": "28737783123244",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123244"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2009年全省各级机关考试录用公务员拟加分人员公示公告",
+    "source": "",
+    "publishDate": "2009-06-12",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2009年全省各级机关考试录用公务员拟加分人员公示公告</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-6-12 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 根据《2009年全省各级机关考试录用公务员实施方案》（吉公局联发[2009]13号），经审核，报考2009年全省各级机关考试录用公务员符合加分政策拟加分人员名单于2009年6月5日起，在吉林省公务员考试网进行公示。公示期为6月5日至6月11日，欢迎社会各界监督。监督举报电话：0431-88902306、85611231。<br>&nbsp;</font><span style=\"FONT-SIZE: medium\"></span></p> <p align=\"center\"><font color=\"#444444\" size=\"2\">吉林省委组织部&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 吉林省公务员局</font></p> <p align=\"center\"><span style=\"FONT-SIZE: medium\"><font color=\"#444444\" size=\"2\">二〇〇九年六月五日</font></span></p> <p align=\"left\"><span style=\"FONT-SIZE: medium\"><font color=\"#444444\" size=\"2\"><img src=\"http://192.168.0.172/webEditor/sysimage/file/xls.gif\" border=\"0\"></font><a href=\"http://192.168.0.172/uploadfile/200906/20090612143811599.xls\" target=\"_blank\"><font color=\"#444444\" size=\"2\">2009年全省各级机关考试录用公务员拟加分人员公示公告.xls</font></a></span></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "831547df6f3e479d18db15d6941d20a215dc3d025360c70082d3ba714793c7b0",
+  "evidence": {
+    "listPage": 54,
+    "listTitle": "2009年全省各级机关考试录用公务员拟加分人员公示公告",
+    "listPublishDate": "2009-06-12",
+    "sourceOrder": 534,
+    "detailPublishDate": "2009-06-12"
+  }
+}

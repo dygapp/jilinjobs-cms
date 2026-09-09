@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268946515197952",
+    "contentId": "268946515197952",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268946515197952"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "把舵定航 精准施策 全方位建设就业指导服务保障体系",
+    "source": "",
+    "publishDate": "2025-01-24",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://32652859e661aceecc63ed81ddf37e9ed1ad06059592d499c0227a3e5787ba02\" width=\"1587\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://2c8441be7daf9ac39f5253941936567c78abccd767a7f91c36425b9a2132d14b\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/c9422704-7198-4417-a1bd-65513cab9759.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/c9422704-7198-4417-a1bd-65513cab9759.jpg",
+      "token": "migration-resource://32652859e661aceecc63ed81ddf37e9ed1ad06059592d499c0227a3e5787ba02",
+      "snapshotPath": "assets/32652859e661aceecc63ed81ddf37e9ed1ad06059592d499c0227a3e5787ba02.jpg",
+      "sha256": "32652859e661aceecc63ed81ddf37e9ed1ad06059592d499c0227a3e5787ba02",
+      "contentType": "image/jpeg",
+      "sizeBytes": 452832
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/6d1d85aa-a433-4541-a64f-b10a07490140.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/6d1d85aa-a433-4541-a64f-b10a07490140.jpg",
+      "token": "migration-resource://2c8441be7daf9ac39f5253941936567c78abccd767a7f91c36425b9a2132d14b",
+      "snapshotPath": "assets/2c8441be7daf9ac39f5253941936567c78abccd767a7f91c36425b9a2132d14b.jpg",
+      "sha256": "2c8441be7daf9ac39f5253941936567c78abccd767a7f91c36425b9a2132d14b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 368094
+    }
+  ],
+  "sourceFingerprint": "c40bdfe2f3ea435f18a53b9d96fbbc6ff9d4cc9afaa4047b1b0918c3c3696479",
+  "evidence": {
+    "listPage": 100,
+    "listTitle": "把舵定航 精准施策 全方位建设就业指导服务保障体系",
+    "listPublishDate": "2025-01-24",
+    "sourceOrder": 992,
+    "detailPublishDate": "2025-01-24"
+  }
+}

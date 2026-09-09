@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783121026",
+    "contentId": "28737783121026",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783121026"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "中科院系统2011届网络招聘活动",
+    "source": "",
+    "publishDate": "2010-12-22",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">中科院系统2011届网络招聘活动</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2010-12-22 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font color=\"#444444\" size=\"2\">第一期（2010年12月-2011年1月）</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 中国科学院共拥有12个分院、100家直属研究机构、100多个国家级重点实验室和工程中心以及近千个野外观测台站网络，全院科研人员达5万余人，构建了较为合理的学科布局，科技创新能力明显提高，高水平的创新成果不断涌现；建设了立足本院、服务社会的科技支撑体系，创办了以联想为代表的高技术企业，推动了科技成果产业化迅速发展；初步走出了一条适合中国国情建设现代国家研究院所的新路子，推动我国科技体制改革进入了以建设中国特色国家创新体系为中心的新阶段，促进了全社会创新意识的大幅提升，在国际科技界也产生了重要影响。</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; “中科招聘网”作为本次网络招聘活动的唯一平台。网站定位为：为中国科学院科研院所、高新技术企业及各大高校毕业生服务的专业性人才招聘网站。</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 此次“中科院系统2011届招聘活动”共分为三期，参加本期网络招聘活动的科研院所包括微电子研究所、电工研究所、工程热物理研究所、声学研究所等京内科研院所，以及沈阳自动化研究所、成都生物研究所、上海应用研究所等京外科研院所，共计30余所。</font></p> <p><font color=\"#444444\" size=\"2\">具体安排如下：</font></p> <p align=\"left\"><font color=\"#444444\" size=\"2\">活动时间：2010年12月-2011年5月</font></p> <p align=\"left\"><font color=\"#444444\" size=\"2\">活动平台：http://www.casjob.com.cn/（中科招聘网）</font></p> <p align=\"left\"><font color=\"#444444\" size=\"2\">专题页面：http://www.casjob.com.cn/casjob2011/</font></p> <p><font color=\"#444444\" size=\"2\">本次招聘活动由中国科学院人才交流开发中主办。</font></p> <p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "687f5200a4f6942493a79ab32633cc985b46312704cdaa73774130ba9f41b0da",
+  "evidence": {
+    "listPage": 48,
+    "listTitle": "中科院系统2011届网络招聘活动",
+    "listPublishDate": "2010-12-22",
+    "sourceOrder": 471,
+    "detailPublishDate": "2010-12-22"
+  }
+}

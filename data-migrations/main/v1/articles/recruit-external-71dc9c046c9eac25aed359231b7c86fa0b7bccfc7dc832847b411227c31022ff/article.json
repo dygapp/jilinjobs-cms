@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:71dc9c046c9eac25aed359231b7c86fa0b7bccfc7dc832847b411227c31022ff",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/bY0BZRrzoh2oDLUcbSCCqw",
+    "url": "https://mp.weixin.qq.com/s/bY0BZRrzoh2oDLUcbSCCqw?scene=25&sessionid=-1367214844"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春中医药大学 【参会单位及领票流程】职引未来一一2025年全国城市巡回招聘（吉林站）暨吉林省医药类毕业生春季大型就业洽谈会",
+    "source": "",
+    "publishDate": "2025-04-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/bY0BZRrzoh2oDLUcbSCCqw?scene=25&sessionid=-1367214844"
+  },
+  "resources": [],
+  "sourceFingerprint": "186769dc687172a8314989342cc8bf0cf3fe85c88cbdb2ec7c35e19170831bd7",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "长春中医药大学 【参会单位及领票流程】职引未来一一2025年全国城市巡回招聘（吉林站）暨吉林省医药类毕业生春季大型就业洽谈会",
+    "listPublishDate": "2025-04-16",
+    "sourceOrder": 176
+  }
+}

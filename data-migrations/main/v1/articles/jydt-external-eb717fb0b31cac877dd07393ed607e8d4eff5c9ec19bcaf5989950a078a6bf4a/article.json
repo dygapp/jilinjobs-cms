@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:eb717fb0b31cac877dd07393ed607e8d4eff5c9ec19bcaf5989950a078a6bf4a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/NMuJSuW68PjEG9vSqFpTmA",
+    "url": "https://mp.weixin.qq.com/s/NMuJSuW68PjEG9vSqFpTmA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学举办留吉就业政校企合作专场招聘会",
+    "source": "",
+    "publishDate": "2025-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/NMuJSuW68PjEG9vSqFpTmA"
+  },
+  "resources": [],
+  "sourceFingerprint": "e87ec1d8c768ae99cf735ee0616c34b74f67d26314cbbca2887b8a8c57b62a30",
+  "evidence": {
+    "listPage": 90,
+    "listTitle": "吉林建筑大学举办留吉就业政校企合作专场招聘会",
+    "listPublishDate": "2025-05-15",
+    "sourceOrder": 893
+  }
+}

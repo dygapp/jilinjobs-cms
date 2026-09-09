@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122960",
+    "contentId": "28737783122960",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122960"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅关于举办2012届高校毕业生网上联合招聘活动的通知",
+    "source": "",
+    "publishDate": "2012-03-15",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部办公厅关于举办2012届高校毕业生网上联合招聘活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-3-15 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://ec71f7f3600a3268f27423e70ed9ea5fae61ade374e26b6fae305e68247f37cd\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://85f1607ebd0a2415cd830b8c7429299c30eb154c94de134f9d0c3e52fe2d2979\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://0faf63c308f790da895d94c006d8a4102794a63262ae01ef0579825a8b94ab58\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120315164429615.jpg",
+      "originalReference": "/chistory/cms/imgs/20120315164429615.jpg",
+      "token": "migration-resource://ec71f7f3600a3268f27423e70ed9ea5fae61ade374e26b6fae305e68247f37cd",
+      "snapshotPath": "assets/ec71f7f3600a3268f27423e70ed9ea5fae61ade374e26b6fae305e68247f37cd.jpg",
+      "sha256": "ec71f7f3600a3268f27423e70ed9ea5fae61ade374e26b6fae305e68247f37cd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 99477
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120315164435927.jpg",
+      "originalReference": "/chistory/cms/imgs/20120315164435927.jpg",
+      "token": "migration-resource://85f1607ebd0a2415cd830b8c7429299c30eb154c94de134f9d0c3e52fe2d2979",
+      "snapshotPath": "assets/85f1607ebd0a2415cd830b8c7429299c30eb154c94de134f9d0c3e52fe2d2979.jpg",
+      "sha256": "85f1607ebd0a2415cd830b8c7429299c30eb154c94de134f9d0c3e52fe2d2979",
+      "contentType": "image/jpeg",
+      "sizeBytes": 94759
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120315164440599.jpg",
+      "originalReference": "/chistory/cms/imgs/20120315164440599.jpg",
+      "token": "migration-resource://0faf63c308f790da895d94c006d8a4102794a63262ae01ef0579825a8b94ab58",
+      "snapshotPath": "assets/0faf63c308f790da895d94c006d8a4102794a63262ae01ef0579825a8b94ab58.jpg",
+      "sha256": "0faf63c308f790da895d94c006d8a4102794a63262ae01ef0579825a8b94ab58",
+      "contentType": "image/jpeg",
+      "sizeBytes": 62940
+    }
+  ],
+  "sourceFingerprint": "be33f4edf4f2dfe9181b9ead17eac76af811df5d3c206517c2d6f32dd091b136",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "教育部办公厅关于举办2012届高校毕业生网上联合招聘活动的通知",
+    "listPublishDate": "2012-03-15",
+    "sourceOrder": 398,
+    "detailPublishDate": "2012-03-15"
+  }
+}

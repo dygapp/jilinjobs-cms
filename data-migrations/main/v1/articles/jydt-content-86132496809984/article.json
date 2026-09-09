@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86132496809984",
+    "contentId": "86132496809984",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86132496809984"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "“蒲根筑梦 ‘就’在吉林”通化师范学院举办留省就业专场招聘会",
+    "source": "通化师范学院",
+    "publishDate": "2022-04-12",
+    "bodyHtml": "\n                        <p>为做好疫情防控期间毕业生就业工作，进一步促进毕业生留省就业创业，学校于3月23日成功举办了“蒲根筑梦 ‘就’在吉林”通化师范学院2022年留省就业专场招聘会。</p>\n\n<p>学校党委高度重视留省就业工作，校党委副书记郭璟瑞亲自安排、亲自部署，他强调要坚持目标导向和问题导向，强化组织领导和机制建设，形成工作闭环，在拓宽就业渠道、就业指导、就业服务、就业帮扶等四个方面出实招、见成效。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"471\" src=\"migration-resource://1d801ce5cb729dd9df8c5c317792e51acecb0fc622fcd2ba9a129499eec43a2b\" width=\"800\"></p>\n\n<p>来自全省的67家用人单位参加了本次网络双选会，共吸引1171名应届毕业生参会。提供就业岗位232个，招聘人数2032人。双选会当天信息浏览量达16296次，毕业生投递求职简历516份，用人单位发出面试邀请307次，有效视频面试57场，共有368名毕业生达成了就业意向。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"600\" src=\"migration-resource://2273997d50d8429b9d6287a701f458115f52d08f93ac7221c57d8462f90f203a\" width=\"800\"></p>\n\n<p>本次双选会是学校全面实施“蒲公英基层就业计划”的一个重要组成部分，进一步引导毕业生扎根基层，留省就业，为吉林省地方经济的健康发展提供了人才支撑。</p>\n\n<p><strong>(通化师范学院 丛俊日）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/a6212aa4-fefa-422a-b976-bd855368f58b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/a6212aa4-fefa-422a-b976-bd855368f58b.jpg",
+      "token": "migration-resource://1d801ce5cb729dd9df8c5c317792e51acecb0fc622fcd2ba9a129499eec43a2b",
+      "snapshotPath": "assets/1d801ce5cb729dd9df8c5c317792e51acecb0fc622fcd2ba9a129499eec43a2b.jpg",
+      "sha256": "1d801ce5cb729dd9df8c5c317792e51acecb0fc622fcd2ba9a129499eec43a2b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 107861
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/703b5ea2-8dfa-491f-a2af-e7644466c90c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/703b5ea2-8dfa-491f-a2af-e7644466c90c.jpg",
+      "token": "migration-resource://2273997d50d8429b9d6287a701f458115f52d08f93ac7221c57d8462f90f203a",
+      "snapshotPath": "assets/2273997d50d8429b9d6287a701f458115f52d08f93ac7221c57d8462f90f203a.jpg",
+      "sha256": "2273997d50d8429b9d6287a701f458115f52d08f93ac7221c57d8462f90f203a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 300727
+    }
+  ],
+  "sourceFingerprint": "b3c61bf2a8d378347c5be0bf465dc04371345d1f14c36b0f233c2552edb218b6",
+  "evidence": {
+    "listPage": 123,
+    "listTitle": "“蒲根筑梦 ‘就’在吉林”通化师范学院举办留省就业专场招聘会",
+    "listPublishDate": "2022-04-12",
+    "sourceOrder": 1224,
+    "detailPublishDate": "2022-04-12"
+  }
+}

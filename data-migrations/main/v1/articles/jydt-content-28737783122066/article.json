@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122066",
+    "contentId": "28737783122066",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122066"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "东北地区28所高师院校2013届毕业生联合供需洽谈会在会展中心举行",
+    "source": "",
+    "publishDate": "2012-12-02",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">东北地区28所高师院校2013届毕业生联合供需洽谈会在会展中心举行</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-12-2 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://87e466fbcac6dd52da320ef1df8423547911898857b0fb1c11324a33ef3f37b0\"></p> <p align=\"center\">12月1日，东北地区28所高师院校2013届毕业生联合供需洽谈会在会展中心举行，省教育厅孙维杰副厅长出席会议。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://59c3e685b9fdd555f68613c5481ac3c7d4078cae6c6bd3ce8ba64298b3e3e78e\"></p> <p align=\"center\">吉林省高校毕业生就业指导中心郑志宏主任到会调研。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://ebb76756b62b4a9286ec8a88f486592e6b6b3816a54c92986c5f17593988cec3\"></p> <p align=\"center\">洽谈会现场</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121202230429697.jpg",
+      "originalReference": "/chistory/cms/imgs/20121202230429697.jpg",
+      "token": "migration-resource://87e466fbcac6dd52da320ef1df8423547911898857b0fb1c11324a33ef3f37b0",
+      "snapshotPath": "assets/87e466fbcac6dd52da320ef1df8423547911898857b0fb1c11324a33ef3f37b0.jpg",
+      "sha256": "87e466fbcac6dd52da320ef1df8423547911898857b0fb1c11324a33ef3f37b0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 61252
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121202230929740.jpg",
+      "originalReference": "/chistory/cms/imgs/20121202230929740.jpg",
+      "token": "migration-resource://59c3e685b9fdd555f68613c5481ac3c7d4078cae6c6bd3ce8ba64298b3e3e78e",
+      "snapshotPath": "assets/59c3e685b9fdd555f68613c5481ac3c7d4078cae6c6bd3ce8ba64298b3e3e78e.jpg",
+      "sha256": "59c3e685b9fdd555f68613c5481ac3c7d4078cae6c6bd3ce8ba64298b3e3e78e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 71958
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121202231057395.jpg",
+      "originalReference": "/chistory/cms/imgs/20121202231057395.jpg",
+      "token": "migration-resource://ebb76756b62b4a9286ec8a88f486592e6b6b3816a54c92986c5f17593988cec3",
+      "snapshotPath": "assets/ebb76756b62b4a9286ec8a88f486592e6b6b3816a54c92986c5f17593988cec3.jpg",
+      "sha256": "ebb76756b62b4a9286ec8a88f486592e6b6b3816a54c92986c5f17593988cec3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 85864
+    }
+  ],
+  "sourceFingerprint": "ba87638764c056d78cffbd7e2bbb64ed63305ed3898c015cfb1a093df3082353",
+  "evidence": {
+    "listPage": 163,
+    "listTitle": "东北地区28所高师院校2013届毕业生联合供需洽谈会在会展中心举行",
+    "listPublishDate": "2012-12-02",
+    "sourceOrder": 1629,
+    "detailPublishDate": "2012-12-02"
+  }
+}

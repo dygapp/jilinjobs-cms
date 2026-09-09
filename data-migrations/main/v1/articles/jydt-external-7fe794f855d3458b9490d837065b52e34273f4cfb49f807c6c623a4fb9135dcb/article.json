@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7fe794f855d3458b9490d837065b52e34273f4cfb49f807c6c623a4fb9135dcb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/oKNNxMoRd2S-lffuU1aZhg",
+    "url": "https://mp.weixin.qq.com/s/oKNNxMoRd2S-lffuU1aZhg?scene=25&sessionid=-1366621266"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“守护健康吉林 共赴高质量未来”——长春医学高等专科学校举办2025年服务吉林高质量发展校园招聘会",
+    "source": "",
+    "publishDate": "2025-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/oKNNxMoRd2S-lffuU1aZhg?scene=25&sessionid=-1366621266"
+  },
+  "resources": [],
+  "sourceFingerprint": "00cfce954c0f430be24da2be2b3fa24989e61107f792b9f88c113ff3a8cda45e",
+  "evidence": {
+    "listPage": 94,
+    "listTitle": "“守护健康吉林 共赴高质量未来”——长春医学高等专科学校举办2025年服务吉林高质量发展校园招聘会",
+    "listPublishDate": "2025-04-21",
+    "sourceOrder": 931
+  }
+}

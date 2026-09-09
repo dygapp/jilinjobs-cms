@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:67fb444dba58fa0a27f5bdfc17d39cb3fb448ea6baa7caa85b589cf8586c7cdc",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/BV965Mkcq7YLYBzJyCtBdQ",
+    "url": "https://mp.weixin.qq.com/s/BV965Mkcq7YLYBzJyCtBdQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "@用人单位|聚力扩容提质 服务高质量发展—吉林化工大学2027届毕业生秋季校园双选会邀请函",
+    "source": "",
+    "publishDate": "2026-09-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/BV965Mkcq7YLYBzJyCtBdQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "5ff5fe66f240e554fbf3baa88f7c53f4ee38bbbb59cb329450668860950c478a",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "@用人单位|聚力扩容提质 服务高质量发展—吉林化工大学2027届毕业生秋季校园双选会邀请函",
+    "listPublishDate": "2026-09-09",
+    "sourceOrder": 2
+  }
+}

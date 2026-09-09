@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-outside:content:28741012734050",
+    "contentId": "28741012734050",
+    "typeCode": "policy-outside",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28741012734050"
+  },
+  "target": {
+    "columnAlias": "policy-outside",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "山东省接收省外院校师范类毕业生的函",
+    "source": "",
+    "publishDate": "2014-03-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    政策法规</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">山东省接收省外院校师范类毕业生的函</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:    发布时间:2014-3-6 0:00:00</font></span>\n                </div>\n         \n                <div id=\"PoliciesContent\"><p>&nbsp;</p><p style=\"text-align:center\"><img title=\"1.jpg\" style=\"float: none;\" src=\"http://192.168.1.201:800/EDJLPortalWeb/upload/6353809969385165503233283.jpg\"></p><p style=\"text-align:center\"><img title=\"2.jpg\" style=\"float: none;\" src=\"http://192.168.1.201:800/EDJLPortalWeb/upload/6353809969506772461357749.jpg\"></p><p style=\"text-align:center\"><img title=\"3.jpg\" style=\"float: none;\" src=\"http://192.168.1.201:800/EDJLPortalWeb/upload/6353809969626579315252970.jpg\"></p><p style=\"text-align:center\"><img title=\"4.jpg\" style=\"float: none;\" src=\"http://192.168.1.201:800/EDJLPortalWeb/upload/6353809969730085239364878.jpg\"></p><p></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "d64c98ce0735d1533220b31dde9ca6a03c86ac3bd2923ff0046820ada3978654",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "山东省接收省外院校师范类毕业生的函",
+    "listPublishDate": "2014-03-06",
+    "sourceOrder": 9,
+    "detailPublishDate": "2014-03-06"
+  }
+}

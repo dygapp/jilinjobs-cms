@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268960373161984",
+    "contentId": "268960373161984",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268960373161984"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春大学旅游学院举办2025届毕业生秋季校园招聘会",
+    "source": "",
+    "publishDate": "2024-11-22",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://d6e9aa9f076504fecbd13017a02909ef1d5f11b7c3fd67f6cd6e1cf4a38c4c03\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/779f8e78-8cee-483e-8356-6b16f17eee1c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/779f8e78-8cee-483e-8356-6b16f17eee1c.jpg",
+      "token": "migration-resource://d6e9aa9f076504fecbd13017a02909ef1d5f11b7c3fd67f6cd6e1cf4a38c4c03",
+      "snapshotPath": "assets/d6e9aa9f076504fecbd13017a02909ef1d5f11b7c3fd67f6cd6e1cf4a38c4c03.jpg",
+      "sha256": "d6e9aa9f076504fecbd13017a02909ef1d5f11b7c3fd67f6cd6e1cf4a38c4c03",
+      "contentType": "image/jpeg",
+      "sizeBytes": 393268
+    }
+  ],
+  "sourceFingerprint": "13bff0b096d6e4db768d5220bb763ef602e49e5e7257f389d046ab4728eb3cde",
+  "evidence": {
+    "listPage": 102,
+    "listTitle": "长春大学旅游学院举办2025届毕业生秋季校园招聘会",
+    "listPublishDate": "2024-11-22",
+    "sourceOrder": 1013,
+    "detailPublishDate": "2024-11-22"
+  }
+}

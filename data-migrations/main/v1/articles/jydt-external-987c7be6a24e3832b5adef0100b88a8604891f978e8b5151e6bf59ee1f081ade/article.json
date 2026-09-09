@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:987c7be6a24e3832b5adef0100b88a8604891f978e8b5151e6bf59ee1f081ade",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/5vTr4BZk8-kRH4speEyAgQ",
+    "url": "https://mp.weixin.qq.com/s/5vTr4BZk8-kRH4speEyAgQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学举办“服务吉林高质量发展”吉林省第四届建筑类人才供需洽谈会暨吉林建筑大学2026届毕业生秋季双选会",
+    "source": "",
+    "publishDate": "2025-11-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5vTr4BZk8-kRH4speEyAgQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "4d79cbdf05fe7441db9f63526fe97c9046a79125137b7cdaad466999a081f727",
+  "evidence": {
+    "listPage": 64,
+    "listTitle": "吉林建筑大学举办“服务吉林高质量发展”吉林省第四届建筑类人才供需洽谈会暨吉林建筑大学2026届毕业生秋季双选会",
+    "listPublishDate": "2025-11-03",
+    "sourceOrder": 638
+  }
+}

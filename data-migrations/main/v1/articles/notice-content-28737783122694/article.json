@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122694",
+    "contentId": "28737783122694",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122694"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办东北三省2021届高校毕业生移动端招聘会（寒假专场）的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2021-01-22",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align:center\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"migration-resource://076656d46e588ebdd7e7c36212dbb5e632b98d83ea17bb7bfa20bcd3f62b3247\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://eb70569f692e37c7349b88c29433a577dfd24a35d4b6bab529941b3a76ed4d64\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://cbda883cf5ec56a8e464f5a47078d5f0eea1c5163e91f443f988116cb264e6f7\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://72d55d6a582897fbcaa6d7464c1c92103b92f1b8b941cd45fbd12229dee7d621\" alt=\"\" width=\"1020\" height=\"1880\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210122094433.jpg",
+      "originalReference": "/chistory/cms/editor/20210122094433.jpg",
+      "token": "migration-resource://076656d46e588ebdd7e7c36212dbb5e632b98d83ea17bb7bfa20bcd3f62b3247",
+      "snapshotPath": "assets/076656d46e588ebdd7e7c36212dbb5e632b98d83ea17bb7bfa20bcd3f62b3247.jpg",
+      "sha256": "076656d46e588ebdd7e7c36212dbb5e632b98d83ea17bb7bfa20bcd3f62b3247",
+      "contentType": "image/jpeg",
+      "sizeBytes": 228276
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210122094450.jpg",
+      "originalReference": "/chistory/cms/editor/20210122094450.jpg",
+      "token": "migration-resource://eb70569f692e37c7349b88c29433a577dfd24a35d4b6bab529941b3a76ed4d64",
+      "snapshotPath": "assets/eb70569f692e37c7349b88c29433a577dfd24a35d4b6bab529941b3a76ed4d64.jpg",
+      "sha256": "eb70569f692e37c7349b88c29433a577dfd24a35d4b6bab529941b3a76ed4d64",
+      "contentType": "image/jpeg",
+      "sizeBytes": 165193
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210122094457.jpg",
+      "originalReference": "/chistory/cms/editor/20210122094457.jpg",
+      "token": "migration-resource://cbda883cf5ec56a8e464f5a47078d5f0eea1c5163e91f443f988116cb264e6f7",
+      "snapshotPath": "assets/cbda883cf5ec56a8e464f5a47078d5f0eea1c5163e91f443f988116cb264e6f7.jpg",
+      "sha256": "cbda883cf5ec56a8e464f5a47078d5f0eea1c5163e91f443f988116cb264e6f7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 156126
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210122094505.jpg",
+      "originalReference": "/chistory/cms/editor/20210122094505.jpg",
+      "token": "migration-resource://72d55d6a582897fbcaa6d7464c1c92103b92f1b8b941cd45fbd12229dee7d621",
+      "snapshotPath": "assets/72d55d6a582897fbcaa6d7464c1c92103b92f1b8b941cd45fbd12229dee7d621.jpg",
+      "sha256": "72d55d6a582897fbcaa6d7464c1c92103b92f1b8b941cd45fbd12229dee7d621",
+      "contentType": "image/jpeg",
+      "sizeBytes": 998941
+    }
+  ],
+  "sourceFingerprint": "7e104e0e48dcefd97541e28dca7d9849d0c07e3481712e9664b4a74bb5c9d09a",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "关于举办东北三省2021届高校毕业生移动端招聘会（寒假专场）的通知",
+    "listPublishDate": "2021-01-22",
+    "sourceOrder": 163,
+    "detailPublishDate": "2021-01-22"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:02495c17fb74777688ff9af62f9055cfd62123a00c0245867e44d028fbbfd6e9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xlTGmh9BfnQ8nOVlnOpvkg",
+    "url": "https://mp.weixin.qq.com/s/xlTGmh9BfnQ8nOVlnOpvkg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北师范大学在深圳召开“招培就”一体化座谈会并推进校地协同育人合作",
+    "source": "",
+    "publishDate": "2026-04-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xlTGmh9BfnQ8nOVlnOpvkg"
+  },
+  "resources": [],
+  "sourceFingerprint": "524220681fd5c0a9d97ed9a3b13e050173544fb90b364aa651d6e56243c0e63a",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "东北师范大学在深圳召开“招培就”一体化座谈会并推进校地协同育人合作",
+    "listPublishDate": "2026-04-24",
+    "sourceOrder": 250
+  }
+}

@@ -3,58 +3,51 @@
 ## Authority
 
 - GitHub Issue #60 / E3
-- `docs/requirements/main-historical-content-migration.md`
 - `docs/project/main-site-formal-content-plan.md`
+- `docs/requirements/main-historical-content-migration.md`
 - `docs/requirements/main-external-link-boundary.md`
-- `docs/requirements/main-single-page-formal-content.md`
+- `docs/requirements/cms-site-package-boundary.md`
 - `data-migrations/README.md`
 
 ## Status
 
-- Specification: **READY**
-- Technical Planning: **READY** — `docs/technical/main-historical-content-migration.md`
-- Upstream implementation dependency: **E2 / EU-49 SATISFIED**
-- `slice-work`: **EU-50 + EU-51 formed**
-- Current Ready Execution Unit from E3: **EU-50**
-- EU-51: **Candidate / Readiness PENDING on EU-50 accepted snapshot**
+- Specification: **READY / ACTIVE**
+- Current migration scope: **ARTICLE ONLY**
+- Current Execution Unit: **EU-50**
+- EU-51: **BLOCKED pending accepted snapshot integration + fresh Readiness**
 
 ## 1. Pipeline
 
-E3 follows:
-
 ```text
 Legacy Main Source
-→ bounded discovery / collection
-→ raw evidence candidate
-→ completeness reconciliation / classification
-→ accepted snapshot promotion
-→ Main Canonical Migration Dataset
-→ Generic Content Migration
-→ Runtime reconciliation
-→ Public/Admin verification
-→ Human Review
+→ bounded discovery / collection / retry
+→ full source Evidence Candidate
+→ Article-only eligibility + explicit deferred/error classification
+→ Page/List Site Package handoff
+→ accepted current Article subset promotion
+→ Generic Article migration (downstream only)
 ```
 
-Collection and Stable Verification are separate. Only the first stages may access Legacy Source.
+Only source-discovery stages may access Legacy Source.
 
 ## 2. Discovery output
 
-A discovery run must emit machine-readable evidence sufficient to answer:
+A discovery/retry evidence chain must record:
 
-- which source surfaces were traversed;
-- page/pagination coverage;
-- discovered content keys and URLs;
-- candidate type: INTERNAL Article / EXTERNAL_LINK Article / Page / ListItem / excluded / unresolved;
-- discovered resource references;
-- duplicates/cross-surface references;
-- HTTP/source failure and retry summary;
-- completeness totals.
+- source root and redirect observations;
+- traversed Article surfaces and complete pagination;
+- INTERNAL / EXTERNAL_LINK Article identities;
+- source URLs and target Column aliases;
+- body/resource references and collection results;
+- retry budget/outcomes;
+- duplicate/cross-surface evidence;
+- every error classification.
 
-Temporary Actions artifacts are Evidence Candidates only. Long-term accepted evidence must be promoted into repository-owned files or summarized by durable digests/records as Repository Authority requires.
+Page/List surfaces may be collected in the same bounded source pass for completeness, but they are tagged as Site Package handoff evidence and never become Main migration import units.
 
-## 3. Canonical Main root
+## 3. Article canonical root
 
-After promotion:
+After promotion, the Main Historical Migration dataset is Article-oriented:
 
 ```text
 data-migrations/main/v1/
@@ -62,150 +55,157 @@ data-migrations/main/v1/
 ├── index.ndjson
 ├── articles/<stable-id>/article.json
 ├── articles/<stable-id>/assets/**
-├── pages/index.json
-├── pages/items/<stable-id>/page.json
-├── pages/items/<stable-id>/assets/**
-├── lists/<list-code>/index.json
-├── lists/<list-code>/items/<stable-id>/item.json
-└── reports/**
+├── reports/**
+└── source-discovery/**
 ```
 
-Exact optional report/source-evidence filenames are Technical Planning details. Canonical item schemas stay site-neutral; Main aliases/codes belong to the dataset, not Generic code.
+Only current import-eligible Articles are present in `index.ndjson` / `articles/**`. Deferred problem Articles and source-defect exclusions remain in durable reports/evidence and are not current import units.
+
+No Main `pages/**` or `lists/**` import units are accepted under the current ownership boundary.
 
 ## 4. Article mapping
 
-Each accepted content record from a Main Column maps to the current Generic Article schema.
+Each accepted Column content record maps to Generic Article semantics:
 
-- INTERNAL: bodyHtml/resources canonicalized and target Column alias recorded;
-- EXTERNAL_LINK: target Column alias + externalUrl, no fabricated local body;
-- source order/publish date/source URL/provenance retained;
-- E1 owns the classification rule.
+- INTERNAL → local canonical body/resources + stable Column alias;
+- EXTERNAL_LINK → stable Column alias + externalUrl; external target body is not scraped into local content;
+- source identity/provenance/publish metadata are retained when available;
+- source fingerprint is deterministic from accepted canonical fields;
+- resources use local migration-relative paths, size and SHA-256 where collection is required.
 
-## 5. Page mapping
+Classification is based on the accepted E1 ownership rules and must fail closed when a source reference cannot be safely attributed.
 
-Each accepted formal Page source maps to the E2 Generic Page schema.
+## 5. Page/List Site Package handoff
 
-- target = stable `(groupAlias? + pageAlias)`;
-- content does not create Page structure;
-- expected target fingerprint is based on accepted pre-import Runtime baseline;
-- Page body resources are canonical bytes, not stable Site assets;
-- current placeholder/fixed-integration Page is not silently reclassified.
-
-## 6. List mapping
-
-Only source evidence showing historical operational membership is promoted to canonical ListItem records.
-
-Expected current possible targets include, but are not limited to, stable Main list codes already in Site Package such as `HOME_CAROUSEL` and `SITE_LINKS` group lists.
-
-- LINK vs ARTICLE follows E1;
-- list order comes from source evidence;
-- images/resources include digest evidence;
-- bootstrap default rows are not automatically treated as historical source truth.
-
-## 7. Completeness gate
-
-Before snapshot promotion:
+The source pass may emit Page/List evidence, but the output contract is:
 
 ```text
-discovered unique candidates
-= accepted canonical
-+ explicitly excluded
-+ explicitly deferred/unresolved
+Site Package handoff
+├── Page source candidates + resources + problems
+├── Main stable ListItem candidates + resources + problems
+└── source-only observations / duplicates / unresolved classifications
 ```
 
-Promotion to `accepted-canonical` requires unresolved that would affect current product scope to be zero. Any deliberate exclusion/defer must have an evidence-backed reason.
+Handoff records:
 
-Counts are evidence outputs, not hardcoded Specification constants.
+- are not listed in `import-eligible-index.json`;
+- do not become `data-migrations/main/v1/pages/**` or `lists/**` import units;
+- preserve all source errors/observations;
+- do not silently modify `sites/jilinjobs/**` during EU-50;
+- may later be consumed by a separately authorized Site Package planning/execution unit.
 
-## 8. Collection determinism
+Current capability facts:
 
-Collector must:
+- Page `bodyHtml` already has stable Site Package structure/reconcile support;
+- stable ListItem membership does not yet have a Site Package v1 structure type/stable reconcile path.
 
-- use explicit source root/config;
-- traverse every discovered pagination branch until termination according to source evidence;
-- preserve raw source identifiers/URLs;
-- normalize only fields defined by canonical contracts;
-- download referenced resources with size/digest;
-- avoid current-time/random values inside item fingerprints except separately recorded collection metadata;
-- be rerunnable enough to compare discovery drift.
+## 6. Error classification and deferral
 
-Collector implementation may be Python/Node/other bounded tooling; no runtime product dependency is implied.
+The classification boundary is fail-closed with respect to current import membership: unresolved/problem Articles never become import input by inference.
 
-## 9. Promotion and drift
+### Source resource missing
 
-An accepted canonical snapshot is immutable by provenance semantics even though repository files can evolve through Git.
+`SOURCE_RESOURCE_MISSING` requires explicit HTTP 404/410 evidence.
 
-If a later collection changes accepted source:
+An INTERNAL Article may move to `EXCLUDE_PENDING_CLIENT_CONFIRMATION` only if every blocking issue on that Article is this classification. The Article remains separately listed with source/error evidence.
 
-- produce explicit diff/evidence;
-- do not silently rewrite current accepted fingerprint;
-- determine whether it is correction, scope extension or new source version;
-- any Runtime update semantics beyond current Generic create/skip/conflict and E2 guarded Page first apply require separate authority.
+### Other errors
 
-## 10. Import composition
+- transport/socket/timeout failures do not imply source missing;
+- unsupported HTML/attributes/resource type/scheme/redirect/size/etc. remain distinct classifications;
+- retry exhaustion remains explicit deferred review evidence;
+- approved non-blocking exceptions remain recorded;
+- unknown/unmapped blocking observations are never silently mapped into the current import set.
 
-Fresh Runtime verification order:
+Current Human Authority (2026-09-09) defers unresolved/problem Articles until the broader current task sequence completes. These Articles are excluded from current import and do not block promotion/integration of the clean or explicitly approved subset, provided they remain separately and durably recorded.
+
+Page/List problems use the same explicit classifications but are emitted in the Site Package handoff rather than migration withholding.
+
+## 7. Current Article subset eligibility gate
+
+For Articles:
 
 ```text
-Generic Flyway schema
-→ JilinJobs stable Site Package reconcile
-→ optional Fresh bootstrap as scenario requires
-→ Main canonical generic-content import
-→ Runtime reconciliation
-→ Public/Admin verification
+total Article candidates
+= current import eligible
++ source-defect excluded pending client confirmation
++ deferred problem Articles
 ```
 
-E3 must not rely on Party command paths.
+`import-eligible-index.json` contains an `articles` collection only.
 
-A mixed Main dataset can contain Article/Page/List units in one Generic preflight so known invalid/conflict blocks mutation before execution.
+Current-subset promotion is ready when:
 
-## 11. Verification matrix
+- the arithmetic closes;
+- final retry has no retryable targets;
+- no unscoped blocking observation can invalidate current-subset correctness;
+- current import-eligible count is non-zero;
+- source-defect exclusions and deferred Articles remain separately preserved;
+- the repository-owned promoted tree contains exactly the current import-eligible subset.
 
-### Discovery
-- full known source surface/pagination coverage;
-- no duplicate canonical identity;
-- accepted/excluded/unresolved arithmetic reconciliation;
-- source/resource failures surfaced.
+The existence of deferred problem Articles alone does not block promotion or current project progression.
 
-### Canonical
-- JSON/schema validity;
-- stable identity uniqueness;
-- source fingerprint consistency;
-- resource path/size/SHA;
-- valid stable target aliases/codes/page identities.
+Page/List Site Package problems are visible in handoff evidence but do not change Article arithmetic.
 
-### Runtime
-- Fresh import expected created/applied totals;
-- second import all SKIP;
-- source fingerprint tamper CONFLICT;
-- target/precondition/resource tamper no unsafe mutation;
-- runtime content/resources/list placement reconcile to canonical.
+## 8. Retry / determinism
 
-### Public/Admin
-- Main homepage/columns/articles/pages/list placements render expected accepted content;
-- external links follow E1;
-- Page behavior follows E2;
-- no Party regression;
-- Integrated Browser PASS.
+Collector/retry behavior must:
 
-### Human Review
-- representative/high-risk content and all exceptional classifications reviewed;
-- final accepted snapshot receives explicit Human Review result before closure.
+- use explicit bounded source configuration;
+- never re-run unrelated successful records during targeted retry;
+- honor the finite per-target retry budget;
+- record final retry evidence;
+- never infer 404/410 from transport failure;
+- preserve frozen successful collection bytes when retrying only failures.
 
-## 12. Slice sequencing
+## 9. Promotion / drift
 
-E2 / EU-49 is now integrated and Fresh Context source-evidence recovery has confirmed a real two-boundary split: the current Legacy Source is large, mixed and externally mutable, while Runtime import/final review must consume a frozen repository-owned dataset without external-source dependency.
+Accepted current Article subset promotion is an explicit repository change. It must copy/freeze only the eligible Article units and their referenced local resources from the frozen evidence chain, retain deterministic provenance/integrity, and keep deferred/source-defect records outside the current import index.
 
-`slice-work` therefore forms:
+Later source drift or later approval of deferred Articles must produce an evidence-backed diff and must not silently overwrite accepted canonical fingerprints.
 
-1. **EU-50 — Main Source Discovery & Accepted Snapshot Promotion**
-   - external Legacy Source access is allowed only in explicit discovery/collection;
-   - owns completeness/classification, resource collection and repository-owned accepted snapshot promotion;
-   - stops before Runtime product import/final Human Review;
-   - `readiness-check = PASS`.
-2. **EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review**
-   - consumes only EU-50's integrated accepted snapshot;
-   - owns Generic import, idempotency/conflict/reconciliation, Public/Admin verification and Human Review;
-   - `readiness-check = PENDING` until exact accepted snapshot identities/counts/digests/exceptions exist as durable Authority.
+Page/List source drift is handled under Site Package follow-up authority, not by changing Main migration semantics.
 
-The two Units must not share Execute Authority. EU-50's Readiness PASS does not establish its Execute baseline on the planning branch; after this Planning/Readiness state is integrated, a Fresh Context must revalidate integrated `main`, Issue #60/#77, current Work Authority, Open PR/Actions and base drift before EU-50 Execute begins.
+## 10. Verification matrix
+
+### Source evidence
+- all configured Main Article surfaces traversed;
+- pagination termination proven;
+- final retry queue closed;
+- error classes machine-readable.
+
+### Article eligibility / promotion
+- Article-only arithmetic closes;
+- eligible index has Articles only;
+- source-defect exclusions are separately listed;
+- deferred Article problems are explicit and excluded from current import;
+- no unmapped blocking observation is hidden;
+- promoted repository-owned `index.ndjson` / `articles/**` equals the eligible subset and passes deterministic integrity checks.
+
+### Site Package handoff
+- all discovered Page/List candidates are represented;
+- Page/List problems/observations are preserved;
+- no handoff record is silently deleted by migration triage;
+- stable ListItem capability gap is surfaced rather than bypassed.
+
+### Downstream
+EU-50 stops before Runtime import, Public/Admin migration verification and final migrated-content Human Review. Those require later authority.
+
+## 11. Slice sequencing
+
+1. **EU-50 — Main Source Discovery & Article Snapshot Promotion**
+   - current Execute unit;
+   - owns external source evidence, Article eligibility/promotion, deferred evidence and Page/List handoff;
+   - does not mutate Runtime CMS product data.
+2. **EU-51 — Main Article Import, Runtime Reconciliation & Human Review**
+   - downstream candidate only;
+   - blocked until EU-50 accepted current Article snapshot integration and a fresh readiness decision.
+3. **Deferred problem Article review**
+   - later explicit review/decision work;
+   - not current import input and not a blocker to current-subset progression.
+4. **Site Package Page/List follow-up**
+   - separate planning gate;
+   - owns accepted Page content and stable Main ListItem capability/content;
+   - not automatically an EU-50/EU-51 subtask.
+
+No Unit inherits Execute Authority from another.

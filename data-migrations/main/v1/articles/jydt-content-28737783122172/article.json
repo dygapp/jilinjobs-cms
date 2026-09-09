@@ -1,0 +1,101 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122172",
+    "contentId": "28737783122172",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122172"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省2014年上半年全国计算机应用技术证书考试（NIT）考试结束",
+    "source": "",
+    "publishDate": "2014-05-14",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省2014年上半年全国计算机应用技术证书考试（NIT）考试结束</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2014-5-14 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font size=\"4\"></font>&nbsp;</p> <p align=\"justify\"><font size=\"4\">&nbsp;&nbsp;&nbsp;吉林省2014年上半年全国计算机应用技术证书考试（NIT）于5月5日-5月11日举行。上半年我省共12个考点举办考试，参加考试学生达4370人次。考前，省高校毕业生就业指导中心（简称中心）召开了考务工作会，主任郑志宏对本次考试提出要求，并做出部署。省中心书记朱军到考试现场检查指导工作。</font></p> <p align=\"center\"><img src=\"migration-resource://46aeb23895bad9862f8564b5b127952f41d27ab11150bcf56f770a4238901a5e\" border=\"0\"></p> <p align=\"center\"><strong>吉林科技职业技术学院考试现场（朱军书记到现场巡视）</strong></p> <p align=\"center\"><img src=\"migration-resource://cb9719669da59c0b646935cd9e8d2288c346a843f012973d5059dbcc969d2e19\" border=\"0\"></p> <p align=\"center\"><strong>吉林农业工程职业技术学院考试现场</strong></p> <p align=\"center\"><img src=\"migration-resource://820e313fa0544a7fc1c5aba5a4c96b2c5afd4612579f57cea66e31a68e9c19b7\" border=\"0\"></p> <p align=\"center\"><strong>吉林省经济管理干部学院考试现场</strong></p> <p align=\"center\"><img src=\"migration-resource://2b68f7429a4d8a870b50a654b7f34ae6b42ca34f4af6053d1d35755f93feb104\" border=\"0\"></p> <p align=\"center\"><strong>长春金融高等专科学校考试现场</strong></p> <p align=\"center\"><img src=\"migration-resource://56e6c977d83bc37ff7f91694425cfaf65eb22fa019187bf2b56041b2ba3234d5\" border=\"0\"></p> <p align=\"center\"><strong>长春师范大学考试现场</strong></p> <p align=\"center\"><img src=\"migration-resource://21dab0d81cbddf1c5a74f3d17a4f4e2b78c40ff3822c04d95f604d94bc791532\" border=\"0\"></p> <p align=\"center\"><strong>四平职业大学考试现场</strong></p> <p align=\"center\"><img src=\"migration-resource://dfcee5ced3120376ae07ef78d4ab6c43fc26df9967c437c01c0de6f789f7fded\" border=\"0\"></p> <p align=\"center\"><strong>长春医学高等专科学校考点</strong></p> <p align=\"center\">&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140514033848714.jpg",
+      "originalReference": "/chistory/cms/imgs/20140514033848714.jpg",
+      "token": "migration-resource://46aeb23895bad9862f8564b5b127952f41d27ab11150bcf56f770a4238901a5e",
+      "snapshotPath": "assets/46aeb23895bad9862f8564b5b127952f41d27ab11150bcf56f770a4238901a5e.jpg",
+      "sha256": "46aeb23895bad9862f8564b5b127952f41d27ab11150bcf56f770a4238901a5e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 50503
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140514034152129.jpg",
+      "originalReference": "/chistory/cms/imgs/20140514034152129.jpg",
+      "token": "migration-resource://cb9719669da59c0b646935cd9e8d2288c346a843f012973d5059dbcc969d2e19",
+      "snapshotPath": "assets/cb9719669da59c0b646935cd9e8d2288c346a843f012973d5059dbcc969d2e19.jpg",
+      "sha256": "cb9719669da59c0b646935cd9e8d2288c346a843f012973d5059dbcc969d2e19",
+      "contentType": "image/jpeg",
+      "sizeBytes": 49264
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140514034228979.jpg",
+      "originalReference": "/chistory/cms/imgs/20140514034228979.jpg",
+      "token": "migration-resource://820e313fa0544a7fc1c5aba5a4c96b2c5afd4612579f57cea66e31a68e9c19b7",
+      "snapshotPath": "assets/820e313fa0544a7fc1c5aba5a4c96b2c5afd4612579f57cea66e31a68e9c19b7.jpg",
+      "sha256": "820e313fa0544a7fc1c5aba5a4c96b2c5afd4612579f57cea66e31a68e9c19b7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 56287
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140514034506168.jpg",
+      "originalReference": "/chistory/cms/imgs/20140514034506168.jpg",
+      "token": "migration-resource://2b68f7429a4d8a870b50a654b7f34ae6b42ca34f4af6053d1d35755f93feb104",
+      "snapshotPath": "assets/2b68f7429a4d8a870b50a654b7f34ae6b42ca34f4af6053d1d35755f93feb104.jpg",
+      "sha256": "2b68f7429a4d8a870b50a654b7f34ae6b42ca34f4af6053d1d35755f93feb104",
+      "contentType": "image/jpeg",
+      "sizeBytes": 45887
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140514034540409.jpg",
+      "originalReference": "/chistory/cms/imgs/20140514034540409.jpg",
+      "token": "migration-resource://56e6c977d83bc37ff7f91694425cfaf65eb22fa019187bf2b56041b2ba3234d5",
+      "snapshotPath": "assets/56e6c977d83bc37ff7f91694425cfaf65eb22fa019187bf2b56041b2ba3234d5.jpg",
+      "sha256": "56e6c977d83bc37ff7f91694425cfaf65eb22fa019187bf2b56041b2ba3234d5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 43011
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140514034619798.jpg",
+      "originalReference": "/chistory/cms/imgs/20140514034619798.jpg",
+      "token": "migration-resource://21dab0d81cbddf1c5a74f3d17a4f4e2b78c40ff3822c04d95f604d94bc791532",
+      "snapshotPath": "assets/21dab0d81cbddf1c5a74f3d17a4f4e2b78c40ff3822c04d95f604d94bc791532.jpg",
+      "sha256": "21dab0d81cbddf1c5a74f3d17a4f4e2b78c40ff3822c04d95f604d94bc791532",
+      "contentType": "image/jpeg",
+      "sizeBytes": 46320
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140514034648416.jpg",
+      "originalReference": "/chistory/cms/imgs/20140514034648416.jpg",
+      "token": "migration-resource://dfcee5ced3120376ae07ef78d4ab6c43fc26df9967c437c01c0de6f789f7fded",
+      "snapshotPath": "assets/dfcee5ced3120376ae07ef78d4ab6c43fc26df9967c437c01c0de6f789f7fded.jpg",
+      "sha256": "dfcee5ced3120376ae07ef78d4ab6c43fc26df9967c437c01c0de6f789f7fded",
+      "contentType": "image/jpeg",
+      "sizeBytes": 42098
+    }
+  ],
+  "sourceFingerprint": "7de91998f834f75037dfa08a4ff800eb012fc27a8428df8d21d93da746c98a73",
+  "evidence": {
+    "listPage": 161,
+    "listTitle": "吉林省2014年上半年全国计算机应用技术证书考试（NIT）考试结束",
+    "listPublishDate": "2014-05-14",
+    "sourceOrder": 1604,
+    "detailPublishDate": "2014-05-14"
+  }
+}

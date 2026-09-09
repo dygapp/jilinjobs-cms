@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3be6e79a570211fe2866ab6599a54330c22a7f53c9f36a21d4799e0c7559d059",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/bcvwWCqKe87_sbB97xCNgQ",
+    "url": "https://mp.weixin.qq.com/s/bcvwWCqKe87_sbB97xCNgQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化医药健康职业学院举办2026届毕业生政策宣讲暨专场招聘会",
+    "source": "",
+    "publishDate": "2026-05-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/bcvwWCqKe87_sbB97xCNgQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "3914da92b2b09030c13be957cca9eba8cf867af0f73271c2a63e2e595e47d4c5",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "通化医药健康职业学院举办2026届毕业生政策宣讲暨专场招聘会",
+    "listPublishDate": "2026-05-18",
+    "sourceOrder": 174
+  }
+}

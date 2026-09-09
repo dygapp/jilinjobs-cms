@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122628",
+    "contentId": "28737783122628",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122628"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "《高等学校毕业生登记表》模板",
+    "source": "",
+    "publishDate": "2014-11-13",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">《高等学校毕业生登记表》模板</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:市场部 发布时间:2014-11-13 0:00:00</span></p>\n\n<p style=\"text-align:center\"><strong><span style=\"font-size:16px\">&nbsp;</span></strong></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<p style=\"text-align:center\"><strong><span style=\"font-size:16px\">《高等学校毕业生登记表》模板请到附件中下载</span></strong></p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=b6a13305-3ee8-4e37-b200-79a864c1d2a2\">《高等学校毕业生登记表》模板.doc</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "f0740ae4e9006414a87ad2b9aa4d5e1cd4c1d911f9fc57272551b1596802d81f",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "《高等学校毕业生登记表》模板",
+    "listPublishDate": "2014-11-13",
+    "sourceOrder": 294,
+    "detailPublishDate": "2014-11-13"
+  }
+}

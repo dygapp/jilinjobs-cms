@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0d2c53c270fda7b3a0b1fce2913ac03ffacade2bc6bf696c224bcb03e8eb2c5c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/T_by-9z2b6QFUDrrdO13Lw",
+    "url": "https://mp.weixin.qq.com/s/T_by-9z2b6QFUDrrdO13Lw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业 产教融合谋发展 —— 延边职业技术学院党委书记杨新民率队走访州内多家企业",
+    "source": "",
+    "publishDate": "2026-03-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/T_by-9z2b6QFUDrrdO13Lw"
+  },
+  "resources": [],
+  "sourceFingerprint": "81a54ee458ba5c013c23a3ffd4d2816751f39569d4f528db2b4d87444795e9ae",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "访企拓岗促就业 产教融合谋发展 —— 延边职业技术学院党委书记杨新民率队走访州内多家企业",
+    "listPublishDate": "2026-03-30",
+    "sourceOrder": 340
+  }
+}

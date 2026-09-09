@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a075b2a42e766d5c6bd1423c46644f7672d66112a0bbad4c823103e9ded781b7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/yoBOrJVPESZn5dMpDwnXjQ",
+    "url": "https://mp.weixin.qq.com/s/yoBOrJVPESZn5dMpDwnXjQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企联手“靶向”育才！长春早期教育职业学院与华盛瑞康达成合作 锚定口腔数字化紧缺人才",
+    "source": "",
+    "publishDate": "2026-01-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/yoBOrJVPESZn5dMpDwnXjQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "779e9b1c2045b18ba55071fdaf6a5f8007fffd4f486635fce6c8715c507ddbe2",
+  "evidence": {
+    "listPage": 51,
+    "listTitle": "校企联手“靶向”育才！长春早期教育职业学院与华盛瑞康达成合作 锚定口腔数字化紧缺人才",
+    "listPublishDate": "2026-01-06",
+    "sourceOrder": 509
+  }
+}

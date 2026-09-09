@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:5d148aa2643349aa4597e4abaa1db2466f86df505130980e9be6b289347d4b7c",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/show.php",
+    "url": "http://tgzp.jlipedu.cn/show.php?contentid=261"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "特岗教师招聘 ---- 无人递补空缺岗位公示及二次征集志愿工作安排",
+    "source": "",
+    "publishDate": "2020-10-17",
+    "bodyHtml": "",
+    "externalUrl": "http://tgzp.jlipedu.cn/show.php?contentid=261"
+  },
+  "resources": [],
+  "sourceFingerprint": "17665a9a852951064a0b7c94955284204b74b9908b33ccb0bb6c404b4ebd5959",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "特岗教师招聘 ---- 无人递补空缺岗位公示及二次征集志愿工作安排",
+    "listPublishDate": "2020-10-17",
+    "sourceOrder": 372
+  }
+}

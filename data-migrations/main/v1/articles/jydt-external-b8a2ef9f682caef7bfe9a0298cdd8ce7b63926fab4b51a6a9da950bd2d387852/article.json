@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b8a2ef9f682caef7bfe9a0298cdd8ce7b63926fab4b51a6a9da950bd2d387852",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/2GDXj8_bfa51K3eY2-bg9Q",
+    "url": "https://mp.weixin.qq.com/s/2GDXj8_bfa51K3eY2-bg9Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "白城市委书记李洪慈向广大长春理工大学学子发出诚挚邀约：“就”在白城 “职”引未来！",
+    "source": "",
+    "publishDate": "2026-04-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/2GDXj8_bfa51K3eY2-bg9Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "3926f3f16824cd7598cc6a68f2ce9ef5ea97f4983d45fd494a66d12087ac8d73",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "白城市委书记李洪慈向广大长春理工大学学子发出诚挚邀约：“就”在白城 “职”引未来！",
+    "listPublishDate": "2026-04-13",
+    "sourceOrder": 300
+  }
+}

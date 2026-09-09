@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120594",
+    "contentId": "28737783120594",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120594"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林建筑大学举办“砼心筑梦杯”第一届大学生职业生涯规划大赛",
+    "source": "培训部",
+    "publishDate": "2020-10-30",
+    "bodyHtml": "\n                        \n\n\n\n\n<p>10月29日上午，学校“砼心筑梦杯”第一届大学生职业生涯规划大赛决赛圆满落幕。学校党委副书记陈士玉出席比赛。</p>\n<p>比赛中，参赛选手们以“大学生职业生涯规划”为主题进行演讲展示和答辩。大家围绕未来的职业理想，结合科学的生涯发展理念，就自我认知澄清、外部环境探索、职业发展定向、制定规划方案、评估调整等内容进行了充分展示。评委对参赛选手的《职业生涯规划书》、《职业世界说明书》和现场自我展示及答辩进行综合评分。最终，艺术设计学院胡胜乐、土木工程工学院刘硕、高正帅获得一等奖，测绘与勘查工程学院陈嘉惠等6名同学获得二等奖，经济与管理学院支裕璐等9名同学获得三等奖，土木工程学院李维一等15名同学获得三等奖。艺术与设计学院王雪瑶等6名教师获得优秀指导教师奖，艺术设计学院等6个学院获得最佳组织奖。</p>\n<p style=\"text-align:center\"><img src=\"migration-resource://256c88fd81657417fcf60f80c65d5fc96465b9b5e5d82d4f7ceb30910d908111\" alt=\"\" width=\"524\" height=\"349\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src=\"migration-resource://7f6790b9ad7f7224dd27e84fe74f971bf8150c1880009eaf2149ec9aa0e9b799\" alt=\"\" width=\"524\" height=\"349\"></p>\n<p>本次比赛由招生与就业工作处（大学生就业指导中心）主办，学生工作处、教务处、大学生创新创业中心以及各学院参与组织。作为我校大学生生涯探索计划的一部分，比赛结合《大学生职业生涯规划》课程的开展，以激发学生学习动力、促进学生树立正确的就业观和职业观，丰富大学生涯为目的，覆盖范围大，专业水准高，对培养生涯自觉意识，以大赛促就业，提升大学生职业生涯规划意识起到了积极促进作用。</p>\n<p><strong>又讯：</strong></p>\n<p>近日，吉林建筑大学2021届毕业生就业工作部署会在行政楼A401会议室召开。各学院党委书记、党委副书记及学生工作负责人、研究生学院就业工作负责人，就业工作处有关人员参加了会议。会议由学校党委副书记陈士玉主持。</p>\n<p>会上，招生与就业工作处通报了2020届毕业生初次就业率，下发了关于秋季校园招聘活动的通知，介绍了2020年秋季校园招聘活动筹备情况。大学生就业指导中心主任、招生与就业工作处副处长周景民对2021届毕业生就业相关工作提出具体要求，希望各学院全力做好校园招聘会准备工作，鼓励学生积极参与招聘会，并为学生提供高质量就业服务。同时强调在逐步恢复线下校园招聘会过程中，不能放松疫情防控，要严格按照疫情防控要求做好相关工作。保卫处、后勤管理处表示将全力支持招聘会举办，确保招聘会顺利进行。</p>\n<p>陈士玉强调毕业生就业工作是重要民生工程，各部门、单位要高度重视，全校上下形成合力，扎实推进，抓紧落实，做好服务工作。要准确掌握就业相关数据，了解学生不愿就业的真实情况，通过采取“一帮一”结对帮扶互助等方式多渠道促进毕业生就业。</p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201231140644.png",
+      "originalReference": "/chistory/cms/editor/20201231140644.png",
+      "token": "migration-resource://256c88fd81657417fcf60f80c65d5fc96465b9b5e5d82d4f7ceb30910d908111",
+      "snapshotPath": "assets/256c88fd81657417fcf60f80c65d5fc96465b9b5e5d82d4f7ceb30910d908111.png",
+      "sha256": "256c88fd81657417fcf60f80c65d5fc96465b9b5e5d82d4f7ceb30910d908111",
+      "contentType": "image/png",
+      "sizeBytes": 846885
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201231140703.png",
+      "originalReference": "/chistory/cms/editor/20201231140703.png",
+      "token": "migration-resource://7f6790b9ad7f7224dd27e84fe74f971bf8150c1880009eaf2149ec9aa0e9b799",
+      "snapshotPath": "assets/7f6790b9ad7f7224dd27e84fe74f971bf8150c1880009eaf2149ec9aa0e9b799.png",
+      "sha256": "7f6790b9ad7f7224dd27e84fe74f971bf8150c1880009eaf2149ec9aa0e9b799",
+      "contentType": "image/png",
+      "sizeBytes": 558871
+    }
+  ],
+  "sourceFingerprint": "787324ea12e3cd924eaea4f3183e734a837be6fa4283523db50f31e9257bc046",
+  "evidence": {
+    "listPage": 140,
+    "listTitle": "吉林建筑大学举办“砼心筑梦杯”第一届大学生职业生涯规划大赛",
+    "listPublishDate": "2020-10-30",
+    "sourceOrder": 1393,
+    "detailPublishDate": "2020-10-30"
+  }
+}

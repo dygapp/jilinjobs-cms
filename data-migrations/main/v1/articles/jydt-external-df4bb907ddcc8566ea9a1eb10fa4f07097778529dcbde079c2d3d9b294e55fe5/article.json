@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:df4bb907ddcc8566ea9a1eb10fa4f07097778529dcbde079c2d3d9b294e55fe5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/3jePWUzt_BDXeDn9cBn9Mg",
+    "url": "https://mp.weixin.qq.com/s/3jePWUzt_BDXeDn9cBn9Mg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企携手共探发展新路径|长春早期教育职业学院体育学院赴慢山里营地小镇开展产业调研",
+    "source": "",
+    "publishDate": "2025-11-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/3jePWUzt_BDXeDn9cBn9Mg"
+  },
+  "resources": [],
+  "sourceFingerprint": "f5d3628d7811bbf7b0a5be724f135f2f9debced4f2a12882eb97bcb2d04e4190",
+  "evidence": {
+    "listPage": 60,
+    "listTitle": "校企携手共探发展新路径|长春早期教育职业学院体育学院赴慢山里营地小镇开展产业调研",
+    "listPublishDate": "2025-11-14",
+    "sourceOrder": 600
+  }
+}

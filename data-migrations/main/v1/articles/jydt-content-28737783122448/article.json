@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122448",
+    "contentId": "28737783122448",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122448"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "人劳局 出台措施鼓励创业",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">人劳局 出台措施鼓励创业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;<br>　　本报4月3日讯（记者王绍兵 通讯员甘毅）在深入学习实践科学发展观活动中，市人劳局每个党组成员都选择了一个针对金融危机背景下的经济形势对劳动就业、社会保险、解决民生问题等方面的调研课题。</font></p> <p><font size=\"2\">　　近日，人劳局党组书记、局长潘泽和连续多天在企业和大学生中调研。受客观因素影响，我市创业基础较为薄弱、创业政策尚不够完善。市人劳局将拿出具体举措，力争将学习实践活动的调研成果转换成实实在在的政策措施。潘泽和表示，要制定出台关于海口市创建国家级创业型城市的指导意见和实施方案，研究出台创业工作配套政策，组织开展创业培训，解决创业融资问题，开发创业项目和产业等。<br>&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "60e94cbc57ea57446b8f1fac3778bde0d2ce5cab3e2adc3d9e07b8b6ccea85d3",
+  "evidence": {
+    "listPage": 189,
+    "listTitle": "人劳局 出台措施鼓励创业",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1889,
+    "detailPublishDate": "2009-04-04"
+  }
+}

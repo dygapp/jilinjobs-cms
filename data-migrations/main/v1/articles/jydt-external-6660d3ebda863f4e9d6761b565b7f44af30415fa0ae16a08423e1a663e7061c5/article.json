@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6660d3ebda863f4e9d6761b565b7f44af30415fa0ae16a08423e1a663e7061c5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/gGLnfN2pgSeSA_x9iKKrQg",
+    "url": "https://mp.weixin.qq.com/s/gGLnfN2pgSeSA_x9iKKrQg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉科影视动画产业学院与两企业签约 共建产教融合 定向育人才",
+    "source": "",
+    "publishDate": "2025-12-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gGLnfN2pgSeSA_x9iKKrQg"
+  },
+  "resources": [],
+  "sourceFingerprint": "5a5ea2b05eb289d7374ce828e72a73f3427cc2113f573041865db80d5d2c0941",
+  "evidence": {
+    "listPage": 54,
+    "listTitle": "吉科影视动画产业学院与两企业签约 共建产教融合 定向育人才",
+    "listPublishDate": "2025-12-18",
+    "sourceOrder": 532
+  }
+}

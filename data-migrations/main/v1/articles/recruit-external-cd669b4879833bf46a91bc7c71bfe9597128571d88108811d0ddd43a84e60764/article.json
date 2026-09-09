@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:cd669b4879833bf46a91bc7c71bfe9597128571d88108811d0ddd43a84e60764",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/nQsbjwOkV8p34R_uoz-29Q",
+    "url": "https://mp.weixin.qq.com/s/nQsbjwOkV8p34R_uoz-29Q"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力扩容提质 服务高质量发展 2026年吉林省高校毕业生财经类专场招聘会参会指南",
+    "source": "",
+    "publishDate": "2026-03-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/nQsbjwOkV8p34R_uoz-29Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "2b57f251c96f7d98dd80c547696286b499844aa590350ce050241ea96b75128c",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "聚力扩容提质 服务高质量发展 2026年吉林省高校毕业生财经类专场招聘会参会指南",
+    "listPublishDate": "2026-03-25",
+    "sourceOrder": 52
+  }
+}

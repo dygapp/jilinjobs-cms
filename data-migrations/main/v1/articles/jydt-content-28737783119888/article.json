@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119888",
+    "contentId": "28737783119888",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119888"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "许世彬总督学调研2019年吉林省高校“双困学生”就业能力提升培训工作",
+    "source": "",
+    "publishDate": "2019-03-28",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">许世彬总督学调研2019年吉林省高校“双困学生”就业能力提升培训工作</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2019-3-28 15:18:35</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">3月27日, 省政府教育督导团总督学许世彬来到省高校毕业生就业指导中心调研指导工作。重点听取了省就业中心领导班子对2019年吉林省高校“双困学生”就业能力提升培训工作的总体计划安排和实施进展情况的详细汇报，走进“双困学生”培训课堂进行听课,视察了学生的用餐场地及学生宿舍，并对培训工作作出指示和部署。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">许世彬总督学要求,今年的培训工作要将习近平总书记在学校思想政治理论课教师座谈会上的重要讲话精神及吉林省教育大会精神充分融入教育环节当中，以就业择业为切入点，以能力提升为核心，以思想转变为根本宗旨，通过教学指导与实习实践相结合的方式培养学生的自主择业意识，帮助学生重塑自信，明确职业发展目标，了解企业用人需求，掌握求职技巧，最大限度的帮助学生实现高质量顺利就业。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">许世彬总督学强调, 要认真贯彻落实《教育部关于做好2019届全国普通高等学校毕业生就业创业工作的通知》精神，促进高校毕业生就业创业，把“稳就业”放在更突出的位置，强化高校就业困难群体帮扶,并将少数民族大学生、残疾大学生就业能力提升纳入到培训工作当中。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">许世彬总督学指出,在不断提升培训质量和效果的同时,要进一步做好培训的基础保障工作,建立科学的管理机制，加强安全防范措施,保证参培学员在培训期间的人身安全及食品安全,确保培训工作能够顺利开展。</span></p><p style=\"text-align: center;\"><img title=\"QQ图片20190328152829.jpg\" src=\"migration-resource://4365784df7c8aa9477384d416111108077ec4a82ea8206514b8abdfb5cd083a6\"></p><p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6368938316963462506722636.jpg",
+      "originalReference": "/chistory/cms/imgs/6368938316963462506722636.jpg",
+      "token": "migration-resource://4365784df7c8aa9477384d416111108077ec4a82ea8206514b8abdfb5cd083a6",
+      "snapshotPath": "assets/4365784df7c8aa9477384d416111108077ec4a82ea8206514b8abdfb5cd083a6.jpg",
+      "sha256": "4365784df7c8aa9477384d416111108077ec4a82ea8206514b8abdfb5cd083a6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 146625
+    }
+  ],
+  "sourceFingerprint": "7a080ee307ca328701af3e6ad137ac6dd4cdde5bec4bfc24b35336948c988286",
+  "evidence": {
+    "listPage": 145,
+    "listTitle": "许世彬总督学调研2019年吉林省高校“双困学生”就业能力提升培训工作",
+    "listPublishDate": "2019-03-28",
+    "sourceOrder": 1448,
+    "detailPublishDate": "2019-03-28"
+  }
+}

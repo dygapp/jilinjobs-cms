@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122226",
+    "contentId": "28737783122226",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122226"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省大学生就业管理平台培训会在吉林农业大学举办",
+    "source": "",
+    "publishDate": "2011-04-01",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省大学生就业管理平台培训会在吉林农业大学举办</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-4-1 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"389\" src=\"migration-resource://7761e609203aceff667d26448c6643ee65c13625ef4349c4bef07ee38a10f14c\" width=\"648\" border=\"0\"></font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 经过一年多的探索实施，吉林省高校毕业生就业指导中心自主研发的大学生就业管理平台主要功能已开发完成，2011年全省高校毕业生毕业就业手续办理工作将启用这一新的平台。我中心于2011年3月24日在吉林农业大学图书馆对全省高校就业管理人员进行了院校客户端的培训。<br>&nbsp;&nbsp;&nbsp; 该平台功能强大，有可持续扩展空间，统计功能完善，平台中的院校客户端为高校提供了更好的服务功能，各高校可根据自身情况将毕业生管理权限下发给各学院（系），还可由学生本人登陆填报，极大的减轻了各高校就业部门的工作压力。<br></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"389\" src=\"http://www.jilinjobs.cn/uploadfile/201104/20110401151720930.jpg\" width=\"648\" border=\"0\"></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110401151743429.jpg",
+      "originalReference": "/chistory/cms/imgs/20110401151743429.jpg",
+      "token": "migration-resource://7761e609203aceff667d26448c6643ee65c13625ef4349c4bef07ee38a10f14c",
+      "snapshotPath": "assets/7761e609203aceff667d26448c6643ee65c13625ef4349c4bef07ee38a10f14c.jpg",
+      "sha256": "7761e609203aceff667d26448c6643ee65c13625ef4349c4bef07ee38a10f14c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 47790
+    }
+  ],
+  "sourceFingerprint": "ccb482e86dd0bc26b84502aca14af079f959194a9e019d6feb4fae2f4eb23819",
+  "evidence": {
+    "listPage": 166,
+    "listTitle": "吉林省大学生就业管理平台培训会在吉林农业大学举办",
+    "listPublishDate": "2011-04-01",
+    "sourceOrder": 1656,
+    "detailPublishDate": "2011-04-01"
+  }
+}

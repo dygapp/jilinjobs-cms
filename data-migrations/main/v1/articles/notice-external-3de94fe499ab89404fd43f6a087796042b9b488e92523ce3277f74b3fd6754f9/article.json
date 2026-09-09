@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:3de94fe499ab89404fd43f6a087796042b9b488e92523ce3277f74b3fd6754f9",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/kBBWYgxR5pfmgKJWz2gJIQ",
+    "url": "https://mp.weixin.qq.com/s/kBBWYgxR5pfmgKJWz2gJIQ"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "景俊海：吸引更多优秀人才投身全面振兴火热实践 书写无悔青春 开创事业辉煌 成就人生梦想",
+    "source": "",
+    "publishDate": "2024-04-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kBBWYgxR5pfmgKJWz2gJIQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "abce5fff927d40b12b26d199d2e1da05e2168c374206ee1497996226a2c0e388",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "景俊海：吸引更多优秀人才投身全面振兴火热实践 书写无悔青春 开创事业辉煌 成就人生梦想",
+    "listPublishDate": "2024-04-24",
+    "sourceOrder": 87
+  }
+}

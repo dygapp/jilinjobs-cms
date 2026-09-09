@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:76a245c71f740c0bee1de2f5d251c763f3aaaa03428ddb8bc84fdc8171e1a4f6",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xnoFhy7g2oTbTfpJIQypkA",
+    "url": "https://mp.weixin.qq.com/s/xnoFhy7g2oTbTfpJIQypkA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "携手顺丰 共育人才丨长春工业大学人文信息学院校长潘福林出席顺丰集团校企合作洽谈暨专场招聘活动",
+    "source": "",
+    "publishDate": "2026-04-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xnoFhy7g2oTbTfpJIQypkA"
+  },
+  "resources": [],
+  "sourceFingerprint": "762e18ccac5176d80d7d275fa3b3075a2a6ff9f24c9813f2205281b8141858e7",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "携手顺丰 共育人才丨长春工业大学人文信息学院校长潘福林出席顺丰集团校企合作洽谈暨专场招聘活动",
+    "listPublishDate": "2026-04-22",
+    "sourceOrder": 258
+  }
+}

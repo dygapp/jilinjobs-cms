@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0f909ca5923ed758bddc04dead9df26d0cee48c3e5fda68e8d38f12597160a2d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/3GLOT48eLR-sUgT7g4CUwA",
+    "url": "https://mp.weixin.qq.com/s/3GLOT48eLR-sUgT7g4CUwA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化市委书记孙简到通化师范学院调研并作“创业奋斗，‘就’在通化”大学生就业创业报告",
+    "source": "",
+    "publishDate": "2024-03-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/3GLOT48eLR-sUgT7g4CUwA"
+  },
+  "resources": [],
+  "sourceFingerprint": "5c865f270ff7e498c92b2c5086eac8f6ac39a3d61a91473f1ffa58792b723b9b",
+  "evidence": {
+    "listPage": 111,
+    "listTitle": "通化市委书记孙简到通化师范学院调研并作“创业奋斗，‘就’在通化”大学生就业创业报告",
+    "listPublishDate": "2024-03-13",
+    "sourceOrder": 1107
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123078",
+    "contentId": "28737783123078",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123078"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "汇胜集团股份有限公司 2021年度招聘简章",
+    "source": "信息部",
+    "publishDate": "2021-03-11",
+    "bodyHtml": "\n                        <p><strong>汇胜集团股份有限公司</strong></p>\n\n<p><strong>2021年度招聘简章</strong></p>\n\n<p>汇胜集团股份有限公司座落于山东省潍坊市高新区，是国家科技部认定的“国家火炬计划重点高新技术企业”，持有“中国驰名商标”，建有“山东省企业技术中心”、“山东省特高压变压器绝缘材料工程中心”等，是山东省特种纸产业联盟理事长单位。集团公司旗下拥有汇胜集团平原纸业有限公司、潍坊汇胜绝缘技术有限公司、汇胜包装科技有限公司、汇胜集团销售有限公司等5家子分公司；公司目前有2个厂区，分别位于潍坊市高新区和德州市平原县。公司年销售收入18亿元，在职员工1300余人。</p>\n\n<p><strong>招 聘 岗 位 信 息 见 附 件</strong></p>\n\n<p>&nbsp;</p>\n\n<p><strong>&nbsp;&nbsp;</strong><strong>联 系 方 式</strong></p>\n\n<p>1、潍坊厂区(总部)：山东省潍坊市高新区潍胶路999号 &nbsp;</p>\n\n<p>联系人：张经理13793633859 &nbsp;</p>\n\n<p>2、平原厂区（分厂）：山东省德州市平原县经济开发区东区兴工东街2406号 &nbsp;&nbsp;&nbsp;</p>\n\n<p>&nbsp;联系人:冯经理13853497308</p>\n\n<p>3、公司网址：www.huishenggroup.com</p>\n\n<p>4、招聘邮箱：潍坊总部：hsrz@cnpaper.cn&nbsp;或 <a href=\"mailto:wffhzl@163.com\"><u>wffhzl@163.com</u></a>&nbsp;&nbsp;</p>\n\n<p>平原厂区：<a href=\"mailto:hspy0534@163.com\">hspy0534@163.com</a></p>\n\n<p>汇胜集团欢迎你的加入！</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "32ea79a3b28cd9cad6225c70e5269b78ec8cb117551a6001edcbbcef7d7380f9",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "汇胜集团股份有限公司 2021年度招聘简章",
+    "listPublishDate": "2021-03-11",
+    "sourceOrder": 357,
+    "detailPublishDate": "2021-03-11"
+  }
+}

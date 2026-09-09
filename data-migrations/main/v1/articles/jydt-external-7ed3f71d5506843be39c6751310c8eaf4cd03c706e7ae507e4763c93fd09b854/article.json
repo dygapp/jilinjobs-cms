@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7ed3f71d5506843be39c6751310c8eaf4cd03c706e7ae507e4763c93fd09b854",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/1C211_oJNLHR543Mmk23jw",
+    "url": "https://mp.weixin.qq.com/s/1C211_oJNLHR543Mmk23jw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业科技学院纪委书记白雪带队赴沈阳开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-01-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1C211_oJNLHR543Mmk23jw"
+  },
+  "resources": [],
+  "sourceFingerprint": "e0a0cda219ab8a222bd8ecb81a6744114045c960a955a7430a1e2a0612510920",
+  "evidence": {
+    "listPage": 48,
+    "listTitle": "吉林农业科技学院纪委书记白雪带队赴沈阳开展访企拓岗专项行动",
+    "listPublishDate": "2026-01-27",
+    "sourceOrder": 474
+  }
+}

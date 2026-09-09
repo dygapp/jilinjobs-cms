@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e8cbca7b8056f660368d2205d3a54ffc5fd0cd805f1c9d9aa3d94edb6193fd1d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/VFuKVdL0ZsJaH0kKVZOn1w",
+    "url": "https://mp.weixin.qq.com/s/VFuKVdL0ZsJaH0kKVZOn1w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林外国语大学开展“优企引才”专项访企拓岗精准赋能2026届毕业生高质量就业",
+    "source": "",
+    "publishDate": "2026-04-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/VFuKVdL0ZsJaH0kKVZOn1w"
+  },
+  "resources": [],
+  "sourceFingerprint": "bd13eb4865e974961912a2a01cf95a7e4708a1b5fb5ef3ce1b401ffa2832c6fc",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "吉林外国语大学开展“优企引才”专项访企拓岗精准赋能2026届毕业生高质量就业",
+    "listPublishDate": "2026-04-02",
+    "sourceOrder": 325
+  }
+}

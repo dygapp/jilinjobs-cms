@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4bc77e77eb41cd4e1fca6ab1da72532dc7ba0cefd638675f4ad78c0fb0fd106b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/yQpcxFdQvRKs7xkWN0XSBQ",
+    "url": "https://mp.weixin.qq.com/s/yQpcxFdQvRKs7xkWN0XSBQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "搭建就业直通桥梁|吉林省歌舞团走进长春早期教育职业学院",
+    "source": "",
+    "publishDate": "2025-12-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/yQpcxFdQvRKs7xkWN0XSBQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "2cf9b38198ffc97d949e28e3fd66869a0792ea75c3596f7db935890f0d081d27",
+  "evidence": {
+    "listPage": 57,
+    "listTitle": "搭建就业直通桥梁|吉林省歌舞团走进长春早期教育职业学院",
+    "listPublishDate": "2025-12-01",
+    "sourceOrder": 562
+  }
+}

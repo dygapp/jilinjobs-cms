@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122864",
+    "contentId": "28737783122864",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122864"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于做好2014年全国计算机应用技术证书考试考务管理工作的通知",
+    "source": "",
+    "publishDate": "2014-01-07",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于做好2014年全国计算机应用技术证书考试考务管理工作的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2014-1-7 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img src=\"migration-resource://bc48c4a04c15eef72615bdd2d888886f5838d807648634c15860c882381b13a5\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://f70ba05d31bfdf29ffabcf6aa57a5e63ac218013eb77151404b3a4f1657a2e2c\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://f4f1d19c8a99dfa868885ef2353900e9dc7632c2b858fc42d3c493651aaf62d6\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://a0c1318ac12727d860285ca08226a1eee87ae0d19cc862d80ddb13b50a653f7d\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://d32dbb8926c0a2b1d7fd4609f7ccb52cf0fbd38200ec438f64a9839839800770\" border=\"0\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140107203759607.jpg",
+      "originalReference": "/chistory/cms/imgs/20140107203759607.jpg",
+      "token": "migration-resource://bc48c4a04c15eef72615bdd2d888886f5838d807648634c15860c882381b13a5",
+      "snapshotPath": "assets/bc48c4a04c15eef72615bdd2d888886f5838d807648634c15860c882381b13a5.jpg",
+      "sha256": "bc48c4a04c15eef72615bdd2d888886f5838d807648634c15860c882381b13a5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88890
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140107203806584.jpg",
+      "originalReference": "/chistory/cms/imgs/20140107203806584.jpg",
+      "token": "migration-resource://f70ba05d31bfdf29ffabcf6aa57a5e63ac218013eb77151404b3a4f1657a2e2c",
+      "snapshotPath": "assets/f70ba05d31bfdf29ffabcf6aa57a5e63ac218013eb77151404b3a4f1657a2e2c.jpg",
+      "sha256": "f70ba05d31bfdf29ffabcf6aa57a5e63ac218013eb77151404b3a4f1657a2e2c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 83517
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140107203811719.jpg",
+      "originalReference": "/chistory/cms/imgs/20140107203811719.jpg",
+      "token": "migration-resource://f4f1d19c8a99dfa868885ef2353900e9dc7632c2b858fc42d3c493651aaf62d6",
+      "snapshotPath": "assets/f4f1d19c8a99dfa868885ef2353900e9dc7632c2b858fc42d3c493651aaf62d6.jpg",
+      "sha256": "f4f1d19c8a99dfa868885ef2353900e9dc7632c2b858fc42d3c493651aaf62d6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92024
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140107203816653.jpg",
+      "originalReference": "/chistory/cms/imgs/20140107203816653.jpg",
+      "token": "migration-resource://a0c1318ac12727d860285ca08226a1eee87ae0d19cc862d80ddb13b50a653f7d",
+      "snapshotPath": "assets/a0c1318ac12727d860285ca08226a1eee87ae0d19cc862d80ddb13b50a653f7d.jpg",
+      "sha256": "a0c1318ac12727d860285ca08226a1eee87ae0d19cc862d80ddb13b50a653f7d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75973
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140107203821841.jpg",
+      "originalReference": "/chistory/cms/imgs/20140107203821841.jpg",
+      "token": "migration-resource://d32dbb8926c0a2b1d7fd4609f7ccb52cf0fbd38200ec438f64a9839839800770",
+      "snapshotPath": "assets/d32dbb8926c0a2b1d7fd4609f7ccb52cf0fbd38200ec438f64a9839839800770.jpg",
+      "sha256": "d32dbb8926c0a2b1d7fd4609f7ccb52cf0fbd38200ec438f64a9839839800770",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75277
+    }
+  ],
+  "sourceFingerprint": "b2ae59fc0d90a0f182324969d7e4e7964fa2c5f22996f6375dbe661ecfa60a54",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "关于做好2014年全国计算机应用技术证书考试考务管理工作的通知",
+    "listPublishDate": "2014-01-07",
+    "sourceOrder": 329,
+    "detailPublishDate": "2014-01-07"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3817eea6c2a59d656b412652860d895d465491c0b24fc37d9a0351cf22dc064f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/fYuzn9ddUZYGsP_X3t10OQ",
+    "url": "https://mp.weixin.qq.com/s/fYuzn9ddUZYGsP_X3t10OQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学赴扬州参加2026年扬州市大学生暑期实践活动",
+    "source": "",
+    "publishDate": "2026-08-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/fYuzn9ddUZYGsP_X3t10OQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "f6735583b7042867959edbf0b75aeb7b7f1e7f43df2a262e8354dd40fca06b02",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "延边大学赴扬州参加2026年扬州市大学生暑期实践活动",
+    "listPublishDate": "2026-08-06",
+    "sourceOrder": 21
+  }
+}

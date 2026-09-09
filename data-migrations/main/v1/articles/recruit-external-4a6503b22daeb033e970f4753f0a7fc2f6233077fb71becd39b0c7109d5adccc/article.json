@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:4a6503b22daeb033e970f4753f0a7fc2f6233077fb71becd39b0c7109d5adccc",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/oRBPiZH6Hq0A6d4Fn8XV_g",
+    "url": "https://mp.weixin.qq.com/s/oRBPiZH6Hq0A6d4Fn8XV_g"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "邀请函 | 长春财经学院2026届毕业生春季校园招聘会",
+    "source": "",
+    "publishDate": "2026-04-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/oRBPiZH6Hq0A6d4Fn8XV_g"
+  },
+  "resources": [],
+  "sourceFingerprint": "2c9c970ebe4ced71db90dfb982c1f7dd4f1570b1b7969efd38e6cb3f0cd16883",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "邀请函 | 长春财经学院2026届毕业生春季校园招聘会",
+    "listPublishDate": "2026-04-24",
+    "sourceOrder": 36
+  }
+}

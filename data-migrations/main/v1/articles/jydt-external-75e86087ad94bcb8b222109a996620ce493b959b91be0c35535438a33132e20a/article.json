@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:75e86087ad94bcb8b222109a996620ce493b959b91be0c35535438a33132e20a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/E4PgMXPK_SLQWmvcyhVpXg",
+    "url": "https://mp.weixin.qq.com/s/E4PgMXPK_SLQWmvcyhVpXg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企协同育人才 助力冰雪经济发展|长春早教学院首批松花湖冰雪订单班实践启航",
+    "source": "",
+    "publishDate": "2025-10-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/E4PgMXPK_SLQWmvcyhVpXg"
+  },
+  "resources": [],
+  "sourceFingerprint": "35668f47a9c0b0c76872c9e5eff70e7aaa227f3adddf4af1c41cef91618235d5",
+  "evidence": {
+    "listPage": 65,
+    "listTitle": "校企协同育人才 助力冰雪经济发展|长春早教学院首批松花湖冰雪订单班实践启航",
+    "listPublishDate": "2025-10-30",
+    "sourceOrder": 649
+  }
+}

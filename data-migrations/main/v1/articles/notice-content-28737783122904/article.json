@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122904",
+    "contentId": "28737783122904",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122904"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《关于召开全国高校创新创业教育学术课题研究与以创业促就业工作经验交流研讨通知》的通知",
+    "source": "",
+    "publishDate": "2013-03-16",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《关于召开全国高校创新创业教育学术课题研究与以创业促就业工作经验交流研讨通知》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2013-3-16 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://8561a5914ec753a7cf336ac85815698a40288769a8d3b3506014cf30250a9968\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://0b29e0afb9443ffa5b063e625baa06f614722e281c16b9883f3f9a5541c02bb4\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://962cdf37aa09c888d67568090ea8d776d6e6291367ca7fe68add35fd86afe732\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130316010442734.jpg",
+      "originalReference": "/chistory/cms/imgs/20130316010442734.jpg",
+      "token": "migration-resource://8561a5914ec753a7cf336ac85815698a40288769a8d3b3506014cf30250a9968",
+      "snapshotPath": "assets/8561a5914ec753a7cf336ac85815698a40288769a8d3b3506014cf30250a9968.jpg",
+      "sha256": "8561a5914ec753a7cf336ac85815698a40288769a8d3b3506014cf30250a9968",
+      "contentType": "image/jpeg",
+      "sizeBytes": 85101
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130316010450297.jpg",
+      "originalReference": "/chistory/cms/imgs/20130316010450297.jpg",
+      "token": "migration-resource://0b29e0afb9443ffa5b063e625baa06f614722e281c16b9883f3f9a5541c02bb4",
+      "snapshotPath": "assets/0b29e0afb9443ffa5b063e625baa06f614722e281c16b9883f3f9a5541c02bb4.jpg",
+      "sha256": "0b29e0afb9443ffa5b063e625baa06f614722e281c16b9883f3f9a5541c02bb4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 73644
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130316010456222.jpg",
+      "originalReference": "/chistory/cms/imgs/20130316010456222.jpg",
+      "token": "migration-resource://962cdf37aa09c888d67568090ea8d776d6e6291367ca7fe68add35fd86afe732",
+      "snapshotPath": "assets/962cdf37aa09c888d67568090ea8d776d6e6291367ca7fe68add35fd86afe732.jpg",
+      "sha256": "962cdf37aa09c888d67568090ea8d776d6e6291367ca7fe68add35fd86afe732",
+      "contentType": "image/jpeg",
+      "sizeBytes": 87745
+    }
+  ],
+  "sourceFingerprint": "d835d27ce6170b66a257c1ab35d351ea98a4a5fa6c2d7669b60c7e0d98c25913",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "转发《关于召开全国高校创新创业教育学术课题研究与以创业促就业工作经验交流研讨通知》的通知",
+    "listPublishDate": "2013-03-16",
+    "sourceOrder": 360,
+    "detailPublishDate": "2013-03-16"
+  }
+}

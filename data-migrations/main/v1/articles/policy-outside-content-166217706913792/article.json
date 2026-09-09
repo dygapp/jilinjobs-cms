@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-outside:content:166217706913792",
+    "contentId": "166217706913792",
+    "typeCode": "policy-outside",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=166217706913792"
+  },
+  "target": {
+    "columnAlias": "policy-outside",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "福建省关于应届高校毕业生就业有关政策的通知",
+    "source": "",
+    "publishDate": "2023-07-07",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://d46111ad772d4873a6ec8d02b8692e57333c111618ed6fa0e24d9b8f3cd99e1d\" width=\"800\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://8636db0e72c468232a7a6fbc468114b6cd57b3ea0e8aef4cca1019fec11be786\" width=\"800\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://da66a147df6b947d7d322623238479c605066fedeab737c66d847e3216f3d393\" width=\"800\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-07/59957d24-b768-45b7-9338-18364e548538.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-07-07/59957d24-b768-45b7-9338-18364e548538.jpg",
+      "token": "migration-resource://d46111ad772d4873a6ec8d02b8692e57333c111618ed6fa0e24d9b8f3cd99e1d",
+      "snapshotPath": "assets/d46111ad772d4873a6ec8d02b8692e57333c111618ed6fa0e24d9b8f3cd99e1d.jpg",
+      "sha256": "d46111ad772d4873a6ec8d02b8692e57333c111618ed6fa0e24d9b8f3cd99e1d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 313139
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-07/4ece8e4e-38bb-40ee-a931-dc78c8d33d57.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-07-07/4ece8e4e-38bb-40ee-a931-dc78c8d33d57.jpg",
+      "token": "migration-resource://8636db0e72c468232a7a6fbc468114b6cd57b3ea0e8aef4cca1019fec11be786",
+      "snapshotPath": "assets/8636db0e72c468232a7a6fbc468114b6cd57b3ea0e8aef4cca1019fec11be786.jpg",
+      "sha256": "8636db0e72c468232a7a6fbc468114b6cd57b3ea0e8aef4cca1019fec11be786",
+      "contentType": "image/jpeg",
+      "sizeBytes": 300289
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-07/c3866290-600d-4b1b-9260-1792dc4902a0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-07-07/c3866290-600d-4b1b-9260-1792dc4902a0.jpg",
+      "token": "migration-resource://da66a147df6b947d7d322623238479c605066fedeab737c66d847e3216f3d393",
+      "snapshotPath": "assets/da66a147df6b947d7d322623238479c605066fedeab737c66d847e3216f3d393.jpg",
+      "sha256": "da66a147df6b947d7d322623238479c605066fedeab737c66d847e3216f3d393",
+      "contentType": "image/jpeg",
+      "sizeBytes": 104109
+    }
+  ],
+  "sourceFingerprint": "9e0efca6f5066c037f7cc433fd3f170aa91aa3bab566042cad4bd549959d5e7c",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "福建省关于应届高校毕业生就业有关政策的通知",
+    "listPublishDate": "2023-07-07",
+    "sourceOrder": 1,
+    "detailPublishDate": "2023-07-07"
+  }
+}

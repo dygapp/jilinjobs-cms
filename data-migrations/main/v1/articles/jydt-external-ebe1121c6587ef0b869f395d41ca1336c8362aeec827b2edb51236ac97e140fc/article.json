@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ebe1121c6587ef0b869f395d41ca1336c8362aeec827b2edb51236ac97e140fc",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/b8ad628s4-a9aJqX5gGtcg",
+    "url": "https://mp.weixin.qq.com/s/b8ad628s4-a9aJqX5gGtcg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "实战赋能，点燃电商创业热情！通化师范学院直播电商创新创业训练营火热开营",
+    "source": "",
+    "publishDate": "2025-06-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/b8ad628s4-a9aJqX5gGtcg"
+  },
+  "resources": [],
+  "sourceFingerprint": "da5673a690706d3bf8a475e9d57b335bc5647d219100073de71d69711b856f56",
+  "evidence": {
+    "listPage": 85,
+    "listTitle": "实战赋能，点燃电商创业热情！通化师范学院直播电商创新创业训练营火热开营",
+    "listPublishDate": "2025-06-09",
+    "sourceOrder": 844
+  }
+}

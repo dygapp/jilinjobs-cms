@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7cbd3c25217e865f417715bdd323888a629d688f26f8c34b3d9a8e04619d8504",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1055/6749.htm",
+    "url": "https://www.jlict.edu.cn/info/1055/6749.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林化工大学校领导赴中石油吉林化工工程有限公司访企拓岗",
+    "source": "",
+    "publishDate": "2026-04-30",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlict.edu.cn/info/1055/6749.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "2518ad41443fa61b4b3e0e38324edbb7f30e797887ac5c9a563238c5e9f17177",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "吉林化工大学校领导赴中石油吉林化工工程有限公司访企拓岗",
+    "listPublishDate": "2026-04-30",
+    "sourceOrder": 220
+  }
+}

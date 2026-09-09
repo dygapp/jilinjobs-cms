@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:287794758975488",
+    "contentId": "287794758975488",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=287794758975488"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展2025年全国中小企业网上百日招聘高校毕业生活动的通知",
+    "source": "教育部办公厅",
+    "publishDate": "2025-05-07",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1274\" src=\"migration-resource://4b68a6cc9a116c5184e66be1d1b7eacebae7b06b64f977eb8d0f888da40be21b\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1274\" src=\"migration-resource://6daa63f183897f6808ccc4928f3d18a503376abbe9a2098bf7dca699d8c75cbe\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1274\" src=\"migration-resource://174eb378caf6c2e4d0070a05ffa2f773cb39447369515232acc06eda917e19d2\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1274\" src=\"migration-resource://7cee172c43cc015a9b074df16aec892ae3976c875aee73a7702dff34db63d825\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1274\" src=\"migration-resource://27056a280a3d3e1f006c04bf6a9db739fecbe4ff95f033b0635757923e5bdb4b\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1274\" src=\"migration-resource://48fabdf5ae9c8f512f866f0377edc6873976232896f3df2486e3a9a815d56b50\" width=\"900\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-05-08/060a8c8a-49ae-46a1-a890-14ecf974473d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-05-08/060a8c8a-49ae-46a1-a890-14ecf974473d.jpg",
+      "token": "migration-resource://4b68a6cc9a116c5184e66be1d1b7eacebae7b06b64f977eb8d0f888da40be21b",
+      "snapshotPath": "assets/4b68a6cc9a116c5184e66be1d1b7eacebae7b06b64f977eb8d0f888da40be21b.jpg",
+      "sha256": "4b68a6cc9a116c5184e66be1d1b7eacebae7b06b64f977eb8d0f888da40be21b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-05-08/b890cc74-9b8d-4b40-bb7d-e85816c131a3.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-05-08/b890cc74-9b8d-4b40-bb7d-e85816c131a3.jpg",
+      "token": "migration-resource://6daa63f183897f6808ccc4928f3d18a503376abbe9a2098bf7dca699d8c75cbe",
+      "snapshotPath": "assets/6daa63f183897f6808ccc4928f3d18a503376abbe9a2098bf7dca699d8c75cbe.jpg",
+      "sha256": "6daa63f183897f6808ccc4928f3d18a503376abbe9a2098bf7dca699d8c75cbe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-05-08/649cb0ff-cb15-4c42-9d28-0b9a9c5b037f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-05-08/649cb0ff-cb15-4c42-9d28-0b9a9c5b037f.jpg",
+      "token": "migration-resource://174eb378caf6c2e4d0070a05ffa2f773cb39447369515232acc06eda917e19d2",
+      "snapshotPath": "assets/174eb378caf6c2e4d0070a05ffa2f773cb39447369515232acc06eda917e19d2.jpg",
+      "sha256": "174eb378caf6c2e4d0070a05ffa2f773cb39447369515232acc06eda917e19d2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-05-08/4b523c20-d13f-42fb-9e63-27650eef153a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-05-08/4b523c20-d13f-42fb-9e63-27650eef153a.jpg",
+      "token": "migration-resource://7cee172c43cc015a9b074df16aec892ae3976c875aee73a7702dff34db63d825",
+      "snapshotPath": "assets/7cee172c43cc015a9b074df16aec892ae3976c875aee73a7702dff34db63d825.jpg",
+      "sha256": "7cee172c43cc015a9b074df16aec892ae3976c875aee73a7702dff34db63d825",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-05-08/f01c7166-cb4f-4641-afda-0a598d6924c0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-05-08/f01c7166-cb4f-4641-afda-0a598d6924c0.jpg",
+      "token": "migration-resource://27056a280a3d3e1f006c04bf6a9db739fecbe4ff95f033b0635757923e5bdb4b",
+      "snapshotPath": "assets/27056a280a3d3e1f006c04bf6a9db739fecbe4ff95f033b0635757923e5bdb4b.jpg",
+      "sha256": "27056a280a3d3e1f006c04bf6a9db739fecbe4ff95f033b0635757923e5bdb4b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-05-08/78bae830-fbb2-478b-95ef-dcc132790014.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-05-08/78bae830-fbb2-478b-95ef-dcc132790014.jpg",
+      "token": "migration-resource://48fabdf5ae9c8f512f866f0377edc6873976232896f3df2486e3a9a815d56b50",
+      "snapshotPath": "assets/48fabdf5ae9c8f512f866f0377edc6873976232896f3df2486e3a9a815d56b50.jpg",
+      "sha256": "48fabdf5ae9c8f512f866f0377edc6873976232896f3df2486e3a9a815d56b50",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "1a0de3f0c71867f2f7137ee43bc27b567e915af47cdf5261d99be4d61dd24153",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "关于开展2025年全国中小企业网上百日招聘高校毕业生活动的通知",
+    "listPublishDate": "2025-05-07",
+    "sourceOrder": 36,
+    "detailPublishDate": "2025-05-07"
+  }
+}

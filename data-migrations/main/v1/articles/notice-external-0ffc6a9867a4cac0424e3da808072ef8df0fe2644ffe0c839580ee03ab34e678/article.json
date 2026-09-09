@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:0ffc6a9867a4cac0424e3da808072ef8df0fe2644ffe0c839580ee03ab34e678",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/szfzt/tzcj/tpxwx/202502/t20250210_3361640.html",
+    "url": "https://www.jl.gov.cn/szfzt/tzcj/tpxwx/202502/t20250210_3361640.html"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平在听取吉林省委和省政府工作汇报时强调：深入落实推动新时代东北全面振兴战略部署 在中国式现代化建设中展现更大作为",
+    "source": "",
+    "publishDate": "2025-02-10",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jl.gov.cn/szfzt/tzcj/tpxwx/202502/t20250210_3361640.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "352b6a8fae6c5da8cf600d02054201b2ee2aa74bba924a6e259c9a3756b573b9",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "习近平在听取吉林省委和省政府工作汇报时强调：深入落实推动新时代东北全面振兴战略部署 在中国式现代化建设中展现更大作为",
+    "listPublishDate": "2025-02-10",
+    "sourceOrder": 64
+  }
+}

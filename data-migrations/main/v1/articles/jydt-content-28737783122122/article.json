@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122122",
+    "contentId": "28737783122122",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122122"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2015-2016年度吉林省高校就业创业教师高端培训班（境内·长春）顺利结束",
+    "source": "",
+    "publishDate": "2015-12-25",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2015-2016年度吉林省高校就业创业教师高端培训班（境内·长春）顺利结束</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2015-12-25 16:13:58</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-align:center;line-height:22px;background:white\"><br></p><p style=\"text-align: center;\"><img src=\"migration-resource://5b4c228d5b8a22513e083a7d871768c68c065ed2ac4ea8db9acbd60502912415\" style=\"float:none;\" title=\"1.jpg\"></p><p><br></p><p style=\"text-align: center;\"><img src=\"migration-resource://96e94ebf8872e4dfdf90278a28a6365ad7a5385fe3db8a1621e4e1ff4472bc0e\" style=\"float:none;\" title=\"2.jpg\"></p><p><br></p><p style=\"text-indent: 40px;line-height: 22px;background-color: white\"><span style=\"font-size:20px;font-family:宋体;color:#333333\">12</span><span style=\"font-size:20px;font-family:宋体;color:#333333\">月21日-25日，由吉林省教育厅主办的为期六天的吉林省高校就业创业教师高端培训班（境内·长春）在林田远达集团的林田创客公园举办。省高校毕业生就业指导中心主任郑志宏、省教育厅高校学生处调研员陈梅出席开班和结业仪式并讲话。来自全省高校的147名从事就业创业指导工作的教师参加培训。</span></p><p style=\"text-indent: 42px;line-height: 22px;background-color: white\"><span style=\"font-size:20px;font-family:宋体;color:#333333\">本次培训聘请了吉林大学管理学院副院长、教授李雪灵、吉林大学管理学院教授周柏翔、吉林大学管理学院副教授费宇鹏、北京万学教育科技集团副总裁、教育部教育信息管理中心创业发展指导专家张强，分别从创业与创业教育、创业实训体系建设、创业团队建设、职业图谱及职业能力的训练方法进行了系统的课程讲授。</span></p><p style=\"text-indent: 42px;line-height: 22px;background-color: white\"><span style=\"font-size:20px;font-family:宋体;color:#333333\">培训期间还考察了林田创客公园、高新开发区摆渡创业工场、吉林大学i.FlameJLU创客空间、吉林省国家广告产业园等创业实训基地，为广大创新创业学生提供了优质的孵化、工作、社交、资源共享的空间和平台。</span></p><p style=\"text-indent: 40px;line-height: 22px;background-color: white\"><span style=\"font-size:20px;font-family:宋体;color:#333333\">此次培训，理论课程的讲授与实地参访的结合，学员们受益匪浅，脑洞大开，倍感吉林省创业硬件设施的完备和吉林省高校创业教师们任务的艰巨。</span><span style=\"font-size:20px;font-family:宋体\">据悉，2015-2016年度高端培训还将于2016年1月和5月在境内举办两期培训班，于2016年5月和7月在境外举办两期培训班。</span></p><p style=\"text-indent: 40px;line-height: 22px;background-color: white\"><span style=\"font-size:20px;font-family:宋体\"><br></span></p><p style=\"text-indent: 40px;line-height: 22px;background-color: white\"><span style=\"font-size:20px;font-family:宋体\"><br></span></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358665706312500003623170.jpg",
+      "originalReference": "/chistory/cms/imgs/6358665706312500003623170.jpg",
+      "token": "migration-resource://5b4c228d5b8a22513e083a7d871768c68c065ed2ac4ea8db9acbd60502912415",
+      "snapshotPath": "assets/5b4c228d5b8a22513e083a7d871768c68c065ed2ac4ea8db9acbd60502912415.jpg",
+      "sha256": "5b4c228d5b8a22513e083a7d871768c68c065ed2ac4ea8db9acbd60502912415",
+      "contentType": "image/jpeg",
+      "sizeBytes": 148852
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358665706367187501522992.jpg",
+      "originalReference": "/chistory/cms/imgs/6358665706367187501522992.jpg",
+      "token": "migration-resource://96e94ebf8872e4dfdf90278a28a6365ad7a5385fe3db8a1621e4e1ff4472bc0e",
+      "snapshotPath": "assets/96e94ebf8872e4dfdf90278a28a6365ad7a5385fe3db8a1621e4e1ff4472bc0e.jpg",
+      "sha256": "96e94ebf8872e4dfdf90278a28a6365ad7a5385fe3db8a1621e4e1ff4472bc0e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 137293
+    }
+  ],
+  "sourceFingerprint": "d7b50efcb1cd678310daf913902672f745b1008fe60d59574d40c4520b576e18",
+  "evidence": {
+    "listPage": 155,
+    "listTitle": "2015-2016年度吉林省高校就业创业教师高端培训班（境内·长春）顺利结束",
+    "listPublishDate": "2015-12-25",
+    "sourceOrder": 1550,
+    "detailPublishDate": "2015-12-25"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122718",
+    "contentId": "28737783122718",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122718"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于防范新型冠状病毒疫情期间各项工作业务办理通告",
+    "source": "",
+    "publishDate": "2020-02-03",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于防范新型冠状病毒疫情期间各项工作业务办理通告</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:吉林省高等学校毕业生就业指导中心   发布时间:2020-2-3 9:22:40</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://cd84d21f25900abc146d2f60555b7656a5559518c058a228ec9342e953a054d4\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://e543e347a6d551bc44c64ac81d11425163d1ce568bc7a45e03a85f64483d2cf5\"></p><p style=\"text-align: center;\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6371633698856250004470480.jpg",
+      "originalReference": "/chistory/cms/imgs/6371633698856250004470480.jpg",
+      "token": "migration-resource://cd84d21f25900abc146d2f60555b7656a5559518c058a228ec9342e953a054d4",
+      "snapshotPath": "assets/cd84d21f25900abc146d2f60555b7656a5559518c058a228ec9342e953a054d4.jpg",
+      "sha256": "cd84d21f25900abc146d2f60555b7656a5559518c058a228ec9342e953a054d4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 185284
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6371633698870312501428204.jpg",
+      "originalReference": "/chistory/cms/imgs/6371633698870312501428204.jpg",
+      "token": "migration-resource://e543e347a6d551bc44c64ac81d11425163d1ce568bc7a45e03a85f64483d2cf5",
+      "snapshotPath": "assets/e543e347a6d551bc44c64ac81d11425163d1ce568bc7a45e03a85f64483d2cf5.jpg",
+      "sha256": "e543e347a6d551bc44c64ac81d11425163d1ce568bc7a45e03a85f64483d2cf5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 137729
+    }
+  ],
+  "sourceFingerprint": "67951fddbc52b514659b2a70ee473ea105d1e127c81c684f670641f41d836b23",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "关于防范新型冠状病毒疫情期间各项工作业务办理通告",
+    "listPublishDate": "2020-02-03",
+    "sourceOrder": 194,
+    "detailPublishDate": "2020-02-03"
+  }
+}

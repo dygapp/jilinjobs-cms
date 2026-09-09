@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9914a6a45fe52159d1afd2f14cad9e8602a33fa388f974c866e6a952791c5f4f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/OHcf9jiQrZ0L3BmqzQrkHw",
+    "url": "https://mp.weixin.qq.com/s/OHcf9jiQrZ0L3BmqzQrkHw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深耕田野践行专业使命丨长春财经学院学生赴市统计局助力农业普查",
+    "source": "",
+    "publishDate": "2026-07-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/OHcf9jiQrZ0L3BmqzQrkHw"
+  },
+  "resources": [],
+  "sourceFingerprint": "6e5d7758e4fcfc295c37e6e7486fbb9e6390bb96f6e9d68f76017ff4ef4bbb4f",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "深耕田野践行专业使命丨长春财经学院学生赴市统计局助力农业普查",
+    "listPublishDate": "2026-07-09",
+    "sourceOrder": 52
+  }
+}

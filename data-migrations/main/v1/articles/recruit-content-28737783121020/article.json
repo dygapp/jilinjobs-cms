@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783121020",
+    "contentId": "28737783121020",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783121020"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "提前感知就业压力 预就业“盯”上大一新生",
+    "source": "",
+    "publishDate": "2010-12-30",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">提前感知就业压力 预就业“盯”上大一新生</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2010-12-30 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">近日，温大瓯江学院商务系联合温州部分知名企业共同启动大学生“预就业”项目。该项目将改变高校传统的人才培养模式，通过校企业合作，将就业教育纳入整个大学教学中，让新生提前加入就业的队伍。</font></p> <p><font size=\"2\">　　据商务系主任董治国副教授介绍，该项目将对学生大学四年的成长成才及毕业就业进行全面指导。首先，通过建立开放的就业咨询平台，提高学生学习积极性和主动性，使学生在自我分析的基础上确定自己职业生涯规划；然后，通过专业学习结合职业方向，指导学生有针对性地选择企业实习实践；最后，通过分析当前就业形势，提高就业咨询的质量，为学生出谋划策，帮助学生合理就业。</font></p> <p><font size=\"2\">　　“预就业”制度实施以来，在新生中引起了很大的反响。来自杭州的大一新生小张说：“原本以为没有了高考的束缚，可以在大学好好轻松一下了。没想到一进大学就面临就业的系列问题，压力很大”。但更多的新生持肯定态度，大一新生小邱在接受就业方向咨询时，就明确表示：“我上大学就是为了有更好的就业机会，现在开始准备总比毕业再临时抱佛脚好吧！面对压力，承受压力，战胜压力，将来走上社会肯定有我的立足之地！”</font></p> <p><font size=\"2\">　　“当前的就业形式要求大学生必须转变观念，尽早树立就业意识，以就业促学业，以就业促发展。”，瓯江学院创业就业办公室主任张朝晖老师指出，“‘预就业’制度的实施能让学生明确目标，提高就业能力，不仅增强了学校与企业的沟通联系，促使学校通过教育教学改革有针对性培养企业所需人才，同时也有助企业人才战略的制订与实施，增进人才业务能力与理论知识之间的联系，为企业提供了人才储备。”</font></p> <p>&nbsp;</p> <p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "8487890a591647131a711d03c66351cee4a9f9740239cf9240fe9836383c02f5",
+  "evidence": {
+    "listPage": 47,
+    "listTitle": "提前感知就业压力 预就业“盯”上大一新生",
+    "listPublishDate": "2010-12-30",
+    "sourceOrder": 465,
+    "detailPublishDate": "2010-12-30"
+  }
+}

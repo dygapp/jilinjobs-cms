@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d3f36af44d8bad4091ba405cabaa47ab0830775f9c3f64bc91418fa4d72f2343",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/TE74znAoyNVYW0l4goy5pg",
+    "url": "https://mp.weixin.qq.com/s/TE74znAoyNVYW0l4goy5pg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学举办“聚力扩容提质 服务高质量发展” —— 2026年吉林省高校毕业生延边大学专场招聘会（长春站）",
+    "source": "",
+    "publishDate": "2026-03-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/TE74znAoyNVYW0l4goy5pg"
+  },
+  "resources": [],
+  "sourceFingerprint": "07a129bdb46ea44d69b8d9277176003a671bfc5262f4dd2101a140fe40a915ac",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "延边大学举办“聚力扩容提质 服务高质量发展” —— 2026年吉林省高校毕业生延边大学专场招聘会（长春站）",
+    "listPublishDate": "2026-03-30",
+    "sourceOrder": 349
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:5cf230c17c9a5a72262f3f6610656ed51492d8fb263d116d57695460192db1c7",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/szfzt/tzcj/tzdt/202502/t20250211_3362215.html",
+    "url": "https://www.jl.gov.cn/szfzt/tzcj/tzdt/202502/t20250211_3362215.html"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "黄强在全省领导干部会议上强调 始终牢记殷殷嘱托 坚定不移奋勇前进 把习近平总书记信任重托转化为干事创业强大动力",
+    "source": "",
+    "publishDate": "2025-02-11",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jl.gov.cn/szfzt/tzcj/tzdt/202502/t20250211_3362215.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "d2d5fb7bea408268675ef61025c4d2e05d7f6d91edfb78b8f2c324c0339b4198",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "黄强在全省领导干部会议上强调 始终牢记殷殷嘱托 坚定不移奋勇前进 把习近平总书记信任重托转化为干事创业强大动力",
+    "listPublishDate": "2025-02-11",
+    "sourceOrder": 63
+  }
+}

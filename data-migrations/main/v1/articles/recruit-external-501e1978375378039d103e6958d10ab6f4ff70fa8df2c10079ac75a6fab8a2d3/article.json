@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:501e1978375378039d103e6958d10ab6f4ff70fa8df2c10079ac75a6fab8a2d3",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/5v2OUgblgfm7Ub_IC1W9tA",
+    "url": "https://mp.weixin.qq.com/s/5v2OUgblgfm7Ub_IC1W9tA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 就在吉林”吉林省应用型人才服务吉林高质量发展暨吉林工程技术师范学院 2024届毕业生就业双选会",
+    "source": "",
+    "publishDate": "2024-04-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5v2OUgblgfm7Ub_IC1W9tA"
+  },
+  "resources": [],
+  "sourceFingerprint": "27a16f2717e1bd6323dc5fbaffe923540033b2c49197dae26d7d8ac5775f0600",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "“创业奋斗 就在吉林”吉林省应用型人才服务吉林高质量发展暨吉林工程技术师范学院 2024届毕业生就业双选会",
+    "listPublishDate": "2024-04-22",
+    "sourceOrder": 293
+  }
+}

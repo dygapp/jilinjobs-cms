@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:5a1e21a35eff16e2043d9a9a8c4ffb58e5549f976691d87af116278e7e7df862",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/ipM4xeLMuRxgQTV3oGYT5A",
+    "url": "https://mp.weixin.qq.com/s/ipM4xeLMuRxgQTV3oGYT5A"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“职”启新程，“聘”暖寒冬 —— 延边大学2026届毕业生寒假促就业暖心行动云招聘",
+    "source": "",
+    "publishDate": "2026-01-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ipM4xeLMuRxgQTV3oGYT5A"
+  },
+  "resources": [],
+  "sourceFingerprint": "9d6ce5e7d37ec1a95886a37a39354d51aa17acb8dd23300b0d6f294b500a3669",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "“职”启新程，“聘”暖寒冬 —— 延边大学2026届毕业生寒假促就业暖心行动云招聘",
+    "listPublishDate": "2026-01-15",
+    "sourceOrder": 110
+  }
+}

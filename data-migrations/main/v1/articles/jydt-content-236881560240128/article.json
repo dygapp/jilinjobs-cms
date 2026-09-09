@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:236881560240128",
+    "contentId": "236881560240128",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=236881560240128"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "实施“高校就业指导教师能力提升培训计划”推进高质量就业指导服务体系建设",
+    "source": "",
+    "publishDate": "2024-07-31",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://9e81c4a3a1df5e61edd02cc952353d0650c611ee89c7506ca62741f43ddefae8\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://dd7e2ff0c3f362fa96dffdefb4f627e2cefd8f057ce40d1fd0d1bc20afc363a1\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-07-31/4494babf-f04a-4bac-b58d-dba185411987.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-07-31/4494babf-f04a-4bac-b58d-dba185411987.jpg",
+      "token": "migration-resource://9e81c4a3a1df5e61edd02cc952353d0650c611ee89c7506ca62741f43ddefae8",
+      "snapshotPath": "assets/9e81c4a3a1df5e61edd02cc952353d0650c611ee89c7506ca62741f43ddefae8.jpg",
+      "sha256": "9e81c4a3a1df5e61edd02cc952353d0650c611ee89c7506ca62741f43ddefae8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-07-31/9264c855-8a0e-4d0c-89ae-6889dcf3ebf6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-07-31/9264c855-8a0e-4d0c-89ae-6889dcf3ebf6.jpg",
+      "token": "migration-resource://dd7e2ff0c3f362fa96dffdefb4f627e2cefd8f057ce40d1fd0d1bc20afc363a1",
+      "snapshotPath": "assets/dd7e2ff0c3f362fa96dffdefb4f627e2cefd8f057ce40d1fd0d1bc20afc363a1.jpg",
+      "sha256": "dd7e2ff0c3f362fa96dffdefb4f627e2cefd8f057ce40d1fd0d1bc20afc363a1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "23de8bdefff747abfd344bbd855dfe9bb90e051ca7eab31ff93b889c729450d0",
+  "evidence": {
+    "listPage": 104,
+    "listTitle": "实施“高校就业指导教师能力提升培训计划”推进高质量就业指导服务体系建设",
+    "listPublishDate": "2024-07-31",
+    "sourceOrder": 1037,
+    "detailPublishDate": "2024-07-31"
+  }
+}

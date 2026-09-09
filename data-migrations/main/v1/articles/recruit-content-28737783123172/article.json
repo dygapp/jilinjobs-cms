@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123172",
+    "contentId": "28737783123172",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123172"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "就业新政1月1日起实施 高校毕业生可享税收优惠",
+    "source": "",
+    "publishDate": "2012-02-27",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">就业新政1月1日起实施 高校毕业生可享税收优惠</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-2-27 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><span class=\"article-resouce\"> <p>&nbsp;&nbsp;&nbsp;&nbsp;记者30日从全国人力资源和社会保障工作会议上获悉，2011年我国将实施更加积极的就业政策，认真落实支持和促进就业的税收优惠政策，把充分就业作为经济社会发展的优先目标，全力做好促进就业工作。为进一步促进劳动者就业和创业，财政部、国家税务总局、人力资源和社会保障部、教育部调整完善了支持和促进就业税收政策，新政策将于2011年1月1日起开始实施。</p> <p>　　为鼓励创业，政策规定:对持《就业失业登记证》人员按规定从事个体经营的，在3年内按每户每年8000元的限额依次扣减其当年实际应缴纳的营业税、城市维护建设税、教育费附加和个人所得税。失业人员、高校毕业生和农民工均可享受税收优惠。为鼓励企业吸纳就业，政策同时规定，对商贸企业、相关服务型企业、劳动就业服务企业中的加工型企业和街道社区具有加工性质的小型企业实体，在新增加的岗位中，当年新招用持《就业失业登记证》人员，与其签订1年以上期限劳动合同并依法缴纳社会保险费的，在3年内按实际招用人数予以定额依次扣减营业税、城市维护建设税、教育费附加和企业所得税优惠，定额标准为每人每年4000元，可上下浮动20%。</p> <p>　　人力资源和社会保障部部长尹蔚民表示，新的一年将着力做好各项就业政策的落实，继续把高校毕业生就业放在就业工作首位，全面推进农民工就近就地就业、返乡创业和有序进城务工，建立健全对困难群体的就业援助制度，大力开发公益性岗位，形成动态长效帮扶机制，增强就业稳定性。</p> <p>　　统计显示，“十一五”期间，我国积极的就业政策发挥突出作用，就业目标全面完成，就业局势保持稳定。预计5年累计实现城镇新增就业5700万人以上，年均达到1140万人，比“十五”时期年均930万人增加210万人；城镇登记失业率控制在4.3%以内；农业富余劳动力向非农产业转移就业近4500万人，比“十五”时期增加500万人。</p></span> <p><span class=\"article-resouce\">来源：<span class=\"font12\">光明日报</span></span></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "1c3987bfceb35c9a6cd7327a6838dc91406cdca602124656548098be3a996f01",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "就业新政1月1日起实施 高校毕业生可享税收优惠",
+    "listPublishDate": "2012-02-27",
+    "sourceOrder": 437,
+    "detailPublishDate": "2012-02-27"
+  }
+}

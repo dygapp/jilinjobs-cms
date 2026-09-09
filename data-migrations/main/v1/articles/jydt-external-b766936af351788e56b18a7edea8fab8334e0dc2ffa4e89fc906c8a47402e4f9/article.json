@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b766936af351788e56b18a7edea8fab8334e0dc2ffa4e89fc906c8a47402e4f9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1028/169842.htm",
+    "url": "https://www.jlju.edu.cn/info/1028/169842.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学举办“助航逐梦”就业大讲堂活动",
+    "source": "",
+    "publishDate": "2025-06-30",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1028/169842.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "146b119790774a3912f5f57e263cbadde6630cdc25d127f96f5c841857004ee9",
+  "evidence": {
+    "listPage": 77,
+    "listTitle": "吉林建筑大学举办“助航逐梦”就业大讲堂活动",
+    "listPublishDate": "2025-06-30",
+    "sourceOrder": 762
+  }
+}

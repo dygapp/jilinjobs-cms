@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:cb7a0d25dd0c98e8c55ac7bcba6f8ca2ee110814c023f6172a737a8e78aca3b0",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/xM4phXcVCjlGT001-VjVvA",
+    "url": "https://mp.weixin.qq.com/s/xM4phXcVCjlGT001-VjVvA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "全国高校2026届毕业生文旅艺术行业人才招聘会暨“服务吉林高质量发展”吉林省高校艺术类毕业生就业洽谈会—吉林艺术学院专场即将启幕",
+    "source": "",
+    "publishDate": "2025-11-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xM4phXcVCjlGT001-VjVvA"
+  },
+  "resources": [],
+  "sourceFingerprint": "1062d28e36946ae6832e3a8fd1be0e601bc5fc5d59133cadf3091a5996175b83",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "全国高校2026届毕业生文旅艺术行业人才招聘会暨“服务吉林高质量发展”吉林省高校艺术类毕业生就业洽谈会—吉林艺术学院专场即将启幕",
+    "listPublishDate": "2025-11-03",
+    "sourceOrder": 121
+  }
+}

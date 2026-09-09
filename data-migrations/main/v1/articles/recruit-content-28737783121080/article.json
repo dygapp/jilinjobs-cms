@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783121080",
+    "contentId": "28737783121080",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783121080"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省农村“特岗教师”报名截止到7月7日",
+    "source": "",
+    "publishDate": "2009-07-07",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省农村“特岗教师”报名截止到7月7日</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-7-7 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 吉林省农村“特岗计划”教师报名工作7月3日开始，应聘者须留意省教育厅公布的“特岗教师”岗位设置计划，报名参加“特岗教师”的考核。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; “特岗教师”报名分网上报名和现场报名两步进行。网上报名时间为7月3日至7日，应聘者首先要登录“吉林省教育信息网”报名。现场报名时间为7月8日至10日，应聘者统一进行现场报名。省内应届毕业生在本校就业办报名；外省应届毕业生和省内、外往届毕业生在所申报的市（州）特岗办公室报名；本省城镇在编教师在所申报的市（州）特岗办公室报名。市（州）特岗办公室设在教育局。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 目前，“特岗教师”的岗位设置已经通过“吉林省教育信息网<font color=\"#000000\">”(</font></font><a href=\"http://www,jledu.gov.cn/\"><font color=\"#000000\" size=\"2\">www,jledu.gov.cn</font></a><font size=\"2\"><font color=\"#000000\">）</font>或吉林省公务员考试网<font color=\"#000000\">（</font></font><a href=\"http://www.jlgwy.net/\"><font color=\"#000000\" size=\"2\">www.jlgwy.net</font></a><font size=\"2\"><font color=\"#000000\">）</font>面向社会公布，其中包括招聘“特岗教师”的学科、数量及岗位要求，请应聘者报名前仔细阅读。报名时，省内、外应届毕业生要携带身份证、毕业证等相应证件；省内、外往届毕业生报名还须持有户口本、身份证、毕业证、教师资格证等证件；本省城镇在编教师所需材料要求与往届毕业生相同，并由所在单位提供工作证明。申请人如具备笔试加分条件，还要携带相关证明材料，所有材料需提供原件。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 考试分为笔试和面试两种形式。笔试统一时间为7月26日，全省统一命题、制卷、评卷，主要考察应聘者的思想政治素质、教育政策法规、教育基本理论和学科基本素养。面试时间为8月7日至8日，具体时间由各市（州）确定，各市（州）组织“特岗教师”考核专家组，自主命题，自主评价，主要考察应聘者的教师素质和教学基本能力。考生在所申报的市（州）参加统一笔试和面试。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; “特岗教师”招聘考试满分为240分。其中笔试成绩满分160分，作为初选的依据，筛选出参加面试的人选。面试满分80分，应聘者笔试成绩与面试成绩之和为最终录取依据。笔试、面试合格者还要参加体检，接受设岗县（市、区）的实地考察核实。经省实施工作领导小组审定后，拟聘人员名单将于8月21日在网上公示。8月25日至29日，被录取的“特岗教师”将参加省里统一组织的为期一周的岗前培训。8月28日，“特岗教师”与设岗县（市、区）教育局签订聘用合同。8月29日，省里组织欢送仪式，“特岗教师”按规定时间到用人单位报到。</font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "b92a54011b664d51d3696d3d8bbeef336cdff7b4f59baf4038d37d69a971aa95",
+  "evidence": {
+    "listPage": 52,
+    "listTitle": "吉林省农村“特岗教师”报名截止到7月7日",
+    "listPublishDate": "2009-07-07",
+    "sourceOrder": 517,
+    "detailPublishDate": "2009-07-07"
+  }
+}

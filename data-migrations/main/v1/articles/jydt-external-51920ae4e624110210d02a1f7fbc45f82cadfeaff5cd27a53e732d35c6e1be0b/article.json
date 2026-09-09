@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:51920ae4e624110210d02a1f7fbc45f82cadfeaff5cd27a53e732d35c6e1be0b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/_UDpIogv1SsGI14I3YZFnw",
+    "url": "https://mp.weixin.qq.com/s/_UDpIogv1SsGI14I3YZFnw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "大力开展校企合作 积极推进实习就业金基地建设——长春科技学院一行前往长春鑫利密封制品有限公司走访座谈",
+    "source": "",
+    "publishDate": "2025-03-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_UDpIogv1SsGI14I3YZFnw"
+  },
+  "resources": [],
+  "sourceFingerprint": "48eab9ee0a4dcc6dcd6e88ebd4faf64b5cc21ac137a5a40e7af533d9cc50fd6a",
+  "evidence": {
+    "listPage": 99,
+    "listTitle": "大力开展校企合作 积极推进实习就业金基地建设——长春科技学院一行前往长春鑫利密封制品有限公司走访座谈",
+    "listPublishDate": "2025-03-06",
+    "sourceOrder": 989
+  }
+}

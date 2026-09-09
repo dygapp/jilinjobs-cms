@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5045451a0b9eb56ce4cc5ca9dd8855e3ee58a3a7760a482f09daac715087adec",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/_pqub86ibjmnxUomEC9kwQ",
+    "url": "https://mp.weixin.qq.com/s/_pqub86ibjmnxUomEC9kwQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学党委书记张炳辉率队赴通榆县开展乡村振兴暨访企拓岗专题调研",
+    "source": "",
+    "publishDate": "2026-05-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_pqub86ibjmnxUomEC9kwQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "fa666d863fb5b00eca72f85d217d341fdfa9d70e582b5d64dacacab08c2b1d9f",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "吉林财经大学党委书记张炳辉率队赴通榆县开展乡村振兴暨访企拓岗专题调研",
+    "listPublishDate": "2026-05-11",
+    "sourceOrder": 199
+  }
+}

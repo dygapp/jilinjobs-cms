@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86133079818240",
+    "contentId": "86133079818240",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86133079818240"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林工商学院疫情防控不放松 就业服务不断线",
+    "source": "吉林工商学院",
+    "publishDate": "2022-04-12",
+    "bodyHtml": "\n                        <p>面对突然爆发的新冠肺炎疫情，吉林工商学院党委高度重视，周密安排，在抓好疫情防控工作同时，结合学校封闭管理实际，多次统筹部署就业工作，坚持疫情防控不放松，就业服务不断线，扎实推进就业工作落实落细。</p>\n\n<p>一是制定《吉林工商学院2022年疫情防控期间就业工作方案》，统筹学校疫情防控、静态管理期间就业工作推进。就业指导中心发布《对各教学学院就业工作的指导意见》，在就业心理疏导、就业指导服务、网络招聘会、招聘信息精准推送、毕业生跟踪统计、就业手续办理等方面给予指导性建议。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"533\" src=\"migration-resource://f30c361f094ee97fb6769dd41589067dedead80f1a65b5160a7262994a810c36\" width=\"800\"></p>\n\n<p>二是先后发布《致吉林工商学院2022届全体毕业生的一封信》、《致用人单位的一封信》。积极整合各类资源，充分利用网站、微信平台等分类分期发布就业招聘信息；携手云校招平台、联合吉林省高等学校毕业生就业指导中心、吉林财经大学等高校，共同举办“2022年全省普通高校毕业生财经类专场网络双选会”；筹办“奋斗有我 ‘就’在吉林”吉林工商学院2022年省内专场网络双选会。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"500\" src=\"migration-resource://c1d99041a1abad6725a7599299d60daf60a24d5afb7f46724cac5e21c8958ebe\" width=\"207\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt=\"\" height=\"500\" src=\"migration-resource://4ed2d9a1846455f6fdf93c86ba28a46a27671de13fdd78f659b05239fbabaae3\" width=\"234\"></p>\n\n<p>三是就业指导中心开通咨询热线，由专人接听解答毕业生就业咨询及心理疏导，鼓励引导毕业生理性思考、树立健康乐观的心理。就业中心主任一直驻校，除参与校内疫情防控工作外，对各类就业协议进行线上审核，确保毕业生就业手续的办理、报考盖章用印等就业服务正常运行。</p>\n\n<p><strong>（吉林工商学院 王鑫）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/4e953483-4984-4a63-9ad8-87f9f149ab5e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/4e953483-4984-4a63-9ad8-87f9f149ab5e.jpg",
+      "token": "migration-resource://f30c361f094ee97fb6769dd41589067dedead80f1a65b5160a7262994a810c36",
+      "snapshotPath": "assets/f30c361f094ee97fb6769dd41589067dedead80f1a65b5160a7262994a810c36.jpg",
+      "sha256": "f30c361f094ee97fb6769dd41589067dedead80f1a65b5160a7262994a810c36",
+      "contentType": "image/jpeg",
+      "sizeBytes": 149588
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/aa6fdc6d-97c8-457d-9be6-117c70cf125c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/aa6fdc6d-97c8-457d-9be6-117c70cf125c.jpg",
+      "token": "migration-resource://c1d99041a1abad6725a7599299d60daf60a24d5afb7f46724cac5e21c8958ebe",
+      "snapshotPath": "assets/c1d99041a1abad6725a7599299d60daf60a24d5afb7f46724cac5e21c8958ebe.jpg",
+      "sha256": "c1d99041a1abad6725a7599299d60daf60a24d5afb7f46724cac5e21c8958ebe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84594
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/f66218e3-5276-4d61-9530-f9e534961a4b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/f66218e3-5276-4d61-9530-f9e534961a4b.jpg",
+      "token": "migration-resource://4ed2d9a1846455f6fdf93c86ba28a46a27671de13fdd78f659b05239fbabaae3",
+      "snapshotPath": "assets/4ed2d9a1846455f6fdf93c86ba28a46a27671de13fdd78f659b05239fbabaae3.jpg",
+      "sha256": "4ed2d9a1846455f6fdf93c86ba28a46a27671de13fdd78f659b05239fbabaae3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 62494
+    }
+  ],
+  "sourceFingerprint": "d6d324edcff1907123f55d64ef024b475f1d5ab1b5c925f39f36efebdba6bfb1",
+  "evidence": {
+    "listPage": 122,
+    "listTitle": "吉林工商学院疫情防控不放松 就业服务不断线",
+    "listPublishDate": "2022-04-12",
+    "sourceOrder": 1220,
+    "detailPublishDate": "2022-04-12"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ae19796409a166c859e28d265c9018548cbec9f2b2a334d9131bfb88cff2406d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/gx46ctyIPrBG6QMpPY8GRw",
+    "url": "https://mp.weixin.qq.com/s/gx46ctyIPrBG6QMpPY8GRw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春建筑学院党委副书记张冀男率队赴青岛开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2025-12-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gx46ctyIPrBG6QMpPY8GRw"
+  },
+  "resources": [],
+  "sourceFingerprint": "d660de6e39c25dbc7af234e9db90c0209fb980627d95cd4e6406081c990ab7b4",
+  "evidence": {
+    "listPage": 54,
+    "listTitle": "长春建筑学院党委副书记张冀男率队赴青岛开展访企拓岗专项行动",
+    "listPublishDate": "2025-12-18",
+    "sourceOrder": 534
+  }
+}

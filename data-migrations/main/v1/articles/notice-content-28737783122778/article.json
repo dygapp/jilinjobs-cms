@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122778",
+    "contentId": "28737783122778",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122778"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅关于举办全国教育系统2017届高校毕业生网上招聘活动的通知",
+    "source": "",
+    "publishDate": "2016-10-27",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部办公厅关于举办全国教育系统2017届高校毕业生网上招聘活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2016-10-27 8:05:58</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img title=\"1.jpg\" src=\"migration-resource://f12f1cde85af252a5408a0be50dacaafa00123c2ac86061f248f9c0bf9b8b5fc\"></p><p style=\"text-align: center\"><img title=\"2.jpg\" src=\"migration-resource://27e092e9ca7ff0eba421fb01f2f507208b75e1202f9c068e37164fb89bb1a0a5\"></p><p style=\"text-align: center\"><img title=\"3.jpg\" src=\"migration-resource://8bd814adeab5133c3d0faa3bfbdfc11d5762b7fa98ac8005030332f5d23b3eec\"></p><p style=\"text-align: center\"><img title=\"4.jpg\" src=\"migration-resource://5900057724af5df47227cd29935409367c17af1cc4125e3d6c02338b11e87869\"></p><p style=\"text-align: center\"><img title=\"5.jpg\" src=\"migration-resource://c5679b49637b9ee353e0c53ed11eb26f8ba45f350546642ead0e89c67904e480\"></p><p style=\"text-align: center\"><img title=\"6.jpg\" src=\"migration-resource://37bea8c5f3f99ff1520f8171e585c2a4aed014eb20529816feec888a21a2e1ba\"></p><p><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361315238721875008609493.jpg",
+      "originalReference": "/chistory/cms/imgs/6361315238721875008609493.jpg",
+      "token": "migration-resource://f12f1cde85af252a5408a0be50dacaafa00123c2ac86061f248f9c0bf9b8b5fc",
+      "snapshotPath": "assets/f12f1cde85af252a5408a0be50dacaafa00123c2ac86061f248f9c0bf9b8b5fc.jpg",
+      "sha256": "f12f1cde85af252a5408a0be50dacaafa00123c2ac86061f248f9c0bf9b8b5fc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 53880
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361315238789062504535965.jpg",
+      "originalReference": "/chistory/cms/imgs/6361315238789062504535965.jpg",
+      "token": "migration-resource://27e092e9ca7ff0eba421fb01f2f507208b75e1202f9c068e37164fb89bb1a0a5",
+      "snapshotPath": "assets/27e092e9ca7ff0eba421fb01f2f507208b75e1202f9c068e37164fb89bb1a0a5.jpg",
+      "sha256": "27e092e9ca7ff0eba421fb01f2f507208b75e1202f9c068e37164fb89bb1a0a5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 61355
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361315238796875006980364.jpg",
+      "originalReference": "/chistory/cms/imgs/6361315238796875006980364.jpg",
+      "token": "migration-resource://8bd814adeab5133c3d0faa3bfbdfc11d5762b7fa98ac8005030332f5d23b3eec",
+      "snapshotPath": "assets/8bd814adeab5133c3d0faa3bfbdfc11d5762b7fa98ac8005030332f5d23b3eec.jpg",
+      "sha256": "8bd814adeab5133c3d0faa3bfbdfc11d5762b7fa98ac8005030332f5d23b3eec",
+      "contentType": "image/jpeg",
+      "sizeBytes": 32549
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361315238800000008737026.jpg",
+      "originalReference": "/chistory/cms/imgs/6361315238800000008737026.jpg",
+      "token": "migration-resource://5900057724af5df47227cd29935409367c17af1cc4125e3d6c02338b11e87869",
+      "snapshotPath": "assets/5900057724af5df47227cd29935409367c17af1cc4125e3d6c02338b11e87869.jpg",
+      "sha256": "5900057724af5df47227cd29935409367c17af1cc4125e3d6c02338b11e87869",
+      "contentType": "image/jpeg",
+      "sizeBytes": 23404
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361315238804687504722934.jpg",
+      "originalReference": "/chistory/cms/imgs/6361315238804687504722934.jpg",
+      "token": "migration-resource://c5679b49637b9ee353e0c53ed11eb26f8ba45f350546642ead0e89c67904e480",
+      "snapshotPath": "assets/c5679b49637b9ee353e0c53ed11eb26f8ba45f350546642ead0e89c67904e480.jpg",
+      "sha256": "c5679b49637b9ee353e0c53ed11eb26f8ba45f350546642ead0e89c67904e480",
+      "contentType": "image/jpeg",
+      "sizeBytes": 34376
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361315238807812506479597.jpg",
+      "originalReference": "/chistory/cms/imgs/6361315238807812506479597.jpg",
+      "token": "migration-resource://37bea8c5f3f99ff1520f8171e585c2a4aed014eb20529816feec888a21a2e1ba",
+      "snapshotPath": "assets/37bea8c5f3f99ff1520f8171e585c2a4aed014eb20529816feec888a21a2e1ba.jpg",
+      "sha256": "37bea8c5f3f99ff1520f8171e585c2a4aed014eb20529816feec888a21a2e1ba",
+      "contentType": "image/jpeg",
+      "sizeBytes": 16187
+    }
+  ],
+  "sourceFingerprint": "83b8ed5d3bd5d6dc78db5972415d7fe1a6813b0371fd2673ee8112dd91cfe0b3",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "教育部办公厅关于举办全国教育系统2017届高校毕业生网上招聘活动的通知",
+    "listPublishDate": "2016-10-27",
+    "sourceOrder": 233,
+    "detailPublishDate": "2016-10-27"
+  }
+}

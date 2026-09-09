@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122908",
+    "contentId": "28737783122908",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122908"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2013年吉林省NIT上机考试有关事项的通知",
+    "source": "",
+    "publishDate": "2013-03-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2013年吉林省NIT上机考试有关事项的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2013-3-5 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://b366f51808f3559fce578e234bfc78924feb94a70628b87f6ba9cd90d8f5d6ec\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://32c3fbc000fd3ccb280aececb9bf0945600cf062b3b5911588fb0b81075ae0be\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://4f4269140cce6d5c1c28b987278520bbfb6602e32c992feafcafa189ba8d40c2\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://167bae77aca54ac9a2b220a9c5b56fb0ef526b1af223f03923cc8486688beba0\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130305033802550.jpg",
+      "originalReference": "/chistory/cms/imgs/20130305033802550.jpg",
+      "token": "migration-resource://b366f51808f3559fce578e234bfc78924feb94a70628b87f6ba9cd90d8f5d6ec",
+      "snapshotPath": "assets/b366f51808f3559fce578e234bfc78924feb94a70628b87f6ba9cd90d8f5d6ec.jpg",
+      "sha256": "b366f51808f3559fce578e234bfc78924feb94a70628b87f6ba9cd90d8f5d6ec",
+      "contentType": "image/jpeg",
+      "sizeBytes": 72734
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130305033808164.jpg",
+      "originalReference": "/chistory/cms/imgs/20130305033808164.jpg",
+      "token": "migration-resource://32c3fbc000fd3ccb280aececb9bf0945600cf062b3b5911588fb0b81075ae0be",
+      "snapshotPath": "assets/32c3fbc000fd3ccb280aececb9bf0945600cf062b3b5911588fb0b81075ae0be.jpg",
+      "sha256": "32c3fbc000fd3ccb280aececb9bf0945600cf062b3b5911588fb0b81075ae0be",
+      "contentType": "image/jpeg",
+      "sizeBytes": 71796
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130305033813193.jpg",
+      "originalReference": "/chistory/cms/imgs/20130305033813193.jpg",
+      "token": "migration-resource://4f4269140cce6d5c1c28b987278520bbfb6602e32c992feafcafa189ba8d40c2",
+      "snapshotPath": "assets/4f4269140cce6d5c1c28b987278520bbfb6602e32c992feafcafa189ba8d40c2.jpg",
+      "sha256": "4f4269140cce6d5c1c28b987278520bbfb6602e32c992feafcafa189ba8d40c2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 102308
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130305033818647.jpg",
+      "originalReference": "/chistory/cms/imgs/20130305033818647.jpg",
+      "token": "migration-resource://167bae77aca54ac9a2b220a9c5b56fb0ef526b1af223f03923cc8486688beba0",
+      "snapshotPath": "assets/167bae77aca54ac9a2b220a9c5b56fb0ef526b1af223f03923cc8486688beba0.jpg",
+      "sha256": "167bae77aca54ac9a2b220a9c5b56fb0ef526b1af223f03923cc8486688beba0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75143
+    }
+  ],
+  "sourceFingerprint": "06e697eec419a333e7e65280f3806f3a900f541ad21ed8c038f4e0a9fcd6cf8c",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "2013年吉林省NIT上机考试有关事项的通知",
+    "listPublishDate": "2013-03-05",
+    "sourceOrder": 365,
+    "detailPublishDate": "2013-03-05"
+  }
+}

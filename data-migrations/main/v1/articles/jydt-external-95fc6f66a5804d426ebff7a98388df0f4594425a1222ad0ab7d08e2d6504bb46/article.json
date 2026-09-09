@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:95fc6f66a5804d426ebff7a98388df0f4594425a1222ad0ab7d08e2d6504bb46",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/OVPypEydNtC-s2OrvHZRGA",
+    "url": "https://mp.weixin.qq.com/s/OVPypEydNtC-s2OrvHZRGA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林科技职业技术学院2025届毕业生春季网络双选会",
+    "source": "",
+    "publishDate": "2025-03-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/OVPypEydNtC-s2OrvHZRGA"
+  },
+  "resources": [],
+  "sourceFingerprint": "cdc6215c473c1b1f92fd09fab106626988337fbf9631e55d4a80cee0347a679d",
+  "evidence": {
+    "listPage": 99,
+    "listTitle": "吉林科技职业技术学院2025届毕业生春季网络双选会",
+    "listPublishDate": "2025-03-14",
+    "sourceOrder": 985
+  }
+}

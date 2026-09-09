@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:889cb330366df08a2d700c3e60e59f9d53baf6bd02e7ac19195d1306f656e058",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/C0eJDGZHkvS4RAI_UGydnw",
+    "url": "https://mp.weixin.qq.com/s/C0eJDGZHkvS4RAI_UGydnw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院2026届毕业生“寒假促就业暖心行动”网络招聘会",
+    "source": "",
+    "publishDate": "2026-01-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/C0eJDGZHkvS4RAI_UGydnw"
+  },
+  "resources": [],
+  "sourceFingerprint": "1f59358b901c4f464390343c53af470a99d38595ed59de4e9395e3ac5a3e0cd2",
+  "evidence": {
+    "listPage": 51,
+    "listTitle": "长春人文学院2026届毕业生“寒假促就业暖心行动”网络招聘会",
+    "listPublishDate": "2026-01-14",
+    "sourceOrder": 505
+  }
+}

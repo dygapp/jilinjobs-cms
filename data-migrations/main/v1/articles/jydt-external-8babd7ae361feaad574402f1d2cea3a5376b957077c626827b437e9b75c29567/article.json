@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8babd7ae361feaad574402f1d2cea3a5376b957077c626827b437e9b75c29567",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/WQNSoxmoBVPWwGC9mSWBIg",
+    "url": "https://mp.weixin.qq.com/s/WQNSoxmoBVPWwGC9mSWBIg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院校领导赴吉林国色天莲集团访企拓岗 深化产教融合推进供需对接",
+    "source": "",
+    "publishDate": "2026-07-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/WQNSoxmoBVPWwGC9mSWBIg"
+  },
+  "resources": [],
+  "sourceFingerprint": "f302d990a1d83ad30049a1663ac2931951359ccc1f63ef1fd77b1c6b379cb002",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "长春人文学院校领导赴吉林国色天莲集团访企拓岗 深化产教融合推进供需对接",
+    "listPublishDate": "2026-07-20",
+    "sourceOrder": 44
+  }
+}

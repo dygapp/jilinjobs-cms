@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0b9aef7a696757bf8f2d3bc1e9f4d4d4e32478296a709ea9faec5aa75a84470e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xSADWq-ou_wJpjSvouCOHg",
+    "url": "https://mp.weixin.qq.com/s/xSADWq-ou_wJpjSvouCOHg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务吉林高质量发展——延边大学2026届毕业生春季综合大型招聘会（长春站）",
+    "source": "",
+    "publishDate": "2026-03-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xSADWq-ou_wJpjSvouCOHg"
+  },
+  "resources": [],
+  "sourceFingerprint": "a494441609af044be3b21ddf0ea5fd6a3c33cd50727eae22ae16cf76cea32cde",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "服务吉林高质量发展——延边大学2026届毕业生春季综合大型招聘会（长春站）",
+    "listPublishDate": "2026-03-06",
+    "sourceOrder": 432
+  }
+}

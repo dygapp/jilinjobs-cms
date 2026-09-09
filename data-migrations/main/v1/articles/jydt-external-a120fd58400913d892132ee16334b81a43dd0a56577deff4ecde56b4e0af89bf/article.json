@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a120fd58400913d892132ee16334b81a43dd0a56577deff4ecde56b4e0af89bf",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/fqmZkOir7TtfNdQ_DY8Xiw",
+    "url": "https://mp.weixin.qq.com/s/fqmZkOir7TtfNdQ_DY8Xiw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业 校所携手育英才｜长春财经学院赴天津律所走访交流",
+    "source": "",
+    "publishDate": "2026-08-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/fqmZkOir7TtfNdQ_DY8Xiw"
+  },
+  "resources": [],
+  "sourceFingerprint": "69778eb7e5b9447ca7021b8cf2b37644a9d2f493cb68295da75eb45dd58d3b66",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "访企拓岗促就业 校所携手育英才｜长春财经学院赴天津律所走访交流",
+    "listPublishDate": "2026-08-21",
+    "sourceOrder": 11
+  }
+}

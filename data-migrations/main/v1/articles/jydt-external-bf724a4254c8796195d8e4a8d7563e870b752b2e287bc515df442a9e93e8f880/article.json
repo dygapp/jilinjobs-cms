@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bf724a4254c8796195d8e4a8d7563e870b752b2e287bc515df442a9e93e8f880",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/iUoqEO4auVMFFQONju1xBA",
+    "url": "https://mp.weixin.qq.com/s/iUoqEO4auVMFFQONju1xBA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院副校长张代治一行赴能建绿色氢氨新能源（松原）有限公司开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-04-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/iUoqEO4auVMFFQONju1xBA"
+  },
+  "resources": [],
+  "sourceFingerprint": "e6782ffc14152ac30c8011b6b450cd8ad9eaf789b464cb026cb02fa9fa44bd55",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "长春科技学院副校长张代治一行赴能建绿色氢氨新能源（松原）有限公司开展访企拓岗专项行动",
+    "listPublishDate": "2026-04-13",
+    "sourceOrder": 295
+  }
+}

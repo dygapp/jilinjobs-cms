@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6c5660be71f669a689d74aa3f2cb83cef20f14ee64b3659c236575f8b6fa7b57",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/T4XOBnr8Jc-vTmIwqmlkNw",
+    "url": "https://mp.weixin.qq.com/s/T4XOBnr8Jc-vTmIwqmlkNw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "国家级协会+独角兽企业组团进校|共启长春早期教育职业学院人工智能职教新征程",
+    "source": "",
+    "publishDate": "2026-05-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/T4XOBnr8Jc-vTmIwqmlkNw"
+  },
+  "resources": [],
+  "sourceFingerprint": "06dcd4ce05dfefe69faf97d62fd8ddc0e0226465ca4869db024f2c5a15f80788",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "国家级协会+独角兽企业组团进校|共启长春早期教育职业学院人工智能职教新征程",
+    "listPublishDate": "2026-05-22",
+    "sourceOrder": 148
+  }
+}

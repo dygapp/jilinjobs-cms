@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bae185725c20f53fb49b346b5051882e2db5dc1fe208af96c83d049106a6a984",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/CHdtaFCvg5luv6wuKKFzug",
+    "url": "https://mp.weixin.qq.com/s/CHdtaFCvg5luv6wuKKFzug"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2026年吉林省高校“政校企协同促就业”专项行动走进白城",
+    "source": "",
+    "publishDate": "2026-05-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/CHdtaFCvg5luv6wuKKFzug"
+  },
+  "resources": [],
+  "sourceFingerprint": "28ce3dfe81d9a13df68f27fce6332d4d2c8d03e0b23b19dbd15833ed514a2b8f",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "2026年吉林省高校“政校企协同促就业”专项行动走进白城",
+    "listPublishDate": "2026-05-28",
+    "sourceOrder": 126
+  }
+}

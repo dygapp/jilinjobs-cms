@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e3cf426f957d39025d19505be547bd2bf69399b1358f72b41da82d514920d7e5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/VOicGdaCjIrIInknBuaSrA",
+    "url": "https://mp.weixin.qq.com/s/VOicGdaCjIrIInknBuaSrA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "梅河口康美职业技术学院开展“访企拓岗”专项行动，深化医教协同，对接岗位需求",
+    "source": "",
+    "publishDate": "2025-07-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/VOicGdaCjIrIInknBuaSrA"
+  },
+  "resources": [],
+  "sourceFingerprint": "8dc477a7dc98a65bd4bd8723c16298d98d510b0d6845aff6694678b70e9bc7c3",
+  "evidence": {
+    "listPage": 75,
+    "listTitle": "梅河口康美职业技术学院开展“访企拓岗”专项行动，深化医教协同，对接岗位需求",
+    "listPublishDate": "2025-07-07",
+    "sourceOrder": 741
+  }
+}

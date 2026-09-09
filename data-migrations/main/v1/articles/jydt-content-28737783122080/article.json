@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122080",
+    "contentId": "28737783122080",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122080"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省举办第五届助学贷款高校毕业生专场招聘会",
+    "source": "",
+    "publishDate": "2016-12-03",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省举办第五届助学贷款高校毕业生专场招聘会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2016-12-3 10:45:03</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋;font-size: 21px\">12</span><span style=\";font-family: 仿宋;font-size: 21px\">月2日，由吉林省教育厅、国家开发银行股份有限公司吉林省分行主办，省高校毕业生就业指导中心、省学生资助中心和长春工业大学承办的“第五届助学贷款高校毕业生专场招聘会”在长春工业大学林园校区举行。本次招聘会汇集了省内外知名企业200余家，行业涵盖了金融、财务、传媒、制药、管理、教育、艺术、服务等领域，提供就业岗位超过4000个。其中综合类、人文社科类用人单位的就业岗位占70%以上。全省有3000余名助学贷款毕业生入场应聘，为毕业生和用人单位搭建了交流互动的平台，促进了助学与就业的衔接。吉林教育电视台对招聘会进行了报道。</span></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋;font-size: 21px\">省教育厅副厅长岳强，国家开发银行吉林省分行副行长孟强在长春工业大学党委书记万春明、校长张会轩、党委副书记李雁冰陪同下到招聘会现场视察指导工作，省教育厅高校学生处、省高校毕业生就业指导中心、省学生资助中心相关负责同志共同陪同。</span></p><p><br></p><p style=\"text-align: center\"><img title=\"吉林省教育厅副厅长岳强、国家开发银行吉林省分行副行长孟强在长春工业大学领导陪同下视察招聘会现场.JPG\" src=\"migration-resource://dde5401b9e8f55691da4931414a3ba173dd6aab1f72e807c932c96592897dc47\"></p><p style=\"text-align:center;margin: 0px;\"><span style=\"margin: 0px; font-family: 仿宋; font-size: 16pt;\">吉林省教育厅副厅长岳强、国家开发银行吉林省分行副行长孟强在长春工业大学领导陪同下视察招聘会现场</span></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center\"><img title=\"吉林省高校毕业生就业指导中心主任郑志宏向媒体介绍全省助学贷款高校毕业生就业情况.JPG\" src=\"migration-resource://1faf6b6477e30ff8b995beecfe618eae0d89d4f82adabab6c76fbce2a52416a2\"></p><p style=\"text-align:center;margin: 0px;\"><span style=\"margin: 0px; font-family: 仿宋; font-size: 16pt;\">吉林省高校毕业生就业指导中心主任郑志宏向媒体介绍全省助学贷款高校毕业生就业情况</span></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361687724362350007306975.JPG",
+      "originalReference": "/chistory/cms/imgs/6361687724362350007306975.JPG",
+      "token": "migration-resource://dde5401b9e8f55691da4931414a3ba173dd6aab1f72e807c932c96592897dc47",
+      "snapshotPath": "assets/dde5401b9e8f55691da4931414a3ba173dd6aab1f72e807c932c96592897dc47.jpg",
+      "sha256": "dde5401b9e8f55691da4931414a3ba173dd6aab1f72e807c932c96592897dc47",
+      "contentType": "image/jpeg",
+      "sizeBytes": 194920
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361687725635787503382533.JPG",
+      "originalReference": "/chistory/cms/imgs/6361687725635787503382533.JPG",
+      "token": "migration-resource://1faf6b6477e30ff8b995beecfe618eae0d89d4f82adabab6c76fbce2a52416a2",
+      "snapshotPath": "assets/1faf6b6477e30ff8b995beecfe618eae0d89d4f82adabab6c76fbce2a52416a2.jpg",
+      "sha256": "1faf6b6477e30ff8b995beecfe618eae0d89d4f82adabab6c76fbce2a52416a2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 191283
+    }
+  ],
+  "sourceFingerprint": "94df7a4a3571b2be8510d0151a3171242a304e1df2175939439a766d8e5ddabb",
+  "evidence": {
+    "listPage": 151,
+    "listTitle": "我省举办第五届助学贷款高校毕业生专场招聘会",
+    "listPublishDate": "2016-12-03",
+    "sourceOrder": 1509,
+    "detailPublishDate": "2016-12-03"
+  }
+}

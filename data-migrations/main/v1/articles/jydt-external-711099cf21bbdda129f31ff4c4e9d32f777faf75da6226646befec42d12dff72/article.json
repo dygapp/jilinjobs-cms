@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:711099cf21bbdda129f31ff4c4e9d32f777faf75da6226646befec42d12dff72",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/abIf49wuLABCQdI8nH7BnA",
+    "url": "https://mp.weixin.qq.com/s/abIf49wuLABCQdI8nH7BnA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教融合 共绘发展蓝图——吉林铁道职业技术大学校领导赴凌云工业股份有限公司长春分公司开展访企拓岗交流活动",
+    "source": "",
+    "publishDate": "2026-04-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/abIf49wuLABCQdI8nH7BnA"
+  },
+  "resources": [],
+  "sourceFingerprint": "0e34049360a122b25f3a2bcf03a31ace2ab51f3d38d6dec8c4a367bf39a00912",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "深化产教融合 共绘发展蓝图——吉林铁道职业技术大学校领导赴凌云工业股份有限公司长春分公司开展访企拓岗交流活动",
+    "listPublishDate": "2026-04-10",
+    "sourceOrder": 303
+  }
+}

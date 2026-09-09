@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cd7affd11c34037c6a3e8c82f5423e9878fdc77065a9f0f90935c0200116c898",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/hzFVR-p_knxyI5JpmR_jRA",
+    "url": "https://mp.weixin.qq.com/s/hzFVR-p_knxyI5JpmR_jRA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春医学高等专科学校与四平梨树县开展“百校对百县”校地合作对接暨访企拓岗活动",
+    "source": "",
+    "publishDate": "2025-06-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/hzFVR-p_knxyI5JpmR_jRA"
+  },
+  "resources": [],
+  "sourceFingerprint": "bb0deb4646eb3cf30dbe6deac420f3399bdb79ec0c85c2e0d62605abac50aebe",
+  "evidence": {
+    "listPage": 78,
+    "listTitle": "长春医学高等专科学校与四平梨树县开展“百校对百县”校地合作对接暨访企拓岗活动",
+    "listPublishDate": "2025-06-24",
+    "sourceOrder": 776
+  }
+}

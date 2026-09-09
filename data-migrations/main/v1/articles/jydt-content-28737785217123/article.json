@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737785217123",
+    "contentId": "28737785217123",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737785217123"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2014年度全国大学生征兵工作网络视频会议召开",
+    "source": "",
+    "publishDate": "2014-05-16",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2014年度全国大学生征兵工作网络视频会议召开</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2014-5-16 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p> <p><font size=\"4\">&nbsp;&nbsp;&nbsp; 2014年度全国大学生征兵工作网络视频会议于5月14日10时召开，我省分会场设在省教育信息中心和吉林大学东荣会议中心。来自全省高校征兵工作分管负责人、相关职能部门负责人、院系负责人及辅导员参加会议。</font></p> <p align=\"center\"><img src=\"http://www.jilinjobs.cn/uploadfile/201405/20140516230733335.jpg\" border=\"0\"></p> <p align=\"center\"><strong>省教育信息中心会议现场</strong></p> <p align=\"center\"><img src=\"migration-resource://b82cb97be93a5448dd22cdf65b576a5d3b7feb8e876c06bbf3825f7db3b63461\" border=\"0\"></p> <p align=\"center\"><strong>吉林大学东荣会议中心会议现场</strong></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140516230842467.jpg",
+      "originalReference": "/chistory/cms/imgs/20140516230842467.jpg",
+      "token": "migration-resource://b82cb97be93a5448dd22cdf65b576a5d3b7feb8e876c06bbf3825f7db3b63461",
+      "snapshotPath": "assets/b82cb97be93a5448dd22cdf65b576a5d3b7feb8e876c06bbf3825f7db3b63461.jpg",
+      "sha256": "b82cb97be93a5448dd22cdf65b576a5d3b7feb8e876c06bbf3825f7db3b63461",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77556
+    }
+  ],
+  "sourceFingerprint": "3a60f4e102b4827e4913d241b09116370c5d7ad6780b6b3e3bd05b2e0250c5f4",
+  "evidence": {
+    "listPage": 161,
+    "listTitle": "2014年度全国大学生征兵工作网络视频会议召开",
+    "listPublishDate": "2014-05-16",
+    "sourceOrder": 1602,
+    "detailPublishDate": "2014-05-16"
+  }
+}

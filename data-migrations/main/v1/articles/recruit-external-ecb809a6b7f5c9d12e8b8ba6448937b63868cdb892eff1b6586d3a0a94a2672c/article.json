@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:ecb809a6b7f5c9d12e8b8ba6448937b63868cdb892eff1b6586d3a0a94a2672c",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/aBZ4rDOtItOGPERexuWcgQ",
+    "url": "https://mp.weixin.qq.com/s/aBZ4rDOtItOGPERexuWcgQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学2026年秋季学期校园招聘活动安排",
+    "source": "",
+    "publishDate": "2026-09-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/aBZ4rDOtItOGPERexuWcgQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "bdcd561a9f92c5869610801050e5723f78946500499b6ffacb4cd5b0a2e3598d",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "长春师范大学2026年秋季学期校园招聘活动安排",
+    "listPublishDate": "2026-09-07",
+    "sourceOrder": 3
+  }
+}

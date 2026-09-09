@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:843fb093ed80170f637fb14151cd5b2bdf9c4053163c9809d7d14a425461340c",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/I8ifBwW-NHYg-dv803IWqA",
+    "url": "https://mp.weixin.qq.com/s/I8ifBwW-NHYg-dv803IWqA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学2026届毕业生春季校园招聘工作安排",
+    "source": "",
+    "publishDate": "2026-01-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/I8ifBwW-NHYg-dv803IWqA"
+  },
+  "resources": [],
+  "sourceFingerprint": "800f6f34b3701f2fdd02385347c201758a68856382c79733d482bacdfb3ed013",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "长春工业大学2026届毕业生春季校园招聘工作安排",
+    "listPublishDate": "2026-01-09",
+    "sourceOrder": 113
+  }
+}

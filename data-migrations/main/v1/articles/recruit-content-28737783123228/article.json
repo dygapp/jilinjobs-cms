@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123228",
+    "contentId": "28737783123228",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123228"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "湖南省：株洲市创业优惠政策和小额贷款政策",
+    "source": "",
+    "publishDate": "2009-07-14",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">湖南省：株洲市创业优惠政策和小额贷款政策</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-7-14 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 日前，从湖南省株洲市物价部门获悉，为了鼓励全民自主创业，株洲市出台创业优惠政策和小额贷款政策支持6类人员自主创业，应届大学毕业生、下岗失业人员、军队退役人员、失地农民、返乡农民工、残疾人在该市自主创业，在3年内可减免20项行政事业性收费。</font></p> <p><font size=\"2\"></font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 据了解，自主创业人员凭证明材料，自工商部门批准经营之日起，3年内减免行政事业性收费。免收事项涉及登记类、证照类的行政事业性收费，包括：工商部门的个体工商户开业登记费、变更登记费、法定代表证明书工本费、负责人证明书工本费；税务部门的税务登记证、注册登记证工本费；卫生部门的医疗机构注册及发证工本费；交通部门的公路运输服务许可证、汽车维修技工证、船舶营业运输证工本费等。此外，公安、新闻出版等相关证照的工本费也在免缴范围。 同时，质量技术监督部门收取的产品质量监督检验费和卫生部门收取的工商产品卫生学鉴定费、食品用机械卫生学鉴定费可减免15%。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 为了支持青年创业，共青团株洲市委日前联合中国银监会株洲监管分局，共同实施青年创业小额贷款项目。据悉，青年创业者一次最高可获贷款5万元，此举为青年创业开辟了一条“绿色通道”。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 符合贷款条件的青年，必须先参加共青团株洲市委举办的青年创业SYB培训，填写创业计划书后，自愿向团组织申报。与团组织合作的农村信用社在接到团组织推荐的项目和拟借款人申请后，将按照信贷程序，认真审查申请人的资信状况、创业计划可行性、发展前景、预计还款能力等情况，测定贷款风险度和可行性，开展评级、授信工作，择优发放贷款。</font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：长沙晚报 </font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "6857d20cc48dba92343bb675986b8d01196a4afa1c028c5ffb4fc9c6729cc7b1",
+  "evidence": {
+    "listPage": 51,
+    "listTitle": "湖南省：株洲市创业优惠政策和小额贷款政策",
+    "listPublishDate": "2009-07-14",
+    "sourceOrder": 508,
+    "detailPublishDate": "2009-07-14"
+  }
+}

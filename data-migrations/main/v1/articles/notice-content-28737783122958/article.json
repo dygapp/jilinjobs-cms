@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122958",
+    "contentId": "28737783122958",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122958"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅关于举办2012年全国毕业研究生专场网上招聘周活动的通知",
+    "source": "",
+    "publishDate": "2012-03-15",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部办公厅关于举办2012年全国毕业研究生专场网上招聘周活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-3-15 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://e067e908c905bed51d196665d3b345af8e666798c9b07e98de1d2128d331d036\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://5aafbc1f4ebb809c875f6faa3c61c3e410fbffc07a73ccb9acbdc1124ef54b74\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://e6045e2d855c65c61f1bbe0cf1c118deebdfed8ba3bc2388f4246b24d669f9eb\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120315164306228.jpg",
+      "originalReference": "/chistory/cms/imgs/20120315164306228.jpg",
+      "token": "migration-resource://e067e908c905bed51d196665d3b345af8e666798c9b07e98de1d2128d331d036",
+      "snapshotPath": "assets/e067e908c905bed51d196665d3b345af8e666798c9b07e98de1d2128d331d036.jpg",
+      "sha256": "e067e908c905bed51d196665d3b345af8e666798c9b07e98de1d2128d331d036",
+      "contentType": "image/jpeg",
+      "sizeBytes": 83715
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/201203151643143.jpg",
+      "originalReference": "/chistory/cms/imgs/201203151643143.jpg",
+      "token": "migration-resource://5aafbc1f4ebb809c875f6faa3c61c3e410fbffc07a73ccb9acbdc1124ef54b74",
+      "snapshotPath": "assets/5aafbc1f4ebb809c875f6faa3c61c3e410fbffc07a73ccb9acbdc1124ef54b74.jpg",
+      "sha256": "5aafbc1f4ebb809c875f6faa3c61c3e410fbffc07a73ccb9acbdc1124ef54b74",
+      "contentType": "image/jpeg",
+      "sizeBytes": 85286
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120315164320330.jpg",
+      "originalReference": "/chistory/cms/imgs/20120315164320330.jpg",
+      "token": "migration-resource://e6045e2d855c65c61f1bbe0cf1c118deebdfed8ba3bc2388f4246b24d669f9eb",
+      "snapshotPath": "assets/e6045e2d855c65c61f1bbe0cf1c118deebdfed8ba3bc2388f4246b24d669f9eb.jpg",
+      "sha256": "e6045e2d855c65c61f1bbe0cf1c118deebdfed8ba3bc2388f4246b24d669f9eb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 63892
+    }
+  ],
+  "sourceFingerprint": "296d7e4555535ec3e340583f756372a218cb7eb2da2d0c514fa6ed12da4a1db4",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "教育部办公厅关于举办2012年全国毕业研究生专场网上招聘周活动的通知",
+    "listPublishDate": "2012-03-15",
+    "sourceOrder": 399,
+    "detailPublishDate": "2012-03-15"
+  }
+}

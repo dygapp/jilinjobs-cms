@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737785217133",
+    "contentId": "28737785217133",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737785217133"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅 国务院国资委办公厅关于举办全国大中型企业面向应届高校毕业生网上双选月活动的通知",
+    "source": "",
+    "publishDate": "2015-10-21",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部办公厅 国务院国资委办公厅关于举办全国大中型企业面向应届高校毕业生网上双选月活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2015-10-21 15:04:47</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://c3f7187c0d10c3c6e56a0ee74cb1da85dbda055604a1811a996ab66ae53d378c\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://1636dd915f64a394af917f23458518db0d37cf7ba03b4e5322ce8dcbac1b5200\"></p><p style=\"text-align: center;\"><img title=\"3.jpg\" src=\"migration-resource://23358abe04af6c2daaf2f015169d686ccd14bffe036e0363b00563fc7b04cf40\"></p><p style=\"text-align: center;\"><img title=\"4.jpg\" src=\"migration-resource://6ac6405fb9c3433ec1e8d0c5dde8cc05b339d39c93b565272cb8bf20ebe114a3\"></p><p style=\"text-align: center;\"><img title=\"5.jpg\" src=\"migration-resource://e132243127c145dfffb63a9137a9e56f98c66c95231bcaf8bc4ff2d8588d61c8\"></p><p style=\"text-align: center;\"><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358267839950000005511648.jpg",
+      "originalReference": "/chistory/cms/imgs/6358267839950000005511648.jpg",
+      "token": "migration-resource://c3f7187c0d10c3c6e56a0ee74cb1da85dbda055604a1811a996ab66ae53d378c",
+      "snapshotPath": "assets/c3f7187c0d10c3c6e56a0ee74cb1da85dbda055604a1811a996ab66ae53d378c.jpg",
+      "sha256": "c3f7187c0d10c3c6e56a0ee74cb1da85dbda055604a1811a996ab66ae53d378c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 117421
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358267839959375006483464.jpg",
+      "originalReference": "/chistory/cms/imgs/6358267839959375006483464.jpg",
+      "token": "migration-resource://1636dd915f64a394af917f23458518db0d37cf7ba03b4e5322ce8dcbac1b5200",
+      "snapshotPath": "assets/1636dd915f64a394af917f23458518db0d37cf7ba03b4e5322ce8dcbac1b5200.jpg",
+      "sha256": "1636dd915f64a394af917f23458518db0d37cf7ba03b4e5322ce8dcbac1b5200",
+      "contentType": "image/jpeg",
+      "sizeBytes": 127803
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358267839962500008240127.jpg",
+      "originalReference": "/chistory/cms/imgs/6358267839962500008240127.jpg",
+      "token": "migration-resource://23358abe04af6c2daaf2f015169d686ccd14bffe036e0363b00563fc7b04cf40",
+      "snapshotPath": "assets/23358abe04af6c2daaf2f015169d686ccd14bffe036e0363b00563fc7b04cf40.jpg",
+      "sha256": "23358abe04af6c2daaf2f015169d686ccd14bffe036e0363b00563fc7b04cf40",
+      "contentType": "image/jpeg",
+      "sizeBytes": 49261
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358267839965625005698617.jpg",
+      "originalReference": "/chistory/cms/imgs/6358267839965625005698617.jpg",
+      "token": "migration-resource://6ac6405fb9c3433ec1e8d0c5dde8cc05b339d39c93b565272cb8bf20ebe114a3",
+      "snapshotPath": "assets/6ac6405fb9c3433ec1e8d0c5dde8cc05b339d39c93b565272cb8bf20ebe114a3.jpg",
+      "sha256": "6ac6405fb9c3433ec1e8d0c5dde8cc05b339d39c93b565272cb8bf20ebe114a3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 50937
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358267839970312505982697.jpg",
+      "originalReference": "/chistory/cms/imgs/6358267839970312505982697.jpg",
+      "token": "migration-resource://e132243127c145dfffb63a9137a9e56f98c66c95231bcaf8bc4ff2d8588d61c8",
+      "snapshotPath": "assets/e132243127c145dfffb63a9137a9e56f98c66c95231bcaf8bc4ff2d8588d61c8.jpg",
+      "sha256": "e132243127c145dfffb63a9137a9e56f98c66c95231bcaf8bc4ff2d8588d61c8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 78944
+    }
+  ],
+  "sourceFingerprint": "7cf4939d816405b2f851b2caee562bd9f2e02e311793ba739c9675551c976cbb",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "教育部办公厅 国务院国资委办公厅关于举办全国大中型企业面向应届高校毕业生网上双选月活动的通知",
+    "listPublishDate": "2015-10-21",
+    "sourceOrder": 267,
+    "detailPublishDate": "2015-10-21"
+  }
+}

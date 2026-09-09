@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fc3a95dfba96fa71a0f95473fbdabcf3577a8211a01a9fe12c885dc4f61c9b19",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/zfSEqMAfJ7J74CfSK9J0HQ",
+    "url": "https://mp.weixin.qq.com/s/zfSEqMAfJ7J74CfSK9J0HQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "40家名企携600＋岗位进校：吉林通用航空职业技术学院春季招聘会火热举行",
+    "source": "",
+    "publishDate": "2026-03-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/zfSEqMAfJ7J74CfSK9J0HQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "2bf67a0a7632d92181fd100b8fe01f4444ec255a38103b1949072115e17c1004",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "40家名企携600＋岗位进校：吉林通用航空职业技术学院春季招聘会火热举行",
+    "listPublishDate": "2026-03-18",
+    "sourceOrder": 399
+  }
+}

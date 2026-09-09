@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122728",
+    "contentId": "28737783122728",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122728"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省青年领袖峰会的通知",
+    "source": "",
+    "publishDate": "2018-09-27",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于举办吉林省青年领袖峰会的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2018-9-27 9:14:50</span></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://3e41e34133681412e516e5f731f8207932ca0fed12d13f5e367b354c3c5c63e0\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://8b014d120dfb7593a17710a25b161ad11c24d79f46c99f75c0261a4d7608fc21\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://d4c8523f23dd4ab0dd22d7a33a003ddcc352fc309e569b6fd76b44853ae56e48\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://b07acda2265f52d610ba568c3806e9b16e7f64804967356fe089d66011bd14e0\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://3b094855738a52cca18d1482a1edfc76d7f18e20d15060dea6807c2c065fda9d\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=b845a7bf-0302-4474-9e89-96ac8ffe8a67\">6.附件3回执表.doc</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6367372294525000001967844.jpg",
+      "originalReference": "/chistory/cms/imgs/6367372294525000001967844.jpg",
+      "token": "migration-resource://3e41e34133681412e516e5f731f8207932ca0fed12d13f5e367b354c3c5c63e0",
+      "snapshotPath": "assets/3e41e34133681412e516e5f731f8207932ca0fed12d13f5e367b354c3c5c63e0.jpg",
+      "sha256": "3e41e34133681412e516e5f731f8207932ca0fed12d13f5e367b354c3c5c63e0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 138799
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6367372294534375002939660.jpg",
+      "originalReference": "/chistory/cms/imgs/6367372294534375002939660.jpg",
+      "token": "migration-resource://8b014d120dfb7593a17710a25b161ad11c24d79f46c99f75c0261a4d7608fc21",
+      "snapshotPath": "assets/8b014d120dfb7593a17710a25b161ad11c24d79f46c99f75c0261a4d7608fc21.jpg",
+      "sha256": "8b014d120dfb7593a17710a25b161ad11c24d79f46c99f75c0261a4d7608fc21",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84459
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6367372294540625006452985.jpg",
+      "originalReference": "/chistory/cms/imgs/6367372294540625006452985.jpg",
+      "token": "migration-resource://d4c8523f23dd4ab0dd22d7a33a003ddcc352fc309e569b6fd76b44853ae56e48",
+      "snapshotPath": "assets/d4c8523f23dd4ab0dd22d7a33a003ddcc352fc309e569b6fd76b44853ae56e48.jpg",
+      "sha256": "d4c8523f23dd4ab0dd22d7a33a003ddcc352fc309e569b6fd76b44853ae56e48",
+      "contentType": "image/jpeg",
+      "sizeBytes": 48062
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6367372294545312502438893.jpg",
+      "originalReference": "/chistory/cms/imgs/6367372294545312502438893.jpg",
+      "token": "migration-resource://b07acda2265f52d610ba568c3806e9b16e7f64804967356fe089d66011bd14e0",
+      "snapshotPath": "assets/b07acda2265f52d610ba568c3806e9b16e7f64804967356fe089d66011bd14e0.jpg",
+      "sha256": "b07acda2265f52d610ba568c3806e9b16e7f64804967356fe089d66011bd14e0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 201642
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6367372294553125009181463.jpg",
+      "originalReference": "/chistory/cms/imgs/6367372294553125009181463.jpg",
+      "token": "migration-resource://3b094855738a52cca18d1482a1edfc76d7f18e20d15060dea6807c2c065fda9d",
+      "snapshotPath": "assets/3b094855738a52cca18d1482a1edfc76d7f18e20d15060dea6807c2c065fda9d.jpg",
+      "sha256": "3b094855738a52cca18d1482a1edfc76d7f18e20d15060dea6807c2c065fda9d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 76712
+    }
+  ],
+  "sourceFingerprint": "a8867329d97c1481a15ca36e5a39fbd8466cc56bab87290cb4c78856a9e8fb07",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "关于举办吉林省青年领袖峰会的通知",
+    "listPublishDate": "2018-09-27",
+    "sourceOrder": 201,
+    "detailPublishDate": "2018-09-27"
+  }
+}

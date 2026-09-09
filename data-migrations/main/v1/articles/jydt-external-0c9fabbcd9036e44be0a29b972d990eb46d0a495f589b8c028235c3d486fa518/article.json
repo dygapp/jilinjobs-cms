@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0c9fabbcd9036e44be0a29b972d990eb46d0a495f589b8c028235c3d486fa518",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/7BsFYk5EdvqFWKw6NWLUoQ",
+    "url": "https://mp.weixin.qq.com/s/7BsFYk5EdvqFWKw6NWLUoQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林通用航空职业技术学院召开2026届毕业生就业工作统筹部署与任务落实会",
+    "source": "",
+    "publishDate": "2025-10-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/7BsFYk5EdvqFWKw6NWLUoQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "70e6761f8668d8f4b3bfd9a1a5e1f5dd93b857a7900beee5d7ab1ead05c134e0",
+  "evidence": {
+    "listPage": 66,
+    "listTitle": "吉林通用航空职业技术学院召开2026届毕业生就业工作统筹部署与任务落实会",
+    "listPublishDate": "2025-10-27",
+    "sourceOrder": 657
+  }
+}

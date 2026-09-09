@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c11b6db4b82dd90bce69fc3641284ddab9959ab914c4d3b6b93564ee9d9a76d4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/wR1UfC6eMfwLBfEC_i3i0w",
+    "url": "https://mp.weixin.qq.com/s/wR1UfC6eMfwLBfEC_i3i0w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企合作结硕果 低空经济谱新篇——长岭县城乡建设集团到访吉林通用航空职业技术学院",
+    "source": "",
+    "publishDate": "2026-05-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wR1UfC6eMfwLBfEC_i3i0w"
+  },
+  "resources": [],
+  "sourceFingerprint": "a337fc253151ebd106dba0193079c720bb5cd5272efe3a6c433582daed4c09f8",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "校企合作结硕果 低空经济谱新篇——长岭县城乡建设集团到访吉林通用航空职业技术学院",
+    "listPublishDate": "2026-05-14",
+    "sourceOrder": 183
+  }
+}

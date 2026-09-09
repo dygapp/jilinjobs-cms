@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1f83236c840b55cb04944b933457975aa8ef005cb86dd2a5ef8fadf54b327658",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/FCuDixZKaD2oSL3YrMALNA",
+    "url": "https://mp.weixin.qq.com/s/FCuDixZKaD2oSL3YrMALNA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学举办2026届毕业生“相约周四 ‘职’等你来”线下小型双选会",
+    "source": "",
+    "publishDate": "2025-10-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/FCuDixZKaD2oSL3YrMALNA"
+  },
+  "resources": [],
+  "sourceFingerprint": "34a93e22f248052822d785f689cac82272c49d38ea3d3576a0b28a37f9c7c221",
+  "evidence": {
+    "listPage": 65,
+    "listTitle": "东北电力大学举办2026届毕业生“相约周四 ‘职’等你来”线下小型双选会",
+    "listPublishDate": "2025-10-31",
+    "sourceOrder": 646
+  }
+}

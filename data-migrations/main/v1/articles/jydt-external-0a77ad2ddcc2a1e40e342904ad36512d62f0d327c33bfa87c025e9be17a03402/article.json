@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0a77ad2ddcc2a1e40e342904ad36512d62f0d327c33bfa87c025e9be17a03402",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/4yMpe0xIOy8N2CypCQWpRw",
+    "url": "https://mp.weixin.qq.com/s/4yMpe0xIOy8N2CypCQWpRw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“百日冲刺”显成效，协同发力促就业 | 通化医药健康职业学院成功开展2025届高校毕业生校园招聘活动",
+    "source": "",
+    "publishDate": "2025-07-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4yMpe0xIOy8N2CypCQWpRw"
+  },
+  "resources": [],
+  "sourceFingerprint": "e7407fa2147980137dc8ab04f1a170e68f861344c263f2bc566a193f546e66d9",
+  "evidence": {
+    "listPage": 74,
+    "listTitle": "“百日冲刺”显成效，协同发力促就业 | 通化医药健康职业学院成功开展2025届高校毕业生校园招聘活动",
+    "listPublishDate": "2025-07-09",
+    "sourceOrder": 735
+  }
+}

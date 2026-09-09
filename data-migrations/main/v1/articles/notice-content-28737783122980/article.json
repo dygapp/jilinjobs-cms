@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122980",
+    "contentId": "28737783122980",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122980"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于参加教育部2012年全国普通高校毕业生就业工作网络视频会议的通知",
+    "source": "",
+    "publishDate": "2011-11-18",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于参加教育部2012年全国普通高校毕业生就业工作网络视频会议的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-18 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://05a418b23e05945cd94601d8b4fb204c1f40c57262a5ed9be183ebfc1f11475e\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://98def63d9b752cae8fc5968809a7a7d5111b5fe9139143ff9cd1dd42ad101469\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://68821babdd2664da8b715f27c2d2964082504dc9d98757323b5991e326daab08\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://e4c7a773d76b1cdbfb7e8490d19f31eea72961ffafeb34fba7d946903c5d9a34\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://a9ec2eb7d5f7658cc05f9ed1e0823f657d3c53944c7d249dc3b00c3cd92c38be\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://3e6b95b5465261083690009f2e779b748e81eb33f12210b902aa2ccf04fb55c0\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111118163535533.jpg",
+      "originalReference": "/chistory/cms/imgs/20111118163535533.jpg",
+      "token": "migration-resource://05a418b23e05945cd94601d8b4fb204c1f40c57262a5ed9be183ebfc1f11475e",
+      "snapshotPath": "assets/05a418b23e05945cd94601d8b4fb204c1f40c57262a5ed9be183ebfc1f11475e.jpg",
+      "sha256": "05a418b23e05945cd94601d8b4fb204c1f40c57262a5ed9be183ebfc1f11475e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95612
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111118163541172.jpg",
+      "originalReference": "/chistory/cms/imgs/20111118163541172.jpg",
+      "token": "migration-resource://98def63d9b752cae8fc5968809a7a7d5111b5fe9139143ff9cd1dd42ad101469",
+      "snapshotPath": "assets/98def63d9b752cae8fc5968809a7a7d5111b5fe9139143ff9cd1dd42ad101469.jpg",
+      "sha256": "98def63d9b752cae8fc5968809a7a7d5111b5fe9139143ff9cd1dd42ad101469",
+      "contentType": "image/jpeg",
+      "sizeBytes": 58198
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111118163549400.jpg",
+      "originalReference": "/chistory/cms/imgs/20111118163549400.jpg",
+      "token": "migration-resource://68821babdd2664da8b715f27c2d2964082504dc9d98757323b5991e326daab08",
+      "snapshotPath": "assets/68821babdd2664da8b715f27c2d2964082504dc9d98757323b5991e326daab08.jpg",
+      "sha256": "68821babdd2664da8b715f27c2d2964082504dc9d98757323b5991e326daab08",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82040
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111118163556758.jpg",
+      "originalReference": "/chistory/cms/imgs/20111118163556758.jpg",
+      "token": "migration-resource://e4c7a773d76b1cdbfb7e8490d19f31eea72961ffafeb34fba7d946903c5d9a34",
+      "snapshotPath": "assets/e4c7a773d76b1cdbfb7e8490d19f31eea72961ffafeb34fba7d946903c5d9a34.jpg",
+      "sha256": "e4c7a773d76b1cdbfb7e8490d19f31eea72961ffafeb34fba7d946903c5d9a34",
+      "contentType": "image/jpeg",
+      "sizeBytes": 86903
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111118163601591.jpg",
+      "originalReference": "/chistory/cms/imgs/20111118163601591.jpg",
+      "token": "migration-resource://a9ec2eb7d5f7658cc05f9ed1e0823f657d3c53944c7d249dc3b00c3cd92c38be",
+      "snapshotPath": "assets/a9ec2eb7d5f7658cc05f9ed1e0823f657d3c53944c7d249dc3b00c3cd92c38be.jpg",
+      "sha256": "a9ec2eb7d5f7658cc05f9ed1e0823f657d3c53944c7d249dc3b00c3cd92c38be",
+      "contentType": "image/jpeg",
+      "sizeBytes": 96056
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111118163608952.jpg",
+      "originalReference": "/chistory/cms/imgs/20111118163608952.jpg",
+      "token": "migration-resource://3e6b95b5465261083690009f2e779b748e81eb33f12210b902aa2ccf04fb55c0",
+      "snapshotPath": "assets/3e6b95b5465261083690009f2e779b748e81eb33f12210b902aa2ccf04fb55c0.jpg",
+      "sha256": "3e6b95b5465261083690009f2e779b748e81eb33f12210b902aa2ccf04fb55c0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 43826
+    }
+  ],
+  "sourceFingerprint": "0f390025425a07afa24dae09fbb9336ecf088ae96a5884bb61137a9171d606fa",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "关于参加教育部2012年全国普通高校毕业生就业工作网络视频会议的通知",
+    "listPublishDate": "2011-11-18",
+    "sourceOrder": 415,
+    "detailPublishDate": "2011-11-18"
+  }
+}

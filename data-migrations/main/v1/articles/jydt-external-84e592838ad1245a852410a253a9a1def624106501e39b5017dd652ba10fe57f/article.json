@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:84e592838ad1245a852410a253a9a1def624106501e39b5017dd652ba10fe57f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1086/78230.htm",
+    "url": "https://www.ccsfu.edu.cn/info/1086/78230.htm?jump_from=1_05_37_01&sessionid=-1369492230"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学党委副书记张广翠率队赴广东省开展访企拓岗活动",
+    "source": "",
+    "publishDate": "2025-03-20",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccsfu.edu.cn/info/1086/78230.htm?jump_from=1_05_37_01&sessionid=-1369492230"
+  },
+  "resources": [],
+  "sourceFingerprint": "a7b3d427f2cd437257ce15d696aef9d7017a0a2f1b3d6f698dd812420caf817f",
+  "evidence": {
+    "listPage": 98,
+    "listTitle": "长春师范大学党委副书记张广翠率队赴广东省开展访企拓岗活动",
+    "listPublishDate": "2025-03-20",
+    "sourceOrder": 974
+  }
+}

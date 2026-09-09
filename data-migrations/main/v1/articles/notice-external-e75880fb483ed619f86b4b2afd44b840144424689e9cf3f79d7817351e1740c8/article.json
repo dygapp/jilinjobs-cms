@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:e75880fb483ed619f86b4b2afd44b840144424689e9cf3f79d7817351e1740c8",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/N61OCCRQgm5brQ-1w4XI2w",
+    "url": "https://mp.weixin.qq.com/s/N61OCCRQgm5brQ-1w4XI2w"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省促进中小企业发展服务中心吉林省高等学校毕业生就业指导中心关于举办2025年“一起益企”全省中小企业秋季人才公益招聘会的通知",
+    "source": "",
+    "publishDate": "2025-09-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/N61OCCRQgm5brQ-1w4XI2w"
+  },
+  "resources": [],
+  "sourceFingerprint": "fd82ff91c8c7ab7141e255c886408dfdf372109e4c4ca008a2ff4359f78f89fd",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "吉林省促进中小企业发展服务中心吉林省高等学校毕业生就业指导中心关于举办2025年“一起益企”全省中小企业秋季人才公益招聘会的通知",
+    "listPublishDate": "2025-09-16",
+    "sourceOrder": 29
+  }
+}

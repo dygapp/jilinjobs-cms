@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1dcf1fa1b4f4b39527e9508f4b8489f9238d21e2d7cdeb060f88b47abc5e7e8c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/mXnXW1985GQWnnJ1oNmvCw",
+    "url": "https://mp.weixin.qq.com/s/mXnXW1985GQWnnJ1oNmvCw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业科技学院党委书记毛彦军带队赴吉林西部开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-04-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/mXnXW1985GQWnnJ1oNmvCw"
+  },
+  "resources": [],
+  "sourceFingerprint": "68d88ba7ab5c5eeb63d31ded63eff3c37cdc0e7fbb41a507382dd114a4664e1f",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "吉林农业科技学院党委书记毛彦军带队赴吉林西部开展访企拓岗专项行动",
+    "listPublishDate": "2026-04-14",
+    "sourceOrder": 291
+  }
+}

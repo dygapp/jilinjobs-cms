@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:87440586981376",
+    "contentId": "87440586981376",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=87440586981376"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办教育部24365校园招聘服务吉林专场招聘活动的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2022-04-12",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1018\" src=\"migration-resource://1217ade6bee3c01b597110be48c88f8900aaa98c4e5e424b828c84cc575ac5b8\" width=\"789\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1022\" src=\"migration-resource://6ffe08602b046e38f43dae0e3a8e657f95c2a78095efc0df6b52cf7ae78314b2\" width=\"789\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1007\" src=\"migration-resource://be639fbe5cb33d7099fcf507eeba02e01856c2abdb4d2f0788b7714b40e1733e\" width=\"789\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1030\" src=\"migration-resource://807a434dcb46cdc42d4c6f31524794e0761dcbe5a2da0544469c61150a2f27da\" width=\"788\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/900c91f4-bf02-4d29-8e55-e72c85c2b78b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/900c91f4-bf02-4d29-8e55-e72c85c2b78b.jpg",
+      "token": "migration-resource://1217ade6bee3c01b597110be48c88f8900aaa98c4e5e424b828c84cc575ac5b8",
+      "snapshotPath": "assets/1217ade6bee3c01b597110be48c88f8900aaa98c4e5e424b828c84cc575ac5b8.jpg",
+      "sha256": "1217ade6bee3c01b597110be48c88f8900aaa98c4e5e424b828c84cc575ac5b8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 65739
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/062db996-2509-43f0-84d7-ce35e1e4335f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/062db996-2509-43f0-84d7-ce35e1e4335f.jpg",
+      "token": "migration-resource://6ffe08602b046e38f43dae0e3a8e657f95c2a78095efc0df6b52cf7ae78314b2",
+      "snapshotPath": "assets/6ffe08602b046e38f43dae0e3a8e657f95c2a78095efc0df6b52cf7ae78314b2.jpg",
+      "sha256": "6ffe08602b046e38f43dae0e3a8e657f95c2a78095efc0df6b52cf7ae78314b2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67577
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/79a933cc-0cf9-4578-8355-2cea14008d65.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/79a933cc-0cf9-4578-8355-2cea14008d65.jpg",
+      "token": "migration-resource://be639fbe5cb33d7099fcf507eeba02e01856c2abdb4d2f0788b7714b40e1733e",
+      "snapshotPath": "assets/be639fbe5cb33d7099fcf507eeba02e01856c2abdb4d2f0788b7714b40e1733e.jpg",
+      "sha256": "be639fbe5cb33d7099fcf507eeba02e01856c2abdb4d2f0788b7714b40e1733e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 91151
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-28/f6391eed-2eaa-4cc7-883a-9a26dec581fd.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-28/f6391eed-2eaa-4cc7-883a-9a26dec581fd.jpg",
+      "token": "migration-resource://807a434dcb46cdc42d4c6f31524794e0761dcbe5a2da0544469c61150a2f27da",
+      "snapshotPath": "assets/807a434dcb46cdc42d4c6f31524794e0761dcbe5a2da0544469c61150a2f27da.jpg",
+      "sha256": "807a434dcb46cdc42d4c6f31524794e0761dcbe5a2da0544469c61150a2f27da",
+      "contentType": "image/jpeg",
+      "sizeBytes": 44032
+    }
+  ],
+  "sourceFingerprint": "86399402b0b2ad5e88a7249a8a5c86742e58e5695c66ea2e8fb4ccb7e9a47757",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "关于举办教育部24365校园招聘服务吉林专场招聘活动的通知",
+    "listPublishDate": "2022-04-12",
+    "sourceOrder": 133,
+    "detailPublishDate": "2022-04-12"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bbb04b54d57984a0e27b2081e811ebbc228a7f514c7d67e64dc837656a392fb2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1021/5239.htm",
+    "url": "https://www.jlnku.edu.cn/info/1021/5239.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业科技学院召开2025届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2025-06-23",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlnku.edu.cn/info/1021/5239.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "f0d1db17a7f5603780e2be49f3b915f1baf83d7c93458cef736391678b30a5d0",
+  "evidence": {
+    "listPage": 79,
+    "listTitle": "吉林农业科技学院召开2025届毕业生就业工作推进会",
+    "listPublishDate": "2025-06-23",
+    "sourceOrder": 782
+  }
+}

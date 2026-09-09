@@ -6,7 +6,17 @@
   "engines": { "node": ">=22.18.0" },
   "scripts": {
     "collect:party": "node tools/party-collector.mjs",
-    "probe:main": "node tools/main-source-probe.mjs"
+    "probe:main": "node tools/main-source-probe.mjs",
+    "inventory:main": "node tools/main-source-inventory.mjs",
+    "collect:main": "node tools/main-source-collector.mjs",
+    "audit:main": "node tools/main-candidate-audit.mjs",
+    "index:main-problems": "node tools/main-collection-problem-index.mjs",
+    "retry:main": "node tools/main-targeted-retry.mjs",
+    "eligibility:main": "node tools/main-import-eligibility.mjs",
+    "readiness:main-current-subset": "node tools/main-current-subset-readiness.mjs",
+    "promote:main-current-subset": "node tools/main-promote-accepted-articles.mjs",
+    "verify:main-current-subset": "node tools/main-verify-accepted-articles.mjs",
+    "probe:main-gaps": "node tools/main-resource-gap-probe.mjs"
   },
   "dependencies": {
     "cheerio": "1.2.0"

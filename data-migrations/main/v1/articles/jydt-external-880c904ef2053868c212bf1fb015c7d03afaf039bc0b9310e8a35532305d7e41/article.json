@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:880c904ef2053868c212bf1fb015c7d03afaf039bc0b9310e8a35532305d7e41",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xCv6iPO31RcXaTFyYwVY9A",
+    "url": "https://mp.weixin.qq.com/s/xCv6iPO31RcXaTFyYwVY9A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春财经学院校长孙长智率队赴长春净月潭建设投资集团有限公司开展校企合作交流",
+    "source": "",
+    "publishDate": "2026-06-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xCv6iPO31RcXaTFyYwVY9A"
+  },
+  "resources": [],
+  "sourceFingerprint": "52785a555d59d1067861c0e143d6b42e62686436ce39ec9be6b486a485e644f8",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "长春财经学院校长孙长智率队赴长春净月潭建设投资集团有限公司开展校企合作交流",
+    "listPublishDate": "2026-06-18",
+    "sourceOrder": 74
+  }
+}

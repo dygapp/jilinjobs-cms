@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b10dd6c047dfe54eda2398ec93c76bd3433b3780ecb7404853193e348e5c4e27",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/--1ow44Dfm_FMuDSP7FWZQ",
+    "url": "https://mp.weixin.qq.com/s/--1ow44Dfm_FMuDSP7FWZQ?scene=25&sessionid=1464888046"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2025年“珲春有约‘职’等你来”珲春市进校园宣讲活动在吉林外国语大学举行",
+    "source": "",
+    "publishDate": "2025-05-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/--1ow44Dfm_FMuDSP7FWZQ?scene=25&sessionid=1464888046"
+  },
+  "resources": [],
+  "sourceFingerprint": "916409527afdf818f7082d78e9c1ea3c434e03602541a907116c99b3bd4f059b",
+  "evidence": {
+    "listPage": 91,
+    "listTitle": "2025年“珲春有约‘职’等你来”珲春市进校园宣讲活动在吉林外国语大学举行",
+    "listPublishDate": "2025-05-12",
+    "sourceOrder": 909
+  }
+}

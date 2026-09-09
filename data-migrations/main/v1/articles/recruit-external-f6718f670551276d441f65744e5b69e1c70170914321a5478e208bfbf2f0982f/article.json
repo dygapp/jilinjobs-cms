@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:f6718f670551276d441f65744e5b69e1c70170914321a5478e208bfbf2f0982f",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/IzXw-CnAtwHl0rSFVKYc9A",
+    "url": "https://mp.weixin.qq.com/s/IzXw-CnAtwHl0rSFVKYc9A"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "邀请函｜吉林地区2027届高校毕业生秋季校园招聘会首场开启！",
+    "source": "",
+    "publishDate": "2026-08-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/IzXw-CnAtwHl0rSFVKYc9A"
+  },
+  "resources": [],
+  "sourceFingerprint": "0ec19f09b33189e5e1c2b1c044621ad8dcd25d81a367249ab04a379a7e10592a",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "邀请函｜吉林地区2027届高校毕业生秋季校园招聘会首场开启！",
+    "listPublishDate": "2026-08-31",
+    "sourceOrder": 19
+  }
+}

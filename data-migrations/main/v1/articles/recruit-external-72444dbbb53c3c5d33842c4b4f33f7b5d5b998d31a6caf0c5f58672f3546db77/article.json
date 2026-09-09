@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:72444dbbb53c3c5d33842c4b4f33f7b5d5b998d31a6caf0c5f58672f3546db77",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/jyhpt/rsj/gsgg/202605/t20260514_9606313.html",
+    "url": "http://www.mhk.gov.cn/jyhpt/rsj/gsgg/202605/t20260514_9606313.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2026年梅河口市事业单位公开招聘工作人员（含专项招聘高校毕业生）公告（3号）",
+    "source": "",
+    "publishDate": "2026-05-19",
+    "bodyHtml": "",
+    "externalUrl": "http://www.mhk.gov.cn/jyhpt/rsj/gsgg/202605/t20260514_9606313.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "2d88ef9f2fa62dbe37ad095b06fd0694ca2283a542cccb581b71e0fab77ad8f4",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "2026年梅河口市事业单位公开招聘工作人员（含专项招聘高校毕业生）公告（3号）",
+    "listPublishDate": "2026-05-19",
+    "sourceOrder": 31
+  }
+}

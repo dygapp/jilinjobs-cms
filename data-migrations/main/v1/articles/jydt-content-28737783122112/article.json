@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122112",
+    "contentId": "28737783122112",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122112"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省2016年上半年全国计算机应用水平考试（NIT）情况通报",
+    "source": "",
+    "publishDate": "2016-06-27",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省2016年上半年全国计算机应用水平考试（NIT）情况通报</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2016-6-27 16:56:20</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"color: rgb(63, 63, 63); font-family: 楷体,楷体_GB2312, SimKai; font-size: 20px;\">&nbsp;&nbsp;&nbsp; 全国计算机应用水平考试（NIT）吉林省考区上半年考试工作截止2016年6月26日全部结束。本次考试全省开考考点18个，组织考试228场次，报考考生10326人次，较去年同期增加4255人次，增幅达到70.09%。为进一步加强考试管理，规范考试流程，省高等学校毕业生就业指导中心共派出巡考人员49人次，查处违纪考生2人，维护了国家级考试的权威性和严肃性。2016年上半年整体考试工作平稳顺利。</span></p><p><br></p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://95ed620c529ab0507ca53f080a105a90f36c20a26469f60a0f02b2de9151a45a\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://a72d87a8d86139810592ad2ba8c94769249878f3a32239b0fe4f1c8642809230\"></p><p style=\"text-align: center;\"><img title=\"3.jpg\" src=\"migration-resource://62c682c809aa877941c775da268ef5f550c294aec9d5aa8cba6df6f95f1c22ef\"></p><p style=\"text-align: center;\"><img title=\"4.jpg\" src=\"migration-resource://2286ca6eea407d6cb8aaa10d634124d53bef5ecc49507a353d9d8ad91d5613fb\"></p><p style=\"text-align: center;\"><img title=\"5.jpg\" src=\"migration-resource://4a85f118c991198a44b4c7b42ca80ef31b758edc070e92210f13f8ab7feba392\"></p><p style=\"text-align: center;\"><img title=\"6.jpg\" src=\"migration-resource://0d516e4cb5d981b5322300a41b25f6ed24bf0c095f6bfd43036e5c4ce06d962a\"></p><p></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360264342220312503079981.jpg",
+      "originalReference": "/chistory/cms/imgs/6360264342220312503079981.jpg",
+      "token": "migration-resource://95ed620c529ab0507ca53f080a105a90f36c20a26469f60a0f02b2de9151a45a",
+      "snapshotPath": "assets/95ed620c529ab0507ca53f080a105a90f36c20a26469f60a0f02b2de9151a45a.jpg",
+      "sha256": "95ed620c529ab0507ca53f080a105a90f36c20a26469f60a0f02b2de9151a45a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 136295
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360264342290625005464944.jpg",
+      "originalReference": "/chistory/cms/imgs/6360264342290625005464944.jpg",
+      "token": "migration-resource://a72d87a8d86139810592ad2ba8c94769249878f3a32239b0fe4f1c8642809230",
+      "snapshotPath": "assets/a72d87a8d86139810592ad2ba8c94769249878f3a32239b0fe4f1c8642809230.jpg",
+      "sha256": "a72d87a8d86139810592ad2ba8c94769249878f3a32239b0fe4f1c8642809230",
+      "contentType": "image/jpeg",
+      "sizeBytes": 129201
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360264342296875004680097.jpg",
+      "originalReference": "/chistory/cms/imgs/6360264342296875004680097.jpg",
+      "token": "migration-resource://62c682c809aa877941c775da268ef5f550c294aec9d5aa8cba6df6f95f1c22ef",
+      "snapshotPath": "assets/62c682c809aa877941c775da268ef5f550c294aec9d5aa8cba6df6f95f1c22ef.jpg",
+      "sha256": "62c682c809aa877941c775da268ef5f550c294aec9d5aa8cba6df6f95f1c22ef",
+      "contentType": "image/jpeg",
+      "sizeBytes": 129795
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360264342301562504964177.jpg",
+      "originalReference": "/chistory/cms/imgs/6360264342301562504964177.jpg",
+      "token": "migration-resource://2286ca6eea407d6cb8aaa10d634124d53bef5ecc49507a353d9d8ad91d5613fb",
+      "snapshotPath": "assets/2286ca6eea407d6cb8aaa10d634124d53bef5ecc49507a353d9d8ad91d5613fb.jpg",
+      "sha256": "2286ca6eea407d6cb8aaa10d634124d53bef5ecc49507a353d9d8ad91d5613fb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 118415
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360264342309375007408575.jpg",
+      "originalReference": "/chistory/cms/imgs/6360264342309375007408575.jpg",
+      "token": "migration-resource://4a85f118c991198a44b4c7b42ca80ef31b758edc070e92210f13f8ab7feba392",
+      "snapshotPath": "assets/4a85f118c991198a44b4c7b42ca80ef31b758edc070e92210f13f8ab7feba392.jpg",
+      "sha256": "4a85f118c991198a44b4c7b42ca80ef31b758edc070e92210f13f8ab7feba392",
+      "contentType": "image/jpeg",
+      "sizeBytes": 135815
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360264342317187505151146.jpg",
+      "originalReference": "/chistory/cms/imgs/6360264342317187505151146.jpg",
+      "token": "migration-resource://0d516e4cb5d981b5322300a41b25f6ed24bf0c095f6bfd43036e5c4ce06d962a",
+      "snapshotPath": "assets/0d516e4cb5d981b5322300a41b25f6ed24bf0c095f6bfd43036e5c4ce06d962a.jpg",
+      "sha256": "0d516e4cb5d981b5322300a41b25f6ed24bf0c095f6bfd43036e5c4ce06d962a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 113068
+    }
+  ],
+  "sourceFingerprint": "a199a06cd6f000dbfed49594bd3b6ddfbeb03929df03266a63e8bff7cdde1119",
+  "evidence": {
+    "listPage": 154,
+    "listTitle": "吉林省2016年上半年全国计算机应用水平考试（NIT）情况通报",
+    "listPublishDate": "2016-06-27",
+    "sourceOrder": 1538,
+    "detailPublishDate": "2016-06-27"
+  }
+}

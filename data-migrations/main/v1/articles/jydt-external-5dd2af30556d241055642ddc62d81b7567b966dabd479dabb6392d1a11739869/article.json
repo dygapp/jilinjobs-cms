@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5dd2af30556d241055642ddc62d81b7567b966dabd479dabb6392d1a11739869",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1003/9392.htm",
+    "url": "https://news.ccsfu.edu.cn/info/1003/9392.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学举办2024届毕业生春季双选会省内校友专场招聘会",
+    "source": "",
+    "publishDate": "2024-04-12",
+    "bodyHtml": "",
+    "externalUrl": "https://news.ccsfu.edu.cn/info/1003/9392.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "c57be7b7006f12f90a959f417cf770e21fe80c597a9f380072894ff246ce2b77",
+  "evidence": {
+    "listPage": 109,
+    "listTitle": "长春师范大学举办2024届毕业生春季双选会省内校友专场招聘会",
+    "listPublishDate": "2024-04-12",
+    "sourceOrder": 1086
+  }
+}

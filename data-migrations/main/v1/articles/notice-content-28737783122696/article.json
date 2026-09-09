@@ -1,0 +1,121 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122696",
+    "contentId": "28737783122696",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122696"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于2020年吉林省“吉人梦想杯”大学生职业生涯规划大赛获奖结果的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2020-12-08",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align: center;\"><img src=\"migration-resource://794d4ac0ad2dbe307a2761f56d84fdc8bafeb9ae13de6c07f824a54030d29d1a\" alt=\"\" width=\"800\" height=\"1131\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://caa71e7f93f752ce0b666a677f97af40218f759c435b2609ec17489bd8846996\" alt=\"\" width=\"800\" height=\"1131\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://bd23ac27abae958eda9e6f337dc0c828e5db56aca68a6d9cc0e97a7c9c7de7c8\" alt=\"\" width=\"800\" height=\"1131\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://281241ed9aa4c3e121523e13bcf5e5691ea51b0b3c02ae8037b5be50d8116252\" alt=\"\" width=\"800\" height=\"1131\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://056ebe88ebf47ab46b58713fa8ff9e1cdd74b3d2b30437b29dbb4fa3fe9037a3\" alt=\"\" width=\"800\" height=\"1131\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://8e3164cf94a3f392eeb12f566ab7e1f05f04e51e607ea0e2e31915552b05942c\" alt=\"\" width=\"800\" height=\"1131\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://dab93d0c057d81b5608b04f8385711ab0d72cbbe8bcb1de47107da661d390621\" alt=\"\" width=\"800\" height=\"1131\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://b0c3872bfcfbac49b2e05c8126611365251bbb6b3dd5aa26c0c84693b5195bda\" alt=\"\" width=\"800\" height=\"1131\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://63706a3d4d9f73e08f66d1b84cd21710a8d52092155938038524bf04e27dff64\" alt=\"\" width=\"800\" height=\"1131\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201209130505.jpg",
+      "originalReference": "/chistory/cms/editor/20201209130505.jpg",
+      "token": "migration-resource://794d4ac0ad2dbe307a2761f56d84fdc8bafeb9ae13de6c07f824a54030d29d1a",
+      "snapshotPath": "assets/794d4ac0ad2dbe307a2761f56d84fdc8bafeb9ae13de6c07f824a54030d29d1a.jpg",
+      "sha256": "794d4ac0ad2dbe307a2761f56d84fdc8bafeb9ae13de6c07f824a54030d29d1a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 163312
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201209130516.jpg",
+      "originalReference": "/chistory/cms/editor/20201209130516.jpg",
+      "token": "migration-resource://caa71e7f93f752ce0b666a677f97af40218f759c435b2609ec17489bd8846996",
+      "snapshotPath": "assets/caa71e7f93f752ce0b666a677f97af40218f759c435b2609ec17489bd8846996.jpg",
+      "sha256": "caa71e7f93f752ce0b666a677f97af40218f759c435b2609ec17489bd8846996",
+      "contentType": "image/jpeg",
+      "sizeBytes": 148795
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201209130530.jpg",
+      "originalReference": "/chistory/cms/editor/20201209130530.jpg",
+      "token": "migration-resource://bd23ac27abae958eda9e6f337dc0c828e5db56aca68a6d9cc0e97a7c9c7de7c8",
+      "snapshotPath": "assets/bd23ac27abae958eda9e6f337dc0c828e5db56aca68a6d9cc0e97a7c9c7de7c8.jpg",
+      "sha256": "bd23ac27abae958eda9e6f337dc0c828e5db56aca68a6d9cc0e97a7c9c7de7c8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 103292
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201209130538.jpg",
+      "originalReference": "/chistory/cms/editor/20201209130538.jpg",
+      "token": "migration-resource://281241ed9aa4c3e121523e13bcf5e5691ea51b0b3c02ae8037b5be50d8116252",
+      "snapshotPath": "assets/281241ed9aa4c3e121523e13bcf5e5691ea51b0b3c02ae8037b5be50d8116252.jpg",
+      "sha256": "281241ed9aa4c3e121523e13bcf5e5691ea51b0b3c02ae8037b5be50d8116252",
+      "contentType": "image/jpeg",
+      "sizeBytes": 96295
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201209130546.jpg",
+      "originalReference": "/chistory/cms/editor/20201209130546.jpg",
+      "token": "migration-resource://056ebe88ebf47ab46b58713fa8ff9e1cdd74b3d2b30437b29dbb4fa3fe9037a3",
+      "snapshotPath": "assets/056ebe88ebf47ab46b58713fa8ff9e1cdd74b3d2b30437b29dbb4fa3fe9037a3.jpg",
+      "sha256": "056ebe88ebf47ab46b58713fa8ff9e1cdd74b3d2b30437b29dbb4fa3fe9037a3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 98410
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201209130554.jpg",
+      "originalReference": "/chistory/cms/editor/20201209130554.jpg",
+      "token": "migration-resource://8e3164cf94a3f392eeb12f566ab7e1f05f04e51e607ea0e2e31915552b05942c",
+      "snapshotPath": "assets/8e3164cf94a3f392eeb12f566ab7e1f05f04e51e607ea0e2e31915552b05942c.jpg",
+      "sha256": "8e3164cf94a3f392eeb12f566ab7e1f05f04e51e607ea0e2e31915552b05942c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 108884
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201209130601.jpg",
+      "originalReference": "/chistory/cms/editor/20201209130601.jpg",
+      "token": "migration-resource://dab93d0c057d81b5608b04f8385711ab0d72cbbe8bcb1de47107da661d390621",
+      "snapshotPath": "assets/dab93d0c057d81b5608b04f8385711ab0d72cbbe8bcb1de47107da661d390621.jpg",
+      "sha256": "dab93d0c057d81b5608b04f8385711ab0d72cbbe8bcb1de47107da661d390621",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67064
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201209130609.jpg",
+      "originalReference": "/chistory/cms/editor/20201209130609.jpg",
+      "token": "migration-resource://b0c3872bfcfbac49b2e05c8126611365251bbb6b3dd5aa26c0c84693b5195bda",
+      "snapshotPath": "assets/b0c3872bfcfbac49b2e05c8126611365251bbb6b3dd5aa26c0c84693b5195bda.jpg",
+      "sha256": "b0c3872bfcfbac49b2e05c8126611365251bbb6b3dd5aa26c0c84693b5195bda",
+      "contentType": "image/jpeg",
+      "sizeBytes": 120704
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201209130616.jpg",
+      "originalReference": "/chistory/cms/editor/20201209130616.jpg",
+      "token": "migration-resource://63706a3d4d9f73e08f66d1b84cd21710a8d52092155938038524bf04e27dff64",
+      "snapshotPath": "assets/63706a3d4d9f73e08f66d1b84cd21710a8d52092155938038524bf04e27dff64.jpg",
+      "sha256": "63706a3d4d9f73e08f66d1b84cd21710a8d52092155938038524bf04e27dff64",
+      "contentType": "image/jpeg",
+      "sizeBytes": 91484
+    }
+  ],
+  "sourceFingerprint": "abcf0769c2ac2e8ac081a62751a69b3759510eab51bf9a0d15bc364dde94b4fc",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "关于2020年吉林省“吉人梦想杯”大学生职业生涯规划大赛获奖结果的通知",
+    "listPublishDate": "2020-12-08",
+    "sourceOrder": 165,
+    "detailPublishDate": "2020-12-08"
+  }
+}

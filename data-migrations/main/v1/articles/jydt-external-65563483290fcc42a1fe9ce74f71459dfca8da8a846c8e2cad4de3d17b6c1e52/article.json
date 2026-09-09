@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:65563483290fcc42a1fe9ce74f71459dfca8da8a846c8e2cad4de3d17b6c1e52",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1026/170442.htm",
+    "url": "https://www.jlju.edu.cn/info/1026/170442.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学举办中国建筑第八工程局有限公司专场招聘会",
+    "source": "",
+    "publishDate": "2025-09-12",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1026/170442.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "6aecdad338473749dc288cf552ed2044597664d1501e0aaa6834328485cbea4b",
+  "evidence": {
+    "listPage": 71,
+    "listTitle": "吉林建筑大学举办中国建筑第八工程局有限公司专场招聘会",
+    "listPublishDate": "2025-09-12",
+    "sourceOrder": 707
+  }
+}

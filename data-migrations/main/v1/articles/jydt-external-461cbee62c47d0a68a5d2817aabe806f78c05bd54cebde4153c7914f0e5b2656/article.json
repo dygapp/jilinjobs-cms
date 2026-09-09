@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:461cbee62c47d0a68a5d2817aabe806f78c05bd54cebde4153c7914f0e5b2656",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kkkmSw12Rh_7RqZtl9A-Gw",
+    "url": "https://mp.weixin.qq.com/s/kkkmSw12Rh_7RqZtl9A-Gw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "教育部 人力资源和社会保障部部署做好2023届全国普通高校毕业生就业创业工作",
+    "source": "",
+    "publishDate": "2022-11-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kkkmSw12Rh_7RqZtl9A-Gw"
+  },
+  "resources": [],
+  "sourceFingerprint": "5a13f068e1bf7833c30d05bc66f0dece3f5d015bc23095242899f3ec9c93b732",
+  "evidence": {
+    "listPage": 117,
+    "listTitle": "教育部 人力资源和社会保障部部署做好2023届全国普通高校毕业生就业创业工作",
+    "listPublishDate": "2022-11-16",
+    "sourceOrder": 1170
+  }
+}

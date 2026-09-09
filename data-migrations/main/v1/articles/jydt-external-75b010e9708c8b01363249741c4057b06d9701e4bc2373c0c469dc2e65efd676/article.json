@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:75b010e9708c8b01363249741c4057b06d9701e4bc2373c0c469dc2e65efd676",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1024/6443.htm",
+    "url": "https://www.bcnu.edu.cn/info/1024/6443.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "白城师范学院副校长李晓元带队赴苏浙两地开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-06-01",
+    "bodyHtml": "",
+    "externalUrl": "https://www.bcnu.edu.cn/info/1024/6443.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "0929c50a5881aa123dca64330e90223085dac1067a2f0a042d34340fd2e2fc9b",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "白城师范学院副校长李晓元带队赴苏浙两地开展访企拓岗促就业专项行动",
+    "listPublishDate": "2026-06-01",
+    "sourceOrder": 119
+  }
+}

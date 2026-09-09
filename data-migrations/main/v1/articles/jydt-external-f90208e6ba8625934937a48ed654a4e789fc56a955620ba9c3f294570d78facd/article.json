@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f90208e6ba8625934937a48ed654a4e789fc56a955620ba9c3f294570d78facd",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/iao_V27-YDBdvBY2Sz0stw",
+    "url": "https://mp.weixin.qq.com/s/iao_V27-YDBdvBY2Sz0stw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学副校长孙俊奇带队开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2025-12-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/iao_V27-YDBdvBY2Sz0stw"
+  },
+  "resources": [],
+  "sourceFingerprint": "bc52a30341ee48862163520cf33f8f4c451a8a318ae91002be8876d454b38fa8",
+  "evidence": {
+    "listPage": 56,
+    "listTitle": "延边大学副校长孙俊奇带队开展访企拓岗促就业专项行动",
+    "listPublishDate": "2025-12-10",
+    "sourceOrder": 554
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122810",
+    "contentId": "28737783122810",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122810"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于吉林省“吉创杯”高校创业指导课程教学大赛获奖结果的通报",
+    "source": "",
+    "publishDate": "2016-06-08",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于吉林省“吉创杯”高校创业指导课程教学大赛获奖结果的通报</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2016-6-8 10:39:44</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img src=\"migration-resource://116c46ac8d42186ad4cde9095ba32377791fcc4ac775b36a75403f87598114a0\" style=\"\" title=\"1.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://c84cb00f413e754ae3e35b606051905e5594f7b4c53f23bfc24cb9f86efa2c4e\" style=\"\" title=\"2.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://278a195b1641f899ec51dd8e6e84c3080dbe617079dee87286ddddd51333d0c6\" style=\"\" title=\"3.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://231f74fa3eb04e8f217a2eeb0eb25f235edb7c47218907a81192df8ab9c510d2\" style=\"\" title=\"4.jpg\"></p><p style=\"text-align: center\"><img src=\"migration-resource://44be3d865ecc37380cb86b248c048f4f7b54c1f5a8a70510584dabde7202a868\" style=\"\" title=\"5.jpg\"></p><p style=\"text-align: center;\"><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360097921331250008034602.jpg",
+      "originalReference": "/chistory/cms/imgs/6360097921331250008034602.jpg",
+      "token": "migration-resource://116c46ac8d42186ad4cde9095ba32377791fcc4ac775b36a75403f87598114a0",
+      "snapshotPath": "assets/116c46ac8d42186ad4cde9095ba32377791fcc4ac775b36a75403f87598114a0.jpg",
+      "sha256": "116c46ac8d42186ad4cde9095ba32377791fcc4ac775b36a75403f87598114a0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 112244
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360097921342187507533836.jpg",
+      "originalReference": "/chistory/cms/imgs/6360097921342187507533836.jpg",
+      "token": "migration-resource://c84cb00f413e754ae3e35b606051905e5594f7b4c53f23bfc24cb9f86efa2c4e",
+      "snapshotPath": "assets/c84cb00f413e754ae3e35b606051905e5594f7b4c53f23bfc24cb9f86efa2c4e.jpg",
+      "sha256": "c84cb00f413e754ae3e35b606051905e5594f7b4c53f23bfc24cb9f86efa2c4e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 76326
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360097921346875003519744.jpg",
+      "originalReference": "/chistory/cms/imgs/6360097921346875003519744.jpg",
+      "token": "migration-resource://278a195b1641f899ec51dd8e6e84c3080dbe617079dee87286ddddd51333d0c6",
+      "snapshotPath": "assets/278a195b1641f899ec51dd8e6e84c3080dbe617079dee87286ddddd51333d0c6.jpg",
+      "sha256": "278a195b1641f899ec51dd8e6e84c3080dbe617079dee87286ddddd51333d0c6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 63366
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360097921354687501262314.jpg",
+      "originalReference": "/chistory/cms/imgs/6360097921354687501262314.jpg",
+      "token": "migration-resource://231f74fa3eb04e8f217a2eeb0eb25f235edb7c47218907a81192df8ab9c510d2",
+      "snapshotPath": "assets/231f74fa3eb04e8f217a2eeb0eb25f235edb7c47218907a81192df8ab9c510d2.jpg",
+      "sha256": "231f74fa3eb04e8f217a2eeb0eb25f235edb7c47218907a81192df8ab9c510d2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67808
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360097921362500008004885.jpg",
+      "originalReference": "/chistory/cms/imgs/6360097921362500008004885.jpg",
+      "token": "migration-resource://44be3d865ecc37380cb86b248c048f4f7b54c1f5a8a70510584dabde7202a868",
+      "snapshotPath": "assets/44be3d865ecc37380cb86b248c048f4f7b54c1f5a8a70510584dabde7202a868.jpg",
+      "sha256": "44be3d865ecc37380cb86b248c048f4f7b54c1f5a8a70510584dabde7202a868",
+      "contentType": "image/jpeg",
+      "sizeBytes": 51532
+    }
+  ],
+  "sourceFingerprint": "a87fc7ba6cfd4fd414872c8b1fc1b85163ae3a4a77fc95929b32203205b1695a",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "关于吉林省“吉创杯”高校创业指导课程教学大赛获奖结果的通报",
+    "listPublishDate": "2016-06-08",
+    "sourceOrder": 250,
+    "detailPublishDate": "2016-06-08"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122428",
+    "contentId": "28737783122428",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122428"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "国际化妆品集团备受关注，上海家化成为本土企业代表",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">国际化妆品集团备受关注，上海家化成为本土企业代表</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"left\"><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 品牌多元化是国际化妆品集团的市场策略之一。为避免同门品牌重复竞争，从价格、功能、性别等维度对品牌进行区隔。欧莱雅集团在中国市场拥有16个品牌，从性别、产品分类等各个角度满足用户需求，旗下品牌（产品的）关注度明显提升。2008年二季度，关注化妆品的网民，对欧莱雅集团以及旗下品牌或产品的整体关注度为21.34%，明显高于其他国际化妆品集团企业。LVMH集团关注度为10.08%；宝洁公司关注度为9.91%；第一个拿到直销化妆品许可牌照的玫琳凯名列第四，网民关注度为9.61%；以专营店拓展策略为主的资生堂集团关注度为8.16%。 </font></p> <p align=\"left\"><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 本土化妆品集团方面则以上海家化为代表，根据上海家化公布财务数据2008年1-6月，上海家化实现营业收入13.85亿元，同比增长19.19%，成为目前唯一与国际巨头抗衡的中国本土企业。2008年二季度上海家化以及旗下品牌或产品受到网民关注为2.87%。其他中国企业关注度明显的不足，最明显的体现在网民对本土品牌关注度偏低。 </font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img src=\"http://data.baidu.com/huazhuangpin4/img/chart1.gif\" border=\"0\"></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "b48f2d8b3cc3cf2b7ab36d7ead0d54be79ed907a5f0cb1c2e7c07b0b22a50e78",
+  "evidence": {
+    "listPage": 182,
+    "listTitle": "国际化妆品集团备受关注，上海家化成为本土企业代表",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1819,
+    "detailPublishDate": "2009-04-05"
+  }
+}

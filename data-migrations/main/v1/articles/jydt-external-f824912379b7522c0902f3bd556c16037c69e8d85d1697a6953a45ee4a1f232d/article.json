@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f824912379b7522c0902f3bd556c16037c69e8d85d1697a6953a45ee4a1f232d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/te1IRd1M_Xf2Nemlol4TAw",
+    "url": "https://mp.weixin.qq.com/s/te1IRd1M_Xf2Nemlol4TAw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业 共育数字体育管理新人才 | 长春工业大学人文信息学院赴中汽伯锐走访交流",
+    "source": "",
+    "publishDate": "2026-05-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/te1IRd1M_Xf2Nemlol4TAw"
+  },
+  "resources": [],
+  "sourceFingerprint": "c4dbfe4cec5eb1a9cfbfe2eab28b69dcc5a5e12aa1740eac2947266c429e5caf",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "访企拓岗促就业 共育数字体育管理新人才 | 长春工业大学人文信息学院赴中汽伯锐走访交流",
+    "listPublishDate": "2026-05-20",
+    "sourceOrder": 160
+  }
+}

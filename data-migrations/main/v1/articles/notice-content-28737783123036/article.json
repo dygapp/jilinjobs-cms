@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783123036",
+    "contentId": "28737783123036",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123036"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于吉林省大学生就业管理平台培训的通知",
+    "source": "",
+    "publishDate": "2011-03-18",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于吉林省大学生就业管理平台培训的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-3-18 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img height=\"704\" src=\"migration-resource://30ea3b1b2cd0f3d9ae896951f3688718af964512a53bcfe0ac9560015ab27d4e\" width=\"544\" border=\"0\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110318160552866.jpg",
+      "originalReference": "/chistory/cms/imgs/20110318160552866.jpg",
+      "token": "migration-resource://30ea3b1b2cd0f3d9ae896951f3688718af964512a53bcfe0ac9560015ab27d4e",
+      "snapshotPath": "assets/30ea3b1b2cd0f3d9ae896951f3688718af964512a53bcfe0ac9560015ab27d4e.jpg",
+      "sha256": "30ea3b1b2cd0f3d9ae896951f3688718af964512a53bcfe0ac9560015ab27d4e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 61330
+    }
+  ],
+  "sourceFingerprint": "61f44b0c6bd09cf7b0d27a68fbb42516884d424acceab31dde4851697f71c029",
+  "evidence": {
+    "listPage": 45,
+    "listTitle": "关于吉林省大学生就业管理平台培训的通知",
+    "listPublishDate": "2011-03-18",
+    "sourceOrder": 450,
+    "detailPublishDate": "2011-03-18"
+  }
+}

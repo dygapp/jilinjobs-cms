@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6aae229036535764f74b72f3cd5be9931c8a74b9d340bbfeff3b5f9b1a640cbb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xnGIApCQ5anKGlpzMbNL-w",
+    "url": "https://mp.weixin.qq.com/s/xnGIApCQ5anKGlpzMbNL-w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力扩容提质 服务高质量发展——吉林交通职业技术学院举办2026届毕业生春季招聘会",
+    "source": "",
+    "publishDate": "2026-04-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xnGIApCQ5anKGlpzMbNL-w"
+  },
+  "resources": [],
+  "sourceFingerprint": "f8397e005c8cb03326c48048d7913431309c2ceae883ec7c30c630ee11efdf7a",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "聚力扩容提质 服务高质量发展——吉林交通职业技术学院举办2026届毕业生春季招聘会",
+    "listPublishDate": "2026-04-20",
+    "sourceOrder": 273
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6099c3d516028c8ecef3b6c6a1fcb9d48f362610e73baff69585535944638f20",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Kn70zvkvRKAU-uKmd2y47g",
+    "url": "https://mp.weixin.qq.com/s/Kn70zvkvRKAU-uKmd2y47g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春财经学院赴易启科技有限公司开展“访企拓岗”调研交流",
+    "source": "",
+    "publishDate": "2026-09-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Kn70zvkvRKAU-uKmd2y47g"
+  },
+  "resources": [],
+  "sourceFingerprint": "48f062550aa33d5ca85033f9701e8bd3dcb5f90e9ea96c6747179254be876fdc",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "长春财经学院赴易启科技有限公司开展“访企拓岗”调研交流",
+    "listPublishDate": "2026-09-07",
+    "sourceOrder": 4
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:396c986b531cd14ffb87661611d26a34306b7284982767e89f7c7b419b637cd5",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/pu3c65GaA09rmGJY9Wot1Q",
+    "url": "https://mp.weixin.qq.com/s/pu3c65GaA09rmGJY9Wot1Q"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "4万+岗位等你来！教育部24365校园招聘化学化工行业专场来了",
+    "source": "",
+    "publishDate": "2021-01-05",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/pu3c65GaA09rmGJY9Wot1Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "1312a2b0699581b8a0b5dd068d233202d05053adb7e2cf10cffdb1cd2fd68ea7",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "4万+岗位等你来！教育部24365校园招聘化学化工行业专场来了",
+    "listPublishDate": "2021-01-05",
+    "sourceOrder": 360
+  }
+}

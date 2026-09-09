@@ -1,0 +1,121 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122692",
+    "contentId": "28737783122692",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122692"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发开展2021年全国高校就业创业金课推选工作的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2021-03-02",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align:center\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"migration-resource://d16ff408cdc8fce9aa62ed5eba4dc67100ad3032eebe00627297b48876a1ae0b\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://3fd3bec27bb1e1969ad02e38a0bebea2c45a728ef24d1a246d2aec19bfa087ba\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://1defc6a80d20f54223ccdc2053b887752d48c1633eaf78d410a19741f726abba\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://786c298ca9c9ea3d8916585a77d7ce5eee0e787d046426f0a4b66c65c8072cc7\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://71134c4890c9e4728b6980efc23bdd8f0ed4308dc2af04c979ca01ce70b3767a\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://a7402aa95f77c6a7fb5a1f6208dcbe1f9bbbc0b3c653f41123528316dda9333f\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://18f98c1d8af0afcf666b96c225511580aa8c58a1a8f991affea72e589d8cbcf2\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://0a0849a9703ed614d26b2e8a5890b992b5b2b4e5084f68e7805893ca537c31af\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://ad238fb89e9f0bcfb83f4d5e9acf347bbd60fee9c251064b177a34ecd0941715\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210302155125.jpg",
+      "originalReference": "/chistory/cms/editor/20210302155125.jpg",
+      "token": "migration-resource://d16ff408cdc8fce9aa62ed5eba4dc67100ad3032eebe00627297b48876a1ae0b",
+      "snapshotPath": "assets/d16ff408cdc8fce9aa62ed5eba4dc67100ad3032eebe00627297b48876a1ae0b.jpg",
+      "sha256": "d16ff408cdc8fce9aa62ed5eba4dc67100ad3032eebe00627297b48876a1ae0b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 214910
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210302155135.jpg",
+      "originalReference": "/chistory/cms/editor/20210302155135.jpg",
+      "token": "migration-resource://3fd3bec27bb1e1969ad02e38a0bebea2c45a728ef24d1a246d2aec19bfa087ba",
+      "snapshotPath": "assets/3fd3bec27bb1e1969ad02e38a0bebea2c45a728ef24d1a246d2aec19bfa087ba.jpg",
+      "sha256": "3fd3bec27bb1e1969ad02e38a0bebea2c45a728ef24d1a246d2aec19bfa087ba",
+      "contentType": "image/jpeg",
+      "sizeBytes": 269941
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210302155148.jpg",
+      "originalReference": "/chistory/cms/editor/20210302155148.jpg",
+      "token": "migration-resource://1defc6a80d20f54223ccdc2053b887752d48c1633eaf78d410a19741f726abba",
+      "snapshotPath": "assets/1defc6a80d20f54223ccdc2053b887752d48c1633eaf78d410a19741f726abba.jpg",
+      "sha256": "1defc6a80d20f54223ccdc2053b887752d48c1633eaf78d410a19741f726abba",
+      "contentType": "image/jpeg",
+      "sizeBytes": 246561
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210302155158.jpg",
+      "originalReference": "/chistory/cms/editor/20210302155158.jpg",
+      "token": "migration-resource://786c298ca9c9ea3d8916585a77d7ce5eee0e787d046426f0a4b66c65c8072cc7",
+      "snapshotPath": "assets/786c298ca9c9ea3d8916585a77d7ce5eee0e787d046426f0a4b66c65c8072cc7.jpg",
+      "sha256": "786c298ca9c9ea3d8916585a77d7ce5eee0e787d046426f0a4b66c65c8072cc7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 178332
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210302155206.jpg",
+      "originalReference": "/chistory/cms/editor/20210302155206.jpg",
+      "token": "migration-resource://71134c4890c9e4728b6980efc23bdd8f0ed4308dc2af04c979ca01ce70b3767a",
+      "snapshotPath": "assets/71134c4890c9e4728b6980efc23bdd8f0ed4308dc2af04c979ca01ce70b3767a.jpg",
+      "sha256": "71134c4890c9e4728b6980efc23bdd8f0ed4308dc2af04c979ca01ce70b3767a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 203041
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210302155212.jpg",
+      "originalReference": "/chistory/cms/editor/20210302155212.jpg",
+      "token": "migration-resource://a7402aa95f77c6a7fb5a1f6208dcbe1f9bbbc0b3c653f41123528316dda9333f",
+      "snapshotPath": "assets/a7402aa95f77c6a7fb5a1f6208dcbe1f9bbbc0b3c653f41123528316dda9333f.jpg",
+      "sha256": "a7402aa95f77c6a7fb5a1f6208dcbe1f9bbbc0b3c653f41123528316dda9333f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 171854
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210302155219.jpg",
+      "originalReference": "/chistory/cms/editor/20210302155219.jpg",
+      "token": "migration-resource://18f98c1d8af0afcf666b96c225511580aa8c58a1a8f991affea72e589d8cbcf2",
+      "snapshotPath": "assets/18f98c1d8af0afcf666b96c225511580aa8c58a1a8f991affea72e589d8cbcf2.jpg",
+      "sha256": "18f98c1d8af0afcf666b96c225511580aa8c58a1a8f991affea72e589d8cbcf2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 69331
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210302155227.jpg",
+      "originalReference": "/chistory/cms/editor/20210302155227.jpg",
+      "token": "migration-resource://0a0849a9703ed614d26b2e8a5890b992b5b2b4e5084f68e7805893ca537c31af",
+      "snapshotPath": "assets/0a0849a9703ed614d26b2e8a5890b992b5b2b4e5084f68e7805893ca537c31af.jpg",
+      "sha256": "0a0849a9703ed614d26b2e8a5890b992b5b2b4e5084f68e7805893ca537c31af",
+      "contentType": "image/jpeg",
+      "sizeBytes": 175603
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210302155234.jpg",
+      "originalReference": "/chistory/cms/editor/20210302155234.jpg",
+      "token": "migration-resource://ad238fb89e9f0bcfb83f4d5e9acf347bbd60fee9c251064b177a34ecd0941715",
+      "snapshotPath": "assets/ad238fb89e9f0bcfb83f4d5e9acf347bbd60fee9c251064b177a34ecd0941715.jpg",
+      "sha256": "ad238fb89e9f0bcfb83f4d5e9acf347bbd60fee9c251064b177a34ecd0941715",
+      "contentType": "image/jpeg",
+      "sizeBytes": 85940
+    }
+  ],
+  "sourceFingerprint": "71078c6ac0f0e7a3be723c4d94ecdb2c4040bc6fca951f683ea40d7aaadd9017",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "关于转发开展2021年全国高校就业创业金课推选工作的通知",
+    "listPublishDate": "2021-03-02",
+    "sourceOrder": 162,
+    "detailPublishDate": "2021-03-02"
+  }
+}

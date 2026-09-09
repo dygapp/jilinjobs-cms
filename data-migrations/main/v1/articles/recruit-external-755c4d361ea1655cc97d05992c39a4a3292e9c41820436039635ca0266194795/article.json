@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:755c4d361ea1655cc97d05992c39a4a3292e9c41820436039635ca0266194795",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/T5Ac7IPabgIAAuYLWDtHMQ",
+    "url": "https://mp.weixin.qq.com/s/T5Ac7IPabgIAAuYLWDtHMQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "关于举办“聚才引智 筑梦辽源”助推辽源高质量发展暨大学生就业创业双选会的公告",
+    "source": "",
+    "publishDate": "2024-04-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/T5Ac7IPabgIAAuYLWDtHMQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "9bf322360471be6dbb691f94a5a54662c3a2b3a6067c778cfa9cd0c971bd378c",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "关于举办“聚才引智 筑梦辽源”助推辽源高质量发展暨大学生就业创业双选会的公告",
+    "listPublishDate": "2024-04-25",
+    "sourceOrder": 289
+  }
+}

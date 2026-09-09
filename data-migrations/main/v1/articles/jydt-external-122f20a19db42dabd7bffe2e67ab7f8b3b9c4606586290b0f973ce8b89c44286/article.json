@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:122f20a19db42dabd7bffe2e67ab7f8b3b9c4606586290b0f973ce8b89c44286",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/GDHn4ZS0jNIkAgT4kVrkMw",
+    "url": "https://mp.weixin.qq.com/s/GDHn4ZS0jNIkAgT4kVrkMw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院开展“企业行”活动助力新生筑梦吉林",
+    "source": "",
+    "publishDate": "2025-11-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/GDHn4ZS0jNIkAgT4kVrkMw"
+  },
+  "resources": [],
+  "sourceFingerprint": "f579e0ed38f5e8a9e26c05bc527a9bce5efd82bc58c6194d7c27353bacbec95d",
+  "evidence": {
+    "listPage": 61,
+    "listTitle": "长春科技学院开展“企业行”活动助力新生筑梦吉林",
+    "listPublishDate": "2025-11-13",
+    "sourceOrder": 601
+  }
+}

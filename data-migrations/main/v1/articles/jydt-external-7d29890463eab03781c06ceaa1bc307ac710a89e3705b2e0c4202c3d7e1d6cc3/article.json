@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7d29890463eab03781c06ceaa1bc307ac710a89e3705b2e0c4202c3d7e1d6cc3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/t9cnpaHJYpYriCODJoHhJg",
+    "url": "https://mp.weixin.qq.com/s/t9cnpaHJYpYriCODJoHhJg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗 深化合作丨长春财经学院赴长春杭盖生物科技有限公司调研交流",
+    "source": "",
+    "publishDate": "2026-08-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/t9cnpaHJYpYriCODJoHhJg"
+  },
+  "resources": [],
+  "sourceFingerprint": "613d3e27bf4a96fa869909ecf868685e1664fb3334c2c519c7bba584d7cb6cc1",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "访企拓岗 深化合作丨长春财经学院赴长春杭盖生物科技有限公司调研交流",
+    "listPublishDate": "2026-08-24",
+    "sourceOrder": 10
+  }
+}

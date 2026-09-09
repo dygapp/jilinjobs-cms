@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ccd8daa38fd866244fbc783b9ae9fd38302754841fbccc26fb8c9c4086697936",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/HcEM_33wC9QUI3GX_sGjhg",
+    "url": "https://mp.weixin.qq.com/s/HcEM_33wC9QUI3GX_sGjhg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院与吉林省梅河新区举办校地合作供需洽谈会",
+    "source": "",
+    "publishDate": "2025-06-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/HcEM_33wC9QUI3GX_sGjhg"
+  },
+  "resources": [],
+  "sourceFingerprint": "dce5298a593ce1cd0336c3523e32c6dcac737c8cae52704ef00bae3eb00d188a",
+  "evidence": {
+    "listPage": 84,
+    "listTitle": "长春工程学院与吉林省梅河新区举办校地合作供需洽谈会",
+    "listPublishDate": "2025-06-10",
+    "sourceOrder": 838
+  }
+}

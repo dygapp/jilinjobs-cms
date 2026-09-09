@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8bcf3202f17752bcb672fcccd13e873ec8b1ff04b60a625329c473bb5790e76e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/NBTRD0oJoHyaUWjLqui1PA",
+    "url": "https://mp.weixin.qq.com/s/NBTRD0oJoHyaUWjLqui1PA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学举办“服务吉林高质量发展”——2025届毕业生春季校园招聘会暨“百校对百县”专场招聘会",
+    "source": "",
+    "publishDate": "2025-06-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/NBTRD0oJoHyaUWjLqui1PA"
+  },
+  "resources": [],
+  "sourceFingerprint": "17feeaeaaa72a8c8fbf2fa155dbd610ab7b8053443d8ad6786aa2513a9eedc56",
+  "evidence": {
+    "listPage": 81,
+    "listTitle": "北华大学举办“服务吉林高质量发展”——2025届毕业生春季校园招聘会暨“百校对百县”专场招聘会",
+    "listPublishDate": "2025-06-17",
+    "sourceOrder": 802
+  }
+}

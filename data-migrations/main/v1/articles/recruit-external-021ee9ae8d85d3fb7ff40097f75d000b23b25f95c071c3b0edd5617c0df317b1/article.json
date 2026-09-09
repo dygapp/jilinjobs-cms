@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:021ee9ae8d85d3fb7ff40097f75d000b23b25f95c071c3b0edd5617c0df317b1",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/727zA1NLA7xDjJhgPQy_jg",
+    "url": "https://mp.weixin.qq.com/s/727zA1NLA7xDjJhgPQy_jg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "全国高校2026届毕业生教育人才招聘会参会通知",
+    "source": "",
+    "publishDate": "2025-11-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/727zA1NLA7xDjJhgPQy_jg"
+  },
+  "resources": [],
+  "sourceFingerprint": "06cc7c7ae61e52992d70b97a008dbb51ce6985203d9628315e203f84816eb5c4",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "全国高校2026届毕业生教育人才招聘会参会通知",
+    "listPublishDate": "2025-11-19",
+    "sourceOrder": 118
+  }
+}

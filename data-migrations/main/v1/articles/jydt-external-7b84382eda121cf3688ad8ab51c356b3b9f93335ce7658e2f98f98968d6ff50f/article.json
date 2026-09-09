@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7b84382eda121cf3688ad8ab51c356b3b9f93335ce7658e2f98f98968d6ff50f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/RSdLG4a-X45O8RL8lmX4PA",
+    "url": "https://mp.weixin.qq.com/s/RSdLG4a-X45O8RL8lmX4PA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学党委副书记张广翠带队赴延边地区开展“招生—培养—就业”一体化促进专项调研",
+    "source": "",
+    "publishDate": "2026-06-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/RSdLG4a-X45O8RL8lmX4PA"
+  },
+  "resources": [],
+  "sourceFingerprint": "f8096a64270bdac8be18f27d0bfbaf07deb434cdd28436b8a8d35abe6e84c20a",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "长春师范大学党委副书记张广翠带队赴延边地区开展“招生—培养—就业”一体化促进专项调研",
+    "listPublishDate": "2026-06-24",
+    "sourceOrder": 67
+  }
+}

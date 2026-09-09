@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c9898cd1051328e39678a456a64c369acd140315f99c4fd6db56968afd7e42f2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/TMtZEHlrfsq4rj6YNMGCTw",
+    "url": "https://mp.weixin.qq.com/s/TMtZEHlrfsq4rj6YNMGCTw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业大学党委副书记周春国赴吉林省沃亿佳生态农业（集团）有限公司开展企拓岗活动",
+    "source": "",
+    "publishDate": "2025-09-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/TMtZEHlrfsq4rj6YNMGCTw"
+  },
+  "resources": [],
+  "sourceFingerprint": "4dff259f46e939d085209bf199b30235edec994f7c84c74960911d0c9ac826a1",
+  "evidence": {
+    "listPage": 70,
+    "listTitle": "吉林农业大学党委副书记周春国赴吉林省沃亿佳生态农业（集团）有限公司开展企拓岗活动",
+    "listPublishDate": "2025-09-23",
+    "sourceOrder": 699
+  }
+}

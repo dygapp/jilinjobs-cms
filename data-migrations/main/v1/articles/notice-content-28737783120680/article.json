@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120680",
+    "contentId": "28737783120680",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120680"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省2021届高校毕业生春季网络招聘会的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2021-03-12",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align: center;\"><img src=\"migration-resource://7b45a0c32d49104c2b0a7a79b49299b03bdee2948188d3ec353b146db81213fe\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://a9bd41ffbb3b6c2cca7dd9bb7a2cfcb1537646a4bb44a4c3e7598eb1a95b09cf\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://fe79bb5149aa0d6fb2eaa45d58418f2e49cbfab413ac78511d49c6329050070d\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210312142114.jpg",
+      "originalReference": "/chistory/cms/editor/20210312142114.jpg",
+      "token": "migration-resource://7b45a0c32d49104c2b0a7a79b49299b03bdee2948188d3ec353b146db81213fe",
+      "snapshotPath": "assets/7b45a0c32d49104c2b0a7a79b49299b03bdee2948188d3ec353b146db81213fe.jpg",
+      "sha256": "7b45a0c32d49104c2b0a7a79b49299b03bdee2948188d3ec353b146db81213fe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 202631
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210312142122.jpg",
+      "originalReference": "/chistory/cms/editor/20210312142122.jpg",
+      "token": "migration-resource://a9bd41ffbb3b6c2cca7dd9bb7a2cfcb1537646a4bb44a4c3e7598eb1a95b09cf",
+      "snapshotPath": "assets/a9bd41ffbb3b6c2cca7dd9bb7a2cfcb1537646a4bb44a4c3e7598eb1a95b09cf.jpg",
+      "sha256": "a9bd41ffbb3b6c2cca7dd9bb7a2cfcb1537646a4bb44a4c3e7598eb1a95b09cf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 158549
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210312142128.jpg",
+      "originalReference": "/chistory/cms/editor/20210312142128.jpg",
+      "token": "migration-resource://fe79bb5149aa0d6fb2eaa45d58418f2e49cbfab413ac78511d49c6329050070d",
+      "snapshotPath": "assets/fe79bb5149aa0d6fb2eaa45d58418f2e49cbfab413ac78511d49c6329050070d.jpg",
+      "sha256": "fe79bb5149aa0d6fb2eaa45d58418f2e49cbfab413ac78511d49c6329050070d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 187562
+    }
+  ],
+  "sourceFingerprint": "3b4c3a26ab8e49eb526f8c90a371eee2a1842bc619474736ea4e85d0651df0a5",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "关于举办吉林省2021届高校毕业生春季网络招聘会的通知",
+    "listPublishDate": "2021-03-12",
+    "sourceOrder": 161,
+    "detailPublishDate": "2021-03-12"
+  }
+}

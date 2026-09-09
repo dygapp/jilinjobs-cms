@@ -1,0 +1,121 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122684",
+    "contentId": "28737783122684",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122684"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2021年吉林省高校就业指导课程教学创新大赛的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2021-04-01",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align: center;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"migration-resource://a9e109fcfc7acd3a20676995f358543ec7aff2056353105cca106116b16a734b\" alt=\"\" width=\"1000\" height=\"1414\"><img src=\"migration-resource://fed869e22fcfbaf95da19163b5c7398506fe13c05c3b4496df1df2ce9c2bf359\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://57e68493cdb4452458fd1b692857b84e21d79c816e5ba8ef37078ec78f442f72\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://6618e88438e6fcb59d70deee0519cf7ce093a9b4096f7b94872a18a3e0ac12bf\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://d9edd878db9a4d81994e556c030b62ae04afd6348d1eaf1da640d30bcb05da24\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://b07d11c244ad9e5caffb7737430a639cbe299daec3760d496c381bff018c4838\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://49f07e6c98c4b82450b0b30c67ef8a45cd50b02f7e2c382fbcfb17711ee47f08\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://debed5c1eb4ae5a6a6300ce441e9f36f0eac8629c15b760bcfb3f3319e2bdfa5\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://cf9b08a15eebc7923535de4b3063881a3f3bd188a04045ce74c97160a23a8fe1\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210402145341.jpg",
+      "originalReference": "/chistory/cms/editor/20210402145341.jpg",
+      "token": "migration-resource://a9e109fcfc7acd3a20676995f358543ec7aff2056353105cca106116b16a734b",
+      "snapshotPath": "assets/a9e109fcfc7acd3a20676995f358543ec7aff2056353105cca106116b16a734b.jpg",
+      "sha256": "a9e109fcfc7acd3a20676995f358543ec7aff2056353105cca106116b16a734b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 217560
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210402145411.jpg",
+      "originalReference": "/chistory/cms/editor/20210402145411.jpg",
+      "token": "migration-resource://fed869e22fcfbaf95da19163b5c7398506fe13c05c3b4496df1df2ce9c2bf359",
+      "snapshotPath": "assets/fed869e22fcfbaf95da19163b5c7398506fe13c05c3b4496df1df2ce9c2bf359.jpg",
+      "sha256": "fed869e22fcfbaf95da19163b5c7398506fe13c05c3b4496df1df2ce9c2bf359",
+      "contentType": "image/jpeg",
+      "sizeBytes": 207951
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210402145420.jpg",
+      "originalReference": "/chistory/cms/editor/20210402145420.jpg",
+      "token": "migration-resource://57e68493cdb4452458fd1b692857b84e21d79c816e5ba8ef37078ec78f442f72",
+      "snapshotPath": "assets/57e68493cdb4452458fd1b692857b84e21d79c816e5ba8ef37078ec78f442f72.jpg",
+      "sha256": "57e68493cdb4452458fd1b692857b84e21d79c816e5ba8ef37078ec78f442f72",
+      "contentType": "image/jpeg",
+      "sizeBytes": 230432
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210402145427.jpg",
+      "originalReference": "/chistory/cms/editor/20210402145427.jpg",
+      "token": "migration-resource://6618e88438e6fcb59d70deee0519cf7ce093a9b4096f7b94872a18a3e0ac12bf",
+      "snapshotPath": "assets/6618e88438e6fcb59d70deee0519cf7ce093a9b4096f7b94872a18a3e0ac12bf.jpg",
+      "sha256": "6618e88438e6fcb59d70deee0519cf7ce093a9b4096f7b94872a18a3e0ac12bf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 125930
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210402145434.jpg",
+      "originalReference": "/chistory/cms/editor/20210402145434.jpg",
+      "token": "migration-resource://d9edd878db9a4d81994e556c030b62ae04afd6348d1eaf1da640d30bcb05da24",
+      "snapshotPath": "assets/d9edd878db9a4d81994e556c030b62ae04afd6348d1eaf1da640d30bcb05da24.jpg",
+      "sha256": "d9edd878db9a4d81994e556c030b62ae04afd6348d1eaf1da640d30bcb05da24",
+      "contentType": "image/jpeg",
+      "sizeBytes": 68733
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210402145440.jpg",
+      "originalReference": "/chistory/cms/editor/20210402145440.jpg",
+      "token": "migration-resource://b07d11c244ad9e5caffb7737430a639cbe299daec3760d496c381bff018c4838",
+      "snapshotPath": "assets/b07d11c244ad9e5caffb7737430a639cbe299daec3760d496c381bff018c4838.jpg",
+      "sha256": "b07d11c244ad9e5caffb7737430a639cbe299daec3760d496c381bff018c4838",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88960
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210402145447.jpg",
+      "originalReference": "/chistory/cms/editor/20210402145447.jpg",
+      "token": "migration-resource://49f07e6c98c4b82450b0b30c67ef8a45cd50b02f7e2c382fbcfb17711ee47f08",
+      "snapshotPath": "assets/49f07e6c98c4b82450b0b30c67ef8a45cd50b02f7e2c382fbcfb17711ee47f08.jpg",
+      "sha256": "49f07e6c98c4b82450b0b30c67ef8a45cd50b02f7e2c382fbcfb17711ee47f08",
+      "contentType": "image/jpeg",
+      "sizeBytes": 76053
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210402145454.jpg",
+      "originalReference": "/chistory/cms/editor/20210402145454.jpg",
+      "token": "migration-resource://debed5c1eb4ae5a6a6300ce441e9f36f0eac8629c15b760bcfb3f3319e2bdfa5",
+      "snapshotPath": "assets/debed5c1eb4ae5a6a6300ce441e9f36f0eac8629c15b760bcfb3f3319e2bdfa5.jpg",
+      "sha256": "debed5c1eb4ae5a6a6300ce441e9f36f0eac8629c15b760bcfb3f3319e2bdfa5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 230319
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210402145500.jpg",
+      "originalReference": "/chistory/cms/editor/20210402145500.jpg",
+      "token": "migration-resource://cf9b08a15eebc7923535de4b3063881a3f3bd188a04045ce74c97160a23a8fe1",
+      "snapshotPath": "assets/cf9b08a15eebc7923535de4b3063881a3f3bd188a04045ce74c97160a23a8fe1.jpg",
+      "sha256": "cf9b08a15eebc7923535de4b3063881a3f3bd188a04045ce74c97160a23a8fe1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 256096
+    }
+  ],
+  "sourceFingerprint": "17b526ff8f0162b409a9c61c17ab5f85d9e10383031c3018cb3723c1d3bc09c1",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "关于举办2021年吉林省高校就业指导课程教学创新大赛的通知",
+    "listPublishDate": "2021-04-01",
+    "sourceOrder": 155,
+    "detailPublishDate": "2021-04-01"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a474648f8d3f1a9b4f781e5935f144c8bb7be284b6cadcf680bb8903648b1cdf",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1021/5166.htm",
+    "url": "https://www.jlnku.edu.cn/info/1021/5166.htm?sessionid=1465063476"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业科技学院召开2025届毕业生春季招聘会",
+    "source": "",
+    "publishDate": "2025-05-12",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlnku.edu.cn/info/1021/5166.htm?sessionid=1465063476"
+  },
+  "resources": [],
+  "sourceFingerprint": "b23efbe1a964cc1812b078fa33dfaa7197aad4d7fa4a3ca410baa5cd4d34f65b",
+  "evidence": {
+    "listPage": 91,
+    "listTitle": "吉林农业科技学院召开2025届毕业生春季招聘会",
+    "listPublishDate": "2025-05-12",
+    "sourceOrder": 906
+  }
+}

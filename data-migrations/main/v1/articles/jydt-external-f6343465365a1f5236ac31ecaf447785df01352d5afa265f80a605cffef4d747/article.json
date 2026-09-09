@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f6343465365a1f5236ac31ecaf447785df01352d5afa265f80a605cffef4d747",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ZQXpYbs4MiAZJZ_zWbSJRw",
+    "url": "https://mp.weixin.qq.com/s/ZQXpYbs4MiAZJZ_zWbSJRw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春市委常委陈志兴到吉林工程技术师范学院开展“长聚学子·春城暖才”毕业生留长就业宣讲活动",
+    "source": "",
+    "publishDate": "2025-11-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ZQXpYbs4MiAZJZ_zWbSJRw"
+  },
+  "resources": [],
+  "sourceFingerprint": "c3b59132df1f049d47cff528d2d5a51264f3f069fcb1c0cbca6802009ac39cbe",
+  "evidence": {
+    "listPage": 59,
+    "listTitle": "长春市委常委陈志兴到吉林工程技术师范学院开展“长聚学子·春城暖才”毕业生留长就业宣讲活动",
+    "listPublishDate": "2025-11-20",
+    "sourceOrder": 582
+  }
+}

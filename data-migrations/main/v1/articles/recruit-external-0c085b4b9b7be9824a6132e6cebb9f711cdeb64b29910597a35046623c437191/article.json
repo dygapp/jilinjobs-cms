@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:0c085b4b9b7be9824a6132e6cebb9f711cdeb64b29910597a35046623c437191",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/qNYfTD4avkg2ZGAfoHx07Q",
+    "url": "https://mp.weixin.qq.com/s/qNYfTD4avkg2ZGAfoHx07Q"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学寒假促就业 “暖心行动”来啦！",
+    "source": "",
+    "publishDate": "2026-01-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/qNYfTD4avkg2ZGAfoHx07Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "4c6c7728f30cc296ba99a9dd9a71ebd22cc5c8d1ac845581f1d1f38c5b2606cd",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "吉林建筑大学寒假促就业 “暖心行动”来啦！",
+    "listPublishDate": "2026-01-21",
+    "sourceOrder": 97
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8ec35cfeb0fd97ad628277440a4aa823fb04dd563e363bc1d910420ae3ec4764",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/0LBF5e8TGUWfZG36Z45w6w",
+    "url": "https://mp.weixin.qq.com/s/0LBF5e8TGUWfZG36Z45w6w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学党委副书记张学建带队赴浙江省访企拓岗",
+    "source": "",
+    "publishDate": "2025-06-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/0LBF5e8TGUWfZG36Z45w6w"
+  },
+  "resources": [],
+  "sourceFingerprint": "cd76ba6761d861b0b335ce85e097b043738837821c1dbfcf893bd72ce7226f18",
+  "evidence": {
+    "listPage": 81,
+    "listTitle": "吉林建筑大学党委副书记张学建带队赴浙江省访企拓岗",
+    "listPublishDate": "2025-06-16",
+    "sourceOrder": 808
+  }
+}

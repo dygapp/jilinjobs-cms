@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120736",
+    "contentId": "28737783120736",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120736"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2014年吉林省“全国计算机应用技术证书考试”上机考试有关事项的通知",
+    "source": "",
+    "publishDate": "2014-03-22",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2014年吉林省“全国计算机应用技术证书考试”上机考试有关事项的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2014-3-22 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img src=\"migration-resource://d33c3bb54cb2a6c8c429497a6d80ad737daae609af1f6ffc66fa98b344956e96\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://bd5b0574837572469f24f4476163cccec4d77931f5c1492da603d78682853063\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://f152b2495cdf3dc3eef2f40a70839133f1faaf9f038e8bbb6e882e05590413ce\" border=\"0\"></p> <p align=\"center\">&nbsp;</p> <p align=\"center\">&nbsp;</p> <p align=\"center\">&nbsp;</p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140322044427696.jpg",
+      "originalReference": "/chistory/cms/imgs/20140322044427696.jpg",
+      "token": "migration-resource://d33c3bb54cb2a6c8c429497a6d80ad737daae609af1f6ffc66fa98b344956e96",
+      "snapshotPath": "assets/d33c3bb54cb2a6c8c429497a6d80ad737daae609af1f6ffc66fa98b344956e96.jpg",
+      "sha256": "d33c3bb54cb2a6c8c429497a6d80ad737daae609af1f6ffc66fa98b344956e96",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84707
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140322044437333.jpg",
+      "originalReference": "/chistory/cms/imgs/20140322044437333.jpg",
+      "token": "migration-resource://bd5b0574837572469f24f4476163cccec4d77931f5c1492da603d78682853063",
+      "snapshotPath": "assets/bd5b0574837572469f24f4476163cccec4d77931f5c1492da603d78682853063.jpg",
+      "sha256": "bd5b0574837572469f24f4476163cccec4d77931f5c1492da603d78682853063",
+      "contentType": "image/jpeg",
+      "sizeBytes": 80656
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140322044441122.jpg",
+      "originalReference": "/chistory/cms/imgs/20140322044441122.jpg",
+      "token": "migration-resource://f152b2495cdf3dc3eef2f40a70839133f1faaf9f038e8bbb6e882e05590413ce",
+      "snapshotPath": "assets/f152b2495cdf3dc3eef2f40a70839133f1faaf9f038e8bbb6e882e05590413ce.jpg",
+      "sha256": "f152b2495cdf3dc3eef2f40a70839133f1faaf9f038e8bbb6e882e05590413ce",
+      "contentType": "image/jpeg",
+      "sizeBytes": 78801
+    }
+  ],
+  "sourceFingerprint": "3f7b73c8063ea155f970b8edca7aadd6437e06f4dd51343184eaf4f69bfb02f9",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "2014年吉林省“全国计算机应用技术证书考试”上机考试有关事项的通知",
+    "listPublishDate": "2014-03-22",
+    "sourceOrder": 321,
+    "detailPublishDate": "2014-03-22"
+  }
+}

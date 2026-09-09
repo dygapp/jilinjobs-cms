@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120764",
+    "contentId": "28737783120764",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120764"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于推荐大学生就业创业教育专家的通知",
+    "source": "",
+    "publishDate": "2012-06-28",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于推荐大学生就业创业教育专家的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-6-28 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://f1093b25141db353a06a675c5fd3c9a2239aa40a8988e98101206b7a39d1e1d4\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://57fc902d58c58b7b41a18126a61c41a1311fbbe3a59d063e629b74653e2b575a\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://1755eab5a728adc031d850db67756f40a2f1e467fc7d15da5fdc033267f79754\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120628160430828.jpg",
+      "originalReference": "/chistory/cms/imgs/20120628160430828.jpg",
+      "token": "migration-resource://f1093b25141db353a06a675c5fd3c9a2239aa40a8988e98101206b7a39d1e1d4",
+      "snapshotPath": "assets/f1093b25141db353a06a675c5fd3c9a2239aa40a8988e98101206b7a39d1e1d4.jpg",
+      "sha256": "f1093b25141db353a06a675c5fd3c9a2239aa40a8988e98101206b7a39d1e1d4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81968
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120628160439223.jpg",
+      "originalReference": "/chistory/cms/imgs/20120628160439223.jpg",
+      "token": "migration-resource://57fc902d58c58b7b41a18126a61c41a1311fbbe3a59d063e629b74653e2b575a",
+      "snapshotPath": "assets/57fc902d58c58b7b41a18126a61c41a1311fbbe3a59d063e629b74653e2b575a.jpg",
+      "sha256": "57fc902d58c58b7b41a18126a61c41a1311fbbe3a59d063e629b74653e2b575a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 72584
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120628160447867.jpg",
+      "originalReference": "/chistory/cms/imgs/20120628160447867.jpg",
+      "token": "migration-resource://1755eab5a728adc031d850db67756f40a2f1e467fc7d15da5fdc033267f79754",
+      "snapshotPath": "assets/1755eab5a728adc031d850db67756f40a2f1e467fc7d15da5fdc033267f79754.jpg",
+      "sha256": "1755eab5a728adc031d850db67756f40a2f1e467fc7d15da5fdc033267f79754",
+      "contentType": "image/jpeg",
+      "sizeBytes": 79380
+    }
+  ],
+  "sourceFingerprint": "18ed88cf1f1d531d629ab4048056902114539ba063e1656eef2b8be3be05a049",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "关于推荐大学生就业创业教育专家的通知",
+    "listPublishDate": "2012-06-28",
+    "sourceOrder": 391,
+    "detailPublishDate": "2012-06-28"
+  }
+}

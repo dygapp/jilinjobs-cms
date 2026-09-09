@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:018c305d81cc3defd220723f3cc2ccd88799f443ef033ac2c04bea9dd0167f78",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/5ZNGQMF5w9-XLitDuNQVjg",
+    "url": "https://mp.weixin.qq.com/s/5ZNGQMF5w9-XLitDuNQVjg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业科技学院召开2026届毕业生就业工作第二次会议",
+    "source": "",
+    "publishDate": "2026-03-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5ZNGQMF5w9-XLitDuNQVjg"
+  },
+  "resources": [],
+  "sourceFingerprint": "131be9d443d72cc6e7e6178ff152aafdc4445ea83aef3b9affab5b24afdb879c",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "吉林农业科技学院召开2026届毕业生就业工作第二次会议",
+    "listPublishDate": "2026-03-16",
+    "sourceOrder": 415
+  }
+}

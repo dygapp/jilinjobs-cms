@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86006231482368",
+    "contentId": "86006231482368",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86006231482368"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "“创业有你 ‘就’在吉林”长春人文学院举办2021届毕业生春季网络视频双选会",
+    "source": "长春人文学院",
+    "publishDate": "2021-04-25",
+    "bodyHtml": "\n                        <p>&nbsp;</p>\n\n<p>为深入贯彻落实习近平总书记视察吉林重要讲话重要指示精神，加快推进人才兴省战略，按照省委关于在全省范围内开展“创业有你 ‘就’在吉林”——助力新时代吉林振兴发展宣传推介活动安排，长春人文学院于4月25日举办“创业有你 ‘就’在吉林” 2021届毕业生春季网络视频双选会。</p>\n\n<p>本次活动就业处重点邀请省内用人单位参会，共有231家企业参会，提供岗位852个，招聘需求人数14924人次，求职者316名，企业主动邀请求职者面试863次。</p>\n\n<p>本次双选会的顺利开展，进一步拓宽了毕业生留省就业创业渠道，进一步强化了毕业生情系吉林、贡献吉林的人文情怀，为吉林新一轮振兴和全方位振兴奉献自己的青春韶华！接下来，就业创业处将进一步贯彻落实省委书记讲话精神及省教育厅、人社厅有关文件精神，开展各类留省就业创业推介活动，为吉林省的建设发展交上一份满意的答卷。</p>\n\n<p><strong>（长春人文学院 杨雪）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "b91a411390dd9289358fe46748b291a88377454481a3d21b2a40b29d8d8663c9",
+  "evidence": {
+    "listPage": 135,
+    "listTitle": "“创业有你 ‘就’在吉林”长春人文学院举办2021届毕业生春季网络视频双选会",
+    "listPublishDate": "2021-04-25",
+    "sourceOrder": 1349,
+    "detailPublishDate": "2021-04-25"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:320d06676cd6838c8ac9602e925d24da597e5900afb80981156e84f021cc997d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/IuwRfx4_aVq1yZQ6pRnx2w",
+    "url": "https://mp.weixin.qq.com/s/IuwRfx4_aVq1yZQ6pRnx2w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学2026届毕业生春季校园招聘活动来了",
+    "source": "",
+    "publishDate": "2026-03-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/IuwRfx4_aVq1yZQ6pRnx2w"
+  },
+  "resources": [],
+  "sourceFingerprint": "da7089e3a9ce7d73233a279d16ade0af25b605c0f1f34578864d026d37aeec5d",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "北华大学2026届毕业生春季校园招聘活动来了",
+    "listPublishDate": "2026-03-06",
+    "sourceOrder": 436
+  }
+}

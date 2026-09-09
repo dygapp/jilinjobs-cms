@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119976",
+    "contentId": "28737783119976",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119976"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "岳强副厅长到省高校毕业生就业指导中心调研",
+    "source": "",
+    "publishDate": "2016-07-28",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">岳强副厅长到省高校毕业生就业指导中心调研</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2016-7-28 13:59:59</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\";text-align: left;text-indent: 46px\">\n    <span style=\"color: rgb(63, 63, 63); font-family: 宋体,SimSun; font-size: 18px;\"><br></span>\n</p>\n<p>\n    <span style=\"color: rgb(63, 63, 63); font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 7月27日,省教育厅副厅长岳强来到省高校毕业生就业指导中心调研指导工作。省教育厅高校学生处、省高校毕业生就业指导中心、教育宾馆的主要负责人及中层干部参加了调研会。</span>\n</p>\n<p>\n    <span style=\"color: rgb(63, 63, 63); font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 会上，各部门的主要负责人分别就2016年上半年的高校毕业生就业创业、大学生征兵、创业就业教师培训、“双困生”培训等工作及下半年的工作要点进行了详细的汇报。听完汇报后，岳强副厅长对各部门在上半年各项工作取得的成绩给予了充分肯定，并对下半年工作提出了要求。一是各部门要加强统筹协调配合工作；二是落实责任、完善评价机制，按项目做好年中考评和年末考评工作；三是突出工作重点，继续做好“双困生”培训工作，并谋划好明年的工作；四是继续做好“两学一做”学习教育工作，加强支部建设，绷紧廉洁自律这根弦，铭记于心,并落实在行动上；五是推动就业创业的管理工作，加强学生管理部门的沟通，把各个部门有机结合起来，抓好队伍、带好队伍。</span>\n</p>\n<p>\n    <br>\n</p>\n<p style=\"text-align: center\">\n    <img title=\"岳强厅长发表讲话.JPG\" src=\"migration-resource://b17e0a10a03c3188e7676e51812fa6ac3075eb69eb016694253325cb503095eb\">\n</p>\n<p style=\"text-align: center;\">\n    <span style=\"color: rgb(63, 63, 63); font-family: 宋体,SimSun; font-size: 16px;\">岳强厅长发表讲话</span>\n</p>\n<p>\n    <br>\n</p>\n<p style=\"text-align: center\">\n    <img title=\"调研会现场.JPG\" src=\"migration-resource://44b0f31db9cc0ffd4bfe72d7a2778e5c5b73dba3006098d17d70ce86bd971a8a\">\n</p>\n<p style=\"text-align: center;\">\n    <span style=\"color: rgb(63, 63, 63); font-family: 宋体,SimSun; font-size: 16px;\">调研会现场</span>\n</p>\n<p>\n    <span style=\"color: rgb(63, 63, 63); font-family: 宋体,SimSun; font-size: 16px;\"><br></span>\n</p>\n</div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360531134867487501889675.JPG",
+      "originalReference": "/chistory/cms/imgs/6360531134867487501889675.JPG",
+      "token": "migration-resource://b17e0a10a03c3188e7676e51812fa6ac3075eb69eb016694253325cb503095eb",
+      "snapshotPath": "assets/b17e0a10a03c3188e7676e51812fa6ac3075eb69eb016694253325cb503095eb.jpg",
+      "sha256": "b17e0a10a03c3188e7676e51812fa6ac3075eb69eb016694253325cb503095eb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 120369
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360531134854987508161196.JPG",
+      "originalReference": "/chistory/cms/imgs/6360531134854987508161196.JPG",
+      "token": "migration-resource://44b0f31db9cc0ffd4bfe72d7a2778e5c5b73dba3006098d17d70ce86bd971a8a",
+      "snapshotPath": "assets/44b0f31db9cc0ffd4bfe72d7a2778e5c5b73dba3006098d17d70ce86bd971a8a.jpg",
+      "sha256": "44b0f31db9cc0ffd4bfe72d7a2778e5c5b73dba3006098d17d70ce86bd971a8a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 146853
+    }
+  ],
+  "sourceFingerprint": "733ee989e884764816546679f303d5923e83426039543b3ac4bf53b0df9eccc5",
+  "evidence": {
+    "listPage": 154,
+    "listTitle": "岳强副厅长到省高校毕业生就业指导中心调研",
+    "listPublishDate": "2016-07-28",
+    "sourceOrder": 1532,
+    "detailPublishDate": "2016-07-28"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:127917fc9d1408027315590604bdec8b92e324f8ab778290fb5c063b50bd2b8f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/H2hLGkMUaE-TgHcqpwW5ew",
+    "url": "https://mp.weixin.qq.com/s/H2hLGkMUaE-TgHcqpwW5ew"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工程技术师范学院召开2025届毕业生就业工作推进部署会",
+    "source": "",
+    "publishDate": "2025-06-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/H2hLGkMUaE-TgHcqpwW5ew"
+  },
+  "resources": [],
+  "sourceFingerprint": "50413e6edff6936c1cd3e6e92ba91e39fdb01832c8cc75977c693ac1fab7e4a3",
+  "evidence": {
+    "listPage": 82,
+    "listTitle": "吉林工程技术师范学院召开2025届毕业生就业工作推进部署会",
+    "listPublishDate": "2025-06-13",
+    "sourceOrder": 816
+  }
+}

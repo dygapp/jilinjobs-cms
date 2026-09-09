@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a6a7f87fd88864b0cc5216ca1b49f7211cdb43ed1da05b0b6c0ff337bb9230ab",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/1twC27ldSvPbHD6XHhA8lA",
+    "url": "https://mp.weixin.qq.com/s/1twC27ldSvPbHD6XHhA8lA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学春季首场！政府就业补贴+名企直招，毕业福利直接拉满",
+    "source": "",
+    "publishDate": "2025-03-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1twC27ldSvPbHD6XHhA8lA"
+  },
+  "resources": [],
+  "sourceFingerprint": "ecc28dd742dba770dd615c778cc2876c67ca0a5bbc897eee74777a17e1dc8d06",
+  "evidence": {
+    "listPage": 98,
+    "listTitle": "长春工业大学春季首场！政府就业补贴+名企直招，毕业福利直接拉满",
+    "listPublishDate": "2025-03-18",
+    "sourceOrder": 978
+  }
+}

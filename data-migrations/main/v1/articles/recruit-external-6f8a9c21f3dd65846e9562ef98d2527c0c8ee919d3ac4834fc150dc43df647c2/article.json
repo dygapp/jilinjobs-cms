@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:6f8a9c21f3dd65846e9562ef98d2527c0c8ee919d3ac4834fc150dc43df647c2",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/f_mIWgvUxiiQlvbWwU1IMA",
+    "url": "https://mp.weixin.qq.com/s/f_mIWgvUxiiQlvbWwU1IMA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 ‘就’在吉林”长春汽车职业技术大学2024年校园招聘会",
+    "source": "",
+    "publishDate": "2024-05-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/f_mIWgvUxiiQlvbWwU1IMA"
+  },
+  "resources": [],
+  "sourceFingerprint": "b6ddabbbdbde45c9a25f99d916a2c8828849b55223a41f08d70d3d89e03bdafd",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "“创业奋斗 ‘就’在吉林”长春汽车职业技术大学2024年校园招聘会",
+    "listPublishDate": "2024-05-24",
+    "sourceOrder": 271
+  }
+}

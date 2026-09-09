@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:077cb1883c3b868e537b037a744699ede28262f5c267d1890de0901364b5af8c",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/BkN0cLRUUPmK7vwNq1u-Hg",
+    "url": "https://mp.weixin.qq.com/s/BkN0cLRUUPmK7vwNq1u-Hg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春光华学院“寒假促就业暖心行动”线上活动正式开启",
+    "source": "",
+    "publishDate": "2026-01-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/BkN0cLRUUPmK7vwNq1u-Hg"
+  },
+  "resources": [],
+  "sourceFingerprint": "11eb2f0eb82f5f69f8967b9637a9c5c2d903fe5d412182ac14930534f3a1d823",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "长春光华学院“寒假促就业暖心行动”线上活动正式开启",
+    "listPublishDate": "2026-01-22",
+    "sourceOrder": 88
+  }
+}

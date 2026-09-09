@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:38f4009c61cedbd13f69978c4d06226d714de5ef95b5ff0fe0836af5c33fa15c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Wnm0k2Z7vOkJcWCx0Lr0yQ",
+    "url": "https://mp.weixin.qq.com/s/Wnm0k2Z7vOkJcWCx0Lr0yQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业科技学院赴大森林食品有限公司开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-04-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Wnm0k2Z7vOkJcWCx0Lr0yQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "ed869927d0a506a3a911b71bff932894ff2b5a24d365cc38062659756c81e8c3",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "吉林农业科技学院赴大森林食品有限公司开展访企拓岗专项行动",
+    "listPublishDate": "2026-04-03",
+    "sourceOrder": 321
+  }
+}

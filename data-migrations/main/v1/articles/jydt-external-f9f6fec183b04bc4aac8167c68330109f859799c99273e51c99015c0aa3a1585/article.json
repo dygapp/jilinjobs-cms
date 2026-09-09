@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f9f6fec183b04bc4aac8167c68330109f859799c99273e51c99015c0aa3a1585",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ev0AjxCeJwY-GQ27jTCzfQ",
+    "url": "https://mp.weixin.qq.com/s/ev0AjxCeJwY-GQ27jTCzfQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春中医药大学党委副书记李磊带队赴沪苏访企拓岗促就业",
+    "source": "",
+    "publishDate": "2026-02-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ev0AjxCeJwY-GQ27jTCzfQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "dc443bb570b5f41a977a9200940cd41db677f08c3cd177d06dc52c319ad8a1bf",
+  "evidence": {
+    "listPage": 46,
+    "listTitle": "长春中医药大学党委副书记李磊带队赴沪苏访企拓岗促就业",
+    "listPublishDate": "2026-02-06",
+    "sourceOrder": 457
+  }
+}

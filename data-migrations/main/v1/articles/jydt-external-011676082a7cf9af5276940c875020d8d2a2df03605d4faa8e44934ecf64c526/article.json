@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:011676082a7cf9af5276940c875020d8d2a2df03605d4faa8e44934ecf64c526",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/ncss/jydt/yw/202312/20231206/2293174091.html",
+    "url": "https://www.ncss.cn/ncss/jydt/yw/202312/20231206/2293174091.html"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "教育部、人社部：多措并举促进2024届高校毕业生更加充分更高质量就业",
+    "source": "",
+    "publishDate": "2023-12-06",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ncss.cn/ncss/jydt/yw/202312/20231206/2293174091.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "f93cfc9743dfcd54f894326ecfaafb42ea0d9cc1af1ac40081f01c434217ae8f",
+  "evidence": {
+    "listPage": 111,
+    "listTitle": "教育部、人社部：多措并举促进2024届高校毕业生更加充分更高质量就业",
+    "listPublishDate": "2023-12-06",
+    "sourceOrder": 1110
+  }
+}

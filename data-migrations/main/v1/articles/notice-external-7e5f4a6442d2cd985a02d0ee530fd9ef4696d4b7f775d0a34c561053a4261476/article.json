@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:7e5f4a6442d2cd985a02d0ee530fd9ef4696d4b7f775d0a34c561053a4261476",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/gg/202507/t20250731_9292211.html",
+    "url": "http://hrss.jl.gov.cn/gg/202507/t20250731_9292211.html"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2025年吉林省高校毕业生“三支一扶”计划招募公告",
+    "source": "",
+    "publishDate": "2025-08-01",
+    "bodyHtml": "",
+    "externalUrl": "http://hrss.jl.gov.cn/gg/202507/t20250731_9292211.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "f05f4a4a818bef47189c5f7cd074598988bbd14110161ad34f75acaf587f0b47",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "2025年吉林省高校毕业生“三支一扶”计划招募公告",
+    "listPublishDate": "2025-08-01",
+    "sourceOrder": 31
+  }
+}

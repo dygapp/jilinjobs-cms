@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:ea90c5f1ea5132198ea2e982e4c2250ea1ae5a981b1f7d09abc1baae263d3bd7",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/largefairs/view/id/9192/domain/jlnu",
+    "url": "https://jlnu.jysd.com/largefairs/view/id/9192/domain/jlnu"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林师范大学2026届毕业生寒假网络招聘会",
+    "source": "",
+    "publishDate": "2026-01-21",
+    "bodyHtml": "",
+    "externalUrl": "https://jlnu.jysd.com/largefairs/view/id/9192/domain/jlnu"
+  },
+  "resources": [],
+  "sourceFingerprint": "bc2faa8a03cdc342fc2b18d2e1fa73039e7c1303537a6851621c81c17db22533",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "吉林师范大学2026届毕业生寒假网络招聘会",
+    "listPublishDate": "2026-01-21",
+    "sourceOrder": 98
+  }
+}

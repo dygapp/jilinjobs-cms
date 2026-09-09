@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b91114512fa68b209fb69d55ae706b9896bacbc2300d3b132e1119fc63fc648b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ndOR7xqbQRNEspMuN1X5bQ",
+    "url": "https://mp.weixin.qq.com/s/ndOR7xqbQRNEspMuN1X5bQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗|深耕产教融合，加强拓岗就业——长春电子科技学院光电科学与工程学院积极开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2024-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ndOR7xqbQRNEspMuN1X5bQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "07d695db7bdf4b3198fb6953f4c4e4352f69220fd8a7b776a692032164160384",
+  "evidence": {
+    "listPage": 106,
+    "listTitle": "访企拓岗|深耕产教融合，加强拓岗就业——长春电子科技学院光电科学与工程学院积极开展访企拓岗专项行动",
+    "listPublishDate": "2024-05-15",
+    "sourceOrder": 1051
+  }
+}

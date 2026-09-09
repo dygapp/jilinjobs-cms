@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6d591426e2664486194c8bc1dbf964a29cf4929f04c9a8f475d5719fa32d7e6f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/WzEJSxc3Q2PbHK8_RJHe6w",
+    "url": "https://mp.weixin.qq.com/s/WzEJSxc3Q2PbHK8_RJHe6w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "青春向北 “吉”聚未来——长春师范大学举办留吉就业政策宣讲会",
+    "source": "",
+    "publishDate": "2025-12-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/WzEJSxc3Q2PbHK8_RJHe6w"
+  },
+  "resources": [],
+  "sourceFingerprint": "3203e7d21e93c79abab2c27e2985156a95808735528c22bb8ca75ab451e7f29f",
+  "evidence": {
+    "listPage": 57,
+    "listTitle": "青春向北 “吉”聚未来——长春师范大学举办留吉就业政策宣讲会",
+    "listPublishDate": "2025-12-01",
+    "sourceOrder": 565
+  }
+}

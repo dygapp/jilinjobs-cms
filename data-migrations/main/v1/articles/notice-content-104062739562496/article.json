@@ -1,0 +1,111 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:104062739562496",
+    "contentId": "104062739562496",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=104062739562496"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省2022年职业发展与就业创业金课建设及高质量教学博览师资培训班的通知",
+    "source": "培训部",
+    "publishDate": "2022-07-27",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://dd804638768f592e1ce729ef77b8251a021b1ff6d18fdc33d05cc6f2aa494353\" width=\"800\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://a678d2a0319fff8c4a6a605e7be6975afdd30f95a03d252b10933e8ad9e8f734\" width=\"800\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://c6a23444a437a7bae0537beabf6014a54ab5feffa73e3a6793bb4ef32712ad37\" width=\"800\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://d923835a6884238abac3b356076cf9657ebe0c09db46b1c2ae167ff2fd54e0c6\" width=\"800\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://af4d1cdd4b929d97e8498777fb49bc4596e7b37573cc8bc34e700f8efe6d040a\" width=\"800\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://7b1e5e54fcd18e165e019c9b05db99fb3ba55a3df5304260be8f990ff6803890\" width=\"800\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://5757ceec02549e23f12874930e7ef5840f5fd65480abdb2d6146debb3456cdd4\" width=\"800\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://680681ea5fd3da3f08f5b54e741299145a88feaf5773d46a02134760ccda7224\" width=\"800\"></p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-29/76e04d43-1f94-42b3-89ac-c314a0fd001d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-29/76e04d43-1f94-42b3-89ac-c314a0fd001d.jpg",
+      "token": "migration-resource://dd804638768f592e1ce729ef77b8251a021b1ff6d18fdc33d05cc6f2aa494353",
+      "snapshotPath": "assets/dd804638768f592e1ce729ef77b8251a021b1ff6d18fdc33d05cc6f2aa494353.jpg",
+      "sha256": "dd804638768f592e1ce729ef77b8251a021b1ff6d18fdc33d05cc6f2aa494353",
+      "contentType": "image/jpeg",
+      "sizeBytes": 235095
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-29/7302cf49-2a18-4d51-bd18-50238a61c434.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-29/7302cf49-2a18-4d51-bd18-50238a61c434.jpg",
+      "token": "migration-resource://a678d2a0319fff8c4a6a605e7be6975afdd30f95a03d252b10933e8ad9e8f734",
+      "snapshotPath": "assets/a678d2a0319fff8c4a6a605e7be6975afdd30f95a03d252b10933e8ad9e8f734.jpg",
+      "sha256": "a678d2a0319fff8c4a6a605e7be6975afdd30f95a03d252b10933e8ad9e8f734",
+      "contentType": "image/jpeg",
+      "sizeBytes": 211186
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-29/f91ead30-1e5a-451d-bf83-31d46e7d688d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-29/f91ead30-1e5a-451d-bf83-31d46e7d688d.jpg",
+      "token": "migration-resource://c6a23444a437a7bae0537beabf6014a54ab5feffa73e3a6793bb4ef32712ad37",
+      "snapshotPath": "assets/c6a23444a437a7bae0537beabf6014a54ab5feffa73e3a6793bb4ef32712ad37.jpg",
+      "sha256": "c6a23444a437a7bae0537beabf6014a54ab5feffa73e3a6793bb4ef32712ad37",
+      "contentType": "image/jpeg",
+      "sizeBytes": 108638
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-29/29396600-fac3-45ee-8ca0-c3f277d4ab1f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-29/29396600-fac3-45ee-8ca0-c3f277d4ab1f.jpg",
+      "token": "migration-resource://d923835a6884238abac3b356076cf9657ebe0c09db46b1c2ae167ff2fd54e0c6",
+      "snapshotPath": "assets/d923835a6884238abac3b356076cf9657ebe0c09db46b1c2ae167ff2fd54e0c6.jpg",
+      "sha256": "d923835a6884238abac3b356076cf9657ebe0c09db46b1c2ae167ff2fd54e0c6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 174654
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-29/d38c2555-a05a-4c81-98ae-ec1c3e343c19.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-29/d38c2555-a05a-4c81-98ae-ec1c3e343c19.jpg",
+      "token": "migration-resource://af4d1cdd4b929d97e8498777fb49bc4596e7b37573cc8bc34e700f8efe6d040a",
+      "snapshotPath": "assets/af4d1cdd4b929d97e8498777fb49bc4596e7b37573cc8bc34e700f8efe6d040a.jpg",
+      "sha256": "af4d1cdd4b929d97e8498777fb49bc4596e7b37573cc8bc34e700f8efe6d040a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 324345
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-29/5da8a8e5-9a11-42f3-b60a-a346dc8f81f0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-29/5da8a8e5-9a11-42f3-b60a-a346dc8f81f0.jpg",
+      "token": "migration-resource://7b1e5e54fcd18e165e019c9b05db99fb3ba55a3df5304260be8f990ff6803890",
+      "snapshotPath": "assets/7b1e5e54fcd18e165e019c9b05db99fb3ba55a3df5304260be8f990ff6803890.jpg",
+      "sha256": "7b1e5e54fcd18e165e019c9b05db99fb3ba55a3df5304260be8f990ff6803890",
+      "contentType": "image/jpeg",
+      "sizeBytes": 351499
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-29/8cabffef-863e-4091-9285-d43e51b2a93d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-29/8cabffef-863e-4091-9285-d43e51b2a93d.jpg",
+      "token": "migration-resource://5757ceec02549e23f12874930e7ef5840f5fd65480abdb2d6146debb3456cdd4",
+      "snapshotPath": "assets/5757ceec02549e23f12874930e7ef5840f5fd65480abdb2d6146debb3456cdd4.jpg",
+      "sha256": "5757ceec02549e23f12874930e7ef5840f5fd65480abdb2d6146debb3456cdd4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 340717
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-29/e56abcc8-9df6-4d2a-86e9-6d97907d811f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-29/e56abcc8-9df6-4d2a-86e9-6d97907d811f.jpg",
+      "token": "migration-resource://680681ea5fd3da3f08f5b54e741299145a88feaf5773d46a02134760ccda7224",
+      "snapshotPath": "assets/680681ea5fd3da3f08f5b54e741299145a88feaf5773d46a02134760ccda7224.jpg",
+      "sha256": "680681ea5fd3da3f08f5b54e741299145a88feaf5773d46a02134760ccda7224",
+      "contentType": "image/jpeg",
+      "sizeBytes": 127239
+    }
+  ],
+  "sourceFingerprint": "88a423aa23506c764bf6c7aa7ad2fde34a9210bd1716c316b6ea63d4f011d0d0",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "关于举办吉林省2022年职业发展与就业创业金课建设及高质量教学博览师资培训班的通知",
+    "listPublishDate": "2022-07-27",
+    "sourceOrder": 117,
+    "detailPublishDate": "2022-07-27"
+  }
+}

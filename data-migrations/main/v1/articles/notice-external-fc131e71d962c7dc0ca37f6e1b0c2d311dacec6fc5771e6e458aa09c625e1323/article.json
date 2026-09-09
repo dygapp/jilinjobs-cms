@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:fc131e71d962c7dc0ca37f6e1b0c2d311dacec6fc5771e6e458aa09c625e1323",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/_dvboRQ6R9kIVPITh087mg",
+    "url": "https://mp.weixin.qq.com/s/_dvboRQ6R9kIVPITh087mg"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平给谢依特小学戍边支教西部计划志愿者服务队队员回信",
+    "source": "",
+    "publishDate": "2025-05-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_dvboRQ6R9kIVPITh087mg"
+  },
+  "resources": [],
+  "sourceFingerprint": "5c140f6bcf48b90faea4d989743cb916a384b8f52b2ab1a7d5ce0c88913bae22",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "习近平给谢依特小学戍边支教西部计划志愿者服务队队员回信",
+    "listPublishDate": "2025-05-06",
+    "sourceOrder": 37
+  }
+}

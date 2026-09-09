@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122420",
+    "contentId": "28737783122420",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122420"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "辽宁：大学生服务“辽西北”、“三支一扶”可享受更多政策",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">辽宁：大学生服务“辽西北”、“三支一扶”可享受更多政策</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 辽宁省鼓励高校毕业生到基层工作，进一步做好一村一名大学生、大学生志愿服务“辽西北”计划、“三支一扶”计划，除原有政策外，可享受如下政策：在全省公务员招考中单独拿出一定比例的乡镇机关职位，专门用于招录上述计划服务期满考核合格人员；报考辽西北地区(锦州、阜新、铁岭、朝阳、葫芦岛市)县乡机关公务员，享受笔试成绩加5分政策(考1科加2.5分)；各受援地有空编的事业单位，可采取考试与考核相结合的方式，优先招聘上述计划服务期满考核合格人员；对有两年基层工作经历的高校毕业生，实行报考省内研究生培养单位可享受总分加20分政策，其中外语加5分、专业课加5分、政治理论课加10分。 </font></p> <p><font size=\"2\">　　从2009年起，在非公有制单位就业或自主创业并依法缴纳社会保险费的高校毕业生和到农村基层志愿服务的高校毕业生，考录或招聘到国家机关、事业单位工作，其缴费年限或志愿服务年限合并计算为工龄。</font></p> <p><font size=\"2\">　　提高各级机关录用具有2年以上基层工作经历人员的比例，省级机关要达到80%、市级机关达到50%、县级机关达到30%。</font></p> <p><font size=\"2\">&nbsp;</font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "b65fb61184d788825ad87a6cd95d64539f7b47796e0a81412aa746cff751856a",
+  "evidence": {
+    "listPage": 183,
+    "listTitle": "辽宁：大学生服务“辽西北”、“三支一扶”可享受更多政策",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1823,
+    "detailPublishDate": "2009-04-05"
+  }
+}

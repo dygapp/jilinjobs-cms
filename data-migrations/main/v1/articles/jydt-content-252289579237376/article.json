@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:252289579237376",
+    "contentId": "252289579237376",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=252289579237376"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春市高校综合类就业洽谈会暨长春大学2025届毕业生秋季第二场校园双选会成功举办",
+    "source": "长春大学",
+    "publishDate": "2024-10-24",
+    "bodyHtml": "\n                        <p>　　为学习贯彻党的二十大精神，落实党中央、国务院稳就业保就业决策部署，千方百计促进我校毕业生高质量充分就业，10月23日下午，由我校承办的长春市高校综合类就业洽谈会暨学校2025届毕业生秋季第二场校园双选会成功举办。吉林省高等学校毕业生就业指导中心主任唐洪丰、校党委书记孙爱军、副校长张洪杰出席了活动。</p>\n\n<p style=\"text-align:center\"><br>\n<img alt=\"\" height=\"562\" src=\"migration-resource://96b09c9302722954e5c4afe07a403aaf59a772fa23cd73a063007fb78bb5d09a\" width=\"1000\"><br>\n<img alt=\"\" height=\"562\" src=\"migration-resource://69bff631f8a48a80e23a17e5fa456f837ef0a7eb790784f6197802331de1df6c\" width=\"1000\"></p>\n\n<p><br>\n　　双选会共邀请京东方科技集团有限公司、奇瑞汽车股份有限公司、厦门金龙联合汽车工业有限公司、北京理工大学长三角研究院、冠捷电子科技（福建）有限公司、牧原食品股份有限公司等172家省内外优质企业现场招聘，共提供625个职位，5847个岗位。厦门市人社局、嘉兴市秀洲区人社局、宁波市奉化区人社局、宁海县人社局携域内企业组团参会。据现场统计，共有3143名来自于长春市各高校的毕业生参会，为毕业生提供了充分的就业机会选择。</p>\n\n<p style=\"text-align:center\"><br>\n<img alt=\"\" height=\"562\" src=\"migration-resource://4b1012af83bfe145746c77fc495390090614bf11734a23142d819889a560100d\" width=\"1000\"></p>\n\n<p><br>\n　　吉林省高等学校毕业生就业指导中心主任唐洪丰、校党委书记孙爱军、副校长张洪杰来到招聘会现场，与用人单位、毕业生进行了亲切交流，详细询问用人单位人才需求及对我校人才培养的意见和建议，考察毕业生对就业工作的满意度。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"562\" src=\"migration-resource://867104d4b8662c9844f0a76ae7cdf5801deffef7f951309f628ed735b3f3859b\" width=\"1000\"></p>\n\n<p><br>\n　　招聘会为用人单位和广大毕业生搭建了优质精准的就业服务平台。各学院也在招聘会现场同用人单位进行了广泛对接，深入挖掘更多优质就业机会，不断提升岗位质量，促进校企合作走深走实。未来，我校将不断拓宽就业渠道，进一步健全毕业生就业服务体系，促进毕业生更加充分更高质量就业，为推动区域发展与产业振兴提供人才智力支持。<br>\n　　各学院相关负责人、毕业班辅导员参加了双选会并对毕业生进行了现场指导。&nbsp;<br>\n&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-24/019ff5d1-e984-4a46-b07f-5e0bffdda50d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-24/019ff5d1-e984-4a46-b07f-5e0bffdda50d.jpg",
+      "token": "migration-resource://96b09c9302722954e5c4afe07a403aaf59a772fa23cd73a063007fb78bb5d09a",
+      "snapshotPath": "assets/96b09c9302722954e5c4afe07a403aaf59a772fa23cd73a063007fb78bb5d09a.jpg",
+      "sha256": "96b09c9302722954e5c4afe07a403aaf59a772fa23cd73a063007fb78bb5d09a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 124648
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-24/c4573ce4-cefb-4644-80e2-e9deb208e79c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-24/c4573ce4-cefb-4644-80e2-e9deb208e79c.jpg",
+      "token": "migration-resource://69bff631f8a48a80e23a17e5fa456f837ef0a7eb790784f6197802331de1df6c",
+      "snapshotPath": "assets/69bff631f8a48a80e23a17e5fa456f837ef0a7eb790784f6197802331de1df6c.jpg",
+      "sha256": "69bff631f8a48a80e23a17e5fa456f837ef0a7eb790784f6197802331de1df6c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 102657
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-24/2efcaa32-7ed4-46e7-8389-e1254e7a15ec.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-24/2efcaa32-7ed4-46e7-8389-e1254e7a15ec.jpg",
+      "token": "migration-resource://4b1012af83bfe145746c77fc495390090614bf11734a23142d819889a560100d",
+      "snapshotPath": "assets/4b1012af83bfe145746c77fc495390090614bf11734a23142d819889a560100d.jpg",
+      "sha256": "4b1012af83bfe145746c77fc495390090614bf11734a23142d819889a560100d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 222344
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-24/3793fb8c-b598-46fa-b6ce-602eacdb177f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-24/3793fb8c-b598-46fa-b6ce-602eacdb177f.jpg",
+      "token": "migration-resource://867104d4b8662c9844f0a76ae7cdf5801deffef7f951309f628ed735b3f3859b",
+      "snapshotPath": "assets/867104d4b8662c9844f0a76ae7cdf5801deffef7f951309f628ed735b3f3859b.jpg",
+      "sha256": "867104d4b8662c9844f0a76ae7cdf5801deffef7f951309f628ed735b3f3859b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 137510
+    }
+  ],
+  "sourceFingerprint": "14bd950a37aace2bf19dda4a4090dd58f23ea695a16f6c6e4977bf7eec498c5f",
+  "evidence": {
+    "listPage": 103,
+    "listTitle": "长春市高校综合类就业洽谈会暨长春大学2025届毕业生秋季第二场校园双选会成功举办",
+    "listPublishDate": "2024-10-24",
+    "sourceOrder": 1024,
+    "detailPublishDate": "2024-10-24"
+  }
+}

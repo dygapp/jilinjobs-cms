@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:43db985b26de73478682d37e816b56ecfad952cc98aef3963fc8539d200f57ca",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/1qU-BV54P41mDFuvkotHdg",
+    "url": "https://mp.weixin.qq.com/s/1qU-BV54P41mDFuvkotHdg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学举办“工筑宏图·理享未来”服务吉林高质量发展——延边大学理工类毕业生就业洽谈会暨2026届理工类秋季专场双选会",
+    "source": "",
+    "publishDate": "2025-11-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1qU-BV54P41mDFuvkotHdg"
+  },
+  "resources": [],
+  "sourceFingerprint": "4c320367aca35d89086235a483f5d585fad0060afec6b742bca9c8c6cd4dd5b5",
+  "evidence": {
+    "listPage": 60,
+    "listTitle": "延边大学举办“工筑宏图·理享未来”服务吉林高质量发展——延边大学理工类毕业生就业洽谈会暨2026届理工类秋季专场双选会",
+    "listPublishDate": "2025-11-18",
+    "sourceOrder": 596
+  }
+}

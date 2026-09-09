@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:22c89f17a9f016727c3e85d73ea0569527e81bf7c15967851c10ed28131e8203",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/YqVMdN-H2S0Q2pk2mtoP9Q",
+    "url": "https://mp.weixin.qq.com/s/YqVMdN-H2S0Q2pk2mtoP9Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力拓岗优服务 春季攻坚促就业 | 长春汽车职业技术大学举办2025年“五优”服务进校园春季巡回双选会",
+    "source": "",
+    "publishDate": "2025-03-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/YqVMdN-H2S0Q2pk2mtoP9Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "d2ac006636542092125e33d526f558d95b58dc74517a0760e611fbf5496ffaca",
+  "evidence": {
+    "listPage": 96,
+    "listTitle": "聚力拓岗优服务 春季攻坚促就业 | 长春汽车职业技术大学举办2025年“五优”服务进校园春季巡回双选会",
+    "listPublishDate": "2025-03-31",
+    "sourceOrder": 959
+  }
+}

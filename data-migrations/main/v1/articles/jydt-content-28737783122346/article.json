@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122346",
+    "contentId": "28737783122346",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122346"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "北京提高创业者小额担保贷款额",
+    "source": "",
+    "publishDate": "2009-05-07",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">北京提高创业者小额担保贷款额</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-5-7 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 北京市劳动和社会保障局相关负责人23日宣布，北京将加大对创业的支持力度，从4月1日起，提高小额担保贷款的担保额度，合伙创办小企业最高可申请50万元。</font></p> <p><font size=\"2\">　　新政策规定，对于北京市城镇失业人员、高校毕业生、农村转移劳动力、复员转业军人开办个体工商户的担保额度由原来不超过5万元提高到8万元。以上人员自主、合伙创办小企业申请小额担保贷款的，贷款担保额提高到人均不超过8万元，最高50万元。 </font></p> <p><font size=\"2\">　　另外，新政策规定，对当年新招用北京市失业人员、高校毕业生、农村转移劳动力和复员转业军人达到企业现有在职职工总数30%(超过100人的企业达到15%)以上，并与其签订一年以上期限劳动合同的劳动密集型小企业(国家限制的行业除外)，由小额贷款担保基金为其提供贷款担保，担保额根据实际招用人数合理确定，最高不超过200万元。 </font></p> <p><font size=\"2\">　　此外，创业培训补贴标准也由原来的每人1329元提高到每人2400元。 </font></p> <p><font size=\"2\">　&nbsp; 北京市已经扩大了小额贷款基金规模，小额贷款市级担保基金由5000万元增加至1亿元，专项用于劳动密集型小企业贷款担保。 </font></p> <p><font size=\"2\">&nbsp;</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：中青在线<br>&nbsp;&nbsp; </font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "d633a7f15841d024cb8b57ae843965994e0b125346f95ebdb33c160337957945",
+  "evidence": {
+    "listPage": 174,
+    "listTitle": "北京提高创业者小额担保贷款额",
+    "listPublishDate": "2009-05-07",
+    "sourceOrder": 1737,
+    "detailPublishDate": "2009-05-07"
+  }
+}

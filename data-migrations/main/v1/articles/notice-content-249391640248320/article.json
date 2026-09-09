@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:249391640248320",
+    "contentId": "249391640248320",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=249391640248320"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省第十届高校职业发展与就业指导课程教学大赛暨微课程大赛的通知",
+    "source": "",
+    "publishDate": "2024-09-30",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://14ea5aa6712d23933beb566b19c847f602f73f0480aba64b96be709c032a4c66\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://dd68d08ccf2195b6489c94fffc3eecf2ba59f8439e9209efb2435baee34b46f7\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://3ad17816d922b84f10a30c85175fd6af17519e35b342760ecc4aa04b783176ab\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://43c2ae4e361f88058a3927c729cb4026651c752b6fd334ab5852f71ad093e00b\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-08/a57bec16-ec84-46ab-9901-e4f2eb24c6ee.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-08/a57bec16-ec84-46ab-9901-e4f2eb24c6ee.jpg",
+      "token": "migration-resource://14ea5aa6712d23933beb566b19c847f602f73f0480aba64b96be709c032a4c66",
+      "snapshotPath": "assets/14ea5aa6712d23933beb566b19c847f602f73f0480aba64b96be709c032a4c66.jpg",
+      "sha256": "14ea5aa6712d23933beb566b19c847f602f73f0480aba64b96be709c032a4c66",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-08/e394a948-2feb-48f8-8d43-f5ff5a2e9358.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-08/e394a948-2feb-48f8-8d43-f5ff5a2e9358.jpg",
+      "token": "migration-resource://dd68d08ccf2195b6489c94fffc3eecf2ba59f8439e9209efb2435baee34b46f7",
+      "snapshotPath": "assets/dd68d08ccf2195b6489c94fffc3eecf2ba59f8439e9209efb2435baee34b46f7.jpg",
+      "sha256": "dd68d08ccf2195b6489c94fffc3eecf2ba59f8439e9209efb2435baee34b46f7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-08/07a26a8f-d6ac-4438-a85b-44e7a8c17174.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-08/07a26a8f-d6ac-4438-a85b-44e7a8c17174.jpg",
+      "token": "migration-resource://3ad17816d922b84f10a30c85175fd6af17519e35b342760ecc4aa04b783176ab",
+      "snapshotPath": "assets/3ad17816d922b84f10a30c85175fd6af17519e35b342760ecc4aa04b783176ab.jpg",
+      "sha256": "3ad17816d922b84f10a30c85175fd6af17519e35b342760ecc4aa04b783176ab",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-08/0581da0b-cdbb-4a1b-aaa1-f52a86e9b48b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-08/0581da0b-cdbb-4a1b-aaa1-f52a86e9b48b.jpg",
+      "token": "migration-resource://43c2ae4e361f88058a3927c729cb4026651c752b6fd334ab5852f71ad093e00b",
+      "snapshotPath": "assets/43c2ae4e361f88058a3927c729cb4026651c752b6fd334ab5852f71ad093e00b.jpg",
+      "sha256": "43c2ae4e361f88058a3927c729cb4026651c752b6fd334ab5852f71ad093e00b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 58887
+    }
+  ],
+  "sourceFingerprint": "b92681ef98c8a3c9aaf245826ee7e9e2f8553e038ae20fa832d69d8bd42b54e9",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "关于举办吉林省第十届高校职业发展与就业指导课程教学大赛暨微课程大赛的通知",
+    "listPublishDate": "2024-09-30",
+    "sourceOrder": 72,
+    "detailPublishDate": "2024-09-30"
+  }
+}

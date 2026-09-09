@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8bab0b4116679e96b835da62ac0549d6bb5eb9ff387c4955e9adfdde9d05f75e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/qnDopSt6N4i2q2T3Cq3Xrw",
+    "url": "https://mp.weixin.qq.com/s/qnDopSt6N4i2q2T3Cq3Xrw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "白城师范学院副校长丁绍宏带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/qnDopSt6N4i2q2T3Cq3Xrw"
+  },
+  "resources": [],
+  "sourceFingerprint": "be4d99adbefc4bfa7e4f9edfa7628877e61a18b576ff76448c56144920a0e221",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "白城师范学院副校长丁绍宏带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-24",
+    "sourceOrder": 376
+  }
+}

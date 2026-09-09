@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120290",
+    "contentId": "28737783120290",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120290"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "湖北：五大方面政策 促进高校毕业生就业",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">湖北：五大方面政策 促进高校毕业生就业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 13日从湖北省教育厅获悉，湖北省今年制定了五大方面的政策，以促进高校毕业生就业。 </font></p> <p><font size=\"2\">　　据了解，2009年湖北省高校毕业生人数为36.76万人，与2008年相比，毕业生总人数减少5.5万人。受国际金融危机影响，今年该省毕业生就业形势严峻。截止2009年3月1日，湖北省高校毕业生签约率为20.56%，与去年同期相比有所下降。其中，文、管、经、法等专业毕业生需求明显减少，国贸、证券专业需求减少达80%以上。 </font></p> <p><font size=\"2\">　　湖北省教育厅副厅长陈传德介绍，近两年来，中共湖北省委、省政府及有关部门先后出台了10多个毕业生就业工作文件。结合实际，湖北省今年制定了五大方面的政策，即：鼓励和引导高校毕业生到城乡基层就业，鼓励高校毕业生到中小企业、非公有制企业就业，鼓励和支持高校毕业生自主创业，鼓励骨干企业和重大科研项目单位积极吸纳高校毕业生，为困难毕业生提供就业援助等。 </font></p> <p><font size=\"2\">　　另外，湖北省今年将继续实施基层项目建设，“三支一扶”计划拟招录3000人、“选调生”300人、“西部计划”500人、“一村一名大学生”7000人，“大学生村官”1000人。湖北省教育厅、省劳动厅将为千名有创业意向的毕业生提供创业服务，动员更多毕业生应征入伍，组织举办好小型、分科类的招聘会，并继续组织“就业指导专家讲师团”，开展就业指导进高校活动。</font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "83295dfbe518128dbb1dc44a011b9aeba4a5ad5160859aba15a030417ec963e5",
+  "evidence": {
+    "listPage": 185,
+    "listTitle": "湖北：五大方面政策 促进高校毕业生就业",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1845,
+    "detailPublishDate": "2009-04-05"
+  }
+}

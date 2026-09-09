@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122454",
+    "contentId": "28737783122454",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122454"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "深圳：政府搭见习\"平台\" 青年唱就业\"好戏\"",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">深圳：政府搭见习\"平台\" 青年唱就业\"好戏\"</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 人民网深圳4月3日电　 （胡谋　尹春芳）深圳市共青团“青年就业创业见习基地”自今年3月1日启动以来获得广泛关注。截止目前，已有近300名青年到岗见习。</font></p> <p><font size=\"2\">　　据介绍，该基地共有近200家企业，提供超过4300个工作岗位。当中见习人员以高校学生为主，其大部分青睐于电信、国企、金融、高科技等行业岗位，而加工、制造等实业企业目前岗位空缺较多。</font></p> <p><font size=\"2\">　　据了解，具有深圳户籍的青年在见习期间，除享受见习企业提供的最低生活保障外，还享受该市劳动局发放的见习补贴。同时，企业招聘1名深圳户籍的见习人员，也可享受相应补贴。</font></p> <p><font size=\"2\">　　据悉，目前该市共青团和劳动局等相关部门正在为已签订见习协议的青年办理保险事宜。记者了解到，该市近期还将出台一系列鼓励青年就业创业的相关政策，在信贷、补贴、创业培训和创业平台等方面给与更多扶持。<br></font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\">&nbsp;</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "013838b6aaf970f1f647de9409f8816f5e5c4a614f666148a7ad25af06711ce7",
+  "evidence": {
+    "listPage": 189,
+    "listTitle": "深圳：政府搭见习\"平台\" 青年唱就业\"好戏\"",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1886,
+    "detailPublishDate": "2009-04-04"
+  }
+}

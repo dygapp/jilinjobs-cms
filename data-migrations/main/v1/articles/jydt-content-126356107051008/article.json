@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:126356107051008",
+    "contentId": "126356107051008",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=126356107051008"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春工业大学人文信息学院开展“访企拓岗”促就业专项行动",
+    "source": "长春工业大学人文信息学院",
+    "publishDate": "2022-10-30",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">为全面贯彻《教育部办公厅关于开展全国高校书记校长访企拓岗促就业专项行动的通知》和省教育厅的工作要求，落实高校毕业生就业工作“一把手”工程，充分发挥高校书记、校长以及校领导班子成员带头做好毕业生就业工作的重要示范作用，9月，长春工业大学人文信息学院校长助理王爽率队开展“访企拓岗”促就业专项行动。</span></span></span></span></p>\n\n<p style=\"text-align:center\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><img alt=\"\" height=\"450\" src=\"migration-resource://e80012c55ea152bb0098532fa4dda15e07c0ed572df9da831262b859cc16f44d\" width=\"600\"></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">王爽一行先后到达浙江省、江苏省、广东省等，走访苏州亿源精密模具有限公司、苏州汇川技术有限公司、大参林医药集团股份有限公司等10余家企业，王爽就深化校企合作、促进就业创业等方面提出了具体建议，希望在今后的合作中，校企双方能够在教学、就业、师资、课程、项目建设等方面增进交流、加深合作。</span></span></span></span></p>\n\n<p style=\"text-align:center\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><img alt=\"\" height=\"450\" src=\"migration-resource://9cd8628f6389a312ffae38f6539a54a85e7d520850fc7ed064bc56a2b31eec26\" width=\"600\"></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">此次行动还看望了部分校友，王爽详细了解校友工作情况，希望校友能为母校争光，同时希望校友们能“常回家看看”。与会的校友表示将继续秉承工大人文的优良传统，立足本职岗位，勇于担当，并祝愿母校更展宏图、再谱华章。</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">本次访企拓岗促就业专项行动是学校落实2023届毕业生充分高质量就业的重要举措之一。学校将进一步深化校企合作，促进形成“共育人才、共享资源、共同发展”的态势，达到企业、学校、学生三方共赢。</span></span></span></span></p>\n\n<p style=\"text-align:right\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><strong><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">（长春工业大学人文信息学院 张松松）</span></span></strong></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-29/f1eb0b60-fb22-47f3-aaee-8558065b7531.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-29/f1eb0b60-fb22-47f3-aaee-8558065b7531.jpg",
+      "token": "migration-resource://e80012c55ea152bb0098532fa4dda15e07c0ed572df9da831262b859cc16f44d",
+      "snapshotPath": "assets/e80012c55ea152bb0098532fa4dda15e07c0ed572df9da831262b859cc16f44d.jpg",
+      "sha256": "e80012c55ea152bb0098532fa4dda15e07c0ed572df9da831262b859cc16f44d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 321134
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-29/885da6b3-2400-439f-b938-11514a3d38ea.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-29/885da6b3-2400-439f-b938-11514a3d38ea.jpg",
+      "token": "migration-resource://9cd8628f6389a312ffae38f6539a54a85e7d520850fc7ed064bc56a2b31eec26",
+      "snapshotPath": "assets/9cd8628f6389a312ffae38f6539a54a85e7d520850fc7ed064bc56a2b31eec26.jpg",
+      "sha256": "9cd8628f6389a312ffae38f6539a54a85e7d520850fc7ed064bc56a2b31eec26",
+      "contentType": "image/jpeg",
+      "sizeBytes": 133572
+    }
+  ],
+  "sourceFingerprint": "536f7372172e40c33dc9ac5e66ba383684b055eca3affdc6e7e44f938634c70c",
+  "evidence": {
+    "listPage": 119,
+    "listTitle": "长春工业大学人文信息学院开展“访企拓岗”促就业专项行动",
+    "listPublishDate": "2022-10-30",
+    "sourceOrder": 1188,
+    "detailPublishDate": "2022-10-30"
+  }
+}

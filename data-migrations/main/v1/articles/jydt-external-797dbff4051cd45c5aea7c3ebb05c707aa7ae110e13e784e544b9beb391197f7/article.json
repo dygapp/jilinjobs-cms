@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:797dbff4051cd45c5aea7c3ebb05c707aa7ae110e13e784e544b9beb391197f7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/9_tjOvk5ewiDt0ZRPm0XZA",
+    "url": "https://mp.weixin.qq.com/s/9_tjOvk5ewiDt0ZRPm0XZA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "教育部新闻办：就业服务不断线！暑期7场招聘活动等你来",
+    "source": "",
+    "publishDate": "2025-08-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/9_tjOvk5ewiDt0ZRPm0XZA"
+  },
+  "resources": [],
+  "sourceFingerprint": "59b6ae1fa7968f66891a65f82b5f92cd3b624c88841c404177cbfb4345ac6e56",
+  "evidence": {
+    "listPage": 72,
+    "listTitle": "教育部新闻办：就业服务不断线！暑期7场招聘活动等你来",
+    "listPublishDate": "2025-08-06",
+    "sourceOrder": 718
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119970",
+    "contentId": "28737783119970",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119970"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2016年全省高校大学生征兵工作培训班开班",
+    "source": "",
+    "publishDate": "2016-10-25",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2016年全省高校大学生征兵工作培训班开班</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2016-10-25 16:47:18</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋_GB2312;font-size: 21px\">为推进新形式下高校大学生征兵工作，切实提升全省高校大学生征兵工作相关工作人员的政策和业务水平，10月24日上午，2016年全省高校大学生征兵工作培训班正式开班。省军区副司令员石佳坤少将、省教育厅副厅长岳强参加培训班开班仪式并讲话。</span></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋_GB2312;font-size: 21px\"><br></span></p><p style=\"text-align: center\"><img title=\"1-2.JPG\" src=\"migration-resource://41bf5f9c36b1a047a6680cf4c23db04f15ba009700dd821516b5d2bf9305639a\"></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋_GB2312;font-size: 21px\"></span><br></p><p style=\";text-indent: 43px\"><span style=\";color: black;font-family: 仿宋_GB2312;font-size: 21px\">岳强副厅长在讲话中总结了今年全省高校大学生征兵工作的总体情况。他指出，省教育厅认真贯彻国家和省委省政府文件精神，将大学生征兵工作列入重要议事日程，积极配合省军区兵役机关，全力推进大学生征兵工作，和省征兵办联合开展了大学生征兵专项督查工作，深入高校进行实地调研和工作督导，推动了大学生征兵工作的深入开展。全省高校认真贯彻落实国家和我省的文件精神，多措并举，狠抓落实，全省高校大学生征兵工作取得新进展、新成效，全省大学生征兵工作呈现良好的态势。</span></p><p style=\";text-indent: 43px\"><span style=\";color: black;font-family: 仿宋_GB2312;font-size: 21px\"><br></span></p><p style=\"text-align: center\"><img title=\"2-3.JPG\" src=\"migration-resource://ad6e5e7ac8b4ee4dbd89b5d628006bfc66ab207f34502c391dcc3f831b4b9964\"></p><p style=\";text-indent: 43px\"><span style=\";color: black;font-family: 仿宋_GB2312;font-size: 21px\"></span><br></p><p style=\";text-indent: 43px\"><span style=\";font-family: 仿宋_GB2312;font-size: 21px\">本次培训班共举办五期，从10月24日开始到10月31日全部结束。期间，全省各高校征兵工作负责人将接受我省大学生参军优抚政策、升学、学籍优惠政策以及教育资助政策等方面的培训，省内高校征兵工作优秀辅导员还将进行经验交流。</span></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361370206996875002967362.JPG",
+      "originalReference": "/chistory/cms/imgs/6361370206996875002967362.JPG",
+      "token": "migration-resource://41bf5f9c36b1a047a6680cf4c23db04f15ba009700dd821516b5d2bf9305639a",
+      "snapshotPath": "assets/41bf5f9c36b1a047a6680cf4c23db04f15ba009700dd821516b5d2bf9305639a.jpg",
+      "sha256": "41bf5f9c36b1a047a6680cf4c23db04f15ba009700dd821516b5d2bf9305639a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 123066
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361370208084375006344988.JPG",
+      "originalReference": "/chistory/cms/imgs/6361370208084375006344988.JPG",
+      "token": "migration-resource://ad6e5e7ac8b4ee4dbd89b5d628006bfc66ab207f34502c391dcc3f831b4b9964",
+      "snapshotPath": "assets/ad6e5e7ac8b4ee4dbd89b5d628006bfc66ab207f34502c391dcc3f831b4b9964.jpg",
+      "sha256": "ad6e5e7ac8b4ee4dbd89b5d628006bfc66ab207f34502c391dcc3f831b4b9964",
+      "contentType": "image/jpeg",
+      "sizeBytes": 78208
+    }
+  ],
+  "sourceFingerprint": "e969bdec29f4f3d97f78cdf6cec4246cb5adb3ed43996540efbd064355070df5",
+  "evidence": {
+    "listPage": 153,
+    "listTitle": "2016年全省高校大学生征兵工作培训班开班",
+    "listPublishDate": "2016-10-25",
+    "sourceOrder": 1529,
+    "detailPublishDate": "2016-10-25"
+  }
+}

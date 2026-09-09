@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:2c6a9a94c8dc2167828bdec9b7d9d9c1988ccfc7863b99996d006e91f4d536f4",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/VtJ0ErLEtl_NbHD2Zz6cpg",
+    "url": "https://mp.weixin.qq.com/s/VtJ0ErLEtl_NbHD2Zz6cpg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "寒假不打烊，就业暖护航——吉林工程技术师范学院“2026年寒假促就业暖心行动”",
+    "source": "",
+    "publishDate": "2026-01-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/VtJ0ErLEtl_NbHD2Zz6cpg"
+  },
+  "resources": [],
+  "sourceFingerprint": "4cb0dbb2d240a4ce82e18b2eff068f4e82a6a9382c658b87ffa439a0ffb84275",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "寒假不打烊，就业暖护航——吉林工程技术师范学院“2026年寒假促就业暖心行动”",
+    "listPublishDate": "2026-01-19",
+    "sourceOrder": 102
+  }
+}

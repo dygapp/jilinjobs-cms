@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:22b66242bd094b3f182b96d73481fc23a5381b727f8d0e4304bd6e5af3294b79",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/O5maB6z91xOdD5nCNZmIlQ",
+    "url": "https://mp.weixin.qq.com/s/O5maB6z91xOdD5nCNZmIlQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "事业编！四平市公开招聘338人",
+    "source": "",
+    "publishDate": "2026-07-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/O5maB6z91xOdD5nCNZmIlQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "2450d429189bd46a6a0591c49250fe14a76a802fd891c632cedb8333e67305ea",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "事业编！四平市公开招聘338人",
+    "listPublishDate": "2026-07-28",
+    "sourceOrder": 21
+  }
+}

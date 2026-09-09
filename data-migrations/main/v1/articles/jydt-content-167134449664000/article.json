@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:167134449664000",
+    "contentId": "167134449664000",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=167134449664000"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "四川：成都将为高校毕业生提供约30万个岗位",
+    "source": "",
+    "publishDate": "2023-07-07",
+    "bodyHtml": "\n                        <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 7月2日上午，成都市2023年“百日万企高校毕业生系列招聘活动”现场，包括多家国有企事业单位在内的405家用人单位发布岗位11547个，平均月薪7477元，进场人才1.1万人。其中，79%的岗位针对大专及以上学历人员，81%的岗位面向应届毕业生、不设工作经验限制。现场有6家企业带来327个需求岗位进行直播带岗活动，在线观看人数近8万。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 成都市人才服务中心相关负责人介绍，此次发布的岗位与成都市当前需要的产业人才相匹配，涵盖电子信息、航空航天、新消费等8个成都市重点产业生态圈，以及23条重点产业链的上下游企业。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 据统计，今年在蓉高校毕业生人数达33.67万人，成都户籍高校毕业生达7.03万人。成都市人社局抢抓高校毕业生离校前促就业关键期，开展公共就业服务“六进”校园活动318场，已服务高校毕业生56.89万人次。接下来，成都市各级人社部门将集中100天时间、筹集提供30万个岗位、举办700场招聘活动，不间断提供直播带岗、职业指导等服务，成都人才市场每周也将举行3—4次专场招聘会，助力高校毕业生等青年人才就业。目前，成都市已成立促进高校毕业生就业工作专班，最大限度筹岗拓岗，全面兜牢就业底线。</span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "62f097b1d9f030b27490f62cf01138aed429cf788a82cfe9df0738445be76e63",
+  "evidence": {
+    "listPage": 113,
+    "listTitle": "四川：成都将为高校毕业生提供约30万个岗位",
+    "listPublishDate": "2023-07-07",
+    "sourceOrder": 1130,
+    "detailPublishDate": "2023-07-07"
+  }
+}

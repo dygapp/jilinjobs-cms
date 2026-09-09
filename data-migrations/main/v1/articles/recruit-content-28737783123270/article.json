@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123270",
+    "contentId": "28737783123270",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123270"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省对失地农民“零就业”家庭实施就业援助",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省对失地农民“零就业”家庭实施就业援助</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 从吉林省劳动和社会保障厅了解到，２００８年吉林省将着力巩固已经取得的城镇\"零就业\"家庭就业援助成果，并进一步加大援助力度，首次把农村失地农民\"零就业\"家庭成员纳为就业援助对象。 </font></p> <p><font size=\"2\">　　吉林省\"２００８年就业援助月\"活动于１月４日正式启动，此次就业援助对象的范围比以往更加拓展，除\"４０５０\"人员、城镇\"零就业\"家庭成员、享受城市居民最低生活保障人员、登记失业６个月以上人员及复员转业退役军人和残疾人等，农村失地农民\"零就业\"家庭成员也被纳为援助对象。 </font></p> <p><font size=\"2\">　　据吉林省就业服务局再就业处工作人员介绍，在城市化进程中，越来越多的农民因土地被征用而失去衣食来源，很多失去土地的农民由于劳动技能等多方面能力的欠缺不易找到稳定工作，因此吉林省决定对这一群体给予就业援助。 </font></p> <p><font size=\"2\">　　据悉，吉林省将对就业援助对象实施就业服务援助、政策落实援助、公益岗位援助、技能培训援助、资金扶持援助和生活保障援助，并对每位有需要的就业援助对象实行专人帮扶和\"一对一\"的职业指导。（记者姚湜）<br>&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "e46b7045877f6eee11266f86cb222c36d1429324ec19bac913b4028f95a8bd64",
+  "evidence": {
+    "listPage": 58,
+    "listTitle": "吉林省对失地农民“零就业”家庭实施就业援助",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 575,
+    "detailPublishDate": "2009-04-04"
+  }
+}

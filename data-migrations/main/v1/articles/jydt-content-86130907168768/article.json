@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86130907168768",
+    "contentId": "86130907168768",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86130907168768"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林交通职业技术学院为毕业生提供全方位多角度就业服务",
+    "source": "吉林交通职业技术学院",
+    "publishDate": "2022-04-12",
+    "bodyHtml": "\n                        <p>受疫情影响，从3月11日开始，吉林交通职业技术学院招生就业处第一时间启动工作预案，利用“云就业”平台召开线上就业招聘会，第一场已于3月15日结束，共99家企业参加，提供就业岗位487个。同时学校启动就业桥, 为学生提供考研、考公、考事业编、参军、考证、留学、找工作等多角度、全方位的就业指导服务。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"376\" src=\"migration-resource://684d98f0be34596fb0518fa4e8326beb104b65b6d43d653489499b24fd948eef\" width=\"740\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"472\" src=\"migration-resource://eecffbd40181363f3256665590053a1603decef5757a4835148dc81c530797ad\" width=\"471\"></p>\n\n<p>学校招生就业宣传工作已全部转为线上，由各学院老师和学生志愿者组成的9个QQ咨询群全天候为考生、家长和企业提供服务。利用新媒体精准推送招生就业宣传片，在不到一周的时间里，抖音播放量超过25万，微信视频号播放量1.8万。</p>\n\n<p>下一步，学校将召开6场线上招聘会，为毕业生提供充足、优质的企业和岗位。</p>\n\n<p><strong>（吉林交通职业技术学院 李丽娜）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/e03c204c-7fdd-4b2f-aace-290ec2589d13.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/e03c204c-7fdd-4b2f-aace-290ec2589d13.jpg",
+      "token": "migration-resource://684d98f0be34596fb0518fa4e8326beb104b65b6d43d653489499b24fd948eef",
+      "snapshotPath": "assets/684d98f0be34596fb0518fa4e8326beb104b65b6d43d653489499b24fd948eef.jpg",
+      "sha256": "684d98f0be34596fb0518fa4e8326beb104b65b6d43d653489499b24fd948eef",
+      "contentType": "image/jpeg",
+      "sizeBytes": 32547
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/8933b3d7-44e0-41d6-b088-2f6ac8a60ce3.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/8933b3d7-44e0-41d6-b088-2f6ac8a60ce3.jpg",
+      "token": "migration-resource://eecffbd40181363f3256665590053a1603decef5757a4835148dc81c530797ad",
+      "snapshotPath": "assets/eecffbd40181363f3256665590053a1603decef5757a4835148dc81c530797ad.jpg",
+      "sha256": "eecffbd40181363f3256665590053a1603decef5757a4835148dc81c530797ad",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67380
+    }
+  ],
+  "sourceFingerprint": "311966f72087dfaa4340ed0dc046fe9f018f2fa540e95331a868dc4d0475740d",
+  "evidence": {
+    "listPage": 124,
+    "listTitle": "吉林交通职业技术学院为毕业生提供全方位多角度就业服务",
+    "listPublishDate": "2022-04-12",
+    "sourceOrder": 1236,
+    "detailPublishDate": "2022-04-12"
+  }
+}

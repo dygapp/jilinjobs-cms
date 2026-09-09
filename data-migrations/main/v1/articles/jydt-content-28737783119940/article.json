@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119940",
+    "contentId": "28737783119940",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119940"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省举办高校就业指导课程教学培训班",
+    "source": "",
+    "publishDate": "2017-05-11",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省举办高校就业指导课程教学培训班</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2017-5-11 14:02:07</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"line-height: 40px; text-indent: 40px;\"><span style=\"font-family: 宋体; font-size: 20px;\">5月8日-10日，省高校毕业生就业指导中心与万学教育科技集团联合举办“高校就业指导课程教学培训班”，来自全省30所高校60名从事就业指导课程教学工作的一线教师参加了培训。</span></p><p style=\"line-height: 40px; text-indent: 40px;\"><span style=\"font-family: 宋体; font-size: 20px;\">课程由万学教育集团培训总监魏宏宇、高级培训经理张婧竹、通过对职业发展全程精细规划、影响择业的社会因素与自我因素分析、行业针对性就业指导、企业纵向认知深度解析、职能部门运作原理深度解析、职业规划咨询模拟指导、求职简历制作流程指导、投递方案解析、修改实战演练、单人面试资历展现、技巧提升指导、形象礼仪优化指导和团队面试特点、面试流程认知、面试角色分析、面试解题思路、面试技巧解析及面试模拟点评演练等内容进行深入讲解。</span></p><p style=\"line-height: 40px; text-indent: 40px;\"><span style=\"font-family: 宋体; font-size: 20px;\">通过深度研究89个行业近2000名典型企业职能部门资深管理者、300余名劣势背景成功进入顶级企业的职场精英所开发的高端辅导项目。课程研发专家组系统而深层地汇集提炼与研究剖析了全球500强企业、上千家著名企业和优秀实力企业招聘应届大学生的全套核心流程与深层评测规则，从而能够大幅度提升大学生就业求职能力、就业成功率与就业品质。</span></p><p style=\"line-height: 40px; text-indent: 40px;\"><span style=\"font-family: 宋体; font-size: 20px;\">培训结束,学员们纷纷表示，此次课程设计实用性、操作性强，使大家掌握了就业指导的本质内涵，能够有效结合自身优势和资源，进行更切合学生实际需求的就业指导，充分利用所学创造性的开展工作。</span></p><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"5.8-5.10.JPG\" src=\"migration-resource://e686af612c0f20e0aa343d531a04502add0d70cc1d968b1b919621e3cdacf18c\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363667490993750004817646.JPG",
+      "originalReference": "/chistory/cms/imgs/6363667490993750004817646.JPG",
+      "token": "migration-resource://e686af612c0f20e0aa343d531a04502add0d70cc1d968b1b919621e3cdacf18c",
+      "snapshotPath": "assets/e686af612c0f20e0aa343d531a04502add0d70cc1d968b1b919621e3cdacf18c.jpg",
+      "sha256": "e686af612c0f20e0aa343d531a04502add0d70cc1d968b1b919621e3cdacf18c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 125524
+    }
+  ],
+  "sourceFingerprint": "9165731a61c322ada106cd51d29f192bb20de71e50b30327893bb924f6209a41",
+  "evidence": {
+    "listPage": 150,
+    "listTitle": "我省举办高校就业指导课程教学培训班",
+    "listPublishDate": "2017-05-11",
+    "sourceOrder": 1497,
+    "detailPublishDate": "2017-05-11"
+  }
+}

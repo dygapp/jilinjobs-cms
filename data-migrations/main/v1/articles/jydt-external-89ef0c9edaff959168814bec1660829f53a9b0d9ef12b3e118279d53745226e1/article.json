@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:89ef0c9edaff959168814bec1660829f53a9b0d9ef12b3e118279d53745226e1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/seq01BMGaUDoRturXl8Dng",
+    "url": "https://mp.weixin.qq.com/s/seq01BMGaUDoRturXl8Dng"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林动画学院召开校务会扩大会议 全方位部署、全力推进2026届毕业生就业工作",
+    "source": "",
+    "publishDate": "2025-12-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/seq01BMGaUDoRturXl8Dng"
+  },
+  "resources": [],
+  "sourceFingerprint": "b22d8cbf8fa76e978c020b21c233a2184d423a3d3f03b43b267be981a184445c",
+  "evidence": {
+    "listPage": 57,
+    "listTitle": "吉林动画学院召开校务会扩大会议 全方位部署、全力推进2026届毕业生就业工作",
+    "listPublishDate": "2025-12-01",
+    "sourceOrder": 564
+  }
+}

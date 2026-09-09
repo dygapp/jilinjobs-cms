@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:410fd8ce519cb8ebd4e72865a2d1dd53c034bcd852948ddb89104c0d80c7aeed",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/QeiJTt4OZeKLW8C9OYQN-w",
+    "url": "https://mp.weixin.qq.com/s/QeiJTt4OZeKLW8C9OYQN-w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学举办“校协联动 共育未来”书法艺术未来人才双选会暨“社会实践导师”受聘仪式",
+    "source": "",
+    "publishDate": "2026-05-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/QeiJTt4OZeKLW8C9OYQN-w"
+  },
+  "resources": [],
+  "sourceFingerprint": "f90210281a6a0b991742c87b6e7c3b9e61e4dbd142ff7c22597fc402737ad7ee",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "吉林建筑大学举办“校协联动 共育未来”书法艺术未来人才双选会暨“社会实践导师”受聘仪式",
+    "listPublishDate": "2026-05-07",
+    "sourceOrder": 209
+  }
+}

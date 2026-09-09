@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120254",
+    "contentId": "28737783120254",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120254"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "杭州市：将建见习基地 多项措施帮大学生就业创业",
+    "source": "",
+    "publishDate": "2009-04-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">杭州市：将建见习基地　多项措施帮大学生就业创业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-6 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 今年，杭州市将建立100多家大学生见习训练基地（以下简称见习基地），以提高大学生就业竞争能力，帮助大学生顺利就业。同时，采取政府补贴形式，3年内每年确保5000名、力争1万名杭州市区生源和在杭高校的大学生参加见习训练。</font></p> <p><font size=\"2\">　　杭州市确定的见习对象包括杭州市区生源的应届毕业生、离校两年内未就业的高校毕业生，以及其他在杭全日制普通高校的应届毕业生。见习期为3至6个月，其中杭州市区生源的大学生见习期满仍未实现就业的，见习期可延长至一年。大学生见习期间，每月将给予杭州市区最低月工资标准70％的生活补贴；每人每半年50元的综合商业保险补贴。</font></p> <p><font size=\"2\">　　为鼓励见习基地提供更多见习岗位，杭州市政府将对见习基地给予训练经费补贴，其中专业技术岗位为每人每月400元。见习结束后，见习基地（除事业单位外）留用杭州市区生源的见习学员，与其签订一年以上劳动合同并缴纳社会保险的，还将给予每人1000元的一次性留用奖励。</font></p> <p><font size=\"2\">　　杭州还将实施高校毕业生到企业就业计划、事业单位招聘高校毕业生计划、农村和社区招聘高校毕业生计划等。对民营人才中介服务机构、各类职业介绍机构，每成功介绍1名杭州生源离校未就业毕业生就业的，给予100元补贴；对劳动密集型小企业招用未就业的大学毕业生达到一定比例的，给予最高200万元的小额担保贷款；对大学生创办企业的，将减免工商注册、会计师事务所验资和银行开户等费用。</font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "a1d4782dbd48548196d7f3825cf0037a1b89bc383268e7f4aef4b20289b1308e",
+  "evidence": {
+    "listPage": 182,
+    "listTitle": "杭州市：将建见习基地 多项措施帮大学生就业创业",
+    "listPublishDate": "2009-04-06",
+    "sourceOrder": 1814,
+    "detailPublishDate": "2009-04-06"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:eca40797bebfdc0476b5741f3b3e44907276c7a54596acefc7fbf590a0b4f2d7",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/gDqt0J70nSTuP-2fx46oaQ",
+    "url": "https://mp.weixin.qq.com/s/gDqt0J70nSTuP-2fx46oaQ"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "丁薛祥在全国高校毕业生等青年就业创业工作视频会议上强调 坚持把高校毕业生等青年群体就业作为重中之重 确保青年就业水平总体平稳",
+    "source": "",
+    "publishDate": "2025-04-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gDqt0J70nSTuP-2fx46oaQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "5e87ca13a528db762a0403be56f5cb3686168dc2ee0a94ebc29312ad112abe5f",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "丁薛祥在全国高校毕业生等青年就业创业工作视频会议上强调 坚持把高校毕业生等青年群体就业作为重中之重 确保青年就业水平总体平稳",
+    "listPublishDate": "2025-04-03",
+    "sourceOrder": 49
+  }
+}

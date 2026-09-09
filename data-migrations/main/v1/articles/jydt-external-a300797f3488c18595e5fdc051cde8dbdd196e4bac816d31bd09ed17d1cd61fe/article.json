@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a300797f3488c18595e5fdc051cde8dbdd196e4bac816d31bd09ed17d1cd61fe",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/UcB1J1izNRtMxuO9HzCmvw",
+    "url": "https://mp.weixin.qq.com/s/UcB1J1izNRtMxuO9HzCmvw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院赴苏州多家企业考察调研",
+    "source": "",
+    "publishDate": "2025-12-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/UcB1J1izNRtMxuO9HzCmvw"
+  },
+  "resources": [],
+  "sourceFingerprint": "eb09e9c79942ad4593516b87d88cd7645b487819497f76270895c039023fd6f4",
+  "evidence": {
+    "listPage": 54,
+    "listTitle": "长春人文学院赴苏州多家企业考察调研",
+    "listPublishDate": "2025-12-18",
+    "sourceOrder": 531
+  }
+}

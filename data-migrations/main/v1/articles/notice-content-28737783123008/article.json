@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783123008",
+    "contentId": "28737783123008",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123008"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办“2011年全国旅游服务行业与高校毕业生网上招聘周”活动的通知",
+    "source": "",
+    "publishDate": "2011-08-16",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办“2011年全国旅游服务行业与高校毕业生网上招聘周”活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-8-16 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://6943075f444cf3b16c3b9584950763f6290db4625ad12155bc24abd68779ae1f\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://599cf3745e3edf7cdfc920c9b2288e9f03dfea9f96aa46c2670885af24b2dae7\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://b13ace8f34d58803cf625643e805cc96e95fe9e9da0759c0d76161ceb3de57eb\"></p> <p align=\"center\">&nbsp;</p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110816125155608.jpg",
+      "originalReference": "/chistory/cms/imgs/20110816125155608.jpg",
+      "token": "migration-resource://6943075f444cf3b16c3b9584950763f6290db4625ad12155bc24abd68779ae1f",
+      "snapshotPath": "assets/6943075f444cf3b16c3b9584950763f6290db4625ad12155bc24abd68779ae1f.jpg",
+      "sha256": "6943075f444cf3b16c3b9584950763f6290db4625ad12155bc24abd68779ae1f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 87316
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110816125250530.jpg",
+      "originalReference": "/chistory/cms/imgs/20110816125250530.jpg",
+      "token": "migration-resource://599cf3745e3edf7cdfc920c9b2288e9f03dfea9f96aa46c2670885af24b2dae7",
+      "snapshotPath": "assets/599cf3745e3edf7cdfc920c9b2288e9f03dfea9f96aa46c2670885af24b2dae7.jpg",
+      "sha256": "599cf3745e3edf7cdfc920c9b2288e9f03dfea9f96aa46c2670885af24b2dae7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 73364
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110816125259711.jpg",
+      "originalReference": "/chistory/cms/imgs/20110816125259711.jpg",
+      "token": "migration-resource://b13ace8f34d58803cf625643e805cc96e95fe9e9da0759c0d76161ceb3de57eb",
+      "snapshotPath": "assets/b13ace8f34d58803cf625643e805cc96e95fe9e9da0759c0d76161ceb3de57eb.jpg",
+      "sha256": "b13ace8f34d58803cf625643e805cc96e95fe9e9da0759c0d76161ceb3de57eb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 62832
+    }
+  ],
+  "sourceFingerprint": "f0e4237bf4bbd7f444f50313ee1ce76990d6bae208f72c125bce793207f1372e",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "关于举办“2011年全国旅游服务行业与高校毕业生网上招聘周”活动的通知",
+    "listPublishDate": "2011-08-16",
+    "sourceOrder": 429,
+    "detailPublishDate": "2011-08-16"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:051a58749267726bbef51803a37196e11782f9881dd2625d22c0c47f285e49d2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/xwdt/1050.jhtml",
+    "url": "https://job.ccit.edu.cn/xwdt/1050.jhtml"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院校领导带队赴白城开展访企拓岗及“百校对百县”调研活动",
+    "source": "",
+    "publishDate": "2026-05-13",
+    "bodyHtml": "",
+    "externalUrl": "https://job.ccit.edu.cn/xwdt/1050.jhtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "a34dbc42fb35900016d6638facfc368609c8f73fe4c8899db312caac00bca806",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "长春工程学院校领导带队赴白城开展访企拓岗及“百校对百县”调研活动",
+    "listPublishDate": "2026-05-13",
+    "sourceOrder": 192
+  }
+}

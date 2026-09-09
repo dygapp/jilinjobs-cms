@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120558",
+    "contentId": "28737783120558",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120558"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林师范大学举办2021届毕业生 供需洽谈会",
+    "source": "信息部",
+    "publishDate": "2020-11-20",
+    "bodyHtml": "\n                        \n\n\n\n\n<p>11月7日，“吉林师范大学2021届毕业生供需洽谈会”在学校体育馆举行。吉林省高等学校毕业生就业指导中心主任唐洪丰、校党委副书记刘万民到会指导，针对岗位需求、人才培养等方面与用人单位和毕业生进行亲切交流。</p>\n<p>本次供需洽谈会得到了省高等学校毕业生就业指导中心的指导，在严格落实疫情防控要求的同时，又最大限度为用人单位和学生提供便利。现场共有60家优质用人单位参会，涉及教育、金融、信息技术、IT、商业服务、房地产等多个行业领域，总计提供就业岗位近6000个，吸引校内2000余名学生参加，达成初步就业意向约500人，有10余家用人单位与学校达成就业实践基地方面的合作意向。除招聘展位外，供需洽谈会现场设立“就业指导咨询台”，同步举办“榜样吉师事迹展”，打造招聘会现场“以行导人、以情育人”新场域。</p>\n<p>毕业生供需洽谈会的举办，标志着2021届毕业生就业工作全面展开，我校将继续举办各种类型的校园招聘活动，助力学生实现更高质量更充分就业。</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "c95c71fbd2f1785ad14b2f00ac7c0f2533c55cc56bc798ab1f1d1fe9e6b9a239",
+  "evidence": {
+    "listPage": 139,
+    "listTitle": "吉林师范大学举办2021届毕业生 供需洽谈会",
+    "listPublishDate": "2020-11-20",
+    "sourceOrder": 1389,
+    "detailPublishDate": "2020-11-20"
+  }
+}

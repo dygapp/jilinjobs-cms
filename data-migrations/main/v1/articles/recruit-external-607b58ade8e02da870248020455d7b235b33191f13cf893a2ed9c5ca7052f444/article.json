@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:607b58ade8e02da870248020455d7b235b33191f13cf893a2ed9c5ca7052f444",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/XrQ6YalPD9YgXIoUklY1YQ",
+    "url": "https://mp.weixin.qq.com/s/XrQ6YalPD9YgXIoUklY1YQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“千校万企供需对接会”（东北地区专场）暨东北地区2025届高校毕业生人才双选会即将启幕",
+    "source": "",
+    "publishDate": "2025-05-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/XrQ6YalPD9YgXIoUklY1YQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "c4e8f831326516157936cfa428192fdc27a268bb365b5224c3962d5f1cd909c6",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "“千校万企供需对接会”（东北地区专场）暨东北地区2025届高校毕业生人才双选会即将启幕",
+    "listPublishDate": "2025-05-20",
+    "sourceOrder": 151
+  }
+}

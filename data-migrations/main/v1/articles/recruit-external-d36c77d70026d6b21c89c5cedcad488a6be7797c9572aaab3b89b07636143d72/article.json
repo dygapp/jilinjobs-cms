@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:d36c77d70026d6b21c89c5cedcad488a6be7797c9572aaab3b89b07636143d72",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/oA17AdPq2hEMU2Elw_mpvw",
+    "url": "https://mp.weixin.qq.com/s/oA17AdPq2hEMU2Elw_mpvw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "邀请函｜东北电力大学2027届毕业生秋季校园招聘活动邀请函",
+    "source": "",
+    "publishDate": "2026-08-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/oA17AdPq2hEMU2Elw_mpvw"
+  },
+  "resources": [],
+  "sourceFingerprint": "e78ecbc19f669c9eb2d8fa4c6c39d5be96d4a10b86f19bf6a355a4f2e31f1adc",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "邀请函｜东北电力大学2027届毕业生秋季校园招聘活动邀请函",
+    "listPublishDate": "2026-08-31",
+    "sourceOrder": 18
+  }
+}

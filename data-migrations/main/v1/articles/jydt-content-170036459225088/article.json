@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:170036459225088",
+    "contentId": "170036459225088",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=170036459225088"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "北京：扩大岗位供给促高校毕业生就业",
+    "source": "",
+    "publishDate": "2023-07-25",
+    "bodyHtml": "\n                        <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 2023届北京高校毕业生预计28.5万人，同比增加1.7万，毕业生规模创历史新高。从北京市教委获悉，为保障2023届高校毕业生顺利就业，市教委实施十大行动计划，截至目前共召开双选会393场，千方百计扩大岗位供给，帮助毕业生们找到匹配度高的岗位。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 北京市教委高校学生处副处长吴缨介绍，疫情等多种因素叠加，给2023届高校毕业生就业带来诸多不确定性。为此，北京市教委通过政校企联合拓岗行动、基层就业引导行动、困难群体就业援助行动、毕业生求职助航行动、创业带动就业扶持行动等十大行动，为毕业生就业“保驾护航”。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 据悉，为挖掘市场潜力、扩大岗位供给，去年下半年以来，北京市教委主动与各地政府相关部门对接，为地方发展提供人才支持。同时，承办全国“百城万企”民企高校携手促就业行动，推动30所北京高校与60家企业签订合作协议。此外，还组织了54所在京高校赴广东深圳、四川绵阳等地走访企业，拓展岗位，签订战略合作协议。北京还遴选33个市级就业指导名师工作室、34门就业指导金课和185家市级毕业生职场体验基地，指导高校做好家校联动，共同帮助毕业生积极就业。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; “我们鼓励创业，促进以创业带动就业。”吴缨说，在创新创业方面，目前北京打造市级创新创业工作体系，创业孵化面积已超过8万平方米。今年3月，北京还启动第二届“京彩大创”北京大学生创新创业大赛，遴选优秀大学生创业团队入驻市级大学生创业园，并提供全方位创业孵化服务。去年，北京市级大学生创业园在孵企业融资3315万元，营收达4.3亿元。</span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "9fa0cf1b7d5f57dc7b71c3704d445900f19dcf4098116e1bd622a12e8f6c7269",
+  "evidence": {
+    "listPage": 112,
+    "listTitle": "北京：扩大岗位供给促高校毕业生就业",
+    "listPublishDate": "2023-07-25",
+    "sourceOrder": 1117,
+    "detailPublishDate": "2023-07-25"
+  }
+}

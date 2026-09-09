@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:778f936ad2080b2c852ffe316c1ebf51daa094946b2ef62eadde9992e26d68f7",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/ww/web/cms/2c9a85868fe3a96e01900f87b2010316/cmsarticledetail.html",
+    "url": "https://www.jlrc.com.cn/ww/web/cms/2c9a85868fe3a96e01900f87b2010316/cmsarticledetail.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2024年“一起益企”人才供需对接服务月活动6月11开始",
+    "source": "",
+    "publishDate": "2024-06-10",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlrc.com.cn/ww/web/cms/2c9a85868fe3a96e01900f87b2010316/cmsarticledetail.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "878d9a1d10ace0d3c5a2b8807f00c46e035fb7e1e9897fa360583a297b3a6f68",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "2024年“一起益企”人才供需对接服务月活动6月11开始",
+    "listPublishDate": "2024-06-10",
+    "sourceOrder": 267
+  }
+}

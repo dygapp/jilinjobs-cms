@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:423a29f91ce2edcc775c850bffebcb9ab769dd9891da36c9fdd2d9970ba73830",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/0Aag5Bki8jYp9fCygVPBrg",
+    "url": "https://mp.weixin.qq.com/s/0Aag5Bki8jYp9fCygVPBrg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院与华为技术有限公司举行产业学院建设合作洽谈会",
+    "source": "",
+    "publishDate": "2026-08-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/0Aag5Bki8jYp9fCygVPBrg"
+  },
+  "resources": [],
+  "sourceFingerprint": "9e9d747d174b068500d4ba420eb646644a740fb53a5369777bf53b4ad6b49466",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "长春科技学院与华为技术有限公司举行产业学院建设合作洽谈会",
+    "listPublishDate": "2026-08-17",
+    "sourceOrder": 15
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122782",
+    "contentId": "28737783122782",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122782"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于做好2017年度《中国大学生就业》杂志征订工作的通知",
+    "source": "",
+    "publishDate": "2016-10-24",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于做好2017年度《中国大学生就业》杂志征订工作的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2016-10-24 16:25:49</span></p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://e3f5a9079eb4b2758438812678ad9cb6c1712f95563d2d417608284cf9ad0c66\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://8c7b2666709c9dd865c166de5f9b662ef824511da6702ae248a3eddbf47053a5\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://d18e131ead4f4f0244348bf1a9b3fd2633a6ba3c09a8d2f72d15fb5b22b6fb7f\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://b444f1da02db6d3eb69c0b8a092cd8a72911613bc4db007866b81e237aadaddd\"></p>\n\n<p>&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=2ab4c148-467c-46bc-9430-e0b00bab85aa\">附件2：订数统计表（2017年度）.doc</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361315594023437508408736.jpg",
+      "originalReference": "/chistory/cms/imgs/6361315594023437508408736.jpg",
+      "token": "migration-resource://e3f5a9079eb4b2758438812678ad9cb6c1712f95563d2d417608284cf9ad0c66",
+      "snapshotPath": "assets/e3f5a9079eb4b2758438812678ad9cb6c1712f95563d2d417608284cf9ad0c66.jpg",
+      "sha256": "e3f5a9079eb4b2758438812678ad9cb6c1712f95563d2d417608284cf9ad0c66",
+      "contentType": "image/jpeg",
+      "sizeBytes": 116862
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361315594159375003894582.jpg",
+      "originalReference": "/chistory/cms/imgs/6361315594159375003894582.jpg",
+      "token": "migration-resource://8c7b2666709c9dd865c166de5f9b662ef824511da6702ae248a3eddbf47053a5",
+      "snapshotPath": "assets/8c7b2666709c9dd865c166de5f9b662ef824511da6702ae248a3eddbf47053a5.jpg",
+      "sha256": "8c7b2666709c9dd865c166de5f9b662ef824511da6702ae248a3eddbf47053a5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 86963
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361292318503125007900862.jpg",
+      "originalReference": "/chistory/cms/imgs/6361292318503125007900862.jpg",
+      "token": "migration-resource://d18e131ead4f4f0244348bf1a9b3fd2633a6ba3c09a8d2f72d15fb5b22b6fb7f",
+      "snapshotPath": "assets/d18e131ead4f4f0244348bf1a9b3fd2633a6ba3c09a8d2f72d15fb5b22b6fb7f.jpg",
+      "sha256": "d18e131ead4f4f0244348bf1a9b3fd2633a6ba3c09a8d2f72d15fb5b22b6fb7f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 91652
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361292318889062508254450.jpg",
+      "originalReference": "/chistory/cms/imgs/6361292318889062508254450.jpg",
+      "token": "migration-resource://b444f1da02db6d3eb69c0b8a092cd8a72911613bc4db007866b81e237aadaddd",
+      "snapshotPath": "assets/b444f1da02db6d3eb69c0b8a092cd8a72911613bc4db007866b81e237aadaddd.jpg",
+      "sha256": "b444f1da02db6d3eb69c0b8a092cd8a72911613bc4db007866b81e237aadaddd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84121
+    }
+  ],
+  "sourceFingerprint": "598f117d03b82746a515783271e628f78d8ee32c0af38f6c600cc051d89ac240",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "关于做好2017年度《中国大学生就业》杂志征订工作的通知",
+    "listPublishDate": "2016-10-24",
+    "sourceOrder": 235,
+    "detailPublishDate": "2016-10-24"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:0af489075a976f4acfe404d16800f76c76ee168062318e8ce69ea7ded5a180a4",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/stage/v5/59drx/531660071",
+    "url": "https://b.xiumi.us/stage/v5/59drx/531660071"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗，‘就’在吉林”长春光华学院2024届毕业生春季校园招聘会邀请函",
+    "source": "",
+    "publishDate": "2024-05-16",
+    "bodyHtml": "",
+    "externalUrl": "https://b.xiumi.us/stage/v5/59drx/531660071"
+  },
+  "resources": [],
+  "sourceFingerprint": "5d1ecfe7d1e98e5a54b04317c4bf78e2cef2a3e480a509550c18af82ab8d8209",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "“创业奋斗，‘就’在吉林”长春光华学院2024届毕业生春季校园招聘会邀请函",
+    "listPublishDate": "2024-05-16",
+    "sourceOrder": 273
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b2f7b61bc08de39df1d9a5a06788323798047f9b823eb6b3711872350e37aa68",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/973JV3404veT0tcbyZliVw",
+    "url": "https://mp.weixin.qq.com/s/973JV3404veT0tcbyZliVw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化师范学院深化校地合作 搭建人才就业共赢桥梁",
+    "source": "",
+    "publishDate": "2026-03-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/973JV3404veT0tcbyZliVw"
+  },
+  "resources": [],
+  "sourceFingerprint": "e7b0620deaa8ba80644fd20ae6f33b3f19fe1531ec7fcceb4c5b56f2aca9fd77",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "通化师范学院深化校地合作 搭建人才就业共赢桥梁",
+    "listPublishDate": "2026-03-26",
+    "sourceOrder": 363
+  }
+}

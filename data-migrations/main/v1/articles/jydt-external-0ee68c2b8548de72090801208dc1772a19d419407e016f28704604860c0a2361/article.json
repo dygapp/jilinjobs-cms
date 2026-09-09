@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0ee68c2b8548de72090801208dc1772a19d419407e016f28704604860c0a2361",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/YdL9N6bc1sGlDqW9S93uUw",
+    "url": "https://mp.weixin.qq.com/s/YdL9N6bc1sGlDqW9S93uUw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学举办“绘梦未来·职创精彩”2025届毕业生系列招聘活动",
+    "source": "",
+    "publishDate": "2025-05-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/YdL9N6bc1sGlDqW9S93uUw"
+  },
+  "resources": [],
+  "sourceFingerprint": "88c05da431ee06a205516f65339d6a096caac81e8568d315f832a395d170b89e",
+  "evidence": {
+    "listPage": 88,
+    "listTitle": "延边大学举办“绘梦未来·职创精彩”2025届毕业生系列招聘活动",
+    "listPublishDate": "2025-05-21",
+    "sourceOrder": 874
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:353f8175117129a89906d26e4f49d7a5650505e33ed94fa1dfa15913df60cf56",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/cHHG5_-jhPcHv4MBkX5qqQ",
+    "url": "https://mp.weixin.qq.com/s/cHHG5_-jhPcHv4MBkX5qqQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院领导率队赴泰康之家·吉园开展走访调研 并签署校企合作协议",
+    "source": "",
+    "publishDate": "2026-07-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/cHHG5_-jhPcHv4MBkX5qqQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "0d75b6067a397c27dff53d133b18ba8086b7157da987db75bf0c4fc852a515b0",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "长春人文学院领导率队赴泰康之家·吉园开展走访调研 并签署校企合作协议",
+    "listPublishDate": "2026-07-07",
+    "sourceOrder": 55
+  }
+}

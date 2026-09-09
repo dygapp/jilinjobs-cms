@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c2cb4d85dd4d82b557605f74050cea6a14e83c3c2d683c792c53750ed033f253",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/KFbr3pe_A3eJhts64tPUyw",
+    "url": "https://mp.weixin.qq.com/s/KFbr3pe_A3eJhts64tPUyw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春中医药大学党委副书记李磊带队开展访企拓岗调研工作",
+    "source": "",
+    "publishDate": "2026-03-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/KFbr3pe_A3eJhts64tPUyw"
+  },
+  "resources": [],
+  "sourceFingerprint": "2aeb1d98d005c84c33c81ad50983847b21bd0bd45f93bc6fe54029bd9a64dcce",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "长春中医药大学党委副书记李磊带队开展访企拓岗调研工作",
+    "listPublishDate": "2026-03-30",
+    "sourceOrder": 348
+  }
+}

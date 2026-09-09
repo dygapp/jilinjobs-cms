@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120038",
+    "contentId": "28737783120038",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120038"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "湖南选聘千名大学生村官笔试结束 本月内出成绩",
+    "source": "",
+    "publishDate": "2014-06-12",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">湖南选聘千名大学生村官笔试结束 本月内出成绩</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:    发布时间:2014-6-12 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"background: rgb(246, 252, 255); text-align: center; line-height: 28px; margin-top: auto; margin-bottom: auto;\"><strong><span style=\"color: rgb(3, 0, 92); font-family: 宋体; font-size: 20px;\">湖南选聘千名大学生村官笔试结束 本月内出成绩</span></strong></p><p style=\"background: rgb(246, 252, 255); text-align: left;\"><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 12px;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"color: rgb(51, 51, 51); font-family: 宋体; font-size: 12px;\">来源：</span><span style=\"color: rgb(222, 0, 0); font-family: 宋体; font-size: 12px;\">长沙晚报</span></p><p style=\"background: rgb(246, 252, 255); text-align: left; line-height: 24px; margin-top: auto; margin-bottom: auto;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(51, 51, 51); font-family: 宋体;\">&nbsp;</span><span style=\"color: rgb(51, 51, 51); font-family: 宋体;\">　&nbsp;</span><span style=\"color: rgb(51, 51, 51); font-family: 仿宋; font-size: 16px;\">2014</span></span><span style=\"color: rgb(51, 51, 51); font-family: 仿宋; font-size: 16px;\">年湖南省计划选聘1000名高校毕业生到村任职笔试日前结束。此次选聘共有6886人报名，通过审核参加笔试的有4273人。笔试成绩将在本月中下旬公布，面试将于下个月全面展开。　　</span></p><p style=\"background: rgb(246, 252, 255); text-align: left; line-height: 24px; margin-top: auto; margin-bottom: auto;\"><span style=\"color: rgb(51, 51, 51); font-family: 仿宋; font-size: 16px;\">　　根据笔试成绩，分市州按照选聘计划1∶2的比例从笔试成绩在合格线以上的对象中由高分到低分确定面试对象；笔试成绩和面试成绩分别按50%的比例合成综合成绩。　　</span></p><p style=\"background: rgb(246, 252, 255); text-align: left; line-height: 24px; margin-top: auto; margin-bottom: auto;\"><span style=\"color: rgb(51, 51, 51); font-family: 仿宋; font-size: 16px;\">　　与去年相比，今年大学生村官选聘更注意从源头提高选聘质量。选聘对象要求是具备全日制本科及以上学历的应届毕业生，重点选聘中共党员（含预备党员）、学生干部，重点院校以及农村基层急需专业的优秀高校毕业生，同时鼓励高校毕业生回原籍应聘。今年的报考人员中，重点院校和高学历考生比例有所提升。　　</span></p><p style=\"background: rgb(246, 252, 255); text-align: left; line-height: 24px; margin-top: auto; margin-bottom: auto;\"><span style=\"color: rgb(51, 51, 51); font-family: 仿宋; font-size: 16px;\">　　对确定聘用的高校毕业生，由所报考市州的党委组织部根据个人报考志愿和组织统一调配相结合的方式确定分配去向。到村任职的前三个月为试用期，试用合格后，经双向选择，再签订正式合同。聘期原则为3年，为“村级组织特设岗位”人员，系非公务员身份。</span></p><p><span style=\"font-family: 仿宋; font-size: 16px;\">&nbsp;</span></p><p></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "fd34806a56d3bd831624547566af0f91dec206c7cb1c5dd7ce15da6ea82db76f",
+  "evidence": {
+    "listPage": 160,
+    "listTitle": "湖南选聘千名大学生村官笔试结束 本月内出成绩",
+    "listPublishDate": "2014-06-12",
+    "sourceOrder": 1595,
+    "detailPublishDate": "2014-06-12"
+  }
+}

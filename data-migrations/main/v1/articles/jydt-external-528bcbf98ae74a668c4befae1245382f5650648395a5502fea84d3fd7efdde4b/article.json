@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:528bcbf98ae74a668c4befae1245382f5650648395a5502fea84d3fd7efdde4b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/4861.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/4861.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学开展2025年暑假“访企拓岗促就业”专项行动",
+    "source": "",
+    "publishDate": "2025-07-14",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/4861.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "eda77bddc815474466c21160fdbc2fc3447b803b4ce11cb1f364a96fb855e82b",
+  "evidence": {
+    "listPage": 73,
+    "listTitle": "长春工业大学开展2025年暑假“访企拓岗促就业”专项行动",
+    "listPublishDate": "2025-07-14",
+    "sourceOrder": 729
+  }
+}

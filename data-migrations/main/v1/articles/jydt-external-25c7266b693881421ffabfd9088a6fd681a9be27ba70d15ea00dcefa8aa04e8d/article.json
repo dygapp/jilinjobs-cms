@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:25c7266b693881421ffabfd9088a6fd681a9be27ba70d15ea00dcefa8aa04e8d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/V1eC6JEletWR6b8smAFkKg",
+    "url": "https://mp.weixin.qq.com/s/V1eC6JEletWR6b8smAFkKg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力赋能・“职”向辽源 —— 辽源职业技术学院举办服务重点工业企业线下双选会",
+    "source": "",
+    "publishDate": "2025-11-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/V1eC6JEletWR6b8smAFkKg"
+  },
+  "resources": [],
+  "sourceFingerprint": "a823d030b1f74aeb96eb7acda869d44d44c3265d63d997cab2d6213562364cba",
+  "evidence": {
+    "listPage": 63,
+    "listTitle": "聚力赋能・“职”向辽源 —— 辽源职业技术学院举办服务重点工业企业线下双选会",
+    "listPublishDate": "2025-11-04",
+    "sourceOrder": 628
+  }
+}

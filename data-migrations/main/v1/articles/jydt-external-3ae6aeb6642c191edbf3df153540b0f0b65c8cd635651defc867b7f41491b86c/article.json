@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3ae6aeb6642c191edbf3df153540b0f0b65c8cd635651defc867b7f41491b86c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Kq8QFfsWz6AaxMyNs9r97w",
+    "url": "https://mp.weixin.qq.com/s/Kq8QFfsWz6AaxMyNs9r97w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学举办“服务吉林高质量发展”重点群体高校毕业生专场招聘会",
+    "source": "",
+    "publishDate": "2025-11-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Kq8QFfsWz6AaxMyNs9r97w"
+  },
+  "resources": [],
+  "sourceFingerprint": "c929af9bcd4cac154de6b8ec0959a112418562fdf8099c3ddddda3ff9574f3df",
+  "evidence": {
+    "listPage": 61,
+    "listTitle": "北华大学举办“服务吉林高质量发展”重点群体高校毕业生专场招聘会",
+    "listPublishDate": "2025-11-11",
+    "sourceOrder": 602
+  }
+}

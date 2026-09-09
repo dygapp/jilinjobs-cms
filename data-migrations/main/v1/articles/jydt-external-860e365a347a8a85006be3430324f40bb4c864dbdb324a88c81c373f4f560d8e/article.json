@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:860e365a347a8a85006be3430324f40bb4c864dbdb324a88c81c373f4f560d8e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/AMowOAMP-Dph2e-sGRnOrg",
+    "url": "https://mp.weixin.qq.com/s/AMowOAMP-Dph2e-sGRnOrg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化校际合作 拓宽就业渠道 ——吉林艺术学院音乐学院赴长春师范高等专科学校 开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2025-06-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/AMowOAMP-Dph2e-sGRnOrg"
+  },
+  "resources": [],
+  "sourceFingerprint": "c7307cfd8481bf74b5d071db93ab69a2ca60b9f4ca4d1ad2ac8f734216c3f3c4",
+  "evidence": {
+    "listPage": 81,
+    "listTitle": "深化校际合作 拓宽就业渠道 ——吉林艺术学院音乐学院赴长春师范高等专科学校 开展访企拓岗专项行动",
+    "listPublishDate": "2025-06-17",
+    "sourceOrder": 803
+  }
+}

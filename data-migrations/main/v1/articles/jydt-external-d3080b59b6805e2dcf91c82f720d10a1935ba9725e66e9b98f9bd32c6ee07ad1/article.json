@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d3080b59b6805e2dcf91c82f720d10a1935ba9725e66e9b98f9bd32c6ee07ad1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/aXGzIaD70z8x3qYz4bWw8Q",
+    "url": "https://mp.weixin.qq.com/s/aXGzIaD70z8x3qYz4bWw8Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "高校毕业生离校后就业服务哪里找？这个小程序别错过",
+    "source": "",
+    "publishDate": "2025-08-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/aXGzIaD70z8x3qYz4bWw8Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "ea295a170348ded75a56891dd29f83e3804d0e6ff9cdab3f51455181ccffc162",
+  "evidence": {
+    "listPage": 72,
+    "listTitle": "高校毕业生离校后就业服务哪里找？这个小程序别错过",
+    "listPublishDate": "2025-08-18",
+    "sourceOrder": 713
+  }
+}

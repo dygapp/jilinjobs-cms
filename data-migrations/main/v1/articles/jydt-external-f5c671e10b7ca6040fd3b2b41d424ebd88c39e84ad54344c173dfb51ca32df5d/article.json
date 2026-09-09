@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f5c671e10b7ca6040fd3b2b41d424ebd88c39e84ad54344c173dfb51ca32df5d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/detail/news",
+    "url": "https://cczyy.bysjy.com.cn/detail/news?id=1778372&type_id=330"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春中医药大学赴云南省开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-04-20",
+    "bodyHtml": "",
+    "externalUrl": "https://cczyy.bysjy.com.cn/detail/news?id=1778372&type_id=330"
+  },
+  "resources": [],
+  "sourceFingerprint": "7562145684071ec4c8548d98600dd1cee0aaed37f173e87c44003af19cfaf5ec",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "长春中医药大学赴云南省开展访企拓岗专项行动",
+    "listPublishDate": "2026-04-20",
+    "sourceOrder": 278
+  }
+}

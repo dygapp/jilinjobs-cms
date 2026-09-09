@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:915421ef683c87810ffd047cb76f7988dc5c7a56346566b3702565c3e8ea21a1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/_hmwIMjKkKvdM6HpNT_7_A",
+    "url": "https://mp.weixin.qq.com/s/_hmwIMjKkKvdM6HpNT_7_A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务吉林高质量发展 汇聚应用型人才力量——长春建筑学院成功举办2026届毕业生秋季校园双选会",
+    "source": "",
+    "publishDate": "2025-10-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_hmwIMjKkKvdM6HpNT_7_A"
+  },
+  "resources": [],
+  "sourceFingerprint": "b7e1cb88e5ceecfec61025b0b98f2db79131e55660f40e8deb67dc3be8d9fe26",
+  "evidence": {
+    "listPage": 68,
+    "listTitle": "服务吉林高质量发展 汇聚应用型人才力量——长春建筑学院成功举办2026届毕业生秋季校园双选会",
+    "listPublishDate": "2025-10-17",
+    "sourceOrder": 674
+  }
+}

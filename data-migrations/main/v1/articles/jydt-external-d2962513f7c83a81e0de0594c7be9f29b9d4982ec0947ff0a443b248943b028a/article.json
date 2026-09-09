@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d2962513f7c83a81e0de0594c7be9f29b9d4982ec0947ff0a443b248943b028a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/acF-PvG8Z5Xs7D76N9PAnA",
+    "url": "https://mp.weixin.qq.com/s/acF-PvG8Z5Xs7D76N9PAnA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "白城师范学院举办服务吉林高质量发展2025年“吉林西部+”校地协同创新联盟应用型人才供需洽谈会",
+    "source": "",
+    "publishDate": "2025-06-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/acF-PvG8Z5Xs7D76N9PAnA"
+  },
+  "resources": [],
+  "sourceFingerprint": "18383ea97d67719f542d5f5282587f7ab68dceffbcb6c258c9d0bd29f2643b54",
+  "evidence": {
+    "listPage": 81,
+    "listTitle": "白城师范学院举办服务吉林高质量发展2025年“吉林西部+”校地协同创新联盟应用型人才供需洽谈会",
+    "listPublishDate": "2025-06-17",
+    "sourceOrder": 804
+  }
+}

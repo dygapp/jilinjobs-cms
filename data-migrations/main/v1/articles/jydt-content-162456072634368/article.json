@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:162456072634368",
+    "contentId": "162456072634368",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=162456072634368"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "五部门发文 今年起; 取消就业报到证! 具体可享受哪些便利?",
+    "source": "",
+    "publishDate": "2023-06-16",
+    "bodyHtml": "\n                        <p><img alt=\"\" height=\"9969\" src=\"migration-resource://8d366f2fac4ea796ccdeb3be17c703e03976881896b2dbfdb5125d3fde80423c\" width=\"1094\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-06-16/2cc35cf4-6dfe-42d1-90f6-32262bdd95e1.png",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-06-16/2cc35cf4-6dfe-42d1-90f6-32262bdd95e1.png",
+      "token": "migration-resource://8d366f2fac4ea796ccdeb3be17c703e03976881896b2dbfdb5125d3fde80423c",
+      "snapshotPath": "assets/8d366f2fac4ea796ccdeb3be17c703e03976881896b2dbfdb5125d3fde80423c.png",
+      "sha256": "8d366f2fac4ea796ccdeb3be17c703e03976881896b2dbfdb5125d3fde80423c",
+      "contentType": "image/png",
+      "sizeBytes": 1145585
+    }
+  ],
+  "sourceFingerprint": "defaf5b2b9b0c0af11db0960b85e728a021c3c9797217679719119f247d15c43",
+  "evidence": {
+    "listPage": 114,
+    "listTitle": "五部门发文 今年起; 取消就业报到证! 具体可享受哪些便利?",
+    "listPublishDate": "2023-06-16",
+    "sourceOrder": 1139,
+    "detailPublishDate": "2023-06-16"
+  }
+}

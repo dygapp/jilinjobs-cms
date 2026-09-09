@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:989ca8d8b14bba8489b008b5e84f32b1ccb36927bf3f3382d90e1616ea87fccf",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/H6PoOGXv8-ZFfvXBv80fQg",
+    "url": "https://mp.weixin.qq.com/s/H6PoOGXv8-ZFfvXBv80fQg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企携手兴农，青春逐梦同行 || 长春职业技术大学现代农学院举办2027届毕业生校园双选会",
+    "source": "",
+    "publishDate": "2026-05-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/H6PoOGXv8-ZFfvXBv80fQg"
+  },
+  "resources": [],
+  "sourceFingerprint": "420dc7cce71956d7f0c9fcf99243ef5361cba6c2376274f0278a740b002bea5d",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "校企携手兴农，青春逐梦同行 || 长春职业技术大学现代农学院举办2027届毕业生校园双选会",
+    "listPublishDate": "2026-05-06",
+    "sourceOrder": 211
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ecb8850ab46979cff6625330722a7a9b4bcf01f8d3fb161dbe8895dc95d5757c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/lgxw/f0b0ef33e99a4dddb535a40b72dde816.htm",
+    "url": "https://www.cust.edu.cn/lgxw/f0b0ef33e99a4dddb535a40b72dde816.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "张恩惠在长春理工大学作宣讲报告向广大学子发出诚挚邀约：选择长春 创业长春 扎根长春 共创人与城双向奔赴相互成就的美好未来",
+    "source": "",
+    "publishDate": "2024-04-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.cust.edu.cn/lgxw/f0b0ef33e99a4dddb535a40b72dde816.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "e79925e3d742339e916c47df92003ff132aca2e8ca75098dfe0fcf92c005c405",
+  "evidence": {
+    "listPage": 110,
+    "listTitle": "张恩惠在长春理工大学作宣讲报告向广大学子发出诚挚邀约：选择长春 创业长春 扎根长春 共创人与城双向奔赴相互成就的美好未来",
+    "listPublishDate": "2024-04-02",
+    "sourceOrder": 1095
+  }
+}

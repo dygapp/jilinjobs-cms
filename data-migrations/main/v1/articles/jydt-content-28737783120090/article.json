@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120090",
+    "contentId": "28737783120090",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120090"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林科技职业技术学院成功举办2012届毕业生供需见面会",
+    "source": "",
+    "publishDate": "2011-11-18",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林科技职业技术学院成功举办2012届毕业生供需见面会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-18 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-align:center\"><img border=\"0\" src=\"migration-resource://7f18eb64b89efa3eab571c5e92a60d83e6d104f1ce95cc7945f9ffdf9ada4833\"></p> <p>&nbsp;&nbsp;&nbsp; 2011年11月15日上午，吉林科技职业技术学院举办了2012届毕业生供需见面会，共有108家企业参加，提供就业岗位1600多个。其中，不乏如华晨宝马汽车有限公司、一汽大众发动机制造有限公司、一汽模具制造有限公司和一汽铸造有限公司、吉林粮食集团新吉粮商务会馆有限公司等省内外知名企业。</p> <p>&nbsp;</p> <p style=\"text-align:center\"><img border=\"0\" src=\"migration-resource://00d6d02874f64a1b9c11cd526b4387209ed886cb20e2955a9f221ffdbf6b38c8\"></p> <p>&nbsp;&nbsp;&nbsp; 省高校毕业生就业指导中心郑志宏主任莅临见面会现场，在学院主管就业的张院长陪同下，详细询问了就业岗位、用人单位特点及学生签约等情况。学院毕业生就业指导中心赵宇主任介绍说，吉林科技职业技术学院在与重点企业进行深度合作的同时，建立了两种类型的“冠名订单班”。一种是在大学二年级综合专业设置和企业需求建立以企业考核为基准的“准就业”模式的订单冠名定向输送。另一种是在招生期间，由企业下达委托招生许可或授权，招生录取后，企业进行统一面试，建立贯穿教学周期的订单培养模式。其课程体系设置及部分师资培养，由企业参与并共同编写教材教案，将企业一线实际生产及企业案例编入教学。<br>&nbsp;&nbsp;&nbsp; 学院在新生入学后签订《吉林科技职业技术学院毕业生就业推荐保障性协议》，毕业时由学院负责将毕业生推荐就业上岗。同时还形成完整的就业回访制度，由学院专职就业指导老师回访毕业生在企业的工作生产情况，以及学生在企业实际生产过程中学习到的新工艺、新方法，并将其纳入日常的教学内容。郑主任对此给予了肯定并同时指出，在今后的就业工作中，要进一步推进校企合作，建立完善企业用人信息的收集和整理渠道，加强校际交流合作。</p> <p>&nbsp;</p> <p style=\"text-align:center\"><img border=\"0\" src=\"migration-resource://2f041aaa73957dcc860e79c2777947044a73363257479342955ee809aab0dc83\"></p> <p align=\"center\">招聘会现场</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111118110301751.jpg",
+      "originalReference": "/chistory/cms/imgs/20111118110301751.jpg",
+      "token": "migration-resource://7f18eb64b89efa3eab571c5e92a60d83e6d104f1ce95cc7945f9ffdf9ada4833",
+      "snapshotPath": "assets/7f18eb64b89efa3eab571c5e92a60d83e6d104f1ce95cc7945f9ffdf9ada4833.jpg",
+      "sha256": "7f18eb64b89efa3eab571c5e92a60d83e6d104f1ce95cc7945f9ffdf9ada4833",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84271
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111118110621310.jpg",
+      "originalReference": "/chistory/cms/imgs/20111118110621310.jpg",
+      "token": "migration-resource://00d6d02874f64a1b9c11cd526b4387209ed886cb20e2955a9f221ffdbf6b38c8",
+      "snapshotPath": "assets/00d6d02874f64a1b9c11cd526b4387209ed886cb20e2955a9f221ffdbf6b38c8.jpg",
+      "sha256": "00d6d02874f64a1b9c11cd526b4387209ed886cb20e2955a9f221ffdbf6b38c8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84562
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2011111811065265.jpg",
+      "originalReference": "/chistory/cms/imgs/2011111811065265.jpg",
+      "token": "migration-resource://2f041aaa73957dcc860e79c2777947044a73363257479342955ee809aab0dc83",
+      "snapshotPath": "assets/2f041aaa73957dcc860e79c2777947044a73363257479342955ee809aab0dc83.jpg",
+      "sha256": "2f041aaa73957dcc860e79c2777947044a73363257479342955ee809aab0dc83",
+      "contentType": "image/jpeg",
+      "sizeBytes": 73652
+    }
+  ],
+  "sourceFingerprint": "c2eb3d90a907b7c5719734f168438c10c487569271ef7f81a1bd4eea7af8c4bd",
+  "evidence": {
+    "listPage": 165,
+    "listTitle": "吉林科技职业技术学院成功举办2012届毕业生供需见面会",
+    "listPublishDate": "2011-11-18",
+    "sourceOrder": 1645,
+    "detailPublishDate": "2011-11-18"
+  }
+}

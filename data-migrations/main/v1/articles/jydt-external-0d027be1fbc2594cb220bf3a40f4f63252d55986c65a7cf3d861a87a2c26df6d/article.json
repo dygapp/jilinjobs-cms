@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0d027be1fbc2594cb220bf3a40f4f63252d55986c65a7cf3d861a87a2c26df6d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/app/news/shareNewsDetail",
+    "url": "https://www.cailianxinwen.com/app/news/shareNewsDetail?newsid=429969"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省高校汇智“新电商+新服务”财经类毕业生专场招聘会举行",
+    "source": "",
+    "publishDate": "2024-04-01",
+    "bodyHtml": "",
+    "externalUrl": "https://www.cailianxinwen.com/app/news/shareNewsDetail?newsid=429969"
+  },
+  "resources": [],
+  "sourceFingerprint": "1a935b6c9dc60ee219e04e47a3f488c203bf4829cc007645d015bc1b5fc7d794",
+  "evidence": {
+    "listPage": 110,
+    "listTitle": "吉林省高校汇智“新电商+新服务”财经类毕业生专场招聘会举行",
+    "listPublishDate": "2024-04-01",
+    "sourceOrder": 1098
+  }
+}

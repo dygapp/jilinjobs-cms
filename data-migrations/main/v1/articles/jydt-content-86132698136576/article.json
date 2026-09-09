@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86132698136576",
+    "contentId": "86132698136576",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86132698136576"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林师范大学打好“云端”组合拳 就业服务“不断线”",
+    "source": "吉林师范大学",
+    "publishDate": "2022-04-12",
+    "bodyHtml": "\n                        <p>&nbsp;</p>\n\n<p>这场疫情“倒春寒”来势汹汹，但毕业生就业工作须臾不容停歇。吉林师范大学积极应对、科学谋划、主动作为，第一时间制定《吉林师范大学疫情防控形势下就业工作方案》，优化工作方式和流程，为毕业生和用人单位持续不断提供全面细致的服务，确保疫情防控期间服务“不断线”。</p>\n\n<p>“云招聘”，凝心聚力搭平台。发布《吉林师范大学开展线上系列招聘活动的通知》，主动对接用人单位，为毕业生和用人单位搭建信息沟通和双向选择的平台，深圳市光明区教育局、梨树县教育局、北京康特瑞科统计科技有限责任公司等10余场线上专场宣讲会成功举办，“2022民办教育春季校园巡回线上招聘会”“2022长三角师资网络招聘会”正式开启，“奋斗有我 ‘就’在吉林吉师校友‘薪’火相传暨2022吉林师范大学春季线上招聘会”也在筹备之中。</p>\n\n<p>“云课堂”，教学相长提质量。《大学生职业发展与就业指导》75个教学班转战线上，通过“钉钉”“腾讯会议”等多平台开展教学，师生以屏为媒，共赴“云之约”。同时，为满足学生个性化需求，与北森合作推出空中就业课堂，学生可随时随地免费学习，即时、方便、高效、实用。此外，在学生中开展疫情下就业指导调查问卷活动，整理学生反馈的有代表性的40个重点问题，提供给就业指导教师，结合线上教学为学生排疑解惑，全力保障线上课堂秩序与教学效果。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"450\" src=\"migration-resource://05e8f3778a594044e603d0bb2050dfd6b4ba4a8e7d688eb6fd746db170d21e1d\" width=\"800\"></p>\n\n<p>“云咨询”， 精准指导“一对一”。发布《关于疫情防控期间开放线上生涯咨询服务的通知》，组建14人咨询师团队，为全校学生特别是应届毕业生在疫情防控期间提供快捷、高效、高质量的生涯咨询与就业指导,目前通过QQ、微信和腾讯会议等方式已为30多名同学提供“一对一”咨询指导，学生反响良好。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"385\" src=\"migration-resource://e76aa4097cfa4f9c79ff4c792c2f38d9600d50e2f9baf56185298a9ca74ec3e7\" width=\"494\"></p>\n\n<p>“云学习”，强化素质助提升。要给学生一滴水，教师需有长流水。疫情防控期间，学校本着“疫情防控不放松，事业发展要抓紧”的原则，组织就业指导教师线上参加北森系列公益课程、新精英生涯直播等学习，学习后教师们通过交流群谈心得、讲收获、说问题、享资源，不断提高自身教学能力和学术水平。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"442\" src=\"migration-resource://68caba8913bc29af775ad5cb689ba8710af994620e41ba1d7cfa127401c22007\" width=\"567\"></p>\n\n<p><strong>（吉林师范大学 朱烁）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/91de1635-6d8d-43d3-8525-1e650f0cc1bf.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/91de1635-6d8d-43d3-8525-1e650f0cc1bf.jpg",
+      "token": "migration-resource://05e8f3778a594044e603d0bb2050dfd6b4ba4a8e7d688eb6fd746db170d21e1d",
+      "snapshotPath": "assets/05e8f3778a594044e603d0bb2050dfd6b4ba4a8e7d688eb6fd746db170d21e1d.jpg",
+      "sha256": "05e8f3778a594044e603d0bb2050dfd6b4ba4a8e7d688eb6fd746db170d21e1d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 244151
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/43efcccd-f7f3-4520-bf9c-e149681d5a95.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/43efcccd-f7f3-4520-bf9c-e149681d5a95.jpg",
+      "token": "migration-resource://e76aa4097cfa4f9c79ff4c792c2f38d9600d50e2f9baf56185298a9ca74ec3e7",
+      "snapshotPath": "assets/e76aa4097cfa4f9c79ff4c792c2f38d9600d50e2f9baf56185298a9ca74ec3e7.jpg",
+      "sha256": "e76aa4097cfa4f9c79ff4c792c2f38d9600d50e2f9baf56185298a9ca74ec3e7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 43902
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/d3ecb48a-e929-4a7a-be82-c6c511c4f324.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/d3ecb48a-e929-4a7a-be82-c6c511c4f324.jpg",
+      "token": "migration-resource://68caba8913bc29af775ad5cb689ba8710af994620e41ba1d7cfa127401c22007",
+      "snapshotPath": "assets/68caba8913bc29af775ad5cb689ba8710af994620e41ba1d7cfa127401c22007.jpg",
+      "sha256": "68caba8913bc29af775ad5cb689ba8710af994620e41ba1d7cfa127401c22007",
+      "contentType": "image/jpeg",
+      "sizeBytes": 68568
+    }
+  ],
+  "sourceFingerprint": "7a73752697aede3952bc64423414a921c340cb9ccb4778339b1f0797f657d422",
+  "evidence": {
+    "listPage": 123,
+    "listTitle": "吉林师范大学打好“云端”组合拳 就业服务“不断线”",
+    "listPublishDate": "2022-04-12",
+    "sourceOrder": 1223,
+    "detailPublishDate": "2022-04-12"
+  }
+}

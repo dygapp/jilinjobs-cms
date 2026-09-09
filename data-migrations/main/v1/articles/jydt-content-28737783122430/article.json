@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122430",
+    "contentId": "28737783122430",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122430"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "河南发放16亿元小额贷款 帮助10万人自主创业",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">河南发放16亿元小额贷款 帮助10万人自主创业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 本报讯 昨日，记者从河南省召开的人力资源和社会保障工作会上了解到，今年河南省要实现城镇新增就业100万人，下岗失业人员再就业33万人，就业困难人员再就业12万人。</font></p> <p><font size=\"2\">　　为扩大就业，确保就业形势稳定，今年将大力实施创业培训和特别职业培训计划。在创业培训方面，重点培训城镇新失业人员、高校毕业生和返乡农民工，力争年内全省培训15万人以上。加大信贷创业扶持，发放16亿元的小额担保贷款，帮助10万人自主创业、扶持3000家劳动密集型小企业创业，带动就业30万人；大力开展创业项目推介和成果展示活动，加强创业孵化和创业辅导服务，为中小型企业和自主创业人员提供帮助。</font></p> <p><font size=\"2\">　　今河南省有高校毕业生近37万人，较去年增加4万多人，加上往年尚未就业的高校毕业生，总量预计突破45万人，就业压力很大。我省要把高校毕业生就业放在就业工作的首位，办好“十件实事”，力争使30万大学生实现就业。<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "46339a0810610855281747caf91341bcdfc915c0ea0ea0ec6cadfa4d42d08f73",
+  "evidence": {
+    "listPage": 190,
+    "listTitle": "河南发放16亿元小额贷款 帮助10万人自主创业",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1897,
+    "detailPublishDate": "2009-04-04"
+  }
+}

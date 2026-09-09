@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7e66042f0733a6cd6284927bf5aef7acdf7184e87331c4ea6c7d7717a2f481dc",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1045/6472.htm",
+    "url": "http://www.jlsfjy.cn/info/1045/6472.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林司法警官职业学院推动落实省领导联系 高职院校机制 促进学生就业",
+    "source": "",
+    "publishDate": "2025-09-02",
+    "bodyHtml": "",
+    "externalUrl": "http://www.jlsfjy.cn/info/1045/6472.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "7f37a65a07b838daea31601789c95146375143bfc866979a3311ddc2ae182731",
+  "evidence": {
+    "listPage": 71,
+    "listTitle": "吉林司法警官职业学院推动落实省领导联系 高职院校机制 促进学生就业",
+    "listPublishDate": "2025-09-02",
+    "sourceOrder": 708
+  }
+}

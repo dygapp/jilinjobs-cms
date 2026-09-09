@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:e3819cceb7e299d20f589445f015dc564134d9af8306f7f20c20e09085da596a",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/DuW2R9cwqGorYd7YwaaZiA",
+    "url": "https://mp.weixin.qq.com/s/DuW2R9cwqGorYd7YwaaZiA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学服务吉林高质量发展系列活动—2025届毕业生春季综合大型招聘会（长春站）",
+    "source": "",
+    "publishDate": "2025-03-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DuW2R9cwqGorYd7YwaaZiA"
+  },
+  "resources": [],
+  "sourceFingerprint": "4ac2392e659dc715dc404d7c205f5c7f3f9c7159db5647093f85bf8398924350",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "延边大学服务吉林高质量发展系列活动—2025届毕业生春季综合大型招聘会（长春站）",
+    "listPublishDate": "2025-03-06",
+    "sourceOrder": 227
+  }
+}

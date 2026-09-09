@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123150",
+    "contentId": "28737783123150",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123150"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于2011年江西省接收省外高校毕业生有关事项的函",
+    "source": "",
+    "publishDate": "2011-05-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于2011年江西省接收省外高校毕业生有关事项的函</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-5-6 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img height=\"820\" src=\"migration-resource://b4426e6f7b6dc411a6bb2548726463dd575520e71ba89f42f61f2fca5f4615c5\" width=\"615\" border=\"0\"></p> <p align=\"center\"><img height=\"820\" src=\"migration-resource://db22782bb2c2e81c695c9a8c23cdf30488903ba23590f050d4e0a3505446c47f\" width=\"615\" border=\"0\"></p> <p align=\"center\"><img height=\"820\" src=\"migration-resource://8999a279c9245a8cb64ab9a302b12474a299760c4611704d73f6b370b151567c\" width=\"615\" border=\"0\"></p> <p align=\"center\"><img height=\"615\" src=\"migration-resource://78f1c24068c87125c81d11e31044c97b77a433502020beb36da396bab57d6595\" width=\"820\" border=\"0\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110506151100237.jpg",
+      "originalReference": "/chistory/cms/imgs/20110506151100237.jpg",
+      "token": "migration-resource://b4426e6f7b6dc411a6bb2548726463dd575520e71ba89f42f61f2fca5f4615c5",
+      "snapshotPath": "assets/b4426e6f7b6dc411a6bb2548726463dd575520e71ba89f42f61f2fca5f4615c5.jpg",
+      "sha256": "b4426e6f7b6dc411a6bb2548726463dd575520e71ba89f42f61f2fca5f4615c5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77365
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2011050615111539.jpg",
+      "originalReference": "/chistory/cms/imgs/2011050615111539.jpg",
+      "token": "migration-resource://db22782bb2c2e81c695c9a8c23cdf30488903ba23590f050d4e0a3505446c47f",
+      "snapshotPath": "assets/db22782bb2c2e81c695c9a8c23cdf30488903ba23590f050d4e0a3505446c47f.jpg",
+      "sha256": "db22782bb2c2e81c695c9a8c23cdf30488903ba23590f050d4e0a3505446c47f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 104606
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110506151128470.jpg",
+      "originalReference": "/chistory/cms/imgs/20110506151128470.jpg",
+      "token": "migration-resource://8999a279c9245a8cb64ab9a302b12474a299760c4611704d73f6b370b151567c",
+      "snapshotPath": "assets/8999a279c9245a8cb64ab9a302b12474a299760c4611704d73f6b370b151567c.jpg",
+      "sha256": "8999a279c9245a8cb64ab9a302b12474a299760c4611704d73f6b370b151567c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82187
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2011050615113943.jpg",
+      "originalReference": "/chistory/cms/imgs/2011050615113943.jpg",
+      "token": "migration-resource://78f1c24068c87125c81d11e31044c97b77a433502020beb36da396bab57d6595",
+      "snapshotPath": "assets/78f1c24068c87125c81d11e31044c97b77a433502020beb36da396bab57d6595.jpg",
+      "sha256": "78f1c24068c87125c81d11e31044c97b77a433502020beb36da396bab57d6595",
+      "contentType": "image/jpeg",
+      "sizeBytes": 101847
+    }
+  ],
+  "sourceFingerprint": "8e569cf920965b4f69d0440ebe4e661be327ee7866e280d1d75f179fbb93858f",
+  "evidence": {
+    "listPage": 46,
+    "listTitle": "关于2011年江西省接收省外高校毕业生有关事项的函",
+    "listPublishDate": "2011-05-06",
+    "sourceOrder": 457,
+    "detailPublishDate": "2011-05-06"
+  }
+}

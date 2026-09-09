@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0c92e94c9272982e9426d9ecf267e53cb77c3983f3b4a66f16cdb73d1bc2f813",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/9NDnjPzl76cg3V2gO1M-SQ",
+    "url": "https://mp.weixin.qq.com/s/9NDnjPzl76cg3V2gO1M-SQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省经济管理干部学院举办2026届毕业生专场招聘会——以人才引育助推吉林高质量发展",
+    "source": "",
+    "publishDate": "2025-10-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/9NDnjPzl76cg3V2gO1M-SQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "d828d951bf0b5da9783e15f98833bc1c85d6402a77781ea530f215b5e295e069",
+  "evidence": {
+    "listPage": 65,
+    "listTitle": "吉林省经济管理干部学院举办2026届毕业生专场招聘会——以人才引育助推吉林高质量发展",
+    "listPublishDate": "2025-10-31",
+    "sourceOrder": 645
+  }
+}

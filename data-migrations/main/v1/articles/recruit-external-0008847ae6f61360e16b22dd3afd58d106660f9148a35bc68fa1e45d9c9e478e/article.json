@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:0008847ae6f61360e16b22dd3afd58d106660f9148a35bc68fa1e45d9c9e478e",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/ZyfTWLfK9Y8kQVeBQtVdUw",
+    "url": "https://mp.weixin.qq.com/s/ZyfTWLfK9Y8kQVeBQtVdUw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北师范大学就业中心关于举办吉林省2025届毕业生应用型人才专场招聘会的通知",
+    "source": "",
+    "publishDate": "2024-09-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ZyfTWLfK9Y8kQVeBQtVdUw"
+  },
+  "resources": [],
+  "sourceFingerprint": "f5c345432ad8b1e510898901d9771aa95cdb640ad962d58a1a94b17b5e9a9a3f",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "东北师范大学就业中心关于举办吉林省2025届毕业生应用型人才专场招聘会的通知",
+    "listPublishDate": "2024-09-24",
+    "sourceOrder": 252
+  }
+}

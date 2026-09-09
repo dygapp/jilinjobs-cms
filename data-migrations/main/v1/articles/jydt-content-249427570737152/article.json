@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:249427570737152",
+    "contentId": "249427570737152",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=249427570737152"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2024年吉林省高校药学类大学生就业能力提升培训班圆满结束",
+    "source": "",
+    "publishDate": "2024-09-30",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://4bf2c43e086ab446a51517574c2cbec895d4daae7eea6c598b00f2bbc7dd05f7\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://be9dd91696e689c1f210f3a2096bc94fce74a4c18f7cc8d2b72c061e6d5bba7a\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://a10ba8bd86c0f5d2c554410050ed4b2ed0405d20f086c2d1d9e3d88eaf71c67a\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-08/3fc204aa-97f2-460d-a23f-445cc4d30b5c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-08/3fc204aa-97f2-460d-a23f-445cc4d30b5c.jpg",
+      "token": "migration-resource://4bf2c43e086ab446a51517574c2cbec895d4daae7eea6c598b00f2bbc7dd05f7",
+      "snapshotPath": "assets/4bf2c43e086ab446a51517574c2cbec895d4daae7eea6c598b00f2bbc7dd05f7.jpg",
+      "sha256": "4bf2c43e086ab446a51517574c2cbec895d4daae7eea6c598b00f2bbc7dd05f7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-08/477f9430-6a81-4adc-a11d-91ed8869d790.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-08/477f9430-6a81-4adc-a11d-91ed8869d790.jpg",
+      "token": "migration-resource://be9dd91696e689c1f210f3a2096bc94fce74a4c18f7cc8d2b72c061e6d5bba7a",
+      "snapshotPath": "assets/be9dd91696e689c1f210f3a2096bc94fce74a4c18f7cc8d2b72c061e6d5bba7a.jpg",
+      "sha256": "be9dd91696e689c1f210f3a2096bc94fce74a4c18f7cc8d2b72c061e6d5bba7a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-10-08/26b80ed3-e604-4369-92c5-1e0c8bcec1b5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-10-08/26b80ed3-e604-4369-92c5-1e0c8bcec1b5.jpg",
+      "token": "migration-resource://a10ba8bd86c0f5d2c554410050ed4b2ed0405d20f086c2d1d9e3d88eaf71c67a",
+      "snapshotPath": "assets/a10ba8bd86c0f5d2c554410050ed4b2ed0405d20f086c2d1d9e3d88eaf71c67a.jpg",
+      "sha256": "a10ba8bd86c0f5d2c554410050ed4b2ed0405d20f086c2d1d9e3d88eaf71c67a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 53184
+    }
+  ],
+  "sourceFingerprint": "7853f16029da50bc830ce40b1790c5912f9fbc48ad75c8c247a8f914036cdad1",
+  "evidence": {
+    "listPage": 104,
+    "listTitle": "2024年吉林省高校药学类大学生就业能力提升培训班圆满结束",
+    "listPublishDate": "2024-09-30",
+    "sourceOrder": 1032,
+    "detailPublishDate": "2024-09-30"
+  }
+}

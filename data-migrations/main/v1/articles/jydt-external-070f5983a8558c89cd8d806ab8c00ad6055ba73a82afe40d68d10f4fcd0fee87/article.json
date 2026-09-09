@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:070f5983a8558c89cd8d806ab8c00ad6055ba73a82afe40d68d10f4fcd0fee87",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/4C9RbGxEmRViA8ZV3PH8fA",
+    "url": "https://mp.weixin.qq.com/s/4C9RbGxEmRViA8ZV3PH8fA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范高等专科学校信息技术学院开展访企拓岗专项活动",
+    "source": "",
+    "publishDate": "2026-06-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4C9RbGxEmRViA8ZV3PH8fA"
+  },
+  "resources": [],
+  "sourceFingerprint": "b4ce960880894a0b3dbae053ff83355103911404f69cfbdccc8bc8b637336a3d",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "长春师范高等专科学校信息技术学院开展访企拓岗专项活动",
+    "listPublishDate": "2026-06-02",
+    "sourceOrder": 113
+  }
+}

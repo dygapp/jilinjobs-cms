@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2b9f7b37004140e8c16237ed0452c4310223d54d39bfe93c0f06506f292adcc1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1003/9112.htm",
+    "url": "https://news.ccsfu.edu.cn/info/1003/9112.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学举办2024届毕业生春季双选会（第二场）",
+    "source": "",
+    "publishDate": "2024-03-28",
+    "bodyHtml": "",
+    "externalUrl": "https://news.ccsfu.edu.cn/info/1003/9112.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "7bc37adad02b2681584fd390b58a6f01f0ccb75ee4d6c0e2d6f003c0fa70c1c3",
+  "evidence": {
+    "listPage": 110,
+    "listTitle": "长春师范大学举办2024届毕业生春季双选会（第二场）",
+    "listPublishDate": "2024-03-28",
+    "sourceOrder": 1100
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:eb1db84d3f4683901e839814fabbe29a9755327a30310783c3852af2fc535195",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/sdbysadv/xzsd/index.html",
+    "url": "http://www.sdbys.com/sdbysadv/xzsd/index.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“印象齐鲁 选择山东”全国财经类高校2023届毕业生山东专场招聘会",
+    "source": "",
+    "publishDate": "2022-11-04",
+    "bodyHtml": "",
+    "externalUrl": "http://www.sdbys.com/sdbysadv/xzsd/index.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "fb3b8b2362bf803a0dca259da32a4b6aa8ba78a80e83a34732cdafe9b49ea7a7",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "“印象齐鲁 选择山东”全国财经类高校2023届毕业生山东专场招聘会",
+    "listPublishDate": "2022-11-04",
+    "sourceOrder": 331
+  }
+}

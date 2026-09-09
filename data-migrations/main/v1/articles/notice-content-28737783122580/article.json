@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122580",
+    "contentId": "28737783122580",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122580"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于2015年第二届“梦想杯”大学生创业大赛获奖结果的通报",
+    "source": "",
+    "publishDate": "2015-11-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于2015年第二届“梦想杯”大学生创业大赛获奖结果的通报</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2015-11-6 14:09:27</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img title=\"关于2015年第二届“梦想杯”大学生创业大赛获奖结果的通报 (1).jpg\" src=\"migration-resource://3a4b83c352cfea6d846c0257ddb2263a1a8d3cb7b236b78d47691902b0c118e8\"></p><p style=\"text-align: center\"><img title=\"关于2015年第二届“梦想杯”大学生创业大赛获奖结果的通报 (2).jpg\" src=\"migration-resource://0a1b0eef1bd5af5b87bbe90d057a57abecaa9da3565a33c525978015e897506b\"></p><p style=\"text-align: center\"><img title=\"关于2015年第二届“梦想杯”大学生创业大赛获奖结果的通报 (3).jpg\" src=\"migration-resource://1fbb4561d20cd1440868b4fa3e07cdcceb8caad8b7bb308592717f5504f5bf59\"></p><p style=\"text-align: center\"><img title=\"关于2015年第二届“梦想杯”大学生创业大赛获奖结果的通报 (4).jpg\" src=\"migration-resource://fb635f235deeec1599ca25388696be89157ff267556e8513855fc1f39cd0f15d\"></p><p style=\"text-align: center\"><img title=\"关于2015年第二届“梦想杯”大学生创业大赛获奖结果的通报 (5).jpg\" src=\"migration-resource://6f2a2ea932414e54c437b4c9816b34382f2818157e6434ae9823f9d51abc16e3\"></p><p><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358276139089062501175162.jpg",
+      "originalReference": "/chistory/cms/imgs/6358276139089062501175162.jpg",
+      "token": "migration-resource://3a4b83c352cfea6d846c0257ddb2263a1a8d3cb7b236b78d47691902b0c118e8",
+      "snapshotPath": "assets/3a4b83c352cfea6d846c0257ddb2263a1a8d3cb7b236b78d47691902b0c118e8.jpg",
+      "sha256": "3a4b83c352cfea6d846c0257ddb2263a1a8d3cb7b236b78d47691902b0c118e8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 97967
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358276139187500001773744.jpg",
+      "originalReference": "/chistory/cms/imgs/6358276139187500001773744.jpg",
+      "token": "migration-resource://0a1b0eef1bd5af5b87bbe90d057a57abecaa9da3565a33c525978015e897506b",
+      "snapshotPath": "assets/0a1b0eef1bd5af5b87bbe90d057a57abecaa9da3565a33c525978015e897506b.jpg",
+      "sha256": "0a1b0eef1bd5af5b87bbe90d057a57abecaa9da3565a33c525978015e897506b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 44777
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358276139320312508801099.jpg",
+      "originalReference": "/chistory/cms/imgs/6358276139320312508801099.jpg",
+      "token": "migration-resource://1fbb4561d20cd1440868b4fa3e07cdcceb8caad8b7bb308592717f5504f5bf59",
+      "snapshotPath": "assets/1fbb4561d20cd1440868b4fa3e07cdcceb8caad8b7bb308592717f5504f5bf59.jpg",
+      "sha256": "1fbb4561d20cd1440868b4fa3e07cdcceb8caad8b7bb308592717f5504f5bf59",
+      "contentType": "image/jpeg",
+      "sizeBytes": 83548
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358276139454687501057700.jpg",
+      "originalReference": "/chistory/cms/imgs/6358276139454687501057700.jpg",
+      "token": "migration-resource://fb635f235deeec1599ca25388696be89157ff267556e8513855fc1f39cd0f15d",
+      "snapshotPath": "assets/fb635f235deeec1599ca25388696be89157ff267556e8513855fc1f39cd0f15d.jpg",
+      "sha256": "fb635f235deeec1599ca25388696be89157ff267556e8513855fc1f39cd0f15d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 65723
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358276139834375006897962.jpg",
+      "originalReference": "/chistory/cms/imgs/6358276139834375006897962.jpg",
+      "token": "migration-resource://6f2a2ea932414e54c437b4c9816b34382f2818157e6434ae9823f9d51abc16e3",
+      "snapshotPath": "assets/6f2a2ea932414e54c437b4c9816b34382f2818157e6434ae9823f9d51abc16e3.jpg",
+      "sha256": "6f2a2ea932414e54c437b4c9816b34382f2818157e6434ae9823f9d51abc16e3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 53793
+    }
+  ],
+  "sourceFingerprint": "0b4f01f91fa292ca2a3123051a983b5882bf58ee691f3125c09bc43bb943ecfe",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "关于2015年第二届“梦想杯”大学生创业大赛获奖结果的通报",
+    "listPublishDate": "2015-11-06",
+    "sourceOrder": 266,
+    "detailPublishDate": "2015-11-06"
+  }
+}

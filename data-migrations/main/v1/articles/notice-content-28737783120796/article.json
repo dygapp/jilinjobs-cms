@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120796",
+    "contentId": "28737783120796",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120796"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办“全国仪器及分析测试行业与2012届高校毕业生网络招聘会”的通知",
+    "source": "",
+    "publishDate": "2011-09-16",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办“全国仪器及分析测试行业与2012届高校毕业生网络招聘会”的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-9-16 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://4140fd1cc78aa6b44e7abb91e161d6a802cba67eed15bd93690eb0fd361f7bc5\"><img border=\"0\" src=\"migration-resource://e8fc067452a0ee0c44fa5eda55d0e15bbb607030bc44caa292e2550656e8aeec\"><img border=\"0\" src=\"migration-resource://339b117915a798b417868832866a3e17d5b47fc359e01db699181a727df8eb30\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110916101020225.jpg",
+      "originalReference": "/chistory/cms/imgs/20110916101020225.jpg",
+      "token": "migration-resource://4140fd1cc78aa6b44e7abb91e161d6a802cba67eed15bd93690eb0fd361f7bc5",
+      "snapshotPath": "assets/4140fd1cc78aa6b44e7abb91e161d6a802cba67eed15bd93690eb0fd361f7bc5.jpg",
+      "sha256": "4140fd1cc78aa6b44e7abb91e161d6a802cba67eed15bd93690eb0fd361f7bc5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 55705
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110916101025500.jpg",
+      "originalReference": "/chistory/cms/imgs/20110916101025500.jpg",
+      "token": "migration-resource://e8fc067452a0ee0c44fa5eda55d0e15bbb607030bc44caa292e2550656e8aeec",
+      "snapshotPath": "assets/e8fc067452a0ee0c44fa5eda55d0e15bbb607030bc44caa292e2550656e8aeec.jpg",
+      "sha256": "e8fc067452a0ee0c44fa5eda55d0e15bbb607030bc44caa292e2550656e8aeec",
+      "contentType": "image/jpeg",
+      "sizeBytes": 59559
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110916101030680.jpg",
+      "originalReference": "/chistory/cms/imgs/20110916101030680.jpg",
+      "token": "migration-resource://339b117915a798b417868832866a3e17d5b47fc359e01db699181a727df8eb30",
+      "snapshotPath": "assets/339b117915a798b417868832866a3e17d5b47fc359e01db699181a727df8eb30.jpg",
+      "sha256": "339b117915a798b417868832866a3e17d5b47fc359e01db699181a727df8eb30",
+      "contentType": "image/jpeg",
+      "sizeBytes": 50427
+    }
+  ],
+  "sourceFingerprint": "18ffced810b71e8636436646d4e3527cf8e014b6fc808a321656f738d7ad5af9",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "关于举办“全国仪器及分析测试行业与2012届高校毕业生网络招聘会”的通知",
+    "listPublishDate": "2011-09-16",
+    "sourceOrder": 427,
+    "detailPublishDate": "2011-09-16"
+  }
+}

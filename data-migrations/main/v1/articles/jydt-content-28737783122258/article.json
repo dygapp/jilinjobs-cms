@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122258",
+    "contentId": "28737783122258",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122258"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林大学2010年毕业生就业大市场于2009年11月18日成功举办",
+    "source": "",
+    "publishDate": "2009-11-18",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林大学2010年毕业生就业大市场于2009年11月18日成功举办</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-11-18 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"367\" src=\"http://www.jilinjobs.cn/uploadfile/200912/20091201160445485.jpg\" width=\"550\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\">吉林大学2010届毕业生就业大市场于2009年11月18日举行，现场人头攒动，气氛火爆</font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"400\" src=\"http://www.jilinjobs.cn/uploadfile/200912/20091201160539922.jpg\" width=\"600\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\">吉林省教育厅副巡视员孙维杰同志到洽谈会现场了解就业情况</font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"456\" src=\"http://www.jilinjobs.cn/uploadfile/200912/2009120116062187.jpg\" width=\"600\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\">吉林大学韩晓峰副校长向新闻媒体介绍吉林大学毕业生就业情况</font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"492\" src=\"http://www.jilinjobs.cn/uploadfile/200912/20091201160648909.jpg\" width=\"600\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\">吉林省教育厅高校学生处纪拓处长与毕业生亲切交谈了解其就业情况</font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"400\" src=\"http://www.jilinjobs.cn/uploadfile/200912/20091201160709298.jpg\" width=\"600\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\">吉林省高校毕业生就业指导中心郑志宏主任在洽谈会现场了解就业情况</font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"400\" src=\"http://www.jilinjobs.cn/uploadfile/200912/20091201160729101.jpg\" width=\"600\" border=\"0\"></font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\">吉林大学毕业生就业指导中心赵刚敏主任接受媒体采访</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "39a37b14878e482fddbcc77f4db95c1732ae28a273b68934e619b9319288d209",
+  "evidence": {
+    "listPage": 168,
+    "listTitle": "吉林大学2010年毕业生就业大市场于2009年11月18日成功举办",
+    "listPublishDate": "2009-11-18",
+    "sourceOrder": 1679,
+    "detailPublishDate": "2009-11-18"
+  }
+}

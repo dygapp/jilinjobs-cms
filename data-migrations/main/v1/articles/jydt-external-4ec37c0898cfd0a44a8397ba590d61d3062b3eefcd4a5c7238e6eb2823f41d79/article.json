@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4ec37c0898cfd0a44a8397ba590d61d3062b3eefcd4a5c7238e6eb2823f41d79",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/dfd___nKxsLzkRhXhdly3w",
+    "url": "https://mp.weixin.qq.com/s/dfd___nKxsLzkRhXhdly3w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春金融高等专科学校与吉林省两大滑雪场正式签约",
+    "source": "",
+    "publishDate": "2025-10-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/dfd___nKxsLzkRhXhdly3w"
+  },
+  "resources": [],
+  "sourceFingerprint": "626cb780b1f21c1bc96b194c3efbe7f44252ae5a37b69a5c7ee60c22c4af2195",
+  "evidence": {
+    "listPage": 67,
+    "listTitle": "长春金融高等专科学校与吉林省两大滑雪场正式签约",
+    "listPublishDate": "2025-10-20",
+    "sourceOrder": 670
+  }
+}

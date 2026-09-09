@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:1f6db19aed98757c7d1adda6be509a2a6c2f0b830f1647defbb24a43893ad91b",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/zw/tzgg/202007/t20200707_379396.html",
+    "url": "http://www.yitong.gov.cn/zw/tzgg/202007/t20200707_379396.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年伊通满族自治县教育系统专项招聘高校毕业生公告",
+    "source": "",
+    "publishDate": "2020-07-09",
+    "bodyHtml": "",
+    "externalUrl": "http://www.yitong.gov.cn/zw/tzgg/202007/t20200707_379396.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "08fd4d44762fa4cbaa5afb55a68c73b865486ac4bd9e75449ffb0f465f32c96b",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "2020年伊通满族自治县教育系统专项招聘高校毕业生公告",
+    "listPublishDate": "2020-07-09",
+    "sourceOrder": 391
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c2f516e19dcc3b531c20b60057c9a64f43f437c5bb0b9d31991aa0fe7eaf0e07",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ewFoeMi1zTBRP2qnDXn1Xg",
+    "url": "https://mp.weixin.qq.com/s/ewFoeMi1zTBRP2qnDXn1Xg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "踏雪寻舞，艺启新程！吉林艺术学院学子以舞绽芳华！",
+    "source": "",
+    "publishDate": "2025-12-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ewFoeMi1zTBRP2qnDXn1Xg"
+  },
+  "resources": [],
+  "sourceFingerprint": "a20e04422a58745ecff9b703df12f912c10fad09ee80d698e3559e9ee0bfee50",
+  "evidence": {
+    "listPage": 55,
+    "listTitle": "踏雪寻舞，艺启新程！吉林艺术学院学子以舞绽芳华！",
+    "listPublishDate": "2025-12-12",
+    "sourceOrder": 549
+  }
+}

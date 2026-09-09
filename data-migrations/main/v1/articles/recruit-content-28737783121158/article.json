@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783121158",
+    "contentId": "28737783121158",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783121158"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关注奖学金新政",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关注奖学金新政</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>　　由于受金融危机的影响，不少海外院校上调了学费，但为不影响生源，也相应地出台了一些新政策，比如扩大学生资助面、提高奖学金和助学金比例等政策。</p> <p>　　<strong>英国：贫困生可获资助</strong></p> <p>　　今年向大学递交入学申请的英国学生人数比上年增加了7%，中低收入家庭学生申请大学的人数也有所增长。这是由于贫困家庭的学生只要申请，他们中的每一个人都可以获得几千英镑的资助。</p> <p>　　<strong>澳大利亚：放宽毕业生还贷条件</strong></p> <p>　　前不久，澳大利亚推出了一项新的高等教育贷款计划，将学生偿还贷款的年收入标准由2003~2004财政年度的25348澳元增加到2007~2008财政年的39825澳元。此无息贷款机制不会强迫贷款人在不具备还款能力的情况下偿还贷款。如果贷款人一直未能达到还款的年收入标准，政府将通过税收来承担其所有款项。</p> <p>　　<strong>新加坡：学费调高资助也放宽</strong></p> <p>　　新加坡三所公立大学——新加坡国立大学、南洋理工大学和新加坡管理大学同时宣布，将在2008~2009学年调高学费4%~50%，并拉大对外国学生的收费差距。据悉，新加坡国立大学目前有一成学生接受学校财务援助，学费提高后，预计需要援助的学生将增至18%，学校将放宽资助比例。</p> <p>　　<strong>德国：特殊学生可免学费</strong></p> <p>　　在过去一直实行免费高等教育的德国16个州中，目前已有7个州实行大学收费政策，学费通常为每学期 500欧元左右。德国目前实行大学收费政策的各州只有残疾学生和需要养育孩子的学生可以获得免交学费的照顾。</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "b10e733cf8a31f58717f3102409043c53ec2f7742a5b37f79624952d10265464",
+  "evidence": {
+    "listPage": 58,
+    "listTitle": "关注奖学金新政",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 579,
+    "detailPublishDate": "2009-04-04"
+  }
+}

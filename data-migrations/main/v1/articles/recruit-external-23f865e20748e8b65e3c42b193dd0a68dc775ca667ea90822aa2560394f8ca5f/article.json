@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:23f865e20748e8b65e3c42b193dd0a68dc775ca667ea90822aa2560394f8ca5f",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/xxgk/zwxxgkfl/tzgg/202006/t20200624_447570.html",
+    "url": "http://www.lyxa.gov.cn/xxgk/zwxxgkfl/tzgg/202006/t20200624_447570.html?bsh_bid=5521921913"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年辽源市西安区事业单位专项招聘工作人员补充公告",
+    "source": "",
+    "publishDate": "2020-06-30",
+    "bodyHtml": "",
+    "externalUrl": "http://www.lyxa.gov.cn/xxgk/zwxxgkfl/tzgg/202006/t20200624_447570.html?bsh_bid=5521921913"
+  },
+  "resources": [],
+  "sourceFingerprint": "3abcaf11606dea0ae18f327bd07353b7af461de84a2a88dc61bb021769b567b7",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "2020年辽源市西安区事业单位专项招聘工作人员补充公告",
+    "listPublishDate": "2020-06-30",
+    "sourceOrder": 394
+  }
+}

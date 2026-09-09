@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122062",
+    "contentId": "28737783122062",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122062"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2017年全国计算机应用水平考试吉林省考区上半年考试工作圆满结束",
+    "source": "",
+    "publishDate": "2017-06-21",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2017年全国计算机应用水平考试吉林省考区上半年考试工作圆满结束</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2017-6-21 10:06:31</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-align: left; text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">2017年6月3日-6日，全国计算机应用水平考试（以下简称NIT）吉林省考区上半年第三次考试在全省15个考试点顺利开考，本次考试历时4天，开考文字处理（Word 2010）、电子表格(Excel 2010)、演示文稿制作Power Point 2010)、计算机应用基础(Windows 7、Office 2010)四个模块 ，考生报名9177人次，省派巡考人员35人次。没有出现违纪和舞弊现象，整个考试过程秩序井然、平稳顺利。 </span></p><p style=\"text-align: left; text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">2017年上半年全省NIT考试开考考点20个，开考模块四个，考生报名12622人次，较去年同期增加2296人次，增幅达22.23%，考生上机考试平均通过率达到82.79%，与上一年水平相当。2017年，中心作为NIT考试省级承办机构，把加强考务管理、规范考试流程、严肃考试纪律作为今年工作重点，突出过程式考核，在不断扩大考试规模基础上，进一步提升各培训考试点规范化管理程度。在考试实施过程中，省派巡考人员对考点考务管理规范化工作进行了重点督查。为维护考试公平公正，在省高校毕业生就业信息网站公布NIT考试舞弊行为监督举报电话。各考点不断加大考试管理力度，要求考试管理人员签订诚信考试承诺书，健全考试应急预案，提升对突发事件的处理能力。同时，中心对省级承办机构管理人员加强了执纪检查，考点对巡考人员工作表现实行背靠背意见反馈。通过实施一系列有效措施，省内各培训考试点整体管理水平有了明显提升，考试规模不断扩大，NIT考试越来越受到高校学生的关注和认可，全省NIT考试呈现不断向好的趋势。</span></p><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://9324a379257900ec0dd5a57437e9bca8b259c8a101014767b55ef027f6780c6c\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://29d39942126c197ed96fc7177d4da7aae84360d4ad5953f0458a73004b805de6\"></p><p style=\"text-align: center;\"><img title=\"3.JPG\" src=\"migration-resource://89f7af719d378507e2e29844a5f761c744ea31c66a92ceed0c65f39d916a666d\"></p><p style=\"text-align: center;\"><img title=\"4.JPG\" src=\"migration-resource://fec1046009aae6778b2a56fd271bfd743863ff5a3f89b809ead14c0ac0f42aad\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363363645956250007730728.jpg",
+      "originalReference": "/chistory/cms/imgs/6363363645956250007730728.jpg",
+      "token": "migration-resource://9324a379257900ec0dd5a57437e9bca8b259c8a101014767b55ef027f6780c6c",
+      "snapshotPath": "assets/9324a379257900ec0dd5a57437e9bca8b259c8a101014767b55ef027f6780c6c.jpg",
+      "sha256": "9324a379257900ec0dd5a57437e9bca8b259c8a101014767b55ef027f6780c6c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 51990
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363363645965625004000716.jpg",
+      "originalReference": "/chistory/cms/imgs/6363363645965625004000716.jpg",
+      "token": "migration-resource://29d39942126c197ed96fc7177d4da7aae84360d4ad5953f0458a73004b805de6",
+      "snapshotPath": "assets/29d39942126c197ed96fc7177d4da7aae84360d4ad5953f0458a73004b805de6.jpg",
+      "sha256": "29d39942126c197ed96fc7177d4da7aae84360d4ad5953f0458a73004b805de6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 175993
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363363645971875003215869.JPG",
+      "originalReference": "/chistory/cms/imgs/6363363645971875003215869.JPG",
+      "token": "migration-resource://89f7af719d378507e2e29844a5f761c744ea31c66a92ceed0c65f39d916a666d",
+      "snapshotPath": "assets/89f7af719d378507e2e29844a5f761c744ea31c66a92ceed0c65f39d916a666d.jpg",
+      "sha256": "89f7af719d378507e2e29844a5f761c744ea31c66a92ceed0c65f39d916a666d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 168241
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363363645978125006729194.JPG",
+      "originalReference": "/chistory/cms/imgs/6363363645978125006729194.JPG",
+      "token": "migration-resource://fec1046009aae6778b2a56fd271bfd743863ff5a3f89b809ead14c0ac0f42aad",
+      "snapshotPath": "assets/fec1046009aae6778b2a56fd271bfd743863ff5a3f89b809ead14c0ac0f42aad.jpg",
+      "sha256": "fec1046009aae6778b2a56fd271bfd743863ff5a3f89b809ead14c0ac0f42aad",
+      "contentType": "image/jpeg",
+      "sizeBytes": 169016
+    }
+  ],
+  "sourceFingerprint": "9e5cf67f29784b1faaa2fc36ec8f91392d9832351aa94265008540eec6406b3f",
+  "evidence": {
+    "listPage": 150,
+    "listTitle": "2017年全国计算机应用水平考试吉林省考区上半年考试工作圆满结束",
+    "listPublishDate": "2017-06-21",
+    "sourceOrder": 1492,
+    "detailPublishDate": "2017-06-21"
+  }
+}

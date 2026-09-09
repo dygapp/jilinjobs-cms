@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c0a7b3f1889505f7c69d0e5f24d46656ae8f0b83392633d6f0cb9202b4752950",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/cPE2MT5rl6fQPvUFMPWibQ",
+    "url": "https://mp.weixin.qq.com/s/cPE2MT5rl6fQPvUFMPWibQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学党委书记李书研、校长蔡国伟带队赴辽宁电力行业企业访企拓岗并洽谈合作",
+    "source": "",
+    "publishDate": "2026-04-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/cPE2MT5rl6fQPvUFMPWibQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "c9561d099d1667a6d95268e11737799234c3260ad4bc7857374db72956db6418",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "东北电力大学党委书记李书研、校长蔡国伟带队赴辽宁电力行业企业访企拓岗并洽谈合作",
+    "listPublishDate": "2026-04-22",
+    "sourceOrder": 261
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:601e5d1c31a281b7cd30a5e0512f4d42258a06de794db1b93fff294a6ae9a497",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/YS4wDUEPE-Gbt3CiQeBfWQ",
+    "url": "https://mp.weixin.qq.com/s/YS4wDUEPE-Gbt3CiQeBfWQ?scene=25&sessionid=-1366907815"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“吉聚英才・筑梦青春”服务吉林高质量发展——长春工业大学人文信息学院2025年就业实习双选会邀请函",
+    "source": "",
+    "publishDate": "2025-04-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/YS4wDUEPE-Gbt3CiQeBfWQ?scene=25&sessionid=-1366907815"
+  },
+  "resources": [],
+  "sourceFingerprint": "f0a8c6836be0dad888d3d03a6de3cb82f41951f937df689b329d823b63e4359e",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "“吉聚英才・筑梦青春”服务吉林高质量发展——长春工业大学人文信息学院2025年就业实习双选会邀请函",
+    "listPublishDate": "2025-04-15",
+    "sourceOrder": 177
+  }
+}

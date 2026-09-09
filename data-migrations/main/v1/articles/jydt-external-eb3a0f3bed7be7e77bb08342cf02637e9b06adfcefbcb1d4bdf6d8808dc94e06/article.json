@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:eb3a0f3bed7be7e77bb08342cf02637e9b06adfcefbcb1d4bdf6d8808dc94e06",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/S3cFuJwEN_G5xOxmjQewLg",
+    "url": "https://mp.weixin.qq.com/s/S3cFuJwEN_G5xOxmjQewLg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化医药健康职业学院赴通化市国参堂药业有限公司走访调研",
+    "source": "",
+    "publishDate": "2026-03-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/S3cFuJwEN_G5xOxmjQewLg"
+  },
+  "resources": [],
+  "sourceFingerprint": "fc6b1bf6db452a49134d19e3fc8eb48cc57135a6b385df8449737d663e8a0bf8",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "通化医药健康职业学院赴通化市国参堂药业有限公司走访调研",
+    "listPublishDate": "2026-03-16",
+    "sourceOrder": 416
+  }
+}

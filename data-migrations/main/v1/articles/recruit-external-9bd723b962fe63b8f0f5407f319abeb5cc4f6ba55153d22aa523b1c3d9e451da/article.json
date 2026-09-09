@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:9bd723b962fe63b8f0f5407f319abeb5cc4f6ba55153d22aa523b1c3d9e451da",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/zJu7guIpYX3Yrd0aBuePvw",
+    "url": "https://mp.weixin.qq.com/s/zJu7guIpYX3Yrd0aBuePvw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学2025届毕业生理工类专场招聘会",
+    "source": "",
+    "publishDate": "2025-03-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/zJu7guIpYX3Yrd0aBuePvw"
+  },
+  "resources": [],
+  "sourceFingerprint": "6c6667a9bedee2afc8484294fc9b9267a1194f68a443508fa1bbd4f598b3657d",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "延边大学2025届毕业生理工类专场招聘会",
+    "listPublishDate": "2025-03-28",
+    "sourceOrder": 199
+  }
+}

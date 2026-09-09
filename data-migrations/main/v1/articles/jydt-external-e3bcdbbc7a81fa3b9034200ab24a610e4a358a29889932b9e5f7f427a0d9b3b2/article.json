@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e3bcdbbc7a81fa3b9034200ab24a610e4a358a29889932b9e5f7f427a0d9b3b2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/h9CRgJrcQKyWAZ7Z17zm2w",
+    "url": "https://mp.weixin.qq.com/s/h9CRgJrcQKyWAZ7Z17zm2w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "市委书记张恩惠到长春中医药大学开展2025年“长聚学子·春城暖才”高校毕业生来长留长系列活动秋季“开学季”宣讲活动",
+    "source": "",
+    "publishDate": "2025-09-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/h9CRgJrcQKyWAZ7Z17zm2w"
+  },
+  "resources": [],
+  "sourceFingerprint": "fc55f54bb014651266255efe9908713f6535c53adb4dad9853beab8556a6d619",
+  "evidence": {
+    "listPage": 70,
+    "listTitle": "市委书记张恩惠到长春中医药大学开展2025年“长聚学子·春城暖才”高校毕业生来长留长系列活动秋季“开学季”宣讲活动",
+    "listPublishDate": "2025-09-28",
+    "sourceOrder": 691
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:af31dba9280b9371bc0768f6206ab1d6ef4934bc5139166bb921e5362b22c6c6",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/wwopen/mpnews",
+    "url": "https://open.work.weixin.qq.com/wwopen/mpnews?mixuin=ZGHTEQAABwCrptivAAAUAA&mfid=WW0318-sjXnJgAABwA6-mEAxuANaQWm6i1a1&idx=0&sn=927e999c6779c130c31c1b66ff0c0b20"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "冬暖就业“不打烊” 护航成长“不断线”||吉林化工大学2026届毕业生寒假暖心促就业专项活动",
+    "source": "",
+    "publishDate": "2026-01-19",
+    "bodyHtml": "",
+    "externalUrl": "https://open.work.weixin.qq.com/wwopen/mpnews?mixuin=ZGHTEQAABwCrptivAAAUAA&mfid=WW0318-sjXnJgAABwA6-mEAxuANaQWm6i1a1&idx=0&sn=927e999c6779c130c31c1b66ff0c0b20"
+  },
+  "resources": [],
+  "sourceFingerprint": "2e14a9e6ab9f0d51f31a51cf8e44ebca0e5b13d807c33520a975698820a87dcc",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "冬暖就业“不打烊” 护航成长“不断线”||吉林化工大学2026届毕业生寒假暖心促就业专项活动",
+    "listPublishDate": "2026-01-19",
+    "sourceOrder": 101
+  }
+}

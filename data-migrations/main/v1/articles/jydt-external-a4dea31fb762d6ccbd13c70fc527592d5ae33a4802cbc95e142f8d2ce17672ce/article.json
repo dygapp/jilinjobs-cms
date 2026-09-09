@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a4dea31fb762d6ccbd13c70fc527592d5ae33a4802cbc95e142f8d2ce17672ce",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/yvjavdbZKfHiLS6RizCtoA",
+    "url": "https://mp.weixin.qq.com/s/yvjavdbZKfHiLS6RizCtoA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务吉林高质量发展 长春市百万大学生留长工程 |长春汽车职业技术大学成功举办“五优”服务进校园秋季巡回双选会",
+    "source": "",
+    "publishDate": "2025-10-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/yvjavdbZKfHiLS6RizCtoA"
+  },
+  "resources": [],
+  "sourceFingerprint": "27462a2867e67221dca7479fdc7ea62cec20868accabfe00aeec8b850a9eb802",
+  "evidence": {
+    "listPage": 67,
+    "listTitle": "服务吉林高质量发展 长春市百万大学生留长工程 |长春汽车职业技术大学成功举办“五优”服务进校园秋季巡回双选会",
+    "listPublishDate": "2025-10-24",
+    "sourceOrder": 661
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122616",
+    "contentId": "28737783122616",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122616"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部 国家卫生计生委 国家中医药局关于规范医学类专业办学的通知",
+    "source": "",
+    "publishDate": "2015-02-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部 国家卫生计生委 国家中医药局关于规范医学类专业办学的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:    发布时间:2015-2-6 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p>&nbsp;</p><p style=\"TEXT-ALIGN: center\"><img title=\"IMG_20150204_143836.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6355881456451475011831365.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"IMG_20150204_143849.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6355881456549280606728119.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"IMG_20150204_143859.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6355881456654486626138199.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"IMG_20150204_143913_1.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6355881456749292049278291.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"IMG_20150204_143924.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6355881456849297763702463.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"IMG_20150204_143936.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6355881456957603959571034.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"IMG_20150204_143948.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6355881457071010449952929.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"IMG_20150204_144140.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6355881457182816847105580.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"IMG_20150204_144201.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6355881457287722846515660.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"IMG_20150204_144209.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6355881457382928289655752.jpg\"></p><p></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "6047233e12386da9346f2d9b0bc2e019c99df4ecda773c61eba68e7e02d7bf0d",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "教育部 国家卫生计生委 国家中医药局关于规范医学类专业办学的通知",
+    "listPublishDate": "2015-02-06",
+    "sourceOrder": 288,
+    "detailPublishDate": "2015-02-06"
+  }
+}

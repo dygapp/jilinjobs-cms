@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bba5f1956ca4b7b7d470762585efd710193719693bfc576cae355f1656c46eb0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/c9fXZOtV5xmH_x0Girl7uQ",
+    "url": "https://mp.weixin.qq.com/s/c9fXZOtV5xmH_x0Girl7uQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林司法警官职业学院开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2025-06-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/c9fXZOtV5xmH_x0Girl7uQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "ebfef2a37cb3405362a8f75380c46b9ff904dcde3a14ac3c643e70f2fa52501a",
+  "evidence": {
+    "listPage": 84,
+    "listTitle": "吉林司法警官职业学院开展访企拓岗促就业专项行动",
+    "listPublishDate": "2025-06-11",
+    "sourceOrder": 832
+  }
+}

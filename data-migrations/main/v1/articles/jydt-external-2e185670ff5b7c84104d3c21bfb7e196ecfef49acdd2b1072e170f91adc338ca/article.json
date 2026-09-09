@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2e185670ff5b7c84104d3c21bfb7e196ecfef49acdd2b1072e170f91adc338ca",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xWTQfGlpvx-9zUZKcFQWHw",
+    "url": "https://mp.weixin.qq.com/s/xWTQfGlpvx-9zUZKcFQWHw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春中医药大学副校长王洪峰带队赴白山地区开展访企拓岗调研",
+    "source": "",
+    "publishDate": "2026-04-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xWTQfGlpvx-9zUZKcFQWHw"
+  },
+  "resources": [],
+  "sourceFingerprint": "765ab46e3090cb7c151dc6038affa074bd035a925adb39c92522d0f12fc4e332",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "长春中医药大学副校长王洪峰带队赴白山地区开展访企拓岗调研",
+    "listPublishDate": "2026-04-15",
+    "sourceOrder": 285
+  }
+}

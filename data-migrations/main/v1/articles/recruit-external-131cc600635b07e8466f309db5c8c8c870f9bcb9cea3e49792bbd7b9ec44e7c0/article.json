@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:131cc600635b07e8466f309db5c8c8c870f9bcb9cea3e49792bbd7b9ec44e7c0",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/U1AST9Zng9LrG5Nl3utB6A",
+    "url": "https://mp.weixin.qq.com/s/U1AST9Zng9LrG5Nl3utB6A"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春中医药大学“寒假促就业暖心行动”就业服务指南",
+    "source": "",
+    "publishDate": "2026-01-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/U1AST9Zng9LrG5Nl3utB6A"
+  },
+  "resources": [],
+  "sourceFingerprint": "e1d34bd7c1c99baaf2ec10a39bad7475d2c8c563a80540e589d86f4d7e373c82",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "长春中医药大学“寒假促就业暖心行动”就业服务指南",
+    "listPublishDate": "2026-01-19",
+    "sourceOrder": 103
+  }
+}

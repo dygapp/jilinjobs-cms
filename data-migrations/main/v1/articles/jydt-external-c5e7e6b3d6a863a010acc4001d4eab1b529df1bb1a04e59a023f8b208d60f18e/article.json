@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c5e7e6b3d6a863a010acc4001d4eab1b529df1bb1a04e59a023f8b208d60f18e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1306/58072.htm",
+    "url": "https://news.jlu.edu.cn/info/1306/58072.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林大学党委书记姜治莹在中心校区会见了吉林市委书记、吉林军分区党委第一书记胡斌一行",
+    "source": "",
+    "publishDate": "2024-04-04",
+    "bodyHtml": "",
+    "externalUrl": "https://news.jlu.edu.cn/info/1306/58072.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "fec667735887c5670989d8b768597d0c43292f622e9159b76efa2db41987876b",
+  "evidence": {
+    "listPage": 109,
+    "listTitle": "吉林大学党委书记姜治莹在中心校区会见了吉林市委书记、吉林军分区党委第一书记胡斌一行",
+    "listPublishDate": "2024-04-04",
+    "sourceOrder": 1090
+  }
+}

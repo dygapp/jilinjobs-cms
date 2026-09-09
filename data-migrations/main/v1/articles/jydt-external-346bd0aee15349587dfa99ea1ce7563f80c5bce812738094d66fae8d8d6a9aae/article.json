@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:346bd0aee15349587dfa99ea1ce7563f80c5bce812738094d66fae8d8d6a9aae",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/qlV8miXdym0byXxgoSUSYw",
+    "url": "https://mp.weixin.qq.com/s/qlV8miXdym0byXxgoSUSYw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春新区与吉林工程技术师范学院校地战略合作项目推进会成功举行",
+    "source": "",
+    "publishDate": "2025-07-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/qlV8miXdym0byXxgoSUSYw"
+  },
+  "resources": [],
+  "sourceFingerprint": "0eeaaf1fb5fca645affadb252e5e5efd358593aa7dc0d742f6386fbe89af0a0d",
+  "evidence": {
+    "listPage": 73,
+    "listTitle": "长春新区与吉林工程技术师范学院校地战略合作项目推进会成功举行",
+    "listPublishDate": "2025-07-15",
+    "sourceOrder": 727
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:85ab200831ab9f158f312241966ca2b1591289cc38484018068d25f54951a471",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/board/v5/7BnTm/651741118",
+    "url": "https://d.xiumi.us/board/v5/7BnTm/651741118?share_depth=1"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省2026届普通高校毕业生秋季 校园招聘活动-教育行业毕业生就业洽谈会邀请函",
+    "source": "",
+    "publishDate": "2025-10-09",
+    "bodyHtml": "",
+    "externalUrl": "https://d.xiumi.us/board/v5/7BnTm/651741118?share_depth=1"
+  },
+  "resources": [],
+  "sourceFingerprint": "e63fb309546e681d21122b5a09adf18acd485465a5c57f8f18d8ecb388eec5ba",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "吉林省2026届普通高校毕业生秋季 校园招聘活动-教育行业毕业生就业洽谈会邀请函",
+    "listPublishDate": "2025-10-09",
+    "sourceOrder": 135
+  }
+}

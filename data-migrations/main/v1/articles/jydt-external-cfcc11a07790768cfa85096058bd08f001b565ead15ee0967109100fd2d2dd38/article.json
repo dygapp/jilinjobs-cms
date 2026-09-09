@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cfcc11a07790768cfa85096058bd08f001b565ead15ee0967109100fd2d2dd38",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/WMMBEpH_dWOAKZmHmQfy8A",
+    "url": "https://mp.weixin.qq.com/s/WMMBEpH_dWOAKZmHmQfy8A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企合作 | 吉林通用航空职业技术学院举办2026 年高校毕业生专场招聘会",
+    "source": "",
+    "publishDate": "2026-04-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/WMMBEpH_dWOAKZmHmQfy8A"
+  },
+  "resources": [],
+  "sourceFingerprint": "04c2ddd0e059427f2fdf91ddcac63761ba6796d14cc1cde57a4a2b22b56802e5",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "校企合作 | 吉林通用航空职业技术学院举办2026 年高校毕业生专场招聘会",
+    "listPublishDate": "2026-04-27",
+    "sourceOrder": 237
+  }
+}

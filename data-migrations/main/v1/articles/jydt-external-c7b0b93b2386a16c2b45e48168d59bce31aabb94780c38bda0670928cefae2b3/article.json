@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c7b0b93b2386a16c2b45e48168d59bce31aabb94780c38bda0670928cefae2b3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/lyU6FQ6x9TbKanlejgu0Tw",
+    "url": "https://mp.weixin.qq.com/s/lyU6FQ6x9TbKanlejgu0Tw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力扩容提质 服务高质量发展 —— 吉林铁道职业技术大学成功举办2026届毕业生春季校园招聘会",
+    "source": "",
+    "publishDate": "2026-03-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/lyU6FQ6x9TbKanlejgu0Tw"
+  },
+  "resources": [],
+  "sourceFingerprint": "cbf35027e187f1f2f6603dd14fddd0bdc7712440f88c5ccbce60d2ac84d9b69d",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "聚力扩容提质 服务高质量发展 —— 吉林铁道职业技术大学成功举办2026届毕业生春季校园招聘会",
+    "listPublishDate": "2026-03-30",
+    "sourceOrder": 343
+  }
+}

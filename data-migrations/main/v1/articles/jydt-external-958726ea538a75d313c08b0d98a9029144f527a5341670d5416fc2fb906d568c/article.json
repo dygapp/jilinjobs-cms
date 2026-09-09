@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:958726ea538a75d313c08b0d98a9029144f527a5341670d5416fc2fb906d568c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1071/5361.htm",
+    "url": "https://www.jlart.edu.cn/info/1071/5361.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林艺术学院联合长春文旅集团举办“艺汇京西·职引未来”人才招聘会",
+    "source": "",
+    "publishDate": "2025-06-30",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlart.edu.cn/info/1071/5361.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "c16a2a4b3b6dc445efad48018d3a6a8cc01f4eb20372694924020f7e4f8276f4",
+  "evidence": {
+    "listPage": 76,
+    "listTitle": "吉林艺术学院联合长春文旅集团举办“艺汇京西·职引未来”人才招聘会",
+    "listPublishDate": "2025-06-30",
+    "sourceOrder": 760
+  }
+}

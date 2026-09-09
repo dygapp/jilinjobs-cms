@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:faeabec2bed22e25b64ce2ac21cefe470804286f82007abb26764bb2e5ca98e0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/-M8aonAQind9A1KLGtxLlA",
+    "url": "https://mp.weixin.qq.com/s/-M8aonAQind9A1KLGtxLlA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化校企合作，助推人才培养 | 长春财经学院赴金恒集团开展“访企拓岗”专项调研交流",
+    "source": "",
+    "publishDate": "2026-08-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/-M8aonAQind9A1KLGtxLlA"
+  },
+  "resources": [],
+  "sourceFingerprint": "ecaffc9aadb434c09a23a79bbfc6341cb161562eac7084b50bbf01dbe7e7600b",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "深化校企合作，助推人才培养 | 长春财经学院赴金恒集团开展“访企拓岗”专项调研交流",
+    "listPublishDate": "2026-08-06",
+    "sourceOrder": 23
+  }
+}

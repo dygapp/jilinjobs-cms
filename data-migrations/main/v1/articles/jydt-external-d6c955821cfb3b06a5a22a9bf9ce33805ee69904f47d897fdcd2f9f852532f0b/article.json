@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d6c955821cfb3b06a5a22a9bf9ce33805ee69904f47d897fdcd2f9f852532f0b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/3jD5spI_PFTAAYLOTcODjw",
+    "url": "https://mp.weixin.qq.com/s/3jD5spI_PFTAAYLOTcODjw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "华为吉林技术服务部一行到访吉林动画学院 共商华为现代产业学院合作办学",
+    "source": "",
+    "publishDate": "2026-04-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/3jD5spI_PFTAAYLOTcODjw"
+  },
+  "resources": [],
+  "sourceFingerprint": "a8432a56ee80340c1d0264436d26947822bbc1277f851c845db719da9ea40f76",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "华为吉林技术服务部一行到访吉林动画学院 共商华为现代产业学院合作办学",
+    "listPublishDate": "2026-04-15",
+    "sourceOrder": 283
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a6d364f89ff483e95f7809f183dc4c339d501b05f89f226a20986c600b17e993",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/wAbDIlcOh_vDZdsOcuoMoA",
+    "url": "https://mp.weixin.qq.com/s/wAbDIlcOh_vDZdsOcuoMoA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学副校长杨洪秀带队赴延边州开展访企拓岗促就业活动",
+    "source": "",
+    "publishDate": "2025-06-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wAbDIlcOh_vDZdsOcuoMoA"
+  },
+  "resources": [],
+  "sourceFingerprint": "9375fc032b520686d4179c988d6f0b9a6a98bcc36cde3dd8cbce906b8f5ae6c0",
+  "evidence": {
+    "listPage": 79,
+    "listTitle": "北华大学副校长杨洪秀带队赴延边州开展访企拓岗促就业活动",
+    "listPublishDate": "2025-06-23",
+    "sourceOrder": 783
+  }
+}

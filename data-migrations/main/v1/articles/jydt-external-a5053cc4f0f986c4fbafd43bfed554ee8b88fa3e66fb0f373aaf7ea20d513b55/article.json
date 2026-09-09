@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a5053cc4f0f986c4fbafd43bfed554ee8b88fa3e66fb0f373aaf7ea20d513b55",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/afiyxsNiH_Po2O-cCWcxxQ",
+    "url": "https://mp.weixin.qq.com/s/afiyxsNiH_Po2O-cCWcxxQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "近千万师生参与！首届全国大学生职业规划大赛成功举办",
+    "source": "",
+    "publishDate": "2024-05-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/afiyxsNiH_Po2O-cCWcxxQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "bab3efcb2892d427045a2401c07810095cdb3f49a3ca30d7a6d5f98d185144fd",
+  "evidence": {
+    "listPage": 106,
+    "listTitle": "近千万师生参与！首届全国大学生职业规划大赛成功举办",
+    "listPublishDate": "2024-05-13",
+    "sourceOrder": 1053
+  }
+}

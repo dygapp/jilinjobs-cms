@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:265731390324736",
+    "contentId": "265731390324736",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=265731390324736"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "筑梦青春志在四方，规划启航职引未来——2024年吉林省大学生职业规划大赛圆满落幕",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2025-01-06",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1002\" src=\"migration-resource://2298db7d95f0489f903d70cb1560d85166b7d44c61e6b39321442247abd496fe\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"831\" src=\"migration-resource://c03d851480e07b676e95dab064c69d9c75a2b3cb6fd12b3d12d26050f828c5de\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-06/6d093427-a10d-4af7-b01d-2b215fe27358.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-06/6d093427-a10d-4af7-b01d-2b215fe27358.jpg",
+      "token": "migration-resource://2298db7d95f0489f903d70cb1560d85166b7d44c61e6b39321442247abd496fe",
+      "snapshotPath": "assets/2298db7d95f0489f903d70cb1560d85166b7d44c61e6b39321442247abd496fe.jpg",
+      "sha256": "2298db7d95f0489f903d70cb1560d85166b7d44c61e6b39321442247abd496fe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 196167
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-06/acb59ad2-1143-49eb-b5c9-e3b537b7475d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-06/acb59ad2-1143-49eb-b5c9-e3b537b7475d.jpg",
+      "token": "migration-resource://c03d851480e07b676e95dab064c69d9c75a2b3cb6fd12b3d12d26050f828c5de",
+      "snapshotPath": "assets/c03d851480e07b676e95dab064c69d9c75a2b3cb6fd12b3d12d26050f828c5de.jpg",
+      "sha256": "c03d851480e07b676e95dab064c69d9c75a2b3cb6fd12b3d12d26050f828c5de",
+      "contentType": "image/jpeg",
+      "sizeBytes": 187243
+    }
+  ],
+  "sourceFingerprint": "68693efa4d8f3cecf5158e1b93d1238f3a28c9abb5797bc0210510973b14f709",
+  "evidence": {
+    "listPage": 100,
+    "listTitle": "筑梦青春志在四方，规划启航职引未来——2024年吉林省大学生职业规划大赛圆满落幕",
+    "listPublishDate": "2025-01-06",
+    "sourceOrder": 996,
+    "detailPublishDate": "2025-01-06"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4d1aad53f64addea94d493a2dc48b6242012e5ee9ec55db56716af55cae3a90b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/8G2WO_sNIVWWJWbMITpXoQ",
+    "url": "https://mp.weixin.qq.com/s/8G2WO_sNIVWWJWbMITpXoQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林医药学院副校长徐冶带队赴长春市访企拓岗",
+    "source": "",
+    "publishDate": "2026-04-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/8G2WO_sNIVWWJWbMITpXoQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "6c8242690cd0e370f8f28e2ee3147977b004534dadd5467e966fb6e060f6c70a",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "吉林医药学院副校长徐冶带队赴长春市访企拓岗",
+    "listPublishDate": "2026-04-13",
+    "sourceOrder": 297
+  }
+}

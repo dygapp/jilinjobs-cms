@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:108429404307456",
+    "contentId": "108429404307456",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=108429404307456"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省各地所属国有企业2022年定向招聘高校毕业生的公告（第一批）",
+    "source": "",
+    "publishDate": "2022-08-19",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"950\" src=\"migration-resource://d5ee7bd65bb2047ac3e4a04cf421ecbe387c3f19c6160ff5340706c0498d66f7\" width=\"791\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"979\" src=\"migration-resource://c8bc5130fe0d4b88476b2a57e6410999a49b88045c37c376fa8e95497464583c\" width=\"792\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"962\" src=\"migration-resource://77462921f280a864144c9bf4d25ca93cfbe46e6280bf522d0fe2a901cafa4d7f\" width=\"792\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1006\" src=\"migration-resource://7b3bcb836259c76e98c8c92ed54fa826feaf8416ed6b570da374db3880a14679\" width=\"791\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<p><span style=\"font-size:16px\"><a href=\"migration-attachment://83fc38b0bc74e623a324b93629910b05b539001864ffd88fed1582cb3cb88549\" target=\"_blank\">附件：吉林省各地所属国有企业2022年（第一批）定向招聘高校毕业生岗位信息表</a></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-08-22/7023c346-a72b-4226-a5a5-1c3b78f842cb.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-08-22/7023c346-a72b-4226-a5a5-1c3b78f842cb.jpg",
+      "token": "migration-resource://d5ee7bd65bb2047ac3e4a04cf421ecbe387c3f19c6160ff5340706c0498d66f7",
+      "snapshotPath": "assets/d5ee7bd65bb2047ac3e4a04cf421ecbe387c3f19c6160ff5340706c0498d66f7.jpg",
+      "sha256": "d5ee7bd65bb2047ac3e4a04cf421ecbe387c3f19c6160ff5340706c0498d66f7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 96604
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-08-22/b17d050c-cd65-4cb8-b4a0-df40e9764fe6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-08-22/b17d050c-cd65-4cb8-b4a0-df40e9764fe6.jpg",
+      "token": "migration-resource://c8bc5130fe0d4b88476b2a57e6410999a49b88045c37c376fa8e95497464583c",
+      "snapshotPath": "assets/c8bc5130fe0d4b88476b2a57e6410999a49b88045c37c376fa8e95497464583c.jpg",
+      "sha256": "c8bc5130fe0d4b88476b2a57e6410999a49b88045c37c376fa8e95497464583c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 96817
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-08-22/bc8f6130-c132-475c-ae60-4ef200d9916e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-08-22/bc8f6130-c132-475c-ae60-4ef200d9916e.jpg",
+      "token": "migration-resource://77462921f280a864144c9bf4d25ca93cfbe46e6280bf522d0fe2a901cafa4d7f",
+      "snapshotPath": "assets/77462921f280a864144c9bf4d25ca93cfbe46e6280bf522d0fe2a901cafa4d7f.jpg",
+      "sha256": "77462921f280a864144c9bf4d25ca93cfbe46e6280bf522d0fe2a901cafa4d7f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 91779
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-08-22/e2b56e5b-2abb-42ce-b83d-17a2f15c26e5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-08-22/e2b56e5b-2abb-42ce-b83d-17a2f15c26e5.jpg",
+      "token": "migration-resource://7b3bcb836259c76e98c8c92ed54fa826feaf8416ed6b570da374db3880a14679",
+      "snapshotPath": "assets/7b3bcb836259c76e98c8c92ed54fa826feaf8416ed6b570da374db3880a14679.jpg",
+      "sha256": "7b3bcb836259c76e98c8c92ed54fa826feaf8416ed6b570da374db3880a14679",
+      "contentType": "image/jpeg",
+      "sizeBytes": 48808
+    },
+    {
+      "role": "ATTACHMENT",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-08-22/e8fad913-11fd-4461-a33d-1584a5fef820.pdf",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-08-22/e8fad913-11fd-4461-a33d-1584a5fef820.pdf",
+      "token": "migration-attachment://83fc38b0bc74e623a324b93629910b05b539001864ffd88fed1582cb3cb88549",
+      "snapshotPath": "assets/83fc38b0bc74e623a324b93629910b05b539001864ffd88fed1582cb3cb88549.pdf",
+      "sha256": "83fc38b0bc74e623a324b93629910b05b539001864ffd88fed1582cb3cb88549",
+      "contentType": "application/pdf",
+      "sizeBytes": 314852
+    }
+  ],
+  "sourceFingerprint": "29660f2451433ac40144bc5901dc563c93b948518a8e6e1f5f6ef9e36c8984dd",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "吉林省各地所属国有企业2022年定向招聘高校毕业生的公告（第一批）",
+    "listPublishDate": "2022-08-19",
+    "sourceOrder": 339,
+    "detailPublishDate": "2022-08-19"
+  }
+}

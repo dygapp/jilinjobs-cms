@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122058",
+    "contentId": "28737783122058",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122058"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "东北三省联合举办全国高校就业指导人员培训（中级）班",
+    "source": "",
+    "publishDate": "2017-07-22",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">东北三省联合举办全国高校就业指导人员培训（中级）班</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2017-7-22 14:15:53</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"margin: auto 0px; text-align: justify; line-height: 32px; text-indent: 43px; -ms-text-justify: inter-ideograph;\"><span style=\"font-family: 仿宋; font-size: 21px;\">7月17日-21日，由全国高等学校学生信息咨询与就业指导中心主办, 辽宁省大学生就业局、吉林省高等学校毕业生就业指导中心、黑龙江省大中专毕业生就业指导中心联合承办的全国高校就业指导人员培训（中级）班在辽宁省大连市举办，来自东北三省、内蒙、河北、宁夏、重庆，共299名教师参加培训，其中我省高校70名就业指导教师参加学习。</span></p><p style=\"margin: auto 0px; text-align: justify; line-height: 32px; text-indent: 43px; -ms-text-justify: inter-ideograph;\"><span style=\"font-family: 仿宋; font-size: 21px;\">课程由兰州大学副调研员石兆俊、新精英生涯教育科技有限公司研发总监李春雨、北京大学心理学院副教授卞冉、厦门大学学生处副处长刘艳杰、北京神州泰岳教育科技有限公司总裁吴斌，分别从高等教育供给侧结构性改革与大学生就业、高校职业辅导体系建设、大学生职业辅导理论、职业咨询与辅导实务、职业测评应用、就业指导课程教学、大学生创业教育等内容进行了深入讲解。</span></p><p style=\"margin: auto 0px; text-align: justify; line-height: 32px; text-indent: 43px; -ms-text-justify: inter-ideograph;\"><span style=\"font-family: 仿宋; font-size: 21px;\">全国高等学校学生信息咨询与就业指导中心职业能力建设处陆新逸, 吉林省高等学校毕业生就业指导中心主任郑志宏、副主任张旭光、辽宁省大学生就业局局长刘铸、黑龙江省大中专毕业生就业指导中心主任张立波参加开班仪式。</span></p><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"7.17-21.jpg\" src=\"migration-resource://3e7f69a1be270c6cb191213ea57c15a6a59e80b2b1ee5e22132a94e73c593b88\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363667523882812504673727.jpg",
+      "originalReference": "/chistory/cms/imgs/6363667523882812504673727.jpg",
+      "token": "migration-resource://3e7f69a1be270c6cb191213ea57c15a6a59e80b2b1ee5e22132a94e73c593b88",
+      "snapshotPath": "assets/3e7f69a1be270c6cb191213ea57c15a6a59e80b2b1ee5e22132a94e73c593b88.jpg",
+      "sha256": "3e7f69a1be270c6cb191213ea57c15a6a59e80b2b1ee5e22132a94e73c593b88",
+      "contentType": "image/jpeg",
+      "sizeBytes": 178409
+    }
+  ],
+  "sourceFingerprint": "ecc948fe49a68d14cf8e52816efed1a79067ad5191597cf6214599053ae025b9",
+  "evidence": {
+    "listPage": 149,
+    "listTitle": "东北三省联合举办全国高校就业指导人员培训（中级）班",
+    "listPublishDate": "2017-07-22",
+    "sourceOrder": 1486,
+    "detailPublishDate": "2017-07-22"
+  }
+}

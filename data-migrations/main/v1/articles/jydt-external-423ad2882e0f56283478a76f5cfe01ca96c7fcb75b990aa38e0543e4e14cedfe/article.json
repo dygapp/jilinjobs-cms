@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:423ad2882e0f56283478a76f5cfe01ca96c7fcb75b990aa38e0543e4e14cedfe",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5776.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5776.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“聚才引智 筑梦辽源”2026年辽源市携企带岗进校园活动在长春工业大学举办",
+    "source": "",
+    "publishDate": "2026-05-14",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5776.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "a7983d1a9b5e847def9a1bbc08f00a71540908426e7b492314f12e26febb9a38",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "“聚才引智 筑梦辽源”2026年辽源市携企带岗进校园活动在长春工业大学举办",
+    "listPublishDate": "2026-05-14",
+    "sourceOrder": 190
+  }
+}

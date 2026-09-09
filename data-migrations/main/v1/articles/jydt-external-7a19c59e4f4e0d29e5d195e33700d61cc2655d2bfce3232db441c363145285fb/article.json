@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7a19c59e4f4e0d29e5d195e33700d61cc2655d2bfce3232db441c363145285fb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/WTA7GR676nKlqsznjqZaaA",
+    "url": "https://mp.weixin.qq.com/s/WTA7GR676nKlqsznjqZaaA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院副校长张代治一行赴解放军联勤保障部队第九六六医院走访交流",
+    "source": "",
+    "publishDate": "2026-01-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/WTA7GR676nKlqsznjqZaaA"
+  },
+  "resources": [],
+  "sourceFingerprint": "85093d35d7e635ada0d735b81affb79faa6e7faf636e9cd98da16072c7dbfca7",
+  "evidence": {
+    "listPage": 50,
+    "listTitle": "长春科技学院副校长张代治一行赴解放军联勤保障部队第九六六医院走访交流",
+    "listPublishDate": "2026-01-19",
+    "sourceOrder": 491
+  }
+}

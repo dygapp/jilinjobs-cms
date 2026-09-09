@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:7b0644a3bc5a8f623b2c3adfab04f35d674a8910cd736b09f8d224d19c6531da",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/ruPpYvUulKu7cXVmUaKS4A",
+    "url": "https://mp.weixin.qq.com/s/ruPpYvUulKu7cXVmUaKS4A"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "高校毕业生就业政策举措落实工作推进会召开",
+    "source": "",
+    "publishDate": "2025-06-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ruPpYvUulKu7cXVmUaKS4A"
+  },
+  "resources": [],
+  "sourceFingerprint": "e41dae90f4e038dc17d52c5055633dc12c84af302ee8261970de4bcedf88edde",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "高校毕业生就业政策举措落实工作推进会召开",
+    "listPublishDate": "2025-06-04",
+    "sourceOrder": 34
+  }
+}

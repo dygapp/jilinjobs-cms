@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b4c2ed05ead66afad527fdb6e8c9d6cb36eb9faf9a3c3e24c807737867bf06a4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kz82a-zyR1cK4rMOAXVYIg",
+    "url": "https://mp.weixin.qq.com/s/kz82a-zyR1cK4rMOAXVYIg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业 校企协同谋新篇 ——长春科技学院赴京考察企业深化产教融合",
+    "source": "",
+    "publishDate": "2025-09-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kz82a-zyR1cK4rMOAXVYIg"
+  },
+  "resources": [],
+  "sourceFingerprint": "09e84587fd02ad0058378c1e95eee55d33e1e1fc6364f40dfbca6250cdd2698e",
+  "evidence": {
+    "listPage": 70,
+    "listTitle": "访企拓岗促就业 校企协同谋新篇 ——长春科技学院赴京考察企业深化产教融合",
+    "listPublishDate": "2025-09-25",
+    "sourceOrder": 696
+  }
+}

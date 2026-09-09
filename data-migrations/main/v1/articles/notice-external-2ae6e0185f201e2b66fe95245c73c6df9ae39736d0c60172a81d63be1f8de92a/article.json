@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:2ae6e0185f201e2b66fe95245c73c6df9ae39736d0c60172a81d63be1f8de92a",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/www/detail",
+    "url": "http://smart.jilinjobs.cn/www/detail?id=5f11651b6bba0a6eb3bd8f4d"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "关于印发《吉林省2020年农村义务教育阶段学校教师特设岗位计划实施方案》的通知",
+    "source": "",
+    "publishDate": "2020-07-17",
+    "bodyHtml": "",
+    "externalUrl": "http://smart.jilinjobs.cn/www/detail?id=5f11651b6bba0a6eb3bd8f4d"
+  },
+  "resources": [],
+  "sourceFingerprint": "8e4b981020fb832dfdaca82ab58f6dd3ce6a5d305157b301b3593f0251f19fa7",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "关于印发《吉林省2020年农村义务教育阶段学校教师特设岗位计划实施方案》的通知",
+    "listPublishDate": "2020-07-17",
+    "sourceOrder": 183
+  }
+}

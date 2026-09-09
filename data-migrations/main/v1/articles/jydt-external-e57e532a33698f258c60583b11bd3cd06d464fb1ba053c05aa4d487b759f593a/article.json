@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e57e532a33698f258c60583b11bd3cd06d464fb1ba053c05aa4d487b759f593a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/-dUFEnFVJ0Y8rsdm1M0clg",
+    "url": "https://mp.weixin.qq.com/s/-dUFEnFVJ0Y8rsdm1M0clg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "就业促进周系列活动 | “简入佳境，职在必得”简历门诊",
+    "source": "",
+    "publishDate": "2024-05-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/-dUFEnFVJ0Y8rsdm1M0clg"
+  },
+  "resources": [],
+  "sourceFingerprint": "0217f5f289d799d1e066886c3227066c07aad74ff4f8c7486dd84637a765a616",
+  "evidence": {
+    "listPage": 105,
+    "listTitle": "就业促进周系列活动 | “简入佳境，职在必得”简历门诊",
+    "listPublishDate": "2024-05-31",
+    "sourceOrder": 1044
+  }
+}

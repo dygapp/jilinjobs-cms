@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:120e5e8e9caeebc676d9b3cc52241bab65c1ad3fb78d819a7fae0a52ee931999",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/rzsxzA7nf3-6VKYklUy9OA",
+    "url": "https://mp.weixin.qq.com/s/rzsxzA7nf3-6VKYklUy9OA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "探访艺术疗愈新业态，融汇中医康复新技能 | 长春早期教育职业学院赴艺术疗愈机构及中医药检测中心交流研讨",
+    "source": "",
+    "publishDate": "2026-07-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/rzsxzA7nf3-6VKYklUy9OA"
+  },
+  "resources": [],
+  "sourceFingerprint": "b200e049e42cac00011539ab62c3b2fc60c48dc1978cd145a952c13fc91c9a96",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "探访艺术疗愈新业态，融汇中医康复新技能 | 长春早期教育职业学院赴艺术疗愈机构及中医药检测中心交流研讨",
+    "listPublishDate": "2026-07-14",
+    "sourceOrder": 48
+  }
+}

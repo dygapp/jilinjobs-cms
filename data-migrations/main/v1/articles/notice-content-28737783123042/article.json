@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783123042",
+    "contentId": "28737783123042",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123042"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《关于征集“大学生自主创业先进人物”的预通知》的通知",
+    "source": "",
+    "publishDate": "2011-02-23",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《关于征集“大学生自主创业先进人物”的预通知》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-2-23 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img height=\"712\" src=\"migration-resource://1d79992788edd810740fc4ede26de082d8cffea571a7c2a9525f1166e13ea8f1\" width=\"536\" border=\"0\"></p> <p align=\"center\"><img height=\"792\" src=\"migration-resource://779a126a5c0969ae448219ff40f267b211fc2fea0cf6c973f1a132e56dbae443\" width=\"536\" border=\"0\"></p> <p align=\"center\"><img height=\"536\" src=\"migration-resource://a470b41e260301b67fe544eb5520da6199336b3991b2e1082eaef7bd7fd952e1\" width=\"536\" border=\"0\"></p> <p align=\"center\"><img height=\"752\" src=\"migration-resource://2416108027a36098b96beb9789d3ea4776b489273d315addc6fcc5d5c77eb5ff\" width=\"536\" border=\"0\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110223161422438.jpg",
+      "originalReference": "/chistory/cms/imgs/20110223161422438.jpg",
+      "token": "migration-resource://1d79992788edd810740fc4ede26de082d8cffea571a7c2a9525f1166e13ea8f1",
+      "snapshotPath": "assets/1d79992788edd810740fc4ede26de082d8cffea571a7c2a9525f1166e13ea8f1.jpg",
+      "sha256": "1d79992788edd810740fc4ede26de082d8cffea571a7c2a9525f1166e13ea8f1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 57560
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110223161435693.jpg",
+      "originalReference": "/chistory/cms/imgs/20110223161435693.jpg",
+      "token": "migration-resource://779a126a5c0969ae448219ff40f267b211fc2fea0cf6c973f1a132e56dbae443",
+      "snapshotPath": "assets/779a126a5c0969ae448219ff40f267b211fc2fea0cf6c973f1a132e56dbae443.jpg",
+      "sha256": "779a126a5c0969ae448219ff40f267b211fc2fea0cf6c973f1a132e56dbae443",
+      "contentType": "image/jpeg",
+      "sizeBytes": 65893
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110223161447769.jpg",
+      "originalReference": "/chistory/cms/imgs/20110223161447769.jpg",
+      "token": "migration-resource://a470b41e260301b67fe544eb5520da6199336b3991b2e1082eaef7bd7fd952e1",
+      "snapshotPath": "assets/a470b41e260301b67fe544eb5520da6199336b3991b2e1082eaef7bd7fd952e1.jpg",
+      "sha256": "a470b41e260301b67fe544eb5520da6199336b3991b2e1082eaef7bd7fd952e1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 22686
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110223161458987.jpg",
+      "originalReference": "/chistory/cms/imgs/20110223161458987.jpg",
+      "token": "migration-resource://2416108027a36098b96beb9789d3ea4776b489273d315addc6fcc5d5c77eb5ff",
+      "snapshotPath": "assets/2416108027a36098b96beb9789d3ea4776b489273d315addc6fcc5d5c77eb5ff.jpg",
+      "sha256": "2416108027a36098b96beb9789d3ea4776b489273d315addc6fcc5d5c77eb5ff",
+      "contentType": "image/jpeg",
+      "sizeBytes": 30400
+    }
+  ],
+  "sourceFingerprint": "406ce0ea45b3a72e45adc89f643bfc18813279baa24934cab89e2122e8419dfe",
+  "evidence": {
+    "listPage": 46,
+    "listTitle": "转发《关于征集“大学生自主创业先进人物”的预通知》的通知",
+    "listPublishDate": "2011-02-23",
+    "sourceOrder": 456,
+    "detailPublishDate": "2011-02-23"
+  }
+}

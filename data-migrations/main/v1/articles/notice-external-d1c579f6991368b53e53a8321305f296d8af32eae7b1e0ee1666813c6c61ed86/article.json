@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:d1c579f6991368b53e53a8321305f296d8af32eae7b1e0ee1666813c6c61ed86",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/srcsite/A15/s3265/202411/t20241112_1162526.html",
+    "url": "http://www.moe.gov.cn/srcsite/A15/s3265/202411/t20241112_1162526.html"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "教育部关于做好2025届全国普通高校毕业生就业创业工作的通知",
+    "source": "",
+    "publishDate": "2024-11-13",
+    "bodyHtml": "",
+    "externalUrl": "http://www.moe.gov.cn/srcsite/A15/s3265/202411/t20241112_1162526.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "d15f5c1ac78de6c9a146389a61055805bc4b6547a8095bdb3e566263c3e0f1ae",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "教育部关于做好2025届全国普通高校毕业生就业创业工作的通知",
+    "listPublishDate": "2024-11-13",
+    "sourceOrder": 69
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86129011343360",
+    "contentId": "86129011343360",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86129011343360"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林工程技术师范学院举办安徽天长市工业学校直招专场招聘会",
+    "source": "吉林工程技术师范学院",
+    "publishDate": "2021-12-09",
+    "bodyHtml": "\n                        <p>12月3日-12月8日，吉林工程技术师范学院——安徽省天长市工业学校专场招聘会在吉林工程技术师范学院举行。天长市教体局书记叶晓东、副书记董启湖、教体局副局长周家华、纪检书记焦有贵，天长市编办主任胡国祥，天长市人社局局长杨明祥、副局长王德俊，天长市财政局副局长管林，天长市工业学校党委书记、校长周福松等一行19人来校组织现场招聘。</p>\n\n<p>校领导对此次招聘活动高度重视，召开专项工作布置会，对前期报考人员进行初选。创业就业处会同相关院系倾力协调、组织报名及考试等相关工作。</p>\n\n<p>招聘会期间，校党委书记刘剑桥、院长杨晓东、副院长张鹏与天长市领导见面会谈，并就未来双方在“实习+就业”方面开展长期合作达成基本意向。天长市工业学校对学校在此次校园招聘工作中给予的大力支持和热情服务以及长期以来对天长市职业教育的关心和支持表示感谢。天长市相关领导表达了与学校进一步加强合作共建的愿望，希望深度融合，为区域经济发展培养更多更好的高质量技能型人才。</p>\n\n<p><strong>（吉林工程技术师范学院 王蕊）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "a11cb745f9bbbd16fe46e0ac28eb01896b8179cc01fa8feed5d522ff4c378744",
+  "evidence": {
+    "listPage": 126,
+    "listTitle": "吉林工程技术师范学院举办安徽天长市工业学校直招专场招聘会",
+    "listPublishDate": "2021-12-09",
+    "sourceOrder": 1259,
+    "detailPublishDate": "2021-12-09"
+  }
+}

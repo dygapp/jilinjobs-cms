@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122216",
+    "contentId": "28737783122216",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122216"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林大学2012届毕业生暨吉林省高校毕业生就业市场隆重举行",
+    "source": "",
+    "publishDate": "2011-11-16",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林大学2012届毕业生暨吉林省高校毕业生就业市场隆重举行</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-16 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://7124a8bd247b95acbf99afab8cc4657b0a5cf50b6850454589039d4a4cc19a5e\"></p> <p>&nbsp;&nbsp;&nbsp; 2011年11月15日，吉林大学2012届毕业生暨吉林省高校毕业生就业市场在长春市会展中心举行。来自全国各地的近700家用人单位参展，分布在会场的四个展区，参会人数1200余人，提供需求岗位两万余个。吉林大学党委书记陈德文、校长李元元、党委副书记兼副校长韩晓峰等校领导到招聘会现场视察。</p> <p>&nbsp;</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://3888d5dcb9193328e41084e84f8aca31615f77200bc6f9a34d52b9fe73d935e0\"></p> <p align=\"center\">&nbsp;&nbsp; 吉林大学党委书记陈德文、校长李元元、党委副书记兼副校长韩晓峰等校领导到招聘会现场视察。</p> <p>&nbsp;</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://a679a0ad84b1fc7f26cda016810f25e7e94502199c725d62630d71c307902f91\"></p> <p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111116095236379.jpg",
+      "originalReference": "/chistory/cms/imgs/20111116095236379.jpg",
+      "token": "migration-resource://7124a8bd247b95acbf99afab8cc4657b0a5cf50b6850454589039d4a4cc19a5e",
+      "snapshotPath": "assets/7124a8bd247b95acbf99afab8cc4657b0a5cf50b6850454589039d4a4cc19a5e.jpg",
+      "sha256": "7124a8bd247b95acbf99afab8cc4657b0a5cf50b6850454589039d4a4cc19a5e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77031
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111116095400602.jpg",
+      "originalReference": "/chistory/cms/imgs/20111116095400602.jpg",
+      "token": "migration-resource://3888d5dcb9193328e41084e84f8aca31615f77200bc6f9a34d52b9fe73d935e0",
+      "snapshotPath": "assets/3888d5dcb9193328e41084e84f8aca31615f77200bc6f9a34d52b9fe73d935e0.jpg",
+      "sha256": "3888d5dcb9193328e41084e84f8aca31615f77200bc6f9a34d52b9fe73d935e0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 47904
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111116095451487.jpg",
+      "originalReference": "/chistory/cms/imgs/20111116095451487.jpg",
+      "token": "migration-resource://a679a0ad84b1fc7f26cda016810f25e7e94502199c725d62630d71c307902f91",
+      "snapshotPath": "assets/a679a0ad84b1fc7f26cda016810f25e7e94502199c725d62630d71c307902f91.jpg",
+      "sha256": "a679a0ad84b1fc7f26cda016810f25e7e94502199c725d62630d71c307902f91",
+      "contentType": "image/jpeg",
+      "sizeBytes": 85070
+    }
+  ],
+  "sourceFingerprint": "a96da00162079de23accba26446417c61d547ddf1cffb87934076e41257ccbd2",
+  "evidence": {
+    "listPage": 165,
+    "listTitle": "吉林大学2012届毕业生暨吉林省高校毕业生就业市场隆重举行",
+    "listPublishDate": "2011-11-16",
+    "sourceOrder": 1646,
+    "detailPublishDate": "2011-11-16"
+  }
+}

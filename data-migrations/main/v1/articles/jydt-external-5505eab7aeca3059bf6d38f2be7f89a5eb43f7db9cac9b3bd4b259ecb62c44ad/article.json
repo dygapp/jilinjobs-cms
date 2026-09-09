@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5505eab7aeca3059bf6d38f2be7f89a5eb43f7db9cac9b3bd4b259ecb62c44ad",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/C-A6wYAWANOCxbZpK1O0Xw",
+    "url": "https://mp.weixin.qq.com/s/C-A6wYAWANOCxbZpK1O0Xw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工程职业学院校领导走访产业园区 助力毕业生高质量就业",
+    "source": "",
+    "publishDate": "2026-04-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/C-A6wYAWANOCxbZpK1O0Xw"
+  },
+  "resources": [],
+  "sourceFingerprint": "3c17a779c201b204dc0d97f6df702707b2c81c29ce74a0a2fc9a780aac411ad6",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "吉林工程职业学院校领导走访产业园区 助力毕业生高质量就业",
+    "listPublishDate": "2026-04-02",
+    "sourceOrder": 326
+  }
+}

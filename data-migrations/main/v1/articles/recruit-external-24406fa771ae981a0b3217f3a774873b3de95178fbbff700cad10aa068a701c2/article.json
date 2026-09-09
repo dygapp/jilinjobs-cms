@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:24406fa771ae981a0b3217f3a774873b3de95178fbbff700cad10aa068a701c2",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/jobfair/fairdetails.html",
+    "url": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=BxMFgsVHuKujbbrd79nq5Z"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "国防科技行业2023届高校毕业生专场招聘",
+    "source": "",
+    "publishDate": "2022-12-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=BxMFgsVHuKujbbrd79nq5Z"
+  },
+  "resources": [],
+  "sourceFingerprint": "773971ecdf40e243ee05de9b8443a7d3066443ce2618c7f582280e683ce839d8",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "国防科技行业2023届高校毕业生专场招聘",
+    "listPublishDate": "2022-12-02",
+    "sourceOrder": 325
+  }
+}

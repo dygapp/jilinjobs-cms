@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122986",
+    "contentId": "28737783122986",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122986"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办“全国会展行业与2012届高校毕业生网络招聘会”的通知",
+    "source": "",
+    "publishDate": "2011-11-07",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办“全国会展行业与2012届高校毕业生网络招聘会”的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-7 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://c983a01aaa967577b87200878de836d89c52bdd0d0c93cd038f3226112dd1776\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://dcbce16c95fad7928e40501c3ecb70600cbe30a952ff1f3ada33f1504dbf7a06\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://f985b41818db441687418ad5b54e826c4c6fa5deb5772dfaf15335ca7ebf76e0\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111107135509198.jpg",
+      "originalReference": "/chistory/cms/imgs/20111107135509198.jpg",
+      "token": "migration-resource://c983a01aaa967577b87200878de836d89c52bdd0d0c93cd038f3226112dd1776",
+      "snapshotPath": "assets/c983a01aaa967577b87200878de836d89c52bdd0d0c93cd038f3226112dd1776.jpg",
+      "sha256": "c983a01aaa967577b87200878de836d89c52bdd0d0c93cd038f3226112dd1776",
+      "contentType": "image/jpeg",
+      "sizeBytes": 79113
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111107135516618.jpg",
+      "originalReference": "/chistory/cms/imgs/20111107135516618.jpg",
+      "token": "migration-resource://dcbce16c95fad7928e40501c3ecb70600cbe30a952ff1f3ada33f1504dbf7a06",
+      "snapshotPath": "assets/dcbce16c95fad7928e40501c3ecb70600cbe30a952ff1f3ada33f1504dbf7a06.jpg",
+      "sha256": "dcbce16c95fad7928e40501c3ecb70600cbe30a952ff1f3ada33f1504dbf7a06",
+      "contentType": "image/jpeg",
+      "sizeBytes": 72768
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111107135522159.jpg",
+      "originalReference": "/chistory/cms/imgs/20111107135522159.jpg",
+      "token": "migration-resource://f985b41818db441687418ad5b54e826c4c6fa5deb5772dfaf15335ca7ebf76e0",
+      "snapshotPath": "assets/f985b41818db441687418ad5b54e826c4c6fa5deb5772dfaf15335ca7ebf76e0.jpg",
+      "sha256": "f985b41818db441687418ad5b54e826c4c6fa5deb5772dfaf15335ca7ebf76e0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 59443
+    }
+  ],
+  "sourceFingerprint": "2badc0bf3cbbbd2f538a27c91958086f3c94abd01d97a597fee1978597b1f7c8",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "关于举办“全国会展行业与2012届高校毕业生网络招聘会”的通知",
+    "listPublishDate": "2011-11-07",
+    "sourceOrder": 420,
+    "detailPublishDate": "2011-11-07"
+  }
+}

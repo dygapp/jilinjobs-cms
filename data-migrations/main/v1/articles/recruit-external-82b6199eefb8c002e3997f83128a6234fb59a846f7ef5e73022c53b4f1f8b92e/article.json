@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:82b6199eefb8c002e3997f83128a6234fb59a846f7ef5e73022c53b4f1f8b92e",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/umv24OqAtSiLijmsVfj7TQ",
+    "url": "https://mp.weixin.qq.com/s/umv24OqAtSiLijmsVfj7TQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“聚力扩容提质 服务高质量发展”2026年吉林省高校毕业生工程技术类专场招聘会",
+    "source": "",
+    "publishDate": "2026-03-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/umv24OqAtSiLijmsVfj7TQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "f53649d18a59d6853c4f3e0da8c72ec4787f313cdec439a9c535390b3738b660",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "“聚力扩容提质 服务高质量发展”2026年吉林省高校毕业生工程技术类专场招聘会",
+    "listPublishDate": "2026-03-19",
+    "sourceOrder": 56
+  }
+}

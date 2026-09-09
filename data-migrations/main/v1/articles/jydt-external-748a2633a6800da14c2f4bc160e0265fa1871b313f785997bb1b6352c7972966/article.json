@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:748a2633a6800da14c2f4bc160e0265fa1871b313f785997bb1b6352c7972966",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/aw3HpI7YpRFkSWJInPjLTQ",
+    "url": "https://mp.weixin.qq.com/s/aw3HpI7YpRFkSWJInPjLTQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业丨长春财经学院人工智能学院领导带队深入高新技术企业走访交流",
+    "source": "",
+    "publishDate": "2026-01-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/aw3HpI7YpRFkSWJInPjLTQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "0085054881824f4294b0903a4bfb4ac6e5da5c2f69c59931ef03c5a26c004d79",
+  "evidence": {
+    "listPage": 47,
+    "listTitle": "访企拓岗促就业丨长春财经学院人工智能学院领导带队深入高新技术企业走访交流",
+    "listPublishDate": "2026-01-30",
+    "sourceOrder": 467
+  }
+}

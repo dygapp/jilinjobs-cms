@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120082",
+    "contentId": "28737783120082",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120082"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "第三届中国•长春创业就业博览会在长春国际会展中心举行",
+    "source": "",
+    "publishDate": "2012-05-25",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">第三届中国•长春创业就业博览会在长春国际会展中心举行</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-5-25 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://433f67a7717b95b6091c380576c15877e1c08e49d86de14f3266c90316a3ce5f\"></p> <p align=\"center\">第三届中国<span style=\"LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; FONT-SIZE: 10.5pt; mso-bidi-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA\">·</span>长春创业（就业）博览会于5月25日-5月27日在长春国际会展中心举行。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://5df4eefe1113e9876e3eaf1ea3b759b90f52f6c82a4423085107148d01c55c4a\"></p> <p align=\"center\">吉林省教育厅做为本届博览会承办单位之一，副厅长孙维杰(右一)代表吉林省教育厅出席开幕式。</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://3e9264e0a03f42fb5f1975ef70cab8e5ea1f3c6999cf61d6628d86c74161dd53\"></p> <p align=\"center\">省教育厅高校学生处处长 纪拓（右一），省高校毕业生就业指导中心主任 郑志宏（右二）在主席台就座。</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120525164649367.jpg",
+      "originalReference": "/chistory/cms/imgs/20120525164649367.jpg",
+      "token": "migration-resource://433f67a7717b95b6091c380576c15877e1c08e49d86de14f3266c90316a3ce5f",
+      "snapshotPath": "assets/433f67a7717b95b6091c380576c15877e1c08e49d86de14f3266c90316a3ce5f.jpg",
+      "sha256": "433f67a7717b95b6091c380576c15877e1c08e49d86de14f3266c90316a3ce5f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 73779
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120525164708400.jpg",
+      "originalReference": "/chistory/cms/imgs/20120525164708400.jpg",
+      "token": "migration-resource://5df4eefe1113e9876e3eaf1ea3b759b90f52f6c82a4423085107148d01c55c4a",
+      "snapshotPath": "assets/5df4eefe1113e9876e3eaf1ea3b759b90f52f6c82a4423085107148d01c55c4a.jpg",
+      "sha256": "5df4eefe1113e9876e3eaf1ea3b759b90f52f6c82a4423085107148d01c55c4a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 73415
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120525164726270.jpg",
+      "originalReference": "/chistory/cms/imgs/20120525164726270.jpg",
+      "token": "migration-resource://3e9264e0a03f42fb5f1975ef70cab8e5ea1f3c6999cf61d6628d86c74161dd53",
+      "snapshotPath": "assets/3e9264e0a03f42fb5f1975ef70cab8e5ea1f3c6999cf61d6628d86c74161dd53.jpg",
+      "sha256": "3e9264e0a03f42fb5f1975ef70cab8e5ea1f3c6999cf61d6628d86c74161dd53",
+      "contentType": "image/jpeg",
+      "sizeBytes": 52972
+    }
+  ],
+  "sourceFingerprint": "887e4a6356b06626ebdd0a7c0c11687e251eae9ac65b3a15441b20c0ee86c3ce",
+  "evidence": {
+    "listPage": 164,
+    "listTitle": "第三届中国•长春创业就业博览会在长春国际会展中心举行",
+    "listPublishDate": "2012-05-25",
+    "sourceOrder": 1634,
+    "detailPublishDate": "2012-05-25"
+  }
+}

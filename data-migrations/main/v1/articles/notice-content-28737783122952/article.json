@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122952",
+    "contentId": "28737783122952",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122952"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于召开吉林省大学生就业创业协会筹备会议的通知",
+    "source": "",
+    "publishDate": "2012-06-01",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于召开吉林省大学生就业创业协会筹备会议的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-6-1 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://db1c61a18ef3ab183522b1f7cc58994fe33f1b5f5738e1e6fa63dc7cb5c4130f\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://da5b547320591226408284858f467a1d5f8d863ef0ba007286ef863874264763\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120601135325725.jpg",
+      "originalReference": "/chistory/cms/imgs/20120601135325725.jpg",
+      "token": "migration-resource://db1c61a18ef3ab183522b1f7cc58994fe33f1b5f5738e1e6fa63dc7cb5c4130f",
+      "snapshotPath": "assets/db1c61a18ef3ab183522b1f7cc58994fe33f1b5f5738e1e6fa63dc7cb5c4130f.jpg",
+      "sha256": "db1c61a18ef3ab183522b1f7cc58994fe33f1b5f5738e1e6fa63dc7cb5c4130f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77107
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120601135331635.jpg",
+      "originalReference": "/chistory/cms/imgs/20120601135331635.jpg",
+      "token": "migration-resource://da5b547320591226408284858f467a1d5f8d863ef0ba007286ef863874264763",
+      "snapshotPath": "assets/da5b547320591226408284858f467a1d5f8d863ef0ba007286ef863874264763.jpg",
+      "sha256": "da5b547320591226408284858f467a1d5f8d863ef0ba007286ef863874264763",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82214
+    }
+  ],
+  "sourceFingerprint": "03def04eb2740bcd6023b2bc194a2e3d2216c1afffe94a3c8f4e7166a1ffba87",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "关于召开吉林省大学生就业创业协会筹备会议的通知",
+    "listPublishDate": "2012-06-01",
+    "sourceOrder": 393,
+    "detailPublishDate": "2012-06-01"
+  }
+}

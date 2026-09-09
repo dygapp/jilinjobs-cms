@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:496344df7612f9f21bf40fefe51cb850658667450e6c9db0f5737cec3dfeff71",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/zwgk/gsgg/202006/t20200629_617749.html",
+    "url": "http://www.fusong.gov.cn/zwgk/gsgg/202006/t20200629_617749.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年抚松县事业单位专项招聘高校毕业生公告",
+    "source": "",
+    "publishDate": "2020-06-29",
+    "bodyHtml": "",
+    "externalUrl": "http://www.fusong.gov.cn/zwgk/gsgg/202006/t20200629_617749.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "2402d26c1f2e1c2a8dee743ef5868360d0be2dcbcd701f577131013f0b015879",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "2020年抚松县事业单位专项招聘高校毕业生公告",
+    "listPublishDate": "2020-06-29",
+    "sourceOrder": 401
+  }
+}

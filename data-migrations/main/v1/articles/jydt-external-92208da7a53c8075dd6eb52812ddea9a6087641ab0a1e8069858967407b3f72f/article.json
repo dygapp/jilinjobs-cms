@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:92208da7a53c8075dd6eb52812ddea9a6087641ab0a1e8069858967407b3f72f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/cNMaNsxN2KJzInd8jEAUHQ",
+    "url": "https://mp.weixin.qq.com/s/cNMaNsxN2KJzInd8jEAUHQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学校领导带队赴北京市开展访企拓岗活动",
+    "source": "",
+    "publishDate": "2026-07-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/cNMaNsxN2KJzInd8jEAUHQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "ea7a2f211de70e5697cfea4a8ae555a9110167f59dc4bb172ff7c67ae37f46ac",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "北华大学校领导带队赴北京市开展访企拓岗活动",
+    "listPublishDate": "2026-07-17",
+    "sourceOrder": 45
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:f5f967ebd38f3aedb7a00c4579f8d2be77ad51fefc419c6871252bea816b1161",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/9k5GRYGFip2stkWQoJnBvw",
+    "url": "https://mp.weixin.qq.com/s/9k5GRYGFip2stkWQoJnBvw?scene=25&sessionid=-1368496928"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春健康职业学院2025年就业（实习）双选会邀请函",
+    "source": "",
+    "publishDate": "2025-04-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/9k5GRYGFip2stkWQoJnBvw?scene=25&sessionid=-1368496928"
+  },
+  "resources": [],
+  "sourceFingerprint": "12e1fced557eedc08b6e504d8036fcd693fe932abb0af16be2e662fc2d4852fa",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "长春健康职业学院2025年就业（实习）双选会邀请函",
+    "listPublishDate": "2025-04-09",
+    "sourceOrder": 189
+  }
+}

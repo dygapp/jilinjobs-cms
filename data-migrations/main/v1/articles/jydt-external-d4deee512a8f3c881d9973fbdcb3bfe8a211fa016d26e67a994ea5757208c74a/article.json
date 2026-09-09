@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d4deee512a8f3c881d9973fbdcb3bfe8a211fa016d26e67a994ea5757208c74a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/RSk0mKYo-yM_AzmgNQDhoA",
+    "url": "https://mp.weixin.qq.com/s/RSk0mKYo-yM_AzmgNQDhoA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "产教融合结硕果 扬帆逐梦向未来｜长春人文学院党委书记柳轶出席交通运输产教融合系列活动闭幕式",
+    "source": "",
+    "publishDate": "2026-08-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/RSk0mKYo-yM_AzmgNQDhoA"
+  },
+  "resources": [],
+  "sourceFingerprint": "e5b950e1dc115f8c3180d4a11631ebc66c3da7aad2bf85f0cd5f01ef163344d7",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "产教融合结硕果 扬帆逐梦向未来｜长春人文学院党委书记柳轶出席交通运输产教融合系列活动闭幕式",
+    "listPublishDate": "2026-08-10",
+    "sourceOrder": 18
+  }
+}

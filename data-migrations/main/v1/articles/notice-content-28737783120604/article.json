@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120604",
+    "contentId": "28737783120604",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120604"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省FET创业基础培训班的通知",
+    "source": "",
+    "publishDate": "2015-09-29",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于举办吉林省FET创业基础培训班的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2015-9-29 10:38:19</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://cc07880cb9fe7d1971a0d41f13fcd7f858fe81009a503eefec3a90d44004e2ba\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://57c3a4aea4210b1fe31a80faea9fd7b38cc58fb2f84f0537f4c5d10676ab85b9\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=71bc7190-6145-4a36-af77-b39b0711bc09\">附件.doc</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357911995774262507095635.jpg",
+      "originalReference": "/chistory/cms/imgs/6357911995774262507095635.jpg",
+      "token": "migration-resource://cc07880cb9fe7d1971a0d41f13fcd7f858fe81009a503eefec3a90d44004e2ba",
+      "snapshotPath": "assets/cc07880cb9fe7d1971a0d41f13fcd7f858fe81009a503eefec3a90d44004e2ba.jpg",
+      "sha256": "cc07880cb9fe7d1971a0d41f13fcd7f858fe81009a503eefec3a90d44004e2ba",
+      "contentType": "image/jpeg",
+      "sizeBytes": 115688
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357911995935200008038438.jpg",
+      "originalReference": "/chistory/cms/imgs/6357911995935200008038438.jpg",
+      "token": "migration-resource://57c3a4aea4210b1fe31a80faea9fd7b38cc58fb2f84f0537f4c5d10676ab85b9",
+      "snapshotPath": "assets/57c3a4aea4210b1fe31a80faea9fd7b38cc58fb2f84f0537f4c5d10676ab85b9.jpg",
+      "sha256": "57c3a4aea4210b1fe31a80faea9fd7b38cc58fb2f84f0537f4c5d10676ab85b9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 107931
+    }
+  ],
+  "sourceFingerprint": "5d226e47237890477af04bf48c8b255da25cca5ba8666b6672c9593166a82b40",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "关于举办吉林省FET创业基础培训班的通知",
+    "listPublishDate": "2015-09-29",
+    "sourceOrder": 270,
+    "detailPublishDate": "2015-09-29"
+  }
+}

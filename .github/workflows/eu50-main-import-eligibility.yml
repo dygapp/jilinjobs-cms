@@ -1,0 +1,147 @@
+name: EU-50 Main Import Eligibility
+
+on:
+  pull_request:
+    paths:
+      - 'data-migrations/main/v1/import-eligibility-control.json'
+      - 'data-migrations/tools/main-import-eligibility.mjs'
+      - 'data-migrations/tools/main-current-subset-readiness.mjs'
+      - 'data-migrations/tools/main-promote-accepted-articles.mjs'
+      - 'data-migrations/tools/main-verify-accepted-articles.mjs'
+      - 'data-migrations/tools/main-source-triage.mjs'
+      - 'data-migrations/package.json'
+      - '.github/workflows/eu50-main-import-eligibility.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  eligibility:
+    name: Build and promote accepted Article-only current subset
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Validate eligibility and promotion tooling
+        id: control
+        working-directory: data-migrations
+        run: |
+          node --check tools/main-import-eligibility.mjs
+          node --check tools/main-current-subset-readiness.mjs
+          node --check tools/main-promote-accepted-articles.mjs
+          node --check tools/main-verify-accepted-articles.mjs
+          node --check tools/main-source-triage.mjs
+          node - <<'NODE'
+          const fs = require('fs')
+          const control = JSON.parse(fs.readFileSync('main/v1/import-eligibility-control.json', 'utf8'))
+          if (Number(control.finalRetryAttempt) !== 3) throw new Error(`finalRetryAttempt must be 3, got ${control.finalRetryAttempt}`)
+          if (!Number.isInteger(Number(control.sourceRunId)) || Number(control.sourceRunId) <= 0) throw new Error('sourceRunId missing')
+          if (!control.sourceArtifactName) throw new Error('sourceArtifactName missing')
+          if (!control.sourceArtifactDigest?.startsWith('sha256:')) throw new Error('sourceArtifactDigest missing')
+          if (!control.sourceHead) throw new Error('sourceHead missing')
+          if (control.policy?.deferredProblemArticles !== 'PRESERVE_AS_DURABLE_EVIDENCE_DO_NOT_BLOCK_CURRENT_SUBSET_PROMOTION') throw new Error('deferred Article policy missing')
+          if (control.policy?.noSilentRepair !== true || control.policy?.noSilentDiscard !== true) throw new Error('no-silent policy missing')
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `run_id=${Number(control.sourceRunId)}\n`)
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `artifact_name=${control.sourceArtifactName}\n`)
+          NODE
+      - name: Download final bounded-retry artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: ${{ steps.control.outputs.artifact_name }}
+          path: data-migrations/main/v1/eligibility-input
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: ${{ steps.control.outputs.run_id }}
+      - name: Build Article-only eligibility and current-subset readiness
+        working-directory: data-migrations
+        env:
+          MAIN_CANDIDATE_ROOT: main/v1/eligibility-input/generated-candidate
+          MAIN_ELIGIBILITY_OUTPUT: main/v1/generated-import-eligibility
+          MAIN_ELIGIBILITY_CONTROL: main/v1/import-eligibility-control.json
+        run: |
+          test -f main/v1/eligibility-input/generated-candidate/index.ndjson
+          test -f main/v1/eligibility-input/generated-candidate/manifest.json
+          test -f main/v1/eligibility-input/generated-candidate/pages/index.json
+          test -d main/v1/eligibility-input/generated-candidate/lists
+          test -f main/v1/eligibility-input/generated-candidate/reports/collection-problem-index.json
+          test -f main/v1/eligibility-input/generated-candidate/reports/targeted-retry-attempt-3.json
+          node tools/main-import-eligibility.mjs
+          node tools/main-current-subset-readiness.mjs
+          node - <<'NODE'
+          const fs = require('fs')
+          const report = JSON.parse(fs.readFileSync('main/v1/generated-import-eligibility/import-eligibility.json', 'utf8'))
+          const eligible = JSON.parse(fs.readFileSync('main/v1/generated-import-eligibility/import-eligible-index.json', 'utf8'))
+          const handoff = JSON.parse(fs.readFileSync('main/v1/generated-import-eligibility/site-package-handoff.json', 'utf8'))
+          const readiness = JSON.parse(fs.readFileSync('main/v1/generated-import-eligibility/current-subset-readiness.json', 'utf8'))
+          const summary = report.summary
+          if (summary.migrationScope !== 'ARTICLE_ONLY') throw new Error(`unexpected migration scope ${summary.migrationScope}`)
+          if (summary.totalCandidates !== summary.eligibleCandidates + summary.excludedSourceDefectCandidates + summary.withheldCandidates) throw new Error('Article-only eligibility arithmetic mismatch')
+          if (summary.eligibleCandidates <= 0) throw new Error('no Article import-eligible candidates')
+          if (summary.finalRetry?.retryableTransient !== 0) throw new Error('retryable targets remain after final retry')
+          if (summary.unscopedBlockingObservations !== 0) throw new Error('unscoped blocking observations remain')
+          if (readiness.currentSubsetPromotionReady !== true) throw new Error('current Article subset is not promotion-ready')
+          if (!Array.isArray(eligible.articles) || 'pages' in eligible || 'lists' in eligible) throw new Error('import-eligible-index must contain Articles only')
+          if (handoff.policy?.ownership !== 'SITE_PACKAGE' || handoff.policy?.migrationImportEligible !== false) throw new Error('Page/ListItem handoff policy mismatch')
+          if (!Array.isArray(handoff.pages) || !Array.isArray(handoff.listItems)) throw new Error('Site Package handoff records missing')
+          console.log(JSON.stringify({ summary, readiness }))
+          NODE
+      - name: Promote and verify repository-owned current Article subset
+        working-directory: data-migrations
+        env:
+          MAIN_CANDIDATE_ROOT: main/v1/eligibility-input/generated-candidate
+          MAIN_ELIGIBILITY_OUTPUT: main/v1/generated-import-eligibility
+          MAIN_ELIGIBILITY_CONTROL: main/v1/import-eligibility-control.json
+          MAIN_CANONICAL_ROOT: main/v1
+        run: |
+          node tools/main-promote-accepted-articles.mjs
+          node tools/main-verify-accepted-articles.mjs
+          if find main/v1/articles main/v1/reports main/v1/source-discovery -type f -size +95M -print -quit | grep -q .; then
+            echo 'accepted snapshot contains a file larger than 95 MiB' >&2
+            exit 1
+          fi
+      - name: Upload Article eligibility and promotion evidence
+        uses: actions/upload-artifact@v7
+        with:
+          name: eu50-main-article-current-subset-${{ github.event.pull_request.head.sha || github.sha }}
+          path: |
+            data-migrations/main/v1/generated-import-eligibility
+            data-migrations/main/v1/manifest.json
+            data-migrations/main/v1/index.ndjson
+            data-migrations/main/v1/reports
+            data-migrations/main/v1/source-discovery
+          if-no-files-found: error
+          retention-days: 7
+      - name: Commit repository-owned accepted current subset
+        id: promote_commit
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          git add \
+            data-migrations/main/v1/manifest.json \
+            data-migrations/main/v1/index.ndjson \
+            data-migrations/main/v1/articles \
+            data-migrations/main/v1/reports \
+            data-migrations/main/v1/source-discovery
+          if git diff --cached --quiet; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'data(eu50): promote accepted Main Article subset'
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+          echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Report promotion commit
+        run: |
+          echo "promotion_changed=${{ steps.promote_commit.outputs.changed }}"
+          echo "promotion_commit=${{ steps.promote_commit.outputs.commit }}"

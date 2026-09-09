@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cbdb23cb7eccd9d874f1d9c1e72d8292db9edcc55f9372be540c6316963d180c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/SwnO9KPcSy-8i_3IibzCUQ",
+    "url": "https://mp.weixin.qq.com/s/SwnO9KPcSy-8i_3IibzCUQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院举办“毕业冲刺，职赢未来”校园专场招聘会",
+    "source": "",
+    "publishDate": "2026-05-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/SwnO9KPcSy-8i_3IibzCUQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "7adb378bb693f717bbdf7dc024705409ee08e9e31edaad59de2d3762e6058ac4",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "长春工程学院举办“毕业冲刺，职赢未来”校园专场招聘会",
+    "listPublishDate": "2026-05-28",
+    "sourceOrder": 127
+  }
+}

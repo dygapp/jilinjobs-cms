@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5d00f679dd099dc25c223d069405ba849a6a4680b22c5245a66274265e404734",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/HvDlC67ixGuoM9ZV4iHPLg",
+    "url": "https://mp.weixin.qq.com/s/HvDlC67ixGuoM9ZV4iHPLg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学组织吉林省部分高校赴江西省开展政校企供需对接活动",
+    "source": "",
+    "publishDate": "2026-06-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/HvDlC67ixGuoM9ZV4iHPLg"
+  },
+  "resources": [],
+  "sourceFingerprint": "5afb0ffb7073c09e140fcf0f1c41e10a6b0b798ecf9475fbe581dfe4142aed18",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "吉林财经大学组织吉林省部分高校赴江西省开展政校企供需对接活动",
+    "listPublishDate": "2026-06-22",
+    "sourceOrder": 70
+  }
+}

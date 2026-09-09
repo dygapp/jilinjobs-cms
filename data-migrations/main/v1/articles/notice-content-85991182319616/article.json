@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:85991182319616",
+    "contentId": "85991182319616",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=85991182319616"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "省高校毕业生就业指导中心组织开展基层群众评议机关作风工作的实施方案",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2021-09-23",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://1c09ab538612d547fef1376bdceb373042099191fa060bee62620a73b3e96c19\" width=\"800\"><img alt=\"\" height=\"1131\" src=\"migration-resource://1441fbfe597d476382529e29e53b54b0a7305b2c83765925d4c62eacd063ca21\" width=\"800\"><img alt=\"\" height=\"1131\" src=\"migration-resource://748731b73e77a9600f95301df9bea1438b57b04bf2c41349d8ccff472c978d68\" width=\"800\"><img alt=\"\" height=\"1131\" src=\"migration-resource://2b6a4d8ee3997595deece2325999c84916ec3653c912b2baba6719505996533c\" width=\"800\"><img alt=\"\" height=\"1131\" src=\"migration-resource://a46469789a8eda740163bd52288bb410df56d158164a8cd02d267de72a49296f\" width=\"800\"><img alt=\"\" height=\"1131\" src=\"migration-resource://615a54a02fc8f7b9d49ec33313a2309170d7ad9c541c7af9cb83cc5d4e35cb0a\" width=\"800\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/8d0a4b65-7241-4855-a392-6d8bec75ad99.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/8d0a4b65-7241-4855-a392-6d8bec75ad99.jpeg",
+      "token": "migration-resource://1c09ab538612d547fef1376bdceb373042099191fa060bee62620a73b3e96c19",
+      "snapshotPath": "assets/1c09ab538612d547fef1376bdceb373042099191fa060bee62620a73b3e96c19.jpeg",
+      "sha256": "1c09ab538612d547fef1376bdceb373042099191fa060bee62620a73b3e96c19",
+      "contentType": "image/jpeg",
+      "sizeBytes": 204437
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/7ff44ad1-c2f9-4e8d-a56a-30d4907d5feb.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/7ff44ad1-c2f9-4e8d-a56a-30d4907d5feb.jpeg",
+      "token": "migration-resource://1441fbfe597d476382529e29e53b54b0a7305b2c83765925d4c62eacd063ca21",
+      "snapshotPath": "assets/1441fbfe597d476382529e29e53b54b0a7305b2c83765925d4c62eacd063ca21.jpeg",
+      "sha256": "1441fbfe597d476382529e29e53b54b0a7305b2c83765925d4c62eacd063ca21",
+      "contentType": "image/jpeg",
+      "sizeBytes": 179485
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/a23f82d3-a4d9-4436-bab1-02646ab406f0.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/a23f82d3-a4d9-4436-bab1-02646ab406f0.jpeg",
+      "token": "migration-resource://748731b73e77a9600f95301df9bea1438b57b04bf2c41349d8ccff472c978d68",
+      "snapshotPath": "assets/748731b73e77a9600f95301df9bea1438b57b04bf2c41349d8ccff472c978d68.jpeg",
+      "sha256": "748731b73e77a9600f95301df9bea1438b57b04bf2c41349d8ccff472c978d68",
+      "contentType": "image/jpeg",
+      "sizeBytes": 190651
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/a1ea808f-6d79-42c0-991f-a35cb37492a7.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/a1ea808f-6d79-42c0-991f-a35cb37492a7.jpeg",
+      "token": "migration-resource://2b6a4d8ee3997595deece2325999c84916ec3653c912b2baba6719505996533c",
+      "snapshotPath": "assets/2b6a4d8ee3997595deece2325999c84916ec3653c912b2baba6719505996533c.jpeg",
+      "sha256": "2b6a4d8ee3997595deece2325999c84916ec3653c912b2baba6719505996533c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 112912
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/e5f82cc6-df25-478f-80e8-395f45b5ec87.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/e5f82cc6-df25-478f-80e8-395f45b5ec87.jpeg",
+      "token": "migration-resource://a46469789a8eda740163bd52288bb410df56d158164a8cd02d267de72a49296f",
+      "snapshotPath": "assets/a46469789a8eda740163bd52288bb410df56d158164a8cd02d267de72a49296f.jpeg",
+      "sha256": "a46469789a8eda740163bd52288bb410df56d158164a8cd02d267de72a49296f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 62725
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/97ab490e-a3fd-460b-b5c8-371af023e012.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/97ab490e-a3fd-460b-b5c8-371af023e012.jpeg",
+      "token": "migration-resource://615a54a02fc8f7b9d49ec33313a2309170d7ad9c541c7af9cb83cc5d4e35cb0a",
+      "snapshotPath": "assets/615a54a02fc8f7b9d49ec33313a2309170d7ad9c541c7af9cb83cc5d4e35cb0a.jpeg",
+      "sha256": "615a54a02fc8f7b9d49ec33313a2309170d7ad9c541c7af9cb83cc5d4e35cb0a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 123826
+    }
+  ],
+  "sourceFingerprint": "da35fd0a51fdb5eaaca9a95c8f8875831d5f49919cd5c6d8b5765d00d50971b6",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "省高校毕业生就业指导中心组织开展基层群众评议机关作风工作的实施方案",
+    "listPublishDate": "2021-09-23",
+    "sourceOrder": 145,
+    "detailPublishDate": "2021-09-23"
+  }
+}

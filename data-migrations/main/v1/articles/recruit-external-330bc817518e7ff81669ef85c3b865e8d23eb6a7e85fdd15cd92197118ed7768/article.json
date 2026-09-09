@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:330bc817518e7ff81669ef85c3b865e8d23eb6a7e85fdd15cd92197118ed7768",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/j9px_P40MBjaMn7B7wwMYA",
+    "url": "https://mp.weixin.qq.com/s/j9px_P40MBjaMn7B7wwMYA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林司法警官职业学院2025届毕业生线下线上专场招聘会即将启幕",
+    "source": "",
+    "publishDate": "2025-05-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/j9px_P40MBjaMn7B7wwMYA"
+  },
+  "resources": [],
+  "sourceFingerprint": "4fc4fba5d77b76c06d0799358f305c802c9e1159852483cebbdc90b84ffe7870",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "吉林司法警官职业学院2025届毕业生线下线上专场招聘会即将启幕",
+    "listPublishDate": "2025-05-26",
+    "sourceOrder": 150
+  }
+}

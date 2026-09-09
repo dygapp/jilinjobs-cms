@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:941db49e35c01929e9374583b4aed367b8633a114950160d73f49022b4b0bb71",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/hbIGdkedLZw6k7lbiOeHDw",
+    "url": "https://mp.weixin.qq.com/s/hbIGdkedLZw6k7lbiOeHDw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学人文信息学院成功举办“服务吉林高质量发展”吉林省第七届应用型本科院校网络视频双选会",
+    "source": "",
+    "publishDate": "2025-11-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/hbIGdkedLZw6k7lbiOeHDw"
+  },
+  "resources": [],
+  "sourceFingerprint": "6d648bbb3ab8c5b481a380ef08c06254d2fb411f5ac82aa14348fdd0f0bdb4a3",
+  "evidence": {
+    "listPage": 58,
+    "listTitle": "长春工业大学人文信息学院成功举办“服务吉林高质量发展”吉林省第七届应用型本科院校网络视频双选会",
+    "listPublishDate": "2025-11-21",
+    "sourceOrder": 575
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122820",
+    "contentId": "28737783122820",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122820"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办全球生涯教练认证培训班的通知",
+    "source": "",
+    "publishDate": "2016-03-31",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于举办全球生涯教练认证培训班的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2016-3-31 16:21:51</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://602a78c48b5e68d8f416c12e545013db59bb5af37fc639f3e7acbb8868b4aff7\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://3a2ec7b4fbb18d600ee1b5ff104ef55a71d24012cc37faa6eba325e4a16d123c\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://d2f19cf6613b4d520a63d4d4fafca0b2b9e1bd745f9bbd31f417a1554767a965\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://2b0a224504af84c4fb25cc8359937c39b23569b1d7a0bfa90ae408eb2b1b3e5c\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://fa198e521eb4765a11020dcee2f34e98cf4104f9f2017d3a2beba03a88c923b6\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=67aa7ef7-58b3-4dcd-b0cc-612beefd0bd2\">附件2-BCC认证培训班报名表.docx</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359503812929687501217091.jpg",
+      "originalReference": "/chistory/cms/imgs/6359503812929687501217091.jpg",
+      "token": "migration-resource://602a78c48b5e68d8f416c12e545013db59bb5af37fc639f3e7acbb8868b4aff7",
+      "snapshotPath": "assets/602a78c48b5e68d8f416c12e545013db59bb5af37fc639f3e7acbb8868b4aff7.jpg",
+      "sha256": "602a78c48b5e68d8f416c12e545013db59bb5af37fc639f3e7acbb8868b4aff7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 307798
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359503813132812501629409.jpg",
+      "originalReference": "/chistory/cms/imgs/6359503813132812501629409.jpg",
+      "token": "migration-resource://3a2ec7b4fbb18d600ee1b5ff104ef55a71d24012cc37faa6eba325e4a16d123c",
+      "snapshotPath": "assets/3a2ec7b4fbb18d600ee1b5ff104ef55a71d24012cc37faa6eba325e4a16d123c.jpg",
+      "sha256": "3a2ec7b4fbb18d600ee1b5ff104ef55a71d24012cc37faa6eba325e4a16d123c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 416841
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359503813146875007587133.jpg",
+      "originalReference": "/chistory/cms/imgs/6359503813146875007587133.jpg",
+      "token": "migration-resource://d2f19cf6613b4d520a63d4d4fafca0b2b9e1bd745f9bbd31f417a1554767a965",
+      "snapshotPath": "assets/d2f19cf6613b4d520a63d4d4fafca0b2b9e1bd745f9bbd31f417a1554767a965.jpg",
+      "sha256": "d2f19cf6613b4d520a63d4d4fafca0b2b9e1bd745f9bbd31f417a1554767a965",
+      "contentType": "image/jpeg",
+      "sizeBytes": 188699
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359503813156250003857121.jpg",
+      "originalReference": "/chistory/cms/imgs/6359503813156250003857121.jpg",
+      "token": "migration-resource://2b0a224504af84c4fb25cc8359937c39b23569b1d7a0bfa90ae408eb2b1b3e5c",
+      "snapshotPath": "assets/2b0a224504af84c4fb25cc8359937c39b23569b1d7a0bfa90ae408eb2b1b3e5c.jpg",
+      "sha256": "2b0a224504af84c4fb25cc8359937c39b23569b1d7a0bfa90ae408eb2b1b3e5c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 289838
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359503813168750006585599.jpg",
+      "originalReference": "/chistory/cms/imgs/6359503813168750006585599.jpg",
+      "token": "migration-resource://fa198e521eb4765a11020dcee2f34e98cf4104f9f2017d3a2beba03a88c923b6",
+      "snapshotPath": "assets/fa198e521eb4765a11020dcee2f34e98cf4104f9f2017d3a2beba03a88c923b6.jpg",
+      "sha256": "fa198e521eb4765a11020dcee2f34e98cf4104f9f2017d3a2beba03a88c923b6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 405443
+    }
+  ],
+  "sourceFingerprint": "79c8889a1adfa821f36c34da4b4625acbd34e38696f3af60b36e0fd8c58a6635",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "关于举办全球生涯教练认证培训班的通知",
+    "listPublishDate": "2016-03-31",
+    "sourceOrder": 256,
+    "detailPublishDate": "2016-03-31"
+  }
+}

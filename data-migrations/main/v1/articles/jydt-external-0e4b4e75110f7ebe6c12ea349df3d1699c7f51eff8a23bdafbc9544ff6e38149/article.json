@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0e4b4e75110f7ebe6c12ea349df3d1699c7f51eff8a23bdafbc9544ff6e38149",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/jXw11q5W1_po9yVzvz-nOA",
+    "url": "https://mp.weixin.qq.com/s/jXw11q5W1_po9yVzvz-nOA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林化工大学校领导赴白城市推进校企合作",
+    "source": "",
+    "publishDate": "2026-04-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/jXw11q5W1_po9yVzvz-nOA"
+  },
+  "resources": [],
+  "sourceFingerprint": "9096dea826074fe035f9ae8cb9e12d2392ca98df721a2ea4527f58010296a8f9",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "吉林化工大学校领导赴白城市推进校企合作",
+    "listPublishDate": "2026-04-24",
+    "sourceOrder": 247
+  }
+}

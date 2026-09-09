@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7eca3e9b4fee842b4f5024c6784f3eb702946cf4fd0b6fbb9aaadc7414755dc8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/IrCPy2ekdK3jT6yptVQyHw",
+    "url": "https://mp.weixin.qq.com/s/IrCPy2ekdK3jT6yptVQyHw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "对标大湾区前沿 深耕低空赛道 || 长春职业技术大学副校长蒋大明带队赴深圳开展低空经济专项调研",
+    "source": "",
+    "publishDate": "2026-04-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/IrCPy2ekdK3jT6yptVQyHw"
+  },
+  "resources": [],
+  "sourceFingerprint": "a8699e3ffadd0f5a83d8676adad8b3f4af0ca7fdc114e55cf7dcacfbe993cb38",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "对标大湾区前沿 深耕低空赛道 || 长春职业技术大学副校长蒋大明带队赴深圳开展低空经济专项调研",
+    "listPublishDate": "2026-04-28",
+    "sourceOrder": 233
+  }
+}

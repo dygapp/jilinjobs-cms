@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:53ebd2ef22b600aaa6cb419dbb9538ffb9158d8e428e1c768711699440e7f5e6",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/8tNaZQ8oYfWsrEdIjB5oag",
+    "url": "https://mp.weixin.qq.com/s/8tNaZQ8oYfWsrEdIjB5oag"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学党委副书记于金欢带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/8tNaZQ8oYfWsrEdIjB5oag"
+  },
+  "resources": [],
+  "sourceFingerprint": "4f31e1a538e884f02602445cbe9a4bd494bbb985981ec2025f527ebc7cdd2d2f",
+  "evidence": {
+    "listPage": 39,
+    "listTitle": "延边大学党委副书记于金欢带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-23",
+    "sourceOrder": 385
+  }
+}

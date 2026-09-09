@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7d41d5ced30e6840bb5532561dbf10bc64a23e8897229da763f3db438131d823",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/DYCvJUDs8ZY8YFCE3cAj3g",
+    "url": "https://mp.weixin.qq.com/s/DYCvJUDs8ZY8YFCE3cAj3g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【就业指导】|| 求职应聘，这十大“坑”要避！",
+    "source": "",
+    "publishDate": "2025-03-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DYCvJUDs8ZY8YFCE3cAj3g"
+  },
+  "resources": [],
+  "sourceFingerprint": "14a6022839e81f87c1d4f911226e311e7969493a4c238c42abb143561a87d7af",
+  "evidence": {
+    "listPage": 99,
+    "listTitle": "【就业指导】|| 求职应聘，这十大“坑”要避！",
+    "listPublishDate": "2025-03-17",
+    "sourceOrder": 981
+  }
+}

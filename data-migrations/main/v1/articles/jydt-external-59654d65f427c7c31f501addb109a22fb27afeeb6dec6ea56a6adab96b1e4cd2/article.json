@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:59654d65f427c7c31f501addb109a22fb27afeeb6dec6ea56a6adab96b1e4cd2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/app/news/shareNewsDetail",
+    "url": "https://www.cailianxinwen.com/app/news/shareNewsDetail?newsid=487690"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学2025届毕业生春季首场大型综合双选会举行",
+    "source": "",
+    "publishDate": "2025-03-31",
+    "bodyHtml": "",
+    "externalUrl": "https://www.cailianxinwen.com/app/news/shareNewsDetail?newsid=487690"
+  },
+  "resources": [],
+  "sourceFingerprint": "a1fd98770670fec7f822808e092bb6e982f0b9a1874979e3646e32f2c3a0c5f3",
+  "evidence": {
+    "listPage": 96,
+    "listTitle": "长春师范大学2025届毕业生春季首场大型综合双选会举行",
+    "listPublishDate": "2025-03-31",
+    "sourceOrder": 958
+  }
+}

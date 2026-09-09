@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:cddea4cfdc3b691a6352f56a9b98df47a0d22aecc20e55eb124bdb51e14817ce",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/kk6V2ovbwtuJqhJMwEiZ_Q",
+    "url": "https://mp.weixin.qq.com/s/kk6V2ovbwtuJqhJMwEiZ_Q"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“服务吉林西部高质量发展” 应用型人才春季供需双选会 暨白城师范学院2025届毕业生春季供需双选会 邀请函",
+    "source": "",
+    "publishDate": "2025-03-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kk6V2ovbwtuJqhJMwEiZ_Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "88ad38e53e824df8d5c1dcb1a3cd3eb8882e1d3792a9c4519fb7b263b260f20a",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "“服务吉林西部高质量发展” 应用型人才春季供需双选会 暨白城师范学院2025届毕业生春季供需双选会 邀请函",
+    "listPublishDate": "2025-03-12",
+    "sourceOrder": 222
+  }
+}

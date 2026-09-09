@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268946729107456",
+    "contentId": "268946729107456",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268946729107456"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省普通高校毕业生就业洽谈月”延边地区毕业生就业洽谈会举行",
+    "source": "",
+    "publishDate": "2024-11-06",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://7d6d1575381a40974342fdef0f6437bdf1dc06af1a14d4a6525ebaf0590cbe99\" width=\"1587\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://034774b34e2d2e90c2f5b9ca83791289f472f4509c8513cc42a90b6f7af8b495\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/65bfdf1a-4902-44f0-98ab-1c6ba761cf6f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/65bfdf1a-4902-44f0-98ab-1c6ba761cf6f.jpg",
+      "token": "migration-resource://7d6d1575381a40974342fdef0f6437bdf1dc06af1a14d4a6525ebaf0590cbe99",
+      "snapshotPath": "assets/7d6d1575381a40974342fdef0f6437bdf1dc06af1a14d4a6525ebaf0590cbe99.jpg",
+      "sha256": "7d6d1575381a40974342fdef0f6437bdf1dc06af1a14d4a6525ebaf0590cbe99",
+      "contentType": "image/jpeg",
+      "sizeBytes": 393773
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/3ed0ab9c-8ed4-497f-8f21-2ffd0b3aab42.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/3ed0ab9c-8ed4-497f-8f21-2ffd0b3aab42.jpg",
+      "token": "migration-resource://034774b34e2d2e90c2f5b9ca83791289f472f4509c8513cc42a90b6f7af8b495",
+      "snapshotPath": "assets/034774b34e2d2e90c2f5b9ca83791289f472f4509c8513cc42a90b6f7af8b495.jpg",
+      "sha256": "034774b34e2d2e90c2f5b9ca83791289f472f4509c8513cc42a90b6f7af8b495",
+      "contentType": "image/jpeg",
+      "sizeBytes": 395096
+    }
+  ],
+  "sourceFingerprint": "553e44137574208275d66a4bb1acde12bb669de84f7db9c581c1907fc481a39d",
+  "evidence": {
+    "listPage": 102,
+    "listTitle": "吉林省普通高校毕业生就业洽谈月”延边地区毕业生就业洽谈会举行",
+    "listPublishDate": "2024-11-06",
+    "sourceOrder": 1019,
+    "detailPublishDate": "2024-11-06"
+  }
+}

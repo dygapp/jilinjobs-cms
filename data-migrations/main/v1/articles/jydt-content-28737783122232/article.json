@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122232",
+    "contentId": "28737783122232",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122232"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春职业技术学院举办第二届“励志、成才、就业、创业”大学生职业生涯规划大赛",
+    "source": "",
+    "publishDate": "2010-12-01",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">长春职业技术学院举办第二届“励志、成才、就业、创业”大学生职业生涯规划大赛</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2010-12-1 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"444\" src=\"http://192.168.0.172/uploadfile/201012/20101201150603181.jpg\" width=\"592\" border=\"0\"><br>专家评委提问</font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"444\" src=\"http://192.168.0.172/uploadfile/201012/20101201150618696.jpg\" width=\"592\" border=\"0\"><br>省高校毕业生就业指导中心郑志宏主任现场点评</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 11月12日，长春职业技术学院第二届大学生职业生涯规划大赛决赛在创业培训中心举行，省高校毕业生就业指导中心主任郑志宏、书记朱军、培训部部长胡丽敏、国际时代英杰总经理钟恒应邀出席大赛，并担任评委，出席大赛的还有学院就业指导服务中心苟文娟主任、分院书记、就业科长、就业指导课教师、就业处全体教师以及学生代表。<br>&nbsp;&nbsp;&nbsp; 经过分院的初赛、决赛和学院的初赛，最终有9名选手进入决赛。在现场展示和专家评委提问两个环节，参赛选手展示了良好的表达能力、敏捷快速的反应能力及自我认知与职业认知能力。经过激烈角逐，旅游分院孙晓舒荣获一等奖，其余8位选手分别获得二、三等奖，并评选出最佳指导教师和最佳组织奖。<br>&nbsp;&nbsp;&nbsp; 赛后，苟文娟主任宣读获奖名单，并进行现场颁奖。郑志宏主任作了精彩点评。他对学院职业生涯规划工作的开展给予了充分的肯定，对参赛选手能够用科学的测评系统，从内在因素和外部环境审视自我，科学合理的设定择业、就业、创业之路感到欣慰，同时对大学生职业生涯规划提出了三点建议：一要从实际出发，不要与所学专业跨度过大；二要将生涯规划转换为具体行动，充分利用在校期间，为职业发展积聚能量；三要根据实际情况不断修正生涯规划方案。最后，他希望同学们既要做一个有远大理想的“仰望星空”者，又要做一个“脚踏实地”的实干家。<br>&nbsp;&nbsp;&nbsp; 本次大赛现场气氛异常热烈，在学生中引起了强烈反响，学生充分认识到了职业生涯规划在大学生学习生活和求职中的重要性，纷纷表示要早规划，早实施，为将来步入职场以及职业发展提前做好准备。<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "4f11328f69ba2915dafac8dde06b1bf0070f1c8afb878a6277c1df39c4971434",
+  "evidence": {
+    "listPage": 167,
+    "listTitle": "长春职业技术学院举办第二届“励志、成才、就业、创业”大学生职业生涯规划大赛",
+    "listPublishDate": "2010-12-01",
+    "sourceOrder": 1661,
+    "detailPublishDate": "2010-12-01"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122630",
+    "contentId": "28737783122630",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122630"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展2015届吉林省高校毕业生就业状况调查的通知",
+    "source": "",
+    "publishDate": "2014-11-05",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于开展2015届吉林省高校毕业生就业状况调查的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:市场部 发布时间:2014-11-5 0:00:00</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"http://www.jilinjobs.cn:80//upload/6355077681279600597177138.jpg\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"http://www.jilinjobs.cn:80//upload/6355077681287901079434567.jpg\"></p>\n\n<p>&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=dd278275-d1a4-4387-ad53-f857a28809ae\">调查问卷领取数量表.xls</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "6b73a62e09ff14d8ac0600dabb884e4c8ade3c70a3573da0e8fe1e7a06915d80",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "关于开展2015届吉林省高校毕业生就业状况调查的通知",
+    "listPublishDate": "2014-11-05",
+    "sourceOrder": 295,
+    "detailPublishDate": "2014-11-05"
+  }
+}

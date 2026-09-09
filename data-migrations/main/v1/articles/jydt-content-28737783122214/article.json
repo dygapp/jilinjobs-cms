@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122214",
+    "contentId": "28737783122214",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122214"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春职业技术学院召开2012届毕业生天津、沈阳地区专场招聘会",
+    "source": "",
+    "publishDate": "2011-11-22",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">长春职业技术学院召开2012届毕业生天津、沈阳地区专场招聘会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-22 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-align:center\"><img border=\"0\" src=\"migration-resource://44c31d9cc3d5b8c4f2f286a80e8c6c056e56fe5c144f9bd66f48296bf7f7af53\"></p> <p align=\"center\">10月27日，长春职业技术学院在A楼大厅召开了2012届毕业生天津、沈阳专场招聘会。</p> <p align=\"center\">&nbsp;</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://719ea4aad7dc877f28a18889a08b03c6cb9980640f8b53c52d49ec9d74ed4593\"></p> <p align=\"justify\">&nbsp;&nbsp; 学院2012届毕业生2864名，目前，已有工程类、汽车类、食品类千余名毕业生落实就业岗位。学院根据各专业毕业生上岗就业情况，专门为信息类、语言类、商贸类等专业学生召开天津、沈阳专场招聘会，参加招聘会的16家用人单位中，世界500强企业2家（世能达物流有限公司、天津松下电子部品有限公司），中国500强企业1家（沈阳同方多媒体科技有限公司），日资企业3家（高田汽配制造有限公司天津分公司等），韩资企业3家（天津和仁昌光电子有限公司等），港资企业1家（同方光电有限公司），国有控股企业1家（天津中钞纸业有限公司），中日合资企业1家（天津三电汽车空调有限公司），本次招聘会，共计提供工作岗位617个。</p> <p align=\"justify\">&nbsp;</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://46bf90dfefe8f78f4a0651a756a6a7c1a26ce6ffb3cf049f8231eb1b3e018d1b\"></p> <p align=\"center\">招聘会当天，有11家用人单位与毕业生进行了面试，共有183名毕业生通过面试环节达成初步意向。</p> <p align=\"center\">&nbsp;</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://b56367cfc1b4d92651a6246345c84c187d529df4db92ac020a145a407ff80d0c\"></p> <p align=\"justify\">&nbsp;&nbsp;&nbsp; 此次专场招聘会拉开了学院毕业生就业洽谈招聘月活动的序幕，学院还将针对毕业生上岗情况，继续组织专场招聘会，为企业与毕业生搭建双选平台，提供优质服务。</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111122132854768.jpg",
+      "originalReference": "/chistory/cms/imgs/20111122132854768.jpg",
+      "token": "migration-resource://44c31d9cc3d5b8c4f2f286a80e8c6c056e56fe5c144f9bd66f48296bf7f7af53",
+      "snapshotPath": "assets/44c31d9cc3d5b8c4f2f286a80e8c6c056e56fe5c144f9bd66f48296bf7f7af53.jpg",
+      "sha256": "44c31d9cc3d5b8c4f2f286a80e8c6c056e56fe5c144f9bd66f48296bf7f7af53",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67000
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111122132943463.jpg",
+      "originalReference": "/chistory/cms/imgs/20111122132943463.jpg",
+      "token": "migration-resource://719ea4aad7dc877f28a18889a08b03c6cb9980640f8b53c52d49ec9d74ed4593",
+      "snapshotPath": "assets/719ea4aad7dc877f28a18889a08b03c6cb9980640f8b53c52d49ec9d74ed4593.jpg",
+      "sha256": "719ea4aad7dc877f28a18889a08b03c6cb9980640f8b53c52d49ec9d74ed4593",
+      "contentType": "image/jpeg",
+      "sizeBytes": 55242
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111122133021929.jpg",
+      "originalReference": "/chistory/cms/imgs/20111122133021929.jpg",
+      "token": "migration-resource://46bf90dfefe8f78f4a0651a756a6a7c1a26ce6ffb3cf049f8231eb1b3e018d1b",
+      "snapshotPath": "assets/46bf90dfefe8f78f4a0651a756a6a7c1a26ce6ffb3cf049f8231eb1b3e018d1b.jpg",
+      "sha256": "46bf90dfefe8f78f4a0651a756a6a7c1a26ce6ffb3cf049f8231eb1b3e018d1b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 51835
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111122133055398.jpg",
+      "originalReference": "/chistory/cms/imgs/20111122133055398.jpg",
+      "token": "migration-resource://b56367cfc1b4d92651a6246345c84c187d529df4db92ac020a145a407ff80d0c",
+      "snapshotPath": "assets/b56367cfc1b4d92651a6246345c84c187d529df4db92ac020a145a407ff80d0c.jpg",
+      "sha256": "b56367cfc1b4d92651a6246345c84c187d529df4db92ac020a145a407ff80d0c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 87707
+    }
+  ],
+  "sourceFingerprint": "0aac80814c558a1cccb366f424086b7e19c7f70bbb0b08107df3520afa3a5817",
+  "evidence": {
+    "listPage": 165,
+    "listTitle": "长春职业技术学院召开2012届毕业生天津、沈阳地区专场招聘会",
+    "listPublishDate": "2011-11-22",
+    "sourceOrder": 1643,
+    "detailPublishDate": "2011-11-22"
+  }
+}

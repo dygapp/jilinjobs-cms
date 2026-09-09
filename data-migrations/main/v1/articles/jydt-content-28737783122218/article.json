@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122218",
+    "contentId": "28737783122218",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122218"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "西藏：四项强化措施巩固今年高校毕业生就业率",
+    "source": "",
+    "publishDate": "2011-11-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">西藏：四项强化措施巩固今年高校毕业生就业率</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font size=\"3\">四项强化措施巩固今年高校毕业生就业率</font></p> <p><font size=\"3\">&nbsp;&nbsp;&nbsp; 西藏即将下发执行2011年高校毕业生就业指导意见，这一意见与去年相比，增加了四项有力措施。</font></p> <p><font size=\"3\">　　2011年西藏高校毕业生就业指导意见鼓励高校毕业生到中小企业和非公企业就业，指出凡在中小企业和非公企业工作5年以上，其在学校期间的学费和国家助学贷款本息由国家代偿；到中小企业和非公企业就业的高校毕业生，在劳动合同期限内每人每月按地区类别给予补贴，最长不超过3年；重点项目聘用高校毕业生的劳务性费用和有关社会保险费用可从项目经费中列支，以支持西藏区内重点建设项目吸纳高校毕业生就业。</font></p> <p><font size=\"3\">　　西藏自治区人力资源和社会保障厅厅长姚瑞峰介绍，按照中央第五次西藏工作座谈会精神，为了鼓励和引导西藏高校毕业生到区外就业。2011年西藏高校毕业生就业指导意见专门强化凡是到区外就业的西藏生源大学生，给予每人1000元的路费补助和每月300元的生活补贴。同时，职业中介机构每推荐成功一名大学生就业，便给予500元的一次性补助。</font></p> <p><font size=\"3\">　　据了解，去年西藏通过公开考录、“三支一扶”和市场就业等途径，共有10205名高校毕业生实现就业，高校毕业生就业率达到82.56%。</font></p> <p><font size=\"3\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "f41ce54c161c1dcbccc2990154d3de66f6fbe0d6f6dc816bb2b8ea9e9ddd3234",
+  "evidence": {
+    "listPage": 165,
+    "listTitle": "西藏：四项强化措施巩固今年高校毕业生就业率",
+    "listPublishDate": "2011-11-04",
+    "sourceOrder": 1649,
+    "detailPublishDate": "2011-11-04"
+  }
+}

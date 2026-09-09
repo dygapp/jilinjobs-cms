@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:6fba0d47a649e62176bc6a52faa199f98f2b2bae23893604956cd13021ec093f",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/xwzx/zxgg/202604/t20260414_1034348.html",
+    "url": "http://hrss.jlbc.gov.cn/xwzx/zxgg/202604/t20260414_1034348.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2026年白城市市直事业单位公开招聘硕士以上人才公告（1号）",
+    "source": "",
+    "publishDate": "2026-04-16",
+    "bodyHtml": "",
+    "externalUrl": "http://hrss.jlbc.gov.cn/xwzx/zxgg/202604/t20260414_1034348.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "afed04d55cb827539597abbbdf02679902732cfe2612402c48dcee1d2dec46c5",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "2026年白城市市直事业单位公开招聘硕士以上人才公告（1号）",
+    "listPublishDate": "2026-04-16",
+    "sourceOrder": 41
+  }
+}

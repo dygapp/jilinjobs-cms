@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:65e260209026462afbfae9d088b89025af2589368a51fc03236fd7c2dead3aea",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/7EZMmZVeToPdfFwOzcQZvw",
+    "url": "https://mp.weixin.qq.com/s/7EZMmZVeToPdfFwOzcQZvw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教融合 共建产业学院——松原职业技术学院与松原城市发展投资控股集团有限公司成功签约",
+    "source": "",
+    "publishDate": "2026-06-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/7EZMmZVeToPdfFwOzcQZvw"
+  },
+  "resources": [],
+  "sourceFingerprint": "be95ac23aeedc1741d3adc534afd6a7cbe6a4e2cf67dbd4f1794439fddbe8dc3",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "深化产教融合 共建产业学院——松原职业技术学院与松原城市发展投资控股集团有限公司成功签约",
+    "listPublishDate": "2026-06-17",
+    "sourceOrder": 79
+  }
+}

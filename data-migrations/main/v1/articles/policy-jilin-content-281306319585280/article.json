@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-jilin:content:281306319585280",
+    "contentId": "281306319585280",
+    "typeCode": "policy-jilin",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=281306319585280"
+  },
+  "target": {
+    "columnAlias": "policy-jilin",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于印发《吉林省高校毕业生就业生活补贴实施细则（暂行）》等6项实施细则的通知",
+    "source": "",
+    "publishDate": "2024-07-26",
+    "bodyHtml": "\n                        <p>请点击附件查看详情。</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "5ac43953596393e297c4c5aa7c423636b226d61af059b68324f490f6b813fab6",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "关于印发《吉林省高校毕业生就业生活补贴实施细则（暂行）》等6项实施细则的通知",
+    "listPublishDate": "2024-07-26",
+    "sourceOrder": 2,
+    "detailPublishDate": "2024-07-26"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122358",
+    "contentId": "28737783122358",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122358"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省开展“就业创业进校园”活动",
+    "source": "",
+    "publishDate": "2009-05-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省开展“就业创业进校园”活动</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-5-6 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 由团吉林省委、团长春市委联合主办的“‘信心09·牵手学子’就业创业进校园”活动，4月18日在吉林大学启动。吉林省委副书记王儒林出席启动仪式。 </font></p> <p><font size=\"2\">　　此次活动中，在团省委组织的大型招聘会上，近300家企事业单位提供就业岗位约3000个、见习岗位500余个，吸引了近万名大学生参加。王儒林在招聘会现场慰问了企事业单位代表，并勉励大中专毕业生坚定信心，运用好各级政府的扶持政策，树立科学择业观，在社会各界的关心与支持下，努力实现就业创业。 </font></p> <p><font size=\"2\">　　据悉，从4月中旬至5月中旬，吉林省各级团组织将以“就业创业进校园”为主题，实施“青年就业创业服务月”活动，通过开展就业创业意识引导、就业创业能力培训、就业创业平台搭建等活动，为青年提供政策、资金、培训、岗位等各方面的服务。 （李振 记者彭冰）</font></p> <p><font size=\"2\"><br></font>&nbsp;</p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 摘自：《中国青年报》2009年4月19日</font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "39874374ca0687c7600189bddc2ccb7d9701c3fd7f3f6793d30fb542807dfbbc",
+  "evidence": {
+    "listPage": 177,
+    "listTitle": "吉林省开展“就业创业进校园”活动",
+    "listPublishDate": "2009-05-06",
+    "sourceOrder": 1769,
+    "detailPublishDate": "2009-05-06"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:b79bafb5503f0a8083a8280007765192af257496e37cfc634f42aa837e68bdc3",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/ygzw/gsgg/202009/t20200903_407146.html",
+    "url": "http://www.qianguo.gov.cn/ygzw/gsgg/202009/t20200903_407146.html"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年前郭县桑梓人才“回归计划”暨教育系统事业单位招聘教师笔试公告",
+    "source": "",
+    "publishDate": "2020-09-07",
+    "bodyHtml": "",
+    "externalUrl": "http://www.qianguo.gov.cn/ygzw/gsgg/202009/t20200903_407146.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "fbcd66ed11f9fa8f3f663d44adae34688e574c060cedd912d1f153fb14f0dd33",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "2020年前郭县桑梓人才“回归计划”暨教育系统事业单位招聘教师笔试公告",
+    "listPublishDate": "2020-09-07",
+    "sourceOrder": 174
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f44fd95def9474b0f142b3097684149822e4009e6af3c8174ec0ddd5d5e13d89",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/iF5YZrSCGi77hZ_3mjLVww",
+    "url": "https://mp.weixin.qq.com/s/iF5YZrSCGi77hZ_3mjLVww"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学党委副书记张广翠带队开展“优企引才” 定向访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/iF5YZrSCGi77hZ_3mjLVww"
+  },
+  "resources": [],
+  "sourceFingerprint": "16210f79ee7a46784f83d37bf670c2538c399139b6e2b94d879b9064d8450d3e",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "长春师范大学党委副书记张广翠带队开展“优企引才” 定向访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-17",
+    "sourceOrder": 411
+  }
+}

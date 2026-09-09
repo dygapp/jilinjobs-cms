@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9932be11cbfa68fe175696cf6cbbba0ac9af1d0e0829aa6793735c16b5ab7aaf",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/YJI-15IYluVU8yGWGrHrYg",
+    "url": "https://mp.weixin.qq.com/s/YJI-15IYluVU8yGWGrHrYg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林体育学院与梅河口市人民政府举行校地人才合作座谈会",
+    "source": "",
+    "publishDate": "2025-06-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/YJI-15IYluVU8yGWGrHrYg"
+  },
+  "resources": [],
+  "sourceFingerprint": "cfaa99389e3a1cd97cd88dfe46191a5df64350b5336c18a43185744dfd021d07",
+  "evidence": {
+    "listPage": 85,
+    "listTitle": "吉林体育学院与梅河口市人民政府举行校地人才合作座谈会",
+    "listPublishDate": "2025-06-06",
+    "sourceOrder": 849
+  }
+}

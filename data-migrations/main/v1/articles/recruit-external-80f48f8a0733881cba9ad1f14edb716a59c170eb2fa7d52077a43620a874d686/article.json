@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:80f48f8a0733881cba9ad1f14edb716a59c170eb2fa7d52077a43620a874d686",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/jobfair/fairdetails.html",
+    "url": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=CiMqZY1CakHbRW5JfnkykU"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "交通运输与邮政快递行业2023届毕业生冬季网络招聘会",
+    "source": "",
+    "publishDate": "2022-12-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=CiMqZY1CakHbRW5JfnkykU"
+  },
+  "resources": [],
+  "sourceFingerprint": "04d73bd0643d9b8daabc52507acf626bbba7ec1d0994ad368e4970a5b75b7e0e",
+  "evidence": {
+    "listPage": 32,
+    "listTitle": "交通运输与邮政快递行业2023届毕业生冬季网络招聘会",
+    "listPublishDate": "2022-12-02",
+    "sourceOrder": 320
+  }
+}

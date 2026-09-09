@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8117497693e3ed8b65ff314ed449d2bfba0148772a6b31c349ed3da53a080125",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/OGz64VZntm1RM4uBl0ms5A",
+    "url": "https://mp.weixin.qq.com/s/OGz64VZntm1RM4uBl0ms5A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工程技术师范学院党委书记刘剑桥带队开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-08-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/OGz64VZntm1RM4uBl0ms5A"
+  },
+  "resources": [],
+  "sourceFingerprint": "0570af8207b5d28952cd858c9b4e44f8f5d1942e1e7577cde250a20cf5aadd72",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "吉林工程技术师范学院党委书记刘剑桥带队开展访企拓岗促就业专项行动",
+    "listPublishDate": "2026-08-04",
+    "sourceOrder": 31
+  }
+}

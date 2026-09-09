@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-national:external:f9b06bdcdfff0a90b818fef201bb113f2d7d03b4c6da942036afb95bca6da267",
+    "contentId": null,
+    "typeCode": "policy-national",
+    "detailPath": "/zhengce/zhengceku/202305/content_6857485.htm",
+    "url": "https://www.gov.cn/zhengce/zhengceku/202305/content_6857485.htm"
+  },
+  "target": {
+    "columnAlias": "policy-national",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "关于做好取消普通高等学校毕业生就业报到证有关衔接工作的通知",
+    "source": "",
+    "publishDate": "2023-06-14",
+    "bodyHtml": "",
+    "externalUrl": "https://www.gov.cn/zhengce/zhengceku/202305/content_6857485.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "2e255190016c032d66da0bc90a20b9d1a02f74646835da39485e5bcf7fea8c3a",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "关于做好取消普通高等学校毕业生就业报到证有关衔接工作的通知",
+    "listPublishDate": "2023-06-14",
+    "sourceOrder": 8
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d328b1b55ca63e219ca02f158896dd3e849b4154235365cee25c0b074423aa87",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/06FVuS5daJrr3kCqRpWkng",
+    "url": "https://mp.weixin.qq.com/s/06FVuS5daJrr3kCqRpWkng"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学招生就业处组织“青年延吉·未来可期”2025年秋季组团引才活动进校园暨就业政策宣讲会议",
+    "source": "",
+    "publishDate": "2025-11-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/06FVuS5daJrr3kCqRpWkng"
+  },
+  "resources": [],
+  "sourceFingerprint": "0c4cbcf180c6abbec4982752cd019baf98d672954c42bffb799a79ade720d239",
+  "evidence": {
+    "listPage": 63,
+    "listTitle": "延边大学招生就业处组织“青年延吉·未来可期”2025年秋季组团引才活动进校园暨就业政策宣讲会议",
+    "listPublishDate": "2025-11-06",
+    "sourceOrder": 624
+  }
+}

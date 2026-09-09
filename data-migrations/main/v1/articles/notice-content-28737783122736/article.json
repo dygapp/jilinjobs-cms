@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122736",
+    "contentId": "28737783122736",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122736"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省第二届“互联网+”视频专场招聘会的通知",
+    "source": "",
+    "publishDate": "2017-12-04",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于举办吉林省第二届“互联网+”视频专场招聘会的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:信息部 发布时间:2017-12-4 13:17:22</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://43664f34c20d825a6750ba936dd4f468ca1fe03d29b216513f3b31b3082f4ef4\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://7f8a2c1747ca6e7d10980d29319db599f9916652772825157f02212f2198b473\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://641e2ff68babfc578f92122db1d2f168bd1b0487f8fd5ba99f9d980651c6087f\"></p>\n\n<p>&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=ac1c5b50-ad78-4902-a637-1141bd568aa8\">部分企业名单及招聘信息.xlsx</a><br>\n\t\t\t<a href=\"../Common/DownLoadFile.aspx?fileid=f88d4933-5094-4029-bd51-54d67ab84f14\">有面儿介绍及操作流程.pdf</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364799031095700004127070.jpg",
+      "originalReference": "/chistory/cms/imgs/6364799031095700004127070.jpg",
+      "token": "migration-resource://43664f34c20d825a6750ba936dd4f468ca1fe03d29b216513f3b31b3082f4ef4",
+      "snapshotPath": "assets/43664f34c20d825a6750ba936dd4f468ca1fe03d29b216513f3b31b3082f4ef4.jpg",
+      "sha256": "43664f34c20d825a6750ba936dd4f468ca1fe03d29b216513f3b31b3082f4ef4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 128237
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364799031151950005256137.jpg",
+      "originalReference": "/chistory/cms/imgs/6364799031151950005256137.jpg",
+      "token": "migration-resource://7f8a2c1747ca6e7d10980d29319db599f9916652772825157f02212f2198b473",
+      "snapshotPath": "assets/7f8a2c1747ca6e7d10980d29319db599f9916652772825157f02212f2198b473.jpg",
+      "sha256": "7f8a2c1747ca6e7d10980d29319db599f9916652772825157f02212f2198b473",
+      "contentType": "image/jpeg",
+      "sizeBytes": 112661
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364799031159762502998708.jpg",
+      "originalReference": "/chistory/cms/imgs/6364799031159762502998708.jpg",
+      "token": "migration-resource://641e2ff68babfc578f92122db1d2f168bd1b0487f8fd5ba99f9d980651c6087f",
+      "snapshotPath": "assets/641e2ff68babfc578f92122db1d2f168bd1b0487f8fd5ba99f9d980651c6087f.jpg",
+      "sha256": "641e2ff68babfc578f92122db1d2f168bd1b0487f8fd5ba99f9d980651c6087f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93132
+    }
+  ],
+  "sourceFingerprint": "ba6ca042bc73b0d20db154292270bad65784446a6f006c2ea37d4c9189562f1e",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "关于举办吉林省第二届“互联网+”视频专场招聘会的通知",
+    "listPublishDate": "2017-12-04",
+    "sourceOrder": 206,
+    "detailPublishDate": "2017-12-04"
+  }
+}

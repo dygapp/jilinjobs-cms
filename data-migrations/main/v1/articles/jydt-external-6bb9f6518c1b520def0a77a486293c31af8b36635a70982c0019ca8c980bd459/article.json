@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6bb9f6518c1b520def0a77a486293c31af8b36635a70982c0019ca8c980bd459",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/index.php",
+    "url": "https://www.thyyjkzyxy.org.cn/index.php?c=show&id=526"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力扩容提质 护航学子就业|通化医药健康职业学院举办2026届医药健康专场招聘会",
+    "source": "",
+    "publishDate": "2026-07-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.thyyjkzyxy.org.cn/index.php?c=show&id=526"
+  },
+  "resources": [],
+  "sourceFingerprint": "42c95df25838a4820faa511bf262bcff57bf03d98832be29127f3f7675060e62",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "聚力扩容提质 护航学子就业|通化医药健康职业学院举办2026届医药健康专场招聘会",
+    "listPublishDate": "2026-07-02",
+    "sourceOrder": 60
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b4d177d30a1a92ef2886e7eb1da4e6e52aec5708f432f681f112ec6e59472dde",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/lIzR-Q9Ytwl8LJX9U86BzQ",
+    "url": "https://mp.weixin.qq.com/s/lIzR-Q9Ytwl8LJX9U86BzQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学旅游学院党委副书记高阳一行赴长春电信工程有限公司开展访企拓岗",
+    "source": "",
+    "publishDate": "2026-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/lIzR-Q9Ytwl8LJX9U86BzQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "a08ce652efba17eec87b19dd72cfacb891c7192709b309eee808cb431d39042c",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "长春大学旅游学院党委副书记高阳一行赴长春电信工程有限公司开展访企拓岗",
+    "listPublishDate": "2026-04-21",
+    "sourceOrder": 264
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:aa41ff438372077775c116ad01372c6c5857f7b5a4e99c2e5d05b2b34195406e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/S0RscyvZ1bbsaP5gKgLBiQ",
+    "url": "https://mp.weixin.qq.com/s/S0RscyvZ1bbsaP5gKgLBiQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗 | 长春东方职业学院校长郝炬赴长春仁大医养中心考察调研 共谋银发经济产教融合新路径",
+    "source": "",
+    "publishDate": "2025-06-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/S0RscyvZ1bbsaP5gKgLBiQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "daadf21c64f18321ced890b265d3d635a271991959633b49176f94f3192d6416",
+  "evidence": {
+    "listPage": 83,
+    "listTitle": "访企拓岗 | 长春东方职业学院校长郝炬赴长春仁大医养中心考察调研 共谋银发经济产教融合新路径",
+    "listPublishDate": "2025-06-12",
+    "sourceOrder": 829
+  }
+}

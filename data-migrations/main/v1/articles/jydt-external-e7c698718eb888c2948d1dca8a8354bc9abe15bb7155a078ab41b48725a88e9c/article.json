@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e7c698718eb888c2948d1dca8a8354bc9abe15bb7155a078ab41b48725a88e9c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/fkJUBuDFVl7Zsg6dzNw91g",
+    "url": "https://mp.weixin.qq.com/s/fkJUBuDFVl7Zsg6dzNw91g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "知行合一强技能，临床见习促成长——松原职业技术学院赴前郭县中医院开展见习活动",
+    "source": "",
+    "publishDate": "2026-06-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/fkJUBuDFVl7Zsg6dzNw91g"
+  },
+  "resources": [],
+  "sourceFingerprint": "f35eb48f9df47381cd99bdec57beddb9182c16dfcfaddb58908ab94b96a4d635",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "知行合一强技能，临床见习促成长——松原职业技术学院赴前郭县中医院开展见习活动",
+    "listPublishDate": "2026-06-03",
+    "sourceOrder": 108
+  }
+}

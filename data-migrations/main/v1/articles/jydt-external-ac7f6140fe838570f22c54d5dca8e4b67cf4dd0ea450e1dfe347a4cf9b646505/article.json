@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ac7f6140fe838570f22c54d5dca8e4b67cf4dd0ea450e1dfe347a4cf9b646505",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/CBEALKSnAMjN2NBXGhvJHA",
+    "url": "https://mp.weixin.qq.com/s/CBEALKSnAMjN2NBXGhvJHA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学与浙江省长兴县开展合作座谈会并举行长兴企业专场招聘会",
+    "source": "",
+    "publishDate": "2025-11-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/CBEALKSnAMjN2NBXGhvJHA"
+  },
+  "resources": [],
+  "sourceFingerprint": "348306fdd13ab4b37b5ec44f0b3d320e2a9aff27c195274d543d3dc418ea2238",
+  "evidence": {
+    "listPage": 58,
+    "listTitle": "吉林建筑大学与浙江省长兴县开展合作座谈会并举行长兴企业专场招聘会",
+    "listPublishDate": "2025-11-20",
+    "sourceOrder": 580
+  }
+}

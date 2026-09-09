@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fd374158a8fae89d5cb6e9967ca4d9a93240f2b4383c940f9ebd541dfb16336c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/HRcxyXmiHXXblZ9ZNc08yQ",
+    "url": "https://mp.weixin.qq.com/s/HRcxyXmiHXXblZ9ZNc08yQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化师范学院举办2026届毕业生春季校园双选会",
+    "source": "",
+    "publishDate": "2026-04-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/HRcxyXmiHXXblZ9ZNc08yQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "080425e0ca926638c808459b16451885b2cf6da8296d42ec3e21bf94c05696f3",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "通化师范学院举办2026届毕业生春季校园双选会",
+    "listPublishDate": "2026-04-20",
+    "sourceOrder": 274
+  }
+}

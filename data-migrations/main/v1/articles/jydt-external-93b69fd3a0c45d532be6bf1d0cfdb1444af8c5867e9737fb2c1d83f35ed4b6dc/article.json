@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:93b69fd3a0c45d532be6bf1d0cfdb1444af8c5867e9737fb2c1d83f35ed4b6dc",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/nIf8zqe2RVtR2k6VHXjHng",
+    "url": "https://mp.weixin.qq.com/s/nIf8zqe2RVtR2k6VHXjHng"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院党委书记张吉锋率队赴新华三集团吉林代表处访企拓岗并签署战略合作协议",
+    "source": "",
+    "publishDate": "2026-04-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/nIf8zqe2RVtR2k6VHXjHng"
+  },
+  "resources": [],
+  "sourceFingerprint": "4e1b7acf284d2fc0e42f8a20f36b93430caf1be62be76abe481ca5dfa0ecc6b9",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "吉林工商学院党委书记张吉锋率队赴新华三集团吉林代表处访企拓岗并签署战略合作协议",
+    "listPublishDate": "2026-04-30",
+    "sourceOrder": 221
+  }
+}

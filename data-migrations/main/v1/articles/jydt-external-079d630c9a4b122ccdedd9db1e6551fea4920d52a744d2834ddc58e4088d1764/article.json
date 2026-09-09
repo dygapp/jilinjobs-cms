@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:079d630c9a4b122ccdedd9db1e6551fea4920d52a744d2834ddc58e4088d1764",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1021/5610.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1021/5610.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "第十六届吉林省理工类人才专场招聘会在长春工业大学举行",
+    "source": "",
+    "publishDate": "2026-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1021/5610.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "fd4d58a162e6b67f5e2e785f0714e5b1fd5c5c23fe6929a9b28140ca5335529b",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "第十六届吉林省理工类人才专场招聘会在长春工业大学举行",
+    "listPublishDate": "2026-03-27",
+    "sourceOrder": 357
+  }
+}

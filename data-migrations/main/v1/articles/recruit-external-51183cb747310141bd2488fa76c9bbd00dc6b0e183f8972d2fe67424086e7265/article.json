@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:51183cb747310141bd2488fa76c9bbd00dc6b0e183f8972d2fe67424086e7265",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/chance/newsdetails.html",
+    "url": "https://m.bysjy.com.cn/student/chance/newsdetails.html?token=yxqqnn0100000004&notice_id=1642305"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“职引未来 筑梦吉林”服务吉林高质量发展高校毕业生秋季校园招聘会—延边地区2026届毕业生就业洽谈会暨延边大学秋季大型校园招聘会",
+    "source": "",
+    "publishDate": "2025-10-14",
+    "bodyHtml": "",
+    "externalUrl": "https://m.bysjy.com.cn/student/chance/newsdetails.html?token=yxqqnn0100000004&notice_id=1642305"
+  },
+  "resources": [],
+  "sourceFingerprint": "4df92e322d397cd87b04cd26dc50230764add0d4f2ec38e5e9c136b743c4f260",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "“职引未来 筑梦吉林”服务吉林高质量发展高校毕业生秋季校园招聘会—延边地区2026届毕业生就业洽谈会暨延边大学秋季大型校园招聘会",
+    "listPublishDate": "2025-10-14",
+    "sourceOrder": 134
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:51c24125512f17e8d5e1c5343160eb0724d325b2736a28f10c262fd9489bca9b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/0p5k3v5QA9n9Yz3wOT4vvw",
+    "url": "https://mp.weixin.qq.com/s/0p5k3v5QA9n9Yz3wOT4vvw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林电子信息职业技术学院校长曾繁明一行赴吉林省矿业集团有限公司访企拓岗",
+    "source": "",
+    "publishDate": "2026-04-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/0p5k3v5QA9n9Yz3wOT4vvw"
+  },
+  "resources": [],
+  "sourceFingerprint": "656d0a9cb27e6fb342b649accf75fe9993a3e9dbc297a1bcb0b31af57dd8213f",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "吉林电子信息职业技术学院校长曾繁明一行赴吉林省矿业集团有限公司访企拓岗",
+    "listPublishDate": "2026-04-15",
+    "sourceOrder": 284
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:895f6aa7f8d89f3273745d8416ba6652731ed52fd556359b1494b6ae03ff2292",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/EYhuX9Q41mHVDfVe1220Bg",
+    "url": "https://mp.weixin.qq.com/s/EYhuX9Q41mHVDfVe1220Bg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "诚邀您参与｜“职引未来、筑梦吉林”吉林省高校毕业生秋季招聘会暨吉林地区高校2026届毕业生就业洽谈会",
+    "source": "",
+    "publishDate": "2025-09-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/EYhuX9Q41mHVDfVe1220Bg"
+  },
+  "resources": [],
+  "sourceFingerprint": "de7589aec4041a5db76954315df0848481ada53536d878ace1c7fc716dacee5e",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "诚邀您参与｜“职引未来、筑梦吉林”吉林省高校毕业生秋季招聘会暨吉林地区高校2026届毕业生就业洽谈会",
+    "listPublishDate": "2025-09-28",
+    "sourceOrder": 138
+  }
+}

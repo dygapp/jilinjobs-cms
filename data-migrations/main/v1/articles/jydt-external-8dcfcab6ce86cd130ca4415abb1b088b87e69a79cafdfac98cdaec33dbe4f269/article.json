@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8dcfcab6ce86cd130ca4415abb1b088b87e69a79cafdfac98cdaec33dbe4f269",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/mIUFEbUiDAdzywScO8sMqA",
+    "url": "https://mp.weixin.qq.com/s/mIUFEbUiDAdzywScO8sMqA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春金融高等专科学校吕鹰飞校长带队赴吉林云投莱森购数字科技有限公司开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2025-06-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/mIUFEbUiDAdzywScO8sMqA"
+  },
+  "resources": [],
+  "sourceFingerprint": "9c51e926b107f646b39f80668c5b66e927a95916c7b70d01dd736c87cd8b37c3",
+  "evidence": {
+    "listPage": 80,
+    "listTitle": "长春金融高等专科学校吕鹰飞校长带队赴吉林云投莱森购数字科技有限公司开展访企拓岗专项行动",
+    "listPublishDate": "2025-06-19",
+    "sourceOrder": 791
+  }
+}

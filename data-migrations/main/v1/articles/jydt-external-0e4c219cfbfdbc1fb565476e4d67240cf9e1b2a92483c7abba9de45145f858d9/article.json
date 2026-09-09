@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0e4c219cfbfdbc1fb565476e4d67240cf9e1b2a92483c7abba9de45145f858d9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/RbQIBAwJp-bllXQRIbebGg",
+    "url": "https://mp.weixin.qq.com/s/RbQIBAwJp-bllXQRIbebGg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学举办“相约福地 才聚镇江”校园专场双选会",
+    "source": "",
+    "publishDate": "2026-04-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/RbQIBAwJp-bllXQRIbebGg"
+  },
+  "resources": [],
+  "sourceFingerprint": "9bef32abcdd03086c4344a6bf4bf5724a58015060d93948c674accacc107e95f",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "东北电力大学举办“相约福地 才聚镇江”校园专场双选会",
+    "listPublishDate": "2026-04-13",
+    "sourceOrder": 298
+  }
+}

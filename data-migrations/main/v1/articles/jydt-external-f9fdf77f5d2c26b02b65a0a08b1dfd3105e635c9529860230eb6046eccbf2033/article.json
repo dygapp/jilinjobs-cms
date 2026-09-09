@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f9fdf77f5d2c26b02b65a0a08b1dfd3105e635c9529860230eb6046eccbf2033",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/GsCHukCiyOZnzTWwUc6HdQ",
+    "url": "https://mp.weixin.qq.com/s/GsCHukCiyOZnzTWwUc6HdQ?scene=25&sessionid=-1366958386"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北师范大学2025届毕业生教育行业春季招聘会暨“宏志助航计划”专场招聘会举行",
+    "source": "",
+    "publishDate": "2025-04-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/GsCHukCiyOZnzTWwUc6HdQ?scene=25&sessionid=-1366958386"
+  },
+  "resources": [],
+  "sourceFingerprint": "5ad963d2acbcc78ade2cc23c730fe7357389ecb3a624111a7975398161ebecaf",
+  "evidence": {
+    "listPage": 94,
+    "listTitle": "东北师范大学2025届毕业生教育行业春季招聘会暨“宏志助航计划”专场招聘会举行",
+    "listPublishDate": "2025-04-17",
+    "sourceOrder": 938
+  }
+}

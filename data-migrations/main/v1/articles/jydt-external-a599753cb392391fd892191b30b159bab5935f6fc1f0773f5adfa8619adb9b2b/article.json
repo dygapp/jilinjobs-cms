@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a599753cb392391fd892191b30b159bab5935f6fc1f0773f5adfa8619adb9b2b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/sk9wtNN6M7GrRoEN9t6BKg",
+    "url": "https://mp.weixin.qq.com/s/sk9wtNN6M7GrRoEN9t6BKg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院开展留省就业创业政策宣传主题月活动 赋能毕业生服务吉林振兴",
+    "source": "",
+    "publishDate": "2026-06-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/sk9wtNN6M7GrRoEN9t6BKg"
+  },
+  "resources": [],
+  "sourceFingerprint": "f06c409e8919a4faf09095037d859be4d6b040deaafa28f2520195c56ac68b4e",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "长春人文学院开展留省就业创业政策宣传主题月活动 赋能毕业生服务吉林振兴",
+    "listPublishDate": "2026-06-24",
+    "sourceOrder": 68
+  }
+}

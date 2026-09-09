@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ccab01ed359967f0b044ae8f0df9ea76a4869c653d86e6f45f385c34bbeabf88",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1028/171072.htm",
+    "url": "https://www.jlju.edu.cn/info/1028/171072.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学与浙江省绍兴市越城区举行政校对接座谈会",
+    "source": "",
+    "publishDate": "2025-11-05",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1028/171072.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "8e034fa8b4177dfe3780b9252b4a9a276abb67010812144d8228dfb5fdf25bd2",
+  "evidence": {
+    "listPage": 63,
+    "listTitle": "吉林建筑大学与浙江省绍兴市越城区举行政校对接座谈会",
+    "listPublishDate": "2025-11-05",
+    "sourceOrder": 627
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5d13c103fa69fc569adfaf289446c3d9023362d1264890389d673684cd26841b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/H6m5RaTwdjf0o0T0Rvn5SA",
+    "url": "https://mp.weixin.qq.com/s/H6m5RaTwdjf0o0T0Rvn5SA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学赴松原市开展“三访三促”专项活动",
+    "source": "",
+    "publishDate": "2025-12-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/H6m5RaTwdjf0o0T0Rvn5SA"
+  },
+  "resources": [],
+  "sourceFingerprint": "9d8a487a76da6bf87ffbbf0efb1aaa2e4fcadd553757ea374fe360657dd31bd1",
+  "evidence": {
+    "listPage": 55,
+    "listTitle": "长春工业大学赴松原市开展“三访三促”专项活动",
+    "listPublishDate": "2025-12-12",
+    "sourceOrder": 546
+  }
+}

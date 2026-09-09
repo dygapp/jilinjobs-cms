@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:e751f491d4a2b62189b378c9957f74b327a45aae71dbce5a13d06957a0176e27",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/QnwRAOCa9trvuqwJSKFsmA",
+    "url": "https://mp.weixin.qq.com/s/QnwRAOCa9trvuqwJSKFsmA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院“暖心行动”线上活动正式开启",
+    "source": "",
+    "publishDate": "2026-01-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/QnwRAOCa9trvuqwJSKFsmA"
+  },
+  "resources": [],
+  "sourceFingerprint": "2d61edc01fe58b0253ec1b82b95839ce4256751de70c1f399cf36728396458d8",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "长春科技学院“暖心行动”线上活动正式开启",
+    "listPublishDate": "2026-01-21",
+    "sourceOrder": 92
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86006084681728",
+    "contentId": "86006084681728",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86006084681728"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "“创业有你 ‘就’在吉林”我们在行动 吉林省2021届高职院校毕业生留省就业系列专场招聘会在吉科成功举办",
+    "source": "吉林科技职业技术学院",
+    "publishDate": "2021-04-24",
+    "bodyHtml": "\n                        暂无内容\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "11c73de5e061a4fd81a659a8db9e7819ff1a931f29810d744bbfa3031fb325ae",
+  "evidence": {
+    "listPage": 135,
+    "listTitle": "“创业有你 ‘就’在吉林”我们在行动 吉林省2021届高职院校毕业生留省就业系列专场招聘会在吉科成功举办",
+    "listPublishDate": "2021-04-24",
+    "sourceOrder": 1350,
+    "detailPublishDate": "2021-04-24"
+  }
+}

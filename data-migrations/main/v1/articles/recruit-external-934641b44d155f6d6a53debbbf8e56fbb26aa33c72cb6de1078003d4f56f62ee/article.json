@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:934641b44d155f6d6a53debbbf8e56fbb26aa33c72cb6de1078003d4f56f62ee",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/jOula3mJpJoaiFcmxNMlPQ",
+    "url": "https://mp.weixin.qq.com/s/jOula3mJpJoaiFcmxNMlPQ?scene=25&sessionid=-1368323515"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学 创业奋斗 “职”在延边——促进高校毕业生留延来延专场招聘会",
+    "source": "",
+    "publishDate": "2025-04-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/jOula3mJpJoaiFcmxNMlPQ?scene=25&sessionid=-1368323515"
+  },
+  "resources": [],
+  "sourceFingerprint": "b5d2bbabf57f2c520d8cb847f47a8a2441b7dd879d5eb24512e367c3221d11bb",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "延边大学 创业奋斗 “职”在延边——促进高校毕业生留延来延专场招聘会",
+    "listPublishDate": "2025-04-09",
+    "sourceOrder": 188
+  }
+}

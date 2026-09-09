@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120296",
+    "contentId": "28737783120296",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120296"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "深圳：深圳政府出台五大政策促进高校毕业生就业",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">深圳：深圳政府出台五大政策促进高校毕业生就业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 深圳市政府17日召开新闻发布会下发《关于做好促进就业工作的意见》（以下简称《意见》），将通过岗位补贴、培训补贴、青年见习政策等十项惠民政策促进就业。其中，《意见》对促进大学生就业提出了5点意见。</font></p> <p><font size=\"2\">　　据介绍，今年深圳市将毕业1．7万名大学生，其中需要深圳市解决就业的学生总数超过万人。《意见》提出，今年深圳市政府将从以下几个方面推进大学生就业：</font></p> <p><font size=\"2\">　　实行职业介绍补贴政策。失业人员通过中介机构推荐就业，用人单位与失业人员签订1年以上劳动合同且正常履行3个月以上的，按每人500元标准给予职业介绍补贴。毕业两年内未就业的高校毕业生，可享受同样的职业介绍补贴。</font></p> <p><font size=\"2\">　　实行职业培训补贴政策。失业人员和毕业两年内未能就业的本市高校毕业生参加定点培训机构技能培训和岗位适应性培训的，每年享受一次技能培训补贴和岗位适应性培训补贴，一年内参加同一工种上一等级技能培训合格的，可再次享受技能培训补贴。本市未能升学的初高中毕业生可参加3个月以上、12个月以内的预备制培训，培训期间取得相应职业资格的给予培训和技能鉴定补贴。</font></p> <p><font size=\"2\">　　实行青年见习政策。对30周岁以下、持有相应职业资格证书的失业人员和本市新成长劳动力，提供3个月以上、6个月以内免费见习培训，其间每月给予800元补贴，并购买人身意外保险，对接收见习学生的企业，按每人每月300元的标准给予补贴。</font></p> <p><font size=\"2\">　　大力扶持高校毕业生创业。将高校毕业生纳入创业扶持重点对象，高校毕业生创办企业的，可按规定享受税收优惠、收费减免、创业资助、场租补贴、社保补贴、小额担保贷款等扶持政策。</font></p> <p><font size=\"2\">　　加强公共就业服务。全市人事、劳动部门举办的公益性专场，全部免费向高校毕业生开放。“零就业家庭”毕业生可按规定享受就业援助政策。</font></p> <p><font size=\"2\">&nbsp;</font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "79f8d60688c9ded662ec54539c41c2ffb21734ec9b0c5b19d6e161c17876beb8",
+  "evidence": {
+    "listPage": 185,
+    "listTitle": "深圳：深圳政府出台五大政策促进高校毕业生就业",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1843,
+    "detailPublishDate": "2009-04-05"
+  }
+}

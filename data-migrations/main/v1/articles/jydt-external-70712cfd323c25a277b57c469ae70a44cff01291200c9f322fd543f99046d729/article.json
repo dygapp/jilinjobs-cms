@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:70712cfd323c25a277b57c469ae70a44cff01291200c9f322fd543f99046d729",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/1CE1dGbx3fUZQ-EcEb5fTA",
+    "url": "https://mp.weixin.qq.com/s/1CE1dGbx3fUZQ-EcEb5fTA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省2026届国家助学贷款等重点群体高校毕业生专场招聘会在吉林师范大学举行毕业生专场招聘会在我校举行",
+    "source": "",
+    "publishDate": "2025-11-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1CE1dGbx3fUZQ-EcEb5fTA"
+  },
+  "resources": [],
+  "sourceFingerprint": "8b13887523c548fdf72cbc752e1d196605c9d99cda76a982211612ad6e8954b9",
+  "evidence": {
+    "listPage": 63,
+    "listTitle": "吉林省2026届国家助学贷款等重点群体高校毕业生专场招聘会在吉林师范大学举行毕业生专场招聘会在我校举行",
+    "listPublishDate": "2025-11-06",
+    "sourceOrder": 623
+  }
+}

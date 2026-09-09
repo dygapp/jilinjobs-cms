@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0de6bb0e190fa57b2af4f7549e264d98309fa4cbff8262ddc89872c08b21c46e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/4RjStEYINShVLmOtDhu5iA",
+    "url": "https://mp.weixin.qq.com/s/4RjStEYINShVLmOtDhu5iA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "王雪峰莅临长白山职业技术学院开展调研 强调打造全国最具特色健康水专业群",
+    "source": "",
+    "publishDate": "2026-03-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4RjStEYINShVLmOtDhu5iA"
+  },
+  "resources": [],
+  "sourceFingerprint": "fae8418e74e83f967069a962d877e61beab655230a4d8b420e6a5b97e00cce02",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "王雪峰莅临长白山职业技术学院开展调研 强调打造全国最具特色健康水专业群",
+    "listPublishDate": "2026-03-26",
+    "sourceOrder": 359
+  }
+}

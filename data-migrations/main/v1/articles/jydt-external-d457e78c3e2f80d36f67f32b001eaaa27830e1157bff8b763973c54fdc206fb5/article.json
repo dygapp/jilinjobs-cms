@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d457e78c3e2f80d36f67f32b001eaaa27830e1157bff8b763973c54fdc206fb5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/bVjhx7g9GiRNhsy8c6JsTA",
+    "url": "https://mp.weixin.qq.com/s/bVjhx7g9GiRNhsy8c6JsTA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗‘就’在吉林”吉林省高校服务“四六四”新格局大旅游产业集群专场招聘会在长春举办",
+    "source": "",
+    "publishDate": "2024-05-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/bVjhx7g9GiRNhsy8c6JsTA"
+  },
+  "resources": [],
+  "sourceFingerprint": "8293259fcd73e4c24a392a3b9d830126db6333b61d390664673c878a6a53111a",
+  "evidence": {
+    "listPage": 105,
+    "listTitle": "“创业奋斗‘就’在吉林”吉林省高校服务“四六四”新格局大旅游产业集群专场招聘会在长春举办",
+    "listPublishDate": "2024-05-16",
+    "sourceOrder": 1050
+  }
+}

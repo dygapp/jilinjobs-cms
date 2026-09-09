@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6e8041062b4581051b72eae0f4e5314d6ee7d02a5b365f55e1b0288eee4ede97",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1211/58728.htm",
+    "url": "https://news.jlu.edu.cn/info/1211/58728.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北五校2025届毕业生秋季双选会在吉林大学举行",
+    "source": "",
+    "publishDate": "2024-10-22",
+    "bodyHtml": "",
+    "externalUrl": "https://news.jlu.edu.cn/info/1211/58728.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "6753b9bed42e67efefeed2cc4dcf690fa7877c61a0487e1a746efc11bc116bf2",
+  "evidence": {
+    "listPage": 103,
+    "listTitle": "东北五校2025届毕业生秋季双选会在吉林大学举行",
+    "listPublishDate": "2024-10-22",
+    "sourceOrder": 1026
+  }
+}

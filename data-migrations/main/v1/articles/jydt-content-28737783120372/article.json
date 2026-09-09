@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120372",
+    "contentId": "28737783120372",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120372"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林:去年创就业历史最高水平",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林:去年创就业历史最高水平</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 新华网长春１月１８日电（记者褚晓亮、宗巍）记者从正在召开的吉林省“两会”上获悉，尽管面临金融危机的严峻考验，吉林省在２００８年依然新增就业５２．５万人，使全社会从业人员达到１２８１万人，创造历史最高水平。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; ２００８年，吉林省提出要实现新增就业４２万人。为实现这一目标，吉林省由政府出资，保持１０万个公益性岗位规模稳定，使在岗人数达到１０．２万人；积极推动农村富余劳动力转移就业，全省劳务输出人数超过３９０万，实现历史新高；援助零就业家庭１８８０余户，确保零就业家庭“出现一户、帮扶一户、解决一户、稳定一户”，使城镇零就业家庭动态为零。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 为应对金融危机给就业带来的严峻挑战，２００８年，吉林省还出台了１０条具体应对措施，包括建立城镇就业转失业人员及返乡农民工监测报告制度、大力开发就业岗位、实施积极的就业政策、加大小额担保贷款扶持力度等。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 吉林省省长韩长赋在《政府工作报告》中表示，今年，吉林省将积极落实促进就业的扶持政策，加强对大学毕业生、城镇退伍军人和下岗失业人员等创业服务，完善城乡就业保障体系，增加就业扶持资金和创业小额信贷，对困难就业人员灵活就业给予社会保险补贴，稳定公益性岗位开发规模并加强动态管理。城镇新增就业４２万人，创建充分就业示范社区１００个。</font></p> <p><font size=\"2\">&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "49b1232219035b99a4727f2281a53fa9989c9eb96e0231b21f9e6f88bd952fcb",
+  "evidence": {
+    "listPage": 197,
+    "listTitle": "吉林:去年创就业历史最高水平",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1964,
+    "detailPublishDate": "2009-04-04"
+  }
+}

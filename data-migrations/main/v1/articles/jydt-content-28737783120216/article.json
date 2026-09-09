@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120216",
+    "contentId": "28737783120216",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120216"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2009年高校毕业生就业政策网上咨询周活动启动",
+    "source": "",
+    "publishDate": "2009-04-15",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2009年高校毕业生就业政策网上咨询周活动启动</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-15 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 4月13日，由教育部、人力资源和社会保障部共同主办的2009年高校毕业生就业政策网上咨询周活动正式启动。这是继教育部印发《国家促进普通高校毕业生就业政策公告》之后，有关部门面向高校毕业生开展就业政策宣传的又一重要举措。</font></p> <p><font size=\"2\">　　受国际金融危机的影响，今年毕业生就业形势面临前所未有的困难和挑战，为促进高校毕业生就业，国务院及有关部门和地区以空前的力度出台了一系列新的政策措施。此次咨询周活动旨在通过在线问题解答的形式，直接面对毕业生解惑答疑。为了给毕业生提供更全面、更权威的政策解读，此次咨询周活动，还邀请科技部、共青团中央、总参谋部等相关部门具体负责业务工作的同志，以及部分就业指导专家参与解答。同时，各省市高校毕业生就业主管部门也将安排专人在线解答毕业生提出的有关地方政策的问题，通过上下联动的方式帮助广大高校毕业生知晓、读懂、用好政策，发挥好重点政策的政策效应。</font></p> <p><font size=\"2\">　　活动期间，毕业生可以直接登录全国大学生就业公共服务立体化平台（</font><a href=\"http://www.ncss.org.cn\"><font size=\"2\">www.ncss.org.cn</font></a><font size=\"2\">）的咨询周活动页面，通过直播了解活动情况，并就有关问题向咨询专家直接提问。咨询专家将在线直接给予解答。</font></p> <p><font size=\"2\">　　据悉，咨询周活动之后，教育部和人力资源社会保障部将印发《国家促进普通高校毕业生就业政策解读手册》，免费发放到各普通高等学校。<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "cb8e8b22e9e8ecbbe42b867fa4068602b8aa5898858cafded320853b6c27251e",
+  "evidence": {
+    "listPage": 179,
+    "listTitle": "2009年高校毕业生就业政策网上咨询周活动启动",
+    "listPublishDate": "2009-04-15",
+    "sourceOrder": 1784,
+    "detailPublishDate": "2009-04-15"
+  }
+}

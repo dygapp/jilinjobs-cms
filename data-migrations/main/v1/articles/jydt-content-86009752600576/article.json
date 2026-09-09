@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86009752600576",
+    "contentId": "86009752600576",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86009752600576"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "“创业有你 就在吉林”长汽高专召开毕业生秋季双选会",
+    "source": "长春汽车工业高等专科学校",
+    "publishDate": "2021-10-22",
+    "bodyHtml": "\n                        <p>为推进2022届毕业生留省就业工作，助力长春新区发展，10月21日，长春汽车工业高等专科学校联合长春新区管理委员会共同主办“创业有你 就在吉林”2022届毕业生秋季双选会暨长春新区优质企业进校园双选会。本次双选会共有39家长春新区的企业参会，提供用工岗位510个，涉及汽车制造、零部件生产、信息服务、机械制造、生产物流等行业。</p>\n\n<p>招聘过程中，各企业对学校毕业生的表现给予了很高的评价，不少企业提出想与学校建立长期合作关系，希望学校能够为企业源源不断地输送人才。</p>\n\n<p>&nbsp;</p>\n\n<p>据悉，本次招聘会现场求职毕业生达800余人，110余名同学达成初步就业意向。招聘会还吸引了众多的大一学生入场观摩学习，借此机会来加深对行业需求的认知，做好职业生涯规划。</p>\n\n<p><strong>（长春汽车工业高等专科学校 翟雨来）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "eaad27572503b32a02be6d0c6491779b7da4c6d23938c3c70cd42b5814f08345",
+  "evidence": {
+    "listPage": 132,
+    "listTitle": "“创业有你 就在吉林”长汽高专召开毕业生秋季双选会",
+    "listPublishDate": "2021-10-22",
+    "sourceOrder": 1317,
+    "detailPublishDate": "2021-10-22"
+  }
+}

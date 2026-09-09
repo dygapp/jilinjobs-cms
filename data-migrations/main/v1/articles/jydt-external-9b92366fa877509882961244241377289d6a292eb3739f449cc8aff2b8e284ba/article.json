@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9b92366fa877509882961244241377289d6a292eb3739f449cc8aff2b8e284ba",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/hx9_SL7DD6fM3gEnUG4YrA",
+    "url": "https://mp.weixin.qq.com/s/hx9_SL7DD6fM3gEnUG4YrA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "重磅！长春早期教育职业学院正式增补长春市旅游协会理事单位 体育+文旅再启新篇",
+    "source": "",
+    "publishDate": "2026-02-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/hx9_SL7DD6fM3gEnUG4YrA"
+  },
+  "resources": [],
+  "sourceFingerprint": "75cbb0d5c1fe19344cb7a0c7b8b3a1f1a661faf4f9f24e8aa0e2b3506f3e627d",
+  "evidence": {
+    "listPage": 47,
+    "listTitle": "重磅！长春早期教育职业学院正式增补长春市旅游协会理事单位 体育+文旅再启新篇",
+    "listPublishDate": "2026-02-02",
+    "sourceOrder": 465
+  }
+}

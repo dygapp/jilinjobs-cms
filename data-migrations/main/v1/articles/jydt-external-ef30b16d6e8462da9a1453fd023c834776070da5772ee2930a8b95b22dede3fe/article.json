@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ef30b16d6e8462da9a1453fd023c834776070da5772ee2930a8b95b22dede3fe",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/hJxLPglRhW2fLQKKmJWHJw",
+    "url": "https://mp.weixin.qq.com/s/hJxLPglRhW2fLQKKmJWHJw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院赴青岛开展政校企合作 深化人才培养与拓展毕业生就业渠道",
+    "source": "",
+    "publishDate": "2025-12-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/hJxLPglRhW2fLQKKmJWHJw"
+  },
+  "resources": [],
+  "sourceFingerprint": "2353a2e248e0dd404229c314899975bf11ea57c671a1d3ae237b61dae7cde171",
+  "evidence": {
+    "listPage": 55,
+    "listTitle": "长春科技学院赴青岛开展政校企合作 深化人才培养与拓展毕业生就业渠道",
+    "listPublishDate": "2025-12-12",
+    "sourceOrder": 547
+  }
+}

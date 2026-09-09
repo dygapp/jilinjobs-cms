@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:3458a2c851f3cee73c341bca96ffd7d9ea81d84550582bb6ddeb572591d142af",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/jobfair/fairdetails.html",
+    "url": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=U9Ddty4JF1fJkx3t5dfpTc"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中科院系统面向2023届高校毕业生网上招聘",
+    "source": "",
+    "publishDate": "2022-11-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=U9Ddty4JF1fJkx3t5dfpTc"
+  },
+  "resources": [],
+  "sourceFingerprint": "fe5103bb7776fe9e30af557551608f7b2ee3d7fef6a734eceb39e644dbe13fc7",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "中科院系统面向2023届高校毕业生网上招聘",
+    "listPublishDate": "2022-11-02",
+    "sourceOrder": 334
+  }
+}

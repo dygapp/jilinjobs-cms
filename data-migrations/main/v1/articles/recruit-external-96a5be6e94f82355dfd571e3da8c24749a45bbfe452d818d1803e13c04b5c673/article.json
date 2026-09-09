@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:96a5be6e94f82355dfd571e3da8c24749a45bbfe452d818d1803e13c04b5c673",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/ZRWEkatQ-MXIYBaS2wsHew",
+    "url": "https://mp.weixin.qq.com/s/ZRWEkatQ-MXIYBaS2wsHew?scene=25&sessionid=-1368769246"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“智汇工程，职引未来” 长春工程学院2025届毕业生校园招聘会",
+    "source": "",
+    "publishDate": "2025-04-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ZRWEkatQ-MXIYBaS2wsHew?scene=25&sessionid=-1368769246"
+  },
+  "resources": [],
+  "sourceFingerprint": "ea6ed5e5679a17345ecd77d44446676720c266d04bc9bc3f91f6972391c4e695",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "“智汇工程，职引未来” 长春工程学院2025届毕业生校园招聘会",
+    "listPublishDate": "2025-04-07",
+    "sourceOrder": 191
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86122623418368",
+    "contentId": "86122623418368",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86122623418368"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "“创业有你‘就’在吉林”吉林工程技术师范学院举办专场视频双选会",
+    "source": "吉林工程技术师范学院",
+    "publishDate": "2021-11-06",
+    "bodyHtml": "\n                        <p>11月5日，由吉林省教育厅主办，省高校毕业生就业指导中心、吉林工程技术师范学院承办的“‘创业有你 就在吉林’吉林工程技术师范学院2022届毕业生省内专场网络视频双选会”在线上举行。</p>\n\n<p>网络视频双选会为毕业生和用人单位搭建了线上精准就业服务平台，吸引141家用人单位参会，提供就业岗位7120个，涵盖了机械、电子、商务、信息科技、艺术等多个领域。</p>\n\n<p>为做好本次双选会工作，学校招生就业处在会前进行协调部署，各学院学生工作办公室广泛宣传、动员，最终1782名学生登录网络视频双选会平台参会。</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "712c6921b2dad30eb94aad3e3c440e7567a1bc1628c5391e912676987b7f6697",
+  "evidence": {
+    "listPage": 131,
+    "listTitle": "“创业有你‘就’在吉林”吉林工程技术师范学院举办专场视频双选会",
+    "listPublishDate": "2021-11-06",
+    "sourceOrder": 1309,
+    "detailPublishDate": "2021-11-06"
+  }
+}

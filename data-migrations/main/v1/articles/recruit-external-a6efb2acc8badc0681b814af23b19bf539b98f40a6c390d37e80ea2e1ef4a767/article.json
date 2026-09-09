@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:a6efb2acc8badc0681b814af23b19bf539b98f40a6c390d37e80ea2e1ef4a767",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/3q-cx-UQgSOUvT_AkTVkNA",
+    "url": "https://mp.weixin.qq.com/s/3q-cx-UQgSOUvT_AkTVkNA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学@全省2026届毕业生，汽车产业专场招聘会等你来！",
+    "source": "",
+    "publishDate": "2025-09-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/3q-cx-UQgSOUvT_AkTVkNA"
+  },
+  "resources": [],
+  "sourceFingerprint": "f8e0fcc6cce1dcb418b584351d910f9f03377ce36d120fd4cd6c85f3f67b0235",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "长春工业大学@全省2026届毕业生，汽车产业专场招聘会等你来！",
+    "listPublishDate": "2025-09-23",
+    "sourceOrder": 142
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:19f7ab1c45e31fb28d9d5173d54826ee2c4014be42455fb57964d0d4484fc8a5",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/N80dJn_7btbMexrByjKuSg",
+    "url": "https://mp.weixin.qq.com/s/N80dJn_7btbMexrByjKuSg"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "关于开展人工智能应用领域校企供需对接就业育人项目征集申报工作的通知",
+    "source": "",
+    "publishDate": "2025-02-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/N80dJn_7btbMexrByjKuSg"
+  },
+  "resources": [],
+  "sourceFingerprint": "2fe28cf3e2606e0d2ecebff0a40c0cc4cefdf80aeaadd0be3719f81da28fcb69",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "关于开展人工智能应用领域校企供需对接就业育人项目征集申报工作的通知",
+    "listPublishDate": "2025-02-24",
+    "sourceOrder": 61
+  }
+}

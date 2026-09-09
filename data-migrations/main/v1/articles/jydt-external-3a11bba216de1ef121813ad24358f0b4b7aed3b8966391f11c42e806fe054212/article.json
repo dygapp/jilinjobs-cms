@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3a11bba216de1ef121813ad24358f0b4b7aed3b8966391f11c42e806fe054212",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/M7OpZu8iwkqfdJCoSOdNSQ",
+    "url": "https://mp.weixin.qq.com/s/M7OpZu8iwkqfdJCoSOdNSQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "370余家用人单位，万余个就业岗位，全省高校服务大数据产业集群人才供需洽谈会来啦",
+    "source": "",
+    "publishDate": "2024-03-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/M7OpZu8iwkqfdJCoSOdNSQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "ead103a9bb3d36a92d0cc535d0a3b82e41c9fb7a7058991561f1569e5159c804",
+  "evidence": {
+    "listPage": 111,
+    "listTitle": "370余家用人单位，万余个就业岗位，全省高校服务大数据产业集群人才供需洽谈会来啦",
+    "listPublishDate": "2024-03-26",
+    "sourceOrder": 1102
+  }
+}

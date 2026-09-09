@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2dd3dcc93466fa66ecfb81564aa821595b7c0242314cab235295e498c0a3a2ed",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/_i4nIwaoJU5pN0DZjyQqgw",
+    "url": "https://mp.weixin.qq.com/s/_i4nIwaoJU5pN0DZjyQqgw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院 | 学校与德惠市中医院教学医院签约揭牌",
+    "source": "",
+    "publishDate": "2026-01-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_i4nIwaoJU5pN0DZjyQqgw"
+  },
+  "resources": [],
+  "sourceFingerprint": "085b9cd5ab52f03e1fee695268cb55854ead3e9e8194f43ba926fa378e53228b",
+  "evidence": {
+    "listPage": 49,
+    "listTitle": "长春科技学院 | 学校与德惠市中医院教学医院签约揭牌",
+    "listPublishDate": "2026-01-26",
+    "sourceOrder": 481
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:85992507719680",
+    "contentId": "85992507719680",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=85992507719680"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于2021年吉林省第七届“吉人梦想杯”大学生就业创业大赛获奖结果的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2021-11-22",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://de2a4fffe407dd9f5293a66967df853ecadbf43c64ad0b562931d13a2c1df218\" width=\"1000\"><img alt=\"\" height=\"1414\" src=\"migration-resource://fef04c5bdd9e248928286b89e7bd03a9dc63ec58a5cf5298c47c1f475fd05473\" width=\"1000\"><img alt=\"\" height=\"1414\" src=\"migration-resource://c570ea44d35adb72f9cebb6f77837a0b4ca392b132c8cb03fa5fb9f9921f7035\" width=\"1000\"><img alt=\"\" height=\"1414\" src=\"migration-resource://48efb6db9f22cf9d88a82094b9e982f4c96ab96db7ba5ba55e92284c68451e95\" width=\"1000\"><img alt=\"\" height=\"1414\" src=\"migration-resource://10b9489dcb4c90a2af77404cd0d536d7f0a682640f49769cd97d9689c050a061\" width=\"1000\"><img alt=\"\" height=\"1414\" src=\"migration-resource://f06374e0d34f3a96ebba7906d55fd8048a3377d36753d2c58427e68ac9e17105\" width=\"1000\"><img alt=\"\" height=\"1414\" src=\"migration-resource://66d6015c315cb8c7824a786abfa22cd31385b242faf3ec4c51cefa620801d833\" width=\"1000\"><img alt=\"\" height=\"1414\" src=\"migration-resource://3df6f25cae4d643b0c71fc2d5070ea9c8a9ade27c7d4d36ad7087f8e3fb21015\" width=\"1000\"><img alt=\"\" height=\"1414\" src=\"migration-resource://4b1f5f6a4427972b68c2ee3f3cdcc00155b57337a2db5c294215772eeb20948e\" width=\"1000\"><img alt=\"\" height=\"1414\" src=\"migration-resource://84f4e92a7e451aee1a2b5aeaade03105025f5ac51fb4fd9194d1e37a17e2ba55\" width=\"1000\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/62a11d97-9dc3-48b2-8706-94779a1fc8b0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/62a11d97-9dc3-48b2-8706-94779a1fc8b0.jpg",
+      "token": "migration-resource://de2a4fffe407dd9f5293a66967df853ecadbf43c64ad0b562931d13a2c1df218",
+      "snapshotPath": "assets/de2a4fffe407dd9f5293a66967df853ecadbf43c64ad0b562931d13a2c1df218.jpg",
+      "sha256": "de2a4fffe407dd9f5293a66967df853ecadbf43c64ad0b562931d13a2c1df218",
+      "contentType": "image/jpeg",
+      "sizeBytes": 195538
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/57eef324-ee15-4874-b6ac-5dfd17e63403.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/57eef324-ee15-4874-b6ac-5dfd17e63403.jpg",
+      "token": "migration-resource://fef04c5bdd9e248928286b89e7bd03a9dc63ec58a5cf5298c47c1f475fd05473",
+      "snapshotPath": "assets/fef04c5bdd9e248928286b89e7bd03a9dc63ec58a5cf5298c47c1f475fd05473.jpg",
+      "sha256": "fef04c5bdd9e248928286b89e7bd03a9dc63ec58a5cf5298c47c1f475fd05473",
+      "contentType": "image/jpeg",
+      "sizeBytes": 195620
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/54500ce6-279b-46bb-b478-553dbe6cf8d5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/54500ce6-279b-46bb-b478-553dbe6cf8d5.jpg",
+      "token": "migration-resource://c570ea44d35adb72f9cebb6f77837a0b4ca392b132c8cb03fa5fb9f9921f7035",
+      "snapshotPath": "assets/c570ea44d35adb72f9cebb6f77837a0b4ca392b132c8cb03fa5fb9f9921f7035.jpg",
+      "sha256": "c570ea44d35adb72f9cebb6f77837a0b4ca392b132c8cb03fa5fb9f9921f7035",
+      "contentType": "image/jpeg",
+      "sizeBytes": 129972
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/ee564ef4-7f01-4867-92c9-81f3abd4ce0b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/ee564ef4-7f01-4867-92c9-81f3abd4ce0b.jpg",
+      "token": "migration-resource://48efb6db9f22cf9d88a82094b9e982f4c96ab96db7ba5ba55e92284c68451e95",
+      "snapshotPath": "assets/48efb6db9f22cf9d88a82094b9e982f4c96ab96db7ba5ba55e92284c68451e95.jpg",
+      "sha256": "48efb6db9f22cf9d88a82094b9e982f4c96ab96db7ba5ba55e92284c68451e95",
+      "contentType": "image/jpeg",
+      "sizeBytes": 122563
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/2b6bbe04-2b4d-490a-962b-3ce471669002.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/2b6bbe04-2b4d-490a-962b-3ce471669002.jpg",
+      "token": "migration-resource://10b9489dcb4c90a2af77404cd0d536d7f0a682640f49769cd97d9689c050a061",
+      "snapshotPath": "assets/10b9489dcb4c90a2af77404cd0d536d7f0a682640f49769cd97d9689c050a061.jpg",
+      "sha256": "10b9489dcb4c90a2af77404cd0d536d7f0a682640f49769cd97d9689c050a061",
+      "contentType": "image/jpeg",
+      "sizeBytes": 151433
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/b7b28fb6-cc4d-4c36-b405-cb9899974d22.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/b7b28fb6-cc4d-4c36-b405-cb9899974d22.jpg",
+      "token": "migration-resource://f06374e0d34f3a96ebba7906d55fd8048a3377d36753d2c58427e68ac9e17105",
+      "snapshotPath": "assets/f06374e0d34f3a96ebba7906d55fd8048a3377d36753d2c58427e68ac9e17105.jpg",
+      "sha256": "f06374e0d34f3a96ebba7906d55fd8048a3377d36753d2c58427e68ac9e17105",
+      "contentType": "image/jpeg",
+      "sizeBytes": 144687
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/2906c9b4-99f3-4cb3-b98c-5ceee7efda6b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/2906c9b4-99f3-4cb3-b98c-5ceee7efda6b.jpg",
+      "token": "migration-resource://66d6015c315cb8c7824a786abfa22cd31385b242faf3ec4c51cefa620801d833",
+      "snapshotPath": "assets/66d6015c315cb8c7824a786abfa22cd31385b242faf3ec4c51cefa620801d833.jpg",
+      "sha256": "66d6015c315cb8c7824a786abfa22cd31385b242faf3ec4c51cefa620801d833",
+      "contentType": "image/jpeg",
+      "sizeBytes": 202297
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/e379d2a1-51dc-40a2-bf36-e1931f09658c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/e379d2a1-51dc-40a2-bf36-e1931f09658c.jpg",
+      "token": "migration-resource://3df6f25cae4d643b0c71fc2d5070ea9c8a9ade27c7d4d36ad7087f8e3fb21015",
+      "snapshotPath": "assets/3df6f25cae4d643b0c71fc2d5070ea9c8a9ade27c7d4d36ad7087f8e3fb21015.jpg",
+      "sha256": "3df6f25cae4d643b0c71fc2d5070ea9c8a9ade27c7d4d36ad7087f8e3fb21015",
+      "contentType": "image/jpeg",
+      "sizeBytes": 162539
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/aace9490-de4d-4b53-a3ea-7d5d60dad0ee.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/aace9490-de4d-4b53-a3ea-7d5d60dad0ee.jpg",
+      "token": "migration-resource://4b1f5f6a4427972b68c2ee3f3cdcc00155b57337a2db5c294215772eeb20948e",
+      "snapshotPath": "assets/4b1f5f6a4427972b68c2ee3f3cdcc00155b57337a2db5c294215772eeb20948e.jpg",
+      "sha256": "4b1f5f6a4427972b68c2ee3f3cdcc00155b57337a2db5c294215772eeb20948e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 103677
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/64480b78-14ba-499c-a82c-af5ea0741662.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/64480b78-14ba-499c-a82c-af5ea0741662.jpg",
+      "token": "migration-resource://84f4e92a7e451aee1a2b5aeaade03105025f5ac51fb4fd9194d1e37a17e2ba55",
+      "snapshotPath": "assets/84f4e92a7e451aee1a2b5aeaade03105025f5ac51fb4fd9194d1e37a17e2ba55.jpg",
+      "sha256": "84f4e92a7e451aee1a2b5aeaade03105025f5ac51fb4fd9194d1e37a17e2ba55",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88718
+    }
+  ],
+  "sourceFingerprint": "0a1066174f192fe6e0942edd0045a162ca267a960bf5af294ef18f4ab97b0c55",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "关于2021年吉林省第七届“吉人梦想杯”大学生就业创业大赛获奖结果的通知",
+    "listPublishDate": "2021-11-22",
+    "sourceOrder": 142,
+    "detailPublishDate": "2021-11-22"
+  }
+}

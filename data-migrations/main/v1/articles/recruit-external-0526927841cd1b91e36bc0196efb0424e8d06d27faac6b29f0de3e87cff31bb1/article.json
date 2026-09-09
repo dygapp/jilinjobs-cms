@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:0526927841cd1b91e36bc0196efb0424e8d06d27faac6b29f0de3e87cff31bb1",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/UrWrNTzKyNIDxTowf7H91Q",
+    "url": "https://mp.weixin.qq.com/s/UrWrNTzKyNIDxTowf7H91Q?scene=25&sessionid=-1368587095"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学教育学院2025届毕业生春季专场招聘会邀请函",
+    "source": "",
+    "publishDate": "2025-04-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/UrWrNTzKyNIDxTowf7H91Q?scene=25&sessionid=-1368587095"
+  },
+  "resources": [],
+  "sourceFingerprint": "17ef11a8cfc97b093c03b80391265a292ee3e126e80ea04276d8f8ba76adb1ec",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "长春师范大学教育学院2025届毕业生春季专场招聘会邀请函",
+    "listPublishDate": "2025-04-04",
+    "sourceOrder": 193
+  }
+}

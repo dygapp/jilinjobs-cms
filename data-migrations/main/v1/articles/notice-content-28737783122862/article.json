@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122862",
+    "contentId": "28737783122862",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122862"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省大学生《创业梦想计划》模拟大赛的通知",
+    "source": "",
+    "publishDate": "2014-03-12",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办吉林省大学生《创业梦想计划》模拟大赛的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2014-3-12 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img src=\"migration-resource://b229f26395132ddc117d9d6f7dc0e881af4f7b8b14031d8c0b4c296cce1d17ef\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://8bf7ff99ade60693c17be22894e42c4ca36bf4bd0fa0fc23e59e398d23591a59\" border=\"0\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140312212330750.jpg",
+      "originalReference": "/chistory/cms/imgs/20140312212330750.jpg",
+      "token": "migration-resource://b229f26395132ddc117d9d6f7dc0e881af4f7b8b14031d8c0b4c296cce1d17ef",
+      "snapshotPath": "assets/b229f26395132ddc117d9d6f7dc0e881af4f7b8b14031d8c0b4c296cce1d17ef.jpg",
+      "sha256": "b229f26395132ddc117d9d6f7dc0e881af4f7b8b14031d8c0b4c296cce1d17ef",
+      "contentType": "image/jpeg",
+      "sizeBytes": 99319
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2014031221233992.jpg",
+      "originalReference": "/chistory/cms/imgs/2014031221233992.jpg",
+      "token": "migration-resource://8bf7ff99ade60693c17be22894e42c4ca36bf4bd0fa0fc23e59e398d23591a59",
+      "snapshotPath": "assets/8bf7ff99ade60693c17be22894e42c4ca36bf4bd0fa0fc23e59e398d23591a59.jpg",
+      "sha256": "8bf7ff99ade60693c17be22894e42c4ca36bf4bd0fa0fc23e59e398d23591a59",
+      "contentType": "image/jpeg",
+      "sizeBytes": 53388
+    }
+  ],
+  "sourceFingerprint": "862fe2ad4843c09b3b0a4611b80f1d5c67812864996223031fadeb0110b4c16d",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "关于举办吉林省大学生《创业梦想计划》模拟大赛的通知",
+    "listPublishDate": "2014-03-12",
+    "sourceOrder": 326,
+    "detailPublishDate": "2014-03-12"
+  }
+}

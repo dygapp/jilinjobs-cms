@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122626",
+    "contentId": "28737783122626",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122626"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展2021届全省高校毕业生就业招聘洽谈月活动的通知",
+    "source": "市场部",
+    "publishDate": "2020-11-16",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align:center\"><img src=\"migration-resource://4db795a1a59efc542206209960798c8560f036cf4e900411cdf7be43a2d3f5b3\" alt=\"\" width=\"680\" height=\"962\"></p>\n<p style=\"text-align:center\"><img src=\"migration-resource://f74e113c1fddf0cdc4e181d4cd20263383c3b9a7b0f77b86e591b19e4a33e285\" alt=\"\" width=\"680\" height=\"962\"></p>\n<p style=\"text-align:center\"><img src=\"migration-resource://e72867deaf0dc825be014a9da5c7391899e2394741a96b3802a7246004d95dd6\" alt=\"\" width=\"680\" height=\"962\"></p>\n<p style=\"text-align:center\"><img src=\"migration-resource://99118e00e6cfe4b8c325b9b55ec7b25e509ed1686a78a033440f72811ca0db8e\" alt=\"\" width=\"680\" height=\"962\"></p>\n<p style=\"text-align:center\"><img src=\"migration-resource://db3b0988a4c9290f5dc750170677c49c0ba1433af1082baa94548f5ce48bca51\" alt=\"\" width=\"680\" height=\"962\"></p>\n<p style=\"text-align:center\"><img src=\"migration-resource://1b81292272e27c3a9afd922fa69408ca1f28eaa6bceb7bfb348f95afb2815505\" alt=\"\" width=\"680\" height=\"962\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201116161915.jpg",
+      "originalReference": "/chistory/cms/editor/20201116161915.jpg",
+      "token": "migration-resource://4db795a1a59efc542206209960798c8560f036cf4e900411cdf7be43a2d3f5b3",
+      "snapshotPath": "assets/4db795a1a59efc542206209960798c8560f036cf4e900411cdf7be43a2d3f5b3.jpg",
+      "sha256": "4db795a1a59efc542206209960798c8560f036cf4e900411cdf7be43a2d3f5b3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 1348490
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201116161941.jpg",
+      "originalReference": "/chistory/cms/editor/20201116161941.jpg",
+      "token": "migration-resource://f74e113c1fddf0cdc4e181d4cd20263383c3b9a7b0f77b86e591b19e4a33e285",
+      "snapshotPath": "assets/f74e113c1fddf0cdc4e181d4cd20263383c3b9a7b0f77b86e591b19e4a33e285.jpg",
+      "sha256": "f74e113c1fddf0cdc4e181d4cd20263383c3b9a7b0f77b86e591b19e4a33e285",
+      "contentType": "image/jpeg",
+      "sizeBytes": 1565943
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201116161957.jpg",
+      "originalReference": "/chistory/cms/editor/20201116161957.jpg",
+      "token": "migration-resource://e72867deaf0dc825be014a9da5c7391899e2394741a96b3802a7246004d95dd6",
+      "snapshotPath": "assets/e72867deaf0dc825be014a9da5c7391899e2394741a96b3802a7246004d95dd6.jpg",
+      "sha256": "e72867deaf0dc825be014a9da5c7391899e2394741a96b3802a7246004d95dd6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 1700824
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201116162017.jpg",
+      "originalReference": "/chistory/cms/editor/20201116162017.jpg",
+      "token": "migration-resource://99118e00e6cfe4b8c325b9b55ec7b25e509ed1686a78a033440f72811ca0db8e",
+      "snapshotPath": "assets/99118e00e6cfe4b8c325b9b55ec7b25e509ed1686a78a033440f72811ca0db8e.jpg",
+      "sha256": "99118e00e6cfe4b8c325b9b55ec7b25e509ed1686a78a033440f72811ca0db8e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 1691788
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201116162043.jpg",
+      "originalReference": "/chistory/cms/editor/20201116162043.jpg",
+      "token": "migration-resource://db3b0988a4c9290f5dc750170677c49c0ba1433af1082baa94548f5ce48bca51",
+      "snapshotPath": "assets/db3b0988a4c9290f5dc750170677c49c0ba1433af1082baa94548f5ce48bca51.jpg",
+      "sha256": "db3b0988a4c9290f5dc750170677c49c0ba1433af1082baa94548f5ce48bca51",
+      "contentType": "image/jpeg",
+      "sizeBytes": 640785
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201116162100.jpg",
+      "originalReference": "/chistory/cms/editor/20201116162100.jpg",
+      "token": "migration-resource://1b81292272e27c3a9afd922fa69408ca1f28eaa6bceb7bfb348f95afb2815505",
+      "snapshotPath": "assets/1b81292272e27c3a9afd922fa69408ca1f28eaa6bceb7bfb348f95afb2815505.jpg",
+      "sha256": "1b81292272e27c3a9afd922fa69408ca1f28eaa6bceb7bfb348f95afb2815505",
+      "contentType": "image/jpeg",
+      "sizeBytes": 1405757
+    }
+  ],
+  "sourceFingerprint": "3e3c2d380e3481f7979981ab360e79e6953551ede153a15735f08a22a6d2a972",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "关于开展2021届全省高校毕业生就业招聘洽谈月活动的通知",
+    "listPublishDate": "2020-11-16",
+    "sourceOrder": 166,
+    "detailPublishDate": "2020-11-16"
+  }
+}

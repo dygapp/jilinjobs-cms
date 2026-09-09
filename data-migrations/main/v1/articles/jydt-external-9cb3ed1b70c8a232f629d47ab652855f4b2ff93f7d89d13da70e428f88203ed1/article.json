@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9cb3ed1b70c8a232f629d47ab652855f4b2ff93f7d89d13da70e428f88203ed1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/4dOWCzE0vWNyd3NYZtgQmA",
+    "url": "https://mp.weixin.qq.com/s/4dOWCzE0vWNyd3NYZtgQmA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林通用航空职业技术学院 | 课堂对接机场 校企共架实习就业“立交桥”",
+    "source": "",
+    "publishDate": "2025-06-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4dOWCzE0vWNyd3NYZtgQmA"
+  },
+  "resources": [],
+  "sourceFingerprint": "65c51f331ffbe2308d98ec555f724da051eaa4f81ea06be3682986e54cee4a62",
+  "evidence": {
+    "listPage": 84,
+    "listTitle": "吉林通用航空职业技术学院 | 课堂对接机场 校企共架实习就业“立交桥”",
+    "listPublishDate": "2025-06-11",
+    "sourceOrder": 833
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:616c7a01f370302bd7c921927960c3b31be7a3d3b9cdf8f1fa2d1becaeb43eee",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/hQ7QgM1t7Jikkljyo2e-oA",
+    "url": "https://mp.weixin.qq.com/s/hQ7QgM1t7Jikkljyo2e-oA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学举办第六届大学生“职秀”大赛",
+    "source": "",
+    "publishDate": "2025-05-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/hQ7QgM1t7Jikkljyo2e-oA"
+  },
+  "resources": [],
+  "sourceFingerprint": "d50753f305bc5ddfa3cdeec411c9545a9f1de54fd5a69234ccdaf43536fb3ab1",
+  "evidence": {
+    "listPage": 86,
+    "listTitle": "长春师范大学举办第六届大学生“职秀”大赛",
+    "listPublishDate": "2025-05-29",
+    "sourceOrder": 859
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:282221418151936",
+    "contentId": "282221418151936",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=282221418151936"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "文化和旅游部办公厅 教育部办公厅关于开展2025年“才聚文旅 职引未来”人才招聘专项行动的通知",
+    "source": "文化和旅游部办公厅 教育部办公厅",
+    "publishDate": "2025-03-31",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://bc9170fc76192cba981264075703e672258be52705f8b2b8c29fdcb71ad8554d\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://4fbbb882b027bc32757760cf56884865f19c2f0c0e08c1c853c2e4e5670ef3fd\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://2e1bc313347b2d16400588112da9c1b3fe36ed4600af1c8d78b2310158b17927\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://949dc231b36e74819c59893d304719c06f8995da4ecb0e85611ef1f3a8e2c03f\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://6a213c3dfdcd16ce718cd642da6e6d31ffb8fb88101b2f7f82ec09ff547a0c33\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://4dfcd7fbc3a3b323f8150f8c90956615e06de97b81165d4c4f0babf298d9a384\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-07/eb93a31d-d447-4214-b630-fe3d74e3d927.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-07/eb93a31d-d447-4214-b630-fe3d74e3d927.jpg",
+      "token": "migration-resource://bc9170fc76192cba981264075703e672258be52705f8b2b8c29fdcb71ad8554d",
+      "snapshotPath": "assets/bc9170fc76192cba981264075703e672258be52705f8b2b8c29fdcb71ad8554d.jpg",
+      "sha256": "bc9170fc76192cba981264075703e672258be52705f8b2b8c29fdcb71ad8554d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-07/15e8c150-3798-4e35-acf9-66e45be88af5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-07/15e8c150-3798-4e35-acf9-66e45be88af5.jpg",
+      "token": "migration-resource://4fbbb882b027bc32757760cf56884865f19c2f0c0e08c1c853c2e4e5670ef3fd",
+      "snapshotPath": "assets/4fbbb882b027bc32757760cf56884865f19c2f0c0e08c1c853c2e4e5670ef3fd.jpg",
+      "sha256": "4fbbb882b027bc32757760cf56884865f19c2f0c0e08c1c853c2e4e5670ef3fd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-07/1dc4a6d9-c7eb-46c3-83d4-52c282a5f9c2.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-07/1dc4a6d9-c7eb-46c3-83d4-52c282a5f9c2.jpg",
+      "token": "migration-resource://2e1bc313347b2d16400588112da9c1b3fe36ed4600af1c8d78b2310158b17927",
+      "snapshotPath": "assets/2e1bc313347b2d16400588112da9c1b3fe36ed4600af1c8d78b2310158b17927.jpg",
+      "sha256": "2e1bc313347b2d16400588112da9c1b3fe36ed4600af1c8d78b2310158b17927",
+      "contentType": "image/jpeg",
+      "sizeBytes": 524288
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-07/424e9481-995e-4bd4-b2fa-3367df5320ee.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-07/424e9481-995e-4bd4-b2fa-3367df5320ee.jpg",
+      "token": "migration-resource://949dc231b36e74819c59893d304719c06f8995da4ecb0e85611ef1f3a8e2c03f",
+      "snapshotPath": "assets/949dc231b36e74819c59893d304719c06f8995da4ecb0e85611ef1f3a8e2c03f.jpg",
+      "sha256": "949dc231b36e74819c59893d304719c06f8995da4ecb0e85611ef1f3a8e2c03f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 524288
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-07/44dc29ab-29c6-407a-bd1a-839d1bd8d2fd.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-07/44dc29ab-29c6-407a-bd1a-839d1bd8d2fd.jpg",
+      "token": "migration-resource://6a213c3dfdcd16ce718cd642da6e6d31ffb8fb88101b2f7f82ec09ff547a0c33",
+      "snapshotPath": "assets/6a213c3dfdcd16ce718cd642da6e6d31ffb8fb88101b2f7f82ec09ff547a0c33.jpg",
+      "sha256": "6a213c3dfdcd16ce718cd642da6e6d31ffb8fb88101b2f7f82ec09ff547a0c33",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-07/270ed415-6fda-4528-9406-99bd0615e6c5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-07/270ed415-6fda-4528-9406-99bd0615e6c5.jpg",
+      "token": "migration-resource://4dfcd7fbc3a3b323f8150f8c90956615e06de97b81165d4c4f0babf298d9a384",
+      "snapshotPath": "assets/4dfcd7fbc3a3b323f8150f8c90956615e06de97b81165d4c4f0babf298d9a384.jpg",
+      "sha256": "4dfcd7fbc3a3b323f8150f8c90956615e06de97b81165d4c4f0babf298d9a384",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    }
+  ],
+  "sourceFingerprint": "cf7416f9349ad2ed2d4125c45e74e3a71349b2a1198a39014a3e169ee84108d4",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "文化和旅游部办公厅 教育部办公厅关于开展2025年“才聚文旅 职引未来”人才招聘专项行动的通知",
+    "listPublishDate": "2025-03-31",
+    "sourceOrder": 50,
+    "detailPublishDate": "2025-03-31"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9fe431ed2be11eccb9ea02d4a416e97ba8419fed70f9e62ed03cadb6877a258d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/htusFmx5S5tkMqKeLn2R-g",
+    "url": "https://mp.weixin.qq.com/s/htusFmx5S5tkMqKeLn2R-g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院聚焦产教融合 共探低空经济人才培养",
+    "source": "",
+    "publishDate": "2026-09-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/htusFmx5S5tkMqKeLn2R-g"
+  },
+  "resources": [],
+  "sourceFingerprint": "42c613c2c3cceb156f1d5968547fe69e9886409c700411f66a78e99be8b94f0e",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "长春科技学院聚焦产教融合 共探低空经济人才培养",
+    "listPublishDate": "2026-09-09",
+    "sourceOrder": 1
+  }
+}

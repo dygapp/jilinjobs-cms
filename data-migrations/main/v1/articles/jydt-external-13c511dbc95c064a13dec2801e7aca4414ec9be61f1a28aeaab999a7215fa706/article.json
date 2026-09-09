@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:13c511dbc95c064a13dec2801e7aca4414ec9be61f1a28aeaab999a7215fa706",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/uKoox8_kmCkjtHC98Ipbew",
+    "url": "https://mp.weixin.qq.com/s/uKoox8_kmCkjtHC98Ipbew"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化校企协同育人 拓宽实习就业路径——松原职业技术学院党委书记林彦章带队赴吉林旭鑫油脂有限公司开展校企合作对接洽谈",
+    "source": "",
+    "publishDate": "2026-06-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/uKoox8_kmCkjtHC98Ipbew"
+  },
+  "resources": [],
+  "sourceFingerprint": "fb1e783fade348756520d17b48b77510a2a79ee405c158152f61680f70ca25b1",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "深化校企协同育人 拓宽实习就业路径——松原职业技术学院党委书记林彦章带队赴吉林旭鑫油脂有限公司开展校企合作对接洽谈",
+    "listPublishDate": "2026-06-03",
+    "sourceOrder": 107
+  }
+}

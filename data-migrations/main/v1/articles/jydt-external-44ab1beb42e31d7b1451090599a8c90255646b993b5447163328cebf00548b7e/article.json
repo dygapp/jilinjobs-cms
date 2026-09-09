@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:44ab1beb42e31d7b1451090599a8c90255646b993b5447163328cebf00548b7e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ySSe0B1wFsd_ZadpurVdHQ",
+    "url": "https://mp.weixin.qq.com/s/ySSe0B1wFsd_ZadpurVdHQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学举办“聚力扩容提质 服务高质量发展”2026年吉林省高校毕业生财经类专场招聘会",
+    "source": "",
+    "publishDate": "2026-03-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ySSe0B1wFsd_ZadpurVdHQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "6fd0aeec25009351a05f6b0b12d74b67f9c35acc19dea90d56e3b84296fb9571",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "吉林财经大学举办“聚力扩容提质 服务高质量发展”2026年吉林省高校毕业生财经类专场招聘会",
+    "listPublishDate": "2026-03-30",
+    "sourceOrder": 347
+  }
+}

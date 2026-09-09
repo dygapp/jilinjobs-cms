@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:acaa325f0b1adea5363dac418dae61973cd1768013e0cd15d35f6ff49e02d24a",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/2025/01/20/ARTI1737328167930218.shtml",
+    "url": "https://www.12371.cn/2025/01/20/ARTI1737328167930218.shtml"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中共中央 国务院印发《教育强国建设规划纲要（2024—2035年）》",
+    "source": "",
+    "publishDate": "2025-01-21",
+    "bodyHtml": "",
+    "externalUrl": "https://www.12371.cn/2025/01/20/ARTI1737328167930218.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "9a7b9bc55f607851d087b8d6e037d30e70a3c48bfc43524d64abef757186e0c5",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "中共中央 国务院印发《教育强国建设规划纲要（2024—2035年）》",
+    "listPublishDate": "2025-01-21",
+    "sourceOrder": 66
+  }
+}

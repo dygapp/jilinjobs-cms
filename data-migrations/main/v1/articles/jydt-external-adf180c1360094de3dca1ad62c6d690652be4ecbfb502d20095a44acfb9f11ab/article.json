@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:adf180c1360094de3dca1ad62c6d690652be4ecbfb502d20095a44acfb9f11ab",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ppYLI2O48v_MOhS024h6rQ",
+    "url": "https://mp.weixin.qq.com/s/ppYLI2O48v_MOhS024h6rQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春汽车职业技术大学党委书记王冬梅带队参加长春经开区光电产业重点企业圆桌会议",
+    "source": "",
+    "publishDate": "2026-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ppYLI2O48v_MOhS024h6rQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "b01921f1478fed6835f8d9f779edfe3174a1afeaed483ac87036947cfb5b4772",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "长春汽车职业技术大学党委书记王冬梅带队参加长春经开区光电产业重点企业圆桌会议",
+    "listPublishDate": "2026-05-15",
+    "sourceOrder": 178
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:398e4518ff193cda1c581052473a16a3f45b6ca1eb71ce9f4e720f028962809f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/zjRCLSQ6ZqXDBStrp01lFQ",
+    "url": "https://mp.weixin.qq.com/s/zjRCLSQ6ZqXDBStrp01lFQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学旅游学院副董事长张海涛率队赴吉林颐养集团开展访企拓岗和校企合作洽谈",
+    "source": "",
+    "publishDate": "2026-08-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/zjRCLSQ6ZqXDBStrp01lFQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "9c8dccf4846161657bd760c72116affea6663432849e0d11424340043eb28b8f",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "长春大学旅游学院副董事长张海涛率队赴吉林颐养集团开展访企拓岗和校企合作洽谈",
+    "listPublishDate": "2026-08-06",
+    "sourceOrder": 24
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ca0b044c8e190f2e80a158d56ad2863f331b68297dd45d52a174b331b62e00db",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Uw1qyapmLut60BJsOn29Iw",
+    "url": "https://mp.weixin.qq.com/s/Uw1qyapmLut60BJsOn29Iw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学学校党委书记张静辉到山东访企拓岗",
+    "source": "",
+    "publishDate": "2025-05-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Uw1qyapmLut60BJsOn29Iw"
+  },
+  "resources": [],
+  "sourceFingerprint": "7fdb681c2631252f8ea25f964e69f632602c697779c45fcd58ce4cc2e309a04e",
+  "evidence": {
+    "listPage": 89,
+    "listTitle": "东北电力大学学校党委书记张静辉到山东访企拓岗",
+    "listPublishDate": "2025-05-19",
+    "sourceOrder": 883
+  }
+}

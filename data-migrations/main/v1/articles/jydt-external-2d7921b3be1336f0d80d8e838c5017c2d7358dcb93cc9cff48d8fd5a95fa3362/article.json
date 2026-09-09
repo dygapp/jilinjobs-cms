@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2d7921b3be1336f0d80d8e838c5017c2d7358dcb93cc9cff48d8fd5a95fa3362",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/eke4TTEuWKlGwzqTCgBqRA",
+    "url": "https://mp.weixin.qq.com/s/eke4TTEuWKlGwzqTCgBqRA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "政校企三方携手 共谱合作发展新篇——长春科技学院与盐城经济技术开发区经济发展局召开政校企合作推介会",
+    "source": "",
+    "publishDate": "2025-03-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/eke4TTEuWKlGwzqTCgBqRA"
+  },
+  "resources": [],
+  "sourceFingerprint": "01b438a39aaab04a027b7d6d4f829f964c42cabac044e5c1babce936e812ed19",
+  "evidence": {
+    "listPage": 98,
+    "listTitle": "政校企三方携手 共谱合作发展新篇——长春科技学院与盐城经济技术开发区经济发展局召开政校企合作推介会",
+    "listPublishDate": "2025-03-20",
+    "sourceOrder": 975
+  }
+}

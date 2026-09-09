@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:de2c1997827678ab5db14f840c34824a896d6f4eda10d70511f59580776794c7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/n3DlLilNHPWjuDWLQRcIxg",
+    "url": "https://mp.weixin.qq.com/s/n3DlLilNHPWjuDWLQRcIxg?scene=1&click_id=11"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学党委副书记张广翠率队赴贵州省开展“招生-培养-就业”一体化促进专项调研",
+    "source": "",
+    "publishDate": "2025-12-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/n3DlLilNHPWjuDWLQRcIxg?scene=1&click_id=11"
+  },
+  "resources": [],
+  "sourceFingerprint": "49155b81b40af104457dffb082d1f1fb6b9473551b18c359a91018ad86825fa9",
+  "evidence": {
+    "listPage": 55,
+    "listTitle": "长春师范大学党委副书记张广翠率队赴贵州省开展“招生-培养-就业”一体化促进专项调研",
+    "listPublishDate": "2025-12-15",
+    "sourceOrder": 541
+  }
+}

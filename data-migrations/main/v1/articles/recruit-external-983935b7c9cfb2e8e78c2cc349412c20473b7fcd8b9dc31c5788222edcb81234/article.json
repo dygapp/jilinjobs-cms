@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:983935b7c9cfb2e8e78c2cc349412c20473b7fcd8b9dc31c5788222edcb81234",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/zw_2131/tzgg/202010/t20201028_303232.html",
+    "url": "http://www.dunhua.gov.cn/zw_2131/tzgg/202010/t20201028_303232.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年敦化市教育系统事业单位公开招聘 工作人员公告",
+    "source": "",
+    "publishDate": "2020-11-05",
+    "bodyHtml": "",
+    "externalUrl": "http://www.dunhua.gov.cn/zw_2131/tzgg/202010/t20201028_303232.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "9ff4a499eb6bcdf5e4a288e68053ff0771cd2649b3316e46798d7571e033461f",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "2020年敦化市教育系统事业单位公开招聘 工作人员公告",
+    "listPublishDate": "2020-11-05",
+    "sourceOrder": 368
+  }
+}

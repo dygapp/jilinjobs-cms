@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:175827872399360",
+    "contentId": "175827872399360",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=175827872399360"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林农业科技学院 开展春季访企拓岗专项行动",
+    "source": "吉林农业科技学院",
+    "publishDate": "2023-03-31",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">为贯彻落实教育部、省教育厅关于“访企拓岗”促就业专项行动工作部署，全力促进毕业生更加充分更高质量就业，吉林农业科技学院积极推进春季访企拓岗促就业专项行动，由学校党委副书记王怀忠带队，招生就业处统一协调，各二级学院共同参与。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">3</span></span></span><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">月8日-10日，王怀忠一行走访了省内优质企业吉林参王植保科技有限公司、白山恒康生物医药有限公司、抚松县大自然生物工程有限公司、吉林省恒通生态农业科技开发有限公司。走访调研中，参观了企业工作环境，了解企业的发展前景和人才需求情况，慰问了在企业就业、实习的学生，认真听取用人单位和毕业生对学校人才培养的意见和建议，与校友企业洽谈2023年毕业季就业合作。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"443\" src=\"migration-resource://f272264ff0dcc2e4e69ed026f31dfd444f74c3ada52f592428898643749ec725\" width=\"650\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">在本次春季访企拓岗专项行动中，学校共计组建8组走访队伍，针对长春、吉林、四平、通化、白城5个地区39家优质企业进行为期一个月的走访。同时，学校与苏州市东太湖度假区签署校地、校企合作框架协议，并完成生物与制药工程学院、电气与信息工程学院、机械与土木工程学院的实习基地揭牌；与宁波市人才中心附属就业平台签署了校企合作协议。走访中，学校深入开展社会需求调查，进一步拓宽了各专业毕业生的实习就业岗位。同时，学校也充分了解用人单位对毕业生的知识、能力、素质要求，吸收用人单位意见建议。下一步学校将从专业设置、人才培养、就业服务等方面调整优化，增强人才培养的针对性和适应性，充分实现校企资源共享、人才共用、互利双赢。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">本次访企拓岗专项行动，有效促进了学校和省内外企业的深度交流和合作，校企双方将在协同育人、提高人才培养质量以及促进学生高质量就业等方面谋求更大合作空间，为毕业生充分就业、高质量就业创建平台，为社会经济发展提供人才储备。</span></span></span></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-29/f73f88fb-b5b9-4bdf-9ff9-4dd0816800a1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-29/f73f88fb-b5b9-4bdf-9ff9-4dd0816800a1.jpg",
+      "token": "migration-resource://f272264ff0dcc2e4e69ed026f31dfd444f74c3ada52f592428898643749ec725",
+      "snapshotPath": "assets/f272264ff0dcc2e4e69ed026f31dfd444f74c3ada52f592428898643749ec725.jpg",
+      "sha256": "f272264ff0dcc2e4e69ed026f31dfd444f74c3ada52f592428898643749ec725",
+      "contentType": "image/jpeg",
+      "sizeBytes": 135596
+    }
+  ],
+  "sourceFingerprint": "a4da5c1c144c315d58edfbf578801e19a9e0e65fd461160afa1601192c216001",
+  "evidence": {
+    "listPage": 116,
+    "listTitle": "吉林农业科技学院 开展春季访企拓岗专项行动",
+    "listPublishDate": "2023-03-31",
+    "sourceOrder": 1155,
+    "detailPublishDate": "2023-03-31"
+  }
+}

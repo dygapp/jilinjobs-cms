@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:85fc4d4c86f466bebcd9d76a4d42fe1d523a08b7ec9f1e8d689262f34d0174a5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/pVfzJM-aFnzztYHaZ7KANA",
+    "url": "https://mp.weixin.qq.com/s/pVfzJM-aFnzztYHaZ7KANA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教融合 共筑育人新篇｜长春早教学院与吉林省久禾文化传媒有限公司举行校企战略合作签约仪式",
+    "source": "",
+    "publishDate": "2025-11-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/pVfzJM-aFnzztYHaZ7KANA"
+  },
+  "resources": [],
+  "sourceFingerprint": "564322b3b020d763ef3d21018bfe82cdef1fcc0c6e95d681bf127babd3ac7fdc",
+  "evidence": {
+    "listPage": 61,
+    "listTitle": "深化产教融合 共筑育人新篇｜长春早教学院与吉林省久禾文化传媒有限公司举行校企战略合作签约仪式",
+    "listPublishDate": "2025-11-11",
+    "sourceOrder": 603
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:82333e6770ac4d98d0c21a6e336482d203925c2865c5d82c9c953103ba2db6c9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Bi6wEE2mFtOkzRGJSLxxIA",
+    "url": "https://mp.weixin.qq.com/s/Bi6wEE2mFtOkzRGJSLxxIA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "精准对接促就业，深化合作谋发展--- 长春工业大学人文信息学院参加东北师范大学 2026 年教育行业企业专场招聘会",
+    "source": "",
+    "publishDate": "2026-03-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Bi6wEE2mFtOkzRGJSLxxIA"
+  },
+  "resources": [],
+  "sourceFingerprint": "28be366c4734706ac46682767b978f55cb61d5c1265d4f4a99e7cfe4aa7049e1",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "精准对接促就业，深化合作谋发展--- 长春工业大学人文信息学院参加东北师范大学 2026 年教育行业企业专场招聘会",
+    "listPublishDate": "2026-03-31",
+    "sourceOrder": 335
+  }
+}

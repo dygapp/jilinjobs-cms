@@ -1,0 +1,111 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:280363203051520",
+    "contentId": "280363203051520",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=280363203051520"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展2025年度“百城千校万企”促就业行动的通知",
+    "source": "教育部办公厅",
+    "publishDate": "2025-03-25",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1292\" src=\"migration-resource://52122b49501035b827ec5d2236b80c027766c6ae00e54a1f04ca0feb9a2dae9b\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1292\" src=\"migration-resource://2957a7e1affb8299c1ced04eed9dabffdb93d302187fb051ff34636d18995ef9\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1292\" src=\"migration-resource://acfab4ee4df5aca47e94c6622fecee6da452abb7953e9653265ed7c0d3fd14e9\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1292\" src=\"migration-resource://ea300189d026514a44f5b76748cb6af21f5ad685cdca6f6930fe95e8040e88e5\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1292\" src=\"migration-resource://82156926dbc3142cbc6636b7a3ce44f1370680649842c30878348f55021c63ff\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1292\" src=\"migration-resource://e1410d9774fae8e2a5e606c76b294324d35ed6d020d5b2d0eb2c687cd565c96f\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1292\" src=\"migration-resource://6efa57eeeed07096f24a150b3caaf8b0e26a35bae2740e219cbf0e8e70e58823\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1292\" src=\"migration-resource://13703e05828d59c2229a8236736a2c75c744f9e0e996ac54f26630e2b42e23b7\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/435be9e9-7b12-4e51-9846-c9d645773e17.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/435be9e9-7b12-4e51-9846-c9d645773e17.jpg",
+      "token": "migration-resource://52122b49501035b827ec5d2236b80c027766c6ae00e54a1f04ca0feb9a2dae9b",
+      "snapshotPath": "assets/52122b49501035b827ec5d2236b80c027766c6ae00e54a1f04ca0feb9a2dae9b.jpg",
+      "sha256": "52122b49501035b827ec5d2236b80c027766c6ae00e54a1f04ca0feb9a2dae9b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/f7d13ea7-d16a-49b0-a872-cedb96edd789.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/f7d13ea7-d16a-49b0-a872-cedb96edd789.jpg",
+      "token": "migration-resource://2957a7e1affb8299c1ced04eed9dabffdb93d302187fb051ff34636d18995ef9",
+      "snapshotPath": "assets/2957a7e1affb8299c1ced04eed9dabffdb93d302187fb051ff34636d18995ef9.jpg",
+      "sha256": "2957a7e1affb8299c1ced04eed9dabffdb93d302187fb051ff34636d18995ef9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/063f94d7-57a3-47da-bc96-a6f8218e85fc.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/063f94d7-57a3-47da-bc96-a6f8218e85fc.jpg",
+      "token": "migration-resource://acfab4ee4df5aca47e94c6622fecee6da452abb7953e9653265ed7c0d3fd14e9",
+      "snapshotPath": "assets/acfab4ee4df5aca47e94c6622fecee6da452abb7953e9653265ed7c0d3fd14e9.jpg",
+      "sha256": "acfab4ee4df5aca47e94c6622fecee6da452abb7953e9653265ed7c0d3fd14e9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/5c282f20-292f-48c3-a8d6-0fddcc2cecb7.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/5c282f20-292f-48c3-a8d6-0fddcc2cecb7.jpg",
+      "token": "migration-resource://ea300189d026514a44f5b76748cb6af21f5ad685cdca6f6930fe95e8040e88e5",
+      "snapshotPath": "assets/ea300189d026514a44f5b76748cb6af21f5ad685cdca6f6930fe95e8040e88e5.jpg",
+      "sha256": "ea300189d026514a44f5b76748cb6af21f5ad685cdca6f6930fe95e8040e88e5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/80de1cdb-bff9-45b8-a450-62d6c4e104be.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/80de1cdb-bff9-45b8-a450-62d6c4e104be.jpg",
+      "token": "migration-resource://82156926dbc3142cbc6636b7a3ce44f1370680649842c30878348f55021c63ff",
+      "snapshotPath": "assets/82156926dbc3142cbc6636b7a3ce44f1370680649842c30878348f55021c63ff.jpg",
+      "sha256": "82156926dbc3142cbc6636b7a3ce44f1370680649842c30878348f55021c63ff",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/76eb9f02-093e-4fe9-8170-c675bf3630e7.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/76eb9f02-093e-4fe9-8170-c675bf3630e7.jpg",
+      "token": "migration-resource://e1410d9774fae8e2a5e606c76b294324d35ed6d020d5b2d0eb2c687cd565c96f",
+      "snapshotPath": "assets/e1410d9774fae8e2a5e606c76b294324d35ed6d020d5b2d0eb2c687cd565c96f.jpg",
+      "sha256": "e1410d9774fae8e2a5e606c76b294324d35ed6d020d5b2d0eb2c687cd565c96f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/ab154f0f-5f1e-4626-874c-65ba46020fa1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/ab154f0f-5f1e-4626-874c-65ba46020fa1.jpg",
+      "token": "migration-resource://6efa57eeeed07096f24a150b3caaf8b0e26a35bae2740e219cbf0e8e70e58823",
+      "snapshotPath": "assets/6efa57eeeed07096f24a150b3caaf8b0e26a35bae2740e219cbf0e8e70e58823.jpg",
+      "sha256": "6efa57eeeed07096f24a150b3caaf8b0e26a35bae2740e219cbf0e8e70e58823",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/fd8ca006-84f1-41ad-bbb5-4e92a791d303.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/fd8ca006-84f1-41ad-bbb5-4e92a791d303.jpg",
+      "token": "migration-resource://13703e05828d59c2229a8236736a2c75c744f9e0e996ac54f26630e2b42e23b7",
+      "snapshotPath": "assets/13703e05828d59c2229a8236736a2c75c744f9e0e996ac54f26630e2b42e23b7.jpg",
+      "sha256": "13703e05828d59c2229a8236736a2c75c744f9e0e996ac54f26630e2b42e23b7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "c58239c23b3e244a8d2230572cc35adf351ba0261c32bcc002499cd846bc2cd0",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "关于开展2025年度“百城千校万企”促就业行动的通知",
+    "listPublishDate": "2025-03-25",
+    "sourceOrder": 56,
+    "detailPublishDate": "2025-03-25"
+  }
+}

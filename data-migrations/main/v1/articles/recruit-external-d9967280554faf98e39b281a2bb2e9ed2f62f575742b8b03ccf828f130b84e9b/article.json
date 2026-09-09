@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:d9967280554faf98e39b281a2bb2e9ed2f62f575742b8b03ccf828f130b84e9b",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/ywdt/tzgg/202007/t20200722_2379966.html",
+    "url": "http://ccrs.changchun.gov.cn/ywdt/tzgg/202007/t20200722_2379966.html?from=timeline&isappinstalled=0"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年长春汽车经济技术开发区事业单位专项招聘高校毕业生公告（1号公告）",
+    "source": "",
+    "publishDate": "2020-07-22",
+    "bodyHtml": "",
+    "externalUrl": "http://ccrs.changchun.gov.cn/ywdt/tzgg/202007/t20200722_2379966.html?from=timeline&isappinstalled=0"
+  },
+  "resources": [],
+  "sourceFingerprint": "306125f994601bf45c66c27adf0e8e38e623fe1fd37f0162a898a3df734b84e4",
+  "evidence": {
+    "listPage": 39,
+    "listTitle": "2020年长春汽车经济技术开发区事业单位专项招聘高校毕业生公告（1号公告）",
+    "listPublishDate": "2020-07-22",
+    "sourceOrder": 385
+  }
+}

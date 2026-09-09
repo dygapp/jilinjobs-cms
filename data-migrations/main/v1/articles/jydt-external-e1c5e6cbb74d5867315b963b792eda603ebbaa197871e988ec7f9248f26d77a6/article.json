@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e1c5e6cbb74d5867315b963b792eda603ebbaa197871e988ec7f9248f26d77a6",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/FNq4aJew16rkFq1iwqll1A",
+    "url": "https://mp.weixin.qq.com/s/FNq4aJew16rkFq1iwqll1A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院赴吉林省农业融资担保有限公司开展访企拓岗调研活动",
+    "source": "",
+    "publishDate": "2025-11-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/FNq4aJew16rkFq1iwqll1A"
+  },
+  "resources": [],
+  "sourceFingerprint": "a90bcb301a2c9421515b5f1460713313714014db6658f3f3ed0e0bac9578dc0d",
+  "evidence": {
+    "listPage": 63,
+    "listTitle": "吉林工商学院赴吉林省农业融资担保有限公司开展访企拓岗调研活动",
+    "listPublishDate": "2025-11-06",
+    "sourceOrder": 621
+  }
+}

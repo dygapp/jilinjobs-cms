@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:23cd285ef42ee597bbd8e632de0d6124b67a8a3d05f2a51faaf270363686b488",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/DD8dy2VSgMtzDHiagH3fxw",
+    "url": "https://mp.weixin.qq.com/s/DD8dy2VSgMtzDHiagH3fxw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校地携手促就业 产教融合谱新篇——吉林城市职业技术学院赴中车长客开展合作交流",
+    "source": "",
+    "publishDate": "2026-04-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DD8dy2VSgMtzDHiagH3fxw"
+  },
+  "resources": [],
+  "sourceFingerprint": "c5238591b1129efaa7ddf45d4e6202e2e2a5058fd609791d89841fa5c67539fd",
+  "evidence": {
+    "listPage": 32,
+    "listTitle": "校地携手促就业 产教融合谱新篇——吉林城市职业技术学院赴中车长客开展合作交流",
+    "listPublishDate": "2026-04-07",
+    "sourceOrder": 311
+  }
+}

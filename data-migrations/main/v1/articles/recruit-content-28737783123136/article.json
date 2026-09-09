@@ -1,0 +1,121 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123136",
+    "contentId": "28737783123136",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123136"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2019年墨玉县自主招聘学前和义务教育阶段特岗教师、普通高中教师简章",
+    "source": "",
+    "publishDate": "2019-09-02",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2019年墨玉县自主招聘学前和义务教育阶段特岗教师、普通高中教师简章</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2019-9-2 10:08:07</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://c0e11fb1223de68d17b2de50982e17c176570b8e5d25481e0ca50af07719f315\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://14ffb9af57f9ec2e8e0da3e3b80016bc30c37e38a4fc09d0b4d7f72b5a961615\"></p><p style=\"text-align: center;\"><img title=\"3.jpg\" src=\"migration-resource://28591989d0a9fcf73ff7a8ff6ad1bf6fc49161f45c209494cb39e24a61fd043e\"></p><p style=\"text-align: center;\"><img title=\"4.jpg\" src=\"migration-resource://7d58c2e11fbb0dfa14e64c4e6579c9c8a4414219f29c9ef31c5f8eff4f8df0dc\"></p><p style=\"text-align: center;\"><img title=\"5.jpg\" src=\"migration-resource://bcc3fd02b966b65e12994d2c73ec6513237b88b5855878ac7f2bd104583b33a4\"></p><p style=\"text-align: center;\"><img title=\"6.jpg\" src=\"migration-resource://c2c7566e5932720aee2234e06df3f149e6ff238d2bf35bdc2969aff24293e3ae\"></p><p style=\"text-align: center;\"><img title=\"7.jpg\" src=\"migration-resource://4540c6a64eeb5f273813b0525c1752c7e957786fb25e17baa104ef2c27d202c7\"></p><p style=\"text-align: center;\"><img title=\"8.jpg\" src=\"migration-resource://bf6c2a7dd89787523057751d7844d7fe03d43dac9a6c1417952b9562163c035d\"></p><p style=\"text-align: center;\"><img title=\"9.jpg\" src=\"migration-resource://9a11b8dc5759f49ab543d2d3d5897501b4eab53876096cb9a612cc6306a639cc\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6370301570998437508199256.jpg",
+      "originalReference": "/chistory/cms/imgs/6370301570998437508199256.jpg",
+      "token": "migration-resource://c0e11fb1223de68d17b2de50982e17c176570b8e5d25481e0ca50af07719f315",
+      "snapshotPath": "assets/c0e11fb1223de68d17b2de50982e17c176570b8e5d25481e0ca50af07719f315.jpg",
+      "sha256": "c0e11fb1223de68d17b2de50982e17c176570b8e5d25481e0ca50af07719f315",
+      "contentType": "image/jpeg",
+      "sizeBytes": 185210
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6370301571010937501927734.jpg",
+      "originalReference": "/chistory/cms/imgs/6370301571010937501927734.jpg",
+      "token": "migration-resource://14ffb9af57f9ec2e8e0da3e3b80016bc30c37e38a4fc09d0b4d7f72b5a961615",
+      "snapshotPath": "assets/14ffb9af57f9ec2e8e0da3e3b80016bc30c37e38a4fc09d0b4d7f72b5a961615.jpg",
+      "sha256": "14ffb9af57f9ec2e8e0da3e3b80016bc30c37e38a4fc09d0b4d7f72b5a961615",
+      "contentType": "image/jpeg",
+      "sizeBytes": 182257
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6370301571020312502899550.jpg",
+      "originalReference": "/chistory/cms/imgs/6370301571020312502899550.jpg",
+      "token": "migration-resource://28591989d0a9fcf73ff7a8ff6ad1bf6fc49161f45c209494cb39e24a61fd043e",
+      "snapshotPath": "assets/28591989d0a9fcf73ff7a8ff6ad1bf6fc49161f45c209494cb39e24a61fd043e.jpg",
+      "sha256": "28591989d0a9fcf73ff7a8ff6ad1bf6fc49161f45c209494cb39e24a61fd043e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 179866
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6370301571028125009642121.jpg",
+      "originalReference": "/chistory/cms/imgs/6370301571028125009642121.jpg",
+      "token": "migration-resource://7d58c2e11fbb0dfa14e64c4e6579c9c8a4414219f29c9ef31c5f8eff4f8df0dc",
+      "snapshotPath": "assets/7d58c2e11fbb0dfa14e64c4e6579c9c8a4414219f29c9ef31c5f8eff4f8df0dc.jpg",
+      "sha256": "7d58c2e11fbb0dfa14e64c4e6579c9c8a4414219f29c9ef31c5f8eff4f8df0dc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 195418
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6370301571035937507384691.jpg",
+      "originalReference": "/chistory/cms/imgs/6370301571035937507384691.jpg",
+      "token": "migration-resource://bcc3fd02b966b65e12994d2c73ec6513237b88b5855878ac7f2bd104583b33a4",
+      "snapshotPath": "assets/bcc3fd02b966b65e12994d2c73ec6513237b88b5855878ac7f2bd104583b33a4.jpg",
+      "sha256": "bcc3fd02b966b65e12994d2c73ec6513237b88b5855878ac7f2bd104583b33a4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 188861
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6370301571045312508356507.jpg",
+      "originalReference": "/chistory/cms/imgs/6370301571045312508356507.jpg",
+      "token": "migration-resource://c2c7566e5932720aee2234e06df3f149e6ff238d2bf35bdc2969aff24293e3ae",
+      "snapshotPath": "assets/c2c7566e5932720aee2234e06df3f149e6ff238d2bf35bdc2969aff24293e3ae.jpg",
+      "sha256": "c2c7566e5932720aee2234e06df3f149e6ff238d2bf35bdc2969aff24293e3ae",
+      "contentType": "image/jpeg",
+      "sizeBytes": 185237
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6370301571053125006099078.jpg",
+      "originalReference": "/chistory/cms/imgs/6370301571053125006099078.jpg",
+      "token": "migration-resource://4540c6a64eeb5f273813b0525c1752c7e957786fb25e17baa104ef2c27d202c7",
+      "snapshotPath": "assets/4540c6a64eeb5f273813b0525c1752c7e957786fb25e17baa104ef2c27d202c7.jpg",
+      "sha256": "4540c6a64eeb5f273813b0525c1752c7e957786fb25e17baa104ef2c27d202c7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 189345
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6370301571060937503841648.jpg",
+      "originalReference": "/chistory/cms/imgs/6370301571060937503841648.jpg",
+      "token": "migration-resource://bf6c2a7dd89787523057751d7844d7fe03d43dac9a6c1417952b9562163c035d",
+      "snapshotPath": "assets/bf6c2a7dd89787523057751d7844d7fe03d43dac9a6c1417952b9562163c035d.jpg",
+      "sha256": "bf6c2a7dd89787523057751d7844d7fe03d43dac9a6c1417952b9562163c035d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 174326
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6370301571070312504813464.jpg",
+      "originalReference": "/chistory/cms/imgs/6370301571070312504813464.jpg",
+      "token": "migration-resource://9a11b8dc5759f49ab543d2d3d5897501b4eab53876096cb9a612cc6306a639cc",
+      "snapshotPath": "assets/9a11b8dc5759f49ab543d2d3d5897501b4eab53876096cb9a612cc6306a639cc.jpg",
+      "sha256": "9a11b8dc5759f49ab543d2d3d5897501b4eab53876096cb9a612cc6306a639cc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131423
+    }
+  ],
+  "sourceFingerprint": "db79275c9048b52aeaa2b77d76b9ed5bcf3f96d5c30ad2e57e4b988bb6b7b340",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "2019年墨玉县自主招聘学前和义务教育阶段特岗教师、普通高中教师简章",
+    "listPublishDate": "2019-09-02",
+    "sourceOrder": 406,
+    "detailPublishDate": "2019-09-02"
+  }
+}

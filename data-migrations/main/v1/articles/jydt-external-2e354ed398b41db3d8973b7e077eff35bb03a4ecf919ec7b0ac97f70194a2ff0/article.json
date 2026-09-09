@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2e354ed398b41db3d8973b7e077eff35bb03a4ecf919ec7b0ac97f70194a2ff0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1028/169992.htm",
+    "url": "https://www.jlju.edu.cn/info/1028/169992.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学赴通化县开展“百校对百县”促就业专项行动",
+    "source": "",
+    "publishDate": "2025-07-07",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1028/169992.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "a873dc0cec80457768faafcfe7ee5ba235a3d996ecb96ce085ae9366451e940b",
+  "evidence": {
+    "listPage": 74,
+    "listTitle": "吉林建筑大学赴通化县开展“百校对百县”促就业专项行动",
+    "listPublishDate": "2025-07-07",
+    "sourceOrder": 739
+  }
+}

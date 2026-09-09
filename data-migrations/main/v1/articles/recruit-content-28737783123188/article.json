@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123188",
+    "contentId": "28737783123188",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123188"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于表彰吉林省首届“大学生职业发展与就业指导”课程教学大赛获奖个人和集体的通报",
+    "source": "",
+    "publishDate": "2011-03-10",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于表彰吉林省首届“大学生职业发展与就业指导”课程教学大赛获奖个人和集体的通报</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-3-10 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img height=\"877\" src=\"migration-resource://04b4e90d9dad3f5b4aa0fb9488192f740170768a5e1dcbe16600241cda8c0dea\" width=\"638\" border=\"0\"><img height=\"877\" src=\"http://www.jilinjobs.cn/uploadfile/201103/20110310143556834.jpg\" width=\"638\" border=\"0\"><img height=\"877\" src=\"migration-resource://d647d460f3f7da4c294509a406ca35778df19b560bbf960fd66f66d4d8af4f21\" width=\"638\" border=\"0\"><img height=\"877\" src=\"migration-resource://290ee55248464fcff1283784a01c2eb883d4ce887897bec7ad6cff1f54803f2d\" width=\"638\" border=\"0\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110310143523959.jpg",
+      "originalReference": "/chistory/cms/imgs/20110310143523959.jpg",
+      "token": "migration-resource://04b4e90d9dad3f5b4aa0fb9488192f740170768a5e1dcbe16600241cda8c0dea",
+      "snapshotPath": "assets/04b4e90d9dad3f5b4aa0fb9488192f740170768a5e1dcbe16600241cda8c0dea.jpg",
+      "sha256": "04b4e90d9dad3f5b4aa0fb9488192f740170768a5e1dcbe16600241cda8c0dea",
+      "contentType": "image/jpeg",
+      "sizeBytes": 72820
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110310143535357.jpg",
+      "originalReference": "/chistory/cms/imgs/20110310143535357.jpg",
+      "token": "migration-resource://d647d460f3f7da4c294509a406ca35778df19b560bbf960fd66f66d4d8af4f21",
+      "snapshotPath": "assets/d647d460f3f7da4c294509a406ca35778df19b560bbf960fd66f66d4d8af4f21.jpg",
+      "sha256": "d647d460f3f7da4c294509a406ca35778df19b560bbf960fd66f66d4d8af4f21",
+      "contentType": "image/jpeg",
+      "sizeBytes": 32254
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110310143545170.jpg",
+      "originalReference": "/chistory/cms/imgs/20110310143545170.jpg",
+      "token": "migration-resource://290ee55248464fcff1283784a01c2eb883d4ce887897bec7ad6cff1f54803f2d",
+      "snapshotPath": "assets/290ee55248464fcff1283784a01c2eb883d4ce887897bec7ad6cff1f54803f2d.jpg",
+      "sha256": "290ee55248464fcff1283784a01c2eb883d4ce887897bec7ad6cff1f54803f2d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 30355
+    }
+  ],
+  "sourceFingerprint": "e1d904962b7f3c7578dbd5254eff0e3abfca47f7af745266816c6f95755b0f9b",
+  "evidence": {
+    "listPage": 47,
+    "listTitle": "关于表彰吉林省首届“大学生职业发展与就业指导”课程教学大赛获奖个人和集体的通报",
+    "listPublishDate": "2011-03-10",
+    "sourceOrder": 463,
+    "detailPublishDate": "2011-03-10"
+  }
+}

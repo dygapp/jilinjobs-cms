@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f11ff75276de410340d0ee13bb4ada23b992259a8a21d177217effb384afe3cb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/9sEeDwr90XonxCMXWufXbQ",
+    "url": "https://mp.weixin.qq.com/s/9sEeDwr90XonxCMXWufXbQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学党委副书记仲秋野带队赴通榆访企拓岗",
+    "source": "",
+    "publishDate": "2026-03-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/9sEeDwr90XonxCMXWufXbQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "a9c8061b714c17e8b49eb6266226361a9cc4eea4ced7953d58c5fe69382fac31",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "北华大学党委副书记仲秋野带队赴通榆访企拓岗",
+    "listPublishDate": "2026-03-19",
+    "sourceOrder": 397
+  }
+}

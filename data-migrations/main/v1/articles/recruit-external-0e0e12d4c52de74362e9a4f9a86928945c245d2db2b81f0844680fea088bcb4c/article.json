@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:0e0e12d4c52de74362e9a4f9a86928945c245d2db2b81f0844680fea088bcb4c",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/tTq1J-tblxFcenOPN0T59g",
+    "url": "https://mp.weixin.qq.com/s/tTq1J-tblxFcenOPN0T59g"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学2027届毕业生秋季校园招聘，诚邀您来",
+    "source": "",
+    "publishDate": "2026-09-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/tTq1J-tblxFcenOPN0T59g"
+  },
+  "resources": [],
+  "sourceFingerprint": "5ce5dba2a5976e8412013d4bf2729ad4aaf7a77d44fc86683e684070f009cfdf",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "长春大学2027届毕业生秋季校园招聘，诚邀您来",
+    "listPublishDate": "2026-09-07",
+    "sourceOrder": 4
+  }
+}

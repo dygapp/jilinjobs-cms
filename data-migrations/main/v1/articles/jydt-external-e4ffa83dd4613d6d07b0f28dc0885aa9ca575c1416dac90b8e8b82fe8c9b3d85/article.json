@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e4ffa83dd4613d6d07b0f28dc0885aa9ca575c1416dac90b8e8b82fe8c9b3d85",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/6Cu7aRZf7nE8IrgMzIKWNw",
+    "url": "https://mp.weixin.qq.com/s/6Cu7aRZf7nE8IrgMzIKWNw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春早期教育职业学院到河南十余家公办幼儿园与企业考察并签合作协议｜为学生充分就业打开新渠道",
+    "source": "",
+    "publishDate": "2025-03-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/6Cu7aRZf7nE8IrgMzIKWNw"
+  },
+  "resources": [],
+  "sourceFingerprint": "901cc4602351ec8f4d8a5a88bcfbd7e4ec810a403fa5a1b2b230c131a5449480",
+  "evidence": {
+    "listPage": 99,
+    "listTitle": "长春早期教育职业学院到河南十余家公办幼儿园与企业考察并签合作协议｜为学生充分就业打开新渠道",
+    "listPublishDate": "2025-03-17",
+    "sourceOrder": 983
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8c0c550ccaf0257f35b0032dd02758da6a1bb9bd1b35e7bd8df4b19f2eaf1309",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Z0Jtk03iGX41ppADW7wFkw",
+    "url": "https://mp.weixin.qq.com/s/Z0Jtk03iGX41ppADW7wFkw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院党委书记崔高嵩一行赴白城中医院走访座谈",
+    "source": "",
+    "publishDate": "2026-07-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Z0Jtk03iGX41ppADW7wFkw"
+  },
+  "resources": [],
+  "sourceFingerprint": "711c83f579306a1c1cecd1234c7e02c9b03912e5ffebff47fd173ddc8f4878d0",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "长春科技学院党委书记崔高嵩一行赴白城中医院走访座谈",
+    "listPublishDate": "2026-07-24",
+    "sourceOrder": 38
+  }
+}

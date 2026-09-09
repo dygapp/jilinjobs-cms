@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ec4a529e9e46470a37cd31851e1e9a564e3ea5c5797e91641faf93222252abe4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/IktwkDtbjiTSlYdoR0DFCQ",
+    "url": "https://mp.weixin.qq.com/s/IktwkDtbjiTSlYdoR0DFCQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林师范大学党委副书记韩金玉带队赴江苏、上海开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/IktwkDtbjiTSlYdoR0DFCQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "4d2a5cfde1b636a75bcc70b0a3c2505823496b2efe7a07b72a6997ea979a883c",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "吉林师范大学党委副书记韩金玉带队赴江苏、上海开展访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-20",
+    "sourceOrder": 392
+  }
+}

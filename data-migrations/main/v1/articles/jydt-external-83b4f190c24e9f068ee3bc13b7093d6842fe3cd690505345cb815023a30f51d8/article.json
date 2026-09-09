@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:83b4f190c24e9f068ee3bc13b7093d6842fe3cd690505345cb815023a30f51d8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/1M_hP9ArvIqBEF8JoobEyA",
+    "url": "https://mp.weixin.qq.com/s/1M_hP9ArvIqBEF8JoobEyA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业 产教融合育新人——吉林城市职业技术学院校长张国华率队赴吉林省仿生机器人创新中心开展专项行动",
+    "source": "",
+    "publishDate": "2026-04-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1M_hP9ArvIqBEF8JoobEyA"
+  },
+  "resources": [],
+  "sourceFingerprint": "0c3fd9d704b78acfdd56bf9697c16e9ba2d67c322722c51d33e4ade663857fd0",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "访企拓岗促就业 产教融合育新人——吉林城市职业技术学院校长张国华率队赴吉林省仿生机器人创新中心开展专项行动",
+    "listPublishDate": "2026-04-01",
+    "sourceOrder": 333
+  }
+}

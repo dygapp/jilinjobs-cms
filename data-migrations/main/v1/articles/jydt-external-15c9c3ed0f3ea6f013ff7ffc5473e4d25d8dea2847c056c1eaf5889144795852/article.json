@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:15c9c3ed0f3ea6f013ff7ffc5473e4d25d8dea2847c056c1eaf5889144795852",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/fvHDABgXruTzyikIE1S24Q",
+    "url": "https://mp.weixin.qq.com/s/fvHDABgXruTzyikIE1S24Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【就业指导】|| 毕业生注意！订立电子劳动合同，如何进行身份认证？",
+    "source": "",
+    "publishDate": "2025-08-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/fvHDABgXruTzyikIE1S24Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "ebc9f9b9c4f111cecd905b5f61a5af58c36004807d527a5ada1b923a5c2b6dec",
+  "evidence": {
+    "listPage": 72,
+    "listTitle": "【就业指导】|| 毕业生注意！订立电子劳动合同，如何进行身份认证？",
+    "listPublishDate": "2025-08-15",
+    "sourceOrder": 714
+  }
+}

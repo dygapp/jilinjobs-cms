@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120692",
+    "contentId": "28737783120692",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120692"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展吉林省高校“双困学生”就业能力提升培训项目培训效果调查的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2020-07-17",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align: center;\"><img src=\"migration-resource://3d3ac890fdd0d63a454449d664833dec9e229d6e8a53bd3bbcb3a10f59f5ef4e\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://950cda969c439dd75961700f6380912e4cb0d98fe8d0b263b4cb3cf2d698286d\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://a586cd5e2fc637df9a2b5fb31bd0d8b4721db2333110d3278dae0013ab1bfcc1\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://254dcd6942e87560ee46c3b15613fcdc3e820c526321a9d00b3ebe589329c081\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200720092230.jpg",
+      "originalReference": "/chistory/cms/editor/20200720092230.jpg",
+      "token": "migration-resource://3d3ac890fdd0d63a454449d664833dec9e229d6e8a53bd3bbcb3a10f59f5ef4e",
+      "snapshotPath": "assets/3d3ac890fdd0d63a454449d664833dec9e229d6e8a53bd3bbcb3a10f59f5ef4e.jpg",
+      "sha256": "3d3ac890fdd0d63a454449d664833dec9e229d6e8a53bd3bbcb3a10f59f5ef4e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 237662
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200720092239.jpg",
+      "originalReference": "/chistory/cms/editor/20200720092239.jpg",
+      "token": "migration-resource://950cda969c439dd75961700f6380912e4cb0d98fe8d0b263b4cb3cf2d698286d",
+      "snapshotPath": "assets/950cda969c439dd75961700f6380912e4cb0d98fe8d0b263b4cb3cf2d698286d.jpg",
+      "sha256": "950cda969c439dd75961700f6380912e4cb0d98fe8d0b263b4cb3cf2d698286d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 257508
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200720092248.jpg",
+      "originalReference": "/chistory/cms/editor/20200720092248.jpg",
+      "token": "migration-resource://a586cd5e2fc637df9a2b5fb31bd0d8b4721db2333110d3278dae0013ab1bfcc1",
+      "snapshotPath": "assets/a586cd5e2fc637df9a2b5fb31bd0d8b4721db2333110d3278dae0013ab1bfcc1.jpg",
+      "sha256": "a586cd5e2fc637df9a2b5fb31bd0d8b4721db2333110d3278dae0013ab1bfcc1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 229977
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200720092257.jpg",
+      "originalReference": "/chistory/cms/editor/20200720092257.jpg",
+      "token": "migration-resource://254dcd6942e87560ee46c3b15613fcdc3e820c526321a9d00b3ebe589329c081",
+      "snapshotPath": "assets/254dcd6942e87560ee46c3b15613fcdc3e820c526321a9d00b3ebe589329c081.jpg",
+      "sha256": "254dcd6942e87560ee46c3b15613fcdc3e820c526321a9d00b3ebe589329c081",
+      "contentType": "image/jpeg",
+      "sizeBytes": 199477
+    }
+  ],
+  "sourceFingerprint": "f9c32e9e096be31ec6d9f6ecb4cb87cffc87029bc9f888e753d6b7de3fc7ca98",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "关于开展吉林省高校“双困学生”就业能力提升培训项目培训效果调查的通知",
+    "listPublishDate": "2020-07-17",
+    "sourceOrder": 181,
+    "detailPublishDate": "2020-07-17"
+  }
+}

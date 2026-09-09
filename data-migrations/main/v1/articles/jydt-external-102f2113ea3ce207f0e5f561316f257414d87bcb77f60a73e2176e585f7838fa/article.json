@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:102f2113ea3ce207f0e5f561316f257414d87bcb77f60a73e2176e585f7838fa",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/FVVz4wEm0OkosgC5Ox45gw",
+    "url": "https://mp.weixin.qq.com/s/FVVz4wEm0OkosgC5Ox45gw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【就业指导】|| 结构化面试如何应对？攻略来啦",
+    "source": "",
+    "publishDate": "2025-08-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/FVVz4wEm0OkosgC5Ox45gw"
+  },
+  "resources": [],
+  "sourceFingerprint": "4b649b597f26113fd89fadc796ed3e9f2b28c0fc45a6fe5aba42c785b164578d",
+  "evidence": {
+    "listPage": 72,
+    "listTitle": "【就业指导】|| 结构化面试如何应对？攻略来啦",
+    "listPublishDate": "2025-08-06",
+    "sourceOrder": 719
+  }
+}

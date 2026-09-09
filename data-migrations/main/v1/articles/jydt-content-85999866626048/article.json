@@ -1,0 +1,151 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:85999866626048",
+    "contentId": "85999866626048",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=85999866626048"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2022 年东莞市（第十三届）校企合作洽谈会 的函",
+    "source": "东莞市人力资源和社会保障局",
+    "publishDate": "2022-04-17",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1000\" src=\"migration-resource://d9d57c8675740eced7c28e08d913eda2929f39d4db4b454d829eea4bdfffb2cd\" width=\"792\"><img alt=\"\" height=\"1017\" src=\"migration-resource://84317149961c98c99a7835dfaac9f84550e718009f7be8ad05e462cdd440e345\" width=\"782\"><img alt=\"\" height=\"1027\" src=\"migration-resource://24276837c6cd23755cd56f0754b495ef8d711cd1e764b29c23f28940b9cd1b34\" width=\"789\"><img alt=\"\" height=\"1019\" src=\"migration-resource://498689f0ebe820930243cb118aa1ac3864575f565a1f21882d80068151886e13\" width=\"789\"><img alt=\"\" height=\"1031\" src=\"migration-resource://cf87e944c309eaf7d597f08bf16355cd04f1211ca9944dab5c3a572cfdda53e0\" width=\"790\"><img alt=\"\" height=\"1016\" src=\"migration-resource://ab54f8e2ae57e37fb568904aec1a98e7f801ed78bff9adcdf4af8134180272fa\" width=\"789\"><img alt=\"\" height=\"1028\" src=\"migration-resource://f48a2b0e5b7ef73c423b7721e5c599042a197c09904cdda6473f158130ada258\" width=\"790\"><img alt=\"\" height=\"1018\" src=\"migration-resource://e179cb8c5ab32ced62be4e8597e7e80e2c96786d2e63b51b709cce22d042c7b6\" width=\"784\"><img alt=\"\" height=\"1019\" src=\"migration-resource://e3c7b8787a018bdddcf972f702df8f53f270b6858b538e7450eccc15d1bdf889\" width=\"788\"><img alt=\"\" height=\"1023\" src=\"migration-resource://cac9aa90333214cd9c28f26379796aec45f18320247f280eb474cdcd3e38b8e3\" width=\"786\"><img alt=\"\" height=\"1026\" src=\"migration-resource://e4de7ff832c90436b5f1ae7c592063dc843f9b7b8fcd2e787b69d7ac797fc927\" width=\"789\"><img alt=\"\" height=\"1028\" src=\"migration-resource://480258f2ffc4425a6ea9ccc7bdfe1aa21f3d3c753d508b90da89aa63ec3be894\" width=\"789\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-24/6182f5c6-e7c1-4256-afc5-abb53111e273.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-24/6182f5c6-e7c1-4256-afc5-abb53111e273.jpg",
+      "token": "migration-resource://d9d57c8675740eced7c28e08d913eda2929f39d4db4b454d829eea4bdfffb2cd",
+      "snapshotPath": "assets/d9d57c8675740eced7c28e08d913eda2929f39d4db4b454d829eea4bdfffb2cd.jpg",
+      "sha256": "d9d57c8675740eced7c28e08d913eda2929f39d4db4b454d829eea4bdfffb2cd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 100169
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-24/40ec69b1-ae1f-4947-a1bc-3e696412bc64.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-24/40ec69b1-ae1f-4947-a1bc-3e696412bc64.jpg",
+      "token": "migration-resource://84317149961c98c99a7835dfaac9f84550e718009f7be8ad05e462cdd440e345",
+      "snapshotPath": "assets/84317149961c98c99a7835dfaac9f84550e718009f7be8ad05e462cdd440e345.jpg",
+      "sha256": "84317149961c98c99a7835dfaac9f84550e718009f7be8ad05e462cdd440e345",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67511
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-24/47231852-cabc-42e5-a901-013ea6beefd6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-24/47231852-cabc-42e5-a901-013ea6beefd6.jpg",
+      "token": "migration-resource://24276837c6cd23755cd56f0754b495ef8d711cd1e764b29c23f28940b9cd1b34",
+      "snapshotPath": "assets/24276837c6cd23755cd56f0754b495ef8d711cd1e764b29c23f28940b9cd1b34.jpg",
+      "sha256": "24276837c6cd23755cd56f0754b495ef8d711cd1e764b29c23f28940b9cd1b34",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84997
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-24/5276ab95-8a87-48c0-848f-33f7fd62c699.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-24/5276ab95-8a87-48c0-848f-33f7fd62c699.jpg",
+      "token": "migration-resource://498689f0ebe820930243cb118aa1ac3864575f565a1f21882d80068151886e13",
+      "snapshotPath": "assets/498689f0ebe820930243cb118aa1ac3864575f565a1f21882d80068151886e13.jpg",
+      "sha256": "498689f0ebe820930243cb118aa1ac3864575f565a1f21882d80068151886e13",
+      "contentType": "image/jpeg",
+      "sizeBytes": 100276
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-24/917a1af2-6c89-421e-9a79-1527000f3200.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-24/917a1af2-6c89-421e-9a79-1527000f3200.jpg",
+      "token": "migration-resource://cf87e944c309eaf7d597f08bf16355cd04f1211ca9944dab5c3a572cfdda53e0",
+      "snapshotPath": "assets/cf87e944c309eaf7d597f08bf16355cd04f1211ca9944dab5c3a572cfdda53e0.jpg",
+      "sha256": "cf87e944c309eaf7d597f08bf16355cd04f1211ca9944dab5c3a572cfdda53e0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90528
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-24/a5fc04fc-7055-44ef-a59a-101a69d7c2e7.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-24/a5fc04fc-7055-44ef-a59a-101a69d7c2e7.jpg",
+      "token": "migration-resource://ab54f8e2ae57e37fb568904aec1a98e7f801ed78bff9adcdf4af8134180272fa",
+      "snapshotPath": "assets/ab54f8e2ae57e37fb568904aec1a98e7f801ed78bff9adcdf4af8134180272fa.jpg",
+      "sha256": "ab54f8e2ae57e37fb568904aec1a98e7f801ed78bff9adcdf4af8134180272fa",
+      "contentType": "image/jpeg",
+      "sizeBytes": 121283
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-24/1c4a1b86-6c08-4957-9209-778ede17c353.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-24/1c4a1b86-6c08-4957-9209-778ede17c353.jpg",
+      "token": "migration-resource://f48a2b0e5b7ef73c423b7721e5c599042a197c09904cdda6473f158130ada258",
+      "snapshotPath": "assets/f48a2b0e5b7ef73c423b7721e5c599042a197c09904cdda6473f158130ada258.jpg",
+      "sha256": "f48a2b0e5b7ef73c423b7721e5c599042a197c09904cdda6473f158130ada258",
+      "contentType": "image/jpeg",
+      "sizeBytes": 55879
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-24/e785b295-40ea-4347-8898-f8392e26d9dd.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-24/e785b295-40ea-4347-8898-f8392e26d9dd.jpg",
+      "token": "migration-resource://e179cb8c5ab32ced62be4e8597e7e80e2c96786d2e63b51b709cce22d042c7b6",
+      "snapshotPath": "assets/e179cb8c5ab32ced62be4e8597e7e80e2c96786d2e63b51b709cce22d042c7b6.jpg",
+      "sha256": "e179cb8c5ab32ced62be4e8597e7e80e2c96786d2e63b51b709cce22d042c7b6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 38889
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-24/4c57c097-1419-40f3-993a-ce23e815ecca.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-24/4c57c097-1419-40f3-993a-ce23e815ecca.jpg",
+      "token": "migration-resource://e3c7b8787a018bdddcf972f702df8f53f270b6858b538e7450eccc15d1bdf889",
+      "snapshotPath": "assets/e3c7b8787a018bdddcf972f702df8f53f270b6858b538e7450eccc15d1bdf889.jpg",
+      "sha256": "e3c7b8787a018bdddcf972f702df8f53f270b6858b538e7450eccc15d1bdf889",
+      "contentType": "image/jpeg",
+      "sizeBytes": 54002
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-24/e88a7af9-33f5-46e1-9e9a-7cac9ef7ef5b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-24/e88a7af9-33f5-46e1-9e9a-7cac9ef7ef5b.jpg",
+      "token": "migration-resource://cac9aa90333214cd9c28f26379796aec45f18320247f280eb474cdcd3e38b8e3",
+      "snapshotPath": "assets/cac9aa90333214cd9c28f26379796aec45f18320247f280eb474cdcd3e38b8e3.jpg",
+      "sha256": "cac9aa90333214cd9c28f26379796aec45f18320247f280eb474cdcd3e38b8e3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 31896
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-24/c7f7e372-ab80-4aa4-93bf-cb2a48db56e2.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-24/c7f7e372-ab80-4aa4-93bf-cb2a48db56e2.jpg",
+      "token": "migration-resource://e4de7ff832c90436b5f1ae7c592063dc843f9b7b8fcd2e787b69d7ac797fc927",
+      "snapshotPath": "assets/e4de7ff832c90436b5f1ae7c592063dc843f9b7b8fcd2e787b69d7ac797fc927.jpg",
+      "sha256": "e4de7ff832c90436b5f1ae7c592063dc843f9b7b8fcd2e787b69d7ac797fc927",
+      "contentType": "image/jpeg",
+      "sizeBytes": 43391
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-24/3f79ec02-33b0-4397-928a-8d07145195ec.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-24/3f79ec02-33b0-4397-928a-8d07145195ec.jpg",
+      "token": "migration-resource://480258f2ffc4425a6ea9ccc7bdfe1aa21f3d3c753d508b90da89aa63ec3be894",
+      "snapshotPath": "assets/480258f2ffc4425a6ea9ccc7bdfe1aa21f3d3c753d508b90da89aa63ec3be894.jpg",
+      "sha256": "480258f2ffc4425a6ea9ccc7bdfe1aa21f3d3c753d508b90da89aa63ec3be894",
+      "contentType": "image/jpeg",
+      "sizeBytes": 60573
+    }
+  ],
+  "sourceFingerprint": "acb2755d31b983dbeb729462e4ce39d3567ba11838b1efabdd554420ce98f8de",
+  "evidence": {
+    "listPage": 122,
+    "listTitle": "2022 年东莞市（第十三届）校企合作洽谈会 的函",
+    "listPublishDate": "2022-04-17",
+    "sourceOrder": 1212,
+    "detailPublishDate": "2022-04-17"
+  }
+}

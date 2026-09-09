@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4d5c6b6b41f6a3a60666c4cbf5f58709053af4cc6805775eb73fb61bf18d0526",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Z1KeTQK92eDpZisTQ2rV3g",
+    "url": "https://mp.weixin.qq.com/s/Z1KeTQK92eDpZisTQ2rV3g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春建筑学院文化创意产业学院走访慧开元麦播AI数字人直播运营服务中心",
+    "source": "",
+    "publishDate": "2026-03-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Z1KeTQK92eDpZisTQ2rV3g"
+  },
+  "resources": [],
+  "sourceFingerprint": "6172c29b26be91e3d59649d370f9c015e21a13a1be31f12be5c3af871d4e32f0",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "长春建筑学院文化创意产业学院走访慧开元麦播AI数字人直播运营服务中心",
+    "listPublishDate": "2026-03-17",
+    "sourceOrder": 409
+  }
+}

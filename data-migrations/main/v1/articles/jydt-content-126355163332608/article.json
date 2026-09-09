@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:126355163332608",
+    "contentId": "126355163332608",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=126355163332608"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春金融高等专科学校举办GCDF&BCF全球职业规划师认证培训班",
+    "source": "长春金融高等专科学校",
+    "publishDate": "2022-10-30",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">为提升就业创业指导工作队伍的专业化水平，有效指导学生做好职业生涯规划，8月19日至23日，长春金融高等专科学校招生就业处和北森生涯研究院联合举办为期五天的GCDF&amp;BCF全球职业规划师认证培训班，专兼职辅导员及招生就业处相关人员共50余人参加培训。学校领导高度重视，校党委书记张冀男在培训期间到现场体验督导，校党委副书记王新忠作为学员全程参与培训。</span></span></span></span></p>\n\n<p style=\"text-align:center\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><img alt=\"\" height=\"354\" src=\"migration-resource://1f75dd22333baa8d1546b6714df1979ba070db11ef33c59fccc39ee26fe20476\" width=\"650\"></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">本次培训是大学生职业生涯教育与就业创业指导的进阶性培训项目，内容包括“生涯发展理论”“助人技巧”“自我探索”“职业探索”“行动决策”和“个案实操”6个板块。培训中，老师细致地讲解了生涯发展的经典理论，同时针对学校就业工作特点、新生代大学生的成长发展需求，讲授了在针对大学生进行个案咨询时可供使用的各类助人技巧，指导学生进行自我探索、职业探索以及开展决策和行动的方法。在培训的最后一天，各位培训学员与讲师一道，运用培训所学，针对来访学生的真实个案，开展了咨询实操，将所学知识转化为实际操作能力。</span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">学员纷纷表示，通过培训更加系统完整地掌握了生涯发展理论和指导技能，也激发了更深层次学习研究的兴趣，增强了做好学生生涯咨询和就业创业指导工作的信心。同时，将有效地提升学校职业生涯辅导与就业创业指导队伍的专业化水平。</span></span></span></span></p>\n\n<p style=\"text-align:right\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\">（长春金融高等专科学校 杨阳）</span></span></strong></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-11-29/053e2ebc-e16b-43cf-acdb-0b8df038869f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-11-29/053e2ebc-e16b-43cf-acdb-0b8df038869f.jpg",
+      "token": "migration-resource://1f75dd22333baa8d1546b6714df1979ba070db11ef33c59fccc39ee26fe20476",
+      "snapshotPath": "assets/1f75dd22333baa8d1546b6714df1979ba070db11ef33c59fccc39ee26fe20476.jpg",
+      "sha256": "1f75dd22333baa8d1546b6714df1979ba070db11ef33c59fccc39ee26fe20476",
+      "contentType": "image/jpeg",
+      "sizeBytes": 68892
+    }
+  ],
+  "sourceFingerprint": "671a4bfa00aae5281dd12bca3504f51ee3750fd569c3169ad0553ad1e9ed4c6c",
+  "evidence": {
+    "listPage": 119,
+    "listTitle": "长春金融高等专科学校举办GCDF&BCF全球职业规划师认证培训班",
+    "listPublishDate": "2022-10-30",
+    "sourceOrder": 1190,
+    "detailPublishDate": "2022-10-30"
+  }
+}

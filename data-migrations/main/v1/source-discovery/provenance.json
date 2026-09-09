@@ -1,0 +1,30 @@
+{
+  "sourceSystem": "legacy-jilinjobs",
+  "sourceRoot": "https://24365.jl.smartedu.cn/",
+  "candidateDatasetDigest": "sha256:524749b4ed16efa03c39807cb22afd4922e64a4c11e45c3d8899ae288899e321",
+  "candidateCounts": {
+    "articles": 3314,
+    "internalArticles": 1812,
+    "externalArticles": 1502,
+    "pages": 10,
+    "listItems": 96,
+    "resources": 2910,
+    "unresolved": 1042,
+    "datasetDigest": "sha256:524749b4ed16efa03c39807cb22afd4922e64a4c11e45c3d8899ae288899e321",
+    "datasetFiles": 6351
+  },
+  "closedRetry": {
+    "sourceRunId": 34303771704,
+    "sourceArtifactId": 10086056781,
+    "sourceArtifactName": "eu50-main-retry-attempt-3-a96cee22449508f92f3c89789f99aad477286a66",
+    "sourceArtifactDigest": "sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494",
+    "sourceHead": "a96cee22449508f92f3c89789f99aad477286a66",
+    "finalRetryAttempt": 3
+  },
+  "policyDecision": {
+    "date": "2026-09-09",
+    "issue": 60,
+    "issueCommentId": 5601906947,
+    "deferredProblemArticles": "PRESERVE_AS_DURABLE_EVIDENCE_DO_NOT_BLOCK_CURRENT_SUBSET_PROMOTION"
+  }
+}

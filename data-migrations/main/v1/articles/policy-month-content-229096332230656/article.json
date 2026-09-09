@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-month:content:229096332230656",
+    "contentId": "229096332230656",
+    "typeCode": "policy-month",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=229096332230656"
+  },
+  "target": {
+    "columnAlias": "policy-month",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "普通高校毕业生就业服务公告",
+    "source": "教育部高校学生司",
+    "publishDate": "2024-06-18",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1344\" src=\"migration-resource://bbff830a409e87f662844c89672e0fa90dda46bc677341060a97b215a563fbe6\" width=\"950\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/8567024a-d5ee-4242-b211-5180958795a4.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/8567024a-d5ee-4242-b211-5180958795a4.jpg",
+      "token": "migration-resource://bbff830a409e87f662844c89672e0fa90dda46bc677341060a97b215a563fbe6",
+      "snapshotPath": "assets/bbff830a409e87f662844c89672e0fa90dda46bc677341060a97b215a563fbe6.jpg",
+      "sha256": "bbff830a409e87f662844c89672e0fa90dda46bc677341060a97b215a563fbe6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    }
+  ],
+  "sourceFingerprint": "5d5539e5034b7718201bb7dae7f3234f109127037ad6be0bf0bd730493129462",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "普通高校毕业生就业服务公告",
+    "listPublishDate": "2024-06-18",
+    "sourceOrder": 4,
+    "detailPublishDate": "2024-06-18"
+  }
+}

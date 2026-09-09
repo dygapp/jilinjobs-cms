@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:376262ad25821b80b0cb713f51daa2707284511b21da781b0590b3765dce1e54",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/pyGDoPhhmY8ieuFVa4dSzQ",
+    "url": "https://mp.weixin.qq.com/s/pyGDoPhhmY8ieuFVa4dSzQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院召开2026届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2025-12-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/pyGDoPhhmY8ieuFVa4dSzQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "0b2a5634977c7bf54742d5d2e0a3b8554dfe21eb710c2eb89e1d64f2fd953d1a",
+  "evidence": {
+    "listPage": 52,
+    "listTitle": "长春工程学院召开2026届毕业生就业工作推进会",
+    "listPublishDate": "2025-12-24",
+    "sourceOrder": 517
+  }
+}

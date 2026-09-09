@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0016614de6bbb74edae6b4b9da1e2955d84ed8b35ec9e2bcf0b35a6a278fa2c3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/JO1PgK3Ihc3ZKED5Czh54Q",
+    "url": "https://mp.weixin.qq.com/s/JO1PgK3Ihc3ZKED5Czh54Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学举办聚力扩容提质服务高质量发展2026届“医路药途 护梦启航”毕业生春季专场招聘会",
+    "source": "",
+    "publishDate": "2026-04-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/JO1PgK3Ihc3ZKED5Czh54Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "57ee7b8caf113064c768a85bf4a680870c2f83af44e593cd32e9d7665bd42996",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "延边大学举办聚力扩容提质服务高质量发展2026届“医路药途 护梦启航”毕业生春季专场招聘会",
+    "listPublishDate": "2026-04-30",
+    "sourceOrder": 224
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8608a2471863d53eab538261b45aea7898fec1142a1e5d3930d2bc1fb697275c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Ci-sGs28ohVPo2j0EdXplw",
+    "url": "https://mp.weixin.qq.com/s/Ci-sGs28ohVPo2j0EdXplw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化校企合作 赋能低空经济发展 —— 吉林通用航空职业技术学院牵头全省有关职业院校赴长春企业开展实地调研",
+    "source": "",
+    "publishDate": "2026-06-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Ci-sGs28ohVPo2j0EdXplw"
+  },
+  "resources": [],
+  "sourceFingerprint": "8aaeb19f63b31cca71479dd0a39c4b57623c5e617baec52d9c913cc68af50852",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "深化校企合作 赋能低空经济发展 —— 吉林通用航空职业技术学院牵头全省有关职业院校赴长春企业开展实地调研",
+    "listPublishDate": "2026-06-15",
+    "sourceOrder": 87
+  }
+}

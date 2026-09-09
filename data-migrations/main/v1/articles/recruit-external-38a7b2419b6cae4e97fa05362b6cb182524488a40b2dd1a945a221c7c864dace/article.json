@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:38a7b2419b6cae4e97fa05362b6cb182524488a40b2dd1a945a221c7c864dace",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/I3gmTCNwpBJZH63XO6EVXA",
+    "url": "https://mp.weixin.qq.com/s/I3gmTCNwpBJZH63XO6EVXA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【邀请函】吉林工商学院2026届毕业生首届校友专场招聘会暨春季校园招聘会",
+    "source": "",
+    "publishDate": "2026-05-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/I3gmTCNwpBJZH63XO6EVXA"
+  },
+  "resources": [],
+  "sourceFingerprint": "bef9fe26105dd844649cf29c41cf77c4102867298984724b08a1e1863c8a143a",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "【邀请函】吉林工商学院2026届毕业生首届校友专场招聘会暨春季校园招聘会",
+    "listPublishDate": "2026-05-13",
+    "sourceOrder": 32
+  }
+}

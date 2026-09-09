@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d4e39215db4b2f5b3625ae65daa60702111ffd677f2091d7f4a105dcb40d889f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/lw8iJ8TO20C-cVVlUQgeUA",
+    "url": "https://mp.weixin.qq.com/s/lw8iJ8TO20C-cVVlUQgeUA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业 校企同心谋发展—— 长白山职业技术学院开展访企拓岗专项活动",
+    "source": "",
+    "publishDate": "2026-03-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/lw8iJ8TO20C-cVVlUQgeUA"
+  },
+  "resources": [],
+  "sourceFingerprint": "557f66994f5c09378449bf277d2a7988ed9362e2d15eba2e046130186ca35629",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "访企拓岗促就业 校企同心谋发展—— 长白山职业技术学院开展访企拓岗专项活动",
+    "listPublishDate": "2026-03-26",
+    "sourceOrder": 358
+  }
+}

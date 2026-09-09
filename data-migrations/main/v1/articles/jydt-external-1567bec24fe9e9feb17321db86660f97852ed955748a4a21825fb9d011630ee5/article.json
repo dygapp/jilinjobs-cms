@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1567bec24fe9e9feb17321db86660f97852ed955748a4a21825fb9d011630ee5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1115/69185.htm",
+    "url": "https://www.neepu.edu.cn/info/1115/69185.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学赴蛟河市开展“百校对百县”促就业专项行动",
+    "source": "",
+    "publishDate": "2025-06-26",
+    "bodyHtml": "",
+    "externalUrl": "https://www.neepu.edu.cn/info/1115/69185.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "fff09d58b498db3345e05638a6f26b2c0b26c6866c302f124dc1181fa788fff5",
+  "evidence": {
+    "listPage": 78,
+    "listTitle": "东北电力大学赴蛟河市开展“百校对百县”促就业专项行动",
+    "listPublishDate": "2025-06-26",
+    "sourceOrder": 772
+  }
+}

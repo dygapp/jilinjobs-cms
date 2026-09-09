@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:166219858591744",
+    "contentId": "166219858591744",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=166219858591744"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省第九届高校职业发展与就业创业指导课程教学大赛的通知",
+    "source": "",
+    "publishDate": "2023-07-07",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1131\" src=\"migration-resource://5ced3f68eaf6ca39a341fa85c81bcbc5b1112574499a4a3f065ed51c22e2bb08\" width=\"800\"><img alt=\"\" height=\"1131\" src=\"migration-resource://17a418cbc92e7b64ad092d376dc9209fd8daa79829c0581cb7d0807aca558f9d\" width=\"800\"><img alt=\"\" height=\"1131\" src=\"migration-resource://6b5ba5aba4838ddade8d1b48d24be7e5e2b73e4d132aae83c5c090d4d83b6e36\" width=\"800\"><img alt=\"\" height=\"1131\" src=\"migration-resource://c6ae529238f8284d8475228348b86dbe66c1745fd2d46dd5f2ec755eb000856a\" width=\"800\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-07/920c057c-32bf-409b-bdd0-530a138f5a32.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-07-07/920c057c-32bf-409b-bdd0-530a138f5a32.jpg",
+      "token": "migration-resource://5ced3f68eaf6ca39a341fa85c81bcbc5b1112574499a4a3f065ed51c22e2bb08",
+      "snapshotPath": "assets/5ced3f68eaf6ca39a341fa85c81bcbc5b1112574499a4a3f065ed51c22e2bb08.jpg",
+      "sha256": "5ced3f68eaf6ca39a341fa85c81bcbc5b1112574499a4a3f065ed51c22e2bb08",
+      "contentType": "image/jpeg",
+      "sizeBytes": 256232
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-07/79b9bdce-044e-48ca-8094-d57128fd588c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-07-07/79b9bdce-044e-48ca-8094-d57128fd588c.jpg",
+      "token": "migration-resource://17a418cbc92e7b64ad092d376dc9209fd8daa79829c0581cb7d0807aca558f9d",
+      "snapshotPath": "assets/17a418cbc92e7b64ad092d376dc9209fd8daa79829c0581cb7d0807aca558f9d.jpg",
+      "sha256": "17a418cbc92e7b64ad092d376dc9209fd8daa79829c0581cb7d0807aca558f9d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 286923
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-07/607f07fc-49cc-4384-b84e-a3e1b391799c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-07-07/607f07fc-49cc-4384-b84e-a3e1b391799c.jpg",
+      "token": "migration-resource://6b5ba5aba4838ddade8d1b48d24be7e5e2b73e4d132aae83c5c090d4d83b6e36",
+      "snapshotPath": "assets/6b5ba5aba4838ddade8d1b48d24be7e5e2b73e4d132aae83c5c090d4d83b6e36.jpg",
+      "sha256": "6b5ba5aba4838ddade8d1b48d24be7e5e2b73e4d132aae83c5c090d4d83b6e36",
+      "contentType": "image/jpeg",
+      "sizeBytes": 276655
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-07/06bb7ba9-36a2-4734-b260-9dca69953076.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-07-07/06bb7ba9-36a2-4734-b260-9dca69953076.jpg",
+      "token": "migration-resource://c6ae529238f8284d8475228348b86dbe66c1745fd2d46dd5f2ec755eb000856a",
+      "snapshotPath": "assets/c6ae529238f8284d8475228348b86dbe66c1745fd2d46dd5f2ec755eb000856a.jpg",
+      "sha256": "c6ae529238f8284d8475228348b86dbe66c1745fd2d46dd5f2ec755eb000856a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 242692
+    }
+  ],
+  "sourceFingerprint": "de5e4171d02722b2fd421917d48490865f60aea97d6e8729da2ec140c1edb0f7",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "关于举办吉林省第九届高校职业发展与就业创业指导课程教学大赛的通知",
+    "listPublishDate": "2023-07-07",
+    "sourceOrder": 103,
+    "detailPublishDate": "2023-07-07"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:236881004478464",
+    "contentId": "236881004478464",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=236881004478464"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2024届全省高校毕业生就业工作视频推进会召开",
+    "source": "",
+    "publishDate": "2024-07-31",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://ab7824c8832ee0099d31a30d761d0954cbc6cdf57a63e0acf6194f63df71df4a\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-07-31/bf50ece7-8746-474b-9789-7526b8e055c8.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-07-31/bf50ece7-8746-474b-9789-7526b8e055c8.jpg",
+      "token": "migration-resource://ab7824c8832ee0099d31a30d761d0954cbc6cdf57a63e0acf6194f63df71df4a",
+      "snapshotPath": "assets/ab7824c8832ee0099d31a30d761d0954cbc6cdf57a63e0acf6194f63df71df4a.jpg",
+      "sha256": "ab7824c8832ee0099d31a30d761d0954cbc6cdf57a63e0acf6194f63df71df4a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    }
+  ],
+  "sourceFingerprint": "5e2a60619c971b02c9ad95cc2fe61b276811b14c0ce757f1cdb13d396a5bb4a7",
+  "evidence": {
+    "listPage": 104,
+    "listTitle": "2024届全省高校毕业生就业工作视频推进会召开",
+    "listPublishDate": "2024-07-31",
+    "sourceOrder": 1038,
+    "detailPublishDate": "2024-07-31"
+  }
+}

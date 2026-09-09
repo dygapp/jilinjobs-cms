@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783123020",
+    "contentId": "28737783123020",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123020"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《关于举办“高校创新创业教育及试点高校先进经验交流”研讨会的通知》的通知",
+    "source": "",
+    "publishDate": "2011-06-09",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《关于举办“高校创新创业教育及试点高校先进经验交流”研讨会的通知》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-6-9 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://f46c4dfe82b1bbe48c5259eb8b6205ed5b2bc733008227a4c5fddf4d090ecbf4\"><img border=\"0\" src=\"migration-resource://2994b5d2dde862f00e30c1864fc217f23acfc93ca5a9b4e0b87485663bb56905\"><img border=\"0\" src=\"migration-resource://f0e5629c44c2c25ed6daae62f58511f34d7f93566eb2d781b41b9b5e5c55057c\"><img border=\"0\" src=\"migration-resource://cf1690c4cf89d3a662785b8a08466d7527c2bec52407110d74278add8e223b2e\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110609104436489.jpg",
+      "originalReference": "/chistory/cms/imgs/20110609104436489.jpg",
+      "token": "migration-resource://f46c4dfe82b1bbe48c5259eb8b6205ed5b2bc733008227a4c5fddf4d090ecbf4",
+      "snapshotPath": "assets/f46c4dfe82b1bbe48c5259eb8b6205ed5b2bc733008227a4c5fddf4d090ecbf4.jpg",
+      "sha256": "f46c4dfe82b1bbe48c5259eb8b6205ed5b2bc733008227a4c5fddf4d090ecbf4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 80358
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110609104440593.jpg",
+      "originalReference": "/chistory/cms/imgs/20110609104440593.jpg",
+      "token": "migration-resource://2994b5d2dde862f00e30c1864fc217f23acfc93ca5a9b4e0b87485663bb56905",
+      "snapshotPath": "assets/2994b5d2dde862f00e30c1864fc217f23acfc93ca5a9b4e0b87485663bb56905.jpg",
+      "sha256": "2994b5d2dde862f00e30c1864fc217f23acfc93ca5a9b4e0b87485663bb56905",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92186
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110609104444841.jpg",
+      "originalReference": "/chistory/cms/imgs/20110609104444841.jpg",
+      "token": "migration-resource://f0e5629c44c2c25ed6daae62f58511f34d7f93566eb2d781b41b9b5e5c55057c",
+      "snapshotPath": "assets/f0e5629c44c2c25ed6daae62f58511f34d7f93566eb2d781b41b9b5e5c55057c.jpg",
+      "sha256": "f0e5629c44c2c25ed6daae62f58511f34d7f93566eb2d781b41b9b5e5c55057c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 99935
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110609104448249.jpg",
+      "originalReference": "/chistory/cms/imgs/20110609104448249.jpg",
+      "token": "migration-resource://cf1690c4cf89d3a662785b8a08466d7527c2bec52407110d74278add8e223b2e",
+      "snapshotPath": "assets/cf1690c4cf89d3a662785b8a08466d7527c2bec52407110d74278add8e223b2e.jpg",
+      "sha256": "cf1690c4cf89d3a662785b8a08466d7527c2bec52407110d74278add8e223b2e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 70216
+    }
+  ],
+  "sourceFingerprint": "eb3b259ed0dd70ae91e45c72a51cb93247d3a81c87bd7506d580780a05a8bbe7",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "转发《关于举办“高校创新创业教育及试点高校先进经验交流”研讨会的通知》的通知",
+    "listPublishDate": "2011-06-09",
+    "sourceOrder": 438,
+    "detailPublishDate": "2011-06-09"
+  }
+}

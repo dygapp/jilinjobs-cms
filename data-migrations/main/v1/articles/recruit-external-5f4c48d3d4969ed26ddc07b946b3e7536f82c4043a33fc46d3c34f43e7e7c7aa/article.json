@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:5f4c48d3d4969ed26ddc07b946b3e7536f82c4043a33fc46d3c34f43e7e7c7aa",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/wow/z/recruitment/default/d52hrSdHXrASAmXYRfHY",
+    "url": "https://pages.tmall.com/wow/z/recruitment/default/d52hrSdHXrASAmXYRfHY"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "阿里巴巴数字经济专场-天猫双11招聘季”专场招聘会",
+    "source": "",
+    "publishDate": "2022-11-04",
+    "bodyHtml": "",
+    "externalUrl": "https://pages.tmall.com/wow/z/recruitment/default/d52hrSdHXrASAmXYRfHY"
+  },
+  "resources": [],
+  "sourceFingerprint": "9c982377a86cfa012bba46a888899815544372a06a59712162226272bed312bc",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "阿里巴巴数字经济专场-天猫双11招聘季”专场招聘会",
+    "listPublishDate": "2022-11-04",
+    "sourceOrder": 330
+  }
+}

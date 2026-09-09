@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:9129f4a446378d6b317d71142568ef9dd72e442c649ad284eae015496201a7e4",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/BQlzpyHIh1FM3tcqM-3BfQ",
+    "url": "https://mp.weixin.qq.com/s/BQlzpyHIh1FM3tcqM-3BfQ?scene=25&sessionid=-1368113096"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林铁道职业技术大学 | 2025届毕业生校园双选会邀请函",
+    "source": "",
+    "publishDate": "2025-04-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/BQlzpyHIh1FM3tcqM-3BfQ?scene=25&sessionid=-1368113096"
+  },
+  "resources": [],
+  "sourceFingerprint": "960b5f46279a83468fc7be4149d7f45fce72e09c9276562d67faf01a5580b33a",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "吉林铁道职业技术大学 | 2025届毕业生校园双选会邀请函",
+    "listPublishDate": "2025-04-11",
+    "sourceOrder": 185
+  }
+}

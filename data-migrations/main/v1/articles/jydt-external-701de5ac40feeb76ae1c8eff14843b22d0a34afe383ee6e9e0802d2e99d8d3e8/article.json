@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:701de5ac40feeb76ae1c8eff14843b22d0a34afe383ee6e9e0802d2e99d8d3e8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Rqx7vTUMeiujJdHLltbmJA",
+    "url": "https://mp.weixin.qq.com/s/Rqx7vTUMeiujJdHLltbmJA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 ‘就’在吉林”吉林省高校服务大农业产业集群毕业生双选会在吉林农业大学举行",
+    "source": "",
+    "publishDate": "2024-03-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Rqx7vTUMeiujJdHLltbmJA"
+  },
+  "resources": [],
+  "sourceFingerprint": "f08f352679d2b696817d4103f8485a61148538d78512db19d33758c3b49c80af",
+  "evidence": {
+    "listPage": 111,
+    "listTitle": "“创业奋斗 ‘就’在吉林”吉林省高校服务大农业产业集群毕业生双选会在吉林农业大学举行",
+    "listPublishDate": "2024-03-25",
+    "sourceOrder": 1104
+  }
+}

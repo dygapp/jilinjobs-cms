@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122230",
+    "contentId": "28737783122230",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122230"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省高等学校毕业生就业指导中心第二届职工大会顺利召开",
+    "source": "",
+    "publishDate": "2011-02-28",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省高等学校毕业生就业指导中心第二届职工大会顺利召开</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-2-28 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"438\" src=\"migration-resource://d0c9e9ea9f467ae897e10681625e1acae1418711ca9dcaf409b7288d8a3f8386\" width=\"704\" border=\"0\"></font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 2011年2月25日中心第二届职工大会顺利召开，参加会议的有朱军书记（中）、张跃主任、唐洪丰主席（右）及全体职工。会议由张旭光部长（左）主持。唐洪丰主席作了工会总结报告，朱书记对上一届的工会工作给予充分肯定。</font></p> <p align=\"center\"><font color=\"#444444\" size=\"2\"><img height=\"463\" src=\"migration-resource://f75108b33992cb355296064ee3e225f722187a902570843fb6695b50bbcd2dbf\" width=\"708\" border=\"0\"></font></p><font color=\"#444444\" size=\"2\"> </font><p><font color=\"#444444\" size=\"2\"><br>&nbsp;&nbsp;&nbsp; 本次会议通过不记名投票的方式选举出了第二届的工会委员。由唐洪丰同志（中）继续担任工会主席一职，新选举出来的工会委员分别是：范志杰（左二）、宋娇（右二）、吴强（左一）、关琳（右一）。</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110228145840219.jpg",
+      "originalReference": "/chistory/cms/imgs/20110228145840219.jpg",
+      "token": "migration-resource://d0c9e9ea9f467ae897e10681625e1acae1418711ca9dcaf409b7288d8a3f8386",
+      "snapshotPath": "assets/d0c9e9ea9f467ae897e10681625e1acae1418711ca9dcaf409b7288d8a3f8386.jpg",
+      "sha256": "d0c9e9ea9f467ae897e10681625e1acae1418711ca9dcaf409b7288d8a3f8386",
+      "contentType": "image/jpeg",
+      "sizeBytes": 42184
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2011022814585330.jpg",
+      "originalReference": "/chistory/cms/imgs/2011022814585330.jpg",
+      "token": "migration-resource://f75108b33992cb355296064ee3e225f722187a902570843fb6695b50bbcd2dbf",
+      "snapshotPath": "assets/f75108b33992cb355296064ee3e225f722187a902570843fb6695b50bbcd2dbf.jpg",
+      "sha256": "f75108b33992cb355296064ee3e225f722187a902570843fb6695b50bbcd2dbf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 60748
+    }
+  ],
+  "sourceFingerprint": "10a0dc37b896a7945fe24f31ffaf91891efc5d4d1f374a852520b6b2ebbedeb0",
+  "evidence": {
+    "listPage": 166,
+    "listTitle": "吉林省高等学校毕业生就业指导中心第二届职工大会顺利召开",
+    "listPublishDate": "2011-02-28",
+    "sourceOrder": 1658,
+    "detailPublishDate": "2011-02-28"
+  }
+}

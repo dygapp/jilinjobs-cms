@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:2f713902ebf520a3f7fa506fee420a1fe1cfc8ba3774924afdd5238e13aae1b7",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/EewTJtmCDG71mtkSiDlq9g",
+    "url": "https://mp.weixin.qq.com/s/EewTJtmCDG71mtkSiDlq9g"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2024年吉林省数字产业人才供需对接会招聘岗位信息（面向毕业生岗位）",
+    "source": "",
+    "publishDate": "2024-10-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/EewTJtmCDG71mtkSiDlq9g"
+  },
+  "resources": [],
+  "sourceFingerprint": "916bbe7d557300319f345fa70e05e1d384880d724e6c13a9b0a75d39aea1fbde",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "2024年吉林省数字产业人才供需对接会招聘岗位信息（面向毕业生岗位）",
+    "listPublishDate": "2024-10-14",
+    "sourceOrder": 241
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:eb4d1ae0c0358aa3daaf9b0c002e5ae812e2bcf4343d182d48c6daced3a8c15f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1028/170252.htm",
+    "url": "https://www.jlju.edu.cn/info/1028/170252.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学开展暑期“访企拓岗”行动全面推进就业工作",
+    "source": "",
+    "publishDate": "2025-08-28",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1028/170252.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "9ed27f7f89e7cef86f7397225dc32d367dc9aa8e0c5e9b01b29bbd45daac6dc2",
+  "evidence": {
+    "listPage": 71,
+    "listTitle": "吉林建筑大学开展暑期“访企拓岗”行动全面推进就业工作",
+    "listPublishDate": "2025-08-28",
+    "sourceOrder": 710
+  }
+}

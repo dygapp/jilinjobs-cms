@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783123018",
+    "contentId": "28737783123018",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123018"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《2011生涯咨询与辅导工作坊邀请函》的通知",
+    "source": "",
+    "publishDate": "2011-06-09",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《2011生涯咨询与辅导工作坊邀请函》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-6-9 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://c157d2c160d9571ecda1aa55ba590bcf669435945ff07abbed86187a67dc9909\"><img border=\"0\" src=\"migration-resource://f56790e62018bf8793ba34f89e7a43e7023284c4a24a1010cb957ce6d5f18cbc\"><img border=\"0\" src=\"migration-resource://e51cf24de7608d0a982e3facc81e97447cdb83b30842729505d0c05601c62f87\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110609092648818.jpg",
+      "originalReference": "/chistory/cms/imgs/20110609092648818.jpg",
+      "token": "migration-resource://c157d2c160d9571ecda1aa55ba590bcf669435945ff07abbed86187a67dc9909",
+      "snapshotPath": "assets/c157d2c160d9571ecda1aa55ba590bcf669435945ff07abbed86187a67dc9909.jpg",
+      "sha256": "c157d2c160d9571ecda1aa55ba590bcf669435945ff07abbed86187a67dc9909",
+      "contentType": "image/jpeg",
+      "sizeBytes": 86938
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110609092652803.jpg",
+      "originalReference": "/chistory/cms/imgs/20110609092652803.jpg",
+      "token": "migration-resource://f56790e62018bf8793ba34f89e7a43e7023284c4a24a1010cb957ce6d5f18cbc",
+      "snapshotPath": "assets/f56790e62018bf8793ba34f89e7a43e7023284c4a24a1010cb957ce6d5f18cbc.jpg",
+      "sha256": "f56790e62018bf8793ba34f89e7a43e7023284c4a24a1010cb957ce6d5f18cbc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 80392
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110609092656516.jpg",
+      "originalReference": "/chistory/cms/imgs/20110609092656516.jpg",
+      "token": "migration-resource://e51cf24de7608d0a982e3facc81e97447cdb83b30842729505d0c05601c62f87",
+      "snapshotPath": "assets/e51cf24de7608d0a982e3facc81e97447cdb83b30842729505d0c05601c62f87.jpg",
+      "sha256": "e51cf24de7608d0a982e3facc81e97447cdb83b30842729505d0c05601c62f87",
+      "contentType": "image/jpeg",
+      "sizeBytes": 60271
+    }
+  ],
+  "sourceFingerprint": "111f94841d43a4cedf419a28ade898463ac990cec24b5b96391896f07947edfb",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "转发《2011生涯咨询与辅导工作坊邀请函》的通知",
+    "listPublishDate": "2011-06-09",
+    "sourceOrder": 439,
+    "detailPublishDate": "2011-06-09"
+  }
+}

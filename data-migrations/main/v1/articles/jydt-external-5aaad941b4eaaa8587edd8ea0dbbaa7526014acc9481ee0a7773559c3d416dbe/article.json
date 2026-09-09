@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5aaad941b4eaaa8587edd8ea0dbbaa7526014acc9481ee0a7773559c3d416dbe",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/z0YrON9lSxSVwhBPCuUQ2w",
+    "url": "https://mp.weixin.qq.com/s/z0YrON9lSxSVwhBPCuUQ2w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "暖心护航就业路！吉林通用航空职业技术学院携手吉林民航机场集团举行专场招聘活动",
+    "source": "",
+    "publishDate": "2026-01-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/z0YrON9lSxSVwhBPCuUQ2w"
+  },
+  "resources": [],
+  "sourceFingerprint": "1b1e0e4bd269b02cf70d2ca8a635f7cf9161185a7bce45a3e8b5bc0b90298367",
+  "evidence": {
+    "listPage": 49,
+    "listTitle": "暖心护航就业路！吉林通用航空职业技术学院携手吉林民航机场集团举行专场招聘活动",
+    "listPublishDate": "2026-01-19",
+    "sourceOrder": 487
+  }
+}

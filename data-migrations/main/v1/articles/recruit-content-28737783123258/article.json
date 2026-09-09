@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123258",
+    "contentId": "28737783123258",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123258"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "福建：调整院校大中专毕业生就业登记规定",
+    "source": "",
+    "publishDate": "2009-05-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">福建：调整院校大中专毕业生就业登记规定</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-5-6 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 为杜绝毕业生虚假就业现象,福建省人事厅日前下发通知,调整了大中专毕业生就业登记的有关规定,强调要追究在毕业生就业问题上弄虚作假的学校和中介机构的责任。</font></p> <p><font size=\"2\">　　通知强调,若将未落实就业单位的毕业生户口、档案关系挂靠到人才中介机构实行人事代理,并以“已就业”形式上报的,一经查实,要追究学校和人才中介机构的责任。对参与弄虚作假的学校,在就业评估时实行“一票否决”,对相关人才中介机构按有关规定予以查处。</font></p> <p><font size=\"2\">　　根据通知,从今年起,福建大中专毕业生“意向就业”将不列入就业登记,“灵活就业”的毕业生则将纳入就业范畴。以灵活方式就业的毕业生在毕业离校时应填写相关登记表,并由所在高校备案,作为就业统计和就业评估抽查的依据。凡在离校时有就业愿望但未就业的毕业生,应在本校进行待就业登记,学校要在本年度内继续对这部分学生提供就业指导、就业信息、短期培训等服务,帮助他们尽快实现就业。</font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：光明日报 <br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "82434ae07c8b56ad07e417571a7c90b347cb58df60a372d95582742f1a97f14a",
+  "evidence": {
+    "listPage": 55,
+    "listTitle": "福建：调整院校大中专毕业生就业登记规定",
+    "listPublishDate": "2009-05-06",
+    "sourceOrder": 545,
+    "detailPublishDate": "2009-05-06"
+  }
+}

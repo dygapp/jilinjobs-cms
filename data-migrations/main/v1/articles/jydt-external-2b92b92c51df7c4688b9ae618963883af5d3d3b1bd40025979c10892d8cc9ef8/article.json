@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2b92b92c51df7c4688b9ae618963883af5d3d3b1bd40025979c10892d8cc9ef8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Zb6wC3qwFf6ZcSKKkdB2Gg",
+    "url": "https://mp.weixin.qq.com/s/Zb6wC3qwFf6ZcSKKkdB2Gg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "《长春师范大学校友赋能毕业生高质量充分就业倡议书》发布",
+    "source": "",
+    "publishDate": "2025-12-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Zb6wC3qwFf6ZcSKKkdB2Gg"
+  },
+  "resources": [],
+  "sourceFingerprint": "aae935837fa3df8c0240f92dec3621861780631279e44e0c153b958b1f1bdbf7",
+  "evidence": {
+    "listPage": 52,
+    "listTitle": "《长春师范大学校友赋能毕业生高质量充分就业倡议书》发布",
+    "listPublishDate": "2025-12-24",
+    "sourceOrder": 518
+  }
+}

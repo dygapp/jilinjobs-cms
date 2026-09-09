@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:f9d937914cd711ddb7619e05f9c0e74fd58b858270b97afb70cc5d9842fe505a",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/tzgg/27045.jhtml",
+    "url": "http://jy.cjgz.edu.cn/tzgg/27045.jhtml"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春金融高等专科学校“创业奋斗 ‘就’在吉林” 2024届毕业生春季校园双选会邀请函",
+    "source": "",
+    "publishDate": "2024-05-09",
+    "bodyHtml": "",
+    "externalUrl": "http://jy.cjgz.edu.cn/tzgg/27045.jhtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "542f09641d706a05dfc8976cc6a5b3bc3d616280047d45b157ecb4deb48cf481",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "长春金融高等专科学校“创业奋斗 ‘就’在吉林” 2024届毕业生春季校园双选会邀请函",
+    "listPublishDate": "2024-05-09",
+    "sourceOrder": 278
+  }
+}

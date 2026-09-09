@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:04f7792a834ea20a241ac7384c988f5504fdd12c2e8af3558d3dff2f6aec9780",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/zw_2185/tzgg/202010/t20201027_303220.html",
+    "url": "http://www.tumen.gov.cn/zw_2185/tzgg/202010/t20201027_303220.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年图们市教育系统事业单位公开招聘工作人员公告",
+    "source": "",
+    "publishDate": "2020-11-05",
+    "bodyHtml": "",
+    "externalUrl": "http://www.tumen.gov.cn/zw_2185/tzgg/202010/t20201027_303220.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "a9a6d128271b2c49ef9d4313d3298f54778517599f571743b9145e8390ac750e",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "2020年图们市教育系统事业单位公开招聘工作人员公告",
+    "listPublishDate": "2020-11-05",
+    "sourceOrder": 369
+  }
+}

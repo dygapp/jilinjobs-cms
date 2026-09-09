@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a8b5eefd443891e2e1d761c1f50f78c22d00fe3032306a2390055dac12d11266",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ym-StRLrvuH_wThFrgfX9w",
+    "url": "https://mp.weixin.qq.com/s/ym-StRLrvuH_wThFrgfX9w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "跨域联动拓渠道 产教融合育新人 —— 辽源职业技术学院赴粤皖开展访企拓岗专项调研",
+    "source": "",
+    "publishDate": "2026-07-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ym-StRLrvuH_wThFrgfX9w"
+  },
+  "resources": [],
+  "sourceFingerprint": "2fd6b4dde9cc678c63ca20b9e8f1906b3a12e619ae9a185051536780b2dff969",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "跨域联动拓渠道 产教融合育新人 —— 辽源职业技术学院赴粤皖开展访企拓岗专项调研",
+    "listPublishDate": "2026-07-22",
+    "sourceOrder": 42
+  }
+}

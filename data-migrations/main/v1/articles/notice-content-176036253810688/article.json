@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:176036253810688",
+    "contentId": "176036253810688",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=176036253810688"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展吉林省高校2023级大学新生职业生涯教育月活动的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2023-08-30",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1343\" src=\"migration-resource://6707cde14206116b2fdd20fb4b45078f5adb64fac65fe48a378e169c62dccde2\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1343\" src=\"migration-resource://2dbfd6e9fa11cd77ff97285cd66b794b66d3ec1f11eea3d1ed95d0bbc4f65a50\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1343\" src=\"migration-resource://c917f5b00f9adea30109cb87ebdc2b337f3aa1e4889be1ffff0a6ed192a8954d\" width=\"950\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-30/6cbdedfe-e54b-4e81-bee6-5395a25121ed.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-30/6cbdedfe-e54b-4e81-bee6-5395a25121ed.jpg",
+      "token": "migration-resource://6707cde14206116b2fdd20fb4b45078f5adb64fac65fe48a378e169c62dccde2",
+      "snapshotPath": "assets/6707cde14206116b2fdd20fb4b45078f5adb64fac65fe48a378e169c62dccde2.jpg",
+      "sha256": "6707cde14206116b2fdd20fb4b45078f5adb64fac65fe48a378e169c62dccde2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 174756
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-30/bfc3292d-124e-48a8-ac75-5b771124a4b6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-30/bfc3292d-124e-48a8-ac75-5b771124a4b6.jpg",
+      "token": "migration-resource://2dbfd6e9fa11cd77ff97285cd66b794b66d3ec1f11eea3d1ed95d0bbc4f65a50",
+      "snapshotPath": "assets/2dbfd6e9fa11cd77ff97285cd66b794b66d3ec1f11eea3d1ed95d0bbc4f65a50.jpg",
+      "sha256": "2dbfd6e9fa11cd77ff97285cd66b794b66d3ec1f11eea3d1ed95d0bbc4f65a50",
+      "contentType": "image/jpeg",
+      "sizeBytes": 193464
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-30/3c673cbb-eb66-4f37-a4e3-48aa29a91feb.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-30/3c673cbb-eb66-4f37-a4e3-48aa29a91feb.jpg",
+      "token": "migration-resource://c917f5b00f9adea30109cb87ebdc2b337f3aa1e4889be1ffff0a6ed192a8954d",
+      "snapshotPath": "assets/c917f5b00f9adea30109cb87ebdc2b337f3aa1e4889be1ffff0a6ed192a8954d.jpg",
+      "sha256": "c917f5b00f9adea30109cb87ebdc2b337f3aa1e4889be1ffff0a6ed192a8954d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67627
+    }
+  ],
+  "sourceFingerprint": "46de6c655ba6161391d16f2361eb213bef6486ebb1ab30847d96eec2323e72d5",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "关于开展吉林省高校2023级大学新生职业生涯教育月活动的通知",
+    "listPublishDate": "2023-08-30",
+    "sourceOrder": 99,
+    "detailPublishDate": "2023-08-30"
+  }
+}

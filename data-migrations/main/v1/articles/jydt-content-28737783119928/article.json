@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119928",
+    "contentId": "28737783119928",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119928"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省举办高校创新创业教育师资培训班",
+    "source": "",
+    "publishDate": "2017-07-01",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省举办高校创新创业教育师资培训班</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2017-7-1 14:14:09</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"line-height: 40px; text-indent: 40px;\"><span style=\"font-family: 宋体; font-size: 20px;\">6月27日-30日,省高校毕业生就业指导中心与万学教育集团联合举办“高校创新创业教育师资培训班”，来自全省30所高校55名从事就业创业工作的部门负责人和教研人员参加了培训。</span></p><p style=\"line-height: 40px; text-indent: 40px;\"><span style=\"font-family: 宋体; font-size: 20px;\">课程由澳大利亚昆士兰科技大学商学院高级讲师、塔斯马尼亚大学博士、撰有《本科生创业教育》和《研究生创业教育》国外高校创业教育经典教材的科林•琼斯，东北师范大学就业创业教育研究院执行院长、教授、博士生导师、法学博士王占仁，东北师范大学就业创业教育研究院副院长、教授、博士生导师、发展与教育心理学博士、哈佛大学国家公派访问学者刘志，万学教育科技集团联合创始人张强，深圳市泰瑞通财富管理有限公司副总经理方铭洋，分别从澳大利亚高校创业教育模式、哈佛大学创业教育&amp;创业伦理研究、创新创业教育史、本科生创业教育与研究生创业教育、国内高校创新创业环境与体系构建、国内高校创新创业课程教学与实践、大学生创业关键任务项目与分布指导方案等内容进行深入讲解。东北师范大学信息化管理与规划办公室主任邹云龙、学生就业指导服务中心主任李亚员和学生处副处长孔洁珺对高校创新创业教育研究问题进行了探讨发言。</span></p><p style=\"line-height: 40px; text-indent: 40px;\"><span style=\"font-family: 宋体; font-size: 20px;\">此次培训，学员们一致表示，课程着眼于国际化创业教育视角，以全新的理念和知识呈现，使学员们耳目一新，为今后高校开展创新创业教育工作拓宽了视野，理清了思路。</span></p><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"6.27-30.JPG\" src=\"migration-resource://6ded755dc2dbfaa885639aa706b70ae8fdfc1cf0b6fc459276eaa0a40337b306\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363667513981250009489539.JPG",
+      "originalReference": "/chistory/cms/imgs/6363667513981250009489539.JPG",
+      "token": "migration-resource://6ded755dc2dbfaa885639aa706b70ae8fdfc1cf0b6fc459276eaa0a40337b306",
+      "snapshotPath": "assets/6ded755dc2dbfaa885639aa706b70ae8fdfc1cf0b6fc459276eaa0a40337b306.jpg",
+      "sha256": "6ded755dc2dbfaa885639aa706b70ae8fdfc1cf0b6fc459276eaa0a40337b306",
+      "contentType": "image/jpeg",
+      "sizeBytes": 166765
+    }
+  ],
+  "sourceFingerprint": "4a08c5a7bd63526790ea5feafd8da8a9f1970efba78ef93ad340dd659997b2a0",
+  "evidence": {
+    "listPage": 149,
+    "listTitle": "我省举办高校创新创业教育师资培训班",
+    "listPublishDate": "2017-07-01",
+    "sourceOrder": 1489,
+    "detailPublishDate": "2017-07-01"
+  }
+}

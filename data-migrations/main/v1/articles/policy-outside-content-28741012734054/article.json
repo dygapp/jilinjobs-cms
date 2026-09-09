@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-outside:content:28741012734054",
+    "contentId": "28741012734054",
+    "typeCode": "policy-outside",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28741012734054"
+  },
+  "target": {
+    "columnAlias": "policy-outside",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于2014年江西省接收省外高校毕业生有关事项的函",
+    "source": "",
+    "publishDate": "2014-02-19",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    政策法规</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于2014年江西省接收省外高校毕业生有关事项的函</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:    发布时间:2014-2-19 0:00:00</font></span>\n                </div>\n         \n                <div id=\"PoliciesContent\"><p>&nbsp;</p><p style=\"text-align:center\"><img title=\"001.jpg\" style=\"float: none;\" src=\"http://192.168.1.201:800/EDJLPortalWeb/upload/6353810296580480006321550.jpg\"></p><p style=\"text-align:center\"><img title=\"001001.jpg\" style=\"float: none;\" src=\"http://192.168.1.201:800/EDJLPortalWeb/upload/6353810296696586649932691.jpg\"></p><p style=\"text-align:center\"><img title=\"001002.jpg\" style=\"float: none;\" src=\"http://192.168.1.201:800/EDJLPortalWeb/upload/6353810296817993593355330.jpg\"></p><p></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "5fa425ecaf60094ee86a162a53b8cd31a95bd3d1cb9ebf43de5494442e32ba56",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "关于2014年江西省接收省外高校毕业生有关事项的函",
+    "listPublishDate": "2014-02-19",
+    "sourceOrder": 12,
+    "detailPublishDate": "2014-02-19"
+  }
+}

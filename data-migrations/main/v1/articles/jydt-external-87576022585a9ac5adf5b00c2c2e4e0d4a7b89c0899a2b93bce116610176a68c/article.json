@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:87576022585a9ac5adf5b00c2c2e4e0d4a7b89c0899a2b93bce116610176a68c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/rCETTiljWbWQD-5oXuSFbw",
+    "url": "https://mp.weixin.qq.com/s/rCETTiljWbWQD-5oXuSFbw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春建筑学院人工智能产业学院赴吉林省讯达科技开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-03-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/rCETTiljWbWQD-5oXuSFbw"
+  },
+  "resources": [],
+  "sourceFingerprint": "d34755f5b82dfb7534fb2ef44ca20dafe1e8f7fb5f2718424d4a5d668a555763",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "长春建筑学院人工智能产业学院赴吉林省讯达科技开展访企拓岗专项行动",
+    "listPublishDate": "2026-03-18",
+    "sourceOrder": 400
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:68ea43894dfce0f8aa0fc5bf616da1de7da2c5958f7e1bdbfd54f9359a08ca59",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/gccCqF9G-9J_Q9torCgizw",
+    "url": "https://mp.weixin.qq.com/s/gccCqF9G-9J_Q9torCgizw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "推动产教融合 搭建就业平台 中智集团校企对接会成功举办",
+    "source": "",
+    "publishDate": "2025-03-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gccCqF9G-9J_Q9torCgizw"
+  },
+  "resources": [],
+  "sourceFingerprint": "c161ff6a7ba61a79b6a7d8f5342c53d8a8ba0af891b6926d7be426c50c0e8dc6",
+  "evidence": {
+    "listPage": 97,
+    "listTitle": "推动产教融合 搭建就业平台 中智集团校企对接会成功举办",
+    "listPublishDate": "2025-03-28",
+    "sourceOrder": 962
+  }
+}

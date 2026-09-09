@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:7b450c1a32f2d953060dea6df38fb5ef17b6f9fe99289e28e7ecab491abe3bbf",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/6x1t1YDp0luFlVKEq7Y-Fg",
+    "url": "https://mp.weixin.qq.com/s/6x1t1YDp0luFlVKEq7Y-Fg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省经济管理干部学院“寒假促就业暖心行动”线上活动正式开启",
+    "source": "",
+    "publishDate": "2026-01-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/6x1t1YDp0luFlVKEq7Y-Fg"
+  },
+  "resources": [],
+  "sourceFingerprint": "251f88a5b4924792bd662e960f42d35a615d361fb999eca69c2dfca19151c468",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "吉林省经济管理干部学院“寒假促就业暖心行动”线上活动正式开启",
+    "listPublishDate": "2026-01-21",
+    "sourceOrder": 93
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1f83c4182c92e0f40f615a5757ae016c37119807439d1a564a111cb72e2a75ee",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/IFmykTLHjKFsoKX4MF3rmQ",
+    "url": "https://mp.weixin.qq.com/s/IFmykTLHjKFsoKX4MF3rmQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "四平职业大学副校长王艳玲带队开展跨区域访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-07-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/IFmykTLHjKFsoKX4MF3rmQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "5ee306dfc5ee76f1170b8a44d2609eff88ff506d17191c3c1112fa3984877d38",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "四平职业大学副校长王艳玲带队开展跨区域访企拓岗专项行动",
+    "listPublishDate": "2026-07-24",
+    "sourceOrder": 40
+  }
+}

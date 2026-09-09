@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:062086f8fde0442023bd549cca521c8246077dc29a9e5438dc1dc1eb0d0dbbc2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Zk1s087Y-KEU8O_RgQA-Aw",
+    "url": "https://mp.weixin.qq.com/s/Zk1s087Y-KEU8O_RgQA-Aw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业 互利共赢谋发展——四平现代职业学院开展书记院长“访企拓岗促就业”专项行动",
+    "source": "",
+    "publishDate": "2025-06-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Zk1s087Y-KEU8O_RgQA-Aw"
+  },
+  "resources": [],
+  "sourceFingerprint": "5d498005c455ed7e0a2f4c84c059f40ff93c4b5fe19563a97895bbcc6c609761",
+  "evidence": {
+    "listPage": 77,
+    "listTitle": "访企拓岗促就业 互利共赢谋发展——四平现代职业学院开展书记院长“访企拓岗促就业”专项行动",
+    "listPublishDate": "2025-06-27",
+    "sourceOrder": 764
+  }
+}

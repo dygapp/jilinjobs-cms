@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119926",
+    "contentId": "28737783119926",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119926"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2017届全省高校毕业生就业手续集中办理工作圆满结束",
+    "source": "",
+    "publishDate": "2017-07-12",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2017届全省高校毕业生就业手续集中办理工作圆满结束</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:省高校毕业生就业指导中心   发布时间:2017-7-12 13:52:19</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-indent: 43px;\"><span style=\"color: black; font-family: 宋体; font-size: 21px;\">截至2017年7月10日，2017届全省普通高校毕业生就业手续集中办理工作圆满完成。</span></p><p style=\"text-indent: 43px;\"><span style=\"color: black; font-family: 宋体; font-size: 21px;\">此项工作由省教育厅高校学生处负责，就业指导中心具体组织实施，专门召开了工作筹备会，制定了详细的工作方案，严肃工作纪律，明确责任分工，各项工作环节透明公开。抽调了业务精、能力强、负责任的人员参与此项工作。严格按照集中办理工作要求和流程做好每项工作，集中办理过程中取消了双休日和午休时间，在为高校提供优质、高效的各项服务同时，努力提升工作效率，保证工作质量。坚持毕业生实名登记就业信息制度，加大做好毕业生就业状况和数据信息的核查力度，面向社会公开就业信息举报电话，完善就业状况网上查询和意见反馈功能，确保就业数据真实准确，让毕业生安全顺利离校。</span></p><p style=\"text-align: left; text-indent: 43px;\"><span style=\"padding: 0px; border: 1px windowtext; border-image: none; color: black; font-family: 宋体; font-size: 21px;\">就业手续集中办理工作期间，共为全省59所高等院校和5所研究生培养单位的165513名毕业生集中办理了就业手续。其中，毕业研究生13838人，本科毕业生101291人，高职高专毕业生50384人。</span></p><p><br></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://02e42751fe3f1fb87013369c132fa43c9a4bb6377b7a147b2db66a4eb8a6642f\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://0983e75d7e4de7edac7e5f338ffb0c625391bb5643064091d37597d7291645d1\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363667448384375006893057.jpg",
+      "originalReference": "/chistory/cms/imgs/6363667448384375006893057.jpg",
+      "token": "migration-resource://02e42751fe3f1fb87013369c132fa43c9a4bb6377b7a147b2db66a4eb8a6642f",
+      "snapshotPath": "assets/02e42751fe3f1fb87013369c132fa43c9a4bb6377b7a147b2db66a4eb8a6642f.jpg",
+      "sha256": "02e42751fe3f1fb87013369c132fa43c9a4bb6377b7a147b2db66a4eb8a6642f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 201182
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363667448393750003163045.jpg",
+      "originalReference": "/chistory/cms/imgs/6363667448393750003163045.jpg",
+      "token": "migration-resource://0983e75d7e4de7edac7e5f338ffb0c625391bb5643064091d37597d7291645d1",
+      "snapshotPath": "assets/0983e75d7e4de7edac7e5f338ffb0c625391bb5643064091d37597d7291645d1.jpg",
+      "sha256": "0983e75d7e4de7edac7e5f338ffb0c625391bb5643064091d37597d7291645d1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 196692
+    }
+  ],
+  "sourceFingerprint": "aa34fd06e492b3ceca09fb4b2e613ca948fb3699321443de3d77223b28b3afd4",
+  "evidence": {
+    "listPage": 149,
+    "listTitle": "2017届全省高校毕业生就业手续集中办理工作圆满结束",
+    "listPublishDate": "2017-07-12",
+    "sourceOrder": 1487,
+    "detailPublishDate": "2017-07-12"
+  }
+}

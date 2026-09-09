@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119896",
+    "contentId": "28737783119896",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119896"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省第五届“吉人梦想杯”大学生创就业大赛决赛启动",
+    "source": "",
+    "publishDate": "2018-09-10",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省第五届“吉人梦想杯”大学生创就业大赛决赛启动</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2018-9-10 10:46:53</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋_GB2312; font-size: 21px;\">9月9日，吉林省第五届“吉人梦想杯”大学生创就业大赛决赛正式启动。省高校毕业生就业指导中心、省创业促进会相关负责人及326名参赛选手参加活动。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋_GB2312; font-size: 21px;\">在一场生动而实用的法律讲座之后，大赛组委会公布了复赛成绩和决赛入围团队名单，共有50支团队402名选手进入决赛，同时宣布决赛启动，并就决赛的具体规则进行了详细的讲解。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋_GB2312; font-size: 21px;\">决赛过程中，入围的50支团队将要经历“市场营销实操项目”、“吉人爱乡公益募捐”两个环节的考验。市场营销实操环节，要求参赛选手真正进入市场，体验一线市场营销工作，并根据团队成绩进行评分。公益捐款环节，要求参赛选手秉持爱心助人原则，为自闭症儿童进行爱心募捐。活动现场，组委会为入围选手们发放了活动主题文化衫。</span></p><p><span style=\"font-family: 仿宋_GB2312; font-size: 21px;\">现场的学生们情绪饱满，热情高涨，纷纷表示要在决赛中大显身手。大赛组委会表示，特别设置的公益募捐环节，就是为了培养大学生的社会责任感和使命感，增强他们热爱吉林、心系吉林、奉献吉林、扎根吉林的家乡情怀。</span></p><p>&nbsp;</p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><img title=\"1.JPG\" src=\"migration-resource://2070abdd80c964f947f251b60d963a1fc39add09db49eb4baf34a61bb82e6d48\"></p><p style=\"text-align: center;\"><img title=\"2.JPG\" src=\"migration-resource://2b217f046d980674f199ac153e9452e1531840875b265dfdcad9f72bb4f2c259\"></p><p style=\"text-align: center;\"><img title=\"3.JPG\" src=\"migration-resource://7451f7c8bf24a2c1daa00a8cd08d1efda00f32646366019ec3b9128e52437968\"></p><p style=\"text-align: center;\"><img title=\"4.JPG\" src=\"migration-resource://af2635d37788610b72dc9208acdd3ef09791c89be2731f634cbe883ddab9ddbe\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6367364214696875007931542.JPG",
+      "originalReference": "/chistory/cms/imgs/6367364214696875007931542.JPG",
+      "token": "migration-resource://2070abdd80c964f947f251b60d963a1fc39add09db49eb4baf34a61bb82e6d48",
+      "snapshotPath": "assets/2070abdd80c964f947f251b60d963a1fc39add09db49eb4baf34a61bb82e6d48.jpg",
+      "sha256": "2070abdd80c964f947f251b60d963a1fc39add09db49eb4baf34a61bb82e6d48",
+      "contentType": "image/jpeg",
+      "sizeBytes": 209642
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6367364214709375001660021.JPG",
+      "originalReference": "/chistory/cms/imgs/6367364214709375001660021.JPG",
+      "token": "migration-resource://2b217f046d980674f199ac153e9452e1531840875b265dfdcad9f72bb4f2c259",
+      "snapshotPath": "assets/2b217f046d980674f199ac153e9452e1531840875b265dfdcad9f72bb4f2c259.jpg",
+      "sha256": "2b217f046d980674f199ac153e9452e1531840875b265dfdcad9f72bb4f2c259",
+      "contentType": "image/jpeg",
+      "sizeBytes": 228268
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6367364214717187508402591.JPG",
+      "originalReference": "/chistory/cms/imgs/6367364214717187508402591.JPG",
+      "token": "migration-resource://7451f7c8bf24a2c1daa00a8cd08d1efda00f32646366019ec3b9128e52437968",
+      "snapshotPath": "assets/7451f7c8bf24a2c1daa00a8cd08d1efda00f32646366019ec3b9128e52437968.jpg",
+      "sha256": "7451f7c8bf24a2c1daa00a8cd08d1efda00f32646366019ec3b9128e52437968",
+      "contentType": "image/jpeg",
+      "sizeBytes": 261460
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6367364214725000006145162.JPG",
+      "originalReference": "/chistory/cms/imgs/6367364214725000006145162.JPG",
+      "token": "migration-resource://af2635d37788610b72dc9208acdd3ef09791c89be2731f634cbe883ddab9ddbe",
+      "snapshotPath": "assets/af2635d37788610b72dc9208acdd3ef09791c89be2731f634cbe883ddab9ddbe.jpg",
+      "sha256": "af2635d37788610b72dc9208acdd3ef09791c89be2731f634cbe883ddab9ddbe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 228545
+    }
+  ],
+  "sourceFingerprint": "a5da4d53edccb4fc1bbeeebfe458a223c76262912c3782bb58f55bb57f41fe3e",
+  "evidence": {
+    "listPage": 146,
+    "listTitle": "吉林省第五届“吉人梦想杯”大学生创就业大赛决赛启动",
+    "listPublishDate": "2018-09-10",
+    "sourceOrder": 1460,
+    "detailPublishDate": "2018-09-10"
+  }
+}

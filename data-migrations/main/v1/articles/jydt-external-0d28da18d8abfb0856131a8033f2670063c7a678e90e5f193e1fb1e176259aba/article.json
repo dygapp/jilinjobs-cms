@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0d28da18d8abfb0856131a8033f2670063c7a678e90e5f193e1fb1e176259aba",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1180/3162.htm",
+    "url": "http://www.cvit.edu.cn/info/1180/3162.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗强对接 校企携手育英才——长春职业技术大学党委书记、校长带队走访长春市见真精密机械制造有限公司",
+    "source": "",
+    "publishDate": "2025-11-28",
+    "bodyHtml": "",
+    "externalUrl": "http://www.cvit.edu.cn/info/1180/3162.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "91d058ed7785ed3df757fe7c43c6d8bede87b1f460608c91c7234ddb764e9377",
+  "evidence": {
+    "listPage": 57,
+    "listTitle": "访企拓岗强对接 校企携手育英才——长春职业技术大学党委书记、校长带队走访长春市见真精密机械制造有限公司",
+    "listPublishDate": "2025-11-28",
+    "sourceOrder": 566
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:0e5d539d94ffdd78aa8bf0ca41f9d490db6e3ae9d25ff051449e3756c328dd09",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/PTB25WrW53nn5C2kQK3I4g",
+    "url": "https://mp.weixin.qq.com/s/PTB25WrW53nn5C2kQK3I4g"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "第十六届吉林省理工类人才专场招聘会、第二十届东北地方高校就业协作体联合双选会暨长春工业大学2026届毕业生秋季双选会邀请函",
+    "source": "",
+    "publishDate": "2025-09-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/PTB25WrW53nn5C2kQK3I4g"
+  },
+  "resources": [],
+  "sourceFingerprint": "a2850dc32a40db685b8e9ddc7964edff7fef38b040bda95e33f9565500245548",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "第十六届吉林省理工类人才专场招聘会、第二十届东北地方高校就业协作体联合双选会暨长春工业大学2026届毕业生秋季双选会邀请函",
+    "listPublishDate": "2025-09-26",
+    "sourceOrder": 139
+  }
+}

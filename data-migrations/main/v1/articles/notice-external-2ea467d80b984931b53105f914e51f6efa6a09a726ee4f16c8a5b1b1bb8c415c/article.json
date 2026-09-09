@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:2ea467d80b984931b53105f914e51f6efa6a09a726ee4f16c8a5b1b1bb8c415c",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/snow-book/index.html",
+    "url": "https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=9302833845552837118&t=1716888319320&toc_style_id=feeds_default&share_to=wechat&track_id=173e0d8d-e38b-47bd-b3bd-34fe3481fbd9"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平在中共中央政治局第十四次集体学习时强调 促进高质量充分就业 不断增强广大劳动者的获得感幸福感安全感",
+    "source": "",
+    "publishDate": "2024-05-29",
+    "bodyHtml": "",
+    "externalUrl": "https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=9302833845552837118&t=1716888319320&toc_style_id=feeds_default&share_to=wechat&track_id=173e0d8d-e38b-47bd-b3bd-34fe3481fbd9"
+  },
+  "resources": [],
+  "sourceFingerprint": "0ca20c94951b532193a3b98bb986461e0db3fa4a0c08d2858055c9cd4a766b45",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "习近平在中共中央政治局第十四次集体学习时强调 促进高质量充分就业 不断增强广大劳动者的获得感幸福感安全感",
+    "listPublishDate": "2024-05-29",
+    "sourceOrder": 81
+  }
+}

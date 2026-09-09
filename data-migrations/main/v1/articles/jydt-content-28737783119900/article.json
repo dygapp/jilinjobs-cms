@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119900",
+    "contentId": "28737783119900",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119900"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "“就业最后一公里”2018届吉林省普通高校毕业生离校前专场招聘会在长春举行",
+    "source": "",
+    "publishDate": "2018-06-30",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">“就业最后一公里”2018届吉林省普通高校毕业生离校前专场招聘会在长春举行</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2018-6-30 14:25:01</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-align: left; line-height: 36px; text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">6月30日，“就业最后一公里”2018届吉林省普通高校毕业生离校前专场招聘会在长春教育宾馆举行。</span></p><p style=\"line-height: 36px; text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">本次专场招聘活动由吉林省教育厅主办，吉林省高校毕业生就业指导中心承办，是吉林省教育厅深入贯彻落实省委、省政府促进高校毕业生就业工作部署，全面实施“吉人生根工程”的重要活动之一。在2018届全省高校毕业生离校之际，为广大未就业毕业生推送的“最后一公里”精准对接服务活动。在招聘会前，所有的岗位信息均已通过网站、微信公众平台、手机短信、宣传海报等方式在全省高校内进行广泛宣传，向毕业生进行全面推送。各高校积极组织毕业生参加应聘，极大增强了选人、用人的针对性，大幅提升了招聘签约成功率。据统计，本场招聘会邀请省内优质用人单位101家。累计提供岗位3000余个，涵盖工科、建筑、IT、医疗、金融、教育、管理等众多行业，学历层次包含研究生、本科生、高职高专生，吸引全省30多所高校超过2000名毕业生到场应聘。用人单位收到学生投递简历1500余份，现场达成初步就业意向500余个。</span></p><p style=\"line-height: 36px; text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">为有效的引导高校毕业生到我省重点行业、重点企业就业创业。今年3月，吉林省教育厅全面启动“吉人生根工程”，立足吉林振兴发展需要，推动高等教育人才培养与吉林经济社会发展相匹配的改革进程。组织高校与省内各地开展全面、精准的政校企对接交流活动，充分挖掘我省优质企业资源，加快推进全省高校与省内各地区开展各类校企、校地、校产合作，为吉林新一轮全面振兴提供智力支撑和人才保障。</span></p><p style=\"line-height: 36px; text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">吉林省教育厅相关职能部门负责人参加了招聘活动，吉林日报和吉林教育电视台等多家媒体进行现场报道。</span></p><p>&nbsp;</p><p style=\"text-align: center;\"><img title=\"IMG_3474.JPG\" src=\"migration-resource://9e7b8dee81b5f0f8d136cb17858b6ace8f19dbe921c8286acb90acbafa9d95b0\"></p><p></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366639761024100009245974.JPG",
+      "originalReference": "/chistory/cms/imgs/6366639761024100009245974.JPG",
+      "token": "migration-resource://9e7b8dee81b5f0f8d136cb17858b6ace8f19dbe921c8286acb90acbafa9d95b0",
+      "snapshotPath": "assets/9e7b8dee81b5f0f8d136cb17858b6ace8f19dbe921c8286acb90acbafa9d95b0.jpg",
+      "sha256": "9e7b8dee81b5f0f8d136cb17858b6ace8f19dbe921c8286acb90acbafa9d95b0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 155200
+    }
+  ],
+  "sourceFingerprint": "24e74a8e93886885fc451ca555eac9a9202c13c8c14072e8226e377a0cacd664",
+  "evidence": {
+    "listPage": 147,
+    "listTitle": "“就业最后一公里”2018届吉林省普通高校毕业生离校前专场招聘会在长春举行",
+    "listPublishDate": "2018-06-30",
+    "sourceOrder": 1464,
+    "detailPublishDate": "2018-06-30"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8d09c5bfffdde8032478e1c3604b05a04c8015b83048063eafcfec68520396e9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/4AeIAUuCjdCkTHoJWfspEg",
+    "url": "https://mp.weixin.qq.com/s/4AeIAUuCjdCkTHoJWfspEg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学举办“服务吉林高质量发展”吉林省2026届能源类高校毕业生就业洽谈会",
+    "source": "",
+    "publishDate": "2025-12-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4AeIAUuCjdCkTHoJWfspEg"
+  },
+  "resources": [],
+  "sourceFingerprint": "91512d606745a00aaf4ef024d2659b8970495ca2bee9fc0e000f8c4b9084a43d",
+  "evidence": {
+    "listPage": 56,
+    "listTitle": "东北电力大学举办“服务吉林高质量发展”吉林省2026届能源类高校毕业生就业洽谈会",
+    "listPublishDate": "2025-12-12",
+    "sourceOrder": 551
+  }
+}

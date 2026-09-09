@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4c7ddbd7aa5807687917eba0ac2278bc349d2074f80d2a847f30a05e53707f4c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/LcyiK4JwfRSMVm4dzE3fHg",
+    "url": "https://mp.weixin.qq.com/s/LcyiK4JwfRSMVm4dzE3fHg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "辽源职业技术学院与吉林建龙钢铁有限责任公司举办就业洽谈会",
+    "source": "",
+    "publishDate": "2025-10-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/LcyiK4JwfRSMVm4dzE3fHg"
+  },
+  "resources": [],
+  "sourceFingerprint": "7e8fa5eab10558e18566677b1d7867d9b48b15cf7e61ab3a41c840f3275e0bec",
+  "evidence": {
+    "listPage": 69,
+    "listTitle": "辽源职业技术学院与吉林建龙钢铁有限责任公司举办就业洽谈会",
+    "listPublishDate": "2025-10-09",
+    "sourceOrder": 686
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f183b20ae52d5aaf6c12666df9d4dc775c3f6a935ebd112b04eeff874f1ed656",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Bfa4Pk8hiimrknjKIa-JoA",
+    "url": "https://mp.weixin.qq.com/s/Bfa4Pk8hiimrknjKIa-JoA?scene=25&sessionid=1465308478"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学与汇泽资本开展校企合作交流",
+    "source": "",
+    "publishDate": "2025-05-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Bfa4Pk8hiimrknjKIa-JoA?scene=25&sessionid=1465308478"
+  },
+  "resources": [],
+  "sourceFingerprint": "398521a7839f6ca052dba8a415d14504ac725fe8719e2e0df467641a4ab35f0b",
+  "evidence": {
+    "listPage": 91,
+    "listTitle": "吉林财经大学与汇泽资本开展校企合作交流",
+    "listPublishDate": "2025-05-13",
+    "sourceOrder": 902
+  }
+}

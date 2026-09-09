@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0e40dbdad409d9d673faee180cc236d7b4e2586c7a24ac1eeb456c191fc3656c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1055/6147.htm",
+    "url": "https://www.jlict.edu.cn/info/1055/6147.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "学校举办“创业奋斗 ‘就’在吉林”2024年吉林化工学院-吉林省优势特色产业人才供需洽谈会",
+    "source": "",
+    "publishDate": "2024-04-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlict.edu.cn/info/1055/6147.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "69c43089d6b302fcb98c03db976edd2b5e57d6698de2ac67b1fc197f842b35d4",
+  "evidence": {
+    "listPage": 110,
+    "listTitle": "学校举办“创业奋斗 ‘就’在吉林”2024年吉林化工学院-吉林省优势特色产业人才供需洽谈会",
+    "listPublishDate": "2024-04-02",
+    "sourceOrder": 1094
+  }
+}

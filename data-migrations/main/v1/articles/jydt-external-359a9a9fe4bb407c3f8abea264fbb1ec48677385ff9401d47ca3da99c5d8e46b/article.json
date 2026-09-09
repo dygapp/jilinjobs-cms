@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:359a9a9fe4bb407c3f8abea264fbb1ec48677385ff9401d47ca3da99c5d8e46b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Wp0DBhDX2mPwPnzN_4VoSg",
+    "url": "https://mp.weixin.qq.com/s/Wp0DBhDX2mPwPnzN_4VoSg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企合作｜ 吉林通用航空职业技术学院王洪福带队赴京津访企拓岗成果丰硕",
+    "source": "",
+    "publishDate": "2026-01-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Wp0DBhDX2mPwPnzN_4VoSg"
+  },
+  "resources": [],
+  "sourceFingerprint": "206b5ed0ea99a248dbe684dadc607c89776316783aa3af5430d834208aaa26c3",
+  "evidence": {
+    "listPage": 48,
+    "listTitle": "校企合作｜ 吉林通用航空职业技术学院王洪福带队赴京津访企拓岗成果丰硕",
+    "listPublishDate": "2026-01-28",
+    "sourceOrder": 471
+  }
+}

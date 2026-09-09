@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d8318651bd8869904dfa630b35051b16fe4d96ab2b59f48ebc062e5b104e6686",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/lQnPBy0XLIZS2vQsnnfd6g",
+    "url": "https://mp.weixin.qq.com/s/lQnPBy0XLIZS2vQsnnfd6g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业大学党委书记张殿锋到吉林国色天莲文化产业集团有限公司开展访企拓岗调研",
+    "source": "",
+    "publishDate": "2025-06-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/lQnPBy0XLIZS2vQsnnfd6g"
+  },
+  "resources": [],
+  "sourceFingerprint": "38706f9de5b18d8d32c3d3036970b8cbee3399efc844a2e48f21212389ae4f19",
+  "evidence": {
+    "listPage": 85,
+    "listTitle": "吉林农业大学党委书记张殿锋到吉林国色天莲文化产业集团有限公司开展访企拓岗调研",
+    "listPublishDate": "2025-06-09",
+    "sourceOrder": 842
+  }
+}

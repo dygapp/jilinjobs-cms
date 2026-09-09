@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:d83ffcfcc5b4316a0d761f3f627158dcf58e93c88533af485138987f46ab2256",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/zH_yh1XjECp0AD3eTmD7Aw",
+    "url": "https://mp.weixin.qq.com/s/zH_yh1XjECp0AD3eTmD7Aw"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "丁薛祥在全国高校毕业生等青年就业创业工作视频会议上强调 千方百计促进高校毕业生就业 确保青年就业形势总体稳定",
+    "source": "",
+    "publishDate": "2024-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/zH_yh1XjECp0AD3eTmD7Aw"
+  },
+  "resources": [],
+  "sourceFingerprint": "79773851cbe1e293e14ce357e4ebce35f9609531af74d83ba172ee380dd05584",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "丁薛祥在全国高校毕业生等青年就业创业工作视频会议上强调 千方百计促进高校毕业生就业 确保青年就业形势总体稳定",
+    "listPublishDate": "2024-05-15",
+    "sourceOrder": 85
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:26c34f8546681fc6ee611e8e7d85da56dc79f12ab2bf5f6b1d23743ae17fbdad",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5624.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5624.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学召开2026届毕业生就业工作暨留省就业专题调度会",
+    "source": "",
+    "publishDate": "2026-04-02",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5624.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "6e9925a7ee7adf033721e3e95794fe3d94e1fe3be3323db2e0b93cc493690783",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "长春工业大学召开2026届毕业生就业工作暨留省就业专题调度会",
+    "listPublishDate": "2026-04-02",
+    "sourceOrder": 330
+  }
+}

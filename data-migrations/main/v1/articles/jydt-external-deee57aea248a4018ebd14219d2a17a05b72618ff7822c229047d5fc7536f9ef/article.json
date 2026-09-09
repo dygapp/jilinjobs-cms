@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:deee57aea248a4018ebd14219d2a17a05b72618ff7822c229047d5fc7536f9ef",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/P_vVBcE7P6Zm2fXAl7WJ-g",
+    "url": "https://mp.weixin.qq.com/s/P_vVBcE7P6Zm2fXAl7WJ-g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学副校长朱卫红带队赴长春开展“优企引才”定向访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/P_vVBcE7P6Zm2fXAl7WJ-g"
+  },
+  "resources": [],
+  "sourceFingerprint": "49c6a26802a81630216d4a6a219ca557f011d8582fc8487a70f2ed7b0d5f5c62",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "延边大学副校长朱卫红带队赴长春开展“优企引才”定向访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-20",
+    "sourceOrder": 394
+  }
+}

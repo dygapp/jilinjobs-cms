@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122760",
+    "contentId": "28737783122760",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122760"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办高校创新创业基础能力教学设计指导课程培训班的通知",
+    "source": "",
+    "publishDate": "2017-04-14",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办高校创新创业基础能力教学设计指导课程培训班的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2017-4-14 15:14:36</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img title=\"1.jpg\" src=\"migration-resource://2c8a19ff3fdde468a892ed24a2b9734b2fbb89bbcd0117a2ccddb00e4ce0fba9\"></p><p style=\"text-align: center\"><img title=\"2.jpg\" src=\"migration-resource://c2cb55cc611b5f2b7d377bcd93589d53e3ef8e8e87ed400f70a55531d31b42f5\"></p><p style=\"text-align: center\"><img title=\"3.jpg\" src=\"migration-resource://40a0da587822d0459a12854035355e59e089adf769e0bfbebc8ff4d9c661ccaa\"></p><p style=\"text-align: center\"><img title=\"4.jpg\" src=\"migration-resource://677585da4f7f686f74cbe6968be01e2d2b9d4c08f8642493c13dd78365d7cb1f\"></p><p style=\"text-align: center\"><img title=\"5.jpg\" src=\"migration-resource://fa9ec3240b2dfc692e443e4b383543b5fea5094fdf0ef45864e96f4ac596822d\"></p><p style=\"text-align: center\"><img title=\"6.jpg\" src=\"migration-resource://6900db0d7fbba32f8d78a5444bbdd1d59453bfec3b8f1e8ef595cbaf0c1afec0\"></p><p><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362777969850000004246552.jpg",
+      "originalReference": "/chistory/cms/imgs/6362777969850000004246552.jpg",
+      "token": "migration-resource://2c8a19ff3fdde468a892ed24a2b9734b2fbb89bbcd0117a2ccddb00e4ce0fba9",
+      "snapshotPath": "assets/2c8a19ff3fdde468a892ed24a2b9734b2fbb89bbcd0117a2ccddb00e4ce0fba9.jpg",
+      "sha256": "2c8a19ff3fdde468a892ed24a2b9734b2fbb89bbcd0117a2ccddb00e4ce0fba9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 91607
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362777969973437501302091.jpg",
+      "originalReference": "/chistory/cms/imgs/6362777969973437501302091.jpg",
+      "token": "migration-resource://c2cb55cc611b5f2b7d377bcd93589d53e3ef8e8e87ed400f70a55531d31b42f5",
+      "snapshotPath": "assets/c2cb55cc611b5f2b7d377bcd93589d53e3ef8e8e87ed400f70a55531d31b42f5.jpg",
+      "sha256": "c2cb55cc611b5f2b7d377bcd93589d53e3ef8e8e87ed400f70a55531d31b42f5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 76392
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362777970085937507858398.jpg",
+      "originalReference": "/chistory/cms/imgs/6362777970085937507858398.jpg",
+      "token": "migration-resource://40a0da587822d0459a12854035355e59e089adf769e0bfbebc8ff4d9c661ccaa",
+      "snapshotPath": "assets/40a0da587822d0459a12854035355e59e089adf769e0bfbebc8ff4d9c661ccaa.jpg",
+      "sha256": "40a0da587822d0459a12854035355e59e089adf769e0bfbebc8ff4d9c661ccaa",
+      "contentType": "image/jpeg",
+      "sizeBytes": 64579
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362777970195312503658041.jpg",
+      "originalReference": "/chistory/cms/imgs/6362777970195312503658041.jpg",
+      "token": "migration-resource://677585da4f7f686f74cbe6968be01e2d2b9d4c08f8642493c13dd78365d7cb1f",
+      "snapshotPath": "assets/677585da4f7f686f74cbe6968be01e2d2b9d4c08f8642493c13dd78365d7cb1f.jpg",
+      "sha256": "677585da4f7f686f74cbe6968be01e2d2b9d4c08f8642493c13dd78365d7cb1f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 83955
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362777970303125005228439.jpg",
+      "originalReference": "/chistory/cms/imgs/6362777970303125005228439.jpg",
+      "token": "migration-resource://fa9ec3240b2dfc692e443e4b383543b5fea5094fdf0ef45864e96f4ac596822d",
+      "snapshotPath": "assets/fa9ec3240b2dfc692e443e4b383543b5fea5094fdf0ef45864e96f4ac596822d.jpg",
+      "sha256": "fa9ec3240b2dfc692e443e4b383543b5fea5094fdf0ef45864e96f4ac596822d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 40581
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362777970403125009056267.jpg",
+      "originalReference": "/chistory/cms/imgs/6362777970403125009056267.jpg",
+      "token": "migration-resource://6900db0d7fbba32f8d78a5444bbdd1d59453bfec3b8f1e8ef595cbaf0c1afec0",
+      "snapshotPath": "assets/6900db0d7fbba32f8d78a5444bbdd1d59453bfec3b8f1e8ef595cbaf0c1afec0.jpg",
+      "sha256": "6900db0d7fbba32f8d78a5444bbdd1d59453bfec3b8f1e8ef595cbaf0c1afec0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 47782
+    }
+  ],
+  "sourceFingerprint": "9d8c7c98b3cb2d0e309a4689c2310201d395d363b3012f0976e7265b726045a0",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "关于举办高校创新创业基础能力教学设计指导课程培训班的通知",
+    "listPublishDate": "2017-04-14",
+    "sourceOrder": 220,
+    "detailPublishDate": "2017-04-14"
+  }
+}

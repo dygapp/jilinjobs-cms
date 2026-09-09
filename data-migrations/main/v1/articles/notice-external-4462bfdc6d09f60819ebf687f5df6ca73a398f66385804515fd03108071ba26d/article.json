@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:4462bfdc6d09f60819ebf687f5df6ca73a398f66385804515fd03108071ba26d",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/E-Q7ZtHAV6ztYvWy5hql7g",
+    "url": "https://mp.weixin.qq.com/s/E-Q7ZtHAV6ztYvWy5hql7g"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "毕业生找工作，住宿有优惠！教育部、共青团中央最新通知来了",
+    "source": "",
+    "publishDate": "2025-04-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/E-Q7ZtHAV6ztYvWy5hql7g"
+  },
+  "resources": [],
+  "sourceFingerprint": "d1f430dcf3fbc3f99fc926f632dee94c859cbb849b6f760f18e9a6f46097899f",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "毕业生找工作，住宿有优惠！教育部、共青团中央最新通知来了",
+    "listPublishDate": "2025-04-25",
+    "sourceOrder": 38
+  }
+}

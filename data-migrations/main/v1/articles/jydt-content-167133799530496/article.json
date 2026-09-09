@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:167133799530496",
+    "contentId": "167133799530496",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=167133799530496"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "云南：教育部调研组在滇开展调研 王予波与翁铁慧一行进行工作交流",
+    "source": "",
+    "publishDate": "2023-07-07",
+    "bodyHtml": "\n                        <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 6月28日至29日，教育部党组成员、副部长翁铁慧率队到云南省调研高校毕业生就业和高考综合改革等工作。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 云南省委副书记、省长王予波与调研组进行了工作交流。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 翁铁慧指出，云南省委、省政府认真贯彻习近平总书记关于高校毕业生就业工作的系列重要指示批示精神，将高校毕业生就业工作作为重要政治责任，推出真招实招，推动就业质量稳步提升。她强调，要提高政治站位，全面贯彻党中央、国务院决策部署，加快落实减负稳岗扩就业政策，加快组织政策性岗位招录，加强困难毕业生兜底帮扶，做好校园安全工作，严守就业数据真实准确的“生命线”。她还与高校师生座谈，表示教育部和各级政府将用心用情帮助同学们实现更好就业。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 在调研高考综合改革工作时，翁铁慧指出，要加强组织领导、统筹协调、工作保障，推进“教考招”联动改革，营造良好舆论环境，确保2025年高考综合改革平稳落地。</span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "095b2c0241c2b74a441fb9c10d0b0f778e0d27a654dfc1c60c8c2ea21d41f127",
+  "evidence": {
+    "listPage": 114,
+    "listTitle": "云南：教育部调研组在滇开展调研 王予波与翁铁慧一行进行工作交流",
+    "listPublishDate": "2023-07-07",
+    "sourceOrder": 1134,
+    "detailPublishDate": "2023-07-07"
+  }
+}

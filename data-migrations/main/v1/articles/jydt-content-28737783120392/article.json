@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120392",
+    "contentId": "28737783120392",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120392"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "黑龙江：“创造性”落实促进高校毕业生就业",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">黑龙江：“创造性”落实促进高校毕业生就业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 新华网哈尔滨3月24日专电(记者王建威)记者从黑龙江省人力资源和社会保障厅了解到，针对高校毕业生就业难题，这个省“创造性”地落实促进高校毕业生就业的各项政策。</font></p> <p><font size=\"2\">　　国务院为促进毕业生就业出台一系列政策，黑龙江省根据省情，在一些方面进行拓展创新：</font></p> <p><font size=\"2\">　　提高“三支一扶”“村村大学生”等项目的毕业生的生活补贴标准;在基层服务期满后三年内参加公务员考录和事业单位招聘的，笔试成绩给予适当加分。</font></p> <p><font size=\"2\">　　经认定生产经营困难并积极吸纳毕业生的国有大中型企业，可在规定时限内缓缴养老、医疗、失业、工伤和生育五项社会保险费，阶段性降低除养老保险外的四项社会保险费率，使用失业保险基金为稳定岗位支付社会保险补贴和岗位补贴，使用就业专项资金开展职工在岗培训。</font></p> <p><font size=\"2\">　　降低毕业生自主创业门槛，放宽市场准入条件，创办企业首次出资额允许为零;毕业两年以内的毕业生从事个体经营的，三年内免收管理费、登记费和证照类等行政事业性收费;对毕业生从事个体经营或创办企业实行税收优惠政策，扩大小额贷款规模等。</font></p> <p><font size=\"2\">　　据了解，黑龙江省2008年前累计有12.7万名高校毕业生未就业，加上今年19万名毕业生，共有近32万名毕业生需要就业，就业任务艰巨。<br></font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "615cc2e5ee9fe9e425589f5464d3418805d3c786efee1eb712ca61b13cb3fb87",
+  "evidence": {
+    "listPage": 196,
+    "listTitle": "黑龙江：“创造性”落实促进高校毕业生就业",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1954,
+    "detailPublishDate": "2009-04-04"
+  }
+}

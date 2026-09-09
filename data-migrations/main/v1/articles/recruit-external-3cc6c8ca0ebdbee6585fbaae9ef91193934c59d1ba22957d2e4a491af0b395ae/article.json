@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:3cc6c8ca0ebdbee6585fbaae9ef91193934c59d1ba22957d2e4a491af0b395ae",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/GnxGoPh5ufha_UGb5jDvMg",
+    "url": "https://mp.weixin.qq.com/s/GnxGoPh5ufha_UGb5jDvMg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化师范学院2025届毕业生秋季校园双选会邀请函",
+    "source": "",
+    "publishDate": "2024-10-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/GnxGoPh5ufha_UGb5jDvMg"
+  },
+  "resources": [],
+  "sourceFingerprint": "1d5d92c8b7999780d9b4db6e8758dbf9997907d905485fbfcdcebe640d4f2034",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "通化师范学院2025届毕业生秋季校园双选会邀请函",
+    "listPublishDate": "2024-10-31",
+    "sourceOrder": 235
+  }
+}

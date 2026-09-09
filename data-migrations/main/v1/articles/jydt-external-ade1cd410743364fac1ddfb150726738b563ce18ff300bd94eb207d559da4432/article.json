@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ade1cd410743364fac1ddfb150726738b563ce18ff300bd94eb207d559da4432",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/article/7381667656572699145/",
+    "url": "https://www.toutiao.com/article/7381667656572699145/?upstream_biz=toutiao_pc&wxshare_count=4&source=m_redirect&wid=1718759458361"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春职业技术学院商贸学院2024年实习就业双选会举办",
+    "source": "",
+    "publishDate": "2024-06-18",
+    "bodyHtml": "",
+    "externalUrl": "https://www.toutiao.com/article/7381667656572699145/?upstream_biz=toutiao_pc&wxshare_count=4&source=m_redirect&wid=1718759458361"
+  },
+  "resources": [],
+  "sourceFingerprint": "6fc6e584da0c8b457de76eca5ab0082f1fbf8563678b958cd3425111d203293f",
+  "evidence": {
+    "listPage": 104,
+    "listTitle": "长春职业技术学院商贸学院2024年实习就业双选会举办",
+    "listPublishDate": "2024-06-18",
+    "sourceOrder": 1039
+  }
+}

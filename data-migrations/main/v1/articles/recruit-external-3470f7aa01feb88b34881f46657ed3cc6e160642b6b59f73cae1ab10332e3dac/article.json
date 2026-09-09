@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:3470f7aa01feb88b34881f46657ed3cc6e160642b6b59f73cae1ab10332e3dac",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/SnYN6CBpfA-EcQFbZhE3kA",
+    "url": "https://mp.weixin.qq.com/s/SnYN6CBpfA-EcQFbZhE3kA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“金秋启航 筑梦未来”长春电子科技学院2026届毕业生网络双选会",
+    "source": "",
+    "publishDate": "2025-10-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/SnYN6CBpfA-EcQFbZhE3kA"
+  },
+  "resources": [],
+  "sourceFingerprint": "edec045447182b51ca8862ec4521a233902597fd98d36c035c6b1e75e01597f6",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "“金秋启航 筑梦未来”长春电子科技学院2026届毕业生网络双选会",
+    "listPublishDate": "2025-10-20",
+    "sourceOrder": 125
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:73e8d775108bb5657dd8a97cb36576f93765b579148608541acd4b52711bec14",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/1Nk6wvFKhg9_M9aE7BS5JQ",
+    "url": "https://mp.weixin.qq.com/s/1Nk6wvFKhg9_M9aE7BS5JQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范高等专科学校与吉林省和兴计算机科技开发有限公司校企联建党支部正式启动",
+    "source": "",
+    "publishDate": "2026-05-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1Nk6wvFKhg9_M9aE7BS5JQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "903875fdcda554a8073f220862b943610451ee155bbb2725dda5e7d869a0aa11",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "长春师范高等专科学校与吉林省和兴计算机科技开发有限公司校企联建党支部正式启动",
+    "listPublishDate": "2026-05-27",
+    "sourceOrder": 138
+  }
+}

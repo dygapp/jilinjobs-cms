@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268947152732160",
+    "contentId": "268947152732160",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268947152732160"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春中医药大学举办2024年大学生职业规划大赛金奖争夺赛",
+    "source": "",
+    "publishDate": "2024-11-18",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://3a9cd03007daac7d8a222b884ec3a8904806e1c584c74b18b6bd7d4da490a16b\" width=\"1587\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://4aeeabcb1c10ada00f63a73dad2d0f59efb849e91f89bca2311834197db9ecc7\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/baeb19f1-403a-4a2b-b916-973d028f9a2b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/baeb19f1-403a-4a2b-b916-973d028f9a2b.jpg",
+      "token": "migration-resource://3a9cd03007daac7d8a222b884ec3a8904806e1c584c74b18b6bd7d4da490a16b",
+      "snapshotPath": "assets/3a9cd03007daac7d8a222b884ec3a8904806e1c584c74b18b6bd7d4da490a16b.jpg",
+      "sha256": "3a9cd03007daac7d8a222b884ec3a8904806e1c584c74b18b6bd7d4da490a16b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 430800
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/521f565d-2362-40ea-8bb1-0f4dc46f2637.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/521f565d-2362-40ea-8bb1-0f4dc46f2637.jpg",
+      "token": "migration-resource://4aeeabcb1c10ada00f63a73dad2d0f59efb849e91f89bca2311834197db9ecc7",
+      "snapshotPath": "assets/4aeeabcb1c10ada00f63a73dad2d0f59efb849e91f89bca2311834197db9ecc7.jpg",
+      "sha256": "4aeeabcb1c10ada00f63a73dad2d0f59efb849e91f89bca2311834197db9ecc7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 148055
+    }
+  ],
+  "sourceFingerprint": "0900d96594a19c14750f841649dd7e396e8a138553195dff8a362c922916b864",
+  "evidence": {
+    "listPage": 102,
+    "listTitle": "长春中医药大学举办2024年大学生职业规划大赛金奖争夺赛",
+    "listPublishDate": "2024-11-18",
+    "sourceOrder": 1014,
+    "detailPublishDate": "2024-11-18"
+  }
+}

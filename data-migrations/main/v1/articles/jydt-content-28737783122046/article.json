@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122046",
+    "contentId": "28737783122046",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122046"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "省高校毕业生就业指导中心到省教育考试院调研学习计算机考务管理工作",
+    "source": "",
+    "publishDate": "2018-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">省高校毕业生就业指导中心到省教育考试院调研学习计算机考务管理工作</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2018-4-4 10:40:04</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋_GB2312; font-size: 21px;\">近日，为进一步提升中心承办的全国计算机应用水平考试（NIT)考务管理工作水平，规范考试工作流程，强化考风考纪，按照厅主管领导指示要求，中心书记孙维才、副主任张旭光带领NIT考试部门有关人员到省教育考试院调研学习计算机考试考务管理工作先进经验和做法。中心一行人员受到省教育考试院郑景国院长的热情接待，他责成负责全国计算机等级考试的非学历部部长赵鹏给予了具体指导。中心工作人员通过半天的学习和交流，在考点设置、考务管理、应急预案、数据安全、考风考纪等方面学习到先进的管理办法和措施，对完善我中心NIT考试各项规章制度、规范工作流程、严肃考风考纪等工作起到巨大推进作用。通过此次调研学习，进一步提升我省NIT考试考务工作的管理能力和水平，为确保全年NIT考试平稳顺利奠定基础。</span></p><p><br></p><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"QQ图片20180409100202.jpg\" src=\"migration-resource://dcb50cf47c342a174bd8eb1495ff03e350c05d92c9cdcb7b5d3e0dbc5e22a7ec\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6365886729440625003785605.jpg",
+      "originalReference": "/chistory/cms/imgs/6365886729440625003785605.jpg",
+      "token": "migration-resource://dcb50cf47c342a174bd8eb1495ff03e350c05d92c9cdcb7b5d3e0dbc5e22a7ec",
+      "snapshotPath": "assets/dcb50cf47c342a174bd8eb1495ff03e350c05d92c9cdcb7b5d3e0dbc5e22a7ec.jpg",
+      "sha256": "dcb50cf47c342a174bd8eb1495ff03e350c05d92c9cdcb7b5d3e0dbc5e22a7ec",
+      "contentType": "image/jpeg",
+      "sizeBytes": 97663
+    }
+  ],
+  "sourceFingerprint": "7775d46f654357d17bb955ff4f1025606d807e7fbd328728503848baa07f233b",
+  "evidence": {
+    "listPage": 148,
+    "listTitle": "省高校毕业生就业指导中心到省教育考试院调研学习计算机考务管理工作",
+    "listPublishDate": "2018-04-04",
+    "sourceOrder": 1472,
+    "detailPublishDate": "2018-04-04"
+  }
+}

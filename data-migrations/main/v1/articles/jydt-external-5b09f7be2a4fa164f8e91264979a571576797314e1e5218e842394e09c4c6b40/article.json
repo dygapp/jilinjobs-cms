@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5b09f7be2a4fa164f8e91264979a571576797314e1e5218e842394e09c4c6b40",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ppOScCeZi5bdEEOM45NeBg",
+    "url": "https://mp.weixin.qq.com/s/ppOScCeZi5bdEEOM45NeBg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春理工大学举办中国兵器集团2026届秋季校园招聘会",
+    "source": "",
+    "publishDate": "2025-09-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ppOScCeZi5bdEEOM45NeBg"
+  },
+  "resources": [],
+  "sourceFingerprint": "86715bcdadcaef67d5147539845c513a087b0c9b109fffe75cc50bd586dc664c",
+  "evidence": {
+    "listPage": 70,
+    "listTitle": "长春理工大学举办中国兵器集团2026届秋季校园招聘会",
+    "listPublishDate": "2025-09-28",
+    "sourceOrder": 693
+  }
+}

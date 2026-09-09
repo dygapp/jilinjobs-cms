@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a153b9cc67598a1e5d10800eb772f0206c1c59db8f648f4c20078eba7e3b9879",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/GJyUPym0A40AL35B0RW_sA",
+    "url": "https://mp.weixin.qq.com/s/GJyUPym0A40AL35B0RW_sA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "松原职业技术学院院长申守权带队赴吉林省世汇教育科技有限公司开展访企拓岗专项调研",
+    "source": "",
+    "publishDate": "2025-06-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/GJyUPym0A40AL35B0RW_sA"
+  },
+  "resources": [],
+  "sourceFingerprint": "ea0a28128f10eadef347e4264fbbd3c54be0f78172025ff32dc06c541460b642",
+  "evidence": {
+    "listPage": 86,
+    "listTitle": "松原职业技术学院院长申守权带队赴吉林省世汇教育科技有限公司开展访企拓岗专项调研",
+    "listPublishDate": "2025-06-03",
+    "sourceOrder": 855
+  }
+}

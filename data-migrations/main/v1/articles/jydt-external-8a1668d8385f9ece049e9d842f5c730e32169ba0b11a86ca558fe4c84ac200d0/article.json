@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8a1668d8385f9ece049e9d842f5c730e32169ba0b11a86ca558fe4c84ac200d0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/h8ahvAfN2-bP0ee2yrNi8Q",
+    "url": "https://mp.weixin.qq.com/s/h8ahvAfN2-bP0ee2yrNi8Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学2026年“寒假促就业暖心行动”",
+    "source": "",
+    "publishDate": "2026-02-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/h8ahvAfN2-bP0ee2yrNi8Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "24aa4d230b0bac8824e995ec2bc1ffaa8e3e21ca84d2e854b1d83a0075e6d54b",
+  "evidence": {
+    "listPage": 47,
+    "listTitle": "延边大学2026年“寒假促就业暖心行动”",
+    "listPublishDate": "2026-02-03",
+    "sourceOrder": 464
+  }
+}

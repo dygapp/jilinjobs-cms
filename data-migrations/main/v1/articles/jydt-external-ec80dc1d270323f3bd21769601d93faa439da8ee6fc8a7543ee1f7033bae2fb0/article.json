@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ec80dc1d270323f3bd21769601d93faa439da8ee6fc8a7543ee1f7033bae2fb0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ReeRi7PN5bQyM6i7hPm9Mw",
+    "url": "https://mp.weixin.qq.com/s/ReeRi7PN5bQyM6i7hPm9Mw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化师范学院召开大学生就业指导课程集体备课会",
+    "source": "",
+    "publishDate": "2025-10-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ReeRi7PN5bQyM6i7hPm9Mw"
+  },
+  "resources": [],
+  "sourceFingerprint": "51cbe26a607ef1a6c61ed085ca6475ea0f99a5c459a9aa117a2627cfdc8f3947",
+  "evidence": {
+    "listPage": 68,
+    "listTitle": "通化师范学院召开大学生就业指导课程集体备课会",
+    "listPublishDate": "2025-10-20",
+    "sourceOrder": 673
+  }
+}

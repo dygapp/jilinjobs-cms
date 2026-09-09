@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4e08370f926e95cab985e5e12a33053b271fbb84646511761b8833bc5d1ec2ad",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/33vbocL7Iqdmq-3p_tk74g",
+    "url": "https://mp.weixin.qq.com/s/33vbocL7Iqdmq-3p_tk74g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚焦湾区康养前沿 共绘福祉教育新篇｜长春人文学院调研团赴广州开展康养产业深度调研",
+    "source": "",
+    "publishDate": "2026-08-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/33vbocL7Iqdmq-3p_tk74g"
+  },
+  "resources": [],
+  "sourceFingerprint": "5de1bc8d53fcc461573b8901437c38c53e3e59d074cc6ed6be54cef0bdfbda74",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "聚焦湾区康养前沿 共绘福祉教育新篇｜长春人文学院调研团赴广州开展康养产业深度调研",
+    "listPublishDate": "2026-08-31",
+    "sourceOrder": 7
+  }
+}

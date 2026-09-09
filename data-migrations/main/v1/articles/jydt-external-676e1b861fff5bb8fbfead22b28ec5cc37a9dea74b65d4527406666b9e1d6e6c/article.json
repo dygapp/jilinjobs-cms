@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:676e1b861fff5bb8fbfead22b28ec5cc37a9dea74b65d4527406666b9e1d6e6c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/oJ92INrw0_HltTDHlp5Vaw",
+    "url": "https://mp.weixin.qq.com/s/oJ92INrw0_HltTDHlp5Vaw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业丨长春财经学院校党委书记郭立东带队赴富生集团走访交流",
+    "source": "",
+    "publishDate": "2025-05-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/oJ92INrw0_HltTDHlp5Vaw"
+  },
+  "resources": [],
+  "sourceFingerprint": "f29efb7be6ed8508316b5f0c1bde1ccfdde761fcf09fb9c877aa1b51fdef1541",
+  "evidence": {
+    "listPage": 88,
+    "listTitle": "访企拓岗促就业丨长春财经学院校党委书记郭立东带队赴富生集团走访交流",
+    "listPublishDate": "2025-05-22",
+    "sourceOrder": 872
+  }
+}

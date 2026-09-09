@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122074",
+    "contentId": "28737783122074",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122074"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于联合开展2017届全省普通高校毕业生春季就业服务月活动的通知",
+    "source": "",
+    "publishDate": "2017-03-02",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于联合开展2017届全省普通高校毕业生春季就业服务月活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2017-3-2 11:11:20</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://440f7ec618c893bbea29116d15f9accce19dcc2f860b21217e1249b07af0009a\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://f5c26e2d07bb26dc8e12cb2bc64c8442dcd9367cee39f47dae7c5cd8e4d1fa3e\"></p><p style=\"text-align: center;\"><img title=\"3.jpg\" src=\"migration-resource://fb7fce16eb3f33d0beffe30bfb7f30d128d0a896fd2f0bae07be013e658a4730\"></p><p></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362404992390062502147007.jpg",
+      "originalReference": "/chistory/cms/imgs/6362404992390062502147007.jpg",
+      "token": "migration-resource://440f7ec618c893bbea29116d15f9accce19dcc2f860b21217e1249b07af0009a",
+      "snapshotPath": "assets/440f7ec618c893bbea29116d15f9accce19dcc2f860b21217e1249b07af0009a.jpg",
+      "sha256": "440f7ec618c893bbea29116d15f9accce19dcc2f860b21217e1249b07af0009a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 98841
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362404992493187507731497.jpg",
+      "originalReference": "/chistory/cms/imgs/6362404992493187507731497.jpg",
+      "token": "migration-resource://f5c26e2d07bb26dc8e12cb2bc64c8442dcd9367cee39f47dae7c5cd8e4d1fa3e",
+      "snapshotPath": "assets/f5c26e2d07bb26dc8e12cb2bc64c8442dcd9367cee39f47dae7c5cd8e4d1fa3e.jpg",
+      "sha256": "f5c26e2d07bb26dc8e12cb2bc64c8442dcd9367cee39f47dae7c5cd8e4d1fa3e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84654
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362404992601000009301895.jpg",
+      "originalReference": "/chistory/cms/imgs/6362404992601000009301895.jpg",
+      "token": "migration-resource://fb7fce16eb3f33d0beffe30bfb7f30d128d0a896fd2f0bae07be013e658a4730",
+      "snapshotPath": "assets/fb7fce16eb3f33d0beffe30bfb7f30d128d0a896fd2f0bae07be013e658a4730.jpg",
+      "sha256": "fb7fce16eb3f33d0beffe30bfb7f30d128d0a896fd2f0bae07be013e658a4730",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93996
+    }
+  ],
+  "sourceFingerprint": "ed1fc3c7aa220466112b8f8f031f8cf301f74efdb708b10ad7ed8f261cd97a74",
+  "evidence": {
+    "listPage": 151,
+    "listTitle": "关于联合开展2017届全省普通高校毕业生春季就业服务月活动的通知",
+    "listPublishDate": "2017-03-02",
+    "sourceOrder": 1504,
+    "detailPublishDate": "2017-03-02"
+  }
+}

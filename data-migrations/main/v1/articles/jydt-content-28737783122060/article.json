@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122060",
+    "contentId": "28737783122060",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122060"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省高等学校毕业生就业指导中心举办生涯叙事谘商技术培训班",
+    "source": "",
+    "publishDate": "2017-07-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省高等学校毕业生就业指导中心举办生涯叙事谘商技术培训班</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训二部   发布时间:2017-7-4 11:41:08</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-indent:43px\"><span style=\"font-size:21px;line-height:115%;font-family:宋体\">为切实做好吉林省高校“双困生”就业能力提升培训工作，提高培训质量，提升培训教师的教学能力和水平。2017年6月30日至7月2日，省高校毕业生就业指导中心举办了吉林省生涯叙事谘商技术培训班。</span></p><p style=\"margin-bottom:0;margin-bottom:0;text-indent: 43px;line-height:normal\"><span style=\"font-size: 21px;font-family:宋体\">培训班聘请了台湾陽明大学人文与社会教育中心黄素非、台北商业大学心理谘商中心黄正旭两位专家主讲。课程围绕“生涯叙事谘商技术”这一主题做了讲解。生涯叙事咨商技术以混沌理论作为学理基础，遵循建构—解构—再建构的逻辑主线，以叙事的方事来开启心理空间，最终实现助人自助的现实目标。来自全省24所高校的60多位“双困生”项目培训师参加了此次培训，此次培训丰富了培训师们的知识储备和教学方法，为“双困生”培训工作更新了视角，提供了更多的理论依据与方法指导。</span></p><p style=\"text-align: center\"><img src=\"migration-resource://a74422ca89ced987f770ae8694e61000a2c9868d699dc40bb32740c4337af9ba\" style=\"\" title=\"师资培训1.JPG\"></p><p style=\"text-align: center\"><img src=\"migration-resource://89c10eb0a59d108a051ee37f37c7926401553ea44509cded3f787e78bbef5dd3\" style=\"\" title=\"师资培训2.JPG\"></p><p style=\"text-align: center\"><img src=\"migration-resource://545aae4065fe9d1adf82ce47f14d4c73ce31ea58b0277ab1d4622c8482140a7a\" style=\"\" title=\"师资培训3.JPG\"></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363476538136875003595843.JPG",
+      "originalReference": "/chistory/cms/imgs/6363476538136875003595843.JPG",
+      "token": "migration-resource://a74422ca89ced987f770ae8694e61000a2c9868d699dc40bb32740c4337af9ba",
+      "snapshotPath": "assets/a74422ca89ced987f770ae8694e61000a2c9868d699dc40bb32740c4337af9ba.jpg",
+      "sha256": "a74422ca89ced987f770ae8694e61000a2c9868d699dc40bb32740c4337af9ba",
+      "contentType": "image/jpeg",
+      "sizeBytes": 103073
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363476538144687501338414.JPG",
+      "originalReference": "/chistory/cms/imgs/6363476538144687501338414.JPG",
+      "token": "migration-resource://89c10eb0a59d108a051ee37f37c7926401553ea44509cded3f787e78bbef5dd3",
+      "snapshotPath": "assets/89c10eb0a59d108a051ee37f37c7926401553ea44509cded3f787e78bbef5dd3.jpg",
+      "sha256": "89c10eb0a59d108a051ee37f37c7926401553ea44509cded3f787e78bbef5dd3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 156688
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363476538152500008080984.JPG",
+      "originalReference": "/chistory/cms/imgs/6363476538152500008080984.JPG",
+      "token": "migration-resource://545aae4065fe9d1adf82ce47f14d4c73ce31ea58b0277ab1d4622c8482140a7a",
+      "snapshotPath": "assets/545aae4065fe9d1adf82ce47f14d4c73ce31ea58b0277ab1d4622c8482140a7a.jpg",
+      "sha256": "545aae4065fe9d1adf82ce47f14d4c73ce31ea58b0277ab1d4622c8482140a7a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 163825
+    }
+  ],
+  "sourceFingerprint": "26bacd12902f94fb9bff671afa672f999ca57790484ebda6e32b6a6f97e6eb9b",
+  "evidence": {
+    "listPage": 149,
+    "listTitle": "吉林省高等学校毕业生就业指导中心举办生涯叙事谘商技术培训班",
+    "listPublishDate": "2017-07-04",
+    "sourceOrder": 1488,
+    "detailPublishDate": "2017-07-04"
+  }
+}

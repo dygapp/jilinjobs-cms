@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-jilin:content:281305967263744",
+    "contentId": "281305967263744",
+    "typeCode": "policy-jilin",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=281305967263744"
+  },
+  "target": {
+    "columnAlias": "policy-jilin",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春市人民政府办公厅关于印发长春市促进高校毕业生等青年群体来（留）长系列优惠政策的通知",
+    "source": "",
+    "publishDate": "2024-07-01",
+    "bodyHtml": "\n                        <p>请点击附件查看详情。</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "20fe125fe44ad7953d627ec33c5989325e236ce4c05984e0c309d94548ef7678",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "长春市人民政府办公厅关于印发长春市促进高校毕业生等青年群体来（留）长系列优惠政策的通知",
+    "listPublishDate": "2024-07-01",
+    "sourceOrder": 3,
+    "detailPublishDate": "2024-07-01"
+  }
+}

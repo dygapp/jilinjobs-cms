@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5fdcdbcbcdf6dd309e3c8d7dc134afdec96f0bd5ff5f9ad8bdf7834b0d23c8fd",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/qMESbZQ3JO4IxVwovo0PNQ",
+    "url": "https://mp.weixin.qq.com/s/qMESbZQ3JO4IxVwovo0PNQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学副校长齐伟民赴上海访企拓岗",
+    "source": "",
+    "publishDate": "2025-11-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/qMESbZQ3JO4IxVwovo0PNQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "7680c0306907309fb7d27fafbbcc1814424bd39ead147cf61ef87a60b6b0a9f3",
+  "evidence": {
+    "listPage": 59,
+    "listTitle": "吉林建筑大学副校长齐伟民赴上海访企拓岗",
+    "listPublishDate": "2025-11-20",
+    "sourceOrder": 581
+  }
+}

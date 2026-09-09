@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:35fa5be77a6791a7e8bc08984874d89ad2dd2c27670af411b0b0079513ace7a7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/I1Lj-cEHs8ngAms6UIPFjA",
+    "url": "https://mp.weixin.qq.com/s/I1Lj-cEHs8ngAms6UIPFjA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学校举办“宏志助航计划”全国高校毕业生就业能力培训——吉林财经大学培训基地揭牌仪式",
+    "source": "",
+    "publishDate": "2023-09-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/I1Lj-cEHs8ngAms6UIPFjA"
+  },
+  "resources": [],
+  "sourceFingerprint": "adae7b69664c5303e474a22666bbb0d0542c30dd656fe118fcf0c8e42a589c26",
+  "evidence": {
+    "listPage": 112,
+    "listTitle": "吉林财经大学校举办“宏志助航计划”全国高校毕业生就业能力培训——吉林财经大学培训基地揭牌仪式",
+    "listPublishDate": "2023-09-22",
+    "sourceOrder": 1113
+  }
+}

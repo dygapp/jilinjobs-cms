@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:dcc036c9ad55201b2c9886f621d136437bfdd4eba839423708bb96a76d5aface",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/mcFVg0YqkKJojsOhPp1p5w",
+    "url": "https://mp.weixin.qq.com/s/mcFVg0YqkKJojsOhPp1p5w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春建筑学院校长任玉珊率队赴上海开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2025-07-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/mcFVg0YqkKJojsOhPp1p5w"
+  },
+  "resources": [],
+  "sourceFingerprint": "69b6ecdf2631ed35273cb5d3d2f7ef3bf0600fa9d040ec6b0258e946b616f8e5",
+  "evidence": {
+    "listPage": 75,
+    "listTitle": "长春建筑学院校长任玉珊率队赴上海开展访企拓岗专项行动",
+    "listPublishDate": "2025-07-03",
+    "sourceOrder": 747
+  }
+}

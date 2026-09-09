@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:85993944268800",
+    "contentId": "85993944268800",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=85993944268800"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办教育部“24365校园招聘服务”连锁经营行业专项人才对接会的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2022-03-30",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"891\" src=\"migration-resource://546739c1f3ab4fb20965d4a2f66ea0bf11fbbd95a81f1a4141982a7382e7993a\" width=\"647\"><img alt=\"\" height=\"871\" src=\"migration-resource://a93befd37508aecf8ec052f848511f79353fea1f44ab60d5c88697b6421196ea\" width=\"644\"><img alt=\"\" height=\"889\" src=\"migration-resource://a89be023dfdc8aae65153f6ff323e959b7c9b1f02fd988f4b6f7cbfc27b7092b\" width=\"642\"><img alt=\"\" height=\"479\" src=\"migration-resource://2ba24a69d21002ebbf7326d5c996c34dc144689cb682d698024e0f0b8c3dc13d\" width=\"632\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/e24b11dd-94c8-4fcb-b74d-9d3fd60ee2f9.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/e24b11dd-94c8-4fcb-b74d-9d3fd60ee2f9.jpg",
+      "token": "migration-resource://546739c1f3ab4fb20965d4a2f66ea0bf11fbbd95a81f1a4141982a7382e7993a",
+      "snapshotPath": "assets/546739c1f3ab4fb20965d4a2f66ea0bf11fbbd95a81f1a4141982a7382e7993a.jpg",
+      "sha256": "546739c1f3ab4fb20965d4a2f66ea0bf11fbbd95a81f1a4141982a7382e7993a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 70946
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/46869cf2-20e0-460b-9193-445f52e19a30.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/46869cf2-20e0-460b-9193-445f52e19a30.jpg",
+      "token": "migration-resource://a93befd37508aecf8ec052f848511f79353fea1f44ab60d5c88697b6421196ea",
+      "snapshotPath": "assets/a93befd37508aecf8ec052f848511f79353fea1f44ab60d5c88697b6421196ea.jpg",
+      "sha256": "a93befd37508aecf8ec052f848511f79353fea1f44ab60d5c88697b6421196ea",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67353
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/73ae7f9f-a513-432a-bc21-90bb34e8fd72.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/73ae7f9f-a513-432a-bc21-90bb34e8fd72.jpg",
+      "token": "migration-resource://a89be023dfdc8aae65153f6ff323e959b7c9b1f02fd988f4b6f7cbfc27b7092b",
+      "snapshotPath": "assets/a89be023dfdc8aae65153f6ff323e959b7c9b1f02fd988f4b6f7cbfc27b7092b.jpg",
+      "sha256": "a89be023dfdc8aae65153f6ff323e959b7c9b1f02fd988f4b6f7cbfc27b7092b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 69343
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/b3f6de65-b6aa-4065-8dd4-a41ca711252c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/b3f6de65-b6aa-4065-8dd4-a41ca711252c.jpg",
+      "token": "migration-resource://2ba24a69d21002ebbf7326d5c996c34dc144689cb682d698024e0f0b8c3dc13d",
+      "snapshotPath": "assets/2ba24a69d21002ebbf7326d5c996c34dc144689cb682d698024e0f0b8c3dc13d.jpg",
+      "sha256": "2ba24a69d21002ebbf7326d5c996c34dc144689cb682d698024e0f0b8c3dc13d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 12213
+    }
+  ],
+  "sourceFingerprint": "684296e6a0a0fc815406923739ade9457e603c92ab944777cc1a30261db033ac",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "关于举办教育部“24365校园招聘服务”连锁经营行业专项人才对接会的通知",
+    "listPublishDate": "2022-03-30",
+    "sourceOrder": 135,
+    "detailPublishDate": "2022-03-30"
+  }
+}

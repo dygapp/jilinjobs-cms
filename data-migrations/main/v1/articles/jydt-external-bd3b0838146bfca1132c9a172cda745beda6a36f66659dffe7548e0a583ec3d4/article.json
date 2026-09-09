@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bd3b0838146bfca1132c9a172cda745beda6a36f66659dffe7548e0a583ec3d4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/V4QEC43gmN9QezUsPq-pvg",
+    "url": "https://mp.weixin.qq.com/s/V4QEC43gmN9QezUsPq-pvg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "毕业生求职“陷阱” 避坑看这里",
+    "source": "",
+    "publishDate": "2025-01-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/V4QEC43gmN9QezUsPq-pvg"
+  },
+  "resources": [],
+  "sourceFingerprint": "fbff5d459f85df511061c08c868e941b02d6d0178dac96916a738e96a9f06dab",
+  "evidence": {
+    "listPage": 100,
+    "listTitle": "毕业生求职“陷阱” 避坑看这里",
+    "listPublishDate": "2025-01-07",
+    "sourceOrder": 995
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5d0ecfdbbfb5158484f1618a8617075d02274eb6d7c2667819be41b1abb7aa2e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/hN_7WmfeOuSbMOvjMtTiGg",
+    "url": "https://mp.weixin.qq.com/s/hN_7WmfeOuSbMOvjMtTiGg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春财经学院走访长春市星翼智通科技有限公司",
+    "source": "",
+    "publishDate": "2026-04-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/hN_7WmfeOuSbMOvjMtTiGg"
+  },
+  "resources": [],
+  "sourceFingerprint": "9ef109d003ebbf7aa4afc58fa578c511302c300449dc29ac35745deaf74bd816",
+  "evidence": {
+    "listPage": 32,
+    "listTitle": "长春财经学院走访长春市星翼智通科技有限公司",
+    "listPublishDate": "2026-04-03",
+    "sourceOrder": 319
+  }
+}

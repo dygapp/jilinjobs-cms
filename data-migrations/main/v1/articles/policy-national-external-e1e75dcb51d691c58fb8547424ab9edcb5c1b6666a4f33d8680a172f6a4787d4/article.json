@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-national:external:e1e75dcb51d691c58fb8547424ab9edcb5c1b6666a4f33d8680a172f6a4787d4",
+    "contentId": null,
+    "typeCode": "policy-national",
+    "detailPath": "/s/IjTtu4ugEb0ZUfoIzL01JA",
+    "url": "https://mp.weixin.qq.com/s/IjTtu4ugEb0ZUfoIzL01JA"
+  },
+  "target": {
+    "columnAlias": "policy-national",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【政策解读】|| 教育部高校学生司（高校毕业生就业服务司）：为教育强国建设提供有力就业服务支撑",
+    "source": "",
+    "publishDate": "2025-04-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/IjTtu4ugEb0ZUfoIzL01JA"
+  },
+  "resources": [],
+  "sourceFingerprint": "ee9434d60a2c68eb8db153ad17b3d28e52341c60503fbc530acdcaee73de7a83",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "【政策解读】|| 教育部高校学生司（高校毕业生就业服务司）：为教育强国建设提供有力就业服务支撑",
+    "listPublishDate": "2025-04-24",
+    "sourceOrder": 1
+  }
+}

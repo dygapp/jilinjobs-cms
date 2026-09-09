@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3f0e49ea4e0cd68362c60d660e473df261ecb9557b174a6e689b9147b6f0f627",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/JsbIS58_jpGSbhfNvgYZXQ",
+    "url": "https://mp.weixin.qq.com/s/JsbIS58_jpGSbhfNvgYZXQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春职业技术大学举办“商聚贤才 职启新程”实习就业双选会",
+    "source": "",
+    "publishDate": "2026-06-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/JsbIS58_jpGSbhfNvgYZXQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "42a9c06b2e6ae3fab8fd6ec42864ceddd1a64abbf7b95e65838ae11146b2921f",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "长春职业技术大学举办“商聚贤才 职启新程”实习就业双选会",
+    "listPublishDate": "2026-06-11",
+    "sourceOrder": 88
+  }
+}

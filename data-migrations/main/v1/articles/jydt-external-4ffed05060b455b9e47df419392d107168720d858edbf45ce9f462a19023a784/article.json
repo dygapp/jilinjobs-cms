@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4ffed05060b455b9e47df419392d107168720d858edbf45ce9f462a19023a784",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/v_264jc3PzaLEqx-e5cFAg",
+    "url": "https://mp.weixin.qq.com/s/v_264jc3PzaLEqx-e5cFAg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2025年“长聚学子·春城暖才”校园宣讲活动走进吉林交通职业技术学院",
+    "source": "",
+    "publishDate": "2025-10-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/v_264jc3PzaLEqx-e5cFAg"
+  },
+  "resources": [],
+  "sourceFingerprint": "e327e6ba7167347830098d11eeb3a231c74f90d586e1d1e9983f0a53288f2a81",
+  "evidence": {
+    "listPage": 67,
+    "listTitle": "2025年“长聚学子·春城暖才”校园宣讲活动走进吉林交通职业技术学院",
+    "listPublishDate": "2025-10-20",
+    "sourceOrder": 669
+  }
+}

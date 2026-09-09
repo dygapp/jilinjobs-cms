@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:606816f7c1a57610046d63fc38aaa514c2b9bd7d8e222c356e4bb90225423d5f",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/10CfOVz_8A0opAze3lsVhg",
+    "url": "https://mp.weixin.qq.com/s/10CfOVz_8A0opAze3lsVhg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务吉林省东南部高质量发展通化师范学院2026届毕业生秋季校园双选会邀请函",
+    "source": "",
+    "publishDate": "2025-10-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/10CfOVz_8A0opAze3lsVhg"
+  },
+  "resources": [],
+  "sourceFingerprint": "712d4e28b22d654fb388d4a026e2a5e51bb6966f97420417ec8867e6d1f85ec0",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "服务吉林省东南部高质量发展通化师范学院2026届毕业生秋季校园双选会邀请函",
+    "listPublishDate": "2025-10-20",
+    "sourceOrder": 126
+  }
+}

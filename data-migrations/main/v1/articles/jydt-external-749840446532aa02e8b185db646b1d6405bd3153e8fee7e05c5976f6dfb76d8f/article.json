@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:749840446532aa02e8b185db646b1d6405bd3153e8fee7e05c5976f6dfb76d8f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/_ihwJj5g2Ae62PXo69MPVA",
+    "url": "https://mp.weixin.qq.com/s/_ihwJj5g2Ae62PXo69MPVA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化师范学院党委书记郑伟峰一行赴白山市开展工作会谈",
+    "source": "",
+    "publishDate": "2026-04-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_ihwJj5g2Ae62PXo69MPVA"
+  },
+  "resources": [],
+  "sourceFingerprint": "8911988a468ad64cc7e71c796f652e6ce1e3af8e6c25bd84647e707554497142",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "通化师范学院党委书记郑伟峰一行赴白山市开展工作会谈",
+    "listPublishDate": "2026-04-22",
+    "sourceOrder": 260
+  }
+}

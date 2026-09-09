@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122922",
+    "contentId": "28737783122922",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122922"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办“高校创业指导师”专题培训班的通知",
+    "source": "",
+    "publishDate": "2012-12-19",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办“高校创业指导师”专题培训班的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-12-19 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://d993f74ee5ff7e2ca33b317e63b69c2e4a8afd765d9525ca53be1fd0e90addae\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://859423ffa3fab8e3fb94c4dc9acc41a3982c368a77a9fd51e0a0b173fa027085\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://60b3f81e610dcca4a42cc676276adf7ef74c284f66f9513d0587d2859d967f21\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://eda3a2fea01da35d664bf60cf49caa8006340493adce7bec0e83a8d139af7380\"></p> <p align=\"center\"><font color=\"#1111ee\" size=\"5\" face=\"仿宋_GB2312\"><strong><img border=\"0\" src=\"http://www.jilinjobs.cn/webEditor/sysimage/file/doc.gif\"></strong></font><a href=\"http://www.jilinjobs.cn/uploadfile/201212/20121219221952479.doc\" target=\"_blank\"><font color=\"#1111ee\" size=\"5\" face=\"仿宋_GB2312\"><strong>推荐表.doc</strong></font></a></p> <p align=\"center\"><font color=\"#1111ee\" size=\"5\" face=\"仿宋_GB2312\"><strong><img border=\"0\" src=\"http://www.jilinjobs.cn/webEditor/sysimage/file/xls.gif\"></strong></font><a href=\"http://www.jilinjobs.cn/uploadfile/201212/2012121922205320.xls\" target=\"_blank\"><font color=\"#1111ee\" size=\"5\" face=\"仿宋_GB2312\"><strong>报名表.xls</strong></font></a></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121219222354428.jpg",
+      "originalReference": "/chistory/cms/imgs/20121219222354428.jpg",
+      "token": "migration-resource://d993f74ee5ff7e2ca33b317e63b69c2e4a8afd765d9525ca53be1fd0e90addae",
+      "snapshotPath": "assets/d993f74ee5ff7e2ca33b317e63b69c2e4a8afd765d9525ca53be1fd0e90addae.jpg",
+      "sha256": "d993f74ee5ff7e2ca33b317e63b69c2e4a8afd765d9525ca53be1fd0e90addae",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82707
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2012121922240264.jpg",
+      "originalReference": "/chistory/cms/imgs/2012121922240264.jpg",
+      "token": "migration-resource://859423ffa3fab8e3fb94c4dc9acc41a3982c368a77a9fd51e0a0b173fa027085",
+      "snapshotPath": "assets/859423ffa3fab8e3fb94c4dc9acc41a3982c368a77a9fd51e0a0b173fa027085.jpg",
+      "sha256": "859423ffa3fab8e3fb94c4dc9acc41a3982c368a77a9fd51e0a0b173fa027085",
+      "contentType": "image/jpeg",
+      "sizeBytes": 96409
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121219222407120.jpg",
+      "originalReference": "/chistory/cms/imgs/20121219222407120.jpg",
+      "token": "migration-resource://60b3f81e610dcca4a42cc676276adf7ef74c284f66f9513d0587d2859d967f21",
+      "snapshotPath": "assets/60b3f81e610dcca4a42cc676276adf7ef74c284f66f9513d0587d2859d967f21.jpg",
+      "sha256": "60b3f81e610dcca4a42cc676276adf7ef74c284f66f9513d0587d2859d967f21",
+      "contentType": "image/jpeg",
+      "sizeBytes": 35723
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121219222416103.jpg",
+      "originalReference": "/chistory/cms/imgs/20121219222416103.jpg",
+      "token": "migration-resource://eda3a2fea01da35d664bf60cf49caa8006340493adce7bec0e83a8d139af7380",
+      "snapshotPath": "assets/eda3a2fea01da35d664bf60cf49caa8006340493adce7bec0e83a8d139af7380.jpg",
+      "sha256": "eda3a2fea01da35d664bf60cf49caa8006340493adce7bec0e83a8d139af7380",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90729
+    }
+  ],
+  "sourceFingerprint": "2829e83da3c26d418814c3c86a839b833ef87e471f3f102df5671d1ebbfb6972",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "关于举办“高校创业指导师”专题培训班的通知",
+    "listPublishDate": "2012-12-19",
+    "sourceOrder": 373,
+    "detailPublishDate": "2012-12-19"
+  }
+}

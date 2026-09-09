@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:12831616101eccaa0d96d68a307141bf11854891c664d0b0cb5da4a3bcdbfa62",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/_5MED5Hm2Iu0kYkF6dX_DA",
+    "url": "https://mp.weixin.qq.com/s/_5MED5Hm2Iu0kYkF6dX_DA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省高校学生就业能力提升“双千计划”工作推进会召开",
+    "source": "",
+    "publishDate": "2025-05-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_5MED5Hm2Iu0kYkF6dX_DA"
+  },
+  "resources": [],
+  "sourceFingerprint": "e504999add4c9ad5db05dc8e8170c7dbc3d39bd5226101efbd5d6901b415683e",
+  "evidence": {
+    "listPage": 89,
+    "listTitle": "吉林省高校学生就业能力提升“双千计划”工作推进会召开",
+    "listPublishDate": "2025-05-16",
+    "sourceOrder": 887
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1add97a220a7f14c08c086f72cf97d72ed9d94a20c6333df706958bcd4b0c792",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/F09Anli94gb8MXGWG48M1Q",
+    "url": "https://mp.weixin.qq.com/s/F09Anli94gb8MXGWG48M1Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春金融高等专科学校校长吕鹰飞带队赴摆渡创新工场集团开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-07-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/F09Anli94gb8MXGWG48M1Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "9f5c66c6d9b3e84e7442b2e9c18282b8deaec9c42acaf3041d0bab0105552ed1",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "长春金融高等专科学校校长吕鹰飞带队赴摆渡创新工场集团开展访企拓岗专项行动",
+    "listPublishDate": "2026-07-16",
+    "sourceOrder": 46
+  }
+}

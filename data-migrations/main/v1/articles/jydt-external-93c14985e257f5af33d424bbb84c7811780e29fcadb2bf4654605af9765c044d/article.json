@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:93c14985e257f5af33d424bbb84c7811780e29fcadb2bf4654605af9765c044d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/DXMkCUSby13j7c4-RVYx2A",
+    "url": "https://mp.weixin.qq.com/s/DXMkCUSby13j7c4-RVYx2A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【就业指导】|| 17个新职业，正式发布！",
+    "source": "",
+    "publishDate": "2025-08-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DXMkCUSby13j7c4-RVYx2A"
+  },
+  "resources": [],
+  "sourceFingerprint": "a0e1e93402372b00c57ee614dcd38fecb96c3b2e770908088e01187e574629be",
+  "evidence": {
+    "listPage": 73,
+    "listTitle": "【就业指导】|| 17个新职业，正式发布！",
+    "listPublishDate": "2025-08-06",
+    "sourceOrder": 721
+  }
+}

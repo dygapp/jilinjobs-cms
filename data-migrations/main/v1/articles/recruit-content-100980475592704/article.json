@@ -1,0 +1,101 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:100980475592704",
+    "contentId": "100980475592704",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=100980475592704"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展2022年“扬帆计划·筑梦通化”大学生职场体验活动的通知",
+    "source": "",
+    "publishDate": "2022-07-12",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1031\" src=\"migration-resource://4d8f5575b3b35ae6a7cb341a51f5d3349d1f6937fefb32e529bfb7cb33f52b0a\" width=\"791\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1029\" src=\"migration-resource://1a2df2fd3c2fe30ed20bb740c0f238a980df5593179c09ba5e1b174b03dc0825\" width=\"789\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1033\" src=\"migration-resource://c50c90149dbd2a9049da1828840c8ea91d9094a62ad382ef664b11dfafd20f17\" width=\"788\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1030\" src=\"migration-resource://d5c479c23369005c7d32c9242b7491e4bced56d3af9ae80b6262e936dd1b7938\" width=\"789\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1022\" src=\"migration-resource://3fb72b525671552d7843c01bef85178750510d0f2c00014b19c08024066f0024\" width=\"788\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1027\" src=\"migration-resource://5b954e80ea942d8bdd0e66a75ddb9bd3b054abfc1c46ead88163023672936c73\" width=\"790\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1020\" src=\"migration-resource://7f0438819546cf1f708c438075b8b4e9f34befc73bcc5914e66ec6c3c71f7665\" width=\"789\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-12/63dc9522-98ce-4ab9-8223-655ca694a8b8.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-12/63dc9522-98ce-4ab9-8223-655ca694a8b8.jpg",
+      "token": "migration-resource://4d8f5575b3b35ae6a7cb341a51f5d3349d1f6937fefb32e529bfb7cb33f52b0a",
+      "snapshotPath": "assets/4d8f5575b3b35ae6a7cb341a51f5d3349d1f6937fefb32e529bfb7cb33f52b0a.jpg",
+      "sha256": "4d8f5575b3b35ae6a7cb341a51f5d3349d1f6937fefb32e529bfb7cb33f52b0a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 66811
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-12/3d556092-3799-4238-8c62-439f57fd07bc.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-12/3d556092-3799-4238-8c62-439f57fd07bc.jpg",
+      "token": "migration-resource://1a2df2fd3c2fe30ed20bb740c0f238a980df5593179c09ba5e1b174b03dc0825",
+      "snapshotPath": "assets/1a2df2fd3c2fe30ed20bb740c0f238a980df5593179c09ba5e1b174b03dc0825.jpg",
+      "sha256": "1a2df2fd3c2fe30ed20bb740c0f238a980df5593179c09ba5e1b174b03dc0825",
+      "contentType": "image/jpeg",
+      "sizeBytes": 78074
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-12/76e462d1-d995-40a4-8916-39246e549952.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-12/76e462d1-d995-40a4-8916-39246e549952.jpg",
+      "token": "migration-resource://c50c90149dbd2a9049da1828840c8ea91d9094a62ad382ef664b11dfafd20f17",
+      "snapshotPath": "assets/c50c90149dbd2a9049da1828840c8ea91d9094a62ad382ef664b11dfafd20f17.jpg",
+      "sha256": "c50c90149dbd2a9049da1828840c8ea91d9094a62ad382ef664b11dfafd20f17",
+      "contentType": "image/jpeg",
+      "sizeBytes": 85260
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-12/859ccc67-0277-4159-a60a-17574290891b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-12/859ccc67-0277-4159-a60a-17574290891b.jpg",
+      "token": "migration-resource://d5c479c23369005c7d32c9242b7491e4bced56d3af9ae80b6262e936dd1b7938",
+      "snapshotPath": "assets/d5c479c23369005c7d32c9242b7491e4bced56d3af9ae80b6262e936dd1b7938.jpg",
+      "sha256": "d5c479c23369005c7d32c9242b7491e4bced56d3af9ae80b6262e936dd1b7938",
+      "contentType": "image/jpeg",
+      "sizeBytes": 53216
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-12/dcd9c886-8952-4d66-b4bc-9f4f33464b98.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-12/dcd9c886-8952-4d66-b4bc-9f4f33464b98.jpg",
+      "token": "migration-resource://3fb72b525671552d7843c01bef85178750510d0f2c00014b19c08024066f0024",
+      "snapshotPath": "assets/3fb72b525671552d7843c01bef85178750510d0f2c00014b19c08024066f0024.jpg",
+      "sha256": "3fb72b525671552d7843c01bef85178750510d0f2c00014b19c08024066f0024",
+      "contentType": "image/jpeg",
+      "sizeBytes": 31381
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-12/c739b039-2640-47be-bc9d-074477526ddf.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-12/c739b039-2640-47be-bc9d-074477526ddf.jpg",
+      "token": "migration-resource://5b954e80ea942d8bdd0e66a75ddb9bd3b054abfc1c46ead88163023672936c73",
+      "snapshotPath": "assets/5b954e80ea942d8bdd0e66a75ddb9bd3b054abfc1c46ead88163023672936c73.jpg",
+      "sha256": "5b954e80ea942d8bdd0e66a75ddb9bd3b054abfc1c46ead88163023672936c73",
+      "contentType": "image/jpeg",
+      "sizeBytes": 40575
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-07-12/52ebf17f-ed00-4d42-ae0c-4c2d6ba0e9d4.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-07-12/52ebf17f-ed00-4d42-ae0c-4c2d6ba0e9d4.jpg",
+      "token": "migration-resource://7f0438819546cf1f708c438075b8b4e9f34befc73bcc5914e66ec6c3c71f7665",
+      "snapshotPath": "assets/7f0438819546cf1f708c438075b8b4e9f34befc73bcc5914e66ec6c3c71f7665.jpg",
+      "sha256": "7f0438819546cf1f708c438075b8b4e9f34befc73bcc5914e66ec6c3c71f7665",
+      "contentType": "image/jpeg",
+      "sizeBytes": 29009
+    }
+  ],
+  "sourceFingerprint": "f9a83449214d7120fdcee3db38b44fd605b445ca3f5e4ec853cc31d44d13f773",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "关于开展2022年“扬帆计划·筑梦通化”大学生职场体验活动的通知",
+    "listPublishDate": "2022-07-12",
+    "sourceOrder": 342,
+    "detailPublishDate": "2022-07-12"
+  }
+}

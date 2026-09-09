@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9da2f86b90482ca431224ef4e1616b46147baa9ee586926dcd245a5ada338736",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Sd55ZGxA91_EWZMrLQTeIA",
+    "url": "https://mp.weixin.qq.com/s/Sd55ZGxA91_EWZMrLQTeIA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2025年“长聚学子·春城暖才”进校园宣讲活动走进长春建筑学院",
+    "source": "",
+    "publishDate": "2025-06-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Sd55ZGxA91_EWZMrLQTeIA"
+  },
+  "resources": [],
+  "sourceFingerprint": "a60e848fd2aac7e450b677240a166206b66e58514cae200946724015f23d9dcd",
+  "evidence": {
+    "listPage": 86,
+    "listTitle": "2025年“长聚学子·春城暖才”进校园宣讲活动走进长春建筑学院",
+    "listPublishDate": "2025-06-03",
+    "sourceOrder": 852
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:68f6b253ac5fdb08f8859b39e9d5923fa8b3b713bb069b0733a566b28cbca94a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ilFXbhXXcpg0f4KvahtRRg",
+    "url": "https://mp.weixin.qq.com/s/ilFXbhXXcpg0f4KvahtRRg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化医药健康职业学院赴吉林省国参集团有限公司开展校企合作访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2025-07-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ilFXbhXXcpg0f4KvahtRRg"
+  },
+  "resources": [],
+  "sourceFingerprint": "e063542ae340196074bb35adfd9756f2711c4a17eec911b538bd0da32acb7d4e",
+  "evidence": {
+    "listPage": 75,
+    "listTitle": "通化医药健康职业学院赴吉林省国参集团有限公司开展校企合作访企拓岗专项行动",
+    "listPublishDate": "2025-07-07",
+    "sourceOrder": 742
+  }
+}

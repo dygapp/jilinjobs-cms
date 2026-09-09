@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b116221f29560095773da47b0be537938dc11da90377344feba6209cc22f6e1f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5034.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5034.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2025年长春市首场百万大学生来（留）长工程“五优”服务进校园秋季巡回双选会在长春工业大学举办",
+    "source": "",
+    "publishDate": "2025-09-15",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5034.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "d14aca52a212e406ee585168cd194a785bacf8ff8cf0a02d6dd61ac61de9cf50",
+  "evidence": {
+    "listPage": 71,
+    "listTitle": "2025年长春市首场百万大学生来（留）长工程“五优”服务进校园秋季巡回双选会在长春工业大学举办",
+    "listPublishDate": "2025-09-15",
+    "sourceOrder": 706
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122458",
+    "contentId": "28737783122458",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122458"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "工商机关将为返乡农民工创业开辟“绿色通道”",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">工商机关将为返乡农民工创业开辟“绿色通道”</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 新华网北京４月３日电（记者张晓松）工商机关将优化返乡农民工创业环境，开通绿色通道，降低市场准入门槛，简化行政审批手续，提供优惠措施，支持返乡农民工创业、就业。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 记者日前从工商总局了解到，受国际金融危机的影响，农民工就业受到很大影响。为此，各级工商机关将把支持返乡农民工创业、就业作为一项重点工作来抓。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 工商机关将提供“零距离、零时限、零障碍”服务，鼓励在外从事生产经营活动且有经济实力的能人、返乡农民工把掌握的各种资源与家乡实际情况结合起来，从事特色规模化种植、养殖及农副产品加工。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 对返乡农民工从事生产经营活动的，将依法放宽准入范围、登记条件、经营范围、字号名称和经营场所等限制。工商机关将积极牵线搭桥，引导返乡农民工与本地企业进行对接，让农民工在家门口就业。同时，积极开展返乡农民工创业培训，培养一批创业带头人。<br>&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "9d47f86613fcf8fc6d2298fb00a7742213493a79eb385e53845f22b4e0805316",
+  "evidence": {
+    "listPage": 189,
+    "listTitle": "工商机关将为返乡农民工创业开辟“绿色通道”",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1884,
+    "detailPublishDate": "2009-04-04"
+  }
+}

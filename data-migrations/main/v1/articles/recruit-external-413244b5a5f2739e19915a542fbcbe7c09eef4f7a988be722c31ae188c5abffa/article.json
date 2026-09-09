@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:413244b5a5f2739e19915a542fbcbe7c09eef4f7a988be722c31ae188c5abffa",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/tzgg/23183.jhtml",
+    "url": "https://www.jllydj.gov.cn/tzgg/23183.jhtml"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2022年辽源市城市社区专职工作者公开招聘公告",
+    "source": "",
+    "publishDate": "2022-05-09",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jllydj.gov.cn/tzgg/23183.jhtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "ae8ce53e7fac578752dd6fc561de7fe69a065080a7d4e789541d875d3d0f8857",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "2022年辽源市城市社区专职工作者公开招聘公告",
+    "listPublishDate": "2022-05-09",
+    "sourceOrder": 349
+  }
+}

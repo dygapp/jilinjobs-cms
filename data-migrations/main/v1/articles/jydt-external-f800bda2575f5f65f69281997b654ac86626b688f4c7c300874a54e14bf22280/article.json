@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f800bda2575f5f65f69281997b654ac86626b688f4c7c300874a54e14bf22280",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/taTQm05gz5dQaJWarMDeMw",
+    "url": "https://mp.weixin.qq.com/s/taTQm05gz5dQaJWarMDeMw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学举办“艺路同行 职为你来”2025年春季艺术类毕业生专场招聘会",
+    "source": "",
+    "publishDate": "2025-05-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/taTQm05gz5dQaJWarMDeMw"
+  },
+  "resources": [],
+  "sourceFingerprint": "d624b4e7e6affe8ee8a50e906aa0d95c50a81a1fbc2bc52e27b18bca51f8aa7c",
+  "evidence": {
+    "listPage": 88,
+    "listTitle": "延边大学举办“艺路同行 职为你来”2025年春季艺术类毕业生专场招聘会",
+    "listPublishDate": "2025-05-22",
+    "sourceOrder": 871
+  }
+}

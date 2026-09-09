@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:83a147722e2e85f719ba5d96a2d69d838e779da3698c049b2e2f22fbc3f459ab",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/mD1V4GDdxnXUQQpS47zdgA",
+    "url": "https://mp.weixin.qq.com/s/mD1V4GDdxnXUQQpS47zdgA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“服务吉林高质量发展”2025年吉林化工学院—吉林省优势特色产业人才供需洽谈会顺利举行",
+    "source": "",
+    "publishDate": "2025-03-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/mD1V4GDdxnXUQQpS47zdgA"
+  },
+  "resources": [],
+  "sourceFingerprint": "d4755c90ff8e2796bd0d62cc8018812d1d963f11cca98c3b4abad78c296673a3",
+  "evidence": {
+    "listPage": 97,
+    "listTitle": "“服务吉林高质量发展”2025年吉林化工学院—吉林省优势特色产业人才供需洽谈会顺利举行",
+    "listPublishDate": "2025-03-24",
+    "sourceOrder": 969
+  }
+}

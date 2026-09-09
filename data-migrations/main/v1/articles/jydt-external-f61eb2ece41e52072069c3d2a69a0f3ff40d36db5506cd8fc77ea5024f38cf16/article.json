@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f61eb2ece41e52072069c3d2a69a0f3ff40d36db5506cd8fc77ea5024f38cf16",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/fp8oE0V-InegmqIVFPgqsQ",
+    "url": "https://mp.weixin.qq.com/s/fp8oE0V-InegmqIVFPgqsQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院与镇赉县开展“百校对百县”促进就业专项对接活动",
+    "source": "",
+    "publishDate": "2025-11-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/fp8oE0V-InegmqIVFPgqsQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "a96f48998e411a1d24bbe73943548e79937477dcbc1f9bcc8afb5449f15d712b",
+  "evidence": {
+    "listPage": 63,
+    "listTitle": "长春工程学院与镇赉县开展“百校对百县”促进就业专项对接活动",
+    "listPublishDate": "2025-11-04",
+    "sourceOrder": 630
+  }
+}

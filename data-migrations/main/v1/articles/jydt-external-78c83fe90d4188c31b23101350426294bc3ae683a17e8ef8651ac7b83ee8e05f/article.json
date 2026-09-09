@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:78c83fe90d4188c31b23101350426294bc3ae683a17e8ef8651ac7b83ee8e05f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/AQndyVRd3axr2mL2FN4laA",
+    "url": "https://mp.weixin.qq.com/s/AQndyVRd3axr2mL2FN4laA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“聚力扩容提质·服务高质量发展” ——2026年吉林省高校毕业生梅河口专场招聘会在我校成功举办",
+    "source": "",
+    "publishDate": "2026-05-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/AQndyVRd3axr2mL2FN4laA"
+  },
+  "resources": [],
+  "sourceFingerprint": "0fc58335cf604272048025fb01728e90a356102fdd7821d41dad43c95c38de00",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "“聚力扩容提质·服务高质量发展” ——2026年吉林省高校毕业生梅河口专场招聘会在我校成功举办",
+    "listPublishDate": "2026-05-18",
+    "sourceOrder": 173
+  }
+}

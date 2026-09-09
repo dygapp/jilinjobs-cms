@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:22b55d0507d36c41167b98bb8afb3e11d85e3933fdec47284b3894593837642c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/30_cGSV804Mweb-_GwMViw",
+    "url": "https://mp.weixin.qq.com/s/30_cGSV804Mweb-_GwMViw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工程职业学院校领导带队赴长春高新区重点企业访企拓岗",
+    "source": "",
+    "publishDate": "2026-04-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/30_cGSV804Mweb-_GwMViw"
+  },
+  "resources": [],
+  "sourceFingerprint": "f91897f4291c80de7a098991e13b288b9a45fd2da2545fdaa27011a58c9b8877",
+  "evidence": {
+    "listPage": 32,
+    "listTitle": "吉林工程职业学院校领导带队赴长春高新区重点企业访企拓岗",
+    "listPublishDate": "2026-04-07",
+    "sourceOrder": 312
+  }
+}

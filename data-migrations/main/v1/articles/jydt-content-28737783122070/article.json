@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122070",
+    "contentId": "28737783122070",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122070"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "省高校毕业生就业指导中心召开集体约谈全体中层干部大会",
+    "source": "",
+    "publishDate": "2017-03-10",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">省高校毕业生就业指导中心召开集体约谈全体中层干部大会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:党总支   发布时间:2017-3-10 15:26:33</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"margin: 0px; text-indent: 30pt;\"><span style=\"margin: 0px; font-family: 宋体; font-size: 15pt;\">3月9日，省高校毕业生就业指导中心召开集体约谈全体中层干部大会。会议由党总支书记孙维才同志主持，中心主任、党总支副书记郑志宏同志进行约谈讲话。 </span></p><p style=\"text-align: center\"><img title=\"1.JPG\" src=\"migration-resource://79b5c5bea336a2eac298e9b02cf157f331425520809807359a3f7c89577beb5b\"></p><p style=\"margin: 0px; text-indent: 30pt;\"><span style=\"margin: 0px; font-family: 宋体; font-size: 15pt;\">郑志宏同志提出五点要求。一是要按照党风廉政建设工作会议部署，牢固树立“四个意识”，团结在以习近平同志为核心的党中央周围，统一领导、统一思想、统一行动，与党中央保持高度一致。二是中层干部始终要把责任扛在肩上，坚持以上率下，加强制度建设，规范行权用权，抓好制度贯彻执行，强化服务意识，不断提高履职能力，进一步明确干事创业的行为准则。三是中心领导干部要带头恪尽职守、接受党内监督、法律监督、群众监督，建立健全决策、执行、监督等相关制度，加强内控管理，严格执行“八项规定”，严控三公经费支出。把预防腐败的要求落实到权力结构和运行机制的各个环节。四是结合“两学一做”学习教育成果，把《关于新形势下党内政治生活的若干准则》和《中国共产党党内监督条例》学好学透、入脑入心。五是注重运用监督执纪“四种形态”，突出强化日常监督。强化责任落实意识，加强教育监督，突出抓早、抓小。</span></p><p style=\"text-align: center\"><img title=\"2.JPG\" src=\"migration-resource://44697a12d62796c2b2f0470973656da940f8b5d4f23e27c5ecb9610df16d2b12\"></p><p style=\"margin: 0px; text-indent: 30pt;\"><span style=\"margin: 0px; font-family: 宋体; font-size: 15pt;\">中心7名中层干部、教育宾馆3名中层以上干部参加会议。</span></p><p><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362475630027512509603642.JPG",
+      "originalReference": "/chistory/cms/imgs/6362475630027512509603642.JPG",
+      "token": "migration-resource://79b5c5bea336a2eac298e9b02cf157f331425520809807359a3f7c89577beb5b",
+      "snapshotPath": "assets/79b5c5bea336a2eac298e9b02cf157f331425520809807359a3f7c89577beb5b.jpg",
+      "sha256": "79b5c5bea336a2eac298e9b02cf157f331425520809807359a3f7c89577beb5b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 91301
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362475631790012507319105.JPG",
+      "originalReference": "/chistory/cms/imgs/6362475631790012507319105.JPG",
+      "token": "migration-resource://44697a12d62796c2b2f0470973656da940f8b5d4f23e27c5ecb9610df16d2b12",
+      "snapshotPath": "assets/44697a12d62796c2b2f0470973656da940f8b5d4f23e27c5ecb9610df16d2b12.jpg",
+      "sha256": "44697a12d62796c2b2f0470973656da940f8b5d4f23e27c5ecb9610df16d2b12",
+      "contentType": "image/jpeg",
+      "sizeBytes": 116932
+    }
+  ],
+  "sourceFingerprint": "1adb9645811240956d701b97c2774e96a187c629ce0fc1825694ccc5da0a134b",
+  "evidence": {
+    "listPage": 151,
+    "listTitle": "省高校毕业生就业指导中心召开集体约谈全体中层干部大会",
+    "listPublishDate": "2017-03-10",
+    "sourceOrder": 1503,
+    "detailPublishDate": "2017-03-10"
+  }
+}

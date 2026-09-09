@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7284771747a4e88f88e97bb46c432eefaf88e7ca9dc19d2502e490428089afa6",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/vFGkRkfwJtf0ekMMBMp8IA",
+    "url": "https://mp.weixin.qq.com/s/vFGkRkfwJtf0ekMMBMp8IA?scene=25&sessionid=-1368013239"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "胡家福：踊跃投身延边跨越赶超火热实践 让青春之花在边疆沃土绚丽绽放",
+    "source": "",
+    "publishDate": "2025-04-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vFGkRkfwJtf0ekMMBMp8IA?scene=25&sessionid=-1368013239"
+  },
+  "resources": [],
+  "sourceFingerprint": "88db77f2d45cc8282a62107cd2addca9282da1db6d27e5242d2d36267083a026",
+  "evidence": {
+    "listPage": 95,
+    "listTitle": "胡家福：踊跃投身延边跨越赶超火热实践 让青春之花在边疆沃土绚丽绽放",
+    "listPublishDate": "2025-04-11",
+    "sourceOrder": 948
+  }
+}

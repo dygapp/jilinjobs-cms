@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0f6d7ea8cb85ab931010289ca52f86ab4c24f7483d2c4e4f9378224234e86fae",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/7KYGm5LOHeGPtPvzC9Qcmg",
+    "url": "https://mp.weixin.qq.com/s/7KYGm5LOHeGPtPvzC9Qcmg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企合作 | 深化校企合作 共筑就业新篇 —— 吉林通用航空职业技术学院党委书记王洪福带队赴南阳市开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2025-07-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/7KYGm5LOHeGPtPvzC9Qcmg"
+  },
+  "resources": [],
+  "sourceFingerprint": "2d33b46fef0b80867493612a935ba366e8df2411dce86fc029a3acf9a0b0ae87",
+  "evidence": {
+    "listPage": 74,
+    "listTitle": "校企合作 | 深化校企合作 共筑就业新篇 —— 吉林通用航空职业技术学院党委书记王洪福带队赴南阳市开展访企拓岗专项行动",
+    "listPublishDate": "2025-07-07",
+    "sourceOrder": 736
+  }
+}

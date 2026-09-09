@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8a61a56651b3b6d05177d5e47aba24c6021c204b06643ee1dadc7095c2c70eb2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/DBWE40gZchef-5WsXfmwFA",
+    "url": "https://mp.weixin.qq.com/s/DBWE40gZchef-5WsXfmwFA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林司法警官职业学院党委书记带队走访长春市中级人民法院",
+    "source": "",
+    "publishDate": "2025-11-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DBWE40gZchef-5WsXfmwFA"
+  },
+  "resources": [],
+  "sourceFingerprint": "e3e531392d7f1f4d37b58d14b8d43f9e413f17da19f821ad5db50f7828aeef94",
+  "evidence": {
+    "listPage": 62,
+    "listTitle": "吉林司法警官职业学院党委书记带队走访长春市中级人民法院",
+    "listPublishDate": "2025-11-06",
+    "sourceOrder": 618
+  }
+}

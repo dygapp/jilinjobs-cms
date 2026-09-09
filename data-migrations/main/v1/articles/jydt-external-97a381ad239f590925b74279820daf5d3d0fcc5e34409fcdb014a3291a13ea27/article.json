@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:97a381ad239f590925b74279820daf5d3d0fcc5e34409fcdb014a3291a13ea27",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1101/14991.htm",
+    "url": "https://www.ccit.edu.cn/info/1101/14991.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院与浙江台州人社部门开展校地合作系列活动",
+    "source": "",
+    "publishDate": "2025-12-12",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccit.edu.cn/info/1101/14991.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "a9f4d82080e7e6afbfbb4aebb541a6ac304052dd970451fe57ad40e14bd706e4",
+  "evidence": {
+    "listPage": 55,
+    "listTitle": "长春工程学院与浙江台州人社部门开展校地合作系列活动",
+    "listPublishDate": "2025-12-12",
+    "sourceOrder": 550
+  }
+}

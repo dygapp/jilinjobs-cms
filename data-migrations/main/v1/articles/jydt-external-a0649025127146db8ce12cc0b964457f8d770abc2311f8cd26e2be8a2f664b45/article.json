@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a0649025127146db8ce12cc0b964457f8d770abc2311f8cd26e2be8a2f664b45",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/wcsx9NpMi-hf48XEF53dZg",
+    "url": "https://mp.weixin.qq.com/s/wcsx9NpMi-hf48XEF53dZg?poc_token=HH3nOWajI1uiBT-rXM69yC3EybICAj6WqCE8nnN7"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 ‘就’在吉林”2024年“聚才引智 筑梦辽源”助推辽源高质量发展暨大学生就业创业双选会在辽源职业技术学院举行",
+    "source": "",
+    "publishDate": "2024-04-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wcsx9NpMi-hf48XEF53dZg?poc_token=HH3nOWajI1uiBT-rXM69yC3EybICAj6WqCE8nnN7"
+  },
+  "resources": [],
+  "sourceFingerprint": "b62684622ed583da0d3d1a0f205eded52048e35d12cbfd164df3220922d04998",
+  "evidence": {
+    "listPage": 107,
+    "listTitle": "“创业奋斗 ‘就’在吉林”2024年“聚才引智 筑梦辽源”助推辽源高质量发展暨大学生就业创业双选会在辽源职业技术学院举行",
+    "listPublishDate": "2024-04-30",
+    "sourceOrder": 1061
+  }
+}

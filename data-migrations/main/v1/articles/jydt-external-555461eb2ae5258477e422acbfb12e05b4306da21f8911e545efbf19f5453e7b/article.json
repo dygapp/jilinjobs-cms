@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:555461eb2ae5258477e422acbfb12e05b4306da21f8911e545efbf19f5453e7b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1026/173282.htm",
+    "url": "https://www.jlju.edu.cn/info/1026/173282.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学党委书记李雁冰带队赴长春市净月高新技术产业开发区管委会开展就业合作对接交流活动",
+    "source": "",
+    "publishDate": "2026-04-27",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1026/173282.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "ecbde6bbe7b9735cc400c4dea848d559cb1923fc7fccccd8365736b60a3abd08",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "吉林建筑大学党委书记李雁冰带队赴长春市净月高新技术产业开发区管委会开展就业合作对接交流活动",
+    "listPublishDate": "2026-04-27",
+    "sourceOrder": 243
+  }
+}

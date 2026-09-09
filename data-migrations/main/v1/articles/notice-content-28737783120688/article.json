@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120688",
+    "contentId": "28737783120688",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120688"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2020年吉林省普通“专升本”考试征集志愿须知",
+    "source": "",
+    "publishDate": "2020-08-27",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align: center;\"><img src=\"migration-resource://85e5281a0a8c0ac82607ce7e1dd56a0f7f1b778dac735fb8e893b8062d100b06\" alt=\"\" width=\"1000\" height=\"1351\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://157034e4f9dd34b40d36e9b8df1c48ee0fc4487bbf5f22845f33707bc2a9d92d\" alt=\"\" width=\"1000\" height=\"1182\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://12259745b1c592e8cccd78bd330e91cc80df17afeacc91477b7440ffa9accd80\" alt=\"\" width=\"1000\" height=\"1478\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200827190039.jpg",
+      "originalReference": "/chistory/cms/editor/20200827190039.jpg",
+      "token": "migration-resource://85e5281a0a8c0ac82607ce7e1dd56a0f7f1b778dac735fb8e893b8062d100b06",
+      "snapshotPath": "assets/85e5281a0a8c0ac82607ce7e1dd56a0f7f1b778dac735fb8e893b8062d100b06.jpg",
+      "sha256": "85e5281a0a8c0ac82607ce7e1dd56a0f7f1b778dac735fb8e893b8062d100b06",
+      "contentType": "image/jpeg",
+      "sizeBytes": 194286
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200827190048.jpg",
+      "originalReference": "/chistory/cms/editor/20200827190048.jpg",
+      "token": "migration-resource://157034e4f9dd34b40d36e9b8df1c48ee0fc4487bbf5f22845f33707bc2a9d92d",
+      "snapshotPath": "assets/157034e4f9dd34b40d36e9b8df1c48ee0fc4487bbf5f22845f33707bc2a9d92d.jpg",
+      "sha256": "157034e4f9dd34b40d36e9b8df1c48ee0fc4487bbf5f22845f33707bc2a9d92d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 213260
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200827190055.jpg",
+      "originalReference": "/chistory/cms/editor/20200827190055.jpg",
+      "token": "migration-resource://12259745b1c592e8cccd78bd330e91cc80df17afeacc91477b7440ffa9accd80",
+      "snapshotPath": "assets/12259745b1c592e8cccd78bd330e91cc80df17afeacc91477b7440ffa9accd80.jpg",
+      "sha256": "12259745b1c592e8cccd78bd330e91cc80df17afeacc91477b7440ffa9accd80",
+      "contentType": "image/jpeg",
+      "sizeBytes": 266354
+    }
+  ],
+  "sourceFingerprint": "d7dfc3fefdc7742103dd26986aa8ddf44626c97f33a8e40033cfda29982c0384",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "2020年吉林省普通“专升本”考试征集志愿须知",
+    "listPublishDate": "2020-08-27",
+    "sourceOrder": 175,
+    "detailPublishDate": "2020-08-27"
+  }
+}

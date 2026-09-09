@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122844",
+    "contentId": "28737783122844",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122844"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于联合举办2014年全国高校毕业生就业网络联盟招聘周活动有关事项的通知",
+    "source": "",
+    "publishDate": "2014-04-16",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于联合举办2014年全国高校毕业生就业网络联盟招聘周活动有关事项的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2014-4-16 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img src=\"migration-resource://f0c5621b900c225cc0cee124abd6fc8704090b4e3fc0d355f440b565864b1783\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://27ed3bc45267df8bddc44f6976ef49bf456736c1189c09664a97f67c4322b80b\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://0ad20c9e9bc31ee1d08905eaf9f78bb293a445d4d4b7e76738108573a49ade53\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://a03273dd183a90eb7d07266409f021309af156df42078a29aa88e06c3cc78f62\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://cc5b8938fe41aadb5496374f7cf008673411ac3d44683e2abee22e1410b808b4\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://bd53012cf7007cff7c010be3ddab5e0b04e48674b5ce3b940765d2628f667fa1\" border=\"0\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140416040503837.jpg",
+      "originalReference": "/chistory/cms/imgs/20140416040503837.jpg",
+      "token": "migration-resource://f0c5621b900c225cc0cee124abd6fc8704090b4e3fc0d355f440b565864b1783",
+      "snapshotPath": "assets/f0c5621b900c225cc0cee124abd6fc8704090b4e3fc0d355f440b565864b1783.jpg",
+      "sha256": "f0c5621b900c225cc0cee124abd6fc8704090b4e3fc0d355f440b565864b1783",
+      "contentType": "image/jpeg",
+      "sizeBytes": 83637
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140416040508247.jpg",
+      "originalReference": "/chistory/cms/imgs/20140416040508247.jpg",
+      "token": "migration-resource://27ed3bc45267df8bddc44f6976ef49bf456736c1189c09664a97f67c4322b80b",
+      "snapshotPath": "assets/27ed3bc45267df8bddc44f6976ef49bf456736c1189c09664a97f67c4322b80b.jpg",
+      "sha256": "27ed3bc45267df8bddc44f6976ef49bf456736c1189c09664a97f67c4322b80b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 89544
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140416040512249.jpg",
+      "originalReference": "/chistory/cms/imgs/20140416040512249.jpg",
+      "token": "migration-resource://0ad20c9e9bc31ee1d08905eaf9f78bb293a445d4d4b7e76738108573a49ade53",
+      "snapshotPath": "assets/0ad20c9e9bc31ee1d08905eaf9f78bb293a445d4d4b7e76738108573a49ade53.jpg",
+      "sha256": "0ad20c9e9bc31ee1d08905eaf9f78bb293a445d4d4b7e76738108573a49ade53",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92332
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140416040517946.jpg",
+      "originalReference": "/chistory/cms/imgs/20140416040517946.jpg",
+      "token": "migration-resource://a03273dd183a90eb7d07266409f021309af156df42078a29aa88e06c3cc78f62",
+      "snapshotPath": "assets/a03273dd183a90eb7d07266409f021309af156df42078a29aa88e06c3cc78f62.jpg",
+      "sha256": "a03273dd183a90eb7d07266409f021309af156df42078a29aa88e06c3cc78f62",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82930
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140416040520244.jpg",
+      "originalReference": "/chistory/cms/imgs/20140416040520244.jpg",
+      "token": "migration-resource://cc5b8938fe41aadb5496374f7cf008673411ac3d44683e2abee22e1410b808b4",
+      "snapshotPath": "assets/cc5b8938fe41aadb5496374f7cf008673411ac3d44683e2abee22e1410b808b4.jpg",
+      "sha256": "cc5b8938fe41aadb5496374f7cf008673411ac3d44683e2abee22e1410b808b4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 52316
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140416040525843.jpg",
+      "originalReference": "/chistory/cms/imgs/20140416040525843.jpg",
+      "token": "migration-resource://bd53012cf7007cff7c010be3ddab5e0b04e48674b5ce3b940765d2628f667fa1",
+      "snapshotPath": "assets/bd53012cf7007cff7c010be3ddab5e0b04e48674b5ce3b940765d2628f667fa1.jpg",
+      "sha256": "bd53012cf7007cff7c010be3ddab5e0b04e48674b5ce3b940765d2628f667fa1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 45760
+    }
+  ],
+  "sourceFingerprint": "7b9b3da15df1fb1593b1cbae8bca209989c96c2d6cde7803ed5e35a3036f14c0",
+  "evidence": {
+    "listPage": 32,
+    "listTitle": "关于联合举办2014年全国高校毕业生就业网络联盟招聘周活动有关事项的通知",
+    "listPublishDate": "2014-04-16",
+    "sourceOrder": 314,
+    "detailPublishDate": "2014-04-16"
+  }
+}

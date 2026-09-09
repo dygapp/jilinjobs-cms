@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:15c1fe34f2260346559bd1511aa04f0d597ae76ca16d765bc1fa168b4f0f9762",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/J0IeHA9nes30HZVEXOzjdQ",
+    "url": "https://mp.weixin.qq.com/s/J0IeHA9nes30HZVEXOzjdQ?scene=25&sessionid=-1365375230"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春市百万大学生留长工程——2025年“五优”服务进校园春季巡回双选会（双阳区高校联盟专场）在长春科技学院成功举办",
+    "source": "",
+    "publishDate": "2025-04-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/J0IeHA9nes30HZVEXOzjdQ?scene=25&sessionid=-1365375230"
+  },
+  "resources": [],
+  "sourceFingerprint": "9f135e663baafa5c319be77344dfe0c983085388d1751701c04e799feb7e9586",
+  "evidence": {
+    "listPage": 92,
+    "listTitle": "长春市百万大学生留长工程——2025年“五优”服务进校园春季巡回双选会（双阳区高校联盟专场）在长春科技学院成功举办",
+    "listPublishDate": "2025-04-28",
+    "sourceOrder": 920
+  }
+}

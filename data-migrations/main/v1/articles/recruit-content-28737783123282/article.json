@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123282",
+    "contentId": "28737783123282",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123282"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "西安市大学生自主创业培训班首期开课",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">西安市大学生自主创业培训班首期开课</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">本报讯 （记者 付亚娟）昨日，西安市大学生创业研究培训基地在陕西教育学院正式挂牌，省委常委、西安市委书记孙清云为基地授牌。</font></p> <p><font size=\"2\">　　西安市2009年首届大学生自主创业培训班自3月16日公开报名后，受到社会各界广泛关注。经过市创业办相关部门筛选，确定了200名大学生作为培训班正式学员。他们中年龄最大的44岁，最小的22岁，平均年龄28.2岁；女性占28%；留学归国人员5人；2006年以后毕业的大学生占52.7%。学员提出的创业计划项目共192个，涉及文化服务、节能环保、网络技术、餐饮服务、教育培训、人力资源服务、高新技术、连锁加盟和农业养殖等九大类别。</font></p> <p><font size=\"2\">　　本次投入使用的“大学生自主创业培训课程”，由陕西教育学院创业教育研究中心牵头，聚集多方专业人士智慧、历时半年完成开发的，具有鲜明的专业性、本土性和实用性。课程专门安排了西安市产业结构现状、发展走向和创业商机分析；创业促进政策和政府服务平台利用等课程。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：三秦都市报</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "499c0a1d2fb1ec338ce69e1cdf7fa47e9303e939de857c8b3faa57fc08a8f697",
+  "evidence": {
+    "listPage": 57,
+    "listTitle": "西安市大学生自主创业培训班首期开课",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 570,
+    "detailPublishDate": "2009-04-04"
+  }
+}

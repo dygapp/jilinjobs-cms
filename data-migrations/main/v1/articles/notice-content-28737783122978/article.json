@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122978",
+    "contentId": "28737783122978",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122978"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "教育部办公厅关于举办“2011年全国高校毕业生就业指导中心联合招聘月”活动的通知",
+    "source": "",
+    "publishDate": "2011-11-25",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">教育部办公厅关于举办“2011年全国高校毕业生就业指导中心联合招聘月”活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-25 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://328c4a1d4789ba61b418e68f61a2c672b0716becd7766b1bc3725d246ef5cd7b\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://91ee9b17c21774ff5772b92a48eeb390355b8d33ff2c12ee72cbc859095ff6e4\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://c3489a2a04a512203d4bdeb0ca2faf82d57330818b25f28283dd22caa4abc9e0\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://85b7128b3f49f00d956f987e6984ddddc16e3e646be8c60f83196183a118940a\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://f6a18c31e9a43dbb8447277003b2001ee72c0c3f2c7fcd97c12692928facfb00\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://1c96ca86e41d9f49c71eca21aba81720082b7cb681d3591bf00d4290b78cf513\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111206145954695.jpg",
+      "originalReference": "/chistory/cms/imgs/20111206145954695.jpg",
+      "token": "migration-resource://328c4a1d4789ba61b418e68f61a2c672b0716becd7766b1bc3725d246ef5cd7b",
+      "snapshotPath": "assets/328c4a1d4789ba61b418e68f61a2c672b0716becd7766b1bc3725d246ef5cd7b.jpg",
+      "sha256": "328c4a1d4789ba61b418e68f61a2c672b0716becd7766b1bc3725d246ef5cd7b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 65893
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111206150000715.jpg",
+      "originalReference": "/chistory/cms/imgs/20111206150000715.jpg",
+      "token": "migration-resource://91ee9b17c21774ff5772b92a48eeb390355b8d33ff2c12ee72cbc859095ff6e4",
+      "snapshotPath": "assets/91ee9b17c21774ff5772b92a48eeb390355b8d33ff2c12ee72cbc859095ff6e4.jpg",
+      "sha256": "91ee9b17c21774ff5772b92a48eeb390355b8d33ff2c12ee72cbc859095ff6e4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 70409
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111206150005358.jpg",
+      "originalReference": "/chistory/cms/imgs/20111206150005358.jpg",
+      "token": "migration-resource://c3489a2a04a512203d4bdeb0ca2faf82d57330818b25f28283dd22caa4abc9e0",
+      "snapshotPath": "assets/c3489a2a04a512203d4bdeb0ca2faf82d57330818b25f28283dd22caa4abc9e0.jpg",
+      "sha256": "c3489a2a04a512203d4bdeb0ca2faf82d57330818b25f28283dd22caa4abc9e0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 68075
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111206150010266.jpg",
+      "originalReference": "/chistory/cms/imgs/20111206150010266.jpg",
+      "token": "migration-resource://85b7128b3f49f00d956f987e6984ddddc16e3e646be8c60f83196183a118940a",
+      "snapshotPath": "assets/85b7128b3f49f00d956f987e6984ddddc16e3e646be8c60f83196183a118940a.jpg",
+      "sha256": "85b7128b3f49f00d956f987e6984ddddc16e3e646be8c60f83196183a118940a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 41148
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111206150017903.jpg",
+      "originalReference": "/chistory/cms/imgs/20111206150017903.jpg",
+      "token": "migration-resource://f6a18c31e9a43dbb8447277003b2001ee72c0c3f2c7fcd97c12692928facfb00",
+      "snapshotPath": "assets/f6a18c31e9a43dbb8447277003b2001ee72c0c3f2c7fcd97c12692928facfb00.jpg",
+      "sha256": "f6a18c31e9a43dbb8447277003b2001ee72c0c3f2c7fcd97c12692928facfb00",
+      "contentType": "image/jpeg",
+      "sizeBytes": 21712
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111206150021275.jpg",
+      "originalReference": "/chistory/cms/imgs/20111206150021275.jpg",
+      "token": "migration-resource://1c96ca86e41d9f49c71eca21aba81720082b7cb681d3591bf00d4290b78cf513",
+      "snapshotPath": "assets/1c96ca86e41d9f49c71eca21aba81720082b7cb681d3591bf00d4290b78cf513.jpg",
+      "sha256": "1c96ca86e41d9f49c71eca21aba81720082b7cb681d3591bf00d4290b78cf513",
+      "contentType": "image/jpeg",
+      "sizeBytes": 32288
+    }
+  ],
+  "sourceFingerprint": "04d72745b6df72ed83d7023cb152ecf18c9dde71b8d6fdc996e1ab37c1052294",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "教育部办公厅关于举办“2011年全国高校毕业生就业指导中心联合招聘月”活动的通知",
+    "listPublishDate": "2011-11-25",
+    "sourceOrder": 414,
+    "detailPublishDate": "2011-11-25"
+  }
+}

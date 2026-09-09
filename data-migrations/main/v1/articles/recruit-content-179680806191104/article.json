@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:179680806191104",
+    "contentId": "179680806191104",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=179680806191104"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省2024届高校毕业生供需洽谈会暨吉林财经大学培训基地“宏志助航”专场招聘会邀请函",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2023-09-19",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"884\" src=\"migration-resource://b50be0a8ee1817b8c01d1e2129383573207df5ba148b7a6c38c39b8123b46257\" width=\"740\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"893\" src=\"migration-resource://132eceb504aa994adb75d1422120e8b0ca864fca299725696c01591cc3316b3d\" width=\"742\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"806\" src=\"migration-resource://ae6f556a7089f0d1079875f1fc713a02955f08d1fc9fe5a70b9da5cb6e296fe3\" width=\"740\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-19/f3236aa8-b791-4454-8269-ea797758a638.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-19/f3236aa8-b791-4454-8269-ea797758a638.jpg",
+      "token": "migration-resource://b50be0a8ee1817b8c01d1e2129383573207df5ba148b7a6c38c39b8123b46257",
+      "snapshotPath": "assets/b50be0a8ee1817b8c01d1e2129383573207df5ba148b7a6c38c39b8123b46257.jpg",
+      "sha256": "b50be0a8ee1817b8c01d1e2129383573207df5ba148b7a6c38c39b8123b46257",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77361
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-19/85f9690c-ca00-45af-afa4-6ee1f968297e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-19/85f9690c-ca00-45af-afa4-6ee1f968297e.jpg",
+      "token": "migration-resource://132eceb504aa994adb75d1422120e8b0ca864fca299725696c01591cc3316b3d",
+      "snapshotPath": "assets/132eceb504aa994adb75d1422120e8b0ca864fca299725696c01591cc3316b3d.jpg",
+      "sha256": "132eceb504aa994adb75d1422120e8b0ca864fca299725696c01591cc3316b3d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 46687
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-19/c873124a-2b17-4db9-bc44-5d3a751edfca.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-19/c873124a-2b17-4db9-bc44-5d3a751edfca.jpg",
+      "token": "migration-resource://ae6f556a7089f0d1079875f1fc713a02955f08d1fc9fe5a70b9da5cb6e296fe3",
+      "snapshotPath": "assets/ae6f556a7089f0d1079875f1fc713a02955f08d1fc9fe5a70b9da5cb6e296fe3.jpg",
+      "sha256": "ae6f556a7089f0d1079875f1fc713a02955f08d1fc9fe5a70b9da5cb6e296fe3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 41281
+    }
+  ],
+  "sourceFingerprint": "715e31e96d9e511bbb1c77ec1c761e3dcd2bf4e2a9237bc409e23d796d804615",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "吉林省2024届高校毕业生供需洽谈会暨吉林财经大学培训基地“宏志助航”专场招聘会邀请函",
+    "listPublishDate": "2023-09-19",
+    "sourceOrder": 309,
+    "detailPublishDate": "2023-09-19"
+  }
+}

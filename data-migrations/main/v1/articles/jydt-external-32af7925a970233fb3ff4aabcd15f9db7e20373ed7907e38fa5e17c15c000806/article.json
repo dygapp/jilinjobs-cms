@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:32af7925a970233fb3ff4aabcd15f9db7e20373ed7907e38fa5e17c15c000806",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/JA18L3x3a2IREgJxFzNMeg",
+    "url": "https://mp.weixin.qq.com/s/JA18L3x3a2IREgJxFzNMeg?scene=25&sessionid=&poc_token=HCDKZGijI77ZkHEHuhdWirku09Y1J9AI_VUIrpUb"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学赴磐石市开展“百校对百县”促就业专项行动",
+    "source": "",
+    "publishDate": "2025-07-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/JA18L3x3a2IREgJxFzNMeg?scene=25&sessionid=&poc_token=HCDKZGijI77ZkHEHuhdWirku09Y1J9AI_VUIrpUb"
+  },
+  "resources": [],
+  "sourceFingerprint": "4f7b8fce63c0cae182a23652bed5b899b5ac4a109cb2ffc308659c48b739397c",
+  "evidence": {
+    "listPage": 76,
+    "listTitle": "北华大学赴磐石市开展“百校对百县”促就业专项行动",
+    "listPublishDate": "2025-07-01",
+    "sourceOrder": 757
+  }
+}

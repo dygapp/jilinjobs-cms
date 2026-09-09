@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e1722927241548b064c6e317ceaeb2f8f4b359e1d9ff60c4d4a035eec8c09573",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/p8FogkppusxsSMYJcSgVQQ",
+    "url": "https://mp.weixin.qq.com/s/p8FogkppusxsSMYJcSgVQQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "学校举办“服务吉林高质量发展——北华大学2025届毕业生春季校园招聘会暨工科专业‘就业最后一公里’专场招聘会”",
+    "source": "",
+    "publishDate": "2025-05-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/p8FogkppusxsSMYJcSgVQQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "4014a7d67fa00f4b0d719964ba02c2fd16dbdd1b36bbd9159e08c8d0799a7d61",
+  "evidence": {
+    "listPage": 86,
+    "listTitle": "学校举办“服务吉林高质量发展——北华大学2025届毕业生春季校园招聘会暨工科专业‘就业最后一公里’专场招聘会”",
+    "listPublishDate": "2025-05-29",
+    "sourceOrder": 858
+  }
+}

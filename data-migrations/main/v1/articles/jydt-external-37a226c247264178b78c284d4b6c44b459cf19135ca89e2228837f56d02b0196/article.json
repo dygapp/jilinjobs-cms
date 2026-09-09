@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:37a226c247264178b78c284d4b6c44b459cf19135ca89e2228837f56d02b0196",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/1UeL8d90MMDhFuJ0nDJqzA",
+    "url": "https://mp.weixin.qq.com/s/1UeL8d90MMDhFuJ0nDJqzA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "搭建供需桥梁 助力高质量就业——吉林警察学院成功举办2026届毕业生秋季双选会",
+    "source": "",
+    "publishDate": "2025-09-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1UeL8d90MMDhFuJ0nDJqzA"
+  },
+  "resources": [],
+  "sourceFingerprint": "394fd49ccf6519eac2d9ab77041026c8c9658d62b3d3d8085099419f725dfe21",
+  "evidence": {
+    "listPage": 69,
+    "listTitle": "搭建供需桥梁 助力高质量就业——吉林警察学院成功举办2026届毕业生秋季双选会",
+    "listPublishDate": "2025-09-30",
+    "sourceOrder": 687
+  }
+}

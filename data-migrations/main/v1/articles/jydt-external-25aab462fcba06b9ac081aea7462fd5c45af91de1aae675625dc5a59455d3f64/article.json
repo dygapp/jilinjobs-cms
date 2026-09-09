@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:25aab462fcba06b9ac081aea7462fd5c45af91de1aae675625dc5a59455d3f64",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/esa8cwmoWQ6LHOpcq20Asg",
+    "url": "https://mp.weixin.qq.com/s/esa8cwmoWQ6LHOpcq20Asg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力扩容提质 服务高质量发展|长春金融高等专科学校举办2026届毕业生春季校园双选会",
+    "source": "",
+    "publishDate": "2026-05-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/esa8cwmoWQ6LHOpcq20Asg"
+  },
+  "resources": [],
+  "sourceFingerprint": "5ec99e1e253913ab574e207b04393fb21656b92d9bc7fa307592e2e6fb733b8f",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "聚力扩容提质 服务高质量发展|长春金融高等专科学校举办2026届毕业生春季校园双选会",
+    "listPublishDate": "2026-05-25",
+    "sourceOrder": 146
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:a26c8854bfe89f08c496c0a253adafaffe691581b24773e063043d4418e62507",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/XBscuFiMqtBBhZaINXr2-A",
+    "url": "https://mp.weixin.qq.com/s/XBscuFiMqtBBhZaINXr2-A"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【邀请函】“聚力扩容提质 服务高质量发展”吉林工商学院2027届毕业生秋季校园招聘会",
+    "source": "",
+    "publishDate": "2026-09-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/XBscuFiMqtBBhZaINXr2-A"
+  },
+  "resources": [],
+  "sourceFingerprint": "8f834de928d4f0e69fa98cfbc41e42b9d297ca251c52e28cb50fb1681660c570",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "【邀请函】“聚力扩容提质 服务高质量发展”吉林工商学院2027届毕业生秋季校园招聘会",
+    "listPublishDate": "2026-09-04",
+    "sourceOrder": 7
+  }
+}

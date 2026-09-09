@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-month:content:229096470626304",
+    "contentId": "229096470626304",
+    "typeCode": "policy-month",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=229096470626304"
+  },
+  "target": {
+    "columnAlias": "policy-month",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "普通高校学生自主创业政策公告",
+    "source": "教育部高校学生司",
+    "publishDate": "2024-06-18",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1344\" src=\"migration-resource://41c7221bdfe554dc65e8ada481beafb6f67643ea3b338e90db394f1575e0670d\" width=\"950\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/006ec8e0-5178-4aa2-8990-1457784db68d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/006ec8e0-5178-4aa2-8990-1457784db68d.jpg",
+      "token": "migration-resource://41c7221bdfe554dc65e8ada481beafb6f67643ea3b338e90db394f1575e0670d",
+      "snapshotPath": "assets/41c7221bdfe554dc65e8ada481beafb6f67643ea3b338e90db394f1575e0670d.jpg",
+      "sha256": "41c7221bdfe554dc65e8ada481beafb6f67643ea3b338e90db394f1575e0670d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    }
+  ],
+  "sourceFingerprint": "a52fec8e703a78dbbd438c8bf20360d263a384e0d3ff01826a1919ac84bded63",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "普通高校学生自主创业政策公告",
+    "listPublishDate": "2024-06-18",
+    "sourceOrder": 2,
+    "detailPublishDate": "2024-06-18"
+  }
+}

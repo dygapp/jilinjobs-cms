@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e38147bfea847c6ddd865e0a391d5b84603e695890e6b0735653a8d5bcbbec75",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/xinwen/p/554792.html",
+    "url": "http://m.cetv.cn/xinwen/p/554792.html?v=1751117562826?v=1752046767599"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“百校对百县”促就业专项行动 稳就业促发展",
+    "source": "",
+    "publishDate": "2025-07-09",
+    "bodyHtml": "",
+    "externalUrl": "http://m.cetv.cn/xinwen/p/554792.html?v=1751117562826?v=1752046767599"
+  },
+  "resources": [],
+  "sourceFingerprint": "ffa11dfed69de35c2f84a5ddc9e6ae1314f4c0380084e6b4b22a832cdee10c66",
+  "evidence": {
+    "listPage": 74,
+    "listTitle": "“百校对百县”促就业专项行动 稳就业促发展",
+    "listPublishDate": "2025-07-09",
+    "sourceOrder": 733
+  }
+}

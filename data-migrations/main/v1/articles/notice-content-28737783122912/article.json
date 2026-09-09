@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122912",
+    "contentId": "28737783122912",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122912"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《关于举办2013年全国毕业研究生专场网上招聘周活动的通知》",
+    "source": "",
+    "publishDate": "2013-01-15",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《关于举办2013年全国毕业研究生专场网上招聘周活动的通知》</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2013-1-15 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><font size=\"3\"><strong>转发《关于举办2013年全国毕业研究生专场</strong></font></p> <p align=\"center\"><font size=\"3\"><strong>网上招聘周活动的通知》</strong></font></p> <p align=\"center\"><font size=\"3\"></font>&nbsp;</p> <p><font size=\"3\">各普通高校：</font></p> <p><font size=\"3\">&nbsp;&nbsp;&nbsp; 教育部高校学生司、全国高等学校信息咨询与就业指导中心将举办“2013年全国毕业研究生专场网上招聘周”活动，时间定于2013年1月21日—27日。现将活动通知转发给你们，请各高校按要求及时宣传动员，组织本校毕业生积极参加网上求职与应聘。</font></p> <p><font size=\"3\">&nbsp;&nbsp;&nbsp; 附件：《关于举办“2013年全国毕业研究生专场网上招聘周”活动的通知》教学司函[2012]1004号</font></p> <p><font size=\"3\"></font><font size=\"3\"></font>&nbsp;</p> <p align=\"right\"><font size=\"3\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;吉林省高等学校毕业生就业指导中心</font></p> <p align=\"justify\"><font size=\"3\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二O一三年一月十四日</font></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://4d563f829a7ed15540fb712773acc8b0e1999b176faf61df0ed9e5723200c76c\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://75f313b15a4a7da40140afe521ad61ee961f74b8f473c56184f8469d5d9b27a0\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://8d79ebe2d82b4c3047ec282e6b262a4c83517db80f17f84ffce1c05be147c36f\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130115035833784.jpg",
+      "originalReference": "/chistory/cms/imgs/20130115035833784.jpg",
+      "token": "migration-resource://4d563f829a7ed15540fb712773acc8b0e1999b176faf61df0ed9e5723200c76c",
+      "snapshotPath": "assets/4d563f829a7ed15540fb712773acc8b0e1999b176faf61df0ed9e5723200c76c.jpg",
+      "sha256": "4d563f829a7ed15540fb712773acc8b0e1999b176faf61df0ed9e5723200c76c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 73780
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130115035839739.jpg",
+      "originalReference": "/chistory/cms/imgs/20130115035839739.jpg",
+      "token": "migration-resource://75f313b15a4a7da40140afe521ad61ee961f74b8f473c56184f8469d5d9b27a0",
+      "snapshotPath": "assets/75f313b15a4a7da40140afe521ad61ee961f74b8f473c56184f8469d5d9b27a0.jpg",
+      "sha256": "75f313b15a4a7da40140afe521ad61ee961f74b8f473c56184f8469d5d9b27a0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 80268
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130115035844808.jpg",
+      "originalReference": "/chistory/cms/imgs/20130115035844808.jpg",
+      "token": "migration-resource://8d79ebe2d82b4c3047ec282e6b262a4c83517db80f17f84ffce1c05be147c36f",
+      "snapshotPath": "assets/8d79ebe2d82b4c3047ec282e6b262a4c83517db80f17f84ffce1c05be147c36f.jpg",
+      "sha256": "8d79ebe2d82b4c3047ec282e6b262a4c83517db80f17f84ffce1c05be147c36f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 53151
+    }
+  ],
+  "sourceFingerprint": "1b7b1c966d37985177a99fe225c351efdd751d4084a23ed4f6d9b57e0dfa75cc",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "转发《关于举办2013年全国毕业研究生专场网上招聘周活动的通知》",
+    "listPublishDate": "2013-01-15",
+    "sourceOrder": 366,
+    "detailPublishDate": "2013-01-15"
+  }
+}

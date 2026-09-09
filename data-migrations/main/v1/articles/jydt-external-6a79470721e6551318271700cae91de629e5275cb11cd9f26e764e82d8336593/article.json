@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6a79470721e6551318271700cae91de629e5275cb11cd9f26e764e82d8336593",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/O4ZSN8xe0I2o4BNjJjzgJg",
+    "url": "https://mp.weixin.qq.com/s/O4ZSN8xe0I2o4BNjJjzgJg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“人才共育，资源共享，发展共赢”—吉林电子信息职业技术学院党委书记何晓杰一行赴山东龙口市、青岛市访企拓岗 开启校地合作发展新篇章",
+    "source": "",
+    "publishDate": "2026-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/O4ZSN8xe0I2o4BNjJjzgJg"
+  },
+  "resources": [],
+  "sourceFingerprint": "56102f1704ca5cdf3270b72dd8d99a0f4dd6ffca8f2c96c39662736fdd72e9fd",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "“人才共育，资源共享，发展共赢”—吉林电子信息职业技术学院党委书记何晓杰一行赴山东龙口市、青岛市访企拓岗 开启校地合作发展新篇章",
+    "listPublishDate": "2026-03-27",
+    "sourceOrder": 353
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4597831f1e303bfbda526265e6baf83f818e7b2f4fb0935c7ad44b084fdd1b2c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/oZZ8TlQEMfTYvvjq-7-BLg",
+    "url": "https://mp.weixin.qq.com/s/oZZ8TlQEMfTYvvjq-7-BLg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【就业指导】|| 遭遇“只试用不转正”怎么办？法官提示",
+    "source": "",
+    "publishDate": "2025-08-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/oZZ8TlQEMfTYvvjq-7-BLg"
+  },
+  "resources": [],
+  "sourceFingerprint": "8b477b7dbe14a9c2b9e18536e6dfab1a4f5c401621fb45b03aa676e5d46bc4ca",
+  "evidence": {
+    "listPage": 72,
+    "listTitle": "【就业指导】|| 遭遇“只试用不转正”怎么办？法官提示",
+    "listPublishDate": "2025-08-13",
+    "sourceOrder": 716
+  }
+}

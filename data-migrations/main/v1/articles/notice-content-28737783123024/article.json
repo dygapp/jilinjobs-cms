@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783123024",
+    "contentId": "28737783123024",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123024"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发《开展2011年 “全民创业带动就业活动月”》的通知",
+    "source": "",
+    "publishDate": "2011-05-13",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于转发《开展2011年 “全民创业带动就业活动月”》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-5-13 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://08994d0136a8aea5793bfda9548bd09dfb931ed03934a00e3cfed8f9768fec46\"><img border=\"0\" src=\"migration-resource://d2006750c28158e76f5e6f96c52db6b22567a611cbd82261a33468d72135dd51\"><img border=\"0\" src=\"migration-resource://cf20b0e2fb92f0164b60bf890f0823dcc210d4be6468a78567b27d300d04e9fb\"><img border=\"0\" src=\"migration-resource://60083ba69b77d4aeeaafabd97080949e62a16bd922026dbd3a507b0e6d003ea5\"><img border=\"0\" src=\"migration-resource://078e0f612a543571caa14627f1f4333135aab2159ee315756e3b7a87ca3459a2\"><img border=\"0\" src=\"migration-resource://696586be6bef958ab4ae14acec418e561eec825f042c0861022cc2fc39fb099b\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110513120713663.jpg",
+      "originalReference": "/chistory/cms/imgs/20110513120713663.jpg",
+      "token": "migration-resource://08994d0136a8aea5793bfda9548bd09dfb931ed03934a00e3cfed8f9768fec46",
+      "snapshotPath": "assets/08994d0136a8aea5793bfda9548bd09dfb931ed03934a00e3cfed8f9768fec46.jpg",
+      "sha256": "08994d0136a8aea5793bfda9548bd09dfb931ed03934a00e3cfed8f9768fec46",
+      "contentType": "image/jpeg",
+      "sizeBytes": 74577
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110513120718188.jpg",
+      "originalReference": "/chistory/cms/imgs/20110513120718188.jpg",
+      "token": "migration-resource://d2006750c28158e76f5e6f96c52db6b22567a611cbd82261a33468d72135dd51",
+      "snapshotPath": "assets/d2006750c28158e76f5e6f96c52db6b22567a611cbd82261a33468d72135dd51.jpg",
+      "sha256": "d2006750c28158e76f5e6f96c52db6b22567a611cbd82261a33468d72135dd51",
+      "contentType": "image/jpeg",
+      "sizeBytes": 91477
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110513120723617.jpg",
+      "originalReference": "/chistory/cms/imgs/20110513120723617.jpg",
+      "token": "migration-resource://cf20b0e2fb92f0164b60bf890f0823dcc210d4be6468a78567b27d300d04e9fb",
+      "snapshotPath": "assets/cf20b0e2fb92f0164b60bf890f0823dcc210d4be6468a78567b27d300d04e9fb.jpg",
+      "sha256": "cf20b0e2fb92f0164b60bf890f0823dcc210d4be6468a78567b27d300d04e9fb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 72989
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110513120727165.jpg",
+      "originalReference": "/chistory/cms/imgs/20110513120727165.jpg",
+      "token": "migration-resource://60083ba69b77d4aeeaafabd97080949e62a16bd922026dbd3a507b0e6d003ea5",
+      "snapshotPath": "assets/60083ba69b77d4aeeaafabd97080949e62a16bd922026dbd3a507b0e6d003ea5.jpg",
+      "sha256": "60083ba69b77d4aeeaafabd97080949e62a16bd922026dbd3a507b0e6d003ea5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75701
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110513120731837.jpg",
+      "originalReference": "/chistory/cms/imgs/20110513120731837.jpg",
+      "token": "migration-resource://078e0f612a543571caa14627f1f4333135aab2159ee315756e3b7a87ca3459a2",
+      "snapshotPath": "assets/078e0f612a543571caa14627f1f4333135aab2159ee315756e3b7a87ca3459a2.jpg",
+      "sha256": "078e0f612a543571caa14627f1f4333135aab2159ee315756e3b7a87ca3459a2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 100600
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110513120735291.jpg",
+      "originalReference": "/chistory/cms/imgs/20110513120735291.jpg",
+      "token": "migration-resource://696586be6bef958ab4ae14acec418e561eec825f042c0861022cc2fc39fb099b",
+      "snapshotPath": "assets/696586be6bef958ab4ae14acec418e561eec825f042c0861022cc2fc39fb099b.jpg",
+      "sha256": "696586be6bef958ab4ae14acec418e561eec825f042c0861022cc2fc39fb099b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 87281
+    }
+  ],
+  "sourceFingerprint": "2a273e1fca3e45a6402dc124ae8a0d0e0990f1ee8617b6901356c65eb651360e",
+  "evidence": {
+    "listPage": 45,
+    "listTitle": "关于转发《开展2011年 “全民创业带动就业活动月”》的通知",
+    "listPublishDate": "2011-05-13",
+    "sourceOrder": 443,
+    "detailPublishDate": "2011-05-13"
+  }
+}

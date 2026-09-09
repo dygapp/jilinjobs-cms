@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1c33562e6af3e4af95348e21d2b88acfe88eb6938d89297b035ecc11d43fb0cf",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/jss7bOQoDUeJyPFbZ9Wx_g",
+    "url": "https://mp.weixin.qq.com/s/jss7bOQoDUeJyPFbZ9Wx_g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学校长张明耀率队赴北湖科技园访企拓岗",
+    "source": "",
+    "publishDate": "2025-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/jss7bOQoDUeJyPFbZ9Wx_g"
+  },
+  "resources": [],
+  "sourceFingerprint": "6a74d456e97937bbd26a01a8bbc114ba41361bd5051f5cf6b9e51c4440de4f6b",
+  "evidence": {
+    "listPage": 90,
+    "listTitle": "长春工业大学校长张明耀率队赴北湖科技园访企拓岗",
+    "listPublishDate": "2025-05-15",
+    "sourceOrder": 896
+  }
+}

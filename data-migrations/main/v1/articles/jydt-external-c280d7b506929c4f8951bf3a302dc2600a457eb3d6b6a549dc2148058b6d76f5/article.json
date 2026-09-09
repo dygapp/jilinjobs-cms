@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c280d7b506929c4f8951bf3a302dc2600a457eb3d6b6a549dc2148058b6d76f5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/su_YOt2uoRmcaPwlPNqz3A",
+    "url": "https://mp.weixin.qq.com/s/su_YOt2uoRmcaPwlPNqz3A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林职业技术学院党委书记李光星带队赴广东省多地开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2025-12-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/su_YOt2uoRmcaPwlPNqz3A"
+  },
+  "resources": [],
+  "sourceFingerprint": "7d727b6940f0cadb4264b0d9dae2d90b6dc988c9072a998a0721264d9af1b040",
+  "evidence": {
+    "listPage": 56,
+    "listTitle": "吉林职业技术学院党委书记李光星带队赴广东省多地开展访企拓岗促就业专项行动",
+    "listPublishDate": "2025-12-10",
+    "sourceOrder": 553
+  }
+}

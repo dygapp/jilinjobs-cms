@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:91b2e223cb20d7292b582eb5be930e3fbad0cb49cfe8c775b36d4123ecfddccf",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/sLuugRsbb1-eiCWRMiJCkA",
+    "url": "https://mp.weixin.qq.com/s/sLuugRsbb1-eiCWRMiJCkA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "白城师范学院“寒假促就业暖心行动”就业服务指南",
+    "source": "",
+    "publishDate": "2026-01-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/sLuugRsbb1-eiCWRMiJCkA"
+  },
+  "resources": [],
+  "sourceFingerprint": "3935a48dd186e5444e1b421c1a8150b17144c5619c409054f9021ca5f1a2185f",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "白城师范学院“寒假促就业暖心行动”就业服务指南",
+    "listPublishDate": "2026-01-19",
+    "sourceOrder": 100
+  }
+}

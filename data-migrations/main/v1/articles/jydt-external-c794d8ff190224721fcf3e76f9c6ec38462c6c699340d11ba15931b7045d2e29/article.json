@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c794d8ff190224721fcf3e76f9c6ec38462c6c699340d11ba15931b7045d2e29",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Bl-PaR63rJF0b1hwZwqNgA",
+    "url": "https://mp.weixin.qq.com/s/Bl-PaR63rJF0b1hwZwqNgA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "智绘艺境・共筑未来 吉林广播电视台与吉林艺术学院访企拓岗暨战略合作启动仪式圆满举行",
+    "source": "",
+    "publishDate": "2025-07-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Bl-PaR63rJF0b1hwZwqNgA"
+  },
+  "resources": [],
+  "sourceFingerprint": "b8c4810210d7343b7a1befb6be565c2b242bc1dcf60bb7b770d8b8c661c40af9",
+  "evidence": {
+    "listPage": 76,
+    "listTitle": "智绘艺境・共筑未来 吉林广播电视台与吉林艺术学院访企拓岗暨战略合作启动仪式圆满举行",
+    "listPublishDate": "2025-07-02",
+    "sourceOrder": 755
+  }
+}

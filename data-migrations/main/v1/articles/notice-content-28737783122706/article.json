@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122706",
+    "contentId": "28737783122706",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122706"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2020年高校就业指导骨干教师线上训练营的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2020-07-17",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align: center;\"><img src=\"migration-resource://7b57e6cef9316d5afd31a9bd6399169220e542aa33a4d2b482a59dd14591f96b\" alt=\"\" width=\"800\" height=\"1140\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://5378c830a4d01945ee353963d78dc5fbe28ff0d6194c2d2ce4608aeecc736697\" alt=\"\" width=\"800\" height=\"1124\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://7131d78fd2253a0d2ed2c8d36f1f525de804cf748c75bb928d2164ae41427913\" alt=\"\" width=\"800\" height=\"1116\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://d2d07d98d0fe4e27d125e5f0b362d2951b2feaff8703ef3755d640e74d43db3e\" alt=\"\" width=\"1117\" height=\"800\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200717171348.jpg",
+      "originalReference": "/chistory/cms/editor/20200717171348.jpg",
+      "token": "migration-resource://7b57e6cef9316d5afd31a9bd6399169220e542aa33a4d2b482a59dd14591f96b",
+      "snapshotPath": "assets/7b57e6cef9316d5afd31a9bd6399169220e542aa33a4d2b482a59dd14591f96b.jpg",
+      "sha256": "7b57e6cef9316d5afd31a9bd6399169220e542aa33a4d2b482a59dd14591f96b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 172259
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200717171356.jpg",
+      "originalReference": "/chistory/cms/editor/20200717171356.jpg",
+      "token": "migration-resource://5378c830a4d01945ee353963d78dc5fbe28ff0d6194c2d2ce4608aeecc736697",
+      "snapshotPath": "assets/5378c830a4d01945ee353963d78dc5fbe28ff0d6194c2d2ce4608aeecc736697.jpg",
+      "sha256": "5378c830a4d01945ee353963d78dc5fbe28ff0d6194c2d2ce4608aeecc736697",
+      "contentType": "image/jpeg",
+      "sizeBytes": 102797
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200717171402.jpg",
+      "originalReference": "/chistory/cms/editor/20200717171402.jpg",
+      "token": "migration-resource://7131d78fd2253a0d2ed2c8d36f1f525de804cf748c75bb928d2164ae41427913",
+      "snapshotPath": "assets/7131d78fd2253a0d2ed2c8d36f1f525de804cf748c75bb928d2164ae41427913.jpg",
+      "sha256": "7131d78fd2253a0d2ed2c8d36f1f525de804cf748c75bb928d2164ae41427913",
+      "contentType": "image/jpeg",
+      "sizeBytes": 185241
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20200717171408.jpg",
+      "originalReference": "/chistory/cms/editor/20200717171408.jpg",
+      "token": "migration-resource://d2d07d98d0fe4e27d125e5f0b362d2951b2feaff8703ef3755d640e74d43db3e",
+      "snapshotPath": "assets/d2d07d98d0fe4e27d125e5f0b362d2951b2feaff8703ef3755d640e74d43db3e.jpg",
+      "sha256": "d2d07d98d0fe4e27d125e5f0b362d2951b2feaff8703ef3755d640e74d43db3e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 52679
+    }
+  ],
+  "sourceFingerprint": "1e53b6eb42b879d32b7e5b05c3eabc64545af681d590fb6f9adf2658eb122b30",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "关于举办2020年高校就业指导骨干教师线上训练营的通知",
+    "listPublishDate": "2020-07-17",
+    "sourceOrder": 180,
+    "detailPublishDate": "2020-07-17"
+  }
+}

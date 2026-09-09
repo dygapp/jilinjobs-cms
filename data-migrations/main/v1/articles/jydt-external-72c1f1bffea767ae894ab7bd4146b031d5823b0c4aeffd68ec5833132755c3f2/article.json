@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:72c1f1bffea767ae894ab7bd4146b031d5823b0c4aeffd68ec5833132755c3f2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/FzajJ-EgTyZ550VBGy7eQQ",
+    "url": "https://mp.weixin.qq.com/s/FzajJ-EgTyZ550VBGy7eQQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学举办“聚力扩容提质 服务高质量发展”电子信息类专场双选会",
+    "source": "",
+    "publishDate": "2026-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/FzajJ-EgTyZ550VBGy7eQQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "81b0449529d8b9e405e0859706b3354d3d5fcbdbb44a267ef72e014752e61b4f",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "吉林建筑大学举办“聚力扩容提质 服务高质量发展”电子信息类专场双选会",
+    "listPublishDate": "2026-05-15",
+    "sourceOrder": 177
+  }
+}

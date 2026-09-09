@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123204",
+    "contentId": "28737783123204",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123204"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省开通创业咨询服务热线—“96611”",
+    "source": "",
+    "publishDate": "2010-04-21",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省开通创业咨询服务热线—“96611”</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2010-4-21 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"left\"><font color=\"#444444\" size=\"2\"><img style=\"LEFT: 1px; POSITION: relative; TOP: 1px\" height=\"105\" src=\"http://www.jilinjobs.cn/uploadfile/201004/2010042117044951.jpg\" width=\"140\" border=\"0\">&nbsp;&nbsp;&nbsp; 为进一步推动我省全民创业，打造创业环境，营造创业氛围，提供创业服务，吉林省工业和信息化厅于2010年4月21日举行了吉林省创业咨询服务热线“96611”开通仪式。</font></p> <p align=\"left\"><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 有自主创业意向的高校毕业生可拨打热线—96611。</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "9ec47f63239e2c6faa810ab1df4e6675043ee7c1286ec0e310f7700fd0893eb8",
+  "evidence": {
+    "listPage": 49,
+    "listTitle": "吉林省开通创业咨询服务热线—“96611”",
+    "listPublishDate": "2010-04-21",
+    "sourceOrder": 484,
+    "detailPublishDate": "2010-04-21"
+  }
+}

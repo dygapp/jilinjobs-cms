@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:83d5e51230992ab123eee3431bcd8049884f97dc7d5217387d4be515a262f456",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1003/17853.htm",
+    "url": "https://news.ccu.edu.cn/info/1003/17853.htm?sessionid=-1368898495"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学召开2025届毕业生重点群体就业工作推进会",
+    "source": "",
+    "publishDate": "2025-04-03",
+    "bodyHtml": "",
+    "externalUrl": "https://news.ccu.edu.cn/info/1003/17853.htm?sessionid=-1368898495"
+  },
+  "resources": [],
+  "sourceFingerprint": "83901e9e2f391413c57cc07c737c7191ae6a2db857b2e6384c28233075068d65",
+  "evidence": {
+    "listPage": 96,
+    "listTitle": "长春大学召开2025届毕业生重点群体就业工作推进会",
+    "listPublishDate": "2025-04-03",
+    "sourceOrder": 952
+  }
+}

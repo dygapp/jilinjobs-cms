@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:528eb580d23c03a28aa5a7df8a37bd8e2710f13bb122a5006f05042508f4e0b0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/JGzVMnXNy5Hwb_tqtScLsw",
+    "url": "https://mp.weixin.qq.com/s/JGzVMnXNy5Hwb_tqtScLsw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学举办国家电力投资集团有限公司莱阳核能有限公司2026届校园招聘宣讲会",
+    "source": "",
+    "publishDate": "2025-09-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/JGzVMnXNy5Hwb_tqtScLsw"
+  },
+  "resources": [],
+  "sourceFingerprint": "493cec4f86ad05be4c137b06377a2b3ed646dac1148b481ed99e4a0f0a792ab8",
+  "evidence": {
+    "listPage": 71,
+    "listTitle": "东北电力大学举办国家电力投资集团有限公司莱阳核能有限公司2026届校园招聘宣讲会",
+    "listPublishDate": "2025-09-22",
+    "sourceOrder": 701
+  }
+}

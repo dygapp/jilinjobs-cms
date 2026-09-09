@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783121986",
+    "contentId": "28737783121986",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783121986"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省大学生人才生根工程暨2018年吉林省第五届“吉人梦想杯”大学生创就业大赛赛前座谈会成功召开",
+    "source": "",
+    "publishDate": "2018-04-02",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省大学生人才生根工程暨2018年吉林省第五届“吉人梦想杯”大学生创就业大赛赛前座谈会成功召开</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2018-4-2 15:28:04</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"background: white;margin: 0 0 14px;padding: 0;border: medium;border-image: none;text-indent: 43px;padding: 0 0 11px 0\">\n    <span style=\"font-size:21px;font-family:宋体;color:#3E3E3E\">3月30日，由吉林省教育厅主办，吉林省高等学校毕业生就业指导中心、吉林省创业促进会承办的吉林省大学生人才生根工程暨2018年吉林省第五届“吉人梦想杯”大学生创就业大赛赛前座谈会在吉林省大创梦城孵化园成功召开。</span>\n</p>\n<p style=\"background: white;margin: 0 0 14px;padding: 0;border: medium;border-image: none;text-indent: 43px;padding: 0 0 11px 0\">\n    <span style=\"font-size:21px;font-family:宋体;color:#3E3E3E\">为制定更加切实可行的大赛工作方案，进一步完善赛制和流程，对前四届大赛进行了回顾和总结，大赛指导教师们敞开心扉，踊跃发言，并提出合理化建议。通过近3个小时的座谈，大赛组委会对大家的宝贵意见和建议及时进行了汇总和梳理，初步形成了2018年大赛的主体思路和基本框架。</span>\n</p>\n<p style=\"background: white;margin: 0 0 14px;padding: 0;border: medium;border-image: none;text-indent: 43px;padding: 0 0 11px 0\">\n    <span style=\"font-size:21px;font-family:宋体;color:#3E3E3E\">部分高校创就业工作人员、相关媒体负责人及大赛组委会成员，共计42人参加座谈会。</span>\n</p>\n<p>\n    <br>\n</p>\n<p style=\"text-align: center\">\n    <img title=\"微信图片_20180417152931.jpg\" src=\"migration-resource://c2e9908774e4874411f6521051ad27e089ef68c305a8f42a43529f72fc152768\">\n</p>\n<p style=\"text-align: center;\">\n    <br>\n</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6365957574963875008706414.jpg",
+      "originalReference": "/chistory/cms/imgs/6365957574963875008706414.jpg",
+      "token": "migration-resource://c2e9908774e4874411f6521051ad27e089ef68c305a8f42a43529f72fc152768",
+      "snapshotPath": "assets/c2e9908774e4874411f6521051ad27e089ef68c305a8f42a43529f72fc152768.jpg",
+      "sha256": "c2e9908774e4874411f6521051ad27e089ef68c305a8f42a43529f72fc152768",
+      "contentType": "image/jpeg",
+      "sizeBytes": 203641
+    }
+  ],
+  "sourceFingerprint": "ef72176a12888c632b36570a7ff749c1d1da3dd8f86a0ef63f0330ee1a0ade85",
+  "evidence": {
+    "listPage": 148,
+    "listTitle": "吉林省大学生人才生根工程暨2018年吉林省第五届“吉人梦想杯”大学生创就业大赛赛前座谈会成功召开",
+    "listPublishDate": "2018-04-02",
+    "sourceOrder": 1473,
+    "detailPublishDate": "2018-04-02"
+  }
+}

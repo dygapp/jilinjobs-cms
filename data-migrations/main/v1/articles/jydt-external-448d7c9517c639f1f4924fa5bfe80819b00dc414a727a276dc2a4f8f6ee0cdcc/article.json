@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:448d7c9517c639f1f4924fa5bfe80819b00dc414a727a276dc2a4f8f6ee0cdcc",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/rtDErn0lCR1ZQtPfYMsuMw",
+    "url": "https://mp.weixin.qq.com/s/rtDErn0lCR1ZQtPfYMsuMw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林医药学院举办2026届毕业生春季校园招聘会",
+    "source": "",
+    "publishDate": "2026-04-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/rtDErn0lCR1ZQtPfYMsuMw"
+  },
+  "resources": [],
+  "sourceFingerprint": "fff2c0f12e40df1a0efed9734ff4e4cefb1f1b738033f2d6752f524056bfd7c7",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "吉林医药学院举办2026届毕业生春季校园招聘会",
+    "listPublishDate": "2026-04-20",
+    "sourceOrder": 276
+  }
+}

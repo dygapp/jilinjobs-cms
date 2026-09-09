@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e6c0f01620fbf5760f689bf1551ebaf420fb2e399a6ba18336555498d157cc21",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/3iWXfzto-VWmPQlZWDHUrQ",
+    "url": "https://mp.weixin.qq.com/s/3iWXfzto-VWmPQlZWDHUrQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春中医药大学成功举办“职引未来 筑梦吉林”大型生涯嘉年华活动",
+    "source": "",
+    "publishDate": "2025-10-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/3iWXfzto-VWmPQlZWDHUrQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "5622e8882c9a44f7af2938c39c88684331687a6587a766b0fb5d43afc84557a9",
+  "evidence": {
+    "listPage": 68,
+    "listTitle": "长春中医药大学成功举办“职引未来 筑梦吉林”大型生涯嘉年华活动",
+    "listPublishDate": "2025-10-17",
+    "sourceOrder": 678
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86127337816064",
+    "contentId": "86127337816064",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86127337816064"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "省教育学院召开高职毕业生就业工作调度会",
+    "source": "吉林省教育学院",
+    "publishDate": "2021-11-10",
+    "bodyHtml": "\n                        <p>近日，吉林省教育学院在教研大厦1711会议室召开了2021年高职毕业生就业工作调度会。学院党委副书记、院长苏威，学院党委副书记尹忠，学生处全体同志，教务处负责同志，高职学院及高职党总支有关负责同志，成教学院负责同志，高职学院有关科室负责同志以及全体毕业班辅导员参加了会议。会议由学院党委副书记尹忠主持。</p>\n\n<p>会上，高职院负责同志汇报了近期就业工作落实情况；学生处相关负责同志通报了高职毕业生目前的整体就业情况及存在的问题。</p>\n\n<p>苏威传达了教育部2021届高校毕业生就业工作第三次调度视频会议精神，并就进一步做好下一阶段就业工作提出了四点意见。一是戒骄戒躁、继续努力，进一步提升毕业生毕业去向落实率；二是强化指导、重点帮扶，加强对未就业毕业生的就业指导工作；三是挖掘潜力、拓展市场，促进更多毕业生留省就业创业；四是实事求是，扎实做好就业统计工作。</p>\n\n<p>尹忠提出三点意见：一是要确保就业统计工作的准确性；二是要灵活运用多种方法推进就业工作；三是要切实保障就业工作的顺利进行。他要求各有关部门、各院系要进一步深入学习领会苏威院长讲话精神，巩固并进一步扩大今年的毕业生就业工作成果。</p>\n\n<p><strong>（吉林省教育学院 殷实）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "8744821ae3ab74eafb6c80fd4b60d193975eebc18d8da8e32653ff3cd1ef6f31",
+  "evidence": {
+    "listPage": 129,
+    "listTitle": "省教育学院召开高职毕业生就业工作调度会",
+    "listPublishDate": "2021-11-10",
+    "sourceOrder": 1282,
+    "detailPublishDate": "2021-11-10"
+  }
+}

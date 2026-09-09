@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4046c5e056389094aa896cb4e79b66b9e4c1d3a86e5a07e9b780199fde142a84",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5522.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5522.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学开展2026年寒假“访企拓岗促就业”专项行动",
+    "source": "",
+    "publishDate": "2026-01-26",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5522.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "cc0079f593a3c95edc1ed8a0216d15391e194b5790ebb0cc41e20a4f6c596fbc",
+  "evidence": {
+    "listPage": 48,
+    "listTitle": "长春工业大学开展2026年寒假“访企拓岗促就业”专项行动",
+    "listPublishDate": "2026-01-26",
+    "sourceOrder": 475
+  }
+}

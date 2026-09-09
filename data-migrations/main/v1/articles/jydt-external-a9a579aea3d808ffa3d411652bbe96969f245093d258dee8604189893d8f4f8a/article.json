@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a9a579aea3d808ffa3d411652bbe96969f245093d258dee8604189893d8f4f8a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Pj4t_8V6qJU5lbT8uUaCdg",
+    "url": "https://mp.weixin.qq.com/s/Pj4t_8V6qJU5lbT8uUaCdg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚焦产教融合 深耕实践育人｜长春人文学院校领导赴吉林翌格科技调研并签署数字产业校外实训基地合作协议",
+    "source": "",
+    "publishDate": "2026-06-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Pj4t_8V6qJU5lbT8uUaCdg"
+  },
+  "resources": [],
+  "sourceFingerprint": "0db4ba6d392c41324a6896d27f7ff364b23ca8a21b2f7eda7e3e528a864c6fec",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "聚焦产教融合 深耕实践育人｜长春人文学院校领导赴吉林翌格科技调研并签署数字产业校外实训基地合作协议",
+    "listPublishDate": "2026-06-04",
+    "sourceOrder": 104
+  }
+}

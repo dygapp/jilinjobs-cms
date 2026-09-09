@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2f80ffdec0ac5812ec79c6b5ef4905e8522c08602cd2e036308417aec278ce37",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/nU4tbU40sTyV00_3hN27wA",
+    "url": "https://mp.weixin.qq.com/s/nU4tbU40sTyV00_3hN27wA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "松原职业技术学院 | 小学教育分院赴长春开展访企拓岗行动",
+    "source": "",
+    "publishDate": "2026-01-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/nU4tbU40sTyV00_3hN27wA"
+  },
+  "resources": [],
+  "sourceFingerprint": "ded5ef1aa3ad3dcff8996dbf014a95ce4762e89cb0948098a21d732218c3192b",
+  "evidence": {
+    "listPage": 48,
+    "listTitle": "松原职业技术学院 | 小学教育分院赴长春开展访企拓岗行动",
+    "listPublishDate": "2026-01-26",
+    "sourceOrder": 479
+  }
+}

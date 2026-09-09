@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:85d76aaca135921528ea322493a87c2b332517855959412c038a840954e148a5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/articles/index.html",
+    "url": "https://article.xuexi.cn/articles/index.html?art_id=12553586920384095215&item_id=12553586920384095215&study_style_id=feeds_default&pid=&ptype=-1&source=share&share_to=wx_single"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平给中国石油大学（北京）克拉玛依校区毕业生的回信",
+    "source": "",
+    "publishDate": "2020-07-10",
+    "bodyHtml": "",
+    "externalUrl": "https://article.xuexi.cn/articles/index.html?art_id=12553586920384095215&item_id=12553586920384095215&study_style_id=feeds_default&pid=&ptype=-1&source=share&share_to=wx_single"
+  },
+  "resources": [],
+  "sourceFingerprint": "865ea64fdfe58e9cffa8c8115fd46c9d97f3f1e38858e2c700907799de2434da",
+  "evidence": {
+    "listPage": 141,
+    "listTitle": "习近平给中国石油大学（北京）克拉玛依校区毕业生的回信",
+    "listPublishDate": "2020-07-10",
+    "sourceOrder": 1405
+  }
+}

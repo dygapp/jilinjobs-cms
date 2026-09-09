@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783121984",
+    "contentId": "28737783121984",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783121984"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "致省内用人单位邀请函",
+    "source": "市场部",
+    "publishDate": "2021-04-09",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align: left;\"><strong>&nbsp;<img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"migration-resource://f21256f393cb4660b980c822a1ad61c7fd6d2020ccbd0c1ad68d87ef3988d995\" alt=\"\" width=\"800\" height=\"1067\"></strong></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210413102750.jpg",
+      "originalReference": "/chistory/cms/editor/20210413102750.jpg",
+      "token": "migration-resource://f21256f393cb4660b980c822a1ad61c7fd6d2020ccbd0c1ad68d87ef3988d995",
+      "snapshotPath": "assets/f21256f393cb4660b980c822a1ad61c7fd6d2020ccbd0c1ad68d87ef3988d995.jpg",
+      "sha256": "f21256f393cb4660b980c822a1ad61c7fd6d2020ccbd0c1ad68d87ef3988d995",
+      "contentType": "image/jpeg",
+      "sizeBytes": 3061230
+    }
+  ],
+  "sourceFingerprint": "4bea8a735ae85bb5e418284121b2256bbe132b492b39b8fcac91022cbf5fd5a3",
+  "evidence": {
+    "listPage": 137,
+    "listTitle": "致省内用人单位邀请函",
+    "listPublishDate": "2021-04-09",
+    "sourceOrder": 1361,
+    "detailPublishDate": "2021-04-09"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0384b572925bb05a3996c7b11a71107a50df188431576be52831e0f5ee46feae",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/jXE1AkgBfU6bue5v7Dr1DA",
+    "url": "https://mp.weixin.qq.com/s/jXE1AkgBfU6bue5v7Dr1DA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "政校企联动拓岗 精准对接促就业丨四平职业大学赴四平热力有限公司开展“优企引才”访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/jXE1AkgBfU6bue5v7Dr1DA"
+  },
+  "resources": [],
+  "sourceFingerprint": "5a3202f45346b1921b547e8471c5154c6a30e05b4fa3bfa8ad1967046b30c68e",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "政校企联动拓岗 精准对接促就业丨四平职业大学赴四平热力有限公司开展“优企引才”访企拓岗专项行动",
+    "listPublishDate": "2026-03-27",
+    "sourceOrder": 352
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8d9d6c5711073ecdd2634b8d3e9bc7402bc3c4e897297c65af2b1ab1a7d6d64c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/KCQrErspZ1HWd4oklabv6g",
+    "url": "https://mp.weixin.qq.com/s/KCQrErspZ1HWd4oklabv6g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春中医药大学举办“职引未来 筑梦吉林”2025年全国城市巡回招聘（吉林站）",
+    "source": "",
+    "publishDate": "2025-10-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/KCQrErspZ1HWd4oklabv6g"
+  },
+  "resources": [],
+  "sourceFingerprint": "32626231a864d973a574ed870ac91b14fb129bc362371f62c9270aad3d56e8fd",
+  "evidence": {
+    "listPage": 66,
+    "listTitle": "长春中医药大学举办“职引未来 筑梦吉林”2025年全国城市巡回招聘（吉林站）",
+    "listPublishDate": "2025-10-27",
+    "sourceOrder": 659
+  }
+}

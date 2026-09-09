@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:49f9acc66bf3f61eeb070bfef9e6b0f46fac365a219d143f2680cd598018f647",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/oAb1LP5i93QErMy0gj2BMw",
+    "url": "https://mp.weixin.qq.com/s/oAb1LP5i93QErMy0gj2BMw?poc_token=HM2vC2qjWFcBRRLoByk5jLuOsnrCO7evgnjfbiQe"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春建筑学院赴粤开展艺术教育高质量发展专题调研",
+    "source": "",
+    "publishDate": "2026-05-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/oAb1LP5i93QErMy0gj2BMw?poc_token=HM2vC2qjWFcBRRLoByk5jLuOsnrCO7evgnjfbiQe"
+  },
+  "resources": [],
+  "sourceFingerprint": "1dd0a0c53758f1e744907f7a039ab45fa580e8d3b4052c685a6a0e931259de90",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "长春建筑学院赴粤开展艺术教育高质量发展专题调研",
+    "listPublishDate": "2026-05-19",
+    "sourceOrder": 165
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:776818272c1a974259941561d034e9e279934dfdf4eee7bd9d275f622c5d27f2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ZmAvKUfekt5fBU5Q-bt4ZA",
+    "url": "https://mp.weixin.qq.com/s/ZmAvKUfekt5fBU5Q-bt4ZA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "白山市召开统一战线“创业奋斗‘就’在吉林”宣讲报告会暨校园招聘会",
+    "source": "",
+    "publishDate": "2024-04-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ZmAvKUfekt5fBU5Q-bt4ZA"
+  },
+  "resources": [],
+  "sourceFingerprint": "0b927a2196f6300a9e73e04faae885da0b793eba5046053eed3522eadc25608f",
+  "evidence": {
+    "listPage": 107,
+    "listTitle": "白山市召开统一战线“创业奋斗‘就’在吉林”宣讲报告会暨校园招聘会",
+    "listPublishDate": "2024-04-29",
+    "sourceOrder": 1066
+  }
+}

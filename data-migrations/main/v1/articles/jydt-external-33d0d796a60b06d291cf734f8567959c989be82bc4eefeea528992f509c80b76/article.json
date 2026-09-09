@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:33d0d796a60b06d291cf734f8567959c989be82bc4eefeea528992f509c80b76",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/3913.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/3913.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省高校服务大装备产业集群毕业生双选会暨吉林省新材料产业2024届毕业生春季双选会在长春工业大学举行",
+    "source": "",
+    "publishDate": "2024-03-29",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/3913.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "b4a1b82907d4d9e9b56277b7b46a8f740571183f1adc8baf327413507e2e588b",
+  "evidence": {
+    "listPage": 110,
+    "listTitle": "吉林省高校服务大装备产业集群毕业生双选会暨吉林省新材料产业2024届毕业生春季双选会在长春工业大学举行",
+    "listPublishDate": "2024-03-29",
+    "sourceOrder": 1099
+  }
+}

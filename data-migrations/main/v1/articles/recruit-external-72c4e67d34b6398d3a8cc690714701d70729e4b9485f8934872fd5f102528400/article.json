@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:72c4e67d34b6398d3a8cc690714701d70729e4b9485f8934872fd5f102528400",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/m4620TwspAKAjz2LGC5pAQ",
+    "url": "https://mp.weixin.qq.com/s/m4620TwspAKAjz2LGC5pAQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省2025年退役军人大学生校园专场招聘会",
+    "source": "",
+    "publishDate": "2025-03-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/m4620TwspAKAjz2LGC5pAQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "e8312dfe892a5e727622856a8c4d97feb4e5b6205e62a37ca96865ca6e3c0e0b",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "吉林省2025年退役军人大学生校园专场招聘会",
+    "listPublishDate": "2025-03-24",
+    "sourceOrder": 208
+  }
+}

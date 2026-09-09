@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:280364039815168",
+    "contentId": "280364039815168",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=280364039815168"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办全国体育服务行业面向2025届高校毕业生春季招聘活动的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2025-03-25",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://b6eae2527aef9ab388bf6f7a11357c952ba5155da0a96e75d046c2a8e27bdbd5\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://e90bf3a1ae6b46bc4dd0cb2f55eda1fb197a4867c57eb4e080ab570736e71849\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://ecfbe1852aee4c2518060affd6e73c7a0e12646b4888ceb4b4b5f56ce4ea70b2\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://b64a3124fdaf910b9b620673c3785d96f597850ca88d16b94d0837d855e2223f\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://a0a01f1ed9864c7b8df017a22a0752f4337b040c92c17cbb96d9b33f118f670e\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/2d29c70b-3ad5-4860-a7ce-69e24a435632.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/2d29c70b-3ad5-4860-a7ce-69e24a435632.jpg",
+      "token": "migration-resource://b6eae2527aef9ab388bf6f7a11357c952ba5155da0a96e75d046c2a8e27bdbd5",
+      "snapshotPath": "assets/b6eae2527aef9ab388bf6f7a11357c952ba5155da0a96e75d046c2a8e27bdbd5.jpg",
+      "sha256": "b6eae2527aef9ab388bf6f7a11357c952ba5155da0a96e75d046c2a8e27bdbd5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/b033d937-f6cb-4998-8283-ba91ce844459.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/b033d937-f6cb-4998-8283-ba91ce844459.jpg",
+      "token": "migration-resource://e90bf3a1ae6b46bc4dd0cb2f55eda1fb197a4867c57eb4e080ab570736e71849",
+      "snapshotPath": "assets/e90bf3a1ae6b46bc4dd0cb2f55eda1fb197a4867c57eb4e080ab570736e71849.jpg",
+      "sha256": "e90bf3a1ae6b46bc4dd0cb2f55eda1fb197a4867c57eb4e080ab570736e71849",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/b26a0f69-e495-40ad-b35f-d204f1c31b56.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/b26a0f69-e495-40ad-b35f-d204f1c31b56.jpg",
+      "token": "migration-resource://ecfbe1852aee4c2518060affd6e73c7a0e12646b4888ceb4b4b5f56ce4ea70b2",
+      "snapshotPath": "assets/ecfbe1852aee4c2518060affd6e73c7a0e12646b4888ceb4b4b5f56ce4ea70b2.jpg",
+      "sha256": "ecfbe1852aee4c2518060affd6e73c7a0e12646b4888ceb4b4b5f56ce4ea70b2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/dd4ca9d4-9172-4268-816c-6f714b5cffd1.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/dd4ca9d4-9172-4268-816c-6f714b5cffd1.jpg",
+      "token": "migration-resource://b64a3124fdaf910b9b620673c3785d96f597850ca88d16b94d0837d855e2223f",
+      "snapshotPath": "assets/b64a3124fdaf910b9b620673c3785d96f597850ca88d16b94d0837d855e2223f.jpg",
+      "sha256": "b64a3124fdaf910b9b620673c3785d96f597850ca88d16b94d0837d855e2223f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-03-28/5b4d2234-b23b-487b-b377-b4358a4f7279.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-03-28/5b4d2234-b23b-487b-b377-b4358a4f7279.jpg",
+      "token": "migration-resource://a0a01f1ed9864c7b8df017a22a0752f4337b040c92c17cbb96d9b33f118f670e",
+      "snapshotPath": "assets/a0a01f1ed9864c7b8df017a22a0752f4337b040c92c17cbb96d9b33f118f670e.jpg",
+      "sha256": "a0a01f1ed9864c7b8df017a22a0752f4337b040c92c17cbb96d9b33f118f670e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    }
+  ],
+  "sourceFingerprint": "074d80cb22f9a012fe155091450c68ebc671fa7b07b809838a4c374955d6fbee",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "关于举办全国体育服务行业面向2025届高校毕业生春季招聘活动的通知",
+    "listPublishDate": "2025-03-25",
+    "sourceOrder": 55,
+    "detailPublishDate": "2025-03-25"
+  }
+}

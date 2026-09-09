@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:88842078011392",
+    "contentId": "88842078011392",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=88842078011392"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省高校大学生就业创业典型引领促就业活动的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2022-05-05",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://e2879a08f4377ea83bdf2e1d95bf8aa3593044c72fec15bd8c055f5df4ae053f\" width=\"1000\"></p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://cb1d0e93e30c3b42ce4b2e5377b2dbc31bd6c42089c9e67634226f5a3fe5dac1\" width=\"1000\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1414\" src=\"migration-resource://e219eff02cbee04b1ed48772fcef7aea4458e844d00c9c34e23eddd17fb0e12b\" width=\"1000\"></p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-06/df566818-9691-406a-9399-865e00cea1c6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-06/df566818-9691-406a-9399-865e00cea1c6.jpg",
+      "token": "migration-resource://e2879a08f4377ea83bdf2e1d95bf8aa3593044c72fec15bd8c055f5df4ae053f",
+      "snapshotPath": "assets/e2879a08f4377ea83bdf2e1d95bf8aa3593044c72fec15bd8c055f5df4ae053f.jpg",
+      "sha256": "e2879a08f4377ea83bdf2e1d95bf8aa3593044c72fec15bd8c055f5df4ae053f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 215320
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-06/638af5f3-c579-4d3e-b899-cfbbcb80b7c3.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-06/638af5f3-c579-4d3e-b899-cfbbcb80b7c3.jpg",
+      "token": "migration-resource://cb1d0e93e30c3b42ce4b2e5377b2dbc31bd6c42089c9e67634226f5a3fe5dac1",
+      "snapshotPath": "assets/cb1d0e93e30c3b42ce4b2e5377b2dbc31bd6c42089c9e67634226f5a3fe5dac1.jpg",
+      "sha256": "cb1d0e93e30c3b42ce4b2e5377b2dbc31bd6c42089c9e67634226f5a3fe5dac1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 141124
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-05-06/a6a94cee-1813-43b7-ac7a-35b5dcafc9e7.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-05-06/a6a94cee-1813-43b7-ac7a-35b5dcafc9e7.jpg",
+      "token": "migration-resource://e219eff02cbee04b1ed48772fcef7aea4458e844d00c9c34e23eddd17fb0e12b",
+      "snapshotPath": "assets/e219eff02cbee04b1ed48772fcef7aea4458e844d00c9c34e23eddd17fb0e12b.jpg",
+      "sha256": "e219eff02cbee04b1ed48772fcef7aea4458e844d00c9c34e23eddd17fb0e12b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 190027
+    }
+  ],
+  "sourceFingerprint": "a7a10866a895bd510cb02e4bae6b3c2c0dd441f54e89b80ee5af02f8d2cb3df1",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "关于举办吉林省高校大学生就业创业典型引领促就业活动的通知",
+    "listPublishDate": "2022-05-05",
+    "sourceOrder": 129,
+    "detailPublishDate": "2022-05-05"
+  }
+}

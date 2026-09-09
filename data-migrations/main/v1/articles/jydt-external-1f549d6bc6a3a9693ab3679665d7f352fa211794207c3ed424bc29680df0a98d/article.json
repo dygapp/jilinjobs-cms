@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1f549d6bc6a3a9693ab3679665d7f352fa211794207c3ed424bc29680df0a98d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/l0ktJOvSY39BTSAb_BiEwQ",
+    "url": "https://mp.weixin.qq.com/s/l0ktJOvSY39BTSAb_BiEwQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "浙江长兴县专场招聘暨合作签约活动在延边大学举行",
+    "source": "",
+    "publishDate": "2025-11-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/l0ktJOvSY39BTSAb_BiEwQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "d79f3769b103392dbb53794acb9c12767ac19d6741bdbeb99c6ff0678f7ee517",
+  "evidence": {
+    "listPage": 58,
+    "listTitle": "浙江长兴县专场招聘暨合作签约活动在延边大学举行",
+    "listPublishDate": "2025-11-21",
+    "sourceOrder": 579
+  }
+}

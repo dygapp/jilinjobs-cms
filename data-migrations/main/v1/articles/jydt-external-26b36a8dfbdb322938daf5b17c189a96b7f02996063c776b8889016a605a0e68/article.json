@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:26b36a8dfbdb322938daf5b17c189a96b7f02996063c776b8889016a605a0e68",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/8svPvai0X41FC1ocOtK_SA",
+    "url": "https://mp.weixin.qq.com/s/8svPvai0X41FC1ocOtK_SA?scene=25&sessionid=-1365724120"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“智汇农业强省，创享学院未来” -长春职业技术大学现代农学院成功举办校园双选会",
+    "source": "",
+    "publishDate": "2025-04-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/8svPvai0X41FC1ocOtK_SA?scene=25&sessionid=-1365724120"
+  },
+  "resources": [],
+  "sourceFingerprint": "e016676004bd25c3378f542a5b8f6a9dc79dd9580bf123611cfa8f602cb460b8",
+  "evidence": {
+    "listPage": 93,
+    "listTitle": "“智汇农业强省，创享学院未来” -长春职业技术大学现代农学院成功举办校园双选会",
+    "listPublishDate": "2025-04-27",
+    "sourceOrder": 925
+  }
+}

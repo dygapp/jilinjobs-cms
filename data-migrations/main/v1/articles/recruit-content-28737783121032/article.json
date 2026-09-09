@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783121032",
+    "contentId": "28737783121032",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783121032"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省2010年普通高校招生录取最低控制分数线",
+    "source": "",
+    "publishDate": "2010-06-25",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省2010年普通高校招生录取最低控制分数线</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2010-6-25 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">吉林省今年普通高校招生录取各批次最低控制分数线已确定 。<br><br>　　根据我省普通高校招生计划安排和考生高考成绩的实际情况，经省招生委员会研究确定，我省2010年普通高校招生录取最低控制分数线如下：<br>（一）文史类各批次录取最低控制分数线 <br>重点本科批录取最低控制分数线为517分<br>普通本科批录取最低控制分数线为425分<br>本科第三批（民办、独立学院）录取最低控制分数线为346分<br>（二）理工类各批次录取最低控制分数线 <br>重点本科批录取最低控制分数线为530分<br>普通本科批录取最低控制分数线为427分<br>本科第三批录取最低控制分数线为366分<br>（三）体育类录取最低控制分数线 <br>文科体育类普通本科批录取最低控制分数线为300分<br>本科第三批（民办、独立学院）录取最低控制分数线为280分<br>理科体育类普通本科批录取最低控制分数线为260分<br>本科第三批（民办、独立学院）录取最低控制分数线为240分<br>（四）艺术类录取最低控制分数线 <br><br>　　经教育部批准的31+8所本科艺术类院校，由学校自行确定录取分数线及录取名单。其他艺术类院校及专业最低控制分数线为：<br>文科艺术类普通本科录取最低控制分数线为276分<br>文科艺术类民办和独立学院本科录取最低控制分数线为224分<br>理科艺术类普通本科批录取最低控制分数线为277分<br>理科艺术类民办和独立学院本科录取最低控制分数线为238分<br>（五）军事院校及国防定向生、公安、司法院校（专业）体检线 <br>　　提前批录取的重点军事院校和重点普通高校（国防定向生）执行重点控制分数线；提前批录取的普通本科院校的国防定向生执行普通本科控制分数线；军事院校指挥专业生源不足时，在同批次最低控制分数线下降20分参加军检。<br>公安、司法院校专科体检、面试和体能测试最低控制分数线理科为286分；文科为256分。<br>（六）专科录取分数线 <br>　　今年继续实行分两次填报志愿、两段录取。专科批次和民办专科批次在8月4日至8月6日填报志愿。参加第二次填报志愿和第二段录取的考生为第一段没有被录取的考生。因此，普通专科、民办和独立学院以及体育类专科院校录取最低控制分数线待考生填报志愿后确定。</font></p> <p><font color=\"#444444\" size=\"2\"><br>&nbsp;</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "ec7bec89fc6ba2213c0c8c17a656fff5f39a64fc2db3c116441b9aabad459651",
+  "evidence": {
+    "listPage": 48,
+    "listTitle": "吉林省2010年普通高校招生录取最低控制分数线",
+    "listPublishDate": "2010-06-25",
+    "sourceOrder": 480,
+    "detailPublishDate": "2010-06-25"
+  }
+}

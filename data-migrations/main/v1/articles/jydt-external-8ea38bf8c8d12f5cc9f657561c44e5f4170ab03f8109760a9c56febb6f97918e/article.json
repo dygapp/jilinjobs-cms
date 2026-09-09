@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8ea38bf8c8d12f5cc9f657561c44e5f4170ab03f8109760a9c56febb6f97918e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/fNQ0dn019vuz8_LhFlsZyg",
+    "url": "https://mp.weixin.qq.com/s/fNQ0dn019vuz8_LhFlsZyg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【访企拓岗】吉林工商学院开展“白山松水荐才行”专项系列行动",
+    "source": "",
+    "publishDate": "2025-03-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/fNQ0dn019vuz8_LhFlsZyg"
+  },
+  "resources": [],
+  "sourceFingerprint": "c2764315f198285b9e61e25645c0b38ee2841a5e33e34ce469e7345b01198564",
+  "evidence": {
+    "listPage": 98,
+    "listTitle": "【访企拓岗】吉林工商学院开展“白山松水荐才行”专项系列行动",
+    "listPublishDate": "2025-03-18",
+    "sourceOrder": 979
+  }
+}

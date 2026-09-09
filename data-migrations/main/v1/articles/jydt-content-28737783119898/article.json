@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119898",
+    "contentId": "28737783119898",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119898"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2018届全省普通高校毕业生集中派遣工作圆满结束",
+    "source": "",
+    "publishDate": "2018-07-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2018届全省普通高校毕业生集中派遣工作圆满结束</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:吉林省高等学校毕业生就业指导中心   发布时间:2018-7-6 14:17:48</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">2018届全省普通高校毕业生集中派遣工作于6月14日开始，至7月5日圆满结束。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">此项工作由省教育厅高校学生处负责，省高校毕业生就业指导中心具体实施。前期制定了工作方案，召开了工作筹备会，严肃工作纪律，明确责任分工，各项环节公开透明。抽调了业务精、能力强、负责任的人员参与此项工作，严格按照工作要求和流程办理。为确保高校毕业生安全顺利离校，集中派遣期间取消双休日和午休时间，给高校提供全方位的就业服务。同时，加大毕业生就业状况和信息的审核力度，面向社会公开了就业信息举报电话，完善了就业状况网上查询和意见反馈功能，坚持毕业生实名登记就业信息制度。提前对全省高校毕业生就业状况开展取样抽查，及时反馈高校修改完善就业方案，确保就业数据真实准确，实现了就业服务“只跑一次”，大幅提升了工作效率。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">集中派遣工作期间，共为全省60所高等院校和2所研究生培养单位的159847名毕业生集中办理了就业手续。其中，毕业研究生14103人，本科毕业生99154人，高职高专毕业生46590人。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 宋体; font-size: 21px;\">&nbsp;</span></p><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.JPG\" src=\"migration-resource://48cff04271e6830cbe8a5cf061e71aee34e84187eed0b60f80fd8e8478baa5d5\"></p><p style=\"text-align: center;\"><img title=\"2.JPG\" src=\"migration-resource://9ba425cda92af515f0ac0a4076a57d77cda01f36b93412e693c5d73f9bfc4c59\"></p><p style=\"text-align: center;\"><img title=\"3.JPG\" src=\"migration-resource://dac92730772787d7d7437034e78a32441669376142b72caaba232c1d4cb91ea0\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366648363972537506821863.JPG",
+      "originalReference": "/chistory/cms/imgs/6366648363972537506821863.JPG",
+      "token": "migration-resource://48cff04271e6830cbe8a5cf061e71aee34e84187eed0b60f80fd8e8478baa5d5",
+      "snapshotPath": "assets/48cff04271e6830cbe8a5cf061e71aee34e84187eed0b60f80fd8e8478baa5d5.jpg",
+      "sha256": "48cff04271e6830cbe8a5cf061e71aee34e84187eed0b60f80fd8e8478baa5d5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 196789
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366648363981912507793678.JPG",
+      "originalReference": "/chistory/cms/imgs/6366648363981912507793678.JPG",
+      "token": "migration-resource://9ba425cda92af515f0ac0a4076a57d77cda01f36b93412e693c5d73f9bfc4c59",
+      "snapshotPath": "assets/9ba425cda92af515f0ac0a4076a57d77cda01f36b93412e693c5d73f9bfc4c59.jpg",
+      "sha256": "9ba425cda92af515f0ac0a4076a57d77cda01f36b93412e693c5d73f9bfc4c59",
+      "contentType": "image/jpeg",
+      "sizeBytes": 184170
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6366648363989725005536249.JPG",
+      "originalReference": "/chistory/cms/imgs/6366648363989725005536249.JPG",
+      "token": "migration-resource://dac92730772787d7d7437034e78a32441669376142b72caaba232c1d4cb91ea0",
+      "snapshotPath": "assets/dac92730772787d7d7437034e78a32441669376142b72caaba232c1d4cb91ea0.jpg",
+      "sha256": "dac92730772787d7d7437034e78a32441669376142b72caaba232c1d4cb91ea0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 187574
+    }
+  ],
+  "sourceFingerprint": "7fe6ddd8773ff7860c116b32a558b62a94474ca015de961b69b3b4af1a520baf",
+  "evidence": {
+    "listPage": 147,
+    "listTitle": "2018届全省普通高校毕业生集中派遣工作圆满结束",
+    "listPublishDate": "2018-07-06",
+    "sourceOrder": 1462,
+    "detailPublishDate": "2018-07-06"
+  }
+}

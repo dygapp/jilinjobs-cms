@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:dd1fe89693e0cc3f7c327d1c26bdf11b92d865068a1747b64110ca66a6cd9fa7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/f8FoQpwaIV6SQfUpFp2RLg",
+    "url": "https://mp.weixin.qq.com/s/f8FoQpwaIV6SQfUpFp2RLg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学旅游学院校长李庆华带队赴吉林省仿生机器人创新中心开展校企合作人才培养调研",
+    "source": "",
+    "publishDate": "2026-08-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/f8FoQpwaIV6SQfUpFp2RLg"
+  },
+  "resources": [],
+  "sourceFingerprint": "600126cbbd7dfc1466f6fcf6d6c06c0f45eec7cea7953c8b5a8865d3e1a0d998",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "长春大学旅游学院校长李庆华带队赴吉林省仿生机器人创新中心开展校企合作人才培养调研",
+    "listPublishDate": "2026-08-06",
+    "sourceOrder": 25
+  }
+}

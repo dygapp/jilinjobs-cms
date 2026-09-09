@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8043dc7901edff8c6b97ddf521a00a966b56f90d19a3ba6012ca4eb221154c52",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Gh4Xe1FIR8b1BB1gal0I-A",
+    "url": "https://mp.weixin.qq.com/s/Gh4Xe1FIR8b1BB1gal0I-A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院举办“聚力扩容提质 服务高质量发展”2026届毕业生春季校园双选会",
+    "source": "",
+    "publishDate": "2026-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Gh4Xe1FIR8b1BB1gal0I-A"
+  },
+  "resources": [],
+  "sourceFingerprint": "395413e164be65fd615d079ebbda0e2f8537befa357b065fe2b5ef749ead659b",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "长春工程学院举办“聚力扩容提质 服务高质量发展”2026届毕业生春季校园双选会",
+    "listPublishDate": "2026-04-21",
+    "sourceOrder": 268
+  }
+}

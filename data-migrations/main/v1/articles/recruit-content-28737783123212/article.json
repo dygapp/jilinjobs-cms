@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123212",
+    "contentId": "28737783123212",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123212"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2010年选调生职位及其条件一览表",
+    "source": "",
+    "publishDate": "2010-02-24",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2010年选调生职位及其条件一览表</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2010-2-24 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\"></font>&nbsp;</p> <p><font color=\"#444444\" size=\"2\"><a href=\"http://www.jlgwy.net/download.ashx?id=285\">2010年全省检察机关选调生报考职位及条件一览表</a></font></p> <p><a href=\"http://www.jlgwy.net/download.ashx?id=278\"><font color=\"#444444\" size=\"2\"><font color=\"#444444\">2010年全省各级机关考试录用公务员职位及其条件一</font>览表（法院选调大学生）</font></a></p> <p><a href=\"http://www.jlgwy.net/download.ashx?id=270\"><font color=\"#444444\" size=\"2\">2010年长春市选调生职位及其条件一览表</font></a></p> <p><a href=\"http://www.jlgwy.net/download.ashx?id=281\"><font color=\"#444444\" size=\"2\">2010年吉林市选调生职位及其条件一览表</font></a></p> <p><a href=\"http://www.jlgwy.net/download.ashx?id=284\"><font color=\"#444444\" size=\"2\">2010年白城市选调生职位及其条件一览表</font></a></p> <p><a href=\"http://www.jlgwy.net/download.ashx?id=277\"><font color=\"#444444\" size=\"2\">2010年通化市选调生职位及其条件一览表(2月26日-3月7日)</font></a></p> <p><a href=\"http://www.jlgwy.net/download.ashx?id=280\"><font color=\"#444444\" size=\"2\">2010年延边州选调生职位及条件一览表</font></a></p> <p><font color=\"#444444\" size=\"2\"></font>&nbsp;</p> <p align=\"right\"><font color=\"#444444\" size=\"2\">----来源：吉林省公务员考试网</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "c1f99e8d771d01839ccc8b4f91474108ae8c8b73a99f91837f3f3b82abb32dbd",
+  "evidence": {
+    "listPage": 50,
+    "listTitle": "2010年选调生职位及其条件一览表",
+    "listPublishDate": "2010-02-24",
+    "sourceOrder": 492,
+    "detailPublishDate": "2010-02-24"
+  }
+}

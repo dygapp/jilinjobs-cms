@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:dd497bab3b4b894c8a1fc57d59d682617daefecdda02c5f1885e2f31cfb8cfe9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/XzsGJqZTv0riCQ5r45PS-Q",
+    "url": "https://mp.weixin.qq.com/s/XzsGJqZTv0riCQ5r45PS-Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林通用航空职业技术学院党委书记王洪福带队赴吉林航空维修有限责任公司访企拓岗",
+    "source": "",
+    "publishDate": "2025-06-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/XzsGJqZTv0riCQ5r45PS-Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "fe6a2b283e54caf587c95dc63c40532cfaf7fa40d704373fa4ee2f22f23283ba",
+  "evidence": {
+    "listPage": 82,
+    "listTitle": "吉林通用航空职业技术学院党委书记王洪福带队赴吉林航空维修有限责任公司访企拓岗",
+    "listPublishDate": "2025-06-16",
+    "sourceOrder": 813
+  }
+}

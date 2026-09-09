@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d9a003ca7d94757afa9568e0ac61aaa1b1976eda07c32a90a2c4acf6e2eeb221",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/TgW0CgYPEgZwELuvuYH3DQ",
+    "url": "https://mp.weixin.qq.com/s/TgW0CgYPEgZwELuvuYH3DQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "通化师范学院成功举办2025届毕业生秋冬季大型校园招聘会",
+    "source": "",
+    "publishDate": "2024-11-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/TgW0CgYPEgZwELuvuYH3DQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "a04fe1dc6887efae01816fe4be4b412a47193982375e1a918e430db028d383f4",
+  "evidence": {
+    "listPage": 102,
+    "listTitle": "通化师范学院成功举办2025届毕业生秋冬季大型校园招聘会",
+    "listPublishDate": "2024-11-25",
+    "sourceOrder": 1011
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122582",
+    "contentId": "28737783122582",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122582"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于召开中国大学生移动互联创客大赛（吉林赛区）工作部署会议的通知",
+    "source": "",
+    "publishDate": "2015-10-08",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于召开中国大学生移动互联创客大赛（吉林赛区）工作部署会议的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2015-10-8 9:07:54</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://ead959c42812c157ebc01cdc20af99e0626ac395da79b65ac82f6999fe859f2c\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://aaddde4347c6fc6fd02020cc8042f39332296d5d0f41c2d7286b33412e13fbce\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=f2a1f51c-a60c-4992-af25-1cb8d5227357\">参会回执表.docx</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357989210327387503787324.jpg",
+      "originalReference": "/chistory/cms/imgs/6357989210327387503787324.jpg",
+      "token": "migration-resource://ead959c42812c157ebc01cdc20af99e0626ac395da79b65ac82f6999fe859f2c",
+      "snapshotPath": "assets/ead959c42812c157ebc01cdc20af99e0626ac395da79b65ac82f6999fe859f2c.jpg",
+      "sha256": "ead959c42812c157ebc01cdc20af99e0626ac395da79b65ac82f6999fe859f2c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 105977
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357989210489887503257544.jpg",
+      "originalReference": "/chistory/cms/imgs/6357989210489887503257544.jpg",
+      "token": "migration-resource://aaddde4347c6fc6fd02020cc8042f39332296d5d0f41c2d7286b33412e13fbce",
+      "snapshotPath": "assets/aaddde4347c6fc6fd02020cc8042f39332296d5d0f41c2d7286b33412e13fbce.jpg",
+      "sha256": "aaddde4347c6fc6fd02020cc8042f39332296d5d0f41c2d7286b33412e13fbce",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82148
+    }
+  ],
+  "sourceFingerprint": "fa91e687525e4ca93412273543ce732bcf1e771a9ea08cfec0efcd82c052ace6",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "关于召开中国大学生移动互联创客大赛（吉林赛区）工作部署会议的通知",
+    "listPublishDate": "2015-10-08",
+    "sourceOrder": 268,
+    "detailPublishDate": "2015-10-08"
+  }
+}

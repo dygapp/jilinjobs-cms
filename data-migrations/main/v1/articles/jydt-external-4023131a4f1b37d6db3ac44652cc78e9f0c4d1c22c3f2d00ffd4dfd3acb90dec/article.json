@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4023131a4f1b37d6db3ac44652cc78e9f0c4d1c22c3f2d00ffd4dfd3acb90dec",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/oTz3wYbo4oEulLSMjf2npw",
+    "url": "https://mp.weixin.qq.com/s/oTz3wYbo4oEulLSMjf2npw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学副校长宫炳成率队赴湖南省调研",
+    "source": "",
+    "publishDate": "2025-11-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/oTz3wYbo4oEulLSMjf2npw"
+  },
+  "resources": [],
+  "sourceFingerprint": "cc73b4a955178357e005898257fa782d43d1f127b8e7fcb59ea1c89179a30e6d",
+  "evidence": {
+    "listPage": 60,
+    "listTitle": "长春师范大学副校长宫炳成率队赴湖南省调研",
+    "listPublishDate": "2025-11-18",
+    "sourceOrder": 595
+  }
+}

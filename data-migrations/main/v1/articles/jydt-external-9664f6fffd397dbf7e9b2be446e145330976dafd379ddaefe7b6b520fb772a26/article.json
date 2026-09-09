@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9664f6fffd397dbf7e9b2be446e145330976dafd379ddaefe7b6b520fb772a26",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/o6Vp0tXn8_qlgC6oykOeYw",
+    "url": "https://mp.weixin.qq.com/s/o6Vp0tXn8_qlgC6oykOeYw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务不断线 暖心助就业｜点击查看寒假期间就业信息获取渠道",
+    "source": "",
+    "publishDate": "2026-01-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/o6Vp0tXn8_qlgC6oykOeYw"
+  },
+  "resources": [],
+  "sourceFingerprint": "51fb79b060a48f5f0bb78149c1158da08dd21d94f9705db4acb9c877946c3f38",
+  "evidence": {
+    "listPage": 51,
+    "listTitle": "服务不断线 暖心助就业｜点击查看寒假期间就业信息获取渠道",
+    "listPublishDate": "2026-01-14",
+    "sourceOrder": 502
+  }
+}

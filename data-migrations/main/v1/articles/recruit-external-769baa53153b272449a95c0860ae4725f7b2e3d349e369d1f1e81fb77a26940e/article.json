@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:769baa53153b272449a95c0860ae4725f7b2e3d349e369d1f1e81fb77a26940e",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/wDjxyPjTzlRyo7whrC_psA",
+    "url": "https://mp.weixin.qq.com/s/wDjxyPjTzlRyo7whrC_psA?scene=25&sessionid=-1366168846"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2025年“长聚学子·春城暖才”校园春季双选会吉林财经大学专场招聘会邀请函",
+    "source": "",
+    "publishDate": "2025-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wDjxyPjTzlRyo7whrC_psA?scene=25&sessionid=-1366168846"
+  },
+  "resources": [],
+  "sourceFingerprint": "a551e07428452460bcbde2761bbb48ccbd0f2e9dfe59ace0911f7bce2523f48d",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "2025年“长聚学子·春城暖才”校园春季双选会吉林财经大学专场招聘会邀请函",
+    "listPublishDate": "2025-04-21",
+    "sourceOrder": 172
+  }
+}

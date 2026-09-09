@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86129298653184",
+    "contentId": "86129298653184",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86129298653184"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "情暖冬日 千校万岗 白城师范学院举办毕业生网络双选会",
+    "source": "白城师范学院",
+    "publishDate": "2021-12-19",
+    "bodyHtml": "\n                        <p>为落实教育部关于开展“2022届高校毕业生校园招聘月”系列活动的工作要求，白城师范学院于12月18日举办了第二场2022届毕业生网络双选会，全力推进毕业生就业工作取得积极进展。</p>\n\n<p>来自北京、上海、浙江、江苏、广东、福建等地的省内外75家企业参加了本次网络双选会，其中吉林省内用人单位占54%；制造业、信息传输、软件信息技术服务业和教育业的用人单位占比超过了50%，提供了机械设计、软件开发、会计、工程管理、营销、行政、幼小初高各科教师等就业岗位3602个。白城师范学院共有513名毕业生参加双选，投递简历559份，320名毕业生与用人单位达成就业意向。</p>\n\n<p>此次双选会全程线上进行，毕业生通过手机端在线投递简历、参加面试，为用人单位和毕业生提供了全环节、全要素的智慧就业功能体验，充分体现白城师范学院疫情防控期间“就业工作不放松、就业招聘不停歇、就业服务不断线”的就业工作理念，做到分类指导、精准发力，全方位助力毕业生顺利就业。</p>\n\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>（白城师范学院 常春辉）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "d5efd5dbc3dcd4baa360c94d2861897db645f7691ca50fa0ad9edc5c92473436",
+  "evidence": {
+    "listPage": 126,
+    "listTitle": "情暖冬日 千校万岗 白城师范学院举办毕业生网络双选会",
+    "listPublishDate": "2021-12-19",
+    "sourceOrder": 1255,
+    "detailPublishDate": "2021-12-19"
+  }
+}

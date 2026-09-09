@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:18491e45ebf83a320069107db6cf6e1670d38bd40dd2fc0ddded34396ca82245",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/mNm8LJ9rnjbmFBOM_zn20A",
+    "url": "https://mp.weixin.qq.com/s/mNm8LJ9rnjbmFBOM_zn20A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工程技术师范学院：创新育人模式促进高质量充分就业",
+    "source": "",
+    "publishDate": "2026-01-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/mNm8LJ9rnjbmFBOM_zn20A"
+  },
+  "resources": [],
+  "sourceFingerprint": "d945360f3f2ac3cb51060093fec00d5fcdc6a1016f718a8b8b7b3e5a5acad499",
+  "evidence": {
+    "listPage": 50,
+    "listTitle": "吉林工程技术师范学院：创新育人模式促进高质量充分就业",
+    "listPublishDate": "2026-01-14",
+    "sourceOrder": 498
+  }
+}

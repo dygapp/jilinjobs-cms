@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fbfd84e255f0c172f5d3aa07b8ffcf2877cd0c709646529f5f6d61d8ed23febe",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/l9gDlFH05BMj6GsyB66OjQ",
+    "url": "https://mp.weixin.qq.com/s/l9gDlFH05BMj6GsyB66OjQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学深植“边疆金达莱”就业品牌，寒假访企拓岗促就业暖人心显实效",
+    "source": "",
+    "publishDate": "2026-02-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/l9gDlFH05BMj6GsyB66OjQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "ac04b32d4083995d111e34e4b7aa64c5201a1df5cfec7ca2fa4e36bcc7c131fb",
+  "evidence": {
+    "listPage": 46,
+    "listTitle": "延边大学深植“边疆金达莱”就业品牌，寒假访企拓岗促就业暖人心显实效",
+    "listPublishDate": "2026-02-09",
+    "sourceOrder": 455
+  }
+}

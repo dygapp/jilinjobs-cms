@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a5b71b18b5fff5f0a947e484e5c18ca30d0308f47cd10f26bae27e95cd43d755",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/OtwdByXKcrA6xU7QHRrMEg",
+    "url": "https://mp.weixin.qq.com/s/OtwdByXKcrA6xU7QHRrMEg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗，关怀成长——长白山职业技术学院走访合作医院开展交流",
+    "source": "",
+    "publishDate": "2026-01-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/OtwdByXKcrA6xU7QHRrMEg"
+  },
+  "resources": [],
+  "sourceFingerprint": "1383b8544e7839880bc02b21b6edc0bbf3d4c9986e688569a946c0b6eded3831",
+  "evidence": {
+    "listPage": 49,
+    "listTitle": "访企拓岗，关怀成长——长白山职业技术学院走访合作医院开展交流",
+    "listPublishDate": "2026-01-19",
+    "sourceOrder": 489
+  }
+}

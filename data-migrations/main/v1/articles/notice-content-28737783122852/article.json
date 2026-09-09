@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122852",
+    "contentId": "28737783122852",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122852"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于做好2014年协会各项工作和开展有关活动的通知",
+    "source": "",
+    "publishDate": "2014-03-27",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于做好2014年协会各项工作和开展有关活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场开发部   发布时间:2014-3-27 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img src=\"migration-resource://2075aa7bc7808be268199c4999c49fd0050ecafa998210d3edd7e0bab1060ec7\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://680c14c27548afbb967b3c5c7851a78602f7c6f15a3d0e789f113606844f3261\" border=\"0\"></p> <p align=\"center\">&nbsp;</p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140327020507853.jpg",
+      "originalReference": "/chistory/cms/imgs/20140327020507853.jpg",
+      "token": "migration-resource://2075aa7bc7808be268199c4999c49fd0050ecafa998210d3edd7e0bab1060ec7",
+      "snapshotPath": "assets/2075aa7bc7808be268199c4999c49fd0050ecafa998210d3edd7e0bab1060ec7.jpg",
+      "sha256": "2075aa7bc7808be268199c4999c49fd0050ecafa998210d3edd7e0bab1060ec7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 69500
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2014032702051288.jpg",
+      "originalReference": "/chistory/cms/imgs/2014032702051288.jpg",
+      "token": "migration-resource://680c14c27548afbb967b3c5c7851a78602f7c6f15a3d0e789f113606844f3261",
+      "snapshotPath": "assets/680c14c27548afbb967b3c5c7851a78602f7c6f15a3d0e789f113606844f3261.jpg",
+      "sha256": "680c14c27548afbb967b3c5c7851a78602f7c6f15a3d0e789f113606844f3261",
+      "contentType": "image/jpeg",
+      "sizeBytes": 51065
+    }
+  ],
+  "sourceFingerprint": "653670a46fd2d7985ba2a5f1a204967dd757631715ceee3ee9372d01aa4ed5a0",
+  "evidence": {
+    "listPage": 32,
+    "listTitle": "关于做好2014年协会各项工作和开展有关活动的通知",
+    "listPublishDate": "2014-03-27",
+    "sourceOrder": 318,
+    "detailPublishDate": "2014-03-27"
+  }
+}

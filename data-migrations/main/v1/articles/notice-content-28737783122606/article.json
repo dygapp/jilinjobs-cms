@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122606",
+    "contentId": "28737783122606",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122606"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于发送《就业启航，伴你同行》高校毕业生就业创业系列宣传视频的通知",
+    "source": "",
+    "publishDate": "2015-04-09",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于发送《就业启航，伴你同行》高校毕业生就业创业系列宣传视频的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2015-4-9 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p>&nbsp;</p><p style=\"TEXT-ALIGN: center\"><img title=\"1.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6356418990794480802846915.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"2.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6356418990798981063130995.jpg\"></p><p>&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "ba03bea02c7859574bdf2e5a97a2205a11e61d93ce11bccdd75d275b337fdcd0",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "关于发送《就业启航，伴你同行》高校毕业生就业创业系列宣传视频的通知",
+    "listPublishDate": "2015-04-09",
+    "sourceOrder": 282,
+    "detailPublishDate": "2015-04-09"
+  }
+}

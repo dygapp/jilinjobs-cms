@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783121000",
+    "contentId": "28737783121000",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783121000"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "[湖南]关于省外普通大中专学校2011届毕业生来湘就业有关事项的函",
+    "source": "",
+    "publishDate": "2011-11-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">[湖南]关于省外普通大中专学校2011届毕业生来湘就业有关事项的函</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><font size=\"3\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 关于省外普通大中专学校2011届毕业生来湘就业有关事项的函<br>各省、自治区、直辖市毕业生就业工作部门:&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; 为方便各省（区、市）普通大中专院校来湘就业的2011届毕业生（含毕业研究生）办理有关手续，现将有关事项函告如下：<br>&nbsp;&nbsp;&nbsp; 一、联系到湖南省直、中央在湘单位和省内市（州）、县（市、区）所属单位就业的毕业生，请直接派往接收单位报到，档案寄往接收单位。毕业生去接收单位报到前，须分别到湖南省大中专学校学生信息咨询与就业指导中心（以下简称“中心”）和接收单位所在地的市州教育局毕业生就业办公室备案登记，以便办理落户等手续。<br>&nbsp;&nbsp;&nbsp; 二、对接收单位隶属关系不清楚的毕业生，可将其派往“中心”报到，并在《报到证》备注栏内注明接收单位名称。毕业生档案寄往接收单位。<br>&nbsp;&nbsp;&nbsp; 三、未落实接收单位的湖南生源毕业生，可直接派往生源地，档案随寄。<br>&nbsp;&nbsp;&nbsp; 四、来我省就业的毕业生，办理就业手续时，须持《就业报到证》、《毕业证书》、户口关系迁移证明、与用人单位签订的就业协议书等原件材料。<br>&nbsp;&nbsp;&nbsp; 凡未经生源地省级招生部门批准招收的和非普通大中专院校普通全日制毕业生，不予办理就业报到手续。非湖南生源毕业生来湘报到时，须持经其生源所在地省级招生部门审批签章的招生录取名册（复印件，并经所在学校盖章确认）。<br>&nbsp;&nbsp;&nbsp; 五、根据国家档案管理有关规定，我省各级毕业生就业工作部门均不受理毕业生本人自带或委托代交的毕业生档案（即毕业生档案由学校负责传递）。<br>&nbsp;&nbsp;&nbsp; 六、请各省（区、市）高校毕业生就业主管部门于2011年6月30日前将派遣来湘的普通高校毕业生名单，以教育部数据库结构的格式，通过电子邮箱发至“中心”（邮箱地址：</font><a href=\"mailto:lcw@hunbys.com\"><font size=\"3\">lcw@hunbys.com</font></a><font size=\"3\">）。名单内容需含：学号、考生号、姓名、性别、学历、学制、专业名称、生源所在地、用人单位名称、单位所在地及备注等。<br>&nbsp;&nbsp;&nbsp; 七、从2011年7月1日至2013年6月30日接待和办理2011届省外院校来湘毕业生的就业手续，接待地点设在湖南省大中专学校学生信息咨询与就业指导中心。地址：长沙市雨花亭新建西路37号，长城·非常生活三楼。联系电话：0731－82816663、82816670；网址：</font><a href=\"http://www.hunbys.com\"><font size=\"3\">http://www.hunbys.com</font></a><font size=\"3\">，邮编：410007。<br>&nbsp;&nbsp;&nbsp; 请各省、自治区、直辖市毕业生就业工作部门将本函内容告知辖区内有关大中专学校、研究生培养单位和来湘就业、择业的高校毕业生，并请督促学校（单位）按本函要求，协助做好有关工作。<br></font></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "f7b6901c94bdec8ece9233ae37dfcd580b960610fcf90c4ccbaf9dde50af0a48",
+  "evidence": {
+    "listPage": 45,
+    "listTitle": "[湖南]关于省外普通大中专学校2011届毕业生来湘就业有关事项的函",
+    "listPublishDate": "2011-11-04",
+    "sourceOrder": 450,
+    "detailPublishDate": "2011-11-04"
+  }
+}

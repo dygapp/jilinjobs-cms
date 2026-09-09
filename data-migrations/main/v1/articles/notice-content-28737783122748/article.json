@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122748",
+    "contentId": "28737783122748",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122748"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "平台维护公告",
+    "source": "",
+    "publishDate": "2017-07-28",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">平台维护公告</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:综合部   发布时间:2017-7-28 11:12:55</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p><span style=\"font-family: 仿宋; font-size: 21px;\">广大高校毕业生、学生家长及社会各界：</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">因我单位部分业务调整，近期对业务咨询热线电话（0431-84657570、84657571）部分功能进行优化升级。在调试过程中给大家带来不便，敬请谅解！在此期间大家可通过中心门户网站（</span><a href=\"http://www.jilinjobs.cn/\"><span style=\"font-family: 仿宋; font-size: 21px;\">http://www.jilinjobs.cn/</span></a><span style=\"font-family: 仿宋; font-size: 21px;\">）、关注吉林省大学生就业创业微信平台对您要办理的业务进行在线查询。我们将竭诚为广大毕业生及社会各界提供热情、高效、便捷的咨询服务。 </span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">&nbsp;</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">&nbsp;</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">&nbsp;</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style=\"font-family: 仿宋; font-size: 21px;\">吉林省高等学校毕业生就业指导中心</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2017</span><span style=\"font-family: 仿宋; font-size: 21px;\">年7月28日</span></p><p><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "9813f9b2a427aff42fa2d8b195e009ce3d600b3b0bb57e49daeb69ba559ec14f",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "平台维护公告",
+    "listPublishDate": "2017-07-28",
+    "sourceOrder": 213,
+    "detailPublishDate": "2017-07-28"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:303c16ea6d97fba87bc2edd9a74954ce0a107031f43fd5622c4e6937c2bfc634",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/RlS-wA3XYaf27qS641fERg",
+    "url": "https://mp.weixin.qq.com/s/RlS-wA3XYaf27qS641fERg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学组织召开2026届毕业生就业监测工作会",
+    "source": "",
+    "publishDate": "2026-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/RlS-wA3XYaf27qS641fERg"
+  },
+  "resources": [],
+  "sourceFingerprint": "f83b525d1e43cc38227daebbf5e5a33dbdb695c961db55af33cbfce162ef72a1",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "延边大学组织召开2026届毕业生就业监测工作会",
+    "listPublishDate": "2026-05-15",
+    "sourceOrder": 176
+  }
+}

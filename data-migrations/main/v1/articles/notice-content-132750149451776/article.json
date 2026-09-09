@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:132750149451776",
+    "contentId": "132750149451776",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=132750149451776"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于停止毕业生就业报到证业务办理的通告",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2023-01-03",
+    "bodyHtml": "\n                        <p style=\"text-align:left\">　　<span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">根据《国务院办公厅关于进一步做好高校毕业生等青年就业创业工作的通知》（国办发〔2022〕13号）和《教育部关于做好2023届全国普通高校毕业生就业创业工作的通知》（教学〔2022〕5 号）要求，从2023年起，不再发放《全国普通高等学校本专科毕业生就业报到证》和《全国毕业研究生就业报到证》（以下统称就业报到证），取消就业报到证补办、改派手续，不再将就业报到证作为办理高校毕业生招聘录用、落户、档案接收转递等手续的必需材料。到机关、国有企事业单位就业或定向招生就业的，档案转递至就业单位或定向单位；到非公单位就业的，档案转递至就业地或户籍地公共就业人才服务机构；暂未就业的，档案转递至户籍地公共就业人才服务机构。</span></span></span></span></p>\n\n<p style=\"text-align:left\">　　<span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">为贯彻落实国务院、教育部要求，进一步简化毕业生就业手续，吉林省教育厅于2023年1月4日起，不再发放《全国普通高等学校本专科毕业生就业报到证》和《全国毕业研究生就业报到证》。《吉林省中等专业学校毕业生就业报到证》同步停止办理。毕业生户口迁移、档案转递未尽事宜，后续将根据相关主管部门有关规定进一步明确。</span></span></span></span></p>\n\n<p style=\"text-align:left\">　　<span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">咨询电话：0431-84657570、84657571</span></span></span></span></p>\n\n<p style=\"text-align:left\">&nbsp;</p>\n\n<p style=\"text-align:right\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Calibri,sans-serif\"><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2023</span></span><span style=\"font-size:16.0pt\"><span style=\"font-family:仿宋\">年1月3日</span></span></span></span></p>\n\n<p style=\"text-align:left\">&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "cdfc0b72d99d91d9489625d7bbeeea4ecdfec733e41fad143b2450775bae9d6e",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "关于停止毕业生就业报到证业务办理的通告",
+    "listPublishDate": "2023-01-03",
+    "sourceOrder": 113,
+    "detailPublishDate": "2023-01-03"
+  }
+}

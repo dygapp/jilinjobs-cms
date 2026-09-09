@@ -1,0 +1,101 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123124",
+    "contentId": "28737783123124",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123124"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省2020年农村义务教育阶段学校教师特设岗位空缺岗位招聘公告",
+    "source": "市场部",
+    "publishDate": "2020-10-01",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align:center\"><img src=\"migration-resource://d300717bdc435c2ea24768d32f85af28034dccc51fb3e06f6db93b4e88a072c6\" alt=\"\" width=\"550\" height=\"783\"><img src=\"migration-resource://4dc69abd86931d43fa27d6817b4c3fa797656ac703ff5ef17dc8d56d4e35d28e\" alt=\"\" width=\"550\" height=\"781\"><img src=\"migration-resource://4b15d31a1c9a3a10299a83d80b490766204f70a4af6d9d28ee1ac34b609baa32\" alt=\"\" width=\"550\" height=\"779\"><img src=\"migration-resource://28e0b0ff7a6d0a001d514ef26b2b97f34a43897c43cd525eccfb1459b92b63f6\" alt=\"\" width=\"550\" height=\"780\"><img src=\"migration-resource://8c3e9fa8e066cfdd5429f9c7587549d4a23b94d236d6c45db8c2bff9f3684da4\" alt=\"\" width=\"550\" height=\"781\"><img src=\"migration-resource://459796ceb295d953c352f8a83352d52668ec5653cdb5699d1accd3d71d54b21d\" alt=\"\" width=\"550\" height=\"786\"><img src=\"migration-resource://4701838dd251b96b01ba2aa234e01a95532c0f4a9d6d02c219fc7ab69bf28e93\" alt=\"\" width=\"550\" height=\"781\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201002092855.png",
+      "originalReference": "/chistory/cms/editor/20201002092855.png",
+      "token": "migration-resource://d300717bdc435c2ea24768d32f85af28034dccc51fb3e06f6db93b4e88a072c6",
+      "snapshotPath": "assets/d300717bdc435c2ea24768d32f85af28034dccc51fb3e06f6db93b4e88a072c6.png",
+      "sha256": "d300717bdc435c2ea24768d32f85af28034dccc51fb3e06f6db93b4e88a072c6",
+      "contentType": "image/png",
+      "sizeBytes": 1061630
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201002092912.png",
+      "originalReference": "/chistory/cms/editor/20201002092912.png",
+      "token": "migration-resource://4dc69abd86931d43fa27d6817b4c3fa797656ac703ff5ef17dc8d56d4e35d28e",
+      "snapshotPath": "assets/4dc69abd86931d43fa27d6817b4c3fa797656ac703ff5ef17dc8d56d4e35d28e.png",
+      "sha256": "4dc69abd86931d43fa27d6817b4c3fa797656ac703ff5ef17dc8d56d4e35d28e",
+      "contentType": "image/png",
+      "sizeBytes": 1059263
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201002092932.png",
+      "originalReference": "/chistory/cms/editor/20201002092932.png",
+      "token": "migration-resource://4b15d31a1c9a3a10299a83d80b490766204f70a4af6d9d28ee1ac34b609baa32",
+      "snapshotPath": "assets/4b15d31a1c9a3a10299a83d80b490766204f70a4af6d9d28ee1ac34b609baa32.png",
+      "sha256": "4b15d31a1c9a3a10299a83d80b490766204f70a4af6d9d28ee1ac34b609baa32",
+      "contentType": "image/png",
+      "sizeBytes": 807568
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201002092945.png",
+      "originalReference": "/chistory/cms/editor/20201002092945.png",
+      "token": "migration-resource://28e0b0ff7a6d0a001d514ef26b2b97f34a43897c43cd525eccfb1459b92b63f6",
+      "snapshotPath": "assets/28e0b0ff7a6d0a001d514ef26b2b97f34a43897c43cd525eccfb1459b92b63f6.png",
+      "sha256": "28e0b0ff7a6d0a001d514ef26b2b97f34a43897c43cd525eccfb1459b92b63f6",
+      "contentType": "image/png",
+      "sizeBytes": 918327
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201002092957.png",
+      "originalReference": "/chistory/cms/editor/20201002092957.png",
+      "token": "migration-resource://8c3e9fa8e066cfdd5429f9c7587549d4a23b94d236d6c45db8c2bff9f3684da4",
+      "snapshotPath": "assets/8c3e9fa8e066cfdd5429f9c7587549d4a23b94d236d6c45db8c2bff9f3684da4.png",
+      "sha256": "8c3e9fa8e066cfdd5429f9c7587549d4a23b94d236d6c45db8c2bff9f3684da4",
+      "contentType": "image/png",
+      "sizeBytes": 918061
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201002093012.png",
+      "originalReference": "/chistory/cms/editor/20201002093012.png",
+      "token": "migration-resource://459796ceb295d953c352f8a83352d52668ec5653cdb5699d1accd3d71d54b21d",
+      "snapshotPath": "assets/459796ceb295d953c352f8a83352d52668ec5653cdb5699d1accd3d71d54b21d.png",
+      "sha256": "459796ceb295d953c352f8a83352d52668ec5653cdb5699d1accd3d71d54b21d",
+      "contentType": "image/png",
+      "sizeBytes": 960432
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20201002093028.png",
+      "originalReference": "/chistory/cms/editor/20201002093028.png",
+      "token": "migration-resource://4701838dd251b96b01ba2aa234e01a95532c0f4a9d6d02c219fc7ab69bf28e93",
+      "snapshotPath": "assets/4701838dd251b96b01ba2aa234e01a95532c0f4a9d6d02c219fc7ab69bf28e93.png",
+      "sha256": "4701838dd251b96b01ba2aa234e01a95532c0f4a9d6d02c219fc7ab69bf28e93",
+      "contentType": "image/png",
+      "sizeBytes": 406531
+    }
+  ],
+  "sourceFingerprint": "e93ddbe1b183491417955ef6991a94fa57fbdff51566fed102588cc15cdb78bf",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "吉林省2020年农村义务教育阶段学校教师特设岗位空缺岗位招聘公告",
+    "listPublishDate": "2020-10-01",
+    "sourceOrder": 373,
+    "detailPublishDate": "2020-10-01"
+  }
+}

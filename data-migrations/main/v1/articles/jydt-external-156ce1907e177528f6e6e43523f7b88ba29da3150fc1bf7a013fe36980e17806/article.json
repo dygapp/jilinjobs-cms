@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:156ce1907e177528f6e6e43523f7b88ba29da3150fc1bf7a013fe36980e17806",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xKDEOVVi1HyFW9A_igNodA",
+    "url": "https://mp.weixin.qq.com/s/xKDEOVVi1HyFW9A_igNodA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学举办与肇东市校地合作对接活动",
+    "source": "",
+    "publishDate": "2026-05-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xKDEOVVi1HyFW9A_igNodA"
+  },
+  "resources": [],
+  "sourceFingerprint": "5b72bf9111392c22abfff809d5cb02a66d2f2cf8aebf55276e60e826a4a81c4b",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "长春师范大学举办与肇东市校地合作对接活动",
+    "listPublishDate": "2026-05-20",
+    "sourceOrder": 163
+  }
+}

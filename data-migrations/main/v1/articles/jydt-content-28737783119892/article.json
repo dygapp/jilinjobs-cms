@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119892",
+    "contentId": "28737783119892",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119892"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "岳强副厅长到省高校毕业生就业指导中心检查工作",
+    "source": "",
+    "publishDate": "2018-11-16",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">岳强副厅长到省高校毕业生就业指导中心检查工作</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:综合业务部   发布时间:2018-11-16 15:20:19</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">11月15日，省教育厅副厅长岳强到省高校毕业生就业指导中心就解放思想，推动吉林教育高质量发展大讨论活动进行调研。岳强副厅长听取了中心综合服务大厅阶段性工作的简要汇报。重点了解了大厅日均接待业务量和各项手续的办理情况，并对调整后的高等教育学历认证工作作出指示和部署。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">岳强副厅长要求，在解放思想、推动吉林教育高质量发展的大背景下，要思考2019推动毕业生就业创业工作的发展，打破传统模式和惯性思维，实施就业创业人才培养联动，突破区域性的壁垒，主动与中小企业和大企业联系对接，实施政校企合作，就业基地和实习基地要有机结合。要将“白山情松水情，留根在吉林”的就业理念，植入大一到大四年级的教育过程中。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">岳强副厅长强调，要站在省里的高度考虑创业就业工作，要有三年至五年的长远思考，要有方向、要有目标、要有主题思想，要有针对性的研究工作中的难点和风险点，认真梳理，各个突破解决，可与科技、人社等跨行业部门进行联动，使就业创业工作形成全省互动的大格局。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">教育厅高校学生处陈梅处长、杜昌军副处长、中心党总支书记孙维才、副主任张旭光陪同并参加座谈会。</span></p><p><span style=\"font-family: 仿宋; font-size: 21px;\">&nbsp;</span></p><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"QQ图片20181116152154.jpg\" src=\"migration-resource://7c2e0020a7f706016c096bd9b75c4aa7119f00eb2bb2bb43d93b45328d7db479\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6367797849348437502271055.jpg",
+      "originalReference": "/chistory/cms/imgs/6367797849348437502271055.jpg",
+      "token": "migration-resource://7c2e0020a7f706016c096bd9b75c4aa7119f00eb2bb2bb43d93b45328d7db479",
+      "snapshotPath": "assets/7c2e0020a7f706016c096bd9b75c4aa7119f00eb2bb2bb43d93b45328d7db479.jpg",
+      "sha256": "7c2e0020a7f706016c096bd9b75c4aa7119f00eb2bb2bb43d93b45328d7db479",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75226
+    }
+  ],
+  "sourceFingerprint": "30dbb2441462b54f82b37bd1589cf817e831340e1d9b193b060e90e7bb8bc2cb",
+  "evidence": {
+    "listPage": 146,
+    "listTitle": "岳强副厅长到省高校毕业生就业指导中心检查工作",
+    "listPublishDate": "2018-11-16",
+    "sourceOrder": 1455,
+    "detailPublishDate": "2018-11-16"
+  }
+}

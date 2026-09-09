@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:7acb9e6a450d557a251f1b8bb2f045eef0507507b5ceee4e8b31ecdd6f4e320e",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/BIAjys1SthCdy-lwQysBoA",
+    "url": "https://mp.weixin.qq.com/s/BIAjys1SthCdy-lwQysBoA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院2026届毕业生“寒假促就业暖心行动”服务指南来啦！",
+    "source": "",
+    "publishDate": "2026-02-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/BIAjys1SthCdy-lwQysBoA"
+  },
+  "resources": [],
+  "sourceFingerprint": "7ce7ffe902d6157bf96d3cca7fb90331cfaf8b6703101a1b705b1cbc6e437a36",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "长春科技学院2026届毕业生“寒假促就业暖心行动”服务指南来啦！",
+    "listPublishDate": "2026-02-02",
+    "sourceOrder": 71
+  }
+}

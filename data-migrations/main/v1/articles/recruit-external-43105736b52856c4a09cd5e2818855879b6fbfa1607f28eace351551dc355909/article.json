@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:43105736b52856c4a09cd5e2818855879b6fbfa1607f28eace351551dc355909",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/q-IIDbAIlT_DGTr1MdlgQg",
+    "url": "https://mp.weixin.qq.com/s/q-IIDbAIlT_DGTr1MdlgQg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院“寒假促就业暖心行动”线上活动正式开启",
+    "source": "",
+    "publishDate": "2026-01-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/q-IIDbAIlT_DGTr1MdlgQg"
+  },
+  "resources": [],
+  "sourceFingerprint": "bcae25f631e0ea9aa4bac98e68851eef95c388105743c93f8f4dc12b5a2847c5",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "长春人文学院“寒假促就业暖心行动”线上活动正式开启",
+    "listPublishDate": "2026-01-28",
+    "sourceOrder": 82
+  }
+}

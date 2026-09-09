@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3c9a572eb8cb88fd8a035422cada6d9cfffc2783f6d64efb44369c0d53915f37",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/B9TBY8sgn5HgXHNr4OEurw",
+    "url": "https://mp.weixin.qq.com/s/B9TBY8sgn5HgXHNr4OEurw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林交通职业技术学院党委书记于繁华带队赴长春合心机械制造有限公司开展访企拓岗活动",
+    "source": "",
+    "publishDate": "2026-05-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/B9TBY8sgn5HgXHNr4OEurw"
+  },
+  "resources": [],
+  "sourceFingerprint": "26fb5b616e1ba47840b8c71f4d687e1e79e674a950197f999d46c17b3b5b45f0",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "吉林交通职业技术学院党委书记于繁华带队赴长春合心机械制造有限公司开展访企拓岗活动",
+    "listPublishDate": "2026-05-14",
+    "sourceOrder": 188
+  }
+}

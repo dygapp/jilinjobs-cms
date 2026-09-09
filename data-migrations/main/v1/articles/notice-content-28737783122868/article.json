@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122868",
+    "contentId": "28737783122868",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122868"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于做好《中国大学生就业》杂志征订及组稿工作的通知",
+    "source": "",
+    "publishDate": "2013-12-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于做好《中国大学生就业》杂志征订及组稿工作的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2013-12-6 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img src=\"migration-resource://c6ae13c8ac768c5ad69e70bae016ab12b87f54e73d949d79557df77a9e1901a4\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://af6d1ce59f4f3336f95c79168f409aa52b27b5bb7eb5e5f452b521c2f50ee8dd\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://2506314ec0152ea8c84cd696cc8d33079a41569c82f45de8a27bb7974963de92\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://9efd96748bbb1668a6f3ab52f681e33ac9ae1506a0ba17707e2c629da88f642c\" border=\"0\"></p> <p align=\"center\"><img src=\"http://192.168.1.251/uploadfile/201312/20131206033403122.jpg\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://2ea0b697b63cafadd48f7b44b972359489deae1cdce9c2a5353924e4bc50a881\" border=\"0\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131206033318268.jpg",
+      "originalReference": "/chistory/cms/imgs/20131206033318268.jpg",
+      "token": "migration-resource://c6ae13c8ac768c5ad69e70bae016ab12b87f54e73d949d79557df77a9e1901a4",
+      "snapshotPath": "assets/c6ae13c8ac768c5ad69e70bae016ab12b87f54e73d949d79557df77a9e1901a4.jpg",
+      "sha256": "c6ae13c8ac768c5ad69e70bae016ab12b87f54e73d949d79557df77a9e1901a4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 98908
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131206033330930.jpg",
+      "originalReference": "/chistory/cms/imgs/20131206033330930.jpg",
+      "token": "migration-resource://af6d1ce59f4f3336f95c79168f409aa52b27b5bb7eb5e5f452b521c2f50ee8dd",
+      "snapshotPath": "assets/af6d1ce59f4f3336f95c79168f409aa52b27b5bb7eb5e5f452b521c2f50ee8dd.jpg",
+      "sha256": "af6d1ce59f4f3336f95c79168f409aa52b27b5bb7eb5e5f452b521c2f50ee8dd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 99504
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131206033348741.jpg",
+      "originalReference": "/chistory/cms/imgs/20131206033348741.jpg",
+      "token": "migration-resource://2506314ec0152ea8c84cd696cc8d33079a41569c82f45de8a27bb7974963de92",
+      "snapshotPath": "assets/2506314ec0152ea8c84cd696cc8d33079a41569c82f45de8a27bb7974963de92.jpg",
+      "sha256": "2506314ec0152ea8c84cd696cc8d33079a41569c82f45de8a27bb7974963de92",
+      "contentType": "image/jpeg",
+      "sizeBytes": 99088
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131206033355507.jpg",
+      "originalReference": "/chistory/cms/imgs/20131206033355507.jpg",
+      "token": "migration-resource://9efd96748bbb1668a6f3ab52f681e33ac9ae1506a0ba17707e2c629da88f642c",
+      "snapshotPath": "assets/9efd96748bbb1668a6f3ab52f681e33ac9ae1506a0ba17707e2c629da88f642c.jpg",
+      "sha256": "9efd96748bbb1668a6f3ab52f681e33ac9ae1506a0ba17707e2c629da88f642c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 78292
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20131206033434543.jpg",
+      "originalReference": "/chistory/cms/imgs/20131206033434543.jpg",
+      "token": "migration-resource://2ea0b697b63cafadd48f7b44b972359489deae1cdce9c2a5353924e4bc50a881",
+      "snapshotPath": "assets/2ea0b697b63cafadd48f7b44b972359489deae1cdce9c2a5353924e4bc50a881.jpg",
+      "sha256": "2ea0b697b63cafadd48f7b44b972359489deae1cdce9c2a5353924e4bc50a881",
+      "contentType": "image/jpeg",
+      "sizeBytes": 78476
+    }
+  ],
+  "sourceFingerprint": "444a25883fe067d5bf1229d81908a22dc62236cbc68221fa2243ae6dac986434",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "关于做好《中国大学生就业》杂志征订及组稿工作的通知",
+    "listPublishDate": "2013-12-06",
+    "sourceOrder": 331,
+    "detailPublishDate": "2013-12-06"
+  }
+}

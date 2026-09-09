@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119988",
+    "contentId": "28737783119988",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119988"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省召开2016年全省高校就业创业工作推进会",
+    "source": "",
+    "publishDate": "2016-04-11",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省召开2016年全省高校就业创业工作推进会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训会   发布时间:2016-4-11 15:19:18</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"font-family: 宋体,SimSun; font-size: 16px;\">&nbsp;&nbsp;&nbsp; 4月8日，2016年全省高校就业创业工作推进会在省高校毕业生就业指导中心召开。来自全省60所高校就业、创业部门负责人参加会议。会议由省高校毕业生就业指导中心副主任张旭光主持，省高校毕业生就业指导中心主任郑志宏到会并讲话。</span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 16px;\">&nbsp;&nbsp;&nbsp; 会议共有两项内容，一是部署离校前高校就业创业工作。郑志宏主任传达了教育部办公厅近日下发的《关于做好全国普通高校未就业毕业生统计服务工作的通知》和《关于开展全国普通高校毕业生精准就业服务工作的通知》精神，并对2016年离校前高校就业创业工作提出工作要求。二是部署吉林省第三届“梦想杯”大学生创业大赛工作。吉林省创业促进会执行会长张喜山、陈波升、魏蓝、思达正兴（北京）企业管理有限公司人事行政总监刘艳、吉林省振兴互强投资咨询有限公司总裁崔士伟、大公网副总编辑、吉林首席代表、吉林省政协常委卢冶、长春市华福建筑构件制作有限公司董事长孟琳娜、吉林省君创教育科技有限公司总经理宁海博等嘉宾参加会议。会议对第二届大赛工作成果进行了展示，对第三届大赛流程做了讲解说明，并进行了工作部署。</span></p><p>&nbsp;</p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><img title=\"1.JPG\" src=\"migration-resource://423f3cc5a8691fd649b8a22ef9ef9292de03e14e2f52d081966046afa7d13f28\"></p><p style=\"text-align: center;\"><img title=\"2.JPG\" src=\"migration-resource://b11adbcb3389f9508862cfcd11275b4a745a25d654b980bb096a472648eb0de5\"></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 16px;\">（会议现场）</span></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359598702505887509579186.JPG",
+      "originalReference": "/chistory/cms/imgs/6359598702505887509579186.JPG",
+      "token": "migration-resource://423f3cc5a8691fd649b8a22ef9ef9292de03e14e2f52d081966046afa7d13f28",
+      "snapshotPath": "assets/423f3cc5a8691fd649b8a22ef9ef9292de03e14e2f52d081966046afa7d13f28.jpg",
+      "sha256": "423f3cc5a8691fd649b8a22ef9ef9292de03e14e2f52d081966046afa7d13f28",
+      "contentType": "image/jpeg",
+      "sizeBytes": 179675
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359598702513700007321756.JPG",
+      "originalReference": "/chistory/cms/imgs/6359598702513700007321756.JPG",
+      "token": "migration-resource://b11adbcb3389f9508862cfcd11275b4a745a25d654b980bb096a472648eb0de5",
+      "snapshotPath": "assets/b11adbcb3389f9508862cfcd11275b4a745a25d654b980bb096a472648eb0de5.jpg",
+      "sha256": "b11adbcb3389f9508862cfcd11275b4a745a25d654b980bb096a472648eb0de5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 228446
+    }
+  ],
+  "sourceFingerprint": "85d14fbde729a2323bd9bb144f53a13bf56a8d1aa751608a3253fe7eb17f8db7",
+  "evidence": {
+    "listPage": 155,
+    "listTitle": "我省召开2016年全省高校就业创业工作推进会",
+    "listPublishDate": "2016-04-11",
+    "sourceOrder": 1546,
+    "detailPublishDate": "2016-04-11"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:13896451a15f681ed9d72835f36f669980b94d5962d7be4703cefa645c7735fb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/so-qWELoyEIt9tyrFtKq_Q",
+    "url": "https://mp.weixin.qq.com/s/so-qWELoyEIt9tyrFtKq_Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学召开2025届毕业生五月份就业创业工作调度会暨“百日冲刺行动”部署会",
+    "source": "",
+    "publishDate": "2025-06-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/so-qWELoyEIt9tyrFtKq_Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "ecce7dfbaef64c9826ab6200e161318c4d06d64315dd0714a9101d5ebfd3c981",
+  "evidence": {
+    "listPage": 83,
+    "listTitle": "吉林财经大学召开2025届毕业生五月份就业创业工作调度会暨“百日冲刺行动”部署会",
+    "listPublishDate": "2025-06-12",
+    "sourceOrder": 823
+  }
+}

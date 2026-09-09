@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86126700281856",
+    "contentId": "86126700281856",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86126700281856"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林建筑科技学院召开2021级新生留省就业宣传报告会",
+    "source": "吉林建筑科技学院",
+    "publishDate": "2021-11-10",
+    "bodyHtml": "\n                        <p>为贯彻省委、省政府人才强省决策部署，促进大学生留省就业，吉林建筑科技学院于9月24日召开了2021年度新生留省就业宣传报告会。会议由招生就业工作处副处长姜卓线上主持，2021级全体新生及学生干部通过抖音直播观看。此次报告会也是学校首次以抖音直播的方式组织开展的大型报告会。</p>\n\n<p>报告内容依次分为“职业规划”“就业风采”、吉林省“一主六双”三个板块。姜卓老师耐心细致地重点讲解了吉林省留省就业的各项政策，并介绍了目前我省各行业发展的动态，让2021级新生对留省就业有了初步的认识和了解。同时，组织新生观看了《这边风景独好》留省就业宣传片。会议最后，姜老师向同学们宣读了吉林省教育厅给全省高校入学新生的一封信。</p>\n\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>（吉林建筑科技学院 田佳欣）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "095d6ad454dd98fcbda94277414bd0d04b524180f71b35d1b1852e8d97cffe98",
+  "evidence": {
+    "listPage": 129,
+    "listTitle": "吉林建筑科技学院召开2021级新生留省就业宣传报告会",
+    "listPublishDate": "2021-11-10",
+    "sourceOrder": 1287,
+    "detailPublishDate": "2021-11-10"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:74c1caf1f4a1eb840044083db4694b23f9be0dd65c75974ce1893761365bd3b7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/wap/detail/chs/zw/10187219.shtml",
+    "url": "https://m.chinanews.com/wap/detail/chs/zw/10187219.shtml"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省高校2024届毕业生春季双选会火热开场",
+    "source": "",
+    "publishDate": "2024-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://m.chinanews.com/wap/detail/chs/zw/10187219.shtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "14dc98d73cb82e5098ec2da4904e37fc4c05159a3f61a3abf8528ab6b130807d",
+  "evidence": {
+    "listPage": 111,
+    "listTitle": "吉林省高校2024届毕业生春季双选会火热开场",
+    "listPublishDate": "2024-03-27",
+    "sourceOrder": 1101
+  }
+}

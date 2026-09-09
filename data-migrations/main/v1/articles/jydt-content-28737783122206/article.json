@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122206",
+    "contentId": "28737783122206",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122206"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省首届生涯团体辅导培训落下帷幕",
+    "source": "",
+    "publishDate": "2012-03-23",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省首届生涯团体辅导培训落下帷幕</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-3-23 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://33a5f177986785807c2e1aafeb64a22518f7e9c4c04b7943e28a471dbce11bf1\"></p> <p align=\"justify\">&nbsp;&nbsp; 3月9-11日，省高校毕业生就业指导中心举办了首届生涯辅导培训班（总第25期），共有来自全省17所普通高校的41名专兼职就业指导教师参加培训。培训由仁能达教育科技有限公司研发总监谢伟与中国传媒大学曾海波博士主讲。学员们经过三天的培训，共同分享了开展高校生涯团体辅导技术的知识和要领。</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20120323160554365.jpg",
+      "originalReference": "/chistory/cms/imgs/20120323160554365.jpg",
+      "token": "migration-resource://33a5f177986785807c2e1aafeb64a22518f7e9c4c04b7943e28a471dbce11bf1",
+      "snapshotPath": "assets/33a5f177986785807c2e1aafeb64a22518f7e9c4c04b7943e28a471dbce11bf1.jpg",
+      "sha256": "33a5f177986785807c2e1aafeb64a22518f7e9c4c04b7943e28a471dbce11bf1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 73346
+    }
+  ],
+  "sourceFingerprint": "1c7e7e1aeb261e2339acd57212840885b8fa4951bdd04328cce575fc0f471680",
+  "evidence": {
+    "listPage": 164,
+    "listTitle": "吉林省首届生涯团体辅导培训落下帷幕",
+    "listPublishDate": "2012-03-23",
+    "sourceOrder": 1636,
+    "detailPublishDate": "2012-03-23"
+  }
+}

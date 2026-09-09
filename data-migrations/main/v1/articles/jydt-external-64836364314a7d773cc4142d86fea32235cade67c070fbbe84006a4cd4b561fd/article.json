@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:64836364314a7d773cc4142d86fea32235cade67c070fbbe84006a4cd4b561fd",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/bmdBAsnnKE3CkNmy6_jbbg",
+    "url": "https://mp.weixin.qq.com/s/bmdBAsnnKE3CkNmy6_jbbg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省经济管理干部学院赴吉林省超星信息技术有限公司开展“优企引才”定向访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/bmdBAsnnKE3CkNmy6_jbbg"
+  },
+  "resources": [],
+  "sourceFingerprint": "38ee53530bb48bbf0dcb3569ae638a209ec6ce57aec04938c7875a562820a2f3",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "吉林省经济管理干部学院赴吉林省超星信息技术有限公司开展“优企引才”定向访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-24",
+    "sourceOrder": 375
+  }
+}

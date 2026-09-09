@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:a121ab2ace924a2109ca452c3d8c2934d19fd533491efb7addb0eccb12027d55",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/2020/0811/3341.html",
+    "url": "http://www.jleea.com.cn/2020/0811/3341.html"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年普通高等学校“专升本”教育考试 部分专业需携带文具说明",
+    "source": "",
+    "publishDate": "2020-08-11",
+    "bodyHtml": "",
+    "externalUrl": "http://www.jleea.com.cn/2020/0811/3341.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "135b0f982ab0581a44ff450acb01452966e4d53277447594df189111618ff4ff",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "2020年普通高等学校“专升本”教育考试 部分专业需携带文具说明",
+    "listPublishDate": "2020-08-11",
+    "sourceOrder": 177
+  }
+}

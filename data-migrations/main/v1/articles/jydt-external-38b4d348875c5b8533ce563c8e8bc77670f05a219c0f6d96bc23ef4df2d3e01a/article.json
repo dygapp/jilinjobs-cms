@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:38b4d348875c5b8533ce563c8e8bc77670f05a219c0f6d96bc23ef4df2d3e01a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/vMZIZHhhFeKfDG_De8emqw",
+    "url": "https://mp.weixin.qq.com/s/vMZIZHhhFeKfDG_De8emqw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学党委常委司学俭带队开展访企拓岗促就业活动",
+    "source": "",
+    "publishDate": "2025-06-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vMZIZHhhFeKfDG_De8emqw"
+  },
+  "resources": [],
+  "sourceFingerprint": "c39eb630b3e5f1a61d9ed6cfdf2f45f2b8ac792662615329b994bfb343f13ed2",
+  "evidence": {
+    "listPage": 80,
+    "listTitle": "延边大学党委常委司学俭带队开展访企拓岗促就业活动",
+    "listPublishDate": "2025-06-18",
+    "sourceOrder": 794
+  }
+}

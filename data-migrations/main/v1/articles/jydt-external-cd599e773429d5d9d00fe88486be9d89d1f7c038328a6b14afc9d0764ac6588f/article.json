@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cd599e773429d5d9d00fe88486be9d89d1f7c038328a6b14afc9d0764ac6588f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5395.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5395.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学赴延边朝鲜族自治州开展“三访三促”专项活动",
+    "source": "",
+    "publishDate": "2025-12-18",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5395.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "c24f8c3d43e14591d4863e729bd1e3907a264e602b8ca57454b6fa27feb3e88a",
+  "evidence": {
+    "listPage": 54,
+    "listTitle": "长春工业大学赴延边朝鲜族自治州开展“三访三促”专项活动",
+    "listPublishDate": "2025-12-18",
+    "sourceOrder": 537
+  }
+}

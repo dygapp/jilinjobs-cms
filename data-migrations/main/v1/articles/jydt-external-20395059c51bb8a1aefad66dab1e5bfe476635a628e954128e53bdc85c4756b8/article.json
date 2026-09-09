@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:20395059c51bb8a1aefad66dab1e5bfe476635a628e954128e53bdc85c4756b8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Z9ajoOPxDMaCTfgPsDBvrA",
+    "url": "https://mp.weixin.qq.com/s/Z9ajoOPxDMaCTfgPsDBvrA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春金融高等专科学校党委书记王登攀带队赴吉林省电子信息行业联合会开展调研交流",
+    "source": "",
+    "publishDate": "2026-05-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Z9ajoOPxDMaCTfgPsDBvrA"
+  },
+  "resources": [],
+  "sourceFingerprint": "f68e4a49430011b7f7c2571ef7932abd56c7405c4519b25a72df02e2e2df812b",
+  "evidence": {
+    "listPage": 18,
+    "listTitle": "长春金融高等专科学校党委书记王登攀带队赴吉林省电子信息行业联合会开展调研交流",
+    "listPublishDate": "2026-05-18",
+    "sourceOrder": 171
+  }
+}

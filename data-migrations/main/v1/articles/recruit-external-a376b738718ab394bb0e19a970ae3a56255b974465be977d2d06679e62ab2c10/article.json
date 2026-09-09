@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:a376b738718ab394bb0e19a970ae3a56255b974465be977d2d06679e62ab2c10",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/7Rr6NflFFWq_uvLwKJAiaA",
+    "url": "https://mp.weixin.qq.com/s/7Rr6NflFFWq_uvLwKJAiaA?scene=25&sessionid=-1364995529"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“吉聚英才・筑梦青春”服务吉林高质量发展专场招聘会暨四平职业大学2025年就业实习双选会",
+    "source": "",
+    "publishDate": "2025-05-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/7Rr6NflFFWq_uvLwKJAiaA?scene=25&sessionid=-1364995529"
+  },
+  "resources": [],
+  "sourceFingerprint": "658f49b142252044c1bc05e41fdb8ee3a4b6f1bdc9ba07679ce6eaec4f2ca7e3",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "“吉聚英才・筑梦青春”服务吉林高质量发展专场招聘会暨四平职业大学2025年就业实习双选会",
+    "listPublishDate": "2025-05-06",
+    "sourceOrder": 160
+  }
+}

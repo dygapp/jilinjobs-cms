@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783123002",
+    "contentId": "28737783123002",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123002"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办全省第二届大学生职业生涯规划大赛的通知",
+    "source": "",
+    "publishDate": "2011-09-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办全省第二届大学生职业生涯规划大赛的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-9-5 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://74427d3fc9b81492a9080baa57caa8bee77816359ec101a92b7a3f7914eca63a\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://05050e37a8b5e3a4f5bf33f2ca11587dfd64a6c14945fc3c95c66f72f3424af3\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://4e53bcb14a8c103f37dd5c543b2a1cfc29d459d0f9ad0cc224272f15935614e7\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://0b2ccfed00f80bda998fbc4f0ac773f76aba6333200f6f7601b5214936035d35\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://7eff4e722970d834b3b2229d3db58c0532144303c2c2473354c3687a6d8ae6d0\"></p> <p align=\"center\">&nbsp;</p> <p align=\"center\">&nbsp;</p> <p align=\"center\">&nbsp;</p> <p align=\"center\">&nbsp;</p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110905164434992.jpg",
+      "originalReference": "/chistory/cms/imgs/20110905164434992.jpg",
+      "token": "migration-resource://74427d3fc9b81492a9080baa57caa8bee77816359ec101a92b7a3f7914eca63a",
+      "snapshotPath": "assets/74427d3fc9b81492a9080baa57caa8bee77816359ec101a92b7a3f7914eca63a.jpg",
+      "sha256": "74427d3fc9b81492a9080baa57caa8bee77816359ec101a92b7a3f7914eca63a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77932
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110905164440976.jpg",
+      "originalReference": "/chistory/cms/imgs/20110905164440976.jpg",
+      "token": "migration-resource://05050e37a8b5e3a4f5bf33f2ca11587dfd64a6c14945fc3c95c66f72f3424af3",
+      "snapshotPath": "assets/05050e37a8b5e3a4f5bf33f2ca11587dfd64a6c14945fc3c95c66f72f3424af3.jpg",
+      "sha256": "05050e37a8b5e3a4f5bf33f2ca11587dfd64a6c14945fc3c95c66f72f3424af3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 65391
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110905164445181.jpg",
+      "originalReference": "/chistory/cms/imgs/20110905164445181.jpg",
+      "token": "migration-resource://4e53bcb14a8c103f37dd5c543b2a1cfc29d459d0f9ad0cc224272f15935614e7",
+      "snapshotPath": "assets/4e53bcb14a8c103f37dd5c543b2a1cfc29d459d0f9ad0cc224272f15935614e7.jpg",
+      "sha256": "4e53bcb14a8c103f37dd5c543b2a1cfc29d459d0f9ad0cc224272f15935614e7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 58210
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110905164451794.jpg",
+      "originalReference": "/chistory/cms/imgs/20110905164451794.jpg",
+      "token": "migration-resource://0b2ccfed00f80bda998fbc4f0ac773f76aba6333200f6f7601b5214936035d35",
+      "snapshotPath": "assets/0b2ccfed00f80bda998fbc4f0ac773f76aba6333200f6f7601b5214936035d35.jpg",
+      "sha256": "0b2ccfed00f80bda998fbc4f0ac773f76aba6333200f6f7601b5214936035d35",
+      "contentType": "image/jpeg",
+      "sizeBytes": 38678
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2011090516445759.jpg",
+      "originalReference": "/chistory/cms/imgs/2011090516445759.jpg",
+      "token": "migration-resource://7eff4e722970d834b3b2229d3db58c0532144303c2c2473354c3687a6d8ae6d0",
+      "snapshotPath": "assets/7eff4e722970d834b3b2229d3db58c0532144303c2c2473354c3687a6d8ae6d0.jpg",
+      "sha256": "7eff4e722970d834b3b2229d3db58c0532144303c2c2473354c3687a6d8ae6d0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 39579
+    }
+  ],
+  "sourceFingerprint": "3b566692182de0b6b18b90875325ff3d9cc244c78587e98d4354ca8b2259a89d",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "关于举办全省第二届大学生职业生涯规划大赛的通知",
+    "listPublishDate": "2011-09-05",
+    "sourceOrder": 428,
+    "detailPublishDate": "2011-09-05"
+  }
+}

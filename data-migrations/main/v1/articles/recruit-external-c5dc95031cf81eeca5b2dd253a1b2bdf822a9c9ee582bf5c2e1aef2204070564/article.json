@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:c5dc95031cf81eeca5b2dd253a1b2bdf822a9c9ee582bf5c2e1aef2204070564",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/03ECKUjd15ox8mqbBfosrw",
+    "url": "https://mp.weixin.qq.com/s/03ECKUjd15ox8mqbBfosrw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力扩容提质 服务高质量发展 —— 全国文旅艺术行业2026年吉林省高校毕业生吉林艺术学院专场招聘会邀请函",
+    "source": "",
+    "publishDate": "2026-03-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/03ECKUjd15ox8mqbBfosrw"
+  },
+  "resources": [],
+  "sourceFingerprint": "abd11f000358891497d0d00c5a291c4ae8d2d235ca3015e71215f6bc53f0ba24",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "聚力扩容提质 服务高质量发展 —— 全国文旅艺术行业2026年吉林省高校毕业生吉林艺术学院专场招聘会邀请函",
+    "listPublishDate": "2026-03-12",
+    "sourceOrder": 63
+  }
+}

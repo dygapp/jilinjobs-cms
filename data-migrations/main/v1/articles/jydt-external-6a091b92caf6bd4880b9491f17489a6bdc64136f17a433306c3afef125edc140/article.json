@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6a091b92caf6bd4880b9491f17489a6bdc64136f17a433306c3afef125edc140",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1007/10552.htm",
+    "url": "https://www.ccit.edu.cn/info/1007/10552.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院校领导带队赴宁夏开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-02-09",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccit.edu.cn/info/1007/10552.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "e330c8ebf9adff52c6255f2c7b647dcc680b5438f029e5ed1e52bc600df3bab9",
+  "evidence": {
+    "listPage": 46,
+    "listTitle": "长春工程学院校领导带队赴宁夏开展访企拓岗专项行动",
+    "listPublishDate": "2026-02-09",
+    "sourceOrder": 452
+  }
+}

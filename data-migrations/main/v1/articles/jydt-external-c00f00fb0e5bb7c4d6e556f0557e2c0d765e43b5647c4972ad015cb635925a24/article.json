@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c00f00fb0e5bb7c4d6e556f0557e2c0d765e43b5647c4972ad015cb635925a24",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/NPzIkiWuqsK4ezVNKUYJ5A",
+    "url": "https://mp.weixin.qq.com/s/NPzIkiWuqsK4ezVNKUYJ5A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林铁道职业技术大学 | 曹炳志校长带队赴中国铁路广州局集团有限公司开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2025-06-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/NPzIkiWuqsK4ezVNKUYJ5A"
+  },
+  "resources": [],
+  "sourceFingerprint": "4821aa5c2d38a4ef6830c4fd78fef75933cb2df757bd383c4531da8dc20ed5a1",
+  "evidence": {
+    "listPage": 78,
+    "listTitle": "吉林铁道职业技术大学 | 曹炳志校长带队赴中国铁路广州局集团有限公司开展访企拓岗专项行动",
+    "listPublishDate": "2025-06-25",
+    "sourceOrder": 775
+  }
+}

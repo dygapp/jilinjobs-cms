@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4ef11ef60bf7ec3934abf19d350cd816e377519cd4c16489f5a271de801f9d94",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/EknlkI0H5yTftkHw-Yk7rg",
+    "url": "https://mp.weixin.qq.com/s/EknlkI0H5yTftkHw-Yk7rg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企合作丨长春师范高等专科学校与吉林省佰仟翡翠艺术馆达成校企合作",
+    "source": "",
+    "publishDate": "2026-05-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/EknlkI0H5yTftkHw-Yk7rg"
+  },
+  "resources": [],
+  "sourceFingerprint": "e81999ffb881c118cfa4cc80ef358f06d0847e53a5b1bdd99812d43725e0cf1a",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "校企合作丨长春师范高等专科学校与吉林省佰仟翡翠艺术馆达成校企合作",
+    "listPublishDate": "2026-05-25",
+    "sourceOrder": 147
+  }
+}

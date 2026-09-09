@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:2fc449c241edff8e905507574f08fd707053225c22251e57790527f20936abc7",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/egPGFiHbJKU8rT2wSQzwbw",
+    "url": "https://mp.weixin.qq.com/s/egPGFiHbJKU8rT2wSQzwbw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 ‘就’在吉林” 吉林建筑大学“拓岗”宣传推介会暨“聚才引智 筑梦净月”长春市净月区政校企合作专场招聘会",
+    "source": "",
+    "publishDate": "2024-05-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/egPGFiHbJKU8rT2wSQzwbw"
+  },
+  "resources": [],
+  "sourceFingerprint": "ddd6528434a07d7878f79a8b73588662df675ba202a0b340609ebff974ad7f77",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "“创业奋斗 ‘就’在吉林” 吉林建筑大学“拓岗”宣传推介会暨“聚才引智 筑梦净月”长春市净月区政校企合作专场招聘会",
+    "listPublishDate": "2024-05-08",
+    "sourceOrder": 281
+  }
+}

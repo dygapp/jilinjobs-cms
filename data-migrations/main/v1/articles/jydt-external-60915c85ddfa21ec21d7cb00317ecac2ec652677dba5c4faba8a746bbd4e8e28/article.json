@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:60915c85ddfa21ec21d7cb00317ecac2ec652677dba5c4faba8a746bbd4e8e28",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/J90FXhkaLvmODopKwLBxbg",
+    "url": "https://mp.weixin.qq.com/s/J90FXhkaLvmODopKwLBxbg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省高校“政校企协同促就业”专项行动辽源站供需对接活动顺利开展",
+    "source": "",
+    "publishDate": "2026-06-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/J90FXhkaLvmODopKwLBxbg"
+  },
+  "resources": [],
+  "sourceFingerprint": "b907d2b9fba1ce2519290e614654420b5684164e8303e5882d2e6883d2463862",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "吉林省高校“政校企协同促就业”专项行动辽源站供需对接活动顺利开展",
+    "listPublishDate": "2026-06-02",
+    "sourceOrder": 109
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ab3cd2135d437b141316f9419608b235e236abccd178897157ff80f6b530e9be",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/IvFb4fodgzUz0BY9sOO76w",
+    "url": "https://mp.weixin.qq.com/s/IvFb4fodgzUz0BY9sOO76w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长科资讯｜医药学院走访长春市人民医院深化康复治疗学专业校企合作",
+    "source": "",
+    "publishDate": "2026-01-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/IvFb4fodgzUz0BY9sOO76w"
+  },
+  "resources": [],
+  "sourceFingerprint": "91d8d3fc61aa4aeaaabf9f6d74c445d8775415779398a80a515481ed940e3cfb",
+  "evidence": {
+    "listPage": 50,
+    "listTitle": "长科资讯｜医药学院走访长春市人民医院深化康复治疗学专业校企合作",
+    "listPublishDate": "2026-01-16",
+    "sourceOrder": 493
+  }
+}

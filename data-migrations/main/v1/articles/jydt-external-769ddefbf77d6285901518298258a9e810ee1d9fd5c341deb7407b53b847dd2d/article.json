@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:769ddefbf77d6285901518298258a9e810ee1d9fd5c341deb7407b53b847dd2d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/v5yz_s89HPZWeYGdxMZnjg",
+    "url": "https://mp.weixin.qq.com/s/v5yz_s89HPZWeYGdxMZnjg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院召开2025届毕业生就业工作总结表彰暨2026届毕业生就业工作部署大会",
+    "source": "",
+    "publishDate": "2025-11-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/v5yz_s89HPZWeYGdxMZnjg"
+  },
+  "resources": [],
+  "sourceFingerprint": "2064c372d2400ac07c449f5740cd88b5bc8730322e769028ec6c8e52b51568e4",
+  "evidence": {
+    "listPage": 61,
+    "listTitle": "长春科技学院召开2025届毕业生就业工作总结表彰暨2026届毕业生就业工作部署大会",
+    "listPublishDate": "2025-11-11",
+    "sourceOrder": 604
+  }
+}

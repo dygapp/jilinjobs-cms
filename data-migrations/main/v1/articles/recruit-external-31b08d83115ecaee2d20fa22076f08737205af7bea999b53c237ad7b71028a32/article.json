@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:31b08d83115ecaee2d20fa22076f08737205af7bea999b53c237ad7b71028a32",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/jobfair/fairdetails.html",
+    "url": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=4Qc5SDEvXF5sA7JvBAWdp6"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“银企携手 职等你来”中国银行千企千校线上招聘会",
+    "source": "",
+    "publishDate": "2022-11-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ncss.cn/student/jobfair/fairdetails.html?fairId=4Qc5SDEvXF5sA7JvBAWdp6"
+  },
+  "resources": [],
+  "sourceFingerprint": "28fb8d5d98bb96e11a0e2c57717c8a7d45524aacabdcd8ece907e650578b65ac",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "“银企携手 职等你来”中国银行千企千校线上招聘会",
+    "listPublishDate": "2022-11-02",
+    "sourceOrder": 332
+  }
+}

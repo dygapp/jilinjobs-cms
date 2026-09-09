@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f146b88de3fdc5e68aae1981a9274bd8aede62941de30bb4ef312b4838202bdc",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/YyLSsV0LwHkshw74zQI2AQ",
+    "url": "https://mp.weixin.qq.com/s/YyLSsV0LwHkshw74zQI2AQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 ‘就’在吉林”群团组织服务高校毕业生留吉就业创业专场招聘会在吉林农业大学举办",
+    "source": "",
+    "publishDate": "2024-05-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/YyLSsV0LwHkshw74zQI2AQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "4662045e7dc8aafac1e9c583cbeab5eab2213f9667d977735bfca45bf74ac51c",
+  "evidence": {
+    "listPage": 105,
+    "listTitle": "“创业奋斗 ‘就’在吉林”群团组织服务高校毕业生留吉就业创业专场招聘会在吉林农业大学举办",
+    "listPublishDate": "2024-05-16",
+    "sourceOrder": 1049
+  }
+}

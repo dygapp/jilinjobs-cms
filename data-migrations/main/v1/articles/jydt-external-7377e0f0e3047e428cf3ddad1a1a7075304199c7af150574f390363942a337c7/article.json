@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7377e0f0e3047e428cf3ddad1a1a7075304199c7af150574f390363942a337c7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/hCWlqotIrbPEs8tjCBdCGQ",
+    "url": "https://mp.weixin.qq.com/s/hCWlqotIrbPEs8tjCBdCGQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业，校企携手育人才——长白山职业技术学院赴长白山万达度假区喜来登、威斯汀酒店开展访企拓岗并签署校企战略合作协议",
+    "source": "",
+    "publishDate": "2026-08-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/hCWlqotIrbPEs8tjCBdCGQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "0a30f13f84de82ad39f234ce145b25a8b54a8cd9a5ef0c0dfed7a9b20c2a5dc3",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "访企拓岗促就业，校企携手育人才——长白山职业技术学院赴长白山万达度假区喜来登、威斯汀酒店开展访企拓岗并签署校企战略合作协议",
+    "listPublishDate": "2026-08-07",
+    "sourceOrder": 20
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:310f37208b7dc2d896dbb62290cdd0953056f737327cab437e07d0c038d804e0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xKh4yEQYHs3VC-lFrqMqRg",
+    "url": "https://mp.weixin.qq.com/s/xKh4yEQYHs3VC-lFrqMqRg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春理工大学党委副书记丁佳带队赴杭州访企拓岗",
+    "source": "",
+    "publishDate": "2026-02-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xKh4yEQYHs3VC-lFrqMqRg"
+  },
+  "resources": [],
+  "sourceFingerprint": "262227db88fa1968f668f0c4fa655be13f7ea9d2ffb3f8a32b3db190cd2bad9c",
+  "evidence": {
+    "listPage": 47,
+    "listTitle": "长春理工大学党委副书记丁佳带队赴杭州访企拓岗",
+    "listPublishDate": "2026-02-03",
+    "sourceOrder": 463
+  }
+}

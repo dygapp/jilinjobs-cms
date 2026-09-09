@@ -1,0 +1,111 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:96321776140288",
+    "contentId": "96321776140288",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=96321776140288"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于印发《吉林省2022届高校毕业生就业“百日冲刺”系列活动实施方案》的通知",
+    "source": "吉林省教育厅",
+    "publishDate": "2022-06-16",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1016\" src=\"migration-resource://2e9d1a4d1162af8e7bd146a811844d76bf9d15514d74a33879cfe4bbafa55cad\" width=\"786\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1006\" src=\"migration-resource://fe39023f91ae4237380f4c2ccb3f78a4d38f2a718d2045d70bf31a2d584ce5bd\" width=\"787\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1019\" src=\"migration-resource://efdf22b097f347d86cf3defd6ba3867864929e81dffb6f4a698303c4b0748c9a\" width=\"787\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"997\" src=\"migration-resource://b09e2c2718954a916d138be24de2019841c9bdd61b432ba395c3b6c4fcafab95\" width=\"785\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1016\" src=\"migration-resource://d88542dc0bda8e4713b431aae0fef4993175ea8ff9398fe0afd2af9013486ae5\" width=\"785\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"996\" src=\"migration-resource://6ea5b0920ad898541474d31d805f0a855be03319510925bc27f2e668ed190e9d\" width=\"789\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"999\" src=\"migration-resource://ad96c683a201b1a06e7f31ddca69a084d3d1919cdf4ae42f6114abca0faed5fc\" width=\"785\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1013\" src=\"migration-resource://6673fb977573f00ffa853ff07ffe5fe1527f84187c1ca304443bf22060c62893\" width=\"786\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-06-16/f37bc565-a258-473c-afc6-1df729329a34.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-06-16/f37bc565-a258-473c-afc6-1df729329a34.jpg",
+      "token": "migration-resource://2e9d1a4d1162af8e7bd146a811844d76bf9d15514d74a33879cfe4bbafa55cad",
+      "snapshotPath": "assets/2e9d1a4d1162af8e7bd146a811844d76bf9d15514d74a33879cfe4bbafa55cad.jpg",
+      "sha256": "2e9d1a4d1162af8e7bd146a811844d76bf9d15514d74a33879cfe4bbafa55cad",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67757
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-06-16/ae0f5609-5b92-4bc3-b903-8dc30da34cf4.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-06-16/ae0f5609-5b92-4bc3-b903-8dc30da34cf4.jpg",
+      "token": "migration-resource://fe39023f91ae4237380f4c2ccb3f78a4d38f2a718d2045d70bf31a2d584ce5bd",
+      "snapshotPath": "assets/fe39023f91ae4237380f4c2ccb3f78a4d38f2a718d2045d70bf31a2d584ce5bd.jpg",
+      "sha256": "fe39023f91ae4237380f4c2ccb3f78a4d38f2a718d2045d70bf31a2d584ce5bd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 12584
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-06-16/1b52e2d9-5970-48f0-8b25-1e062515c2dd.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-06-16/1b52e2d9-5970-48f0-8b25-1e062515c2dd.jpg",
+      "token": "migration-resource://efdf22b097f347d86cf3defd6ba3867864929e81dffb6f4a698303c4b0748c9a",
+      "snapshotPath": "assets/efdf22b097f347d86cf3defd6ba3867864929e81dffb6f4a698303c4b0748c9a.jpg",
+      "sha256": "efdf22b097f347d86cf3defd6ba3867864929e81dffb6f4a698303c4b0748c9a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92647
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-06-16/4ab7392d-71cb-41f6-93a8-7e98b7bf411b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-06-16/4ab7392d-71cb-41f6-93a8-7e98b7bf411b.jpg",
+      "token": "migration-resource://b09e2c2718954a916d138be24de2019841c9bdd61b432ba395c3b6c4fcafab95",
+      "snapshotPath": "assets/b09e2c2718954a916d138be24de2019841c9bdd61b432ba395c3b6c4fcafab95.jpg",
+      "sha256": "b09e2c2718954a916d138be24de2019841c9bdd61b432ba395c3b6c4fcafab95",
+      "contentType": "image/jpeg",
+      "sizeBytes": 107382
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-06-16/fae1ae58-5919-4b8d-b8f2-3b5f8b584913.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-06-16/fae1ae58-5919-4b8d-b8f2-3b5f8b584913.jpg",
+      "token": "migration-resource://d88542dc0bda8e4713b431aae0fef4993175ea8ff9398fe0afd2af9013486ae5",
+      "snapshotPath": "assets/d88542dc0bda8e4713b431aae0fef4993175ea8ff9398fe0afd2af9013486ae5.jpg",
+      "sha256": "d88542dc0bda8e4713b431aae0fef4993175ea8ff9398fe0afd2af9013486ae5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93825
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-06-16/e3d07984-a925-4fd1-bdf5-57f0eaaf3f15.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-06-16/e3d07984-a925-4fd1-bdf5-57f0eaaf3f15.jpg",
+      "token": "migration-resource://6ea5b0920ad898541474d31d805f0a855be03319510925bc27f2e668ed190e9d",
+      "snapshotPath": "assets/6ea5b0920ad898541474d31d805f0a855be03319510925bc27f2e668ed190e9d.jpg",
+      "sha256": "6ea5b0920ad898541474d31d805f0a855be03319510925bc27f2e668ed190e9d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88503
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-06-16/7f633caf-37b4-42a1-9594-f248aa06a671.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-06-16/7f633caf-37b4-42a1-9594-f248aa06a671.jpg",
+      "token": "migration-resource://ad96c683a201b1a06e7f31ddca69a084d3d1919cdf4ae42f6114abca0faed5fc",
+      "snapshotPath": "assets/ad96c683a201b1a06e7f31ddca69a084d3d1919cdf4ae42f6114abca0faed5fc.jpg",
+      "sha256": "ad96c683a201b1a06e7f31ddca69a084d3d1919cdf4ae42f6114abca0faed5fc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 101722
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-06-16/fb9eada2-c37d-49dc-ba4e-0da2fc93017d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-06-16/fb9eada2-c37d-49dc-ba4e-0da2fc93017d.jpg",
+      "token": "migration-resource://6673fb977573f00ffa853ff07ffe5fe1527f84187c1ca304443bf22060c62893",
+      "snapshotPath": "assets/6673fb977573f00ffa853ff07ffe5fe1527f84187c1ca304443bf22060c62893.jpg",
+      "sha256": "6673fb977573f00ffa853ff07ffe5fe1527f84187c1ca304443bf22060c62893",
+      "contentType": "image/jpeg",
+      "sizeBytes": 80038
+    }
+  ],
+  "sourceFingerprint": "b94c248071dc8285c03591fe19d62c7a4a15887938c2751f42d10f9d484e33dd",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "关于印发《吉林省2022届高校毕业生就业“百日冲刺”系列活动实施方案》的通知",
+    "listPublishDate": "2022-06-16",
+    "sourceOrder": 121,
+    "detailPublishDate": "2022-06-16"
+  }
+}

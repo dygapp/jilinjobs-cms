@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:abe286ff5b8d14970e76a459ffcf5a244918f0f58bd8f4fbe782e3982754d08f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xLATeO4JNqJMzxTwwO5Y6Q",
+    "url": "https://mp.weixin.qq.com/s/xLATeO4JNqJMzxTwwO5Y6Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学人文信息学院校长潘福林带队赴长春经济技术开发区人才中心、长春百事可乐有限公司开展调研和访企拓岗",
+    "source": "",
+    "publishDate": "2026-05-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xLATeO4JNqJMzxTwwO5Y6Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "550c9183c39d12cc92819da0ad705a50f401f7f94f7fe9bb2340f236f80e3775",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "长春工业大学人文信息学院校长潘福林带队赴长春经济技术开发区人才中心、长春百事可乐有限公司开展调研和访企拓岗",
+    "listPublishDate": "2026-05-18",
+    "sourceOrder": 170
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:63f0f8121ecd8639c0a0535ac3fe0c57c10b1ed4905d22f3ca7e28d149c34ccd",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/wXNwRDAKXNDwbkU1jM4DCw",
+    "url": "https://mp.weixin.qq.com/s/wXNwRDAKXNDwbkU1jM4DCw?scene=25&sessionid=-1365559461"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "松原市委在松原职业技术学院开展大学生就业创业宣讲活动",
+    "source": "",
+    "publishDate": "2025-04-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wXNwRDAKXNDwbkU1jM4DCw?scene=25&sessionid=-1365559461"
+  },
+  "resources": [],
+  "sourceFingerprint": "c4bd102dc3075068b0e4db3166c68e59d83a0de3a23fa53493021d0779a72e28",
+  "evidence": {
+    "listPage": 93,
+    "listTitle": "松原市委在松原职业技术学院开展大学生就业创业宣讲活动",
+    "listPublishDate": "2025-04-27",
+    "sourceOrder": 923
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122528",
+    "contentId": "28737783122528",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122528"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林建筑大学召开就业工作推进会",
+    "source": "培训部",
+    "publishDate": "2021-03-26",
+    "bodyHtml": "\n                        \n\n\n\n\n<p>3月24日，吉林建筑大学召开2021届毕业生就业工作推进会。各学院党委副书记、学生工作负责人、2021届毕业班辅导员及招生与就业工作处相关人员参加了本次会议。会议由学校党委副书记陈士玉主持。</p>\n<p>会上，就业指导中心主任、招生与就业工作处副处长周景民传达并解读了教育部2021届高校毕业生就业工作第二次调度视频会议精神、省教育厅2021年全省普通高校就业处长工作会议精神，介绍了2021届毕业生就业工作进展情况，总结了当前工作中存在的不足，对推进各项工作的时间安排及相关工作具体事宜进行了部署。</p>\n<p>陈士玉对一年来学校就业工作取得的成绩给予充分肯定，他强调就业工作是民生之本，也是推进学校高质量发展的重要任务。各学院要继续强化组织领导，布控全局，着手细微工作；要深入开展就业指导与就业帮扶，全面摸底排查了解学生就业状况，创新工作方式方法，制定解决方案，继续推动学校就业工作再上新台阶。</p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "fdcf9a379597712171fdfdab37a00f9a805a9400cd3ff4e1aec6e030b5d0be49",
+  "evidence": {
+    "listPage": 137,
+    "listTitle": "吉林建筑大学召开就业工作推进会",
+    "listPublishDate": "2021-03-26",
+    "sourceOrder": 1366,
+    "detailPublishDate": "2021-03-26"
+  }
+}

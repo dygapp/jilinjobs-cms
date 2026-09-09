@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a99b8bed3987bbffc2f670ce735ab81d74e7f48c4c8dfd816fd0a6ef7d90cbbb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/news/article.html",
+    "url": "https://app.xinhuanet.com/news/article.html?articleId=1a521fd607156abe128d7a42e0df7e39&timestamp=16855&sessionid=-1367639591"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "新华吉林快报丨电商培训进校园 吉林积极助力毕业生早就业",
+    "source": "",
+    "publishDate": "2025-04-14",
+    "bodyHtml": "",
+    "externalUrl": "https://app.xinhuanet.com/news/article.html?articleId=1a521fd607156abe128d7a42e0df7e39&timestamp=16855&sessionid=-1367639591"
+  },
+  "resources": [],
+  "sourceFingerprint": "7c3abce95c2de8c0d1c172a1111242077dd2ea1f843e1edce2c61b585545a5ba",
+  "evidence": {
+    "listPage": 95,
+    "listTitle": "新华吉林快报丨电商培训进校园 吉林积极助力毕业生早就业",
+    "listPublishDate": "2025-04-14",
+    "sourceOrder": 945
+  }
+}

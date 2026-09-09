@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:acb33c6e3cb85b6964a720d0a1907d16dfc7ea763107cff5f47c0e1070ea5367",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/TZsQEgsDMhiboyzyDLpetA",
+    "url": "https://mp.weixin.qq.com/s/TZsQEgsDMhiboyzyDLpetA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "职教宣传月 | 长春汽车职业技术大学与一汽奔腾汽车股份有限公司校企合作签约仪式成功举行",
+    "source": "",
+    "publishDate": "2026-05-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/TZsQEgsDMhiboyzyDLpetA"
+  },
+  "resources": [],
+  "sourceFingerprint": "83171a98a82369a8e84f05b80e845adac5125dfb1a2517518b8f838fe56c81c1",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "职教宣传月 | 长春汽车职业技术大学与一汽奔腾汽车股份有限公司校企合作签约仪式成功举行",
+    "listPublishDate": "2026-05-11",
+    "sourceOrder": 195
+  }
+}

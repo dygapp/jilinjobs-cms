@@ -1,0 +1,101 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122750",
+    "contentId": "28737783122750",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122750"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发开展2017年创业类慕课建设课题申报工作的通知",
+    "source": "",
+    "publishDate": "2017-06-23",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于转发开展2017年创业类慕课建设课题申报工作的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2017-6-23 16:09:24</span></p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://ed6dff781466017214936813cb270b2e27339472b43e55cf0df19f0d8d5dc799\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://29cefb192732255a23cc089c565394a2f87da244dbf2cd4cbd8e9d1b320ac3f8\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://3c48ca61021dc77d27cbd7633abc8be9d82d1697b87197cd2f5e7b00a0f4e7ad\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://e2a9b99026c41cf5f89ed50a6d7e4c8a5bbd917a36eaf37ba89491d7c347f2f3\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://634758d33e5403ae09ec7a5a3135a0a619f709257949e41e365e6670282718fc\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://7d7b6fb687af69d1d4deaad7a1b436471337b0ea5abc2c10c194dc3e6de2e6f0\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://7d1b5383c4eea943a320c477a8d9df0327f3615e0d01944c9281db2d9887478c\"></p>\n\n<p>&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=cb805cf8-f3ea-416f-bfdc-cb4c6e368635\">2017年创业类慕课建设课题申报表.doc</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363383106403125005807459.jpg",
+      "originalReference": "/chistory/cms/imgs/6363383106403125005807459.jpg",
+      "token": "migration-resource://ed6dff781466017214936813cb270b2e27339472b43e55cf0df19f0d8d5dc799",
+      "snapshotPath": "assets/ed6dff781466017214936813cb270b2e27339472b43e55cf0df19f0d8d5dc799.jpg",
+      "sha256": "ed6dff781466017214936813cb270b2e27339472b43e55cf0df19f0d8d5dc799",
+      "contentType": "image/jpeg",
+      "sizeBytes": 184439
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363383106414062505306692.jpg",
+      "originalReference": "/chistory/cms/imgs/6363383106414062505306692.jpg",
+      "token": "migration-resource://29cefb192732255a23cc089c565394a2f87da244dbf2cd4cbd8e9d1b320ac3f8",
+      "snapshotPath": "assets/29cefb192732255a23cc089c565394a2f87da244dbf2cd4cbd8e9d1b320ac3f8.jpg",
+      "sha256": "29cefb192732255a23cc089c565394a2f87da244dbf2cd4cbd8e9d1b320ac3f8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 155329
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363383106421875007751091.jpg",
+      "originalReference": "/chistory/cms/imgs/6363383106421875007751091.jpg",
+      "token": "migration-resource://3c48ca61021dc77d27cbd7633abc8be9d82d1697b87197cd2f5e7b00a0f4e7ad",
+      "snapshotPath": "assets/3c48ca61021dc77d27cbd7633abc8be9d82d1697b87197cd2f5e7b00a0f4e7ad.jpg",
+      "sha256": "3c48ca61021dc77d27cbd7633abc8be9d82d1697b87197cd2f5e7b00a0f4e7ad",
+      "contentType": "image/jpeg",
+      "sizeBytes": 158689
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363383106429687505493661.jpg",
+      "originalReference": "/chistory/cms/imgs/6363383106429687505493661.jpg",
+      "token": "migration-resource://e2a9b99026c41cf5f89ed50a6d7e4c8a5bbd917a36eaf37ba89491d7c347f2f3",
+      "snapshotPath": "assets/e2a9b99026c41cf5f89ed50a6d7e4c8a5bbd917a36eaf37ba89491d7c347f2f3.jpg",
+      "sha256": "e2a9b99026c41cf5f89ed50a6d7e4c8a5bbd917a36eaf37ba89491d7c347f2f3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 126474
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363383106437500003236232.jpg",
+      "originalReference": "/chistory/cms/imgs/6363383106437500003236232.jpg",
+      "token": "migration-resource://634758d33e5403ae09ec7a5a3135a0a619f709257949e41e365e6670282718fc",
+      "snapshotPath": "assets/634758d33e5403ae09ec7a5a3135a0a619f709257949e41e365e6670282718fc.jpg",
+      "sha256": "634758d33e5403ae09ec7a5a3135a0a619f709257949e41e365e6670282718fc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90416
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363383106445312509978802.jpg",
+      "originalReference": "/chistory/cms/imgs/6363383106445312509978802.jpg",
+      "token": "migration-resource://7d7b6fb687af69d1d4deaad7a1b436471337b0ea5abc2c10c194dc3e6de2e6f0",
+      "snapshotPath": "assets/7d7b6fb687af69d1d4deaad7a1b436471337b0ea5abc2c10c194dc3e6de2e6f0.jpg",
+      "sha256": "7d7b6fb687af69d1d4deaad7a1b436471337b0ea5abc2c10c194dc3e6de2e6f0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 51549
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363383106450000005964710.jpg",
+      "originalReference": "/chistory/cms/imgs/6363383106450000005964710.jpg",
+      "token": "migration-resource://7d1b5383c4eea943a320c477a8d9df0327f3615e0d01944c9281db2d9887478c",
+      "snapshotPath": "assets/7d1b5383c4eea943a320c477a8d9df0327f3615e0d01944c9281db2d9887478c.jpg",
+      "sha256": "7d1b5383c4eea943a320c477a8d9df0327f3615e0d01944c9281db2d9887478c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 54352
+    }
+  ],
+  "sourceFingerprint": "336129fcfe256d91c3d986811f6c40827f445d4dae6a17e3ee8b7ebe5e128bce",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "关于转发开展2017年创业类慕课建设课题申报工作的通知",
+    "listPublishDate": "2017-06-23",
+    "sourceOrder": 214,
+    "detailPublishDate": "2017-06-23"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122634",
+    "contentId": "28737783122634",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122634"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于做好吉林省2014年下半年全国计算机应用技术证书考试考务工作的通知",
+    "source": "",
+    "publishDate": "2014-10-20",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于做好吉林省2014年下半年全国计算机应用技术证书考试考务工作的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2014-10-20 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"TEXT-ALIGN: center\">&nbsp;</p><p style=\"TEXT-ALIGN: center\"><img title=\"考务会通知1.jpg\" style=\"FLOAT: none\" src=\"http://www.jilinjobs.cn:80//upload/6354940076184839371925009.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"考务会通知2.jpg\" style=\"FLOAT: none\" src=\"http://www.jilinjobs.cn:80//upload/6354940076290545418285684.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"考务会通知3.jpg\" style=\"FLOAT: none\" src=\"http://www.jilinjobs.cn:80//upload/6354940076372950132103316.jpg\"></p><p></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "cabcd3b575741c1ca59dd9fe4320ccf052ef2730ccff991c8a51433ee807c197",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "关于做好吉林省2014年下半年全国计算机应用技术证书考试考务工作的通知",
+    "listPublishDate": "2014-10-20",
+    "sourceOrder": 297,
+    "detailPublishDate": "2014-10-20"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122140",
+    "contentId": "28737783122140",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122140"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省召开中国大学生移动互联创客大赛（吉林赛区）工作部署会",
+    "source": "",
+    "publishDate": "2015-10-16",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省召开中国大学生移动互联创客大赛（吉林赛区）工作部署会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2015-10-16 14:58:10</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><br></p><p style=\"text-indent: 40px;\"><span style=\"font-family: 宋体; font-size: 20px;\">10</span><span style=\"font-family: 宋体; font-size: 20px;\">月16日，省高校毕业生就业指导中心召开中国大学生移动互联创客大赛（吉林赛区）工作部署会。省高校毕业生就业指导中心主任郑志宏</span><span style=\"font-family: 宋体; font-size: 20px;\">、教育部高校毕业生就业协会创业导师项目组副组长、启明星大学生创业分会秘书长赵紫晨、</span><span style=\"font-family: 宋体; font-size: 20px;\">辽宁省大学生就业局副局长王宪明</span><span style=\"font-family: 宋体; font-size: 20px;\">、全国大学生移动互联网创业大赛组委会培训部负责人梁晓春</span><span style=\"font-family: 宋体; font-size: 20px;\">及全省60所高校就业、创业部门负责人参加会议。<br>&nbsp; &nbsp; 会议对</span><span style=\"font-family: 宋体; font-size: 20px;\">创业实践教育与高校创业生态圈建设做了主题报告，对移动互联创客大赛赛事流程及赛制介绍，企业家代表对企业家助力创业梦做了分享。</span></p><p style=\"text-indent: 32px;\"><span style=\"font-family: 宋体; font-size: 20px;\">&nbsp;最后，省高校毕业生就业指导中心郑志宏主任对大赛做了工作部署。</span></p><p style=\"text-indent: 32px;\"><span style=\"font-family: 宋体; font-size: 20px;\"></span></p><p style=\"text-align: center;\"><br></p><p style=\"text-indent: 32px;\"><span style=\"font-family: 宋体; font-size: 20px;\"></span><br></p><p style=\"text-align: center;\"><img title=\"2郑主任.jpg\" src=\"migration-resource://e04c78f887916ec58c3e96596cceb015c16e314b3a052eb0c346dfef9eb78cd8\"></p><p><br></p><p style=\"text-align: center;\"><img title=\"1.JPG\" src=\"http://www.jilinjobs.cn//Common/GetFileByServer.aspx?FileName=6358060436633637507430907.JPG\"></p><p style=\"text-align: center;\"><strong>会议现场</strong><br></p><p><strong><br></strong></p><p><strong><br></strong></p><p><strong><br></strong></p><p><strong><br></strong></p><p><strong><br></strong></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358060438728950004032433.jpg",
+      "originalReference": "/chistory/cms/imgs/6358060438728950004032433.jpg",
+      "token": "migration-resource://e04c78f887916ec58c3e96596cceb015c16e314b3a052eb0c346dfef9eb78cd8",
+      "snapshotPath": "assets/e04c78f887916ec58c3e96596cceb015c16e314b3a052eb0c346dfef9eb78cd8.jpg",
+      "sha256": "e04c78f887916ec58c3e96596cceb015c16e314b3a052eb0c346dfef9eb78cd8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 61268
+    }
+  ],
+  "sourceFingerprint": "40bf45fbb5275cb71ad033f8002b510aeae74047c5e58763b671a9ae4c066eae",
+  "evidence": {
+    "listPage": 157,
+    "listTitle": "我省召开中国大学生移动互联创客大赛（吉林赛区）工作部署会",
+    "listPublishDate": "2015-10-16",
+    "sourceOrder": 1566,
+    "detailPublishDate": "2015-10-16"
+  }
+}

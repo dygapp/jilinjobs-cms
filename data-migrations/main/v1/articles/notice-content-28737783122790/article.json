@@ -1,0 +1,131 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122790",
+    "contentId": "28737783122790",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122790"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2016年全国高校毕业生能源电力行业大型招聘会的通知",
+    "source": "",
+    "publishDate": "2016-10-19",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办2016年全国高校毕业生能源电力行业大型招聘会的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2016-10-19 13:02:19</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img title=\"1.jpg\" src=\"migration-resource://81f6dab166fdabcac09f69f7568ed6a8b478a73465f356d8d18e8d0c585fc797\"></p><p style=\"text-align: center\"><img title=\"2.jpg\" src=\"migration-resource://a79ef6529960733d9bffbd42cae776f3435a4c79f9803927b4ca0eccfebdc921\"></p><p style=\"text-align: center\"><img title=\"3.jpg\" src=\"migration-resource://1c6c8fdaa028cf285e6146ff1832d7d5ce076abc50e2c3ef974a78b0393645cf\"></p><p style=\"text-align: center\"><img title=\"4.jpg\" src=\"migration-resource://b4c550bd74f344365168ebc884a8307e1c96ac8a2393f91170c3e11618939c85\"></p><p style=\"text-align: center\"><img title=\"5.jpg\" src=\"migration-resource://7864acb0189ccd1d546db64d2371b2dfc4345a5ebffc14eda0de55f40f5f2289\"></p><p style=\"text-align: center\"><img title=\"6.jpg\" src=\"migration-resource://d76be3b85c7186af7519d9d9a0a2a5efab6c28b6895816cb10ab5413827444ce\"></p><p style=\"text-align: center\"><img title=\"7.jpg\" src=\"migration-resource://0e4d899b2ddc71ebc468f7d971d8e10c3f678daf8a75d5cae7286c741aa98eae\"></p><p style=\"text-align: center\"><img title=\"8.jpg\" src=\"migration-resource://272c08eaad221bf0d258aa46a0d69f61f189224cc6997b367ba212b694c41eff\"></p><p style=\"text-align: center\"><img title=\"9.jpg\" src=\"migration-resource://b602b4476ff8bcbcbab08ff5fe72f41d9b51e3cf547afcbed8af555358661a29\"></p><p style=\"text-align: center\"><img title=\"10.jpg\" src=\"migration-resource://9bc2d889ec80c29d70c61960bbe982e1e51471aa00cea80a3efdbf2ec381900c\"></p><p><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361247905032812508013616.jpg",
+      "originalReference": "/chistory/cms/imgs/6361247905032812508013616.jpg",
+      "token": "migration-resource://81f6dab166fdabcac09f69f7568ed6a8b478a73465f356d8d18e8d0c585fc797",
+      "snapshotPath": "assets/81f6dab166fdabcac09f69f7568ed6a8b478a73465f356d8d18e8d0c585fc797.jpg",
+      "sha256": "81f6dab166fdabcac09f69f7568ed6a8b478a73465f356d8d18e8d0c585fc797",
+      "contentType": "image/jpeg",
+      "sizeBytes": 80272
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361247905253125007140320.jpg",
+      "originalReference": "/chistory/cms/imgs/6361247905253125007140320.jpg",
+      "token": "migration-resource://a79ef6529960733d9bffbd42cae776f3435a4c79f9803927b4ca0eccfebdc921",
+      "snapshotPath": "assets/a79ef6529960733d9bffbd42cae776f3435a4c79f9803927b4ca0eccfebdc921.jpg",
+      "sha256": "a79ef6529960733d9bffbd42cae776f3435a4c79f9803927b4ca0eccfebdc921",
+      "contentType": "image/jpeg",
+      "sizeBytes": 83911
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361247905406250005638724.jpg",
+      "originalReference": "/chistory/cms/imgs/6361247905406250005638724.jpg",
+      "token": "migration-resource://1c6c8fdaa028cf285e6146ff1832d7d5ce076abc50e2c3ef974a78b0393645cf",
+      "snapshotPath": "assets/1c6c8fdaa028cf285e6146ff1832d7d5ce076abc50e2c3ef974a78b0393645cf.jpg",
+      "sha256": "1c6c8fdaa028cf285e6146ff1832d7d5ce076abc50e2c3ef974a78b0393645cf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 62773
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361247905559375008838956.jpg",
+      "originalReference": "/chistory/cms/imgs/6361247905559375008838956.jpg",
+      "token": "migration-resource://b4c550bd74f344365168ebc884a8307e1c96ac8a2393f91170c3e11618939c85",
+      "snapshotPath": "assets/b4c550bd74f344365168ebc884a8307e1c96ac8a2393f91170c3e11618939c85.jpg",
+      "sha256": "b4c550bd74f344365168ebc884a8307e1c96ac8a2393f91170c3e11618939c85",
+      "contentType": "image/jpeg",
+      "sizeBytes": 74343
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361247905715625009094023.jpg",
+      "originalReference": "/chistory/cms/imgs/6361247905715625009094023.jpg",
+      "token": "migration-resource://7864acb0189ccd1d546db64d2371b2dfc4345a5ebffc14eda0de55f40f5f2289",
+      "snapshotPath": "assets/7864acb0189ccd1d546db64d2371b2dfc4345a5ebffc14eda0de55f40f5f2289.jpg",
+      "sha256": "7864acb0189ccd1d546db64d2371b2dfc4345a5ebffc14eda0de55f40f5f2289",
+      "contentType": "image/jpeg",
+      "sizeBytes": 74838
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361247905865625005835765.jpg",
+      "originalReference": "/chistory/cms/imgs/6361247905865625005835765.jpg",
+      "token": "migration-resource://d76be3b85c7186af7519d9d9a0a2a5efab6c28b6895816cb10ab5413827444ce",
+      "snapshotPath": "assets/d76be3b85c7186af7519d9d9a0a2a5efab6c28b6895816cb10ab5413827444ce.jpg",
+      "sha256": "d76be3b85c7186af7519d9d9a0a2a5efab6c28b6895816cb10ab5413827444ce",
+      "contentType": "image/jpeg",
+      "sizeBytes": 66738
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361247906037500006277801.jpg",
+      "originalReference": "/chistory/cms/imgs/6361247906037500006277801.jpg",
+      "token": "migration-resource://0e4d899b2ddc71ebc468f7d971d8e10c3f678daf8a75d5cae7286c741aa98eae",
+      "snapshotPath": "assets/0e4d899b2ddc71ebc468f7d971d8e10c3f678daf8a75d5cae7286c741aa98eae.jpg",
+      "sha256": "0e4d899b2ddc71ebc468f7d971d8e10c3f678daf8a75d5cae7286c741aa98eae",
+      "contentType": "image/jpeg",
+      "sizeBytes": 86055
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361247906181250003804389.jpg",
+      "originalReference": "/chistory/cms/imgs/6361247906181250003804389.jpg",
+      "token": "migration-resource://272c08eaad221bf0d258aa46a0d69f61f189224cc6997b367ba212b694c41eff",
+      "snapshotPath": "assets/272c08eaad221bf0d258aa46a0d69f61f189224cc6997b367ba212b694c41eff.jpg",
+      "sha256": "272c08eaad221bf0d258aa46a0d69f61f189224cc6997b367ba212b694c41eff",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82565
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361247906315625005060989.jpg",
+      "originalReference": "/chistory/cms/imgs/6361247906315625005060989.jpg",
+      "token": "migration-resource://b602b4476ff8bcbcbab08ff5fe72f41d9b51e3cf547afcbed8af555358661a29",
+      "snapshotPath": "assets/b602b4476ff8bcbcbab08ff5fe72f41d9b51e3cf547afcbed8af555358661a29.jpg",
+      "sha256": "b602b4476ff8bcbcbab08ff5fe72f41d9b51e3cf547afcbed8af555358661a29",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67815
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361247906451562504845007.jpg",
+      "originalReference": "/chistory/cms/imgs/6361247906451562504845007.jpg",
+      "token": "migration-resource://9bc2d889ec80c29d70c61960bbe982e1e51471aa00cea80a3efdbf2ec381900c",
+      "snapshotPath": "assets/9bc2d889ec80c29d70c61960bbe982e1e51471aa00cea80a3efdbf2ec381900c.jpg",
+      "sha256": "9bc2d889ec80c29d70c61960bbe982e1e51471aa00cea80a3efdbf2ec381900c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 63870
+    }
+  ],
+  "sourceFingerprint": "36450035851982d2a17707b5fba7d1161a26651d2093933f081795874d9d2a02",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "关于举办2016年全国高校毕业生能源电力行业大型招聘会的通知",
+    "listPublishDate": "2016-10-19",
+    "sourceOrder": 238,
+    "detailPublishDate": "2016-10-19"
+  }
+}

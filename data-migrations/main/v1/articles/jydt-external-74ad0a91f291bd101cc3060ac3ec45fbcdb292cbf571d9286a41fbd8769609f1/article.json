@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:74ad0a91f291bd101cc3060ac3ec45fbcdb292cbf571d9286a41fbd8769609f1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kzHf55NOVQAXy-T7BYh84w",
+    "url": "https://mp.weixin.qq.com/s/kzHf55NOVQAXy-T7BYh84w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "产教携手拓岗赋能 校企同心共育新人 —— 长白山职业技术学院赴长白山希尔顿逸林温泉酒店开展访企拓岗暨校企签约活动",
+    "source": "",
+    "publishDate": "2026-07-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kzHf55NOVQAXy-T7BYh84w"
+  },
+  "resources": [],
+  "sourceFingerprint": "9e72dbffc7cd150664d93addf4c83de0b5b2217e60f7ff95793390092fb5b30b",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "产教携手拓岗赋能 校企同心共育新人 —— 长白山职业技术学院赴长白山希尔顿逸林温泉酒店开展访企拓岗暨校企签约活动",
+    "listPublishDate": "2026-07-31",
+    "sourceOrder": 35
+  }
+}

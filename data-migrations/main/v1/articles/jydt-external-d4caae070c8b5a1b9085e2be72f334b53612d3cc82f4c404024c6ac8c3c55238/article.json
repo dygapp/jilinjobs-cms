@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d4caae070c8b5a1b9085e2be72f334b53612d3cc82f4c404024c6ac8c3c55238",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/app/news/shareNewsDetail",
+    "url": "https://www.cailianxinwen.com/app/news/shareNewsDetail?newsid=478786"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院寒假期间多措并举促进毕业生就业",
+    "source": "",
+    "publishDate": "2025-02-10",
+    "bodyHtml": "",
+    "externalUrl": "https://www.cailianxinwen.com/app/news/shareNewsDetail?newsid=478786"
+  },
+  "resources": [],
+  "sourceFingerprint": "6499356cd6c8ad00f4ea8e0b1abd7a3a464d5953a205aa144c806d7a2d31c8b1",
+  "evidence": {
+    "listPage": 100,
+    "listTitle": "吉林工商学院寒假期间多措并举促进毕业生就业",
+    "listPublishDate": "2025-02-10",
+    "sourceOrder": 991
+  }
+}

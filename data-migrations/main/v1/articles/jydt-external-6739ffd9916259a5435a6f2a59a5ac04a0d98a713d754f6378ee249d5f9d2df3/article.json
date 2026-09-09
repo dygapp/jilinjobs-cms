@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6739ffd9916259a5435a6f2a59a5ac04a0d98a713d754f6378ee249d5f9d2df3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Gk7JjGT9nhxJS5SNXTz9TQ",
+    "url": "https://mp.weixin.qq.com/s/Gk7JjGT9nhxJS5SNXTz9TQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学副校长王庆洲带队赴长春开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Gk7JjGT9nhxJS5SNXTz9TQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "2e7d20335c9da7f85993f41ae0efbcdda3087b2d82b7979db9faf444afacf01d",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "东北电力大学副校长王庆洲带队赴长春开展访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-25",
+    "sourceOrder": 371
+  }
+}

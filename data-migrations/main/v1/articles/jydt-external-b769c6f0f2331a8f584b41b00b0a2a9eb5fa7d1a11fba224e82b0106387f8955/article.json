@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b769c6f0f2331a8f584b41b00b0a2a9eb5fa7d1a11fba224e82b0106387f8955",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/6ZKUxt7VJcMHo2sD0fjyPA",
+    "url": "https://mp.weixin.qq.com/s/6ZKUxt7VJcMHo2sD0fjyPA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春早期教育职业学院与吉林大学第三医院南湖院区拟签订实习医院！",
+    "source": "",
+    "publishDate": "2026-07-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/6ZKUxt7VJcMHo2sD0fjyPA"
+  },
+  "resources": [],
+  "sourceFingerprint": "3555fa7257d70b076140fa2ede34d9e832465a3fd58127d54f7fc6d1e4bbc0ff",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "长春早期教育职业学院与吉林大学第三医院南湖院区拟签订实习医院！",
+    "listPublishDate": "2026-07-03",
+    "sourceOrder": 57
+  }
+}

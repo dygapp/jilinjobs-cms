@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:dfb5c91f354992be471e3c72499dbbcc051e61cd5dc535e01e6d66dc7f311c4f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/5qHyl-4RXxWkhArOe11fmg",
+    "url": "https://mp.weixin.qq.com/s/5qHyl-4RXxWkhArOe11fmg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "冰雪育人拓宽就业赛道|长春早期教育职业学院赴长白山万达国际度假区开展校企合作交流暨基地授牌仪式",
+    "source": "",
+    "publishDate": "2026-05-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5qHyl-4RXxWkhArOe11fmg"
+  },
+  "resources": [],
+  "sourceFingerprint": "28f1e0a3800d418063eaf1ab6ae46940d078dcc35ae618f76e9a6a6d73aa3d89",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "冰雪育人拓宽就业赛道|长春早期教育职业学院赴长白山万达国际度假区开展校企合作交流暨基地授牌仪式",
+    "listPublishDate": "2026-05-27",
+    "sourceOrder": 139
+  }
+}

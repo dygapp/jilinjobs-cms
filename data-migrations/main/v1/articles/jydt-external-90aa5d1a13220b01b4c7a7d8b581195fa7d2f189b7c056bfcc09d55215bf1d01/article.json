@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:90aa5d1a13220b01b4c7a7d8b581195fa7d2f189b7c056bfcc09d55215bf1d01",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/cDghv5bc-pEmFWLiZEI-9w",
+    "url": "https://mp.weixin.qq.com/s/cDghv5bc-pEmFWLiZEI-9w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "凝心聚力促就业 松原职业技术学院召开2026届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2026-01-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/cDghv5bc-pEmFWLiZEI-9w"
+  },
+  "resources": [],
+  "sourceFingerprint": "cc4665803a9b930e3ec1b412c09be21191d213b33a3669824ab6587d71c85d14",
+  "evidence": {
+    "listPage": 51,
+    "listTitle": "凝心聚力促就业 松原职业技术学院召开2026届毕业生就业工作推进会",
+    "listPublishDate": "2026-01-04",
+    "sourceOrder": 510
+  }
+}

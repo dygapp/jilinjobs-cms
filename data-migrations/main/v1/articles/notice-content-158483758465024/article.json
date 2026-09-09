@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:158483758465024",
+    "contentId": "158483758465024",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=158483758465024"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办“创业奋斗 就在吉林”2023届全省普通高校毕业生网络招聘会的通知",
+    "source": "市场部",
+    "publishDate": "2023-05-25",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"848\" src=\"migration-resource://3f4e052e5b0c7f8a61ed848ed3c925dc4654241b7dd012137cac20e5a2ec1681\" width=\"600\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"848\" src=\"migration-resource://cb80b447ba640d2597d36f7ea1a1bfc96564c7293b352faf688bb46679a55a84\" width=\"600\"></p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-25/08077f09-e3a2-4b47-a6d3-e54ebf4458c3.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-25/08077f09-e3a2-4b47-a6d3-e54ebf4458c3.jpg",
+      "token": "migration-resource://3f4e052e5b0c7f8a61ed848ed3c925dc4654241b7dd012137cac20e5a2ec1681",
+      "snapshotPath": "assets/3f4e052e5b0c7f8a61ed848ed3c925dc4654241b7dd012137cac20e5a2ec1681.jpg",
+      "sha256": "3f4e052e5b0c7f8a61ed848ed3c925dc4654241b7dd012137cac20e5a2ec1681",
+      "contentType": "image/jpeg",
+      "sizeBytes": 1084451
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-25/b375aec9-e6e9-4779-af95-738226c6dc78.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-25/b375aec9-e6e9-4779-af95-738226c6dc78.jpg",
+      "token": "migration-resource://cb80b447ba640d2597d36f7ea1a1bfc96564c7293b352faf688bb46679a55a84",
+      "snapshotPath": "assets/cb80b447ba640d2597d36f7ea1a1bfc96564c7293b352faf688bb46679a55a84.jpg",
+      "sha256": "cb80b447ba640d2597d36f7ea1a1bfc96564c7293b352faf688bb46679a55a84",
+      "contentType": "image/jpeg",
+      "sizeBytes": 864757
+    }
+  ],
+  "sourceFingerprint": "090dd91dbb7f49b643a238d720c0bfbe87ca0bbcf56f02e50c70566e55d994a3",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "关于举办“创业奋斗 就在吉林”2023届全省普通高校毕业生网络招聘会的通知",
+    "listPublishDate": "2023-05-25",
+    "sourceOrder": 106,
+    "detailPublishDate": "2023-05-25"
+  }
+}

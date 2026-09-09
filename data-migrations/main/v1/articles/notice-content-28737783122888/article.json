@@ -1,0 +1,121 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122888",
+    "contentId": "28737783122888",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122888"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《关于举办2013年高校职业发展教育和生涯辅导服务国际学术研讨会的通知》的通知",
+    "source": "",
+    "publishDate": "2013-09-25",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《关于举办2013年高校职业发展教育和生涯辅导服务国际学术研讨会的通知》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2013-9-25 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><img src=\"migration-resource://8d441dfb8224dfa8c175104b20edddd8c37a55e513c40e7148572d13db0ed3db\" border=\"0\"><img src=\"migration-resource://f6511bd6b0dbddfb36d242bbb1e5b636af581ae032179deb0359a64b50ac4e3c\" border=\"0\"><img src=\"migration-resource://e81e6edb08d4bc7d11723d7914968724878de0f357ba75f86f463d7943982bee\" border=\"0\"><img src=\"migration-resource://bf97f7e4755e0ed57af9cea0afb91f4fe63b0c6530450bb92b23295a887604c8\" border=\"0\"><img src=\"migration-resource://13abe93ea9652ad8d652569882744c34b6dda2bbfc3b99e886cc35d86f58b589\" border=\"0\"><img src=\"migration-resource://4d79ff0986772b1806a1a8d4478da4d5a0369f3e217057bb1c416ec4c485d2cc\" border=\"0\"><img src=\"migration-resource://19bca5491bea385a8890efe443c9322d33ddf0aa601b1cbab72be89661d559a4\" border=\"0\"><img src=\"migration-resource://a10c21163894992e7b876731a9dddeeae04125d71ead5e865adc3067f56ed319\" border=\"0\"><img src=\"migration-resource://61a487b32a6154b79e936e0190264d514babf210c9277ef432190678ca60a0d5\" border=\"0\"></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130925044208117.jpg",
+      "originalReference": "/chistory/cms/imgs/20130925044208117.jpg",
+      "token": "migration-resource://8d441dfb8224dfa8c175104b20edddd8c37a55e513c40e7148572d13db0ed3db",
+      "snapshotPath": "assets/8d441dfb8224dfa8c175104b20edddd8c37a55e513c40e7148572d13db0ed3db.jpg",
+      "sha256": "8d441dfb8224dfa8c175104b20edddd8c37a55e513c40e7148572d13db0ed3db",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81074
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130925044212185.jpg",
+      "originalReference": "/chistory/cms/imgs/20130925044212185.jpg",
+      "token": "migration-resource://f6511bd6b0dbddfb36d242bbb1e5b636af581ae032179deb0359a64b50ac4e3c",
+      "snapshotPath": "assets/f6511bd6b0dbddfb36d242bbb1e5b636af581ae032179deb0359a64b50ac4e3c.jpg",
+      "sha256": "f6511bd6b0dbddfb36d242bbb1e5b636af581ae032179deb0359a64b50ac4e3c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77691
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130925044217730.jpg",
+      "originalReference": "/chistory/cms/imgs/20130925044217730.jpg",
+      "token": "migration-resource://e81e6edb08d4bc7d11723d7914968724878de0f357ba75f86f463d7943982bee",
+      "snapshotPath": "assets/e81e6edb08d4bc7d11723d7914968724878de0f357ba75f86f463d7943982bee.jpg",
+      "sha256": "e81e6edb08d4bc7d11723d7914968724878de0f357ba75f86f463d7943982bee",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95293
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130925044221449.jpg",
+      "originalReference": "/chistory/cms/imgs/20130925044221449.jpg",
+      "token": "migration-resource://bf97f7e4755e0ed57af9cea0afb91f4fe63b0c6530450bb92b23295a887604c8",
+      "snapshotPath": "assets/bf97f7e4755e0ed57af9cea0afb91f4fe63b0c6530450bb92b23295a887604c8.jpg",
+      "sha256": "bf97f7e4755e0ed57af9cea0afb91f4fe63b0c6530450bb92b23295a887604c8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93962
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130925044224700.jpg",
+      "originalReference": "/chistory/cms/imgs/20130925044224700.jpg",
+      "token": "migration-resource://13abe93ea9652ad8d652569882744c34b6dda2bbfc3b99e886cc35d86f58b589",
+      "snapshotPath": "assets/13abe93ea9652ad8d652569882744c34b6dda2bbfc3b99e886cc35d86f58b589.jpg",
+      "sha256": "13abe93ea9652ad8d652569882744c34b6dda2bbfc3b99e886cc35d86f58b589",
+      "contentType": "image/jpeg",
+      "sizeBytes": 98187
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130925044228424.jpg",
+      "originalReference": "/chistory/cms/imgs/20130925044228424.jpg",
+      "token": "migration-resource://4d79ff0986772b1806a1a8d4478da4d5a0369f3e217057bb1c416ec4c485d2cc",
+      "snapshotPath": "assets/4d79ff0986772b1806a1a8d4478da4d5a0369f3e217057bb1c416ec4c485d2cc.jpg",
+      "sha256": "4d79ff0986772b1806a1a8d4478da4d5a0369f3e217057bb1c416ec4c485d2cc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92847
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130925044232609.jpg",
+      "originalReference": "/chistory/cms/imgs/20130925044232609.jpg",
+      "token": "migration-resource://19bca5491bea385a8890efe443c9322d33ddf0aa601b1cbab72be89661d559a4",
+      "snapshotPath": "assets/19bca5491bea385a8890efe443c9322d33ddf0aa601b1cbab72be89661d559a4.jpg",
+      "sha256": "19bca5491bea385a8890efe443c9322d33ddf0aa601b1cbab72be89661d559a4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 87824
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130925044236995.jpg",
+      "originalReference": "/chistory/cms/imgs/20130925044236995.jpg",
+      "token": "migration-resource://a10c21163894992e7b876731a9dddeeae04125d71ead5e865adc3067f56ed319",
+      "snapshotPath": "assets/a10c21163894992e7b876731a9dddeeae04125d71ead5e865adc3067f56ed319.jpg",
+      "sha256": "a10c21163894992e7b876731a9dddeeae04125d71ead5e865adc3067f56ed319",
+      "contentType": "image/jpeg",
+      "sizeBytes": 74728
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130925044240350.jpg",
+      "originalReference": "/chistory/cms/imgs/20130925044240350.jpg",
+      "token": "migration-resource://61a487b32a6154b79e936e0190264d514babf210c9277ef432190678ca60a0d5",
+      "snapshotPath": "assets/61a487b32a6154b79e936e0190264d514babf210c9277ef432190678ca60a0d5.jpg",
+      "sha256": "61a487b32a6154b79e936e0190264d514babf210c9277ef432190678ca60a0d5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 48771
+    }
+  ],
+  "sourceFingerprint": "7481946b3b9bd81017a5e6b4ebb34657952a0a4af394b4dd6b22fd7e4ec1e583",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "转发《关于举办2013年高校职业发展教育和生涯辅导服务国际学术研讨会的通知》的通知",
+    "listPublishDate": "2013-09-25",
+    "sourceOrder": 346,
+    "detailPublishDate": "2013-09-25"
+  }
+}

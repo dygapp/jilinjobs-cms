@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a9c4b3fd5017e78ca5f09b8b0d2d343ee2e9a0e3beaf07fda3c0fdcec11da451",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/2JUMlXmD2m_ZZZo9CwkRsg",
+    "url": "https://mp.weixin.qq.com/s/2JUMlXmD2m_ZZZo9CwkRsg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学党委副书记张玉红带队开展“优企引才”定向访企拓岗促就业专项行动 招生就业处",
+    "source": "",
+    "publishDate": "2026-03-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/2JUMlXmD2m_ZZZo9CwkRsg"
+  },
+  "resources": [],
+  "sourceFingerprint": "6ae890456cf1d1ca3d1e618ab2e2699ea8d34f1b70f35242a0c81598729e3e07",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "延边大学党委副书记张玉红带队开展“优企引才”定向访企拓岗促就业专项行动 招生就业处",
+    "listPublishDate": "2026-03-18",
+    "sourceOrder": 405
+  }
+}

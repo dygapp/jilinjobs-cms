@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:74007d7b41d946f38089bc5968d17c0a9b6e2412bff458c36f4cc4441b86c4b4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/B-CPli4W7Vo6ZYSk3eKqfA",
+    "url": "https://mp.weixin.qq.com/s/B-CPli4W7Vo6ZYSk3eKqfA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学开展“服务吉林高质量发展”——2026届毕业生秋季校园招聘会",
+    "source": "",
+    "publishDate": "2025-09-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/B-CPli4W7Vo6ZYSk3eKqfA"
+  },
+  "resources": [],
+  "sourceFingerprint": "c6f9dffdc1a54fb4dc7a3a1de276257ddea2c7eb823bad4a4d8af8ce3b351016",
+  "evidence": {
+    "listPage": 71,
+    "listTitle": "北华大学开展“服务吉林高质量发展”——2026届毕业生秋季校园招聘会",
+    "listPublishDate": "2025-09-22",
+    "sourceOrder": 703
+  }
+}

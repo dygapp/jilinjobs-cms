@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:95c9e30fbf767125ac1e3985a1a9d2bd7e129a3d6ce0a9e66a91c4c369f7d0eb",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/XMlit3byLN-NQsSLgEJePA",
+    "url": "https://mp.weixin.qq.com/s/XMlit3byLN-NQsSLgEJePA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "职引未来—2026年全国城市联合招聘（吉林站）暨“聚力扩容提质 服务高质量发展”医药类毕业生春季大型就业洽谈会",
+    "source": "",
+    "publishDate": "2026-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/XMlit3byLN-NQsSLgEJePA"
+  },
+  "resources": [],
+  "sourceFingerprint": "40204419cb9f6d56ffce6412d6e44f946413c01cade48b73362622039bdaf242",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "职引未来—2026年全国城市联合招聘（吉林站）暨“聚力扩容提质 服务高质量发展”医药类毕业生春季大型就业洽谈会",
+    "listPublishDate": "2026-04-21",
+    "sourceOrder": 39
+  }
+}

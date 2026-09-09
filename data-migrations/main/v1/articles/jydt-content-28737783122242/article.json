@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122242",
+    "contentId": "28737783122242",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122242"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "沈阳打包推出高校毕业生就业创业补贴新政策",
+    "source": "",
+    "publishDate": "2010-02-24",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">沈阳打包推出高校毕业生就业创业补贴新政策</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2010-2-24 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 辽宁省沈阳市日前下发了《关于促进沈阳市高校毕业生就业创业政策的补充通知》，打包推出高校毕业生就业创业优惠新政策。 <br>&nbsp;&nbsp; <br>　　根据规定，今年毕业的沈阳籍大学生自主创业的，或已毕业不到两年灵活就业的，如果以自由职业者身份参加了养老和医疗保险，沈阳市财政将对养老和医保的统筹部分给予补贴，养老保险按沈阳市职工月平均工资７．２％补贴；医保按职工月平均工资的５．６％补贴。毕业生拿相关证件到社区即可办理申请，补贴的期限至明年６月３０日。 </font></p> <p><font color=\"#444444\" size=\"2\">　　为帮助高校毕业生顺利就业，《通知》推出多项优惠政策。其中，沈阳高校毕业生见习基地范围将在原有以企业为主的基础上，扩大到非财政拨款的事业单位和社会组织，引导两年内未就业普通高校毕业生到基地见习，增强实践经验。 </font></p> <p><font color=\"#444444\" size=\"2\">　　见习期如果６个月不够可延长至１２个月，见习期间的补贴不低于当地最低工资标准，其中６０％由市财政出资，为见习单位减轻了不少压力。另外，如果见习单位聘用了毕业生并缴纳了保险的，企业缴费的５０％也由政府承担，这一政策一直施行至今年年底。 </font></p> <p><font color=\"#444444\" size=\"2\">　　新政策规定，企业招收应届毕业生，签约１年并缴纳了社会保险的，在今年年内政府将给予１／３的保险补贴。</font></p> <p><font color=\"#444444\" size=\"2\"></font>&nbsp;</p> <p class=\"laiyuan\" align=\"right\"><font color=\"#444444\" size=\"2\">----来源：新华网·新职业</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "1a47023cba8affd931ab7c86e4d18980287bbd80efdef982175d43edbdd516d0",
+  "evidence": {
+    "listPage": 168,
+    "listTitle": "沈阳打包推出高校毕业生就业创业补贴新政策",
+    "listPublishDate": "2010-02-24",
+    "sourceOrder": 1671,
+    "detailPublishDate": "2010-02-24"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9e95f80855b35f87f6ce5bc5ebd7752cfe12a8886d0d31d587c856103af75934",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/zsjyw/info/1099/1581.htm",
+    "url": "https://www.ccut.edu.cn/zsjyw/info/1099/1581.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学组织吉林省高校服务新型工业化重点产业就业联盟赴广东省开展政校企供需对接",
+    "source": "",
+    "publishDate": "2025-12-02",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccut.edu.cn/zsjyw/info/1099/1581.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "59e35b69323d711af4bd45ec977abc7a2f1288a1cedf1f0a95e177a6a5c6cf29",
+  "evidence": {
+    "listPage": 56,
+    "listTitle": "长春工业大学组织吉林省高校服务新型工业化重点产业就业联盟赴广东省开展政校企供需对接",
+    "listPublishDate": "2025-12-02",
+    "sourceOrder": 560
+  }
+}

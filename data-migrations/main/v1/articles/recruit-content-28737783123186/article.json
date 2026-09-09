@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123186",
+    "contentId": "28737783123186",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123186"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春硕博、本科参会企业名录",
+    "source": "",
+    "publishDate": "2011-04-13",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">长春硕博、本科参会企业名录</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-4-13 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">（长春硕博参会企业名录）<br>1、长春迪瑞<br>2、宁夏医科大学<br>3、铁岭天光<br>4、吉林财经大学<br>5、建湖医院<br>6、齐医一附属医院<br>7、齐医二附属医院<br>8、齐医三附属医院<br>9、襄樊医院<br>10、哈尔滨电工仪表研究所<br>11、吉林华侨外国语学院<br>12、海口经济学校<br>13、龙江生物科技<br>14、长春三鼎公司<br>15、华安机械<br>16、齐齐哈尔医学院<br>17、重庆理工大学<br>18、东华理工大学<br>19、江苏科技大学<br>20、扬子江药业<br>21、富田雷沃重工<br>22、海南省第二人民医院<br>23、江西景德镇陶瓷学院<br>24、吉林动画<br>25、四川重望咨询有限公司<br>26、新大洋机电<br>27、广州博桥教育咨询<br>28、辽宁葆盛投资（2展位）<br>29、宁津县人民医院<br>30、中船重工集团<br>31、北华航天工业学院<br>32、哈尔滨鑫达高分子<br>33、宝鸡文理学院<br>34、新疆天文台<br>35、辽宁医学医疗学院<br>36、吉林建工装饰学院<br>37、北京百迈克</font></p> <p><br><font color=\"#444444\" size=\"2\">（长春本科参会企业名录）<br>1、营口大合<br>2、八达农药<br>3、齐齐哈尔宏顺重工<br>4、北京歧黄<br>5、鞍山新世纪<br>6、信众合科技<br>7、宜昌人福药业<br>8、晨讯科技<br>9、山东侨昌科技<br>10、新大洋机电<br>11、沈阳天泽彩印集团<br>12、沈阳康福食品公司<br>13、耘垦牧业集团<br>14、统一（沈阳）食品公司</font></p> <p><font color=\"#444444\" size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "c9a87e86b60b95a4412c589bed4d92ea23d4e22ad8a035969dbe318b0305f8e6",
+  "evidence": {
+    "listPage": 46,
+    "listTitle": "长春硕博、本科参会企业名录",
+    "listPublishDate": "2011-04-13",
+    "sourceOrder": 460,
+    "detailPublishDate": "2011-04-13"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:62d9ed17ce634597f7e6e77a286697bf56a792123113a4a8e7de4fe574767ac9",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/7wKOR6Zolmwkl0rlrt6Llg",
+    "url": "https://mp.weixin.qq.com/s/7wKOR6Zolmwkl0rlrt6Llg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省财经类2025届毕业生春季供需洽谈会邀请函",
+    "source": "",
+    "publishDate": "2025-02-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/7wKOR6Zolmwkl0rlrt6Llg"
+  },
+  "resources": [],
+  "sourceFingerprint": "bd9e55dbbc82fe9976454ca912e6b797eb667dbe5c8dfe3e6110a87867897bc0",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "吉林省财经类2025届毕业生春季供需洽谈会邀请函",
+    "listPublishDate": "2025-02-20",
+    "sourceOrder": 233
+  }
+}

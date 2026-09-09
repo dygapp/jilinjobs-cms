@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122126",
+    "contentId": "28737783122126",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122126"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "中国大学生移动互联创客大赛（吉林赛区）宣讲工作结束",
+    "source": "",
+    "publishDate": "2015-12-10",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">中国大学生移动互联创客大赛（吉林赛区）宣讲工作结束</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2015-12-10 9:49:47</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><br></p><p><span style=\"font-size: 20px;\"></span></p><p><span style=\"font-size: 20px;\">&nbsp; &nbsp; 12月9日，中国大学生移动互联创客大赛（吉林赛区）(以下简称大赛）宣讲工作结束。11月11日、12月8日、12月9日，大赛组委会分别在长春大学旅游学院、长春信息技术职业学院、长春职业技术学院、长春东方职业学院、吉林动画学院，共计举办了5场宣讲会，15所高校，36名指导教师，1500余名学生参会。</span></p><p><span style=\"font-size: 20px;\">&nbsp; &nbsp; 教育部高校毕业生就业协会创业导师项目组副组长、启明星大学生创业分会秘书长赵紫晨老师以大学生创业</span></p><p><span style=\"font-size: 20px;\">新生态为主题，结合自身经历，生动感人的进行了精彩的分享，大赛执行委员李怡璇详细介绍了大赛赛制及操作</span></p><p><span style=\"font-size: 20px;\">指南，学生反响热烈，收效明显。按照大赛方案的工作安排，下一步将进入大赛项目推广阶段。</span></p><p><span style=\"font-size: 20px;\"> &nbsp;</span><br></p><p><br></p><p style=\"text-align: center\"><img src=\"migration-resource://817a21454cf4c281b3f8ca9c9100f28d0eaa0cf2e7c734c126700c4caf2ad65b\" style=\"\" title=\"1.jpg\"></p><p><br></p><p style=\"text-align: center\"><img src=\"migration-resource://b044753e1c088c9436195eb9a55c4427f6b73665f6fc1e70d3e2fa2a2c38b79c\" style=\"\" title=\"2.jpg\"></p><p><br></p><p style=\"text-align: center\"><img src=\"migration-resource://d6c302524b4e8d7827c1f44ccf84213d70233c44daf4940ea3cc43fe50d613ab\" style=\"\" title=\"3.jpg\"></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p style=\"text-align: center;\"><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358533790981250008902461.jpg",
+      "originalReference": "/chistory/cms/imgs/6358533790981250008902461.jpg",
+      "token": "migration-resource://817a21454cf4c281b3f8ca9c9100f28d0eaa0cf2e7c734c126700c4caf2ad65b",
+      "snapshotPath": "assets/817a21454cf4c281b3f8ca9c9100f28d0eaa0cf2e7c734c126700c4caf2ad65b.jpg",
+      "sha256": "817a21454cf4c281b3f8ca9c9100f28d0eaa0cf2e7c734c126700c4caf2ad65b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 228447
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358533790990625009874277.jpg",
+      "originalReference": "/chistory/cms/imgs/6358533790990625009874277.jpg",
+      "token": "migration-resource://b044753e1c088c9436195eb9a55c4427f6b73665f6fc1e70d3e2fa2a2c38b79c",
+      "snapshotPath": "assets/b044753e1c088c9436195eb9a55c4427f6b73665f6fc1e70d3e2fa2a2c38b79c.jpg",
+      "sha256": "b044753e1c088c9436195eb9a55c4427f6b73665f6fc1e70d3e2fa2a2c38b79c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 230275
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358533790998437507616847.jpg",
+      "originalReference": "/chistory/cms/imgs/6358533790998437507616847.jpg",
+      "token": "migration-resource://d6c302524b4e8d7827c1f44ccf84213d70233c44daf4940ea3cc43fe50d613ab",
+      "snapshotPath": "assets/d6c302524b4e8d7827c1f44ccf84213d70233c44daf4940ea3cc43fe50d613ab.jpg",
+      "sha256": "d6c302524b4e8d7827c1f44ccf84213d70233c44daf4940ea3cc43fe50d613ab",
+      "contentType": "image/jpeg",
+      "sizeBytes": 244440
+    }
+  ],
+  "sourceFingerprint": "8731326b24b61c33ccd4002df03e8d96ba8588fd2645f8843fbf3f6a4510ca4a",
+  "evidence": {
+    "listPage": 156,
+    "listTitle": "中国大学生移动互联创客大赛（吉林赛区）宣讲工作结束",
+    "listPublishDate": "2015-12-10",
+    "sourceOrder": 1553,
+    "detailPublishDate": "2015-12-10"
+  }
+}

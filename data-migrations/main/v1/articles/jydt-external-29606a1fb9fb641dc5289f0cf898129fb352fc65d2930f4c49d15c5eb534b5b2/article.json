@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:29606a1fb9fb641dc5289f0cf898129fb352fc65d2930f4c49d15c5eb534b5b2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/_0OP1ii8DhEJYWSvDa-Wzw",
+    "url": "https://mp.weixin.qq.com/s/_0OP1ii8DhEJYWSvDa-Wzw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业丨长春财经学院金融学院深入省内企业与税务局走访交流",
+    "source": "",
+    "publishDate": "2026-02-05",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/_0OP1ii8DhEJYWSvDa-Wzw"
+  },
+  "resources": [],
+  "sourceFingerprint": "30dbdd8af111a1d514fb613972a6503fac73c8ce4a3d841e1c98fde91814b774",
+  "evidence": {
+    "listPage": 46,
+    "listTitle": "访企拓岗促就业丨长春财经学院金融学院深入省内企业与税务局走访交流",
+    "listPublishDate": "2026-02-05",
+    "sourceOrder": 460
+  }
+}

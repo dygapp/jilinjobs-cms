@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120186",
+    "contentId": "28737783120186",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120186"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "胡锦涛会见法国前总统希拉克",
+    "source": "",
+    "publishDate": "2009-05-07",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">胡锦涛会见法国前总统希拉克</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-5-7 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font size=\"2\"><img src=\"http://paper.people.com.cn/rmrb/res/1/1921/2009-04/29/01/res01_attpic_brief.jpg\"></font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 4月28日，国家主席胡锦涛在北京钓鱼台国宾馆会见法国前总统希拉克。<br>　　新华社记者 李学仁摄<br>&nbsp;</font></p> <p><font size=\"2\">　　国家主席胡锦涛２８日下午在钓鱼台会见了法国前总统希拉克。双方进行了亲切友好的谈话。</font></p> <p><font size=\"2\">　　胡锦涛说，希拉克先生是中国人民尊敬的老朋友、好朋友，无论是在担任总统期间，还是卸任以后，一直致力于中法友好，为加深两国人民了解和友谊，促进两国关系发展作出了突出贡献。中国人民对此是不会忘记的。</font></p> <p><font size=\"2\">　　胡锦涛表示，在当前复杂多变的国际形势和国际金融危机持续蔓延的背景下，继续推进中法关系向前发展，加强两国务实合作，既是双方共同应对国际金融危机等全球性挑战的现实需要，也对推动建设持久和平、共同繁荣的和谐世界具有深远意义。希望中法两国社会各界携手努力，巩固和深化两国关系，共同开创中法全面战略伙伴关系的新局面。</font></p> <p><font size=\"2\">　　希拉克说，中国历史文化悠久，发展充满活力，面貌日新月异，在世界舞台上发挥着越来越重要的作用。中国的发展对世界来说是个积极因素。希拉克表示，中国通过自身的努力已进入世界强国之列。中国是个一贯热爱和平的国家，中国的和平发展有利于世界的稳定和进步，我们对中国的发展充满信心。</font></p> <p><font size=\"2\">　　外交部长杨洁篪、中国人民外交学会会长杨文昌等参加会见。<br>&nbsp;&nbsp; <br>&nbsp;<br>&nbsp; <br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "7d29a3a1525a6b603a79138031d84b2f768777413f8dd5ef55d4cf5bed3f0b90",
+  "evidence": {
+    "listPage": 175,
+    "listTitle": "胡锦涛会见法国前总统希拉克",
+    "listPublishDate": "2009-05-07",
+    "sourceOrder": 1749,
+    "detailPublishDate": "2009-05-07"
+  }
+}

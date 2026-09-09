@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:9ad96971bce85b4e940cbb88272c7a24fbd8f6f64919c302a49a15396b70f8e8",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/DknLgSIRjp_t-hq8Pvgxqw",
+    "url": "https://mp.weixin.qq.com/s/DknLgSIRjp_t-hq8Pvgxqw"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "厅局长访谈·吉林篇：谋新篇布新局启新程 持续推进吉林教育高质量发展",
+    "source": "",
+    "publishDate": "2025-02-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DknLgSIRjp_t-hq8Pvgxqw"
+  },
+  "resources": [],
+  "sourceFingerprint": "83218186a84944f28be67fba7e87a35de1019a85019571fe24f5f498853382b1",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "厅局长访谈·吉林篇：谋新篇布新局启新程 持续推进吉林教育高质量发展",
+    "listPublishDate": "2025-02-13",
+    "sourceOrder": 62
+  }
+}

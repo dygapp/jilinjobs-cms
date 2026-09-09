@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:b8e0f6f6ba442731c79c57faa82e2e2dd4b301670e6ff4d10bc2818af63b2884",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/UmMhgjtuXDi73DLxwyJ0cA",
+    "url": "https://mp.weixin.qq.com/s/UmMhgjtuXDi73DLxwyJ0cA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "寒假促就业暖心行动——吉林艺术学院2026届毕业生寒假专场网络招聘会（二）",
+    "source": "",
+    "publishDate": "2026-01-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/UmMhgjtuXDi73DLxwyJ0cA"
+  },
+  "resources": [],
+  "sourceFingerprint": "fd8c01da3a20cad5f9dbd098446c32420341c34444d0e2b6a7f6b923ad684340",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "寒假促就业暖心行动——吉林艺术学院2026届毕业生寒假专场网络招聘会（二）",
+    "listPublishDate": "2026-01-21",
+    "sourceOrder": 95
+  }
+}

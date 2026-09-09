@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8d4d50f0f3ba209fc29e18abf9b5682ce4cdf6f401711596c9fe49a2322c3a7a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/N2GZVtBbk-PAIHVx3pyyNg",
+    "url": "https://mp.weixin.qq.com/s/N2GZVtBbk-PAIHVx3pyyNg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教融合 共谋协同发展 —— 吉林交通职业技术学院领导赴长春市轨道交通集团有限公司调研交流",
+    "source": "",
+    "publishDate": "2026-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/N2GZVtBbk-PAIHVx3pyyNg"
+  },
+  "resources": [],
+  "sourceFingerprint": "4fbfc8f090e65db2b0b079bd191b5c989cbd2afc84154d7f50c13780dafcdc39",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "深化产教融合 共谋协同发展 —— 吉林交通职业技术学院领导赴长春市轨道交通集团有限公司调研交流",
+    "listPublishDate": "2026-03-27",
+    "sourceOrder": 354
+  }
+}

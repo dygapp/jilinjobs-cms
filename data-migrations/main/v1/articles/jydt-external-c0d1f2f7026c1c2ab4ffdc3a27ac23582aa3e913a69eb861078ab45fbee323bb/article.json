@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c0d1f2f7026c1c2ab4ffdc3a27ac23582aa3e913a69eb861078ab45fbee323bb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/2_E7qBEnS4lvoYnWU_v-6A",
+    "url": "https://mp.weixin.qq.com/s/2_E7qBEnS4lvoYnWU_v-6A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林通用航空职业技术学院召开寒假访企拓岗工作总结会",
+    "source": "",
+    "publishDate": "2026-03-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/2_E7qBEnS4lvoYnWU_v-6A"
+  },
+  "resources": [],
+  "sourceFingerprint": "1d6cb9df0ac6ec91c45cc5a90f453d71f86a804142e926651afc8624304a6018",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "吉林通用航空职业技术学院召开寒假访企拓岗工作总结会",
+    "listPublishDate": "2026-03-06",
+    "sourceOrder": 437
+  }
+}

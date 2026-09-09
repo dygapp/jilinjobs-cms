@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:16cd1bd6638686d065cd2c946abe666344d632abf22ef570ba05b333ed0303f0",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/5T8XJn7P8V44NDOUWEAlbA",
+    "url": "https://mp.weixin.qq.com/s/5T8XJn7P8V44NDOUWEAlbA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 ‘就’在吉林”吉林省高校服务“四六四”新格局暨吉林工商学院2024届毕业生春季校园招聘会邀请函",
+    "source": "",
+    "publishDate": "2024-04-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5T8XJn7P8V44NDOUWEAlbA"
+  },
+  "resources": [],
+  "sourceFingerprint": "d4aaffaec33c4b82f43fc77513f1b119dd83a96a42871e6d81258df02bcee051",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "“创业奋斗 ‘就’在吉林”吉林省高校服务“四六四”新格局暨吉林工商学院2024届毕业生春季校园招聘会邀请函",
+    "listPublishDate": "2024-04-25",
+    "sourceOrder": 290
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:891c9f6fb61702dffa1636d11e49daa7a81dc6d0b01ade5b6e0ce8f4219d8a90",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/liy0Exl-YtxqJC6KGCNWTg",
+    "url": "https://mp.weixin.qq.com/s/liy0Exl-YtxqJC6KGCNWTg?scene=25&sessionid=-1364891345"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "逐梦辽源正当时！“希望辽源 聚力引才”市长走进职业院校宣讲推介会在辽源职业技术学院隆重举行",
+    "source": "",
+    "publishDate": "2025-05-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/liy0Exl-YtxqJC6KGCNWTg?scene=25&sessionid=-1364891345"
+  },
+  "resources": [],
+  "sourceFingerprint": "b8c5093828f4c7179b74333dd0c400373e13cdee6b811223a82b921b036b0601",
+  "evidence": {
+    "listPage": 92,
+    "listTitle": "逐梦辽源正当时！“希望辽源 聚力引才”市长走进职业院校宣讲推介会在辽源职业技术学院隆重举行",
+    "listPublishDate": "2025-05-07",
+    "sourceOrder": 913
+  }
+}

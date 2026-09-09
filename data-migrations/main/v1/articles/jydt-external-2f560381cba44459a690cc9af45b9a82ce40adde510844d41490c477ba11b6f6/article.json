@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2f560381cba44459a690cc9af45b9a82ce40adde510844d41490c477ba11b6f6",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/OtRtFo07lSH4kFcNNdIDBg",
+    "url": "https://mp.weixin.qq.com/s/OtRtFo07lSH4kFcNNdIDBg?scene=25&sessionid=-1367897670"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“就”在白城 “职”引未来2025年服务吉林高质量发展高校毕业生招聘会在白城师范学院举行",
+    "source": "",
+    "publishDate": "2025-04-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/OtRtFo07lSH4kFcNNdIDBg?scene=25&sessionid=-1367897670"
+  },
+  "resources": [],
+  "sourceFingerprint": "78412353edf355e88ac29489bd73ca228ba33d913a241ece7579ca33eabebfd0",
+  "evidence": {
+    "listPage": 95,
+    "listTitle": "“就”在白城 “职”引未来2025年服务吉林高质量发展高校毕业生招聘会在白城师范学院举行",
+    "listPublishDate": "2025-04-14",
+    "sourceOrder": 947
+  }
+}

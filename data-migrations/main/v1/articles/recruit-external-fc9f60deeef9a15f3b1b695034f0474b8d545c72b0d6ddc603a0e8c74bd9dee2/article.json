@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:fc9f60deeef9a15f3b1b695034f0474b8d545c72b0d6ddc603a0e8c74bd9dee2",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/Buda9NedxDdY-ajMbL3lhw",
+    "url": "https://mp.weixin.qq.com/s/Buda9NedxDdY-ajMbL3lhw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“筑梦新区•梅好启航”人才招聘对接交流活动的公告",
+    "source": "",
+    "publishDate": "2022-06-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Buda9NedxDdY-ajMbL3lhw"
+  },
+  "resources": [],
+  "sourceFingerprint": "fe50f2a42d41072c0cd1edeb1717fc91019dc7aba941182337c88562f82eefae",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "“筑梦新区•梅好启航”人才招聘对接交流活动的公告",
+    "listPublishDate": "2022-06-13",
+    "sourceOrder": 347
+  }
+}

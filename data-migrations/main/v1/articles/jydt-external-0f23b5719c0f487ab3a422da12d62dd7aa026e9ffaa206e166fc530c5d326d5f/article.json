@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0f23b5719c0f487ab3a422da12d62dd7aa026e9ffaa206e166fc530c5d326d5f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ZwpMQqV5v0_boNMgoZlk3w",
+    "url": "https://mp.weixin.qq.com/s/ZwpMQqV5v0_boNMgoZlk3w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院召开企业导师聘任暨产教融合校企合作交流会",
+    "source": "",
+    "publishDate": "2026-06-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ZwpMQqV5v0_boNMgoZlk3w"
+  },
+  "resources": [],
+  "sourceFingerprint": "f8bd68f3f0c7c4c291c6f5426ab58183128683a601875b31e655856104422d16",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "长春人文学院召开企业导师聘任暨产教融合校企合作交流会",
+    "listPublishDate": "2026-06-15",
+    "sourceOrder": 85
+  }
+}

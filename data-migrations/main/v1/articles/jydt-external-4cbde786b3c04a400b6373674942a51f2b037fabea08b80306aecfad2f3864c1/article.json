@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4cbde786b3c04a400b6373674942a51f2b037fabea08b80306aecfad2f3864c1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/DhPFSjSEsc3a5Tw4-ZsGjg",
+    "url": "https://mp.weixin.qq.com/s/DhPFSjSEsc3a5Tw4-ZsGjg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林通用航空职业技术学院飞机维修专业现代学徒制班开班仪式在南阳市举行",
+    "source": "",
+    "publishDate": "2025-10-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DhPFSjSEsc3a5Tw4-ZsGjg"
+  },
+  "resources": [],
+  "sourceFingerprint": "6950e575d357e432e614f124750ca6ded94469d3b77c7729adbc60070cf8200b",
+  "evidence": {
+    "listPage": 67,
+    "listTitle": "吉林通用航空职业技术学院飞机维修专业现代学徒制班开班仪式在南阳市举行",
+    "listPublishDate": "2025-10-20",
+    "sourceOrder": 668
+  }
+}

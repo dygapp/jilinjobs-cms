@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122924",
+    "contentId": "28737783122924",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122924"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《关于举办“2013届全国纺织系统高校毕业生网上招聘周”活动的通知》",
+    "source": "",
+    "publishDate": "2012-12-17",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《关于举办“2013届全国纺织系统高校毕业生网上招聘周”活动的通知》</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-12-17 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><font size=\"3\" face=\"黑体\">转发《关于举办“2013届全国纺织系统高校毕业生网上招聘周”活动的通知》</font></p> <p align=\"center\"><font size=\"3\" face=\"仿宋_GB2312\"></font>&nbsp;</p> <p><font size=\"3\" face=\"仿宋_GB2312\">各普通高校：</font></p> <p><font size=\"3\" face=\"仿宋_GB2312\">&nbsp;&nbsp;&nbsp; 全国高等学校信息咨询与就业指导中心与纺织人才交流培训中心将联合举办“2013届全国纺织系统高校毕业生网上招聘周”活动，时间定于2012年12月28日—2013年1月5日。现将活动通知转发给你们，请各高校按要求及时宣传动员，组织本校毕业生积极参加网上求职与应聘。</font></p> <p><font size=\"3\" face=\"仿宋_GB2312\"></font>&nbsp;</p> <p><font size=\"3\" face=\"仿宋_GB2312\">&nbsp;&nbsp;&nbsp; 附件：《关于举办“2013届全国纺织系统高校毕业生网上招聘周”活动的通知》教毕指[2012]77号</font></p> <p><font size=\"3\" face=\"仿宋_GB2312\"></font>&nbsp;</p> <p><font size=\"3\" face=\"仿宋_GB2312\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 吉林省高等学校毕业生就业指导中心</font></p> <p><font size=\"3\" face=\"仿宋_GB2312\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二O一二年十二月十七日</font></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://5d8f8eebb0537c1de63404176ec196f32b48f4943d15fd3ad8012b7954ce8d57\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://26cc67e07bb76ee9c7e508b2f83889bce56fe343bb20bd3d4ff5a5989305c2b1\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://07836e753433a4d1071d6096ba0a47034f9f2ff43d038682684641691be5408b\"></p> <p><font size=\"3\" face=\"仿宋_GB2312\"></font>&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121217222147445.jpg",
+      "originalReference": "/chistory/cms/imgs/20121217222147445.jpg",
+      "token": "migration-resource://5d8f8eebb0537c1de63404176ec196f32b48f4943d15fd3ad8012b7954ce8d57",
+      "snapshotPath": "assets/5d8f8eebb0537c1de63404176ec196f32b48f4943d15fd3ad8012b7954ce8d57.jpg",
+      "sha256": "5d8f8eebb0537c1de63404176ec196f32b48f4943d15fd3ad8012b7954ce8d57",
+      "contentType": "image/jpeg",
+      "sizeBytes": 86700
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2012121722215515.jpg",
+      "originalReference": "/chistory/cms/imgs/2012121722215515.jpg",
+      "token": "migration-resource://26cc67e07bb76ee9c7e508b2f83889bce56fe343bb20bd3d4ff5a5989305c2b1",
+      "snapshotPath": "assets/26cc67e07bb76ee9c7e508b2f83889bce56fe343bb20bd3d4ff5a5989305c2b1.jpg",
+      "sha256": "26cc67e07bb76ee9c7e508b2f83889bce56fe343bb20bd3d4ff5a5989305c2b1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75054
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121217222201283.jpg",
+      "originalReference": "/chistory/cms/imgs/20121217222201283.jpg",
+      "token": "migration-resource://07836e753433a4d1071d6096ba0a47034f9f2ff43d038682684641691be5408b",
+      "snapshotPath": "assets/07836e753433a4d1071d6096ba0a47034f9f2ff43d038682684641691be5408b.jpg",
+      "sha256": "07836e753433a4d1071d6096ba0a47034f9f2ff43d038682684641691be5408b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 56071
+    }
+  ],
+  "sourceFingerprint": "365b0a246157752649e3a95710d2b7fca0b1e4d1cc0223f99a97f844ebffbba6",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "转发《关于举办“2013届全国纺织系统高校毕业生网上招聘周”活动的通知》",
+    "listPublishDate": "2012-12-17",
+    "sourceOrder": 374,
+    "detailPublishDate": "2012-12-17"
+  }
+}

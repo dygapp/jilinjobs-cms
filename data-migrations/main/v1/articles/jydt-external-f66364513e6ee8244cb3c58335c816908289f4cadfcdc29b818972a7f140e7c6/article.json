@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f66364513e6ee8244cb3c58335c816908289f4cadfcdc29b818972a7f140e7c6",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ZgqU9tq_iGegJYJsrP3qyw",
+    "url": "https://mp.weixin.qq.com/s/ZgqU9tq_iGegJYJsrP3qyw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2025年“长聚学子·春城暖才”进校园宣讲活动走进吉林建筑大学",
+    "source": "",
+    "publishDate": "2025-05-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ZgqU9tq_iGegJYJsrP3qyw"
+  },
+  "resources": [],
+  "sourceFingerprint": "a3b4be1549e935cf688b9cfa27cdcb43a22aa9a68f1032670036f150bbcc5911",
+  "evidence": {
+    "listPage": 91,
+    "listTitle": "2025年“长聚学子·春城暖才”进校园宣讲活动走进吉林建筑大学",
+    "listPublishDate": "2025-05-13",
+    "sourceOrder": 904
+  }
+}

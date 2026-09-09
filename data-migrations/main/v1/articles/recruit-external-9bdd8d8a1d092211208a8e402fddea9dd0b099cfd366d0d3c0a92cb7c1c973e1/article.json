@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:9bdd8d8a1d092211208a8e402fddea9dd0b099cfd366d0d3c0a92cb7c1c973e1",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/mHfvVfvhtElXhfJLA7nQfw",
+    "url": "https://mp.weixin.qq.com/s/mHfvVfvhtElXhfJLA7nQfw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "直播预告｜北华大学寒假促就业暖心行动系列活动参与指南",
+    "source": "",
+    "publishDate": "2026-01-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/mHfvVfvhtElXhfJLA7nQfw"
+  },
+  "resources": [],
+  "sourceFingerprint": "c5710eaaea0f249b65c40a5ea05dbd98c2b5e25c1f1223a56e82be64b128121c",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "直播预告｜北华大学寒假促就业暖心行动系列活动参与指南",
+    "listPublishDate": "2026-01-30",
+    "sourceOrder": 79
+  }
+}

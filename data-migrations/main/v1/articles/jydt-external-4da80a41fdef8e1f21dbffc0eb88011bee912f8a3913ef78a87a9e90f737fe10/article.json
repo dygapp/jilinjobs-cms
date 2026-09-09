@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4da80a41fdef8e1f21dbffc0eb88011bee912f8a3913ef78a87a9e90f737fe10",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/BnzondiKq3069r_osuKEdw",
+    "url": "https://mp.weixin.qq.com/s/BnzondiKq3069r_osuKEdw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林师范大学博达学院赴河南开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-05-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/BnzondiKq3069r_osuKEdw"
+  },
+  "resources": [],
+  "sourceFingerprint": "eb5857d638afaab6470ecfdc7d9cccb69d435d1ed3bf91bacf42753a06163051",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "吉林师范大学博达学院赴河南开展访企拓岗促就业专项行动",
+    "listPublishDate": "2026-05-06",
+    "sourceOrder": 212
+  }
+}

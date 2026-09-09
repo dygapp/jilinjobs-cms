@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:fa507d02d529d62e2cccf8f95569d426204c5339e1d44f8d351e4ccef275717d",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/engine2/d/11988015/2928739/0",
+    "url": "https://zhjy.jlau.edu.cn/engine2/d/11988015/2928739/0?t=6292904&p=419454&isMobile=1"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务吉林高质量发展大型双选会（涉农类专场）暨吉林农业大学2026届毕业生秋季双选会邀请函",
+    "source": "",
+    "publishDate": "2025-10-14",
+    "bodyHtml": "",
+    "externalUrl": "https://zhjy.jlau.edu.cn/engine2/d/11988015/2928739/0?t=6292904&p=419454&isMobile=1"
+  },
+  "resources": [],
+  "sourceFingerprint": "776f4c027c24201a51764f3d84e42db4cf574f5740708e581ec29dac09cf08ab",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "服务吉林高质量发展大型双选会（涉农类专场）暨吉林农业大学2026届毕业生秋季双选会邀请函",
+    "listPublishDate": "2025-10-14",
+    "sourceOrder": 133
+  }
+}

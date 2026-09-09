@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:670d7fc286156f3d7d53ead36a1d1f8320b30d7a083a90d6275d6f7179319ab9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Lq0iTopMcCNJGyBlwe0jkA",
+    "url": "https://mp.weixin.qq.com/s/Lq0iTopMcCNJGyBlwe0jkA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北地区高层次人才招引活动即将开启——百余家优质企业虚位以待，诚邀博士及以上人才共赴长春",
+    "source": "",
+    "publishDate": "2025-05-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Lq0iTopMcCNJGyBlwe0jkA"
+  },
+  "resources": [],
+  "sourceFingerprint": "5679b33da688232295a410dfd8a9df39ec869cfc4b7543ea5abde83b37cdd154",
+  "evidence": {
+    "listPage": 90,
+    "listTitle": "东北地区高层次人才招引活动即将开启——百余家优质企业虚位以待，诚邀博士及以上人才共赴长春",
+    "listPublishDate": "2025-05-13",
+    "sourceOrder": 900
+  }
+}

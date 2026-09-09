@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1900bd219dc17430e04fb09271891ef3f4313f6ba87f21e86eb77262daa7f59c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/AvHAHUmx4Vw2YexNNNpAuw",
+    "url": "https://mp.weixin.qq.com/s/AvHAHUmx4Vw2YexNNNpAuw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院党委书记崔高嵩一行赴白城市开展访企拓岗工作",
+    "source": "",
+    "publishDate": "2026-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/AvHAHUmx4Vw2YexNNNpAuw"
+  },
+  "resources": [],
+  "sourceFingerprint": "a6170b426e003b829690f5e5f0605634898d2496764eaf9401d53acaa16d2c09",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "长春科技学院党委书记崔高嵩一行赴白城市开展访企拓岗工作",
+    "listPublishDate": "2026-04-21",
+    "sourceOrder": 263
+  }
+}

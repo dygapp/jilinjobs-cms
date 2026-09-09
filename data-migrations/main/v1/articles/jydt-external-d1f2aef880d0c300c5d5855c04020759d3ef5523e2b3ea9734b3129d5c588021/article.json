@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d1f2aef880d0c300c5d5855c04020759d3ef5523e2b3ea9734b3129d5c588021",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/VQBh4peY98v_9gCbhesp3Q",
+    "url": "https://mp.weixin.qq.com/s/VQBh4peY98v_9gCbhesp3Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "创业有你 “就”在吉林",
+    "source": "",
+    "publishDate": "2021-09-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/VQBh4peY98v_9gCbhesp3Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "dd39363a4290509edf5564d084ef1bdf1ad02369c5690b9c073baf403d04d31a",
+  "evidence": {
+    "listPage": 132,
+    "listTitle": "创业有你 “就”在吉林",
+    "listPublishDate": "2021-09-11",
+    "sourceOrder": 1318
+  }
+}

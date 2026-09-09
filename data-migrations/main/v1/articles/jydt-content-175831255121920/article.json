@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:175831255121920",
+    "contentId": "175831255121920",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=175831255121920"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "北华大学春季校园招聘活动火爆启动",
+    "source": "北华大学",
+    "publishDate": "2023-03-31",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">春暖花开，万物复苏。北华大学2023年春季校园招聘活动正式启动。北华大学于3月16日开始在东、南、北校区成功举办了“2023年大中城市联合招聘高校毕业生（吉林站）巡回招聘会北华大学专场招聘会”“北华大学‘筑巢圆梦’—吉林省内优质企业专场招聘会”等多场大型招聘会和专场招聘活动，现场火爆，反响热烈。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">近日的招聘活动，共有661家企业参与，提供了近17000个就业岗位，涉及教育、医疗、建筑、金融、新媒体等多个行业。吉林市8所高校毕业生6000余人次参与，投递简历近万份，达成意向签约毕业生1200余人。来自全国各地的企业对毕业生的求职热情和专业素养表示肯定，企业岗位也深受毕业生好评。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">学校领导、就业部门和学院负责人按照教育部、教育厅的要求积极开展“访企拓岗”活动，结合学校专业实际情况，搭建校企供需平台。接下来，北华大学还将举办“金职人才民办学校团体招聘会”“浙江省优质企业招聘会”“苏州工业园区优质企业招聘会”“‘筑梦家乡’优质企业专场招聘会”和“‘宏志助航’优质企业专场”等大型招聘活动和多场次专场招聘活动。</span></span></span></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "dfab20a3eb3a94250ef7710bcdc6a32dd3e64c0f5cd6c199694c4fcaab7f4f14",
+  "evidence": {
+    "listPage": 115,
+    "listTitle": "北华大学春季校园招聘活动火爆启动",
+    "listPublishDate": "2023-03-31",
+    "sourceOrder": 1148,
+    "detailPublishDate": "2023-03-31"
+  }
+}

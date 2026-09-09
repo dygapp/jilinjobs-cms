@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86127748857856",
+    "contentId": "86127748857856",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86127748857856"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春职业技术学院举办大学生求职面试模拟大赛",
+    "source": "长春职业技术学院",
+    "publishDate": "2021-11-10",
+    "bodyHtml": "\n                        <p>长春职业技术学院为了营造大学生求职氛围，增强就业意识，提高学生求职能力，了解并体验应聘流程，体验用人单位真实招聘场景，提升学生求职自荐水平，特举办大学生求职面试模拟大赛。</p>\n\n<p>大赛历时3个月，经过学院初赛，最终有60名选手进入决赛。决赛邀请了世纪新能源网人事总监雷婷、富维集团招聘经理张敏、长春联塑实业有限公司行政经理孙羽等企业高管担任评委。</p>\n\n<p>决赛设置了简历制作、自我介绍、模拟问答、评委点评等环节。比赛现场，选手们尽显自身能力素养与岗位能力要求的契合度。评委们精彩点评和中肯的建议，开阔了选手们的视野，博得现场观众阵阵掌声。经过激烈角逐，大赛共决出一等奖10人，二等奖20人，三等奖30人。赛后，选手们纷纷表示受益匪浅，知道了自身技能与素质就是最好的简历。</p>\n\n<p>此次大赛，既搭建了学生与企业对接的良好平台，又为学生提供了展现自我、锻炼自我的舞台。</p>\n\n<p><strong>（长春职业技术学院 高艳）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "6b9d72583dc603a433f8f5eb2d4e4c241e191df35d878dba2af80a167bdab8e9",
+  "evidence": {
+    "listPage": 128,
+    "listTitle": "长春职业技术学院举办大学生求职面试模拟大赛",
+    "listPublishDate": "2021-11-10",
+    "sourceOrder": 1278,
+    "detailPublishDate": "2021-11-10"
+  }
+}

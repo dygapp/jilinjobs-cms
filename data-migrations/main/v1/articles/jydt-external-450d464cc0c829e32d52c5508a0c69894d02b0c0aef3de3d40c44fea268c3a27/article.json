@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:450d464cc0c829e32d52c5508a0c69894d02b0c0aef3de3d40c44fea268c3a27",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/zXCjPygZVxq8OrodRz6Tfw",
+    "url": "https://mp.weixin.qq.com/s/zXCjPygZVxq8OrodRz6Tfw?scene=25&sessionid=-1367012392"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "学校举办服务吉林高质量发展大型双选会（涉农类专场）暨吉林农业大学2025届毕业生春季双选会",
+    "source": "",
+    "publishDate": "2025-04-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/zXCjPygZVxq8OrodRz6Tfw?scene=25&sessionid=-1367012392"
+  },
+  "resources": [],
+  "sourceFingerprint": "a1f08b9ba056e820cbf8cda03badc31a1044797b69353e02f231b7dec5c9aca4",
+  "evidence": {
+    "listPage": 95,
+    "listTitle": "学校举办服务吉林高质量发展大型双选会（涉农类专场）暨吉林农业大学2025届毕业生春季双选会",
+    "listPublishDate": "2025-04-16",
+    "sourceOrder": 942
+  }
+}

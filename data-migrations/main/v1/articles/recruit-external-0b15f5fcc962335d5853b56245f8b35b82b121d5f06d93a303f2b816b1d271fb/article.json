@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:0b15f5fcc962335d5853b56245f8b35b82b121d5f06d93a303f2b816b1d271fb",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/ha75PMOcVwtu1ffGbL0DKg",
+    "url": "https://mp.weixin.qq.com/s/ha75PMOcVwtu1ffGbL0DKg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "双选会预告｜寒假促就业暖心行动 延边大学2月学院专场空中双选会邀请函",
+    "source": "",
+    "publishDate": "2026-02-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ha75PMOcVwtu1ffGbL0DKg"
+  },
+  "resources": [],
+  "sourceFingerprint": "9dc28e5f47406b4db742c6c36ac06022ff69ee63f96ce1e3e611763cd241dd58",
+  "evidence": {
+    "listPage": 7,
+    "listTitle": "双选会预告｜寒假促就业暖心行动 延边大学2月学院专场空中双选会邀请函",
+    "listPublishDate": "2026-02-14",
+    "sourceOrder": 65
+  }
+}

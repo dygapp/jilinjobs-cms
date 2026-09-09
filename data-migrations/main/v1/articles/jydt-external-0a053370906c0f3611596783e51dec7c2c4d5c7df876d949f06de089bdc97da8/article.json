@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0a053370906c0f3611596783e51dec7c2c4d5c7df876d949f06de089bdc97da8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1028/172022.htm",
+    "url": "https://www.jlju.edu.cn/info/1028/172022.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学赴山东省开展访企拓岗专项行动 深化政校企合作助推毕业生高质量就业",
+    "source": "",
+    "publishDate": "2025-12-30",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1028/172022.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "2ec5749a46bec6f3cd2dff22ba28e5df8b01cf0cf7783b7f39e11b6fa416b939",
+  "evidence": {
+    "listPage": 52,
+    "listTitle": "吉林建筑大学赴山东省开展访企拓岗专项行动 深化政校企合作助推毕业生高质量就业",
+    "listPublishDate": "2025-12-30",
+    "sourceOrder": 513
+  }
+}

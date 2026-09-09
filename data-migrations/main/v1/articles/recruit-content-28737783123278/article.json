@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123278",
+    "contentId": "28737783123278",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123278"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "促就业 昆明有了首个创业基地",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">促就业 昆明有了首个创业基地</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 昨日，园博花鸟市场被授予盘龙区创业基地。据悉，这不仅是盘龙区的第一个，也是昆明市率先建立起的第一个创业基地。作为创业基地，园博花鸟市场将提供3个优惠铺面，提供给有经验的人员进行创业。<br>与此同时，昨日，园博花鸟市场举办了青云街道办事处就业再就业专场招聘会，来自昆明市和盘龙区40家知名企业和近600名求职人员聚集现场。盘龙区劳动就业局相关负责人告诉记者，除建立创业基地外，盘龙区还成立了“创业指导中心”，为自主创业者提供创业项目推介、免费创业培训、提供小额担保贷款、建立创业基地、跟踪服务等“一条龙”的创业服务，方便自主创业失业人员。<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "8ed45de9522f216148f8406428000cede3d465c5755de8b427157347ec2ab2a3",
+  "evidence": {
+    "listPage": 58,
+    "listTitle": "促就业 昆明有了首个创业基地",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 572,
+    "detailPublishDate": "2009-04-04"
+  }
+}

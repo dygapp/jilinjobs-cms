@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7fd31c4b10bb5fb295e2719fdac08d546a0d77a3aa49d839b8cb85be754d6641",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/dwuFpuE3Rwv9m349v-4VFQ",
+    "url": "https://mp.weixin.qq.com/s/dwuFpuE3Rwv9m349v-4VFQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院前往德翔集团开展“优企引才”定向访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/dwuFpuE3Rwv9m349v-4VFQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "fe9e60add881168326eeac844439591ed138f237d9a7887c9896336307deab8e",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "长春科技学院前往德翔集团开展“优企引才”定向访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-31",
+    "sourceOrder": 337
+  }
+}

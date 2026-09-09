@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:13993fd09cdf42178373fad6754af3a37a85a01da2867542875ff6424486ea1d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/CrlEKxK0uPRbF3c5iahjxA",
+    "url": "https://mp.weixin.qq.com/s/CrlEKxK0uPRbF3c5iahjxA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院与桦甸市中医院携手合作培育医学人才",
+    "source": "",
+    "publishDate": "2026-04-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/CrlEKxK0uPRbF3c5iahjxA"
+  },
+  "resources": [],
+  "sourceFingerprint": "dc9f08d59252a2b8f61b145ad5c127126f3740bcb9578bd1d7c0b1af814be27d",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "长春科技学院与桦甸市中医院携手合作培育医学人才",
+    "listPublishDate": "2026-04-29",
+    "sourceOrder": 228
+  }
+}

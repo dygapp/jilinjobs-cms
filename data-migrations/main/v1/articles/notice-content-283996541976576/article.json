@@ -1,0 +1,101 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:283996541976576",
+    "contentId": "283996541976576",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=283996541976576"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2025年全国国家级经济技术开发区高校毕业生网络招聘会活动的通知",
+    "source": "教育部办公厅",
+    "publishDate": "2025-04-17",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1123\" src=\"migration-resource://5cf95cc42a5bb8480a3582cb6a53f0020fca12570fefd0421a51150167b86c18\" width=\"794\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1123\" src=\"migration-resource://845e79a183fc41a19657b5f03857024d2357c7385448f876b72c9b04389610bc\" width=\"794\"><img alt=\"\" height=\"1123\" src=\"migration-resource://3901186a764ce3f3ab6e3c970368a26a8a41c7b78edd4ee9884e087380e77312\" width=\"794\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1123\" src=\"migration-resource://29c1df121a8b092ef6e1903f751bbe0cf3c1ef7b449cd1844f2783019fec5a5f\" width=\"794\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1123\" src=\"migration-resource://7b0da228cb30b4bdf31ad956d3eb7ad8c47d454aa2fa51e20c2b8244d914c0c9\" width=\"794\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1123\" src=\"migration-resource://7576320414319f64d350c6fcd82756c1858acf86baf57c69f3890786eb0ff087\" width=\"794\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1123\" src=\"migration-resource://e9dc8c407dc68c1cf696f0b7579aaf2e5c5c99e9a2a336f2f230348c5b37a857\" width=\"794\"></p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-17/4795fd03-6c2d-4341-9ca5-636c4f4a32e8.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-17/4795fd03-6c2d-4341-9ca5-636c4f4a32e8.jpeg",
+      "token": "migration-resource://5cf95cc42a5bb8480a3582cb6a53f0020fca12570fefd0421a51150167b86c18",
+      "snapshotPath": "assets/5cf95cc42a5bb8480a3582cb6a53f0020fca12570fefd0421a51150167b86c18.jpeg",
+      "sha256": "5cf95cc42a5bb8480a3582cb6a53f0020fca12570fefd0421a51150167b86c18",
+      "contentType": "image/jpeg",
+      "sizeBytes": 100685
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-17/142e82fa-9076-47a1-a9ec-40a12f785f89.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-17/142e82fa-9076-47a1-a9ec-40a12f785f89.jpeg",
+      "token": "migration-resource://845e79a183fc41a19657b5f03857024d2357c7385448f876b72c9b04389610bc",
+      "snapshotPath": "assets/845e79a183fc41a19657b5f03857024d2357c7385448f876b72c9b04389610bc.jpeg",
+      "sha256": "845e79a183fc41a19657b5f03857024d2357c7385448f876b72c9b04389610bc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88408
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-17/159d1c3e-1136-4f23-9852-8b4698d0e622.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-17/159d1c3e-1136-4f23-9852-8b4698d0e622.jpeg",
+      "token": "migration-resource://3901186a764ce3f3ab6e3c970368a26a8a41c7b78edd4ee9884e087380e77312",
+      "snapshotPath": "assets/3901186a764ce3f3ab6e3c970368a26a8a41c7b78edd4ee9884e087380e77312.jpeg",
+      "sha256": "3901186a764ce3f3ab6e3c970368a26a8a41c7b78edd4ee9884e087380e77312",
+      "contentType": "image/jpeg",
+      "sizeBytes": 99730
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-17/e0695ae8-caca-4706-bf92-83ad8ca07622.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-17/e0695ae8-caca-4706-bf92-83ad8ca07622.jpeg",
+      "token": "migration-resource://29c1df121a8b092ef6e1903f751bbe0cf3c1ef7b449cd1844f2783019fec5a5f",
+      "snapshotPath": "assets/29c1df121a8b092ef6e1903f751bbe0cf3c1ef7b449cd1844f2783019fec5a5f.jpeg",
+      "sha256": "29c1df121a8b092ef6e1903f751bbe0cf3c1ef7b449cd1844f2783019fec5a5f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 59375
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-17/3c994557-6315-4e3f-bb61-368e5e437239.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-17/3c994557-6315-4e3f-bb61-368e5e437239.jpeg",
+      "token": "migration-resource://7b0da228cb30b4bdf31ad956d3eb7ad8c47d454aa2fa51e20c2b8244d914c0c9",
+      "snapshotPath": "assets/7b0da228cb30b4bdf31ad956d3eb7ad8c47d454aa2fa51e20c2b8244d914c0c9.jpeg",
+      "sha256": "7b0da228cb30b4bdf31ad956d3eb7ad8c47d454aa2fa51e20c2b8244d914c0c9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 56991
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-17/a79a103d-386b-4b34-8b24-999ae3a8e7e8.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-17/a79a103d-386b-4b34-8b24-999ae3a8e7e8.jpeg",
+      "token": "migration-resource://7576320414319f64d350c6fcd82756c1858acf86baf57c69f3890786eb0ff087",
+      "snapshotPath": "assets/7576320414319f64d350c6fcd82756c1858acf86baf57c69f3890786eb0ff087.jpeg",
+      "sha256": "7576320414319f64d350c6fcd82756c1858acf86baf57c69f3890786eb0ff087",
+      "contentType": "image/jpeg",
+      "sizeBytes": 44472
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-17/7ad04ce3-d5d5-4bdb-819c-3d92ecbad641.jpeg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-17/7ad04ce3-d5d5-4bdb-819c-3d92ecbad641.jpeg",
+      "token": "migration-resource://e9dc8c407dc68c1cf696f0b7579aaf2e5c5c99e9a2a336f2f230348c5b37a857",
+      "snapshotPath": "assets/e9dc8c407dc68c1cf696f0b7579aaf2e5c5c99e9a2a336f2f230348c5b37a857.jpeg",
+      "sha256": "e9dc8c407dc68c1cf696f0b7579aaf2e5c5c99e9a2a336f2f230348c5b37a857",
+      "contentType": "image/jpeg",
+      "sizeBytes": 23594
+    }
+  ],
+  "sourceFingerprint": "bdc4d041283e8491e09d1e96cab0eed0cabb79aa8ff4c97937e4b53c297dabdd",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "关于举办2025年全国国家级经济技术开发区高校毕业生网络招聘会活动的通知",
+    "listPublishDate": "2025-04-17",
+    "sourceOrder": 42,
+    "detailPublishDate": "2025-04-17"
+  }
+}

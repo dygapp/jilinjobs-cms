@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783121110",
+    "contentId": "28737783121110",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783121110"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "黑龙江：十项具体措施鼓励和引导高校毕业生就业",
+    "source": "",
+    "publishDate": "2009-05-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">黑龙江：十项具体措施鼓励和引导高校毕业生就业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-5-6 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 日前从黑龙江省新闻办获悉,该省出台了《关于进一步加强普通高等学校毕业生就业工作的意见》,提出了十项具体措施鼓励和引导高校毕业生就业。 </font></p> <p><font size=\"2\">　　这十项具体措施包括:鼓励和引导高校毕业生到农村基层就业;鼓励高校毕业生到城市街道社区就业;鼓励中小企业和非公有制企 </font></p> <p><font size=\"2\">　　业吸纳高校毕业生;鼓励和支持高校毕业生自主创业;鼓励国有大中型企业吸纳高校毕业生就业;鼓励政府投资重点建设项目和服务外包型企业录用高校毕业生;鼓励高校毕业生应征入伍服义务兵役;挖掘机关、事业单位空编招用有基层工作经历的高校毕业生;鼓励高校毕业生参加职业技能培训和就业见习提升就业能力;认真做好高校毕业生就业服务和就业援助工作。 </font></p> <p><font size=\"2\">　　《意见》决定,对参加“三支一扶计划”、“村村大学生行动计划”等项目的高校毕业生的生活补贴标准由每人每月650元提高到1000元,同时参加养老、医疗等社会保险。对到县以下农村基层单位就业满5年的高校毕业生,按规定实施相应的学费和助学贷款代偿;在城市的每个社区、街道,要确保至少选一名高校毕业生特别是家庭困难毕业生,从事社会管理和公共服务工作。大力开发适合高校毕业生就业的基层社会管理和公共服务岗位;对企业招用非本地户籍的普通高校专科及以上学历毕业生,取消用人审批和落户限制。户口可落到当地人才交流中心。劳动密集型小企业招用登记失业的高校毕业生等城镇登记失业人员达到企业现有职工总数的30%(超过100人的企业达到15%)以上并签订1年以上劳动合同的,可提供最高额度为200万元的小额担保贷款支持。《意见》特别规定:高校毕业生应征入伍服义务兵役期满后,参加机关事业单位招考,可享受加分政策;大学生自主创业,创办企业首次出资额允许为零,扩大小额担保贷款规模,高校毕业生自主创业自筹资金不足的,可给予不超过5万元的小额担保贷款。 </font></p> <p><font size=\"2\">　　据悉,今年,该省高校毕业生总数为18.95万人。目前已经签订就业协议的毕业生6.68万人,占毕业生总数的35.25%,比去年同期低10个百分点。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：光明日报 <br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "7f7312dea4b46759f9461709e6b852733274a36f7ee1dc6db460df78bf78426e",
+  "evidence": {
+    "listPage": 55,
+    "listTitle": "黑龙江：十项具体措施鼓励和引导高校毕业生就业",
+    "listPublishDate": "2009-05-06",
+    "sourceOrder": 550,
+    "detailPublishDate": "2009-05-06"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:85994214801408",
+    "contentId": "85994214801408",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=85994214801408"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办教育部“24365校园招聘服务”IT行业春季网络招聘会的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2022-03-30",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"888\" src=\"migration-resource://95693e6df7ad4875db56484994e326c19bbbaeaaff2d87645857caaed961e250\" width=\"722\"><img alt=\"\" height=\"883\" src=\"migration-resource://7b93c0404eb027fae97bc32df4acf3937f9bfa957c52e34fe941aaa703d5fb26\" width=\"713\"><img alt=\"\" height=\"887\" src=\"migration-resource://b3e7a6830c3c42248a0a7934bf5f1fc87f2c54dff4606918f9725eb9909d6975\" width=\"662\"><img alt=\"\" height=\"801\" src=\"migration-resource://72608b7a3c7c3aa5acc9e7cc35faf1a4af482b8e70bf73ee2413f777f543c386\" width=\"663\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/e263ca43-a2f9-45e2-b786-8ce97aa5d65a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/e263ca43-a2f9-45e2-b786-8ce97aa5d65a.jpg",
+      "token": "migration-resource://95693e6df7ad4875db56484994e326c19bbbaeaaff2d87645857caaed961e250",
+      "snapshotPath": "assets/95693e6df7ad4875db56484994e326c19bbbaeaaff2d87645857caaed961e250.jpg",
+      "sha256": "95693e6df7ad4875db56484994e326c19bbbaeaaff2d87645857caaed961e250",
+      "contentType": "image/jpeg",
+      "sizeBytes": 73781
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/f4529864-2b68-473e-8945-ab83fcf1bcf5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/f4529864-2b68-473e-8945-ab83fcf1bcf5.jpg",
+      "token": "migration-resource://7b93c0404eb027fae97bc32df4acf3937f9bfa957c52e34fe941aaa703d5fb26",
+      "snapshotPath": "assets/7b93c0404eb027fae97bc32df4acf3937f9bfa957c52e34fe941aaa703d5fb26.jpg",
+      "sha256": "7b93c0404eb027fae97bc32df4acf3937f9bfa957c52e34fe941aaa703d5fb26",
+      "contentType": "image/jpeg",
+      "sizeBytes": 60204
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/6e3e37be-b6b4-4411-9009-36df06d19a07.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/6e3e37be-b6b4-4411-9009-36df06d19a07.jpg",
+      "token": "migration-resource://b3e7a6830c3c42248a0a7934bf5f1fc87f2c54dff4606918f9725eb9909d6975",
+      "snapshotPath": "assets/b3e7a6830c3c42248a0a7934bf5f1fc87f2c54dff4606918f9725eb9909d6975.jpg",
+      "sha256": "b3e7a6830c3c42248a0a7934bf5f1fc87f2c54dff4606918f9725eb9909d6975",
+      "contentType": "image/jpeg",
+      "sizeBytes": 71109
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-20/5c2a1eab-3dd5-4536-a1fa-fb3ca1d4f74e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-20/5c2a1eab-3dd5-4536-a1fa-fb3ca1d4f74e.jpg",
+      "token": "migration-resource://72608b7a3c7c3aa5acc9e7cc35faf1a4af482b8e70bf73ee2413f777f543c386",
+      "snapshotPath": "assets/72608b7a3c7c3aa5acc9e7cc35faf1a4af482b8e70bf73ee2413f777f543c386.jpg",
+      "sha256": "72608b7a3c7c3aa5acc9e7cc35faf1a4af482b8e70bf73ee2413f777f543c386",
+      "contentType": "image/jpeg",
+      "sizeBytes": 29601
+    }
+  ],
+  "sourceFingerprint": "6fadbeff8b4f92b993a338e1a7117f4daaf92bc12a76f1346b3fe5c11af979d2",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "关于举办教育部“24365校园招聘服务”IT行业春季网络招聘会的通知",
+    "listPublishDate": "2022-03-30",
+    "sourceOrder": 134,
+    "detailPublishDate": "2022-03-30"
+  }
+}

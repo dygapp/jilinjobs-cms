@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:80fc3f39c50eff4f5c8b36f7fa54fc806b62611a47a9e33e8f43835f15e37f9b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1055/6659.htm",
+    "url": "https://www.jlict.edu.cn/info/1055/6659.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "数字赋能促就业 才聚产业兴吉林——吉林化工大学2025年秋冬季人才供需洽谈会成功举办",
+    "source": "",
+    "publishDate": "2025-12-05",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlict.edu.cn/info/1055/6659.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "cf0bbc458401e1230480d826872c82d9e4e8a26cb190d165a756efdc299397c1",
+  "evidence": {
+    "listPage": 56,
+    "listTitle": "数字赋能促就业 才聚产业兴吉林——吉林化工大学2025年秋冬季人才供需洽谈会成功举办",
+    "listPublishDate": "2025-12-05",
+    "sourceOrder": 556
+  }
+}

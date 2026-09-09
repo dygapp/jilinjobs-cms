@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122020",
+    "contentId": "28737783122020",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122020"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "京东物流校企合作座谈会成功召开",
+    "source": "",
+    "publishDate": "2019-06-11",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">京东物流校企合作座谈会成功召开</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2019-6-11 11:16:46</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-align: left; text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">6月6日，省高校毕业生就业指导中心与京东物流联合举办了“京东物流校企合作座谈会”，省内28所高校56名就业创业部门及物流、电子商务专业负责人参加会议。省高校毕业生就业指导中心张旭光副主任介绍了本次会议的背景和意义，并代表中心与京东物流东北区签订战略合作协议。京东物流东北区人力资源总监许永超和相关项目负责人参加并现场进行校企合作项目推介。</span></p><p style=\"text-align: left; text-indent: 43px;\"><span style=\"color: black; font-family: 仿宋; font-size: 21px;\">张旭光副主任表示，本次会议是为深入贯彻2019年全国普通高等学校毕业生就业创业工作电视电话会议和李克强总理重要批示精神，大胆探索改革的校企合作模式。通过此次会议，将进一步加强专项职业技能培训，提升大学生就业创业能力，更加注重学生在校学习与企业实践的有效结合，培养更多适应社会需要的创新型、复合型、应用型人才，全面加强校企合作、资源共享，深化产教融合。</span></p><p style=\"text-align: left; text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">京东物流东北区校企合作负责人丁旭佳从人才生态营、VUCA时代下的校企合作新方向、京东物流东北区校企合作新模式、六大支柱搭建院校合作框架、众创空间、助力生态联盟和校企合作阶段性结果展示等方面，介绍了“京育人才•东察先机”校企合作模式及内容。京东物流云仓业务部校园生态高级经理李响从京东物流的专业设施和极致体验、京东云仓的战略创新、智能云物流实训中心高度智能化的场景效果、科研+云仓创新创业项目，联合开发科研课题等方面介绍了“京东云仓对校赋能，贯彻落实产教融合”项目。</span></p><p style=\"text-align: left; text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">此次座谈会的召开，对深度加强校企合作，深化产教融合，促进职业教育和培训体系的完善，发挥了有力的助推作用。</span></p><p><br></p><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://805ea5d258929b90432b345622cdd175234b90e92dfb6ad0e52bf6aca22fe4be\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://84b204c57d44ddab33c270d43f3345f541cbbd88de47b7e72d109f575d6115ea\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6369584867189450008899366.jpg",
+      "originalReference": "/chistory/cms/imgs/6369584867189450008899366.jpg",
+      "token": "migration-resource://805ea5d258929b90432b345622cdd175234b90e92dfb6ad0e52bf6aca22fe4be",
+      "snapshotPath": "assets/805ea5d258929b90432b345622cdd175234b90e92dfb6ad0e52bf6aca22fe4be.jpg",
+      "sha256": "805ea5d258929b90432b345622cdd175234b90e92dfb6ad0e52bf6aca22fe4be",
+      "contentType": "image/jpeg",
+      "sizeBytes": 141581
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6369584867200387504100427.jpg",
+      "originalReference": "/chistory/cms/imgs/6369584867200387504100427.jpg",
+      "token": "migration-resource://84b204c57d44ddab33c270d43f3345f541cbbd88de47b7e72d109f575d6115ea",
+      "snapshotPath": "assets/84b204c57d44ddab33c270d43f3345f541cbbd88de47b7e72d109f575d6115ea.jpg",
+      "sha256": "84b204c57d44ddab33c270d43f3345f541cbbd88de47b7e72d109f575d6115ea",
+      "contentType": "image/jpeg",
+      "sizeBytes": 166991
+    }
+  ],
+  "sourceFingerprint": "f16a5ee499f2e8c6b5f22499230d41ce267d41027461fec9075f1d8823c3854d",
+  "evidence": {
+    "listPage": 145,
+    "listTitle": "京东物流校企合作座谈会成功召开",
+    "listPublishDate": "2019-06-11",
+    "sourceOrder": 1446,
+    "detailPublishDate": "2019-06-11"
+  }
+}

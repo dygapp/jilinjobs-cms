@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fd9eb4d9e1572cbe03f4edc87f90bbca6c9ed975650246d8eb5dd34c023dd9e2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kUlFfcAtBv8ird-ni122Wg",
+    "url": "https://mp.weixin.qq.com/s/kUlFfcAtBv8ird-ni122Wg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工业职业技术学院赴永吉县开展“百校对百县”促就业专项行动",
+    "source": "",
+    "publishDate": "2025-07-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kUlFfcAtBv8ird-ni122Wg"
+  },
+  "resources": [],
+  "sourceFingerprint": "87622a43c020865e38e051b4d166f48bc0ef4fb71103088df0e52355ba8f5e5a",
+  "evidence": {
+    "listPage": 76,
+    "listTitle": "吉林工业职业技术学院赴永吉县开展“百校对百县”促就业专项行动",
+    "listPublishDate": "2025-07-02",
+    "sourceOrder": 752
+  }
+}

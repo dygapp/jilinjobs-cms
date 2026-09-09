@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:ced3ed220fc811b4ec7f0f3679bc2b5aca7b9bfd888fdf5d0ecab2967526cce6",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/j9e9M3sL89wYKgnTJEsLlw",
+    "url": "https://mp.weixin.qq.com/s/j9e9M3sL89wYKgnTJEsLlw"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "教育部高校学生司领导谈高校毕业生就业",
+    "source": "",
+    "publishDate": "2024-06-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/j9e9M3sL89wYKgnTJEsLlw"
+  },
+  "resources": [],
+  "sourceFingerprint": "f3c340d0f6e730dd74c81b8d6bc7ec71e2ac3665e2d7f8285c9ae1121008582d",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "教育部高校学生司领导谈高校毕业生就业",
+    "listPublishDate": "2024-06-18",
+    "sourceOrder": 79
+  }
+}

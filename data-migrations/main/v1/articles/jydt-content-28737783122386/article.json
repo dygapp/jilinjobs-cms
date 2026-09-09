@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122386",
+    "contentId": "28737783122386",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122386"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "陕西“创业之星”俱乐部为创业者搭建交流平台",
+    "source": "",
+    "publishDate": "2009-04-12",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">陕西“创业之星”俱乐部为创业者搭建交流平台</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-12 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 陕西省“创业之星”俱乐部10日在西安成立。<br>　　“创业之星”俱乐部是由陕西省农村劳动力资源开发促进会主管，9名创业成功的中小企业家自发自愿成立的民间非盈利组织。这个俱乐部将为中小企业创业者搭建一个交流的平台，通过企业间的互动、交流，取长补短，共同进步。</font></p> <p><font size=\"2\">　　“创业之星”俱乐部执行主席顾维龙表示，他们将开展多元化的联谊活动、进行创业经验交流，并协助会员疏通资金渠道。同时，还将建立专家顾问团，动员社会力量帮助中小企业，让其在起步发展过程中少走弯路，不断发展壮大。凡成功创业且企业经营1年以上，信誉良好人士，均可自愿申请加入这个俱乐部。<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "70a32bbb26dd1bd5d6363358894c7dd29273b6a25657ad621681a12e37eb0f32",
+  "evidence": {
+    "listPage": 179,
+    "listTitle": "陕西“创业之星”俱乐部为创业者搭建交流平台",
+    "listPublishDate": "2009-04-12",
+    "sourceOrder": 1788,
+    "detailPublishDate": "2009-04-12"
+  }
+}

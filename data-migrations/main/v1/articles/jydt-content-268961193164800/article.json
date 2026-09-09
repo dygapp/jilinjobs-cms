@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268961193164800",
+    "contentId": "268961193164800",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268961193164800"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "四平职业大学举办2024年大学生职业规划大赛",
+    "source": "",
+    "publishDate": "2024-12-06",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://9b753494a64496eb27be2f17cecd9104a1e595f846c7905d162b286d48f8b808\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/90b6b3d4-9128-4319-9a73-a6d6d5ae724d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/90b6b3d4-9128-4319-9a73-a6d6d5ae724d.jpg",
+      "token": "migration-resource://9b753494a64496eb27be2f17cecd9104a1e595f846c7905d162b286d48f8b808",
+      "snapshotPath": "assets/9b753494a64496eb27be2f17cecd9104a1e595f846c7905d162b286d48f8b808.jpg",
+      "sha256": "9b753494a64496eb27be2f17cecd9104a1e595f846c7905d162b286d48f8b808",
+      "contentType": "image/jpeg",
+      "sizeBytes": 452636
+    }
+  ],
+  "sourceFingerprint": "59cea95b8abd002f869b15508db19a7ab2b11f3a277a3c61b0374d4cb0b44a5c",
+  "evidence": {
+    "listPage": 101,
+    "listTitle": "四平职业大学举办2024年大学生职业规划大赛",
+    "listPublishDate": "2024-12-06",
+    "sourceOrder": 1001,
+    "detailPublishDate": "2024-12-06"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8e73799a12925a30eb7a91cd3cec7b4e5ab75b2b07303d11cccbba6e15714228",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/7enyUo7larB27e2AxiSmLQ",
+    "url": "https://mp.weixin.qq.com/s/7enyUo7larB27e2AxiSmLQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "怀进鹏调研高校毕业生就业、人才供需适配、经费监管等工作",
+    "source": "",
+    "publishDate": "2025-04-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/7enyUo7larB27e2AxiSmLQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "6f2a9ea42eb8527c7edb741b3c087df76f73e7fa2ccda8a1037307977bdf6079",
+  "evidence": {
+    "listPage": 96,
+    "listTitle": "怀进鹏调研高校毕业生就业、人才供需适配、经费监管等工作",
+    "listPublishDate": "2025-04-01",
+    "sourceOrder": 954
+  }
+}

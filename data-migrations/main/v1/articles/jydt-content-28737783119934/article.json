@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783119934",
+    "contentId": "28737783119934",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783119934"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省召开第四届“梦想杯”大学生创业大赛指导教师培训会",
+    "source": "",
+    "publishDate": "2017-06-18",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省召开第四届“梦想杯”大学生创业大赛指导教师培训会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2017-6-18 13:00:16</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\"></span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">吉林省第四届“梦想杯”大学生创业大赛宣讲报名阶段已圆满结束，为确保初赛顺利开展，2017年6月16日上午，由大赛组委会组织的吉林省高校创新创业工作交流会暨吉林省第四届”梦想杯“大学生创业大赛指导教师培训会在长春中医药大学”大健康+互联网“创业孵化园召开。来自省内43所高校的50名负责创就业工作的教师出席会议。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\"></span></p><p style=\"text-align: center;\"><img title=\"IMG_0613_副本.jpg\" src=\"migration-resource://aea6ff7fab0e97ea031afd6dc72afdb6c74aeb67da0c4cd28953925f9f3c3b92\"></p><p style=\"text-align: center; text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\"></span></p><p><span style=\"font-size: 21px;\"><span style=\"font-family: 宋体;\"></span></span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\"></span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">大赛负责人就CEO特训营和初赛细则进行了解读。CEO特训营是为帮助参赛者了解比赛规则、流程，提高参赛者领导能力、团队建设能力、项目策划能力而进行的系列培训项目。分为赛前集中式现场培训及赛中日常性线上、线下培训两部分。赛前集中式现场培训将聘请创业领域知名创业导师，为参赛选手带来精彩创业分享。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">6</span><span style=\"font-family: 仿宋; font-size: 21px;\">月16日至9月15日为初赛阶段，主要内容为开展“千企万职”创就业生根牵手行动，通过吉创天下APP平台，参赛者以引进千家企业及万个职位为目标，为大学生提供丰富的兼职、实习、就业、创业等方面的机会，同时企业通过该平台，遴选出优秀大学生人才。</span></p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">来自各高校的创业指导教师们在充分理解CEO特训营和初赛细则的基础上，纷纷提出建设性意见，会议取得预期效果。会后，各高校指导教师将发挥辐射作用，实现对本校参赛者的精准指导。</span></p><p style=\"text-indent: 43px;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363346073025387509123159.jpg",
+      "originalReference": "/chistory/cms/imgs/6363346073025387509123159.jpg",
+      "token": "migration-resource://aea6ff7fab0e97ea031afd6dc72afdb6c74aeb67da0c4cd28953925f9f3c3b92",
+      "snapshotPath": "assets/aea6ff7fab0e97ea031afd6dc72afdb6c74aeb67da0c4cd28953925f9f3c3b92.jpg",
+      "sha256": "aea6ff7fab0e97ea031afd6dc72afdb6c74aeb67da0c4cd28953925f9f3c3b92",
+      "contentType": "image/jpeg",
+      "sizeBytes": 145680
+    }
+  ],
+  "sourceFingerprint": "c79b43f0d5e91130ba27528e8e06145d8c669c4a5f0d1b2e9d71a813995410b9",
+  "evidence": {
+    "listPage": 150,
+    "listTitle": "我省召开第四届“梦想杯”大学生创业大赛指导教师培训会",
+    "listPublishDate": "2017-06-18",
+    "sourceOrder": 1493,
+    "detailPublishDate": "2017-06-18"
+  }
+}

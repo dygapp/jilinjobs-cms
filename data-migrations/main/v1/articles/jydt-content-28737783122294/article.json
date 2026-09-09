@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122294",
+    "contentId": "28737783122294",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122294"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "济南开设“创业辅导站”助力大学生自主创业",
+    "source": "",
+    "publishDate": "2009-06-26",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">济南开设“创业辅导站”助力大学生自主创业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-6-26 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 为帮扶大学生自主创业，今年济南工商在 142 个工商所开通了“创业辅导站”，积极为他们解决资金、人力和房屋三大难题。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 张庆春毕业于山东师范大学，去年毕业后他选择了自主创业，在长清区大学城商业街从事餐饮经营。创业之初，济南市工商局长清分局工作人员靠前服务，帮助他在大学城商业街租赁了15平方米的房屋。近日，工作人员又协调金融部门为其提供了3 万元的低息贷款。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 针对大学生在自主创业时遇到的资金、人力和房屋三大难题，济南市工商部门多次协调多家银行和小额贷款公司，在政策范围内，在手续办理、贷款利率、资金使用等方面为自主创业的大学生提供全方位的优惠。截至目前，已帮助全市自主创业的大学生先后获得30余万元的贷款扶持。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 此外，济南市142个工商所均已开通“创业辅导站”，与大中专院校联合推出自主创业信息，并通过召开“创业教育进校园”、“自主创业辅导会”等活动，邀请大学生自主创业的成功人士介绍经验，提升应届大学生自主创业的信心。同时，“创业辅导站”还充分利用工商机关企业登记注册的信息，及时向自主创业的大学生提供企业人力资源信息，供其实现技术、信息、人力资源的“短距离对接”。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 济南市工商局企业注册局副局长马效鲁表示，为自主创业的大学生送去政策扶持的同时，给他们提供资金、人力、房屋等帮扶，才是真正的“雪中送炭”。</font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "112a7f0c6e6b9f99943b553292dc019e7c9ec060ea654a5c2948ef0a97d4d055",
+  "evidence": {
+    "listPage": 171,
+    "listTitle": "济南开设“创业辅导站”助力大学生自主创业",
+    "listPublishDate": "2009-06-26",
+    "sourceOrder": 1707,
+    "detailPublishDate": "2009-06-26"
+  }
+}

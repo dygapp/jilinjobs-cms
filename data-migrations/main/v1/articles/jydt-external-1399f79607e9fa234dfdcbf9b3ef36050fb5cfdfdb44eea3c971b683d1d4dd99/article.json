@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1399f79607e9fa234dfdcbf9b3ef36050fb5cfdfdb44eea3c971b683d1d4dd99",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/JNtR6N2IBptEJQUZE306jQ",
+    "url": "https://mp.weixin.qq.com/s/JNtR6N2IBptEJQUZE306jQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学召开2025届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2025-06-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/JNtR6N2IBptEJQUZE306jQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "cb3185de542515c36bcacd15d09ba73d2172778dd53f9c4aa48ba42061b32fce",
+  "evidence": {
+    "listPage": 82,
+    "listTitle": "东北电力大学召开2025届毕业生就业工作推进会",
+    "listPublishDate": "2025-06-13",
+    "sourceOrder": 820
+  }
+}

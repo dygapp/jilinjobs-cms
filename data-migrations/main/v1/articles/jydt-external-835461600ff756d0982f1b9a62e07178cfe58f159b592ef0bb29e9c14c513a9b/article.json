@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:835461600ff756d0982f1b9a62e07178cfe58f159b592ef0bb29e9c14c513a9b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/-s0AGm9jlur_1fLL6zJjcA",
+    "url": "https://mp.weixin.qq.com/s/-s0AGm9jlur_1fLL6zJjcA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "跨域拓岗强合作 精准育人促就业——辽源职业技术学院开展多省市访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-01-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/-s0AGm9jlur_1fLL6zJjcA"
+  },
+  "resources": [],
+  "sourceFingerprint": "8693284e696562334f43b34beea10eb4de58fa1af4832517b363fc248d72de3d",
+  "evidence": {
+    "listPage": 48,
+    "listTitle": "跨域拓岗强合作 精准育人促就业——辽源职业技术学院开展多省市访企拓岗专项行动",
+    "listPublishDate": "2026-01-27",
+    "sourceOrder": 472
+  }
+}

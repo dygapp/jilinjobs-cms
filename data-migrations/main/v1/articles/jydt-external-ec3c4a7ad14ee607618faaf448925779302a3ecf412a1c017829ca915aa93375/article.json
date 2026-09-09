@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ec3c4a7ad14ee607618faaf448925779302a3ecf412a1c017829ca915aa93375",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/uwLNmsqcFxDaR4emfkxb7A",
+    "url": "https://mp.weixin.qq.com/s/uwLNmsqcFxDaR4emfkxb7A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "明确岗位拓展与精准帮扶 凝聚合力保就业提质|长春早期教育职业学院召开2026届毕业生就业工作部署会",
+    "source": "",
+    "publishDate": "2025-11-05",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/uwLNmsqcFxDaR4emfkxb7A"
+  },
+  "resources": [],
+  "sourceFingerprint": "e75aa82e5cde7bbb8da833a1b06d96de2f74413c797421c4953be7a7f2cf5fc0",
+  "evidence": {
+    "listPage": 63,
+    "listTitle": "明确岗位拓展与精准帮扶 凝聚合力保就业提质|长春早期教育职业学院召开2026届毕业生就业工作部署会",
+    "listPublishDate": "2025-11-05",
+    "sourceOrder": 625
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a8413d647122e76db888ccbd98f4b6503cb68f5ded342cb85d069aa1f502a8dc",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xrSSqlLRqHytdWJtzkUaiw",
+    "url": "https://mp.weixin.qq.com/s/xrSSqlLRqHytdWJtzkUaiw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深耕访企拓岗 深化产教融合——四平职业大学赴长春多家企业开展访企拓岗活动",
+    "source": "",
+    "publishDate": "2026-07-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xrSSqlLRqHytdWJtzkUaiw"
+  },
+  "resources": [],
+  "sourceFingerprint": "833cfe9823cab3dfba741847e03a96bcf6e47f029e9902719abf5d420fb32c69",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "深耕访企拓岗 深化产教融合——四平职业大学赴长春多家企业开展访企拓岗活动",
+    "listPublishDate": "2026-07-09",
+    "sourceOrder": 53
+  }
+}

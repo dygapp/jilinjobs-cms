@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120724",
+    "contentId": "28737783120724",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120724"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于遴选吉林省高校就业创业教育教师高端培训人员的通知",
+    "source": "",
+    "publishDate": "2016-08-29",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于遴选吉林省高校就业创业教育教师高端培训人员的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2016-8-29 8:56:28</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center;\"><img title=\"1.jpg\" src=\"migration-resource://4eb4bfa12348a382c8418026b1f4bb03b6d54a91a150da15eaee60e8b160f66c\"></p><p style=\"text-align: center;\"><img title=\"2.jpg\" src=\"migration-resource://299c360c22930cbe00cbe1efc3db576c1a8c404a56cec52abb438e79d153ca83\"></p><p style=\"text-align: center;\"><img title=\"3.jpg\" src=\"migration-resource://229b4d188a4e7212309a8a6e72d76605801160014c6964bbfb34de69eee8ad14\"></p><p style=\"text-align: center;\"><img title=\"4.jpg\" src=\"migration-resource://7857e0f430a0ef15a5d78536cea9b616b591102012570927f7f08906f55a9062\"></p><p style=\"text-align: center;\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360805794026100004793922.jpg",
+      "originalReference": "/chistory/cms/imgs/6360805794026100004793922.jpg",
+      "token": "migration-resource://4eb4bfa12348a382c8418026b1f4bb03b6d54a91a150da15eaee60e8b160f66c",
+      "snapshotPath": "assets/4eb4bfa12348a382c8418026b1f4bb03b6d54a91a150da15eaee60e8b160f66c.jpg",
+      "sha256": "4eb4bfa12348a382c8418026b1f4bb03b6d54a91a150da15eaee60e8b160f66c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 104510
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360805794171412501251584.jpg",
+      "originalReference": "/chistory/cms/imgs/6360805794171412501251584.jpg",
+      "token": "migration-resource://299c360c22930cbe00cbe1efc3db576c1a8c404a56cec52abb438e79d153ca83",
+      "snapshotPath": "assets/299c360c22930cbe00cbe1efc3db576c1a8c404a56cec52abb438e79d153ca83.jpg",
+      "sha256": "299c360c22930cbe00cbe1efc3db576c1a8c404a56cec52abb438e79d153ca83",
+      "contentType": "image/jpeg",
+      "sizeBytes": 64879
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360805794308912504264847.jpg",
+      "originalReference": "/chistory/cms/imgs/6360805794308912504264847.jpg",
+      "token": "migration-resource://229b4d188a4e7212309a8a6e72d76605801160014c6964bbfb34de69eee8ad14",
+      "snapshotPath": "assets/229b4d188a4e7212309a8a6e72d76605801160014c6964bbfb34de69eee8ad14.jpg",
+      "sha256": "229b4d188a4e7212309a8a6e72d76605801160014c6964bbfb34de69eee8ad14",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90589
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360805794318287509534835.jpg",
+      "originalReference": "/chistory/cms/imgs/6360805794318287509534835.jpg",
+      "token": "migration-resource://7857e0f430a0ef15a5d78536cea9b616b591102012570927f7f08906f55a9062",
+      "snapshotPath": "assets/7857e0f430a0ef15a5d78536cea9b616b591102012570927f7f08906f55a9062.jpg",
+      "sha256": "7857e0f430a0ef15a5d78536cea9b616b591102012570927f7f08906f55a9062",
+      "contentType": "image/jpeg",
+      "sizeBytes": 64174
+    }
+  ],
+  "sourceFingerprint": "e13b0ed100f2dae7e8aa7c1ef62a5732293a3011c9cb957d8e5d8cb59966ea40",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "关于遴选吉林省高校就业创业教育教师高端培训人员的通知",
+    "listPublishDate": "2016-08-29",
+    "sourceOrder": 244,
+    "detailPublishDate": "2016-08-29"
+  }
+}

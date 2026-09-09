@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f82ea1127b8d701abb40fd299ec51f30b7ef2ed2c8b0298c6e42c2f24bb414a9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/x0fEb6QoFjicfFAWKw9ydQ",
+    "url": "https://mp.weixin.qq.com/s/x0fEb6QoFjicfFAWKw9ydQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业科技学院与江苏吴江东太湖度假区及横扇街道签署合作协议",
+    "source": "",
+    "publishDate": "2026-01-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/x0fEb6QoFjicfFAWKw9ydQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "91d6c32aeef593437e20a8b4a2f225cf98e574a553677aca93f13b4993f55c99",
+  "evidence": {
+    "listPage": 48,
+    "listTitle": "吉林农业科技学院与江苏吴江东太湖度假区及横扇街道签署合作协议",
+    "listPublishDate": "2026-01-26",
+    "sourceOrder": 477
+  }
+}

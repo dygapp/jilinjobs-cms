@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120612",
+    "contentId": "28737783120612",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120612"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发《关于举办2014年大学生创业指导服务国际学术研讨会的通知》的通知",
+    "source": "",
+    "publishDate": "2014-11-26",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发《关于举办2014年大学生创业指导服务国际学术研讨会的通知》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:    发布时间:2014-11-26 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p>&nbsp;</p><p style=\"text-align:center\"><img title=\"20141125_103700.jpg\" style=\"float: none;\" src=\"http://www.jilinjobs.cn:80//upload/6355258992794326057658953.jpg\"></p><p style=\"text-align:center\"><img title=\"20141125_133921.jpg\" style=\"float: none;\" src=\"http://www.jilinjobs.cn:80//upload/6355258992800126382172278.jpg\"></p><p></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        <a href=\"../Common/DownLoadFile.aspx?fileid=00df8c3c-b750-47e6-ab92-0fe305d4314a\">附件《关于举办2014年大学生创业指导服务国际学术研讨会的通知》.zip</a><br>\n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "c81c8956e0c7c83f24d2e2ddfd4ad90b75d3447f6f40933ac27e8cb3c9d5f7f1",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "转发《关于举办2014年大学生创业指导服务国际学术研讨会的通知》的通知",
+    "listPublishDate": "2014-11-26",
+    "sourceOrder": 291,
+    "detailPublishDate": "2014-11-26"
+  }
+}

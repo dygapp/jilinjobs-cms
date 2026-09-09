@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:175832536465408",
+    "contentId": "175832536465408",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=175832536465408"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春中医药大学召开就业工作推进会",
+    "source": "长春中医药大学",
+    "publishDate": "2023-03-31",
+    "bodyHtml": "\n                        <p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">3</span></span></span><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">月8日，长春中医药大学召开2023年就业工作推进会，学校党委副书记潘正岩出席会议并讲话。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">会上，潘正岩结合政府工作报告分析了2023年就业工作面临的严峻形势，强调做好毕业生就业工作的重要性，要多措并举将就业工作做实、做细，促进毕业生更加充分、更高质量就业。潘正岩提出三项具体要求：一是要将就业工作校院两级“一把手”工程落到实处，制定工作计划，结合专业特点和毕业生需求聚焦重点地区、重点单位、重点人群，强化联合协作，精准开展校院两级访企拓岗，形成全员抓就业的工作格局，加大留省就业工作力度，丰富校园招聘等活动；二是要将毕业生就业意向调研落到实处，各学院要针对未就业毕业生进行全面摸底排查，了解毕业生就业预期，掌握具体情况，做到精准服务；三是要将招生—培养—就业联动机制落到实处，将各专业就业率、就业质量作为专业招生计划设置的重要依据，科学制定招生计划，提高人才培养质量，培养符合社会需要的中医药人才。</span></span></span></span></span></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">招生与就业处、研究生工作部负责人通报了2023届毕业生就业工作进展情况，传达了国家、吉林省有关就业工作会议精神，并做出具体安排部署；各学院分管就业工作的书记、副书记、副院长分别汇报了2023届毕业生就业工作进展情况、存在的问题和工作举措。</span></span></span></span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"380\" src=\"migration-resource://1abc1c190d8eb0fdc7c3096d52c559fa53fac0c050876d11f8167d474bf3a40c\" width=\"650\"></p>\n\n<p style=\"text-align:justify\"><span style=\"font-size:10.5pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\"><span style=\"font-size:12.0pt\"><span style=\"font-family:宋体\"><span style=\"color:black\">招生与就业处、研究生工作部负责人及相关人员，各学院分管就业工作书记、副书记、副院长，全体毕业班辅导员及就业工作秘书参加了会议。</span></span></span></span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-08-29/c15ae4e2-fe0c-42da-88ec-c6a72534d857.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-08-29/c15ae4e2-fe0c-42da-88ec-c6a72534d857.jpg",
+      "token": "migration-resource://1abc1c190d8eb0fdc7c3096d52c559fa53fac0c050876d11f8167d474bf3a40c",
+      "snapshotPath": "assets/1abc1c190d8eb0fdc7c3096d52c559fa53fac0c050876d11f8167d474bf3a40c.jpg",
+      "sha256": "1abc1c190d8eb0fdc7c3096d52c559fa53fac0c050876d11f8167d474bf3a40c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 107757
+    }
+  ],
+  "sourceFingerprint": "899cc61ad9edf84e54a4184523e4f48fa8b9003ba40a69dbf0db3ec2b7733596",
+  "evidence": {
+    "listPage": 115,
+    "listTitle": "长春中医药大学召开就业工作推进会",
+    "listPublishDate": "2023-03-31",
+    "sourceOrder": 1144,
+    "detailPublishDate": "2023-03-31"
+  }
+}

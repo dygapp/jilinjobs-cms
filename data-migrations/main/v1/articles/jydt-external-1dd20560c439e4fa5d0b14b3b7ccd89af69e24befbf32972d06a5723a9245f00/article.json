@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1dd20560c439e4fa5d0b14b3b7ccd89af69e24befbf32972d06a5723a9245f00",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Dhj39u-i0hRP0wcuWgLFKw",
+    "url": "https://mp.weixin.qq.com/s/Dhj39u-i0hRP0wcuWgLFKw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林通用航空职业技术学院党委书记王洪福带队赴京蒙开展航空企业访企拓岗专项调研",
+    "source": "",
+    "publishDate": "2026-08-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Dhj39u-i0hRP0wcuWgLFKw"
+  },
+  "resources": [],
+  "sourceFingerprint": "b7b88b2086b0ac276eb546c0eefc2b8ccdd8132688136373a0942581c7954e77",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "吉林通用航空职业技术学院党委书记王洪福带队赴京蒙开展航空企业访企拓岗专项调研",
+    "listPublishDate": "2026-08-04",
+    "sourceOrder": 26
+  }
+}

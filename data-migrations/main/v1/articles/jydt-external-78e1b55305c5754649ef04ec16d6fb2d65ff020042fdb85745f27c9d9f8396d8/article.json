@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:78e1b55305c5754649ef04ec16d6fb2d65ff020042fdb85745f27c9d9f8396d8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/g73drnvjrPsPMMRup7Vq2Q",
+    "url": "https://mp.weixin.qq.com/s/g73drnvjrPsPMMRup7Vq2Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力扩容提质 赋能就业成才 | 吉林外国语大学举办2026届毕业生春季双选会",
+    "source": "",
+    "publishDate": "2026-06-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/g73drnvjrPsPMMRup7Vq2Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "8d04e60b01c694a25961203280cc3a96e5bb5b207d095ec8eb9f2ed462731831",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "聚力扩容提质 赋能就业成才 | 吉林外国语大学举办2026届毕业生春季双选会",
+    "listPublishDate": "2026-06-01",
+    "sourceOrder": 118
+  }
+}

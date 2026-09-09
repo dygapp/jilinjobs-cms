@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:3af8ab67cadf6db235a8d7d322bdcc4ce91c066fb5625bec71b50fc333bf59c4",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/y-BmlBnKWmXF6kX887pH3A",
+    "url": "https://mp.weixin.qq.com/s/y-BmlBnKWmXF6kX887pH3A"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 ‘就’在吉林”吉林农业科技学院2024届毕业生春季校园招聘会邀请函",
+    "source": "",
+    "publishDate": "2024-05-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/y-BmlBnKWmXF6kX887pH3A"
+  },
+  "resources": [],
+  "sourceFingerprint": "50b27f0902619edf32656d4e1d84ca3b4527d094c6bc8c08340419dc29303ece",
+  "evidence": {
+    "listPage": 28,
+    "listTitle": "“创业奋斗 ‘就’在吉林”吉林农业科技学院2024届毕业生春季校园招聘会邀请函",
+    "listPublishDate": "2024-05-10",
+    "sourceOrder": 277
+  }
+}

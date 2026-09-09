@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123216",
+    "contentId": "28737783123216",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123216"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "11月9日中关村人才市场高级人才双选会",
+    "source": "",
+    "publishDate": "2009-11-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">11月9日中关村人才市场高级人才双选会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-11-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font color=\"#444444\" size=\"2\">时间：2009年11月9日9：00至12：00</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;</font></p> <p><font color=\"#444444\" size=\"2\">地点：乘坐740（外环）、751、469、619、121、355、508、664、913、851、952、996、982、992、983支、运通109、运通101、运通113、运通114、运通118，四季青桥北站下车，四季青桥西北角即到；或乘坐347、469、689、489、特10、运通110、运通115、电车114，四季青桥东站下车，四季青桥西北角即到。</font></p> <p><font color=\"#444444\" size=\"2\">&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "1cbc1112adac14cde0ce78c44878142de1ccdb2b3c89beddbc68903ee172caf2",
+  "evidence": {
+    "listPage": 51,
+    "listTitle": "11月9日中关村人才市场高级人才双选会",
+    "listPublishDate": "2009-11-04",
+    "sourceOrder": 502,
+    "detailPublishDate": "2009-11-04"
+  }
+}

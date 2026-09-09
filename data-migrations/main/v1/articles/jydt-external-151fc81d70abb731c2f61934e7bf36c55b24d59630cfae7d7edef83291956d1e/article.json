@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:151fc81d70abb731c2f61934e7bf36c55b24d59630cfae7d7edef83291956d1e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/NKALQQ3IOJSj4tRbqeByhA",
+    "url": "https://mp.weixin.qq.com/s/NKALQQ3IOJSj4tRbqeByhA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "梅河口康美职业技术学院召开2026届毕业生就业工作统筹部署与任务落实会暨校企合作助理岗位开发工作推进会",
+    "source": "",
+    "publishDate": "2025-11-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/NKALQQ3IOJSj4tRbqeByhA"
+  },
+  "resources": [],
+  "sourceFingerprint": "90812fe0ba484243d2bb9097906f725ca2281a120abbe923a99420ca90c3d5b8",
+  "evidence": {
+    "listPage": 62,
+    "listTitle": "梅河口康美职业技术学院召开2026届毕业生就业工作统筹部署与任务落实会暨校企合作助理岗位开发工作推进会",
+    "listPublishDate": "2025-11-06",
+    "sourceOrder": 617
+  }
+}

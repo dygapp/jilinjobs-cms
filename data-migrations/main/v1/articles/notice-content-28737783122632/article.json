@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122632",
+    "contentId": "28737783122632",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122632"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办“梦想杯”2014吉林省大学生创业大赛颁奖典礼的通知",
+    "source": "",
+    "publishDate": "2014-10-27",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办“梦想杯”2014吉林省大学生创业大赛颁奖典礼的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:     发布时间:2014-10-27 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center;\">&nbsp;</p><p style=\"text-align:center\"><img title=\"文件第一页.jpg\" style=\"float: none;\" src=\"http://www.jilinjobs.cn:80//upload/6355001446286908428796131.jpg\"></p><p style=\"text-align:center\"><img title=\"文件第二页.jpg\" src=\"http://www.jilinjobs.cn:80//upload/6355001446291508693810224.jpg\"></p><p style=\"text-align:center\"><img title=\"附件一（1）.jpg\" style=\"float: none;\" src=\"http://www.jilinjobs.cn:80//upload/6355001588564246227006745.jpg\"></p><p style=\"text-align:center\"><img title=\"附件一（2）.jpg\" style=\"float: none;\" src=\"http://www.jilinjobs.cn:80//upload/6355001588565546307006745.jpg\"></p><p style=\"text-align:center\"><img title=\"附件二.jpg\" style=\"float: none;\" src=\"http://www.jilinjobs.cn:80//upload/6355001588567946435250082.jpg\"></p><p style=\"text-align:center\"><img title=\"附件三（1）.jpg\" style=\"float: none;\" src=\"http://www.jilinjobs.cn:80//upload/6355001588571346633493419.jpg\"></p><p style=\"text-align:center\"><img title=\"附件三（2）.jpg\" style=\"float: none;\" src=\"http://www.jilinjobs.cn:80//upload/6355001588576546937507511.jpg\"></p><p style=\"text-align: center;\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "ec0698a543628648f955e4fb92e85ac28cb56a20f9cd4da432b993be8bdcfa18",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "关于举办“梦想杯”2014吉林省大学生创业大赛颁奖典礼的通知",
+    "listPublishDate": "2014-10-27",
+    "sourceOrder": 296,
+    "detailPublishDate": "2014-10-27"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783123028",
+    "contentId": "28737783123028",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123028"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于召开普通高校预征工作和专升本教育考前动员会的通知",
+    "source": "",
+    "publishDate": "2011-04-13",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于召开普通高校预征工作和专升本教育考前动员会的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-4-13 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img height=\"820\" src=\"migration-resource://e9dae22ce8df7bf75a76db65a89b9dc7e1586732ae2efc17ebcd31c4f5664178\" width=\"615\" border=\"0\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110413111824342.jpg",
+      "originalReference": "/chistory/cms/imgs/20110413111824342.jpg",
+      "token": "migration-resource://e9dae22ce8df7bf75a76db65a89b9dc7e1586732ae2efc17ebcd31c4f5664178",
+      "snapshotPath": "assets/e9dae22ce8df7bf75a76db65a89b9dc7e1586732ae2efc17ebcd31c4f5664178.jpg",
+      "sha256": "e9dae22ce8df7bf75a76db65a89b9dc7e1586732ae2efc17ebcd31c4f5664178",
+      "contentType": "image/jpeg",
+      "sizeBytes": 69773
+    }
+  ],
+  "sourceFingerprint": "029d7f63e561d1d928deca69e84634aef5b25568548251f59f8e885d520d3c82",
+  "evidence": {
+    "listPage": 45,
+    "listTitle": "关于召开普通高校预征工作和专升本教育考前动员会的通知",
+    "listPublishDate": "2011-04-13",
+    "sourceOrder": 445,
+    "detailPublishDate": "2011-04-13"
+  }
+}

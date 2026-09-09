@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:9ea12fc84e703c0994493f1782dc324bd990ea3218a47ce3e0a934e43059c04f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/1Le7AYUP5KLEKed9bd8ybw",
+    "url": "https://mp.weixin.qq.com/s/1Le7AYUP5KLEKed9bd8ybw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工业职业技术学院举行校企合作“梅花订单班”开班仪式",
+    "source": "",
+    "publishDate": "2026-03-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1Le7AYUP5KLEKed9bd8ybw"
+  },
+  "resources": [],
+  "sourceFingerprint": "b3d773bf5eebc0b057a72dde4f0c0e633e4deba59061776dd976164f647f0993",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "吉林工业职业技术学院举行校企合作“梅花订单班”开班仪式",
+    "listPublishDate": "2026-03-26",
+    "sourceOrder": 362
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:573f71654cf33d6090885bac52e3bf77a0a5dc22feb1eabc43c9d8329997e42a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/sqr4-OZffkc1_sh7rIT8Gw",
+    "url": "https://mp.weixin.qq.com/s/sqr4-OZffkc1_sh7rIT8Gw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学举行服务吉林高质量发展应用型人才招聘会（师范类专场）暨长春师范大学2025届毕业生春季双选会",
+    "source": "",
+    "publishDate": "2025-05-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/sqr4-OZffkc1_sh7rIT8Gw"
+  },
+  "resources": [],
+  "sourceFingerprint": "d6f6cdd4fecc104524d0e7989f085182b85e483217a18cb7915196a0829124d6",
+  "evidence": {
+    "listPage": 91,
+    "listTitle": "长春师范大学举行服务吉林高质量发展应用型人才招聘会（师范类专场）暨长春师范大学2025届毕业生春季双选会",
+    "listPublishDate": "2025-05-12",
+    "sourceOrder": 905
+  }
+}

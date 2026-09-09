@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86133593620480",
+    "contentId": "86133593620480",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86133593620480"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "东北师范大学开展“2022届毕业生就业促进行动”",
+    "source": "东北师范大学",
+    "publishDate": "2022-04-12",
+    "bodyHtml": "\n                        <p>2022年3月，面对突如其来的新冠肺炎疫情，东北师范大学迅速反应、主动应战，严格落实“一把手工程”，第一时间启动就业工作应急预案，每周召开疫情防控工作领导小组会议，分析研判、部署推进就业工作，大力开展“2022届毕业生就业促进行动”，与时间赛跑、同疫情竞速，千方百计打赢“稳就业”“保就业”攻坚战。</p>\n\n<p>确保网络招聘不打烊。学校组建用人单位线上邀约专班，每天挂图作战，12个小时不间断联络用人单位，戮力同心，抢占就业工作市场先机。开展“网络直播带岗”，在线推荐岗位，组织31场空中宣讲会，发布就业岗位4780个。研发“线上双选会系统”，召开教育类专场招聘会、应用型人才专场招聘会、环境类专场招聘会，发布就业岗位7500余个，吸引了2000多名2022届毕业生参会，其中近700人与用人单位达成了就业意向，全力打造就业工作“免疫模式”。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"945\" src=\"migration-resource://16dc9ac6c008b11785f0aae39d20dca8d8ea504bacbd5d86e96e5c403f251d1f\" width=\"531\"><img alt=\"\" height=\"946\" src=\"migration-resource://63ceedd6e038007d07c9dff2e173bbeeddaac3230f8f53109df0e763f0669fb4\" width=\"531\"></p>\n\n<p>确保就业服务不断线。静态管理期间，学校利用“就业智慧大脑”平台，综合分析学生就业意向、网络痕迹、薪资预期，精准识别就业需求，开展就业信息“精选推送”工作，对海量就业信息进行甄别遴选，每天定时为毕业生推送招聘信息150条。利用自主研发的“试讲吧”网络试讲平台和“网络签约平台”，实现用人单位与学生线上互动、宣讲、面试、试讲、签约一站式服务，让就业服务更有力度。</p>\n\n<p>确保帮扶指导不停歇。学校针对2022届未就业毕业生开展全面摸排，重点筛查低收入家庭和少数民族等重点毕业生群体421人，一对一建立帮扶台账，启动“就业齐飞计划”；开通《东师就业微课堂》、金牌名师在线预约咨询等特色活动，围绕“坚定职业理想信念”“就业形势分析与机会把握”“求职礼仪与网上面试”“权益维护与心态调整”等主题组织就业指导系列讲座，引导学生树立扎根基层、终身从教的职业理想，切实提高学生职业素养。</p>\n\n<p>同时，学校还充分利用“教育部24365”“国聘行动”“吉林省高校就业创业系列直播课”等就业平台，积极开展各类就业促进活动，全力保障2022届毕业生顺利就业。</p>\n\n<p><strong>（东北师范大学 赵心蕊）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/9eb4a91c-a7d9-4596-98f8-d59c9537f557.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/9eb4a91c-a7d9-4596-98f8-d59c9537f557.jpg",
+      "token": "migration-resource://16dc9ac6c008b11785f0aae39d20dca8d8ea504bacbd5d86e96e5c403f251d1f",
+      "snapshotPath": "assets/16dc9ac6c008b11785f0aae39d20dca8d8ea504bacbd5d86e96e5c403f251d1f.jpg",
+      "sha256": "16dc9ac6c008b11785f0aae39d20dca8d8ea504bacbd5d86e96e5c403f251d1f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82103
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/862db1a1-eb54-417c-abec-09857fb5ba37.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/862db1a1-eb54-417c-abec-09857fb5ba37.jpg",
+      "token": "migration-resource://63ceedd6e038007d07c9dff2e173bbeeddaac3230f8f53109df0e763f0669fb4",
+      "snapshotPath": "assets/63ceedd6e038007d07c9dff2e173bbeeddaac3230f8f53109df0e763f0669fb4.jpg",
+      "sha256": "63ceedd6e038007d07c9dff2e173bbeeddaac3230f8f53109df0e763f0669fb4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 107532
+    }
+  ],
+  "sourceFingerprint": "f2deb980d61b9355b534656e40d40fb236be904c6be54d8a3f3fa21ff664d335",
+  "evidence": {
+    "listPage": 122,
+    "listTitle": "东北师范大学开展“2022届毕业生就业促进行动”",
+    "listPublishDate": "2022-04-12",
+    "sourceOrder": 1217,
+    "detailPublishDate": "2022-04-12"
+  }
+}

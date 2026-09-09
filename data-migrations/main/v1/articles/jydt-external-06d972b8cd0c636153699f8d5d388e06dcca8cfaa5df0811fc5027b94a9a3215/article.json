@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:06d972b8cd0c636153699f8d5d388e06dcca8cfaa5df0811fc5027b94a9a3215",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/-Gql12U8YBstlzvfQB-WZg",
+    "url": "https://mp.weixin.qq.com/s/-Gql12U8YBstlzvfQB-WZg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院副校长张代治一行参加大连市普兰店区东北高校产教融合对接考察活动",
+    "source": "",
+    "publishDate": "2026-03-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/-Gql12U8YBstlzvfQB-WZg"
+  },
+  "resources": [],
+  "sourceFingerprint": "892e0d7de7d6047326108591df70c45d5a24cb09bda20f80ecd1b6b633c18fc0",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "长春科技学院副校长张代治一行参加大连市普兰店区东北高校产教融合对接考察活动",
+    "listPublishDate": "2026-03-19",
+    "sourceOrder": 396
+  }
+}

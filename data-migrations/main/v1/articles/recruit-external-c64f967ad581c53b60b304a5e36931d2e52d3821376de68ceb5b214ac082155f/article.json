@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:c64f967ad581c53b60b304a5e36931d2e52d3821376de68ceb5b214ac082155f",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/EwCimcRaI-7aoU7cO7V2Sg",
+    "url": "https://mp.weixin.qq.com/s/EwCimcRaI-7aoU7cO7V2Sg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省气象局2021年应届毕业生招聘信息",
+    "source": "",
+    "publishDate": "2020-11-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/EwCimcRaI-7aoU7cO7V2Sg"
+  },
+  "resources": [],
+  "sourceFingerprint": "84925c51bae1a9d5b4f10909b2c47f35769312180e6d0cd7164d412bba131a89",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "吉林省气象局2021年应届毕业生招聘信息",
+    "listPublishDate": "2020-11-27",
+    "sourceOrder": 361
+  }
+}

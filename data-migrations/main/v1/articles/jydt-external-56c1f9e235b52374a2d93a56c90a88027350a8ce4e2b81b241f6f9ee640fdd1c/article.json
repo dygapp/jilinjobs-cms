@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:56c1f9e235b52374a2d93a56c90a88027350a8ce4e2b81b241f6f9ee640fdd1c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/vHKDiXsE8DDkrR9w3GZuhw",
+    "url": "https://mp.weixin.qq.com/s/vHKDiXsE8DDkrR9w3GZuhw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "松原职业技术学院院长王文奎带队开展“优企引才”定向访企拓岗促就业专项行动 —— 精准对接地方产业 访企拓岗架起就业连心桥",
+    "source": "",
+    "publishDate": "2026-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vHKDiXsE8DDkrR9w3GZuhw"
+  },
+  "resources": [],
+  "sourceFingerprint": "11d3bf4ee3bc0ee7097a38d543503d604e9cc0f7189981b875b8eb548610a1b0",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "松原职业技术学院院长王文奎带队开展“优企引才”定向访企拓岗促就业专项行动 —— 精准对接地方产业 访企拓岗架起就业连心桥",
+    "listPublishDate": "2026-03-27",
+    "sourceOrder": 351
+  }
+}

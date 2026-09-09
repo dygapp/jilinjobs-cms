@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b8223debfdebd0ce48dcb33db0e096e09b8e34f6cabff4a113a4957485c6d98e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/DL9IShwqDQKbfejEZJ8dIg",
+    "url": "https://mp.weixin.qq.com/s/DL9IShwqDQKbfejEZJ8dIg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林外国语大学开展校企合作走访调研活动",
+    "source": "",
+    "publishDate": "2026-08-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DL9IShwqDQKbfejEZJ8dIg"
+  },
+  "resources": [],
+  "sourceFingerprint": "6253967d29967e9222b5ae1358c6b8234ff8d5fb6645e9b1a7811d967e7d255f",
+  "evidence": {
+    "listPage": 3,
+    "listTitle": "吉林外国语大学开展校企合作走访调研活动",
+    "listPublishDate": "2026-08-04",
+    "sourceOrder": 29
+  }
+}

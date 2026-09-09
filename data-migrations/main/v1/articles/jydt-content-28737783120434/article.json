@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120434",
+    "contentId": "28737783120434",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120434"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "安徽：大力促进高校毕业生就业",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">安徽：大力促进高校毕业生就业</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 3月27日，省政府召开全省普通高校毕业生就业工作电视电话会议，副省长谢广祥出席会议并讲话。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 谢广祥指出，今年全省高校毕业生人数创历史新高，达到21.5万人。高校毕业生就业工作面临的形势更加严峻，任务更加艰巨，但党和政府的重视程度也前所未有，政策出台的频度之高、力度之大更是前所未有。他强调，各地、各部门要切实将高校毕业生就业工作摆在就业工作的首位，坚持政府促进就业，抓项目带动，广开就业门路，强化保障措施，落实好国家促进就业的优惠政策；要坚持市场调节就业，加强各级人才市场建设，开辟省外就业市场，严抓市场监管；要引导毕业生自主择业，帮助学生转变观念，提高就业能力，扶持自主创业；要坚持多渠道缓冲就业，完善高校毕业生见习制度，鼓励科研单位聘用毕业生，拓宽毕业生深造渠道。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 谢广祥要求，各地、各部门要切实加强领导，层层分解就业目标任务，建立健全目标责任体系，完善工作调度机制。要密切关注就业形势的变化，建立健全应对紧急情况突发事件的应急预案。要把党和政府的好政策有效传递到每一个毕业生，更多地让学生看到希望，树立信心。要加强舆论引导，营造全社会共同关心和促进高校毕业生多渠道就业的良好氛围。要千方百计促进高校毕业生就业。<br>&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "d1dfb4d178f18ed08eca47de8554eef5fd440e3be73f7bf754b66a4a7ba773b2",
+  "evidence": {
+    "listPage": 194,
+    "listTitle": "安徽：大力促进高校毕业生就业",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1933,
+    "detailPublishDate": "2009-04-04"
+  }
+}

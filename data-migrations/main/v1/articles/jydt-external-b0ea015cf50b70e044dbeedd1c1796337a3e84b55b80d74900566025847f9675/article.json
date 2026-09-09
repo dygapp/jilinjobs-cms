@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b0ea015cf50b70e044dbeedd1c1796337a3e84b55b80d74900566025847f9675",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Z7Y5qTILyrA1l37sv4HrHw",
+    "url": "https://mp.weixin.qq.com/s/Z7Y5qTILyrA1l37sv4HrHw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“师道薪火 育见未来”——四平现代职业学院成功举办2025届毕业生就业洽谈会",
+    "source": "",
+    "publishDate": "2025-06-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Z7Y5qTILyrA1l37sv4HrHw"
+  },
+  "resources": [],
+  "sourceFingerprint": "e8122d6a9a66a89a1119ed900757ca325505021e756805212da250aabc0367df",
+  "evidence": {
+    "listPage": 77,
+    "listTitle": "“师道薪火 育见未来”——四平现代职业学院成功举办2025届毕业生就业洽谈会",
+    "listPublishDate": "2025-06-27",
+    "sourceOrder": 765
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:179478468788224",
+    "contentId": "179478468788224",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=179478468788224"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省高校2024届毕业生应用型人才专场招聘会参会通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2023-09-18",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"881\" src=\"migration-resource://e1bf8262a81cee503b227951a75a61647f8886b73cdf6ec33519f4ccea4cc258\" width=\"757\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-18/2f18c804-5b90-4436-b5b5-876e8dee2c54.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-18/2f18c804-5b90-4436-b5b5-876e8dee2c54.jpg",
+      "token": "migration-resource://e1bf8262a81cee503b227951a75a61647f8886b73cdf6ec33519f4ccea4cc258",
+      "snapshotPath": "assets/e1bf8262a81cee503b227951a75a61647f8886b73cdf6ec33519f4ccea4cc258.jpg",
+      "sha256": "e1bf8262a81cee503b227951a75a61647f8886b73cdf6ec33519f4ccea4cc258",
+      "contentType": "image/jpeg",
+      "sizeBytes": 66878
+    }
+  ],
+  "sourceFingerprint": "c6379a55d20ffe24a19654bb91f0fe6aec2dbb14e032df478adc78e395b88d70",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "吉林省高校2024届毕业生应用型人才专场招聘会参会通知",
+    "listPublishDate": "2023-09-18",
+    "sourceOrder": 310,
+    "detailPublishDate": "2023-09-18"
+  }
+}

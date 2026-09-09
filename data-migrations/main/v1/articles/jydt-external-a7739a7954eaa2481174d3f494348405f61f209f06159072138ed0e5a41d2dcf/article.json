@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a7739a7954eaa2481174d3f494348405f61f209f06159072138ed0e5a41d2dcf",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/7ge762-GkWVwyFiwWmNXpQ",
+    "url": "https://mp.weixin.qq.com/s/7ge762-GkWVwyFiwWmNXpQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春市百万大学生留长工程2024年“五优”服务进校园秋季巡回双选会",
+    "source": "",
+    "publishDate": "2024-09-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/7ge762-GkWVwyFiwWmNXpQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "63e812a1cefbffb2a8484832dd5694f4ca505139f6ba30e685f98d525e568b66",
+  "evidence": {
+    "listPage": 104,
+    "listTitle": "长春市百万大学生留长工程2024年“五优”服务进校园秋季巡回双选会",
+    "listPublishDate": "2024-09-18",
+    "sourceOrder": 1036
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123156",
+    "contentId": "28737783123156",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123156"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省退役大学生士兵报考公务员政策",
+    "source": "",
+    "publishDate": "2014-05-28",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省退役大学生士兵报考公务员政策</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2014-5-28 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><span lang=\"EN-US\" style=\"FONT-SIZE: 10.5pt; FONT-FAMILY: SimHei; mso-font-kerning: 1.0pt; mso-hansi-font-family: Calibri; mso-bidi-font-size: 11.0pt; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA; mso-no-proof: yes\"><!--?xml:namespace prefix = v ns = \"urn:schemas-microsoft-com:vml\" /--><v:shapetype id=\"_x0000_t75\" stroked=\"f\" filled=\"f\" path=\"m@4@5l@4@11@9@11@9@5xe\" o:preferrelative=\"t\" o:spt=\"75\" coordsize=\"21600,21600\">&nbsp; <p align=\"center\"><img src=\"migration-resource://eeaedc6708a6cd6e336c467219967c40503ecf5a573b436627145d3496bd4c3c\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://7384171f5bfcfaa75e2651e5e2bf63126e2234acc53b3bb9e0f8becb0a048001\" border=\"0\"></p><v:stroke joinstyle=\"miter\"></v:stroke><v:formulas><v:f eqn=\"if lineDrawn pixelLineWidth 0\"></v:f><v:f eqn=\"sum @0 1 0\"></v:f><v:f eqn=\"sum 0 0 @1\"></v:f><v:f eqn=\"prod @2 1 2\"></v:f><v:f eqn=\"prod @3 21600 pixelWidth\"></v:f><v:f eqn=\"prod @3 21600 pixelHeight\"></v:f><v:f eqn=\"sum @0 0 1\"></v:f><v:f eqn=\"prod @6 1 2\"></v:f><v:f eqn=\"prod @7 21600 pixelWidth\"></v:f><v:f eqn=\"sum @8 21600 0\"></v:f><v:f eqn=\"prod @7 21600 pixelHeight\"></v:f><v:f eqn=\"sum @10 21600 0\"></v:f></v:formulas><v:path o:connecttype=\"rect\" gradientshapeok=\"t\" o:extrusionok=\"f\"></v:path><!--?xml:namespace prefix = o ns = \"urn:schemas-microsoft-com:office:office\" /--><o:lock aspectratio=\"t\" v:ext=\"edit\"></o:lock></v:shapetype></span></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140528024635318.jpg",
+      "originalReference": "/chistory/cms/imgs/20140528024635318.jpg",
+      "token": "migration-resource://eeaedc6708a6cd6e336c467219967c40503ecf5a573b436627145d3496bd4c3c",
+      "snapshotPath": "assets/eeaedc6708a6cd6e336c467219967c40503ecf5a573b436627145d3496bd4c3c.jpg",
+      "sha256": "eeaedc6708a6cd6e336c467219967c40503ecf5a573b436627145d3496bd4c3c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 101135
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140528024646824.jpg",
+      "originalReference": "/chistory/cms/imgs/20140528024646824.jpg",
+      "token": "migration-resource://7384171f5bfcfaa75e2651e5e2bf63126e2234acc53b3bb9e0f8becb0a048001",
+      "snapshotPath": "assets/7384171f5bfcfaa75e2651e5e2bf63126e2234acc53b3bb9e0f8becb0a048001.jpg",
+      "sha256": "7384171f5bfcfaa75e2651e5e2bf63126e2234acc53b3bb9e0f8becb0a048001",
+      "contentType": "image/jpeg",
+      "sizeBytes": 74037
+    }
+  ],
+  "sourceFingerprint": "1835a3fbe5fce94a9128683a956022a405e65039d5c51e0eefe05d942a690347",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "吉林省退役大学生士兵报考公务员政策",
+    "listPublishDate": "2014-05-28",
+    "sourceOrder": 419,
+    "detailPublishDate": "2014-05-28"
+  }
+}

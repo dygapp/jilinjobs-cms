@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:158e78d92a542b64c6bf1ba78bc23abcc543f42adc8caea27df15c80d808252c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/engine2/d/11988043/2928739/0",
+    "url": "https://zhjy.jlau.edu.cn/engine2/d/11988043/2928739/0?t=6292904&p=419454&isMobile=1"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业大学党委副书记周春国赴天津市开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-04-28",
+    "bodyHtml": "",
+    "externalUrl": "https://zhjy.jlau.edu.cn/engine2/d/11988043/2928739/0?t=6292904&p=419454&isMobile=1"
+  },
+  "resources": [],
+  "sourceFingerprint": "e2562a0c80dec83967a1f166578ee3cab4b34bcb775201519c73aa524f77cae5",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "吉林农业大学党委副书记周春国赴天津市开展访企拓岗专项行动",
+    "listPublishDate": "2026-04-28",
+    "sourceOrder": 236
+  }
+}

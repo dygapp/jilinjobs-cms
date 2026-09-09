@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:249611e2d42eb2fba8d6e129d0b7f169752a7b1457993b2da6018e9d4b987fd8",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/wNIU09XkrV90qjC7hwgAsg",
+    "url": "https://mp.weixin.qq.com/s/wNIU09XkrV90qjC7hwgAsg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学党委书记杜锐带队赴汪清县访企拓岗",
+    "source": "",
+    "publishDate": "2026-03-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wNIU09XkrV90qjC7hwgAsg"
+  },
+  "resources": [],
+  "sourceFingerprint": "84108a913f141754120d21aa9ee98391d9c2c6877c770aeedc8d786867036cd6",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "延边大学党委书记杜锐带队赴汪清县访企拓岗",
+    "listPublishDate": "2026-03-16",
+    "sourceOrder": 412
+  }
+}

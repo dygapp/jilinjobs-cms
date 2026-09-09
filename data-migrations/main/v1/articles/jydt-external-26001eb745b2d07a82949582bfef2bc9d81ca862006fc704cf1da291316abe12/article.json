@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:26001eb745b2d07a82949582bfef2bc9d81ca862006fc704cf1da291316abe12",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1002/14531.htm",
+    "url": "http://www.jty.edu.cn/info/1002/14531.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林铁道职业技术大学与京东集团产教融合推进会在我校顺利举行",
+    "source": "",
+    "publishDate": "2026-04-03",
+    "bodyHtml": "",
+    "externalUrl": "http://www.jty.edu.cn/info/1002/14531.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "3f1073f2eafe0831b5dc4f17965440f3255c7f4597651a45a829b221e528638d",
+  "evidence": {
+    "listPage": 32,
+    "listTitle": "吉林铁道职业技术大学与京东集团产教融合推进会在我校顺利举行",
+    "listPublishDate": "2026-04-03",
+    "sourceOrder": 320
+  }
+}

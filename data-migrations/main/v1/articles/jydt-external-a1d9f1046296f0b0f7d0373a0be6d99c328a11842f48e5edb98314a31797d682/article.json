@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a1d9f1046296f0b0f7d0373a0be6d99c328a11842f48e5edb98314a31797d682",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/UsEaGSbhB_DatkukYiBOBA",
+    "url": "https://mp.weixin.qq.com/s/UsEaGSbhB_DatkukYiBOBA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春财经学院国际经济贸易学院与吉林省跨境电商孵化园区签约实践基地",
+    "source": "",
+    "publishDate": "2026-03-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/UsEaGSbhB_DatkukYiBOBA"
+  },
+  "resources": [],
+  "sourceFingerprint": "856d84a75411ac805986d9c74a51048b6a3e79787385f5c93ef2781766c5c691",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "长春财经学院国际经济贸易学院与吉林省跨境电商孵化园区签约实践基地",
+    "listPublishDate": "2026-03-25",
+    "sourceOrder": 366
+  }
+}

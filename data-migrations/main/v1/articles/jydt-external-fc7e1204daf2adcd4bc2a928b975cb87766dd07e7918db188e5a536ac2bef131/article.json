@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fc7e1204daf2adcd4bc2a928b975cb87766dd07e7918db188e5a536ac2bef131",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5174.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5174.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学举办2026届毕业生大型秋季招聘会",
+    "source": "",
+    "publishDate": "2025-11-03",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5174.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "fdd105d9886f7d09612007548443568700e700c3bede194de3c83f5b145b13c1",
+  "evidence": {
+    "listPage": 64,
+    "listTitle": "长春工业大学举办2026届毕业生大型秋季招聘会",
+    "listPublishDate": "2025-11-03",
+    "sourceOrder": 640
+  }
+}

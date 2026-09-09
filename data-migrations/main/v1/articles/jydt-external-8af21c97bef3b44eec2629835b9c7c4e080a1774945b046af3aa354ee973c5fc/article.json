@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8af21c97bef3b44eec2629835b9c7c4e080a1774945b046af3aa354ee973c5fc",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/inl_ZNGfT-7JmTlrX9yA3w",
+    "url": "https://mp.weixin.qq.com/s/inl_ZNGfT-7JmTlrX9yA3w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春理工大学党委书记张宝宗带队赴长春市光电类企业访企拓岗",
+    "source": "",
+    "publishDate": "2026-03-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/inl_ZNGfT-7JmTlrX9yA3w"
+  },
+  "resources": [],
+  "sourceFingerprint": "30f0298d22ec2384dfe82efc143e6dac0401c48904ad62742be0130338c6ef2f",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "长春理工大学党委书记张宝宗带队赴长春市光电类企业访企拓岗",
+    "listPublishDate": "2026-03-24",
+    "sourceOrder": 377
+  }
+}

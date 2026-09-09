@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b49fc7a9465797633c45cee7b8bdf615b3dcaea4cfef8a404498fab673a1ff69",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/LmZDd0TQ4uMBSgsqwAOcaw",
+    "url": "https://mp.weixin.qq.com/s/LmZDd0TQ4uMBSgsqwAOcaw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学副校长杨兆武带队赴广东省多地开展访企拓岗专项工作",
+    "source": "",
+    "publishDate": "2026-05-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/LmZDd0TQ4uMBSgsqwAOcaw"
+  },
+  "resources": [],
+  "sourceFingerprint": "18f97bf2335d66195b086dbe4f5ca75a5b26216c522eb6d5d986cc45f42de097",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "北华大学副校长杨兆武带队赴广东省多地开展访企拓岗专项工作",
+    "listPublishDate": "2026-05-07",
+    "sourceOrder": 208
+  }
+}

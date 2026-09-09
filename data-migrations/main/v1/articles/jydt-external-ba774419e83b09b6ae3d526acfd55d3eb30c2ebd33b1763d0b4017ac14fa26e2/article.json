@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ba774419e83b09b6ae3d526acfd55d3eb30c2ebd33b1763d0b4017ac14fa26e2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/BhztYbWNZvoors6L9Jihtw",
+    "url": "https://mp.weixin.qq.com/s/BhztYbWNZvoors6L9Jihtw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学赴广东省开展“筑梦护航，上门荐才”访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-01-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/BhztYbWNZvoors6L9Jihtw"
+  },
+  "resources": [],
+  "sourceFingerprint": "b13b1f3508c8c82780851685470a498b57412fc83e2f9a0c8a1b009ed47e3204",
+  "evidence": {
+    "listPage": 52,
+    "listTitle": "延边大学赴广东省开展“筑梦护航，上门荐才”访企拓岗专项行动",
+    "listPublishDate": "2026-01-04",
+    "sourceOrder": 512
+  }
+}

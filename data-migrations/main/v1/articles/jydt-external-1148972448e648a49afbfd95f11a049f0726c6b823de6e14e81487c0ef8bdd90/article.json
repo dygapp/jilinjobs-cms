@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1148972448e648a49afbfd95f11a049f0726c6b823de6e14e81487c0ef8bdd90",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/vK8DZW15G-QsHL8Xsk8JZw",
+    "url": "https://mp.weixin.qq.com/s/vK8DZW15G-QsHL8Xsk8JZw?scene=1&click_id=4"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林动画学院”访企拓岗\"在行动（二）",
+    "source": "",
+    "publishDate": "2026-04-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vK8DZW15G-QsHL8Xsk8JZw?scene=1&click_id=4"
+  },
+  "resources": [],
+  "sourceFingerprint": "b34579bbf2e4d0c5a29ff53035fbff3767a8df762978ca628a770f2ed859f70f",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "吉林动画学院”访企拓岗\"在行动（二）",
+    "listPublishDate": "2026-04-01",
+    "sourceOrder": 332
+  }
+}

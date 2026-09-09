@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2c967d7c09b703aaba9a997a10f2c206f00ac39a0a365d058e52c709075e5c24",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/iytvhmHFBuYEnOswjtV2cA",
+    "url": "https://mp.weixin.qq.com/s/iytvhmHFBuYEnOswjtV2cA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“赋能青春·筑梦就业” ——吉林省高校毕业生就业创业政策暨校企合作助理政策宣讲会在吉林动画学院顺利召开",
+    "source": "",
+    "publishDate": "2025-12-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/iytvhmHFBuYEnOswjtV2cA"
+  },
+  "resources": [],
+  "sourceFingerprint": "2da5684b479b5705ac3ad4a5f02004b43022bb0d5406c6bb69a91d01a255332f",
+  "evidence": {
+    "listPage": 53,
+    "listTitle": "“赋能青春·筑梦就业” ——吉林省高校毕业生就业创业政策暨校企合作助理政策宣讲会在吉林动画学院顺利召开",
+    "listPublishDate": "2025-12-23",
+    "sourceOrder": 522
+  }
+}

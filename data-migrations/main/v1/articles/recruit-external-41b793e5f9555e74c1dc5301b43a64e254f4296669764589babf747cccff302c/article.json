@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:41b793e5f9555e74c1dc5301b43a64e254f4296669764589babf747cccff302c",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/rhBkYB7evnPUzTgjhRFo_Q",
+    "url": "https://mp.weixin.qq.com/s/rhBkYB7evnPUzTgjhRFo_Q"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业奋斗 ‘就’在吉林”吉林建筑大学2024届毕业生春季招聘会暨吉林省服务“四新设施”建设高校高质量发展联盟成立大会",
+    "source": "",
+    "publishDate": "2024-04-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/rhBkYB7evnPUzTgjhRFo_Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "d0fba597be945fd43e597d68268c8c5d0b9e619bc61cec82463a258d12442ec1",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "“创业奋斗 ‘就’在吉林”吉林建筑大学2024届毕业生春季招聘会暨吉林省服务“四新设施”建设高校高质量发展联盟成立大会",
+    "listPublishDate": "2024-04-17",
+    "sourceOrder": 297
+  }
+}

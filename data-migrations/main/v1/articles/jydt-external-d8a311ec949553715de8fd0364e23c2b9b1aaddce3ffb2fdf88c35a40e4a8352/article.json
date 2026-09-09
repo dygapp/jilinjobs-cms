@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d8a311ec949553715de8fd0364e23c2b9b1aaddce3ffb2fdf88c35a40e4a8352",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/o8ZCtDhaQz6wJN2To0Gf2w",
+    "url": "https://mp.weixin.qq.com/s/o8ZCtDhaQz6wJN2To0Gf2w?scene=25"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春市政府到吉林工商学院开展“长聚学子·春城暖才”校园宣讲活动",
+    "source": "",
+    "publishDate": "2025-05-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/o8ZCtDhaQz6wJN2To0Gf2w?scene=25"
+  },
+  "resources": [],
+  "sourceFingerprint": "bb180eaef948871c525cfbb5b51419f8b98398b76252b323b73fe5b4f25b083f",
+  "evidence": {
+    "listPage": 90,
+    "listTitle": "长春市政府到吉林工商学院开展“长聚学子·春城暖才”校园宣讲活动",
+    "listPublishDate": "2025-05-14",
+    "sourceOrder": 899
+  }
+}

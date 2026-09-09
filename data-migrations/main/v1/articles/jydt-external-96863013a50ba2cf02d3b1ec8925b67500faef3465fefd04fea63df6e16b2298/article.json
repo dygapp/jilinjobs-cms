@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:96863013a50ba2cf02d3b1ec8925b67500faef3465fefd04fea63df6e16b2298",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/TB3XL0K5aOUT_cva_DiNwQ",
+    "url": "https://mp.weixin.qq.com/s/TB3XL0K5aOUT_cva_DiNwQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "支教边疆砺成长 精准对接促就业 通化师范学院召开新疆支教实习促就业工作座谈会",
+    "source": "",
+    "publishDate": "2026-04-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/TB3XL0K5aOUT_cva_DiNwQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "43904c4bd2785efcb83a39e700a0b6b66ab387283b8a7084f3632de7f75f700c",
+  "evidence": {
+    "listPage": 32,
+    "listTitle": "支教边疆砺成长 精准对接促就业 通化师范学院召开新疆支教实习促就业工作座谈会",
+    "listPublishDate": "2026-04-07",
+    "sourceOrder": 314
+  }
+}

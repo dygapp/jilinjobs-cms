@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b67102d22b192f22cefd1c1561e4cd9c2068c64c0837f7703e4f0ae214890d20",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/52-KsQ_dqETwIXtpWKsxWQ",
+    "url": "https://mp.weixin.qq.com/s/52-KsQ_dqETwIXtpWKsxWQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企合作结硕果 创业市集展风采丨长春财经学院创业团队参加吉林省教育厅创业市集活动",
+    "source": "",
+    "publishDate": "2026-06-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/52-KsQ_dqETwIXtpWKsxWQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "af55c11038217798d55869dd4fe788f552733c09562a458a5af12a10258efe67",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "校企合作结硕果 创业市集展风采丨长春财经学院创业团队参加吉林省教育厅创业市集活动",
+    "listPublishDate": "2026-06-15",
+    "sourceOrder": 84
+  }
+}

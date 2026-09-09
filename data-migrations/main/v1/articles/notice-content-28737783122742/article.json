@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122742",
+    "contentId": "28737783122742",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122742"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办GCT生涯团体辅导培训班的通知",
+    "source": "",
+    "publishDate": "2017-09-08",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于举办GCT生涯团体辅导培训班的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2017-9-8 16:19:34</span></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://13fdae8e04c1f8ce2aadaff98e87b7b83eea56962f8532791562ff8b18919aa9\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://8af104c8efb589b87886fc5b53117b756f40a8e6787eeee4d28d9ebbc91d313c\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://45efab2c6dc8531490445aaefead778ac633ff22f893a73087b053924e20228b\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://147196e955fba4dc5dcb383ec8bf89b80f494061bcb476d077ecaad589966ca3\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=fab2ca91-881a-42b4-84bb-cf20d67c646f\">GCT报名表.docx</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364048423552662509419227.jpg",
+      "originalReference": "/chistory/cms/imgs/6364048423552662509419227.jpg",
+      "token": "migration-resource://13fdae8e04c1f8ce2aadaff98e87b7b83eea56962f8532791562ff8b18919aa9",
+      "snapshotPath": "assets/13fdae8e04c1f8ce2aadaff98e87b7b83eea56962f8532791562ff8b18919aa9.jpg",
+      "sha256": "13fdae8e04c1f8ce2aadaff98e87b7b83eea56962f8532791562ff8b18919aa9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 155799
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364048423562037501391043.jpg",
+      "originalReference": "/chistory/cms/imgs/6364048423562037501391043.jpg",
+      "token": "migration-resource://8af104c8efb589b87886fc5b53117b756f40a8e6787eeee4d28d9ebbc91d313c",
+      "snapshotPath": "assets/8af104c8efb589b87886fc5b53117b756f40a8e6787eeee4d28d9ebbc91d313c.jpg",
+      "sha256": "8af104c8efb589b87886fc5b53117b756f40a8e6787eeee4d28d9ebbc91d313c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 126977
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364048423568287504904368.jpg",
+      "originalReference": "/chistory/cms/imgs/6364048423568287504904368.jpg",
+      "token": "migration-resource://45efab2c6dc8531490445aaefead778ac633ff22f893a73087b053924e20228b",
+      "snapshotPath": "assets/45efab2c6dc8531490445aaefead778ac633ff22f893a73087b053924e20228b.jpg",
+      "sha256": "45efab2c6dc8531490445aaefead778ac633ff22f893a73087b053924e20228b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84632
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364048423577662505876184.jpg",
+      "originalReference": "/chistory/cms/imgs/6364048423577662505876184.jpg",
+      "token": "migration-resource://147196e955fba4dc5dcb383ec8bf89b80f494061bcb476d077ecaad589966ca3",
+      "snapshotPath": "assets/147196e955fba4dc5dcb383ec8bf89b80f494061bcb476d077ecaad589966ca3.jpg",
+      "sha256": "147196e955fba4dc5dcb383ec8bf89b80f494061bcb476d077ecaad589966ca3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 156097
+    }
+  ],
+  "sourceFingerprint": "e72901613a4108fd75fd2b124a384080371b5ed4a9421c109d003fcb8293615e",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "关于举办GCT生涯团体辅导培训班的通知",
+    "listPublishDate": "2017-09-08",
+    "sourceOrder": 210,
+    "detailPublishDate": "2017-09-08"
+  }
+}

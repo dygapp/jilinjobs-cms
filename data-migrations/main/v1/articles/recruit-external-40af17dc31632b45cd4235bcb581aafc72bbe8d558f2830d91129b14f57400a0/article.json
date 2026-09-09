@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:40af17dc31632b45cd4235bcb581aafc72bbe8d558f2830d91129b14f57400a0",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/HSDsurLoWon2Fnjevl8mzA",
+    "url": "https://mp.weixin.qq.com/s/HSDsurLoWon2Fnjevl8mzA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“百日招聘”活动暨就业服务周",
+    "source": "",
+    "publishDate": "2024-05-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/HSDsurLoWon2Fnjevl8mzA"
+  },
+  "resources": [],
+  "sourceFingerprint": "0eb972e17fc13eafc8c2334e75acfc74bb0982162a23f9860357190136935cf9",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "“百日招聘”活动暨就业服务周",
+    "listPublishDate": "2024-05-30",
+    "sourceOrder": 268
+  }
+}

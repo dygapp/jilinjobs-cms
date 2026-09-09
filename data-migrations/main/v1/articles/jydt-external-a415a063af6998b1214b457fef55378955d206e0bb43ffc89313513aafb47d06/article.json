@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a415a063af6998b1214b457fef55378955d206e0bb43ffc89313513aafb47d06",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kZ0ym4286l2Qe36JBUx5jA",
+    "url": "https://mp.weixin.qq.com/s/kZ0ym4286l2Qe36JBUx5jA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学人文信息学院赴长春中至成会计师事务所开展访企拓岗专项走访活动",
+    "source": "",
+    "publishDate": "2026-05-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kZ0ym4286l2Qe36JBUx5jA"
+  },
+  "resources": [],
+  "sourceFingerprint": "a3c698904aa1d0b4caed14b97620c9ab0c973cec531b3f250bdebd0f841fae35",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "长春工业大学人文信息学院赴长春中至成会计师事务所开展访企拓岗专项走访活动",
+    "listPublishDate": "2026-05-09",
+    "sourceOrder": 202
+  }
+}

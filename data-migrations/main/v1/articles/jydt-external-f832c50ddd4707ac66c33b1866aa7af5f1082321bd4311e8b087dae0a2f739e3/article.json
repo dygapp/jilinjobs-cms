@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f832c50ddd4707ac66c33b1866aa7af5f1082321bd4311e8b087dae0a2f739e3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/jyxw/121862.jhtml",
+    "url": "https://jobjlufe.hjiuye.com/jyxw/121862.jhtml"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学召开2025届毕业生六月份就业创业工作调度会暨留省就业工作推进会",
+    "source": "",
+    "publishDate": "2025-07-04",
+    "bodyHtml": "",
+    "externalUrl": "https://jobjlufe.hjiuye.com/jyxw/121862.jhtml"
+  },
+  "resources": [],
+  "sourceFingerprint": "a432e8fd5f52edf5f83f9c0e8e9f742681c560076538d8de1d367acefd0782b6",
+  "evidence": {
+    "listPage": 75,
+    "listTitle": "吉林财经大学召开2025届毕业生六月份就业创业工作调度会暨留省就业工作推进会",
+    "listPublishDate": "2025-07-04",
+    "sourceOrder": 743
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:be55255214b948bc61929b9b0b4bde75939c45638f3037e2704efeeb065c7b64",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1086/75990.htm",
+    "url": "https://www.ccsfu.edu.cn/info/1086/75990.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学举办2025届毕业生教育行业就业洽谈会",
+    "source": "",
+    "publishDate": "2024-10-25",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccsfu.edu.cn/info/1086/75990.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "d656cadc79b25df5058cdb1449a590e387120ade0c531c722a496283d4d5f83c",
+  "evidence": {
+    "listPage": 103,
+    "listTitle": "长春师范大学举办2025届毕业生教育行业就业洽谈会",
+    "listPublishDate": "2024-10-25",
+    "sourceOrder": 1021
+  }
+}

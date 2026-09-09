@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:df188ec4e3ae71f7c798706bd4c04a7a901f1378dfb81b8d273c8d8c3ab8e584",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/2H8BRbJqAqMGEq_T6vLmAQ",
+    "url": "https://mp.weixin.qq.com/s/2H8BRbJqAqMGEq_T6vLmAQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "寒假不放松，就业再推进——长白山职业技术学院专题部署寒假及新学期初就业工作",
+    "source": "",
+    "publishDate": "2026-01-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/2H8BRbJqAqMGEq_T6vLmAQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "863bb1e552f2eea6f2c34eceeb02258e2176aa8f51b279508cf9679147b5774a",
+  "evidence": {
+    "listPage": 51,
+    "listTitle": "寒假不放松，就业再推进——长白山职业技术学院专题部署寒假及新学期初就业工作",
+    "listPublishDate": "2026-01-08",
+    "sourceOrder": 508
+  }
+}

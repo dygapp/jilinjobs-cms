@@ -1,0 +1,101 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:318967543529472",
+    "contentId": "318967543529472",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=318967543529472"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办全国科技服务行业面向2026届高校毕业生秋季招聘活动的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2025-10-27",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1263\" src=\"migration-resource://1fab266d3c475ccc4229d7285ef59809d3d5d996314a21b29816ad6c4c12a278\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1266\" src=\"migration-resource://f2c706dbb942a934dcface5e60ec63840d43f3c1690171db2bba52149955e2d3\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1266\" src=\"migration-resource://10599b6187f4e0e31faa341253848c7ed972e5d1613caea8bdcd36bb3baf2fff\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1263\" src=\"migration-resource://91dba94dba22347ef710aa5b62ed61b25fb120523cadd7a0d8d70ffd855c9f3f\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"900\" src=\"migration-resource://695959f5f54011879f15cd6460b2995c06858fd7930d35cea0e5e6840a5d46d1\" width=\"1263\"><img alt=\"\" height=\"900\" src=\"migration-resource://e241dd3f2948a06bb1f7c6575a9ca73396ff9a45c82cd927acb5f0df6a04ed17\" width=\"1266\"><img alt=\"\" height=\"900\" src=\"migration-resource://1a86c571b2fe70da49d3d54f67f4d1cc985cc43adbffaaf1d653365c0691a326\" width=\"1266\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-27/f5a006f5-9b73-4608-b5da-ab699dae24a4.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-27/f5a006f5-9b73-4608-b5da-ab699dae24a4.jpg",
+      "token": "migration-resource://1fab266d3c475ccc4229d7285ef59809d3d5d996314a21b29816ad6c4c12a278",
+      "snapshotPath": "assets/1fab266d3c475ccc4229d7285ef59809d3d5d996314a21b29816ad6c4c12a278.jpg",
+      "sha256": "1fab266d3c475ccc4229d7285ef59809d3d5d996314a21b29816ad6c4c12a278",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-27/275d35df-abf7-4342-aa8f-5dde2586eed6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-27/275d35df-abf7-4342-aa8f-5dde2586eed6.jpg",
+      "token": "migration-resource://f2c706dbb942a934dcface5e60ec63840d43f3c1690171db2bba52149955e2d3",
+      "snapshotPath": "assets/f2c706dbb942a934dcface5e60ec63840d43f3c1690171db2bba52149955e2d3.jpg",
+      "sha256": "f2c706dbb942a934dcface5e60ec63840d43f3c1690171db2bba52149955e2d3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-27/4adf43e5-6c14-4167-8d94-375789b3c0e3.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-27/4adf43e5-6c14-4167-8d94-375789b3c0e3.jpg",
+      "token": "migration-resource://10599b6187f4e0e31faa341253848c7ed972e5d1613caea8bdcd36bb3baf2fff",
+      "snapshotPath": "assets/10599b6187f4e0e31faa341253848c7ed972e5d1613caea8bdcd36bb3baf2fff.jpg",
+      "sha256": "10599b6187f4e0e31faa341253848c7ed972e5d1613caea8bdcd36bb3baf2fff",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-27/82d44c3a-8ed6-4075-9613-4fc3a3414fa4.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-27/82d44c3a-8ed6-4075-9613-4fc3a3414fa4.jpg",
+      "token": "migration-resource://91dba94dba22347ef710aa5b62ed61b25fb120523cadd7a0d8d70ffd855c9f3f",
+      "snapshotPath": "assets/91dba94dba22347ef710aa5b62ed61b25fb120523cadd7a0d8d70ffd855c9f3f.jpg",
+      "sha256": "91dba94dba22347ef710aa5b62ed61b25fb120523cadd7a0d8d70ffd855c9f3f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 40691
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-27/baa98c7a-b500-403b-969c-dc2b98e91bb9.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-27/baa98c7a-b500-403b-969c-dc2b98e91bb9.jpg",
+      "token": "migration-resource://695959f5f54011879f15cd6460b2995c06858fd7930d35cea0e5e6840a5d46d1",
+      "snapshotPath": "assets/695959f5f54011879f15cd6460b2995c06858fd7930d35cea0e5e6840a5d46d1.jpg",
+      "sha256": "695959f5f54011879f15cd6460b2995c06858fd7930d35cea0e5e6840a5d46d1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-27/fe686f9e-8854-40cf-94a9-03564bbdc7b6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-27/fe686f9e-8854-40cf-94a9-03564bbdc7b6.jpg",
+      "token": "migration-resource://e241dd3f2948a06bb1f7c6575a9ca73396ff9a45c82cd927acb5f0df6a04ed17",
+      "snapshotPath": "assets/e241dd3f2948a06bb1f7c6575a9ca73396ff9a45c82cd927acb5f0df6a04ed17.jpg",
+      "sha256": "e241dd3f2948a06bb1f7c6575a9ca73396ff9a45c82cd927acb5f0df6a04ed17",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-27/28eeed9c-b90f-4c57-bb5e-2645f1855af4.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-27/28eeed9c-b90f-4c57-bb5e-2645f1855af4.jpg",
+      "token": "migration-resource://1a86c571b2fe70da49d3d54f67f4d1cc985cc43adbffaaf1d653365c0691a326",
+      "snapshotPath": "assets/1a86c571b2fe70da49d3d54f67f4d1cc985cc43adbffaaf1d653365c0691a326.jpg",
+      "sha256": "1a86c571b2fe70da49d3d54f67f4d1cc985cc43adbffaaf1d653365c0691a326",
+      "contentType": "image/jpeg",
+      "sizeBytes": 37166
+    }
+  ],
+  "sourceFingerprint": "5f8abd985f2b9b0ecf37bb3323a26433deae4f982c552ee7a9a3dae715f2cee8",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "关于举办全国科技服务行业面向2026届高校毕业生秋季招聘活动的通知",
+    "listPublishDate": "2025-10-27",
+    "sourceOrder": 18,
+    "detailPublishDate": "2025-10-27"
+  }
+}

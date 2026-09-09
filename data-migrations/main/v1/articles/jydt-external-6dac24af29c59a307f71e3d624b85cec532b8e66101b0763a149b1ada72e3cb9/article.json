@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:6dac24af29c59a307f71e3d624b85cec532b8e66101b0763a149b1ada72e3cb9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/engine2/d/11988040/2928739/0",
+    "url": "https://zhjy.jlau.edu.cn/engine2/d/11988040/2928739/0?t=6292904&p=419454&isMobile=1"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业大学党委副书记周春国赴广西壮族自治区开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-04-10",
+    "bodyHtml": "",
+    "externalUrl": "https://zhjy.jlau.edu.cn/engine2/d/11988040/2928739/0?t=6292904&p=419454&isMobile=1"
+  },
+  "resources": [],
+  "sourceFingerprint": "cccd6463671193d39375d8f5cda49d53ef6a2133d51fd3d75b9651034459d83a",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "吉林农业大学党委副书记周春国赴广西壮族自治区开展访企拓岗专项行动",
+    "listPublishDate": "2026-04-10",
+    "sourceOrder": 308
+  }
+}

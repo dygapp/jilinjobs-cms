@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:02d0346e2041568b45cc684f4abe900167fa9b46d2be77a68c8fd52424e77404",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/iDcOrUePd5xjfd2UUNhWDw",
+    "url": "https://mp.weixin.qq.com/s/iDcOrUePd5xjfd2UUNhWDw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院举办吉林省优势特色产业类毕业生就业洽谈会暨2025届毕业生秋季校园招聘会",
+    "source": "",
+    "publishDate": "2024-09-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/iDcOrUePd5xjfd2UUNhWDw"
+  },
+  "resources": [],
+  "sourceFingerprint": "709675c4df1a3fda64fb0493b02d97d0970309cc361a354d833ed1211aa56850",
+  "evidence": {
+    "listPage": 104,
+    "listTitle": "吉林工商学院举办吉林省优势特色产业类毕业生就业洽谈会暨2025届毕业生秋季校园招聘会",
+    "listPublishDate": "2024-09-26",
+    "sourceOrder": 1035
+  }
+}

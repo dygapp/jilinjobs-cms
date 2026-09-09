@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:194883765682176",
+    "contentId": "194883765682176",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=194883765682176"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省大学生就业创业协会2023 年就业工作报告会在建筑大学召开",
+    "source": "",
+    "publishDate": "2023-12-12",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://2b68617438869b45eb891d8c94d301d229e5d33ed7421bf9292f521fe85f42c0\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://d353fb96dce3580006d45cc3aca95345976389c120de50f12db65c65f28c0397\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-12-12/f74fb581-f0d9-451c-9fcb-e0daef51c520.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-12-12/f74fb581-f0d9-451c-9fcb-e0daef51c520.jpg",
+      "token": "migration-resource://2b68617438869b45eb891d8c94d301d229e5d33ed7421bf9292f521fe85f42c0",
+      "snapshotPath": "assets/2b68617438869b45eb891d8c94d301d229e5d33ed7421bf9292f521fe85f42c0.jpg",
+      "sha256": "2b68617438869b45eb891d8c94d301d229e5d33ed7421bf9292f521fe85f42c0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 194694
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-12-12/731932e9-94dd-495b-b9e8-cbf84a7c8691.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-12-12/731932e9-94dd-495b-b9e8-cbf84a7c8691.jpg",
+      "token": "migration-resource://d353fb96dce3580006d45cc3aca95345976389c120de50f12db65c65f28c0397",
+      "snapshotPath": "assets/d353fb96dce3580006d45cc3aca95345976389c120de50f12db65c65f28c0397.jpg",
+      "sha256": "d353fb96dce3580006d45cc3aca95345976389c120de50f12db65c65f28c0397",
+      "contentType": "image/jpeg",
+      "sizeBytes": 201301
+    }
+  ],
+  "sourceFingerprint": "6d63ab03f878cbb0f4ef88ef8ed644346bfc8eeb81339a5dc7200c218caf97b0",
+  "evidence": {
+    "listPage": 111,
+    "listTitle": "吉林省大学生就业创业协会2023 年就业工作报告会在建筑大学召开",
+    "listPublishDate": "2023-12-12",
+    "sourceOrder": 1109,
+    "detailPublishDate": "2023-12-12"
+  }
+}

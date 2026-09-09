@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:05d83a0ebce8080724ee14bf253f433fb8140fc5f8f3397c4e639740f9b6e706",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/v1QNS3trlb0YFu-Hs1YdlA",
+    "url": "https://mp.weixin.qq.com/s/v1QNS3trlb0YFu-Hs1YdlA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学旅游学院党委副书记高阳一行赴长春国际陆港发展有限公司开展访企拓岗",
+    "source": "",
+    "publishDate": "2026-03-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/v1QNS3trlb0YFu-Hs1YdlA"
+  },
+  "resources": [],
+  "sourceFingerprint": "fd1b448784e67b6065d93aee5f1f5be1c5d41f8c03389d6336dba84ddc84bb9b",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "长春大学旅游学院党委副书记高阳一行赴长春国际陆港发展有限公司开展访企拓岗",
+    "listPublishDate": "2026-03-19",
+    "sourceOrder": 395
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120792",
+    "contentId": "28737783120792",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120792"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于召开全国计算机应用技术证书考试（NIT）考务工作会议的通知",
+    "source": "",
+    "publishDate": "2011-11-14",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于召开全国计算机应用技术证书考试（NIT）考务工作会议的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-14 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://22acfdfc84ac3df7a8ea4f7185e1258bd5a48bf42b4edc6f7a501d601a6e9c14\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://6dd347c01b3a02e1720c0d7491ab11734d1465ad9297c58101471475a135fb2e\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://5fe9bc025e1e4929cb21c2cdef1fea5acca17ccf9d4927430dcd7bfa7a738d10\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111114165356504.jpg",
+      "originalReference": "/chistory/cms/imgs/20111114165356504.jpg",
+      "token": "migration-resource://22acfdfc84ac3df7a8ea4f7185e1258bd5a48bf42b4edc6f7a501d601a6e9c14",
+      "snapshotPath": "assets/22acfdfc84ac3df7a8ea4f7185e1258bd5a48bf42b4edc6f7a501d601a6e9c14.jpg",
+      "sha256": "22acfdfc84ac3df7a8ea4f7185e1258bd5a48bf42b4edc6f7a501d601a6e9c14",
+      "contentType": "image/jpeg",
+      "sizeBytes": 94411
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111114165405528.jpg",
+      "originalReference": "/chistory/cms/imgs/20111114165405528.jpg",
+      "token": "migration-resource://6dd347c01b3a02e1720c0d7491ab11734d1465ad9297c58101471475a135fb2e",
+      "snapshotPath": "assets/6dd347c01b3a02e1720c0d7491ab11734d1465ad9297c58101471475a135fb2e.jpg",
+      "sha256": "6dd347c01b3a02e1720c0d7491ab11734d1465ad9297c58101471475a135fb2e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 64347
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111114165412856.jpg",
+      "originalReference": "/chistory/cms/imgs/20111114165412856.jpg",
+      "token": "migration-resource://5fe9bc025e1e4929cb21c2cdef1fea5acca17ccf9d4927430dcd7bfa7a738d10",
+      "snapshotPath": "assets/5fe9bc025e1e4929cb21c2cdef1fea5acca17ccf9d4927430dcd7bfa7a738d10.jpg",
+      "sha256": "5fe9bc025e1e4929cb21c2cdef1fea5acca17ccf9d4927430dcd7bfa7a738d10",
+      "contentType": "image/jpeg",
+      "sizeBytes": 62674
+    }
+  ],
+  "sourceFingerprint": "25ea5a750e9ea1bccc42083dbbdb1ddcaca64a032a133a1023dab52144dd671f",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "关于召开全国计算机应用技术证书考试（NIT）考务工作会议的通知",
+    "listPublishDate": "2011-11-14",
+    "sourceOrder": 416,
+    "detailPublishDate": "2011-11-14"
+  }
+}

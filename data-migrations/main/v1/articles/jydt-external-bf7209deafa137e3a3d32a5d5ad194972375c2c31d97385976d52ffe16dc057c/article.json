@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bf7209deafa137e3a3d32a5d5ad194972375c2c31d97385976d52ffe16dc057c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/PwPijTHu9zwAgYA75hHNLQ",
+    "url": "https://mp.weixin.qq.com/s/PwPijTHu9zwAgYA75hHNLQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省经济管理干部学院赴吉林省中旭投资集团有限公司开展“访企拓岗”促就业活动",
+    "source": "",
+    "publishDate": "2025-12-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/PwPijTHu9zwAgYA75hHNLQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "bd094f83c20141224467485bc78286224634b49cebe1a24590703402458f4625",
+  "evidence": {
+    "listPage": 53,
+    "listTitle": "吉林省经济管理干部学院赴吉林省中旭投资集团有限公司开展“访企拓岗”促就业活动",
+    "listPublishDate": "2025-12-23",
+    "sourceOrder": 523
+  }
+}

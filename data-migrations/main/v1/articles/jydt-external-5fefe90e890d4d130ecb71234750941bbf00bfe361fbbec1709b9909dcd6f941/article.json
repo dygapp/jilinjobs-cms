@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:5fefe90e890d4d130ecb71234750941bbf00bfe361fbbec1709b9909dcd6f941",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1022/5704.htm",
+    "url": "https://ccutnews.ccut.edu.cn/info/1022/5704.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学举办“服务吉林高质量发展”第三届IT类专场招聘会",
+    "source": "",
+    "publishDate": "2026-04-23",
+    "bodyHtml": "",
+    "externalUrl": "https://ccutnews.ccut.edu.cn/info/1022/5704.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "38202f51beeaee78dcaf36ae4a8edb1ee0259534f1846db8da671d9d534f6841",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "长春工业大学举办“服务吉林高质量发展”第三届IT类专场招聘会",
+    "listPublishDate": "2026-04-23",
+    "sourceOrder": 255
+  }
+}

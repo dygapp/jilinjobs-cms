@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:8d68401df4a716697f83cf28256a47e282a4d985028de15eec365d0d4658b89f",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/OVvs30-WO7avGzcqxp4DEg",
+    "url": "https://mp.weixin.qq.com/s/OVvs30-WO7avGzcqxp4DEg?scene=25&sessionid=-1367948938"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "职等你来 | 服务吉林高质量发展大型双选会（涉农类专场）暨吉林农业大学2025届毕业生春季双选会邀你共赴",
+    "source": "",
+    "publishDate": "2025-04-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/OVvs30-WO7avGzcqxp4DEg?scene=25&sessionid=-1367948938"
+  },
+  "resources": [],
+  "sourceFingerprint": "26761e127ed3ce88d6afa8350878ed0e3208d2f8ccc8f0e6e2a79630ee0bbfa7",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "职等你来 | 服务吉林高质量发展大型双选会（涉农类专场）暨吉林农业大学2025届毕业生春季双选会邀你共赴",
+    "listPublishDate": "2025-04-14",
+    "sourceOrder": 183
+  }
+}

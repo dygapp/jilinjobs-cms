@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:095785afd62a99c004a8f2004e66de1b75f4e5e2cbc7b0ac4123e444f6c242b6",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ZhAb0oih0nIWgIqeWL89DA",
+    "url": "https://mp.weixin.qq.com/s/ZhAb0oih0nIWgIqeWL89DA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学招生就业处举办“吉林省校友企业推介会”活动",
+    "source": "",
+    "publishDate": "2025-06-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ZhAb0oih0nIWgIqeWL89DA"
+  },
+  "resources": [],
+  "sourceFingerprint": "9319ad44c8c8f212421a17c1a4e7d9485a07dc4668d43dd9022ca810aceaace9",
+  "evidence": {
+    "listPage": 79,
+    "listTitle": "延边大学招生就业处举办“吉林省校友企业推介会”活动",
+    "listPublishDate": "2025-06-19",
+    "sourceOrder": 788
+  }
+}

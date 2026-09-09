@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2284854f2d8f1eaa52db9320f7062365414ed98b5e7b691e59502b1c607cc483",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1003/17003.htm",
+    "url": "https://news.ccu.edu.cn/info/1003/17003.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春市高校综合类就业洽谈会在长春大学举办",
+    "source": "",
+    "publishDate": "2025-03-13",
+    "bodyHtml": "",
+    "externalUrl": "https://news.ccu.edu.cn/info/1003/17003.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "026ad799ec0d9bae0b10948c70062fd164e50d638c6fc9e136dadf7fa123f032",
+  "evidence": {
+    "listPage": 99,
+    "listTitle": "长春市高校综合类就业洽谈会在长春大学举办",
+    "listPublishDate": "2025-03-13",
+    "sourceOrder": 987
+  }
+}

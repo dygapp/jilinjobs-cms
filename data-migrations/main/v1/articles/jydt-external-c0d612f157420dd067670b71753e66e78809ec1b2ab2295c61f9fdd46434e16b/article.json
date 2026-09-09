@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c0d612f157420dd067670b71753e66e78809ec1b2ab2295c61f9fdd46434e16b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/mp/wappoc_appmsgcaptcha",
+    "url": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HJOhR2ijayiux8vcZJNQszTVTbkdLV3RsjZbtrLy&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2FbKfAOigLdcGbXc6XXK3a6A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春电子科技学院召开 2025 届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2025-06-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HJOhR2ijayiux8vcZJNQszTVTbkdLV3RsjZbtrLy&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2FbKfAOigLdcGbXc6XXK3a6A"
+  },
+  "resources": [],
+  "sourceFingerprint": "9ccf1b5de4e492fbf4bc22ecd0843840ed4d789e5f0c28486cde61f51634e531",
+  "evidence": {
+    "listPage": 85,
+    "listTitle": "长春电子科技学院召开 2025 届毕业生就业工作推进会",
+    "listPublishDate": "2025-06-10",
+    "sourceOrder": 841
+  }
+}

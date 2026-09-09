@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0212df043fdb82c876e62ef469997cf04cd35849cb31d0e88ce8d96f2268c74f",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/kHcVR7at7gG3kJPm9YTdYQ",
+    "url": "https://mp.weixin.qq.com/s/kHcVR7at7gG3kJPm9YTdYQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "筑梦迪士尼 青春向未来｜上海迪士尼度假区走进长春早期教育职业学院开展实习项目专场宣讲会",
+    "source": "",
+    "publishDate": "2026-04-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/kHcVR7at7gG3kJPm9YTdYQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "5bb7ff196cd0186975ccdd850fb71007d19404b84d65b69f74538aa6e618cc6f",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "筑梦迪士尼 青春向未来｜上海迪士尼度假区走进长春早期教育职业学院开展实习项目专场宣讲会",
+    "listPublishDate": "2026-04-14",
+    "sourceOrder": 287
+  }
+}

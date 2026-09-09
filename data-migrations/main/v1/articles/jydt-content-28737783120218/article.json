@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120218",
+    "contentId": "28737783120218",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120218"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "沈阳：毕业生见习留用率达到８３％",
+    "source": "",
+    "publishDate": "2009-04-12",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">沈阳：毕业生见习留用率达到８３％</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-12 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 记者从沈阳市人事局了解到，沈阳市自２００６年１０月实行高校毕业生就业见习制度以来，共提供见习岗位１２０００余个，７１００余名毕业生参与了就业见习，其中５９００余人被用人单位留用，正式就业，见习留用率达到８３％。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 沈阳市人才中心主任孟庆伟介绍说，就业见习工作是针对大学生就业实际中面临的无工作经验这一客观实际而开展的。２年多来，沈阳共开发见习基地５７１家，其中绝大部分为沈阳市重点发展的装备制造、汽车及零部件、电子信息、化工医药、钢铁及有色金属加工和航空制造产业中规模以上企业，年可提供见习岗位１万个，旨在切实达到增强大学生实际经验、促进市场就业的目标。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; “毕业生就业见习制度为企业招贤引才提供了一种新形式，使企业可以近距离、长时间地考察大学生的实际工作能力，更有利于下一步的聘用和工作安排。”沈阳鼓风机集团人力资源部副部长贾克说，２００８年到企业见习高校毕业生有３９５人，其中３５２人被留用，留用比例为８９％。今年该集团还将提供一定数量的见习岗位。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 按规定，沈阳市人事局将通过毕业生就业见习洽谈会等多种方式帮助毕业生落实就业见习岗位。见习期限最长不超过６个月。见习期间发放见习补贴，其中财政承担２８０元，其余由见习单位承担。毕业生在见习期间或期满后被用人单位正式聘用的，其见习期可作为工龄计算。</font></p> <p><font size=\"2\">&nbsp;</font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "e99e9b92a7ac26795277241eb4507e608b882908ec335857bb052d7c9c124393",
+  "evidence": {
+    "listPage": 181,
+    "listTitle": "沈阳：毕业生见习留用率达到８３％",
+    "listPublishDate": "2009-04-12",
+    "sourceOrder": 1805,
+    "detailPublishDate": "2009-04-12"
+  }
+}

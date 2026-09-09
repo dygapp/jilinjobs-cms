@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:5ef68e024ce4cbaf3585dc203a295bdb63c3ec37f7e4c9f2f75029a1b72dd56a",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/orrjFh6Xs813bKularBURA",
+    "url": "https://mp.weixin.qq.com/s/orrjFh6Xs813bKularBURA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "服务吉林高质量发展 —— 长春职业技术大学2025年学生实习就业校园双选会邀请函",
+    "source": "",
+    "publishDate": "2025-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/orrjFh6Xs813bKularBURA"
+  },
+  "resources": [],
+  "sourceFingerprint": "41b06ef9411bd4919f6fc8c65bcbca00dcdde2b182e6f8380c9ed4398e02d6d3",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "服务吉林高质量发展 —— 长春职业技术大学2025年学生实习就业校园双选会邀请函",
+    "listPublishDate": "2025-05-15",
+    "sourceOrder": 155
+  }
+}

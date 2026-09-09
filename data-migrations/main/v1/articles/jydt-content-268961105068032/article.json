@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:268961105068032",
+    "contentId": "268961105068032",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=268961105068032"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春医学高等专科学校举办2025届医药类毕业生就业形势研判及应对策略讲座",
+    "source": "",
+    "publishDate": "2024-11-25",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"2154\" src=\"migration-resource://1a9453a453fca2ee4a1d63c92b1b7234779b107c65839214c72218a8c2a30f4b\" width=\"1587\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-01-24/b72bb9e4-08b7-4c8f-be91-35be2b961dab.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-01-24/b72bb9e4-08b7-4c8f-be91-35be2b961dab.jpg",
+      "token": "migration-resource://1a9453a453fca2ee4a1d63c92b1b7234779b107c65839214c72218a8c2a30f4b",
+      "snapshotPath": "assets/1a9453a453fca2ee4a1d63c92b1b7234779b107c65839214c72218a8c2a30f4b.jpg",
+      "sha256": "1a9453a453fca2ee4a1d63c92b1b7234779b107c65839214c72218a8c2a30f4b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 320620
+    }
+  ],
+  "sourceFingerprint": "c6988c266fe56805f12ba46434ee697e8c9bd6085fcf838910dc81bc450366ed",
+  "evidence": {
+    "listPage": 102,
+    "listTitle": "长春医学高等专科学校举办2025届医药类毕业生就业形势研判及应对策略讲座",
+    "listPublishDate": "2024-11-25",
+    "sourceOrder": 1012,
+    "detailPublishDate": "2024-11-25"
+  }
+}

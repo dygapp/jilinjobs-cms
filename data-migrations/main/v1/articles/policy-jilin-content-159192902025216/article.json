@@ -1,0 +1,111 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-jilin:content:159192902025216",
+    "contentId": "159192902025216",
+    "typeCode": "policy-jilin",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=159192902025216"
+  },
+  "target": {
+    "columnAlias": "policy-jilin",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "四平市 高校毕业生就业创业政策摘编",
+    "source": "",
+    "publishDate": "2023-05-29",
+    "bodyHtml": "\n                        <p><img alt=\"\" height=\"1275\" src=\"migration-resource://bd9245a08101176dec7aa0e0b415a77250842e61933debcaf0431c84d6ee855c\" width=\"1446\"><img alt=\"\" height=\"1275\" src=\"migration-resource://75a13cc2cbef39db64d9574754258cc9d331b997b94fb3342aaf10036bb210b0\" width=\"1446\"><img alt=\"\" height=\"1275\" src=\"migration-resource://b7f3ad788a46a6eedf7ec1201197306b13bf66144ceac9019fc4a279c1cae6c0\" width=\"1446\"><img alt=\"\" height=\"1275\" src=\"migration-resource://0f22c5ab8140fa2911f4922c1f08ff37fc00944c65f46e4a9e6a44c1f8cad843\" width=\"1446\"><img alt=\"\" height=\"1275\" src=\"migration-resource://335dc1678afe6795230c725da1dd2096095a6d7b30d4090852396101e1355b40\" width=\"1446\"><img alt=\"\" height=\"1275\" src=\"migration-resource://cc1ded98af64331d04cc43b5b0602ce513704c30d7d9daff48a267da12986f96\" width=\"1446\"><img alt=\"\" height=\"1275\" src=\"migration-resource://5cdd40211a4f1df660913b2f51233e05e0536ceb36b8d46339a4aadc56c64e1a\" width=\"1446\"><img alt=\"\" height=\"1275\" src=\"migration-resource://2fc2a52e62aa03c1f377a598af41c21c9f54711d8e7e65f2affdfddcdbef59ea\" width=\"1446\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/7ae851b0-fbd5-4f1d-8966-600546d3f40c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/7ae851b0-fbd5-4f1d-8966-600546d3f40c.jpg",
+      "token": "migration-resource://bd9245a08101176dec7aa0e0b415a77250842e61933debcaf0431c84d6ee855c",
+      "snapshotPath": "assets/bd9245a08101176dec7aa0e0b415a77250842e61933debcaf0431c84d6ee855c.jpg",
+      "sha256": "bd9245a08101176dec7aa0e0b415a77250842e61933debcaf0431c84d6ee855c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 349142
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/1943a876-ecf3-4e6f-abdc-18e0248d444b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/1943a876-ecf3-4e6f-abdc-18e0248d444b.jpg",
+      "token": "migration-resource://75a13cc2cbef39db64d9574754258cc9d331b997b94fb3342aaf10036bb210b0",
+      "snapshotPath": "assets/75a13cc2cbef39db64d9574754258cc9d331b997b94fb3342aaf10036bb210b0.jpg",
+      "sha256": "75a13cc2cbef39db64d9574754258cc9d331b997b94fb3342aaf10036bb210b0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 333887
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/e47914e9-6af6-4364-8da6-5bc4dfbf7dd7.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/e47914e9-6af6-4364-8da6-5bc4dfbf7dd7.jpg",
+      "token": "migration-resource://b7f3ad788a46a6eedf7ec1201197306b13bf66144ceac9019fc4a279c1cae6c0",
+      "snapshotPath": "assets/b7f3ad788a46a6eedf7ec1201197306b13bf66144ceac9019fc4a279c1cae6c0.jpg",
+      "sha256": "b7f3ad788a46a6eedf7ec1201197306b13bf66144ceac9019fc4a279c1cae6c0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 322482
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/5cd61709-36b2-491f-9570-8ba26d86224a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/5cd61709-36b2-491f-9570-8ba26d86224a.jpg",
+      "token": "migration-resource://0f22c5ab8140fa2911f4922c1f08ff37fc00944c65f46e4a9e6a44c1f8cad843",
+      "snapshotPath": "assets/0f22c5ab8140fa2911f4922c1f08ff37fc00944c65f46e4a9e6a44c1f8cad843.jpg",
+      "sha256": "0f22c5ab8140fa2911f4922c1f08ff37fc00944c65f46e4a9e6a44c1f8cad843",
+      "contentType": "image/jpeg",
+      "sizeBytes": 341168
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/ad4bbe73-5255-4462-a48f-ff13e5cc0569.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/ad4bbe73-5255-4462-a48f-ff13e5cc0569.jpg",
+      "token": "migration-resource://335dc1678afe6795230c725da1dd2096095a6d7b30d4090852396101e1355b40",
+      "snapshotPath": "assets/335dc1678afe6795230c725da1dd2096095a6d7b30d4090852396101e1355b40.jpg",
+      "sha256": "335dc1678afe6795230c725da1dd2096095a6d7b30d4090852396101e1355b40",
+      "contentType": "image/jpeg",
+      "sizeBytes": 303793
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/f4dc68fb-3eb2-4983-9bfe-b74eb5d7b76c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/f4dc68fb-3eb2-4983-9bfe-b74eb5d7b76c.jpg",
+      "token": "migration-resource://cc1ded98af64331d04cc43b5b0602ce513704c30d7d9daff48a267da12986f96",
+      "snapshotPath": "assets/cc1ded98af64331d04cc43b5b0602ce513704c30d7d9daff48a267da12986f96.jpg",
+      "sha256": "cc1ded98af64331d04cc43b5b0602ce513704c30d7d9daff48a267da12986f96",
+      "contentType": "image/jpeg",
+      "sizeBytes": 306124
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/85a63f5e-660c-45c6-8291-fcb5e0c40870.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/85a63f5e-660c-45c6-8291-fcb5e0c40870.jpg",
+      "token": "migration-resource://5cdd40211a4f1df660913b2f51233e05e0536ceb36b8d46339a4aadc56c64e1a",
+      "snapshotPath": "assets/5cdd40211a4f1df660913b2f51233e05e0536ceb36b8d46339a4aadc56c64e1a.jpg",
+      "sha256": "5cdd40211a4f1df660913b2f51233e05e0536ceb36b8d46339a4aadc56c64e1a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 356063
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-05-29/335be75b-55e6-43b8-9c72-3fa3b34fca55.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-05-29/335be75b-55e6-43b8-9c72-3fa3b34fca55.jpg",
+      "token": "migration-resource://2fc2a52e62aa03c1f377a598af41c21c9f54711d8e7e65f2affdfddcdbef59ea",
+      "snapshotPath": "assets/2fc2a52e62aa03c1f377a598af41c21c9f54711d8e7e65f2affdfddcdbef59ea.jpg",
+      "sha256": "2fc2a52e62aa03c1f377a598af41c21c9f54711d8e7e65f2affdfddcdbef59ea",
+      "contentType": "image/jpeg",
+      "sizeBytes": 326115
+    }
+  ],
+  "sourceFingerprint": "6e9660a3292cc8c40c10a43949de8dc59e469fbfcbd902f0cb31abb71783a8ad",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "四平市 高校毕业生就业创业政策摘编",
+    "listPublishDate": "2023-05-29",
+    "sourceOrder": 17,
+    "detailPublishDate": "2023-05-29"
+  }
+}

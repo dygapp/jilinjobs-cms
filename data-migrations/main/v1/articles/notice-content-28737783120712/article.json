@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120712",
+    "contentId": "28737783120712",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120712"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办吉林省大学生创就业生根工程启动仪式暨第四届梦想杯大学生创业大赛颁奖典礼的通知",
+    "source": "",
+    "publishDate": "2017-11-18",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于举办吉林省大学生创就业生根工程启动仪式暨第四届梦想杯大学生创业大赛颁奖典礼的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2017-11-18 9:57:56</span></p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://b0198dfc9a7d13d8e5016771cd50cac7663eae60467839f25f2459e1b8db2abc\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://188456cd929d30be3c39af06cc0a4943837b3c2bc80ed1e94ef03b53f9050a3b\"></p>\n\n<p>&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=76b033b4-71fe-4a85-8ee7-48e975f01d89\">参会附件.docx</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364694149898037501851893.jpg",
+      "originalReference": "/chistory/cms/imgs/6364694149898037501851893.jpg",
+      "token": "migration-resource://b0198dfc9a7d13d8e5016771cd50cac7663eae60467839f25f2459e1b8db2abc",
+      "snapshotPath": "assets/b0198dfc9a7d13d8e5016771cd50cac7663eae60467839f25f2459e1b8db2abc.jpg",
+      "sha256": "b0198dfc9a7d13d8e5016771cd50cac7663eae60467839f25f2459e1b8db2abc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 117202
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364694149908975006052954.jpg",
+      "originalReference": "/chistory/cms/imgs/6364694149908975006052954.jpg",
+      "token": "migration-resource://188456cd929d30be3c39af06cc0a4943837b3c2bc80ed1e94ef03b53f9050a3b",
+      "snapshotPath": "assets/188456cd929d30be3c39af06cc0a4943837b3c2bc80ed1e94ef03b53f9050a3b.jpg",
+      "sha256": "188456cd929d30be3c39af06cc0a4943837b3c2bc80ed1e94ef03b53f9050a3b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 61273
+    }
+  ],
+  "sourceFingerprint": "03a2b965685a1204d72f72fafabecde05a11f45c2ea3dc4d12327063cd952888",
+  "evidence": {
+    "listPage": 21,
+    "listTitle": "关于举办吉林省大学生创就业生根工程启动仪式暨第四届梦想杯大学生创业大赛颁奖典礼的通知",
+    "listPublishDate": "2017-11-18",
+    "sourceOrder": 207,
+    "detailPublishDate": "2017-11-18"
+  }
+}

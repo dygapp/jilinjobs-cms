@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783120078",
+    "contentId": "28737783120078",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120078"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省召开2013年双困学生就业能力拓展培训工作会议",
+    "source": "",
+    "publishDate": "2013-03-12",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省召开2013年双困学生就业能力拓展培训工作会议</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2013-3-12 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font size=\"5\" face=\"黑体\">我省召开2013年双困学生就业能力拓展</font></p> <p align=\"center\"><font size=\"5\" face=\"黑体\">培训工作会议</font></p> <p><font size=\"4\">&nbsp;&nbsp;&nbsp; 3月11日，2012年吉林省高校“双困”学生就业能力拓展培训工作总结会及2013年培训工作部署会在省高校毕业生就业指导中心召开。</font></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://69a72c2b37e492ba8782f7ed4bf93a7a879b9ed63018bdc3d280e1edc9b2ae6f\"></p> <p align=\"center\"><font size=\"2\"><strong>(左一朱军书记、左二纪拓处长、左三郑志宏主任、左四张跃副主任)</strong></font></p> <p><font size=\"4\">&nbsp;&nbsp;&nbsp; 省教育厅高校学生处处长纪拓、省高校毕业生就业指导中心主任郑志宏、书记朱军、副主任张跃和来自省内28所参培训高校的主管学生就业工作的处长、主任及双困生培训具体负责人共计52人参会。</font></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://3e5e87a356176031bbe2c61ec7c6d7176e9ca1ef8d0641c53631b73d1a175882\"></p> <p><font size=\"4\">&nbsp;&nbsp;&nbsp; 纪拓处长对2013年培训工作提出意见要求。他要求各高校对参培训学员要按照“重点关注、优先推荐、跟踪服务”的原则，采取有效措施，拓展建立双困学生帮扶的新渠道；会后要抓紧安排部署，强化管理，明确专人，健全培训跟踪调查及定期上报机制，同时要做好参培学员的遴选及动员工作。2013年计划培训5000人，首期培训班从3月15日开始。</font></p> <p align=\"center\"><font size=\"4\"><img border=\"0\" src=\"migration-resource://0b4ce47c2b3e1a601e9a8d2c37ef28caa4e95d26c99100522c8c0c74a6cd836f\"></font></p> <p align=\"center\"><font size=\"4\">郑志宏主任对2012年的双困学生实施情况进行了总结。</font></p> <p align=\"center\"><font size=\"4\"><img border=\"0\" src=\"migration-resource://ca6c70bbb2df120edcfe58e3c36de67a23ff6ad90adaae8594886987e34e55e0\"></font></p> <p align=\"center\"><font size=\"2\"><strong>长春大学张洪杰</strong></font></p> <p><font size=\"4\">&nbsp;&nbsp;&nbsp; 会议由朱军书记主持。长春大学、长春工业大学两所高校对双困生培训具体实施组织情况作了经验介绍与汇报</font></p> <p align=\"center\"><font size=\"4\"><img border=\"0\" src=\"migration-resource://80f9d2be31458158c64daa9f973b15eb3c03fbe72984b26f05ff2f8dc8346b38\"></font></p> <p align=\"center\"><font size=\"2\"><strong>长春工业大学 杨文龙</strong></font></p> <p align=\"center\"><font size=\"4\"><img border=\"0\" src=\"migration-resource://4f89415784f8878bf645818acd9fab307ed0b907b9758f2b36033686626f443a\"></font></p> <p align=\"center\"><font size=\"2\"><strong>会议现场</strong></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130312043936283.jpg",
+      "originalReference": "/chistory/cms/imgs/20130312043936283.jpg",
+      "token": "migration-resource://69a72c2b37e492ba8782f7ed4bf93a7a879b9ed63018bdc3d280e1edc9b2ae6f",
+      "snapshotPath": "assets/69a72c2b37e492ba8782f7ed4bf93a7a879b9ed63018bdc3d280e1edc9b2ae6f.jpg",
+      "sha256": "69a72c2b37e492ba8782f7ed4bf93a7a879b9ed63018bdc3d280e1edc9b2ae6f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 48003
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130312044007928.jpg",
+      "originalReference": "/chistory/cms/imgs/20130312044007928.jpg",
+      "token": "migration-resource://3e5e87a356176031bbe2c61ec7c6d7176e9ca1ef8d0641c53631b73d1a175882",
+      "snapshotPath": "assets/3e5e87a356176031bbe2c61ec7c6d7176e9ca1ef8d0641c53631b73d1a175882.jpg",
+      "sha256": "3e5e87a356176031bbe2c61ec7c6d7176e9ca1ef8d0641c53631b73d1a175882",
+      "contentType": "image/jpeg",
+      "sizeBytes": 49008
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130312044031110.jpg",
+      "originalReference": "/chistory/cms/imgs/20130312044031110.jpg",
+      "token": "migration-resource://0b4ce47c2b3e1a601e9a8d2c37ef28caa4e95d26c99100522c8c0c74a6cd836f",
+      "snapshotPath": "assets/0b4ce47c2b3e1a601e9a8d2c37ef28caa4e95d26c99100522c8c0c74a6cd836f.jpg",
+      "sha256": "0b4ce47c2b3e1a601e9a8d2c37ef28caa4e95d26c99100522c8c0c74a6cd836f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 47708
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130312044057580.jpg",
+      "originalReference": "/chistory/cms/imgs/20130312044057580.jpg",
+      "token": "migration-resource://ca6c70bbb2df120edcfe58e3c36de67a23ff6ad90adaae8594886987e34e55e0",
+      "snapshotPath": "assets/ca6c70bbb2df120edcfe58e3c36de67a23ff6ad90adaae8594886987e34e55e0.jpg",
+      "sha256": "ca6c70bbb2df120edcfe58e3c36de67a23ff6ad90adaae8594886987e34e55e0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 51249
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20130312044110317.jpg",
+      "originalReference": "/chistory/cms/imgs/20130312044110317.jpg",
+      "token": "migration-resource://80f9d2be31458158c64daa9f973b15eb3c03fbe72984b26f05ff2f8dc8346b38",
+      "snapshotPath": "assets/80f9d2be31458158c64daa9f973b15eb3c03fbe72984b26f05ff2f8dc8346b38.jpg",
+      "sha256": "80f9d2be31458158c64daa9f973b15eb3c03fbe72984b26f05ff2f8dc8346b38",
+      "contentType": "image/jpeg",
+      "sizeBytes": 72160
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/201303120441235.jpg",
+      "originalReference": "/chistory/cms/imgs/201303120441235.jpg",
+      "token": "migration-resource://4f89415784f8878bf645818acd9fab307ed0b907b9758f2b36033686626f443a",
+      "snapshotPath": "assets/4f89415784f8878bf645818acd9fab307ed0b907b9758f2b36033686626f443a.jpg",
+      "sha256": "4f89415784f8878bf645818acd9fab307ed0b907b9758f2b36033686626f443a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 68497
+    }
+  ],
+  "sourceFingerprint": "1c0af5f23141547c1871017a01606c0cb4aa27cd448de19cacf12bbf5ae0bbf1",
+  "evidence": {
+    "listPage": 163,
+    "listTitle": "我省召开2013年双困学生就业能力拓展培训工作会议",
+    "listPublishDate": "2013-03-12",
+    "sourceOrder": 1626,
+    "detailPublishDate": "2013-03-12"
+  }
+}

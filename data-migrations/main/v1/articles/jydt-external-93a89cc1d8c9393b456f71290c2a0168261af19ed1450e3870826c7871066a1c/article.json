@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:93a89cc1d8c9393b456f71290c2a0168261af19ed1450e3870826c7871066a1c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Ez0oYzPkeuqW5XTr40nfmQ",
+    "url": "https://mp.weixin.qq.com/s/Ez0oYzPkeuqW5XTr40nfmQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2026年吉林省高校毕业生化工类专场招聘会在吉林化工大学举行",
+    "source": "",
+    "publishDate": "2026-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Ez0oYzPkeuqW5XTr40nfmQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "0a05240aa2e050de27cffca319430c3b391c5978d5e2252a1715c1cb66b60d46",
+  "evidence": {
+    "listPage": 36,
+    "listTitle": "2026年吉林省高校毕业生化工类专场招聘会在吉林化工大学举行",
+    "listPublishDate": "2026-03-27",
+    "sourceOrder": 355
+  }
+}

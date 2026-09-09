@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86132324843520",
+    "contentId": "86132324843520",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86132324843520"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "白城师范学院举办“春风送岗·网揽人才”系列就业活动",
+    "source": "白城师范学院",
+    "publishDate": "2022-04-12",
+    "bodyHtml": "\n                        <p>2022年春季学期开学以来，白城师范学院深入贯彻省委省政府毕业生就业工作的有关精神，认真落实省教育厅关于毕业生就业工作的部署要求，为积极应对当前疫情对毕业生就业工作的影响，持续做好2022届毕业生就业服务工作，白城师范学院科学研判、主动作为，开学初向用人单位和毕业生发布了《白城师范学院关于2022届毕业生就业工作安排的通知》，在做好疫情防控工作的同时，确保疫情期间就业招聘不停歇、就业指导不缺位、就业服务不断线，促进学校毕业生更加充分更高质量就业。</p>\n\n<p>3月26日-27日，白城师范学院利用“慧就业”平台举办“春风送岗·网揽人才”2022届毕业生（第三场）网络双选会。本次网络双选会涵盖了教育、金融、机械、经济管理等多个行业，共邀请中国农业银行吉林省分行、中国水利水电第一工程局有限公司、长城汽车股份有限公司、华南师范大学附属茂名滨海学校、中粮家佳康（吉林）有限公司、公主岭第五中学、伊通龙华实验学校、长春市海乘中等职业学校等130家用人单位参会，为毕业生提供就业岗位7790余个。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"386\" src=\"migration-resource://afe718695c72e1c02aaa9f7028645c35e470660d03fa93778f7a3c44b43fda49\" width=\"800\"></p>\n\n<p>学校1069名2022届毕业生参加本次双选会，投递线上简历1076份，430名毕业生与用人单位达成就业意向。本次双选会利用“互联网+就业”模式，信息发布、简历投递、面试试讲、就业洽谈、就业签约等环节都在线上完成，为毕业生和用人单位快速达成就业意向提供了便捷的信息化渠道。</p>\n\n<p>白城师范学院还通过就业信息网和“白师云就业”平台发布吉林省内各地就业创业促进政策；开通“就业咨询热线”，3月份，累计为27名毕业生提供就业咨询与指导服务，及时疏导了未就业毕业生的消极情绪和心理压力。</p>\n\n<p>3月14日开始，白城师范学院每周举办一次“线上就业沙龙”活动，邀请行业专家、就业典型人物、优秀毕业生代表分享求职经验、心路历程，讲述“我的就业故事”，发挥朋辈引领作用，释放互助成长力量，指导毕业生从就业形势、留省（基层）就业、考研复试、公考备战、面试技巧、求职心理等方面进行分析讨论。截至目前，线上就业沙龙共有300余人次参与，得到全校师生一致好评。</p>\n\n<p>3月21日，白城师范学院针对尚未签约的毕业生开展了“白城师范学院第三届视频简历制作大赛”，通过就业竞赛活动展风采，升技能，造氛围，进一步提升学生视频简历制作能力，适应疫情防控期间求职的新形式。</p>\n\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>（白城师范学院 常春辉）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/c89cae59-a2d9-4b05-a7ee-a50479017dfb.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/c89cae59-a2d9-4b05-a7ee-a50479017dfb.jpg",
+      "token": "migration-resource://afe718695c72e1c02aaa9f7028645c35e470660d03fa93778f7a3c44b43fda49",
+      "snapshotPath": "assets/afe718695c72e1c02aaa9f7028645c35e470660d03fa93778f7a3c44b43fda49.jpg",
+      "sha256": "afe718695c72e1c02aaa9f7028645c35e470660d03fa93778f7a3c44b43fda49",
+      "contentType": "image/jpeg",
+      "sizeBytes": 264444
+    }
+  ],
+  "sourceFingerprint": "0152abafb51959879920c2de429f4dbbc4074358d574c7719f9333a2c5fb939b",
+  "evidence": {
+    "listPage": 123,
+    "listTitle": "白城师范学院举办“春风送岗·网揽人才”系列就业活动",
+    "listPublishDate": "2022-04-12",
+    "sourceOrder": 1225,
+    "detailPublishDate": "2022-04-12"
+  }
+}

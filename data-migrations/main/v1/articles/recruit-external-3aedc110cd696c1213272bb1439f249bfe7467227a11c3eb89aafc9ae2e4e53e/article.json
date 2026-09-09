@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:3aedc110cd696c1213272bb1439f249bfe7467227a11c3eb89aafc9ae2e4e53e",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/zwgk/tzgg/202007/t20200706_471419.html",
+    "url": "http://www.huinanxian.gov.cn/zwgk/tzgg/202007/t20200706_471419.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年辉南县事业单位专项招聘工作人员公告(1号)",
+    "source": "",
+    "publishDate": "2020-07-09",
+    "bodyHtml": "",
+    "externalUrl": "http://www.huinanxian.gov.cn/zwgk/tzgg/202007/t20200706_471419.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "58b7d9817cf6e9909f8f406a9a7c039485a3d76d6b991b55340df02a66b8960b",
+  "evidence": {
+    "listPage": 39,
+    "listTitle": "2020年辉南县事业单位专项招聘工作人员公告(1号)",
+    "listPublishDate": "2020-07-09",
+    "sourceOrder": 390
+  }
+}

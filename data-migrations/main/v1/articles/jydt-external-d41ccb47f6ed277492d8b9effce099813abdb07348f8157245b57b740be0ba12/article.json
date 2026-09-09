@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d41ccb47f6ed277492d8b9effce099813abdb07348f8157245b57b740be0ba12",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ixYTB5kTOBWacvedeEhsTQ",
+    "url": "https://mp.weixin.qq.com/s/ixYTB5kTOBWacvedeEhsTQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "跑出就业“加速度”！吉林师范大学赴粤港澳大湾区开拓优质就业新平台",
+    "source": "",
+    "publishDate": "2025-12-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ixYTB5kTOBWacvedeEhsTQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "9f3c71f51956c237bb8e3ebdcbc52f59c375e12944ca6c0686d56817fe99dbd4",
+  "evidence": {
+    "listPage": 54,
+    "listTitle": "跑出就业“加速度”！吉林师范大学赴粤港澳大湾区开拓优质就业新平台",
+    "listPublishDate": "2025-12-18",
+    "sourceOrder": 536
+  }
+}

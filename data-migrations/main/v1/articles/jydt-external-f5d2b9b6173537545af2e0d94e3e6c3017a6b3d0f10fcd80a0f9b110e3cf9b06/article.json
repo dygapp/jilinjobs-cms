@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f5d2b9b6173537545af2e0d94e3e6c3017a6b3d0f10fcd80a0f9b110e3cf9b06",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/hW942SugabYbpSlfUgCMyQ",
+    "url": "https://mp.weixin.qq.com/s/hW942SugabYbpSlfUgCMyQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院举办“筑梦吉林 ‘职’达未来”赋能大学生就业创业宣讲暨“财智人生 卓越未来”工商大讲堂",
+    "source": "",
+    "publishDate": "2025-12-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/hW942SugabYbpSlfUgCMyQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "6b62d7055d3d5a64aa89ecf79cfd521929c736268c4e52d8e04ac72b1ccc7158",
+  "evidence": {
+    "listPage": 56,
+    "listTitle": "吉林工商学院举办“筑梦吉林 ‘职’达未来”赋能大学生就业创业宣讲暨“财智人生 卓越未来”工商大讲堂",
+    "listPublishDate": "2025-12-02",
+    "sourceOrder": 559
+  }
+}

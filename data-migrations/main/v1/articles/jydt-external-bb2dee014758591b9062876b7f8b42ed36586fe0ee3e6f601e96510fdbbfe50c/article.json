@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bb2dee014758591b9062876b7f8b42ed36586fe0ee3e6f601e96510fdbbfe50c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/UDiNL4HFs8pT1kwLScNsoA",
+    "url": "https://mp.weixin.qq.com/s/UDiNL4HFs8pT1kwLScNsoA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省普通高校外语外贸类毕业生就业洽谈会在吉林外国语大学举行",
+    "source": "",
+    "publishDate": "2024-10-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/UDiNL4HFs8pT1kwLScNsoA"
+  },
+  "resources": [],
+  "sourceFingerprint": "3a17436e97b0d94cff3d49adec052a0b18b1397baeef6ead2753d9e434f58c95",
+  "evidence": {
+    "listPage": 103,
+    "listTitle": "吉林省普通高校外语外贸类毕业生就业洽谈会在吉林外国语大学举行",
+    "listPublishDate": "2024-10-25",
+    "sourceOrder": 1022
+  }
+}

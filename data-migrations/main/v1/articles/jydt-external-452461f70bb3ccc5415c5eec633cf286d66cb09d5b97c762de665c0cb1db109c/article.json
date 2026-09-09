@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:452461f70bb3ccc5415c5eec633cf286d66cb09d5b97c762de665c0cb1db109c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/i9S_q5zRsIN0IXFWTUn4eA",
+    "url": "https://mp.weixin.qq.com/s/i9S_q5zRsIN0IXFWTUn4eA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化院校合作 共育法治人才--白城市中级人民法院与白城师范学院成功签署院校合作框架协议",
+    "source": "",
+    "publishDate": "2026-04-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/i9S_q5zRsIN0IXFWTUn4eA"
+  },
+  "resources": [],
+  "sourceFingerprint": "6fc250a1b88312d30f45091a30460fb2d865cf82d0790aa80448713bcecc1156",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "深化院校合作 共育法治人才--白城市中级人民法院与白城师范学院成功签署院校合作框架协议",
+    "listPublishDate": "2026-04-10",
+    "sourceOrder": 304
+  }
+}

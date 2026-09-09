@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:b002bee3356f906be4f8c5ed9670554bc4a43db3e5497ad682ea169c279957b4",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/gzHDNtT21zKr37nscj00Qw",
+    "url": "https://mp.weixin.qq.com/s/gzHDNtT21zKr37nscj00Qw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工程职业学院招聘活动邀请函",
+    "source": "",
+    "publishDate": "2024-04-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gzHDNtT21zKr37nscj00Qw"
+  },
+  "resources": [],
+  "sourceFingerprint": "62f7c3faa453dc6e4087f120c2b7872ffa9d1f9094559e4c8c074aec4270b844",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "吉林工程职业学院招聘活动邀请函",
+    "listPublishDate": "2024-04-19",
+    "sourceOrder": 294
+  }
+}

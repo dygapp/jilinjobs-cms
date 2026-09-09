@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2fab116e0dcd2d03d1fc1656897f2a467d416034682ceee8a57d4fdb440739a9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/VU60kCE9xQh9tcPtxZkACQ",
+    "url": "https://mp.weixin.qq.com/s/VU60kCE9xQh9tcPtxZkACQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春建筑学院土木工程学院赴吉林建工集团开展访企拓岗交流",
+    "source": "",
+    "publishDate": "2026-03-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/VU60kCE9xQh9tcPtxZkACQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "92fea1aa1783f9f0a90ffc66f47dccbd849ac6177254e764854070678a7661cd",
+  "evidence": {
+    "listPage": 41,
+    "listTitle": "长春建筑学院土木工程学院赴吉林建工集团开展访企拓岗交流",
+    "listPublishDate": "2026-03-17",
+    "sourceOrder": 408
+  }
+}

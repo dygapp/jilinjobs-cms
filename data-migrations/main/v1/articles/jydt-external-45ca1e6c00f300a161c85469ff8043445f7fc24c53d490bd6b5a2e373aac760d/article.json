@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:45ca1e6c00f300a161c85469ff8043445f7fc24c53d490bd6b5a2e373aac760d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/CRm7bBJ1StYW7kfFJW1lfA",
+    "url": "https://mp.weixin.qq.com/s/CRm7bBJ1StYW7kfFJW1lfA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春建筑学院健康产业学院赴长春市仁大医养中心开展访企拓岗专项活动",
+    "source": "",
+    "publishDate": "2026-03-13",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/CRm7bBJ1StYW7kfFJW1lfA"
+  },
+  "resources": [],
+  "sourceFingerprint": "62a4f0d0df8f6dd5b2a4fb9f0f7fb011d78647fc88a6ea6e4bf16888311dd2fc",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "长春建筑学院健康产业学院赴长春市仁大医养中心开展访企拓岗专项活动",
+    "listPublishDate": "2026-03-13",
+    "sourceOrder": 419
+  }
+}

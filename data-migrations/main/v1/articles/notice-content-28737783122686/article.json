@@ -1,0 +1,111 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122686",
+    "contentId": "28737783122686",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122686"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于组织开展2021届全省普通高校毕业生“创业有我 就在吉林”春季招聘活动的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2021-03-23",
+    "bodyHtml": "\n                        \n\n\n\n\n<p style=\"text-align:center\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"migration-resource://34672c240f6ebacec6591a69806b8a8cb7c65f054baf9b20ca25f7f571f11fc4\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://f31e98d4f95989b4504e606025d9530d9d4470347dfc60380606c7d2c37ae4e1\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://b648f7aeb82d0a4e25f2de353ce724a4c20935b45fad21cd030081f4726129df\" alt=\"\" width=\"1000\" height=\"1414\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://ba1d050b718d5085be20847ea7b4d2543133c531e95de68156d9cdb8be0ee67c\" alt=\"\" width=\"1414\" height=\"1000\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://9e9c913506395af3a536a6db5f6cedc6bc1d5c43ddb1db5702a707555d931eb7\" alt=\"\" width=\"1414\" height=\"1000\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://8d90fd3367da088d1f747fb043c86472a9be554f3f9d2b432681a6c9ab3a5a6f\" alt=\"\" width=\"1414\" height=\"1000\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://d478a9dc5095175867726b6b0178cdc606c809c479f6237b63ee4d08df2a3039\" alt=\"\" width=\"1414\" height=\"1000\"></p>\n<p style=\"text-align: center;\"><img src=\"migration-resource://6368e4cc36f3b628778743c01d41ecb034cc99742441e6f8fb70396a40f07174\" alt=\"\" width=\"1414\" height=\"1000\"></p>\n\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210326135004.jpg",
+      "originalReference": "/chistory/cms/editor/20210326135004.jpg",
+      "token": "migration-resource://34672c240f6ebacec6591a69806b8a8cb7c65f054baf9b20ca25f7f571f11fc4",
+      "snapshotPath": "assets/34672c240f6ebacec6591a69806b8a8cb7c65f054baf9b20ca25f7f571f11fc4.jpg",
+      "sha256": "34672c240f6ebacec6591a69806b8a8cb7c65f054baf9b20ca25f7f571f11fc4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 213498
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210326135020.jpg",
+      "originalReference": "/chistory/cms/editor/20210326135020.jpg",
+      "token": "migration-resource://f31e98d4f95989b4504e606025d9530d9d4470347dfc60380606c7d2c37ae4e1",
+      "snapshotPath": "assets/f31e98d4f95989b4504e606025d9530d9d4470347dfc60380606c7d2c37ae4e1.jpg",
+      "sha256": "f31e98d4f95989b4504e606025d9530d9d4470347dfc60380606c7d2c37ae4e1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 199637
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210326135027.jpg",
+      "originalReference": "/chistory/cms/editor/20210326135027.jpg",
+      "token": "migration-resource://b648f7aeb82d0a4e25f2de353ce724a4c20935b45fad21cd030081f4726129df",
+      "snapshotPath": "assets/b648f7aeb82d0a4e25f2de353ce724a4c20935b45fad21cd030081f4726129df.jpg",
+      "sha256": "b648f7aeb82d0a4e25f2de353ce724a4c20935b45fad21cd030081f4726129df",
+      "contentType": "image/jpeg",
+      "sizeBytes": 69065
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210326135035.jpg",
+      "originalReference": "/chistory/cms/editor/20210326135035.jpg",
+      "token": "migration-resource://ba1d050b718d5085be20847ea7b4d2543133c531e95de68156d9cdb8be0ee67c",
+      "snapshotPath": "assets/ba1d050b718d5085be20847ea7b4d2543133c531e95de68156d9cdb8be0ee67c.jpg",
+      "sha256": "ba1d050b718d5085be20847ea7b4d2543133c531e95de68156d9cdb8be0ee67c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 177940
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210326135043.jpg",
+      "originalReference": "/chistory/cms/editor/20210326135043.jpg",
+      "token": "migration-resource://9e9c913506395af3a536a6db5f6cedc6bc1d5c43ddb1db5702a707555d931eb7",
+      "snapshotPath": "assets/9e9c913506395af3a536a6db5f6cedc6bc1d5c43ddb1db5702a707555d931eb7.jpg",
+      "sha256": "9e9c913506395af3a536a6db5f6cedc6bc1d5c43ddb1db5702a707555d931eb7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 221518
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210326135050.jpg",
+      "originalReference": "/chistory/cms/editor/20210326135050.jpg",
+      "token": "migration-resource://8d90fd3367da088d1f747fb043c86472a9be554f3f9d2b432681a6c9ab3a5a6f",
+      "snapshotPath": "assets/8d90fd3367da088d1f747fb043c86472a9be554f3f9d2b432681a6c9ab3a5a6f.jpg",
+      "sha256": "8d90fd3367da088d1f747fb043c86472a9be554f3f9d2b432681a6c9ab3a5a6f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 234800
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210326135058.jpg",
+      "originalReference": "/chistory/cms/editor/20210326135058.jpg",
+      "token": "migration-resource://d478a9dc5095175867726b6b0178cdc606c809c479f6237b63ee4d08df2a3039",
+      "snapshotPath": "assets/d478a9dc5095175867726b6b0178cdc606c809c479f6237b63ee4d08df2a3039.jpg",
+      "sha256": "d478a9dc5095175867726b6b0178cdc606c809c479f6237b63ee4d08df2a3039",
+      "contentType": "image/jpeg",
+      "sizeBytes": 221546
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/editor/20210326135115.jpg",
+      "originalReference": "/chistory/cms/editor/20210326135115.jpg",
+      "token": "migration-resource://6368e4cc36f3b628778743c01d41ecb034cc99742441e6f8fb70396a40f07174",
+      "snapshotPath": "assets/6368e4cc36f3b628778743c01d41ecb034cc99742441e6f8fb70396a40f07174.jpg",
+      "sha256": "6368e4cc36f3b628778743c01d41ecb034cc99742441e6f8fb70396a40f07174",
+      "contentType": "image/jpeg",
+      "sizeBytes": 65353
+    }
+  ],
+  "sourceFingerprint": "a57014c00c89d142ffcb422629074f2acca6d67482f5e4b18798c557e3b31021",
+  "evidence": {
+    "listPage": 16,
+    "listTitle": "关于组织开展2021届全省普通高校毕业生“创业有我 就在吉林”春季招聘活动的通知",
+    "listPublishDate": "2021-03-23",
+    "sourceOrder": 157,
+    "detailPublishDate": "2021-03-23"
+  }
+}

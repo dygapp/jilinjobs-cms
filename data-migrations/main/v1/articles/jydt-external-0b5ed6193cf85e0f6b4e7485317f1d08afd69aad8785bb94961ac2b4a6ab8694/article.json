@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0b5ed6193cf85e0f6b4e7485317f1d08afd69aad8785bb94961ac2b4a6ab8694",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/OI6INAtn1Xda8D2OO9Z36Q",
+    "url": "https://mp.weixin.qq.com/s/OI6INAtn1Xda8D2OO9Z36Q"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "延边大学副校长孙佰兴带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-03-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/OI6INAtn1Xda8D2OO9Z36Q"
+  },
+  "resources": [],
+  "sourceFingerprint": "d097b948b15f2c48e0c77e1f87c2ef92b8437be73dc9d59caffeea5fe0efc68a",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "延边大学副校长孙佰兴带队开展“优企引才”定向访企拓岗促就业专项行动",
+    "listPublishDate": "2026-03-12",
+    "sourceOrder": 427
+  }
+}

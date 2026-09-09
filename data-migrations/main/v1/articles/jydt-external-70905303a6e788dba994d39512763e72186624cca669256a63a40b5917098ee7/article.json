@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:70905303a6e788dba994d39512763e72186624cca669256a63a40b5917098ee7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/WywkbL7HIeeOlDo57dUMwA",
+    "url": "https://mp.weixin.qq.com/s/WywkbL7HIeeOlDo57dUMwA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春科技学院与吉林市中医院举行校院合作座谈会暨签约仪式",
+    "source": "",
+    "publishDate": "2026-05-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/WywkbL7HIeeOlDo57dUMwA"
+  },
+  "resources": [],
+  "sourceFingerprint": "3cae0080d745c0411a6b09dab978efefe0d21f865185430633b674772393178b",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "长春科技学院与吉林市中医院举行校院合作座谈会暨签约仪式",
+    "listPublishDate": "2026-05-15",
+    "sourceOrder": 182
+  }
+}

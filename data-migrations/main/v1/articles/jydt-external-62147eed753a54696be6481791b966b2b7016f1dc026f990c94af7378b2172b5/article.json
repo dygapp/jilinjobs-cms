@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:62147eed753a54696be6481791b966b2b7016f1dc026f990c94af7378b2172b5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/FOmHPBaLtYFyLuyrVqx4Vw",
+    "url": "https://mp.weixin.qq.com/s/FOmHPBaLtYFyLuyrVqx4Vw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "松原职业技术学院不断深化校企合作",
+    "source": "",
+    "publishDate": "2025-09-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/FOmHPBaLtYFyLuyrVqx4Vw"
+  },
+  "resources": [],
+  "sourceFingerprint": "ca4b659facb8aa3e36a0fd1a8b2663d2f16f90b5797479457bc9af4046b8507d",
+  "evidence": {
+    "listPage": 70,
+    "listTitle": "松原职业技术学院不断深化校企合作",
+    "listPublishDate": "2025-09-25",
+    "sourceOrder": 697
+  }
+}

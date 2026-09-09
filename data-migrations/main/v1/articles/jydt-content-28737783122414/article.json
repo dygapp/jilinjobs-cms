@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122414",
+    "contentId": "28737783122414",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122414"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "青岛市：人民政府关于促进高校毕业生就业工作的意见",
+    "source": "",
+    "publishDate": "2009-04-05",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">青岛市：人民政府关于促进高校毕业生就业工作的意见</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-5 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 2009-04-01 市财政从促进就业专项资金中列专款1000万元，设立“青岛市高校毕业生创业扶持资金”，扶持高校毕业生自主创业。成立高校毕业生创业项目评审专家组，负责项目申请受理、立项审理、实施过程监理、项目验收以及资金使用效果的综合评价等工作。高校毕业生自主创业，可申请5万元以下的小额担保贷款。其中，从事微利项目的，由同级财政据实全额贴息；两人及以上团队创业的可放宽到20万元。各区市政府也要根据实际情况，设立不低于100万元的高校毕业生创业扶持资金。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 高校毕业生派遣期内创办企业，可参照执行个体工商户和特殊群体、特殊产业等工商、税务优惠政策。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 对设办独资企业、合伙企业的不设注册资本的限制，设办有限公司的可以分期认缴，无异议的房屋权属可以免交房屋权属证明，免除工商注册和税务登记费用。在税收方面享受国家现行的所有支持再就业、新办企业优惠政策（具体由市国税局、市地税局另行制定下发），同时享受其他连续性优惠政策。</font></p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "03908025dc8dfb703f893214ab1f85c04398f48b46a6f1044a3898de8357fa93",
+  "evidence": {
+    "listPage": 183,
+    "listTitle": "青岛市：人民政府关于促进高校毕业生就业工作的意见",
+    "listPublishDate": "2009-04-05",
+    "sourceOrder": 1824,
+    "detailPublishDate": "2009-04-05"
+  }
+}

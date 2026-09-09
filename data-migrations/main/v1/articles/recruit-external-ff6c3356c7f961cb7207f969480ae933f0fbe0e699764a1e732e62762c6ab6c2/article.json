@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:ff6c3356c7f961cb7207f969480ae933f0fbe0e699764a1e732e62762c6ab6c2",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/frontend/student/default/chance/largemeetingdetails/",
+    "url": "https://m.bysjy.com.cn/frontend/student/default/chance/largemeetingdetails/?token=yxqqnn0100000037&fair_id=22951"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“春启医途，职梦同筑”吉林医药学院医疗 卫生专场招聘会邀请函",
+    "source": "",
+    "publishDate": "2025-03-18",
+    "bodyHtml": "",
+    "externalUrl": "https://m.bysjy.com.cn/frontend/student/default/chance/largemeetingdetails/?token=yxqqnn0100000037&fair_id=22951"
+  },
+  "resources": [],
+  "sourceFingerprint": "35dd85c1a5a3c8c6239fe211e71bb4cc65ff6b801df8f875ca9b88ac16c84899",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "“春启医途，职梦同筑”吉林医药学院医疗 卫生专场招聘会邀请函",
+    "listPublishDate": "2025-03-18",
+    "sourceOrder": 213
+  }
+}

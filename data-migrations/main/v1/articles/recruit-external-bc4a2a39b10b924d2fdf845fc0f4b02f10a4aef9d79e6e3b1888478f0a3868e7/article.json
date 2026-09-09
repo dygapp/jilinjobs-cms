@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:bc4a2a39b10b924d2fdf845fc0f4b02f10a4aef9d79e6e3b1888478f0a3868e7",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/UEL18c_X_0SqMlou8iTXzA",
+    "url": "https://mp.weixin.qq.com/s/UEL18c_X_0SqMlou8iTXzA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业大学2027届毕业生秋季双选会邀请函",
+    "source": "",
+    "publishDate": "2026-09-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/UEL18c_X_0SqMlou8iTXzA"
+  },
+  "resources": [],
+  "sourceFingerprint": "7a2332c17679c4ea78451b0221eaae72b94b262e1844503862361bb54f87cf42",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "吉林农业大学2027届毕业生秋季双选会邀请函",
+    "listPublishDate": "2026-09-09",
+    "sourceOrder": 1
+  }
+}

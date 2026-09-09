@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86130261245952",
+    "contentId": "86130261245952",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86130261245952"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林电子信息职业技术学院成功举办2022届毕业生春季省内专场网络招聘会",
+    "source": "吉林电子信息职业技术学院",
+    "publishDate": "2022-04-12",
+    "bodyHtml": "\n                        <p>为深入贯彻落实党中央、国务院“稳就业”“保就业”决策部署，扎实推进吉林省人才强省战略，统筹做好我院毕业生就业工作，千方百计促进我院2022届毕业生更加充分更高质量就业。在当前全国疫情异常严峻的形势下，结合我校就业工作安排，减少疫情对就业工作的影响，增强求职、招聘的有效性、针对性，为毕业生提供不断线的就业服务。3月29日我院成功举办“吉林电子信息职业技术学院2022届毕业生春季省内专场网络招聘会”。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"543\" src=\"migration-resource://061ec4234b7e698a73bc76e65e7d03a3f8ad6e0ece75a31f3b91eb4dbe9797fb\" width=\"1000\"></p>\n\n<p>本次网络招聘会吸引了全国各地优质企业共117家，涵盖了制造业、建筑业、信息传输、软件和信息服务业、房地产、批发和零售业、金融业和技术服务业、租赁和商务服务、文化体育和娱乐业、教育业、住宿和餐饮业、仓储和邮政业、居民服务、修理和服务业，岗位需求5552个，其中制造行业位居首位，其次是信息传输、软件和信息术服务行业，线上参会求职毕业生共834人，参会企业共收到简历636份，已达成就业意向63人。通过此次双选会，企业和毕业生进行有效沟通，建立了良性对接，为学生后续签约奠定基础，未来我们将会对协议达成度持续关注。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"519\" src=\"migration-resource://905fa88d775d980f6cc6e21feb890c3ff04ca03c1241eaf4d90afa4876887214\" width=\"1000\"></p>\n\n<p>在疫情防控阶段，学校领导高度重视就业工作，就业创业指导中心积极谋划，精心组织，充分利用“互联网+云平台+精准就业”的新模式，简化就业手续办理，精准推送就业信息，做到战“疫”、就业两不误，最大限度降低疫情对就业工作的影响，全力以赴做好疫情防控期间2022届毕业生就业工作，以优异的成绩向党的二十大献礼。</p>\n\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&nbsp;</strong><strong>（吉林电子信息职业技术学院 孟令飞）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/e611e0c9-f28b-4964-9a0c-69d383f6ace5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/e611e0c9-f28b-4964-9a0c-69d383f6ace5.jpg",
+      "token": "migration-resource://061ec4234b7e698a73bc76e65e7d03a3f8ad6e0ece75a31f3b91eb4dbe9797fb",
+      "snapshotPath": "assets/061ec4234b7e698a73bc76e65e7d03a3f8ad6e0ece75a31f3b91eb4dbe9797fb.jpg",
+      "sha256": "061ec4234b7e698a73bc76e65e7d03a3f8ad6e0ece75a31f3b91eb4dbe9797fb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 160569
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/17ad8ddc-2a8d-4847-b291-2322dd2e7919.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/17ad8ddc-2a8d-4847-b291-2322dd2e7919.jpg",
+      "token": "migration-resource://905fa88d775d980f6cc6e21feb890c3ff04ca03c1241eaf4d90afa4876887214",
+      "snapshotPath": "assets/905fa88d775d980f6cc6e21feb890c3ff04ca03c1241eaf4d90afa4876887214.jpg",
+      "sha256": "905fa88d775d980f6cc6e21feb890c3ff04ca03c1241eaf4d90afa4876887214",
+      "contentType": "image/jpeg",
+      "sizeBytes": 197789
+    }
+  ],
+  "sourceFingerprint": "1618e9eeca360e0e96f43e7a72f5cb0d333883c415149aa75b3ae817dbe0f8ce",
+  "evidence": {
+    "listPage": 124,
+    "listTitle": "吉林电子信息职业技术学院成功举办2022届毕业生春季省内专场网络招聘会",
+    "listPublishDate": "2022-04-12",
+    "sourceOrder": 1239,
+    "detailPublishDate": "2022-04-12"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f5ee0dd11bacf4aed7a7c12af12e0215f3c3682bfa532b12719e6b3e3f76b06d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/bvd7Nh7JAuoWNw8BftdhkQ",
+    "url": "https://mp.weixin.qq.com/s/bvd7Nh7JAuoWNw8BftdhkQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院校长张兴海带队赴吉广传媒产业园区调研",
+    "source": "",
+    "publishDate": "2026-01-15",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/bvd7Nh7JAuoWNw8BftdhkQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "60564ee9de7f9b9b83b0dc94032a230536225ad53dac764c85c6e3c4ed1cfa51",
+  "evidence": {
+    "listPage": 50,
+    "listTitle": "长春人文学院校长张兴海带队赴吉广传媒产业园区调研",
+    "listPublishDate": "2026-01-15",
+    "sourceOrder": 496
+  }
+}

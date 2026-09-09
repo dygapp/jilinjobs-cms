@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:20a65885dc66cd478f597ebe93dd98df73e9b25983681f8c23f22a35c5168c50",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/yw230523/202403/3831782.html",
+    "url": "https://cc.cnjiwang.com/yw230523/202403/3831782.html"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "职引未来——2024年大中城市联合招聘高校毕业生春季吉林省专场活动启动",
+    "source": "",
+    "publishDate": "2024-03-21",
+    "bodyHtml": "",
+    "externalUrl": "https://cc.cnjiwang.com/yw230523/202403/3831782.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "c2bbba346af858d62f1aabef6ab6fca9fe5fb519cc636d31747227adf197303b",
+  "evidence": {
+    "listPage": 111,
+    "listTitle": "职引未来——2024年大中城市联合招聘高校毕业生春季吉林省专场活动启动",
+    "listPublishDate": "2024-03-21",
+    "sourceOrder": 1105
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:582592db51baa73cc71166f8f3f4a026c426a5cc2b7edbcde38e9db67ad931d1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/iyOSsqap5DkBSv4T7H1_qA",
+    "url": "https://mp.weixin.qq.com/s/iyOSsqap5DkBSv4T7H1_qA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教融合，共育数智财会人才 | 珍岛信息技术（上海）股份有限公司来长春财经学院交流座谈",
+    "source": "",
+    "publishDate": "2026-04-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/iyOSsqap5DkBSv4T7H1_qA"
+  },
+  "resources": [],
+  "sourceFingerprint": "09983074a67259cfab4bcc8bd608f497afa6f675c8fec12cc9851df55ff91844",
+  "evidence": {
+    "listPage": 29,
+    "listTitle": "深化产教融合，共育数智财会人才 | 珍岛信息技术（上海）股份有限公司来长春财经学院交流座谈",
+    "listPublishDate": "2026-04-14",
+    "sourceOrder": 289
+  }
+}

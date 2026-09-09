@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a91867257041af84300af979e8187e3d37a4061ee0e6efe53e53b4613907af0b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/6mi50OrqfNlaesHflhlFCw",
+    "url": "https://mp.weixin.qq.com/s/6mi50OrqfNlaesHflhlFCw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林财经大学这场招聘会 为毕业生提供了近1.2万个岗位",
+    "source": "",
+    "publishDate": "2025-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/6mi50OrqfNlaesHflhlFCw"
+  },
+  "resources": [],
+  "sourceFingerprint": "08d0359c2d858d141a94b7abd538d7d5e5c2e85a5496bca21e53e30fa551c333",
+  "evidence": {
+    "listPage": 97,
+    "listTitle": "吉林财经大学这场招聘会 为毕业生提供了近1.2万个岗位",
+    "listPublishDate": "2025-03-27",
+    "sourceOrder": 967
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d866e0b043fce8a27657d0f306bedf30d04d4fc0bfdc90c39bc1fb1b3ed6cf3a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/C7-VC-T-IBNUpTrznEoUKg",
+    "url": "https://mp.weixin.qq.com/s/C7-VC-T-IBNUpTrznEoUKg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学旅游学院召开“职引未来·青春留夏”——2026年校园实习就业双选会",
+    "source": "",
+    "publishDate": "2026-05-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/C7-VC-T-IBNUpTrznEoUKg"
+  },
+  "resources": [],
+  "sourceFingerprint": "4e8abb817b318149a93fda1f73909cf83e72497ead9d3e5fe10e3b458f0d1765",
+  "evidence": {
+    "listPage": 14,
+    "listTitle": "长春大学旅游学院召开“职引未来·青春留夏”——2026年校园实习就业双选会",
+    "listPublishDate": "2026-05-28",
+    "sourceOrder": 132
+  }
+}

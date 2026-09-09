@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ff6ad5c6d4180a0e63d3474c5232b976888dea02350886c2a33a985c26483abb",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/2WcVthFV5HslnhHIQOJFXw",
+    "url": "https://mp.weixin.qq.com/s/2WcVthFV5HslnhHIQOJFXw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "医教赋能 护边强基——长春东方职业学院赴集安市调研开展赋能吉林省边境地区医药健康产业发展系列活动",
+    "source": "",
+    "publishDate": "2025-07-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/2WcVthFV5HslnhHIQOJFXw"
+  },
+  "resources": [],
+  "sourceFingerprint": "3fd6354a7ed985d97447957d9e7bd562b36c78470c3d1fcc5989c82ec468e601",
+  "evidence": {
+    "listPage": 76,
+    "listTitle": "医教赋能 护边强基——长春东方职业学院赴集安市调研开展赋能吉林省边境地区医药健康产业发展系列活动",
+    "listPublishDate": "2025-07-02",
+    "sourceOrder": 751
+  }
+}

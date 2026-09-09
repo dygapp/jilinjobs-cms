@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:8c61394e1cdce0d4a22fa7af024d2bdbc0f49d6fa338bb5529b07b48da170505",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/NDJRQUE66sF2MAR7B6uFBA",
+    "url": "https://mp.weixin.qq.com/s/NDJRQUE66sF2MAR7B6uFBA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "@所有毕业生！人民日报喊你参加招聘会啦！",
+    "source": "",
+    "publishDate": "2022-06-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/NDJRQUE66sF2MAR7B6uFBA"
+  },
+  "resources": [],
+  "sourceFingerprint": "9966f851e4f64b787e36e1fb19b070af04d2c5987f907b1cc79e572a8e41502d",
+  "evidence": {
+    "listPage": 121,
+    "listTitle": "@所有毕业生！人民日报喊你参加招聘会啦！",
+    "listPublishDate": "2022-06-09",
+    "sourceOrder": 1201
+  }
+}

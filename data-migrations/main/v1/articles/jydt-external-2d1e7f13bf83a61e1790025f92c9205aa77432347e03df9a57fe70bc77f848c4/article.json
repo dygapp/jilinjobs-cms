@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2d1e7f13bf83a61e1790025f92c9205aa77432347e03df9a57fe70bc77f848c4",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1045/15120.htm",
+    "url": "https://www.jlufe.edu.cn/info/1045/15120.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "财经大学举办“财经英才汇智兴吉地 服务吉林高质量发展” 吉林省财经类2025届毕业生春季供需洽谈会暨“宏志助航计划”专场招聘会",
+    "source": "",
+    "publishDate": "2025-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlufe.edu.cn/info/1045/15120.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "c4326ba60168b87b24da67a2ff76534a30f1036e376d1b7f95b278b58f4ba237",
+  "evidence": {
+    "listPage": 97,
+    "listTitle": "财经大学举办“财经英才汇智兴吉地 服务吉林高质量发展” 吉林省财经类2025届毕业生春季供需洽谈会暨“宏志助航计划”专场招聘会",
+    "listPublishDate": "2025-03-27",
+    "sourceOrder": 965
+  }
+}

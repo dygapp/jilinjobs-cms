@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783120716",
+    "contentId": "28737783120716",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120716"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于召开吉林省第四届“梦想杯”大学生创业大赛部署会的通知",
+    "source": "",
+    "publishDate": "2017-04-11",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于召开吉林省第四届“梦想杯”大学生创业大赛部署会的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2017-4-11 16:28:57</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img title=\"1.png\" src=\"migration-resource://0e6bba44144b9609a9459fa1a1bad22839b231c1e26954b305bf8ae187644913\"></p><p style=\"text-align: center\"><img title=\"2.png\" src=\"migration-resource://2a4b28648527598a7a3036d37ae809c7c4ad4fb60611bb137863c81f082a0ec2\"></p><p style=\"text-align: center\"><img title=\"3.png\" src=\"migration-resource://d697c4ba65192e297695e9e1a3958ac277ebb8ad1bd94ca01aafb7e227375556\"></p><p><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362752495665775007840498.png",
+      "originalReference": "/chistory/cms/imgs/6362752495665775007840498.png",
+      "token": "migration-resource://0e6bba44144b9609a9459fa1a1bad22839b231c1e26954b305bf8ae187644913",
+      "snapshotPath": "assets/0e6bba44144b9609a9459fa1a1bad22839b231c1e26954b305bf8ae187644913.jpg",
+      "sha256": "0e6bba44144b9609a9459fa1a1bad22839b231c1e26954b305bf8ae187644913",
+      "contentType": "image/jpeg",
+      "sizeBytes": 86554
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362752495859525007281001.png",
+      "originalReference": "/chistory/cms/imgs/6362752495859525007281001.png",
+      "token": "migration-resource://2a4b28648527598a7a3036d37ae809c7c4ad4fb60611bb137863c81f082a0ec2",
+      "snapshotPath": "assets/2a4b28648527598a7a3036d37ae809c7c4ad4fb60611bb137863c81f082a0ec2.jpg",
+      "sha256": "2a4b28648527598a7a3036d37ae809c7c4ad4fb60611bb137863c81f082a0ec2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 50422
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362752495997025001294264.png",
+      "originalReference": "/chistory/cms/imgs/6362752495997025001294264.png",
+      "token": "migration-resource://d697c4ba65192e297695e9e1a3958ac277ebb8ad1bd94ca01aafb7e227375556",
+      "snapshotPath": "assets/d697c4ba65192e297695e9e1a3958ac277ebb8ad1bd94ca01aafb7e227375556.jpg",
+      "sha256": "d697c4ba65192e297695e9e1a3958ac277ebb8ad1bd94ca01aafb7e227375556",
+      "contentType": "image/jpeg",
+      "sizeBytes": 43888
+    }
+  ],
+  "sourceFingerprint": "fc4d3de39ae349c7be321fb031af63e327c190466c2797c02b5e4d4770ca60ed",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "关于召开吉林省第四届“梦想杯”大学生创业大赛部署会的通知",
+    "listPublishDate": "2017-04-11",
+    "sourceOrder": 221,
+    "detailPublishDate": "2017-04-11"
+  }
+}

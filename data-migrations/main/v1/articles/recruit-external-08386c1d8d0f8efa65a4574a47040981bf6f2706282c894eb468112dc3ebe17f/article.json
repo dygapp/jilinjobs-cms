@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:08386c1d8d0f8efa65a4574a47040981bf6f2706282c894eb468112dc3ebe17f",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/AdX30id9uxBlSsK3YtUjvQ",
+    "url": "https://mp.weixin.qq.com/s/AdX30id9uxBlSsK3YtUjvQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学人文信息学院“暖心行动”线上活动正式开启",
+    "source": "",
+    "publishDate": "2026-01-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/AdX30id9uxBlSsK3YtUjvQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "c59db24a0d7a8db3c10757eab42c3ecae170f1ac6f1e5b48acefe20c0130335b",
+  "evidence": {
+    "listPage": 9,
+    "listTitle": "长春工业大学人文信息学院“暖心行动”线上活动正式开启",
+    "listPublishDate": "2026-01-23",
+    "sourceOrder": 85
+  }
+}

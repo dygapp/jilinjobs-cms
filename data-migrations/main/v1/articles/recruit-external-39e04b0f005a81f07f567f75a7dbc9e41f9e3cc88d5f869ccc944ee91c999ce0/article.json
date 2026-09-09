@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:39e04b0f005a81f07f567f75a7dbc9e41f9e3cc88d5f869ccc944ee91c999ce0",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/qjR4jO1gomxJNbiOvcfGXQ",
+    "url": "https://mp.weixin.qq.com/s/qjR4jO1gomxJNbiOvcfGXQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "6月5日长春汽车职业技术大学组织招聘会",
+    "source": "",
+    "publishDate": "2025-06-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/qjR4jO1gomxJNbiOvcfGXQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "502f4cc8f5042a6325dd78f7af6fc5588582f5b8c12f3e288c1244f3016e84e7",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "6月5日长春汽车职业技术大学组织招聘会",
+    "listPublishDate": "2025-06-04",
+    "sourceOrder": 148
+  }
+}

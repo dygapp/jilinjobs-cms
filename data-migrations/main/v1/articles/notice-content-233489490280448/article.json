@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:233489490280448",
+    "contentId": "233489490280448",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=233489490280448"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展第四期教育部供需对接就业育人项目的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2024-07-12",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1018\" src=\"migration-resource://e1fa9ac7e570a353863a2b62cf9917d424707c6b86c85f1ce8ef91efd76e06e3\" width=\"720\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1018\" src=\"migration-resource://4efd16e80f08561876168cb27d9a9982f6bfeeb7e2748ecce66e4fe92c7e4aec\" width=\"720\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1018\" src=\"migration-resource://f3f08612e619e4fda99525a3f6fb5e8822f7dc0db94bfbf2ed9d47de7fe023ca\" width=\"720\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1018\" src=\"migration-resource://fe318f1346991aa16895126aef11c364be33f9621ab19427db7035101aa3f2ac\" width=\"720\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1018\" src=\"migration-resource://7454b95f4fd697bf9e9c02bca373a19200c34baa4311225a1ae32bcc3a542b1a\" width=\"720\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-07-12/5bfd390a-442c-48c2-b22f-8a6918ff72ad.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-07-12/5bfd390a-442c-48c2-b22f-8a6918ff72ad.jpg",
+      "token": "migration-resource://e1fa9ac7e570a353863a2b62cf9917d424707c6b86c85f1ce8ef91efd76e06e3",
+      "snapshotPath": "assets/e1fa9ac7e570a353863a2b62cf9917d424707c6b86c85f1ce8ef91efd76e06e3.jpg",
+      "sha256": "e1fa9ac7e570a353863a2b62cf9917d424707c6b86c85f1ce8ef91efd76e06e3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 59881
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-07-12/a1ec14fd-bde1-4e3d-80ca-3308c1119c3d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-07-12/a1ec14fd-bde1-4e3d-80ca-3308c1119c3d.jpg",
+      "token": "migration-resource://4efd16e80f08561876168cb27d9a9982f6bfeeb7e2748ecce66e4fe92c7e4aec",
+      "snapshotPath": "assets/4efd16e80f08561876168cb27d9a9982f6bfeeb7e2748ecce66e4fe92c7e4aec.jpg",
+      "sha256": "4efd16e80f08561876168cb27d9a9982f6bfeeb7e2748ecce66e4fe92c7e4aec",
+      "contentType": "image/jpeg",
+      "sizeBytes": 70056
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-07-12/64804f0c-3644-48ef-8cd0-8f241eccf66e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-07-12/64804f0c-3644-48ef-8cd0-8f241eccf66e.jpg",
+      "token": "migration-resource://f3f08612e619e4fda99525a3f6fb5e8822f7dc0db94bfbf2ed9d47de7fe023ca",
+      "snapshotPath": "assets/f3f08612e619e4fda99525a3f6fb5e8822f7dc0db94bfbf2ed9d47de7fe023ca.jpg",
+      "sha256": "f3f08612e619e4fda99525a3f6fb5e8822f7dc0db94bfbf2ed9d47de7fe023ca",
+      "contentType": "image/jpeg",
+      "sizeBytes": 69074
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-07-12/d38288a9-73a3-4eaa-aaec-39d83cc25b65.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-07-12/d38288a9-73a3-4eaa-aaec-39d83cc25b65.jpg",
+      "token": "migration-resource://fe318f1346991aa16895126aef11c364be33f9621ab19427db7035101aa3f2ac",
+      "snapshotPath": "assets/fe318f1346991aa16895126aef11c364be33f9621ab19427db7035101aa3f2ac.jpg",
+      "sha256": "fe318f1346991aa16895126aef11c364be33f9621ab19427db7035101aa3f2ac",
+      "contentType": "image/jpeg",
+      "sizeBytes": 70070
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-07-12/40e0143e-e7ca-4ee4-b019-57cf5d95ff64.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-07-12/40e0143e-e7ca-4ee4-b019-57cf5d95ff64.jpg",
+      "token": "migration-resource://7454b95f4fd697bf9e9c02bca373a19200c34baa4311225a1ae32bcc3a542b1a",
+      "snapshotPath": "assets/7454b95f4fd697bf9e9c02bca373a19200c34baa4311225a1ae32bcc3a542b1a.jpg",
+      "sha256": "7454b95f4fd697bf9e9c02bca373a19200c34baa4311225a1ae32bcc3a542b1a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 23338
+    }
+  ],
+  "sourceFingerprint": "3ab0d19b84c4affd6e6f6bb610810e69fba146cdbd28dcd8ad9fe9e0e590206c",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "关于开展第四期教育部供需对接就业育人项目的通知",
+    "listPublishDate": "2024-07-12",
+    "sourceOrder": 78,
+    "detailPublishDate": "2024-07-12"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122834",
+    "contentId": "28737783122834",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122834"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省人民政府办公厅关于做好2014年全省普通高等学校毕业生就业创业工作的通知",
+    "source": "",
+    "publishDate": "2014-07-01",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省人民政府办公厅关于做好2014年全省普通高等学校毕业生就业创业工作的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场开发部   发布时间:2014-7-1 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"TEXT-ALIGN: center\">&nbsp;</p><p style=\"TEXT-ALIGN: center\"><img title=\"1.jpg\" style=\"FLOAT: none\" src=\"http://www.jilinjobs.cn:80//upload/6353980497117115422428332.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"2.jpg\" style=\"FLOAT: none\" src=\"http://www.jilinjobs.cn:80//upload/6353980497123315777414240.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"3.jpg\" style=\"FLOAT: none\" src=\"http://www.jilinjobs.cn:80//upload/6353980497126615967698320.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"4.jpg\" style=\"FLOAT: none\" src=\"http://www.jilinjobs.cn:80//upload/6353980497134516415440891.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"5.jpg\" style=\"FLOAT: none\" src=\"http://www.jilinjobs.cn:80//upload/6353980497140016731426799.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"6.jpg\" style=\"FLOAT: none\" src=\"http://www.jilinjobs.cn:80//upload/6353980497143316923183461.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"7.jpg\" style=\"FLOAT: none\" src=\"http://www.jilinjobs.cn:80//upload/6353980497148517222398614.jpg\"></p><p style=\"TEXT-ALIGN: center\"><img title=\"8.jpg\" style=\"FLOAT: none\" src=\"http://www.jilinjobs.cn:80//upload/6353980497151517394155277.jpg\"></p><p></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "42bed257140228d5a083ce0d1b681e9f77e6eb6df1fe7cd929efa813910cdf0c",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "吉林省人民政府办公厅关于做好2014年全省普通高等学校毕业生就业创业工作的通知",
+    "listPublishDate": "2014-07-01",
+    "sourceOrder": 307,
+    "detailPublishDate": "2014-07-01"
+  }
+}

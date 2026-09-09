@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:672d2707be87cdcc95fd56a04696ea2fc80a21e2a7c08fafa427a0542e20b703",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1026/35474.htm",
+    "url": "https://www.jlju.edu.cn/info/1026/35474.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学举办“创业奋斗 ‘就’在吉林”吉林省高校服务“四新设施”建设毕业生双选会吉林建筑大学2024届毕业生春季招聘会",
+    "source": "",
+    "publishDate": "2024-04-20",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlju.edu.cn/info/1026/35474.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "ae50a1d708c6aab39d3b84be603f5b675bdae940e538ae5c5f3e93f39593dd13",
+  "evidence": {
+    "listPage": 108,
+    "listTitle": "吉林建筑大学举办“创业奋斗 ‘就’在吉林”吉林省高校服务“四新设施”建设毕业生双选会吉林建筑大学2024届毕业生春季招聘会",
+    "listPublishDate": "2024-04-20",
+    "sourceOrder": 1075
+  }
+}

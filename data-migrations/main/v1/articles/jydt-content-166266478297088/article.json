@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:166266478297088",
+    "contentId": "166266478297088",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=166266478297088"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "内蒙古：自治区教育厅2023届全区高校毕业生就业工作推进会 对高校毕业生就业进行再部署再推进",
+    "source": "",
+    "publishDate": "2023-07-07",
+    "bodyHtml": "\n                        <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; 6月25日，内蒙古自治区教育厅召开2023届全区普通高校毕业生就业工作推进会议，认真落实怀进鹏部长在内蒙古调研时的讲话精神，对高校毕业生就业工作进行再部署再推进。自治区政协副主席，自治区党委教育工委书记、教育厅党组书记、厅长杨劼主持会议并讲话。</span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"396\" src=\"migration-resource://967ef2de511dc0bf7e8453667b3b4c24464d317fd2d0d59d78c48a1e2481aa23\" width=\"592\"></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\"><strong>&nbsp; &nbsp; 会议指出</strong>，各高校要切实提高政治判断力、政治领悟力、政治执行力，深刻认识高校毕业生就业是一项必须做实做好的重大政治任务，抢抓离校前工作关键期，要以时时放心不下的责任感和使命感全力以赴做好今年的高校毕业生就业工作。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\"><strong>&nbsp; &nbsp; 会议强调，</strong>各高校<strong>要</strong>提高市场化岗位精准度，积极拓展就业渠道，提升就业岗位质量和匹配度。<strong>要</strong>推进政策性岗位落实，引导更多毕业生参与基层项目、应征参军入伍，同时按时完成第二学士学位招录工作。<strong>要</strong>持续做好毕业生就业指导服务，持续开展专场招聘、岗位推送、就业培训、创业指导、能力提升等服务。<strong>要</strong>加强困难毕业生兜底帮扶，持续完善帮扶台账，细化帮扶举措，重点组织实施好“宏志助航计划”。<strong>要</strong>强化就业数据统计核查，凡是违反“四不准”“三不得”规定的，一经查实，坚决依规依纪从严处理。<strong>要</strong>深化招生、人才培养、就业联动，加强校企、校地、校行（业）合作，主动对接社会需要、匹配市场需求，提升办学水平和培养质量。要强化责任狠抓推动落实，挂图作战，倒排工期，确保自治区高校毕业生就业大局稳定。</span></span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"334\" src=\"migration-resource://c6189e41f8736b40b13d50fe7767fc68cabb74178f5d4f92635ef6fec7121b57\" width=\"591\"></p>\n\n<p>&nbsp;</p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; 自治区党委教育工委委员、教育厅党组成员、副厅长王敏，自治区教育厅有关处室负责同志，各高校主要领导和有关负责同志参加会议。</span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-07/b856dd97-3015-4bad-83bb-547c4a843843.png",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-07-07/b856dd97-3015-4bad-83bb-547c4a843843.png",
+      "token": "migration-resource://967ef2de511dc0bf7e8453667b3b4c24464d317fd2d0d59d78c48a1e2481aa23",
+      "snapshotPath": "assets/967ef2de511dc0bf7e8453667b3b4c24464d317fd2d0d59d78c48a1e2481aa23.png",
+      "sha256": "967ef2de511dc0bf7e8453667b3b4c24464d317fd2d0d59d78c48a1e2481aa23",
+      "contentType": "image/png",
+      "sizeBytes": 466983
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-07/b3b764df-70f4-427d-896e-310d2c24a7b2.png",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-07-07/b3b764df-70f4-427d-896e-310d2c24a7b2.png",
+      "token": "migration-resource://c6189e41f8736b40b13d50fe7767fc68cabb74178f5d4f92635ef6fec7121b57",
+      "snapshotPath": "assets/c6189e41f8736b40b13d50fe7767fc68cabb74178f5d4f92635ef6fec7121b57.png",
+      "sha256": "c6189e41f8736b40b13d50fe7767fc68cabb74178f5d4f92635ef6fec7121b57",
+      "contentType": "image/png",
+      "sizeBytes": 458411
+    }
+  ],
+  "sourceFingerprint": "f7c027cc558439151988ee47bf65df9ed788f4dcef546365d033af70242d306c",
+  "evidence": {
+    "listPage": 113,
+    "listTitle": "内蒙古：自治区教育厅2023届全区高校毕业生就业工作推进会 对高校毕业生就业进行再部署再推进",
+    "listPublishDate": "2023-07-07",
+    "sourceOrder": 1124,
+    "detailPublishDate": "2023-07-07"
+  }
+}

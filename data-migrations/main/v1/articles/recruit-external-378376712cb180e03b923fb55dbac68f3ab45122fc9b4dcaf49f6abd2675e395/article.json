@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:378376712cb180e03b923fb55dbac68f3ab45122fc9b4dcaf49f6abd2675e395",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/vv6eNtv78QbJzwdqZrjafQ",
+    "url": "https://mp.weixin.qq.com/s/vv6eNtv78QbJzwdqZrjafQ?scene=25&sessionid=-1365483265"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【邀请函】｜服务吉林高质量发展--吉林省高校服务文创产业集群2025届毕业生春季供需洽谈周",
+    "source": "",
+    "publishDate": "2025-04-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vv6eNtv78QbJzwdqZrjafQ?scene=25&sessionid=-1365483265"
+  },
+  "resources": [],
+  "sourceFingerprint": "87241062599f1ceda090bb6c500566366bb7da00449d998e5114edf27747daa5",
+  "evidence": {
+    "listPage": 17,
+    "listTitle": "【邀请函】｜服务吉林高质量发展--吉林省高校服务文创产业集群2025届毕业生春季供需洽谈周",
+    "listPublishDate": "2025-04-27",
+    "sourceOrder": 164
+  }
+}

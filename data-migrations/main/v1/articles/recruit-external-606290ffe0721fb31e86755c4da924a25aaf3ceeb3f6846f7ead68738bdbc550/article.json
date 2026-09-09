@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:606290ffe0721fb31e86755c4da924a25aaf3ceeb3f6846f7ead68738bdbc550",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/msqFH2ag-azY7Z8jlLwM0w",
+    "url": "https://mp.weixin.qq.com/s/msqFH2ag-azY7Z8jlLwM0w"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "北华大学2026届毕业生综合类大型双选会，诚邀各用人单位拨冗参加，广纳贤才！",
+    "source": "",
+    "publishDate": "2026-05-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/msqFH2ag-azY7Z8jlLwM0w"
+  },
+  "resources": [],
+  "sourceFingerprint": "1dccbce92bc01941705689929cba3c821924cf6f3fc05099d120a61e8ca779d3",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "北华大学2026届毕业生综合类大型双选会，诚邀各用人单位拨冗参加，广纳贤才！",
+    "listPublishDate": "2026-05-12",
+    "sourceOrder": 33
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122052",
+    "contentId": "28737783122052",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122052"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省举办SFBT焦点解决生涯辅导工作坊",
+    "source": "",
+    "publishDate": "2017-10-22",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省举办SFBT焦点解决生涯辅导工作坊</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2017-10-22 14:25:48</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"margin: 0px 0px 13px; text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">10月19日-21日，省高校毕业生就业指导中心与北京仁能达生涯科技有限公司联合举办“SFBT焦点解决生涯辅导工作坊”，来自全省33所高校的60名从事就业管理和教学工作的教师参加培训。</span></p><p style=\"margin: 0px 0px 13px; text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">此次工作坊邀请台湾焦点解决技术第一人许维素教授进行授课。许维素教授是台湾师范大学教育心理与辅导研究所辅导组博士，投入于焦点解决短期治疗（SFBT）近二十年之久，是台湾焦点解决短期治疗领域最有影响力的专家。</span></p><p style=\"margin: 0px 0px 13px; text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">课程内容以生动的实例介绍了焦点解决的理念，从个案中发现和找到其目标的正向性并加以引导，通过积极的语言帮助个体找到自身的资源、找到解决问题的办法，学习使用焦点解决的语言，练习课程的设计，制定辅导的方案。以了解焦点解决短期咨询的理论为核心，掌握代表性咨询技术及其应用技巧；通过焦点解决技术强化与学生的有效互动，催化对学生的即时干预；通过焦点治疗各种询问技术的学习与训练，快速找到来访者的问题根源。</span></p><p style=\"margin: 0px 0px 13px; text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">通过3天的学习，使学员们学到了焦点解决的理论知识和实践应用，解决了在实际工作中的困惑和问题，掌握了用焦点解决指导未来工作、学习、生活的方法和技巧。</span></p><p style=\"margin: 0px 0px 13px; text-align: center;\"><span style=\"font-family: 仿宋; font-size: 21px;\">&nbsp;</span></p><p style=\"text-align: center;\"><img title=\"SFBT焦点解决工作坊新闻稿.jpg\" src=\"migration-resource://5394663755255ff0536def7e516c9249ccf7f738013da43c590f44dd3d929ba1\"></p><p style=\"margin: 0px 0px 13px; text-align: center;\"><span style=\"font-family: 仿宋; font-size: 21px;\"></span></p><p style=\"margin: 0px 0px 13px; text-align: center;\"><span style=\"font-family: 仿宋; font-size: 21px;\">（省高校毕业生就业指导中心&nbsp; 宋姣&nbsp; 王崴 ）</span></p><p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6364816728172262504395644.jpg",
+      "originalReference": "/chistory/cms/imgs/6364816728172262504395644.jpg",
+      "token": "migration-resource://5394663755255ff0536def7e516c9249ccf7f738013da43c590f44dd3d929ba1",
+      "snapshotPath": "assets/5394663755255ff0536def7e516c9249ccf7f738013da43c590f44dd3d929ba1.jpg",
+      "sha256": "5394663755255ff0536def7e516c9249ccf7f738013da43c590f44dd3d929ba1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 145783
+    }
+  ],
+  "sourceFingerprint": "a766a1db23edd53d9beb2a25a4eb61e3b81375d7bc6e3dfe2c10676027dad2fb",
+  "evidence": {
+    "listPage": 149,
+    "listTitle": "我省举办SFBT焦点解决生涯辅导工作坊",
+    "listPublishDate": "2017-10-22",
+    "sourceOrder": 1481,
+    "detailPublishDate": "2017-10-22"
+  }
+}

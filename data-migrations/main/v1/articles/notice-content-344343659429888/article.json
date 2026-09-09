@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:344343659429888",
+    "contentId": "344343659429888",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=344343659429888"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办“一起益企”2026年全省中小企业春季人才公益招聘活动的通知",
+    "source": "市场开发部",
+    "publishDate": "2026-03-16",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://52d1add27868f249e168d5c257989ebf6940c917333373170466eb46910bae7e\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://52553a1031aece93ec6505b9119c66babb6f297342f86a99f7d45b8ddd7e90bd\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://84e10619d26be032c48887380475b8641c481ac4016d1d5949c3a582bb0a82f3\" width=\"900\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-03-16/b4c6e2d2-0026-4770-8790-40c495faa0f8.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-03-16/b4c6e2d2-0026-4770-8790-40c495faa0f8.jpg",
+      "token": "migration-resource://52d1add27868f249e168d5c257989ebf6940c917333373170466eb46910bae7e",
+      "snapshotPath": "assets/52d1add27868f249e168d5c257989ebf6940c917333373170466eb46910bae7e.jpg",
+      "sha256": "52d1add27868f249e168d5c257989ebf6940c917333373170466eb46910bae7e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-03-16/5f6c9abc-24e3-49ea-827c-d37b4494c89a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-03-16/5f6c9abc-24e3-49ea-827c-d37b4494c89a.jpg",
+      "token": "migration-resource://52553a1031aece93ec6505b9119c66babb6f297342f86a99f7d45b8ddd7e90bd",
+      "snapshotPath": "assets/52553a1031aece93ec6505b9119c66babb6f297342f86a99f7d45b8ddd7e90bd.jpg",
+      "sha256": "52553a1031aece93ec6505b9119c66babb6f297342f86a99f7d45b8ddd7e90bd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2026-03-16/27f45089-4154-4bf2-933a-aafea96579ae.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2026-03-16/27f45089-4154-4bf2-933a-aafea96579ae.jpg",
+      "token": "migration-resource://84e10619d26be032c48887380475b8641c481ac4016d1d5949c3a582bb0a82f3",
+      "snapshotPath": "assets/84e10619d26be032c48887380475b8641c481ac4016d1d5949c3a582bb0a82f3.jpg",
+      "sha256": "84e10619d26be032c48887380475b8641c481ac4016d1d5949c3a582bb0a82f3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "40cbb1f75b843ca3cdf9370801a7a27b0a6789703be4688772567f9116b033a1",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "关于举办“一起益企”2026年全省中小企业春季人才公益招聘活动的通知",
+    "listPublishDate": "2026-03-16",
+    "sourceOrder": 10,
+    "detailPublishDate": "2026-03-16"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7589348298a601cff92cb75ccde348739bbd5939c85f609cf77abf07adb223ed",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/R9Og9ZsTtjXJu4VYXLt2ZA",
+    "url": "https://mp.weixin.qq.com/s/R9Og9ZsTtjXJu4VYXLt2ZA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范高等专科学校党委书记张万财、校长姜国权带队开展“访企拓岗”专项行动",
+    "source": "",
+    "publishDate": "2025-06-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/R9Og9ZsTtjXJu4VYXLt2ZA"
+  },
+  "resources": [],
+  "sourceFingerprint": "81ffde04798787ac6b75043d2536cc66494b8962e27d4b6120918e4c40e99a25",
+  "evidence": {
+    "listPage": 76,
+    "listTitle": "长春师范高等专科学校党委书记张万财、校长姜国权带队开展“访企拓岗”专项行动",
+    "listPublishDate": "2025-06-30",
+    "sourceOrder": 759
+  }
+}

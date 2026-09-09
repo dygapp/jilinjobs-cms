@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:e768550667bf9af5eaa35266a81d890c516bc98692ca8d02940392dbb735ce8f",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/1V6zEkSzFRyC88t93AQCqA",
+    "url": "https://mp.weixin.qq.com/s/1V6zEkSzFRyC88t93AQCqA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2025年全省中小企业春季人才公益招聘会将于4月2日举办",
+    "source": "",
+    "publishDate": "2025-03-27",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/1V6zEkSzFRyC88t93AQCqA"
+  },
+  "resources": [],
+  "sourceFingerprint": "c03d9d3970ccfdd1a69cb153171a4dfb9db0c2e12891e781acb437e1a8d5e06d",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "2025年全省中小企业春季人才公益招聘会将于4月2日举办",
+    "listPublishDate": "2025-03-27",
+    "sourceOrder": 200
+  }
+}

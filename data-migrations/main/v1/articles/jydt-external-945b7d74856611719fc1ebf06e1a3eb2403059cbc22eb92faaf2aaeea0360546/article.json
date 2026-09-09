@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:945b7d74856611719fc1ebf06e1a3eb2403059cbc22eb92faaf2aaeea0360546",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/tfwTYPfoCFM4a9TuLAy-hA",
+    "url": "https://mp.weixin.qq.com/s/tfwTYPfoCFM4a9TuLAy-hA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林师范大学党委书记梅丽娜带队开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-04-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/tfwTYPfoCFM4a9TuLAy-hA"
+  },
+  "resources": [],
+  "sourceFingerprint": "6afb6929e9e4f113e890acc47261e3af6908690ffca971326aa5cb3841f9e5a4",
+  "evidence": {
+    "listPage": 32,
+    "listTitle": "吉林师范大学党委书记梅丽娜带队开展访企拓岗专项行动",
+    "listPublishDate": "2026-04-07",
+    "sourceOrder": 315
+  }
+}

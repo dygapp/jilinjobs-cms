@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0a37ebc079df7e69774488a92ec6307653de921b09a57dd0dc6ae30e479307e2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/HfO7_QwzAPN_8I8QyDjpPQ",
+    "url": "https://mp.weixin.qq.com/s/HfO7_QwzAPN_8I8QyDjpPQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "全国首个“小米汽车产业学院”落户吉林科技职业技术学院 产教融合定向培育新能源智能汽车“工匠摇篮”",
+    "source": "",
+    "publishDate": "2025-10-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/HfO7_QwzAPN_8I8QyDjpPQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "b620a1658bb309be732b1bce8b2c1460789a78a9e17b94af4a01f8cfe6612283",
+  "evidence": {
+    "listPage": 67,
+    "listTitle": "全国首个“小米汽车产业学院”落户吉林科技职业技术学院 产教融合定向培育新能源智能汽车“工匠摇篮”",
+    "listPublishDate": "2025-10-24",
+    "sourceOrder": 664
+  }
+}

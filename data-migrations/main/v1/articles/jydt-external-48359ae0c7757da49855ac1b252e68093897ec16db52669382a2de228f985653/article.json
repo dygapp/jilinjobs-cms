@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:48359ae0c7757da49855ac1b252e68093897ec16db52669382a2de228f985653",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/wLNDudO2joUXU_9SRLP7hQ",
+    "url": "https://mp.weixin.qq.com/s/wLNDudO2joUXU_9SRLP7hQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林通用航空职业技术学院党委书记王洪福带队开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2025-06-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wLNDudO2joUXU_9SRLP7hQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "8e95d287cdcf3610cb2e4491e324765d998952dfd02ec5494333820d78fc1a44",
+  "evidence": {
+    "listPage": 76,
+    "listTitle": "吉林通用航空职业技术学院党委书记王洪福带队开展访企拓岗专项行动",
+    "listPublishDate": "2025-06-30",
+    "sourceOrder": 758
+  }
+}

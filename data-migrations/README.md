@@ -1,281 +1,155 @@
 # Historical Content Migration Workspace
 
-`data-migrations/` 承担历史运营内容迁移资产，与 Generic Backend Flyway、JilinJobs Site Package 和运行时数据库保持职责分离。
+`data-migrations/` owns historical content whose lifecycle requires source provenance, canonical fingerprints, offline validation and controlled Runtime import. It is separate from Generic Flyway, JilinJobs Site Package and Runtime databases.
 
-本 README 是 Consumer Repository 内历史内容迁移数据组织的长期约定。Party / EU-29 是首个落地场景；后续主站历史文章、外链、运营列表等迁移应优先沿用本约定，而不是为每个站点重新设计一套 Snapshot 结构。
+## 1. Long-term boundary
 
-## 1. 边界
+- Backend Flyway → Generic CMS schema/capability only.
+- `sites/jilinjobs/structure/**` → stable JilinJobs site structure/content.
+- `sites/jilinjobs/bootstrap/**` → truly one-time ordinary Fresh Site defaults only.
+- `sites/jilinjobs/assets/**` → stable Site asset source owner.
+- `data-migrations/**` → historical migration units/evidence explicitly authorized for a site/scope.
+- Runtime DB → imported/operated state, never canonical source authority.
 
-- Backend Flyway：只承担 Generic CMS Schema evolution 与 site-neutral provisioning capability；不承担具体 JilinJobs 站点实例数据。
-- `sites/jilinjobs/structure/**`：稳定 JilinJobs Site structure；`sites/jilinjobs/bootstrap/**`：Fresh Site one-time operational defaults；`sites/jilinjobs/assets/**`：稳定 Site asset 的唯一版本化 source owner，Runtime target 继续为 `/static/**`。
-- `data-migrations/**`：历史文章、外链、正文资源、附件、历史运营列表成员的采集证据、标准化迁移数据、导入工具和迁移报告。
-- CMS Runtime Database：迁移后的运行时数据，不作为历史迁移源文件。
+Generic migration capability may support Article/Page/List records, but **product ownership for a concrete scope decides which types belong here**.
 
-Historical Migration 可以引用 Site Package 已 provision 的稳定 Column alias / List code 等 identity，但不得接管 Site stable structure、Fresh Site bootstrap 或 stable Site asset ownership。历史文章 / 正文 / 附件 / 历史轮播资源仍随对应 Canonical Migration unit 管理，不进入 stable Site asset manifest。
+## 2. Current Main rule
 
-本目录按未来可独立迁出仓库的方式组织；迁移数据仍与 `jilinjobs-cms` 同仓，以便 CMS Schema、Importer 与 Runtime Verification 在同一 CI 中闭环。
+For Main E3, Historical Migration is **Article-only**:
 
-## 2. 数据流
+- INTERNAL Articles;
+- EXTERNAL_LINK Articles;
+- Article body/resources/attachments;
+- source identity/fingerprint/provenance;
+- collection/retry/error/reconciliation evidence.
+
+Main Page content and stable Main ListItem membership belong to `sites/jilinjobs/**` Site Package authority.
+
+A Main source collector may still discover Page/List surfaces for completeness, but those records are **Site Package source handoff evidence**. They must not appear in Main import eligibility or be silently discarded.
+
+This Main-specific ownership correction does not retroactively invalidate Party canonical ListItem data or another scope whose accepted authority explicitly treats a list placement as Historical Migration.
+
+## 3. Data flow
 
 ```text
 Legacy Website / Export / API
         ↓
-Raw Evidence
+Raw Evidence Candidate
+        ↓
+classification / retry / review
         ↓
 Canonical Migration Dataset
         ↓
-Validator / Reconciliation
+offline validation / reconciliation
         ↓
-Importer
+Generic Content Migration
         ↓
-Column / Article / Resource / CmsList
+Runtime CMS Data
 ```
 
-外部原站只用于显式 Collect / Discovery；稳定 CI 应验证已固化的 Canonical Migration Dataset，不能让普通回归测试依赖原站实时可用性。
+External source access is limited to explicit Collect/Discovery workflows. Stable CI/import must consume frozen repository/evidence bytes.
 
-GitHub Actions Artifact、ZIP、tar 等只允许作为采集、传输或临时评审容器，不作为长期权威数据结构。
+Actions artifacts/ZIPs are transport/evidence candidates, not long-lived canonical authority by themselves.
 
-## 3. Canonical Dataset 原则
+## 4. Canonical dataset principles
 
-历史迁移数据在仓库中长期只维护一套 **Canonical Migration Dataset**。
+Maintain one canonical dataset per accepted migration scope. Git history expresses later additions/corrections; do not accumulate permanent full-snapshot ZIP generations.
 
-不长期维护：
+Every migration unit must have:
+
+- stable migration identity independent of Runtime numeric IDs;
+- source system / source URL;
+- deterministic source fingerprint;
+- stable target identity (for Main Article: Column alias);
+- local resource paths where resources must be imported;
+- resource size + SHA-256;
+- explicit source/error state.
+
+Missing fields are not guessed.
+
+## 5. Article self-contained unit
+
+Article is the Main historical migration unit:
 
 ```text
-baseline.zip
-increment-01.zip
-increment-02.zip
-```
-
-也不把每轮采集结果作为一个新的完整 Snapshot 目录永久叠加。
-
-增量由 Git 本身表达：
-
-- 新增内容：新增对应迁移单元并更新索引；
-- 内容变化：更新对应迁移单元并更新 fingerprint；
-- 资源变化：只新增或替换该迁移单元实际引用的资源；
-- Git commit / diff 记录每次迁移数据变化。
-
-因此“基线”和“增量”是采集 / 校验过程中的概念，不是两套永久存储形态。
-
-## 4. 文章级自包含迁移单元
-
-文章是历史内容迁移的最小可独立管理、校验和导入单元。
-
-推荐结构：
-
-```text
-data-migrations/
-├── README.md
-├── schemas/
-│   └── article.schema.json
-└── <site>/
-    └── v1/
-        ├── manifest.json
-        ├── index.ndjson
-        ├── articles/
-        │   ├── <stable-id-1>/
-        │   │   ├── article.json
-        │   │   └── assets/
-        │   │       ├── <sha256>.jpg
-        │   │       └── <sha256>.png
-        │   └── <stable-id-2>/
-        │       ├── article.json
-        │       └── assets/
-        ├── lists/
-        │   └── <list-code>/
-        │       ├── index.json
-        │       └── items/
-        └── reports/
-```
-
-其中：
-
-- `<site>` 可以是 `party`、后续主站对应 scope 等；
-- `<stable-id>` 来自稳定 migration identity，不依赖运行时数据库 ID；
-- 每篇文章一个目录；
-- `article.json` 保存文章标准化数据、来源、fingerprint 和资源清单；
-- `assets/` 只保存该文章实际引用的正文图片 / 附件等资源；
-- 文章目录应能够脱离原站独立校验和导入。
-
-单篇文章使用 `.json`，而不是单行 `.ndjson`。NDJSON 保留给需要逐行维护和扫描的全局索引。
-
-## 5. `index.ndjson` 职责
-
-`index.ndjson` 是轻量迁移目录，不承载文章正文。
-
-每条索引至少应能够定位：
-
-- stable migration identity / `legacyKey`；
-- 文章目录；
-- legacy `content_id / typeCode / detail path`（若存在）；
-- 原始 URL；
-- 目标栏目 alias；
-- Article Type；
-- `sourceFingerprint`；
-- 当前 source observation 状态；
-- `firstSeenAt / lastSeenAt` 等必要追踪信息。
-
-Collector 后续增量扫描应优先通过 identity + fingerprint 比较得到：
-
-```text
-NEW
-UNCHANGED
-CHANGED
-MISSING_FROM_SOURCE
-```
-
-只有 `NEW / CHANGED` 才需要重新抓取详情和资源。
-
-`MISSING_FROM_SOURCE` 不等于删除。原站暂时不可访问、内容下架和真实删除是不同事实；在证据不足时应保留迁移单元并记录 source observation 状态，不静默执行 `git rm`。
-
-## 6. 文章资源组织
-
-文章引用的图片、附件等资源跟随文章目录管理，不再为全部历史文章建立一个持续增长的统一资源 ZIP。
-
-示例：
-
-```text
-articles/gzdt-content-154659859759104/
-├── article.json
-└── assets/
-    ├── 7c3f...jpg
-    └── b8a1...pdf
-```
-
-`article.json` 中的每个资源至少保留：
-
-- resource role（如 `BODY_IMAGE`、`ATTACHMENT`）；
-- 原始 URL；
-- migration-relative path；
-- MIME / content type；
-- size；
-- SHA-256。
-
-正文中的标准化资源引用应使用迁移单元内部相对路径，例如：
-
-```html
-<img src="assets/7c3f....jpg">
-```
-
-不得让 Canonical Dataset 依赖原站 URL 或未来 CMS Runtime URL 才能恢复正文资源。
-
-Importer 负责：
-
-1. 读取 `article.json`；
-2. 校验本地资源字节、大小和 SHA-256；
-3. 写入 CMS Resource / Static Resource；
-4. 把 migration-relative reference 改写为运行时公开 URL；
-5. 再创建或核对文章 Runtime 数据。
-
-完全相同的资源可以在不同文章目录中以相同 SHA 文件名出现；是否进一步做跨文章物理去重属于存储优化，不应破坏文章级自包含边界。
-
-## 7. 运营列表 / 轮播
-
-轮播和其他历史运营列表成员也应采用与文章类似的可独立管理单元，而不是长期依赖一个整包资源目录。
-
-推荐结构：
-
-```text
-lists/PARTY_CAROUSEL/
-├── index.json
-└── items/
-    └── <stable-id>/
-        ├── item.json
-        └── assets/
-            └── <sha256>.jpg
-```
-
-每个列表项保存自身标题、目标 URL、open mode、排序、legacy identity、fingerprint 与实际引用资源。
-
-若某个列表项未来建立到迁移文章的 canonical 关系，应通过稳定 identity 表达，不通过临时 Runtime 数据库 ID 建立长期迁移依赖。
-
-## 8. 追溯与幂等原则
-
-每条迁移内容至少保留：
-
-- `sourceSystem`；
-- stable migration identity / legacy identity；
-- 原始 URL；
-- 可取得的 legacy `content_id / typeCode / detail path`；
-- 目标栏目 alias / list code；
-- Article Type / item type；
-- `sourceFingerprint`；
-- 可可靠取得的资源 URL、媒体类型、大小与 SHA-256。
-
-Importer 必须先判断 legacy identity + fingerprint，再创建 Runtime 数据：
-
-- 不存在：创建并记录映射；
-- 已存在且 fingerprint 相同：跳过；
-- 已存在但 fingerprint 不同：作为冲突停止该条自动覆盖并进入报告。
-
-不根据缺失字段猜值；例如原站没有发布日期时保留 `null`。
-
-## 9. Collect / Review / CI 边界
-
-### Collect Mode
-
-允许联系原站，输出 Raw Evidence 和 Canonical Dataset 的候选变化。
-
-### Review Mode
-
-必须基于冻结的候选数据进行 Fresh DB Import、Reconciliation 和 Runtime Browser Review。ZIP 可以作为 Actions Artifact 的运输容器，但评审对象是解包后的逻辑数据集。
-
-### Stable CI
-
-不得依赖原站在线。应从仓库中的 Canonical Dataset 恢复 Fresh Runtime，验证：
-
-- Schema / format；
-- 资源完整性和 SHA-256；
-- Importer 首次导入；
-- 二次导入幂等；
-- reconciliation；
-- Runtime Browser 行为。
-
-## 10. Party / EU-29 兼容说明
-
-EU-29 初始候选 Snapshot 曾采用：
-
-```text
-articles.ndjson
-resources.ndjson
-carousel.json
-assets/
-```
-
-并通过 GitHub Actions Artifact ZIP 在 Review Workflow 中传输。这是当前实验阶段形成的候选格式，不定义后续长期存储规范。
-
-EU-29 正式长期资产收口时，应迁移为本 README 定义的 Canonical Dataset：
-
-```text
-party/v1/
+data-migrations/main/v1/
 ├── manifest.json
 ├── index.ndjson
-├── articles/<stable-id>/article.json
-├── articles/<stable-id>/assets/**
-├── lists/PARTY_CAROUSEL/**
-└── reports/**
+├── articles/
+│   └── <stable-id>/
+│       ├── article.json
+│       └── assets/**
+├── reports/**
+└── source-discovery/**
 ```
 
-迁移格式变化不得改变已经冻结的人工作证据含义：原始 legacy identity、来源 URL、正文、资源字节、SHA-256、文章数量、列表项顺序等必须可对账。
+`article.json` owns normalized Article data, source provenance/fingerprint and resource manifest. Body/attachment resources required for local migration remain inside the Article unit and are verified by size/SHA.
 
-## 11. 后续主站迁移要求
+The canonical body must not depend on a Legacy Source URL when the resource is supposed to be locally migrated.
 
-后续主站历史内容迁移应默认复用本 README：
+## 6. Identity / idempotency
 
-1. 先建立 Main-site scope 的 `manifest.json + index.ndjson`；
-2. 每篇文章采用独立 self-contained migration unit；
-3. 正文图片 / 附件跟随文章目录；
-4. 新增 / 修改内容直接更新 Canonical Dataset，不创建新的完整 ZIP 基线；
-5. 统一使用 stable identity + fingerprint 做增量判定；
-6. Collect、Import、Reconciliation、Runtime Verification 沿用同一数据契约；
-7. 只有出现本约定无法覆盖的新内容类型时，才扩展本 README / schema，不为单个迁移阶段另起一套临时规则。
+Importer behavior remains:
 
-## 12. Source Discovery 基本顺序
+- unknown migration identity → create;
+- same identity + same fingerprint → SKIP/idempotent;
+- same identity + different fingerprint or invalid target/precondition → CONFLICT/no silent overwrite.
 
-1. 比较 HTTP 初始 HTML、Browser 最终 DOM、XHR / fetch 与资源请求；
-2. 优先使用已证明可靠的结构化数据源；
-3. 若无结构化内容 API，以服务端 HTML 为主采集源，Browser DOM / Network Evidence 作为校验；
-4. 遍历目标栏目的完整分页边界，不把首页 Top-N 或单页展示数当作内容全集；
-5. 输出 discovered / internal / external / unresolved reconciliation；
-6. Canonical Dataset 候选冻结后，再执行 Fresh DB Import + 二次 Import 幂等验证 + Runtime Browser Review。
+Deletion or disappearance from a later source scan is not automatically a Runtime delete.
+
+## 7. Error policy
+
+Migration tooling is fail-closed and evidence-preserving.
+
+For current Main:
+
+- HTTP 404/410 alone may establish `SOURCE_RESOURCE_MISSING`;
+- INTERNAL Article with only that blocking class may be excluded pending client confirmation and must remain separately listed;
+- transport/socket/timeout is not inferred missing;
+- unsupported HTML/attributes/media/schemes/redirects and every new error class remain explicit human-review classifications unless Authority accepts another disposition;
+- approved non-blocking exceptions remain recorded as evidence;
+- no silent repair/drop/discard.
+
+Page/List problems found by the Main collector are written to the Site Package handoff rather than migration withholding.
+
+## 8. Page/List capability note
+
+The Generic migration engine may still contain site-neutral Page/List support because earlier/other consumers use it. That technical capability does not make Main Page/List data migration-owned.
+
+For Main:
+
+- Page stable content already has Site Package representation/reconcile capability;
+- stable Main ListItem membership requires a separate Site Package capability/ownership Unit;
+- Historical Migration must not be used as a temporary fallback for that missing capability.
+
+## 9. Collect / Review / Stable CI
+
+### Collect
+May contact Legacy Source and emit full source evidence.
+
+### Retry / Classification
+May retry only explicitly authorized transient targets under a finite budget; all terminal classifications remain recorded.
+
+### Review / Eligibility
+Uses frozen source/retry evidence. For Main, `import-eligible-index.json` contains Articles only and a separate `site-package-handoff.json` preserves Page/List findings.
+
+### Stable CI / downstream import
+Must not contact Legacy Source and must verify canonical bytes, fingerprints/resources, first import, second-import idempotency, reconciliation and accepted conflict behavior.
+
+## 10. Party compatibility
+
+Party was the first real Canonical Migration consumer and historically includes accepted carousel/ListItem data. Those accepted Party semantics remain governed by Party authority and compatibility evidence.
+
+Do not generalize Party list ownership into Main. Likewise, do not rewrite Party merely because Main now classifies stable list membership as Site Package content.
+
+## 11. Main EU-50 current gate
+
+EU-50 owns:
+
+- Article source discovery/collection/retry;
+- Article-only eligibility/promotion;
+- source-defect client-confirmation list;
+- human-review Article error list;
+- Page/List Site Package source handoff.
+
+EU-50 does not perform Runtime import and does not enter EU-51. The old mixed destructive Main triage path is retired because it could delete Page/List evidence and mix ownership domains.

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:3002aeef31ea0cf74b4e9a6fa11ec4a91a4655b8f9725f627f567307e4729222",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/G0GI69oRaVG0y1W_eJZbMA",
+    "url": "https://mp.weixin.qq.com/s/G0GI69oRaVG0y1W_eJZbMA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林动画学院2026年春季专场招聘月工作安排",
+    "source": "",
+    "publishDate": "2026-03-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/G0GI69oRaVG0y1W_eJZbMA"
+  },
+  "resources": [],
+  "sourceFingerprint": "97ec2f9213ab2ea7e91b3a6ccaf2afe5280a9c416c61c3e3eb6650109b3cc635",
+  "evidence": {
+    "listPage": 6,
+    "listTitle": "吉林动画学院2026年春季专场招聘月工作安排",
+    "listPublishDate": "2026-03-19",
+    "sourceOrder": 55
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:df25ae0d8ebf7e027b1e6499bfb799088d2d14ca4851a56d32a375a194c6814e",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/sheDXKtyzds_TkFI2jziEA",
+    "url": "https://mp.weixin.qq.com/s/sheDXKtyzds_TkFI2jziEA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春大学旅游学院召开2025届毕业生就业工作推进会",
+    "source": "",
+    "publishDate": "2025-06-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/sheDXKtyzds_TkFI2jziEA"
+  },
+  "resources": [],
+  "sourceFingerprint": "330630eab72e07342181ed4e6dbc7a5958e8bb8954125c2a39eab0f165b6adca",
+  "evidence": {
+    "listPage": 84,
+    "listTitle": "长春大学旅游学院召开2025届毕业生就业工作推进会",
+    "listPublishDate": "2025-06-10",
+    "sourceOrder": 840
+  }
+}

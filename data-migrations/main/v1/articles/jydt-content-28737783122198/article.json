@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122198",
+    "contentId": "28737783122198",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122198"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2013年全国普通高校毕业生就业工作网络视频会议召开",
+    "source": "",
+    "publishDate": "2012-11-22",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2013年全国普通高校毕业生就业工作网络视频会议召开</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-11-22 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://73c424dcdf0861b55ba07227af62d6f1d4daf8526ae70f1544d68de5b3c0a7a9\"></p> <p><font size=\"4\">&nbsp;&nbsp;&nbsp; <font size=\"3\" face=\"仿宋_GB2312\">11月21日，2013年全国普通高校毕业生就业工作网络视频会议召开，我省分会场设在省教育信息中心。会议贯彻学习党的十八大精神，总结2012年全国普通高校毕业生就业工作，全面部署2013年全国普通高校毕业生就业工作。全省各高校主要负责人、分管就业工作校领导和就业工作负责人参加了会议。省教育厅副厅长孙维杰到会并讲话。</font><br></font></p> <p align=\"center\"><span style=\"FONT-FAMILY: 仿宋; FONT-SIZE: 15pt; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA\"><img border=\"0\" src=\"migration-resource://94684073b57d84b5d5c736d8552c8b5636a8a6cb49a0d6c8e915c5cf7b4616e3\"></span></p><span style=\"FONT-FAMILY: 仿宋; FONT-SIZE: 15pt; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA\"> <p align=\"center\"><font size=\"3\" face=\"仿宋_GB2312\">省教育厅副厅长孙维杰对吉林省2013年高校毕业生就业工作做了部署。</font></p></span></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121122233045926.jpg",
+      "originalReference": "/chistory/cms/imgs/20121122233045926.jpg",
+      "token": "migration-resource://73c424dcdf0861b55ba07227af62d6f1d4daf8526ae70f1544d68de5b3c0a7a9",
+      "snapshotPath": "assets/73c424dcdf0861b55ba07227af62d6f1d4daf8526ae70f1544d68de5b3c0a7a9.jpg",
+      "sha256": "73c424dcdf0861b55ba07227af62d6f1d4daf8526ae70f1544d68de5b3c0a7a9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 81397
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2012112223332263.jpg",
+      "originalReference": "/chistory/cms/imgs/2012112223332263.jpg",
+      "token": "migration-resource://94684073b57d84b5d5c736d8552c8b5636a8a6cb49a0d6c8e915c5cf7b4616e3",
+      "snapshotPath": "assets/94684073b57d84b5d5c736d8552c8b5636a8a6cb49a0d6c8e915c5cf7b4616e3.jpg",
+      "sha256": "94684073b57d84b5d5c736d8552c8b5636a8a6cb49a0d6c8e915c5cf7b4616e3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 48303
+    }
+  ],
+  "sourceFingerprint": "29360c3b1fce720c386daebb2cd10fd4392efd5ce84991152a3536b3d933bdab",
+  "evidence": {
+    "listPage": 164,
+    "listTitle": "2013年全国普通高校毕业生就业工作网络视频会议召开",
+    "listPublishDate": "2012-11-22",
+    "sourceOrder": 1632,
+    "detailPublishDate": "2012-11-22"
+  }
+}

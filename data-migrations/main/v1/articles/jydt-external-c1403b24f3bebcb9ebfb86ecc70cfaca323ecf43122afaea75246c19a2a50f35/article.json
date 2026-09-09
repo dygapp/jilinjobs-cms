@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c1403b24f3bebcb9ebfb86ecc70cfaca323ecf43122afaea75246c19a2a50f35",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/TkGk_sdvs5hZuTrx4CMOJQ",
+    "url": "https://mp.weixin.qq.com/s/TkGk_sdvs5hZuTrx4CMOJQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "深化产教融合 共促校企发展 —— 松原职业技术学院赴吉林中威油气工程有限公司开展校企合作洽谈",
+    "source": "",
+    "publishDate": "2026-06-05",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/TkGk_sdvs5hZuTrx4CMOJQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "505a8376867d40bbe2653589af860cf1beb27133dda7dd99530cf5a54be2203e",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "深化产教融合 共促校企发展 —— 松原职业技术学院赴吉林中威油气工程有限公司开展校企合作洽谈",
+    "listPublishDate": "2026-06-05",
+    "sourceOrder": 100
+  }
+}

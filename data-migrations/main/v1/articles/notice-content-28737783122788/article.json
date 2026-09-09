@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122788",
+    "contentId": "28737783122788",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122788"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展2017届全省普通高校毕业生就业洽谈月活动的通知",
+    "source": "",
+    "publishDate": "2016-10-19",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于开展2017届全省普通高校毕业生就业洽谈月活动的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:市场部 发布时间:2016-10-19 13:56:06</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://b56c8962229d5f12fef52764e45bb6516ffc940a00719291ac5cbfe99b41cf69\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://5bdf1ef28fabc1c05947c844ea965362512fda5b5e204fd13adfb06f56c5ff06\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://547503dfcfc2d2429ca1e723925b7bf3a4c1d8fefae2200d5c31629cdd7e0044\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://8c6de51afc21d6d4cdcd0a8ba04636d4e019ce2cebeab1059e2652fa3fb5cd51\"></p>\n\n<p>&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=302db6b5-e50b-4adf-978f-59a7f5017c89\">吉教学字〔2016〕9号附件.doc</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361248218681250004765958.jpg",
+      "originalReference": "/chistory/cms/imgs/6361248218681250004765958.jpg",
+      "token": "migration-resource://b56c8962229d5f12fef52764e45bb6516ffc940a00719291ac5cbfe99b41cf69",
+      "snapshotPath": "assets/b56c8962229d5f12fef52764e45bb6516ffc940a00719291ac5cbfe99b41cf69.jpg",
+      "sha256": "b56c8962229d5f12fef52764e45bb6516ffc940a00719291ac5cbfe99b41cf69",
+      "contentType": "image/jpeg",
+      "sizeBytes": 74884
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361248218884375009880104.jpg",
+      "originalReference": "/chistory/cms/imgs/6361248218884375009880104.jpg",
+      "token": "migration-resource://5bdf1ef28fabc1c05947c844ea965362512fda5b5e204fd13adfb06f56c5ff06",
+      "snapshotPath": "assets/5bdf1ef28fabc1c05947c844ea965362512fda5b5e204fd13adfb06f56c5ff06.jpg",
+      "sha256": "5bdf1ef28fabc1c05947c844ea965362512fda5b5e204fd13adfb06f56c5ff06",
+      "contentType": "image/jpeg",
+      "sizeBytes": 94727
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361248219051562509634404.jpg",
+      "originalReference": "/chistory/cms/imgs/6361248219051562509634404.jpg",
+      "token": "migration-resource://547503dfcfc2d2429ca1e723925b7bf3a4c1d8fefae2200d5c31629cdd7e0044",
+      "snapshotPath": "assets/547503dfcfc2d2429ca1e723925b7bf3a4c1d8fefae2200d5c31629cdd7e0044.jpg",
+      "sha256": "547503dfcfc2d2429ca1e723925b7bf3a4c1d8fefae2200d5c31629cdd7e0044",
+      "contentType": "image/jpeg",
+      "sizeBytes": 105522
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6361248219214062509104624.jpg",
+      "originalReference": "/chistory/cms/imgs/6361248219214062509104624.jpg",
+      "token": "migration-resource://8c6de51afc21d6d4cdcd0a8ba04636d4e019ce2cebeab1059e2652fa3fb5cd51",
+      "snapshotPath": "assets/8c6de51afc21d6d4cdcd0a8ba04636d4e019ce2cebeab1059e2652fa3fb5cd51.jpg",
+      "sha256": "8c6de51afc21d6d4cdcd0a8ba04636d4e019ce2cebeab1059e2652fa3fb5cd51",
+      "contentType": "image/jpeg",
+      "sizeBytes": 84913
+    }
+  ],
+  "sourceFingerprint": "3a969cb9e018e58bab92811e850c3aa3872349aed7b18fed32ac78f8892fa7a3",
+  "evidence": {
+    "listPage": 24,
+    "listTitle": "关于开展2017届全省普通高校毕业生就业洽谈月活动的通知",
+    "listPublishDate": "2016-10-19",
+    "sourceOrder": 239,
+    "detailPublishDate": "2016-10-19"
+  }
+}

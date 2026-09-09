@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122994",
+    "contentId": "28737783122994",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122994"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发“关于做好2012年度《中国大学生就业》杂志征订工作的通知”的通知",
+    "source": "",
+    "publishDate": "2011-10-24",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发“关于做好2012年度《中国大学生就业》杂志征订工作的通知”的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-10-24 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://69a2d7007e509d1c24a6fb40c9f1445e23b5b2d8d3019485d6c4b20c1b97de37\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://3bfbcb67054b9211b1a26938fb9595e7d0b8796d23eb5eaa771074022115ed87\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111024154459705.jpg",
+      "originalReference": "/chistory/cms/imgs/20111024154459705.jpg",
+      "token": "migration-resource://69a2d7007e509d1c24a6fb40c9f1445e23b5b2d8d3019485d6c4b20c1b97de37",
+      "snapshotPath": "assets/69a2d7007e509d1c24a6fb40c9f1445e23b5b2d8d3019485d6c4b20c1b97de37.jpg",
+      "sha256": "69a2d7007e509d1c24a6fb40c9f1445e23b5b2d8d3019485d6c4b20c1b97de37",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77309
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111024154507808.jpg",
+      "originalReference": "/chistory/cms/imgs/20111024154507808.jpg",
+      "token": "migration-resource://3bfbcb67054b9211b1a26938fb9595e7d0b8796d23eb5eaa771074022115ed87",
+      "snapshotPath": "assets/3bfbcb67054b9211b1a26938fb9595e7d0b8796d23eb5eaa771074022115ed87.jpg",
+      "sha256": "3bfbcb67054b9211b1a26938fb9595e7d0b8796d23eb5eaa771074022115ed87",
+      "contentType": "image/jpeg",
+      "sizeBytes": 42845
+    }
+  ],
+  "sourceFingerprint": "a3b996759ed84869101e800603fe0f24ec072e5403345bc4b31ccd43e2f42eaa",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "转发“关于做好2012年度《中国大学生就业》杂志征订工作的通知”的通知",
+    "listPublishDate": "2011-10-24",
+    "sourceOrder": 422,
+    "detailPublishDate": "2011-10-24"
+  }
+}

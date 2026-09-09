@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122146",
+    "contentId": "28737783122146",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122146"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省2015年上半年全国计算机应用技术证书考试（NIT）情况通报",
+    "source": "",
+    "publishDate": "2015-06-24",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省2015年上半年全国计算机应用技术证书考试（NIT）情况通报</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2015-6-24 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p>&nbsp;</p><p style=\"text-indent: 43px;\"><span style=\"font-family: 仿宋; font-size: 21px;\">截止2015年6月22日，全省上半年全国计算机应用技术证书考试（NIT）工作已全部结束。为加强考试管理，省高等学校毕业生就业指导中心进一步规范考试流程，增派巡考人员，严肃考场纪律。省内有13个考点开考，共151场次，参考考生5911人次，派出巡考人员 62人次，查处违纪考生3人。考生报名较去年同期增加1701人次，增幅达 38.9 %。整体考试工作平稳顺利。</span></p><p>&nbsp;</p><p style=\"text-align: center;\"><img title=\"IMG_4762.JPG\" src=\"migration-resource://57b2a62e958ce9609b2d1b10783f4cac29fdc436348b42b2195270626d882f81\"></p><p style=\"text-align: center;\"><img title=\"IMG_4773.JPG\" src=\"migration-resource://82f82ab8545b44868aedb9809592a02cd2a6bdcd5b91a02078c992d61ee23368\"></p><p style=\"text-align: center;\"><img title=\"吉林工业职业技术学院.png\" src=\"migration-resource://c1658bc604df3fabd7be5a140b45f0da621b790f575384715fb33edea406eab5\"></p><p style=\"text-align: center;\"><img title=\"吉林化工学院.jpg\" src=\"migration-resource://6c5ecaad03136aee3d7ed6ee87646c85dcb7758e8a86bab4b2eb9811c6cb503f\"></p><p style=\"text-align: center;\"><img title=\"长春医药大学职业技术学院.jpg\" src=\"migration-resource://14bb3f7106d64d9c99037096e6344550ced67ffac7dae707209eec4f6bebc1c1\"></p><p style=\"text-align: center;\"></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357075319214062507997248.JPG",
+      "originalReference": "/chistory/cms/imgs/6357075319214062507997248.JPG",
+      "token": "migration-resource://57b2a62e958ce9609b2d1b10783f4cac29fdc436348b42b2195270626d882f81",
+      "snapshotPath": "assets/57b2a62e958ce9609b2d1b10783f4cac29fdc436348b42b2195270626d882f81.jpg",
+      "sha256": "57b2a62e958ce9609b2d1b10783f4cac29fdc436348b42b2195270626d882f81",
+      "contentType": "image/jpeg",
+      "sizeBytes": 112950
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357075319225000007496482.JPG",
+      "originalReference": "/chistory/cms/imgs/6357075319225000007496482.JPG",
+      "token": "migration-resource://82f82ab8545b44868aedb9809592a02cd2a6bdcd5b91a02078c992d61ee23368",
+      "snapshotPath": "assets/82f82ab8545b44868aedb9809592a02cd2a6bdcd5b91a02078c992d61ee23368.jpg",
+      "sha256": "82f82ab8545b44868aedb9809592a02cd2a6bdcd5b91a02078c992d61ee23368",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131583
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357075319234375008468297.png",
+      "originalReference": "/chistory/cms/imgs/6357075319234375008468297.png",
+      "token": "migration-resource://c1658bc604df3fabd7be5a140b45f0da621b790f575384715fb33edea406eab5",
+      "snapshotPath": "assets/c1658bc604df3fabd7be5a140b45f0da621b790f575384715fb33edea406eab5.jpg",
+      "sha256": "c1658bc604df3fabd7be5a140b45f0da621b790f575384715fb33edea406eab5",
+      "contentType": "image/jpeg",
+      "sizeBytes": 116684
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357075319242187506210868.jpg",
+      "originalReference": "/chistory/cms/imgs/6357075319242187506210868.jpg",
+      "token": "migration-resource://6c5ecaad03136aee3d7ed6ee87646c85dcb7758e8a86bab4b2eb9811c6cb503f",
+      "snapshotPath": "assets/6c5ecaad03136aee3d7ed6ee87646c85dcb7758e8a86bab4b2eb9811c6cb503f.jpg",
+      "sha256": "6c5ecaad03136aee3d7ed6ee87646c85dcb7758e8a86bab4b2eb9811c6cb503f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 104482
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357075319250000003953439.jpg",
+      "originalReference": "/chistory/cms/imgs/6357075319250000003953439.jpg",
+      "token": "migration-resource://14bb3f7106d64d9c99037096e6344550ced67ffac7dae707209eec4f6bebc1c1",
+      "snapshotPath": "assets/14bb3f7106d64d9c99037096e6344550ced67ffac7dae707209eec4f6bebc1c1.jpg",
+      "sha256": "14bb3f7106d64d9c99037096e6344550ced67ffac7dae707209eec4f6bebc1c1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 109897
+    }
+  ],
+  "sourceFingerprint": "f30f0252b0f65d3e55c276af0ff8751ce16d9cb3b959e499473bb1de6bad0bc0",
+  "evidence": {
+    "listPage": 157,
+    "listTitle": "吉林省2015年上半年全国计算机应用技术证书考试（NIT）情况通报",
+    "listPublishDate": "2015-06-24",
+    "sourceOrder": 1569,
+    "detailPublishDate": "2015-06-24"
+  }
+}

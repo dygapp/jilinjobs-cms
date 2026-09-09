@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122210",
+    "contentId": "28737783122210",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122210"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "全省高校推广使用“全国大学生就业服务一体化系统”工作会在吉林省高校毕业生就业指导中心召开",
+    "source": "",
+    "publishDate": "2011-12-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">全省高校推广使用“全国大学生就业服务一体化系统”工作会在吉林省高校毕业生就业指导中心召开</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-12-6 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p align=\"center\"><font color=\"#444444\" size=\"2\"></font>&nbsp;</p> <p align=\"center\"><img border=\"0\" src=\"http://www.jilinjobs.cn/uploadfile/201112/20111206130309203.jpg\"></p> <p><br><font color=\"#444444\" size=\"2\">&nbsp;&nbsp;&nbsp; 为贯彻落实《关于做好2012年全国普通高等学校毕业生就业工作的通知》（教学[2011]12号）文件精神，大力推进就业信息化建设，建立健全统一、规范的信息标准，2012年7月前要全面推广使用“全国大学生就业信息服务一体化系统”。按照《教育部办公厅关于使用“全国大学生就业信息服务一体化系统”的通知》（教学厅函[2010]30号）文件中对使用“一体化系统”提出的明确要求，我省于2011年12月6日在吉林省高校毕业生就业指导中心召开了全省高校推广使用“全国大学生就业服务一体化系统”工作会议，各高校就业部门的负责人和专职信息工作人员参加会。省教育厅高校学生处陈梅副处长在会上就各高校进一步推广使用教育部“一体化系统”提出工作要求；省高校毕业生就业指导中心郑志宏主任做了具体工作部署和我省高校毕业生就业信息化建设情况及下阶段工作任务。</font></p> <p align=\"center\"><img border=\"0\" src=\"http://www.jilinjobs.cn/uploadfile/201112/20111206130354993.jpg\"></p> <p align=\"center\"><font color=\"#444444\" size=\"2\">省教育厅高校学生处陈梅副处长就全省高校推广使用“全国大学生就业服务一体化系统”工作会讲话</font></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://051df69f8a1addd024188f8a2de721a548ebc5f652ab4f78006792ef87c73e72\"><br><font color=\"#444444\" size=\"2\">省高校毕业生就业指导中心郑志宏主任部署全省高校进一步推广使用\"一体化系统\"工作</font></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://8baa8077194e8d3db57e8a7b4c50113b755b1b12e594f1b7ea0e7909f4e31b2e\"><br><font color=\"#444444\" size=\"2\">全省58所高校就业部门的负责人和信息工作人员参加会议</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111206130428808.jpg",
+      "originalReference": "/chistory/cms/imgs/20111206130428808.jpg",
+      "token": "migration-resource://051df69f8a1addd024188f8a2de721a548ebc5f652ab4f78006792ef87c73e72",
+      "snapshotPath": "assets/051df69f8a1addd024188f8a2de721a548ebc5f652ab4f78006792ef87c73e72.jpg",
+      "sha256": "051df69f8a1addd024188f8a2de721a548ebc5f652ab4f78006792ef87c73e72",
+      "contentType": "image/jpeg",
+      "sizeBytes": 51739
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111206130440196.jpg",
+      "originalReference": "/chistory/cms/imgs/20111206130440196.jpg",
+      "token": "migration-resource://8baa8077194e8d3db57e8a7b4c50113b755b1b12e594f1b7ea0e7909f4e31b2e",
+      "snapshotPath": "assets/8baa8077194e8d3db57e8a7b4c50113b755b1b12e594f1b7ea0e7909f4e31b2e.jpg",
+      "sha256": "8baa8077194e8d3db57e8a7b4c50113b755b1b12e594f1b7ea0e7909f4e31b2e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 69153
+    }
+  ],
+  "sourceFingerprint": "61b73c74a557a14c43fa1f8f203fcb069ee049029f676ff07861fefe42aebb3b",
+  "evidence": {
+    "listPage": 165,
+    "listTitle": "全省高校推广使用“全国大学生就业服务一体化系统”工作会在吉林省高校毕业生就业指导中心召开",
+    "listPublishDate": "2011-12-06",
+    "sourceOrder": 1641,
+    "detailPublishDate": "2011-12-06"
+  }
+}

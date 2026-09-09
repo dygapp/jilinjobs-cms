@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e84b8fae4896aeefc1019f31c6c6822bdebee545f85ff920152c641be5de92c0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/5r-wqnD2Vhq-3iAIPkpcwg",
+    "url": "https://mp.weixin.qq.com/s/5r-wqnD2Vhq-3iAIPkpcwg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学党委书记李书研带队赴国网吉林省电力有限公司调研交流",
+    "source": "",
+    "publishDate": "2026-04-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/5r-wqnD2Vhq-3iAIPkpcwg"
+  },
+  "resources": [],
+  "sourceFingerprint": "37707a0745bea1e00654c08217fea9ca9ae12a22e081de6fdeb0d643c3ecf3c1",
+  "evidence": {
+    "listPage": 30,
+    "listTitle": "东北电力大学党委书记李书研带队赴国网吉林省电力有限公司调研交流",
+    "listPublishDate": "2026-04-14",
+    "sourceOrder": 293
+  }
+}

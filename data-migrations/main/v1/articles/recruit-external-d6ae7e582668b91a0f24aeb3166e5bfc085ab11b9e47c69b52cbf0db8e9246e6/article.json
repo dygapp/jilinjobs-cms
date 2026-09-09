@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:d6ae7e582668b91a0f24aeb3166e5bfc085ab11b9e47c69b52cbf0db8e9246e6",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/ibdcc2d5sBCiw4sVYac0XQ",
+    "url": "https://mp.weixin.qq.com/s/ibdcc2d5sBCiw4sVYac0XQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院关于2027届毕业生秋季校园招聘活动的通知",
+    "source": "",
+    "publishDate": "2026-09-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ibdcc2d5sBCiw4sVYac0XQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "dc35c57f9e943db376fb264da35ebb6361d00690731ae8ac56e3a07b76fe0f2f",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "长春工程学院关于2027届毕业生秋季校园招聘活动的通知",
+    "listPublishDate": "2026-09-02",
+    "sourceOrder": 14
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122124",
+    "contentId": "28737783122124",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122124"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省2015年下半年全国计算机应用技术证书考试（NIT）全部结束",
+    "source": "",
+    "publishDate": "2015-12-24",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省2015年下半年全国计算机应用技术证书考试（NIT）全部结束</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2015-12-24 15:42:59</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp;&nbsp; 2015年12月5日至12月23日，吉林省高等学校毕业生就业指导中心组织实施了下半年全国计算机应用技术证书考试（NIT）吉林省考区考试工作。本次考试省内有17个考点开考，共计211场次，参考考生10259人次，较去年同期增加3120人次，增幅达43.7%。全年报考16330 人次，较去年增加4820人次，增幅达41.87%。</span></p><p style=\"text-align: center;\"><img title=\"IMG_20151212_103756.jpg\" src=\"http://www.jilinjobs.cn//Common/GetFileByServer.aspx?FileName=6358656866806250003926518.jpg\"></p><p style=\"text-align: center;\"><img title=\"_MG_2506.JPG\" src=\"migration-resource://32aa1d7c713019327f5116d55eeecfd4b8c8b923ad6b66d0d9e274eecc0f43a9\"></p><p style=\"text-align: center;\"><img title=\"_MG_2524.JPG\" src=\"migration-resource://06cd3ef6357798477d5b310b19474cf64d8315ee29015e7eb849dcb11ef3aad8\"></p><p style=\"text-align: center;\"><img title=\"_MG_2526.JPG\" src=\"migration-resource://f95d078b8e025b43d45ae666fd9b8119463a64b85e40492ecd099c101769c348\"></p><p style=\"text-align: center;\"><img title=\"_MG_2536.JPG\" src=\"migration-resource://9db02ff58279fc0eb1e56ece007e9262fc6ac983b60d19979c4f4c245496dff3\"></p><p style=\"text-align: center;\"><img title=\"20151212_084358.jpg\" src=\"migration-resource://a4538ada0e2db398048730aa92749ede7616b9f064f04cf27cadbb019c4ca5d0\"></p><p style=\"text-align: center;\"><img title=\"IMG_2488.JPG\" src=\"migration-resource://2c62b15db93b9836bb64939a17b4cf0521f67141ff2e05e830cdd07457f02db4\"></p><p style=\"text-align: center;\"><img title=\"IMG_2543.JPG\" src=\"migration-resource://93c21ea52a93b28c59c2ac509c738ce924d32459b85003acc0b51b2fb592f75a\"></p><p style=\"text-align: center;\"><img title=\"IMG_2545.JPG\" src=\"migration-resource://034e6c28551486c4915c85c8b96406e794a0432d399ceeea914096fa359a391d\"></p><p style=\"text-align: center;\"><img title=\"IMG_4860.JPG\" src=\"migration-resource://24319371d58403da4d387d094b95ecc25299b20cc775087b528db1ef8ee8d0f7\"></p><p style=\"text-align: center;\"><br></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"></span></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358656866745312502513371.JPG",
+      "originalReference": "/chistory/cms/imgs/6358656866745312502513371.JPG",
+      "token": "migration-resource://32aa1d7c713019327f5116d55eeecfd4b8c8b923ad6b66d0d9e274eecc0f43a9",
+      "snapshotPath": "assets/32aa1d7c713019327f5116d55eeecfd4b8c8b923ad6b66d0d9e274eecc0f43a9.jpg",
+      "sha256": "32aa1d7c713019327f5116d55eeecfd4b8c8b923ad6b66d0d9e274eecc0f43a9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 147547
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358656866756250002012604.JPG",
+      "originalReference": "/chistory/cms/imgs/6358656866756250002012604.JPG",
+      "token": "migration-resource://06cd3ef6357798477d5b310b19474cf64d8315ee29015e7eb849dcb11ef3aad8",
+      "snapshotPath": "assets/06cd3ef6357798477d5b310b19474cf64d8315ee29015e7eb849dcb11ef3aad8.jpg",
+      "sha256": "06cd3ef6357798477d5b310b19474cf64d8315ee29015e7eb849dcb11ef3aad8",
+      "contentType": "image/jpeg",
+      "sizeBytes": 168434
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358656866764062508755174.JPG",
+      "originalReference": "/chistory/cms/imgs/6358656866764062508755174.JPG",
+      "token": "migration-resource://f95d078b8e025b43d45ae666fd9b8119463a64b85e40492ecd099c101769c348",
+      "snapshotPath": "assets/f95d078b8e025b43d45ae666fd9b8119463a64b85e40492ecd099c101769c348.jpg",
+      "sha256": "f95d078b8e025b43d45ae666fd9b8119463a64b85e40492ecd099c101769c348",
+      "contentType": "image/jpeg",
+      "sizeBytes": 172753
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358656866768750004741082.JPG",
+      "originalReference": "/chistory/cms/imgs/6358656866768750004741082.JPG",
+      "token": "migration-resource://9db02ff58279fc0eb1e56ece007e9262fc6ac983b60d19979c4f4c245496dff3",
+      "snapshotPath": "assets/9db02ff58279fc0eb1e56ece007e9262fc6ac983b60d19979c4f4c245496dff3.jpg",
+      "sha256": "9db02ff58279fc0eb1e56ece007e9262fc6ac983b60d19979c4f4c245496dff3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 173783
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358656866773437509726990.jpg",
+      "originalReference": "/chistory/cms/imgs/6358656866773437509726990.jpg",
+      "token": "migration-resource://a4538ada0e2db398048730aa92749ede7616b9f064f04cf27cadbb019c4ca5d0",
+      "snapshotPath": "assets/a4538ada0e2db398048730aa92749ede7616b9f064f04cf27cadbb019c4ca5d0.jpg",
+      "sha256": "a4538ada0e2db398048730aa92749ede7616b9f064f04cf27cadbb019c4ca5d0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 136161
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358656866781250007469561.JPG",
+      "originalReference": "/chistory/cms/imgs/6358656866781250007469561.JPG",
+      "token": "migration-resource://2c62b15db93b9836bb64939a17b4cf0521f67141ff2e05e830cdd07457f02db4",
+      "snapshotPath": "assets/2c62b15db93b9836bb64939a17b4cf0521f67141ff2e05e830cdd07457f02db4.jpg",
+      "sha256": "2c62b15db93b9836bb64939a17b4cf0521f67141ff2e05e830cdd07457f02db4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 166266
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358656866789062505212131.JPG",
+      "originalReference": "/chistory/cms/imgs/6358656866789062505212131.JPG",
+      "token": "migration-resource://93c21ea52a93b28c59c2ac509c738ce924d32459b85003acc0b51b2fb592f75a",
+      "snapshotPath": "assets/93c21ea52a93b28c59c2ac509c738ce924d32459b85003acc0b51b2fb592f75a.jpg",
+      "sha256": "93c21ea52a93b28c59c2ac509c738ce924d32459b85003acc0b51b2fb592f75a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 130626
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358656866793750001198039.JPG",
+      "originalReference": "/chistory/cms/imgs/6358656866793750001198039.JPG",
+      "token": "migration-resource://034e6c28551486c4915c85c8b96406e794a0432d399ceeea914096fa359a391d",
+      "snapshotPath": "assets/034e6c28551486c4915c85c8b96406e794a0432d399ceeea914096fa359a391d.jpg",
+      "sha256": "034e6c28551486c4915c85c8b96406e794a0432d399ceeea914096fa359a391d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 114581
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358656866798437506183947.JPG",
+      "originalReference": "/chistory/cms/imgs/6358656866798437506183947.JPG",
+      "token": "migration-resource://24319371d58403da4d387d094b95ecc25299b20cc775087b528db1ef8ee8d0f7",
+      "snapshotPath": "assets/24319371d58403da4d387d094b95ecc25299b20cc775087b528db1ef8ee8d0f7.jpg",
+      "sha256": "24319371d58403da4d387d094b95ecc25299b20cc775087b528db1ef8ee8d0f7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 113102
+    }
+  ],
+  "sourceFingerprint": "321a419b3fd16c5e93b16ee6f56d3d096b24adaa32020724e3d620041ca95314",
+  "evidence": {
+    "listPage": 156,
+    "listTitle": "吉林省2015年下半年全国计算机应用技术证书考试（NIT）全部结束",
+    "listPublishDate": "2015-12-24",
+    "sourceOrder": 1551,
+    "detailPublishDate": "2015-12-24"
+  }
+}

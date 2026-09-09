@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f9905043662a6ab38699b539cddffe7fb55ac8a8322bac0e4d30e11f2d262f17",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Msr4rSQ2jOph5xfaLKvqyg",
+    "url": "https://mp.weixin.qq.com/s/Msr4rSQ2jOph5xfaLKvqyg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工业大学人文信息学院法学院开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2026-04-21",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Msr4rSQ2jOph5xfaLKvqyg"
+  },
+  "resources": [],
+  "sourceFingerprint": "b490f619ee354a076d9b52c88544c068596945e2c9cb42199eebc73d11a31361",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "长春工业大学人文信息学院法学院开展访企拓岗促就业专项行动",
+    "listPublishDate": "2026-04-21",
+    "sourceOrder": 266
+  }
+}

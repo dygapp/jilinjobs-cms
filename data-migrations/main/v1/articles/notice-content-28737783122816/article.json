@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122816",
+    "contentId": "28737783122816",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122816"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于召开全省高校就业创业工作推进会的通知",
+    "source": "",
+    "publishDate": "2016-04-05",
+    "bodyHtml": "\n                        <p>通知公告</p>\n\n<p><strong><span style=\"font-size:x-large\">关于召开全省高校就业创业工作推进会的通知</span></strong></p>\n\n<p><span style=\"font-size:medium\">发布部门:培训部 发布时间:2016-4-5 14:17:05</span></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://afc02b9fba64413a0ee9a2cbd292df67758dd59dc987d0686d34383ff67e02b7\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" src=\"migration-resource://c85ba7d6d7447590a6398949c463bc9ce667c7e956fd63d9510b1846bc6325a9\"></p>\n\n<p style=\"text-align:center\">&nbsp;</p>\n\n<table style=\"width:100%\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>附件：</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td><a href=\"../Common/DownLoadFile.aspx?fileid=5be6c3e0-fa48-4383-b5ab-a901a6c04b07\">参会回执表.docx</a></td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359546265643225008297514.jpg",
+      "originalReference": "/chistory/cms/imgs/6359546265643225008297514.jpg",
+      "token": "migration-resource://afc02b9fba64413a0ee9a2cbd292df67758dd59dc987d0686d34383ff67e02b7",
+      "snapshotPath": "assets/afc02b9fba64413a0ee9a2cbd292df67758dd59dc987d0686d34383ff67e02b7.jpg",
+      "sha256": "afc02b9fba64413a0ee9a2cbd292df67758dd59dc987d0686d34383ff67e02b7",
+      "contentType": "image/jpeg",
+      "sizeBytes": 245699
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6359546265657287505255238.jpg",
+      "originalReference": "/chistory/cms/imgs/6359546265657287505255238.jpg",
+      "token": "migration-resource://c85ba7d6d7447590a6398949c463bc9ce667c7e956fd63d9510b1846bc6325a9",
+      "snapshotPath": "assets/c85ba7d6d7447590a6398949c463bc9ce667c7e956fd63d9510b1846bc6325a9.jpg",
+      "sha256": "c85ba7d6d7447590a6398949c463bc9ce667c7e956fd63d9510b1846bc6325a9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 291487
+    }
+  ],
+  "sourceFingerprint": "a548c68444d8c9e8f19bdcf898e7953103af426f918da2e74121d0d5ed601322",
+  "evidence": {
+    "listPage": 26,
+    "listTitle": "关于召开全省高校就业创业工作推进会的通知",
+    "listPublishDate": "2016-04-05",
+    "sourceOrder": 254,
+    "detailPublishDate": "2016-04-05"
+  }
+}

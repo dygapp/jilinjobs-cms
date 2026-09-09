@@ -1,0 +1,41 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:167134336417792",
+    "contentId": "167134336417792",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=167134336417792"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "山东：三方联动搭建服务平台 为毕业生就业创业提供帮助",
+    "source": "",
+    "publishDate": "2023-07-07",
+    "bodyHtml": "\n                        <p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 山东多地开展“直播带岗”“就业体验日”等系列活动，同时通过政府、企业、高校三方联动，打造招聘服务平台，帮助高校毕业生就业创业。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 在山东省淄博市淄川区，当地的人才服务中心每天开设2小时在线“直播带岗”和线上答疑，为毕业生和用人单位搭建沟通平台。</span></span></p>\n\n<p>&nbsp;</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"258\" src=\"migration-resource://31202f679f808b7ffb55caf382b8a61b7cf73c76209c753d14b29c6e983326fd\" width=\"589\"></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 山东省淄博市淄川区公共就业和人才服务中心 张春燕：自直播上线以来我们已累计开展线上直播661场，拍摄企业招聘政策解读视频600余条，累计观看人次超过2100万。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 记者从人社部门了解到，山东省今年拿出国企新招聘岗位的60%面向高校毕业生，计划招聘23720人。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 山东省人力资源和社会保障厅就业促进处处长 董廷杰：我们进一步稳定公共部门的岗位，发挥公共部门稳就业示范作用，各级的机关公务员招录稳定在8000名左右，事业单位的招考稳定在了2万名以上，还有基层服务岗位稳定在3万名以上。</span></span></p>\n\n<p><span style=\"font-family:Arial,Helvetica,sans-serif\"><span style=\"font-size:18px\">&nbsp; &nbsp; &nbsp; &nbsp; 此外，各高校也通过线上线下相结合的方式，为应届毕业生就业提供帮助。同时举办就业沙龙，邀请政府相关部门和用人单位走进校园，与毕业生直接对接就业机会。今年以来，山东组织公共就业服务机构和人力资源服务机构，已联合开展进校园活动198场。</span></span></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-07-12/9bd0a845-babc-4820-880e-6c3dbaf07343.png",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-07-12/9bd0a845-babc-4820-880e-6c3dbaf07343.png",
+      "token": "migration-resource://31202f679f808b7ffb55caf382b8a61b7cf73c76209c753d14b29c6e983326fd",
+      "snapshotPath": "assets/31202f679f808b7ffb55caf382b8a61b7cf73c76209c753d14b29c6e983326fd.png",
+      "sha256": "31202f679f808b7ffb55caf382b8a61b7cf73c76209c753d14b29c6e983326fd",
+      "contentType": "image/png",
+      "sizeBytes": 289964
+    }
+  ],
+  "sourceFingerprint": "2567ea75f65fa3c7cb75dcff5b305a6545107cb9c3bc35defa76ddf6daae1c5e",
+  "evidence": {
+    "listPage": 114,
+    "listTitle": "山东：三方联动搭建服务平台 为毕业生就业创业提供帮助",
+    "listPublishDate": "2023-07-07",
+    "sourceOrder": 1131,
+    "detailPublishDate": "2023-07-07"
+  }
+}

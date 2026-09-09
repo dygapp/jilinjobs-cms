@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:44e26b1aa1e3fc83b5ce76675d3eb6e0c825ddaf6b1c217d5de0b63498cddada",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/sUL1W6ARI3YPmbeclqO_zw",
+    "url": "https://mp.weixin.qq.com/s/sUL1W6ARI3YPmbeclqO_zw?poc_token=HLQxjWmjIN7N5cZFK9PsArKEKGGtiygNrqSMJXoB"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "四平职业大学校领导带队赴四平发展集团开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-02-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/sUL1W6ARI3YPmbeclqO_zw?poc_token=HLQxjWmjIN7N5cZFK9PsArKEKGGtiygNrqSMJXoB"
+  },
+  "resources": [],
+  "sourceFingerprint": "b171e449b215ffe81ceb9cace5efe5c4d524e7ac0b7feed36d4377de0b5b1434",
+  "evidence": {
+    "listPage": 45,
+    "listTitle": "四平职业大学校领导带队赴四平发展集团开展访企拓岗专项行动",
+    "listPublishDate": "2026-02-11",
+    "sourceOrder": 447
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86133211938816",
+    "contentId": "86133211938816",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86133211938816"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "战疫情 保就业-吉林财经大学举办云校招专场招聘会",
+    "source": "吉林财经大学",
+    "publishDate": "2022-04-12",
+    "bodyHtml": "\n                        <p>为贯彻落实党中央、国务院稳就业保就业决策部署，落实省委省政府做好高校毕业生留吉就业工作，千方百计促进学校2022届毕业生更加充分更高质量就业，最大限度降低疫情对用人单位引才和毕业生就业的影响，吉林财经大学联合云校招，于3月14日、15日举办“云校招2022届春季空中双选会吉林财经大学专场招聘会”。</p>\n\n<p>本次空中双选会吸纳了中国民生银行、兴业银行、中国人寿保险、正大食品、中交二航局市政建设有限公司、广东理工学院等99家省内外优质企业参加招聘，包含制造业等传统行业及信息传输、软件和信息技术服务业等新兴行业，提供岗位10000余个，毕业生参会人数1000余人，投递简历600多份。</p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"391\" src=\"migration-resource://96c68f9b2698c82010dc80a61e7d688b71e92f836d75e4ed6ef7218559b52597\" width=\"693\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"417\" src=\"migration-resource://14a10553949b36ba402ee6a9283f1b6018c4313b70a274cae1d1e6a696b7cd33\" width=\"693\"></p>\n\n<p>本次空中双选会是招生就业处落实学校党委工作要求开展的第一步举措。接下来，招生就业处将全方位拓宽就业市场、强化就业指导、优化就业服务，举办空中双选会、空中宣讲会等线上招聘活动，开展一对一简历指导、面试辅导、生涯咨询等一系列就业服务活动，推进“慧就业”和“云就业”服务平台功能的升级改造，实现就业推荐表网上申请、就业协议网上签约、数据统计分析一体化服务，最大限度降低疫情对毕业生求职就业的影响，促进毕业生更高质量就业。</p>\n\n<p><strong>（吉林财经大学 那佳）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/9c13b241-bf04-4851-bde8-bab9cef4238f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/9c13b241-bf04-4851-bde8-bab9cef4238f.jpg",
+      "token": "migration-resource://96c68f9b2698c82010dc80a61e7d688b71e92f836d75e4ed6ef7218559b52597",
+      "snapshotPath": "assets/96c68f9b2698c82010dc80a61e7d688b71e92f836d75e4ed6ef7218559b52597.jpg",
+      "sha256": "96c68f9b2698c82010dc80a61e7d688b71e92f836d75e4ed6ef7218559b52597",
+      "contentType": "image/jpeg",
+      "sizeBytes": 49084
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2022-04-21/a183db63-d3ac-4c3f-a4ee-0f48c9f6798c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2022-04-21/a183db63-d3ac-4c3f-a4ee-0f48c9f6798c.jpg",
+      "token": "migration-resource://14a10553949b36ba402ee6a9283f1b6018c4313b70a274cae1d1e6a696b7cd33",
+      "snapshotPath": "assets/14a10553949b36ba402ee6a9283f1b6018c4313b70a274cae1d1e6a696b7cd33.jpg",
+      "sha256": "14a10553949b36ba402ee6a9283f1b6018c4313b70a274cae1d1e6a696b7cd33",
+      "contentType": "image/jpeg",
+      "sizeBytes": 54197
+    }
+  ],
+  "sourceFingerprint": "b532c737444d0bda77c616739fbf4423d7beea081eaebec5ef84b6055474a80e",
+  "evidence": {
+    "listPage": 122,
+    "listTitle": "战疫情 保就业-吉林财经大学举办云校招专场招聘会",
+    "listPublishDate": "2022-04-12",
+    "sourceOrder": 1219,
+    "detailPublishDate": "2022-04-12"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122998",
+    "contentId": "28737783122998",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122998"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "2011年下半年吉林省NIT上机考试有关事项的通知",
+    "source": "",
+    "publishDate": "2011-09-27",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">2011年下半年吉林省NIT上机考试有关事项的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-9-27 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://13155e376c1cb095d3f1eddf26cb4437adafc88ee83c272badd9f91f7cd705fe\"><img border=\"0\" src=\"migration-resource://db06bfe31947206fd4965c1f31d0e966982912eb6bedf2224d086679fdbe3904\"><img border=\"0\" src=\"migration-resource://c61a7918a3998858386b7aa1ef317a495a5ef5a0319873744e9ee20d10ed4ba4\"><img border=\"0\" src=\"migration-resource://ce8ea1e203153fb6d31b1b1e00c7c3bf37842d2ddbfbaa115c341f451b6b499d\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110927135936819.jpg",
+      "originalReference": "/chistory/cms/imgs/20110927135936819.jpg",
+      "token": "migration-resource://13155e376c1cb095d3f1eddf26cb4437adafc88ee83c272badd9f91f7cd705fe",
+      "snapshotPath": "assets/13155e376c1cb095d3f1eddf26cb4437adafc88ee83c272badd9f91f7cd705fe.jpg",
+      "sha256": "13155e376c1cb095d3f1eddf26cb4437adafc88ee83c272badd9f91f7cd705fe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92228
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110927135941676.jpg",
+      "originalReference": "/chistory/cms/imgs/20110927135941676.jpg",
+      "token": "migration-resource://db06bfe31947206fd4965c1f31d0e966982912eb6bedf2224d086679fdbe3904",
+      "snapshotPath": "assets/db06bfe31947206fd4965c1f31d0e966982912eb6bedf2224d086679fdbe3904.jpg",
+      "sha256": "db06bfe31947206fd4965c1f31d0e966982912eb6bedf2224d086679fdbe3904",
+      "contentType": "image/jpeg",
+      "sizeBytes": 80263
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110927135945312.jpg",
+      "originalReference": "/chistory/cms/imgs/20110927135945312.jpg",
+      "token": "migration-resource://c61a7918a3998858386b7aa1ef317a495a5ef5a0319873744e9ee20d10ed4ba4",
+      "snapshotPath": "assets/c61a7918a3998858386b7aa1ef317a495a5ef5a0319873744e9ee20d10ed4ba4.jpg",
+      "sha256": "c61a7918a3998858386b7aa1ef317a495a5ef5a0319873744e9ee20d10ed4ba4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 97032
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110927135949424.jpg",
+      "originalReference": "/chistory/cms/imgs/20110927135949424.jpg",
+      "token": "migration-resource://ce8ea1e203153fb6d31b1b1e00c7c3bf37842d2ddbfbaa115c341f451b6b499d",
+      "snapshotPath": "assets/ce8ea1e203153fb6d31b1b1e00c7c3bf37842d2ddbfbaa115c341f451b6b499d.jpg",
+      "sha256": "ce8ea1e203153fb6d31b1b1e00c7c3bf37842d2ddbfbaa115c341f451b6b499d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 47529
+    }
+  ],
+  "sourceFingerprint": "e0b93bb289ae40868c666548c794db72cb757944b754c5adb8270c256dbac38a",
+  "evidence": {
+    "listPage": 43,
+    "listTitle": "2011年下半年吉林省NIT上机考试有关事项的通知",
+    "listPublishDate": "2011-09-27",
+    "sourceOrder": 425,
+    "detailPublishDate": "2011-09-27"
+  }
+}

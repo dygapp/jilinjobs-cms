@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:de102476cdc06669d6fb0abfe44b550e164e15adb86146ec8cc3e123f21f89a9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1003/22853.htm",
+    "url": "http://news.ccu.edu.cn/info/1003/22853.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "学校举办“服务吉林高质量发展”长春市高校综合类就业洽谈会暨长春大学2026届毕业生首场秋季校园双选会",
+    "source": "",
+    "publishDate": "2025-09-18",
+    "bodyHtml": "",
+    "externalUrl": "http://news.ccu.edu.cn/info/1003/22853.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "5019fb4a7afead022904ddadad38a999683f5bfe9be30c6454e2bea8b5f6fbc7",
+  "evidence": {
+    "listPage": 71,
+    "listTitle": "学校举办“服务吉林高质量发展”长春市高校综合类就业洽谈会暨长春大学2026届毕业生首场秋季校园双选会",
+    "listPublishDate": "2025-09-18",
+    "sourceOrder": 705
+  }
+}

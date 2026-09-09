@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:996d6022169c15538ca72b461d61112d063a6b14379735058052d2d14ae73aa3",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1007/10554.htm",
+    "url": "https://www.ccit.edu.cn/info/1007/10554.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春工程学院校领导带队赴中交二航局吉林建设有限公司开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-02-10",
+    "bodyHtml": "",
+    "externalUrl": "https://www.ccit.edu.cn/info/1007/10554.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "686120863a9d5e31a82d5e923283caa2525eb91f9cfd2278990d2b0f9f43a048",
+  "evidence": {
+    "listPage": 45,
+    "listTitle": "长春工程学院校领导带队赴中交二航局吉林建设有限公司开展访企拓岗专项行动",
+    "listPublishDate": "2026-02-10",
+    "sourceOrder": 449
+  }
+}

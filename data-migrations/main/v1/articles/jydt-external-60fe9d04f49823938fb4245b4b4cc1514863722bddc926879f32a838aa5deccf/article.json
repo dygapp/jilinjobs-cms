@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:60fe9d04f49823938fb4245b4b4cc1514863722bddc926879f32a838aa5deccf",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/pEI5rNwd-r5R0-8boRogeQ",
+    "url": "https://mp.weixin.qq.com/s/pEI5rNwd-r5R0-8boRogeQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "招商银行股份有限公司长春分行来延边大学开展座谈宣讲活动",
+    "source": "",
+    "publishDate": "2026-03-20",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/pEI5rNwd-r5R0-8boRogeQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "e832725f0d621ebdc1245551e59092fcc401ca35752d0ac1eaa559b112acb3d5",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "招商银行股份有限公司长春分行来延边大学开展座谈宣讲活动",
+    "listPublishDate": "2026-03-20",
+    "sourceOrder": 393
+  }
+}

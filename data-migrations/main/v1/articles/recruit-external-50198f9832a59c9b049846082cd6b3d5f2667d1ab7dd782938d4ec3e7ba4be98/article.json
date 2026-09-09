@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:50198f9832a59c9b049846082cd6b3d5f2667d1ab7dd782938d4ec3e7ba4be98",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/mC2daTWtA5kd8_TrOmUofQ",
+    "url": "https://mp.weixin.qq.com/s/mC2daTWtA5kd8_TrOmUofQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省高校服务“464”新格局2024届毕业生春季供需洽谈会暨吉林师范大学2024届毕业生专场招聘会邀请函",
+    "source": "",
+    "publishDate": "2024-03-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/mC2daTWtA5kd8_TrOmUofQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "90be1ff33930e73523f9c34e84c6007731beba109b9b46f1d48a158abf02c0a0",
+  "evidence": {
+    "listPage": 31,
+    "listTitle": "吉林省高校服务“464”新格局2024届毕业生春季供需洽谈会暨吉林师范大学2024届毕业生专场招聘会邀请函",
+    "listPublishDate": "2024-03-31",
+    "sourceOrder": 304
+  }
+}

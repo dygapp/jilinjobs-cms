@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cdb541cb99a8b0a57d6f7839417e7e622924200733b20def8a9af06706e0ff80",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/8xgo05s1yHjBfYcUnPTslg",
+    "url": "https://mp.weixin.qq.com/s/8xgo05s1yHjBfYcUnPTslg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林师范大学党委副书记韩金玉带队赴北京开展访企拓岗专项行动",
+    "source": "",
+    "publishDate": "2026-08-04",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/8xgo05s1yHjBfYcUnPTslg"
+  },
+  "resources": [],
+  "sourceFingerprint": "ef2ca6ed73121186e8672d21194fff2d4fbabba9375edf1a388efb0d70dbdec2",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "吉林师范大学党委副书记韩金玉带队赴北京开展访企拓岗专项行动",
+    "listPublishDate": "2026-08-04",
+    "sourceOrder": 32
+  }
+}

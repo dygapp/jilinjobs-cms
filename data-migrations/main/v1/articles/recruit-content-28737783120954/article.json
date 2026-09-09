@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783120954",
+    "contentId": "28737783120954",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783120954"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "长春地区吉林省省属高校综合类就业洽谈会暨长春大学2016届毕业生“就业洽谈月”活动财经类招聘会",
+    "source": "",
+    "publishDate": "2015-10-22",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">长春地区吉林省省属高校综合类就业洽谈会暨长春大学2016届毕业生“就业洽谈月”活动财经类招聘会</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:市场部   发布时间:2015-10-22 16:01:55</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 10月21日下午，由吉林省教育厅主办，长春大学承办的长春地区吉林省省属高校综合类就业洽谈会暨长春大学2016届毕业生“就业洽谈月”活动财经类招聘会在长春大学召开。本次招聘会邀请到招聘企业242家，共提供岗位4351个，现场收取简历6740份。本次招聘会共有来自省内各高校的2500余名应届毕业生参会，用人单位意向签约754人，现场签约75人。&nbsp;</span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 吉林省教育厅高校学生处处长蒋蔓萍、吉林省高等学校毕业生就业指导中心主任郑志宏、副主任张旭光赴招聘会现场指导工作。</span></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"><br></span></p><p style=\"text-align: center;\"><img title=\"1教育厅学生处处长蒋蔓萍、省就业中心主任郑志宏等到招聘会现场指导工作.jpg\" src=\"migration-resource://f36f9e0e2f88e660c8ca7a85841791f1df6bdaad8b06e0b5e1c0b6fb5eb759cb\"></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 16px;\">教育厅学生处处长蒋蔓萍、省就业中心主任郑志宏等到招聘会现场指导工作</span><span style=\"font-family: 宋体,SimSun; font-size: 18px;\"></span></p><p><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp; 长春大学作为长春地区省属综合类就业市场承办单位，近年来一直坚持“小型连续、分类专场”的校园洽谈会模式，旨在发挥主体作用，提高办会效益，实现充分就业。本次洽谈会，还邀请省内多所院校毕业生共同参会，发挥省属高校综合类就业洽谈会优势，共享求职机会，确保毕业生无障碍入场，收到了良好的效果。以区域性、行业性中型洽谈会为主要形式的“就业洽谈月”活动是按照学科门类不同，在不同时间举办中型校园就业洽谈会。近期，长春大学还将组织5场中型就业洽谈会，为2016届毕业生顺利就业创造充分的机会。</span></p><p style=\"text-align: center;\"></p><p style=\"text-align: center;\"><img title=\"2活动现场.JPG\" src=\"migration-resource://d4457d92ecac9a9668c0415e61bc572dbe6ce65d59a7ee7cec6aff49893ad4ed\"></p><p style=\"text-align: center;\"><span style=\"font-family: 宋体,SimSun; font-size: 18px;\">活动现场</span></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544605034375003562581.jpg",
+      "originalReference": "/chistory/cms/imgs/6358544605034375003562581.jpg",
+      "token": "migration-resource://f36f9e0e2f88e660c8ca7a85841791f1df6bdaad8b06e0b5e1c0b6fb5eb759cb",
+      "snapshotPath": "assets/f36f9e0e2f88e660c8ca7a85841791f1df6bdaad8b06e0b5e1c0b6fb5eb759cb.jpg",
+      "sha256": "f36f9e0e2f88e660c8ca7a85841791f1df6bdaad8b06e0b5e1c0b6fb5eb759cb",
+      "contentType": "image/jpeg",
+      "sizeBytes": 209367
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6358544607723437503712868.JPG",
+      "originalReference": "/chistory/cms/imgs/6358544607723437503712868.JPG",
+      "token": "migration-resource://d4457d92ecac9a9668c0415e61bc572dbe6ce65d59a7ee7cec6aff49893ad4ed",
+      "snapshotPath": "assets/d4457d92ecac9a9668c0415e61bc572dbe6ce65d59a7ee7cec6aff49893ad4ed.jpg",
+      "sha256": "d4457d92ecac9a9668c0415e61bc572dbe6ce65d59a7ee7cec6aff49893ad4ed",
+      "contentType": "image/jpeg",
+      "sizeBytes": 189648
+    }
+  ],
+  "sourceFingerprint": "5d4020287cacf8fa9ed8ff80684b2f3757cac84e549aea31a939ffd5cb63e35c",
+  "evidence": {
+    "listPage": 42,
+    "listTitle": "长春地区吉林省省属高校综合类就业洽谈会暨长春大学2016届毕业生“就业洽谈月”活动财经类招聘会",
+    "listPublishDate": "2015-10-22",
+    "sourceOrder": 416,
+    "detailPublishDate": "2015-10-22"
+  }
+}

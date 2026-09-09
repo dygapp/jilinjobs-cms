@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:68214a1f8810753c12bc9de67f7ddc9b92562c062513e9c2e57edeaee43c9cbe",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/k_JBeRMa9ejzU39p1oR6SQ",
+    "url": "https://mp.weixin.qq.com/s/k_JBeRMa9ejzU39p1oR6SQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "辽源市政府到长春工程学院开展“携企带岗进校园”专题活动",
+    "source": "",
+    "publishDate": "2026-04-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/k_JBeRMa9ejzU39p1oR6SQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "88abff5a107ca5c549a5895215617d2371cb551471653185e9bd7f3ecb7a2239",
+  "evidence": {
+    "listPage": 25,
+    "listTitle": "辽源市政府到长春工程学院开展“携企带岗进校园”专题活动",
+    "listPublishDate": "2026-04-24",
+    "sourceOrder": 248
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122106",
+    "contentId": "28737783122106",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122106"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省大学生创业就业实训基地“双创”指导教师培训班圆满结束",
+    "source": "",
+    "publishDate": "2016-06-29",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省大学生创业就业实训基地“双创”指导教师培训班圆满结束</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2016-6-29 11:50:08</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><br></p><p style=\"text-indent:40px\"><span style=\"font-size:20px;font-family:宋体\">为了加强大学生创新创业教育，提高“双创”指导教师教学能力和水平，充分发挥吉林省大学生创业就业实训基地的功能与示范引领作用，6月18日-19日省高校毕业生就业指导中心与北华大学联合举办了吉林省大学生创业就业实训基地“双创”指导教师培训班。省高校毕业生就业指导中心主任郑志宏与北华大学副校长戚继忠出席了培训班的开班仪式及结业仪式。</span></p><p style=\"text-indent:40px\"><span style=\"font-size:20px;font-family:宋体\">本次培训为期两天，邀请了省内外“双创”教育方面的专家来给学员们授课。课程紧紧围绕互联网+创新创业的内容展开，给参培学员提供了“双创”指导方面的新思路、新方法。北华大学的40名教师参加了此次培训，他们普遍认为此次培训的内容新颖，方法实用，对未来的“双创”教学指导工作提供了很大的帮助。</span></p><p style=\"text-align: center\"><br></p><p><br></p><p style=\"text-align: center\"><img src=\"migration-resource://78e16751e2cff9f616f6e8dd3e50e942797edf4546974c01d90c821c1fe57a7a\" style=\"\" title=\"11.jpg\"></p><p><br></p><p style=\"text-align: center\"><img src=\"migration-resource://b3dabff396789a00051a8050e175cffb0e57d51fb5681636fb9d97d8fba70f2e\" style=\"\" title=\"22.jpg\"></p><p><br></p><p><br></p><p style=\"text-align: center;\"><br></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360288430691725001760332.jpg",
+      "originalReference": "/chistory/cms/imgs/6360288430691725001760332.jpg",
+      "token": "migration-resource://78e16751e2cff9f616f6e8dd3e50e942797edf4546974c01d90c821c1fe57a7a",
+      "snapshotPath": "assets/78e16751e2cff9f616f6e8dd3e50e942797edf4546974c01d90c821c1fe57a7a.jpg",
+      "sha256": "78e16751e2cff9f616f6e8dd3e50e942797edf4546974c01d90c821c1fe57a7a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 40392
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6360288430702662501259565.jpg",
+      "originalReference": "/chistory/cms/imgs/6360288430702662501259565.jpg",
+      "token": "migration-resource://b3dabff396789a00051a8050e175cffb0e57d51fb5681636fb9d97d8fba70f2e",
+      "snapshotPath": "assets/b3dabff396789a00051a8050e175cffb0e57d51fb5681636fb9d97d8fba70f2e.jpg",
+      "sha256": "b3dabff396789a00051a8050e175cffb0e57d51fb5681636fb9d97d8fba70f2e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 42812
+    }
+  ],
+  "sourceFingerprint": "db28ae94438c7f0982a089714085eb1037a89b53b00ca4eac59168912a3b8d6a",
+  "evidence": {
+    "listPage": 154,
+    "listTitle": "吉林省大学生创业就业实训基地“双创”指导教师培训班圆满结束",
+    "listPublishDate": "2016-06-29",
+    "sourceOrder": 1536,
+    "detailPublishDate": "2016-06-29"
+  }
+}

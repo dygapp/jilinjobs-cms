@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:cffae58da44e5be65f98e4ac94fb687371848c825f25b56d9796f75f0d750eb9",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/UnS6AvosaLyfgwoGjm-E6g",
+    "url": "https://mp.weixin.qq.com/s/UnS6AvosaLyfgwoGjm-E6g"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春理工大学校党委书记张宝宗带队赴上海、绍兴、杭州等地考察调研、访企拓岗",
+    "source": "",
+    "publishDate": "2026-01-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/UnS6AvosaLyfgwoGjm-E6g"
+  },
+  "resources": [],
+  "sourceFingerprint": "4ca2c040d0fc554a3f24d92e59766fb874216714c122b9ba0d6ea5d06fcdafe5",
+  "evidence": {
+    "listPage": 49,
+    "listTitle": "长春理工大学校党委书记张宝宗带队赴上海、绍兴、杭州等地考察调研、访企拓岗",
+    "listPublishDate": "2026-01-23",
+    "sourceOrder": 484
+  }
+}

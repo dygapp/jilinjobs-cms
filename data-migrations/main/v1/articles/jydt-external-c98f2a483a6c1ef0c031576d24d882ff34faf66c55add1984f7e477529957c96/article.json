@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c98f2a483a6c1ef0c031576d24d882ff34faf66c55add1984f7e477529957c96",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/6HYt7ZStBxf6VxIXQFp-YQ",
+    "url": "https://mp.weixin.qq.com/s/6HYt7ZStBxf6VxIXQFp-YQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长白山职业技术学院“立志成才第一课”走进国水中心 筑牢职业理想",
+    "source": "",
+    "publishDate": "2026-03-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/6HYt7ZStBxf6VxIXQFp-YQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "9074cac6b5c4fa75fa30714de21ce8f6eeef2c25150d01a1a0fee173968a07c6",
+  "evidence": {
+    "listPage": 34,
+    "listTitle": "长白山职业技术学院“立志成才第一课”走进国水中心 筑牢职业理想",
+    "listPublishDate": "2026-03-31",
+    "sourceOrder": 336
+  }
+}

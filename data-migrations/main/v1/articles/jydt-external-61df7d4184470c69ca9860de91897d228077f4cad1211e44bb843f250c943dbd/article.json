@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:61df7d4184470c69ca9860de91897d228077f4cad1211e44bb843f250c943dbd",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/o_W22YcL9Sqy51DOqI6Bsg",
+    "url": "https://mp.weixin.qq.com/s/o_W22YcL9Sqy51DOqI6Bsg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "创业奋斗 “就”在吉林 | 学校2024 年春季就业实习双选会成功举办",
+    "source": "",
+    "publishDate": "2024-06-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/o_W22YcL9Sqy51DOqI6Bsg"
+  },
+  "resources": [],
+  "sourceFingerprint": "8b48b2b1c5623b0e42a5db59b7116108a6edcb78995ddfc4d7e0f0183bc783de",
+  "evidence": {
+    "listPage": 105,
+    "listTitle": "创业奋斗 “就”在吉林 | 学校2024 年春季就业实习双选会成功举办",
+    "listPublishDate": "2024-06-01",
+    "sourceOrder": 1041
+  }
+}

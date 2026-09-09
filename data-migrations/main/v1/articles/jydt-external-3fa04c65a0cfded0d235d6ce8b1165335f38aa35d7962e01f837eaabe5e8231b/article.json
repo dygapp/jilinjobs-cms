@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3fa04c65a0cfded0d235d6ce8b1165335f38aa35d7962e01f837eaabe5e8231b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/XA4uYZwvWqbXHPM3fGrcsA",
+    "url": "https://mp.weixin.qq.com/s/XA4uYZwvWqbXHPM3fGrcsA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林师范大学博达学院校领导带队赴山东省开展访企拓岗促就业专项行动",
+    "source": "",
+    "publishDate": "2025-12-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/XA4uYZwvWqbXHPM3fGrcsA"
+  },
+  "resources": [],
+  "sourceFingerprint": "f4917fe32905e598235343ab99fba23a43404b9f7d6accd7da7917bcc7e2954a",
+  "evidence": {
+    "listPage": 53,
+    "listTitle": "吉林师范大学博达学院校领导带队赴山东省开展访企拓岗促就业专项行动",
+    "listPublishDate": "2025-12-22",
+    "sourceOrder": 527
+  }
+}

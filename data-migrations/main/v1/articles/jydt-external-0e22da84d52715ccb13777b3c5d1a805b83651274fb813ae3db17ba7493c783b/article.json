@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:0e22da84d52715ccb13777b3c5d1a805b83651274fb813ae3db17ba7493c783b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/xM_fkEykDz0sI6kfDVPimA",
+    "url": "https://mp.weixin.qq.com/s/xM_fkEykDz0sI6kfDVPimA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "职引未来——2024年大中城市巡回招聘（吉林站）暨“创业奋斗、就在吉林”“新医药、新康养”行业大型就业洽谈会在长春中医药大学举行",
+    "source": "",
+    "publishDate": "2024-04-23",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xM_fkEykDz0sI6kfDVPimA"
+  },
+  "resources": [],
+  "sourceFingerprint": "07225bf8ffea49ad03df11a500ebf717152692b7a325a6a5c1acffa8c569a851",
+  "evidence": {
+    "listPage": 108,
+    "listTitle": "职引未来——2024年大中城市巡回招聘（吉林站）暨“创业奋斗、就在吉林”“新医药、新康养”行业大型就业洽谈会在长春中医药大学举行",
+    "listPublishDate": "2024-04-23",
+    "sourceOrder": 1072
+  }
+}

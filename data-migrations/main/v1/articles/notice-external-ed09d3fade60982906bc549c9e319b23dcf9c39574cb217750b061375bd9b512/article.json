@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:external:ed09d3fade60982906bc549c9e319b23dcf9c39574cb217750b061375bd9b512",
+    "contentId": null,
+    "typeCode": "notice",
+    "detailPath": "/s/xa2wH7Hd2aq5zYuEgDRTjA",
+    "url": "https://mp.weixin.qq.com/s/xa2wH7Hd2aq5zYuEgDRTjA"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "习近平总书记在全国教育大会上的重要讲话为全面推进教育强国建设提供根本遵循：以教育之强夯实国家富强之基",
+    "source": "",
+    "publishDate": "2024-09-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/xa2wH7Hd2aq5zYuEgDRTjA"
+  },
+  "resources": [],
+  "sourceFingerprint": "a0806a6894fc5b784feedfcf758a70cc7fb40899e67d2525eeb0b4fcd6be5bec",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "习近平总书记在全国教育大会上的重要讲话为全面推进教育强国建设提供根本遵循：以教育之强夯实国家富强之基",
+    "listPublishDate": "2024-09-11",
+    "sourceOrder": 76
+  }
+}

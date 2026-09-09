@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:41bf1a467f08b012c00e76fe4b7414c6819be00613cd8d4089cc8f80218ec904",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/l4HQKautbhwCj18p4s4OmQ",
+    "url": "https://mp.weixin.qq.com/s/l4HQKautbhwCj18p4s4OmQ?scene=25&sessionid=-1369009859"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "邀请函 | 教育部“24365校园招聘服务”2025届全国能源动力行业春季招聘会暨吉林省能源类高校毕业生就业洽谈会邀请函",
+    "source": "",
+    "publishDate": "2025-04-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/l4HQKautbhwCj18p4s4OmQ?scene=25&sessionid=-1369009859"
+  },
+  "resources": [],
+  "sourceFingerprint": "fb031f087c2cc5dfb32f6d6c7e4370f3a7a00e3ea2bf9d352614cc663f86d4f4",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "邀请函 | 教育部“24365校园招聘服务”2025届全国能源动力行业春季招聘会暨吉林省能源类高校毕业生就业洽谈会邀请函",
+    "listPublishDate": "2025-04-03",
+    "sourceOrder": 195
+  }
+}

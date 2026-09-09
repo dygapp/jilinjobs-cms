@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122174",
+    "contentId": "28737783122174",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122174"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "我省举办高校创业指导师师资专题培训班",
+    "source": "",
+    "publishDate": "2014-04-30",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">我省举办高校创业指导师师资专题培训班</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2014-4-30 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><br><font size=\"4\">&nbsp; </font></p> <p><font size=\"4\">&nbsp;&nbsp;&nbsp; 为贯彻落实省教育厅《关于做好2014年全省普通高等学校毕业生就业工作的通知》精神，加强高校创业指导师资队伍建设，提升高校创业指导教师创业指导理论与实践指导水平，满足高校创业指导教师的教学需求，4月28-30日，我中心与教育部高校毕业生就业协会共同举办创业指导师师资专题培训班，来自省内19所高校从事就业创业课程教学与研究工作的47名老师参加了培训。培训内容围绕教育部下发的《创业基础》课程大纲展开，共七个主题模块，分为创业基本认知、创业团队建设、创业机会识别与评价等内容，培训采取课堂小组讨论、互动交流方式进行。本次培训是继今年1月11日至13日“大学生职场适应指导”师资培训和3月26日至28日“高校就业创业教育课程”培训后，我省2014年上半年举办的第三期就创业指导师资专题培训班。担任本次授课任务的是国家级精品课程主要负责人、国家创业咨询师一级培训师黄欢。省高校毕业生就业指导中心书记朱军参加开班仪式,并对前段培训情况和下一阶段主要培训工作任务做了简要通报和安排。</font></p> <p align=\"center\"><font size=\"4\"><img src=\"migration-resource://ca6efd24de60f0cb19d072cc0a9d5fe2bbcdcf4d225fb12f82eb1c5f814ea642\" border=\"0\"></font></p> <p align=\"center\"><font size=\"4\"><img src=\"migration-resource://caebeef7e54fedc467c31416f9bdcd9b6cde4d6cdb33bac12746f2badfaac6dc\" border=\"0\"></font></p> <p><font size=\"4\"></font>&nbsp;</p> <p><font size=\"4\"></font>&nbsp;</p> <p><font size=\"4\">&nbsp;</font></p><font size=\"4\"> <p><br></p></font></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140430204644983.jpg",
+      "originalReference": "/chistory/cms/imgs/20140430204644983.jpg",
+      "token": "migration-resource://ca6efd24de60f0cb19d072cc0a9d5fe2bbcdcf4d225fb12f82eb1c5f814ea642",
+      "snapshotPath": "assets/ca6efd24de60f0cb19d072cc0a9d5fe2bbcdcf4d225fb12f82eb1c5f814ea642.jpg",
+      "sha256": "ca6efd24de60f0cb19d072cc0a9d5fe2bbcdcf4d225fb12f82eb1c5f814ea642",
+      "contentType": "image/jpeg",
+      "sizeBytes": 70925
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140430204653256.jpg",
+      "originalReference": "/chistory/cms/imgs/20140430204653256.jpg",
+      "token": "migration-resource://caebeef7e54fedc467c31416f9bdcd9b6cde4d6cdb33bac12746f2badfaac6dc",
+      "snapshotPath": "assets/caebeef7e54fedc467c31416f9bdcd9b6cde4d6cdb33bac12746f2badfaac6dc.jpg",
+      "sha256": "caebeef7e54fedc467c31416f9bdcd9b6cde4d6cdb33bac12746f2badfaac6dc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 95283
+    }
+  ],
+  "sourceFingerprint": "761d639589994d69b0cda5c9e7e69381b9d5adeb2f73305c3341f4c2f26515a0",
+  "evidence": {
+    "listPage": 161,
+    "listTitle": "我省举办高校创业指导师师资专题培训班",
+    "listPublishDate": "2014-04-30",
+    "sourceOrder": 1605,
+    "detailPublishDate": "2014-04-30"
+  }
+}

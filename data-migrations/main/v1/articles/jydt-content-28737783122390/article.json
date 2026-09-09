@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122390",
+    "contentId": "28737783122390",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122390"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林：民营企业吸纳大学生就业将享受优惠政策",
+    "source": "",
+    "publishDate": "2009-04-12",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林：民营企业吸纳大学生就业将享受优惠政策</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-12 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 新华网长春２月１９日专电（记者姚湜　褚晓亮）记者从吉林省人力资源和社会保障厅了解到，吉林省将出台免收部分行政事业性收费等一系列政策，鼓励中小企业和民营企业吸纳高校毕业生就业。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 按照计划，吉林省将对当年聘用高校毕业生人数达到在职职工总数２０％（职工总数１００人以上为１０％）以上、并与之签订一年以上聘用合同的中小企业和民营企业，两年内免收登记类、管理类和证照类行政事业性收费；对当年聘用高校毕业生３人以上的中小企业和民营企业，符合条件的，各级财政安排的扶持中小企业发展资金可向其倾斜，当年聘用高校毕业生超过８人的，可适当提高扶持资金的额度。 </font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 同时，吉林省还将对自愿到非公经济组织就业的高校毕业生实行无障碍就业，不受户籍、所学专业、毕业院校等方面的限制，在职称评定、权益保护等方面享受与国有企事业单位同类人员同等待遇。</font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "2e476dad8b0f3202d13b1692f05a3463e17966e517bbfacb3306168bec593754",
+  "evidence": {
+    "listPage": 179,
+    "listTitle": "吉林：民营企业吸纳大学生就业将享受优惠政策",
+    "listPublishDate": "2009-04-12",
+    "sourceOrder": 1787,
+    "detailPublishDate": "2009-04-12"
+  }
+}

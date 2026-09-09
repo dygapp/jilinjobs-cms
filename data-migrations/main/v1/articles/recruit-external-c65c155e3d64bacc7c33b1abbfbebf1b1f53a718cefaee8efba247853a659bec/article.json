@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:c65c155e3d64bacc7c33b1abbfbebf1b1f53a718cefaee8efba247853a659bec",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/4bhBmK2qYXWZSC0jZWw4gQ",
+    "url": "https://mp.weixin.qq.com/s/4bhBmK2qYXWZSC0jZWw4gQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“创业有我 ‘就’在吉林”全省农业龙头企业专场网络招聘活动邀请函",
+    "source": "",
+    "publishDate": "2020-08-12",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/4bhBmK2qYXWZSC0jZWw4gQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "30122027e77121119427de1e6cd8124b1fa0ec86c083b2fa4ac35fd0dc8a7c18",
+  "evidence": {
+    "listPage": 39,
+    "listTitle": "“创业有我 ‘就’在吉林”全省农业龙头企业专场网络招聘活动邀请函",
+    "listPublishDate": "2020-08-12",
+    "sourceOrder": 381
+  }
+}

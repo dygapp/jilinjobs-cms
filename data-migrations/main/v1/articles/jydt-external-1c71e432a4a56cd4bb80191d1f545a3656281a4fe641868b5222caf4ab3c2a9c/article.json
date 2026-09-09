@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:1c71e432a4a56cd4bb80191d1f545a3656281a4fe641868b5222caf4ab3c2a9c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/oYDDzUGp9sBwvIL6vRNreA",
+    "url": "https://mp.weixin.qq.com/s/oYDDzUGp9sBwvIL6vRNreA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "教育部部署开展2025届高校毕业生“寒假促就业暖心行动”",
+    "source": "",
+    "publishDate": "2025-01-16",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/oYDDzUGp9sBwvIL6vRNreA"
+  },
+  "resources": [],
+  "sourceFingerprint": "5f82ce4701b0fb0049a45f269eabefaeaba61298b25012f5cd8251e2083524d1",
+  "evidence": {
+    "listPage": 100,
+    "listTitle": "教育部部署开展2025届高校毕业生“寒假促就业暖心行动”",
+    "listPublishDate": "2025-01-16",
+    "sourceOrder": 994
+  }
+}

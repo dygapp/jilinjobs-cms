@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122756",
+    "contentId": "28737783122756",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122756"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于转发《关于推广使用学职平台》的通知",
+    "source": "",
+    "publishDate": "2017-06-13",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于转发《关于推广使用学职平台》的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2017-6-13 9:44:07</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img title=\"888.jpg\" src=\"migration-resource://9db7b22647bc658a4d824013c6209f1320ba197a40af7c3a0af3a7f483429d81\"></p><p style=\"text-align: center\"><img title=\"1.jpg\" src=\"migration-resource://29959170d2904dbb608ef7fae1e0678e202b1d2ba173e4e655ff02fd5e068cc9\"></p><p style=\"text-align: center\"><img title=\"2.jpg\" src=\"migration-resource://fa6256293dd23c9205ac90fd799832148ec92abb1c9b1a8f7d1b4e3893148d0a\"></p><p style=\"text-align: center\"><img title=\"3.jpg\" src=\"migration-resource://5e8f1be531a07a9bfc59234aabfc1075c1b360602daa3dfd34e647bd14e6538e\"></p><p style=\"text-align: center\"><img title=\"4.jpg\" src=\"migration-resource://fe5946b6a77a68b3f064a688e63be50727bc9e711c47e0865ce2d9476272ec8f\"></p><p><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363294393390337507637220.jpg",
+      "originalReference": "/chistory/cms/imgs/6363294393390337507637220.jpg",
+      "token": "migration-resource://9db7b22647bc658a4d824013c6209f1320ba197a40af7c3a0af3a7f483429d81",
+      "snapshotPath": "assets/9db7b22647bc658a4d824013c6209f1320ba197a40af7c3a0af3a7f483429d81.jpg",
+      "sha256": "9db7b22647bc658a4d824013c6209f1320ba197a40af7c3a0af3a7f483429d81",
+      "contentType": "image/jpeg",
+      "sizeBytes": 90567
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363294394930962502996734.jpg",
+      "originalReference": "/chistory/cms/imgs/6363294394930962502996734.jpg",
+      "token": "migration-resource://29959170d2904dbb608ef7fae1e0678e202b1d2ba173e4e655ff02fd5e068cc9",
+      "snapshotPath": "assets/29959170d2904dbb608ef7fae1e0678e202b1d2ba173e4e655ff02fd5e068cc9.jpg",
+      "sha256": "29959170d2904dbb608ef7fae1e0678e202b1d2ba173e4e655ff02fd5e068cc9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 104631
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363294395090337509710291.jpg",
+      "originalReference": "/chistory/cms/imgs/6363294395090337509710291.jpg",
+      "token": "migration-resource://fa6256293dd23c9205ac90fd799832148ec92abb1c9b1a8f7d1b4e3893148d0a",
+      "snapshotPath": "assets/fa6256293dd23c9205ac90fd799832148ec92abb1c9b1a8f7d1b4e3893148d0a.jpg",
+      "sha256": "fa6256293dd23c9205ac90fd799832148ec92abb1c9b1a8f7d1b4e3893148d0a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 113055
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363294395252837509180511.jpg",
+      "originalReference": "/chistory/cms/imgs/6363294395252837509180511.jpg",
+      "token": "migration-resource://5e8f1be531a07a9bfc59234aabfc1075c1b360602daa3dfd34e647bd14e6538e",
+      "snapshotPath": "assets/5e8f1be531a07a9bfc59234aabfc1075c1b360602daa3dfd34e647bd14e6538e.jpg",
+      "sha256": "5e8f1be531a07a9bfc59234aabfc1075c1b360602daa3dfd34e647bd14e6538e",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82640
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6363294395377837509465296.jpg",
+      "originalReference": "/chistory/cms/imgs/6363294395377837509465296.jpg",
+      "token": "migration-resource://fe5946b6a77a68b3f064a688e63be50727bc9e711c47e0865ce2d9476272ec8f",
+      "snapshotPath": "assets/fe5946b6a77a68b3f064a688e63be50727bc9e711c47e0865ce2d9476272ec8f.jpg",
+      "sha256": "fe5946b6a77a68b3f064a688e63be50727bc9e711c47e0865ce2d9476272ec8f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 42177
+    }
+  ],
+  "sourceFingerprint": "d019bf78612c4ec75e11e2030260063967bf5af52698018a1e4221d37e07dc4f",
+  "evidence": {
+    "listPage": 22,
+    "listTitle": "关于转发《关于推广使用学职平台》的通知",
+    "listPublishDate": "2017-06-13",
+    "sourceOrder": 217,
+    "detailPublishDate": "2017-06-13"
+  }
+}

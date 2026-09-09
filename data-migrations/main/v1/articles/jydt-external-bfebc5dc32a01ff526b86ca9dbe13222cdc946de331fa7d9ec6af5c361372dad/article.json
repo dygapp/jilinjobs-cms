@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:bfebc5dc32a01ff526b86ca9dbe13222cdc946de331fa7d9ec6af5c361372dad",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/gsYWGXXXof0EuOLtYRZZsw",
+    "url": "https://mp.weixin.qq.com/s/gsYWGXXXof0EuOLtYRZZsw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春财经学院赴长春金砺科技开展访企拓岗并签约共建实习基地",
+    "source": "",
+    "publishDate": "2026-06-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/gsYWGXXXof0EuOLtYRZZsw"
+  },
+  "resources": [],
+  "sourceFingerprint": "2fa40e8e4c722847dd2b53be418962b6b8465c87ca969e490101b629ee2c5844",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "长春财经学院赴长春金砺科技开展访企拓岗并签约共建实习基地",
+    "listPublishDate": "2026-06-08",
+    "sourceOrder": 97
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:94e7d598264aa8c359d2a5cb9c1f2ad479da6da999075d7d2d5028d22d72e483",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/H6rtB_B00zwAwP0kAqzqBg",
+    "url": "https://mp.weixin.qq.com/s/H6rtB_B00zwAwP0kAqzqBg?scene=25&sessionid=-1365138600"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "喜报丨长春财经学院荣获第二届全国大学生职业规划大赛优秀组织奖",
+    "source": "",
+    "publishDate": "2025-04-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/H6rtB_B00zwAwP0kAqzqBg?scene=25&sessionid=-1365138600"
+  },
+  "resources": [],
+  "sourceFingerprint": "5d332effc901042fa51e89877796391c29358f9c2ed1e75c57d3dc9336d8f7fa",
+  "evidence": {
+    "listPage": 92,
+    "listTitle": "喜报丨长春财经学院荣获第二届全国大学生职业规划大赛优秀组织奖",
+    "listPublishDate": "2025-04-29",
+    "sourceOrder": 917
+  }
+}

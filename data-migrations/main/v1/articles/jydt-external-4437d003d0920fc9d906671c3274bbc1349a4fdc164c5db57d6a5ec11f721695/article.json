@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4437d003d0920fc9d906671c3274bbc1349a4fdc164c5db57d6a5ec11f721695",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Dc72muH2cXpdA_0BOB-3Dg",
+    "url": "https://mp.weixin.qq.com/s/Dc72muH2cXpdA_0BOB-3Dg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春人文学院校领导率队赴吉林国色天莲集团洽谈校企合作",
+    "source": "",
+    "publishDate": "2025-11-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Dc72muH2cXpdA_0BOB-3Dg"
+  },
+  "resources": [],
+  "sourceFingerprint": "f5000252b72331a1fa5cc3b993e5c02e8c3467e31838bc4efe8cb618fa16471b",
+  "evidence": {
+    "listPage": 62,
+    "listTitle": "长春人文学院校领导率队赴吉林国色天莲集团洽谈校企合作",
+    "listPublishDate": "2025-11-07",
+    "sourceOrder": 613
+  }
+}

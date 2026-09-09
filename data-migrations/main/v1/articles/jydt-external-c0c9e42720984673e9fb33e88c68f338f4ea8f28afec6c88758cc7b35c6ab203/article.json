@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c0c9e42720984673e9fb33e88c68f338f4ea8f28afec6c88758cc7b35c6ab203",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/jydt/gjssdt/202206/t20220630_8495067.html",
+    "url": "http://jyt.jl.gov.cn/jydt/gjssdt/202206/t20220630_8495067.html"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "省委教育工作领导小组召开专题会议 研究部署高校毕业生就业工作",
+    "source": "",
+    "publishDate": "2022-06-30",
+    "bodyHtml": "",
+    "externalUrl": "http://jyt.jl.gov.cn/jydt/gjssdt/202206/t20220630_8495067.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "14767e792bfc771ff5f0ba97592b43a78e89ceef3b4bc6adc3505465f8b329bc",
+  "evidence": {
+    "listPage": 120,
+    "listTitle": "省委教育工作领导小组召开专题会议 研究部署高校毕业生就业工作",
+    "listPublishDate": "2022-06-30",
+    "sourceOrder": 1197
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122142",
+    "contentId": "28737783122142",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122142"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "省人社厅、省教育厅领导到吉林省大学生创业就业实训基地视察工作",
+    "source": "",
+    "publishDate": "2015-07-10",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">省人社厅、省教育厅领导到吉林省大学生创业就业实训基地视察工作</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2015-7-10 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><span style=\"color: rgb(89, 89, 89); font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;</span></p><p><span style=\"color: rgb(89, 89, 89); font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2015年7月2日，省委组织部副部长、省人社厅厅长张志军、省教育厅党组书记、省高校工委书记孙维杰视察了吉林省大学生创业就业实训基地，参观了基地种植、养殖场地、实训教室、寝室、食堂等设施。省高校毕业生就业指导中心主任郑志宏、吉林农业科技学院党委书记徐大林、纪委书记黄国满、副校长马丽娟陪同视察。</span></p><p><span style=\"color: rgb(89, 89, 89); font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;郑志宏主任对基地的建设情况进行了汇报，徐大林书记对专业优势和办学特色做了介绍，并对基地的规划设计情况进行了汇报。</span></p><p><span style=\"color: rgb(89, 89, 89); font-family: 宋体,SimSun; font-size: 18px;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 张志军厅长对基地建设给予充分肯定，表示要加大支持力度，指出要利用基地为全省涉农高校提供实习实训场所，培养到基层农村就业创业的实用型人才，为我省经济和社会发展做出贡献。孙维杰书记对基地工作提出了要求，指出要充分发挥功能和示范引领作用，提升大学生就业创业能力，为高校毕业生就业创业提供优质高效的实训平台。</span></p><p><span style=\"color: rgb(89, 89, 89); font-family: 宋体,SimSun; font-size: 18px;\"><span style=\"color: rgb(89, 89, 89); font-family: 宋体; font-size: 20px;\"></span>&nbsp;</span></p><p><span style=\"font-family: 宋体; font-size: 20px;\"></span>&nbsp;</p><p style=\"text-align: center;\"><img title=\"IMG_0740.JPG\" src=\"migration-resource://604a53e40a8e03cacbd2dcc118cf210bd8169ad4d3d2922c8eea50ad816dc922\"></p><p style=\"text-align: center;\"><img title=\"IMG_0782.JPG\" src=\"migration-resource://d71b8e4a01d3c2efdaa5e0b47cf33b2c32d2a526366e8c9a89ee72a28cd85b63\"></p><p><span style=\"font-family: 宋体; font-size: 20px;\"></span>&nbsp;</p><p>&nbsp;</p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357214301500000006020074.JPG",
+      "originalReference": "/chistory/cms/imgs/6357214301500000006020074.JPG",
+      "token": "migration-resource://604a53e40a8e03cacbd2dcc118cf210bd8169ad4d3d2922c8eea50ad816dc922",
+      "snapshotPath": "assets/604a53e40a8e03cacbd2dcc118cf210bd8169ad4d3d2922c8eea50ad816dc922.jpg",
+      "sha256": "604a53e40a8e03cacbd2dcc118cf210bd8169ad4d3d2922c8eea50ad816dc922",
+      "contentType": "image/jpeg",
+      "sizeBytes": 202597
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6357214301515625001505215.JPG",
+      "originalReference": "/chistory/cms/imgs/6357214301515625001505215.JPG",
+      "token": "migration-resource://d71b8e4a01d3c2efdaa5e0b47cf33b2c32d2a526366e8c9a89ee72a28cd85b63",
+      "snapshotPath": "assets/d71b8e4a01d3c2efdaa5e0b47cf33b2c32d2a526366e8c9a89ee72a28cd85b63.jpg",
+      "sha256": "d71b8e4a01d3c2efdaa5e0b47cf33b2c32d2a526366e8c9a89ee72a28cd85b63",
+      "contentType": "image/jpeg",
+      "sizeBytes": 153200
+    }
+  ],
+  "sourceFingerprint": "0e0dbba5b5831c4cf06dbced823e6676e46b4afa23d582d459ef584dec3e6023",
+  "evidence": {
+    "listPage": 157,
+    "listTitle": "省人社厅、省教育厅领导到吉林省大学生创业就业实训基地视察工作",
+    "listPublishDate": "2015-07-10",
+    "sourceOrder": 1567,
+    "detailPublishDate": "2015-07-10"
+  }
+}

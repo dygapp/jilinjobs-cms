@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:ae74ca5edbb1a8f6ca26cf8044697e3d864b27a09b22d2e8885c21b1e34fc7af",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/mNgv38EmuyGbJy7PI-bDaw",
+    "url": "https://mp.weixin.qq.com/s/mNgv38EmuyGbJy7PI-bDaw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑大学2026届毕业生春季校园招聘活动的通知",
+    "source": "",
+    "publishDate": "2026-03-06",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/mNgv38EmuyGbJy7PI-bDaw"
+  },
+  "resources": [],
+  "sourceFingerprint": "799882448b412988e77c2fe39549b86f2c0fd07971eb574001e819b08804d65b",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "吉林建筑大学2026届毕业生春季校园招聘活动的通知",
+    "listPublishDate": "2026-03-06",
+    "sourceOrder": 434
+  }
+}

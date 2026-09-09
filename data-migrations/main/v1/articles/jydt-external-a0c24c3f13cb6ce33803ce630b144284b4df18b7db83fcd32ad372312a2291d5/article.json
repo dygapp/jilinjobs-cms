@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a0c24c3f13cb6ce33803ce630b144284b4df18b7db83fcd32ad372312a2291d5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/wDs7SIURvDqgBOnPtlmtEA",
+    "url": "https://mp.weixin.qq.com/s/wDs7SIURvDqgBOnPtlmtEA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省普通高校光电产业类毕业生就业洽谈会举行",
+    "source": "",
+    "publishDate": "2024-10-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/wDs7SIURvDqgBOnPtlmtEA"
+  },
+  "resources": [],
+  "sourceFingerprint": "49316fc627d4e5d2a1275695d0dd3d825e7e88f23da5d0153e1bc59c2b766cba",
+  "evidence": {
+    "listPage": 103,
+    "listTitle": "吉林省普通高校光电产业类毕业生就业洽谈会举行",
+    "listPublishDate": "2024-10-24",
+    "sourceOrder": 1023
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122352",
+    "contentId": "28737783122352",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122352"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "首批50种基层岗位公布 高校毕业生可享补贴",
+    "source": "",
+    "publishDate": "2009-05-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">首批50种基层岗位公布　高校毕业生可享补贴</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-5-6 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 首批高校毕业生基层社会管理和公共服务岗位目录日前向社会公布，包括9个领域的50种岗位。到这些岗位就业的高校毕业生可以享受国家相应的补贴政策。这是记者今天从人力资源和社会保障部了解到的。</font></p> <p><font size=\"2\">　　这批发布的岗位目录包括：基层人力资源和社会保障管理类，如劳动保障协理等岗位；基层农业服务类，如村支书（主任）助理等岗位；基层医疗卫生类，如乡村（社区）妇幼保健等岗位；基层文化科技服务类，如乡村（社区）文化服务等岗位；基层法律服务类，如司法协理等岗位；基层民政（托老托幼）助残服务类，如社区托幼服务岗位等；基层市政管理类，如流动人口协管等岗位；基层公共环境与设施管理维护类，如乡村道路维护等岗位；其他类如残疾工作协管等岗位。</font></p> <p><font size=\"2\">　　各级人力资源社会保障部门将做好基层社会管理和公共服务岗位的推荐、推广，安排一批高校毕业生，特别是困难毕业生上岗就业。到这些岗位工作的高校毕业生，符合公益性岗位就业条件并在公益性岗位就业的，按照国家促进就业政策的规定，给予社会保险补贴和公益性岗位补贴；公益性岗位之外的，给予薪酬或生活补贴，同时按规定参加有关社会保险。</font></p> <p><br><font size=\"2\">&nbsp;&nbsp;&nbsp; 据悉，人社部还将继续对各地基层社会管理和公共服务岗位开发工作进行跟踪了解，适时推出新的岗位目录。</font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来源：中国教育新闻网<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "2112740d0a8cce4a64736c44f74b51bc4b8cd3b261a305607e3bebf3d89904a7",
+  "evidence": {
+    "listPage": 178,
+    "listTitle": "首批50种基层岗位公布 高校毕业生可享补贴",
+    "listPublishDate": "2009-05-06",
+    "sourceOrder": 1772,
+    "detailPublishDate": "2009-05-06"
+  }
+}

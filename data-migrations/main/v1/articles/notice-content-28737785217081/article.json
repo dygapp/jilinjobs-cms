@@ -1,0 +1,51 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737785217081",
+    "contentId": "28737785217081",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737785217081"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发吉林省人民政府办公厅关于参加全国普通高校毕业生就业工作电视电话会议的通知",
+    "source": "",
+    "publishDate": "2011-06-01",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发吉林省人民政府办公厅关于参加全国普通高校毕业生就业工作电视电话会议的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-6-1 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align:center\"><img border=\"0\" src=\"migration-resource://20bbcfda1cafd925dcf98eb555007a34bdb1bfad0fb9cbe54e7c46fd99698e06\"><img border=\"0\" src=\"migration-resource://7d2299abcdfc7210da1d76bc3b758d4d3f35d90713fec6a9291fc21ea9873321\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20110601125614175.jpg",
+      "originalReference": "/chistory/cms/imgs/20110601125614175.jpg",
+      "token": "migration-resource://20bbcfda1cafd925dcf98eb555007a34bdb1bfad0fb9cbe54e7c46fd99698e06",
+      "snapshotPath": "assets/20bbcfda1cafd925dcf98eb555007a34bdb1bfad0fb9cbe54e7c46fd99698e06.jpg",
+      "sha256": "20bbcfda1cafd925dcf98eb555007a34bdb1bfad0fb9cbe54e7c46fd99698e06",
+      "contentType": "image/jpeg",
+      "sizeBytes": 73658
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/2011060112562193.jpg",
+      "originalReference": "/chistory/cms/imgs/2011060112562193.jpg",
+      "token": "migration-resource://7d2299abcdfc7210da1d76bc3b758d4d3f35d90713fec6a9291fc21ea9873321",
+      "snapshotPath": "assets/7d2299abcdfc7210da1d76bc3b758d4d3f35d90713fec6a9291fc21ea9873321.jpg",
+      "sha256": "7d2299abcdfc7210da1d76bc3b758d4d3f35d90713fec6a9291fc21ea9873321",
+      "contentType": "image/jpeg",
+      "sizeBytes": 73206
+    }
+  ],
+  "sourceFingerprint": "21c40cfc15666ad67ab27a6444600d494b38591b69fcb29b1684fcff2387d8e3",
+  "evidence": {
+    "listPage": 44,
+    "listTitle": "转发吉林省人民政府办公厅关于参加全国普通高校毕业生就业工作电视电话会议的通知",
+    "listPublishDate": "2011-06-01",
+    "sourceOrder": 440,
+    "detailPublishDate": "2011-06-01"
+  }
+}

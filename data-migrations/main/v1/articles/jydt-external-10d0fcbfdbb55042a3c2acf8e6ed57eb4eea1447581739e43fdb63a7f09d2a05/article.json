@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:10d0fcbfdbb55042a3c2acf8e6ed57eb4eea1447581739e43fdb63a7f09d2a05",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/NfN_Y5lc7_JLLtaRWE21Fw",
+    "url": "https://mp.weixin.qq.com/s/NfN_Y5lc7_JLLtaRWE21Fw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林外国语大学30周年校庆 | “校友携手·职通未来”校友企业双选会举行",
+    "source": "",
+    "publishDate": "2025-09-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/NfN_Y5lc7_JLLtaRWE21Fw"
+  },
+  "resources": [],
+  "sourceFingerprint": "b7cd21ef8d9f79de3e50f012b201e30afefd91f70825380bb2d88da414013d71",
+  "evidence": {
+    "listPage": 70,
+    "listTitle": "吉林外国语大学30周年校庆 | “校友携手·职通未来”校友企业双选会举行",
+    "listPublishDate": "2025-09-24",
+    "sourceOrder": 698
+  }
+}

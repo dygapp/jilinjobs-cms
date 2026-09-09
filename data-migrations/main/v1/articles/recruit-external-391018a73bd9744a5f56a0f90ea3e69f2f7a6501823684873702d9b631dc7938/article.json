@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:391018a73bd9744a5f56a0f90ea3e69f2f7a6501823684873702d9b631dc7938",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/ENjvKVTvxB5yOtBDPZj8Cw",
+    "url": "https://mp.weixin.qq.com/s/ENjvKVTvxB5yOtBDPZj8Cw"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "邀请函丨“聚力扩容提质 服务高质量发展”长春工业大学人文信息学院2026年春季实习就业双选会",
+    "source": "",
+    "publishDate": "2026-04-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ENjvKVTvxB5yOtBDPZj8Cw"
+  },
+  "resources": [],
+  "sourceFingerprint": "ecf78ab4fec4836cb761f1e8ddd0c440f8e31d4d87d8d2bcb44ea8530af4fe98",
+  "evidence": {
+    "listPage": 4,
+    "listTitle": "邀请函丨“聚力扩容提质 服务高质量发展”长春工业大学人文信息学院2026年春季实习就业双选会",
+    "listPublishDate": "2026-04-17",
+    "sourceOrder": 40
+  }
+}

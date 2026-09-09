@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122856",
+    "contentId": "28737783122856",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122856"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2014年全国高校毕业研究生专场网上招聘周活动的通知",
+    "source": "",
+    "publishDate": "2014-03-14",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办2014年全国高校毕业研究生专场网上招聘周活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2014-3-14 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img src=\"migration-resource://04dd03f265fef9886742c0eef6280a3b1b011475e48b2b9b771bd39747d6ecfe\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://298c14c687e684dedff7eb48a44831e00051568571564477448b2b305348f610\" border=\"0\"></p> <p align=\"center\"><img src=\"migration-resource://9c21c2a8bede1f78f85f63811891eb561a68dbafa1c4457a2dadb96f653d8c3c\" border=\"0\"></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140314213140455.jpg",
+      "originalReference": "/chistory/cms/imgs/20140314213140455.jpg",
+      "token": "migration-resource://04dd03f265fef9886742c0eef6280a3b1b011475e48b2b9b771bd39747d6ecfe",
+      "snapshotPath": "assets/04dd03f265fef9886742c0eef6280a3b1b011475e48b2b9b771bd39747d6ecfe.jpg",
+      "sha256": "04dd03f265fef9886742c0eef6280a3b1b011475e48b2b9b771bd39747d6ecfe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92647
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140314213148656.jpg",
+      "originalReference": "/chistory/cms/imgs/20140314213148656.jpg",
+      "token": "migration-resource://298c14c687e684dedff7eb48a44831e00051568571564477448b2b305348f610",
+      "snapshotPath": "assets/298c14c687e684dedff7eb48a44831e00051568571564477448b2b305348f610.jpg",
+      "sha256": "298c14c687e684dedff7eb48a44831e00051568571564477448b2b305348f610",
+      "contentType": "image/jpeg",
+      "sizeBytes": 89290
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20140314213155796.jpg",
+      "originalReference": "/chistory/cms/imgs/20140314213155796.jpg",
+      "token": "migration-resource://9c21c2a8bede1f78f85f63811891eb561a68dbafa1c4457a2dadb96f653d8c3c",
+      "snapshotPath": "assets/9c21c2a8bede1f78f85f63811891eb561a68dbafa1c4457a2dadb96f653d8c3c.jpg",
+      "sha256": "9c21c2a8bede1f78f85f63811891eb561a68dbafa1c4457a2dadb96f653d8c3c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 71670
+    }
+  ],
+  "sourceFingerprint": "c2b44c9228bdf4265caae9a4fb9ef080dab081df1fd4c317b9a7ab49da6c429e",
+  "evidence": {
+    "listPage": 33,
+    "listTitle": "关于举办2014年全国高校毕业研究生专场网上招聘周活动的通知",
+    "listPublishDate": "2014-03-14",
+    "sourceOrder": 325,
+    "detailPublishDate": "2014-03-14"
+  }
+}

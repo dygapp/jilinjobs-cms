@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b0794b32a8a24e46374bed24593705f6bb09e2e69f4450e1fd5e934edb24c1b1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/XNl1XwYIrFq4ZxycP_C5vA",
+    "url": "https://mp.weixin.qq.com/s/XNl1XwYIrFq4ZxycP_C5vA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "中国电影基金会携相关企业到访吉林动画学院 共探东北影视发展 沉浸式感受师生影视创作",
+    "source": "",
+    "publishDate": "2026-06-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/XNl1XwYIrFq4ZxycP_C5vA"
+  },
+  "resources": [],
+  "sourceFingerprint": "ea00120758f4b8017d8d146843fa512a39e82576f204a0f37e527807adfab11b",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "中国电影基金会携相关企业到访吉林动画学院 共探东北影视发展 沉浸式感受师生影视创作",
+    "listPublishDate": "2026-06-17",
+    "sourceOrder": 76
+  }
+}

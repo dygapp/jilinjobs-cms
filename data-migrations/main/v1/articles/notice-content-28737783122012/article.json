@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122012",
+    "contentId": "28737783122012",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122012"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省国有企业定向招聘高校毕业生 目前报名人数小于1：3（20200708统计）！",
+    "source": "市场部",
+    "publishDate": "2020-07-09",
+    "bodyHtml": "\n                        <p>详见附表</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "ba2b3d7b14ff5e2a02106fdf39c3601b733f7d34081fd3f5d5184c6643c5c74f",
+  "evidence": {
+    "listPage": 19,
+    "listTitle": "吉林省国有企业定向招聘高校毕业生 目前报名人数小于1：3（20200708统计）！",
+    "listPublishDate": "2020-07-09",
+    "sourceOrder": 184,
+    "detailPublishDate": "2020-07-09"
+  }
+}

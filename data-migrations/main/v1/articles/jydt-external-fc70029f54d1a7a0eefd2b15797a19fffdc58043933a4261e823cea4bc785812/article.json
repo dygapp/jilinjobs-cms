@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:fc70029f54d1a7a0eefd2b15797a19fffdc58043933a4261e823cea4bc785812",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/PwaXtZ2j8Fv2JZOz2XgcwA",
+    "url": "https://mp.weixin.qq.com/s/PwaXtZ2j8Fv2JZOz2XgcwA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春市“五优”服务进校园春季系列活动 首场招聘会启幕",
+    "source": "",
+    "publishDate": "2025-03-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/PwaXtZ2j8Fv2JZOz2XgcwA"
+  },
+  "resources": [],
+  "sourceFingerprint": "0398f53cddaf7e04b4b46b7e129b77d2b4a150a9726c6e44da6bcafb5254f11a",
+  "evidence": {
+    "listPage": 98,
+    "listTitle": "长春市“五优”服务进校园春季系列活动 首场招聘会启幕",
+    "listPublishDate": "2025-03-17",
+    "sourceOrder": 980
+  }
+}

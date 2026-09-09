@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:565e9fb765028fea1f4beae0b751cbb7b03e1a176d262324087424ca60f3a407",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/l0Jag0zLXI9hs9m724-E5w",
+    "url": "https://mp.weixin.qq.com/s/l0Jag0zLXI9hs9m724-E5w"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "校企合作｜吉林通用航空职业技术学院与广慧金通教育集团共商协同育人新路径",
+    "source": "",
+    "publishDate": "2026-05-11",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/l0Jag0zLXI9hs9m724-E5w"
+  },
+  "resources": [],
+  "sourceFingerprint": "55c6bd1d578a091f42ed516770f282aa0c9338094c3510289745093ecedabb8d",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "校企合作｜吉林通用航空职业技术学院与广慧金通教育集团共商协同育人新路径",
+    "listPublishDate": "2026-05-11",
+    "sourceOrder": 194
+  }
+}

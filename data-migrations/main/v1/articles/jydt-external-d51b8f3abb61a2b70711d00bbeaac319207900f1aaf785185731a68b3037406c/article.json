@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d51b8f3abb61a2b70711d00bbeaac319207900f1aaf785185731a68b3037406c",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/F5HPDGqD3Eke7eUwjBvhPg",
+    "url": "https://mp.weixin.qq.com/s/F5HPDGqD3Eke7eUwjBvhPg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林警察学院副院长伊峰一行到吉林省华为技术有限公司走访调研",
+    "source": "",
+    "publishDate": "2025-07-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/F5HPDGqD3Eke7eUwjBvhPg"
+  },
+  "resources": [],
+  "sourceFingerprint": "8010001547820944247a417cdef716a3738bf09a101468b6434bd23704e81463",
+  "evidence": {
+    "listPage": 76,
+    "listTitle": "吉林警察学院副院长伊峰一行到吉林省华为技术有限公司走访调研",
+    "listPublishDate": "2025-07-02",
+    "sourceOrder": 754
+  }
+}

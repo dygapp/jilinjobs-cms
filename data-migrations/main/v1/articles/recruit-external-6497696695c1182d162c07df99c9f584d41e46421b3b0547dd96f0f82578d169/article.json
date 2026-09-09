@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:6497696695c1182d162c07df99c9f584d41e46421b3b0547dd96f0f82578d169",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/cIVg53kOWklgGgz5jk6vEg",
+    "url": "https://mp.weixin.qq.com/s/cIVg53kOWklgGgz5jk6vEg"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "就在4月24日｜北华大学2026届毕业生工科类专场招聘会邀请函",
+    "source": "",
+    "publishDate": "2026-04-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/cIVg53kOWklgGgz5jk6vEg"
+  },
+  "resources": [],
+  "sourceFingerprint": "2ad8f4bc0d6b9a0c67f09e857068387d4c3ba210ad16347e9855081e521e5786",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "就在4月24日｜北华大学2026届毕业生工科类专场招聘会邀请函",
+    "listPublishDate": "2026-04-09",
+    "sourceOrder": 46
+  }
+}

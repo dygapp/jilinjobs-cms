@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:45c99476a5e584c57ad3b1a6e579f514fff51c19edee6a4f21c31d7b0dbb655d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/tzuBtSABdLQhp2tsvhgjOA",
+    "url": "https://mp.weixin.qq.com/s/tzuBtSABdLQhp2tsvhgjOA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省2026届毕业生汽车产业专场招聘会在长春工业大学举行",
+    "source": "",
+    "publishDate": "2025-09-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/tzuBtSABdLQhp2tsvhgjOA"
+  },
+  "resources": [],
+  "sourceFingerprint": "703d33b8040e7bb192a94e638c151a84d63f9c2f45d4c48fd4bb66f3330a498b",
+  "evidence": {
+    "listPage": 70,
+    "listTitle": "吉林省2026届毕业生汽车产业专场招聘会在长春工业大学举行",
+    "listPublishDate": "2025-09-26",
+    "sourceOrder": 694
+  }
+}

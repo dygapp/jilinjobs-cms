@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7bee86cf073dede7b0d0b70dc18634c5626fa9fd0cd64a120c748a51932a0e7a",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/j-REKkCbQhZaOfuDt3y8SA",
+    "url": "https://mp.weixin.qq.com/s/j-REKkCbQhZaOfuDt3y8SA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工商学院党委副书记、校长李宝永率队赴净发集团访企拓岗并签署战略合作协议",
+    "source": "",
+    "publishDate": "2026-03-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/j-REKkCbQhZaOfuDt3y8SA"
+  },
+  "resources": [],
+  "sourceFingerprint": "0b75429ae4fc8b40158bffcb754b1572405e379ff0e7c5eeb431447a9a3bb691",
+  "evidence": {
+    "listPage": 37,
+    "listTitle": "吉林工商学院党委副书记、校长李宝永率队赴净发集团访企拓岗并签署战略合作协议",
+    "listPublishDate": "2026-03-25",
+    "sourceOrder": 369
+  }
+}

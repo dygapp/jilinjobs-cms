@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:8312e406ec1ae27a01d73e6b2dc5f0142cd626b6e78d66739b5bacbb228c19c9",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/xxgk/zfxxgkfl/tzgg/202006/t20200624_447634.html",
+    "url": "http://www.jllyls.gov.cn/xxgk/zfxxgkfl/tzgg/202006/t20200624_447634.html"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2020年辽源市龙山区事业单位公开（专项）招聘工作人员补充公告",
+    "source": "",
+    "publishDate": "2020-06-30",
+    "bodyHtml": "",
+    "externalUrl": "http://www.jllyls.gov.cn/xxgk/zfxxgkfl/tzgg/202006/t20200624_447634.html"
+  },
+  "resources": [],
+  "sourceFingerprint": "58d0bc271fcfea499658bfce99092129637dfda5d8ec6c8f209388c84190ee4f",
+  "evidence": {
+    "listPage": 40,
+    "listTitle": "2020年辽源市龙山区事业单位公开（专项）招聘工作人员补充公告",
+    "listPublishDate": "2020-06-30",
+    "sourceOrder": 395
+  }
+}

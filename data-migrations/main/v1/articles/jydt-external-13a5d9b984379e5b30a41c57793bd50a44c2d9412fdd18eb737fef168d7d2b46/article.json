@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:13a5d9b984379e5b30a41c57793bd50a44c2d9412fdd18eb737fef168d7d2b46",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/3Uwh5PZ3dDs5TO98xrROyg",
+    "url": "https://mp.weixin.qq.com/s/3Uwh5PZ3dDs5TO98xrROyg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "助力毕业生高质量就业 服务吉林振兴发展——吉林农业科技学院举办2025年秋季双选会",
+    "source": "",
+    "publishDate": "2025-10-17",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/3Uwh5PZ3dDs5TO98xrROyg"
+  },
+  "resources": [],
+  "sourceFingerprint": "1fa8291ec6f8889472a6b5c2f9acaf0ae07d2ab4b3698fc276bc13adfab313d8",
+  "evidence": {
+    "listPage": 68,
+    "listTitle": "助力毕业生高质量就业 服务吉林振兴发展——吉林农业科技学院举办2025年秋季双选会",
+    "listPublishDate": "2025-10-17",
+    "sourceOrder": 677
+  }
+}

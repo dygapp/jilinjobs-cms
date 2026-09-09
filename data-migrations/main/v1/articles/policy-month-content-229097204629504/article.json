@@ -1,0 +1,181 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-month:content:229097204629504",
+    "contentId": "229097204629504",
+    "typeCode": "policy-month",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=229097204629504"
+  },
+  "target": {
+    "columnAlias": "policy-month",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "高校毕业生等青年就业创业政策汇编",
+    "source": "教育部高校学生司",
+    "publishDate": "2024-06-18",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"672\" src=\"migration-resource://e990ac6b517e02aa0c29b1045795044cf596e12ae4dc60fa1d9ef8751138876b\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"672\" src=\"migration-resource://6731d7c36f4d743d01e2239225d6477577434e351d343baedf4246b78e85ade4\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"672\" src=\"migration-resource://5fe7e9a259b1fe7f71b383321d4f8e1edeaea2976d04e7785437e6c7f86bd447\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"672\" src=\"migration-resource://ff7e18665aa85fa6b484fe41d1b1a090fb1a3050b41650c14c4e1a0437bfb4dd\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"672\" src=\"migration-resource://d8451425aa949027504e4fdfb984e3b98a5e127faef743a835e1e292305d402b\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"672\" src=\"migration-resource://6ae7d6a2c3c998d32267a7c247332db4df7007a7f33286bafe4c63a6c71c9877\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"672\" src=\"migration-resource://13349e4accf29dcd2d7a9efe390697723eebc6cb23e8352aab2a183c5c3b1643\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"672\" src=\"migration-resource://1224f9e6c1b2c07a806e5fab97c78f2d2ffae091a56785971631f96e45b566c9\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"672\" src=\"migration-resource://3fa35934c06411c01d7693c918b1960cd736f4b765f8aff06f1d5997b8938cc3\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"672\" src=\"migration-resource://2ecbb6f8d6923960de66d8ca990fa4ee2735ea951ae3dc3a97be53d7e4f4bb69\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"672\" src=\"migration-resource://4d587ebca84d8feca96cdd8bb73b5222c901b8c937d4cb0ea019899df7dd53d1\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"672\" src=\"migration-resource://21e12b3f1932160bf74efde3b6d0950afcf68ac668bb4325fe9a7cc8be658251\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"672\" src=\"migration-resource://0be20b16c68f7c7219f486388c476d5e5c0fa6caa338c297c54e8fe46d1290bc\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"672\" src=\"migration-resource://f0cb06568295de9a9bc5bd2baa11323eb4e58bb31896b86952bb0879d6273fd4\" width=\"950\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"672\" src=\"migration-resource://14f5fd7282bbe1d5bd507b8c083c2d9f75a18a318008fc51b57aa76869fdb802\" width=\"950\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/ebdda6e2-700e-4a40-96ad-ff53b23fad46.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/ebdda6e2-700e-4a40-96ad-ff53b23fad46.jpg",
+      "token": "migration-resource://e990ac6b517e02aa0c29b1045795044cf596e12ae4dc60fa1d9ef8751138876b",
+      "snapshotPath": "assets/e990ac6b517e02aa0c29b1045795044cf596e12ae4dc60fa1d9ef8751138876b.jpg",
+      "sha256": "e990ac6b517e02aa0c29b1045795044cf596e12ae4dc60fa1d9ef8751138876b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 58493
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/7ba9f8bf-855a-41d3-965c-b8aad96a4807.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/7ba9f8bf-855a-41d3-965c-b8aad96a4807.jpg",
+      "token": "migration-resource://6731d7c36f4d743d01e2239225d6477577434e351d343baedf4246b78e85ade4",
+      "snapshotPath": "assets/6731d7c36f4d743d01e2239225d6477577434e351d343baedf4246b78e85ade4.jpg",
+      "sha256": "6731d7c36f4d743d01e2239225d6477577434e351d343baedf4246b78e85ade4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/b45aa3b7-42d6-42f9-ae07-0a4a6060b5a0.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/b45aa3b7-42d6-42f9-ae07-0a4a6060b5a0.jpg",
+      "token": "migration-resource://5fe7e9a259b1fe7f71b383321d4f8e1edeaea2976d04e7785437e6c7f86bd447",
+      "snapshotPath": "assets/5fe7e9a259b1fe7f71b383321d4f8e1edeaea2976d04e7785437e6c7f86bd447.jpg",
+      "sha256": "5fe7e9a259b1fe7f71b383321d4f8e1edeaea2976d04e7785437e6c7f86bd447",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/027c9413-2a45-4993-aca4-0c8ada1a14e3.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/027c9413-2a45-4993-aca4-0c8ada1a14e3.jpg",
+      "token": "migration-resource://ff7e18665aa85fa6b484fe41d1b1a090fb1a3050b41650c14c4e1a0437bfb4dd",
+      "snapshotPath": "assets/ff7e18665aa85fa6b484fe41d1b1a090fb1a3050b41650c14c4e1a0437bfb4dd.jpg",
+      "sha256": "ff7e18665aa85fa6b484fe41d1b1a090fb1a3050b41650c14c4e1a0437bfb4dd",
+      "contentType": "image/jpeg",
+      "sizeBytes": 58865
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/bfb057c1-424a-42fd-9c91-4ebb4a3de22e.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/bfb057c1-424a-42fd-9c91-4ebb4a3de22e.jpg",
+      "token": "migration-resource://d8451425aa949027504e4fdfb984e3b98a5e127faef743a835e1e292305d402b",
+      "snapshotPath": "assets/d8451425aa949027504e4fdfb984e3b98a5e127faef743a835e1e292305d402b.jpg",
+      "sha256": "d8451425aa949027504e4fdfb984e3b98a5e127faef743a835e1e292305d402b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/8023074b-8998-4b5d-8cf1-d78b5598a4f6.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/8023074b-8998-4b5d-8cf1-d78b5598a4f6.jpg",
+      "token": "migration-resource://6ae7d6a2c3c998d32267a7c247332db4df7007a7f33286bafe4c63a6c71c9877",
+      "snapshotPath": "assets/6ae7d6a2c3c998d32267a7c247332db4df7007a7f33286bafe4c63a6c71c9877.jpg",
+      "sha256": "6ae7d6a2c3c998d32267a7c247332db4df7007a7f33286bafe4c63a6c71c9877",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/f5b7c4eb-01df-43cb-bfb7-8480a7e12020.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/f5b7c4eb-01df-43cb-bfb7-8480a7e12020.jpg",
+      "token": "migration-resource://13349e4accf29dcd2d7a9efe390697723eebc6cb23e8352aab2a183c5c3b1643",
+      "snapshotPath": "assets/13349e4accf29dcd2d7a9efe390697723eebc6cb23e8352aab2a183c5c3b1643.jpg",
+      "sha256": "13349e4accf29dcd2d7a9efe390697723eebc6cb23e8352aab2a183c5c3b1643",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/5fbfafab-f3fc-49d3-9d11-ec406e2637df.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/5fbfafab-f3fc-49d3-9d11-ec406e2637df.jpg",
+      "token": "migration-resource://1224f9e6c1b2c07a806e5fab97c78f2d2ffae091a56785971631f96e45b566c9",
+      "snapshotPath": "assets/1224f9e6c1b2c07a806e5fab97c78f2d2ffae091a56785971631f96e45b566c9.jpg",
+      "sha256": "1224f9e6c1b2c07a806e5fab97c78f2d2ffae091a56785971631f96e45b566c9",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/56489e02-3737-4ea1-947d-dd6e9ccca359.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/56489e02-3737-4ea1-947d-dd6e9ccca359.jpg",
+      "token": "migration-resource://3fa35934c06411c01d7693c918b1960cd736f4b765f8aff06f1d5997b8938cc3",
+      "snapshotPath": "assets/3fa35934c06411c01d7693c918b1960cd736f4b765f8aff06f1d5997b8938cc3.jpg",
+      "sha256": "3fa35934c06411c01d7693c918b1960cd736f4b765f8aff06f1d5997b8938cc3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/ef89af15-6283-4b39-bd4f-089579e2f40b.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/ef89af15-6283-4b39-bd4f-089579e2f40b.jpg",
+      "token": "migration-resource://2ecbb6f8d6923960de66d8ca990fa4ee2735ea951ae3dc3a97be53d7e4f4bb69",
+      "snapshotPath": "assets/2ecbb6f8d6923960de66d8ca990fa4ee2735ea951ae3dc3a97be53d7e4f4bb69.jpg",
+      "sha256": "2ecbb6f8d6923960de66d8ca990fa4ee2735ea951ae3dc3a97be53d7e4f4bb69",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/27461735-fa2a-4af1-ab91-8d1a2f807262.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/27461735-fa2a-4af1-ab91-8d1a2f807262.jpg",
+      "token": "migration-resource://4d587ebca84d8feca96cdd8bb73b5222c901b8c937d4cb0ea019899df7dd53d1",
+      "snapshotPath": "assets/4d587ebca84d8feca96cdd8bb73b5222c901b8c937d4cb0ea019899df7dd53d1.jpg",
+      "sha256": "4d587ebca84d8feca96cdd8bb73b5222c901b8c937d4cb0ea019899df7dd53d1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/07a702c9-7be6-4c0d-9265-3d5d4d50796d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/07a702c9-7be6-4c0d-9265-3d5d4d50796d.jpg",
+      "token": "migration-resource://21e12b3f1932160bf74efde3b6d0950afcf68ac668bb4325fe9a7cc8be658251",
+      "snapshotPath": "assets/21e12b3f1932160bf74efde3b6d0950afcf68ac668bb4325fe9a7cc8be658251.jpg",
+      "sha256": "21e12b3f1932160bf74efde3b6d0950afcf68ac668bb4325fe9a7cc8be658251",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/aae5e8fa-3234-422a-86c3-17bcc2cf00fb.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/aae5e8fa-3234-422a-86c3-17bcc2cf00fb.jpg",
+      "token": "migration-resource://0be20b16c68f7c7219f486388c476d5e5c0fa6caa338c297c54e8fe46d1290bc",
+      "snapshotPath": "assets/0be20b16c68f7c7219f486388c476d5e5c0fa6caa338c297c54e8fe46d1290bc.jpg",
+      "sha256": "0be20b16c68f7c7219f486388c476d5e5c0fa6caa338c297c54e8fe46d1290bc",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/ea915d68-352b-4748-b859-d005f9cf6a3c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/ea915d68-352b-4748-b859-d005f9cf6a3c.jpg",
+      "token": "migration-resource://f0cb06568295de9a9bc5bd2baa11323eb4e58bb31896b86952bb0879d6273fd4",
+      "snapshotPath": "assets/f0cb06568295de9a9bc5bd2baa11323eb4e58bb31896b86952bb0879d6273fd4.jpg",
+      "sha256": "f0cb06568295de9a9bc5bd2baa11323eb4e58bb31896b86952bb0879d6273fd4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2024-06-18/e83aed10-f490-404f-9113-6ebd09721f3d.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2024-06-18/e83aed10-f490-404f-9113-6ebd09721f3d.jpg",
+      "token": "migration-resource://14f5fd7282bbe1d5bd507b8c083c2d9f75a18a318008fc51b57aa76869fdb802",
+      "snapshotPath": "assets/14f5fd7282bbe1d5bd507b8c083c2d9f75a18a318008fc51b57aa76869fdb802.jpg",
+      "sha256": "14f5fd7282bbe1d5bd507b8c083c2d9f75a18a318008fc51b57aa76869fdb802",
+      "contentType": "image/jpeg",
+      "sizeBytes": 58712
+    }
+  ],
+  "sourceFingerprint": "b18118ef70549b590c61342cfcf1aaea35377e887563990b49cd1dee698f4ee1",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "高校毕业生等青年就业创业政策汇编",
+    "listPublishDate": "2024-06-18",
+    "sourceOrder": 1,
+    "detailPublishDate": "2024-06-18"
+  }
+}

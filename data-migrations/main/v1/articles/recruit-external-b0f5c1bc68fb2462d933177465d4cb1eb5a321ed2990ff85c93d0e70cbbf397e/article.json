@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:b0f5c1bc68fb2462d933177465d4cb1eb5a321ed2990ff85c93d0e70cbbf397e",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/hnaFa1i74t-bTO4Z-2DDUQ",
+    "url": "https://mp.weixin.qq.com/s/hnaFa1i74t-bTO4Z-2DDUQ"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "寒假就业服务不打烊 | 长春工业大学人文信息学院@2026届毕业生:你的暖心就业服务指南已送达，请查收！",
+    "source": "",
+    "publishDate": "2026-01-30",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/hnaFa1i74t-bTO4Z-2DDUQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "93c6db2c49cf6c21a604d3d99b8dec84da6262ec74958ea008ad5167ca40bdd0",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "寒假就业服务不打烊 | 长春工业大学人文信息学院@2026届毕业生:你的暖心就业服务指南已送达，请查收！",
+    "listPublishDate": "2026-01-30",
+    "sourceOrder": 76
+  }
+}

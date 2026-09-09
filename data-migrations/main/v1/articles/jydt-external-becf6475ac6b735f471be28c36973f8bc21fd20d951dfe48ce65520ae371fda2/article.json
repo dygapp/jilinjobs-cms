@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:becf6475ac6b735f471be28c36973f8bc21fd20d951dfe48ce65520ae371fda2",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ZQjjOrUw_B6Q2KtSKlVhfQ",
+    "url": "https://mp.weixin.qq.com/s/ZQjjOrUw_B6Q2KtSKlVhfQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "燃动公益星河！吉科与吉大一院共谱校院协同育人新篇章",
+    "source": "",
+    "publishDate": "2025-12-18",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ZQjjOrUw_B6Q2KtSKlVhfQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "f416ff5b3ef08358c97ab541dfe5178064b999dc0b87fc313a6a67ffdd79f2a0",
+  "evidence": {
+    "listPage": 54,
+    "listTitle": "燃动公益星河！吉科与吉大一院共谱校院协同育人新篇章",
+    "listPublishDate": "2025-12-18",
+    "sourceOrder": 533
+  }
+}

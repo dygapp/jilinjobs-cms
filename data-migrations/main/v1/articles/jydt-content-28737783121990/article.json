@@ -1,0 +1,71 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783121990",
+    "contentId": "28737783121990",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783121990"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林省2012年农业类高校毕业生大型公益交流会在吉林农业大学隆重举行",
+    "source": "",
+    "publishDate": "2011-11-08",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">吉林省2012年农业类高校毕业生大型公益交流会在吉林农业大学隆重举行</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2011-11-8 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p style=\"text-align:center\"><img border=\"0\" src=\"migration-resource://84f8528d549525ac7a8e7e93b1f1f28f1272cf250ab57b1dab955c06136c006d\"></p> <p><font size=\"4\">&nbsp;&nbsp;&nbsp; </font><font size=\"3\">由吉林农业大学主办，吉林大学农学部、延边大学、北华大学、吉林农业科技学院、吉林工商学院、吉林农业大学发展学院共同协办的吉林省2012年农业类高校毕业生大型公益交流会于11月6日上午在吉林农业大学体育馆隆重举行。共有东北地区农业类高校近万名毕业生参会，其中博士、硕士研究生千余人。参会企业共提供用人岗位两万多个，供需比达到1：2，意向签约率达到60%。为我省2012年农业类高校毕业生实现充分就业，提升就业质量提供了切实保障。<br>&nbsp;&nbsp;&nbsp; 据统计，本次大会共邀请到来自全国各地用人单位650余家，其中世界500强企业11家，中国500强企业11家，上市公司近30家，行业龙头企业百余家。外省企业200余家，其中长三角、珠三角企业近30家，山东、辽宁等环渤海地区企业50多家，北京、天津企业40多家。记者在现场看到，中粮集团、中化集团、青岛海尔、青岛啤酒、中国电信、杭州娃哈哈集团、三星电子等各行各业知名企业云集，可以说是一次农业类高校人才交流的饕餮盛宴。</font></p> <p><font size=\"4\"></font>&nbsp;</p> <p style=\"text-align:center\"><img border=\"0\" src=\"migration-resource://e22716ac69c7baff4830512e6e91d9a4c050d3d369cf3c7d52667388ddde60d1\"></p> <p align=\"center\"><font size=\"3\">吉林省教育厅高校学生处纪拓处长在交流会开幕式上讲话</font></p> <p align=\"center\">&nbsp;</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://40656ee6719c0bbc4ee1e389a89e05817ecf3ee0bf7288db8e4d20894c8b7df0\"></p> <p align=\"center\"><font size=\"3\">吉林省教育厅高校学生处陈梅副处长（右）与吉林省高等学校毕业生</font></p> <p align=\"center\"><font size=\"3\">就业指导中心朱军书记（左）到会了解毕业生就业情况</font></p> <p align=\"center\">&nbsp;</p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://41a685e594e57b814e459280e2afe57b7f97e8618d60cb2ee4a904c12baab1d2\"></p> <p align=\"center\"><font size=\"3\">交流会主会场</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111108164542900.jpg",
+      "originalReference": "/chistory/cms/imgs/20111108164542900.jpg",
+      "token": "migration-resource://84f8528d549525ac7a8e7e93b1f1f28f1272cf250ab57b1dab955c06136c006d",
+      "snapshotPath": "assets/84f8528d549525ac7a8e7e93b1f1f28f1272cf250ab57b1dab955c06136c006d.jpg",
+      "sha256": "84f8528d549525ac7a8e7e93b1f1f28f1272cf250ab57b1dab955c06136c006d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 55985
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111108164652663.jpg",
+      "originalReference": "/chistory/cms/imgs/20111108164652663.jpg",
+      "token": "migration-resource://e22716ac69c7baff4830512e6e91d9a4c050d3d369cf3c7d52667388ddde60d1",
+      "snapshotPath": "assets/e22716ac69c7baff4830512e6e91d9a4c050d3d369cf3c7d52667388ddde60d1.jpg",
+      "sha256": "e22716ac69c7baff4830512e6e91d9a4c050d3d369cf3c7d52667388ddde60d1",
+      "contentType": "image/jpeg",
+      "sizeBytes": 38378
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111108164738188.jpg",
+      "originalReference": "/chistory/cms/imgs/20111108164738188.jpg",
+      "token": "migration-resource://40656ee6719c0bbc4ee1e389a89e05817ecf3ee0bf7288db8e4d20894c8b7df0",
+      "snapshotPath": "assets/40656ee6719c0bbc4ee1e389a89e05817ecf3ee0bf7288db8e4d20894c8b7df0.jpg",
+      "sha256": "40656ee6719c0bbc4ee1e389a89e05817ecf3ee0bf7288db8e4d20894c8b7df0",
+      "contentType": "image/jpeg",
+      "sizeBytes": 45936
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20111108164824617.jpg",
+      "originalReference": "/chistory/cms/imgs/20111108164824617.jpg",
+      "token": "migration-resource://41a685e594e57b814e459280e2afe57b7f97e8618d60cb2ee4a904c12baab1d2",
+      "snapshotPath": "assets/41a685e594e57b814e459280e2afe57b7f97e8618d60cb2ee4a904c12baab1d2.jpg",
+      "sha256": "41a685e594e57b814e459280e2afe57b7f97e8618d60cb2ee4a904c12baab1d2",
+      "contentType": "image/jpeg",
+      "sizeBytes": 43579
+    }
+  ],
+  "sourceFingerprint": "b571273865ed99d18142a08923e483b836513d3f2fa1424a769f8ccb78e0f395",
+  "evidence": {
+    "listPage": 165,
+    "listTitle": "吉林省2012年农业类高校毕业生大型公益交流会在吉林农业大学隆重举行",
+    "listPublishDate": "2011-11-08",
+    "sourceOrder": 1647,
+    "detailPublishDate": "2011-11-08"
+  }
+}

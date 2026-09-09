@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:7596fa4f36d0f076a8c5adc150bcec13eacf092234f7ccc177eff6255f2399fa",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/BCss02qfk4MUj97ToQnuzw",
+    "url": "https://mp.weixin.qq.com/s/BCss02qfk4MUj97ToQnuzw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林农业大学举办“服务吉林高质量发展”吉林省2026届国家助学贷款等重点群体高校毕业生专场招聘会",
+    "source": "",
+    "publishDate": "2025-11-10",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/BCss02qfk4MUj97ToQnuzw"
+  },
+  "resources": [],
+  "sourceFingerprint": "8cba91b95c83e6124fe795ded68e4031339878636f23c55d32c4b0bee2bd3852",
+  "evidence": {
+    "listPage": 61,
+    "listTitle": "吉林农业大学举办“服务吉林高质量发展”吉林省2026届国家助学贷款等重点群体高校毕业生专场招聘会",
+    "listPublishDate": "2025-11-10",
+    "sourceOrder": 610
+  }
+}

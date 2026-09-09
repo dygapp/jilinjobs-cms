@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:26c906df56cf6fa97e3d6dde60bb507b4a27d1185ef4285d4a02ecbe85341e15",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/Q8uBo-Ou41aU82_T2DOxYg",
+    "url": "https://mp.weixin.qq.com/s/Q8uBo-Ou41aU82_T2DOxYg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗促就业 校企合作谋新篇 | 长春工业大学人文信息学院与吉林省中鑫路桥工程有限公司签订战略合作协议",
+    "source": "",
+    "publishDate": "2026-04-29",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/Q8uBo-Ou41aU82_T2DOxYg"
+  },
+  "resources": [],
+  "sourceFingerprint": "f1964bc3b32a08a4f0b76623f00cc666de789a30fc275882b113b2730acab423",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "访企拓岗促就业 校企合作谋新篇 | 长春工业大学人文信息学院与吉林省中鑫路桥工程有限公司签订战略合作协议",
+    "listPublishDate": "2026-04-29",
+    "sourceOrder": 226
+  }
+}

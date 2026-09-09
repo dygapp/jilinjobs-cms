@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:318966593503232",
+    "contentId": "318966593503232",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=318966593503232"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办全国文旅艺术行业面向2026届高校毕业生秋季招聘活动的通知",
+    "source": "教育部高校学生司",
+    "publishDate": "2025-10-27",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1263\" src=\"migration-resource://924417dd24eb413730810692b0e0363ab5f9650e6a17296130a1bc505df3c6ba\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1268\" src=\"migration-resource://411b364d9508f77fbe98f27c1cca97c4fe3be137cc5d92c6728efedca3798d68\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1267\" src=\"migration-resource://750ec217f3f528cf638b3bdf68e06726bea4e45c017aed9c367ed12a6145bb53\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1267\" src=\"migration-resource://6ce8a57f094453a61dc0bc16a06c8e7c290f05f02e2d4acb4830ab6306b598be\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"900\" src=\"migration-resource://ebdc2486535ef2372da8ac74e91ccda8e6fcffad2bd8a2ac99c98334bf650d60\" width=\"1267\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"900\" src=\"migration-resource://6318b926c5c9363ebcaa5d6e7afcd63906ab07efdc87936282c4f4c07e62d86b\" width=\"1268\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-27/14b1e937-8c77-4b9a-848a-278403094627.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-27/14b1e937-8c77-4b9a-848a-278403094627.jpg",
+      "token": "migration-resource://924417dd24eb413730810692b0e0363ab5f9650e6a17296130a1bc505df3c6ba",
+      "snapshotPath": "assets/924417dd24eb413730810692b0e0363ab5f9650e6a17296130a1bc505df3c6ba.jpg",
+      "sha256": "924417dd24eb413730810692b0e0363ab5f9650e6a17296130a1bc505df3c6ba",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-27/dda663a8-d434-406b-aa3c-1d48012a7f22.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-27/dda663a8-d434-406b-aa3c-1d48012a7f22.jpg",
+      "token": "migration-resource://411b364d9508f77fbe98f27c1cca97c4fe3be137cc5d92c6728efedca3798d68",
+      "snapshotPath": "assets/411b364d9508f77fbe98f27c1cca97c4fe3be137cc5d92c6728efedca3798d68.jpg",
+      "sha256": "411b364d9508f77fbe98f27c1cca97c4fe3be137cc5d92c6728efedca3798d68",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-27/4373ade3-2c40-4cbc-86fa-884549fc5d12.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-27/4373ade3-2c40-4cbc-86fa-884549fc5d12.jpg",
+      "token": "migration-resource://750ec217f3f528cf638b3bdf68e06726bea4e45c017aed9c367ed12a6145bb53",
+      "snapshotPath": "assets/750ec217f3f528cf638b3bdf68e06726bea4e45c017aed9c367ed12a6145bb53.jpg",
+      "sha256": "750ec217f3f528cf638b3bdf68e06726bea4e45c017aed9c367ed12a6145bb53",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-27/de05949f-b5eb-49d6-9b00-c23d002f75e3.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-27/de05949f-b5eb-49d6-9b00-c23d002f75e3.jpg",
+      "token": "migration-resource://6ce8a57f094453a61dc0bc16a06c8e7c290f05f02e2d4acb4830ab6306b598be",
+      "snapshotPath": "assets/6ce8a57f094453a61dc0bc16a06c8e7c290f05f02e2d4acb4830ab6306b598be.jpg",
+      "sha256": "6ce8a57f094453a61dc0bc16a06c8e7c290f05f02e2d4acb4830ab6306b598be",
+      "contentType": "image/jpeg",
+      "sizeBytes": 42831
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-27/693df101-22c2-499f-8bc1-eda58145a56a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-27/693df101-22c2-499f-8bc1-eda58145a56a.jpg",
+      "token": "migration-resource://ebdc2486535ef2372da8ac74e91ccda8e6fcffad2bd8a2ac99c98334bf650d60",
+      "snapshotPath": "assets/ebdc2486535ef2372da8ac74e91ccda8e6fcffad2bd8a2ac99c98334bf650d60.jpg",
+      "sha256": "ebdc2486535ef2372da8ac74e91ccda8e6fcffad2bd8a2ac99c98334bf650d60",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-10-27/04bfa8f1-22b1-47bc-93d2-d14e11151bfc.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-10-27/04bfa8f1-22b1-47bc-93d2-d14e11151bfc.jpg",
+      "token": "migration-resource://6318b926c5c9363ebcaa5d6e7afcd63906ab07efdc87936282c4f4c07e62d86b",
+      "snapshotPath": "assets/6318b926c5c9363ebcaa5d6e7afcd63906ab07efdc87936282c4f4c07e62d86b.jpg",
+      "sha256": "6318b926c5c9363ebcaa5d6e7afcd63906ab07efdc87936282c4f4c07e62d86b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "48dc1aea61381747f7da677fccf5fc818d7bd1f301116894e0861c0343285371",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "关于举办全国文旅艺术行业面向2026届高校毕业生秋季招聘活动的通知",
+    "listPublishDate": "2025-10-27",
+    "sourceOrder": 19,
+    "detailPublishDate": "2025-10-27"
+  }
+}

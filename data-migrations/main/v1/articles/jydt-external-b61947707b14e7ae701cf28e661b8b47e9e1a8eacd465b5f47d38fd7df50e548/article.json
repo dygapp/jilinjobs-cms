@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b61947707b14e7ae701cf28e661b8b47e9e1a8eacd465b5f47d38fd7df50e548",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/DsGThljx47onp-EVgj3SMQ",
+    "url": "https://mp.weixin.qq.com/s/DsGThljx47onp-EVgj3SMQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力扩容提质 服务高质量发展丨长春财经学院举办2026届毕业生春季校园招聘会暨数字经济人才双选会（第二场）",
+    "source": "",
+    "publishDate": "2026-05-28",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/DsGThljx47onp-EVgj3SMQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "d947a17a780e10ba7a7014b1dd37630eb350d81defae8226f6fbc12ea2056b59",
+  "evidence": {
+    "listPage": 13,
+    "listTitle": "聚力扩容提质 服务高质量发展丨长春财经学院举办2026届毕业生春季校园招聘会暨数字经济人才双选会（第二场）",
+    "listPublishDate": "2026-05-28",
+    "sourceOrder": 129
+  }
+}

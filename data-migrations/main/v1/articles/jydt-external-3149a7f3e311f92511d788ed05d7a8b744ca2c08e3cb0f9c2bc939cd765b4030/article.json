@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:3149a7f3e311f92511d788ed05d7a8b744ca2c08e3cb0f9c2bc939cd765b4030",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/J60LEpdSwI8l8Bn0NjzNRw",
+    "url": "https://mp.weixin.qq.com/s/J60LEpdSwI8l8Bn0NjzNRw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "浙江华策影视集团到访长春职业技术大学开展交流宣讲",
+    "source": "",
+    "publishDate": "2026-06-22",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/J60LEpdSwI8l8Bn0NjzNRw"
+  },
+  "resources": [],
+  "sourceFingerprint": "c4bdc52b41eb312bb3782d847998dc001b77d332cbab0c8ddf776cf61d1284d1",
+  "evidence": {
+    "listPage": 8,
+    "listTitle": "浙江华策影视集团到访长春职业技术大学开展交流宣讲",
+    "listPublishDate": "2026-06-22",
+    "sourceOrder": 72
+  }
+}

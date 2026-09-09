@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:705de97669eaa72f81cbb03cd4f714685aded9cd648c3a1ad5d450f386bdd85d",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/uXN4ff2cngWCrcsPOc6oZQ",
+    "url": "https://mp.weixin.qq.com/s/uXN4ff2cngWCrcsPOc6oZQ?scene=25&sessionid=-1368838907"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林工程职业学院领导走访企业 助推毕业生高质量就业",
+    "source": "",
+    "publishDate": "2025-04-07",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/uXN4ff2cngWCrcsPOc6oZQ?scene=25&sessionid=-1368838907"
+  },
+  "resources": [],
+  "sourceFingerprint": "197f8a568bbc5a1d12302cb93e4a39bcff12d269243caf2409aadb6d9b30b7a3",
+  "evidence": {
+    "listPage": 96,
+    "listTitle": "吉林工程职业学院领导走访企业 助推毕业生高质量就业",
+    "listPublishDate": "2025-04-07",
+    "sourceOrder": 951
+  }
+}

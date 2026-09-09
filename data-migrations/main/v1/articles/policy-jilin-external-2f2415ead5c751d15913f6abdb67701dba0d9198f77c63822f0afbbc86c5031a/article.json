@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "policy-jilin:external:2f2415ead5c751d15913f6abdb67701dba0d9198f77c63822f0afbbc86c5031a",
+    "contentId": null,
+    "typeCode": "policy-jilin",
+    "detailPath": "/s/-f5THtC7H2sLT-1KCvGpMg",
+    "url": "https://mp.weixin.qq.com/s/-f5THtC7H2sLT-1KCvGpMg"
+  },
+  "target": {
+    "columnAlias": "policy-jilin",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省人力资源和社会保障厅促进高校毕业生就业创业政策清单",
+    "source": "",
+    "publishDate": "2024-01-24",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/-f5THtC7H2sLT-1KCvGpMg"
+  },
+  "resources": [],
+  "sourceFingerprint": "ea48d3ffcf2d66f1c985f4fe732a0ded20b375e26b1b4cb2152bebdca6017828",
+  "evidence": {
+    "listPage": 1,
+    "listTitle": "吉林省人力资源和社会保障厅促进高校毕业生就业创业政策清单",
+    "listPublishDate": "2024-01-24",
+    "sourceOrder": 7
+  }
+}

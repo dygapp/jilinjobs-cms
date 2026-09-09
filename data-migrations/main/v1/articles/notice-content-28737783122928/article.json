@@ -1,0 +1,81 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122928",
+    "contentId": "28737783122928",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122928"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "转发“企业人才需求与职业咨询实务”专题培训班的通知的通知",
+    "source": "",
+    "publishDate": "2012-11-23",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">转发“企业人才需求与职业咨询实务”专题培训班的通知的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-11-23 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://b6bfa37ea7274699893e6d1eb40bfb8a857c988917f5f14610ac1b336346dcb4\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://a7ca220284b3d4d27d505d1c3c002e91553dd7a031a7305b1efa330ba35961b6\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://73dca2e72384e4934fb883b1ac6431ff002fe45d3099e5ff3b836141c99e7397\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://791f7a4e019796d6e4d710202931dd03a8b821389543b75e933a18e993d120fe\"></p> <p align=\"center\"><img border=\"0\" src=\"http://192.168.1.251/uploadfile/201211/20121123013242127.jpg\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://594fc8ca794756db740981bfa9a57dbc9a4041fa980c1ecf7ee10df6b29a8905\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121123013212327.jpg",
+      "originalReference": "/chistory/cms/imgs/20121123013212327.jpg",
+      "token": "migration-resource://b6bfa37ea7274699893e6d1eb40bfb8a857c988917f5f14610ac1b336346dcb4",
+      "snapshotPath": "assets/b6bfa37ea7274699893e6d1eb40bfb8a857c988917f5f14610ac1b336346dcb4.jpg",
+      "sha256": "b6bfa37ea7274699893e6d1eb40bfb8a857c988917f5f14610ac1b336346dcb4",
+      "contentType": "image/jpeg",
+      "sizeBytes": 98793
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121123013221571.jpg",
+      "originalReference": "/chistory/cms/imgs/20121123013221571.jpg",
+      "token": "migration-resource://a7ca220284b3d4d27d505d1c3c002e91553dd7a031a7305b1efa330ba35961b6",
+      "snapshotPath": "assets/a7ca220284b3d4d27d505d1c3c002e91553dd7a031a7305b1efa330ba35961b6.jpg",
+      "sha256": "a7ca220284b3d4d27d505d1c3c002e91553dd7a031a7305b1efa330ba35961b6",
+      "contentType": "image/jpeg",
+      "sizeBytes": 92643
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121123013228344.jpg",
+      "originalReference": "/chistory/cms/imgs/20121123013228344.jpg",
+      "token": "migration-resource://73dca2e72384e4934fb883b1ac6431ff002fe45d3099e5ff3b836141c99e7397",
+      "snapshotPath": "assets/73dca2e72384e4934fb883b1ac6431ff002fe45d3099e5ff3b836141c99e7397.jpg",
+      "sha256": "73dca2e72384e4934fb883b1ac6431ff002fe45d3099e5ff3b836141c99e7397",
+      "contentType": "image/jpeg",
+      "sizeBytes": 87995
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121123013235360.jpg",
+      "originalReference": "/chistory/cms/imgs/20121123013235360.jpg",
+      "token": "migration-resource://791f7a4e019796d6e4d710202931dd03a8b821389543b75e933a18e993d120fe",
+      "snapshotPath": "assets/791f7a4e019796d6e4d710202931dd03a8b821389543b75e933a18e993d120fe.jpg",
+      "sha256": "791f7a4e019796d6e4d710202931dd03a8b821389543b75e933a18e993d120fe",
+      "contentType": "image/jpeg",
+      "sizeBytes": 51680
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121123013307798.jpg",
+      "originalReference": "/chistory/cms/imgs/20121123013307798.jpg",
+      "token": "migration-resource://594fc8ca794756db740981bfa9a57dbc9a4041fa980c1ecf7ee10df6b29a8905",
+      "snapshotPath": "assets/594fc8ca794756db740981bfa9a57dbc9a4041fa980c1ecf7ee10df6b29a8905.jpg",
+      "sha256": "594fc8ca794756db740981bfa9a57dbc9a4041fa980c1ecf7ee10df6b29a8905",
+      "contentType": "image/jpeg",
+      "sizeBytes": 41740
+    }
+  ],
+  "sourceFingerprint": "df714af28129b44962eb365ec95657999635689ae4be84e1dc20abc6ae79ddb4",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "转发“企业人才需求与职业咨询实务”专题培训班的通知的通知",
+    "listPublishDate": "2012-11-23",
+    "sourceOrder": 377,
+    "detailPublishDate": "2012-11-23"
+  }
+}

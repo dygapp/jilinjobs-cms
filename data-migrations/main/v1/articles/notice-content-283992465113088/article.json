@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:283992465113088",
+    "contentId": "283992465113088",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=283992465113088"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办“千校万企供需对接会”（东北地区专场）暨东北地区2025届高校毕业生人才双选会的通知",
+    "source": "中国高等教育学会",
+    "publishDate": "2025-04-17",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://422135489b52c7b168b3ffcf1edbf9aa955ee3442a46b599f722c4c2e7ecf14c\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://efa05946e8775d2be13b64e55a980b5f76776573f13b3d0578e0333b2014b43a\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://5991cf2c822ecb97a24dbb106b41d8be570db5d17de92e288d9c04b92a6dde78\" width=\"900\"><img alt=\"\" height=\"1273\" src=\"migration-resource://89f9f05b267226232b5d23cd7952741cf584a74398271539ba7f14dc7e4c63ac\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://722234aaa63fed126e3b366385130618cf35a678f6f70197706f309ed20c577b\" width=\"900\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"1273\" src=\"migration-resource://1efc4f41ed71d44f63ad03cecd16f44da4ffa043a45a0b6b601e1412cf941cbf\" width=\"900\"></p>\n\n<p>&nbsp;</p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-17/f59313e5-5a37-44f4-ae26-e722a0cb551a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-17/f59313e5-5a37-44f4-ae26-e722a0cb551a.jpg",
+      "token": "migration-resource://422135489b52c7b168b3ffcf1edbf9aa955ee3442a46b599f722c4c2e7ecf14c",
+      "snapshotPath": "assets/422135489b52c7b168b3ffcf1edbf9aa955ee3442a46b599f722c4c2e7ecf14c.jpg",
+      "sha256": "422135489b52c7b168b3ffcf1edbf9aa955ee3442a46b599f722c4c2e7ecf14c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-17/16e2ebba-c03e-4848-a91e-18fe4686e3e9.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-17/16e2ebba-c03e-4848-a91e-18fe4686e3e9.jpg",
+      "token": "migration-resource://efa05946e8775d2be13b64e55a980b5f76776573f13b3d0578e0333b2014b43a",
+      "snapshotPath": "assets/efa05946e8775d2be13b64e55a980b5f76776573f13b3d0578e0333b2014b43a.jpg",
+      "sha256": "efa05946e8775d2be13b64e55a980b5f76776573f13b3d0578e0333b2014b43a",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-17/7d30b96e-5e97-46ec-b985-d4b868b404bf.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-17/7d30b96e-5e97-46ec-b985-d4b868b404bf.jpg",
+      "token": "migration-resource://5991cf2c822ecb97a24dbb106b41d8be570db5d17de92e288d9c04b92a6dde78",
+      "snapshotPath": "assets/5991cf2c822ecb97a24dbb106b41d8be570db5d17de92e288d9c04b92a6dde78.jpg",
+      "sha256": "5991cf2c822ecb97a24dbb106b41d8be570db5d17de92e288d9c04b92a6dde78",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-17/521769d9-ee98-4b03-9a70-d0ab9d96452a.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-17/521769d9-ee98-4b03-9a70-d0ab9d96452a.jpg",
+      "token": "migration-resource://89f9f05b267226232b5d23cd7952741cf584a74398271539ba7f14dc7e4c63ac",
+      "snapshotPath": "assets/89f9f05b267226232b5d23cd7952741cf584a74398271539ba7f14dc7e4c63ac.jpg",
+      "sha256": "89f9f05b267226232b5d23cd7952741cf584a74398271539ba7f14dc7e4c63ac",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-17/e367ffa2-4b9f-4d37-ad18-559b1aa46222.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-17/e367ffa2-4b9f-4d37-ad18-559b1aa46222.jpg",
+      "token": "migration-resource://722234aaa63fed126e3b366385130618cf35a678f6f70197706f309ed20c577b",
+      "snapshotPath": "assets/722234aaa63fed126e3b366385130618cf35a678f6f70197706f309ed20c577b.jpg",
+      "sha256": "722234aaa63fed126e3b366385130618cf35a678f6f70197706f309ed20c577b",
+      "contentType": "image/jpeg",
+      "sizeBytes": 262144
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2025-04-17/608740eb-4a94-4be2-9112-6f5b035173e5.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2025-04-17/608740eb-4a94-4be2-9112-6f5b035173e5.jpg",
+      "token": "migration-resource://1efc4f41ed71d44f63ad03cecd16f44da4ffa043a45a0b6b601e1412cf941cbf",
+      "snapshotPath": "assets/1efc4f41ed71d44f63ad03cecd16f44da4ffa043a45a0b6b601e1412cf941cbf.jpg",
+      "sha256": "1efc4f41ed71d44f63ad03cecd16f44da4ffa043a45a0b6b601e1412cf941cbf",
+      "contentType": "image/jpeg",
+      "sizeBytes": 131072
+    }
+  ],
+  "sourceFingerprint": "3230aced77fc12fbd785040edbe080a693db20045466b6b084c6dadc6d886753",
+  "evidence": {
+    "listPage": 5,
+    "listTitle": "关于举办“千校万企供需对接会”（东北地区专场）暨东北地区2025届高校毕业生人才双选会的通知",
+    "listPublishDate": "2025-04-17",
+    "sourceOrder": 43,
+    "detailPublishDate": "2025-04-17"
+  }
+}

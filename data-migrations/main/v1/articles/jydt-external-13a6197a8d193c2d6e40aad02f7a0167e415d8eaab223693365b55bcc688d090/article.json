@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:13a6197a8d193c2d6e40aad02f7a0167e415d8eaab223693365b55bcc688d090",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/m2/FxezN95cUw0",
+    "url": "https://a5.rabbitpre.com/m2/FxezN95cUw0?lc=4&sui=obGcFtx65TTUWis4WXEKuWDzPVo4&resource=o5_FNs6SG3IU5QcWIXGIBnkszLKM,wx06a877b61d74ea72,wechat&resourcetype=OPENID,APPID,TYPE&from=singlemessage&host=a5.rabbitpre.com"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "致2022年全省广大高校毕业生的倡议书",
+    "source": "",
+    "publishDate": "2022-04-06",
+    "bodyHtml": "",
+    "externalUrl": "https://a5.rabbitpre.com/m2/FxezN95cUw0?lc=4&sui=obGcFtx65TTUWis4WXEKuWDzPVo4&resource=o5_FNs6SG3IU5QcWIXGIBnkszLKM,wx06a877b61d74ea72,wechat&resourcetype=OPENID,APPID,TYPE&from=singlemessage&host=a5.rabbitpre.com"
+  },
+  "resources": [],
+  "sourceFingerprint": "4a8d84d69fb3abacccb52a0211b12efbddb655dfcbacc4d6f2676a53be11030c",
+  "evidence": {
+    "listPage": 125,
+    "listTitle": "致2022年全省广大高校毕业生的倡议书",
+    "listPublishDate": "2022-04-06",
+    "sourceOrder": 1241
+  }
+}

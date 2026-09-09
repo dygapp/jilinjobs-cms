@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:d88024777ca2f897a081d6035cb5f8b5928bf294960c5b2079eafa5f93adf511",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/PpuWAHKQ7vOPlYQGstl6EA",
+    "url": "https://mp.weixin.qq.com/s/PpuWAHKQ7vOPlYQGstl6EA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省经济管理干部学院成功举办“乘文旅之舟·启人生新航”2026届毕业生专场招聘会",
+    "source": "",
+    "publishDate": "2025-10-31",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/PpuWAHKQ7vOPlYQGstl6EA"
+  },
+  "resources": [],
+  "sourceFingerprint": "32ec6d2d9b60f8b2a560c004e030e4817def1c82f1b94e958ce5f75f48c00759",
+  "evidence": {
+    "listPage": 65,
+    "listTitle": "吉林省经济管理干部学院成功举办“乘文旅之舟·启人生新航”2026届毕业生专场招聘会",
+    "listPublishDate": "2025-10-31",
+    "sourceOrder": 642
+  }
+}

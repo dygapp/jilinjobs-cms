@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:86122220765184",
+    "contentId": "86122220765184",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=86122220765184"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "吉林建筑大学举办“青春筑梦新时代 职启规划新人生”第二届大学生生涯体验活动",
+    "source": "吉林建筑大学",
+    "publishDate": "2021-10-30",
+    "bodyHtml": "\n                        <p>10月28至29日，吉林建筑大学举办了“青春筑梦新时代，职启规划新人生”第二届大学生生涯体验活动。学校党委副书记陈士玉、学校相关职能部门负责人、大学生职业发展与就业指导授课教师、各学院负责人及辅导员参加活动。</p>\n\n<p>本次活动是学校面向全体在校本科、研究生开展的生涯教育体验活动。活动包括唤醒大学“梦”、性格猜猜猜、E往职前 畅想未来、愿望星空、时光信封等5个环节。活动期间，有近8000余名在校学生参与体验。</p>\n\n<p>本次活动以一种全新的生涯教育模式给大学生带来了一种全新的体验，旨在帮助学生更加直观地了解如何进行目标定位、自我认知、职业探索，引导学生进行科学的生涯决策，对于提升大学生职业生涯规划意识起到了积极促进作用。</p>\n\n<p>&nbsp;&nbsp;<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（吉林建筑大学 韩志超）</strong></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "c2d1a0f1b8b0ac8c01d7821fb1819ea90533d759e31e5b8e6203ada15acb6631",
+  "evidence": {
+    "listPage": 132,
+    "listTitle": "吉林建筑大学举办“青春筑梦新时代 职启规划新人生”第二届大学生生涯体验活动",
+    "listPublishDate": "2021-10-30",
+    "sourceOrder": 1313,
+    "detailPublishDate": "2021-10-30"
+  }
+}

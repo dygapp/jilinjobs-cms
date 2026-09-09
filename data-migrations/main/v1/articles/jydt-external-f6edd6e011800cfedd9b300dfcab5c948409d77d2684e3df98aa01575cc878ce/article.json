@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f6edd6e011800cfedd9b300dfcab5c948409d77d2684e3df98aa01575cc878ce",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/info/1025/5135.htm",
+    "url": "https://www.jlemcc.edu.cn/info/1025/5135.htm"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "产教融合赋能银发经济 校企联动培育康养英才 吉林省经济管理干部学院与长春仁大医养中心成功举行校企合作签约仪式暨订单班开班典礼",
+    "source": "",
+    "publishDate": "2026-05-11",
+    "bodyHtml": "",
+    "externalUrl": "https://www.jlemcc.edu.cn/info/1025/5135.htm"
+  },
+  "resources": [],
+  "sourceFingerprint": "df65cebea62ec90b2522ab3c7e3567e23df606d4ee1618245bfd4e0b11d1eef7",
+  "evidence": {
+    "listPage": 20,
+    "listTitle": "产教融合赋能银发经济 校企联动培育康养英才 吉林省经济管理干部学院与长春仁大医养中心成功举行校企合作签约仪式暨订单班开班典礼",
+    "listPublishDate": "2026-05-11",
+    "sourceOrder": 197
+  }
+}

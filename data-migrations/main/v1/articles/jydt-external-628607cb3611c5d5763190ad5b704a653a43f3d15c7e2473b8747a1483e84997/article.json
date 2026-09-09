@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:628607cb3611c5d5763190ad5b704a653a43f3d15c7e2473b8747a1483e84997",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/0RCgpVl_HvykC4XsrHV9tw",
+    "url": "https://mp.weixin.qq.com/s/0RCgpVl_HvykC4XsrHV9tw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林省2026届外语外贸类毕业生就业洽谈会在吉林外国语大学举行",
+    "source": "",
+    "publishDate": "2025-11-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/0RCgpVl_HvykC4XsrHV9tw"
+  },
+  "resources": [],
+  "sourceFingerprint": "992c1389555abe4e2b695e591435389c84d2e1d13a291dd132d041c08dc8cbb0",
+  "evidence": {
+    "listPage": 64,
+    "listTitle": "吉林省2026届外语外贸类毕业生就业洽谈会在吉林外国语大学举行",
+    "listPublishDate": "2025-11-03",
+    "sourceOrder": 636
+  }
+}

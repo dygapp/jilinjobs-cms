@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:836ab0f1247c3c4821c23b5d708e5a8f312be2d635b842a3c11d1eef490b3137",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/lPa5rS0NKoSwLUbdK4aRDA",
+    "url": "https://mp.weixin.qq.com/s/lPa5rS0NKoSwLUbdK4aRDA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "四平现代职业学院成功举办2026年就业实习双选会",
+    "source": "",
+    "publishDate": "2026-06-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/lPa5rS0NKoSwLUbdK4aRDA"
+  },
+  "resources": [],
+  "sourceFingerprint": "27cb16d597546d583f085b57592ee970addf4f363ccb13aad2496f2f8782d4bc",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "四平现代职业学院成功举办2026年就业实习双选会",
+    "listPublishDate": "2026-06-08",
+    "sourceOrder": 98
+  }
+}

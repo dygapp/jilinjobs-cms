@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:402897f0daa520545c038c6a9d9191aeb650034900d9125eb173a45793342ff2",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/app/news/shareNewsDetail",
+    "url": "https://www.cailianxinwen.com/app/news/shareNewsDetail?newsid=333281"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "2022年吉林省“阳光在行动”残疾大学生专场招聘会举办",
+    "source": "",
+    "publishDate": "2022-06-25",
+    "bodyHtml": "",
+    "externalUrl": "https://www.cailianxinwen.com/app/news/shareNewsDetail?newsid=333281"
+  },
+  "resources": [],
+  "sourceFingerprint": "6ffd0ece597180314eb999a38eb413d59e39da329d1857614f0d752321b97dec",
+  "evidence": {
+    "listPage": 35,
+    "listTitle": "2022年吉林省“阳光在行动”残疾大学生专场招聘会举办",
+    "listPublishDate": "2022-06-25",
+    "sourceOrder": 344
+  }
+}

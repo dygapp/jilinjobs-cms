@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:53f09d7409f516f623610c8d650e554fbe210c5edd7d7df6ae1be302213ccba5",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/E94Z6jUenP0Gwvck5-MoGQ",
+    "url": "https://mp.weixin.qq.com/s/E94Z6jUenP0Gwvck5-MoGQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "寒假促就业暖心行动 | 东北电力大学2026届毕业生寒假专场网络招聘会",
+    "source": "",
+    "publishDate": "2026-01-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/E94Z6jUenP0Gwvck5-MoGQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "95dc33bab58de3c17d18293284bacc903c541bcde2e734819057138cad9f560b",
+  "evidence": {
+    "listPage": 50,
+    "listTitle": "寒假促就业暖心行动 | 东北电力大学2026届毕业生寒假专场网络招聘会",
+    "listPublishDate": "2026-01-14",
+    "sourceOrder": 500
+  }
+}

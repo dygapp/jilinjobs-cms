@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:79a10424f958a192f8b062630e5e495acbf553f923b46048d5c3a0b5d74dc5a0",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/OPbzku_LUZAiwxIoAVQBQw",
+    "url": "https://mp.weixin.qq.com/s/OPbzku_LUZAiwxIoAVQBQw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "政校企协同聚才引智 稳就业助力振兴发展丨吉林省 “百城千校万企” 促就业行动暨应用型人才春季招聘会成功举办",
+    "source": "",
+    "publishDate": "2026-05-25",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/OPbzku_LUZAiwxIoAVQBQw"
+  },
+  "resources": [],
+  "sourceFingerprint": "8d30be7ffa0ffc19c382d6ddb0aee90884ad55bf8bb618f380959efd2aa51711",
+  "evidence": {
+    "listPage": 15,
+    "listTitle": "政校企协同聚才引智 稳就业助力振兴发展丨吉林省 “百城千校万企” 促就业行动暨应用型人才春季招聘会成功举办",
+    "listPublishDate": "2026-05-25",
+    "sourceOrder": 144
+  }
+}

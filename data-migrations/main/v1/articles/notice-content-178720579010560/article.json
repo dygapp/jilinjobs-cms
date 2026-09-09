@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:178720579010560",
+    "contentId": "178720579010560",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=178720579010560"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于开展“生涯启航 筑梦前行”吉林省高校大学生生涯教育第一课的通知",
+    "source": "吉林省高等学校毕业生就业指导中心",
+    "publishDate": "2023-09-11",
+    "bodyHtml": "\n                        <p style=\"text-align:center\"><img alt=\"\" height=\"974\" src=\"migration-resource://fe8f9908fa56e19b0c87fc89e296d5face14db47cd0043f30986fc489cf4b36c\" width=\"790\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"992\" src=\"migration-resource://67780d1a6b4740836ddb49ea58861d265683a661ccafdb270c2401a0b674a6e3\" width=\"789\"></p>\n\n<p style=\"text-align:center\"><img alt=\"\" height=\"983\" src=\"migration-resource://99c6696d4bb51fd78f915b7a66675b1dfc91b5be64d430eb85e4c46730b6e15c\" width=\"790\"></p>\n\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-14/42fcc179-e6c0-4213-9cf1-fe297f64800f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-14/42fcc179-e6c0-4213-9cf1-fe297f64800f.jpg",
+      "token": "migration-resource://fe8f9908fa56e19b0c87fc89e296d5face14db47cd0043f30986fc489cf4b36c",
+      "snapshotPath": "assets/fe8f9908fa56e19b0c87fc89e296d5face14db47cd0043f30986fc489cf4b36c.jpg",
+      "sha256": "fe8f9908fa56e19b0c87fc89e296d5face14db47cd0043f30986fc489cf4b36c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 67512
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-14/3722fb8e-b2a8-4c9a-b44f-73c9d552635f.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-14/3722fb8e-b2a8-4c9a-b44f-73c9d552635f.jpg",
+      "token": "migration-resource://67780d1a6b4740836ddb49ea58861d265683a661ccafdb270c2401a0b674a6e3",
+      "snapshotPath": "assets/67780d1a6b4740836ddb49ea58861d265683a661ccafdb270c2401a0b674a6e3.jpg",
+      "sha256": "67780d1a6b4740836ddb49ea58861d265683a661ccafdb270c2401a0b674a6e3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 55265
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/ck/nullcontent/2023-09-14/bb1da6dd-6327-4320-9a1c-c7f753046a8c.jpg",
+      "originalReference": "/group1/cms/ck/nullcontent/2023-09-14/bb1da6dd-6327-4320-9a1c-c7f753046a8c.jpg",
+      "token": "migration-resource://99c6696d4bb51fd78f915b7a66675b1dfc91b5be64d430eb85e4c46730b6e15c",
+      "snapshotPath": "assets/99c6696d4bb51fd78f915b7a66675b1dfc91b5be64d430eb85e4c46730b6e15c.jpg",
+      "sha256": "99c6696d4bb51fd78f915b7a66675b1dfc91b5be64d430eb85e4c46730b6e15c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 57364
+    }
+  ],
+  "sourceFingerprint": "3d173af058c5f2913738ab6440859d268e1e7b7467d5cd90666ec95178f47e5e",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "关于开展“生涯启航 筑梦前行”吉林省高校大学生生涯教育第一课的通知",
+    "listPublishDate": "2023-09-11",
+    "sourceOrder": 98,
+    "detailPublishDate": "2023-09-11"
+  }
+}

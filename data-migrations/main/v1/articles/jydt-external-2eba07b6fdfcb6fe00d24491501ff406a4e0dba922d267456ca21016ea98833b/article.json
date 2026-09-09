@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:2eba07b6fdfcb6fe00d24491501ff406a4e0dba922d267456ca21016ea98833b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/BbbzEQuy33WW2qzt_VaYtw",
+    "url": "https://mp.weixin.qq.com/s/BbbzEQuy33WW2qzt_VaYtw"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林交通职业技术学院举办 2026 届毕业生就业启航第一课政策宣讲会",
+    "source": "",
+    "publishDate": "2026-06-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/BbbzEQuy33WW2qzt_VaYtw"
+  },
+  "resources": [],
+  "sourceFingerprint": "bfef1f333555158b3347e174e593f5ac6c37a1e170d43994ec4b17a2043a4f25",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "吉林交通职业技术学院举办 2026 届毕业生就业启航第一课政策宣讲会",
+    "listPublishDate": "2026-06-08",
+    "sourceOrder": 96
+  }
+}

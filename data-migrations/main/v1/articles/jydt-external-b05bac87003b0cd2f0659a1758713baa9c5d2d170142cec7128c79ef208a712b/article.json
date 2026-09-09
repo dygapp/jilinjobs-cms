@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b05bac87003b0cd2f0659a1758713baa9c5d2d170142cec7128c79ef208a712b",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/WrHUqJr9IH2pOVijYfP36A",
+    "url": "https://mp.weixin.qq.com/s/WrHUqJr9IH2pOVijYfP36A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "聚力校行企协同 赋能福祉学科建设｜长春人文学院与省老龄产业协会、中孚智慧生态康养公司签署战略合作协议",
+    "source": "",
+    "publishDate": "2026-06-01",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/WrHUqJr9IH2pOVijYfP36A"
+  },
+  "resources": [],
+  "sourceFingerprint": "bb459c41c9e4a0908046e0e133b4e36abf2ca7cb820d3ed24788f51d86b98617",
+  "evidence": {
+    "listPage": 12,
+    "listTitle": "聚力校行企协同 赋能福祉学科建设｜长春人文学院与省老龄产业协会、中孚智慧生态康养公司签署战略合作协议",
+    "listPublishDate": "2026-06-01",
+    "sourceOrder": 116
+  }
+}

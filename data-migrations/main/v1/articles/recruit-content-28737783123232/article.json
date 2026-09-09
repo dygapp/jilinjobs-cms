@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:content:28737783123232",
+    "contentId": "28737783123232",
+    "typeCode": "recruit",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783123232"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "青海省成立首家大学生创业园 提供贷款支持",
+    "source": "",
+    "publishDate": "2009-07-06",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">青海省成立首家大学生创业园 提供贷款支持</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-7-6 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp;&nbsp; 日前，青海省首家大学生创业园、青海青年创业孵化基地在西宁揭牌。俞敏洪、朱明瑛、陈远东等30名知名企业家被聘为青海青年创业导师团导师，30名创业青年获得共计480万元的青海青年创业小额贷款。</font></p> <p><font size=\"2\"></font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 青海大学生创业园、青海青年创业孵化基地共占地5000平方米，总部设在西宁市经济技术开发区，将为全省大学生、青年创业提供资金、政策、孵化等服务和支持。</font></p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp; 青海大学生创业园、青海青年创业孵化基地与YBC（中国青年创业国际计划）、国家开发银行青海省分行等机构合作，在大学生创业园引进青年创业小额贷款项目和YBC青年创业项目模式，通过建立青海青年创业基金和青海青年创业导师团，为创业者提供20万元以内的青年创业小额贷款和3万~8万元免担保启动资金，以及青年创业导师“一对一”指导服务，逐步形成“全方位、全程陪伴式”服务的青海青年就业创业综合服务体系。</font></p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\"></font>&nbsp;</p> <p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 来源：中国青年报</font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "dd855c4b01a2c6e80dd7cf94ae6d357284c4fb23ceca14d68d2e76b3f771a2e3",
+  "evidence": {
+    "listPage": 52,
+    "listTitle": "青海省成立首家大学生创业园 提供贷款支持",
+    "listPublishDate": "2009-07-06",
+    "sourceOrder": 519,
+    "detailPublishDate": "2009-07-06"
+  }
+}

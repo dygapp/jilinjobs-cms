@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:95780a5fea27147e8ce9709d1e1a44ae7bf3808b9a5b7100765f22fce455ea20",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/ABtuW-o3oDp1rvoLVatRiA",
+    "url": "https://mp.weixin.qq.com/s/ABtuW-o3oDp1rvoLVatRiA?scene=25&sessionid=-1368381599"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“就”在白城 “职”引未来 白城医学高等专科学校2025年应届毕业生供需洽谈暨服务吉林高质量发展校园招聘会成功举办",
+    "source": "",
+    "publishDate": "2025-04-09",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/ABtuW-o3oDp1rvoLVatRiA?scene=25&sessionid=-1368381599"
+  },
+  "resources": [],
+  "sourceFingerprint": "cdef9747e4313109c23af3a1e1da4d1dbb117fe3ef746b9907c2c41e9cac2a5d",
+  "evidence": {
+    "listPage": 95,
+    "listTitle": "“就”在白城 “职”引未来 白城医学高等专科学校2025年应届毕业生供需洽谈暨服务吉林高质量发展校园招聘会成功举办",
+    "listPublishDate": "2025-04-09",
+    "sourceOrder": 950
+  }
+}

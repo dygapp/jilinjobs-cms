@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:30ddaf26ff35f5acd5bfd9c8f3e80bedc2b2ef0813f2e09f2a45d421b75606c2",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/student/chance/newsdetails.html",
+    "url": "https://m.bysjy.com.cn/student/chance/newsdetails.html?token=yxqqnn0100000012&notice_id=1019880&is_new_openid=1"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "【就业促进周招聘会参会单位名录】长春中医药大学2024届毕业生专场线上招聘会",
+    "source": "",
+    "publishDate": "2024-05-29",
+    "bodyHtml": "",
+    "externalUrl": "https://m.bysjy.com.cn/student/chance/newsdetails.html?token=yxqqnn0100000012&notice_id=1019880&is_new_openid=1"
+  },
+  "resources": [],
+  "sourceFingerprint": "97b2074582e699694a928990785fbe11fd61fcd8439d532112f55ae00d613797",
+  "evidence": {
+    "listPage": 27,
+    "listTitle": "【就业促进周招聘会参会单位名录】长春中医药大学2024届毕业生专场线上招聘会",
+    "listPublishDate": "2024-05-29",
+    "sourceOrder": 269
+  }
+}

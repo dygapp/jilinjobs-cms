@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:c7707679b8a6a8df6c0a200476d0065fc1a030330b80df5bc2da31deeb463021",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/vcpUczRGPUiZ47bsiDXldg",
+    "url": "https://mp.weixin.qq.com/s/vcpUczRGPUiZ47bsiDXldg"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "访企拓岗强实践 院所携手育新人丨长春财经学院赴吉林国洋律师事务所走访交流",
+    "source": "",
+    "publishDate": "2026-08-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vcpUczRGPUiZ47bsiDXldg"
+  },
+  "resources": [],
+  "sourceFingerprint": "d166172df40ddcc0d2b36133ca9cf58ab12b55d9056d32d3f1919922cd8f4a2c",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "访企拓岗强实践 院所携手育新人丨长春财经学院赴吉林国洋律师事务所走访交流",
+    "listPublishDate": "2026-08-19",
+    "sourceOrder": 13
+  }
+}

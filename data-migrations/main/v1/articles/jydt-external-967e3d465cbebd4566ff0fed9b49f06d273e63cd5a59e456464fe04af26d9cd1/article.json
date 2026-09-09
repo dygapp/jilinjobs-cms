@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:967e3d465cbebd4566ff0fed9b49f06d273e63cd5a59e456464fe04af26d9cd1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/pWfGLsSGsAjl3lk0xDJFpQ",
+    "url": "https://mp.weixin.qq.com/s/pWfGLsSGsAjl3lk0xDJFpQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“智”汇东北 “才”启新程",
+    "source": "",
+    "publishDate": "2025-05-26",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/pWfGLsSGsAjl3lk0xDJFpQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "25c279efb28420cf034880b6e22baece897fddc3d74e6b26364ecdc1205a3e2b",
+  "evidence": {
+    "listPage": 87,
+    "listTitle": "“智”汇东北 “才”启新程",
+    "listPublishDate": "2025-05-26",
+    "sourceOrder": 865
+  }
+}

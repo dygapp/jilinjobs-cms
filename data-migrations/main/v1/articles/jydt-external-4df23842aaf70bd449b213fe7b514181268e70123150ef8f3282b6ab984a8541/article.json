@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:4df23842aaf70bd449b213fe7b514181268e70123150ef8f3282b6ab984a8541",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/pDR-uAxkqpLt2TEcY_kClA",
+    "url": "https://mp.weixin.qq.com/s/pDR-uAxkqpLt2TEcY_kClA"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "长春师范大学副校长宫炳成带队赴安徽省开展“招生—培养—就业”一体化促进专项调研",
+    "source": "",
+    "publishDate": "2026-06-03",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/pDR-uAxkqpLt2TEcY_kClA"
+  },
+  "resources": [],
+  "sourceFingerprint": "3f7d44e8e2ab84268c187c5e2737e5f830194a4d3d174067b0eedc580b867e31",
+  "evidence": {
+    "listPage": 11,
+    "listTitle": "长春师范大学副校长宫炳成带队赴安徽省开展“招生—培养—就业”一体化促进专项调研",
+    "listPublishDate": "2026-06-03",
+    "sourceOrder": 106
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "recruit:external:ce4f80ea4fc1d7f981533116de7ec20092ad5eed4535fbdbbc5e28dc2ac8f944",
+    "contentId": null,
+    "typeCode": "recruit",
+    "detailPath": "/s/voOszdowEZEPAeKL8_FzgA",
+    "url": "https://mp.weixin.qq.com/s/voOszdowEZEPAeKL8_FzgA"
+  },
+  "target": {
+    "columnAlias": "recruitment-announcement",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "“秋雨润禾 筑梦未来”第二届全国建设行业人才（大学生专场）招聘会线上招聘渠道同步开放！",
+    "source": "",
+    "publishDate": "2026-09-02",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/voOszdowEZEPAeKL8_FzgA"
+  },
+  "resources": [],
+  "sourceFingerprint": "e2060f462df7384ebd4cc7a7b05c213529d1034d8337a9284864087234b4a2dd",
+  "evidence": {
+    "listPage": 2,
+    "listTitle": "“秋雨润禾 筑梦未来”第二届全国建设行业人才（大学生专场）招聘会线上招聘渠道同步开放！",
+    "listPublishDate": "2026-09-02",
+    "sourceOrder": 12
+  }
+}

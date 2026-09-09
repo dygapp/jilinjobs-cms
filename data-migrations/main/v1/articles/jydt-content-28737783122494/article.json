@@ -1,0 +1,30 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:content:28737783122494",
+    "contentId": "28737783122494",
+    "typeCode": "jydt",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122494"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "北京：北京多项举措助大学生就业 岗位超6万个",
+    "source": "",
+    "publishDate": "2009-04-04",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    就业动态</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">北京：北京多项举措助大学生就业 岗位超6万个</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息管理部   发布时间:2009-4-4 0:00:00</font></span>\n                </div>\n               <div id=\"tdNewsContent\"><p><font size=\"2\">&nbsp;&nbsp; </font></p> <p><font size=\"2\">&nbsp;&nbsp; “2009年全年北京市教委将组织70多场双选招聘会，招聘单位将超过4000家，将提供岗位超过6万个。”北京市教委近日公布多项促进高校毕业生就业的举措。</font></p> <p><font size=\"2\">　　据悉，今年北京还将举办多场网络招聘会，招聘单位超过2800家，提供超过1万个招聘岗位。北京市将与各省区市毕业生服务机构网站实现链接，提供部分省区市的毕业生招聘信息，提供各省区市的就业政策、接收毕业生手续流程和联系方式，为高校和毕业生提供方便。</font></p> <p><font size=\"2\">　　北京市还将为困难群体毕业生提供“一对一”就业帮扶，对未就业毕业生发放就业服务卡，凭卡免费参加北京高校毕业生就业指导中心举办的就业指导讲座；设立就业专家咨询服务专区。（记者樊未晨）<br>&nbsp;<br></font></p></div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [],
+  "sourceFingerprint": "8617c2520a1a3ee227fed49f3be2f6c851293527436157769db169a84c91909f",
+  "evidence": {
+    "listPage": 187,
+    "listTitle": "北京：北京多项举措助大学生就业 岗位超6万个",
+    "listPublishDate": "2009-04-04",
+    "sourceOrder": 1869,
+    "detailPublishDate": "2009-04-04"
+  }
+}

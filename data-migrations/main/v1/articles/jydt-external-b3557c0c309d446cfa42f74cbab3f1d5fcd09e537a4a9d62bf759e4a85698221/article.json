@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:b3557c0c309d446cfa42f74cbab3f1d5fcd09e537a4a9d62bf759e4a85698221",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/vX-OvX-E-siyhlunZyeo5A",
+    "url": "https://mp.weixin.qq.com/s/vX-OvX-E-siyhlunZyeo5A"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "吉林建筑科技学院举办“创业奋斗‘就’在吉林”2024届毕业生校园双选会",
+    "source": "",
+    "publishDate": "2024-04-19",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/vX-OvX-E-siyhlunZyeo5A"
+  },
+  "resources": [],
+  "sourceFingerprint": "c8afce64aa0c1fd56895f9391403c8c7ed692adbbb7369b88f0e8d12aa638b79",
+  "evidence": {
+    "listPage": 108,
+    "listTitle": "吉林建筑科技学院举办“创业奋斗‘就’在吉林”2024届毕业生校园双选会",
+    "listPublishDate": "2024-04-19",
+    "sourceOrder": 1076
+  }
+}

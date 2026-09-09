@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:e002b1a9c01f90cd19a66b08fbe09046ab192914ca35ee5c7c9098475f856ff1",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA4ODQ1MTY2Ng==&mid=2650803749&idx=1&sn=1e1cf20cba0dad95fc564163ab9d1fa7&chksm=8bdd5118bcaad80e8609c96d04784b9f15fb43f984f5bff291315822860217da866b4c8f3636&mpshare=1&scene=1&srcid=0413vG720rZRoS2drrlXk0fc&sharer_sharetime"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "战疫“屏相见”，北华大学推出创意就业讲堂",
+    "source": "",
+    "publishDate": "2022-04-14",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s?__biz=MzA4ODQ1MTY2Ng==&mid=2650803749&idx=1&sn=1e1cf20cba0dad95fc564163ab9d1fa7&chksm=8bdd5118bcaad80e8609c96d04784b9f15fb43f984f5bff291315822860217da866b4c8f3636&mpshare=1&scene=1&srcid=0413vG720rZRoS2drrlXk0fc&sharer_sharetime"
+  },
+  "resources": [],
+  "sourceFingerprint": "890a071f97088340532278f04e41041c9cb0d2f6100a56577bc68206d12d175e",
+  "evidence": {
+    "listPage": 122,
+    "listTitle": "战疫“屏相见”，北华大学推出创意就业讲堂",
+    "listPublishDate": "2022-04-14",
+    "sourceOrder": 1214
+  }
+}

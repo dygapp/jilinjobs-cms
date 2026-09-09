@@ -1,0 +1,61 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122926",
+    "contentId": "28737783122926",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122926"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办2013届吉林省普通高校毕业生网络招聘活动的通知",
+    "source": "",
+    "publishDate": "2012-12-01",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办2013届吉林省普通高校毕业生网络招聘活动的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:信息部   发布时间:2012-12-1 0:00:00</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p align=\"center\"><img border=\"0\" src=\"migration-resource://e1508135690afbdf4c11d5db941e5f115698a37e935e059a771066c1073d2f5c\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://c0e4df894048825c3de3bddc3629ec8ba75c17776a502aac4c09af071657ab66\"></p> <p align=\"center\"><img border=\"0\" src=\"migration-resource://19099104cf4571755ee441c5239c7178b3c706d56e41a10a0498a95f017132ca\"></p> <p align=\"center\">&nbsp;</p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121201032031423.jpg",
+      "originalReference": "/chistory/cms/imgs/20121201032031423.jpg",
+      "token": "migration-resource://e1508135690afbdf4c11d5db941e5f115698a37e935e059a771066c1073d2f5c",
+      "snapshotPath": "assets/e1508135690afbdf4c11d5db941e5f115698a37e935e059a771066c1073d2f5c.jpg",
+      "sha256": "e1508135690afbdf4c11d5db941e5f115698a37e935e059a771066c1073d2f5c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 77637
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121201045431436.jpg",
+      "originalReference": "/chistory/cms/imgs/20121201045431436.jpg",
+      "token": "migration-resource://c0e4df894048825c3de3bddc3629ec8ba75c17776a502aac4c09af071657ab66",
+      "snapshotPath": "assets/c0e4df894048825c3de3bddc3629ec8ba75c17776a502aac4c09af071657ab66.jpg",
+      "sha256": "c0e4df894048825c3de3bddc3629ec8ba75c17776a502aac4c09af071657ab66",
+      "contentType": "image/jpeg",
+      "sizeBytes": 93360
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/20121201032045377.jpg",
+      "originalReference": "/chistory/cms/imgs/20121201032045377.jpg",
+      "token": "migration-resource://19099104cf4571755ee441c5239c7178b3c706d56e41a10a0498a95f017132ca",
+      "snapshotPath": "assets/19099104cf4571755ee441c5239c7178b3c706d56e41a10a0498a95f017132ca.jpg",
+      "sha256": "19099104cf4571755ee441c5239c7178b3c706d56e41a10a0498a95f017132ca",
+      "contentType": "image/jpeg",
+      "sizeBytes": 52098
+    }
+  ],
+  "sourceFingerprint": "b8c70b1e36a22004e13e3014d761957227ba3b3a237bedb48d3b5b8211e8ce77",
+  "evidence": {
+    "listPage": 38,
+    "listTitle": "关于举办2013届吉林省普通高校毕业生网络招聘活动的通知",
+    "listPublishDate": "2012-12-01",
+    "sourceOrder": 376,
+    "detailPublishDate": "2012-12-01"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:f925341114a3b9b12558b22ebef4705f1e7aaa64e96e8b535a41912a53738bd7",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/s/uGgLDT_0MDG3vKuNzi_RiQ",
+    "url": "https://mp.weixin.qq.com/s/uGgLDT_0MDG3vKuNzi_RiQ"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "东北电力大学与云南电网有限责任公司签署校企合作协议",
+    "source": "",
+    "publishDate": "2026-06-08",
+    "bodyHtml": "",
+    "externalUrl": "https://mp.weixin.qq.com/s/uGgLDT_0MDG3vKuNzi_RiQ"
+  },
+  "resources": [],
+  "sourceFingerprint": "030f3f9d30796580dc56099e39e6d2df9e08529ddb7ce495175be4cb96ef0afc",
+  "evidence": {
+    "listPage": 10,
+    "listTitle": "东北电力大学与云南电网有限责任公司签署校企合作协议",
+    "listPublishDate": "2026-06-08",
+    "sourceOrder": 94
+  }
+}

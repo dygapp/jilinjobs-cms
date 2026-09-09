@@ -1,0 +1,29 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "jydt:external:a0dd90120811c93182944400bff4dbceea876c90596c32cf4c7cd8b5f1289708",
+    "contentId": null,
+    "typeCode": "jydt",
+    "detailPath": "/app/template/displayTemplate/news/newsDetail/569/10077562.html",
+    "url": "https://jlrbapp.cailianxinwen.com/app/template/displayTemplate/news/newsDetail/569/10077562.html?xyt=1766449917465"
+  },
+  "target": {
+    "columnAlias": "employment-news",
+    "articleType": "EXTERNAL_LINK"
+  },
+  "content": {
+    "title": "智赋产业 教融未来！吉林科技职业技术学院人工智能产业学院揭牌成立",
+    "source": "",
+    "publishDate": "2025-12-23",
+    "bodyHtml": "",
+    "externalUrl": "https://jlrbapp.cailianxinwen.com/app/template/displayTemplate/news/newsDetail/569/10077562.html?xyt=1766449917465"
+  },
+  "resources": [],
+  "sourceFingerprint": "72f115136abe296e34242e5f1eeac1a13896b92054d7bcebf936cae2618874cd",
+  "evidence": {
+    "listPage": 52,
+    "listTitle": "智赋产业 教融未来！吉林科技职业技术学院人工智能产业学院揭牌成立",
+    "listPublishDate": "2025-12-23",
+    "sourceOrder": 519
+  }
+}

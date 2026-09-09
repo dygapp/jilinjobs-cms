@@ -1,0 +1,91 @@
+{
+  "source": {
+    "system": "legacy-jilinjobs",
+    "legacyKey": "notice:content:28737783122766",
+    "contentId": "28737783122766",
+    "typeCode": "notice",
+    "detailPath": "/detail.html",
+    "url": "https://24365.jl.smartedu.cn/detail.html?content_id=28737783122766"
+  },
+  "target": {
+    "columnAlias": "notice",
+    "articleType": "INTERNAL"
+  },
+  "content": {
+    "title": "关于举办SFBT焦点解决生涯辅导工作坊的通知",
+    "source": "",
+    "publishDate": "2017-03-10",
+    "bodyHtml": "\n                        <div class=\"mainlist bor\">\n            <h5>\n                <div class=\"ttt text20\">\n                    通知公告</div>\n            </h5>\n            <div>\n                <div class=\"titles\">\n                    <span id=\"lblTitle\" style=\"display:inline-block;\"><b><font size=\"5\">关于举办SFBT焦点解决生涯辅导工作坊的通知</font></b></span>\n                </div>\n                <div class=\"xian2\">\n                </div>\n                <div class=\"Issues\">\n                    <span id=\"lblIssue\" style=\"display:inline-block;\"><font size=\"3\">发布部门:培训部   发布时间:2017-3-10 14:13:18</font></span>\n                </div>\n               \n                <div id=\"tdNoticesContent\"><p style=\"text-align: center\"><img title=\"1.jpg\" src=\"migration-resource://d2c7c857f1e0dea47d80d1eb54fa233e12f3b544d26d38636aecbd80c4233f6d\"></p><p style=\"text-align: center\"><img title=\"2.jpg\" src=\"migration-resource://df370fc1e12271b133d295ecffb1bf890bc2c1df1f0f21fc204565c54c8dcfe3\"></p><p style=\"text-align: center\"><img title=\"3.jpg\" src=\"migration-resource://753d9efdad689e21ec5daa5fe14144bc5888b47abed785e96e4a94741a95a58c\"></p><p style=\"text-align: center\"><img title=\"4.jpg\" src=\"migration-resource://b97d9c124d55b8067fa7bac97ee41ea29751afc14daac170bddb064eda585908\"></p><p style=\"text-align: center\"><img title=\"5.jpg\" src=\"migration-resource://88c0d93ac77fe728af79c17b0badb7bdd3e7f35d440e377e22c54ac111dece7f\"></p><p style=\"text-align: center\"><img title=\"6.jpg\" src=\"migration-resource://1a6e563166292af2cbe05dae76cb1e4edb3096fdcaac713385ee83b24116a487\"></p><p><br></p></div>\n                <div class=\"clearfloat\">\n                </div>\n                <div class=\"xian2\">\n                </div>\n                \n                <div class=\"clearfloat\">\n                </div>\n            </div>\n            <div class=\"xian2\">\n            </div>\n            <table width=\"100%\">\n                <tbody><tr>\n                    <td width=\"10%\" height=\"23\" bgcolor=\"#FFFFFF\" align=\"right\">\n                        附件：\n                    </td>\n                    <td>\n                        &nbsp;\n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        &nbsp;\n                    </td>\n                    <td width=\"90%\" height=\"23\" align=\"left\" bgcolor=\"#FFFFFF\">\n                        \n                    </td>\n                </tr>\n            </tbody></table>\n        </div>\n                    ",
+    "externalUrl": null
+  },
+  "resources": [
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362760321873587505034698.jpg",
+      "originalReference": "/chistory/cms/imgs/6362760321873587505034698.jpg",
+      "token": "migration-resource://d2c7c857f1e0dea47d80d1eb54fa233e12f3b544d26d38636aecbd80c4233f6d",
+      "snapshotPath": "assets/d2c7c857f1e0dea47d80d1eb54fa233e12f3b544d26d38636aecbd80c4233f6d.jpg",
+      "sha256": "d2c7c857f1e0dea47d80d1eb54fa233e12f3b544d26d38636aecbd80c4233f6d",
+      "contentType": "image/jpeg",
+      "sizeBytes": 88502
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362760322023587501776440.jpg",
+      "originalReference": "/chistory/cms/imgs/6362760322023587501776440.jpg",
+      "token": "migration-resource://df370fc1e12271b133d295ecffb1bf890bc2c1df1f0f21fc204565c54c8dcfe3",
+      "snapshotPath": "assets/df370fc1e12271b133d295ecffb1bf890bc2c1df1f0f21fc204565c54c8dcfe3.jpg",
+      "sha256": "df370fc1e12271b133d295ecffb1bf890bc2c1df1f0f21fc204565c54c8dcfe3",
+      "contentType": "image/jpeg",
+      "sizeBytes": 75325
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362760322181400005260752.jpg",
+      "originalReference": "/chistory/cms/imgs/6362760322181400005260752.jpg",
+      "token": "migration-resource://753d9efdad689e21ec5daa5fe14144bc5888b47abed785e96e4a94741a95a58c",
+      "snapshotPath": "assets/753d9efdad689e21ec5daa5fe14144bc5888b47abed785e96e4a94741a95a58c.jpg",
+      "sha256": "753d9efdad689e21ec5daa5fe14144bc5888b47abed785e96e4a94741a95a58c",
+      "contentType": "image/jpeg",
+      "sizeBytes": 53049
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362760322339212508745064.jpg",
+      "originalReference": "/chistory/cms/imgs/6362760322339212508745064.jpg",
+      "token": "migration-resource://b97d9c124d55b8067fa7bac97ee41ea29751afc14daac170bddb064eda585908",
+      "snapshotPath": "assets/b97d9c124d55b8067fa7bac97ee41ea29751afc14daac170bddb064eda585908.jpg",
+      "sha256": "b97d9c124d55b8067fa7bac97ee41ea29751afc14daac170bddb064eda585908",
+      "contentType": "image/jpeg",
+      "sizeBytes": 82472
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362760322482962501973480.jpg",
+      "originalReference": "/chistory/cms/imgs/6362760322482962501973480.jpg",
+      "token": "migration-resource://88c0d93ac77fe728af79c17b0badb7bdd3e7f35d440e377e22c54ac111dece7f",
+      "snapshotPath": "assets/88c0d93ac77fe728af79c17b0badb7bdd3e7f35d440e377e22c54ac111dece7f.jpg",
+      "sha256": "88c0d93ac77fe728af79c17b0badb7bdd3e7f35d440e377e22c54ac111dece7f",
+      "contentType": "image/jpeg",
+      "sizeBytes": 49805
+    },
+    {
+      "role": "BODY_IMAGE",
+      "sourceUrl": "https://24365.jl.smartedu.cn/chistory/cms/imgs/6362760322640775005457792.jpg",
+      "originalReference": "/chistory/cms/imgs/6362760322640775005457792.jpg",
+      "token": "migration-resource://1a6e563166292af2cbe05dae76cb1e4edb3096fdcaac713385ee83b24116a487",
+      "snapshotPath": "assets/1a6e563166292af2cbe05dae76cb1e4edb3096fdcaac713385ee83b24116a487.jpg",
+      "sha256": "1a6e563166292af2cbe05dae76cb1e4edb3096fdcaac713385ee83b24116a487",
+      "contentType": "image/jpeg",
+      "sizeBytes": 45182
+    }
+  ],
+  "sourceFingerprint": "e3681f5c0d49b1cc519e593e120363a6b5a5a7649a17be9a3bec4a2887318003",
+  "evidence": {
+    "listPage": 23,
+    "listTitle": "关于举办SFBT焦点解决生涯辅导工作坊的通知",
+    "listPublishDate": "2017-03-10",
+    "sourceOrder": 224,
+    "detailPublishDate": "2017-03-10"
+  }
+}
