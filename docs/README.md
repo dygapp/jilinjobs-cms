@@ -54,9 +54,9 @@ Issue #60 当前状态：
 
 - **E1 Main External-link Ownership & Behavior Boundary**：Planning / Authority closure；Requirement / Specification READY；无 implementation Unit；
 - **E2 Main Single-page Formal Content**：**EU-49 COMPLETED**；Page operational-content ownership 与 site-neutral Generic Page migration foundation 已集成，Execute Authority已终止；
-- **E3 Main Historical Content Collection & Canonical Migration**：Requirement / Specification / Technical Plan READY；EU-50 accepted current Article snapshot 已完成并集成。
+- **E3 Main Historical Content Collection & Canonical Migration**：Requirement / Specification / Technical Plan READY；EU-50 accepted current Article snapshot 已完成并集成；EU-51 downstream Readiness 已在 integrated snapshot 上重新核验并取得 PASS。
 
-Current Ready Execution Unit：**NONE**。
+Current Ready Execution Unit：**EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review Closure**。
 
 EU-50：**COMPLETED / Execute Authority TERMINATED**。Completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`。
 
@@ -68,9 +68,11 @@ EU-50 integrated accepted current subset：
 - canonical dataset 位于 `data-migrations/main/v1/**`；
 - dataset digest：`sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`。
 
-Downstream Candidate：**EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review**。EU-50 dependency 已满足，但 EU-51 Readiness 仍为 **PENDING / NOT READY**；它只由 Technical Plan / Roadmap 跟踪，在 Readiness PASS 前不进入 `docs/work/current/`，也不具有 Execute Authority。
+EU-51：**READY / Readiness PASS**，Readiness baseline `main@fd192460cb481645c1f1af435cbe5451145797d9`。Current Work：`docs/work/current/eu51-main-canonical-import-runtime-review.md`。
 
-Main Page / stable ListItem source findings属于 JilinJobs Site Package handoff，保持独立 Planning Gate；它们不因 EU-50 completion 自动获得 Execute Authority。
+EU-51 Execute baseline 当前仍为 **PENDING**：必须先集成本 Planning/Readiness Authority，再由新的 Fresh Context 在 integrated `main` 上重新核验 Issue #60/#77、Open PR/Actions、E3 Authority、EU-51 Work、canonical manifest 与 base drift，才能建立独立 Execute baseline并开始 Runtime import。
+
+Main Page / stable ListItem source findings属于 JilinJobs Site Package handoff，保持独立 Planning Gate；它们不进入 EU-51，也不因 EU-51 Ready 自动获得 Execute Authority。
 
 Current planning authority：
 
@@ -95,7 +97,8 @@ E3 current Authority：
 - `docs/technical/main-historical-content-migration.md`
 - EU-50 completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`
 - accepted current canonical dataset：`data-migrations/main/v1/**`
+- EU-51 Current Work：`docs/work/current/eu51-main-canonical-import-runtime-review.md`
 
-下一自然 Gate 是从 integrated `main` Fresh Context 恢复 Issue #60 / #77、E3 Authority、EU-50 archived evidence 与 canonical dataset，重新判断 downstream dependency / Readiness。EU-50 completion 不自动提供 EU-51 Readiness PASS 或 Execute Authority；deferred problem Articles 保持后置单独处理。
+下一自然 Gate 是：**集成 EU-51 Planning/Readiness Authority → Fresh Context Execute-baseline recovery**。EU-51 Readiness PASS 不等于已经建立 Execute baseline；deferred problem Articles 保持后置单独处理。
 
 `data-migrations/**` 是 Historical Content Migration 的 current data/provenance workspace，不属于 documentation archive；“历史内容”不等于 `HISTORICAL_EVIDENCE`。

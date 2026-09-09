@@ -29,7 +29,7 @@ Fresh Context 按以下入口恢复，避免把历史执行记录当作当前 Au
 
 ## 当前 Gate
 
-Issue #92 Phase 0～Phase 3 已完成；E1 Main External-link Boundary 以 Planning / Authority closure 收口；E2 已通过 EU-49 完成 Page operational-content ownership 与 site-neutral Generic Page canonical migration foundation；E3 的第一段执行 EU-50 已完成 bounded Legacy Main source discovery、Article-only eligibility 与 accepted current Article subset promotion，并集成到 `main`。
+Issue #92 Phase 0～Phase 3 已完成；E1 Main External-link Boundary 以 Planning / Authority closure 收口；E2 已通过 EU-49 完成 Page operational-content ownership 与 site-neutral Generic Page canonical migration foundation；E3 的第一段执行 EU-50 已完成并集成 accepted current Article subset。基于 integrated snapshot 的 downstream dependency/readiness 已重新核验，EU-51 现在取得 Readiness PASS，但尚未建立 Execute baseline。
 
 ```text
 E1 Main External-link Ownership & Behavior Boundary
@@ -40,10 +40,10 @@ E2 Main Single-page Formal Content
         ↓
 E3 Main Historical Content Collection & Canonical Migration
    ├─ EU-50 Main Source Discovery & Accepted Snapshot Promotion
-   │    └─ COMPLETED / integrated accepted current Article subset
-   │         ↓ dependency satisfied
+   │    └─ COMPLETED / Execute Authority TERMINATED
+   │         ↓ accepted current Article subset integrated
    └─ EU-51 Main Canonical Import, Runtime Reconciliation & Human Review
-        └─ Candidate / Readiness PENDING；no Execute Authority
+        └─ READY / Readiness PASS；Execute baseline PENDING
 ```
 
 当前状态：
@@ -52,15 +52,17 @@ E3 Main Historical Content Collection & Canonical Migration
 - E2 / EU-49：**COMPLETED**；completed Work Evidence 位于 `docs/work/archive/eu49-page-content-migration-foundation.md`；
 - E3 Requirement / Specification / Technical Plan：**READY**；
 - EU-50：**COMPLETED**；PR #117 已集成，accepted current subset 为 3078 篇 Article（1577 INTERNAL + 1501 EXTERNAL_LINK），canonical resource 2603 files / 450,273,166 bytes，dataset digest 为 `sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`；
-- 6 篇 `SOURCE_RESOURCE_MISSING` Article 继续排除并等待客户确认；230 篇 problem Article 作为 durable deferred evidence 保留，**不属于当前 import input，也不阻断当前项目进程**；
+- 6 篇 `SOURCE_RESOURCE_MISSING` Article 继续排除并等待客户确认；230 篇 problem Article 作为 durable deferred evidence 保留，**不属于 EU-51 import input，也不阻断当前项目进程**；
 - EU-50 Execute Authority：**TERMINATED**；completed Work Evidence 位于 `docs/work/archive/eu50-main-source-discovery-promotion.md`；
-- **Current Ready Execution Unit：NONE**；
-- EU-51：**Candidate / NOT READY**；EU-50 accepted snapshot dependency 已满足，但必须从 integrated `main` 重新执行 downstream Readiness，不能继承 EU-50 Execute Authority；
-- Main Page / stable ListItem source findings 属于 JilinJobs Site Package follow-up，保持独立 Planning Gate，不因 EU-50 completion 自动进入 Execute；
+- **Current Ready Execution Unit：EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review Closure**；
+- EU-51 Readiness：**PASS**，baseline `main@fd192460cb481645c1f1af435cbe5451145797d9`；Current Work 位于 `docs/work/current/eu51-main-canonical-import-runtime-review.md`；
+- EU-51 Execute baseline：**PENDING**；本 Planning/Readiness 状态必须先集成，之后才由新的 Fresh Context 在 integrated `main` 上重新核验并建立独立 Execute baseline；
+- EU-51 只消费 repository-owned `data-migrations/main/v1/**`，Runtime 顺序必须显式保持 `Flyway → JilinJobs Site Package provisioning → Generic Main canonical import`；
+- Main Page / stable ListItem source findings 属于 JilinJobs Site Package follow-up，保持独立 Planning Gate，不进入 EU-51；
 - Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层长期边界；
 - Repository Split Readiness Assessment、C1/C2、Issue #57/#59 保持独立候选。
 
-下一自然 Gate 是 **Issue #60 / E3 的 Fresh Context downstream planning / readiness decision**：重新读取 integrated `main`、Issue #60/#77、E3 Authority、EU-50 archived evidence 与 current canonical dataset，在不处理 deferred problem Articles 的前提下判断 EU-51 与 Site Package follow-up 的依赖和 Readiness。只有新的 Execution Unit 通过 `readiness-check` 后才能建立 Execute Authority；不得因为 EU-50 已完成就直接进入 EU-51 Execute。
+下一自然 Gate 是：**先集成 EU-51 Planning/Readiness Authority；随后从 integrated `main` Fresh Context 建立 EU-51 独立 Execute baseline**。在该恢复完成前不得执行 Main Runtime import，也不得继承 EU-50、EU-49、EU-48、Phase 3 或 E1 的 Execute Authority。
 
 Current Main formal-content Authority：
 
@@ -75,7 +77,7 @@ Current Main formal-content Authority：
 - E3 Specification：`docs/specifications/main-historical-content-migration.md`；
 - E3 Technical Plan：`docs/technical/main-historical-content-migration.md`；
 - EU-50 Completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`；
-- EU-51 Candidate：由 E3 Technical Plan / Roadmap 跟踪；在 Readiness PASS 前不进入 `docs/work/current/`。
+- EU-51 Current Work：`docs/work/current/eu51-main-canonical-import-runtime-review.md`。
 
 Phase 2C accepted Authority：
 
