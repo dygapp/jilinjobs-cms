@@ -106,7 +106,8 @@ For current Main:
 - HTTP 404/410 alone may establish `SOURCE_RESOURCE_MISSING`;
 - INTERNAL Article with only that blocking class may be excluded pending client confirmation and must remain separately listed;
 - transport/socket/timeout is not inferred missing;
-- unsupported HTML/attributes/media/schemes/redirects and every new error class remain explicit human-review classifications unless Authority accepts another disposition;
+- unsupported HTML/attributes/media/schemes/redirects and every new error class remain explicit review classifications unless Authority accepts another disposition;
+- current Human Authority defers unresolved/problem Articles until later separate handling; they remain durable evidence, are not current import input, and do not block the current project sequence;
 - approved non-blocking exceptions remain recorded as evidence;
 - no silent repair/drop/discard.
 
@@ -142,14 +143,24 @@ Party was the first real Canonical Migration consumer and historically includes 
 
 Do not generalize Party list ownership into Main. Likewise, do not rewrite Party merely because Main now classifies stable list membership as Site Package content.
 
-## 11. Main EU-50 current gate
+## 11. Main current state after EU-50
 
-EU-50 owns:
+EU-50 is **COMPLETED** and its Execute Authority is **TERMINATED**.
 
-- Article source discovery/collection/retry;
-- Article-only eligibility/promotion;
-- source-defect client-confirmation list;
-- human-review Article error list;
+The integrated current Main canonical dataset under `main/v1/**` contains:
+
+- 3078 current import-eligible Articles = 1577 INTERNAL + 1501 EXTERNAL_LINK;
+- 2603 local resource files / 450,273,166 bytes;
+- dataset digest `sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`.
+
+Separately preserved evidence contains:
+
+- 6 source-defect Articles excluded pending client confirmation;
+- 230 deferred problem Articles for later separate review;
 - Page/List Site Package source handoff.
 
-EU-50 does not perform Runtime import and does not enter EU-51. The old mixed destructive Main triage path is retired because it could delete Page/List evidence and mix ownership domains.
+Those excluded/deferred records are not current import input. EU-50 did not perform Runtime Main import.
+
+Current Ready Execution Unit is **NONE**. EU-51 remains a Candidate whose accepted-snapshot dependency is satisfied but whose downstream `readiness-check` has not yet run after EU-50 integration. No Runtime import may start merely because the canonical dataset now exists. Main Page/List follow-up remains a separate Site Package Planning/Readiness path.
+
+The old mixed destructive Main triage path remains retired because it could delete Page/List evidence and mix ownership domains.

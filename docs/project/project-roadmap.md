@@ -21,14 +21,16 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | Issue #92 Phase 0～Phase 3 | **已完成 / CLOSED** | EU-43～EU-48 与 Phase 3 compatibility closure 完成；E1～E3 re-entry = PASS |
 | Issue #60 / E1 Main External-link Boundary | **Planning / Authority closure** | Requirement / Specification READY；current implementation audit 未发现独立 implementation gap；`slice-work = NO CANDIDATE EXECUTION UNIT` |
 | Issue #60 / E2 Main Single-page Formal Content | **COMPLETED** | EU-49 已关闭 Page operational-content ownership gap，并建立 site-neutral Generic Page canonical migration foundation |
-| Issue #60 / E3 / EU-50 Main Source Discovery & Accepted Snapshot Promotion | **READY after Planning/Readiness integration** | Technical Plan READY；`slice-work`完成；`readiness-check = PASS`；下一 Gate为 integrated main上的 Fresh Context Execute-baseline recovery |
-| Issue #60 / E3 / EU-51 Main Canonical Import, Runtime Reconciliation & Human Review | **Candidate / NOT READY** | blocked by EU-50 integrated accepted snapshot；无 Execute Authority |
-| Repository Split Readiness Assessment | deferred | 四层 boundary 已闭环，但 Assessment 仍独立后置；不自动拆仓，也不阻塞 E3 |
+| Issue #60 / E3 / EU-50 Main Source Discovery & Accepted Snapshot Promotion | **COMPLETED** | accepted current Article subset 已 repository-owned promotion 并集成；Execute Authority terminated |
+| Issue #60 / E3 / EU-51 Main Canonical Import, Runtime Reconciliation & Human Review | **Candidate / NOT READY** | EU-50 dependency 已满足；必须从 integrated snapshot 重新执行 downstream Readiness；无 Execute Authority |
+| Main Page / stable ListItem Site Package follow-up | **Planning Candidate** | EU-50 已形成 source handoff；Page content 与 stable ListItem capability/content 仍需独立 Site Package Planning / Readiness |
+| Deferred problem Article review | deferred | 230 篇 problem Article 与 6 篇 source-defect Article 保持独立 evidence / client-review backlog，不阻断当前路线 |
+| Repository Split Readiness Assessment | deferred | 四层 boundary 已闭环，但 Assessment 仍独立后置 |
 | Issues #57 / #59 / #60 其他候选 | 规划层保留 | C1/C2、Browser Compatibility、Public Rendering Architecture 等保持独立 |
 
-Current Ready Execution Unit：**EU-50**。
+Current Ready Execution Unit：**NONE**。
 
-EU-50 在本 Planning/Readiness branch 上尚未建立 Execute baseline；只有本状态集成后重新从 integrated `main`完成 Fresh Context revalidation，才能开始 Execute。
+EU-50 已完成 Integration 与 Post-Integration verification；其 Execute Authority 已终止。任何 downstream implementation 都必须重新经过 Planning / dependency closure / `slice-work` / `readiness-check`，不得继承 EU-50 Execute Authority。
 
 ## 当前已接受长期边界
 
@@ -53,7 +55,8 @@ sites/jilinjobs/
 - one-time bootstrap 不 overwrite / resurrect 后续 operator changes；
 - stable assets 使用 manifest integrity + create-if-missing projection + protected-path；
 - `/static/uploads/**` 与 historical canonical assets 不属于 stable Site asset ownership；
-- Page stable identity / required structure由 Site Package持有；EU-49 已完成 ownership transfer，使 ordinary reconcile 不再覆盖 existing Page 的 operator-managed `bodyHtml / renderMode / embedUrl`。
+- Page stable identity / required structure由 Site Package持有；EU-49 已完成 ownership transfer，使 ordinary reconcile 不再覆盖 existing Page 的 operator-managed `bodyHtml / renderMode / embedUrl`；
+- Main Page source handoff 与 stable Main ListItem membership 仍属于 Site Package 后续 Planning，不属于 Historical Migration fallback。
 
 ### 3. Historical Content Migration
 
@@ -62,7 +65,8 @@ sites/jilinjobs/
 - Canonical Dataset 依赖 stable Site identity，不依赖临时 Runtime DB id 或 Public Renderer internals；
 - Historical Migration implementation 位于独立 `backend/apps/content-migration` non-web application，只依赖 `cms-core`；
 - Generic Content Migration 已提供 site-neutral Article / ListItem / Page load、preflight、stable mapping、guarded apply、idempotency/conflict/report foundation；Main-specific source facts / policy不得进入 Generic capability；
-- Legacy Source只允许出现在显式 Collect / Discovery 边界；promoted canonical verification与Runtime import必须可离线执行。
+- Legacy Source只允许出现在显式 Collect / Discovery 边界；promoted canonical verification与Runtime import必须可离线执行；
+- Main current accepted Article subset 已 repository-owned 固化到 `data-migrations/main/v1/**`；deferred/problem Article evidence 与 current import input 分离。
 
 ### 4. Replaceable Public Renderer
 
@@ -76,6 +80,8 @@ sites/jilinjobs/
 Initial E1～E3 planning baseline：`main@f42bacf4ab7719e3291288c77f0685b428b86141`。
 
 E3 Planning/Readiness baseline：`main@e6fe7674398ad8c29fa7ff1d62eb500754a66cc8`。
+
+EU-50 integrated accepted snapshot baseline：`main@05dfa604ccde45c8409cf6a456e4f201534dc602`。
 
 ### E1 — Main External-link Ownership & Behavior Boundary
 
@@ -95,16 +101,7 @@ Current accepted contract：
 - `docs/technical/main-single-page-formal-content.md`
 - completed Work Evidence：`docs/work/archive/eu49-page-content-migration-foundation.md`
 
-EU-49 已完成：
-
-1. existing Page ordinary reconcile 不再覆盖 operator-owned content fields；
-2. Fresh Page provisioning保持 package defaults；
-3. Core 提供窄的 Page content-only update boundary；
-4. Generic Content Migration增加 stable Page target / mapping / guarded first apply / SKIP / CONFLICT / resource projection；
-5. append-only Generic Flyway V3增加 site-neutral Page migration mapping；
-6. Generic / Party / Site Package / Backend boundary / Repository CI regressions保持 PASS。
-
-Implementation integrated main：`18da735c654c1a5d1310fe6db7e8e98f6f7b0026`；Post-Integration CI #868 / run `34200526862` = **PASS**。Authority closure integrated main：`e6fe7674398ad8c29fa7ff1d62eb500754a66cc8`；Post-Integration CI #870 / run `34204439580` = **PASS**。EU-49 Execute Authority 已终止。
+EU-49 已完成 Page operational-content ownership、Generic Page canonical migration foundation 与 append-only V3 mapping。Implementation integrated main：`18da735c654c1a5d1310fe6db7e8e98f6f7b0026`；Authority closure integrated main：`e6fe7674398ad8c29fa7ff1d62eb500754a66cc8`。EU-49 Execute Authority 已终止。
 
 ### E3 — Main Historical Content Collection & Canonical Migration
 
@@ -114,43 +111,34 @@ Current Authority：
 - `docs/specifications/main-historical-content-migration.md`
 - `docs/technical/main-historical-content-migration.md`
 
-Fresh Context source recovery confirmed a current reachable Legacy Main source, mixed INTERNAL/external content, large pagination surfaces, formal Page content and resource-bearing shapes. Exact source observations remain discovery evidence rather than accepted dataset totals.
+#### EU-50 — Main Source Discovery & Accepted Snapshot Promotion — COMPLETED
 
-Current capability/dependency audit confirmed:
+Completed Work Evidence：
 
-- stable Main Column aliases already exist in Site Package;
-- `HOME_CAROUSEL` and Main `SITE_LINKS` list targets exist;
-- stable Main Page identities exist;
-- Generic Content Migration supports Article / ListItem / Page through `generic-content`;
-- no Main-specific Runtime importer is justified by current evidence.
+`docs/work/archive/eu50-main-source-discovery-promotion.md`
 
-The real external-source versus offline-runtime boundary requires two Units.
+Accepted integrated result：
 
-#### EU-50 — Main Source Discovery & Accepted Snapshot Promotion
+- PR #117 squash merged to `main@05dfa604ccde45c8409cf6a456e4f201534dc602`；
+- 3314 Article candidates闭合为 `3078 current import eligible + 6 source defect excluded + 230 deferred problem`；
+- current accepted subset：3078 Articles = 1577 INTERNAL + 1501 EXTERNAL_LINK；
+- current accepted resources：2603 files / 450,273,166 bytes；
+- dataset digest：`sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`；
+- canonical root：`data-migrations/main/v1/**`；
+- Page/List source findings preserved as Site Package handoff；
+- 6 source-defect Articles 与 230 deferred problem Articles均不进入 current canonical/import input；
+- no Runtime Main import / EU-51 execution occurred；
+- Execute Authority：**TERMINATED**。
 
-Current Work Authority：
+Final PR Head `8c2fdd6cdbbd4d1faf865d0ba4ca0f40a0096e84` exact-head evidence：EU-50 Source Discovery #64、EU-50 Import Eligibility #30、Canonical Migration #256、Generic Content Migration #51、EU-30 Upgrade #206、CI #944、Review Environment #830 均 **PASS**。
 
-`docs/work/current/eu50-main-source-discovery-promotion.md`
-
-Scope：
-
-- bounded current Legacy Source discovery/collection；
-- complete known-surface/pagination reconciliation；
-- E1/E2 classification；
-- resource collection/digest evidence；
-- accepted snapshot promotion under `data-migrations/main/v1/**`；
-- durable provenance/completeness reports；
-- stable offline verification。
-
-`readiness-check = PASS`。
-
-EU-50 does **not** include Runtime product import or final Human Review. The current planning branch does not establish Execute baseline; after Planning/Readiness integration a Fresh Context must revalidate base drift and current Authority before Execute.
+Integrated main evidence：Generic Content Migration #52 / run `34354290017` = **PASS**；CI #945 / run `34354289981` = **PASS**，包含 Backend / Admin / Public / Integrated Browser。
 
 #### EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review
 
-EU-51 is a stable downstream Candidate formed by `slice-work` and tracked by this Roadmap plus the E3 Technical Plan. Since Readiness is still PENDING / BLOCKED, no `docs/work/current/` artifact exists for EU-51 yet.
+EU-51 仍是 stable downstream Candidate，由本 Roadmap 与 E3 Technical Plan 跟踪。EU-50 accepted snapshot dependency 已满足，但这只允许重新执行 Readiness，不自动授予 Ready / Execute Authority。
 
-Scope after dependency closure：
+Potential scope after fresh readiness：
 
 - Fresh Generic import from accepted Main canonical dataset；
 - second-run idempotency / conflict / tamper evidence；
@@ -159,24 +147,32 @@ Scope after dependency closure：
 - representative/high-risk and exceptional-classification Human Review；
 - final E3 closure。
 
-`readiness-check = PENDING / BLOCKED` until EU-50 integrates the exact accepted identities/counts/digests/resources/exception set. EU-50 completion does not automatically grant EU-51 Ready or Execute Authority。
+当前 `readiness-check = PENDING / NOT RUN after EU-50 integration`。在新的 Fresh Context dependency/readiness decision 前，EU-51 不进入 `docs/work/current/`，不执行 Runtime import。
+
+#### Site Package Page/List follow-up
+
+EU-50 source handoff 已证明 Page/List 属于独立产品 ownership：
+
+- accepted Page source content/resource projection 需在 Site Package Authority 下规划；
+- stable Main ListItem membership 仍缺少 package stable identity / reconcile / adoption semantics；
+- 该路径与 EU-51 并行但相互不继承 Execute Authority。
 
 ## 当前 Next Gate
 
-**EU-50 Fresh Context Execute-baseline recovery after Planning/Readiness integration**。
+**Issue #60 / E3 Fresh Context downstream planning / readiness decision after EU-50 integration**。
 
-新的 Execute 会话至少：
+新的会话至少：
 
 1. 重新确认 integrated `main`、Open PR / Issue 与最近相关 Actions；
 2. 完整读取 `AGENTS.md`、Root `README.md`、`docs/README.md`；
 3. 读取本 Roadmap 与 `docs/project/development-method.md`；
 4. 读取 Issue #60、Issue #77；
 5. 完整读取 E3 Requirement / Specification / Technical Plan；
-6. 完整读取 `docs/work/current/eu50-main-source-discovery-promotion.md`；
-7. 重新核验当前 source reachability、Planning integration result与 base drift；
-8. 只有 EU-50 Authority仍有效且无 blocker 时，才建立新的 Execute baseline并开始 collection/promotion。
+6. 按需读取 `docs/work/archive/eu50-main-source-discovery-promotion.md` 与 `data-migrations/main/v1/manifest.json` / reports；
+7. 确认 230 deferred problem Articles 与 6 source-defect Articles仍保持后置、非 current import input；
+8. 重新判断 EU-51 与 Site Package follow-up 的 dependency closure / `slice-work` / `readiness-check`。
 
-不得继承 EU-49、EU-48、Phase 3 或 E1 的 Execute Authority。EU-51在EU-50 accepted snapshot integration前继续保持 Candidate / NOT READY。
+Current Ready Execution Unit：**NONE**。不得继承 EU-50、EU-49、EU-48、Phase 3 或 E1 的 Execute Authority，也不得因为 EU-50 integrated snapshot存在就直接开始 EU-51 Runtime import。
 
 ## 其他开放方向
 
@@ -187,7 +183,7 @@ Scope after dependency closure：
 - Issue #60 C2：Mobile Layout Human Review Candidate；
 - Repository Split Readiness Assessment：deferred / independent。
 
-上述候选均不阻塞EU-50，也不从任何已完成 Unit继承 Execute Authority。
+上述候选均不从任何已完成 Unit继承 Execute Authority。
 
 ## 历史收敛追溯
 
@@ -195,5 +191,6 @@ Scope after dependency closure：
 - Phase 1 Documentation Authority：EU-43 / EU-44 / EU-45 archive records；
 - Backend / Migration foundation：EU-46 / EU-47 / EU-48 archive records；
 - E2 Page migration foundation：EU-49 archive record；
+- E3 source discovery / accepted Article snapshot：EU-50 archive record + `data-migrations/main/v1/**`；
 - Party canonical migration：对应 `data-migrations/party/**`、PR / Actions / Issue Current Evidence；
 - 详细 historical implementation / verification 不在本 Roadmap 重复维护。
