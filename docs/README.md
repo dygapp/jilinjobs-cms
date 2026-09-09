@@ -54,11 +54,23 @@ Issue #60 当前状态：
 
 - **E1 Main External-link Ownership & Behavior Boundary**：Planning / Authority closure；Requirement / Specification READY；无 implementation Unit；
 - **E2 Main Single-page Formal Content**：**EU-49 COMPLETED**；Page operational-content ownership 与 site-neutral Generic Page migration foundation 已集成，Execute Authority已终止；
-- **E3 Main Historical Content Collection & Canonical Migration**：Requirement / Specification / Technical Plan READY；Fresh Context source recovery、`slice-work`与当前 Readiness已完成。
+- **E3 Main Historical Content Collection & Canonical Migration**：Requirement / Specification / Technical Plan READY；EU-50 accepted current Article snapshot 已完成并集成。
 
-Current Ready Execution Unit：**EU-50 — Main Source Discovery & Accepted Snapshot Promotion**。
+Current Ready Execution Unit：**NONE**。
 
-Downstream Candidate：**EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review**，Readiness **PENDING / blocked by EU-50 accepted snapshot**。由于尚未通过 Readiness，EU-51 只由 Technical Plan / Roadmap 跟踪，不进入 `docs/work/current/`。
+EU-50：**COMPLETED / Execute Authority TERMINATED**。Completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`。
+
+EU-50 integrated accepted current subset：
+
+- 3078 篇 current import-eligible Article；
+- 6 篇 source-defect Article 单独排除并等待客户确认；
+- 230 篇 problem Article 作为 durable deferred evidence 保留，不属于当前 import input，也不阻断当前进程；
+- canonical dataset 位于 `data-migrations/main/v1/**`；
+- dataset digest：`sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`。
+
+Downstream Candidate：**EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review**。EU-50 dependency 已满足，但 EU-51 Readiness 仍为 **PENDING / NOT READY**；它只由 Technical Plan / Roadmap 跟踪，在 Readiness PASS 前不进入 `docs/work/current/`，也不具有 Execute Authority。
+
+Main Page / stable ListItem source findings属于 JilinJobs Site Package handoff，保持独立 Planning Gate；它们不因 EU-50 completion 自动获得 Execute Authority。
 
 Current planning authority：
 
@@ -81,10 +93,9 @@ E3 current Authority：
 - `docs/requirements/main-historical-content-migration.md`
 - `docs/specifications/main-historical-content-migration.md`
 - `docs/technical/main-historical-content-migration.md`
-- `docs/work/current/eu50-main-source-discovery-promotion.md`
+- EU-50 completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`
+- accepted current canonical dataset：`data-migrations/main/v1/**`
 
-EU-50 current Readiness只授权在其 Planning/Readiness状态集成后进入 **Fresh Context Execute-baseline recovery**，并不在 planning branch上直接建立 Execute baseline。新的 Execute context必须重新核验 integrated `main`、Issue #60/#77、Open PR/Actions、E3 Authority、EU-50 Current Work、source reachability与base drift；无 blocker 后才能开始 Main source collection / canonical promotion。
-
-EU-51在EU-50 accepted snapshot集成前不得进入 Execute。EU-50 completion只满足其依赖，不自动提供Readiness PASS或Execute Authority。
+下一自然 Gate 是从 integrated `main` Fresh Context 恢复 Issue #60 / #77、E3 Authority、EU-50 archived evidence 与 canonical dataset，重新判断 downstream dependency / Readiness。EU-50 completion 不自动提供 EU-51 Readiness PASS 或 Execute Authority；deferred problem Articles 保持后置单独处理。
 
 `data-migrations/**` 是 Historical Content Migration 的 current data/provenance workspace，不属于 documentation archive；“历史内容”不等于 `HISTORICAL_EVIDENCE`。
