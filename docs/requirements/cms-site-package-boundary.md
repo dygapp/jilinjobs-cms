@@ -3,132 +3,150 @@
 ## Status
 
 - Candidate source: GitHub Issue #77
-- Stage: Requirement Authority — ACTIVE / ACCEPTED BOUNDARY
-- Completed implementation: EU-37 / EU-38 / EU-39 / EU-40 / EU-41 / EU-42
-- Cross-boundary convergence: Issue #92 Phase 0～Phase 3 **COMPLETED / E1～E3 RE-ENTRY PASS**
-- Repository Documentation Authority Convergence: **PHASE 1 COMPLETED（EU-43 / EU-44 / EU-45）**
-- Backend / Migration convergence: **Phase 2A EU-46 / Phase 2B EU-47 / Phase 2C EU-48 COMPLETED**
-- Current Ready Execution Unit: **NONE**
-- Next product planning Gate: **Issue #60 / E1～E3 Planning / Requirement Candidates**
-- Scope: E1～E3 前置的 CMS 通用化、站点实例数据所有权与 Public Renderer 可替换边界
+- Stage: **Requirement Authority — ACTIVE / ACCEPTED BOUNDARY**
+- Foundation completed: EU-37～EU-42
+- Repository / migration convergence completed: EU-43～EU-48 + Issue #92 Phase 3 PASS
+- Current Main ownership correction: **Page + stable Main ListItem belong to JilinJobs Site Package**
+- Current Site Package capability gap: **stable ListItem identity / provisioning / reconcile**
 
-## Intent
+## 1. Four-layer authority
 
-在继续 Issue #60 / E1～E3 主站正式内容建设前，项目需要先把当前“CMS 能力”与“吉林就业网站实例”从长期责任上分离。
-
-目标不是为了目录形式而搬文件，也不是立即拆分 Git Repository，而是让以下四类长期事实具有清晰且可独立演进的 Authority：
-
-1. **Generic CMS Core**：可复用的 CMS 数据模型、Schema、Backend Domain、Admin / Public API、Admin UI、`preset` 等通用能力；
-2. **JilinJobs Site Package / Provisioning**：吉林就业网站自身的稳定栏目、导航、Page/PageGroup、List / Advertisement Slot 定义、Site Config 实例值、Fresh Site 初始运营默认数据及稳定站点资源；
-3. **Historical Content Migration**：Main / Party 历史文章、外链、正文资源、附件、历史运营列表成员等 Canonical Migration Dataset；
-4. **Replaceable Public Renderer**：当前 Vue/Vite Public Site 只是稳定 `/api/public/**`、公开 URL 和 Site 数据契约的一个呈现实现，未来可以由其他技术栈替换。
-
-该边界应保证未来增加 Main Site 正式内容时，新增内容进入正确的数据 / Site Authority，而不是继续扩大 CMS Core 对吉林就业网站实例的内建假设。
-
-## Requirements
-
-### 1. Generic CMS Core
-
-1. CMS Core 的 Schema、Backend Domain、Admin 能力和 Public API 不应要求某个具体站点必须存在 `notice`、`party`、`guide`、`MAIN`、`HOME_CAROUSEL` 或吉林就业相关配置值才能成立。
-2. `preset` 继续作为通用 CMS 能力保留：它表达“由当前 Site Provisioning 建立并受稳定身份 / 删除保护的结构对象”，而不是“吉林就业专属”能力。
-3. Backend Flyway **只承担 Generic CMS Schema evolution 与真正通用的数据库级能力**；具体站点的栏目名称、导航树、联系方式、备案号、具体外链、运营默认数据或视觉资源路径不得占用 / 参与 Backend migration lineage。
-4. CMS Core 仍可以提供 Site Provisioning 所需的通用导入、校验、稳定 identity、保护、查询和一次性 bootstrap-state 等能力；这些能力必须 site-neutral，不得内建 JilinJobs package identity 或实例值。
-5. Backend Schema migration numbering 必须可以独立演进；Site Package 不得依赖“必须位于 Backend V1 与 V3 之间”等 migration-order contract。
-
-### 2. JilinJobs Site Package / Provisioning
-
-1. 历史 `V2__current_preset_data.sql` 中属于吉林就业网站实例的责任已经退出 Backend Flyway；Current Authority 由独立 Site Package / Provisioning 承载。旧 V2 仅作为 historical implementation / compatibility evidence 保留，不得恢复为 current runtime responsibility。
-2. Site Package 至少能够表达当前站点所需的稳定结构 identity、父子 / 引用关系、默认运营字段、`preset` 身份及必要站点配置值。
-3. 稳定视觉资源归属于具体 Site，而不是 Vue Renderer 或通用 CMS Domain；EU-42 已将其唯一版本化 source owner 收敛为 `sites/jilinjobs/assets/**`，公开 `/static/**` target URL 保持不变。
-4. Site Provisioning 必须可在 Fresh Database 上重复、可验证地恢复当前正式站点稳定结构，并需要定义幂等 / 升级 / 冲突策略，不能依赖一次性人工 SQL 操作。
-5. Site Package 应与 Runtime 运营数据区分：管理员后续创建的普通对象、文章、列表成员、展示内容等不因 Site Package 存在而自动变成版本化 preset。
-6. **Fresh Site 初始运营默认数据属于 Site bootstrap，不属于 Backend Flyway migration，也不属于长期 stable-structure reconcile。** Bootstrap artifact 应面向当前 CMS Schema 维护，不建立与 Backend migration number 对应的 V1/V2/V3 序列。
-7. Site bootstrap 必须具有明确的一次性安装语义：完成后相关 `CmsListItem` / `Advertisement` 成为普通 operator-managed Runtime Data；管理员修改不得被后续 reconcile 覆盖，管理员删除不得被后续启动或显式重复 bootstrap resurrect。
-8. 一次性状态应通过 Generic CMS 提供的 site-neutral bootstrap-state capability 记录，而不是借用 `flyway_schema_history`；Site Package 与 CMS 的依赖应表达为 Schema / Provisioning capability compatibility，而不是共享迁移顺序。
-9. 当前 stable Site structure、one-time bootstrap 与 stable Site assets 的版本化 owner 分别为 `sites/jilinjobs/structure/**`、`sites/jilinjobs/bootstrap/**`、`sites/jilinjobs/assets/**`；三者可以共享 Site Package root，但 lifecycle / overwrite semantics 不得混同。
-
-### 3. Historical Content Migration
-
-1. `data-migrations/**` 继续只承担历史运营内容迁移，不机械接收栏目、导航、PageGroup、Site Config 定义、Fresh Site 普通默认运营数据或 stable Site asset source ownership。
-2. Main / Party Canonical Migration Dataset 应引用稳定 Site identity（例如栏目 alias、list code），不得依赖临时 Runtime 数据库 ID 或当前 Vue 组件 / Router 内部实现。
-3. 更换 Public Renderer 不得要求重新迁移已经接受的 Canonical Content，仅因为框架、构建产物或组件结构发生变化。
-4. Fresh Site bootstrap 与 Historical Canonical Migration 必须是不同 lifecycle：前者建立当前站点的初始普通运营默认值，后者承载具有 provenance / fingerprint / source evidence 的历史内容迁移。
-5. Historical article/body/attachment/list-member assets 继续随 Canonical Migration unit 管理，不进入 `sites/jilinjobs/assets/**` stable Site asset manifest。
-
-### 4. Replaceable Public Renderer
-
-1. EU-36 已接受的 Public source ownership / `/api/public/**` / managed Resource projection 边界继续有效。
-2. 当前 `frontend/public-site` 可以继续作为实现模块，但不得成为 Site Definition、Canonical Migration 或 CMS Domain Authority。
-3. Public Renderer 可以依赖稳定公开 API、公开 URL、站点数据和站点静态资源；不得要求 Admin API、Flyway 中的站点 SQL 形状或 Vue/Vite 内部结构成为长期内容契约。
-4. Main / Party 的产品 identity、Canonical URL、主题和已接受 Public behavior 必须在本次边界收敛中保持不变。
-
-### 5. Integration / Verification
-
-1. Fresh Runtime 验证需要能够证明：Generic CMS Core → JilinJobs stable Site Provisioning → one-time Site bootstrap → stable asset projection 可以恢复当前正式 Fresh Site 状态，再按场景叠加 Party / Main Canonical Migration 后得到预期 Runtime 数据。
-2. Generic CMS-only Fresh Database 必须可独立成立且不包含任何 JilinJobs Site instance rows。
-3. Site bootstrap 必须证明 first apply、repeated apply、ordinary restart、operator mutation/deletion 后 no-overwrite / no-resurrection。
-4. stable Site asset projection 必须从 `sites/jilinjobs/assets/**` manifest 校验 source/target/digest，并证明 create-if-missing、protected-path 与 `/static/uploads/**` exclusion。
-5. 迁移站点 baseline 所产生的最终状态必须与当前已接受 `main` 行为对账；不得把“数据所有权移动”扩大为用户可见产品改版。
-6. CI / Review Environment 可以继续由当前单 Repository 编排；是否跨 Repository 组合属于后续独立架构决策。
-
-## Current Evidence
-
-当前 Repository 已取得以下阶段性证据：
-
-- EU-36 已让 Public production source 退出 `/api/admin/**` endpoint knowledge，并明确 Public Renderer 是可替换实现；
-- `frontend/public-site` 已有独立 package、build 和 Browser Tests；
-- EU-37 已建立 Site Package v1 manifest/schema、narrow provisioner、Fresh V1 Generic Schema MySQL proof、second apply idempotency 与 ownership conflict contract；
-- EU-38 已将 Column、PageGroup、Page、NavigationLocation、SiteConfig、CmsList definition、AdvertisementSlot 七类具有 stable identity 的 JilinJobs preset structure 表达进 `sites/jilinjobs/**`；
-- EU-39 已为 NavigationItem 引入 provisioning-only nullable stable `code`，把当前 40 条正式 preset NavigationItem 表达为 `sites/jilinjobs/structure/navigation-items.json` 并完成 Legacy adoption / stable-code reconcile 过渡；
-- EU-40 已把 Site Package reconcile 激活为 `cms.site-package.root` opt-in Spring lifecycle，并让 Repository Runtime、Canonical / Upgrade importer 与 Review Environment 显式消费同一 JilinJobs Site Package；
-- EU-40 后 audit 已确认原 V2 剩余 6 条 `CmsListItem` + 1 条 `Advertisement` 是 **initial operational defaults**：属于 Fresh JilinJobs site 初始状态，但初始化后由运营管理，不是 stable preset structure，也不是 Historical Canonical Migration；
-- EU-41 已完成 Generic Schema-only Flyway lineage + current-schema one-time Site bootstrap：Backend active Flyway 为 `V1__current_cms_schema.sql` + `V2__site_provisioning_schema_capabilities.sql`，旧 `V2__current_preset_data.sql` / development V3 已退出 active lineage；
-- 七条 initial operational defaults 已进入 `sites/jilinjobs/bootstrap/**`，由 `cms_site_bootstrap_state` 提供一次性 completion state；targeted real-MySQL evidence 已证明 repeat guard 与 no-overwrite / no-resurrection；
-- Canonical / Upgrade / Review evidence 已证明 183 篇 Party current canonical Runtime Dataset、4 条 accepted carousel、幂等导入与 EU-29→EU-30 upgrade compatibility 在新 lifecycle 下保持独立兼容；
-- EU-42 已将原 `site-baseline/static/**` 中 31 个稳定 Site assets 迁入 `sites/jilinjobs/assets/**`，并建立 package identity + source/target + SHA-256 integrity manifest、create-if-missing Runtime projection、StaticResource protected-path 与 `/static/uploads/**` exclusion；原目录只属于历史迁移来源描述，不再是 current source authority；
-- EU-37～EU-42 均已完成对应 exact-head、Integration 与 Post-Integration Current Evidence；当前 Roadmap / Issue #92 承担后续 Phase 顺序，不从本 Requirement 的历史 EU 编号推导 Execute Authority；
-- Issue #92 Phase 1 Repository Documentation Authority Convergence（EU-43 / EU-44 / EU-45）已完成物理 IA / archive 收敛；其 Integration 与 Post-Integration Evidence 由 EU-45 work record、PR / Actions 与 Issue #92 承担；
-- Phase 2A / EU-46 已建立 `cms-server` / `content-migration` → `cms-core` application boundary；Phase 2B / EU-47 已建立 site-neutral Generic Content Migration capability；Phase 2C / EU-48 已将 Party 收敛为 bounded compatibility authority + Generic Engine real consumer；
-- Phase 3 已基于 integrated EU-48 boundary 完成 Generic Schema → Site Package → bootstrap → Generic Migration → Party canonical/compatibility → Runtime → Replaceable Public Renderer 全链路 compatibility closure，并取得 E1～E3 re-entry PASS；未发现需要新增 Phase 3 implementation Unit 的 gap；
-- `data-migrations/README.md` 已明确 Historical Content Migration 与 Generic Flyway / Site Package stable structure/bootstrap/assets 分离，并规定后续 Main historical migration默认复用同一 canonical organization。
-
-## Non-goals / Deferred
-
-本 Requirement 当前明确不做：
-
-- 不选择新的 Public Frontend 技术栈；
-- 不重写 Vue Public Site；
-- 不改变 ADR-0002 的当前 Multi-entry SPA 决策；
-- 不为了形式统一做全仓库目录大搬迁；
-- 不预设必须拆成多个 Git Repository；
-- 不立即引入 Git Submodule；
-- 不把文档、CMS Core、Site Package、Public Renderer 机械拆成独立 Repository；
-- 不把 Site Provisioning 或 Fresh Site bootstrap 错误并入 Historical Content Migration；
-- 不为 Site bootstrap 创建独立 migration version sequence；
-- 不在本 Requirement 中执行 Issue #60 / E1、E2、E3 的正式内容建设；
-- 不顺带处理 C1 / C2、Browser Compatibility 或 Issue #57 的 Public Rendering Architecture 讨论；
-- 不在没有第二个真实 Site / Renderer Consumer 证据时引入过度通用的插件框架、部署框架或多站点产品模型。
-
-## Current Follow-up Direction
-
-EU-37～EU-42 已关闭 Site Package Foundation、stable structure、Navigation stable identity / reconcile、explicit Runtime composition activation、Site bootstrap / Generic Schema baseline separation 与 stable Site asset ownership / Runtime projection。Issue #92 Phase 1～Phase 2C 已进一步完成 Documentation Authority、Backend Application/Core、Generic Content Migration 与 Party de-specialization；Phase 3 compatibility / E1～E3 re-entry 现已 **PASS**。当前没有 Ready / executing Execution Unit。
-
-当前跨边界前置路线已经闭环：
+The long-term boundary is:
 
 ```text
-Phase 2A  Backend Application / Core Boundary — COMPLETED
-               ↓
-Phase 2B  Generic Content Migration Application — COMPLETED
-               ↓
-Phase 2C  Party Migration De-specialization & Compatibility — COMPLETED
-               ↓
-Phase 3   Canonical Migration Compatibility & E1～E3 Re-entry — PASS
-               ↓
-Issue #60 / E1～E3 — Planning / Requirement Candidates
+Generic CMS Core
+        ↓ generic schema/domain/API/provisioning capability
+JilinJobs Site Package
+        ↓ stable site structure + stable site content + install/bootstrap + stable assets
+Historical Content Migration
+        ↓ historical Article/canonical provenance content
+Runtime CMS Data
+        ↓ public contracts
+Replaceable Public Renderer
 ```
 
-Phase 3 PASS只解除 E1～E3 的前置 planning block，不把 E1/E2/E3 自动提升为 Ready Specification、Execution Unit 或 Execute Authority。后续 Main formal content候选仍必须按 Consumer-local Method从 Intent / Requirement、Specification、必要 Technical Planning、`slice-work → readiness-check` 独立形成 Ready Unit。
+Logical/lifecycle ownership takes precedence over the fact that all layers currently live in one Git repository.
 
-Repository Split Readiness Assessment 继续保持后置独立 Planning Candidate；四层 boundary已完整闭环，因此可在未来独立评估，但不自动拆仓，也不默认阻塞 E1～E3。
+## 2. Generic CMS Core requirements
 
-上述后续候选不继承 EU-37～EU-48 的历史 Execute Authority；Issue #77继续作为四层长期架构 Authority。
+Generic CMS Core owns:
+
+- site-neutral database schema and Flyway evolution;
+- Article/Page/Navigation/List/Advertisement/SiteConfig/Resource domain capabilities;
+- Admin/Public APIs and Generic migration/provisioning primitives;
+- stable identity/reconcile mechanisms that are genuinely reusable;
+- site-neutral bootstrap completion-state capability.
+
+Generic Core must not hardcode JilinJobs aliases, list codes, navigation labels, Page text, URLs, contacts or site asset values.
+
+If stable ListItem support is added, its schema/identity/reconcile mechanics must be generic. JilinJobs-specific membership values remain Site Package data.
+
+## 3. JilinJobs Site Package requirements
+
+`sites/jilinjobs/**` is the versioned authority for the JilinJobs site product definition.
+
+### 3.1 Stable structure and content
+
+Site Package owns at least:
+
+- Columns;
+- PageGroups and Pages, including accepted stable Page content/body defaults;
+- NavigationLocations / NavigationItems;
+- CmsList definitions;
+- **stable Main ListItem membership**;
+- AdvertisementSlots and any stable site placement content explicitly accepted as product definition;
+- SiteConfig values;
+- stable site assets;
+- package identity/version/integrity metadata.
+
+Stable objects/content must use repository-owned identities rather than Runtime numeric IDs and must have explicit reconcile/ownership semantics.
+
+### 3.2 Page
+
+Current Site Package v1 already supports stable `Page` identity and `bodyHtml`/render configuration through `sites/jilinjobs/structure/pages.json`. Main Legacy Page source content must therefore converge into Site Package authority rather than Historical Migration.
+
+Operator-edit/reconcile semantics accepted by EU-49 remain relevant implementation constraints; a later Page-content update must respect the current ownership guard rather than blindly overwrite operator content.
+
+### 3.3 Main stable ListItem
+
+Current product authority now classifies Main homepage/site-link ListItem membership as stable Site Package content.
+
+Current implementation does **not** yet satisfy this requirement:
+
+- Site Package v1 supports stable `lists` definitions but no `list-items` structure type;
+- `cms_list_item` has no package stable identity/preset ownership contract;
+- current Main bootstrap ListItems are one-time ordinary Runtime defaults and are not reconciled.
+
+A separately authorized Site Package Unit must define stable ListItem identity, representation, adoption/reconcile, operator mutation and upgrade/idempotency behavior before Main stable ListItem content can be considered fully provisioned.
+
+## 4. Bootstrap requirements
+
+One-time bootstrap remains valid for **truly initial ordinary operator data** that is not stable Site Package content.
+
+Historical EU-41 evidence showed six Main ListItems + one Advertisement as one-time defaults. That was correct for the then-current boundary. The latest Main ownership decision supersedes that classification **for stable Main ListItem membership**.
+
+The existing bootstrap implementation must not be silently reinterpreted as stable reconcile. Any transition of current ListItems out of bootstrap requires explicit Site Package planning and compatibility evidence.
+
+## 5. Historical Content Migration requirements
+
+`data-migrations/**` owns historical content that requires source provenance/fingerprint/import lifecycle.
+
+For **Main E3**, current migration ownership is Article-only:
+
+- INTERNAL Articles;
+- EXTERNAL_LINK Articles;
+- Article body images/attachments and migration evidence.
+
+Main Page content and stable Main ListItem membership are not Historical Migration input. Legacy Source discovery may preserve them as Site Package handoff evidence.
+
+Party or another scope may retain historical ListItem canonical data where its accepted authority explicitly requires that lifecycle; the Main correction does not retroactively rewrite accepted Party history.
+
+## 6. Stable assets
+
+Stable Site assets remain owned by `sites/jilinjobs/assets/**` with package identity, target path and digest integrity. Runtime uploads remain separate mutable storage.
+
+Historical Article resources remain with the Article migration unit unless a separate product decision promotes an asset into stable Site ownership.
+
+## 7. Replaceable Public Renderer
+
+The current Vue public site is an implementation, not Site Authority.
+
+Renderer replacement must be possible against stable public API/resource/site-data contracts without redefining Site Package or replaying Historical Migration merely because frontend technology changes.
+
+## 8. Verification requirements
+
+The repository must be able to prove:
+
+1. Generic schema contains no JilinJobs instance rows before Site Package composition;
+2. stable Site Package structure can be loaded/reconciled idempotently;
+3. Page content ownership follows current Site Package + operator-guard semantics;
+4. any future stable ListItem capability has deterministic identity/reconcile/adoption verification;
+5. one-time bootstrap does not overwrite/resurrect ordinary operator data;
+6. stable Site assets pass source/target/digest verification;
+7. Historical Main migration imports Articles only under current E3 authority;
+8. Page/List source evidence is handed off without silent loss;
+9. Public Renderer remains replaceable through stable contracts.
+
+## 9. Current planning finding
+
+The current gap is not a reason to keep ListItems in migration. It is a real **Site Package capability gap** that must be planned from Issue #77/current Repository Authority before implementation.
+
+Required future decisions include:
+
+- stable ListItem identity;
+- package schema/manifest type;
+- list-code relationship;
+- operator ownership/conflict policy;
+- bootstrap-to-stable adoption/compatibility;
+- reconcile ordering/idempotency;
+- Fresh/Existing Site verification.
+
+No existing EU Execute Authority is implicitly extended by this finding.
+
+## 10. Non-goals
+
+- no speculative multi-site framework;
+- no forced repository split;
+- no new Public frontend technology choice;
+- no Page/List fallback into Historical Migration merely because Generic migration supports those Runtime mutations;
+- no stable ListItem implementation without a separate ready Unit.

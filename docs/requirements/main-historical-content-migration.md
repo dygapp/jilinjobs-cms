@@ -4,155 +4,172 @@
 
 - Parent Planning Authority: GitHub Issue #60 / E3
 - Planning Authority: `docs/project/main-site-formal-content-plan.md`
-- Upstream: E1 external-link boundary; E2 Page formal-content boundary
-- Initial planning baseline: `main@f42bacf4ab7719e3291288c77f0685b428b86141`
-- Current E3 planning baseline: `main@e6fe7674398ad8c29fa7ff1d62eb500754a66cc8`
-- Requirement: **READY**
+- Requirement: **READY / ACTIVE**
 - Specification: **READY**
-- Technical Plan: **READY** — `docs/technical/main-historical-content-migration.md`
-- Current Ready Execution Unit: **EU-50**
-- Downstream Candidate: **EU-51 / Readiness PENDING on EU-50 accepted snapshot**
+- Technical Plan: **READY**
+- Current Execution Unit: **EU-50**
+- EU-51: **BLOCKED**
+- Current migration scope: **ARTICLE ONLY**
+- Ownership correction: **Main Page and stable ListItem content belong to JilinJobs Site Package**
 
 ## 1. Intent
 
-E3 将 Main 原站仍属于当前产品范围的历史运营内容与正式固定页内容，从 Legacy Source 发现、收集、规范化并晋升为 Consumer-owned Canonical Migration Dataset，再通过 Generic Content Migration进入CMS Runtime。
+E3 collects and promotes Main historical **Article** content from the current Legacy Source into a Consumer-owned, offline-verifiable Canonical Migration Dataset.
 
-E3不是一次性网页抓取脚本任务。长期结果必须是repository-owned canonical data / evidence / verifier；Legacy Source只在 discovery / collection 阶段使用，Stable CI与Runtime import不得重新依赖外网。
+E3 is not the ownership home for Main Page content or stable Main ListItem membership. EU-50 may discover those source surfaces because the same Legacy Source exposes them, but their output is Site Package source handoff evidence rather than Historical Migration input.
 
 ## 2. Source boundary
 
-Current Requirement authority把 `www.jilinjobs.cn` 及其当前指向的原站内容源作为 Main视觉/内容分析参考。E3 discovery必须从届时current source evidence重新确认实际reachable source与redirect，而不能把本Planning文件中的域名描述当成永恒Runtime contract。
+Legacy Source access is allowed only during explicit discovery/collection/retry evidence runs.
 
-Collector可以访问Legacy Source；canonical verification/import不得访问Legacy Source。
+Current evidence identifies `https://24365.jl.smartedu.cn/` as the reachable Main content source and `cms.jilinjobs.cn` as a redirect/source host. These are source observations, not Runtime contracts.
+
+Stable verification/import must consume frozen repository/evidence bytes and must not require Legacy Source network access.
 
 ## 3. Discovery scope
 
-E3必须系统发现并分类Main当前产品范围内至少以下surface：
+EU-50 must systematically discover:
 
-- Main Columns及完整pagination中的Article / EXTERNAL_LINK Article；
-- Main Page / PageGroup对应的正式内容来源；
-- 首页轮播等historical operational list membership；
-- 网站导航/友情链接等historical list membership；
-- 正文图片、附件、Page body resource；
-- source URL、detail/list path、source order、publish metadata；
-- unresolved / unsupported / duplicate candidate。
+- every in-scope Main Column pagination branch;
+- INTERNAL / EXTERNAL_LINK Article identities and URLs;
+- Article body, image and attachment references;
+- duplicate/cross-surface Article identities;
+- HTTP failures, retry outcomes, unsupported content and unresolved Article classifications.
 
-不得只抓第一页或只依赖当前首页可见条目。
+The bounded source probe may also discover:
 
-## 4. Classification contract
+- Main Page bodies/resources;
+- Main carousel / site-link ListItem membership;
+- Page/List duplicates, broken resources or unsupported source shapes.
 
-E1 accepted ownership决定external target分类：
+Those Page/List findings must be preserved in a **Site Package handoff report** and must not enter Article migration eligibility.
 
-- Column content → INTERNAL / EXTERNAL_LINK Article；
-- historical operational list member → CmsListItem；
-- stable Navigation structure → Site Package，不进入E3；
-- fixed integration → engineering asset，不进入E3；
-- unresolved role → unresolved evidence，不静默晋升。
+## 4. Ownership / classification contract
 
-E2 accepted Page boundary决定Page分类：
+### Historical Migration
 
-- stable Page identity由Site Package提供；
-- source-derived formalPage body属于canonical content；
-- current EMBED_PLACEHOLDER不在没有新Product evidence时被collector自动改成真实iframe/integration。
+Only Main Column content classified as:
 
-## 5. Accepted snapshot
+- `INTERNAL` Article; or
+- `EXTERNAL_LINK` Article
 
-Raw discovery output只是Evidence Candidate。只有经过repository review/promotion后，accepted snapshot才成为长期migration input。
+is an E3 canonical migration candidate.
 
-Promotion至少冻结：
+### Site Package
 
-- collection timestamp / source root；
-- discovery completeness report；
-- accepted / unresolved / excluded counts与理由；
-- source bytes或必要raw evidence digest；
-- canonical manifest/index/item fingerprints；
-- resource SHA-256 / size；
-- exact target stable identity；
-- human decision for ambiguous classification。
+The following belong to JilinJobs Site Package:
 
-E3 Requirement不预先写死Article/Page/List item数量；accepted counts只能来自实际source evidence。
+- stable Page identity and accepted Page content;
+- stable CmsList definitions;
+- stable Main ListItem membership, including the Main homepage/list link membership established as part of the site product definition;
+- stable navigation, site config and stable site assets.
 
-## 6. Canonical organization
+The current Site Package already supports stable Page content via `pages`, but stable ListItem provisioning/reconcile is a known capability gap and requires separate authority.
 
-Main默认复用`data-migrations/README.md`与Generic Engine的site-neutral组织，建议root：
+## 5. Error / human-review contract
+
+No collection or normalization path may silently repair, discard or infer away a data problem.
+
+For Article resources:
+
+1. Only explicit HTTP `404` / `410` evidence may be classified `SOURCE_RESOURCE_MISSING`.
+2. An INTERNAL Article may be temporarily excluded only when **every blocking issue** is `SOURCE_RESOURCE_MISSING`.
+3. Such Articles must remain in a separate client-confirmation list with identity/title/source/error evidence.
+4. Transport/socket/timeouts are not source-missing evidence.
+5. Every other error type remains separately classified and human-reviewable until an explicit decision exists.
+6. Approved non-blocking cases must remain recorded as evidence rather than silently removed.
+
+Page/List errors follow the same no-silent-loss rule but are routed to Site Package handoff instead of Article migration review.
+
+## 6. Accepted Article snapshot
+
+Raw discovery output is Evidence Candidate only. Accepted migration input must be explicitly promoted.
+
+The Article promotion boundary must freeze, as applicable:
+
+- source root / redirect provenance;
+- source collection/retry run/artifact identity and digest;
+- complete Article surface/pagination reconciliation;
+- accepted / excluded-source-defect / withheld-review Article counts;
+- stable Article migration identity and target Column alias;
+- source fingerprint / source URL / publish metadata;
+- canonical body/resource bytes and SHA-256/size;
+- explicit error/human decisions.
+
+Article arithmetic must satisfy:
+
+```text
+Article candidates
+= import eligible Articles
++ source-defect Articles excluded pending client confirmation
++ Articles withheld for unresolved/human-review errors
+```
+
+Unscoped blocking observations that could affect Article correctness keep Article promotion blocked.
+
+## 7. Canonical organization
+
+The accepted Main migration root is Article-oriented:
 
 ```text
 data-migrations/main/v1/
 ├── manifest.json
 ├── index.ndjson
 ├── articles/**
-├── pages/**
-├── lists/**
 ├── reports/**
-└── source-discovery/**   # only durable promoted evidence as justified
+└── source-discovery/**
 ```
 
-不得复制Party alias/fixed count/compatibility assumptions。
+Page/List source handoff evidence may be retained in bounded reports/evidence, but `pages/**` and `lists/**` are not Main migration import units under the current authority.
 
-## 7. Stable identity / fingerprint
+## 8. Stable identity / fingerprint
 
-- Article/List/Page source identity使用`sourceSystem + legacyKey`；
-- target依赖Column alias、List code、Page `(groupAlias? + alias)`等stable Site identity；
-- canonical record包含source fingerprint；
-- resources包含size + SHA-256；
-- Runtime DB id不进入canonical authority；
-- URL/router/component name不是target identity。
+For migration Articles:
 
-## 8. Import / reconciliation
+- source identity uses `sourceSystem + legacyKey`;
+- INTERNAL identity is content-id based; external identity is URL-fingerprint based;
+- target uses stable Column alias, never Runtime numeric ID;
+- canonical record includes source fingerprint;
+- local resource records include size + SHA-256.
 
-E3 import复用Generic Content Migration：
+Page/List target identities remain Site Package identities and are only referenced by handoff evidence.
 
-- Article：EU-47 accepted generic semantics；
-- ListItem：EU-47 accepted generic semantics；
-- Page：E2 foundation accepted generic Page semantics；
-- E1 external classification决定Article/List target ownership。
+## 9. Runtime import boundary
 
-Fresh canonical import必须在Generic Schema + JilinJobs stable Site Package target ready之后执行。
+E3 Runtime import, once a downstream Unit is Ready, uses Generic Content Migration for **Articles only**.
 
-First accepted import、second idempotent import、fingerprint conflict与Runtime reconciliation必须可独立验证。
+The fact that Generic Content Migration can technically support Page/List mutations does not authorize Main Page/List migration. Product ownership takes precedence over generic technical capability.
 
-E3不新增Main-specific importer，除非真实source shape存在无法由bounded normalization处理且有明确长期价值的证据；任何Main adapter都不得复制Generic Runtime mutation pipeline。
-
-## 9. Human review
-
-最终Main迁移不仅需要结构/count验证，还必须对代表性和高风险内容执行Human Review，至少覆盖：
-
-- 首页/栏目列表是否显示正确条目与顺序；
-- INTERNAL正文可读、图片/附件可访问；
-- EXTERNAL_LINK目标与title/source一致；
-- Page/PageGroup正式正文、Tab与public URL正确；
-- historical list links / carousel目标与图片正确；
-- 乱码、空正文、异常HTML、broken resource、明显duplicate/unresolved不存在或有接受记录；
-- Main视觉主基线无migration-induced regression。
+EU-50 itself does not perform Runtime import.
 
 ## 10. Verification requirements
 
-进入最终Integration前至少证明：
+Before EU-50 integration, prove at least:
 
-1. discovery遍历complete pagination / known source surfaces；
-2. discovered = accepted + excluded + unresolved reconciliation成立；
-3. unresolved在accepted promotion前为0，或每项有明确人工接受的defer/exclude记录；
-4. canonical schema/fingerprint/resource digest PASS；
-5. Fresh DB import PASS；
-6. second import SKIP/idempotent；
-7. changed fingerprint CONFLICT/no silent overwrite；
-8. Page target precondition与operator ownership contract成立；
-9. Runtime count/identity/resource reconciliation PASS；
-10. Public/Admin/Integrated Browser + Human Review PASS；
-11. stable CI不访问Legacy Source。
+1. complete known Article surface/pagination traversal;
+2. INTERNAL / EXTERNAL_LINK ownership classification is deterministic and evidence-backed;
+3. bounded retry budget is closed;
+4. Article-only eligibility arithmetic closes;
+5. source-defect Articles are separately retained for client confirmation;
+6. all other Article blockers remain explicitly classified;
+7. Page/List source findings and their errors are preserved in a Site Package handoff artifact;
+8. `import-eligible-index.json` contains Articles only;
+9. no Page/List source finding is silently deleted by the promotion path;
+10. stable/offline validation does not contact Legacy Source;
+11. no Runtime import or EU-51 execution occurs.
 
 ## 11. Non-goals
 
-- 不把Main内容写入Flyway；
-- 不把historical members写入stable Site structure；
-- 不把历史内容变成Site bootstrap；
-- 不复制Party-specific importer/policy；
-- 不修改Public frontend technology；
-- 不在没有source evidence时决定新external indicator/iframe/product behavior；
-- 不更新`agentic-dev` baseline。
+- no Main Page migration;
+- no Main stable ListItem migration;
+- no Site Package ListItem capability implementation inside EU-50;
+- no Main data in Flyway;
+- no Main-specific Runtime importer;
+- no Public frontend technology change;
+- no `agentic-dev` baseline update.
 
-## 12. Requirement readiness
+## 12. Readiness
 
-E1/E2已能定义classification与target ownership；EU-47/E2 foundation定义Generic runtime migration contract；`data-migrations/README.md`定义canonical lifecycle。E3的Product Goal、source-discovery completeness、promotion、migration与verification obligations均可以在未知最终count的情况下明确。
+The Article discovery/collection/retry boundary, Generic Article canonical contract and stable Column targets are available. Page/List ownership no longer blocks E3 because they are outside the migration promotion scope and are handed to Site Package authority.
 
-本 Requirement **READY**。Exact accepted snapshot/count属于后续Evidence，不是EU-50 Readiness blocker。E2 / EU-49 已完成，Specification与Technical Plan已Ready，`slice-work`现形成EU-50 / EU-51；其中EU-50通过`readiness-check`，EU-51必须等待EU-50 accepted snapshot集成后再基于实际数据重新执行Readiness。
+This Requirement remains **READY** for EU-50 Article-only execution. EU-51 remains blocked until EU-50 integrates an accepted Article snapshot and a fresh downstream readiness decision is made.

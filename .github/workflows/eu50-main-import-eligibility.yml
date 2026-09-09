@@ -5,6 +5,7 @@ on:
     paths:
       - 'data-migrations/main/v1/import-eligibility-control.json'
       - 'data-migrations/tools/main-import-eligibility.mjs'
+      - 'data-migrations/tools/main-source-triage.mjs'
       - '.github/workflows/eu50-main-import-eligibility.yml'
   workflow_dispatch:
 
@@ -14,7 +15,7 @@ permissions:
 
 jobs:
   eligibility:
-    name: Build current import-eligible index
+    name: Build Article-only import eligibility and Site Package handoff
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -28,6 +29,7 @@ jobs:
         working-directory: data-migrations
         run: |
           node --check tools/main-import-eligibility.mjs
+          node --check tools/main-source-triage.mjs
           node - <<'NODE'
           const fs = require('fs')
           const control = JSON.parse(fs.readFileSync('main/v1/import-eligibility-control.json', 'utf8'))
@@ -47,7 +49,7 @@ jobs:
           github-token: ${{ github.token }}
           repository: ${{ github.repository }}
           run-id: ${{ steps.control.outputs.run_id }}
-      - name: Build import eligibility whitelist
+      - name: Build Article-only eligibility and Site Package handoff
         working-directory: data-migrations
         env:
           MAIN_CANDIDATE_ROOT: main/v1/eligibility-input/generated-candidate
@@ -55,22 +57,36 @@ jobs:
           MAIN_ELIGIBILITY_CONTROL: main/v1/import-eligibility-control.json
         run: |
           test -f main/v1/eligibility-input/generated-candidate/index.ndjson
+          test -f main/v1/eligibility-input/generated-candidate/pages/index.json
+          test -d main/v1/eligibility-input/generated-candidate/lists
           test -f main/v1/eligibility-input/generated-candidate/reports/collection-problem-index.json
           test -f main/v1/eligibility-input/generated-candidate/reports/targeted-retry-attempt-3.json
           node tools/main-import-eligibility.mjs
           node - <<'NODE'
           const fs = require('fs')
           const report = JSON.parse(fs.readFileSync('main/v1/generated-import-eligibility/import-eligibility.json', 'utf8'))
+          const eligible = JSON.parse(fs.readFileSync('main/v1/generated-import-eligibility/import-eligible-index.json', 'utf8'))
+          const handoff = JSON.parse(fs.readFileSync('main/v1/generated-import-eligibility/site-package-handoff.json', 'utf8'))
           const summary = report.summary
-          if (summary.totalCandidates !== summary.eligibleCandidates + summary.withheldCandidates) throw new Error('eligibility arithmetic mismatch')
-          if (summary.eligibleCandidates <= 0) throw new Error('no import-eligible candidates')
+          if (summary.migrationScope !== 'ARTICLE_ONLY') throw new Error(`unexpected migration scope ${summary.migrationScope}`)
+          if (summary.totalCandidates !== summary.eligibleCandidates + summary.excludedSourceDefectCandidates + summary.withheldCandidates) {
+            throw new Error('Article-only eligibility arithmetic mismatch')
+          }
+          if (summary.eligibleCandidates <= 0) throw new Error('no Article import-eligible candidates')
           if (summary.finalRetry?.retryableTransient !== 0) throw new Error('retryable targets remain after final retry')
+          if (!Array.isArray(eligible.articles) || 'pages' in eligible || 'lists' in eligible) {
+            throw new Error('import-eligible-index must contain Articles only')
+          }
+          if (handoff.policy?.ownership !== 'SITE_PACKAGE' || handoff.policy?.migrationImportEligible !== false) {
+            throw new Error('Page/ListItem handoff policy mismatch')
+          }
+          if (!Array.isArray(handoff.pages) || !Array.isArray(handoff.listItems)) throw new Error('Site Package handoff records missing')
           console.log(JSON.stringify(summary))
           NODE
-      - name: Upload import eligibility evidence
+      - name: Upload Article eligibility and Site Package handoff evidence
         uses: actions/upload-artifact@v7
         with:
-          name: eu50-main-import-eligibility-${{ github.event.pull_request.head.sha || github.sha }}
+          name: eu50-main-article-eligibility-${{ github.event.pull_request.head.sha || github.sha }}
           path: data-migrations/main/v1/generated-import-eligibility
           if-no-files-found: error
           retention-days: 7

@@ -1,4 +1,4 @@
-# EU-50 — Main Source Discovery & Accepted Snapshot Promotion
+# EU-50 — Main Source Discovery & Article Snapshot Promotion
 
 ## Status
 
@@ -7,168 +7,153 @@
 - Requirement: `docs/requirements/main-historical-content-migration.md`
 - Specification: `docs/specifications/main-historical-content-migration.md`
 - Technical Plan: `docs/technical/main-historical-content-migration.md`
-- Candidate formed by: `slice-work`
 - Identifier: **EU-50**
 - Readiness: **PASS**
-- Planning baseline: `main@e6fe7674398ad8c29fa7ff1d62eb500754a66cc8`
-- Execute baseline: **NOT ESTABLISHED**
-- Execute state: **NOT STARTED**
-- Execute Authority: **NOT YET ACTIVATED — requires Fresh Context revalidation after Planning/Readiness integration**
+- Execute state: **ACTIVE in PR #117**
+- Current migration scope: **ARTICLE ONLY**
+- Page/List ownership correction: **Site Package**
+- EU-51: **BLOCKED / no Execute Authority**
 
 ## 1. Goal
 
-Build the bounded Main legacy-source discovery and evidence-promotion boundary required to turn live external source observations into a complete, reviewable, Consumer-owned accepted canonical migration snapshot.
+Turn bounded Legacy Main source observations into a complete, reviewable, Consumer-owned **Article** snapshot and durable evidence, while preserving Page/List source findings as explicit Site Package handoff evidence.
 
-EU-50 is not the Runtime import/final review unit. It stops when the accepted Main canonical snapshot and durable evidence are integrated and can be verified offline.
+EU-50 stops before Runtime Main import/final migrated-content review.
 
 ## 2. In scope
 
-- current Main source root/redirect discovery and explicit collector configuration;
-- complete inventory of in-scope Main source surfaces;
-- full pagination traversal according to source evidence;
-- INTERNAL / EXTERNAL_LINK Article discovery and normalization candidates;
-- formal Page/PageGroup source content candidates;
-- historical operational ListItem candidates only where source evidence proves migration ownership;
-- body image, attachment and Page resource collection;
-- duplicate/cross-surface detection;
-- unsupported/unresolved classification evidence;
-- HTTP failure/retry/termination evidence;
-- deterministic stable identities/fingerprints/resource digests;
-- repository-owned accepted snapshot promotion under `data-migrations/main/v1/**`;
-- durable completeness/reconciliation/provenance reports;
-- an offline stable verifier for promoted bytes/evidence;
-- manual external-source collection workflow as needed.
+- source root/redirect discovery;
+- complete Main Article surface/pagination inventory;
+- INTERNAL / EXTERNAL_LINK Article classification;
+- Article body/image/attachment collection;
+- deterministic identities/fingerprints/resource digests;
+- finite targeted retry and terminal error classification;
+- Article-only eligibility and accepted snapshot promotion;
+- separate source-defect Article list for client confirmation;
+- separate human-review Article blockers;
+- Page/List source discovery only as Site Package handoff evidence;
+- preservation of Page/List errors/duplicates/unsupported findings without silent repair/drop;
+- explicit Actions workflows for external-source collection/retry and offline eligibility processing.
 
 ## 3. Out of scope
 
-- importing Main canonical data into Runtime CMS as the product result;
-- final Runtime Article/Page/List reconciliation;
-- final Public/Admin/Integrated Browser verification of migrated Main content;
-- final Human Review closure;
-- Main-specific Runtime importer/mutation pipeline;
-- changes to Generic Flyway, stable Site structure/bootstrap/assets ownership, Public frontend technology or Party canonical data;
-- C1/C2, Issue #57/#59, Repository Split or `agentic-dev` baseline work.
+- Runtime Main import;
+- EU-51 execution;
+- Main Page migration;
+- Main stable ListItem migration;
+- changing Site Package Page content in `sites/jilinjobs/**` during this Unit;
+- adding stable ListItem structure/reconcile capability to CMS Core/Site Package;
+- changing Generic Flyway, Public renderer technology or Party canonical data.
 
-## 4. Source evidence available at Readiness
+## 4. Ownership correction
 
-Fresh Context source recovery on 2026-09-08 established sufficient evidence to execute a bounded collector:
-
-- reachable current source root: `https://24365.jl.smartedu.cn/`;
-- `cms.jilinjobs.cn` currently redirects to that source;
-- `www.jilinjobs.cn` was not a reliable collection endpoint in the current probe;
-- `notice` currently exposes 56 pages / 559 records;
-- `jydt` currently exposes 196 pages / 1,957 records;
-- observed surfaces contain mixed internal/external content and real formal Page/resource shapes.
-
-These values are discovery observations, not accepted snapshot totals. EU-50 must recompute/reconcile the authoritative accepted counts from its actual collection evidence.
-
-## 5. Stable target dependencies
-
-Dependencies are already available from current Repository Authority:
-
-- Main Column aliases in `sites/jilinjobs/structure/columns.json`;
-- `HOME_CAROUSEL` and the three Main `SITE_LINKS` list codes in `sites/jilinjobs/structure/lists.json`;
-- stable Main Page identities in `sites/jilinjobs/structure/pages.json`;
-- E1 external-link classification Authority;
-- E2 Page ownership/migration foundation completed by EU-49;
-- site-neutral Article/List/Page canonical contracts and Generic migration validation.
-
-No Runtime database ID is a dependency.
-
-## 6. Execution boundary
-
-Expected implementation surface is bounded to historical migration tooling/data/evidence and its manual collection verification, primarily:
-
-- `data-migrations/package.json`;
-- `data-migrations/tools/**`;
-- `data-migrations/main/v1/**`;
-- focused migration schemas/verifiers only if current Generic schema coverage requires them;
-- one explicit manual source-discovery workflow if needed.
-
-If Execute discovers that an in-scope source shape cannot be represented by the accepted Generic Article/List/Page contracts, stop that classification as unresolved and return to Planning rather than adding a speculative Main-specific Runtime path.
-
-## 7. Promotion Gate
-
-Before accepted promotion:
+Earlier EU-50 planning included Page/PageGroup and historical ListItem candidates as migration units. Current Product/Repository Authority supersedes that boundary:
 
 ```text
-discovered unique candidates
-= accepted canonical
-+ explicitly excluded
-+ explicitly deferred/unresolved
+Article → Historical Migration / EU-50
+Page → JilinJobs Site Package
+Main stable ListItem → JilinJobs Site Package
 ```
 
-Readiness permits Execute to discover the exact counts; it does not permit promotion with unresolved current-scope classifications.
+EU-50 may retain Page/List bytes in source artifacts because they were already discovered by the bounded probe, but it must never promote them through Main migration eligibility.
 
-Promotion requires:
+## 5. Current implementation facts
 
-- in-scope unresolved = 0;
-- every excluded/deferred item has a durable evidence-backed reason;
-- stable identities and targets are unique/valid;
-- item/source fingerprints are deterministic;
-- resource bytes/size/SHA-256 reconcile;
-- source root, redirects, surface inventory, pagination termination and errors/retries are recorded;
-- accepted snapshot and reports are repository-owned and offline-verifiable.
+- Site Package v1 already loads/reconciles Page `bodyHtml` as stable structure.
+- Site Package v1 owns CmsList definitions.
+- Site Package v1 has no `list-items` structure type/stable ListItem reconcile path.
+- current Main bootstrap creates six ListItems once, after which they become ordinary operator-managed Runtime data.
 
-## 8. Verification Strategy
+The last point is now a Site Package capability gap, not permission to keep Main ListItems in Historical Migration.
 
-EU-50 verification must include:
+## 6. Source/retry evidence contract
 
-1. collector/config tests or equivalent deterministic checks;
-2. explicit source collection evidence from current Legacy Source;
-3. complete known-surface/pagination reconciliation;
-4. accepted/excluded/unresolved arithmetic;
-5. canonical schema/stable identity/fingerprint/resource integrity checks;
-6. offline verifier PASS without Legacy Source access;
-7. Generic/Party migration compatibility checks appropriate to any touched shared validation contract;
-8. repository CI required by the final diff;
-9. PR review with no unresolved threads;
-10. diff review for accidental secrets/private data and unbounded source bytes.
+The current collection model is:
 
-No final Main Runtime visual Human Review is claimed by EU-50; that belongs to EU-51.
+1. one bounded full source pass;
+2. preserve all successful records and raw issues;
+3. classify a targeted retry queue;
+4. retry only prior transient targets under the finite three-iteration total budget;
+5. close the budget with attempt-3 evidence;
+6. build Article-only eligibility from the frozen evidence chain.
 
-## 9. Rollback / side effects
+No new automatic retry is authorized after the recorded closure unless new evidence/authority reopens it.
 
-EU-50 may read external public Legacy Source and may create temporary GitHub Actions artifacts. Those artifacts remain Evidence Candidates until promoted.
+## 7. Error policy
 
-Accepted repository side effects are limited to:
+### Confirmed source resource missing
 
-- collector/manual workflow/verifier changes;
-- promoted historical migration data/resources/evidence/reports.
+Only HTTP 404/410 establishes `SOURCE_RESOURCE_MISSING`.
 
-EU-50 must not intentionally mutate a persistent Main Runtime CMS database as its product side effect.
+An INTERNAL Article can be temporarily excluded only when every blocking issue is this class. It must remain separately listed as `EXCLUDE_PENDING_CLIENT_CONFIRMATION`.
 
-## 10. Readiness Check
+### All other errors
 
-### Requirement / Specification
+Transport failures, unsupported HTML/attributes/resources, redirect/type/scheme anomalies, retry exhaustion and any other newly discovered issue remain explicit classifications. They are not silently repaired or discarded.
 
-- E3 Requirement: READY.
-- E3 Specification: READY.
-- Required Technical Planning: READY.
+Approved non-blocking cases remain recorded as evidence.
 
-### Dependency closure
+### Page/List errors
 
-- E1 classification boundary: satisfied.
-- E2 / EU-49 Page foundation: integrated and completed.
-- stable Main Column/List/Page targets: present.
-- Generic Article/List/Page canonical migration capability: present.
-- current reachable Legacy Source evidence: present.
-- source exact counts: deliberately an Execute evidence output, not a Readiness blocker.
+Page/List errors are preserved in the Site Package handoff and do not become migration decisions. They do not block Article eligibility solely because Site Package follow-up remains pending.
 
-### Boundedness / verifiability
+## 8. Current promotion tooling
 
-- one clear external-source boundary;
-- one clear accepted-snapshot promotion boundary;
-- no Runtime product mutation required for completion;
-- offline acceptance evidence is definable before Execute;
-- rollback is independent from downstream Runtime import/review.
+`data-migrations/tools/main-import-eligibility.mjs` is the current Article promotion-boundary classifier.
 
-### Verdict
+Expected outputs:
 
-**PASS — EU-50 is the Current Ready Execution Unit once this Planning/Readiness state is integrated.**
+- `import-eligibility.json`;
+- `import-eligible-index.json` — Articles only;
+- `import-withheld.json`;
+- `source-defect-articles.json`;
+- `site-package-handoff.json`;
+- matching Markdown summaries.
 
-This Readiness PASS does not establish an Execute baseline from the planning branch. Execute may begin only after Planning/Readiness integration and Fresh Context revalidation of integrated `main`, Issue #60/#77, Open PR/Actions, this Unit Authority and base drift.
+The prior mixed destructive `main-source-triage.mjs` is retired/fail-closed because it deleted blocked Page/List candidates and mixed their state into `promotionReady`.
 
-## 11. Downstream
+## 9. Article promotion Gate
 
-EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review is a separate Candidate Execution Unit. It has no Execute Authority and cannot pass Readiness until EU-50 integrates the accepted snapshot and exact dataset evidence required by its verification expectations.
+Article arithmetic must close:
+
+```text
+total Articles
+= eligible Articles
++ SOURCE_RESOURCE_MISSING exclusions pending client confirmation
++ human-review withheld Articles
+```
+
+Promotion is not Ready while any human-review Article or unscoped blocking migration observation remains.
+
+Page/List handoff counts/problems are reported independently.
+
+## 10. Verification Strategy
+
+Before EU-50 integration prove:
+
+1. exact closed retry provenance is valid;
+2. Article-only eligibility workflow PASS;
+3. eligible index contains no Page/List units;
+4. Article arithmetic closes;
+5. source-defect exclusions remain separately listed;
+6. other Article classifications remain explicit;
+7. Page/List handoff preserves all discovered candidate refs and problems;
+8. old destructive mixed triage cannot be used for current promotion;
+9. PR/CI has no unresolved correctness regression;
+10. no Runtime import / EU-51 execution occurred.
+
+If Article blockers remain after this non-human work, EU-50 stays Draft/open at a Human Review Gate rather than inventing classifications.
+
+## 11. Site Package follow-up finding
+
+EU-50 hands off, but does not implement:
+
+- accepted Page content/resource projection into Site Package;
+- stable Main ListItem identity/reconcile capability;
+- migration/adoption of current bootstrap ListItems into any future stable membership model.
+
+These require separate Planning/Readiness under Site Package Authority (Issue #77 / current project authority).
+
+## 12. Downstream
+
+EU-51 remains blocked until an accepted **Article-only** snapshot is integrated and a Fresh Context re-runs its readiness check. Site Package Page/List work is a separate branch of work and does not gain Execute Authority from EU-50.
