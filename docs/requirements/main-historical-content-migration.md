@@ -8,8 +8,8 @@
 - Specification: **READY**
 - Technical Plan: **READY**
 - EU-50 — Main Source Discovery & Article Snapshot Promotion: **COMPLETED / Execute Authority TERMINATED**
-- EU-51 — Main Article Import, Runtime Reconciliation & Human Review: **Candidate / NOT READY / no Execute Authority**
-- Current Ready Execution Unit: **NONE**
+- EU-51 — Main Article Import, Runtime Reconciliation & Human Review: **READY / Readiness PASS / Execute baseline PENDING**
+- Current Ready Execution Unit: **EU-51**
 - Current migration scope: **ARTICLE ONLY**
 - Ownership correction: **Main Page and stable ListItem content belong to JilinJobs Site Package**
 
@@ -89,7 +89,7 @@ Current accepted facts:
 - deferred problem Articles: **230**;
 - resource files: **2603**；resource bytes: **450,273,166**；
 - dataset digest: `sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`；
-- integrated main: `05dfa604ccde45c8409cf6a456e4f201534dc602`。
+- integrated snapshot main: `05dfa604ccde45c8409cf6a456e4f201534dc602`。
 
 Article arithmetic closes as:
 
@@ -131,13 +131,13 @@ Page/List target identities remain Site Package identities and are only referenc
 
 ## 9. Runtime import boundary
 
-E3 Runtime import may occur only after a downstream Execution Unit passes a new Readiness decision.
+E3 Runtime import is authorized only through a downstream Execution Unit that has passed Readiness and then established its own Execute baseline from integrated Authority.
 
-Deferred problem Articles remain outside Runtime import until a later explicit review/decision promotes them.
+EU-51 has now passed Readiness on `main@fd192460cb481645c1f1af435cbe5451145797d9`, but its Execute baseline remains pending until the Planning/Readiness state is integrated and a new Fresh Context verifies current `main`, Authority, Actions and base drift.
+
+EU-51 imports only the integrated 3078-Article accepted current subset. Deferred problem Articles remain outside Runtime import until a later explicit review/decision promotes them.
 
 The fact that Generic Content Migration can technically support Page/List mutations does not authorize Main Page/List migration. Product ownership takes precedence over generic technical capability.
-
-EU-50 performed no Runtime Main import. Its completion does not automatically grant EU-51 Ready or Execute Authority.
 
 ## 10. Verification / acceptance closure
 
@@ -153,9 +153,11 @@ EU-50 acceptance has proved:
 8. `import-eligible-index.json` contains Articles only;
 9. no Page/List source finding is silently deleted by the promotion path;
 10. stable/offline canonical verification does not contact Legacy Source;
-11. no Runtime Main import or EU-51 execution occurred.
+11. no Runtime Main import or EU-51 execution occurred during EU-50.
 
 Final PR Head `8c2fdd6cdbbd4d1faf865d0ba4ca0f40a0096e84` passed EU-50 Source Discovery #64、EU-50 Import Eligibility #30、Canonical Migration #256、Generic Content Migration #51、EU-30 Upgrade #206、CI #944 and Review Environment #830. Integrated main additionally passed Generic Content Migration #52 and CI #945.
+
+EU-51 Readiness additionally proves that all ten canonical target Column aliases exist/enabled in the JilinJobs Site Package and that the existing Generic importer, Site Package provisioning, CI/Review/browser capabilities can satisfy the downstream execution contract without inventing a Main-specific migration engine.
 
 ## 11. Non-goals
 
@@ -171,4 +173,6 @@ Final PR Head `8c2fdd6cdbbd4d1faf865d0ba4ca0f40a0096e84` passed EU-50 Source Dis
 
 EU-50 accepted-snapshot dependency is **SATISFIED** and EU-50 Execute Authority is **TERMINATED**.
 
-Current Ready Execution Unit is **NONE**. EU-51 remains a downstream Candidate whose `readiness-check` must be run from a Fresh Context against the integrated canonical identities/counts/digests/resources and current Repository Authority. Site Package Page/List follow-up is a separate Planning Gate. Neither path inherits EU-50 Execute Authority.
+EU-51 `readiness-check = PASS` on `main@fd192460cb481645c1f1af435cbe5451145797d9` and Current Ready Execution Unit is **EU-51**. Current Work：`docs/work/current/eu51-main-canonical-import-runtime-review.md`。
+
+EU-51 Readiness PASS does not establish Execute baseline on the Planning/Readiness branch. After this state is integrated, a new Fresh Context must establish EU-51's independent Execute baseline before any Runtime Main import. Site Package Page/List follow-up remains a separate Planning Gate. Neither path inherits EU-50 Execute Authority.
