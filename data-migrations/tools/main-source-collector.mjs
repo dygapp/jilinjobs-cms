@@ -39,8 +39,8 @@ const sha256 = value => createHash('sha256').update(value).digest('hex')
 const sha256Bytes = bytes => createHash('sha256').update(bytes).digest('hex')
 const safeName = value => String(value).replace(/[^a-zA-Z0-9._-]/g, '_').slice(0, 180)
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
-const attachmentExtensions = new Set(['pdf', 'doc', 'docx', 'xls', 'xlsx'])
-const pageResourceExtensions = new Set(['png', 'jpg', 'jpeg', 'gif', 'webp', 'ico', 'pdf', 'doc', 'docx', 'xls', 'xlsx'])
+const attachmentExtensions = new Set(['pdf', 'doc', 'docx', 'xls', 'xlsx', 'rar'])
+const pageResourceExtensions = new Set(['png', 'jpg', 'jpeg', 'gif', 'webp', 'ico', 'pdf', 'doc', 'docx', 'xls', 'xlsx', 'rar'])
 
 function normalizeUrl(value, base = sourceRoot) {
   const url = new URL(value, base)
@@ -59,6 +59,18 @@ function escapeHtml(value) {
 }
 function sourceExtension(url) {
   try { return path.extname(new URL(url).pathname).slice(1).toLowerCase() } catch { return '' }
+}
+function contentDispositionExtension(value) {
+  if (!value) return ''
+  const encoded = /filename\*\s*=\s*(?:UTF-8'')?([^;]+)/i.exec(value)?.[1]
+  const plain = /filename\s*=\s*(?:"([^"]+)"|([^;]+))/i.exec(value)
+  const raw = encoded || plain?.[1] || plain?.[2] || ''
+  let filename = raw.trim().replace(/^"|"$/g, '')
+  try { filename = decodeURIComponent(filename) } catch {}
+  return path.extname(filename).slice(1).toLowerCase()
+}
+function isLegacyDynamicAttachment(parsed) {
+  return /\/common\/downloadfile\.aspx$/i.test(parsed.pathname) && parsed.searchParams.has('fileid')
 }
 function describeError(error) {
   const base = String(error)
@@ -123,26 +135,33 @@ async function readResponseBounded(response, maxBytes) {
   }
   return Buffer.concat(chunks)
 }
-function detectMedia(bytes, url, declaredContentType) {
+function detectMedia(bytes, url, declaredContentType, contentDisposition = null) {
   const b = Buffer.from(bytes)
   const ascii = (start, end) => b.subarray(start, end).toString('ascii')
-  const ext = sourceExtension(url)
+  const ext = sourceExtension(url) || contentDispositionExtension(contentDisposition)
   if (b.length >= 8 && b.subarray(0, 8).equals(Buffer.from([0x89,0x50,0x4e,0x47,0x0d,0x0a,0x1a,0x0a]))) return { contentType: 'image/png', extension: 'png' }
   if (b.length >= 2 && b[0] === 0xff && b[1] === 0xd8) return { contentType: 'image/jpeg', extension: ext === 'jpeg' ? 'jpeg' : 'jpg' }
   if (ascii(0, 6) === 'GIF87a' || ascii(0, 6) === 'GIF89a') return { contentType: 'image/gif', extension: 'gif' }
   if (ascii(0, 4) === 'RIFF' && ascii(8, 12) === 'WEBP') return { contentType: 'image/webp', extension: 'webp' }
   if (b.length >= 4 && b.subarray(0, 4).equals(Buffer.from([0x00,0x00,0x01,0x00]))) return { contentType: 'image/x-icon', extension: 'ico' }
   if (ascii(0, 5) === '%PDF-') return { contentType: 'application/pdf', extension: 'pdf' }
+  if (b.length >= 7 && b.subarray(0, 7).equals(Buffer.from([0x52,0x61,0x72,0x21,0x1a,0x07,0x00]))) return { contentType: 'application/vnd.rar', extension: 'rar' }
+  if (b.length >= 8 && b.subarray(0, 8).equals(Buffer.from([0x52,0x61,0x72,0x21,0x1a,0x07,0x01,0x00]))) return { contentType: 'application/vnd.rar', extension: 'rar' }
   if (b.length >= 8 && b.subarray(0, 8).equals(Buffer.from([0xd0,0xcf,0x11,0xe0,0xa1,0xb1,0x1a,0xe1]))) {
     if (ext === 'doc') return { contentType: 'application/msword', extension: 'doc' }
     if (ext === 'xls') return { contentType: 'application/vnd.ms-excel', extension: 'xls' }
+    if (declaredContentType === 'application/msword') return { contentType: declaredContentType, extension: 'doc' }
+    if (declaredContentType === 'application/vnd.ms-excel') return { contentType: declaredContentType, extension: 'xls' }
     return { contentType: declaredContentType || 'application/x-ole-storage', extension: null }
   }
   if (ascii(0, 2) === 'PK') {
     if (ext === 'docx') return { contentType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', extension: 'docx' }
     if (ext === 'xlsx') return { contentType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', extension: 'xlsx' }
+    if (declaredContentType === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') return { contentType: declaredContentType, extension: 'docx' }
+    if (declaredContentType === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') return { contentType: declaredContentType, extension: 'xlsx' }
     return { contentType: declaredContentType || 'application/zip', extension: null }
   }
+  if (attachmentExtensions.has(ext)) return { contentType: declaredContentType || 'application/octet-stream', extension: ext }
   return { contentType: declaredContentType || null, extension: null }
 }
 async function fetchResource(rawReference, baseUrl) {
@@ -157,13 +176,14 @@ async function fetchResource(rawReference, baseUrl) {
     if (totalDownloadedResourceBytes + bytes.length > MAX_TOTAL_RESOURCE_BYTES) throw new Error(`total resource bytes exceed ${MAX_TOTAL_RESOURCE_BYTES}`)
     totalDownloadedResourceBytes += bytes.length
     const declaredContentType = (response.headers.get('content-type') || '').split(';')[0].trim() || null
-    const media = detectMedia(bytes, response.url, declaredContentType)
+    const contentDisposition = response.headers.get('content-disposition') || null
+    const media = detectMedia(bytes, response.url, declaredContentType, contentDisposition)
     if (!media.extension) throw new Error(`unsupported resource media: ${sourceUrl} declared=${declaredContentType || '<none>'}`)
     const hash = sha256Bytes(bytes)
     const cachePath = path.join(tempResourceRoot, `${hash}.${media.extension}`)
     await mkdir(tempResourceRoot, { recursive: true })
     await writeFile(cachePath, bytes)
-    const value = { sourceUrl: response.url, requestedUrl: sourceUrl, sha256: hash, contentType: media.contentType, sizeBytes: bytes.length, extension: media.extension, cachePath }
+    const value = { sourceUrl: response.url, requestedUrl: sourceUrl, sha256: hash, contentType: media.contentType, contentDisposition, sizeBytes: bytes.length, extension: media.extension, cachePath }
     resourceEvidence.set(sourceUrl, { ...value, cachePath: undefined })
     return value
   })()
@@ -227,7 +247,8 @@ async function localizeBodyResources($, node, baseUrl, unitDir, evidenceKey, pag
     let parsed
     try { parsed = new URL(rawReference, baseUrl) } catch { continue }
     const extension = path.extname(parsed.pathname).slice(1).toLowerCase()
-    if (!attachmentExtensions.has(extension)) continue
+    const dynamicAttachment = isLegacyDynamicAttachment(parsed)
+    if (!attachmentExtensions.has(extension) && !dynamicAttachment) continue
     try {
       const resource = await materializeResource(rawReference, baseUrl, unitDir, 'ATTACHMENT', page)
       resources.push(resource)
