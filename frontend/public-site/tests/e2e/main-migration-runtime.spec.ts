@@ -99,9 +99,7 @@ test.describe('EU-51 imported Main canonical Runtime', () => {
         const response = await request.get(`/api/public/resources/${image.runtimeId}/content`)
         expect(response.ok()).toBeTruthy()
         expect((await response.body()).byteLength).toBe(image.sizeBytes)
-      }
-      if (sample.bodyImages.length > 0) {
-        await expect(page.getByTestId('public-article-body').locator('img')).toHaveCount(sample.bodyImages.length)
+        await expect(page.getByTestId('public-article-body').locator(`img[src="/api/public/resources/${image.runtimeId}/content"]`)).toBeVisible()
       }
 
       for (const attachment of sample.attachments) {
