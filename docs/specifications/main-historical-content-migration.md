@@ -14,7 +14,7 @@
 - Specification: **READY / ACTIVE**
 - Current migration scope: **ARTICLE ONLY**
 - Current Execution Unit: **EU-50**
-- EU-51: **BLOCKED**
+- EU-51: **BLOCKED pending accepted snapshot integration + fresh Readiness**
 
 ## 1. Pipeline
 
@@ -22,9 +22,9 @@
 Legacy Main Source
 → bounded discovery / collection / retry
 → full source Evidence Candidate
-→ Article-only eligibility + error classification
+→ Article-only eligibility + explicit deferred/error classification
 → Page/List Site Package handoff
-→ accepted Article snapshot promotion
+→ accepted current Article subset promotion
 → Generic Article migration (downstream only)
 ```
 
@@ -58,6 +58,8 @@ data-migrations/main/v1/
 ├── reports/**
 └── source-discovery/**
 ```
+
+Only current import-eligible Articles are present in `index.ndjson` / `articles/**`. Deferred problem Articles and source-defect exclusions remain in durable reports/evidence and are not current import units.
 
 No Main `pages/**` or `lists/**` import units are accepted under the current ownership boundary.
 
@@ -97,9 +99,9 @@ Current capability facts:
 - Page `bodyHtml` already has stable Site Package structure/reconcile support;
 - stable ListItem membership does not yet have a Site Package v1 structure type/stable reconcile path.
 
-## 6. Error classification
+## 6. Error classification and deferral
 
-The promotion boundary is fail-closed.
+The classification boundary is fail-closed with respect to current import membership: unresolved/problem Articles never become import input by inference.
 
 ### Source resource missing
 
@@ -111,29 +113,37 @@ An INTERNAL Article may move to `EXCLUDE_PENDING_CLIENT_CONFIRMATION` only if ev
 
 - transport/socket/timeout failures do not imply source missing;
 - unsupported HTML/attributes/resource type/scheme/redirect/size/etc. remain distinct classifications;
-- retry exhaustion remains explicit human review;
+- retry exhaustion remains explicit deferred review evidence;
 - approved non-blocking exceptions remain recorded;
-- any unknown/unmapped blocking Article observation keeps Article promotion blocked.
+- unknown/unmapped blocking observations are never silently mapped into the current import set.
+
+Current Human Authority (2026-09-09) defers unresolved/problem Articles until the broader current task sequence completes. These Articles are excluded from current import and do not block promotion/integration of the clean or explicitly approved subset, provided they remain separately and durably recorded.
 
 Page/List problems use the same explicit classifications but are emitted in the Site Package handoff rather than migration withholding.
 
-## 7. Article eligibility gate
+## 7. Current Article subset eligibility gate
 
 For Articles:
 
 ```text
 total Article candidates
-= eligible
+= current import eligible
 + source-defect excluded pending client confirmation
-+ human-review withheld
++ deferred problem Articles
 ```
 
 `import-eligible-index.json` contains an `articles` collection only.
 
-Article promotion is not ready while:
+Current-subset promotion is ready when:
 
-- any human-review Article remains withheld; or
-- an unscoped blocking observation could affect Article correctness.
+- the arithmetic closes;
+- final retry has no retryable targets;
+- no unscoped blocking observation can invalidate current-subset correctness;
+- current import-eligible count is non-zero;
+- source-defect exclusions and deferred Articles remain separately preserved;
+- the repository-owned promoted tree contains exactly the current import-eligible subset.
+
+The existence of deferred problem Articles alone does not block promotion or current project progression.
 
 Page/List Site Package problems are visible in handoff evidence but do not change Article arithmetic.
 
@@ -150,7 +160,9 @@ Collector/retry behavior must:
 
 ## 9. Promotion / drift
 
-Accepted Article promotion is an explicit repository change. Later source drift must produce an evidence-backed diff and must not silently overwrite accepted canonical fingerprints.
+Accepted current Article subset promotion is an explicit repository change. It must copy/freeze only the eligible Article units and their referenced local resources from the frozen evidence chain, retain deterministic provenance/integrity, and keep deferred/source-defect records outside the current import index.
+
+Later source drift or later approval of deferred Articles must produce an evidence-backed diff and must not silently overwrite accepted canonical fingerprints.
 
 Page/List source drift is handled under Site Package follow-up authority, not by changing Main migration semantics.
 
@@ -162,12 +174,13 @@ Page/List source drift is handled under Site Package follow-up authority, not by
 - final retry queue closed;
 - error classes machine-readable.
 
-### Article eligibility
+### Article eligibility / promotion
 - Article-only arithmetic closes;
 - eligible index has Articles only;
 - source-defect exclusions are separately listed;
-- remaining Article blockers are explicit;
-- no unmapped blocking observation is hidden.
+- deferred Article problems are explicit and excluded from current import;
+- no unmapped blocking observation is hidden;
+- promoted repository-owned `index.ndjson` / `articles/**` equals the eligible subset and passes deterministic integrity checks.
 
 ### Site Package handoff
 - all discovered Page/List candidates are represented;
@@ -182,12 +195,15 @@ EU-50 stops before Runtime import, Public/Admin migration verification and final
 
 1. **EU-50 — Main Source Discovery & Article Snapshot Promotion**
    - current Execute unit;
-   - owns external source evidence, Article eligibility/promotion, Page/List handoff;
+   - owns external source evidence, Article eligibility/promotion, deferred evidence and Page/List handoff;
    - does not mutate Runtime CMS product data.
 2. **EU-51 — Main Article Import, Runtime Reconciliation & Human Review**
    - downstream candidate only;
-   - blocked until EU-50 accepted Article snapshot integration and a fresh readiness decision.
-3. **Site Package Page/List follow-up**
+   - blocked until EU-50 accepted current Article snapshot integration and a fresh readiness decision.
+3. **Deferred problem Article review**
+   - later explicit review/decision work;
+   - not current import input and not a blocker to current-subset progression.
+4. **Site Package Page/List follow-up**
    - separate planning gate;
    - owns accepted Page content and stable Main ListItem capability/content;
    - not automatically an EU-50/EU-51 subtask.
