@@ -8,7 +8,7 @@
 - Specification: **READY**
 - Technical Plan: **READY**
 - Current Execution Unit: **EU-50**
-- EU-51: **BLOCKED**
+- EU-51: **BLOCKED pending accepted snapshot integration + fresh Readiness**
 - Current migration scope: **ARTICLE ONLY**
 - Ownership correction: **Main Page and stable ListItem content belong to JilinJobs Site Package**
 
@@ -66,22 +66,24 @@ The following belong to JilinJobs Site Package:
 
 The current Site Package already supports stable Page content via `pages`, but stable ListItem provisioning/reconcile is a known capability gap and requires separate authority.
 
-## 5. Error / human-review contract
+## 5. Error / deferred-review contract
 
 No collection or normalization path may silently repair, discard or infer away a data problem.
 
 For Article resources:
 
 1. Only explicit HTTP `404` / `410` evidence may be classified `SOURCE_RESOURCE_MISSING`.
-2. An INTERNAL Article may be temporarily excluded only when **every blocking issue** is `SOURCE_RESOURCE_MISSING`.
+2. An INTERNAL Article may be excluded from current import when **every blocking issue** is `SOURCE_RESOURCE_MISSING`.
 3. Such Articles must remain in a separate client-confirmation list with identity/title/source/error evidence.
 4. Transport/socket/timeouts are not source-missing evidence.
-5. Every other error type remains separately classified and human-reviewable until an explicit decision exists.
-6. Approved non-blocking cases must remain recorded as evidence rather than silently removed.
+5. Every other unresolved error type remains separately classified and reviewable.
+6. Current Human Authority (2026-09-09) defers those problem Articles until the broader current task sequence is complete. They remain durable evidence, are not current import input, and do not block promotion/integration of the clean or explicitly approved subset.
+7. Deferral is not repair: no unresolved Article may be guessed, rewritten, silently dropped or imported merely to advance the current subset.
+8. Approved non-blocking cases must remain recorded as evidence rather than silently removed.
 
 Page/List errors follow the same no-silent-loss rule but are routed to Site Package handoff instead of Article migration review.
 
-## 6. Accepted Article snapshot
+## 6. Accepted current Article snapshot
 
 Raw discovery output is Evidence Candidate only. Accepted migration input must be explicitly promoted.
 
@@ -90,7 +92,7 @@ The Article promotion boundary must freeze, as applicable:
 - source root / redirect provenance;
 - source collection/retry run/artifact identity and digest;
 - complete Article surface/pagination reconciliation;
-- accepted / excluded-source-defect / withheld-review Article counts;
+- current-import / excluded-source-defect / deferred-review Article counts;
 - stable Article migration identity and target Column alias;
 - source fingerprint / source URL / publish metadata;
 - canonical body/resource bytes and SHA-256/size;
@@ -100,12 +102,12 @@ Article arithmetic must satisfy:
 
 ```text
 Article candidates
-= import eligible Articles
+= current import-eligible Articles
 + source-defect Articles excluded pending client confirmation
-+ Articles withheld for unresolved/human-review errors
++ deferred problem Articles
 ```
 
-Unscoped blocking observations that could affect Article correctness keep Article promotion blocked.
+The existence of deferred problem Articles does not block the accepted current subset. Promotion remains blocked only when the current subset cannot be proven complete/deterministic, an unscoped blocking observation could affect Article correctness, or deferred/excluded records are not preserved separately.
 
 ## 7. Canonical organization
 
@@ -119,6 +121,8 @@ data-migrations/main/v1/
 ├── reports/**
 └── source-discovery/**
 ```
+
+Only current import-eligible Articles enter the promoted canonical Article tree/index. Deferred problem Articles and source-defect exclusions remain in durable reports/evidence outside the current import index.
 
 Page/List source handoff evidence may be retained in bounded reports/evidence, but `pages/**` and `lists/**` are not Main migration import units under the current authority.
 
@@ -136,7 +140,9 @@ Page/List target identities remain Site Package identities and are only referenc
 
 ## 9. Runtime import boundary
 
-E3 Runtime import, once a downstream Unit is Ready, uses Generic Content Migration for **Articles only**.
+E3 Runtime import, once a downstream Unit is Ready, uses Generic Content Migration for **the integrated current Article subset only**.
+
+Deferred problem Articles remain outside Runtime import until a later explicit review/decision promotes them.
 
 The fact that Generic Content Migration can technically support Page/List mutations does not authorize Main Page/List migration. Product ownership takes precedence over generic technical capability.
 
@@ -149,17 +155,19 @@ Before EU-50 integration, prove at least:
 1. complete known Article surface/pagination traversal;
 2. INTERNAL / EXTERNAL_LINK ownership classification is deterministic and evidence-backed;
 3. bounded retry budget is closed;
-4. Article-only eligibility arithmetic closes;
+4. Article-only arithmetic closes;
 5. source-defect Articles are separately retained for client confirmation;
-6. all other Article blockers remain explicitly classified;
+6. deferred problem Articles remain explicitly classified and excluded from current import;
 7. Page/List source findings and their errors are preserved in a Site Package handoff artifact;
 8. `import-eligible-index.json` contains Articles only;
-9. no Page/List source finding is silently deleted by the promotion path;
-10. stable/offline validation does not contact Legacy Source;
-11. no Runtime import or EU-51 execution occurs.
+9. no deferred/source-defect/Page/List record is silently deleted by the promotion path;
+10. the promoted repository-owned canonical tree/index contains exactly the current import-eligible subset;
+11. stable/offline validation does not contact Legacy Source;
+12. no Runtime import or EU-51 execution occurs.
 
 ## 11. Non-goals
 
+- no resolution of deferred problem Articles during current EU-50 closure;
 - no Main Page migration;
 - no Main stable ListItem migration;
 - no Site Package ListItem capability implementation inside EU-50;
@@ -170,6 +178,6 @@ Before EU-50 integration, prove at least:
 
 ## 12. Readiness
 
-The Article discovery/collection/retry boundary, Generic Article canonical contract and stable Column targets are available. Page/List ownership no longer blocks E3 because they are outside the migration promotion scope and are handed to Site Package authority.
+The Article discovery/collection/retry boundary, Generic Article canonical contract and stable Column targets are available. Page/List ownership and deferred Article handling no longer block current-subset promotion because they are outside the current import input and remain separately preserved.
 
-This Requirement remains **READY** for EU-50 Article-only execution. EU-51 remains blocked until EU-50 integrates an accepted Article snapshot and a fresh downstream readiness decision is made.
+This Requirement remains **READY** for EU-50 Article-only execution. EU-51 remains blocked until EU-50 integrates the accepted current Article snapshot and a fresh downstream readiness decision is made.
