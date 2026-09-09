@@ -1,0 +1,297 @@
+name: EU-51 Main Canonical Runtime Verification
+
+on:
+  pull_request:
+    paths:
+      - 'data-migrations/main/v1/**'
+      - 'data-migrations/tools/main-verify-accepted-articles.mjs'
+      - 'backend/build.gradle.kts'
+      - 'backend/settings.gradle.kts'
+      - 'backend/modules/cms-core/**'
+      - 'backend/apps/cms-server/**'
+      - 'backend/apps/content-migration/**'
+      - 'sites/jilinjobs/**'
+      - '.github/workflows/eu51-main-canonical-runtime-verify.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  main-canonical-runtime:
+    name: Main canonical Fresh DB import and reconcile
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_ROOT_HOST: '%'
+          MYSQL_DATABASE: jilinjobs_cms
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=12
+
+    env:
+      DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+      DB_USERNAME: root
+      DB_PASSWORD: root
+      CMS_STORAGE_ROOT: ${{ github.workspace }}/eu51-runtime/uploads
+      CMS_STATIC_ROOT: ${{ github.workspace }}/eu51-runtime/static
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Verify accepted Main canonical bytes offline
+        working-directory: data-migrations
+        env:
+          MAIN_CANONICAL_ROOT: main/v1
+        run: node tools/main-verify-accepted-articles.mjs | tee ../eu51-offline-verify.log
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: '9.6.1'
+
+      - name: Prepare Fresh Runtime storage
+        run: |
+          set -euo pipefail
+          rm -rf eu51-runtime
+          mkdir -p eu51-runtime/uploads eu51-runtime/static
+
+      - name: Provision JilinJobs Site Package on Fresh DB
+        working-directory: backend
+        run: gradle provisionSitePackage --args="../sites/jilinjobs" --no-daemon | tee ../eu51-site-package.log
+
+      - name: Verify Main target Columns after provisioning
+        run: |
+          set -euo pipefail
+          docker run --rm --network host mysql:8.4 \
+            mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT alias,enabled FROM cms_column WHERE alias IN ('notice','employment-news','recruitment-announcement','policy-month','policy-outside','policy-jilin','policy-national','typical-grassroots','typical-startup','typical-military') ORDER BY alias" \
+            > eu51-columns.tsv
+          python3 - <<'PY'
+          from pathlib import Path
+          expected = {
+              'notice','employment-news','recruitment-announcement',
+              'policy-month','policy-outside','policy-jilin','policy-national',
+              'typical-grassroots','typical-startup','typical-military',
+          }
+          rows = [line.split('\t') for line in Path('eu51-columns.tsv').read_text(encoding='utf-8').splitlines() if line]
+          actual = {alias for alias, enabled in rows if enabled == '1'}
+          assert actual == expected, (actual, expected)
+          assert len(rows) == len(expected), rows
+          print('EU51_TARGET_COLUMN_VERIFY PASS', len(rows))
+          PY
+
+      - name: Import accepted Main canonical Articles
+        working-directory: backend
+        run: gradle importCanonicalContent --args="../data-migrations/main/v1" --no-daemon | tee ../eu51-first-import.log
+
+      - name: Verify first import report
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          line = next((line for line in reversed(Path('eu51-first-import.log').read_text(encoding='utf-8').splitlines()) if line.startswith('CONTENT_MIGRATION_REPORT ')), None)
+          assert line, 'missing CONTENT_MIGRATION_REPORT'
+          report = json.loads(line.removeprefix('CONTENT_MIGRATION_REPORT '))
+          assert report['phase'] == 'EXECUTE', report
+          assert report['total'] == 3078 and report['created'] == 3078, report
+          assert report['skipped'] == 0 and report['conflicts'] == 0 and report['invalid'] == 0, report
+          assert len(report['results']) == 3078, len(report['results'])
+          assert {item['status'] for item in report['results']} == {'CREATED'}, {item['status'] for item in report['results']}
+          print('EU51_FIRST_IMPORT_REPORT_VERIFY PASS')
+          PY
+
+      - name: Export Runtime Article and resource reconciliation evidence
+        run: |
+          set -euo pipefail
+          docker run --rm --network host mysql:8.4 \
+            mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT m.legacy_key,m.source_fingerprint,c.alias,a.article_type,COALESCE(a.external_url,''),a.id,a.status FROM cms_article_legacy_mapping m JOIN cms_article a ON a.id=m.article_id JOIN cms_column c ON c.id=a.column_id WHERE m.source_system='legacy-jilinjobs' ORDER BY m.legacy_key" \
+            > eu51-runtime-articles.tsv
+
+          docker run --rm --network host mysql:8.4 \
+            mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT m.legacy_key,ar.resource_role,ar.sort_order,r.id,r.storage_key,r.size_bytes FROM cms_article_legacy_mapping m JOIN cms_article_resource ar ON ar.article_id=m.article_id JOIN cms_resource r ON r.id=ar.resource_id WHERE m.source_system='legacy-jilinjobs' ORDER BY m.legacy_key,ar.resource_role,ar.sort_order,r.id" \
+            > eu51-runtime-resources.tsv
+
+          docker run --rm --network host mysql:8.4 \
+            mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT c.alias,a.article_type,COUNT(*) FROM cms_article_legacy_mapping m JOIN cms_article a ON a.id=m.article_id JOIN cms_column c ON c.id=a.column_id WHERE m.source_system='legacy-jilinjobs' GROUP BY c.alias,a.article_type ORDER BY c.alias,a.article_type" \
+            > eu51-runtime-counts.tsv
+
+      - name: Reconcile Runtime identities, types, resources and bytes
+        run: |
+          python3 - <<'PY'
+          import csv, hashlib, json
+          from collections import defaultdict
+          from pathlib import Path
+
+          root = Path('data-migrations/main/v1').resolve()
+          upload_root = Path('eu51-runtime/uploads').resolve()
+          entries = [json.loads(line) for line in (root / 'index.ndjson').read_text(encoding='utf-8').splitlines() if line]
+          assert len(entries) == 3078
+
+          expected = {}
+          expected_counts = defaultdict(int)
+          expected_resources = {}
+          for entry in entries:
+              article_path = root / entry['path']
+              article = json.loads(article_path.read_text(encoding='utf-8'))
+              key = entry['legacyKey']
+              assert article['source']['legacyKey'] == key
+              article_type = article['target']['articleType']
+              alias = article['target']['columnAlias']
+              external_url = article['content'].get('externalUrl') or ''
+              expected[key] = (article['sourceFingerprint'], alias, article_type, external_url)
+              expected_counts[(alias, article_type)] += 1
+              by_role = defaultdict(list)
+              for resource in article.get('resources', []):
+                  by_role[resource['role']].append(resource)
+              for role, resources in by_role.items():
+                  for order, resource in enumerate(resources):
+                      expected_resources[(key, role, order)] = resource
+
+          runtime = {}
+          with Path('eu51-runtime-articles.tsv').open(encoding='utf-8', newline='') as stream:
+              for row in csv.reader(stream, delimiter='\t'):
+                  assert len(row) == 7, row
+                  key, fingerprint, alias, article_type, external_url, article_id, status = row
+                  assert key not in runtime, key
+                  assert status == 'PUBLISHED', row
+                  runtime[key] = (fingerprint, alias, article_type, external_url)
+          assert runtime == expected, (len(runtime), len(expected), set(expected) - set(runtime), set(runtime) - set(expected))
+
+          runtime_counts = {}
+          with Path('eu51-runtime-counts.tsv').open(encoding='utf-8', newline='') as stream:
+              for alias, article_type, count in csv.reader(stream, delimiter='\t'):
+                  runtime_counts[(alias, article_type)] = int(count)
+          assert runtime_counts == dict(expected_counts), (runtime_counts, dict(expected_counts))
+          assert sum(count for (alias, article_type), count in runtime_counts.items() if article_type == 'INTERNAL') == 1577
+          assert sum(count for (alias, article_type), count in runtime_counts.items() if article_type == 'EXTERNAL_LINK') == 1501
+
+          runtime_resource_count = 0
+          runtime_resource_bytes = 0
+          with Path('eu51-runtime-resources.tsv').open(encoding='utf-8', newline='') as stream:
+              for row in csv.reader(stream, delimiter='\t'):
+                  assert len(row) == 6, row
+                  key, role, order, resource_id, storage_key, size_bytes = row
+                  identity = (key, role, int(order))
+                  assert identity in expected_resources, identity
+                  canonical = expected_resources.pop(identity)
+                  assert int(size_bytes) == int(canonical['sizeBytes']), (identity, size_bytes, canonical['sizeBytes'])
+                  runtime_file = (upload_root / storage_key).resolve()
+                  assert runtime_file.parent == upload_root, runtime_file
+                  assert runtime_file.is_file(), runtime_file
+                  data = runtime_file.read_bytes()
+                  assert len(data) == int(canonical['sizeBytes']), (identity, len(data), canonical['sizeBytes'])
+                  assert hashlib.sha256(data).hexdigest() == canonical['sha256'], identity
+                  runtime_resource_count += 1
+                  runtime_resource_bytes += len(data)
+          assert not expected_resources, list(expected_resources)[:5]
+          assert runtime_resource_count == 2603, runtime_resource_count
+          assert runtime_resource_bytes == 450273166, runtime_resource_bytes
+          assert len(list(upload_root.iterdir())) == 2603
+          print(json.dumps({
+              'runtimeArticles': len(runtime),
+              'internalArticles': 1577,
+              'externalArticles': 1501,
+              'runtimeResources': runtime_resource_count,
+              'runtimeResourceBytes': runtime_resource_bytes,
+              'reconciliation': 'PASS',
+          }, ensure_ascii=False))
+          PY
+
+      - name: Verify Runtime resource references and Article semantics
+        run: |
+          set -euo pipefail
+          unresolved=$(docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT COUNT(*) FROM cms_article_legacy_mapping m JOIN cms_article a ON a.id=m.article_id WHERE m.source_system='legacy-jilinjobs' AND a.body_html REGEXP 'migration-(resource|attachment)://';")
+          test "$unresolved" -eq 0
+
+          missing_body_images=$(docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT COUNT(*) FROM cms_article_legacy_mapping m JOIN cms_article a ON a.id=m.article_id JOIN cms_article_resource ar ON ar.article_id=a.id WHERE m.source_system='legacy-jilinjobs' AND ar.resource_role='BODY_IMAGE' AND LOCATE(CONCAT('/api/admin/resources/',ar.resource_id,'/content'),a.body_html)=0;")
+          test "$missing_body_images" -eq 0
+
+          missing_attachments=$(docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT COUNT(*) FROM cms_article_legacy_mapping m JOIN cms_article a ON a.id=m.article_id JOIN cms_article_resource ar ON ar.article_id=a.id WHERE m.source_system='legacy-jilinjobs' AND ar.resource_role='ATTACHMENT' AND LOCATE(CONCAT('/api/public/resources/',ar.resource_id,'/attachment'),a.body_html)=0;")
+          test "$missing_attachments" -eq 0
+
+          invalid_external=$(docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT COUNT(*) FROM cms_article_legacy_mapping m JOIN cms_article a ON a.id=m.article_id WHERE m.source_system='legacy-jilinjobs' AND a.article_type='EXTERNAL_LINK' AND (a.external_url IS NULL OR a.external_url='' OR a.body_html<>'');")
+          test "$invalid_external" -eq 0
+
+          invalid_internal=$(docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
+            "SELECT COUNT(*) FROM cms_article_legacy_mapping m JOIN cms_article a ON a.id=m.article_id WHERE m.source_system='legacy-jilinjobs' AND a.article_type='INTERNAL' AND a.external_url IS NOT NULL;")
+          test "$invalid_internal" -eq 0
+
+          list_mappings=$(docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e "SELECT COUNT(*) FROM cms_list_item_legacy_mapping;")
+          page_mappings=$(docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e "SELECT COUNT(*) FROM cms_page_legacy_mapping;")
+          test "$list_mappings" -eq 0
+          test "$page_mappings" -eq 0
+          echo "EU51_RUNTIME_SEMANTICS_VERIFY PASS"
+
+      - name: Re-import identical Main canonical dataset
+        working-directory: backend
+        run: gradle importCanonicalContent --args="../data-migrations/main/v1" --no-daemon | tee ../eu51-second-import.log
+
+      - name: Verify second-run idempotency and no duplicate resources
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          line = next((line for line in reversed(Path('eu51-second-import.log').read_text(encoding='utf-8').splitlines()) if line.startswith('CONTENT_MIGRATION_REPORT ')), None)
+          assert line, 'missing CONTENT_MIGRATION_REPORT'
+          report = json.loads(line.removeprefix('CONTENT_MIGRATION_REPORT '))
+          assert report['phase'] == 'EXECUTE', report
+          assert report['total'] == 3078 and report['created'] == 0, report
+          assert report['skipped'] == 3078 and report['conflicts'] == 0 and report['invalid'] == 0, report
+          assert len(report['results']) == 3078, len(report['results'])
+          assert {item['status'] for item in report['results']} == {'SKIPPED'}, {item['status'] for item in report['results']}
+          print('EU51_SECOND_IMPORT_REPORT_VERIFY PASS')
+          PY
+
+          article_count=$(docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e "SELECT COUNT(*) FROM cms_article_legacy_mapping WHERE source_system='legacy-jilinjobs';")
+          resource_count=$(docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e "SELECT COUNT(*) FROM cms_resource;")
+          article_resource_count=$(docker run --rm --network host mysql:8.4 mysql -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e "SELECT COUNT(*) FROM cms_article_resource ar JOIN cms_article_legacy_mapping m ON m.article_id=ar.article_id WHERE m.source_system='legacy-jilinjobs';")
+          upload_file_count=$(find eu51-runtime/uploads -maxdepth 1 -type f | wc -l)
+          test "$article_count" -eq 3078
+          test "$resource_count" -eq 2603
+          test "$article_resource_count" -eq 2603
+          test "$upload_file_count" -eq 2603
+          echo "EU51_IDEMPOTENCY_VERIFY PASS"
+
+      - name: Upload EU-51 Runtime verification evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: eu51-main-canonical-runtime-evidence
+          path: |
+            eu51-offline-verify.log
+            eu51-site-package.log
+            eu51-first-import.log
+            eu51-second-import.log
+            eu51-columns.tsv
+            eu51-runtime-articles.tsv
+            eu51-runtime-resources.tsv
+            eu51-runtime-counts.tsv
+          if-no-files-found: warn
+          retention-days: 7
