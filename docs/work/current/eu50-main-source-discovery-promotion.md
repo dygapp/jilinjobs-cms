@@ -12,7 +12,8 @@
 - Execute state: **ACTIVE in PR #117**
 - Current migration scope: **ARTICLE ONLY**
 - Page/List ownership correction: **Site Package**
-- EU-51: **BLOCKED / no Execute Authority**
+- Deferred problem Articles: **not current import input / do not block current progression**
+- EU-51: **BLOCKED until accepted Article snapshot integration and fresh Readiness**
 
 ## 1. Goal
 
@@ -30,15 +31,16 @@ EU-50 stops before Runtime Main import/final migrated-content review.
 - finite targeted retry and terminal error classification;
 - Article-only eligibility and accepted snapshot promotion;
 - separate source-defect Article list for client confirmation;
-- separate human-review Article blockers;
+- separate deferred-review Article evidence;
 - Page/List source discovery only as Site Package handoff evidence;
 - preservation of Page/List errors/duplicates/unsupported findings without silent repair/drop;
-- explicit Actions workflows for external-source collection/retry and offline eligibility processing.
+- explicit Actions workflows for external-source collection/retry, offline eligibility and repository-owned promotion.
 
 ## 3. Out of scope
 
 - Runtime Main import;
 - EU-51 execution;
+- resolving/fixing deferred problem Articles during current EU-50 promotion;
 - Main Page migration;
 - Main stable ListItem migration;
 - changing Site Package Page content in `sites/jilinjobs/**` during this Unit;
@@ -85,11 +87,19 @@ No new automatic retry is authorized after the recorded closure unless new evide
 
 Only HTTP 404/410 establishes `SOURCE_RESOURCE_MISSING`.
 
-An INTERNAL Article can be temporarily excluded only when every blocking issue is this class. It must remain separately listed as `EXCLUDE_PENDING_CLIENT_CONFIRMATION`.
+An INTERNAL Article can be excluded from current import when every blocking issue is this class. It must remain separately listed as `EXCLUDE_PENDING_CLIENT_CONFIRMATION` for later client handling.
 
-### All other errors
+### Deferred problem Articles
 
-Transport failures, unsupported HTML/attributes/resources, redirect/type/scheme anomalies, retry exhaustion and any other newly discovered issue remain explicit classifications. They are not silently repaired or discarded.
+Transport failures, unsupported HTML/attributes/resources, redirect/type/scheme anomalies, retry exhaustion and any other unresolved Article issue remain explicit classifications. They are not silently repaired or discarded.
+
+Current Human Authority (2026-09-09) explicitly defers those problem Articles until the broader current task sequence is complete:
+
+- they remain in durable problem/review evidence;
+- they are **not current import input**;
+- they do **not block promotion/integration of the clean or explicitly approved current subset**;
+- EU-50 must not guess, rewrite, repair or delete them merely to advance the current subset;
+- later handling requires its own explicit review/decision context.
 
 Approved non-blocking cases remain recorded as evidence.
 
@@ -99,7 +109,7 @@ Page/List errors are preserved in the Site Package handoff and do not become mig
 
 ## 8. Current promotion tooling
 
-`data-migrations/tools/main-import-eligibility.mjs` is the current Article promotion-boundary classifier.
+`data-migrations/tools/main-import-eligibility.mjs` is the current Article eligibility classifier.
 
 Expected outputs:
 
@@ -110,20 +120,32 @@ Expected outputs:
 - `site-package-handoff.json`;
 - matching Markdown summaries.
 
-The prior mixed destructive `main-source-triage.mjs` is retired/fail-closed because it deleted blocked Page/List candidates and mixed their state into `promotionReady`.
+`import-withheld.json` is durable deferred evidence, not current import input.
 
-## 9. Article promotion Gate
+The prior mixed destructive `main-source-triage.mjs` is retired/fail-closed because it deleted blocked Page/List candidates and mixed their state into promotion readiness.
+
+## 9. Current-subset promotion Gate
 
 Article arithmetic must close:
 
 ```text
 total Articles
-= eligible Articles
+= current import-eligible Articles
 + SOURCE_RESOURCE_MISSING exclusions pending client confirmation
-+ human-review withheld Articles
++ deferred problem Articles
 ```
 
-Promotion is not Ready while any human-review Article or unscoped blocking migration observation remains.
+Current-subset promotion is Ready when all of the following hold:
+
+- the arithmetic closes;
+- bounded retry is terminal/closed;
+- no unscoped blocking migration observation remains;
+- current import-eligible Article count is non-zero;
+- source-defect and deferred problem Articles remain separately and durably recorded;
+- current import index contains Articles only;
+- promoted canonical bytes contain only the current import-eligible Article subset.
+
+The existence of deferred problem Articles alone is **not** a promotion or progression blocker.
 
 Page/List handoff counts/problems are reported independently.
 
@@ -136,13 +158,12 @@ Before EU-50 integration prove:
 3. eligible index contains no Page/List units;
 4. Article arithmetic closes;
 5. source-defect exclusions remain separately listed;
-6. other Article classifications remain explicit;
+6. deferred Article classifications remain explicit and excluded from current canonical/import input;
 7. Page/List handoff preserves all discovered candidate refs and problems;
 8. old destructive mixed triage cannot be used for current promotion;
-9. PR/CI has no unresolved correctness regression;
-10. no Runtime import / EU-51 execution occurred.
-
-If Article blockers remain after this non-human work, EU-50 stays Draft/open at a Human Review Gate rather than inventing classifications.
+9. repository-owned canonical Article bytes/index contain exactly the eligible subset and deterministic integrity/provenance;
+10. PR/CI has no unresolved correctness regression;
+11. no Runtime import / EU-51 execution occurred.
 
 ## 11. Site Package follow-up finding
 
@@ -156,4 +177,6 @@ These require separate Planning/Readiness under Site Package Authority (Issue #7
 
 ## 12. Downstream
 
-EU-51 remains blocked until an accepted **Article-only** snapshot is integrated and a Fresh Context re-runs its readiness check. Site Package Page/List work is a separate branch of work and does not gain Execute Authority from EU-50.
+Once the accepted **current Article subset** snapshot is integrated, EU-50's accepted-snapshot dependency is satisfied even though deferred problem Articles remain outside the current import set. EU-51 still receives no automatic Execute Authority: a Fresh Context must re-run downstream readiness against the integrated snapshot and current Repository Authority.
+
+Deferred problem Articles remain a later review backlog and must not be silently folded into EU-51 import input. Site Package Page/List work is a separate branch of work and does not gain Execute Authority from EU-50.
