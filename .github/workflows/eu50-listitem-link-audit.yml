@@ -48,7 +48,6 @@ jobs:
                       'decisionSource': 'LEGACY_SOURCE',
                   })
 
-          # Restore the duplicate source occurrence that the old URL-identity collector collapsed.
           rows.append({
               'listCode': 'SITE_REGIONAL_GRADUATES',
               'sourceOrder': 22,
@@ -103,7 +102,7 @@ jobs:
           out_dir = pathlib.Path('listitem-link-audit')
           out_dir.mkdir(exist_ok=True)
           (out_dir / 'listitem-link-audit.json').write_text(json.dumps(results, ensure_ascii=False, indent=2) + '\n')
-          fields = ['listCode','sourceOrder','title','sourceUrl','auditUrl','decisionSource','curlExit','httpStatus','finalUrl','contentType','pageTitle','stderr']
+          fields = ['listCode','sourceOrder','legacyKey','title','sourceUrl','auditUrl','decisionSource','curlExit','httpStatus','finalUrl','contentType','pageTitle','stderr']
           with (out_dir / 'listitem-link-audit.csv').open('w', newline='', encoding='utf-8-sig') as f:
               w = csv.DictWriter(f, fieldnames=fields)
               w.writeheader(); w.writerows(results)
