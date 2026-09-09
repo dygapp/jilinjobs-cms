@@ -1,0 +1,136 @@
+name: EU-50 ListItem Link Audit
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/eu50-listitem-link-audit.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    name: Audit discovered Main ListItem links
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - name: Download frozen EU-50 source artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: eu50-main-retry-attempt-3-a96cee22449508f92f3c89789f99aad477286a66
+          path: list-source
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 34303771704
+      - name: Probe all link ListItems
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import concurrent.futures, csv, html, json, pathlib, re, subprocess, tempfile
+
+          root = pathlib.Path('list-source/generated-candidate')
+          list_codes = ['SITE_REGIONAL_GRADUATES', 'SITE_RELATED', 'SITE_JILIN_UNIVERSITIES']
+          rows = []
+          for code in list_codes:
+              index = json.loads((root / 'lists' / code / 'index.json').read_text())
+              for entry in index.get('items', []):
+                  item = json.loads((root / 'lists' / code / entry['path']).read_text())
+                  rows.append({
+                      'listCode': code,
+                      'sourceOrder': item['sourceOrder'],
+                      'legacyKey': item['legacyKey'],
+                      'title': item['title'],
+                      'sourceUrl': item['url'],
+                      'auditUrl': item['url'],
+                      'decisionSource': 'LEGACY_SOURCE',
+                  })
+
+          # Restore the duplicate source occurrence that the old URL-identity collector collapsed.
+          rows.append({
+              'listCode': 'SITE_REGIONAL_GRADUATES',
+              'sourceOrder': 22,
+              'legacyKey': 'main-site-regional-graduates:source-order:22',
+              'title': '四川省高等院校毕业生就业信息网',
+              'sourceUrl': 'http://jyzdzx.scedu.net',
+              'auditUrl': 'https://bigdata.scbdc.edu.cn:8888/',
+              'decisionSource': 'HUMAN_CONFIRMED_REPLACEMENT',
+          })
+          for row in rows:
+              if row['title'] == '湖北省高等院校毕业生就业信息网':
+                  row['auditUrl'] = 'https://www.hbbys.com.cn/'
+                  row['decisionSource'] = 'HUMAN_CONFIRMED_REPLACEMENT'
+
+          def probe(row):
+              with tempfile.TemporaryDirectory() as td:
+                  body = pathlib.Path(td) / 'body'
+                  cmd = [
+                      'curl', '--location', '--silent', '--show-error',
+                      '--connect-timeout', '8', '--max-time', '20', '--max-filesize', '1048576',
+                      '--user-agent', 'Mozilla/5.0 EU50-Link-Audit/1.0',
+                      '--output', str(body),
+                      '--write-out', '%{http_code}\t%{url_effective}\t%{content_type}',
+                      row['auditUrl'],
+                  ]
+                  proc = subprocess.run(cmd, capture_output=True, text=True)
+                  out = proc.stdout.strip().split('\t')
+                  status = out[0] if len(out) > 0 else '000'
+                  final_url = out[1] if len(out) > 1 else ''
+                  content_type = out[2] if len(out) > 2 else ''
+                  title = ''
+                  if body.exists():
+                      raw = body.read_bytes()[:1048576]
+                      text = raw.decode('utf-8', 'replace')
+                      m = re.search(r'<title[^>]*>(.*?)</title>', text, re.I | re.S)
+                      if m:
+                          title = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', '', m.group(1)))).strip()
+                  return {
+                      **row,
+                      'curlExit': proc.returncode,
+                      'httpStatus': status,
+                      'finalUrl': final_url,
+                      'contentType': content_type,
+                      'pageTitle': title,
+                      'stderr': proc.stderr.strip()[-500:],
+                  }
+
+          with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+              results = list(pool.map(probe, rows))
+          results.sort(key=lambda x: (x['listCode'], int(x['sourceOrder'])))
+
+          out_dir = pathlib.Path('listitem-link-audit')
+          out_dir.mkdir(exist_ok=True)
+          (out_dir / 'listitem-link-audit.json').write_text(json.dumps(results, ensure_ascii=False, indent=2) + '\n')
+          fields = ['listCode','sourceOrder','title','sourceUrl','auditUrl','decisionSource','curlExit','httpStatus','finalUrl','contentType','pageTitle','stderr']
+          with (out_dir / 'listitem-link-audit.csv').open('w', newline='', encoding='utf-8-sig') as f:
+              w = csv.DictWriter(f, fieldnames=fields)
+              w.writeheader(); w.writerows(results)
+
+          ok = [r for r in results if r['curlExit'] == 0 and str(r['httpStatus']).startswith(('2','3'))]
+          bad = [r for r in results if r not in ok]
+          redirected = [r for r in results if r['finalUrl'] and r['finalUrl'].rstrip('/') != r['auditUrl'].rstrip('/')]
+          lines = [
+              '# EU-50 ListItem Link Audit', '',
+              f'- Total source occurrences audited: {len(results)}',
+              f'- HTTP/curl successful: {len(ok)}',
+              f'- Probe failures/non-2xx/3xx: {len(bad)}',
+              f'- Redirected/final-URL changed: {len(redirected)}', '',
+              '## Failed / suspicious reachability', '',
+          ]
+          for r in bad:
+              lines.append(f"- [{r['listCode']} #{r['sourceOrder']}] {r['title']} — `{r['auditUrl']}` — curl={r['curlExit']} HTTP={r['httpStatus']} final=`{r['finalUrl']}` title=`{r['pageTitle']}` error=`{r['stderr']}`")
+          lines += ['', '## Redirects / changed final URLs', '']
+          for r in redirected:
+              lines.append(f"- [{r['listCode']} #{r['sourceOrder']}] {r['title']} — `{r['auditUrl']}` → `{r['finalUrl']}` — HTTP={r['httpStatus']} title=`{r['pageTitle']}`")
+          (out_dir / 'listitem-link-audit.md').write_text('\n'.join(lines) + '\n')
+          print(json.dumps({'total':len(results),'ok':len(ok),'failed':len(bad),'redirected':len(redirected)}, ensure_ascii=False))
+          PY
+      - name: Upload link audit evidence
+        uses: actions/upload-artifact@v7
+        with:
+          name: eu50-listitem-link-audit-${{ github.event.pull_request.head.sha || github.sha }}
+          path: listitem-link-audit
+          if-no-files-found: error
+          retention-days: 7
