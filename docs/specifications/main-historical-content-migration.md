@@ -13,26 +13,27 @@
 
 - Specification: **READY / ACTIVE**
 - Current migration scope: **ARTICLE ONLY**
-- Current Execution Unit: **EU-50**
-- EU-51: **BLOCKED pending accepted snapshot integration + fresh Readiness**
+- EU-50 — Main Source Discovery & Article Snapshot Promotion: **COMPLETED / Execute Authority TERMINATED**
+- EU-51 — Main Article Import, Runtime Reconciliation & Human Review: **Candidate / NOT READY / no Execute Authority**
+- Current Ready Execution Unit: **NONE**
 
 ## 1. Pipeline
 
 ```text
 Legacy Main Source
-→ bounded discovery / collection / retry
-→ full source Evidence Candidate
-→ Article-only eligibility + explicit deferred/error classification
-→ Page/List Site Package handoff
-→ accepted current Article subset promotion
-→ Generic Article migration (downstream only)
+→ bounded discovery / collection / retry                 [EU-50 COMPLETED]
+→ full source Evidence Candidate                         [EU-50 COMPLETED]
+→ Article-only eligibility + explicit deferred/error classification [EU-50 COMPLETED]
+→ Page/List Site Package handoff                         [EU-50 COMPLETED]
+→ accepted current Article subset promotion              [EU-50 COMPLETED / INTEGRATED]
+→ Generic Article migration                              [downstream only / NOT READY]
 ```
 
-Only source-discovery stages may access Legacy Source.
+Only source-discovery stages may access Legacy Source. Downstream verification/import must use repository-owned canonical bytes.
 
 ## 2. Discovery output
 
-A discovery/retry evidence chain must record:
+The EU-50 discovery/retry evidence chain records:
 
 - source root and redirect observations;
 - traversed Article surfaces and complete pagination;
@@ -43,11 +44,11 @@ A discovery/retry evidence chain must record:
 - duplicate/cross-surface evidence;
 - every error classification.
 
-Page/List surfaces may be collected in the same bounded source pass for completeness, but they are tagged as Site Package handoff evidence and never become Main migration import units.
+Page/List surfaces were collected in the same bounded source pass for completeness, but they are tagged as Site Package handoff evidence and never become Main migration import units.
 
 ## 3. Article canonical root
 
-After promotion, the Main Historical Migration dataset is Article-oriented:
+The integrated Main Historical Migration dataset is Article-oriented:
 
 ```text
 data-migrations/main/v1/
@@ -77,7 +78,7 @@ Classification is based on the accepted E1 ownership rules and must fail closed 
 
 ## 5. Page/List Site Package handoff
 
-The source pass may emit Page/List evidence, but the output contract is:
+The source pass emits Page/List evidence under this contract:
 
 ```text
 Site Package handoff
@@ -91,8 +92,8 @@ Handoff records:
 - are not listed in `import-eligible-index.json`;
 - do not become `data-migrations/main/v1/pages/**` or `lists/**` import units;
 - preserve all source errors/observations;
-- do not silently modify `sites/jilinjobs/**` during EU-50;
-- may later be consumed by a separately authorized Site Package planning/execution unit.
+- were not used to silently modify `sites/jilinjobs/**` during EU-50;
+- may later be consumed only by a separately authorized Site Package planning/execution unit.
 
 Current capability facts:
 
@@ -117,95 +118,93 @@ An INTERNAL Article may move to `EXCLUDE_PENDING_CLIENT_CONFIRMATION` only if ev
 - approved non-blocking exceptions remain recorded;
 - unknown/unmapped blocking observations are never silently mapped into the current import set.
 
-Current Human Authority (2026-09-09) defers unresolved/problem Articles until the broader current task sequence completes. These Articles are excluded from current import and do not block promotion/integration of the clean or explicitly approved subset, provided they remain separately and durably recorded.
+Current Human Authority defers unresolved/problem Articles until later separate handling. These Articles are excluded from current import and do not block the current project sequence, provided they remain separately and durably recorded.
 
-Page/List problems use the same explicit classifications but are emitted in the Site Package handoff rather than migration withholding.
+Page/List problems use the same explicit classifications but are emitted in the Site Package handoff rather than migration import membership.
 
-## 7. Current Article subset eligibility gate
+## 7. Integrated current Article subset
 
-For Articles:
+Accepted arithmetic:
 
 ```text
-total Article candidates
-= current import eligible
-+ source-defect excluded pending client confirmation
-+ deferred problem Articles
+3314 total Article candidates
+= 3078 current import eligible
++ 6 source-defect excluded pending client confirmation
++ 230 deferred problem Articles
 ```
 
-`import-eligible-index.json` contains an `articles` collection only.
+Current accepted subset:
 
-Current-subset promotion is ready when:
+- INTERNAL: 1577；
+- EXTERNAL_LINK: 1501；
+- local resource files: 2603；
+- resource bytes: 450,273,166；
+- dataset digest: `sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`；
+- integrated main: `05dfa604ccde45c8409cf6a456e4f201534dc602`。
 
-- the arithmetic closes;
-- final retry has no retryable targets;
-- no unscoped blocking observation can invalidate current-subset correctness;
-- current import-eligible count is non-zero;
-- source-defect exclusions and deferred Articles remain separately preserved;
-- the repository-owned promoted tree contains exactly the current import-eligible subset.
-
-The existence of deferred problem Articles alone does not block promotion or current project progression.
-
-Page/List Site Package problems are visible in handoff evidence but do not change Article arithmetic.
+`import-eligible-index.json` contains an `articles` collection only. The 6 source-defect and 230 deferred records remain outside the current canonical Article tree/index and remain durable evidence.
 
 ## 8. Retry / determinism
 
-Collector/retry behavior must:
+The completed EU-50 collector/retry path:
 
-- use explicit bounded source configuration;
-- never re-run unrelated successful records during targeted retry;
-- honor the finite per-target retry budget;
-- record final retry evidence;
-- never infer 404/410 from transport failure;
-- preserve frozen successful collection bytes when retrying only failures.
+- used explicit bounded source configuration;
+- never re-ran unrelated successful records during targeted retry;
+- honored the finite per-target retry budget;
+- recorded final retry evidence;
+- never inferred 404/410 from transport failure;
+- preserved frozen successful collection bytes when retrying only failures.
+
+The accepted promotion is deterministic from the frozen evidence chain. Exact-head replay returned `promotion_changed=false` and the same dataset digest.
 
 ## 9. Promotion / drift
 
-Accepted current Article subset promotion is an explicit repository change. It must copy/freeze only the eligible Article units and their referenced local resources from the frozen evidence chain, retain deterministic provenance/integrity, and keep deferred/source-defect records outside the current import index.
+Accepted current Article subset promotion is an explicit repository-owned dataset change. It freezes only the eligible Article units and their referenced local resources, retains deterministic provenance/integrity, and keeps deferred/source-defect records outside the current import index.
 
 Later source drift or later approval of deferred Articles must produce an evidence-backed diff and must not silently overwrite accepted canonical fingerprints.
 
 Page/List source drift is handled under Site Package follow-up authority, not by changing Main migration semantics.
 
-## 10. Verification matrix
+## 10. Verification closure
 
-### Source evidence
-- all configured Main Article surfaces traversed;
-- pagination termination proven;
-- final retry queue closed;
-- error classes machine-readable.
+### EU-50 final exact-head evidence
 
-### Article eligibility / promotion
-- Article-only arithmetic closes;
-- eligible index has Articles only;
-- source-defect exclusions are separately listed;
-- deferred Article problems are explicit and excluded from current import;
-- no unmapped blocking observation is hidden;
-- promoted repository-owned `index.ndjson` / `articles/**` equals the eligible subset and passes deterministic integrity checks.
+Final Head `8c2fdd6cdbbd4d1faf865d0ba4ca0f40a0096e84`:
 
-### Site Package handoff
-- all discovered Page/List candidates are represented;
-- Page/List problems/observations are preserved;
-- no handoff record is silently deleted by migration triage;
-- stable ListItem capability gap is surfaced rather than bypassed.
+- EU-50 Main Source Discovery #64 / run `34352898345` — **PASS**；
+- EU-50 Main Import Eligibility #30 / run `34352898410` — **PASS**；
+- Canonical Migration Verification #256 / run `34352898301` — **PASS**；
+- Generic Content Migration Verification #51 / run `34352898313` — **PASS**；
+- EU-30 Migration Upgrade Verification #206 / run `34352898498` — **PASS**；
+- CI #944 / run `34352898338` — **PASS**；
+- Review Environment #830 / run `34352898415` — **PASS**。
 
-### Downstream
-EU-50 stops before Runtime import, Public/Admin migration verification and final migrated-content Human Review. Those require later authority.
+### Integrated-main evidence
+
+Integrated `main@05dfa604ccde45c8409cf6a456e4f201534dc602`:
+
+- Generic Content Migration Verification #52 / run `34354290017` — **PASS**；
+- CI #945 / run `34354289981` — **PASS**，包含 Backend / Admin / Public / Integrated Browser。
+
+EU-50 acceptance obligations are closed. Runtime Main import, migrated-content Human Review and final E3 closure remain downstream concerns.
 
 ## 11. Slice sequencing
 
 1. **EU-50 — Main Source Discovery & Article Snapshot Promotion**
-   - current Execute unit;
-   - owns external source evidence, Article eligibility/promotion, deferred evidence and Page/List handoff;
-   - does not mutate Runtime CMS product data.
+   - **COMPLETED**；
+   - accepted current Article subset integrated；
+   - Execute Authority **TERMINATED**。
 2. **EU-51 — Main Article Import, Runtime Reconciliation & Human Review**
-   - downstream candidate only;
-   - blocked until EU-50 accepted current Article snapshot integration and a fresh readiness decision.
+   - downstream Candidate only；
+   - EU-50 dataset dependency **SATISFIED**；
+   - `readiness-check = PENDING / NOT RUN after integration`；
+   - no Execute Authority。
 3. **Deferred problem Article review**
-   - later explicit review/decision work;
-   - not current import input and not a blocker to current-subset progression.
+   - later explicit review/decision work；
+   - not current import input and not a blocker to current progression。
 4. **Site Package Page/List follow-up**
-   - separate planning gate;
-   - owns accepted Page content and stable Main ListItem capability/content;
-   - not automatically an EU-50/EU-51 subtask.
+   - separate planning gate；
+   - owns accepted Page content and stable Main ListItem capability/content；
+   - does not inherit EU-50/EU-51 authority。
 
 No Unit inherits Execute Authority from another.
