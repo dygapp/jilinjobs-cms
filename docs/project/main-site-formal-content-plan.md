@@ -9,9 +9,10 @@
 - E2 / EU-49: **COMPLETED**
 - E3 Article migration sequence: **COMPLETED through EU-50 / EU-51**
 - Main Page Site Package follow-up / EU-52: **COMPLETED / Execute Authority TERMINATED**
-- Main ListItem Site Package follow-up: **Planning / direct bootstrap-data completion**
-- Current Ready Execution Unit: **NONE**
-- Planning baseline: `main@4d5578a2715f8adc0ebca73ee0ae7342f740c8ce`
+- Main ListItem Site Package follow-up / EU-53: **READY / bootstrap-data completion**
+- Current Ready Execution Unit: **EU-53**
+- Planning/Readiness baseline: `main@4d5578a2715f8adc0ebca73ee0ae7342f740c8ce`
+- Work Authority: `docs/work/current/eu53-main-listitem-bootstrap-completion.md`
 
 ## 1. Current ownership boundary
 
@@ -23,10 +24,10 @@ Main Page formal content + stable Page assets
     → JilinJobs Site Package / EU-52 completed
 
 Main ListItem initial site data
-    → JilinJobs Site Package bootstrap SQL
+    → JilinJobs Site Package bootstrap SQL / EU-53
 
 Party ListItems / Party carousel
-    → Party migration authority; not part of this Main follow-up
+    → Party migration authority; not part of EU-53
 ```
 
 EU-50 source discovery already established that Main ListItem data does not belong to Article Historical Migration. The remaining gap is only that the reviewed Main ListItem values were not fully written into the Site Package initialization SQL.
@@ -51,7 +52,7 @@ Site Package stable structure provision
 
 `SitePackageBootstrapper` already records `(packageId, bootstrapId)` in `cms_site_bootstrap_state`; an applied bootstrap is not replayed on every startup. No new ListItem stable identity, Flyway column, package `list-items` structure type, adoption algorithm, delete protection or runtime reconcile capability is required.
 
-## 4. Main scope
+## 4. EU-53 scope
 
 The Main initialization SQL must contain:
 
@@ -73,14 +74,13 @@ No live-network re-audit is required. Accepted titles/URLs from that report are 
 
 ## 5. Implementation boundary
 
-Required changes are intentionally small:
+EU-53 is intentionally small:
 
-1. update the Main ListItem Requirement / Specification / Technical Plan to the bootstrap-SQL model;
-2. keep Generic CMS schema and Site Package provisioner unchanged;
-3. expand `sites/jilinjobs/bootstrap/initial-data.sql` with the accepted Main ListItem rows;
-4. keep the Main `HOME_CAROUSEL` row in the same SQL;
-5. update `sites/jilinjobs/bootstrap/manifest.json` SHA-256 for the changed SQL;
-6. add or update focused verification that a Fresh Site receives the expected Main ListItem counts/content and that Party data is unaffected.
+1. keep Generic CMS schema and Site Package provisioner unchanged;
+2. expand `sites/jilinjobs/bootstrap/initial-data.sql` with the accepted Main ListItem rows;
+3. keep the Main `HOME_CAROUSEL` row in the same SQL;
+4. update `sites/jilinjobs/bootstrap/manifest.json` SHA-256 for the changed SQL;
+5. add or update focused verification that a Fresh Site receives the expected Main ListItem counts/content and that Party data is unaffected.
 
 This work does not create a new long-lived ListItem ownership subsystem.
 
@@ -109,9 +109,9 @@ External third-party availability is not part of Runtime acceptance; the links w
 - no ListItem reconcile/adoption/removal/delete-protection framework;
 - no Party ListItem or `PARTY_CAROUSEL` changes;
 - no Article migration changes;
-- no Hui Employment iframe changes in this unit;
+- no Hui Employment iframe changes in EU-53;
 - no `agentic-dev` baseline update.
 
 ## 8. Current Gate
 
-The corrected Requirement / Specification / Technical Plan define a direct bootstrap-data implementation. After these documents are internally consistent, the work can be sliced as one small execution unit and passed through the repository's normal Readiness gate. No previous EU Execute Authority is inherited.
+`slice-work` has formed **EU-53 — Main ListItem Bootstrap Completion** and `readiness-check` is **PASS**. Planning/Readiness Authority must integrate first; then Execute recovery revalidates the integrated `main` and establishes the EU-53 Execute baseline. No previous EU Execute Authority is inherited.
