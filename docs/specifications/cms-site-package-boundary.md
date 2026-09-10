@@ -8,7 +8,6 @@
 - `docs/specifications/public-frontend-replaceability.md`
 - `data-migrations/README.md`
 - `docs/requirements/main-stable-listitem-site-package.md`
-- `docs/specifications/main-stable-listitem-site-package.md`
 
 ## Status
 
@@ -16,8 +15,7 @@
 - Foundation: **EU-37～EU-42 COMPLETED**
 - Cross-boundary convergence: **EU-43～EU-48 + Phase 3 PASS**
 - Main Page formal-content adoption: **EU-52 COMPLETED**
-- Main stable ListItem ownership: **Site Package**
-- Main stable ListItem design: **Requirement / Specification / Technical Plan READY; implementation not yet authorized**
+- Main ListItem ownership: **JilinJobs Site Package bootstrap data**
 
 ## 1. Four-layer contract
 
@@ -33,173 +31,100 @@ Runtime CMS Data
 Replaceable Public Renderer
 ```
 
-The layers may remain in one repository, but source ownership and lifecycle are distinct.
+The layers may remain in one repository, but source ownership and lifecycle remain distinct.
 
 ## 2. Generic CMS Core
 
 Core includes site-neutral schema/domain/API/provisioning/migration primitives. It must not embed JilinJobs product values.
 
-Accepted provisioning primitives include stable identity/reconcile for Columns, PageGroups/Pages, Navigation, SiteConfig, CmsList definitions and AdvertisementSlots plus site-neutral bootstrap-state and stable-asset capabilities.
+Accepted provisioning primitives include stable structure for Columns, PageGroups/Pages, Navigation, SiteConfig, CmsList definitions and AdvertisementSlots, plus the site-neutral one-time bootstrap mechanism.
 
-The current Main ListItem Planning Authority extends the design with a site-neutral stable ListItem primitive:
-
-- nullable ListItem stable code;
-- stable logical identity `(list_id, code)`;
-- optional Site Package `list-items` representation;
-- guarded adoption/reconcile/report mechanics;
-- stable-item deletion protection while ordinary null-code rows remain operator data.
-
-The Generic primitive must not contain the concrete JilinJobs 96-member dataset.
+Main ListItem completion requires **no new Generic Core capability**. `cms_list_item` remains ordinary Runtime data populated by Site Package bootstrap SQL.
 
 ## 3. JilinJobs Site Package
-
-### 3.1 Versioned owner
 
 `sites/jilinjobs/` is the versioned source owner for:
 
 ```text
 manifest.json
-structure/**     # stable structure/content/defaults
-bootstrap/**     # truly one-time ordinary defaults only
+structure/**     # stable structure/content
+bootstrap/**     # one-time site initialization data
 assets/**        # stable site assets
 ```
 
-### 3.2 Stable Page
+### Main Page
 
-Page stable identity remains `(groupAlias? + alias)`. EU-52 completed Main formal Page body/resource adoption with explicit prior-baseline guards; ordinary operator edits continue to survive reconcile.
+EU-52 completed current Main formal Page content and stable Page assets through Site Package authority.
 
-Main Page formal content is Site Package content, not Historical Migration input.
+### Main ListItem
 
-### 3.3 Stable CmsList / ListItem
+Main ListItem initial data belongs to `sites/jilinjobs/bootstrap/initial-data.sql`.
 
-CmsList definition stable identity remains `code`.
+Current Main scope includes:
 
-For Main stable ListItems, current accepted design is:
+- `HOME_CAROUSEL` Main carousel initialization;
+- `SITE_RELATED` 5 reviewed links;
+- `SITE_REGIONAL_GRADUATES` 31 reviewed links;
+- `SITE_JILIN_UNIVERSITIES` 60 reviewed links.
 
-```text
-package identity = (listCode, itemCode)
-runtime identity = (list_id, code)
-```
+The three SITE_LINKS groups consume the final EU-50 reviewed content decision from repository history. They do not become Historical Migration input.
 
-`code = NULL` continues to mean ordinary operator-created ListItem. Non-null code is package stable membership identity. Stable identity is independent from numeric id, title, URL and sort order.
+After bootstrap, these rows follow the existing ordinary operator-managed ListItem lifecycle. Site Package does not reconcile or resurrect them on later startup.
 
-Current Main package scope is exactly the reviewed SITE_LINKS membership:
+## 4. One-time bootstrap
 
-- `SITE_RELATED`: 5;
-- `SITE_REGIONAL_GRADUATES`: 31;
-- `SITE_JILIN_UNIVERSITIES`: 60;
-- total: 96.
-
-Concrete content remains JilinJobs Site Package data. Current Generic package capability is intentionally limited to stable `LINK` ListItems because no current Main requirement needs ARTICLE/image ListItem package projection.
-
-## 4. Operator mutation boundary
-
-Stable ListItem membership and identity are package-owned; ordinary mutable presentation/target payload remains operator-maintainable after create/adoption.
-
-Therefore:
-
-- package creates a missing stable identity from package defaults;
-- package may adopt a known prior package/bootstrap row only through exact declared fingerprint;
-- ordinary reconcile does not overwrite operator-mutated title/URL/sort/enabled/etc.;
-- stable-coded rows cannot be deleted through ordinary Admin;
-- operator-created null-code rows remain normal CRUD data and do not participate in stable reconcile;
-- package omission is not a deletion instruction.
-
-Future stable-member retirement requires explicit versioned Authority rather than absence-based deletion.
-
-## 5. One-time bootstrap
-
-Bootstrap remains for data whose desired lifecycle is:
+The accepted lifecycle is:
 
 ```text
 install once
 → ordinary operator-managed Runtime data
-→ never reconciled/resurrected by package
+→ no replay after cms_site_bootstrap_state records the bootstrapId
 ```
 
-Historical current bootstrap contains:
+`SitePackageBootstrapper` already implements this contract. Therefore Main ListItem completion does not require stable ListItem identity, a new package structure type, runtime reconcile, adoption fingerprints or delete protection.
 
-- `HOME_CAROUSEL`: 1 ListItem;
-- `SITE_RELATED`: 5 ListItems;
-- `HOME_RECRUITMENT_PROMO`: 1 Advertisement.
+## 5. Party boundary
 
-The Main stable ListItem plan now defines the transition:
+Party ListItems remain governed by Party migration/current Party Authority. In particular, `PARTY_CAROUSEL` is not duplicated into Main Site Package bootstrap data.
 
-- the five SITE_RELATED defaults leave bootstrap when stable `list-items` becomes active;
-- Existing Sites adopt those five only from exact known prior-bootstrap fingerprints;
-- HOME_CAROUSEL stays bootstrap/operator-managed in this scope;
-- Advertisement bootstrap stays unchanged.
-
-This preserves EU-41 bootstrap semantics for truly bootstrap-owned rows while moving only the separately authorized stable membership into Site Package structure.
+This Main correction does not change Party migration ownership or Runtime behavior.
 
 ## 6. Historical Migration
 
-Historical Migration owns provenance/fingerprint/import-oriented historical content.
+Historical Migration owns historical Articles/resources and migration provenance/fingerprint/import concerns.
 
-Current Main Article contract remains INTERNAL / EXTERNAL_LINK Article plus accepted resources and migration evidence. Main Page and stable Main ListItem are not Historical Migration fallback content.
+Main Page and Main ListItem are not Article Historical Migration content. EU-50 may retain source-discovery evidence about them, but current product delivery is through Site Package Page content/assets and bootstrap SQL respectively.
 
-Party ListItem migration remains governed by Party's accepted authority and is not changed by Main ListItem package ownership.
+## 7. Runtime composition
 
-## 7. Site Package stable identities
-
-Current accepted identities include:
-
-- Column → alias;
-- PageGroup → alias;
-- Page → groupAlias + alias;
-- NavigationLocation → code;
-- NavigationItem → provisioning code;
-- CmsList → code;
-- **ListItem → parent list code + stable item code**;
-- AdvertisementSlot → code;
-- SiteConfig → key.
-
-For the current 96 Main entries, explicit package item codes are assigned once to the frozen reviewed occurrences. They are never dynamically regenerated from legacy order, Runtime sort order, title or URL.
-
-## 8. Runtime composition
-
-Accepted target composition becomes:
+Accepted composition remains:
 
 ```text
 Generic Flyway schema
-→ Site Package stable reconcile
-     ├─ existing stable structure
-     └─ optional stable list-items
-→ optional one-time bootstrap for remaining ordinary defaults
+→ Site Package stable structure reconcile
+→ Site Package one-time bootstrap data
 → stable asset projection
 → optional Historical Article migration
 → Runtime
 ```
 
-Stable ListItems join stable reconcile once the separately planned implementation passes Readiness and is integrated. They never enter Historical Migration solely because EU-50 originally discovered them.
+Main ListItems are inserted in the one-time bootstrap step.
 
-## 9. Replaceable Public Renderer
+## 8. Replaceable Public Renderer
 
-Public renderer continues to consume stable public APIs, routes, `/static/**`, SiteConfig, Navigation, Lists, Pages and Articles. It does not own source definitions or stable provisioning identity.
+Public renderer continues to consume Generic public APIs and does not own ListItem source definitions. Main SITE_LINKS continue through the existing list public contract; no Main-specific API is introduced.
 
-The current Main ListItem plan keeps `/api/public/lists/by-group/SITE_LINKS` as the public contract and introduces no Main-specific endpoint.
+## 9. Verification
 
-## 10. Verification
+Current Main ListItem verification must prove:
 
-Current stable ListItem planning requires evidence for:
+- bootstrap SQL / manifest digest integrity;
+- Fresh Site Main carousel initialization;
+- SITE_LINKS counts 5 / 31 / 60 and accepted title/URL data;
+- second bootstrap evaluation does not replay or duplicate data;
+- no Party ListItem changes;
+- existing Generic Core/Site Package/Public behavior remains compatible.
 
-- append-only nullable ListItem stable identity;
-- Generic package code containing no JilinJobs-specific member data;
-- Site Package with/without optional `list-items`;
-- exact Fresh Site 5 + 31 + 60 Main SITE_LINKS membership;
-- guarded adoption of the historical five SITE_RELATED bootstrap rows;
-- no heuristic ownership claim, no duplicate bootstrap creation;
-- operator-edit preservation and stable-item delete protection;
-- no absence-based deletion;
-- Public SITE_LINKS rendering;
-- HOME_CAROUSEL, Party, Page, Article/migration and full repository regression compatibility.
+## 10. Current Gate
 
-## 11. Current Gate
-
-The stable Main ListItem architecture questions previously recorded here are now resolved by:
-
-- `docs/requirements/main-stable-listitem-site-package.md`;
-- `docs/specifications/main-stable-listitem-site-package.md`;
-- `docs/technical/main-stable-listitem-site-package.md`.
-
-They are READY Planning Authority but do not themselves grant Execute Authority. Current Ready Execution Unit remains **NONE** until this Planning Authority is integrated and `slice-work → readiness-check` completes against current `main`.
+The previous proposal for a stable ListItem identity/reconcile subsystem is superseded. The current Planning Authority is a bounded Site Package bootstrap-data completion and may proceed through the normal `slice-work → readiness-check` gate without Generic schema/provisioner expansion.
