@@ -15,7 +15,7 @@
 - Foundation: **EU-37～EU-42 COMPLETED**
 - Cross-boundary convergence: **EU-43～EU-48 + Phase 3 PASS**
 - Main Page formal-content adoption: **EU-52 COMPLETED**
-- Main ListItem ownership: **JilinJobs Site Package bootstrap data**
+- Main ListItem ownership: **JilinJobs Site Package bootstrap data / EU-53 READY**
 
 ## 1. Four-layer contract
 
@@ -116,7 +116,7 @@ Public renderer continues to consume Generic public APIs and does not own ListIt
 
 ## 9. Verification
 
-Current Main ListItem verification must prove:
+EU-53 verification must prove:
 
 - bootstrap SQL / manifest digest integrity;
 - Fresh Site Main carousel initialization;
@@ -127,4 +127,4 @@ Current Main ListItem verification must prove:
 
 ## 10. Current Gate
 
-The previous proposal for a stable ListItem identity/reconcile subsystem is superseded. The current Planning Authority is a bounded Site Package bootstrap-data completion and may proceed through the normal `slice-work → readiness-check` gate without Generic schema/provisioner expansion.
+The previous proposal for a stable ListItem identity/reconcile subsystem is superseded. `slice-work` has formed **EU-53 — Main ListItem Bootstrap Completion** and `readiness-check` is **PASS**. Planning/Readiness Authority integrates first; Execute then uses only the existing bootstrap SQL mechanism and does not expand Generic schema/provisioning.
