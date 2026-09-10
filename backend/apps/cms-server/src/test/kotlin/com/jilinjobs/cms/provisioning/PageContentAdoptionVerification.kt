@@ -8,6 +8,8 @@ import javax.sql.DataSource
 import org.springframework.boot.WebApplicationType
 import org.springframework.boot.builder.SpringApplicationBuilder
 
+private const val ADOPTION_TEST_ALIAS = "eu52-adoption-verification"
+
 fun main() {
     val dbUrl = requireNotNull(System.getenv("SITE_PACKAGE_VERIFY_DB_URL")) { "SITE_PACKAGE_VERIFY_DB_URL is required" }
     val context = SpringApplicationBuilder(CmsApplication::class.java)
@@ -26,17 +28,19 @@ fun main() {
         val root = Files.createTempDirectory("eu52-page-adoption-")
         val oldBody = "<p>关于我们内容可通过固定页面管理维护。</p>"
         val acceptedOldFingerprint = "7b0edda0a0731b89e578d442cdf9e243dccf7e97eaa8d867aeb068742733904e"
+        val testIdentity = "<root>:$ADOPTION_TEST_ALIAS"
 
+        deleteTestPage(dataSource)
         writePackage(root, "About", oldBody, 10, null)
         val first = provisioner.apply(root)
-        require(first.created == 1 && first.updated == 0 && first.unchanged == 0)
+        require(first.created == 1 && first.updated == 0 && first.unchanged == 0) { "Initial isolated create unexpected: $first" }
         require(first.adoptedPageContent.isEmpty() && first.protectedPageContent.isEmpty())
         require(readPage(dataSource).bodyHtml == oldBody)
 
         writePackage(root, "About", "<p>Formal package content</p>", 10, acceptedOldFingerprint)
         val adopted = provisioner.apply(root)
         require(adopted.created == 0 && adopted.updated == 1 && adopted.unchanged == 0) { "Adoption counters unexpected: $adopted" }
-        require(adopted.adoptedPageContent == listOf("<root>:about")) { "Adoption identity report unexpected: $adopted" }
+        require(adopted.adoptedPageContent == listOf(testIdentity)) { "Adoption identity report unexpected: $adopted" }
         require(adopted.protectedPageContent.isEmpty())
         require(readPage(dataSource).bodyHtml == "<p>Formal package content</p>")
 
@@ -45,10 +49,11 @@ fun main() {
         require(idempotent.adoptedPageContent.isEmpty() && idempotent.protectedPageContent.isEmpty())
 
         dataSource.connection.use { connection ->
-            connection.prepareStatement("UPDATE cms_page SET body_html=?,render_mode=?,embed_url=? WHERE group_id IS NULL AND alias='about'").use {
+            connection.prepareStatement("UPDATE cms_page SET body_html=?,render_mode=?,embed_url=? WHERE group_id IS NULL AND alias=?").use {
                 it.setString(1, "<p>Operator edit after adoption</p>")
                 it.setString(2, "INTERNAL_STATIC")
                 it.setString(3, "/operator-owned")
+                it.setString(4, ADOPTION_TEST_ALIAS)
                 require(it.executeUpdate() == 1)
             }
         }
@@ -56,13 +61,13 @@ fun main() {
         val protected = provisioner.apply(root)
         require(protected.created == 0 && protected.updated == 0 && protected.unchanged == 1)
         require(protected.adoptedPageContent.isEmpty())
-        require(protected.protectedPageContent == listOf("<root>:about")) { "Protected identity report missing: $protected" }
+        require(protected.protectedPageContent == listOf(testIdentity)) { "Protected identity report missing: $protected" }
         require(readPage(dataSource) == operator) { "Ordinary reconcile overwrote operator content" }
 
         writePackage(root, "About renamed", "<p>Formal package content</p>", 20, acceptedOldFingerprint)
         val structural = provisioner.apply(root)
         require(structural.created == 0 && structural.updated == 1 && structural.unchanged == 0)
-        require(structural.protectedPageContent == listOf("<root>:about"))
+        require(structural.protectedPageContent == listOf(testIdentity))
         require(readPage(dataSource) == operator.copy(name = "About renamed", sortOrder = 20)) { "Structural reconcile did not preserve protected content" }
 
         writePackage(root, "Invalid", "<p>Invalid</p>", 10, "not-a-sha")
@@ -83,8 +88,18 @@ private data class AdoptionPageState(
     val sortOrder: Int,
 )
 
+private fun deleteTestPage(dataSource: DataSource) {
+    dataSource.connection.use { connection ->
+        connection.prepareStatement("DELETE FROM cms_page WHERE group_id IS NULL AND alias=?").use { statement ->
+            statement.setString(1, ADOPTION_TEST_ALIAS)
+            statement.executeUpdate()
+        }
+    }
+}
+
 private fun readPage(dataSource: DataSource): AdoptionPageState = dataSource.connection.use { connection ->
-    connection.prepareStatement("SELECT name,body_html,render_mode,embed_url,sort_order FROM cms_page WHERE group_id IS NULL AND alias='about'").use { statement ->
+    connection.prepareStatement("SELECT name,body_html,render_mode,embed_url,sort_order FROM cms_page WHERE group_id IS NULL AND alias=?").use { statement ->
+        statement.setString(1, ADOPTION_TEST_ALIAS)
         statement.executeQuery().use { result ->
             require(result.next())
             AdoptionPageState(result.getString("name"), result.getString("body_html"), result.getString("render_mode"), result.getString("embed_url"), result.getInt("sort_order"))
@@ -99,7 +114,7 @@ private fun writePackage(root: Path, name: String, body: String, sortOrder: Int,
     val adoption = adoptionFingerprint?.let { ",\"contentAdoptionFromFingerprint\":\"$it\"" } ?: ""
     Files.writeString(
         pages,
-        "[{\"groupAlias\":null,\"alias\":\"about\",\"name\":\"$name\",\"bodyHtml\":\"$body\",\"renderMode\":\"RICH_TEXT\",\"embedUrl\":null$adoption,\"sortOrder\":$sortOrder,\"enabled\":true,\"preset\":true}]\n",
+        "[{\"groupAlias\":null,\"alias\":\"$ADOPTION_TEST_ALIAS\",\"name\":\"$name\",\"bodyHtml\":\"$body\",\"renderMode\":\"RICH_TEXT\",\"embedUrl\":null$adoption,\"sortOrder\":$sortOrder,\"enabled\":true,\"preset\":true}]\n",
     )
     Files.writeString(
         root.resolve("manifest.json"),
