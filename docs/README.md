@@ -51,15 +51,18 @@ Phase 1 使用四类语义角色：
 
 ### Current Issue #60 Main Site Formal Content Authority
 
-Issue #60 当前阶段性结果：E1 Planning / Authority closure 已完成；E2 / EU-49 foundation 已完成；E3 / EU-50～EU-51 accepted Article sequence 已完成；EU-52 Main Page Formal Content Package Adoption 已完成并终止 Execute Authority。
+Issue #60 当前阶段性结果：E1 Planning / Authority closure 已完成；E2 / EU-49 foundation 已完成；E3 / EU-50～EU-51 accepted Article sequence 已完成；EU-52 Main Page Formal Content Package Adoption 与 **EU-53 Main ListItem Bootstrap Completion** 均已完成并终止 Execute Authority。
 
-- EU-52 implementation PR #125 final Head：`ff4acdc08e9b902d6aa273ff33fae33fb5bfc520`；
-- integrated main：`ccbd9fd8c6048f5b4a96d965b8578f7b7a1d2838`；
-- exact-head automated verification + bounded Human Review：**PASS**；
-- Post-Integration CI #973 / run `34442174532`：**PASS**；Site Package #104、Backend Boundary #41、Generic #64、Party #19：**PASS**；
-- accepted Page result：10 formal Pages + 156 new Page-owned assets；Site Package assets total 187；`budget` 13 PDFs package-owned；guarded exact-baseline Existing-Site adoption + operator divergence protection；
-- EU-52 Completed Work Evidence：`docs/work/archive/eu52-main-page-formal-content-package-adoption.md`；
-- stable Main ListItem：独立 Planning Candidate / no Identifier；
+EU-53 current result：
+
+- Planning / Readiness PR #129 已集成到 `main@26a772928278754f478b38742423fc7b71b1f439`；
+- implementation PR #130 final Head：`10449bedf4df38aa2daec99b80d0a9637df2f8db`；
+- implementation integrated main：`b1130b110bccdb1565c340a6cce62504ec06a87a`；
+- exact-head CI #987、Site Package #109、Backend Boundary #42、EU-51 Runtime #22、EU-51 Browser #18、Review Environment #865：**PASS**；
+- Post-Integration CI #988 / run `34484030549`、Site Package #110、Backend Boundary #43：**PASS**；
+- accepted Main ListItem result：`HOME_CAROUSEL = 1`，`SITE_RELATED = 5`，`SITE_REGIONAL_GRADUATES = 31`，`SITE_JILIN_UNIVERSITIES = 60`，通过现有 Site Package one-time bootstrap SQL 初始化；
+- Party ListItem / `PARTY_CAROUSEL` 未进入 Main bootstrap，继续由 Party migration/current Party Authority 管理；
+- EU-53 Completed Work Evidence：`docs/work/archive/eu53-main-listitem-bootstrap-completion.md`；
 - 230 deferred + 6 source-defect Articles：独立 later-review / customer-confirmation boundary；
 - Current Ready Execution Unit：**NONE**。
 
@@ -72,7 +75,10 @@ Current planning / product Authority：
 - `docs/requirements/main-historical-content-migration.md`
 - `docs/specifications/main-historical-content-migration.md`
 - `docs/technical/main-historical-content-migration.md`
+- `docs/requirements/main-stable-listitem-site-package.md`
+- `docs/specifications/main-stable-listitem-site-package.md`
+- `docs/technical/main-stable-listitem-site-package.md`
 
-下一自然 Gate 是新的 Fresh Context Planning/Readiness decision；不得从 EU-52 completion 自动进入 stable ListItem、deferred Article 或其他 successor Unit。
+下一自然 Gate 是新的 Fresh Context Planning/Readiness decision；不得从 EU-53 completion 自动进入 deferred Article、慧就业 iframe 或其他 successor Unit。
 
 `data-migrations/**` 是 Historical Content Migration 的 current data/provenance workspace，不属于 documentation archive；“历史内容”不等于 `HISTORICAL_EVIDENCE`。
