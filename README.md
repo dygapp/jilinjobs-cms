@@ -27,6 +27,8 @@ Fresh Context 按以下入口恢复，避免把历史执行记录当作当前 Au
 
 `docs/**/archive/**` 与 `docs/work/archive/**` 默认只承担 traceability / historical evidence，不参与 Fresh Context Current Authority 恢复，除非当前 Authority 明确要求读取。
 
+当前执行作用域护栏见 `docs/project/execution-scope-guardrails.md`。当用户目标仅为 Repository 状态恢复 / 检查 / 总结，且恢复结果为 `Current Ready Execution Unit = NONE` 时，默认在完成只读状态报告后停止，不因非阻塞文档漂移自动创建新的 Branch / PR / Workflow 生命周期；高成本验证与 Historical Migration 只在当前变更和 Evidence Claim 确实需要时升级执行。
+
 ## 当前 Gate
 
 Issue #92 Phase 0～Phase 3、E1 Planning closure、E2 / EU-49、E3 / EU-50～EU-51、EU-52 Main Page Formal Content Package Adoption，以及 **EU-53 Main ListItem Bootstrap Completion** 均已完成相应当前闭环。
@@ -48,6 +50,7 @@ Deferred Article review
 - EU-53 implementation PR #130 final Head `10449bedf4df38aa2daec99b80d0a9637df2f8db` 已 squash 集成到 `main@b1130b110bccdb1565c340a6cce62504ec06a87a`；
 - Main ListItem bootstrap 已固化：`HOME_CAROUSEL = 1`、`SITE_RELATED = 5`、`SITE_REGIONAL_GRADUATES = 31`、`SITE_JILIN_UNIVERSITIES = 60`；bootstrap 后继续作为普通 operator-managed data，不新增 stable identity / reconcile；
 - Party ListItem / `PARTY_CAROUSEL` 继续由 Party migration/current Party Authority 管理，不进入 Main bootstrap；
+- Main historical migration execution 当前为 **FROZEN / explicit reactivation only**：既有 `data-migrations/main/**` canonical evidence 保留，原 EU-50 / EU-51 workflow 原样归档到 `.github/frozen-workflows/main-migration/`，普通流程不得触发；Party migration 不在冻结范围内；
 - exact-head CI #987、Site Package #109、Backend Boundary #42、EU-51 Runtime #22、Imported Browser #18 均 PASS；Post-Integration `main@b1130b...` 的 CI #988、Site Package #110、Backend Boundary #43 均 PASS；
 - 230 篇 deferred problem Articles 与 6 篇 source-defect Articles继续作为独立 later-review / customer-confirmation evidence；
 - **Current Ready Execution Unit：NONE**。
@@ -83,6 +86,7 @@ Current Main formal-content Authority：
 
 - Repository 工作规则：`AGENTS.md`；
 - Consumer-local Development Method：`docs/project/development-method.md`；
+- Execution Scope Guardrails：`docs/project/execution-scope-guardrails.md`；
 - Current Roadmap：`docs/project/project-roadmap.md`；
 - Verification Strategy：`docs/technical/verification-strategy.md`；
 - Backend build / ownership entry：`backend/build.gradle.kts`、`backend/settings.gradle.kts`、`backend/README.md`；
