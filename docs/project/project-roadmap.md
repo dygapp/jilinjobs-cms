@@ -23,15 +23,15 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | Issue #60 / E2 Main Single-page Formal Content foundation | **COMPLETED** | EU-49 已关闭 Page operational-content ownership gap，并建立 site-neutral Generic Page canonical migration foundation |
 | Issue #60 / E3 / EU-50 Main Source Discovery & Accepted Snapshot Promotion | **COMPLETED** | accepted current Article subset 已 repository-owned promotion 并集成；Execute Authority terminated |
 | Issue #60 / E3 / EU-51 Main Canonical Import, Runtime Reconciliation & Human Review | **COMPLETED** | 3078 accepted Articles 已完成 Fresh Runtime import / reconciliation / idempotency、Public/Admin/Integrated Browser 与 bounded Human Review；Execute Authority terminated |
-| EU-52 Main Page Formal Content Package Adoption | **READY / Execute NOT STARTED** | Page-only Site Package follow-up 已完成 Requirement / Specification / Technical Planning、`slice-work` 与 `readiness-check`；等待 Planning/Readiness integration 后 Fresh Context Execute-baseline recovery |
+| EU-52 Main Page Formal Content Package Adoption | **COMPLETED** | 10 formal Pages + Page-owned assets + guarded Existing-Site adoption 已通过 PR #125、bounded Human Review 与 Post-Integration verification；Execute Authority terminated |
 | stable Main ListItem Site Package follow-up | **Planning Candidate** | stable identity / package representation / adoption / reconcile / operator mutation / upgrade semantics仍需独立 Planning；无 Identifier |
 | Deferred problem Article review | deferred | 230 篇 problem Article 与 6 篇 source-defect Article 保持独立 evidence / client-review backlog，不阻断当前路线 |
 | Repository Split Readiness Assessment | deferred | 四层 boundary 已闭环，但 Assessment 仍独立后置 |
 | Issues #57 / #59 / #60 其他候选 | 规划层保留 | C1/C2、Browser Compatibility、Public Rendering Architecture 等保持独立 |
 
-Current Ready Execution Unit：**EU-52 — Main Page Formal Content Package Adoption**。
+Current Ready Execution Unit：**NONE**。
 
-EU-52 Readiness does not establish Execute Authority. The next Gate is Planning/Readiness integration followed by a new Fresh Context that independently revalidates integrated `main`, current Issue #60 / #77 Authority, source artifact freshness and base drift before establishing an Execute baseline.
+EU-52 已完成并终止 Execute Authority。下一 Gate 是新的 Fresh Context Planning/Readiness decision；任何后续候选必须独立形成 Readiness，不能继承 EU-52 Execute Authority。
 
 ## 当前已接受长期边界
 
@@ -57,7 +57,7 @@ sites/jilinjobs/
 - stable assets 使用 manifest integrity + create-if-missing projection + protected-path；
 - `/static/uploads/**` 与 historical canonical assets 不属于 stable Site asset ownership；
 - Page stable identity / required structure由 Site Package持有；EU-49 已完成 ownership transfer，使 ordinary reconcile 不再覆盖 existing Page 的 operator-managed `bodyHtml / renderMode / embedUrl`；
-- EU-52 current contract进一步明确 accepted Main Page formal body 是 package create-time default，accepted stable Page resource 是 package asset；Existing Site只允许在 exact prior-package baseline match 时进行显式一次性 adoption，operator divergence必须保留并报告；
+- EU-52 已实现并验证 accepted Main Page formal body 作为 package create-time default、accepted stable Page resource作为 package asset；Existing Site只在 exact prior-package baseline match 时显式一次性 adoption，operator divergence保留并报告；
 - stable Main ListItem membership 仍属于独立 Site Package Planning Candidate，不属于 EU-52 或 Historical Migration fallback。
 
 ### 3. Historical Content Migration
@@ -110,7 +110,7 @@ Current accepted contract：
 - `docs/requirements/main-single-page-formal-content.md`
 - `docs/specifications/main-single-page-formal-content.md`
 - `docs/technical/main-single-page-formal-content.md`
-- EU-52 Current Work：`docs/work/current/eu52-main-page-formal-content-package-adoption.md`
+- EU-52 Completed Work Evidence：`docs/work/archive/eu52-main-page-formal-content-package-adoption.md`
 - EU-49 completed Work Evidence：`docs/work/archive/eu49-page-content-migration-foundation.md`
 
 EU-49 已完成 Page operational-content ownership、Generic Page canonical migration foundation 与 append-only V3 mapping。Implementation integrated main：`18da735c654c1a5d1310fe6db7e8e98f6f7b0026`；Authority closure integrated main：`e6fe7674398ad8c29fa7ff1d62eb500754a66cc8`。EU-49 Execute Authority 已终止。
@@ -161,19 +161,20 @@ Execution / integration result：
 - no Generic migration implementation or canonical bytes were changed；
 - Execute Authority：**TERMINATED**。
 
-### EU-52 — Main Page Formal Content Package Adoption — READY
+### EU-52 — Main Page Formal Content Package Adoption — COMPLETED
 
-EU-52 Planning/Readiness has frozen the Page-only delivery boundary:
+EU-52 completed the Page-only Site Package delivery boundary:
 
-- accepted target set = 10 EU-50 handoff `RICH_TEXT` Pages；
-- package bodies / stable Page assets become JilinJobs Site Package-owned product defaults；
-- Existing Site only adopts when current mutable-content fingerprint exactly matches an explicitly declared prior package baseline；
-- operator-diverged Page content is preserved and reported by stable identity；
-- successful adoption is idempotent and later operator edits remain protected；
-- `budget` 13 PDFs follow Issue #77 Human Authority; the 8 authorized legacy absolute-source residues may be reacquired only through the accepted bounded normalization；
-- no Main Page Historical Migration mapping/input is created。
-
-Source artifact `10086056781` was non-expired at Readiness with accepted digest `sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494`; Execute recovery must revalidate it rather than inherit its freshness claim.
+- final implementation Head：`ff4acdc08e9b902d6aa273ff33fae33fb5bfc520`；
+- PR #125 squash integrated main：`ccbd9fd8c6048f5b4a96d965b8578f7b7a1d2838`；
+- 10 accepted Main formal Pages are package create-time defaults；
+- 156 new Page-owned assets were integrated, total Site Package assets = 187；
+- `budget` 13 PDFs are package-owned under `/static/pages/budget/**`；
+- Existing Site guarded adoption only occurs on exact declared prior-package content fingerprint；operator-diverged content is preserved/reported；adoption is idempotent and later operator edits remain protected；
+- exact-head automated gates and bounded Human Review PASS；the `guide/faq` heading hierarchy finding was corrected within the same Unit and reverified；
+- Post-Integration CI #973 / run `34442174532` plus Site Package #104 / Backend Boundary #41 / Generic #64 / Party #19 all PASS；
+- no Main Page Historical Migration mapping/input or Generic Flyway/schema change was introduced；
+- Execute Authority：**TERMINATED**；Completed Work Evidence：`docs/work/archive/eu52-main-page-formal-content-package-adoption.md`。
 
 ### Stable Main ListItem follow-up
 
@@ -188,18 +189,9 @@ Stable Main ListItem membership remains an independent Site Package Planning Can
 
 ## 当前 Next Gate
 
-**EU-52 Planning/Readiness integration → new Fresh Context EU-52 Execute-baseline recovery**。
+**Fresh Context Planning/Readiness decision**。
 
-当前 Planning branch 只建立 Readiness，不存在 Execute baseline，不得开始 Site Package bytes/source promotion/provisioning implementation 或 Runtime mutation。Planning/Readiness 集成后，新的上下文至少应重新确认：
-
-1. integrated `main`、Open PR / Issue 与最近相关 Actions；
-2. `AGENTS.md`、Root `README.md`、`docs/README.md`；
-3. 本 Roadmap 与 `docs/project/development-method.md`；
-4. Issue #60、Issue #77及其最新 Current Evidence；
-5. EU-52 Requirement / Specification / Technical / Current Work Authority；
-6. source artifact freshness/digest/provenance 与 Page package/provisioning base drift。
-
-只有上述 Execute recovery PASS 后才能建立 EU-52 独立 Execute baseline。stable Main ListItem、deferred Article review、C1/C2、Issue #57/#59 与 Repository Split Readiness Assessment均保持独立候选，不继承 EU-52 Authority。
+Current Ready Execution Unit = **NONE**。EU-52 Execute Authority 已终止，stable Main ListItem、230 deferred problem Articles、6 source-defect Articles及其他 Issue #57/#59/#60 candidates均保持独立；不得自动选择、编号或授权任何 successor Unit。
 
 ## 其他开放方向
 
@@ -221,6 +213,6 @@ Stable Main ListItem membership remains an independent Site Package Planning Can
 - E2 Page migration foundation：EU-49 archive record；
 - E3 source discovery / accepted Article snapshot：EU-50 archive record + `data-migrations/main/v1/**`；
 - E3 Runtime import / reconciliation / Human Review：EU-51 archive record；
-- Main Page current Site Package delivery：EU-52 Current Work / Planning-Readiness authority；
+- Main Page Site Package delivery：EU-52 completed Work Evidence；
 - Party canonical migration：对应 `data-migrations/party/**`、PR / Actions / Issue Current Evidence；
 - 详细 historical implementation / verification 不在本 Roadmap 重复维护。

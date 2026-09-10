@@ -51,66 +51,28 @@ Phase 1 使用四类语义角色：
 
 ### Current Issue #60 Main Site Formal Content Authority
 
-Issue #60 当前状态：
+Issue #60 当前阶段性结果：E1 Planning / Authority closure 已完成；E2 / EU-49 foundation 已完成；E3 / EU-50～EU-51 accepted Article sequence 已完成；EU-52 Main Page Formal Content Package Adoption 已完成并终止 Execute Authority。
 
-- **E1 Main External-link Ownership & Behavior Boundary**：Planning / Authority closure；Requirement / Specification READY；无 implementation Unit；
-- **E2 Main Single-page Formal Content**：EU-49 foundation **COMPLETED**；当前 Main Page Site Package product follow-up 已完成新的 Planning/Readiness 并形成 **EU-52 — Main Page Formal Content Package Adoption：READY / Execute NOT STARTED**；
-- **E3 Main Historical Content Collection & Canonical Migration**：Requirement / Specification / Technical Plan 继续作为 READY / ACTIVE contract；EU-50 accepted current Article snapshot 与 EU-51 Runtime import / reconciliation / Human Review 均已完成并集成。
+- EU-52 implementation PR #125 final Head：`ff4acdc08e9b902d6aa273ff33fae33fb5bfc520`；
+- integrated main：`ccbd9fd8c6048f5b4a96d965b8578f7b7a1d2838`；
+- exact-head automated verification + bounded Human Review：**PASS**；
+- Post-Integration CI #973 / run `34442174532`：**PASS**；Site Package #104、Backend Boundary #41、Generic #64、Party #19：**PASS**；
+- accepted Page result：10 formal Pages + 156 new Page-owned assets；Site Package assets total 187；`budget` 13 PDFs package-owned；guarded exact-baseline Existing-Site adoption + operator divergence protection；
+- EU-52 Completed Work Evidence：`docs/work/archive/eu52-main-page-formal-content-package-adoption.md`；
+- stable Main ListItem：独立 Planning Candidate / no Identifier；
+- 230 deferred + 6 source-defect Articles：独立 later-review / customer-confirmation boundary；
+- Current Ready Execution Unit：**NONE**。
 
-Current Ready Execution Unit：**EU-52**。
-
-EU-52 Current Work：`docs/work/current/eu52-main-page-formal-content-package-adoption.md`。Planning baseline：`main@25e452ee3ce66c2d7da1000ad55e9570d732528a`；Readiness：**PASS**；Execute baseline：**NONE**；Execute Authority：**NOT ESTABLISHED**。
-
-EU-52 scope 只包含 accepted Main Page formal content、stable Page assets 与受保护的一次性 Site Package adoption。stable Main ListItem 仍为独立 Planning Candidate，没有 Identifier 或 Execute Authority。EU-52 不使用 Main Page Historical Migration fallback。
-
-EU-50：**COMPLETED / Execute Authority TERMINATED**。Completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`。
-
-EU-51：**COMPLETED / Execute Authority TERMINATED**。Completed Work Evidence：`docs/work/archive/eu51-main-canonical-import-runtime-review.md`。
-
-EU-51 accepted Runtime closure：
-
-- implementation PR #122 final Head：`5adae340edcf605e36779c831fb512c31342eec8`；
-- integrated main：`fad4bfc17b762ec9612cf1e44a1c0af67e74a307`；
-- 3078 Articles = 1577 INTERNAL + 1501 EXTERNAL_LINK；
-- 2603 resources / 450,273,166 bytes；
-- dataset digest：`sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`；
-- first import / stable mapping / resource reconciliation / second-run idempotency：**PASS**；
-- Public/Admin/Integrated Browser：**PASS**；
-- bounded Human Review：**PASS**；
-- Post-Integration CI #958 / run `34417382337`：**PASS**。
-
-Separately preserved backlog：
-
-- 6 篇 source-defect Article 单独排除并等待客户确认；
-- 230 篇 problem Article 作为 durable deferred evidence 保留，不属于已完成 EU-51 import input，也不属于 EU-52；
-- stable Main ListItem source findings属于 JilinJobs Site Package handoff，保持独立 Planning Gate。
-
-Current planning authority：
+Current planning / product Authority：
 
 - `docs/project/main-site-formal-content-plan.md`
-
-E1：
-
-- `docs/requirements/main-external-link-boundary.md`
-- `docs/specifications/main-external-link-boundary.md`
-
-E2 / Main Page current contract：
-
 - `docs/requirements/main-single-page-formal-content.md`
 - `docs/specifications/main-single-page-formal-content.md`
 - `docs/technical/main-single-page-formal-content.md`
-- EU-52 Current Work：`docs/work/current/eu52-main-page-formal-content-package-adoption.md`
-- EU-49 completed Work Evidence：`docs/work/archive/eu49-page-content-migration-foundation.md`
-
-E3 current Authority：
-
 - `docs/requirements/main-historical-content-migration.md`
 - `docs/specifications/main-historical-content-migration.md`
 - `docs/technical/main-historical-content-migration.md`
-- EU-50 completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`
-- accepted current canonical dataset：`data-migrations/main/v1/**`
-- EU-51 completed Work Evidence：`docs/work/archive/eu51-main-canonical-import-runtime-review.md`
 
-下一自然 Gate 是 **EU-52 Planning/Readiness integration → new Fresh Context EU-52 Execute-baseline recovery**。Planning/Readiness 本身不建立 Execute Authority；集成后必须重新读取 integrated `main`、Issue #60/#77、EU-52 current Authority、source artifact freshness/digest/provenance、Open PR / Actions 与 base drift，再决定是否建立独立 Execute baseline。
+下一自然 Gate 是新的 Fresh Context Planning/Readiness decision；不得从 EU-52 completion 自动进入 stable ListItem、deferred Article 或其他 successor Unit。
 
 `data-migrations/**` 是 Historical Content Migration 的 current data/provenance workspace，不属于 documentation archive；“历史内容”不等于 `HISTORICAL_EVIDENCE`。
