@@ -2,114 +2,15 @@
 -- This script is applied once after stable Site Package structure provisioning.
 -- After bootstrap, these rows are ordinary operator-managed data and are never reconciled by Site Package runtime composition.
 
--- Main homepage carousel.
 INSERT INTO cms_list_item(list_id, source_type, title, url, image_path, open_mode, sort_order, enabled)
 VALUES ((SELECT id FROM cms_list WHERE code='HOME_CAROUSEL'), 'LINK', '这里美得不愿离开', 'https://mp.weixin.qq.com/s/fUv21IynaUh_N8OjjLkDXQ', '/static/home/carousel-01.jpg', 'DEFAULT', 10, 1);
 
--- Main related links.
 INSERT INTO cms_list_item(list_id, source_type, title, url, open_mode, sort_order, enabled) VALUES
 ((SELECT id FROM cms_list WHERE code='SITE_RELATED'), 'LINK', '中国高等教育学生信息网', 'https://www.chsi.com.cn/', 'DEFAULT', 10, 1),
-((SELECT id FROM cms_list WHERE code='SITE_RELATED'), 'LINK', '国家大学生就业服务平台', 'https://www.ncss.cn/', 'DEFAULT', 20, 1),
-((SELECT id FROM cms_list WHERE code='SITE_RELATED'), 'LINK', '学历认证', 'https://www.chsi.com.cn/xlrz/paper/report/gdjyxl.action', 'DEFAULT', 30, 1),
+((SELECT id FROM cms_list WHERE code='SITE_RELATED'), 'LINK', '国家24365大学生就业服务平台', 'https://www.ncss.cn/', 'DEFAULT', 20, 1),
+((SELECT id FROM cms_list WHERE code='SITE_RELATED'), 'LINK', '学历认证', 'https://www.chsi.com.cn/xlrz/index.jsp', 'DEFAULT', 30, 1),
 ((SELECT id FROM cms_list WHERE code='SITE_RELATED'), 'LINK', '全国征兵网', 'https://www.gfbzb.gov.cn/', 'DEFAULT', 40, 1),
-((SELECT id FROM cms_list WHERE code='SITE_RELATED'), 'LINK', '吉林省教育厅', 'https://jyt.jl.gov.cn/', 'DEFAULT', 50, 1);
-
--- Provincial / regional graduate employment links.
-INSERT INTO cms_list_item(list_id, source_type, title, url, open_mode, sort_order, enabled) VALUES
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '北京毕业生就业创业服务平台', 'https://fuwu.rsj.beijing.gov.cn/bjdkhy/bysjycy/', 'DEFAULT', 10, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '天津公共就业服务网智慧招聘频道', 'https://www.cnthr.com/', 'DEFAULT', 20, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '河北高校毕业生招聘专区', 'https://rst.hebei.gov.cn/ggzp/ww/a/b/wwab_gxbyszp.html', 'DEFAULT', 30, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '山西省公共招聘网', 'https://sxjy.rst.shanxi.gov.cn/sxscwebui/', 'DEFAULT', 40, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '内蒙古高等院校毕业生就业信息网', 'https://zph.nmrc.com.cn/', 'DEFAULT', 50, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '山东省高等院校毕业生就业信息网', 'https://www.sdgxbys.cn/col/sdjyfwpt/index.html', 'DEFAULT', 60, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '江苏省人才服务云平台', 'https://www.jssrcfwypt.org.cn/rcfwypt/?areaCode=320000', 'DEFAULT', 70, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '安徽公共招聘网高校毕业生专区', 'https://www.ahggzp.gov.cn/ww/b/a/wwba_graduates.html', 'DEFAULT', 80, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '浙江人才服务网', 'https://www.zjrc.com/zjrcw/#/activityList', 'DEFAULT', 90, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '福建省毕业生就业创业公共服务网', 'https://220.160.52.58/', 'DEFAULT', 100, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '乐业上海第一站', 'https://jobs.rsj.sh.gov.cn/ggzp-shrs/index.html#/', 'DEFAULT', 110, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '辽宁省大学生就业创业服务平台', 'http://bys.lnrc.com.cn/index.do', 'DEFAULT', 120, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '吉林人才网', 'https://www.jlrc.com.cn/ww/index.html', 'DEFAULT', 130, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '黑龙江省大学生就业创业服务平台', 'https://www.hljbys.org.cn/', 'DEFAULT', 140, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '广东公共求职招聘服务平台高校毕业生专区', 'https://ggfw.hrss.gd.gov.cn/recruitment/internet/main/#/graduateZone', 'DEFAULT', 150, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '广西毕业生就业服务平台', 'https://bys.gxrc.com/', 'DEFAULT', 160, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '海南省公共招聘网', 'https://zhaopin.hainan.gov.cn/#/recruit/home', 'DEFAULT', 170, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '湖北省高等院校毕业生就业信息网', 'https://www.hbbys.com.cn/', 'DEFAULT', 180, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '湖南大学生就业服务平台', 'https://employment.hunan.smartedu.cn/', 'DEFAULT', 190, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '河南省大学生就业服务平台', 'https://hnbysjy.jyt.henan.gov.cn/zp/', 'DEFAULT', 200, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '江西人才服务网', 'https://www.jxrcfw.com/', 'DEFAULT', 210, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '四川大学生就业服务平台', 'https://bigdata.scbdc.edu.cn:8888/', 'DEFAULT', 220, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '云南省高等院校毕业生就业信息网', 'https://www.ynhr.com/index.php?m=home&c=gxfw&a=index', 'DEFAULT', 230, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '贵州省高等院校毕业生就业信息网', 'https://gzggzpw.gzsrs.cn/app/graduates/graduates.shtml', 'DEFAULT', 240, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '西藏自治区高等院校毕业生就业信息网', 'https://www.xzggjyfw.cn/', 'DEFAULT', 250, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '重庆市高等院校毕业生就业信息网', 'https://ggfw.rlsbj.cq.gov.cn/cqjy/', 'DEFAULT', 260, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '宁夏高等院校毕业生就业信息网', 'http://www.nxjob.cn/wcms/nxjob/byszp/', 'DEFAULT', 270, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '新疆高等院校毕业生就业信息网', 'https://www.xjggjy.com/', 'DEFAULT', 280, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '青海省高等院校毕业生就业信息网', 'https://qhrsggfw.org.cn/qhrst/index/qhrs/talant/index.jspx', 'DEFAULT', 290, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '陕西省高等院校毕业生就业信息网', 'https://job.snhrm.com/app/article/content/newArticleAction.shtml', 'DEFAULT', 300, 1),
-((SELECT id FROM cms_list WHERE code='SITE_REGIONAL_GRADUATES'), 'LINK', '甘肃省高等院校毕业生就业信息网', 'https://www.gszhaopin.com/', 'DEFAULT', 310, 1);
-
--- Jilin universities.
-INSERT INTO cms_list_item(list_id, source_type, title, url, open_mode, sort_order, enabled) VALUES
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林大学', 'https://www.jlu.edu.cn/', 'DEFAULT', 10, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '东北师范大学', 'https://www.nenu.edu.cn/', 'DEFAULT', 20, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春理工大学', 'http://www.cust.edu.cn/', 'DEFAULT', 30, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '延边大学', 'https://www.ybu.edu.cn/', 'DEFAULT', 40, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林农业大学', 'https://www.jlau.edu.cn/', 'DEFAULT', 50, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '北华大学', 'http://www.beihua.edu.cn/', 'DEFAULT', 60, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春工业大学', 'https://www.ccut.edu.cn/', 'DEFAULT', 70, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '东北电力大学', 'https://www.neepu.edu.cn/', 'DEFAULT', 80, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春中医药大学', 'http://www.ccucm.edu.cn//', 'DEFAULT', 90, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林师范大学', 'http://www.jlnu.edu.cn/', 'DEFAULT', 100, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林财经大学', 'http://www.jlufe.edu.cn/', 'DEFAULT', 110, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林外国语大学', 'https://www.jisu.edu.cn/', 'DEFAULT', 120, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春大学', 'https://www.ccu.edu.cn/', 'DEFAULT', 130, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林建筑大学', 'https://www.jlju.edu.cn/', 'DEFAULT', 140, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林化工大学', 'https://www.jluct.edu.cn/', 'DEFAULT', 150, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春工程学院', 'https://www.ccit.edu.cn/', 'DEFAULT', 160, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林农业科技学院', 'https://www.jlnku.edu.cn/', 'DEFAULT', 170, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林医药学院', 'https://www.jlmu.cn/', 'DEFAULT', 180, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春师范大学', 'https://www.ccsfu.edu.cn/', 'DEFAULT', 190, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '通化师范学院', 'http://www.thnu.edu.cn/', 'DEFAULT', 200, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林工程技术师范学院', 'https://www.jlenu.edu.cn/', 'DEFAULT', 210, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '白城师范学院', 'https://www.bcnu.edu.cn/', 'DEFAULT', 220, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林工商学院', 'https://www.jlbtc.edu.cn/', 'DEFAULT', 230, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林体育学院', 'http://www.jlsu.edu.cn/index.html', 'DEFAULT', 240, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林艺术学院', 'https://www.jlart.edu.cn/', 'DEFAULT', 250, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林警察学院', 'https://www.jljcxy.com/', 'DEFAULT', 260, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林动画学院', 'https://www.jlai.edu.cn/', 'DEFAULT', 270, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林省教育学院', 'https://www.jlsjyxy.com.cn/', 'DEFAULT', 280, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林开放大学', 'http://www.jlrtvu.jl.cn/', 'DEFAULT', 290, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林省经济管理干部学院', 'https://www.jlemcc.edu.cn/', 'DEFAULT', 300, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春汽车职业技术大学', 'https://www.caii.edu.cn/', 'DEFAULT', 310, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春金融高等专科学校', 'http://www.cjgz.edu.cn/', 'DEFAULT', 320, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春医学高等专科学校', 'http://www.ccmc.edu.cn/', 'DEFAULT', 330, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '白城医学高等专科学校', 'http://www.bcyz.cn/', 'DEFAULT', 340, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林交通职业技术学院', 'https://www.jljy.edu.cn/', 'DEFAULT', 350, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林电子信息职业技术学院', 'http://www.jltc.edu.cn/', 'DEFAULT', 360, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林工业职业技术学院', 'http://www.jvcit.edu.cn/', 'DEFAULT', 370, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林铁道职业技术大学', 'https://www.jty.edu.cn/', 'DEFAULT', 380, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林工程职业学院', 'https://www.jlevc.cn/', 'DEFAULT', 390, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林司法警官职业学院', 'https://www.jlsfjy.cn/', 'DEFAULT', 400, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '四平职业大学', 'http://www.spvu.edu.cn/', 'DEFAULT', 410, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '辽源职业技术学院', 'http://www.lyvtc.cn/', 'DEFAULT', 420, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春职业技术大学', 'https://www.cvit.edu.cn/', 'DEFAULT', 430, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '松原职业技术学院', 'http://www.sypt.cn/', 'DEFAULT', 440, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '白城职业技术学院', 'https://www.bcvit.cn/', 'DEFAULT', 450, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长白山职业技术学院', 'http://www.cbsvtc.com.cn/', 'DEFAULT', 460, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '延边职业技术学院', 'http://www.ybvtc.com/', 'DEFAULT', 470, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春医药职业学院', 'https://www.dfzyxy.net/', 'DEFAULT', 480, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春信息技术职业学院', 'https://www.citpc.edu.cn/', 'DEFAULT', 490, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林科技职业技术学院', 'https://www.jilinkj.com/', 'DEFAULT', 500, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春人文学院', 'https://www.ccrw.edu.cn/', 'DEFAULT', 510, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春光华学院', 'http://www.ghu.edu.cn/', 'DEFAULT', 520, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春大学旅游学院', 'https://www.tccu.edu.cn/', 'DEFAULT', 530, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春电子科技学院', 'https://www3.changdian2001.com/', 'DEFAULT', 540, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春工业大学人文信息学院', 'http://www.ccutchi.com/', 'DEFAULT', 550, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春科技学院', 'http://www.jlaudev.com.cn/', 'DEFAULT', 560, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林师范大学博达学院', 'https://www.bdxy.com.cn/', 'DEFAULT', 570, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春财经学院', 'http://www.ccufe.edu.cn/', 'DEFAULT', 580, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '吉林建筑科技学院', 'http://www.jluat.edu.cn/', 'DEFAULT', 590, 1),
-((SELECT id FROM cms_list WHERE code='SITE_JILIN_UNIVERSITIES'), 'LINK', '长春建筑学院', 'https://www.jladi.edu.cn/', 'DEFAULT', 600, 1);
+((SELECT id FROM cms_list WHERE code='SITE_RELATED'), 'LINK', '吉林省教育厅', 'http://jyt.jl.gov.cn/', 'DEFAULT', 50, 1);
 
 INSERT INTO cms_advertisement(slot_id, title, image_path, url, open_mode, sort_order, enabled)
 VALUES ((SELECT id FROM cms_ad_slot WHERE code='HOME_RECRUITMENT_PROMO'), '吉林省高校毕业生招聘活动', '/static/home/recruitment-campaign.png', 'https://24365.jl.smartedu.cn/', 'DEFAULT', 10, 1);
