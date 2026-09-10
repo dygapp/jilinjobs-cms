@@ -14,6 +14,7 @@ on:
       - "backend/apps/cms-server/src/test/kotlin/com/jilinjobs/cms/provisioning/**"
       - "backend/apps/cms-server/src/test/kotlin/com/jilinjobs/cms/staticresource/**"
       - "sites/**"
+      - "!sites/**/*.md"
       - ".github/workflows/site-package-verification.yml"
   pull_request:
     paths:
@@ -27,6 +28,7 @@ on:
       - "backend/apps/cms-server/src/test/kotlin/com/jilinjobs/cms/provisioning/**"
       - "backend/apps/cms-server/src/test/kotlin/com/jilinjobs/cms/staticresource/**"
       - "sites/**"
+      - "!sites/**/*.md"
       - ".github/workflows/site-package-verification.yml"
 
 permissions:
