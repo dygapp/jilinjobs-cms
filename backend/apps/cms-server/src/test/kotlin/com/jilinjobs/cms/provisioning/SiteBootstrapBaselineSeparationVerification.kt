@@ -7,6 +7,13 @@ import org.springframework.boot.builder.SpringApplicationBuilder
 import java.nio.file.Path
 import java.sql.DriverManager
 
+private val EXPECTED_MAIN_LIST_ITEM_COUNTS = mapOf(
+    "HOME_CAROUSEL" to 1,
+    "SITE_RELATED" to 5,
+    "SITE_REGIONAL_GRADUATES" to 31,
+    "SITE_JILIN_UNIVERSITIES" to 60,
+)
+
 fun main() {
     val dbUrl = requireBootstrapEnv("SITE_PACKAGE_VERIFY_DB_URL")
     val dbUsername = System.getenv("SITE_PACKAGE_VERIFY_DB_USERNAME") ?: "root"
@@ -34,8 +41,14 @@ fun main() {
             "Fresh install stable structure 结果异常：${composition.report}"
         }
         require(bootstrap.report.status == "APPLIED") { "Fresh install bootstrap 必须执行一次：${bootstrap.report}" }
-        require(bootstrapOperationalCounts(dbUrl, dbUsername, dbPassword) == (6 to 1)) {
-            "Fresh install 必须建立 6 条 ListItem + 1 条 Advertisement"
+        require(bootstrapOperationalCounts(dbUrl, dbUsername, dbPassword) == (97 to 1)) {
+            "Fresh install 必须建立 97 条 Main ListItem + 1 条 Advertisement"
+        }
+        require(mainListItemCounts(dbUrl, dbUsername, dbPassword) == EXPECTED_MAIN_LIST_ITEM_COUNTS) {
+            "Fresh install Main ListItem 分组数量异常：${mainListItemCounts(dbUrl, dbUsername, dbPassword)}"
+        }
+        require(listItemCount(dbUrl, dbUsername, dbPassword, "PARTY_CAROUSEL") == 0) {
+            "Main bootstrap 不得写入 PARTY_CAROUSEL"
         }
         require(bootstrapStateCount(dbUrl, dbUsername, dbPassword) == 1) { "Bootstrap completion state 必须记录一次" }
     } finally {
@@ -50,14 +63,19 @@ fun main() {
             "Repeated stable structure reconcile 必须幂等：${composition.report}"
         }
         require(bootstrap.report.status == "ALREADY_APPLIED") { "Repeated bootstrap 必须由 completion state 拦截：${bootstrap.report}" }
-        require(bootstrapOperationalCounts(dbUrl, dbUsername, dbPassword) == (6 to 1)) { "Repeated bootstrap 不得复制运营数据" }
+        require(bootstrapOperationalCounts(dbUrl, dbUsername, dbPassword) == (97 to 1)) { "Repeated bootstrap 不得复制运营数据" }
+        require(mainListItemCounts(dbUrl, dbUsername, dbPassword) == EXPECTED_MAIN_LIST_ITEM_COUNTS) {
+            "Repeated bootstrap 不得改变 Main ListItem 分组数量"
+        }
+        require(listItemCount(dbUrl, dbUsername, dbPassword, "PARTY_CAROUSEL") == 0)
         require(bootstrapStateCount(dbUrl, dbUsername, dbPassword) == 1)
     } finally {
         repeated.close()
     }
 
     mutateOperationalDefaults(dbUrl, dbUsername, dbPassword)
-    require(bootstrapOperationalCounts(dbUrl, dbUsername, dbPassword) == (5 to 1))
+    require(bootstrapOperationalCounts(dbUrl, dbUsername, dbPassword) == (96 to 1))
+    require(mainListItemCounts(dbUrl, dbUsername, dbPassword) == EXPECTED_MAIN_LIST_ITEM_COUNTS + ("SITE_RELATED" to 4))
     require(advertisementTitle(dbUrl, dbUsername, dbPassword) == "运营已修改标题")
 
     val ordinaryRuntime = startBootstrapContext(dbUrl, dbUsername, dbPassword, packageRoot, bootstrapOnStart = false)
@@ -65,7 +83,8 @@ fun main() {
         require(ordinaryRuntime.getBeansOfType(SitePackageBootstrapRuntime::class.java).isEmpty()) {
             "普通 Runtime composition 不得执行 bootstrap"
         }
-        require(bootstrapOperationalCounts(dbUrl, dbUsername, dbPassword) == (5 to 1)) { "普通 Runtime 不得复活已删除运营数据" }
+        require(bootstrapOperationalCounts(dbUrl, dbUsername, dbPassword) == (96 to 1)) { "普通 Runtime 不得复活已删除运营数据" }
+        require(mainListItemCounts(dbUrl, dbUsername, dbPassword) == EXPECTED_MAIN_LIST_ITEM_COUNTS + ("SITE_RELATED" to 4))
         require(advertisementTitle(dbUrl, dbUsername, dbPassword) == "运营已修改标题") { "普通 Runtime 不得覆盖运营修改" }
     } finally {
         ordinaryRuntime.close()
@@ -75,9 +94,10 @@ fun main() {
     try {
         val bootstrap = guardedRepeat.getBean(SitePackageBootstrapRuntime::class.java)
         require(bootstrap.report.status == "ALREADY_APPLIED")
-        require(bootstrapOperationalCounts(dbUrl, dbUsername, dbPassword) == (5 to 1)) {
+        require(bootstrapOperationalCounts(dbUrl, dbUsername, dbPassword) == (96 to 1)) {
             "即使再次显式请求 bootstrap，也不得复活已删除运营数据"
         }
+        require(mainListItemCounts(dbUrl, dbUsername, dbPassword) == EXPECTED_MAIN_LIST_ITEM_COUNTS + ("SITE_RELATED" to 4))
         require(advertisementTitle(dbUrl, dbUsername, dbPassword) == "运营已修改标题") {
             "Bootstrap completion state 必须保护运营修改"
         }
@@ -85,7 +105,7 @@ fun main() {
         guardedRepeat.close()
     }
 
-    println("EU41_SITE_BOOTSTRAP_BASELINE_SEPARATION_VERIFY PASS")
+    println("EU53_MAIN_LISTITEM_BOOTSTRAP_VERIFY PASS")
 }
 
 private fun startBootstrapContext(
@@ -143,6 +163,19 @@ private fun bootstrapOperationalCounts(dbUrl: String, username: String, password
             statement.executeQuery().use { result -> require(result.next()); result.getInt(1) }
         }
         count("cms_list_item") to count("cms_advertisement")
+    }
+
+private fun mainListItemCounts(dbUrl: String, username: String, password: String): Map<String, Int> =
+    EXPECTED_MAIN_LIST_ITEM_COUNTS.keys.associateWith { code -> listItemCount(dbUrl, username, password, code) }
+
+private fun listItemCount(dbUrl: String, username: String, password: String, listCode: String): Int =
+    DriverManager.getConnection(dbUrl, username, password).use { connection ->
+        connection.prepareStatement(
+            "SELECT COUNT(*) FROM cms_list_item i JOIN cms_list l ON l.id=i.list_id WHERE l.code=?",
+        ).use { statement ->
+            statement.setString(1, listCode)
+            statement.executeQuery().use { result -> require(result.next()); result.getInt(1) }
+        }
     }
 
 private fun bootstrapStateCount(dbUrl: String, username: String, password: String): Int =
