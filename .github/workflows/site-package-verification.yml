@@ -66,4 +66,4 @@ jobs:
           SITE_PACKAGE_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/site_package_verify?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
           SITE_PACKAGE_VERIFY_DB_USERNAME: root
           SITE_PACKAGE_VERIFY_DB_PASSWORD: root
-        run: gradle verifySitePackageFoundation verifyStableSiteStructure verifyRuntimeSitePackageComposition verifySiteBootstrapBaselineSeparation verifySitePackageAssets verifyPageContentOwnership --no-daemon
+        run: gradle verifySitePackageFoundation verifyStableSiteStructure verifyRuntimeSitePackageComposition verifySiteBootstrapBaselineSeparation verifySitePackageAssets verifyPageContentOwnership verifyPageContentAdoption --no-daemon
