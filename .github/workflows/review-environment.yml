@@ -8,7 +8,7 @@ on:
         required: false
         default: main
   pull_request:
-    types: [opened, synchronize, reopened, labeled]
+    types: [labeled]
 
 concurrency:
   group: review-environment
