@@ -29,14 +29,14 @@ Fresh Context 按以下入口恢复，避免把历史执行记录当作当前 Au
 
 ## 当前 Gate
 
-Issue #92 Phase 0～Phase 3、E1 Planning closure、E2 / EU-49、E3 / EU-50～EU-51，以及 EU-52 Main Page Formal Content Package Adoption 均已完成相应当前闭环。
+Issue #92 Phase 0～Phase 3、E1 Planning closure、E2 / EU-49、E3 / EU-50～EU-51、EU-52 Main Page Formal Content Package Adoption，以及 **EU-53 Main ListItem Bootstrap Completion** 均已完成相应当前闭环。
 
 ```text
 EU-52 Main Page Formal Content Package Adoption
    └─ COMPLETED / Execute Authority TERMINATED
 
 EU-53 Main ListItem Bootstrap Completion
-   └─ READY / Planning+Readiness pending integration
+   └─ COMPLETED / Execute Authority TERMINATED
 
 Deferred Article review
    └─ 230 problem + 6 source-defect / independent later review
@@ -44,12 +44,13 @@ Deferred Article review
 
 当前状态：
 
-- EU-49、EU-50、EU-51、EU-52：**COMPLETED / Execute Authority TERMINATED**；
-- Main ListItem delivery：Main `HOME_CAROUSEL` 与已审核 `SITE_RELATED=5`、`SITE_REGIONAL_GRADUATES=31`、`SITE_JILIN_UNIVERSITIES=60` 使用现有 Site Package one-time bootstrap SQL；bootstrap 后继续作为普通 operator-managed data；不新增 stable identity / reconcile；
-- Party ListItem / `PARTY_CAROUSEL` 继续由 Party migration/current Party Authority 管理，不进入 EU-53；
-- EU-53 `slice-work` 已形成单一小型 bootstrap-data Unit，`readiness-check` = **PASS**；
-- 230 篇 deferred problem Articles与 6 篇 source-defect Articles继续作为独立 later-review / customer-confirmation evidence；
-- **Current Ready Execution Unit：EU-53**。
+- EU-49～EU-53：**COMPLETED / Execute Authority TERMINATED**；
+- EU-53 implementation PR #130 final Head `10449bedf4df38aa2daec99b80d0a9637df2f8db` 已 squash 集成到 `main@b1130b110bccdb1565c340a6cce62504ec06a87a`；
+- Main ListItem bootstrap 已固化：`HOME_CAROUSEL = 1`、`SITE_RELATED = 5`、`SITE_REGIONAL_GRADUATES = 31`、`SITE_JILIN_UNIVERSITIES = 60`；bootstrap 后继续作为普通 operator-managed data，不新增 stable identity / reconcile；
+- Party ListItem / `PARTY_CAROUSEL` 继续由 Party migration/current Party Authority 管理，不进入 Main bootstrap；
+- exact-head CI #987、Site Package #109、Backend Boundary #42、EU-51 Runtime #22、Imported Browser #18 均 PASS；Post-Integration `main@b1130b...` 的 CI #988、Site Package #110、Backend Boundary #43 均 PASS；
+- 230 篇 deferred problem Articles 与 6 篇 source-defect Articles继续作为独立 later-review / customer-confirmation evidence；
+- **Current Ready Execution Unit：NONE**。
 
 Current Main formal-content Authority：
 
@@ -57,7 +58,7 @@ Current Main formal-content Authority：
 - Main ListItem Requirement：`docs/requirements/main-stable-listitem-site-package.md`；
 - Main ListItem Specification：`docs/specifications/main-stable-listitem-site-package.md`；
 - Main ListItem Technical Plan：`docs/technical/main-stable-listitem-site-package.md`；
-- EU-53 Current Work：`docs/work/current/eu53-main-listitem-bootstrap-completion.md`；
+- EU-53 Completed Work Evidence：`docs/work/archive/eu53-main-listitem-bootstrap-completion.md`；
 - Main Page current Requirement：`docs/requirements/main-single-page-formal-content.md`；
 - Main Page current Specification：`docs/specifications/main-single-page-formal-content.md`；
 - Main Page current Technical Authority：`docs/technical/main-single-page-formal-content.md`；
@@ -65,7 +66,7 @@ Current Main formal-content Authority：
 - EU-49 / EU-50 / EU-51 Completed Work Evidence：`docs/work/archive/`；
 - E3 current Article contract：`docs/requirements/main-historical-content-migration.md`、`docs/specifications/main-historical-content-migration.md`、`docs/technical/main-historical-content-migration.md`。
 
-下一自然 Gate 是先集成 EU-53 Planning / Readiness Authority；随后重新恢复 integrated `main` 并建立 EU-53 Execute baseline。不得继承 EU-52 Execute Authority，也不得顺带进入 Party ListItem、deferred Article 或慧就业 iframe 工作。
+下一自然 Gate 是新的 **Fresh Context Planning/Readiness decision**。不得自动进入 Party ListItem、deferred Article、慧就业 iframe 或其他候选，也不得继承 EU-53 Execute Authority。
 
 ## 主要目录
 
