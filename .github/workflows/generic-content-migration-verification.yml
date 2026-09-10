@@ -9,7 +9,7 @@ on:
       - "backend/modules/cms-core/**"
       - "backend/apps/content-migration/**"
       - "data-migrations/schemas/**"
-      - "data-migrations/README.md"
+      - "!data-migrations/schemas/**/*.md"
       - ".github/workflows/generic-content-migration-verification.yml"
   pull_request:
     paths:
@@ -18,7 +18,7 @@ on:
       - "backend/modules/cms-core/**"
       - "backend/apps/content-migration/**"
       - "data-migrations/schemas/**"
-      - "data-migrations/README.md"
+      - "!data-migrations/schemas/**/*.md"
       - ".github/workflows/generic-content-migration-verification.yml"
 
 permissions:
