@@ -1,164 +1,117 @@
-# Main Stable ListItem Site Package Requirement
+# Main ListItem Site Package Requirement
 
 ## Status
 
-- Parent Planning Authority: GitHub Issue #60 / stable Main ListItem Site Package follow-up
+- Parent Planning Authority: GitHub Issue #60
 - Architecture Authority: GitHub Issue #77
-- Planning Authority: `docs/project/main-site-formal-content-plan.md`
 - Planning baseline: `main@4d5578a2715f8adc0ebca73ee0ae7342f740c8ce`
 - Requirement: **READY**
-- Candidate: Main Stable ListItem Site Package Adoption
+- Candidate: Main ListItem Site Package Bootstrap Completion
 - Execution Unit identity: **not assigned before `slice-work`**
 
 ## 1. Intent
 
-EU-50 已完成 Main source discovery，并明确 Main stable ListItem membership 属于 JilinJobs Site Package，而不是 Historical Content Migration。PR #117 在 EU-50 收敛过程中曾形成最终 ListItem 内容审核结果，但 stable ListItem Runtime provisioning 因超出当时 Article-only Execute Authority 被正确回退；EU-52 随后只独立完成 Main Page formal content，没有继承或覆盖 ListItem scope。
+EU-50 已确认 Main ListItem 属于 JilinJobs Site Package，而不是 Article Historical Migration。当前产品需求不是建立新的 ListItem Runtime ownership/reconcile 子系统，而是把已经确认的 Main ListItem 初始数据完整固化到 Site Package bootstrap SQL 中，与现有 Main `HOME_CAROUSEL`、其他一次性初始化数据采用相同机制。
 
-本 Requirement 的目标是关闭这一明确的 Site Package capability gap：把已经审核接受的 Main 稳定站点链接成员固化为版本化 Site Package 数据，建立独立于 Runtime DB id、title、URL 和排序的稳定身份，并在 Fresh Site、已有 bootstrap Site、operator edit 与重复 reconcile 场景下保持可预测、非破坏性的生命周期。
+初始化完成后，ListItem 按现有 bootstrap 语义成为普通 operator-managed Runtime data；Site Package 不在后续启动时反复覆盖或恢复这些行。
 
-## 2. Accepted content scope
+## 2. Main scope
 
-本轮只接受 EU-50 最终 ListItem adjustment evidence 中的三组 Main `SITE_LINKS`：
+本轮 Main ListItem 初始化范围：
 
-| List | Accepted occurrences |
-|---|---:|
-| `SITE_RELATED` | 5 |
-| `SITE_REGIONAL_GRADUATES` | 31 |
-| `SITE_JILIN_UNIVERSITIES` | 60 |
-| **Total** | **96** |
+- `HOME_CAROUSEL`：主站首页轮播，继续保留在 Site Package bootstrap SQL；
+- `SITE_RELATED`：5 条；
+- `SITE_REGIONAL_GRADUATES`：31 条；
+- `SITE_JILIN_UNIVERSITIES`：60 条。
 
-最终内容决策来自 repository history 中已审核报告：
+三个 `SITE_LINKS` 列表共 96 条，使用 EU-50 已审核完成的最终内容决策：
 
-- commit: `b223a1d3a40b510f53a34ea9997926f8f4541a18`；
-- file: `sites/jilinjobs/reports/listitem-final-adjustment-report.md`；
-- audited: 96；adjusted: 72；unchanged after review: 24；
-- source evidence: run `34303771704` / artifact `10086056781` / digest `sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494`；
-- ListItem Link Audit: run `34323764980` / artifact `10092940455` / digest `sha256:b0cfd4549c700f0b84edf19bb620b2ebc4c2102b46f7a8dc727ee9d841b5fa16`。
+- commit `b223a1d3a40b510f53a34ea9997926f8f4541a18`；
+- `sites/jilinjobs/reports/listitem-final-adjustment-report.md`；
+- audited 96 = adjusted 72 + unchanged 24。
 
-当前实现必须消费该报告已经接受的最终 title/URL 决策，不重新抓取 Legacy Source，也不得因为当前外部网络状态重新猜测、删除或改写这些成员。
+实现不得重新抓取 Legacy Source，也不得根据当前第三方站点可达性重新猜测、删除或替换已接受 title/URL。
 
-`HOME_CAROUSEL` 不在上述最终三组稳定站点链接审核范围内，继续保持当前 bootstrap/operator-managed lifecycle；`PARTY_CAROUSEL`、Advertisement、Page、Article 均不属于本轮。
+## 3. Party boundary
 
-## 3. Ownership contract
+党员之家 ListItem 不属于本轮 Main ListItem 固化：
 
-### 3.1 Site Package owns stable identity and membership
+- `PARTY_CAROUSEL` 已包含在 Party 数据迁移及对应 Party Authority 中；
+- 不在 Main bootstrap SQL 中复制 Party ListItem；
+- 不修改 Party migration input、mapping、runtime verification 或 ownership。
 
-对于本轮 96 个 accepted ListItem：
+## 4. Bootstrap lifecycle
 
-- parent `CmsList.code` 与 ListItem package code 共同形成稳定身份；
-- stable identity 不得依赖 Runtime numeric id、当前 title、当前 URL、当前 sortOrder 或实时外部站点状态；
-- JilinJobs Site Package 负责声明这些稳定成员及其 create/adoption defaults；
-- Generic CMS Core 只提供 site-neutral stable identity、provisioning/reconcile 与保护机制，不包含 JilinJobs 具体成员值；
-- Historical Migration、Flyway seed data 与 Public Renderer 都不成为这些具体成员的 source owner。
+使用现有 Site Package bootstrap 机制：
 
-### 3.2 Runtime mutable fields remain operator-maintainable
+```text
+stable Site structure provision
+→ bootstrap/initial-data.sql applied once
+→ cms_site_bootstrap_state records completion
+→ subsequent startup does not replay the bootstrap
+→ rows are ordinary operator-managed Runtime data
+```
 
-稳定成员被创建或安全 adoption 后，其展示/目标字段继续允许通过既有 ListItem Admin 能力维护，包括 title、subtitle、URL、openMode、sortOrder、enabled 以及当前 ListItem contract 允许的其他 mutable payload。
+因此本 Requirement 不需要：
 
-ordinary Site Package reconcile 不得因为 package defaults 与 Runtime 当前值不同而覆盖 operator edit。package defaults 是 create/adoption baseline，不是永久 overwrite authority。
+- `cms_list_item` 新 stable code；
+- Flyway schema evolution；
+- Site Package `list-items` structure type；
+- Runtime ListItem reconcile；
+- Existing-Site adoption/fingerprint；
+- stable-item delete protection；
+- absence-based removal semantics。
 
-### 3.3 Stable membership is protected from ordinary deletion
+## 5. Data requirements
 
-stable-coded ListItem 属于网站规划基线，ordinary Admin 不得删除；operator-created `code = NULL` ListItem 继续保持现有增删改能力。
+`sites/jilinjobs/bootstrap/initial-data.sql` 必须：
 
-这只保护 stable membership identity，不把同一 CmsList 中的全部 Runtime rows 变成 package-owned。
+1. 保留 Main `HOME_CAROUSEL` 初始化数据；
+2. 将 `SITE_RELATED` 更新为已审核接受的 5 条最终值；
+3. 新增 `SITE_REGIONAL_GRADUATES` 31 条最终值；
+4. 新增 `SITE_JILIN_UNIVERSITIES` 60 条最终值；
+5. 使用已有 `CmsList` code 查询父列表，不绑定固定 Runtime numeric id；
+6. 保持 `LINK` source type、既有 open-mode semantics 与明确 sort order；
+7. 不添加任何 Party ListItem。
 
-## 4. Stable identity requirements
+修改 SQL 后必须同步更新 `sites/jilinjobs/bootstrap/manifest.json` 中的 SHA-256。
 
-Generic Core 必须为 `cms_list_item` 提供 nullable stable code：
+## 6. Runtime / operator behavior
 
-- package-owned stable row: code 非空；
-- ordinary operator-created row: code 保持 `NULL`；
-- logical identity: `(list_id, code)`，外部 package representation 使用 `(listCode, itemCode)`；
-- 同一 List 内 stable code 唯一；
-- stable code 一旦分配，不因 title/URL/sortOrder 后续变化重新生成。
+Bootstrap 成功后：
 
-本轮 package item code 必须在版本化 `list-items` 数据中显式冻结。可以使用有序编号作为一次性 opaque key，但编号只承担不可变 identity，不得在 Runtime 根据 source order 或 sortOrder 动态推导/重算。
+- ListItem 继续使用现有 Generic Admin/Public contract；
+- operator 可以按现有能力维护这些数据；
+- 后续 Site Package composition 不对这些 bootstrap rows 做 reconcile；
+- 已执行 bootstrap 的环境不会因为 package 再次启动而自动重放同一 bootstrapId。
 
-## 5. Existing-Site guarded adoption
+本轮不解决“对已执行旧 bootstrap 的长期在线环境自动补种新数据”问题；当前目标是仓库内正式初始化基线完整、Fresh Site 可重复验证。若未来存在生产升级补种需求，应单独形成明确的数据升级 Authority，而不是把初始化数据升级问题转化为永久 reconcile 机制。
 
-当前 `sites/jilinjobs/bootstrap/initial-data.sql` 中 5 个 `SITE_RELATED` ListItem 是旧的一次性 bootstrap defaults。它们在新 stable capability 上线时不能被无条件认领，也不能留下重复初始化路径。
+## 7. Verification requirements
 
-每个允许从旧 bootstrap row 迁移到 stable membership 的 package item 必须声明精确 prior-baseline fingerprint。Existing Site 处理：
+至少证明：
 
-1. target stable code 已存在且 identity/source type 合法：保留 Runtime mutable payload；
-2. stable code 不存在，且恰有一个 `code = NULL` row 精确匹配声明的 prior-baseline fingerprint：允许 adoption，赋予 stable code，并将该已知旧 package baseline 一次性提升到本次 accepted target default；
-3. 匹配多个候选：fail closed / 明确报告 identity conflict，不猜测；
-4. 没有匹配且该 stable identity 尚不存在：创建 accepted target row；
-5. 任何未被精确 adoption 的 `code = NULL` operator row 原样保留。
+- bootstrap SQL 与 manifest digest 一致；
+- Fresh Site 可成功执行 bootstrap；
+- Main `HOME_CAROUSEL` 初始化存在；
+- 三组 `SITE_LINKS` 条数为 5 / 31 / 60；
+- EU-50 最终审核的 96 条 title/URL 决策与 SQL 一致；
+- `SITE_RELATED` 已使用最终审核值，而不是旧 bootstrap 值；
+- 第二次 apply 保持 `ALREADY_APPLIED`，无重复插入；
+- Public `SITE_LINKS` 可读取新初始化数据；
+- Party ListItem 数据与 Party migration 不受影响；
+- Backend / Site Package / Public 相关回归通过。
 
-不得通过 title 相似、URL redirect、更新时间、source order、空字段或其他启发式方式认领已有 operator data。
+## 8. Non-goals
 
-## 6. Reconcile and future upgrade/removal semantics
-
-本轮冻结以下生命周期：
-
-- missing stable identity：CREATE；
-- existing stable identity：验证 parent/source-type identity 后，ordinary reconcile 不覆盖 mutable payload；
-- repeated reconcile：幂等；
-- operator edit：后续 reconcile 保留；
-- operator stable-item delete：拒绝；
-- operator-created null-code item：不参与 stable reconcile；
-- package 新增新 code：按新成员 CREATE；
-- package manifest 中缺少历史 code **不表示删除**，ordinary reconcile 不做 absence-based delete/detach/disable；
-- 未来确需移除 stable member 时，必须通过独立、显式、版本化 removal/adoption Authority 定义，不从文件缺项静默推导。
-
-该约束关闭当前 removal ambiguity，同时优先保护已有运营数据。
-
-## 7. Bootstrap transition
-
-stable ListItem capability 集成后：
-
-- `SITE_RELATED` 5 条不得继续由 `bootstrap/initial-data.sql` 另行创建；
-- Fresh Site 由 stable `list-items` structure 创建三组共 96 条；
-- `HOME_CAROUSEL` 当前 1 条 bootstrap row 保持 one-time/operator-managed，不因本轮自动转成 stable item；
-- Advertisement bootstrap 保持现状。
-
-Existing Site 已执行过 bootstrap 的事实不得被重置，也不得通过重跑 bootstrap 实现 adoption。
-
-## 8. Public behavior
-
-当前 Public `SITE_LINKS` contract 保持不变：
-
-- `/api/public/lists/by-group/SITE_LINKS` 继续返回三组稳定 List definition 及 enabled items；
-- Main Public Renderer 继续消费该 stable public contract，不新增 Main-specific API；
-- Fresh Runtime 中应可观察到 5 + 31 + 60 accepted link members；
-- operator-disabled stable item继续遵守现有 public enabled filtering；
-- external target/open-mode 继续使用既有 ListItem/Public Renderer semantics。
-
-## 9. Verification requirements
-
-进入 Integration 前至少证明：
-
-1. append-only schema upgrade 为 ListItem 建立 nullable stable code，并保持 ordinary rows 可为 NULL；
-2. Generic Core 不包含任何 JilinJobs-specific member data；
-3. package loader/validator 支持 `list-items`，并验证 parent list、stable code、LINK payload 与唯一性；
-4. Fresh Site 创建 exactly 96 stable SITE_LINKS members，bootstrap 不产生重复 SITE_RELATED rows；
-5. Existing Site 的旧 5 条 SITE_RELATED bootstrap defaults 只在 exact baseline match 时 adoption；
-6. ambiguous adoption fail closed，unmatched operator rows保留；
-7. stable-coded item ordinary update 后 reconcile 保留 operator edit；
-8. stable-coded item ordinary delete 被拒绝，null-code item仍可正常增删改；
-9. second reconcile idempotent，不产生重复 stable identities；
-10. manifest absence 不触发静默删除；
-11. Public SITE_LINKS exact membership/title/URL/order 与 accepted package data一致，并通过 Browser verification；
-12. Generic migration/Party migration/Page package/Backend/Admin/Public regressions保持通过。
-
-由于 96 条链接内容会直接改变 Main 公开站可见内容，自动 Browser verification 通过后需要 bounded Human Review，人工重点确认三组展示、布局与代表性外链呈现；不要求依赖 96 个第三方站点全部实时可访问作为 Runtime acceptance 条件。
-
-## 10. Non-goals
-
-- 不处理 `HOME_CAROUSEL` stable conversion；
-- 不处理 Party ListItem ownership；
-- 不处理 230 deferred + 6 source-defect Articles；
-- 不处理慧就业 iframe/fixed integration；
-- 不重新抓取或重新审核 EU-50 已接受的 96 条最终内容；
-- 不把 ListItem stable code 暴露为 ordinary Admin 可编辑产品字段；
-- 不建立通用 package removal framework；
-- 不修改 Public frontend 技术栈或 URL contract；
+- 不建立新的 stable ListItem identity/reconcile framework；
+- 不新增 Flyway；
+- 不新增 Site Package structure type；
+- 不修改 Party ListItems；
+- 不处理 Article exception backlog；
+- 不处理慧就业 iframe；
 - 不更新 `agentic-dev` baseline。
 
-## 11. Requirement readiness
+## 9. Readiness
 
-Ownership、accepted content scope、最终审核 evidence、现有 bootstrap 兼容状态、operator mutation contract 与 stable identity gap 均已有 Repository Evidence。剩余问题属于可由 Technical Plan 明确的 site-neutral schema/provisioning实现细节，不需要新的产品决策。
-
-本 Requirement **READY**，可进入 Specification / Technical Planning；在 `slice-work` 前仍只是 Planning / Requirement Candidate，不因本文件 READY 自动获得 Execution Unit identity、Readiness 或 Execute Authority。
+需求边界、内容 Authority、实现位置和生命周期均已明确。本 Requirement **READY**；下一步由 Specification / Technical Plan 将其收敛为一个小型 bootstrap-data execution unit，经 `slice-work → readiness-check` 后方可执行。
