@@ -89,13 +89,13 @@ test('image-heavy formal Pages use projected package assets that are actually re
 test('FAQ Page promotes its ten top-level questions above answer numbering', async ({ page }) => {
   await page.goto('/page/guide/faq')
 
-  const questions = page.locator('.rich-content h2.faq-question')
+  const questions = page.locator('.rich-content > h2')
   await expect(questions).toHaveCount(10)
   await expect(questions.nth(2)).toHaveText('3.可免费申请书面认证报告的高等教育学历证书包括哪些？')
   await expect(questions.nth(3)).toHaveText('4.普通、成人高等教育学历证书认证需要提供哪些材料')
   await expect(questions.nth(4)).toHaveText('5.自学考试学历证书认证提供哪些材料？')
 
-  const answer = page.locator('.rich-content p').filter({ hasText: '1、毕业证原件' }).first()
+  const answer = page.locator('.rich-content > p').filter({ hasText: '1、毕业证原件' }).first()
   await expect(answer).toBeVisible()
   await expect(questions.nth(2)).toHaveCSS('font-weight', '700')
 
