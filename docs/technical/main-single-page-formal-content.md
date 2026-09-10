@@ -12,7 +12,7 @@
 - Technical Plan: **READY**
 - Planning baseline: `main@25e452ee3ce66c2d7da1000ad55e9570d732528a`
 - Candidate scope: Main Page Formal Content Package Adoption
-- Execute: **NOT STARTED / no Execute baseline**
+- Implementation lifecycle: **COMPLETED via EU-52 / Execute Authority TERMINATED**
 
 ## 1. Current implementation baseline
 
@@ -152,15 +152,9 @@ Execution may normalize the accepted `zhjy.jilinjobs.cn:8080/group1/cms/**` sour
 
 Any unresolved/mismatched PDF blocks `budget` Page acceptance; do not remove the link or replace it with another document.
 
-## 9. Source-evidence freshness gate
+## 9. Source-evidence execution evidence
 
-At future Execute baseline recovery, re-check artifact `10086056781`:
-
-- exists and not expired;
-- digest remains `sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494`;
-- run/head provenance matches accepted EU-50 evidence.
-
-Current GitHub metadata reports expiry `2026-09-16T02:42:04Z`. If it is unavailable at Execute recovery, this Technical Plan does not authorize silent substitution. Execute must remain blocked until an explicit bounded Page reacquisition produces equivalent auditable source evidence and Current Readiness is refreshed.
+EU-52 Fresh Context Execute recovery revalidated artifact `10086056781` before promotion: artifact availability, accepted digest `sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494`, run/head provenance and all 10 prior-package content fingerprints matched Authority. The 8 Issue #77-authorized budget residues were reacquired only through the accepted bounded normalization and all resolved to verified PDF bytes. Source artifacts are now provenance only; integrated Site Package bytes/manifests are the long-term product authority.
 
 ## 10. Verification implementation
 
@@ -208,4 +202,4 @@ Rollback is the complete implementation PR. Existing Runtime operator content is
 
 The current implementation paths, accepted source identities/fingerprints, stable Page targets, asset projector and operator guard are directly inspectable. The only product ambiguity (`budget` PDF ownership) already has Human Authority. The bounded adoption mechanism above removes the remaining technical conflict without reopening Historical Migration ownership.
 
-Technical Plan **READY** for `slice-work → readiness-check`.
+Technical Plan remains **READY / CURRENT** as implementation authority and was completed by EU-52. PR #125 integrated at `main@ccbd9fd8c6048f5b4a96d965b8578f7b7a1d2838`; final exact-head verification, bounded Human Review and Post-Integration CI #973 passed. EU-52 Execute Authority is terminated.

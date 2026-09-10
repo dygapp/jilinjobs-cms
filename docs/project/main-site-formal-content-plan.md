@@ -10,9 +10,9 @@
 - E3 current Article migration sequence: **COMPLETED through EU-50 / EU-51**
 - EU-50 — Main Source Discovery & Article Snapshot Promotion: **COMPLETED / Execute Authority TERMINATED**
 - EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review: **COMPLETED / Execute Authority TERMINATED**
-- Main Page Site Package follow-up / EU-52: **READY / Execute NOT STARTED**
+- Main Page Site Package follow-up / EU-52: **COMPLETED / Execute Authority TERMINATED**
 - stable Main ListItem Site Package follow-up: **Planning Candidate / no Identifier**
-- Current Ready Execution Unit: **EU-52 — Main Page Formal Content Package Adoption**
+- Current Ready Execution Unit: **NONE**
 - EU-52 Planning baseline: `main@25e452ee3ce66c2d7da1000ad55e9570d732528a`
 - EU-51 implementation integrated main: `fad4bfc17b762ec9612cf1e44a1c0af67e74a307`
 - Ownership correction: **2026-09-09 — Main Page and stable ListItem content belong to JilinJobs Site Package**
@@ -37,7 +37,7 @@ Legacy Source Page/List observations
 
 This boundary supersedes earlier planning text that treated Main Page bodies or stable Main list membership as Canonical Migration units.
 
-The accepted Main Article sequence is closed through source discovery/promotion and Runtime import/reconciliation/Human Review. EU-52 is a newly formed, independent Page-only Ready Execution Unit; it inherits no Execute Authority from E2/E3 history. Stable ListItem remains unplanned at Execution Unit level.
+The accepted Main Article sequence is closed through source discovery/promotion and Runtime import/reconciliation/Human Review. EU-52 has now also completed the independent Page-only Site Package implementation, verification, bounded Human Review and integration lifecycle; its Execute Authority is terminated. Stable ListItem remains unplanned at Execution Unit level.
 
 ## 2. Why Page and ListItem now split
 
@@ -116,35 +116,21 @@ Accepted Runtime closure:
 
 EU-51 Execute Authority is terminated.
 
-## 6. EU-52 — Main Page Formal Content Package Adoption — READY
+## 6. EU-52 — Main Page Formal Content Package Adoption — COMPLETED
 
-EU-52 was formed only after current Requirement / Specification / Technical Planning converged to the accepted Site Package ownership model and `slice-work` separated the still-immature ListItem path.
+Completed Work Evidence：`docs/work/archive/eu52-main-page-formal-content-package-adoption.md`。
 
-Current Authority:
+Accepted result：
 
-- Requirement: `docs/requirements/main-single-page-formal-content.md`
-- Specification: `docs/specifications/main-single-page-formal-content.md`
-- Technical Plan: `docs/technical/main-single-page-formal-content.md`
-- Work: `docs/work/current/eu52-main-page-formal-content-package-adoption.md`
-
-Accepted Page scope is the 10 EU-50 handoff `RICH_TEXT` Pages with stable targets:
-
-- standalone: `about`, `budget`, `teacher-library`, `employment-report-contact`;
-- `guide/*`: `contact`, `dagl`, `faq`, `dygl`, `jypq`, `xlrz`.
-
-EU-52 freezes the safe package-evolution contract:
-
-1. accepted formal bodies become JilinJobs Site Package create-time defaults;
-2. accepted stable Page resources become package assets under `sites/jilinjobs/assets/pages/**` with runtime targets under `/static/pages/**`;
-3. Existing Site content is upgraded only when its mutable-content fingerprint exactly matches an explicitly declared prior package baseline;
-4. operator-diverged content is preserved and reported by stable Page identity;
-5. successful adoption is idempotent and later operator edits remain protected;
-6. `budget` all 13 PDFs are package-owned; the 8 authorized legacy absolute-source residues may be reacquired only through the bounded normalization recorded by Issue #77;
-7. no Main Page Historical Migration fallback/mapping is created.
-
-`readiness-check = PASS` on planning baseline `main@25e452...`. The exact EU-50 source artifact is currently available as artifact `10086056781`, digest `sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494`, expiry `2026-09-16T02:42:04Z`.
-
-This Readiness does **not** establish Execute Authority. After the Planning/Readiness state integrates, a new Fresh Context must revalidate actual `main`, Authority, artifact freshness/digest/provenance and base drift before establishing an EU-52 Execute baseline.
+- implementation PR #125 final exact Head `ff4acdc08e9b902d6aa273ff33fae33fb5bfc520`；squash integrated main `ccbd9fd8c6048f5b4a96d965b8578f7b7a1d2838`；
+- 10 accepted Main `RICH_TEXT` Page formal bodies became JilinJobs Site Package defaults；
+- 156 new Page-owned assets integrated, total package assets = 187；`budget` all 13 PDFs are package-owned；
+- exact prior-package fingerprint guarded adoption, operator divergence reporting, idempotency and post-adoption operator-edit protection are implemented；
+- exact-head CI / Site Package / compatibility regressions PASS；bounded Human Review PASS；
+- manual review finding on `guide/faq` top-level question hierarchy was corrected and reverified by the final Integrated Browser gate；
+- Post-Integration CI #973 / run `34442174532` and Site Package #104 / Backend Boundary #41 / Generic #64 / Party #19 all PASS；
+- no Main Page Historical Migration mapping, Generic Flyway/schema expansion, stable ListItem implementation or Article backlog handling was introduced；
+- Execute Authority：**TERMINATED**。
 
 ## 7. Stable Main ListItem follow-up — independent Planning Candidate
 
@@ -176,24 +162,9 @@ For EU-52 Page source scope, artifact/resource path, size, SHA-256 or newly disc
 
 ## 9. Current Gate
 
-Current Ready Execution Unit is:
+Current Ready Execution Unit：**NONE**。
 
-> **EU-52 — Main Page Formal Content Package Adoption — READY / Execute NOT STARTED**
-
-Current lifecycle boundary:
-
-```text
-EU-51 completion / closure — INTEGRATED
-→ Fresh Context Planning candidate decision
-→ Main Page selected; stable ListItem remains independent
-→ Requirement / Specification / Technical Planning convergence
-→ slice-work → EU-52
-→ readiness-check — PASS
-→ Planning/Readiness integration
-→ NEW Fresh Context EU-52 Execute-baseline recovery
-```
-
-No Execute baseline exists on the Planning branch. No Site Package bytes, source bytes, code or Runtime state may be changed until the next Fresh Context independently revalidates integrated authority and establishes Execute Authority.
+EU-52 已完成并终止 Execute Authority。下一自然 Gate 是新的 Fresh Context Planning/Readiness decision。stable Main ListItem、230 deferred problem Articles、6 source-defect Articles及其他候选都必须保持独立，只有重新完成相应 Authority / `slice-work` / `readiness-check` 后才能进入 Execute；不得从 EU-52 自动继承或推导 successor authority。
 
 ## 10. Non-goals
 

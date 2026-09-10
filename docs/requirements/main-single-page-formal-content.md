@@ -8,7 +8,7 @@
 - Planning baseline: `main@25e452ee3ce66c2d7da1000ad55e9570d732528a`
 - Requirement: **READY**
 - Candidate: Main Page Formal Content Package Adoption
-- Execute: **NOT STARTED / no Execute Authority**
+- Implementation lifecycle: **COMPLETED via EU-52 / Execute Authority TERMINATED**
 
 ## 1. Intent
 
@@ -132,4 +132,4 @@ EU-50 handoff中的已下载 Page resources必须逐项按 source evidence 的 p
 
 当前 Repository Authority 已明确 Page归属、10 个 source handoff target、EU-49 operator guard、Site Package stable asset能力，以及 `budget` 13 PDF 的 Human Authority。剩余问题属于可在 Technical Plan 中冻结的 package evolution机制与验证细节，不需要新的产品决策。
 
-本 Requirement **READY**。
+本 Requirement **READY**，并已由 EU-52 完成实现与验收。Implementation PR #125 已集成到 `main@ccbd9fd8c6048f5b4a96d965b8578f7b7a1d2838`；bounded Human Review 与 Post-Integration CI #973 PASS；EU-52 Execute Authority 已终止。后续 Page 版本变化仍必须遵守本 Requirement 的显式 adoption precondition，不因 EU-52 completion 获得永久 overwrite authority。

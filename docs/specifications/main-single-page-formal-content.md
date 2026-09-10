@@ -13,7 +13,7 @@
 - Specification: **READY**
 - Technical Planning: **REQUIRED / READY in companion Technical Plan**
 - Planning baseline: `main@25e452ee3ce66c2d7da1000ad55e9570d732528a`
-- Execute: **NOT STARTED / no Execute Authority**
+- Implementation lifecycle: **COMPLETED via EU-52 / Execute Authority TERMINATED**
 
 ## 1. Accepted package projection
 
@@ -189,4 +189,4 @@ Excluded:
 
 The capability and content are one atomic delivery boundary: integrating formal package bytes without guarded Existing-Site adoption would leave current sites stale, while adding adoption semantics without an accepted target package would have no product outcome. They therefore form one homogeneous Candidate Execution Unit under `slice-work`.
 
-This Specification is **READY** for Technical Planning and `slice-work → readiness-check`.
+This Specification remains **READY / CURRENT** as the accepted product contract and was implemented by EU-52. PR #125 integrated at `main@ccbd9fd8c6048f5b4a96d965b8578f7b7a1d2838`; exact-head automated verification, bounded Human Review and Post-Integration CI #973 passed. EU-52 Execute Authority is terminated.

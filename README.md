@@ -29,77 +29,41 @@ Fresh Context 按以下入口恢复，避免把历史执行记录当作当前 Au
 
 ## 当前 Gate
 
-Issue #92 Phase 0～Phase 3 已完成；E1 Main External-link Boundary 以 Planning / Authority closure 收口；E2 / EU-49 已完成 Page operational-content ownership 与 site-neutral Generic Page canonical migration foundation；E3 的 EU-50 source discovery / accepted snapshot promotion 与 EU-51 Main canonical Runtime import / reconciliation / Human Review 均已完成并集成。随后从 integrated `main@25e452ee3ce66c2d7da1000ad55e9570d732528a` 对 Main Page / stable ListItem Site Package follow-up重新执行 Planning，Page 与 ListItem 因 maturity 不同被拆分；Page 已完成 Requirement / Specification / Technical Planning、`slice-work` 与 `readiness-check`，形成 **EU-52 — Main Page Formal Content Package Adoption**。
+Issue #92 Phase 0～Phase 3、E1 Planning closure、E2 / EU-49、E3 / EU-50～EU-51，以及 EU-52 Main Page Formal Content Package Adoption 均已完成相应当前闭环。EU-52 implementation PR #125 已从 final exact Head `ff4acdc08e9b902d6aa273ff33fae33fb5bfc520` squash 集成到 `main@ccbd9fd8c6048f5b4a96d965b8578f7b7a1d2838`，Post-Integration CI #973 / run `34442174532` PASS。
 
 ```text
-EU-51 completion / closure — COMPLETED
-        ↓
-Fresh Context Planning/Readiness decision
-        ↓
-Main Page Site Package follow-up
-   └─ EU-52 — READY / Execute NOT STARTED
+EU-52 Main Page Formal Content Package Adoption
+   └─ COMPLETED / Execute Authority TERMINATED
 
 stable Main ListItem Site Package follow-up
    └─ independent Planning Candidate / no Identifier
+
+Deferred Article review
+   └─ 230 problem + 6 source-defect / independent later review
 ```
 
 当前状态：
 
-- E1 Requirement / Specification：**READY / Planning closure**；无独立 implementation gap；
-- E2 / EU-49：**COMPLETED**；completed Work Evidence：`docs/work/archive/eu49-page-content-migration-foundation.md`；
-- E3 Requirement / Specification / Technical Plan：继续作为 **READY / ACTIVE** 的 Main Article historical migration contract；当前阶段性执行已通过 EU-50 / EU-51 完成；
-- EU-50：**COMPLETED / Execute Authority TERMINATED**；completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`；
-- EU-51：**COMPLETED / Execute Authority TERMINATED**；completed Work Evidence：`docs/work/archive/eu51-main-canonical-import-runtime-review.md`；
-- EU-51 implementation PR #122 final Head `5adae340edcf605e36779c831fb512c31342eec8`；squash integrated main `fad4bfc17b762ec9612cf1e44a1c0af67e74a307`；
-- PR #122 exact-head Runtime #8、Browser #4、Canonical #264、EU-30 #214、CI #957、Standard Review #840 均 **PASS**；bounded Human Review **PASS**；Post-Integration CI #958 / run `34417382337` **PASS**；
-- accepted current subset = 3078 Articles（1577 INTERNAL + 1501 EXTERNAL_LINK），2603 resources / 450,273,166 bytes，dataset digest `sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`；
-- 6 篇 `SOURCE_RESOURCE_MISSING` Article 继续排除并等待客户确认；230 篇 problem Article继续作为 durable deferred evidence，**不属于已完成 EU-51 import input，也不属于 EU-52**；
-- **EU-52：READY / Execute NOT STARTED / Execute baseline NONE**；Planning baseline `main@25e452ee3ce66c2d7da1000ad55e9570d732528a`；Current Work：`docs/work/current/eu52-main-page-formal-content-package-adoption.md`；
-- EU-52 只覆盖 accepted Main Page formal content、stable Page assets 与受保护的一次性 package adoption；stable Main ListItem 继续保持独立 Planning Candidate；
-- **Current Ready Execution Unit：EU-52**；
-- Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层长期边界；
-- Repository Split Readiness Assessment、C1/C2、Issue #57/#59 与 Issue #60 其余候选保持独立。
-
-下一自然 Gate 是 **EU-52 Planning/Readiness integration → Fresh Context Execute-baseline recovery**。本 Planning 分支没有 Execute baseline，也不得实施 Site Package bytes、Page source promotion、provisioning code 或 Runtime mutation。只有 Planning/Readiness 状态集成后，新 Fresh Context 重新核验 integrated `main`、Issue #60/#77、EU-52 Authority、source artifact freshness/digest/provenance、Open PR / Actions 与 base drift，才允许建立 EU-52 的独立 Execute baseline。
+- EU-49、EU-50、EU-51、EU-52：**COMPLETED / Execute Authority TERMINATED**；
+- EU-52 accepted result：10 个 Main formal Page + 156 个新增 Page-owned assets进入 JilinJobs Site Package，总 package assets = 187；`budget` 13 PDF均 package-owned；Existing Site只在 exact prior-package mutable-content fingerprint match 时一次性 adoption，operator-diverged content保留并报告；
+- PR #125 exact-head CI #972 / Site Package #103 / Backend Boundary #40 / Generic #63 / Canonical #273 / Party #18 / EU-30 #223 / EU-51 Runtime #17 / Imported Browser #13均 PASS；bounded Human Review PASS；
+- 人工验收发现的 `guide/faq` 顶层问题层级已在同一 Unit 内修正并由 final Browser verification证明；
+- Post-Integration on `main@ccbd9fd8c6048f5b4a96d965b8578f7b7a1d2838`：CI #973、Site Package #104、Backend Boundary #41、Generic #64、Party #19均 **PASS**；
+- stable Main ListItem继续作为独立 Planning Candidate，不具有 Identifier / Readiness / Execute Authority；
+- 230 篇 deferred problem Articles与 6 篇 source-defect Articles继续作为独立 later-review / customer-confirmation evidence；EU-52未采用“每栏目仅迁移最新20条”的 Article 策略；
+- **Current Ready Execution Unit：NONE**。
 
 Current Main formal-content Authority：
 
 - Overall plan：`docs/project/main-site-formal-content-plan.md`；
-- E1 Requirement：`docs/requirements/main-external-link-boundary.md`；
-- E1 Specification：`docs/specifications/main-external-link-boundary.md`；
-- E2 / EU-52 current Requirement：`docs/requirements/main-single-page-formal-content.md`；
-- E2 / EU-52 current Specification：`docs/specifications/main-single-page-formal-content.md`；
-- E2 / EU-52 current Technical Plan：`docs/technical/main-single-page-formal-content.md`；
-- EU-52 Current Work：`docs/work/current/eu52-main-page-formal-content-package-adoption.md`；
-- EU-49 Completed Work Evidence：`docs/work/archive/eu49-page-content-migration-foundation.md`；
-- E3 Requirement：`docs/requirements/main-historical-content-migration.md`；
-- E3 Specification：`docs/specifications/main-historical-content-migration.md`；
-- E3 Technical Plan：`docs/technical/main-historical-content-migration.md`；
-- EU-50 Completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`；
-- EU-51 Completed Work Evidence：`docs/work/archive/eu51-main-canonical-import-runtime-review.md`。
+- Main Page current Requirement：`docs/requirements/main-single-page-formal-content.md`；
+- Main Page current Specification：`docs/specifications/main-single-page-formal-content.md`；
+- Main Page current Technical Authority：`docs/technical/main-single-page-formal-content.md`；
+- EU-52 Completed Work Evidence：`docs/work/archive/eu52-main-page-formal-content-package-adoption.md`；
+- EU-49 / EU-50 / EU-51 Completed Work Evidence：`docs/work/archive/`；
+- E3 current Article contract：`docs/requirements/main-historical-content-migration.md`、`docs/specifications/main-historical-content-migration.md`、`docs/technical/main-historical-content-migration.md`。
 
-Phase 2C accepted Authority：
-
-- Requirement：`docs/requirements/party-migration-despecialization-compatibility.md`；
-- Specification：`docs/specifications/party-migration-despecialization-compatibility.md`；
-- Technical Plan：`docs/technical/party-migration-despecialization-compatibility.md`；
-- Completed Work Artifact：`docs/work/archive/eu48-party-migration-despecialization-compatibility.md`。
-
-Phase 2B accepted Authority继续作为 Generic Migration长期 contract：
-
-- `docs/requirements/generic-content-migration-application.md`；
-- `docs/specifications/generic-content-migration-application.md`；
-- `docs/technical/generic-content-migration-application.md`；
-- `docs/work/archive/eu47-generic-content-migration-application-foundation.md`。
-
-Phase 2A accepted Authority继续说明长期 application/core contract：
-
-- `docs/requirements/backend-application-core-boundary.md`；
-- `docs/specifications/backend-application-core-boundary.md`；
-- `docs/technical/backend-application-core-boundary.md`；
-- `docs/work/archive/eu46-backend-application-core-boundary-foundation.md`。
-
-已完成 Execution Unit 的详细记录位于 `docs/work/archive/`；完成记录中的旧 Status / Next Step 不构成新的 Execute Authority。
+下一自然 Gate 是新的 **Fresh Context Planning/Readiness decision**。任何后续 Candidate 都必须从 current Repository Authority 重新完成必要的 Requirement / Specification / Technical Planning、`slice-work` 与 `readiness-check`；不得自动进入 stable ListItem、deferred Article 或其他候选，也不得继承 EU-52 Execute Authority。
 
 ## 主要目录
 
