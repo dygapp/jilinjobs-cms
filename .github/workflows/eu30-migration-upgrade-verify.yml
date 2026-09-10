@@ -3,7 +3,8 @@ name: EU-30 Migration Upgrade Verification
 on:
   pull_request:
     paths:
-      - 'data-migrations/**'
+      - 'data-migrations/party/v1/**'
+      - '!data-migrations/party/v1/**/*.md'
       - 'backend/build.gradle.kts'
       - 'backend/settings.gradle.kts'
       - 'backend/modules/cms-core/build.gradle.kts'

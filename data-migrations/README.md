@@ -120,8 +120,8 @@ The Generic migration engine may still contain site-neutral Page/List support be
 For Main:
 
 - Page stable content already has Site Package representation/reconcile capability;
-- stable Main ListItem membership requires a separate Site Package capability/ownership Unit;
-- Historical Migration must not be used as a temporary fallback for that missing capability.
+- stable Main ListItem membership belongs to Site Package product ownership;
+- Historical Migration must not be used as a temporary fallback for Site Package content.
 
 ## 9. Collect / Review / Stable CI
 
@@ -143,9 +143,9 @@ Party was the first real Canonical Migration consumer and historically includes 
 
 Do not generalize Party list ownership into Main. Likewise, do not rewrite Party merely because Main now classifies stable list membership as Site Package content.
 
-## 11. Main current state after EU-50
+## 11. Current migration state
 
-EU-50 is **COMPLETED** and its Execute Authority is **TERMINATED**.
+EU-50 and EU-51 Main historical migration lifecycle are **COMPLETED** and their Execute Authority is **TERMINATED**.
 
 The integrated current Main canonical dataset under `main/v1/**` contains:
 
@@ -159,8 +159,12 @@ Separately preserved evidence contains:
 - 230 deferred problem Articles for later separate review;
 - Page/List Site Package source handoff.
 
-Those excluded/deferred records are not current import input. EU-50 did not perform Runtime Main import.
+Those excluded/deferred records are not current import input.
 
-Current Ready Execution Unit is **NONE**. EU-51 remains a Candidate whose accepted-snapshot dependency is satisfied but whose downstream `readiness-check` has not yet run after EU-50 integration. No Runtime import may start merely because the canonical dataset now exists. Main Page/List follow-up remains a separate Site Package Planning/Readiness path.
+Main historical migration execution is currently **FROZEN / explicit reactivation only**. The accepted `main/**` canonical data and evidence remain repository-owned; the former EU-50 / EU-51 Main migration workflows are preserved under `.github/frozen-workflows/main-migration/` and do not participate in ordinary GitHub Actions triggers. Only an explicitly authorized independent Main migration process may reactivate the necessary execution capability.
+
+Party historical migration is not frozen. Party canonical Article/ListItem data, `PARTY_CAROUSEL` compatibility and the active Party migration verification capability remain in force.
+
+EU-52 and EU-53 are also completed. **Current Ready Execution Unit is `NONE`**; the next natural gate is a new Fresh Context Planning / Readiness decision, and no future Unit may inherit Execute Authority from a completed Unit.
 
 The old mixed destructive Main triage path remains retired because it could delete Page/List evidence and mix ownership domains.
