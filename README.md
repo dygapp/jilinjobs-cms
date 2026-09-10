@@ -35,8 +35,8 @@ Issue #92 Phase 0～Phase 3、E1 Planning closure、E2 / EU-49、E3 / EU-50～EU
 EU-52 Main Page Formal Content Package Adoption
    └─ COMPLETED / Execute Authority TERMINATED
 
-stable Main ListItem Site Package follow-up
-   └─ independent Planning Candidate / no Identifier
+Main ListItem Site Package bootstrap completion
+   └─ current Planning Candidate / Requirement + Specification + Technical Plan READY
 
 Deferred Article review
    └─ 230 problem + 6 source-defect / independent later review
@@ -46,16 +46,17 @@ Deferred Article review
 
 - EU-49、EU-50、EU-51、EU-52：**COMPLETED / Execute Authority TERMINATED**；
 - EU-52 accepted result：10 个 Main formal Page + 156 个新增 Page-owned assets进入 JilinJobs Site Package，总 package assets = 187；`budget` 13 PDF均 package-owned；Existing Site只在 exact prior-package mutable-content fingerprint match 时一次性 adoption，operator-diverged content保留并报告；
-- PR #125 exact-head CI #972 / Site Package #103 / Backend Boundary #40 / Generic #63 / Canonical #273 / Party #18 / EU-30 #223 / EU-51 Runtime #17 / Imported Browser #13均 PASS；bounded Human Review PASS；
-- 人工验收发现的 `guide/faq` 顶层问题层级已在同一 Unit 内修正并由 final Browser verification证明；
-- Post-Integration on `main@ccbd9fd8c6048f5b4a96d965b8578f7b7a1d2838`：CI #973、Site Package #104、Backend Boundary #41、Generic #64、Party #19均 **PASS**；
-- stable Main ListItem继续作为独立 Planning Candidate，不具有 Identifier / Readiness / Execute Authority；
-- 230 篇 deferred problem Articles与 6 篇 source-defect Articles继续作为独立 later-review / customer-confirmation evidence；EU-52未采用“每栏目仅迁移最新20条”的 Article 策略；
+- Main ListItem current plan：Main `HOME_CAROUSEL` 与已审核 `SITE_RELATED=5`、`SITE_REGIONAL_GRADUATES=31`、`SITE_JILIN_UNIVERSITIES=60` 使用现有 Site Package one-time bootstrap SQL；bootstrap 后继续作为普通 operator-managed data；不新增 stable identity / reconcile；
+- Party ListItem / `PARTY_CAROUSEL` 继续由 Party migration/current Party Authority 管理，不进入 Main ListItem follow-up；
+- 230 篇 deferred problem Articles与 6 篇 source-defect Articles继续作为独立 later-review / customer-confirmation evidence；
 - **Current Ready Execution Unit：NONE**。
 
 Current Main formal-content Authority：
 
 - Overall plan：`docs/project/main-site-formal-content-plan.md`；
+- Main ListItem Requirement：`docs/requirements/main-stable-listitem-site-package.md`；
+- Main ListItem Specification：`docs/specifications/main-stable-listitem-site-package.md`；
+- Main ListItem Technical Plan：`docs/technical/main-stable-listitem-site-package.md`；
 - Main Page current Requirement：`docs/requirements/main-single-page-formal-content.md`；
 - Main Page current Specification：`docs/specifications/main-single-page-formal-content.md`；
 - Main Page current Technical Authority：`docs/technical/main-single-page-formal-content.md`；
@@ -63,7 +64,7 @@ Current Main formal-content Authority：
 - EU-49 / EU-50 / EU-51 Completed Work Evidence：`docs/work/archive/`；
 - E3 current Article contract：`docs/requirements/main-historical-content-migration.md`、`docs/specifications/main-historical-content-migration.md`、`docs/technical/main-historical-content-migration.md`。
 
-下一自然 Gate 是新的 **Fresh Context Planning/Readiness decision**。任何后续 Candidate 都必须从 current Repository Authority 重新完成必要的 Requirement / Specification / Technical Planning、`slice-work` 与 `readiness-check`；不得自动进入 stable ListItem、deferred Article 或其他候选，也不得继承 EU-52 Execute Authority。
+下一自然 Gate 是 Main ListItem 的 **`slice-work → readiness-check`**。只有形成 Candidate Execution Unit 并通过 Readiness 后才能建立新的 Execute Authority；不得继承 EU-52 Execute Authority，也不得顺带进入 Party ListItem、deferred Article 或慧就业 iframe 工作。
 
 ## 主要目录
 
