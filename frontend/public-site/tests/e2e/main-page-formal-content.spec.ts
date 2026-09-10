@@ -86,7 +86,6 @@ test('image-heavy formal Pages use projected package assets that are actually re
   expect(certificationResponse.ok()).toBeTruthy()
 })
 
-
 test('FAQ Page promotes its ten top-level questions above answer numbering', async ({ page }) => {
   await page.goto('/page/guide/faq')
 
@@ -96,5 +95,11 @@ test('FAQ Page promotes its ten top-level questions above answer numbering', asy
   await expect(questions.nth(3)).toHaveText('4.普通、成人高等教育学历证书认证需要提供哪些材料')
   await expect(questions.nth(4)).toHaveText('5.自学考试学历证书认证提供哪些材料？')
 
-  await expect(page.locator('.rich-content p').filter({ hasText: '1、毕业证原件' }).first()).toBeVisible()
+  const answer = page.locator('.rich-content p').filter({ hasText: '1、毕业证原件' }).first()
+  await expect(answer).toBeVisible()
+  await expect(questions.nth(2)).toHaveCSS('font-weight', '700')
+
+  const questionFontSize = await questions.nth(2).evaluate(element => Number.parseFloat(getComputedStyle(element).fontSize))
+  const answerFontSize = await answer.evaluate(element => Number.parseFloat(getComputedStyle(element).fontSize))
+  expect(questionFontSize).toBeGreaterThan(answerFontSize)
 })
