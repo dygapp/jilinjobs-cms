@@ -5,281 +5,207 @@
 - `docs/requirements/main-single-page-formal-content.md`
 - `docs/specifications/main-single-page-formal-content.md`
 - `docs/project/main-site-formal-content-plan.md`
+- GitHub Issue #77
 
 ## Status
 
 - Technical Plan: **READY**
-- Planning baseline: `main@f42bacf4ab7719e3291288c77f0685b428b86141`
-- Scope: E2 first foundation slice only
+- Planning baseline: `main@25e452ee3ce66c2d7da1000ad55e9570d732528a`
+- Candidate scope: Main Page Formal Content Package Adoption
+- Execute: **NOT STARTED / no Execute baseline**
 
-## 1. Implementation topology
+## 1. Current implementation baseline
 
-Keep the accepted application boundary:
+Current Page provisioning lives in:
 
-```text
-cms-server ───────────→ cms-core
-content-migration ───→ cms-core
-```
+`backend/modules/cms-core/src/main/kotlin/com/jilinjobs/cms/provisioning/SitePackageProvisioning.kt`.
 
-No new app/module is created.
+EU-49 behavior is accepted and must remain the default:
 
-Implementation areas:
+- missing Page: CREATE uses package `bodyHtml/renderMode/embedUrl`;
+- existing Page: ordinary structural reconcile does not compare or overwrite those three mutable content fields.
 
-```text
-backend/modules/cms-core/
-├── src/main/kotlin/.../page/**
-├── src/main/kotlin/.../provisioning/SitePackageProvisioning.kt
-└── src/main/resources/db/migration/V3__page_content_migration_mapping.sql
+Current verification `backend/apps/cms-server/src/test/kotlin/com/jilinjobs/cms/provisioning/PageContentOwnershipVerification.kt` proves operator-maintained content survives ordinary reconcile.
 
-backend/apps/content-migration/
-├── src/main/kotlin/.../migration/LegacyMappings.kt
-└── src/main/kotlin/.../migration/generic/GenericContentMigration.kt
+Stable asset loading/projection remains in `SitePackageAssets.kt`; no second asset subsystem is introduced.
 
-data-migrations/schemas/
-└── generic Page index/item schema additions
-```
+## 2. Generic adoption field
 
-Focused verification may add a dedicated Gradle task/workflow or extend Generic Content Migration Verification; final choice must preserve one clear Page-specific failure signal without duplicating the entire repository CI.
-
-## 2. Site Package Page reconcile change
-
-Current existing-Page branch in `SitePackageProvisioning.kt` compares and updates:
-
-`group/name/bodyHtml/renderMode/embedUrl/sortOrder/enabled`.
-
-Change only the E2 content fields:
-
-- on create: keep setting `body_html`, `render_mode`, `embed_url` from package;
-- on existing Page comparison: ignore these three fields;
-- on existing Page UPDATE: do not write these three fields;
-- continue current behavior for group/name/sort/enabled/preset in this Unit.
-
-This is deliberately narrow. Broader preset operational-field governance is not part of E2.
-
-Focused Site Package verification adds:
-
-1. first provision creates package defaults;
-2. mutate existing preset Page `body_html/render_mode/embed_url`;
-3. second provision leaves the mutation unchanged;
-4. current structural reconciliation remains PASS.
-
-## 3. Generic schema V3
-
-Add append-only Generic CMS migration:
-
-`V3__page_content_migration_mapping.sql`
-
-Create `cms_page_legacy_mapping` with at least:
-
-- `id` BIGINT PK;
-- `source_system` VARCHAR(100) NOT NULL;
-- `legacy_key` VARCHAR(255) NOT NULL;
-- `source_url` VARCHAR(2000) NOT NULL;
-- `source_fingerprint` CHAR(64) NOT NULL;
-- `page_id` BIGINT NOT NULL;
-- `created_at` timestamp;
-- unique `(source_system, legacy_key)`;
-- FK `page_id → cms_page(id)` with delete restriction/cascade chosen consistently with current stable Page deletion protection; preferred `ON DELETE RESTRICT` because preset target deletion is already prohibited and mapping must not disappear silently.
-
-Do not modify V1/V2. V3 is Generic schema capability and contains no Main aliases/data.
-
-## 4. Core Page content boundary
-
-Do not make the migration app construct a full `PageDraft` merely to change three content fields.
-
-Add a narrow site-neutral Core capability, implementation-equivalent to:
+Extend `SitePackagePage` with one nullable field:
 
 ```kotlin
-data class PageContentDraft(
-    val bodyHtml: String,
-    val renderMode: PageRenderMode,
-    val embedUrl: String?,
-)
-
-PageService.updateContent(id: Long, draft: PageContentDraft): CmsPage
+val contentAdoptionFromFingerprint: String? = null
 ```
+
+Validation:
+
+- null means no explicit existing-content adoption authority;
+- non-null must match lowercase SHA-256 (`[0-9a-f]{64}`);
+- the field is generic Site Package capability and must not encode Main aliases or source-system policy.
+
+No Site Package schemaVersion bump is required if current JSON v1 evolution rules accept an additive optional field; if implementation verification proves that assumption false, stop and update the Technical Plan before changing schema semantics.
+
+## 3. Shared Page content fingerprint
+
+Implement or extract the smallest site-neutral helper for the accepted Page mutable-content fingerprint:
+
+```text
+SHA-256(UTF-8 exact JSON)
+{"bodyHtml":<stored body>,"renderMode":<enum/string>,"embedUrl":<string-or-null>}
+```
+
+Key order is fixed exactly as above. Do not include Page id, group, alias, name, sort, enabled, preset or timestamps.
+
+The helper must produce the same semantics as EU-49 Generic Page `expectedTargetFingerprint`; focused tests must prove the known EU-50 expected-target fingerprints for the 10 accepted Pages match the prior package baseline before package bodies are replaced.
+
+## 4. Reconcile algorithm
+
+Refactor `reconcilePage` only enough to keep structural and content decisions separate.
+
+Pseudo-flow:
+
+```text
+resolve existing Page by stable identity
+if missing:
+  create full package Page
+else:
+  owned/preset check
+  reconcile structural fields as today
+  targetFingerprint = fingerprint(target body/render/embed)
+  currentFingerprint = fingerprint(existing body/render/embed)
+
+  if currentFingerprint == targetFingerprint:
+      content = CURRENT_EQUALS_TARGET
+  else if target.contentAdoptionFromFingerprint != null
+       && currentFingerprint == target.contentAdoptionFromFingerprint:
+      update body_html/render_mode/embed_url to target
+      content = ADOPTED
+  else:
+      do not write content
+      content = PROTECTED_DIVERGENCE
+```
+
+The SQL content update must be bounded to the three mutable fields and only execute in the exact baseline-match branch. Do not restore these fields to ordinary structural UPDATE SQL.
+
+If structural fields also change, both changes occur in the same DB transaction used by current provisioner.
+
+## 5. Provisioning report evolution
+
+Keep existing `created/updated/unchanged/objects/columns` compatibility and add deterministic Page-content outcome evidence, preferably:
+
+```kotlin
+val protectedPageContent: List<String> = emptyList()
+val adoptedPageContent: List<String> = emptyList()
+```
+
+Stable identity format must reuse the current `pageIdentity(groupAlias, alias)` representation or another already accepted deterministic representation.
 
 Requirements:
 
-- reuse current `RichTextHtmlPolicy` for RICH_TEXT;
-- reuse current renderMode/embedUrl validation;
-- do not change alias/group/name/sort/enabled/preset;
-- remain usable only as a domain capability; no new Admin/Public endpoint is required by this Unit.
+- baseline-matched adoption appears in `adoptedPageContent` and contributes to `updated` when no incompatible existing counter semantics result;
+- protected divergence appears in `protectedPageContent`, even if structure is otherwise unchanged;
+- list ordering follows package Page order for deterministic output;
+- CLI continues emitting a single `SITE_PACKAGE_PROVISION_REPORT <json>` record.
 
-Generic migration service can call this capability inside its transaction.
+Do not fail the whole provision solely because operator content diverged; preservation + explicit report is the accepted ownership behavior. Validation/source-integrity errors still fail closed.
 
-## 5. Mapping ownership
+## 6. Main package content promotion
 
-Extend neutral `migration/LegacyMappings.kt` with `PageLegacyMappingMapper` / record, consistent with Article/List mapping ownership.
+Execution consumes the exact accepted EU-50 Page evidence only after artifact/digest revalidation.
 
-The mapper supports:
+Target changes:
 
-- find by `(sourceSystem, legacyKey)`;
-- insert accepted first-apply mapping.
+- replace the 10 accepted Page placeholder/default bodies in `sites/jilinjobs/structure/pages.json` with accepted source `bodyHtml/renderMode/embedUrl`;
+- add `contentAdoptionFromFingerprint` using each accepted handoff `expectedTargetFingerprint` after verifying it matches the prior package content;
+- rewrite accepted local resource references to final `/static/pages/**` URLs;
+- bump package version and structure digest(s) using current manifest contract.
 
-No update method is added in this Unit because changed source fingerprint defaults to CONFLICT.
+The source handoff's `sourceFingerprint` remains provenance/evidence; it is not a Runtime migration mapping.
 
-## 6. Canonical Page models
+## 7. Page asset promotion
 
-Extend `GenericContentMigration.kt` with site-neutral models:
+Use existing `sites/jilinjobs/assets/manifest.json` and `SitePackageAssetProjector`.
 
-- `CanonicalPageIndex` / `CanonicalPageReference`;
-- `CanonicalPageSource`;
-- `CanonicalPageTarget(groupAlias?, pageAlias)`;
-- `CanonicalPageContent(bodyHtml, renderMode, embedUrl?)`;
-- `CanonicalPageResource` if body resources are present;
-- `CanonicalPageRecord(sourceFingerprint, expectedTargetFingerprint, ...)`;
-- `LoadedPage` / `PagePlan`;
-- `GenericMigrationKind.PAGE`.
+For every accepted local Page resource:
 
-`LoadedDataset.total` / `GenericImportPlan` / reports include pages without changing Article/List semantics.
+1. recover exact bytes from the verified EU-50 artifact or the explicitly authorized bounded `budget` normalization source;
+2. verify path/source relationship, expected size and SHA-256 before copying;
+3. choose deterministic package source path under `assets/pages/**`;
+4. choose runtime target under `/static/pages/**`;
+5. add source/target/SHA-256 to existing asset manifest;
+6. rewrite Page body to the target URL;
+7. verify manifest/projector and protected-path behavior.
 
-## 7. Fingerprint rules
+Prefer meaningful stable filenames when source/product semantics are clear, especially all 13 `budget` PDFs. Where source filename is not a stable product identifier, a deterministic digest-backed filename is acceptable. Never guess extension/content type from URL when bytes/evidence disagree.
 
-### 7.1 Source fingerprint
+## 8. Budget bounded normalization
 
-Use canonical Page source data serialization defined by schema/fixture builder; source fingerprint remains repository evidence identity and is validated as SHA-256.
+The 8 Human-authorized legacy absolute PDF references are the only known special acquisition case.
 
-### 7.2 Target precondition fingerprint
+Execution may normalize the accepted `zhjy.jilinjobs.cn:8080/group1/cms/**` source residue to the bounded current legacy source form authorized by Issue #77 for byte acquisition. It must record for each PDF:
 
-Implement one shared helper for Runtime Page content fingerprint:
+- original legacy URL;
+- normalized acquisition URL;
+- acquired size/SHA-256;
+- final package source path;
+- final `/static/pages/budget/**` target.
 
-```text
-UTF-8 JSON object with fixed key order:
-{
-  "bodyHtml": <stored current bodyHtml>,
-  "renderMode": <enum name>,
-  "embedUrl": <string or null>
-}
-```
+Any unresolved/mismatched PDF blocks `budget` Page acceptance; do not remove the link or replace it with another document.
 
-SHA-256 of exact UTF-8 bytes is `expectedTargetFingerprint`.
+## 9. Source-evidence freshness gate
 
-The same helper is used by:
+At future Execute baseline recovery, re-check artifact `10086056781`:
 
-- fixture/canonical validation tests;
-- migration preflight Runtime comparison.
+- exists and not expired;
+- digest remains `sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494`;
+- run/head provenance matches accepted EU-50 evidence.
 
-Do not include Runtime id, timestamps, name, sort or enabled.
+Current GitHub metadata reports expiry `2026-09-16T02:42:04Z`. If it is unavailable at Execute recovery, this Technical Plan does not authorize silent substitution. Execute must remain blocked until an explicit bounded Page reacquisition produces equivalent auditable source evidence and Current Readiness is refreshed.
 
-## 8. Page resource projection
+## 10. Verification implementation
 
-Do not introduce Page Resource association.
+Extend focused Site Package verification rather than creating a second provisioning engine.
 
-If a Page fixture contains body resources, reuse the existing Generic file verifier and StaticResource capability. Use deterministic site-neutral target:
+Required synthetic cases:
 
-```text
-migrated/content/pages/<sha256>.<validated-extension>
-```
+- fresh Page create with target formal content;
+- exact old-baseline adoption;
+- target-already-current no-op;
+- operator divergence preserve + identity report;
+- structural update + protected content coexistence;
+- adoption rerun idempotency;
+- operator edit after adoption survives later reconcile;
+- invalid adoption fingerprint rejected.
 
-Public URL becomes:
+Add Main package-content verification that runs offline after bytes are promoted and proves:
 
-```text
-/static/migrated/content/pages/<sha256>.<ext>
-```
+- exact set of 10 Page identities;
+- accepted source/target fingerprints recorded in Work evidence agree with package result;
+- no unresolved `migration-resource://` token;
+- no accepted package-local resource still points at legacy `/group1/cms/**`;
+- all body-owned package targets exist in asset manifest and bytes match digest;
+- all 13 `budget` PDF targets exist under `/static/pages/budget/**`;
+- existing Site Package Asset Projection verification remains PASS.
 
-Rules:
+Repository gates remain Backend, Site Package, Admin/Public/Integrated Browser and any directly affected focused verification. Exact-head Browser verification must visit all 10 Page routes before bounded Human Review.
 
-- canonical body uses the existing generic `migration-resource://<sha256>` token where compatible; do not create a Main-specific token;
-- every token must resolve exactly one canonical resource;
-- digest/size/path and actual image/file bytes are validated before mutation;
-- static target create must use existing safe path policy;
-- same digest target is reusable/idempotent;
-- no target under `/static/uploads/**` or `sites/jilinjobs/assets/**`.
+## 11. Side effects and rollback
 
-If implementation evidence shows current Generic token helper is Article-coupled, extract the smallest site-neutral rewrite helper rather than duplicating logic.
+Planning/Readiness changes are documentation only.
 
-## 9. Preflight / execute order
+Future Execute side effects are bounded to:
 
-Extend current dataset pipeline:
+- generic Site Package provisioning model/report implementation;
+- JilinJobs Page package bodies/version/digests;
+- JilinJobs stable Page asset bytes/manifest;
+- focused verification/workflow support if required.
 
-```text
-load Article/List/Page
-→ structural/file validation
-→ Runtime target + mapping classification
-→ dependency/precondition validation
-→ GenericImportPlan
-→ execute
-→ report
-```
+No Flyway, Generic Historical Migration, canonical Article data, ListItem capability or frontend technology change is required.
 
-Page classification:
+Rollback is the complete implementation PR. Existing Runtime operator content is never rewritten unless its current fingerprint exactly matches the explicitly declared prior package baseline.
 
-1. resolve stable target;
-2. load existing page mapping;
-3. mapping same fingerprint + same target → SKIP;
-4. mapping changed fingerprint / changed target → CONFLICT;
-5. no mapping → compute Runtime target-content fingerprint;
-6. mismatch expectedTargetFingerprint → CONFLICT;
-7. match → APPLY plan.
+## 12. Technical readiness
 
-Any known INVALID/CONFLICT prevents dataset execute from starting, preserving EU-47 all-known-errors-before-write behavior.
+The current implementation paths, accepted source identities/fingerprints, stable Page targets, asset projector and operator guard are directly inspectable. The only product ambiguity (`budget` PDF ownership) already has Human Authority. The bounded adoption mechanism above removes the remaining technical conflict without reopening Historical Migration ownership.
 
-Execute Page APPLY:
-
-- project validated static assets as required;
-- call Core `updateContent`;
-- insert mapping;
-- return PAGE result.
-
-Keep DB mutation + mapping insert in one transaction. Filesystem/static side effects follow the existing Generic side-effect boundary; failed DB execution must remain observable and must not cause a false successful mapping.
-
-## 10. CLI / report
-
-No new Main command.
-
-Existing:
-
-```text
-generic-content <snapshot-root>
-./gradlew importCanonicalContent ...
-```
-
-accepts Page units.
-
-Report adds PAGE kind while preserving:
-
-- total / created(or applied) / skipped / conflicts / invalid counters;
-- existing machine-readable `CONTENT_MIGRATION_REPORT` label;
-- nonzero failure semantics.
-
-For compatibility with existing status enum, successful first Page APPLY may report `CREATED` even though it updates an existing stable Page row; message/kind makes the semantic explicit. Do not rename global statuses in this Unit.
-
-## 11. Verification
-
-Add a synthetic neutral fixture using aliases such as `docs` / `about`, never Main/Party production aliases.
-
-Focused proof:
-
-- Generic Fresh DB + synthetic Site Package target;
-- standalone and grouped Page target;
-- first Page apply;
-- same input second run SKIP;
-- operator edit after import + same input still SKIP/preserved;
-- precondition mismatch CONFLICT/no DB mutation;
-- source fingerprint drift CONFLICT;
-- missing/ambiguous target INVALID;
-- resource digest/path/token failure INVALID;
-- existing Article/List first/second/conflict tests still PASS;
-- Generic source purity still has no Party/Main aliases;
-- Site Package Page content no-overwrite test;
-- Backend Application Boundary verification;
-- Canonical Party + Upgrade verification regression;
-- Site Package Verification;
-- Repository CI / Integrated Browser.
-
-No Review Environment/Human visual gate is required because this foundation intentionally makes no actual Main content or visual change.
-
-## 12. Rollback / side effects
-
-Rollback boundary is the complete foundation PR.
-
-Schema side effect: additive V3 mapping table only; no current Runtime content rows are seeded by Flyway.
-
-Verification uses Fresh DB/temp static roots. No Main production dataset is imported by this Unit.
-
-## 13. Technical readiness
-
-Current code paths, V3 numbering, Page domain boundary, Generic pipeline and verification entries are all directly inspectable. No unresolved technology choice remains.
-
-Technical Plan **READY** for `slice-work`.
+Technical Plan **READY** for `slice-work → readiness-check`.
