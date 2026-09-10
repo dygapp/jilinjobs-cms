@@ -7,172 +7,111 @@
 - Phase 3 re-entry: **PASS**
 - E1: **COMPLETED / Authority-only**
 - E2 / EU-49: **COMPLETED**
-- E3 current Article migration sequence: **COMPLETED through EU-50 / EU-51**
-- EU-50 — Main Source Discovery & Article Snapshot Promotion: **COMPLETED / Execute Authority TERMINATED**
-- EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review: **COMPLETED / Execute Authority TERMINATED**
+- E3 Article migration sequence: **COMPLETED through EU-50 / EU-51**
 - Main Page Site Package follow-up / EU-52: **COMPLETED / Execute Authority TERMINATED**
-- stable Main ListItem Site Package follow-up: **Planning Candidate / no Identifier**
-- Current Ready Execution Unit: **NONE**
-- EU-52 Planning baseline: `main@25e452ee3ce66c2d7da1000ad55e9570d732528a`
-- EU-51 implementation integrated main: `fad4bfc17b762ec9612cf1e44a1c0af67e74a307`
-- Ownership correction: **2026-09-09 — Main Page and stable ListItem content belong to JilinJobs Site Package**
+- Main ListItem Site Package follow-up / EU-53: **READY / bootstrap-data completion**
+- Current Ready Execution Unit: **EU-53**
+- Planning/Readiness baseline: `main@4d5578a2715f8adc0ebca73ee0ae7342f740c8ce`
+- Work Authority: `docs/work/current/eu53-main-listitem-bootstrap-completion.md`
 
-## 1. Current planning boundary
-
-Issue #60 E1～E3 remains the Main formal-content planning authority, with the accepted product ownership boundary:
+## 1. Current ownership boundary
 
 ```text
 Main Article historical content
-    → E3 Historical Content Migration
+    → Historical Content Migration
 
 Main Page formal content + stable Page assets
-    → JilinJobs Site Package / EU-52
+    → JilinJobs Site Package / EU-52 completed
 
-Main stable ListItem membership
-    → JilinJobs Site Package / independent later Planning Candidate
+Main ListItem initial site data
+    → JilinJobs Site Package bootstrap SQL / EU-53
 
-Legacy Source Page/List observations
-    → source discovery evidence / Site Package handoff only
+Party ListItems / Party carousel
+    → Party migration authority; not part of EU-53
 ```
 
-This boundary supersedes earlier planning text that treated Main Page bodies or stable Main list membership as Canonical Migration units.
+EU-50 source discovery already established that Main ListItem data does not belong to Article Historical Migration. The remaining gap is only that the reviewed Main ListItem values were not fully written into the Site Package initialization SQL.
 
-The accepted Main Article sequence is closed through source discovery/promotion and Runtime import/reconciliation/Human Review. EU-52 has now also completed the independent Page-only Site Package implementation, verification, bounded Human Review and integration lifecycle; its Execute Authority is terminated. Stable ListItem remains unplanned at Execution Unit level.
+## 2. Why ListItem remained incomplete
 
-## 2. Why Page and ListItem now split
+EU-50 had Article-only Execute Authority. PR #117 temporarily carried ListItem review/report work, but that work was removed when the PR was restored to the authorized Article-only tree. EU-52 later completed only Main Page formal content.
 
-Current repository evidence proves the two Site Package follow-ups have different readiness:
+This did **not** invalidate the earlier ownership decision. It only left the concrete Main ListItem initialization data incomplete.
 
-- `sites/jilinjobs/structure/pages.json` already owns stable Page identities and create-time `bodyHtml` defaults;
-- EU-49 already ensures ordinary Site Package reconcile preserves existing operator-managed `bodyHtml / renderMode / embedUrl`;
-- existing Site Package asset manifest/projector already owns stable package assets;
-- EU-50 has accepted source handoff for 10 stable `RICH_TEXT` Page targets;
-- Issue #77 Human Authority has resolved `budget` Page's 13-PDF ownership and the bounded normalization allowed for 8 legacy absolute-source residues;
-- current Site Package v1 does **not** have a `list-items` structure type or stable ListItem identity/reconcile path;
-- the six current Main bootstrap ListItems are one-time operator defaults and cannot simply be relabelled stable without defining identity, representation, adoption, reconcile, operator mutation and upgrade semantics.
+The earlier Planning attempt on this branch incorrectly expanded this into a new stable ListItem identity/reconcile subsystem. That is unnecessary for the current product requirement and is superseded by this plan.
 
-Therefore `slice-work` forms a Page-only Unit. Combining stable ListItems would couple a ready product slice to unresolved architecture and would violate the independent Planning/Readiness boundary.
+## 3. Current ListItem delivery model
 
-## 3. E1 accepted result
+Main ListItems use the same Site Package initialization-data model already used by current bootstrap data:
 
-E1 continues to define link behavior/ownership:
+```text
+Site Package stable structure provision
+→ Site Package bootstrap SQL applied once
+→ ListItem rows become ordinary operator-managed Runtime data
+```
 
-- `EXTERNAL_LINK` Article owns article title + external target;
-- Navigation owns stable navigation label/target/open mode;
-- ListItem owns list placement/presentation target;
-- fixed integration remains engineering-owned.
+`SitePackageBootstrapper` already records `(packageId, bootstrapId)` in `cms_site_bootstrap_state`; an applied bootstrap is not replayed on every startup. No new ListItem stable identity, Flyway column, package `list-items` structure type, adoption algorithm, delete protection or runtime reconcile capability is required.
 
-For completed E3, only Column content classified as INTERNAL / EXTERNAL_LINK Article is migration content. Main stable list placement is Site Package content.
+## 4. EU-53 scope
 
-## 4. E2 / EU-49 historical result
+The Main initialization SQL must contain:
 
-EU-49 established Page operational-content ownership protection and a site-neutral Generic Page migration capability. Its accepted result remains valid:
+- `HOME_CAROUSEL`: Main homepage carousel initialization data, using the same bootstrap-SQL lifecycle;
+- `SITE_RELATED`: 5 reviewed link items;
+- `SITE_REGIONAL_GRADUATES`: 31 reviewed link items;
+- `SITE_JILIN_UNIVERSITIES`: 60 reviewed link items;
+- existing Main advertisement bootstrap data remains unchanged unless separately required.
 
-- missing preset Page may be created from package defaults;
-- existing Page mutable content is operator-managed and ordinary Site Package reconcile does not overwrite it;
-- Generic Page migration capability remains a generic CMS capability and historical compatibility evidence.
+The three `SITE_LINKS` groups consume the final reviewed ListItem evidence from repository history:
 
-The later ownership correction means Main Page formal content is **not** delivered through Historical Migration. EU-49 is not reopened and its Execute Authority remains terminated.
+- commit `b223a1d3a40b510f53a34ea9997926f8f4541a18`;
+- `sites/jilinjobs/reports/listitem-final-adjustment-report.md`;
+- 96 audited occurrences = 72 adjusted + 24 unchanged.
 
-## 5. E3 completed Article sequence
+No live-network re-audit is required. Accepted titles/URLs from that report are the implementation input.
 
-### EU-50 — Main Source Discovery & Article Snapshot Promotion — COMPLETED
+`HOME_CAROUSEL` is Main Site Package bootstrap data and uses the same initialization mechanism. `PARTY_CAROUSEL` and all other Party ListItems are explicitly excluded because Party data migration already owns them.
 
-EU-50 completed the explicit external-source stage and integrated the accepted current Article subset through PR #117.
+## 5. Implementation boundary
 
-Accepted result:
+EU-53 is intentionally small:
 
-- total Article candidates: 3314；
-- current import-eligible: 3078 = 1577 INTERNAL + 1501 EXTERNAL_LINK；
-- source-defect excluded pending client confirmation: 6；
-- deferred problem Articles: 230；
-- current accepted resources: 2603 files / 450,273,166 bytes；
-- canonical dataset: `data-migrations/main/v1/**`；
-- dataset digest: `sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`；
-- Page/List discoveries preserved as Site Package handoff evidence；
-- no Runtime Main import was performed by EU-50。
+1. keep Generic CMS schema and Site Package provisioner unchanged;
+2. expand `sites/jilinjobs/bootstrap/initial-data.sql` with the accepted Main ListItem rows;
+3. keep the Main `HOME_CAROUSEL` row in the same SQL;
+4. update `sites/jilinjobs/bootstrap/manifest.json` SHA-256 for the changed SQL;
+5. add or update focused verification that a Fresh Site receives the expected Main ListItem counts/content and that Party data is unaffected.
 
-Current Human Authority explicitly defers the 230 problem Articles and the separately excluded 6 source-defect Articles until later review/customer confirmation. They remain durable evidence, are not current import input, and are not part of EU-52.
+This work does not create a new long-lived ListItem ownership subsystem.
 
-EU-50 completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`。Execute Authority is terminated.
+## 6. Verification boundary
 
-### EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review — COMPLETED
+Verification must prove at least:
 
-EU-51 consumed only the accepted repository-owned `data-migrations/main/v1/**` Article subset. Completed Work Evidence：
+- bootstrap manifest digest matches `initial-data.sql`;
+- Fresh Site bootstrap succeeds;
+- Main `HOME_CAROUSEL` initialization remains present;
+- `SITE_RELATED = 5`;
+- `SITE_REGIONAL_GRADUATES = 31`;
+- `SITE_JILIN_UNIVERSITIES = 60`;
+- reviewed title/URL corrections are represented exactly in SQL;
+- second bootstrap evaluation returns the existing one-time/`ALREADY_APPLIED` behavior rather than duplicating data;
+- no Party ListItem/migration data is changed;
+- existing Site Package / Backend / Public checks remain green.
 
-`docs/work/archive/eu51-main-canonical-import-runtime-review.md`
+External third-party availability is not part of Runtime acceptance; the links were already reviewed in EU-50 evidence.
 
-Accepted Runtime closure:
+## 7. Non-goals
 
-- PR #122 final exact Head：`5adae340edcf605e36779c831fb512c31342eec8`；
-- squash integrated main：`fad4bfc17b762ec9612cf1e44a1c0af67e74a307`；
-- first Generic import：3078 CREATED，0 conflict / invalid；
-- all stable mappings / target Columns / 2603 resources reconciled；
-- second identical import：3078 SKIPPED，0 CREATED / conflict / invalid；
-- no Main Page/List migration mapping produced；
-- Public/Admin/Integrated Browser verification：PASS；
-- bounded Human Review：PASS；
-- Post-Integration CI #958 / run `34417382337`：PASS。
+- no `cms_list_item.code` schema change;
+- no Flyway V4 for ListItem identity;
+- no Site Package `list-items.json`;
+- no ListItem reconcile/adoption/removal/delete-protection framework;
+- no Party ListItem or `PARTY_CAROUSEL` changes;
+- no Article migration changes;
+- no Hui Employment iframe changes in EU-53;
+- no `agentic-dev` baseline update.
 
-EU-51 Execute Authority is terminated.
+## 8. Current Gate
 
-## 6. EU-52 — Main Page Formal Content Package Adoption — COMPLETED
-
-Completed Work Evidence：`docs/work/archive/eu52-main-page-formal-content-package-adoption.md`。
-
-Accepted result：
-
-- implementation PR #125 final exact Head `ff4acdc08e9b902d6aa273ff33fae33fb5bfc520`；squash integrated main `ccbd9fd8c6048f5b4a96d965b8578f7b7a1d2838`；
-- 10 accepted Main `RICH_TEXT` Page formal bodies became JilinJobs Site Package defaults；
-- 156 new Page-owned assets integrated, total package assets = 187；`budget` all 13 PDFs are package-owned；
-- exact prior-package fingerprint guarded adoption, operator divergence reporting, idempotency and post-adoption operator-edit protection are implemented；
-- exact-head CI / Site Package / compatibility regressions PASS；bounded Human Review PASS；
-- manual review finding on `guide/faq` top-level question hierarchy was corrected and reverified by the final Integrated Browser gate；
-- Post-Integration CI #973 / run `34442174532` and Site Package #104 / Backend Boundary #41 / Generic #64 / Party #19 all PASS；
-- no Main Page Historical Migration mapping, Generic Flyway/schema expansion, stable ListItem implementation or Article backlog handling was introduced；
-- Execute Authority：**TERMINATED**。
-
-## 7. Stable Main ListItem follow-up — independent Planning Candidate
-
-Stable Main ListItem membership remains a separate Site Package Planning Candidate because the current package owns `lists` definitions but not stable membership instances.
-
-Before any ListItem Candidate Execution Unit can be formed, Planning must define at least:
-
-- stable ListItem identity;
-- package representation / schema evolution;
-- Runtime adoption from one-time bootstrap or operator-maintained state;
-- reconcile semantics and non-destructive operator mutation boundary;
-- upgrade/removal ordering and conflict behavior;
-- verification for link/article targets and Public list rendering.
-
-EU-52 does not answer these questions and cannot grant authority to that path.
-
-## 8. Source-error boundary
-
-The accepted error policy remains:
-
-- only confirmed HTTP 404/410 resource absence may be classified `SOURCE_RESOURCE_MISSING`;
-- INTERNAL Articles whose every blocking issue is that class may be excluded pending client confirmation and must remain separately listed;
-- all other Article error types remain separately classified / human-reviewable;
-- transport/socket failures are never inferred to be missing-source evidence;
-- Page/List errors are preserved in Site Package handoff reports and are not silently repaired, discarded or converted into migration decisions；
-- 230 deferred problem Articles and 6 source-defect Articles remain independent later-review/customer-confirmation evidence and are outside EU-52。
-
-For EU-52 Page source scope, artifact/resource path, size, SHA-256 or newly discovered source anomalies fail closed for the affected accepted Page. No silent HTML repair, resource deletion or guessed replacement is allowed.
-
-## 9. Current Gate
-
-Current Ready Execution Unit：**NONE**。
-
-EU-52 已完成并终止 Execute Authority。下一自然 Gate 是新的 Fresh Context Planning/Readiness decision。stable Main ListItem、230 deferred problem Articles、6 source-defect Articles及其他候选都必须保持独立，只有重新完成相应 Authority / `slice-work` / `readiness-check` 后才能进入 Execute；不得从 EU-52 自动继承或推导 successor authority。
-
-## 10. Non-goals
-
-- no stable ListItem implementation in EU-52;
-- no Page/List Historical Migration fallback;
-- no repair/import of 230 deferred or 6 source-defect Articles;
-- no speculative Main-specific Runtime importer;
-- no Public frontend technology change;
-- no Party canonical rewrite;
-- no `agentic-dev` baseline update;
-- no automatic successor nomination after EU-52 future completion.
+`slice-work` has formed **EU-53 — Main ListItem Bootstrap Completion** and `readiness-check` is **PASS**. Planning/Readiness Authority must integrate first; then Execute recovery revalidates the integrated `main` and establishes the EU-53 Execute baseline. No previous EU Execute Authority is inherited.
