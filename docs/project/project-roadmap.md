@@ -24,14 +24,14 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | Issue #60 / E3 / EU-50 Main Source Discovery & Accepted Snapshot Promotion | **COMPLETED** | accepted current Article subset 已 repository-owned promotion 并集成；Execute Authority terminated |
 | Issue #60 / E3 / EU-51 Main Canonical Import, Runtime Reconciliation & Human Review | **COMPLETED** | 3078 accepted Articles 已完成 Fresh Runtime import / reconciliation / idempotency、Public/Admin/Integrated Browser 与 bounded Human Review；Execute Authority terminated |
 | EU-52 Main Page Formal Content Package Adoption | **COMPLETED** | 10 formal Pages + Page-owned assets + guarded Existing-Site adoption 已通过 PR #125、bounded Human Review 与 Post-Integration verification；Execute Authority terminated |
-| stable Main ListItem Site Package follow-up | **Planning Candidate** | stable identity / package representation / adoption / reconcile / operator mutation / upgrade semantics仍需独立 Planning；无 Identifier |
+| Main ListItem Site Package bootstrap completion | **Planning Candidate / READY upstream** | Main `HOME_CAROUSEL` 与 96 条已审核 SITE_LINKS 使用现有一次性 bootstrap SQL；不新增 stable identity / reconcile；待 `slice-work → readiness-check` |
 | Deferred problem Article review | deferred | 230 篇 problem Article 与 6 篇 source-defect Article 保持独立 evidence / client-review backlog，不阻断当前路线 |
 | Repository Split Readiness Assessment | deferred | 四层 boundary 已闭环，但 Assessment 仍独立后置 |
 | Issues #57 / #59 / #60 其他候选 | 规划层保留 | C1/C2、Browser Compatibility、Public Rendering Architecture 等保持独立 |
 
 Current Ready Execution Unit：**NONE**。
 
-EU-52 已完成并终止 Execute Authority。下一 Gate 是新的 Fresh Context Planning/Readiness decision；任何后续候选必须独立形成 Readiness，不能继承 EU-52 Execute Authority。
+EU-52 已完成并终止 Execute Authority。当前已选择 Main ListItem Site Package bootstrap completion 作为下一 Planning Candidate；Requirement / Specification / Technical Plan 已收敛到最低必要复杂度，下一 Gate 是 `slice-work → readiness-check`，不得继承 EU-52 Execute Authority。
 
 ## 当前已接受长期边界
 
@@ -58,7 +58,8 @@ sites/jilinjobs/
 - `/static/uploads/**` 与 historical canonical assets 不属于 stable Site asset ownership；
 - Page stable identity / required structure由 Site Package持有；EU-49 已完成 ownership transfer，使 ordinary reconcile 不再覆盖 existing Page 的 operator-managed `bodyHtml / renderMode / embedUrl`；
 - EU-52 已实现并验证 accepted Main Page formal body 作为 package create-time default、accepted stable Page resource作为 package asset；Existing Site只在 exact prior-package baseline match 时显式一次性 adoption，operator divergence保留并报告；
-- stable Main ListItem membership 仍属于独立 Site Package Planning Candidate，不属于 EU-52 或 Historical Migration fallback。
+- Main ListItem 初始数据属于 Site Package one-time bootstrap；包括 Main `HOME_CAROUSEL` 以及 EU-50 已审核的 `SITE_RELATED` / `SITE_REGIONAL_GRADUATES` / `SITE_JILIN_UNIVERSITIES`；bootstrap 后按普通 operator-managed Runtime data 生命周期运行，不引入新的 ListItem stable identity/reconcile；
+- Party ListItem / `PARTY_CAROUSEL` 继续由 Party migration/current Party Authority 管理，不进入 Main bootstrap follow-up。
 
 ### 3. Historical Content Migration
 
@@ -69,7 +70,8 @@ sites/jilinjobs/
 - Generic Content Migration 已提供 site-neutral Article / ListItem / Page load、preflight、stable mapping、guarded apply、idempotency/conflict/report foundation；Main-specific source facts / policy不得进入 Generic capability；
 - Legacy Source只允许出现在显式 Collect / Discovery 边界；promoted canonical verification与Runtime import必须可离线执行；
 - Main current accepted Article subset 已 repository-owned 固化到 `data-migrations/main/v1/**`；EU-51 已证明该 subset 可通过现有 Generic capability 在 Fresh Runtime 确定性导入和幂等重放；deferred/problem Article evidence 与 current import input继续分离；
-- Main Page current product delivery不使用 Historical Migration fallback；Generic Page migration capability继续作为通用能力与兼容性事实存在。
+- Main Page current product delivery不使用 Historical Migration fallback；Generic Page migration capability继续作为通用能力与兼容性事实存在；
+- Main ListItem current product delivery使用 Site Package bootstrap SQL，不作为 Main Historical Article Migration 输入；Party ListItem migration保持既有 Party Authority。
 
 ### 4. Replaceable Public Renderer
 
@@ -115,7 +117,7 @@ Current accepted contract：
 
 EU-49 已完成 Page operational-content ownership、Generic Page canonical migration foundation 与 append-only V3 mapping。Implementation integrated main：`18da735c654c1a5d1310fe6db7e8e98f6f7b0026`；Authority closure integrated main：`e6fe7674398ad8c29fa7ff1d62eb500754a66cc8`。EU-49 Execute Authority 已终止。
 
-EU-50 source handoff 与 Issue #77 Human Authority随后解决了 Main Page 当前产品交付所需的 source/resource 事实。新的 current Authority据此把 Main Page正式内容归入 JilinJobs Site Package，并通过 `slice-work → readiness-check` 形成 **EU-52 — Main Page Formal Content Package Adoption**。EU-52 随后已完成 implementation、verification、bounded Human Review、integration 与 Post-Integration closure，Execute Authority 已终止；其 accepted scope 仅覆盖 10 个 accepted RICH_TEXT Page、stable Page assets 与受保护的一次性 package adoption；stable Main ListItem 从未进入该 Unit，继续保持独立 Planning Candidate。
+EU-50 source handoff 与 Issue #77 Human Authority随后解决了 Main Page 当前产品交付所需的 source/resource 事实。新的 current Authority据此把 Main Page正式内容归入 JilinJobs Site Package，并通过 `slice-work → readiness-check` 形成 **EU-52 — Main Page Formal Content Package Adoption**。EU-52 随后已完成 implementation、verification、bounded Human Review、integration 与 Post-Integration closure，Execute Authority 已终止；其 accepted scope 仅覆盖 10 个 accepted RICH_TEXT Page、stable Page assets 与受保护的一次性 package adoption；Main ListItem 初始化不属于 EU-52，并由后续独立 bootstrap-data Planning Candidate 处理。
 
 ### E3 — Main Historical Content Collection & Canonical Migration
 
@@ -176,26 +178,35 @@ EU-52 completed the Page-only Site Package delivery boundary:
 - no Main Page Historical Migration mapping/input or Generic Flyway/schema change was introduced；
 - Execute Authority：**TERMINATED**；Completed Work Evidence：`docs/work/archive/eu52-main-page-formal-content-package-adoption.md`。
 
-### Stable Main ListItem follow-up
+### Main ListItem Site Package bootstrap completion
 
-Stable Main ListItem membership remains an independent Site Package Planning Candidate. Current package owns `lists` definitions but not stable membership instances; stable identity, representation/schema evolution, adoption, reconcile, operator mutation and upgrade/removal semantics must be defined before `slice-work` can form any ListItem Execution Unit.
+Main ListItem ownership was already established during EU-50 source discovery. The current follow-up deliberately uses the existing Site Package one-time bootstrap mechanism rather than introducing a new stable ListItem Runtime subsystem.
+
+Current Main initialization scope:
+
+- `HOME_CAROUSEL`：Main homepage carousel bootstrap data；
+- `SITE_RELATED`：5 reviewed links；
+- `SITE_REGIONAL_GRADUATES`：31 reviewed links；
+- `SITE_JILIN_UNIVERSITIES`：60 reviewed links。
+
+The three SITE_LINKS groups consume the final reviewed ListItem report from historical commit `b223a1d3a40b510f53a34ea9997926f8f4541a18`. Party ListItems / `PARTY_CAROUSEL` remain under Party migration/current Party Authority and are explicitly excluded. No Generic schema, Flyway or Site Package runtime reconcile extension is required.
 
 ### Deferred Article / client-confirmation backlog
 
 - 230 篇 problem Article继续作为 durable deferred evidence；
 - 6 篇 source-defect Article继续等待客户确认；
-- 二者均不属于已完成 EU-51 import input，也不属于 EU-52；
+- 二者均不属于已完成 EU-51 import input，也不属于 EU-52 或 Main ListItem bootstrap completion；
 - 后续只能通过新的显式 Planning / Review Authority处理，不得静默修复、猜测、删除或自动导入。
 
 ## 当前 Next Gate
 
-**Fresh Context Planning/Readiness decision**。
+**Main ListItem `slice-work → readiness-check`**。
 
-Current Ready Execution Unit = **NONE**。EU-52 Execute Authority 已终止，stable Main ListItem、230 deferred problem Articles、6 source-defect Articles及其他 Issue #57/#59/#60 candidates均保持独立；不得自动选择、编号或授权任何 successor Unit。
+Current Ready Execution Unit = **NONE**。当前 Planning Candidate 已收敛为 Site Package bootstrap SQL 数据补全；只有 `slice-work` 形成 Candidate Execution Unit 且 `readiness-check` PASS 后才允许正式 Execute。230 deferred problem Articles、6 source-defect Articles及其他 Issue #57/#59/#60 candidates均保持独立。
 
 ## 其他开放方向
 
-- stable Main ListItem Site Package follow-up：独立 Planning Candidate；
+- Main ListItem Site Package bootstrap completion：当前 Planning Candidate；
 - Issue #77：继续作为 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层长期 Architecture Authority；
 - Issue #57：Public Rendering Architecture future discussion；
 - Issue #59：Browser Compatibility & Runtime Guard 后置候选；
