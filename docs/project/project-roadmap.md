@@ -115,7 +115,7 @@ Current accepted contract：
 
 EU-49 已完成 Page operational-content ownership、Generic Page canonical migration foundation 与 append-only V3 mapping。Implementation integrated main：`18da735c654c1a5d1310fe6db7e8e98f6f7b0026`；Authority closure integrated main：`e6fe7674398ad8c29fa7ff1d62eb500754a66cc8`。EU-49 Execute Authority 已终止。
 
-EU-50 source handoff 与 Issue #77 Human Authority随后解决了 Main Page 当前产品交付所需的 source/resource 事实。新的 current Authority据此把 Main Page正式内容归入 JilinJobs Site Package，并通过 `slice-work → readiness-check` 形成 **EU-52 — Main Page Formal Content Package Adoption**。EU-52 当前为 **READY / Execute NOT STARTED / Execute baseline NONE**，只覆盖 10 个 accepted RICH_TEXT Page、stable Page assets 与受保护的一次性 package adoption；stable Main ListItem不在该 Unit。
+EU-50 source handoff 与 Issue #77 Human Authority随后解决了 Main Page 当前产品交付所需的 source/resource 事实。新的 current Authority据此把 Main Page正式内容归入 JilinJobs Site Package，并通过 `slice-work → readiness-check` 形成 **EU-52 — Main Page Formal Content Package Adoption**。EU-52 已完成实现、验证、bounded Human Review、integration 与 Post-Integration closure，Execute Authority 已终止；该 Unit 仅覆盖 10 个 accepted RICH_TEXT Page、stable Page assets 与受保护的一次性 package adoption，stable Main ListItem不在该 Unit。
 
 ### E3 — Main Historical Content Collection & Canonical Migration
 
