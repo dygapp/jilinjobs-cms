@@ -12,9 +12,9 @@
 - Identifier: **EU-52**
 - Planning baseline: `main@25e452ee3ce66c2d7da1000ad55e9570d732528a`
 - Readiness: **PASS**
-- Execute state: **NOT STARTED**
-- Execute baseline: **NONE**
-- Execute Authority: **NOT ESTABLISHED**
+- Execute state: **IN PROGRESS**
+- Execute baseline: `main@14d63d82135385e0b8de89b578836d5d995b0a4b`
+- Execute Authority: **ESTABLISHED — Fresh Context revalidation PASS on 2026-09-10**
 
 EU-52 is a Planning/Readiness result only. This Work artifact does not authorize implementation from the planning branch. After this Readiness state is integrated, a new Fresh Context must independently recover the integrated `main`, current Issue #60/#77 Authority, Open PR/Issue/Actions, source-evidence freshness and base drift before establishing an EU-52 Execute baseline.
 
@@ -210,3 +210,24 @@ After this Planning/Readiness state is integrated and Post-Integration Current E
 The next natural Gate is a **new Fresh Context EU-52 Execute-baseline recovery**. That Fresh Context must independently revalidate integrated `main`, Issue #60/#77, this Work artifact, source artifact freshness, Open PR/Issue/Actions and base drift before establishing Execute Authority.
 
 EU-52 does not authorize or nominate the stable Main ListItem follow-up after its own future completion.
+
+## 11. Execute Current Evidence
+
+Fresh Context Execute recovery established the independent baseline `main@14d63d82135385e0b8de89b578836d5d995b0a4b` after revalidating integrated Authority, no Page/provisioning drift, source artifact availability/digest/provenance, Open PR/Actions, and the ten prior-package Page fingerprints.
+
+EU-50 source artifact remains `10086056781` from run `34303771704`, Head `a96cee22449508f92f3c89789f99aad477286a66`, digest `sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494`.
+
+The eight Issue #77-authorized legacy `zhjy.jilinjobs.cn:8080/group1/cms/**` budget residues were reacquired by bounded host normalization through EU-52 acquisition run `34433750232` / source commit `10e443132aeb06e01518400641d658bb7f95d36d`. Run result: **PASS**, 8/8 actual PDF responses, acquisition artifact `10135439308`, artifact digest `sha256:01104be3bccc5bafec4ca75e52fdc22ebbf2a408a8ca8d55cf7090474a8463a8`.
+
+| Final file | Original legacy URL | Normalized acquisition URL | Bytes | SHA-256 | Runtime target |
+|---|---|---|---:|---|---|
+| `budget-2023.pdf` | `https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2023-02-27/8331fd04-91d2-4365-8576-44a7adb40d44.pdf` | `https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content2/2023-02-27/8331fd04-91d2-4365-8576-44a7adb40d44.pdf` | 1020114 | `120edfa8ff20294845d8a96dc30c1cf3e3efd42ba7c561a85c554ad33d412a68` | `/static/pages/budget/budget-2023.pdf` |
+| `budget-2024.pdf` | `https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2024-03-12/d87173cd-8a3f-4667-a042-ece836a0f0ea.pdf` | `https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content2/2024-03-12/d87173cd-8a3f-4667-a042-ece836a0f0ea.pdf` | 1072453 | `22191f03b5eb7a8591a6ab94a76353bdf49efceb7f52dba75c985579d704e3f0` | `/static/pages/budget/budget-2024.pdf` |
+| `budget-2025.pdf` | `https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2025-03-07/ceb5b088-6158-4b73-b446-3cf650194866.pdf` | `https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content2/2025-03-07/ceb5b088-6158-4b73-b446-3cf650194866.pdf` | 395609 | `2a76bddefbc00baa4648526dbb4f8a902dbbea54294ae9246878648255c6d585` | `/static/pages/budget/budget-2025.pdf` |
+| `budget-2026.pdf` | `https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2026-03-17/84773049-6580-4c9d-87ce-ab29f9576157.pdf` | `https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content2/2026-03-17/84773049-6580-4c9d-87ce-ab29f9576157.pdf` | 558958 | `9c198388a55e90c930d7c994972749fb05aaff63f016eafd272814ca30f3aefe` | `/static/pages/budget/budget-2026.pdf` |
+| `final-accounts-2022.pdf` | `https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2023-09-08/e74779f2-e551-43ad-a5f8-0a91020e8d00.pdf` | `https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content2/2023-09-08/e74779f2-e551-43ad-a5f8-0a91020e8d00.pdf` | 703607 | `4dae555b1986e58953794d5326aed259b9742740cee1a7f527c183ed51c556ec` | `/static/pages/budget/final-accounts-2022.pdf` |
+| `final-accounts-2023.pdf` | `https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2024-09-12/f7b003d5-9074-4d26-ac58-827131c02f22.pdf` | `https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content2/2024-09-12/f7b003d5-9074-4d26-ac58-827131c02f22.pdf` | 2722567 | `b8da79b1ab19d1eda5dbbb22f99cc16ed9b5ccc4ccb2595b9a7117f43e9b1f24` | `/static/pages/budget/final-accounts-2023.pdf` |
+| `final-accounts-2024.pdf` | `https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2025-09-05/4851fa77-f787-4d7f-be10-34490a98df0f.pdf` | `https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content2/2025-09-05/4851fa77-f787-4d7f-be10-34490a98df0f.pdf` | 1946548 | `14066db387bfb7a003df6ce8f1d55180ad561c76b8440dee4d3274f22efcd84b` | `/static/pages/budget/final-accounts-2024.pdf` |
+| `final-accounts-2025.pdf` | `https://zhjy.jilinjobs.cn:8080/group1/cms/t_biz_attachment/content2/2026-09-04/75b071b2-c354-4690-bb8e-2bdc25e600bb.pdf` | `https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content2/2026-09-04/75b071b2-c354-4690-bb8e-2bdc25e600bb.pdf` | 2325289 | `6ea0e382e585ceae389a717744b2ec76b3c9fd6ec85a5e263a2c15fcd4d544aa` | `/static/pages/budget/final-accounts-2025.pdf` |
+
+Promotion generator verified all 10 accepted Page prior-package fingerprints before replacement and all 156 Page asset bytes before writing package files. Stable Main ListItem and the 230 + 6 Article backlog remain untouched.

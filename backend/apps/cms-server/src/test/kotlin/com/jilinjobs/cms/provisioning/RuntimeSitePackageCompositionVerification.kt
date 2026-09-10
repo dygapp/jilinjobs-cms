@@ -30,15 +30,23 @@ fun main() {
         "Generic CMS Flyway 不得创建 JilinJobs navigation rows"
     }
 
+    var expectedAssetCount = 0
     val first = startRuntimeCompositionContext(dbUrl, dbUsername, dbPassword, packageRoot, staticRoot)
     try {
         val composition = first.getBean(SitePackageRuntimeComposition::class.java)
+        val assetDefinition = first.getBean(SitePackageAssetManifestLoader::class.java).load(packageRoot)
+        expectedAssetCount = assetDefinition.assets.size
+        require(expectedAssetCount > 0) { "Site Package asset manifest 必须包含 stable assets" }
         require(composition.packageRoot == packageRoot)
         require(composition.report.created == 98 && composition.report.updated == 0 && composition.report.unchanged == 0) {
             "首次 Runtime composition 应从 Generic Schema 创建完整 stable structure：${composition.report}"
         }
         require(composition.report.objects == 98)
-        require(composition.assetReport.created == 31 && composition.assetReport.unchanged == 0) { "首次 Runtime composition 应投影完整 stable assets：${composition.assetReport}" }
+        require(
+            composition.assetReport.created == expectedAssetCount &&
+                composition.assetReport.unchanged == 0 &&
+                composition.assetReport.assets == expectedAssetCount,
+        ) { "首次 Runtime composition 应投影 asset manifest 中的全部 stable assets：${composition.assetReport}" }
         require(countCodedPresetNavigation(dbUrl, dbUsername, dbPassword) == 40)
         require(operationalCounts(dbUrl, dbUsername, dbPassword) == (0 to 0)) {
             "普通 Runtime composition 不得隐式执行 Site bootstrap"
@@ -56,7 +64,11 @@ fun main() {
         require(composition.report.created == 0 && composition.report.updated == 0 && composition.report.unchanged == 98) {
             "第二次 Runtime composition 必须幂等：${composition.report}"
         }
-        require(composition.assetReport.created == 0 && composition.assetReport.unchanged == 31) { "第二次 Runtime composition 必须保持 stable assets：${composition.assetReport}" }
+        require(
+            composition.assetReport.created == 0 &&
+                composition.assetReport.unchanged == expectedAssetCount &&
+                composition.assetReport.assets == expectedAssetCount,
+        ) { "第二次 Runtime composition 必须保持 asset manifest 中的全部 stable assets：${composition.assetReport}" }
         require(countCodedPresetNavigation(dbUrl, dbUsername, dbPassword) == 40)
         require(operationalCounts(dbUrl, dbUsername, dbPassword) == (0 to 0))
     } finally {

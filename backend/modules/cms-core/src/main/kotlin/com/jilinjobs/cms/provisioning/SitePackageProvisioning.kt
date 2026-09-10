@@ -76,6 +76,7 @@ data class SitePackagePage(
     val bodyHtml: String = "",
     val renderMode: String = "RICH_TEXT",
     val embedUrl: String? = null,
+    val contentAdoptionFromFingerprint: String? = null,
     val sortOrder: Int = 0,
     val enabled: Boolean = true,
     val preset: Boolean = true,
@@ -169,6 +170,8 @@ data class SiteProvisioningReport(
     val unchanged: Int,
     val objects: Int,
     val columns: Int,
+    val adoptedPageContent: List<String> = emptyList(),
+    val protectedPageContent: List<String> = emptyList(),
 )
 
 class SitePackageValidationException(message: String) : RuntimeException(message)
@@ -241,6 +244,7 @@ class SitePackageLoader(private val objectMapper: ObjectMapper) {
             name(it.name, "Page", pageIdentity(it.groupAlias, it.alias))
             if (it.renderMode.isBlank() || it.renderMode.length > 32) throw SitePackageValidationException("Page renderMode 不合法：${it.alias}")
             if (it.embedUrl != null && it.embedUrl.length > 1000) throw SitePackageValidationException("Page embedUrl 过长：${it.alias}")
+            if (it.contentAdoptionFromFingerprint != null && !it.contentAdoptionFromFingerprint.matches(SHA256)) throw SitePackageValidationException("Page contentAdoptionFromFingerprint 不合法：${pageIdentity(it.groupAlias, it.alias)}")
             preset(it.preset, "Page", pageIdentity(it.groupAlias, it.alias))
         }
 
@@ -351,7 +355,11 @@ class SitePackageLoader(private val objectMapper: ObjectMapper) {
 }
 
 @Service
-class SitePackageProvisioner(private val loader: SitePackageLoader, private val dataSource: DataSource) {
+class SitePackageProvisioner(
+    private val loader: SitePackageLoader,
+    private val dataSource: DataSource,
+    private val objectMapper: ObjectMapper,
+) {
     fun apply(packageRoot: Path): SiteProvisioningReport {
         val definition = loader.load(packageRoot)
         dataSource.connection.use { connection ->
@@ -359,9 +367,19 @@ class SitePackageProvisioner(private val loader: SitePackageLoader, private val 
             try {
                 preflight(connection, definition)
                 val counts = Counts()
+                val adoptedPageContent = mutableListOf<String>()
+                val protectedPageContent = mutableListOf<String>()
                 orderedColumns(definition.columns).forEach { counts.add(reconcileColumn(connection, it)) }
                 definition.pageGroups.forEach { counts.add(reconcilePageGroup(connection, it)) }
-                definition.pages.forEach { counts.add(reconcilePage(connection, it)) }
+                definition.pages.forEach { page ->
+                    val pageResult = reconcilePage(connection, page)
+                    counts.add(pageResult.result)
+                    when (pageResult.contentOutcome) {
+                        PageContentOutcome.ADOPTED -> adoptedPageContent += pageIdentity(page.groupAlias, page.alias)
+                        PageContentOutcome.PROTECTED_DIVERGENCE -> protectedPageContent += pageIdentity(page.groupAlias, page.alias)
+                        else -> Unit
+                    }
+                }
                 definition.navigationLocations.forEach { counts.add(reconcileNavigationLocation(connection, it)) }
                 orderedNavigationItems(definition.navigationItems).forEach { counts.add(reconcileNavigationItem(connection, it)) }
                 definition.siteConfig.forEach { counts.add(reconcileSiteConfig(connection, it)) }
@@ -376,6 +394,8 @@ class SitePackageProvisioner(private val loader: SitePackageLoader, private val 
                     unchanged = counts.unchanged,
                     objects = definition.objectCount,
                     columns = definition.columns.size,
+                    adoptedPageContent = adoptedPageContent.toList(),
+                    protectedPageContent = protectedPageContent.toList(),
                 )
             } catch (error: Exception) {
                 connection.rollback()
@@ -447,7 +467,7 @@ class SitePackageProvisioner(private val loader: SitePackageLoader, private val 
         return Result.UPDATED
     }
 
-    private fun reconcilePage(connection: Connection, target: SitePackagePage): Result {
+    private fun reconcilePage(connection: Connection, target: SitePackagePage): PageReconcileResult {
         val groupId = target.groupAlias?.let { alias ->
             val group = pageGroup(connection, alias) ?: throw SitePackageValidationException("Page groupAlias 尚未 provision：${pageIdentity(alias, target.alias)}")
             group.owned("PageGroup", alias)
@@ -459,14 +479,42 @@ class SitePackageProvisioner(private val loader: SitePackageLoader, private val 
             connection.prepareStatement("INSERT INTO cms_page(group_id,alias,name,body_html,render_mode,embed_url,sort_order,enabled,preset) VALUES(?,?,?,?,?,?,?,?,1)").use {
                 it.setObject(1, groupId); it.setString(2, target.alias); it.setString(3, target.name); it.setString(4, target.bodyHtml); it.setString(5, target.renderMode); it.setString(6, target.embedUrl); it.setInt(7, target.sortOrder); it.setBoolean(8, target.enabled); it.executeUpdate()
             }
-            return Result.CREATED
+            return PageReconcileResult(Result.CREATED, PageContentOutcome.NONE)
         }
         existing.owned("Page", identity)
-        if (existing.groupId == groupId && existing.name == target.name && existing.sortOrder == target.sortOrder && existing.enabled == target.enabled) return Result.UNCHANGED
-        connection.prepareStatement("UPDATE cms_page SET group_id=?,name=?,sort_order=?,enabled=?,preset=1 WHERE id=?").use {
-            it.setObject(1, groupId); it.setString(2, target.name); it.setInt(3, target.sortOrder); it.setBoolean(4, target.enabled); it.setLong(5, existing.id); it.executeUpdate()
+
+        val structuralChanged = existing.groupId != groupId || existing.name != target.name || existing.sortOrder != target.sortOrder || existing.enabled != target.enabled
+        val currentFingerprint = pageContentFingerprint(existing.bodyHtml, existing.renderMode, existing.embedUrl)
+        val targetFingerprint = pageContentFingerprint(target.bodyHtml, target.renderMode, target.embedUrl)
+        val contentOutcome = when {
+            currentFingerprint == targetFingerprint -> PageContentOutcome.CURRENT_EQUALS_TARGET
+            target.contentAdoptionFromFingerprint != null && currentFingerprint == target.contentAdoptionFromFingerprint -> PageContentOutcome.ADOPTED
+            else -> PageContentOutcome.PROTECTED_DIVERGENCE
         }
-        return Result.UPDATED
+
+        if (structuralChanged) {
+            connection.prepareStatement("UPDATE cms_page SET group_id=?,name=?,sort_order=?,enabled=?,preset=1 WHERE id=?").use {
+                it.setObject(1, groupId); it.setString(2, target.name); it.setInt(3, target.sortOrder); it.setBoolean(4, target.enabled); it.setLong(5, existing.id); it.executeUpdate()
+            }
+        }
+        if (contentOutcome == PageContentOutcome.ADOPTED) {
+            connection.prepareStatement("UPDATE cms_page SET body_html=?,render_mode=?,embed_url=? WHERE id=?").use {
+                it.setString(1, target.bodyHtml); it.setString(2, target.renderMode); it.setString(3, target.embedUrl); it.setLong(4, existing.id); it.executeUpdate()
+            }
+        }
+        val result = if (structuralChanged || contentOutcome == PageContentOutcome.ADOPTED) Result.UPDATED else Result.UNCHANGED
+        return PageReconcileResult(result, contentOutcome)
+    }
+
+    private fun pageContentFingerprint(bodyHtml: String, renderMode: String, embedUrl: String?): String {
+        val bytes = objectMapper.writeValueAsBytes(
+            linkedMapOf<String, Any?>(
+                "bodyHtml" to bodyHtml,
+                "renderMode" to renderMode,
+                "embedUrl" to embedUrl,
+            ),
+        )
+        return MessageDigest.getInstance("SHA-256").digest(bytes).joinToString("") { "%02x".format(it) }
     }
 
     private fun reconcileNavigationLocation(connection: Connection, target: SitePackageNavigationLocation): Result =
@@ -700,6 +748,8 @@ class SitePackageProvisioner(private val loader: SitePackageLoader, private val 
     )
 
     private enum class Result { CREATED, UPDATED, UNCHANGED }
+    private enum class PageContentOutcome { NONE, CURRENT_EQUALS_TARGET, ADOPTED, PROTECTED_DIVERGENCE }
+    private data class PageReconcileResult(val result: Result, val contentOutcome: PageContentOutcome)
     private data class Counts(var created: Int = 0, var updated: Int = 0, var unchanged: Int = 0) {
         fun add(result: Result) = when (result) { Result.CREATED -> created++; Result.UPDATED -> updated++; Result.UNCHANGED -> unchanged++ }
     }
