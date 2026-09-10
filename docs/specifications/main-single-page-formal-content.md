@@ -2,212 +2,191 @@
 
 ## Authority
 
-- GitHub Issue #60 / E2
+- GitHub Issue #60 / Main Page Site Package follow-up
+- GitHub Issue #77
 - `docs/requirements/main-single-page-formal-content.md`
 - `docs/project/main-site-formal-content-plan.md`
-- `docs/specifications/public-site.md`
 - `docs/specifications/cms-site-package-boundary.md`
-- `docs/specifications/generic-content-migration-application.md`
 
 ## Status
 
 - Specification: **READY**
-- Technical Planning: **REQUIRED**
-- Current Ready Execution Unit: **NONE until slice-work + readiness-check**
+- Technical Planning: **REQUIRED / READY in companion Technical Plan**
+- Planning baseline: `main@25e452ee3ce66c2d7da1000ad55e9570d732528a`
+- Execute: **NOT STARTED / no Execute Authority**
 
-## 1. Page ownership split
+## 1. Accepted package projection
 
-E2 freezes Page responsibility as:
+The Main Page follow-up consumes only the 10 accepted EU-50 Page handoff records and projects them into the JilinJobs Site Package:
 
-```text
-Site Package stable Page target
-        ↓ create / structural reconcile
-Runtime Page content
-        ↓ operator-maintainable after create
-Canonical Page content migration
-        ↓ explicit guarded first apply only
-Runtime Page content
-        ↓ returns to operator ownership
-Public /page/** projection
-```
+| Source identity | Stable target |
+|---|---|
+| `main-page:about` | `(null, about)` |
+| `main-page:budget` | `(null, budget)` |
+| `main-page:teacher-library` | `(null, teacher-library)` |
+| `main-page:employment-report-contact` | `(null, employment-report-contact)` |
+| `main-page:guide-contact` | `(guide, contact)` |
+| `main-page:guide-dagl` | `(guide, dagl)` |
+| `main-page:guide-faq` | `(guide, faq)` |
+| `main-page:guide-dygl` | `(guide, dygl)` |
+| `main-page:guide-jypq` | `(guide, jypq)` |
+| `main-page:guide-xlrz` | `(guide, xlrz)` |
 
-Site Package is not a continuous Page-body deployment mechanism; Canonical Migration is not a continuous reconciler.
+Every target already exists as a stable preset Page in current `sites/jilinjobs/structure/pages.json`. This Unit does not create new product Page identities.
 
-## 2. Site Package reconcile behavior
+## 2. Package content representation
 
-For a missing package-owned Page, first provision continues to create the full current Page row using package values.
+For each accepted Page, `sites/jilinjobs/structure/pages.json` becomes the long-term Site Package authority for the accepted formal `bodyHtml / renderMode / embedUrl` create-time default.
 
-For an existing package-owned Page:
-
-- stable identity resolution / preset ownership remains required;
-- current package structural reconciliation remains unchanged outside the three E2 content fields;
-- `body_html`, `render_mode`, `embed_url` are **preserved from Runtime** and excluded from ordinary update comparison/write;
-- changing those three values in a future `sites/jilinjobs/structure/pages.json` therefore changes only future first-provision defaults, not existing Runtime content.
-
-The focused Site Package verifier must add a regression proving an operator change to these fields survives a second provision/restart-style reconcile.
-
-## 3. Canonical Page dataset contract
-
-Generic snapshots may add an optional Page section:
+The Page package definition may add one optional, generic adoption field whose semantics are frozen as:
 
 ```text
-<snapshot-root>/
-├── index.ndjson
-├── articles/**
-├── lists/**
-└── pages/
-    ├── index.json
-    └── items/<stable-id>/page.json
-        └── assets/**   # optional
+contentAdoptionFromFingerprint: <sha256 or null>
 ```
 
-A dataset may contain only Page records as long as at least one canonical unit exists overall.
+The fingerprint is the SHA-256 of the same canonical Page-content serialization already used by the accepted Generic Page target-precondition contract:
 
-### 3.1 Page index
+```json
+{"bodyHtml":<stored body>,"renderMode":<enum name>,"embedUrl":<string-or-null>}
+```
 
-Page index contains ordered references with at least:
+with fixed key order and exact UTF-8 bytes.
 
-- `legacyKey`;
-- `path`;
-- `sourceOrder`;
-- `sourceFingerprint`.
+This field is not a permanent overwrite flag. It identifies exactly one prior package-owned content baseline that may be upgraded to the new package content.
 
-Source system may be index-level if all records share one source; implementation may also validate item-level agreement.
+## 3. Provisioning classification
 
-### 3.2 Page item
+For a missing Page, provisioner behavior remains CREATE with full target package content.
 
-Canonical Page item contains:
+For an existing Page, the provisioner resolves stable identity and independently classifies structural and mutable-content changes.
 
-- source: `system`, `legacyKey`, source/provenance URL;
-- target: optional `groupAlias`, required `pageAlias`;
-- content: `bodyHtml`, `renderMode`, optional `embedUrl`;
-- `sourceFingerprint`;
-- `expectedTargetFingerprint` for first-apply guard;
-- optional resources referenced from `bodyHtml`.
+Content classification:
 
-`expectedTargetFingerprint` is the SHA-256 of a documented canonical serialization of the target's pre-import `bodyHtml + renderMode + embedUrl`. It is a guard, not the historical source fingerprint.
+- `CURRENT_EQUALS_TARGET`: Runtime mutable content already equals target package content; no content write.
+- `CURRENT_EQUALS_ADOPTION_BASELINE`: `contentAdoptionFromFingerprint` is declared and equals current Runtime content fingerprint; update only `body_html / render_mode / embed_url` to target package content.
+- `PROTECTED_DIVERGENCE`: target differs, adoption baseline is absent or does not match; preserve Runtime content and report the Page identity.
 
-## 4. Stable target resolution
+Structural `group/name/sortOrder/enabled/preset` reconciliation continues under the existing Site Package contract regardless of content classification.
 
-Generic Page import resolves target only by Site-stable identity:
+A Page may therefore have structural UPDATE while its operator content is protected. Report output must preserve this distinction.
 
-- standalone: `(groupAlias = null, pageAlias)`;
-- grouped: `(groupAlias, pageAlias)`.
+## 4. Provisioning report
 
-The target must resolve to exactly one existing Page. Generic migration does not create Page/PageGroup structure and does not depend on Runtime numeric ID in canonical data.
-
-Missing/ambiguous target is INVALID before mutation.
-
-## 5. Mapping contract
-
-Generic CMS schema adds a site-neutral Page migration mapping analogous to Article/List mapping.
-
-Minimum semantics:
+The machine-readable `SITE_PACKAGE_PROVISION_REPORT` must make protected content observable. At minimum it adds a stable collection such as:
 
 ```text
-(source_system, legacy_key) UNIQUE
-→ page_id
-→ source_fingerprint
-→ source_url / provenance metadata
+protectedPageContent: [<stable page identity>...]
 ```
 
-The exact table/record names are technical details, but ownership is Generic CMS migration support, not Main-specific schema.
+Equivalent naming is allowed, but it must be deterministic, machine-readable and identity-specific. A divergence must not be represented only as generic `unchanged`.
 
-Classification:
+Successful baseline adoption may continue to count as `updated`; no global result-status redesign is required.
 
-- no mapping + target precondition matches → APPLY candidate;
-- same mapping fingerprint → SKIP;
-- same identity + different source fingerprint → CONFLICT;
-- mapping points to another Page → CONFLICT;
-- no mapping + target precondition mismatch → CONFLICT.
+## 5. Adoption lifecycle
 
-There is no default Page UPDATE-on-new-fingerprint policy.
+For each Page included in this formal-content release:
 
-## 6. Execute semantics
+1. source handoff's `expectedTargetFingerprint` is verified against the prior package definition/current accepted baseline before it is used as `contentAdoptionFromFingerprint`;
+2. new formal content is written into the package definition;
+3. Fresh Site gets the new content on CREATE;
+4. Existing Site still at the old package baseline is upgraded once;
+5. Existing Site with operator divergence is preserved and reported;
+6. rerun after successful adoption sees target content and is idempotent;
+7. operator edits after adoption survive later ordinary reconciles.
 
-The Generic Page plan is built in the same all-known-errors-before-write dataset preflight as Article/List.
+Future formal-content changes require a new explicit adoption baseline or a separate Requirement. The provisioner must not infer one automatically.
 
-For an APPLY candidate:
+## 6. Source promotion boundary
 
-1. verify target and expected target fingerprint;
-2. verify all referenced canonical resource bytes;
-3. prepare safe body rewrites;
-4. update only `bodyHtml / renderMode / embedUrl` through a Core Page content boundary that preserves current sanitizer/validation semantics;
-5. insert Page migration mapping in the same database transaction as Page DB mutation where practical;
-6. project deterministic historical static assets only after static preflight and with existing safe-path protections;
-7. return a Generic result with Page kind / runtime Page id.
+The durable source-handoff locator is `data-migrations/main/v1/reports/site-package-handoff.json`; exact Page bodies/resources are recovered from the accepted EU-50 attempt-3 artifact only after verifying:
 
-Known dataset INVALID/CONFLICT must prevent unrelated Page/Article/List mutations from starting.
+- run `34303771704`;
+- artifact `10086056781`;
+- artifact digest `sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494`;
+- source Head `a96cee22449508f92f3c89789f99aad477286a66`;
+- each Page source fingerprint, target identity and expected-target fingerprint agree with the durable handoff/evidence.
 
-## 7. Operator edit after import
+Artifact expiration or digest mismatch invalidates the execution input. No implicit fallback source is allowed.
 
-After successful first apply, Runtime content becomes ordinary operator-managed content.
+Once accepted Page bodies/resources are integrated into `sites/jilinjobs/**`, the repository package bytes and manifests become long-term product authority; the workflow artifact remains provenance only.
 
-A second run with the same source fingerprint:
+## 7. Resource projection
 
-- returns SKIP based on accepted mapping;
-- does not compare-and-rewrite the current Page body;
-- therefore preserves operator edits made after import.
-
-A newer canonical source fingerprint conflicts by default and requires a future explicit upgrade Requirement if the project ever needs controlled Page re-import.
-
-## 8. Page resource contract
-
-Because current Page RICH_TEXT has no Article-style Resource association, E2 does not introduce one.
-
-Canonical Page body resources use repository-frozen bytes + digest evidence and are projected to a site-neutral deterministic historical static namespace, for example an implementation-equivalent of:
+Accepted Page resources are copied into page-scoped package paths:
 
 ```text
-/static/migrated/content/pages/<sha256>.<ext>
+sites/jilinjobs/assets/pages/<page-scope>/<stable-name-or-digest-backed-name>
+          ↓ existing asset manifest/projector
+/static/pages/<page-scope>/<stable-name-or-digest-backed-name>
 ```
 
-Exact path naming is frozen by Technical Plan. Requirements:
+Rules:
 
-- path must not encode Main/Party policy;
-- resource token/reference rewrite must be deterministic;
-- path traversal / symlink escape / digest mismatch are INVALID;
-- historical Page assets do not enter `sites/jilinjobs/assets/**`;
-- mutable `/static/uploads/**` ownership is not taken over.
+- source bytes must match accepted size/SHA-256 evidence;
+- `bodyHtml` resource references are rewritten deterministically to package `/static/pages/**` URLs;
+- no `migration-resource://` token remains in final package body;
+- no accepted local resource continues to depend on legacy host URLs;
+- asset manifest covers every package-owned Page resource and current protected-path semantics apply;
+- no target uses `/static/uploads/**` or `/static/migrated/content/**`.
 
-If later source evidence proves a richer resource lifecycle is required, that is a separate Requirement change.
+For `budget`, all 13 PDFs are included. The 8 legacy absolute `zhjy.jilinjobs.cn:8080/group1/cms/**` references may be reacquired only through the bounded normalization authorized on Issue #77. Their final names must be stable and meaningful, and final body links must use `/static/pages/budget/**`.
 
-## 9. Report / command compatibility
+## 8. Source anomaly contract
 
-Existing `generic-content <snapshot-root>` and root `importCanonicalContent` remain the generic entry. Page support extends the same command/report rather than adding a Main-specific executable.
+Execution is fail-closed for Page scope when any accepted Page has:
 
-Generic report adds `PAGE` as a kind while preserving existing totals/statuses and Article/List compatibility.
+- missing/ambiguous stable target;
+- source/artifact fingerprint mismatch;
+- missing resource bytes;
+- size/SHA-256 mismatch;
+- unclassified external resource that is required for the accepted Page;
+- a new source-defect category not already covered by Authority.
 
-Party commands/reports remain unchanged.
+Such findings are reported and do not permit silent resource deletion, HTML repair, inferred replacement, or partial acceptance of that affected Page.
 
-## 10. Verification obligations
+This Page anomaly handling does not change the separate 230 + 6 Article boundary.
 
-A synthetic site-neutral Page fixture must prove:
+## 9. Verification contract
 
-- standalone + grouped stable Page target resolution;
-- RICH_TEXT first apply;
-- optional body resource validation/rewrite;
-- second run SKIP;
-- post-import operator edit survives same-input rerun;
-- wrong expected target fingerprint CONFLICT/no mutation;
-- changed source fingerprint CONFLICT/no mutation;
-- missing group/page INVALID;
-- duplicate source identity / duplicate path INVALID;
-- target mapping mismatch CONFLICT;
-- ordinary Site Package second reconcile preserves content fields;
-- existing Generic Article/List tests and Party compatibility tests remain PASS;
-- no HTTP listener / Server dependency leakage into content-migration app.
+Automated verification must cover:
 
-## 11. Slice boundary
+- loader validation for adoption fingerprint format;
+- fresh create formal content;
+- baseline-matched content adoption;
+- protected divergence identity reporting;
+- structural reconcile with protected content;
+- second-run idempotency;
+- post-adoption operator edit preservation;
+- all 10 Page identities and accepted source fingerprints;
+- package body contains no unresolved `migration-resource://` or accepted legacy local-resource URL;
+- package asset manifest source/target uniqueness, digest integrity and safe projection;
+- `budget` 13 PDF package projection;
+- no Main Page mapping under Historical Migration;
+- existing Site Package / Backend / Admin / Public / Integrated Browser regressions.
 
-This Specification is intentionally separable from actual Main content acquisition.
+Browser verification on the exact candidate Head must cover all 10 public Page routes and representative local assets, including `budget` PDF links and image-heavy `teacher-library`. Bounded Human Review follows successful automated Browser verification.
 
-The first E2 implementation slice includes only:
+## 10. Scope boundary
 
-- Site Package Page content no-overwrite reconcile;
-- Generic Page canonical schema/loader/preflight/apply/mapping/report;
-- focused synthetic verification;
-- existing regression verification.
+Included:
 
-It excludes Main page bytes, accepted Main source count, source scraping, Human Review content approval and E3 Article/List migration.
+- generic Site Package Page adoption precondition/report capability;
+- accepted 10 Main Page formal bodies;
+- accepted package-owned Page assets;
+- deterministic reference rewrite;
+- focused automated + Browser + Human verification.
 
-Technical Planning is required because this slice crosses Generic schema, Core Page update boundary, Site Package reconcile, content-migration application and focused verification while preserving independent lifecycle ownership.
+Excluded:
+
+- stable ListItem capability/content;
+- 230 deferred + 6 source-defect Articles;
+- placeholder/fixed integration product redesign;
+- Generic Historical Migration changes;
+- Public URL/frontend technology changes;
+- agentic-dev baseline upgrade.
+
+## 11. Slice readiness
+
+The capability and content are one atomic delivery boundary: integrating formal package bytes without guarded Existing-Site adoption would leave current sites stale, while adding adoption semantics without an accepted target package would have no product outcome. They therefore form one homogeneous Candidate Execution Unit under `slice-work`.
+
+This Specification is **READY** for Technical Planning and `slice-work → readiness-check`.
