@@ -136,6 +136,12 @@ tasks.register<JavaExec>("verifyPageContentOwnership") {
     configureServerVerification("com.jilinjobs.cms.provisioning.PageContentOwnershipVerificationKt")
 }
 
+tasks.register<JavaExec>("verifyPageContentAdoption") {
+    group = "verification"
+    description = "Verify EU-52 exact-baseline Page content adoption and protected divergence reporting"
+    configureServerVerification("com.jilinjobs.cms.provisioning.PageContentAdoptionVerificationKt")
+}
+
 tasks.register<JavaExec>("verifyContentMigrationBoundary") {
     group = "verification"
     description = "Verify Content Migration is non-web, excludes Server transport and composes Core/Flyway/Party capabilities"

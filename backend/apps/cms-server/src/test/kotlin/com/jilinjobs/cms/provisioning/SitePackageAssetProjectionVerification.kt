@@ -34,12 +34,12 @@ fun main() {
     lateinit var uploadBytes: ByteArray
     try {
         val composition = first.getBean(SitePackageRuntimeComposition::class.java)
-        require(composition.assetReport.assets == 31)
-        require(composition.assetReport.created == 31 && composition.assetReport.unchanged == 0) {
+        require(composition.assetReport.assets == 187)
+        require(composition.assetReport.created == 187 && composition.assetReport.unchanged == 0) {
             "fresh Runtime projection 应创建完整稳定资源：${composition.assetReport}"
         }
         val catalog = first.getBean(SitePackageAssetCatalog::class.java)
-        require(catalog.protectedPaths.size == 31)
+        require(catalog.protectedPaths.size == 187)
         require("home/header-banner.png" in catalog.protectedPaths)
         require("party/party-header-banner.jpg" in catalog.protectedPaths)
         require(catalog.protectedPaths.none { it == "uploads" || it.startsWith("uploads/") })
@@ -63,7 +63,7 @@ fun main() {
 
         val projector = first.getBean(SitePackageAssetProjector::class.java)
         val secondProjection = projector.project(packageRoot, staticRoot)
-        require(secondProjection.created == 0 && secondProjection.unchanged == 31) {
+        require(secondProjection.created == 0 && secondProjection.unchanged == 187) {
             "第二次 projection 必须幂等：$secondProjection"
         }
         require(Files.readAllBytes(staticRoot.resolve("health/baseline.png")).contentEquals(replacement)) {
@@ -75,7 +75,7 @@ fun main() {
 
         Files.delete(staticRoot.resolve("footer/wechat-qr.png"))
         val repair = projector.project(packageRoot, staticRoot)
-        require(repair.created == 1 && repair.unchanged == 30) { "缺失 package target 应按 create-if-missing 恢复：$repair" }
+        require(repair.created == 1 && repair.unchanged == 186) { "缺失 package target 应按 create-if-missing 恢复：$repair" }
         require(Files.readAllBytes(staticRoot.resolve("health/baseline.png")).contentEquals(replacement))
         require(Files.readAllBytes(staticRoot.resolve("uploads/operator.png")).contentEquals(uploadBytes))
 
@@ -87,7 +87,7 @@ fun main() {
     val second = startAssetContext(dbUrl, dbUsername, dbPassword, packageRoot, staticRoot)
     try {
         val composition = second.getBean(SitePackageRuntimeComposition::class.java)
-        require(composition.assetReport.created == 0 && composition.assetReport.unchanged == 31) {
+        require(composition.assetReport.created == 0 && composition.assetReport.unchanged == 187) {
             "restart projection 必须保持现有 target：${composition.assetReport}"
         }
         require(Files.readAllBytes(staticRoot.resolve("health/baseline.png")).contentEquals(replacement))
