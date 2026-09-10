@@ -14,8 +14,8 @@
 - Specification: **READY / ACTIVE**
 - Current migration scope: **ARTICLE ONLY**
 - EU-50 — Main Source Discovery & Article Snapshot Promotion: **COMPLETED / Execute Authority TERMINATED**
-- EU-51 — Main Article Import, Runtime Reconciliation & Human Review: **READY / Readiness PASS / Execute baseline PENDING**
-- Current Ready Execution Unit: **EU-51**
+- EU-51 — Main Article Import, Runtime Reconciliation & Human Review: **COMPLETED / Execute Authority TERMINATED**
+- Current Ready Execution Unit: **NONE**
 
 ## 1. Pipeline
 
@@ -26,10 +26,12 @@ Legacy Main Source
 → Article-only eligibility + explicit deferred/error classification [EU-50 COMPLETED]
 → Page/List Site Package handoff                         [EU-50 COMPLETED]
 → accepted current Article subset promotion              [EU-50 COMPLETED / INTEGRATED]
-→ Generic Article migration                              [EU-51 READY / Execute baseline PENDING]
+→ Generic Article migration                              [EU-51 COMPLETED]
+→ Runtime reconciliation + same-input idempotency        [EU-51 COMPLETED]
+→ Public/Admin/Integrated Browser + bounded Human Review  [EU-51 COMPLETED]
 ```
 
-Only source-discovery stages may access Legacy Source. Downstream verification/import must use repository-owned canonical bytes.
+Only source-discovery stages may access Legacy Source. Downstream verification/import uses repository-owned canonical bytes.
 
 ## 2. Discovery output
 
@@ -92,7 +94,7 @@ Handoff records:
 - are not listed in `import-eligible-index.json`;
 - do not become `data-migrations/main/v1/pages/**` or `lists/**` import units;
 - preserve all source errors/observations;
-- were not used to silently modify `sites/jilinjobs/**` during EU-50;
+- were not used to silently modify `sites/jilinjobs/**` during EU-50/EU-51;
 - may later be consumed only by a separately authorized Site Package planning/execution unit.
 
 Current capability facts:
@@ -165,37 +167,15 @@ Later source drift or later approval of deferred Articles must produce an eviden
 
 Page/List source drift is handled under Site Package follow-up authority, not by changing Main migration semantics.
 
-## 10. Verification closure / downstream contract
+## 10. Verification closure
 
-### EU-50 final exact-head evidence
+### EU-50
 
-Final Head `8c2fdd6cdbbd4d1faf865d0ba4ca0f40a0096e84`:
+Final Head `8c2fdd6cdbbd4d1faf865d0ba4ca0f40a0096e84` passed EU-50 Main Source Discovery #64、EU-50 Main Import Eligibility #30、Canonical Migration #256、Generic Content Migration #51、EU-30 Upgrade #206、CI #944 and Review Environment #830. Integrated snapshot `main@05dfa604ccde45c8409cf6a456e4f201534dc602` additionally passed Generic Content Migration #52 and CI #945.
 
-- EU-50 Main Source Discovery #64 / run `34352898345` — **PASS**；
-- EU-50 Main Import Eligibility #30 / run `34352898410` — **PASS**；
-- Canonical Migration Verification #256 / run `34352898301` — **PASS**；
-- Generic Content Migration Verification #51 / run `34352898313` — **PASS**；
-- EU-30 Migration Upgrade Verification #206 / run `34352898498` — **PASS**；
-- CI #944 / run `34352898338` — **PASS**；
-- Review Environment #830 / run `34352898415` — **PASS**。
+### EU-51
 
-### Integrated-main evidence
-
-Integrated snapshot `main@05dfa604ccde45c8409cf6a456e4f201534dc602`:
-
-- Generic Content Migration Verification #52 / run `34354290017` — **PASS**；
-- CI #945 / run `34354289981` — **PASS**，包含 Backend / Admin / Public / Integrated Browser。
-
-EU-50 acceptance obligations are closed.
-
-EU-51 downstream Readiness on `main@fd192460cb481645c1f1af435cbe5451145797d9` additionally confirms:
-
-- all ten Main target Column aliases are stable/enabled Site Package Columns；
-- Generic Article migration already provides fail-closed preflight/apply, stable mapping and same-input idempotency；
-- Site Package provisioning and Generic import entry points already exist；
-- Runtime verification can be composed without a Main-specific migration engine。
-
-EU-51 execution must use the explicit Fresh Runtime chain:
+EU-51 independently established Execute baseline `main@04090a3cc8dd9c85112488f036c4bc1a67003594` and executed this Fresh Runtime chain:
 
 ```text
 Flyway
@@ -207,23 +187,35 @@ Flyway
 → bounded Human Review
 ```
 
-## 11. Slice sequencing
+Final exact Head `5adae340edcf605e36779c831fb512c31342eec8` proved:
 
-1. **EU-50 — Main Source Discovery & Article Snapshot Promotion**
-   - **COMPLETED**；
-   - accepted current Article subset integrated；
-   - Execute Authority **TERMINATED**。
-2. **EU-51 — Main Article Import, Runtime Reconciliation & Human Review**
-   - **READY / Readiness PASS**；
-   - Readiness baseline `main@fd192460cb481645c1f1af435cbe5451145797d9`；
-   - Current Work `docs/work/current/eu51-main-canonical-import-runtime-review.md`；
-   - Execute baseline **PENDING until Planning/Readiness integration + Fresh Context recovery**。
-3. **Deferred problem Article review**
-   - later explicit review/decision work；
-   - not EU-51 import input and not a blocker to current progression。
-4. **Site Package Page/List follow-up**
-   - separate planning gate；
-   - owns accepted Page content and stable Main ListItem capability/content；
-   - does not inherit EU-50/EU-51 authority。
+- first import: 3078 CREATED / 0 conflict / invalid;
+- 3078 stable mappings and ten target Column counts reconcile one-to-one;
+- all 2603 resources / 450,273,166 bytes reconcile by size/SHA-256 and Runtime references;
+- INTERNAL / EXTERNAL_LINK behavior remains exact;
+- second import: 3078 SKIPPED / 0 CREATED / conflict / invalid with no resource/mapping growth;
+- no Page/List mapping enters the Runtime import;
+- imported-content Public/Admin/Integrated Browser passes;
+- bounded Human Review returns **PASS** with no accepted-subset correctness blocker.
 
-No Unit inherits Execute Authority from another. EU-51 Readiness PASS does not authorize Runtime import on the Planning/Readiness branch.
+Exact-head evidence:
+
+- EU-51 Main Canonical Runtime Verification #8 / run `34414803518` — **PASS**；
+- EU-51 Main Imported Browser Verification #4 / run `34414803509` — **PASS**；
+- Canonical Migration Verification #264 / run `34414803507` — **PASS**；
+- EU-30 Migration Upgrade Verification #214 / run `34414803594` — **PASS**；
+- CI #957 / run `34414803593` — **PASS**；
+- Standard Review Environment #840 / run `34414803462` — **PASS**；
+- Human Review — **PASS**；
+- Browser artifact `10128741919`, digest `sha256:83df3a2d37634e30403eba4777c5554c71723deca82f08ffad71330e1a6ca070`。
+
+PR #122 squash integrated to `main@fad4bfc17b762ec9612cf1e44a1c0af67e74a307`. Post-Integration CI #958 / run `34417382337` — **PASS**, including Backend / Admin / Public / Integrated Browser.
+
+## 11. Slice sequencing / current state
+
+1. **EU-50 — Main Source Discovery & Article Snapshot Promotion** — **COMPLETED / Execute Authority TERMINATED**；completed evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`。
+2. **EU-51 — Main Article Import, Runtime Reconciliation & Human Review** — **COMPLETED / Execute Authority TERMINATED**；completed evidence：`docs/work/archive/eu51-main-canonical-import-runtime-review.md`。
+3. **Deferred problem Article review** — later explicit review/decision work；not inherited from EU-51 and not a blocker to current progression。
+4. **Site Package Page/List follow-up** — separate planning gate；owns accepted Page content and stable Main ListItem capability/content；does not inherit EU-50/EU-51 authority。
+
+Current Ready Execution Unit is **NONE**. Any successor must be formed and pass Readiness from current Repository Authority; no Unit inherits Execute Authority from another.

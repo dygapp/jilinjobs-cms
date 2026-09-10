@@ -42,6 +42,7 @@ Phase 1 使用四类语义角色：
 - Requirement：`docs/requirements/README.md`
 - Specification：`docs/specifications/README.md`
 - Technical：`docs/technical/README.md`
+- Architecture：`docs/architecture/README.md`
 - Work lifecycle：`docs/work/README.md`
 - Current Roadmap：`docs/project/project-roadmap.md`
 - Consumer-local Method：`docs/project/development-method.md`
@@ -54,25 +55,31 @@ Issue #60 当前状态：
 
 - **E1 Main External-link Ownership & Behavior Boundary**：Planning / Authority closure；Requirement / Specification READY；无 implementation Unit；
 - **E2 Main Single-page Formal Content**：**EU-49 COMPLETED**；Page operational-content ownership 与 site-neutral Generic Page migration foundation 已集成，Execute Authority已终止；
-- **E3 Main Historical Content Collection & Canonical Migration**：Requirement / Specification / Technical Plan READY；EU-50 accepted current Article snapshot 已完成并集成；EU-51 downstream Readiness 已在 integrated snapshot 上重新核验并取得 PASS。
+- **E3 Main Historical Content Collection & Canonical Migration**：Requirement / Specification / Technical Plan 继续作为 READY / ACTIVE contract；EU-50 accepted current Article snapshot 与 EU-51 Runtime import / reconciliation / Human Review 均已完成并集成。
 
-Current Ready Execution Unit：**EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review Closure**。
+Current Ready Execution Unit：**NONE**。
 
 EU-50：**COMPLETED / Execute Authority TERMINATED**。Completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`。
 
-EU-50 integrated accepted current subset：
+EU-51：**COMPLETED / Execute Authority TERMINATED**。Completed Work Evidence：`docs/work/archive/eu51-main-canonical-import-runtime-review.md`。
 
-- 3078 篇 current import-eligible Article；
+EU-51 accepted Runtime closure：
+
+- implementation PR #122 final Head：`5adae340edcf605e36779c831fb512c31342eec8`；
+- integrated main：`fad4bfc17b762ec9612cf1e44a1c0af67e74a307`；
+- 3078 Articles = 1577 INTERNAL + 1501 EXTERNAL_LINK；
+- 2603 resources / 450,273,166 bytes；
+- dataset digest：`sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`；
+- first import / stable mapping / resource reconciliation / second-run idempotency：**PASS**；
+- Public/Admin/Integrated Browser：**PASS**；
+- bounded Human Review：**PASS**；
+- Post-Integration CI #958 / run `34417382337`：**PASS**。
+
+Separately preserved backlog：
+
 - 6 篇 source-defect Article 单独排除并等待客户确认；
-- 230 篇 problem Article 作为 durable deferred evidence 保留，不属于当前 import input，也不阻断当前进程；
-- canonical dataset 位于 `data-migrations/main/v1/**`；
-- dataset digest：`sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`。
-
-EU-51：**READY / Readiness PASS**，Readiness baseline `main@fd192460cb481645c1f1af435cbe5451145797d9`。Current Work：`docs/work/current/eu51-main-canonical-import-runtime-review.md`。
-
-EU-51 Execute baseline 当前仍为 **PENDING**：必须先集成本 Planning/Readiness Authority，再由新的 Fresh Context 在 integrated `main` 上重新核验 Issue #60/#77、Open PR/Actions、E3 Authority、EU-51 Work、canonical manifest 与 base drift，才能建立独立 Execute baseline并开始 Runtime import。
-
-Main Page / stable ListItem source findings属于 JilinJobs Site Package handoff，保持独立 Planning Gate；它们不进入 EU-51，也不因 EU-51 Ready 自动获得 Execute Authority。
+- 230 篇 problem Article 作为 durable deferred evidence 保留，不属于已完成 EU-51 import input，也不阻断当前进程；
+- Main Page / stable ListItem source findings属于 JilinJobs Site Package handoff，保持独立 Planning Gate。
 
 Current planning authority：
 
@@ -97,8 +104,8 @@ E3 current Authority：
 - `docs/technical/main-historical-content-migration.md`
 - EU-50 completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`
 - accepted current canonical dataset：`data-migrations/main/v1/**`
-- EU-51 Current Work：`docs/work/current/eu51-main-canonical-import-runtime-review.md`
+- EU-51 completed Work Evidence：`docs/work/archive/eu51-main-canonical-import-runtime-review.md`
 
-下一自然 Gate 是：**集成 EU-51 Planning/Readiness Authority → Fresh Context Execute-baseline recovery**。EU-51 Readiness PASS 不等于已经建立 Execute baseline；deferred problem Articles 保持后置单独处理。
+下一自然 Gate 是新的 **Issue #60 / #77 Fresh Context Planning/Readiness decision**。必须从 integrated `main`、当前 Authority、Roadmap、Open PR / Issue / Actions 与 Current Evidence 判断下一真实候选；任何后续候选均不得继承 EU-51 Execute Authority。deferred problem Articles 与 Site Package Page/List follow-up继续分别保持后置、独立。
 
 `data-migrations/**` 是 Historical Content Migration 的 current data/provenance workspace，不属于 documentation archive；“历史内容”不等于 `HISTORICAL_EVIDENCE`。
