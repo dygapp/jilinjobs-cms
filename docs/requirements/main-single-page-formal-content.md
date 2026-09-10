@@ -2,149 +2,134 @@
 
 ## Status
 
-- Parent Planning Authority: GitHub Issue #60 / E2
+- Parent Planning Authority: GitHub Issue #60 / Main Page Site Package follow-up
+- Architecture Authority: GitHub Issue #77
 - Planning Authority: `docs/project/main-site-formal-content-plan.md`
-- Planning baseline: `main@f42bacf4ab7719e3291288c77f0685b428b86141`
+- Planning baseline: `main@25e452ee3ce66c2d7da1000ad55e9570d732528a`
 - Requirement: **READY**
-- Current Ready Execution Unit: **NONE until slice-work + readiness-check**
+- Candidate: Main Page Formal Content Package Adoption
+- Execute: **NOT STARTED / no Execute Authority**
 
 ## 1. Intent
 
-E2 要把 Main 当前稳定 Page / PageGroup 从“结构已存在、部分正文仍是占位”推进为可安全承载正式内容的长期模型。
+Main 当前稳定 Page identity 已由 JilinJobs Site Package 持有，EU-49 又明确了 existing Page 的 `bodyHtml / renderMode / embedUrl` 属于 operator-maintainable Runtime content。EU-50 随后取得了 10 个稳定 Main Page 的真实 source handoff，并证明这些 Page 的正式内容与稳定资源应回到 Site Package，而不是继续进入 Historical Migration fallback。
 
-目标不是把 Page 变成 Site Package 不可编辑文档，也不是把所有单页改成代码页面；而是保持：
+本 Requirement 的目标是把这 10 个已接受 source Page 收敛为 JilinJobs Site Package 的正式默认内容，并建立一次明确、可审计、不会覆盖 operator edit 的 package content adoption 语义，使 Fresh Site 与仍停留在旧 package baseline 的 Existing Site 都能安全获得正式 Page 内容。
 
-- Site Package owns stable Page identity / required Site structure；
-- Runtime Page content is operator-maintainable；
-- 从原站或其他 accepted source获得的正式 Page content通过独立 canonical migration lifecycle进入 Runtime；
-- Public `/page/**` contract继续不依赖当前 Vue实现。
+## 2. Accepted Page scope
 
-## 2. Current scope classification
+本次只接受 EU-50 source handoff 中已经绑定稳定 target 的 10 个 `RICH_TEXT` Page：
 
-Current Site Package已经声明稳定 Main Page identities：
+- standalone: `about`、`budget`、`teacher-library`、`employment-report-contact`；
+- `guide/*`: `contact`、`dagl`、`faq`、`dygl`、`jypq`、`xlrz`。
 
-- standalone: `about`、`budget`、`teacher-library`、`live-course`、`employment-report-contact`；
-- `guide/*`: `jypq`、`dagl`、`dygl`、`xlrz`、`contact`、`faq`；
-- `jobs/*`: `positions`、`recruitment`、`jobfair`、`presentation`、`jilin`。
+不把 `jobs/*`、`live-course` 等 placeholder / fixed integration Page 自动改造成 rich text；没有 source handoff 的 Page 不在本次范围。
 
-E2 不在缺少source evidence时伪造正式正文。Current `RICH_TEXT` Page是正式运营内容候选；current `EMBED_PLACEHOLDER` Page继续保持既有placeholder / fixed-integration边界，是否转换为真实integration或rich text必须由后续source/Product evidence证明。
+## 3. Ownership contract
 
-## 3. Stable structure vs operational content
+### 3.1 Site Package owns formal defaults and stable resources
 
-### 3.1 Site Package ownership
+对于上述 10 个 Page：
 
-Site Package继续负责Page stable existence / logical target以及current package-owned structural metadata。
+- stable Page identity / required structure继续由 Site Package持有；
+- accepted formal `bodyHtml / renderMode / embedUrl` 作为 JilinJobs Site Package 的正式 create-time default 固化到 `sites/jilinjobs/structure/pages.json`；
+- 正文引用且被接受为稳定产品资源的 bytes 固化到 `sites/jilinjobs/assets/pages/**`，并纳入既有 Site Package asset manifest / digest / protected-path / runtime projection；
+- Runtime URL 使用 `/static/pages/**`；不得保留 legacy `/group1/cms/**` 作为产品运行依赖；
+- 这些 Page bytes/resources 不进入 `data-migrations/**` canonical historical content，也不使用 Generic Page migration mapping 作为 Main 的长期 ownership。
 
-对于**已存在**的preset Page，ordinary Site Package reconcile不得覆盖以下operator-owned content fields：
+EU-49 建立的 Generic Page migration capability继续作为 Generic capability保留，但不是本次 Main Page formal-content 的交付路径。
+
+### 3.2 Runtime remains operator-maintainable
+
+Site Package 正式正文不是持续 overwrite authority。完成 create/adoption 后：
+
+- operator仍可通过当前 Page domain/Admin能力维护 `bodyHtml / renderMode / embedUrl`；
+- ordinary reconcile不得把 operator edit恢复成 package bytes；
+- 后续如果 package 正文再次变化，必须再次有显式、版本化的 adoption precondition；不得把本次 adoption 变成永久覆盖规则。
+
+## 4. Guarded content adoption
+
+现有 EU-49 ordinary reconcile只在 Page首次创建时写 package content，existing Page始终保留 Runtime content。本次必须在不破坏该 guard 的前提下增加显式 adoption contract。
+
+每个需要把旧 package default 升级为正式内容的 Page，Site Package必须声明一个精确的旧 content baseline fingerprint。fingerprint只覆盖：
 
 - `bodyHtml`；
 - `renderMode`；
 - `embedUrl`。
 
-Fresh first provision可以使用`pages.json`当前值创建Page，使未执行canonical migration的Fresh Site仍有可预测初始状态；但这些create-time defaults不得变成后续restart的内容overwrite authority。
+Existing Page 的处理语义：
 
-本 Requirement不扩大为所有preset对象operational field治理；只解决E2 formal Page content所直接依赖的content fields。
+1. 当前 content 已等于新 package target：no-op；
+2. 当前 content fingerprint 精确等于声明的旧 package baseline：允许一次性 adoption 到新 formal content；
+3. 当前 content 与两者都不同：视为 operator/content divergence，**保留当前 content，不覆盖，并在 machine-readable provisioning report 中明确报告 Page identity**；
+4. structural fields继续按当前 Site Package contract正常 reconcile；
+5. adoption成功后重复运行必须幂等；后续 operator edit必须继续受 EU-49 guard保护。
 
-### 3.2 Runtime editing
+不得通过名称相似、DOM猜测、时间戳、空值或其他启发式方式认领 operator content。
 
-Current Admin/Core Page edit contract保持：
+## 5. Source evidence and provenance
 
-- preset Page alias继续受稳定身份保护；
-- Page正文与呈现字段可以按current validation / sanitizer维护；
-- E2 foundation不新增发布状态、版本历史、Page Resource association或新的Page类型。
+正式 Page 内容来自 EU-50 已接受 attempt-3 source evidence：
 
-## 4. Canonical Page content migration
+- workflow run: `34303771704`；
+- artifact: `10086056781` / `eu50-main-retry-attempt-3-a96cee22449508f92f3c89789f99aad477286a66`；
+- artifact digest: `sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494`；
+- source Head: `a96cee22449508f92f3c89789f99aad477286a66`；
+- durable handoff index: `data-migrations/main/v1/reports/site-package-handoff.json`。
 
-Generic Content Migration必须增加site-neutral Page content能力，供Main正式Page与未来真实consumer复用。
+Artifact只承担 bounded source evidence，不成为长期产品运行依赖。执行时必须重新校验 artifact availability + digest；若 artifact 已过期/不可取得，不得静默换源，当前 Readiness必须视为 stale，并先通过新的显式 bounded Page source-acquisition evidence恢复同等 provenance。
 
-Canonical Page unit至少表达：
+## 6. Resource acceptance
 
-- source system + stable legacy key；
-- source URL / provenance；
-- stable target `groupAlias? + pageAlias`；
-- `bodyHtml`、`renderMode`、optional `embedUrl`；
-- source fingerprint；
-- first-apply target precondition fingerprint；
-- body引用的repository-frozen resource evidence（若有）。
+EU-50 handoff中的已下载 Page resources必须逐项按 source evidence 的 path/size/SHA-256核验后，才可转成 package-owned bytes。
 
-不得使用Runtime page id、Vue route name或JilinJobs-specific alias allow-list作为Generic schema。
+`budget` Page 的 13 个 PDF 采用 Issue #77 最新 Human Authority：
 
-## 5. Safe first-apply contract
+- 13 个 PDF 全部为 package-owned stable assets；
+- 8 个 `zhjy.jilinjobs.cn:8080/group1/cms/**` 引用是 legacy absolute-source residue，可通过该 Human Authority授权的 bounded normalization重新取得；
+- 最终全部使用有意义的稳定文件名放入 `sites/jilinjobs/assets/pages/budget/**`；
+- 正文只引用 `/static/pages/budget/**`。
 
-Page与Article不同：Page target在migration前已经由Site Package创建，因此Generic Page migration不能用“mapping不存在即无条件CREATE”语义。
+任何 acquisition failure、digest mismatch、未分类资源或新的 source anomaly 都必须 fail closed / 单独报告，不得静默删除引用、伪造文件或换成猜测内容。
 
-First apply必须：
+## 7. Relationship to deferred Articles / ListItems
 
-1. stable Page target可唯一解析；
-2. canonical record提供expected target-content fingerprint；
-3. Runtime当前`bodyHtml + renderMode + embedUrl`与该precondition完全匹配；
-4. 无既有Page migration mapping；
-5. 全dataset structural/resource/target preflight无INVALID/CONFLICT；
-6. 才允许更新Page content并写入migration mapping。
+本 Requirement只处理 Main Page：
 
-任何未知operator edit / target drift都必须CONFLICT，不能静默覆盖。
+- 230 篇 deferred problem Articles 与 6 篇 source-defect Articles保持独立人工/客户确认边界；
+- 不修改其 evidence、canonical/import eligibility或Runtime状态；
+- stable Main ListItem identity / representation / adoption / reconcile仍是独立 Site Package Planning Candidate；
+- 不因为 Page Readiness而给 ListItem授予 Identifier、Ready或Execute Authority。
 
-## 6. Re-run / operator ownership
+## 8. Verification requirements
 
-Accepted first apply后：
+进入 Integration 前至少证明：
 
-- mapping记录`sourceSystem + legacyKey + sourceFingerprint + page target`；
-- 同一source fingerprint再次运行 = **SKIP**；
-- SKIP不得把migration后operator edit重新覆盖回canonical bytes；
-- 同identity但新source fingerprint默认 = **CONFLICT**，除非未来Requirement明确建立受控content upgrade contract；
-- 因此canonical migration是受控一次性/显式导入，不成为Runtime持续reconcile owner。
+1. 10 个 accepted Page target 与 current stable Site Package identity 一一匹配；
+2. Fresh Site provision使用正式 package body；
+3. Existing Site在 current content 精确匹配旧 baseline时完成 adoption；
+4. operator-diverged content被保留且 report明确列出 identity；
+5. adoption后重复 provision幂等，后续 operator edit继续被保护；
+6. accepted Page resource bytes全部经过 path/size/SHA-256验证并进入 package asset manifest；
+7. `budget` 13 PDF全部形成 package-owned stable projection，正文无 legacy `/group1/cms/**` 运行依赖；
+8. package asset projection仍满足 create-if-missing / protected-path / safe-path contract；
+9. Site Package、Backend、Admin/Public/Integrated Browser regression通过；
+10. no Page canonical migration mapping / Historical Migration fallback / Main-specific Generic schema change。
 
-这与Site Package ordinary reconcile的no-content-overwrite共同保证：正式Page导入后回到普通operator-managed lifecycle。
+实际 Main Page 内容产生可见变化，因此 Execute/Integration阶段需要对 10 个 Page 做 bounded Human Review；自动 Browser验证必须先于人工验收。
 
-## 7. Page resource boundary
+## 9. Non-goals
 
-Page RICH_TEXT当前没有Article式Resource association。若canonical Page正文包含历史资源：
+- 不处理 stable Main ListItem；
+- 不处理 230 + 6 deferred/source-defect Articles；
+- 不扩大 Generic Historical Migration schema；
+- 不修改 Public URL contract 或前端技术；
+- 不将所有 operator-managed Page变为 package持续管理内容；
+- 不改变 placeholder/fixed-integration Page产品方案；
+- 不执行 `agentic-dev` baseline upgrade。
 
-- source bytes必须进入repository-owned canonical unit并校验size/SHA-256；
-- Generic migration可以使用site-neutral deterministic historical static projection并rewrite正文reference；
-- target不得进入`sites/jilinjobs/assets/**` stable Site asset ownership，也不得伪装成Article Resource association；
-- `/static/uploads/**`仍属于mutable Runtime upload store。
+## 10. Requirement readiness
 
-具体static path与token form由Technical Plan冻结。
+当前 Repository Authority 已明确 Page归属、10 个 source handoff target、EU-49 operator guard、Site Package stable asset能力，以及 `budget` 13 PDF 的 Human Authority。剩余问题属于可在 Technical Plan 中冻结的 package evolution机制与验证细节，不需要新的产品决策。
 
-## 8. Formal content evidence
-
-E2 foundation本身不接受/编造Main真实正文。Actual formal content必须在后续source discovery / evidence promotion后满足：
-
-- source provenance可追溯；
-- target stable Page identity明确；
-- 页面类型（RICH_TEXT / existing placeholder / fixed integration）分类明确；
-- body / external resource evidence完整；
-- accepted snapshot进入repository后才成为长期Authority。
-
-实际内容采集可与E3 Main source discovery共享evidence，但Page scope必须遵守本Requirement。
-
-## 9. Verification requirements
-
-Foundation进入Integration前至少证明：
-
-1. existing preset Page operator修改`bodyHtml/renderMode/embedUrl`后ordinary Site Package reconcile不overwrite；
-2. Fresh provision仍创建完整Page targets；
-3. synthetic Generic Page canonical fixture first apply成功；
-4. second same import SKIP且不overwrite post-import operator edit；
-5. wrong target precondition / missing target / duplicate identity / fingerprint drift = CONFLICT或INVALID且no mutation；
-6. body resource bytes/path/digest验证与reference rewrite成立（fixture含resource时）；
-7. Article/ListItem Generic behavior、Party migration compatibility、Site Package verification与Repository CI保持；
-8. no Public/Admin API contract or visible page layout change。
-
-## 10. Non-goals
-
-- 不在foundation里采集Main真实页面；
-- 不决定`live-course`/jobs placeholders的新产品集成方案；
-- 不增加Page publish workflow/version history；
-- 不增加Page Resource association；
-- 不改变Page public URL；
-- 不让Site Package持续拥有正式正文；
-- 不修改Party canonical data；
-- 不进入E3 full Main migration execution。
-
-## 11. Requirement readiness
-
-Current Repository已经直接暴露：stable Main Page identities、Admin可编辑Page content、Site Package content overwrite冲突，以及Generic Migration缺少Page consumer的事实。长期ownership、failure boundary与no-overwrite目标均可由current accepted Authority推导，不需要新的Product Intent。
-
-本 Requirement **READY**；需要Ready Specification与Technical Plan后再执行`slice-work → readiness-check`。
+本 Requirement **READY**。

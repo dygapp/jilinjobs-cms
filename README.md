@@ -29,21 +29,18 @@ Fresh Context 按以下入口恢复，避免把历史执行记录当作当前 Au
 
 ## 当前 Gate
 
-Issue #92 Phase 0～Phase 3 已完成；E1 Main External-link Boundary 以 Planning / Authority closure 收口；E2 / EU-49 已完成 Page operational-content ownership 与 site-neutral Generic Page canonical migration foundation；E3 的 EU-50 source discovery / accepted snapshot promotion 与 EU-51 Main canonical Runtime import / reconciliation / Human Review 均已完成并集成。
+Issue #92 Phase 0～Phase 3 已完成；E1 Main External-link Boundary 以 Planning / Authority closure 收口；E2 / EU-49 已完成 Page operational-content ownership 与 site-neutral Generic Page canonical migration foundation；E3 的 EU-50 source discovery / accepted snapshot promotion 与 EU-51 Main canonical Runtime import / reconciliation / Human Review 均已完成并集成。随后从 integrated `main@25e452ee3ce66c2d7da1000ad55e9570d732528a` 对 Main Page / stable ListItem Site Package follow-up重新执行 Planning，Page 与 ListItem 因 maturity 不同被拆分；Page 已完成 Requirement / Specification / Technical Planning、`slice-work` 与 `readiness-check`，形成 **EU-52 — Main Page Formal Content Package Adoption**。
 
 ```text
-E1 Main External-link Ownership & Behavior Boundary
-   └─ Planning / Authority closure；no implementation Unit
+EU-51 completion / closure — COMPLETED
         ↓
-E2 Main Single-page Formal Content
-   └─ EU-49 — COMPLETED / Execute Authority TERMINATED
+Fresh Context Planning/Readiness decision
         ↓
-E3 Main Historical Content Collection & Canonical Migration
-   ├─ EU-50 Main Source Discovery & Accepted Snapshot Promotion
-   │    └─ COMPLETED / Execute Authority TERMINATED
-   │         ↓ accepted current Article subset integrated
-   └─ EU-51 Main Canonical Import, Runtime Reconciliation & Human Review Closure
-        └─ COMPLETED / Execute Authority TERMINATED
+Main Page Site Package follow-up
+   └─ EU-52 — READY / Execute NOT STARTED
+
+stable Main ListItem Site Package follow-up
+   └─ independent Planning Candidate / no Identifier
 ```
 
 当前状态：
@@ -56,22 +53,24 @@ E3 Main Historical Content Collection & Canonical Migration
 - EU-51 implementation PR #122 final Head `5adae340edcf605e36779c831fb512c31342eec8`；squash integrated main `fad4bfc17b762ec9612cf1e44a1c0af67e74a307`；
 - PR #122 exact-head Runtime #8、Browser #4、Canonical #264、EU-30 #214、CI #957、Standard Review #840 均 **PASS**；bounded Human Review **PASS**；Post-Integration CI #958 / run `34417382337` **PASS**；
 - accepted current subset = 3078 Articles（1577 INTERNAL + 1501 EXTERNAL_LINK），2603 resources / 450,273,166 bytes，dataset digest `sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`；
-- 6 篇 `SOURCE_RESOURCE_MISSING` Article 继续排除并等待客户确认；230 篇 problem Article继续作为 durable deferred evidence，**不属于已完成 EU-51 import input，也不阻断当前项目进程**；
-- Main Page / stable ListItem source findings 属于 JilinJobs Site Package follow-up，保持独立 Planning Gate；
-- **Current Ready Execution Unit：NONE**；
+- 6 篇 `SOURCE_RESOURCE_MISSING` Article 继续排除并等待客户确认；230 篇 problem Article继续作为 durable deferred evidence，**不属于已完成 EU-51 import input，也不属于 EU-52**；
+- **EU-52：READY / Execute NOT STARTED / Execute baseline NONE**；Planning baseline `main@25e452ee3ce66c2d7da1000ad55e9570d732528a`；Current Work：`docs/work/current/eu52-main-page-formal-content-package-adoption.md`；
+- EU-52 只覆盖 accepted Main Page formal content、stable Page assets 与受保护的一次性 package adoption；stable Main ListItem 继续保持独立 Planning Candidate；
+- **Current Ready Execution Unit：EU-52**；
 - Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层长期边界；
 - Repository Split Readiness Assessment、C1/C2、Issue #57/#59 与 Issue #60 其余候选保持独立。
 
-下一自然 Gate 是新的 **Issue #60 / #77 Fresh Context Planning/Readiness decision**：从 integrated `main`、当前 Roadmap、Current Authority、Open PR / Issue / Actions 与 Current Evidence 恢复真实状态，再决定下一 Planning Candidate。任何后续候选都不得继承 EU-51 Execute Authority，也不得仅因 Roadmap 顺序或历史 EU 编号自动进入 Execute。
+下一自然 Gate 是 **EU-52 Planning/Readiness integration → Fresh Context Execute-baseline recovery**。本 Planning 分支没有 Execute baseline，也不得实施 Site Package bytes、Page source promotion、provisioning code 或 Runtime mutation。只有 Planning/Readiness 状态集成后，新 Fresh Context 重新核验 integrated `main`、Issue #60/#77、EU-52 Authority、source artifact freshness/digest/provenance、Open PR / Actions 与 base drift，才允许建立 EU-52 的独立 Execute baseline。
 
 Current Main formal-content Authority：
 
 - Overall plan：`docs/project/main-site-formal-content-plan.md`；
 - E1 Requirement：`docs/requirements/main-external-link-boundary.md`；
 - E1 Specification：`docs/specifications/main-external-link-boundary.md`；
-- E2 Requirement：`docs/requirements/main-single-page-formal-content.md`；
-- E2 Specification：`docs/specifications/main-single-page-formal-content.md`；
-- E2 Technical Plan：`docs/technical/main-single-page-formal-content.md`；
+- E2 / EU-52 current Requirement：`docs/requirements/main-single-page-formal-content.md`；
+- E2 / EU-52 current Specification：`docs/specifications/main-single-page-formal-content.md`；
+- E2 / EU-52 current Technical Plan：`docs/technical/main-single-page-formal-content.md`；
+- EU-52 Current Work：`docs/work/current/eu52-main-page-formal-content-package-adoption.md`；
 - EU-49 Completed Work Evidence：`docs/work/archive/eu49-page-content-migration-foundation.md`；
 - E3 Requirement：`docs/requirements/main-historical-content-migration.md`；
 - E3 Specification：`docs/specifications/main-historical-content-migration.md`；

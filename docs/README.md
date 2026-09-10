@@ -54,10 +54,14 @@ Phase 1 使用四类语义角色：
 Issue #60 当前状态：
 
 - **E1 Main External-link Ownership & Behavior Boundary**：Planning / Authority closure；Requirement / Specification READY；无 implementation Unit；
-- **E2 Main Single-page Formal Content**：**EU-49 COMPLETED**；Page operational-content ownership 与 site-neutral Generic Page migration foundation 已集成，Execute Authority已终止；
+- **E2 Main Single-page Formal Content**：EU-49 foundation **COMPLETED**；当前 Main Page Site Package product follow-up 已完成新的 Planning/Readiness 并形成 **EU-52 — Main Page Formal Content Package Adoption：READY / Execute NOT STARTED**；
 - **E3 Main Historical Content Collection & Canonical Migration**：Requirement / Specification / Technical Plan 继续作为 READY / ACTIVE contract；EU-50 accepted current Article snapshot 与 EU-51 Runtime import / reconciliation / Human Review 均已完成并集成。
 
-Current Ready Execution Unit：**NONE**。
+Current Ready Execution Unit：**EU-52**。
+
+EU-52 Current Work：`docs/work/current/eu52-main-page-formal-content-package-adoption.md`。Planning baseline：`main@25e452ee3ce66c2d7da1000ad55e9570d732528a`；Readiness：**PASS**；Execute baseline：**NONE**；Execute Authority：**NOT ESTABLISHED**。
+
+EU-52 scope 只包含 accepted Main Page formal content、stable Page assets 与受保护的一次性 Site Package adoption。stable Main ListItem 仍为独立 Planning Candidate，没有 Identifier 或 Execute Authority。EU-52 不使用 Main Page Historical Migration fallback。
 
 EU-50：**COMPLETED / Execute Authority TERMINATED**。Completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`。
 
@@ -78,8 +82,8 @@ EU-51 accepted Runtime closure：
 Separately preserved backlog：
 
 - 6 篇 source-defect Article 单独排除并等待客户确认；
-- 230 篇 problem Article 作为 durable deferred evidence 保留，不属于已完成 EU-51 import input，也不阻断当前进程；
-- Main Page / stable ListItem source findings属于 JilinJobs Site Package handoff，保持独立 Planning Gate。
+- 230 篇 problem Article 作为 durable deferred evidence 保留，不属于已完成 EU-51 import input，也不属于 EU-52；
+- stable Main ListItem source findings属于 JilinJobs Site Package handoff，保持独立 Planning Gate。
 
 Current planning authority：
 
@@ -90,12 +94,13 @@ E1：
 - `docs/requirements/main-external-link-boundary.md`
 - `docs/specifications/main-external-link-boundary.md`
 
-E2 accepted current contract：
+E2 / Main Page current contract：
 
 - `docs/requirements/main-single-page-formal-content.md`
 - `docs/specifications/main-single-page-formal-content.md`
 - `docs/technical/main-single-page-formal-content.md`
-- completed Work Evidence：`docs/work/archive/eu49-page-content-migration-foundation.md`
+- EU-52 Current Work：`docs/work/current/eu52-main-page-formal-content-package-adoption.md`
+- EU-49 completed Work Evidence：`docs/work/archive/eu49-page-content-migration-foundation.md`
 
 E3 current Authority：
 
@@ -106,6 +111,6 @@ E3 current Authority：
 - accepted current canonical dataset：`data-migrations/main/v1/**`
 - EU-51 completed Work Evidence：`docs/work/archive/eu51-main-canonical-import-runtime-review.md`
 
-下一自然 Gate 是新的 **Issue #60 / #77 Fresh Context Planning/Readiness decision**。必须从 integrated `main`、当前 Authority、Roadmap、Open PR / Issue / Actions 与 Current Evidence 判断下一真实候选；任何后续候选均不得继承 EU-51 Execute Authority。deferred problem Articles 与 Site Package Page/List follow-up继续分别保持后置、独立。
+下一自然 Gate 是 **EU-52 Planning/Readiness integration → new Fresh Context EU-52 Execute-baseline recovery**。Planning/Readiness 本身不建立 Execute Authority；集成后必须重新读取 integrated `main`、Issue #60/#77、EU-52 current Authority、source artifact freshness/digest/provenance、Open PR / Actions 与 base drift，再决定是否建立独立 Execute baseline。
 
 `data-migrations/**` 是 Historical Content Migration 的 current data/provenance workspace，不属于 documentation archive；“历史内容”不等于 `HISTORICAL_EVIDENCE`。

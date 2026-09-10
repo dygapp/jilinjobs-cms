@@ -3,47 +3,55 @@
 ## Status
 
 - Parent Planning Authority: GitHub Issue #60
+- Architecture Authority: GitHub Issue #77
 - Phase 3 re-entry: **PASS**
 - E1: **COMPLETED / Authority-only**
 - E2 / EU-49: **COMPLETED**
 - E3 current Article migration sequence: **COMPLETED through EU-50 / EU-51**
 - EU-50 — Main Source Discovery & Article Snapshot Promotion: **COMPLETED / Execute Authority TERMINATED**
 - EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review: **COMPLETED / Execute Authority TERMINATED**
-- Current Ready Execution Unit: **NONE**
+- Main Page Site Package follow-up / EU-52: **READY / Execute NOT STARTED**
+- stable Main ListItem Site Package follow-up: **Planning Candidate / no Identifier**
+- Current Ready Execution Unit: **EU-52 — Main Page Formal Content Package Adoption**
+- EU-52 Planning baseline: `main@25e452ee3ce66c2d7da1000ad55e9570d732528a`
 - EU-51 implementation integrated main: `fad4bfc17b762ec9612cf1e44a1c0af67e74a307`
 - Ownership correction: **2026-09-09 — Main Page and stable ListItem content belong to JilinJobs Site Package**
 
 ## 1. Current planning boundary
 
-Issue #60 E1～E3 remains the Main formal-content planning authority, but the current product ownership boundary is:
+Issue #60 E1～E3 remains the Main formal-content planning authority, with the accepted product ownership boundary:
 
 ```text
 Main Article historical content
     → E3 Historical Content Migration
 
-Main Page content
+Main Page formal content + stable Page assets
+    → JilinJobs Site Package / EU-52
+
 Main stable ListItem membership
-    → JilinJobs Site Package
+    → JilinJobs Site Package / independent later Planning Candidate
 
 Legacy Source Page/List observations
     → source discovery evidence / Site Package handoff only
 ```
 
-This boundary supersedes earlier E3 planning text that treated Main Page bodies or Main list membership as Canonical Migration units.
+This boundary supersedes earlier planning text that treated Main Page bodies or stable Main list membership as Canonical Migration units.
 
-The current accepted Main Article sequence is now closed through source discovery/promotion and Runtime import/reconciliation/Human Review. Any later extension or correction must obtain new Planning/Readiness Authority and cannot inherit EU-50 or EU-51 Execute Authority.
+The accepted Main Article sequence is closed through source discovery/promotion and Runtime import/reconciliation/Human Review. EU-52 is a newly formed, independent Page-only Ready Execution Unit; it inherits no Execute Authority from E2/E3 history. Stable ListItem remains unplanned at Execution Unit level.
 
-## 2. Why the boundary changed
+## 2. Why Page and ListItem now split
 
-Current repository implementation proves that Page and ListItem have different long-term lifecycle semantics from historical Articles:
+Current repository evidence proves the two Site Package follow-ups have different readiness:
 
-- `sites/jilinjobs/structure/pages.json` already owns stable Page identities and `bodyHtml` defaults;
-- `SitePackageProvisioning` already loads/reconciles `pages` as stable Site Package structure;
-- stable CmsList definitions already belong to `sites/jilinjobs/structure/lists.json`;
-- current Site Package v1 does **not** yet have a `list-items` structure type or stable ListItem identity/reconcile path;
-- the six current Main bootstrap ListItems are one-time operator defaults, which no longer matches the accepted ownership for stable Main list membership.
+- `sites/jilinjobs/structure/pages.json` already owns stable Page identities and create-time `bodyHtml` defaults;
+- EU-49 already ensures ordinary Site Package reconcile preserves existing operator-managed `bodyHtml / renderMode / embedUrl`;
+- existing Site Package asset manifest/projector already owns stable package assets;
+- EU-50 has accepted source handoff for 10 stable `RICH_TEXT` Page targets;
+- Issue #77 Human Authority has resolved `budget` Page's 13-PDF ownership and the bounded normalization allowed for 8 legacy absolute-source residues;
+- current Site Package v1 does **not** have a `list-items` structure type or stable ListItem identity/reconcile path;
+- the six current Main bootstrap ListItems are one-time operator defaults and cannot simply be relabelled stable without defining identity, representation, adoption, reconcile, operator mutation and upgrade semantics.
 
-Therefore Page/List content must not be forced through Historical Migration merely because the Generic Migration application can technically mutate those Runtime types.
+Therefore `slice-work` forms a Page-only Unit. Combining stable ListItems would couple a ready product slice to unresolved architecture and would violate the independent Planning/Readiness boundary.
 
 ## 3. E1 accepted result
 
@@ -54,17 +62,19 @@ E1 continues to define link behavior/ownership:
 - ListItem owns list placement/presentation target;
 - fixed integration remains engineering-owned.
 
-For E3, only Column content classified as INTERNAL / EXTERNAL_LINK Article is migration content. Main stable list placement is Site Package content.
+For completed E3, only Column content classified as INTERNAL / EXTERNAL_LINK Article is migration content. Main stable list placement is Site Package content.
 
 ## 4. E2 / EU-49 historical result
 
-EU-49 established a site-neutral Generic Page migration capability and Page content conflict guard. That capability remains valid Generic CMS capability and compatibility evidence.
+EU-49 established Page operational-content ownership protection and a site-neutral Generic Page migration capability. Its accepted result remains valid:
 
-The accepted Main ownership decision means E3 does not use that capability to migrate Main Page content. Main Page source evidence discovered by EU-50 is handed to Site Package authority instead.
+- missing preset Page may be created from package defaults;
+- existing Page mutable content is operator-managed and ordinary Site Package reconcile does not overwrite it;
+- Generic Page migration capability remains a generic CMS capability and historical compatibility evidence.
 
-EU-49 is not reopened and its historical Execute Authority is not inherited.
+The later ownership correction means Main Page formal content is **not** delivered through Historical Migration. EU-49 is not reopened and its Execute Authority remains terminated.
 
-## 5. E3 completed split
+## 5. E3 completed Article sequence
 
 ### EU-50 — Main Source Discovery & Article Snapshot Promotion — COMPLETED
 
@@ -82,15 +92,13 @@ Accepted result:
 - Page/List discoveries preserved as Site Package handoff evidence；
 - no Runtime Main import was performed by EU-50。
 
-Current Human Authority explicitly defers the 230 problem Articles and the separately excluded source-defect set until later review. They remain durable evidence, are not current import input, and do not block the current project sequence. EU-50 must not be reopened merely to repair/guess those records.
+Current Human Authority explicitly defers the 230 problem Articles and the separately excluded 6 source-defect Articles until later review/customer confirmation. They remain durable evidence, are not current import input, and are not part of EU-52.
 
 EU-50 completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`。Execute Authority is terminated.
 
 ### EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review — COMPLETED
 
-EU-51 consumed only the accepted repository-owned `data-migrations/main/v1/**` Article subset. Its independently recovered Execute baseline was `main@04090a3cc8dd9c85112488f036c4bc1a67003594`.
-
-Completed Work Evidence：
+EU-51 consumed only the accepted repository-owned `data-migrations/main/v1/**` Article subset. Completed Work Evidence：
 
 `docs/work/archive/eu51-main-canonical-import-runtime-review.md`
 
@@ -98,31 +106,62 @@ Accepted Runtime closure:
 
 - PR #122 final exact Head：`5adae340edcf605e36779c831fb512c31342eec8`；
 - squash integrated main：`fad4bfc17b762ec9612cf1e44a1c0af67e74a307`；
-- all ten canonical target Column aliases existed/enabled after Site Package provisioning；
 - first Generic import：3078 CREATED，0 conflict / invalid；
-- stable mapping / target Column / Article type reconciliation：PASS；
-- all 2603 resources / 450,273,166 bytes reconciled to canonical size/SHA-256；
-- BODY_IMAGE / ATTACHMENT Runtime projection：PASS；
-- EXTERNAL_LINK navigation semantics：PASS；
+- all stable mappings / target Columns / 2603 resources reconciled；
 - second identical import：3078 SKIPPED，0 CREATED / conflict / invalid；
-- no Main Page/List migration mapping was produced；
+- no Main Page/List migration mapping produced；
 - Public/Admin/Integrated Browser verification：PASS；
 - bounded Human Review：PASS；
 - Post-Integration CI #958 / run `34417382337`：PASS。
 
-No Main-specific importer was created and Generic migration implementation/canonical bytes did not require changes. EU-51 Execute Authority is terminated after Post-Integration Authority closure.
+EU-51 Execute Authority is terminated.
 
-## 6. Site Package follow-up Gate
+## 6. EU-52 — Main Page Formal Content Package Adoption — READY
 
-The ownership correction creates a separate Site Package planning finding:
+EU-52 was formed only after current Requirement / Specification / Technical Planning converged to the accepted Site Package ownership model and `slice-work` separated the still-immature ListItem path.
 
-1. Page source handoff may later reconcile accepted Legacy Page content into `sites/jilinjobs/structure/pages.json` and required stable Page assets/resources under explicit Site Package authority.
-2. Main stable ListItem membership requires a new Site Package capability decision because v1 currently supports `lists` definitions but not stable `list-items` provisioning/reconcile.
-3. The existing one-time bootstrap ListItems cannot simply be relabelled stable without defining stable identity, ownership/adoption, reconcile, operator mutation and upgrade semantics.
+Current Authority:
 
-This finding is independent of completed EU-51 and does not inherit its Execute Authority.
+- Requirement: `docs/requirements/main-single-page-formal-content.md`
+- Specification: `docs/specifications/main-single-page-formal-content.md`
+- Technical Plan: `docs/technical/main-single-page-formal-content.md`
+- Work: `docs/work/current/eu52-main-page-formal-content-package-adoption.md`
 
-## 7. Source-error boundary
+Accepted Page scope is the 10 EU-50 handoff `RICH_TEXT` Pages with stable targets:
+
+- standalone: `about`, `budget`, `teacher-library`, `employment-report-contact`;
+- `guide/*`: `contact`, `dagl`, `faq`, `dygl`, `jypq`, `xlrz`.
+
+EU-52 freezes the safe package-evolution contract:
+
+1. accepted formal bodies become JilinJobs Site Package create-time defaults;
+2. accepted stable Page resources become package assets under `sites/jilinjobs/assets/pages/**` with runtime targets under `/static/pages/**`;
+3. Existing Site content is upgraded only when its mutable-content fingerprint exactly matches an explicitly declared prior package baseline;
+4. operator-diverged content is preserved and reported by stable Page identity;
+5. successful adoption is idempotent and later operator edits remain protected;
+6. `budget` all 13 PDFs are package-owned; the 8 authorized legacy absolute-source residues may be reacquired only through the bounded normalization recorded by Issue #77;
+7. no Main Page Historical Migration fallback/mapping is created.
+
+`readiness-check = PASS` on planning baseline `main@25e452...`. The exact EU-50 source artifact is currently available as artifact `10086056781`, digest `sha256:66118e4f21bf7644db1c97e2a631eee5d4902410f167606286e1280293620494`, expiry `2026-09-16T02:42:04Z`.
+
+This Readiness does **not** establish Execute Authority. After the Planning/Readiness state integrates, a new Fresh Context must revalidate actual `main`, Authority, artifact freshness/digest/provenance and base drift before establishing an EU-52 Execute baseline.
+
+## 7. Stable Main ListItem follow-up — independent Planning Candidate
+
+Stable Main ListItem membership remains a separate Site Package Planning Candidate because the current package owns `lists` definitions but not stable membership instances.
+
+Before any ListItem Candidate Execution Unit can be formed, Planning must define at least:
+
+- stable ListItem identity;
+- package representation / schema evolution;
+- Runtime adoption from one-time bootstrap or operator-maintained state;
+- reconcile semantics and non-destructive operator mutation boundary;
+- upgrade/removal ordering and conflict behavior;
+- verification for link/article targets and Public list rendering.
+
+EU-52 does not answer these questions and cannot grant authority to that path.
+
+## 8. Source-error boundary
 
 The accepted error policy remains:
 
@@ -131,34 +170,38 @@ The accepted error policy remains:
 - all other Article error types remain separately classified / human-reviewable;
 - transport/socket failures are never inferred to be missing-source evidence;
 - Page/List errors are preserved in Site Package handoff reports and are not silently repaired, discarded or converted into migration decisions；
-- deferred problem Articles remain durable later-review evidence and were excluded from EU-51 import input。
+- 230 deferred problem Articles and 6 source-defect Articles remain independent later-review/customer-confirmation evidence and are outside EU-52。
 
-## 8. Current Gate
+For EU-52 Page source scope, artifact/resource path, size, SHA-256 or newly discovered source anomalies fail closed for the affected accepted Page. No silent HTML repair, resource deletion or guessed replacement is allowed.
 
-The completed sequence is:
+## 9. Current Gate
+
+Current Ready Execution Unit is:
+
+> **EU-52 — Main Page Formal Content Package Adoption — READY / Execute NOT STARTED**
+
+Current lifecycle boundary:
 
 ```text
-EU-50 accepted current Article subset — INTEGRATED / COMPLETED
-→ EU-51 readiness-check — PASS
-→ EU-51 independent Execute baseline
-→ Fresh Runtime import / reconciliation / idempotency — PASS
-→ Public/Admin/Integrated Browser — PASS
-→ bounded Human Review — PASS
-→ PR #122 Integration — COMPLETE
-→ Post-Integration CI #958 — PASS
-→ EU-51 Execute Authority — TERMINATED by closure
+EU-51 completion / closure — INTEGRATED
+→ Fresh Context Planning candidate decision
+→ Main Page selected; stable ListItem remains independent
+→ Requirement / Specification / Technical Planning convergence
+→ slice-work → EU-52
+→ readiness-check — PASS
+→ Planning/Readiness integration
+→ NEW Fresh Context EU-52 Execute-baseline recovery
 ```
 
-Current Ready Execution Unit is **NONE**.
+No Execute baseline exists on the Planning branch. No Site Package bytes, source bytes, code or Runtime state may be changed until the next Fresh Context independently revalidates integrated authority and establishes Execute Authority.
 
-The next natural Gate is a new Fresh Context Planning/Readiness decision from current Issue #60 / Issue #77 evidence. The deferred Article/client-confirmation backlog and Site Package Page/List follow-up remain separate candidates and do not gain authority from EU-51 completion.
+## 10. Non-goals
 
-## 9. Non-goals
-
-- no Page/List migration fallback;
+- no stable ListItem implementation in EU-52;
+- no Page/List Historical Migration fallback;
+- no repair/import of 230 deferred or 6 source-defect Articles;
 - no speculative Main-specific Runtime importer;
-- no CMS Core stable ListItem redesign inside Historical Migration;
 - no Public frontend technology change;
 - no Party canonical rewrite;
 - no `agentic-dev` baseline update;
-- no automatic entry into deferred Article review or Site Package Page/List execution after EU-51 completion.
+- no automatic successor nomination after EU-52 future completion.
