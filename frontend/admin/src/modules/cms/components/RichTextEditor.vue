@@ -39,7 +39,7 @@ onMounted(() => {
   if (!target.value) return
 
   editor = suneditor.create(target.value, {
-    value: props.modelValue,
+    value: normalizeLegacyImageDimensions(props.modelValue),
     plugins,
     lang: zhCn,
     minHeight: '260px',
@@ -57,8 +57,14 @@ onMounted(() => {
       createFileInput: Boolean(props.uploadImage),
       createUrlInput: !props.uploadImage,
     },
-    attributeWhitelist: { table: 'align|cellpadding|cellspacing' },
-    tagStyles: { td: 'width|height' },
+    attributeWhitelist: {
+      table: 'align|cellpadding|cellspacing',
+      img: 'width|height|align',
+    },
+    tagStyles: {
+      td: 'width|height',
+      img: 'width|height|float',
+    },
     events: {
       onChange: ({ data }) => {
         if (!applyingExternalValue) emit('update:modelValue', data)
@@ -87,7 +93,7 @@ onMounted(() => {
 
 watch(() => props.modelValue, value => {
   if (!editor) return
-  const normalized = value || ''
+  const normalized = normalizeLegacyImageDimensions(value)
   if (editor.$.html.get() === normalized) return
   applyingExternalValue = true
   try {
@@ -101,6 +107,26 @@ onBeforeUnmount(() => {
   editor?.destroy()
   editor = null
 })
+
+function normalizeLegacyImageDimensions(html: string): string {
+  if (!html) return ''
+  const template = document.createElement('template')
+  template.innerHTML = html
+  template.content.querySelectorAll('img').forEach(image => {
+    const width = legacyDimensionStyle(image.getAttribute('width'))
+    const height = legacyDimensionStyle(image.getAttribute('height'))
+    if (width && !image.style.width) image.style.width = width
+    if (height && !image.style.height) image.style.height = height
+  })
+  return template.innerHTML
+}
+
+function legacyDimensionStyle(value: string | null): string | null {
+  const normalized = value?.trim() || ''
+  if (/^\d+(?:\.\d+)?$/.test(normalized)) return `${normalized}px`
+  if (/^\d+(?:\.\d+)?(?:px|%)$/i.test(normalized)) return normalized
+  return null
+}
 
 function isSafeUrl(value: string): boolean {
   return value.startsWith('/') || /^https?:\/\//i.test(value)
