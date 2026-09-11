@@ -1,0 +1,43 @@
+name: Rich Text Editor V2 PoC
+
+on:
+  pull_request:
+    paths:
+      - "experiments/rich-text-editor-v2-poc/**"
+      - ".github/workflows/rich-text-editor-v2-poc.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  poc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install PoC dependencies
+        working-directory: experiments/rich-text-editor-v2-poc
+        run: npm install --no-audit --no-fund
+
+      - name: Install Chromium
+        working-directory: experiments/rich-text-editor-v2-poc
+        run: npx playwright install --with-deps chromium
+
+      - name: Run P1/P2 PoC
+        working-directory: experiments/rich-text-editor-v2-poc
+        run: npm run poc
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rich-text-editor-v2-poc-results
+          path: experiments/rich-text-editor-v2-poc/results.json
+          if-no-files-found: warn
