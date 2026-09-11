@@ -35,10 +35,6 @@ async function firstColumnId(request: import('@playwright/test').APIRequestConte
   return (columns.find(item => item.alias === 'notice') ?? columns[0]).id
 }
 
-function editable(root: import('@playwright/test').Locator) {
-  return root.locator('.se-wrapper-wysiwyg[contenteditable="true"]')
-}
-
 async function appendMarker(surface: import('@playwright/test').Locator, marker: string) {
   await surface.evaluate(node => {
     const range = document.createRange()
@@ -72,8 +68,7 @@ test('EU-54：SunEditor 3.3.3 生产适配器保持 P1/P2 real corpus 并可继�
   await page.getByTestId('article-filter-keyword').fill(articleTitle)
   await page.getByTestId('article-table').getByRole('row').filter({ hasText: articleTitle }).getByRole('button', { name: '编辑' }).click()
   const articleDialog = page.getByRole('dialog', { name: '编辑文章' })
-  const articleRoot = articleDialog.getByTestId('article-body-editor')
-  const articleSurface = editable(articleRoot)
+  const articleSurface = articleDialog.getByTestId('article-body-editor')
   await expect(articleSurface).toBeVisible()
   await expect(articleSurface).toContainText('中共中央政治局召开会议')
   await expect(articleSurface.locator('img')).toHaveCount(23)
@@ -104,8 +99,7 @@ test('EU-54：SunEditor 3.3.3 生产适配器保持 P1/P2 real corpus 并可继�
   await page.goto('/admin/pages')
   await page.getByTestId(`edit-page-${savedPage.id}`).click()
   const pageDialog = page.getByRole('dialog', { name: '编辑单页' })
-  const pageRoot = pageDialog.getByTestId('page-body-editor')
-  const pageSurface = editable(pageRoot)
+  const pageSurface = pageDialog.getByTestId('page-body-editor')
   await expect(pageSurface).toContainText('方占仁')
   await expect(pageSurface).toContainText('李军凯')
   const table = pageSurface.locator('table').first()
@@ -137,8 +131,8 @@ test('EU-54：普通中文编辑、撤销重做与共享 Article/Page adapter �
   await page.goto('/admin/pages')
   await page.getByTestId('add-page').click()
   const dialog = page.getByRole('dialog', { name: '新增单页' })
-  const root = dialog.getByTestId('page-body-editor')
-  const surface = editable(root)
+  const root = dialog.getByTestId('page-body-editor-shell')
+  const surface = dialog.getByTestId('page-body-editor')
   await expect(surface).toBeVisible()
   for (const command of ['undo', 'redo', 'bold', 'italic', 'underline', 'strike', 'align', 'list', 'table', 'link', 'image']) {
     await expect(root.locator(`[data-command="${command}"]`)).toBeVisible()
@@ -158,7 +152,7 @@ test('EU-54：粘贴 hostile HTML 后服务端共享安全边界继续生效', a
   const dialog = page.getByRole('dialog', { name: '新增单页' })
   await dialog.getByRole('textbox', { name: '单页名称' }).fill(`EU54安全粘贴-${suffix}`)
   await dialog.getByRole('textbox', { name: '公开标识' }).fill(`eu54-paste-${suffix}`)
-  const surface = editable(dialog.getByTestId('page-body-editor'))
+  const surface = dialog.getByTestId('page-body-editor')
   await surface.evaluate((node, html) => {
     const data = new DataTransfer()
     data.setData('text/html', String(html))
