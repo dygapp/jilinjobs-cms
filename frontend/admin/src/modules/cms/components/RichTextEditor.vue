@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import suneditor from 'suneditor'
-import plugins from 'suneditor/src/plugins'
-import zhCn from 'suneditor/src/langs/zh_cn'
+import suneditor, { plugins } from 'suneditor'
+import zhCn from 'suneditor/langs/zh_cn'
 import 'suneditor/dist/css/suneditor.min.css'
 
 interface UploadedImage {
@@ -10,8 +9,17 @@ interface UploadedImage {
   alt?: string
 }
 
-type SunEditorInstance = ReturnType<typeof suneditor.create>
 type SunUploadHandler = (response?: unknown) => void
+
+type SunEditorInstance = {
+  destroy: () => void
+  $: {
+    html: {
+      get: () => string
+      set: (value: string) => void
+    }
+  }
+}
 
 const props = withDefaults(defineProps<{
   modelValue: string
@@ -28,6 +36,16 @@ const target = ref<HTMLTextAreaElement | null>(null)
 let editor: SunEditorInstance | null = null
 let applyingExternalValue = false
 
+function onImageUploadBefore(...args: any[]) {
+  if (!props.uploadImage) return true
+  const files = args[0] as File[] | undefined
+  const uploadHandler = args.at(-1) as SunUploadHandler | undefined
+  const file = files?.[0]
+  if (!file || typeof uploadHandler !== 'function') return false
+  void uploadManagedImage(file, uploadHandler)
+  return undefined
+}
+
 onMounted(() => {
   if (!target.value) return
 
@@ -39,40 +57,35 @@ onMounted(() => {
     width: '100%',
     buttonList: [
       ['undo', 'redo'],
-      ['formatBlock', 'bold', 'underline', 'italic', 'strike'],
-      ['font', 'fontSize', 'fontColor', 'hiliteColor'],
-      ['align', 'list', 'blockquote', 'horizontalRule'],
+      ['blockStyle', 'bold', 'underline', 'italic', 'strike'],
+      ['font', 'fontSize', 'fontColor', 'backgroundColor'],
+      ['align', 'list', 'blockquote', 'hr'],
       ['table', 'link', 'image'],
       ['removeFormat', 'codeView', 'fullScreen'],
     ],
-    imageMultipleFile: false,
-    imageFileInput: Boolean(props.uploadImage),
-    imageUrlInput: !props.uploadImage,
+    image: {
+      allowMultiple: false,
+      createFileInput: Boolean(props.uploadImage),
+      createUrlInput: !props.uploadImage,
+    },
     attributeWhitelist: { table: 'align|cellpadding|cellspacing' },
     tagStyles: { td: 'width|height' },
-  })
-
-  editor.onChange = contents => {
-    if (!applyingExternalValue) emit('update:modelValue', contents)
-  }
-
-  if (props.uploadImage) {
-    editor.onImageUploadBefore = (files, _info, _core, uploadHandler) => {
-      const file = files?.[0]
-      if (!file) return false
-      void uploadManagedImage(file, uploadHandler as SunUploadHandler)
-      return undefined
-    }
-  }
+    events: {
+      onChange: contents => {
+        if (!applyingExternalValue) emit('update:modelValue', contents)
+      },
+      onImageUploadBefore,
+    },
+  }) as unknown as SunEditorInstance
 })
 
 watch(() => props.modelValue, value => {
   if (!editor) return
   const normalized = value || ''
-  if (editor.getContents() === normalized) return
+  if (editor.$.html.get() === normalized) return
   applyingExternalValue = true
   try {
-    editor.setContents(normalized)
+    editor.$.html.set(normalized)
   } finally {
     applyingExternalValue = false
   }
@@ -90,7 +103,7 @@ async function uploadManagedImage(file: File, uploadHandler: SunUploadHandler) {
       result: [{
         url: image.src,
         name: image.alt || file.name,
-        size: String(file.size),
+        size: file.size,
       }],
     })
   } catch (error) {
