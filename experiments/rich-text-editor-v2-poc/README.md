@@ -40,6 +40,19 @@ PASS 重点：不丢字、不重复字、光标不异常跳转、正文/列表/�
 
 完成后在页面下方选择 PASS / FAIL、填写必要备注，点击“复制人工验证结果”，将结果粘贴回当前讨论即可。
 
+## Automated Evidence Boundary
+
+当前自动化 Gate 已覆盖：
+
+- P1 Party inline image historical HTML；
+- P2 `teacher-library` complex Page HTML；
+- P3 ordinary Chinese authoring + undo/redo；
+- P4a Office-shaped clipboard structural precheck；
+- P5 CMS Resource thin adapter；
+- Human Review page smoke initialization。
+
+P4a 不替代真实 Windows Microsoft Word / WPS Writer 剪贴板验证；Headless Chromium 也不替代真实 Windows 中文 IME，因此 H1～H4 仍是最终人工 Gate。
+
 ## Boundary
 
 - 不连接 CMS API；
