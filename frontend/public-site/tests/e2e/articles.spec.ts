@@ -1,5 +1,10 @@
 import { expect, test } from '@playwright/test'
 
+const ONE_PIXEL_PNG = Buffer.from(
+  'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zt9sAAAAASUVORK5CYII=',
+  'base64',
+)
+
 test('文章草稿、文件资源与栏目内容依赖形成管理端闭环', async ({ page, request }, testInfo) => {
   const suffix = `${Date.now()}-${testInfo.retry}`
   const columnName = `文章栏目-${suffix}`
@@ -26,14 +31,24 @@ test('文章草稿、文件资源与栏目内容依赖形成管理端闭环', as
   await createDialog.getByTestId('article-column-tree-select').click()
   await page.locator('.el-select-dropdown:visible').getByText(columnName, { exact: true }).click()
   await page.getByPlaceholder('请输入内容来源').fill('吉林就业测试来源')
-  await page.getByTestId('article-body-editor').fill('这是草稿正文')
+  const articleEditor = page.getByTestId('article-body-editor')
+  await articleEditor.fill('这是草稿正文')
 
-  await page.getByTestId('body-image-input').setInputFiles({
+  const articleEditorShell = createDialog.getByTestId('article-body-editor-shell')
+  await articleEditorShell.locator('[data-command="image"]').click()
+  const bodyImageInput = page.locator('input.__se__file_input[type="file"]')
+  await expect(bodyImageInput).toHaveCount(1)
+  await bodyImageInput.setInputFiles({
     name: 'body-image.png',
     mimeType: 'image/png',
-    buffer: Buffer.from('body-image-content'),
+    buffer: ONE_PIXEL_PNG,
   })
-  await expect(page.getByText('正文图片已上传', { exact: true })).toBeVisible()
+  const bodyImageSubmit = page.locator('.se-modal-content:visible .se-btn-primary')
+  await expect(bodyImageSubmit).toHaveCount(1)
+  await bodyImageSubmit.click()
+  const insertedBodyImage = articleEditor.locator('img').last()
+  await expect(insertedBodyImage).toBeVisible()
+  await expect(insertedBodyImage).toHaveAttribute('src', /\/api\/admin\/resources\/\d+\/content/)
 
   await page.getByTestId('cover-input').setInputFiles({
     name: 'cover-image.png',
