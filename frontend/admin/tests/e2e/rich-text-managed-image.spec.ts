@@ -44,7 +44,6 @@ test('EU-54：Article 正文图片继续通过 managed Resource bridge 保存', 
   await expect(surface).toBeVisible()
 
   await root.locator('[data-command="image"]').click()
-  const imageModal = root.locator('.se-modal-content').filter({ visible: true })
   const fileInput = root.locator('input.__se__file_input[type="file"]')
   await expect(fileInput).toHaveCount(1)
   await fileInput.setInputFiles({ name: 'eu54-managed.png', mimeType: 'image/png', buffer: ONE_PIXEL_PNG })
