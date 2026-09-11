@@ -9,6 +9,33 @@ interface UploadedImage {
   alt?: string
 }
 
+type LegacyImageAlignment = 'none' | 'left' | 'center' | 'right'
+
+type LegacyImageState = {
+  width: string
+  height: string
+  alignment: LegacyImageAlignment
+}
+
+type FigureInfo = {
+  container?: Element | null
+}
+
+type SunEditorImagePlugin = {
+  figure?: {
+    open: (target: HTMLImageElement, options: {
+      nonResizing: boolean
+      nonSizeInfo: boolean
+      nonBorder: boolean
+      figureTarget: boolean
+      infoOnly: boolean
+    }) => FigureInfo | undefined
+  }
+  sizeService?: {
+    applySize: (width: string, height: string) => void
+  }
+}
+
 type SunEditorInstance = {
   destroy: () => void
   $: {
@@ -17,8 +44,25 @@ type SunEditorInstance = {
       set: (value: string) => void
       insertHTML: (value: string) => void
     }
+    plugins?: {
+      image?: SunEditorImagePlugin
+    }
+    pluginManager?: {
+      checkFileInfo?: (loaded: boolean) => void
+    }
+    frameContext?: {
+      get?: (key: string) => HTMLElement | null
+    }
   }
 }
+
+const LEGACY_IMAGE_INDEX_ATTRIBUTE = 'data-jilinjobs-legacy-image-index'
+const IMAGE_FLOAT_CLASSES = [
+  '__se__float-none',
+  '__se__float-left',
+  '__se__float-center',
+  '__se__float-right',
+] as const
 
 const props = withDefaults(defineProps<{
   modelValue: string
@@ -34,12 +78,17 @@ const emit = defineEmits<{ (event: 'update:modelValue', value: string): void }>(
 const target = ref<HTMLTextAreaElement | null>(null)
 let editor: SunEditorInstance | null = null
 let applyingExternalValue = false
+let pendingLegacyImageStates: LegacyImageState[] = []
+const boundLegacyImageLoads = new WeakSet<HTMLImageElement>()
 
 onMounted(() => {
   if (!target.value) return
 
+  pendingLegacyImageStates = readLegacyImageStates(props.modelValue)
+  const initialValue = prepareLegacyImagesForEditor(props.modelValue)
+
   editor = suneditor.create(target.value, {
-    value: normalizeLegacyImageDimensions(props.modelValue),
+    value: initialValue,
     plugins,
     lang: zhCn,
     minHeight: '260px',
@@ -67,7 +116,12 @@ onMounted(() => {
     },
     events: {
       onChange: ({ data }) => {
-        if (!applyingExternalValue) emit('update:modelValue', data)
+        if (applyingExternalValue) return
+        const value = normalizeLegacyImagesForApp(data)
+        if (value !== props.modelValue) emit('update:modelValue', value)
+      },
+      onImageLoad: () => {
+        requestAnimationFrame(() => applyLegacyImageStatesViaSunEditor())
       },
       onImageUploadBefore: async ({ info }) => {
         if (!props.uploadImage) return true
@@ -80,7 +134,7 @@ onMounted(() => {
           const src = escapeAttribute(image.src)
           const alt = escapeAttribute(image.alt || file.name)
           editor.$.html.insertHTML(`<img src="${src}" alt="${alt}">`)
-          emit('update:modelValue', editor.$.html.get())
+          emit('update:modelValue', normalizeLegacyImagesForApp(editor.$.html.get()))
         } catch {
           return false
         }
@@ -89,18 +143,14 @@ onMounted(() => {
       },
     },
   }) as unknown as SunEditorInstance
+
+  initializeLegacyImageBridge()
 })
 
 watch(() => props.modelValue, value => {
   if (!editor) return
-  const normalized = normalizeLegacyImageDimensions(value)
-  if (editor.$.html.get() === normalized) return
-  applyingExternalValue = true
-  try {
-    editor.$.html.set(normalized)
-  } finally {
-    applyingExternalValue = false
-  }
+  if (normalizeLegacyImagesForApp(editor.$.html.get()) === value) return
+  setEditorContents(value)
 })
 
 onBeforeUnmount(() => {
@@ -108,24 +158,177 @@ onBeforeUnmount(() => {
   editor = null
 })
 
-function normalizeLegacyImageDimensions(html: string): string {
+function setEditorContents(value: string): void {
+  if (!editor) return
+
+  pendingLegacyImageStates = readLegacyImageStates(value)
+  applyingExternalValue = true
+  try {
+    editor.$.html.set(prepareLegacyImagesForEditor(value))
+    initializeLegacyImageBridge()
+  } finally {
+    requestAnimationFrame(() => {
+      applyingExternalValue = false
+    })
+  }
+}
+
+function initializeLegacyImageBridge(): void {
+  if (!editor || pendingLegacyImageStates.length === 0) return
+
+  bindLegacyImageLoads()
+  try {
+    editor.$.pluginManager?.checkFileInfo?.(true)
+  } catch (error) {
+    console.warn('[RichTextEditor] SunEditor file-manager compatibility check failed', error)
+  }
+
+  applyLegacyImageStatesViaSunEditor()
+  requestAnimationFrame(() => applyLegacyImageStatesViaSunEditor())
+}
+
+function bindLegacyImageLoads(): void {
+  const surface = editorSurface()
+  if (!surface) return
+
+  surface.querySelectorAll<HTMLImageElement>(`img[${LEGACY_IMAGE_INDEX_ATTRIBUTE}]`).forEach(image => {
+    if (boundLegacyImageLoads.has(image)) return
+    boundLegacyImageLoads.add(image)
+    image.addEventListener('load', () => applyLegacyImageStatesViaSunEditor(), { once: true })
+  })
+}
+
+function applyLegacyImageStatesViaSunEditor(): void {
+  if (!editor || pendingLegacyImageStates.length === 0) return
+
+  const imagePlugin = editor.$.plugins?.image
+  const figure = imagePlugin?.figure
+  const sizeService = imagePlugin?.sizeService
+  const surface = editorSurface()
+  if (!figure || !sizeService || !surface) return
+
+  surface.querySelectorAll<HTMLImageElement>(`img[${LEGACY_IMAGE_INDEX_ATTRIBUTE}]`).forEach(image => {
+    const index = Number(image.getAttribute(LEGACY_IMAGE_INDEX_ATTRIBUTE))
+    const state = Number.isInteger(index) ? pendingLegacyImageStates[index] : undefined
+    if (!state) return
+
+    try {
+      const info = figure.open(image, {
+        nonResizing: true,
+        nonSizeInfo: true,
+        nonBorder: true,
+        figureTarget: false,
+        infoOnly: true,
+      })
+      if (!info?.container) return
+
+      sizeService.applySize(state.width || 'auto', state.height || 'auto')
+      applyLegacyImageAlignment(image, state.alignment)
+    } catch (error) {
+      console.warn('[RichTextEditor] SunEditor legacy-image compatibility bridge failed', error)
+    }
+  })
+}
+
+function applyLegacyImageAlignment(image: HTMLImageElement, alignment: LegacyImageAlignment): void {
+  const component = image.closest('.se-component.se-image-container')
+  if (!component) return
+  component.classList.remove(...IMAGE_FLOAT_CLASSES)
+  component.classList.add(`__se__float-${alignment}`)
+}
+
+function editorSurface(): HTMLElement | null {
+  return editor?.$.frameContext?.get?.('wysiwyg') ?? null
+}
+
+function readLegacyImageStates(html: string): LegacyImageState[] {
+  if (!html) return []
+  const template = document.createElement('template')
+  template.innerHTML = html
+  return Array.from(template.content.querySelectorAll<HTMLImageElement>('img'), image => ({
+    width: legacyDimensionStyle(image.style.width) || legacyDimensionStyle(image.getAttribute('width')) || '',
+    height: legacyDimensionStyle(image.style.height) || legacyDimensionStyle(image.getAttribute('height')) || '',
+    alignment: legacyImageAlignment(image.style.float || image.getAttribute('align')),
+  }))
+}
+
+function prepareLegacyImagesForEditor(html: string): string {
   if (!html) return ''
   const template = document.createElement('template')
   template.innerHTML = html
-  template.content.querySelectorAll('img').forEach(image => {
-    const width = legacyDimensionStyle(image.getAttribute('width'))
-    const height = legacyDimensionStyle(image.getAttribute('height'))
-    if (width && !image.style.width) image.style.width = width
-    if (height && !image.style.height) image.style.height = height
+
+  template.content.querySelectorAll<HTMLImageElement>('img').forEach((image, index) => {
+    image.setAttribute(LEGACY_IMAGE_INDEX_ATTRIBUTE, String(index))
+    if (image.closest('.se-component.se-image-container')) return
+
+    const wrapper = document.createElement('span')
+    const alignment = legacyImageAlignment(image.style.float || image.getAttribute('align'))
+    wrapper.className = `se-component se-inline-component se-image-container __se__float-${alignment}`
+    image.replaceWith(wrapper)
+    wrapper.appendChild(image)
   })
+
   return template.innerHTML
 }
 
-function legacyDimensionStyle(value: string | null): string | null {
+function normalizeLegacyImagesForApp(html: string): string {
+  if (!html) return ''
+  const template = document.createElement('template')
+  template.innerHTML = html
+
+  template.content.querySelectorAll<HTMLImageElement>(`img[${LEGACY_IMAGE_INDEX_ATTRIBUTE}]`).forEach(image => {
+    const component = image.closest('.se-component.se-image-container')
+    const clone = image.cloneNode(true) as HTMLImageElement
+    const dataSize = (clone.getAttribute('data-se-size') || '').split(',')
+    const width = legacyDimensionStyle(clone.style.width)
+      || legacyDimensionStyle(dataSize[0])
+      || legacyDimensionStyle(clone.getAttribute('width'))
+    const height = legacyDimensionStyle(clone.style.height)
+      || legacyDimensionStyle(dataSize[1])
+      || legacyDimensionStyle(clone.getAttribute('height'))
+
+    if (width) clone.setAttribute('width', dimensionAttributeValue(width))
+    else clone.removeAttribute('width')
+    if (height) clone.setAttribute('height', dimensionAttributeValue(height))
+    else clone.removeAttribute('height')
+
+    for (const name of clone.getAttributeNames()) {
+      if (name.startsWith('data-se-') || name === LEGACY_IMAGE_INDEX_ATTRIBUTE) clone.removeAttribute(name)
+    }
+
+    const originalFloat = clone.style.float
+    clone.style.removeProperty('width')
+    clone.style.removeProperty('height')
+    clone.style.removeProperty('float')
+
+    if (component?.classList.contains('__se__float-left')) clone.style.float = 'left'
+    else if (component?.classList.contains('__se__float-right')) clone.style.float = 'right'
+    else if (originalFloat === 'left' || originalFloat === 'right') clone.style.float = originalFloat
+
+    if (!clone.getAttribute('style')) clone.removeAttribute('style')
+
+    if (component) component.replaceWith(clone)
+    else image.replaceWith(clone)
+  })
+
+  return template.innerHTML
+}
+
+function legacyDimensionStyle(value: string | null | undefined): string | null {
   const normalized = value?.trim() || ''
   if (/^\d+(?:\.\d+)?$/.test(normalized)) return `${normalized}px`
   if (/^\d+(?:\.\d+)?(?:px|%)$/i.test(normalized)) return normalized
   return null
+}
+
+function dimensionAttributeValue(value: string): string {
+  return value.endsWith('px') ? value.slice(0, -2) : value
+}
+
+function legacyImageAlignment(value: string | null | undefined): LegacyImageAlignment {
+  const normalized = value?.trim().toLowerCase()
+  if (normalized === 'left' || normalized === 'center' || normalized === 'right') return normalized
+  return 'none'
 }
 
 function isSafeUrl(value: string): boolean {
