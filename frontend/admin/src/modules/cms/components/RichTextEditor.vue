@@ -80,6 +80,18 @@ type SunEditorInstance = {
 }
 
 const LEGACY_IMAGE_INDEX_ATTRIBUTE = 'data-jilinjobs-legacy-image-index'
+const DEFAULT_EDITOR_FONT_STACK = '"Microsoft YaHei","PingFang SC",Arial,sans-serif'
+const EDITOR_FONT_ITEMS = [
+  'Microsoft YaHei',
+  'SimSun',
+  'KaiTi',
+  'FangSong',
+  'PingFang SC',
+  'Noto Sans CJK SC',
+  'Source Han Sans SC',
+  'Arial',
+  'Times New Roman',
+]
 const IMAGE_FLOAT_CLASSES = [
   '__se__float-none',
   '__se__float-left',
@@ -118,6 +130,7 @@ onMounted(() => {
     lang: zhCn,
     minHeight: '260px',
     width: '100%',
+    editorStyle: `font-family:${DEFAULT_EDITOR_FONT_STACK};`,
     buttonList: [
       ['undo', 'redo'],
       ['blockStyle', 'bold', 'underline', 'italic', 'strike'],
@@ -126,6 +139,9 @@ onMounted(() => {
       ['table', 'link', 'image'],
       ['removeFormat', 'codeView', 'fullScreen'],
     ],
+    font: {
+      items: EDITOR_FONT_ITEMS,
+    },
     image: {
       allowMultiple: false,
       createFileInput: Boolean(props.uploadImage),
