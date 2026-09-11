@@ -8,6 +8,17 @@ const PAGES_PATH = path.join(REPO_ROOT, 'sites/jilinjobs/structure/pages.json')
 const REAL_CORPUS_AVAILABLE = existsSync(PARTY_PATH) && existsSync(PAGES_PATH)
 const PARTY_MARKER = 'EU54_PARTY_ROUNDTRIP_MARKER'
 const TEACHER_MARKER = 'EU54_TEACHER_ROUNDTRIP_MARKER'
+const EXPECTED_EDITOR_FONTS = [
+  'Microsoft YaHei',
+  'SimSun',
+  'KaiTi',
+  'FangSong',
+  'PingFang SC',
+  'Noto Sans CJK SC',
+  'Source Han Sans SC',
+  'Arial',
+  'Times New Roman',
+]
 
 function readRealCorpus() {
   const party = JSON.parse(readFileSync(PARTY_PATH, 'utf8')) as { content: { bodyHtml: string } }
@@ -127,18 +138,29 @@ test('EU-54：SunEditor 3.3.3 生产适配器保持 P1/P2 real corpus 并可继�
   expect(storedPage?.bodyHtml).toContain('float:left')
 })
 
-test('EU-54：普通中文编辑、撤销重做与共享 Article/Page adapter 可用', async ({ page }) => {
+test('EU-54：普通中文编辑、中文字体、撤销重做与共享 Article/Page adapter 可用', async ({ page }) => {
   await page.goto('/admin/pages')
   await page.getByTestId('add-page').click()
   const dialog = page.getByRole('dialog', { name: '新增单页' })
   const root = dialog.getByTestId('page-body-editor-shell')
   const surface = dialog.getByTestId('page-body-editor')
   await expect(surface).toBeVisible()
-  for (const command of ['undo', 'redo', 'bold', 'italic', 'underline', 'strike', 'align', 'list', 'table', 'link', 'image']) {
+  for (const command of ['undo', 'redo', 'bold', 'italic', 'underline', 'strike', 'font', 'fontSize', 'align', 'list', 'table', 'link', 'image']) {
     await expect(root.locator(`[data-command="${command}"]`)).toBeVisible()
   }
+
+  const defaultFontFamily = await surface.evaluate(node => getComputedStyle(node).fontFamily)
+  expect(defaultFontFamily).toContain('Microsoft YaHei')
+  expect(defaultFontFamily).toContain('PingFang SC')
+  expect(defaultFontFamily).not.toContain('Helvetica Neue')
+  for (const font of EXPECTED_EDITOR_FONTS) {
+    await expect(root.locator(`.se-list-font-family [data-command="${font}"]`)).toHaveCount(1)
+  }
+
   await surface.fill('吉林省高校毕业生就业服务')
   await expect(surface).toContainText('吉林省高校毕业生就业服务')
+  const editorHtml = await surface.evaluate(node => node.innerHTML)
+  expect(editorHtml).not.toContain('Microsoft YaHei')
   await root.locator('[data-command="undo"]').click()
   await expect(surface).not.toContainText('吉林省高校毕业生就业服务')
   await root.locator('[data-command="redo"]').click()
