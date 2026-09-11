@@ -152,4 +152,7 @@ function findObject(value, predicate) {
   }
   return null
 }
-const sha256 = value => createHash('sha256').update(value).digest('hex')
+
+function sha256(value) {
+  return createHash('sha256').update(value).digest('hex')
+}
