@@ -1,4 +1,5 @@
 import { spawn } from 'node:child_process'
+import vm from 'node:vm'
 import { chromium } from '@playwright/test'
 
 const port = 4174
@@ -15,6 +16,17 @@ child.stderr.on('data', chunk => { output += chunk.toString() })
 
 try {
   await waitForServer(url)
+  const html = await (await fetch(url)).text()
+  const inlineScripts = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/gi)]
+    .map(match => match[1])
+    .filter(Boolean)
+  const reviewScript = inlineScripts.at(-1) || ''
+  try {
+    new vm.Script(reviewScript, { filename: 'human-review-inline.js' })
+  } catch (error) {
+    throw new Error(`Human Review inline script is invalid before browser startup:\n${error?.stack || error}\n--- script ---\n${reviewScript}`)
+  }
+
   const browser = await chromium.launch({ headless: true })
   try {
     const page = await browser.newPage({ viewport: { width: 1500, height: 1000 } })
