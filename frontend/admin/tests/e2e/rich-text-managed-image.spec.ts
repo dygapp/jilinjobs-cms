@@ -39,8 +39,8 @@ test('EU-54：Article 正文图片继续通过 managed Resource bridge 保存', 
   await row.getByRole('button', { name: '编辑' }).click()
 
   const dialog = page.getByRole('dialog', { name: '编辑文章' })
-  const root = dialog.getByTestId('article-body-editor')
-  const surface = root.locator('.se-wrapper-wysiwyg[contenteditable="true"]')
+  const root = dialog.getByTestId('article-body-editor-shell')
+  const surface = dialog.getByTestId('article-body-editor')
   await expect(surface).toBeVisible()
 
   await root.locator('[data-command="image"]').click()
