@@ -48,7 +48,9 @@ test('EU-54：Article 正文图片继续通过 managed Resource bridge 保存', 
   const fileInput = page.locator('input.__se__file_input[type="file"]')
   await expect(fileInput).toHaveCount(1)
   await fileInput.setInputFiles({ name: 'eu54-managed.png', mimeType: 'image/png', buffer: ONE_PIXEL_PNG })
-  await page.locator('.se-modal-content .se-btn-primary').click()
+  const imageModalSubmit = page.locator('.se-modal-content:visible .se-btn-primary')
+  await expect(imageModalSubmit).toHaveCount(1)
+  await imageModalSubmit.click()
 
   const insertedImage = surface.locator('img').last()
   await expect(insertedImage).toBeVisible()
