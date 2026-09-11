@@ -111,6 +111,7 @@ onMounted(() => {
       img: 'width|height|align',
     },
     tagStyles: {
+      table: 'width',
       td: 'width|height',
       img: 'width|height|float',
     },
