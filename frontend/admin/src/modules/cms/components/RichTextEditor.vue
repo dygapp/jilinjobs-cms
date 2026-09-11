@@ -2,7 +2,7 @@
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import suneditor, { plugins } from 'suneditor'
 import zhCn from 'suneditor/langs/zh_cn'
-import 'suneditor/dist/css/suneditor.min.css'
+import 'suneditor/css/editor'
 
 interface UploadedImage {
   src: string
