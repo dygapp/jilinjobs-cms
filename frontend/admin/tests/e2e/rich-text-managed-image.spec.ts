@@ -44,10 +44,11 @@ test('EU-54：Article 正文图片继续通过 managed Resource bridge 保存', 
   await expect(surface).toBeVisible()
 
   await root.locator('[data-command="image"]').click()
-  const fileInput = root.locator('input.__se__file_input[type="file"]')
+  // SunEditor mounts its carrier/modal under document.body instead of inside the Vue adapter root.
+  const fileInput = page.locator('input.__se__file_input[type="file"]')
   await expect(fileInput).toHaveCount(1)
   await fileInput.setInputFiles({ name: 'eu54-managed.png', mimeType: 'image/png', buffer: ONE_PIXEL_PNG })
-  await root.locator('.se-modal-content .se-btn-primary').click()
+  await page.locator('.se-modal-content .se-btn-primary').click()
 
   const insertedImage = surface.locator('img').last()
   await expect(insertedImage).toBeVisible()
