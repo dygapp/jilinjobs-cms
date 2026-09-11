@@ -40,6 +40,44 @@ PASS 重点：不丢字、不重复字、光标不异常跳转、正文/列表/�
 
 完成后在页面下方选择 PASS / FAIL、填写必要备注，点击“复制人工验证结果”，将结果粘贴回当前讨论即可。
 
+## SunEditor HTML Round-trip Harness
+
+用于单独验证 SunEditor 3.3.3 的原始 HTML 加载、序列化、浏览器保存及重新加载行为，尤其用于复现 P1 legacy image `width` / `height` 被归一化为 `auto` 的问题。
+
+Windows 本地执行：
+
+```bash
+git fetch origin
+git switch experiment/rich-text-editor-v2-poc
+cd experiments/rich-text-editor-v2-poc
+npm install
+npm run suneditor-roundtrip
+```
+
+浏览器打开：
+
+```text
+http://127.0.0.1:4174/
+```
+
+页面包含三个普通 HTML 文本框，可直接粘贴或修改原始 HTML：
+
+1. **P1 Party canonical HTML**：直接读取 `data-migrations/party/v1/articles/zhutijiaoyu-content-154659859759104/article.json` 的真实 `bodyHtml`；这是当前 EU-54 自动验证中稳定复现 `15×15 → auto×auto` 的样本。
+2. **P2 `teacher-library` canonical HTML**：直接读取 `sites/jilinjobs/structure/pages.json` 的真实 `bodyHtml`。
+3. **自定义 / 最小复现 HTML**：内置一张 `15×15` 和一张 `16×16` legacy image，可任意替换为其他 HTML。
+
+Round-trip 页面支持：
+
+- 从任一普通 textarea 加载 HTML 到 SunEditor；
+- 读取并显示 SunEditor 当前序列化 HTML；
+- 将当前 HTML 保存到浏览器 `localStorage`；
+- 从当前序列化 HTML 或保存快照重新加载；
+- 刷新页面后继续恢复浏览器快照；
+- 显示每张图片的 `width`、`height`、`style`、`data-se-size` 和实际渲染尺寸；
+- 切换 SunEditor 官方 `v2Migration` 后重建编辑器，对比兼容模式行为。
+
+建议先复现 P1，再手工添加图片并设置为 `16×16px`，执行“读取当前 HTML → 保存浏览器快照 → 从快照重新加载”，把“当前序列化 HTML”和图片尺寸诊断结果一并反馈。
+
 ## Automated Evidence Boundary
 
 当前自动化 Gate 已覆盖：
