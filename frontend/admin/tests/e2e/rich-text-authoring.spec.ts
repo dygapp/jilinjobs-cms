@@ -145,9 +145,10 @@ test('EU-54：普通中文编辑、中文字体、撤销重做与共享 Article/
   const root = dialog.getByTestId('page-body-editor-shell')
   const surface = dialog.getByTestId('page-body-editor')
   await expect(surface).toBeVisible()
-  for (const command of ['undo', 'redo', 'bold', 'italic', 'underline', 'strike', 'font', 'fontSize', 'align', 'list', 'table', 'link', 'image']) {
+  for (const command of ['undo', 'redo', 'bold', 'italic', 'underline', 'strike', 'font', 'align', 'list', 'table', 'link', 'image']) {
     await expect(root.locator(`[data-command="${command}"]`)).toBeVisible()
   }
+  await expect(root.getByLabel('字号')).toBeVisible()
 
   const defaultFontFamily = await surface.evaluate(node => getComputedStyle(node).fontFamily)
   expect(defaultFontFamily).toContain('Microsoft YaHei')
