@@ -30,14 +30,20 @@ jobs:
         working-directory: experiments/rich-text-editor-v2-poc
         run: npx playwright install --with-deps chromium
 
-      - name: Run P1/P2 PoC
+      - name: Run Jodit P1/P2 PoC
         working-directory: experiments/rich-text-editor-v2-poc
         run: npm run poc
+
+      - name: Run corrected SunEditor P1/P2 PoC
+        working-directory: experiments/rich-text-editor-v2-poc
+        run: node run-suneditor.mjs
 
       - name: Upload results
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: rich-text-editor-v2-poc-results
-          path: experiments/rich-text-editor-v2-poc/results.json
+          path: |
+            experiments/rich-text-editor-v2-poc/results.json
+            experiments/rich-text-editor-v2-poc/suneditor-results.json
           if-no-files-found: warn
