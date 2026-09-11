@@ -1,0 +1,13 @@
+{
+  "name": "jilinjobs-rich-text-editor-v2-poc",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "poc": "node run.mjs"
+  },
+  "dependencies": {
+    "@playwright/test": "1.61.0",
+    "jodit": "4.15.0",
+    "suneditor": "3.3.3"
+  }
+}
