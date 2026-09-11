@@ -9,14 +9,13 @@ interface UploadedImage {
   alt?: string
 }
 
-type SunUploadHandler = (response?: unknown) => void
-
 type SunEditorInstance = {
   destroy: () => void
   $: {
     html: {
       get: () => string
       set: (value: string) => void
+      insertHTML: (value: string) => void
     }
   }
 }
@@ -35,16 +34,6 @@ const emit = defineEmits<{ (event: 'update:modelValue', value: string): void }>(
 const target = ref<HTMLTextAreaElement | null>(null)
 let editor: SunEditorInstance | null = null
 let applyingExternalValue = false
-
-function onImageUploadBefore(...args: any[]) {
-  if (!props.uploadImage) return true
-  const files = args[0] as File[] | undefined
-  const uploadHandler = args.at(-1) as SunUploadHandler | undefined
-  const file = files?.[0]
-  if (!file || typeof uploadHandler !== 'function') return false
-  void uploadManagedImage(file, uploadHandler)
-  return undefined
-}
 
 onMounted(() => {
   if (!target.value) return
@@ -71,10 +60,27 @@ onMounted(() => {
     attributeWhitelist: { table: 'align|cellpadding|cellspacing' },
     tagStyles: { td: 'width|height' },
     events: {
-      onChange: contents => {
-        if (!applyingExternalValue) emit('update:modelValue', contents)
+      onChange: ({ data }) => {
+        if (!applyingExternalValue) emit('update:modelValue', data)
       },
-      onImageUploadBefore,
+      onImageUploadBefore: async ({ info }) => {
+        if (!props.uploadImage) return true
+        const file = info.files?.[0]
+        if (!file || !editor) return false
+
+        try {
+          const image = await props.uploadImage(file)
+          if (!isSafeUrl(image.src)) return false
+          const src = escapeAttribute(image.src)
+          const alt = escapeAttribute(image.alt || file.name)
+          editor.$.html.insertHTML(`<img src="${src}" alt="${alt}">`)
+          emit('update:modelValue', editor.$.html.get())
+        } catch {
+          return false
+        }
+
+        return undefined
+      },
     },
   }) as unknown as SunEditorInstance
 })
@@ -96,19 +102,16 @@ onBeforeUnmount(() => {
   editor = null
 })
 
-async function uploadManagedImage(file: File, uploadHandler: SunUploadHandler) {
-  try {
-    const image = await props.uploadImage!(file)
-    uploadHandler({
-      result: [{
-        url: image.src,
-        name: image.alt || file.name,
-        size: file.size,
-      }],
-    })
-  } catch (error) {
-    uploadHandler(error instanceof Error ? error.message : '图片上传失败')
-  }
+function isSafeUrl(value: string): boolean {
+  return value.startsWith('/') || /^https?:\/\//i.test(value)
+}
+
+function escapeAttribute(value: string): string {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('"', '&quot;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
 }
 </script>
 
