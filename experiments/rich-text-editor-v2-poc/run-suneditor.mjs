@@ -29,7 +29,14 @@ const server = http.createServer((req, res) => {
 await new Promise(resolve => server.listen(0, '127.0.0.1', resolve))
 const { port } = server.address()
 const browser = await chromium.launch({ headless: true })
-const results = { version, candidates: {} }
+const results = {
+  version,
+  compatibilityConfig: {
+    attributeWhitelist: { table: 'align|cellpadding|cellspacing' },
+    tagStyles: { td: 'width|height' },
+  },
+  candidates: {},
+}
 for (const [sampleName, html] of [['party', partyHtml], ['teacherLibrary', teacherHtml]]) {
   try {
     results.candidates[sampleName] = await roundTrip(sampleName, html)
@@ -47,24 +54,34 @@ async function roundTrip(sampleName, html) {
   const page = await browser.newPage({ viewport: { width: 1440, height: 1200 } })
   await page.goto(`http://127.0.0.1:${port}/`, { waitUntil: 'load' })
   await page.evaluate(value => {
-    window.__pocEditor = SUNEDITOR.create('#editor', { value, buttonList: [['bold']], height: 'auto' })
+    window.__pocEditor = SUNEDITOR.create('#editor', {
+      value,
+      buttonList: [['bold']],
+      height: 'auto',
+      attributeWhitelist: { table: 'align|cellpadding|cellspacing' },
+      tagStyles: { td: 'width|height' },
+    })
   }, html)
   await page.waitForSelector('.se-wrapper-wysiwyg[contenteditable="true"]')
   await page.waitForTimeout(150)
   const initialOutput = await getOutput(page)
   const initialFacts = await facts(page, sampleName, initialOutput)
   await page.evaluate(marker => {
-    window.__pocEditor.$.html.insert(`<p>${marker}</p>`, { selectInserted: false, skipCleaning: false })
-    window.__pocEditor.$.history.push(false)
+    const current = typeof window.__pocEditor.getContents === 'function'
+      ? window.__pocEditor.getContents()
+      : window.__pocEditor.$.html.get()
+    window.__pocEditor.$.html.set(`${current}<p>${marker}</p>`)
   }, MARKER)
   await page.waitForTimeout(100)
   const editedOutput = await getOutput(page)
   const editedFacts = await facts(page, sampleName, editedOutput)
   const markerPresent = editedOutput.includes(MARKER)
+  const contentCountStable = sampleName !== 'party' || initialFacts.imageCount === editedFacts.imageCount
   await page.close()
   return {
-    pass: markerPresent && gatePass(sampleName, initialFacts) && gatePass(sampleName, editedFacts),
+    pass: markerPresent && contentCountStable && gatePass(sampleName, initialFacts) && gatePass(sampleName, editedFacts),
     markerPresent,
+    contentCountStable,
     inputLength: html.length,
     initialOutputLength: initialOutput.length,
     editedOutputLength: editedOutput.length,
@@ -138,8 +155,8 @@ async function facts(page, sampleName, html) {
 }
 
 function gatePass(sampleName, f) {
-  if (sampleName === 'party') return f.textContainsKnownHeadline && f.imageCount > 0 && f.firstImageWidth === 15 && f.firstImageHeight === 15 && f.firstImageStrongAncestor && f.renderedWidth === 15 && f.renderedHeight === 15
-  return f.textContainsFangZhanren && f.textContainsLiJunkai && f.tableExists && f.tableWidth === 1170 && f.firstTdWidth === 200 && f.firstTdHeight === 325 && f.firstImageWidth === 200 && f.firstImageHeight === 266 && f.firstImageFloat === 'left' && f.renderedImageWidth === 200 && f.renderedImageHeight === 266
+  if (sampleName === 'party') return f.textContainsKnownHeadline && f.imageCount === 23 && f.firstImageWidth === 15 && f.firstImageHeight === 15 && f.firstImageStrongAncestor && f.renderedWidth === 15 && f.renderedHeight === 15
+  return f.textContainsFangZhanren && f.textContainsLiJunkai && f.tableExists && f.tableAlign === 'center' && f.tableCellpadding === '1' && f.tableCellspacing === '1' && f.tableWidth === 1170 && f.firstTdWidth === 200 && f.firstTdHeight === 325 && f.firstImageWidth === 200 && f.firstImageHeight === 266 && f.firstImageFloat === 'left' && f.renderedImageWidth === 200 && f.renderedImageHeight === 266
 }
 
 function findObject(value, predicate) {
