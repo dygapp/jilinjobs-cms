@@ -5,7 +5,8 @@
   "scripts": {
     "poc": "node run.mjs",
     "human-review": "node human-review.mjs",
-    "human-review:smoke": "node human-review-smoke.mjs"
+    "human-review:smoke": "node human-review-smoke.mjs",
+    "suneditor-roundtrip": "node suneditor-roundtrip.mjs"
   },
   "dependencies": {
     "@playwright/test": "1.61.0",
