@@ -154,9 +154,6 @@ test('EU-54：普通中文编辑、中文字体、撤销重做与共享 Article/
   expect(defaultFontFamily).toContain('Microsoft YaHei')
   expect(defaultFontFamily).toContain('PingFang SC')
   expect(defaultFontFamily).not.toContain('Helvetica Neue')
-  for (const font of EXPECTED_EDITOR_FONTS) {
-    await expect(root.locator(`.se-list-font-family [data-command="${font}"]`)).toHaveCount(1)
-  }
 
   await surface.fill('吉林省高校毕业生就业服务')
   await expect(surface).toContainText('吉林省高校毕业生就业服务')
@@ -166,6 +163,16 @@ test('EU-54：普通中文编辑、中文字体、撤销重做与共享 Article/
   await expect(surface).not.toContainText('吉林省高校毕业生就业服务')
   await root.locator('[data-command="redo"]').click()
   await expect(surface).toContainText('吉林省高校毕业生就业服务')
+
+  await surface.press('Control+A')
+  await root.locator('[data-command="font"]').click()
+  const fontMenu = page.locator('.se-list-font-family:visible')
+  await expect(fontMenu).toBeVisible()
+  for (const font of EXPECTED_EDITOR_FONTS) {
+    await expect(fontMenu.locator(`[data-command="${font}"]`)).toHaveCount(1)
+  }
+  await fontMenu.locator('[data-command="SimSun"]').click()
+  await expect.poll(() => surface.evaluate(node => node.innerHTML)).toMatch(/font-family:\s*SimSun/i)
 })
 
 test('EU-54：粘贴 hostile HTML 后服务端共享安全边界继续生效', async ({ page, request }, testInfo) => {
