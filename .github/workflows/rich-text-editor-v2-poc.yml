@@ -38,9 +38,13 @@ jobs:
         working-directory: experiments/rich-text-editor-v2-poc
         run: node run-suneditor.mjs
 
-      - name: Run P3/P4a/P5 behavior PoC
+      - name: Run P3/P4a/P5 diagnostic behavior PoC
         working-directory: experiments/rich-text-editor-v2-poc
         run: node run-behavior.mjs
+
+      - name: Run final P3/P4a behavior verification
+        working-directory: experiments/rich-text-editor-v2-poc
+        run: node run-behavior-final.mjs
 
       - name: Upload results
         if: always()
@@ -51,4 +55,5 @@ jobs:
             experiments/rich-text-editor-v2-poc/results.json
             experiments/rich-text-editor-v2-poc/suneditor-results.json
             experiments/rich-text-editor-v2-poc/behavior-results.json
+            experiments/rich-text-editor-v2-poc/behavior-final-results.json
           if-no-files-found: warn
