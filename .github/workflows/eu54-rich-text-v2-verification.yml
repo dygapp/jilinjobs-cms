@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   exact-corpus:
-    name: P1 P2 production round-trip
+    name: P1 P2 resource production round-trip
     runs-on: ubuntu-latest
     timeout-minutes: 25
     services:
@@ -32,7 +32,16 @@ jobs:
           --health-timeout=5s
           --health-retries=12
     steps:
-      - uses: actions/checkout@v7
+      - name: Checkout exact PR head
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Record exact-head evidence
+        run: |
+          actual="$(git rev-parse HEAD)"
+          expected="${{ github.event.pull_request.head.sha }}"
+          echo "EU54_EXACT_HEAD=$actual"
+          test "$actual" = "$expected"
       - uses: actions/setup-java@v5
         with:
           distribution: temurin
@@ -74,7 +83,7 @@ jobs:
           done
           cat eu54-admin.log
           exit 1
-      - name: Run exact canonical corpus through production Admin adapter
+      - name: Run exact canonical corpus and managed resource through production Admin adapter
         run: |
           docker run --rm --init --ipc=host --network host \
             -e CI=true \
@@ -83,7 +92,7 @@ jobs:
             -v "$GITHUB_WORKSPACE:/repo" \
             -w /repo/frontend/admin \
             mcr.microsoft.com/playwright:v1.61.0-noble \
-            bash -lc 'npm install --no-audit --no-fund && npx playwright test tests/e2e/rich-text-authoring.spec.ts'
+            bash -lc 'npm install --no-audit --no-fund && npx playwright test tests/e2e/rich-text-authoring.spec.ts tests/e2e/rich-text-managed-image.spec.ts'
       - name: Upload focused evidence
         if: always()
         uses: actions/upload-artifact@v7
