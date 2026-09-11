@@ -18,9 +18,31 @@ try {
   const browser = await chromium.launch({ headless: true })
   try {
     const page = await browser.newPage({ viewport: { width: 1500, height: 1000 } })
+    const diagnostics = { consoleErrors: [], pageErrors: [], failedRequests: [] }
+    page.on('console', message => {
+      if (message.type() === 'error') diagnostics.consoleErrors.push(message.text())
+    })
+    page.on('pageerror', error => diagnostics.pageErrors.push(String(error?.stack || error)))
+    page.on('requestfailed', request => diagnostics.failedRequests.push(`${request.url()} :: ${request.failure()?.errorText || 'unknown'}`))
+
     await page.goto(url, { waitUntil: 'load' })
-    await page.waitForSelector('.jodit-wysiwyg[contenteditable="true"]')
-    await page.waitForSelector('.se-wrapper-wysiwyg[contenteditable="true"]')
+    try {
+      await page.waitForSelector('.jodit-wysiwyg[contenteditable="true"]', { timeout: 5000 })
+      await page.waitForSelector('.se-wrapper-wysiwyg[contenteditable="true"]', { timeout: 5000 })
+    } catch (error) {
+      const startupFacts = await page.evaluate(() => ({
+        readyState: document.readyState,
+        title: document.title,
+        hasJoditGlobal: typeof window.Jodit !== 'undefined',
+        hasSunEditorGlobal: typeof window.SUNEDITOR !== 'undefined',
+        hasSunChineseLanguage: Boolean(window.SUNEDITOR_LANG?.zh_cn),
+        hasHumanReview: Boolean(window.__humanReview),
+        joditEditableCount: document.querySelectorAll('.jodit-wysiwyg').length,
+        sunEditableCount: document.querySelectorAll('.se-wrapper-wysiwyg').length,
+        scriptSources: Array.from(document.scripts).map(script => script.src || '[inline]'),
+      }))
+      throw new Error(`Human Review editors did not initialize: ${error}\nDiagnostics=${JSON.stringify({ startupFacts, ...diagnostics }, null, 2)}`)
+    }
 
     const facts = await page.evaluate(() => ({
       title: document.title,
@@ -54,7 +76,7 @@ try {
     if (!after.jodit.includes('SMOKE中文输入')) throw new Error('Jodit smoke insertion missing')
     if (!after.suneditor.includes('SMOKE中文输入')) throw new Error('SunEditor smoke insertion missing')
 
-    console.log(JSON.stringify({ pass: true, facts }, null, 2))
+    console.log(JSON.stringify({ pass: true, facts, diagnostics }, null, 2))
   } finally {
     await browser.close()
   }
