@@ -1,0 +1,58 @@
+name: EU-54 Admin Lock Refresh
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'frontend/admin/package.json'
+      - 'frontend/admin/package-lock.json'
+      - '.github/workflows/eu54-lock-refresh.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-lock:
+    name: Refresh exact Admin lockfile
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Regenerate package-lock from exact manifest
+        working-directory: frontend/admin
+        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+      - name: Verify exact SunEditor lock and removed Tiptap runtime
+        working-directory: frontend/admin
+        run: |
+          node - <<'NODE'
+          const lock=require('./package-lock.json')
+          if(lock.packages['']?.dependencies?.suneditor !== '3.3.3') throw new Error('root lock does not pin suneditor 3.3.3')
+          if(lock.packages['node_modules/suneditor']?.version !== '3.3.3') throw new Error('resolved SunEditor is not 3.3.3')
+          const tiptap=Object.keys(lock.packages).filter(key=>key.startsWith('node_modules/@tiptap/'))
+          if(tiptap.length) throw new Error(`stale Tiptap packages remain: ${tiptap.join(', ')}`)
+          NODE
+      - name: Commit regenerated lockfile to EU-54 branch
+        run: |
+          if git diff --quiet -- frontend/admin/package-lock.json; then
+            echo 'package-lock.json already exact'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add frontend/admin/package-lock.json
+          git commit -m 'build(admin): refresh SunEditor 3.3.3 lockfile'
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
+      - name: Upload lockfile evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: eu54-admin-package-lock
+          path: frontend/admin/package-lock.json
+          if-no-files-found: error
+          retention-days: 3
