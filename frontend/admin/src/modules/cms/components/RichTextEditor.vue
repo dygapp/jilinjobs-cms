@@ -66,7 +66,6 @@ type SunEditorInstance = {
     html: {
       get: () => string
       set: (value: string) => void
-      insertHTML: (value: string) => void
     }
     plugins?: {
       image?: SunEditorImagePlugin
@@ -182,6 +181,7 @@ onMounted(() => {
     },
   }) as unknown as SunEditorInstance
 
+  applyEditorTestId()
   initializeLegacyPresentationBridge()
 })
 
@@ -209,6 +209,10 @@ function setEditorContents(value: string): void {
       applyingExternalValue = false
     })
   }
+}
+
+function applyEditorTestId(): void {
+  editorSurface()?.setAttribute('data-testid', props.testId)
 }
 
 function readLegacyPresentationStates(html: string): void {
@@ -418,18 +422,10 @@ function legacyImageAlignment(value: string | null | undefined): LegacyImageAlig
 function isSafeUrl(value: string): boolean {
   return value.startsWith('/') || /^https?:\/\//i.test(value)
 }
-
-function escapeAttribute(value: string): string {
-  return value
-    .replaceAll('&', '&amp;')
-    .replaceAll('"', '&quot;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-}
 </script>
 
 <template>
-  <div class="rich-text-editor-shell" :class="{ 'is-uploading': uploading }" :data-testid="testId">
+  <div class="rich-text-editor-shell" :class="{ 'is-uploading': uploading }" :data-testid="`${testId}-shell`">
     <textarea ref="target" />
   </div>
 </template>
