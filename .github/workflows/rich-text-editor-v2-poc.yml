@@ -46,6 +46,10 @@ jobs:
         working-directory: experiments/rich-text-editor-v2-poc
         run: node run-behavior-final.mjs
 
+      - name: Smoke test Human Review page
+        working-directory: experiments/rich-text-editor-v2-poc
+        run: npm run human-review:smoke
+
       - name: Upload results
         if: always()
         uses: actions/upload-artifact@v4
