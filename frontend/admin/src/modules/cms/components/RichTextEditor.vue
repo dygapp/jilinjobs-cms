@@ -30,6 +30,18 @@ type FigureInfo = {
   container?: Element | null
 }
 
+type SunEditorManagedImageInfo = {
+  url: string
+  files: { name: string; size: number }
+  element?: HTMLImageElement | null
+  anchor?: Node | null
+  inputWidth: string
+  inputHeight: string
+  align: string
+  isUpdate: boolean
+  alt: string
+}
+
 type SunEditorImagePlugin = {
   figure?: {
     open: (target: HTMLImageElement, options: {
@@ -42,6 +54,9 @@ type SunEditorImagePlugin = {
   }
   sizeService?: {
     applySize: (width: string, height: string) => void
+  }
+  uploadService?: {
+    urlUpload: (info: SunEditorManagedImageInfo) => void
   }
 }
 
@@ -138,19 +153,30 @@ onMounted(() => {
       onImageUploadBefore: async ({ info }) => {
         if (!props.uploadImage) return true
         const file = info.files?.[0]
-        if (!file || !editor) return false
+        const imagePlugin = editor?.$.plugins?.image
+        if (!file || !editor || !imagePlugin?.uploadService) return false
 
         try {
           const image = await props.uploadImage(file)
           if (!isSafeUrl(image.src)) return false
-          const src = escapeAttribute(image.src)
-          const alt = escapeAttribute(image.alt || file.name)
-          editor.$.html.insertHTML(`<img src="${src}" alt="${alt}">`)
+
+          imagePlugin.uploadService.urlUpload({
+            url: image.src,
+            files: { name: file.name, size: file.size },
+            element: info.element,
+            anchor: info.anchor,
+            inputWidth: info.inputWidth || 'auto',
+            inputHeight: info.inputHeight || 'auto',
+            align: info.align || 'none',
+            isUpdate: Boolean(info.isUpdate),
+            alt: image.alt || info.alt || file.name,
+          })
           emit('update:modelValue', normalizeLegacyImagesForApp(editor.$.html.get()))
         } catch {
           return false
         }
 
+        // undefined tells SunEditor the custom bridge already completed insertion.
         return undefined
       },
     },
