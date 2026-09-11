@@ -61,6 +61,18 @@ async function appendMarker(surface: import('@playwright/test').Locator, marker:
   await expect(surface).toContainText(marker)
 }
 
+async function selectEditorContents(surface: import('@playwright/test').Locator, expectedText: string) {
+  await surface.evaluate(node => {
+    ;(node as HTMLElement).focus()
+    const range = document.createRange()
+    range.selectNodeContents(node)
+    const selection = window.getSelection()
+    selection?.removeAllRanges()
+    selection?.addRange(range)
+  })
+  await expect.poll(() => surface.page().evaluate(() => window.getSelection()?.toString() || '')).toContain(expectedText)
+}
+
 test('EU-54：SunEditor 3.3.3 生产适配器保持 P1/P2 real corpus 并可继续编辑保存', async ({ page, request }, testInfo) => {
   test.skip(!REAL_CORPUS_AVAILABLE, 'P1/P2 exact corpus runs in the dedicated EU-54 repository-mounted verification path')
   const { partyHtml, teacherHtml } = readRealCorpus()
@@ -164,7 +176,7 @@ test('EU-54：普通中文编辑、中文字体、撤销重做与共享 Article/
   await root.locator('[data-command="redo"]').click()
   await expect(surface).toContainText('吉林省高校毕业生就业服务')
 
-  await surface.press('Control+A')
+  await selectEditorContents(surface, '吉林省高校毕业生就业服务')
   await root.locator('[data-command="font"]').click()
   const fontMenu = page.locator('.se-list-font-family:visible')
   await expect(fontMenu).toBeVisible()
