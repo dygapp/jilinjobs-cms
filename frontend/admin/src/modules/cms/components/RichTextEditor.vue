@@ -17,6 +17,15 @@ type LegacyImageState = {
   alignment: LegacyImageAlignment
 }
 
+type LegacyTableState = {
+  width: string
+}
+
+type LegacyTableCellState = {
+  width: string
+  height: string
+}
+
 type FigureInfo = {
   container?: Element | null
 }
@@ -79,12 +88,14 @@ const target = ref<HTMLTextAreaElement | null>(null)
 let editor: SunEditorInstance | null = null
 let applyingExternalValue = false
 let pendingLegacyImageStates: LegacyImageState[] = []
+let pendingLegacyTableStates: LegacyTableState[] = []
+let pendingLegacyTableCellStates: LegacyTableCellState[] = []
 const boundLegacyImageLoads = new WeakSet<HTMLImageElement>()
 
 onMounted(() => {
   if (!target.value) return
 
-  pendingLegacyImageStates = readLegacyImageStates(props.modelValue)
+  readLegacyPresentationStates(props.modelValue)
   const initialValue = prepareLegacyImagesForEditor(props.modelValue)
 
   editor = suneditor.create(target.value, {
@@ -145,7 +156,7 @@ onMounted(() => {
     },
   }) as unknown as SunEditorInstance
 
-  initializeLegacyImageBridge()
+  initializeLegacyPresentationBridge()
 })
 
 watch(() => props.modelValue, value => {
@@ -162,11 +173,11 @@ onBeforeUnmount(() => {
 function setEditorContents(value: string): void {
   if (!editor) return
 
-  pendingLegacyImageStates = readLegacyImageStates(value)
+  readLegacyPresentationStates(value)
   applyingExternalValue = true
   try {
     editor.$.html.set(prepareLegacyImagesForEditor(value))
-    initializeLegacyImageBridge()
+    initializeLegacyPresentationBridge()
   } finally {
     requestAnimationFrame(() => {
       applyingExternalValue = false
@@ -174,18 +185,31 @@ function setEditorContents(value: string): void {
   }
 }
 
-function initializeLegacyImageBridge(): void {
-  if (!editor || pendingLegacyImageStates.length === 0) return
+function readLegacyPresentationStates(html: string): void {
+  pendingLegacyImageStates = readLegacyImageStates(html)
+  const tableStates = readLegacyTableStates(html)
+  pendingLegacyTableStates = tableStates.tables
+  pendingLegacyTableCellStates = tableStates.cells
+}
 
-  bindLegacyImageLoads()
-  try {
-    editor.$.pluginManager?.checkFileInfo?.(true)
-  } catch (error) {
-    console.warn('[RichTextEditor] SunEditor file-manager compatibility check failed', error)
+function initializeLegacyPresentationBridge(): void {
+  if (!editor) return
+
+  if (pendingLegacyImageStates.length > 0) {
+    bindLegacyImageLoads()
+    try {
+      editor.$.pluginManager?.checkFileInfo?.(true)
+    } catch (error) {
+      console.warn('[RichTextEditor] SunEditor file-manager compatibility check failed', error)
+    }
+    applyLegacyImageStatesViaSunEditor()
   }
 
-  applyLegacyImageStatesViaSunEditor()
-  requestAnimationFrame(() => applyLegacyImageStatesViaSunEditor())
+  applyLegacyTableStates()
+  requestAnimationFrame(() => {
+    applyLegacyImageStatesViaSunEditor()
+    applyLegacyTableStates()
+  })
 }
 
 function bindLegacyImageLoads(): void {
@@ -238,6 +262,23 @@ function applyLegacyImageAlignment(image: HTMLImageElement, alignment: LegacyIma
   component.classList.add(`__se__float-${alignment}`)
 }
 
+function applyLegacyTableStates(): void {
+  const surface = editorSurface()
+  if (!surface) return
+
+  surface.querySelectorAll<HTMLTableElement>('table').forEach((table, index) => {
+    const state = pendingLegacyTableStates[index]
+    if (state?.width) table.style.width = state.width
+  })
+
+  surface.querySelectorAll<HTMLTableCellElement>('th, td').forEach((cell, index) => {
+    const state = pendingLegacyTableCellStates[index]
+    if (!state) return
+    if (state.width) cell.style.width = state.width
+    if (state.height) cell.style.height = state.height
+  })
+}
+
 function editorSurface(): HTMLElement | null {
   return editor?.$.frameContext?.get?.('wysiwyg') ?? null
 }
@@ -251,6 +292,22 @@ function readLegacyImageStates(html: string): LegacyImageState[] {
     height: legacyDimensionStyle(image.style.height) || legacyDimensionStyle(image.getAttribute('height')) || '',
     alignment: legacyImageAlignment(image.style.float || image.getAttribute('align')),
   }))
+}
+
+function readLegacyTableStates(html: string): { tables: LegacyTableState[]; cells: LegacyTableCellState[] } {
+  if (!html) return { tables: [], cells: [] }
+  const template = document.createElement('template')
+  template.innerHTML = html
+
+  const tables = Array.from(template.content.querySelectorAll<HTMLTableElement>('table'), table => ({
+    width: legacyDimensionStyle(table.style.width) || '',
+  }))
+  const cells = Array.from(template.content.querySelectorAll<HTMLTableCellElement>('th, td'), cell => ({
+    width: legacyDimensionStyle(cell.style.width) || '',
+    height: legacyDimensionStyle(cell.style.height) || '',
+  }))
+
+  return { tables, cells }
 }
 
 function prepareLegacyImagesForEditor(html: string): string {
