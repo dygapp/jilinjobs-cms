@@ -29,10 +29,18 @@ const budgetPdfNames = [
   'final-accounts-2025.pdf',
 ] as const
 
+const dispatchCardTitles = [
+  '关于停止毕业生就业报到证业务办理的通告',
+  '关于做好取消普通高等学校毕业生就业报到证有关衔接工作的通知',
+  '国务院办公厅关于进一步做好高校毕业生等青年就业创业工作的通知',
+] as const
+
 test('Main formal Pages render accepted package content on all ten stable routes', async ({ page }) => {
   for (const item of formalPages) {
     await page.goto(item.route)
-    const content = page.locator('.rich-content')
+    const content = item.route === '/page/guide/jypq'
+      ? page.locator('[data-page-renderer="JILINJOBS_GUIDE_CARDS"]')
+      : page.locator('.rich-content')
     await expect(content).toBeVisible()
     await expect(content).toContainText(item.marker)
     await expect(page.locator('.error-text')).toHaveCount(0)
@@ -41,6 +49,68 @@ test('Main formal Pages render accepted package content on all ten stable routes
     expect(html).not.toContain('migration-resource://')
     expect(html).not.toContain('zhjy.jilinjobs.cn:8080/group1/cms/')
   }
+})
+
+test('guide/jypq renders the accepted three-card Structured contract and four package images', async ({ page, request }) => {
+  await page.goto('/page/guide/jypq')
+
+  const renderer = page.locator('[data-page-renderer="JILINJOBS_GUIDE_CARDS"]')
+  await expect(renderer).toBeVisible()
+  await expect(renderer).toHaveAttribute('data-page-structured-kind', 'CARD_COLLECTION')
+  await expect(renderer).toHaveAttribute('data-page-schema-version', '1')
+
+  const cards = renderer.locator('.guide-card')
+  await expect(cards).toHaveCount(3)
+  expect(await cards.locator('.guide-card-header h2').allTextContents()).toEqual([...dispatchCardTitles])
+
+  const images = renderer.locator('img[src^="/static/pages/guide/jypq/"]')
+  await expect(images).toHaveCount(4)
+  const imageSources = await images.evaluateAll(elements => elements.map(element => element.getAttribute('src') || ''))
+  expect(new Set(imageSources).size).toBe(4)
+  for (const src of imageSources) {
+    const response = await request.get(src)
+    expect(response.ok(), `${src} must be served`).toBeTruthy()
+  }
+
+  await expect(page.locator('[data-unsupported-renderer]')).toHaveCount(0)
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', /\/page\/guide\/jypq$/)
+})
+
+test('ordinary Rich Page remains on the explicit Rich renderer', async ({ page }) => {
+  await page.goto('/page/about')
+  const content = page.locator('[data-page-renderer="RICH_TEXT"]')
+  await expect(content).toBeVisible()
+  await expect(content).toContainText('中心主要工作职责')
+  await expect(page.locator('[data-unsupported-renderer]')).toHaveCount(0)
+})
+
+test('unknown renderer identity fails closed without rendering bodyHtml', async ({ page }) => {
+  await page.route('**/api/public/pages/about', async route => {
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({
+        id: 999999,
+        alias: 'about',
+        name: 'Unsupported renderer test',
+        bodyHtml: '<p>UNSAFE_FALLBACK_MARKER</p>',
+        contentModel: 'RICH_TEXT',
+        rendererKey: 'UNSUPPORTED_EU55_TEST',
+        contentOwner: 'OPERATOR',
+        structuredContent: null,
+        renderMode: null,
+        embedUrl: null,
+        canonicalUrl: '/page/about',
+        group: null,
+        breadcrumbs: [{ title: '首页', href: '/' }, { title: 'Unsupported renderer test', href: null }],
+      }),
+    })
+  })
+
+  await page.goto('/page/about')
+  await expect(page.locator('[data-unsupported-renderer="UNSUPPORTED_EU55_TEST"]')).toBeVisible()
+  await expect(page.getByText('当前页面的内容或呈现方式暂不受支持，已停止自动降级渲染。')).toBeVisible()
+  await expect(page.getByText('UNSAFE_FALLBACK_MARKER')).toHaveCount(0)
 })
 
 test('budget Page exposes all thirteen package-owned PDFs and every target serves PDF bytes', async ({ page, request }) => {
@@ -71,7 +141,7 @@ test('image-heavy formal Pages use projected package assets that are actually re
   expect(teacherResponse.ok()).toBeTruthy()
 
   await page.goto('/page/guide/jypq')
-  const dispatchImages = page.locator('.rich-content img[src^="/static/pages/guide/jypq/"]')
+  const dispatchImages = page.locator('.guide-card-body img[src^="/static/pages/guide/jypq/"]')
   await expect(dispatchImages).toHaveCount(4)
   for (const src of await dispatchImages.evaluateAll(elements => elements.map(element => element.getAttribute('src') || ''))) {
     const response = await request.get(src)
