@@ -3,25 +3,27 @@ package com.jilinjobs.cms.common
 import com.jilinjobs.cms.column.CmsColumn
 import com.jilinjobs.cms.column.ColumnQuery
 import com.jilinjobs.cms.content.ArticleDraft
-import com.jilinjobs.cms.content.ArticleNotFoundException
 import com.jilinjobs.cms.content.ArticleRepository
 import com.jilinjobs.cms.content.ArticleService
 import com.jilinjobs.cms.content.ArticleStatus
 import com.jilinjobs.cms.content.ArticleType
 import com.jilinjobs.cms.content.CmsArticle
+import com.jilinjobs.cms.page.PageContentModel
+import com.jilinjobs.cms.page.PageContentOwner
 import com.jilinjobs.cms.page.PageGroupRecord
 import com.jilinjobs.cms.page.PageMapper
 import com.jilinjobs.cms.page.PageRecord
-import com.jilinjobs.cms.page.PageRenderMode
+import com.jilinjobs.cms.page.PageRendererKey
 import com.jilinjobs.cms.page.PageService
 import com.jilinjobs.cms.resource.ArticleResourceAssociation
 import com.jilinjobs.cms.resource.ArticleResourceLinks
 import com.jilinjobs.cms.resource.CmsResource
+import java.time.LocalDateTime
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import java.time.LocalDateTime
+import tools.jackson.databind.ObjectMapper
 
 class RichTextLegacyReadDefenseTest {
     @Test
@@ -42,7 +44,7 @@ class RichTextLegacyReadDefenseTest {
     fun `public rich text page defensively sanitizes legacy stored html without rewriting persistence`() {
         val raw = legacyHostileHtml()
         val mapper = LegacyPageMapper(raw)
-        val service = PageService(mapper)
+        val service = PageService(mapper, ObjectMapper())
 
         val public = service.getPublicStandalone("legacy")
 
@@ -128,7 +130,10 @@ private class LegacyPageMapper(rawBodyHtml: String) : PageMapper {
         alias = "legacy",
         name = "存量单页",
         bodyHtml = rawBodyHtml,
-        renderMode = PageRenderMode.RICH_TEXT.name,
+        contentModel = PageContentModel.RICH_TEXT.name,
+        rendererKey = PageRendererKey.RICH_TEXT,
+        contentOwner = PageContentOwner.OPERATOR.name,
+        structuredPayload = null,
         embedUrl = null,
         sortOrder = 0,
         enabled = true,
@@ -151,7 +156,7 @@ private class LegacyPageMapper(rawBodyHtml: String) : PageMapper {
         updateCount += 1
         error("public legacy read must not rewrite persistence")
     }
-    override fun updatePageContent(id: Long, bodyHtml: String, renderMode: String, embedUrl: String?): Int {
+    override fun updatePageContent(id: Long, bodyHtml: String, structuredPayload: String?, embedUrl: String?): Int {
         updateCount += 1
         error("public legacy read must not rewrite persistence")
     }
