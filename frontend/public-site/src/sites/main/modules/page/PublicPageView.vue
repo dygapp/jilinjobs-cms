@@ -3,6 +3,7 @@ import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { getPublicGroupedPage, getPublicPage, type PublicPage } from '../../api/pages'
 import { setPageMeta, summarizeHtml } from '../../seo'
+import PageBodyRenderer from './PageBodyRenderer.vue'
 
 const route = useRoute()
 const item = ref<PublicPage | null>(null)
@@ -10,6 +11,13 @@ const loading = ref(false)
 const error = ref('')
 
 watch(() => [route.params.group, route.params.alias], load, { immediate: true })
+
+function pageSummarySource(page:PublicPage):string{
+  if(page.contentModel==='STRUCTURED'&&page.structuredContent?.kind==='CARD_COLLECTION'){
+    return page.structuredContent.items.map(card=>`<h2>${card.title}</h2>${card.bodyHtml}`).join('')
+  }
+  return page.bodyHtml
+}
 
 async function load() {
   loading.value = true
@@ -19,7 +27,7 @@ async function load() {
     const group = typeof route.params.group === 'string' ? route.params.group : null
     const alias = String(route.params.alias || '')
     item.value = group ? await getPublicGroupedPage(group, alias) : await getPublicPage(alias)
-    setPageMeta({ title: item.value.name, description: summarizeHtml(item.value.bodyHtml, item.value.name) })
+    setPageMeta({ title: item.value.name, description: summarizeHtml(pageSummarySource(item.value), item.value.name) })
   } catch (e) {
     error.value = e instanceof Error ? e.message : '页面不可用'
   } finally {
@@ -52,11 +60,7 @@ async function load() {
             >{{ tab.name }}</router-link>
           </nav>
           <section class="group-page-content fixed-page-content">
-            <div v-if="item.renderMode === 'EMBED_PLACEHOLDER'" class="embed-placeholder">
-              <h1>{{ item.name }}</h1>
-              <p>该内容由外部平台提供，本轮保留本站页面框架与内容区域，实际嵌入将在后续集成阶段完成。</p>
-            </div>
-            <div v-else class="rich-content" v-html="item.bodyHtml" />
+            <PageBodyRenderer :page="item" grouped />
           </section>
         </template>
 
@@ -65,10 +69,7 @@ async function load() {
             <h1>{{ item.name }}</h1>
           </header>
           <div class="fixed-page-content fixed-page-body">
-            <div v-if="item.renderMode === 'EMBED_PLACEHOLDER'" class="embed-placeholder">
-              <p>该内容由外部平台提供，本轮保留本站页面框架与内容区域，实际嵌入将在后续集成阶段完成。</p>
-            </div>
-            <div v-else class="rich-content" v-html="item.bodyHtml" />
+            <PageBodyRenderer :page="item" />
           </div>
         </section>
       </template>
