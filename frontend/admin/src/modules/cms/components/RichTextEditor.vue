@@ -130,6 +130,7 @@ let applyingExternalValue = false
 let pendingLegacyImageStates: LegacyImageState[] = []
 let pendingLegacyTableStates: LegacyTableState[] = []
 let pendingLegacyTableCellStates: LegacyTableCellState[] = []
+let fontToolbarLabelObserver: MutationObserver | null = null
 const boundLegacyImageLoads = new WeakSet<HTMLImageElement>()
 
 onMounted(() => {
@@ -223,6 +224,8 @@ watch(() => props.modelValue, value => {
 })
 
 onBeforeUnmount(() => {
+  fontToolbarLabelObserver?.disconnect()
+  fontToolbarLabelObserver = null
   editor?.destroy()
   editor = null
 })
@@ -259,6 +262,22 @@ function applyEditorFontLabels(): void {
     button.title = label
     button.setAttribute('aria-label', label)
   })
+
+  const toolbarFontText = target.value
+    ?.closest('.rich-text-editor-shell')
+    ?.querySelector<HTMLElement>('.se-btn-tool-font .se-txt')
+  if (!toolbarFontText) return
+
+  const syncToolbarLabel = () => {
+    const value = toolbarFontText.textContent?.trim() || ''
+    const firstFont = value.replace(/["']/g, '').split(',')[0]?.trim() || value
+    toolbarFontText.setAttribute('data-jilinjobs-font-label', EDITOR_FONT_LABELS[firstFont] || value)
+  }
+
+  fontToolbarLabelObserver?.disconnect()
+  syncToolbarLabel()
+  fontToolbarLabelObserver = new MutationObserver(syncToolbarLabel)
+  fontToolbarLabelObserver.observe(toolbarFontText, { childList: true, characterData: true, subtree: true })
 }
 
 function readLegacyPresentationStates(html: string): void {
@@ -481,5 +500,10 @@ function isSafeUrl(value: string): boolean {
 .rich-text-editor-shell :deep(.sun-editor) { border-color: #dcdfe6; border-radius: 4px; }
 .rich-text-editor-shell :deep(.se-toolbar) { border-bottom-color: #ebeef5; background: #f8f9fb; }
 .rich-text-editor-shell :deep(.se-wrapper-wysiwyg) { line-height: 1.75; word-break: break-word; }
+.rich-text-editor-shell :deep(.se-btn-tool-font .se-txt[data-jilinjobs-font-label]) { font-size: 0; }
+.rich-text-editor-shell :deep(.se-btn-tool-font .se-txt[data-jilinjobs-font-label]::after) {
+  content: attr(data-jilinjobs-font-label);
+  font-size: 13px;
+}
 .rich-text-editor-shell.is-uploading :deep(.se-btn[data-command='image']) { opacity: 0.55; pointer-events: none; }
 </style>
