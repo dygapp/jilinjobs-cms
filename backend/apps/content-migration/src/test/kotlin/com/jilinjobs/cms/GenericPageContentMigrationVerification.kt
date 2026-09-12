@@ -179,21 +179,21 @@ private fun seedPageTargets(connection: Connection) {
         )
         statement.executeUpdate(
             """
-            INSERT INTO cms_page(group_id,alias,name,body_html,render_mode,embed_url,sort_order,enabled,preset)
-            VALUES (NULL,'about','Verification About','<p>About placeholder</p>','RICH_TEXT',NULL,0,1,1)
+            INSERT INTO cms_page(group_id,alias,name,body_html,content_model,renderer_key,content_owner,structured_payload,embed_url,sort_order,enabled,preset)
+            VALUES (NULL,'about','Verification About','<p>About placeholder</p>','RICH_TEXT','RICH_TEXT','OPERATOR',NULL,NULL,0,1,1)
             """.trimIndent(),
         )
         statement.executeUpdate(
             """
-            INSERT INTO cms_page(group_id,alias,name,body_html,render_mode,embed_url,sort_order,enabled,preset)
-            SELECT id,'guide','Verification Guide','<p>Guide placeholder</p>','RICH_TEXT',NULL,0,1,1
+            INSERT INTO cms_page(group_id,alias,name,body_html,content_model,renderer_key,content_owner,structured_payload,embed_url,sort_order,enabled,preset)
+            SELECT id,'guide','Verification Guide','<p>Guide placeholder</p>','RICH_TEXT','RICH_TEXT','OPERATOR',NULL,NULL,0,1,1
             FROM cms_page_group WHERE alias='docs'
             """.trimIndent(),
         )
         statement.executeUpdate(
             """
-            INSERT INTO cms_page(group_id,alias,name,body_html,render_mode,embed_url,sort_order,enabled,preset)
-            VALUES (NULL,'guard','Verification Guard','<p>Guard placeholder</p>','RICH_TEXT',NULL,0,1,1)
+            INSERT INTO cms_page(group_id,alias,name,body_html,content_model,renderer_key,content_owner,structured_payload,embed_url,sort_order,enabled,preset)
+            VALUES (NULL,'guard','Verification Guard','<p>Guard placeholder</p>','RICH_TEXT','RICH_TEXT','OPERATOR',NULL,NULL,0,1,1)
             """.trimIndent(),
         )
     }
