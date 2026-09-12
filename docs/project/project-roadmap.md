@@ -1,6 +1,8 @@
 # 项目演进路线与当前状态
 
-本文是 `jilinjobs-cms` Consumer Repository 的 Project Roadmap。它只维护当前演进状态、长期边界与下一 Gate；详细 Execution Unit、Verification 与阶段追溯由 Current Work artifact、`docs/work/archive/**`、GitHub Issue / PR / Actions Current Evidence 承载。
+本文是 `jilinjobs-cms` Consumer Repository 的 Project Roadmap。它只维护 **durable milestones、长期边界与 Planning directions**；不缓存 `Current Ready Execution Unit`、Readiness `PENDING/PASS`、exact implementation Head 或最近 Actions 等高频 Execute Gate。Current Execution Lifecycle 统一从 `docs/work/current/README.md` 恢复，其 Entry / Exit / fail-closed 契约见 `docs/work/README.md`；GitHub PR / Branch / Actions 继续承担各自原生瞬时事实与 Current Evidence。
+
+详细 Execution Unit、Verification 与阶段追溯由 Current / archived Work artifact、GitHub Issue / PR / Actions Current Evidence 承载。本 Roadmap 中的已完成结果属于 durable milestone / traceability，不因为出现 EU 编号、历史 baseline 或 PASS 记录就重新授予 Execute Authority。
 
 ## 方法基线
 
@@ -10,11 +12,11 @@ Validation Baseline: master@d9fad0da83dbdb61cac5eb9778b0258c6861eef1
 Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be6b8535b3690daf3533ee22a46
 ```
 
-普通开发优先读取 Consumer-local `AGENTS.md`、`README.md`、`docs/README.md`、`docs/project/development-method.md`、本 Roadmap 与当前 Requirement / Specification / Technical Plan。Planning / Requirement Candidate 在 `slice-work` 前不具有 Execution Unit 身份；只有 `slice-work` 形成 Candidate Execution Unit 且 `readiness-check` PASS 后才允许进入 Execute。Roadmap 顺序、Issue 编号、EU 名称或模型评审结果都不能替代 Readiness。
+普通开发优先读取 Consumer-local `AGENTS.md`、`README.md`、`docs/README.md`、`docs/work/current/README.md`、`docs/project/development-method.md`、本 Roadmap 与当前 Requirement / Specification / Technical Plan。Planning / Requirement Candidate 在 `slice-work` 前不具有 Execution Unit 身份；只有 `slice-work` 形成 Candidate Execution Unit 且 `readiness-check` PASS 后才允许进入 Execute。Roadmap 顺序、Issue 编号、EU 名称或模型评审结果都不能替代 Readiness。
 
 ## 总体路线
 
-| 路线 | 状态 | 当前结果 / Gate |
+| 路线 | 状态 | Durable result / Planning boundary |
 |---|---|---|
 | Consumer Bootstrap ～ EU-36 | 已完成 | 通用 CMS、Admin/Public frontend、Party 正式页面与 historical migration、Rich Text、Public source isolation 已建立 |
 | EU-37～EU-42 Site Package Boundary | 已完成 | stable structure、Navigation identity、Runtime composition、one-time bootstrap、Generic Schema separation、stable assets 已闭环 |
@@ -23,15 +25,14 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | Issue #60 / E2 Main Single-page Formal Content foundation | **COMPLETED** | EU-49 已关闭 Page operational-content ownership gap，并建立 site-neutral Generic Page canonical migration foundation |
 | Issue #60 / E3 / EU-50 Main Source Discovery & Accepted Snapshot Promotion | **COMPLETED** | accepted current Article subset 已 repository-owned promotion 并集成；Execute Authority terminated |
 | Issue #60 / E3 / EU-51 Main Canonical Import, Runtime Reconciliation & Human Review | **COMPLETED** | 3078 accepted Articles 已完成 Fresh Runtime import / reconciliation / idempotency、Public/Admin/Integrated Browser 与 bounded Human Review；Execute Authority terminated |
-| EU-52 Main Page Formal Content Package Adoption | **COMPLETED** | 10 formal Pages + Page-owned assets + guarded Existing-Site adoption 已通过 PR #125、bounded Human Review 与 Post-Integration verification；Execute Authority terminated |
-| EU-53 Main ListItem Bootstrap Completion | **COMPLETED** | Main `HOME_CAROUSEL=1` 与 96 条已审核 SITE_LINKS 已通过现有一次性 bootstrap SQL 固化；PR #130 与 Post-Integration verification PASS；Execute Authority terminated |
-| Deferred problem Article review | deferred | 230 篇 problem Article 与 6 篇 source-defect Article 保持独立 evidence / client-review backlog，不阻断当前路线 |
+| EU-52 Main Page Formal Content Package Adoption | **COMPLETED** | 10 formal Pages + Page-owned assets + guarded Existing-Site adoption 已完成并通过 Post-Integration closure；Execute Authority terminated |
+| EU-53 Main ListItem Bootstrap Completion | **COMPLETED** | Main `HOME_CAROUSEL=1` 与 96 条已审核 SITE_LINKS 已通过现有一次性 bootstrap SQL 固化并完成 Post-Integration closure；Execute Authority terminated |
+| EU-54 Rich Text V2 Mature Editor Adoption | **COMPLETED** | Article `INTERNAL` / Page `RICH_TEXT` 已采用 `suneditor@3.3.3` thin adapter；P1/P2 compatibility、HTML safety、Review Environment、bounded Windows + WPS Human Review 与 Post-Integration closure 已完成；Execute Authority terminated |
+| Deferred problem Article review | deferred | 230 篇 problem Article 与 6 篇 source-defect Article 保持独立 evidence / client-review backlog，不阻断其他路线 |
 | Repository Split Readiness Assessment | deferred | 四层 boundary 已闭环，但 Assessment 仍独立后置 |
-| Issues #57 / #59 / #60 其他候选 | 规划层保留 | C1/C2、Browser Compatibility、Public Rendering Architecture 等保持独立 |
+| Issues #57 / #59 / #60 / #137 其他候选 | 规划层保留 | Public Rendering、Browser Compatibility、Loading / Mobile Review、Page Content Architecture 等保持独立 Planning / Review 边界 |
 
-Current Ready Execution Unit：**NONE**。
-
-EU-53 已完成 Main ListItem bootstrap data implementation、exact-head verification、Integration 与 Post-Integration closure，并终止 Execute Authority。下一 Gate 恢复为新的 Fresh Context Planning/Readiness decision；不得从 EU-53 自动进入后续候选。
+本表只声明 durable milestone / Planning boundary。**当前是否存在 Ready / active Execution Unit 不在本表判断**；Fresh Context 必须读取 `docs/work/current/README.md` 并协调当前 Open execution PR / branch 与必要 Readiness / Integration Current Evidence。
 
 ## 当前已接受长期边界
 
@@ -71,7 +72,8 @@ sites/jilinjobs/
 - Legacy Source只允许出现在显式 Collect / Discovery 边界；promoted canonical verification与Runtime import必须可离线执行；
 - Main current accepted Article subset 已 repository-owned 固化到 `data-migrations/main/v1/**`；EU-51 已证明该 subset 可通过现有 Generic capability 在 Fresh Runtime 确定性导入和幂等重放；deferred/problem Article evidence 与 current import input继续分离；
 - Main Page current product delivery不使用 Historical Migration fallback；Generic Page migration capability继续作为通用能力与兼容性事实存在；
-- Main ListItem current product delivery使用 Site Package bootstrap SQL，不作为 Main Historical Article Migration 输入；Party ListItem migration保持既有 Party Authority。
+- Main ListItem current product delivery使用 Site Package bootstrap SQL，不作为 Main Historical Article Migration 输入；Party ListItem migration保持既有 Party Authority；
+- Main historical migration execution保持 **FROZEN / explicit reactivation only**；Party migration 不在冻结范围内。
 
 ### 4. Replaceable Public Renderer
 
@@ -80,25 +82,19 @@ sites/jilinjobs/
 - Renderer 不成为 Site Definition、Canonical Migration、Flyway 或 CMS Domain Authority；
 - Main / Party canonical URL、产品 identity 与 accepted behavior 在后续内容建设中保持。
 
-## Issue #60 — Main Site Remaining Product Content
+## Issue #60 — Main Site Remaining Product Content durable trace
 
-Initial E1～E3 planning baseline：`main@f42bacf4ab7719e3291288c77f0685b428b86141`。
+以下 baseline / result 只承担已完成工作的 durable traceability，不是 Current Execute Gate：
 
-E3 Planning/Readiness baseline：`main@e6fe7674398ad8c29fa7ff1d62eb500754a66cc8`。
-
-EU-50 integrated accepted snapshot baseline：`main@05dfa604ccde45c8409cf6a456e4f201534dc602`。
-
-EU-51 downstream Readiness baseline：`main@fd192460cb481645c1f1af435cbe5451145797d9`。
-
-EU-51 Execute baseline：`main@04090a3cc8dd9c85112488f036c4bc1a67003594`。
-
-EU-51 implementation integrated main：`main@fad4bfc17b762ec9612cf1e44a1c0af67e74a307`。
-
-EU-52 Planning/Readiness baseline：`main@25e452ee3ce66c2d7da1000ad55e9570d732528a`。
-
-EU-53 Planning/Readiness integrated main：`main@26a772928278754f478b38742423fc7b71b1f439`。
-
-EU-53 implementation integrated main：`main@b1130b110bccdb1565c340a6cce62504ec06a87a`。
+- Initial E1～E3 planning baseline：`main@f42bacf4ab7719e3291288c77f0685b428b86141`；
+- E3 Planning/Readiness baseline：`main@e6fe7674398ad8c29fa7ff1d62eb500754a66cc8`；
+- EU-50 integrated accepted snapshot baseline：`main@05dfa604ccde45c8409cf6a456e4f201534dc602`；
+- EU-51 downstream Readiness baseline：`main@fd192460cb481645c1f1af435cbe5451145797d9`；
+- EU-51 Execute baseline：`main@04090a3cc8dd9c85112488f036c4bc1a67003594`；
+- EU-51 implementation integrated main：`main@fad4bfc17b762ec9612cf1e44a1c0af67e74a307`；
+- EU-52 Planning/Readiness baseline：`main@25e452ee3ce66c2d7da1000ad55e9570d732528a`；
+- EU-53 Planning/Readiness integrated main：`main@26a772928278754f478b38742423fc7b71b1f439`；
+- EU-53 implementation integrated main：`main@b1130b110bccdb1565c340a6cce62504ec06a87a`。
 
 ### E1 — Main External-link Ownership & Behavior Boundary
 
@@ -119,9 +115,7 @@ Current accepted contract：
 - EU-52 Completed Work Evidence：`docs/work/archive/eu52-main-page-formal-content-package-adoption.md`
 - EU-49 completed Work Evidence：`docs/work/archive/eu49-page-content-migration-foundation.md`
 
-EU-49 已完成 Page operational-content ownership、Generic Page canonical migration foundation 与 append-only V3 mapping。Implementation integrated main：`18da735c654c1a5d1310fe6db7e8e98f6f7b0026`；Authority closure integrated main：`e6fe7674398ad8c29fa7ff1d62eb500754a66cc8`。EU-49 Execute Authority 已终止。
-
-EU-50 source handoff 与 Issue #77 Human Authority随后解决了 Main Page 当前产品交付所需的 source/resource 事实。新的 current Authority据此把 Main Page正式内容归入 JilinJobs Site Package，并通过 `slice-work → readiness-check` 形成 **EU-52 — Main Page Formal Content Package Adoption**。EU-52 随后已完成 implementation、verification、bounded Human Review、integration 与 Post-Integration closure，Execute Authority 已终止；其 accepted scope 仅覆盖 10 个 accepted RICH_TEXT Page、stable Page assets 与受保护的一次性 package adoption。
+EU-49 已完成 Page operational-content ownership、Generic Page canonical migration foundation 与 append-only V3 mapping。EU-50 source handoff 与 Issue #77 Human Authority随后解决了 Main Page 当前产品交付所需的 source/resource 事实；EU-52 随后完成 accepted Main Page formal content 的 Site Package delivery boundary。各 completed Unit 的实现 / 验证细节由 archived Work Evidence 与 GitHub traceability 承载，不在本 Roadmap 作为 Current Gate 重复维护。
 
 ### E3 — Main Historical Content Collection & Canonical Migration
 
@@ -131,74 +125,20 @@ Current Authority：
 - `docs/specifications/main-historical-content-migration.md`
 - `docs/technical/main-historical-content-migration.md`
 
-#### EU-50 — Main Source Discovery & Accepted Snapshot Promotion — COMPLETED
+EU-50 / EU-51 已完成 accepted Main Article snapshot promotion、Fresh Runtime import / reconciliation / idempotency、Public/Admin/Integrated Browser 与 bounded Human Review；completed Work Evidence 分别位于：
 
-Completed Work Evidence：`docs/work/archive/eu50-main-source-discovery-promotion.md`。
+- `docs/work/archive/eu50-main-source-discovery-promotion.md`
+- `docs/work/archive/eu51-main-canonical-import-runtime-review.md`
 
-Accepted integrated result：
-
-- PR #117 squash merged to `main@05dfa604ccde45c8409cf6a456e4f201534dc602`；
-- 3314 Article candidates闭合为 `3078 current import eligible + 6 source defect excluded + 230 deferred problem`；
-- current accepted subset：3078 Articles = 1577 INTERNAL + 1501 EXTERNAL_LINK；
-- current accepted resources：2603 files / 450,273,166 bytes；
-- dataset digest：`sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`；
-- canonical root：`data-migrations/main/v1/**`；
-- Page/List source findings preserved as Site Package handoff；
-- 6 source-defect Articles 与 230 deferred problem Articles均不进入 current canonical/import input；
-- Execute Authority：**TERMINATED**。
-
-#### EU-51 — Main Canonical Import, Runtime Reconciliation & Human Review — COMPLETED
-
-Completed Work Evidence：`docs/work/archive/eu51-main-canonical-import-runtime-review.md`。
-
-Execution / integration result：
-
-- Readiness baseline：`main@fd192460cb481645c1f1af435cbe5451145797d9`；
-- Execute baseline：`main@04090a3cc8dd9c85112488f036c4bc1a67003594`；
-- final PR #122 Head：`5adae340edcf605e36779c831fb512c31342eec8`；
-- squash integrated main：`fad4bfc17b762ec9612cf1e44a1c0af67e74a307`；
-- Fresh Runtime first import：3078 CREATED，0 conflict / invalid；
-- second identical import：3078 SKIPPED，0 CREATED / conflict / invalid；
-- stable mappings、ten target Columns、1577 INTERNAL + 1501 EXTERNAL_LINK 与全部 2603 resources / 450,273,166 bytes完成确定性 reconciliation；
-- no Page/List migration mapping产生；
-- exact-head EU-51 Runtime #8、Browser #4、Canonical #264、EU-30 #214、CI #957、Standard Review #840均 **PASS**；
-- bounded Human Review：**PASS**；
-- Post-Integration CI #958 / run `34417382337`：**PASS**，包含 Backend / Admin / Public / Integrated Browser；
-- no Generic migration implementation or canonical bytes were changed；
-- Execute Authority：**TERMINATED**。
+Accepted durable facts：3314 Article candidates闭合为 `3078 current import eligible + 6 source defect excluded + 230 deferred problem`；3078 accepted Articles = 1577 INTERNAL + 1501 EXTERNAL_LINK；accepted resources = 2603 files / 450,273,166 bytes；canonical root = `data-migrations/main/v1/**`。6 source-defect 与 230 deferred problem 不进入 current canonical/import input。
 
 ### EU-52 — Main Page Formal Content Package Adoption — COMPLETED
 
-EU-52 completed the Page-only Site Package delivery boundary:
-
-- final implementation Head：`ff4acdc08e9b902d6aa273ff33fae33fb5bfc520`；
-- PR #125 squash integrated main：`ccbd9fd8c6048f5b4a96d965b8578f7b7a1d2838`；
-- 10 accepted Main formal Pages are package create-time defaults；
-- 156 new Page-owned assets were integrated, total Site Package assets = 187；
-- `budget` 13 PDFs are package-owned under `/static/pages/budget/**`；
-- Existing Site guarded adoption only occurs on exact declared prior-package content fingerprint；operator-diverged content is preserved/reported；adoption is idempotent and later operator edits remain protected；
-- exact-head automated gates and bounded Human Review PASS；the `guide/faq` heading hierarchy finding was corrected within the same Unit and reverified；
-- Post-Integration CI #973 / run `34442174532` plus Site Package #104 / Backend Boundary #41 / Generic #64 / Party #19 all PASS；
-- no Main Page Historical Migration mapping/input or Generic Flyway/schema change was introduced；
-- Execute Authority：**TERMINATED**；Completed Work Evidence：`docs/work/archive/eu52-main-page-formal-content-package-adoption.md`。
+EU-52 completed the Page-only Site Package delivery boundary：10 accepted Main formal Pages作为 package create-time defaults，accepted Page-owned assets进入 Site Package；Existing Site adoption受 exact prior-package baseline保护，operator divergence保留并报告；Execute Authority已终止。Completed Work Evidence：`docs/work/archive/eu52-main-page-formal-content-package-adoption.md`。
 
 ### EU-53 — Main ListItem Bootstrap Completion — COMPLETED
 
-EU-53 completed the remaining Main ListItem initialization gap using the existing Site Package one-time bootstrap mechanism.
-
-Accepted result：
-
-- Main `HOME_CAROUSEL = 1`；
-- `SITE_RELATED = 5`；
-- `SITE_REGIONAL_GRADUATES = 31`；
-- `SITE_JILIN_UNIVERSITIES = 60`；
-- final bootstrap digest：`sha256:45e8ea98ecf82c06e14617874f0b2fb58a4ddc681d84042cd5731afff6c6c15e`；
-- Party ListItems / `PARTY_CAROUSEL` remain under Party migration/current Party Authority and are not inserted by Main bootstrap；
-- no Generic schema, Flyway, stable ListItem identity or runtime reconcile extension was introduced；
-- final PR #130 Head `10449bedf4df38aa2daec99b80d0a9637df2f8db`；CI #987、Site Package #109、Backend Boundary #42、EU-51 Runtime #22、Imported Browser #18均 PASS；
-- squash integrated main：`b1130b110bccdb1565c340a6cce62504ec06a87a`；
-- Post-Integration CI #988、Site Package #110、Backend Boundary #43均 PASS；
-- Execute Authority：**TERMINATED**；Completed Work Evidence：`docs/work/archive/eu53-main-listitem-bootstrap-completion.md`。
+EU-53 completed the remaining Main ListItem initialization gap using the existing Site Package one-time bootstrap mechanism：Main `HOME_CAROUSEL = 1`、`SITE_RELATED = 5`、`SITE_REGIONAL_GRADUATES = 31`、`SITE_JILIN_UNIVERSITIES = 60`；Party ListItems / `PARTY_CAROUSEL`保持在 Party migration/current Party Authority；不引入 Generic schema、Flyway、stable ListItem identity或runtime reconcile扩展。Execute Authority已终止。Completed Work Evidence：`docs/work/archive/eu53-main-listitem-bootstrap-completion.md`。
 
 ### Deferred Article / client-confirmation backlog
 
@@ -207,24 +147,23 @@ Accepted result：
 - 二者均不属于已完成 EU-51 import input，也不属于 EU-52 / EU-53；
 - 后续只能通过新的显式 Planning / Review Authority处理，不得静默修复、猜测、删除或自动导入。
 
-## 当前 Next Gate
+## Current Execution locator 与 Planning directions
 
-**新的 Fresh Context Planning/Readiness decision**。
+本 Roadmap **不拥有 Current Execute Gate**。Fresh Context 必须读取 `docs/work/current/README.md`，并协调当前任务相关的 Open execution PR / branch 与必要 Readiness / Integration Current Evidence。若 locator、active artifact 或 GitHub Current Evidence缺失、冲突或歧义，按 `docs/work/README.md` fail closed；不得从本 Roadmap 的候选顺序、历史 EU 编号或 completed milestone推导 Execute Authority。
 
-Current Ready Execution Unit = **NONE**。EU-53 已完成并终止 Execute Authority。230 deferred problem Articles、6 source-defect Articles、慧就业 iframe 及其他 Issue #57/#59/#60 candidates 均保持独立；必须重新按当前 Repository Authority 选择真实 Planning Candidate，不得从编号或历史顺序自动进入 Execute。
+长期开放方向包括：
 
-## 其他开放方向
-
-- Issue #77：继续作为 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层长期 Architecture Authority；
+- Issue #77：Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层长期 Architecture Authority；
 - Issue #57：Public Rendering Architecture future discussion；
 - Issue #59：Browser Compatibility & Runtime Guard 后置候选；
 - Issue #60 C1：Loading / Skeleton Experience Planning Candidate；
 - Issue #60 C2：Mobile Layout Human Review Candidate；
+- Issue #137：Page Content Architecture & Special Page Rendering planning capture；
 - Deferred Article / source-defect review：独立 later-review / customer-confirmation candidate；
 - Hui Employment iframe：独立 Main integration candidate，需从 current Requirement / Specification Authority 重新恢复并完成 Planning / Readiness；
 - Repository Split Readiness Assessment：deferred / independent。
 
-上述候选均不从任何已完成 Unit或 EU-53 Readiness继承 Execute Authority。
+上述候选均不从任何已完成 Unit继承 Execute Authority，也不会仅因列在 Roadmap 中而自动成为下一 Ready Execution Unit。
 
 ## 历史收敛追溯
 
@@ -236,5 +175,6 @@ Current Ready Execution Unit = **NONE**。EU-53 已完成并终止 Execute Autho
 - E3 Runtime import / reconciliation / Human Review：EU-51 archive record；
 - Main Page Site Package delivery：EU-52 completed Work Evidence；
 - Main ListItem Site Package bootstrap：EU-53 completed Work Evidence；
+- Rich Text V2 mature editor adoption：`docs/work/archive/eu54-rich-text-v2-mature-editor-adoption.md`；
 - Party canonical migration：对应 `data-migrations/party/**`、PR / Actions / Issue Current Evidence；
 - 详细 historical implementation / verification 不在本 Roadmap 重复维护。
