@@ -71,5 +71,6 @@ function toggleCard(index: number) {
 .guide-card-title{min-width:0}
 .guide-card-indicator{flex:0 0 auto;font-size:22px;line-height:1;font-weight:400}
 .guide-card-body{padding:20px}
+.guide-card-body :deep(img){display:block;max-width:100%;height:auto;margin-left:auto;margin-right:auto}
 .unsupported-page-content{padding:24px;border:1px solid #d9d9d9;background:#fafafa;color:#555}
 </style>
