@@ -14,9 +14,9 @@
 - Planning baseline: `main@881893f9523effaabb82e0a0dacfcd38fe0c44fe`
 - Specification: **READY / HUMAN REVIEW ACCEPTED**
 - Representative-sample validation: **SUFFICIENT FOR TECHNICAL PLANNING**
-- Technical Planning: **NEXT NATURAL STAGE / NOT STARTED**
-- Candidate Execution Unit: **NONE**
-- Readiness: **NOT APPLICABLE / NOT STARTED**
+- Technical Planning: **READY — `docs/technical/page-content-architecture.md`**
+- Candidate Execution Unit: **NONE at Technical Plan creation**
+- Readiness: **NOT STARTED**
 - Execute Authority: **NONE**
 
 ## 1. Model
@@ -204,9 +204,7 @@ Current canonical public routes 保持：
 
 ## 7. Admin / API / persistence implications
 
-Structured Page 会真实影响 Generic CMS domain / API / Admin authoring / persistence，具体实现尚未冻结。
-
-Technical Planning 必须比较至少：
+Structured Page 会真实影响 Generic CMS domain / API / Admin authoring / persistence。Specification 要求 Technical Planning 至少比较：
 
 - structured content 是否作为 Page 新的 site-neutral payload/JSON contract，或拆成独立 site-neutral section/item entities；
 - renderer identity 与 content model / ownership 的最小持久化表达；
@@ -215,13 +213,13 @@ Technical Planning 必须比较至少：
 - Flyway append-only schema evolution 与 existing data compatibility；
 - Site Package create/adoption 如何声明 Structured target，并保留 operator-divergence guard。
 
-上述是 Technical Planning 的比较问题，不代表本 Specification 已决定任何 DB schema、字段、API payload 或 Vue component 结构。
+这些问题现已由 `docs/technical/page-content-architecture.md` 作为 HOW Authority 收敛：选择 Page-owned versioned Structured payload，保持 Content Model / Renderer Identity / Content Ownership 独立持久语义，采用 append-only Flyway、显式 renderer registry、model-specific Admin authoring 与 exact-prior-baseline adoption。具体 HOW 不在本 Specification 重复维护。
 
-在这些问题完成 Technical Planning 前，不得执行 `slice-work` 形成 implementation EU。
+Technical Plan ready 后才允许根据当前 `main` 与 Current Evidence 执行 `slice-work`；Specification 本身不创建 Candidate/Ready Unit。
 
 ## 8. Verification contract for the first implementation candidate
 
-后续 Technical Planning 如果保持 `guide/jypq` Structured target，进入 readiness 前至少应定义并证明：
+Technical Planning 保持 `guide/jypq` Structured target；进入 readiness 前至少应定义并证明：
 
 - Generic Rich Page regression：`about` 等 ordinary Page 仍走现有 rich renderer；
 - Structured renderer dispatch 明确且 unknown identity fail closed；
@@ -234,18 +232,16 @@ Technical Planning 必须比较至少：
 
 具体 card visual acceptance 需要在 Technical Planning / Human Review 中用 current product evidence 冻结；如果未来要声明某种 interaction requirement，也必须先取得具体 source / product evidence。本 Specification 不凭空发明像素值、动画或交互行为。
 
-## 9. Explicit non-decisions
+## 9. Specification-level non-decisions
 
-本 Specification 尚未决定：
+本 Specification 继续不负责维护 Technical HOW。当前已由 Technical Plan 选择的 DB/payload/renderer/Admin/adoption 设计以 `docs/technical/page-content-architecture.md` 为准；本 Specification 仍不授权：
 
-- 具体 DB schema；
-- 字段是否叫 `contentType` / `rendererKey` / `ownership`；
-- structured payload 是否 JSON 或 normalized entities；
-- renderer registry 的具体 TypeScript API；
-- Admin structured editor 组件实现；
 - FAQ 迁移时机；
 - Hui Employment integration；
-- 新 EU 编号、slice 数量或 Execute timing。
+- Engineering Page implementation sample；
+- 通用 Page Builder / arbitrary block framework；
+- 新 EU 编号、slice 数量或 Execute timing；
+- Main historical migration reactivation。
 
 ## 10. Human Review conclusion and current gate
 
@@ -256,15 +252,15 @@ Human Review 对 Requirement / Specification 的产品与架构方向结论为 *
 - `guide/jypq` 的 Structured target 有足够 evidence 进入 Technical Planning，同时保留严格 Stage Return；
 - renderer identity / unknown fail-closed / Replaceable Public Renderer boundary 明确；
 - EU-49 / EU-52 ownership 与 adoption protection 未被绕过；
-- DB/schema/API/Admin/Vue/EU 数量与 execution timing 均未提前冻结。
+- DB/schema/API/Admin/Vue/EU 数量与 execution timing 没有由 Specification 提前冻结。
 
-因此本 Specification 当前自然责任可以进入 **Technical Planning**，但 Technical Planning 仍是 Planning lifecycle 的下一阶段，不是 Execution Unit：
+Technical Planning 已在 `docs/technical/page-content-architecture.md` 收敛为 **READY**；截至该 Technical Plan 创建时：
 
-- Technical Planning：**NOT STARTED**；
-- `slice-work`：**NOT AUTHORIZED / NOT STARTED**；
+- Stage Return：**NOT TRIGGERED**；
+- `slice-work`：**NOT YET EXECUTED**；
 - Candidate / Ready Execution Unit：**NONE**；
 - `docs/work/current/README.md`：继续保持 `NONE`；
 - Readiness：**NOT STARTED**；
 - Execute Authority：**NONE**。
 
-本 Specification 的 Human Review 接受或 PR integration 都不得被解释为自动授予 successor Execute Authority。
+后续只有在 Technical Plan 集成并重新协调当前 `main` / Open PR / Current Evidence 后，才可以按 Consumer Method 执行 `slice-work` 与 readiness；本 Specification 的 Human Review 接受、Technical Plan ready 或 PR integration 都不得被解释为自动授予 successor Execute Authority。
