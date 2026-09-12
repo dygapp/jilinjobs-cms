@@ -72,4 +72,45 @@ class RichTextHtmlPolicyTest {
         assertTrue(sanitized.contains("href=\"https://example.com/info\""))
         assertTrue(sanitized.contains("src=\"/api/admin/resources/12/content\""))
     }
+
+    @Test
+    fun `preserves P1 party star dimensions`() {
+        val sanitized = RichTextHtmlPolicy.sanitize(
+            """
+            <p><span style="font-size:18px"><strong><img alt="" height="15" src="/static/migrated/party/star.png" width="15">主题教育</strong></span></p>
+            <p><strong><img alt="" height="16" src="/static/migrated/party/star.png" width="16">继续学习</strong></p>
+            """.trimIndent(),
+        )
+
+        assertTrue(sanitized.contains("height=\"15\""))
+        assertTrue(sanitized.contains("width=\"15\""))
+        assertTrue(sanitized.contains("height=\"16\""))
+        assertTrue(sanitized.contains("width=\"16\""))
+        assertTrue(sanitized.contains("<strong>"))
+    }
+
+    @Test
+    fun `preserves P2 teacher library table cell and image presentation`() {
+        val sanitized = RichTextHtmlPolicy.sanitize(
+            """
+            <table align="center" cellpadding="1" cellspacing="1" style="width:1170px">
+              <tbody><tr>
+                <td style="height:325px; width:200px"><p><img alt="" height="266" src="/static/pages/teacher-library/person.jpg" style="float:left" width="200"></p></td>
+                <td style="width:360px"><p><span style="font-size:26px">方占仁</span></p></td>
+              </tr></tbody>
+            </table>
+            """.trimIndent(),
+        )
+
+        assertTrue(sanitized.contains("align=\"center\""))
+        assertTrue(sanitized.contains("cellpadding=\"1\""))
+        assertTrue(sanitized.contains("cellspacing=\"1\""))
+        assertTrue(sanitized.contains("width:1170px"))
+        assertTrue(sanitized.contains("height:325px"))
+        assertTrue(sanitized.contains("width:200px"))
+        assertTrue(sanitized.contains("height=\"266\""))
+        assertTrue(sanitized.contains("width=\"200\""))
+        assertTrue(sanitized.contains("float:left"))
+        assertTrue(sanitized.contains("方占仁"))
+    }
 }

@@ -1,0 +1,107 @@
+name: EU-54 Rich Text V2 Verification
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'frontend/admin/**'
+      - 'backend/modules/cms-core/src/main/kotlin/com/jilinjobs/cms/common/RichTextHtmlPolicy.kt'
+      - 'backend/apps/cms-server/src/test/kotlin/com/jilinjobs/cms/common/RichTextHtmlPolicyTest.kt'
+      - '.github/workflows/eu54-rich-text-v2-verification.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  exact-corpus:
+    name: P1 P2 resource production round-trip
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_ROOT_HOST: "%"
+          MYSQL_DATABASE: jilinjobs_cms
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=12
+    steps:
+      - name: Checkout exact PR head
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Record exact-head evidence
+        run: |
+          actual="$(git rev-parse HEAD)"
+          expected="${{ github.event.pull_request.head.sha }}"
+          echo "EU54_EXACT_HEAD=$actual"
+          test "$actual" = "$expected"
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: '9.6.1'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Build backend and Admin
+        run: |
+          (cd backend && gradle clean test bootJar --no-daemon) & backend_pid=$!
+          (cd frontend/admin && npm install --no-audit --no-fund && npm run build) & admin_pid=$!
+          wait "$backend_pid"
+          wait "$admin_pid"
+      - name: Start production backend and Admin runtime
+        env:
+          DB_URL: jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          DB_USERNAME: root
+          DB_PASSWORD: root
+          CMS_SITE_PACKAGE_ROOT: ${{ github.workspace }}/sites/jilinjobs
+          CMS_SITE_PACKAGE_BOOTSTRAP_ON_START: 'true'
+          CMS_STATIC_ROOT: ${{ github.workspace }}/runtime-static
+          CMS_STORAGE_ROOT: ${{ github.workspace }}/runtime-uploads
+        run: |
+          mkdir -p runtime-static runtime-uploads
+          java -jar backend/build/libs/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar > eu54-backend.log 2>&1 &
+          echo $! > eu54-backend.pid
+          for i in $(seq 1 60); do
+            if curl --fail --silent http://127.0.0.1:8080/api/admin/columns > /dev/null; then break; fi
+            if [ "$i" -eq 60 ]; then cat eu54-backend.log; exit 1; fi
+            sleep 2
+          done
+          (cd frontend/admin && npm run dev -- --host 127.0.0.1 --port 5173 > ../../eu54-admin.log 2>&1 & echo $! > ../../eu54-admin.pid)
+          for i in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:5173/admin/ | grep -qi '<html'; then exit 0; fi
+            sleep 1
+          done
+          cat eu54-admin.log
+          exit 1
+      - name: Run exact canonical corpus and managed resource through production Admin adapter
+        run: |
+          docker run --rm --init --ipc=host --network host \
+            -e CI=true \
+            -e CI_EXTERNAL_WEB_SERVER=true \
+            -e EU54_REPO_ROOT=/repo \
+            -v "$GITHUB_WORKSPACE:/repo" \
+            -w /repo/frontend/admin \
+            mcr.microsoft.com/playwright:v1.61.0-noble \
+            bash -lc 'npm install --no-audit --no-fund && npx playwright test tests/e2e/rich-text-authoring.spec.ts tests/e2e/rich-text-managed-image.spec.ts'
+      - name: Upload focused evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: eu54-rich-text-v2-evidence
+          path: |
+            frontend/admin/playwright-report
+            frontend/admin/test-results
+            eu54-backend.log
+            eu54-admin.log
+          if-no-files-found: warn
+          retention-days: 5

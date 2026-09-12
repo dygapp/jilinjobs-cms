@@ -1,16 +1,117 @@
 <script setup lang="ts">
-import { onBeforeUnmount, ref, watch } from 'vue'
-import Image from '@tiptap/extension-image'
-import { TableKit } from '@tiptap/extension-table'
-import TextAlign from '@tiptap/extension-text-align'
-import { TextStyleKit } from '@tiptap/extension-text-style'
-import StarterKit from '@tiptap/starter-kit'
-import { EditorContent, useEditor } from '@tiptap/vue-3'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import suneditor, { plugins } from 'suneditor'
+import zhCn from 'suneditor/langs/zh_cn'
+import 'suneditor/css/editor'
 
 interface UploadedImage {
   src: string
   alt?: string
 }
+
+type LegacyImageAlignment = 'none' | 'left' | 'center' | 'right'
+
+type LegacyImageState = {
+  width: string
+  height: string
+  alignment: LegacyImageAlignment
+}
+
+type LegacyTableState = {
+  width: string
+}
+
+type LegacyTableCellState = {
+  width: string
+  height: string
+}
+
+type FigureInfo = {
+  container?: Element | null
+}
+
+type SunEditorManagedImageInfo = {
+  url: string
+  files: { name: string; size: number }
+  element?: HTMLImageElement | null
+  anchor?: Node | null
+  inputWidth: string
+  inputHeight: string
+  align: string
+  isUpdate: boolean
+  alt: string
+}
+
+type SunEditorImagePlugin = {
+  figure?: {
+    open: (target: HTMLImageElement, options: {
+      nonResizing: boolean
+      nonSizeInfo: boolean
+      nonBorder: boolean
+      figureTarget: boolean
+      infoOnly: boolean
+    }) => FigureInfo | undefined
+  }
+  sizeService?: {
+    applySize: (width: string, height: string) => void
+  }
+  uploadService?: {
+    urlUpload: (info: SunEditorManagedImageInfo) => void
+  }
+}
+
+type SunEditorInstance = {
+  destroy: () => void
+  $: {
+    html: {
+      get: () => string
+      set: (value: string) => void
+    }
+    plugins?: {
+      image?: SunEditorImagePlugin
+    }
+    pluginManager?: {
+      checkFileInfo?: (loaded: boolean) => void
+    }
+    frameContext?: {
+      get?: (key: string) => HTMLElement | null
+    }
+    menu?: {
+      targetMap?: Record<string, HTMLElement>
+    }
+  }
+}
+
+const LEGACY_IMAGE_INDEX_ATTRIBUTE = 'data-jilinjobs-legacy-image-index'
+const DEFAULT_EDITOR_FONT_STACK = '"Microsoft YaHei","PingFang SC",Arial,sans-serif'
+const EDITOR_FONT_ITEMS = [
+  'Microsoft YaHei',
+  'SimSun',
+  'KaiTi',
+  'FangSong',
+  'PingFang SC',
+  'Noto Sans CJK SC',
+  'Source Han Sans SC',
+  'Arial',
+  'Times New Roman',
+]
+const EDITOR_FONT_LABELS: Record<string, string> = {
+  'Microsoft YaHei': '微软雅黑',
+  SimSun: '宋体',
+  KaiTi: '楷体',
+  FangSong: '仿宋',
+  'PingFang SC': '苹方',
+  'Noto Sans CJK SC': 'Noto 思源黑体',
+  'Source Han Sans SC': '思源黑体',
+  Arial: 'Arial',
+  'Times New Roman': 'Times New Roman',
+}
+const IMAGE_FLOAT_CLASSES = [
+  '__se__float-none',
+  '__se__float-left',
+  '__se__float-center',
+  '__se__float-right',
+] as const
 
 const props = withDefaults(defineProps<{
   modelValue: string
@@ -23,190 +124,386 @@ const props = withDefaults(defineProps<{
 })
 
 const emit = defineEmits<{ (event: 'update:modelValue', value: string): void }>()
-const fileInput = ref<HTMLInputElement | null>(null)
-const blockType = ref<'paragraph' | '2' | '3' | '4'>('paragraph')
-const fontSize = ref('16px')
-const fontFamily = ref('Microsoft YaHei')
+const target = ref<HTMLTextAreaElement | null>(null)
+let editor: SunEditorInstance | null = null
+let applyingExternalValue = false
+let pendingLegacyImageStates: LegacyImageState[] = []
+let pendingLegacyTableStates: LegacyTableState[] = []
+let pendingLegacyTableCellStates: LegacyTableCellState[] = []
+let fontToolbarLabelObserver: MutationObserver | null = null
+const boundLegacyImageLoads = new WeakSet<HTMLImageElement>()
 
-const editor = useEditor({
-  content: props.modelValue,
-  extensions: [
-    StarterKit.configure({
-      heading: { levels: [2, 3, 4] },
-      link: { openOnClick: false, autolink: false, defaultProtocol: 'https' },
-    }),
-    Image.configure({ allowBase64: false }),
-    TextAlign.configure({ types: ['heading', 'paragraph'] }),
-    TextStyleKit,
-    TableKit,
-  ],
-  editorProps: {
-    attributes: {
-      class: 'rich-editor',
-      'data-testid': props.testId,
+onMounted(() => {
+  if (!target.value) return
+
+  readLegacyPresentationStates(props.modelValue)
+  const initialValue = prepareLegacyImagesForEditor(props.modelValue)
+
+  editor = suneditor.create(target.value, {
+    value: initialValue,
+    plugins,
+    lang: zhCn,
+    minHeight: '260px',
+    width: '100%',
+    editorStyle: `font-family:${DEFAULT_EDITOR_FONT_STACK};`,
+    buttonList: [
+      ['undo', 'redo'],
+      ['blockStyle', 'bold', 'underline', 'italic', 'strike'],
+      ['font', 'fontSize', 'fontColor', 'backgroundColor'],
+      ['align', 'list', 'blockquote', 'hr'],
+      ['table', 'link', 'image'],
+      ['removeFormat', 'codeView', 'fullScreen'],
+    ],
+    font: {
+      items: EDITOR_FONT_ITEMS,
     },
-  },
-  onUpdate: ({ editor: current }) => emit('update:modelValue', current.getHTML()),
+    image: {
+      allowMultiple: false,
+      createFileInput: Boolean(props.uploadImage),
+      createUrlInput: !props.uploadImage,
+    },
+    attributeWhitelist: {
+      table: 'align|cellpadding|cellspacing',
+      img: 'width|height|align',
+    },
+    tagStyles: {
+      table: 'width',
+      td: 'width|height',
+      img: 'width|height|float',
+    },
+    events: {
+      onChange: ({ data }) => {
+        if (applyingExternalValue) return
+        const value = normalizeLegacyImagesForApp(data)
+        if (value !== props.modelValue) emit('update:modelValue', value)
+      },
+      onImageLoad: () => {
+        requestAnimationFrame(() => applyLegacyImageStatesViaSunEditor())
+      },
+      onImageUploadBefore: async ({ info }) => {
+        if (!props.uploadImage) return true
+        const file = info.files?.[0]
+        const imagePlugin = editor?.$.plugins?.image
+        if (!file || !editor || !imagePlugin?.uploadService) return false
+
+        try {
+          const image = await props.uploadImage(file)
+          if (!isSafeUrl(image.src)) return false
+
+          imagePlugin.uploadService.urlUpload({
+            url: image.src,
+            files: { name: file.name, size: file.size },
+            element: info.element,
+            anchor: info.anchor,
+            inputWidth: info.inputWidth || 'auto',
+            inputHeight: info.inputHeight || 'auto',
+            align: info.align || 'none',
+            isUpdate: Boolean(info.isUpdate),
+            alt: image.alt || info.alt || file.name,
+          })
+          emit('update:modelValue', normalizeLegacyImagesForApp(editor.$.html.get()))
+        } catch {
+          return false
+        }
+
+        // undefined tells SunEditor the custom bridge already completed insertion.
+        return undefined
+      },
+    },
+  }) as unknown as SunEditorInstance
+
+  applyEditorTestId()
+  applyEditorFontLabels()
+  initializeLegacyPresentationBridge()
 })
 
 watch(() => props.modelValue, value => {
-  const current = editor.value
-  if (!current || current.getHTML() === value) return
-  current.commands.setContent(value || '', { emitUpdate: false })
+  if (!editor) return
+  if (normalizeLegacyImagesForApp(editor.$.html.get()) === value) return
+  setEditorContents(value)
 })
 
-onBeforeUnmount(() => editor.value?.destroy())
+onBeforeUnmount(() => {
+  fontToolbarLabelObserver?.disconnect()
+  fontToolbarLabelObserver = null
+  editor?.destroy()
+  editor = null
+})
 
-function setBlock(value: 'paragraph' | '2' | '3' | '4') {
-  blockType.value = value
-  if (value === 'paragraph') editor.value?.chain().focus().setParagraph().run()
-  else editor.value?.chain().focus().setHeading({ level: Number(value) as 2 | 3 | 4 }).run()
+function setEditorContents(value: string): void {
+  if (!editor) return
+
+  readLegacyPresentationStates(value)
+  applyingExternalValue = true
+  try {
+    editor.$.html.set(prepareLegacyImagesForEditor(value))
+    initializeLegacyPresentationBridge()
+  } finally {
+    requestAnimationFrame(() => {
+      applyingExternalValue = false
+    })
+  }
 }
 
-function setFontSize(value: string) {
-  fontSize.value = value
-  editor.value?.chain().focus().setFontSize(value).run()
+function applyEditorTestId(): void {
+  editorSurface()?.setAttribute('data-testid', props.testId)
 }
 
-function setFontFamily(value: string) {
-  fontFamily.value = value
-  editor.value?.chain().focus().setFontFamily(value).run()
+function applyEditorFontLabels(): void {
+  const fontMenu = editor?.$.menu?.targetMap?.font
+  if (!fontMenu) return
+
+  fontMenu.querySelectorAll<HTMLButtonElement>('[data-command]').forEach(button => {
+    const command = button.getAttribute('data-command') || ''
+    const label = EDITOR_FONT_LABELS[command]
+    if (!label || label === command) return
+
+    button.textContent = label
+    button.title = label
+    button.setAttribute('aria-label', label)
+  })
+
+  const toolbarFontText = target.value
+    ?.closest('.rich-text-editor-shell')
+    ?.querySelector<HTMLElement>('.se-btn-tool-font .se-txt')
+  if (!toolbarFontText) return
+
+  const syncToolbarLabel = () => {
+    const value = toolbarFontText.textContent?.trim() || ''
+    const firstFont = value.replace(/["']/g, '').split(',')[0]?.trim() || value
+    toolbarFontText.setAttribute('data-jilinjobs-font-label', EDITOR_FONT_LABELS[firstFont] || value)
+  }
+
+  fontToolbarLabelObserver?.disconnect()
+  syncToolbarLabel()
+  fontToolbarLabelObserver = new MutationObserver(syncToolbarLabel)
+  fontToolbarLabelObserver.observe(toolbarFontText, { childList: true, characterData: true, subtree: true })
 }
 
-function setTextColor(value: string | null) {
-  if (value) editor.value?.chain().focus().setColor(value).run()
+function readLegacyPresentationStates(html: string): void {
+  pendingLegacyImageStates = readLegacyImageStates(html)
+  const tableStates = readLegacyTableStates(html)
+  pendingLegacyTableStates = tableStates.tables
+  pendingLegacyTableCellStates = tableStates.cells
 }
 
-function setBackgroundColor(value: string | null) {
-  if (value) editor.value?.chain().focus().setBackgroundColor(value).run()
+function initializeLegacyPresentationBridge(): void {
+  if (!editor) return
+
+  if (pendingLegacyImageStates.length > 0) {
+    bindLegacyImageLoads()
+    try {
+      editor.$.pluginManager?.checkFileInfo?.(true)
+    } catch (error) {
+      console.warn('[RichTextEditor] SunEditor file-manager compatibility check failed', error)
+    }
+    applyLegacyImageStatesViaSunEditor()
+  }
+
+  applyLegacyTableStates()
+  requestAnimationFrame(() => {
+    applyLegacyImageStatesViaSunEditor()
+    applyLegacyTableStates()
+  })
 }
 
-function safeUrl(value: string): boolean {
+function bindLegacyImageLoads(): void {
+  const surface = editorSurface()
+  if (!surface) return
+
+  surface.querySelectorAll<HTMLImageElement>(`img[${LEGACY_IMAGE_INDEX_ATTRIBUTE}]`).forEach(image => {
+    if (boundLegacyImageLoads.has(image)) return
+    boundLegacyImageLoads.add(image)
+    image.addEventListener('load', () => applyLegacyImageStatesViaSunEditor(), { once: true })
+  })
+}
+
+function applyLegacyImageStatesViaSunEditor(): void {
+  if (!editor || pendingLegacyImageStates.length === 0) return
+
+  const imagePlugin = editor.$.plugins?.image
+  const figure = imagePlugin?.figure
+  const sizeService = imagePlugin?.sizeService
+  const surface = editorSurface()
+  if (!figure || !sizeService || !surface) return
+
+  surface.querySelectorAll<HTMLImageElement>(`img[${LEGACY_IMAGE_INDEX_ATTRIBUTE}]`).forEach(image => {
+    const index = Number(image.getAttribute(LEGACY_IMAGE_INDEX_ATTRIBUTE))
+    const state = Number.isInteger(index) ? pendingLegacyImageStates[index] : undefined
+    if (!state) return
+
+    try {
+      const info = figure.open(image, {
+        nonResizing: true,
+        nonSizeInfo: true,
+        nonBorder: true,
+        figureTarget: false,
+        infoOnly: true,
+      })
+      if (!info?.container) return
+
+      sizeService.applySize(state.width || 'auto', state.height || 'auto')
+      applyLegacyImageAlignment(image, state.alignment)
+    } catch (error) {
+      console.warn('[RichTextEditor] SunEditor legacy-image compatibility bridge failed', error)
+    }
+  })
+}
+
+function applyLegacyImageAlignment(image: HTMLImageElement, alignment: LegacyImageAlignment): void {
+  const component = image.closest('.se-component.se-image-container')
+  if (!component) return
+  component.classList.remove(...IMAGE_FLOAT_CLASSES)
+  component.classList.add(`__se__float-${alignment}`)
+}
+
+function applyLegacyTableStates(): void {
+  const surface = editorSurface()
+  if (!surface) return
+
+  surface.querySelectorAll<HTMLTableElement>('table').forEach((table, index) => {
+    const state = pendingLegacyTableStates[index]
+    if (state?.width) table.style.width = state.width
+  })
+
+  surface.querySelectorAll<HTMLTableCellElement>('th, td').forEach((cell, index) => {
+    const state = pendingLegacyTableCellStates[index]
+    if (!state) return
+    if (state.width) cell.style.width = state.width
+    if (state.height) cell.style.height = state.height
+  })
+}
+
+function editorSurface(): HTMLElement | null {
+  return editor?.$.frameContext?.get?.('wysiwyg') ?? null
+}
+
+function readLegacyImageStates(html: string): LegacyImageState[] {
+  if (!html) return []
+  const template = document.createElement('template')
+  template.innerHTML = html
+  return Array.from(template.content.querySelectorAll<HTMLImageElement>('img'), image => ({
+    width: legacyDimensionStyle(image.style.width) || legacyDimensionStyle(image.getAttribute('width')) || '',
+    height: legacyDimensionStyle(image.style.height) || legacyDimensionStyle(image.getAttribute('height')) || '',
+    alignment: legacyImageAlignment(image.style.float || image.getAttribute('align')),
+  }))
+}
+
+function readLegacyTableStates(html: string): { tables: LegacyTableState[]; cells: LegacyTableCellState[] } {
+  if (!html) return { tables: [], cells: [] }
+  const template = document.createElement('template')
+  template.innerHTML = html
+
+  const tables = Array.from(template.content.querySelectorAll<HTMLTableElement>('table'), table => ({
+    width: legacyDimensionStyle(table.style.width) || '',
+  }))
+  const cells = Array.from(template.content.querySelectorAll<HTMLTableCellElement>('th, td'), cell => ({
+    width: legacyDimensionStyle(cell.style.width) || '',
+    height: legacyDimensionStyle(cell.style.height) || '',
+  }))
+
+  return { tables, cells }
+}
+
+function prepareLegacyImagesForEditor(html: string): string {
+  if (!html) return ''
+  const template = document.createElement('template')
+  template.innerHTML = html
+
+  template.content.querySelectorAll<HTMLImageElement>('img').forEach((image, index) => {
+    image.setAttribute(LEGACY_IMAGE_INDEX_ATTRIBUTE, String(index))
+    if (image.closest('.se-component.se-image-container')) return
+
+    const wrapper = document.createElement('span')
+    const alignment = legacyImageAlignment(image.style.float || image.getAttribute('align'))
+    wrapper.className = `se-component se-inline-component se-image-container __se__float-${alignment}`
+    image.replaceWith(wrapper)
+    wrapper.appendChild(image)
+  })
+
+  return template.innerHTML
+}
+
+function normalizeLegacyImagesForApp(html: string): string {
+  if (!html) return ''
+  const template = document.createElement('template')
+  template.innerHTML = html
+
+  template.content.querySelectorAll<HTMLImageElement>(`img[${LEGACY_IMAGE_INDEX_ATTRIBUTE}]`).forEach(image => {
+    const component = image.closest('.se-component.se-image-container')
+    const clone = image.cloneNode(true) as HTMLImageElement
+    const dataSize = (clone.getAttribute('data-se-size') || '').split(',')
+    const width = legacyDimensionStyle(clone.style.width)
+      || legacyDimensionStyle(dataSize[0])
+      || legacyDimensionStyle(clone.getAttribute('width'))
+    const height = legacyDimensionStyle(clone.style.height)
+      || legacyDimensionStyle(dataSize[1])
+      || legacyDimensionStyle(clone.getAttribute('height'))
+
+    if (width) clone.setAttribute('width', dimensionAttributeValue(width))
+    else clone.removeAttribute('width')
+    if (height) clone.setAttribute('height', dimensionAttributeValue(height))
+    else clone.removeAttribute('height')
+
+    for (const name of clone.getAttributeNames()) {
+      if (name.startsWith('data-se-') || name === LEGACY_IMAGE_INDEX_ATTRIBUTE) clone.removeAttribute(name)
+    }
+
+    const originalFloat = clone.style.float
+    clone.style.removeProperty('width')
+    clone.style.removeProperty('height')
+    clone.style.removeProperty('float')
+
+    if (component?.classList.contains('__se__float-left')) clone.style.float = 'left'
+    else if (component?.classList.contains('__se__float-right')) clone.style.float = 'right'
+    else if (originalFloat === 'left' || originalFloat === 'right') clone.style.float = originalFloat
+
+    if (!clone.getAttribute('style')) clone.removeAttribute('style')
+
+    if (component) component.replaceWith(clone)
+    else image.replaceWith(clone)
+  })
+
+  return template.innerHTML
+}
+
+function legacyDimensionStyle(value: string | null | undefined): string | null {
+  const normalized = value?.trim() || ''
+  if (/^\d+(?:\.\d+)?$/.test(normalized)) return `${normalized}px`
+  if (/^\d+(?:\.\d+)?(?:px|%)$/i.test(normalized)) return normalized
+  return null
+}
+
+function dimensionAttributeValue(value: string): string {
+  return value.endsWith('px') ? value.slice(0, -2) : value
+}
+
+function legacyImageAlignment(value: string | null | undefined): LegacyImageAlignment {
+  const normalized = value?.trim().toLowerCase()
+  if (normalized === 'left' || normalized === 'center' || normalized === 'right') return normalized
+  return 'none'
+}
+
+function isSafeUrl(value: string): boolean {
   return value.startsWith('/') || /^https?:\/\//i.test(value)
-}
-
-function editLink() {
-  const current = editor.value
-  if (!current) return
-  const existing = String(current.getAttributes('link').href || '')
-  const raw = window.prompt('链接地址', existing || 'https://')
-  if (raw == null) return
-  const url = raw.trim()
-  if (!url) {
-    current.chain().focus().extendMarkRange('link').unsetLink().run()
-    return
-  }
-  if (!safeUrl(url)) return
-  current.chain().focus().extendMarkRange('link').setLink({ href: url }).run()
-}
-
-function requestImage() {
-  if (props.uploadImage) {
-    const current = editor.value
-    if (current) current.chain().focus().setTextSelection(current.state.selection.to).run()
-    fileInput.value?.click()
-    return
-  }
-  const raw = window.prompt('图片地址', 'https://')
-  if (raw == null) return
-  const src = raw.trim()
-  if (!safeUrl(src)) return
-  editor.value?.chain().focus().setImage({ src }).run()
-}
-
-async function handleImageFile(event: Event) {
-  const input = event.target as HTMLInputElement
-  const file = input.files?.[0]
-  input.value = ''
-  if (!file || !props.uploadImage) return
-  const image = await props.uploadImage(file)
-  if (!safeUrl(image.src)) return
-  editor.value?.chain().focus().setImage({ src: image.src, alt: image.alt || '' }).run()
 }
 </script>
 
 <template>
-  <div class="rich-text-editor-shell" :data-testid="`${testId}-shell`">
-    <div v-if="editor" class="rich-text-editor-toolbar" :data-testid="`${testId}-toolbar`">
-      <el-button-group>
-        <el-button size="small" :data-testid="`${testId}-undo`" @click="editor.chain().focus().undo().run()">撤销</el-button>
-        <el-button size="small" :data-testid="`${testId}-redo`" @click="editor.chain().focus().redo().run()">重做</el-button>
-      </el-button-group>
-
-      <el-select :model-value="blockType" size="small" class="toolbar-select block-select" :data-testid="`${testId}-block`" @change="setBlock">
-        <el-option label="正文" value="paragraph" />
-        <el-option label="标题 2" value="2" />
-        <el-option label="标题 3" value="3" />
-        <el-option label="标题 4" value="4" />
-      </el-select>
-
-      <el-button-group>
-        <el-button size="small" :type="editor.isActive('bold') ? 'primary' : 'default'" :data-testid="`${testId}-bold`" @click="editor.chain().focus().toggleBold().run()"><strong>B</strong></el-button>
-        <el-button size="small" :type="editor.isActive('italic') ? 'primary' : 'default'" :data-testid="`${testId}-italic`" @click="editor.chain().focus().toggleItalic().run()"><em>I</em></el-button>
-        <el-button size="small" :type="editor.isActive('underline') ? 'primary' : 'default'" :data-testid="`${testId}-underline`" @click="editor.chain().focus().toggleUnderline().run()"><u>U</u></el-button>
-        <el-button size="small" :type="editor.isActive('strike') ? 'primary' : 'default'" :data-testid="`${testId}-strike`" @click="editor.chain().focus().toggleStrike().run()"><s>S</s></el-button>
-      </el-button-group>
-
-      <el-button-group>
-        <el-button size="small" :data-testid="`${testId}-bullet-list`" @click="editor.chain().focus().toggleBulletList().run()">项目符号</el-button>
-        <el-button size="small" :data-testid="`${testId}-ordered-list`" @click="editor.chain().focus().toggleOrderedList().run()">编号</el-button>
-        <el-button size="small" :data-testid="`${testId}-blockquote`" @click="editor.chain().focus().toggleBlockquote().run()">引用</el-button>
-        <el-button size="small" :data-testid="`${testId}-hr`" @click="editor.chain().focus().setHorizontalRule().run()">分隔线</el-button>
-      </el-button-group>
-
-      <el-button-group>
-        <el-button size="small" :data-testid="`${testId}-align-left`" @click="editor.chain().focus().setTextAlign('left').run()">左</el-button>
-        <el-button size="small" :data-testid="`${testId}-align-center`" @click="editor.chain().focus().setTextAlign('center').run()">中</el-button>
-        <el-button size="small" :data-testid="`${testId}-align-right`" @click="editor.chain().focus().setTextAlign('right').run()">右</el-button>
-      </el-button-group>
-
-      <el-select :model-value="fontSize" size="small" class="toolbar-select font-size-select" :data-testid="`${testId}-font-size`" @change="setFontSize">
-        <el-option v-for="size in ['14px','16px','18px','20px','24px','28px']" :key="size" :label="size" :value="size" />
-      </el-select>
-      <el-select :model-value="fontFamily" size="small" class="toolbar-select font-family-select" :data-testid="`${testId}-font-family`" @change="setFontFamily">
-        <el-option label="微软雅黑" value="Microsoft YaHei" />
-        <el-option label="宋体" value="SimSun" />
-        <el-option label="Arial" value="Arial" />
-      </el-select>
-      <span class="color-control">文字<el-color-picker size="small" :data-testid="`${testId}-text-color`" @change="setTextColor" /></span>
-      <span class="color-control">底色<el-color-picker size="small" :data-testid="`${testId}-background-color`" @change="setBackgroundColor" /></span>
-
-      <el-button-group>
-        <el-button size="small" :data-testid="`${testId}-link`" @click="editLink">链接</el-button>
-        <el-button size="small" :data-testid="`${testId}-unlink`" @click="editor.chain().focus().unsetLink().run()">移除链接</el-button>
-        <el-button size="small" :data-testid="`${testId}-image`" :loading="uploading" @click="requestImage">{{ uploadImage ? '插入图片' : '图片地址' }}</el-button>
-      </el-button-group>
-
-      <el-button-group>
-        <el-button size="small" :data-testid="`${testId}-table`" @click="editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()">插入表格</el-button>
-        <el-button size="small" :data-testid="`${testId}-table-add-row`" @click="editor.chain().focus().addRowAfter().run()">加行</el-button>
-        <el-button size="small" :data-testid="`${testId}-table-delete-row`" @click="editor.chain().focus().deleteRow().run()">删行</el-button>
-        <el-button size="small" :data-testid="`${testId}-table-add-column`" @click="editor.chain().focus().addColumnAfter().run()">加列</el-button>
-        <el-button size="small" :data-testid="`${testId}-table-delete-column`" @click="editor.chain().focus().deleteColumn().run()">删列</el-button>
-        <el-button size="small" :data-testid="`${testId}-table-delete`" @click="editor.chain().focus().deleteTable().run()">删表</el-button>
-      </el-button-group>
-    </div>
-
-    <input v-if="uploadImage" ref="fileInput" data-testid="body-image-input" class="hidden-file-input" type="file" accept="image/*" :disabled="uploading" @change="handleImageFile">
-    <EditorContent :editor="editor" class="rich-text-editor-content" />
+  <div class="rich-text-editor-shell" :class="{ 'is-uploading': uploading }" :data-testid="`${testId}-shell`">
+    <textarea ref="target" />
   </div>
 </template>
 
 <style scoped>
-.rich-text-editor-shell { width: 100%; border: 1px solid #dcdfe6; border-radius: 4px; overflow: hidden; background: #fff; }
-.rich-text-editor-toolbar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding: 8px; border-bottom: 1px solid #ebeef5; background: #f8f9fb; }
-.toolbar-select { width: 104px; }
-.font-family-select { width: 118px; }
-.color-control { display: inline-flex; align-items: center; gap: 4px; color: #606266; font-size: 12px; }
-.hidden-file-input { display: none; }
-.rich-text-editor-content :deep(.rich-editor) { min-height: 240px; padding: 14px 16px; outline: none; line-height: 1.75; word-break: break-word; }
-.rich-text-editor-content :deep(.rich-editor p) { margin: 0 0 0.8em; }
-.rich-text-editor-content :deep(.rich-editor h2),
-.rich-text-editor-content :deep(.rich-editor h3),
-.rich-text-editor-content :deep(.rich-editor h4) { margin: 1em 0 0.55em; line-height: 1.4; }
-.rich-text-editor-content :deep(.rich-editor blockquote) { margin: 0.8em 0; padding-left: 12px; border-left: 3px solid #dcdfe6; color: #606266; }
-.rich-text-editor-content :deep(.rich-editor img) { max-width: 100%; height: auto; }
-.rich-text-editor-content :deep(.rich-editor table) { width: 100%; border-collapse: collapse; margin: 0.8em 0; }
-.rich-text-editor-content :deep(.rich-editor th),
-.rich-text-editor-content :deep(.rich-editor td) { border: 1px solid #dcdfe6; padding: 6px 8px; vertical-align: top; }
+.rich-text-editor-shell { width: 100%; min-width: 0; }
+.rich-text-editor-shell :deep(.sun-editor) { border-color: #dcdfe6; border-radius: 4px; }
+.rich-text-editor-shell :deep(.se-toolbar) { border-bottom-color: #ebeef5; background: #f8f9fb; }
+.rich-text-editor-shell :deep(.se-wrapper-wysiwyg) { line-height: 1.75; word-break: break-word; }
+.rich-text-editor-shell :deep(.se-btn-tool-font .se-txt[data-jilinjobs-font-label]) { font-size: 0; }
+.rich-text-editor-shell :deep(.se-btn-tool-font .se-txt[data-jilinjobs-font-label]::after) {
+  content: attr(data-jilinjobs-font-label);
+  font-size: 13px;
+}
+.rich-text-editor-shell.is-uploading :deep(.se-btn[data-command='image']) { opacity: 0.55; pointer-events: none; }
 </style>

@@ -12,6 +12,9 @@ object RichTextHtmlPolicy {
             "color",
             "background-color",
             "text-align",
+            "width",
+            "height",
+            "float",
         ),
     )
 
@@ -25,8 +28,9 @@ object RichTextHtmlPolicy {
             "table", "caption", "thead", "tbody", "tfoot", "tr", "th", "td",
         )
         .allowAttributes("href", "title").onElements("a")
-        .allowAttributes("src", "alt", "title").onElements("img")
-        .allowAttributes("colspan", "rowspan").onElements("th", "td")
+        .allowAttributes("src", "alt", "title", "width", "height", "align").onElements("img")
+        .allowAttributes("align", "cellpadding", "cellspacing", "width").onElements("table")
+        .allowAttributes("colspan", "rowspan", "width", "height", "align", "valign").onElements("th", "td")
         .allowUrlProtocols("http", "https")
         .allowStyling(safeCss)
         .toFactory()

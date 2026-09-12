@@ -1,6 +1,52 @@
 import { expect, test } from '@playwright/test'
+import { existsSync, readFileSync } from 'node:fs'
+import path from 'node:path'
 
-const ONE_PIXEL_PNG = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zt9sAAAAASUVORK5CYII=', 'base64')
+const REPO_ROOT = process.env.EU54_REPO_ROOT || path.resolve(process.cwd(), '../..')
+const PARTY_PATH = path.join(REPO_ROOT, 'data-migrations/party/v1/articles/zhutijiaoyu-content-154659859759104/article.json')
+const PAGES_PATH = path.join(REPO_ROOT, 'sites/jilinjobs/structure/pages.json')
+const REAL_CORPUS_AVAILABLE = existsSync(PARTY_PATH) && existsSync(PAGES_PATH)
+const PARTY_MARKER = 'EU54_PARTY_ROUNDTRIP_MARKER'
+const TEACHER_MARKER = 'EU54_TEACHER_ROUNDTRIP_MARKER'
+const EXPECTED_EDITOR_FONTS = [
+  'Microsoft YaHei',
+  'SimSun',
+  'KaiTi',
+  'FangSong',
+  'PingFang SC',
+  'Noto Sans CJK SC',
+  'Source Han Sans SC',
+  'Arial',
+  'Times New Roman',
+]
+const EXPECTED_EDITOR_FONT_LABELS: Record<string, string> = {
+  'Microsoft YaHei': '微软雅黑',
+  SimSun: '宋体',
+  KaiTi: '楷体',
+  FangSong: '仿宋',
+  'PingFang SC': '苹方',
+  'Noto Sans CJK SC': 'Noto 思源黑体',
+  'Source Han Sans SC': '思源黑体',
+}
+
+function readRealCorpus() {
+  const party = JSON.parse(readFileSync(PARTY_PATH, 'utf8')) as { content: { bodyHtml: string } }
+  const pages = JSON.parse(readFileSync(PAGES_PATH, 'utf8')) as unknown
+  const teacher = findObject(pages, value => value?.alias === 'teacher-library' && typeof value?.bodyHtml === 'string')
+  if (!party.content?.bodyHtml || !teacher?.bodyHtml) throw new Error('EU-54 real corpus is unavailable')
+  return { partyHtml: party.content.bodyHtml, teacherHtml: String(teacher.bodyHtml) }
+}
+
+function findObject(value: unknown, predicate: (candidate: any) => boolean): any | null {
+  if (value && typeof value === 'object') {
+    if (predicate(value)) return value
+    for (const child of (Array.isArray(value) ? value : Object.values(value))) {
+      const found = findObject(child, predicate)
+      if (found) return found
+    }
+  }
+  return null
+}
 
 async function firstColumnId(request: import('@playwright/test').APIRequestContext): Promise<number> {
   const response = await request.get('/api/admin/columns')
@@ -9,127 +55,177 @@ async function firstColumnId(request: import('@playwright/test').APIRequestConte
   return (columns.find(item => item.alias === 'notice') ?? columns[0]).id
 }
 
-test('EU-35：Article 与 Page 共用完整富文本工具栏且已有 HTML 可保存重开', async ({ page, request }, testInfo) => {
+async function appendMarker(surface: import('@playwright/test').Locator, marker: string) {
+  await surface.evaluate(node => {
+    const range = document.createRange()
+    range.selectNodeContents(node)
+    range.collapse(false)
+    const selection = window.getSelection()
+    selection?.removeAllRanges()
+    selection?.addRange(range)
+    ;(node as HTMLElement).focus()
+  })
+  await surface.press('Enter')
+  await surface.page().keyboard.insertText(marker)
+  await expect(surface).toContainText(marker)
+}
+
+async function selectEditorContents(surface: import('@playwright/test').Locator, expectedText: string) {
+  await surface.evaluate(node => {
+    ;(node as HTMLElement).focus()
+    const range = document.createRange()
+    range.selectNodeContents(node)
+    const selection = window.getSelection()
+    selection?.removeAllRanges()
+    selection?.addRange(range)
+  })
+  await expect.poll(() => surface.page().evaluate(() => window.getSelection()?.toString() || '')).toContain(expectedText)
+}
+
+test('EU-54：SunEditor 3.3.3 生产适配器保持 P1/P2 real corpus 并可继续编辑保存', async ({ page, request }, testInfo) => {
+  test.skip(!REAL_CORPUS_AVAILABLE, 'P1/P2 exact corpus runs in the dedicated EU-54 repository-mounted verification path')
+  const { partyHtml, teacherHtml } = readRealCorpus()
   const suffix = `${Date.now()}-${testInfo.retry}`
   const columnId = await firstColumnId(request)
-  const articleTitle = `EU35富文本文章-${suffix}`
+
+  const articleTitle = `EU54-P1-${suffix}`
   const articleResponse = await request.post('/api/admin/articles', { data: {
-    columnId, title: articleTitle,
-    bodyHtml: '<p><span style="font-size:18px;color:#1f4e79">历史正文</span> <strong>强调</strong></p>',
-    source: 'EU-35 E2E', articleType: 'INTERNAL', externalUrl: null, publishDate: '2026-09-05',
-    pinned: false, sortOrder: 0, coverResourceId: null, bodyImageResourceIds: [], attachmentResourceIds: [],
+    columnId, title: articleTitle, bodyHtml: partyHtml, source: 'EU-54 P1 real corpus', articleType: 'INTERNAL', externalUrl: null,
+    publishDate: '2026-09-11', pinned: false, sortOrder: 0, coverResourceId: null, bodyImageResourceIds: [], attachmentResourceIds: [],
   } })
   expect(articleResponse.ok()).toBeTruthy()
   const article = await articleResponse.json() as { id: number }
 
   await page.goto('/admin/articles')
   await page.getByTestId('article-filter-keyword').fill(articleTitle)
-  const articleRow = page.getByTestId('article-table').getByRole('row').filter({ hasText: articleTitle })
-  await articleRow.getByRole('button', { name: '编辑' }).click()
+  await page.getByTestId('article-table').getByRole('row').filter({ hasText: articleTitle }).getByRole('button', { name: '编辑' }).click()
   const articleDialog = page.getByRole('dialog', { name: '编辑文章' })
-  const articleEditor = articleDialog.getByTestId('article-body-editor')
-  await expect(articleEditor).toContainText('历史正文')
-  await expect(articleEditor.locator('strong')).toContainText('强调')
-  for (const control of ['undo','redo','block','bold','italic','underline','strike','bullet-list','ordered-list','blockquote','hr','align-left','align-center','align-right','font-size','font-family','text-color','background-color','link','unlink','image','table','table-add-row','table-delete-row','table-add-column','table-delete-column','table-delete']) {
-    await expect(articleDialog.getByTestId(`article-body-editor-${control}`)).toBeVisible()
-  }
-
-  await articleEditor.fill('标题内容')
-  await articleEditor.selectText()
-  await articleDialog.getByTestId('article-body-editor-block').click()
-  await page.getByRole('option', { name: '标题 2' }).click()
-  await expect(articleEditor.locator('h2')).toContainText('标题内容')
-  await articleEditor.locator('h2').selectText()
-  await articleDialog.getByTestId('article-body-editor-bold').click()
-  await expect(articleEditor.locator('h2 strong')).toContainText('标题内容')
-  await articleDialog.getByTestId('article-body-editor-undo').click()
-  await expect(articleEditor.locator('h2 strong')).toHaveCount(0)
-  await articleDialog.getByTestId('article-body-editor-redo').click()
-  await expect(articleEditor.locator('h2 strong')).toContainText('标题内容')
-
-  const chooserPromise = page.waitForEvent('filechooser')
-  await articleDialog.getByTestId('article-body-editor-image').click()
-  const chooser = await chooserPromise
-  await chooser.setFiles({ name: 'eu35.png', mimeType: 'image/png', buffer: ONE_PIXEL_PNG })
-  await expect(articleEditor.locator('img')).toHaveCount(1)
+  const articleSurface = articleDialog.getByTestId('article-body-editor')
+  await expect(articleSurface).toBeVisible()
+  await expect(articleSurface).toContainText('中共中央政治局召开会议')
+  await expect(articleSurface.locator('img')).toHaveCount(23)
+  const firstStar = articleSurface.locator('img').first()
+  await expect(firstStar).toHaveAttribute('width', '15')
+  await expect(firstStar).toHaveAttribute('height', '15')
+  await expect(firstStar.locator('xpath=ancestor::strong[1]')).toHaveCount(1)
+  const starRect = await firstStar.boundingBox()
+  expect(Math.round(starRect?.width ?? 0)).toBe(15)
+  expect(Math.round(starRect?.height ?? 0)).toBe(15)
+  await appendMarker(articleSurface, PARTY_MARKER)
   await articleDialog.getByTestId('save-article').click()
   await expect(articleDialog).toBeHidden()
-  const storedAfterImage = await (await request.get(`/api/admin/articles/${article.id}`)).json() as { bodyHtml: string; bodyImageResourceIds: number[] }
-  expect(storedAfterImage.bodyHtml).toContain('<h2')
-  expect(storedAfterImage.bodyImageResourceIds).toHaveLength(1)
-  expect(storedAfterImage.bodyHtml).toContain(`/api/admin/resources/${storedAfterImage.bodyImageResourceIds[0]}/content`)
+  const storedArticle = await (await request.get(`/api/admin/articles/${article.id}`)).json() as { bodyHtml: string }
+  expect(storedArticle.bodyHtml).toContain(PARTY_MARKER)
+  expect((storedArticle.bodyHtml.match(/<img\b/gi) || [])).toHaveLength(23)
+  expect(storedArticle.bodyHtml).toMatch(/<img[^>]*height="15"[^>]*width="15"|<img[^>]*width="15"[^>]*height="15"/i)
 
-  await page.getByTestId('article-filter-keyword').fill(articleTitle)
-  await page.getByTestId('article-table').getByRole('row').filter({ hasText: articleTitle }).getByRole('button', { name: '编辑' }).click()
-  const reopenedArticle = page.getByRole('dialog', { name: '编辑文章' })
-  await expect(reopenedArticle.getByTestId('article-body-editor').locator('h2 strong')).toContainText('标题内容')
-  const image = reopenedArticle.getByTestId('article-body-editor').locator('img')
-  await image.click()
-  await page.keyboard.press('Backspace')
-  await expect(reopenedArticle.getByTestId('article-body-editor').locator('img')).toHaveCount(0)
-  await reopenedArticle.getByTestId('save-article').click()
-  await expect(reopenedArticle).toBeHidden()
-  const storedWithoutImage = await (await request.get(`/api/admin/articles/${article.id}`)).json() as { bodyImageResourceIds: number[] }
-  expect(storedWithoutImage.bodyImageResourceIds).toEqual([])
-
-  const pageName = `EU35富文本单页-${suffix}`
-  const pageAlias = `eu35-rich-${suffix}`
-  const createPage = await request.post('/api/admin/pages', { data: {
-    groupId: null, alias: pageAlias, name: pageName,
-    bodyHtml: '<p><span style="font-family:SimSun;font-size:18px;color:#800000">历史单页正文</span></p>',
+  const pageName = `EU54-P2-${suffix}`
+  const pageAlias = `eu54-teacher-${suffix}`
+  const pageResponse = await request.post('/api/admin/pages', { data: {
+    groupId: null, alias: pageAlias, name: pageName, bodyHtml: teacherHtml,
     renderMode: 'RICH_TEXT', embedUrl: null, sortOrder: 999, enabled: true,
   } })
-  expect(createPage.ok()).toBeTruthy()
-  const savedPage = await createPage.json() as { id: number }
+  expect(pageResponse.ok()).toBeTruthy()
+  const savedPage = await pageResponse.json() as { id: number }
 
   await page.goto('/admin/pages')
   await page.getByTestId(`edit-page-${savedPage.id}`).click()
   const pageDialog = page.getByRole('dialog', { name: '编辑单页' })
-  const pageEditor = pageDialog.getByTestId('page-body-editor')
-  await expect(pageEditor).toContainText('历史单页正文')
-  await expect(pageEditor.locator('span')).toHaveAttribute('style', /font-family/i)
-
-  await pageEditor.fill('链接文本')
-  await pageEditor.selectText()
-  page.once('dialog', dialog => dialog.accept('https://example.com/eu35'))
-  await pageDialog.getByTestId('page-body-editor-link').click()
-  await expect(pageEditor.locator('a')).toHaveAttribute('href', 'https://example.com/eu35')
-  await pageEditor.press('ArrowRight')
-  await pageDialog.getByTestId('page-body-editor-table').click()
-  await expect(pageEditor.locator('table')).toHaveCount(1)
-  await pageDialog.getByTestId('page-body-editor-hr').click()
-  await expect(pageEditor.locator('hr')).toHaveCount(1)
-  await pageDialog.getByTestId('page-body-editor-align-center').click()
+  const pageSurface = pageDialog.getByTestId('page-body-editor')
+  await expect(pageSurface).toContainText('方占仁')
+  await expect(pageSurface).toContainText('李军凯')
+  const table = pageSurface.locator('table').first()
+  await expect(table).toHaveAttribute('align', 'center')
+  await expect(table).toHaveAttribute('cellpadding', '1')
+  await expect(table).toHaveAttribute('cellspacing', '1')
+  await expect(table).toHaveAttribute('style', /width:\s*1170px/i)
+  const firstTd = pageSurface.locator('td').first()
+  await expect(firstTd).toHaveAttribute('style', /height:\s*325px/i)
+  await expect(firstTd).toHaveAttribute('style', /width:\s*200px/i)
+  const teacherImage = pageSurface.locator('img').first()
+  await expect(teacherImage).toHaveAttribute('width', '200')
+  await expect(teacherImage).toHaveAttribute('height', '266')
+  await expect(teacherImage).toHaveAttribute('style', /float:\s*left/i)
+  const teacherRect = await teacherImage.boundingBox()
+  expect(Math.round(teacherRect?.width ?? 0)).toBe(200)
+  expect(Math.round(teacherRect?.height ?? 0)).toBe(266)
+  await appendMarker(pageSurface, TEACHER_MARKER)
   await pageDialog.getByRole('button', { name: '保存' }).click()
   await expect(pageDialog).toBeHidden()
-
-  await page.getByTestId(`edit-page-${savedPage.id}`).click()
-  const reopenedPage = page.getByRole('dialog', { name: '编辑单页' })
-  await expect(reopenedPage.getByTestId('page-body-editor').locator('a')).toHaveAttribute('href', 'https://example.com/eu35')
-  await expect(reopenedPage.getByTestId('page-body-editor').locator('table')).toHaveCount(1)
-  await reopenedPage.getByRole('button', { name: '取消' }).click()
+  const storedPages = await (await request.get('/api/admin/pages')).json() as Array<{ id: number; bodyHtml: string }>
+  const storedPage = storedPages.find(item => item.id === savedPage.id)
+  expect(storedPage?.bodyHtml).toContain(TEACHER_MARKER)
+  expect(storedPage?.bodyHtml).toContain('width:1170px')
+  expect(storedPage?.bodyHtml).toContain('float:left')
 })
 
-test('EU-35：粘贴 schema 不保留未知节点且服务端安全边界继续生效', async ({ page, request }, testInfo) => {
+test('EU-54：普通中文编辑、中文字体、撤销重做与共享 Article/Page adapter 可用', async ({ page }) => {
+  await page.goto('/admin/pages')
+  await page.getByTestId('add-page').click()
+  const dialog = page.getByRole('dialog', { name: '新增单页' })
+  const root = dialog.getByTestId('page-body-editor-shell')
+  const surface = dialog.getByTestId('page-body-editor')
+  await expect(surface).toBeVisible()
+  for (const command of ['undo', 'redo', 'bold', 'italic', 'underline', 'strike', 'font', 'align', 'list', 'table', 'link', 'image']) {
+    await expect(root.locator(`[data-command="${command}"]`)).toBeVisible()
+  }
+  await expect(root.getByLabel('字号')).toBeVisible()
+
+  const defaultFontFamily = await surface.evaluate(node => getComputedStyle(node).fontFamily)
+  expect(defaultFontFamily).toContain('Microsoft YaHei')
+  expect(defaultFontFamily).toContain('PingFang SC')
+  expect(defaultFontFamily).not.toContain('Helvetica Neue')
+
+  await surface.fill('吉林省高校毕业生就业服务')
+  await expect(surface).toContainText('吉林省高校毕业生就业服务')
+  const editorHtml = await surface.evaluate(node => node.innerHTML)
+  expect(editorHtml).not.toContain('Microsoft YaHei')
+  await root.locator('[data-command="undo"]').click()
+  await expect(surface).not.toContainText('吉林省高校毕业生就业服务')
+  await root.locator('[data-command="redo"]').click()
+  await expect(surface).toContainText('吉林省高校毕业生就业服务')
+
+  await selectEditorContents(surface, '吉林省高校毕业生就业服务')
+  await root.locator('[data-command="font"]').click()
+  const fontMenu = page.locator('.se-list-font-family:visible')
+  await expect(fontMenu).toBeVisible()
+  for (const font of EXPECTED_EDITOR_FONTS) {
+    await expect(fontMenu.locator(`[data-command="${font}"]`)).toHaveCount(1)
+  }
+  for (const [font, label] of Object.entries(EXPECTED_EDITOR_FONT_LABELS)) {
+    const item = fontMenu.locator(`[data-command="${font}"]`)
+    await expect(item).toHaveText(label)
+    await expect(item).toHaveAttribute('aria-label', label)
+  }
+  await fontMenu.locator('[data-command="SimSun"]').click()
+  await expect.poll(() => surface.evaluate(node => node.innerHTML)).toMatch(/font-family:\s*SimSun/i)
+  const fontToolbarText = root.locator('.se-btn-tool-font .se-txt')
+  await expect(fontToolbarText).toHaveText('SimSun')
+  await expect(fontToolbarText).toHaveAttribute('data-jilinjobs-font-label', '宋体')
+  await expect.poll(() => fontToolbarText.evaluate(node => getComputedStyle(node, '::after').content)).toContain('宋体')
+})
+
+test('EU-54：粘贴 hostile HTML 后服务端共享安全边界继续生效', async ({ page, request }, testInfo) => {
   const suffix = `${Date.now()}-${testInfo.retry}`
   await page.goto('/admin/pages')
   await page.getByTestId('add-page').click()
   const dialog = page.getByRole('dialog', { name: '新增单页' })
-  await dialog.getByRole('textbox', { name: '单页名称' }).fill(`EU35粘贴-${suffix}`)
-  await dialog.getByRole('textbox', { name: '公开标识' }).fill(`eu35-paste-${suffix}`)
-  const editor = dialog.getByTestId('page-body-editor')
-  await editor.evaluate((node, html) => {
+  await dialog.getByRole('textbox', { name: '单页名称' }).fill(`EU54安全粘贴-${suffix}`)
+  await dialog.getByRole('textbox', { name: '公开标识' }).fill(`eu54-paste-${suffix}`)
+  const surface = dialog.getByTestId('page-body-editor')
+  await surface.evaluate((node, html) => {
     const data = new DataTransfer()
     data.setData('text/html', String(html))
+    data.setData('text/plain', '安全文字 保留颜色')
     node.dispatchEvent(new ClipboardEvent('paste', { clipboardData: data, bubbles: true, cancelable: true }))
   }, '<p class="unknown" data-extra="x" onclick="alert(1)">安全文字 <span style="color:#123456;position:fixed">保留颜色</span></p><script>alert(1)</script><iframe src="https://example.com"></iframe>')
-  await expect(editor).toContainText('安全文字')
-  await expect(editor.locator('script,iframe')).toHaveCount(0)
+  await expect(surface).toContainText('安全文字')
   await dialog.getByRole('button', { name: '保存' }).click()
   await expect(dialog).toBeHidden()
   const pages = await (await request.get('/api/admin/pages')).json() as Array<{ alias: string; bodyHtml: string }>
-  const saved = pages.find(item => item.alias === `eu35-paste-${suffix}`)
+  const saved = pages.find(item => item.alias === `eu54-paste-${suffix}`)
   expect(saved).toBeTruthy()
   expect(saved!.bodyHtml).not.toMatch(/script|iframe|onclick|position\s*:/i)
   expect(saved!.bodyHtml).toContain('安全文字')
+  expect(saved!.bodyHtml).toContain('color')
 })
