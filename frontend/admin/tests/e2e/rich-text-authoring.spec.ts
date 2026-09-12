@@ -19,6 +19,15 @@ const EXPECTED_EDITOR_FONTS = [
   'Arial',
   'Times New Roman',
 ]
+const EXPECTED_EDITOR_FONT_LABELS: Record<string, string> = {
+  'Microsoft YaHei': '微软雅黑',
+  SimSun: '宋体',
+  KaiTi: '楷体',
+  FangSong: '仿宋',
+  'PingFang SC': '苹方',
+  'Noto Sans CJK SC': 'Noto 思源黑体',
+  'Source Han Sans SC': '思源黑体',
+}
 
 function readRealCorpus() {
   const party = JSON.parse(readFileSync(PARTY_PATH, 'utf8')) as { content: { bodyHtml: string } }
@@ -182,6 +191,11 @@ test('EU-54：普通中文编辑、中文字体、撤销重做与共享 Article/
   await expect(fontMenu).toBeVisible()
   for (const font of EXPECTED_EDITOR_FONTS) {
     await expect(fontMenu.locator(`[data-command="${font}"]`)).toHaveCount(1)
+  }
+  for (const [font, label] of Object.entries(EXPECTED_EDITOR_FONT_LABELS)) {
+    const item = fontMenu.locator(`[data-command="${font}"]`)
+    await expect(item).toHaveText(label)
+    await expect(item).toHaveAttribute('aria-label', label)
   }
   await fontMenu.locator('[data-command="SimSun"]').click()
   await expect.poll(() => surface.evaluate(node => node.innerHTML)).toMatch(/font-family:\s*SimSun/i)
