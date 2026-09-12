@@ -8,8 +8,8 @@
 - Existing Main Page delivery authority: `docs/requirements/main-single-page-formal-content.md`
 - Planning baseline: `main@881893f9523effaabb82e0a0dacfcd38fe0c44fe`
 - Requirement: **READY / HUMAN REVIEW ACCEPTED**
-- Technical Planning: **NEXT NATURAL STAGE / NOT STARTED**
-- Candidate Execution Unit: **NONE**
+- Technical Planning: **READY — `docs/technical/page-content-architecture.md`**
+- Candidate Execution Unit: **NONE at Technical Plan creation**
 - Execute Authority: **NONE**
 
 ## 1. Intent
@@ -145,6 +145,6 @@ FAQ 已在 EU-52 Human Review 中修复一级/二级层级显示问题，当前�
 
 Issue #137 durable acquisition / collector evidence、Issue #77 long-lived boundary、EU-52 accepted formal Page contract，以及当前 `main` 的 Site Package projection、Public renderer 与 E2E downstream state 已经共同证明真实产品 gap：**结构敏感 Page 不能继续依赖语义扁平化作为长期方案。**
 
-Human Review 已确认 Requirement intent / product constraints 足够进入下一阶段；Structured / Engineering 的实现表达、metadata contract、storage/API/Admin impact 等仍属于 Specification / Technical Planning，不能由本 Requirement 猜测为既成事实。
+Human Review 已确认 Requirement intent / product constraints；Specification 已接受 `guide/jypq` Structured target，当前 Technical Planning 也已由 `docs/technical/page-content-architecture.md` 收敛长期 HOW。本 Requirement 不重复维护 DB / API / renderer / adoption 细节，也不因 Technical Plan ready 自动创建 Execution Unit。
 
-本 Requirement 的接受与集成都不创建 Execution Unit，不构成 Readiness PASS，也不授予 Execute Authority。
+本 Requirement 的接受与集成都不构成 Readiness PASS，也不授予 Execute Authority。
