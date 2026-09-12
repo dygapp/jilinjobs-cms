@@ -11,7 +11,7 @@
 
 ## Status
 
-- Planning baseline: `main@881893f9b4a9fb759b78ff8d90ea1cef0cfbe8fe`
+- Planning baseline: `main@881893f9523effaabb82e0a0dacfcd38fe0c44fe`
 - Specification: **CANDIDATE / HUMAN REVIEW REQUIRED**
 - Representative-sample validation: **SUFFICIENT FOR ARCHITECTURE REVIEW**
 - Technical Planning: **NOT STARTED**
