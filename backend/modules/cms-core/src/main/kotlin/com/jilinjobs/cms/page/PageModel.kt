@@ -49,23 +49,23 @@ data class PageDraft(
     val alias: String,
     val name: String,
     val bodyHtml: String = "",
-    val contentModel: PageContentModel? = null,
-    val rendererKey: String? = null,
-    val contentOwner: PageContentOwner? = null,
-    val structuredContent: PageStructuredContent? = null,
     /** Compatibility input for clients created before EU-55. */
     val renderMode: PageRenderMode? = null,
     val embedUrl: String? = null,
     val sortOrder: Int = 0,
     val enabled: Boolean = true,
+    val contentModel: PageContentModel? = null,
+    val rendererKey: String? = null,
+    val contentOwner: PageContentOwner? = null,
+    val structuredContent: PageStructuredContent? = null,
 )
 
 data class PageContentDraft(
     val bodyHtml: String = "",
-    val structuredContent: PageStructuredContent? = null,
     /** Compatibility input. Contract switching remains forbidden for preset Pages. */
     val renderMode: PageRenderMode? = null,
     val embedUrl: String? = null,
+    val structuredContent: PageStructuredContent? = null,
 )
 
 data class PublicPageMember(val alias: String, val name: String, val href: String, val sortOrder: Int)
