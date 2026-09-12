@@ -8,11 +8,14 @@
 
 ```text
 dygapp/agentic-dev
-Validation Baseline: master@d9fad0da83dbdb61cac5eb9778b0258c6861eef1
+Previous Evaluated Baseline: d9fad0da83dbdb61cac5eb9778b0258c6861eef1
+Current Evaluated Baseline: 2fe193035c629f6b8805fd473bd322f70fe6e172
 Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be6b8535b3690daf3533ee22a46
 ```
 
-普通开发优先读取 Consumer-local `AGENTS.md`、`README.md`、`docs/README.md`、`docs/work/current/README.md`、`docs/project/development-method.md`、本 Roadmap 与当前 Requirement / Specification / Technical Plan。Planning / Requirement Candidate 在 `slice-work` 前不具有 Execution Unit 身份；只有 `slice-work` 形成 Candidate Execution Unit 且 `readiness-check` PASS 后才允许进入 Execute。Roadmap 顺序、Issue 编号、EU 名称或模型评审结果都不能替代 Readiness。
+Evaluated Baseline 只记录本 Consumer 最近完成 exact compare / adoption verification 的 upstream frontier，不表示对应 upstream Project state、Research / Eval、self-adoption instance 或全部资源被 Consumer 采用。当前长期资产的真实 owner / provenance 继续由 Consumer-local Authority 单点承担；V3-08 Track B 的 upgrade-only disposition / validation history 见 `docs/project/agentic-dev-v3-08-track-b-evidence.md`，普通 Fresh Context 不默认读取该 evidence。
+
+普通开发优先从 Consumer-local `AGENTS.md`、根 `README.md` 到达 `docs/README.md` Local Discovery Entry，再按 state-only / routing-only / execution 选择最小必要 owner。普通运行不自动访问 `agentic-dev` upstream；本地 locator / owner / supersede / ambiguity 失败时先 local fail closed。Planning / Requirement Candidate 在 `slice-work` 前不具有 Execution Unit 身份；只有 `slice-work` 形成 Candidate Execution Unit 且 `readiness-check` PASS 后才允许进入 Execute。Roadmap 顺序、Issue 编号、EU 名称或模型评审结果都不能替代 Readiness。
 
 ## 总体路线
 
@@ -28,6 +31,7 @@ Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be
 | EU-52 Main Page Formal Content Package Adoption | **COMPLETED** | 10 formal Pages + Page-owned assets + guarded Existing-Site adoption 已完成并通过 Post-Integration closure；Execute Authority terminated |
 | EU-53 Main ListItem Bootstrap Completion | **COMPLETED** | Main `HOME_CAROUSEL=1` 与 96 条已审核 SITE_LINKS 已通过现有一次性 bootstrap SQL 固化并完成 Post-Integration closure；Execute Authority terminated |
 | EU-54 Rich Text V2 Mature Editor Adoption | **COMPLETED** | Article `INTERNAL` / Page `RICH_TEXT` 已采用 `suneditor@3.3.3` thin adapter；P1/P2 compatibility、HTML safety、Review Environment、bounded Windows + WPS Human Review 与 Post-Integration closure 已完成；Execute Authority terminated |
+| agentic-dev V3-08 Track B baseline adoption | **durable method upgrade** | evaluated upstream frontier 从 `d9fad0da...` 推进到 `2fe19303...`；采用 Consumer Lifecycle / Resource Model / Local Discovery / Skill identity 语义，现有 Consumer owner 保留，Reviewed Discovery Map / Runtime View 不建立；不授予产品 Execute Authority |
 | Deferred problem Article review | deferred | 230 篇 problem Article 与 6 篇 source-defect Article 保持独立 evidence / client-review backlog，不阻断其他路线 |
 | Repository Split Readiness Assessment | deferred | 四层 boundary 已闭环，但 Assessment 仍独立后置 |
 | Issues #57 / #59 / #60 / #137 其他候选 | 规划层保留 | Public Rendering、Browser Compatibility、Loading / Mobile Review、Page Content Architecture 等保持独立 Planning / Review 边界 |
