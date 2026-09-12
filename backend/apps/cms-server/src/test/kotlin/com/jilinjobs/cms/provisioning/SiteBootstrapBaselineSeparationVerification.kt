@@ -167,7 +167,7 @@ private fun bootstrapOperationalCounts(dbUrl: String, username: String, password
     }
 
 private fun mainListItemCounts(dbUrl: String, username: String, password: String): Map<String, Int> =
-    EXPECTED_MAIN_LIST_ITEM_COUNTS.keys.associateWith { code -> listItemCount(dbUrl, dbUsername, dbPassword, code) }
+    EXPECTED_MAIN_LIST_ITEM_COUNTS.keys.associateWith { code -> listItemCount(dbUrl, username, password, code) }
 
 private fun listItemCount(dbUrl: String, username: String, password: String, listCode: String): Int =
     DriverManager.getConnection(dbUrl, username, password).use { connection ->
