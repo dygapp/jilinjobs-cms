@@ -92,6 +92,17 @@ const EDITOR_FONT_ITEMS = [
   'Arial',
   'Times New Roman',
 ]
+const EDITOR_FONT_LABELS: Record<string, string> = {
+  'Microsoft YaHei': '微软雅黑',
+  SimSun: '宋体',
+  KaiTi: '楷体',
+  FangSong: '仿宋',
+  'PingFang SC': '苹方',
+  'Noto Sans CJK SC': 'Noto 思源黑体',
+  'Source Han Sans SC': '思源黑体',
+  Arial: 'Arial',
+  'Times New Roman': 'Times New Roman',
+}
 const IMAGE_FLOAT_CLASSES = [
   '__se__float-none',
   '__se__float-left',
@@ -198,6 +209,7 @@ onMounted(() => {
   }) as unknown as SunEditorInstance
 
   applyEditorTestId()
+  applyEditorFontLabels()
   initializeLegacyPresentationBridge()
 })
 
@@ -229,6 +241,21 @@ function setEditorContents(value: string): void {
 
 function applyEditorTestId(): void {
   editorSurface()?.setAttribute('data-testid', props.testId)
+}
+
+function applyEditorFontLabels(): void {
+  const shell = target.value?.closest('.rich-text-editor-shell')
+  if (!shell) return
+
+  shell.querySelectorAll<HTMLButtonElement>('.se-list-font-family [data-command]').forEach(button => {
+    const command = button.getAttribute('data-command') || ''
+    const label = EDITOR_FONT_LABELS[command]
+    if (!label || label === command) return
+
+    button.textContent = label
+    button.title = label
+    button.setAttribute('aria-label', label)
+  })
 }
 
 function readLegacyPresentationStates(html: string): void {
