@@ -1,18 +1,17 @@
 # Current Work
 
-Current Ready / active Execution Unit：**EU-55 — Structured Page Card Adoption**。
+Current Ready Execution Unit：**NONE**。
 
-Current work artifact：
+EU-55 — Structured Page Card Adoption 已完成 Planning / Readiness、Execute、exact-head verification、Review Environment、bounded Human Review、Integration 与 Post-Integration verification，并终止 Execute Authority。Completed Work Evidence：
 
-- `eu55-structured-page-card-adoption.md`
+- `../archive/eu55-structured-page-card-adoption.md`
 
-Readiness：**PASS**。
-Execute Authority：**GRANTED for EU-55 only**。
-Execute baseline：`main@17288b40af98084905c9f7b6ed24d5e3a7c7fb71`。
-Implementation branch：`feature/eu-55-structured-page-card-adoption`。
+EU-55 accepted result：Generic Page 已采用正交 `contentModel` / `rendererKey` / `contentOwner` 与 Page-owned versioned Structured payload；`guide/jypq` 以 `CARD_COLLECTION` V1 + `JILINJOBS_GUIDE_CARDS` 成为首个正式 Structured Page，保留 3 张卡片与 4 张 package 图片，默认折叠并支持独立展开/收起，Structured card 图片保持响应式居中；Site Package 的 exact predecessor adoption / operator divergence protection / idempotency 与 Rich Page compatibility 均已验证。
 
-本文件是 `docs/work/README.md` 定义的 **Current Execution Lifecycle Locator**。EU-55 在完成 Execute / Verification / Integration / Post-Integration closure 前保持 active；详细 Scope、Acceptance、Readiness 与 Stage Return 以 current work artifact 为准。
+当前没有 active / Ready Execution Unit。任何 Roadmap / Open Issue / backlog / historical candidate 均不会因 EU-55 完成自动获得 Planning、Readiness 或 Execute Authority。
 
-Fresh Context 必须继续核对 Open execution PR / branch、当前 exact Head、Readiness Current Evidence 与本 locator。若 locator、active artifact 或 GitHub Current Evidence 冲突、缺失或发生不可安全解释的 base drift，按 `docs/work/README.md` fail closed，不得继承旧 Head 的 Execute 判断。
+Main historical migration execution 继续冻结：`data-migrations/main/**` 的已接受 canonical evidence 保留不变，只有项目负责人明确开启独立 Main migration process 后才允许重新激活。Party migration 能力不受 EU-55 影响。
 
-Main historical migration execution 继续冻结；Party migration 能力不受 EU-55 影响。
+如果 Fresh Context 的当前用户目标仅为状态恢复 / 检查 / 总结，完成当前 Repository Authority 与必要 GitHub Current Evidence 的只读核验后即停止；不得仅因发现 non-blocking documentation drift 自动创建新的 Branch / PR / Workflow 生命周期。详细护栏见 `../../project/execution-scope-guardrails.md`。
+
+下一自然 Gate 是新的 **Fresh Context Planning/Readiness decision**。任何后续工作都必须从当前 Repository Authority 重新完成必要状态链，不得继承 EU-55 或任何已完成 Unit 的 Execute Authority。
