@@ -4,7 +4,24 @@
 
 `jilinjobs-cms` 是吉林省智慧就业云平台中“信息发布与网站服务”相关能力的独立 Consumer 项目。
 
-中心党建正式页面、真实栏目、历史内容迁移与最终 Review 已由 EU-26～EU-29 收敛完成；EU-30～EU-42、Issue #92 Phase 0～Phase 3、Phase 2A / EU-46、Phase 2B / EU-47、Phase 2C / EU-48、E2 / EU-49、E3 / EU-50～EU-51、EU-52，以及 **EU-53 — Main ListItem Bootstrap Completion** 均已完成并终止各自 Execute Authority。EU-53 implementation PR #130 已从 exact Head `10449bedf4df38aa2daec99b80d0a9637df2f8db` squash 集成到 `main@b1130b110bccdb1565c340a6cce62504ec06a87a`；Main `HOME_CAROUSEL = 1` 与 EU-50 已审核确认的 96 条 SITE_LINKS（`SITE_RELATED = 5`、`SITE_REGIONAL_GRADUATES = 31`、`SITE_JILIN_UNIVERSITIES = 60`）已通过现有 Site Package one-time bootstrap SQL 固化，Post-Integration verification PASS。随后 PR #131 已完成 EU-53 Authority / Work closure。**Current Ready Execution Unit = NONE；EU-53 Execute Authority = TERMINATED。** Party ListItem / `PARTY_CAROUSEL` 继续由 Party migration/current Party Authority 管理；230 篇 deferred problem Articles 与 6 篇 source-defect Articles继续后置独立处理；“每栏目仅迁移最新 20 条”也未成为当前 Article Authority。Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层架构边界。后续工作只允许从当前 GitHub Planning / Requirement Candidates 重新完成状态链后进入，不得继承 EU-53 或其他已完成 Unit 的 Execute Authority。Roadmap 顺序、Issue 编号、模型评审或未来 EU 名称都不能替代该状态链。Documentation Authority Map 统一由 `docs/README.md` 承载；`docs/**/archive/**` 与 `docs/work/archive/**` 默认不参与 Fresh Context Current Authority 恢复。不得从其他项目、其他会话、个人记忆、旧预编号路线、惯例或实现便利性中推导、补充或扩大本项目的产品范围。
+本文件只维护 Repository Governance、Authority Boundary、Knowledge Boundary、Development Method adoption、Human Escalation 与 GitHub operation rules，不缓存某个 Execution Unit 的高频 Current Gate。已完成里程碑、持久路线与后续 Planning directions 由 Project Roadmap 维护；Current Execution Lifecycle 由 `docs/work/` 的专门 locator / lifecycle contract 管理。Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层长期架构边界。Documentation Authority Map 统一由 `docs/README.md` 承载；`docs/**/archive/**` 与 `docs/work/archive/**` 默认不参与 Fresh Context Current Authority 恢复。不得从其他项目、其他会话、个人记忆、旧预编号路线、惯例或实现便利性中推导、补充或扩大本项目的产品范围。
+
+## Current State ownership 与 locator
+
+Current State 按职责分层，不建立第二套 Current State truth：
+
+- `AGENTS.md`：稳定 Repository rules / Authority Boundary；
+- 根 `README.md`：稳定项目入口与范围；
+- `docs/README.md`：Documentation Authority Map；
+- `docs/work/README.md`：Ready / active Execution Unit 的 Entry / Exit / fail-closed lifecycle contract；
+- `docs/work/current/README.md`：Repository-owned **Current Execution Lifecycle Locator**；
+- `docs/project/project-roadmap.md`：durable milestones、长期边界与 Planning directions；
+- GitHub PR / Branch / Actions：各自原生瞬时事实与 Current Evidence；
+- controlling Issue：Planning / decision / evidence timeline，不因历史 comment 中出现 `PENDING` / `PASS` / `Current Evidence` 字样就永久拥有 Execute Gate。
+
+Bootstrap / Roadmap surface 不并行维护 `Current Ready Execution Unit`、Readiness `PENDING/PASS`、exact implementation Head 或最近 Actions 等高频 Execute Gate 真值。Fresh Context 在使用 `docs/work/current/README.md` 的 `NONE` 作为 state-only 安全停止条件前，必须核对当前任务相关的 Open execution PR / branch 与必要 Readiness / Integration Current Evidence；`NONE` 只表示没有 Ready / active Execution Unit，不表示没有 Planning Candidate 或新的用户指定 Planning 目标。
+
+若 Current Work locator、active artifact、Readiness Evidence、Open execution work 或关键 GitHub Current Evidence之间缺失、冲突或无法消歧，必须 **fail closed**：不得进入、继续或继承 Execute Authority，先恢复一致的 Current State。GitHub 原生状态只对其职责内的瞬时事实负责；本规则**不**建立“GitHub 永远高于本地文件”的通用优先级，Requirement / Specification / Architecture / Method / Work lifecycle 继续按 Repository Authority 各自拥有其语义责任。
 
 ## 文档语言与术语表达
 
@@ -28,6 +45,8 @@
 4. 后续依据以上权威正式形成的 Specification、Architecture、Decision、Project Roadmap、Consumer-local Development Method 等项目产物（Artifact）；
 5. Code 与 Tests：用于证明当前实现状态，不得反向发明产品需求；
 6. 会话历史（Conversation History）、临时计划和 Agent reasoning：均不构成项目权威。
+
+上述优先级用于解决同一语义责任内的 Authority 冲突；对于 Current Execution Lifecycle、GitHub native status、Requirement、Specification 等不同职责，先按本文件定义的 owner / locator 读取对应事实，再处理真正的语义冲突，不把优先级表机械解释成一个 surface 可以替代其他 surface 的职责。
 
 `docs/requirements/information-publishing.md` 已由本仓库显式采纳为当前迭代的详细业务需求，但其来源文档中声明的 `relations.upstream` 以及正文引用的 `docs/project/project.md`、`docs/requirements/overview/system-module-boundaries.md` 当前并不存在于本 Consumer Repository。这些引用只保留其来源关系（Provenance / Upstream References），**不构成当前 Consumer Authority，也不得用于扩大或覆盖本仓库已明确的 Goal、Scope 与 Boundary**。只有后续被本仓库显式采纳的上游事实才可成为新的 Consumer Authority。
 
@@ -55,7 +74,7 @@
 - Validation Baseline Commit：`d9fad0da83dbdb61cac5eb9778b0258c6861eef1`
 - Capability Milestone Tag：`baseline-2026-09-04-engineering-capability` → `5be2e6aad29b2be6b8535b3690daf3533ee22a46`
 
-当前 Validation Baseline 以 `agentic-dev` 已进入默认分支的精确 commit 为准。相对上一 Consumer baseline `master@394d1c3cde04b35940d5e33b7cbcaaf6557678ce`，`master@d9fad0da83dbdb61cac5eb9778b0258c6861eef1` 只前进 1 个 Stable Maintenance 提交：没有增加 Method Stage、Engineering Discipline、Technology Profile、Task-oriented Skill 或新的 Skill Contract。本 Consumer 选择性固化 **Planning Candidate 与 Execution Unit 身份边界**：Planning / Requirement Candidate 在进入 `slice-work` 前不具有 Execution Unit 身份；Specification Ready 且必要 Technical Planning 已完成或确认不需要后，`slice-work` 形成 Candidate Execution Unit，并可以分配稳定 Identifier；Identifier 只承担追踪 / 依赖身份，不构成 Readiness PASS，也不授予 Execute 权限；只有 `readiness-check` PASS 后才成为 Ready Execution Unit。Roadmap 顺序、预编号、Issue 标签或名称中的 `EU-xx` 均不能替代该状态链。上一 baseline 已固化的 Ephemeral Evidence Promotion 与 Long-lived Review Environment owner / lease / stale-run 生命周期规则继续有效。`agentic-dev` 自身 Stable Maintenance、Issue #58、Eval、PR 与 Roadmap 状态不继承为 Consumer 项目事实。
+当前 Validation Baseline 以 `agentic-dev` 已进入默认分支的精确 commit 为准。相对上一 Consumer baseline `master@394d1c3cde04b35940d5e33b7cbcaaf6557678b0258c6861eef1`，`master@d9fad0da83dbdb61cac5eb9778b0258c6861eef1` 只前进 1 个 Stable Maintenance 提交：没有增加 Method Stage、Engineering Discipline、Technology Profile、Task-oriented Skill 或新的 Skill Contract。本 Consumer 选择性固化 **Planning Candidate 与 Execution Unit 身份边界**：Planning / Requirement Candidate 在进入 `slice-work` 前不具有 Execution Unit 身份；Specification Ready 且必要 Technical Planning 已完成或确认不需要后，`slice-work` 形成 Candidate Execution Unit，并可以分配稳定 Identifier；Identifier 只承担追踪 / 依赖身份，不构成 Readiness PASS，也不授予 Execute 权限；只有 `readiness-check` PASS 后才成为 Ready Execution Unit。Roadmap 顺序、预编号、Issue 标签或名称中的 `EU-xx` 均不能替代该状态链。上一 baseline 已固化的 Ephemeral Evidence Promotion 与 Long-lived Review Environment owner / lease / stale-run 生命周期规则继续有效。`agentic-dev` 自身 Stable Maintenance、Issue #58、Eval、PR 与 Roadmap 状态不继承为 Consumer 项目事实。
 
 上一 Capability Milestone 已包含并继续保留 **Data Access Scope & Boundedness Control（数据访问作用域与有界性控制）** Engineering Discipline；本 Consumer 继续以现有 `docs/technical/verification-strategy.md` 的作用域查询、分页窗口与边界验证规则作为项目级验证实现。Technology Profile 与当前项目依赖不因本次 baseline 升级改变。
 
