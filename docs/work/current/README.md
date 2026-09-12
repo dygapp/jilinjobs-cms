@@ -2,24 +2,16 @@
 
 Current Ready Execution Unit：**NONE**。
 
-Current Planning Candidate：**EU-54 — Rich Text V2 Mature Editor Adoption**。
+EU-54 — Rich Text V2 Mature Editor Adoption 已完成 Planning / Readiness、Execute、exact-head verification、Review Environment、bounded Windows + WPS Human Review、Integration 与 Post-Integration verification，并终止 Execute Authority。Completed Work Evidence：
 
-Current Authority：
+- `../archive/eu54-rich-text-v2-mature-editor-adoption.md`
 
-- `../../requirements/rich-text-authoring.md` — V2 Requirement；
-- `../../specifications/rich-text-authoring.md` — V2 Specification；
-- `../../technical/rich-text-authoring-plan.md` — V2 Technical Plan；
-- `./eu54-rich-text-v2-mature-editor-adoption.md` — Candidate / Readiness Authority；
-- GitHub Issue #60 — Planning / Current Evidence。
+EU-54 accepted result：Article `INTERNAL` / Page `RICH_TEXT` 统一采用 `suneditor@3.3.3` thin adapter，`bodyHtml` 继续作为唯一正文 Authority；Article managed Resource association 保持不变，Page 不新增 Resource domain；P1/P2 canonical corpus compatibility、中文默认字体 / 字体控件显示、WPS / IME 与 shared HTML safety boundary 已完成验证。
 
-EU-54 由 Rich Text V2 `slice-work` 形成单一 Candidate。Planning baseline：`main@6069e493c5a330ab3a53f55fd31cccc5b14b043d`。Selection Evidence来自 closed / unmerged PR #135及 Human Review：SunEditor 3.3.3为 Primary，Jodit 4.15.0为 verified fallback。
+当前没有 active / Ready Execution Unit。Issue #57 / #59 / #60 的其他 candidates、230 篇 deferred problem Articles、6 篇 source-defect Articles、慧就业 iframe 与其他后续事项均保持独立 Planning / Review 层状态，不因 EU-54 完成自动获得 Execute Authority。
 
-**Readiness 当前仍为 PENDING，Execute Authority 尚未授予。** Planning Authority集成到 main后，新的 Fresh Context必须重新核验 main/base drift、Authority、dependency、verification path和是否已有 implementation PR；只有 `readiness-check = PASS` 后才能进入 Execute。
+Main historical migration execution 继续冻结：`data-migrations/main/**` 的已接受 canonical evidence 保留不变，原 EU-50 / EU-51 Main migration Actions workflow 继续只允许在项目负责人明确开启独立 Main migration process 后重新激活。Party migration 不在冻结范围内。
 
-本 Candidate不包含 Page Content Architecture、`就业派遣`特殊页、Page Resource association、Main historical migration reactivation、全库正文 rewrite或高级 AI/内容质检能力。
+如果 Fresh Context 的当前用户目标仅为状态恢复 / 检查 / 总结，完成当前 Repository Authority 与必要 GitHub Current Evidence 的只读核验后即停止；不得仅因发现 non-blocking documentation drift 自动创建新的 Branch / PR / Workflow 生命周期。详细护栏见 `../../project/execution-scope-guardrails.md`。
 
-Main historical migration execution继续冻结：`data-migrations/main/**`已接受 canonical evidence保持不变，只有项目负责人明确开启独立 Main migration process后才允许重新激活。Party migration不在冻结范围内。
-
-如果 Fresh Context当前目标是继续 EU-54，则从 `./eu54-rich-text-v2-mature-editor-adoption.md` 的 Readiness Check开始；不得继承 EU-53、EU-35或任何已完成 Unit的 Execute Authority。若 Readiness PASS，可在同一 implementation PR内连续完成实现、验证、Human Review准备、Integration与Post-Integration closure。
-
-详细通用护栏见 `../../project/execution-scope-guardrails.md`。
+下一自然 Gate 是新的 **Fresh Context Planning/Readiness decision**。任何后续工作都必须从当前 Repository Authority 重新完成必要状态链，不得继承 EU-54 或任何已完成 Unit 的 Execute Authority。
