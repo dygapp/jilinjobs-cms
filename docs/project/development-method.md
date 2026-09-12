@@ -2,7 +2,7 @@
 
 本文固化 `jilinjobs-cms` 在持续开发阶段实际采用的 AI Agent 开发方法、Skill 使用规则和上下文恢复规则。
 
-本文是 Consumer-local 规则。后续开发默认优先读取并遵守本仓库 `AGENTS.md`、`README.md`、`docs/README.md`、本文及其他当前 Authority；不需要在每次普通开发工作中重新读取 `dygapp/agentic-dev`。只有项目负责人明确要求升级 `agentic-dev` baseline，或当前 Consumer 文档明确无法回答方法问题时，才重新读取指定 baseline 并将需要长期保留的变化回写到本仓库。
+本文是 Consumer-local 规则。后续开发默认优先读取并遵守本仓库 `AGENTS.md`、`README.md`、`docs/README.md`、本文及其他当前 Authority；不需要在每次普通开发工作中重新读取 `dygapp/agentic-dev`。只有项目负责人明确要求升级 `agentic-dev` baseline、当前 Repository Authority 明确要求读取 / 比较 upstream，或当前任务本身是显式 `agentic-dev` Consumer experiment / validation 时，才重新读取固定 upstream ref；本地文档缺失、stale / ambiguity 或 Agent uncertainty 只触发本地 fail closed，不单独授权 upstream re-entry。
 
 ## 1. 方法来源、evaluated baseline 与 provenance
 
