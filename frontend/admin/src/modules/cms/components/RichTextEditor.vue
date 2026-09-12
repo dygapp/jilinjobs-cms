@@ -76,6 +76,9 @@ type SunEditorInstance = {
     frameContext?: {
       get?: (key: string) => HTMLElement | null
     }
+    menu?: {
+      targetMap?: Record<string, HTMLElement>
+    }
   }
 }
 
@@ -244,10 +247,10 @@ function applyEditorTestId(): void {
 }
 
 function applyEditorFontLabels(): void {
-  const shell = target.value?.closest('.rich-text-editor-shell')
-  if (!shell) return
+  const fontMenu = editor?.$.menu?.targetMap?.font
+  if (!fontMenu) return
 
-  shell.querySelectorAll<HTMLButtonElement>('.se-list-font-family [data-command]').forEach(button => {
+  fontMenu.querySelectorAll<HTMLButtonElement>('[data-command]').forEach(button => {
     const command = button.getAttribute('data-command') || ''
     const label = EDITOR_FONT_LABELS[command]
     if (!label || label === command) return
