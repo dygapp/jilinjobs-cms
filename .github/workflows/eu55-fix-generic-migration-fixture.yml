@@ -1,0 +1,64 @@
+name: EU-55 Fix Generic Migration Fixture
+
+on:
+  push:
+    branches:
+      - feature/eu-55-structured-page-card-adoption
+    paths:
+      - .github/workflows/eu55-fix-generic-migration-fixture.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: feature/eu-55-structured-page-card-adoption
+          fetch-depth: 0
+      - name: Patch V4 Generic Page fixture
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('backend/apps/content-migration/src/test/kotlin/com/jilinjobs/cms/GenericPageContentMigrationVerification.kt')
+          s = p.read_text(encoding='utf-8')
+          old = '''            INSERT INTO cms_page(group_id,alias,name,body_html,render_mode,embed_url,sort_order,enabled,preset)
+            VALUES (NULL,'about','Verification About','<p>About placeholder</p>','RICH_TEXT',NULL,0,1,1)'''
+          new = '''            INSERT INTO cms_page(group_id,alias,name,body_html,content_model,renderer_key,content_owner,structured_payload,embed_url,sort_order,enabled,preset)
+            VALUES (NULL,'about','Verification About','<p>About placeholder</p>','RICH_TEXT','RICH_TEXT','OPERATOR',NULL,NULL,0,1,1)'''
+          if s.count(old) != 1:
+              raise SystemExit(f'about seed occurrence count={s.count(old)}')
+          s = s.replace(old, new)
+          old = '''            INSERT INTO cms_page(group_id,alias,name,body_html,render_mode,embed_url,sort_order,enabled,preset)
+            SELECT id,'guide','Verification Guide','<p>Guide placeholder</p>','RICH_TEXT',NULL,0,1,1
+            FROM cms_page_group WHERE alias='docs' '''.rstrip()
+          new = '''            INSERT INTO cms_page(group_id,alias,name,body_html,content_model,renderer_key,content_owner,structured_payload,embed_url,sort_order,enabled,preset)
+            SELECT id,'guide','Verification Guide','<p>Guide placeholder</p>','RICH_TEXT','RICH_TEXT','OPERATOR',NULL,NULL,0,1,1
+            FROM cms_page_group WHERE alias='docs' '''.rstrip()
+          if s.count(old) != 1:
+              raise SystemExit(f'guide seed occurrence count={s.count(old)}')
+          s = s.replace(old, new)
+          old = '''            INSERT INTO cms_page(group_id,alias,name,body_html,render_mode,embed_url,sort_order,enabled,preset)
+            VALUES (NULL,'guard','Verification Guard','<p>Guard placeholder</p>','RICH_TEXT',NULL,0,1,1)'''
+          new = '''            INSERT INTO cms_page(group_id,alias,name,body_html,content_model,renderer_key,content_owner,structured_payload,embed_url,sort_order,enabled,preset)
+            VALUES (NULL,'guard','Verification Guard','<p>Guard placeholder</p>','RICH_TEXT','RICH_TEXT','OPERATOR',NULL,NULL,0,1,1)'''
+          if s.count(old) != 1:
+              raise SystemExit(f'guard seed occurrence count={s.count(old)}')
+          s = s.replace(old, new)
+          if 'render_mode' in s[s.index('private fun seedPageTargets'):s.index('private data class PageRuntimeState')]:
+              raise SystemExit('legacy render_mode remains in seedPageTargets')
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit repair and remove helper
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/eu55-fix-generic-migration-fixture.yml
+          git add backend/apps/content-migration/src/test/kotlin/com/jilinjobs/cms/GenericPageContentMigrationVerification.kt
+          git diff --cached --check
+          git commit -m "test: align Generic Page migration fixture with V4"
+          git push origin HEAD:feature/eu-55-structured-page-card-adoption
