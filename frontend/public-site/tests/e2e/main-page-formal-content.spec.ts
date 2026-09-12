@@ -73,7 +73,11 @@ test('guide/jypq renders the accepted three-card Structured contract and four pa
   }
 
   await expect(page.locator('[data-unsupported-renderer]')).toHaveCount(0)
-  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', /\/page\/guide\/jypq$/)
+  await expect(page).toHaveURL(/\/page\/guide\/jypq$/)
+  const canonicalResponse = await request.get('/api/public/page-groups/guide/jypq')
+  expect(canonicalResponse.ok()).toBeTruthy()
+  const canonicalPage = await canonicalResponse.json() as { canonicalUrl: string }
+  expect(canonicalPage.canonicalUrl).toBe('/page/guide/jypq')
 })
 
 test('ordinary Rich Page remains on the explicit Rich renderer', async ({ page }) => {
