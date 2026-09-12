@@ -99,6 +99,14 @@ Projection content head before this evidence record：
 516243ec07ee8c538d5b1850e35b609dcc5d8d85
 ```
 
+PR exact-head review 发现并修复 ordinary-runtime upstream re-entry 冲突后的 projection head：
+
+```text
+9b08f9c67d58bb25b3f34d51c3b119d79bc6a2db
+```
+
+`3638e7c1a2bbecdab69a49295b288a65cc69dd91..9b08f9c67d58bb25b3f34d51c3b119d79bc6a2db` exact compare 只有 `docs/project/development-method.md` 1 addition / 1 deletion；没有带入额外 scope。
+
 Modified long-lived Consumer assets：
 
 - `AGENTS.md`；
@@ -207,7 +215,9 @@ Consumer 没有复制 upstream physical Skill directory；这里的 primary Skil
 
 ### B-09 Local-only ordinary runtime — PASS
 
-Candidate 投射完成后，state / routing / execution 所需长期规则均有 Consumer-local owner。`agentic-dev` 只在显式 baseline upgrade / experiment / Repository-authorized re-entry 时读取；upstream 新 commit、local discovery stale 或 Agent uncertainty 不自动触发 upstream fallback。
+Candidate 投射完成后，state / routing / execution 所需长期规则均有 Consumer-local owner。`agentic-dev` 只在显式 baseline upgrade、Repository-authorized upstream re-entry 或显式 Consumer experiment / validation 时读取；upstream 新 commit、local discovery stale / missing / ambiguity 或 Agent uncertainty 不自动触发 upstream fallback。
+
+PR #141 首轮 exact-head diff review 发现 Development Method 开头仍保留旧句“当前 Consumer 文档明确无法回答方法问题时可重读 upstream”，与本节和 B-10 冲突，分类为 **Medium candidate**。已在 `9b08f9c...` 修复：只有显式 upgrade / Repository Authority / explicit experiment-validation 才允许 upstream re-entry；local missing / stale / ambiguity / uncertainty 仅触发 local fail closed。该修复相对上一 exact head 只有 1 addition / 1 deletion，复核后 B-09 恢复 PASS。
 
 ### B-10 Fail-closed — PASS
 
@@ -221,7 +231,7 @@ Candidate 投射完成后，state / routing / execution 所需长期规则均有
 | no-match + governance / verification risk | 明确 fail closed，不把 no-match 当成“无规则” | PASS |
 | current owner / override / supersede conflict | 回到 Consumer Repository Authority 解析；无法协调则不执行 / 不继承 authority | PASS |
 
-所有 fail-closed scenario 都禁止 ordinary runtime 自动打开 upstream 作为隐式修补路径。
+所有 fail-closed scenario 都禁止 ordinary runtime 自动打开 upstream 作为隐式修补路径。`9b08f9c...` 已同时消除 Development Method 顶部与本规则的内部冲突。
 
 ### B-11 Context cost — PASS with correctness preserved
 
@@ -253,25 +263,28 @@ bootstrap document bytes          37,828 bytes
 
 Raw bootstrap bytes 减少 `53,248`（约 58%）只是 secondary cost signal，不替代 correctness。Correctness check 同时确认：Current Work locator unchanged、Open execution evidence reconciliation retained、`NONE` 不推导无 Planning Candidate、conflict / missing state 继续 fail closed。
 
-Routing-only 也不再因为固定 Fresh Context 顺序机械读取完整 37.5KB / 41.7KB Method；只有 execution 或 method-specific routing 才按需读取相应 section / owner。
+Routing-only 也不再因为固定 Fresh Context 顺序机械读取完整 Method；只有 execution 或 method-specific routing 才按需读取相应 section / owner。
 
 ## 9. Base drift / conflict recheck
 
-Candidate validation 时重新检查：
+Candidate validation 与 PR #141 首轮 exact-head review 时重新检查：
 
 ```text
 main = 72fea274b34c40ef40b09fd3e3a7c2ddc44cb838
-Open PR = 0
+PR #141 base = main@72fea274b34c40ef40b09fd3e3a7c2ddc44cb838
 candidate branch ahead of start main
 ```
 
-没有 start-after drift，也没有新的 conflicting product Execute lifecycle。
+没有 start-after drift，也没有新的 conflicting product Execute lifecycle。PR #141 在 GitHub 重新计算后 `mergeable = true`。
+
+首轮 PR exact head `3638e7c1a2bbecdab69a49295b288a65cc69dd91` 没有 workflow run / commit status。仓库 `.github/workflows/ci.yml` 对 Markdown / `docs/**` 使用 `paths-ignore`；因此本 Track 不把“没有 CI”描述为 PASS，而以 exact diff、Authority consistency、Current State ownership、baseline/provenance separation、local discovery routing 与 fail-closed semantics 作为当前文档变更的匹配验证。
 
 ## 10. Candidate findings
 
-Resolved during candidate validation：
+Resolved during candidate validation / exact-head review：
 
-- **Medium candidate — Bootstrap routing conflict**：root `README.md` 旧 fixed recovery order 会强制 state-only 继续 Roadmap + Method，削弱 progressive discovery。已修复并复核。
+- **Medium candidate — Bootstrap routing conflict**：root `README.md` 旧 fixed recovery order 会强制 state-only 继续 Roadmap + Method，削弱 progressive discovery。已在 `516243ec...` 修复并复核。
+- **Medium candidate — ordinary-runtime upstream re-entry conflict**：Development Method 开头旧 fallback 允许“Consumer 文档无法回答”单独触发 upstream，与 local-only / fail-closed 相冲突。已在 `9b08f9c...` 修复并通过 exact compare 确认只产生 1 addition / 1 deletion。
 
 Remaining：
 
