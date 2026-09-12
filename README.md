@@ -19,14 +19,13 @@ Main historical migration execution 当前保持 **FROZEN / explicit reactivatio
 
 ## Repository Authority 与 Fresh Context
 
-Fresh Context 按稳定入口恢复，避免 Bootstrap 文件复制高频 Execute Gate：
+Fresh Context 先通过稳定 Bootstrap 到达 Consumer-local discovery，再按当前目标加载最小必要 owner，避免 Bootstrap 文件复制高频 Execute Gate 或机械预加载完整 Method：
 
 1. `AGENTS.md`：Repository Governance、Authority Boundary、Fresh Context 与操作规则；
 2. 本 `README.md`：稳定项目入口与范围；
-3. `docs/README.md`：Documentation Authority Map；
-4. `docs/work/current/README.md` + 当前 Open PR / Branch：解析 Current Execution Lifecycle；
-5. `docs/project/project-roadmap.md` 与 `docs/project/development-method.md`：持久路线与 Consumer-local Method；
-6. 当前任务直接相关的 Requirement / Specification / Technical / Architecture Authority，以及 controlling Issue / PR / Actions Current Evidence。
+3. `docs/README.md`：Documentation Authority Map / Local Discovery Entry；
+4. 由 `docs/README.md` 根据当前请求选择 state-only / routing-only / execution 路径；Current Execution State 需要时读取 `docs/work/current/README.md` 并协调当前 Open execution PR / Branch 与必要 GitHub Current Evidence；
+5. 只有当前目标需要 durable planning、method routing 或实际 execution 时，才按需读取 `docs/project/project-roadmap.md`、`docs/project/development-method.md` 以及当前 Requirement / Specification / Technical / Architecture Authority、controlling Issue / PR / Actions Current Evidence。
 
 `docs/**/archive/**` 与 `docs/work/archive/**` 默认只承担 traceability / historical evidence，不参与 Fresh Context Current Authority 恢复，除非当前 Authority 明确要求读取。
 
@@ -34,7 +33,7 @@ Fresh Context 按稳定入口恢复，避免 Bootstrap 文件复制高频 Execut
 
 GitHub PR / Branch / Actions 只对其各自原生瞬时事实负责；这不建立“GitHub 永远高于本地文件”的通用规则。Fresh Context 必须协调 Work locator、当前 Open execution work、Readiness Evidence 与任务 Authority；缺失、冲突或歧义时 fail closed，不得授予或继承 Execute Authority。
 
-当前执行作用域护栏见 `docs/project/execution-scope-guardrails.md`。当用户目标仅为 Repository 状态恢复 / 检查 / 总结，且上述 Current State 协调结果为 `Current Ready / active Execution Unit = NONE` 时，默认在完成只读状态报告后停止；`NONE` 不表示没有 Planning Candidate，也不得因此自动创建新的 Branch / PR / Workflow 生命周期。高成本验证与 Historical Migration 只在当前变更和 Evidence Claim 确实需要时升级执行。
+当前执行作用域护栏见 `docs/project/execution-scope-guardrails.md`。当用户目标仅为 Repository 状态恢复 / 检查 / 总结，且 `docs/README.md` 定义的 state-only 路径协调结果为 `Current Ready / active Execution Unit = NONE` 时，默认在完成只读状态报告后停止；`NONE` 不表示没有 Planning Candidate，也不得因此自动创建新的产品 Planning / Branch / PR / Workflow 生命周期。高成本验证与 Historical Migration 只在当前变更和 Evidence Claim 确实需要时升级执行。
 
 ## 主要目录
 
@@ -50,7 +49,7 @@ GitHub PR / Branch / Actions 只对其各自原生瞬时事实负责；这不建
 ## 开发与验证入口
 
 - Repository 工作规则：`AGENTS.md`；
-- Documentation Authority Map：`docs/README.md`；
+- Local Discovery Entry / Documentation Authority Map：`docs/README.md`；
 - Current execution locator：`docs/work/current/README.md`；
 - Work lifecycle：`docs/work/README.md`；
 - Consumer-local Development Method：`docs/project/development-method.md`；
