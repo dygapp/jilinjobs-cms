@@ -1,15 +1,18 @@
 # Documentation Authority Map
 
-本文件是 `jilinjobs-cms` 的 Documentation Information Architecture 入口。它说明各文档区的责任与 Fresh Context 恢复顺序，但不替代 `AGENTS.md`、产品 Requirement、Roadmap 或 GitHub Current Evidence。
+本文件是 `jilinjobs-cms` 的 Documentation Information Architecture 入口。它说明各文档区的责任与 Fresh Context 恢复顺序，但不替代 `AGENTS.md`、产品 Requirement、Roadmap、Work lifecycle 或 GitHub Current Evidence。
 
 ## Fresh Context 恢复顺序
 
 1. 根 `AGENTS.md`：Repository Governance、Authority Boundary、Fresh Context、Human Escalation 与 GitHub 操作授权；
-2. 根 `README.md`：稳定项目入口、当前 Planning / Execute Gate；
-3. `docs/project/project-roadmap.md`：当前阶段、长期边界与下一 Gate；
-4. `docs/project/development-method.md`：Consumer-local Development Method；
-5. 当前任务直接相关的 Current Requirement / Specification / Technical / Architecture Authority；
-6. 当前控制 Issue、Open PR / Actions、Ready Execution Unit 与 Current Evidence。
+2. 根 `README.md`：稳定项目入口、范围与 Current State locator；
+3. `docs/work/current/README.md` + 当前 Open PR / Branch：解析是否存在 Ready / active Execution Unit；
+4. `docs/project/project-roadmap.md`：恢复持久路线、长期边界与 Planning directions；
+5. `docs/project/development-method.md`：Consumer-local Development Method；
+6. 当前任务直接相关的 Current Requirement / Specification / Technical / Architecture Authority；
+7. 当前 controlling Issue、PR / Actions 与其他 Current Evidence。
+
+`docs/work/current/README.md` 只拥有 **Current Execution Lifecycle** 的 Repository locator 语义，不拥有 Planning Candidate 排序或完整 Roadmap。其 `NONE` 只有在完成 Open execution PR / branch 与必要 Current Evidence 协调后，才能用于 state-only 安全停止；不得从 `NONE` 推导“没有 Planning Candidate”。详细 Entry / Exit / fail-closed 契约见 `docs/work/README.md`。
 
 `archive/**` 默认不在 Fresh Context Current Authority 恢复集合中。只有当前 Authority、追溯/审计任务或 Verification 明确要求时才读取 archive。
 
@@ -22,7 +25,8 @@
 | `docs/specifications/` | Current / Partially Current WHAT / WHY contracts | 读取当前任务相关项 |
 | `docs/technical/` | Current / Partially Current Technical Authority、plans、verification strategy | 读取当前任务相关项 |
 | `docs/architecture/` | 长期 Architecture Decisions / ADR | 按任务读取 |
-| `docs/work/current/` | 当前已通过 Readiness、仍处于 Execute / Verification / Integration 生命周期的 work artifact | 存在 Ready / active unit 时读取 |
+| `docs/work/current/README.md` | Current Execution Lifecycle Locator；Ready / active Unit 定位与 `NONE` 语义 | Fresh Context 必读 |
+| `docs/work/current/*.md` | 已通过 Readiness、仍处于 Execute / Verification / Integration / Post-Integration closure 的 active work artifact | locator 指向或 Open execution work 存在时读取 |
 | `docs/work/archive/` | 已完成 Execution Units、历史计划、执行与验证 evidence | 默认不读取 |
 | 各分类 `archive/` | `SUPERSEDED` / `HISTORICAL_EVIDENCE` 文档 | 默认不读取 |
 
@@ -37,6 +41,21 @@ Phase 1 使用四类语义角色：
 
 物理 archive 只接收已明确为 `SUPERSEDED` / `HISTORICAL_EVIDENCE` 的文档。不得按年龄、EU 编号或“看起来旧”把 `PARTIALLY_CURRENT` 文件机械归档。
 
+## Stable Authority 与 high-frequency Current Evidence
+
+Bootstrap / long-lived surface 只维护稳定职责与 locator：
+
+- `AGENTS.md`：Repository Governance / Authority / operation boundary；
+- 根 `README.md`：稳定项目入口与 scope；
+- 本文件：Documentation IA / locator；
+- Project Roadmap：持久路线、长期边界、durable milestone；
+- `docs/work/README.md`：Execution lifecycle contract；
+- `docs/work/current/README.md`：Current Execution Lifecycle Locator。
+
+这些稳定 surface 不应并行复制高频变化的 `Current Ready Execution Unit`、Readiness `PENDING/PASS`、exact implementation Head 或 Actions result。Issue body / comment 可以承载 Planning 与 Current Evidence，但旧 comment 只是历史 evidence；它不会因为包含“Current Evidence”字样就永久成为当前 Execute Gate。
+
+GitHub PR / Branch / Actions 对其各自原生瞬时状态负责；这不构成“GitHub 永远高于本地文件”的通用规则。Requirement、Specification、Architecture、Method、Work lifecycle 与 GitHub Current Evidence 仍按各自 Authority 责任协调。若 Current Work locator、active artifact、Readiness Evidence 或 GitHub native state 缺失、冲突或无法消歧，必须 fail closed，不得授予或继承 Execute Authority。
+
 ## Current Authority 入口
 
 - Requirement：`docs/requirements/README.md`
@@ -44,41 +63,12 @@ Phase 1 使用四类语义角色：
 - Technical：`docs/technical/README.md`
 - Architecture：`docs/architecture/README.md`
 - Work lifecycle：`docs/work/README.md`
+- Current execution locator：`docs/work/current/README.md`
 - Current Roadmap：`docs/project/project-roadmap.md`
 - Consumer-local Method：`docs/project/development-method.md`
 - Phase 1 classification / convergence authority：`docs/project/documentation-authority-convergence.md`
 - Issue #92 completed convergence traceability：`docs/project/pre-e1e3-convergence-plan.md` + closed GitHub Issue #92
 
-### Current Issue #60 Main Site Formal Content Authority
-
-Issue #60 当前阶段性结果：E1 Planning / Authority closure 已完成；E2 / EU-49 foundation 已完成；E3 / EU-50～EU-51 accepted Article sequence 已完成；EU-52 Main Page Formal Content Package Adoption 与 **EU-53 Main ListItem Bootstrap Completion** 均已完成并终止 Execute Authority。
-
-EU-53 current result：
-
-- Planning / Readiness PR #129 已集成到 `main@26a772928278754f478b38742423fc7b71b1f439`；
-- implementation PR #130 final Head：`10449bedf4df38aa2daec99b80d0a9637df2f8db`；
-- implementation integrated main：`b1130b110bccdb1565c340a6cce62504ec06a87a`；
-- exact-head CI #987、Site Package #109、Backend Boundary #42、EU-51 Runtime #22、EU-51 Browser #18、Review Environment #865：**PASS**；
-- Post-Integration CI #988 / run `34484030549`、Site Package #110、Backend Boundary #43：**PASS**；
-- accepted Main ListItem result：`HOME_CAROUSEL = 1`，`SITE_RELATED = 5`，`SITE_REGIONAL_GRADUATES = 31`，`SITE_JILIN_UNIVERSITIES = 60`，通过现有 Site Package one-time bootstrap SQL 初始化；
-- Party ListItem / `PARTY_CAROUSEL` 未进入 Main bootstrap，继续由 Party migration/current Party Authority 管理；
-- EU-53 Completed Work Evidence：`docs/work/archive/eu53-main-listitem-bootstrap-completion.md`；
-- 230 deferred + 6 source-defect Articles：独立 later-review / customer-confirmation boundary；
-- Current Ready Execution Unit：**NONE**。
-
-Current planning / product Authority：
-
-- `docs/project/main-site-formal-content-plan.md`
-- `docs/requirements/main-single-page-formal-content.md`
-- `docs/specifications/main-single-page-formal-content.md`
-- `docs/technical/main-single-page-formal-content.md`
-- `docs/requirements/main-historical-content-migration.md`
-- `docs/specifications/main-historical-content-migration.md`
-- `docs/technical/main-historical-content-migration.md`
-- `docs/requirements/main-stable-listitem-site-package.md`
-- `docs/specifications/main-stable-listitem-site-package.md`
-- `docs/technical/main-stable-listitem-site-package.md`
-
-下一自然 Gate 是新的 Fresh Context Planning/Readiness decision；不得从 EU-53 completion 自动进入 deferred Article、慧就业 iframe 或其他 successor Unit。
+Planning / product Authority 必须按当前任务从 Requirement / Specification / Technical / controlling Issue 重新定位；本 Documentation Map 不再缓存某个 Issue 的短期 Current Gate、Ready Unit 或最近 implementation SHA。
 
 `data-migrations/**` 是 Historical Content Migration 的 current data/provenance workspace，不属于 documentation archive；“历史内容”不等于 `HISTORICAL_EVIDENCE`。

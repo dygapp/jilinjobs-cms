@@ -15,61 +15,26 @@
 
 当前产品范围、行为与验收标准不得从本 README 的摘要反向扩展；详细 Authority 由 `AGENTS.md` 与 `docs/README.md` 指向的 Current documents 决定。
 
+Main historical migration execution 当前保持 **FROZEN / explicit reactivation only**：既有 `data-migrations/main/**` canonical evidence 保留，普通开发流程不得自行重新激活 Main migration；Party migration 不在该冻结范围内。
+
 ## Repository Authority 与 Fresh Context
 
-Fresh Context 按以下入口恢复，避免把历史执行记录当作当前 Authority：
+Fresh Context 按稳定入口恢复，避免 Bootstrap 文件复制高频 Execute Gate：
 
 1. `AGENTS.md`：Repository Governance、Authority Boundary、Fresh Context 与操作规则；
-2. 本 `README.md`：稳定项目入口与当前 Planning / Execute Gate；
+2. 本 `README.md`：稳定项目入口与范围；
 3. `docs/README.md`：Documentation Authority Map；
-4. `docs/project/project-roadmap.md` 与 `docs/project/development-method.md`：当前路线与 Consumer-local Method；
-5. 当前任务直接相关的 Requirement / Specification / Technical Authority、GitHub Issue / PR / Actions 与 Ready Execution Unit。
+4. `docs/work/current/README.md` + 当前 Open PR / Branch：解析 Current Execution Lifecycle；
+5. `docs/project/project-roadmap.md` 与 `docs/project/development-method.md`：持久路线与 Consumer-local Method；
+6. 当前任务直接相关的 Requirement / Specification / Technical / Architecture Authority，以及 controlling Issue / PR / Actions Current Evidence。
 
 `docs/**/archive/**` 与 `docs/work/archive/**` 默认只承担 traceability / historical evidence，不参与 Fresh Context Current Authority 恢复，除非当前 Authority 明确要求读取。
 
-当前执行作用域护栏见 `docs/project/execution-scope-guardrails.md`。当用户目标仅为 Repository 状态恢复 / 检查 / 总结，且恢复结果为 `Current Ready Execution Unit = NONE` 时，默认在完成只读状态报告后停止，不因非阻塞文档漂移自动创建新的 Branch / PR / Workflow 生命周期；高成本验证与 Historical Migration 只在当前变更和 Evidence Claim 确实需要时升级执行。
+根 README **不维护** `Current Ready Execution Unit`、Readiness `PENDING/PASS`、exact execution Head 或最近 Actions 等高频状态。Current Execution Lifecycle 的 Repository locator 统一为 `docs/work/current/README.md`，其 Entry / Exit / fail-closed 契约由 `docs/work/README.md` 定义。Project Roadmap 只维护 durable milestones、长期边界和 Planning directions，不作为 Execute Gate 缓存。
 
-## 当前 Gate
+GitHub PR / Branch / Actions 只对其各自原生瞬时事实负责；这不建立“GitHub 永远高于本地文件”的通用规则。Fresh Context 必须协调 Work locator、当前 Open execution work、Readiness Evidence 与任务 Authority；缺失、冲突或歧义时 fail closed，不得授予或继承 Execute Authority。
 
-Issue #92 Phase 0～Phase 3、E1 Planning closure、E2 / EU-49、E3 / EU-50～EU-51、EU-52 Main Page Formal Content Package Adoption，以及 **EU-53 Main ListItem Bootstrap Completion** 均已完成相应当前闭环。
-
-```text
-EU-52 Main Page Formal Content Package Adoption
-   └─ COMPLETED / Execute Authority TERMINATED
-
-EU-53 Main ListItem Bootstrap Completion
-   └─ COMPLETED / Execute Authority TERMINATED
-
-Deferred Article review
-   └─ 230 problem + 6 source-defect / independent later review
-```
-
-当前状态：
-
-- EU-49～EU-53：**COMPLETED / Execute Authority TERMINATED**；
-- EU-53 implementation PR #130 final Head `10449bedf4df38aa2daec99b80d0a9637df2f8db` 已 squash 集成到 `main@b1130b110bccdb1565c340a6cce62504ec06a87a`；
-- Main ListItem bootstrap 已固化：`HOME_CAROUSEL = 1`、`SITE_RELATED = 5`、`SITE_REGIONAL_GRADUATES = 31`、`SITE_JILIN_UNIVERSITIES = 60`；bootstrap 后继续作为普通 operator-managed data，不新增 stable identity / reconcile；
-- Party ListItem / `PARTY_CAROUSEL` 继续由 Party migration/current Party Authority 管理，不进入 Main bootstrap；
-- Main historical migration execution 当前为 **FROZEN / explicit reactivation only**：既有 `data-migrations/main/**` canonical evidence 保留，原 EU-50 / EU-51 workflow 原样归档到 `.github/frozen-workflows/main-migration/`，普通流程不得触发；Party migration 不在冻结范围内；
-- exact-head CI #987、Site Package #109、Backend Boundary #42、EU-51 Runtime #22、Imported Browser #18 均 PASS；Post-Integration `main@b1130b...` 的 CI #988、Site Package #110、Backend Boundary #43 均 PASS；
-- 230 篇 deferred problem Articles 与 6 篇 source-defect Articles继续作为独立 later-review / customer-confirmation evidence；
-- **Current Ready Execution Unit：NONE**。
-
-Current Main formal-content Authority：
-
-- Overall plan：`docs/project/main-site-formal-content-plan.md`；
-- Main ListItem Requirement：`docs/requirements/main-stable-listitem-site-package.md`；
-- Main ListItem Specification：`docs/specifications/main-stable-listitem-site-package.md`；
-- Main ListItem Technical Plan：`docs/technical/main-stable-listitem-site-package.md`；
-- EU-53 Completed Work Evidence：`docs/work/archive/eu53-main-listitem-bootstrap-completion.md`；
-- Main Page current Requirement：`docs/requirements/main-single-page-formal-content.md`；
-- Main Page current Specification：`docs/specifications/main-single-page-formal-content.md`；
-- Main Page current Technical Authority：`docs/technical/main-single-page-formal-content.md`；
-- EU-52 Completed Work Evidence：`docs/work/archive/eu52-main-page-formal-content-package-adoption.md`；
-- EU-49 / EU-50 / EU-51 Completed Work Evidence：`docs/work/archive/`；
-- E3 current Article contract：`docs/requirements/main-historical-content-migration.md`、`docs/specifications/main-historical-content-migration.md`、`docs/technical/main-historical-content-migration.md`。
-
-下一自然 Gate 是新的 **Fresh Context Planning/Readiness decision**。不得自动进入 Party ListItem、deferred Article、慧就业 iframe 或其他候选，也不得继承 EU-53 Execute Authority。
+当前执行作用域护栏见 `docs/project/execution-scope-guardrails.md`。当用户目标仅为 Repository 状态恢复 / 检查 / 总结，且上述 Current State 协调结果为 `Current Ready / active Execution Unit = NONE` 时，默认在完成只读状态报告后停止；`NONE` 不表示没有 Planning Candidate，也不得因此自动创建新的 Branch / PR / Workflow 生命周期。高成本验证与 Historical Migration 只在当前变更和 Evidence Claim 确实需要时升级执行。
 
 ## 主要目录
 
@@ -85,9 +50,12 @@ Current Main formal-content Authority：
 ## 开发与验证入口
 
 - Repository 工作规则：`AGENTS.md`；
+- Documentation Authority Map：`docs/README.md`；
+- Current execution locator：`docs/work/current/README.md`；
+- Work lifecycle：`docs/work/README.md`；
 - Consumer-local Development Method：`docs/project/development-method.md`；
 - Execution Scope Guardrails：`docs/project/execution-scope-guardrails.md`；
-- Current Roadmap：`docs/project/project-roadmap.md`；
+- Project Roadmap：`docs/project/project-roadmap.md`；
 - Verification Strategy：`docs/technical/verification-strategy.md`；
 - Backend build / ownership entry：`backend/build.gradle.kts`、`backend/settings.gradle.kts`、`backend/README.md`；
 - Generic CMS Core：`backend/modules/cms-core/`；
