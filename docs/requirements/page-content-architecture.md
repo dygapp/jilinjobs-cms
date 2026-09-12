@@ -6,7 +6,7 @@
 - Long-lived architecture boundary: GitHub Issue #77
 - Existing product authority: `docs/requirements/information-publishing.md`
 - Existing Main Page delivery authority: `docs/requirements/main-single-page-formal-content.md`
-- Planning baseline: `main@881893f9b4a9fb759b78ff8d90ea1cef0cfbe8fe`
+- Planning baseline: `main@881893f9523effaabb82e0a0dacfcd38fe0c44fe`
 - Requirement: **READY FOR PLANNING REVIEW**
 - Candidate Execution Unit: **NONE**
 - Execute Authority: **NONE**
