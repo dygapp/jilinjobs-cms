@@ -1,0 +1,117 @@
+name: EU-55 Package Transform
+
+on:
+  pull_request:
+    types: [synchronize]
+    paths:
+      - .github/workflows/eu55-package-transform.yml
+
+permissions:
+  contents: write
+
+jobs:
+  transform:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Transform JilinJobs Page package to schema v2
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import re
+          from pathlib import Path
+
+          pages_path = Path('sites/jilinjobs/structure/pages.json')
+          manifest_path = Path('sites/jilinjobs/manifest.json')
+          pages = json.loads(pages_path.read_text(encoding='utf-8'))
+
+          target = None
+          for page in pages:
+              mode = page.pop('renderMode', None)
+              if mode not in {'RICH_TEXT', 'EMBED_PLACEHOLDER', 'INTERNAL_STATIC'}:
+                  raise SystemExit(f"unsupported legacy renderMode for {page.get('groupAlias')}:{page.get('alias')}: {mode}")
+
+              if mode == 'RICH_TEXT':
+                  page['contentModel'] = 'RICH_TEXT'
+                  page['rendererKey'] = 'RICH_TEXT'
+                  page['contentOwner'] = 'OPERATOR'
+              elif mode == 'EMBED_PLACEHOLDER':
+                  page['contentModel'] = 'NONE'
+                  page['rendererKey'] = 'EMBED_PLACEHOLDER'
+                  page['contentOwner'] = 'EXTERNAL'
+              else:
+                  page['contentModel'] = 'NONE'
+                  page['rendererKey'] = 'INTERNAL_STATIC'
+                  page['contentOwner'] = 'ENGINEERING'
+              page['structuredPayload'] = None
+
+              if page.get('groupAlias') == 'guide' and page.get('alias') == 'jypq':
+                  if mode != 'RICH_TEXT' or target is not None:
+                      raise SystemExit('guide:jypq legacy predecessor is missing or ambiguous')
+                  body = page['bodyHtml']
+                  matches = list(re.finditer(r'<section><h2>(.*?)</h2>(.*?)</section>', body, flags=re.S))
+                  if len(matches) != 3:
+                      raise SystemExit(f'guide:jypq expected 3 sections, found {len(matches)}')
+                  outside = body[:matches[0].start()] + ''.join(body[a.end():b.start()] for a, b in zip(matches, matches[1:])) + body[matches[-1].end():]
+                  if outside.strip():
+                      raise SystemExit('guide:jypq has non-section body content; Stage Return required')
+                  items = [{'title': m.group(1), 'bodyHtml': m.group(2)} for m in matches]
+                  image_refs = re.findall(r'/static/pages/guide/jypq/[^\"<>\s]+', items[1]['bodyHtml'])
+                  if len(image_refs) != 4 or len(set(image_refs)) != 4:
+                      raise SystemExit(f'guide:jypq second card expected 4 unique package images, found {image_refs}')
+                  page['bodyHtml'] = ''
+                  page['contentModel'] = 'STRUCTURED'
+                  page['rendererKey'] = 'JILINJOBS_GUIDE_CARDS'
+                  page['contentOwner'] = 'OPERATOR'
+                  page['structuredPayload'] = {
+                      'schemaVersion': 1,
+                      'kind': 'CARD_COLLECTION',
+                      'items': items,
+                  }
+                  if page.get('embedUrl') is not None:
+                      raise SystemExit('guide:jypq Structured target must not carry embedUrl')
+                  target = page
+
+          if target is None:
+              raise SystemExit('guide:jypq target not found')
+          if [i['title'] for i in target['structuredPayload']['items']] != [
+              '关于停止毕业生就业报到证业务办理的通告',
+              '关于做好取消普通高等学校毕业生就业报到证有关衔接工作的通知',
+              '国务院办公厅关于进一步做好高校毕业生等青年就业创业工作的通知',
+          ]:
+              raise SystemExit('guide:jypq card titles/order changed unexpectedly')
+          if any('renderMode' in page for page in pages):
+              raise SystemExit('schema v2 pages must not retain renderMode')
+
+          pages_bytes = (json.dumps(pages, ensure_ascii=False, separators=(',', ':')) + '\n').encode('utf-8')
+          pages_path.write_bytes(pages_bytes)
+          pages_digest = hashlib.sha256(pages_bytes).hexdigest()
+
+          manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+          manifest['schemaVersion'] = 2
+          manifest['version'] = '0.6.0-structured-page-cards'
+          page_entries = [entry for entry in manifest['structure'] if entry['type'] == 'pages']
+          if len(page_entries) != 1:
+              raise SystemExit('manifest must contain exactly one pages structure entry')
+          page_entries[0]['sha256'] = pages_digest
+          manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          print(f'EU55_PACKAGE_TRANSFORM pages={len(pages)} digest={pages_digest}')
+          print(f'EU55_JYPQ predecessor={target.get("contentAdoptionFromFingerprint")} cards={len(target["structuredPayload"]["items"])}')
+          PY
+      - name: Commit deterministic package transform and remove helper
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/eu55-package-transform.yml
+          git add sites/jilinjobs/structure/pages.json sites/jilinjobs/manifest.json
+          git diff --cached --check
+          git commit -m "feat: adopt structured guide page package"
+          git push origin HEAD:${{ github.head_ref }}
