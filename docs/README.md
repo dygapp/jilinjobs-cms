@@ -77,7 +77,7 @@ GitHub PR / Branch / Actions 对其各自原生瞬时状态负责；这不构成
 - Specification：`docs/specifications/README.md`
 - Technical：`docs/technical/README.md`
 - Verification：`docs/technical/verification-strategy.md`
-- Architecture：`docs/architecture/README.md`
+- Architecture：`docs/architecture/decisions/`
 - Work lifecycle：`docs/work/README.md`
 - Current execution locator：`docs/work/current/README.md`
 - Durable Roadmap：`docs/project/project-roadmap.md`
