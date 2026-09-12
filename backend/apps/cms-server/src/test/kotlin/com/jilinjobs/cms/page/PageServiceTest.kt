@@ -1,20 +1,117 @@
 package com.jilinjobs.cms.page
 
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertFalse
+import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
+import tools.jackson.databind.ObjectMapper
+import tools.jackson.module.kotlin.jacksonObjectMapper
 
 class PageServiceTest {
-    @Test fun `rejects external url for internal static page`() { val service = PageService(FakePageMapper()); val error = assertThrows(PageValidationException::class.java) { service.createPage(PageDraft(null, "special", "特殊页面", "", PageRenderMode.INTERNAL_STATIC, "https://example.com/page", 0, true)) }; assertTrue(error.message!!.contains("本站路径")) }
-    @Test fun `keeps alias unique within the same page group`() { val mapper = FakePageMapper(); val service = PageService(mapper); val guide = service.createGroup(PageGroupDraft("guide", "业务指南")); service.createPage(PageDraft(guide.id, "contact", "联系我们")); assertThrows(PageValidationException::class.java) { service.createPage(PageDraft(guide.id, "contact", "重复页面")) } }
-    @Test fun `public page group contains only enabled members in configured order`() { val service = PageService(FakePageMapper()); val group = service.createGroup(PageGroupDraft("guide", "业务指南")); service.createPage(PageDraft(group.id, "second", "第二项", sortOrder = 20, enabled = true)); service.createPage(PageDraft(group.id, "hidden", "停用项", sortOrder = 5, enabled = false)); service.createPage(PageDraft(group.id, "first", "第一项", sortOrder = 10, enabled = true)); val publicGroup = service.getPublicGroup("guide"); assertEquals(listOf("first", "second"), publicGroup.members.map { it.alias }) }
+    @Test fun `rejects external url for internal static page`() { val service = PageService(FakePageMapper(), testObjectMapper()); val error = assertThrows(PageValidationException::class.java) { service.createPage(PageDraft(null, "special", "特殊页面", "", PageRenderMode.INTERNAL_STATIC, "https://example.com/page", 0, true)) }; assertTrue(error.message!!.contains("本站路径")) }
+    @Test fun `keeps alias unique within the same page group`() { val mapper = FakePageMapper(); val service = PageService(mapper, testObjectMapper()); val guide = service.createGroup(PageGroupDraft("guide", "业务指南")); service.createPage(PageDraft(guide.id, "contact", "联系我们")); assertThrows(PageValidationException::class.java) { service.createPage(PageDraft(guide.id, "contact", "重复页面")) } }
+    @Test fun `public page group contains only enabled members in configured order`() { val service = PageService(FakePageMapper(), testObjectMapper()); val group = service.createGroup(PageGroupDraft("guide", "业务指南")); service.createPage(PageDraft(group.id, "second", "第二项", sortOrder = 20, enabled = true)); service.createPage(PageDraft(group.id, "hidden", "停用项", sortOrder = 5, enabled = false)); service.createPage(PageDraft(group.id, "first", "第一项", sortOrder = 10, enabled = true)); val publicGroup = service.getPublicGroup("guide"); assertEquals(listOf("first", "second"), publicGroup.members.map { it.alias }) }
+
+    @Test
+    fun `Structured card collection is page-owned ordered and sanitized`() {
+        val service = PageService(FakePageMapper(), testObjectMapper())
+        val created = service.createPage(
+            PageDraft(
+                groupId = null,
+                alias = "cards",
+                name = "结构化卡片",
+                contentModel = PageContentModel.STRUCTURED,
+                rendererKey = PageRendererKey.JILINJOBS_GUIDE_CARDS,
+                contentOwner = PageContentOwner.OPERATOR,
+                structuredContent = PageStructuredContent(
+                    items = listOf(
+                        PageStructuredCard(" 第一项 ", "<p>安全正文</p><script>alert(1)</script>"),
+                        PageStructuredCard("第二项", "<p>第二正文</p>"),
+                    ),
+                ),
+            ),
+        )
+
+        assertEquals(PageContentModel.STRUCTURED, created.contentModel)
+        assertEquals(PageRendererKey.JILINJOBS_GUIDE_CARDS, created.rendererKey)
+        assertEquals(PageContentOwner.OPERATOR, created.contentOwner)
+        assertEquals("", created.bodyHtml)
+        assertNull(created.renderMode)
+        assertEquals(listOf("第一项", "第二项"), created.structuredContent!!.items.map { it.title })
+        assertFalse(created.structuredContent!!.items.first().bodyHtml.contains("<script"))
+    }
+
+    @Test
+    fun `Structured Page rejects unsupported schema kind and parallel whole-page authority`() {
+        val service = PageService(FakePageMapper(), testObjectMapper())
+        fun draft(content: PageStructuredContent, bodyHtml: String = "") = PageDraft(
+            groupId = null,
+            alias = "cards-${content.schemaVersion}-${content.kind.lowercase().replace('_', '-')}",
+            name = "结构化卡片",
+            bodyHtml = bodyHtml,
+            contentModel = PageContentModel.STRUCTURED,
+            rendererKey = PageRendererKey.JILINJOBS_GUIDE_CARDS,
+            contentOwner = PageContentOwner.OPERATOR,
+            structuredContent = content,
+        )
+
+        assertThrows(PageValidationException::class.java) {
+            service.createPage(draft(PageStructuredContent(schemaVersion = 2, items = listOf(PageStructuredCard("A", "<p>A</p>")))))
+        }
+        assertThrows(PageValidationException::class.java) {
+            service.createPage(draft(PageStructuredContent(kind = "UNKNOWN_BLOCKS", items = listOf(PageStructuredCard("A", "<p>A</p>")))))
+        }
+        assertThrows(PageValidationException::class.java) {
+            service.createPage(draft(PageStructuredContent(items = listOf(PageStructuredCard("A", "<p>A</p>"))), "<p>parallel body</p>"))
+        }
+    }
+
+    @Test
+    fun `persisted malformed or unsupported Structured state fails closed`() {
+        val mapper = FakePageMapper()
+        val service = PageService(mapper, testObjectMapper())
+        mapper.seedRawPage(
+            PageRecord(
+                groupId = null,
+                alias = "malformed",
+                name = "Malformed",
+                bodyHtml = "",
+                contentModel = PageContentModel.STRUCTURED.name,
+                rendererKey = PageRendererKey.JILINJOBS_GUIDE_CARDS,
+                contentOwner = PageContentOwner.OPERATOR.name,
+                structuredPayload = "{not-json",
+                embedUrl = null,
+                sortOrder = 0,
+                enabled = true,
+            ),
+        )
+        mapper.seedRawPage(
+            PageRecord(
+                groupId = null,
+                alias = "future-model",
+                name = "Future",
+                bodyHtml = "",
+                contentModel = "FUTURE_MODEL",
+                rendererKey = "FUTURE_RENDERER",
+                contentOwner = PageContentOwner.OPERATOR.name,
+                structuredPayload = null,
+                embedUrl = null,
+                sortOrder = 0,
+                enabled = true,
+            ),
+        )
+
+        assertThrows(PageValidationException::class.java) { service.getPublicStandalone("malformed") }
+        assertThrows(PageValidationException::class.java) { service.getPublicStandalone("future-model") }
+    }
 
     @Test
     fun `预置单页分组不能修改 Alias`() {
         val mapper = FakePageMapper()
         val group = mapper.seedPresetGroup("guide", "业务指南")
-        val service = PageService(mapper)
+        val service = PageService(mapper, testObjectMapper())
         val error = assertThrows(PageValidationException::class.java) { service.updateGroup(group.id!!, PageGroupDraft("guide-new", "业务指南", 20, false)) }
         assertEquals("预置单页分组的 Alias 属于稳定站点身份，不能修改", error.message)
         val updated = service.updateGroup(group.id!!, PageGroupDraft("guide", "业务指南（调整）", 20, false))
@@ -26,7 +123,7 @@ class PageServiceTest {
     fun `预置单页不能删除或修改 Alias`() {
         val mapper = FakePageMapper()
         val page = mapper.seedPresetPage(null, "about", "关于我们")
-        val service = PageService(mapper)
+        val service = PageService(mapper, testObjectMapper())
         val deleteError = assertThrows(PageValidationException::class.java) { service.deletePage(page.id!!) }
         assertEquals("预置单页属于网站规划基线，不能删除", deleteError.message)
         val aliasError = assertThrows(PageValidationException::class.java) { service.updatePage(page.id!!, PageDraft(null, "about-new", "关于我们")) }
@@ -37,6 +134,8 @@ class PageServiceTest {
     }
 }
 
+private fun testObjectMapper(): ObjectMapper = jacksonObjectMapper()
+
 private class FakePageMapper : PageMapper {
     private val groups = mutableListOf<PageGroupRecord>()
     private val pages = mutableListOf<PageRecord>()
@@ -44,7 +143,27 @@ private class FakePageMapper : PageMapper {
     private var nextPageId = 1L
 
     fun seedPresetGroup(alias: String, name: String): PageGroupRecord = PageGroupRecord(nextGroupId++, alias, name, 10, true, true).also { groups += it.copy() }
-    fun seedPresetPage(groupId: Long?, alias: String, name: String): PageRecord = PageRecord(nextPageId++, groupId, alias, name, "", PageRenderMode.RICH_TEXT.name, null, 10, true, true).also { pages += it.copy() }
+    fun seedPresetPage(groupId: Long?, alias: String, name: String): PageRecord = PageRecord(
+        id = nextPageId++,
+        groupId = groupId,
+        alias = alias,
+        name = name,
+        bodyHtml = "",
+        contentModel = PageContentModel.RICH_TEXT.name,
+        rendererKey = PageRendererKey.RICH_TEXT,
+        contentOwner = PageContentOwner.OPERATOR.name,
+        structuredPayload = null,
+        embedUrl = null,
+        sortOrder = 10,
+        enabled = true,
+        preset = true,
+    ).also { pages += it.copy() }
+
+    fun seedRawPage(record: PageRecord): PageRecord {
+        val seeded = record.copy(id = nextPageId++)
+        pages += seeded
+        return seeded
+    }
 
     override fun findGroups(): List<PageGroupRecord> = groups.sortedWith(compareBy<PageGroupRecord> { it.sortOrder }.thenBy { it.id })
     override fun findGroupById(id: Long): PageGroupRecord? = groups.find { it.id == id }
@@ -58,10 +177,10 @@ private class FakePageMapper : PageMapper {
     override fun findByGroup(groupId: Long): List<PageRecord> = pages.filter { it.groupId == groupId }.sortedWith(compareBy<PageRecord> { it.sortOrder }.thenBy { it.id })
     override fun insertPage(record: PageRecord): Int { record.id = nextPageId++; pages += record.copy(); return 1 }
     override fun updatePage(record: PageRecord): Int { val index = pages.indexOfFirst { it.id == record.id }; if (index < 0) return 0; pages[index] = record.copy(preset = pages[index].preset); return 1 }
-    override fun updatePageContent(id: Long, bodyHtml: String, renderMode: String, embedUrl: String?): Int {
+    override fun updatePageContent(id: Long, bodyHtml: String, structuredPayload: String?, embedUrl: String?): Int {
         val index = pages.indexOfFirst { it.id == id }
         if (index < 0) return 0
-        pages[index] = pages[index].copy(bodyHtml = bodyHtml, renderMode = renderMode, embedUrl = embedUrl)
+        pages[index] = pages[index].copy(bodyHtml = bodyHtml, structuredPayload = structuredPayload, embedUrl = embedUrl)
         return 1
     }
     override fun deletePage(id: Long): Int { val index = pages.indexOfFirst { it.id == id }; if (index < 0) return 0; pages.removeAt(index); return 1 }

@@ -16,7 +16,6 @@ fun main() {
             "--spring.datasource.url=$dbUrl",
             "--spring.datasource.username=${System.getenv("SITE_PACKAGE_VERIFY_DB_USERNAME") ?: "root"}",
             "--spring.datasource.password=${System.getenv("SITE_PACKAGE_VERIFY_DB_PASSWORD") ?: "root"}",
-            "--spring.flyway.target=1",
             "--spring.main.banner-mode=off",
         )
     try {
@@ -24,20 +23,26 @@ fun main() {
         val provisioner = context.getBean(SitePackageProvisioner::class.java)
         val root = Files.createTempDirectory("eu49-page-ownership-")
 
+        deleteTestPage(dataSource)
         writePagePackage(root, name = "Ownership Page", sortOrder = 10)
         val first = provisioner.apply(root)
         require(first.created == 1 && first.updated == 0 && first.unchanged == 0) { "Fresh Page provision unexpected: $first" }
-        require(readPage(dataSource) == PageState("Ownership Page", "<p>Package default</p>", "RICH_TEXT", null, 10, true)) {
-            "Fresh Page did not use package defaults: ${readPage(dataSource)}"
-        }
+        require(
+            readPage(dataSource) == PageState(
+                "Ownership Page", "<p>Package default</p>", "RICH_TEXT", "RICH_TEXT", "OPERATOR", null, null, 10, true,
+            ),
+        ) { "Fresh Page did not use package defaults: ${readPage(dataSource)}" }
 
         dataSource.connection.use { connection ->
             connection.prepareStatement(
-                "UPDATE cms_page SET body_html=?,render_mode=?,embed_url=? WHERE group_id IS NULL AND alias='ownership-page'",
+                "UPDATE cms_page SET body_html=?,content_model=?,renderer_key=?,content_owner=?,structured_payload=?,embed_url=? WHERE group_id IS NULL AND alias='ownership-page'",
             ).use { statement ->
                 statement.setString(1, "<p>Operator maintained content</p>")
-                statement.setString(2, "INTERNAL_STATIC")
-                statement.setString(3, "/operator-managed")
+                statement.setString(2, "NONE")
+                statement.setString(3, "INTERNAL_STATIC")
+                statement.setString(4, "ENGINEERING")
+                statement.setString(5, null)
+                statement.setString(6, "/operator-managed")
                 require(statement.executeUpdate() == 1)
             }
         }
@@ -47,6 +52,7 @@ fun main() {
         require(second.created == 0 && second.updated == 0 && second.unchanged == 1) {
             "Ordinary second reconcile must treat operator Page content as unchanged ownership: $second"
         }
+        require(second.protectedPageContent == listOf("<root>:ownership-page")) { "Protected content report missing: $second" }
         require(readPage(dataSource) == operatorState) { "Second reconcile overwrote operator-owned Page content" }
 
         writePagePackage(root, name = "Ownership Page Renamed", sortOrder = 20)
@@ -55,17 +61,8 @@ fun main() {
             "Structural Page reconcile unexpected: $structural"
         }
         require(
-            readPage(dataSource) == PageState(
-                "Ownership Page Renamed",
-                "<p>Operator maintained content</p>",
-                "INTERNAL_STATIC",
-                "/operator-managed",
-                20,
-                true,
-            ),
-        ) {
-            "Structural reconcile did not preserve operator-owned Page content: ${readPage(dataSource)}"
-        }
+            readPage(dataSource) == operatorState.copy(name = "Ownership Page Renamed", sortOrder = 20),
+        ) { "Structural reconcile did not preserve operator-owned Page content: ${readPage(dataSource)}" }
 
         println("EU49_PAGE_CONTENT_OWNERSHIP_VERIFY PASS")
     } finally {
@@ -76,25 +73,30 @@ fun main() {
 private data class PageState(
     val name: String,
     val bodyHtml: String,
-    val renderMode: String,
+    val contentModel: String,
+    val rendererKey: String,
+    val contentOwner: String,
+    val structuredPayload: String?,
     val embedUrl: String?,
     val sortOrder: Int,
     val enabled: Boolean,
 )
 
+private fun deleteTestPage(dataSource: DataSource) {
+    dataSource.connection.use { connection ->
+        connection.prepareStatement("DELETE FROM cms_page WHERE group_id IS NULL AND alias='ownership-page'").use { it.executeUpdate() }
+    }
+}
+
 private fun readPage(dataSource: DataSource): PageState = dataSource.connection.use { connection ->
     connection.prepareStatement(
-        "SELECT name,body_html,render_mode,embed_url,sort_order,enabled FROM cms_page WHERE group_id IS NULL AND alias='ownership-page'",
+        "SELECT name,body_html,content_model,renderer_key,content_owner,structured_payload,embed_url,sort_order,enabled FROM cms_page WHERE group_id IS NULL AND alias='ownership-page'",
     ).use { statement ->
         statement.executeQuery().use { result ->
             require(result.next()) { "Ownership Page missing" }
             PageState(
-                result.getString("name"),
-                result.getString("body_html"),
-                result.getString("render_mode"),
-                result.getString("embed_url"),
-                result.getInt("sort_order"),
-                result.getBoolean("enabled"),
+                result.getString("name"), result.getString("body_html"), result.getString("content_model"), result.getString("renderer_key"),
+                result.getString("content_owner"), result.getString("structured_payload"), result.getString("embed_url"), result.getInt("sort_order"), result.getBoolean("enabled"),
             )
         }
     }

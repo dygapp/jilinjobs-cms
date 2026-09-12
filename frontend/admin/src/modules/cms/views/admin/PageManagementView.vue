@@ -17,6 +17,8 @@ import {
   type CmsPageGroup,
   type PageDraft,
   type PageGroupDraft,
+  type PageRenderMode,
+  type PageStructuredCard,
 } from '../../api/pages'
 
 const groups = ref<CmsPageGroup[]>([])
@@ -29,7 +31,7 @@ const selectedGroup = ref<'all' | 'ungrouped' | number>('all')
 const sideCollapsed = ref(false)
 const saving = ref(false)
 const loading = ref(false)
-const pageForm = reactive<PageDraft>({ groupId: null, alias: '', name: '', bodyHtml: '', renderMode: 'RICH_TEXT', embedUrl: null, sortOrder: 0, enabled: true })
+const pageForm = reactive<PageDraft>(legacyPageDraft(null))
 const groupForm = reactive<PageGroupDraft>({ alias: '', name: '', sortOrder: 0, enabled: true })
 
 const filteredPages = computed(() => {
@@ -45,12 +47,39 @@ const selectedGroupName = computed(() => {
 })
 const editingPageModel = computed(() => editingPage.value == null ? null : pages.value.find(page => page.id === editingPage.value) || null)
 const editingGroupModel = computed(() => editingGroup.value == null ? null : groups.value.find(group => group.id === editingGroup.value) || null)
+const structuredEditing = computed(() => pageForm.contentModel === 'STRUCTURED')
+const structuredCards = computed(() => pageForm.structuredContent?.items ?? [])
 
 const groupName = (id: number | null) => id == null ? '独立单页' : groups.value.find(g => g.id === id)?.name || `#${id}`
 const groupCount = (groupId: number | null) => pages.value.filter(page => page.groupId === groupId).length
 const asPage = (row: unknown) => row as CmsPage
 
 onMounted(refresh)
+
+function legacyPageDraft(groupId:number|null):PageDraft{
+  return { groupId, alias: '', name: '', bodyHtml: '', contentModel: null, rendererKey: null, contentOwner: null, structuredContent: null, renderMode: 'RICH_TEXT', embedUrl: null, sortOrder: 0, enabled: true }
+}
+
+function structuredPageDraft(row:CmsPage):PageDraft{
+  return {
+    groupId:row.groupId,
+    alias:row.alias,
+    name:row.name,
+    bodyHtml:'',
+    contentModel:row.contentModel,
+    rendererKey:row.rendererKey,
+    contentOwner:row.contentOwner,
+    structuredContent:row.structuredContent ? {
+      schemaVersion:row.structuredContent.schemaVersion,
+      kind:row.structuredContent.kind,
+      items:row.structuredContent.items.map(card=>({title:card.title,bodyHtml:card.bodyHtml})),
+    } : null,
+    renderMode:null,
+    embedUrl:null,
+    sortOrder:row.sortOrder,
+    enabled:row.enabled,
+  }
+}
 
 async function refresh() {
   loading.value = true
@@ -71,16 +100,26 @@ function selectGroup(value: 'all' | 'ungrouped' | number) {
 async function openPage(row?: CmsPage) {
   editingPage.value = row?.id ?? null
   const defaultGroupId = typeof selectedGroup.value === 'number' ? selectedGroup.value : null
-  Object.assign(pageForm, row ? {
-    groupId: row.groupId,
-    alias: row.alias,
-    name: row.name,
-    bodyHtml: row.bodyHtml,
-    renderMode: row.renderMode,
-    embedUrl: row.embedUrl,
-    sortOrder: row.sortOrder,
-    enabled: row.enabled,
-  } : { groupId: defaultGroupId, alias: '', name: '', bodyHtml: '', renderMode: 'RICH_TEXT', embedUrl: null, sortOrder: 0, enabled: true })
+  if(!row){
+    Object.assign(pageForm,legacyPageDraft(defaultGroupId))
+  }else if(row.contentModel==='STRUCTURED'){
+    Object.assign(pageForm,structuredPageDraft(row))
+  }else{
+    Object.assign(pageForm,{
+      groupId: row.groupId,
+      alias: row.alias,
+      name: row.name,
+      bodyHtml: row.bodyHtml,
+      contentModel: null,
+      rendererKey: null,
+      contentOwner: null,
+      structuredContent: null,
+      renderMode: row.renderMode ?? 'RICH_TEXT',
+      embedUrl: row.embedUrl,
+      sortOrder: row.sortOrder,
+      enabled: row.enabled,
+    })
+  }
   pageVisible.value = true
 }
 
@@ -96,16 +135,62 @@ function changeRenderMode() {
   if (pageForm.renderMode === 'RICH_TEXT') pageForm.embedUrl = null
 }
 
+function addStructuredCard(){
+  if(!pageForm.structuredContent)return
+  pageForm.structuredContent.items.push({title:'',bodyHtml:''})
+}
+
+function removeStructuredCard(index:number){
+  if(!pageForm.structuredContent||pageForm.structuredContent.items.length<=1)return
+  pageForm.structuredContent.items.splice(index,1)
+}
+
+function moveStructuredCard(index:number,delta:number){
+  if(!pageForm.structuredContent)return
+  const target=index+delta
+  if(target<0||target>=pageForm.structuredContent.items.length)return
+  const [card]=pageForm.structuredContent.items.splice(index,1)
+  if(card)pageForm.structuredContent.items.splice(target,0,card)
+}
+
+function asStructuredCard(card:unknown):PageStructuredCard{return card as PageStructuredCard}
+
 async function savePage() {
   if (!pageForm.name.trim()) { ElMessage.warning('请输入单页名称'); return }
   if (!pageForm.alias.trim()) { ElMessage.warning('请输入公开标识'); return }
-  if (pageForm.renderMode === 'INTERNAL_STATIC' && pageForm.embedUrl?.trim() && !pageForm.embedUrl.trim().startsWith('/')) {
+  if(structuredEditing.value){
+    if(pageForm.structuredContent?.schemaVersion!==1||pageForm.structuredContent.kind!=='CARD_COLLECTION'){
+      ElMessage.error('当前结构化内容版本不受支持，已停止保存')
+      return
+    }
+    if(!pageForm.structuredContent.items.length||pageForm.structuredContent.items.some(card=>!card.title.trim())){
+      ElMessage.warning('结构化卡片至少保留一项，且每个卡片标题不能为空')
+      return
+    }
+  }else if (pageForm.renderMode === 'INTERNAL_STATIC' && pageForm.embedUrl?.trim() && !pageForm.embedUrl.trim().startsWith('/')) {
     ElMessage.warning('站内页面路径必须以 / 开头')
     return
   }
   saving.value = true
   try {
-    const draft = { ...pageForm, embedUrl: pageForm.renderMode === 'RICH_TEXT' ? null : pageForm.embedUrl?.trim() || null }
+    const draft:PageDraft=structuredEditing.value ? {
+      ...pageForm,
+      bodyHtml:'',
+      renderMode:null,
+      embedUrl:null,
+      structuredContent:pageForm.structuredContent ? {
+        ...pageForm.structuredContent,
+        items:pageForm.structuredContent.items.map(card=>({title:card.title.trim(),bodyHtml:card.bodyHtml})),
+      } : null,
+    } : {
+      ...pageForm,
+      contentModel:null,
+      rendererKey:null,
+      contentOwner:null,
+      structuredContent:null,
+      renderMode:(pageForm.renderMode ?? 'RICH_TEXT') as PageRenderMode,
+      embedUrl:pageForm.renderMode === 'RICH_TEXT' ? null : pageForm.embedUrl?.trim() || null,
+    }
     editingPage.value == null ? await createPage(draft) : await updatePage(editingPage.value, draft)
     pageVisible.value = false
     ElMessage.success('单页已保存')
@@ -143,8 +228,9 @@ async function remove(row: CmsPage) {
   }
 }
 
-function renderModeName(mode: CmsPage['renderMode']) {
-  return mode === 'RICH_TEXT' ? '富文本' : mode === 'EMBED_PLACEHOLDER' ? '外部嵌入占位' : '站内特殊页面'
+function pageContentName(page:CmsPage) {
+  if(page.contentModel==='STRUCTURED')return '结构化卡片'
+  return page.renderMode === 'RICH_TEXT' ? '富文本' : page.renderMode === 'EMBED_PLACEHOLDER' ? '外部嵌入占位' : page.renderMode === 'INTERNAL_STATIC' ? '站内特殊页面' : '不支持'
 }
 
 function message(error: unknown) {
@@ -191,7 +277,7 @@ function message(error: unknown) {
           <el-table-column label="单页名称" min-width="170"><template #default="scope"><span>{{asPage(scope.row).name}}</span><el-tag v-if="asPage(scope.row).preset" :data-testid="`preset-page-${asPage(scope.row).id}`" size="small" type="info" style="margin-left:8px">预置</el-tag></template></el-table-column>
           <el-table-column label="单页分组" min-width="140"><template #default="scope">{{ groupName(scope.row.groupId) }}</template></el-table-column>
           <el-table-column prop="alias" label="公开标识" min-width="140" />
-          <el-table-column label="呈现方式" min-width="150"><template #default="scope">{{ renderModeName(scope.row.renderMode) }}</template></el-table-column>
+          <el-table-column label="呈现方式" min-width="150"><template #default="scope">{{ pageContentName(asPage(scope.row)) }}</template></el-table-column>
           <el-table-column label="状态" width="90"><template #default="scope">{{ scope.row.enabled ? '启用' : '停用' }}</template></el-table-column>
           <el-table-column label="操作" width="92" fixed="right"><template #default="scope"><div class="admin-table-actions"><AdminIconAction :testid="`edit-page-${scope.row.id}`" label="编辑" :icon="Edit" @click="openPage(asPage(scope.row))" /><AdminIconAction v-if="!asPage(scope.row).preset" label="删除" :icon="Delete" type="danger" @click="remove(asPage(scope.row))" /></div></template></el-table-column>
         </el-table>
@@ -208,19 +294,43 @@ function message(error: unknown) {
       <template #footer><el-button @click="groupVisible = false">取消</el-button><el-button type="primary" :loading="saving" @click="saveGroup">保存</el-button></template>
     </el-dialog>
 
-    <el-dialog v-model="pageVisible" :title="editingPage == null ? '新增单页' : '编辑单页'" width="820px" destroy-on-close>
+    <el-dialog v-model="pageVisible" :title="editingPage == null ? '新增单页' : '编辑单页'" width="920px" destroy-on-close>
       <el-form label-width="110px">
         <el-form-item label="单页名称" required><el-input v-model="pageForm.name" /></el-form-item>
         <el-form-item label="单页分组"><el-select v-model="pageForm.groupId" clearable data-testid="page-group-select" style="width:100%" placeholder="独立单页"><el-option v-for="group in groups" :key="group.id" :label="group.name" :value="group.id" /></el-select></el-form-item>
         <el-form-item label="公开标识" required><el-input v-model="pageForm.alias" :disabled="Boolean(editingPageModel?.preset)" placeholder="用于公开页面地址" /><div v-if="editingPageModel?.preset" data-testid="preset-page-alias-hint" style="color:#909399;font-size:12px">预置单页的公开标识不可修改。</div></el-form-item>
-        <el-form-item label="呈现方式" required><el-select v-model="pageForm.renderMode" data-testid="page-render-mode" style="width:100%" @change="changeRenderMode"><el-option label="富文本" value="RICH_TEXT" /><el-option label="外部嵌入占位" value="EMBED_PLACEHOLDER" /><el-option label="站内特殊页面" value="INTERNAL_STATIC" /></el-select></el-form-item>
 
-        <el-form-item v-if="pageForm.renderMode === 'RICH_TEXT'" label="正文"><RichTextEditor v-model="pageForm.bodyHtml" test-id="page-body-editor" /></el-form-item>
+        <template v-if="structuredEditing">
+          <el-form-item label="内容模型"><el-tag type="info">结构化卡片</el-tag><span class="structured-contract-hint">Renderer：{{ pageForm.rendererKey }}；正文由运行时运营数据维护</span></el-form-item>
+          <el-form-item label="卡片内容" required>
+            <div class="structured-card-editor" data-testid="structured-card-editor">
+              <el-card v-for="(card,index) in structuredCards" :key="index" shadow="never" class="structured-card-editor-item" :data-testid="`structured-card-${index}`">
+                <template #header>
+                  <div class="structured-card-header">
+                    <strong>卡片 {{ index + 1 }}</strong>
+                    <div>
+                      <el-button size="small" :disabled="index===0" @click="moveStructuredCard(index,-1)">上移</el-button>
+                      <el-button size="small" :disabled="index===structuredCards.length-1" @click="moveStructuredCard(index,1)">下移</el-button>
+                      <el-button size="small" type="danger" plain :disabled="structuredCards.length<=1" @click="removeStructuredCard(index)">删除</el-button>
+                    </div>
+                  </div>
+                </template>
+                <el-form-item label="标题" required><el-input v-model="asStructuredCard(card).title" :data-testid="`structured-card-title-${index}`" /></el-form-item>
+                <el-form-item label="正文"><RichTextEditor v-model="asStructuredCard(card).bodyHtml" :test-id="`structured-card-body-${index}`" /></el-form-item>
+              </el-card>
+              <el-button data-testid="add-structured-card" plain @click="addStructuredCard">新增卡片</el-button>
+            </div>
+          </el-form-item>
+        </template>
 
         <template v-else>
-          <el-form-item :label="pageForm.renderMode === 'INTERNAL_STATIC' ? '站内页面路径' : '嵌入地址'"><el-input v-model="pageForm.embedUrl" data-testid="page-embed-url" :placeholder="pageForm.renderMode === 'INTERNAL_STATIC' ? '/special/page-path' : 'https://外部内容地址'" /></el-form-item>
-          <el-form-item label="占位说明"><el-input v-model="pageForm.bodyHtml" data-testid="page-placeholder-body" type="textarea" :rows="6" placeholder="当前页面对外展示的占位或说明内容" /></el-form-item>
-          <el-alert v-if="pageForm.renderMode === 'EMBED_PLACEHOLDER'" title="当前只保存嵌入地址和占位说明，不直接加载第三方内容。" type="info" :closable="false" show-icon />
+          <el-form-item label="呈现方式" required><el-select v-model="pageForm.renderMode" data-testid="page-render-mode" style="width:100%" @change="changeRenderMode"><el-option label="富文本" value="RICH_TEXT" /><el-option label="外部嵌入占位" value="EMBED_PLACEHOLDER" /><el-option label="站内特殊页面" value="INTERNAL_STATIC" /></el-select></el-form-item>
+          <el-form-item v-if="pageForm.renderMode === 'RICH_TEXT'" label="正文"><RichTextEditor v-model="pageForm.bodyHtml" test-id="page-body-editor" /></el-form-item>
+          <template v-else>
+            <el-form-item :label="pageForm.renderMode === 'INTERNAL_STATIC' ? '站内页面路径' : '嵌入地址'"><el-input v-model="pageForm.embedUrl" data-testid="page-embed-url" :placeholder="pageForm.renderMode === 'INTERNAL_STATIC' ? '/special/page-path' : 'https://外部内容地址'" /></el-form-item>
+            <el-form-item label="占位说明"><el-input v-model="pageForm.bodyHtml" data-testid="page-placeholder-body" type="textarea" :rows="6" placeholder="当前页面对外展示的占位或说明内容" /></el-form-item>
+            <el-alert v-if="pageForm.renderMode === 'EMBED_PLACEHOLDER'" title="当前只保存嵌入地址和占位说明，不直接加载第三方内容。" type="info" :closable="false" show-icon />
+          </template>
         </template>
 
         <el-form-item label="排序"><el-input-number v-model="pageForm.sortOrder" /></el-form-item>
@@ -230,3 +340,10 @@ function message(error: unknown) {
     </el-dialog>
   </main>
 </template>
+
+<style scoped>
+.structured-contract-hint{margin-left:10px;color:#909399;font-size:12px}
+.structured-card-editor{display:grid;gap:14px;width:100%}
+.structured-card-editor-item{width:100%}
+.structured-card-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+</style>

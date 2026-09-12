@@ -28,7 +28,7 @@ fun main() {
 
         val repositoryPackage = loader.load(Path.of("../sites/jilinjobs"))
         require(repositoryPackage.manifest.packageId == "jilinjobs") { "仓库 Site Package identity 异常" }
-        require(repositoryPackage.manifest.schemaVersion == 1) { "仓库 Site Package schemaVersion 异常" }
+        require(repositoryPackage.manifest.schemaVersion == 2) { "仓库 Site Package schemaVersion 异常" }
 
         insertFoundationOperatorColumn(dataSource)
         val validRoot = Files.createTempDirectory("eu37-valid-package-")
