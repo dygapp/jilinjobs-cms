@@ -1,8 +1,14 @@
 package com.jilinjobs.cms.provisioning
 
 import com.jilinjobs.cms.common.ContentImagePolicy
+import com.jilinjobs.cms.common.RichTextHtmlPolicy
 import com.jilinjobs.cms.navigation.NavigationOpenMode
 import com.jilinjobs.cms.navigation.NavigationTargetType
+import com.jilinjobs.cms.page.PageContentModel
+import com.jilinjobs.cms.page.PageContentOwner
+import com.jilinjobs.cms.page.PageRendererKey
+import com.jilinjobs.cms.page.PageStructuredCard
+import com.jilinjobs.cms.page.PageStructuredContent
 import org.springframework.stereotype.Service
 import tools.jackson.databind.ObjectMapper
 import java.nio.file.Files
@@ -17,8 +23,9 @@ private val LOWER_ALIAS = Regex("[a-z0-9][a-z0-9-]{0,99}")
 private val STRUCTURE_CODE = Regex("[A-Za-z0-9][A-Za-z0-9_-]{0,99}")
 private val NAVIGATION_CODE = Regex("[a-z0-9][a-z0-9-]{0,99}")
 private val CONFIG_KEY = Regex("[A-Z0-9][A-Z0-9_]{0,99}")
+private val RENDERER_KEY = Regex("[A-Z0-9][A-Z0-9_-]{0,99}")
 private val SHA256 = Regex("[0-9a-f]{64}")
-private const val SITE_PACKAGE_SCHEMA_VERSION = 1
+private val SUPPORTED_SITE_PACKAGE_SCHEMA_VERSIONS = setOf(1, 2)
 private const val COLUMNS = "columns"
 private const val PAGE_GROUPS = "page-groups"
 private const val PAGES = "pages"
@@ -27,6 +34,8 @@ private const val NAVIGATION_ITEMS = "navigation-items"
 private const val SITE_CONFIG = "site-config"
 private const val LISTS = "lists"
 private const val ADVERTISEMENT_SLOTS = "advertisement-slots"
+private const val CARD_COLLECTION = "CARD_COLLECTION"
+private const val CARD_COLLECTION_SCHEMA_VERSION = 1
 private val SUPPORTED_STRUCTURE_TYPES = setOf(
     COLUMNS,
     PAGE_GROUPS,
@@ -74,7 +83,12 @@ data class SitePackagePage(
     val alias: String = "",
     val name: String = "",
     val bodyHtml: String = "",
-    val renderMode: String = "RICH_TEXT",
+    /** Site Package v1 compatibility input. v2 uses the orthogonal Page contract below. */
+    val renderMode: String? = null,
+    val contentModel: String? = null,
+    val rendererKey: String? = null,
+    val contentOwner: String? = null,
+    val structuredPayload: PageStructuredContent? = null,
     val embedUrl: String? = null,
     val contentAdoptionFromFingerprint: String? = null,
     val sortOrder: Int = 0,
@@ -206,13 +220,13 @@ class SitePackageLoader(private val objectMapper: ObjectMapper) {
 
     private fun validateManifest(manifest: SitePackageManifest) {
         if (!manifest.packageId.matches(PACKAGE_ID)) throw SitePackageValidationException("packageId 不合法：${manifest.packageId}")
-        if (manifest.schemaVersion != SITE_PACKAGE_SCHEMA_VERSION) throw SitePackageValidationException("不支持的 Site Package schemaVersion：${manifest.schemaVersion}")
+        if (manifest.schemaVersion !in SUPPORTED_SITE_PACKAGE_SCHEMA_VERSIONS) throw SitePackageValidationException("不支持的 Site Package schemaVersion：${manifest.schemaVersion}")
         if (manifest.version.isBlank() || manifest.version.length > 64) throw SitePackageValidationException("version 不合法")
         if (manifest.structure.isEmpty()) throw SitePackageValidationException("structure 不能为空")
         if (manifest.structure.map { it.type }.toSet().size != manifest.structure.size) throw SitePackageValidationException("structure type 不能重复")
         if (manifest.structure.map { it.path }.toSet().size != manifest.structure.size) throw SitePackageValidationException("structure path 不能重复")
         val unsupported = manifest.structure.map { it.type }.filter { it !in SUPPORTED_STRUCTURE_TYPES }
-        if (unsupported.isNotEmpty()) throw SitePackageValidationException("Site Package v1 暂不支持 structure type：${unsupported.joinToString()}")
+        if (unsupported.isNotEmpty()) throw SitePackageValidationException("Site Package 暂不支持 structure type：${unsupported.joinToString()}")
         manifest.structure.forEach {
             if (it.path.isBlank()) throw SitePackageValidationException("structure path 不能为空")
             if (!it.sha256.matches(SHA256)) throw SitePackageValidationException("structure sha256 不合法：${it.path}")
@@ -239,13 +253,14 @@ class SitePackageLoader(private val objectMapper: ObjectMapper) {
 
         unique(definition.pages.map { pageIdentity(it.groupAlias, it.alias) }, "Page logical identity")
         definition.pages.forEach {
+            val identity = pageIdentity(it.groupAlias, it.alias)
             if (!it.alias.matches(LOWER_ALIAS)) throw SitePackageValidationException("Page alias 不合法：${it.alias}")
-            if (it.groupAlias != null && !it.groupAlias.matches(LOWER_ALIAS)) throw SitePackageValidationException("Page groupAlias 不合法：${pageIdentity(it.groupAlias, it.alias)}")
-            name(it.name, "Page", pageIdentity(it.groupAlias, it.alias))
-            if (it.renderMode.isBlank() || it.renderMode.length > 32) throw SitePackageValidationException("Page renderMode 不合法：${it.alias}")
+            if (it.groupAlias != null && !it.groupAlias.matches(LOWER_ALIAS)) throw SitePackageValidationException("Page groupAlias 不合法：$identity")
+            name(it.name, "Page", identity)
+            resolvePageContent(definition.manifest.schemaVersion, it)
             if (it.embedUrl != null && it.embedUrl.length > 1000) throw SitePackageValidationException("Page embedUrl 过长：${it.alias}")
-            if (it.contentAdoptionFromFingerprint != null && !it.contentAdoptionFromFingerprint.matches(SHA256)) throw SitePackageValidationException("Page contentAdoptionFromFingerprint 不合法：${pageIdentity(it.groupAlias, it.alias)}")
-            preset(it.preset, "Page", pageIdentity(it.groupAlias, it.alias))
+            if (it.contentAdoptionFromFingerprint != null && !it.contentAdoptionFromFingerprint.matches(SHA256)) throw SitePackageValidationException("Page contentAdoptionFromFingerprint 不合法：$identity")
+            preset(it.preset, "Page", identity)
         }
 
         unique(definition.navigationLocations.map { it.code }, "NavigationLocation code")
@@ -372,7 +387,7 @@ class SitePackageProvisioner(
                 orderedColumns(definition.columns).forEach { counts.add(reconcileColumn(connection, it)) }
                 definition.pageGroups.forEach { counts.add(reconcilePageGroup(connection, it)) }
                 definition.pages.forEach { page ->
-                    val pageResult = reconcilePage(connection, page)
+                    val pageResult = reconcilePage(connection, definition.manifest.schemaVersion, page)
                     counts.add(pageResult.result)
                     when (pageResult.contentOutcome) {
                         PageContentOutcome.ADOPTED -> adoptedPageContent += pageIdentity(page.groupAlias, page.alias)
@@ -467,28 +482,50 @@ class SitePackageProvisioner(
         return Result.UPDATED
     }
 
-    private fun reconcilePage(connection: Connection, target: SitePackagePage): PageReconcileResult {
+    private fun reconcilePage(connection: Connection, packageSchemaVersion: Int, target: SitePackagePage): PageReconcileResult {
         val groupId = target.groupAlias?.let { alias ->
             val group = pageGroup(connection, alias) ?: throw SitePackageValidationException("Page groupAlias 尚未 provision：${pageIdentity(alias, target.alias)}")
             group.owned("PageGroup", alias)
             group.id
         }
         val identity = pageIdentity(target.groupAlias, target.alias)
+        val targetContent = resolvePageContent(packageSchemaVersion, target)
+        val targetStructuredPayload = targetContent.structuredPayload?.let(objectMapper::writeValueAsString)
         val existing = page(connection, target.groupAlias, target.alias)
         if (existing == null) {
-            connection.prepareStatement("INSERT INTO cms_page(group_id,alias,name,body_html,render_mode,embed_url,sort_order,enabled,preset) VALUES(?,?,?,?,?,?,?,?,1)").use {
-                it.setObject(1, groupId); it.setString(2, target.alias); it.setString(3, target.name); it.setString(4, target.bodyHtml); it.setString(5, target.renderMode); it.setString(6, target.embedUrl); it.setInt(7, target.sortOrder); it.setBoolean(8, target.enabled); it.executeUpdate()
+            connection.prepareStatement("INSERT INTO cms_page(group_id,alias,name,body_html,content_model,renderer_key,content_owner,structured_payload,embed_url,sort_order,enabled,preset) VALUES(?,?,?,?,?,?,?,?,?,?,?,1)").use {
+                it.setObject(1, groupId)
+                it.setString(2, target.alias)
+                it.setString(3, target.name)
+                it.setString(4, targetContent.bodyHtml)
+                it.setString(5, targetContent.contentModel.name)
+                it.setString(6, targetContent.rendererKey)
+                it.setString(7, targetContent.contentOwner.name)
+                it.setString(8, targetStructuredPayload)
+                it.setString(9, targetContent.embedUrl)
+                it.setInt(10, target.sortOrder)
+                it.setBoolean(11, target.enabled)
+                it.executeUpdate()
             }
             return PageReconcileResult(Result.CREATED, PageContentOutcome.NONE)
         }
         existing.owned("Page", identity)
 
         val structuralChanged = existing.groupId != groupId || existing.name != target.name || existing.sortOrder != target.sortOrder || existing.enabled != target.enabled
-        val currentFingerprint = pageContentFingerprint(existing.bodyHtml, existing.renderMode, existing.embedUrl)
-        val targetFingerprint = pageContentFingerprint(target.bodyHtml, target.renderMode, target.embedUrl)
+        val contentMatchesTarget = existing.bodyHtml == targetContent.bodyHtml &&
+            existing.contentModel == targetContent.contentModel.name &&
+            existing.rendererKey == targetContent.rendererKey &&
+            existing.contentOwner == targetContent.contentOwner.name &&
+            existing.structuredPayload == targetStructuredPayload &&
+            existing.embedUrl == targetContent.embedUrl
+        val currentFingerprint = pageContentFingerprint(existing.bodyHtml, existing.rendererKey, existing.embedUrl)
+        val adoptionAllowed = target.contentAdoptionFromFingerprint != null &&
+            currentFingerprint == target.contentAdoptionFromFingerprint &&
+            existing.isLosslessLegacyState() &&
+            (!targetContent.isStructured || existing.isLosslessLegacyRichState())
         val contentOutcome = when {
-            currentFingerprint == targetFingerprint -> PageContentOutcome.CURRENT_EQUALS_TARGET
-            target.contentAdoptionFromFingerprint != null && currentFingerprint == target.contentAdoptionFromFingerprint -> PageContentOutcome.ADOPTED
+            contentMatchesTarget -> PageContentOutcome.CURRENT_EQUALS_TARGET
+            adoptionAllowed -> PageContentOutcome.ADOPTED
             else -> PageContentOutcome.PROTECTED_DIVERGENCE
         }
 
@@ -498,14 +535,25 @@ class SitePackageProvisioner(
             }
         }
         if (contentOutcome == PageContentOutcome.ADOPTED) {
-            connection.prepareStatement("UPDATE cms_page SET body_html=?,render_mode=?,embed_url=? WHERE id=?").use {
-                it.setString(1, target.bodyHtml); it.setString(2, target.renderMode); it.setString(3, target.embedUrl); it.setLong(4, existing.id); it.executeUpdate()
+            connection.prepareStatement("UPDATE cms_page SET body_html=?,content_model=?,renderer_key=?,content_owner=?,structured_payload=?,embed_url=? WHERE id=?").use {
+                it.setString(1, targetContent.bodyHtml)
+                it.setString(2, targetContent.contentModel.name)
+                it.setString(3, targetContent.rendererKey)
+                it.setString(4, targetContent.contentOwner.name)
+                it.setString(5, targetStructuredPayload)
+                it.setString(6, targetContent.embedUrl)
+                it.setLong(7, existing.id)
+                it.executeUpdate()
             }
         }
         val result = if (structuralChanged || contentOutcome == PageContentOutcome.ADOPTED) Result.UPDATED else Result.UNCHANGED
         return PageReconcileResult(result, contentOutcome)
     }
 
+    /**
+     * EU-52 compatibility contract. Keep the exact JSON keys/order and renderer string identities.
+     * The physical persistence column is now renderer_key, but accepted legacy fingerprints do not change.
+     */
     private fun pageContentFingerprint(bodyHtml: String, renderMode: String, embedUrl: String?): String {
         val bytes = objectMapper.writeValueAsBytes(
             linkedMapOf<String, Any?>(
@@ -661,15 +709,28 @@ class SitePackageProvisioner(
 
     private fun page(connection: Connection, groupAlias: String?, alias: String): ExistingPage? {
         val sql = if (groupAlias == null) {
-            "SELECT id,group_id,name,body_html,render_mode,embed_url,sort_order,enabled,preset FROM cms_page WHERE group_id IS NULL AND alias=?"
+            "SELECT id,group_id,name,body_html,content_model,renderer_key,content_owner,structured_payload,embed_url,sort_order,enabled,preset FROM cms_page WHERE group_id IS NULL AND alias=?"
         } else {
-            "SELECT p.id,p.group_id,p.name,p.body_html,p.render_mode,p.embed_url,p.sort_order,p.enabled,p.preset FROM cms_page p JOIN cms_page_group g ON g.id=p.group_id WHERE g.alias=? AND p.alias=?"
+            "SELECT p.id,p.group_id,p.name,p.body_html,p.content_model,p.renderer_key,p.content_owner,p.structured_payload,p.embed_url,p.sort_order,p.enabled,p.preset FROM cms_page p JOIN cms_page_group g ON g.id=p.group_id WHERE g.alias=? AND p.alias=?"
         }
         return connection.prepareStatement(sql).use { statement ->
             if (groupAlias == null) statement.setString(1, alias) else { statement.setString(1, groupAlias); statement.setString(2, alias) }
             statement.executeQuery().use { result ->
                 if (!result.next()) return@use null
-                val row = ExistingPage(result.getLong("id"), result.nullableLong("group_id"), result.getString("name"), result.getString("body_html"), result.getString("render_mode"), result.getString("embed_url"), result.getInt("sort_order"), result.getBoolean("enabled"), result.getBoolean("preset"))
+                val row = ExistingPage(
+                    result.getLong("id"),
+                    result.nullableLong("group_id"),
+                    result.getString("name"),
+                    result.getString("body_html"),
+                    result.getString("content_model"),
+                    result.getString("renderer_key"),
+                    result.getString("content_owner"),
+                    result.getString("structured_payload"),
+                    result.getString("embed_url"),
+                    result.getInt("sort_order"),
+                    result.getBoolean("enabled"),
+                    result.getBoolean("preset"),
+                )
                 if (result.next()) throw SitePackageValidationException("Page logical identity 存在歧义：${pageIdentity(groupAlias, alias)}")
                 row
             }
@@ -714,7 +775,36 @@ class SitePackageProvisioner(
 
     private data class ExistingColumn(val id: Long, val parentId: Long?, val name: String, val coverPolicy: String, val sortOrder: Int, val enabled: Boolean, override val preset: Boolean) : Owned
     private data class ExistingPageGroup(val id: Long, val name: String, val sortOrder: Int, val enabled: Boolean, override val preset: Boolean) : Owned
-    private data class ExistingPage(val id: Long, val groupId: Long?, val name: String, val bodyHtml: String, val renderMode: String, val embedUrl: String?, val sortOrder: Int, val enabled: Boolean, override val preset: Boolean) : Owned
+    private data class ExistingPage(
+        val id: Long,
+        val groupId: Long?,
+        val name: String,
+        val bodyHtml: String,
+        val contentModel: String,
+        val rendererKey: String,
+        val contentOwner: String,
+        val structuredPayload: String?,
+        val embedUrl: String?,
+        val sortOrder: Int,
+        val enabled: Boolean,
+        override val preset: Boolean,
+    ) : Owned {
+        fun isLosslessLegacyRichState(): Boolean =
+            contentModel == PageContentModel.RICH_TEXT.name &&
+                rendererKey == PageRendererKey.RICH_TEXT &&
+                contentOwner == PageContentOwner.OPERATOR.name &&
+                structuredPayload == null
+
+        fun isLosslessLegacyState(): Boolean {
+            if (structuredPayload != null) return false
+            return when (rendererKey) {
+                PageRendererKey.RICH_TEXT -> contentModel == PageContentModel.RICH_TEXT.name && contentOwner == PageContentOwner.OPERATOR.name
+                PageRendererKey.EMBED_PLACEHOLDER -> contentModel == PageContentModel.NONE.name && contentOwner == PageContentOwner.EXTERNAL.name
+                PageRendererKey.INTERNAL_STATIC -> contentModel == PageContentModel.NONE.name && contentOwner == PageContentOwner.ENGINEERING.name
+                else -> false
+            }
+        }
+    }
     private data class ExistingNamed(val name: String, val description: String, val sortOrder: Int, val enabled: Boolean, val systemFlag: Boolean, override val preset: Boolean) : Owned
     private data class ExistingConfig(val propertyName: String, val groupCode: String, val value: String, val valueType: String, val description: String, val sortOrder: Int, val required: Boolean, val systemFlag: Boolean, val enabled: Boolean, override val preset: Boolean) : Owned
     private data class ExistingList(val name: String, val groupCode: String, val imagePolicy: String, val description: String, val sortOrder: Int, val enabled: Boolean, val systemFlag: Boolean, override val preset: Boolean) : Owned
@@ -753,6 +843,93 @@ class SitePackageProvisioner(
     private data class Counts(var created: Int = 0, var updated: Int = 0, var unchanged: Int = 0) {
         fun add(result: Result) = when (result) { Result.CREATED -> created++; Result.UPDATED -> updated++; Result.UNCHANGED -> unchanged++ }
     }
+}
+
+private data class ResolvedSitePackagePageContent(
+    val bodyHtml: String,
+    val contentModel: PageContentModel,
+    val rendererKey: String,
+    val contentOwner: PageContentOwner,
+    val structuredPayload: PageStructuredContent?,
+    val embedUrl: String?,
+) {
+    val isStructured: Boolean get() = contentModel == PageContentModel.STRUCTURED
+}
+
+private fun resolvePageContent(packageSchemaVersion: Int, page: SitePackagePage): ResolvedSitePackagePageContent = when (packageSchemaVersion) {
+    1 -> {
+        if (page.contentModel != null || page.rendererKey != null || page.contentOwner != null || page.structuredPayload != null) {
+            throw SitePackageValidationException("Site Package v1 Page 不允许声明 v2 content contract：${pageIdentity(page.groupAlias, page.alias)}")
+        }
+        legacyPageContent(page.renderMode ?: PageRendererKey.RICH_TEXT, page.bodyHtml, page.embedUrl, page)
+    }
+    2 -> {
+        if (page.renderMode != null) throw SitePackageValidationException("Site Package v2 Page 不允许继续声明 renderMode：${pageIdentity(page.groupAlias, page.alias)}")
+        val model = page.contentModel?.let { runCatching { PageContentModel.valueOf(it) }.getOrNull() }
+            ?: throw SitePackageValidationException("Site Package v2 Page contentModel 不合法：${pageIdentity(page.groupAlias, page.alias)}")
+        val renderer = page.rendererKey?.takeIf { it.matches(RENDERER_KEY) }
+            ?: throw SitePackageValidationException("Site Package v2 Page rendererKey 不合法：${pageIdentity(page.groupAlias, page.alias)}")
+        val owner = page.contentOwner?.let { runCatching { PageContentOwner.valueOf(it) }.getOrNull() }
+            ?: throw SitePackageValidationException("Site Package v2 Page contentOwner 不合法：${pageIdentity(page.groupAlias, page.alias)}")
+        validatePageContract(model, renderer, owner, page)
+        when (model) {
+            PageContentModel.RICH_TEXT -> ResolvedSitePackagePageContent(page.bodyHtml, model, renderer, owner, null, page.embedUrl)
+            PageContentModel.STRUCTURED -> {
+                if (page.bodyHtml.isNotBlank()) throw SitePackageValidationException("Structured Page 不允许并行 whole-page bodyHtml：${pageIdentity(page.groupAlias, page.alias)}")
+                if (!page.embedUrl.isNullOrBlank()) throw SitePackageValidationException("Structured Page 不允许 embedUrl：${pageIdentity(page.groupAlias, page.alias)}")
+                val structured = normalizeStructuredPayload(page.structuredPayload ?: throw SitePackageValidationException("Structured Page 缺少 structuredPayload：${pageIdentity(page.groupAlias, page.alias)}"), page)
+                ResolvedSitePackagePageContent("", model, renderer, owner, structured, null)
+            }
+            PageContentModel.NONE -> {
+                if (page.structuredPayload != null) throw SitePackageValidationException("NONE Page 不允许 structuredPayload：${pageIdentity(page.groupAlias, page.alias)}")
+                if (renderer == PageRendererKey.INTERNAL_STATIC && !page.embedUrl.isNullOrBlank() && !page.embedUrl.startsWith("/")) {
+                    throw SitePackageValidationException("INTERNAL_STATIC Page 必须使用本站路径：${pageIdentity(page.groupAlias, page.alias)}")
+                }
+                ResolvedSitePackagePageContent(page.bodyHtml, model, renderer, owner, null, page.embedUrl)
+            }
+        }
+    }
+    else -> throw SitePackageValidationException("不支持的 Site Package schemaVersion：$packageSchemaVersion")
+}
+
+private fun legacyPageContent(renderMode: String, bodyHtml: String, embedUrl: String?, page: SitePackagePage): ResolvedSitePackagePageContent = when (renderMode) {
+    PageRendererKey.RICH_TEXT -> ResolvedSitePackagePageContent(bodyHtml, PageContentModel.RICH_TEXT, PageRendererKey.RICH_TEXT, PageContentOwner.OPERATOR, null, embedUrl)
+    PageRendererKey.EMBED_PLACEHOLDER -> ResolvedSitePackagePageContent(bodyHtml, PageContentModel.NONE, PageRendererKey.EMBED_PLACEHOLDER, PageContentOwner.EXTERNAL, null, embedUrl)
+    PageRendererKey.INTERNAL_STATIC -> {
+        if (!embedUrl.isNullOrBlank() && !embedUrl.startsWith("/")) throw SitePackageValidationException("INTERNAL_STATIC Page 必须使用本站路径：${pageIdentity(page.groupAlias, page.alias)}")
+        ResolvedSitePackagePageContent(bodyHtml, PageContentModel.NONE, PageRendererKey.INTERNAL_STATIC, PageContentOwner.ENGINEERING, null, embedUrl)
+    }
+    else -> throw SitePackageValidationException("Site Package v1 Page renderMode 不合法：${pageIdentity(page.groupAlias, page.alias)}")
+}
+
+private fun validatePageContract(contentModel: PageContentModel, rendererKey: String, contentOwner: PageContentOwner, page: SitePackagePage) {
+    val identity = pageIdentity(page.groupAlias, page.alias)
+    when (contentModel) {
+        PageContentModel.RICH_TEXT -> if (rendererKey != PageRendererKey.RICH_TEXT || contentOwner != PageContentOwner.OPERATOR) {
+            throw SitePackageValidationException("RICH_TEXT Page contract 不合法：$identity")
+        }
+        PageContentModel.STRUCTURED -> if (contentOwner != PageContentOwner.OPERATOR || rendererKey in setOf(PageRendererKey.RICH_TEXT, PageRendererKey.EMBED_PLACEHOLDER, PageRendererKey.INTERNAL_STATIC)) {
+            throw SitePackageValidationException("STRUCTURED Page contract 不合法：$identity")
+        }
+        PageContentModel.NONE -> {
+            val valid = (rendererKey == PageRendererKey.EMBED_PLACEHOLDER && contentOwner == PageContentOwner.EXTERNAL) ||
+                (rendererKey == PageRendererKey.INTERNAL_STATIC && contentOwner == PageContentOwner.ENGINEERING)
+            if (!valid) throw SitePackageValidationException("NONE Page contract 不合法：$identity")
+        }
+    }
+}
+
+private fun normalizeStructuredPayload(content: PageStructuredContent, page: SitePackagePage): PageStructuredContent {
+    val identity = pageIdentity(page.groupAlias, page.alias)
+    if (content.schemaVersion != CARD_COLLECTION_SCHEMA_VERSION) throw SitePackageValidationException("Structured schemaVersion 不支持：$identity")
+    if (content.kind != CARD_COLLECTION) throw SitePackageValidationException("Structured kind 不支持：$identity")
+    if (content.items.isEmpty()) throw SitePackageValidationException("CARD_COLLECTION items 不能为空：$identity")
+    if (content.items.size > 100) throw SitePackageValidationException("CARD_COLLECTION items 不能超过 100 项：$identity")
+    return content.copy(items = content.items.mapIndexed { index, item ->
+        val title = item.title.trim()
+        if (title.isBlank() || title.length > 200) throw SitePackageValidationException("CARD_COLLECTION 第 ${index + 1} 项 title 不合法：$identity")
+        PageStructuredCard(title = title, bodyHtml = RichTextHtmlPolicy.sanitize(item.bodyHtml))
+    })
 }
 
 private fun ResultSet.nullableLong(column: String): Long? = getLong(column).let { if (wasNull()) null else it }
