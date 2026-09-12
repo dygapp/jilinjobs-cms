@@ -199,6 +199,10 @@ test('EU-54：普通中文编辑、中文字体、撤销重做与共享 Article/
   }
   await fontMenu.locator('[data-command="SimSun"]').click()
   await expect.poll(() => surface.evaluate(node => node.innerHTML)).toMatch(/font-family:\s*SimSun/i)
+  const fontToolbarText = root.locator('.se-btn-tool-font .se-txt')
+  await expect(fontToolbarText).toHaveText('SimSun')
+  await expect(fontToolbarText).toHaveAttribute('data-jilinjobs-font-label', '宋体')
+  await expect.poll(() => fontToolbarText.evaluate(node => getComputedStyle(node, '::after').content)).toContain('宋体')
 })
 
 test('EU-54：粘贴 hostile HTML 后服务端共享安全边界继续生效', async ({ page, request }, testInfo) => {
