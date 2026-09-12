@@ -51,7 +51,7 @@ test('Main formal Pages render accepted package content on all ten stable routes
   }
 })
 
-test('guide/jypq renders the accepted three-card Structured contract as collapsed interactive cards with four package images', async ({ page, request }) => {
+test('guide/jypq renders the accepted three-card Structured contract as collapsed interactive cards with centered package images', async ({ page, request }) => {
   await page.goto('/page/guide/jypq')
 
   const renderer = page.locator('[data-page-renderer="JILINJOBS_GUIDE_CARDS"]')
@@ -83,8 +83,26 @@ test('guide/jypq renders the accepted three-card Structured contract as collapse
   await expect(cards.nth(0)).toHaveAttribute('data-card-state', 'collapsed')
   await expect(firstBody).toBeHidden()
 
-  const images = renderer.locator('img[src^="/static/pages/guide/jypq/"]')
+  const secondToggle = renderer.getByTestId('guide-card-toggle-1')
+  const secondBody = renderer.getByTestId('guide-card-body-1')
+  await secondToggle.click()
+  await expect(secondToggle).toHaveAttribute('aria-expanded', 'true')
+  await expect(secondBody).toBeVisible()
+
+  const images = secondBody.locator('img[src^="/static/pages/guide/jypq/"]')
   await expect(images).toHaveCount(4)
+  const bodyBox = await secondBody.boundingBox()
+  expect(bodyBox).not.toBeNull()
+  const bodyCenter = bodyBox!.x + bodyBox!.width / 2
+  for (let index = 0; index < 4; index += 1) {
+    const image = images.nth(index)
+    await expect(image).toBeVisible()
+    const imageBox = await image.boundingBox()
+    expect(imageBox).not.toBeNull()
+    const imageCenter = imageBox!.x + imageBox!.width / 2
+    expect(Math.abs(imageCenter - bodyCenter)).toBeLessThanOrEqual(2)
+  }
+
   const imageSources = await images.evaluateAll(elements => elements.map(element => element.getAttribute('src') || ''))
   expect(new Set(imageSources).size).toBe(4)
   for (const src of imageSources) {
