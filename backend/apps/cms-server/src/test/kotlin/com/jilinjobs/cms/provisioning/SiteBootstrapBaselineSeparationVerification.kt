@@ -137,6 +137,7 @@ private fun verifyGenericMigrationHistory(dbUrl: String, username: String, passw
                         "1" to "current cms schema",
                         "2" to "site provisioning schema capabilities",
                         "3" to "page content migration mapping",
+                        "4" to "page content architecture",
                     ),
                 ) {
                     "Backend Flyway history 必须只包含 accepted Generic CMS schema migrations：$migrations"
@@ -166,7 +167,7 @@ private fun bootstrapOperationalCounts(dbUrl: String, username: String, password
     }
 
 private fun mainListItemCounts(dbUrl: String, username: String, password: String): Map<String, Int> =
-    EXPECTED_MAIN_LIST_ITEM_COUNTS.keys.associateWith { code -> listItemCount(dbUrl, username, password, code) }
+    EXPECTED_MAIN_LIST_ITEM_COUNTS.keys.associateWith { code -> listItemCount(dbUrl, dbUsername, dbPassword, code) }
 
 private fun listItemCount(dbUrl: String, username: String, password: String, listCode: String): Int =
     DriverManager.getConnection(dbUrl, username, password).use { connection ->
