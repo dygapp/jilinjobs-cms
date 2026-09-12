@@ -4,7 +4,7 @@
 
 `jilinjobs-cms` 是吉林省智慧就业云平台中“信息发布与网站服务”相关能力的独立 Consumer 项目。
 
-本文件只维护 Repository Governance、Authority Boundary、Knowledge Boundary、Development Method adoption、Human Escalation 与 GitHub operation rules，不缓存某个 Execution Unit 的高频 Current Gate。已完成里程碑、持久路线与后续 Planning directions 由 Project Roadmap 维护；Current Execution Lifecycle 由 `docs/work/` 的专门 locator / lifecycle contract 管理。Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层长期架构边界。Documentation Authority Map 统一由 `docs/README.md` 承载；`docs/**/archive/**` 与 `docs/work/archive/**` 默认不参与 Fresh Context Current Authority 恢复。不得从其他项目、其他会话、个人记忆、旧预编号路线、惯例或实现便利性中推导、补充或扩大本项目的产品范围。
+本文件只维护 Repository Governance、Authority Boundary、Knowledge Boundary、Development Method adoption、Human Escalation 与 GitHub operation rules，不缓存某个 Execution Unit 的高频 Current Gate。已完成里程碑、持久路线与后续 Planning directions 由 Project Roadmap 维护；Current Execution Lifecycle 由 `docs/work/` 的专门 locator / lifecycle contract 管理。Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层长期架构边界。Documentation Authority Map 与 Consumer **Local Discovery Entry** 统一由 `docs/README.md` 承载；`docs/**/archive/**` 与 `docs/work/archive/**` 默认不参与 Fresh Context Current Authority 恢复。不得从其他项目、其他会话、个人记忆、旧预编号路线、惯例或实现便利性中推导、补充或扩大本项目的产品范围。
 
 ## Current State ownership 与 locator
 
@@ -12,7 +12,7 @@ Current State 按职责分层，不建立第二套 Current State truth：
 
 - `AGENTS.md`：稳定 Repository rules / Authority Boundary；
 - 根 `README.md`：稳定项目入口与范围；
-- `docs/README.md`：Documentation Authority Map；
+- `docs/README.md`：Documentation Authority Map / Local Discovery Entry；
 - `docs/work/README.md`：Ready / active Execution Unit 的 Entry / Exit / fail-closed lifecycle contract；
 - `docs/work/current/README.md`：Repository-owned **Current Execution Lifecycle Locator**；
 - `docs/project/project-roadmap.md`：durable milestones、长期边界与 Planning directions；
@@ -22,6 +22,16 @@ Current State 按职责分层，不建立第二套 Current State truth：
 Bootstrap / Roadmap surface 不并行维护 `Current Ready Execution Unit`、Readiness `PENDING/PASS`、exact implementation Head 或最近 Actions 等高频 Execute Gate 真值。Fresh Context 在使用 `docs/work/current/README.md` 的 `NONE` 作为 state-only 安全停止条件前，必须核对当前任务相关的 Open execution PR / branch 与必要 Readiness / Integration Current Evidence；`NONE` 只表示没有 Ready / active Execution Unit，不表示没有 Planning Candidate 或新的用户指定 Planning 目标。
 
 若 Current Work locator、active artifact、Readiness Evidence、Open execution work 或关键 GitHub Current Evidence之间缺失、冲突或无法消歧，必须 **fail closed**：不得进入、继续或继承 Execute Authority，先恢复一致的 Current State。GitHub 原生状态只对其职责内的瞬时事实负责；本规则**不**建立“GitHub 永远高于本地文件”的通用优先级，Requirement / Specification / Architecture / Method / Work lifecycle 继续按 Repository Authority 各自拥有其语义责任。
+
+## 本地资源发现（Local Discovery）
+
+普通运行从本文件与根 `README.md` 到达 `docs/README.md` Local Discovery Entry，并按当前目标使用最小正确读取集合：
+
+- **state-only**：定位 Current Execution Lifecycle 与必要 GitHub native state，不机械加载完整 Roadmap、Method、Skills 或 upstream；
+- **routing-only**：返回一个 primary responsibility + 最小 supporting locator，不加载完整 Skill；
+- **execution**：真正执行某项职责时才加载对应 Method / primary Skill 与当前条件实际触发的 supporting capability。
+
+当前 Consumer 不维护 Reviewed Discovery Map，也不维护 Runtime View；稳定入口、当前 resource owner 与原生 locator 已足够支撑普通运行。若 source / locator 缺失、semantic owner 不明确、多个 primary 无法消歧、override / supersede 冲突，或 no-match 但已知 Governance / Verification risk 仍存在，则回到本地 Authority **fail closed**，不得自动访问 `dygapp/agentic-dev` 修补普通运行。
 
 ## 文档语言与术语表达
 
@@ -57,26 +67,26 @@ Bootstrap / Roadmap surface 不并行维护 `Current Ready Execution Unit`、Rea
 本项目事实只允许来自：
 
 - 当前 Consumer Repository；
-- 明确指定的 `agentic-dev` baseline，但它只作为开发 Method、Operating Guide、Engineering Discipline、Technology Profile 与 Skills 的知识来源；
+- 明确指定的 `agentic-dev` baseline，但它只作为开发 Method、Operating Guide、Engineering Discipline、Technology Profile、Consumer Lifecycle / Resource Discovery 与 Skills 的知识来源；
 - 已被有意纳入本仓库的权威需求输入；
 - 当前 Runtime / Repository 可以直接观察到的状态和证据。
 
 不得把其他聊天、其他项目、个人记忆或未经声明的领域假设直接作为 Consumer 项目事实。
 
-`agentic-dev` 决定“如何工作”，不决定 `jilinjobs-cms` 的业务事实。
+`agentic-dev` 决定“如何工作”，不决定 `jilinjobs-cms` 的业务事实。即使 upstream baseline 被评估，也只有显式采纳并投射到本地 owner 的语义才进入 Consumer ordinary runtime；upstream project-only / Research / Eval / self-adoption 状态不继承。
 
 ## 开发方法（Development Method）
 
 方法来源：
 
 - Repository：`dygapp/agentic-dev`
-- Validation Baseline Ref：`master`
-- Validation Baseline Commit：`d9fad0da83dbdb61cac5eb9778b0258c6861eef1`
+- Previous Evaluated Baseline：`d9fad0da83dbdb61cac5eb9778b0258c6861eef1`
+- Current Evaluated Baseline：`2fe193035c629f6b8805fd473bd322f70fe6e172`
 - Capability Milestone Tag：`baseline-2026-09-04-engineering-capability` → `5be2e6aad29b2be6b8535b3690daf3533ee22a46`
 
-当前 Validation Baseline 以 `agentic-dev` 已进入默认分支的精确 commit 为准。相对上一 Consumer baseline `master@394d1c3cde04b35940d5e33b7cbcaaf6557678ce`，`master@d9fad0da83dbdb61cac5eb9778b0258c6861eef1` 只前进 1 个 Stable Maintenance 提交：没有增加 Method Stage、Engineering Discipline、Technology Profile、Task-oriented Skill 或新的 Skill Contract。本 Consumer 选择性固化 **Planning Candidate 与 Execution Unit 身份边界**：Planning / Requirement Candidate 在进入 `slice-work` 前不具有 Execution Unit 身份；Specification Ready 且必要 Technical Planning 已完成或确认不需要后，`slice-work` 形成 Candidate Execution Unit，并可以分配稳定 Identifier；Identifier 只承担追踪 / 依赖身份，不构成 Readiness PASS，也不授予 Execute权限；只有 `readiness-check` PASS 后才成为 Ready Execution Unit。Roadmap 顺序、预编号、Issue 标签或名称中的 `EU-xx` 均不能替代该状态链。上一 baseline 已固化的 Ephemeral Evidence Promotion 与 Long-lived Review Environment owner / lease / stale-run 生命周期规则继续有效。`agentic-dev` 自身 Stable Maintenance、Issue #58、Eval、PR 与 Roadmap 状态不继承为 Consumer 项目事实。
+Current Evaluated Baseline 只表示本 Consumer 已经完成 exact upstream compare 与 adoption verification 到哪个精确 commit，不表示 `2fe193...` 中所有文件、Project 状态或规则均被采用。当前 local asset 的真实 semantic owner / provenance 与 upgrade-only disposition history 必须与 baseline 分离；V3-08 Track B 的逐项记录见 `docs/project/agentic-dev-v3-08-track-b-evidence.md`，普通运行不默认读取该升级历史。
 
-上一 Capability Milestone 已包含并继续保留 **Data Access Scope & Boundedness Control（数据访问作用域与有界性控制）** Engineering Discipline；本 Consumer 继续以现有 `docs/technical/verification-strategy.md` 的作用域查询、分页窗口与边界验证规则作为项目级验证实现。Technology Profile 与当前项目依赖不因本次 baseline 升级改变。
+从 previous baseline 到当前 baseline 的可复用变化选择性固化为：Consumer Lifecycle、Agent Resource Model、Resource Discovery Architecture、Skill identity / admission / supporting-resource boundary；Verification / Evidence、External Operation、Engineering Discipline、Technology Profile 与既有 Consumer-local owner 一致的部分继续由本仓库现有 owner 承载，不复制 upstream Guide。`agentic-dev` 自身 `AGENTS.md` / README / Roadmap、V3 Project / Issue / PR 状态、Research / Eval、tasks/plans、自采用 `docs/discovery/**` 实例均不成为 Consumer current authority。
 
 本项目不是在每次开发工作中直接运行 `agentic-dev` 仓库的方法文档，而是将当前采用的方法和 Skills 使用规则固化在 Consumer Repository：
 
@@ -84,50 +94,53 @@ Bootstrap / Roadmap surface 不并行维护 `Current Ready Execution Unit`、Rea
 docs/project/development-method.md
 ```
 
-后续普通开发应优先读取并遵守本仓库 `AGENTS.md`、`README.md`、`docs/project/development-method.md`、`docs/project/project-roadmap.md` 以及与当前工作相关的 Consumer Authority。除非项目负责人明确要求更新 `agentic-dev` baseline，或本仓库尚未固化某个必要的方法问题，否则不要求为普通开发重新跨仓库读取 `agentic-dev`。
+后续普通开发应优先读取并遵守本仓库 `AGENTS.md`、`README.md`、`docs/README.md`、`docs/project/development-method.md`、`docs/project/project-roadmap.md` 以及与当前工作相关的 Consumer Authority。除非项目负责人明确要求更新 `agentic-dev` baseline、本仓库 Authority 明确要求 upstream 比较，或当前任务本身就是显式 `agentic-dev` Consumer validation，否则不要求为普通开发跨仓库读取 `agentic-dev`。
 
 当项目负责人明确要求升级 baseline 时，应：
 
-1. 读取指定 Branch / Tag / commit ref 并解析其精确 commit；
-2. 比较当前 Consumer baseline 到新 baseline 的 Method、Operating Guide、Engineering Discipline、Technology Profile、Contract 与 Skill 变化；
-3. 区分跨项目可复用规则与 `agentic-dev` 自身 Project Rule；
-4. 只将影响本 Consumer 工作方式、且具有持续约束价值的变化固化到本仓库；
-5. 明确处理需要更新、保留或取代的 Consumer-local 规则，并同步更新本节、`docs/project/development-method.md` 和 `docs/project/project-roadmap.md`；
-6. 完成升级后恢复以 Consumer-local Authority 为普通开发入口，不继承 `agentic-dev` 自身的 Project Roadmap、Issue、实验状态或项目事实。
+1. 重新恢复 Consumer 当前 Authority / Current Work / GitHub evidence，并确认没有冲突的 active lifecycle；
+2. 精确确认 previous evaluated baseline 与固定 candidate baseline，执行 exact compare；
+3. 对 reusable delta 逐项分类 `adopt / retain-or-override / reject-or-not-applicable / supersede-or-remove`；
+4. 区分跨项目可复用规则与 `agentic-dev` project-only / Research / Eval / historical / self-adoption 实例；
+5. 优先投射到 Consumer 现有 semantic owner，不机械复制完整文档、Map、Catalog、Runtime View 或 Skill supporting resources；
+6. 分开维护 evaluated baseline、current local asset provenance / owner、upgrade-only decision history；
+7. 验证 state-only / routing-only / execution progressive loading、ordinary runtime local-only、stale / missing / ambiguity / coverage / supersede 等 fail-closed 与 Current State ownership；
+8. 只有 adoption verification 完成且 Blocking=0、Medium=0 时才推进 evaluated baseline；失败 / 中断保持 previous baseline；
+9. 完成升级后恢复以 Consumer-local Authority 为普通开发入口，不继承 upstream Project Roadmap、Issue、实验状态或项目事实。
 
 当前采用的主要方法原则：
 
-- 使用渐进式披露（Progressive Disclosure），只加载当前阶段真正需要的 Skills；
+- 使用渐进式披露（Progressive Disclosure），只加载当前职责真正需要的 Authority、Skill 与 supporting capability；
+- 一次 discovery / routing 决策只确定一个 primary responsibility + 最小 supporting locator；routing-only 不加载完整 Skill，真正 execution 才加载 primary Skill；
 - 阶段是工作状态，不为了表示阶段而机械创建 Artifact；
 - 规格说明（Specification）聚焦 WHAT / WHY；
 - 只有存在跨执行单元（Execution Units）的长期 HOW 协调价值时，才持久化技术计划（Technical Plan）；
 - Planning / Requirement Candidate 在 `slice-work` 前保持规划身份；`slice-work` 只在上游 Ready 后形成 Candidate Execution Unit，可分配稳定 Identifier；Identifier 不等于 Readiness 或 Execute 授权，只有 `readiness-check` PASS 后才成为 Ready Execution Unit；
 - 优先形成纵向、可独立验证、范围明确且 context-fit 的 Execution Unit；
 - 在条件允许时使用 Fresh Context；
-- Fresh Context 的会话切换提示词只承担 **Locator / Handoff** 职责，不并行维护第二份项目 Authority；凡可从当前 GitHub Repository、Roadmap、Consumer-local Method、Requirement / Specification / Technical Plan、Issue / PR / Actions 或 Runtime Evidence 恢复的事实、规则、状态和执行步骤，不得为了“交接完整”再次复制进提示词；完整规则见 `docs/project/development-method.md` §11.1；
+- Fresh Context 的会话切换提示词只承担 **Locator / Handoff** 职责，不并行维护第二份项目 Authority；凡可从当前 GitHub Repository、Roadmap、Consumer-local Method、Requirement / Specification / Technical Plan、Issue / PR / Actions 或 Runtime Evidence 恢复的事实、规则、状态和执行步骤，不得为了“交接完整”再次复制进提示词；完整规则见 `docs/project/development-method.md`；
 - 实施时选择当前证据支持的最低必要复杂度；没有当前 Requirement、Specification、Architecture、Verification、安全、性能、生命周期或真实多消费者证据支持的额外抽象、配置项、依赖、扩展点、框架层和未来分支默认不进入实现；必要的失败路径、安全措施、验证能力、行为保持型 preparatory refactor 与薄适配不属于“过度设计”；
 - 最终 Diff 的每个有意义区域必须能追溯到当前 Unit 实现、验证、Authority 同步、必要 preparatory refactor 或其直接 cleanup；相邻 typo、TODO、历史死代码、独立优化、全局格式化等默认留在当前 Diff 之外；
-- 当 Unit 涉及集合、列表或 snapshot 数据访问时，先确认真实 Consumer Scope、集合的稳定有界性或增长特征、Lifecycle / Freshness，再决定过滤、稳定排序、window / pagination、representation 与复用方式；页面最终展示数量、现有 `LIMIT/OFFSET` 或客户端过滤不能替代业务作用域，业务 scope 决定成员资格时应先形成 scope 再 window / paginate；只有当前 Authority 明确定义 global Top-N / ranking 本身为业务语义时例外；稳定有界的结构性共享快照可以按当前生命周期完整读取，不为形式统一机械分页；
+- 当 Unit 涉及集合、列表或 snapshot 数据访问时，先确认真实 Consumer Scope、集合的稳定有界性或增长特征、Lifecycle / Freshness，再决定过滤、稳定排序、window / pagination、representation 与复用方式；页面最终展示数量、现有 `LIMIT/OFFSET` 或客户端过滤不能替代业务作用域；
 - 每项 Acceptance Obligation 必须闭环到实现责任、验证责任、计划证据与已执行的 Current Evidence；
-- 实现覆盖不等于验证覆盖；
-- 没有 Current Evidence，不得声明完成、通过或修复成功；
-- Technology Profile 是可复用默认值而不是 Consumer 产品事实；本仓库当前确认的实际版本、Architecture / ADR、目录、依赖、Element Plus 规则、package scripts、tsconfig 与验证命令优先于 Profile Engineering Default。不得为了匹配 Profile Research Anchor 机械升级 Vue、TypeScript、`vue-tsc` 或其他依赖；
-- 当前 Vue 3 + TypeScript 代码遵守 Vue / TypeScript 客观语义约束，并在不与 Consumer Authority 冲突时采用 Profile 默认：保持 props 单向数据流、正确声明 props/emits、生命周期内安全处理模板引用、正确理解 `watch` / `watchEffect` 依赖与异步失效工作、保持 computed 纯计算、避免以 `any` 或无证据断言逃逸类型系统；不为采用 Profile 重写稳定组件或迁移既有 API 风格；
-- Vue / TypeScript Verification 按变更风险映射到本仓库真实命令与证据，不机械执行 Profile 中不存在于本仓库的命令。当前公开站与管理端 `npm run build` 都先执行 `vue-tsc --noEmit` 再执行 `vite build`，因此该项目脚本同时提供 Vue-aware type-check 与 bundler build evidence；不能据此反向声称单独的 Vite transpile 等同于 type-check；DOM / Router / watcher / lifecycle / 视觉与多入口行为仍按 `docs/technical/verification-strategy.md` 追加对应 Browser / Visual / Integration Evidence；
-- 测试、Workflow assertion、fixture、snapshot 等 Verification Artifact 也可能陈旧；当其与更高优先级 Authority / Specification 冲突时，应分类为 Stale Verification Contract 并修正验证层，而不是修改产品去恢复已被取代的旧行为；
-- 证据类型必须与声明类型匹配；Functional Browser PASS 不能单独证明 Visual Fidelity，视觉复刻在缺少完整机器可判定容差时需要参考证据、AI 视觉对照与 Human Visual Review；
-- Human Review 的原始结论按实际范围记录，不把“基本通过，暂未发现阻塞问题”扩大为“完全一致”或无条件验收；Human Review 中发现的问题不因评审名称自动归类为视觉问题，应重新读取当前 Authority 与 Product Intent 后区分 Implementation Defect、Product / Requirement Ambiguity、Domain / Architecture Authority Gap 或 Runtime Problem；
-- 自动 E2E 与 Human Review 共用 Runtime 时，应在收集自动化证据后恢复已知数据库/静态资源基线，再注入明确的人工评审 Fixture；测试数据不得因环境复用而意外泄漏；
-- 长生命周期单实例 Review Environment 必须将真实共享资源的排他边界与环境生命周期分开治理：定义 owner、lease 取得 / 续期 / 到期 / 释放条件和 stale 判定；自动 Verification 与 Human Review 可以采用不同租约生命周期；保护有效人工评审租约与让新 Head 获取验证环境属于不同目标，由本仓库 Policy 决定优先级，不机械使用 `latest-head-wins`；释放或接管前核对 owner、lease / activity、环境与授权，接管后重新验证目标 Head 与外部地址归属；
-- 容器可写 host bind mount 时，必须显式处理 UID/GID、ownership、permissions、cleanup 与 Reset 的可重复验证；调用清理命令本身不构成 Cleanup Evidence；
-- 从外部网站、接口、附件或其他 Repository 取得并准备版本化或交给 Runtime 消费的二进制/媒体资源时，文件名、扩展名、URL 后缀和响应头只能作为线索；当内容类型会影响行为、验证或安全边界时，必须使用内容签名、可靠媒体类型识别或实际解码/解析核对真实格式，必要时规范化后重新验证，禁止只改扩展名伪装格式；
-- Workflow Artifact、远程 Job 输出、临时快照等默认只承担单次运行的证明、传输、诊断或审查职责；当其中的数据、资源或配置被适当 Human / Product Authority 接受，并成为后续稳定重放、迁移、评审或运行输入时，必须显式 Promotion 到 Consumer 可长期发现和维护的持久来源，只晋升后续真实消费者需要的内容，保留 source Run / Head SHA / Artifact identity / digest / 生成规则等必要 provenance 与 integrity，且 Promotion 影响 Head、输入、Workflow、Importer、Review Environment 或 Evidence Claim 时重新取得最终 Current Evidence；不得让长期消费者把会过期的临时 Artifact 作为唯一输入；
-- 已验证提交之后出现新提交时，不按 `docs-only`、文件扩展名或变更数量机械继承祖先证据；只有取得祖先 Evidence Commit 到当前目标提交的精确差异、逐项证明差异不影响具体 Evidence Claim 且相关 Authority / Requirement / Specification / Architecture / Acceptance / Runtime 语义未变时，才可按声明复用未受影响证据，并记录祖先 SHA、当前 SHA、compare range 与 claim 映射；受影响或无法证明不受影响的声明必须重新验证或重新 Review；
-- 项目跨多个里程碑或 Fresh Context 持续演进时，维护 Consumer 自己的 `docs/project/project-roadmap.md`；Roadmap 维护持久路线和可恢复状态，不逐项复制 PR open/merged、精确 Merge Commit、临时分支删除等 GitHub 原生瞬时事实；仅当集成结果改变阶段、核心目标、里程碑或已决定下一步时更新路线，避免形成只记录上一 PR 已合并的递归尾部变更；
-- 同一任务涉及多个 Repository 时，分别确认每个 Repository 的操作授权，Runtime 工具能力本身不构成授权；
-- Workflow、Deployment、远程 Job 等异步外部操作在 `queued` / `pending` / `in_progress` 时仍属于执行闭环中间状态；只要 Runtime 可继续观察且当前目标需要结果，就应在授权范围内有界观察、收集证据、诊断、修复和重试，而不是仅因“仍在运行”就默认交回人工；
-- 固定域名、代理名、端口、评审 / 部署槽位、临时数据库或单例服务等共享外部资源的并发边界必须按真实冲突域覆盖所有触发路径；独立工作争用同一资源时默认有界排队，只有新 Run 确实取代旧工作且取消后的资源释放闭环可靠时才使用 cancellation；Run cancellation 与资源释放必须分别验证；
-- 实施阶段发现‘硬编码’或准备自行实现通用技术能力时，先按真实变化来源、维护者、稳定性、安全 / 协议约束和生命周期判断责任层；稳定且没有已证明外部维护责任的值默认保留在代码或既有权威载体中，不为消除字面量机械配置化；当前代码、框架、标准库或已引入依赖满足契约时优先复用，并只使用最薄适配层承载项目差异。
+- 实现覆盖不等于验证覆盖；没有 Current Evidence，不得声明完成、通过或修复成功；
+- Technology Profile 是可复用默认值而不是 Consumer 产品事实；本仓库当前确认的实际版本、Architecture / ADR、目录、依赖、Element Plus 规则、package scripts、tsconfig 与验证命令优先于 Profile Engineering Default；
+- 当前 Vue 3 + TypeScript 代码遵守 Vue / TypeScript 客观语义约束，并在不与 Consumer Authority 冲突时采用 Profile 默认；不为采用 Profile 重写稳定组件或迁移既有 API 风格；
+- Vue / TypeScript Verification 按变更风险映射到本仓库真实命令与证据，不机械执行 Profile 中不存在于本仓库的命令；
+- 测试、Workflow assertion、fixture、snapshot 等 Verification Artifact 也可能陈旧；与更高优先级 Authority / Specification 冲突时分类为 Stale Verification Contract 并修正验证层；
+- 证据类型必须与声明类型匹配；Functional Browser PASS 不能单独证明 Visual Fidelity；
+- Human Review 原始结论按实际范围记录，并按真实问题分类，不因评审名称自动压缩成视觉问题；
+- 自动 E2E 与 Human Review 共用 Runtime 时，应在收集自动化证据后恢复已知数据库/静态资源基线，再注入明确的人工评审 Fixture；
+- 长生命周期单实例 Review Environment 定义 owner、lease 取得 / 续期 / 到期 / 释放和 stale 判定；真实共享资源排他边界与环境生命周期分开治理；
+- 容器可写 host bind mount 时显式处理 UID/GID、ownership、permissions、cleanup 与 Reset 的可重复验证；
+- 外部二进制 / 媒体资源在内容类型会影响当前行为、验证或安全边界时验证真实格式，不只信扩展名 / URL / header；
+- 临时 Workflow Artifact / Snapshot 经 Authority 接受成为稳定输入时执行持久化 Promotion，保留必要 provenance / integrity，并重新取得受影响 Current Evidence；
+- 后继提交不按 `docs-only`、扩展名或变更数量机械继承祖先 evidence；只能按 exact diff + claim impact 复用未受影响声明；
+- Roadmap 维护持久路线和 durable milestone，不逐项复制 PR / exact merge SHA / 临时 Branch / Actions 等 GitHub native transient state；
+- 同一任务涉及多个 Repository 时分别确认操作授权，Runtime 工具能力本身不构成授权；
+- Workflow、Deployment、远程 Job 等异步外部操作保持有界 observe / diagnose / retry / verify 闭环；
+- 固定域名、代理名、端口、评审 / 部署槽位、临时数据库或单例服务等共享资源按真实冲突域治理；Run cancellation 与资源释放分别验证；
+- 实施阶段发现“硬编码”或准备自行实现通用能力时先按真实变化来源、维护者、稳定性、安全 / 协议约束和 lifecycle 判断 responsibility；已有代码、框架、标准库或依赖满足契约时优先复用最薄适配。
 
 当前核心 Skills、Engineering Disciplines、Vue 3 + TypeScript Profile 的 Consumer-local 使用边界统一记录在 `docs/project/development-method.md`，不在本文件重复维护 Skill 级细节。
 
