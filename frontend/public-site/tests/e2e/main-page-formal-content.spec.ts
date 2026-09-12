@@ -51,7 +51,7 @@ test('Main formal Pages render accepted package content on all ten stable routes
   }
 })
 
-test('guide/jypq renders the accepted three-card Structured contract and four package images', async ({ page, request }) => {
+test('guide/jypq renders the accepted three-card Structured contract as collapsed interactive cards with four package images', async ({ page, request }) => {
   await page.goto('/page/guide/jypq')
 
   const renderer = page.locator('[data-page-renderer="JILINJOBS_GUIDE_CARDS"]')
@@ -61,7 +61,27 @@ test('guide/jypq renders the accepted three-card Structured contract and four pa
 
   const cards = renderer.locator('.guide-card')
   await expect(cards).toHaveCount(3)
-  expect(await cards.locator('.guide-card-header h2').allTextContents()).toEqual([...dispatchCardTitles])
+  expect(await cards.locator('.guide-card-title').allTextContents()).toEqual([...dispatchCardTitles])
+
+  for (let index = 0; index < 3; index += 1) {
+    await expect(cards.nth(index)).toHaveAttribute('data-card-state', 'collapsed')
+    await expect(renderer.getByTestId(`guide-card-toggle-${index}`)).toHaveAttribute('aria-expanded', 'false')
+    await expect(renderer.getByTestId(`guide-card-body-${index}`)).toBeHidden()
+  }
+
+  const firstToggle = renderer.getByTestId('guide-card-toggle-0')
+  const firstBody = renderer.getByTestId('guide-card-body-0')
+  await firstToggle.click()
+  await expect(firstToggle).toHaveAttribute('aria-expanded', 'true')
+  await expect(cards.nth(0)).toHaveAttribute('data-card-state', 'expanded')
+  await expect(firstBody).toBeVisible()
+  await expect(renderer.getByTestId('guide-card-body-1')).toBeHidden()
+  await expect(renderer.getByTestId('guide-card-body-2')).toBeHidden()
+
+  await firstToggle.click()
+  await expect(firstToggle).toHaveAttribute('aria-expanded', 'false')
+  await expect(cards.nth(0)).toHaveAttribute('data-card-state', 'collapsed')
+  await expect(firstBody).toBeHidden()
 
   const images = renderer.locator('img[src^="/static/pages/guide/jypq/"]')
   await expect(images).toHaveCount(4)
