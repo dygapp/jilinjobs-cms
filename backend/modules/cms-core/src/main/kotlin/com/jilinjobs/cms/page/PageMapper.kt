@@ -43,4 +43,7 @@ data class PageRecord(
     var sortOrder:Int=0,
     var enabled:Boolean=true,
     var preset:Boolean=false,
-)
+) {
+    /** Compatibility projection for legacy code that still fingerprints the old render_mode contract. */
+    val renderMode: String get() = rendererKey
+}
