@@ -75,7 +75,7 @@ test('EU-55：Admin 对 guide/jypq 提供单一 Structured 卡片编辑 authorit
     await expect(dialog.getByTestId('page-render-mode')).toHaveCount(0)
     await expect(dialog.getByTestId('page-body-editor')).toHaveCount(0)
     await expect(dialog).toContainText('Renderer：JILINJOBS_GUIDE_CARDS')
-    await expect(dialog.locator('[data-testid^="structured-card-"][data-testid]:not([data-testid^="structured-card-title-"]):not([data-testid^="structured-card-body-"])')).toHaveCount(3)
+    await expect(dialog.locator('.structured-card-editor-item')).toHaveCount(3)
     await expect(dialog.getByTestId('structured-card-title-0')).toHaveValue(originalTitles[0]!)
     await expect(dialog.getByTestId('structured-card-title-1')).toHaveValue(originalTitles[1]!)
 
