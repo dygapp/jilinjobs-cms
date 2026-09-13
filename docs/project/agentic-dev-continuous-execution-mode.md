@@ -1,5 +1,8 @@
 # Agent 驱动开发连续执行模式
 
+> **Classification: SUPERSEDED / HISTORICAL_EVIDENCE**  
+> 本文件保留 RC-01 时期 continuous-execution 经验及其当时的 upstream provenance，仅用于历史追溯。当前长期方法语义由 `docs/project/development-method.md` 与 `docs/project/execution-continuity-guidelines.md` 拥有；本文件中的 baseline、执行规则与状态描述均不得作为普通运行的 current owner 或 Fresh Context current state。
+
 ## 目的
 
 记录多步骤工程任务所需的执行模式，尽量减少不必要的人工介入，并将 RC-01 中验证过的连续执行经验固化为本 Consumer 的长期操作规则。
