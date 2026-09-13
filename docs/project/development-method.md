@@ -11,10 +11,10 @@ Repository:
 dygapp/agentic-dev
 
 Previous Evaluated Baseline:
-d9fad0da83dbdb61cac5eb9778b0258c6861eef1
+2fe193035c629f6b8805fd473bd322f70fe6e172
 
 Current Evaluated Baseline:
-2fe193035c629f6b8805fd473bd322f70fe6e172
+1c8cdfea9ecf23ef33ffab20eec3c93679fd4578
 
 Capability Milestone Tag:
 baseline-2026-09-04-engineering-capability
@@ -23,21 +23,16 @@ Capability Milestone Commit:
 5be2e6aad29b2be6b8535b3690daf3533ee22a46
 ```
 
-当前 evaluated baseline 是 `dygapp/agentic-dev@2fe193035c629f6b8805fd473bd322f70fe6e172`。它只回答“本 Consumer 最近完整比较并完成采用判断到哪个精确 upstream baseline”，**不表示本仓库所有方法、规则、Skill 或文档都采用自该 commit**。
+当前 evaluated baseline 是 `dygapp/agentic-dev@1c8cdfea9ecf23ef33ffab20eec3c93679fd4578`。它只回答“本 Consumer 最近完整比较并完成采用判断到哪个精确 upstream baseline”，**不表示本仓库所有方法、规则、Skill 或文档都采用自该 commit**。
 
-从 previous evaluated baseline `d9fad0da83dbdb61cac5eb9778b0258c6861eef1` 到 candidate / current evaluated baseline `2fe193035c629f6b8805fd473bd322f70fe6e172` 的 GitHub exact compare 为 ahead 34 / behind 0。V3-08 Track B 对该 delta 执行逐项分类后，Consumer 只投射具有持续本地价值的长期语义：
+从 previous evaluated baseline `2fe193035c629f6b8805fd473bd322f70fe6e172` 到 current evaluated baseline `1c8cdfea9ecf23ef33ffab20eec3c93679fd4578` 的 GitHub exact compare 为 ahead 5 / behind 0。本轮逐项 disposition 后，只有一个新的长期 Consumer-local 语义进入 current owner：
 
-- **adopt — Consumer Lifecycle**：显式 baseline upgrade、逐项 adoption、采用验证、普通运行 local-only、显式 re-entry upstream；
-- **adopt — Agent Resource Model**：规范正文 / 资源固有结构 / 派生发现投影分层；真实 semantic owner 继续拥有正文，不建立第二 current truth；
-- **adopt — Resource Discovery Architecture**：薄 Local Discovery Entry、一个 primary responsibility + 最小 supporting locator、state-only / routing-only / execution 的渐进式加载、本地 fail-closed；
-- **adopt — Skill identity / admission / supporting-resource boundary**：Skill 只拥有稳定独立执行过程，不能因为“重要、可复用、有步骤、位于 skills 目录”就自动 Skill 化；supporting resource 不因物理目录取得平级所有权；
-- **retain / override — Consumer-local Verification / Evidence / External Operation / Engineering Discipline / Technology Profile**：上游变化与本仓库现有长期 owner 语义一致或更通用时，继续由 `docs/technical/verification-strategy.md`、本文、`AGENTS.md`、`docs/project/execution-continuity-guidelines.md`、`docs/project/review-feedback-cycle.md` 等 Consumer-local owner 承载，不复制 upstream Guide；
-- **reject / not applicable — agentic-dev project-only / Research / Eval / historical / V3 Project state**：`agentic-dev` 自身 `AGENTS.md`、README、Roadmap、Issue / PR / milestone、Research / Eval、tasks/plans、自采用实例均不成为 Consumer current authority；
-- **reject physical copy — upstream discovery instance**：不复制 `agentic-dev/docs/discovery/**`；Consumer 以 `docs/README.md` 作为自己的 Local Discovery Entry；
-- **Reviewed Discovery Map = NOT REQUIRED**：当前稳定入口、资源原生身份与 owner inventory 足以可靠发现；没有持续跨资源正规化成本证据；
-- **Runtime View = NOT REQUIRED**：没有真实运行成本证据支持增加纯生成运行投影。
+- **adopt — Handoff artifact lifecycle**：Handoff 仅在真实未完成 transition state、明确 producer、明确 downstream consumer，且 Current Repository Authority / GitHub native state 无法以同等可靠性和更低重复成本恢复所需最小状态时形成；消费或持久化到正式 owner 后立即失效；Handoff 不是 current Skill，也不得成为 Requirement、Method、Architecture、Current State 或第二份执行真值。其 Consumer current owner 是 `docs/project/execution-continuity-guidelines.md`。
+- **retain / override — Consumer-local Verification / Evidence / External Operation / Engineering Discipline / Technology Profile / Local Discovery / Skill inventory**：上游变化与本仓库现有长期 owner 一致或属于更通用 upstream framing，继续由 `docs/technical/verification-strategy.md`、本文、`AGENTS.md`、`docs/project/execution-continuity-guidelines.md`、`docs/project/review-feedback-cycle.md`、`docs/README.md` 等 Consumer-local owner 承载，不复制 upstream Guide / discovery instance。
+- **reject / not applicable — agentic-dev project-only / Research / Eval / review fixture / V3 closure state**：V3-08 Gate A、Independent Review Gate A/C、V3 Closure Decision、upstream Roadmap / Issue / PR / tasks/plans / self-adoption state 只作为 upstream 项目证据，不成为 Consumer current authority。
+- **Reviewed Discovery Map = NOT REQUIRED；Runtime View = NOT REQUIRED；Handoff Skill = NOT REQUIRED**：当前稳定入口、资源原生身份、owner inventory 与条件性 Handoff artifact contract 已足够，不增加第二套发现或 transition truth。
 
-本次 upgrade-only disposition / validation history 记录在 `docs/project/agentic-dev-v3-08-track-b-evidence.md`。该 evidence 用于 provenance 和下一次显式 upgrade，不属于普通 Fresh Context 的默认读取集合。
+本次 `2fe193... -> 1c8cdfea...` upgrade-only disposition / validation history 记录在 `docs/project/agentic-dev-v3-closure-baseline-upgrade-evidence.md`。此前 `d9fad0da... -> 2fe193...` 的 V3-08 Track B history 继续保留在 `docs/project/agentic-dev-v3-08-track-b-evidence.md`。这些 evidence 用于 provenance 和后续显式 upgrade，不属于普通 Fresh Context 的默认读取集合。
 
 必须长期分离三类状态：
 
@@ -59,7 +54,7 @@ previous baseline 及更早 Capability Milestone 已选择性固化并继续保�
 - Stale Verification Contract、Visual Fidelity、自动验证与 Human Review Baseline 隔离、bind mount 可重复恢复、Artifact Evidence、异步 Actions 闭环、Human Review Finding 分类、外部媒体真实内容验证、后继提交 Evidence Claim 影响判断与 Roadmap / GitHub 集成状态边界。
 - 共享外部资源并发边界按真实冲突域治理；配置责任与已有能力复用基于真实 ownership / lifecycle 判断，不为消除硬编码机械配置化或为复用扩大依赖面。
 
-这些能力的真实 current owner 是本仓库对应 Consumer-local 文档与代码 / Workflow，不因 evaluated baseline 前进而被重新归因到 `2fe193...`。
+这些能力的真实 current owner 是本仓库对应 Consumer-local 文档与代码 / Workflow，不因 evaluated baseline 前进而被重新归因到 `1c8cdfea...`。
 
 ## 2. Consumer 与 agentic-dev 的职责边界
 
@@ -426,6 +421,8 @@ README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项�
 
 - `github-actions-verification`
 
+`Handoff` **不是 current Skill**。它只是在 `docs/project/execution-continuity-guidelines.md` 所定义条件成立时形成的临时 transition artifact；普通 stage transition、Fresh Context prompt、已完成工作或可以直接从 Repository Authority 恢复的状态均不创建 Handoff Skill / Artifact。
+
 Skill identity 只适用于具有稳定触发 / 不触发条件、稳定输入、可重复且足够独立的执行过程、可观察输出、明确退出 / Stage Return / Escalation、可独立组合，并且复杂度值得按需加载的能力。以下事实单独存在均不足以创建 Skill：重要、可复用、有若干步骤、会被多个 Skill 消费、Agent 需要读取、或文件位于 `skills/`。
 
 Engineering Discipline、Technology / Verification Profile、Consumer Lifecycle、Repository-local Policy、Guide 与派生发现导航继续由各自 owner 承载，不为了激活方便 Skill 化。Skill supporting resource 只有在形成独立 semantic owner 或被多个职责独立消费时才重新分类；物理上位于 Skill 目录不取得平级所有权。
@@ -484,9 +481,9 @@ Engineering Discipline、Technology / Verification Profile、Consumer Lifecycle�
 
 不得依赖历史聊天或个人记忆补充未固化的项目事实。ordinary runtime 默认 local-only；本地 stale / missing / ambiguous 先按 `docs/README.md` fail closed，不自动访问 upstream。
 
-### 11.4 Fresh Context Handoff Prompt Contract（Prompt-as-Locator）
+### 11.4 Fresh Context Prompt Contract（Prompt-as-Locator）
 
-Fresh Context 的 handoff prompt 是**定位器（Locator）**，不是第二份项目权威（Authority）、状态快照或方法副本。它的目标是让新会话知道“从哪个 Consumer Repository、哪个当前工作入口开始恢复”，而不是替 Repository 重新讲述项目。
+Fresh Context prompt 是**定位器（Locator）**，不是第二份项目权威（Authority）、状态快照、方法副本，也不等同于本项目条件性 `Handoff` artifact。它的目标是让新会话知道“从哪个 Consumer Repository、哪个当前工作入口开始恢复”，而不是替 Repository 重新讲述项目。
 
 生成新的会话切换提示词时，默认只允许携带：
 
@@ -496,7 +493,7 @@ Fresh Context 的 handoff prompt 是**定位器（Locator）**，不是第二份
 - 当前工作入口，例如某个 Issue、用户刚刚指定的目标或尚未固化但本次必须延续的最小意图；
 - Repository 尚无法推导、且项目负责人在当前会话新增加的会话级约束。
 
-以下内容只要能够从当前 Repository / GitHub 重新恢复，就**不得为了“交接完整”“防止遗漏”或“作为定位线索”再次复制进 handoff prompt**：
+以下内容只要能够从当前 Repository / GitHub 重新恢复，就**不得为了“交接完整”“防止遗漏”或“作为定位线索”再次复制进 Fresh Context prompt**：
 
 - Repository Authority / Knowledge Boundary / GitHub 权限矩阵；
 - Consumer 当前 `agentic-dev` baseline、Capability Milestone 或 baseline upgrade 规则；
@@ -509,14 +506,15 @@ Fresh Context 的 handoff prompt 是**定位器（Locator）**，不是第二份
 
 生成 prompt 前执行一个删除测试：
 
-> **如果新会话通过读取当前 GitHub Repository 和 Current Evidence 能得到这句话，就从 handoff prompt 删除。**
+> **如果新会话通过读取当前 GitHub Repository 和 Current Evidence 能得到这句话，就从 Fresh Context prompt 删除。**
 
 规则补充：
 
 - 不通过“这些历史状态只作为线索、需要重新核验”来为重复复制开例外；可恢复事实即使标注为线索，仍然会制造冗余和潜在双重 Authority。
-- 如果当前会话产生了一个**持续有效且后续必须依赖**的新规则、状态或决策，应优先先把它固化到适当 Consumer Authority，再生成最小 handoff prompt；不能长期依赖 prompt 保存它。
+- 如果当前会话产生了一个**持续有效且后续必须依赖**的新规则、状态或决策，应优先先把它固化到适当 Consumer Authority，再生成最小 Fresh Context prompt；不能长期依赖 prompt 保存它。
+- 如果确有无法从 Repository 可靠恢复的未完成 transition state，并且存在明确 downstream consumer，才按 Execution Continuity 的 Handoff contract 形成临时 Handoff；这与 prompt 的 Locator 职责分离。
 - 如果新的用户意图只是下一会话的一次性目标、尚无必要进入长期 Authority，可以在 prompt 中最小携带；新会话确认它具有持续约束价值后，再按正常 Method 固化。
-- 不要求 handoff prompt 复述 Fresh Context 的完整恢复顺序；提示词只需要求读取 `AGENTS.md` / `README.md` 并按 Consumer-local Fresh Context 规则恢复，具体顺序由本节 Authority 负责。
+- 不要求 prompt 复述 Fresh Context 的完整恢复顺序；提示词只需要求读取 `AGENTS.md` / `README.md` 并按 Consumer-local Fresh Context 规则恢复，具体顺序由本节 Authority 负责。
 - 当项目负责人要求“生成新会话提示词”时，Agent 应以本契约为生成 Gate，而不是默认输出完整 conversation handoff summary。
 
 推荐的最小形态是：

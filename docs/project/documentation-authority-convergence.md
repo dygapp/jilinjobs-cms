@@ -1,5 +1,8 @@
 # Repository Documentation Authority Convergence
 
+> **Classification: SUPERSEDED / HISTORICAL_EVIDENCE**  
+> 本文件保留 Issue #92 Phase 1 的分类 contract、audit lineage 与当时的 Information Architecture closure snapshot，仅用于追溯。当前 Documentation IA、Classification Contract 与 Local Discovery Entry 的唯一 current owner 是 `docs/README.md`；当前 Execution Lifecycle 由 `docs/work/current/README.md` + GitHub native state 负责。下文出现的 `Current Ready Execution Unit`、`Next Planning Gate`、Phase 2 / E1～E3 等状态均为当时快照，不得用于恢复今天的 Current State。
+
 ## Status
 
 - Parent Planning Authority: GitHub Issue #92 / `docs/project/pre-e1e3-convergence-plan.md`

@@ -221,6 +221,19 @@ Fresh Context 用于控制知识边界和恢复事实来源，不等于缩短单
 - 如果必须切换 Context，应把持续执行所需 Authority、当前状态和未完成工作固化到 Repository，而不是要求人工重新组织大量交接信息；
 - Fresh Context 恢复完成后，应重新进入连续执行，不把恢复步骤本身作为独立人工任务。
 
+### 6.1 Handoff 是条件性临时运行时产物
+
+`Handoff` 不是当前 Skill，也不是每次阶段转换都必须创建的长期 Artifact。只有同时满足以下条件时，才形成一个最小 Handoff：
+
+1. 当前工作确实存在尚未完成、需要跨 Context / Agent / 时间继续的状态；
+2. 有明确的 producer 负责输出该 transition state；
+3. 有明确的 downstream consumer 会消费它；
+4. 仅从 Current Repository Authority / GitHub native state 无法以同等可靠性和更低重复成本恢复所需的最小未完成状态。
+
+若工作已经自然收口，或后继会话可以直接从 Repository Authority、Current Work locator、Issue / PR / Actions 与持久 Evidence 恢复，则**不创建 Handoff**。Fresh Context prompt 继续只承担最小 Locator 职责，不因此升级为 Handoff Artifact。
+
+Handoff 一旦被消费或其未完成状态已持久化到正式 owner，应立即失效；不得把 temporary transition note 长期化为 Requirement、Method、Architecture、Current State 或第二份执行真值。若某类 Handoff 内容长期反复出现，应优先修复真正缺失的 Repository owner / locator，而不是把 Handoff Skill 化。
+
 ## 7. 与验证和安全边界的关系
 
 Execution Continuity 只减少无必要停顿和汇报，不降低验证要求，也不覆盖 Repository Authority。

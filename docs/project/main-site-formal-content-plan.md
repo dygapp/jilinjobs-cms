@@ -1,6 +1,9 @@
 # Main Site Formal Content E1～E3 Planning
 
-## Status
+> **Classification: HISTORICAL_EVIDENCE / COMPLETED PLANNING RECORD**  
+> 本文件保留 E1～E3、EU-49～EU-53 的已完成 Planning / implementation lineage。下文出现的 `Current Ready Execution Unit`、`Current Gate`、baseline 与“下一自然 Gate”均是对应 closure 时点的历史快照，不再拥有当前 Planning / Execute state。当前状态必须从 `docs/work/current/README.md`、Project Roadmap 与 GitHub native state 恢复。
+
+## Closure Snapshot（historical）
 
 - Parent Planning Authority: GitHub Issue #60
 - Architecture Authority: GitHub Issue #77
@@ -16,7 +19,7 @@
 - EU-53 integrated main: `b1130b110bccdb1565c340a6cce62504ec06a87a`
 - Completed Work Evidence: `docs/work/archive/eu53-main-listitem-bootstrap-completion.md`
 
-## 1. Current ownership boundary
+## 1. Accepted ownership boundary
 
 ```text
 Main Article historical content
@@ -120,7 +123,7 @@ External third-party availability is not part of Runtime acceptance; the links w
 - no Hui Employment iframe changes in EU-53;
 - no `agentic-dev` baseline update.
 
-## 8. Current Gate
+## 8. Closure Gate Snapshot（historical）
 
 EU-53 is **COMPLETED** and Execute Authority is **TERMINATED**. Current Ready Execution Unit returns to **NONE**.
 
