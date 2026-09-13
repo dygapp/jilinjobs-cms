@@ -2,7 +2,7 @@
 title: Git Commit 规范
 status: 已采用
 scope: Consumer-local Governance
-source: agentic-dev master@394d1c3cde04b35940d5e33b7cbcaaf6557678ce
+source: agentic-dev evaluated baseline
 ---
 
 # Git Commit 规范
@@ -11,7 +11,7 @@ source: agentic-dev master@394d1c3cde04b35940d5e33b7cbcaaf6557678ce
 
 本规范统一 `jilinjobs-cms` 的 Git Commit Message，保证人工和 Agent 在 Fresh Context 中能够直接从提交历史理解主要变更目的，并避免依赖聊天记录或临时约定。
 
-本规范选择性固化自当前 Consumer 采用的 `agentic-dev` baseline 中 `docs/guides/git-commit-guidelines.md` 的通用规则，并根据本 Consumer 已有提交历史扩展实际使用的 Type / Scope。它不继承 `agentic-dev` 自身项目事实。
+本规范选择性固化自 Consumer 已评估并采用的 `agentic-dev` baseline 通用 Git Commit 规则，并根据本 Consumer 已有提交历史扩展实际使用的 Type / Scope。具体 evaluated baseline 由 `AGENTS.md` 与 `docs/project/development-method.md` 维护；本文件不保存不存在的 Consumer-local upstream 文档副本，也不继承 `agentic-dev` 自身项目事实。
 
 ## 2. 基本格式
 
