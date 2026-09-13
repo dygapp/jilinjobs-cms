@@ -35,15 +35,21 @@ Bootstrap / Roadmap surface 不并行维护 `Current Ready Execution Unit`、Rea
 
 ## 文档语言与术语表达
 
-本项目面向人的文档以**中文为主导语言**，并采用“中文主述、必要英文精确锚定”的表达原则。
+本项目所有**面向人的 Current / Partially Current 文档强制以中文为主语言**，采用“中文主述、必要英文精确锚定”的表达原则。该规则适用于根级项目文档以及 `docs/project/`、`docs/requirements/`、`docs/specifications/`、`docs/technical/`、`docs/architecture/`、`docs/work/current/` 中仍参与当前 Authority / Fresh Context 的 Markdown 文档。
 
-- 中文已有自然稳定表达、且英文有助于与 `agentic-dev` Method、Skill、Contract 或技术概念精确对应时，首次重要出现优先使用“中文（English Term）”；
-- 英文本身属于固定名称、状态或精确锚点时，可以使用“English Term（中文解释）”；
-- Skill 名称、代码标识符、文件路径、命令、API 参数、协议名和专有名词保持原生形式；
-- 不要求每次重复中英对照，避免双语注释成为阅读噪声；
-- 术语表达调整不得改变已有产品、方法或技术语义。
+- 文档标题、章节标题、状态说明、背景、需求、规格、技术方案、验证说明、结论等叙述性内容必须使用中文表达；允许在中文后以括号保留英文精确名称。
+- 中文已有自然稳定表达、且英文有助于与 `agentic-dev` Method、Skill、Contract 或技术概念精确对应时，首次重要出现优先使用“中文（English Term）”。
+- Skill 名称、代码标识符、类名、方法名、字段名、文件路径、命令、API、URL、协议 / 标准名称、枚举值、GitHub / Git / Flyway / Vue / Spring Boot 等专有技术名称保持原生形式，不做机械翻译。
+- `READY`、`COMPLETED`、`CURRENT`、`SUPERSEDED` 等状态标识可以作为精确治理锚点保留，但必须由中文正文解释其含义，不得形成整段纯英文状态说明。
+- 代码块、JSON / SQL / YAML 示例、CLI 输出和外部系统固定名称不受中文比例约束。
+- 不要求同一术语在每次出现时重复中英对照；同一文档中的术语必须稳定一致。
+- Current 文档不得出现纯英文主体、英文占主导的长篇叙述或纯英文一级标题；发现后必须在同一治理工作中翻译、收敛或明确降级为历史证据。
 
-同一文档中的术语应保持稳定。后续新增或实际触达的文档按上述原则逐步收敛，不为了形式统一制造大规模纯语言 diff。
+`SUPERSEDED` / `HISTORICAL_EVIDENCE` 文档以证据保真为优先，不因纯语言原因大规模重写历史正文；但它们必须通过 `docs/README.md` 或其 archive 入口明确退出 Current Authority。历史文档一旦重新晋升为 Current Authority，必须先满足本节中文主语言规范。
+
+语言治理不得改变已有 Product Goal、Scope、Business Boundary、User-visible Behavior、Architecture Decision 或技术契约。中文化不是重新设计；若翻译过程中暴露语义冲突，应按 Repository Authority 解决冲突，而不是用翻译选择隐式覆盖事实。
+
+Current 文档的中文主语言与本地文档引用完整性由 `scripts/verify-docs-governance.mjs` 和对应 GitHub Actions 检查持续约束；不得通过扩大例外列表来规避真实 Current 文档问题。
 
 ## 仓库权威（Repository Authority）
 
