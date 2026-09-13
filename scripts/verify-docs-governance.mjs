@@ -3,8 +3,8 @@ import path from 'node:path'
 
 const root = process.cwd()
 
-// 这些文件已被 docs/README.md 明确降级，不再参与 Current Authority / locator 检查。
-// 它们仍属于项目维护 Markdown，因此仍需满足中文标题与中文主述要求；原始英文历史证据应转存为非 Markdown raw evidence。
+// 这些文件已被 docs/README.md 明确降级，不再参与 Current Authority / locator / 中文主语言检查。
+// 历史证据以证据保真优先，不因语言形式重写历史正文；重新晋升为 Current 前必须先完成中文化。
 const historicalCurrentPaths = new Set([
   'docs/project/documentation-authority-convergence.md',
   'docs/project/agentic-dev-continuous-execution-mode.md',
@@ -73,7 +73,9 @@ const currentFiles = [...new Set(currentRoots.flatMap((p) => collectMarkdown(p, 
   .filter((file) => !historicalCurrentPaths.has(file))
   .sort()
 
-const languageFiles = [...new Set(['AGENTS.md', 'README.md', ...collectMarkdown('docs')])].sort()
+// 中文主语言规则只作用于 Current / Partially Current 读取集合。
+// archive/** 与 docs/README.md 明确降级的 HISTORICAL_EVIDENCE / SUPERSEDED 文档不参与语言阻断。
+const languageFiles = currentFiles
 const failures = []
 const warnings = []
 const cjkRe = /[\u3400-\u9fff]/g
@@ -113,7 +115,7 @@ function addFailure(file, message) {
   console.error(`::error file=${file}::${escaped}`)
 }
 
-// 所有项目维护 Markdown 都要求中文一级标题和中文主述；原始英文历史证据应使用 .txt 等 raw evidence 载体保真保存。
+// Current / Partially Current 文档必须“中文主述、必要英文精确锚定”。
 for (const file of languageFiles) {
   const content = fs.readFileSync(path.join(root, file), 'utf8')
   const narrative = stripNonNarrative(content)
@@ -162,7 +164,7 @@ if (!/Current Ready Execution Unit[：:]\s*\*\*NONE\*\*/.test(currentLocator)) {
   addFailure('docs/work/current/README.md', '当前治理任务不得改变 Current Ready Execution Unit = NONE。')
 }
 
-console.log(`文档语言扫描：${languageFiles.length} 个 Markdown 文档`)
+console.log(`Current 文档语言扫描：${languageFiles.length} 个 Markdown 文档`)
 console.log(`Current Authority / locator 扫描：${currentFiles.length} 个 Markdown 文档`)
 
 if (warnings.length) {
@@ -176,4 +178,4 @@ if (failures.length) {
   process.exit(1)
 }
 
-console.log('\nPASS：项目 Markdown 满足中文主语言基线，Current 文档满足本地引用完整性基线。')
+console.log('\nPASS：Current / Partially Current Markdown 满足中文主语言基线，并满足本地引用完整性基线。')
