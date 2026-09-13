@@ -1,4 +1,4 @@
-# Requirements
+# 需求文档（Requirements）
 
 本目录根级保存当前仍可参与 Product Authority 恢复的 `CURRENT` / `PARTIALLY_CURRENT` Requirement。主产品需求入口为 `information-publishing.md`；具体边界按当前 Roadmap / Issue 与相关 Requirement 共同判断。
 

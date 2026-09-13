@@ -1,8 +1,8 @@
-# Work Lifecycle
+# 工作生命周期（Work Lifecycle）
 
 `docs/work/` 只承担 Execution Unit / execution evidence 的生命周期组织，不是第二份 Roadmap，也不承担 Planning Candidate 排序。
 
-## Current execution lifecycle owner
+## 当前执行生命周期 owner
 
 `docs/work/current/README.md` 是 **Repository-owned Current Execution Lifecycle Locator**：只回答当前是否存在已经通过 `readiness-check`、仍处于 Execute / Verification / Integration / Post-Integration closure 生命周期中的 Ready / active Execution Unit，以及其对应的 current work artifact 在哪里。
 
@@ -12,7 +12,7 @@
 
 Execution Unit 的稳定 Identifier 只承担追踪身份；只有当前 Readiness PASS 才授予 Execute Authority。Planning / Requirement Candidate、`PENDING` Readiness 或仅有未来 EU 名称的工作不得进入 `current/`。已完成 artifact 即使包含 `Ready`、`Next Step` 或旧 Execute wording，也不得从 archive 重新获得执行权限。
 
-## Entry / exit lifecycle
+## 进入与退出生命周期
 
 进入规则：
 
@@ -26,7 +26,7 @@ Execution Unit 的稳定 Identifier 只承担追踪身份；只有当前 Readine
 2. closure 将 completed work artifact 移入 `docs/work/archive/`，并把 `docs/work/current/README.md` 恢复为 `NONE`；
 3. closure 后旧 Issue comment、旧 PR body、archive 中的 `READY` / `PENDING` / Execute wording只保留历史证据语义，不再拥有 Current Execute Gate。
 
-## Current-state resolution and fail-closed
+## Current State 解析与失败关闭
 
 Bootstrap / Roadmap surface（`AGENTS.md`、根 `README.md`、`docs/README.md`、Project Roadmap）只维护稳定 Authority、职责与 locator，不重复缓存高频变化的 `Current Ready Execution Unit`、Readiness `PENDING/PASS`、exact execution Head 或类似 Execute Gate 真值。
 

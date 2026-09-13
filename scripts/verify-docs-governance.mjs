@@ -4,7 +4,7 @@ import path from 'node:path'
 const root = process.cwd()
 
 // 这些文件已被 docs/README.md 明确降级，不再参与 Current Authority / locator 检查。
-// 注意：它们仍参与全仓中文主语言检查。
+// 它们仍属于项目维护 Markdown，因此仍需满足中文标题与中文主述要求；原始英文历史证据应转存为非 Markdown raw evidence。
 const historicalCurrentPaths = new Set([
   'docs/project/documentation-authority-convergence.md',
   'docs/project/agentic-dev-continuous-execution-mode.md',
@@ -41,9 +41,6 @@ const allowedMissingProvenance = new Set([
   'docs/requirements/overview/system-module-boundaries.md',
 ])
 
-// 仅真正的原始/机器证据可以豁免中文主叙述；普通 archive / work history 不豁免。
-const rawEvidenceLanguageExempt = new Set([])
-
 const currentRoots = [
   'AGENTS.md',
   'README.md',
@@ -76,12 +73,7 @@ const currentFiles = [...new Set(currentRoots.flatMap((p) => collectMarkdown(p, 
   .filter((file) => !historicalCurrentPaths.has(file))
   .sort()
 
-const languageFiles = [...new Set([
-  'AGENTS.md',
-  'README.md',
-  ...collectMarkdown('docs'),
-])].filter((file) => !rawEvidenceLanguageExempt.has(file)).sort()
-
+const languageFiles = [...new Set(['AGENTS.md', 'README.md', ...collectMarkdown('docs')])].sort()
 const failures = []
 const warnings = []
 const cjkRe = /[\u3400-\u9fff]/g
@@ -89,11 +81,19 @@ const latinRe = /[A-Za-z]/g
 
 function stripNonNarrative(content) {
   return content
-    .replace(/^---\n[\s\S]*?\n---\n?/, '')
+    .replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '')
     .replace(/```[\s\S]*?```/g, '')
-    .replace(/`[^`]*`/g, '')
+    .replace(/`[^`\n]*`/g, '')
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
     .replace(/https?:\/\/\S+/g, '')
-    .replace(/\[[^\]]*\]\([^)]*\)/g, '')
+    .replace(/<[^>]+>/g, '')
+    .replace(/(?:^|\s)(?:[A-Za-z0-9_.-]+\/)+[A-Za-z0-9_./-]+(?=\s|$|[，。；、：)])/g, ' ')
+    .replace(/\b[A-Za-z_][A-Za-z0-9_.:-]{2,}\b/g, (token) => {
+      // 固定技术标识、状态词、类名/字段名等不参与“自然语言是否英文主导”的计数。
+      if (/[_.:-]/.test(token) || /[A-Z].*[A-Z]/.test(token) || /[a-z][A-Z]/.test(token)) return ' '
+      return token
+    })
 }
 
 function narrativeParagraphs(content) {
@@ -109,12 +109,11 @@ function narrativeParagraphs(content) {
 
 function addFailure(file, message) {
   failures.push(`${file}: ${message}`)
-  // GitHub Actions annotation，便于远程治理时直接读取具体失败项。
   const escaped = message.replace(/%/g, '%25').replace(/\r/g, '%0D').replace(/\n/g, '%0A')
   console.error(`::error file=${file}::${escaped}`)
 }
 
-// 仓库级语言规则：所有项目维护 Markdown（包含 archive）都必须中文主述。
+// 所有项目维护 Markdown 都要求中文一级标题和中文主述；原始英文历史证据应使用 .txt 等 raw evidence 载体保真保存。
 for (const file of languageFiles) {
   const content = fs.readFileSync(path.join(root, file), 'utf8')
   const narrative = stripNonNarrative(content)
@@ -123,21 +122,21 @@ for (const file of languageFiles) {
 
   if (cjkCount === 0 && latinCount > 80) {
     addFailure(file, '文档没有中文主叙述，属于纯英文文档。')
-  } else if (latinCount > 1000 && latinCount > cjkCount * 4) {
-    addFailure(file, `英文字符显著压倒中文主叙述（中文 ${cjkCount} / 英文 ${latinCount}）。`)
+  } else if (latinCount > 1200 && latinCount > cjkCount * 3) {
+    addFailure(file, `清理技术锚点后，英文叙述仍显著压倒中文主叙述（中文 ${cjkCount} / 英文 ${latinCount}）。`)
   }
 
   const h1 = content.match(/^#\s+(.+)$/m)?.[1]?.trim()
-  if (h1 && !/[\u3400-\u9fff]/.test(h1) && !['AGENTS.md', 'README.md'].includes(h1)) {
+  if (h1 && !/[\u3400-\u9fff]/.test(h1)) {
     addFailure(file, `一级标题必须以中文为主，可在括号中保留英文精确名称；当前为“${h1}”。`)
   }
 
   for (const paragraph of narrativeParagraphs(content)) {
     const paragraphLatin = (paragraph.match(latinRe) || []).length
     const paragraphCjk = (paragraph.match(cjkRe) || []).length
-    if (paragraphLatin >= 180 && paragraphCjk === 0) {
+    if (paragraphLatin >= 220 && paragraphCjk < 12) {
       const preview = paragraph.replace(/\s+/g, ' ').slice(0, 100)
-      addFailure(file, `存在纯英文长段落：“${preview}${paragraph.length > 100 ? '…' : ''}”`)
+      addFailure(file, `存在英文主导长段落：“${preview}${paragraph.length > 100 ? '…' : ''}”`)
       break
     }
   }
@@ -150,14 +149,17 @@ for (const file of currentFiles) {
   for (const match of content.matchAll(/docs\/[A-Za-z0-9_.\/-]+\.md/g)) {
     const ref = match[0]
     if (allowedMissingProvenance.has(ref)) continue
-    if (!fs.existsSync(path.join(root, ref))) {
-      addFailure(file, `引用了不存在的本地文档 ${ref}`)
-    }
+    if (!fs.existsSync(path.join(root, ref))) addFailure(file, `引用了不存在的本地文档 ${ref}`)
   }
 
   if (/Current Ready Execution Unit\s*:/i.test(content) && file !== 'docs/work/current/README.md') {
     warnings.push(`${file}: 仍包含 Current Ready Execution Unit 字样；确认它不是第二份 Current State truth。`)
   }
+}
+
+const currentLocator = fs.readFileSync(path.join(root, 'docs/work/current/README.md'), 'utf8')
+if (!/Current Ready Execution Unit[：:]\s*\*\*NONE\*\*/.test(currentLocator)) {
+  addFailure('docs/work/current/README.md', '当前治理任务不得改变 Current Ready Execution Unit = NONE。')
 }
 
 console.log(`文档语言扫描：${languageFiles.length} 个 Markdown 文档`)
