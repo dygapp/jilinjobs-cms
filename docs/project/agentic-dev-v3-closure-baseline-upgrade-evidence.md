@@ -81,6 +81,7 @@ Fresh Context prompt 继续是 **Prompt-as-Locator**，不是 Handoff Artifact �
 | M3 `agentic-dev-continuous-execution-mode.md` 与当前 Method 重复并带旧 upstream provenance | 明确 `SUPERSEDED / HISTORICAL_EVIDENCE`；current semantics 只由 Development Method + Execution Continuity 承担 |
 | M4 Issue #60 仍声称 E3 为 current / next Planning Gate | Issue #60 收敛为 candidate-pool-only；E1～E3 标记 historical closure；不得授予 current Planning / Readiness / Execute Authority；清理 stale labels |
 | M5 Issue #77 长期 Architecture owner 混入高频 execution / next-gate state | 保留四层 long-lived Architecture ownership；移除 current execution responsibility；高频状态交回 Current Work / Roadmap / GitHub native state |
+| M6 Project Roadmap 仍把已完成的 Issue #137 / Page Content Architecture 列为开放候选 | Roadmap 增加 EU-55 durable milestone，并将 Issue #137 收敛为 completed architecture traceability；开放 candidate 列表只保留真实未完成方向 |
 
 Phase 1 exact diff at `2e202a07902f2ef4cd04ff2a69e5ce7f4072f743`：仅 5 个 Markdown governance/method records；Consumer `main` 与 upstream fixed candidate 均无 side drift；`docs/work/current/README.md` 仍为 `Current Ready Execution Unit = NONE`。
 
@@ -92,11 +93,11 @@ Phase 1 AI Review：
 - Product / runtime behavior change: **none**
 - Adoption pre-check: **PASS**
 
-详细 pre-check evidence 已记录在 Issue #146。
+M6 在 baseline-owner / Roadmap 同步阶段发现并立即关闭，不改变 Phase 1 Handoff projection verdict。详细 pre-check 与 follow-up evidence 记录在 Issue #146。
 
 ## 5. Baseline progression gate
 
-只有在上述 Consumer-local projection 已完成并通过 adoption pre-check 后，才允许 current baseline owners 从：
+只有在上述 Consumer-local projection 已完成并通过 adoption pre-check 后，才允许 current baseline owners 从升级前的：
 
 ```text
 Previous evaluated: d9fad0da83dbdb61cac5eb9778b0258c6861eef1
@@ -112,6 +113,13 @@ Current evaluated:  1c8cdfea9ecf23ef33ffab20eec3c93679fd4578
 
 推进 baseline pointer **不**重新归因已存在的 Consumer-local assets；V3-08 Track B 的 `d9fad0da... -> 2fe193...` evidence 继续由 `docs/project/agentic-dev-v3-08-track-b-evidence.md` 原样保留。
 
+Current baseline owner / durable locator 同步范围：
+
+- `AGENTS.md`；
+- `docs/project/development-method.md`；
+- `docs/project/project-roadmap.md`；
+- `docs/README.md` 只负责把 upgrade history 标为非普通入口，不复制 baseline pointer。
+
 ## 6. Ordinary-runtime return condition
 
 本轮 candidate 只有在最终 exact-head governance review 继续满足以下条件时，才可进入 Human Integration Decision：
@@ -120,6 +128,7 @@ Current evaluated:  1c8cdfea9ecf23ef33ffab20eec3c93679fd4578
 - upgrade-only evidence 与 current owner 分离；
 - Local Discovery 仍然 Consumer-local / progressive / fail-closed；
 - Skills inventory 仍为 8 core + `github-actions-verification`，Handoff 不成为 Skill；
+- Issue #60 只作为 candidate pool；Issue #77 只拥有长期四层 Architecture Boundary；Issue #137 已退出开放 Planning Candidate；
 - no Product / Runtime / Migration / Architecture direction drift；
 - Blocking = 0；
 - Medium = 0。
