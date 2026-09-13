@@ -45,14 +45,14 @@
 
 ## Classification 与物理位置
 
-Phase 1 使用四类语义角色：
+当前四类语义角色由本文件维护：
 
 - `CURRENT`：可直接作为现行 Authority 消费；
 - `PARTIALLY_CURRENT`：仍含有效当前语义，必须保留在 Current 区并由后续有 Authority 的 reconciliation 处理；
 - `SUPERSEDED`：已被后继 Authority 取代，只保留 traceability；
 - `HISTORICAL_EVIDENCE`：研究、执行、评审或验证记录，不定义当前产品/架构事实。
 
-物理 archive 只接收已明确为 `SUPERSEDED` / `HISTORICAL_EVIDENCE` 的文档。不得按年龄、EU 编号或“看起来旧”把 `PARTIALLY_CURRENT` 文件机械归档。
+物理 archive 只接收已明确为 `SUPERSEDED` / `HISTORICAL_EVIDENCE` 的文档。不得按年龄、EU 编号或“看起来旧”把 `PARTIALLY_CURRENT` 文件机械归档。已经在 Current 物理目录中、但明确带有 `SUPERSEDED / HISTORICAL_EVIDENCE` 标记的历史记录，不因物理位置重新取得 Current Authority；只有后续独立 IA 工作有真实收益时才需要移动路径。
 
 ## Stable Authority 与 high-frequency Current Evidence
 
@@ -77,7 +77,7 @@ GitHub PR / Branch / Actions 对其各自原生瞬时状态负责；这不构成
 - Specification：`docs/specifications/README.md`
 - Technical：`docs/technical/README.md`
 - Verification：`docs/technical/verification-strategy.md`
-- Architecture：`docs/architecture/decisions/`
+- Architecture：`docs/architecture/decisions/` + Repository Authority 明确指定的长期 architecture owner
 - Work lifecycle：`docs/work/README.md`
 - Current execution locator：`docs/work/current/README.md`
 - Durable Roadmap：`docs/project/project-roadmap.md`
@@ -86,10 +86,15 @@ GitHub PR / Branch / Actions 对其各自原生瞬时状态负责；这不构成
 - Human review feedback cycle：`docs/project/review-feedback-cycle.md`
 - Git commit governance：`docs/project/git-commit-guidelines.md`
 - Method experiment lifecycle：`docs/project/method-validation-evidence.md`
-- Phase 1 classification / convergence authority：`docs/project/documentation-authority-convergence.md`
 - Issue #92 completed convergence traceability：`docs/project/pre-e1e3-convergence-plan.md` + closed GitHub Issue #92
 - Historical migration current data / provenance workspace：`data-migrations/**`
 - GitHub Actions runtime topology：`.github/workflows/**` + GitHub native Actions state
+
+以下文件只作为 governance / planning history，不属于普通 Fresh Context 的 Current Authority 入口：
+
+- `docs/project/documentation-authority-convergence.md` — `SUPERSEDED / HISTORICAL_EVIDENCE`，保留 Phase 1 classification / IA closure lineage；
+- `docs/project/agentic-dev-continuous-execution-mode.md` — `SUPERSEDED / HISTORICAL_EVIDENCE`，当前 continuous-execution 语义由 Development Method + Execution Continuity owner 承担；
+- `docs/project/main-site-formal-content-plan.md` — `HISTORICAL_EVIDENCE / COMPLETED PLANNING RECORD`，其 E1～E3 / EU-49～EU-53 current-gate wording仅为 closure snapshot。
 
 Planning / product Authority 必须按当前任务从 Requirement / Specification / Technical / controlling Issue 重新定位；本 Documentation Map 不缓存某个 Issue 的短期 Current Gate、Ready Unit、最近 implementation SHA 或规则正文摘要。
 
