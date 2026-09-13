@@ -90,11 +90,13 @@ GitHub PR / Branch / Actions 对其各自原生瞬时状态负责；这不构成
 - Historical migration current data / provenance workspace：`data-migrations/**`
 - GitHub Actions runtime topology：`.github/workflows/**` + GitHub native Actions state
 
-以下文件只作为 governance / planning history，不属于普通 Fresh Context 的 Current Authority 入口：
+以下文件只作为 governance / planning / upgrade history，不属于普通 Fresh Context 的 Current Authority 入口：
 
 - `docs/project/documentation-authority-convergence.md` — `SUPERSEDED / HISTORICAL_EVIDENCE`，保留 Phase 1 classification / IA closure lineage；
 - `docs/project/agentic-dev-continuous-execution-mode.md` — `SUPERSEDED / HISTORICAL_EVIDENCE`，当前 continuous-execution 语义由 Development Method + Execution Continuity owner 承担；
-- `docs/project/main-site-formal-content-plan.md` — `HISTORICAL_EVIDENCE / COMPLETED PLANNING RECORD`，其 E1～E3 / EU-49～EU-53 current-gate wording仅为 closure snapshot。
+- `docs/project/main-site-formal-content-plan.md` — `HISTORICAL_EVIDENCE / COMPLETED PLANNING RECORD`，其 E1～E3 / EU-49～EU-53 current-gate wording仅为 closure snapshot；
+- `docs/project/agentic-dev-v3-08-track-b-evidence.md` — `HISTORICAL_EVIDENCE / UPGRADE-ONLY`，保留 `d9fad0da... -> 2fe193...` baseline adoption history；
+- `docs/project/agentic-dev-v3-closure-baseline-upgrade-evidence.md` — `HISTORICAL_EVIDENCE / UPGRADE-ONLY`，保留 `2fe193... -> 1c8cdfea...` baseline adoption / governance convergence history。
 
 Planning / product Authority 必须按当前任务从 Requirement / Specification / Technical / controlling Issue 重新定位；本 Documentation Map 不缓存某个 Issue 的短期 Current Gate、Ready Unit、最近 implementation SHA 或规则正文摘要。
 
