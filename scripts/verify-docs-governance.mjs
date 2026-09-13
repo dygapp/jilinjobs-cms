@@ -98,16 +98,30 @@ function stripNonNarrative(content) {
     })
 }
 
-function narrativeParagraphs(content) {
-  return stripNonNarrative(content)
-    .split(/\n\s*\n/)
-    .map((p) => p
-      .split('\n')
-      // 表格、引用和标题主要承载结构/精确技术锚点；列表项保留，避免纯英文需求 bullet 绕过检查。
-      .filter((line) => !/^\s*[|>]/.test(line) && !/^\s*#{1,6}\s+/.test(line))
-      .join(' ')
-      .trim())
-    .filter(Boolean)
+function narrativeSegments(content) {
+  const result = []
+  for (const block of stripNonNarrative(content).split(/\n\s*\n/)) {
+    let proseLines = []
+    const flushProse = () => {
+      const prose = proseLines.join(' ').trim()
+      if (prose) result.push(prose)
+      proseLines = []
+    }
+
+    for (const rawLine of block.split('\n')) {
+      const line = rawLine.trim()
+      if (!line || /^#{1,6}\s+/.test(line) || /^[|>]/.test(line)) continue
+      if (/^[-*+]\s+/.test(line) || /^\d+[.)]\s+/.test(line)) {
+        flushProse()
+        const item = line.replace(/^([-*+]\s+|\d+[.)]\s+)/, '').trim()
+        if (item) result.push(item)
+      } else {
+        proseLines.push(line)
+      }
+    }
+    flushProse()
+  }
+  return result
 }
 
 function addFailure(file, message) {
@@ -118,7 +132,7 @@ function addFailure(file, message) {
 
 // Current / Partially Current 文档必须“中文主述、必要英文精确锚定”。
 // 不用全文件英文字母比例做判定，因为技术表格、枚举、类名、路径等会系统性制造误报；
-// 真正阻断的是没有中文叙述或存在英文主导的人类叙述段落。
+// 真正阻断的是没有中文叙述或存在英文主导的人类叙述段落/列表项。
 for (const file of languageFiles) {
   const content = fs.readFileSync(path.join(root, file), 'utf8')
   const narrative = stripNonNarrative(content)
@@ -135,12 +149,12 @@ for (const file of languageFiles) {
     addFailure(file, `一级标题必须以中文为主，可在括号中保留英文精确名称；当前为“${h1}”。`)
   }
 
-  for (const paragraph of narrativeParagraphs(content)) {
-    const paragraphLatin = (paragraph.match(latinRe) || []).length
-    const paragraphCjk = (paragraph.match(cjkRe) || []).length
-    if (paragraphLatin >= 160 && paragraphCjk < 12) {
-      const preview = paragraph.replace(/\s+/g, ' ').slice(0, 100)
-      addFailure(file, `存在英文主导长段落：“${preview}${paragraph.length > 100 ? '…' : ''}”`)
+  for (const segment of narrativeSegments(content)) {
+    const segmentLatin = (segment.match(latinRe) || []).length
+    const segmentCjk = (segment.match(cjkRe) || []).length
+    if (segmentLatin >= 160 && segmentCjk < 12) {
+      const preview = segment.replace(/\s+/g, ' ').slice(0, 100)
+      addFailure(file, `存在英文主导长叙述：“${preview}${segment.length > 100 ? '…' : ''}”`)
       break
     }
   }
