@@ -1,150 +1,169 @@
-# Page Content Architecture Requirement
+# 单页内容架构需求
 
-## Status
+## 状态
 
-- Planning source: GitHub Issue #137 — durable Planning Capture / legacy acquisition evidence source
-- Long-lived architecture boundary: GitHub Issue #77
-- Existing product authority: `docs/requirements/information-publishing.md`
-- Existing Main Page delivery authority: `docs/requirements/main-single-page-formal-content.md`
-- Planning baseline: `main@881893f9523effaabb82e0a0dacfcd38fe0c44fe`
-- Requirement: **READY / HUMAN REVIEW ACCEPTED**
-- Technical Planning: **READY — `docs/technical/page-content-architecture.md`**
-- Candidate Execution Unit: **NONE at Technical Plan creation**
-- Execute Authority: **NONE**
+- 长期架构边界：GitHub Issue #77；
+- 规划来源与 legacy acquisition evidence：GitHub Issue #137；
+- 上游产品 Authority：`docs/requirements/information-publishing.md`；
+- 规格与技术方案：`docs/specifications/page-content-architecture.md`、`docs/technical/page-content-architecture.md`；
+- Requirement：**CURRENT / ACCEPTED**；
+- Implementation：**COMPLETED via EU-55**；
+- Execute Authority：**TERMINATED**。
 
-## 1. Intent
+本文保留 EU-55 完成后的长期产品约束，不拥有 Current Execution Gate。
 
-CMS `Page` 既承载普通说明性正文，也可能承载具有稳定结构、特殊呈现、交互或外部集成语义的正式单页。当前 Main Page formal-content 已证明普通 `RICH_TEXT + bodyHtml + generic renderer` 可以覆盖大量内容页；Issue #137 保留的 legacy acquisition / collector evidence 与当前 downstream repository state 又共同证明：把多 card 页面采集后压平成任意 HTML，会保留文字与图片，却丢失原页面的 card 结构 / 呈现语义。
+## 1. 目标
 
-本 Requirement 的目标是建立 Page 内容语义的产品边界：**Page 的 stable identity / navigation / publish lifecycle 仍属于 CMS，而 Page 正文必须由一个明确 primary content authority 拥有，并以能够保留该页面真实产品语义的数据模型与 renderer 呈现。**
+CMS `Page` 既承载普通说明性正文，也可能承载具有稳定结构、特殊呈现、交互或外部集成语义的正式单页。普通 `RICH_TEXT + bodyHtml + generic renderer` 可以覆盖大量内容页，但不能把具有用户可感知产品结构的页面长期压平成任意 HTML 后仍宣称语义完整。
 
-本 Requirement 不预先冻结 DB 字段名、枚举名或具体 Vue component；这些属于 Specification / Technical Planning。
+长期要求是：**Page 的 stable identity、group、canonical URL 与 enabled / publish lifecycle 继续属于 CMS；Page 正文必须由一个明确 primary content authority 拥有，并以能够保留真实产品语义的数据模型与显式 renderer 呈现。**
 
-## 2. Product requirements
+## 2. 三个正交维度
 
-### 2.1 One primary content authority
+Page content contract 必须分别回答三个问题，不得重新压成一个混合 `renderMode`：
 
-每个 Page 在任一有效配置下必须能够唯一回答“正文由谁维护、什么数据是正文事实、由什么 renderer 呈现”。不得出现多个来源同时声称拥有 primary body/content 的状态。
+1. **内容模型（Content Model）**：正文是什么数据形态；
+2. **Renderer Identity**：Public Runtime 使用哪个稳定 renderer；
+3. **内容所有权（Content Ownership）**：primary body/content authority 由 operator、Site Package lifecycle、engineering implementation 或 external integration 中的哪一方承担。
 
-至少必须避免：
+Current Generic CMS 持久化语义使用：
+
+- `contentModel`；
+- `rendererKey`；
+- `contentOwner`；
+- `bodyHtml`；
+- `structuredPayload`；
+- `embedUrl`。
+
+## 3. Primary content authority
+
+每个有效 Page 必须唯一回答“正文事实在哪里”。不得出现以下长期状态：
 
 - operator 可编辑 `bodyHtml`，但真实页面主要由 repository hardcode 决定；
-- Site Package body 与 engineered component 同时作为有效正文；
-- external URL、structured data 与 arbitrary rich text 同时被当作主内容；
-- renderer 通过 alias/path 隐式猜测页面类型，而 Page metadata 没有表达稳定 renderer identity。
+- `bodyHtml` 与 `structuredPayload` 同时成为 primary body；
+- Site Package default 与 engineered component 同时声称拥有当前正文；
+- external URL、structured data 与 arbitrary rich text 同时作为主内容；
+- renderer 通过 alias、URL、DOM shape 或正文内容猜测 Page 类型。
 
-### 2.2 Rich content remains the default for ordinary content pages
+Unknown / unsupported content model、payload schema 或 renderer 必须 fail closed，不得静默 fallback 到 Rich HTML。
 
-普通说明、通知说明型单页以及长期由运营人员自由编辑正文的 Page 继续允许使用成熟 Rich Text 能力与 generic rich-content renderer。
+## 4. Page profiles
 
-不得因为本 Requirement 存在就把所有 Page 升级为 structured/component model，也不得引入通用 Page Builder。
+### 4.1 普通富文本 Page
 
-### 2.3 Product-significant structure must not be flattened away
+普通说明、通知说明以及由运营人员自由维护正文的 Page 继续使用成熟 Rich Text 能力。
 
-当 source / Human Review / current product authority 证明页面的 section、card、accordion、步骤、交互或其他结构本身具有用户可感知产品语义时，采集、Site Package、Runtime model 与 Public Renderer 不得只保留“等价文本字节”而静默丢弃这些语义。
+- `contentModel=RICH_TEXT`；
+- primary body 为 `bodyHtml`；
+- renderer 使用 generic Rich renderer；
+- ordinary Runtime content 由 operator 维护；
+- 不因为本架构存在而把所有 Page 迁移为 Structured。
 
-若现有模型无法表达该语义，应 fail closed 到 Planning / Specification，而不是把它默认降级为 arbitrary `bodyHtml`。
+`about` 是当前代表样本。
 
-### 2.4 Special rendering must be explicit
+### 4.2 Structured Page
 
-非 generic rich-content 页面需要稳定、可审计的 renderer selection contract。长期方案不得依赖 `alias === ...`、URL 特判、正文 DOM 猜测或其他隐藏 routing 规则来选择特殊 renderer。
+当 card、section、step、accordion 等结构本身属于用户可感知产品语义时，应使用可验证的 structured contract，而不是只保存“等价文本”。
 
-具体 metadata / field 名称由 Specification / Technical Planning 决定。
+- `contentModel=STRUCTURED`；
+- primary body 为 `structuredPayload`；
+- top-level `bodyHtml` 不再作为并行正文 Authority；
+- renderer 使用稳定、显式 `rendererKey`；
+- Admin authoring surface 必须与结构模型一致；
+- item 内部可以按结构 schema 使用受控 Rich HTML。
 
-### 2.5 Stable Page lifecycle remains CMS-owned
+### 4.3 Engineering Page
 
-无论正文最终由 rich content、structured data、repository engineering asset 还是 external integration 承载：
+只有真实产品行为需要 repository-owned interaction / state / implementation，且稳定 Structured contract 无法自然表达时，才进入 Engineering profile。
 
-- Page stable identity、group membership、canonical public URL、navigation visibility、publish/enabled lifecycle 继续由现有 CMS / Site Package boundary 管理；
-- Public Renderer 不成为 Site Definition 或产品数据 authority；
-- 不因为特殊正文模式建立第二套与 CMS Page identity 并行的页面目录。
+Engineering 不是通用 Page type，也不是为了方便而跳过 CMS content ownership 的逃生口。CMS Page identity / canonical route / lifecycle 仍保留。
 
-### 2.6 Existing operator ownership protection remains valid
+### 4.4 External integration
 
-EU-49 / EU-52 已建立的 existing Page operator-content protection 不因新 Page architecture 失效。
+当 primary behavior/content 来自外部系统时：
 
-任何 Page 从现有 `RICH_TEXT` baseline 演进到新的 content model / renderer contract 时：
+- CMS Page 继续持有 stable identity、route、lifecycle 与必要 integration metadata；
+- external system 持有 primary content / behavior；
+- renderer / integration identity 必须显式；
+- iframe、URL 等只是 delivery mechanism，不是 content model。
 
-- 必须有显式 migration / adoption precondition；
-- operator-diverged Runtime content 不得被静默覆盖；
-- package / migration / engineered asset 之间的 ownership transfer 必须可审计；
-- Main historical migration 不作为 silent fallback。
+具体慧就业 integration 仍是独立 Planning Candidate，本架构不自动启动。
 
-## 3. Representative product samples
+## 5. `guide/jypq` 当前产品事实
 
-正式 Specification 至少用以下真实样本验证模型，而不是只做抽象分类。
+Issue #137 的 legacy evidence 证明原页面具有重复 card 结构；EU-52 阶段曾把这些 card 扁平化为 Rich HTML。该 flattened Rich 表达现在只属于 **EU-55 adoption 之前的历史 predecessor**，不再是 Current target。
 
-### 3.1 About — ordinary Rich Content
+EU-55 已完成 `guide/jypq` Structured adoption。Current Site Package / Runtime target 为：
 
-`about` 当前由 Site Package 提供 create-time formal body、Runtime 后续可由 operator 维护，generic rich-content renderer 已满足产品语义。它用于证明新模型不会把普通 Page 复杂化。
+```text
+contentModel = STRUCTURED
+rendererKey = JILINJOBS_GUIDE_CARDS
+contentOwner = OPERATOR
+structuredPayload.schemaVersion = 1
+structuredPayload.kind = CARD_COLLECTION
+```
 
-### 3.2 Employment dispatch (`guide/jypq`) — structure-sensitive Page
+当前 `CARD_COLLECTION` 保留已接受的 card title / body / order 与既有 package image references。不得从 EU-52 历史 formal-content 文档恢复 flattened `RICH_TEXT` 作为当前 Page authority。
 
-证据必须按 provenance 分层读取，而不能把历史 acquisition implementation 误称为当前 `main` implementation：
+## 6. Existing operator ownership protection
 
-- Issue #137 当前 durable Planning Capture 记录 legacy acquisition surface `/jiuyepaiqian` 使用 `contentMode = GUIDE_CARDS`、selector `#blueTabContent`；
-- 同一 capture 记录当时 collector 对多个 `.card` 提取 title/body 后主动投影为 `<section><h2>...</h2>...</section>`；
-- 当前 `main` 的 `sites/jilinjobs/structure/pages.json` 直接证明 `guide/jypq` 仍以 `RICH_TEXT` 保存上述 flattened sections 与 4 张既有图片；
-- 当前 Public `PublicPageView.vue` 直接证明非 placeholder 内容统一走 generic `v-html`；
-- 当前 E2E 直接证明 route marker 与 4 张图片可用，但不验证 card structure / presentation，也不能据此声称存在某种特定 legacy interaction contract。
+EU-49 / EU-52 建立的 operator-content protection 继续有效。
 
-因此当前 `guide/jypq` 的正文内容存在，但**产品结构 / 呈现语义恢复不足**。Specification 必须在 Structured 与 Engineering 等方案之间作正式选择，不能把现有 flattened Rich Text 直接视为最终正确模型；若后续取得新的 interaction evidence，也必须回到相应产品 / Specification Gate 判断其影响。
+任何 package-driven Page evolution 都必须满足：
 
-### 3.3 FAQ — hierarchy-sensitive but currently accepted
+- Fresh create 可以使用 Site Package accepted default；
+- Existing Site adoption 必须有显式、可审计的 prior-baseline precondition；
+- operator-diverged content 必须 preserve + report；
+- ordinary reconcile 不得覆盖 operator content；
+- adoption 必须幂等；
+- ownership transfer 必须显式；
+- Main Historical Migration 不作为 silent fallback。
 
-FAQ 已在 EU-52 Human Review 中修复一级/二级层级显示问题，当前不是开放 blocker。它用于验证架构能够表达 hierarchical content，但本 Requirement 不要求立即把 FAQ 从当前 accepted Rich Text 迁移为 Structured。
+EU-55 对 `guide/jypq` 的 Rich → Structured 转换已经按 exact prior baseline adoption contract 完成；后续 Structured → Structured package update 不得自动复用旧 fingerprint 语义，必须依据新的明确 Authority。
 
-### 3.4 Embedded / external integration
+## 7. Stable lifecycle 与 URL
 
-外部业务系统 Page 用于验证 external content authority 与 CMS Page identity 能够并存。External / embed 是 ownership / integration 语义，不应被误当成与 Rich / Structured 平行的单一 content-model 枚举。是否、何时实现具体 Hui Employment integration 仍是独立 Planning Candidate，不由本 Requirement 授予 Execute Authority。
+Page 的 stable identity / grouping / enabled lifecycle 保持 CMS-owned。Current canonical routes 保持：
 
-### 3.5 Engineering page boundary
+```text
+/page/{alias}
+/page/{groupAlias}/{alias}
+```
 
-只有出现需要定制业务交互、强产品级布局或 repository-owned implementation 的真实 Page 时，才允许选择 engineered renderer / ownership profile。Engineering 不是一种为了方便而选择的 generic content model，也不能因为“四类模型”形式完整而强行给某个样本安排 Engineering 类型。
+`/page/guide/jypq` 保持稳定。不得为不同 renderer 建立第二套 Page identity 或 canonical route。
 
-当前 evidence 没有证明 `guide/jypq` 必须由 repository-owned business behavior 实现；如果后续 Technical Planning / representative evidence 证明 Structured 无法覆盖真实产品行为，必须 Stage Return 到 Specification，而不是在 implementation 中增加 alias/path 特判。
+## 8. Admin / Public contract
 
-## 4. Acceptance principles for Specification
+Current Admin / Public Page contract 必须能够显式表达 `contentModel / rendererKey / contentOwner / structuredContent`，同时按现有 compatibility 约束保持仍被当前客户端消费的 legacy projection。
 
-后续 Specification 必须至少回答：
+- Admin 根据 content model / structured schema 选择 authoring surface，不通过 alias/path 特判；
+- Rich Page 使用现有 mature Rich Text editor；
+- `STRUCTURED + CARD_COLLECTION V1` 使用 ordered card editor；
+- unsupported model / schema / renderer 显示阻塞诊断，不提供 arbitrary Rich fallback；
+- Public Renderer 使用显式 registry / resolver，不从 alias/path/DOM 猜测。
 
-1. Page content model、renderer identity 与 content ownership 如何保持正交，避免继续把不同维度混进单一 `renderMode` / category；
-2. primary content authority 如何显式表达；
-3. non-rich renderer identity 如何稳定绑定且 unknown binding 如何 fail closed；
-4. structured / engineered / external profile 如何进入 Admin / Public API 边界而不重新混同为单一 content model；
-5. canonical `/page/{alias}` / `/page/{group}/{alias}` 是否保持稳定；
-6. existing Site Package / operator divergence protection 如何延续；
-7. `guide/jypq` 的正式目标方向是什么，以及为什么；
-8. FAQ、external integration 与 Engineering boundary 在该模型中是否自然成立，而无需为了模型完整性强行迁移或制造新页面。
+## 9. 验证义务
 
-## 5. Verification requirements
+后续触达 Page Content Architecture 时至少验证：
 
-进入任何 implementation readiness 前，至少需要：
+- Fresh DB 完整 Flyway chain 可以建立 Current Page schema；
+- Existing legacy Page upgrade 不破坏 operator content；
+- Rich Page regression；
+- Structured schema parse / validation / sanitization；
+- renderer dispatch 与 unknown fail-closed；
+- Admin model-specific authoring；
+- Site Package exact-baseline adoption / operator divergence / idempotency；
+- `/page/guide/jypq` canonical URL；
+- `guide/jypq` card count / order / titles / body / package image integrity；
+- 自动 Browser verification 先于 bounded Human Review。
 
-- representative-sample analysis 覆盖 About / `guide/jypq` / FAQ / external integration / Engineering boundary；
-- Issue #137 durable acquisition / collector evidence 与当前 Site Package projection、Public Renderer、E2E downstream state 被分别核验，不混淆 evidence provenance；
-- Specification 对 ownership、renderer selection、fallback/fail-closed、URL stability 给出明确 contract；
-- 如果引入 Generic CMS schema / API / Admin authoring model，必须有对应 Technical Plan 与 migration compatibility strategy；
-- `guide/jypq` 的目标 card structure / presentation 需要 Browser verification，并在自动验证后进行 bounded Human Review；任何 interaction acceptance 只有在取得具体 evidence 后才能冻结；
-- 所有 existing operator-content adoption / divergence protection 保持可验证。
+## 10. 非目标
 
-## 6. Non-goals
-
-- 不在 Requirement 阶段冻结 `contentType`、`rendererKey`、`ownership` 等具体字段名；
-- 不决定新 DB schema；
-- 不把 FAQ 自动迁移为 Structured；
-- 不把 iframe 设为所有特殊 Page 的默认方案；
-- 不把 External / Engineering profile 降格成单一混合 `renderMode`；
-- 不重写 Public frontend 技术栈；
-- 不改变四层 CMS Core / Site Package / Historical Migration / Replaceable Public Renderer boundary；
-- 不启动 Hui Employment integration；
-- 不创建 Candidate / Ready Execution Unit；
-- 不访问或升级 `agentic-dev` upstream baseline。
-
-## 7. Requirement readiness
-
-Issue #137 durable acquisition / collector evidence、Issue #77 long-lived boundary、EU-52 accepted formal Page contract，以及当前 `main` 的 Site Package projection、Public renderer 与 E2E downstream state 已经共同证明真实产品 gap：**结构敏感 Page 不能继续依赖语义扁平化作为长期方案。**
-
-Human Review 已确认 Requirement intent / product constraints；Specification 已接受 `guide/jypq` Structured target，当前 Technical Planning 也已由 `docs/technical/page-content-architecture.md` 收敛长期 HOW。本 Requirement 不重复维护 DB / API / renderer / adoption 细节，也不因 Technical Plan ready 自动创建 Execution Unit。
-
-本 Requirement 的接受与集成都不构成 Readiness PASS，也不授予 Execute Authority。
+- 不建设通用 Page Builder / arbitrary block framework；
+- 不因为架构存在就自动把 FAQ 迁移为 Structured；
+- 不自动实现慧就业 external integration；
+- 不创建无真实需求的 Engineering Page sample；
+- 不允许 operator 任意切换 content model / renderer / owner；
+- 不重新打开 Main Historical Migration；
+- 不改变 Public frontend 技术栈；
+- 不从本文创建新的 Candidate / Ready Execution Unit。
