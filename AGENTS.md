@@ -80,13 +80,13 @@ Bootstrap / Roadmap surface 不并行维护 `Current Ready Execution Unit`、Rea
 方法来源：
 
 - Repository：`dygapp/agentic-dev`
-- Previous Evaluated Baseline：`d9fad0da83dbdb61cac5eb9778b0258c6861eef1`
-- Current Evaluated Baseline：`2fe193035c629f6b8805fd473bd322f70fe6e172`
+- Previous Evaluated Baseline：`2fe193035c629f6b8805fd473bd322f70fe6e172`
+- Current Evaluated Baseline：`1c8cdfea9ecf23ef33ffab20eec3c93679fd4578`
 - Capability Milestone Tag：`baseline-2026-09-04-engineering-capability` → `5be2e6aad29b2be6b8535b3690daf3533ee22a46`
 
-Current Evaluated Baseline 只表示本 Consumer 已经完成 exact upstream compare 与 adoption verification 到哪个精确 commit，不表示 `2fe193...` 中所有文件、Project 状态或规则均被采用。当前 local asset 的真实 semantic owner / provenance 与 upgrade-only disposition history 必须与 baseline 分离；V3-08 Track B 的逐项记录见 `docs/project/agentic-dev-v3-08-track-b-evidence.md`，普通运行不默认读取该升级历史。
+Current Evaluated Baseline 只表示本 Consumer 已经完成 exact upstream compare 与 adoption verification 到哪个精确 commit，不表示 `1c8cdfea...` 中所有文件、Project 状态或规则均被采用。当前 local asset 的真实 semantic owner / provenance 与 upgrade-only disposition history 必须与 baseline 分离；最近一次 `2fe193... -> 1c8cdfea...` 的逐项记录见 `docs/project/agentic-dev-v3-closure-baseline-upgrade-evidence.md`，此前 `d9fad0da... -> 2fe193...` 的 V3-08 Track B 记录继续保留在 `docs/project/agentic-dev-v3-08-track-b-evidence.md`。普通运行不默认读取这些升级历史。
 
-从 previous baseline 到当前 baseline 的可复用变化选择性固化为：Consumer Lifecycle、Agent Resource Model、Resource Discovery Architecture、Skill identity / admission / supporting-resource boundary；Verification / Evidence、External Operation、Engineering Discipline、Technology Profile 与既有 Consumer-local owner 一致的部分继续由本仓库现有 owner 承载，不复制 upstream Guide。`agentic-dev` 自身 `AGENTS.md` / README / Roadmap、V3 Project / Issue / PR 状态、Research / Eval、tasks/plans、自采用 `docs/discovery/**` 实例均不成为 Consumer current authority。
+本轮从 previous baseline `2fe193...` 到 current baseline `1c8cdfea...` 的 reusable change 只新增采用 Handoff artifact lifecycle：Handoff 是**条件性临时 runtime transition artifact**，仅在真实未完成状态、明确 producer、明确 downstream consumer 且 Repository Current Authority / Evidence 不能可靠替代时形成；消费或持久化到正式 owner 后立即失效；它不是 current Skill，也不能成为第二份 Current State truth。其 Consumer current owner 是 `docs/project/execution-continuity-guidelines.md`。Verification / Evidence、External Operation、Engineering Discipline、Technology Profile、Local Discovery 与 Skill inventory 继续由既有 Consumer-local owner 承担；upstream V3-08 / Independent Review / Closure 等 Project state 不继承。
 
 本项目不是在每次开发工作中直接运行 `agentic-dev` 仓库的方法文档，而是将当前采用的方法和 Skills 使用规则固化在 Consumer Repository：
 
@@ -118,7 +118,7 @@ docs/project/development-method.md
 - Planning / Requirement Candidate 在 `slice-work` 前保持规划身份；`slice-work` 只在上游 Ready 后形成 Candidate Execution Unit，可分配稳定 Identifier；Identifier 不等于 Readiness 或 Execute 授权，只有 `readiness-check` PASS 后才成为 Ready Execution Unit；
 - 优先形成纵向、可独立验证、范围明确且 context-fit 的 Execution Unit；
 - 在条件允许时使用 Fresh Context；
-- Fresh Context 的会话切换提示词只承担 **Locator / Handoff** 职责，不并行维护第二份项目 Authority；凡可从当前 GitHub Repository、Roadmap、Consumer-local Method、Requirement / Specification / Technical Plan、Issue / PR / Actions 或 Runtime Evidence 恢复的事实、规则、状态和执行步骤，不得为了“交接完整”再次复制进提示词；完整规则见 `docs/project/development-method.md`；
+- Fresh Context 的会话切换提示词只承担 **Locator** 职责，不并行维护第二份项目 Authority；凡可从当前 GitHub Repository、Roadmap、Consumer-local Method、Requirement / Specification / Technical Plan、Issue / PR / Actions 或 Runtime Evidence 恢复的事实、规则、状态和执行步骤，不得为了“交接完整”再次复制进提示词；真正 Handoff 仅按 `docs/project/execution-continuity-guidelines.md` 的条件性临时 artifact contract 形成；
 - 实施时选择当前证据支持的最低必要复杂度；没有当前 Requirement、Specification、Architecture、Verification、安全、性能、生命周期或真实多消费者证据支持的额外抽象、配置项、依赖、扩展点、框架层和未来分支默认不进入实现；必要的失败路径、安全措施、验证能力、行为保持型 preparatory refactor 与薄适配不属于“过度设计”；
 - 最终 Diff 的每个有意义区域必须能追溯到当前 Unit 实现、验证、Authority 同步、必要 preparatory refactor 或其直接 cleanup；相邻 typo、TODO、历史死代码、独立优化、全局格式化等默认留在当前 Diff 之外；
 - 当 Unit 涉及集合、列表或 snapshot 数据访问时，先确认真实 Consumer Scope、集合的稳定有界性或增长特征、Lifecycle / Freshness，再决定过滤、稳定排序、window / pagination、representation 与复用方式；页面最终展示数量、现有 `LIMIT/OFFSET` 或客户端过滤不能替代业务作用域；
