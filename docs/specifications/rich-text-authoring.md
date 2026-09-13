@@ -2,227 +2,142 @@
 id: specification-rich-text-authoring
 title: 富文本内容编辑 V2 规格说明
 type: specification
-status: ready
+status: accepted
 version: "V2.0"
 relations:
   upstream:
     - docs/requirements/rich-text-authoring.md
   related:
     - docs/technical/rich-text-authoring-plan.md
-    - docs/work/current/eu54-rich-text-v2-mature-editor-adoption.md
+    - docs/work/archive/eu54-rich-text-v2-mature-editor-adoption.md
 created_at: 2026-09-05
-updated_at: 2026-09-11
+updated_at: 2026-09-13
 ---
 
 # 富文本内容编辑 V2 规格说明
 
-## 1. Scope
+## 状态
 
-本 Specification 定义 Article `INTERNAL` 与 Page `RICH_TEXT` 的成熟 editor integration、`bodyHtml` contract、Article managed image bridge、Backend/Public compatibility-first HTML policy 与验证义务。
+- Specification：**CURRENT / ACCEPTED**；
+- EU-54：**COMPLETED / Execute Authority TERMINATED**。
 
-它不定义 Page Content Architecture、特殊业务单页 renderer、Page Resource association 或 Main historical migration。
+## 1. 适用范围
 
-## 2. Technology Decision
+本规格定义 Article `INTERNAL` 与 Page `RICH_TEXT` 的 mature editor integration、`bodyHtml` contract、Article managed image bridge、Backend/Public compatibility-first HTML policy 与 verification obligations。
 
-### RT2-01 Primary editor
+不定义 Page Content Architecture、特殊业务 Page renderer、Page Resource association 或 Main Historical Migration。
 
-正式实现使用 **SunEditor 3.3.3** 开源核心并锁定精确版本与 lockfile。直接消费 SunEditor core；不依赖成熟度不足的 Vue wrapper。
+## 2. Editor contract
 
-Jodit 4.15.0 是已验证 fallback，但不得静默切换。只有 SunEditor 命中本 Specification 的 Stop Condition，并形成明确 Repository Evidence 后，才能通过新的 Human / Repository Authority 决定是否切换；不得在一个 Runtime 同时保留两套 editor。
+正式实现使用 **SunEditor 3.3.3**，精确锁定 dependency / lockfile；直接消费 SunEditor core，不依赖额外 Vue wrapper。
 
-### RT2-02 Thin Vue adapter
+CMS-local `RichTextEditor` 是 thin lifecycle adapter，只负责：
 
-保留 CMS-local `RichTextEditor` component 名称和尽量稳定的 consumer API。adapter 只负责：
+- create / destroy；
+- `modelValue` 初始化与同步；
+- `update:modelValue`；
+- E2E stable selector；
+- `zh_cn` 与项目最小 config；
+- optional resource callback / uploading state。
 
-- SunEditor create / destroy lifecycle；
-- `modelValue` HTML 初始化与 `update:modelValue`；
-- `testId` / E2E integration；
-- 中文语言与项目级基础配置；
-- 可选 resource callbacks；
-- consumer state 与 editor state 同步。
+不得在 adapter 中重新实现 selection、history、paste、table、font、format 等 editor core behavior。
 
-不得重新实现 selection、history、paste、table、font、format 等 editor core behavior，也不得用 Element Plus 重建一套完整 toolbar。
+## 3. Authoring behavior
 
-### RT2-03 Chinese / authoring behavior
+- Windows 中文 IME 正常；
+- WPS 一次完整 paste 作为一个可整体 Undo 的用户操作；
+- paste 后继续插字 / 删除 / formatting / table edit / multi undo-redo 稳定；
+- 使用成熟 editor 自带 toolbar / dialog / plugin；
+- 至少支持 heading、bold/italic/underline/strike、font/size/color/background、align、list、table、link、image、undo/redo。
 
-- 使用 SunEditor `zh_cn`；
-- Windows 中文 IME 不丢字、不重复字、不异常跳光标；
-- 使用成熟 editor 自带 undo / redo；
-- WPS 的一次完整 paste 必须表现为一个可整体撤销的用户操作；
-- Paste 后继续插字、删除、格式化、表格编辑与多次 undo / redo 保持稳定。
+## 4. Content contract
 
-## 3. Content Contract
+`bodyHtml` 是唯一 Rich Text Authority。Editor canonicalization 不要求 byte-equal，但必须保持 accepted semantic/presentation：
 
-### RT2-04 Single HTML Authority
-
-Admin、API、DB 和 Public 继续以 `bodyHtml` HTML 为唯一正文 Authority。不持久化 SunEditor内部 model 或任何第二格式。
-
-### RT2-05 Semantic compatibility
-
-HTML canonicalization 可以发生，但必须保持 accepted corpus 的语义与关键 presentation。Compatibility 验证以 DOM facts + 浏览器实际表现为准，而不是 SHA / 字节相等。
-
-必须保留：
-
-- normal text / paragraphs / headings / emphasis / lists / links；
+- text / paragraphs / headings / emphasis / list / link；
 - table / caption / thead / tbody / tfoot / row / cell；
-- `colspan` / `rowspan` 与 accepted table presentation metadata；
-- image `src` / `alt` / `title` / `width` / `height` 与必要 alignment；
-- accepted corpus 实际需要的 text / background / font / size / align / width / height / float 等 presentation。
+- colspan / rowspan；
+- image src / alt / title / width / height / alignment；
+- accepted text/background/font/size/align/width/height/float。
 
-### RT2-06 Representative corpus hard gates
+## 5. Compatibility hard gates
 
-- **P1 Party inline image**：canonical Article `zhutijiaoyu:content:154659859759104` 的图片数量稳定，首批 15 / 16 px 星标在保存与 Public render 后仍为小尺寸行内内容；
-- **P2 teacher-library**：正式 Page 中 table structure、`align/cellpadding/cellspacing` 等当前语义、1170px table width、200×266 image、cell dimensions 与 `float:left` 等关键 presentation 保持；
-- 普通 Article / Page 的标准富文本行为保持。
+### Party inline image
 
-## 4. SunEditor Configuration Contract
+Canonical Party representative Article 中 15 / 16 px star images 在 save + Public render 后仍保持 inline small-size presentation。
 
-### RT2-07 Built-in UI first
+### teacher-library
 
-优先使用 SunEditor 自带 toolbar / dialogs / plugins。项目只选择需要启用的成熟能力与做必要业务 adapter，不复制产品自身 UI。
+Main Page 中 table structure、accepted table metadata、1170px width、200×266 image、cell dimensions、`float:left` 等关键 presentation 保持。
 
-基础能力至少覆盖：
+普通 Article / Page Rich Text 也必须回归。
 
-- undo / redo；
-- paragraph / heading；
-- bold / italic / underline / strike；
-- font / font size / text color / background；
-- align / ordered / unordered list；
-- table；
-- link；
-- image upload / image size / alignment / alt 等常规图片维护。
+## 6. Resource contract
 
-### RT2-08 Proven compatibility config
+### Article managed image
 
-实现起点必须包含 PoC 已验证的 compatibility configuration：
+- 上传继续走 `/api/admin/resources`；
+- editor 插入 URL / alt / presentation；
+- consumer 维护 `bodyImageResourceIds`；
+- save 按 body actual references reconcile association；
+- remove body reference 不自动删除 Resource；
+- image presentation 可维护。
 
-- table attributes：`align|cellpadding|cellspacing`；
-- `td` presentation：`width|height`；
-- 完整注册实际启用的 SunEditor core plugins；
-- `zh_cn`。
+SunEditor core 不直接读写 `bodyImageResourceIds`。
 
-最终配置可以因 real-corpus tests增加成熟产品官方配置，但不得演变为复制一份项目自定义 HTML schema。
+### Attachment / Page
 
-## 5. CMS Resource Contract
+- Article `attachmentResourceIds` lifecycle 保持；
+- Page `RICH_TEXT` 不新增 managed Resource association；
+- future resource picker / plugin 需要新的明确 contract。
 
-### RT2-09 Article image bridge
+## 7. HTML safety policy
 
-Article 继续复用 `/api/admin/resources`：
+使用成熟 OWASP Java HTML Sanitizer / parser-based policy：
 
-1. consumer/resource adapter 上传 image；
-2. 返回 managed Resource id、content URL、filename；
-3. editor 只插入 URL / alt / presentation；
-4. Article consumer 把 id 纳入 `bodyImageResourceIds`；
-5. save 前只保留正文仍实际引用的 managed image association；
-6. 删除正文引用不自动删除 Resource 本体。
+- compatibility-first；
+- 从成熟 formatting / blocks / links / images / tables / styles policy 组合；
+- 只为 Repository accepted corpus 增加必要 presentation attributes / styles；
+- 不复制 SunEditor toolbar schema 作为 Backend dialect；
+- hostile corpus 与 real valid corpus 同时驱动 tests。
 
-SunEditor core 不读写 `bodyImageResourceIds`。
+Public 输出至少阻止 script、event handlers、dangerous schemes、unauthorized iframe/object/embed/form、executable SVG/MathML、meta/base/link 与 dangerous CSS/URL behavior。
 
-### RT2-10 Attachment / Page boundaries
+Article/Page Rich write boundary 与 Public defensive read 复用同一 shared policy responsibility；read defense 不回写 DB。
 
-- Article 现有 `attachmentResourceIds`、独立上传/移除/公开附件 contract 保持；本 Unit 不强制把附件迁入正文；
-- Page RICH_TEXT 继续没有 managed Resource association；不新增 Backend schema/API；
-- adapter 设计不得阻碍未来增加 resource picker / attachment plugin，但未来能力不作为本 Unit scope。
+## 8. Public renderer independence
 
-## 6. Backend / Public HTML Policy
+Public `.rich-content` 必须能显示 accepted standard HTML，不得整体加载 SunEditor editor UI/chrome CSS 才能工作。
 
-### RT2-11 Compatibility-first sanitizer
+如果 future editor output 必须依赖 editor product-specific CSS/classes 才能正确显示，必须触发 Stop Condition / new evidence review。
 
-保留成熟 OWASP Java HTML Sanitizer 作为 parser-based safety foundation，但重构当前窄 `RichTextHtmlPolicy` 配置方式：
+## 9. Historical data
 
-- 优先组合成熟库已有 blocks / formatting / links / images / tables / styles 能力；
-- 只为 Repository accepted corpus 补充必要 presentation attributes / styles；
-- 不把 SunEditor toolbar schema复制成 Backend allow-list；
-- policy tests同时由真实合法 corpus和 hostile corpus驱动。
+不执行 bulk rewrite，不重新打开 Main migration。Fresh Runtime / canonical import 必须证明 V2 不再造成 accepted presentation loss。
 
-### RT2-12 Minimum active-content boundary
+已发生的旧数据损失只能在有 exact baseline evidence 时做 bounded repair；operator-diverged content 必须保护。
 
-无论客户端如何调用，Public 输出不得包含可执行 active content。至少覆盖：
+## 10. Verification obligations
 
-- `script`、iframe/object/embed/form 与 document-level meta/base/link；
-- `on*` event handler、`srcdoc`；
-- `javascript:` / `vbscript:` 等危险 scheme；
-- 未授权可执行 SVG/MathML；
-- 能引入 active behavior 的危险 CSS/URL。
+- dependency / lock / Admin build；
+- editor init / Chinese / formatting / table / link / image / save-reopen；
+- WPS paste/history；
+- Article managed image + attachment regression；
+- Party / teacher-library real corpus；
+- hostile direct API payload；
+- Public render independent from editor chrome CSS；
+- exact-head Backend/Admin/Public/Browser regression。
 
-普通 presentation HTML 不得因为与 editor toolbar 无关而被默认删除。
+旧测试若只绑定 Tiptap DOM implementation detail，应按 Stale Verification Contract 更新到 user behavior / stable wrapper selector，不恢复旧实现。
 
-### RT2-13 write + read defense
+## 11. Stop Conditions
 
-- Article INTERNAL create/update 与 Page RICH_TEXT create/update 在 write boundary 通过 shared policy；
-- Public Article / RICH_TEXT Page 继续执行 defensive filtering，以覆盖 V2 前历史数据；
-- read defense 不回写数据库；
-- External Article 和非 RICH_TEXT Page contract 不变。
+出现以下情况不得通过堆叠 bespoke transforms / CSS / plugins 继续绕过：
 
-### RT2-14 Public renderer independence
+1. accepted real corpus 在成熟官方 config 下仍无法保持；
+2. Public 正常显示必须整体依赖 editor chrome CSS；
+3. Article managed resource association 不稳定；
+4. wrapper 破坏真实 WPS single-paste Undo；
+5. 必须在 Backend 复制与 editor schema 等宽的 project-specific HTML dialect。
 
-Public `.rich-content` 必须能够展示存储 HTML 的 accepted语义；不得为了正常正文显示而加载 SunEditor editor UI/chrome CSS。
-
-如果 SunEditor 新生成的关键正文 presentation 必须依赖产品专属 CSS/class 才成立，属于 Stop Condition：不得静默把 Public Renderer绑定到 editor product，需报告 Evidence 并重新决策。
-
-## 7. Historical / Migration Contract
-
-### RT2-15 No bulk rewrite
-
-不执行全库 Article/Page body rewrite，也不更改冻结的 Main historical migration。
-
-管理员实际保存的记录允许进入 SunEditor canonicalization；未编辑记录保持原持久化数据，Public 仅做 defensive filtering。
-
-### RT2-16 V1 content-loss boundary
-
-V2 必须证明 Fresh Runtime / canonical import 不再丢失 Party star `width/height` 等合法信息。对已经由 V1 sanitizer 丢失信息的现有数据库，不得通过猜测恢复；若需要保留该数据库，只能形成 exact-baseline bounded repair，并拒绝覆盖 operator-diverged content。
-
-## 8. Verification Obligations
-
-### RT2-V01 Dependency / build
-
-- Admin 精确锁定 `suneditor@3.3.3`；
-- 删除不再使用的 Tiptap runtime dependencies；
-- Admin `npm run build` PASS；
-- Backend tests/package 与 Public build PASS。
-
-### RT2-V02 Editor integration
-
-Article / Page Browser Evidence覆盖：初始化 existing HTML、中文输入、基础格式、表格、链接、图片、保存/重开/继续编辑、undo / redo。
-
-### RT2-V03 WPS behavior
-
-在自动行为测试中覆盖 paste/history contract；最终 bounded Human Review 使用真实 Windows + WPS 复核：整体格式可接受、继续编辑稳定、一次完整 paste 一次 Undo 可整体回退。
-
-Microsoft Word 当前没有 Human environment，记录为 non-blocking residual；不得伪造 Word PASS。
-
-### RT2-V04 Resource consistency
-
-Article managed image upload/insert/remove/save 后：正文 URL 与 `bodyImageResourceIds` 一致；attachment lifecycle 无回归。
-
-### RT2-V05 HTML compatibility / safety
-
-Backend + browser regression 同时覆盖 P1、P2 和 hostile direct API payload；证明关键 presentation 保留且 active content 不进入可执行 Public 输出。
-
-### RT2-V06 Public integration
-
-Main / Party Public Article 与 RICH_TEXT Page 回归 PASS；不依赖 SunEditor editor chrome CSS；现有 accepted `.rich-content` 行为没有无关回归。
-
-### RT2-V07 Full regression
-
-最终 exact implementation Head 执行当前 CI、Backend、Admin、Public、Integrated Browser 以及受影响 Party verification；旧测试若只绑定 Tiptap DOM implementation detail，按 Stale Verification Contract 更新到用户行为/稳定 wrapper selector，不恢复旧实现。
-
-## 9. Stop Conditions
-
-出现以下任一情况时停止机械修复并提交证据，不得通过不断增加 bespoke transform / CSS / plugin 绕过：
-
-1. accepted P1/P2 presentation 在成熟官方配置下仍无法保持；
-2. Public 正常展示必须整体依赖 SunEditor editor UI/chrome CSS；
-3. Article managed resource association 出现不可解释的新增/丢失；
-4. wrapper 使真实 WPS paste 失去已验证的一步 Undo 行为；
-5. 为通过 Backend policy 必须再次建立与 editor schema等宽的项目自定义 HTML 方言。
-
-Jodit fallback 只有在 Stop Condition成立并经新的明确 Authority确认后才能启用。
-
-## 10. Slice Result
-
-本 V2 由 `slice-work` 形成单一 Candidate：
-
-**EU-54 — Rich Text V2 Mature Editor Adoption**。
-
-不拆分“editor replacement”与“HTML policy correction”，因为两者共享同一 `bodyHtml` contract、real-corpus compatibility Gate 和 Public行为；分拆会再次产生前后端内容模型错位风险。
+Jodit fallback 只在 Stop Condition 成立并取得新 Authority 后允许启用。

@@ -1,157 +1,71 @@
-# Page Content Architecture Technical Plan
+# 单页内容架构技术方案
 
 ## Authority
 
 - `docs/requirements/page-content-architecture.md`
 - `docs/specifications/page-content-architecture.md`
-- `docs/project/development-method.md`
-- `docs/technical/main-single-page-formal-content.md`
+- `docs/technical/cms-site-package-boundary.md`
 - `docs/technical/verification-strategy.md`
-- GitHub Issue #77 — Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer boundary
-- GitHub Issue #137 — durable Page-content acquisition / legacy structure evidence only; current product decisions are owned by the Requirement / Specification above
+- GitHub Issue #77
+- GitHub Issue #137（legacy structure evidence only）
 
-## Status
+## 状态
 
-- Technical Plan: **READY**
-- Planning baseline: `main@7fd5d4b45506f9eac570038c606db17feaba1ae2`
-- Primary implementation target: `guide/jypq` Structured Page
-- Stage Return: **NOT TRIGGERED**
-- Candidate / Ready Execution Unit: **NONE at Technical Plan creation**
-- Execute Authority: **NONE**
+- Technical Authority：**CURRENT / ACCEPTED**；
+- Architecture implementation：**COMPLETED via EU-55**；
+- Current Flyway：V1～V4；
+- Current representative Structured Page：`guide/jypq`；
+- Execute Authority：**TERMINATED**。
 
-This plan coordinates a change that crosses Generic CMS persistence/domain/API, Site Package adoption, Admin authoring and the replaceable Public Renderer. That cross-unit HOW value is durable enough to justify a Technical Plan rather than leaving the decisions implicit in one implementation diff.
+本文保留完成后的长期 HOW，不拥有 Current Execution Gate。
 
-## 1. Current implementation evidence
+## 1. Current persistence
 
-Current Page persistence and runtime still encode three different concerns in one shape:
+EU-55 已完成 Page persistence 从混合 `render_mode` 表达向正交 content contract 的迁移。Current migration：
 
-```text
-bodyHtml
-+ renderMode = RICH_TEXT | EMBED_PLACEHOLDER | INTERNAL_STATIC
-+ embedUrl
-```
+`backend/modules/cms-core/src/main/resources/db/migration/V4__page_content_architecture.sql`
 
-`PageRenderMode` is persisted in `cms_page.render_mode`, exposed directly through Admin/Public DTOs and used by the current Public renderer. `PublicPageView.vue` special-cases only `EMBED_PLACEHOLDER`; all other values fall through to one `v-html` path. This is the mixed contract the accepted Specification requires us to evolve away from.
-
-Current Site Package provisioning already provides the ownership safety that must be preserved:
-
-- missing Page: create package content;
-- ordinary reconcile of an existing Page: do not overwrite operator-managed content;
-- explicit adoption: update only when current content exactly matches the declared prior-package fingerprint;
-- operator divergence: preserve and report;
-- rerun: idempotent.
-
-The current `guide/jypq` package body is a flattened Rich Page containing **3 ordered legacy sections/cards**. The second section contains the **4 accepted package images** under `/static/pages/guide/jypq/**`. No current repository evidence proves interaction/state beyond this durable card structure and presentation.
-
-## 2. Selected architecture
-
-Choose **Option A — Page-owned, versioned Structured payload**.
-
-The first Structured contract is a site-neutral ordered card collection. Page remains the aggregate and the single mutable content boundary; cards do not become independently addressable CMS entities.
-
-Conceptual Page contract after the change:
+Current `cms_page` content fields：
 
 ```text
-stable Page identity / grouping / canonical URL / lifecycle
-+
-contentModel
-+
-rendererKey
-+
-contentOwner
-+
-exactly one model-owned content representation
-  - Rich: bodyHtml
-  - Structured: structuredPayload
-  - no CMS primary body: NONE / integration metadata
-+
-existing integration metadata when applicable (for example embedUrl)
+body_html
+content_model
+renderer_key
+content_owner
+structured_payload
+embed_url
 ```
 
-The three accepted semantic dimensions therefore remain independent:
-
-- `contentModel` answers what data shape the Page body has;
-- `rendererKey` answers which registered renderer consumes that contract;
-- `contentOwner` answers which authority owns the primary content after the current lifecycle transition.
-
-They are intentionally not collapsed into a new profile enum or another mixed `renderMode`.
-
-## 3. Alternatives considered
-
-| Option | Advantages | Costs / risks | Verdict |
-|---|---|---|---|
-| **A. Page-owned versioned Structured payload** | Atomic Page ownership; minimal schema; preserves ordered structure; simple package default/adoption; no item lifecycle; schema/version fail-closed; Admin can edit one Page transactionally | No SQL-level card querying/indexing; item identity is not independently stable | **SELECTED** — current Requirement has no cross-page reuse, independent item identity or card query need |
-| **B. Normalized `page_section` / `page_item` entities** | Stable row identity; direct item querying/indexing; natural item CRUD | More domain/repository/Flyway/API/Admin complexity; ordering and transactional adoption span rows; package bootstrap/adoption needs item identity and diff semantics; creates lifecycle not required by current target | **REJECTED for current scope** — over-designed for one Page-owned ordered collection |
-| **C. One opaque `content_contract_json` containing model + renderer + owner + payload** | Small physical schema; flexible envelope | Hides three accepted orthogonal dimensions in an opaque blob; weakens audit/query/validation; makes renderer and ownership drift harder to detect; encourages an untyped page-builder contract | **REJECTED** |
-| **D. Keep `renderMode` and add `STRUCTURED` / alias-specific dispatch** | Smallest immediate diff | Recreates the exact mixed semantic problem; encourages path/alias fallback and silent Rich rendering | **REJECTED** |
-
-Normalized entities become a future option only if real Requirements require independently addressable items, cross-page reuse, item-level query/indexing, or independent item workflow. That evidence does not exist today.
-
-## 4. Generic persistence and domain contract
-
-### 4.1 Flyway evolution
-
-Use the next append-only Generic Flyway migration. The migration must support both:
+V4 将旧 `render_mode` rename 为 `renderer_key`，并按旧值 deterministic backfill：
 
 ```text
-Fresh Database -> V1 -> V2 -> V3 -> new migration -> current schema
+RICH_TEXT          -> contentModel=RICH_TEXT, rendererKey=RICH_TEXT,         contentOwner=OPERATOR
+EMBED_PLACEHOLDER  -> contentModel=NONE,      rendererKey=EMBED_PLACEHOLDER, contentOwner=EXTERNAL
+INTERNAL_STATIC    -> contentModel=NONE,      rendererKey=INTERNAL_STATIC,   contentOwner=ENGINEERING
 ```
 
-and upgrade of an existing current database without rewriting operator content.
+Migration 不重写 existing operator body bytes。
 
-Evolve `cms_page` as follows:
+## 2. Generic domain values
 
-```text
-render_mode        -> renderer_key      VARCHAR(100) NOT NULL
-ADD content_model                     VARCHAR(32)  NOT NULL
-ADD content_owner                     VARCHAR(32)  NOT NULL
-ADD structured_payload                LONGTEXT     NULL
-```
-
-The existing physical `render_mode` column is renamed rather than retained beside a second renderer column. Existing values remain stable renderer identities during the migration, which avoids creating two persisted renderer authorities:
-
-```text
-RICH_TEXT          -> rendererKey RICH_TEXT
-EMBED_PLACEHOLDER  -> rendererKey EMBED_PLACEHOLDER
-INTERNAL_STATIC    -> rendererKey INTERNAL_STATIC
-```
-
-Backfill the other dimensions deterministically:
-
-```text
-RICH_TEXT          -> contentModel=RICH_TEXT, contentOwner=OPERATOR
-EMBED_PLACEHOLDER  -> contentModel=NONE,      contentOwner=EXTERNAL
-INTERNAL_STATIC    -> contentModel=NONE,      contentOwner=ENGINEERING
-```
-
-`LONGTEXT` is preferred over database-native JSON for `structured_payload`: current behavior does not require SQL queries inside the payload, while application-level canonical parsing/validation keeps the contract portable and explicit.
-
-### 4.2 Generic enums / values
-
-Generic Core owns the finite semantic dimensions:
+Generic Core 当前语义：
 
 ```text
 PageContentModel = RICH_TEXT | STRUCTURED | NONE
 PageContentOwner = OPERATOR | SITE_PACKAGE | ENGINEERING | EXTERNAL
 ```
 
-`rendererKey` remains a validated string, not a Generic Core enum, because renderer registration belongs to the replaceable Public Renderer and may be site-specific. Generic validation owns only syntax/length, not membership in a concrete frontend registry.
+`rendererKey` 是 validated string，不是 Generic enum。具体 renderer registration 属于 replaceable Public Renderer。
 
-The first implementation uses `OPERATOR` for both normal Rich Pages and adopted `guide/jypq`. `SITE_PACKAGE` remains a valid ownership concept but is not used to claim ongoing ownership of `guide/jypq`: the package is the accepted default/adoption source; after create/adoption, Runtime operator data is the primary authority.
+Validation 保证一个 Page 只有一个 primary content representation：
 
-### 4.3 One primary content representation
+- `RICH_TEXT` → `bodyHtml`；
+- `STRUCTURED` → `structuredPayload`，top-level `bodyHtml` 为空；
+- `NONE` → 不把 CMS content field 当作 whole-page primary body。
 
-Validation must make ownership of the Page body unambiguous:
+## 3. Structured Card Collection V1
 
-- `RICH_TEXT`: `bodyHtml` is the body authority; `structuredPayload` must be null;
-- `STRUCTURED`: `structuredPayload` is the body authority; top-level `bodyHtml` must be empty; `embedUrl` must be null for the current Structured profile;
-- `NONE`: no CMS field may be interpreted as a primary whole-page body; existing placeholder/internal metadata remains behavior-preserving compatibility data until those profiles receive separate product planning.
-
-A Structured Page must never simultaneously render `structuredPayload` plus an old Rich `bodyHtml` fallback.
-
-## 5. Structured Card Collection V1
-
-The first site-neutral Structured schema is deliberately narrow:
+Current first structured schema：
 
 ```json
 {
@@ -166,133 +80,42 @@ The first site-neutral Structured schema is deliberately narrow:
 }
 ```
 
-Contract:
+实现要求：
 
-- array order is card presentation/order authority;
-- `title` is plain text and required;
-- `bodyHtml` is item-level Rich content and is sanitized through the existing Rich HTML policy;
-- no persisted item ID is introduced because current cards have no independent URL, workflow, references or query identity;
-- no separate resource array is introduced in V1. Images/files remain references inside the item-level Rich body and use the existing managed/static resource path policy;
-- unknown `kind`, unknown `schemaVersion`, malformed JSON or invalid item structure fails closed; it is never coerced to Rich HTML;
-- schema evolution that cannot be backward-read requires a new supported schema version and explicit adoption/migration decision.
+- preserve item order；
+- title 必填、plain text；
+- item `bodyHtml` 复用现有 Rich HTML sanitize policy；
+- 不引入独立 card entity / ID；
+- 不引入第二套 Resource model；
+- unknown kind/version、malformed JSON、invalid item fail closed；
+- canonical parse / validation 必须在 persistence / API / Public consumption 前完成。
 
-For `guide/jypq`, V1 contains exactly the 3 accepted ordered card titles/bodies recovered in current package evidence. The existing 4 `/static/pages/guide/jypq/**` images remain inside the appropriate item body and keep their current package asset authority.
+当前需求没有 SQL-level card query、cross-page reuse、independent workflow 或 item-level identity，因此不引入 normalized `page_section/page_item` entities。
 
-This is not a general page-builder schema. New block kinds/layout composition are out of scope until a real Requirement proves them necessary.
+## 4. Renderer registry
 
-## 6. Renderer identity and resolution
-
-### 6.1 Stable renderer keys
-
-Existing values continue as renderer identities for behavior compatibility:
-
-```text
-RICH_TEXT
-EMBED_PLACEHOLDER
-INTERNAL_STATIC
-```
-
-The JilinJobs Site Package binds `guide/jypq` to one new site-specific stable renderer identity, for example:
-
-```text
-JILINJOBS_GUIDE_CARDS
-```
-
-The final spelling may change during implementation only if all package/API/registry/tests use one stable value; it must not encode the Page alias as a dispatch condition.
-
-### 6.2 Registry boundary
-
-The Main Public Renderer owns a small static registry/resolver, conceptually:
+Main Public Renderer 使用小型静态 registry / resolver：
 
 ```text
 rendererKey -> renderer component
 ```
 
-It is not a dynamic plugin framework and does not add runtime discovery or generic plugin loading.
-
-- `RICH_TEXT` resolves to the generic Rich renderer;
-- existing placeholder/internal identities resolve to their behavior-preserving renderers;
-- `JILINJOBS_GUIDE_CARDS` resolves to the JilinJobs Structured card renderer;
-- unknown key renders an explicit unsupported/error state and records diagnosable evidence; it must not fall through to `v-html`.
-
-Alias, path, group, DOM shape or body heuristics are forbidden as renderer selectors.
-
-Generic Core validates renderer-key syntax. The replaceable Public Renderer validates registration at consumption time. Site Package verification proves every renderer key used by the JilinJobs package is registered by the current Main renderer.
-
-## 7. Content ownership and Site Package adoption
-
-### 7.1 `guide/jypq` lifecycle
-
-The valid lifecycle is:
+Current bindings 至少包括：
 
 ```text
-Site Package accepted Structured default
--> Fresh create OR explicit exact-baseline adoption
--> Runtime row contentOwner=OPERATOR
--> operator-managed Structured payload
--> Public structured renderer
+RICH_TEXT               -> generic Rich renderer
+JILINJOBS_GUIDE_CARDS   -> Structured card renderer
+EMBED_PLACEHOLDER       -> current external placeholder/integration behavior
+INTERNAL_STATIC         -> current engineering/internal behavior
 ```
 
-There is no long-lived runtime state in which the following three surfaces all claim the Page body:
+Unknown key 必须显示 explicit unsupported state 并产生 diagnosable evidence；禁止 fallback 到 Rich `v-html`。
 
-```text
-structuredPayload + old top-level bodyHtml + Vue hardcode
-```
+禁止用 alias、path、group、DOM shape 或 body content 作为 renderer selector。
 
-The renderer contains presentation logic only. Card titles/body/resources live in Runtime Structured data after create/adoption; package data is the accepted baseline/default and does not remain a second runtime body authority.
+## 5. Site Package representation
 
-### 7.2 Existing Rich baseline before adoption
-
-The current Rich `guide/jypq` package baseline remains the only accepted adoption predecessor.
-
-The existing EU-52 `contentAdoptionFromFingerprint` contract is preserved for current Rich predecessors. Because existing renderer string values are retained when `render_mode` becomes `renderer_key`, the accepted legacy fingerprint remains computable exactly as:
-
-```text
-SHA-256(UTF-8 exact JSON)
-{"bodyHtml":<stored body>,"renderMode":<legacy renderer string>,"embedUrl":<string-or-null>}
-```
-
-For `guide/jypq`, adoption is allowed only when the existing row is also a lossless legacy-Rich state:
-
-```text
-contentModel = RICH_TEXT
-rendererKey = RICH_TEXT
-contentOwner = OPERATOR
-structuredPayload = null
-legacy content fingerprint = declared prior-package fingerprint
-```
-
-If any precondition fails, preserve the complete current content contract and report protected divergence.
-
-### 7.3 Atomic target adoption
-
-When the precondition matches, one transaction replaces the complete mutable content contract:
-
-```text
-contentModel
-rendererKey
-contentOwner
-bodyHtml          -> empty for Structured
-structuredPayload -> accepted CARD_COLLECTION V1
-embedUrl          -> null
-```
-
-Structural Page fields continue to follow the existing structural reconcile policy.
-
-After adoption:
-
-- an unchanged rerun is a no-op;
-- operator edits to the Structured payload survive ordinary reconcile;
-- a later package mismatch is protected/reported unless a future explicit adoption contract is separately authorized;
-- Main Historical Migration is not consulted as fallback.
-
-A future Structured->Structured package adoption fingerprint/version is intentionally not invented now. If such a product need appears, it receives its own versioned adoption contract instead of silently reinterpreting EU-52's legacy Rich fingerprint.
-
-## 8. Site Package boundary
-
-The Page structure contract changes enough that JilinJobs Site Package should move to the next package schema version rather than keep a misleading mixed `renderMode` field.
-
-Page entries become conceptually:
+Site Package Page entries 使用相同 generic contract：
 
 ```json
 {
@@ -303,217 +126,168 @@ Page entries become conceptually:
   "rendererKey": "JILINJOBS_GUIDE_CARDS",
   "contentOwner": "OPERATOR",
   "bodyHtml": "",
-  "structuredPayload": { "schemaVersion": 1, "kind": "CARD_COLLECTION", "items": [] },
+  "structuredPayload": {
+    "schemaVersion": 1,
+    "kind": "CARD_COLLECTION",
+    "items": []
+  },
   "embedUrl": null,
-  "contentAdoptionFromFingerprint": "<exact accepted prior Rich baseline>",
-  "sortOrder": 10,
-  "enabled": true,
-  "preset": true
+  "contentAdoptionFromFingerprint": "<accepted prior Rich baseline>"
 }
 ```
 
-Site-neutral package loader/provisioner owns these generic fields and their validation. JilinJobs-specific content and `JILINJOBS_GUIDE_CARDS` binding live only in `sites/jilinjobs/**` and Main Public renderer code.
+Current `sites/jilinjobs/structure/pages.json` 已按此语义存储 `guide/jypq`。JilinJobs-specific content / renderer binding 留在 `sites/jilinjobs/**` 与 Main Public renderer；Generic Core 不知道 `jypq` alias 或 card 文案。
 
-All existing JilinJobs Page entries move from `renderMode` to `rendererKey` under the new package schema without changing their accepted product content. Package version, manifest structure digest and affected verification fixtures must be updated together.
+## 6. Rich → Structured adoption
 
-## 9. Admin authoring
+Current adoption safety 继承 EU-49 / EU-52 ownership guard。
 
-Admin identifies the authoring surface from `contentModel` and supported Structured schema, never from alias/path.
+对 `guide/jypq`，只有 Existing Page 精确满足 legacy Rich predecessor 时允许转换：
 
-Minimum behavior:
+```text
+contentModel = RICH_TEXT
+rendererKey = RICH_TEXT
+contentOwner = OPERATOR
+structuredPayload = null
+legacy content fingerprint = declared prior-package fingerprint
+```
 
-- `RICH_TEXT`: keep the current mature `RichTextEditor` whole-body surface;
-- `STRUCTURED + CARD_COLLECTION V1`: show an ordered card editor;
-- each card exposes required title and item-level `RichTextEditor` body;
-- operator can add/remove/reorder cards and maintain body resources through the existing Rich editor/resource path behavior;
-- Structured editing never exposes a parallel arbitrary whole-page HTML editor;
-- preset `guide/jypq` does not allow an ordinary content edit to switch content model, renderer identity or ownership;
-- unsupported content model/schema/version shows a blocking error/read-only diagnostic rather than a fallback editor;
-- invalid Structured payload is rejected before persistence with actionable validation errors.
+成功分支在一个 DB transaction 中原子更新完整 content contract：
 
-The current Page create/edit UI may keep behavior-preserving profile choices for existing Page types through a thin mapping to the orthogonal contract. It must not introduce a new persisted profile enum.
+```text
+contentModel = STRUCTURED
+rendererKey = JILINJOBS_GUIDE_CARDS
+contentOwner = OPERATOR
+bodyHtml = empty
+structuredPayload = accepted CARD_COLLECTION V1
+embedUrl = null
+```
 
-No new Page Resource relation is introduced. `RichTextEditor` remains the item-body editor adapter; the Structured Page architecture does not fork a second rich-text engine.
+不匹配时：
 
-## 10. Admin/Public API compatibility
+- preserve Runtime content；
+- report protected divergence；
+- 不通过 alias/DOM/source heuristic 强制认领；
+- 不调用 Main Historical Migration fallback。
 
-### 10.1 DTO evolution
+Adoption 后 repeated reconcile no-op；operator 修改 Structured payload 后 ordinary reconcile 继续保护其修改。
 
-Add explicit fields to Admin/Public Page contracts:
+## 7. Admin authoring
+
+Admin 只根据 content contract 选择 authoring UI：
+
+- `RICH_TEXT` → current mature `RichTextEditor`；
+- `STRUCTURED + CARD_COLLECTION V1` → ordered card editor；
+- card body 继续使用 item-level `RichTextEditor`；
+- add/remove/reorder 保持 atomic Page save；
+- 不提供平行 whole-page Rich HTML editor；
+- preset Page 普通 edit 不允许切换 content model / renderer / owner；
+- unsupported schema/version → blocking diagnostic / read-only safety state。
+
+不建立第二套 rich-text engine。
+
+## 8. Admin / Public API
+
+Current Admin/Public Page DTO 显式表达：
 
 ```text
 contentModel
 rendererKey
 contentOwner
-structuredContent (typed object or null at the HTTP boundary)
+structuredContent
 ```
 
-Existing Page identity, name, group, breadcrumbs and `canonicalUrl` remain unchanged.
+Existing Page identity、group、breadcrumbs、canonical URL 与仍在 compatibility window 内的 legacy projection 按当前 implementation contract 保持。
 
-For existing Rich / placeholder / internal Pages, current wire-visible `bodyHtml`, `renderMode` and `embedUrl` fields remain available during a compatibility window. `renderMode` becomes a deprecated projection derived from `rendererKey` for the three existing legacy identities; it is not accepted as the new domain dispatch authority.
+Structured payload 在 HTTP boundary 输出 validated typed JSON data；Public client 不消费未经验证的 opaque string。
 
-Structured clients consume the new fields. `structuredContent` is emitted as validated JSON data, not an opaque JSON string.
+## 9. Public routing / SEO
 
-### 10.2 Compatibility scope
-
-- Existing Rich Page responses remain behavior- and field-compatible for current consumers.
-- Current Admin and Public applications are upgraded in the same vertical implementation before `guide/jypq` Structured adoption is made live.
-- A historical client that does not understand Structured Pages is not allowed to define a Rich fallback contract. Deployment/integration verification must prevent a mixed-version rollout in which Structured data becomes live before the current renderer can consume it.
-- Updated Public code explicitly fails closed for unknown `contentModel`, Structured kind/version or `rendererKey`.
-
-The deprecated `renderMode` DTO projection can be removed only under a later explicit compatibility decision; its persistence column is not retained as a second truth.
-
-## 11. Public rendering and canonical routing
-
-Routes remain exactly:
+Routes 保持：
 
 ```text
 /page/{alias}
 /page/{groupAlias}/{alias}
 ```
 
-`/page/guide/jypq` remains canonical.
+`PublicPageView` 继续拥有 route / shell / group tab / breadcrumb responsibility，再把 body 委托给 renderer resolver。
 
-`PublicPageView.vue` remains the route/shell owner and delegates the body to renderer resolution. Group tabs, breadcrumbs and Page shell remain generic Page behavior. The Structured renderer receives only the validated Page contract and contains no hard-coded card titles, source facts or duplicate content.
+Structured Page 的 SEO / summary 从 validated structured contract 提取文本，不依赖空 top-level `bodyHtml`。
 
-SEO/summary logic for Structured Pages derives text from the validated Structured contract rather than reading an empty top-level `bodyHtml`.
+## 10. Historical Migration boundary
 
-## 12. Historical Migration boundary
+Page Content Architecture evolution 使用 Generic Flyway + Site Package create/adoption；Main Historical Migration 不参与 fallback。
 
-No Generic or Main Historical Migration fallback is added.
+`cms_page_legacy_mapping` 只承担已有 historical provenance / mapping 责任，不成为 Page schema evolution 的第二套内容来源。
 
-- current Main historical migration remains frozen;
-- `cms_page_legacy_mapping` continues as historical provenance/mapping only;
-- Page content shape evolution is implemented through Generic Flyway + Site Package default/adoption;
-- missing/unsafe adoption is preserved and reported, not repaired through migration.
+## 11. Current verification
 
-If future historical evidence is needed only to validate provenance, it remains evidence and does not become a second runtime content source.
+后续修改本能力时按风险至少覆盖：
 
-## 13. Verification strategy
+### Persistence / domain
 
-Implementation must extend current repository verification rather than relying on the docs-only Planning PR behavior.
+- Fresh DB V1～V4 complete chain；
+- upgrade fixture 对 legacy renderer deterministic mapping；
+- Rich create/read/update；
+- Structured parse / validation / canonical serialization；
+- unknown model / owner / kind / version fail closed；
+- one-primary-body validation。
 
-### 13.1 Generic persistence/domain/API
+### Public renderer
 
-Automated cases must prove:
+- Rich renderer regression；
+- `JILINJOBS_GUIDE_CARDS` dispatch；
+- unknown renderer explicit failure；
+- no alias/path/DOM fallback。
 
-- fresh database applies the complete active Flyway chain including the new Page contract migration;
-- upgrade fixture maps each existing legacy renderer value deterministically without changing body/operator data;
-- Rich Page create/read/update sanitization remains correct;
-- Structured Card Collection V1 parse/validation/canonical serialization;
-- unknown model / owner / payload kind / payload version fails closed;
-- Structured validation forbids simultaneous top-level Rich body authority;
-- Admin/Public DTOs preserve existing Rich compatibility and expose typed Structured data;
-- canonical Page URL/group/breadcrumb behavior is unchanged.
+### Admin
 
-### 13.2 Renderer dispatch
+- `about` mature Rich editor；
+- `guide/jypq` card editor only；
+- card title/body edit + reorder + reload；
+- item-level Rich resource behavior；
+- invalid payload visible blocking diagnostics。
 
-Automated Public verification must prove:
+### Site Package / adoption
 
-- `RICH_TEXT` resolves to Rich rendering;
-- `JILINJOBS_GUIDE_CARDS` resolves to the Structured card renderer;
-- unknown renderer identity produces the explicit unsupported state;
-- there is no alias/path/DOM fallback route to any renderer;
-- unsupported Structured schema/version cannot fall through to Rich rendering.
+- Fresh create Structured target；
+- exact legacy Rich baseline adoption；
+- operator-diverged predecessor preserve + report；
+- already-current no-op；
+- rerun idempotency；
+- post-adoption operator Structured edits survive ordinary reconcile。
 
-### 13.3 Admin authoring
+### Product contract
 
-Automated Admin/browser verification must prove:
+- `guide/jypq` exactly 3 accepted cards；
+- accepted order / titles / body；
+- existing 4 package image URLs / bytes remain manifest-backed；
+- canonical `/page/guide/jypq`；
+- browser renders through Structured renderer；
+- automated evidence precedes bounded Human Review when visual acceptance is affected。
 
-- `about` still opens/saves through the mature Rich editor;
-- Structured `guide/jypq` opens only the card authoring surface;
-- operator can change card title/body and reorder cards;
-- item-level Rich content/resource insertion follows the existing editor policy;
-- no top-level arbitrary HTML authoring surface is concurrently available;
-- invalid/unsupported payload is blocked with a visible diagnostic.
+## 12. Stage Return
 
-### 13.4 Site Package and adoption
+出现以下任一新 Current Evidence 时，必须回到 Requirement / Specification，而不是实现隐藏 special case：
 
-Focused provisioning verification must cover:
+- card model 无法表达真实 required interaction/state；
+- Structured item 需要独立 workflow / identity / query lifecycle；
+- operator-owned Structured data 与 Product ownership 冲突；
+- 必须同时依赖 Structured payload 与 top-level Rich/renderer hardcode 才能工作；
+- safe prior-baseline adoption 无法成立；
+- renderer 必须通过 alias/path/DOM dispatch 才能满足产品行为。
 
-- Fresh create directly creates the Structured target;
-- exact current prior-package Rich baseline adopts to Structured;
-- operator-diverged Rich baseline is preserved and reported;
-- target-already-current is a no-op;
-- adoption rerun is idempotent;
-- operator Structured edit after adoption survives ordinary reconcile and is reported as protected divergence when package differs;
-- structural reconcile can coexist with protected content;
-- current EU-52 legacy fingerprints for unaffected Rich Pages remain valid under the renderer-column rename;
-- Main Historical Migration is never called as fallback.
+## 13. 非目标
 
-### 13.5 `guide/jypq` product contract
-
-Current exact content verification must prove:
-
-- `guide/jypq` Structured payload has **3 cards**, in accepted order;
-- all 3 accepted titles and corresponding body content are preserved;
-- the existing 4 accepted package image URLs remain present in the correct card body and bytes remain package-manifest backed;
-- package manifest/version/digests are internally consistent;
-- canonical route is exactly `/page/guide/jypq`;
-- the public page renders the 3 cards through renderer dispatch, not a Rich fallback.
-
-### 13.6 Repository gates / runtime review
-
-Because implementation changes backend schema/domain/API plus both frontends and Site Package, minimum Current Evidence is:
-
-```text
-Backend Verify
-+ fresh Flyway / upgrade verification
-+ Site Package focused verification
-+ Admin build (vue-tsc + Vite)
-+ Public build (vue-tsc + Vite)
-+ relevant backend/frontend behavior tests
-+ Integrated Browser / Review Environment
-+ bounded Human Review after automated evidence
-```
-
-Browser verification must include at least:
-
-- Rich regression: `about`;
-- Structured route: `/page/guide/jypq`;
-- card count/order/titles/body visibility;
-- all 4 existing package images;
-- Admin Structured edit/reorder/save/reload;
-- renderer unknown/fail-closed test path using controlled test data;
-- canonical navigation/group behavior.
-
-Automated evidence is collected before Human Review. Human Review checks the real card presentation and Rich regression; it does not replace machine-checkable content/adoption assertions.
-
-## 14. Stage Return conditions
-
-Stop Technical Planning / implementation continuation and return to Specification + bounded Human Review if new current evidence proves any of the following:
-
-- `guide/jypq` requires repository-owned interaction/state/behavior that Card Collection V1 cannot naturally express;
-- a Structured Page needs independent item workflow/identity/query semantics that invalidate Page-owned atomic payload;
-- accepted Product semantics conflict with operator-owned Structured Runtime data;
-- a valid runtime state would require both Structured payload and top-level Rich/renderer hardcode to claim the body;
-- exact prior-package adoption cannot preserve operator divergence safely;
-- the proposed Public renderer must dispatch by alias/path/DOM shape to satisfy the real behavior.
-
-Do not solve any of these in implementation with hidden special cases.
-
-## 15. Explicit non-decisions
-
-This Technical Plan does **not** decide or authorize:
-
-- a generic Page builder/block framework;
-- normalized card/section entities without new evidence;
-- FAQ automatic migration to Structured;
-- a new External/iframe production integration contract;
-- an Engineering Page sample or repository-owned workflow;
-- arbitrary operator switching among content model / renderer / owner combinations;
-- a future Structured->Structured package adoption fingerprint protocol;
-- a new Page Resource relation;
-- public frontend technology replacement;
-- Main historical migration reactivation;
-- production deployment/release.
-
-## 16. Slice-work assessment
-
-The Technical Plan is sufficiently concrete for slice-work: Requirement and Specification are accepted; persistence/domain/API ownership, renderer resolution, Admin authoring, Site Package adoption, fail-closed behavior and verification obligations are all bounded.
-
-The natural vertical outcome is one end-to-end capability:
-
-> An existing/fresh JilinJobs instance can safely represent, author and render `guide/jypq` as an operator-owned Structured Card Page, while Rich Pages remain compatible and Site Package adoption preserves operator divergence.
-
-Whether this becomes one or multiple Candidate Execution Units is decided by post-integration `slice-work` against the then-current `main` and Current Evidence. This document itself creates no Candidate/Ready Unit and no Execute Authority.
+- generic Page Builder；
+- normalized card entities without new evidence；
+- FAQ automatic Structured migration；
+- Hui Employment production integration；
+- Engineering Page sample；
+- arbitrary operator switching among model / renderer / owner；
+- Structured → Structured implicit package overwrite protocol；
+- new Page Resource relation；
+- Public frontend technology replacement；
+- Main Historical Migration reactivation；
+- Production Deployment / Release；
+- 从本文恢复任何已结束的 EU-55 Execute Authority。

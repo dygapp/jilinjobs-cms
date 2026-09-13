@@ -1,4 +1,4 @@
-# jilinjobs-cms
+# 吉林智慧就业 CMS（jilinjobs-cms）
 
 `jilinjobs-cms` 是吉林省智慧就业云平台“信息发布与网站服务”相关能力的 Consumer Repository，负责通用 CMS、中心主站 / 中心党建公开站、JilinJobs Site Package 与历史内容迁移的版本化实现。
 

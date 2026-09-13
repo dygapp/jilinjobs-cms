@@ -7,13 +7,12 @@ version: "V1.3"
 relations:
   upstream:
     - docs/requirements/information-publishing.md
-    - docs/requirements/information-publishing-eu30-amendment.md
   related:
     - docs/specifications/public-site.md
     - docs/specifications/party.md
-    - docs/work/frontend-follow-up-execution-units.md
+    - docs/work/archive/eu30-carousel-convergence.md
 created_at: 2026-09-04
-updated_at: 2026-09-05
+updated_at: 2026-09-13
 ---
 
 # 轮播与列表内容投放技术方案

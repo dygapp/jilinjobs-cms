@@ -1,0 +1,32 @@
+name: 文档治理检查
+
+on:
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - 'README.md'
+      - 'docs/**'
+      - 'scripts/verify-docs-governance.mjs'
+      - '.github/workflows/docs-governance.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'AGENTS.md'
+      - 'README.md'
+      - 'docs/**'
+      - 'scripts/verify-docs-governance.mjs'
+      - '.github/workflows/docs-governance.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-docs-governance:
+    name: 中文主语言与文档引用完整性
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - name: 运行文档治理检查
+        run: node scripts/verify-docs-governance.mjs

@@ -148,13 +148,13 @@ EU-52 completed the Page-only Site Package delivery boundary：10 accepted Main 
 
 EU-53 completed the remaining Main ListItem initialization gap using the existing Site Package one-time bootstrap mechanism：Main `HOME_CAROUSEL = 1`、`SITE_RELATED = 5`、`SITE_REGIONAL_GRADUATES = 31`、`SITE_JILIN_UNIVERSITIES = 60`；Party ListItems / `PARTY_CAROUSEL`保持在 Party migration/current Party Authority；不引入 Generic schema、Flyway、stable ListItem identity或runtime reconcile扩展。Execute Authority已终止。Completed Work Evidence：`docs/work/archive/eu53-main-listitem-bootstrap-completion.md`。
 
-### EU-54 — Rich Text V2 Mature Editor Adoption — COMPLETED
+### EU-54 — 成熟富文本 V2 编辑器采用 — COMPLETED
 
-EU-54 completed the mature Rich Text editor transition using `suneditor@3.3.3` through a thin Consumer adapter while preserving existing Rich HTML safety and Page / Article compatibility. Completed Work Evidence：`docs/work/archive/eu54-rich-text-v2-mature-editor-adoption.md`。
+EU-54 通过 thin Consumer adapter 采用 `suneditor@3.3.3`，完成成熟 Rich Text 编辑器迁移，同时保持既有 Rich HTML 安全边界与 Page / Article 兼容性。完成态证据：`docs/work/archive/eu54-rich-text-v2-mature-editor-adoption.md`。
 
-### EU-55 — Structured Page Card Adoption — COMPLETED
+### EU-55 — 结构化页面卡片采用 — COMPLETED
 
-EU-55 introduced the first accepted Structured Page vertical without a generic Page Builder: Generic Page separates `contentModel` / `rendererKey` / `contentOwner`, Structured `CARD_COLLECTION` V1 owns ordered cards, Public uses explicit renderer registry and fail-closed resolution, Admin provides model-specific card authoring, and Site Package safely adopts `guide/jypq` from the exact accepted Rich predecessor while preserving operator divergence. Completed Work Evidence：`docs/work/archive/eu55-structured-page-card-adoption.md`。
+EU-55 建立了首个已接受的 Structured Page vertical，且不引入通用 Page Builder：Generic Page 将 `contentModel` / `rendererKey` / `contentOwner` 正交分离；Structured `CARD_COLLECTION` V1 负责有序卡片；Public 通过显式 renderer registry 与 fail-closed resolution 渲染；Admin 提供 model-specific 卡片编辑；Site Package 仅从 exact accepted Rich predecessor 安全 adoption `guide/jypq`，并继续保护 operator divergence。完成态证据：`docs/work/archive/eu55-structured-page-card-adoption.md`。
 
 ### Deferred Article / client-confirmation backlog
 

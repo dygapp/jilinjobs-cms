@@ -1,94 +1,80 @@
-# Main External-link Ownership & Behavior Specification
+# 主站外链归属与行为规格说明
 
 ## Authority
 
-- GitHub Issue #60 / E1
-- `docs/requirements/main-external-link-boundary.md`
-- `docs/project/main-site-formal-content-plan.md`
-- `docs/specifications/public-site.md`
+- GitHub Issue #60；
+- `docs/requirements/main-external-link-boundary.md`；
+- `docs/specifications/public-site.md`。
 
-## Status
+## 状态
 
-- Specification: **READY**
-- Technical Planning: **NOT REQUIRED**
-- Current Ready Execution Unit: **NONE**
+- 规格：**CURRENT / ACCEPTED**；
+- Technical Planning：当前无额外计划需求；
+- Current Execution Gate 不由本文维护，统一读取 `docs/work/current/README.md`。
 
-## 1. Surface matrix
+## 1. Surface 矩阵
 
-| Surface | Business owner | Public target | Opening owner | Migration owner |
+| Surface | 业务 owner | Public target | 打开行为 owner | 迁移 owner |
 |---|---|---|---|---|
-| EXTERNAL_LINK Article | Article | `externalUrl` | current Article public behavior | E3 Article canonical unit |
-| Navigation LINK | NavigationItem | `targetUrl` / projected `href` | Navigation `openMode` | Site Package if stable structure |
-| CmsList LINK | CmsListItem | item URL | ListItem `openMode` | E3 when historical member |
-| CmsList ARTICLE | CmsListItem placement + Article target | Article canonical target | current Article/List projection | E3 list placement + referenced Article |
-| Advertisement | Advertisement | advertisement URL | Advertisement `openMode` | later migration only if source evidence requires |
-| fixed integration | engineering Site/Public code | fixed target | engineering contract | no historical migration unless reclassified |
+| EXTERNAL_LINK Article | Article | `externalUrl` | 当前 Article 公开行为 | Historical Article canonical unit |
+| Navigation LINK | NavigationItem | `targetUrl` / projected `href` | Navigation `openMode` | stable structure 时属于 Site Package |
+| CmsList LINK | CmsListItem | item URL | ListItem `openMode` | 历史成员属于 Historical Migration |
+| CmsList ARTICLE | CmsListItem placement + Article target | Article canonical target | 当前 Article/List projection | 历史 placement + referenced Article |
+| Advertisement | Advertisement | advertisement URL | Advertisement `openMode` | 有 source evidence 时才进入后续迁移 |
+| fixed integration | engineering Site/Public code | fixed target | engineering contract | 除非重新分类，否则不属于 Historical Migration |
 
-The same URL may legitimately appear in multiple surfaces when business placement differs; URL equality is not an identity rule.
+同一 URL 可以因业务 placement 不同而合法出现在多个 surface；URL 相等不是 identity 规则。
 
-## 2. Main Public behavior
+## 2. 主站公开行为
 
 ### 2.1 Article
 
-- Main Column and homepage Article aggregation classify `articleType=EXTERNAL_LINK` + valid `externalUrl` as an external target.
-- External Article opens the source directly; current new-window behavior remains accepted.
-- INTERNAL Article uses `/article/{id}`.
-- No external Article detail duplication is introduced.
+- Main Column 与首页 Article aggregation 将 `articleType=EXTERNAL_LINK` 且 `externalUrl` 有效的记录视为外部目标；
+- External Article 直接打开来源地址，保持当前新窗口行为；
+- INTERNAL Article 使用 `/article/{id}`；
+- 不为 External Article 创建站内正文副本。
 
 ### 2.2 Navigation
 
-- same-entry internal paths remain Router navigation;
-- external URL and cross-entry target use document navigation;
-- current `newWindow` projection controls `_blank`; new-window anchors keep `noopener noreferrer`;
-- `/party/**` remains a cross-entry route, not an external business URL.
+- same-entry internal path 继续使用 Router navigation；
+- external URL 与 cross-entry target 使用 document navigation；
+- 当前 `newWindow` projection 控制 `_blank`，新窗口 anchor 保持 `noopener noreferrer`；
+- `/party/**` 是 cross-entry route，不属于外部业务 URL。
 
 ### 2.3 CmsList
 
-- LINK item uses item-owned URL/title/openMode;
-- ARTICLE item resolves the current Article target;
-- ARTICLE + INTERNAL resolves the consuming Site canonical article route;
-- ARTICLE + EXTERNAL_LINK resolves the Article external source URL;
-- list placement does not transfer Article ownership.
+- LINK item 使用 item-owned URL / title / openMode；
+- ARTICLE item 解析当前 Article target；
+- ARTICLE + INTERNAL 使用消费 Site 的 canonical article route；
+- ARTICLE + EXTERNAL_LINK 使用 Article external source URL；
+- list placement 不转移 Article ownership。
 
 ### 2.4 Advertisement / fixed integration
 
-- Advertisement uses its existing URL/openMode projection;
-- fixed NCSS and other accepted engineering seams remain fixed unless future operational-maintenance evidence requires a CMS owner.
+Advertisement 使用既有 URL / openMode projection；固定 NCSS 等已接受 engineering seam 保持固定，除非未来运营维护需求要求重新建立 CMS owner。
 
-## 3. Migration classification
+## 3. 迁移分类
 
-E3 source discovery must classify each discovered external target by **source business role**, not by URL string:
+历史 source discovery 必须按 source business role 分类，而不是按 URL 字符串分类：
 
-1. content record in a Column → Article canonical record with `EXTERNAL_LINK`;
-2. historical operational member of stable list → ListItem canonical record;
-3. stable navigation structure → Site Package Navigation, not historical dataset;
-4. Fresh Site initial ordinary default → bootstrap, not historical dataset;
-5. fixed integration → engineering asset;
-6. unresolved role → source discovery unresolved evidence; do not silently promote.
+1. Column 内容记录 → `EXTERNAL_LINK` Article canonical record；
+2. stable list 的历史运营成员 → ListItem canonical record；
+3. stable navigation structure → Site Package Navigation；
+4. Fresh Site ordinary default → Site Package bootstrap；
+5. fixed integration → engineering asset；
+6. role 无法确认 → 保留 unresolved evidence，不静默提升。
 
-## 4. No-gap audit
+## 4. Current contract audit
 
-Current Repository inspection already demonstrates the required runtime primitives:
+当前 Repository 已具备本规格所需 runtime primitives：
 
-- `PublicColumnPage.vue` directly renders EXTERNAL_LINK Article anchors;
-- Main home uses the same EXTERNAL_LINK semantics for news/recruitment aggregation;
-- `PublicNavigation.vue` separates internal Router navigation from external/cross-entry document navigation;
-- Main home CmsList carousel and Advertisement paths already honor their current target/open-mode semantics;
-- Site Package stable Navigation/List definitions and Generic Article/List migration capabilities already have distinct ownership.
+- Public Column / Main home 能直接使用 EXTERNAL_LINK Article target；
+- Public Navigation 区分 internal Router navigation 与 external/cross-entry document navigation；
+- Main CmsList carousel 与 Advertisement 保持各自 target/open-mode 语义；
+- Site Package stable definitions 与 Historical Article/List migration 保持不同 ownership。
 
-No additional schema, API, Admin form, frontend component or migration engine capability is required solely to satisfy E1.
+因此，仅为了本规格不需要新增 schema、API、Admin form、frontend component 或 migration engine capability。
 
-## 5. Verification / closure
+## 5. 后续变化边界
 
-E1 Planning integration must verify:
-
-- Requirement/Specification do not contradict `information-publishing.md` or `public-site.md`;
-- source inspection still matches the matrix above;
-- no E1-only implementation diff is required;
-- E2/E3 explicitly consume this classification boundary.
-
-If those checks remain true at final planning head, `slice-work` result for E1 is:
-
-**NO CANDIDATE EXECUTION UNIT — E1 closes as Planning / Authority convergence.**
-
-Any future request for external badges, leave-site confirmation, health checking, a global link object or per-Article opening controls is a new Requirement and must not be smuggled into E1.
+若未来提出 external badge、leave-site confirmation、health checking、global link object 或 per-Article opening control，应建立新的 Requirement，不得把它们隐式追加到本已接受规格中。

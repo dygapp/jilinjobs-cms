@@ -2,115 +2,115 @@
 
 ## 1. 目的
 
-本文定义 jilinjobs-cms 对“代码常量、CMS 运营数据、CMS 元数据、Spring 外部化配置和 CI / 部署参数”的长期责任边界，用于后续需求设计、技术设计、AI Review 和代码审查。
+本文定义 `jilinjobs-cms` 对代码常量、CMS 运营数据、CMS metadata、Spring externalized configuration、Site Package 与 CI / Deployment variables 的长期责任边界。
 
-核心原则：**硬编码本身不是缺陷。只有本应具备部署差异、站点差异或运营可维护性的值被固定在代码中，才需要配置化。禁止以消除字面常量为目标进行机械配置化。**
+核心原则：**硬编码本身不是缺陷。只有本应存在部署差异、站点差异或运营维护价值的值被错误固定，才需要配置化。禁止以消除字面常量为目标机械配置化。**
 
 ## 2. 配置责任分类
 
 ### 2.1 代码常量
 
-适用于稳定领域契约、安全规则、协议规则、页面模板契约和实现算法参数。
+适用于稳定领域契约、安全 / protocol 规则、页面模板 contract 与实现算法参数，例如：
 
-典型内容：
+- `ContentImagePolicy`、打开方式、内容类型等稳定 enum；
+- HTTP / HTTPS URL safety rules；
+- Code / Alias / Key 格式与长度；
+- 上传文件真实签名 / allow-list 等安全边界；
+- `MAIN / HOME_SHORTCUT / HOME_QUICK / HOME_CAROUSEL` 等页面模板稳定 identity；
+- 没有运营价值的 UI / algorithm parameters。
 
-- `ContentImagePolicy`、打开方式、内容类型等稳定枚举；
-- HTTP / HTTPS URL 安全限制；
-- Code / Alias / Key 格式和字段最大长度；
-- 上传文件真实内容签名校验、允许文件类型等安全边界；
-- 页面模板依赖的稳定 Code / Alias，例如 `MAIN`、`HOME_SHORTCUT`、`HOME_QUICK`、`HOME_CAROUSEL`；
-- UI 算法参数，例如图片亮度分析阈值；
-- 仅用于表现层且没有明确运营价值的分页候选值等。
+### 2.2 CMS 运营数据 / SiteProperty
 
-这类内容不应因为“看起来写死”而提升为系统配置。
+适用于管理员需要在 Runtime 维护的数据或低风险行为参数：
 
-### 2.2 CMS 运营数据 / 网站属性
+- 网站名称、联系方式、备案、版权；
+- 可运营 Logo / Banner 等 Resource path；
+- `CAROUSEL_INTERVAL_SECONDS / CAROUSEL_MAX_ITEMS`；
+- 栏目、导航、单页、列表、宣传展示等普通 Runtime content。
 
-适用于站点管理员需要在运行期维护、且修改风险可由 CMS 业务约束控制的数据或低风险行为参数。
+SiteProperty 不是通用“系统设置”容器。DB connection、安全限制、基础设施地址、deployment parameters 不进入 CMS SiteProperty。
 
-典型内容：
+### 2.3 CMS metadata
 
-- 站点名称、联系方式、备案号、版权信息；
-- Logo、Banner 等可维护资源路径；
-- 首页轮播切换间隔；
-- 栏目、导航、单页、列表、宣传展示等 CMS 运营数据。
+适用于低频、结构性、通常由开发 / 部署维护、但不需要 DB lifecycle 的 CMS definitions。
 
-网站属性不是通用“系统设置”容器。数据库连接、安全限制、基础设施地址、部署参数等不得进入网站属性。
+Current `cms-metadata.yml` 至少负责 SiteProperty group definitions。只有真实需求证明需要独立 Runtime lifecycle 时才建立新的 DB management object。
 
-### 2.3 CMS 资源元数据
+### 2.4 Spring externalized configuration
 
-适用于低频、结构性、通常由开发或部署维护，但不需要数据库生命周期的 CMS 定义。
+适用于部署实例差异，例如：
 
-当前 `cms-metadata.yml` 用于网站属性分组等资源元数据。后续类似结构性定义应优先评估是否归入该层，而不是建立新的数据库配置表。
+- DB connection；
+- Backend port；
+- Runtime storage root；
+- Site Package root；
+- fixed protected-resource paths；
+- 未来真实具有部署差异的 infrastructure parameters。
 
-### 2.4 Spring 外部化配置
+### 2.5 JilinJobs Site Package
 
-适用于不同部署实例可能变化、需要通过配置文件或环境变量覆盖的基础设施和运行参数。
+适用于 JilinJobs 产品级、版本化且需要随 Repository 一致恢复的 stable site definition：
 
-典型内容：
+- `sites/jilinjobs/structure/**`；
+- `sites/jilinjobs/bootstrap/**`；
+- `sites/jilinjobs/assets/**`；
+- package manifest / asset catalog / digest metadata。
 
-- 数据库连接；
-- Backend 端口；
-- 文件存储根目录；
-- 网站静态资源根目录；
-- 固定站点基线受保护资源清单；
-- 未来真正具有部署差异的第三方基础设施参数。
+Site Package 不是 Spring deployment configuration，也不是 ordinary operator Runtime data。
 
-此类参数由 `application.yml` / 环境变量负责，不在 Admin 中提供运营编辑入口。
+### 2.6 CI / Repository / Deployment Variables
 
-### 2.5 CI / Repository / Deployment Variables
+GitHub Actions、Review Environment、FRP、临时域名 / proxy name、CI runner parameters 属于 CI / deployment responsibility，不进入 CMS。
 
-适用于 GitHub Actions、人工评审环境、FRP 隧道、临时部署地址和 CI 运行环境参数。
+## 3. StaticResource protection
 
-例如评审域名、FRP Server、Proxy Name 等属于 CI / 部署环境责任，不属于 CMS 网站属性。需要环境差异时应优先使用 Repository / Environment Variables 或部署系统参数。
+Current `protectedResource` 表示资源不能通过 ordinary delete 移除。Backend 合并至少三类保护来源：
 
-## 3. 静态资源保护规则
+1. **固定部署保护**：Spring externalized configuration 声明的 fixed protected paths；
+2. **Site Package stable asset protection**：`sites/jilinjobs/assets/**` manifest/catalog 声明的 stable `/static/**` target；
+3. **Runtime direct reference protection**：当前 enabled SiteProperty `RESOURCE_PATH`、CmsList effective/override image、Advertisement image、Navigation iconPath 等直接引用。
 
-静态资源的 `protectedResource` 表示“当前不能通过普通删除入口移除”，来源分为两类：
+不得把保护状态改为管理员手工维护的 `protected=true` 重要性标记。
 
-1. **部署 / 工程基线保护**：由 `cms.static.protected-resources` Spring 配置提供，可通过 `CMS_STATIC_PROTECTED_RESOURCES` 覆盖；
-2. **运行时引用保护**：Backend 根据当前启用的网站属性 `RESOURCE_PATH`、列表图片、宣传展示图片、导航图标动态计算。
+资源进入/退出 Runtime direct reference 集合时应自动影响保护状态。Site Package stable target 在 package ownership 持续期间始终受保护。
 
-运行时引用保护不得改成人工维护的 `protected=true` 数据字段。资源开始被 CMS 引用时应自动进入保护集合，解除引用后应自然退出。
-
-受保护资源允许通过明确的“替换”动作更新，但普通删除必须由 Backend 最终拒绝。Admin 仅负责显示保护状态和禁用删除入口。
+普通 DELETE 必须由 Backend 最终拒绝 protected resource；明确 replace 继续按 current contract 允许。该机制不宣称扫描所有 Rich HTML / CSS / JS reference，因此对普通资源删除仍需保留风险提示。
 
 ## 4. 硬编码审计方法
 
-涉及新增页面、外部链接、固定路径、时间间隔、预置业务码、上传目录或环境地址时，Review 必须先判断其责任归属：
+Review 发现 literal value 时先判断：
 
-1. 是否属于稳定领域 / 安全 / 模板契约？是则保留代码常量；
-2. 是否需要站点运营人员运行期维护？是则进入 CMS 数据或网站属性；
-3. 是否属于低频结构元数据？是则优先 CMS 资源元数据；
-4. 是否因部署实例不同而变化？是则进入 Spring 外部化配置；
-5. 是否仅服务 CI / Review / 部署流程？是则进入 CI / Deployment Variables。
+1. 是否属于稳定领域 / security / protocol / template contract？→ code constant；
+2. 是否需要管理员 Runtime 维护？→ CMS data / SiteProperty；
+3. 是否属于低频结构 metadata？→ CMS metadata resource；
+4. 是否具有部署实例差异？→ Spring externalized configuration；
+5. 是否属于 JilinJobs stable product definition？→ Site Package；
+6. 是否只服务 CI / Review / deployment？→ CI / Deployment Variables。
 
-只有在责任归属明确后才能进行配置化。
+只有责任归属明确后才能配置化。
 
-## 5. 2026-09 配置审计结论
+## 5. Current examples
 
-本轮对 Backend、Public Site、Admin 和 GitHub Actions 进行代表性硬编码检查，形成以下长期结论：
+| 项目 | 当前责任 | 处理 |
+|---|---|---|
+| 上传扩展名 / real media signature | 安全边界 | 代码常量 |
+| `MAIN / HOME_SHORTCUT / HOME_QUICK / HOME_CAROUSEL` | stable template identity | 保持稳定 code |
+| `CAROUSEL_INTERVAL_SECONDS / CAROUSEL_MAX_ITEMS` | 低风险运营行为 | SiteProperty |
+| `sites/jilinjobs/assets/**` target / digest | stable product asset | Site Package manifest/catalog |
+| `/static/uploads/**` | mutable Runtime content | CMS Runtime store |
+| Review FRP server/domain/proxy | CI / deployment | Repository / Environment variables |
+| DB URL / credentials / port | deployment instance | Spring / environment |
 
-| 项目 | 当前判断 | 处理 |
-| --- | --- | --- |
-| `health/baseline.png`、`home/ncss-logo.png` 固定保护路径 | 部署 / 工程基线 | 已提升为 `cms.static.protected-resources` |
-| 网站属性、列表、宣传展示、导航正在引用的静态资源 | 运行时事实 | 保持 Backend 动态计算，不配置化 |
-| `TEXT / INTEGER / RESOURCE_PATH / JSON / URL / BOOLEAN` | 稳定能力契约 | 保持代码常量 |
-| `DEFAULT / SAME_WINDOW / NEW_WINDOW / NO_LINK` | 稳定领域契约 | 保持代码常量 |
-| 上传扩展名和真实内容签名校验 | 安全边界 | 保持代码常量 |
-| `MAIN / HOME_SHORTCUT / HOME_QUICK / HOME_CAROUSEL` 等 | 页面模板稳定身份 | 保持稳定 Code；必要时集中代码常量，不提供运营配置 |
-| 栏目页分页候选值、图片亮度阈值 | UI / 算法参数 | 当前保持实现常量 |
-| Review Environment FRP Server / Domain / Proxy | CI / 部署参数 | 不进入 CMS；后续环境分化时迁移 Repository / Environment Variables |
-| Public Site 第三方地址、页脚固定文案 | 需逐项判断运营属性与模板责任 | 不在本轮机械迁移；后续对应需求变更时按本文分类处理 |
-| 宣传展示自动轮换 `4000ms` | 具有运营参数特征 | 记录为后续网站属性候选；在没有明确需求前不为消除常量单独增加配置 |
+旧 `HOME_CAROUSEL_INTERVAL_SECONDS` 只属于 superseded history，不是 Current SiteProperty。
 
 ## 6. Review 要求
 
-后续 AI Review / Code Review 发现“写死值”时，不得仅以字面常量存在作为 Finding。Finding 必须说明：
+后续 Finding 不能只说“这里写死了”。必须说明：
 
-- 该值为什么存在部署差异、站点差异或运营维护需求；
-- 推荐归入哪一责任层；
-- 配置化后如何验证默认值、覆盖能力和失败行为；
-- 是否会错误扩大管理员可修改范围或削弱安全边界。
+- 值的真实变化来源与维护者；
+- 应归入哪一 responsibility；
+- 配置化后的 default / override / failure behavior；
+- 是否错误扩大管理员可修改范围；
+- 是否削弱 security / protocol / lifecycle boundary。
 
-若无法回答上述问题，应默认保留稳定代码常量，而不是增加配置复杂度。
+无法回答这些问题时，默认保留稳定代码常量而不是增加配置复杂度。

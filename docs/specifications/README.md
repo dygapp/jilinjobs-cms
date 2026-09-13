@@ -1,4 +1,4 @@
-# Specifications
+# 规格说明（Specifications）
 
 本目录根级保存当前 `CURRENT` / `PARTIALLY_CURRENT` Specification。Specification 聚焦已接受产品 / 架构 contract 的 WHAT / WHY，并由对应 Requirement、Roadmap 与 controlling Issue 确定当前作用域。
 
