@@ -103,7 +103,8 @@ function narrativeParagraphs(content) {
     .split(/\n\s*\n/)
     .map((p) => p
       .split('\n')
-      .filter((line) => !/^\s*[|>-]/.test(line) && !/^\s*#{1,6}\s+/.test(line))
+      // 表格、引用和标题主要承载结构/精确技术锚点；列表项保留，避免纯英文需求 bullet 绕过检查。
+      .filter((line) => !/^\s*[|>]/.test(line) && !/^\s*#{1,6}\s+/.test(line))
       .join(' ')
       .trim())
     .filter(Boolean)
@@ -116,6 +117,8 @@ function addFailure(file, message) {
 }
 
 // Current / Partially Current 文档必须“中文主述、必要英文精确锚定”。
+// 不用全文件英文字母比例做判定，因为技术表格、枚举、类名、路径等会系统性制造误报；
+// 真正阻断的是没有中文叙述或存在英文主导的人类叙述段落。
 for (const file of languageFiles) {
   const content = fs.readFileSync(path.join(root, file), 'utf8')
   const narrative = stripNonNarrative(content)
@@ -124,19 +127,18 @@ for (const file of languageFiles) {
 
   if (cjkCount === 0 && latinCount > 80) {
     addFailure(file, '文档没有中文主叙述，属于纯英文文档。')
-  } else if (latinCount > 1200 && latinCount > cjkCount * 3) {
-    addFailure(file, `清理技术锚点后，英文叙述仍显著压倒中文主叙述（中文 ${cjkCount} / 英文 ${latinCount}）。`)
   }
 
   const h1 = content.match(/^#\s+(.+)$/m)?.[1]?.trim()
-  if (h1 && !/[\u3400-\u9fff]/.test(h1)) {
+  const standardizedAgentTitle = file === 'AGENTS.md' && h1 === 'AGENTS.md'
+  if (h1 && !standardizedAgentTitle && !/[\u3400-\u9fff]/.test(h1)) {
     addFailure(file, `一级标题必须以中文为主，可在括号中保留英文精确名称；当前为“${h1}”。`)
   }
 
   for (const paragraph of narrativeParagraphs(content)) {
     const paragraphLatin = (paragraph.match(latinRe) || []).length
     const paragraphCjk = (paragraph.match(cjkRe) || []).length
-    if (paragraphLatin >= 220 && paragraphCjk < 12) {
+    if (paragraphLatin >= 160 && paragraphCjk < 12) {
       const preview = paragraph.replace(/\s+/g, ' ').slice(0, 100)
       addFailure(file, `存在英文主导长段落：“${preview}${paragraph.length > 100 ? '…' : ''}”`)
       break
