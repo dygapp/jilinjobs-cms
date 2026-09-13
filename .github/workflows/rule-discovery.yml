@@ -1,0 +1,81 @@
+name: Rule Discovery
+
+on:
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - 'docs/rules/**'
+      - 'docs/project/rule-discovery-method.md'
+      - 'docs/project/agentic-dev-v4-08-consumer-validation-evidence.md'
+      - 'skills/**'
+      - 'tools/rule-discovery/**'
+      - '.github/workflows/rule-discovery.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'AGENTS.md'
+      - 'docs/rules/**'
+      - 'docs/project/rule-discovery-method.md'
+      - 'docs/project/agentic-dev-v4-08-consumer-validation-evidence.md'
+      - 'skills/**'
+      - 'tools/rule-discovery/**'
+      - '.github/workflows/rule-discovery.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rule-discovery:
+    name: Consumer-local Rule Discovery
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Deterministic contract tests
+        run: python3 -m unittest discover -s tools/rule-discovery/tests -v
+
+      - name: Lint Rules and Skills
+        run: python3 tools/rule-discovery/rule_discovery.py --repo-root . lint
+
+      - name: Ordinary generation discovery trace
+        shell: bash
+        run: |
+          python3 tools/rule-discovery/rule_discovery.py --repo-root . discover \
+            --signals-json '{"phases":["execute"],"activities":["implementation"],"technologies":["python"],"artifacts":["code","configuration","test"],"risks":[]}' \
+            | tee /tmp/generation-discovery.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          payload = json.loads(Path('/tmp/generation-discovery.json').read_text())
+          assert payload['status'] == 'ok'
+          assert [item['id'] for item in payload['candidates']] == [
+              'rule:exact-machine-identifiers',
+              'rule:implementation-minimality',
+              'rule:surgical-change',
+          ]
+          assert all(set(item) == {'id', 'path'} for item in payload['candidates'])
+          PY
+
+      - name: Ordinary verification discovery trace
+        shell: bash
+        run: |
+          python3 tools/rule-discovery/rule_discovery.py --repo-root . discover \
+            --signals-json '{"phases":["converge"],"activities":["verification"],"technologies":[],"artifacts":["commit","evidence"],"risks":["evidence-reuse"]}' \
+            | tee /tmp/verification-discovery.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          payload = json.loads(Path('/tmp/verification-discovery.json').read_text())
+          assert payload['status'] == 'ok'
+          assert [item['id'] for item in payload['candidates']] == [
+              'rule:evidence-claim-reuse-across-commits',
+              'rule:evidence-type-must-match-claim',
+              'rule:integration-state-closure-review',
+          ]
+          assert all(set(item) == {'id', 'path'} for item in payload['candidates'])
+          PY
