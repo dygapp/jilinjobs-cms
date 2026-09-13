@@ -16,147 +16,148 @@ relations:
   related:
     - docs/specifications/rich-text-authoring.md
     - docs/technical/rich-text-authoring-plan.md
-    - docs/work/current/eu54-rich-text-v2-mature-editor-adoption.md
+    - docs/work/archive/eu54-rich-text-v2-mature-editor-adoption.md
 created_at: 2026-09-05
-updated_at: 2026-09-11
+updated_at: 2026-09-13
 ---
 
 # 富文本内容编辑 V2 需求
 
+## 状态
+
+- Requirement：**CURRENT / ACCEPTED**；
+- EU-54 — Rich Text V2 Mature Editor Adoption：**COMPLETED**；
+- Work artifact：`docs/work/archive/eu54-rich-text-v2-mature-editor-adoption.md`；
+- Execute Authority：**TERMINATED**。
+
+本文保留 EU-54 完成后的长期富文本 contract，不拥有 Current Execution Gate。
+
 ## 1. 目标
 
-为 CMS 内部运营人员提供成熟、稳定、中文友好的富文本编辑能力，同时保持 `bodyHtml` 作为 Article / Page 唯一长期正文 Authority。
+为 CMS 内部运营人员提供成熟、稳定、中文友好的富文本编辑能力，同时保持 `bodyHtml` 作为 Article / Page Rich Text 的唯一长期正文 Authority。
 
-V2 取代此前“项目自行组合 editor schema / toolbar / paste / undo 行为，再由窄 HTML allow-list 反向约束编辑器输出”的 V1 设计。富文本编辑属于成熟通用能力，本项目只负责成熟开源编辑器集成、CMS Resource 桥接、内容兼容与 Public 输出的最低必要安全边界，不再把编辑器内核本身作为项目核心研发能力。
+V2 不再自研 editor schema / toolbar / selection / history / paste / table 等成熟通用能力。项目职责限定为成熟开源编辑器集成、CMS Resource bridge、现有内容兼容与 Public 输出的最低必要 active-content 防护。
 
 ## 2. 适用范围
 
-### 2.1 Rich Text consumers
-
-本需求只覆盖：
+只覆盖：
 
 - Article `INTERNAL` 的 `bodyHtml`；
-- Page `RICH_TEXT` 的 `bodyHtml`。
+- Page `RICH_TEXT` 的 `bodyHtml`；
+- Structured Page 中 schema 明确允许的 item-level Rich Text body，仍复用同一 Rich Text capability。
 
-两者共用同一个 CMS-local 富文本编辑器 adapter，但消费者仍保留各自业务规则。
+Page Content Architecture 独立拥有 `contentModel / rendererKey / contentOwner / structuredPayload`。Rich Text V2 不把 Structured / Engineering / External Page 强制改造成 whole-page Rich HTML。
 
-Page Content Architecture 是独立设计线。Structured / Engineering / Embed 等特殊单页不因本需求被强制转为富文本；`就业派遣` 等需要特殊显示或交互的业务页不属于本轮富文本实现范围。
+## 3. Current editor choice
 
-### 2.2 成熟编辑器集成
+Current Primary：**SunEditor 3.3.3**。
 
-编辑器必须优先采用开源免费、维护活跃的成熟产品，并满足：
+- Vue 3 / TypeScript 通过 CMS-local thin adapter 集成；
+- 使用简体中文 `zh_cn`；
+- 支持 Windows 中文 IME；
+- 支持 WPS / 常见 Office-shaped paste；
+- 使用成熟 editor 自带 undo/redo、table、image、link、font、size、color、alignment 等常规能力；
+- Runtime 不同时集成两套 editor。
 
-- Vue 3 / TypeScript 项目可稳定集成；
-- 简体中文界面与 Windows 中文 IME 正常；
-- WPS / 常见 Office HTML 粘贴可用；
-- 图片、链接、表格、列表、字体、字号、颜色、对齐、undo / redo 等常规后台编辑能力；
-- 能通过薄 adapter 接入 CMS Resource，而不要求项目重新实现 editor schema / selection / history / paste / table 等核心机制。
+Jodit 4.15.0 只保留为已验证 fallback evidence；只有 SunEditor 命中明确 Stop Condition 并形成新的 Repository / Human Authority，才允许切换。
 
-当前经过 Repository PoC 与 Human Review 接受的 Primary 为 **SunEditor 3.3.3**；Jodit 4.15.0 作为已验证 fallback。运行时不同时集成两套编辑器。
+## 4. 单一 HTML Authority
 
-## 3. 用户体验原则
+Admin、API、DB 与 Public 对 Rich Text 继续只持久化 `bodyHtml`。
 
-富文本编辑器面向网站管理员与内部业务人员，不面向互联网匿名用户。产品优先级为：
+不得新增 SunEditor internal state、Tiptap / ProseMirror JSON、Quill Delta、Markdown 或 HTML + JSON 双写作为第二正文 Authority。
 
-1. 内容生产效率和易用性；
-2. 中文输入、复制粘贴和撤销/恢复行为稳定；
-3. 图片、表格、字体、段落等常规网页内容的可维护性；
-4. 与 CMS Resource 的清晰集成；
-5. 现有合法 HTML 的语义和展示兼容。
+Editor canonicalization 可以改变等价 HTML bytes，但必须保持用户可感知语义与 accepted presentation：
 
-安全策略只承担公开 HTML 输出所需的基础 active-content 防护，不得以“安全”为理由建立新的项目专属窄 HTML 方言或限制普通编辑能力。
+- paragraphs / headings / emphasis / lists / links；
+- table / row / cell / colspan / rowspan；
+- image `src / alt / title / width / height` 与必要 alignment；
+- accepted font / size / color / background / width / height / float 等表现；
+- 保存后重新打开仍可稳定继续编辑。
 
-## 4. HTML 内容契约
+## 5. Repository compatibility corpus
 
-### 4.1 单一正文 Authority
+至少持续保护：
 
-继续只持久化 HTML `bodyHtml`。不得新增 SunEditor 内部状态、Tiptap / ProseMirror JSON、Quill Delta、Markdown 或 HTML+JSON 双写作为第二正文 Authority。
+- Party canonical Article 中 15 / 16 px inline star images；
+- Main `teacher-library` Page 的 table、cell size、200×266 image、float 等复杂 HTML；
+- ordinary Article / Page Rich Text；
+- WPS 中文 paste / undo behavior。
 
-### 4.2 语义与展示优先
+V1 窄 `RichTextHtmlPolicy` 曾丢失 image width / height 等合法 presentation；Current V2 不得恢复该行为。
 
-编辑器加载、编辑与保存可以进行成熟产品自身的 HTML canonicalization；验收不要求输入输出字节完全相同，但必须保持用户可感知的正文语义与关键展示信息，包括：
+## 6. CMS Resource boundary
 
-- 文本、标题、段落、强调、列表、链接；
-- table / row / cell 结构；
-- 图片数量、src、alt、显式 width / height 与必要对齐；
-- 当前接受内容实际使用的字体、字号、颜色、背景、对齐、宽高、float 等表现；
-- 后续继续编辑时内容结构稳定。
+### Article
 
-### 4.3 代表性兼容事实
+继续复用 `/api/admin/resources` managed image contract：
 
-至少持续保护以下 Repository-owned corpus：
+1. consumer / adapter 上传 image；
+2. editor 插入 managed content URL；
+3. Article consumer 维护 `bodyImageResourceIds`；
+4. save 前按正文实际引用 reconcile association；
+5. 删除正文引用不自动删除 Resource 本体；
+6. width / height / align / alt 等普通编辑结果可持久化并公开展示。
 
-- Party canonical Article 中 15 / 16 px 行内星标图片；
-- Main `teacher-library` Page 中 table、cell size、200×266 image、float 等复杂 HTML；
-- 普通 Article / Page 富文本；
-- WPS 中文粘贴内容。
+`attachmentResourceIds` 的独立 lifecycle 保持，不因 editor 更换被强制改造成正文内联附件。
 
-V1 `RichTextHtmlPolicy` 已证明会丢失图片 `width` / `height` 等合法表现信息，V2 不得延续该行为。
+### Page
 
-## 5. CMS Resource 边界
+Page `RICH_TEXT` 当前没有 Article 式 managed Resource association。本需求不创建新的 Page Resource domain / API / DB relation。
 
-### 5.1 Editor adapter
+Structured Page item body 若使用 Rich Text，仍必须遵循其当前 Page Content Architecture 与 Resource contract，不从本文隐式扩展 ownership。
 
-编辑器内核不感知 CMS Resource ID、Article association 或 Backend domain。项目通过薄 adapter 向 editor 提供当前消费者可用的资源操作。
+## 7. HTML safety
 
-### 5.2 Article
+Backend / Public 使用成熟 parser-based sanitizer 提供 compatibility-first 防护：
 
-本轮至少保持现有 Article managed image upload contract：
+允许标准 CMS formatting / blocks / links / images / tables / accepted styles，同时移除真正 active / document-level content，例如：
 
-- 图片仍通过 `/api/admin/resources` 创建；
-- editor 插入 managed content URL；
-- Article consumer 继续维护 `bodyImageResourceIds`；
-- 正文删除图片后移除 association，但不自动删除 Resource 本体；
-- image width / height / align / alt 等普通编辑结果可保存并公开展示。
+- `script`；
+- event handler；
+- dangerous URL scheme；
+- iframe/object/embed/form（除非未来独立 integration Authority 明确允许）；
+- executable SVG/MathML；
+- meta/base/link 等 document-level controls；
+- dangerous CSS/URL behavior。
 
-现有 `attachmentResourceIds` 与附件独立展示生命周期必须保持，不因编辑器替换回归。本轮不强制把附件改为正文内联 file link。
+不得通过 regex 解析 HTML，也不得把 editor toolbar 能生成的内容当作 Backend allow-list 上限。
 
-### 5.3 Page
+Public defensive filtering 不自动回写 DB。
 
-Page `RICH_TEXT` 当前没有 Article 式 Resource association。本需求不顺带创建 Page Resource domain、资源选择 API 或数据库关系。shared editor adapter 应保持未来扩展能力，但当前 Page consumer 不伪造不存在的 resource ownership。
+## 8. 历史数据
 
-## 6. Public HTML 基础防护
+- 不因 editor replacement 批量重写全部 Article / Page `bodyHtml`；
+- 管理员实际保存时允许进入 SunEditor canonicalization；
+- 不重新激活 Main Historical Migration；
+- Party Migration 保持独立 Authority；
+- 对已被 V1 sanitizer 永久丢失的信息不得猜测恢复；需要保留特定旧 Runtime DB 时，只允许 exact-baseline bounded repair，并保护 operator divergence。
 
-`bodyHtml` 仍可能通过 API 或历史数据绕过编辑器，因此 Backend / Public 需要成熟 sanitizer 提供最低必要防护。
+## 9. Verification
 
-V2 的原则是 compatibility-first：
+后续触达 Rich Text capability 时至少覆盖：
 
-- 基于成熟 HTML sanitizer 的通用 formatting / blocks / links / images / tables / styles 能力；
-- 保留当前接受内容所需的普通 HTML attributes / styles；
-- 移除真正可执行或文档级控制内容，例如 script、事件属性、危险 URL scheme、iframe/object/embed/form、可执行 SVG/MathML、meta/base/link 等；
-- 不依赖正则表达式处理 HTML；
-- 不以编辑器 toolbar 可生成的内容作为 Backend 允许内容的上限；
-- Public defensive filtering 不自动回写数据库。
+- `suneditor@3.3.3` lock / Admin build；
+- Article + Page 共用一个 thin `RichTextEditor` adapter；
+- 中文 IME；
+- WPS paste + single-operation Undo；
+- common formatting / table / image / link / undo / redo；
+- Article managed image association；
+- attachment regression；
+- Party inline-star / teacher-library real corpus；
+- hostile direct API payload active-content filtering；
+- Public render 不依赖 SunEditor editor chrome CSS；
+- Backend / Admin / Public / Integrated Browser regression。
 
-## 7. 历史数据与迁移
+真实 Microsoft Word paste 只有在具备环境时补充 evidence；不得伪造 PASS。
 
-- 不因编辑器替换批量重写 Article / Page `bodyHtml`；
-- 现有内容只有在管理员实际保存时才自然进入 SunEditor canonicalization；
-- 不重新激活被冻结的 Main historical migration；
-- Party migration 仍保持独立 Authority；
-- 已经被 V1 sanitizer 永久丢失的属性不能凭猜测自动恢复。Fresh Runtime / canonical re-import 必须证明 V2 不再造成该损失；需要保留现有 Runtime DB 时，只允许 exact-baseline bounded repair，不得覆盖 operator-diverged 内容。
+## 10. 非目标
 
-## 8. Non-goals
-
-- 自研富文本 editor core、selection、history、paste engine、table model；
-- 双编辑器运行时或自动在 SunEditor / Jodit 间切换；
-- Page Builder、Structured / Engineering Page、iframe / special-page renderer；
-- 新建 Page Resource association；
-- 全库正文批量 rewrite；
-- 重新开启 Main historical migration；
-- grammar / typo / sensitive-word / AI writing / automatic style adjustment；
-- Microsoft Word 专项能力作为当前 Release Gate。真实 Word 粘贴可在有环境时补测，但当前 WPS + Office-shaped automated evidence 足以进入 Planning。
-
-## 9. 验收边界
-
-1. Article INTERNAL 与 Page RICH_TEXT 使用同一薄 `RichTextEditor` adapter，编辑器核心由成熟 SunEditor 提供；
-2. 现有自组 Tiptap editor core / extensions / 自建 toolbar 被移除，不保留双实现；
-3. Windows 中文 IME 正常，且 integration 不低于已完成 PoC 的人工体验；
-4. WPS 中文内容可粘贴并继续编辑，一次完整粘贴应能通过一次 Undo 整体回退；
-5. Party 15 / 16 px 星标与 `teacher-library` 复杂 HTML 的关键语义/展示经 editor + Backend policy + Public render 后保持；
-6. Article managed image upload / association 一致，image width / height / align / alt 等常规表现可维护；
-7. 现有 Article attachment lifecycle 不回归；
-8. Backend API 绕过 editor 时，active content 不能成为可执行 Public 输出；
-9. Public renderer 不依赖 SunEditor 编辑器 UI/chrome CSS 才能正确展示标准正文语义；
-10. 不新增第二正文 Authority，不扩展 Page Resource domain，不改变非 RICH_TEXT Page contract；
-11. full Backend / Admin / Public / Integrated Browser regression PASS。
+- 自研 editor core / selection / history / paste / table engine；
+- 双 editor Runtime；
+- 通用 Page Builder；
+- Page Resource domain；
+- full-database body rewrite；
+- Main Historical Migration reactivation；
+- grammar / typo / sensitive-word / AI writing；
+- 从本文恢复 EU-54 Execute Authority。
