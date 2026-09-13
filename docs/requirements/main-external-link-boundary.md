@@ -1,109 +1,85 @@
-# Main External-link Ownership & Behavior Requirement
+# 主站外链归属与行为需求
 
-## Status
+## 状态
 
-- Parent Planning Authority: GitHub Issue #60 / E1
-- Planning Authority: `docs/project/main-site-formal-content-plan.md`
-- Planning baseline: `main@f42bacf4ab7719e3291288c77f0685b428b86141`
-- Requirement: **READY**
-- Current Ready Execution Unit: **NONE**
+- 语义角色：**CURRENT / DURABLE REQUIREMENT**；
+- 长期规划来源：GitHub Issue #60；
+- 当前执行生命周期：不由本文维护，统一读取 `docs/work/current/README.md`；
+- 本需求不授予新的 Planning、Readiness 或 Execute Authority。
 
-## 1. Intent
+## 1. 目标
 
-E1 的目标是统一解释 Main Site 多种“点击后进入外部目标”的业务载体各自负责什么，而不是把 Article、Navigation、CmsList、Advertisement 与固定工程集成合并成一个通用 Link 模型。
+主站中存在多种“点击后进入外部目标”的业务载体。本文只冻结它们各自的业务归属、公开行为和迁移责任，不把 Article、Navigation、CmsList、Advertisement 与固定工程集成合并为一个通用 Link 模型。
 
-当前产品已经存在稳定外链行为。E1 默认保持现有用户可见语义，只消除 ownership / migration / route responsibility 的歧义；没有新的原站证据或 Product Requirement 时，不新增外链徽标、确认弹窗、统一中转页或 Article open-mode字段。
+当前已经存在稳定外链行为。除非后续出现新的 Product Requirement，否则保持现有用户可见语义，不新增外链徽标、离站确认、统一中转页或 Article 级 `openMode`。
 
-## 2. Ownership contract
+## 2. 归属契约
 
 ### 2.1 EXTERNAL_LINK Article
 
-- Article owns：title、source / publish metadata、externalUrl、column membership、publish lifecycle；
-- Public column/home placement直接使用 Article的外部 URL，不为该 Article制造站内正文副本；
-- Article详情 canonical route只承担已有兼容行为，不成为外部内容的新 Authority；
-- Historical EXTERNAL_LINK Article 的 provenance / legacy identity / fingerprint属于 E3 Canonical Migration Dataset。
+Article 持有标题、来源/发布日期元数据、`externalUrl`、栏目归属和发布生命周期。公开栏目或首页投放直接使用 Article 的外部 URL，不为外部正文制造站内副本。历史 EXTERNAL_LINK Article 的 provenance、legacy identity 与 fingerprint 属于 Historical Content Migration。
 
 ### 2.2 Navigation LINK
 
-- Navigation owns：navigation label、stable navigation identity、target URL、open mode、enabled state与placement；
-- Site Package只承载被站点稳定导航结构真正依赖的 NavigationItem；
-- Navigation LINK不是 Article，也不为已有 Article复制标题/URL Authority。
+Navigation 持有导航文案、稳定导航身份、目标 URL、打开方式、启停状态与 placement。只有站点稳定导航结构需要的 NavigationItem 才属于 Site Package。Navigation LINK 不是 Article，也不得复制已有 Article 的标题/URL Authority。
 
 ### 2.3 CmsList LINK / ARTICLE
 
-- LINK ListItem owns presentation title、URL、open mode、optional image与list placement；
-- ARTICLE ListItem只承担placement / optional presentation override；canonical target继续来自关联 Article；
-- ARTICLE关联到 EXTERNAL_LINK Article 时，公开目标仍是 Article externalUrl；
-- historical list membership 的 provenance / stable legacy identity / fingerprint属于 E3 migration，而不是 Site Package list definition。
+- LINK ListItem 持有展示标题、URL、打开方式、可选图片与列表 placement；
+- ARTICLE ListItem 只承担 placement 和可选展示覆盖，canonical target 继续来自关联 Article；
+- ARTICLE 关联 EXTERNAL_LINK Article 时，公开目标仍是 Article 的 `externalUrl`；
+- 历史列表 membership 的 provenance、stable legacy identity 与 fingerprint 属于 Historical Content Migration，不属于 Site Package 的 List definition。
 
 ### 2.4 Advertisement
 
-- Advertisement owns campaign/display title、image、URL、open mode、enabled/order；
-- AdvertisementSlot仅承担稳定展示容器；
-- 当前 E1 不把 Advertisement改造成 Article/ListItem。
+Advertisement 持有活动/展示标题、图片、URL、打开方式、启停与排序；AdvertisementSlot 只承担稳定展示容器。不得因为目标是外部 URL 就把 Advertisement 改造成 Article 或 ListItem。
 
-### 2.5 Fixed external integration
+### 2.5 固定外部集成
 
-真正无需运营维护、与工程页面直接集成的第三方 seam（例如 accepted NCSS固定入口）可以继续由 Public Renderer / Site工程资产持有。
+无需运营维护、与工程页面直接集成的固定第三方 seam 可以继续由 Public Renderer / Site 工程资产持有。一旦该目标需要普通运营人员维护、排序、启停或替换，应通过新的 Requirement Change 进入合适 CMS 对象，不预先把所有固定 URL 配置化。
 
-一旦该目标需要普通运营人员维护、排序、启停或替换，应通过 Requirement Change进入合适CMS对象；E1不预先把所有固定URL配置化。
+## 3. 打开行为
 
-## 3. Opening behavior
+保持当前已接受行为：
 
-E1保持 current accepted behavior：
+- EXTERNAL_LINK Article 在主站内容列表/首页聚合中直接打开外部源，当前以新窗口行为为基线；
+- Navigation / CmsList / Advertisement 使用各自既有 open-mode contract；
+- `DEFAULT` 保持当前公共投影语义，不重新定义跨对象全局策略；
+- same-site internal target 使用 canonical Main route；
+- cross-entry `/party/**` 保持既有 document navigation 边界。
 
-- EXTERNAL_LINK Article在Main内容列表/首页聚合中直接打开外部源，当前以新窗口行为为基线；
-- Navigation / CmsList / Advertisement继续使用各自现有 open-mode contract；
-- `DEFAULT` 的当前公共投影语义保持，不在E1重新定义为另一套跨对象全局策略；
-- same-site internal target继续使用 canonical Main route；cross-entry `/party/**`保持既有 document navigation边界。
+## 4. 外链提示与安全
 
-E1不新增 Article-level openMode，也不要求所有外部对象使用完全相同的数据字段。
+- 当前没有 Requirement 要求所有外链增加视觉徽标或离站确认，本需求不新增该行为；
+- 新窗口外链继续使用 `noopener noreferrer`；
+- URL validity 由各领域既有 validation 负责；
+- 不增加外部站点在线探测、定时失效检测或自动禁用；
+- disabled / unpublished 对象继续按各领域公开过滤规则退出公开投影。
 
-## 4. External indication / safety
+## 5. 迁移归属
 
-- 当前没有 accepted Requirement要求在每个外链标题旁增加视觉“外链”徽标；E1不新增该用户可见行为；
-- 新窗口外链继续使用当前 `noopener noreferrer` safety；
-- URL validity继续由各领域现有validation承担；E1不增加外部站点在线探测、定时失效检测或自动禁用；
-- disabled / unpublished对象继续按各领域current public filtering规则退出公开投影。
+主站历史外部内容按真实来源角色分类：
 
-如果未来要求统一视觉标识、离站确认或在线健康检查，应作为独立Product Requirement评估。
+1. legacy 栏目内容记录 → EXTERNAL_LINK Article canonical unit；
+2. legacy 友情链接/网站导航等运营列表成员 → Generic ListItem canonical unit；
+3. stable navigation structure → Site Package Navigation；
+4. Fresh Site 一次性默认项 → Site Package bootstrap；
+5. fixed third-party seam → engineering asset；
+6. Advertisement 只有 source evidence 证明存在历史运营 campaign 需要迁移时才进入对应迁移范围。
 
-## 5. Migration ownership
+不得仅因 URL 相同就把不同业务载体机械去重为同一对象。
 
-Main历史外部内容按真实来源分类：
+## 6. 当前验收边界
 
-- legacy内容条目本质为栏目内容 → EXTERNAL_LINK Article canonical unit；
-- legacy友情链接/网站导航等运营列表成员 → Generic ListItem canonical unit；
-- stable navigation结构本身 → Site Package Navigation；
-- one-time Fresh Site默认项 → Site bootstrap；
-- fixed third-party seam → engineering asset；
-- Advertisement只有在source evidence证明存在历史运营campaign需要迁移时进入对应后续migration scope。
+持续满足以下条件即可视为本 Requirement 未发生漂移：
 
-不得因为目标 URL 相同就把不同业务载体机械去重为同一对象；是否重复由业务placement / ownership决定。
+- Public column/home 对 EXTERNAL_LINK Article 使用 `externalUrl`；
+- Navigation external/cross-entry 与 internal route 职责分离；
+- CmsList LINK / ARTICLE target responsibility 与当前 Specification 一致；
+- Advertisement / fixed integration 未被错误提升为 Article；
+- Site Package、bootstrap、Historical Migration 三类 lifecycle 不因外链而混同；
+- 本需求本身不要求新增 DB schema、API、Admin form 或 Public visual behavior。
 
-## 6. Verification requirements
+## 7. 非目标
 
-E1 Planning closure至少证明：
-
-1. Public column/home对EXTERNAL_LINK Article使用externalUrl；
-2. Navigation external/cross-entry与internal route职责分离；
-3. CmsList LINK / ARTICLE target responsibility与current spec一致；
-4. Advertisement / fixed integration未被错误提升为Article；
-5. Site Package、bootstrap、Canonical Migration三类lifecycle不因外链而混同；
-6. no new DB schema/API/Admin/Public visual behavior is required by E1 itself。
-
-## 7. Non-goals
-
-- 不采集Main历史内容；
-- 不修改任何外链URL；
-- 不增加外链徽标/确认页；
-- 不增加Article openMode；
-- 不建立统一Link domain object；
-- 不修改Party behavior；
-- 不进入E2/E3 implementation。
-
-## 8. Requirement readiness
-
-Current Repository已同时暴露Article、Navigation、CmsList、Advertisement和fixed integration的稳定model与Public consumer behavior，足以冻结ownership与migration classification；没有未决Product Intent。
-
-本 Requirement **READY**。对应 Specification可以直接以current behavior形成；若 Specification audit仍无implementation gap，E1应以Planning/Authority closure完成，不创建Execution Unit。
+本文不负责历史内容采集、不修改任何外链 URL、不增加外链徽标/确认页、不增加 Article `openMode`、不建立统一 Link domain object，也不改变 Party behavior。
