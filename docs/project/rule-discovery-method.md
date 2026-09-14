@@ -1,30 +1,66 @@
-# V4 Rule Discovery Consumer-local 方法扩展
+# Consumer-local Rule Discovery 方法扩展
 
 ## 1. 状态与来源
 
-本文件是 `jilinjobs-cms` Consumer-local Development Method 的 **V4 Rule Discovery 扩展**。它只拥有 Rule / Skill 发现与 V4 adoption 的本地运行语义，不改变产品 Requirement、Specification、四层 CMS Architecture、Work lifecycle 或 GitHub native state。
+本文件是 `jilinjobs-cms` Consumer-local Development Method 的 Rule Discovery 扩展。它只拥有 Rule / Skill 发现及显式 upstream upgrade 后的本地运行语义，不改变产品 Requirement、Specification、四层 CMS Architecture、Work lifecycle 或 GitHub native state。
 
-- 既有 `Current Evaluated Baseline`：`dygapp/agentic-dev@1c8cdfea9ecf23ef33ffab20eec3c93679fd4578`
-- V4-08 本次显式采用的精确候选：`dygapp/agentic-dev@3e0b2f5a29caeb344da79f8c96ebffbeb5c2b0cb`
-- 上游 `3e0b2f5a...` 是 V4-07 已完成 Token Scaling Gate 的精确 runtime candidate。
-- 本次采用不进入 `agentic-dev` V4-09，也不把 upstream Roadmap / Issue / PR 状态变成 Consumer Authority。
-- 在 `agentic-dev` 对 V4-08 独立裁决并由后续显式 baseline replacement lifecycle 处理前，旧 `Current Evaluated Baseline` 字段不被本次实验机械改写；本文件记录的是 Consumer 已采用并正在验证的 V4 Foundation candidate。
+- Previous Evaluated Baseline：`dygapp/agentic-dev@1c8cdfea9ecf23ef33ffab20eec3c93679fd4578`
+- Current Evaluated Baseline：`dygapp/agentic-dev@8e7e94eff62b958b2044407cf6d85de3dde48ee9`
+- 当前 baseline 对应已合并 upstream PR #128：`Rule Granularity Consolidation + Technology Rule IA`。
+- `dygapp/agentic-dev@3e0b2f5a29caeb344da79f8c96ebffbeb5c2b0cb` 是此前 V4-08 Consumer validation 使用的 historical Foundation projection；它与本次 target lineage 分离，不再作为当前 evaluated frontier。
+- 本次 exact upstream transition 为 `1c8cdfea... -> 8e7e94ef...`，GitHub compare = ahead 7 / behind 0。
+- upstream Project Roadmap、Issue / PR state、Research / Eval 与 self-adoption instance 不传播为 Consumer Authority；只投射本 Consumer 明确接受的 reusable capability。
+
+本次升级的逐项 disposition 与验证证据见：
+
+`docs/project/agentic-dev-rule-granularity-baseline-upgrade-evidence.md`
+
+普通运行不默认读取 upgrade evidence。
 
 ## 2. Consumer-local ownership
 
-采用后职责如下：
+当前职责如下：
 
 - `AGENTS.md`：稳定 Bootstrap、Rule Discovery ordinary-runtime contract、Repository / Human Authority；
-- `docs/project/development-method.md`：既有生命周期、Planning / Readiness / Execute / Converge 核心方法；
-- 本文件：V4 Rule / Skill discovery 运行扩展与 explicit-upgrade decoupling；
-- `skills/*/SKILL.md`：Consumer 已有九项独立执行能力的物理化 Consumer-local procedure；
-- `docs/rules/**`：可独立发现的横切 Rule；每条 Rule 的 metadata 与规范正文同文件；
+- `docs/project/development-method.md`：生命周期、Planning / Readiness / Execute / Converge 核心方法与 evaluated baseline；
+- 本文件：Rule / Skill discovery 运行扩展、Rule granularity 与 explicit-upgrade decoupling；
+- `skills/*/SKILL.md`：Consumer 已采用九项独立执行能力的 Consumer-local procedure；
+- `docs/rules/**`：可发现横切 Rule；每条 Rule 的 metadata 与规范正文同文件；
 - `tools/rule-discovery/rule_discovery.py`：确定性 metadata prefilter 与 lint；
-- `.github/workflows/rule-discovery.yml`：Rule Discovery contract 的 Consumer-local CI 证据。
+- `.github/workflows/rule-discovery.yml`：Rule Discovery contract 的 Consumer-local CI。
 
 Rule 文件自身是该 Rule 的唯一规范正文 owner。路径、测试、Workflow、Issue、Evidence 文件都不得成为第二份 Rule 语义或人工同步路由表。
 
-## 3. bounded task signals
+## 3. Rule 粒度
+
+Rule 默认面向**一个可独立发现的具体任务或责任所需的有界规范语义集合**，不是“一条 assertion = 一个文件”。
+
+同一任务中的 policy 在以下情况应优先聚合：
+
+- task facts 相同或高度重叠；
+- ordinary runtime 中通常共同发现、共同消费；
+- Agent 完成该责任时通常需要一起知道；
+- 合并后仍可整体判断“是否值得加载 / 是否适用”；
+- 没有把明显不同的 technology、artifact、risk、lifecycle 或 semantic owner 强行绑在一起。
+
+只有独立 discovery 具有真实收益时才继续拆分，例如独立 metadata 能稳定减少无关加载或错误激活，或确有不同 technology / artifact / risk / lifecycle / semantic owner。仅仅能够把两条 policy 分别表述，不构成拆分理由。
+
+Agent Skills Specification 的 Progressive Disclosure `<5000 tokens / <500 lines` 只作为单文件上限复核参照，不是 Rule 目标大小或机械拆分阈值。若 Rule 接近该上限，应先检查是否混入多个独立任务、长教程或研究材料。
+
+## 4. Technology Rule 信息架构
+
+目录只服务人类维护，不参与 runtime matching。当前 Consumer 有真实 Vue Rule，因此使用：
+
+```text
+docs/rules/technology/
+└── vue/
+```
+
+当前没有独立 Consumer-local TypeScript Rule，因此不创建空 `technology/typescript/`。后续只有真实规则存在时才建立新的技术子目录。
+
+Rule Discovery 继续只依赖 Rule Front Matter 与 task signals；目录名、目录层级和文件名都不是 routing signal。
+
+## 5. bounded task signals
 
 ordinary runtime 只从当前 Consumer task / repository 可观察事实提取五个维度：
 
@@ -46,7 +82,7 @@ ordinary runtime 只从当前 Consumer task / repository 可观察事实提取�
 
 每个维度最多 6 个 token。不得把预期 Rule 名称、候选 id、推荐答案、近义词堆叠或从未命中 Rule 反向学习到的 metadata 填入 signals。
 
-## 4. Rule Discovery ordinary runtime
+## 6. Rule Discovery ordinary runtime
 
 执行横切规则发现时：
 
@@ -67,12 +103,11 @@ Consumer current facts
 3. ordinary runtime 禁止通过 `rg --files`、`find`、目录树、IDE tree、脚本输出或其他方式枚举未命中 `docs/rules/**` locator；
 4. 未命中 Rule 的 locator、metadata、body 不进入模型上下文，也不得用于 false-negative calibration；
 5. discovery 只返回 `{id,path}`；不返回全量 metadata、未命中清单、score、摘要或推荐答案；
-6. metadata / duplicate id / signals / root 异常时 fail closed，不自动回到 upstream；
-7. Tool 负责候选初筛，LLM 仍负责 candidate body 的最终语义适用性确认。
+6. metadata、duplicate id、signals 或 root 异常时 fail closed，不自动回到 upstream；
+7. Tool 负责候选初筛，LLM 仍负责 candidate body 的最终语义适用性确认；
+8. phase / activity / technology / artifact / risk facts 实质变化时重新 discovery，不把旧 candidate set 当作整个会话永久上下文。
 
-目录分类只用于人类信息架构，不承担隐藏 routing 语义。
-
-## 5. Skill discovery
+## 7. Skill discovery
 
 Skill 与 Rule 分离：
 
@@ -83,7 +118,7 @@ Skill 与 Rule 分离：
 
 当前物理 Skill 只是 `docs/project/development-method.md` 已经采用的九项能力的 Consumer-local 投射，不因物理化扩大原有 stage 或 Execute Authority。
 
-## 6. 不建立中心同步资产
+## 8. 不建立中心同步资产
 
 本 Consumer 明确不建立，也不把以下内容作为 ordinary runtime 依赖：
 
@@ -96,9 +131,9 @@ Skill 与 Rule 分离：
 
 测试可以对具体场景断言候选结果；这属于可执行验证，不是 ordinary runtime 路由资产。
 
-## 7. explicit upgrade 与 ordinary-runtime 解耦
+## 9. explicit upgrade 与 ordinary-runtime 解耦
 
-本次 adoption 完成后，普通运行默认：
+一次 baseline upgrade 完成后，普通运行默认：
 
 ```text
 upstream access = 0
@@ -108,12 +143,6 @@ upstream access = 0
 
 本地 discovery 缺失、stale、ambiguity 或 zero-candidate 只触发 Consumer-local fail closed，不自动访问 upstream。
 
-## 8. Evidence 与 Rule evolution
+## 10. Rule evolution
 
-V4-08 Consumer-side Evidence 记录在：
-
-`docs/project/agentic-dev-v4-08-consumer-validation-evidence.md`
-
-该文件只承担 upgrade / experiment evidence，不是 ordinary-runtime Rule Map。
-
-Rule 后续自然新增或修改时，只维护该 Rule 自身以及必要 lint / deterministic tests。若没有真实自然 Rule evolution，不为了实验制造规则变化；Evidence 必须保留“尚未自然发生”的真实状态，由 upstream V4-08 独立判断是否构成 Gate blocker。
+Rule 后续自然新增、拆分、合并或修改时，先判断真实任务 / 责任边界与独立 discovery 价值，只维护真实 semantic owner、必要 lint 与 deterministic tests。不得为了匹配 upstream inventory、历史指标或目录整齐制造空目录、micro-rules 或重复 Rule。

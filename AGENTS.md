@@ -33,7 +33,7 @@ Bootstrap / Roadmap surface 不并行维护 `Current Ready Execution Unit`、Rea
 
 当前 Consumer 不维护 Reviewed Discovery Map，也不维护 Runtime View；稳定入口、当前 resource owner 与原生 locator 已足够支撑普通运行。若 source / locator 缺失、semantic owner 不明确、多个 primary 无法消歧、override / supersede 冲突，或 no-match 但已知 Governance / Verification risk 仍存在，则回到本地 Authority **fail closed**，不得自动访问 `dygapp/agentic-dev` 修补普通运行。
 
-V4-08 adoption 后，execution 中的横切 Rule 由 Consumer-local `tools/rule-discovery/rule_discovery.py` 从当前任务事实提取的 bounded signals 做确定性候选发现；详细 contract 由 `docs/project/rule-discovery-method.md` 持有。普通运行必须满足：
+execution 中的横切 Rule 由 Consumer-local `tools/rule-discovery/rule_discovery.py` 从当前任务事实提取 bounded signals 做确定性候选发现；详细 contract 由 `docs/project/rule-discovery-method.md` 持有。当前 Rule 默认按“一个可独立发现的具体任务或责任所需的有界规范语义集合”形成自然边界，不采用“一条 assertion = 一个 Rule 文件”的机械拆分；同一任务中通常共同发现、共同消费的 policy 优先聚合，只有独立 discovery 能实际减少无关加载 / 错误激活，或存在不同 technology / artifact / risk / lifecycle / semantic owner 时才拆分。Technology Rule 子目录只服务人类维护，不参与 runtime matching。普通运行必须满足：
 
 - task signals 使用 `phases / activities / technologies / artifacts / risks` 五维；非空数组表示 known，`[]` 表示 known-empty，`null` 表示 unknown / unsafe-to-canonicalize；每维最多 6 个 canonical token；
 - Rule metadata 与规范正文同文件维护在 `docs/rules/**`；
@@ -42,6 +42,8 @@ V4-08 adoption 后，execution 中的横切 Rule 由 Consumer-local `tools/rule-
 - 不建立 Reviewed Discovery Map、Activation Manifest、Runtime Catalog、`rule-index` 或其他需要与 Rule 正文同步维护的中心路由资产；
 - local discovery / metadata / ambiguity 失败一律 Consumer-local fail closed，不自动读取 upstream current state；
 - Skill 与 Rule 分离；`skills/*/SKILL.md` 只物理化本仓库已采用的稳定执行能力，不因物理文件存在扩大 Planning / Readiness / Execute Authority。
+
+Agent Skills Specification 的 Progressive Disclosure `<5000 tokens / <500 lines` 只作为 Rule 单文件上限复核参照，不是拆分阈值或目标大小。
 
 ## 文档语言与术语表达
 
@@ -98,16 +100,16 @@ Current 文档的中文主语言与本地文档引用完整性由 `scripts/verif
 方法来源：
 
 - Repository：`dygapp/agentic-dev`
-- Previous Evaluated Baseline：`2fe193035c629f6b8805fd473bd322f70fe6e172`
-- Current Evaluated Baseline：`1c8cdfea9ecf23ef33ffab20eec3c93679fd4578`
-- V4-08 Adopted Foundation Candidate：`3e0b2f5a29caeb344da79f8c96ebffbeb5c2b0cb`
+- Previous Evaluated Baseline：`1c8cdfea9ecf23ef33ffab20eec3c93679fd4578`
+- Current Evaluated Baseline：`8e7e94eff62b958b2044407cf6d85de3dde48ee9`
+- Historical V4 Foundation Projection：`3e0b2f5a29caeb344da79f8c96ebffbeb5c2b0cb`
 - Capability Milestone Tag：`baseline-2026-09-04-engineering-capability` → `5be2e6aad29b2be6b8535b3690daf3533ee22a46`
 
-Current Evaluated Baseline 只表示本 Consumer 已经完成 exact upstream compare 与 adoption verification 到哪个精确 commit，不表示 `1c8cdfea...` 中所有文件、Project 状态或规则均被采用。当前 local asset 的真实 semantic owner / provenance 与 upgrade-only disposition history 必须与 baseline 分离；最近一次 `2fe193... -> 1c8cdfea...` 的逐项记录见 `docs/project/agentic-dev-v3-closure-baseline-upgrade-evidence.md`，此前 `d9fad0da... -> 2fe193...` 的 V3-08 Track B 记录继续保留在 `docs/project/agentic-dev-v3-08-track-b-evidence.md`。普通运行不默认读取这些升级历史。
+Current Evaluated Baseline 只表示本 Consumer 已经完成 exact upstream compare、逐项 disposition 与 adoption verification 到哪个精确 commit，不表示 `8e7e94ef...` 中所有文件、Project 状态或规则均被采用。当前 local asset 的真实 semantic owner / provenance 与 upgrade-only decision history 必须与 baseline 分离；本轮 `1c8cdfea... -> 8e7e94ef...` 的逐项记录见 `docs/project/agentic-dev-rule-granularity-baseline-upgrade-evidence.md`。此前 `2fe193... -> 1c8cdfea...`、`d9fad0da... -> 2fe193...` 的历史升级证据继续保留，但普通运行不默认读取这些 upgrade history。
 
-V4-08 Adopted Foundation Candidate 与 Current Evaluated Baseline 暂时分离是有意行为：本次 Consumer 只显式采用并验证 V4 Foundation candidate；`agentic-dev` Issue #122 仍需独立判断 V4-08，且本轮不得提前进入 V4-09 Baseline Replacement。因此 upstream V4 project-state commit 或浮动 PR Head 不得被机械写成 Consumer 已关闭的 evaluated frontier。
+`3e0b2f5a...` 是此前 V4-08 Consumer validation 的 historical Foundation projection，与本次 target 从 `1c8cdfea...` 后分叉；不得把它当作 `8e7e94ef...` 的 ancestry 或第二个 current baseline。本轮只把 upstream PR #128 中经 Consumer 显式接受的 Rule granularity、公开 Rule id / path replacement 与 Technology Rule IA 投射到本地 owner；upstream Project Roadmap、Issue / PR state、Research / Eval 与 self-adoption 不继承。
 
-本轮从 previous baseline `2fe193...` 到 current baseline `1c8cdfea...` 的 reusable change 只新增采用 Handoff artifact lifecycle：Handoff 是**条件性临时 runtime transition artifact**，仅在真实未完成状态、明确 producer、明确 downstream consumer 且 Repository Current Authority / Evidence 不能可靠替代时形成；消费或持久化到正式 owner 后立即失效；它不是 current Skill，也不能成为第二份 Current State truth。其 Consumer current owner 是 `docs/project/execution-continuity-guidelines.md`。Verification / Evidence、External Operation、Engineering Discipline、Technology Profile、Local Discovery 与 Skill inventory 继续由既有 Consumer-local owner 承担；upstream V3-08 / Independent Review / Closure 等 Project state 不继承。
+本轮 accepted reusable change 包括：Rule 默认按 task / responsibility 的有界语义集合形成自然粒度；Consumer discoverable Rule 从 15 条收敛为 13 条；7 个旧 id / path 由 5 个任务级 Rule replace / adapt；真实 Vue Rule 进入 `docs/rules/technology/vue/` 人类信息架构。Consumer-local deterministic Rule Discovery 算法、Git Commit 规范、TypeScript Technology Profile 与未受影响的 local specialization 保持原 owner；不机械复制 upstream 27 条 Rule，也不创建空 `technology/typescript/`。
 
 本项目不是在每次开发工作中直接运行 `agentic-dev` 仓库的方法文档，而是将当前采用的方法和 Skills 使用规则固化在 Consumer Repository：
 
@@ -115,7 +117,7 @@ V4-08 Adopted Foundation Candidate 与 Current Evaluated Baseline 暂时分离�
 docs/project/development-method.md
 ```
 
-V4 Rule Discovery 的 Consumer-local 扩展记录在 `docs/project/rule-discovery-method.md`；已采用的九项稳定执行能力物理化在 `skills/*/SKILL.md`。这些入口只承载当前 Consumer-local 方法与 procedure，不继承 upstream Project state。
+Rule Discovery 的 Consumer-local 扩展记录在 `docs/project/rule-discovery-method.md`；已采用的九项稳定执行能力物理化在 `skills/*/SKILL.md`。这些入口只承载当前 Consumer-local 方法与 procedure，不继承 upstream Project state。
 
 后续普通开发应优先读取并遵守本仓库 `AGENTS.md`、`README.md`、`docs/README.md`、`docs/project/development-method.md`、`docs/project/project-roadmap.md` 以及与当前工作相关的 Consumer Authority。除非项目负责人明确要求更新 `agentic-dev` baseline、本仓库 Authority 明确要求 upstream 比较，或当前任务本身就是显式 `agentic-dev` Consumer validation，否则不要求为普通开发跨仓库读取 `agentic-dev`。
 

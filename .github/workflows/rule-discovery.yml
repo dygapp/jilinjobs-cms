@@ -7,6 +7,7 @@ on:
       - 'docs/rules/**'
       - 'docs/project/rule-discovery-method.md'
       - 'docs/project/agentic-dev-v4-08-consumer-validation-evidence.md'
+      - 'docs/project/agentic-dev-rule-granularity-baseline-upgrade-evidence.md'
       - 'skills/**'
       - 'tools/rule-discovery/**'
       - '.github/workflows/rule-discovery.yml'
@@ -17,6 +18,7 @@ on:
       - 'docs/rules/**'
       - 'docs/project/rule-discovery-method.md'
       - 'docs/project/agentic-dev-v4-08-consumer-validation-evidence.md'
+      - 'docs/project/agentic-dev-rule-granularity-baseline-upgrade-evidence.md'
       - 'skills/**'
       - 'tools/rule-discovery/**'
       - '.github/workflows/rule-discovery.yml'
@@ -54,11 +56,25 @@ jobs:
           payload = json.loads(Path('/tmp/generation-discovery.json').read_text())
           assert payload['status'] == 'ok'
           assert [item['id'] for item in payload['candidates']] == [
-              'rule:exact-machine-identifiers',
-              'rule:implementation-minimality',
-              'rule:surgical-change',
+              'rule:human-facing-content-integrity',
+              'rule:implementation-discipline',
           ]
           assert all(set(item) == {'id', 'path'} for item in payload['candidates'])
+          PY
+
+      - name: Task-level Vue discovery trace
+        shell: bash
+        run: |
+          python3 tools/rule-discovery/rule_discovery.py --repo-root . discover \
+            --signals-json '{"phases":["execute"],"activities":["implementation"],"technologies":["vue3"],"artifacts":["vue-sfc","code"],"risks":[]}' \
+            | tee /tmp/vue-discovery.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          payload = json.loads(Path('/tmp/vue-discovery.json').read_text())
+          assert payload['status'] == 'ok'
+          candidate = next(item for item in payload['candidates'] if item['id'] == 'rule:vue-component-authoring')
+          assert candidate['path'] == 'docs/rules/technology/vue/component-authoring.md'
           PY
 
       - name: Ordinary verification discovery trace
