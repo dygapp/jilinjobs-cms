@@ -80,12 +80,14 @@ Task signals 来自当前 Consumer 实现责任，不从预期 Rule id 或未命
   "scanned": 15,
   "candidate_count": 3,
   "candidates": [
-    {"id": "rule:exact-machine-identifiers", "path": "docs/rules/repository/exact-machine-identifiers.md"},
-    {"id": "rule:implementation-minimality", "path": "docs/rules/generation/implementation-minimality.md"},
-    {"id": "rule:surgical-change", "path": "docs/rules/generation/surgical-change.md"}
+    {"id": "rule:exact-machine-identifiers", "path": "docs\/rules\/repository\/exact-machine-identifiers.md"},
+    {"id": "rule:implementation-minimality", "path": "docs\/rules\/generation\/implementation-minimality.md"},
+    {"id": "rule:surgical-change", "path": "docs\/rules\/generation\/surgical-change.md"}
   ]
 }
 ```
+
+上述 `path` 使用 JSON 等价的 escaped slash 保留当时 locator 原值，同时避免被当前文档治理误判为仍应存在的本地文档引用。
 
 Semantic applicability confirmation：三条均适用。
 
