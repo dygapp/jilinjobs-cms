@@ -11,10 +11,13 @@ Repository:
 dygapp/agentic-dev
 
 Previous Evaluated Baseline:
-2fe193035c629f6b8805fd473bd322f70fe6e172
+1c8cdfea9ecf23ef33ffab20eec3c93679fd4578
 
 Current Evaluated Baseline:
-1c8cdfea9ecf23ef33ffab20eec3c93679fd4578
+8e7e94eff62b958b2044407cf6d85de3dde48ee9
+
+Historical V4 Foundation Projection:
+3e0b2f5a29caeb344da79f8c96ebffbeb5c2b0cb
 
 Capability Milestone Tag:
 baseline-2026-09-04-engineering-capability
@@ -23,22 +26,24 @@ Capability Milestone Commit:
 5be2e6aad29b2be6b8535b3690daf3533ee22a46
 ```
 
-当前 evaluated baseline 是 `dygapp/agentic-dev@1c8cdfea9ecf23ef33ffab20eec3c93679fd4578`。它只回答“本 Consumer 最近完整比较并完成采用判断到哪个精确 upstream baseline”，**不表示本仓库所有方法、规则、Skill 或文档都采用自该 commit**。
+当前 evaluated baseline 是 `dygapp/agentic-dev@8e7e94eff62b958b2044407cf6d85de3dde48ee9`。它只回答“本 Consumer 最近完整比较并完成采用判断到哪个精确 upstream baseline”，**不表示本仓库所有方法、规则、Skill 或文档都采用自该 commit**。
 
-从 previous evaluated baseline `2fe193035c629f6b8805fd473bd322f70fe6e172` 到 current evaluated baseline `1c8cdfea9ecf23ef33ffab20eec3c93679fd4578` 的 GitHub exact compare 为 ahead 5 / behind 0。本轮逐项 disposition 后，只有一个新的长期 Consumer-local 语义进入 current owner：
+从 previous evaluated baseline `1c8cdfea9ecf23ef33ffab20eec3c93679fd4578` 到 current evaluated baseline `8e7e94eff62b958b2044407cf6d85de3dde48ee9` 的 GitHub exact compare 为 ahead 7 / behind 0。本轮逐项 disposition 后，进入 current owner 的 reusable change 为：
 
-- **adopt — Handoff artifact lifecycle**：Handoff 仅在真实未完成 transition state、明确 producer、明确 downstream consumer，且 Current Repository Authority / GitHub native state 无法以同等可靠性和更低重复成本恢复所需最小状态时形成；消费或持久化到正式 owner 后立即失效；Handoff 不是 current Skill，也不得成为 Requirement、Method、Architecture、Current State 或第二份执行真值。其 Consumer current owner 是 `docs/project/execution-continuity-guidelines.md`。
-- **retain / override — Consumer-local Verification / Evidence / External Operation / Engineering Discipline / Technology Profile / Local Discovery / Skill inventory**：上游变化与本仓库现有长期 owner 一致或属于更通用 upstream framing，继续由 `docs/technical/verification-strategy.md`、本文、`AGENTS.md`、`docs/project/execution-continuity-guidelines.md`、`docs/project/review-feedback-cycle.md`、`docs/README.md` 等 Consumer-local owner 承载，不复制 upstream Guide / discovery instance。
-- **reject / not applicable — agentic-dev project-only / Research / Eval / review fixture / V3 closure state**：V3-08 Gate A、Independent Review Gate A/C、V3 Closure Decision、upstream Roadmap / Issue / PR / tasks/plans / self-adoption state 只作为 upstream 项目证据，不成为 Consumer current authority。
-- **Reviewed Discovery Map = NOT REQUIRED；Runtime View = NOT REQUIRED；Handoff Skill = NOT REQUIRED**：当前稳定入口、资源原生身份、owner inventory 与条件性 Handoff artifact contract 已足够，不增加第二套发现或 transition truth。
+- **adopt / adapt — task-level Rule granularity**：Rule 默认面向一个可独立发现的具体任务或责任所需的有界规范语义集合；同一任务中通常共同发现、共同消费的 policy 优先聚合，不再以“一条 assertion = 一个 Rule 文件”作为设计原则。Consumer discoverable Rule 从 15 条收敛为 13 条，7 个旧 id / path 由 5 个任务级 Rule replace / adapt。
+- **adapt — Technology Rule IA**：当前真实 Vue Rule 进入 `docs/rules/technology/vue/`；目录只用于人类维护，不参与 matching；当前没有独立 Consumer-local TypeScript Rule，因此不创建空 `technology/typescript/`。
+- **retain / override — Consumer-local Rule Discovery / Git commit governance / TypeScript Profile / unaffected specializations**：deterministic five-dimension discovery、local-only / fail-closed contract、`docs/project/git-commit-guidelines.md`、现有 Vue + TypeScript Technology Profile 与 8 条未受影响 Rule 继续由本地 owner 承担，不为了 upstream 目录或 inventory 制造重复 owner。
+- **reject / not applicable — 未采用 upstream Rule 与 agentic-dev project-only / Research / Eval / self-adoption state**：不机械复制 upstream 27 条 Rule，也不继承 upstream Roadmap、Issue / PR state、Research / Eval corpus 或 self-adoption instance。
 
-本次 `2fe193... -> 1c8cdfea...` upgrade-only disposition / validation history 记录在 `docs/project/agentic-dev-v3-closure-baseline-upgrade-evidence.md`。此前 `d9fad0da... -> 2fe193...` 的 V3-08 Track B history 继续保留在 `docs/project/agentic-dev-v3-08-track-b-evidence.md`。这些 evidence 用于 provenance 和后续显式 upgrade，不属于普通 Fresh Context 的默认读取集合。
+本次 `1c8cdfea... -> 8e7e94ef...` upgrade-only disposition / validation history 记录在 `docs/project/agentic-dev-rule-granularity-baseline-upgrade-evidence.md`。此前 `2fe193... -> 1c8cdfea...` 与 `d9fad0da... -> 2fe193...` 的历史 upgrade evidence 继续保留，但普通 Fresh Context 不默认读取这些 history。
+
+`3e0b2f5a...` 是此前 V4-08 Consumer validation 的 historical Foundation projection；它与本次 target 从 `1c8cdfea...` 后分叉，不构成 `8e7e94ef...` 的 ancestry 或第二个 current baseline。
 
 必须长期分离三类状态：
 
 1. **evaluated upstream baseline**：最近完整比较到哪个精确 upstream commit；
 2. **current local asset provenance / owner**：每项 Consumer-local 当前能力实际由哪个本地 semantic owner 承载、来源于何处或已经如何本地演进；
-3. **upgrade-only decision history**：`adopt / retain / reject / supersede` 判断及比较证据。
+3. **upgrade-only decision history**：`adopt / adapt / retain / replace / reject / supersede` 判断及比较证据。
 
 不得用一个 baseline SHA 代替后两者，也不得因为 upstream 后续有新提交就在普通运行中自动改变 Consumer 行为。
 
@@ -50,11 +55,11 @@ previous baseline 及更早 Capability Milestone 已选择性固化并继续保�
 - **Ephemeral Evidence Promotion**：Workflow Artifact、远程输出、临时 Snapshot 等执行证据，经适当 Authority 接受并成为后续稳定迁移、评审或运行输入时，必须显式晋升为 Consumer-owned 持久输入，保留 provenance / integrity，并重新取得受影响 Current Evidence。
 - **Long-lived Review Environment Lifecycle**：长生命周期单实例 Review Environment 具有可观察 owner、lease 取得 / 续期 / 到期 / 释放与 stale-run 策略；自动 Verification 与 Human Review 可以具有不同租约生命周期。
 - **Data Access Scope & Boundedness Control**：本 Consumer 继续以 `docs/technical/verification-strategy.md` §2.4 的作用域查询、分页窗口和边界验证语义作为项目级验证实现。
-- **Implementation Minimality & Speculative Complexity Control**、**Surgical Change & Diff Scope Control**、**Technology Profile Contract**、**Vue 3 + TypeScript Technology / Verification Profile**。
+- **Implementation Discipline（最低必要复杂度 + Diff Scope）**、**Technology Profile Contract**、**Vue 3 + TypeScript Technology / Verification Profile**。
 - Stale Verification Contract、Visual Fidelity、自动验证与 Human Review Baseline 隔离、bind mount 可重复恢复、Artifact Evidence、异步 Actions 闭环、Human Review Finding 分类、外部媒体真实内容验证、后继提交 Evidence Claim 影响判断与 Roadmap / GitHub 集成状态边界。
 - 共享外部资源并发边界按真实冲突域治理；配置责任与已有能力复用基于真实 ownership / lifecycle 判断，不为消除硬编码机械配置化或为复用扩大依赖面。
 
-这些能力的真实 current owner 是本仓库对应 Consumer-local 文档与代码 / Workflow，不因 evaluated baseline 前进而被重新归因到 `1c8cdfea...`。
+这些能力的真实 current owner 是本仓库对应 Consumer-local 文档与代码 / Workflow，不因 evaluated baseline 前进而被整体重新归因到 `8e7e94ef...`。
 
 ## 2. Consumer 与 agentic-dev 的职责边界
 
@@ -63,7 +68,7 @@ previous baseline 及更早 Capability Milestone 已选择性固化并继续保�
 - `agentic-dev/docs/project/*` 中属于其自身项目的状态、路线和实验事实不得复制为 Consumer 项目事实。
 - 从 `agentic-dev` baseline 吸收的方法变化，应转化为本仓库可直接执行的本地规则，而不是要求后续 Agent 持续跨仓库读取方法文档。
 - 新的 `agentic-dev` 提交不会仅因存在就自动覆盖已固化的 Consumer-local 规则；只有显式 baseline 升级才重新比较并处理更新、保留或取代关系。
-- 显式允许访问 upstream 也不等于允许采用；只读比较 / 研究 / V3 验证默认只形成 Evidence，只有明确进入 adoption / upgrade lifecycle 才允许更新本地 current owner 或 evaluated baseline。
+- 显式允许访问 upstream 也不等于允许采用；只读比较 / 研究 / Consumer validation 默认只形成 Evidence，只有明确进入 adoption / upgrade lifecycle 才允许更新本地 current owner 或 evaluated baseline。
 
 ### 2.1 Consumer Override Boundary
 
@@ -126,6 +131,8 @@ one primary responsibility
 ```
 
 Current resource set 由真实 owner、Repository Authority、资源原生状态与 supersede / disable 关系确定；不得维护脱离 owner 的第二 `active/current` 真值。
+
+横切 Rule 的粒度与运行发现契约由 `docs/project/rule-discovery-method.md` 单点持有。Rule 目录只承担 human IA，不形成 routing semantics；ordinary runtime 只消费 Front Matter + task signals 返回的 candidate locator。
 
 ## 3. 常规 Feature 工作流
 
@@ -236,6 +243,8 @@ External Dependency Problem
 
 Unit 完成前执行轻量 Final Diff Scope Check。每个有意义的 Diff 区域必须属于当前 Unit 产品实现、当前验证、当前变更导致的 Authority 同步、必要 preparatory refactor 或其直接 cleanup；邻近但独立的 bug、TODO、历史死代码、样式清理、全局格式化和无关优化默认不进入当前 Diff。
 
+这两项语义在 Rule Discovery 中由任务级 `rule:implementation-discipline` 共同承载；本文继续持有 Consumer-local Method 解释，不为了 Rule 合并删除方法层语义。
+
 ### 4.3 Data Access Scope & Boundedness Control
 
 集合型数据访问首先保护正确的数据集合边界，其次才是性能优化。当前 Unit 涉及列表、集合、Top-N、分页、snapshot 或批量读取时，按实际风险确认：
@@ -266,6 +275,8 @@ Unit 完成前执行轻量 Final Diff Scope Check。每个有意义的 Diff 区�
 在当前代码真实适用时采用以下默认：props 保持单向数据流；正确声明 props / emits；模板引用按生命周期视为可能为空；computed 保持无副作用；`watch` / `watchEffect` 正确处理依赖与异步失效工作，旧异步结果不得在依赖改变后无条件覆盖新状态；新代码优先保持 TypeScript inference，不以 `any` 或无证据断言逃逸类型系统；`defineModel`、`useTemplateRef` 等版本能力只在当前组件真实受益时使用，不为统一风格重写稳定组件。
 
 验证按风险映射到 Consumer 实际命令：SFC / 类型契约至少需要 Vue-aware type-check；reactivity / watcher / lifecycle 需要能证明依赖变化和旧工作失效的行为测试；DOM / Router / 用户交互增加 Browser E2E；视觉 Acceptance 再增加 Visual Evidence；build / module / tsconfig 需要 type-check + bundler build，并按 Runtime 风险追加 Browser / Integration。具体执行以 `docs/technical/verification-strategy.md` 为准。
+
+当前 discoverable Vue Rule 只物理化已经证明具有独立任务级发现价值的 `vue-component-authoring` 与 `vue-typecheck`；template refs / reactivity / watchers / TypeScript type safety 等更细语义目前继续由本 Technology Profile owner 持有，不为了匹配 upstream inventory 机械创建 Rule。后续只有自然任务证据表明独立 discovery 能减少无关加载或错误激活时再拆分。
 
 ## 5. 证据声明、Human Review 与视觉验收边界
 
@@ -543,7 +554,7 @@ Fresh Context prompt 是**定位器（Locator）**，不是第二份项目权威
 2. 精确确认 previous evaluated baseline 与固定 candidate baseline；previous baseline 缺失时不得猜测，按显式 baseline recovery 处理；
 3. 使用 exact compare 识别真实 delta，candidate 评估期间 upstream 新 commit 不自动进入范围；
 4. 区分 Core Method / Principle、Skill / Contract、Engineering Discipline、Technology / Verification Profile、Consumer Lifecycle / Discovery、External Operation、`agentic-dev` project-only、Research / Eval / historical；
-5. 对 Consumer 可能持续消费的变化逐项给出 `adopt / retain-or-override / reject-or-not-applicable / supersede-or-remove`；
+5. 对 Consumer 可能持续消费的变化逐项给出 `adopt / adapt / retain-or-override / replace / reject-or-not-applicable / supersede-or-remove`；
 6. 优先更新现有 Consumer semantic owner；不机械复制 upstream 完整文档、Project state、Research / Eval 或 self-adoption 实例；
 7. 分别维护 evaluated baseline、current local asset provenance / owner、upgrade-only decision history；baseline SHA 不代表所有 upstream 资源已经采用；
 8. 按实际变化同步检查 `AGENTS.md`、本文件、`docs/README.md`、Verification Strategy、Roadmap 与其他受影响 owner；已一致的 Consumer-local 契约不为制造 diff 重复改写；

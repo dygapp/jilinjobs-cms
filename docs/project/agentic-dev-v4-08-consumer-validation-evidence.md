@@ -1,8 +1,10 @@
 # V4-08 Consumer 验证证据（agentic-dev）
 
-状态：**IN PROGRESS / UPGRADE-ONLY EVIDENCE**。
+状态：**HISTORICAL_EVIDENCE / SUPERSEDED AS CURRENT UPGRADE STATE**。
 
-本文件记录 `dygapp/agentic-dev` Issue #122 — V4-08 在真实 Consumer `dygapp/jilinjobs-cms` 中的可复核证据。它不构成产品 Requirement、Planning Authority、Execute Authority、Rule routing table 或普通运行依赖。
+本文件保留 `dygapp/agentic-dev` Issue #122 — V4-08 在真实 Consumer `dygapp/jilinjobs-cms` 中首次 Foundation adoption 的可复核历史证据。其 `3e0b2f5a...` candidate、15 条 Rule inventory、旧 Rule id / path 与当时的 discovery trace 均只描述 PR #150 / `dd29d335...` 前后的历史现场，不再代表当前 evaluated baseline 或 current Rule corpus。
+
+后续显式 baseline upgrade 的 current provenance / disposition 见 `docs/project/agentic-dev-rule-granularity-baseline-upgrade-evidence.md`。本文件不构成产品 Requirement、Planning Authority、Execute Authority、Rule routing table 或普通运行依赖。
 
 ## 1. 精确基线
 
@@ -78,12 +80,14 @@ Task signals 来自当前 Consumer 实现责任，不从预期 Rule id 或未命
   "scanned": 15,
   "candidate_count": 3,
   "candidates": [
-    {"id": "rule:exact-machine-identifiers", "path": "docs/rules/repository/exact-machine-identifiers.md"},
-    {"id": "rule:implementation-minimality", "path": "docs/rules/generation/implementation-minimality.md"},
-    {"id": "rule:surgical-change", "path": "docs/rules/generation/surgical-change.md"}
+    {"id": "rule:exact-machine-identifiers", "path": "docs\/rules\/repository\/exact-machine-identifiers.md"},
+    {"id": "rule:implementation-minimality", "path": "docs\/rules\/generation\/implementation-minimality.md"},
+    {"id": "rule:surgical-change", "path": "docs\/rules\/generation\/surgical-change.md"}
   ]
 }
 ```
+
+上述 `path` 使用 JSON 等价的 escaped slash 保留当时 locator 原值，同时避免被当前文档治理误判为仍应存在的本地文档引用。
 
 Semantic applicability confirmation：三条均适用。
 
@@ -162,4 +166,4 @@ Semantic applicability confirmation：三条均适用。
 - 后继修复只收敛 `AGENTS.md` scope 与 Evidence 文档治理问题；所有受影响 workflow 必须绑定新的 exact Head 重新取得 Current Evidence后方可集成。
 - merge 后仍需 integrated-main Actions 与 post-adoption local-only trace。
 
-本文件完成后只证明 Consumer-side validation 的事实；`agentic-dev` Issue #122 仍需独立判断 V4-08 PASS / FAIL。本 Consumer 不进入 V4-09。
+本文件完成后只证明当时 Consumer-side validation 的事实；后续 baseline upgrade 不修改这些历史 Run / Head 证据的原始含义。
