@@ -3,7 +3,7 @@ id: specification-public-site
 title: 公开站产品规格
 type: specification
 status: accepted
-version: "V2.0"
+version: "V2.1"
 relations:
   requirements:
     - docs/requirements/information-publishing.md
@@ -63,13 +63,20 @@ Main 首页继续保持已接受的固定页面结构与主要视觉识别，并
 
 - 主导航；
 - 首页快捷入口；
-- 业务指南快捷入口；
 - 主轮播；
-- 通知公告、就业动态、招聘公告等资讯区；
+- 通知公告、就业动态等普通资讯区；
+- 招聘日历；
 - 招聘活动宣传展示；
+- “最新招聘”与招聘 / 宣讲等固定第三方业务集成 seam；
+- 招聘公告；
+- 业务指南快捷入口；
 - 网站导航 / 友情链接；
 - 网站名称、联系方式、备案、版权等站点信息；
 - NCSS 等无需运营维护的固定工程集成。
+
+其中“招聘公告”首页区域只聚合 `recruitment-announcement` 栏目中当前已发布的 `EXTERNAL_LINK` Article，并直接进入其外部来源；这不限制该栏目的普通栏目页只能存在外链 Article。
+
+“最新招聘”及招聘 / 宣讲区域当前只是已接受页面结构中的第三方业务集成 seam；真实 iframe / 第三方 Runtime integration 必须由新的 Feature Requirement / Specification 明确授权，不因页面已存在占位区域自动获得实施权限。
 
 Public 不得同时读取两套等价业务来源后再合并，例如 CMS 正式对象与历史 JSON / 前端常量并行成为同一运营数据 Authority。
 
@@ -160,9 +167,9 @@ Main / Party 轮播共享以下用户可观察 lifecycle：
 - 全部有效图片失败时进入稳定空态；
 - 有效集合变化时优先保持当前 item identity，避免仅因数组下标变化无意跳转。
 
-自动切换间隔和前台最大有效项数量使用当前 CMS 低风险 presentation configuration；具体 key / default 属于 Domain / current data contract，Public 不另维护第二份配置。
+自动切换间隔和前台最大有效项数量使用当前 CMS 低风险 presentation configuration；具体 key / current default value 由 JilinJobs Site Definition 持有，Public 不另维护第二份配置。
 
-Main / Party 可以有不同的比例、caption、dot 和主题视觉，不要求共用相同 DOM。
+当前已接受的主要视觉比例为：Main 主轮播 `8:5`；Party 轮播 `585:329`。两者可以使用不同 caption、dot 和主题视觉，也不要求共用相同 DOM；改变这些已接受比例属于 Public visual Specification change，不应由局部实现重构静默漂移。
 
 ## 9. External links
 
@@ -234,12 +241,14 @@ Public client 不应理解 Admin-only resource endpoint，也不应在页面代�
 触达公开站行为时按实际范围至少验证：
 
 - Main / Party canonical direct access + refresh；
+- Main 首页招聘公告只聚合已发布 EXTERNAL_LINK Article；
+- Main 首页招聘日历与当前第三方业务 integration seam 保持已接受结构；
 - scope-correct Column / Article / Page data；
 - INTERNAL / EXTERNAL_LINK target；
 - Main / Party public theme boundary；
 - shared Navigation / Footer behavior；
 - shared column-page behavior；
-- carousel 0/1/many、pause/resume、reduced-motion、failed-image behavior；
+- carousel 0/1/many、pause/resume、reduced-motion、failed-image behavior以及当前 Main / Party accepted visual ratio；
 - managed Rich Text resources；
 - desktop + representative mobile viewport，无明显横向溢出；
 - loading / empty / error / unsupported states；
