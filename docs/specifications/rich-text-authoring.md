@@ -1,143 +1,159 @@
 ---
 id: specification-rich-text-authoring
-title: 富文本内容编辑 V2 规格说明
+title: 富文本内容编辑规格
 type: specification
 status: accepted
-version: "V2.0"
+version: "V3.0"
 relations:
-  upstream:
-    - docs/requirements/rich-text-authoring.md
-  related:
-    - docs/technical/rich-text-authoring-plan.md
-    - docs/work/archive/eu54-rich-text-v2-mature-editor-adoption.md
-created_at: 2026-09-05
-updated_at: 2026-09-13
+  requirements:
+    - docs/requirements/information-publishing.md
+    - docs/requirements/cms-domain.md
+  architecture:
+    - docs/architecture/cms-architecture.md
+  technical:
+    - docs/technical/rich-text-authoring.md
+updated_at: 2026-09-15
 ---
 
-# 富文本内容编辑 V2 规格说明
+# 富文本内容编辑规格
 
-## 状态
+## 1. Scope
 
-- Specification：**CURRENT / ACCEPTED**；
-- EU-54：**COMPLETED / Execute Authority TERMINATED**。
+本规格定义 CMS 运营人员对 Rich Text 内容的可观察 authoring、compatibility、resource 与 safety 行为。
 
-## 1. 适用范围
+适用范围：
 
-本规格定义 Article `INTERNAL` 与 Page `RICH_TEXT` 的 mature editor integration、`bodyHtml` contract、Article managed image bridge、Backend/Public compatibility-first HTML policy 与 verification obligations。
+- INTERNAL Article 的 whole-body Rich Text；
+- RICH_TEXT Page 的 whole-body Rich Text；
+- Structured schema 明确允许的 item-level Rich Text。
 
-不定义 Page Content Architecture、特殊业务 Page renderer、Page Resource association 或 Main Historical Migration。
+本规格不决定 editor 品牌、版本、framework wrapper、Backend library 或源码目录；这些属于 Technical / implementation。
 
-## 2. Editor contract
+## 2. Authoring experience
 
-正式实现使用 **SunEditor 3.3.3**，精确锁定 dependency / lockfile；直接消费 SunEditor core，不依赖额外 Vue wrapper。
+Rich Text authoring 必须提供成熟、稳定的编辑体验，至少覆盖：
 
-CMS-local `RichTextEditor` 是 thin lifecycle adapter，只负责：
+- 中文输入法正常输入；
+- 段落、标题、粗体、斜体、下划线、删除线；
+- 字体 / 字号 / 文字色 / 背景色等当前已接受表现；
+- 对齐、列表；
+- 表格及常见单元格结构；
+- 链接；
+- 图片；
+- undo / redo；
+- 常见 WPS / Office-shaped paste。
 
-- create / destroy；
-- `modelValue` 初始化与同步；
-- `update:modelValue`；
-- E2E stable selector；
-- `zh_cn` 与项目最小 config；
-- optional resource callback / uploading state。
+不得要求运营人员理解 editor internal schema、HTML sanitizer 实现或资源存储细节。
 
-不得在 adapter 中重新实现 selection、history、paste、table、font、format 等 editor core behavior。
+## 3. Single body authority
 
-## 3. Authoring behavior
+Rich Text 的长期正文 Authority 是 `bodyHtml`。
 
-- Windows 中文 IME 正常；
-- WPS 一次完整 paste 作为一个可整体 Undo 的用户操作；
-- paste 后继续插字 / 删除 / formatting / table edit / multi undo-redo 稳定；
-- 使用成熟 editor 自带 toolbar / dialog / plugin；
-- 至少支持 heading、bold/italic/underline/strike、font/size/color/background、align、list、table、link、image、undo/redo。
+不得同时持久化第二套 editor-internal JSON、Delta、Markdown 或其他 whole-body representation，并要求二者长期同步。
 
-## 4. Content contract
+Editor 保存时允许对等价 HTML 做 canonicalization，但必须保持用户可感知语义和已接受表现，例如：
 
-`bodyHtml` 是唯一 Rich Text Authority。Editor canonicalization 不要求 byte-equal，但必须保持 accepted semantic/presentation：
+- paragraphs / headings / emphasis / lists / links；
+- table / row / cell / colspan / rowspan；
+- image src / alt / title / accepted width / height / alignment；
+- accepted text / background / font / size / align / width / height / float。
 
-- text / paragraphs / headings / emphasis / list / link；
-- table / caption / thead / tbody / tfoot / row / cell；
-- colspan / rowspan；
-- image src / alt / title / width / height / alignment；
-- accepted text/background/font/size/align/width/height/float。
+保存后重新打开必须能够继续稳定编辑。
 
-## 5. Compatibility hard gates
+## 4. Paste / history behavior
 
-### Party inline image
+对常见 WPS / Office-shaped content：
 
-Canonical Party representative Article 中 15 / 16 px star images 在 save + Public render 后仍保持 inline small-size presentation。
+- 一次用户 paste 应作为一个可理解的 authoring 操作进入 history；
+- paste 后继续输入、删除、formatting、table edit 和 undo / redo 不应破坏内容；
+- 不能为了“清理 HTML”而把仍属于 accepted presentation 的结构、图片尺寸或表格信息机械删除。
 
-### teacher-library
+真实 Microsoft Word 行为只有在具备对应环境时才作为 Human Evidence；没有环境时不得伪报 PASS。
 
-Main Page 中 table structure、accepted table metadata、1170px width、200×266 image、cell dimensions、`float:left` 等关键 presentation 保持。
+## 5. Article managed images
 
-普通 Article / Page Rich Text 也必须回归。
+Article Rich Text 中的 managed image 必须保持以下用户可观察语义：
 
-## 6. Resource contract
+1. 运营人员可以在 editor 中上传或插入受控 CMS image；
+2. 保存后图片在重新打开时仍存在；
+3. Public 页面能够通过公开资源 contract 显示该图片；
+4. alt、有效尺寸 / alignment 等已接受 presentation 可以持久化；
+5. 从正文删除引用不等于立即物理删除 Resource；
+6. Article attachment lifecycle 不因 Rich Text editor 改变而被强制合并进正文图片模型。
 
-### Article managed image
+Page Rich Text 当前不因为本规格自动获得新的 Article-style managed Resource domain；若未来需要新的 Page Resource relation，应形成独立 Requirement / Specification。
 
-- 上传继续走 `/api/admin/resources`；
-- editor 插入 URL / alt / presentation；
-- consumer 维护 `bodyImageResourceIds`；
-- save 按 body actual references reconcile association；
-- remove body reference 不自动删除 Resource；
-- image presentation 可维护。
+## 6. Compatibility corpus
 
-SunEditor core 不直接读写 `bodyImageResourceIds`。
+触达 Rich Text capability 时至少保护当前已接受 representative corpus：
 
-### Attachment / Page
+- Party Article 中 small inline images；
+- Main `teacher-library` Page 中 table / cell / image dimensions / float 等复杂 presentation；
+- ordinary Article / Page Rich Text；
+- WPS 中文 paste / undo behavior。
 
-- Article `attachmentResourceIds` lifecycle 保持；
-- Page `RICH_TEXT` 不新增 managed Resource association；
-- future resource picker / plugin 需要新的明确 contract。
+该 corpus 只是 regression evidence，不成为新的业务数据 Authority。
 
-## 7. HTML safety policy
+## 7. HTML safety
 
-使用成熟 OWASP Java HTML Sanitizer / parser-based policy：
+Rich Text 必须在保持 accepted content compatibility 的同时阻止真正 active / document-level dangerous content，例如：
 
-- compatibility-first；
-- 从成熟 formatting / blocks / links / images / tables / styles policy 组合；
-- 只为 Repository accepted corpus 增加必要 presentation attributes / styles；
-- 不复制 SunEditor toolbar schema 作为 Backend dialect；
-- hostile corpus 与 real valid corpus 同时驱动 tests。
+- script；
+- event handler；
+- dangerous URL scheme；
+- 未经独立 integration Authority 允许的 iframe / object / embed / form；
+- executable SVG / MathML；
+- meta / base / link 等 document-level controls；
+- dangerous CSS / URL behavior。
 
-Public 输出至少阻止 script、event handlers、dangerous schemes、unauthorized iframe/object/embed/form、executable SVG/MathML、meta/base/link 与 dangerous CSS/URL behavior。
+Safety policy 不能简单等于当前 editor toolbar allow-list，也不能用 regex 代替结构化 HTML parsing。
 
-Article/Page Rich write boundary 与 Public defensive read 复用同一 shared policy responsibility；read defense 不回写 DB。
+Public defensive filtering 不应在读取时静默回写数据库内容。
 
-## 8. Public renderer independence
+## 8. Public rendering independence
 
-Public `.rich-content` 必须能显示 accepted standard HTML，不得整体加载 SunEditor editor UI/chrome CSS 才能工作。
+Public 正常展示 accepted Rich HTML 时，不得要求加载 authoring editor 的完整 UI / chrome 才能成立。
 
-如果 future editor output 必须依赖 editor product-specific CSS/classes 才能正确显示，必须触发 Stop Condition / new evidence review。
+如果未来某个 editor 的正常输出必须依赖其产品专属 UI CSS 或 internal runtime 才能显示，应停止机械 patch，重新评估 Technical choice 与产品 compatibility。
 
-## 9. Historical data
+## 9. Failure behavior
 
-不执行 bulk rewrite，不重新打开 Main migration。Fresh Runtime / canonical import 必须证明 V2 不再造成 accepted presentation loss。
+以下情况不得静默成功：
 
-已发生的旧数据损失只能在有 exact baseline evidence 时做 bounded repair；operator-diverged content 必须保护。
+- hostile active content 被接受并执行；
+- accepted valid content 在 save → reopen → public chain 中出现明显语义 / presentation loss；
+- managed image association 丢失导致 Public content broken；
+- editor wrapper 导致正常中文输入或 paste/history 无法使用；
+- 为适配 editor 而要求 Public 理解 Admin-only resource route。
 
-## 10. Verification obligations
+具体错误提示与实现 recovery 由 Technical contract 决定，但必须可验证。
 
-- dependency / lock / Admin build；
-- editor init / Chinese / formatting / table / link / image / save-reopen；
-- WPS paste/history；
-- Article managed image + attachment regression；
-- Party / teacher-library real corpus；
+## 10. Acceptance
+
+触达 Rich Text capability 时，根据实际影响至少覆盖：
+
+- 中文输入；
+- common formatting / list / table / link / image；
+- save / reopen；
+- undo / redo；
+- WPS paste / history；
+- Article managed image；
+- attachment regression；
+- representative Party / teacher-library corpus；
 - hostile direct API payload；
-- Public render independent from editor chrome CSS；
-- exact-head Backend/Admin/Public/Browser regression。
+- Public render 不依赖 editor chrome；
+- Backend / Admin / Public / Integrated Browser regression。
 
-旧测试若只绑定 Tiptap DOM implementation detail，应按 Stale Verification Contract 更新到 user behavior / stable wrapper selector，不恢复旧实现。
+有真实 UX / presentation 变化时，在 automated evidence 后执行 bounded Human Review。
 
-## 11. Stop Conditions
+## 11. Non-goals
 
-出现以下情况不得通过堆叠 bespoke transforms / CSS / plugins 继续绕过：
-
-1. accepted real corpus 在成熟官方 config 下仍无法保持；
-2. Public 正常显示必须整体依赖 editor chrome CSS；
-3. Article managed resource association 不稳定；
-4. wrapper 破坏真实 WPS single-paste Undo；
-5. 必须在 Backend 复制与 editor schema 等宽的 project-specific HTML dialect。
-
-Jodit fallback 只在 Stop Condition 成立并取得新 Authority 后允许启用。
+- 自研 editor core / selection / history / paste / table engine；
+- 同时维护两套 Rich Text editor runtime；
+- whole-body HTML 与 editor JSON 双写；
+- generic Page Builder；
+- Page Resource domain expansion；
+- full-database body rewrite；
+- Main Historical Migration reactivation；
+- grammar / typo / sensitive-word / AI writing；
+- 从本规格恢复已结束的 Rich Text Execution Unit。
