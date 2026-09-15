@@ -1,170 +1,149 @@
 # Historical Content Migration Workspace
 
-`data-migrations/` owns historical content whose lifecycle requires source provenance, canonical fingerprints, offline validation and controlled Runtime import. It is separate from Generic Flyway, JilinJobs Site Package and Runtime databases.
+`data-migrations/` 是历史内容迁移的 Repository workspace owner。它保存需要 provenance、stable identity、fingerprint、resource integrity、offline validation 与受控 Runtime import 的 canonical migration data；它不是 Generic Flyway、JilinJobs Site Definition、ordinary Runtime DB 或 Project Current State 的替代品。
 
-## 1. Long-term boundary
-
-- Backend Flyway → Generic CMS schema/capability only.
-- `sites/jilinjobs/structure/**` → stable JilinJobs site structure/content.
-- `sites/jilinjobs/bootstrap/**` → truly one-time ordinary Fresh Site defaults only.
-- `sites/jilinjobs/assets/**` → stable Site asset source owner.
-- `data-migrations/**` → historical migration units/evidence explicitly authorized for a site/scope.
-- Runtime DB → imported/operated state, never canonical source authority.
-
-Generic migration capability may support Article/Page/List records, but **product ownership for a concrete scope decides which types belong here**.
-
-## 2. Current Main rule
-
-For Main E3, Historical Migration is **Article-only**:
-
-- INTERNAL Articles;
-- EXTERNAL_LINK Articles;
-- Article body/resources/attachments;
-- source identity/fingerprint/provenance;
-- collection/retry/error/reconciliation evidence.
-
-Main Page content and stable Main ListItem membership belong to `sites/jilinjobs/**` Site Package authority.
-
-A Main source collector may still discover Page/List surfaces for completeness, but those records are **Site Package source handoff evidence**. They must not appear in Main import eligibility or be silently discarded.
-
-This Main-specific ownership correction does not retroactively invalidate Party canonical ListItem data or another scope whose accepted authority explicitly treats a list placement as Historical Migration.
-
-## 3. Data flow
+## 1. 长期边界
 
 ```text
-Legacy Website / Export / API
-        ↓
-Raw Evidence Candidate
-        ↓
-classification / retry / review
-        ↓
+Generic schema              → Backend schema owner
+JilinJobs stable definition → sites/jilinjobs/**
+Historical canonical data   → data-migrations/**
+ordinary operated state     → Runtime CMS Data
+```
+
+Generic migration capability可以支持多种 site-neutral record，但某一具体 scope 的数据是否属于 Historical Migration，必须由当前 Product / Domain / Architecture Authority决定。技术能力本身不创造数据 ownership。
+
+## 2. Canonical migration contract
+
+每个 accepted migration scope 必须由 Repository-owned canonical dataset表达，至少具备：
+
+- stable migration identity，不依赖 Runtime numeric ID；
+- source system / provenance；
+- deterministic source fingerprint；
+- stable target identity；
+- 需要本地迁移的 resource path / size / SHA-256；
+- explicit acceptance / error classification；
+- 可验证的 dataset / manifest relationship。
+
+具体 record count、resource bytes、dataset digest、source run / artifact provenance由各 scope 自己的 manifest / reports持有；本 README 不复制第二份 inventory。
+
+## 3. Acquisition 与 stable import 分离
+
+长期数据流：
+
+```text
+Legacy Source / Export / API
+        ↓ explicit bounded acquisition
+Source Evidence
+        ↓ classification / review
 Canonical Migration Dataset
-        ↓
-offline validation / reconciliation
-        ↓
-Generic Content Migration
+        ↓ offline preflight
+Controlled Runtime Import
         ↓
 Runtime CMS Data
 ```
 
-External source access is limited to explicit Collect/Discovery workflows. Stable CI/import must consume frozen repository/evidence bytes.
+只有显式 Collect / Discovery / Retry activity可以访问 Legacy Source。稳定 CI、ordinary startup与 canonical import必须消费冻结的 Repository / authorized evidence bytes，不能在运行时重新抓取旧站补事实。
 
-Actions artifacts/ZIPs are transport/evidence candidates, not long-lived canonical authority by themselves.
+GitHub Actions artifact / ZIP可以是 transport/evidence carrier，但不能仅因被下载过就自动成为长期 canonical authority。
 
-## 4. Canonical dataset principles
+## 4. Preflight / import invariants
 
-Maintain one canonical dataset per accepted migration scope. Git history expresses later additions/corrections; do not accumulate permanent full-snapshot ZIP generations.
+Canonical import在任何已知 mutation前必须尽可能完成结构、identity、target、path与resource完整性 preflight。
 
-Every migration unit must have:
-
-- stable migration identity independent of Runtime numeric IDs;
-- source system / source URL;
-- deterministic source fingerprint;
-- stable target identity (for Main Article: Column alias);
-- local resource paths where resources must be imported;
-- resource size + SHA-256;
-- explicit source/error state.
-
-Missing fields are not guessed.
-
-## 5. Article self-contained unit
-
-Article is the Main historical migration unit:
+稳定语义：
 
 ```text
-data-migrations/main/v1/
-├── manifest.json
-├── index.ndjson
-├── articles/
-│   └── <stable-id>/
-│       ├── article.json
-│       └── assets/**
-├── reports/**
-└── source-discovery/**
+unknown identity + valid input       → CREATE
+same identity + same fingerprint     → SKIP
+same identity + changed fingerprint  → CONFLICT
+invalid target / bytes / dependency  → INVALID / fail closed
 ```
 
-`article.json` owns normalized Article data, source provenance/fingerprint and resource manifest. Body/attachment resources required for local migration remain inside the Article unit and are verified by size/SHA.
+Generic engine不得静默覆盖不同 fingerprint，也不得把某个历史 site 的一次性 correction推广成通用 overwrite policy。
 
-The canonical body must not depend on a Legacy Source URL when the resource is supposed to be locally migrated.
+如果存在已接受的 old → current transition，必须由该 scope 的 bounded compatibility authority显式定义，并保持 exact identity / fingerprint / Runtime precondition guard。
 
-## 6. Identity / idempotency
+删除、源站消失或后来扫描未发现某记录，不自动等价于 Runtime delete。
 
-Importer behavior remains:
+## 5. Resource invariants
 
-- unknown migration identity → create;
-- same identity + same fingerprint → SKIP/idempotent;
-- same identity + different fingerprint or invalid target/precondition → CONFLICT/no silent overwrite.
+Historical resource必须：
 
-Deletion or disappearance from a later source scan is not automatically a Runtime delete.
+- resolve在 authorized snapshot root 内；
+- 使用真实文件和明确 media / safety contract；
+- 在写入前验证 accepted size / digest；
+- 需要本地化时不能让 canonical body继续依赖 Legacy Source URL；
+- Runtime projection遵守 CMS Resource / StaticResource安全边界；
+- source provenance、canonical bytes与 Runtime target责任保持可区分。
 
-## 7. Error policy
+## 6. Main scope
 
-Migration tooling is fail-closed and evidence-preserving.
+当前 Main Historical Migration ownership是 **Article-only**：
 
-For current Main:
+- INTERNAL Article；
+- EXTERNAL_LINK Article；
+- Article body/resources/attachments；
+- Article source identity、fingerprint与provenance。
 
-- HTTP 404/410 alone may establish `SOURCE_RESOURCE_MISSING`;
-- INTERNAL Article with only that blocking class may be excluded pending client confirmation and must remain separately listed;
-- transport/socket/timeout is not inferred missing;
-- unsupported HTML/attributes/media/schemes/redirects and every new error class remain explicit review classifications unless Authority accepts another disposition;
-- current Human Authority defers unresolved/problem Articles until later separate handling; they remain durable evidence, are not current import input, and do not block the current project sequence;
-- approved non-blocking exceptions remain recorded as evidence;
-- no silent repair/drop/discard.
+Main Page与稳定 Site Definition数据不进入 Main historical import。Source discovery发现的非 Article 事实如果有长期价值，应交给其真实 owner审查，而不是为了不丢数据就自动纳入 Historical Migration。
 
-Page/List problems found by the Main collector are written to the Site Package handoff rather than migration withholding.
+Main 当前 accepted canonical dataset与其精确统计、digest、deferred/source-defect evidence由 `main/**` 内 manifest / reports持有。
 
-## 8. Page/List capability note
+### Main execution boundary
 
-The Generic migration engine may still contain site-neutral Page/List support because earlier/other consumers use it. That technical capability does not make Main Page/List data migration-owned.
+Main ordinary migration execution保持 **frozen / explicit reactivation only**。冻结的是执行能力，不是否定 Repository 中 canonical data / evidence的长期价值。
 
-For Main:
+任何 reactivation都必须建立新的当前 Authority，明确 source/canonical scope、变更原因、deferred/source-defect disposition、实现兼容与所需 verification；不得从历史 Technical Plan、旧 Workflow或 completed EU继承 Execute Authority。
 
-- Page stable content already has Site Package representation/reconcile capability;
-- stable Main ListItem membership belongs to Site Package product ownership;
-- Historical Migration must not be used as a temporary fallback for Site Package content.
+Deferred problem Article与 source-defect Article 的未来处理方向以 `docs/project/project-roadmap.md` 为准。
 
-## 9. Collect / Review / Stable CI
+## 7. Party scope
 
-### Collect
-May contact Legacy Source and emit full source evidence.
+Party 是早期 real Canonical Migration consumer，当前允许其 accepted Article与ListItem / carousel historical semantics继续由 `party/**` canonical workspace持有。
 
-### Retry / Classification
-May retry only explicitly authorized transient targets under a finite budget; all terminal classifications remain recorded.
+Party-specific alias、dataset cardinality、stable item identity、compatibility transition与accepted fingerprints不进入 Generic migration package。Generic engine只提供 site-neutral load / preflight / execute primitives；Party adapter / compatibility layer负责把其 accepted on-disk contract有界映射到 Generic capability。
 
-### Review / Eligibility
-Uses frozen source/retry evidence. For Main, `import-eligible-index.json` contains Articles only and a separate `site-package-handoff.json` preserves Page/List findings.
+Main 的 Article-only ownership不能反向改写 Party 已接受的 ListItem historical ownership；Party 的 historical ListItem ownership也不能反向推广成 Main规则。
 
-### Stable CI / downstream import
-Must not contact Legacy Source and must verify canonical bytes, fingerprints/resources, first import, second-import idempotency, reconciliation and accepted conflict behavior.
+## 8. Canonical data vs Site Definition
 
-## 10. Party compatibility
+Historical Migration 与 Site Definition的判断依据是内容来源与 lifecycle：
 
-Party was the first real Canonical Migration consumer and historically includes accepted carousel/ListItem data. Those accepted Party semantics remain governed by Party authority and compatibility evidence.
+- 版本化稳定站点结构 / accepted stable defaults / stable assets → `sites/jilinjobs/**`；
+- 需要 legacy provenance / fingerprint / controlled import的历史内容 → `data-migrations/**`；
+- bootstrap完成后由 operator维护的普通数据 → Runtime owner。
 
-Do not generalize Party list ownership into Main. Likewise, do not rewrite Party merely because Main now classifies stable list membership as Site Package content.
+同一对象类型可以在不同场景拥有不同来源，但同一具体事实在当前时刻只能有一个 primary owner。
 
-## 11. Current migration state
+## 9. Verification
 
-EU-50 and EU-51 Main historical migration lifecycle are **COMPLETED** and their Execute Authority is **TERMINATED**.
+受影响 migration scope至少按风险验证：
 
-The integrated current Main canonical dataset under `main/v1/**` contains:
+- canonical manifest / index / item一致性；
+- path containment与resource digest；
+- target / dependency preflight；
+- first import；
+- second import idempotency；
+- changed-fingerprint conflict；
+- bounded compatibility transition（存在时）；
+- Generic package不吸收site-specific policy；
+- Runtime resource / mapping reconciliation；
+- stable import阶段不访问 Legacy Source。
 
-- 3078 current import-eligible Articles = 1577 INTERNAL + 1501 EXTERNAL_LINK;
-- 2603 local resource files / 450,273,166 bytes;
-- dataset digest `sha256:92f05017923ebff5ca3b77108e60d5d79521dba0d5487878035b727fbff9095a`.
+完整 Evidence claim规则见 `../docs/technical/verification-strategy.md` 与当前 live-discovered verification Rules。
 
-Separately preserved evidence contains:
+## 10. Workspace 维护规则
 
-- 6 source-defect Articles excluded pending client confirmation;
-- 230 deferred problem Articles for later separate review;
-- Page/List Site Package source handoff.
+本 README只在 migration workspace 的长期边界、canonical contract或 scope ownership发生稳定变化时更新。
 
-Those excluded/deferred records are not current import input.
+不得在本文件维护：
 
-Main historical migration execution is currently **FROZEN / explicit reactivation only**. The accepted `main/**` canonical data and evidence remain repository-owned; the former EU-50 / EU-51 Main migration workflows are preserved under `.github/frozen-workflows/main-migration/` and do not participate in ordinary GitHub Actions triggers. Only an explicitly authorized independent Main migration process may reactivate the necessary execution capability.
+- Current Ready Execution Unit；
+- completed EU / PR / merge commit流水；
+- 当前 Workflow Run状态；
+- 可以从 manifest / reports唯一恢复的 count / bytes / digest；
+- active migration task / Kotlin file inventory；
+- 临时 source acquisition checklist。
 
-Party historical migration is not frozen. Party canonical Article/ListItem data, `PARTY_CAROUSEL` compatibility and the active Party migration verification capability remain in force.
-
-EU-52 and EU-53 are also completed. **Current Ready Execution Unit is `NONE`**; the next natural gate is a new Fresh Context Planning / Readiness decision, and no future Unit may inherit Execute Authority from a completed Unit.
-
-The old mixed destructive Main triage path remains retired because it could delete Page/List evidence and mix ownership domains.
+精确 current事实应从各 scope manifest / reports、Repository implementation与GitHub原生 Evidence恢复。
