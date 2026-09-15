@@ -7,7 +7,7 @@
 - `admin-site.md` — CMS 管理端可观察行为与管理体验；
 - `public-site.md` — Main / Party 公开访问行为、canonical URL、公共呈现与失败状态；
 - `party.md` — 中心党建专题入口的 bounded 产品规格；
-- `page-content-architecture.md` — 当前 Page content profile / renderer 相关的可观察行为与 Acceptance；
+- `page-content.md` — 当前 Page content profile / renderer 相关的可观察行为与 Acceptance；
 - `rich-text-authoring.md` — Rich Text authoring / compatibility / safety 的用户可观察 contract。
 
 Specification 不重新定义 CMS Domain baseline，不拥有长期 Architecture State，也不维护 Vue / Spring / Gradle 等 implementation inventory。对应上游分别读取 `docs/requirements/` 与 `docs/architecture/`，跨 Feature HOW 读取 `docs/technical/`。
