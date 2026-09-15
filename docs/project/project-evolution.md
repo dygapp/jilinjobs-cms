@@ -8,7 +8,7 @@ status: active
 
 ## 角色
 
-本文件只保存 `jilinjobs-cms` 已完成、仍有助于理解当前 Repository 的**稳定演进摘要**。它不拥有 Current Execute Gate，不替代产品 Requirement / Domain / Architecture，也不重复保存详细实施 / 验证 Evidence。
+本文件只保存 `jilinjobs-cms` 已完成、仍有助于理解当前 Repository 的**稳定演进摘要**。它不拥有 Current Execute Gate，不替代产品 Requirement / Domain / Architecture，也不重复保存详细实施 / 验证 Evidence 或可由其他 canonical owner 唯一恢复的数据 inventory。
 
 完整历史通过 Git、Issue / PR / Actions、`docs/work/archive/`、`docs/project/archive/` 与 `data-migrations/**` 追溯。
 
@@ -34,7 +34,7 @@ status: active
 - EU-52：完成 accepted Main formal Page content / assets 的 Site Package delivery boundary；
 - EU-53：完成 Main ListItem one-time bootstrap initialization。
 
-Main Article snapshot 的当前 canonical data / provenance 由 `data-migrations/main/v1/**` 持有；230 篇 problem Article 与 6 篇 source-defect Article仍属于 deferred / customer-confirmation backlog，不因本历史摘要取得新的处理授权。
+Main Article snapshot 的当前 canonical data / provenance 由 `data-migrations/main/v1/**` 持有；其中明确标记为 deferred / source-defect 的 Article 继续属于后续复核 / 客户确认 backlog，精确数量、分类与 digest 由对应 migration manifest / reports 持有，不因本历史摘要取得新的处理授权。
 
 ### EU-54 ～ EU-55 — Authoring 与 Page Content Architecture
 
