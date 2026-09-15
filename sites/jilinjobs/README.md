@@ -1,52 +1,48 @@
 # JilinJobs Site Package
 
-`sites/jilinjobs/` 是 JilinJobs Site 的稳定版本化 package source：
+`sites/jilinjobs/` 是 JilinJobs 稳定版本化站点定义（Site Definition）的 Repository owner。它描述随代码版本一起恢复的稳定站点结构、明确的一次性初始默认值与稳定站点资源，不承担 Generic CMS Schema、Historical Content Migration 或 ordinary Runtime 数据的长期 ownership。
 
-- `manifest.json`：package identity / version / component manifest；
-- `structure/`：stable Site structure **and stable Site content**；
-- `bootstrap/`：真正的一次性 Fresh Site ordinary defaults；
-- `assets/`：stable Site asset source 与 integrity metadata。
+## 1. 目录责任
 
-## Current ownership
+- `manifest.json`：当前 package identity、schema version 与实际 component inventory；当前支持哪些 structure component 以 manifest 和实现为准，本 README 不维护第二份清单。
+- `structure/**`：由当前 manifest 声明并受 stable identity / reconcile contract 管理的站点结构与明确接受的稳定内容。
+- `bootstrap/**`：只保存需要在 Fresh Site 或明确 adoption 场景执行的一次性初始默认值；成功应用后对应数据进入 ordinary operator-managed Runtime lifecycle，普通 reconcile 不重放、覆盖或 resurrect 它们。
+- `assets/**`：稳定站点资源的版本化 source、integrity metadata 与 Runtime projection 输入。
 
-当前 Main 产品边界：
+## 2. Ownership 边界
 
-- stable Columns / PageGroups / Pages → Site Package；
-- Page accepted content / `bodyHtml` → Site Package；
-- NavigationLocations / NavigationItems → Site Package；
-- CmsList definitions → Site Package；
-- **stable Main ListItem membership → Site Package**；
-- SiteConfig / AdvertisementSlots / stable site assets → Site Package；
-- historical Main INTERNAL / EXTERNAL_LINK Articles + Article resources/provenance → `../../data-migrations/**`。
+以下内容不由 Site Package 持有：
 
-Legacy Source 中发现的 Main Page/ListItem 数据可以由 EU-50 作为 source handoff evidence 保留，但不得进入 Main Historical Migration import eligibility。
+- Generic CMS Schema / capability evolution → Backend Generic schema owner；
+- Historical Article / legacy provenance / fingerprint / canonical migration dataset → `../../data-migrations/**`；
+- operator-created / operator-edited ordinary Runtime content → Runtime CMS Data；
+- `/static/uploads/**` 等 mutable Runtime uploads → Runtime storage；
+- Feature-local renderer / frontend implementation → 对应 Specification / Technical / code。
 
-## Current capability gap
+Historical Source 中发现的 Page、List 或其他信息只有在当前 Product / Domain / Architecture Authority 明确选择 Site Definition ownership 后，才能形成新的 versioned Site Definition change；Source discovery 本身不自动授予该 ownership。
 
-Site Package v1 已支持 stable Page content reconcile，但当前 `manifest.json` / `SitePackageProvisioning` 只支持 `lists` definitions，**尚不支持 stable `list-items` structure/reconcile**。
+## 3. Runtime composition
 
-现有 `bootstrap/initial-data.sql` 中的 Main ListItems 是 EU-41 时建立的一次性 ordinary defaults：bootstrap 完成后变成 operator-managed Runtime data，不会被普通 Site Package reconcile 覆盖或 resurrect。
-
-最新 ownership 决策要求 stable Main ListItem 最终退出这种一次性 lifecycle，但该 transition 必须由单独的 Site Package Planning/Execution Unit 定义 stable identity、adoption、reconcile、operator ownership 与 upgrade verification；EU-50 不得直接修改 CMS Core/provisioner 来绕过该 Gate。
-
-## Runtime composition
-
-当前 accepted composition：
+当前长期组合语义为：
 
 ```text
-Generic CMS schema
-→ stable Site Package reconcile
-→ optional one-time bootstrap (only for remaining true bootstrap data)
+Generic CMS schema ready
+→ stable Site Definition reconcile
 → stable asset projection
-→ optional Historical Article migration
-→ Runtime
+→ optional one-time initial Runtime defaults
+→ optional Historical Canonical Migration
+→ ordinary Runtime
 ```
 
-`/static/uploads/**` 继续属于 mutable Runtime uploads，不是 stable Site Package asset source。
+`structure/**` 与 `bootstrap/**` 的区别是 lifecycle，不是“重要 / 不重要”：stable structure 可以按稳定 identity reconcile；bootstrap 数据完成初始化后由 ordinary Runtime owner 接管。
 
-详细 Authority：
+README 不维护“未来必须把某类 bootstrap 数据迁移为 stable structure”的隐含 Roadmap。若未来产品或架构需要改变 ownership，必须通过新的 Requirement / Architecture / Planning Authority 明确建立，而不是从历史 capability gap 描述继承。
 
-- `../../docs/requirements/cms-site-package-boundary.md`
-- `../../docs/specifications/cms-site-package-boundary.md`
-- `../../docs/technical/cms-site-package-boundary.md`
-- GitHub Issue #77
+## 4. Canonical Authority
+
+- CMS Domain 与 stable identity / ownership semantics：`../../docs/requirements/cms-domain.md`
+- Site Definition / Runtime / Historical Migration 长期架构边界：`../../docs/architecture/cms-architecture.md`
+- 跨 Feature 验证策略：`../../docs/technical/verification-strategy.md`
+- 当前 package component inventory、version、digest 与具体格式：本目录 manifest / structure / bootstrap / assets 及对应 implementation
+
+本 README 是 workspace boundary / locator，不复制 Requirement、Architecture 或当前 GitHub execution state。
