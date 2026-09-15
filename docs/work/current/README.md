@@ -12,6 +12,6 @@ EU-55 accepted result：Generic Page 已采用正交 `contentModel` / `rendererK
 
 Main historical migration execution 继续冻结：`data-migrations/main/**` 的已接受 canonical evidence 保留不变，只有项目负责人明确开启独立 Main migration process 后才允许重新激活。Party migration 能力不受 EU-55 影响。
 
-如果 Fresh Context 的当前用户目标仅为状态恢复 / 检查 / 总结，完成当前 Repository Authority 与必要 GitHub Current Evidence 的只读核验后即停止；不得仅因发现 non-blocking documentation drift 自动创建新的 Branch / PR / Workflow 生命周期。详细护栏见 `../../project/execution-scope-guardrails.md`。
+如果 Fresh Context 的当前用户目标仅为状态恢复 / 检查 / 总结，完成当前 Repository Authority 与必要 GitHub Current Evidence 的只读核验后即停止；不得仅因发现 non-blocking documentation drift 自动创建新的 Branch / PR / Workflow 生命周期。只读停止边界读取 `../../rules/repository/read-only-state-inspection.md`；高成本 CI / Review Runtime / Historical Migration 的激活边界读取 `../../rules/verification/high-cost-runtime-activation.md`。
 
 下一自然 Gate 是新的 **Fresh Context Planning/Readiness decision**。任何后续工作都必须从当前 Repository Authority 重新完成必要状态链，不得继承 EU-55 或任何已完成 Unit 的 Execute Authority。

@@ -3,53 +3,24 @@ import path from 'node:path'
 
 const root = process.cwd()
 
-// 这些文件已被 docs/README.md 明确降级，不再参与 Current Authority / locator / 中文主语言检查。
-// 历史证据以证据保真优先，不因语言形式重写历史正文；重新晋升为 Current 前必须先完成中文化。
-const historicalCurrentPaths = new Set([
-  'docs/project/documentation-authority-convergence.md',
-  'docs/project/agentic-dev-continuous-execution-mode.md',
-  'docs/project/main-site-formal-content-plan.md',
-  'docs/project/site-package-planning.md',
-  'docs/project/pre-e1e3-convergence-plan.md',
-  'docs/project/agentic-dev-v3-08-track-b-evidence.md',
-  'docs/project/agentic-dev-v3-closure-baseline-upgrade-evidence.md',
-  'docs/requirements/backend-application-core-boundary.md',
-  'docs/specifications/backend-application-core-boundary.md',
-  'docs/technical/backend-application-core-boundary.md',
-  'docs/requirements/generic-content-migration-application.md',
-  'docs/specifications/generic-content-migration-application.md',
-  'docs/technical/generic-content-migration-application.md',
-  'docs/requirements/party-migration-despecialization-compatibility.md',
-  'docs/specifications/party-migration-despecialization-compatibility.md',
-  'docs/technical/party-migration-despecialization-compatibility.md',
-  'docs/requirements/main-single-page-formal-content.md',
-  'docs/specifications/main-single-page-formal-content.md',
-  'docs/technical/main-single-page-formal-content.md',
-  'docs/requirements/main-stable-listitem-site-package.md',
-  'docs/specifications/main-stable-listitem-site-package.md',
-  'docs/technical/main-stable-listitem-site-package.md',
-  'docs/requirements/public-frontend-replaceability.md',
-  'docs/specifications/public-frontend-replaceability.md',
-  'docs/technical/public-frontend-replaceability.md',
-  'docs/requirements/database-migration-baseline-convergence.md',
-  'docs/specifications/database-migration-baseline-convergence.md',
-  'docs/technical/database-migration-baseline-convergence.md',
-])
-
 const allowedMissingProvenance = new Set([
   'docs/project/project.md',
   'docs/requirements/overview/system-module-boundaries.md',
 ])
 
+// 这里只列 ordinary Fresh Context 可能读取的 Current Authority / locator 根。
+// archive/** 统一由 collectMarkdown(skipArchive=true) 排除，不再维护第二份历史路径例外清单。
 const currentRoots = [
   'AGENTS.md',
   'README.md',
   'docs/README.md',
   'docs/project',
+  'docs/methods',
+  'docs/architecture',
+  'docs/rules',
   'docs/requirements',
   'docs/specifications',
   'docs/technical',
-  'docs/architecture/decisions',
   'docs/work/README.md',
   'docs/work/current',
 ]
@@ -69,12 +40,7 @@ function collectMarkdown(target, { skipArchive = false } = {}) {
   return result
 }
 
-const currentFiles = [...new Set(currentRoots.flatMap((p) => collectMarkdown(p, { skipArchive: true })))]
-  .filter((file) => !historicalCurrentPaths.has(file))
-  .sort()
-
-// 中文主语言规则只作用于 Current / Partially Current 读取集合。
-// archive/** 与 docs/README.md 明确降级的 HISTORICAL_EVIDENCE / SUPERSEDED 文档不参与语言阻断。
+const currentFiles = [...new Set(currentRoots.flatMap((p) => collectMarkdown(p, { skipArchive: true })))].sort()
 const languageFiles = currentFiles
 const failures = []
 const warnings = []
@@ -92,7 +58,6 @@ function stripNonNarrative(content) {
     .replace(/<[^>]+>/g, '')
     .replace(/(?:^|\s)(?:[A-Za-z0-9_.-]+\/)+[A-Za-z0-9_./-]+(?=\s|$|[，。；、：)])/g, ' ')
     .replace(/\b[A-Za-z_][A-Za-z0-9_.:-]{2,}\b/g, (token) => {
-      // 固定技术标识、状态词、类名/字段名等不参与“自然语言是否英文主导”的计数。
       if (/[_.:-]/.test(token) || /[A-Z].*[A-Z]/.test(token) || /[a-z][A-Z]/.test(token)) return ' '
       return token
     })
@@ -130,9 +95,7 @@ function addFailure(file, message) {
   console.error(`::error file=${file}::${escaped}`)
 }
 
-// Current / Partially Current 文档必须“中文主述、必要英文精确锚定”。
-// 不用全文件英文字母比例做判定，因为技术表格、枚举、类名、路径等会系统性制造误报；
-// 真正阻断的是没有中文叙述或存在英文主导的人类叙述段落/列表项。
+// Current 文档必须中文主述；精确技术标识、路径、命令、枚举与专名不参与机械语言比例判断。
 for (const file of languageFiles) {
   const content = fs.readFileSync(path.join(root, file), 'utf8')
   const narrative = stripNonNarrative(content)
@@ -160,7 +123,7 @@ for (const file of languageFiles) {
   }
 }
 
-// Current Authority / locator 规则只检查 Current 读取集合，历史证据允许保留历史 locator。
+// Current Authority / locator 的本地 Markdown 引用必须真实存在；archive 历史正文不参与此检查。
 for (const file of currentFiles) {
   const content = fs.readFileSync(path.join(root, file), 'utf8')
 
@@ -194,4 +157,4 @@ if (failures.length) {
   process.exit(1)
 }
 
-console.log('\nPASS：Current / Partially Current Markdown 满足中文主语言基线，并满足本地引用完整性基线。')
+console.log('\nPASS：Current Markdown 满足中文主语言与本地引用完整性基线。')
