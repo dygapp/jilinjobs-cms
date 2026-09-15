@@ -71,7 +71,7 @@ Current 文档的中文主语言与本地文档引用完整性由 `scripts/verif
 项目事实或规则发生冲突时，按以下优先级判断：
 
 1. `AGENTS.md`：Repository Governance、Authority Boundary 与工作规则；
-2. `README.md`：当前项目目标、当前迭代范围与稳定项目入口；
+2. `README.md`：稳定项目目标、项目边界摘要与入口；
 3. `docs/requirements/information-publishing.md` 与 `docs/requirements/cms-domain.md`：当前 Product / Domain Requirement Authority；
 4. 后续依据以上权威正式形成的 Specification、Architecture、Decision、Project Roadmap、Consumer-local Method 等项目产物（Artifact）；
 5. Code 与 Tests：用于证明当前实现状态，不得反向发明产品需求；
@@ -79,9 +79,7 @@ Current 文档的中文主语言与本地文档引用完整性由 `scripts/verif
 
 上述优先级用于解决同一语义责任内的 Authority 冲突；对于 Current Execution Lifecycle、GitHub native status、Requirement、Specification 等不同职责，先按本文件定义的 owner / locator 读取对应事实，再处理真正的语义冲突，不把优先级表机械解释成一个 surface 可以替代其他 surface 的职责。
 
-`docs/requirements/information-publishing.md` 已由本仓库显式采纳为当前迭代的详细业务需求，但其来源文档中声明的 `relations.upstream` 以及正文引用的 `docs/project/project.md`、`docs/requirements/overview/system-module-boundaries.md` 当前并不存在于本 Consumer Repository。这些引用只保留其来源关系（Provenance / Upstream References），**不构成当前 Consumer Authority，也不得用于扩大或覆盖本仓库已明确的 Goal、Scope 与 Boundary**。只有后续被本仓库显式采纳的上游事实才可成为新的 Consumer Authority。
-
-`README.md` 的当前迭代范围可以有意只选择原始需求的一部分。即使某项能力存在于详细需求文档中，只要 `README.md` 已明确将其排除在当前迭代之外，就不得在本轮自行实现，除非项目负责人正式调整范围。
+根 `README.md` 是 Project Charter equivalent 与稳定范围摘要，详细 Product / Domain 事实分别由当前 canonical Requirement owner 持有。README 摘要没有逐项重复某个已确认 Product fact，不构成对该事实的隐式排除；Requirement 的详细事实也不能反向扩大已经由更高层 Human / Repository Authority 明确改变的项目边界。若这些 owner 出现真实冲突，必须显式澄清并同步对应 Authority，不允许依靠摘要缺失或历史来源引用长期维持双重解释。
 
 ## 知识边界（Knowledge Boundary）
 
@@ -100,19 +98,7 @@ Current 文档的中文主语言与本地文档引用完整性由 `scripts/verif
 
 ## 开发方法（Development Method）
 
-方法来源：
-
-- Repository：`dygapp/agentic-dev`
-- Previous Evaluated Baseline：`8e7e94eff62b958b2044407cf6d85de3dde48ee9`
-- Current Evaluated Baseline：`ed1a4446f0430890e7ad39673ac9c2e341e6a829`
-- Historical V4 Foundation Projection：`3e0b2f5a29caeb344da79f8c96ebffbeb5c2b0cb`
-- Capability Milestone Tag：`baseline-2026-09-04-engineering-capability` → `5be2e6aad29b2be6b8535b3690daf3533ee22a46`
-
-Current Evaluated Baseline 只表示本 Consumer 已经完成 exact upstream compare、逐项 disposition 与 adoption verification 到哪个精确 commit，不表示 `ed1a4446...` 中所有文件、Project 状态或 capability 均被采用。当前 local asset 的真实 semantic owner / provenance 与 upgrade-only decision history 必须与 baseline 分离；本轮 `8e7e94ef... -> ed1a4446...` 的逐项记录已归档至 `docs/project/archive/agentic-dev-clarification-rule-activation-baseline-upgrade-evidence.md`。此前 Rule Granularity、V3 Closure、V3-08 Track B 的历史升级证据同样保留在 `docs/project/archive/`，普通运行不默认读取这些 upgrade history。
-
-`3e0b2f5a...` 继续只是此前 V4-08 Consumer validation 的 historical Foundation projection，不构成 `ed1a4446...` 的 ancestry 或第二个 current baseline。
-
-该次 baseline-upgrade closure 采用 bounded 的 Software Project Clarification、收紧 ordinary Feature Development 的进入 / 返回边界，并采用 direct-responsibility 级 Rule Discovery checkpoint；Model Collaboration reusable capability 当时**不采用、不启用**，upstream Project Roadmap、Evolution、Research、Guide instance 与 self-adoption state 不继承。该次 upgrade 没有因为 upstream 差异机械扩张 Consumer Rule / Skill corpus；后续 Foundation Rebuild 的当前 capability instance 以 `docs/project/project-capability-profile.md`、实际 Consumer-local corpus 与 Rule Discovery lint 为准，本文件不维护 Current Rule / Skill 数量。
+当前 evaluated upstream baseline、Consumer-local capability instance 与 Method selector 的唯一 Project Knowledge owner 是 `docs/project/project-capability-profile.md`。本文件只维护稳定的 upstream / local Knowledge Boundary、adoption discipline 与 baseline upgrade procedure，不复制 exact baseline SHA、previous baseline、historical projection / tag 或 upgrade-only decision history。已完成 upgrade 的 provenance / evidence 按需从 `docs/project/archive/` 与 GitHub history 定向恢复。
 
 当前采用的方法不在普通开发中直接运行 upstream 文档，而是固化为 Consumer-local 一等资源：
 

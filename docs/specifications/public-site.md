@@ -3,7 +3,7 @@ id: specification-public-site
 title: 公开站产品规格
 type: specification
 status: accepted
-version: "V2.2"
+version: "V2.3"
 relations:
   requirements:
     - docs/requirements/information-publishing.md
@@ -175,8 +175,8 @@ Main / Party 轮播共享以下用户可观察 lifecycle：
 
 ## 9. External links
 
-- EXTERNAL_LINK Article 默认直接进入当前外部来源；
-- Navigation、CmsList、Advertisement 使用各自 Domain open-mode contract；
+- Main 的 EXTERNAL_LINK Article 从内容列表、首页聚合或其他不带独立 open-mode 的 Article 入口进入当前外部来源时，以新窗口作为已接受基线；Article 不因此获得独立 `openMode` 字段；
+- Navigation、CmsList、Advertisement 使用各自 Domain open-mode contract；其中 ARTICLE 型 CmsListItem 继续遵守 placement 自身 open-mode contract；
 - 新窗口外链使用等价于 `noopener noreferrer` 的安全行为；
 - 当前没有 Requirement 要求统一离站确认页或外链徽标；
 - same-site internal target 使用 canonical route；
@@ -244,6 +244,7 @@ Public client 不应理解 Admin-only resource endpoint，也不应在页面代�
 
 - Main / Party canonical direct access + refresh；
 - Main 首页招聘公告只聚合已发布 EXTERNAL_LINK Article；
+- Main EXTERNAL_LINK Article 在无独立 open-mode 的内容入口使用新窗口并保持安全 rel 行为；
 - Main 首页招聘活动宣传展示的 0/1/many 与 open-mode 行为；
 - Main 首页招聘日历与当前第三方业务 integration seam 保持已接受结构；
 - scope-correct Column / Article / Page data；

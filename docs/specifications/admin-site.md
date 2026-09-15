@@ -3,7 +3,7 @@ id: specification-admin-site
 title: CMS 管理端产品规格
 type: specification
 status: accepted
-version: "V2.1"
+version: "V2.2"
 relations:
   requirements:
     - docs/requirements/information-publishing.md
@@ -154,7 +154,7 @@ List definition 可以维护业务名称、列表标识、图片数据策略、�
 
 ListItem authoring 根据 source identity：
 
-- LINK：维护自身 title / target / open mode / allowed image；
+- LINK：维护自身 title / optional subtitle / target / open mode / allowed image；
 - ARTICLE：选择既有 Article 并维护 placement / presentation override。
 
 source type 创建后不可切换；ARTICLE relation 创建后不能普通改成另一篇文章。
@@ -252,7 +252,7 @@ Admin 必须显式呈现：
 - Article 栏目上下文、source identity 与 cover policy；
 - Page 分组与 profile-specific authoring；
 - NavigationLocation 上下文、tree integrity、图标；
-- CmsList source identity 与 image policy；
+- CmsList source identity、LINK subtitle / target / open mode 与 image policy；
 - Advertisement `NO_LINK` / valid period；
 - SiteProperty group / typed value；
 - StaticResource browse / preview / replace / protected delete / recycle / restore；
