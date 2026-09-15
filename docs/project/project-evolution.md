@@ -4,7 +4,7 @@ type: project
 status: active
 ---
 
-# Project Evolution
+# 项目演进（Project Evolution）
 
 ## 角色
 
@@ -20,7 +20,7 @@ status: active
 
 ### EU-37 ～ EU-42 — Site Package Boundary
 
-建立 Generic CMS Core 与 JilinJobs Site Package 的稳定边界：stable structure、Navigation identity、Runtime composition、one-time bootstrap、Generic Schema separation 与 stable assets 逐步闭环。具体长期产品 / 架构语义在当前 Authority Rebuild 中由真实 Requirement / Architecture owner重新收敛，本 Evolution 只保留已发生的演进事实。
+建立 Generic CMS Core 与 JilinJobs Site Package 的稳定边界：stable structure、Navigation identity、Runtime composition、one-time bootstrap、Generic Schema separation 与 stable assets 逐步闭环。当前长期产品 / 领域语义由 `docs/requirements/information-publishing.md` 与 `docs/requirements/cms-domain.md` 持有，当前长期系统边界由 `docs/architecture/cms-architecture.md` 持有；本 Evolution 只保留已发生的演进事实。
 
 ### Issue #92 / EU-43 ～ EU-48 — Authority 与工程基础收敛
 
@@ -41,7 +41,7 @@ Main Article snapshot 的当前 canonical data / provenance 由 `data-migrations
 - EU-54：通过 thin Consumer adapter 采用成熟 Rich Text editor，并保持既有 Rich HTML safety / compatibility；
 - EU-55：建立首个 accepted Structured Page vertical，将 Page content model / renderer identity / content ownership 正交分离，并以显式 renderer registry / fail-closed resolution 支持 structured card rendering，而不引入通用 Page Builder。
 
-这些结果均已完成 Execute / Post-Integration closure；当前长期语义由 Issue #153 后续 Requirement / Architecture Clarification重新归位，不从历史 Work artifact直接恢复新的 Execute Authority。
+这些结果均已完成 Execute / Post-Integration closure；当前长期语义分别由现行 Requirement / Domain、Architecture、Specification 与 Technical owner 持有，不从历史 Work artifact 直接恢复新的 Execute Authority。
 
 ## Consumer Method / Capability 演进
 

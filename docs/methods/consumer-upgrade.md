@@ -4,7 +4,7 @@ type: method
 status: active
 ---
 
-# Consumer Upgrade Method
+# Consumer 升级方法（Consumer Upgrade Method）
 
 ## 目标
 

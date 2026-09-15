@@ -1,4 +1,4 @@
-# Product Specifications
+# 产品规格（Product Specifications）
 
 `docs/specifications/` 根目录只保存当前仍承担用户可观察行为、Failure Behavior 与 Acceptance 责任的 Product / Feature Specification。
 

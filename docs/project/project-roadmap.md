@@ -4,7 +4,7 @@ type: project
 status: active
 ---
 
-# Project Roadmap
+# 项目路线图（Project Roadmap）
 
 ## 角色
 
@@ -37,16 +37,16 @@ Roadmap 顺序、Issue 编号或候选名称均不授予 Execute Authority。Fea
 
 以下均保持 **Planning / Review Candidate**，需要在 Issue #153 收敛后的新 Authority 上重新确认优先级、Requirement context 与 Readiness；不得从历史 EU、Issue 排序或旧 Roadmap 自动获得执行权。
 
-- **Hui Employment iframe integration**：独立 Main integration candidate；进入前恢复 / 重建 current Requirement / Specification Authority，再完成 Planning / Readiness。
+- **Hui Employment iframe integration**：独立 Main integration candidate；进入前建立 current feature-specific Requirement / Specification Authority，再完成 Planning / Readiness。
 - **Issue #60 C1 — Loading / Skeleton Experience**：用户体验 Planning Candidate。
 - **Issue #60 C2 — Mobile Layout Human Review**：独立 Human Review / follow-up candidate。
 - **Issue #59 — Browser Compatibility & Runtime Guard**：后置兼容性 / runtime governance candidate。
 - **Issue #57 — Public Rendering Architecture**：仅在未来 Feature 暴露真实长期 renderer architecture driver 时进入；不因历史 Issue 存在自动设计。
-- **Issue #77 — CMS / Site Package / Historical Migration / Public Renderer Architecture**：现有四层长期边界在本轮 Product Authority Clarification 完成前继续作为 current evidence / authority locus；Issue #153 必须将其有效长期语义收敛到新的 canonical Architecture owner，而不是在 Roadmap 重复正文。
+- **Issue #77 — CMS / Site Package / Historical Migration / Public Renderer Architecture**：其有效长期四层边界已经收敛到 `docs/architecture/cms-architecture.md`；Issue #77 继续作为历史 planning / decision / evidence locator，而不是第二份 Current Architecture owner。未来只有新的真实 driver 才重新进入 Requirement / Architecture decision lifecycle。
 - **Deferred Article / source-defect review**：230 篇 problem Article 与 6 篇 source-defect Article 的独立 later-review / customer-confirmation candidate；不得静默修复、猜测、删除或自动导入。
 - **Repository Split Readiness Assessment**：deferred / independent；只有当前边界与真实工程成本产生足够 Evidence 后重新评估。
 
-Issue #137 / EU-55 Page Content Architecture 已完成，不属于开放 Planning Candidate；其稳定历史摘要进入 Project Evolution，当前产品语义在本轮 Authority Rebuild 中作为 Evidence 重新归位。
+Issue #137 / EU-55 Page Content Architecture 已完成，不属于开放 Planning Candidate；其稳定历史摘要进入 Project Evolution，当前产品语义已归位到现行 Domain / Architecture / Specification owner。
 
 ## Roadmap 维护规则
 

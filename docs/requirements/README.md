@@ -1,4 +1,4 @@
-# Requirement / Domain Authority
+# 需求 / 领域权威（Requirement / Domain Authority）
 
 `docs/requirements/` 根目录只保存当前仍承担长期 Product / Domain Requirement 责任的 canonical owner。
 

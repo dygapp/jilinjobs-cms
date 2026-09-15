@@ -1,4 +1,4 @@
-# Architecture Authority
+# 架构权威（Architecture Authority）
 
 `docs/architecture/` 保存 Consumer-local 长期 Architecture Context / State、reusable engineering capability architecture 与 ADR。
 

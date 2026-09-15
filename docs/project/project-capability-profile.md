@@ -4,7 +4,7 @@ type: project
 status: active
 ---
 
-# Project Capability Profile
+# 项目能力画像（Project Capability Profile）
 
 ## 1. 角色
 
@@ -76,7 +76,7 @@ ordinary Agent 使用 Agent Skills 原生 discovery，根据 `SKILL.md` 的 `nam
 - `docs/architecture/rule-discovery.md`
 - `docs/architecture/skill.md`
 
-产品 / Domain / CMS Architecture 不由本 Profile 定义。本轮 Foundation Rebuild 后续会分别重建其真实长期 owner；在完成前仍按当前 Repository Authority 与现有 Current documents fail closed，不从本 Profile 发明产品事实。
+产品 / Domain / CMS Architecture 不由本 Profile 定义。当前产品与领域语义由 `docs/requirements/information-publishing.md`、`docs/requirements/cms-domain.md` 持有；跨 Feature 的 CMS / Site Definition / Historical Migration / Runtime / Public Renderer 等长期结构边界由 `docs/architecture/cms-architecture.md` 持有。本 Profile 只提供 capability instance locator，不从工程 capability 反向发明产品事实。
 
 ## 6. Model Collaboration Instance
 

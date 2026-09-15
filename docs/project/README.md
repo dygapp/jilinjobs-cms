@@ -1,4 +1,4 @@
-# Project Knowledge
+# 项目知识（Project Knowledge）
 
 `docs/project/` 只保存当前 `jilinjobs-cms` Repository 自身的长期 Project Knowledge，不作为“重要文档”通用收容区。
 
