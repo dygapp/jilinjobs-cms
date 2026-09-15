@@ -1,161 +1,264 @@
-# CMS 管理端规格说明（Specification）
+---
+id: specification-admin-site
+title: CMS 管理端产品规格
+type: specification
+status: accepted
+version: "V2.0"
+relations:
+  requirements:
+    - docs/requirements/information-publishing.md
+    - docs/requirements/cms-domain.md
+  architecture:
+    - docs/architecture/cms-architecture.md
+  related:
+    - docs/specifications/rich-text-authoring.md
+    - docs/specifications/page-content-architecture.md
+updated_at: 2026-09-15
+---
 
-## 1. 目标
+# CMS 管理端产品规格
 
-本文定义独立 CMS 管理端的 WHAT / WHY。共享业务模型以 `docs/specifications/cms-core.md` 为准；公开站展示规则以 `docs/specifications/public-site.md` 为准。
+## 1. Scope
 
-管理端目标是提供通用、可复用的 CMS 管理体验，而不是把当前首页每个视觉区块都做成专用配置页面。
+本规格定义 CMS 运营人员可以观察和操作的管理端行为。
 
-管理端前端模块集成方向遵循 `docs/architecture/decisions/ADR-0001-admin-frontend-module-integration.md`：当前采用模块化 SPA，Module Federation 仅作为未来按需演进机制。
+CMS Domain、stable/source identity、state/lifecycle 与数据完整性由 `docs/requirements/cms-domain.md` 持有；Admin application / module architecture 由 `docs/architecture/cms-architecture.md` 持有；具体 Vue / Element Plus / component / API wiring 属于 Technical / implementation。
 
-## 2. 管理信息架构
+## 2. 入口与信息架构
 
-管理端以业务职责组织现有八类 CMS 能力，而不是在一级侧边栏无差别平铺：
+管理端 canonical browser namespace 为 `/admin/cms/**`。兼容旧地址可以重定向，但不能成为新的第二套产品导航结构。
 
-- 内容管理：文章管理、单页管理、列表管理；
-- 内容结构：栏目管理、导航管理；
+一级管理信息架构按业务职责组织，不增加无业务价值的中间点击层：
+
+- 内容管理：文章、单页、列表；
+- 内容结构：栏目、导航；
 - 运营展示：宣传展示；
 - 站点设置：网站属性、静态资源。
 
-上述四项是侧边栏分组标题，不增加额外点击层级，也不新增独立“系统设置”模块。数据库、环境地址、上传安全限制等基础设施配置不进入 CMS 菜单。
+界面使用运营人员可理解的业务术语，不暴露数据库表、Frontend module、Migration、Backend class 或其他实现术语。
 
-管理端保持独立 `/admin/` SPA 和统一 Application Shell。CMS canonical 技术路由统一位于 `/admin/cms/**` 命名空间，例如 `/admin/cms/articles`、`/admin/cms/pages`、`/admin/cms/advertisements`；原 `/admin/articles`、`/admin/pages`、`/admin/advertisements` 等路径只作为兼容重定向保留。产品界面继续使用“文章 / 单页 / 单页分组 / 宣传展示”等业务术语，不向管理员暴露模块装配细节。
+## 3. 通用管理交互
 
-主要内容类型按“文章 / 单页 / 列表”组织。栏目和导航负责内容结构，宣传展示负责稳定展示位中的运营内容，网站属性和静态资源属于站点设置。不得为了技术对象名称一致而让管理员理解数据库/API 术语。
+### 3.1 Container → Member
 
-对存在明确“容器 → 成员”关系的 CMS 模型，管理页面优先采用“左侧选择容器/组织上下文 + 右侧管理成员”的统一交互：文章使用栏目树组织文章，单页使用单页分组组织单页，列表使用列表组织列表项，导航使用导航位置组织导航条目，宣传展示使用展示位组织展示内容。容器自身就是主要管理对象的场景可以保留更直接的结构视图，例如栏目管理继续直接维护栏目树。
+存在明确容器 / 组织上下文的对象，优先使用“选择上下文 → 管理成员”：
 
-为适配较窄桌面分辨率，Application Shell 主侧边栏必须允许收起和重新展开；采用左侧容器/组织面板的页面也必须允许临时收起该面板，使右侧列表能够取得更多横向空间。收起行为属于当前浏览器中的界面状态，不新增 CMS 系统配置，也不在当前阶段建立用户个人显示偏好或服务端持久化。
+- 栏目 → 文章；
+- 单页分组 → 单页；
+- 列表 → 列表项；
+- 导航位置 → 导航条目；
+- 展示位 → 展示内容。
 
-表格中的常规行操作优先采用紧凑“图标 + Tooltip”交互，减少固定操作列占用宽度；图标按钮必须保留明确的可访问名称，不能要求管理员仅凭图形猜测行为。复杂的容器操作仍可使用现有 `...` 菜单。
+容器自身就是主要维护对象时可以直接维护结构，例如栏目树。
 
-### 2.1 文章与栏目管理
+### 3.2 可用空间
 
-栏目是文章管理的主要内容分类维度，但“管理栏目结构”和“通过栏目管理文章”属于不同任务，不要求为了视觉一致而机械采用同一种页面布局。
+主导航和局部组织面板必须允许在当前浏览器会话中收起 / 恢复，使较窄桌面宽度仍能完成主要管理任务。
 
-文章管理采用左侧栏目导航树 + 右侧文章列表。左侧必须提供“全部文章”；选择具体栏目后，右侧只显示该栏目及全部后代栏目的文章，使父栏目承担内容聚合入口。关键词、状态、文章类型继续作为右侧列表的辅助筛选条件，不再额外提供重复的平铺栏目下拉框。
+当前不因此建立用户 Profile、服务端显示偏好或新的 CMS 配置项。
 
-在已选择栏目上下文中新增文章时，默认将当前栏目带入草稿表单，但管理员仍可调整。新增/编辑文章的“所属栏目”使用能够表达真实栏目层级的 TreeSelect，不得退化为丢失层级关系的平铺 Select。
+### 3.3 行操作
 
-栏目管理本身继续使用整页树形 Table 直接维护栏目树、Alias、排序、状态、文章封面数据策略及新增子栏目等结构信息；当前阶段不额外增加与右侧树表格重复的左侧栏目树。
+常规行操作应紧凑且具有明确可访问名称 / Tooltip；复杂容器操作可以使用更多操作菜单。运营人员不能只凭无法解释的图标猜测 destructive action。
 
-栏目封面数据策略支持：
+## 4. 用户提示与解释责任
 
-- `NONE`：文章表单不提供封面编辑，站内文章不保存封面引用；
-- `OPTIONAL`：封面字段可选；
-- `REQUIRED`：文章草稿允许先无封面保存，但发布前必须补齐封面；已发布文章后续编辑也必须继续满足封面要求。
+Admin 只长期展示完成当前操作所需的信息：
 
-管理端应在文章表单中根据当前栏目策略给出对应字段和说明，但不得把策略解释成“图文列表 / 纯文字列表”等展示模式。外链文章继续不保存本地封面。
+- 必填 / validation failure；
+- 发布、撤回、启停等状态后果；
+- 删除、替换等高风险操作确认；
+- 创建后不可修改的来源 / 稳定身份限制；
+- 受保护资源与引用风险；
+- EXTERNAL_LINK、`NO_LINK` 等直接改变目标行为的语义。
 
-### 2.2 单页与单页分组管理
+以下内容不作为运营 UI 的长期说明：
 
-产品界面统一使用“单页管理 / 单页 / 单页分组”。“固定页面”不再作为管理端正式术语，避免与“不可修改内容”或工程静态页面混淆；技术模型继续使用 `Page / PageGroup`，不要求同步进行数据库/API 重命名。
+- “由 Backend / Database / Frontend / deployment 负责”；
+- Requirement / Method 背景；
+- metadata 存储位置；
+- “字段不决定页面布局”等纯设计职责说明；
+- 控件本身已经自然表达的重复 Alert。
 
-单页具有稳定页面身份和 Alias，可以作为独立单页存在，也可以属于一个单页分组。单页分组是平级组织容器，不建立嵌套分组层级；分组成员在公开站可形成公共 Tab 和稳定分组 URL。
+稳定 `alias / code / key` 对运营人员使用“公开标识 / 列表标识 / 位置标识 / 展示位标识 / 属性标识”等可理解名称。
 
-单页管理采用左侧组织导航 + 右侧单页列表。左侧至少包含“全部单页”“独立单页”和全部单页分组：
+## 5. 文章与栏目
 
-- “全部单页”显示全部单页；
-- “独立单页”只显示 `groupId = null` 的单页；
-- 选择某个单页分组时只显示该分组成员；
-- 在具体分组上下文新增单页时默认带入当前分组；
-- 在“独立单页”上下文新增时默认不属于任何分组；
-- 管理员仍可在编辑表单中调整单页分组。
+### 5.1 Article management
 
-单页分组不再通过页面顶部独立整表与单页列表上下堆叠展示。分组新增/编辑入口保留在单页管理页，左侧分组作为单页管理的主要组织上下文。
+文章管理提供栏目组织上下文和文章列表：
 
-## 3. 导航管理
+- 可查看全部文章；
+- 选择父栏目时可聚合其后代栏目文章；
+- 关键词、状态、Article source type 等作为辅助筛选；
+- 在栏目上下文新增文章时默认带入当前栏目，运营人员仍可调整；
+- 所属栏目选择必须表达真实层级。
 
-导航页面必须先选择导航位置，再管理该位置下的树形导航条目。主数据表只显示当前位置的数据，不再把 `position=MAIN` 作为每行重复字段展示。
+Article source type 创建后只读，不能通过普通编辑 INTERNAL ↔ EXTERNAL_LINK 切换。
 
-推荐交互为左侧导航位置列表 + 右侧树形 Table。导航位置列表采用整行选择、选中高亮和右侧 `...` 编辑/删除菜单；数据模型不得依赖前端 Tab 常量。
+### 5.2 Cover policy
 
-当前正式基线内置 `MAIN`（主导航）、`HOME_SHORTCUT`（首页快捷入口）、`HOME_QUICK`（首页快速导航）三个导航位置；V8 过渡期引入的 `SERVICE`、`SITE` 仅用于兼容旧模型，现已退出 Authority 并必须从升级数据库和管理端列表中清理。网站导航/友情链接数据由通用列表承担，不得为兼容旧模型继续保留重复导航位置。
+文章表单根据当前 Column cover policy 表达：
 
-导航位置允许当前阶段直接新增、修改、删除；导航条目支持树形新增/编辑/删除、目标对象、打开方式、可选图标、排序、启停。父级候选只显示当前导航位置内条目。
+- `NONE`：不提供本地封面编辑；
+- `OPTIONAL`：封面可选；
+- `REQUIRED`：草稿可暂存无封面，但发布前必须补齐。
 
-导航图标编辑复用统一图片资源选择器，可以从站点已整理的导航图标目录中选择，也可以上传自定义图标。图标是条目自身属性，不由排序位置推导。管理端使用统一自适应图片预览保证透明、浅色图标可辨识；该行为仅用于后台可见性辅助，不改变图标文件和公开站页面背景。
+外链文章不要求本地正文 / 封面。
 
-## 4. 通用列表管理
+### 5.3 Column management
 
-列表管理允许维护列表定义及列表项。列表定义不控制公开页面的视觉展示模式，也不再通过 `itemType` 将字段绑定为 LINK / IMAGE_LINK / TEXT 套餐。
+栏目管理直接维护树形结构、公开标识、排序、状态、封面数据策略与子栏目关系。稳定 / 预置栏目按照 Domain protection 规则显示受保护身份和删除限制。
 
-列表定义增加“列表项图片”数据策略 `NONE / OPTIONAL / REQUIRED`：
+## 6. 单页
 
-- `NONE`：列表项编辑器隐藏图片字段，Backend 不接受图片数据；
+单页管理左侧至少提供：
+
+- 全部单页；
+- 独立单页；
+- 当前全部单页分组。
+
+选择分组时只显示其成员；在具体分组上下文新增时默认带入该分组，在独立单页上下文新增时默认无分组，但表单允许调整。
+
+不同 Page content profile 使用对应 authoring surface：
+
+- Rich Text → whole-body Rich Text authoring；
+- Structured Card Collection → card-aware authoring；
+- unsupported profile/schema → blocking diagnostic / safe read-only state。
+
+ordinary content edit 不允许随意改变稳定 Page identity、content model、renderer identity 或 ownership。
+
+## 7. 导航
+
+导航管理先选择 NavigationLocation，再维护该位置的树形 NavigationItem。
+
+要求：
+
+- 主数据区域只显示当前所选位置的条目；
+- parent candidate 只来自同一位置；
+- 稳定位置 / 条目明确显示受保护身份；
+- NavigationItem 图标是条目自身数据，可选择或上传受控图片；
+- 调整排序不得改变图标与业务语义的对应关系。
+
+当前稳定位置至少包括 `MAIN`、`HOME_SHORTCUT`、`HOME_QUICK`。
+
+## 8. 通用列表
+
+列表管理先选择 CmsList，再维护其 CmsListItem。
+
+### 8.1 List definition
+
+List definition 可以维护业务名称、列表标识、图片数据策略、说明、排序与启停。普通运营创建 / 编辑不直接维护内部稳定 `groupCode`；稳定结构分组由受控站点定义持有。
+
+### 8.2 ListItem
+
+ListItem authoring 根据 source identity：
+
+- LINK：维护自身 title / target / open mode / allowed image；
+- ARTICLE：选择既有 Article 并维护 placement / presentation override。
+
+source type 创建后不可切换；ARTICLE relation 创建后不能普通改成另一篇文章。
+
+### 8.3 Image policy
+
+根据父列表：
+
+- `NONE`：不提供图片输入；
 - `OPTIONAL`：图片可选；
-- `REQUIRED`：图片字段标记必填，Backend 拒绝缺图列表项。
+- `REQUIRED`：必须形成有效图片。
 
-策略变化必须保持已有数据一致：存在图片时不能直接改为 `NONE`，存在缺图列表项时不能直接改为 `REQUIRED`。该策略只说明列表项的数据要求，不控制公开页面的图片尺寸、布局、Logo 显示或其他视觉模式。
+该策略不在 Admin 中解释成具体 Public layout mode。
 
-列表项统一提供标题、副标题、目标地址、打开方式、排序、启停等数据属性；图片字段按上述策略出现。标题作为后台识别名称保留。具体页面是否使用标题、Logo、图片、链接以及如何组合展示，由公开站页面设计决定。
+## 9. 宣传展示
 
-图片字段复用统一图片资源选择器，新图片上传到 `/static/uploads/lists/{listCode}/`，也可从 `/static/uploads/**` 共享 Runtime 图片库复用已有图片。
+宣传展示管理先选择展示位，再维护展示内容。
 
-当前 `HOME_CAROUSEL` 基线为 `REQUIRED`；当前 `SITE_LINKS` 相关列表基线为 `NONE`。未来若友情链接真实需要 Logo，应先调整图片数据策略和内容数据，不新增 `displayMode`。
+展示内容至少支持：
 
-## 5. 宣传展示管理
+- 标题；
+- 图片；
+- 可选 URL；
+- open mode；
+- 排序；
+- 启停；
+- 可选有效期。
 
-宣传展示管理允许维护展示位和展示内容。展示内容至少支持图片、可选链接、点击行为、展示顺序、启停和可选有效时间。
+`NO_LINK` 时保留 URL 但当前不产生点击，界面以简洁用户语言表达这一行为。
 
-同一展示位可维护多条内容；`NO_LINK` 可以保留 URL 但临时禁止点击。图片字段复用统一图片资源选择器，新图片上传进入 `/static/uploads/displays/{slotCode}/`，并允许选择共享 Runtime 图片。
+## 10. 网站属性
 
-首页招聘活动横幅通过 `HOME_RECRUITMENT_PROMO` 展示位维护。
+网站属性按受控分组浏览，属性定义与日常值编辑分离。
 
-## 6. 网站属性
+- 定义编辑维护属性标识、名称、分组、类型、说明等；
+- 值编辑根据 value type 提供合适控件；
+- UNKNOWN group / invalid typed value 必须被拒绝；
+- RESOURCE_PATH 等图片属性复用统一资源选择体验；
+- UI 不解释 metadata 存储位置、Database 或 deployment ownership。
 
-“网站配置”收敛为“网站属性”。管理端显示属性名称、key、分组、类型和值，并允许新增、编辑、删除属性定义。
+## 11. 静态资源
 
-网站属性分组由 Backend 从 Spring CMS metadata 资源提供，不在数据库中新增“属性分组”管理对象。页面采用左侧分组导航 + 右侧属性列表，至少展示 `BASIC / BRAND / CONTACT / FOOTER / PRESENTATION / GENERAL`；属性定义表单只能从这些元数据分组中选择，不允许自由输入未声明 groupCode。
+静态资源管理至少支持：
 
-属性列表负责紧凑展示当前值，不在表格单元格中直接展开输入框、图片上传器或多行 JSON 编辑器。属性值通过独立弹窗进行类型化编辑和保存；属性“定义”与“值”是两个不同操作，已有属性的定义弹窗不再同时承担日常值修改。
+- 浏览资源；
+- 图片预览；
+- 上传 / 明确替换；
+- ordinary delete；
+- 显示受保护状态。
 
-类型化编辑和校验至少覆盖 `TEXT / INTEGER / RESOURCE_PATH / JSON / URL / BOOLEAN`。JSON 保存前执行真实解析；INTEGER 必须是整数；RESOURCE_PATH 使用 `/static/**` 并复用统一图片资源选择器；URL 使用站内路径或 HTTP(S) 规则。
+受保护资源普通删除必须明确拒绝。系统不能证明全部 Rich HTML / CSS / JS 引用时，普通资源删除仍应提示残余引用风险。
 
-`HOME_CAROUSEL_INTERVAL_SECONDS` 归入“展示设置（PRESENTATION）”，以正整数秒维护首页主轮播自动切换间隔。该参数属于低风险站点行为属性，不因此产生新的“系统设置”页面。
+改变业务对象引用不自动物理删除旧文件。
 
-当前阶段不根据用户身份隐藏新增/删除按钮，也不实现普通管理员/超级管理员差异。相关限制只作为未来权限规划。
+## 12. 图片编辑体验
 
-## 7. 统一图片资源选择与预览
+Admin 中需要运营人员辨识图片的场景，应提供一致的预览与选择体验，包括：
 
-宣传展示、列表项、导航图标、RESOURCE_PATH 网站属性、静态资源图片等 Admin 图片场景复用统一图片选择/展示能力。图片编辑控件至少支持当前图片预览、上传新图片、从 `/static/uploads/**` 共享 Runtime 图片库选择已有图片，并在导航等场景提供经过整理的内置图片候选。
+- 当前图片可见；
+- 上传新图片；
+- 从允许范围选择既有图片；
+- 可选值可以清除；
+- 透明 / 浅色图标仍可辨识；
+- 普通浏览场景可以查看原图。
 
-新上传文件始终进入当前业务上下文约定目录；跨模块选择只复用已有资源，不改变上传目录治理。业务表单上传成功后保存 `/static/**` 路径；文件真实内容仍由 Backend StaticResource 统一校验。表单改变引用不得自动物理删除旧文件，未被引用资源由静态资源管理入口统一清理。
+该体验不能改变 Public image bytes 或把 Admin preview metadata写回业务数据。
 
-凡后台界面需要运营人员辨识图片内容，缩略图必须优先使用统一自适应预览能力，以解决白色、浅色、透明 PNG / Logo / 图标在默认白底下难以查看的问题。该策略适用于图标、Logo，也适用于普通 Banner、宣传图和列表图片；它只是后台识别辅助，不控制 Public Site 的页面背景或展示样式。
+## 13. Failure behavior
 
-图片放大查看优先复用 Element Plus `el-image` 原生 Viewer，包括缩放、旋转、关闭等通用交互；不得在没有额外业务能力需求时重复开发自定义大图 Dialog / Viewer。图片选择库中的候选卡片点击职责为“选择”，可以关闭 Viewer，避免“选择”和“查看”冲突。
+Admin 必须显式呈现：
 
-## 8. 风险操作
+- domain validation failure；
+- immutable identity modification；
+- preset/stable object delete rejection；
+- required image/content missing；
+- invalid typed SiteProperty；
+- protected resource delete；
+- unsupported Page content profile/schema；
+- Backend conflict / fail-closed result。
 
-删除、受保护资源替换等继续提供确认和业务保护。此类保护属于运行安全，不依赖认证授权。
+不得通过前端默默修正成另一种业务语义来“让保存成功”。
 
-静态资源中的“受保护”表示当前由站点基线或 CMS 数据直接引用保护，不能通过普通删除入口移除；它不是管理员人工标记的重要性等级。固定工程/部署基线由 Spring 外部化配置声明，当前 CMS 直接引用由 Backend 运行时动态计算。受保护资源仍允许通过明确替换操作更新。
+## 14. Acceptance
 
-静态资源继续提示“不提供完整引用检查”。不得开放任意 HTML/JavaScript 上传执行能力。
+触达管理端行为时根据实际范围至少验证：
 
-## 9. Acceptance Criteria
+- `/admin/cms/**` canonical entry 与必要 compatibility redirect；
+- 四个业务分组和八类正式入口；
+- 主侧栏 / 局部组织面板收起与恢复；
+- Article 栏目上下文、source identity 与 cover policy；
+- Page 分组与 profile-specific authoring；
+- NavigationLocation 上下文、tree integrity、图标；
+- CmsList source identity 与 image policy；
+- Advertisement `NO_LINK` / valid period；
+- SiteProperty group / typed value；
+- StaticResource preview / protected delete；
+- 用户界面不长期展示 Backend / Database / deployment / Requirement 实现说明；
+- 必要风险和 validation 信息没有因“简化提示”而消失；
+- Backend / Admin / relevant Integrated Browser regression。
 
-- 管理端保持单一 Vue SPA；Admin Shell 与 CMS Module 具有明确源码边界，CMS canonical 路由统一使用 `/admin/cms/**`，原 `/admin/<feature>` 路径仅兼容重定向；
-- 管理端侧边栏按“内容管理 / 内容结构 / 运营展示 / 站点设置”组织八类入口，不增加父级点击层级，也不新增独立“系统设置”；
-- 主侧边栏可以收起/展开；文章、单页、列表、导航、宣传展示、网站属性等 Master–Detail 页面可以收起/展开左侧组织面板，收起后右侧列表取得更多横向空间；
-- 当前阶段不为上述显示方式增加系统配置、数据库字段或用户个人设置；
-- 表格常规操作使用紧凑图标 + Tooltip，并保留“编辑 / 删除 / 发布 / 撤回 / 新增子栏目”等可访问名称；
-- 产品界面使用“单页管理 / 单页 / 单页分组”，技术层可继续使用 `Page / PageGroup`；
-- 单页管理提供“全部单页 / 独立单页 / 单页分组”左侧导航，右侧只展示当前组织上下文中的单页；
-- 文章管理提供左侧栏目树和“全部文章”，父栏目筛选包含全部后代栏目文章；
-- 文章新增/编辑使用层级 TreeSelect；栏目管理继续使用整页树形 Table；
-- 栏目可维护 `NONE / OPTIONAL / REQUIRED` 封面数据策略；REQUIRED 草稿可暂存但无封面不能发布，已发布文章编辑不得破坏该契约；
-- 导航管理按位置 + 树形结构呈现，正式基线只显示 `MAIN / HOME_SHORTCUT / HOME_QUICK`；
-- 导航图标能够作为条目属性维护，透明浅色图标后台预览清晰且不影响公开站视觉；
-- 通用列表不再暴露 `itemType`，并按 `imagePolicy` 控制列表项图片数据是否禁用、可选或必填，不控制页面布局；
-- `HOME_CAROUSEL` 显示图片必填策略，`SITE_LINKS` 当前显示不使用图片策略；
-- 宣传展示管理支持多内容/NO_LINK/有效期；
-- 列表、宣传展示、导航图标、RESOURCE_PATH 属性复用统一图片资源选择/上传，并可跨 CMS 模块复用 Runtime 已上传图片；
-- 网站属性左侧分组来自 Spring CMS metadata，定义表单不能创建未知分组；
-- 网站属性表格仅紧凑展示当前值，RESOURCE_PATH 图片使用自适应缩略图，文本/整数/布尔/JSON/图片路径等属性值均通过独立值编辑弹窗维护；
-- 网站属性支持 INTEGER，`HOME_CAROUSEL_INTERVAL_SECONDS` 以正整数秒维护；
-- 图片内容识别型缩略图统一解决浅色/透明图片可辨识问题，普通浏览场景可以直接调用 Element Plus Viewer 查看原图；
-- 静态资源 UI 使用“受保护”语义，保护状态来自 Backend，不提供人工 `protected=true` 开关；
-- 当前阶段无登录/角色/权限实现；
-- Browser E2E 覆盖 canonical/legacy CMS 路由、导航收起、图标操作可访问名称/Tooltip、网站属性弹窗值编辑、统一图片预览/Viewer、受保护资源、图片策略、属性元数据分组、整数校验、轮播参数及既有核心路径。
+## 15. Non-goals
+
+- 当前阶段的用户 / 角色 /权限实现；
+- 通用系统设置中心；
+- generic Page Builder；
+- 通过 Specification 固化具体 Vue component / Element Plus control；
+- 从本规格授予新的 Execute Authority。
