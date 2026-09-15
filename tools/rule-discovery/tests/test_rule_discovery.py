@@ -164,6 +164,20 @@ scope:
         self.assertEqual(ids, {"rule:execution-continuity", "rule:safe-external-write"})
         self.assertNotIn("rule:post-write-state-verification", ids)
 
+    def test_clarification_phase_does_not_hide_cross_cutting_document_and_write_rules(self):
+        payload = self.discover({
+            "phases": ["establish-context"],
+            "activities": ["documentation", "external-operation"],
+            "technologies": [],
+            "artifacts": ["document", "repository"],
+            "risks": [],
+        })
+        ids = {item["id"] for item in payload["candidates"]}
+        self.assertEqual(
+            ids,
+            {"rule:human-facing-content-integrity", "rule:safe-external-write"},
+        )
+
     def test_read_only_state_inspection_is_independently_discoverable(self):
         payload = self.discover({
             "phases": None,
