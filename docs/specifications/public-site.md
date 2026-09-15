@@ -3,7 +3,7 @@ id: specification-public-site
 title: 公开站产品规格
 type: specification
 status: accepted
-version: "V2.1"
+version: "V2.2"
 relations:
   requirements:
     - docs/requirements/information-publishing.md
@@ -75,6 +75,8 @@ Main 首页继续保持已接受的固定页面结构与主要视觉识别，并
 - NCSS 等无需运营维护的固定工程集成。
 
 其中“招聘公告”首页区域只聚合 `recruitment-announcement` 栏目中当前已发布的 `EXTERNAL_LINK` Article，并直接进入其外部来源；这不限制该栏目的普通栏目页只能存在外链 Article。
+
+首页招聘活动宣传展示消费 `HOME_RECRUITMENT_PROMO` 当前有效 Advertisement：0 项时不制造伪内容，1 项时静态展示，2 项及以上按展示顺序轮动；每项继续遵守其 URL / open-mode / `NO_LINK` Domain contract。具体轮动间隔属于当前实现选择，不在本规格固化。
 
 “最新招聘”及招聘 / 宣讲区域当前只是已接受页面结构中的第三方业务集成 seam；真实 iframe / 第三方 Runtime integration 必须由新的 Feature Requirement / Specification 明确授权，不因页面已存在占位区域自动获得实施权限。
 
@@ -242,6 +244,7 @@ Public client 不应理解 Admin-only resource endpoint，也不应在页面代�
 
 - Main / Party canonical direct access + refresh；
 - Main 首页招聘公告只聚合已发布 EXTERNAL_LINK Article；
+- Main 首页招聘活动宣传展示的 0/1/many 与 open-mode 行为；
 - Main 首页招聘日历与当前第三方业务 integration seam 保持已接受结构；
 - scope-correct Column / Article / Page data；
 - INTERNAL / EXTERNAL_LINK target；
