@@ -11,10 +11,10 @@ Repository:
 dygapp/agentic-dev
 
 Previous Evaluated Baseline:
-1c8cdfea9ecf23ef33ffab20eec3c93679fd4578
+8e7e94eff62b958b2044407cf6d85de3dde48ee9
 
 Current Evaluated Baseline:
-8e7e94eff62b958b2044407cf6d85de3dde48ee9
+ed1a4446f0430890e7ad39673ac9c2e341e6a829
 
 Historical V4 Foundation Projection:
 3e0b2f5a29caeb344da79f8c96ebffbeb5c2b0cb
@@ -26,18 +26,19 @@ Capability Milestone Commit:
 5be2e6aad29b2be6b8535b3690daf3533ee22a46
 ```
 
-当前 evaluated baseline 是 `dygapp/agentic-dev@8e7e94eff62b958b2044407cf6d85de3dde48ee9`。它只回答“本 Consumer 最近完整比较并完成采用判断到哪个精确 upstream baseline”，**不表示本仓库所有方法、规则、Skill 或文档都采用自该 commit**。
+当前 evaluated baseline 是 `dygapp/agentic-dev@ed1a4446f0430890e7ad39673ac9c2e341e6a829`。它只回答“本 Consumer 最近完整比较并完成采用判断到哪个精确 upstream baseline”，**不表示本仓库所有方法、规则、Skill、Architecture 或文档都采用自该 commit**。
 
-从 previous evaluated baseline `1c8cdfea9ecf23ef33ffab20eec3c93679fd4578` 到 current evaluated baseline `8e7e94eff62b958b2044407cf6d85de3dde48ee9` 的 GitHub exact compare 为 ahead 7 / behind 0。本轮逐项 disposition 后，进入 current owner 的 reusable change 为：
+从 previous evaluated baseline `8e7e94eff62b958b2044407cf6d85de3dde48ee9` 到 current evaluated baseline `ed1a4446f0430890e7ad39673ac9c2e341e6a829` 的 GitHub exact compare 为 ahead 8 / behind 0。本轮遵循 `method:consumer-upgrade` 的核心边界：**Project 不传播，Capability 传播**。逐项 disposition 后：
 
-- **adopt / adapt — task-level Rule granularity**：Rule 默认面向一个可独立发现的具体任务或责任所需的有界规范语义集合；同一任务中通常共同发现、共同消费的 policy 优先聚合，不再以“一条 assertion = 一个 Rule 文件”作为设计原则。Consumer discoverable Rule 从 15 条收敛为 13 条，7 个旧 id / path 由 5 个任务级 Rule replace / adapt。
-- **adapt — Technology Rule IA**：当前真实 Vue Rule 进入 `docs/rules/technology/vue/`；目录只用于人类维护，不参与 matching；当前没有独立 Consumer-local TypeScript Rule，因此不创建空 `technology/typescript/`。
-- **retain / override — Consumer-local Rule Discovery / Git commit governance / TypeScript Profile / unaffected specializations**：deterministic five-dimension discovery、local-only / fail-closed contract、`docs/project/git-commit-guidelines.md`、现有 Vue + TypeScript Technology Profile 与 8 条未受影响 Rule 继续由本地 owner 承担，不为了 upstream 目录或 inventory 制造重复 owner。
-- **reject / not applicable — 未采用 upstream Rule 与 agentic-dev project-only / Research / Eval / self-adoption state**：不机械复制 upstream 27 条 Rule，也不继承 upstream Roadmap、Issue / PR state、Research / Eval corpus 或 self-adoption instance。
+- **adopt / adapt — Software Project Clarification + AI Development boundary**：接受面向普通软件 Consumer 的项目级澄清能力，并明确常规 AI Development 面向具体 Feature / change。只有多个当前或预期 Feature 共同依赖的长期 Requirement / Architecture Context 缺失、冲突或需要重建时，才由本地 Method selector 进入项目级澄清；普通单 Feature、bugfix、小范围变更继续使用常规 Feature workflow。
+- **adapt — Rule Discovery responsibility-transition checkpoint**：当前 direct responsibility 建立后，在首个有副作用动作前完成 task-level discovery；职责或关键 `phase / activity / technology / artifact / risk` facts 实质变化后，在下一次有副作用动作前重新发现；CI lint / deterministic test / 固定 smoke 不能替代 ordinary runtime invocation。
+- **retain / reject activation — Model Collaboration**：已评估 upstream Model Collaboration Architecture 与 Adoption Method，但本 Consumer 当前没有启用 multi-model runtime instance 的目标、local strategy 或 Current Runtime Evidence，因此不复制 upstream model / provider mapping、`.codex` 示例、Project profile instance 或 activation state。未来若确有需要，必须先形成独立 Consumer-local semantic / adoption decision，再建立并验证 local runtime instance。
+- **retain — Consumer-local owners**：13 条 Rule、9 个物理 Skill、Vue + TypeScript Technology / Verification Profile、Git commit governance、Repository operation boundary、Verification Strategy 与既有 local specialization 保持当前 owner；本轮不因 upstream capability inventory 制造重复文档或空配置。
+- **reject / not applicable — upstream Project-only / Research / Eval / Roadmap / self-adoption state**：这些内容只作为本轮 provenance / design context，不进入 Consumer Current Authority；`noop` 与其移除提交也没有 reusable semantic delta。
 
-本次 `1c8cdfea... -> 8e7e94ef...` upgrade-only disposition / validation history 记录在 `docs/project/agentic-dev-rule-granularity-baseline-upgrade-evidence.md`。此前 `2fe193... -> 1c8cdfea...` 与 `d9fad0da... -> 2fe193...` 的历史 upgrade evidence 继续保留，但普通 Fresh Context 不默认读取这些 history。
+本次 `8e7e94ef... -> ed1a4446...` upgrade-only disposition / validation history 记录在 `docs/project/archive/agentic-dev-ed1a-baseline-upgrade-evidence.md`。此前 `1c8cdfea... -> 8e7e94ef...`、`2fe193... -> 1c8cdfea...` 与 `d9fad0da... -> 2fe193...` 的历史 upgrade evidence 继续保留，但普通 Fresh Context 不默认读取这些 history。
 
-`3e0b2f5a...` 是此前 V4-08 Consumer validation 的 historical Foundation projection；它与本次 target 从 `1c8cdfea...` 后分叉，不构成 `8e7e94ef...` 的 ancestry 或第二个 current baseline。
+`3e0b2f5a...` 是此前 V4-08 Consumer validation 的 historical Foundation projection；它不构成 current evaluated baseline 的第二条 ancestry，也不恢复为普通运行输入。
 
 必须长期分离三类状态：
 
@@ -59,7 +60,7 @@ previous baseline 及更早 Capability Milestone 已选择性固化并继续保�
 - Stale Verification Contract、Visual Fidelity、自动验证与 Human Review Baseline 隔离、bind mount 可重复恢复、Artifact Evidence、异步 Actions 闭环、Human Review Finding 分类、外部媒体真实内容验证、后继提交 Evidence Claim 影响判断与 Roadmap / GitHub 集成状态边界。
 - 共享外部资源并发边界按真实冲突域治理；配置责任与已有能力复用基于真实 ownership / lifecycle 判断，不为消除硬编码机械配置化或为复用扩大依赖面。
 
-这些能力的真实 current owner 是本仓库对应 Consumer-local 文档与代码 / Workflow，不因 evaluated baseline 前进而被整体重新归因到 `8e7e94ef...`。
+这些能力的真实 current owner 是本仓库对应 Consumer-local 文档与代码 / Workflow，不因 evaluated baseline 前进而被整体重新归因到 `ed1a4446...`。
 
 ## 2. Consumer 与 agentic-dev 的职责边界
 
@@ -97,12 +98,13 @@ upstream 有新 commit、Local Discovery Entry 出现 stale / missing / ambiguit
 一次 baseline upgrade 的语义路径是：
 
 ```text
-Previous evaluated baseline
+Restore Current Consumer
 → fixed candidate baseline
-→ exact delta classification
+→ exact capability delta classification
 → per-item disposition
 → Consumer-local projection candidate
-→ adoption verification
+→ refresh local capability instance when actually affected
+→ targeted revalidation
 → Consumer integration gate
 → evaluated baseline progression
 → local-only ordinary runtime
@@ -134,7 +136,48 @@ Current resource set 由真实 owner、Repository Authority、资源原生状态
 
 横切 Rule 的粒度与运行发现契约由 `docs/project/rule-discovery-method.md` 单点持有。Rule 目录只承担 human IA，不形成 routing semantics；ordinary runtime 只消费 Front Matter + task signals 返回的 candidate locator。
 
+### 2.4 Method selection 与 Software Project Clarification
+
+本 Consumer 现在显式区分三类主要 work kind：
+
+- **普通 Feature / change**：使用本文 §3 的常规 Feature workflow；
+- **项目级 / 重大范围 Requirement / Architecture 澄清**：只有满足本节进入条件时才选择 Software Project Clarification；
+- **Existing Consumer baseline upgrade**：使用 §12 的显式 upgrade lifecycle，不与产品 Planning / Execute lifecycle 混同。
+
+Software Project Clarification 的最小进入判据是：
+
+> 普通 Feature Development 无法安全继续，因为多个当前或预期 Feature 共同依赖的长期 Requirement / Architecture Context 缺失、冲突或需要重建。
+
+常见适用场景包括 greenfield / rewrite / major modernization、Requirement Authority 碎片化或冲突、major domain / product boundary restructuring，以及多个 Feature 被同一个长期 architecture driver 阻塞。不得仅因为项目规模大、技术复杂、文档很多，或单个 Feature 存在局部不确定性而进入。
+
+本 Consumer 采用以下阶段与 stable phase identity：
+
+```text
+Establish Context            → establish-context
+Requirement Clarification    → requirement-clarification
+Architecture Clarification?  → architecture-clarification
+Clarification Convergence    → clarification-convergence
+```
+
+阶段责任：
+
+1. **Establish Context**：识别当前可作为 Requirement / Domain / Architecture Authority 的来源；区分 current、legacy、reference、analysis、conversation 与 unknown；明确哪些材料只是 Evidence；冻结本次分析范围，避免历史材料或平级材料自动成为当前事实。
+2. **Requirement Clarification**：抽取并规范化 product / domain goal、actor、business object、workflow、business rule、state / lifecycle、failure behavior、quality / compliance 与 project-level acceptance intent；识别 gap / conflict / ambiguity / unsupported assumption / external dependency / design item。只有现有 Authority 无法唯一裁决且合理答案会实质改变产品行为、长期边界或验收时才升级 Human Authority。确认的长期事实必须回写真实 Consumer-local Requirement / Domain owner，聊天、分析表和候选清单不成为第二 Authority。
+3. **Architecture Clarification**：条件阶段，只处理多个当前或预期 Feature 在进入可靠 Specification 前共同依赖的长期 architecture driver，例如 shared contract、core data/system boundary、security / integration / deployment topology 或高成本难逆 structural decision。它不是 Big Design Up Front；局部、低风险、可逆、只影响单 Feature 的 HOW 留给 Feature Technical Planning / JIT Execution。若暴露新的 Product ambiguity 或 Requirement conflict，返回 Requirement Clarification，不由 Architecture 自行创造产品需求。
+4. **Clarification Convergence**：检查长期 Requirement / Domain owner、自洽性、必须前置解决的 architecture driver、剩余 non-blocking open item 与 Fresh Context 可恢复性。成功只返回 `Clarified Project Context Ready`，**不等于** Specification 已创建、Execution Unit 已创建或 Execute / Integrate authority 已授予。
+
+以下任一情况成立时，在声明项目级澄清 Ready 前必须增加独立语义复核：
+
+- 从 legacy / heterogeneous sources 重建新的 Requirement Baseline；
+- 对现有 Requirement Authority 进行大规模重构、批量迁移、结构化改写、摘要化或 AI 辅助语义收敛；
+- 多个 Authority 来源存在冲突，澄清过程对长期事实进行了实质合并、取舍或覆盖；
+- 一次澄清批量改变长期业务状态、生命周期、权限、业务范围、数据语义或验收不变量。
+
+Software Project Clarification 不要求每个阶段创建独立文档，也不预建新 Skill / Rule。长期事实进入真实 semantic owner；source inventory、ambiguity list、comparison matrix、review scratchpad 等默认属于 transitional / disposable 工作材料，除非它们确有跨上下文持续价值。
+
 ## 3. 常规 Feature 工作流
+
+常规 AI Development 面向**具体 Feature / change**。进入本流程前，当前 Repository 必须已有足以支持本次 Feature 判断 Goal、Scope、Observable Behavior 与 Acceptance 的最小 Requirement / Domain / Architecture Context。如果多个 Feature 共同依赖的长期 Context 缺失、冲突或需要重建，不得在当前 Feature 内局部创造长期事实；按 §2.4 返回真实长期 owner 或项目级澄清责任。
 
 当前项目采用以下主流程：
 
@@ -169,14 +212,16 @@ Repository Policy / Human Authority
 规则：
 
 - 阶段是工作状态，不要求每个阶段都创建文档。
-- Specification 聚焦 WHAT / WHY。
-- Technical Plan 只在跨 Execution Unit 的长期 HOW 协调具有持续价值时持久化。
+- Clarify Intent 优先从当前 Requirement / Domain / Architecture Authority 解析；局部 Feature ambiguity 返回当前 owner，系统性长期 gap 按 §2.4 升级，不在 Specification 中建立隐藏项目基线。
+- Specification 聚焦 WHAT / WHY；跨多个 Feature 持续成立的长期事实由真实 Requirement / Domain owner 持有，不为了自包含复制完整项目基线。
+- Technical Plan 只在跨 Execution Unit 的长期 HOW 协调具有持续价值时持久化；若 Technical Planning 发现跨多个 Feature 的长期 architecture driver 已阻塞可靠 Specification，则升级到 §2.4 Architecture Clarification，而不是在当前 Feature 内静默重构项目级 Architecture。
 - Planning / Requirement Candidate 在 `slice-work` 前不具有 Execution Unit 身份；Roadmap 顺序、预编号、Issue 标签或名称不能替代上游 Readiness。
 - `slice-work` 只在 Specification Ready 且必要 Technical Planning 已完成或确认不需要后形成 Candidate Execution Unit；Candidate Unit 可以获得稳定 Identifier，但该 Identifier 不构成 Readiness PASS 或 Execute 授权。
 - `readiness-check` 对 Candidate Unit 执行统一 Gate；只有 PASS 后才成为 Ready Execution Unit。
 - Execution Unit 应纵向、范围明确、可独立验证、可追溯并适合 Fresh Context。
 - 实施文件、具体命令和局部施工步骤优先通过 JIT Plan 在执行时确定。
-- 通用 Method 的终点是 `Ready to Integrate`；实际 merge / release / deploy 仍服从本仓库授权和策略。
+- Converge 发现局部 Feature 缺口时返回当前 Feature owner；系统性 Requirement / Architecture gap 返回真实长期 owner 或 §2.4 项目级澄清责任，不把 Converge 变成项目级需求 / 架构重建阶段。
+- 通用 Feature Method 的终点是 `Ready to Integrate`；实际 merge / release / deploy 仍服从本仓库授权和策略。
 
 ### 3.1 依赖 PR 与 squash merge
 
@@ -434,6 +479,8 @@ README 只提供 Roadmap 入口，不并行维护第二份易变化的详细项�
 
 `Handoff` **不是 current Skill**。它只是在 `docs/project/execution-continuity-guidelines.md` 所定义条件成立时形成的临时 transition artifact；普通 stage transition、Fresh Context prompt、已完成工作或可以直接从 Repository Authority 恢复的状态均不创建 Handoff Skill / Artifact。
 
+Software Project Clarification 当前同样**不新增 Skill**。它是独立 work kind / Method responsibility；只有未来真实 Consumer Evidence 证明其中某个 procedure 在多个 Repository 中稳定、可独立调用并能减少重复错误时，才重新评估 Skill admission。不能仅因存在 `requirement-clarification` / `architecture-clarification` 阶段就预建同名 Skill。
+
 Skill identity 只适用于具有稳定触发 / 不触发条件、稳定输入、可重复且足够独立的执行过程、可观察输出、明确退出 / Stage Return / Escalation、可独立组合，并且复杂度值得按需加载的能力。以下事实单独存在均不足以创建 Skill：重要、可复用、有若干步骤、会被多个 Skill 消费、Agent 需要读取、或文件位于 `skills/`。
 
 Engineering Discipline、Technology / Verification Profile、Consumer Lifecycle、Repository-local Policy、Guide 与派生发现导航继续由各自 owner 承载，不为了激活方便 Skill 化。Skill supporting resource 只有在形成独立 semantic owner 或被多个职责独立消费时才重新分类；物理上位于 Skill 目录不取得平级所有权。
@@ -482,13 +529,15 @@ Engineering Discipline、Technology / Verification Profile、Consumer Lifecycle�
 
 ### 11.3 execution
 
-真正进入 Planning / Readiness / Execute / Debug / Converge / GitHub Actions 等执行职责时，才读取：
+真正进入项目级 Clarification、Planning / Readiness / Execute / Debug / Converge / GitHub Actions 等执行职责时，才读取：
 
 - 当前 primary Authority；
 - 本文中相应 Method contract；
-- primary Skill / process；
+- primary Skill / process（若该责任存在已采用 Skill）；
 - 当前条件真实触发的 Engineering Discipline、Technology / Verification Profile、External Operation 或 GitHub Actions supporting capability；
 - 当前 Work / code / tests / PR / Actions Evidence。
+
+进入一个 direct responsibility 后，Rule Discovery 的 runtime checkpoint 按 `docs/project/rule-discovery-method.md` 执行：首个有副作用动作前完成当前 task-level discovery；职责或关键 task facts 实质变化后，在下一次有副作用动作前重新发现。CI 的 corpus / tool PASS 不能替代这次 runtime discovery。
 
 不得依赖历史聊天或个人记忆补充未固化的项目事实。ordinary runtime 默认 local-only；本地 stale / missing / ambiguous 先按 `docs/README.md` fail closed，不自动访问 upstream。
 
@@ -548,19 +597,34 @@ Fresh Context prompt 是**定位器（Locator）**，不是第二份项目权威
 
 只有项目负责人明确要求更新 `agentic-dev` baseline 时，才执行 baseline 升级。
 
-升级时：
+核心原则：**Project 不传播，Capability 传播**。升级比较的是 reusable capability semantic delta，不是把 upstream Project state 或目录镜像同步到 Consumer。
+
+升级生命周期：
+
+```text
+Restore Current Consumer
+→ Select Candidate Upstream Baseline
+→ Evaluate Capability Delta
+→ Apply Local Decisions
+→ Refresh Local Capability Instance（仅实际受影响时）
+→ Targeted Revalidation
+→ Close New Evaluated Baseline
+```
+
+具体规则：
 
 1. 重新读取当前 Consumer Authority、Local Discovery Entry、Current Work / GitHub evidence，并确认没有冲突的 active lifecycle；
 2. 精确确认 previous evaluated baseline 与固定 candidate baseline；previous baseline 缺失时不得猜测，按显式 baseline recovery 处理；
 3. 使用 exact compare 识别真实 delta，candidate 评估期间 upstream 新 commit 不自动进入范围；
-4. 区分 Core Method / Principle、Skill / Contract、Engineering Discipline、Technology / Verification Profile、Consumer Lifecycle / Discovery、External Operation、`agentic-dev` project-only、Research / Eval / historical；
-5. 对 Consumer 可能持续消费的变化逐项给出 `adopt / adapt / retain-or-override / replace / reject-or-not-applicable / supersede-or-remove`；
-6. 优先更新现有 Consumer semantic owner；不机械复制 upstream 完整文档、Project state、Research / Eval 或 self-adoption 实例；
-7. 分别维护 evaluated baseline、current local asset provenance / owner、upgrade-only decision history；baseline SHA 不代表所有 upstream 资源已经采用；
-8. 按实际变化同步检查 `AGENTS.md`、本文件、`docs/README.md`、Verification Strategy、Roadmap 与其他受影响 owner；已一致的 Consumer-local 契约不为制造 diff 重复改写；
-9. 验证 state-only / routing-only / execution progressive loading、ordinary runtime local-only、owner / locator / supersede / ambiguity / no-match risk fail-closed、Track A Current State ownership 与相关 Consumer currentness；
-10. 在完成前重新检查 Consumer side drift；只重验受影响 disposition，无法安全判断影响范围时 fail closed；
-11. 只有 Consumer-local projection 验证完成、Blocking=0、Medium=0、Repository integration gate 满足且普通运行能够 local-only 后，才推进 evaluated baseline；
-12. 完成后 ordinary runtime 不默认读取 upgrade history、upstream delta、rejected items 或 `agentic-dev` Project state。
+4. 对相关 Method stage / Gate / completion、Architecture ownership / runtime invariant、Skill procedure、Rule policy / metadata / discovery contract、Tool runtime contract 与 Consumer-local specialization 做语义级比较，而不是逐文件镜像；
+5. 对 Consumer 可能持续消费的变化逐项给出 `retain / adopt / adapt / replace / reject`；需要迁移或替换时明确旧 owner 退出，避免双 Authority；
+6. upstream Project Charter / Capability Profile / Roadmap / Evolution 只可作为 provenance / design context，不作为需要同步的 upgrade object；Research / Eval / historical / self-adoption state 也不传播为 Consumer Project fact；
+7. 只把已接受决定写入 Consumer-local canonical owner；不得用 upstream 文件覆盖未重新裁决的 local adaptation；
+8. 只有 accepted delta 实际改变 Method selector、Skill discovery、Rule root / Discovery Tool、Human / Agent entry 或其他 local instance pointer 时，才刷新 Consumer-local capability instance；不得为了“同步最新”机械复制 upstream Project Capability Profile；
+9. 按真实 semantic delta 做 targeted revalidation，例如 Method entry / transition、Skill behavior、Rule discovery / fail-closed、Consumer-local policy、local runtime entry、ordinary runtime upstream decoupling 与受影响产品 / 工程行为；不得用语义变化前的旧 Evidence 支撑新 claim；
+10. 分别维护 evaluated baseline、current local asset provenance / owner、upgrade-only decision history；baseline SHA 不代表所有 upstream 资源已经采用；
+11. 完成前重新检查 Consumer side drift；只重验受影响 disposition，无法安全判断影响范围时 fail closed；
+12. 只有 Consumer-local Project / capability owners 自洽、ordinary runtime 不依赖 upstream、upstream Project state 未泄漏为 Consumer Current Authority、所有受影响 claim 有当前 Evidence、Blocking=0、Medium=0 且 Repository integration gate 满足时，才推进 evaluated baseline；
+13. 完成后 ordinary runtime 不默认读取 upgrade history、upstream delta、rejected items 或 `agentic-dev` Project state。
 
 任一关键门禁失败、中断或存在未解决 Blocking / Medium：保持 previous evaluated baseline，不通过更新一个 baseline pointer 掩盖部分完成。
