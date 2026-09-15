@@ -6,7 +6,7 @@ relations:
   specifications:
     - docs/specifications/public-site.md
     - docs/specifications/party.md
-    - docs/specifications/page-content-architecture.md
+    - docs/specifications/page-content.md
   architecture:
     - docs/architecture/cms-architecture.md
     - docs/architecture/decisions/ADR-0002-public-site-multi-entry-modular-spa.md
