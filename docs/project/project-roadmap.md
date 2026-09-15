@@ -8,13 +8,13 @@
 
 ```text
 dygapp/agentic-dev
-Previous Evaluated Baseline: 1c8cdfea9ecf23ef33ffab20eec3c93679fd4578
-Current Evaluated Baseline: 8e7e94eff62b958b2044407cf6d85de3dde48ee9
+Previous Evaluated Baseline: 8e7e94eff62b958b2044407cf6d85de3dde48ee9
+Current Evaluated Baseline: ed1a4446f0430890e7ad39673ac9c2e341e6a829
 Historical V4 Foundation Projection: 3e0b2f5a29caeb344da79f8c96ebffbeb5c2b0cb
 Capability Milestone: baseline-2026-09-04-engineering-capability@5be2e6aad29b2be6b8535b3690daf3533ee22a46
 ```
 
-Evaluated Baseline 只记录本 Consumer 最近完成 exact compare / adoption verification 的 upstream frontier，不表示对应 upstream Project state、Research / Eval、self-adoption instance 或全部资源被 Consumer 采用。当前长期资产的真实 owner / provenance 继续由 Consumer-local Authority 单点承担；最近一次 `1c8cdfea... -> 8e7e94ef...` 的 upgrade-only disposition / validation history 见 `docs/project/agentic-dev-rule-granularity-baseline-upgrade-evidence.md`。此前 `2fe193... -> 1c8cdfea...` 与 `d9fad0da... -> 2fe193...` 的历史 evidence 继续保留。普通 Fresh Context 不默认读取这些 upgrade evidence。
+Evaluated Baseline 只记录本 Consumer 最近完成 exact compare / adoption verification 的 upstream frontier，不表示对应 upstream Project state、Research / Eval、self-adoption instance 或全部资源被 Consumer 采用。当前长期资产的真实 owner / provenance 继续由 Consumer-local Authority 单点承担；最近一次 `8e7e94ef... -> ed1a4446...` 的 upgrade-only disposition / validation history 见 `docs/project/archive/agentic-dev-ed1a-baseline-upgrade-evidence.md`。此前 `1c8cdfea... -> 8e7e94ef...`、`2fe193... -> 1c8cdfea...` 与 `d9fad0da... -> 2fe193...` 的历史 evidence 继续保留。普通 Fresh Context 不默认读取这些 upgrade evidence。
 
 普通开发优先从 Consumer-local `AGENTS.md`、根 `README.md` 到达 `docs/README.md` Local Discovery Entry，再按 state-only / routing-only / execution 选择最小必要 owner。普通运行不自动访问 `agentic-dev` upstream；本地 locator / owner / supersede / ambiguity 失败时先 local fail closed。Planning / Requirement Candidate 在 `slice-work` 前不具有 Execution Unit 身份；只有 `slice-work` 形成 Candidate Execution Unit 且 `readiness-check` PASS 后才允许进入 Execute。Roadmap 顺序、Issue 编号、EU 名称或模型评审结果都不能替代 Readiness。
 
@@ -36,6 +36,7 @@ Evaluated Baseline 只记录本 Consumer 最近完成 exact compare / adoption v
 | agentic-dev V3-08 Track B baseline adoption | **durable method upgrade** | evaluated upstream frontier 从 `d9fad0da...` 推进到 `2fe19303...`；采用 Consumer Lifecycle / Resource Model / Local Discovery / Skill identity 语义，现有 Consumer owner 保留，Reviewed Discovery Map / Runtime View 不建立；不授予产品 Execute Authority |
 | agentic-dev V3 Closure baseline adoption | **durable method upgrade** | evaluated upstream frontier 从 `2fe19303...` 推进到 `1c8cdfea...`；只新增采用条件性临时 Handoff lifecycle，继续保留 Consumer-local Verification / Discovery / Skills owner；upstream V3 Project / Independent Review / Closure state 不继承；不授予产品 Execute Authority |
 | agentic-dev Rule Granularity baseline adoption | **durable method upgrade** | evaluated upstream frontier 从 `1c8cdfea...` 推进到 `8e7e94ef...`；Consumer Rule 15 → 13，采用 task-level granularity 与 `technology/vue/` human IA，保留 local discovery / specialization，不机械复制 upstream 27 Rules；不授予产品 Execute Authority |
+| agentic-dev Software Clarification / Rule Runtime Checkpoint baseline adoption | **durable method upgrade** | evaluated upstream frontier 从 `8e7e94ef...` 推进到 `ed1a4446...`；采用 Software Project Clarification 的项目级选择边界、具体 Feature / change 的 AI Development 边界与 direct-responsibility Rule Discovery checkpoint；Model Collaboration 已评估但未建立 Consumer runtime instance；不授予产品 Execute Authority |
 | Deferred problem Article review | deferred | 230 篇 problem Article 与 6 篇 source-defect Article 保持独立 evidence / client-review backlog，不阻断其他路线 |
 | Repository Split Readiness Assessment | deferred | 四层 boundary 已闭环，但 Assessment 仍独立后置 |
 | Issues #57 / #59 / #60 其他候选 | 规划层保留 | Public Rendering、Browser Compatibility、Loading / Mobile Review 等保持独立 Planning / Review 边界 |
@@ -196,6 +197,6 @@ Issue #137 / Page Content Architecture 已完成 Requirement / Specification / T
 - Main ListItem Site Package bootstrap：EU-53 completed Work Evidence；
 - Rich Text V2 mature editor adoption：`docs/work/archive/eu54-rich-text-v2-mature-editor-adoption.md`；
 - Page Content Architecture / Structured Page Card adoption：`docs/work/archive/eu55-structured-page-card-adoption.md` + closed Issue #137；
-- agentic-dev baseline upgrade history：`docs/project/agentic-dev-v3-08-track-b-evidence.md` + `docs/project/agentic-dev-v3-closure-baseline-upgrade-evidence.md` + `docs/project/agentic-dev-rule-granularity-baseline-upgrade-evidence.md`；
+- agentic-dev baseline upgrade history：`docs/project/agentic-dev-v3-08-track-b-evidence.md` + `docs/project/agentic-dev-v3-closure-baseline-upgrade-evidence.md` + `docs/project/agentic-dev-rule-granularity-baseline-upgrade-evidence.md` + `docs/project/archive/agentic-dev-ed1a-baseline-upgrade-evidence.md`；
 - Party canonical migration：对应 `data-migrations/party/**`、PR / Actions / Issue Current Evidence；
 - 详细 historical implementation / verification 不在本 Roadmap 重复维护。
