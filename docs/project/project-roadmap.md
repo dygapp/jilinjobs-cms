@@ -8,7 +8,7 @@ status: active
 
 ## 角色
 
-本 Roadmap 只维护 `jilinjobs-cms` 的**当前治理 / 产品演进方向、durable planning boundary 与 deferred direction**。它不拥有产品 Requirement、Domain、Architecture 正文，不保存已完成 Execution Unit 的实施流水，也不缓存 `Current Ready Execution Unit`、Readiness、exact Head 或 Actions 结果。
+本 Roadmap 只维护 `jilinjobs-cms` 的**当前治理 / 产品演进方向、durable planning boundary 与 deferred direction**。它不拥有产品 Requirement、Domain、Architecture 正文，不保存已完成 Execution Unit 的实施流水，也不缓存 `Current Ready Execution Unit`、Readiness、exact Head、Actions 结果或可由其他 canonical owner 唯一恢复的数据 inventory。
 
 Current Execution Lifecycle 统一从 `docs/work/current/README.md` 恢复；已完成里程碑的稳定摘要由 `docs/project/project-evolution.md` 持有；具体历史 Evidence 留在 Git / Issue / PR / Actions、`docs/work/archive/` 与各类 archive。
 
@@ -43,7 +43,7 @@ Roadmap 顺序、Issue 编号或候选名称均不授予 Execute Authority。Fea
 - **Issue #59 — Browser Compatibility & Runtime Guard**：后置兼容性 / runtime governance candidate。
 - **Issue #57 — Public Rendering Architecture**：仅在未来 Feature 暴露真实长期 renderer architecture driver 时进入；不因历史 Issue 存在自动设计。
 - **Issue #77 — CMS / Site Package / Historical Migration / Public Renderer Architecture**：其有效长期四层边界已经收敛到 `docs/architecture/cms-architecture.md`；Issue #77 继续作为历史 planning / decision / evidence locator，而不是第二份 Current Architecture owner。未来只有新的真实 driver 才重新进入 Requirement / Architecture decision lifecycle。
-- **Deferred Article / source-defect review**：230 篇 problem Article 与 6 篇 source-defect Article 的独立 later-review / customer-confirmation candidate；不得静默修复、猜测、删除或自动导入。
+- **Deferred Article / source-defect review**：当前 Historical Migration workspace 中明确标记为 deferred / source-defect 的 Article 后续复核与客户确认 candidate；精确数量、分类和 digest 由对应 migration manifest / reports 持有，Roadmap 不复制第二份数据清单。不得静默修复、猜测、删除或自动导入。
 - **Repository Split Readiness Assessment**：deferred / independent；只有当前边界与真实工程成本产生足够 Evidence 后重新评估。
 
 Issue #137 / EU-55 Page Content Architecture 已完成，不属于开放 Planning Candidate；其稳定历史摘要进入 Project Evolution，当前产品语义已归位到现行 Domain / Architecture / Specification owner。
