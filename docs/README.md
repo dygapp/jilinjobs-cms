@@ -29,14 +29,7 @@
 
 ## 文档语言规范
 
-Current / Partially Current 文档必须遵循根 `AGENTS.md` 的“中文主述、必要英文精确锚定”规则。
-
-- 面向人的标题、章节、状态说明、背景、需求、规格、技术方案、验证说明与结论以中文为主；
-- 代码标识符、类 / 方法 / 字段名、文件路径、命令、API / URL、协议 / 标准、枚举值与固定技术专名保持原生形式；
-- `CURRENT`、`READY`、`COMPLETED`、`SUPERSEDED` 等状态标识可以保留，但必须由中文正文解释；
-- 不允许 Current 文档出现纯英文主体、英文占主导的长篇叙述或纯英文一级标题；
-- `SUPERSEDED` / `HISTORICAL_EVIDENCE` 以证据保真优先，不因语言形式重写历史正文；重新晋升为 Current 前必须满足当前语言规范；
-- 语言调整不得改变 Product Goal、Scope、Business Boundary、User-visible Behavior、Architecture Decision 或技术契约。
+Current / Partially Current 文档必须遵循 `rule:human-facing-content-integrity`：中文主述、精确机器标识、正式概念身份不被表达重写改变。Historical Evidence 以证据保真优先，重新晋升为 Current 前先完成 semantic reconciliation。
 
 自动约束由 `scripts/verify-docs-governance.mjs` 与 `.github/workflows/docs-governance.yml` 执行。不得通过扩大历史例外列表隐藏仍属于 Current Authority 的问题。
 
@@ -44,12 +37,12 @@ Current / Partially Current 文档必须遵循根 `AGENTS.md` 的“中文主述
 
 | 区域 | 责任 | Fresh Context 默认 |
 |---|---|---|
-| `docs/project/` | Consumer-local Project Knowledge：Capability Profile、Roadmap 与稳定项目级 owner | 按任务读取 |
+| `docs/project/` | Consumer-local Project Knowledge：Capability Profile、Roadmap / Evolution 等稳定项目级 owner | 按任务读取 |
 | `docs/methods/` | Consumer-local canonical Method | selector 命中后读取一个 |
 | `docs/architecture/` | 长期 capability / product Architecture 与 ADR | 按责任读取 |
 | `docs/rules/` | Discoverable Consumer-local Rule | 只通过 Rule Discovery 读取命中正文 |
 | `skills/` | Consumer-local Skill corpus | 责任明确且需要独立 Procedure 时读取 |
-| `docs/requirements/` | Current / Partially Current Product Requirement Authority | 读取当前任务相关项 |
+| `docs/requirements/` | Current / Partially Current Product / Domain Requirement Authority | 读取当前任务相关项 |
 | `docs/specifications/` | Current / Partially Current Feature / change WHAT / WHY contracts | 读取当前任务相关项 |
 | `docs/technical/` | Current / Partially Current Feature Technical Authority、verification strategy 与当前待治理的历史技术文档 | 读取当前任务相关项 |
 | `docs/work/current/README.md` | Current Execution Lifecycle Locator | state / execution lifecycle 任务读取 |
@@ -76,7 +69,7 @@ Bootstrap / long-lived surface 只维护稳定职责与 locator：
 - 根 `README.md`：Project Charter equivalent / 稳定 scope；
 - 本文件：Local Discovery Entry / Documentation IA；
 - `docs/project/project-capability-profile.md`：Repository-local capability instance 与 Method selector；
-- `docs/project/project-roadmap.md`：持久路线、长期边界、durable milestone；
+- `docs/project/project-roadmap.md`：持久路线与 Planning directions；
 - `docs/work/README.md`：Execution lifecycle contract；
 - `docs/work/current/README.md`：Current Execution Lifecycle Locator。
 
@@ -99,10 +92,11 @@ GitHub PR / Branch / Actions 对其各自原生瞬时状态负责；这不构成
 - Work lifecycle：`docs/work/README.md`
 - Current execution locator：`docs/work/current/README.md`
 - Durable Roadmap：`docs/project/project-roadmap.md`
-- Execution continuity：`docs/project/execution-continuity-guidelines.md`（Issue #153 后续继续迁移到真实 owner）
-- Execution scope guardrails：`docs/project/execution-scope-guardrails.md`（Issue #153 后续继续迁移到真实 owner）
-- Git commit governance：`docs/project/git-commit-guidelines.md`（Issue #153 后续继续迁移到真实 owner）
-- Document authoring governance：`docs/project/document-authoring-guidelines.md`（Issue #153 后续继续迁移到真实 owner）
+- Execution continuity：`docs/rules/repository/execution-continuity.md`
+- Read-only state inspection：`docs/rules/repository/read-only-state-inspection.md`
+- High-cost runtime activation：`docs/rules/verification/high-cost-runtime-activation.md`
+- Git commit governance：`docs/rules/repository/git-commit-governance.md`
+- Human-facing content / document authoring integrity：`docs/rules/repository/human-facing-content-integrity.md`
 - Human review feedback lifecycle：`docs/methods/review-feedback-cycle.md`
 - Method experiment lifecycle：`docs/methods/method-experiment.md`
 - Rule Discovery runtime：`docs/architecture/rule-discovery.md` + `tools/rule-discovery/rule_discovery.py`
@@ -120,6 +114,10 @@ GitHub PR / Branch / Actions 对其各自原生瞬时状态负责；这不构成
 - `docs/project/rule-discovery-method.md`
 - `docs/project/review-feedback-cycle.md`
 - `docs/project/method-validation-evidence.md`
+- `docs/project/execution-continuity-guidelines.md`
+- `docs/project/execution-scope-guardrails.md`
+- `docs/project/git-commit-guidelines.md`
+- `docs/project/document-authoring-guidelines.md`
 
 它们必须在 Foundation ownership / locator 迁移完成后删除，不能进入最终长期结构。
 

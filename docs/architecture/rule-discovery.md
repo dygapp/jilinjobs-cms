@@ -59,17 +59,19 @@ Method phase token 只能来自当前 selected Method canonical owner；不能�
 
 ## 输出与渐进披露
 
-成功结果只暴露：
+成功结果只暴露 locator，例如：
 
 ```json
-{"status":"ok","scanned":13,"candidate_count":1,"candidates":[{"id":"rule:example","path":"docs/rules/..."}]}
+{"status":"ok","scanned":100,"candidate_count":1,"candidates":[{"id":"rule:example","path":"docs/rules/..."}]}
 ```
+
+示例中的 `scanned` 不是本仓库当前 Rule 数量；实际 inventory 由 Rule corpus 与 Tool lint 机械得到，不由 Architecture 缓存。
 
 ordinary runtime 只能从 `candidates[].path` 获得 Rule locator。不得通过目录树、`find`、`rg --files`、IDE index 或 Human README 枚举未命中 Rule。candidate 只是“值得读取”，最终适用性仍由正文语义确认。
 
 ## Consumer-local adaptation
 
-当前 Consumer Tool contract 由 Project Capability Profile 指向。当前 `docs/rules/**` 下每个 `.md` 都属于 discoverable Rule；本地 Tool 暂不提供 Rule-root `README.md` 保留例外，因此 Human navigation 继续由 `docs/README.md` 等 Rule root 外入口承担。只有显式修改本地 Tool contract 并完成验证后才可改变这一点。
+当前 Consumer Tool contract 由 Project Capability Profile 指向。当前 `docs/rules/**` 下每个 `.md` 都属于 discoverable Rule；本地 Tool 暂不提供 Rule-root `README.md` 保留例外，因此 Human navigation 继续由 `docs/README.md` 等 Rule root 外入口承担。只有显式修改本地 Tool contract并完成验证后才可改变这一点。
 
 ## Fail-closed
 

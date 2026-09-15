@@ -33,17 +33,17 @@ class RuntimeActivationRegressionTests(unittest.TestCase):
         self.assertIn("首个有副作用动作前必须完成本次 task-level discovery", agents)
         self.assertIn("其 PASS 不得替代 ordinary runtime invocation", agents)
 
-    def test_local_method_defines_responsibility_transition_checkpoint(self):
-        method = (
-            REPO_ROOT / "docs/project/rule-discovery-method.md"
+    def test_rule_discovery_architecture_defines_responsibility_transition_checkpoint(self):
+        contract = (
+            REPO_ROOT / "docs/architecture/rule-discovery.md"
         ).read_text(encoding="utf-8")
-        self.assertIn("首个有副作用动作前必须完成一次 task-level discovery", method)
-        self.assertIn("不得替代 ordinary runtime invocation", method)
-        self.assertIn("旧 candidate set 不跨职责永久有效", method)
+        self.assertIn("首个有副作用动作前必须完成 task-level discovery", contract)
+        self.assertIn("必须在下一次有副作用动作前重新发现", contract)
+        self.assertIn("不替代当前 Agent 的 live discovery", contract)
 
     def test_software_project_clarification_projection_is_bounded(self):
         method = (
-            REPO_ROOT / "docs/project/development-method.md"
+            REPO_ROOT / "docs/methods/software-project-clarification.md"
         ).read_text(encoding="utf-8")
         for token in (
             "establish-context",
@@ -53,15 +53,16 @@ class RuntimeActivationRegressionTests(unittest.TestCase):
             "Clarified Project Context Ready",
         ):
             self.assertIn(token, method)
-        self.assertIn("不等于** Specification created", method)
-        self.assertIn("当前没有 active project-clarification lifecycle", method)
+        self.assertIn("不等于 Specification / Execution Unit 已创建", method)
+        self.assertIn("多个当前或预期 Feature", method)
 
-    def test_model_collaboration_is_not_activated_by_baseline_upgrade(self):
-        method = (
-            REPO_ROOT / "docs/project/development-method.md"
+    def test_model_collaboration_is_not_activated_by_current_consumer_profile(self):
+        profile = (
+            REPO_ROOT / "docs/project/project-capability-profile.md"
         ).read_text(encoding="utf-8")
-        self.assertIn("reject / not-applicable for current instance", method)
-        self.assertIn("不建立 runtime / provider", method)
+        self.assertIn("不采用、不启用", profile)
+        self.assertIn("persistent runtime config：none", profile)
+        self.assertIn("provider / delegation instance：none", profile)
 
 
 if __name__ == "__main__":

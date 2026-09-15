@@ -37,7 +37,11 @@ class RuleDiscoveryTests(unittest.TestCase):
         ids = {item["id"] for item in payload["candidates"]}
         self.assertEqual(
             ids,
-            {"rule:human-facing-content-integrity", "rule:implementation-discipline"},
+            {
+                "rule:execution-continuity",
+                "rule:human-facing-content-integrity",
+                "rule:implementation-discipline",
+            },
         )
         for item in payload["candidates"]:
             self.assertEqual(set(item), {"id", "path"})
@@ -55,6 +59,7 @@ class RuleDiscoveryTests(unittest.TestCase):
         self.assertEqual(ids, [
             "rule:evidence-claim-reuse-across-commits",
             "rule:evidence-type-must-match-claim",
+            "rule:execution-continuity",
             "rule:integration-state-closure-review",
         ])
 
@@ -69,6 +74,7 @@ class RuleDiscoveryTests(unittest.TestCase):
         ids = {item["id"] for item in payload["candidates"]}
         self.assertIn("rule:vue-component-authoring", ids)
         self.assertIn("rule:implementation-discipline", ids)
+        self.assertIn("rule:execution-continuity", ids)
 
     def test_known_empty_dimension_excludes_restricted_rules(self):
         payload = self.discover({
@@ -81,6 +87,7 @@ class RuleDiscoveryTests(unittest.TestCase):
         ids = {item["id"] for item in payload["candidates"]}
         self.assertNotIn("rule:vue-component-authoring", ids)
         self.assertIn("rule:implementation-discipline", ids)
+        self.assertIn("rule:execution-continuity", ids)
 
     def test_nested_technology_directory_does_not_change_matching_semantics(self):
         rule_text = """---
@@ -154,8 +161,41 @@ scope:
             "risks": [],
         })
         ids = {item["id"] for item in payload["candidates"]}
-        self.assertEqual(ids, {"rule:safe-external-write"})
+        self.assertEqual(ids, {"rule:execution-continuity", "rule:safe-external-write"})
         self.assertNotIn("rule:post-write-state-verification", ids)
+
+    def test_read_only_state_inspection_is_independently_discoverable(self):
+        payload = self.discover({
+            "phases": None,
+            "activities": ["status-inspection"],
+            "technologies": [],
+            "artifacts": ["repository"],
+            "risks": [],
+        })
+        ids = {item["id"] for item in payload["candidates"]}
+        self.assertEqual(ids, {"rule:read-only-state-inspection"})
+
+    def test_git_commit_governance_is_independently_discoverable(self):
+        payload = self.discover({
+            "phases": None,
+            "activities": [],
+            "technologies": [],
+            "artifacts": ["git-commit"],
+            "risks": [],
+        })
+        ids = {item["id"] for item in payload["candidates"]}
+        self.assertEqual(ids, {"rule:git-commit-governance"})
+
+    def test_high_cost_runtime_activation_is_independently_discoverable(self):
+        payload = self.discover({
+            "phases": None,
+            "activities": [],
+            "technologies": [],
+            "artifacts": ["review-environment"],
+            "risks": [],
+        })
+        ids = {item["id"] for item in payload["candidates"]}
+        self.assertEqual(ids, {"rule:high-cost-runtime-activation"})
 
     def test_retired_rule_ids_are_absent_from_current_corpus(self):
         retired = {
@@ -214,7 +254,7 @@ scope:
             rule_roots=[Path("docs/rules")],
             skills_root=Path("skills"),
         )
-        self.assertEqual(payload, {"status": "ok", "rules": 13, "skills": 9})
+        self.assertEqual(payload, {"status": "ok", "rules": 17, "skills": 11})
 
 
 if __name__ == "__main__":
