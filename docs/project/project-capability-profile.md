@@ -94,12 +94,13 @@ ordinary Agent 使用 Agent Skills 原生 discovery，根据 `SKILL.md` 的 `nam
 当前 Project Knowledge 的稳定入口：
 
 - Project Charter equivalent：根 `README.md`；
+- Project directory boundary / Human navigation：`docs/project/README.md`；
 - Project Capability Profile：本文件；
 - Project Roadmap：`docs/project/project-roadmap.md`；
-- Current Execution Lifecycle：`docs/work/README.md` + `docs/work/current/README.md`；
-- Project Evolution：本轮 Foundation Rebuild 后续从当前 Roadmap / historical planning 中提炼独立 owner；在完成前不得把 Roadmap 中的历史流水直接视为新的 capability / product Authority。
+- Project Evolution：`docs/project/project-evolution.md`；
+- Current Execution Lifecycle：`docs/work/README.md` + `docs/work/current/README.md`。
 
-Project Knowledge / Capability 边界由 `docs/architecture/project-knowledge.md` 持有。
+Project Knowledge / Capability 边界由 `docs/architecture/project-knowledge.md` 持有。Roadmap 只拥有 future directions；Evolution 只拥有稳定历史摘要；两者都不取得产品 Requirement / Architecture 或 Current Execute Gate 的第二所有权。
 
 ## 8. Ordinary Runtime
 
