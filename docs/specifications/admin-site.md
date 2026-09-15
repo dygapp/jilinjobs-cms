@@ -3,7 +3,7 @@ id: specification-admin-site
 title: CMS 管理端产品规格
 type: specification
 status: accepted
-version: "V2.0"
+version: "V2.1"
 relations:
   requirements:
     - docs/requirements/information-publishing.md
@@ -199,13 +199,17 @@ source type 创建后不可切换；ARTICLE relation 创建后不能普通改成
 
 静态资源管理至少支持：
 
-- 浏览资源；
-- 图片预览；
-- 上传 / 明确替换；
-- ordinary delete；
+- 按目录浏览资源；
+- 图片预览以及打开当前公开文件；
+- 上传新资源；
+- 对明确目标执行替换；
+- 对非受保护资源执行 ordinary delete；
+- 删除后的资源进入可识别回收区，并可以恢复到原路径；
 - 显示受保护状态。
 
-受保护资源普通删除必须明确拒绝。系统不能证明全部 Rich HTML / CSS / JS 引用时，普通资源删除仍应提示残余引用风险。
+受保护资源普通删除必须明确拒绝，但允许在确认影响后通过明确 replace flow 更新。系统不能证明全部 Rich HTML / CSS / JS 引用时，普通资源删除和替换仍应提示残余引用风险。
+
+ordinary delete 不等于立即不可恢复的物理销毁；当前操作语义是先进入回收区。恢复失败、原路径冲突或 Backend 拒绝必须显式反馈，不能静默覆盖已有资源。
 
 改变业务对象引用不自动物理删除旧文件。
 
@@ -232,6 +236,7 @@ Admin 必须显式呈现：
 - required image/content missing；
 - invalid typed SiteProperty；
 - protected resource delete；
+- StaticResource delete / replace / restore conflict；
 - unsupported Page content profile/schema；
 - Backend conflict / fail-closed result。
 
@@ -250,7 +255,7 @@ Admin 必须显式呈现：
 - CmsList source identity 与 image policy；
 - Advertisement `NO_LINK` / valid period；
 - SiteProperty group / typed value；
-- StaticResource preview / protected delete；
+- StaticResource browse / preview / replace / protected delete / recycle / restore；
 - 用户界面不长期展示 Backend / Database / deployment / Requirement 实现说明；
 - 必要风险和 validation 信息没有因“简化提示”而消失；
 - Backend / Admin / relevant Integrated Browser regression。
