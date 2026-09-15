@@ -112,7 +112,7 @@ Current Evaluated Baseline 只表示本 Consumer 已经完成 exact upstream com
 
 `3e0b2f5a...` 继续只是此前 V4-08 Consumer validation 的 historical Foundation projection，不构成 `ed1a4446...` 的 ancestry 或第二个 current baseline。
 
-本轮 accepted reusable change 包括：采用 bounded 的 Software Project Clarification 作为 Consumer-local 可选项目级 Method，用于多个 Feature 共同受长期 Requirement / Architecture Context 缺失、冲突或需要重建而阻塞的场景；同步收紧 ordinary Feature Development 的进入 / 返回边界；采用 direct-responsibility 级 Rule Discovery checkpoint。Model Collaboration reusable capability 本轮**不采用、不启用**，不建立本地 runtime/config/tier mapping；upstream Project Roadmap、Evolution、Research、Guide instance 与 self-adoption state 不继承。Consumer Rule corpus 保持 13 条、Skill 保持 9 个。
+该次 baseline-upgrade closure 采用 bounded 的 Software Project Clarification、收紧 ordinary Feature Development 的进入 / 返回边界，并采用 direct-responsibility 级 Rule Discovery checkpoint；Model Collaboration reusable capability 当时**不采用、不启用**，upstream Project Roadmap、Evolution、Research、Guide instance 与 self-adoption state 不继承。该次 upgrade 没有因为 upstream 差异机械扩张 Consumer Rule / Skill corpus；后续 Foundation Rebuild 的当前 capability instance 以 `docs/project/project-capability-profile.md`、实际 Consumer-local corpus 与 Rule Discovery lint 为准，本文件不维护 Current Rule / Skill 数量。
 
 当前采用的方法不在普通开发中直接运行 upstream 文档，而是固化为 Consumer-local 一等资源：
 
