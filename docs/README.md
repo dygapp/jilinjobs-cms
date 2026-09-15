@@ -1,168 +1,71 @@
 # 文档权威与本地发现入口
 
-本文件是 `jilinjobs-cms` 的文档信息架构（Documentation Information Architecture）入口，也是 Consumer 普通运行的 **本地发现入口（Local Discovery Entry）**。它只提供稳定 Authority / resource locator、按需加载边界与本地失败回退，不替代 `AGENTS.md`、产品 Requirement、Roadmap、Work lifecycle、Skill procedure 或 GitHub Current Evidence，也不缓存第二份 Current State truth。
-
-## 本地发现入口
-
-普通运行从薄 Bootstrap 到达本文件后，先按当前任务选择最小正确读取路径：
-
-- **state-only**：读取 `docs/work/current/README.md`，并与当前 Open execution PR / branch 及必要 GitHub Current Evidence 协调；只询问 Current Execution State 时，不机械加载完整 Roadmap、Development Method、Skills 或 `agentic-dev` upstream。
-- **routing-only**：根据下方 Current Authority 入口定位 **一个 primary responsibility + 最小 supporting locator**；只为判断职责或下一阶段时，不加载完整 Skill procedure。
-- **execution**：先定位当前 primary owner，再按 `docs/project/development-method.md` 加载真正执行所需的 primary Skill / Engineering Capability 与必要 supporting authority；不得因为资源存在就全量预加载。
-
-当前 Repository 的稳定入口、资源原生身份与现有 owner 足以支持上述发现路径；普通运行不需要持久化 Reviewed Discovery Map，也不需要 Runtime View。后续只有出现持续的跨资源正规化 / 发现成本证据并经独立治理决定后，才重新评估是否增加派生发现机制。
-
-如果 locator / source 缺失、Current owner 不明确、多个 primary responsibility 无法消歧、override / supersede 关系冲突，或 no-match 但已知 Governance / Verification risk 仍存在，则 **fail closed**：停止依赖当前发现结果，回到本仓库稳定 Authority Entry，按问题扩大最小本地读取并重新定位。普通运行不得自动访问 `dygapp/agentic-dev` 来修补本地发现缺口。
+本文件是 `jilinjobs-cms` 的 Documentation Information Architecture 入口，也是 Consumer 普通运行的 **Local Discovery Entry**。它只提供稳定 Authority / resource locator、按需加载边界与本地失败回退，不替代 `AGENTS.md`、产品 Requirement、Project Roadmap、Work lifecycle、Method / Skill procedure 或 GitHub Current Evidence，也不缓存第二份 Current State truth。
 
 ## Fresh Context 恢复顺序
 
 1. 根 `AGENTS.md`：Repository Governance、Authority Boundary、Fresh Context、Human Escalation 与 GitHub 操作授权；
-2. 根 `README.md`：稳定项目入口、范围与 Current State locator；
-3. 本文件：Local Discovery Entry / Documentation Authority Map；
-4. `docs/work/current/README.md` + 当前 Open execution PR / Branch：解析是否存在 Ready / active Execution Unit；
-5. 如果当前任务只是 state-only 且已经无歧义得到所需状态，在此停止；否则按当前目标继续读取必要 owner；
-6. Planning / durable route 任务按需读取 `docs/project/project-roadmap.md`；方法 / execution routing 任务按需读取 `docs/project/development-method.md`；
-7. 当前任务直接相关的 Current Requirement / Specification / Technical / Architecture Authority；
-8. 当前 controlling Issue、PR / Actions 与其他 Current Evidence；只有真正执行某项 Skill responsibility 时才加载对应 Skill 语义。
+2. 根 `README.md`：稳定项目范围与入口；
+3. 本文件：Local Discovery Entry / Documentation IA；
+4. `docs/work/current/README.md` + 当前 Open execution PR / Branch：解析 Current Execution Lifecycle；
+5. 如果任务只是 state-only 且状态已无歧义，在此停止；
+6. Planning / durable route 按需读取 `docs/project/project-roadmap.md`；Method / execution routing 读取 `docs/project/project-capability-profile.md`，再按 selector 加载单个 canonical Method；
+7. 当前任务直接相关的 Requirement / Domain / Architecture / Specification / Technical Authority；
+8. 当前 controlling Issue、PR / Actions 与其他 Current Evidence；只有真正执行某项 Skill responsibility 时才加载对应 `SKILL.md`。
 
-`docs/work/current/README.md` 只拥有 **Current Execution Lifecycle** 的 Repository locator 语义，不拥有 Planning Candidate 排序或完整 Roadmap。其 `NONE` 只有在完成 Open execution PR / branch 与必要 Current Evidence 协调后，才能用于 state-only 安全停止；不得从 `NONE` 推导“没有 Planning Candidate”。详细 Entry / Exit / fail-closed 契约见 `docs/work/README.md`。
+普通运行不得自动访问 `dygapp/agentic-dev` 修补本地发现缺口。若 locator / source 缺失、Current owner 不明确、多个 primary responsibility 无法消歧或 Authority 冲突，必须 fail closed，扩大最小本地读取并重新定位。
 
-`archive/**` 默认不在 Fresh Context Current Authority 恢复集合中。只有当前 Authority、追溯 / 审计任务或 Verification 明确要求时才读取 archive。
-
-## 文档语言规范
-
-Current / Partially Current 文档必须遵循根 `AGENTS.md` 的“中文主述、必要英文精确锚定”规则。
-
-- 面向人的标题、章节、状态说明、背景、需求、规格、技术方案、验证说明与结论以中文为主；
-- 代码标识符、类 / 方法 / 字段名、文件路径、命令、API / URL、协议 / 标准、枚举值与固定技术专名保持原生形式；
-- `CURRENT`、`READY`、`COMPLETED`、`SUPERSEDED` 等状态标识可以保留，但必须由中文正文解释；
-- 不允许 Current 文档出现纯英文主体、英文占主导的长篇叙述或纯英文一级标题；
-- `SUPERSEDED` / `HISTORICAL_EVIDENCE` 以证据保真优先，不因语言形式重写历史正文；它们必须明确退出 Current Authority，重新晋升为 Current 前必须先完成中文化；
-- 语言调整不得改变 Product Goal、Scope、Business Boundary、User-visible Behavior、Architecture Decision 或技术契约。
-
-自动约束由 `scripts/verify-docs-governance.mjs` 与 `.github/workflows/docs-governance.yml` 执行。检查覆盖 Current 文档的中文主语言、本地 `docs/*.md` 引用完整性和 Current State 重复真值风险；不得通过扩大历史例外列表来隐藏仍然属于 Current Authority 的问题。
+`archive/**` 默认不参与 Fresh Context。只有当前 Authority、追溯 / 审计任务或 Verification 明确要求时才定向读取。
 
 ## 文档区域
 
 | 区域 | 责任 | Fresh Context 默认 |
 |---|---|---|
-| `docs/project/` | Roadmap、Development Method、Planning Authority、长期项目治理与 supporting method notes | 读取当前任务相关项 |
-| `docs/requirements/` | Current / Partially Current Product Requirement Authority | 读取当前任务相关项 |
-| `docs/specifications/` | Current / Partially Current WHAT / WHY contracts | 读取当前任务相关项 |
-| `docs/technical/` | Current / Partially Current Technical Authority、plans、verification strategy | 读取当前任务相关项 |
-| `docs/architecture/` | 长期 Architecture Decisions / ADR | 按任务读取 |
-| `docs/work/current/README.md` | Current Execution Lifecycle Locator；Ready / active Unit 定位与 `NONE` 语义 | state / execution lifecycle 任务读取 |
-| `docs/work/current/*.md` | 已通过 Readiness、仍处于 Execute / Verification / Integration / Post-Integration closure 的 active work artifact | locator 指向或 Open execution work 存在时读取 |
-| `docs/work/archive/` | 已完成 Execution Units、历史计划、执行与验证 evidence | 默认不读取 |
-| 各分类 `archive/` | `SUPERSEDED` / `HISTORICAL_EVIDENCE` 文档 | 默认不读取 |
+| `docs/project/` | Consumer-local Project Knowledge：Capability Profile、Roadmap、Evolution | 按任务读取 |
+| `docs/methods/` | Consumer-local canonical Method | selector 命中后读取一个 |
+| `docs/architecture/` | 长期 capability / product Architecture 与 ADR | 按责任读取 |
+| `docs/rules/` | Discoverable Consumer-local Rule | 只通过 Rule Discovery 读取命中正文 |
+| `skills/` | Consumer-local Skill corpus | 责任明确且需要独立 Procedure 时读取 |
+| `docs/requirements/` | 当前 Product / Domain Requirement Authority | 读取当前任务相关 owner |
+| `docs/specifications/` | 当前用户可观察行为、Failure Behavior 与 Acceptance | 读取当前任务相关 owner |
+| `docs/technical/` | 跨 Feature implementation contract 与 Verification Strategy | 读取当前任务相关 owner |
+| `docs/work/current/README.md` | Current Execution Lifecycle Locator | state / execution lifecycle 任务读取 |
+| `docs/work/current/*.md` | active work artifact | locator 指向时读取 |
+| `docs/work/archive/` | 已完成 Execution Unit / execution evidence | 默认不读取 |
+| 各分类 `archive/` | superseded / historical traceability | 默认不读取 |
 
-## 文档分类与物理位置
+## 当前产品 Authority 入口
 
-当前四类语义角色由本文件维护：
+- Product Requirement：`docs/requirements/information-publishing.md`
+- CMS Domain：`docs/requirements/cms-domain.md`
+- CMS 长期 Architecture：`docs/architecture/cms-architecture.md`
+- Current Specifications：`docs/specifications/README.md`
+- Backend Technical：`docs/technical/backend-service.md`
+- Admin Technical：`docs/technical/admin-frontend.md`
+- Public Technical：`docs/technical/public-site-frontend.md`
+- Rich Text Technical：`docs/technical/rich-text-authoring.md`
+- Verification Strategy：`docs/technical/verification-strategy.md`
+- JilinJobs Site Definition workspace：`sites/jilinjobs/**`
+- Historical Migration workspace：`data-migrations/**`
 
-- `CURRENT`：可直接作为现行 Authority 消费；
-- `PARTIALLY_CURRENT`：仍含有效当前语义，必须保留在 Current 区并由后续有 Authority 的 reconciliation 处理；
-- `SUPERSEDED`：已被后继 Authority 取代，只保留 traceability；
-- `HISTORICAL_EVIDENCE`：研究、执行、评审或验证记录，不定义当前产品 / 架构事实。
+Requirement / Domain / Architecture / Specification / Technical 各自只维护自己的 semantic owner；历史同名三件套、完成态 Planning、旧 READY / EU / migration inventory 不参与 ordinary Fresh Context。
 
-物理 archive 只接收已明确为 `SUPERSEDED` / `HISTORICAL_EVIDENCE` 的文档。不得按年龄、EU 编号或“看起来旧”把 `PARTIALLY_CURRENT` 文件机械归档。已经在 Current 物理目录中、但由本文件明确列为 `SUPERSEDED / HISTORICAL_EVIDENCE` 的历史记录，不因物理位置重新取得 Current Authority；只有后续独立 IA 工作有真实收益时才需要移动路径。
+## Project / Method / Rule / Skill 入口
 
-## 稳定 Authority 与高频 Current Evidence
-
-Bootstrap / long-lived surface 只维护稳定职责与 locator：
-
-- `AGENTS.md`：Repository Governance / Authority / operation boundary；
-- 根 `README.md`：稳定项目入口与 scope；
-- 本文件：Local Discovery Entry / Documentation IA / locator；
-- Project Roadmap：持久路线、长期边界、durable milestone；
-- `docs/work/README.md`：Execution lifecycle contract；
-- `docs/work/current/README.md`：Current Execution Lifecycle Locator。
-
-这些稳定 surface 不应并行复制高频变化的 `Current Ready Execution Unit`、Readiness `PENDING/PASS`、exact implementation Head 或 Actions result。Issue body / comment 可以承载 Planning 与 Current Evidence，但旧 comment 只是历史 evidence；它不会因为包含“Current Evidence”字样就永久成为当前 Execute Gate。
-
-GitHub PR / Branch / Actions 对其各自原生瞬时状态负责；这不构成“GitHub 永远高于本地文件”的通用规则。Requirement、Specification、Architecture、Method、Work lifecycle 与 GitHub Current Evidence 仍按各自 Authority 责任协调。若 Current Work locator、active artifact、Readiness Evidence 或 GitHub native state 缺失、冲突或无法消歧，必须 fail closed，不得授予或继承 Execute Authority。
-
-## Current Authority 入口
-
-- Repository governance：根 `AGENTS.md`
-- Stable project scope：根 `README.md`
-- Requirement：`docs/requirements/README.md`
-- Specification：`docs/specifications/README.md`
-- Technical：`docs/technical/README.md`
-- Verification：`docs/technical/verification-strategy.md`
-- Architecture：`docs/architecture/decisions/` + Repository Authority 明确指定的长期 architecture owner
+- Project Capability Profile：`docs/project/project-capability-profile.md`
+- Project Roadmap：`docs/project/project-roadmap.md`
+- Project Evolution：`docs/project/project-evolution.md`
+- Canonical Methods：`docs/methods/`
+- Capability Architecture：`docs/architecture/engineering-capability.md`、`consumer.md`、`method.md`、`project-knowledge.md`、`rule.md`、`rule-discovery.md`、`skill.md`
+- Rule Discovery runtime：`docs/architecture/rule-discovery.md` + `tools/rule-discovery/rule_discovery.py`
+- Skill root：`skills/`
 - Work lifecycle：`docs/work/README.md`
 - Current execution locator：`docs/work/current/README.md`
-- Durable Roadmap：`docs/project/project-roadmap.md`
-- Consumer-local Method / Skill routing：`docs/project/development-method.md`
-- Execution continuity：`docs/project/execution-continuity-guidelines.md`
-- Human review feedback cycle：`docs/project/review-feedback-cycle.md`
-- Git commit governance：`docs/project/git-commit-guidelines.md`
-- Method experiment lifecycle：`docs/project/method-validation-evidence.md`
-- Current CMS / Site Package architecture：`docs/technical/cms-architecture.md` + `docs/requirements/cms-site-package-boundary.md` + `docs/specifications/cms-site-package-boundary.md` + `docs/technical/cms-site-package-boundary.md`
-- Current Page content architecture：`docs/requirements/page-content-architecture.md` + `docs/specifications/page-content-architecture.md` + `docs/technical/page-content-architecture.md`
-- Historical migration current data / provenance workspace：`data-migrations/**`
-- GitHub Actions runtime topology：`.github/workflows/**` + GitHub native Actions state
 
-## 已完成 / 已取代文档的治理分类
+`docs/work/current/README.md` 只拥有 Current Execution Lifecycle locator，不拥有 Planning Candidate 排序或完整 Roadmap。GitHub PR / Branch / Actions 对各自原生瞬时状态负责；这不构成“GitHub 永远高于本地文件”的通用规则。
 
-以下文件位于非 archive 目录只是为了保持既有 locator 与 Git history 连续性；它们已经完成或被后继 Current Authority 取代，**不属于普通 Fresh Context 的 Current Authority 读取集合**。
+## 文档完整性
 
-### Project / planning 历史
+Current 文档遵循 `rule:human-facing-content-integrity`：中文主述、精确机器标识、正式概念身份不被表达重写改变。Historical Evidence 以证据保真优先，重新晋升为 Current 前先完成 semantic reconciliation。
 
-- `docs/project/documentation-authority-convergence.md` — `SUPERSEDED / HISTORICAL_EVIDENCE`；
-- `docs/project/agentic-dev-continuous-execution-mode.md` — `SUPERSEDED / HISTORICAL_EVIDENCE`；
-- `docs/project/main-site-formal-content-plan.md` — `HISTORICAL_EVIDENCE / COMPLETED PLANNING RECORD`；
-- `docs/project/site-package-planning.md` — `HISTORICAL_EVIDENCE / COMPLETED PLANNING RECORD`，其中旧 Current Gate / E1～E3 排序不再生效；
-- `docs/project/pre-e1e3-convergence-plan.md` — `HISTORICAL_EVIDENCE / COMPLETED PLANNING RECORD`，Issue #92 Phase 2 / Phase 3 已完成；
-- `docs/project/agentic-dev-v3-08-track-b-evidence.md` — `HISTORICAL_EVIDENCE / UPGRADE-ONLY`；
-- `docs/project/agentic-dev-v3-closure-baseline-upgrade-evidence.md` — `HISTORICAL_EVIDENCE / UPGRADE-ONLY`。
-
-### 已完成 Engineering / migration convergence 文档
-
-以下三件套分别记录 EU-46、EU-47、EU-48 的规划 / 实施前 contract；其已接受 durable 结果已经由 Current CMS Architecture、Backend Authority、`data-migrations/**` 与代码实现接管：
-
-- `docs/requirements/backend-application-core-boundary.md`
-- `docs/specifications/backend-application-core-boundary.md`
-- `docs/technical/backend-application-core-boundary.md`
-- `docs/requirements/generic-content-migration-application.md`
-- `docs/specifications/generic-content-migration-application.md`
-- `docs/technical/generic-content-migration-application.md`
-- `docs/requirements/party-migration-despecialization-compatibility.md`
-- `docs/specifications/party-migration-despecialization-compatibility.md`
-- `docs/technical/party-migration-despecialization-compatibility.md`
-
-上述文件统一分类为 `HISTORICAL_EVIDENCE / COMPLETED`，其中 `READY`、`Technical Planning REQUIRED`、`Current Ready Execution Unit` 等字样只表达当时阶段，不得重新授予 Execute Authority。
-
-### 已完成 Main 内容 / Site Package 文档
-
-以下文档分别记录 EU-52 / EU-53 的已完成实施边界，当前语义由 Page Content Architecture 与 CMS / Site Package Boundary 接管：
-
-- `docs/requirements/main-single-page-formal-content.md`
-- `docs/specifications/main-single-page-formal-content.md`
-- `docs/technical/main-single-page-formal-content.md`
-- `docs/requirements/main-stable-listitem-site-package.md`
-- `docs/specifications/main-stable-listitem-site-package.md`
-- `docs/technical/main-stable-listitem-site-package.md`
-
-统一分类为 `HISTORICAL_EVIDENCE / COMPLETED`。特别地，EU-52 中 `guide/jypq` 的 RICH_TEXT 表达已被 EU-55 Page Content Architecture 的 `STRUCTURED + JILINJOBS_GUIDE_CARDS` 后继事实取代；EU-53 的 Main ListItem 当前长期语义是一轮 Site Package bootstrap 后进入普通 operator-managed Runtime Data，不存在 stable ListItem reconcile capability gap。
-
-### 已完成 Public replaceability 文档
-
-- `docs/requirements/public-frontend-replaceability.md`
-- `docs/specifications/public-frontend-replaceability.md`
-- `docs/technical/public-frontend-replaceability.md`
-
-统一分类为 `HISTORICAL_EVIDENCE / COMPLETED`（EU-36）。当前公开站 URL、Source Isolation 与 Renderer Boundary 由 `docs/specifications/public-site.md`、`docs/technical/public-site-frontend.md`、ADR 与 CMS Architecture 接管。
-
-### 已取代的 Flyway baseline convergence 文档
-
-- `docs/requirements/database-migration-baseline-convergence.md`
-- `docs/specifications/database-migration-baseline-convergence.md`
-- `docs/technical/database-migration-baseline-convergence.md`
-
-统一分类为 `HISTORICAL_EVIDENCE / SUPERSEDED BASELINE`。这些文件记录 EU-31 / EU-41 当时的 V1 / V2 baseline replacement 决策；当前实际 active Generic Flyway lineage 已演进至 V1～V4，Current owner 为 `docs/technical/cms-architecture.md`、`docs/technical/backend-service.md` 与 `docs/technical/verification-strategy.md`。不得从历史文档中的“下一次使用 V3”推导当前 migration 编号。
-
-Planning / product Authority 必须按当前任务从 Current Requirement / Specification / Technical / controlling Issue 重新定位；本 Documentation Map 不缓存某个 Issue 的短期 Current Gate、Ready Unit、最近 implementation SHA 或规则正文摘要。
-
-`data-migrations/**` 是 Historical Content Migration 的 current data / provenance workspace，不属于 documentation archive；“历史内容”不等于 `HISTORICAL_EVIDENCE`。
+自动约束由 `scripts/verify-docs-governance.mjs` 与 `.github/workflows/docs-governance.yml` 执行。不得通过扩大历史例外列表隐藏仍属于 Current Authority 的问题。

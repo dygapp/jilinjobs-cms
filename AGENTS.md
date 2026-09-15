@@ -4,7 +4,7 @@
 
 `jilinjobs-cms` 是吉林省智慧就业云平台中“信息发布与网站服务”相关能力的独立 Consumer 项目。
 
-本文件只维护 Repository Governance、Authority Boundary、Knowledge Boundary、Development Method adoption、Human Escalation 与 GitHub operation rules，不缓存某个 Execution Unit 的高频 Current Gate。已完成里程碑、持久路线与后续 Planning directions 由 Project Roadmap 维护；Current Execution Lifecycle 由 `docs/work/` 的专门 locator / lifecycle contract 管理。Issue #77 继续承担 Generic CMS Core / JilinJobs Site Package / Historical Migration / Replaceable Public Renderer 四层长期架构边界。Documentation Authority Map 与 Consumer **Local Discovery Entry** 统一由 `docs/README.md` 承载；`docs/**/archive/**` 与 `docs/work/archive/**` 默认不参与 Fresh Context Current Authority 恢复。不得从其他项目、其他会话、个人记忆、旧预编号路线、惯例或实现便利性中推导、补充或扩大本项目的产品范围。
+本文件只维护 Repository Governance、Authority Boundary、Knowledge Boundary、Development Method adoption、Human Escalation 与 GitHub operation rules，不缓存某个 Execution Unit 的高频 Current Gate。已完成里程碑、持久路线与后续 Planning directions 由 Project Roadmap 维护；Current Execution Lifecycle 由 `docs/work/` 的专门 locator / lifecycle contract 管理。Generic CMS Core / JilinJobs Site Definition / Historical Migration / Runtime / Replaceable Public Renderer 等当前长期系统边界由 `docs/architecture/cms-architecture.md` 持有；Issue #77 只保留历史 planning / decision / evidence timeline。Documentation Authority Map 与 Consumer **Local Discovery Entry** 统一由 `docs/README.md` 承载；`docs/**/archive/**` 与 `docs/work/archive/**` 默认不参与 Fresh Context Current Authority 恢复。不得从其他项目、其他会话、个人记忆、旧预编号路线、惯例或实现便利性中推导、补充或扩大本项目的产品范围。
 
 ## Current State ownership 与 locator
 
@@ -33,7 +33,7 @@ Bootstrap / Roadmap surface 不并行维护 `Current Ready Execution Unit`、Rea
 
 当前 Consumer 不维护 Reviewed Discovery Map，也不维护 Runtime View；稳定入口、当前 resource owner 与原生 locator 已足够支撑普通运行。若 source / locator 缺失、semantic owner 不明确、多个 primary 无法消歧、override / supersede 冲突，或 no-match 但已知 Governance / Verification risk 仍存在，则回到本地 Authority **fail closed**，不得自动访问 `dygapp/agentic-dev` 修补普通运行。
 
-execution 中的横切 Rule 由 Consumer-local `tools/rule-discovery/rule_discovery.py` 从当前任务事实提取 bounded signals 做确定性候选发现；详细 contract 由 `docs/project/rule-discovery-method.md` 持有。当前 Rule 默认按“一个可独立发现的具体任务或责任所需的有界规范语义集合”形成自然边界，不采用“一条 assertion = 一个 Rule 文件”的机械拆分；同一任务中通常共同发现、共同消费的 policy 优先聚合，只有独立 discovery 能实际减少无关加载 / 错误激活，或存在不同 technology / artifact / risk / lifecycle / semantic owner 时才拆分。Technology Rule 子目录只服务人类维护，不参与 runtime matching。普通运行必须满足：
+execution 中的横切 Rule 由 Consumer-local `tools/rule-discovery/rule_discovery.py` 从当前任务事实提取 bounded signals 做确定性候选发现；详细 contract 由 `docs/architecture/rule-discovery.md` 持有。当前 Rule 默认按“一个可独立发现的具体任务或责任所需的有界规范语义集合”形成自然边界，不采用“一条 assertion = 一个 Rule 文件”的机械拆分；同一任务中通常共同发现、共同消费的 policy 优先聚合，只有独立 discovery 能实际减少无关加载 / 错误激活，或存在不同 technology / artifact / risk / lifecycle / semantic owner 时才拆分。Technology Rule 子目录只服务人类维护，不参与 runtime matching。普通运行必须满足：
 
 - task signals 使用 `phases / activities / technologies / artifacts / risks` 五维；非空数组表示 known，`[]` 表示 known-empty，`null` 表示 unknown / unsafe-to-canonicalize；每维最多 6 个 canonical token；
 - 当前 direct responsibility 建立后，在该责任的**首个有副作用动作前必须完成本次 task-level discovery**；只读 Authority / Repository fact 恢复可以先于 discovery；
@@ -50,7 +50,7 @@ Agent Skills Specification 的 Progressive Disclosure `<5000 tokens / <500 lines
 
 ## 文档语言与术语表达
 
-本项目所有**面向人的 Current / Partially Current 文档强制以中文为主语言**，采用“中文主述、必要英文精确锚定”的表达原则。该规则适用于根级项目文档以及 `docs/project/`、`docs/requirements/`、`docs/specifications/`、`docs/technical/`、`docs/architecture/`、`docs/work/current/` 中仍参与当前 Authority / Fresh Context 的 Markdown 文档。
+本项目所有**面向人的 Current / Partially Current 文档强制以中文为主语言**，采用“中文主述、必要英文精确锚定”的表达原则。该规则适用于根级项目文档以及 `docs/project/`、`docs/methods/`、`docs/architecture/`、`docs/rules/`、`docs/requirements/`、`docs/specifications/`、`docs/technical/`、`docs/work/current/` 中仍参与当前 Authority / Fresh Context 的 Markdown 文档。
 
 - 文档标题、章节标题、状态说明、背景、需求、规格、技术方案、验证说明、结论等叙述性内容必须使用中文表达；允许在中文后以括号保留英文精确名称。
 - 中文已有自然稳定表达、且英文有助于与 `agentic-dev` Method、Skill、Contract 或技术概念精确对应时，首次重要出现优先使用“中文（English Term）”。
@@ -71,17 +71,15 @@ Current 文档的中文主语言与本地文档引用完整性由 `scripts/verif
 项目事实或规则发生冲突时，按以下优先级判断：
 
 1. `AGENTS.md`：Repository Governance、Authority Boundary 与工作规则；
-2. `README.md`：当前项目目标、当前迭代范围与稳定项目入口；
-3. `docs/requirements/information-publishing.md`：当前迭代范围内行为的详细权威业务需求；
-4. 后续依据以上权威正式形成的 Specification、Architecture、Decision、Project Roadmap、Consumer-local Development Method 等项目产物（Artifact）；
+2. `README.md`：稳定项目目标、项目边界摘要与入口；
+3. `docs/requirements/information-publishing.md` 与 `docs/requirements/cms-domain.md`：当前 Product / Domain Requirement Authority；
+4. 后续依据以上权威正式形成的 Specification、Architecture、Decision、Project Roadmap、Consumer-local Method 等项目产物（Artifact）；
 5. Code 与 Tests：用于证明当前实现状态，不得反向发明产品需求；
 6. 会话历史（Conversation History）、临时计划和 Agent reasoning：均不构成项目权威。
 
 上述优先级用于解决同一语义责任内的 Authority 冲突；对于 Current Execution Lifecycle、GitHub native status、Requirement、Specification 等不同职责，先按本文件定义的 owner / locator 读取对应事实，再处理真正的语义冲突，不把优先级表机械解释成一个 surface 可以替代其他 surface 的职责。
 
-`docs/requirements/information-publishing.md` 已由本仓库显式采纳为当前迭代的详细业务需求，但其来源文档中声明的 `relations.upstream` 以及正文引用的 `docs/project/project.md`、`docs/requirements/overview/system-module-boundaries.md` 当前并不存在于本 Consumer Repository。这些引用只保留其来源关系（Provenance / Upstream References），**不构成当前 Consumer Authority，也不得用于扩大或覆盖本仓库已明确的 Goal、Scope 与 Boundary**。只有后续被本仓库显式采纳的上游事实才可成为新的 Consumer Authority。
-
-`README.md` 的当前迭代范围可以有意只选择原始需求的一部分。即使某项能力存在于详细需求文档中，只要 `README.md` 已明确将其排除在当前迭代之外，就不得在本轮自行实现，除非项目负责人正式调整范围。
+根 `README.md` 是 Project Charter equivalent 与稳定范围摘要，详细 Product / Domain 事实分别由当前 canonical Requirement owner 持有。README 摘要没有逐项重复某个已确认 Product fact，不构成对该事实的隐式排除；Requirement 的详细事实也不能反向扩大已经由更高层 Human / Repository Authority 明确改变的项目边界。若这些 owner 出现真实冲突，必须显式澄清并同步对应 Authority，不允许依靠摘要缺失或历史来源引用长期维持双重解释。
 
 ## 知识边界（Knowledge Boundary）
 
@@ -100,29 +98,20 @@ Current 文档的中文主语言与本地文档引用完整性由 `scripts/verif
 
 ## 开发方法（Development Method）
 
-方法来源：
+当前 evaluated upstream baseline、Consumer-local capability instance 与 Method selector 的唯一 Project Knowledge owner 是 `docs/project/project-capability-profile.md`。本文件只维护稳定的 upstream / local Knowledge Boundary、adoption discipline 与 baseline upgrade procedure，不复制 exact baseline SHA、previous baseline、historical projection / tag 或 upgrade-only decision history。已完成 upgrade 的 provenance / evidence 按需从 `docs/project/archive/` 与 GitHub history 定向恢复。
 
-- Repository：`dygapp/agentic-dev`
-- Previous Evaluated Baseline：`8e7e94eff62b958b2044407cf6d85de3dde48ee9`
-- Current Evaluated Baseline：`ed1a4446f0430890e7ad39673ac9c2e341e6a829`
-- Historical V4 Foundation Projection：`3e0b2f5a29caeb344da79f8c96ebffbeb5c2b0cb`
-- Capability Milestone Tag：`baseline-2026-09-04-engineering-capability` → `5be2e6aad29b2be6b8535b3690daf3533ee22a46`
+当前采用的方法不在普通开发中直接运行 upstream 文档，而是固化为 Consumer-local 一等资源：
 
-Current Evaluated Baseline 只表示本 Consumer 已经完成 exact upstream compare、逐项 disposition 与 adoption verification 到哪个精确 commit，不表示 `ed1a4446...` 中所有文件、Project 状态或 capability 均被采用。当前 local asset 的真实 semantic owner / provenance 与 upgrade-only decision history 必须与 baseline 分离；本轮 `8e7e94ef... -> ed1a4446...` 的逐项记录见 `docs/project/agentic-dev-clarification-rule-activation-baseline-upgrade-evidence.md`。此前 Rule Granularity、V3 Closure、V3-08 Track B 的历史升级证据继续保留，但普通运行不默认读取这些 upgrade history。
+- 普通 Feature / change：`docs/methods/ai-development.md`；
+- 项目级长期 Requirement / Domain / Architecture 澄清：`docs/methods/software-project-clarification.md`；
+- Consumer baseline 显式升级：`docs/methods/consumer-upgrade.md`；
+- Review feedback：`docs/methods/review-feedback-cycle.md`；
+- Method 实验：`docs/methods/method-experiment.md`；
+- Method selector 与本地 capability instance：`docs/project/project-capability-profile.md`；
+- Rule Discovery contract：`docs/architecture/rule-discovery.md`；
+- 已采用的稳定执行能力：`skills/*/SKILL.md`。
 
-`3e0b2f5a...` 继续只是此前 V4-08 Consumer validation 的 historical Foundation projection，不构成 `ed1a4446...` 的 ancestry 或第二个 current baseline。
-
-本轮 accepted reusable change 包括：采用 bounded 的 Software Project Clarification 作为 Consumer-local 可选项目级 Method，用于多个 Feature 共同受长期 Requirement / Architecture Context 缺失、冲突或需要重建而阻塞的场景；同步收紧 ordinary Feature Development 的进入 / 返回边界；采用 direct-responsibility 级 Rule Discovery checkpoint。Model Collaboration reusable capability 本轮**不采用、不启用**，不建立本地 runtime/config/tier mapping；upstream Project Roadmap、Evolution、Research、Guide instance 与 self-adoption state 不继承。Consumer Rule corpus 保持 13 条、Skill 保持 9 个。
-
-本项目不是在每次开发工作中直接运行 `agentic-dev` 仓库的方法文档，而是将当前采用的方法和 Skills 使用规则固化在 Consumer Repository：
-
-```text
-docs/project/development-method.md
-```
-
-Rule Discovery 的 Consumer-local 扩展记录在 `docs/project/rule-discovery-method.md`；已采用的九项稳定执行能力物理化在 `skills/*/SKILL.md`。这些入口只承载当前 Consumer-local 方法与 procedure，不继承 upstream Project state。
-
-后续普通开发应优先读取并遵守本仓库 `AGENTS.md`、`README.md`、`docs/README.md`、`docs/project/development-method.md`、`docs/project/project-roadmap.md` 以及与当前工作相关的 Consumer Authority。除非项目负责人明确要求更新 `agentic-dev` baseline、本仓库 Authority 明确要求 upstream 比较，或当前任务本身就是显式 `agentic-dev` Consumer validation，否则不要求为普通开发跨仓库读取 `agentic-dev`。
+后续普通开发应优先读取并遵守本仓库 `AGENTS.md`、`README.md`、`docs/README.md`、`docs/project/project-capability-profile.md`、当前 selector 命中的 Consumer-local Method、`docs/project/project-roadmap.md` 以及与当前工作相关的 Consumer Authority。除非项目负责人明确要求更新 `agentic-dev` baseline、本仓库 Authority 明确要求 upstream 比较，或当前任务本身就是显式 `agentic-dev` Consumer validation，否则不要求为普通开发跨仓库读取 `agentic-dev`。
 
 当项目负责人明确要求升级 baseline 时，应：
 
@@ -140,14 +129,14 @@ Rule Discovery 的 Consumer-local 扩展记录在 `docs/project/rule-discovery-m
 
 - 使用渐进式披露（Progressive Disclosure），只加载当前职责真正需要的 Authority、Skill 与 supporting capability；
 - 一次 discovery / routing 决策只确定一个 primary responsibility + 最小 supporting locator；routing-only 不加载完整 Skill，真正 execution 才加载 primary Skill；
-- 普通 Feature / change 只在当前 Repository 已具备足以支持 Goal、Scope、Observable Behavior 与 Acceptance 的最小长期 Requirement / Domain / Architecture Context 时进入常规 Feature Method；单个 Feature 的局部歧义留在对应 owner 内解决；多个 Feature 共同受长期 Context 缺失、冲突或需要重建而阻塞时，按 `docs/project/development-method.md` 的 Consumer-local selector 进入项目级澄清责任；
+- 普通 Feature / change 只在当前 Repository 已具备足以支持 Goal、Scope、Observable Behavior 与 Acceptance 的最小长期 Requirement / Domain / Architecture Context 时进入常规 Feature Method；单个 Feature 的局部歧义留在对应 owner 内解决；多个 Feature 共同受长期 Context 缺失、冲突或需要重建而阻塞时，由 `docs/project/project-capability-profile.md` 的 selector 进入 `docs/methods/software-project-clarification.md`；
 - 阶段是工作状态，不为了表示阶段而机械创建 Artifact；
 - 规格说明（Specification）聚焦 WHAT / WHY；
 - 只有存在跨执行单元（Execution Units）的长期 HOW 协调价值时，才持久化技术计划（Technical Plan）；
 - Planning / Requirement Candidate 在 `slice-work` 前保持规划身份；`slice-work` 只在上游 Ready 后形成 Candidate Execution Unit，可分配稳定 Identifier；Identifier 不等于 Readiness 或 Execute 授权，只有 `readiness-check` PASS 后才成为 Ready Execution Unit；
 - 优先形成纵向、可独立验证、范围明确且 context-fit 的 Execution Unit；
 - 在条件允许时使用 Fresh Context；
-- Fresh Context 的会话切换提示词只承担 **Locator** 职责，不并行维护第二份项目 Authority；凡可从当前 GitHub Repository、Roadmap、Consumer-local Method、Requirement / Specification / Technical Plan、Issue / PR / Actions 或 Runtime Evidence 恢复的事实、规则、状态和执行步骤，不得为了“交接完整”再次复制进提示词；真正 Handoff 仅按 `docs/project/execution-continuity-guidelines.md` 的条件性临时 artifact contract 形成；
+- Fresh Context 的会话切换提示词只承担 **Locator** 职责，不并行维护第二份项目 Authority；凡可从当前 GitHub Repository、Roadmap、Consumer-local Method、Requirement / Specification / Technical Plan、Issue / PR / Actions 或 Runtime Evidence 恢复的事实、规则、状态和执行步骤，不得为了“交接完整”再次复制进提示词；真正 Handoff 按 `docs/rules/repository/execution-continuity.md` 的条件与边界执行；
 - 实施时选择当前证据支持的最低必要复杂度；没有当前 Requirement、Specification、Architecture、Verification、安全、性能、生命周期或真实多消费者证据支持的额外抽象、配置项、依赖、扩展点、框架层和未来分支默认不进入实现；必要的失败路径、安全措施、验证能力、行为保持型 preparatory refactor 与薄适配不属于“过度设计”；
 - 最终 Diff 的每个有意义区域必须能追溯到当前 Unit 实现、验证、Authority 同步、必要 preparatory refactor 或其直接 cleanup；相邻 typo、TODO、历史死代码、独立优化、全局格式化等默认留在当前 Diff 之外；
 - 当 Unit 涉及集合、列表或 snapshot 数据访问时，先确认真实 Consumer Scope、集合的稳定有界性或增长特征、Lifecycle / Freshness，再决定过滤、稳定排序、window / pagination、representation 与复用方式；页面最终展示数量、现有 `LIMIT/OFFSET` 或客户端过滤不能替代业务作用域；
@@ -171,7 +160,7 @@ Rule Discovery 的 Consumer-local 扩展记录在 `docs/project/rule-discovery-m
 - 固定域名、代理名、端口、评审 / 部署槽位、临时数据库或单例服务等共享资源按真实冲突域治理；Run cancellation 与资源释放分别验证；
 - 实施阶段发现“硬编码”或准备自行实现通用能力时先按真实变化来源、维护者、稳定性、安全 / 协议约束和 lifecycle 判断 responsibility；已有代码、框架、标准库或依赖满足契约时优先复用最薄适配。
 
-当前核心 Skills、Engineering Disciplines、Vue 3 + TypeScript Profile 的 Consumer-local 使用边界统一记录在 `docs/project/development-method.md`，不在本文件重复维护 Skill 级细节。
+当前核心 Skills、Engineering Disciplines 与 Technology Profile 的 Consumer-local 使用入口由 `docs/project/project-capability-profile.md` 提供；具体规范分别由对应 Method / Architecture / Rule / Skill / profile owner 持有，不在本文件重复维护 Skill 级细节。
 
 ## 人工升级（Human Escalation）
 

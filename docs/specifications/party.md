@@ -1,238 +1,190 @@
-# 中心党建页面规格说明（Specification）
+---
+id: specification-party
+title: 中心党建公开体验规格
+type: specification
+status: accepted
+version: "V2.0"
+relations:
+  requirements:
+    - docs/requirements/information-publishing.md
+    - docs/requirements/cms-domain.md
+  architecture:
+    - docs/architecture/cms-architecture.md
+  related:
+    - docs/specifications/public-site.md
+updated_at: 2026-09-15
+---
 
-## 1. 目标与业务定位
+# 中心党建公开体验规格
 
-本文定义主站“中心党建”特殊栏目/专题页面的 WHAT / WHY。通用 CMS 模型继续以 `docs/requirements/information-publishing.md`、`docs/specifications/cms-core.md` 为准；公开前端共享导航与页脚遵循 ADR-0003 与 `docs/specifications/public-shared-shell.md`；轮播投放与生命周期边界遵循 `docs/specifications/public-site.md` 和 `docs/technical/carousel-list-placement.md`。
+## 1. Scope 与业务定位
 
-**中心党建不是第二个网站，也不是主站之外的独立首页。** 它是主站信息架构下具有独立红色视觉主题的特殊栏目/专题入口。当前 `/party/**`、`party.html`、独立 App/Router 只是为了隔离红色主题、路由和页面模板的技术实现边界，不改变其业务上属于主站的定位。
+本规格定义主站“中心党建”专题入口的公开可观察行为、内容范围和视觉体验。
 
-原站页面名称为“党员之家”，英文业务表述为 **Party Members’ Home**。当前工程技术命名统一使用 `party / Party` 表示中心党建 Site/模块；仅 `/party/` 入口页使用 `party-home / PartyHome`，例如 `PartyHomeView.vue`。技术标识不作为“党员之家”的英文翻译。
+“中心党建”属于 Main 信息架构下的专题入口，不是第二个独立业务网站。`/party/**` 的独立 namespace 和红色主题用于保证专题呈现与内容作用域，不改变这一业务定位。
 
-本规格依据 2026-09-02～2026-09-03 对原站 `https://24365.jl.smartedu.cn/dyzj` 的 Browser Evidence、2026-09-03 Human Visual Review，以及 EU-30 对轮播第二项与遗漏“主题教育”历史内容的补充取证收敛。凡旧文档把中心党建描述为“独立站点”“党建首页”的业务语义，以本规格和 Human Review 结论为准。
+CMS Domain、Page/List/Article identity 与 lifecycle 由 Domain Requirement 持有；Public Site 技术隔离、共享组件与当前实现方式由 Architecture / Technical 持有。
 
-## 2. 原站事实基线
+## 2. 内容范围
 
-已确认：
+当前已接受的 Party 内容栏目：
 
-- 原站入口：`/dyzj`，页面标题“党员之家”；
-- 首页四条主内容线：
-  - 高层声音：`typeCode=gcsy`；
-  - 工作动态：`typeCode=gzdt`；
-  - 党规党章：`typeCode=dgdz`；
-  - 理论学习：`typeCode=llxx`；
-- “学习园地”只是“党规党章 + 理论学习”的页面分组，不是第五种首页内容类型；
-- EU-30 对轮播第二项反向追踪确认原站另有历史栏目 `typeCode=zhutijiaoyu`，原列表标题带“主题教育2023”；新版栏目名称收敛为“主题教育”，它进入 Party 内容作用域和历史迁移，但**不新增为 PartyHome 第五个固定内容区块**；
-- `zhutijiaoyu` 完整列表补采共 2 条：1 条站内文章、1 条外链，数量对账一致，`unresolved=0`；
-- 四个首页主栏目列表使用 `/plist.html?typeCode=...`，且均存在多页历史内容；主题教育历史列表继续只作为迁移来源证据；
-- 当前原站站内详情主要使用 `/pdetail.html?content_id=...`，历史还存在携带 `typeCode` 或 `/detail.html?content_id=...` 的变体；这些只作为迁移映射证据；
-- 内容同时存在站内详情与外部权威来源直链；
-- 页面顶部左侧存在独立 4 项图片轮播，与右侧“高层声音”并列；轮播不是栏目置顶文章推导结果；
-- 轮播第二项实际指向 `content_id=154659859759104` 的主题教育站内文章，其轮播 PNG 与文章内容图片是不同展示资产；新版应表达为 ARTICLE 投放并保留原轮播 PNG 作为列表专用覆盖图；
-- 原站 Footer 与主站使用同一机构信息口径；新版 Navigation/Footer 进一步统一为共享组件；
-- 原站 CSS 使用固定 1200px 并导致窄屏横向溢出，新版不复制该限制。
+- 高层声音：`party-voice`；
+- 工作动态：`party-work`；
+- 党规党章：`party-rules`；
+- 理论学习：`party-study`；
+- 主题教育：`party-theme-education`。
 
-### 2.1 Banner 原始资源
+业务规则：
 
-原站 Banner：
+- “学习园地”是党规党章 + 理论学习的页面视觉分组，不是独立内容类型；
+- 主题教育是可访问内容栏目，但不因此成为 Party 入口页第五个固定内容区；
+- Party 内容复用通用 Column + Article；
+- INTERNAL 使用 Party 站内详情；
+- EXTERNAL_LINK 直接进入当前外部来源；
+- 普通 Main 非 Party 内容不能通过 `/party/article/**` 或 `/party/column/**` 套用 Party 模板。
 
-- URL：`https://24365.jl.smartedu.cn/webfile/theme2/img/party_banner.png`；
-- 原始尺寸：3072 × 512；
-- SHA-256：`7444d50235d4c87a00d0221ac84551ea083c617bb8a15e58f58d002224bd27a3`；
-- 原站文件名扩展名为 `.png`，Reference Evidence 取得的原始文件实际媒体字节为 JFIF/JPEG；不得因为扩展名再次转码。
-
-2026-09-03 Human Review 已两次证明派生 WebP/AVIF 会在标题文字边缘产生可见清晰度损失。因此正式页面必须使用**原站原始字节的版本化本地副本**：
-
-`/static/party/party-header-banner.jpg`
-
-该文件以正确 JPEG 扩展名保存，必须保持原始 SHA-256，不允许重新编码后冒充原始资源；正式运行不得再依赖原站 URL。
-
-Banner 仅承担视觉展示：必须使用非链接容器 + `<img>`，不得包裹 `<a>`，不得通过点击 Banner 返回 `/party/` 或执行其他导航。
-
-### 2.2 稳定展示资源边界
-
-公开站设计模板使用的稳定图片、图标、二维码、字体等展示资源，必须来自：
-
-1. JilinJobs Site Package 的版本化 stable asset source `sites/jilinjobs/assets/**`，由 asset manifest 投影到公开 `/static/**` target；或
-2. 受控 CMS 静态资源路径 / Resource。
-
-`sites/jilinjobs/assets/**` 是当前 stable Site asset 的唯一版本化 source owner；`/static/**` 只是 Runtime/Public target namespace，`/static/uploads/**` 继续属于 mutable CMS Runtime Store。历史文章正文、附件和历史轮播资源继续跟随 `data-migrations/**` 的 Canonical Migration unit，不因 Party 页面使用而提升为 stable Site asset。
-
-除开源 JS/CSS 依赖外，模板不得通过 `img/src`、媒体 `src/poster`、CSS `url(http...)`、资源型常量等方式直接依赖第三方静态资源 URL。业务 `<a href>` 外链、文章外链和外部平台入口不属于此限制。
-
-## 3. CMS 复用规格
-
-### 3.1 栏目结构
-
-继续使用通用 Column：
+## 3. Canonical URLs
 
 ```text
-中心党建 (party)
-├── 高层声音 (party-voice)              <- legacy gcsy
-├── 工作动态 (party-work)               <- legacy gzdt
-├── 党规党章 (party-rules)              <- legacy dgdz
-├── 理论学习 (party-study)              <- legacy llxx
-└── 主题教育 (party-theme-education)     <- legacy zhutijiaoyu
+/party/                       中心党建入口
+/party/column/{alias}         Party 栏目
+/party/article/{id}           Party INTERNAL Article
 ```
 
-父栏目用于 CMS 组织和中心党建作用域识别；“学习园地”只属于页面布局。`party-theme-education` 由 EU-30 为遗漏历史内容与轮播文章关系补齐，属于可访问内容栏目，但不加入 `PartyHome` 四个固定内容查询区。
+要求：
 
-### 3.2 文章
+- direct access / refresh 正常；
+- Main 主导航“中心党建”进入 `/party/`；
+- legacy `plist.html` / `pdetail.html` / `detail.html` 等旧地址只属于 migration / provenance，不继续作为新版 canonical URL；
+- breadcrumb 来自当前业务对象关系，不从 legacy typeCode 或旧 URL 猜测。
 
-上述子栏目复用通用 Article：
-
-- `INTERNAL`：本站保存正文，使用中心党建文章详情模板；
-- `EXTERNAL_LINK`：保存标题、来源、日期和外部 URL，从中心党建页面/栏目列表直接进入原文。
-
-Article 继续只拥有一个 `columnId`。加入轮播或其他 CmsList 只建立展示投放关系，不改变栏目归属和详情面包屑。
-
-不创建 `PartyArticle`、`PartyCategory` 等重复模型。
-
-### 3.3 中心党建轮播
-
-顶部图片轮播复用通用 CmsList，稳定容器 code 为 **`PARTY_CAROUSEL`**，产品名称为 **“中心党建轮播”**：
-
-- `imagePolicy=REQUIRED`；
-- 列表项支持通用 `LINK / ARTICLE` 两种来源；
-- LINK 项维护自身标题、图片、URL、打开方式、排序、启停；
-- ARTICLE 项通过 `articleId` 引用既有文章；文章必须已发布才进入公开轮播，撤回后自动退出；
-- ARTICLE 项默认可继承文章主题图片，也允许选用正文图片或使用独立 CMS Resource 作为轮播覆盖图；覆盖图不修改 Article 主题图片；
-- ARTICLE 站内目标由 Party 公开端生成 `/party/article/{id}`，不在列表中长期固化 Runtime Article ID URL；
-- 轮播成员属于运营内容，不进入 Generic Backend Flyway；历史轮播成员的 canonical provenance 由 Historical Migration 管理；
-- 不新增中心党建专属 Carousel 数据表或 Admin Module。
-
-历史 V14 曾初始化 `PARTY_HOME_CAROUSEL / 中心党建首页轮播`。该 Migration 属已完成 development history，不修改历史文件；V15 曾通过原列表 ID 原地重命名为 `PARTY_CAROUSEL / 中心党建轮播`。从 EU-41 current baseline 起，Fresh JilinJobs stable list container 由 Site Package stable structure 建立，历史 migration number 不再承担 Current provisioning lifecycle。
-
-EU-30 历史迁移中，position 2 必须使用稳定 `sourceSystem + legacyKey=zhutijiaoyu:content:154659859759104` 解析 Article Runtime ID，并把原轮播 PNG 作为 `imageResourceId` 覆盖图导入；不得使用文章标题猜测关系，也不得把历史 Runtime URL 继续作为新版站内目标。
-
-### 3.4 轮播行为
-
-Party 轮播使用与 Main 共用的无主题生命周期规则：
-
-- `CAROUSEL_INTERVAL_SECONDS` 默认 4 秒，Main / Party 共用；
-- `CAROUSEL_MAX_ITEMS` 默认 5；
-- 0 项空态、1 项静态、多项循环自动播放；
-- 提供手动页码；hover、focus、页面隐藏暂停，恢复不重置当前项；
-- `prefers-reduced-motion: reduce` 关闭自动播放与 opacity transition，但保留手动切换；
-- 图片加载失败项退出有效集合并补位；
-- EU-30 不实现 swipe，不引入第三方 Carousel。
-
-Party 视觉层仍由 Party 自己持有：Desktop 约 585×329；响应式使用 `585:329` 比例；图片 `object-fit: cover`；不要求与 Main 使用同一比例或 DOM。
-
-### 3.5 管理端
-
-继续使用“栏目管理 + 文章管理 + 列表管理”。没有独立审核流、权限或专属字段的证据，不新增党建专属后台模块。
-
-列表管理对 ARTICLE 投放提供文章选择、图片继承/正文候选/覆盖图上传；这些能力属于通用 CmsListItem，不是 Party 专属表单。
-
-## 4. URL 与技术隔离
-
-Canonical URL：
-
-- 中心党建入口：`/party/`；
-- 栏目：`/party/column/{alias}`；
-- 站内文章：`/party/article/{id}`。
-
-这里的“入口”不是独立网站首页。`party.html` / Party Router 用于主题与模板隔离；产品信息架构仍把“中心党建”视为主导航中的特殊栏目入口。路由名称使用 `party-home / party-column / party-article`，其中 `party-home` 仅表示 `/party/` 入口页技术角色。
-
-Router 必须验证栏目/文章属于中心党建栏目树，包括 `party-theme-education`；普通主站文章不得通过 `/party/article/{id}` 套用红色主题。
-
-## 5. 页面规格
-
-### 5.1 中心党建入口页（PartyHome）
+## 4. 入口页
 
 `/party/` 至少包含：
 
-1. 原站 Banner 的本地原始字节副本（纯展示、不可点击）；
-2. 主站共享 Navigation，使用红色主题变量；
+1. 已接受的中心党建 Banner；
+2. 与 Main 一致业务结构的公共 Navigation；
 3. 中心党建轮播；
 4. 高层声音；
 5. 工作动态；
-6. 学习园地：党规党章、理论学习；
-7. 主站共享 Footer，使用红色主题变量。
+6. 学习园地，其中包含党规党章与理论学习；
+7. 与 Main 一致业务信息的 Footer。
 
-四个固定首页内容区从 `party-voice / party-work / party-rules / party-study` 查询；轮播从 `PARTY_CAROUSEL` 获取，不从全站文章或前端静态数组拼装。`party-theme-education` 不新增首页固定栏目区，但其 INTERNAL 文章可以通过轮播或直接栏目 URL 进入 Party 详情。
+`party-theme-education` 不增加入口页第五个固定内容区，但其文章可以通过栏目 URL、轮播或其他明确投放进入 Party 内容体验。
 
-### 5.2 栏目列表
+## 5. Banner
+
+中心党建 Banner 是稳定专题视觉，不承担导航行为：
+
+- Banner 自身不可点击；
+- 正式运行使用项目受控的版本化本地资源，不以旧站静态资源 URL 作为 Runtime dependency；
+- 不为格式优化而接受肉眼可见的标题文字清晰度退化；
+- Banner 的具体版本化文件名、digest 与投影路径属于 Site Definition / implementation evidence，不在本规格复制。
+
+## 6. Party carousel
+
+中心党建轮播使用稳定内容容器 identity `PARTY_CAROUSEL`，并遵循通用 CmsList ARTICLE / LINK Domain semantics。
+
+当前产品行为：
+
+- 图片是有效公开项的必要内容；
+- LINK 项使用自身 target；
+- ARTICLE 项引用已有 Article，不复制正文；
+- Article 必须已发布才进入轮播；
+- INTERNAL Article target 使用 `/party/article/{id}`；
+- EXTERNAL_LINK 使用 Article 当前外部目标；
+- ARTICLE 可以使用明确的列表展示覆盖图，不反向修改 Article 正文或封面；
+- open mode 继续有效；
+- 历史轮播 provenance / compatibility 不进入普通运营模型。
+
+轮播交互遵循 Public Site 共享 lifecycle：0 项空态、1 项静态、多项循环、手动控制、hover/focus/visibility 暂停、reduced-motion、失败图片剔除与稳定恢复。
+
+Party 可以保持自己的尺寸比例、dot、caption 和红色主题，不要求与 Main 使用相同视觉表达。
+
+## 7. 栏目列表
 
 `/party/column/{alias}`：
 
-- 只接受中心党建父栏目下当前已确认的五个子栏目；
-- 栏目作用域分页；
-- INTERNAL 进入 `/party/article/{id}`；
+- 只接受当前 Party 内容作用域内的栏目；
+- 只展示当前栏目作用域的公开内容；
+- 提供 breadcrumb、标题、分页、loading / empty / error；
+- INTERNAL 进入 Party article detail；
 - EXTERNAL_LINK 直接打开原文；
-- 保持中心党建红色内容 Frame；
-- 支持直接访问和刷新。
+- 二级栏目列表当前与 Main 使用一致的主要 presentation primitive和分页能力；
+- Party route scope 与 canonical URL保持独立。
 
-### 5.3 文章详情
+分页的页码、跳转、每页条数等可操作状态不得泄漏错误的 Main 蓝色主题。
+
+## 8. Article detail
 
 `/party/article/{id}`：
 
-- 仅允许已发布且属于中心党建栏目树的站内文章；
-- 显示栏目上下文、标题、来源、发布日期、正文、图片和附件；
-- 继续复用通用公开资源安全和浏览量规则。
+- 只允许已发布且属于 Party 栏目树的 INTERNAL Article；
+- 展示 Party 专题内容主题；
+- breadcrumb 与栏目列表保持一致的信息层级；
+- Rich Text、正文图片和附件遵循当前公共内容 / Resource contract；
+- 不存在、撤回、删除或非 Party Article 显示明确不可用状态；
+- EXTERNAL_LINK 不进入本地 Party detail。
 
-## 6. Shared Shell 与视觉规格
+## 9. Navigation 与 Footer
 
-Navigation 与 Footer 不是 Party-owned DOM：
+Party 与 Main 共用相同业务结构和交互的 Navigation / Footer：
 
-- Main / Party 共同复用 `shared/components/PublicNavigation.vue`；
-- Main / Party 共同复用 `shared/components/PublicFooter.vue`；
-- DOM、菜单层级、字体、响应式与 Footer 信息结构保持一致；
-- Party 只通过 CSS variables/modifier 使用红色主题。
+- 菜单层级和内容一致；
+- Footer 机构 / 联系 / 备案 / 官方标识信息一致；
+- Party 使用红色主题表达；
+- Main/Party 公共区域后续变化不得依靠两份手工复制内容同步。
 
-Party-owned 视觉包括 Banner、内容 Frame、轮播 DOM/比例/主题样式和内容区块模板；轮播状态与 timer 生命周期属于 Shared 无主题能力。
+Party-specific 的 Banner、入口页布局、内容主题和仍有真实差异的详情视觉保持 Party 自己的产品表达。
 
-Desktop 关键关系：
+## 10. Visual / responsive behavior
 
-- Banner 使用版本化 `party-header-banner.jpg` 原始字节副本，按容器裁切展示，不二次有损转码；
-- 主导航一级菜单使用原站 16px bold；二级菜单与一级菜单同主题底色、白色粗体文字，hover/active 使用主题深色；
-- 中心党建轮播与高层声音约 585×329 并列；
-- 工作动态单列；
-- 学习园地两栏；
-- Footer 与 Main 结构一致，仅颜色不同。
+中心党建公开体验应保持明确红色专题视觉，同时避免把“红色主题”扩大成第二套 CMS Domain。
 
-Mobile 必须正常响应式，无固定 1200px 横向溢出；轮播保持约 `585:329` 比例。
+要求：
 
-## 7. 数据与历史迁移
+- desktop 与 mobile 均可浏览；
+- 不复制旧站固定宽度造成明显横向溢出；
+- Banner、入口页、栏目和详情保持一致 Party branding；
+- 公共 Navigation / Footer 在结构不变的前提下使用 Party theme；
+- 栏目列表与分页交互保持统一主题；
+- 有明确视觉 Fidelity 变更时必须经过 automated browser evidence + bounded Human Review。
 
-当前 Fresh Site lifecycle 不再由 Party-specific Flyway data migrations 建立站点结构。责任顺序为：
+## 11. Failure behavior
 
-```text
-Generic Backend Flyway schema/capabilities
-→ JilinJobs Site Package stable structure
-→ optional one-time Fresh Site bootstrap
-→ Historical Canonical Migration
-```
+以下情况不得显示错误作用域内容或静默 fallback：
 
-Party 父栏目、五个子栏目、`PARTY_CAROUSEL` 容器等稳定结构由 `sites/jilinjobs/structure/**` provision / reconcile；历史文章、正文图片、附件和历史轮播成员继续由 `data-migrations/**` 独立处理。
+- 非 Party alias 请求 Party column route；
+- 非 Party Article 请求 Party article route；
+- Article 非公开；
+- Party carousel ARTICLE 关联内容无效；
+- Resource 无法公开解析；
+- scoped query 失败；
+- stale async response 覆盖已经变化的 Party route。
 
-EU-29 `acceptedSnapshot` 保持 181 篇冻结 provenance；EU-30 已接受主题教育 2 条扩展后，当前 Party canonical Runtime Dataset = 183，4 条 accepted carousel，并保持 EU-29→EU-30 upgrade compatibility。旧 candidate / Human Review 状态只作为历史执行证据，不应被 Fresh Context 当作当前未决 acceptance。
+## 12. Acceptance
 
-历史迁移必须保留可识别的 `content_id / typeCode / detail path` 证据并落入通用 Column / Article / CmsList / Resource 模型。长期 Runtime 关联使用数据库 ID；迁移解析使用稳定 `sourceSystem + legacyKey`，不得依赖过期 workflow artifact、标题匹配或旧 Runtime ID。
+触达 Party 体验时按范围至少验证：
 
-历史 V13/V14/V15/V16 文件名和 SQL 中可保留 `party_building / party-building`、旧 list code 与 alias transition 作为不可改写历史；这些历史 migration 不再承担 current Fresh Site provisioning responsibility。当前源码、目录、测试和现行 Authority 不再使用 `PartyBuilding / party-building` 作为技术命名。
+- `/party/` direct access / refresh；
+- accepted Banner 可见且不可点击；
+- 入口页固定内容线正确，主题教育不成为第五个固定区；
+- Party 五个栏目 scope 正确；
+- INTERNAL / EXTERNAL_LINK 行为；
+- `PARTY_CAROUSEL` LINK / ARTICLE、open mode、图片与共享 lifecycle；
+- shared Navigation / Footer 的结构、交互和 Party theme；
+- shared column-page behavior与 Party canonical routes；
+- Party Article scope guard；
+- representative desktop / mobile viewport无明显横向溢出；
+- loading / empty / error / unavailable states；
+- 有视觉变化时 automated evidence 后执行 bounded Human Review。
 
-## 8. Acceptance Criteria
+## 13. Non-goals
 
-- 中心党建在业务上明确属于主站特殊栏目/专题页面，不再称为独立网站或党建首页；
-- `/party/**` 独立 Entry/Router 仅作为主题与模板隔离技术实现；
-- 当前技术命名以 `party / Party` 为通用标识，入口页使用 `party-home / PartyHome`；
-- 四个固定首页内容子栏目及其 legacy 映射明确；
-- `party-theme-education / 主题教育` 作为第五个 Party 内容栏目存在，但不新增 PartyHome 固定区块；
-- 当前 Party Canonical Dataset = 183 Articles，EU-29 frozen acceptedSnapshot = 181，4 条 accepted carousel 与 EU-29→EU-30 upgrade compatibility 可独立审计；
-- CmsList 稳定 code 为 `PARTY_CAROUSEL`，名称为“中心党建轮播”，旧 `PARTY_HOME_CAROUSEL` 不再作为当前运行时 code；
-- `PARTY_CAROUSEL` 支持 LINK / ARTICLE；ARTICLE 投放不改变文章单一栏目归属；
-- 历史轮播 position 2 解析到主题教育文章并保留原轮播 PNG 作为列表覆盖 Resource；
-- ARTICLE 撤回后自动退出公开轮播，重新发布后可按既有投放关系恢复；
-- Main / Party 共用 `CAROUSEL_INTERVAL_SECONDS` 和 `CAROUSEL_MAX_ITEMS`，不存在 Party 专属硬编码 5 秒行为；
-- hover/focus/页面隐藏暂停后恢复不重置，reduced-motion 关闭自动播放和动画，手动页码仍有效；
-- Banner 使用版本化 `/static/party/party-header-banner.jpg`，其 source bytes 由 `sites/jilinjobs/assets/party/**` + asset manifest 持有，Runtime target 字节 SHA-256 与原站一致；正式运行不访问原站 Banner URL；
-- Banner DOM 不含 `<a>`，不可点击；
-- 公开站设计模板不存在未经允许的外部静态资源直接引用；
-- Main / Party Navigation 与 Footer 使用同一 Shared Components，仅主题色不同；
-- 主导航一级/二级菜单视觉符合原站主题规则：16px bold、主题底色、白字、深色 hover/active；
-- Main / Party Entry 的 favicon 均从版本化 `/static/brand/site-favicon.png` 正常加载；
-- Fresh Runtime 通过 Generic Flyway + JilinJobs Site Package composition 得到 stable Party structure，不依赖历史 Party Flyway data seed；
-- 中心党建入口页、五个允许栏目路由、文章功能和响应式通过 Browser Verification；
-- Canonical Fresh DB import、二次幂等、Runtime articleRef/resource 关联验证通过；
-- AI Visual Review / Human Review 的历史 accepted evidence 保持可追溯，后续影响相关 visual claim 的变更仍按 Verification Strategy 重新取得 Current Evidence。
+- 新增 Party-specific CMS model / Admin Module；
+- 独立用户 /权限体系；
+- 因红色主题拆成独立 Repository / deployment；
+- 把旧站 URL 当作 Runtime dependency；
+- 把 legacy typeCode 暴露为新系统产品 identity；
+- 从本规格恢复 Party Historical Migration 执行权限或已结束 Execution Unit。

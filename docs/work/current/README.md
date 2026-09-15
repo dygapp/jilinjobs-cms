@@ -2,16 +2,10 @@
 
 Current Ready Execution Unit：**NONE**。
 
-EU-55 — Structured Page Card Adoption 已完成 Planning / Readiness、Execute、exact-head verification、Review Environment、bounded Human Review、Integration 与 Post-Integration verification，并终止 Execute Authority。Completed Work Evidence：
+当前没有 active / Ready Execution Unit。`docs/work/current/` 只负责当前执行生命周期定位，不复制已完成 Feature 的产品结果、长期 Requirement / Architecture、Historical Migration 状态、Roadmap candidate 或 GitHub 瞬时 Evidence。
 
-- `../archive/eu55-structured-page-card-adoption.md`
+已完成 Execution Unit 的历史证据按需从 `../archive/` 定向读取；其稳定产品语义必须从当前 Requirement / Domain / Architecture / Specification / Technical canonical owner 恢复，而不是从完成态 Work artifact 反向建立第二份 Authority。
 
-EU-55 accepted result：Generic Page 已采用正交 `contentModel` / `rendererKey` / `contentOwner` 与 Page-owned versioned Structured payload；`guide/jypq` 以 `CARD_COLLECTION` V1 + `JILINJOBS_GUIDE_CARDS` 成为首个正式 Structured Page，保留 3 张卡片与 4 张 package 图片，默认折叠并支持独立展开/收起，Structured card 图片保持响应式居中；Site Package 的 exact predecessor adoption / operator divergence protection / idempotency 与 Rich Page compatibility 均已验证。
+如果 Fresh Context 的当前用户目标仅为状态恢复 / 检查 / 总结，完成当前 Repository Authority 与必要 GitHub Current Evidence 的只读核验后即停止。只读停止边界读取 `../../rules/repository/read-only-state-inspection.md`；高成本 CI / Review Runtime / Historical Migration 的激活边界读取 `../../rules/verification/high-cost-runtime-activation.md`。
 
-当前没有 active / Ready Execution Unit。任何 Roadmap / Open Issue / backlog / historical candidate 均不会因 EU-55 完成自动获得 Planning、Readiness 或 Execute Authority。
-
-Main historical migration execution 继续冻结：`data-migrations/main/**` 的已接受 canonical evidence 保留不变，只有项目负责人明确开启独立 Main migration process 后才允许重新激活。Party migration 能力不受 EU-55 影响。
-
-如果 Fresh Context 的当前用户目标仅为状态恢复 / 检查 / 总结，完成当前 Repository Authority 与必要 GitHub Current Evidence 的只读核验后即停止；不得仅因发现 non-blocking documentation drift 自动创建新的 Branch / PR / Workflow 生命周期。详细护栏见 `../../project/execution-scope-guardrails.md`。
-
-下一自然 Gate 是新的 **Fresh Context Planning/Readiness decision**。任何后续工作都必须从当前 Repository Authority 重新完成必要状态链，不得继承 EU-55 或任何已完成 Unit 的 Execute Authority。
+下一**产品执行生命周期**自然 Gate 是新的 **Fresh Context Planning / Readiness decision**。该表述只约束 Ready / active Execution Unit lifecycle，不替代当前 Project Governance / Review 等其他责任已经建立的 Gate。Roadmap、Open Issue、backlog、historical candidate 或已完成 Unit 都不会自动获得 Planning、Readiness 或 Execute Authority；任何后续产品执行工作必须从当前 Repository Authority 重新建立必要状态链。

@@ -3,7 +3,7 @@ id: rule:safe-external-write
 type: rule
 status: active
 scope:
-  phases: [execute, converge]
+  phases: []
   activities: [external-operation]
   technologies: []
   artifacts: []

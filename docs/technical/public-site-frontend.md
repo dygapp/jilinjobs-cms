@@ -1,304 +1,115 @@
-# 公开站前端技术计划（Technical Plan）
-
-## 1. 目标架构
-
-`frontend/public-site` 只负责公开页面与固定工程集成，不承载 CMS 管理页面。公开前端采用 **Multi-entry Modular SPA**，Entry 按真实 Theme / Router Boundary 划分，而不是按普通页面类型划分。
-
-当前结构：
-
-```text
-frontend/public-site/
-├── index.html                 # Main Site Entry
-├── party.html                 # Party Entry
-└── src/
-    ├── shared/
-    │   ├── api/
-    │   ├── carousel/
-    │   │   └── useContentCarousel.ts
-    │   ├── components/
-    │   │   ├── PublicNavigation.vue
-    │   │   └── PublicFooter.vue
-    │   ├── styles/
-    │   │   └── public-shell.css
-    │   └── seo.ts
-    └── sites/
-        ├── main/
-        │   ├── app/
-        │   ├── shell/
-        │   ├── modules/
-        │   │   ├── home/
-        │   │   ├── content/
-        │   │   ├── page/
-        │   │   └── integration/
-        │   └── styles/
-        └── party/
-            ├── app/
-            ├── shell/
-            ├── modules/
-            │   ├── home/
-            │   └── content/
-            └── styles/
-```
-
-中心主站与中心党建当前同 package、同 Vite build、同部署、同 Spring Boot CMS Backend。两者分别拥有 App、Router、Banner、内容 Frame 与页面主题；Navigation/Footer 通过 Shared Shell Components 共享结构、交互和响应式，仅由 theme variables 切换蓝色/红色。EU-30 进一步把已经证明稳定一致的轮播**行为生命周期**抽到 `shared/carousel`，但不共享 Site-specific Carousel DOM / CSS。
-
-不引入 Module Federation；不建立 `frontend/party` 独立工程；EU-30 不引入第三方 Carousel。后续只有出现独立发布/部署、不同团队或技术栈、明显不同生命周期等真实需求时再重新评估工程拆分。
-
-中心党建 Foundation 架构已经完成；正式党建前端实施细节由 `docs/technical/party-frontend.md` 接续，本文件继续承担 Main / Party 两个 Entry 的总体工程边界。
-
-## 2. Entry 与 Runtime 路由
-
-### 2.1 Main Site Entry
+---
+id: technical:public-frontend
+type: technical-contract
+status: active
+relations:
+  specifications:
+    - docs/specifications/public-site.md
+    - docs/specifications/party.md
+    - docs/specifications/page-content.md
+  architecture:
+    - docs/architecture/cms-architecture.md
+    - docs/architecture/decisions/ADR-0002-public-site-multi-entry-modular-spa.md
+    - docs/architecture/decisions/ADR-0003-public-shared-shell-components.md
+    - docs/architecture/decisions/ADR-0004-public-shared-column-page.md
+  verification:
+    - docs/technical/verification-strategy.md
+updated_at: 2026-09-15
+---
 
-Main Site Entry 使用 `index.html`，承载：
-
-- `/`
-- `/column/**`
-- `/columns/**` 兼容地址
-- `/article/**`
-- `/articles/**` 兼容地址
-- `/page/**`
+# Public Frontend 跨 Feature 技术契约
 
-原 `page.html / page-main.ts` 已删除。`/page/**` 继续保持公开 canonical URL，但不再拥有重复 Vue bootstrap。
+## 1. 文档责任
 
-Main Router 只组合主站页面路由，各页面组件使用动态 `import()`：
+本文只维护当前 Public Renderer implementation 在多个 Feature 之间持续需要一致的 HOW。Main / Party 的用户可观察行为、canonical URL、Carousel lifecycle、失败状态和 Acceptance 由 Product Specifications 持有；Site / Theme / replaceability boundary 由 CMS Architecture 与 ADR 持有。
 
-```text
-home        -> 首页
-content     -> 栏目 + 文章
-page        -> 独立单页 + 单页分组
-integration -> 稳定外部集成页面
-```
-
-### 2.2 Party Entry
-
-Party Entry 使用 `party.html`，Nginx 对 `/party/**` fallback 到该 Entry。正式 Party Router 承载：
-
-- `/party/`：中心党建入口页（`PartyHome`）；
-- `/party/column/:alias`：党建栏目列表；
-- `/party/article/:id`：党建站内文章详情；
-- Party catch-all：保持在 Party Entry 内处理，不回落 Main Router。
+本文不复制 CMS Domain rules、历史迁移 dataset、精确 asset hash、当前 component inventory、package version 或 E2E case inventory。
 
-Party Entry 拥有独立红色内容主题、Banner 和页面 Frame；Navigation/Footer 复用 Shared Components，不复制 Main DOM，也不依赖 Main 私有 CSS。正式实现细节见 `docs/technical/party-frontend.md`。
+## 2. Current implementation adapter
 
-### 2.3 Gateway
+Public 当前由一个前端 package 提供 Main / Party 两个真实 Site Entry，并共享同一构建生命周期。两个 Entry 各自拥有 App / Router / theme / Site-specific page composition；共享部分只包含已经由产品事实证明稳定一致的 capability。
 
-```text
-/api/**      -> Backend
-/static/**   -> Backend / static resources
-/admin/**    -> Admin frontend
-/party/**    -> Public Party Entry
-其他公开路径 -> Public Main Site Entry
-```
+当前 implementation 使用 Vue / TypeScript / Vite；精确版本、HTML entry、source path 与 build script 由 package / Vite configuration 自己持有，不提升为 Product contract。
 
-用户不直接访问 `party.html`；公开 URL 与实际 HTML Entry 文件名解耦。
-
-## 3. Shared 与 Site Ownership
+如果未来替换 Public Renderer，只要满足当前 Requirement / Specification / Architecture，可以改变 framework、bundle、entry implementation 与 delivery adapter。
 
-`src/shared/` 放跨 Main / Party 两个 Entry 已经证明具有长期复用价值的能力：
+## 3. Shared vs Site-specific source ownership
 
-- API transport 与 CMS DTO；
-- 静态资源 URL helper；
-- SEO / metadata helper；
-- 无主题通用 utility；
-- `useContentCarousel.ts`：轮播有效项、当前项、timer、pause reasons、visibility、reduced-motion、图片失败剔除和最大项数量；
-- `PublicNavigation.vue`：统一一级/二级菜单、active、external/newWindow、Desktop/Mobile 交互；
-- `PublicFooter.vue`：统一机构信息、备案、事业单位图标、微信公众号二维码和响应式结构；
-- `public-shell.css`：共享 Navigation/Footer 结构样式以及蓝/红主题变量。
+可以进入 shared 的长期 implementation responsibility 包括：
 
-以下内容继续归各 Entry：
+- Public API transport / public DTO adapters；
+- resource URL / metadata / SEO utility；
+- 已接受的 Navigation / Footer shared shell；
+- 已接受的二级栏目页面 presentation primitive；
+- 无主题 Carousel lifecycle / state primitive；
+- 多 Site 都需要且行为真正一致的通用 utility。
 
-- Main 顶部平台条与 Main Banner；
-- Party Banner；
-- Page Frame；
-- 首页/专题内容布局；
-- Main / Party 轮播 DOM、比例、caption、dot 视觉和主题动画样式；
-- Site-specific 内容 Theme 和页面模板。
+保持 Site-specific：
 
-共享的判断依据是稳定产品/技术职责，不是简单代码相似。若未来某 Entry 要求不同的菜单层级、Footer 信息架构或轮播基础行为，应先形成 Requirement Change，不通过 Site-local 逻辑静默分叉。
+- Main / Party App 与 Router composition；
+- theme / Banner / homepage or topic layout；
+- Site-specific route scope；
+- 尚未由 Requirement / Architecture 证明可共享的模板与交互。
 
-## 4. Main Site 数据装配
+“代码相似”不是 shared owner 的充分条件；如果产品语义已经不同，不能用 shared abstraction 隐藏分叉。
 
-Main Site App 统一装配有界 Navigation + SiteProperty 快照；首页再按真实业务作用域加载 Article、CmsList、Advertisement，不恢复全站前 N 条后前端过滤。
+## 4. Public-only source boundary
 
-映射规则：
+Public production source只消费 Public contracts，不拥有 Admin CRUD / mutation / resource-management endpoint knowledge。
 
-- `MAIN` → Shared Navigation；
-- `HOME_SHORTCUT` → 首屏右侧快捷入口，并直接使用 Navigation `iconPath`；
-- `HOME_QUICK` → 快速导航，并直接使用 Navigation `iconPath`；
-- `HOME_CAROUSEL` → 主轮播 CmsList；
-- `CAROUSEL_INTERVAL_SECONDS` → Main / Party 共用轮播自动切换间隔，默认 4 秒；
-- `CAROUSEL_MAX_ITEMS` → 单个轮播区域前台最大有效项，默认 5；
-- `SITE_LINKS` group → 网站导航 Tab；
-- `HOME_RECRUITMENT_PROMO` → 招聘活动宣传展示；
-- CONTACT_PHONE 等 → 网站属性；
-- NCSS → 本地固定常量 + 版本化静态资源。
+当前 Repository 通过 source-boundary check 对 `/api/admin/` endpoint knowledge执行 fail-fast guard。具体 guard脚本和扫描实现属于 Repository tooling；长期约束是：
 
-`HOME_CAROUSEL_INTERVAL_SECONDS` 已由 V19 原地收敛为 `CAROUSEL_INTERVAL_SECONDS`，Main 不再读取旧 key。删除旧 JSON merge/fallback 逻辑，避免两个 Authority 同时生效。不得恢复 `top-nav-${index}`、`guide-${index}` 等按数据位置推导业务图标的逻辑。
+- Public source不依赖 Admin-only endpoint；
+- managed content在 Backend Public projection边界转换成 Public 可消费 representation；
+- Public frontend不复制 Admin client来修补 Backend projection gap；
+- source-boundary guard不能替代 Browser / contract verification。
 
-Main Navigation 中“中心党建”预置项通过 V13 为 `LINK /party/`，默认当前窗口进入 Party Entry。
+## 5. Routing / delivery
 
-## 5. Shared Carousel 生命周期
+Main 与 Party 的 canonical route由 `docs/specifications/public-site.md` 持有。Technical implementation需要保证：
 
-`useContentCarousel<T extends { id:number }>` 接收：
+- Main / Party direct access与refresh可到达正确 Entry；
+- Entry file name / bundler chunk不进入 canonical URL；
+- Main / Party Router不互相吞并 route namespace；
+- Gateway fallback、static/resource/API route与当前 deployment adapter一致；
+- compatibility URL若存在，只服务迁移，不成为新 canonical route。
 
-- `items: Ref<T[]>`；
-- `intervalSeconds: Ref<number>`；
-- `maxItems: Ref<number>`。
+Nginx规则、Vite input和具体 artifact名由 current Repository implementation持有。
 
-内部状态：
+## 6. Public data assembly
 
-- `activeIndex`：当前有效项 index；
-- `failedIds`：本次页面生命周期已加载失败图片 ID；
-- `pauseReasons`：允许 `hover / focus / visibility` 等原因叠加；
-- `reducedMotion`：由 `matchMedia('(prefers-reduced-motion: reduce)')` 驱动；
-- `timer`：仅在有效项 > 1、无暂停理由且非 reduced-motion 时存在。
+页面按稳定业务 scope消费 Public API，不使用“全局固定窗口 + 前端过滤”代替 Backend已有的 scope查询。
 
-`visibleItems` 先剔除 failed IDs，再按 `CAROUSEL_MAX_ITEMS` 截断。有效项变化时必须 clamp `activeIndex`，避免失败当前项后落到越界 index。
+Frontend adapter可以把 transport DTO转成 view-facing shape，但不能成为第二份 Domain Authority。Article、Page、CmsList、Resource 的 identity / lifecycle / effective content interpretation来自当前 Domain / Specification。
 
-行为：
+异步装配必须绑定当前 route / scope；旧请求返回不得覆盖已经变化的 route state。
 
-- 0 项：`activeItem=null`，不启动 timer；
-- 1 项：静态，不启动 timer；
-- 多项：`setInterval` 循环切换；
-- `select(index)` 手动切换后重建 timer，但不改变其他 pause reason；
-- `pause(reason)` / `resume(reason)` 使用 Set，解除一个原因不得覆盖其他仍有效的暂停原因；
-- hover / focus / visibility 恢复时保留当前 index；
-- `focusout` 只有 focus 真正离开轮播容器才解除 focus pause；
-- 页面 `visibilitychange` hidden/visible 控制 visibility pause；
-- reduced-motion 直接不 schedule autoplay；
-- `markImageFailed(id)` 把失败项排除并由 watch 重新计算有效集合；
-- unmount 必须清 timer、visibility listener、MediaQuery listener。
+## 7. Page renderer integration
 
-当前最低 interval Runtime 防御值为 1 秒；Backend 正常配置要求大于 0，默认 4 秒。
+Page renderer使用明确稳定的 renderer identity进行选择，不通过 alias、URL、DOM shape或正文 heuristic猜测类型。
 
-## 6. 列表与文章展示契约
+当前 implementation可以使用 renderer registry把 accepted renderer key映射到具体 Vue renderer；unknown / malformed renderer遵循 Specification 的可诊断 fail-closed behavior。
 
-CmsList 不提供 displayMode。CmsListItem 采用两种来源：
+Renderer registry是 implementation mechanism，不是 Page业务对象的新身份层；新增 renderer必须先有相应 Product / Domain / Architecture / Specification Authority。
 
-### LINK
+## 8. Resource integration
 
-- 使用列表项自身 `title / subtitle / url / imagePath`；
-- `HOME_CAROUSEL` LINK URL 为空时渲染静态图片，不产生伪链接。
+Public 只消费当前公开资源 contract：stable Site assets、允许公开的 managed resources与受控 historical resources。
 
-### ARTICLE
+稳定模板资源不直接依赖 Legacy Source URL；mutable uploads不提升为 Site Package stable assets。具体 Runtime path、manifest和asset projection由 Site Definition / Backend implementation持有。
 
-- 使用 `articleId` 建立展示投放关系；
-- Backend 公开查询只输出关联 `PUBLISHED` Article 的有效项；
-- `title / articleType` 等文章派生字段以关联 Article 当前值为准；
-- 对 `INTERNAL` Article，公开 `CmsListItem.url` 为空，由 Main / Party 分别根据 `articleId` 生成自己的 canonical route；
-- 对 `EXTERNAL_LINK` Article，Backend 在解析公开列表项时把 **Article 当前 `externalUrl` 投影到通用 `CmsListItem.url` 字段**；公开 DTO 不额外增加 `externalUrl` 字段，前端只消费解析后的通用 `item.url`；
-- ARTICLE 持久化的列表项自身 `url` 不是目标地址 Authority，创建/更新时会归一为空；因此 Article 外链地址修改后，无需修改投放记录即可由下一次公开查询得到新 `item.url`；
-- Main INTERNAL 目标由前端生成 `/article/{id}`；
-- Party INTERNAL 目标由 Party 生成 `/party/article/{id}`；
-- 列表覆盖图片以 `imageResourceId` 表达，公开端使用 `effectiveImageResourceId`，没有覆盖图时可继承文章可用图片；
-- 投放不修改 Article `columnId`。
+## 9. Build / verification adapter
 
-页面消费：
+当前 Public package自己持有 Node engine、Vue / TypeScript / Vite与 scripts 的精确版本。正式 build包含 source-boundary guard、Vue-aware type-check与bundler build。
 
-- `HOME_CAROUSEL`：消费有效 LINK / ARTICLE + 有效图片；
-- `PARTY_CAROUSEL`：同一 DTO / 生命周期，使用 Party route/theme；
-- `SITE_LINKS`：当前 imagePolicy=NONE，页面使用 title + URL。
+影响 route、DOM、async data、resource或用户交互时追加 Browser Verification；存在视觉 Acceptance时再取得对应 AI / Human Visual Evidence。证据规则以 `docs/technical/verification-strategy.md` 与 live-discovered verification Rules为准。
 
-Public Article Summary 的可选 `coverResourceId` 只是可消费数据；具体栏目列表是否展示封面按页面设计决定，Column coverPolicy 不参与 DOM 模板分支。
+## 10. 不由本文拥有
 
-中心党建当前五个允许内容栏目同样复用 Public Article Summary / Detail；PartyHome 固定内容区仍只查询 `party-voice / party-work / party-rules / party-study`，`party-theme-education` 只进入 Party 内容路由/历史迁移和可选投放。
-
-页面显示模式属于前端工程设计，不回写成 CMS 可配置展示模式。
-
-## 7. Site-specific Carousel 视觉
-
-Main：
-
-- `HOME_CAROUSEL` `imagePolicy=REQUIRED`；
-- 容器使用稳定 `aspect-ratio: 8 / 5`，使既有 Desktop 约 400×250 的比例自然延伸到移动端；
-- 图片 `object-fit: cover`；
-- 使用短 opacity fade；
-- dots 保持低侵入视觉，不增加大面积左右箭头；
-- reduced-motion media query 下 transition 为 none。
-
-Party：
-
-- `PARTY_CAROUSEL` `imagePolicy=REQUIRED`；
-- Desktop 约 585×329；
-- `<=900px` 使用 `aspect-ratio:585/329`；
-- opacity fade 和 Party dot 样式由 Party CSS 持有；
-- reduced-motion 下关闭 transition。
-
-EU-30 不实现 touch swipe。移动端使用现有可聚焦 dots 手动选择。
-
-## 8. 工程资产与 Theme
-
-Main：
-
-- 继续使用现有蓝白主题和视觉基线；
-- NCSS 区域继续使用固定工程集成；
-- 顶部平台条、Main Banner、页面 Frame、首页区域布局属于 Main 工程资产。
-
-Party：
-
-- Foundation 红色 Theme 已证明 Theme / Router 隔离；
-- 正式阶段按原站证据重构 Banner、PartyHome、栏目和详情视觉；
-- Foundation 占位文案、伪品牌元素和临时 CSS 不作为最终 Authority；
-- 可靠取得并验证的党建稳定视觉资源进入 `site-baseline/static/party/**`；
-- 历史文章正文图片属于内容迁移，不混入工程静态基线。
-
-Main / Party 公共 Navigation/Footer 属于 Shared Shell 工程资产。两者结构和交互保持一致，Main 使用蓝色 theme，Party 使用红色 theme。
-
-`/static/icons/**` 可以保存版本化图标文件，但导航条目与图标的对应关系仍来自 Navigation `iconPath`。
-
-## 9. 构建与验证
-
-### 9.1 Public Frontend Build
-
-一次 `npm run build` 必须同时验证 Main 与 Party 两个 Entry 可成功构建。Vite multi-input 仅保留真实 Entry：
-
-```text
-main  -> index.html
-party -> party.html
-```
-
-不得恢复以普通页面类型建立 HTML Entry 的模式。
-
-### 9.2 EU-30 Browser Verification
-
-在既有 Main/Party Regression 上增加：
-
-- Fresh DB 中只有 `CAROUSEL_INTERVAL_SECONDS / CAROUSEL_MAX_ITEMS`，无旧 Main-only key；
-- Main / Party 都受同一 `CAROUSEL_MAX_ITEMS` 控制；
-- reduced-motion 下等待超过 interval 不自动切换，但手动 dot 仍能切换；
-- ARTICLE 投放可进入 Main / Party canonical article route；
-- EXTERNAL_LINK ARTICLE 公开轮播使用 Backend 从 Article 当前外链解析到 `CmsListItem.url` 的地址，而不是列表项持久化 URL；
-- ARTICLE 加入列表后 Article `columnId` 不变；
-- Article withdraw 后对应公开列表项消失；
-- 列表专用 Resource 只在有效公开 ARTICLE 投放时公开；
-- Main / Party responsive ratio 与无横向溢出保持；
-- 图片失败、单项、零项等生命周期边界至少通过针对性单元/Browser evidence 或代码路径验证。
-
-### 9.3 Migration Verification
-
-Canonical Verification 必须：
-
-- 保持 EU-29 `acceptedSnapshot` 181 篇原值与 provenance；
-- 单独识别 EU-30 `candidateExtension` 2 条；
-- Fresh DB 当前 Runtime dataset 导入 183 篇；
-- 第二次导入 183 篇全部 SKIPPED；
-- PARTY_CAROUSEL position 2 为 ARTICLE；
-- `sourceSystem + legacyKey` 解析到 Runtime article_id；
-- 原轮播 PNG 写为 `image_resource_id`，实际 storage bytes SHA-256 与 Canonical 一致；
-- 其他 LINK 项继续使用 static migrated path；
-- 二次 Carousel import 全部 SKIPPED。
-
-## 10. 实施顺序
-
-EU-23～EU-29 已完成并转为追溯；EU-30 对历史内容发现形成定向修订，不重新打开整个 EU-29。
-
-当前顺序：
-
-1. EU-30：Carousel Architecture & Behavior Convergence；
-2. EU-30 Current Evidence：Backend / Main / Party / Admin / Canonical / Browser；
-3. EU-30 Human Review：轮播视觉、交互、主题教育增量内容与历史 position 2 ARTICLE 关系；
-4. Human Review PASS 后收敛 migration candidate 状态、Roadmap 和 PR；
-5. EU-31：Browser Compatibility & Runtime Guard Convergence。
-
-最终视觉和历史增量接受声明必须额外满足 AI Visual / Human Review；PR #58 在人工合并指令前保持未合并。
+- Main / Party 产品身份与业务信息架构；
+- Carousel用户可观察行为；
+- CMS Domain data semantics；
+- Historical Migration counts / fingerprint；
+- Site asset具体 hash / resource inventory；
+- package / component / test case inventory；
+- 已完成 Public replaceability / source-isolation计划的过程历史。

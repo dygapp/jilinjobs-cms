@@ -4,10 +4,11 @@ on:
   pull_request:
     paths:
       - 'AGENTS.md'
+      - 'docs/architecture/rule.md'
+      - 'docs/architecture/rule-discovery.md'
+      - 'docs/architecture/skill.md'
+      - 'docs/project/project-capability-profile.md'
       - 'docs/rules/**'
-      - 'docs/project/rule-discovery-method.md'
-      - 'docs/project/agentic-dev-v4-08-consumer-validation-evidence.md'
-      - 'docs/project/agentic-dev-rule-granularity-baseline-upgrade-evidence.md'
       - 'skills/**'
       - 'tools/rule-discovery/**'
       - '.github/workflows/rule-discovery.yml'
@@ -15,10 +16,11 @@ on:
     branches: [main]
     paths:
       - 'AGENTS.md'
+      - 'docs/architecture/rule.md'
+      - 'docs/architecture/rule-discovery.md'
+      - 'docs/architecture/skill.md'
+      - 'docs/project/project-capability-profile.md'
       - 'docs/rules/**'
-      - 'docs/project/rule-discovery-method.md'
-      - 'docs/project/agentic-dev-v4-08-consumer-validation-evidence.md'
-      - 'docs/project/agentic-dev-rule-granularity-baseline-upgrade-evidence.md'
       - 'skills/**'
       - 'tools/rule-discovery/**'
       - '.github/workflows/rule-discovery.yml'
@@ -56,6 +58,7 @@ jobs:
           payload = json.loads(Path('/tmp/generation-discovery.json').read_text())
           assert payload['status'] == 'ok'
           assert [item['id'] for item in payload['candidates']] == [
+              'rule:execution-continuity',
               'rule:human-facing-content-integrity',
               'rule:implementation-discipline',
           ]
@@ -91,6 +94,7 @@ jobs:
           assert [item['id'] for item in payload['candidates']] == [
               'rule:evidence-claim-reuse-across-commits',
               'rule:evidence-type-must-match-claim',
+              'rule:execution-continuity',
               'rule:integration-state-closure-review',
           ]
           assert all(set(item) == {'id', 'path'} for item in payload['candidates'])

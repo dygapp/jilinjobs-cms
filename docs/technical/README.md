@@ -1,9 +1,21 @@
 # 技术权威文档（Technical Authority）
 
-本目录根级保存当前 `CURRENT` / `PARTIALLY_CURRENT` Technical Authority、Technical Plan 与 Verification Strategy。技术文档不得反向扩大 Product Requirement；其 currentness 由 `AGENTS.md`、Roadmap、Requirement / Specification 与 controlling Issue 共同约束。
+`docs/technical/` 根目录只保存当前仍需要跨 Execution Unit 持续协调的 implementation HOW 与 Verification Strategy。
 
-当前 Page 内容架构 Technical Planning：
+## Current Technical owners
 
-- `page-content-architecture.md` — Structured Page persistence/domain/API、renderer identity、content ownership、Site Package adoption、Admin authoring 与 verification 的 current HOW Authority。
+- `backend-service.md` — Backend multi-project / application composition 与跨 Feature implementation contract；
+- `admin-frontend.md` — Admin application / module 与共享 authoring implementation contract；
+- `public-site-frontend.md` — 当前 Public Renderer implementation adapter 与 source ownership contract；
+- `rich-text-authoring.md` — Rich Text 跨 consumer integration HOW；
+- `verification-strategy.md` — 跨 Feature verification layering、Runtime composition 与 Evidence contract。
 
-`archive/` 保存 Phase 1 已明确为 `SUPERSEDED` 或 `HISTORICAL_EVIDENCE` 的技术计划 / research evidence。archive 默认不参与 Fresh Context。
+Technical Authority 不拥有 Product Requirement、Domain semantics 或长期 Architecture State；也不因历史上曾存在 Requirement / Specification / Technical 同名三件套而保留完成态 Planning 正文。
+
+具体 package version、源码文件清单、Gradle task、active migration inventory、测试数量、当前 Workflow run 与 Execution Unit Evidence 由 Repository implementation、Work lifecycle 或 GitHub 原生状态持有。
+
+## Archive
+
+`archive/` 保存已完成、被取代或已经被长期 owner 接管的 Technical Plan / convergence record，仅用于 traceability。Archive 默认不参与 Fresh Context。
+
+当一个 Feature Technical Plan 完成后，如果其中仍有跨 Feature 长期 HOW，应折回上述 canonical Technical owner；其余完成态 Planning / READY / EU / exact implementation snapshot 退出根级 Current Authority。
