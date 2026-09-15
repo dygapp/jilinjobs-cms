@@ -12,7 +12,7 @@ relations:
     - docs/architecture/cms-architecture.md
   related:
     - docs/specifications/rich-text-authoring.md
-    - docs/specifications/page-content-architecture.md
+    - docs/specifications/page-content.md
 updated_at: 2026-09-15
 ---
 
