@@ -4,16 +4,16 @@
 
 本文件是 `jilinjobs-cms` Consumer-local Development Method 的 Rule Discovery 扩展。它只拥有 Rule / Skill 发现及显式 upstream upgrade 后的本地运行语义，不改变产品 Requirement、Specification、四层 CMS Architecture、Work lifecycle 或 GitHub native state。
 
-- Previous Evaluated Baseline：`dygapp/agentic-dev@1c8cdfea9ecf23ef33ffab20eec3c93679fd4578`
-- Current Evaluated Baseline：`dygapp/agentic-dev@8e7e94eff62b958b2044407cf6d85de3dde48ee9`
-- 当前 baseline 对应已合并 upstream PR #128：`Rule Granularity Consolidation + Technology Rule IA`。
-- `dygapp/agentic-dev@3e0b2f5a29caeb344da79f8c96ebffbeb5c2b0cb` 是此前 V4-08 Consumer validation 使用的 historical Foundation projection；它与本次 target lineage 分离，不再作为当前 evaluated frontier。
-- 本次 exact upstream transition 为 `1c8cdfea... -> 8e7e94ef...`，GitHub compare = ahead 7 / behind 0。
+- Previous Evaluated Baseline：`dygapp/agentic-dev@8e7e94eff62b958b2044407cf6d85de3dde48ee9`
+- Current Evaluated Baseline：`dygapp/agentic-dev@ed1a4446f0430890e7ad39673ac9c2e341e6a829`
+- 本次 exact upstream transition 为 `8e7e94ef... -> ed1a4446...`，GitHub compare = ahead 8 / behind 0。
+- 本次接受的 Rule Discovery reusable delta 只收紧 ordinary-runtime activation checkpoint：Rule Discovery 从“会话中需要时执行”明确为 direct-responsibility 级 checkpoint；算法、五维 signals、matching、locator-only 输出、13 条 Consumer-local Rule corpus 与 9 个 Skill 均不因本次 baseline 升级改变。
+- `dygapp/agentic-dev@3e0b2f5a29caeb344da79f8c96ebffbeb5c2b0cb` 继续只是此前 V4-08 Consumer validation 使用的 historical Foundation projection，不作为当前 evaluated frontier。
 - upstream Project Roadmap、Issue / PR state、Research / Eval 与 self-adoption instance 不传播为 Consumer Authority；只投射本 Consumer 明确接受的 reusable capability。
 
 本次升级的逐项 disposition 与验证证据见：
 
-`docs/project/agentic-dev-rule-granularity-baseline-upgrade-evidence.md`
+`docs/project/agentic-dev-clarification-rule-activation-baseline-upgrade-evidence.md`
 
 普通运行不默认读取 upgrade evidence。
 
@@ -22,8 +22,8 @@
 当前职责如下：
 
 - `AGENTS.md`：稳定 Bootstrap、Rule Discovery ordinary-runtime contract、Repository / Human Authority；
-- `docs/project/development-method.md`：生命周期、Planning / Readiness / Execute / Converge 核心方法与 evaluated baseline；
-- 本文件：Rule / Skill discovery 运行扩展、Rule granularity 与 explicit-upgrade decoupling；
+- `docs/project/development-method.md`：生命周期、Planning / Readiness / Execute / Converge、项目级澄清 Method selection 与 evaluated baseline；
+- 本文件：Rule / Skill discovery 运行扩展、Rule granularity、direct-responsibility checkpoint 与 explicit-upgrade decoupling；
 - `skills/*/SKILL.md`：Consumer 已采用九项独立执行能力的 Consumer-local procedure；
 - `docs/rules/**`：可发现横切 Rule；每条 Rule 的 metadata 与规范正文同文件；
 - `tools/rule-discovery/rule_discovery.py`：确定性 metadata prefilter 与 lint；
@@ -105,7 +105,12 @@ Consumer current facts
 5. discovery 只返回 `{id,path}`；不返回全量 metadata、未命中清单、score、摘要或推荐答案；
 6. metadata、duplicate id、signals 或 root 异常时 fail closed，不自动回到 upstream；
 7. Tool 负责候选初筛，LLM 仍负责 candidate body 的最终语义适用性确认；
-8. phase / activity / technology / artifact / risk facts 实质变化时重新 discovery，不把旧 candidate set 当作整个会话永久上下文。
+8. 当前 direct responsibility 建立后，在执行该责任的首个有副作用动作前必须完成一次 task-level discovery；为恢复 Authority / Repository facts 所需的只读读取可以先于 discovery；
+9. direct responsibility 切换，或 phase / activity / technology / artifact / risk 等关键事实发生足以改变候选集合的实质变化时，旧 candidate set 不再构成下一责任的充分依据；必须在下一次有副作用动作前重新构造 signals 并执行 discovery；
+10. CI 中的 Rule Discovery lint、deterministic tests 或固定 smoke scenario 只验证工具与 corpus，**不得替代 ordinary runtime invocation**，也不能证明当前 Agent 的真实 direct responsibility 已完成 task-level discovery；
+11. 旧 candidate set 不跨职责永久有效；discovery fail-closed 时先修复本地 signals / metadata / scan 完整性，不回退到全量 Rule、旧索引或 upstream。
+
+该 checkpoint 只规定“何时必须发现 / 重新发现”，不改变五维 signals、三态语义、matching、locator-only 输出与正文 semantic confirmation。
 
 ## 7. Skill discovery
 

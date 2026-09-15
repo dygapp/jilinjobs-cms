@@ -36,6 +36,9 @@ Bootstrap / Roadmap surface 不并行维护 `Current Ready Execution Unit`、Rea
 execution 中的横切 Rule 由 Consumer-local `tools/rule-discovery/rule_discovery.py` 从当前任务事实提取 bounded signals 做确定性候选发现；详细 contract 由 `docs/project/rule-discovery-method.md` 持有。当前 Rule 默认按“一个可独立发现的具体任务或责任所需的有界规范语义集合”形成自然边界，不采用“一条 assertion = 一个 Rule 文件”的机械拆分；同一任务中通常共同发现、共同消费的 policy 优先聚合，只有独立 discovery 能实际减少无关加载 / 错误激活，或存在不同 technology / artifact / risk / lifecycle / semantic owner 时才拆分。Technology Rule 子目录只服务人类维护，不参与 runtime matching。普通运行必须满足：
 
 - task signals 使用 `phases / activities / technologies / artifacts / risks` 五维；非空数组表示 known，`[]` 表示 known-empty，`null` 表示 unknown / unsafe-to-canonicalize；每维最多 6 个 canonical token；
+- 当前 direct responsibility 建立后，在该责任的**首个有副作用动作前必须完成本次 task-level discovery**；只读 Authority / Repository fact 恢复可以先于 discovery；
+- direct responsibility 切换，或 phase / activity / technology / artifact / risk 等关键事实实质变化时，旧 candidate set 不跨职责继续生效；必须在下一次有副作用动作前重新构造 signals 并发现；
+- Rule Discovery CI lint、deterministic tests 与固定 smoke 只证明 Tool / corpus contract，**其 PASS 不得替代 ordinary runtime invocation**，也不能证明当前 Agent 的实时责任已经完成 discovery；
 - Rule metadata 与规范正文同文件维护在 `docs/rules/**`；
 - discovery 返回的 candidate `{id,path}` locator 是 ordinary runtime 获得 Rule locator 的唯一入口；只读取返回候选的 Rule body，再做 semantic applicability confirmation；
 - 不得通过 `rg --files`、`find`、目录树或其他方式枚举未命中的 Rule locator，也不得在 zero-candidate 后读取未命中 Rule 做 calibration；
@@ -100,16 +103,16 @@ Current 文档的中文主语言与本地文档引用完整性由 `scripts/verif
 方法来源：
 
 - Repository：`dygapp/agentic-dev`
-- Previous Evaluated Baseline：`1c8cdfea9ecf23ef33ffab20eec3c93679fd4578`
-- Current Evaluated Baseline：`8e7e94eff62b958b2044407cf6d85de3dde48ee9`
+- Previous Evaluated Baseline：`8e7e94eff62b958b2044407cf6d85de3dde48ee9`
+- Current Evaluated Baseline：`ed1a4446f0430890e7ad39673ac9c2e341e6a829`
 - Historical V4 Foundation Projection：`3e0b2f5a29caeb344da79f8c96ebffbeb5c2b0cb`
 - Capability Milestone Tag：`baseline-2026-09-04-engineering-capability` → `5be2e6aad29b2be6b8535b3690daf3533ee22a46`
 
-Current Evaluated Baseline 只表示本 Consumer 已经完成 exact upstream compare、逐项 disposition 与 adoption verification 到哪个精确 commit，不表示 `8e7e94ef...` 中所有文件、Project 状态或规则均被采用。当前 local asset 的真实 semantic owner / provenance 与 upgrade-only decision history 必须与 baseline 分离；本轮 `1c8cdfea... -> 8e7e94ef...` 的逐项记录见 `docs/project/agentic-dev-rule-granularity-baseline-upgrade-evidence.md`。此前 `2fe193... -> 1c8cdfea...`、`d9fad0da... -> 2fe193...` 的历史升级证据继续保留，但普通运行不默认读取这些 upgrade history。
+Current Evaluated Baseline 只表示本 Consumer 已经完成 exact upstream compare、逐项 disposition 与 adoption verification 到哪个精确 commit，不表示 `ed1a4446...` 中所有文件、Project 状态或 capability 均被采用。当前 local asset 的真实 semantic owner / provenance 与 upgrade-only decision history 必须与 baseline 分离；本轮 `8e7e94ef... -> ed1a4446...` 的逐项记录见 `docs/project/agentic-dev-clarification-rule-activation-baseline-upgrade-evidence.md`。此前 Rule Granularity、V3 Closure、V3-08 Track B 的历史升级证据继续保留，但普通运行不默认读取这些 upgrade history。
 
-`3e0b2f5a...` 是此前 V4-08 Consumer validation 的 historical Foundation projection，与本次 target 从 `1c8cdfea...` 后分叉；不得把它当作 `8e7e94ef...` 的 ancestry 或第二个 current baseline。本轮只把 upstream PR #128 中经 Consumer 显式接受的 Rule granularity、公开 Rule id / path replacement 与 Technology Rule IA 投射到本地 owner；upstream Project Roadmap、Issue / PR state、Research / Eval 与 self-adoption 不继承。
+`3e0b2f5a...` 继续只是此前 V4-08 Consumer validation 的 historical Foundation projection，不构成 `ed1a4446...` 的 ancestry 或第二个 current baseline。
 
-本轮 accepted reusable change 包括：Rule 默认按 task / responsibility 的有界语义集合形成自然粒度；Consumer discoverable Rule 从 15 条收敛为 13 条；7 个旧 id / path 由 5 个任务级 Rule replace / adapt；真实 Vue Rule 进入 `docs/rules/technology/vue/` 人类信息架构。Consumer-local deterministic Rule Discovery 算法、Git Commit 规范、TypeScript Technology Profile 与未受影响的 local specialization 保持原 owner；不机械复制 upstream 27 条 Rule，也不创建空 `technology/typescript/`。
+本轮 accepted reusable change 包括：采用 bounded 的 Software Project Clarification 作为 Consumer-local 可选项目级 Method，用于多个 Feature 共同受长期 Requirement / Architecture Context 缺失、冲突或需要重建而阻塞的场景；同步收紧 ordinary Feature Development 的进入 / 返回边界；采用 direct-responsibility 级 Rule Discovery checkpoint。Model Collaboration reusable capability 本轮**不采用、不启用**，不建立本地 runtime/config/tier mapping；upstream Project Roadmap、Evolution、Research、Guide instance 与 self-adoption state 不继承。Consumer Rule corpus 保持 13 条、Skill 保持 9 个。
 
 本项目不是在每次开发工作中直接运行 `agentic-dev` 仓库的方法文档，而是将当前采用的方法和 Skills 使用规则固化在 Consumer Repository：
 
@@ -125,7 +128,7 @@ Rule Discovery 的 Consumer-local 扩展记录在 `docs/project/rule-discovery-m
 
 1. 重新恢复 Consumer 当前 Authority / Current Work / GitHub evidence，并确认没有冲突的 active lifecycle；
 2. 精确确认 previous evaluated baseline 与固定 candidate baseline，执行 exact compare；
-3. 对 reusable delta 逐项分类 `adopt / retain-or-override / reject-or-not-applicable / supersede-or-remove`；
+3. 对 reusable delta 逐项分类 `adopt / adapt / retain / replace / reject / not-applicable`；
 4. 区分跨项目可复用规则与 `agentic-dev` project-only / Research / Eval / historical / self-adoption 实例；
 5. 优先投射到 Consumer 现有 semantic owner，不机械复制完整文档、Map、Catalog、Runtime View 或 Skill supporting resources；
 6. 分开维护 evaluated baseline、current local asset provenance / owner、upgrade-only decision history；
@@ -137,6 +140,7 @@ Rule Discovery 的 Consumer-local 扩展记录在 `docs/project/rule-discovery-m
 
 - 使用渐进式披露（Progressive Disclosure），只加载当前职责真正需要的 Authority、Skill 与 supporting capability；
 - 一次 discovery / routing 决策只确定一个 primary responsibility + 最小 supporting locator；routing-only 不加载完整 Skill，真正 execution 才加载 primary Skill；
+- 普通 Feature / change 只在当前 Repository 已具备足以支持 Goal、Scope、Observable Behavior 与 Acceptance 的最小长期 Requirement / Domain / Architecture Context 时进入常规 Feature Method；单个 Feature 的局部歧义留在对应 owner 内解决；多个 Feature 共同受长期 Context 缺失、冲突或需要重建而阻塞时，按 `docs/project/development-method.md` 的 Consumer-local selector 进入项目级澄清责任；
 - 阶段是工作状态，不为了表示阶段而机械创建 Artifact；
 - 规格说明（Specification）聚焦 WHAT / WHY；
 - 只有存在跨执行单元（Execution Units）的长期 HOW 协调价值时，才持久化技术计划（Technical Plan）；
