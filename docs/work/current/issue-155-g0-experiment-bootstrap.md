@@ -4,7 +4,7 @@ type: work
 status: active
 ---
 
-# Issue #155 — G0 Experiment Bootstrap & Baseline Upgrade
+# Issue #155 — G0 实验启动与基线升级
 
 ## 目标
 
@@ -37,7 +37,8 @@ status: active
 - Consumer-local Method / engineering capability Architecture；
 - Project Capability Profile / Method selector；
 - Method / Architecture Human navigation；
-- Current Work / Roadmap / experiment coordination 所需治理 locator。
+- Current Work / Roadmap / experiment coordination 所需治理 locator；
+- 为本次 Method / capability migration 保持 current 的 governance verification contract。
 
 本单元禁止修改：
 
@@ -68,6 +69,8 @@ Human Guide 只可用于 adoption 理解，不得成为 Consumer runtime Authori
 - `rule:verification-contract-currentness`
 
 `read-only-state-inspection` 不阻止本单元，因为当前 Human Authority 已明确授权新的治理责任；跨仓库边界保持 Consumer 可写、`agentic-dev` 只读。
+
+当责任切换到 verification-contract repair 与 documentation-governance convergence 时，已分别在下一次副作用前重新执行 task-level Rule Discovery，并按新 signals 读取命中的 current Rules。
 
 ## Semantic Disposition Target
 
@@ -103,7 +106,7 @@ Requirement Baseline Ready
 - 四类 direct capability delta 已显式 adopt / adapt / reject；
 - Method selector 与采用结果一致；
 - retired super-method 不再构成 competing Current Authority；
-- 没有修改 Product Requirement / Specification / Product Architecture / Technical / Verification contract；
+- 没有修改 Product Requirement / Specification / Product Architecture / Technical / Product Verification contract；
 - Issue #155 已持久化 G0～G7、Behavioral Regenerability、Technology Substitutability 与 Failure Evidence protocol；
 - targeted static / governance / selector consistency / Review 全部通过；
 - G0 PR 已 Integration，实际 integrated `main` 已完成 Post-Integration verification；
