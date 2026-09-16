@@ -81,6 +81,18 @@ JSON contract 基线：
 
 Article list query 支持当前 Admin filtering / paging contract：`keyword`、`columnId`、`status`、`articleType`、`page`、`size`；未指定 page / size 时保持零基页码与当前默认 page size 语义。
 
+Admin Article query 的 `columnId` 表示**所选栏目子树**：结果包含该 Column 自身以及当前全部 descendant Column 中满足其余过滤条件的 Article。该语义对应 Admin Specification 的“选择父栏目时聚合其后代栏目文章”，不是 exact-column filter。`columnId = null` 表示不按栏目限制。
+
+Article mutation endpoint 只负责把 Domain lifecycle 投影为稳定 HTTP action：
+
+- `POST /api/admin/articles` 创建后返回 `DRAFT` Article；
+- ordinary `PUT /api/admin/articles/{id}` 更新内容但保持当前 publish status，不隐式 publish / withdraw；
+- `POST /api/admin/articles/{id}/publish` 将当前允许发布的 `DRAFT` 或 `WITHDRAWN` Article 转为 `PUBLISHED`；
+- `POST /api/admin/articles/{id}/withdraw` 只对当前 `PUBLISHED` Article 成功，并转为 `WITHDRAWN`；
+- 不满足 Domain transition / publication precondition 时返回受控 validation failure，而不是静默改写成其他状态。
+
+这些规则是 Domain lifecycle 在现有 HTTP surface 上的 compatibility projection；Domain 仍由 `docs/requirements/cms-domain.md` 持有。
+
 仅在 frontend adapter 中声明、但没有当前 Backend projection / active consumer 证据的 helper endpoint **不自动进入本 contract**。例如 endpoint 增删必须以真实 Current consumer + provider contract 为依据，而不是因为某个 TypeScript function 曾存在就永久保留。
 
 ## 4. Public endpoint families
@@ -98,6 +110,8 @@ Public frontend 只消费 read / resource projection，不依赖 Admin mutation 
 | SiteProperty | `GET /api/public/site-config` |
 | Managed Resource | `GET /api/public/resources/{id}/content`；`GET /api/public/resources/{id}/attachment` |
 | StaticResource | `GET /static/{path...}` |
+
+Public Article query 的 `columnId` 是**exact-column** filter：只返回 primary Column 等于该 id 且当前可公开的 Article；它不会像 Admin query 一样自动扩展到 descendant Column。`columnId = null` 表示不按栏目限制。`articleType` 是对当前公开 Article source type 的 exact filter。
 
 Public list / advertisement 的 by-code / by-group projection 是 Main homepage 等当前运行 consumer 的稳定依赖；Backend replacement 不得只实现“全量列表再让前端过滤”来改变已有 scope contract。
 

@@ -127,6 +127,19 @@ Review Environment 的共享外部资源、并发互斥、临时代理、bind mo
 - 外部访问、内部 target、Run ownership 与释放状态分别可验证；
 - 临时验证授权不扩张为 Production / shared data 的破坏性操作授权。
 
+### 4.6 跨层语义与可再生性复核
+
+当 claim 涉及 Documentation Authority completeness、Fresh Context reconstruction、technology substitution 或 code-holdout regeneration 时，不能只检查文档存在、字段名称一致或单层测试通过；必须对当前受影响语义做双向 traceability challenge：
+
+- Product / Domain Requirement 中具有用户可观察后果的长期事实，应能进入唯一 Current Specification 的 Observable / Failure / Acceptance contract；
+- Specification 中依赖 Backend / external boundary 的行为，应能在对应 Interface / Technical owner 中恢复必要的 transport semantics，不只恢复 endpoint / field shape，还要覆盖 query scope、lifecycle transition、failure 与 resource projection 等会改变 consumer 行为的含义；
+- Architecture 的长期 seam 应有相应 Technical consumer / provider contract 与 Verification oracle，不由某个当前 implementation file 代替；
+- Verification 不应维护第二份 Requirement / Specification / Interface truth，也不应因 implementation 当前“碰巧这样做”就自动把未授权行为晋升为产品事实。
+
+Repository implementation 可以在 Review 中作为 **Evidence** 暴露 Current Authority 的遗漏、冲突或 stale contract：先建立 Expected vs Actual，再判断应修复 Authority、verification 还是 implementation。若 implementation 只是证明某个已经存在的上层 Requirement 在下游缺少可恢复 projection，可以把该已授权语义 promotion 到正确 owner；不得从 implementation convenience 反向发明新 Requirement。
+
+进入真正 code-holdout / technology-substitution design 后，replacement Agent 必须以 Current Authority 为设计输入，不再通过读取被替换 implementation 来补齐缺失 contract；旧 implementation 只在结果比较阶段按实验协议作为对照 Evidence 使用。
+
 ## 5. 失败分类
 
 遇到 Test、Workflow、fixture、snapshot 或 Runtime failure，先建立 Expected vs Actual，再至少区分：

@@ -3,7 +3,7 @@ id: specification-public-site
 title: 公开站产品规格
 type: specification
 status: accepted
-version: "V3.0"
+version: "V3.1"
 relations:
   requirements:
     - docs/requirements/information-publishing.md
@@ -77,6 +77,8 @@ Main 首页继续保持已接受的固定页面结构与主要视觉识别，并
 其中“招聘公告”首页区域只聚合当前招聘公告业务栏目中已发布的 `EXTERNAL_LINK` Article，并直接进入其外部来源；这不限制该栏目的普通栏目页只能存在外链 Article。具体稳定栏目 identity 由其真实 Domain / Site Definition owner 持有，不在本规格复制内部 alias。
 
 首页招聘活动宣传展示消费当前招聘活动展示位中的有效 Advertisement：0 项时不制造伪内容，1 项时静态展示，2 项及以上按展示顺序轮动；每项继续遵守其 URL / open-mode / `NO_LINK` Domain contract。具体展示位 identity 与轮动参数由其真实 source / configuration owner 持有，不在本规格复制内部 key 或 default value。
+
+招聘日历当前承担首页日期定位能力：展示当前日期所在年份 / 月份，以周一到周日的七列周视图排列当月日期，并对当前日期提供可辨识状态。当前没有 Authority 把某一天与招聘活动 dataset、详情跳转或第三方事件接口建立绑定；不能仅因为区域名称为“招聘日历”就在 regeneration 中发明尚未授权的事件数据集成。
 
 “最新招聘”及招聘 / 宣讲区域当前只是已接受页面结构中的第三方业务集成 seam；真实 iframe / 第三方 Runtime integration 必须由新的 Feature Requirement / Specification 明确授权，不因页面已存在占位区域自动获得实施权限。
 
@@ -218,7 +220,19 @@ Main / Party 轮播共享以下用户可观察 lifecycle：
 - loading / empty / error / unsupported state 可辨识，不通过永久 skeleton 或静默空白掩盖失败；
 - Party Banner、入口页、栏目、分页与详情在不同 viewport 下保持一致 Party branding，不泄漏错误的 Main 蓝色主题。
 
-## 13. Main / Party 一致与差异行为
+## 13. 基础搜索引擎友好行为
+
+成功加载的公开页面必须提供与当前 Site / 内容语义相符的基础页面 metadata，而不是长期保留入口 HTML 的通用占位信息：
+
+- Main / Party 入口能够表达各自站点 / 专题 identity；
+- Column 页面能够以当前栏目名称表达页面 title，并提供与栏目浏览语义相符的 description；
+- INTERNAL Article 页面能够以当前文章标题表达页面 title，并从当前正文或 source/date 等 accepted content 形成合理 description；
+- Page 能够以当前 Page 名称表达页面 title，并从 Rich / Structured accepted content 形成合理 description；
+- 成功切换到新的公开内容后，metadata 必须随当前内容更新，不能继续代表上一条已成功加载的内容。
+
+本能力只定义最小可观察结果，不要求特定 DOM API、Vue helper、SSR / SSG，也不自动新增 canonical link element、structured data、sitemap 或完整 SEO 平台 Requirement。
+
+## 14. Main / Party 一致与差异行为
 
 Main 与 Party 当前保持一致的用户可观察行为包括：
 
@@ -237,7 +251,7 @@ Main 与 Party 当前保持一致的用户可观察行为包括：
 
 行为一致不改变 Main / Party 的产品身份；视觉和布局差异也不产生第二套 CMS Domain。
 
-## 14. Failure behavior
+## 15. Failure behavior
 
 以下情况必须产生可观察失败或稳定空态，而不是展示错误内容：
 
@@ -252,7 +266,7 @@ Main 与 Party 当前保持一致的用户可观察行为包括：
 
 异步数据必须以当前 route / scope 为准；旧请求不能覆盖新页面的 success、error、loading 或 metadata 状态。
 
-## 15. Acceptance
+## 16. Acceptance
 
 触达公开站行为时，最终结果至少满足实际涉及的以下 contract：
 
@@ -260,7 +274,7 @@ Main 与 Party 当前保持一致的用户可观察行为包括：
 - Main 首页招聘公告只聚合已发布 EXTERNAL_LINK Article；
 - Main EXTERNAL_LINK Article 在无独立 open-mode 的内容入口使用新窗口并保持安全 rel 行为；
 - Main 首页招聘活动宣传展示的 0/1/many 与 open-mode 行为；
-- Main 首页招聘日历与当前第三方业务 integration seam 保持已接受结构；
+- Main 首页招聘日历展示当前年月、周一至周日日期网格与可辨识的今日状态，且不因名称自行发明未授权招聘事件数据；
 - `/party/` accepted Banner 可见且不可点击；
 - Party 入口页内容线正确，“主题教育”不被静默增加为第五个固定内容区；
 - scope-correct Column / Article / Page data，以及 Party route scope guard；
@@ -269,13 +283,14 @@ Main 与 Party 当前保持一致的用户可观察行为包括：
 - Navigation / Footer 与 column-page 的当前一致行为；
 - carousel 0/1/many、pause/resume、reduced-motion、failed-image behavior 与当前 Main / Party accepted visual ratio；
 - managed Rich Text resources；
+- Main / Party 成功加载的入口、Column、Article、Page 按当前内容提供合理 title / description metadata；
 - desktop + representative mobile viewport 无明显横向溢出；
 - loading / empty / error / unsupported states；
 - stale async response 不覆盖当前 route。
 
 需要哪些自动化、Browser 或 Human visual evidence 由当前 Verification Authority 与变更风险决定，本规格只拥有应满足的可观察结果。
 
-## 16. Non-goals
+## 17. Non-goals
 
 - 新增 Party-specific CMS model / Admin module；
 - generic page builder；
