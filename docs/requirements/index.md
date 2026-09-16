@@ -1,12 +1,12 @@
 ---
 id: requirement-authority-index
-title: Requirement Authority Index
+title: 需求权威索引（Requirement Authority Index）
 type: requirement-index
 status: active
 updated_at: 2026-09-16
 ---
 
-# Requirement Authority Index
+# 需求权威索引（Requirement Authority Index）
 
 ## 1. 责任
 
