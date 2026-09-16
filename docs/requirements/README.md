@@ -24,7 +24,7 @@ docs/requirements/
 └── archive/                   # superseded / historical requirement evidence
 ```
 
-G2 复核后没有证据支持按页面、菜单、前端应用、数据库对象或历史 Feature 再拆更多长期 Requirement owner。多个 Requirement Capability 可以由同一个语义一致的 fact owner 承担，并由 `index.md` 定位到稳定章节；是否未来物理拆分，必须由真实 ownership pressure 驱动。
+当前 Repository Authority 没有证据支持按页面、菜单、前端应用、数据库对象或历史 Feature 再拆更多长期 Requirement owner。多个 Requirement Capability 可以由同一个语义一致的 fact owner 承担，并由 `index.md` 定位到稳定章节；是否未来物理拆分，必须由真实 ownership pressure 驱动。
 
 ## Fact owner 边界
 
@@ -37,7 +37,7 @@ G2 复核后没有证据支持按页面、菜单、前端应用、数据库对�
 
 source inventory、extraction table、ambiguity / conflict list、comparison matrix、capability review batch 与会话 scratchpad 默认属于 **Requirement Analysis Workspace**，不构成 Requirement Authority。
 
-当前 G2 的 transitional analysis / review evidence 由 Issue #155、PR Review 与 GitHub history 承载，因此不为“方便 AI”额外创建长期 `analysis/` 同步副本。未来确需 Repository 内 analysis artifact 时，必须显式标记 non-Authority、producer、promotion path 与退出条件；事实 promote 后应删除、归档或降级为 historical evidence。
+Requirement baseline / clarification 的 transitional analysis / review evidence 默认留在当前 controlling Issue / Review 或显式 non-Authority artifact；没有独立恢复需要时，不为“方便 AI”额外创建长期 `analysis/` 同步副本。未来确需 Repository 内 analysis artifact 时，必须显式标记 non-Authority、producer、promotion path 与退出条件；事实 promote 后应删除、归档或降级为 historical evidence。
 
 ## Archive
 
