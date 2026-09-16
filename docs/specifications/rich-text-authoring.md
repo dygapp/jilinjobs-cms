@@ -3,7 +3,7 @@ id: specification-rich-text-authoring
 title: 富文本内容编辑规格
 type: specification
 status: accepted
-version: "V3.0"
+version: "V4.0"
 relations:
   requirements:
     - docs/requirements/information-publishing.md
@@ -12,7 +12,7 @@ relations:
     - docs/architecture/cms-architecture.md
   technical:
     - docs/technical/rich-text-authoring.md
-updated_at: 2026-09-15
+updated_at: 2026-09-16
 ---
 
 # 富文本内容编辑规格
@@ -27,7 +27,7 @@ updated_at: 2026-09-15
 - RICH_TEXT Page 的 whole-body Rich Text；
 - Structured schema 明确允许的 item-level Rich Text。
 
-本规格不决定 editor 品牌、版本、framework wrapper、Backend library 或源码目录；这些属于 Technical / implementation。
+Rich Text 的长期 content authority、ownership 与安全业务不变量由 Domain Requirement 持有。本规格不决定 editor 品牌、版本、framework wrapper、Backend library、HTML parser 或源码目录；这些属于 Technical / implementation。
 
 ## 2. Authoring experience
 
@@ -43,22 +43,20 @@ Rich Text authoring 必须提供成熟、稳定的编辑体验，至少覆盖：
 - undo / redo；
 - 常见 WPS / Office-shaped paste。
 
-不得要求运营人员理解 editor internal schema、HTML sanitizer 实现或资源存储细节。
+不得要求运营人员理解 editor internal schema、HTML safety implementation 或资源存储细节。
 
-## 3. Single body authority
+## 3. 保存、重开与语义保持
 
-Rich Text 的长期正文 Authority 是 `bodyHtml`。
+Rich Text 保存时可以对等价内容做不会改变用户感知语义的规范化，但 Domain 所定义的正文 Authority 仍必须保持单一且可恢复。
 
-不得同时持久化第二套 editor-internal JSON、Delta、Markdown 或其他 whole-body representation，并要求二者长期同步。
-
-Editor 保存时允许对等价 HTML 做 canonicalization，但必须保持用户可感知语义和已接受表现，例如：
+用户可观察的有效内容在 save → reopen → public chain 中应保持，例如：
 
 - paragraphs / headings / emphasis / lists / links；
 - table / row / cell / colspan / rowspan；
 - image src / alt / title / accepted width / height / alignment；
 - accepted text / background / font / size / align / width / height / float。
 
-保存后重新打开必须能够继续稳定编辑。
+保存后重新打开必须能够继续稳定编辑；不得因为 editor 内部 representation 改变而要求运营人员维护第二份正文。
 
 ## 4. Paste / history behavior
 
@@ -68,7 +66,7 @@ Editor 保存时允许对等价 HTML 做 canonicalization，但必须保持用�
 - paste 后继续输入、删除、formatting、table edit 和 undo / redo 不应破坏内容；
 - 不能为了“清理 HTML”而把仍属于 accepted presentation 的结构、图片尺寸或表格信息机械删除。
 
-真实 Microsoft Word 行为只有在具备对应环境时才作为 Human Evidence；没有环境时不得伪报 PASS。
+在缺少真实 Microsoft Word 环境时，不把未实际观察的 Word-specific 行为声明为已验证产品结果。
 
 ## 5. Article managed images
 
@@ -83,16 +81,16 @@ Article Rich Text 中的 managed image 必须保持以下用户可观察语义�
 
 Page Rich Text 当前不因为本规格自动获得新的 Article-style managed Resource domain；若未来需要新的 Page Resource relation，应形成独立 Requirement / Specification。
 
-## 6. Compatibility corpus
+## 6. Compatibility behavior
 
-触达 Rich Text capability 时至少保护当前已接受 representative corpus：
+触达 Rich Text capability 时，需要保护当前已经接受的代表性内容形态，包括：
 
-- Party Article 中 small inline images；
-- Main `teacher-library` Page 中 table / cell / image dimensions / float 等复杂 presentation；
+- small inline images；
+- table / cell / image dimensions / float 等复杂 presentation；
 - ordinary Article / Page Rich Text；
-- WPS 中文 paste / undo behavior。
+- WPS-shaped 中文 paste / undo behavior。
 
-该 corpus 只是 regression evidence，不成为新的业务数据 Authority。
+具体 regression corpus、样本 identity 与测试 fixture 由 Verification / Repository Evidence 持有，不在 Specification 复制成新的业务数据 Authority。
 
 ## 7. HTML safety
 
@@ -106,15 +104,13 @@ Rich Text 必须在保持 accepted content compatibility 的同时阻止真正 a
 - meta / base / link 等 document-level controls；
 - dangerous CSS / URL behavior。
 
-Safety policy 不能简单等于当前 editor toolbar allow-list，也不能用 regex 代替结构化 HTML parsing。
-
-Public defensive filtering 不应在读取时静默回写数据库内容。
+Safety policy 不能简单等同于当前 editor toolbar 的可见能力。具体 parser、sanitization 与 defensive-read mechanism 属于 Technical；Public 防御性处理不得造成用户内容被静默持久化改写。
 
 ## 8. Public rendering independence
 
-Public 正常展示 accepted Rich HTML 时，不得要求加载 authoring editor 的完整 UI / chrome 才能成立。
+Public 正常展示 accepted Rich content 时，不得要求加载 authoring editor 的完整 UI / chrome 才能成立。
 
-如果未来某个 editor 的正常输出必须依赖其产品专属 UI CSS 或 internal runtime 才能显示，应停止机械 patch，重新评估 Technical choice 与产品 compatibility。
+如果未来某个 editor 的正常输出必须依赖其产品专属 authoring runtime 才能显示，应重新评估 Technical choice 与产品 compatibility，而不是把 Admin implementation 变成新的公开内容 contract。
 
 ## 9. Failure behavior
 
@@ -123,37 +119,32 @@ Public 正常展示 accepted Rich HTML 时，不得要求加载 authoring editor
 - hostile active content 被接受并执行；
 - accepted valid content 在 save → reopen → public chain 中出现明显语义 / presentation loss；
 - managed image association 丢失导致 Public content broken；
-- editor wrapper 导致正常中文输入或 paste/history 无法使用；
+- editor integration 导致正常中文输入或 paste/history 无法使用；
 - 为适配 editor 而要求 Public 理解 Admin-only resource route。
 
-具体错误提示与实现 recovery 由 Technical contract 决定，但必须可验证。
+具体错误提示与 implementation recovery 由 Technical contract 决定，但失败结果必须可观察、可验证。
 
 ## 10. Acceptance
 
-触达 Rich Text capability 时，根据实际影响至少覆盖：
+触达 Rich Text capability 时，最终结果至少满足实际涉及的以下 contract：
 
-- 中文输入；
-- common formatting / list / table / link / image；
-- save / reopen；
-- undo / redo；
-- WPS paste / history；
-- Article managed image；
-- attachment regression；
-- representative Party / teacher-library corpus；
-- hostile direct API payload；
-- Public render 不依赖 editor chrome；
-- Backend / Admin / Public / Integrated Browser regression。
+- 中文输入正常；
+- common formatting / list / table / link / image 可编辑并保持；
+- save / reopen 后用户可感知语义保持；
+- undo / redo 可用；
+- WPS-shaped paste / history 不破坏 accepted content；
+- Article managed image 在 authoring → reopen → Public chain 中保持；
+- attachment behavior 不因 editor integration 回归；
+- representative simple / complex Rich Text content 保持；
+- hostile active content 被阻止；
+- Public render 不依赖 editor authoring chrome。
 
-有真实 UX / presentation 变化时，在 automated evidence 后执行 bounded Human Review。
+验证使用哪些 Backend / Admin / Public / Browser 层次与 Human evidence，由当前 Verification Authority 和实际风险决定，不由本规格固化测试程序。
 
 ## 11. Non-goals
 
 - 自研 editor core / selection / history / paste / table engine；
-- 同时维护两套 Rich Text editor runtime；
-- whole-body HTML 与 editor JSON 双写；
 - generic Page Builder；
 - Page Resource domain expansion；
 - full-database body rewrite；
-- Main Historical Migration reactivation；
-- grammar / typo / sensitive-word / AI writing；
-- 从本规格恢复已结束的 Rich Text Execution Unit。
+- grammar / typo / sensitive-word / AI writing。
