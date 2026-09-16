@@ -3,7 +3,7 @@ id: specification-admin-site
 title: CMS 管理端产品规格
 type: specification
 status: accepted
-version: "V2.2"
+version: "V3.0"
 relations:
   requirements:
     - docs/requirements/information-publishing.md
@@ -13,7 +13,7 @@ relations:
   related:
     - docs/specifications/rich-text-authoring.md
     - docs/specifications/page-content.md
-updated_at: 2026-09-15
+updated_at: 2026-09-16
 ---
 
 # CMS 管理端产品规格
@@ -22,7 +22,7 @@ updated_at: 2026-09-15
 
 本规格定义 CMS 运营人员可以观察和操作的管理端行为。
 
-CMS Domain、stable/source identity、state/lifecycle 与数据完整性由 `docs/requirements/cms-domain.md` 持有；Admin application / module architecture 由 `docs/architecture/cms-architecture.md` 持有；具体 Vue / Element Plus / component / API wiring 属于 Technical / implementation。
+CMS business object、stable/source identity、state/lifecycle 与数据完整性由 `docs/requirements/cms-domain.md` 持有；本规格只描述这些规则在管理端形成的可观察编辑限制、提示与失败行为。Admin application / module architecture 由 `docs/architecture/cms-architecture.md` 持有；具体 Vue / Element Plus / component / API wiring 属于 Technical / implementation。
 
 ## 2. 入口与信息架构
 
@@ -94,7 +94,7 @@ Admin 只长期展示完成当前操作所需的信息：
 - 在栏目上下文新增文章时默认带入当前栏目，运营人员仍可调整；
 - 所属栏目选择必须表达真实层级。
 
-Article source type 创建后只读，不能通过普通编辑 INTERNAL ↔ EXTERNAL_LINK 切换。
+根据 Domain source identity，Article source type 在创建后以只读方式呈现，普通编辑不能把 INTERNAL 与 EXTERNAL_LINK 相互切换。
 
 ### 5.2 Cover policy
 
@@ -126,7 +126,7 @@ Article source type 创建后只读，不能通过普通编辑 INTERNAL ↔ EXTE
 - Structured Card Collection → card-aware authoring；
 - unsupported profile/schema → blocking diagnostic / safe read-only state。
 
-ordinary content edit 不允许随意改变稳定 Page identity、content model、renderer identity 或 ownership。
+ordinary content edit 不允许通过普通表单随意改变 Domain 所定义的稳定 Page identity、content model、renderer identity 或 ownership。
 
 ## 7. 导航
 
@@ -136,11 +136,11 @@ ordinary content edit 不允许随意改变稳定 Page identity、content model�
 
 - 主数据区域只显示当前所选位置的条目；
 - parent candidate 只来自同一位置；
-- 稳定位置 / 条目明确显示受保护身份；
+- 当前 Site Definition / Domain 接受的稳定位置与条目明确显示受保护身份；
 - NavigationItem 图标是条目自身数据，可选择或上传受控图片；
 - 调整排序不得改变图标与业务语义的对应关系。
 
-当前稳定位置至少包括 `MAIN`、`HOME_SHORTCUT`、`HOME_QUICK`。
+具体稳定位置 inventory 由其真实 Site Definition / Domain source 持有，不在本规格复制第二份 code 清单。
 
 ## 8. 通用列表
 
@@ -152,16 +152,16 @@ List definition 可以维护业务名称、列表标识、图片数据策略、�
 
 ### 8.2 ListItem
 
-ListItem authoring 根据 source identity：
+Admin 根据 Domain source identity 提供对应编辑体验：
 
 - LINK：维护自身 title / optional subtitle / target / open mode / allowed image；
 - ARTICLE：选择既有 Article；title / target 继续来自当前 Article，列表项维护 optional subtitle / open mode / placement image 等 presentation override。
 
-source type 创建后不可切换；ARTICLE relation 创建后不能普通改成另一篇文章。
+source type 创建后以不可切换方式呈现；既有 ARTICLE relation 不通过普通编辑改成另一篇文章。
 
 ### 8.3 Image policy
 
-根据父列表：
+根据父列表当前 image policy：
 
 - `NONE`：不提供图片输入；
 - `OPTIONAL`：图片可选；
@@ -224,7 +224,7 @@ Admin 中需要运营人员辨识图片的场景，应提供一致的预览与�
 - 透明 / 浅色图标仍可辨识；
 - 普通浏览场景可以查看原图。
 
-该体验不能改变 Public image bytes 或把 Admin preview metadata写回业务数据。
+该体验不能改变 Public image bytes 或把 Admin preview metadata 写回业务数据。
 
 ## 13. Failure behavior
 
@@ -244,26 +244,26 @@ Admin 必须显式呈现：
 
 ## 14. Acceptance
 
-触达管理端行为时根据实际范围至少验证：
+触达管理端行为时，最终结果至少满足实际涉及的以下 contract：
 
-- `/admin/cms/**` canonical entry 与必要 compatibility redirect；
-- 四个业务分组和八类正式入口；
-- 主侧栏 / 局部组织面板收起与恢复；
-- Article 栏目上下文、source identity 与 cover policy；
-- Page 分组与 profile-specific authoring；
-- NavigationLocation 上下文、tree integrity、图标；
-- CmsList source identity、LINK title / subtitle / target / open mode、ARTICLE placement subtitle / open mode 与 image policy；
-- Advertisement `NO_LINK` / valid period；
-- SiteProperty group / typed value；
-- StaticResource browse / preview / replace / protected delete / recycle / restore；
-- 用户界面不长期展示 Backend / Database / deployment / Requirement 实现说明；
-- 必要风险和 validation 信息没有因“简化提示”而消失；
-- Backend / Admin / relevant Integrated Browser regression。
+- `/admin/cms/**` canonical entry 与必要 compatibility redirect 可用；
+- 四个业务分组和八类正式入口保持可达；
+- 主侧栏 / 局部组织面板可收起与恢复；
+- Article 栏目上下文、source identity 与 cover policy 的用户可观察限制正确；
+- Page 分组与 profile-specific authoring 正确；
+- NavigationLocation 上下文、tree integrity 与图标关系正确；
+- CmsList LINK / ARTICLE 对应字段、placement override 与 image policy 正确；
+- Advertisement `NO_LINK` / valid period 行为正确；
+- SiteProperty group / typed value 行为正确；
+- StaticResource browse / preview / replace / protected delete / recycle / restore 行为正确；
+- 用户界面不长期展示 Backend / Database / deployment / Requirement 等实现或治理说明；
+- 必要风险、validation 与 fail-closed 信息没有因“简化提示”而消失。
+
+Verification 采用哪些自动化层次、Browser 工具或 evidence 由当前 Verification Authority 决定，不由本 Acceptance 固化。
 
 ## 15. Non-goals
 
-- 当前阶段的用户 / 角色 /权限实现；
+- 当前阶段的用户 / 角色 / 权限实现；
 - 通用系统设置中心；
 - generic Page Builder；
-- 通过 Specification 固化具体 Vue component / Element Plus control；
-- 从本规格授予新的 Execute Authority。
+- 通过 Specification 固化具体 Vue component / Element Plus control。
