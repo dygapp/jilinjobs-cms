@@ -103,7 +103,7 @@ CMS 必须让运营人员以业务语言维护 Article、Page、CmsList 等正�
 
 产品层只要求运营人员能够维护“什么内容、所属业务上下文、顺序、启停、发布/有效状态、目标和必要资源”；具体 object identity、source identity、状态转换和关系约束由 Domain Authority 定义。
 
-运营界面不得要求运营人员理解数据库表、Migration、Frontend module、Backend class 或其他实现术语。
+运营界面使用“栏目、文章、单页、单页分组、列表、位置标识、属性标识、资源”等运营人员可理解的业务术语；数据库表名、Migration、Frontend / Backend module、内部类名等实现术语不得成为操作语义。
 
 ### 5.2 站点结构、运营展示与站点属性
 
