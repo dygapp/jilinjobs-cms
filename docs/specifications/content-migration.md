@@ -92,7 +92,7 @@ load
 
 - canonical path 越界、缺失文件、digest / size 不一致；
 - duplicate stable source identity；
-- target Column / List / Page 或其他必要 stable target 不存在 / 不可用；
+- 必要 stable target 不存在 / 不可用；
 - dependency 缺失或无法解析；
 - same identity + changed fingerprint 且没有 accepted compatibility；
 - canonical shape / resource relation 不满足当前 Domain contract；

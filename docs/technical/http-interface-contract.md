@@ -113,6 +113,8 @@ Public frontend 只消费 read / resource projection，不依赖 Admin mutation 
 
 Public Article query 的 `columnId` 是**exact-column** filter：只返回 primary Column 等于该 id 且当前可公开的 Article；它不会像 Admin query 一样自动扩展到 descendant Column。`columnId = null` 表示不按栏目限制。`articleType` 是对当前公开 Article source type 的 exact filter。
 
+当前 HTTP surface 不引入单独的 `site=MAIN|PARTY` query 来决定浏览器 route / template scope。Main / Party 的 route / theme / template scope 继续由 Public Renderer 的 Site-specific responsibility 持有，但其判断必须使用当前 Authority 接受的 stable business relation / Site Definition identity 并 fail closed，不能通过 URL 文本、DOM 或历史 typeCode heuristic 猜测。Backend Public projection仍负责 Domain publish lifecycle、endpoint-defined query scope 与 effective-content filtering；Renderer 不能通过读取 Admin/full-data projection来补偿这些 Backend contract。
+
 Public list / advertisement 的 by-code / by-group projection 是 Main homepage 等当前运行 consumer 的稳定依赖；Backend replacement 不得只实现“全量列表再让前端过滤”来改变已有 scope contract。
 
 ## 5. Stable wire projections
@@ -273,7 +275,7 @@ Backend implementation 可以从 Java / Spring 替换为 Node.js 或其他技术
 2. 保持本文 endpoint、method、query、status、JSON field、nullability、enum token、pagination、error envelope、multipart 与 binary resource compatibility；
 3. Admin / Public frontend 不需要因为 Backend language/framework 替换而改变业务 adapter；
 4. Core-equivalent domain capability 与 HTTP transport adaptation 保持分离，transport framework type 不泄漏为 shared domain/service contract；
-5. Public projection继续在 Backend boundary执行 lifecycle/scope/effective-content语义，不把缺失 projection 推给 frontend 修复；
+5. Backend Public projection继续执行 Domain publish lifecycle、本文 endpoint 定义的 query scope 与 effective-content filtering；Main / Party route / theme / template scope 继续由 Public Renderer 的 Site-specific responsibility 按稳定关系执行，Renderer 不通过 Admin/full-data fallback 修复 Backend projection；
 6. deployment / process / persistence implementation可以不同，只要产品与接口 contract成立。
 
 G6 Backend substitution dry-run 应把本文作为稳定 HTTP input，而不是读取 Java Controller / Kotlin model 后反推 contract。
