@@ -26,7 +26,7 @@ updated_at: 2026-09-16
 | Product-level quality / NFR | 响应式、基础可访问性、安全呈现、可诊断失败、替换实现时保持产品语义等跨 Capability 要求 | `information-publishing.md` §9 |
 | Product acceptance / out-of-scope | 项目级验收不变量、非决策与未来事项边界 | `information-publishing.md` §10～§11 |
 | CMS object model | Column、Article、PageGroup / Page、Navigation、CmsList、Advertisement、SiteProperty、StaticResource 等业务对象与关系 | `cms-domain.md` §4～§11 |
-| Identity / lifecycle / ownership | stable identity、source identity、publish lifecycle、content ownership、preset protection 与 operator divergence | `cms-domain.md` §3～§6、§13～§17 |
+| Identity / lifecycle / ownership | stable identity、source identity、publish lifecycle、content ownership、preset protection 与 operator divergence | `cms-domain.md` §3，并按对象读取 §4～§10；跨对象 lifecycle 读取 §13～§17 |
 | External-link ownership | Article / Navigation / CmsList / Advertisement / fixed integration 各自拥有外链语义，不建立全局 Link 对象 | `cms-domain.md` §12 |
 | Stable Site Definition vs Runtime | stable structure、one-time bootstrap 与 ordinary operator-managed Runtime 的 Domain lifecycle | `cms-domain.md` §13 |
 | Historical Content Migration semantics | provenance、legacy identity、fingerprint、preflight、compatibility、offline stability、Main / Party accepted scope | `cms-domain.md` §14 |
