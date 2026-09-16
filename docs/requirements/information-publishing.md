@@ -144,6 +144,8 @@ Main 继续以吉林省高等学校毕业生就业信息网已经确认的信息
 
 具体 legacy identity、fingerprint、preflight、compatibility、Main / Party accepted migration scope 与冲突语义由 `cms-domain.md` 的 Historical Migration owner 统一定义。Concrete canonical records、digest 与 source evidence 由 `data-migrations/**` 持有，不在 Product Requirement 复制。
 
+未解决、缺失、source-defect、deferred 或待客户确认的历史数据不得为了“全绿”而静默猜测、删除、覆盖或自动导入；是否接受、修正、延期或重新获取必须由对应 Authority / Human decision 明确建立。
+
 ## 6. 公开身份与 canonical URL
 
 公开 URL 是产品 contract，不由 HTML entry、Vue component、Router file、framework 或 bundler 决定。
