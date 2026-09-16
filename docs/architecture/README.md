@@ -15,6 +15,7 @@
 - `engineering-capability.md`
 - `consumer.md`
 - `method.md`
+- `requirement-authority.md` — Requirement Human Navigation / Authority Index / Fact Authority / Analysis Workspace 的 semantic ownership 与 lifecycle；
 - `project-knowledge.md`
 - `rule.md`
 - `rule-discovery.md`
