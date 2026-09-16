@@ -3,7 +3,7 @@ id: specification-admin-site
 title: CMS 管理端产品规格
 type: specification
 status: accepted
-version: "V3.0"
+version: "V3.1"
 relations:
   requirements:
     - docs/requirements/information-publishing.md
@@ -95,6 +95,15 @@ Admin 只长期展示完成当前操作所需的信息：
 - 所属栏目选择必须表达真实层级。
 
 根据 Domain source identity，Article source type 在创建后以只读方式呈现，普通编辑不能把 INTERNAL 与 EXTERNAL_LINK 相互切换。
+
+Article publish lifecycle 在 Admin 中必须形成显式、可理解的状态与动作投影：
+
+- 新建 Article 先进入草稿状态，普通保存 / 编辑不会自动发布；
+- 草稿可以通过明确“发布”动作进入已发布状态；
+- 已发布 Article 可以通过明确“撤回”动作退出 Public discovery；
+- 已撤回 Article 可以通过明确“重新发布”动作恢复公开；
+- 普通内容编辑保持当前 publish status，不把“保存”隐式解释为发布、撤回或重新发布；
+- 发布 / 重新发布所需的 Domain precondition 不满足时必须阻止状态变化并显示可诊断失败。
 
 ### 5.2 Cover policy
 
@@ -250,6 +259,7 @@ Admin 必须显式呈现：
 - 四个业务分组和八类正式入口保持可达；
 - 主侧栏 / 局部组织面板可收起与恢复；
 - Article 栏目上下文、source identity 与 cover policy 的用户可观察限制正确；
+- Article 草稿 / 发布 / 撤回 / 重新发布与“普通保存不改变发布状态”的可观察 lifecycle 正确；
 - Page 分组与 profile-specific authoring 正确；
 - NavigationLocation 上下文、tree integrity 与图标关系正确；
 - CmsList LINK / ARTICLE 对应字段、placement override 与 image policy 正确；
