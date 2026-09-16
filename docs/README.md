@@ -60,10 +60,11 @@ Requirement / Domain / Architecture / Specification / Technical 各自只维护�
 | Formal Decision / ADR | Accepted decision 的背景、候选、权衡与 supersede lineage | 用于解释为什么形成当前架构；当前叠加后的 Architecture State 仍以 `docs/architecture/cms-architecture.md` 等 current state owner 为准 |
 | Versioned canonical source | 对自身明确拥有的稳定 Site Definition、canonical migration dataset、manifest / digest / provenance 等具体事实具有 bounded authority | `sites/jilinjobs/**` 不拥有 Product Requirement；`data-migrations/**` 不因保存 legacy-derived data 就成为普通 Runtime 或产品需求 owner |
 | External authoritative source | 对合同、法规、外部接口或外部系统自身事实提供有 provenance 的输入 | 必须保留来源、时间 / 版本与适用范围；外部事实不会自动覆盖 Consumer 已确认的其他 semantic owner |
+| Explicit Human Authority / decision | 对 Human 明确裁决的当前 bounded decision 具有授权价值 | 只覆盖明确问题与范围；若结论需要跨上下文长期成立，必须 promotion 到对应 canonical semantic owner，而不是让聊天或 Issue comment 永久替代它 |
 | GitHub-native Current Evidence | 对 Branch、PR、Commit、Actions、Review、Issue timeline 等原生瞬时状态具有当前证据价值 | 不长期拥有 Product / Domain / Architecture 事实；durable semantic decision 应进入真实 canonical owner |
 | Repository implementation evidence | Code、tests、configuration、schema、build / runtime behavior 可证明“当前实现是什么” | 不能仅凭实现存在反向发明 Requirement；与 Current Authority 不一致时先判定 implementation defect、stale Authority 或 stale verification contract |
 | Historical / Legacy material | `archive/**`、旧规划 / EU、Legacy Source、历史 Snapshot、closed change lineage 等只提供追溯与历史证据 | 默认退出 ordinary Fresh Context；“历史上如此”不等于“当前仍要求如此” |
-| Analysis / conversation material | source inventory、comparison、scratchpad、会话推理与未 promotion 的分析结论 | 默认非 Authority；若形成 durable fact，必须 promotion 到真实 semantic owner，否则在任务结束后退出 Current runtime |
+| Analysis / conversation material | source inventory、comparison、scratchpad、未作明确裁决的会话推理与未 promotion 的分析结论 | 默认非 Authority；若形成 durable fact，必须 promotion 到真实 semantic owner，否则在任务结束后退出 Current runtime |
 | Unknown / unresolved | provenance、scope、currentness 或 owner 尚不能确定 | 不得被提升为当前事实；若会实质改变产品行为或验收，按当前 Method / Human Authority 处理 |
 
 发生冲突时不按“文件更新日期”或“代码比文档真实”机械裁决。先回到该事实的 semantic owner 与适用范围：Current owner 与 Historical / Legacy 冲突时，Historical 只保留 lineage；ADR 与 current Architecture State 表达不同阶段时，以当前 state owner 解释现状、ADR 保留决策历史；implementation / verification 与 Authority 不一致时，必须先判定哪一侧 stale。多个 Current primary owner 对同一语义给出不兼容结论且无法由责任边界消歧时，fail closed 并升级到对应 Method / Human Authority。
