@@ -115,8 +115,7 @@ Admin 根据 Page 当前 content profile 选择 authoring surface：
 - unknown structured kind / version；
 - unknown renderer；
 - content profile 与当前 primary content contract 不一致；
-- reconcile 会覆盖 Domain 认定的 operator-diverged content；
-- renderer 只能通过 alias/path/DOM heuristic 才能选择。
+- reconcile 会覆盖 Domain 认定的 operator-diverged content。
 
 具体 HTTP status、log、report、fingerprint algorithm 或 UI message 由对应 Technical / implementation contract 决定，但失败必须能被用户或验证证据识别。
 

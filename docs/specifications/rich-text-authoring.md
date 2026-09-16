@@ -141,8 +141,6 @@ Public 正常展示 accepted Rich content 时，不得要求加载 authoring edi
 
 ## 11. Non-goals
 
-- 自研 editor core / selection / history / paste / table engine；
 - generic Page Builder；
 - Page Resource domain expansion；
-- full-database body rewrite；
 - grammar / typo / sensitive-word / AI writing。

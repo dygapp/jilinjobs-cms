@@ -80,8 +80,6 @@ Main 首页继续保持已接受的固定页面结构与主要视觉识别，并
 
 “最新招聘”及招聘 / 宣讲区域当前只是已接受页面结构中的第三方业务集成 seam；真实 iframe / 第三方 Runtime integration 必须由新的 Feature Requirement / Specification 明确授权，不因页面已存在占位区域自动获得实施权限。
 
-Public 不得同时读取两套等价业务来源后再合并，例如 CMS 正式对象与历史 JSON / 前端常量并行成为同一运营数据 Authority。
-
 ## 4. 中心党建入口与内容体验
 
 `/party/` 是 Main 信息架构下的专题入口，保持明确红色视觉主题与独立内容作用域，不建立第二套 CMS Domain。
@@ -204,15 +202,9 @@ Main / Party 轮播共享以下用户可观察 lifecycle：
 
 ## 11. Resources
 
-公开页面只消费已接受的公开资源 contract：
+公开页面只消费当前已接受的公开资源 contract，包括 stable Site assets、允许公开的 managed resources 与受控 historical resources。
 
-- stable Site assets；
-- current Runtime uploads / managed resources；
-- Historical Migration 已投影的受控资源。
-
-Public client 不应理解 Admin-only resource endpoint，也不应在页面代码中重新建立资源 ownership。
-
-稳定模板资源不得在 Runtime 直接依赖旧站静态资源 URL；业务 `<a href>` 外链和第三方业务入口不属于此限制。
+这些资源在正常页面中应按当前内容语义可访问；资源不可用时进入本规格定义的可观察失败状态，而不是依靠第二份内容来源或静默替换掩盖问题。
 
 ## 12. Responsive / accessibility behavior
 
@@ -226,24 +218,24 @@ Public client 不应理解 Admin-only resource endpoint，也不应在页面代�
 - loading / empty / error / unsupported state 可辨识，不通过永久 skeleton 或静默空白掩盖失败；
 - Party Banner、入口页、栏目、分页与详情在不同 viewport 下保持一致 Party branding，不泄漏错误的 Main 蓝色主题。
 
-## 13. Main / Party shared vs site-specific behavior
+## 13. Main / Party 一致与差异行为
 
-当前已接受的共享行为：
+Main 与 Party 当前保持一致的用户可观察行为包括：
 
 - Navigation / Footer 的业务结构与交互；
-- 二级栏目列表的主要 presentation primitive；
-- 无主题 carousel lifecycle；
-- common public data / resource / metadata behavior。
+- 二级栏目列表的主要 presentation 与分页能力；
+- carousel lifecycle；
+- common public content / resource / metadata behavior。
 
-保持 Site-specific：
+当前保持差异的用户可观察行为包括：
 
 - Main / Party Banner；
 - Main 首页与 Party 入口页内容布局；
 - 各自内容主题与 brand presentation；
 - Site-specific route scope；
-- 尚未被证据证明应共享的页面模板。
+- 尚未被新的产品事实要求统一的页面呈现。
 
-共享不等于合并 Main / Party 产品身份；Site-specific 不等于复制 Domain model。
+行为一致不改变 Main / Party 的产品身份；视觉和布局差异也不产生第二套 CMS Domain。
 
 ## 14. Failure behavior
 
@@ -274,7 +266,7 @@ Public client 不应理解 Admin-only resource endpoint，也不应在页面代�
 - scope-correct Column / Article / Page data，以及 Party route scope guard；
 - INTERNAL / EXTERNAL_LINK target；
 - Main / Party public theme boundary；
-- shared Navigation / Footer 与 shared column-page behavior；
+- Navigation / Footer 与 column-page 的当前一致行为；
 - carousel 0/1/many、pause/resume、reduced-motion、failed-image behavior 与当前 Main / Party accepted visual ratio；
 - managed Rich Text resources；
 - desktop + representative mobile viewport 无明显横向溢出；
@@ -285,9 +277,6 @@ Public client 不应理解 Admin-only resource endpoint，也不应在页面代�
 
 ## 16. Non-goals
 
-- 从本规格固化 Vue / Vite / Router / HTML Entry implementation；
-- 选择 SSR / SSG / Hybrid 或新框架；
-- 因 Main / Party 主题不同自动拆 Repository / deployment；
 - 新增 Party-specific CMS model / Admin module；
 - generic page builder；
 - 当前未批准的真实第三方 iframe integration。
