@@ -102,8 +102,9 @@ Current 文档的中文主语言与本地文档引用完整性由 `scripts/verif
 
 当前采用的方法不在普通开发中直接运行 upstream 文档，而是固化为 Consumer-local 一等资源：
 
+- 需求基线建立 / 重建：`docs/methods/requirement-baseline-establishment.md`；
+- 系统性架构澄清：`docs/methods/architecture-clarification.md`；
 - 普通 Feature / change：`docs/methods/ai-development.md`；
-- 项目级长期 Requirement / Domain / Architecture 澄清：`docs/methods/software-project-clarification.md`；
 - Consumer baseline 显式升级：`docs/methods/consumer-upgrade.md`；
 - Review feedback：`docs/methods/review-feedback-cycle.md`；
 - Method 实验：`docs/methods/method-experiment.md`；
@@ -129,7 +130,7 @@ Current 文档的中文主语言与本地文档引用完整性由 `scripts/verif
 
 - 使用渐进式披露（Progressive Disclosure），只加载当前职责真正需要的 Authority、Skill 与 supporting capability；
 - 一次 discovery / routing 决策只确定一个 primary responsibility + 最小 supporting locator；routing-only 不加载完整 Skill，真正 execution 才加载 primary Skill；
-- 普通 Feature / change 只在当前 Repository 已具备足以支持 Goal、Scope、Observable Behavior 与 Acceptance 的最小长期 Requirement / Domain / Architecture Context 时进入常规 Feature Method；单个 Feature 的局部歧义留在对应 owner 内解决；多个 Feature 共同受长期 Context 缺失、冲突或需要重建而阻塞时，由 `docs/project/project-capability-profile.md` 的 selector 进入 `docs/methods/software-project-clarification.md`；
+- 普通 Feature / change 只在当前 Repository 已具备足以支持 Goal、Scope、Observable Behavior 与 Acceptance 的最小长期 Requirement / Domain / Architecture Context 时进入常规 Feature Method；单个 Feature 的局部歧义留在对应 owner 内解决；多个 Feature 共同受系统性 Requirement Baseline gap / conflict / ownership failure 阻塞时，由 `docs/project/project-capability-profile.md` 的 selector 进入 `docs/methods/requirement-baseline-establishment.md`；Requirement Baseline 已足够但存在阻塞多个 Feature 的长期高成本架构 driver 时，由 selector 进入 `docs/methods/architecture-clarification.md`；
 - 阶段是工作状态，不为了表示阶段而机械创建 Artifact；
 - 规格说明（Specification）聚焦 WHAT / WHY；
 - 只有存在跨执行单元（Execution Units）的长期 HOW 协调价值时，才持久化技术计划（Technical Plan）；
