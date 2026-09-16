@@ -28,7 +28,7 @@
 | `skills/` | Consumer-local Skill corpus | 责任明确且需要独立 Procedure 时读取 |
 | `docs/requirements/` | 当前 Product / Domain Requirement fact owner、Human Navigation 与 Authority Index | 先 Index，再读取命中 owner |
 | `docs/specifications/` | 当前用户可观察行为、Failure Behavior 与 Acceptance | 读取当前任务相关 owner |
-| `docs/technical/` | 跨 Feature implementation contract 与 Verification Strategy | 读取当前任务相关 owner |
+| `docs/technical/` | 跨 Feature implementation / HTTP Interface Contract 与 Verification Strategy | 读取当前任务相关 owner |
 | `docs/work/current/README.md` | Current Execution Lifecycle Locator | state / execution lifecycle 任务读取 |
 | `docs/work/current/*.md` | active work artifact | locator 指向时读取 |
 | `docs/work/archive/` | 已完成 Execution Unit / execution evidence | 默认不读取 |
@@ -43,6 +43,7 @@
 - CMS 长期 Architecture：`docs/architecture/cms-architecture.md`
 - Current Specifications：`docs/specifications/README.md`
 - Backend Technical：`docs/technical/backend-service.md`
+- HTTP Interface Contract：`docs/technical/http-interface-contract.md`
 - Admin Technical：`docs/technical/admin-frontend.md`
 - Public Technical：`docs/technical/public-site-frontend.md`
 - Rich Text Technical：`docs/technical/rich-text-authoring.md`
