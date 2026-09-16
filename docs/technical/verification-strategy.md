@@ -8,7 +8,9 @@ relations:
   requirements:
     - docs/requirements/information-publishing.md
     - docs/requirements/cms-domain.md
-updated_at: 2026-09-15
+  interface:
+    - docs/technical/http-interface-contract.md
+updated_at: 2026-09-16
 ---
 
 # 验证运行策略
@@ -65,7 +67,27 @@ Backend 变更至少按风险选择编译、静态检查、自动化测试、可
 
 涉及 schema / initialization / migration 的变化，仅检查 SQL 文件、编译或已有数据库增量运行不能单独证明 Fresh Runtime 可建立；需要时必须覆盖从空环境开始的真实组合路径。
 
-### 4.2 Frontend
+涉及 Core / Server / Migration boundary 时，验证必须检查**责任性质**而不是只维护已知 class 黑名单：Core 不应暴露 Controller / Servlet / multipart 等 HTTP transport responsibility；Migration application 不应因依赖 Core 获得 ordinary Server transport。新增一个以前不在 inventory 中的 Controller 也必须能被边界验证发现。
+
+### 4.2 HTTP Interface Contract
+
+触达 Backend HTTP transport、Admin/Public API adapter、DTO projection、resource transport 或 Backend technology substitution 时，以 `docs/technical/http-interface-contract.md` 为唯一稳定接口 oracle。
+
+验证至少按受影响范围覆盖：
+
+- method + endpoint path / query compatibility；
+- request / response JSON field、nullability 与 enum token；
+- pagination、create/update/delete status semantics；
+- `{message}` error envelope 与 `400 / 404 / 413` 等当前稳定失败分类；
+- multipart field、binary resource content type 与 attachment disposition；
+- Public scoped query 不退化为 Admin/full-data projection；
+- Admin / Public frontend adapter 与同一个 canonical contract 对齐。
+
+Interface contract test 可以有 provider-specific adapter，但 contract assertion 本身必须能在 Backend implementation 替换后复用；不能把 Java Controller class、Kotlin DTO 或 TypeScript interface 当成唯一 oracle。
+
+G6 Backend substitution dry-run 的 PASS 需要在不读取 Java implementation 作为设计输入的前提下，以 Current Authority 重建 provider 并证明现有 Admin/Public consumer 所需 contract compatibility。
+
+### 4.3 Frontend
 
 独立前端应用分别拥有自己的 type-check、build 与 Runtime / Browser Evidence，不能用一个应用的成功替代另一个应用。
 
@@ -79,7 +101,7 @@ Vue / TypeScript 变更按真实风险选择验证层：
 
 验证以当前 Consumer 实际 package、tsconfig、Workflow 与 Repository Authority 为准，不为匹配外部 Technology Profile 机械升级依赖。
 
-### 4.3 Browser / E2E
+### 4.4 Browser / E2E
 
 Browser Verification 用于证明路由、交互、资源加载、异步状态与已编码 Acceptance。
 
@@ -92,7 +114,7 @@ Browser Verification 用于证明路由、交互、资源加载、异步状态�
 
 Functional Browser PASS 不自动等于 Visual Fidelity PASS。
 
-### 4.4 Human Review / Review Environment
+### 4.5 Human Review / Review Environment
 
 需要人工运行时观察的工作必须使用与目标 claim 对应的可复现 Review Runtime。
 
@@ -123,7 +145,7 @@ External Dependency Problem
 - Runtime / Environment Problem 修复环境或组合链，不把环境失败伪装成产品通过；
 - External Dependency Problem 明确记录外部依赖与阻断范围，不用本地 mock 证明真实外部集成已经完成。
 
-如果同一产品语义在多个测试层重复硬编码，应回到真正的 Requirement / Specification / Architecture owner，并减少第二套契约。
+如果同一产品语义在多个测试层重复硬编码，应回到真正的 Requirement / Specification / Architecture / Interface owner，并减少第二套契约。
 
 ## 6. Evidence contract
 
@@ -142,17 +164,18 @@ External Dependency Problem
 
 ## 7. Verification 与 Authority 的关系
 
-验证证明实现是否满足当前 Authority，不反向创造 Product Requirement。
+验证证明实现是否满足当前 Authority，不反向创造 Product Requirement、Architecture 或 Interface Contract。
 
-当测试、Workflow assertion 或 fixture 与当前 Requirement / Specification / Architecture 冲突时，先判断是否为 stale verification contract；只有 Authority 本身存在真实歧义 / 缺口时才回到对应 owner。
+当测试、Workflow assertion 或 fixture 与当前 Requirement / Specification / Architecture / Interface Contract 冲突时，先判断是否为 stale verification contract；只有 Authority 本身存在真实歧义 / 缺口时才回到对应 owner。
 
 验证策略不维护第二份：
 
 - active migration inventory；
+- HTTP Controller / endpoint / DTO inventory；
 - Site Package 文件清单；
 - Runtime resource count；
 - Workflow / job 名称清单；
 - 固定 Review Environment endpoint inventory；
 - 当前 Execution Unit checklist。
 
-这些事实应从其真实 Repository / Work / GitHub owner 恢复。
+这些事实应从其真实 Repository / Technical / Work / GitHub owner 恢复。
