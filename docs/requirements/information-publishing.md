@@ -18,7 +18,8 @@ relations:
   related:
     - docs/specifications/admin-site.md
     - docs/specifications/public-site.md
-    - docs/specifications/party.md
+    - docs/specifications/page-content.md
+    - docs/specifications/rich-text-authoring.md
 updated_at: 2026-09-16
 ---
 

@@ -5,7 +5,6 @@ status: active
 relations:
   specifications:
     - docs/specifications/public-site.md
-    - docs/specifications/party.md
     - docs/specifications/page-content.md
   architecture:
     - docs/architecture/cms-architecture.md
@@ -14,7 +13,7 @@ relations:
     - docs/architecture/decisions/ADR-0004-public-shared-column-page.md
   verification:
     - docs/technical/verification-strategy.md
-updated_at: 2026-09-15
+updated_at: 2026-09-16
 ---
 
 # Public Frontend 跨 Feature 技术契约
