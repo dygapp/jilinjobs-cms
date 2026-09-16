@@ -8,9 +8,11 @@ status: active
 
 ## 目标与进入条件
 
-本 Method 面向具体 Feature / change。进入前提是 Consumer 已存在足以判断 Goal、Scope、Observable Behavior 与 Acceptance 的最小长期 Requirement / Domain / Architecture Context。
+本 Method 面向具体 Feature / change。进入前提是 Consumer 已存在足以判断 Goal、Scope、Observable Behavior 与 Acceptance 的 Requirement Baseline，以及当前 Feature 真正需要的最小 Architecture Context。
 
-如果多个当前或预期 Feature 共同依赖的长期 Requirement / Architecture Context 缺失、冲突或需要重建，不在当前 Feature 中局部创造长期事实；返回长期 owner，必要时由 Project Capability Profile 选择 `method:software-project-clarification`。
+如果项目尚无可靠 Requirement Baseline，或多个当前 / 预期 Feature 共同被系统性 Requirement gap / conflict / ownership failure 阻塞，不在当前 Feature 中局部创造长期事实；返回真实 Requirement owner，必要时由 Project Capability Profile 选择 `method:requirement-baseline-establishment`。
+
+如果 Requirement Baseline 已足够，但多个当前 / 预期 Feature 共同依赖尚未解决、长期、高成本难逆并阻塞可靠开发的 architecture driver，则返回真实 Architecture owner，必要时由 local selector 进入 `method:architecture-clarification`。
 
 ## 生命周期
 
@@ -38,7 +40,9 @@ Integration 不是本 Method 的通用阶段。merge、release、deploy 与其�
 
 ## Clarify Intent
 
-只解决会实质改变 Goal、Scope、User-visible Behavior、Business Boundary、Acceptance 或重大非功能义务的歧义。优先从当前 Requirement / Domain / Architecture Authority 解析；低影响、可逆实现选择不升级到产品意图层。
+只解决会实质改变 Goal、Scope、User-visible Behavior、Business Boundary、Acceptance 或重大非功能义务的当前 Feature 歧义。优先从当前 Requirement / Domain / Architecture Authority 解析；低影响、可逆实现选择不升级到产品意图层。
+
+局部 Feature 缺口返回当前 Feature owner；系统性 Requirement Baseline gap 返回 Requirement owner / `method:requirement-baseline-establishment`；systemic architecture driver 返回 Architecture owner / `method:architecture-clarification`。不要在当前 Specification 中创建新的项目级 Requirement 或 Architecture 事实。
 
 退出：不存在会改变目标或验收结果的关键未决问题，且长期 Context 足够进入 Specification。
 
@@ -48,7 +52,7 @@ Integration 不是本 Method 的通用阶段。merge、release、deploy 与其�
 
 形成当前 Feature / change 的 WHAT / WHY Authority，至少覆盖 Goal、In/Out Scope、Observable Behavior、Business Rules、Boundary / Failure Behavior、Acceptance Criteria 与必要非功能约束。
 
-Specification 不复制完整 project-level Requirement / Domain baseline。新确认的跨 Feature 长期事实必须提升到真实长期 owner。
+Specification 不复制完整 project-level Requirement / Domain baseline。新确认且具有跨 Feature 长期价值的业务事实必须提升到真实 Requirement / Domain owner。
 
 退出：Fresh Context Agent 读取 Specification + 最小长期 Context 即可判断做什么、不做什么、什么算完成。
 
@@ -58,7 +62,7 @@ Specification 不复制完整 project-level Requirement / Domain baseline。新�
 
 仅在 Specification 无法直接、安全映射到当前系统时进入，例如跨模块、新数据模型、外部集成、迁移、共享契约、部署拓扑或重大架构权衡。
 
-Technical Plan 只保存跨 Execution Unit 仍有协调价值的 HOW；精确文件 / 命令 / 编辑顺序属于 JIT Execution Plan。跨多个 Feature 的长期 architecture driver 返回长期 Architecture owner / Project Clarification；Feature-local 可逆 HOW 留在本阶段。
+Technical Plan 只保存跨 Execution Unit 仍有协调价值的 HOW；精确文件 / 命令 / 编辑顺序属于 JIT Execution Plan。Feature-local 可逆 HOW 留在本阶段；只有多个 Feature 共同依赖且必须提前解决的长期 structural driver 才升级到 `method:architecture-clarification`，并更新同一个长期 Architecture owner。
 
 对应 Skill：`technical-plan`。
 
@@ -76,7 +80,7 @@ Technical Plan 只保存跨 Execution Unit 仍有协调价值的 HOW；精确文
 
 ## Converge
 
-对当前 Authority、最终实现与当前 Evidence 做整体收敛，区分 Verification、Review 与 Convergence。局部 Feature 缺口返回当前 Feature owner；系统性 Requirement / Architecture gap 返回长期 owner，不在 Converge 中静默重建项目级事实。
+对当前 Authority、最终实现与当前 Evidence 做整体收敛，区分 Verification、Review 与 Convergence。发现缺口时返回拥有责任的上游层：局部 Feature 缺口返回当前 Feature owner；系统性 Requirement Baseline gap 返回 Requirement owner / `method:requirement-baseline-establishment`；systemic architecture gap 返回 Architecture owner / `method:architecture-clarification`。
 
 退出：无已知 Blocking 缺口，Authority、实现与当前 Evidence 一致，可声明 `Ready to Integrate`。
 
@@ -84,9 +88,9 @@ Technical Plan 只保存跨 Execution Unit 仍有协调价值的 HOW；精确文
 
 ## Fresh Context 与 Artifact lifecycle
 
-普通上下文只加载 Repository Authority、当前工作对象、最小必要 Requirement / Domain / Architecture、当前 Method、必要 Skill、Rule Discovery 返回的候选及相关 code / tests / Evidence。
+普通上下文只加载 Repository Authority、当前工作对象、Requirement locator / 当前 Feature 直接相关 Requirement owner、必要 Specification / Technical / Architecture / Domain / Project Authority、Rule Discovery 返回的候选、当前需要的 Skill，以及相关 code / tests / Evidence。
 
-长期知识只进入真实 semantic owner；会话推理、source comparison、JIT plan 与阶段流水账默认不持久化。
+长期知识只进入真实 semantic owner；会话推理、source comparison、JIT plan 与阶段流水账默认不持久化。Requirement Authority 的 ownership / locator contract 由 `architecture:requirement-authority` 持有。
 
 ## Human escalation
 
