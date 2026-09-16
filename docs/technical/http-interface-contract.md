@@ -51,12 +51,13 @@ JSON contract 基线：
 - nullable relation / optional target 使用 `null`，不使用伪造的 `0` / empty object 表示“不存在”；
 - enum / identity token 保持当前 Domain 定义的稳定字符串，例如 `INTERNAL`、`EXTERNAL_LINK`、`DRAFT`、`PUBLISHED`、`WITHDRAWN`、`RICH_TEXT`、`STRUCTURED`、`NONE`；
 - `LocalDate` compatible value 使用 `YYYY-MM-DD`；date-time value 保持 ISO-compatible string；
-- JSON API 的非成功响应提供至少 `{ "message": string }` 的可诊断错误 envelope；
+- validation、not-found、upload-size 等受控 JSON failure 提供至少 `{ "message": string }` 的可诊断错误 envelope；
 - Domain / input validation 映射为 `400`，当前资源不存在映射为 `404`，上传体超过 Server 限制映射为 `413`；
+- 未受控的 provider / platform `5xx` 只要求 consumer 能识别请求失败，不把 Spring 或其他 provider 的默认 error body 提升为稳定 wire contract；
 - 普通 create endpoint 在当前 contract 中返回 `201` + created representation；普通 update / read 返回 `200`；明确无 response body 的 delete 返回 `204`；
 - binary resource 返回真实 content type；attachment projection 使用下载语义并保留原文件名。
 
-具体错误中文文案只有在 Specification 明确要求时才属于稳定用户 contract；Backend replacement 必须保持可诊断语义和 envelope，不要求逐字复制实现消息。
+具体错误中文文案只有在 Specification 明确要求时才属于稳定用户 contract；Backend replacement 必须保持上述受控失败的可诊断语义和 envelope，不要求逐字复制实现消息，也不要求模拟旧 provider 的未知 `5xx` body。
 
 ## 3. Admin endpoint families
 

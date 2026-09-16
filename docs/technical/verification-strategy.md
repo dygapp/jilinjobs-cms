@@ -78,7 +78,7 @@ Backend 变更至少按风险选择编译、静态检查、自动化测试、可
 - method + endpoint path / query compatibility；
 - request / response JSON field、nullability 与 enum token；
 - pagination、create/update/delete status semantics；
-- `{message}` error envelope 与 `400 / 404 / 413` 等当前稳定失败分类；
+- validation / not-found / upload-size 等受控失败的 `{message}` envelope 与 `400 / 404 / 413`；unknown `5xx` 只验证 consumer 可识别失败，不把 provider-specific body 当作稳定 contract；
 - multipart field、binary resource content type 与 attachment disposition；
 - Public scoped query 不退化为 Admin/full-data projection；
 - Admin / Public frontend adapter 与同一个 canonical contract 对齐。
