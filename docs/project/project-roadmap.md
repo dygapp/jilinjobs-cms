@@ -45,13 +45,15 @@ Requirement
 
 **G5 — Cross-layer Independent Semantic Review 已完成。** 独立 Review 已对 Requirement ↔ Specification ↔ Architecture ↔ Technical / Interface ↔ Verification 做双向 traceability 与 regenerability challenge，并关闭发现的跨层缺口：Admin Article lifecycle 的可观察投影、Admin/Public Article `columnId` scope 与 lifecycle HTTP compatibility、Main 招聘日历最小 observable contract、基础 SEO observable contract、Historical Content Migration maintainer-visible Specification orphan，以及 Backend Public projection 与 Main / Party Renderer site-scope 的责任歧义。Historical Migration 已恢复最小 Current Specification owner，但该 owner 不授予 migration execute authority，也不解除 Main migration freeze；Verification Strategy 已加入可复用的跨层语义 / code-holdout regenerability review contract。G5 Exit 时 blocking semantic finding 为 0。
 
-下一实验 Gate 为 **G6 — Regenerability & Technology Substitution Validation**，当前状态 **NOT STARTED**。G6 必须从新的 Fresh Context 按当时最新 Repository Authority 与 Issue #155 协议建立独立实验输入；实施 / 替换 Agent 不得把 G5 治理会话、Review 推理或旧 implementation 作为隐藏设计输入。G6 只验证当前 Authority 的行为可再生性与 Backend / Public Renderer technology substitutability，不自动获得产品 Execute Authority。
+**G6 — Regenerability & Technology Substitution Validation 已完成。** 独立 Fresh Context 先以 Current Authority、正式 Site Definition 与 canonical migration/data assets 冻结 implementation-independent design input，再执行 Product Reconstruction、Article representative vertical reconstruction、code-holdout comparison、Node.js Backend substitution dry-run、HTML-first / Progressive Enhancement Public Renderer substitution dry-run与 Fresh Context Minimality。R4 / R5 只证明 replacement design / contract completeness，不冒充已构建、已运行的新 implementation evidence。G6 发现并关闭了 Party canonical migration workspace 将 stale Flyway inventory 与 Spring / Gradle / class / task wiring混入 Current入口的问题；修复后 bounded Fresh Context不再需要旧 implementation、archive、upstream或治理会话隐式知识来补齐设计语义。G6 Exit 时 R1～R6 均 PASS，blocking finding 为 0；本 Gate 未获得或授予任何产品 Execute Authority，也未激活 Main / Party Historical Migration。
+
+下一实验 Gate 为 **G7 — Review Evidence Synthesis**，当前状态 **NOT STARTED**。G7 必须在新的 Fresh Context 中从 Issue #155、当前 Repository Authority 与 G1～G6 已记录 Failure Evidence重新恢复，只负责汇总真实失败并形成 Review Rule Evidence Pack；不得把单个 Consumer failure自动提升为上游 Rule，也不得从 G6 dry-run取得产品 Execute Authority。
 
 Issue #153 / PR #154 Consumer Authority Foundation Rebuild 已完成并作为本轮起始 baseline，不再是当前治理进行中状态；其历史与 integration evidence 留在 GitHub / Project Evolution，不在 Roadmap 继续维护过程状态。
 
 ## 后续 Planning directions
 
-以下均保持 **Planning / Review Candidate**；不得从 Issue 排序、历史 EU 或旧 Roadmap 自动获得执行权。Issue #155 的后续 G6～G7 由其 umbrella lifecycle 单独协调，同样必须在各 Gate 的新 Fresh Context 中按当前 Repository Authority 建立实际工作入口。
+以下均保持 **Planning / Review Candidate**；不得从 Issue 排序、历史 EU 或旧 Roadmap 自动获得执行权。Issue #155 的后续 G7 由其 umbrella lifecycle 单独协调，同样必须在新的 Fresh Context 中按当前 Repository Authority 建立实际工作入口。
 
 - **Hui Employment iframe integration**：独立 Main integration candidate；进入前建立 current feature-specific Requirement / Specification Authority，再完成 Planning / Readiness。
 - **Issue #60 C1 — Loading / Skeleton Experience**：用户体验 Planning Candidate。
