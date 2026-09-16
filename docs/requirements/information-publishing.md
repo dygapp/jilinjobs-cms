@@ -20,6 +20,7 @@ relations:
     - docs/specifications/public-site.md
     - docs/specifications/page-content.md
     - docs/specifications/rich-text-authoring.md
+    - docs/specifications/content-migration.md
 updated_at: 2026-09-16
 ---
 
