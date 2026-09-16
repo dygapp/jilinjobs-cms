@@ -1,8 +1,8 @@
-# Party Canonical Migration Runtime Composition
+# Party Canonical Migration 运行组合边界
 
 Party Canonical Migration 继续遵循仓库根 `data-migrations/README.md` 的 Historical Content Migration 边界；本文件只补充 JilinJobs Consumer 当前长期稳定的 Party canonical import 组合关系，不维护具体 Backend task、class、环境变量或 active schema migration 文件清单。
 
-## Runtime preparation
+## 运行准备
 
 当前正式组合顺序为：
 
