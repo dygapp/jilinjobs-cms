@@ -16,26 +16,30 @@ Roadmap 顺序、Issue 编号或候选名称均不授予 Execute Authority。Fea
 
 ## 当前治理里程碑
 
-### Issue #153 — Consumer Authority Foundation Rebuild
+### Issue #155 — Full Documentation Authority Rebuild & Regenerability Validation
 
-状态：**治理进行中；不授予产品 Execute Authority。**
+状态：**active governance / validation umbrella；不授予产品 Execute Authority。**
 
-目标是在不机械复制 upstream、也不盲目继承历史 Consumer 文档的前提下，重建可独立运行的 Consumer-local Authority Foundation：
+本里程碑验证当前 Consumer 文档 Authority 是否能够在保持 single semantic ownership 与可恢复 traceability 的同时，支撑 Behavioral Regenerability 与 Technology Substitutability。完整 G0～G7 lifecycle、Gate 结果和 Evidence locator 由 Issue #155 协调；当前执行状态只从 `docs/work/current/README.md` 恢复。
 
-- 一等 Method / Architecture / Rule / Skill owner 与 Project Capability Profile；
-- 清晰的 Project Knowledge 边界；
-- 基于 current / legacy / implementation / human decision Evidence 的 Requirement / Domain Clarification；
-- 条件性的长期 Architecture Clarification；
-- Requirement → Feature Specification → conditional Technical Plan → Work 的可持续链路；
-- 清理被取代、重复或仅有过程价值的中间 Markdown；
-- Independent Semantic Review；
-- Consumer-local Fresh Context / ordinary runtime validation，并恢复普通运行 `upstream access = 0`。
+治理对象最终覆盖：
 
-本治理允许按 Issue #153 的 Bootstrap Governance Authority 只读使用固定 `agentic-dev` reference；该权限只服务 Foundation Rebuild，不能传播为普通运行依赖，也不能决定 JilinJobs 产品事实。
+```text
+Requirement
+→ Specification
+→ Architecture
+→ Technical / Interface Contract
+→ Verification
+→ Work / Code
+```
+
+当前 prerequisite 是先把本 Consumer 的 reusable Method / Requirement Authority capability 显式升级到 Issue #140 所要求的固定 upstream baseline；该临时 upstream read-only access 只属于 G0。G0 收口后 ordinary runtime 必须恢复 `upstream access = 0`。
+
+Issue #153 / PR #154 Consumer Authority Foundation Rebuild 已完成并作为本轮起始 baseline，不再是当前治理进行中状态；其历史与 integration evidence 留在 GitHub / Project Evolution，不在 Roadmap 继续维护过程状态。
 
 ## 后续 Planning directions
 
-以下均保持 **Planning / Review Candidate**，需要在 Issue #153 收敛后的新 Authority 上重新确认优先级、Requirement context 与 Readiness；不得从历史 EU、Issue 排序或旧 Roadmap 自动获得执行权。
+以下均保持 **Planning / Review Candidate**；不得从 Issue 排序、历史 EU 或旧 Roadmap 自动获得执行权。Issue #155 的后续 G1～G7 由其 umbrella lifecycle 单独协调，同样必须在各 Gate 的新 Fresh Context 中按当前 Repository Authority 建立实际工作入口。
 
 - **Hui Employment iframe integration**：独立 Main integration candidate；进入前建立 current feature-specific Requirement / Specification Authority，再完成 Planning / Readiness。
 - **Issue #60 C1 — Loading / Skeleton Experience**：用户体验 Planning Candidate。
