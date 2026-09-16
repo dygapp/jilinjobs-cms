@@ -67,6 +67,18 @@ Evaluated upstream frontier 推进到：
 
 对应 upgrade / validation history 已物理归档至 `docs/project/archive/`。当前 capability instance 只由 `docs/project/project-capability-profile.md` 与真实 Method / Architecture / Rule / Skill owner定义。
 
+## Documentation Authority / Regenerability 演进
+
+### Issue #155 — Documentation Authority 与 Regenerability Validation
+
+完成一次覆盖完整 Authority Chain 的 Consumer 实证治理：重新建立 source / evidence role boundary，收敛 Product / Domain Requirement 与 Current Specification ownership，建立独立 HTTP Interface Contract owner，并通过跨层独立语义复核关闭 observable projection、interface semantics 与 responsibility split 等缺口。
+
+随后使用独立 Fresh Context 执行 Product / representative feature reconstruction、code-holdout comparison、Node.js Backend substitution dry-run、HTML-first / Progressive Enhancement Public Renderer substitution dry-run与 Fresh Context Minimality；修复 canonical migration workspace 中残留的 mutable implementation inventory 后，R1～R6 均达到 PASS。该验证证明当前 Authority 可以支持 behavioral / contractual / operational reconstruction 与 technology substitution planning，但 dry-run 不等于已经构建替代实现。
+
+最终 G7 从 G1～G6 的 25 个 primary Failure Evidence 与 G0 的 7 个 supplemental governance / adoption failure 中形成 Review Rule Evidence Pack，并将可泛化的 failure pattern、review invariant、automation boundary 与 rejected candidate反馈到 `dygapp/agentic-dev#140`。Consumer evidence 支持优先增强既有 `review-change` 的 Authority-chain semantic review，而不是因单个项目样本自动新增 upstream Rule。
+
+本实验没有授予产品 Execute Authority，没有重新激活 Main / Party Historical Migration，也没有把 Issue / conversation analysis提升为长期 Product / Domain / Architecture truth；详细 Gate、PR、Actions、Failure Evidence 与 upstream feedback 继续由 Issue #155、GitHub native history 与 upstream Issue #140 追溯。
+
 ## 追溯入口
 
 - completed Execution Units：`docs/work/archive/`；
