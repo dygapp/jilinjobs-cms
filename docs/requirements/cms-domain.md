@@ -376,6 +376,7 @@ Article managed image、attachment 与 body image 是不同 relation；从 body 
 - stable identity conflict；
 - illegal source identity change；
 - `REQUIRED` image contract 无法满足；
+- invalid resource path / media；
 - invalid typed SiteProperty；
 - protected Resource ordinary delete；
 - Historical Migration fingerprint conflict / unresolved target dependency；
