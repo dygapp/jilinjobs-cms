@@ -41,13 +41,15 @@ Requirement
 
 **G3 — Specification Convergence 已完成。** Current Specification 已收敛为 Admin、Main / Party Public、Page Content、Rich Text Authoring 四个清晰 owner；原独立 Party Specification 的仍有效公开可观察行为已折叠到统一 Public owner，历史原文退出 Current Authority 并归档。Specification 只维护 Scope、Observable / Failure Behavior、Acceptance 与必要 feature-level quality obligation，不并行持有 Requirement / Domain、Architecture、Technical / Verification 或 concrete Site Definition inventory；当前没有未关闭的 material Specification ambiguity 或 parallel Current owner。
 
-下一实验 Gate 为 **G4 — Architecture & Technical Contract Convergence**，当前状态 **NOT STARTED**。G4 必须在新的 Fresh Context 中从当时最新 Repository Authority、Issue #155 与重新建立的真实 work locator 启动；不得从 G3 的 transitional analysis、PR Review、完成态 Specification 收敛或本 Gate 的 implicit context 自动继承 Architecture / Technical 结论、Execute Authority 或当前状态。
+**G4 — Architecture & Technical Contract Convergence 已完成。** 当前 CMS Architecture State 保持既有 Generic Core / CMS Server / Content Migration / Replaceable Public Renderer 等长期边界，不因实现漂移新增无 driver 的架构方案或 ADR；Backend ↔ Admin/Public Frontend 的稳定 HTTP compatibility 已由 `docs/technical/http-interface-contract.md` 建立唯一 Current Technical owner，Backend/Admin/Public Technical 与 Verification Strategy 改为消费该 owner，不复制 endpoint / DTO 第二事实源。G4 发现的 Core 内 HTTP Controller、`MultipartFile` transport leakage 与 boundary verification inventory blind spot 继续作为 implementation / verification evidence 保留，不反向改写 Architecture Authority，也不在本 Gate 顺手重构现有代码，从而保持 G6 code-holdout / technology substitution 的验证 subject。
+
+下一实验 Gate 为 **G5 — Cross-layer Independent Semantic Review**，当前状态 **NOT STARTED**。G5 必须在新的 Fresh Context 中从当时最新 Repository Authority、Issue #155 与重新建立的真实 work locator 启动；不得从 G4 的 transitional analysis、PR Review、implementation drift findings 或本 Gate 的 implicit context 自动继承 Review 结论、Execute Authority 或当前状态。
 
 Issue #153 / PR #154 Consumer Authority Foundation Rebuild 已完成并作为本轮起始 baseline，不再是当前治理进行中状态；其历史与 integration evidence 留在 GitHub / Project Evolution，不在 Roadmap 继续维护过程状态。
 
 ## 后续 Planning directions
 
-以下均保持 **Planning / Review Candidate**；不得从 Issue 排序、历史 EU 或旧 Roadmap 自动获得执行权。Issue #155 的后续 G4～G7 由其 umbrella lifecycle 单独协调，同样必须在各 Gate 的新 Fresh Context 中按当前 Repository Authority 建立实际工作入口。
+以下均保持 **Planning / Review Candidate**；不得从 Issue 排序、历史 EU 或旧 Roadmap 自动获得执行权。Issue #155 的后续 G5～G7 由其 umbrella lifecycle 单独协调，同样必须在各 Gate 的新 Fresh Context 中按当前 Repository Authority 建立实际工作入口。
 
 - **Hui Employment iframe integration**：独立 Main integration candidate；进入前建立 current feature-specific Requirement / Specification Authority，再完成 Planning / Readiness。
 - **Issue #60 C1 — Loading / Skeleton Experience**：用户体验 Planning Candidate。
