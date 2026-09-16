@@ -227,7 +227,7 @@ Engineering / External Page 可以保留 Page identity 与 canonical URL，但�
 7. unsupported / conflict / ambiguity 不通过默认值、静默 fallback 或实现 convenience 伪装成功；
 8. 真实产品歧义必须返回 Requirement / Human Authority，不在实现中静默选择。
 
-## 11. 非决策与后续责任
+## 11. 非决策
 
 本文不决定：
 
@@ -239,4 +239,4 @@ Engineering / External Page 可以保留 Page identity 与 canonical URL，但�
 - Review Environment / CI topology；
 - 当前 Ready Execution Unit、Planning Candidate 排序、PR、release 或 deployment state。
 
-Loading / Skeleton、Browser Compatibility、Public Rendering Architecture、真实第三方 integration、完整 Authentication / Authorization 等未来候选只有在新的 Requirement / Planning Authority 建立后才成为当前工作；Issue 或页面占位本身不授予产品事实或 Execute Authority。
+后续候选、优先级与当前 Gate 由 Project Roadmap / GitHub Current Evidence 持有，不在 Product Requirement 缓存第二份规划状态。
