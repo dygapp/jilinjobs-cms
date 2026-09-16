@@ -18,7 +18,7 @@ updated_at: 2026-09-16
 
 ## 1. 文档责任
 
-本文是 `jilinjobs-cms` 当前 **CMS Domain Requirement fact owner**，统一维护 business object、stable/source identity、state / lifecycle、cross-object relation、content ownership、stable / Runtime lifecycle、Historical Migration domain semantics 与 fail-closed business invariants。
+本文是 `jilinjobs-cms` 当前 **CMS 领域需求事实的长期 owner**，统一维护 CMS 业务对象、稳定 / 来源身份、状态与生命周期、跨对象关系、内容 ownership、stable / Runtime 生命周期、Historical Migration 领域语义与 fail-closed 业务不变量。
 
 产品目标、用户、范围、Main / Party 产品定位、canonical public contract 与跨 Capability 产品级质量要求由 `docs/requirements/information-publishing.md` 持有；Requirement locator 由 `docs/requirements/index.md` 持有。本文不重新定义这些 Product facts。
 
