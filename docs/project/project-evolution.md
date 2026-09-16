@@ -67,6 +67,8 @@ Evaluated upstream frontier 推进到：
 
 对应 upgrade / validation history 已物理归档至 `docs/project/archive/`。当前 capability instance 只由 `docs/project/project-capability-profile.md` 与真实 Method / Architecture / Rule / Skill owner定义。
 
+## Documentation Authority / Regenerability 演进
+
 ### Issue #155 — Documentation Authority 与 Regenerability Validation
 
 完成一次覆盖完整 Authority Chain 的 Consumer 实证治理：重新建立 source / evidence role boundary，收敛 Product / Domain Requirement 与 Current Specification ownership，建立独立 HTTP Interface Contract owner，并通过跨层独立语义复核关闭 observable projection、interface semantics 与 responsibility split 等缺口。
