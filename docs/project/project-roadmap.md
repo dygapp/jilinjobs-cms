@@ -33,7 +33,9 @@ Requirement
 → Work / Code
 ```
 
-当前 prerequisite 是先把本 Consumer 的 reusable Method / Requirement Authority capability 显式升级到 Issue #140 所要求的固定 upstream baseline；该临时 upstream read-only access 只属于 G0。G0 收口后 ordinary runtime 必须恢复 `upstream access = 0`。
+**G0 — Experiment Bootstrap & Baseline Upgrade 已完成。** Consumer 已完成本实验 prerequisite reusable capability upgrade，精确 evaluated upstream baseline 与 adopted / adapted capability disposition 由 `docs/project/project-capability-profile.md` 持有；G0 完成后 ordinary runtime 已恢复 `upstream access = 0`。
+
+下一实验 Gate 为 **G1 — Source & Authority Establishment**，当前状态 **NOT STARTED**。G1 只能在新的 Fresh Context 中从当前 Repository Authority、Issue #155 与当时重新建立的真实 work locator 启动；Roadmap 本身不授予 G1 执行或文档重构权限。
 
 Issue #153 / PR #154 Consumer Authority Foundation Rebuild 已完成并作为本轮起始 baseline，不再是当前治理进行中状态；其历史与 integration evidence 留在 GitHub / Project Evolution，不在 Roadmap 继续维护过程状态。
 
