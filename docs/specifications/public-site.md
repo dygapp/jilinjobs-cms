@@ -74,9 +74,9 @@ Main 首页继续保持已接受的固定页面结构与主要视觉识别，并
 - 网站名称、联系方式、备案、版权等站点信息；
 - NCSS 等无需运营维护的固定工程集成。
 
-其中“招聘公告”首页区域只聚合 `recruitment-announcement` 栏目中当前已发布的 `EXTERNAL_LINK` Article，并直接进入其外部来源；这不限制该栏目的普通栏目页只能存在外链 Article。
+其中“招聘公告”首页区域只聚合当前招聘公告业务栏目中已发布的 `EXTERNAL_LINK` Article，并直接进入其外部来源；这不限制该栏目的普通栏目页只能存在外链 Article。具体稳定栏目 identity 由其真实 Domain / Site Definition owner 持有，不在本规格复制内部 alias。
 
-首页招聘活动宣传展示消费 `HOME_RECRUITMENT_PROMO` 当前有效 Advertisement：0 项时不制造伪内容，1 项时静态展示，2 项及以上按展示顺序轮动；每项继续遵守其 URL / open-mode / `NO_LINK` Domain contract。具体轮动间隔属于 presentation configuration，不在本规格固化。
+首页招聘活动宣传展示消费当前招聘活动展示位中的有效 Advertisement：0 项时不制造伪内容，1 项时静态展示，2 项及以上按展示顺序轮动；每项继续遵守其 URL / open-mode / `NO_LINK` Domain contract。具体展示位 identity 与轮动参数由其真实 source / configuration owner 持有，不在本规格复制内部 key 或 default value。
 
 “最新招聘”及招聘 / 宣讲区域当前只是已接受页面结构中的第三方业务集成 seam；真实 iframe / 第三方 Runtime integration 必须由新的 Feature Requirement / Specification 明确授权，不因页面已存在占位区域自动获得实施权限。
 

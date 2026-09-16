@@ -94,17 +94,15 @@ Page Rich Text 当前不因为本规格自动获得新的 Article-style managed 
 
 ## 7. HTML safety
 
-Rich Text 必须在保持 accepted content compatibility 的同时阻止真正 active / document-level dangerous content，例如：
+Rich Text 必须在保持 accepted content compatibility 的同时，阻止 Domain / Product Authority 所定义的 active / document-level dangerous content 形成可执行或可利用结果。
 
-- script；
-- event handler；
-- dangerous URL scheme；
-- 未经独立 integration Authority 允许的 iframe / object / embed / form；
-- executable SVG / MathML；
-- meta / base / link 等 document-level controls；
-- dangerous CSS / URL behavior。
+用户可观察 contract 是：
 
-Safety policy 不能简单等同于当前 editor toolbar 的可见能力。具体 parser、sanitization 与 defensive-read mechanism 属于 Technical；Public 防御性处理不得造成用户内容被静默持久化改写。
+- hostile active content 不被当作正常可执行正文接受；
+- safety processing 不以破坏 accepted valid content 为代价；
+- Public defensive handling 不把读取时的处理静默持久化成新的正文事实。
+
+具体危险内容分类、业务安全边界由 Product / Domain Authority 持有；parser、sanitization、defensive-read mechanism 与 editor integration 属于 Technical，本规格不复制实现 allow-list / block-list。
 
 ## 8. Public rendering independence
 
