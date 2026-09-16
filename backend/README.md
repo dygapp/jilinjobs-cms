@@ -1,18 +1,24 @@
 # Backend
 
-`backend/` 是 Generic CMS Backend 的统一 Gradle 入口。EU-46 将原单体 Spring Boot 工程收敛为一个共享 Core 与两个独立 executable application；EU-47 在独立 Content Migration application 内建立了 site-neutral Canonical Dataset → CMS Runtime capability，同时保持 Party compatibility path 独立。
+`backend/` 是 Generic CMS Backend 的统一 Gradle workspace。当前 Repository implementation 由共享 Core 与两个 application responsibility 组成：
 
-- `modules/cms-core/`：Generic CMS domain / service / Mapper / persistence、Generic Flyway、Site Package 与共享 metadata；不包含 HTTP Controller、Server application 或 migration application composition；
-- `apps/cms-server/`：`CmsApplication`、Admin/Public HTTP transport、Server configuration、兼容 Site Package CLI 与现有 Server/runtime verifier；
-- `apps/content-migration/`：独立 non-web `ContentMigrationApplication`；持有 site-neutral Generic canonical loader/preflight、Article/ListItem importer、stable legacy mapping/report capability，以及仍由后续 Phase 2C 管理的 Party historical migration / compatibility implementation；不依赖 `cms-server`；
-- `build.gradle.kts`：保持 `clean`、`test`、`bootJar`、`importParty*`、`provisionSitePackage`、`bootstrapSitePackage` 与既有 `verifySitePackage*` root compatibility tasks，并提供 `importCanonicalContent` / `verifyGenericContentMigration`；
-- Server artifact 继续输出为 `build/libs/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar`。
+- `modules/cms-core/`：Generic CMS domain、service、persistence、Generic schema / Site Package / migration primitives 与共享 metadata；
+- `apps/cms-server/`：Admin / Public HTTP transport、ordinary server lifecycle 与 server-side composition；
+- `apps/content-migration/`：Canonical Historical Migration 的 non-web application composition；
+- `build.gradle.kts`、`settings.gradle.kts`：当前 Gradle project / task composition 的 implementation evidence。
 
-Current Backend Technical Authority：
+以上目录与 task 是当前实现事实，不因此成为 Product / Domain / Architecture Authority。
 
-- application/core boundary：`../docs/technical/backend-application-core-boundary.md`；
-- Generic Content Migration：`../docs/technical/generic-content-migration-application.md`。
+## Current Authority locator
 
-长期产品与 Site Package 边界仍由 `../docs/specifications/cms-core.md`、`../docs/requirements/cms-site-package-boundary.md` 与 `../docs/specifications/cms-site-package-boundary.md` 定义。EU-47 完成不代表 Party current dataset/profile 已迁到 Generic path；Party aliases、accepted fingerprints 与 EU-29→EU-30 compatibility 仍属于 Phase 2C Planning Candidate。
+- Product Requirement：`../docs/requirements/information-publishing.md`
+- CMS Domain：`../docs/requirements/cms-domain.md`
+- 长期 CMS Architecture：`../docs/architecture/cms-architecture.md`
+- Backend Technical Authority：`../docs/technical/backend-service.md`
+- Verification Strategy：`../docs/technical/verification-strategy.md`
+- JilinJobs Site Definition：`../sites/jilinjobs/**`
+- Historical Migration workspace：`../data-migrations/**`
 
-本 README 只说明 Backend subtree ownership，不建立新的产品或架构 Authority。具体验证以 `../docs/technical/verification-strategy.md`、当前 Technical Authority、`../docs/work/archive/eu46-backend-application-core-boundary-foundation.md`、`../docs/work/archive/eu47-generic-content-migration-application-foundation.md` 与 Repository Current Evidence 为准。
+Feature 可观察行为按需进入 `../docs/specifications/README.md` 定位当前 Specification。
+
+本 README 只说明 Backend subtree ownership 与 Current locator，不缓存已完成 EU、历史 Phase、Planning Candidate、exact migration inventory、Workflow 状态或旧 Requirement / Specification / Technical 三件套。需要历史实现 lineage 时，从当前 Authority 明确要求的 `docs/**/archive/**`、`docs/work/archive/**` 或 GitHub native Evidence 定向恢复。
