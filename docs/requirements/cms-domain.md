@@ -344,7 +344,7 @@ Main 当前 accepted Historical Migration scope 为 Article-only：
 - Article body resources / attachments；
 - Article provenance、legacy identity、fingerprint 与 import evidence。
 
-Main Page、stable Site Definition 与 ordinary bootstrap ListItem 不属于 Main historical import。Main ordinary migration execution 当前保持 **FROZEN / explicit reactivation only**；existing canonical evidence 保留不等于授予重新执行 Authority。
+Main Page、stable Site Definition 与 ordinary bootstrap ListItem 不属于 Main historical import。Historical Migration 是否在某一时刻允许重新执行，由当前治理 / execution Authority 决定，不属于本文的长期 Domain fact。
 
 ### 14.5 Party accepted scope
 
