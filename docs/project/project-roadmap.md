@@ -39,13 +39,15 @@ Requirement
 
 **G2 — Requirement Baseline Rebuild 已完成。** Consumer 已建立 Requirement Human Navigation 与 Requirement Authority Index，并将长期 Requirement 收敛为 Product Requirement 与 CMS Domain Requirement 两个清晰的 canonical fact owner；Capability 通过 Index 定位到唯一 owner / stable section，过程性 extraction / comparison / review 不进入 durable Requirement Authority。当前 Baseline 不包含未复核 provisional default，也没有未关闭的 material Requirement ambiguity。
 
-下一实验 Gate 为 **G3 — Specification Convergence**，当前状态 **NOT STARTED**。G3 必须在新的 Fresh Context 中从当时最新 Repository Authority、Issue #155 与重新建立的真实 work locator 启动；不得从 G2 的 transitional analysis、review batch 或完成态 Requirement 重构自动继承 Specification 结论、Execute Authority 或当前状态。
+**G3 — Specification Convergence 已完成。** Current Specification 已收敛为 Admin、Main / Party Public、Page Content、Rich Text Authoring 四个清晰 owner；原独立 Party Specification 的仍有效公开可观察行为已折叠到统一 Public owner，历史原文退出 Current Authority 并归档。Specification 只维护 Scope、Observable / Failure Behavior、Acceptance 与必要 feature-level quality obligation，不并行持有 Requirement / Domain、Architecture、Technical / Verification 或 concrete Site Definition inventory；当前没有未关闭的 material Specification ambiguity 或 parallel Current owner。
+
+下一实验 Gate 为 **G4 — Architecture & Technical Contract Convergence**，当前状态 **NOT STARTED**。G4 必须在新的 Fresh Context 中从当时最新 Repository Authority、Issue #155 与重新建立的真实 work locator 启动；不得从 G3 的 transitional analysis、PR Review、完成态 Specification 收敛或本 Gate 的 implicit context 自动继承 Architecture / Technical 结论、Execute Authority 或当前状态。
 
 Issue #153 / PR #154 Consumer Authority Foundation Rebuild 已完成并作为本轮起始 baseline，不再是当前治理进行中状态；其历史与 integration evidence 留在 GitHub / Project Evolution，不在 Roadmap 继续维护过程状态。
 
 ## 后续 Planning directions
 
-以下均保持 **Planning / Review Candidate**；不得从 Issue 排序、历史 EU 或旧 Roadmap 自动获得执行权。Issue #155 的后续 G3～G7 由其 umbrella lifecycle 单独协调，同样必须在各 Gate 的新 Fresh Context 中按当前 Repository Authority 建立实际工作入口。
+以下均保持 **Planning / Review Candidate**；不得从 Issue 排序、历史 EU 或旧 Roadmap 自动获得执行权。Issue #155 的后续 G4～G7 由其 umbrella lifecycle 单独协调，同样必须在各 Gate 的新 Fresh Context 中按当前 Repository Authority 建立实际工作入口。
 
 - **Hui Employment iframe integration**：独立 Main integration candidate；进入前建立 current feature-specific Requirement / Specification Authority，再完成 Planning / Readiness。
 - **Issue #60 C1 — Loading / Skeleton Experience**：用户体验 Planning Candidate。
