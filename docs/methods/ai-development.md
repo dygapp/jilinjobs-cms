@@ -38,7 +38,7 @@ Clarify Intent
 
 Integration 不是本 Method 的通用阶段。merge、release、deploy 与其他外部副作用由 Repository / Human Authority 决定。
 
-## Clarify Intent
+## 意图澄清（Clarify Intent）
 
 只解决会实质改变 Goal、Scope、User-visible Behavior、Business Boundary、Acceptance 或重大非功能义务的当前 Feature 歧义。优先从当前 Requirement / Domain / Architecture Authority 解析；低影响、可逆实现选择不升级到产品意图层。
 
@@ -48,7 +48,7 @@ Integration 不是本 Method 的通用阶段。merge、release、deploy 与其�
 
 对应 Skill：`clarify-intent`。
 
-## Specification
+## 功能规格（Specification）
 
 形成当前 Feature / change 的 WHAT / WHY Authority，至少覆盖 Goal、In/Out Scope、Observable Behavior、Business Rules、Boundary / Failure Behavior、Acceptance Criteria 与必要非功能约束。
 
@@ -58,7 +58,7 @@ Specification 不复制完整 project-level Requirement / Domain baseline。新�
 
 对应 Skill：`specify`。
 
-## Technical Planning
+## 技术规划（Technical Planning）
 
 仅在 Specification 无法直接、安全映射到当前系统时进入，例如跨模块、新数据模型、外部集成、迁移、共享契约、部署拓扑或重大架构权衡。
 
@@ -66,11 +66,11 @@ Technical Plan 只保存跨 Execution Unit 仍有协调价值的 HOW；精确文
 
 对应 Skill：`technical-plan`。
 
-## Slice & Ready
+## 切片与就绪（Slice & Ready）
 
 `slice-work` 把 Ready Specification 与必要 Technical Plan 切为 context-fit Candidate Execution Units；`readiness-check` 在 Execute 前执行只读门禁。只有 Readiness PASS 才授予该 Unit 的 Execute Authority；不自动授权后续 Unit 或 Integration。
 
-## Execute
+## 执行（Execute）
 
 每次只执行一个 Ready Execution Unit。重新读取当前 Unit、直接 Authority 与代码事实，形成 JIT plan；在 direct responsibility 首个副作用前执行 Consumer-local Rule Discovery，并按需调用 Skill。
 
@@ -78,7 +78,7 @@ Technical Plan 只保存跨 Execution Unit 仍有协调价值的 HOW；精确文
 
 对应 Skill：`execute-unit`。
 
-## Converge
+## 收敛（Converge）
 
 对当前 Authority、最终实现与当前 Evidence 做整体收敛，区分 Verification、Review 与 Convergence。发现缺口时返回拥有责任的上游层：局部 Feature 缺口返回当前 Feature owner；系统性 Requirement Baseline gap 返回 Requirement owner / `method:requirement-baseline-establishment`；systemic architecture gap 返回 Architecture owner / `method:architecture-clarification`。
 
@@ -92,6 +92,6 @@ Technical Plan 只保存跨 Execution Unit 仍有协调价值的 HOW；精确文
 
 长期知识只进入真实 semantic owner；会话推理、source comparison、JIT plan 与阶段流水账默认不持久化。Requirement Authority 的 ownership / locator contract 由 `architecture:requirement-authority` 持有。
 
-## Human escalation
+## 人工升级
 
 改变产品意图 / 范围、产生实质不同用户行为、Authority 冲突、重大难逆架构方向、安全 / 隐私 / 数据风险、超出授权的共享 / 外部副作用，以及 Repository policy 保留给人工的 merge / release / deploy 等必须升级 Human Authority。

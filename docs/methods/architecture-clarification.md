@@ -74,7 +74,7 @@ Establish Architecture Drivers
 2. Clarify Architecture；
 3. Architecture Convergence。
 
-### 4.1 Stable phase identities
+### 4.1 稳定阶段身份
 
 - Establish Architecture Drivers → `establish-architecture-drivers`；
 - Clarify Architecture → `clarify-architecture`；
@@ -82,7 +82,7 @@ Establish Architecture Drivers
 
 这些 token 只属于 `method:architecture-clarification`。
 
-## 5. Establish Architecture Drivers
+## 5. 建立架构驱动因素（Establish Architecture Drivers）
 
 先证明当前问题真的属于项目级 Architecture responsibility，而不是 Requirement ambiguity 或 Feature-local HOW。
 
@@ -99,7 +99,7 @@ Establish Architecture Drivers
 
 退出条件：保留下来的 driver 都具有明确的项目级 Architecture 理由，且没有把未解决 Product Requirement 伪装成 Architecture decision。
 
-## 6. Clarify Architecture
+## 6. 澄清架构（Clarify Architecture）
 
 根据当前 Requirement Baseline、Repository facts、已有 Architecture Context、成熟 reference / engineering evidence，对保留的 driver 形成最小充分长期结构决定。
 
@@ -113,13 +113,13 @@ Establish Architecture Drivers
 - current durable Architecture State；
 - ADR（仅当背景、主要替代关系与权衡具有长期历史价值时）。
 
-### 6.1 Seed Architecture
+### 6.1 种子架构（Seed Architecture）
 
 项目早期可以基于已知系统类别、Requirement Baseline、明确 NFR、成熟工程经验和 reference implementation 形成最小 Seed Architecture。
 
 目标是提前解决高杠杆结构问题，而不是一次性预测全部未来设计。
 
-### 6.2 Evolutionary Architecture
+### 6.2 演进式架构（Evolutionary Architecture）
 
 实施过程中出现以下 Evidence 时，可以重新进入本 Method 或其中相应责任：
 
@@ -149,7 +149,7 @@ local implementation evidence
 
 退出条件：阻塞性的长期 architecture driver 已进入真实 Architecture owner；普通 Feature-specific HOW 没有被提前吸收。
 
-## 7. Architecture Convergence
+## 7. 架构收敛（Architecture Convergence）
 
 只有同时满足以下条件，才可以声明 `Architecture Context Ready`：
 
@@ -165,7 +165,7 @@ local implementation evidence
 
 真正存在 blocker 时保持 NOT READY。
 
-## 8. Return contract
+## 8. 返回契约
 
 完成后只声明：
 
@@ -185,9 +185,9 @@ Execute / Integrate authority granted
 
 后续具体 Feature / change 仍必须重新按 Consumer-local selector 进入 `method:ai-development` 或其他适用 Method。
 
-## 9. Artifact lifecycle
+## 9. 产物生命周期
 
-### 9.1 Durable outputs
+### 9.1 长期产物
 
 默认 durable：
 
@@ -216,7 +216,7 @@ Execute / Integrate authority granted
 - Architecture Evidence 不足以支持 durable decision；
 - owner 冲突或 supersede 关系无法唯一确定。
 
-### 9.2 Transitional outputs
+### 9.2 过渡产物
 
 默认 transitional / disposable：
 

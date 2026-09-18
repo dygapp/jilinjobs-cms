@@ -24,7 +24,7 @@ Human Review Finding
 
 本 Method 不替代 `method:ai-development` 的 Feature lifecycle，也不授予 merge / deploy 权限。
 
-## Feedback Batch
+## 反馈批次
 
 除单个高优先级 blocker 外，同一次 Human Review 的 Findings 优先形成 Batch。对每项 finding 判断：
 
@@ -36,7 +36,7 @@ Human Review Finding
 
 Authority 已明确的 Finding 应在同一 Batch 内连续修复和定向验证，不因单项完成机械停下等待“继续”。
 
-## Verification tier
+## 验证层级
 
 最低充分范围按实际 claim 选择：
 
@@ -48,7 +48,7 @@ Authority 已明确的 Finding 应在同一 Batch 内连续修复和定向验证
 
 当前稳定 Verification Strategy、PR policy 或 workflow topology 要求更高层时服从更高要求；本分层不能用于绕过 Acceptance。
 
-## Return / escalation
+## 返回 / 升级
 
 - Finding 需要改变 Product Goal、Scope、Acceptance、长期 Architecture 或 Security / Privacy → 返回真实 Authority / Human decision；
 - 修复后仍需人工观察的内容 → Human Re-review；

@@ -81,7 +81,7 @@ Establish Sources & Authority
 5. Review Requirement Baseline；
 6. Requirement Convergence。
 
-### 4.1 Stable phase identities
+### 4.1 稳定阶段身份
 
 - Establish Sources & Authority → `establish-requirement-sources`；
 - Extract Requirement Facts → `extract-requirements`；
@@ -92,7 +92,7 @@ Establish Sources & Authority
 
 这些 token 只属于 `method:requirement-baseline-establishment`。
 
-## 5. Establish Sources & Authority
+## 5. 建立来源与权威（Establish Sources & Authority）
 
 先明确当前需求建立可以使用哪些输入、它们具有何种事实地位，以及哪些现有长期 owner 可以继续使用。
 
@@ -123,7 +123,7 @@ Establish Sources & Authority
 
 退出条件：后续事实抽取可以明确判断来源可信度、时间边界与当前 Authority owner，不会把不同历史时期或不同证据等级平权混合。
 
-## 6. Extract Requirement Facts
+## 6. 提取需求事实（Extract Requirement Facts）
 
 需求抽取优先从业务语义出发，而不是从 UI、数据库或代码结构出发。
 
@@ -153,7 +153,7 @@ Establish Sources & Authority
 
 退出条件：主要长期业务事实已经能够被识别，并可以进入 ownership / capability boundary 分析；不要求在此阶段穷举未来所有 Feature 细节。
 
-## 7. Structure Requirement Authority
+## 7. 结构化需求权威（Structure Requirement Authority）
 
 把已提取事实组织到明确的长期 semantic owner，而不是建立第二套持久业务模型。
 
@@ -181,7 +181,7 @@ Requirement Capability 边界优先依据：
 
 退出条件：核心事实已经有唯一长期 owner，Requirement index 可以定位主要 Authority，且不存在明显重复 / 平行事实源。
 
-## 8. Resolve Requirement Unknowns
+## 8. 解决需求未知项（Resolve Requirement Unknowns）
 
 ### 8.1 先分类，不默认提问
 
@@ -199,7 +199,7 @@ Requirement Capability 边界优先依据：
 
 “未知”不等于“必须问人”。
 
-### 8.2 Derive → Default → Ask → Review
+### 8.2 推导 → 默认 → 询问 → 评审（Derive → Default → Ask → Review）
 
 需求讨论遵守以下顺序：
 
@@ -217,7 +217,7 @@ Project Requirement Default 若要跨多个 Capability 直接复用，必须先�
 
 Provisional Minimal Default 必须在当前 Capability Human Review 中可见。只有 Review 通过、Product / Requirement Authority 明确认可，或其结果随后被其他有效 Authority 支持后，相关长期事实才能 promote 到 durable Requirement owner；在此之前不得把 provisional default 当成已确认基线事实传播到其他 Capability。
 
-### 8.3 Human Question Gate
+### 8.3 人工问题门禁（Human Question Gate）
 
 一个候选问题只有同时满足以下条件才升级为 Human Blocking Question：
 
@@ -231,7 +231,7 @@ Provisional Minimal Default 必须在当前 Capability Human Review 中可见。
 
 否则应推导、应用 Authoritative Default、采用可 Review 的 Provisional Minimal Default、记录为 non-blocking open item，或推迟到后续责任层。
 
-### 8.4 Conversation protocol
+### 8.4 会话协议
 
 会话只是需求获取渠道，不是长期 Authority。
 
@@ -245,7 +245,7 @@ Provisional Minimal Default 必须在当前 Capability Human Review 中可见。
 
 问题数量应由真实 Blocking Ambiguity 数决定，而不是为了形成“完整讨论”凑足固定数量。连续没有真实 blocking question 时，应停止提问并继续完成当前 Capability。
 
-## 9. Clarification Depth Stop Condition
+## 9. 澄清深度停止条件
 
 当以下信息已经足以唯一决定主要业务行为与验收时，Requirement 下钻应停止：
 
@@ -263,9 +263,9 @@ Provisional Minimal Default 必须在当前 Capability Human Review 中可见。
 
 如果下游结果已经由上游规则唯一决定，也必须停止逐项追问并直接记录推导结果。
 
-## 10. Review Requirement Baseline
+## 10. 评审需求基线（Review Requirement Baseline）
 
-### 10.1 Capability-level Human Review
+### 10.1 能力级人工评审（Capability-level Human Review）
 
 每个主要 Requirement Capability 达到可读状态后，可以进行一次整体 Human Review，重点查看：
 
@@ -279,7 +279,7 @@ Provisional Minimal Default 必须在当前 Capability Human Review 中可见。
 
 人工主要作为 Product Authority / Reviewer，而不是逐字段需求生成器。
 
-### 10.2 Independent semantic review
+### 10.2 独立语义复核（Independent Semantic Review）
 
 以下任一情况成立时，在 Baseline Ready 前必须执行独立语义复核：
 
@@ -290,7 +290,7 @@ Provisional Minimal Default 必须在当前 Capability Human Review 中可见。
 
 Review 必须可以核对 source / decision / resulting Authority；格式、链接、lint 或“Fresh Context 可读”不能单独证明语义正确。
 
-## 11. Requirement Convergence
+## 11. 需求收敛（Requirement Convergence）
 
 只有同时满足以下条件，才可以声明 `Requirement Baseline Ready`：
 
@@ -310,7 +310,7 @@ Review 必须可以核对 source / decision / resulting Authority；格式、链
 
 真正存在 blocker 时必须保持 NOT READY。
 
-## 12. Requirement Authority Artifact lifecycle
+## 12. 需求权威产物生命周期
 
 Requirement Authority 的结构、README / index / fact owner 边界、推荐目录、producer / consumer / update / supersede / escalation contract 由 `architecture:requirement-authority` 统一定义。
 
@@ -320,7 +320,7 @@ Requirement Authority 的结构、README / index / fact owner 边界、推荐目
 
 只要能够从 Requirement Authority 唯一再生，就不应为了 AI 理解方便建立新的持久中间 Authority。
 
-## 13. Return contract
+## 13. 返回契约
 
 完成后只声明：
 
