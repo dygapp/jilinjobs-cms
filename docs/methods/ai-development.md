@@ -36,7 +36,7 @@ Clarify Intent
 - Execute → `execute`
 - Converge → `converge`
 
-Integration 不是本 Method 的通用阶段。merge、release、deploy 与其他外部副作用由 Repository / Human Authority 决定。
+Integration 不是本 Method 的通用阶段。merge、release、deploy 与其他外部副作用由 Repository / 人工权威 决定。
 
 ## 意图澄清（Clarify Intent）
 
@@ -68,11 +68,11 @@ Technical Plan 只保存跨 Execution Unit 仍有协调价值的 HOW；精确文
 
 ## 切片与就绪（Slice & Ready）
 
-`slice-work` 把 Ready Specification 与必要 Technical Plan 切为 context-fit Candidate Execution Units；`readiness-check` 在 Execute 前执行只读门禁。只有 Readiness PASS 才授予该 Unit 的 Execute Authority；不自动授权后续 Unit 或 Integration。
+`slice-work` 把 Ready Specification 与必要 Technical Plan 切为 context-fit Candidate Execution Units；`readiness-check` 在 Execute 前执行只读门禁。只有 Readiness PASS 才授予该 Unit 的 执行授权；不自动授权后续 Unit 或 Integration。
 
 ## 执行（Execute）
 
-每次只执行一个 Ready Execution Unit。重新读取当前 Unit、直接 Authority 与代码事实，形成 JIT plan；在 direct responsibility 首个副作用前执行 Consumer-local Rule Discovery，并按需调用 Skill。
+每次只执行一个 Ready Execution Unit。重新读取当前 Unit、直接 Authority 与代码事实，形成 JIT plan；在 直接责任 首个副作用前执行 Consumer-local Rule Discovery，并按需调用 Skill。
 
 意外失败进入 `systematic-debug`。完成声明必须由与 Completion Conditions 匹配的当前 Evidence 支持。
 
@@ -88,10 +88,10 @@ Technical Plan 只保存跨 Execution Unit 仍有协调价值的 HOW；精确文
 
 ## Fresh Context 与 Artifact lifecycle
 
-普通上下文只加载 Repository Authority、当前工作对象、Requirement locator / 当前 Feature 直接相关 Requirement owner、必要 Specification / Technical / Architecture / Domain / Project Authority、Rule Discovery 返回的候选、当前需要的 Skill，以及相关 code / tests / Evidence。
+普通上下文只加载 仓库权威、当前工作对象、Requirement locator / 当前 Feature 直接相关 Requirement owner、必要 Specification / Technical / Architecture / Domain / Project Authority、Rule Discovery 返回的候选、当前需要的 Skill，以及相关 code / tests / Evidence。
 
-长期知识只进入真实 semantic owner；会话推理、source comparison、JIT plan 与阶段流水账默认不持久化。Requirement Authority 的 ownership / locator contract 由 `architecture:requirement-authority` 持有。
+长期知识只进入真实 语义所有者；会话推理、source comparison、JIT plan 与阶段流水账默认不持久化。Requirement Authority 的 ownership / locator contract 由 `architecture:requirement-authority` 持有。
 
 ## 人工升级
 
-改变产品意图 / 范围、产生实质不同用户行为、Authority 冲突、重大难逆架构方向、安全 / 隐私 / 数据风险、超出授权的共享 / 外部副作用，以及 Repository policy 保留给人工的 merge / release / deploy 等必须升级 Human Authority。
+改变产品意图 / 范围、产生实质不同用户行为、Authority 冲突、重大难逆架构方向、安全 / 隐私 / 数据风险、超出授权的共享 / 外部副作用，以及 Repository policy 保留给人工的 merge / release / deploy 等必须升级 人工权威。

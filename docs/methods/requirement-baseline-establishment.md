@@ -8,7 +8,7 @@ status: active
 
 ## 1. 目标
 
-本方法面向普通软件 Consumer 项目的项目建立或重大需求基线重建，负责把原始、碎片化、不同可信度且可能相互冲突的 Project Inputs，收敛为一套可持续维护、具有明确 semantic ownership、可由 Fresh Context Agent 直接消费的 Requirement Baseline。
+本方法面向普通软件 Consumer 项目的项目建立或重大需求基线重建，负责把原始、碎片化、不同可信度且可能相互冲突的 Project Inputs，收敛为一套可持续维护、具有明确 语义所有者ship、可由 Fresh Context Agent 直接消费的 Requirement Baseline。
 
 它解决的是：
 
@@ -56,7 +56,7 @@ Requirement Baseline Ready
         AI Development
 ```
 
-本 Method 是新项目进入普通 Feature Development 的上游 Project Establishment work kind，但不是每个 Feature 都要重复执行的前置步骤。
+本 Method 是新项目进入普通 Feature Development 的上游 Project Establishment 工作类型，但不是每个 Feature 都要重复执行的前置步骤。
 
 Requirement Baseline 一旦有效，后续普通 Feature 直接按 Repository-local selector 进入 `method:ai-development`。只有基线本身出现系统性缺口、冲突或需要重建时，才重新进入本 Method 或返回其中拥有该责任的阶段。
 
@@ -155,7 +155,7 @@ Establish Sources & Authority
 
 ## 7. 结构化需求权威（Structure Requirement Authority）
 
-把已提取事实组织到明确的长期 semantic owner，而不是建立第二套持久业务模型。
+把已提取事实组织到明确的长期 语义所有者，而不是建立第二套持久业务模型。
 
 通用 ownership 与推荐 `docs/requirements` 信息架构由 `architecture:requirement-authority` 定义。本阶段至少完成：
 
@@ -215,7 +215,7 @@ Requirement Capability 边界优先依据：
 
 Project Requirement Default 若要跨多个 Capability 直接复用，必须先进入真实 Requirement Authority，并明确其适用范围与必要 override 条件；聊天中的口头习惯、模型常识或历史项目经验不能直接充当 Authoritative Default。
 
-Provisional Minimal Default 必须在当前 Capability Human Review 中可见。只有 Review 通过、Product / Requirement Authority 明确认可，或其结果随后被其他有效 Authority 支持后，相关长期事实才能 promote 到 durable Requirement owner；在此之前不得把 provisional default 当成已确认基线事实传播到其他 Capability。
+Provisional Minimal Default 必须在当前 Capability 人工评审 中可见。只有 Review 通过、Product / Requirement Authority 明确认可，或其结果随后被其他有效 Authority 支持后，相关长期事实才能 promote 到 durable Requirement owner；在此之前不得把 provisional default 当成已确认基线事实传播到其他 Capability。
 
 ### 8.3 人工问题门禁（Human Question Gate）
 
@@ -265,9 +265,9 @@ Provisional Minimal Default 必须在当前 Capability Human Review 中可见。
 
 ## 10. 评审需求基线（Review Requirement Baseline）
 
-### 10.1 能力级人工评审（Capability-level Human Review）
+### 10.1 能力级人工评审（Capability-level 人工评审）
 
-每个主要 Requirement Capability 达到可读状态后，可以进行一次整体 Human Review，重点查看：
+每个主要 Requirement Capability 达到可读状态后，可以进行一次整体 人工评审，重点查看：
 
 - 范围是否正确；
 - AI 自动推导是否符合意图；
@@ -337,7 +337,7 @@ Execution Unit created
 Execute / Integrate authority granted
 ```
 
-下一步由 Repository-local Method selector 根据当前 work kind 决定：
+下一步由 Repository-local Method selector 根据当前 工作类型 决定：
 
 - 没有 systemic architecture blocker → 可进入具体 Feature 的 `method:ai-development`；
 - 存在多个 Feature 共同依赖、长期、高成本难逆并阻塞可靠开发的 architecture driver → 可进入 `method:architecture-clarification`；

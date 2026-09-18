@@ -8,7 +8,7 @@ status: active
 
 ## 目标
 
-本 Consumer-local Method 管理已经进入 Human Review 的变更在收到 Finding 后的批量修复、定向验证与 Human Re-review，避免每个 Finding 都机械重跑完整验证链，同时不降低最终 Acceptance。
+本 Consumer-local Method 管理已经进入 人工评审 的变更在收到 Finding 后的批量修复、定向验证与 人工复评，避免每个 Finding 都机械重跑完整验证链，同时不降低最终 Acceptance。
 
 ## 生命周期
 
@@ -26,13 +26,13 @@ Human Review Finding
 
 ## 反馈批次
 
-除单个高优先级 blocker 外，同一次 Human Review 的 Findings 优先形成 Batch。对每项 finding 判断：
+除单个高优先级 blocker 外，同一次 人工评审 的 Findings 优先形成 Batch。对每项 finding 判断：
 
 - 是否属于当前 Authority / Scope；
 - 影响 Requirement / Specification / Architecture / code / verification 的哪一层；
 - 是否需要返回上游 owner；
 - 最低充分验证范围；
-- 是否改变 Human Review baseline。
+- 是否改变 人工评审 baseline。
 
 Authority 已明确的 Finding 应在同一 Batch 内连续修复和定向验证，不因单项完成机械停下等待“继续”。
 
@@ -51,7 +51,7 @@ Authority 已明确的 Finding 应在同一 Batch 内连续修复和定向验证
 ## 返回 / 升级
 
 - Finding 需要改变 Product Goal、Scope、Acceptance、长期 Architecture 或 Security / Privacy → 返回真实 Authority / Human decision；
-- 修复后仍需人工观察的内容 → Human Re-review；
+- 修复后仍需人工观察的内容 → 人工复评；
 - Batch 已无未解决 blocker / medium finding 且验证充分 → 返回原 lifecycle 的下一 Repository / Human Gate。
 
-旧 Review Evidence 只有在能够证明不受后续修改影响时才复用。
+旧 复核证据 只有在能够证明不受后续修改影响时才复用。

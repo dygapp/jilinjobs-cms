@@ -8,7 +8,7 @@ status: active
 
 ## 目标
 
-本 Architecture 定义 `jilinjobs-cms` 长期 Requirement Authority 的 semantic ownership、Human / Agent 导航边界与 artifact lifecycle，确保同一长期业务事实只有一个长期 owner，Fresh Context Agent 能从有限入口确定性找到当前 Requirement，临时分析不会成为隐藏的第二事实源。
+本 Architecture 定义 `jilinjobs-cms` 长期 Requirement Authority 的 语义所有者ship、Human / Agent 导航边界与 artifact lifecycle，确保同一长期业务事实只有一个长期 owner，Fresh Context Agent 能从有限入口确定性找到当前 Requirement，临时分析不会成为隐藏的第二事实源。
 
 本文件不修改任何 JilinJobs Product Requirement，也不要求 G0 立即重排现有 `docs/requirements/**`。物理 IA 是否迁移、拆分或合并属于后续 Requirement Baseline governance；G0 只采用本 semantic contract。
 
@@ -28,7 +28,7 @@ status: active
 
 ### Requirement Analysis Workspace（分析工作区）
 
-保存 source inventory、extraction、ambiguity / conflict、comparison、flow / state / relationship view、migration analysis、human review batch 等 transitional material。默认非 Authority；事实 promote 到 durable owner 后应退出 ordinary runtime，并按需要删除、归档或保留为明确 historical evidence。
+保存 source inventory、extraction、ambiguity / conflict、comparison、flow / state / relationship view、migration analysis、human review batch 等 transitional material。默认非 Authority；事实 promote 到 durable owner 后应退出 普通运行时，并按需要删除、归档或保留为明确 historical evidence。
 
 Analysis artifact 必须能说明 producer、当前用途、Authority promotion path 与 exit / archive / delete boundary；只要派生表达可以从 Current Requirement Authority 唯一再生，就不建立长期同步副本。
 
@@ -47,7 +47,7 @@ docs/requirements/
 └── analysis/          # non-Authority workspace
 ```
 
-这是推荐 projection，不是硬编码 runtime contract。当前 Consumer 可以在 G2 依据真实 semantic ownership 决定是否采用完全相同物理结构。
+这是推荐 projection，不是硬编码 runtime contract。当前 Consumer 可以在 G2 依据真实 语义所有者ship 决定是否采用完全相同物理结构。
 
 `overview/` 只持有跨多个 Capability 持续成立的 Product Goal、Scope、系统责任边界、Actor overview、Capability map、project-wide business constraint 与必要 domain semantics；不把内部组件划分或 deployment topology 误写成 Product Requirement。
 
@@ -112,13 +112,13 @@ Repository Authority
 
 如果当前 Consumer 尚未建立独立 `index.md`，必须通过现有 canonical locator 确定性找到 owner；是否建立 index 由 G2 按本 Architecture 判断，不由 G0 预先决定。
 
-`README.md` 主要供人理解，不作为 ordinary runtime Requirement router；`analysis/` 也不进入 ordinary runtime，除非当前任务明确需要原始 Evidence、历史原因或尚未 promote 的分析材料。
+`README.md` 主要供人理解，不作为 普通运行时 Requirement router；`analysis/` 也不进入 普通运行时，除非当前任务明确需要原始 Evidence、历史原因或尚未 promote 的分析材料。
 
 ## 产物生命周期
 
 ### 生产者
 
-主要 producer：`method:requirement-baseline-establishment`、后续 Feature / Clarification 中经 Repository Authority 确认需提升的长期 Requirement fact，以及 Human / Product Authority 的长期决定。
+主要 producer：`method:requirement-baseline-establishment`、后续 Feature / Clarification 中经 仓库权威 确认需提升的长期 Requirement fact，以及 Human / Product Authority 的长期决定。
 
 ### 触发条件
 
@@ -130,13 +130,13 @@ Repository Authority
 
 ### 持久化 / 更新 / 替代
 
-长期 Requirement Fact 必须保存在 Consumer Repository Authority 可定位的 durable owner。修改事实时先更新真实 owner，再最小传播 locator / relation / affected references；不得在下游 Specification、Technical Plan 或聊天中静默覆盖 Requirement。
+长期 Requirement Fact 必须保存在 Consumer 仓库权威 可定位的 durable owner。修改事实时先更新真实 owner，再最小传播 locator / relation / affected references；不得在下游 Specification、Technical Plan 或聊天中静默覆盖 Requirement。
 
 新 owner 替代旧 owner 时应更新当前 locator / references，并删除、归档或明确废止旧 current owner；历史由 Git / Issue / PR 与必要 archive 保存，不维护两套 current fact。
 
 ### 升级
 
-发现 current Authority 冲突、unique owner 不清、多种合理答案会实质改变 Product behavior / Acceptance、变更超出授权，或批量语义变换需要独立 review 时，返回 Requirement Method / Human Authority。
+发现 current Authority 冲突、unique owner 不清、多种合理答案会实质改变 Product behavior / Acceptance、变更超出授权，或批量语义变换需要独立 review 时，返回 Requirement Method / 人工权威。
 
 ## 与 Specification / Architecture 的边界
 

@@ -8,7 +8,7 @@ status: active
 
 ## 目标与边界
 
-本架构定义普通 Consumer 软件项目中，Requirement、Specification、Architecture 与 Technical 内容如何转换为便于人工理解和判断的评审材料，以及人工反馈如何返回真实 semantic owner。
+本架构定义普通 Consumer 软件项目中，Requirement、Specification、Architecture 与 Technical 内容如何转换为便于人工理解和判断的评审材料，以及人工反馈如何返回真实 语义所有者。
 
 它不拥有具体产品事实，不创建新的通用 Method stage，也不替代 `skill:review-change`。人工评审用于帮助业务、产品、架构或工程人员理解并确认内容；独立变更复核用于判断 Repository change 是否符合当前 Authority、范围、规则与 Evidence。
 
@@ -66,7 +66,7 @@ status: active
 3. 已确认的长期语义变化都实际进入真实 owner；
 4. 已重新读取 owner 并确认回写存在且无冲突；
 5. 评审草稿已按最新 Current Authority 校准；
-6. 不存在只保存在草稿、图形、会话或待执行动作中的 durable fact。
+6. 不存在只保存在草稿、图形、会话或待执行动作中的 长期事实。
 
 人工评审完成不授予 merge、release、deploy 或独立变更复核通过。
 

@@ -51,7 +51,7 @@ Architecture Context Ready
 AI Development
 ```
 
-本 Method 是条件性 work kind，不是所有新项目的必经步骤。简单项目、成熟技术栈或已经存在足够 Architecture Context 的项目，可以在 `Requirement Baseline Ready` 后直接进入具体 Feature 的 `method:ai-development`。
+本 Method 是条件性 工作类型，不是所有新项目的必经步骤。简单项目、成熟技术栈或已经存在足够 Architecture Context 的项目，可以在 `Requirement Baseline Ready` 后直接进入具体 Feature 的 `method:ai-development`。
 
 Feature Technical Planning 与本 Method 共享同一个长期 Architecture owner：
 
