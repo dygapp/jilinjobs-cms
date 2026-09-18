@@ -10,7 +10,7 @@ status: active
 
 本 Architecture 定义 `jilinjobs-cms` 长期 Requirement Authority 的 语义所有权、Human / Agent 导航边界与 artifact lifecycle，确保同一长期业务事实只有一个长期 owner，Fresh Context Agent 能从有限入口确定性找到当前 Requirement，临时分析不会成为隐藏的第二事实源。
 
-本文件不修改任何 JilinJobs Product Requirement，也不要求 G0 立即重排现有 `docs/requirements/**`。物理 IA 是否迁移、拆分或合并属于后续 Requirement Baseline governance；G0 只采用本 semantic contract。
+本文件不修改任何 JilinJobs Product Requirement，也不要求因为采用本 contract 就立即重排现有 `docs/requirements/**`。物理 IA 是否迁移、拆分或合并属于 Requirement Baseline governance；本 Architecture 只定义长期 semantic contract。
 
 ## 四类责任
 
@@ -47,7 +47,7 @@ docs/requirements/
 └── analysis/          # non-Authority workspace
 ```
 
-这是推荐 projection，不是硬编码 runtime contract。当前 Consumer 可以在 G2 依据真实 语义所有权 决定是否采用完全相同物理结构。
+这是推荐 projection，不是硬编码 runtime contract。当前 Consumer 依据真实语义所有权决定是否采用完全相同的物理结构。
 
 `overview/` 只持有跨多个 Capability 持续成立的 Product Goal、Scope、系统责任边界、Actor overview、Capability map、project-wide business constraint 与必要 domain semantics；不把内部组件划分或 deployment topology 误写成 Product Requirement。
 
@@ -110,7 +110,7 @@ Repository Authority
 → Specification / Technical Plan
 ```
 
-如果当前 Consumer 尚未建立独立 `index.md`，必须通过现有 canonical locator 确定性找到 owner；是否建立 index 由 G2 按本 Architecture 判断，不由 G0 预先决定。
+如果某个 Consumer 尚未建立独立 `index.md`，必须通过现有 canonical locator 确定性找到 owner；是否建立 index 由 Requirement governance 根据真实定位压力判断，不因采用本 Architecture 自动新增。
 
 `README.md` 主要供人理解，不作为 普通运行时 Requirement router；`analysis/` 也不进入 普通运行时，除非当前任务明确需要原始 Evidence、历史原因或尚未 promote 的分析材料。
 
