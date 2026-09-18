@@ -27,7 +27,7 @@ Rule 可以约束 Method stage、Skill execution、direct Agent work、repositor
 
 一条 assertion 不等于一个 Rule 文件；正文大小也不是机械拆分指标。
 
-## Consumer-local specialization
+## Consumer 本地特化
 
 Consumer Rule corpus 由本仓库当前 Authority 自主 adopt / adapt / replace / reject，不与 upstream Rule 数量或目录镜像。Repository-specific commit、术语、审批、迁移、验证与技术 policy 优先由本地 Rule 持有。
 

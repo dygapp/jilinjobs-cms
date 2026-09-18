@@ -34,7 +34,7 @@ updated_at: 2026-09-16
 
 一种 Evidence 不能自动替代另一种。没有与当前 claim、目标提交和运行环境相匹配的证据，不声明相应完成状态。
 
-## 3. Runtime composition
+## 3. 运行时组合
 
 验证环境必须消费真实产品 ownership，而不是由 Test fixture 重建第二份产品基线。
 
@@ -61,7 +61,7 @@ Runtime composition 的长期 ownership 以 `docs/architecture/cms-architecture.
 
 ## 4. 验证分层
 
-### 4.1 Backend
+### 4.1 后端
 
 Backend 变更至少按风险选择编译、静态检查、自动化测试、可执行产物构建与必要 Runtime startup。
 
@@ -69,7 +69,7 @@ Backend 变更至少按风险选择编译、静态检查、自动化测试、可
 
 涉及 Core / Server / Migration boundary 时，验证必须检查**责任性质**而不是只维护已知 class 黑名单：Core 不应暴露 Controller / Servlet / multipart 等 HTTP transport responsibility；Migration application 不应因依赖 Core 获得 ordinary Server transport。新增一个以前不在 inventory 中的 Controller 也必须能被边界验证发现。
 
-### 4.2 HTTP Interface Contract
+### 4.2 HTTP 接口契约
 
 触达 Backend HTTP transport、Admin/Public API adapter、DTO projection、resource transport 或 Backend technology substitution 时，以 `docs/technical/http-interface-contract.md` 为唯一稳定接口 oracle。
 
@@ -87,7 +87,7 @@ Interface contract test 可以有 provider-specific adapter，但 contract asser
 
 G6 Backend substitution dry-run 的 PASS 需要在不读取 Java implementation 作为设计输入的前提下，以 Current Authority 重建 provider 并证明现有 Admin/Public consumer 所需 contract compatibility。
 
-### 4.3 Frontend
+### 4.3 前端
 
 独立前端应用分别拥有自己的 type-check、build 与 Runtime / Browser Evidence，不能用一个应用的成功替代另一个应用。
 
@@ -101,7 +101,7 @@ Vue / TypeScript 变更按真实风险选择验证层：
 
 验证以当前 Consumer 实际 package、tsconfig、Workflow 与 Repository Authority 为准，不为匹配外部 Technology Profile 机械升级依赖。
 
-### 4.4 Browser / E2E
+### 4.4 浏览器 / E2E
 
 Browser Verification 用于证明路由、交互、资源加载、异步状态与已编码 Acceptance。
 
@@ -114,7 +114,7 @@ Browser Verification 用于证明路由、交互、资源加载、异步状态�
 
 Functional Browser PASS 不自动等于 Visual Fidelity PASS。
 
-### 4.5 Human Review / Review Environment
+### 4.5 人工评审 / 评审环境
 
 需要人工运行时观察的工作必须使用与目标 claim 对应的可复现 Review Runtime。
 
@@ -160,7 +160,7 @@ External Dependency Problem
 
 如果同一产品语义在多个测试层重复硬编码，应回到真正的 Requirement / Specification / Architecture / Interface owner，并减少第二套契约。
 
-## 6. Evidence contract
+## 6. 证据契约
 
 对目标 PR / commit 的 Completion claim 应能关联：
 

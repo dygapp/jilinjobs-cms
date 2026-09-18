@@ -45,7 +45,7 @@ content-migration ──→ cms-core
 
 `backend/` 根工程继续作为 Repository 级 build / verification / migration / provisioning facade；具体 task 名、artifact path、plugin/version 与 classpath wiring 以当前 Gradle implementation 为准，不由本文建立第二份 inventory。
 
-## 3. `cms-core`
+## 3. `cms-core` 模块
 
 Core 持有两个 application 真正共享的 implementation capability：
 
@@ -63,7 +63,7 @@ Spring transaction / DI / persistence implementation 可以在当前 Core 内使
 
 领域规则如果需要改变，必须先回到 Domain / Product Authority；不得因为 Core 当前代码方便而在 Technical 层发明新业务语义。
 
-## 4. `cms-server`
+## 4. `cms-server` 模块
 
 CMS Server 持有 ordinary Runtime 的 transport / application composition：
 
@@ -79,7 +79,7 @@ Server 可以消费 Core，但不拥有 Historical Content Migration command lif
 
 Admin / Public contract 可以投影同一 Domain；Public projection 不泄漏 Admin-only endpoint responsibility。endpoint / method / wire field / status compatibility 统一服从 `http-interface-contract.md`，Controller class 布局本身不是接口 Authority。
 
-## 5. `content-migration`
+## 5. `content-migration` 模块
 
 Content Migration 是独立 non-web application，持有：
 
@@ -115,7 +115,7 @@ Generic schema ready
 
 具体 package component inventory 由 `sites/jilinjobs/manifest.json` 与 implementation 持有。
 
-## 7. Persistence / transport boundary
+## 7. 持久化 / 传输边界
 
 共享 Domain model、service、persistence 与 transaction capability尽量留在 Core；HTTP request/response adaptation 留在 Server；migration canonical model / report 留在 Migration application。
 
@@ -138,7 +138,7 @@ Backend 是资源安全、public projection 与最终数据约束的 enforcement
 
 具体 parser、library、storage path 与 validator implementation 由代码和相关 Technical owner 持有；HTTP multipart / content / attachment semantics 由 Interface Contract 持有。
 
-## 9. Verification
+## 9. 验证
 
 Backend 变化按实际风险验证：
 

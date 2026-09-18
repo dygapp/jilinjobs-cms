@@ -27,7 +27,7 @@ Method 拥有复杂工作的长期生命周期；Skill 拥有其中某个明确�
 
 Rule 与 Skill 正交。容易因 Consumer / Repository Authority 改变的 policy、格式、审批、授权和完成声明要求优先由 Rule / Repository Authority 持有，不写死进 Skill。
 
-## Inventory ownership
+## 清单所有权
 
 Architecture 不持有当前 Consumer 的完整 Skill inventory 或数量。实际 `skills/*/SKILL.md` corpus 是 Skill 资源；当前 Skill root / discovery entry 由 Project Capability Profile 声明。
 
