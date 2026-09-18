@@ -37,7 +37,7 @@ Requirement Baseline Establishment、Architecture Clarification 与 AI Developme
 
 本映射不复制 Method stage、Gate、completion condition 或内部 Skill / Rule routing。
 
-## 3. Rule Discovery Instance
+## 3. 规则发现实例
 
 当前 Rule Discovery instance：
 
@@ -45,17 +45,31 @@ Requirement Baseline Establishment、Architecture Clarification 与 AI Developme
 - Discovery Architecture：`docs/architecture/rule-discovery.md`；
 - Rule root：`docs/rules/`；
 - Tool：`tools/rule-discovery/rule_discovery.py`；
+- cloud transport：`.github/workflows/rule-discovery.yml`；
 - ordinary runtime 输出：少量 `{id, path}` candidate locator。
 
-普通运行调用：
+当前本地 checkout 调用：
 
 ```bash
 python3 tools/rule-discovery/rule_discovery.py --repo-root . discover --signals-json '<task-signals-json>'
 ```
 
+当前云端 task-level invocation 支持两种 transport，二者都必须携带 exact 40-character commit SHA，并在该 SHA checkout 后调用同一 Consumer-local Tool：
+
+1. GitHub Actions `workflow_dispatch`：输入 `target_sha` 与 `signals_json`；
+2. 当前 Agent / connector 无 workflow dispatch 写能力时，可由仓库 `OWNER` / `MEMBER` / `COLLABORATOR` 在 Issue / PR 中发送：
+
+```text
+/rule-discovery <40-char-sha> <signals-json>
+```
+
+云端 invocation 必须校验 requested SHA = actual SHA，并把 signals、requested / actual SHA 与 discovery JSON 作为可审计 Evidence；`pull_request` / `push(main)` 触发的同名 workflow 仍只承担 repository lint、deterministic tests 与固定 smoke，不能替代当前 task signals 的 task-level discovery。
+
+调用 Rule Discovery transport 本身是 preflight compute，不授予 Repository / Issue / PR / workflow / deployment 等后续副作用权限。
+
 五维 task signals、三态、bounded-token、matching、locator-only、semantic confirmation、responsibility transition checkpoint 与 fail-closed 由 `docs/architecture/rule-discovery.md` 持有；本 Profile 不复制这些规则，也不维护 Rule inventory、scope metadata 或 Rule → signal 映射。
 
-当前 Consumer Tool 尚未实现 upstream 后续 Rule-root Human `README.md` 保留例外，因此 `docs/rules/**` 当前仍只放 discoverable Rule Markdown；不能因为 upstream Architecture 已有该能力就推断本地 Tool 已支持。
+当前 Consumer Tool 继续不采用 Rule-root Human `README.md` 保留例外；`docs/rules/**` 仍只放 discoverable Rule Markdown。该本地选择与 cloud transport 正交，不因为 upstream Architecture 支持 Human README 就自动改变。
 
 ## 4. Skill Discovery Instance
 

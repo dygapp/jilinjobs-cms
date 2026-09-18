@@ -36,35 +36,56 @@ Bootstrap / Roadmap surface 不并行维护 `Current Ready Execution Unit`、Rea
 execution 中的横切 Rule 由 Consumer-local `tools/rule-discovery/rule_discovery.py` 从当前任务事实提取 bounded signals 做确定性候选发现；详细 contract 由 `docs/architecture/rule-discovery.md` 持有。当前 Rule 默认按“一个可独立发现的具体任务或责任所需的有界规范语义集合”形成自然边界，不采用“一条 assertion = 一个 Rule 文件”的机械拆分；同一任务中通常共同发现、共同消费的 policy 优先聚合，只有独立 discovery 能实际减少无关加载 / 错误激活，或存在不同 technology / artifact / risk / lifecycle / semantic owner 时才拆分。Technology Rule 子目录只服务人类维护，不参与 runtime matching。普通运行必须满足：
 
 - task signals 使用 `phases / activities / technologies / artifacts / risks` 五维；非空数组表示 known，`[]` 表示 known-empty，`null` 表示 unknown / unsafe-to-canonicalize；每维最多 6 个 canonical token；
-- 当前 direct responsibility 建立后，在该责任的**首个有副作用动作前必须完成本次 task-level discovery**；只读 Authority / Repository fact 恢复可以先于 discovery；
-- direct responsibility 切换，或 phase / activity / technology / artifact / risk 等关键事实实质变化时，旧 candidate set 不跨职责继续生效；必须在下一次有副作用动作前重新构造 signals 并发现；
-- Rule Discovery CI lint、deterministic tests 与固定 smoke 只证明 Tool / corpus contract，**其 PASS 不得替代 ordinary runtime invocation**，也不能证明当前 Agent 的实时责任已经完成 discovery；
+- 首次向人工输出包含项目事实、状态判断、方案、复核结论或其他实质内容前，建立一次 `communication` responsibility checkpoint；若本次 task-level discovery 已经覆盖 `communication` + `human-facing-content`，不重复调用；仅表示“正在恢复 / 正在读取”、且不承载项目事实或判断的短进度消息可以先行；
+- 当前 direct responsibility 建立后，在该责任的**首个受 Rule 约束的实质动作前必须完成本次 task-level discovery**；有副作用动作始终属于这一边界；只读 Authority / Repository fact 恢复可以先于 discovery，但只读工作不能因此绕过适用于其输出或复核责任的 Rule；
+- direct responsibility 切换，或 phase / activity / technology / artifact / risk 等关键事实实质变化时，旧 candidate set 不跨职责继续生效；必须在下一次受 Rule 约束的实质动作前重新构造 signals 并发现；
+- Rule Discovery CI lint、deterministic tests 与固定 smoke 只证明 Tool / corpus contract，**这些通过结果不能替代当前 task signals 的 task-level discovery**，也不能证明当前 Agent 的实时责任已经完成 discovery；
+- Rule Discovery 本身属于 preflight infrastructure invocation，只计算候选，不修改项目语义或授予后续操作权限，因此不要求为调用 discovery 再递归执行一轮 discovery；当前执行面没有本地 shell 时，可以使用 Project Capability Profile 声明的 exact-SHA 云端 transport，但不得因此跳过 discovery；
 - Rule metadata 与规范正文同文件维护在 `docs/rules/**`；
 - discovery 返回的 candidate `{id,path}` locator 是 ordinary runtime 获得 Rule locator 的唯一入口；只读取返回候选的 Rule body，再做 semantic applicability confirmation；
 - 不得通过 `rg --files`、`find`、目录树或其他方式枚举未命中的 Rule locator，也不得在 zero-candidate 后读取未命中 Rule 做 calibration；
 - 不建立 Reviewed Discovery Map、Activation Manifest、Runtime Catalog、`rule-index` 或其他需要与 Rule 正文同步维护的中心路由资产；
 - local discovery / metadata / ambiguity 失败一律 Consumer-local fail closed，不自动读取 upstream current state；
+- 准备请求人工执行动作、提供输入、作出决定或充当系统 / 工具之间的中转时，视为新的 human escalation responsibility checkpoint；发出请求前用 `activities=[human-escalation]`、`risks=[human-intervention]` 重新执行 Rule Discovery，并只在自动化 / Evidence 路径确实不足时请求最小必要人工动作；
 - Skill 与 Rule 分离；`skills/*/SKILL.md` 只物理化本仓库已采用的稳定执行能力，不因物理文件存在扩大 Planning / Readiness / Execute Authority。
 
 Agent Skills Specification 的 Progressive Disclosure `<5000 tokens / <500 lines` 只作为 Rule 单文件上限复核参照，不是拆分阈值或目标大小。
 
 ## 文档语言与术语表达
 
-本项目所有**面向人的 Current / Partially Current 文档强制以中文为主语言**，采用“中文主述、必要英文精确锚定”的表达原则。该规则适用于根级项目文档以及 `docs/project/`、`docs/methods/`、`docs/architecture/`、`docs/rules/`、`docs/requirements/`、`docs/specifications/`、`docs/technical/`、`docs/work/current/` 中仍参与当前 Authority / Fresh Context 的 Markdown 文档。
+本项目所有面向人的 Current / Partially Current 内容默认使用自然、完整、连续的中文。动作、判断、因果、结论以及标题、表格列名、流程节点等结构性标签都应以中文表达；不得为了显得专业、便于检索或制造“术语感”机械保留普通英文。该要求也适用于 Agent 面向人工展示的进度、分析、方案、风险、阻塞、验证和复核结论。
 
-- 文档标题、章节标题、状态说明、背景、需求、规格、技术方案、验证说明、结论等叙述性内容必须使用中文表达；允许在中文后以括号保留英文精确名称。
-- 中文已有自然稳定表达、且英文有助于与 `agentic-dev` Method、Skill、Contract 或技术概念精确对应时，首次重要出现优先使用“中文（English Term）”。
-- Skill 名称、代码标识符、类名、方法名、字段名、文件路径、命令、API、URL、协议 / 标准名称、枚举值、GitHub / Git / Flyway / Vue / Spring Boot 等专有技术名称保持原生形式，不做机械翻译。
-- `READY`、`COMPLETED`、`CURRENT`、`SUPERSEDED` 等状态标识可以作为精确治理锚点保留，但必须由中文正文解释其含义，不得形成整段纯英文状态说明。
-- 代码块、JSON / SQL / YAML 示例、CLI 输出和外部系统固定名称不受中文比例约束。
-- 不要求同一术语在每次出现时重复中英对照；同一文档中的术语必须稳定一致。
-- Current 文档不得出现纯英文主体、英文占主导的长篇叙述或纯英文一级标题；发现后必须在同一治理工作中翻译、收敛或明确降级为历史证据。
+以下对象应保持可精确匹配的原始形式：
 
-`SUPERSEDED` / `HISTORICAL_EVIDENCE` 文档以证据保真为优先，不因纯语言原因大规模重写历史正文；但它们必须通过 `docs/README.md` 或其 archive 入口明确退出 Current Authority。历史文档一旦重新晋升为 Current Authority，必须先满足本节中文主语言规范。
+- Skill / Rule / Method 的精确 id 或调用名；
+- 文件路径、Branch、Commit SHA、Issue / PR 编号；
+- 代码标识符、配置键、数据库字段、API / CLI、命令与参数、协议值；
+- 真实日志、错误信息以及外部产品、框架、协议、标准和官方项目名称；
+- 跨 Gate / Verification / Review 使用的稳定状态值，例如 `PASS`、`FAIL`、`READY`、`BLOCKED`、`PENDING`、`HOLD`。
 
-语言治理不得改变已有 Product Goal、Scope、Business Boundary、User-visible Behavior、Architecture Decision 或技术契约。中文化不是重新设计；若翻译过程中暴露语义冲突，应按 Repository Authority 解决冲突，而不是用翻译选择隐式覆盖事实。
+稳定状态值可以保持原样，但其原因、判断和结论仍使用自然中文；不得为了“纯中文”再建立一套与 `PASS` / `PENDING` 等并行的长期状态表示。
 
-Current 文档的中文主语言与本地文档引用完整性由 `scripts/verify-docs-governance.mjs` 和对应 GitHub Actions 检查持续约束；不得通过扩大例外列表来规避真实 Current 文档问题。
+正式概念拥有英文 identity，不等于普通中文叙述默认保留英文名称。当前句子只需要表达含义、类型或状态而不需要逐字识别正式 identity 时，应使用自然中文或当前稳定中文表达，例如“稳定基线”“当前方法”“规则发现已完成”“人工评审”；只有确实需要消歧、引用精确 id / 路径或跨文档稳定身份时才保留原文。
+
+语言整理不得合并或改变职责不同的正式对象。尤其保持以下区分：
+
+- 方法阶段不等于同名 / 近义 Skill；
+- Gate 不等于 Skill；
+- artifact 不等于 lifecycle stage；
+- Repository Authority 不等于 Human Authority；
+- 当前项目状态不等于 reusable capability；
+- Human View 不等于 canonical Authority；
+- Consumer-local adaptation 不等于 upstream canonical semantics；
+- evaluated baseline 不等于已经启用的本地能力；
+- upstream Project state 不等于 Consumer Project state。
+
+同一 Current canonical concept 已有稳定中文表达时，后续面向人内容应沿用，不自行制造新的中文别名，也不恢复已经退出 Current model 的历史别名。业务 / 产品术语继续由真实 Requirement / Domain owner 持有，不迁移到通用语言 Rule、Guide 或 README。
+
+`SUPERSEDED` / `HISTORICAL_EVIDENCE` 文档以证据保真为优先，不因纯语言原因批量改写历史正文；它们必须退出 ordinary Fresh Context Current Authority。历史文档如果重新晋升为 Current Authority，先完成 semantic reconciliation，再满足当前语言规范。
+
+语言治理不得改变 Product Goal、Scope、Business Boundary、User-visible Behavior、Architecture Decision、Specification 或技术契约。若表达整理暴露真实语义冲突，返回对应 canonical owner 解决，而不是通过翻译选择隐式覆盖事实。
+
+Current 文档的中文主语言、结构标题和本地引用完整性由 `scripts/verify-docs-governance.mjs` 与对应 GitHub Actions 持续约束；不得通过扩大例外列表规避真实 Current 文档问题。
 
 ## 仓库权威（Repository Authority）
 
@@ -196,7 +217,7 @@ Current 文档的中文主语言与本地文档引用完整性由 `scripts/verif
 
 该授权只代表 Repository 操作权限，不代表 Agent 可以自行改变 Product Intent 或 Scope。产品决策仍必须遵守上面的 Human Escalation 规则。
 
-### Repository Operation Boundary
+### 仓库操作边界（Repository Operation Boundary）
 
 当前 Consumer 工作对两个 Repository 的操作权限明确区分：
 
