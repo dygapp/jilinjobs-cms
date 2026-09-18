@@ -12,7 +12,7 @@ Method 针对一类复杂工作定义规范生命周期。一个 Method 至少�
 
 Method stage 表示工作状态与责任，不要求每个阶段都创建同名 Markdown，也不要求阶段与 Skill 一一对应。
 
-## Repository-local selection
+## Repository 本地选择
 
 Agent 必须能够从本地 Authority 选择 Method：
 
@@ -42,7 +42,7 @@ Requirement Baseline Establishment
 
 上游 Method 完成不自动授予下游 Execute / Integrate Authority；每个后续实际工作仍由 Repository / Human Authority 建立其当前入口。
 
-## Phase identity
+## 阶段身份
 
 Rule Discovery 需要 phase token 时，只能使用当前 selected Method canonical owner 明确定义的 stable phase identity。无法无歧义确定时使用 `null`，不得从目录、自然语言阶段名、其他 Method 或 Rule metadata 猜测。
 

@@ -40,7 +40,7 @@ Repository Authority / Bootstrap
 
 Method、Architecture、Skill、Rule 彼此按责任组合，不形成固定的 `Method → Skill → Rule` 串行流水线。
 
-## Consumer-local specialization
+## Consumer 本地特化
 
 `agentic-dev` reusable capability 只有经过显式 adopt / adapt / replace / reject 并落到本仓库 canonical owner 后，才属于 Consumer current capability。Consumer-local Rule、版本、路径、工具与 Repository policy 可以与 upstream 不同；不得为了目录或数量一致机械镜像 upstream。
 
