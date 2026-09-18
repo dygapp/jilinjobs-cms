@@ -14,7 +14,7 @@ scope:
 
 创建、重写或准备接受 Git Commit 时，提交历史必须保持可读、可追溯并符合本 Consumer 的稳定语义。
 
-## Commit Message
+## 提交说明（Commit Message）
 
 默认格式：
 
