@@ -15,15 +15,15 @@ updated_at: 2026-09-16
 
 # 单页内容模型与结构化页面规格
 
-## 1. Scope
+## 1. 范围
 
 本规格只定义 CMS Page 在用户和运营人员可观察层面的 content-profile 行为，以及当前已接受 Structured Page `guide/jypq` 的产品 contract。
 
 Page 的长期 identity、ownership、content authority、operator-divergence 与 fail-closed 业务不变量由 Domain Requirement 持有；renderer / Site Definition / application boundary 由 Architecture 与对应 source owner 持有；数据库字段、Migration、DTO、registry、源码组件与 adoption 实现属于 Technical / code，不在本规格复制。
 
-## 2. Page content profiles
+## 2. 页面内容配置
 
-### 2.1 Rich Text Page
+### 2.1 富文本页面
 
 普通说明性、通知性和由运营人员自由维护正文的 Page 使用 Rich Text authoring：
 
@@ -32,7 +32,7 @@ Page 的长期 identity、ownership、content authority、operator-divergence �
 - 保存、重新打开和公开展示必须保持 accepted Rich HTML 语义；
 - 不因为 Structured capability 存在而强制迁移普通 Rich Page。
 
-### 2.2 Structured Page
+### 2.2 结构化页面
 
 当 card、section、step 等结构本身属于产品语义时，Page 可以使用 Structured content：
 
@@ -43,13 +43,13 @@ Page 的长期 identity、ownership、content authority、operator-divergence �
 
 Structured payload 的 identity / ownership 与 primary-content 规则由 Domain Requirement 持有，本规格不建立第二套表示权威。
 
-### 2.3 Engineering / External Page
+### 2.3 工程 / 外部页面
 
 当页面主要行为由受控工程实现或外部系统承担时，CMS 仍保留 Page identity、canonical URL 与 lifecycle，但不伪装成 operator-owned whole-page Rich body。
 
 具体工程 interaction、第三方 integration 和 delivery mechanism 需要独立 Feature Specification；本规格不自动实现慧就业 iframe 或其他外部系统。
 
-## 3. Structured Card Collection V1
+## 3. 结构化卡片集合 V1
 
 当前第一种 accepted Structured shape 为有序卡片集合。
 
@@ -64,7 +64,7 @@ Structured payload 的 identity / ownership 与 primary-content 规则由 Domain
 
 V1 不承诺 generic block builder、任意布局 DSL、item-level workflow、独立 card identity 或跨 Page card reuse。
 
-## 4. `guide/jypq` current contract
+## 4. `guide/jypq` 当前契约
 
 `/page/guide/jypq` 当前使用 Structured Card Collection，并保持既有稳定 Page identity 与 canonical URL。
 
@@ -77,7 +77,7 @@ V1 不承诺 generic block builder、任意布局 DSL、item-level workflow、�
 
 具体 card 数量、完整文案、resource inventory / bytes 属于当前 Site Definition content，不在 Specification 复制第二份 inventory。
 
-## 5. Existing content reconciliation behavior
+## 5. 现有内容协调行为
 
 当版本化 Site Definition 需要让已有 Page content 与新的 accepted Structured target 协调时，运营人员可观察结果必须满足：
 
@@ -89,7 +89,7 @@ V1 不承诺 generic block builder、任意布局 DSL、item-level workflow、�
 
 精确 fingerprint、prior-baseline 判定与 reconcile algorithm 由 Domain / Technical owner 持有，本规格不复制实现判定规则。
 
-## 6. Admin authoring behavior
+## 6. 管理端编辑行为
 
 Admin 根据 Page 当前 content profile 选择 authoring surface：
 
@@ -99,7 +99,7 @@ Admin 根据 Page 当前 content profile 选择 authoring surface：
 
 对预置 / 稳定 Page 的 ordinary content editing，不允许运营人员通过普通表单任意切换 Domain 所定义的 content model、renderer identity 或 ownership。
 
-## 7. Public behavior
+## 7. 公开站点行为
 
 - canonical routes 保持 `/page/{alias}` 与 `/page/{groupAlias}/{alias}`；
 - 页面 Shell、breadcrumb、group tab 与 Page identity 不因 renderer 不同建立第二套 URL；
@@ -107,7 +107,7 @@ Admin 根据 Page 当前 content profile 选择 authoring surface：
 - unknown renderer / schema 显示可诊断失败，不呈现错误或过期的 Rich fallback；
 - Structured 页面仍应形成合理 metadata / text summary，不依赖不存在的 whole-page Rich body。
 
-## 8. Failure behavior
+## 8. 失败行为
 
 以下情况不得静默成功：
 
@@ -119,7 +119,7 @@ Admin 根据 Page 当前 content profile 选择 authoring surface：
 
 具体 HTTP status、log、report、fingerprint algorithm 或 UI message 由对应 Technical / implementation contract 决定，但失败必须能被用户或验证证据识别。
 
-## 9. Acceptance
+## 9. 验收
 
 触达本能力时，最终结果至少满足实际涉及的以下 contract：
 
@@ -136,7 +136,7 @@ Admin 根据 Page 当前 content profile 选择 authoring surface：
 
 验证采用何种 automation / Browser / Human evidence 由当前 Verification Authority 与实际变更风险决定。
 
-## 10. Non-goals
+## 10. 非目标
 
 - generic Page Builder / arbitrary block framework；
 - 自动把 FAQ 等其他 Page 迁移为 Structured；

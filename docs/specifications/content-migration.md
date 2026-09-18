@@ -19,7 +19,7 @@ updated_at: 2026-09-16
 
 # 历史内容迁移规格
 
-## 1. Scope
+## 1. 范围
 
 本规格定义项目维护者在**已经获得当前执行 Authority** 时，对 Historical Content Migration 可以观察和验收的受控导入行为，包括 preflight、执行结果、冲突 / 无效状态、幂等性与可审计 report。
 
@@ -27,7 +27,7 @@ Historical object 的 stable source identity、fingerprint、CREATE / SKIP / CON
 
 本规格**不授予 migration execute authority**。Main historical migration 是否可执行继续服从 Repository 当前治理状态；根 `README.md` 当前定义的 Main `FROZEN / explicit reactivation only` 不因本规格存在而解除。Party 或其他 migration activity 同样必须从当前 Work / Governance Authority 获得真实执行入口。
 
-## 2. Controlled input
+## 2. 受控输入
 
 Stable verification / import 消费明确授权、可追溯的 canonical snapshot / dataset，而不是把 Legacy Source 在线响应当作普通 Runtime input。
 
@@ -35,7 +35,7 @@ Stable verification / import 消费明确授权、可追溯的 canonical snapsho
 
 Legacy Source acquisition / retry / reactivation 是独立 activity，不因为执行 canonical import 自动发生。
 
-## 3. Load → preflight → execute → report
+## 3. 加载 → 预检 → 执行 → 报告
 
 Historical Migration 的可观察生命周期至少区分：
 
@@ -50,7 +50,7 @@ load
 
 只要当前 dataset 存在已知 `INVALID` / unresolved `CONFLICT` 或必要 dependency 无法满足，本次受影响 dataset 不得继续执行成“部分成功但整体显示成功”。纯 preflight failure 不产生该 dataset 的 Runtime mutation。
 
-## 4. Result semantics
+## 4. 结果语义
 
 每个 canonical migration unit 的结果必须能够落入当前 Domain semantics，并由项目维护者从 report 中辨认：
 
@@ -63,7 +63,7 @@ load
 
 重复执行相同 accepted canonical input 必须保持幂等，不制造 duplicate Runtime content 或重复 mapping。
 
-## 5. Auditable report / process outcome
+## 5. 可审计报告 / 流程结果
 
 每次受控 migration 都必须形成足以审计本次范围和结果的 report。Report 至少能够恢复：
 
@@ -78,7 +78,7 @@ load
 
 存在 unresolved `CONFLICT` / `INVALID` 时，process / task 必须产生明确失败结果，不能只打印 warning 后以成功完成伪装通过。
 
-## 6. Side-effect boundary
+## 6. 副作用边界
 
 - 已知 structural / dependency / conflict 问题应尽可能在 execute 前集中暴露；
 - preflight 未通过时不创建与本次失败 dataset 无关的 Runtime business record；
@@ -86,7 +86,7 @@ load
 - 如果某类外部文件 / managed resource side effect 无法与最终 DB mapping 形成分布式原子事务，失败 report 必须能够定位受影响 identity，不能把残余 side effect 隐藏为完整成功；
 - migration 不启动 ordinary CMS Server HTTP lifecycle，也不把 Legacy Source 变成稳定 Runtime dependency。
 
-## 7. Failure behavior
+## 7. 失败行为
 
 以下情况必须 fail closed，并在 report / process outcome 中可诊断：
 
@@ -100,7 +100,7 @@ load
 
 不得通过默认 target、silent overwrite、跳过异常但仍返回成功等方式制造假阳性完成状态。
 
-## 8. Acceptance
+## 8. 验收
 
 触达 Historical Content Migration capability 时，最终结果至少满足实际涉及的以下 contract：
 
@@ -116,7 +116,7 @@ load
 
 具体 automated fixture、CLI invocation、Workflow、artifact 与 Evidence procedure 由 Verification Authority 与 Repository implementation 决定。
 
-## 9. Non-goals
+## 9. 非目标
 
 - 解除 Main Historical Migration freeze；
 - 定义具体 historical record inventory / count / digest；

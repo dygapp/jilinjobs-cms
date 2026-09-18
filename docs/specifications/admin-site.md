@@ -18,7 +18,7 @@ updated_at: 2026-09-16
 
 # CMS 管理端产品规格
 
-## 1. Scope
+## 1. 范围
 
 本规格定义 CMS 运营人员可以观察和操作的管理端行为。
 
@@ -39,7 +39,7 @@ CMS business object、stable/source identity、state/lifecycle 与数据完整�
 
 ## 3. 通用管理交互
 
-### 3.1 Container → Member
+### 3.1 容器 → 成员
 
 存在明确容器 / 组织上下文的对象，优先使用“选择上下文 → 管理成员”：
 
@@ -84,7 +84,7 @@ Admin 只长期展示完成当前操作所需的信息：
 
 ## 5. 文章与栏目
 
-### 5.1 Article management
+### 5.1 文章管理
 
 文章管理提供栏目组织上下文和文章列表：
 
@@ -105,7 +105,7 @@ Article publish lifecycle 在 Admin 中必须形成显式、可理解的状态�
 - 普通内容编辑保持当前 publish status，不把“保存”隐式解释为发布、撤回或重新发布；
 - 发布 / 重新发布所需的 Domain precondition 不满足时必须阻止状态变化并显示可诊断失败。
 
-### 5.2 Cover policy
+### 5.2 封面策略
 
 文章表单根据当前 Column cover policy 表达：
 
@@ -115,7 +115,7 @@ Article publish lifecycle 在 Admin 中必须形成显式、可理解的状态�
 
 外链文章不要求本地正文 / 封面。
 
-### 5.3 Column management
+### 5.3 栏目管理
 
 栏目管理直接维护树形结构、公开标识、排序、状态、封面数据策略与子栏目关系。稳定 / 预置栏目按照 Domain protection 规则显示受保护身份和删除限制。
 
@@ -155,11 +155,11 @@ ordinary content edit 不允许通过普通表单随意改变 Domain 所定义�
 
 列表管理先选择 CmsList，再维护其 CmsListItem。
 
-### 8.1 List definition
+### 8.1 列表定义
 
 List definition 可以维护业务名称、列表标识、图片数据策略、说明、排序与启停。普通运营创建 / 编辑不直接维护内部稳定 `groupCode`；稳定结构分组由受控站点定义持有。
 
-### 8.2 ListItem
+### 8.2 列表项（`ListItem`）
 
 Admin 根据 Domain source identity 提供对应编辑体验：
 
@@ -168,7 +168,7 @@ Admin 根据 Domain source identity 提供对应编辑体验：
 
 source type 创建后以不可切换方式呈现；既有 ARTICLE relation 不通过普通编辑改成另一篇文章。
 
-### 8.3 Image policy
+### 8.3 图片策略
 
 根据父列表当前 image policy：
 
@@ -235,7 +235,7 @@ Admin 中需要运营人员辨识图片的场景，应提供一致的预览与�
 
 该体验不能改变 Public image bytes 或把 Admin preview metadata 写回业务数据。
 
-## 13. Failure behavior
+## 13. 失败行为
 
 Admin 必须显式呈现：
 
@@ -251,7 +251,7 @@ Admin 必须显式呈现：
 
 不得通过前端默默修正成另一种业务语义来“让保存成功”。
 
-## 14. Acceptance
+## 14. 验收
 
 触达管理端行为时，最终结果至少满足实际涉及的以下 contract：
 
@@ -271,7 +271,7 @@ Admin 必须显式呈现：
 
 Verification 采用哪些自动化层次、Browser 工具或 evidence 由当前 Verification Authority 决定，不由本 Acceptance 固化。
 
-## 15. Non-goals
+## 15. 非目标
 
 - 当前阶段的用户 / 角色 / 权限实现；
 - 通用系统设置中心；

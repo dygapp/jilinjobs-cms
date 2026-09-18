@@ -14,7 +14,7 @@
 
 Historical Migration 的长期 identity / fingerprint / accepted scope / compatibility 仍由 Domain Requirement 持有，canonical records 由 `data-migrations/**` 持有；`content-migration.md` 只拥有项目维护者可观察的受控执行结果，不授予 migration execute authority，也不解除 Main migration freeze。
 
-## Specification responsibility
+## 功能规格责任
 
 Specification 回答“用户、运营人员或项目维护者能观察到什么、边界和失败如何表现、什么结果算满足”。它不重新定义：
 
@@ -26,7 +26,7 @@ Specification 回答“用户、运营人员或项目维护者能观察到什么
 
 遇到跨 Feature 的新长期业务事实，回到真实 Requirement / Domain owner；遇到长期结构 driver，回到 Architecture；实现机制与验证程序分别进入 Technical / Verification owner。
 
-## Archive
+## 归档
 
 `archive/` 保存已被后继 Requirement / Specification / Architecture 吸收或取代的历史 Feature Specification、Architecture convergence specification 与完成态 change contract，仅用于 traceability。
 
