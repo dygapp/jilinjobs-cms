@@ -20,8 +20,10 @@ class BaselineB717UpgradeContractTests(unittest.TestCase):
     def test_root_readme_is_not_fixed_bootstrap_input(self):
         agents = self.read("AGENTS.md")
         docs_readme = self.read("docs/README.md")
+        root_readme = self.read("README.md")
         self.assertIn("不再作为 ordinary Fresh Context 的固定预读", agents)
         self.assertIn("不作为固定 Bootstrap", docs_readme)
+        self.assertIn("不作为 ordinary Fresh Context 的固定预读", root_readme)
 
     def test_human_facing_rule_covers_communication_and_review(self):
         rule = self.read("docs/rules/repository/human-facing-content-integrity.md")
