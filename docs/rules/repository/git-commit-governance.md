@@ -35,11 +35,11 @@ scope:
 - 摘要直接描述主要动作与对象，默认不以句号结尾；
 - 普通 Commit 不要求 Body；只有摘要不足以解释关键 why、兼容边界、迁移约束或 trade-off 时才增加。
 
-## Type
+## 类型（Type）
 
 优先复用已经稳定使用的 Type：`feat`、`fix`、`refactor`、`test`、`docs`、`chore`、`ci`、`build`、`style`、`data`。只有形成新的长期责任语义时才增加 Type。
 
-## Scope
+## 范围（Scope）
 
 Scope 表示稳定责任域，不表示单个文件或一次性任务编号。优先复用 `migration`、`public`、`party`、`admin`、`backend`、`config`、`resource`、`review`、`method`、`governance`、`project`、`repo` 等已有稳定域。
 

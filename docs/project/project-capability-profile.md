@@ -14,7 +14,7 @@ Consumer 项目事实、产品 Requirement、Domain、Architecture、代码、�
 
 当前 evaluated upstream baseline：
 
-`dygapp/agentic-dev@ce28ec748f28a58b2bb65bf75db353f5f50f772d`
+`dygapp/agentic-dev@b71783782b97e2033b99014744d1286dd69cb107`
 
 该 SHA 只表示最近完成显式 compare / disposition 的 upstream frontier，不表示 upstream Project state、Research / Eval、Guide instance 或全部 capability 已被本 Consumer 采用。
 
@@ -83,7 +83,7 @@ ordinary Agent 使用 Agent Skills 原生 discovery，根据 `SKILL.md` 的 `nam
 
 ## 5. Architecture 实例
 
-当前工程 capability 类型与组合边界由以下 Consumer-local 规范语义所有者s 持有：
+当前工程 capability 类型与组合边界由以下 Consumer-local 规范语义所有者持有：
 
 - `docs/architecture/engineering-capability.md`
 - `docs/architecture/consumer.md`
@@ -125,9 +125,9 @@ Project Knowledge / Capability 边界由 `docs/architecture/project-knowledge.md
 治理收口后的普通运行路径：
 
 ```text
-AGENTS.md + README.md
+AGENTS.md
 → docs/README.md Local Discovery Entry
-→ Project Capability Profile + current Repository facts
+→ 按当前责任读取 Project Capability Profile / README.md / Current Work / 其他 Repository facts
 → Method selection（如当前 work kind 命中）
 → current Method stage / direct responsibility
     ├─→ relevant Consumer-local Architecture
@@ -146,13 +146,24 @@ upstream access = 0
 
 ## 9. 最近一次显式上游处置
 
-Issue #155 G0 对 `ed1a4446f0430890e7ad39673ac9c2e341e6a829 → ce28ec748f28a58b2bb65bf75db353f5f50f772d` 的 direct semantic delta 作出以下 Consumer-local disposition：
+Issue #172 / PR #173 对 `ce28ec748f28a58b2bb65bf75db353f5f50f772d → b71783782b97e2033b99014744d1286dd69cb107` 的 20-commit reusable capability delta 作出以下 Consumer-local disposition：
 
-- **adopt** `method:requirement-baseline-establishment`，本地 规范语义所有者：`docs/methods/requirement-baseline-establishment.md`；
-- **adopt** `method:architecture-clarification`，本地 规范语义所有者：`docs/methods/architecture-clarification.md`；
-- **adapt** `architecture:requirement-authority` 到本 Consumer，保留 语义所有者ship / lifecycle contract，但不在 G0 预先改造 Product Requirement IA；本地 owner：`docs/architecture/requirement-authority.md`；
-- **adapt** `method:ai-development` 的 return-contract delta，使 systemic Requirement / Architecture gap 分别返回真实 owner / 新 Method；
-- **replace / retire** `method:software-project-clarification`，不再作为 Current Method 或 selector target；
-- 人工指南 未进入 Consumer runtime Authority。
+- **adapt — Authority-chain review**：吸收高影响 Authority 变更的 owner transition、single semantic owner、下游可观察投影、replaceability seam 与 bounded regenerability challenge，落到 `skills/review-change/SKILL.md` 与 `rule:authoritative-artifact-lifecycle-review`；不把 upstream Review Project state 带入 Consumer。
+- **adopt + adapt — Human Review capability**：新增 `architecture:human-review` 与 `skill:human-review`，服务普通 Consumer 软件项目的结构化 Markdown 评审、反馈分类与真实 owner 回写；不复制 upstream Human Guide，也不把人工评审与 independent `review-change` 合并。
+- **adapt — Requirement terminology governance**：将跨 Capability 术语 identity / alias / source-role 边界吸收到 `architecture:requirement-authority`；当前没有真实跨 owner terminology pressure，因此**不建立中央中英文术语表**，业务术语继续由 Product / Domain Requirement owner 持有。
+- **reject as duplicate owner — generic Data Migration Architecture**：本 Consumer 的长期迁移语义已经分别由 `docs/requirements/cms-domain.md`、`docs/specifications/content-migration.md`、`docs/architecture/cms-architecture.md` 与对应 Technical / Verification owner 持有；不再增加并行通用 migration owner。
+- **adapt — Rule Discovery / Bootstrap**：首次实质性人工输出前增加 `communication + human-facing-content` checkpoint；采用 exact-SHA cloud task discovery、scan completeness / symlink fail-closed，并将根 `README.md` 从固定 Bootstrap 改为按需加载。Rule Discovery 仍只返回 locator，Human Guide 不进入固定 Bootstrap。
+- **adopt — human intervention necessity**：新增 `rule:human-intervention-necessity`，请求人工前先验证当前 connector / API / Actions / Evidence 是否存在可替代自动化路径；不削弱 Human Authority。
+- **adapt — safe external write**：`rule:safe-external-write` 增加创建前查询 / 复用已有远程对象与写后回读，降低重试、会话切换或不确定返回造成的重复 Issue / PR / resource。
+- **retain Consumer-local technology Rules**：upstream 在该区间退出通用 Vue / TypeScript technical Rules，但本 Consumer 的 `docs/rules/technology/vue/**` 已是由真实 Vue3 / TypeScript 责任和本地工程事实驱动的 Consumer-local policy，因此不跟随删除，也不反向复制回 upstream。
+- **adapt — human-facing content integrity**：普通动作、判断、原因、结论与结构标签默认使用自然中文；稳定状态值、路径、id、SHA、API / CLI、协议值、真实日志与外部正式名称保持精确身份；语言整理不得合并 Method stage、Gate、artifact、Skill、Rule、Authority 等不同正式对象。
+- **not adopted — upstream project-only / research / eval / guide state**：upstream Roadmap、Project Capability Profile、Research、Eval result、Guide instance 与 self-adoption 状态都不传播进 Consumer current state。仅用于理解 reusable semantic delta 的 upstream evidence 不成为普通运行依赖。
 
-该记录只说明 reusable capability adoption，不把 `agentic-dev` Project Knowledge、Roadmap、Research 或 Consumer-independent Guide 内容变成 JilinJobs 事实。完成显式 upgrade 后 普通运行时 继续保持 `upstream access = 0`。
+该 baseline 表示**截至 `b717837…` 已完成显式评估**，不表示该区间每项 upstream asset 都已采用。真正启用的能力只以本文件指向的 Consumer-local Method / Architecture / Rule / Skill canonical owner 为准。
+
+完成本轮 upgrade 后普通运行继续满足：
+
+```text
+Consumer-local current state sufficient
+upstream ordinary-runtime dependency = 0
+```
