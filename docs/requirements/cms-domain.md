@@ -24,7 +24,7 @@ updated_at: 2026-09-16
 
 本文不定义页面布局、组件、数据库字段、HTTP DTO、Migration 文件、源码目录、framework 或具体实现算法。Feature Observable Behavior 由 Specification 定义；跨 Feature 系统 structure / application boundary 由 Architecture 定义；concrete Site Definition 与 canonical migration records 分别由其 versioned source workspace 持有。
 
-## 2. Domain boundary
+## 2. 领域边界
 
 CMS Domain 回答：
 
@@ -40,31 +40,31 @@ Main / Party 的视觉 template、Vue / Spring implementation、build / deployme
 
 ## 3. Scope、identity 与 ownership 基础语义
 
-### 3.1 Main / Party content scope
+### 3.1 主站 / 党建站内容范围
 
 Main 与 Party 的产品定位由 Product Requirement 定义。Domain 只规定：两者复用同一组 Column、Article、Page、Navigation、CmsList 等业务对象，不因 Party 主题或 route namespace 创建第二套 Domain model。
 
 object 的 Main / Party scope 必须来自稳定业务关系，例如 Column tree、明确 List identity、Page contract 或其他 accepted relation；不得仅根据 URL、DOM、标题、数组位置或源码目录猜测 scope。
 
-### 3.2 Stable identity
+### 3.2 稳定身份
 
 stable alias / code / key / location identity 用于公开定位、结构恢复或长期关系时，ordinary edit 不得静默改变其业务身份。稳定对象可以使用 `preset` 或等价 ownership 标识保护 identity / ordinary delete；preset 不等于所有字段永久不可修改。
 
 ordinary Admin-created object 不自动成为 stable preset；Article、CmsListItem、Advertisement 等 ordinary content 不因 Fresh bootstrap 来源自动获得 preset identity。
 
-### 3.3 Source identity
+### 3.3 来源身份
 
 source identity 表示对象“是什么来源类型”，与 ordinary editable field 分离。创建时确定的 Article `INTERNAL / EXTERNAL_LINK`、CmsListItem `LINK / ARTICLE` 及 ARTICLE relation 等，不得通过普通编辑静默切换成另一种来源语义。
 
 需要改变 source identity 时，使用显式新对象或后续经 Requirement 授权的受控变更流程。
 
-### 3.4 Content ownership
+### 3.4 内容所有权
 
 同一具体 primary content 在同一时刻只能有一个业务 owner。operator Runtime content、versioned Site Definition content、engineering implementation 与 external integration 不得同时宣称拥有同一 primary body。
 
 ## 4. Column 与 Article
 
-### 4.1 Column
+### 4.1 栏目（`Column`）
 
 Column 是 Article 的树形内容分类对象：
 
@@ -82,7 +82,7 @@ Column 的 Article image data policy：
 
 该 policy 只表达 data validity，不表达 Public layout。EXTERNAL_LINK Article 不持有本地 body / cover，因此不受本地 cover required rule 约束。
 
-### 4.2 Article source identity
+### 4.2 文章来源身份
 
 Article source identity：
 
@@ -91,7 +91,7 @@ Article source identity：
 
 普通编辑不得 `INTERNAL ↔ EXTERNAL_LINK` 切换。
 
-### 4.3 Article publish lifecycle
+### 4.3 文章发布生命周期
 
 Article 至少具有：
 
@@ -107,7 +107,7 @@ DRAFT → PUBLISHED → WITHDRAWN → PUBLISHED
 - republish 后仍有效的 existing placement 可以恢复；
 - missing、deleted、non-public Article 的 direct public access 必须产生明确 unavailable result，而不是展示旧内容。
 
-### 4.4 Article ordering / placement
+### 4.4 文章排序 / 投放
 
 普通 Public Article ordering 语义：
 
@@ -124,15 +124,15 @@ INTERNAL Article 的 Rich Text body 使用 `bodyHtml` 作为唯一 whole-body au
 
 ## 5. PageGroup 与 Page
 
-### 5.1 PageGroup
+### 5.1 页面组（`PageGroup`）
 
 PageGroup 是多个 Page 的平级业务组织容器，不建立 nested PageGroup。成员关系可以形成 Public Tab 等可观察结构；Frontend 不维护第二份成员清单作为长期 Authority。
 
-### 5.2 Page identity
+### 5.2 页面身份
 
 Page 可以 standalone 或属于一个 PageGroup。stable alias / group relation 决定 canonical Page identity；renderer 不创建第二套 Page identity 或 URL。
 
-### 5.3 Content profile
+### 5.3 内容配置
 
 Page content model、renderer identity、content ownership 是三个正交概念。
 
@@ -144,7 +144,7 @@ Page content model、renderer identity、content ownership 是三个正交概念
 
 Unknown / malformed / unsupported content model、structured schema 或 renderer 必须 fail closed，不得 fallback 为 arbitrary Rich Text。
 
-### 5.4 Page content ownership
+### 5.4 页面内容所有权
 
 primary content ownership 至少区分：
 
@@ -155,7 +155,7 @@ primary content ownership 至少区分：
 
 禁止长期存在：Rich body 与 structured payload 同为 primary body；package default 与 operator content 同时拥有当前正文；external / engineering page 同时伪装成 operator-owned arbitrary body；renderer 通过 alias / URL / DOM / body heuristic 猜测 Page type。
 
-### 5.5 Operator divergence protection
+### 5.5 运营编辑偏离保护
 
 versioned default 不得成为永久 overwrite authority：
 
@@ -167,13 +167,13 @@ versioned default 不得成为永久 overwrite authority：
 - adoption 必须 idempotent；
 - 新一轮 content upgrade 需要新的 Authority，不自动复用旧 fingerprint rule。
 
-## 6. Navigation
+## 6. 导航
 
-### 6.1 NavigationLocation
+### 6.1 导航位置（`NavigationLocation`）
 
 NavigationLocation 是稳定导航容器，不要求用 compile-time Enum 穷举全部未来位置。JilinJobs 当前 stable locations 至少包括 `MAIN`、`HOME_SHORTCUT`、`HOME_QUICK`。
 
-### 6.2 NavigationItem
+### 6.2 导航项（`NavigationItem`）
 
 NavigationItem 属于一个 NavigationLocation，可有 parent / child，并持有 target、open mode、ordering、enabled state 与 optional icon。
 
@@ -192,20 +192,20 @@ Navigation target 至少表达 HOME、COLUMN、PAGE、LINK、PLACEHOLDER 等 acc
 
 CmsList 是可排序、可启停的 content placement container；不拥有 Public layout mode。
 
-### 7.1 CmsList identity / image policy
+### 7.1 `CmsList` 身份 / 图片策略
 
 CmsList 具有 stable `code`。受控 `groupCode` 可以作为 structure metadata，但不是独立 business object；ordinary Runtime List 默认进入 ordinary group，stable group 由 Site Definition 管理。
 
 image data policy：`NONE`、`OPTIONAL`、`REQUIRED`。它只定义 data validity，不定义尺寸、card direction、caption 或页面 layout。
 
-### 7.2 CmsListItem source identity
+### 7.2 `CmsListItem` 来源身份
 
 - `LINK`：item 自己拥有 title、optional URL、optional image 等内容；
 - `ARTICLE`：引用 existing Article 进行 placement，不复制 Article body。
 
 `sourceType` 与 ARTICLE relation 是 source identity；ordinary edit 不得 LINK ↔ ARTICLE，也不得把 ARTICLE placement 改成另一篇 Article。需要改变来源时删除旧 placement 并新建。
 
-### 7.3 ARTICLE placement
+### 7.3 `ARTICLE` 投放
 
 ARTICLE placement 不改变 Article primary Column、publish lifecycle 或 detail breadcrumb。
 
@@ -217,7 +217,7 @@ Public effective condition：
 - Article withdrawn 后 placement 退出，republish 后可恢复；
 - placement 可以持有 list-specific presentation image override，但不能修改 Article body / cover。
 
-### 7.4 Effective image
+### 7.4 生效图片
 
 LINK 使用自身 image。
 
@@ -238,7 +238,7 @@ AdvertisementSlot 是 stable presentation container；Advertisement 是 ordinary
 - Slot stable identity 与 Advertisement Runtime lifecycle 分离；
 - target 指向 external URL 不会把 Advertisement 改造成 Article / CmsListItem。
 
-## 9. SiteProperty
+## 9. 站点属性（`SiteProperty`）
 
 SiteProperty 表示少量需要 Runtime 运营维护的 site-level information 或 low-risk behavior parameter。
 
@@ -252,7 +252,7 @@ SiteProperty 表示少量需要 Runtime 运营维护的 site-level information �
 
 使用 SiteProperty 承载低风险 presentation behavior 不等于建立 generic system settings center。
 
-## 10. StaticResource
+## 10. 静态资源（`StaticResource`）
 
 StaticResource 表示 CMS managed resource 及 metadata。
 
@@ -266,14 +266,14 @@ Domain rules：
 
 path、extension、media、active-content 等 cross-capability safety outcome 由 Product Requirement 持有，具体 parser / storage / endpoint 属于 Technical。
 
-## 11. Cross-object placement / relation invariants
+## 11. 跨对象投放 / 关系不变量
 
 - placement 不能篡改 source object 的 primary ownership / lifecycle；
 - presentation policy 不能反向创建新的 content identity；
 - stable structure container 与 ordinary member content 生命周期必须可区分；
 - Public projection 只消费符合 object lifecycle、relation validity 与 scope 的当前 data。
 
-## 12. External-link ownership model
+## 12. 外部链接所有权模型
 
 不建立全局 Link domain object；external URL 由真实业务载体拥有：
 
@@ -289,11 +289,11 @@ path、extension、media、active-content 等 cross-capability safety outcome �
 
 Domain 必须区分：
 
-### 13.1 Stable structure / versioned definition
+### 13.1 稳定结构 / 版本化定义
 
 用于保证 public structure、stable identity、fixed container、accepted stable content / asset 与必要 default 可以从受控 versioned source 恢复。stable object 可以按 stable identity reconcile，但不能因此把全部 operational content 升级为 immutable system data。
 
-### 13.2 One-time initial default → Runtime
+### 13.2 一次性初始默认 → 运行时
 
 某些 ordinary Runtime data 可以在 Fresh Site / explicit adoption 时由 one-time bootstrap 建立；成功后即进入 ordinary operator-managed lifecycle：
 
@@ -306,11 +306,11 @@ one-time initial default
 
 因此 ordinary Article / ListItem / Advertisement 不因 bootstrap origin 自动获得 permanent stable membership / delete protection。
 
-## 14. Historical Content Migration domain
+## 14. 历史内容迁移领域
 
 Historical Migration 把需要 provenance、legacy identity、fingerprint 与 auditable import lifecycle 的 accepted legacy data 转化为当前 Runtime；它不是 Generic schema migration，也不是 Site Definition / ordinary bootstrap。
 
-### 14.1 Stable migration identity / fingerprint
+### 14.1 稳定迁移身份 / 指纹
 
 Historical object 使用稳定 source identity（例如 `sourceSystem + legacyKey`），不以 Runtime numeric ID 作为 canonical identity。
 
@@ -325,17 +325,17 @@ invalid target / dependency / canonical bytes → INVALID / fail closed
 
 changed fingerprint 不默认 overwrite。
 
-### 14.2 Preflight / compatibility
+### 14.2 预检 / 兼容性
 
 产生 Runtime mutation 前应验证足够的 canonical shape、path / resource integrity、stable target identity、dependency 与 duplicate / conflict condition。known INVALID / CONFLICT 不得静默变成 partial success。
 
 只有 explicit、versioned、scope-bounded compatibility authority 才能允许 accepted historical transition 原位更新；compatibility 不能成为 ordinary Admin / API 绕过 source identity immutable rule 的后门，也不能推广为 Generic arbitrary overwrite policy。
 
-### 14.3 Offline stability
+### 14.3 离线稳定性
 
 stable verification / import 消费 Repository-owned canonical bytes 或其他 authorized frozen evidence，不依赖 Legacy Source 在线可用。Legacy Source access 只属于 explicit acquisition / retry / reactivation activity。
 
-### 14.4 Main accepted scope
+### 14.4 主站已接受范围
 
 Main 当前 accepted Historical Migration scope 为 Article-only：
 
@@ -346,13 +346,13 @@ Main 当前 accepted Historical Migration scope 为 Article-only：
 
 Main Page、stable Site Definition 与 ordinary bootstrap ListItem 不属于 Main historical import。Historical Migration 是否在某一时刻允许重新执行，由当前治理 / execution Authority 决定，不属于本文的长期 Domain fact。
 
-### 14.5 Party accepted scope
+### 14.5 党建站已接受范围
 
 Party Historical Migration 可以包含 Article 与已经 accepted 的 historical ListItem / carousel semantics，因为它具有独立 source evidence / compatibility history。
 
 Party-specific alias、dataset cardinality、accepted fingerprint / transition 属于 concrete migration source / evidence，不进入 Generic Domain rule；Main Article-only scope 不能反向覆盖 Party，Party historical ListItem 也不能反向推广为 Main rule。
 
-## 15. Rich Text domain invariants
+## 15. 富文本领域不变量
 
 Rich Text capability 服务 INTERNAL Article、RICH_TEXT Page 与 schema 明确允许的 item-level Rich Text。
 
@@ -368,7 +368,7 @@ Rich Text capability 服务 INTERNAL Article、RICH_TEXT Page 与 schema 明确�
 
 Article managed image、attachment 与 body image 是不同 relation；从 body 删除引用不等于立即 physical delete Resource。
 
-## 16. Domain failure invariants
+## 16. 领域失败不变量
 
 以下业务条件默认 fail closed，不允许 silent fallback：
 
@@ -385,7 +385,7 @@ Article managed image、attachment 与 body image 是不同 relation；从 body 
 
 具体 user message、HTTP status、CLI exit / report format属于 Specification / Technical。
 
-## 17. Domain acceptance invariants
+## 17. 领域验收不变量
 
 未来 change 不得在没有新的 Requirement Authority 时破坏：
 

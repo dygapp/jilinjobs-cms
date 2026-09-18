@@ -18,7 +18,7 @@ Consumer 项目事实、产品 Requirement、Domain、Architecture、代码、�
 
 该 SHA 只表示最近完成显式 compare / disposition 的 upstream frontier，不表示 upstream Project state、Research / Eval、Guide instance 或全部 capability 已被本 Consumer 采用。
 
-## 2. Method Selection Instance
+## 2. Method 选择实例
 
 通用 Method selection contract 由 `docs/architecture/method.md` 定义；本文件只保存当前 Repository 的 `work kind → Method id / locator` 映射。
 
@@ -81,7 +81,7 @@ ordinary Agent 使用 Agent Skills 原生 discovery，根据 `SKILL.md` 的 `nam
 
 `external-operation`、`human-review` 与 `review-change` 作为独立 Procedure 保留在 Consumer-local Skill corpus；其存在来自本 Consumer 已确认的 Trigger → Procedure → Output → Exit / Escalation 责任，不是为了与 upstream inventory 数量对齐。`human-review` 服务普通 Consumer 软件项目的内容评审与权威回写，`review-change` 服务独立 Repository 变更复核，二者互不替代。
 
-## 5. Architecture Instance
+## 5. Architecture 实例
 
 当前工程 capability 类型与组合边界由以下 Consumer-local canonical owners 持有：
 
@@ -96,7 +96,7 @@ ordinary Agent 使用 Agent Skills 原生 discovery，根据 `SKILL.md` 的 `nam
 
 产品 / Domain / CMS Architecture 不由本 Profile 定义。当前产品与领域语义仍由现有 `docs/requirements/**` owners 持有；跨 Feature 的 CMS / Site Definition / Historical Migration / Runtime / Public Renderer 等长期结构边界仍由 `docs/architecture/cms-architecture.md` 持有。本次 capability adoption 不改变任何 Product Requirement，也不预判后续 G2 的 Requirement IA。
 
-## 6. Model Collaboration Instance
+## 6. Model Collaboration 实例
 
 当前 Consumer **不采用、不启用** Model Collaboration runtime：
 
@@ -107,7 +107,7 @@ ordinary Agent 使用 Agent Skills 原生 discovery，根据 `SKILL.md` 的 `nam
 
 未来如有明确采用目标，必须建立独立 Consumer-local semantic acceptance / runtime validation lifecycle；不能因为 upstream capability 存在、Guide 有示例或工具支持就推断 enabled。
 
-## 7. Project Knowledge Entry
+## 7. 项目知识入口
 
 当前 Project Knowledge 的稳定入口：
 
@@ -120,7 +120,7 @@ ordinary Agent 使用 Agent Skills 原生 discovery，根据 `SKILL.md` 的 `nam
 
 Project Knowledge / Capability 边界由 `docs/architecture/project-knowledge.md` 持有。Roadmap 只拥有 future directions / durable governance milestones；Evolution 只拥有稳定历史摘要；两者都不取得产品 Requirement / Architecture 或 Current Execute Gate 的第二所有权。
 
-## 8. Ordinary Runtime
+## 8. 普通运行时
 
 治理收口后的普通运行路径：
 
@@ -144,7 +144,7 @@ upstream access = 0
 
 本地 selector、locator、metadata 或 owner 异常只允许 Consumer-local fail closed；不得自动访问 `agentic-dev` 在线补流程。
 
-## 9. Latest Explicit Upstream Disposition
+## 9. 最近一次显式上游处置
 
 Issue #155 G0 对 `ed1a4446f0430890e7ad39673ac9c2e341e6a829 → ce28ec748f28a58b2bb65bf75db353f5f50f772d` 的 direct semantic delta 作出以下 Consumer-local disposition：
 

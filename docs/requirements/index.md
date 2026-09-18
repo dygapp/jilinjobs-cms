@@ -71,6 +71,6 @@ Repository Authority
 
 如果 Index 不能唯一定位 owner、多个 Current owner 对同一长期事实给出不兼容结论，或真实事实不属于任何现有 owner，必须 fail closed，返回 `method:requirement-baseline-establishment` / Human Authority，而不是在下游文档中静默选择。
 
-## 5. Analysis boundary
+## 5. 分析边界
 
 Requirement extraction、冲突矩阵、capability review batch 与临时 comparison 默认不进入本 Index。只有 durable owner / relation 改变时更新本文件；过程 Evidence 留在当前 controlling Issue / Review 或显式 non-Authority analysis artifact。

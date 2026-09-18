@@ -140,7 +140,7 @@ Main 继续以吉林省高等学校毕业生就业信息网已经确认的信息
 - Party 继续复用通用 CMS Domain，不因红色主题新增第二套 Column / Article / Page / List model；
 - Main / Party 的公共 Navigation / Footer 保持相同业务信息，同时允许不同主题与页面设计。
 
-### 5.5 Historical content onboarding
+### 5.5 历史内容接入
 
 产品允许在具有明确 Authority、provenance 与可审计边界时，把接受的 Legacy content 转换为当前 Runtime content；该能力属于离线、受控的数据进入过程，不是 Public Runtime dependency。
 
