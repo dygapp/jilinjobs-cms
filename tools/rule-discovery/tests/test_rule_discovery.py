@@ -39,7 +39,6 @@ class RuleDiscoveryTests(unittest.TestCase):
             ids,
             {
                 "rule:execution-continuity",
-                "rule:human-facing-content-integrity",
                 "rule:implementation-discipline",
             },
         )
@@ -152,6 +151,40 @@ scope:
             "docs/rules/technology/vue/component-authoring.md",
         )
 
+    def test_initial_communication_rule_is_task_level_candidate(self):
+        payload = self.discover({
+            "phases": None,
+            "activities": ["communication"],
+            "technologies": [],
+            "artifacts": ["human-facing-content"],
+            "risks": [],
+        })
+        ids = {item["id"] for item in payload["candidates"]}
+        self.assertIn("rule:human-facing-content-integrity", ids)
+
+    def test_human_escalation_rule_is_task_level_candidate(self):
+        payload = self.discover({
+            "phases": None,
+            "activities": ["human-escalation"],
+            "technologies": [],
+            "artifacts": [],
+            "risks": ["human-intervention"],
+        })
+        ids = {item["id"] for item in payload["candidates"]}
+        self.assertEqual(ids, {"rule:human-intervention-necessity"})
+
+    def test_authority_lifecycle_review_rule_is_task_level_candidate(self):
+        payload = self.discover({
+            "phases": None,
+            "activities": ["review"],
+            "technologies": [],
+            "artifacts": ["authority"],
+            "risks": ["authority-lifecycle"],
+        })
+        ids = {item["id"] for item in payload["candidates"]}
+        self.assertIn("rule:authoritative-artifact-lifecycle-review", ids)
+        self.assertIn("rule:human-facing-content-integrity", ids)
+
     def test_safe_external_write_is_task_level_candidate(self):
         payload = self.discover({
             "phases": ["execute"],
@@ -238,6 +271,31 @@ scope:
                 "risks": [],
             })
 
+    def test_symlink_directory_in_rule_root_fails_closed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            rules = root / "docs/rules"
+            target = root / "outside"
+            rules.mkdir(parents=True)
+            target.mkdir()
+            (target / "example.md").write_text("""---
+id: rule:outside
+type: rule
+status: active
+scope:
+  phases: [execute]
+  activities: []
+  technologies: []
+  artifacts: []
+  risks: []
+---
+
+# outside
+""", encoding="utf-8")
+            (rules / "linked").symlink_to(target, target_is_directory=True)
+            with self.assertRaises(rd.ContractError):
+                rd.scan_rules(repo_root=root, rule_roots=[Path("docs/rules")])
+
     def test_duplicate_rule_id_fails_closed(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -268,7 +326,7 @@ scope:
             rule_roots=[Path("docs/rules")],
             skills_root=Path("skills"),
         )
-        self.assertEqual(payload, {"status": "ok", "rules": 17, "skills": 11})
+        self.assertEqual(payload, {"status": "ok", "rules": 19, "skills": 11})
 
 
 if __name__ == "__main__":
