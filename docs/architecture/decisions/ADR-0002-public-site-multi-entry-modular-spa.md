@@ -114,7 +114,7 @@ Gateway：
 
 - 第二套 `package.json` / Vite / TypeScript 配置；
 - 第二次 npm install、build artifact 和 CI job；
-- 独立 Browser Verification 入口与更多 Gateway/Review 配置；
+- 独立 浏览器验证 入口与更多 Gateway/Review 配置；
 - API types / transport / SEO / resource helpers 的复制或额外 shared package；
 - 当前同团队、同 Backend、同部署场景下不必要的集成成本。
 
@@ -146,7 +146,7 @@ Gateway：
 代价与约束：
 
 - 同一次 Public Site build 仍会覆盖两个 Site；
-- Vite / Nginx / Browser Verification 必须显式验证两个 Entry；
+- Vite / Nginx / 浏览器验证 必须显式验证两个 Entry；
 - Shared 边界需要克制，防止主站主题样式反向污染党建；
 - 当未来出现真正独立生命周期时，需要新的 ADR 重新评估工程拆分。
 

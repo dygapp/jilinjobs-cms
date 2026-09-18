@@ -28,24 +28,24 @@ Consumer Repository facts
 → execute / verify / return
 ```
 
-ordinary runtime 默认：
+普通运行时 默认：
 
 ```text
 upstream access = 0
 ```
 
-本地 owner、Method selector、Skill entry、Rule Discovery 或 metadata 缺失 / 冲突时先 Consumer-local fail closed，不在线读取 upstream 补流程或规则。
+本地 owner、Method selector、Skill entry、Rule Discovery 或 metadata 缺失 / 冲突时先 Consumer-local 失败关闭，不在线读取 upstream 补流程或规则。
 
 ## 显式 upstream re-entry
 
-只有当前 Repository / Human Authority 明确启动 adoption、upgrade、research / comparison、Consumer validation，或显式授权的 Foundation governance work，才允许只读进入固定 upstream ref。允许读取不等于自动采用；所有接受结果必须重新落到 Consumer-local canonical owner。
+只有当前 Repository / 人工权威 明确启动 adoption、upgrade、research / comparison、Consumer validation，或显式授权的 Foundation governance work，才允许只读进入固定 upstream ref。允许读取不等于自动采用；所有接受结果必须重新落到 Consumer-local 规范语义所有者。
 
-## 本地 canonical owner
+## 本地 规范语义所有者
 
 Consumer 可以采用不同路径、工具、Method adaptation 与 Rule specialization，只要：
 
 - 项目事实仍由本地 Authority 持有；
-- capability semantic owner 单一且可发现；
+- capability 语义所有者 单一且可发现；
 - Rule metadata 与正文同源；
 - 不建立需要与 Rule 正文人工同步的中心路由表；
 - upstream provenance 与 local Authority 不混为一谈。

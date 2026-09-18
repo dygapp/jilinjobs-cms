@@ -102,7 +102,7 @@ Public projection负责把 managed resource identity转换为公开可消费的 
 - Backend → DB/API → Public browser chain；
 - Public independence from editor chrome。
 
-有真实 authoring UX / presentation 变化时，再追加 bounded Human Review。
+有真实 authoring UX / presentation 变化时，再追加 bounded 人工评审。
 
 ## 9. 停止条件
 

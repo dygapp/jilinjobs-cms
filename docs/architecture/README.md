@@ -4,7 +4,7 @@
 
 ## 产品架构
 
-- `cms-architecture.md` — `jilinjobs-cms` 当前跨 Feature 的 CMS / Site Definition / Historical Migration / Runtime / Public Renderer、Backend application、Page Content、configuration/resource ownership 与验证组合边界。
+- `cms-architecture.md` — `jilinjobs-cms` 当前跨 Feature 的 CMS / Site Definition / 历史迁移 / Runtime / Public Renderer、Backend application、Page Content、configuration/resource ownership 与验证组合边界。
 
 普通 Feature 只有在需要恢复多个 Feature 共同依赖的长期边界时才读取该文件；Feature-local、低风险、可逆 HOW 留给 Technical Planning。
 
@@ -15,7 +15,7 @@
 - `engineering-capability.md`
 - `consumer.md`
 - `method.md`
-- `requirement-authority.md` — Requirement Human Navigation / Authority Index / Fact Authority / Analysis Workspace 的 semantic ownership 与 lifecycle；
+- `requirement-authority.md` — Requirement Human Navigation / Authority Index / Fact Authority / Analysis Workspace 的 语义所有权 与 lifecycle；
 - `human-review.md` — Consumer 软件项目人工评审材料、反馈回写、派生视图与独立变更复核之间的长期边界；
 - `project-knowledge.md`
 - `rule.md`

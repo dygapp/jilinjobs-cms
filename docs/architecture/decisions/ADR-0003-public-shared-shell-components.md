@@ -100,7 +100,7 @@ Shared Navigation / Footer 的**结构、排版、交互、响应式行为必须
 
 - 主站公共区域修改可自动同步到党员之家；
 - 消除 Navigation / Footer 双实现漂移；
-- Browser Verification 可以直接验证两个 Entry 渲染同一 Shared Component；
+- 浏览器验证 可以直接验证两个 Entry 渲染同一 Shared Component；
 - Site Boundary 更聚焦于真实的品牌 Banner、页面 Frame 和内容主题差异。
 
 代价：

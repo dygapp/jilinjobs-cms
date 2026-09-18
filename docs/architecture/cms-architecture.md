@@ -29,7 +29,7 @@ updated_at: 2026-09-15
 
 1. Generic CMS capability 不硬编码 JilinJobs 具体站点内容；
 2. JilinJobs 稳定站点定义能够版本化恢复，但 ordinary operator content 不被持续覆盖；
-3. Historical Migration 保持 provenance / fingerprint / idempotency，而不成为 Site Definition；
+3. 历史迁移 保持 provenance / fingerprint / idempotency，而不成为 Site Definition；
 4. Admin、Public 与 Migration 使用同一 CMS Domain，但不互相吞并 application responsibility；
 5. Public Renderer 可以替换，不反向成为 CMS Product/Data Authority；
 6. Main 与 Party 保持真实的 Site/Theme/route boundary，同时只共享已经被产品事实证明稳定一致的能力；
@@ -119,7 +119,7 @@ stable site assets
 
 ### 4.3 历史内容迁移
 
-Historical Migration owner 位于 `data-migrations/**` 及对应 migration application capability。
+历史迁移 owner 位于 `data-migrations/**` 及对应 migration application capability。
 
 职责：
 
@@ -143,8 +143,8 @@ Runtime 不是 Repository baseline 的镜像：
 
 - operator divergence 必须受保护；
 - one-time bootstrap rows 初始化后由 operator lifecycle 持有；
-- stable structure reconcile 不得顺带 resurrect ordinary Runtime rows；
-- Historical Migration 只能按 canonical identity / fingerprint contract受控写入。
+- stable structure reconcile 不得顺带 resurrect 普通运行时 rows；
+- 历史迁移 只能按 canonical identity / fingerprint contract受控写入。
 
 ### 4.5 可替换的公开站点渲染器
 
@@ -154,7 +154,7 @@ Public Renderer 只消费稳定 Public contracts 与 Runtime-visible resources�
 
 - CMS business object definition；
 - Site Definition source；
-- Historical Migration canonical data；
+- 历史迁移 canonical data；
 - Admin workflow；
 - migration identity / fingerprint。
 
@@ -184,7 +184,7 @@ Core 不依赖任何具体 application。
 - Runtime static exposure；
 - server-only composition。
 
-Server 不拥有 Historical Migration command lifecycle。
+Server 不拥有 历史迁移 command lifecycle。
 
 ### 5.3 内容迁移应用
 
@@ -333,7 +333,7 @@ JilinJobs 版本化稳定产品定义与 stable assets。
 
 ### CI / 部署变量
 
-Actions、Review Environment、proxy/domain 与 runner/runtime-specific参数。
+Actions、评审环境、proxy/domain 与 runner/runtime-specific参数。
 
 “出现 literal”本身不构成配置化理由。只有变化来源 / owner 与当前持有位置不一致时才需要迁移。
 
@@ -395,12 +395,12 @@ Test fixture只建立测试场景数据，不重建第二份站点 baseline。
 未来 Feature / refactor 不得在没有新的 Requirement / Architecture Authority 时破坏：
 
 1. Generic Core 与 JilinJobs-specific definition 分离；
-2. Site Definition、ordinary Runtime、Historical Migration lifecycle 分离；
+2. Site Definition、普通运行时、历史迁移 lifecycle 分离；
 3. CMS Server 与 Content Migration application都只依赖 shared Core，不互相依赖；
 4. Public Renderer可以替换但不拥有 CMS Domain / Site Definition / migration data；
 5. Main / Party Site boundary不因代码去重消失，也不因主题不同机械拆成独立 Repository；
 6. shared public capability必须来自真实稳定共同责任，不从偶然代码相似推导；
-7. Page renderer dispatch显式、fail-closed，不依赖 alias/path heuristic；
+7. Page renderer dispatch显式、失败关闭，不依赖 alias/path heuristic；
 8. operator content不被 ordinary reconcile覆盖；
 9. Generic migration capability不吸收具体 site dataset / compatibility facts；
 10. Product / Domain Authority不缓存 active implementation inventory。

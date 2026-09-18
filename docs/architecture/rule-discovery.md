@@ -21,7 +21,7 @@ Rule Discovery 只解决一个问题：从当前可观察的任务 / Repository 
 → 语义适用性确认
 ```
 
-Rule 的类型、粒度与 Consumer 本地特化由 `docs/architecture/rule.md` 持有；本文件只拥有 discovery、渐进披露与 fail-closed contract。
+Rule 的类型、粒度与 Consumer 本地特化由 `docs/architecture/rule.md` 持有；本文件只拥有 discovery、渐进披露与 失败关闭 contract。
 
 ## 任务信号
 
@@ -45,7 +45,7 @@ Rule 的类型、粒度与 Consumer 本地特化由 `docs/architecture/rule.md` 
 
 每个非空数组最多 6 个 lowercase kebab-case token。不得用候选 Rule 名、同义词堆叠、未命中 metadata 或预期答案反向构造 signals。
 
-Method phase token 只能来自当前选定 Method 的 canonical owner；不能安全确定时 `phases = null`。
+Method phase token 只能来自当前选定 Method 的 规范语义所有者；不能安全确定时 `phases = null`。
 
 ## 确定性匹配
 
@@ -67,7 +67,7 @@ Method phase token 只能来自当前选定 Method 的 canonical owner；不能�
 
 示例中的 `scanned` 不是本仓库当前 Rule 数量；实际 inventory 由 Rule corpus 与 Tool lint 机械得到，不由 Architecture 缓存。
 
-ordinary runtime 只能从 `candidates[].path` 获得 Rule locator。不得通过目录树、`find`、`rg --files`、IDE index 或 Human README 枚举未命中 Rule。candidate 只是“值得读取”，最终适用性仍由正文语义确认。
+普通运行时 只能从 `candidates[].path` 获得 Rule locator。不得通过目录树、`find`、`rg --files`、IDE index 或 Human README 枚举未命中 Rule。candidate 只是“值得读取”，最终适用性仍由正文语义确认。
 
 ## Consumer 本地适配
 
@@ -75,7 +75,7 @@ ordinary runtime 只能从 `candidates[].path` 获得 Rule locator。不得通�
 
 ## 失败关闭
 
-metadata / schema / duplicate id / task signals / scan 完整性异常必须 fail closed；不得跳过坏 Rule 后继续，也不得在 zero-candidate 后读取未命中 Rule 做 calibration。
+metadata / schema / duplicate id / task signals / scan 完整性异常必须 失败关闭；不得跳过坏 Rule 后继续，也不得在 zero-candidate 后读取未命中 Rule 做 calibration。
 
 ## 责任检查点
 
@@ -99,8 +99,8 @@ direct responsibility 切换，或 phase / activity / technology / artifact / ri
 - checkout 目标 SHA 并验证 actual SHA 与 requested SHA 一致；
 - 调用该 SHA 自身的 Consumer-local Rule Discovery Tool；
 - 输出并保留 requested / actual SHA、signals 与 locator-only result；
-- signals、SHA 或 discovery contract 无效时 fail closed。
+- signals、SHA 或 discovery contract 无效时 失败关闭。
 
 `pull_request` / `push(main)` 的 CI lint、deterministic tests 与固定 smoke 只验证 Tool / corpus，不替代当前 Agent 的 task-level discovery。
 
-Skill discovery 与 Rule Discovery 分离；ordinary runtime discovery 失败只在 Consumer-local state 内关闭，不自动访问 upstream。
+Skill discovery 与 Rule Discovery 分离；普通运行时 discovery 失败只在 Consumer-local state 内关闭，不自动访问 upstream。

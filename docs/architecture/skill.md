@@ -25,13 +25,13 @@ Skill 不拥有跨多个 Method stage 的项目生命周期，也不因自身存
 
 Method 拥有复杂工作的长期生命周期；Skill 拥有其中某个明确责任下可重复执行的 Procedure。Method stage 不要求一一对应 Skill，一个 Skill 也可以在多个 Method 中复用。
 
-Rule 与 Skill 正交。容易因 Consumer / Repository Authority 改变的 policy、格式、审批、授权和完成声明要求优先由 Rule / Repository Authority 持有，不写死进 Skill。
+Rule 与 Skill 正交。容易因 Consumer / 仓库权威 改变的 policy、格式、审批、授权和完成声明要求优先由 Rule / 仓库权威 持有，不写死进 Skill。
 
 ## 清单所有权
 
 Architecture 不持有当前 Consumer 的完整 Skill inventory 或数量。实际 `skills/*/SKILL.md` corpus 是 Skill 资源；当前 Skill root / discovery entry 由 Project Capability Profile 声明。
 
-新增 Skill 至少要证明独立 trigger、稳定 inputs、可重复 procedure、稳定 outputs、明确 exit / escalation、单一 semantic owner 与真实重复使用价值。
+新增 Skill 至少要证明独立 trigger、稳定 inputs、可重复 procedure、稳定 outputs、明确 exit / escalation、单一 语义所有者 与真实重复使用价值。
 
 ## Agent Skills 互操作
 
