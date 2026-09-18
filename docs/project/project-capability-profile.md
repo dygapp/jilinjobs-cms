@@ -94,7 +94,7 @@ ordinary Agent 使用 Agent Skills 原生 discovery，根据 `SKILL.md` 的 `nam
 - `docs/architecture/rule-discovery.md`
 - `docs/architecture/skill.md`
 
-产品 / Domain / CMS Architecture 不由本 Profile 定义。当前产品与领域语义仍由现有 `docs/requirements/**` owners 持有；跨 Feature 的 CMS / Site Definition / Historical Migration / Runtime / Public Renderer 等长期结构边界仍由 `docs/architecture/cms-architecture.md` 持有。本次 capability adoption 不改变任何 Product Requirement，也不预判后续 G2 的 Requirement IA。
+产品 / Domain / CMS Architecture 不由本 Profile 定义。当前产品与领域语义仍由现有 `docs/requirements/**` owners 持有；跨 Feature 的 CMS / Site Definition / Historical Migration / Runtime / Public Renderer 等长期结构边界仍由 `docs/architecture/cms-architecture.md` 持有。本次 capability adoption 不改变任何 Product Requirement，也不预判未来 Requirement IA。
 
 ## 6. Model Collaboration 实例
 
