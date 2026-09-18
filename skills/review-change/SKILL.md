@@ -11,14 +11,14 @@ metadata:
 
 ## 目的
 
-基于当前 Repository Authority 与最终变更状态进行独立复核，发现会阻止安全接受的语义、范围、授权、生命周期或证据问题。
+基于当前 仓库权威 与最终变更状态进行独立复核，发现会阻止安全接受的语义、范围、授权、生命周期或证据问题。
 
 人工评审与本 Skill 不是同一责任：人工评审用于理解、确认产品 / 需求 / 架构 / 技术内容；本 Skill 独立检查 Repository change 是否符合当前 Authority、范围、规则、证据与生命周期。二者互不替代。
 
 ## 输入
 
 - 当前目标基线与拟接受变更；
-- 当前 Repository Authority；
+- 当前 仓库权威；
 - 精确 diff / changed files；
 - 当前验证证据；
 - 当前 review responsibility 下已发现并确认适用的 Rules。
@@ -41,7 +41,7 @@ metadata:
 该模式只用于会实质改变或重组长期 Authority chain 的高影响变更，例如：
 
 - 大规模 Authority restructure；
-- canonical owner 的 fold / replace / retire / archive；
+- 规范语义所有者 的 fold / replace / retire / archive；
 - Requirement / Domain / Specification / Interface 的重大 convergence；
 - Product / Architecture 明确声明 replaceability 或发生 technology substitution review；
 - heterogeneous legacy / historical / current source reconstruction；
@@ -51,19 +51,19 @@ metadata:
 
 ### 核心挑战
 
-1. **Current owner transition**：canonical owner 或 lifecycle 改变后，Current locator、selector、verification consumer 与 durable current-state wording 是否都已迁移；historical / archive / provenance 引用是否明确保持非 Current 角色。
-2. **Single semantic owner + bounded projection**：重复表达是合法 locator / summary / observable projection，还是 competing Current truth；每层是否只拥有自己的 semantic responsibility。
-3. **Downstream observable projection**：Requirement / Domain 中已经接受、且需要用户、运营人员或维护者观察、失败或验收的语义，是否存在 Current Observable / Failure / Acceptance projection。
+1. **Current owner transition**：规范语义所有者 或 lifecycle 改变后，Current locator、selector、verification consumer 与 durable current-state wording 是否都已迁移；historical / archive / provenance 引用是否明确保持非 Current 角色。
+2. **Single 语义所有者 + bounded projection**：重复表达是合法 locator / summary / observable projection，还是 competing Current truth；每层是否只拥有自己的 semantic responsibility。
+3. **Downstream observable projection**：Requirement / Domain 中已经接受、且需要用户、运营人员或维护者观察、失败或验收的语义，是否存在 Current Observable / Failure / 验收 projection。
 4. **Replaceability seam**：只有明确命中 replaceability boundary 时，检查替代实现维持 compatibility 所需的 stable interface、failure semantics 与 responsibility split 是否可以脱离被替换源码恢复。
 5. **Conflict classification**：Authority、implementation 与 verification 冲突时，先基于 owner / currentness / provenance 判断是 implementation defect、stale Authority 还是 stale verification contract；不得因为“代码当前如此”自动覆盖 Product / Architecture truth。
-6. **Source role / promotion boundary**：用于当前 claim 的 source 是 canonical Authority、bounded canonical data、implementation evidence、historical evidence、Human decision 还是 unresolved material；Evidence 不得越权晋升成更高层 truth。
+6. **Source role / promotion boundary**：用于当前 claim 的 source 是 canonical Authority、bounded canonical data、implementation evidence、historical evidence、Human decision 还是 unresolved material；证据 不得越权晋升成更高层 truth。
 
 ### 有界可再生性挑战
 
 当变更涉及大规模 Authority restructuring、明确 replaceability、major Specification / Interface convergence、heterogeneous reconstruction 或 high-impact semantic migration 时，追加反事实挑战：
 
-- 不读取当前 implementation，Current Authority 是否足以恢复 Product behavior、stable contracts、failure semantics、responsibility boundaries 与 acceptance / verification obligations？
-- 若替换 implementation technology，stable compatibility seam 是否仍能从 Current Authority 确定？
+- 不读取当前 implementation，当前权威内容 是否足以恢复 Product behavior、stable contracts、failure semantics、responsibility boundaries 与 acceptance / verification obligations？
+- 若替换 implementation technology，stable compatibility seam 是否仍能从 当前权威内容 确定？
 
 该挑战可以限定在受影响 capability / seam，不要求每个高影响 Review 都重建完整系统。
 
@@ -73,7 +73,7 @@ metadata:
 
 以下情况升级：
 
-- Repository Authority 自身冲突；
+- 仓库权威 自身冲突；
 - 需要改变 Product Goal、Scope、User-visible Behavior、重大 Architecture 或 Security / Privacy boundary；
 - 需要人工承担的高影响、难逆或 Integration 决定。
 
