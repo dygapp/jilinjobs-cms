@@ -9,7 +9,7 @@
 - Project Roadmap：`project-roadmap.md`；
 - Project Evolution：`project-evolution.md`。
 
-它们分别拥有项目使命 / 范围摘要、当前 capability instance、持久路线与稳定历史摘要，不复制 Method、Architecture、Rule、Skill、Feature Specification、Technical、Current Work 或 GitHub native state 的规范正文。
+它们分别拥有项目使命 / 范围摘要、当前 capability instance、持久路线与稳定历史摘要，不复制 Method、Architecture、Rule、Skill、Feature Specification、Technical、当前工作 或 GitHub native state 的规范正文。
 
 ## 语义所有权
 

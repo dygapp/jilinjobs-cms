@@ -8,7 +8,7 @@ status: active
 
 ## 1. 角色
 
-本文件记录 `jilinjobs-cms` 当前 Repository 如何实例化已采用的工程 Capability contract。它属于 Consumer-local Project Knowledge，只拥有本仓库当前 capability instance、selector 与 locator，不复制 Method、Architecture、Skill、Rule 的规范正文，也不承担 Current Execution State。
+本文件记录 `jilinjobs-cms` 当前 Repository 如何实例化已采用的工程 Capability contract。它属于 Consumer-local Project Knowledge，只拥有本仓库当前 capability instance、selector 与 locator，不复制 Method、Architecture、Skill、Rule 的规范正文，也不承担 当前执行状态。
 
 Consumer 项目事实、产品 Requirement、Domain、Architecture、代码、验证与集成策略始终由本仓库 Authority 决定；`agentic-dev` 只提供经过显式采用 / 适配的 reusable capability provenance。
 
@@ -28,12 +28,12 @@ Consumer 项目事实、产品 Requirement、Domain、Architecture、代码、�
 - Requirement Baseline 已足够，但多个 Feature 被跨 Feature、长期、高成本难逆的 systemic architecture driver 阻塞 → `method:architecture-clarification` → `docs/methods/architecture-clarification.md`；
 - 普通 Feature / change，Requirement Baseline 与所需 Architecture Context 已足够 → `method:ai-development` → `docs/methods/ai-development.md`；
 - Existing Consumer 显式评估 / 升级 `agentic-dev` baseline → `method:consumer-upgrade` → `docs/methods/consumer-upgrade.md`；
-- 已进入 Human Review，针对同一批 findings 执行分类、修复、定向验证与重新复核 → `method:review-feedback-cycle` → `docs/methods/review-feedback-cycle.md`；
+- 已进入 人工评审，针对同一批 findings 执行分类、修复、定向验证与重新复核 → `method:review-feedback-cycle` → `docs/methods/review-feedback-cycle.md`；
 - Consumer-local Method / Engineering practice 需要跨多个真实样本验证后再决定 Promotion / Reject → `method:method-experiment` → `docs/methods/method-experiment.md`。
 
 Requirement Baseline Establishment、Architecture Clarification 与 AI Development 通过各自 Return Contract 自然衔接；当前不保留只负责串联它们的 compatibility super-method。
 
-如果当前 work kind 不属于任何映射，不得为了获得流程而强行套用最接近的 Method；按 Repository Authority 与 direct responsibility 工作，并在真实 Evidence 支持时再评估是否新增 Method。
+如果当前 工作类型 不属于任何映射，不得为了获得流程而强行套用最接近的 Method；按 仓库权威 与 直接责任 工作，并在真实 Evidence 支持时再评估是否新增 Method。
 
 本映射不复制 Method stage、Gate、completion condition 或内部 Skill / Rule routing。
 
@@ -46,7 +46,7 @@ Requirement Baseline Establishment、Architecture Clarification 与 AI Developme
 - Rule root：`docs/rules/`；
 - Tool：`tools/rule-discovery/rule_discovery.py`；
 - cloud transport：`.github/workflows/rule-discovery.yml`；
-- ordinary runtime 输出：少量 `{id, path}` candidate locator。
+- 普通运行时 输出：少量 `{id, path}` candidate locator。
 
 当前本地 checkout 调用：
 
@@ -67,7 +67,7 @@ python3 tools/rule-discovery/rule_discovery.py --repo-root . discover --signals-
 
 调用 Rule Discovery transport 本身是 preflight compute，不授予 Repository / Issue / PR / workflow / deployment 等后续副作用权限。
 
-五维 task signals、三态、bounded-token、matching、locator-only、semantic confirmation、responsibility transition checkpoint 与 fail-closed 由 `docs/architecture/rule-discovery.md` 持有；本 Profile 不复制这些规则，也不维护 Rule inventory、scope metadata 或 Rule → signal 映射。
+五维 task signals、三态、bounded-token、matching、locator-only、semantic confirmation、responsibility transition checkpoint 与 失败关闭 由 `docs/architecture/rule-discovery.md` 持有；本 Profile 不复制这些规则，也不维护 Rule inventory、scope metadata 或 Rule → signal 映射。
 
 当前 Consumer Tool 继续不采用 Rule-root Human `README.md` 保留例外；`docs/rules/**` 仍只放 discoverable Rule Markdown。该本地选择与 cloud transport 正交，不因为 upstream Architecture 支持 Human README 就自动改变。
 
@@ -83,7 +83,7 @@ ordinary Agent 使用 Agent Skills 原生 discovery，根据 `SKILL.md` 的 `nam
 
 ## 5. Architecture 实例
 
-当前工程 capability 类型与组合边界由以下 Consumer-local canonical owners 持有：
+当前工程 capability 类型与组合边界由以下 Consumer-local 规范语义所有者s 持有：
 
 - `docs/architecture/engineering-capability.md`
 - `docs/architecture/consumer.md`
@@ -116,7 +116,7 @@ ordinary Agent 使用 Agent Skills 原生 discovery，根据 `SKILL.md` 的 `nam
 - Project Capability Profile：本文件；
 - Project Roadmap：`docs/project/project-roadmap.md`；
 - Project Evolution：`docs/project/project-evolution.md`；
-- Current Execution Lifecycle：`docs/work/README.md` + `docs/work/current/README.md`。
+- 当前执行生命周期：`docs/work/README.md` + `docs/work/current/README.md`。
 
 Project Knowledge / Capability 边界由 `docs/architecture/project-knowledge.md` 持有。Roadmap 只拥有 future directions / durable governance milestones；Evolution 只拥有稳定历史摘要；两者都不取得产品 Requirement / Architecture 或 Current Execute Gate 的第二所有权。
 
@@ -142,17 +142,17 @@ AGENTS.md + README.md
 upstream access = 0
 ```
 
-本地 selector、locator、metadata 或 owner 异常只允许 Consumer-local fail closed；不得自动访问 `agentic-dev` 在线补流程。
+本地 selector、locator、metadata 或 owner 异常只允许 Consumer-local 失败关闭；不得自动访问 `agentic-dev` 在线补流程。
 
 ## 9. 最近一次显式上游处置
 
 Issue #155 G0 对 `ed1a4446f0430890e7ad39673ac9c2e341e6a829 → ce28ec748f28a58b2bb65bf75db353f5f50f772d` 的 direct semantic delta 作出以下 Consumer-local disposition：
 
-- **adopt** `method:requirement-baseline-establishment`，本地 canonical owner：`docs/methods/requirement-baseline-establishment.md`；
-- **adopt** `method:architecture-clarification`，本地 canonical owner：`docs/methods/architecture-clarification.md`；
-- **adapt** `architecture:requirement-authority` 到本 Consumer，保留 semantic ownership / lifecycle contract，但不在 G0 预先改造 Product Requirement IA；本地 owner：`docs/architecture/requirement-authority.md`；
+- **adopt** `method:requirement-baseline-establishment`，本地 规范语义所有者：`docs/methods/requirement-baseline-establishment.md`；
+- **adopt** `method:architecture-clarification`，本地 规范语义所有者：`docs/methods/architecture-clarification.md`；
+- **adapt** `architecture:requirement-authority` 到本 Consumer，保留 语义所有者ship / lifecycle contract，但不在 G0 预先改造 Product Requirement IA；本地 owner：`docs/architecture/requirement-authority.md`；
 - **adapt** `method:ai-development` 的 return-contract delta，使 systemic Requirement / Architecture gap 分别返回真实 owner / 新 Method；
 - **replace / retire** `method:software-project-clarification`，不再作为 Current Method 或 selector target；
-- Human Guide 未进入 Consumer runtime Authority。
+- 人工指南 未进入 Consumer runtime Authority。
 
-该记录只说明 reusable capability adoption，不把 `agentic-dev` Project Knowledge、Roadmap、Research 或 Consumer-independent Guide 内容变成 JilinJobs 事实。完成显式 upgrade 后 ordinary runtime 继续保持 `upstream access = 0`。
+该记录只说明 reusable capability adoption，不把 `agentic-dev` Project Knowledge、Roadmap、Research 或 Consumer-independent Guide 内容变成 JilinJobs 事实。完成显式 upgrade 后 普通运行时 继续保持 `upstream access = 0`。
