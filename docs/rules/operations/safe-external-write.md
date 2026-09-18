@@ -16,7 +16,7 @@ scope:
 
 ## 先确认授权
 
-工具能力、认证成功或 API 可写不等于已经获得操作授权。写入前必须从当前 `AGENTS.md`、Repository Authority 与 Human Authority 确认目标、范围和允许动作；涉及多个 Repository 时继续应用独立的跨仓库授权规则。
+工具能力、认证成功或 API 可写不等于已经获得操作授权。写入前必须从当前 `AGENTS.md`、仓库权威 与 人工权威 确认目标、范围和允许动作；涉及多个 Repository 时继续应用独立的跨仓库授权规则。
 
 合并、发布、部署、破坏性清理以及其他当前 Authority 明确保留给人工或高影响审批的操作，不得因为技术上可执行而自动执行。
 
@@ -38,4 +38,4 @@ scope:
 
 外部写 API 返回成功只证明操作被接受或执行，不证明目标状态已经成立。写操作后必须重新读取对应事实来源，并按声明需要核对 ref / Head SHA、changed files、PR / Issue 状态、Workflow status / conclusion、部署或其他目标对象的真实当前状态。
 
-验证失败时重新分析；不得把 mutation response、预期状态或旧缓存当作已经成立的 Current Evidence，也不得继续基于未验证预期执行后续写操作。
+验证失败时重新分析；不得把 mutation response、预期状态或旧缓存当作已经成立的 当前证据，也不得继续基于未验证预期执行后续写操作。

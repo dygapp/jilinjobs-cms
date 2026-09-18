@@ -56,8 +56,8 @@ Scope 表示稳定责任域，不表示单个文件或一次性任务编号。�
 - 最终历史是否仍有助于 Review 与 Fresh Context 恢复；
 - 是否混入无关生成物、调试内容或未授权变化。
 
-## 历史重写与 Evidence
+## 历史重写与 证据
 
-重写 Branch history 后必须重新读取最终 Head / tree / diff。与旧 Head 绑定的 Current Evidence 不机械继承；是否复用由当前 Evidence Claim 影响判断决定。
+重写 Branch history 后必须重新读取最终 Head / tree / diff。与旧 Head 绑定的 当前证据 不机械继承；是否复用由当前 证据 Claim 影响判断决定。
 
 本 Rule 不授予 merge / release / deploy 权限。Squash merge 的最终标题仍应保持中文 Conventional Commit 语义。

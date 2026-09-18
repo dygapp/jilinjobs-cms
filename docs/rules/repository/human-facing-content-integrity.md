@@ -32,27 +32,27 @@ Skill / Rule / Method 的精确 id 或调用名、文件名与路径、Branch、
 
 ## 正式概念身份不得被语言重写改变
 
-中文化、术语整理、格式治理或表达优化只能改变面向人的表达，不得改变 Product Goal、Scope、Business Boundary、User-visible Behavior、Architecture Decision、Specification、技术契约，也不得把职责或生命周期不同的 Method stage、Gate、artifact、Skill、Rule、Architecture、Repository Authority、Human Authority 等正式对象合并。
+中文化、术语整理、格式治理或表达优化只能改变面向人的表达，不得改变 Product Goal、Scope、Business Boundary、User-visible Behavior、Architecture Decision、Specification、技术契约，也不得把职责或生命周期不同的 Method stage、Gate、artifact、Skill、Rule、Architecture、仓库权威、人工权威 等正式对象合并。
 
 正式概念拥有英文 identity，不等于普通中文叙述默认保留英文名称。当前句子不需要精确识别正式 identity 时，优先使用自然中文或当前稳定中文表达，例如“稳定基线”“当前方法”“规则发现已完成”“人工评审”；只有确需消歧、引用精确 id / 路径或跨文档稳定身份时才保留原文。
 
 同一 Current canonical concept 已形成稳定中文表达时，后续面向人内容应沿用，不自行制造同义中文，也不恢复已经退出 Current model 的历史别名。业务术语仍由真实 Requirement / Domain owner 持有，本 Rule 不建立中央中英文术语表。
 
-## Current Authority 与 Front Matter
+## 当前权威内容 与 Front Matter
 
-新增或实质重写长期维护的 canonical Authority 时，应遵循该资源类型已经采用的结构化 identity / status 约定；不要为了格式统一给历史 Evidence 批量补 metadata，也不要通过 Front Matter 建立第二份 Current State truth。
+新增或实质重写长期维护的 canonical Authority 时，应遵循该资源类型已经采用的结构化 identity / status 约定；不要为了格式统一给历史 证据 批量补 metadata，也不要通过 Front Matter 建立第二份 当前状态 truth。
 
-修改已有 Current Authority 时同时检查：
+修改已有 当前权威内容 时同时检查：
 
-- semantic owner 是否仍正确；
+- 语义所有者 是否仍正确；
 - 是否残留被后继 Authority 取代的旧语义；
 - 是否缓存了不属于该文件职责的 Current Gate / runtime state；
 - 本地 locator 是否仍有效；
 - 中文主述、结构标签与机器标识是否仍满足本 Rule。
 
-## Historical Evidence 保真
+## Historical 证据 保真
 
-`SUPERSEDED / HISTORICAL_EVIDENCE` 以证据保真优先，不因语言、格式或 metadata 风格统一而破坏性改写历史正文。它们必须退出 ordinary Fresh Context Current Authority；若未来重新晋升为 Current Authority，先完成 semantic reconciliation，再满足当前文档规范。
+`SUPERSEDED / HISTORICAL_EVIDENCE` 以证据保真优先，不因语言、格式或 metadata 风格统一而破坏性改写历史正文。它们必须退出 ordinary Fresh Context 当前权威内容；若未来重新晋升为 当前权威内容，先完成 semantic reconciliation，再满足当前文档规范。
 
 历史内容的物理归档必须建立在明确 lifecycle 判定上，不按年龄、编号或“看起来旧”机械移动。
 

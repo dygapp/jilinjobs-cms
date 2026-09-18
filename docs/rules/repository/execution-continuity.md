@@ -24,7 +24,7 @@ scope:
 - 工作仍在已授权 Scope；
 - 剩余选择属于低影响、可逆的常规工程判断；
 - 所需权限和输入存在；
-- 当前 Method / Acceptance 仍要求继续；
+- 当前 Method / 验收 仍要求继续；
 
 就应连续分析、实施、验证、修复和收敛，而不是因为一个内部步骤完成就请求人工发送“继续”。
 
@@ -32,7 +32,7 @@ scope:
 
 完整收口或人工决策默认只在以下情况发生：
 
-1. 当前授权工作达到 Method / Review Batch 的自然完成或 Human Review / Integration Gate；
+1. 当前授权工作达到 Method / Review Batch 的自然完成或 人工评审 / Integration Gate；
 2. 需要改变 Product Goal、Scope、User-visible Behavior、Business Boundary、重大 Architecture、Security / Privacy 等高影响事实；
 3. 缺失必须由人工提供的权限、凭据、外部事实或不可替代输入；
 4. 出现超出当前 Scope、难逆或共享状态高影响操作；
@@ -44,12 +44,12 @@ scope:
 
 Fresh Context 用于控制知识边界，不等于缩短执行链。同一 Execution Unit / Review Batch / 已授权治理工作不因内部 Slice 完成机械切换 Context。
 
-只有确有未完成状态需要跨 Context / Agent / 时间传递，且单靠 Repository Authority / GitHub native state 无法以同等可靠性恢复时，才形成最小临时 Handoff。Handoff 被消费或正式 owner 已接管后立即失效，不升级为第二份 Current State。
+只有确有未完成状态需要跨 Context / Agent / 时间传递，且单靠 仓库权威 / GitHub native state 无法以同等可靠性恢复时，才形成最小临时 Handoff。Handoff 被消费或正式 owner 已接管后立即失效，不升级为第二份 当前状态。
 
 ## 沟通负担
 
-长任务可以提供必要的简短进度更新，但不把文件读取、每个 Commit、每次测试或每个内部 Slice重述为完整阶段报告。最终汇报聚焦结果、Acceptance / Evidence、剩余风险、人工 Gate 和下一主要动作。
+长任务可以提供必要的简短进度更新，但不把文件读取、每个 Commit、每次测试或每个内部 Slice重述为完整阶段报告。最终汇报聚焦结果、验收 / 证据、剩余风险、人工 Gate 和下一主要动作。
 
 ## 不覆盖的边界
 
-连续执行不降低验证要求，不扩大 Scope，也不授予 merge / release / deploy 权限。当前 Repository / Human Authority、适用 Method、Rules 与 Acceptance 始终优先。
+连续执行不降低验证要求，不扩大 Scope，也不授予 merge / release / deploy 权限。当前 Repository / 人工权威、适用 Method、Rules 与 验收 始终优先。
