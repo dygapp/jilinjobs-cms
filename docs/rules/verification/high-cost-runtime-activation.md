@@ -21,7 +21,7 @@ scope:
 - Workflow / Runtime configuration / migration activation 变化先验证 trigger、scope、syntax 与受影响 Runtime，只在 Evidence Claim 需要时升级 Browser / Human Review；
 - 产品实现仍必须满足当前 Requirement / Specification 与 `docs/technical/verification-strategy.md`，不得借“最低充分”降低真实 Acceptance。
 
-## Main Historical Migration
+## 主站历史迁移（Main Historical Migration）
 
 Main historical migration execution 当前保持 **FROZEN / explicit reactivation only**：
 
@@ -32,7 +32,7 @@ Main historical migration execution 当前保持 **FROZEN / explicit reactivatio
 
 Party historical migration 不因 Main freeze 被禁用；Party 当前 Authority / workflow 保持自身边界。
 
-## Review Environment
+## 评审环境（Review Environment）
 
 `review-environment.yml` 是 Human Review / Review Runtime 能力，不是每个 PR 的默认 CI。当前稳定激活方式为：
 
