@@ -33,13 +33,19 @@ docs/requirements/
 
 同一长期事实只能有一个 primary fact owner。Product 文档可以引用 Domain rule 的业务结果，但不得复制状态机、identity policy、fingerprint 等 Domain 正文；Domain 文档可以说明 Product scope 对对象模型的约束，但不得重新定义 Product Goal、用户或公开站定位。
 
-## Analysis / Human Review material
+## 术语治理
+
+当前 Consumer 不维护中央中英文术语表。长期业务名称、状态与对象语义继续由真实 Product / Domain Requirement owner 持有；技术标识如何形成由 Technical / Code convention 决定。
+
+如果后续出现跨 Product / Domain owner 的真实同义、近义、legacy / external mapping 冲突，先按 `docs/architecture/requirement-authority.md` 判断是否需要项目级术语 owner；只有确实需要时才通过 `index.md` 增加唯一 locator，不在 README、Guide 或语言 Rule 中维护第二套定义。
+
+## 分析 / 人工评审材料
 
 source inventory、extraction table、ambiguity / conflict list、comparison matrix、capability review batch 与会话 scratchpad 默认属于 **Requirement Analysis Workspace**，不构成 Requirement Authority。
 
 Requirement baseline / clarification 的 transitional analysis / review evidence 默认留在当前 controlling Issue / Review 或显式 non-Authority artifact；没有独立恢复需要时，不为“方便 AI”额外创建长期 `analysis/` 同步副本。未来确需 Repository 内 analysis artifact 时，必须显式标记 non-Authority、producer、promotion path 与退出条件；事实 promote 后应删除、归档或降级为 historical evidence。
 
-## Archive
+## 归档
 
 `archive/` 保存已经被当前 Product / Domain / Architecture / Specification Authority 吸收、取代或纠正的历史 Requirement Change 与 clarification source，只用于 traceability。
 

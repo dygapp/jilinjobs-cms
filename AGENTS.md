@@ -25,7 +25,7 @@ Bootstrap / Roadmap surface 不并行维护 `Current Ready Execution Unit`、Rea
 
 ## 本地资源发现（Local Discovery）
 
-普通运行从本文件与根 `README.md` 到达 `docs/README.md` Local Discovery Entry，并按当前目标使用最小正确读取集合：
+普通运行从本文件直接进入 `docs/README.md` Local Discovery Entry，并按当前目标使用最小正确读取集合。根 `README.md` 仍是稳定项目范围 Authority / Human View，但不再作为 ordinary Fresh Context 的固定预读；只有当前任务需要项目范围摘要、人类入口或该 Authority 本身进入责任时才读取：
 
 - **state-only**：定位 Current Execution Lifecycle 与必要 GitHub native state，不机械加载完整 Roadmap、Method、Skills 或 upstream；
 - **routing-only**：返回一个 primary responsibility + 最小 supporting locator，不加载完整 Skill；
@@ -133,7 +133,7 @@ Current 文档的中文主语言、结构标题和本地引用完整性由 `scri
 - Rule Discovery contract：`docs/architecture/rule-discovery.md`；
 - 已采用的稳定执行能力：`skills/*/SKILL.md`。
 
-后续普通开发应优先读取并遵守本仓库 `AGENTS.md`、`README.md`、`docs/README.md`、`docs/project/project-capability-profile.md`、当前 selector 命中的 Consumer-local Method、`docs/project/project-roadmap.md` 以及与当前工作相关的 Consumer Authority。除非项目负责人明确要求更新 `agentic-dev` baseline、本仓库 Authority 明确要求 upstream 比较，或当前任务本身就是显式 `agentic-dev` Consumer validation，否则不要求为普通开发跨仓库读取 `agentic-dev`。
+后续普通开发固定从本仓库 `AGENTS.md` 与 `docs/README.md` 恢复；`docs/work/current/README.md`、`docs/project/project-capability-profile.md`、当前 selector 命中的 Consumer-local Method、`docs/project/project-roadmap.md`、根 `README.md` 以及其他 Consumer Authority 都按当前责任最小加载。除非项目负责人明确要求更新 `agentic-dev` baseline、本仓库 Authority 明确要求 upstream 比较，或当前任务本身就是显式 `agentic-dev` Consumer validation，否则不要求为普通开发跨仓库读取 `agentic-dev`。
 
 当项目负责人明确要求升级 baseline 时，应：
 

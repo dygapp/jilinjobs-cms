@@ -5,13 +5,13 @@
 ## Fresh Context 恢复顺序
 
 1. 根 `AGENTS.md`：Repository Governance、Authority Boundary、Fresh Context、Human Escalation 与 GitHub 操作授权；
-2. 根 `README.md`：稳定项目范围与入口；
-3. 本文件：Local Discovery Entry / Documentation IA；
-4. `docs/work/current/README.md` + 当前 Open execution PR / Branch：解析 Current Execution Lifecycle；
-5. 如果任务只是 state-only 且状态已无歧义，在此停止；
+2. 本文件：Local Discovery Entry / Documentation IA；
+3. `docs/work/current/README.md` + 当前 Open execution PR / Branch：只在当前任务需要解析执行生命周期时读取；
+4. 如果任务只是状态检查且状态已无歧义，在此停止；
+5. 根 `README.md` 只在当前任务需要稳定项目范围摘要、人类入口或该 Authority 本身进入责任时读取，不作为固定 Bootstrap；
 6. Planning / durable route 按需读取 `docs/project/project-roadmap.md`；Method / execution routing 读取 `docs/project/project-capability-profile.md`，再按 selector 加载单个 canonical Method；
 7. Requirement 任务先读取 `docs/requirements/index.md` 定位唯一 fact owner；其他任务读取当前责任直接相关的 Domain / Architecture / Specification / Technical Authority；
-8. 当前 controlling Issue、PR / Actions 与其他 Current Evidence；只有真正执行某项 Skill responsibility 时才加载对应 `SKILL.md`。
+8. 当前 controlling Issue、PR / Actions 与其他当前证据；只有真正执行某项 Skill responsibility 时才加载对应 `SKILL.md`。
 
 普通运行不得自动访问 `dygapp/agentic-dev` 修补本地发现缺口。若 locator / source 缺失、Current owner 不明确、多个 primary responsibility 无法消歧或 Authority 冲突，必须 fail closed，扩大最小本地读取并重新定位。
 
