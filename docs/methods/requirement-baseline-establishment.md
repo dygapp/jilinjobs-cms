@@ -8,7 +8,7 @@ status: active
 
 ## 1. 目标
 
-本方法面向普通软件 Consumer 项目的项目建立或重大需求基线重建，负责把原始、碎片化、不同可信度且可能相互冲突的 Project Inputs，收敛为一套可持续维护、具有明确 语义所有者ship、可由 Fresh Context Agent 直接消费的 Requirement Baseline。
+本方法面向普通软件 Consumer 项目的项目建立或重大需求基线重建，负责把原始、碎片化、不同可信度且可能相互冲突的 Project Inputs，收敛为一套可持续维护、具有明确 语义所有权、可由 Fresh Context Agent 直接消费的 Requirement Baseline。
 
 它解决的是：
 

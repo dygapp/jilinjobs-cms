@@ -17,7 +17,7 @@ status: active
 ## 能力类型
 
 - **Method**：拥有一类复杂工作的进入条件、阶段 / 状态、责任转换、Gate、返回与完成语义。
-- **Architecture**：拥有长期结构、capability boundary、语义所有者ship、组合关系与 runtime invariant。
+- **Architecture**：拥有长期结构、capability boundary、语义所有权、组合关系与 runtime invariant。
 - **Skill**：在责任已明确后提供稳定、有界、可独立调用的执行 Procedure。
 - **Rule**：按当前 task facts 条件性施加 policy、constraint、default、invariant 或 completion requirement。
 - **Guide**：Human-facing 解释、示例与导航，不拥有 Agent runtime 的规范语义。

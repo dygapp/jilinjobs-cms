@@ -27,4 +27,4 @@ scope:
 
 Historical、archive、migration provenance 或兼容性说明可以合法保留 retired owner / id / path 引用；出现旧标识本身不构成 stale Current dependency。只有该引用仍被 普通运行时、Current selector、verification contract 或 durable current-state claim 当作当前事实消费时，才构成 transition 缺口。
 
-Targeted retired-id/path reference scan、dead locator / link check 等 deterministic validation 可以帮助发现明显遗漏，但不能替代对引用角色、currentness 与 语义所有者ship 的复核，也不得为此建立需要与 Authority corpus 持续同步的中央 retired-owner catalog。
+Targeted retired-id/path reference scan、dead locator / link check 等 deterministic validation 可以帮助发现明显遗漏，但不能替代对引用角色、currentness 与 语义所有权 的复核，也不得为此建立需要与 Authority corpus 持续同步的中央 retired-owner catalog。

@@ -8,7 +8,7 @@ status: active
 
 ## 目标
 
-本 Architecture 定义 `jilinjobs-cms` 长期 Requirement Authority 的 语义所有者ship、Human / Agent 导航边界与 artifact lifecycle，确保同一长期业务事实只有一个长期 owner，Fresh Context Agent 能从有限入口确定性找到当前 Requirement，临时分析不会成为隐藏的第二事实源。
+本 Architecture 定义 `jilinjobs-cms` 长期 Requirement Authority 的 语义所有权、Human / Agent 导航边界与 artifact lifecycle，确保同一长期业务事实只有一个长期 owner，Fresh Context Agent 能从有限入口确定性找到当前 Requirement，临时分析不会成为隐藏的第二事实源。
 
 本文件不修改任何 JilinJobs Product Requirement，也不要求 G0 立即重排现有 `docs/requirements/**`。物理 IA 是否迁移、拆分或合并属于后续 Requirement Baseline governance；G0 只采用本 semantic contract。
 
@@ -47,7 +47,7 @@ docs/requirements/
 └── analysis/          # non-Authority workspace
 ```
 
-这是推荐 projection，不是硬编码 runtime contract。当前 Consumer 可以在 G2 依据真实 语义所有者ship 决定是否采用完全相同物理结构。
+这是推荐 projection，不是硬编码 runtime contract。当前 Consumer 可以在 G2 依据真实 语义所有权 决定是否采用完全相同物理结构。
 
 `overview/` 只持有跨多个 Capability 持续成立的 Product Goal、Scope、系统责任边界、Actor overview、Capability map、project-wide business constraint 与必要 domain semantics；不把内部组件划分或 deployment topology 误写成 Product Requirement。
 

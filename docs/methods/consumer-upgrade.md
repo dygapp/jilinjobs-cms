@@ -24,7 +24,7 @@ Restore Current Consumer
 
 ## 恢复当前 Consumer（Restore Current Consumer）
 
-从 Consumer-local Project Knowledge、Method / Architecture / Skills / Rules、evaluated baseline 与 local adaptation 恢复当前 canonical state。若当前 规范语义所有者ship 本身无法可靠恢复，应先进入独立治理 / clarification work，而不是用 upgrade 覆盖结构性问题。
+从 Consumer-local Project Knowledge、Method / Architecture / Skills / Rules、evaluated baseline 与 local adaptation 恢复当前 canonical state。若当前 规范语义所有权 本身无法可靠恢复，应先进入独立治理 / clarification work，而不是用 upgrade 覆盖结构性问题。
 
 ## 选择候选上游基线（Select Candidate Upstream Baseline）
 
