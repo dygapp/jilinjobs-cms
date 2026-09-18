@@ -247,7 +247,7 @@ Admin 必须显式呈现：
 - protected resource delete；
 - StaticResource delete / replace / restore conflict；
 - unsupported Page content profile/schema；
-- Backend conflict / fail-closed result。
+- Backend conflict / 失败关闭 result。
 
 不得通过前端默默修正成另一种业务语义来“让保存成功”。
 
@@ -267,9 +267,9 @@ Admin 必须显式呈现：
 - SiteProperty group / typed value 行为正确；
 - StaticResource browse / preview / replace / protected delete / recycle / restore 行为正确；
 - 用户界面不长期展示 Backend / Database / deployment / Requirement 等实现或治理说明；
-- 必要风险、validation 与 fail-closed 信息没有因“简化提示”而消失。
+- 必要风险、validation 与 失败关闭 信息没有因“简化提示”而消失。
 
-Verification 采用哪些自动化层次、Browser 工具或 evidence 由当前 Verification Authority 决定，不由本 Acceptance 固化。
+Verification 采用哪些自动化层次、Browser 工具或 evidence 由当前 Verification Authority 决定，不由本 验收 固化。
 
 ## 15. 非目标
 

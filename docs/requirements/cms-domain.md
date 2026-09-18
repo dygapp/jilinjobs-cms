@@ -18,11 +18,11 @@ updated_at: 2026-09-16
 
 ## 1. 文档责任
 
-本文是 `jilinjobs-cms` 当前 **CMS 领域需求事实的长期 owner**，统一维护 CMS 业务对象、稳定 / 来源身份、状态与生命周期、跨对象关系、内容 ownership、stable / Runtime 生命周期、Historical Migration 领域语义与 fail-closed 业务不变量。
+本文是 `jilinjobs-cms` 当前 **CMS 领域需求事实的长期 owner**，统一维护 CMS 业务对象、稳定 / 来源身份、状态与生命周期、跨对象关系、内容 ownership、stable / Runtime 生命周期、历史迁移 领域语义与 失败关闭 业务不变量。
 
 产品目标、用户、范围、Main / Party 产品定位、canonical public contract 与跨 Capability 产品级质量要求由 `docs/requirements/information-publishing.md` 持有；Requirement locator 由 `docs/requirements/index.md` 持有。本文不重新定义这些 Product facts。
 
-本文不定义页面布局、组件、数据库字段、HTTP DTO、Migration 文件、源码目录、framework 或具体实现算法。Feature Observable Behavior 由 Specification 定义；跨 Feature 系统 structure / application boundary 由 Architecture 定义；concrete Site Definition 与 canonical migration records 分别由其 versioned source workspace 持有。
+本文不定义页面布局、组件、数据库字段、HTTP DTO、Migration 文件、源码目录、framework 或具体实现算法。Feature 可观察行为 由 Specification 定义；跨 Feature 系统 structure / application boundary 由 Architecture 定义；concrete Site Definition 与 canonical migration records 分别由其 versioned source workspace 持有。
 
 ## 2. 领域边界
 
@@ -33,8 +33,8 @@ CMS Domain 回答：
 - stable identity、source identity 与 ordinary editable data 如何区分；
 - 什么 state / relation 可以进入 Public projection；
 - Page / Rich Text 等 primary content 由谁拥有；
-- stable Site Definition、one-time bootstrap、ordinary Runtime 与 Historical Migration 如何保持不同 lifecycle；
-- 哪些 business conflict / unsupported state 必须 fail closed。
+- stable Site Definition、one-time bootstrap、普通运行时 与 历史迁移 如何保持不同 lifecycle；
+- 哪些 business conflict / unsupported state 必须 失败关闭。
 
 Main / Party 的视觉 template、Vue / Spring implementation、build / deployment topology 不属于 Domain object。
 
@@ -142,13 +142,13 @@ Page content model、renderer identity、content ownership 是三个正交概念
 - `STRUCTURED`：structured payload 是 primary body；
 - `NONE`：CMS 不持有 whole-page primary body，由明确 Engineering / External ownership 承担主要内容或行为。
 
-Unknown / malformed / unsupported content model、structured schema 或 renderer 必须 fail closed，不得 fallback 为 arbitrary Rich Text。
+Unknown / malformed / unsupported content model、structured schema 或 renderer 必须 失败关闭，不得 fallback 为 arbitrary Rich Text。
 
 ### 5.4 页面内容所有权
 
 primary content ownership 至少区分：
 
-- `OPERATOR`：ordinary Runtime 由运营人员维护；
+- `OPERATOR`：普通运行时 由运营人员维护；
 - `SITE_PACKAGE`：versioned Site Definition 拥有当前 content；
 - `ENGINEERING`：受控 engineering implementation 拥有主要内容 / 行为；
 - `EXTERNAL`：external system 拥有主要内容 / 行为。
@@ -184,7 +184,7 @@ NavigationItem 属于一个 NavigationLocation，可有 parent / child，并持�
 - 有 child 时 ordinary delete 不能造成 orphan；
 - icon 属于 item 自身，不能按 array index / sort order 推导；
 - reorder / insert / delete 不得使 icon 与业务语义错位；
-- stable item identity 可以受保护，ordinary Runtime item 不自动成为 preset。
+- stable item identity 可以受保护，普通运行时 item 不自动成为 preset。
 
 Navigation target 至少表达 HOME、COLUMN、PAGE、LINK、PLACEHOLDER 等 accepted semantics；HTTP representation 属于 Technical contract。
 
@@ -194,7 +194,7 @@ CmsList 是可排序、可启停的 content placement container；不拥有 Publ
 
 ### 7.1 `CmsList` 身份 / 图片策略
 
-CmsList 具有 stable `code`。受控 `groupCode` 可以作为 structure metadata，但不是独立 business object；ordinary Runtime List 默认进入 ordinary group，stable group 由 Site Definition 管理。
+CmsList 具有 stable `code`。受控 `groupCode` 可以作为 structure metadata，但不是独立 business object；普通运行时 List 默认进入 ordinary group，stable group 由 Site Definition 管理。
 
 image data policy：`NONE`、`OPTIONAL`、`REQUIRED`。它只定义 data validity，不定义尺寸、card direction、caption 或页面 layout。
 
@@ -285,7 +285,7 @@ path、extension、media、active-content 等 cross-capability safety outcome �
 
 即使 URL 相同，也不因“可去重”机械合并不同业务载体。
 
-## 13. Stable Site Definition 与 ordinary Runtime lifecycle
+## 13. Stable Site Definition 与 普通运行时 lifecycle
 
 Domain 必须区分：
 
@@ -295,7 +295,7 @@ Domain 必须区分：
 
 ### 13.2 一次性初始默认 → 运行时
 
-某些 ordinary Runtime data 可以在 Fresh Site / explicit adoption 时由 one-time bootstrap 建立；成功后即进入 ordinary operator-managed lifecycle：
+某些 普通运行时 data 可以在 Fresh Site / explicit adoption 时由 one-time bootstrap 建立；成功后即进入 ordinary operator-managed lifecycle：
 
 ```text
 one-time initial default
@@ -308,7 +308,7 @@ one-time initial default
 
 ## 14. 历史内容迁移领域
 
-Historical Migration 把需要 provenance、legacy identity、fingerprint 与 auditable import lifecycle 的 accepted legacy data 转化为当前 Runtime；它不是 Generic schema migration，也不是 Site Definition / ordinary bootstrap。
+历史迁移 把需要 provenance、legacy identity、fingerprint 与 auditable import lifecycle 的 accepted legacy data 转化为当前 Runtime；它不是 Generic schema migration，也不是 Site Definition / ordinary bootstrap。
 
 ### 14.1 稳定迁移身份 / 指纹
 
@@ -337,18 +337,18 @@ stable verification / import 消费 Repository-owned canonical bytes 或其他 a
 
 ### 14.4 主站已接受范围
 
-Main 当前 accepted Historical Migration scope 为 Article-only：
+Main 当前 accepted 历史迁移 scope 为 Article-only：
 
 - INTERNAL Article；
 - EXTERNAL_LINK Article；
 - Article body resources / attachments；
 - Article provenance、legacy identity、fingerprint 与 import evidence。
 
-Main Page、stable Site Definition 与 ordinary bootstrap ListItem 不属于 Main historical import。Historical Migration 是否在某一时刻允许重新执行，由当前治理 / execution Authority 决定，不属于本文的长期 Domain fact。
+Main Page、stable Site Definition 与 ordinary bootstrap ListItem 不属于 Main historical import。历史迁移 是否在某一时刻允许重新执行，由当前治理 / execution Authority 决定，不属于本文的长期 Domain fact。
 
 ### 14.5 党建站已接受范围
 
-Party Historical Migration 可以包含 Article 与已经 accepted 的 historical ListItem / carousel semantics，因为它具有独立 source evidence / compatibility history。
+Party 历史迁移 可以包含 Article 与已经 accepted 的 historical ListItem / carousel semantics，因为它具有独立 source evidence / compatibility history。
 
 Party-specific alias、dataset cardinality、accepted fingerprint / transition 属于 concrete migration source / evidence，不进入 Generic Domain rule；Main Article-only scope 不能反向覆盖 Party，Party historical ListItem 也不能反向推广为 Main rule。
 
@@ -370,7 +370,7 @@ Article managed image、attachment 与 body image 是不同 relation；从 body 
 
 ## 16. 领域失败不变量
 
-以下业务条件默认 fail closed，不允许 silent fallback：
+以下业务条件默认 失败关闭，不允许 silent fallback：
 
 - unknown / malformed Page content model、schema 或 renderer；
 - stable identity conflict；
@@ -379,7 +379,7 @@ Article managed image、attachment 与 body image 是不同 relation；从 body 
 - invalid resource path / media；
 - invalid typed SiteProperty；
 - protected Resource ordinary delete；
-- Historical Migration fingerprint conflict / unresolved target dependency；
+- 历史迁移 fingerprint conflict / unresolved target dependency；
 - existing operator content 与 package adoption precondition 不匹配；
 - cross-scope content 被错误投影到 Main / Party。
 
@@ -394,7 +394,7 @@ Article managed image、attachment 与 body image 是不同 relation；从 body 
 3. publish lifecycle 与 placement 不互相篡改 ownership；
 4. presentation configuration 不反向污染 content object identity；
 5. Site stable structure 不吞并 ordinary operator content；
-6. Historical Migration 不吞并 Site Definition / ordinary bootstrap；
+6. 历史迁移 不吞并 Site Definition / ordinary bootstrap；
 7. Public Renderer 不反向成为 CMS Domain Authority；
 8. Generic capability 不吸收 Main / Party concrete dataset fact；
 9. operator divergence 不被 ordinary reconcile 静默覆盖；

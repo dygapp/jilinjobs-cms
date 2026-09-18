@@ -90,7 +90,7 @@ Page Rich Text 当前不因为本规格自动获得新的 Article-style managed 
 - ordinary Article / Page Rich Text；
 - WPS-shaped 中文 paste / undo behavior。
 
-具体 regression corpus、样本 identity 与测试 fixture 由 Verification / Repository Evidence 持有，不在 Specification 复制成新的业务数据 Authority。
+具体 regression corpus、样本 identity 与测试 fixture 由 Verification / Repository 证据 持有，不在 Specification 复制成新的业务数据 Authority。
 
 ## 7. HTML 安全
 

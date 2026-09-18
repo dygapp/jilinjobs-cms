@@ -21,7 +21,7 @@ updated_at: 2026-09-16
 
 ## 1. 范围
 
-本规格定义项目维护者在**已经获得当前执行 Authority** 时，对 Historical Content Migration 可以观察和验收的受控导入行为，包括 preflight、执行结果、冲突 / 无效状态、幂等性与可审计 report。
+本规格定义项目维护者在**已经获得当前执行 Authority** 时，对 历史内容迁移 可以观察和验收的受控导入行为，包括 preflight、执行结果、冲突 / 无效状态、幂等性与可审计 report。
 
 Historical object 的 stable source identity、fingerprint、CREATE / SKIP / CONFLICT、accepted Main / Party scope 与 compatibility business rule 由 `docs/requirements/cms-domain.md` 持有；canonical dataset、digest、provenance 与具体记录由 `data-migrations/**` 持有；Content Migration application boundary 由 `docs/architecture/cms-architecture.md` 持有；具体 CLI 名称、Gradle task、class、parser、文件布局与 process wiring 属于 Technical / implementation。
 
@@ -37,7 +37,7 @@ Legacy Source acquisition / retry / reactivation 是独立 activity，不因为�
 
 ## 3. 加载 → 预检 → 执行 → 报告
 
-Historical Migration 的可观察生命周期至少区分：
+历史迁移 的可观察生命周期至少区分：
 
 ```text
 load
@@ -88,7 +88,7 @@ load
 
 ## 7. 失败行为
 
-以下情况必须 fail closed，并在 report / process outcome 中可诊断：
+以下情况必须 失败关闭，并在 report / process outcome 中可诊断：
 
 - canonical path 越界、缺失文件、digest / size 不一致；
 - duplicate stable source identity；
@@ -102,7 +102,7 @@ load
 
 ## 8. 验收
 
-触达 Historical Content Migration capability 时，最终结果至少满足实际涉及的以下 contract：
+触达 历史内容迁移 capability 时，最终结果至少满足实际涉及的以下 contract：
 
 - canonical input 在没有 Legacy Source 在线依赖的情况下可以完成 stable preflight / import；
 - first accepted import 能形成 `CREATED` 结果；
@@ -114,11 +114,11 @@ load
 - Main / Party concrete dataset scope 与 compatibility 不被 Generic migration capability反向改写；
 - migration execution 是否允许启动继续由当前 Repository / Work Authority 决定，而不是由本规格自动激活。
 
-具体 automated fixture、CLI invocation、Workflow、artifact 与 Evidence procedure 由 Verification Authority 与 Repository implementation 决定。
+具体 automated fixture、CLI invocation、Workflow、artifact 与 证据 procedure 由 Verification Authority 与 Repository implementation 决定。
 
 ## 9. 非目标
 
-- 解除 Main Historical Migration freeze；
+- 解除 Main 历史迁移 freeze；
 - 定义具体 historical record inventory / count / digest；
 - 在线抓取 Legacy Source；
 - 为 source defect 猜测修复内容；

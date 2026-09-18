@@ -19,7 +19,7 @@ updated_at: 2026-09-16
 
 本规格只定义 CMS Page 在用户和运营人员可观察层面的 content-profile 行为，以及当前已接受 Structured Page `guide/jypq` 的产品 contract。
 
-Page 的长期 identity、ownership、content authority、operator-divergence 与 fail-closed 业务不变量由 Domain Requirement 持有；renderer / Site Definition / application boundary 由 Architecture 与对应 source owner 持有；数据库字段、Migration、DTO、registry、源码组件与 adoption 实现属于 Technical / code，不在本规格复制。
+Page 的长期 identity、ownership、content authority、operator-divergence 与 失败关闭 业务不变量由 Domain Requirement 持有；renderer / Site Definition / application boundary 由 Architecture 与对应 source owner 持有；数据库字段、Migration、DTO、registry、源码组件与 adoption 实现属于 Technical / code，不在本规格复制。
 
 ## 2. 页面内容配置
 
@@ -126,8 +126,8 @@ Admin 根据 Page 当前 content profile 选择 authoring surface：
 - representative Rich Page 正常编辑 / 保存 / 重开 / 公开展示；
 - `/page/guide/jypq` 保持当前 Site Definition 接受的 card structure、顺序、内容与有效资源引用；
 - card add / remove / reorder / edit / reload 后语义保持；
-- invalid Structured data fail closed；
-- unknown renderer fail closed；
+- invalid Structured data 失败关闭；
+- unknown renderer 失败关闭；
 - accepted baseline 的受控 adoption 不损坏内容；
 - operator-diverged predecessor 被保留并产生可诊断结果；
 - repeated reconcile 保持稳定；

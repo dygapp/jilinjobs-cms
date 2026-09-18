@@ -30,9 +30,9 @@ updated_at: 2026-09-16
 
 本文是 `jilinjobs-cms` 当前信息发布与网站服务的 **Product Requirement fact owner**，回答“产品为什么存在、面向谁、当前提供哪些长期业务能力、哪些产品级边界和验收不变量必须持续成立”。
 
-CMS business object、stable/source identity、state / lifecycle、content ownership、Historical Migration fingerprint / compatibility 等领域事实统一由 `docs/requirements/cms-domain.md` 持有；本文件只引用这些 Domain 结果，不复制 Domain 状态机或 identity policy。Requirement 路由由 `docs/requirements/index.md` 持有。
+CMS business object、stable/source identity、state / lifecycle、content ownership、历史迁移 fingerprint / compatibility 等领域事实统一由 `docs/requirements/cms-domain.md` 持有；本文件只引用这些 Domain 结果，不复制 Domain 状态机或 identity policy。Requirement 路由由 `docs/requirements/index.md` 持有。
 
-本文不维护数据库 migration 编号、源码目录、前端组件、框架装配、Site Package 物理格式、Historical canonical record inventory、Execution Unit、PR / Actions 或其他实现状态。Feature 的具体 Observable Behavior / Failure Behavior / Acceptance 由 Specification 持有；跨 Feature 的长期系统结构由 Architecture 持有。
+本文不维护数据库 migration 编号、源码目录、前端组件、框架装配、Site Package 物理格式、Historical canonical record inventory、Execution Unit、PR / Actions 或其他实现状态。Feature 的具体 可观察行为 / 失败行为 / 验收 由 Specification 持有；跨 Feature 的长期系统结构由 Architecture 持有。
 
 ## 2. 产品目标
 
@@ -57,7 +57,7 @@ CMS business object、stable/source identity、state / lifecycle、content owner
 
 ### 3.3 项目维护者
 
-项目维护者负责稳定页面设计、工程集成、版本化 Site Definition、Historical Migration 与运行环境。维护者不能为了实现便利改变公开访问者或运营人员已经接受的产品语义。
+项目维护者负责稳定页面设计、工程集成、版本化 Site Definition、历史迁移 与运行环境。维护者不能为了实现便利改变公开访问者或运营人员已经接受的产品语义。
 
 ## 4. 产品范围
 
@@ -78,7 +78,7 @@ CMS business object、stable/source identity、state / lifecycle、content owner
 - Rich Text 内容编辑与安全呈现；
 - 结构本身具有产品语义时的 bounded Structured Page capability；
 - Fresh Site 所需稳定结构、稳定资源与必要一次性初始运营数据；
-- 在具备明确 Authority 时的 Historical Content Migration 与可追溯导入；
+- 在具备明确 Authority 时的 历史内容迁移 与可追溯导入；
 - 面向公开访问的响应式、基础可访问性、基础浏览器兼容与基础搜索引擎友好体验。
 
 ### 4.2 当前不在范围
@@ -144,7 +144,7 @@ Main 继续以吉林省高等学校毕业生就业信息网已经确认的信息
 
 产品允许在具有明确 Authority、provenance 与可审计边界时，把接受的 Legacy content 转换为当前 Runtime content；该能力属于离线、受控的数据进入过程，不是 Public Runtime dependency。
 
-具体 legacy identity、fingerprint、preflight、compatibility、Main / Party accepted migration scope 与冲突语义由 `cms-domain.md` 的 Historical Migration owner 统一定义。Concrete canonical records、digest 与 source evidence 由 `data-migrations/**` 持有，不在 Product Requirement 复制。
+具体 legacy identity、fingerprint、preflight、compatibility、Main / Party accepted migration scope 与冲突语义由 `cms-domain.md` 的 历史迁移 owner 统一定义。Concrete canonical records、digest 与 source evidence 由 `data-migrations/**` 持有，不在 Product Requirement 复制。
 
 未解决、缺失、source-defect、deferred 或待客户确认的历史数据不得为了“全绿”而静默猜测、删除、覆盖或自动导入；是否接受、修正、延期或重新获取必须由对应 Authority / Human decision 明确建立。
 
@@ -185,7 +185,7 @@ Legacy Source / authorized evidence
 → ordinary Runtime content
 ```
 
-稳定站点定义可以拥有 stable structure、accepted stable content / asset 和 Fresh Site initial default，但不能因为 Repository 中存在 default 就永久覆盖运营人员已经维护的 ordinary Runtime content。
+稳定站点定义可以拥有 stable structure、accepted stable content / asset 和 Fresh Site initial default，但不能因为 Repository 中存在 default 就永久覆盖运营人员已经维护的 普通运行时 content。
 
 Public Renderer 只负责呈现当前正式数据；它不能成为 CMS 内容、Site Definition 或 Historical canonical data 的第二业务 Authority。
 
@@ -193,7 +193,7 @@ Article / Page / ListItem 等具体 identity、publish lifecycle、content profi
 
 ## 8. Rich Text 与结构化内容产品边界
 
-运营人员需要成熟、稳定、中文友好的 Rich Text authoring。Rich Text 的长期正文 authority 与安全 / compatibility Domain 不变量由 `cms-domain.md` 定义，具体 authoring Observable Behavior 由 `docs/specifications/rich-text-authoring.md` 定义。
+运营人员需要成熟、稳定、中文友好的 Rich Text authoring。Rich Text 的长期正文 authority 与安全 / compatibility Domain 不变量由 `cms-domain.md` 定义，具体 authoring 可观察行为 由 `docs/specifications/rich-text-authoring.md` 定义。
 
 当 card、section、step 等结构本身属于产品语义时，Page 可以使用 Structured content；这不建立通用 Page Builder，也不要求普通说明性 Page 从 Rich Text 迁移为 Structured。
 
@@ -212,7 +212,7 @@ Engineering / External Page 可以保留 Page identity 与 canonical URL，但�
 - 新窗口外链必须使用等价于 `noopener noreferrer` 的安全行为；当前没有统一离站确认页或外链徽标 Requirement；
 - Admin save / reopen / Public render 之间必须保持 accepted content semantics；
 - implementation replacement 不能改变业务对象 identity、content ownership、canonical URL 或已接受用户行为；
-- 具有视觉 Acceptance 的变更，自动行为验证不能替代必要的 bounded Human Review。
+- 具有视觉 验收 的变更，自动行为验证不能替代必要的 bounded 人工评审。
 
 当前没有 Authority 支持具体性能 SLA、固定首屏毫秒数、任意浏览器全兼容或完整 WCAG 等级；这些不能从“现代网站通常需要”反向补入 Baseline。真实新增要求必须通过后续 Requirement Change 建立。
 
@@ -223,11 +223,11 @@ Engineering / External Page 可以保留 Page identity 与 canonical URL，但�
 1. 运营数据只有一个长期业务 Authority，不在 CMS、Frontend 常量、Site Definition default 与 migration data 间并行双写同一事实；
 2. Main / Party 的业务定位、内容作用域和 canonical URL 不因工程重构漂移；
 3. CMS business object 的 stable/source identity、lifecycle 与 operator ownership 不被实现捷径绕过；
-4. stable Site Definition、ordinary Runtime data 与 Historical Migration provenance 保持可区分 lifecycle；
+4. stable Site Definition、普通运行时 data 与 历史迁移 provenance 保持可区分 lifecycle；
 5. Public Renderer 可以替换，但不能反向拥有正式 CMS content 或 historical source fact；
 6. Product Requirement 不因数据库、框架、目录、migration number 或 package layout 变化而失效；
 7. unsupported / conflict / ambiguity 不通过默认值、静默 fallback 或实现 convenience 伪装成功；
-8. 真实产品歧义必须返回 Requirement / Human Authority，不在实现中静默选择。
+8. 真实产品歧义必须返回 Requirement / 人工权威，不在实现中静默选择。
 
 ## 11. 非决策
 
@@ -238,7 +238,7 @@ Engineering / External Page 可以保留 Page identity 与 canonical URL，但�
 - 当前 Flyway 文件编号；
 - Site Package / migration / Runtime 的具体物理目录和文件格式；
 - Rich Text editor 品牌、版本或 wrapper；
-- Review Environment / CI topology；
+- 评审环境 / CI topology；
 - 当前 Ready Execution Unit、Planning Candidate 排序、PR、release 或 deployment state。
 
-后续候选、优先级与当前 Gate 由 Project Roadmap / GitHub Current Evidence 持有，不在 Product Requirement 缓存第二份规划状态。
+后续候选、优先级与当前 Gate 由 Project Roadmap / GitHub 当前证据 持有，不在 Product Requirement 缓存第二份规划状态。

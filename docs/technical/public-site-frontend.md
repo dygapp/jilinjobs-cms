@@ -22,7 +22,7 @@ updated_at: 2026-09-16
 
 ## 1. 文档责任
 
-本文只维护当前 Public Renderer implementation 在多个 Feature 之间持续需要一致的 HOW。Main / Party 的用户可观察行为、canonical URL、Carousel lifecycle、失败状态和 Acceptance 由 Product Specifications 持有；Site / Theme / replaceability boundary 由 CMS Architecture 与 ADR 持有；Backend ↔ Public 的稳定 HTTP compatibility 由 `docs/technical/http-interface-contract.md` 唯一持有。
+本文只维护当前 Public Renderer implementation 在多个 Feature 之间持续需要一致的 HOW。Main / Party 的用户可观察行为、canonical URL、Carousel lifecycle、失败状态和 验收 由 Product Specifications 持有；Site / Theme / replaceability boundary 由 CMS Architecture 与 ADR 持有；Backend ↔ Public 的稳定 HTTP compatibility 由 `docs/technical/http-interface-contract.md` 唯一持有。
 
 本文不复制 CMS Domain rules、HTTP DTO inventory、历史迁移 dataset、精确 asset hash、当前 component inventory、package version 或 E2E case inventory。
 
@@ -92,7 +92,7 @@ Frontend adapter可以把 transport DTO转成 view-facing shape，但不能成�
 
 Page renderer使用明确稳定的 renderer identity进行选择，不通过 alias、URL、DOM shape或正文 heuristic猜测类型。
 
-当前 implementation可以使用 renderer registry把 accepted renderer key映射到具体 Vue renderer；unknown / malformed renderer遵循 Specification 的可诊断 fail-closed behavior。
+当前 implementation可以使用 renderer registry把 accepted renderer key映射到具体 Vue renderer；unknown / malformed renderer遵循 Specification 的可诊断 失败关闭 behavior。
 
 Renderer registry是 implementation mechanism，不是 Page业务对象的新身份层；新增 renderer必须先有相应 Product / Domain / Architecture / Specification Authority。
 
@@ -106,7 +106,7 @@ managed resource content / attachment 与 `/static/**` 的 HTTP namespace / bina
 
 当前 Public package自己持有 Node engine、Vue / TypeScript / Vite与 scripts 的精确版本。正式 build包含 source-boundary guard、Vue-aware type-check与bundler build。
 
-影响 API adapter 时验证 `http-interface-contract.md` compatibility；影响 route、DOM、async data、resource或用户交互时追加 Browser Verification；存在视觉 Acceptance时再取得对应 AI / Human Visual Evidence。证据规则以 `docs/technical/verification-strategy.md` 与 live-discovered verification Rules为准。
+影响 API adapter 时验证 `http-interface-contract.md` compatibility；影响 route、DOM、async data、resource或用户交互时追加 浏览器验证；存在视觉 验收时再取得对应 AI / 人工视觉证据。证据规则以 `docs/technical/verification-strategy.md` 与 live-discovered verification Rules为准。
 
 ## 10. 不由本文拥有
 
@@ -114,7 +114,7 @@ managed resource content / attachment 与 `/static/**` 的 HTTP namespace / bina
 - Carousel用户可观察行为；
 - CMS Domain data semantics；
 - HTTP endpoint / DTO field 的第二份 Authority；
-- Historical Migration counts / fingerprint；
+- 历史迁移 counts / fingerprint；
 - Site asset具体 hash / resource inventory；
 - package / component / test case inventory；
 - 已完成 Public replaceability / source-isolation计划的过程历史。

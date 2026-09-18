@@ -28,9 +28,9 @@ updated_at: 2026-09-16
 
 本文是 `jilinjobs-cms` 当前 **Backend ↔ Admin/Public Frontend HTTP compatibility** 的唯一 Current Technical owner，回答“替换 Backend implementation 时，现有 Admin / Public consumer 仍需要哪些稳定 HTTP surface、wire projection 与失败语义”。
 
-Product / Domain Requirement 拥有业务对象、identity、lifecycle 与产品级质量；Specification 拥有用户可观察行为、Failure Behavior 与 Acceptance；Architecture 拥有 Core / Server / Migration、Admin / Public 与 replaceability boundary。本文只拥有 transport compatibility，不反向成为业务事实来源。
+Product / Domain Requirement 拥有业务对象、identity、lifecycle 与产品级质量；Specification 拥有用户可观察行为、失败行为 与 验收；Architecture 拥有 Core / Server / Migration、Admin / Public 与 replaceability boundary。本文只拥有 transport compatibility，不反向成为业务事实来源。
 
-Controller class、TypeScript adapter 文件、Spring annotation、Node framework、package path、当前测试文件和代码生成方式都不是本文的长期事实。代码可以作为当前实现 Evidence；一旦与本文冲突，必须判断 implementation defect 或 contract change，不能让某个 adapter / Controller 自动成为第二接口 Authority。
+Controller class、TypeScript adapter 文件、Spring annotation、Node framework、package path、当前测试文件和代码生成方式都不是本文的长期事实。代码可以作为当前实现 证据；一旦与本文冲突，必须判断 implementation defect 或 contract change，不能让某个 adapter / Controller 自动成为第二接口 Authority。
 
 ## 2. Namespace 与 transport 基线
 
@@ -113,7 +113,7 @@ Public frontend 只消费 read / resource projection，不依赖 Admin mutation 
 
 Public Article query 的 `columnId` 是**exact-column** filter：只返回 primary Column 等于该 id 且当前可公开的 Article；它不会像 Admin query 一样自动扩展到 descendant Column。`columnId = null` 表示不按栏目限制。`articleType` 是对当前公开 Article source type 的 exact filter。
 
-当前 HTTP surface 不引入单独的 `site=MAIN|PARTY` query 来决定浏览器 route / template scope。Main / Party 的 route / theme / template scope 继续由 Public Renderer 的 Site-specific responsibility 持有，但其判断必须使用当前 Authority 接受的 stable business relation / Site Definition identity 并 fail closed，不能通过 URL 文本、DOM 或历史 typeCode heuristic 猜测。Backend Public projection仍负责 Domain publish lifecycle、endpoint-defined query scope 与 effective-content filtering；Renderer 不能通过读取 Admin/full-data projection来补偿这些 Backend contract。
+当前 HTTP surface 不引入单独的 `site=MAIN|PARTY` query 来决定浏览器 route / template scope。Main / Party 的 route / theme / template scope 继续由 Public Renderer 的 Site-specific responsibility 持有，但其判断必须使用当前 Authority 接受的 stable business relation / Site Definition identity 并 失败关闭，不能通过 URL 文本、DOM 或历史 typeCode heuristic 猜测。Backend Public projection仍负责 Domain publish lifecycle、endpoint-defined query scope 与 effective-content filtering；Renderer 不能通过读取 Admin/full-data projection来补偿这些 Backend contract。
 
 Public list / advertisement 的 by-code / by-group projection 是 Main homepage 等当前运行 consumer 的稳定依赖；Backend replacement 不得只实现“全量列表再让前端过滤”来改变已有 scope contract。
 
