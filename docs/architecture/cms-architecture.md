@@ -23,7 +23,7 @@ updated_at: 2026-09-15
 
 本文不保存 Feature-local HOW、Migration 精确编号、源码文件清单、当前 Execution Unit、PR / Actions 或短期 implementation inventory。具体历史决策的背景、替代方案与权衡由 ADR 保留；当前代码事实由 Repository implementation 提供。
 
-## 2. Architecture drivers
+## 2. 架构驱动因素
 
 当前架构必须同时满足：
 
@@ -37,7 +37,7 @@ updated_at: 2026-09-15
 8. configuration、stable assets、Runtime uploads 与 historical resources 有明确 ownership；
 9. 架构演进不通过复制 Requirement / Specification / Technical 三套相同事实维持一致性。
 
-## 3. System context
+## 3. 系统上下文
 
 当前主要系统责任：
 
@@ -61,7 +61,7 @@ Legacy Sources ──(acquisition only)──→ Canonical Migration Data
 
 公开访问者只消费 Public Renderer 与公开 contracts；运营人员通过 Admin 维护 Runtime 内容。Legacy Source 不属于稳定 Runtime dependency。
 
-## 4. Data / authority layers
+## 4. 数据与权威分层
 
 长期 responsibility chain：
 
@@ -79,7 +79,7 @@ Replaceable Public Renderer
 
 这些责任可以物理同仓，但 source ownership 与 lifecycle 必须独立。
 
-### 4.1 Generic CMS Core
+### 4.1 通用 CMS 核心（Generic CMS Core）
 
 Generic CMS Core 提供 site-neutral：
 
@@ -95,7 +95,7 @@ Generic CMS Core 提供 site-neutral：
 
 Generic Core 不拥有 JilinJobs aliases、站点文案、具体导航成员、具体 ListItem、正式 Page 文案、联系方式、Party dataset 或其他 instance-specific values。
 
-### 4.2 JilinJobs Site Definition
+### 4.2 JilinJobs 站点定义（Site Definition）
 
 JilinJobs Site Definition 是版本化产品基线，当前 Repository owner 位于 `sites/jilinjobs/**`。
 
@@ -117,7 +117,7 @@ stable site assets
 
 具体文件格式和当前 manifest 字段属于 Technical / implementation contract。
 
-### 4.3 Historical Content Migration
+### 4.3 历史内容迁移
 
 Historical Migration owner 位于 `data-migrations/**` 及对应 migration application capability。
 
@@ -135,7 +135,7 @@ Historical Migration owner 位于 `data-migrations/**` 及对应 migration appli
 
 Generic migration capability 不持有 Main / Party 具体 dataset facts。Party accepted transition 等 site-specific compatibility 继续由对应 migration scope ownership 管理。
 
-### 4.4 Runtime CMS Data
+### 4.4 运行时 CMS 数据
 
 Runtime CMS Data 是当前运营状态，包括 operator-created/edited content、普通配置和 mutable uploads。
 
@@ -146,7 +146,7 @@ Runtime 不是 Repository baseline 的镜像：
 - stable structure reconcile 不得顺带 resurrect ordinary Runtime rows；
 - Historical Migration 只能按 canonical identity / fingerprint contract受控写入。
 
-### 4.5 Replaceable Public Renderer
+### 4.5 可替换的公开站点渲染器
 
 Public Renderer 只消费稳定 Public contracts 与 Runtime-visible resources。
 
@@ -160,7 +160,7 @@ Public Renderer 只消费稳定 Public contracts 与 Runtime-visible resources�
 
 替换 Public implementation 时必须保持当前 Product Requirement、Domain semantics 与 canonical URL，除非新的 Requirement / Architecture Decision明确改变它们。
 
-## 5. Backend application boundary
+## 5. 后端应用边界
 
 当前 Backend 采用 shared core + two application responsibilities：
 
@@ -169,13 +169,13 @@ CMS Server ──────────→ Generic CMS Core
 Content Migration ──→ Generic CMS Core
 ```
 
-### 5.1 Generic CMS Core
+### 5.1 通用 CMS 核心（Generic CMS Core）
 
 承担两个 application 共同需要的 domain、persistence、transaction、schema/resource/provisioning/migration primitives 与 shared configuration capability。
 
 Core 不依赖任何具体 application。
 
-### 5.2 CMS Server
+### 5.2 CMS 服务端（CMS Server）
 
 承担：
 
@@ -186,7 +186,7 @@ Core 不依赖任何具体 application。
 
 Server 不拥有 Historical Migration command lifecycle。
 
-### 5.3 Content Migration application
+### 5.3 内容迁移应用
 
 承担：
 
@@ -222,7 +222,7 @@ Architecture 只要求：
 - Historical content不进入 Generic schema migration；
 - Site one-time bootstrap 不借用 Generic schema migration numbering。
 
-## 7. Page Content Architecture
+## 7. 页面内容架构
 
 Page Content Architecture 由三个正交维度构成：
 
@@ -232,29 +232,29 @@ renderer identity
 content ownership
 ```
 
-### 7.1 Content model
+### 7.1 内容模型
 
 用于表达 primary body/data shape，例如 Rich Text、Structured 或 CMS 不持有 whole-page body 的 profile。
 
-### 7.2 Renderer identity
+### 7.2 渲染器身份
 
 Public Renderer 通过显式稳定 identity 选择 renderer。Renderer resolution 不允许依赖 Page alias、URL、DOM shape 或正文 heuristic。
 
 Unknown renderer 必须进入可诊断 unsupported state，不 fallback 到 arbitrary Rich renderer。
 
-### 7.3 Content ownership
+### 7.3 内容所有权
 
 用于表达 primary content authority，例如 operator、versioned Site Definition、engineering implementation 或 external integration。
 
 Site default 与 Runtime operator content不能同时成为当前 primary body owner。
 
-### 7.4 Structured content
+### 7.4 结构化内容
 
 Structured schema 只在结构本身属于产品语义时使用。当前已接受的 card collection 是一个 bounded schema，不因此建立 generic Page Builder / arbitrary block framework。
 
 Schema 的具体 JSON 字段、当前 representative Page、DTO 与 renderer registry implementation属于 Feature Specification / Technical / code，不在 Architecture Context 重复维护。
 
-## 8. Admin architecture
+## 8. 管理端架构
 
 依据 ADR-0001，Admin 当前采用模块化 SPA，而不是 runtime microfrontend。
 
@@ -269,11 +269,11 @@ Architecture state：
 
 当前 CMS 是 Admin 中已实现的业务模块；不存在当前 Authority 支撑的其他业务模块名称时，不预先发明它们。
 
-## 9. Public architecture
+## 9. 公开站点架构
 
 依据 ADR-0002～ADR-0004，当前 Public Architecture 是按真实 Site / Theme Boundary 划分的 Multi-entry Modular SPA。
 
-### 9.1 Main / Party boundary
+### 9.1 主站 / 党建站边界
 
 Main 与 Party 当前：
 
@@ -283,7 +283,7 @@ Main 与 Party 当前：
 - 不使用 runtime Module Federation；
 - Party 的独立呈现边界不改变其业务上属于 Main 信息架构专题入口的 Requirement。
 
-### 9.2 Shared public capability
+### 9.2 共享公开站点能力
 
 共享边界只接收已由产品事实证明稳定一致的 responsibility。
 
@@ -299,7 +299,7 @@ Site-specific Header/Banner、首页区块、内容主题、route scope 与仍�
 
 Shared 不是“代码相似就抽取”。若产品信息架构或交互出现真实差异，先 Requirement Change，不通过局部 CSS / DOM hack 静默分叉。
 
-### 9.3 Replaceability
+### 9.3 可替换性
 
 Public source不能包含 Admin CRUD responsibility，也不能要求 Public client理解 Admin-only resource route。
 
@@ -307,37 +307,37 @@ Formal CMS data、historical content、canonical URL 与 resource identity不能
 
 SSR / SSG / Hybrid / replacement framework仍是未来 architecture decision，不由当前 replaceability原则预选。
 
-## 10. Configuration ownership
+## 10. 配置所有权
 
 长期配置责任按变化来源划分：
 
-### Code / domain constants
+### 代码 / 领域常量
 
 稳定领域 identity、安全 / protocol rules、页面模板 contract、没有运营价值的算法参数。
 
-### CMS Runtime data / SiteProperty
+### CMS 运行时数据 / SiteProperty
 
 运营人员需要维护的数据和低风险站点行为参数。
 
-### CMS metadata
+### CMS 元数据
 
 低频结构 definition，需要受控但不需要独立 DB lifecycle。
 
-### Deployment configuration
+### 部署配置
 
 DB、port、storage root、instance address、安全环境参数等部署差异。
 
-### Site Definition
+### 站点定义（Site Definition）
 
 JilinJobs 版本化稳定产品定义与 stable assets。
 
-### CI / deployment variables
+### CI / 部署变量
 
 Actions、Review Environment、proxy/domain 与 runner/runtime-specific参数。
 
 “出现 literal”本身不构成配置化理由。只有变化来源 / owner 与当前持有位置不一致时才需要迁移。
 
-## 11. Resource ownership
+## 11. 资源所有权
 
 Resource ownership 分为三类：
 
@@ -357,7 +357,7 @@ Architecture invariants：
 
 具体 Runtime path、catalog format与 storage implementation属于 Technical / deployment contract。
 
-## 12. Public/Admin contract boundary
+## 12. 公开站点 / 管理端契约边界
 
 Admin 与 Public 可以消费同一 Domain，但 contract responsibility不同：
 
@@ -367,13 +367,13 @@ Admin 与 Public 可以消费同一 Domain，但 contract responsibility不同�
 - Public client不负责修复 Backend public projection缺口；
 - Frontend DTO / adapter不能成为第二份 Domain Authority。
 
-## 13. Authentication / authorization boundary
+## 13. 认证 / 授权边界
 
 当前 CMS Runtime 尚没有完整统一认证授权体系。
 
 Architecture 不通过虚构当前用户或角色填补该空白。Future auth/permission属于独立 Requirement / Architecture工作；当前 preset protection、immutable identity、resource safety等是 domain/data integrity，不等同于 role-based authorization。
 
-## 14. Verification architecture
+## 14. 验证架构
 
 验证必须按真实 ownership组合 Runtime：
 
@@ -390,7 +390,7 @@ Test fixture只建立测试场景数据，不重建第二份站点 baseline。
 
 验证策略可以规定风险层与 evidence contract，但不长期复制当前 migration file list、具体 resource counts或其他能从 Repository直接恢复的高频 inventory。
 
-## 15. Architecture invariants
+## 15. 架构不变量
 
 未来 Feature / refactor 不得在没有新的 Requirement / Architecture Authority 时破坏：
 
@@ -405,7 +405,7 @@ Test fixture只建立测试场景数据，不重建第二份站点 baseline。
 9. Generic migration capability不吸收具体 site dataset / compatibility facts；
 10. Product / Domain Authority不缓存 active implementation inventory。
 
-## 16. ADR relationship
+## 16. ADR 关系
 
 当前 ADR 保留历史决策与权衡：
 
