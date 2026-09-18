@@ -326,7 +326,7 @@ scope:
             rule_roots=[Path("docs/rules")],
             skills_root=Path("skills"),
         )
-        self.assertEqual(payload, {"status": "ok", "rules": 19, "skills": 11})
+        self.assertEqual(payload, {"status": "ok", "rules": 19, "skills": 12})
 
 
 if __name__ == "__main__":

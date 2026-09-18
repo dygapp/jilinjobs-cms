@@ -71,7 +71,7 @@ python3 tools/rule-discovery/rule_discovery.py --repo-root . discover --signals-
 
 当前 Consumer Tool 继续不采用 Rule-root Human `README.md` 保留例外；`docs/rules/**` 仍只放 discoverable Rule Markdown。该本地选择与 cloud transport 正交，不因为 upstream Architecture 支持 Human README 就自动改变。
 
-## 4. Skill Discovery Instance
+## 4. Skill 发现实例
 
 当前 Skill root：`skills/`。
 
@@ -79,7 +79,7 @@ Skill 类型 contract：`docs/architecture/skill.md`。
 
 ordinary Agent 使用 Agent Skills 原生 discovery，根据 `SKILL.md` 的 `name` / `description` 与当前责任按需加载。Skill corpus 自身是当前 inventory；本 Profile 不复制 Skill 清单和数量。
 
-`external-operation` 与 `review-change` 作为独立 Procedure 保留在 Consumer-local Skill corpus；其存在来自本 Consumer 已确认的 Trigger → Procedure → Output → Exit / Escalation 责任，不是为了与 upstream inventory 数量对齐。
+`external-operation`、`human-review` 与 `review-change` 作为独立 Procedure 保留在 Consumer-local Skill corpus；其存在来自本 Consumer 已确认的 Trigger → Procedure → Output → Exit / Escalation 责任，不是为了与 upstream inventory 数量对齐。`human-review` 服务普通 Consumer 软件项目的内容评审与权威回写，`review-change` 服务独立 Repository 变更复核，二者互不替代。
 
 ## 5. Architecture Instance
 

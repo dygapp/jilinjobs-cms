@@ -22,7 +22,7 @@ Human Review Finding
 → Ready to return / Integration Gate
 ```
 
-本 Method 不替代 `method:ai-development` 的 Feature lifecycle，也不授予 merge / deploy 权限。
+本 Method 不替代 `method:ai-development` 的 Feature lifecycle，也不授予 merge / deploy 权限。评审材料准备、人工反馈语义分类与长期事实回写由 `skill:human-review` / `architecture:human-review` 负责；本 Method 只拥有已经形成 Review Findings 后的批量修复与重新验证循环。
 
 ## 反馈批次
 

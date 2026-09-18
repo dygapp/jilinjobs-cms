@@ -16,6 +16,7 @@
 - `consumer.md`
 - `method.md`
 - `requirement-authority.md` — Requirement Human Navigation / Authority Index / Fact Authority / Analysis Workspace 的 semantic ownership 与 lifecycle；
+- `human-review.md` — Consumer 软件项目人工评审材料、反馈回写、派生视图与独立变更复核之间的长期边界；
 - `project-knowledge.md`
 - `rule.md`
 - `rule-discovery.md`
