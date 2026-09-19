@@ -42,9 +42,21 @@ Restore Current Consumer
 
 如果 accepted delta 改变 Method selection、Skill entry、Rule root / Tool、Human / Agent entry 或其他 local instance pointer，更新 `docs/project/project-capability-profile.md`。不得复制 upstream Project Capability Profile。
 
+如果 accepted delta 改变 Tool contract、runtime assumption、Rule Discovery contract、verification behavior 或 executable path requirement，还必须重新评估并刷新受影响的 Consumer-local executable instance，包括 obligation、canonical locator、direct execution path、automated alternate path、result / Evidence recovery 与 fail-closed behavior。不得只更新 upstream provenance 或 Tool source 而保留已经失真的运行路径。
+
 ## 定向重新验证（Targeted Revalidation）
 
-按真实 semantic delta 选择 Method transition、Skill behavior、Rule Discovery、local policy、runtime entry、upstream decoupling 与受影响工程行为的当前验证；旧 Evidence 不支撑已经变化的新 claim。
+按真实 semantic delta 选择当前验证，至少覆盖实际受影响的：
+
+- Method transition、Skill behavior、Rule Discovery 与 local policy；
+- local capability profile / runtime entry 与 ordinary-runtime upstream decoupling；
+- direct execution path 与 automated alternate path；
+- result / Evidence recovery、exact subject 与 terminal state；
+- declared path 不可用或 locator 破坏时的 fail-closed behavior；
+- Fresh Runtime 仅依赖 Consumer-local Authority 恢复受影响路径的行为；
+- 受影响工程 / 产品行为。
+
+旧 Evidence 不支撑已经变化的新 claim。
 
 ## 关闭新的已评估基线（Close New Evaluated Baseline）
 
