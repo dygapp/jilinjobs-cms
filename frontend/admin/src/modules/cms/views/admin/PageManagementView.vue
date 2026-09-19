@@ -48,6 +48,7 @@ const selectedGroupName = computed(() => {
 const editingPageModel = computed(() => editingPage.value == null ? null : pages.value.find(page => page.id === editingPage.value) || null)
 const editingGroupModel = computed(() => editingGroup.value == null ? null : groups.value.find(group => group.id === editingGroup.value) || null)
 const structuredEditing = computed(() => pageForm.contentModel === 'STRUCTURED')
+const fixedExternalEditing = computed(() => pageForm.contentModel === 'NONE' && pageForm.contentOwner === 'EXTERNAL' && pageForm.rendererKey !== 'EMBED_PLACEHOLDER')
 const structuredCards = computed(() => pageForm.structuredContent?.items ?? [])
 
 const groupName = (id: number | null) => id == null ? '独立单页' : groups.value.find(g => g.id === id)?.name || `#${id}`
@@ -81,6 +82,23 @@ function structuredPageDraft(row:CmsPage):PageDraft{
   }
 }
 
+function fixedExternalPageDraft(row:CmsPage):PageDraft{
+  return {
+    groupId:row.groupId,
+    alias:row.alias,
+    name:row.name,
+    bodyHtml:'',
+    contentModel:row.contentModel,
+    rendererKey:row.rendererKey,
+    contentOwner:row.contentOwner,
+    structuredContent:null,
+    renderMode:null,
+    embedUrl:null,
+    sortOrder:row.sortOrder,
+    enabled:row.enabled,
+  }
+}
+
 async function refresh() {
   loading.value = true
   try {
@@ -104,6 +122,8 @@ async function openPage(row?: CmsPage) {
     Object.assign(pageForm,legacyPageDraft(defaultGroupId))
   }else if(row.contentModel==='STRUCTURED'){
     Object.assign(pageForm,structuredPageDraft(row))
+  }else if(row.contentModel==='NONE'&&row.contentOwner==='EXTERNAL'&&row.renderMode==null){
+    Object.assign(pageForm,fixedExternalPageDraft(row))
   }else{
     Object.assign(pageForm,{
       groupId: row.groupId,
@@ -230,6 +250,7 @@ async function remove(row: CmsPage) {
 
 function pageContentName(page:CmsPage) {
   if(page.contentModel==='STRUCTURED')return '结构化卡片'
+  if(page.contentModel==='NONE'&&page.contentOwner==='EXTERNAL'&&page.renderMode==null)return '固定外部集成'
   return page.renderMode === 'RICH_TEXT' ? '富文本' : page.renderMode === 'EMBED_PLACEHOLDER' ? '外部嵌入占位' : page.renderMode === 'INTERNAL_STATIC' ? '站内特殊页面' : '不支持'
 }
 
@@ -296,11 +317,16 @@ function message(error: unknown) {
 
     <el-dialog v-model="pageVisible" :title="editingPage == null ? '新增单页' : '编辑单页'" width="920px" destroy-on-close>
       <el-form label-width="110px">
-        <el-form-item label="单页名称" required><el-input v-model="pageForm.name" /></el-form-item>
-        <el-form-item label="单页分组"><el-select v-model="pageForm.groupId" clearable data-testid="page-group-select" style="width:100%" placeholder="独立单页"><el-option v-for="group in groups" :key="group.id" :label="group.name" :value="group.id" /></el-select></el-form-item>
+        <el-form-item label="单页名称" required><el-input v-model="pageForm.name" :disabled="fixedExternalEditing" /></el-form-item>
+        <el-form-item label="单页分组"><el-select v-model="pageForm.groupId" :disabled="fixedExternalEditing" clearable data-testid="page-group-select" style="width:100%" placeholder="独立单页"><el-option v-for="group in groups" :key="group.id" :label="group.name" :value="group.id" /></el-select></el-form-item>
         <el-form-item label="公开标识" required><el-input v-model="pageForm.alias" :disabled="Boolean(editingPageModel?.preset)" placeholder="用于公开页面地址" /><div v-if="editingPageModel?.preset" data-testid="preset-page-alias-hint" style="color:#909399;font-size:12px">预置单页的公开标识不可修改。</div></el-form-item>
 
-        <template v-if="structuredEditing">
+        <template v-if="fixedExternalEditing">
+          <el-alert data-testid="fixed-external-page-readonly" title="该页面由固定外部业务集成持有，仅供识别，不能在 CMS 中修改目标地址或正文。" type="info" :closable="false" show-icon />
+          <el-form-item label="内容责任"><el-tag type="info">外部系统</el-tag><span class="structured-contract-hint">Renderer：{{ pageForm.rendererKey }}</span></el-form-item>
+        </template>
+
+        <template v-else-if="structuredEditing">
           <el-form-item label="内容模型"><el-tag type="info">结构化卡片</el-tag><span class="structured-contract-hint">Renderer：{{ pageForm.rendererKey }}；正文由运行时运营数据维护</span></el-form-item>
           <el-form-item label="卡片内容" required>
             <div class="structured-card-editor" data-testid="structured-card-editor">
@@ -333,10 +359,10 @@ function message(error: unknown) {
           </template>
         </template>
 
-        <el-form-item label="排序"><el-input-number v-model="pageForm.sortOrder" /></el-form-item>
-        <el-form-item label="状态"><el-switch v-model="pageForm.enabled" /></el-form-item>
+        <el-form-item label="排序"><el-input-number v-model="pageForm.sortOrder" :disabled="fixedExternalEditing" /></el-form-item>
+        <el-form-item label="状态"><el-switch v-model="pageForm.enabled" :disabled="fixedExternalEditing" /></el-form-item>
       </el-form>
-      <template #footer><el-button @click="pageVisible = false">取消</el-button><el-button data-testid="save-page" type="primary" :loading="saving" @click="savePage">保存</el-button></template>
+      <template #footer><el-button @click="pageVisible = false">{{ fixedExternalEditing ? '关闭' : '取消' }}</el-button><el-button v-if="!fixedExternalEditing" data-testid="save-page" type="primary" :loading="saving" @click="savePage">保存</el-button></template>
     </el-dialog>
   </main>
 </template>

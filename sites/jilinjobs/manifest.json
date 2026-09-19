@@ -1,7 +1,7 @@
 {
   "packageId": "jilinjobs",
   "schemaVersion": 2,
-  "version": "0.6.0-structured-page-cards",
+  "version": "0.7.0-hui-employment-integration",
   "structure": [
     {
       "type": "columns",
@@ -16,7 +16,7 @@
     {
       "type": "pages",
       "path": "structure/pages.json",
-      "sha256": "86891f1e331b7540be4003b222c5e77f7b36123889aaf91028ae8d26c3541c74"
+      "sha256": "6b04e0a75c14fc9993124e800d18903d1c58e24e2b53e063b880368605e2e1be"
     },
     {
       "type": "navigation-locations",

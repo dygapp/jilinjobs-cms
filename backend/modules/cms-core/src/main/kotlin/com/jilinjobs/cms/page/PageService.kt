@@ -37,6 +37,9 @@ class PageService(
     @Transactional fun updateContent(id:Long,draft:PageContentDraft):CmsPage {
         val current=mapper.findPageById(id)?:throw PageNotFoundException("单页不存在：$id")
         val currentModel=current.model()
+        if (currentModel.contentOwner == PageContentOwner.EXTERNAL && currentModel.rendererKey != PageRendererKey.EMBED_PLACEHOLDER) {
+            throw PageValidationException("固定外部页面内容由工程集成持有，不能通过普通正文编辑修改")
+        }
         if (draft.renderMode != null && draft.renderMode != currentModel.renderMode) {
             throw PageValidationException("正文编辑不能切换 Renderer contract")
         }
@@ -149,7 +152,12 @@ class PageService(
             PageContentModel.RICH_TEXT -> if(rendererKey!=PageRendererKey.RICH_TEXT || contentOwner!=PageContentOwner.OPERATOR) throw PageValidationException("RICH_TEXT 必须使用 generic Rich renderer 且由 OPERATOR 持有正文")
             PageContentModel.STRUCTURED -> if(contentOwner!=PageContentOwner.OPERATOR || rendererKey in setOf(PageRendererKey.RICH_TEXT,PageRendererKey.EMBED_PLACEHOLDER,PageRendererKey.INTERNAL_STATIC)) throw PageValidationException("STRUCTURED 必须使用显式 Structured renderer 且由 OPERATOR 持有正文")
             PageContentModel.NONE -> {
-                val valid=(rendererKey==PageRendererKey.EMBED_PLACEHOLDER&&contentOwner==PageContentOwner.EXTERNAL)||(rendererKey==PageRendererKey.INTERNAL_STATIC&&contentOwner==PageContentOwner.ENGINEERING)
+                val externalRenderer = contentOwner == PageContentOwner.EXTERNAL && rendererKey !in setOf(
+                    PageRendererKey.RICH_TEXT,
+                    PageRendererKey.INTERNAL_STATIC,
+                    PageRendererKey.JILINJOBS_GUIDE_CARDS,
+                )
+                val valid=externalRenderer||(rendererKey==PageRendererKey.INTERNAL_STATIC&&contentOwner==PageContentOwner.ENGINEERING)
                 if(!valid) throw PageValidationException("NONE content model 当前仅支持显式 External / Engineering compatibility profile")
             }
         }
@@ -179,6 +187,9 @@ class PageService(
             PageContentModel.NONE -> {
                 if(rendererKey==PageRendererKey.INTERNAL_STATIC && !normalizedUrl.isNullOrBlank() && !normalizedUrl.startsWith("/")) throw PageValidationException("站内静态页面必须使用本站路径")
                 if(structuredContent!=null) throw PageValidationException("NONE content model 不允许 structuredContent")
+                if(contentOwner==PageContentOwner.EXTERNAL && rendererKey!=PageRendererKey.EMBED_PLACEHOLDER && (bodyHtml.isNotBlank() || normalizedUrl!=null)) {
+                    throw PageValidationException("显式外部 Renderer 的正文和目标地址由工程实现持有")
+                }
                 NormalizedContent(bodyHtml,null,null,normalizedUrl)
             }
         }

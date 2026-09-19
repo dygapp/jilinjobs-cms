@@ -6,6 +6,8 @@ import { getPublicAdvertisementSlot, type Advertisement } from '../../api/advert
 import { listPublicArticles, type PublicArticleSummary } from '../../api/articles'
 import { getPublicColumnByAlias } from '../../api/columns'
 import { getPublicCmsListByCode, listPublicCmsListsByGroup, publicListImageUrl, type CmsListItem } from '../../api/lists'
+import HuiEmploymentFrame from '../../components/HuiEmploymentFrame.vue'
+import { HUI_EMPLOYMENT_HOME_TARGETS } from '../../integrations/huiEmployment'
 import { setPageMeta } from '../../seo'
 
 type SiteLinkGroup = { name: string; links: CmsListItem[] }
@@ -93,18 +95,6 @@ function carouselHref(item: CmsListItem) {
 function carouselImage(item: CmsListItem) {
   return publicListImageUrl(item) || ''
 }
-
-const calendar = computed(() => {
-  const today = new Date()
-  const year = today.getFullYear()
-  const month = today.getMonth()
-  const start = new Date(year, month, 1).getDay()
-  const days = new Date(year, month + 1, 0).getDate()
-  const cells: Array<number | null> = Array.from({ length: start }, () => null)
-  for (let day = 1; day <= days; day += 1) cells.push(day)
-  while (cells.length % 7) cells.push(null)
-  return { year, month: month + 1, today: today.getDate(), cells }
-})
 
 onMounted(async () => {
   try {
@@ -231,11 +221,12 @@ onUnmounted(() => {
       </section>
 
       <section class="home-secondary-row">
-        <div class="home-calendar" aria-label="招聘日历">
-          <div class="calendar-selects"><span>{{ calendar.year }}年</span><span>{{ calendar.month }}月</span></div>
-          <div class="calendar-week"><span v-for="name in ['一','二','三','四','五','六','日']" :key="name">{{ name }}</span></div>
-          <div class="calendar-days"><span v-for="(day, index) in calendar.cells" :key="index" :class="{ today: day === calendar.today, empty: day == null }">{{ day || '' }}</span></div>
-        </div>
+        <HuiEmploymentFrame
+          :src="HUI_EMPLOYMENT_HOME_TARGETS.calendar.url"
+          :title="HUI_EMPLOYMENT_HOME_TARGETS.calendar.title"
+          variant="calendar"
+          test-id="hui-employment-home-calendar"
+        />
 
         <section class="home-panel employment-panel news-column">
           <header><h2>就业动态</h2><router-link to="/column/employment-news">更多 &gt;</router-link></header>
@@ -266,10 +257,26 @@ onUnmounted(() => {
         <div v-else class="home-promo-banner" :data-testid="`home-promo-ad-${activePromo.id}`"><img :src="activePromo.imagePath" :alt="activePromo.title"></div>
       </template>
 
-      <section class="home-section original-section latest-recruitment"><header class="section-title"><h2>最新招聘</h2></header><div class="external-placeholder iframe-placeholder"><span>慧就业招聘信息区域</span></div></section>
+      <section class="home-section original-section latest-recruitment">
+        <header class="section-title"><h2>最新招聘</h2></header>
+        <HuiEmploymentFrame
+          :src="HUI_EMPLOYMENT_HOME_TARGETS.latestRecruitment.url"
+          :title="HUI_EMPLOYMENT_HOME_TARGETS.latestRecruitment.title"
+          variant="home-wide"
+          test-id="hui-employment-home-latest-recruitment"
+        />
+      </section>
 
       <section class="home-recruitment-row">
-        <div class="external-placeholder recruitment-stream"><span>招聘与宣讲内容区域</span></div>
+        <section class="home-live-courses">
+          <header class="home-integrated-heading"><h2>直播课程</h2><router-link to="/page/live-course">更多 &gt;</router-link></header>
+          <HuiEmploymentFrame
+            :src="HUI_EMPLOYMENT_HOME_TARGETS.liveCourses.url"
+            :title="HUI_EMPLOYMENT_HOME_TARGETS.liveCourses.title"
+            variant="home-compact"
+            test-id="hui-employment-home-live-courses"
+          />
+        </section>
         <section class="home-panel recruitment-panel news-column">
           <header><h2>招聘公告</h2><router-link to="/column/recruitment-announcement">更多 &gt;</router-link></header>
           <ul><li v-for="article in recruitmentArticles" :key="article.id"><a :data-testid="`recruitment-external-${article.id}`" :href="article.externalUrl!" target="_blank" rel="noopener noreferrer">{{ article.title }}</a><time v-if="article.publishDate">{{ article.publishDate }}</time></li><li v-if="!recruitmentArticles.length" class="empty-item">暂无已发布内容</li></ul>

@@ -45,6 +45,23 @@ fun main() {
         }
         require(countCodedPresetNavigations(dataSource) == 40) { "Fresh Site Package 必须直接建立 40 条 coded preset navigation" }
 
+        restoreHuiEmploymentLegacyPlaceholders(dataSource)
+        val huiEmploymentAdoption = provisioner.apply(packageRoot)
+        require(huiEmploymentAdoption.created == 0 && huiEmploymentAdoption.updated == 6 && huiEmploymentAdoption.unchanged == 92) {
+            "慧就业占位页面受控升级结果异常：$huiEmploymentAdoption"
+        }
+        require(
+            huiEmploymentAdoption.adoptedPageContent.toSet() == setOf(
+                "<root>:live-course",
+                "jobs:positions",
+                "jobs:recruitment",
+                "jobs:jobfair",
+                "jobs:presentation",
+                "jobs:jilin",
+            ),
+        ) { "慧就业占位页面受控升级清单异常：$huiEmploymentAdoption" }
+        verifyHuiEmploymentRenderers(dataSource)
+
         insertStableStructureOperatorNavigation(dataSource, "fresh-operator")
         val freshSecond = provisioner.apply(packageRoot)
         require(freshSecond.created == 0 && freshSecond.updated == 0 && freshSecond.unchanged == 98) {
@@ -110,6 +127,58 @@ private fun mutateStableNavigation(dataSource: DataSource) {
         connection.prepareStatement(
             "UPDATE cms_navigation SET parent_id=(SELECT p.id FROM (SELECT id FROM cms_navigation WHERE code='main-guide') p),name='已改名',position='HOME_QUICK',target_type='LINK',target_column_id=NULL,target_url='https://changed.invalid/',sort_order=999 WHERE code='main-policy'",
         ).use { it.executeUpdate() }
+    }
+}
+
+private fun restoreHuiEmploymentLegacyPlaceholders(dataSource: DataSource) {
+    val legacyPages = listOf(
+        Triple("live-course", null, "<p>直播课程由外部平台提供，本轮保留页面入口与展示占位。</p>"),
+        Triple("positions", "jobs", "<p>在招职位由慧就业等外部平台提供，本轮保留嵌入区域占位。</p>"),
+        Triple("recruitment", "jobs", "<p>招聘简章由慧就业等外部平台提供，本轮保留嵌入区域占位。</p>"),
+        Triple("jobfair", "jobs", "<p>双选会由慧就业等外部平台提供，本轮保留嵌入区域占位。</p>"),
+        Triple("presentation", "jobs", "<p>现场宣讲由慧就业等外部平台提供，本轮保留嵌入区域占位。</p>"),
+        Triple("jilin", "jobs", "<p>留省就业由慧就业等外部平台提供，本轮保留嵌入区域占位。</p>"),
+    )
+    dataSource.connection.use { connection ->
+        legacyPages.forEach { (alias, groupAlias, bodyHtml) ->
+            val sql = if (groupAlias == null) {
+                "UPDATE cms_page SET body_html=?,content_model='NONE',renderer_key='EMBED_PLACEHOLDER',content_owner='EXTERNAL',structured_payload=NULL,embed_url=NULL WHERE alias=? AND group_id IS NULL"
+            } else {
+                "UPDATE cms_page SET body_html=?,content_model='NONE',renderer_key='EMBED_PLACEHOLDER',content_owner='EXTERNAL',structured_payload=NULL,embed_url=NULL WHERE alias=? AND group_id=(SELECT id FROM cms_page_group WHERE alias=?)"
+            }
+            connection.prepareStatement(sql).use { statement ->
+                statement.setString(1, bodyHtml)
+                statement.setString(2, alias)
+                if (groupAlias != null) statement.setString(3, groupAlias)
+                require(statement.executeUpdate() == 1) { "慧就业旧占位页面不存在：${groupAlias ?: "<root>"}:$alias" }
+            }
+        }
+    }
+}
+
+private fun verifyHuiEmploymentRenderers(dataSource: DataSource) {
+    val expected = mapOf(
+        "live-course" to "HUI_EMPLOYMENT_LIVE_COURSES",
+        "positions" to "HUI_EMPLOYMENT_POSITIONS",
+        "recruitment" to "HUI_EMPLOYMENT_RECRUITMENT",
+        "jobfair" to "HUI_EMPLOYMENT_JOB_FAIR",
+        "presentation" to "HUI_EMPLOYMENT_PRESENTATION",
+        "jilin" to "HUI_EMPLOYMENT_JILIN",
+    )
+    dataSource.connection.use { connection ->
+        expected.forEach { (alias, rendererKey) ->
+            connection.prepareStatement("SELECT body_html,content_model,renderer_key,content_owner,embed_url FROM cms_page WHERE alias=?").use { statement ->
+                statement.setString(1, alias)
+                statement.executeQuery().use { result ->
+                    require(result.next()) { "慧就业页面不存在：$alias" }
+                    require(result.getString("body_html").isEmpty())
+                    require(result.getString("content_model") == "NONE")
+                    require(result.getString("renderer_key") == rendererKey)
+                    require(result.getString("content_owner") == "EXTERNAL")
+                    require(result.getString("embed_url") == null)
+                }
+            }
+        }
     }
 }
 
