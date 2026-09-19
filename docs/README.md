@@ -40,6 +40,7 @@
 - Requirement Authority Index：`docs/requirements/index.md`
 - Product Requirement：`docs/requirements/information-publishing.md`
 - CMS Domain Requirement：`docs/requirements/cms-domain.md`
+- 慧就业公共网站集成 Requirement：`docs/requirements/hui-employment-integration.md`
 - CMS 长期 Architecture：`docs/architecture/cms-architecture.md`
 - Current Specifications：`docs/specifications/README.md`
 - Backend Technical：`docs/technical/backend-service.md`
@@ -51,7 +52,7 @@
 - JilinJobs Site Definition workspace：`sites/jilinjobs/**`
 - Historical Migration workspace：`data-migrations/**`
 
-Requirement Index 只拥有 locator / relation；长期 Product / Domain fact 仍由两个 canonical fact owner 持有。历史同名三件套、完成态 Planning、旧 READY / EU / migration inventory 不参与 ordinary Fresh Context。
+Requirement Index 只拥有 locator / relation；长期 Product / Domain / 外部业务集成事实由 Index 指向的当前 canonical fact owner 持有。历史同名三件套、完成态 Planning、旧 READY / EU / migration inventory 不参与 ordinary Fresh Context。
 
 ## 来源与证据角色
 

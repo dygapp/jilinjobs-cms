@@ -21,15 +21,17 @@ docs/requirements/
 ├── index.md                   # Requirement Authority Index；只拥有 locator / relation
 ├── information-publishing.md # Product Requirement fact owner
 ├── cms-domain.md              # CMS Domain Requirement fact owner
+├── hui-employment-integration.md # 慧就业外部业务集成 Requirement fact owner
 └── archive/                   # superseded / historical requirement evidence
 ```
 
-当前 Repository Authority 没有证据支持按页面、菜单、前端应用、数据库对象或历史 Feature 再拆更多长期 Requirement owner。多个 Requirement Capability 可以由同一个语义一致的 fact owner 承担，并由 `index.md` 定位到稳定章节；是否未来物理拆分，必须由真实 ownership pressure 驱动。
+当前慧就业集成因同时拥有独立的公共网站业务范围、外部系统页面地址与业务编号契约、技术替换不变量和长期追溯需求，形成独立 Requirement fact owner。该拆分来自真实 semantic ownership pressure，不建立“一个页面 / 菜单 = 一个 Requirement 文件”的机械规则；其他 Requirement Capability 仍优先由语义一致的现有 owner 承担，并由 `index.md` 定位到稳定章节。
 
 ## Fact owner 边界
 
 - `information-publishing.md`：产品目标、用户、范围、长期产品能力、Main / Party 业务定位、canonical public contract、跨 Capability 产品级质量与验收不变量；
 - `cms-domain.md`：CMS business objects、identity、state / lifecycle、cross-object rule、content ownership、stable / Runtime lifecycle、Historical Migration domain semantics 与 domain failure invariants。
+- `hui-employment-integration.md`：公共网站与慧就业之间的当前嵌入范围、完整页面地址、业务分类编号 / 业务编号映射、责任边界、技术替换不变量，以及未纳入当前交付范围但需长期保留的已确认历史映射。
 
 同一长期事实只能有一个 primary fact owner。Product 文档可以引用 Domain rule 的业务结果，但不得复制状态机、identity policy、fingerprint 等 Domain 正文；Domain 文档可以说明 Product scope 对对象模型的约束，但不得重新定义 Product Goal、用户或公开站定位。
 

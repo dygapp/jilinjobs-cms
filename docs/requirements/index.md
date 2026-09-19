@@ -3,7 +3,7 @@ id: requirement-authority-index
 title: 需求权威索引（Requirement Authority Index）
 type: requirement-index
 status: active
-updated_at: 2026-09-16
+updated_at: 2026-09-19
 ---
 
 # 需求权威索引（Requirement Authority Index）
@@ -21,6 +21,7 @@ updated_at: 2026-09-16
 | Product Goal / Scope / Actors | 产品为什么存在、面向谁、当前包含和排除什么 | `information-publishing.md` §2～§4 |
 | CMS content operations | 运营人员长期能够维护哪些内容与运营对象，以及这些能力产生什么业务结果 | `information-publishing.md` §5.1～§5.2 |
 | Main public delivery | Main 首页、栏目、文章、Page、固定业务 seam 与稳定公开访问习惯 | `information-publishing.md` §5.3、§6 |
+| 慧就业公共网站集成 | 首页就业日历、最新招聘、直播课程，以及招聘信息 / 直播课程二级页面与慧就业页面之间的地址映射、业务编号契约和外部系统边界 | `hui-employment-integration.md` §2～§15；历史已确认但未启用映射见附录 A |
 | Party product positioning | “中心党建”的业务定位、内容范围、专题入口与公开边界 | `information-publishing.md` §5.4、§6 |
 | Canonical public contract | Main / Party 稳定公开 URL 与 implementation-independent public identity | `information-publishing.md` §6 |
 | Product-level quality / NFR | 响应式、基础可访问性、安全呈现、可诊断失败、替换实现时保持产品语义等跨 Capability 要求 | `information-publishing.md` §9 |
@@ -68,6 +69,7 @@ Repository Authority
 - 修改 Party 内容入口或 canonical URL → `information-publishing.md` Party / URL sections，再按需读取 Domain；
 - 修改 历史迁移 fingerprint / accepted scope → `cms-domain.md` 历史迁移 section，再读取 `data-migrations/**` 的 concrete canonical evidence；
 - 修改跨站响应式 /安全呈现要求 → `information-publishing.md` 产品级质量 section，再进入对应 Specification / Verification。
+- 修改慧就业嵌入范围、完整页面地址、业务分类编号 / 业务编号映射或外部系统边界 → `hui-employment-integration.md`；只有需要确认 Main 上层产品范围时再读取 `information-publishing.md`。
 
 如果 Index 不能唯一定位 owner、多个 Current owner 对同一长期事实给出不兼容结论，或真实事实不属于任何现有 owner，必须 失败关闭，返回 `method:requirement-baseline-establishment` / 人工权威，而不是在下游文档中静默选择。
 

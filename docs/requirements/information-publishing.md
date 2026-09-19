@@ -21,7 +21,8 @@ relations:
     - docs/specifications/page-content.md
     - docs/specifications/rich-text-authoring.md
     - docs/specifications/content-migration.md
-updated_at: 2026-09-16
+    - docs/requirements/hui-employment-integration.md
+updated_at: 2026-09-19
 ---
 
 # 信息发布与网站服务产品需求
@@ -95,7 +96,7 @@ CMS business object、stable/source identity、state / lifecycle、content owner
 - Production deployment topology、正式发布平台或部署体系重构；
 - 没有证据支撑的 Party-specific CMS model 或独立后台；
 - 因未来可能替换前端而预先建设无证据的插件框架、Repository split 或独立部署；
-- 未经独立 Feature Requirement / Specification 授权的真实第三方 iframe / Runtime integration。
+- 除已由独立 Requirement 明确授权的慧就业公共网站集成外，未经独立 Feature Requirement / Specification 授权的其他真实第三方 iframe / Runtime integration。
 
 ## 5. 长期产品能力
 
@@ -122,9 +123,11 @@ Main 继续以吉林省高等学校毕业生就业信息网已经确认的信息
 - INTERNAL Article 详情；
 - Page 与 PageGroup member；
 - 固定第三方业务集成入口 / seam；
-- 主导航、快捷入口、轮播、资讯区域、招聘日历、招聘活动宣传、招聘公告、业务指南、网站链接与 Footer 等已确认页面能力。
+- 主导航、快捷入口、轮播、资讯区域、就业日历、招聘活动宣传、招聘公告、业务指南、网站链接与 Footer 等已确认页面能力。
 
 需要持续运营的数据由 CMS 正式业务对象提供；无需运营维护的固定页面结构、装饰和第三方 seam 可以继续由工程实现承担。一旦真实需求要求运营维护，必须通过 Requirement Change 决定是否进入 CMS，而不是从已有页面结构反推配置需求。
+
+慧就业在 Main 中的具体嵌入区域、完整页面地址、业务分类编号 / 业务编号映射、外部系统责任边界与技术替换不变量由 `docs/requirements/hui-employment-integration.md` 持有；本文只持有其作为 Main 固定第三方业务集成能力的上层产品定位，不复制具体集成契约。
 
 ### 5.4 中心党建（Party）
 

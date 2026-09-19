@@ -93,7 +93,7 @@ Current 文档的中文主语言、结构标题和本地引用完整性由 `scri
 
 1. `AGENTS.md`：Repository Governance、Authority Boundary 与工作规则；
 2. `README.md`：稳定项目目标、项目边界摘要与入口；
-3. `docs/requirements/information-publishing.md` 与 `docs/requirements/cms-domain.md`：当前 Product / Domain Requirement Authority；
+3. `docs/requirements/index.md` 定位的当前 Requirement Authority（当前包括 `docs/requirements/information-publishing.md`、`docs/requirements/cms-domain.md` 与 `docs/requirements/hui-employment-integration.md`）：Product / Domain / 外部业务集成长期事实；
 4. 后续依据以上权威正式形成的 Specification、Architecture、Decision、Project Roadmap、Consumer-local Method 等项目产物（Artifact）；
 5. Code 与 Tests：用于证明当前实现状态，不得反向发明产品需求；
 6. 会话历史（Conversation History）、临时计划和 Agent reasoning：均不构成项目权威。
