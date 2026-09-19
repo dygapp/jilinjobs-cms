@@ -1,10 +1,8 @@
 # 当前工作（当前工作）
 
-Current Ready Execution Unit：**EU-56 — 慧就业公共网站固定 iframe 集成**。
+Current Ready Execution Unit：**NONE**。
 
-当前工作 artifact：`eu56-hui-employment-integration.md`。
-
-Readiness：`PASS`。Controlling Issue：#176。执行分支：`feature/eu56-hui-employment-integration`。
+当前没有 active / Ready Execution Unit。`docs/work/current/` 只负责当前执行生命周期定位，不复制已完成 Feature 的产品结果、长期 Requirement / Architecture、Historical Migration 状态、Roadmap candidate 或 GitHub 瞬时 Evidence。
 
 已完成 Execution Unit 的历史证据按需从 `../archive/` 定向读取；其稳定产品语义必须从当前 Requirement / Domain / Architecture / Specification / Technical 规范语义所有者 恢复，而不是从完成态 Work artifact 反向建立第二份 Authority。
 

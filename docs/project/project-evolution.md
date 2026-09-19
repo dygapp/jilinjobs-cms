@@ -43,6 +43,12 @@ Main Article snapshot 的当前 canonical data / provenance 由 `data-migrations
 
 这些结果均已完成 Execute / Post-Integration closure；当前长期语义分别由现行 Requirement / Domain、Architecture、Specification 与 Technical owner 持有，不从历史 Work artifact 直接恢复新的 Execute Authority。
 
+### Issue #176 / EU-56 — 慧就业固定业务集成
+
+完成 Main 首页就业日历、最新招聘、直播课程三个独立区域，以及五个招聘信息 PageGroup 成员和直播课程二级页面的固定 iframe 集成。业务地址由 Requirement 唯一持有并投射为 Public 工程常量与稳定 renderer identity；Site Definition 通过受控 fingerprint 升级六个既有占位 Page，Generic CMS 保持 `NONE + EXTERNAL` 边界，Admin 仅提供只读诊断，没有新增地址配置、数据库 Schema 或运营内容责任。
+
+统一 iframe 承载补齐延迟激活、加载、超时、失败隔离与原位重试；Public、Admin、Backend、Site Package、迁移兼容与集成浏览器验证均在完成态 Head 通过。当前长期语义由慧就业 Requirement、Public / Page Content Specification 与 Public Technical owner 持有，详细实施和验证证据归档于 EU-56 Work artifact、Issue #176、PR #177 与 GitHub Actions。
+
 ## Consumer Method / Capability 演进
 
 ### V3-08 Track B 采用
