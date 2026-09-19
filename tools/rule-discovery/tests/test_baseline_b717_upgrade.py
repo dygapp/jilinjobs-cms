@@ -34,7 +34,7 @@ class BaselineB717UpgradeContractTests(unittest.TestCase):
         self.assertNotIn("high-cost-runtime-activation.md", root_readme)
         self.assertNotIn("read-only-state-inspection.md", current_work)
         self.assertNotIn("high-cost-runtime-activation.md", current_work)
-        self.assertIn("不发布固定 Rule locator", root_readme)
+        self.assertIn("不发布固定 Rule 路径", root_readme)
         self.assertIn("不发布固定 Rule 路径", current_work)
 
     def test_executable_instance_obligation_is_consumer_local(self):
@@ -42,9 +42,9 @@ class BaselineB717UpgradeContractTests(unittest.TestCase):
         upgrade = self.read("docs/methods/consumer-upgrade.md")
         profile = self.read("docs/project/project-capability-profile.md")
         self.assertIn("automated alternate path", consumer)
-        self.assertIn("result / Evidence recovery", consumer)
+        self.assertIn("Evidence recovery", consumer)
         self.assertIn("automated alternate path", upgrade)
-        self.assertIn("result / Evidence recovery", upgrade)
+        self.assertIn("Evidence recovery", upgrade)
         self.assertIn("executable capability instance closure", profile)
 
     def test_current_technical_authority_does_not_depend_on_historical_g6_gate(self):
@@ -86,6 +86,19 @@ class BaselineB717UpgradeContractTests(unittest.TestCase):
         self.assertIn("## 权威链语义复核", review_skill)
         self.assertIn("human-review", profile)
         self.assertIn("review-change", profile)
+
+    def test_human_review_is_reachable_from_adopted_methods_and_has_lifecycle_owner(self):
+        architecture = self.read("docs/architecture/human-review.md")
+        skill = self.read("skills/human-review/SKILL.md")
+        ai = self.read("docs/methods/ai-development.md")
+        arch_method = self.read("docs/methods/architecture-clarification.md")
+        requirement = self.read("docs/methods/requirement-baseline-establishment.md")
+        for heading in ["## 生命周期", "### 产生与触发", "### 使用方", "### 持久化、更新与退出", "### 取代与升级"]:
+            self.assertIn(heading, architecture)
+        self.assertIn("architecture:human-review", skill)
+        self.assertIn("skill:human-review", ai)
+        self.assertIn("skill:human-review", arch_method)
+        self.assertIn("skill:human-review", requirement)
 
     def test_terminology_governance_has_no_central_glossary_by_default(self):
         architecture = self.read("docs/architecture/requirement-authority.md")
