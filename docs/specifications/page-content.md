@@ -3,14 +3,15 @@ id: specification-page-content
 title: 单页内容模型与结构化页面规格
 type: specification
 status: accepted
-version: "V3.0"
+version: "V3.1"
 relations:
   requirements:
     - docs/requirements/information-publishing.md
     - docs/requirements/cms-domain.md
+    - docs/requirements/hui-employment-integration.md
   architecture:
     - docs/architecture/cms-architecture.md
-updated_at: 2026-09-16
+updated_at: 2026-09-19
 ---
 
 # 单页内容模型与结构化页面规格
@@ -47,7 +48,7 @@ Structured payload 的 identity / ownership 与 primary-content 规则由 Domain
 
 当页面主要行为由受控工程实现或外部系统承担时，CMS 仍保留 Page identity、canonical URL 与 lifecycle，但不伪装成 operator-owned whole-page Rich body。
 
-具体工程 interaction、第三方 integration 和 delivery mechanism 需要独立 Feature Specification；本规格不自动实现慧就业 iframe 或其他外部系统。
+具体工程 interaction、第三方 integration 和 delivery mechanism 需要独立 Feature Specification。当前慧就业固定 iframe 集成已经由 `docs/requirements/hui-employment-integration.md` 与 `docs/specifications/public-site.md` 授权；其他外部系统不会因为 Page 支持外部内容 profile 而自动进入实现范围。
 
 ## 3. 结构化卡片集合 V1
 
@@ -96,6 +97,8 @@ Admin 根据 Page 当前 content profile 选择 authoring surface：
 - Rich Text → whole-body Rich Text editor；
 - Structured Card Collection → ordered card editor；
 - unsupported profile/schema → blocking diagnostic / safe read-only state。
+
+由工程实现持有固定目标的外部 Page 使用可诊断的只读状态：运营人员可以识别其稳定 Page identity 与外部内容责任，但不能通过普通单页编辑器修改 renderer identity、content ownership、目标地址或占位正文。启停等是否开放继续服从 Page 当前 lifecycle 与具体 Feature Specification，不把固定集成地址提升为 CMS 运营配置。
 
 对预置 / 稳定 Page 的 ordinary content editing，不允许运营人员通过普通表单任意切换 Domain 所定义的 content model、renderer identity 或 ownership。
 

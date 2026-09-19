@@ -152,8 +152,19 @@ for (const file of currentFiles) {
 }
 
 const currentLocator = fs.readFileSync(path.join(root, 'docs/work/current/README.md'), 'utf8')
-if (!/Current Ready Execution Unit[：:]\s*\*\*NONE\*\*/.test(currentLocator)) {
-  addFailure('docs/work/current/README.md', '当前治理任务不得改变 Current Ready Execution Unit = NONE。')
+const readyUnit = currentLocator.match(/Current Ready Execution Unit[：:]\s*\*\*([^*]+)\*\*/)?.[1]?.trim()
+const currentWorkFiles = collectMarkdown('docs/work/current').filter(file => file !== 'docs/work/current/README.md')
+if (!readyUnit) {
+  addFailure('docs/work/current/README.md', '缺少可解析的 Current Ready Execution Unit。')
+} else if (readyUnit === 'NONE') {
+  if (currentWorkFiles.length) addFailure('docs/work/current/README.md', 'Current Ready Execution Unit 为 NONE 时不得保留 active work artifact。')
+} else {
+  const activeArtifact = currentLocator.match(/当前工作 artifact[：:]\s*`([^`]+\.md)`/)?.[1]
+  if (!activeArtifact) {
+    addFailure('docs/work/current/README.md', '存在 active Execution Unit 时必须定位当前工作 artifact。')
+  } else if (!fs.existsSync(path.join(root, 'docs/work/current', activeArtifact))) {
+    addFailure('docs/work/current/README.md', `当前工作 artifact 不存在：${activeArtifact}`)
+  }
 }
 
 console.log(`Current 文档语言扫描：${languageFiles.length} 个 Markdown 文档`)

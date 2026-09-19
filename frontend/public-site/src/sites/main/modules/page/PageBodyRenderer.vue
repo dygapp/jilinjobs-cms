@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import type { PublicPage } from '../../api/pages'
 import GuideCardsRenderer from './GuideCardsRenderer.vue'
+import HuiEmploymentPageRenderer from './HuiEmploymentPageRenderer.vue'
 import { resolvePageRenderer } from './pageRendererRegistry'
 
 const props=defineProps<{page:PublicPage;grouped?:boolean}>()
@@ -28,6 +29,11 @@ const structuredCards=computed(()=>{
     v-else-if="renderer==='jilinjobs-guide-cards'&&structuredCards"
     :content="structuredCards"
     data-page-renderer="JILINJOBS_GUIDE_CARDS"
+  />
+
+  <HuiEmploymentPageRenderer
+    v-else-if="renderer==='hui-employment'&&page.contentModel==='NONE'&&page.contentOwner==='EXTERNAL'"
+    :renderer-key="page.rendererKey"
   />
 
   <div v-else class="unsupported-page-renderer" role="alert" :data-unsupported-renderer="page.rendererKey">

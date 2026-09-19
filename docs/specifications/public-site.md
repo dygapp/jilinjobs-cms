@@ -3,17 +3,18 @@ id: specification-public-site
 title: 公开站产品规格
 type: specification
 status: accepted
-version: "V3.1"
+version: "V3.2"
 relations:
   requirements:
     - docs/requirements/information-publishing.md
     - docs/requirements/cms-domain.md
+    - docs/requirements/hui-employment-integration.md
   architecture:
     - docs/architecture/cms-architecture.md
   related:
     - docs/specifications/page-content.md
     - docs/specifications/rich-text-authoring.md
-updated_at: 2026-09-16
+updated_at: 2026-09-19
 ---
 
 # 公开站产品规格
@@ -34,6 +35,8 @@ Main / Party 的长期产品定位与内容范围由 `docs/requirements/informat
 /article/{id}                 站内文章详情
 /page/{alias}                 独立单页
 /page/{groupAlias}/{alias}    单页分组成员
+
+/page/live-course             直播课程二级页面
 ```
 
 外链 Article 不创建本地正文详情；在公开入口中按其外链语义进入真实来源。
@@ -65,9 +68,9 @@ Main 首页继续保持已接受的固定页面结构与主要视觉识别，并
 - 首页快捷入口；
 - 主轮播；
 - 通知公告、就业动态等普通资讯区；
-- 招聘日历；
+- 就业日历；
 - 招聘活动宣传展示；
-- “最新招聘”与招聘 / 宣讲等固定第三方业务集成 seam；
+- 最新招聘、直播课程与招聘 / 宣讲等固定第三方业务集成 seam；
 - 招聘公告；
 - 业务指南快捷入口；
 - 网站导航 / 友情链接；
@@ -78,9 +81,15 @@ Main 首页继续保持已接受的固定页面结构与主要视觉识别，并
 
 首页招聘活动宣传展示消费当前招聘活动展示位中的有效 Advertisement：0 项时不制造伪内容，1 项时静态展示，2 项及以上按展示顺序轮动；每项继续遵守其 URL / open-mode / `NO_LINK` Domain contract。具体展示位 identity 与轮动参数由其真实 source / configuration owner 持有，不在本规格复制内部 key 或 default value。
 
-招聘日历当前承担首页日期定位能力：展示当前日期所在年份 / 月份，以周一到周日的七列周视图排列当月日期，并对当前日期提供可辨识状态。当前没有 Authority 把某一天与招聘活动 dataset、详情跳转或第三方事件接口建立绑定；不能仅因为区域名称为“招聘日历”就在 regeneration 中发明尚未授权的事件数据集成。
+首页固定承载以下三个相互独立的慧就业业务区域：
 
-“最新招聘”及招聘 / 宣讲区域当前只是已接受页面结构中的第三方业务集成 seam；真实 iframe / 第三方 Runtime integration 必须由新的 Feature Requirement / Specification 明确授权，不因页面已存在占位区域自动获得实施权限。
+- “就业日历”加载当前 Requirement 指定的就业日历完整页面；
+- “最新招聘”加载业务分类编号 `4` 对应的聚合页面；
+- “直播课程”加载业务分类编号 `5` 对应的聚合页面，并提供“更多”入口进入本站 `/page/live-course`。
+
+这三个区域都保留 Main 首页自身结构与导航上下文，慧就业负责 iframe 内的实时内容与交互。页面标题、区域名称和实际加载业务必须一致；“直播课程”不能并入“最新招聘”或招聘公告。具体完整目标地址和业务编号映射只由 `docs/requirements/hui-employment-integration.md` 持有，本规格不复制第二份 URL 清单。
+
+首页 iframe 在加载期间显示可辨识状态；在加载失败或限定时间内未确认加载完成时，显示“外部内容暂时不可用”的独立失败状态与重试操作。单个慧就业区域失败不得隐藏首页其他区域，也不得使 Main Header、Navigation 或 Footer 失效。
 
 ## 4. 中心党建入口与内容体验
 
@@ -152,6 +161,10 @@ Page 公开行为遵循当前 Page Content Specification：
 - PageGroup 成员可以形成数据驱动的公共 Tab；
 - unknown / malformed content profile / renderer 必须显示可诊断失败；
 - 不因 renderer 不同建立第二套 Page URL。
+
+慧就业当前五个招聘信息 PageGroup 成员继续使用现有 `/page/jobs/{alias}` 规范 URL；各页面名称、当前 Tab 与实际嵌入业务必须保持一致。`/page/live-course` 是首页“直播课程”的本站二级页面，在 Main Shell 内嵌入当前直播课程完整业务页面。
+
+这些页面的主要内容与行为由外部系统承担，CMS 只保留稳定 Page identity、页面组关系、规范 URL 与启停生命周期；运营人员不能通过普通单页编辑把固定慧就业目标改成其他地址。公开端必须通过明确 renderer identity 选择对应业务，不得从 alias、URL、标题或正文猜测映射。
 
 ## 8. CmsList 与内容投放
 
@@ -263,8 +276,11 @@ Main 与 Party 当前保持一致的用户可观察行为包括：
 - scoped query 失败；
 - carousel 所有图片失效；
 - stale async request 在 route 已变化后才返回。
+- 慧就业 iframe 加载失败或在限定时间内未确认完成。
 
 异步数据必须以当前 route / scope 为准；旧请求不能覆盖新页面的 success、error、loading 或 metadata 状态。
+
+慧就业外部内容失败时，只替换对应 iframe 区域为可重试失败状态；Main Shell、breadcrumb、PageGroup Tab、首页其他内容和 Footer 继续可用。重试必须重新发起当前区域加载，不得跳转到错误业务或复用上一页面状态。
 
 ## 16. 验收
 
@@ -274,7 +290,10 @@ Main 与 Party 当前保持一致的用户可观察行为包括：
 - Main 首页招聘公告只聚合已发布 EXTERNAL_LINK Article；
 - Main EXTERNAL_LINK Article 在无独立 open-mode 的内容入口使用新窗口并保持安全 rel 行为；
 - Main 首页招聘活动宣传展示的 0/1/many 与 open-mode 行为；
-- Main 首页招聘日历展示当前年月、周一至周日日期网格与可辨识的今日状态，且不因名称自行发明未授权招聘事件数据；
+- Main 首页就业日历、最新招聘、直播课程三个独立区域实际加载当前 Requirement 指定的完整慧就业页面；
+- 首页“直播课程”的“更多”入口进入 `/page/live-course`，并在 Main Shell 内加载当前 Requirement 指定的直播课程二级页面；
+- 招聘信息五个 PageGroup 成员的页面名称、当前 Tab 与实际慧就业业务映射一致；
+- 慧就业区域具有可辨识的加载、超时 / 失败和重试状态，单个外部区域异常不破坏 Main Shell 或其他页面内容；
 - `/party/` accepted Banner 可见且不可点击；
 - Party 入口页内容线正确，“主题教育”不被静默增加为第五个固定内容区；
 - scope-correct Column / Article / Page data，以及 Party route scope guard；
@@ -294,4 +313,4 @@ Main 与 Party 当前保持一致的用户可观察行为包括：
 
 - 新增 Party-specific CMS model / Admin module；
 - generic page builder；
-- 当前未批准的真实第三方 iframe integration。
+- 除当前慧就业 Requirement 明确授权范围外的其他真实第三方 iframe integration。

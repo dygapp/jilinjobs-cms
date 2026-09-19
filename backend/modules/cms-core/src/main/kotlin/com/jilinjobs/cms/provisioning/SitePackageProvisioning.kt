@@ -912,9 +912,17 @@ private fun validatePageContract(contentModel: PageContentModel, rendererKey: St
             throw SitePackageValidationException("STRUCTURED Page contract 不合法：$identity")
         }
         PageContentModel.NONE -> {
-            val valid = (rendererKey == PageRendererKey.EMBED_PLACEHOLDER && contentOwner == PageContentOwner.EXTERNAL) ||
+            val externalRenderer = contentOwner == PageContentOwner.EXTERNAL && rendererKey !in setOf(
+                PageRendererKey.RICH_TEXT,
+                PageRendererKey.INTERNAL_STATIC,
+                PageRendererKey.JILINJOBS_GUIDE_CARDS,
+            )
+            val valid = externalRenderer ||
                 (rendererKey == PageRendererKey.INTERNAL_STATIC && contentOwner == PageContentOwner.ENGINEERING)
             if (!valid) throw SitePackageValidationException("NONE Page contract 不合法：$identity")
+            if (externalRenderer && rendererKey != PageRendererKey.EMBED_PLACEHOLDER && (page.bodyHtml.isNotBlank() || !page.embedUrl.isNullOrBlank())) {
+                throw SitePackageValidationException("显式外部 Renderer 的正文和目标地址必须由工程实现持有：$identity")
+            }
         }
     }
 }

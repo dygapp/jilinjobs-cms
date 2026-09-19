@@ -11,6 +11,47 @@ import tools.jackson.module.kotlin.jacksonObjectMapper
 
 class PageServiceTest {
     @Test fun `rejects external url for internal static page`() { val service = PageService(FakePageMapper(), testObjectMapper()); val error = assertThrows(PageValidationException::class.java) { service.createPage(PageDraft(null, "special", "特殊页面", "", PageRenderMode.INTERNAL_STATIC, "https://example.com/page", 0, true)) }; assertTrue(error.message!!.contains("本站路径")) }
+
+    @Test
+    fun `explicit external renderer keeps target in engineering implementation`() {
+        val service = PageService(FakePageMapper(), testObjectMapper())
+        val page = service.createPage(
+            PageDraft(
+                groupId = null,
+                alias = "external-business",
+                name = "外部业务",
+                contentModel = PageContentModel.NONE,
+                rendererKey = "EXTERNAL_BUSINESS_RENDERER",
+                contentOwner = PageContentOwner.EXTERNAL,
+            ),
+        )
+
+        assertEquals(PageContentModel.NONE, page.contentModel)
+        assertEquals("EXTERNAL_BUSINESS_RENDERER", page.rendererKey)
+        assertEquals(PageContentOwner.EXTERNAL, page.contentOwner)
+        assertNull(page.renderMode)
+        assertNull(page.embedUrl)
+
+        val contentError = assertThrows(PageValidationException::class.java) {
+            service.updateContent(page.id, PageContentDraft(bodyHtml = "<p>不应由 CMS 持有</p>", embedUrl = "https://example.com"))
+        }
+        assertTrue(contentError.message!!.contains("工程集成持有"))
+
+        assertThrows(PageValidationException::class.java) {
+            service.createPage(
+                PageDraft(
+                    groupId = null,
+                    alias = "external-configured",
+                    name = "错误外部业务",
+                    bodyHtml = "<p>并行正文</p>",
+                    embedUrl = "https://example.com",
+                    contentModel = PageContentModel.NONE,
+                    rendererKey = "EXTERNAL_CONFIGURED_RENDERER",
+                    contentOwner = PageContentOwner.EXTERNAL,
+                ),
+            )
+        }
+    }
     @Test fun `keeps alias unique within the same page group`() { val mapper = FakePageMapper(); val service = PageService(mapper, testObjectMapper()); val guide = service.createGroup(PageGroupDraft("guide", "业务指南")); service.createPage(PageDraft(guide.id, "contact", "联系我们")); assertThrows(PageValidationException::class.java) { service.createPage(PageDraft(guide.id, "contact", "重复页面")) } }
     @Test fun `public page group contains only enabled members in configured order`() { val service = PageService(FakePageMapper(), testObjectMapper()); val group = service.createGroup(PageGroupDraft("guide", "业务指南")); service.createPage(PageDraft(group.id, "second", "第二项", sortOrder = 20, enabled = true)); service.createPage(PageDraft(group.id, "hidden", "停用项", sortOrder = 5, enabled = false)); service.createPage(PageDraft(group.id, "first", "第一项", sortOrder = 10, enabled = true)); val publicGroup = service.getPublicGroup("guide"); assertEquals(listOf("first", "second"), publicGroup.members.map { it.alias }) }
 

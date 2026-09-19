@@ -6,6 +6,8 @@ relations:
   specifications:
     - docs/specifications/public-site.md
     - docs/specifications/page-content.md
+  requirements:
+    - docs/requirements/hui-employment-integration.md
   architecture:
     - docs/architecture/cms-architecture.md
     - docs/architecture/decisions/ADR-0002-public-site-multi-entry-modular-spa.md
@@ -15,7 +17,7 @@ relations:
     - docs/technical/http-interface-contract.md
   verification:
     - docs/technical/verification-strategy.md
-updated_at: 2026-09-16
+updated_at: 2026-09-19
 ---
 
 # Public Frontend 跨 Feature 技术契约
@@ -102,13 +104,32 @@ Public 只消费当前公开资源 contract：stable Site assets、允许公开�
 
 managed resource content / attachment 与 `/static/**` 的 HTTP namespace / binary compatibility 由 Interface Contract 持有。稳定模板资源不直接依赖 Legacy Source URL；mutable uploads不提升为 Site Package stable assets。具体 Runtime storage、manifest和asset projection由 Site Definition / Backend implementation持有。
 
-## 9. 构建 / 验证适配
+## 9. 慧就业固定 iframe 集成
+
+慧就业属于无需运营维护的固定第三方 seam，完整地址和业务编号映射由 Requirement 持有，并以 Public production source 中的只读工程常量实现；不得转存为 `SiteProperty`、普通 Page `embedUrl` 编辑项或新的 CMS 配置对象。
+
+首页直接消费明确命名的就业日历、最新招聘与直播课程目标。招聘信息五个 PageGroup 成员和直播课程独立 Page 使用不同的稳定 renderer identity 表达各自业务映射；Public renderer registry 以该 identity 解析目标，不从 Page alias、URL、标题或 DOM 推断业务编号。
+
+这些 Page 使用 `NONE + EXTERNAL` content profile，Site Definition 持有稳定 Page identity、分组关系、renderer identity 与 lifecycle，主要业务内容仍由慧就业持有。Generic CMS Core 只验证“显式外部 renderer + external ownership”组合，不硬编码 JilinJobs renderer 名称或慧就业地址。Admin 对这类非运营内容 profile 提供只读诊断，不开放目标地址与正文编辑。
+
+统一 iframe 组件至少承担：
+
+- 明确、可访问的 iframe title；
+- 加载中、加载完成、浏览器 error 与超时状态；
+- 超时或失败后的原位重试；
+- 每次重试隔离旧加载状态；
+- 不让单个外部 frame 的状态影响 Main Shell 或同页其他区域；
+- 按首页紧凑区域与二级页面主体区域提供响应式高度，窄屏不产生本站页面横向溢出。
+
+当前 timeout 属于低风险工程参数，由组件内部持有，不进入 CMS 配置。由于跨源 iframe 无法读取内部 DOM，Public 只以浏览器可观察的 `load` / `error` 与 timeout 作为外层状态证据，不声称检查慧就业页面内部业务成功。
+
+## 10. 构建 / 验证适配
 
 当前 Public package自己持有 Node engine、Vue / TypeScript / Vite与 scripts 的精确版本。正式 build包含 source-boundary guard、Vue-aware type-check与bundler build。
 
 影响 API adapter 时验证 `http-interface-contract.md` compatibility；影响 route、DOM、async data、resource或用户交互时追加 浏览器验证；存在视觉 验收时再取得对应 AI / 人工视觉证据。证据规则以 `docs/technical/verification-strategy.md` 与 live-discovered verification Rules为准。
 
-## 10. 不由本文拥有
+## 11. 不由本文拥有
 
 - Main / Party 产品身份与业务信息架构；
 - Carousel用户可观察行为；

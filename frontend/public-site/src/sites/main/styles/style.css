@@ -53,15 +53,6 @@ img{max-width:100%}
 .home-top-shortcuts>a:last-child{border-bottom:0}
 .home-top-shortcuts img{width:18px;height:18px;object-fit:contain}
 .home-secondary-row{display:grid;grid-template-columns:320px minmax(0,1fr) 320px;gap:12px;min-height:260px}
-.home-calendar{padding:12px;background:#fff;border:1px solid #ebeef2}
-.calendar-selects{display:flex;gap:16px;margin-bottom:11px}
-.calendar-selects span{flex:1;height:28px;display:flex;align-items:center;padding:0 12px;border:1px solid #d3e6ff;border-radius:4px;color:#323b47;background:#fff}
-.calendar-week,.calendar-days{display:grid;grid-template-columns:repeat(7,1fr);text-align:center}
-.calendar-week{color:#515c6b;font-size:12px;border-bottom:1px solid #ebeef2;padding-bottom:5px}
-.calendar-days span{height:28px;display:grid;place-items:center;font-size:12px;color:#515c6b}
-.calendar-days span:nth-child(7n),.calendar-days span:nth-child(7n-1){color:#d64d4d}
-.calendar-days .today{background:#0d76ff;color:#fff;border-radius:3px}
-.calendar-days .empty{background:none}
 .employment-panel{min-width:0}
 .service-panel{background:#fff;border:1px solid #ebeef2;padding:0 14px}
 .service-panel>h2{height:48px;border-bottom:1px solid #ebeef2;line-height:48px}
@@ -79,10 +70,12 @@ img{max-width:100%}
 .section-title::before{content:"";flex:0 0 4px;width:4px;height:18px;margin-right:12px;background:linear-gradient(to bottom,#00aebd 0 50%,#005cd4 50%)}
 .section-title h2{margin:0;padding:0;color:#323b47;font-size:20px;font-weight:500;line-height:42px}
 .latest-recruitment{margin-top:0}
-.external-placeholder{background:#fff;border:1px solid #ebeef2;color:#8491a1}
-.iframe-placeholder{height:470px;display:grid;place-items:center;font-size:13px}
 .home-recruitment-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-height:300px;background:#fff;padding:10px;border:1px solid #ebeef2}
-.recruitment-stream{min-height:280px;display:grid;place-items:center}
+.home-live-courses{min-width:0}
+.home-integrated-heading{height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;border:1px solid #ebeef2;border-bottom:0;background:#fff}
+.home-integrated-heading h2{margin:0;color:#00aebd;font-size:17px;font-weight:500}
+.home-integrated-heading a{color:#8491a1;font-size:12px;text-decoration:none}
+.home-integrated-heading a:hover{color:#005cd4}
 .recruitment-panel{border:0;border-left:1px solid #ebeef2}
 .ncss-entrance{height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:#d3e6ff}
 .ncss-entrance>a{display:flex;align-items:center;height:45px}
@@ -183,7 +176,6 @@ img{max-width:100%}
   .service-shortcuts{grid-template-columns:repeat(2,1fr)}
   .home-promo-banner{height:auto;min-height:80px}
   .home-promo-banner img{height:auto;min-height:80px;object-fit:cover}
-  .iframe-placeholder{height:260px}
   .home-recruitment-row{padding:8px}
   .ncss-entrance{height:auto;min-height:80px;flex-direction:column;align-items:stretch;gap:8px;padding:10px}
   .ncss-entrance img{width:100%;height:auto;max-height:45px}

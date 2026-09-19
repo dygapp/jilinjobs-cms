@@ -1,4 +1,6 @@
-export type PageRendererKind='rich'|'embed-placeholder'|'internal-static'|'jilinjobs-guide-cards'
+import { isHuiEmploymentPageRenderer } from '../../integrations/huiEmployment'
+
+export type PageRendererKind='rich'|'embed-placeholder'|'internal-static'|'jilinjobs-guide-cards'|'hui-employment'
 
 const PAGE_RENDERERS:Readonly<Record<string,PageRendererKind>>=Object.freeze({
   RICH_TEXT:'rich',
@@ -8,6 +10,7 @@ const PAGE_RENDERERS:Readonly<Record<string,PageRendererKind>>=Object.freeze({
 })
 
 export function resolvePageRenderer(rendererKey:string):PageRendererKind|null{
+  if(isHuiEmploymentPageRenderer(rendererKey))return 'hui-employment'
   return PAGE_RENDERERS[rendererKey]??null
 }
 
