@@ -36,6 +36,10 @@ upstream access = 0
 
 本地 owner、Method selector、Skill entry、Rule Discovery 或 metadata 缺失 / 冲突时先 Consumer-local 失败关闭，不在线读取 upstream 补流程或规则。
 
+如果已采用能力依赖 Tool、compute 或 external integration，普通运行还必须能够仅从 Consumer-local Agent-consumable Authority 恢复其 obligation、canonical locator、可执行路径、结果 / Evidence recovery 与 fail-closed behavior。只复制 Method / Architecture / Rule / Tool source 或 locator，却无法恢复真实 executable path，不构成完成采用。
+
+该 invariant 不规定具体平台或 transport。direct execution 与 automated alternate path 由 Consumer-local capability instance 持有；Fresh Context 不得依赖 upstream、Human Guide、历史聊天或模型记忆补齐。
+
 ## 显式 upstream re-entry
 
 只有当前 Repository / 人工权威 明确启动 adoption、upgrade、research / comparison、Consumer validation，或显式授权的 Foundation governance work，才允许只读进入固定 upstream ref。允许读取不等于自动采用；所有接受结果必须重新落到 Consumer-local 规范语义所有者。
@@ -53,5 +57,7 @@ Consumer 可以采用不同路径、工具、Method adaptation 与 Rule speciali
 ## 能力投影
 
 显式 adoption / upgrade 可传播的对象包括 Method、Architecture、Skill、Rule 与必要 Tool / runtime contract。每项能力必须有明确 disposition；upstream Project Knowledge 不属于传播对象。
+
+accepted capability 依赖 Tool、compute 或 external integration 时，能力投影必须同时建立 Consumer-local executable instance，包括可执行路径、自动化 alternate path、结果 / Evidence recovery 与 fail-closed behavior；upstream 的运行路径只能作为 adoption / upgrade 输入，不能成为普通运行时在线 fallback。
 
 治理或升级结束后必须验证普通 Fresh Context 能仅依赖 Consumer-local assets 工作。
