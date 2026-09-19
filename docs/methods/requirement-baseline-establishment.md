@@ -279,6 +279,8 @@ Provisional Minimal Default 必须在当前 Capability 人工评审 中可见。
 
 人工主要作为 Product Authority / Reviewer，而不是逐字段需求生成器。
 
+当前 Consumer 已采用 `architecture:human-review` 与 `skill:human-review`。本阶段需要集中人工确认时，可以调用该 Skill 形成结构化 Markdown 评审草稿、分类反馈并把已确认的长期语义回写真正 Requirement owner；完成回写后必须重新读取 owner 再校准草稿。没有显式交付格式要求时，不因为进入能力级人工评审自动生成 DOCX、HTML 或其他最终交付物。
+
 ### 10.2 独立语义复核（Independent Semantic Review）
 
 以下任一情况成立时，在 Baseline Ready 前必须执行独立语义复核：
@@ -347,5 +349,7 @@ Execute / Integrate authority granted
 ## 14. Skill / Rule 边界
 
 本 Method 当前不要求新的 `requirements-analysis` 或 `requirement-elicitation` Skill。只有未来真实 Consumer 使用证明某个 procedure 在多个 Repository 中稳定、可独立调用并能显著减少重复错误时，才评估 Skill admission。
+
+`skill:human-review` 是跨 Requirement / Specification / Architecture / Technical 共用的 supporting capability，不拥有需求抽取、需求分析或 Requirement Baseline lifecycle，因此不改变上述 Skill 准入结论。
 
 同样不因为本 Method 新增就复制一组 Requirement Rules。`Derive → Default → Ask → Review`、Question Gate 与 Depth Stop 是本 Method 的过程 contract；只有未来出现能够独立于 Method 存在的 policy gap 时，才进入 Rule owner。
