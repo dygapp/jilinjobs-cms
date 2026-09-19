@@ -85,7 +85,7 @@ Backend 变更至少按风险选择编译、静态检查、自动化测试、可
 
 Interface contract test 可以有 provider-specific adapter，但 contract assertion 本身必须能在 Backend implementation 替换后复用；不能把 Java Controller class、Kotlin DTO 或 TypeScript interface 当成唯一 oracle。
 
-G6 Backend substitution dry-run 的 PASS 需要在不读取 Java implementation 作为设计输入的前提下，以 当前权威内容 重建 provider 并证明现有 Admin/Public consumer 所需 contract compatibility。
+Backend technology substitution dry-run 的 PASS 需要在不读取 Java implementation 作为设计输入的前提下，以 当前权威内容 重建 provider 并证明现有 Admin/Public consumer 所需 contract compatibility。
 
 ### 4.3 前端
 
