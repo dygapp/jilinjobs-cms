@@ -29,9 +29,9 @@ updated_at: 2026-09-16
 | Identity / lifecycle / ownership | stable identity、source identity、publish lifecycle、content ownership、preset protection 与 operator divergence | `cms-domain.md` §3，并按对象读取 §4～§10；跨对象 lifecycle 读取 §13～§17 |
 | External-link ownership | Article / Navigation / CmsList / Advertisement / fixed integration 各自拥有外链语义，不建立全局 Link 对象 | `cms-domain.md` §12 |
 | Stable Site Definition vs Runtime | stable structure、one-time bootstrap 与 ordinary operator-managed Runtime 的 Domain lifecycle | `cms-domain.md` §13 |
-| Historical Content Migration semantics | provenance、legacy identity、fingerprint、preflight、compatibility、offline stability、Main / Party accepted scope | `cms-domain.md` §14 |
+| 历史内容迁移 semantics | provenance、legacy identity、fingerprint、preflight、compatibility、offline stability、Main / Party accepted scope | `cms-domain.md` §14 |
 | Rich Text domain invariants | HTML body authority、accepted content semantics、资源关系与 active-content safety 的 Domain 不变量 | `cms-domain.md` §15 |
-| Domain failure / acceptance | 业务 identity、content model、resource relation、migration conflict 等 fail-closed 与 Domain acceptance invariants | `cms-domain.md` §16～§17 |
+| Domain failure / acceptance | 业务 identity、content model、resource relation、migration conflict 等 失败关闭 与 Domain acceptance invariants | `cms-domain.md` §16～§17 |
 
 同一 Product / Domain 文件可以承担多个相互一致的 Requirement Capability；唯一 ownership 按上表的 semantic responsibility 与稳定章节确定，不因“一个 capability = 一个文件”的机械规则拆分。
 
@@ -43,11 +43,11 @@ updated_at: 2026-09-16
 |---|---|
 | `sites/jilinjobs/**` | JilinJobs Site Definition 的 versioned canonical source；拥有具体稳定结构、bootstrap defaults、assets 与 manifest facts |
 | `data-migrations/**` | Historical canonical dataset / provenance / fingerprint / concrete migration evidence |
-| `docs/specifications/**` | 当前 Feature / surface 的 Observable Behavior、Failure Behavior 与 Acceptance |
+| `docs/specifications/**` | 当前 Feature / surface 的 可观察行为、失败行为 与 验收 |
 | `docs/architecture/**` | 跨 Feature 长期系统结构、责任边界与 ADR / current Architecture State |
 | `docs/technical/**` | implementation HOW、interface / runtime contract 与 Verification Strategy |
-| Repository code / tests | 当前实现状态与验证 Evidence；不能反向发明 Product Requirement |
-| GitHub Issue / PR / Actions | planning / decision / review / integration 的原生 Current Evidence；不长期拥有 Requirement fact |
+| Repository code / tests | 当前实现状态与验证 证据；不能反向发明 Product Requirement |
+| GitHub Issue / PR / Actions | planning / decision / review / integration 的原生 当前证据；不长期拥有 Requirement fact |
 | `docs/requirements/archive/**` | superseded / historical Requirement evidence；默认退出 ordinary Fresh Context |
 
 ## 4. Fresh Context 路由
@@ -66,11 +66,11 @@ Repository Authority
 
 - 修改 Article source identity → `cms-domain.md` Article / identity sections；只有需要确认产品范围时再读取 `information-publishing.md`；
 - 修改 Party 内容入口或 canonical URL → `information-publishing.md` Party / URL sections，再按需读取 Domain；
-- 修改 Historical Migration fingerprint / accepted scope → `cms-domain.md` Historical Migration section，再读取 `data-migrations/**` 的 concrete canonical evidence；
+- 修改 历史迁移 fingerprint / accepted scope → `cms-domain.md` 历史迁移 section，再读取 `data-migrations/**` 的 concrete canonical evidence；
 - 修改跨站响应式 /安全呈现要求 → `information-publishing.md` 产品级质量 section，再进入对应 Specification / Verification。
 
-如果 Index 不能唯一定位 owner、多个 Current owner 对同一长期事实给出不兼容结论，或真实事实不属于任何现有 owner，必须 fail closed，返回 `method:requirement-baseline-establishment` / Human Authority，而不是在下游文档中静默选择。
+如果 Index 不能唯一定位 owner、多个 Current owner 对同一长期事实给出不兼容结论，或真实事实不属于任何现有 owner，必须 失败关闭，返回 `method:requirement-baseline-establishment` / 人工权威，而不是在下游文档中静默选择。
 
-## 5. Analysis boundary
+## 5. 分析边界
 
-Requirement extraction、冲突矩阵、capability review batch 与临时 comparison 默认不进入本 Index。只有 durable owner / relation 改变时更新本文件；过程 Evidence 留在当前 controlling Issue / Review 或显式 non-Authority analysis artifact。
+Requirement extraction、冲突矩阵、capability review batch 与临时 comparison 默认不进入本 Index。只有 durable owner / relation 改变时更新本文件；过程 证据 留在当前 controlling Issue / Review 或显式 non-Authority analysis artifact。

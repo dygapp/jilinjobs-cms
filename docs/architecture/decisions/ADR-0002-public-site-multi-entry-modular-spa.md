@@ -4,7 +4,7 @@
 - Date: 2026-09-01
 - Scope: `frontend/public-site`
 
-## 1. Context
+## 1. 背景
 
 当前公开站已经是 Vue 3 + Vue Router 应用，但 Vite 同时构建 `index.html` 与 `page.html`。`main.ts` 和 `page-main.ts` 实际内容相同，两个 HTML Entry 都挂载同一个 `App` 和同一个 Router；Nginx 只是让 `/page/**` fallback 到 `page.html`。因此当前结构承担了 Multi-entry 的配置成本，却没有形成真正不同的 Runtime / Product Boundary。
 
@@ -18,7 +18,7 @@
 4. 不因为视觉主题不同而提前承担第二套 package、依赖、CI、构建、部署和 API transport 的工程成本；
 5. 为未来真正独立发布 / 部署时保留低成本拆分路径。
 
-## 2. Decision
+## 2. 决策
 
 公开站采用 **Multi-entry Modular SPA**，Entry 按真实 Site / Theme Boundary 划分，而不是按普通页面类型划分。
 
@@ -41,7 +41,7 @@ frontend/public-site
 - 共享同一个 Spring Boot CMS Backend；
 - 不使用 Module Federation、iframe 或其他 Runtime Microfrontend 机制。
 
-### 2.1 Main Site Boundary
+### 2.1 主站边界
 
 Main Site 持有：
 
@@ -54,7 +54,7 @@ Main Site 的页面路由使用 Vue Router 动态 `import()` 进行 route-level 
 
 原 `page.html / page-main.ts` 删除。`/page/**` 与 `/column/**`、`/article/**` 一样由 Main Site Entry 直接承载。
 
-### 2.2 Party Building Site Boundary
+### 2.2 党建站边界
 
 Party Building Site 持有：
 
@@ -67,7 +67,7 @@ Party Building Site 持有：
 
 本次架构阶段只建立可独立访问、可直接刷新、主题隔离且可扩展的基础页面框架。党建真实栏目、内容、视觉细节和专属后台能力由后续 Requirement / Specification 单独确认。
 
-### 2.3 Shared Boundary
+### 2.3 共享边界
 
 `src/shared/` 只承担已经证明跨 Site 稳定复用且不携带主题所有权的技术能力，例如：
 
@@ -85,7 +85,7 @@ Party Building Site 持有：
 - Typography；
 - 首页或专题区块布局。
 
-### 2.4 Build / Runtime Boundary
+### 2.4 构建 / 运行时边界
 
 Vite Entry：
 
@@ -106,7 +106,7 @@ Gateway：
 
 公开 canonical URL 与 HTML 文件名解耦，用户不直接访问 `party.html`。
 
-## 3. Why not a separate Party Building frontend project now
+## 3. 为什么目前不单独建立党建站前端项目
 
 独立前端工程能够提供更强的 package/build/deploy 隔离，但当前只有视觉和主题边界得到确认，尚未出现工程生命周期边界。
 
@@ -114,13 +114,13 @@ Gateway：
 
 - 第二套 `package.json` / Vite / TypeScript 配置；
 - 第二次 npm install、build artifact 和 CI job；
-- 独立 Browser Verification 入口与更多 Gateway/Review 配置；
+- 独立 浏览器验证 入口与更多 Gateway/Review 配置；
 - API types / transport / SEO / resource helpers 的复制或额外 shared package；
 - 当前同团队、同 Backend、同部署场景下不必要的集成成本。
 
 因此独立视觉主题由独立 Site Entry / Shell / Theme 解决，不把 UI Boundary 机械提升为 Project Boundary。
 
-## 4. Future extraction trigger
+## 4. 未来拆分触发条件
 
 只有出现以下真实需求之一，再评估把 `sites/party` 提取为独立前端工程或独立应用：
 
@@ -133,7 +133,7 @@ Gateway：
 
 当前不以“红色主题”本身作为拆分触发条件。
 
-## 5. Consequences
+## 5. 影响
 
 正向影响：
 
@@ -146,11 +146,11 @@ Gateway：
 代价与约束：
 
 - 同一次 Public Site build 仍会覆盖两个 Site；
-- Vite / Nginx / Browser Verification 必须显式验证两个 Entry；
+- Vite / Nginx / 浏览器验证 必须显式验证两个 Entry；
 - Shared 边界需要克制，防止主站主题样式反向污染党建；
 - 当未来出现真正独立生命周期时，需要新的 ADR 重新评估工程拆分。
 
-## 6. Non-goals
+## 6. 非目标
 
 本 ADR 不决定：
 

@@ -14,11 +14,11 @@ status: active
 
 ## 产品与工程演进
 
-### Consumer Bootstrap ～ EU-36
+### Consumer 启动至 EU-36
 
 完成通用 CMS、Spring Boot Backend、Admin / Public frontend、Party 正式页面与 historical migration、Rich Text 基础能力和 Public source isolation，并形成可独立部署和验证的 Consumer Repository 基础。
 
-### EU-37 ～ EU-42 — Site Package Boundary
+### EU-37 ～ EU-42 — 站点包边界
 
 建立 Generic CMS Core 与 JilinJobs Site Package 的稳定边界：stable structure、Navigation identity、Runtime composition、one-time bootstrap、Generic Schema separation 与 stable assets 逐步闭环。当前长期产品 / 领域语义由 `docs/requirements/information-publishing.md` 与 `docs/requirements/cms-domain.md` 持有，当前长期系统边界由 `docs/architecture/cms-architecture.md` 持有；本 Evolution 只保留已发生的演进事实。
 
@@ -45,19 +45,19 @@ Main Article snapshot 的当前 canonical data / provenance 由 `data-migrations
 
 ## Consumer Method / Capability 演进
 
-### V3-08 Track B adoption
+### V3-08 Track B 采用
 
 Consumer 开始显式区分 upstream reusable capability 与 Consumer-local Project state，并采用 Local Discovery、Skill identity 与 Consumer lifecycle 的关键语义；普通运行继续以本地 owner 为准。
 
-### V3 Closure adoption
+### V3 收口能力采用
 
 采用条件性、临时 Handoff lifecycle 等收敛语义，同时保持 Consumer-local Verification / Discovery / Skills owner；upstream Project closure state不继承。
 
-### Rule Granularity adoption
+### Rule 粒度能力采用
 
 将 Rule 从过度原子化收敛到任务 / responsibility 级自然边界，并建立 `technology/vue/` 等只服务 Human IA 的目录结构；deterministic Rule Discovery 继续按 Rule metadata 而非目录匹配。
 
-### Clarification / Rule Activation adoption
+### 澄清 / Rule 激活能力采用
 
 Evaluated upstream frontier 推进到：
 

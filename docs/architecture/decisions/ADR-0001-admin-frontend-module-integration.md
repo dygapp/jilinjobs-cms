@@ -3,13 +3,13 @@
 - 状态：Accepted
 - 日期：2026-09-01
 
-## Context
+## 背景
 
 管理系统会随着业务范围扩展形成多个相对独立的前端业务模块，同时需要统一的管理端 Shell、导航、路由和用户体验。可选方案包括 iframe 集成、无明确边界的大型 SPA、模块化 SPA，以及以 Module Federation 等技术实现的运行时微前端。
 
 当前 `jilinjobs-cms` 已使用 Vue 3、Vue Router、Vite 和 Element Plus，并且 CMS Admin 当前仍由单一团队、单一构建和单一部署链路维护。仓库没有证据表明当前需要独立部署的前端模块或跨技术栈运行时组合。
 
-## Decision
+## 决策
 
 管理端当前采用“模块化 SPA + 可演进微前端”架构。
 
@@ -26,9 +26,9 @@
 11. 样式所有权遵循相同边界：`app/` 只持有全局基础与 Shell 自身样式；跨模块可复用的管理页布局/交互基础样式进入 `shared/`；模块专属页面、领域组件和 feature selector 由模块目录自己持有。Shell 不通过全局 CSS 反向维护业务模块内部 class，模块组件优先自持 scoped 样式。
 12. 源码穿越边界只允许两类显式依赖：`moduleRegistry.ts` 作为 composition root 引用各业务模块声明；业务模块的 `module.ts` 引用 `app/adminModule.ts` 公开 Module Contract。除这两类外，Shell 不直接 import 模块内部实现，模块页面/组件也不 import Shell 内部实现。
 
-## Consequences
+## 影响
 
-### Positive
+### 正向影响
 
 - CMS 作为独立业务模块可以更容易集成到未来完整管理平台。
 - 当前不承担 Module Federation 的运行时、依赖共享、远程版本和故障治理成本。
@@ -37,13 +37,13 @@
 - Shell Router 不再持有 CMS feature 路由知识，新增本地模块时只需要增加模块声明与 Registry composition，不需要修改 Shell 的模块内部路由表。
 - Shell 样式不再隐式依赖 CMS 页面结构；共享管理页视觉 primitives 与业务模块私有样式具有明确所有者。
 
-### Trade-offs
+### 权衡
 
 - 当前模块仍随 Admin SPA 一起发布，不能做到 Remote Module 的独立部署。
 - 需要维护 Shell、Shared Layer 与 Module Contract，禁止通过任意跨目录 import 或全局 CSS 重新形成隐式耦合。
 - 旧 CMS URL 需要在兼容期维护重定向，但兼容映射由 CMS Module 自己维护。
 
-## Current Consumer Mapping
+## 当前 Consumer 映射
 
 当前 `jilinjobs-cms` 只实现 CMS Module，不在本仓库引入尚未成为项目事实的其他平台业务模块名称。源码边界为：
 

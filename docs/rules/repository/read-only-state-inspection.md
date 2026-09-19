@@ -16,7 +16,7 @@ scope:
 
 ## 安全停止
 
-如果协调 `docs/work/current/README.md`、当前 Open execution PR / branch 与必要 Current Evidence 后得到：
+如果协调 `docs/work/current/README.md`、当前 Open execution PR / branch 与必要 当前证据 后得到：
 
 ```text
 Current Ready / active Execution Unit = NONE
@@ -24,7 +24,7 @@ Current Ready / active Execution Unit = NONE
 
 则在完成以下事项后停止：
 
-1. 核对当前 Repository Authority、Roadmap、Current Work 与必要 GitHub native state；
+1. 核对当前 仓库权威、Roadmap、Current Work 与必要 GitHub native state；
 2. 准确报告当前状态与下一自然 Planning / Readiness Gate；
 3. 不自动创建新的 Candidate、Execution Unit、Branch、Commit、PR、Workflow Run 或修复生命周期。
 
@@ -39,4 +39,4 @@ Current Ready / active Execution Unit = NONE
 
 已完成并终止 Execute Authority 的 Execution Unit 只能在新的当前工作明确依赖其结果时作为 dependency evidence 读取；dependency revalidation 不等于重新打开旧 Unit。
 
-本 Rule 不阻止用户明确要求的治理、Planning 或修复工作；一旦目标从状态检查切换为新的 direct responsibility，必须重新执行 Rule Discovery 并按新的 Authority 工作。
+本 Rule 不阻止用户明确要求的治理、Planning 或修复工作；一旦目标从状态检查切换为新的 直接责任，必须重新执行 Rule Discovery 并按新的 Authority 工作。

@@ -11,7 +11,7 @@ metadata:
 
 ## 输入
 
-当前 Consumer Repository Authority、与职责直接相关的 Work / GitHub Current Evidence，以及调用该能力所需的最小上下文。
+当前 Consumer 仓库权威、与职责直接相关的 Work / GitHub 当前证据，以及调用该能力所需的最小上下文。
 
 ## 过程
 
@@ -21,6 +21,6 @@ metadata:
 
 ## 输出与退出
 
-输出与 exact commit 对应的 Actions Evidence，或明确尚未完成。
+输出与 exact commit 对应的 Actions 证据，或明确尚未完成。
 
-若继续执行会实质改变 Product Goal、Scope、User-visible Behavior、Business Boundary、Acceptance Result、重大 Architecture Direction 或安全 / 隐私边界，则按 `AGENTS.md` Human Escalation 退出，不自行扩大 Authority。
+若继续执行会实质改变 Product Goal、Scope、User-visible Behavior、Business Boundary、验收 Result、重大 Architecture Direction 或安全 / 隐私边界，则按 `AGENTS.md` Human Escalation 退出，不自行扩大 Authority。

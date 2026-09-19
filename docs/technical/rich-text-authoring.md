@@ -19,7 +19,7 @@ updated_at: 2026-09-15
 
 如果未来 Rich Text 变更只涉及单一 Feature-local、低风险实现，不需要为了保持本文件“同步”而复制所有实现细节。
 
-## 2. Single editor runtime
+## 2. 单一编辑器运行时
 
 Admin Runtime 同一时刻只采用一个成熟 Rich Text editor implementation，通过 CMS-local thin adapter 提供统一 `modelValue` / lifecycle / optional resource callback contract。
 
@@ -36,7 +36,7 @@ selection、history、paste、table、font、format、dialog 等成熟通用能�
 
 当前具体 editor 与版本从 `frontend/admin` package / lockfile 恢复，不在 Product Requirement 或本文件复制版本号。
 
-## 3. Article integration
+## 3. 文章集成
 
 Article consumer 继续拥有 Article form、`bodyHtml`、cover、attachment 与 body-image association。
 
@@ -54,7 +54,7 @@ Admin consumer
 
 从正文移除 URL 只解除当前正文引用，不自动删除 Resource 本体。
 
-## 4. Page integration
+## 4. 页面集成
 
 RICH_TEXT Page 使用同一 Rich Text adapter编辑 whole-body `bodyHtml`。
 
@@ -62,7 +62,7 @@ Structured Page 只在 schema 明确允许的 item body 中复用 Rich Text capa
 
 Page 不因共享 editor 而自动获得 Article 的 resource association model。
 
-## 5. HTML policy
+## 5. HTML 策略
 
 Backend write boundary 与 Public defensive read 使用共享 responsibility 的 parser-based HTML policy：
 
@@ -74,13 +74,13 @@ Backend write boundary 与 Public defensive read 使用共享 responsibility 的
 
 Public read defense不回写 DB。
 
-## 6. Public independence
+## 6. 公开端独立性
 
 Public Renderer 消费 accepted HTML contract，不加载 editor authoring chrome 作为正常显示前提。
 
 Public projection负责把 managed resource identity转换为公开可消费的 contract；Public client不应知道 Admin-only endpoint。
 
-## 7. Existing data
+## 7. 现有数据
 
 - ordinary editor replacement 不触发 full-database rewrite；
 - operator 未编辑的 historical bytes 不因技术升级被批量 canonicalize；
@@ -88,7 +88,7 @@ Public projection负责把 managed resource identity转换为公开可消费的 
 - 已发生的历史 presentation loss 没有 exact evidence 时不猜测修复；
 - bounded repair 必须保护 operator divergence。
 
-## 8. Verification
+## 8. 验证
 
 技术变更根据实际风险至少选择：
 
@@ -102,9 +102,9 @@ Public projection负责把 managed resource identity转换为公开可消费的 
 - Backend → DB/API → Public browser chain；
 - Public independence from editor chrome。
 
-有真实 authoring UX / presentation 变化时，再追加 bounded Human Review。
+有真实 authoring UX / presentation 变化时，再追加 bounded 人工评审。
 
-## 9. Stop conditions
+## 9. 停止条件
 
 出现以下情况时停止堆叠 bespoke patch，回到 Specification / Technical decision：
 

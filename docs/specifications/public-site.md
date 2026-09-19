@@ -18,15 +18,15 @@ updated_at: 2026-09-16
 
 # 公开站产品规格
 
-## 1. Scope
+## 1. 范围
 
 本规格是 Main 与中心党建（Party）公开访问行为的唯一 Current public-surface Specification owner，定义访问者可以观察到的页面、导航、内容投影、跳转、作用域、响应式与失败行为。
 
 Main / Party 的长期产品定位与内容范围由 `docs/requirements/information-publishing.md` 持有；CMS business object、identity、lifecycle 与 ownership 由 `docs/requirements/cms-domain.md` 持有；Site / Theme / replaceability boundary 由 `docs/architecture/cms-architecture.md` 持有。具体前端框架、Entry、Router、源码目录、build 与 delivery mechanism 属于 Technical / implementation。
 
-## 2. Canonical URLs
+## 2. 规范 URL（Canonical URL）
 
-### 2.1 Main
+### 2.1 主站（Main）
 
 ```text
 /                             首页
@@ -38,7 +38,7 @@ Main / Party 的长期产品定位与内容范围由 `docs/requirements/informat
 
 外链 Article 不创建本地正文详情；在公开入口中按其外链语义进入真实来源。
 
-### 2.2 Party
+### 2.2 党建站（Party）
 
 ```text
 /party/                       中心党建入口
@@ -48,7 +48,7 @@ Main / Party 的长期产品定位与内容范围由 `docs/requirements/informat
 
 `/party/**` 保持独立红色主题与内容作用域，但业务上仍是 Main 信息架构下的中心党建专题入口。
 
-### 2.3 URL invariants
+### 2.3 URL 不变量
 
 - canonical URL 不依赖具体 HTML 文件名、Frontend component 或 bundler；
 - direct access / refresh 必须正常；
@@ -119,7 +119,7 @@ Main 使用蓝色主题，Party 使用红色主题。主题可以改变视觉 to
 
 ## 6. 栏目与文章
 
-### 6.1 Column list
+### 6.1 栏目列表
 
 栏目页至少提供：
 
@@ -132,7 +132,7 @@ Main 使用蓝色主题，Party 使用红色主题。主题可以改变视觉 to
 
 Main 与 Party 二级栏目当前使用一致的主要列表 presentation 与分页能力，同时保持各自 canonical Article URL、主题与作用域约束。
 
-### 6.2 Article detail
+### 6.2 文章详情
 
 INTERNAL Article detail：
 
@@ -143,7 +143,7 @@ INTERNAL Article detail：
 
 Party detail 只接受属于 Party 内容作用域的 INTERNAL Article，并保持 Party 主题与 breadcrumb 信息层级。EXTERNAL_LINK Article 从列表 / placement 进入其当前外部目标，不复制外部正文，也不进入本地 Party detail。
 
-## 7. Page
+## 7. 页面
 
 Page 公开行为遵循当前 Page Content Specification：
 
@@ -172,7 +172,7 @@ Public 对 CmsListItem 的消费遵循 Domain source identity 的当前投影：
 
 CmsList 的 image policy 只控制数据有效性，不决定 Public 页面布局模式。Party 轮播中的有效项需要具备当前 accepted image；无有效图片的项不应作为可用轮播项展示。
 
-## 9. Carousel behavior
+## 9. 轮播行为
 
 Main / Party 轮播共享以下用户可观察 lifecycle：
 
@@ -193,7 +193,7 @@ Main / Party 轮播共享以下用户可观察 lifecycle：
 
 当前已接受的主要视觉比例为：Main 主轮播 `8:5`；Party 轮播 `585:329`。两者可以使用不同 caption、dot 和主题视觉，也不要求共用相同 DOM；改变这些已接受比例属于 Public visual Specification change，不应由局部实现重构静默漂移。
 
-## 10. External links
+## 10. 外部链接
 
 - Main 的 EXTERNAL_LINK Article 从内容列表、首页聚合或其他不带独立 open-mode 的 Article 入口进入当前外部来源时，以新窗口作为已接受基线；Article 不因此获得独立 `openMode` 字段；
 - Navigation、CmsList、Advertisement 使用各自 Domain open-mode contract；其中 ARTICLE 型 CmsListItem 继续遵守 placement 自身 open-mode contract；
@@ -202,13 +202,13 @@ Main / Party 轮播共享以下用户可观察 lifecycle：
 - same-site internal target 使用 canonical route；
 - `/party/**` 作为跨 Site Entry 的站内目标仍保持其 canonical namespace。
 
-## 11. Resources
+## 11. 资源
 
 公开页面只消费当前已接受的公开资源 contract，包括 stable Site assets、允许公开的 managed resources 与受控 historical resources。
 
 这些资源在正常页面中应按当前内容语义可访问；资源不可用时进入本规格定义的可观察失败状态，而不是依靠第二份内容来源或静默替换掩盖问题。
 
-## 12. Responsive / accessibility behavior
+## 12. 响应式 / 无障碍行为
 
 公开站至少满足：
 
@@ -251,7 +251,7 @@ Main 与 Party 当前保持一致的用户可观察行为包括：
 
 行为一致不改变 Main / Party 的产品身份；视觉和布局差异也不产生第二套 CMS Domain。
 
-## 15. Failure behavior
+## 15. 失败行为
 
 以下情况必须产生可观察失败或稳定空态，而不是展示错误内容：
 
@@ -266,7 +266,7 @@ Main 与 Party 当前保持一致的用户可观察行为包括：
 
 异步数据必须以当前 route / scope 为准；旧请求不能覆盖新页面的 success、error、loading 或 metadata 状态。
 
-## 16. Acceptance
+## 16. 验收
 
 触达公开站行为时，最终结果至少满足实际涉及的以下 contract：
 
@@ -290,7 +290,7 @@ Main 与 Party 当前保持一致的用户可观察行为包括：
 
 需要哪些自动化、Browser 或 Human visual evidence 由当前 Verification Authority 与变更风险决定，本规格只拥有应满足的可观察结果。
 
-## 17. Non-goals
+## 17. 非目标
 
 - 新增 Party-specific CMS model / Admin module；
 - generic page builder；

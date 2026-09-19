@@ -17,23 +17,23 @@
 
 Main historical migration execution 当前保持 **FROZEN / explicit reactivation only**：既有 `data-migrations/main/**` canonical evidence 保留，普通开发流程不得自行重新激活 Main migration；Party migration 不在该冻结范围内。
 
-## Repository Authority 与 Fresh Context
+## 仓库权威 与 Fresh Context
 
-Fresh Context 先通过稳定 Bootstrap 到达 Consumer-local discovery，再按当前目标加载最小必要 owner，避免 Bootstrap 文件复制高频 Execute Gate 或机械预加载完整 Method：
+Fresh Context 先通过最小稳定 Bootstrap 到达 Consumer-local discovery，再按当前目标加载必要 owner，避免固定入口复制高频执行门禁或机械预加载完整 Method：
 
 1. `AGENTS.md`：Repository Governance、Authority Boundary、Fresh Context 与操作规则；
-2. 本 `README.md`：Project Charter equivalent / 稳定项目入口与范围；
-3. `docs/README.md`：Documentation IA / Local Discovery Entry；
-4. 由 `docs/README.md` 根据当前请求选择 state-only / routing-only / execution 路径；Current Execution State 需要时读取 `docs/work/current/README.md` 并协调当前 Open execution PR / Branch 与必要 GitHub Current Evidence；
-5. 只有当前目标需要 durable planning、Method routing 或实际 execution 时，才按需读取 `docs/project/project-roadmap.md`、`docs/project/project-capability-profile.md`、被 selector 选中的单个 `docs/methods/*.md`，以及当前 Requirement / Domain / Architecture / Specification / Technical Authority、controlling Issue / PR / Actions Current Evidence。
+2. `docs/README.md`：Documentation IA / Local Discovery Entry；
+3. 由 `docs/README.md` 根据当前请求选择状态检查 / routing / execution 路径；当前执行状态需要时读取 `docs/work/current/README.md` 并协调当前 Open execution PR / Branch 与必要 GitHub 当前证据；
+4. 本 `README.md` 只在当前任务需要稳定项目范围摘要、人类入口或该 Authority 本身进入责任时读取，不作为 ordinary Fresh Context 的固定预读；
+5. 只有当前目标需要长期规划、Method routing 或实际 execution 时，才按需读取 `docs/project/project-roadmap.md`、`docs/project/project-capability-profile.md`、被 selector 选中的单个 `docs/methods/*.md`，以及当前 Requirement / Domain / Architecture / Specification / Technical Authority、controlling Issue / PR / Actions 当前证据。
 
 `docs/**/archive/**` 与 `docs/work/archive/**` 默认只承担 traceability / historical evidence，不参与 Fresh Context Current Authority 恢复，除非当前 Authority 明确要求读取。
 
-根 README **不维护** `Current Ready Execution Unit`、Readiness `PENDING/PASS`、exact execution Head 或最近 Actions 等高频状态。Current Execution Lifecycle 的 Repository locator 统一为 `docs/work/current/README.md`，其 Entry / Exit / fail-closed 契约由 `docs/work/README.md` 定义。Project Roadmap 只维护 durable route / planning direction，不作为 Execute Gate 缓存。
+根 README **不维护** `Current Ready Execution Unit`、Readiness `PENDING/PASS`、exact execution Head 或最近 Actions 等高频状态。当前执行生命周期 的 Repository locator 统一为 `docs/work/current/README.md`，其 Entry / Exit / 失败关闭 契约由 `docs/work/README.md` 定义。Project Roadmap 只维护 durable route / planning direction，不作为 Execute Gate 缓存。
 
-GitHub PR / Branch / Actions 只对其各自原生瞬时事实负责；这不建立“GitHub 永远高于本地文件”的通用规则。Fresh Context 必须协调 Work locator、当前 Open execution work、Readiness Evidence 与任务 Authority；缺失、冲突或歧义时 fail closed，不得授予或继承 Execute Authority。
+GitHub PR / Branch / Actions 只对其各自原生瞬时事实负责；这不建立“GitHub 永远高于本地文件”的通用规则。Fresh Context 必须协调 Work locator、当前 Open execution work、就绪证据 与任务 Authority；缺失、冲突或歧义时 失败关闭，不得授予或继承 执行授权。
 
-只读状态检查受 `docs/rules/repository/read-only-state-inspection.md` 约束；高成本 CI / Review Runtime / Historical Migration 激活受 `docs/rules/verification/high-cost-runtime-activation.md` 约束。两者只限制副作用与验证作用域，不降低当前 Requirement / Specification / Verification Authority 所要求的真实 Acceptance。
+只读状态检查与高成本 CI / Review Runtime / Historical Migration 激活都继续受 Consumer-local Rule 约束，但具体 Rule locator 只能由当前 task-level Rule Discovery 返回后按需读取；本 README 不发布固定 Rule 路径。相关 Rule 只限制副作用与验证作用域，不降低当前 Requirement / Specification / Verification Authority 所要求的真实 Acceptance。
 
 ## 主要目录
 
@@ -65,4 +65,4 @@ GitHub PR / Branch / Actions 只对其各自原生瞬时事实负责；这不建
 - Content Migration application：`backend/apps/content-migration/`；
 - Admin / Public build 与脚本：分别以 `frontend/admin/package.json`、`frontend/public-site/package.json` 为准。
 
-成功、完成、通过或修复声明必须具有与目标提交匹配的 Current Evidence；GitHub Actions、PR Review 与 Post-Integration Evidence 仍按 Consumer-local Method / Rule / Repository Authority 执行。
+成功、完成、通过或修复声明必须具有与目标提交匹配的 当前证据；GitHub Actions、PR Review 与 Post-Integration Evidence 仍按 Consumer-local Method / Rule / 仓库权威 执行。

@@ -17,7 +17,7 @@ updated_at: 2026-09-16
 
 # 富文本内容编辑规格
 
-## 1. Scope
+## 1. 范围
 
 本规格定义 CMS 运营人员对 Rich Text 内容的可观察 authoring、compatibility、resource 与 safety 行为。
 
@@ -29,7 +29,7 @@ updated_at: 2026-09-16
 
 Rich Text 的长期 content authority、ownership 与安全业务不变量由 Domain Requirement 持有。本规格不决定 editor 品牌、版本、framework wrapper、Backend library、HTML parser 或源码目录；这些属于 Technical / implementation。
 
-## 2. Authoring experience
+## 2. 编辑体验
 
 Rich Text authoring 必须提供成熟、稳定的编辑体验，至少覆盖：
 
@@ -58,7 +58,7 @@ Rich Text 保存时可以对等价内容做不会改变用户感知语义的规�
 
 保存后重新打开必须能够继续稳定编辑；不得因为 editor 内部 representation 改变而要求运营人员维护第二份正文。
 
-## 4. Paste / history behavior
+## 4. 粘贴 / 历史行为
 
 对常见 WPS / Office-shaped content：
 
@@ -68,7 +68,7 @@ Rich Text 保存时可以对等价内容做不会改变用户感知语义的规�
 
 在缺少真实 Microsoft Word 环境时，不把未实际观察的 Word-specific 行为声明为已验证产品结果。
 
-## 5. Article managed images
+## 5. 文章托管图片
 
 Article Rich Text 中的 managed image 必须保持以下用户可观察语义：
 
@@ -81,7 +81,7 @@ Article Rich Text 中的 managed image 必须保持以下用户可观察语义�
 
 Page Rich Text 当前不因为本规格自动获得新的 Article-style managed Resource domain；若未来需要新的 Page Resource relation，应形成独立 Requirement / Specification。
 
-## 6. Compatibility behavior
+## 6. 兼容行为
 
 触达 Rich Text capability 时，需要保护当前已经接受的代表性内容形态，包括：
 
@@ -90,9 +90,9 @@ Page Rich Text 当前不因为本规格自动获得新的 Article-style managed 
 - ordinary Article / Page Rich Text；
 - WPS-shaped 中文 paste / undo behavior。
 
-具体 regression corpus、样本 identity 与测试 fixture 由 Verification / Repository Evidence 持有，不在 Specification 复制成新的业务数据 Authority。
+具体 regression corpus、样本 identity 与测试 fixture 由 Verification / Repository 证据 持有，不在 Specification 复制成新的业务数据 Authority。
 
-## 7. HTML safety
+## 7. HTML 安全
 
 Rich Text 必须在保持 accepted content compatibility 的同时，阻止 Domain / Product Authority 所定义的 active / document-level dangerous content 形成可执行或可利用结果。
 
@@ -104,13 +104,13 @@ Rich Text 必须在保持 accepted content compatibility 的同时，阻止 Doma
 
 具体危险内容分类、业务安全边界由 Product / Domain Authority 持有；parser、sanitization、defensive-read mechanism 与 editor integration 属于 Technical，本规格不复制实现 allow-list / block-list。
 
-## 8. Public rendering independence
+## 8. 公开渲染独立性
 
 Public 正常展示 accepted Rich content 时，不得要求加载 authoring editor 的完整 UI / chrome 才能成立。
 
 如果未来某个 editor 的正常输出必须依赖其产品专属 authoring runtime 才能显示，应重新评估 Technical choice 与产品 compatibility，而不是把 Admin implementation 变成新的公开内容 contract。
 
-## 9. Failure behavior
+## 9. 失败行为
 
 以下情况不得静默成功：
 
@@ -122,7 +122,7 @@ Public 正常展示 accepted Rich content 时，不得要求加载 authoring edi
 
 具体错误提示与 implementation recovery 由 Technical contract 决定，但失败结果必须可观察、可验证。
 
-## 10. Acceptance
+## 10. 验收
 
 触达 Rich Text capability 时，最终结果至少满足实际涉及的以下 contract：
 
@@ -139,7 +139,7 @@ Public 正常展示 accepted Rich content 时，不得要求加载 authoring edi
 
 验证使用哪些 Backend / Admin / Public / Browser 层次与 Human evidence，由当前 Verification Authority 和实际风险决定，不由本规格固化测试程序。
 
-## 11. Non-goals
+## 11. 非目标
 
 - generic Page Builder；
 - Page Resource domain expansion；

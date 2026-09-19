@@ -32,14 +32,14 @@ Project Knowledge 只保存当前 `jilinjobs-cms` 自身值得跨 Fresh Context 
 - 可从 GitHub 直接恢复的 Open PR / Issue / Actions 流水账；
 - 临时 source inventory、comparison matrix、review scratchpad。
 
-这些内容必须回到真实 semantic owner，或只保留在 Git / Issue / PR / Actions 中。
+这些内容必须回到真实 语义所有者，或只保留在 Git / Issue / PR / Actions 中。
 
 ## Capability Profile 边界
 
-Project Capability Profile 只保存少量 Repository-local instance pointers，例如 work kind → Method locator、Rule root / Discovery Tool、Skill root、Human / Agent entry 与 evaluated upstream baseline。它不得复制完整 Rule / Skill inventory、Method stages、当前 candidate set 或 Issue / PR 状态。
+Project Capability Profile 只保存少量 Repository-local instance pointers，例如 工作类型 → Method locator、Rule root / Discovery Tool、Skill root、Human / Agent entry 与 evaluated upstream baseline。它不得复制完整 Rule / Skill inventory、Method stages、当前 candidate set 或 Issue / PR 状态。
 
 ## Roadmap 与 Evolution
 
 Roadmap 只回答当前正式基线、当前演进 Gate、下一候选；Evolution 只保存对理解今天设计仍有价值的主要里程碑。每个 EU、commit、workflow run、实验流水账不进入长期 Project Knowledge。
 
-当可变 Repository state 与长期 Project summary 冲突时，应读取真实 Current Evidence 并修正 stale summary；Product / Method / Architecture 语义仍回到各自 canonical owner。
+当可变 Repository state 与长期 Project summary 冲突时，应读取真实 当前证据 并修正 stale summary；Product / Method / Architecture 语义仍回到各自 规范语义所有者。

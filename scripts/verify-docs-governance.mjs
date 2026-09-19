@@ -23,6 +23,7 @@ const currentRoots = [
   'docs/technical',
   'docs/work/README.md',
   'docs/work/current',
+  'skills',
 ]
 
 function collectMarkdown(target, { skipArchive = false } = {}) {
@@ -106,10 +107,22 @@ for (const file of languageFiles) {
     addFailure(file, '文档没有中文主叙述，属于纯英文文档。')
   }
 
-  const h1 = content.match(/^#\s+(.+)$/m)?.[1]?.trim()
-  const standardizedAgentTitle = file === 'AGENTS.md' && h1 === 'AGENTS.md'
-  if (h1 && !standardizedAgentTitle && !/[\u3400-\u9fff]/.test(h1)) {
-    addFailure(file, `一级标题必须以中文为主，可在括号中保留英文精确名称；当前为“${h1}”。`)
+  const skillName = file.endsWith('/SKILL.md') ? path.posix.basename(path.posix.dirname(file)) : null
+  for (const match of content.matchAll(/^(#{1,6})\s+(.+)$/gm)) {
+    const heading = match[2].trim()
+    const standardizedAgentTitle = file === 'AGENTS.md' && heading === 'AGENTS.md'
+    const exactSkillTitle = skillName && heading === skillName
+    const exactCodeTitle = /^\`[^\`]+\`$/.test(heading)
+    const stableTokenTitle = /^[A-Z][A-Z0-9_-]*$/.test(heading)
+    if (
+      !standardizedAgentTitle &&
+      !exactSkillTitle &&
+      !exactCodeTitle &&
+      !stableTokenTitle &&
+      !/[\u3400-\u9fff]/.test(heading)
+    ) {
+      addFailure(file, `面向人的结构标题必须以中文为主；精确机器标识、Skill 名或稳定状态值可保留原样。当前为“${heading}”。`)
+    }
   }
 
   for (const segment of narrativeSegments(content)) {

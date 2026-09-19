@@ -8,7 +8,7 @@ status: active
 
 ## 1. 目标
 
-本方法面向普通软件 Consumer 项目的项目建立或重大需求基线重建，负责把原始、碎片化、不同可信度且可能相互冲突的 Project Inputs，收敛为一套可持续维护、具有明确 semantic ownership、可由 Fresh Context Agent 直接消费的 Requirement Baseline。
+本方法面向普通软件 Consumer 项目的项目建立或重大需求基线重建，负责把原始、碎片化、不同可信度且可能相互冲突的 Project Inputs，收敛为一套可持续维护、具有明确 语义所有权、可由 Fresh Context Agent 直接消费的 Requirement Baseline。
 
 它解决的是：
 
@@ -56,7 +56,7 @@ Requirement Baseline Ready
         AI Development
 ```
 
-本 Method 是新项目进入普通 Feature Development 的上游 Project Establishment work kind，但不是每个 Feature 都要重复执行的前置步骤。
+本 Method 是新项目进入普通 Feature Development 的上游 Project Establishment 工作类型，但不是每个 Feature 都要重复执行的前置步骤。
 
 Requirement Baseline 一旦有效，后续普通 Feature 直接按 Repository-local selector 进入 `method:ai-development`。只有基线本身出现系统性缺口、冲突或需要重建时，才重新进入本 Method 或返回其中拥有该责任的阶段。
 
@@ -81,7 +81,7 @@ Establish Sources & Authority
 5. Review Requirement Baseline；
 6. Requirement Convergence。
 
-### 4.1 Stable phase identities
+### 4.1 稳定阶段身份
 
 - Establish Sources & Authority → `establish-requirement-sources`；
 - Extract Requirement Facts → `extract-requirements`；
@@ -92,7 +92,7 @@ Establish Sources & Authority
 
 这些 token 只属于 `method:requirement-baseline-establishment`。
 
-## 5. Establish Sources & Authority
+## 5. 建立来源与权威（Establish Sources & Authority）
 
 先明确当前需求建立可以使用哪些输入、它们具有何种事实地位，以及哪些现有长期 owner 可以继续使用。
 
@@ -123,7 +123,7 @@ Establish Sources & Authority
 
 退出条件：后续事实抽取可以明确判断来源可信度、时间边界与当前 Authority owner，不会把不同历史时期或不同证据等级平权混合。
 
-## 6. Extract Requirement Facts
+## 6. 提取需求事实（Extract Requirement Facts）
 
 需求抽取优先从业务语义出发，而不是从 UI、数据库或代码结构出发。
 
@@ -153,9 +153,9 @@ Establish Sources & Authority
 
 退出条件：主要长期业务事实已经能够被识别，并可以进入 ownership / capability boundary 分析；不要求在此阶段穷举未来所有 Feature 细节。
 
-## 7. Structure Requirement Authority
+## 7. 结构化需求权威（Structure Requirement Authority）
 
-把已提取事实组织到明确的长期 semantic owner，而不是建立第二套持久业务模型。
+把已提取事实组织到明确的长期 语义所有者，而不是建立第二套持久业务模型。
 
 通用 ownership 与推荐 `docs/requirements` 信息架构由 `architecture:requirement-authority` 定义。本阶段至少完成：
 
@@ -181,7 +181,7 @@ Requirement Capability 边界优先依据：
 
 退出条件：核心事实已经有唯一长期 owner，Requirement index 可以定位主要 Authority，且不存在明显重复 / 平行事实源。
 
-## 8. Resolve Requirement Unknowns
+## 8. 解决需求未知项（Resolve Requirement Unknowns）
 
 ### 8.1 先分类，不默认提问
 
@@ -199,7 +199,7 @@ Requirement Capability 边界优先依据：
 
 “未知”不等于“必须问人”。
 
-### 8.2 Derive → Default → Ask → Review
+### 8.2 推导 → 默认 → 询问 → 评审（Derive → Default → Ask → Review）
 
 需求讨论遵守以下顺序：
 
@@ -215,9 +215,9 @@ Requirement Capability 边界优先依据：
 
 Project Requirement Default 若要跨多个 Capability 直接复用，必须先进入真实 Requirement Authority，并明确其适用范围与必要 override 条件；聊天中的口头习惯、模型常识或历史项目经验不能直接充当 Authoritative Default。
 
-Provisional Minimal Default 必须在当前 Capability Human Review 中可见。只有 Review 通过、Product / Requirement Authority 明确认可，或其结果随后被其他有效 Authority 支持后，相关长期事实才能 promote 到 durable Requirement owner；在此之前不得把 provisional default 当成已确认基线事实传播到其他 Capability。
+Provisional Minimal Default 必须在当前 Capability 人工评审 中可见。只有 Review 通过、Product / Requirement Authority 明确认可，或其结果随后被其他有效 Authority 支持后，相关长期事实才能 promote 到 durable Requirement owner；在此之前不得把 provisional default 当成已确认基线事实传播到其他 Capability。
 
-### 8.3 Human Question Gate
+### 8.3 人工问题门禁（Human Question Gate）
 
 一个候选问题只有同时满足以下条件才升级为 Human Blocking Question：
 
@@ -231,7 +231,7 @@ Provisional Minimal Default 必须在当前 Capability Human Review 中可见。
 
 否则应推导、应用 Authoritative Default、采用可 Review 的 Provisional Minimal Default、记录为 non-blocking open item，或推迟到后续责任层。
 
-### 8.4 Conversation protocol
+### 8.4 会话协议
 
 会话只是需求获取渠道，不是长期 Authority。
 
@@ -245,7 +245,7 @@ Provisional Minimal Default 必须在当前 Capability Human Review 中可见。
 
 问题数量应由真实 Blocking Ambiguity 数决定，而不是为了形成“完整讨论”凑足固定数量。连续没有真实 blocking question 时，应停止提问并继续完成当前 Capability。
 
-## 9. Clarification Depth Stop Condition
+## 9. 澄清深度停止条件
 
 当以下信息已经足以唯一决定主要业务行为与验收时，Requirement 下钻应停止：
 
@@ -263,11 +263,11 @@ Provisional Minimal Default 必须在当前 Capability Human Review 中可见。
 
 如果下游结果已经由上游规则唯一决定，也必须停止逐项追问并直接记录推导结果。
 
-## 10. Review Requirement Baseline
+## 10. 评审需求基线（Review Requirement Baseline）
 
-### 10.1 Capability-level Human Review
+### 10.1 能力级人工评审（Capability-level 人工评审）
 
-每个主要 Requirement Capability 达到可读状态后，可以进行一次整体 Human Review，重点查看：
+每个主要 Requirement Capability 达到可读状态后，可以进行一次整体 人工评审，重点查看：
 
 - 范围是否正确；
 - AI 自动推导是否符合意图；
@@ -279,7 +279,9 @@ Provisional Minimal Default 必须在当前 Capability Human Review 中可见。
 
 人工主要作为 Product Authority / Reviewer，而不是逐字段需求生成器。
 
-### 10.2 Independent semantic review
+当前 Consumer 已采用 `architecture:human-review` 与 `skill:human-review`。本阶段需要集中人工确认时，可以调用该 Skill 形成结构化 Markdown 评审草稿、分类反馈并把已确认的长期语义回写真正 Requirement owner；完成回写后必须重新读取 owner 再校准草稿。没有显式交付格式要求时，不因为进入能力级人工评审自动生成 DOCX、HTML 或其他最终交付物。
+
+### 10.2 独立语义复核（Independent Semantic Review）
 
 以下任一情况成立时，在 Baseline Ready 前必须执行独立语义复核：
 
@@ -290,7 +292,7 @@ Provisional Minimal Default 必须在当前 Capability Human Review 中可见。
 
 Review 必须可以核对 source / decision / resulting Authority；格式、链接、lint 或“Fresh Context 可读”不能单独证明语义正确。
 
-## 11. Requirement Convergence
+## 11. 需求收敛（Requirement Convergence）
 
 只有同时满足以下条件，才可以声明 `Requirement Baseline Ready`：
 
@@ -310,7 +312,7 @@ Review 必须可以核对 source / decision / resulting Authority；格式、链
 
 真正存在 blocker 时必须保持 NOT READY。
 
-## 12. Requirement Authority Artifact lifecycle
+## 12. 需求权威产物生命周期
 
 Requirement Authority 的结构、README / index / fact owner 边界、推荐目录、producer / consumer / update / supersede / escalation contract 由 `architecture:requirement-authority` 统一定义。
 
@@ -320,7 +322,7 @@ Requirement Authority 的结构、README / index / fact owner 边界、推荐目
 
 只要能够从 Requirement Authority 唯一再生，就不应为了 AI 理解方便建立新的持久中间 Authority。
 
-## 13. Return contract
+## 13. 返回契约
 
 完成后只声明：
 
@@ -337,7 +339,7 @@ Execution Unit created
 Execute / Integrate authority granted
 ```
 
-下一步由 Repository-local Method selector 根据当前 work kind 决定：
+下一步由 Repository-local Method selector 根据当前 工作类型 决定：
 
 - 没有 systemic architecture blocker → 可进入具体 Feature 的 `method:ai-development`；
 - 存在多个 Feature 共同依赖、长期、高成本难逆并阻塞可靠开发的 architecture driver → 可进入 `method:architecture-clarification`；
@@ -347,5 +349,7 @@ Execute / Integrate authority granted
 ## 14. Skill / Rule 边界
 
 本 Method 当前不要求新的 `requirements-analysis` 或 `requirement-elicitation` Skill。只有未来真实 Consumer 使用证明某个 procedure 在多个 Repository 中稳定、可独立调用并能显著减少重复错误时，才评估 Skill admission。
+
+`skill:human-review` 是跨 Requirement / Specification / Architecture / Technical 共用的 supporting capability，不拥有需求抽取、需求分析或 Requirement Baseline lifecycle，因此不改变上述 Skill 准入结论。
 
 同样不因为本 Method 新增就复制一组 Requirement Rules。`Derive → Default → Ask → Review`、Question Gate 与 Depth Stop 是本 Method 的过程 contract；只有未来出现能够独立于 Method 存在的 policy gap 时，才进入 Rule owner。

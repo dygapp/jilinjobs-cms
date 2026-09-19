@@ -51,7 +51,7 @@ Architecture Context Ready
 AI Development
 ```
 
-本 Method 是条件性 work kind，不是所有新项目的必经步骤。简单项目、成熟技术栈或已经存在足够 Architecture Context 的项目，可以在 `Requirement Baseline Ready` 后直接进入具体 Feature 的 `method:ai-development`。
+本 Method 是条件性 工作类型，不是所有新项目的必经步骤。简单项目、成熟技术栈或已经存在足够 Architecture Context 的项目，可以在 `Requirement Baseline Ready` 后直接进入具体 Feature 的 `method:ai-development`。
 
 Feature Technical Planning 与本 Method 共享同一个长期 Architecture owner：
 
@@ -74,7 +74,7 @@ Establish Architecture Drivers
 2. Clarify Architecture；
 3. Architecture Convergence。
 
-### 4.1 Stable phase identities
+### 4.1 稳定阶段身份
 
 - Establish Architecture Drivers → `establish-architecture-drivers`；
 - Clarify Architecture → `clarify-architecture`；
@@ -82,7 +82,7 @@ Establish Architecture Drivers
 
 这些 token 只属于 `method:architecture-clarification`。
 
-## 5. Establish Architecture Drivers
+## 5. 建立架构驱动因素（Establish Architecture Drivers）
 
 先证明当前问题真的属于项目级 Architecture responsibility，而不是 Requirement ambiguity 或 Feature-local HOW。
 
@@ -99,7 +99,7 @@ Establish Architecture Drivers
 
 退出条件：保留下来的 driver 都具有明确的项目级 Architecture 理由，且没有把未解决 Product Requirement 伪装成 Architecture decision。
 
-## 6. Clarify Architecture
+## 6. 澄清架构（Clarify Architecture）
 
 根据当前 Requirement Baseline、Repository facts、已有 Architecture Context、成熟 reference / engineering evidence，对保留的 driver 形成最小充分长期结构决定。
 
@@ -113,13 +113,15 @@ Establish Architecture Drivers
 - current durable Architecture State；
 - ADR（仅当背景、主要替代关系与权衡具有长期历史价值时）。
 
-### 6.1 Seed Architecture
+当保留下来的 architecture driver 存在多个后果显著不同的长期方案、高成本难逆选择、安全 / 隐私 / 核心数据 / 集成 / 部署边界，或当前授权不足以作出长期决定时，应升级人工权威。需要集中比较当前事实、方案差异与长期后果时可以调用 `skill:human-review`；人工评审只辅助判断，不成为新的 Architecture owner，长期决定必须回写真实 owner。
+
+### 6.1 种子架构（Seed Architecture）
 
 项目早期可以基于已知系统类别、Requirement Baseline、明确 NFR、成熟工程经验和 reference implementation 形成最小 Seed Architecture。
 
 目标是提前解决高杠杆结构问题，而不是一次性预测全部未来设计。
 
-### 6.2 Evolutionary Architecture
+### 6.2 演进式架构（Evolutionary Architecture）
 
 实施过程中出现以下 Evidence 时，可以重新进入本 Method 或其中相应责任：
 
@@ -149,7 +151,7 @@ local implementation evidence
 
 退出条件：阻塞性的长期 architecture driver 已进入真实 Architecture owner；普通 Feature-specific HOW 没有被提前吸收。
 
-## 7. Architecture Convergence
+## 7. 架构收敛（Architecture Convergence）
 
 只有同时满足以下条件，才可以声明 `Architecture Context Ready`：
 
@@ -161,11 +163,12 @@ local implementation evidence
 6. ADR 只记录真正需要历史理由的 decision，不把 ADR 变成全部 Architecture 文档；
 7. remaining architecture item 已明确为 non-blocking 或属于后续 evolutionary evidence；
 8. 高影响变更需要的独立 review 已完成；
-9. 新增或重大修改的长期 Architecture artifact 已有明确 producer、trigger、consumer、persistence、update、supersede 与 escalation boundary。
+9. 新增或重大修改的长期 Architecture artifact 已有明确 producer、trigger、consumer、persistence、update、supersede 与 escalation boundary；
+10. 需要人工裁决的长期架构决定已经完成，或明确保持 unresolved，没有只停留在人工评审草稿中。
 
 真正存在 blocker 时保持 NOT READY。
 
-## 8. Return contract
+## 8. 返回契约
 
 完成后只声明：
 
@@ -185,9 +188,9 @@ Execute / Integrate authority granted
 
 后续具体 Feature / change 仍必须重新按 Consumer-local selector 进入 `method:ai-development` 或其他适用 Method。
 
-## 9. Artifact lifecycle
+## 9. 产物生命周期
 
-### 9.1 Durable outputs
+### 9.1 长期产物
 
 默认 durable：
 
@@ -216,7 +219,7 @@ Execute / Integrate authority granted
 - Architecture Evidence 不足以支持 durable decision；
 - owner 冲突或 supersede 关系无法唯一确定。
 
-### 9.2 Transitional outputs
+### 9.2 过渡产物
 
 默认 transitional / disposable：
 
@@ -224,12 +227,15 @@ Execute / Integrate authority granted
 - option comparison；
 - exploratory diagram；
 - spike / benchmark result 的解释性草稿；
-- review scratchpad。
+- review scratchpad；
+- 结构化 Markdown 人工评审草稿及其临时派生视图。
 
-临时产物只需要明确当前用途与退出 / 丢弃边界；只要某个派生表达可以从长期 Architecture Authority 唯一再生，就不应为了 AI 理解方便再建立平行长期模型。
+临时产物只需要明确当前用途与退出 / 丢弃边界；只要某个派生表达可以从长期 Architecture Authority 唯一再生，就不应为了 AI 理解方便再建立平行长期模型。跨 Requirement / Specification / Architecture / Technical 共用的评审草稿、反馈分类与回写边界由 `architecture:human-review` 持有。
 
 ## 10. Skill / Rule 边界
 
 本 Method 当前不要求新的 `architecture-framing` Skill。只有未来真实 Consumer Evidence 证明某个 procedure 在多个 Repository 中稳定、可独立调用并能减少重复错误时，才评估 Skill admission。
+
+`skill:human-review` 是 Requirement、Specification、Architecture 与 Technical Planning 可以共同复用的横切 supporting capability；它不拥有 Architecture Clarification lifecycle，也不替代真实 Architecture owner。
 
 同样不因为 Method 独立出来就批量新增 Architecture Rules。现有高影响 review、Authority lifecycle、verification 等横切 policy 继续按 Rule Discovery 条件性适用。

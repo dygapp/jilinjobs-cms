@@ -36,9 +36,9 @@ Clarify Intent
 - Execute → `execute`
 - Converge → `converge`
 
-Integration 不是本 Method 的通用阶段。merge、release、deploy 与其他外部副作用由 Repository / Human Authority 决定。
+Integration 不是本 Method 的通用阶段。merge、release、deploy 与其他外部副作用由 Repository / 人工权威 决定。
 
-## Clarify Intent
+## 意图澄清（Clarify Intent）
 
 只解决会实质改变 Goal、Scope、User-visible Behavior、Business Boundary、Acceptance 或重大非功能义务的当前 Feature 歧义。优先从当前 Requirement / Domain / Architecture Authority 解析；低影响、可逆实现选择不升级到产品意图层。
 
@@ -48,37 +48,41 @@ Integration 不是本 Method 的通用阶段。merge、release、deploy 与其�
 
 对应 Skill：`clarify-intent`。
 
-## Specification
+## 功能规格（Specification）
 
 形成当前 Feature / change 的 WHAT / WHY Authority，至少覆盖 Goal、In/Out Scope、Observable Behavior、Business Rules、Boundary / Failure Behavior、Acceptance Criteria 与必要非功能约束。
 
 Specification 不复制完整 project-level Requirement / Domain baseline。新确认且具有跨 Feature 长期价值的业务事实必须提升到真实 Requirement / Domain owner。
 
+当 Specification 新增或实质改变用户可见行为、主要业务流程、失败语义、验收结果，或者同一 Requirement 可以形成多个合理的可观察行为时，应按当前 Consumer Authority 判断是否需要人工集中确认。需要时可调用 `skill:human-review` 形成结构化 Markdown 评审草稿，并把确认后的长期语义回写真正的 Specification 或上游 owner；普通、直接、无歧义地投影既有 Requirement 时不增加固定人工审批。
+
 退出：Fresh Context Agent 读取 Specification + 最小长期 Context 即可判断做什么、不做什么、什么算完成。
 
 对应 Skill：`specify`。
 
-## Technical Planning
+## 技术规划（Technical Planning）
 
 仅在 Specification 无法直接、安全映射到当前系统时进入，例如跨模块、新数据模型、外部集成、迁移、共享契约、部署拓扑或重大架构权衡。
 
 Technical Plan 只保存跨 Execution Unit 仍有协调价值的 HOW；精确文件 / 命令 / 编辑顺序属于 JIT Execution Plan。Feature-local 可逆 HOW 留在本阶段；只有多个 Feature 共同依赖且必须提前解决的长期 structural driver 才升级到 `method:architecture-clarification`，并更新同一个长期 Architecture owner。
 
+涉及高成本难逆的数据迁移、对外 / 跨团队共享接口重大改变、生产部署 / 回滚 / 安全边界重大影响，或会改变已承诺稳定兼容边界时，应按当前 Authority 升级人工决定。需要集中比较当前事实、方案差异与长期后果时可调用 `skill:human-review`；人工确认形成的长期事实仍必须回写真正 Architecture / Specification / Technical owner，不能停留在评审草稿。
+
 对应 Skill：`technical-plan`。
 
-## Slice & Ready
+## 切片与就绪（Slice & Ready）
 
-`slice-work` 把 Ready Specification 与必要 Technical Plan 切为 context-fit Candidate Execution Units；`readiness-check` 在 Execute 前执行只读门禁。只有 Readiness PASS 才授予该 Unit 的 Execute Authority；不自动授权后续 Unit 或 Integration。
+`slice-work` 把 Ready Specification 与必要 Technical Plan 切为 context-fit Candidate Execution Units；`readiness-check` 在 Execute 前执行只读门禁。只有 Readiness PASS 才授予该 Unit 的 执行授权；不自动授权后续 Unit 或 Integration。
 
-## Execute
+## 执行（Execute）
 
-每次只执行一个 Ready Execution Unit。重新读取当前 Unit、直接 Authority 与代码事实，形成 JIT plan；在 direct responsibility 首个副作用前执行 Consumer-local Rule Discovery，并按需调用 Skill。
+每次只执行一个 Ready Execution Unit。重新读取当前 Unit、直接 Authority 与代码事实，形成 JIT plan；在 直接责任 首个副作用前执行 Consumer-local Rule Discovery，并按需调用 Skill。
 
 意外失败进入 `systematic-debug`。完成声明必须由与 Completion Conditions 匹配的当前 Evidence 支持。
 
 对应 Skill：`execute-unit`。
 
-## Converge
+## 收敛（Converge）
 
 对当前 Authority、最终实现与当前 Evidence 做整体收敛，区分 Verification、Review 与 Convergence。发现缺口时返回拥有责任的上游层：局部 Feature 缺口返回当前 Feature owner；系统性 Requirement Baseline gap 返回 Requirement owner / `method:requirement-baseline-establishment`；systemic architecture gap 返回 Architecture owner / `method:architecture-clarification`。
 
@@ -88,10 +92,12 @@ Technical Plan 只保存跨 Execution Unit 仍有协调价值的 HOW；精确文
 
 ## Fresh Context 与 Artifact lifecycle
 
-普通上下文只加载 Repository Authority、当前工作对象、Requirement locator / 当前 Feature 直接相关 Requirement owner、必要 Specification / Technical / Architecture / Domain / Project Authority、Rule Discovery 返回的候选、当前需要的 Skill，以及相关 code / tests / Evidence。
+普通上下文只加载 仓库权威、当前工作对象、Requirement locator / 当前 Feature 直接相关 Requirement owner、必要 Specification / Technical / Architecture / Domain / Project Authority、Rule Discovery 返回的候选、当前需要的 Skill，以及相关 code / tests / Evidence。
 
-长期知识只进入真实 semantic owner；会话推理、source comparison、JIT plan 与阶段流水账默认不持久化。Requirement Authority 的 ownership / locator contract 由 `architecture:requirement-authority` 持有。
+长期知识只进入真实 语义所有者；会话推理、source comparison、JIT plan 与阶段流水账默认不持久化。Requirement Authority 的 ownership / locator contract 由 `architecture:requirement-authority` 持有。
 
-## Human escalation
+## 人工升级
 
-改变产品意图 / 范围、产生实质不同用户行为、Authority 冲突、重大难逆架构方向、安全 / 隐私 / 数据风险、超出授权的共享 / 外部副作用，以及 Repository policy 保留给人工的 merge / release / deploy 等必须升级 Human Authority。
+改变产品意图 / 范围、产生实质不同用户行为、Authority 冲突、重大难逆架构方向、安全 / 隐私 / 数据风险、超出授权的共享 / 外部副作用，以及 Repository policy 保留给人工的 merge / release / deploy 等必须升级 人工权威。
+
+人工升级负责判断“什么必须由人决定”；`skill:human-review` 只在需要时把当前权威内容整理为便于判断的结构化材料，并把反馈回写真正 owner。它不是新的 Method stage，不替代 independent `review-change`，也不授予 integration / merge / release / deploy 权限。

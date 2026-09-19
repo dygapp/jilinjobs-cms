@@ -14,7 +14,7 @@ scope:
 
 创建、重写或准备接受 Git Commit 时，提交历史必须保持可读、可追溯并符合本 Consumer 的稳定语义。
 
-## Commit Message
+## 提交说明（Commit Message）
 
 默认格式：
 
@@ -35,11 +35,11 @@ scope:
 - 摘要直接描述主要动作与对象，默认不以句号结尾；
 - 普通 Commit 不要求 Body；只有摘要不足以解释关键 why、兼容边界、迁移约束或 trade-off 时才增加。
 
-## Type
+## 类型（Type）
 
 优先复用已经稳定使用的 Type：`feat`、`fix`、`refactor`、`test`、`docs`、`chore`、`ci`、`build`、`style`、`data`。只有形成新的长期责任语义时才增加 Type。
 
-## Scope
+## 范围（Scope）
 
 Scope 表示稳定责任域，不表示单个文件或一次性任务编号。优先复用 `migration`、`public`、`party`、`admin`、`backend`、`config`、`resource`、`review`、`method`、`governance`、`project`、`repo` 等已有稳定域。
 
@@ -56,8 +56,8 @@ Scope 表示稳定责任域，不表示单个文件或一次性任务编号。�
 - 最终历史是否仍有助于 Review 与 Fresh Context 恢复；
 - 是否混入无关生成物、调试内容或未授权变化。
 
-## 历史重写与 Evidence
+## 历史重写与 证据
 
-重写 Branch history 后必须重新读取最终 Head / tree / diff。与旧 Head 绑定的 Current Evidence 不机械继承；是否复用由当前 Evidence Claim 影响判断决定。
+重写 Branch history 后必须重新读取最终 Head / tree / diff。与旧 Head 绑定的 当前证据 不机械继承；是否复用由当前 证据 Claim 影响判断决定。
 
 本 Rule 不授予 merge / release / deploy 权限。Squash merge 的最终标题仍应保持中文 Conventional Commit 语义。

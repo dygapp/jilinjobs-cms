@@ -28,18 +28,36 @@ class RuntimeActivationRegressionTests(unittest.TestCase):
         ids = {item["id"] for item in result["candidates"]}
         self.assertIn("rule:integration-state-closure-review", ids)
 
-    def test_bootstrap_requires_task_level_discovery_before_side_effects(self):
+    def test_initial_human_communication_discovers_language_rule_without_method_phase(self):
+        result = rd.discover(
+            repo_root=REPO_ROOT,
+            rule_roots=[Path("docs/rules")],
+            signals={
+                "phases": None,
+                "activities": ["communication"],
+                "technologies": [],
+                "artifacts": ["human-facing-content"],
+                "risks": [],
+            },
+        )
+
+        ids = {item["id"] for item in result["candidates"]}
+        self.assertIn("rule:human-facing-content-integrity", ids)
+
+    def test_bootstrap_requires_discovery_before_substantive_communication_and_side_effects(self):
         agents = (REPO_ROOT / "AGENTS.md").read_text(encoding="utf-8")
-        self.assertIn("首个有副作用动作前必须完成本次 task-level discovery", agents)
-        self.assertIn("其 PASS 不得替代 ordinary runtime invocation", agents)
+        self.assertIn("首次向人工输出包含项目事实", agents)
+        self.assertIn("首个受 Rule 约束的实质动作前必须完成本次 task-level discovery", agents)
+        self.assertIn("这些通过结果不能替代当前 task signals 的 task-level discovery", agents)
 
     def test_rule_discovery_architecture_defines_responsibility_transition_checkpoint(self):
         contract = (
             REPO_ROOT / "docs/architecture/rule-discovery.md"
         ).read_text(encoding="utf-8")
-        self.assertIn("首个有副作用动作前必须完成 task-level discovery", contract)
-        self.assertIn("必须在下一次有副作用动作前重新发现", contract)
-        self.assertIn("不替代当前 Agent 的 live discovery", contract)
+        self.assertIn("首个受 Rule 约束的实质动作前必须完成 task-level discovery", contract)
+        self.assertIn("必须在下一次受 Rule 约束的实质动作前重新发现", contract)
+        self.assertIn("preflight infrastructure invocation", contract)
+        self.assertIn("communication", contract)
 
     def test_requirement_and_architecture_methods_replace_clarification_super_method(self):
         requirement_method = (

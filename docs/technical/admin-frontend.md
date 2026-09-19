@@ -19,11 +19,11 @@ updated_at: 2026-09-16
 
 ## 1. 文档责任
 
-本文只维护 Admin 在多个 Feature 之间持续需要共享的前端 implementation contract。用户可观察行为、管理能力与 Acceptance 由 `docs/specifications/admin-site.md` 持有；模块化 SPA 的长期边界与 ADR 由 Architecture Authority 持有；Backend ↔ Admin 的 endpoint / request / response / error compatibility 由 `docs/technical/http-interface-contract.md` 唯一持有。
+本文只维护 Admin 在多个 Feature 之间持续需要共享的前端 implementation contract。用户可观察行为、管理能力与 验收 由 `docs/specifications/admin-site.md` 持有；模块化 SPA 的长期边界与 ADR 由 Architecture Authority 持有；Backend ↔ Admin 的 endpoint / request / response / error compatibility 由 `docs/technical/http-interface-contract.md` 唯一持有。
 
 本文不复制每个 CMS 对象的业务规则、HTTP DTO inventory、当前组件清单、精确依赖版本、测试数量或某个 Execution Unit 的设计计划。
 
-## 2. Application / module model
+## 2. 应用 / 模块模型
 
 Admin 当前是单一 Vue SPA，由 Application Shell 聚合业务模块，不使用 runtime microfrontend。
 
@@ -39,7 +39,7 @@ Shell 只消费模块公开 contract，不读取模块内部页面 / API / compo
 
 具体 `AdminModule` TypeScript shape、registry、Router 与源码目录以 current implementation 为准。
 
-## 3. Routing
+## 3. 路由
 
 Router 将业务模块置于 Admin application namespace，canonical URL 与 compatibility behavior 必须满足 Admin Specification。
 
@@ -50,15 +50,15 @@ Technical 层只要求：
 - direct access / refresh 与 application base 协同；
 - route-level loading / chunking 可以由当前 bundler 实现，但 chunk 文件名不是长期 contract。
 
-## 4. API responsibility
+## 4. API 责任
 
 Admin source 只消费 Admin authoring / management contract；它可以拥有 mutation、validation feedback、Resource authoring 与管理态 DTO adapter。
 
 稳定 HTTP namespace、method、query、wire field、status、multipart 与 error envelope 统一来自 `http-interface-contract.md`。Frontend API Type / Draft model 是 consumer-side adapter，不是第二份 Interface / Domain Authority；adapter 应投影 canonical wire contract，而不是通过局部 helper 发明不存在的 Backend endpoint。
 
-Backend 返回的 stable identity、preset、status、policy 等字段必须按当前 Domain / Specification 解释，不由 UI 自行发明可编辑语义。发现 adapter 与 Backend / Interface Contract 不一致时必须 fail closed 判断 stale client、stale provider 或 contract change，不以“TypeScript 已声明”为理由自动扩张接口。
+Backend 返回的 stable identity、preset、status、policy 等字段必须按当前 Domain / Specification 解释，不由 UI 自行发明可编辑语义。发现 adapter 与 Backend / Interface Contract 不一致时必须 失败关闭 判断 stale client、stale provider 或 contract change，不以“TypeScript 已声明”为理由自动扩张接口。
 
-## 5. Shared authoring primitives
+## 5. 共享编辑基础能力
 
 跨 CMS 管理页面已经证明稳定一致的 authoring / presentation responsibility 应使用共享 primitive，而不是每个 Feature 重建一套。
 
@@ -73,7 +73,7 @@ Backend 返回的 stable identity、preset、status、policy 等字段必须按�
 
 具体 component 名、Element Plus API、DOM class 与样式参数由 implementation 持有；只有当多个 Feature 真实共享同一职责时才进入 shared，不因代码相似机械抽象。
 
-## 6. Rich Text integration
+## 6. 富文本集成
 
 Admin Rich Text editor 通过薄 adapter 接入当前 authoring contract：
 
@@ -85,20 +85,20 @@ Admin Rich Text editor 通过薄 adapter 接入当前 authoring contract：
 
 更具体的跨 Consumer Rich Text HOW 由 `docs/technical/rich-text-authoring.md` 持有。
 
-## 7. UI state
+## 7. UI 状态
 
 纯界面局部状态默认留在客户端，例如折叠、当前局部 selection、dialog visibility。只有当前 Product / Domain Authority 明确要求跨会话、跨设备或用户级持久化时，才建立新的 Runtime persistence；不能因为 UI 有 state 就自动创建 SiteProperty 或用户 Profile。
 
-## 8. Build / verification adapter
+## 8. 构建 / 验证适配
 
 当前 Admin package 以 Repository `package.json` 持有 Node engine、Vue / TypeScript / Vite / Element Plus / editor 的精确版本与 scripts。
 
-正式 build 必须包含 Vue-aware type-check 与 bundler build；有 Router / DOM / async / user interaction 风险时追加 Browser Evidence。触达 API adapter 时，应验证 consumer 与 `http-interface-contract.md` 的 endpoint / wire compatibility，而不是让 client type 成为唯一接口测试 oracle。具体命令和版本直接从 package / Workflow 恢复，本文不复制 inventory。
+正式 build 必须包含 Vue-aware type-check 与 bundler build；有 Router / DOM / async / user interaction 风险时追加 Browser 证据。触达 API adapter 时，应验证 consumer 与 `http-interface-contract.md` 的 endpoint / wire compatibility，而不是让 client type 成为唯一接口测试 oracle。具体命令和版本直接从 package / Workflow 恢复，本文不复制 inventory。
 
 ## 9. 不由本文拥有
 
 - CMS Domain object / lifecycle / validation rule；
-- Admin 信息架构的产品文案与 Acceptance；
+- Admin 信息架构的产品文案与 验收；
 - HTTP endpoint / DTO 的第二份长期 Authority；
 - 每个页面的 current component tree；
 - package version inventory；

@@ -213,9 +213,19 @@ def _walk_markdown(root: Path) -> Iterable[Path]:
         errors.append(error)
 
     for current, dirs, files in os.walk(root, followlinks=False, onerror=onerror):
+        current_path = Path(current)
+        symlink_dirs = sorted(
+            current_path / dirname
+            for dirname in dirs
+            if (current_path / dirname).is_symlink()
+        )
+        if symlink_dirs:
+            raise ContractError(
+                "symlink directories are not supported in resource roots: "
+                + ", ".join(str(path) for path in symlink_dirs)
+            )
         dirs.sort()
         files.sort()
-        current_path = Path(current)
         for filename in files:
             if filename.endswith(".md"):
                 found.append(current_path / filename)

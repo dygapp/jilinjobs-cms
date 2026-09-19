@@ -28,9 +28,9 @@ updated_at: 2026-09-16
 
 本文是 `jilinjobs-cms` 当前 **Backend ↔ Admin/Public Frontend HTTP compatibility** 的唯一 Current Technical owner，回答“替换 Backend implementation 时，现有 Admin / Public consumer 仍需要哪些稳定 HTTP surface、wire projection 与失败语义”。
 
-Product / Domain Requirement 拥有业务对象、identity、lifecycle 与产品级质量；Specification 拥有用户可观察行为、Failure Behavior 与 Acceptance；Architecture 拥有 Core / Server / Migration、Admin / Public 与 replaceability boundary。本文只拥有 transport compatibility，不反向成为业务事实来源。
+Product / Domain Requirement 拥有业务对象、identity、lifecycle 与产品级质量；Specification 拥有用户可观察行为、失败行为 与 验收；Architecture 拥有 Core / Server / Migration、Admin / Public 与 replaceability boundary。本文只拥有 transport compatibility，不反向成为业务事实来源。
 
-Controller class、TypeScript adapter 文件、Spring annotation、Node framework、package path、当前测试文件和代码生成方式都不是本文的长期事实。代码可以作为当前实现 Evidence；一旦与本文冲突，必须判断 implementation defect 或 contract change，不能让某个 adapter / Controller 自动成为第二接口 Authority。
+Controller class、TypeScript adapter 文件、Spring annotation、Node framework、package path、当前测试文件和代码生成方式都不是本文的长期事实。代码可以作为当前实现 证据；一旦与本文冲突，必须判断 implementation defect 或 contract change，不能让某个 adapter / Controller 自动成为第二接口 Authority。
 
 ## 2. Namespace 与 transport 基线
 
@@ -59,7 +59,7 @@ JSON contract 基线：
 
 具体错误中文文案只有在 Specification 明确要求时才属于稳定用户 contract；Backend replacement 必须保持上述受控失败的可诊断语义和 envelope，不要求逐字复制实现消息，也不要求模拟旧 provider 的未知 `5xx` body。
 
-## 3. Admin endpoint families
+## 3. 管理端 endpoint 族
 
 下表拥有当前 Admin consumer 需要的稳定 HTTP family。`{id}` 为 numeric object identity，`{code}` / `{key}` 使用 URL encoding。
 
@@ -95,7 +95,7 @@ Article mutation endpoint 只负责把 Domain lifecycle 投影为稳定 HTTP act
 
 仅在 frontend adapter 中声明、但没有当前 Backend projection / active consumer 证据的 helper endpoint **不自动进入本 contract**。例如 endpoint 增删必须以真实 Current consumer + provider contract 为依据，而不是因为某个 TypeScript function 曾存在就永久保留。
 
-## 4. Public endpoint families
+## 4. 公开端 endpoint 族
 
 Public frontend 只消费 read / resource projection，不依赖 Admin mutation contract：
 
@@ -113,15 +113,15 @@ Public frontend 只消费 read / resource projection，不依赖 Admin mutation 
 
 Public Article query 的 `columnId` 是**exact-column** filter：只返回 primary Column 等于该 id 且当前可公开的 Article；它不会像 Admin query 一样自动扩展到 descendant Column。`columnId = null` 表示不按栏目限制。`articleType` 是对当前公开 Article source type 的 exact filter。
 
-当前 HTTP surface 不引入单独的 `site=MAIN|PARTY` query 来决定浏览器 route / template scope。Main / Party 的 route / theme / template scope 继续由 Public Renderer 的 Site-specific responsibility 持有，但其判断必须使用当前 Authority 接受的 stable business relation / Site Definition identity 并 fail closed，不能通过 URL 文本、DOM 或历史 typeCode heuristic 猜测。Backend Public projection仍负责 Domain publish lifecycle、endpoint-defined query scope 与 effective-content filtering；Renderer 不能通过读取 Admin/full-data projection来补偿这些 Backend contract。
+当前 HTTP surface 不引入单独的 `site=MAIN|PARTY` query 来决定浏览器 route / template scope。Main / Party 的 route / theme / template scope 继续由 Public Renderer 的 Site-specific responsibility 持有，但其判断必须使用当前 Authority 接受的 stable business relation / Site Definition identity 并 失败关闭，不能通过 URL 文本、DOM 或历史 typeCode heuristic 猜测。Backend Public projection仍负责 Domain publish lifecycle、endpoint-defined query scope 与 effective-content filtering；Renderer 不能通过读取 Admin/full-data projection来补偿这些 Backend contract。
 
 Public list / advertisement 的 by-code / by-group projection 是 Main homepage 等当前运行 consumer 的稳定依赖；Backend replacement 不得只实现“全量列表再让前端过滤”来改变已有 scope contract。
 
-## 5. Stable wire projections
+## 5. 稳定传输投影
 
 以下 projection 名称只是本文中的 contract locator；Backend implementation 不要求使用相同 class / TypeScript interface 名称，但 JSON wire shape 必须兼容现有 consumer。
 
-### 5.1 Column
+### 5.1 栏目（`Column`）
 
 ```text
 CmsColumn
@@ -131,7 +131,7 @@ PublicColumn
   id, parentId, name, alias, coverPolicy
 ```
 
-### 5.2 Article / Resource
+### 5.2 文章 / 资源（`Article` / `Resource`）
 
 ```text
 CmsArticle
@@ -162,7 +162,7 @@ CmsResource
 
 Article write payload 保持：`columnId`、`title`、`bodyHtml`、`source`、`articleType`、`externalUrl`、`publishDate`、`pinned`、`sortOrder`、`coverResourceId`、`bodyImageResourceIds`、`attachmentResourceIds`。
 
-### 5.3 Navigation
+### 5.3 导航
 
 ```text
 NavigationLocation
@@ -180,7 +180,7 @@ PublicNavigation
 
 Navigation write payload 保持上述 editable fields；Public projection 直接提供 resolved `href / external / newWindow / clickable`，Public Renderer 不重新实现 target resolution 业务规则。
 
-### 5.4 Page
+### 5.4 页面
 
 ```text
 CmsPageGroup
@@ -208,7 +208,7 @@ PublicPage
 
 `renderMode / embedUrl` 是当前 legacy compatibility projection；它们不是新的 Domain owner，但在 consumer 尚未退出前属于 wire compatibility。移除必须作为显式 contract migration，不得在 Backend technology substitution 中顺带删除。
 
-### 5.5 CmsList / Advertisement
+### 5.5 列表 / 广告（`CmsList` / `Advertisement`）
 
 ```text
 CmsListDefinition
@@ -236,7 +236,7 @@ PublicAdvertisementSlot
 
 Public projection 必须已经应用当前 Domain lifecycle / effective-item rules；Frontend 不通过获取 Admin 全量数据后自行修复 publish / effective semantics。
 
-### 5.6 SiteProperty / StaticResource
+### 5.6 站点属性 / 静态资源（`SiteProperty` / `StaticResource`）
 
 ```text
 SiteConfigItem
@@ -259,7 +259,7 @@ TrashEntry
 
 SiteProperty typed business validity 仍由 Domain / Backend write boundary保证；Public frontend 可以对 presentation parameter 做 defensive interpretation，但不能因此改变 persisted value contract。
 
-## 6. Resource / multipart compatibility
+## 6. 资源 / multipart 兼容性
 
 Managed Resource 与 StaticResource upload 使用 `multipart/form-data`，当前 file part 名为 `file`。HTTP transport 层负责把 multipart request 转换为 Core 可消费的 framework-neutral file input；`MultipartFile`、Servlet request 或其他 Spring Web type 不属于 Generic Core contract。
 
@@ -267,7 +267,7 @@ Public managed image：`/api/public/resources/{id}/content`；Public attachment�
 
 `/static/**` 是 CMS-managed static public namespace；其 path safety、允许类型与真实媒体校验由 Product / Domain / Backend enforcement 共同约束，但具体 filesystem / object-storage implementation 可替换。
 
-## 7. Backend technology substitution seam
+## 7. 后端技术替换接缝
 
 Backend implementation 可以从 Java / Spring 替换为 Node.js 或其他技术，只要：
 
@@ -278,9 +278,9 @@ Backend implementation 可以从 Java / Spring 替换为 Node.js 或其他技术
 5. Backend Public projection继续执行 Domain publish lifecycle、本文 endpoint 定义的 query scope 与 effective-content filtering；Main / Party route / theme / template scope 继续由 Public Renderer 的 Site-specific responsibility 按稳定关系执行，Renderer 不通过 Admin/full-data fallback 修复 Backend projection；
 6. deployment / process / persistence implementation可以不同，只要产品与接口 contract成立。
 
-G6 Backend substitution dry-run 应把本文作为稳定 HTTP input，而不是读取 Java Controller / Kotlin model 后反推 contract。
+Backend technology substitution dry-run 应把本文作为稳定 HTTP input，而不是读取 Java Controller / Kotlin model 后反推 contract。
 
-## 8. Contract evolution / fail-closed
+## 8. 契约演进 / 失败关闭
 
 以下变化属于 Interface Contract change：
 

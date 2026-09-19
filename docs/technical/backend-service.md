@@ -45,7 +45,7 @@ content-migration ──→ cms-core
 
 `backend/` 根工程继续作为 Repository 级 build / verification / migration / provisioning facade；具体 task 名、artifact path、plugin/version 与 classpath wiring 以当前 Gradle implementation 为准，不由本文建立第二份 inventory。
 
-## 3. `cms-core`
+## 3. `cms-core` 模块
 
 Core 持有两个 application 真正共享的 implementation capability：
 
@@ -63,9 +63,9 @@ Spring transaction / DI / persistence implementation 可以在当前 Core 内使
 
 领域规则如果需要改变，必须先回到 Domain / Product Authority；不得因为 Core 当前代码方便而在 Technical 层发明新业务语义。
 
-## 4. `cms-server`
+## 4. `cms-server` 模块
 
-CMS Server 持有 ordinary Runtime 的 transport / application composition：
+CMS Server 持有 普通运行时 的 transport / application composition：
 
 - Spring Boot Server application root；
 - Admin / Public HTTP transport；
@@ -75,11 +75,11 @@ CMS Server 持有 ordinary Runtime 的 transport / application composition：
 - Server-specific application configuration；
 - 需要真实 Server composition 的 integration verification。
 
-Server 可以消费 Core，但不拥有 Historical Content Migration command lifecycle。
+Server 可以消费 Core，但不拥有 历史内容迁移 command lifecycle。
 
 Admin / Public contract 可以投影同一 Domain；Public projection 不泄漏 Admin-only endpoint responsibility。endpoint / method / wire field / status compatibility 统一服从 `http-interface-contract.md`，Controller class 布局本身不是接口 Authority。
 
-## 5. `content-migration`
+## 5. `content-migration` 模块
 
 Content Migration 是独立 non-web application，持有：
 
@@ -115,13 +115,13 @@ Generic schema ready
 
 具体 package component inventory 由 `sites/jilinjobs/manifest.json` 与 implementation 持有。
 
-## 7. Persistence / transport boundary
+## 7. 持久化 / 传输边界
 
 共享 Domain model、service、persistence 与 transaction capability尽量留在 Core；HTTP request/response adaptation 留在 Server；migration canonical model / report 留在 Migration application。
 
 不得为了减少文件数量重新把 HTTP Controller、Domain Service、Migration adapter 混回同一 owner；也不得让 transport-specific input type成为 Core service signature，从而使 non-web application被迫依赖 HTTP stack。
 
-DTO / persistence field / API endpoint 是实现 contract，不反向成为 CMS Domain Authority。稳定 HTTP compatibility 的 semantic owner 是 `docs/technical/http-interface-contract.md`；Backend code 与 frontend adapter 都是该 contract 的 implementation / consumer，不各自建立平行接口事实。
+DTO / persistence field / API endpoint 是实现 contract，不反向成为 CMS Domain Authority。稳定 HTTP compatibility 的 语义所有者 是 `docs/technical/http-interface-contract.md`；Backend code 与 frontend adapter 都是该 contract 的 implementation / consumer，不各自建立平行接口事实。
 
 若 implementation 与 Domain / Specification / Interface Contract 冲突，先识别 stale implementation contract，而不是用代码事实覆盖产品语义。
 
@@ -133,12 +133,12 @@ Backend 是资源安全、public projection 与最终数据约束的 enforcement
 - Server 把 HTTP multipart 转为 Core framework-neutral resource input；
 - Public response只暴露公开消费所需的 resource projection；
 - Rich Text / structured payload 的业务语义由对应 Domain / Specification 持有；
-- sanitization、path safety、real-media validation 等实现必须保持 fail-closed security boundary；
+- sanitization、path safety、real-media validation 等实现必须保持 失败关闭 security boundary；
 - Public client 不承担修复 Admin-only resource URL / contract 泄漏的职责。
 
 具体 parser、library、storage path 与 validator implementation 由代码和相关 Technical owner 持有；HTTP multipart / content / attachment semantics 由 Interface Contract 持有。
 
-## 9. Verification
+## 9. 验证
 
 Backend 变化按实际风险验证：
 
@@ -147,13 +147,13 @@ Backend 变化按实际风险验证：
 - affected unit/integration tests；
 - executable artifact / application composition；
 - HTTP Interface Contract compatibility（触达 transport / projection 时）；
-- schema / Fresh Runtime composition（受影响时）；
+- schema / 全新运行环境 composition（受影响时）；
 - Site Definition / migration integration（受影响时）；
 - Public/Admin Browser behavior（contract 变化时）。
 
 Boundary verification 应验证责任性质，而不是维护一串“已知 Controller class”黑名单作为第二 implementation inventory；新增 transport type / Controller 若进入 Core 必须被结构性发现。
 
-完整 Evidence contract 由 `docs/technical/verification-strategy.md` 与 live-discovered verification Rules 持有。
+完整 证据 contract 由 `docs/technical/verification-strategy.md` 与 live-discovered verification Rules 持有。
 
 ## 10. 不由本文拥有
 
@@ -163,5 +163,5 @@ Boundary verification 应验证责任性质，而不是维护一串“已知 Con
 - active Flyway 编号 / 文件数；
 - 当前 package / class / task inventory；
 - 某个 EU 的 execution sequence / readiness；
-- Workflow run / test count / Current Evidence；
+- Workflow run / test count / 当前证据；
 - 已完成重构的历史过程。
