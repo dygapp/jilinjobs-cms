@@ -25,6 +25,34 @@ class BaselineB717UpgradeContractTests(unittest.TestCase):
         self.assertIn("不作为固定 Bootstrap", docs_readme)
         self.assertIn("不作为 ordinary Fresh Context 的固定预读", root_readme)
 
+    def test_bootstrap_surfaces_do_not_publish_fixed_rule_locators(self):
+        agents = self.read("AGENTS.md")
+        root_readme = self.read("README.md")
+        current_work = self.read("docs/work/current/README.md")
+        self.assertNotIn("docs/rules/repository/execution-continuity.md", agents)
+        self.assertNotIn("read-only-state-inspection.md", root_readme)
+        self.assertNotIn("high-cost-runtime-activation.md", root_readme)
+        self.assertNotIn("read-only-state-inspection.md", current_work)
+        self.assertNotIn("high-cost-runtime-activation.md", current_work)
+        self.assertIn("不发布固定 Rule locator", root_readme)
+        self.assertIn("不发布固定 Rule 路径", current_work)
+
+    def test_executable_instance_obligation_is_consumer_local(self):
+        consumer = self.read("docs/architecture/consumer.md")
+        upgrade = self.read("docs/methods/consumer-upgrade.md")
+        profile = self.read("docs/project/project-capability-profile.md")
+        self.assertIn("automated alternate path", consumer)
+        self.assertIn("result / Evidence recovery", consumer)
+        self.assertIn("automated alternate path", upgrade)
+        self.assertIn("result / Evidence recovery", upgrade)
+        self.assertIn("executable capability instance closure", profile)
+
+    def test_current_technical_authority_does_not_depend_on_historical_g6_gate(self):
+        interface = self.read("docs/technical/http-interface-contract.md")
+        verification = self.read("docs/technical/verification-strategy.md")
+        self.assertNotIn("G6 Backend substitution dry-run", interface)
+        self.assertNotIn("G6 Backend substitution dry-run", verification)
+
     def test_human_facing_rule_covers_communication_and_review(self):
         rule = self.read("docs/rules/repository/human-facing-content-integrity.md")
         self.assertIn("activities: [documentation, communication, review, implementation]", rule)
