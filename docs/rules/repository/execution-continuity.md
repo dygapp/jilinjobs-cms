@@ -4,7 +4,7 @@ type: rule
 status: active
 scope:
   phases: [execute, converge]
-  activities: [implementation, verification, review, external-operation]
+  activities: [implementation, verification, review, external-operation, handoff]
   technologies: []
   artifacts: []
   risks: []
