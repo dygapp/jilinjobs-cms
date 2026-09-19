@@ -278,7 +278,7 @@ Backend implementation 可以从 Java / Spring 替换为 Node.js 或其他技术
 5. Backend Public projection继续执行 Domain publish lifecycle、本文 endpoint 定义的 query scope 与 effective-content filtering；Main / Party route / theme / template scope 继续由 Public Renderer 的 Site-specific responsibility 按稳定关系执行，Renderer 不通过 Admin/full-data fallback 修复 Backend projection；
 6. deployment / process / persistence implementation可以不同，只要产品与接口 contract成立。
 
-G6 Backend substitution dry-run 应把本文作为稳定 HTTP input，而不是读取 Java Controller / Kotlin model 后反推 contract。
+Backend technology substitution dry-run 应把本文作为稳定 HTTP input，而不是读取 Java Controller / Kotlin model 后反推 contract。
 
 ## 8. 契约演进 / 失败关闭
 
