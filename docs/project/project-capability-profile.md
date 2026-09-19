@@ -54,14 +54,22 @@ Requirement Baseline Establishment、Architecture Clarification 与 AI Developme
 python3 tools/rule-discovery/rule_discovery.py --repo-root . discover --signals-json '<task-signals-json>'
 ```
 
-当前云端 task-level invocation 支持两种 transport，二者都必须携带 exact 40-character commit SHA，并在该 SHA checkout 后调用同一 Consumer-local Tool：
+当前云端 task-level invocation 支持以下 transport，真正执行 discovery 的路径都必须携带 exact 40-character commit SHA，并在该 SHA checkout 后调用同一 Consumer-local Tool：
 
 1. GitHub Actions `workflow_dispatch`：输入 `target_sha` 与 `signals_json`；
-2. 当前 Agent / connector 无 workflow dispatch 写能力时，可由仓库 `OWNER` / `MEMBER` / `COLLABORATOR` 在 Issue / PR 中发送：
+2. `issue_comment` transport：只有承载该 listener 的 workflow **已经存在于 GitHub 默认分支** 时，仓库 `OWNER` / `MEMBER` / `COLLABORATOR` 才可在 Issue / PR 中发送：
 
 ```text
 /rule-discovery <40-char-sha> <signals-json>
 ```
+
+candidate PR 仅在自身 workflow 文件中新增 `issue_comment` trigger，并不使该 listener 在合并前自动生效。当前 Consumer 因此提供一个仅服务**预集成 exact-Head 验证**的 PR-body transport：当 candidate 自身的 Rule Discovery workflow 已在该 PR 的 `pull_request` 事件上运行时，可在 PR body 中临时写入一行隐藏请求：
+
+```text
+<!-- /rule-discovery <40-char-sha> <signals-json> -->
+```
+
+该 transport 只接受 `target_sha == current PR Head SHA`，并由该 exact Head 自身的 Tool 产生 locator-only result；请求消费完成后可从 PR body 移除。它不建立新的 Authority，也不替代合并后的 `issue_comment` / `workflow_dispatch` transport。若当前 Runtime 没有可用的本地 exact checkout / Repository Runtime、不可调用 `workflow_dispatch`，且 candidate 也没有可用的 PR-body pre-integration transport，则必须 fail closed；不得把未触发的 comment、固定 smoke、旧 Head Evidence 或“candidate 已声明 listener”当作 task-level discovery 成功。
 
 云端 invocation 必须校验 requested SHA = actual SHA，并把 signals、requested / actual SHA 与 discovery JSON 作为可审计 Evidence；`pull_request` / `push(main)` 触发的同名 workflow 仍只承担 repository lint、deterministic tests 与固定 smoke，不能替代当前 task signals 的 task-level discovery。
 

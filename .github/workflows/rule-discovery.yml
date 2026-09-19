@@ -2,6 +2,7 @@ name: Rule Discovery
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, edited]
     paths:
       - 'AGENTS.md'
       - 'docs/architecture/rule.md'
@@ -145,6 +146,7 @@ jobs:
   task-rule-discovery:
     if: >-
       github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'pull_request' ||
       (github.event_name == 'issue_comment' &&
        startsWith(github.event.comment.body, '/rule-discovery ') &&
        contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
@@ -164,6 +166,8 @@ jobs:
           DISPATCH_TARGET_SHA: ${{ inputs.target_sha }}
           DISPATCH_SIGNALS_JSON: ${{ inputs.signals_json }}
           COMMENT_BODY: ${{ github.event.comment.body }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           python3 - <<'PY'
           import json
@@ -185,6 +189,35 @@ jobs:
                   target_sha, signals_text = request.split(maxsplit=1)
               except ValueError as exc:
                   raise SystemExit('expected: /rule-discovery <40-char-sha> <signals-json>') from exc
+          elif event_name == 'pull_request':
+              body = os.environ.get('PR_BODY', '')
+              prefix = '<!-- /rule-discovery '
+              suffix = ' -->'
+              requests = [
+                  line.strip()
+                  for line in body.splitlines()
+                  if line.strip().startswith(prefix) and line.strip().endswith(suffix)
+              ]
+              if not requests:
+                  with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
+                      output.write('found=false\n')
+                  print(json.dumps({
+                      'event': event_name,
+                      'status': 'no-task-request',
+                      'head_sha': os.environ.get('PR_HEAD_SHA', '').lower(),
+                  }))
+                  raise SystemExit(0)
+              if len(requests) != 1:
+                  raise SystemExit('expected exactly one PR-body Rule Discovery request')
+              request = requests[0][len(prefix):-len(suffix)].strip()
+              try:
+                  target_sha, signals_text = request.split(maxsplit=1)
+              except ValueError as exc:
+                  raise SystemExit(
+                      'expected: <!-- /rule-discovery <40-char-sha> <signals-json> -->'
+                  ) from exc
+              if target_sha.lower() != os.environ.get('PR_HEAD_SHA', '').lower():
+                  raise SystemExit('PR-body Rule Discovery target must equal current PR Head SHA')
           else:
               raise SystemExit(f'unsupported event: {event_name}')
 
@@ -203,6 +236,7 @@ jobs:
           )
 
           with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
+              output.write('found=true\n')
               output.write(f'target_sha={target_sha.lower()}\n')
               output.write(f'signals_path={signals_path}\n')
 
@@ -214,12 +248,14 @@ jobs:
           PY
 
       - name: Checkout exact target
+        if: steps.request.outputs.found == 'true'
         uses: actions/checkout@v7
         with:
           ref: ${{ steps.request.outputs.target_sha }}
           fetch-depth: 1
 
       - name: Run exact-SHA task discovery
+        if: steps.request.outputs.found == 'true'
         shell: bash
         env:
           TARGET_SHA: ${{ steps.request.outputs.target_sha }}
@@ -264,7 +300,7 @@ jobs:
           exit "$discovery_status"
 
       - name: Upload task discovery evidence
-        if: always() && steps.request.outcome == 'success'
+        if: always() && steps.request.outputs.found == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: task-rule-discovery-${{ github.run_id }}

@@ -103,4 +103,10 @@ direct responsibility 切换，或 phase / activity / technology / artifact / ri
 
 `pull_request` / `push(main)` 的 CI lint、deterministic tests 与固定 smoke 只验证 Tool / corpus，不替代当前 Agent 的 task-level discovery。
 
+GitHub event listener 的可用性以**当前已集成到默认分支的 workflow 定义**为准。candidate PR 只在自身 workflow 文件中新增 `issue_comment` trigger，并不代表该 listener 已可在预集成阶段接收 comment event。
+
+当 candidate 正在改变 discovery transport 本身时，可以由 candidate 的 `pull_request` workflow 提供 bounded pre-integration transport：从当前 PR body 的隐藏 task request 读取 signals，要求请求中的 exact SHA 与当前 PR Head 完全一致，再 checkout 该 SHA 并调用同一 Consumer-local Tool。该通道只承担 preflight locator 计算，不取得新的 semantic Authority；无请求时必须明确 no-op，有 stale / ambiguous / invalid request 时必须 fail closed。
+
+若当前 Runtime 同时缺少可用的本地 exact checkout / Repository Runtime、可调用的 `workflow_dispatch` 与已验证的 pre-integration transport，task-level discovery 必须 fail closed；不得用固定 smoke、旧 Head Evidence 或未触发 comment 代替。
+
 Skill discovery 与 Rule Discovery 分离；普通运行时 discovery 失败只在 Consumer-local state 内关闭，不自动访问 upstream。
