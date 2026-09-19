@@ -4,6 +4,7 @@ const useExternalWebServer = process.env.CI_EXTERNAL_WEB_SERVER === 'true'
 
 export default defineConfig({
   testDir: './tests/e2e',
+  testMatch: /hjyzpxx-active-num-diagnostic\\.spec\\.ts/,
   fullyParallel: false,
   workers: process.env.CI ? 1 : undefined,
   retries: process.env.CI ? 1 : 0,
