@@ -26,7 +26,6 @@ Issue #153 / PR #154 Consumer Authority Foundation Rebuild 也已完成，不再
 
 以下均保持 **规划 / 评审候选**；不得从 Issue 排序、历史 EU 或旧 Roadmap 自动获得执行权。任何方向进入实际工作前，都必须从新的 Fresh Context 按当前 仓库权威 建立对应 Planning / Review lifecycle。
 
-- **Hui Employment iframe integration**：独立 Main integration candidate；进入前建立 current feature-specific Requirement / Specification Authority，再完成 Planning / Readiness。
 - **Issue #60 C1 — Loading / Skeleton Experience**：用户体验 规划候选。
 - **Issue #60 C2 — Mobile Layout 人工评审**：独立 人工评审 / follow-up candidate。
 - **Issue #59 — Browser Compatibility & Runtime Guard**：后置兼容性 / runtime governance candidate。
@@ -36,6 +35,8 @@ Issue #153 / PR #154 Consumer Authority Foundation Rebuild 也已完成，不再
 - **Repository Split Readiness Assessment**：deferred / independent；只有当前边界与真实工程成本产生足够 Evidence 后重新评估。
 
 Issue #137 / EU-55 Page Content Architecture 已完成，不属于开放 规划候选；其稳定历史摘要进入 Project Evolution，当前产品语义已归位到现行 Domain / Architecture / Specification owner。
+
+Issue #176 / EU-56 慧就业公共网站固定 iframe 集成已完成，不再属于开放规划候选；稳定结果进入 Project Evolution，当前产品与技术语义由现行 Requirement、Specification 与 Technical owner 持有。
 
 ## Roadmap 维护规则
 
