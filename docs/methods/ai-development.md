@@ -54,6 +54,8 @@ Integration 不是本 Method 的通用阶段。merge、release、deploy 与其�
 
 Specification 不复制完整 project-level Requirement / Domain baseline。新确认且具有跨 Feature 长期价值的业务事实必须提升到真实 Requirement / Domain owner。
 
+当 Specification 新增或实质改变用户可见行为、主要业务流程、失败语义、验收结果，或者同一 Requirement 可以形成多个合理的可观察行为时，应按当前 Consumer Authority 判断是否需要人工集中确认。需要时可调用 `skill:human-review` 形成结构化 Markdown 评审草稿，并把确认后的长期语义回写真正的 Specification 或上游 owner；普通、直接、无歧义地投影既有 Requirement 时不增加固定人工审批。
+
 退出：Fresh Context Agent 读取 Specification + 最小长期 Context 即可判断做什么、不做什么、什么算完成。
 
 对应 Skill：`specify`。
@@ -63,6 +65,8 @@ Specification 不复制完整 project-level Requirement / Domain baseline。新�
 仅在 Specification 无法直接、安全映射到当前系统时进入，例如跨模块、新数据模型、外部集成、迁移、共享契约、部署拓扑或重大架构权衡。
 
 Technical Plan 只保存跨 Execution Unit 仍有协调价值的 HOW；精确文件 / 命令 / 编辑顺序属于 JIT Execution Plan。Feature-local 可逆 HOW 留在本阶段；只有多个 Feature 共同依赖且必须提前解决的长期 structural driver 才升级到 `method:architecture-clarification`，并更新同一个长期 Architecture owner。
+
+涉及高成本难逆的数据迁移、对外 / 跨团队共享接口重大改变、生产部署 / 回滚 / 安全边界重大影响，或会改变已承诺稳定兼容边界时，应按当前 Authority 升级人工决定。需要集中比较当前事实、方案差异与长期后果时可调用 `skill:human-review`；人工确认形成的长期事实仍必须回写真正 Architecture / Specification / Technical owner，不能停留在评审草稿。
 
 对应 Skill：`technical-plan`。
 
@@ -95,3 +99,5 @@ Technical Plan 只保存跨 Execution Unit 仍有协调价值的 HOW；精确文
 ## 人工升级
 
 改变产品意图 / 范围、产生实质不同用户行为、Authority 冲突、重大难逆架构方向、安全 / 隐私 / 数据风险、超出授权的共享 / 外部副作用，以及 Repository policy 保留给人工的 merge / release / deploy 等必须升级 人工权威。
+
+人工升级负责判断“什么必须由人决定”；`skill:human-review` 只在需要时把当前权威内容整理为便于判断的结构化材料，并把反馈回写真正 owner。它不是新的 Method stage，不替代 independent `review-change`，也不授予 integration / merge / release / deploy 权限。
