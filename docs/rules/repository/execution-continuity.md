@@ -4,7 +4,7 @@ type: rule
 status: active
 scope:
   phases: [execute, converge]
-  activities: [implementation, verification, review, external-operation, handoff]
+  activities: [implementation, verification, review, external-operation]
   technologies: []
   artifacts: []
   risks: []
@@ -39,12 +39,6 @@ scope:
 5. 用户明确要求阶段总结或停在当前检查点。
 
 普通测试失败、可自行诊断的 Workflow 失败、局部修复、单个 Review Finding、一次重试或一个内部 Slice 完成本身不构成停止条件。
-
-## Fresh Context 与 Handoff
-
-Fresh Context 用于控制知识边界，不等于缩短执行链。同一 Execution Unit / Review Batch / 已授权治理工作不因内部 Slice 完成机械切换 Context。
-
-只有确有未完成状态需要跨 Context / Agent / 时间传递，且单靠 仓库权威 / GitHub native state 无法以同等可靠性恢复时，才形成最小临时 Handoff。Handoff 被消费或正式 owner 已接管后立即失效，不升级为第二份 当前状态。
 
 ## 沟通负担
 
