@@ -33,7 +33,7 @@ Fresh Context 先通过最小稳定 Bootstrap 到达 Consumer-local discovery，
 
 GitHub PR / Branch / Actions 只对其各自原生瞬时事实负责；这不建立“GitHub 永远高于本地文件”的通用规则。Fresh Context 必须协调 Work locator、当前 Open execution work、就绪证据 与任务 Authority；缺失、冲突或歧义时 失败关闭，不得授予或继承 执行授权。
 
-只读状态检查受 `docs/rules/repository/read-only-state-inspection.md` 约束；高成本 CI / Review Runtime / Historical Migration 激活受 `docs/rules/verification/high-cost-runtime-activation.md` 约束。两者只限制副作用与验证作用域，不降低当前 Requirement / Specification / Verification Authority 所要求的真实 Acceptance。
+只读状态检查与高成本 CI / Review Runtime / Historical Migration 激活都继续受 Consumer-local Rule 约束，但具体 Rule locator 只能由当前 task-level Rule Discovery 返回后按需读取；本 README 不发布固定 Rule 路径。相关 Rule 只限制副作用与验证作用域，不降低当前 Requirement / Specification / Verification Authority 所要求的真实 Acceptance。
 
 ## 主要目录
 
