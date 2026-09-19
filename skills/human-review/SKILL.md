@@ -9,6 +9,8 @@ metadata:
 
 # human-review
 
+人工评审的长期边界、反馈分类、交付投影与完成条件由 `architecture:human-review` 持有；本 Skill 只执行该契约，不建立第二套规范语义所有者。
+
 ## 输入
 
 - 当前评审目标、范围与受众；
