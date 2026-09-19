@@ -70,6 +70,30 @@ status: active
 
 人工评审完成不授予 merge、release、deploy 或独立变更复核通过。
 
+## 生命周期
+
+### 产生与触发
+
+评审草稿可以由当前 Method / Skill、已采用的 `skill:human-review` 或明确的人工作业请求产生。典型触发包括：当前责任判断需要人工集中确认、人工明确要求评审材料，或跨模块 / 多角色 / 长生命周期内容需要通过结构化视图暴露缺口。
+
+人工评审能力不自行创造新的产品、架构或技术决策，也不因为能力存在而把普通低风险工作升级为固定人工门禁。
+
+### 使用方
+
+主要使用方包括目标项目的产品、业务、架构、工程与客户评审人员，以及需要根据人工决定更新真实 Requirement / Specification / Architecture / Technical owner 的后续 Agent。
+
+### 持久化、更新与退出
+
+评审草稿和临时派生视图默认属于 transitional / disposable artifact。只有确需跨上下文继续评审、审计、签署或显式交付时才持久化；即使持久化，也不获得产品或架构事实所有权。
+
+真实 owner 更新后，必须重新读取并确认回写，再重新生成或校准评审草稿。可从 Current Authority 唯一再生的旧草稿 / 派生视图应退出当前评审范围，不要求与 Authority 长期双向同步。
+
+### 取代与升级
+
+新的评审投影取代旧草稿时，不通过并行维护两份 Current review truth 保留历史；必要历史由 Git / Issue / PR 或明确 historical evidence 承担。
+
+出现 Product / Domain ambiguity、重大难逆 Architecture、安全 / 隐私 / 生产或不可逆数据风险、owner 无法唯一确定、或当前写入授权不足时，返回真实责任层 / 人工权威。当前请求若实际属于独立 Repository change review，则使用 `skill:review-change`。
+
 ## Consumer 本地适配
 
 本 Consumer 不建立中央人工评审数据库、持久业务模型层或固定全项目评审模板。评审对象、章节和派生视图按当前责任选择；产品 / 业务术语继续由 Requirement / Domain owner 持有。
