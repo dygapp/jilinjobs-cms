@@ -162,6 +162,20 @@ scope:
         ids = {item["id"] for item in payload["candidates"]}
         self.assertIn("rule:human-facing-content-integrity", ids)
 
+    def test_handoff_discovers_continuity_and_human_facing_rules(self):
+        payload = self.discover({
+            "phases": None,
+            "activities": ["handoff", "communication"],
+            "technologies": [],
+            "artifacts": ["human-facing-content"],
+            "risks": [],
+        })
+        ids = {item["id"] for item in payload["candidates"]}
+        self.assertEqual(
+            ids,
+            {"rule:execution-continuity", "rule:human-facing-content-integrity"},
+        )
+
     def test_human_escalation_rule_is_task_level_candidate(self):
         payload = self.discover({
             "phases": None,
