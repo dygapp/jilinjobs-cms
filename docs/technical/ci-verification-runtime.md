@@ -201,19 +201,44 @@ UNKNOWN_ERROR
 
 当前方案不通过长期共享 Backend service 连接不同 Runner。
 
-## 11. 构建缓存与生成物
+
+## 11. 人工评审环境的运行时复用
+
+人工评审环境同样运行于 GitHub-hosted Runner，因此不得重复承担完整 CI 已经完成的 Backend / Content Migration 编译职责。
+
+目标 Head 的 `backend/**` build-input fingerprint 同时标识两个配套 Runtime artifact：
+
+~~~text
+ghcr.io/dygapp/jilinjobs-cms-backend:<fingerprint>
+ghcr.io/dygapp/jilinjobs-cms-content-migration:<fingerprint>
+~~~
+
+两个 image 都只能由完整 CI 在对应 exact Head 的 Backend / Content Migration verification 成功后发布。人工评审 Workflow 对目标 Head：
+
+- checkout 仍用于 Frontend、Site Package、canonical migration data 与 Review fixture；
+- 计算同一 Backend fingerprint；
+- 必须命中并拉取两个 verified image；
+- 不安装 Java / Gradle；
+- 不执行 Backend / Content Migration 本地编译；
+- Fresh MySQL、Frontend build、AI / Browser verification、人工基线重置、canonical migration、FRP 与租约仍由 Review Workflow 持有；
+- canonical migration data 作为运行时挂载输入传给 Content Migration image，不打包进 image；
+- verified image 缺失、Registry 权限失败或无法确认 provenance 时失败关闭，不静默退回未验证的现场构建。
+
+人工评审环境产生的是 Human Review Runtime evidence；它不因为复用 verified image 取代完整 CI 的 exact-head completion evidence。
+
+## 12. 构建缓存与生成物
 
 存储职责保持分离：
 
 - Git Repository：源码、Dockerfile、Workflow、脚本与 Authority；
-- GHCR：可运行 Backend Runtime image；
+- GHCR：完整 CI 验证后可复用的 Backend / Content Migration Runtime image；
 - Actions Artifact：测试报告、诊断和短期构建证据；
 - Actions Cache：npm / Gradle 等可丢失的依赖缓存；
 - Release Asset：正式发布物（需要时）。
 
 Cache 不承担 artifact authority，Git 不存储构建二进制。
 
-## 12. 可复用原则
+## 13. 可复用原则
 
 本文的实现仅限 GitHub Actions，但以下工程原则可在其他 Runtime 中重新投影：
 
