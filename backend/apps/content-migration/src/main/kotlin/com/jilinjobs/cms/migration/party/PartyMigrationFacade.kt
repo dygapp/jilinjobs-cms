@@ -1,5 +1,7 @@
 package com.jilinjobs.cms.migration.party
 
+import com.jilinjobs.cms.content.ArticleRepository
+import com.jilinjobs.cms.content.ArticleType
 import com.jilinjobs.cms.listing.CmsListItemRecord
 import com.jilinjobs.cms.listing.CmsListItemSourceType
 import com.jilinjobs.cms.listing.CmsListMapper
@@ -27,6 +29,7 @@ import com.jilinjobs.cms.migration.generic.CanonicalFileVerifier
 import com.jilinjobs.cms.migration.generic.CanonicalListImage
 import com.jilinjobs.cms.migration.generic.CanonicalListItemRecord
 import com.jilinjobs.cms.migration.generic.CanonicalMigrationResource
+import com.jilinjobs.cms.migration.generic.canonicalOpenModeToRuntime
 import com.jilinjobs.cms.migration.generic.GenericContentMigrationReport
 import com.jilinjobs.cms.migration.generic.GenericContentMigrationService
 import com.jilinjobs.cms.migration.generic.GenericMigrationKind
@@ -304,6 +307,7 @@ class PartyCompatibilityService(
     private val listMapper: CmsListMapper,
     private val staticResourceService: StaticResourceService,
     private val resourceService: ResourceService,
+    private val articleRepository: ArticleRepository,
     private val objectMapper: ObjectMapper,
 ) {
     @Transactional
@@ -357,7 +361,8 @@ class PartyCompatibilityService(
         require(current.title == record.title && current.subtitle == record.subtitle) { "Compatibility Runtime title/subtitle 已漂移" }
         require(current.url == sourceProvenance) { "Compatibility Runtime URL 已漂移" }
         require(current.imagePath == "/static/$staticTarget" && current.imageResourceId == null) { "Compatibility Runtime image projection 已漂移" }
-        require(current.openMode == record.openMode && current.sortOrder == record.sourceOrder && current.enabled == record.enabled) { "Compatibility Runtime order/open/enabled 已漂移" }
+        val acceptedOldOpenMode = canonicalOpenModeToRuntime(record.openMode, sourceProvenance)
+        require(current.openMode == acceptedOldOpenMode && current.sortOrder == record.sourceOrder && current.enabled == record.enabled) { "Compatibility Runtime order/open/enabled 已漂移" }
         require(existing.sourceUrl == sourceProvenance) { "Compatibility mapping source provenance 已漂移" }
         require(existing.imageSourceUrl == image.canonical.sourceUrl && existing.imageSha256 == image.canonical.sha256) { "Compatibility mapping image evidence 已漂移" }
         val oldStatic = try {
@@ -372,6 +377,10 @@ class PartyCompatibilityService(
         val reference = requireNotNull(record.articleReference) { "Compatibility current ARTICLE target 缺少 stable reference" }
         val targetArticle = articleMapping.find(reference.sourceSystem, reference.legacyKey)
             ?: error("Compatibility target Article mapping 不存在：${reference.sourceSystem}/${reference.legacyKey}")
+        val targetArticleModel = articleRepository.findById(targetArticle.articleId)
+            ?: error("Compatibility target Article Runtime 不存在：${targetArticle.articleId}")
+        val targetUrl = targetArticleModel.takeIf { it.articleType == ArticleType.EXTERNAL_LINK }?.externalUrl
+        val runtimeOpenMode = canonicalOpenModeToRuntime(record.openMode, targetUrl)
         val imageResourceId = resourceService.upload(
             PartyPathMultipartFile(sourceFilename(image.canonical.sourceUrl, image.canonical.sha256, image.canonical.snapshotPath), image.canonical.contentType, image.file),
         ).id
@@ -397,7 +406,7 @@ class PartyCompatibilityService(
             url = null,
             imagePath = null,
             imageResourceId = imageResourceId,
-            openMode = record.openMode,
+            openMode = runtimeOpenMode,
             sortOrder = record.sourceOrder,
             enabled = record.enabled,
             extraJson = extraJson,

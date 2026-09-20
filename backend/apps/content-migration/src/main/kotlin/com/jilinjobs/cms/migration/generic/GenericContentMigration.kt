@@ -3,6 +3,7 @@ package com.jilinjobs.cms.migration.generic
 import com.jilinjobs.cms.ContentMigrationApplication
 import com.jilinjobs.cms.column.ColumnQuery
 import com.jilinjobs.cms.content.ArticleDraft
+import com.jilinjobs.cms.content.ArticleRepository
 import com.jilinjobs.cms.content.ArticleService
 import com.jilinjobs.cms.content.ArticleType
 import com.jilinjobs.cms.listing.CmsListItemDraft
@@ -34,7 +35,17 @@ import tools.jackson.databind.ObjectMapper
 private val SHA256 = Regex("[0-9a-f]{64}")
 private val MIGRATION_TOKEN = Regex("migration-(resource|attachment)://[0-9a-f]{64}")
 private val CANONICAL_ASSET_REFERENCE = Regex("""(?i)(?:src|href)=[\"'](assets/[^\"']+)[\"']""")
-private val OPEN_MODES = setOf("DEFAULT", "SAME_WINDOW", "NEW_WINDOW")
+private val CANONICAL_OPEN_MODES = setOf("DEFAULT", "SAME_WINDOW", "NEW_WINDOW")
+
+internal fun canonicalOpenModeToRuntime(openMode: String, targetUrl: String?): String? =
+    when (openMode.uppercase()) {
+        "NEW_WINDOW" -> "_blank"
+        "SAME_WINDOW" -> "_self"
+        "DEFAULT" -> targetUrl
+            ?.takeIf { it.startsWith("http://", ignoreCase = true) || it.startsWith("https://", ignoreCase = true) }
+            ?.let { "_blank" }
+        else -> error("未知 canonical openMode：$openMode")
+    }
 private val STATIC_IMAGE_EXTENSIONS = setOf("png", "jpg", "jpeg", "gif", "webp", "ico")
 
 data class CanonicalArticleSource(
@@ -337,7 +348,7 @@ object CanonicalDatasetValidator {
         require(record.legacyKey.isNotBlank() && record.legacyKey.length <= 255) { "List item legacy identity 不合法" }
         require(record.sourceOrder > 0) { "List item sourceOrder 必须大于 0" }
         require(record.title.isNotBlank() && record.title.length <= 200) { "List item title 不合法" }
-        require(record.openMode.uppercase() in OPEN_MODES) { "List item openMode 不合法：${record.openMode}" }
+        require(record.openMode.uppercase() in CANONICAL_OPEN_MODES) { "List item openMode 不合法：${record.openMode}" }
         require(record.sourceFingerprint.matches(SHA256)) { "List item fingerprint 不合法：${record.legacyKey}" }
         when (record.sourceType) {
             CmsListItemSourceType.LINK -> {
@@ -609,6 +620,7 @@ class GenericListItemImporter(
     private val listService: CmsListService,
     private val staticResourceService: StaticResourceService,
     private val resourceService: ResourceService,
+    private val articleRepository: ArticleRepository,
     private val articleMapping: ArticleLegacyMappingMapper,
     private val listItemMapping: CmsListItemLegacyMappingMapper,
     private val objectMapper: ObjectMapper,
@@ -659,6 +671,14 @@ class GenericListItemImporter(
         } else {
             null
         }
+        val openModeTarget = when (record.sourceType) {
+            CmsListItemSourceType.LINK -> record.url
+            CmsListItemSourceType.ARTICLE -> articleId
+                ?.let(articleRepository::findById)
+                ?.takeIf { it.articleType == ArticleType.EXTERNAL_LINK }
+                ?.externalUrl
+        }
+        val runtimeOpenMode = canonicalOpenModeToRuntime(record.openMode, openModeTarget)
         val extra = linkedMapOf<String, Any?>(
             "migrationSourceSystem" to loaded.sourceSystem,
             "migrationSourcePage" to loaded.sourcePage,
@@ -682,7 +702,7 @@ class GenericListItemImporter(
                 url = record.url,
                 imagePath = imagePath,
                 imageResourceId = imageResourceId,
-                openMode = record.openMode,
+                openMode = runtimeOpenMode,
                 sortOrder = record.sourceOrder,
                 enabled = record.enabled,
                 extraJson = extraJson,
