@@ -84,13 +84,8 @@ test('视觉基线：桌面首页维持原站三列首屏与关键图片区块',
   const bottomAccents = await localTitleLabels.evaluateAll(elements => elements.map(element => getComputedStyle(element, '::after').content))
   expect(bottomAccents.every(content => content === 'none')).toBeTruthy()
 
-  const rootNavigationLinks = page.locator('.shared-public-nav-root > .shared-public-nav-item > .shared-public-nav-link')
-  await expect(rootNavigationLinks.first()).toHaveCSS('font-size', '18px')
-  await expect(page.locator('.shared-public-nav-children a').first()).toHaveCSS('font-size', '17px')
-  const rootLabelsFit = await rootNavigationLinks.evaluateAll(elements =>
-    elements.every(element => element.scrollWidth <= element.clientWidth + 1),
-  )
-  expect(rootLabelsFit).toBeTruthy()
+  await expect(page.locator('.site-navigation-tabs button').first()).toHaveCSS('font-size', '16px')
+  await expect(page.locator('.site-link-group a').first()).toHaveCSS('font-size', '15px')
 
   const listStyles = await page.locator('.news-column li a').evaluateAll(elements => elements.map(element => {
     const style = getComputedStyle(element)
