@@ -208,7 +208,7 @@ jobs:
           curl --fail --silent http://127.0.0.1:5173/static/brand/site-favicon.png > /dev/null
           test "$(find runtime-static -maxdepth 1 -type d -name 'verification-*' | wc -l)" -eq 0
 
-      - name: 导入 Party canonical 历史数据
+      - name: 使用通用 Content Migration 导入 canonical 历史数据
         run: |
           set -euo pipefail
           canonical_root="$GITHUB_WORKSPACE/data-migrations/party/v1"
@@ -231,13 +231,17 @@ jobs:
             and .acceptedSnapshot.unresolved == 0
             and .acceptedSnapshot.artifactDigest == "sha256:230ac0df997b3dc913ed38503a8289eae30d8bb0a455fd858e388ddc27066148"' "$canonical_root/manifest.json" > /dev/null
 
-          export DB_URL='jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true'
-          export DB_USERNAME=root
-          export DB_PASSWORD=root
-          export CMS_STORAGE_ROOT="$GITHUB_WORKSPACE/runtime-uploads"
-          export CMS_STATIC_ROOT="$GITHUB_WORKSPACE/runtime-static"
-          (cd backend && gradle importPartyHistoricalContent --args="../data-migrations/party/v1" --no-daemon) | tee eu29-review-article-import.log
-          (cd backend && gradle importPartyCarousel --args="../data-migrations/party/v1" --no-daemon) | tee eu29-review-carousel-import.log
+          docker run --rm --network host \
+            -e 'DB_URL=jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true' \
+            -e DB_USERNAME=root \
+            -e DB_PASSWORD=root \
+            -e CMS_STORAGE_ROOT=/uploads \
+            -e CMS_STATIC_ROOT=/runtime-static \
+            -v "$GITHUB_WORKSPACE/runtime-uploads:/uploads" \
+            -v "$GITHUB_WORKSPACE/runtime-static:/runtime-static" \
+            -v "$canonical_root:/snapshot:ro" \
+            "${{ steps.runtime-images.outputs.migration_image }}" /snapshot \
+            | tee canonical-review-import.log
 
           python3 - <<'PY'
           import json, re
@@ -245,23 +249,21 @@ jobs:
           manifest=json.loads(Path('data-migrations/party/v1/manifest.json').read_text(encoding='utf-8'))
           expected=manifest['acceptedSnapshot']
           runtime_articles=manifest.get('candidateExtension', {}).get('runtimeDatasetArticles', expected['articles'])
-          article=json.loads(re.findall(r'EU29_IMPORT_REPORT (\{.*\})', Path('eu29-review-article-import.log').read_text(encoding='utf-8'))[-1])
-          assert article['total']==runtime_articles and article['created']==runtime_articles, article
-          assert article['skipped']==0 and article['conflicts']==0 and article['invalid']==0, article
-          carousel=json.loads(re.findall(r'EU29_CAROUSEL_IMPORT_REPORT (\{.*\})', Path('eu29-review-carousel-import.log').read_text(encoding='utf-8'))[-1])
-          assert carousel['total']==expected['carouselItems'] and carousel['created']==expected['carouselItems'], carousel
-          assert carousel['updated']==0 and carousel['skipped']==0 and carousel['conflicts']==0 and carousel['invalid']==0, carousel
+          report=json.loads(re.findall(r'CONTENT_MIGRATION_REPORT (\{.*\})', Path('canonical-review-import.log').read_text(encoding='utf-8'))[-1])
+          expected_total=runtime_articles + expected['carouselItems']
+          assert report['total']==expected_total and report['created']==expected_total, report
+          assert report['updated']==0 and report['skipped']==0 and report['conflicts']==0 and report['invalid']==0, report
           PY
 
           docker run --rm --network host mysql:8.4 \
             mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms -N -B -e \
             "SELECT c.alias,COUNT(a.id) FROM cms_column c LEFT JOIN cms_article a ON a.column_id=c.id AND a.status='PUBLISHED' WHERE c.parent_id=(SELECT id FROM cms_column WHERE alias='party') GROUP BY c.alias ORDER BY c.alias" \
-            | tee eu29-review-column-counts.tsv
+            | tee canonical-review-column-counts.tsv
           node - <<'NODE'
           const fs=require('fs')
           const manifest=require('./data-migrations/party/v1/manifest.json')
           const expected=Object.fromEntries(manifest.contentScope.map(scope=>[scope.columnAlias,scope.observedListCount]))
-          const rows=fs.readFileSync('eu29-review-column-counts.tsv','utf8').trim().split(/\n/).filter(Boolean).map(line=>line.split('\t'))
+          const rows=fs.readFileSync('canonical-review-column-counts.tsv','utf8').trim().split(/\n/).filter(Boolean).map(line=>line.split('\t'))
           const actual=Object.fromEntries(rows.map(([alias,count])=>[alias,Number(count)]))
           for (const [alias,count] of Object.entries(expected)) {
             if (actual[alias] !== Number(count)) throw new Error(`${alias}: ${actual[alias]} != ${count}`)
@@ -300,7 +302,7 @@ jobs:
           # 显式人工评审数据，使主站也能观察多项自动/手动切换。
           home_list_id=$(curl --fail --silent http://127.0.0.1:5173/api/admin/lists | jq --exit-status '.[] | select(.code == "HOME_CAROUSEL") | .id')
           for position in 1 2; do
-            payload=$(jq -n --argjson position "$position" '{sourceType:"LINK",articleId:null,title:("主站轮播人工评审示例 " + ($position|tostring)),subtitle:null,url:"/column/notice",imagePath:(if $position == 1 then "/static/home/carousel-01.jpg" else "/static/home/recruitment-campaign.png" end),imageResourceId:null,openMode:"SAME_WINDOW",sortOrder:(-100 + $position),enabled:true,extraJson:null}')
+            payload=$(jq -n --argjson position "$position" '{sourceType:"LINK",articleId:null,title:("主站轮播人工评审示例 " + ($position|tostring)),subtitle:null,url:"/column/notice",imagePath:(if $position == 1 then "/static/home/carousel-01.jpg" else "/static/home/recruitment-campaign.png" end),imageResourceId:null,openMode:"_self",sortOrder:(-100 + $position),enabled:true,extraJson:null}')
             curl --fail --silent -H 'Content-Type: application/json' -d "$payload" "http://127.0.0.1:5173/api/admin/lists/$home_list_id/items" | jq --exit-status '.id > 0' > /dev/null
           done
 
@@ -353,7 +355,8 @@ jobs:
               assert item['sourceType'] == source_type, item
               assert item['title'] == source['title'], item
               assert item['sortOrder'] == source['sourceOrder'], item
-              assert item['openMode'] == source['openMode'] == 'NEW_WINDOW', item
+              expected_open_mode = {'NEW_WINDOW': '_blank', 'SAME_WINDOW': '_self', 'DEFAULT': None}[source.get('openMode', 'DEFAULT')]
+              assert item['openMode'] == expected_open_mode, (item, source)
               if source_type == 'ARTICLE':
                   assert item['articleId'] and item['effectiveImageResourceId'], item
                   assert item['imageResourceId'] == item['effectiveImageResourceId'], item
@@ -367,7 +370,7 @@ jobs:
                   assert item['articleId'] is None and item['effectiveImageResourceId'] is None, item
                   assert item['url'] == source['url'], item
                   image_path = item['imagePath']
-                  assert image_path.startswith('/static/migrated/party/carousel/'), item
+                  assert image_path == '/static/' + source['staticTarget'], (item, source)
               content = read(image_path)
               assert len(content) == source['image']['sizeBytes'], image_path
               digest = hashlib.sha256(content).hexdigest()
@@ -401,9 +404,8 @@ jobs:
             data-migrations/party/v1/manifest.json
             data-migrations/party/v1/index.ndjson
             data-migrations/party/v1/reports/canonical-promotion.json
-            eu29-review-article-import.log
-            eu29-review-carousel-import.log
-            eu29-review-column-counts.tsv
+            canonical-review-import.log
+            canonical-review-column-counts.tsv
             eu30-review-runtime.json
             frontend/public-site/test-results
           if-no-files-found: warn
