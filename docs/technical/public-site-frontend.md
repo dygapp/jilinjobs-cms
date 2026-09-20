@@ -17,7 +17,7 @@ relations:
     - docs/technical/http-interface-contract.md
   verification:
     - docs/technical/verification-strategy.md
-updated_at: 2026-09-19
+updated_at: 2026-09-20
 ---
 
 # Public Frontend 跨 Feature 技术契约
@@ -119,9 +119,14 @@ managed resource content / attachment 与 `/static/**` 的 HTTP namespace / bina
 - 超时或失败后的原位重试；
 - 每次重试隔离旧加载状态；
 - 不让单个外部 frame 的状态影响 Main Shell 或同页其他区域；
-- 按首页紧凑区域与二级页面主体区域提供响应式高度，窄屏不产生本站页面横向溢出。
+- 按首页紧凑区域与二级页面主体区域提供响应式高度，窄屏不产生本站页面横向溢出；
+- 二级页面关闭 iframe 自身滚动，并按原网站已确认基线为招聘信息提供 `1300px`、为直播课程提供 `1250px` 的宿主承载高度，只保留宿主页面滚动。
 
 当前 timeout 属于低风险工程参数，由组件内部持有，不进入 CMS 配置。由于跨源 iframe 无法读取内部 DOM，Public 只以浏览器可观察的 `load` / `error` 与 timeout 作为外层状态证据，不声称检查慧就业页面内部业务成功。
+
+共享 Navigation 在目标被选择时收起移动端菜单，并抑制当前指针仍停留在父项上造成的桌面下拉残留；指针离开后恢复正常 hover / focus 行为。Site Definition 继续通过 Navigation `openMode` 表达新窗口语义，Public 对 internal Router target 也必须投影 `NEW_WINDOW`，不得仅对 external URL 生效。
+
+首页直播课程不得再包裹第二层同名标题；本站“更多”链接以覆盖嵌入页原入口的方式保持 `/page/live-course` 规范目标。招聘公告与其他首页资讯列表共用同一组字体、颜色与 hover token，不尝试跨源修改慧就业 iframe 内部样式。
 
 ## 10. 构建 / 验证适配
 

@@ -40,14 +40,14 @@ img{max-width:100%}
 .visual-empty{height:100%;display:grid;place-items:center;color:#8491a1}
 .home-panel{background:#fff;border:1px solid #ebeef2;padding:0 14px;min-width:0}
 .home-panel>header,.news-column>header{height:48px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ebeef2}
-.home-panel h2,.news-column h2,.service-panel h2{position:relative;margin:0;color:#00aebd;font-size:17px;font-weight:500;line-height:48px}
+.home-panel h2,.news-column h2,.service-panel h2{position:relative;margin:0;color:#00aebd;font-size:17px;font-weight:600;line-height:48px}
 .home-panel h2::after,.news-column h2::after,.service-panel>h2::after{content:"";position:absolute;left:0;bottom:-1px;width:64px;height:2px;background:#00aebd}
 .home-panel header>a,.news-column header>a{font-size:12px;text-decoration:none;color:#8491a1}
 .home-panel ul,.news-column ul{list-style:none;padding:6px 0 8px;margin:0}
-.home-panel li,.news-column li{height:27px;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:0 2px;border:0}
-.home-panel li a,.news-column li a{font-size:13px;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#323b47}
+.home-panel li,.news-column li{height:30px;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:0 2px;border:0}
+.home-panel li a,.news-column li a{font-size:14px;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#323b47}
 .home-panel li a:hover,.news-column li a:hover{color:#005cd4}
-.home-panel time,.news-column time{flex:0 0 auto;color:#8491a1;font-size:12px}
+.home-panel time,.news-column time{flex:0 0 auto;color:#8491a1;font-size:13px}
 .home-top-shortcuts{display:flex;flex-direction:column;background:#007bff;border:1px solid #d3e6ff}
 .home-top-shortcuts>a{flex:1;display:flex;align-items:center;gap:13px;padding:0 25px;border-bottom:1px solid rgba(255,255,255,.38);color:#fff;text-decoration:none;font-size:14px}
 .home-top-shortcuts>a:last-child{border-bottom:0}
@@ -70,13 +70,11 @@ img{max-width:100%}
 .section-title::before{content:"";flex:0 0 4px;width:4px;height:18px;margin-right:12px;background:linear-gradient(to bottom,#00aebd 0 50%,#005cd4 50%)}
 .section-title h2{margin:0;padding:0;color:#323b47;font-size:20px;font-weight:500;line-height:42px}
 .latest-recruitment{margin-top:0}
-.home-recruitment-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-height:300px;background:#fff;padding:10px;border:1px solid #ebeef2}
-.home-live-courses{min-width:0}
-.home-integrated-heading{height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;border:1px solid #ebeef2;border-bottom:0;background:#fff}
-.home-integrated-heading h2{margin:0;color:#00aebd;font-size:17px;font-weight:500}
-.home-integrated-heading a{color:#8491a1;font-size:12px;text-decoration:none}
-.home-integrated-heading a:hover{color:#005cd4}
-.recruitment-panel{border:0;border-left:1px solid #ebeef2}
+.home-recruitment-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-height:300px}
+.home-live-courses{position:relative;min-width:0}
+.home-live-courses-more{position:absolute;z-index:2;top:1px;right:1px;height:44px;display:flex;align-items:center;padding:0 14px 0 22px;background:#fff;color:#8491a1;font-size:13px;text-decoration:none}
+.home-live-courses-more:hover{color:#005cd4}
+.recruitment-panel{border:1px solid #ebeef2}
 .ncss-entrance{height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:#d3e6ff}
 .ncss-entrance>a{display:flex;align-items:center;height:45px}
 .ncss-entrance img{width:500px;height:45px;object-fit:contain;object-position:left center}
@@ -176,7 +174,7 @@ img{max-width:100%}
   .service-shortcuts{grid-template-columns:repeat(2,1fr)}
   .home-promo-banner{height:auto;min-height:80px}
   .home-promo-banner img{height:auto;min-height:80px;object-fit:cover}
-  .home-recruitment-row{padding:8px}
+  .home-live-courses-more{font-size:12px}
   .ncss-entrance{height:auto;min-height:80px;flex-direction:column;align-items:stretch;gap:8px;padding:10px}
   .ncss-entrance img{width:100%;height:auto;max-height:45px}
   .ncss-login-buttons a{flex:1}

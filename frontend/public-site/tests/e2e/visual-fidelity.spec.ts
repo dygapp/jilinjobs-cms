@@ -40,7 +40,7 @@ test('视觉基线：原站关键静态资源与蓝色公共框架可用', async
   expect(await page.locator('.home-main').evaluate(el => getComputedStyle(el).backgroundColor)).toBe('rgb(245, 248, 252)')
 })
 
-test('视觉基线：桌面首页维持原站三列首屏与关键图片区块', async ({ page }) => {
+test('视觉基线：桌面首页维持原站三列首屏与关键图片区块', async ({ page }, testInfo) => {
   await page.setViewportSize({ width: 1440, height: 1000 })
   await page.goto('/')
 
@@ -58,8 +58,37 @@ test('视觉基线：桌面首页维持原站三列首屏与关键图片区块',
   await expect(page.getByRole('heading', { name: '招聘公告', exact: true })).toBeVisible()
   await expect(page.getByRole('heading', { name: '网站导航', exact: true })).toBeVisible()
 
+  await expect(page.locator('.home-live-courses > header')).toHaveCount(0)
+  const pairedModules = await page.locator('.home-recruitment-row > *').evaluateAll(elements => elements.map(element => {
+    const box = element.getBoundingClientRect()
+    return { top: Math.round(box.top), height: Math.round(box.height) }
+  }))
+  expect(pairedModules).toHaveLength(2)
+  expect(Math.abs(pairedModules[0].top - pairedModules[1].top)).toBeLessThanOrEqual(1)
+  expect(Math.abs(pairedModules[0].height - pairedModules[1].height)).toBeLessThanOrEqual(1)
+
+  const titleStyles = await page.locator('.home-panel h2').evaluateAll(elements => elements.map(element => {
+    const style = getComputedStyle(element)
+    return `${style.color}|${style.fontFamily}|${style.fontSize}|${style.fontWeight}`
+  }))
+  expect(new Set(titleStyles).size).toBe(1)
+
+  const listStyles = await page.locator('.news-column li a').evaluateAll(elements => elements.map(element => {
+    const style = getComputedStyle(element)
+    return `${style.color}|${style.fontFamily}|${style.fontSize}|${style.fontWeight}`
+  }))
+  expect(new Set(listStyles).size).toBe(1)
+
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth)
   expect(overflow).toBeFalsy()
+
+  const recruitmentRow = page.locator('.home-recruitment-row')
+  await recruitmentRow.scrollIntoViewIfNeeded()
+  const liveCourses = page.getByTestId('hui-employment-home-live-courses')
+  await expect(liveCourses.locator('iframe')).toBeVisible()
+  await expect(liveCourses).toHaveAttribute('data-frame-status', 'loaded')
+  await page.waitForTimeout(1_000)
+  await page.screenshot({ path: testInfo.outputPath('homepage-hui-employment-desktop.png'), fullPage: true })
 })
 
 test('视觉基线：栏目、文章、固定页与业务指南匹配原站内容页主结构', async ({ page, request }, testInfo) => {

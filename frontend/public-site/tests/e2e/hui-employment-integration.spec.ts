@@ -3,11 +3,11 @@ import { expect, test } from '@playwright/test'
 const HUI_HOST = 'https://student.hjiuye.com'
 
 const pageTargets = [
-  { route: '/page/jobs/positions', tab: '在招职位', renderer: 'HUI_EMPLOYMENT_POSITIONS', url: `${HUI_HOST}/moreActivities/2685/4/22` },
-  { route: '/page/jobs/recruitment', tab: '招聘简章', renderer: 'HUI_EMPLOYMENT_RECRUITMENT', url: `${HUI_HOST}/moreActivities/2685/4/23` },
-  { route: '/page/jobs/jobfair', tab: '双选会', renderer: 'HUI_EMPLOYMENT_JOB_FAIR', url: `${HUI_HOST}/moreActivities/2685/4/24` },
-  { route: '/page/jobs/presentation', tab: '现场宣讲', renderer: 'HUI_EMPLOYMENT_PRESENTATION', url: `${HUI_HOST}/moreActivities/2685/4/25` },
-  { route: '/page/jobs/jilin', tab: '留省就业', renderer: 'HUI_EMPLOYMENT_JILIN', url: `${HUI_HOST}/moreActivities/2685/4/30` },
+  { route: '/page/jobs/positions', tab: '在招职位', renderer: 'HUI_EMPLOYMENT_POSITIONS', url: `${HUI_HOST}/moreActivities/2685/4/22`, height: '1300px' },
+  { route: '/page/jobs/recruitment', tab: '招聘简章', renderer: 'HUI_EMPLOYMENT_RECRUITMENT', url: `${HUI_HOST}/moreActivities/2685/4/23`, height: '1300px' },
+  { route: '/page/jobs/jobfair', tab: '双选会', renderer: 'HUI_EMPLOYMENT_JOB_FAIR', url: `${HUI_HOST}/moreActivities/2685/4/24`, height: '1300px' },
+  { route: '/page/jobs/presentation', tab: '现场宣讲', renderer: 'HUI_EMPLOYMENT_PRESENTATION', url: `${HUI_HOST}/moreActivities/2685/4/25`, height: '1300px' },
+  { route: '/page/jobs/jilin', tab: '留省就业', renderer: 'HUI_EMPLOYMENT_JILIN', url: `${HUI_HOST}/moreActivities/2685/4/30`, height: '1300px' },
 ] as const
 
 test.beforeEach(async ({ page }) => {
@@ -38,7 +38,8 @@ test('首页三个独立慧就业区域使用当前完整地址，直播课程�
     await expect(container).toHaveAttribute('data-frame-status', 'loaded')
   }
 
-  await page.locator('.home-integrated-heading').getByRole('link', { name: '更多 >' }).click()
+  await expect(page.locator('.home-live-courses > header')).toHaveCount(0)
+  await page.getByRole('link', { name: '查看更多直播课程' }).click()
   await expect(page).toHaveURL(/\/page\/live-course$/)
   await expect(page.getByRole('heading', { name: '直播课程', exact: true })).toBeVisible()
   const livePage = page.getByTestId('hui-employment-page-HUI_EMPLOYMENT_LIVE_COURSES')
@@ -52,10 +53,60 @@ test('招聘信息五个二级页面保持本站框架、当前 Tab 与精确业
     await expect(page.locator('.site-footer')).toBeVisible()
     await expect(page.locator('.group-tabs a.active')).toHaveText(target.tab)
     const container = page.getByTestId(`hui-employment-page-${target.renderer}`)
-    await expect(container.locator('iframe')).toHaveAttribute('src', target.url)
-    await expect(container.locator('iframe')).toHaveAttribute('title', `${target.tab}—慧就业`)
+    const frame = container.locator('iframe')
+    await expect(frame).toHaveAttribute('src', target.url)
+    await expect(frame).toHaveAttribute('title', `${target.tab}—慧就业`)
+    await expect(frame).toHaveAttribute('scrolling', 'no')
+    await expect(container).toHaveCSS('height', target.height)
     await expect(page.locator('[data-unsupported-renderer]')).toHaveCount(0)
   }
+})
+
+test('直播课程二级页面使用原网站无内部滚动承载基线', async ({ page }) => {
+  await page.goto('/page/live-course')
+  const container = page.getByTestId('hui-employment-page-HUI_EMPLOYMENT_LIVE_COURSES')
+  const frame = container.locator('iframe')
+  await expect(frame).toHaveAttribute('scrolling', 'no')
+  await expect(container).toHaveCSS('height', '1250px')
+  expect(await page.evaluate(() => document.documentElement.scrollHeight > window.innerHeight)).toBeTruthy()
+})
+
+test('导航切换后隐藏菜单，慧就业入口使用安全的新窗口行为', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 800 })
+  await page.goto('/')
+
+  const recruitment = page.locator('.shared-public-nav-item').filter({ hasText: '招聘信息' }).first()
+  await recruitment.hover()
+  const positionLink = recruitment.getByRole('link', { name: '在招职位', exact: true })
+  await expect(positionLink).toHaveAttribute('target', '_blank')
+  await expect(positionLink).toHaveAttribute('rel', 'noopener noreferrer')
+  const popupPromise = page.waitForEvent('popup')
+  await positionLink.click()
+  const popup = await popupPromise
+  await expect(recruitment.locator('.shared-public-nav-children')).toBeHidden()
+  await popup.close()
+
+  const guidance = page.locator('.shared-public-nav-item').filter({ hasText: '就业指导' }).first()
+  await guidance.hover()
+  const liveCourseLink = guidance.getByRole('link', { name: '直播课程', exact: true })
+  await expect(liveCourseLink).toHaveAttribute('target', '_blank')
+  await expect(liveCourseLink).toHaveAttribute('rel', 'noopener noreferrer')
+
+  const guide = page.locator('.shared-public-nav-item').filter({ hasText: '业务指南' }).first()
+  await guide.hover()
+  await guide.getByRole('link', { name: '档案管理', exact: true }).click()
+  await expect(page).toHaveURL(/\/page\/guide\/dagl$/)
+  await expect(guide.locator('.shared-public-nav-children')).toBeHidden()
+
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('/')
+  await page.getByRole('button', { name: '展开导航' }).click()
+  const mobileGuideLink = page.locator('.shared-public-navigation').getByRole('link', { name: '档案管理', exact: true })
+  await expect(mobileGuideLink).toBeVisible()
+  await mobileGuideLink.click()
+  await expect(page).toHaveURL(/\/page\/guide\/dagl$/)
+  await expect(page.getByRole('button', { name: '展开导航' })).toHaveAttribute('aria-expanded', 'false')
+  await expect(mobileGuideLink).toBeHidden()
 })
 
 test('单个慧就业区域失败后保留本站内容并可原位重试', async ({ page }) => {
