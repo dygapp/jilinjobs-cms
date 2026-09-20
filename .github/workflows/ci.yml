@@ -94,17 +94,22 @@ jobs:
           SITE_PACKAGE_VERIFY_DB_USERNAME: root
           SITE_PACKAGE_VERIFY_DB_PASSWORD: root
         run: gradle verifyLinkOpenModeMigration --no-daemon
+      - name: Prepare isolated Content Migration verification databases
+        run: |
+          docker run --rm --network host mysql:8.4 \
+            mysql -h127.0.0.1 -uroot -proot -e \
+            "CREATE DATABASE IF NOT EXISTS migration_boundary; CREATE DATABASE IF NOT EXISTS generic_content_migration; CREATE DATABASE IF NOT EXISTS generic_list_item_compatibility;"
       - name: Verify Content Migration application boundary
         working-directory: backend
         env:
-          MIGRATION_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/eu37_site_package?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          MIGRATION_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/migration_boundary?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
           MIGRATION_VERIFY_DB_USERNAME: root
           MIGRATION_VERIFY_DB_PASSWORD: root
         run: gradle verifyContentMigrationBoundary --no-daemon
       - name: Verify Generic Content Migration
         working-directory: backend
         env:
-          GENERIC_MIGRATION_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/eu37_site_package?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          GENERIC_MIGRATION_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/generic_content_migration?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
           GENERIC_MIGRATION_VERIFY_DB_USERNAME: root
           GENERIC_MIGRATION_VERIFY_DB_PASSWORD: root
         run: |
@@ -113,7 +118,7 @@ jobs:
       - name: Verify Generic ListItem compatibility
         working-directory: backend
         env:
-          GENERIC_COMPATIBILITY_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/eu37_site_package?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          GENERIC_COMPATIBILITY_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/generic_list_item_compatibility?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
           GENERIC_COMPATIBILITY_VERIFY_DB_USERNAME: root
           GENERIC_COMPATIBILITY_VERIFY_DB_PASSWORD: root
         run: gradle verifyGenericListItemCompatibility --no-daemon
