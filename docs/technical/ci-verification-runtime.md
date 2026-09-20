@@ -81,7 +81,7 @@ Backend fingerprint
 
 Site Package、Frontend 和 Historical Migration 不因为与 Backend 同仓库就自动进入 Backend image fingerprint；它们保持各自 ownership 与 Runtime composition。
 
-## 5. GHCR Backend Runtime Artifact
+## 5. GHCR 后端运行时产物
 
 Backend Runtime image 使用 GitHub Container Registry 保存，不把 JAR、image tar 或其他生成二进制提交到 Git。
 
@@ -107,20 +107,20 @@ ghcr.io/dygapp/jilinjobs-cms-backend:<backend-fingerprint>
 典型路径：
 
 ~~~text
-checkout PR exact Head
-→ detect changed frontend scope
-→ calculate Backend fingerprint
-→ authenticate GHCR
-→ inspect image
-   ├─ HIT  → pull verified image
-   ├─ MISS → current Head Backend build for this Run
+检出 PR 精确 Head
+→ 识别受影响前端范围
+→ 计算 Backend fingerprint
+→ 登录 GHCR
+→ 检查镜像
+   ├─ HIT  → 拉取已验证镜像
+   ├─ MISS → 为本次 Run 构建当前 Head Backend
    └─ AUTH / NETWORK / UNKNOWN → FAIL
-→ Fresh MySQL
-→ start Backend
-→ build affected frontend
-→ start bounded frontend gateway
-→ affected application bounded smoke
-→ upload browser evidence / failure diagnostics
+→ 创建 Fresh MySQL
+→ 启动 Backend
+→ 构建受影响前端
+→ 启动有界前端 Gateway
+→ 执行受影响应用的固定快速 smoke
+→ 上传浏览器证据 / 失败诊断
 ~~~
 
 快速 CI 的约束：
