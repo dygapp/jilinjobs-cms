@@ -12,7 +12,6 @@ import com.jilinjobs.cms.migration.generic.GenericMigrationKind
 import com.jilinjobs.cms.migration.generic.GenericMigrationPhase
 import com.jilinjobs.cms.migration.generic.GenericMigrationStatus
 import com.jilinjobs.cms.migration.generic.pageContentFingerprint
-import com.jilinjobs.cms.migration.generic.main as runGenericCli
 import com.jilinjobs.cms.page.PageRenderMode
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
@@ -141,7 +140,7 @@ fun main() {
         val originalOut = System.out
         try {
             System.setOut(PrintStream(cliOutput, true, StandardCharsets.UTF_8))
-            runGenericCli(
+            main(
                 arrayOf(
                     validRoot.toString(),
                     "--spring.datasource.url=$dbUrl",
