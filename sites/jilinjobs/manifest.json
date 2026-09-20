@@ -1,7 +1,7 @@
 {
   "packageId": "jilinjobs",
   "schemaVersion": 2,
-  "version": "0.7.0-hui-employment-integration",
+  "version": "0.7.1-hui-employment-review-feedback",
   "structure": [
     {
       "type": "columns",
@@ -26,7 +26,7 @@
     {
       "type": "navigation-items",
       "path": "structure/navigation-items.json",
-      "sha256": "0c3a7e2ae8cae72dc9c83227670629bc8adbc05ba1e7268b00da07c304c01ead"
+      "sha256": "88b8c8ebe24051121961df63918e197cecd0be3852195996eefd5aa9e9e72dcf"
     },
     {
       "type": "site-config",

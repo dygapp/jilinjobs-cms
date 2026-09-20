@@ -3,7 +3,7 @@ id: specification-public-site
 title: 公开站产品规格
 type: specification
 status: accepted
-version: "V3.2"
+version: "V3.3"
 relations:
   requirements:
     - docs/requirements/information-publishing.md
@@ -14,7 +14,7 @@ relations:
   related:
     - docs/specifications/page-content.md
     - docs/specifications/rich-text-authoring.md
-updated_at: 2026-09-19
+updated_at: 2026-09-20
 ---
 
 # 公开站产品规格
@@ -89,6 +89,8 @@ Main 首页继续保持已接受的固定页面结构与主要视觉识别，并
 
 这三个区域都保留 Main 首页自身结构与导航上下文，慧就业负责 iframe 内的实时内容与交互。页面标题、区域名称和实际加载业务必须一致；“直播课程”不能并入“最新招聘”或招聘公告。具体完整目标地址和业务编号映射只由 `docs/requirements/hui-employment-integration.md` 持有，本规格不复制第二份 URL 清单。
 
+首页“直播课程”直接使用慧就业嵌入页自身的标题区，不在宿主页面重复显示第二层同名标题。“更多”仍必须进入本站 `/page/live-course`。与其并排的“招聘公告”以及首页其他资讯区使用一致的标题、正文、日期与交互色彩基线，避免同一首页出现相互割裂的文字体系。
+
 首页 iframe 在加载期间显示可辨识状态；在加载失败或限定时间内未确认加载完成时，显示“外部内容暂时不可用”的独立失败状态与重试操作。单个慧就业区域失败不得隐藏首页其他区域，也不得使 Main Header、Navigation 或 Footer 失效。
 
 ## 4. 中心党建入口与内容体验
@@ -121,6 +123,8 @@ Main 与 Party 的公共 Navigation / Footer 保持同一业务信息和交互�
 - desktop / mobile navigation；
 - Footer 中已确认的机构、联系、备案和官方标识信息；
 - 响应式重排。
+
+选择导航目标后，当前展开的下拉菜单必须立即隐藏；移动端选择目标后同时收起主导航。招聘信息下五个慧就业页面入口与“直播课程”导航入口使用新窗口，并采用等价于 `noopener noreferrer` 的安全行为。新窗口只改变打开方式，不改变本站规范 URL、页面框架或慧就业业务映射。
 
 Main 使用蓝色主题，Party 使用红色主题。主题可以改变视觉 token，但不能静默改变菜单层级、Footer 信息架构或公共交互语义。
 
@@ -163,6 +167,8 @@ Page 公开行为遵循当前 Page Content Specification：
 - 不因 renderer 不同建立第二套 Page URL。
 
 慧就业当前五个招聘信息 PageGroup 成员继续使用现有 `/page/jobs/{alias}` 规范 URL；各页面名称、当前 Tab 与实际嵌入业务必须保持一致。`/page/live-course` 是首页“直播课程”的本站二级页面，在 Main Shell 内嵌入当前直播课程完整业务页面。
+
+招聘信息和直播课程二级页面默认不显示 iframe 自身滚动条，并以充分展开当前慧就业主要内容的宿主承载高度呈现，只保留本站页面的纵向滚动。该行为不得造成本站页面横向溢出；外部内容未来明显超出当前承载基线时，应调整宿主承载高度，而不是恢复页面内外双重纵向滚动。
 
 这些页面的主要内容与行为由外部系统承担，CMS 只保留稳定 Page identity、页面组关系、规范 URL 与启停生命周期；运营人员不能通过普通单页编辑把固定慧就业目标改成其他地址。公开端必须通过明确 renderer identity 选择对应业务，不得从 alias、URL、标题或正文猜测映射。
 
@@ -291,8 +297,11 @@ Main 与 Party 当前保持一致的用户可观察行为包括：
 - Main EXTERNAL_LINK Article 在无独立 open-mode 的内容入口使用新窗口并保持安全 rel 行为；
 - Main 首页招聘活动宣传展示的 0/1/many 与 open-mode 行为；
 - Main 首页就业日历、最新招聘、直播课程三个独立区域实际加载当前 Requirement 指定的完整慧就业页面；
-- 首页“直播课程”的“更多”入口进入 `/page/live-course`，并在 Main Shell 内加载当前 Requirement 指定的直播课程二级页面；
+- 首页“直播课程”不重复显示宿主标题，“更多”入口进入 `/page/live-course`，并在 Main Shell 内加载当前 Requirement 指定的直播课程二级页面；
+- 招聘公告与其他首页资讯区采用一致的标题、列表正文、日期和交互色彩基线；
+- 导航目标切换后下拉菜单立即隐藏；招聘信息五个入口与“直播课程”导航入口使用安全的新窗口行为；
 - 招聘信息五个 PageGroup 成员的页面名称、当前 Tab 与实际慧就业业务映射一致；
+- 招聘信息和直播课程二级页面不显示 iframe 内部滚动条，以宿主页面滚动承载展开内容；
 - 慧就业区域具有可辨识的加载、超时 / 失败和重试状态，单个外部区域异常不破坏 Main Shell 或其他页面内容；
 - `/party/` accepted Banner 可见且不可点击；
 - Party 入口页内容线正确，“主题教育”不被静默增加为第五个固定内容区；

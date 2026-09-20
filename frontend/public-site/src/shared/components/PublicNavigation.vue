@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import type { PublicNavigation } from '../api/navigation'
 import '../styles/public-shell.css'
@@ -21,6 +21,7 @@ const props = withDefaults(defineProps<{
 
 const route = useRoute()
 const open = ref(false)
+const dismissedRootId = ref<number | null>(null)
 const arrowIcon = '/static/icons/arrow-down.png'
 
 const normalizePath = (value: string) => {
@@ -71,6 +72,20 @@ const matchesRoute = (item: PublicNavigation) => {
 const isActive = (item: PublicNavigation) =>
   matchesRoute(item) || children(item.id).some(matchesRoute)
 
+function closeNavigation(rootId: number, event: MouseEvent) {
+  if (event.currentTarget instanceof HTMLElement) event.currentTarget.blur()
+  open.value = false
+  dismissedRootId.value = rootId
+}
+
+function restoreNavigation(rootId: number) {
+  if (dismissedRootId.value === rootId) dismissedRootId.value = null
+}
+
+watch(() => route.fullPath, () => {
+  open.value = false
+})
+
 const legacyClass = computed(() => props.theme === 'main' ? 'site-nav' : 'party-navigation')
 </script>
 
@@ -101,7 +116,8 @@ const legacyClass = computed(() => props.theme === 'main' ? 'site-nav' : 'party-
         v-for="item in roots"
         :key="item.id"
         class="shared-public-nav-item"
-        :class="{ active: isActive(item) }"
+        :class="{ active: isActive(item), 'navigation-dismissed': dismissedRootId === item.id }"
+        @mouseleave="restoreNavigation(item.id)"
       >
         <a
           v-if="item.clickable && usesDocumentNavigation(item)"
@@ -110,6 +126,7 @@ const legacyClass = computed(() => props.theme === 'main' ? 'site-nav' : 'party-
           :href="item.href"
           :target="item.newWindow ? '_blank' : undefined"
           :rel="item.newWindow ? 'noopener noreferrer' : undefined"
+          @click="closeNavigation(item.id, $event)"
         >
           <span>{{ item.name }}</span>
           <img v-if="children(item.id).length" class="shared-public-nav-arrow" :src="arrowIcon" alt="">
@@ -119,6 +136,9 @@ const legacyClass = computed(() => props.theme === 'main' ? 'site-nav' : 'party-
           class="shared-public-nav-link"
           :data-testid="`${testIdPrefix}-${item.id}`"
           :to="item.href"
+          :target="item.newWindow ? '_blank' : undefined"
+          :rel="item.newWindow ? 'noopener noreferrer' : undefined"
+          @click="closeNavigation(item.id, $event)"
         >
           <span>{{ item.name }}</span>
           <img v-if="children(item.id).length" class="shared-public-nav-arrow" :src="arrowIcon" alt="">
@@ -139,8 +159,15 @@ const legacyClass = computed(() => props.theme === 'main' ? 'site-nav' : 'party-
               :href="child.href"
               :target="child.newWindow ? '_blank' : undefined"
               :rel="child.newWindow ? 'noopener noreferrer' : undefined"
+              @click="closeNavigation(item.id, $event)"
             >{{ child.name }}</a>
-            <RouterLink v-else-if="child.clickable" :to="child.href">{{ child.name }}</RouterLink>
+            <RouterLink
+              v-else-if="child.clickable"
+              :to="child.href"
+              :target="child.newWindow ? '_blank' : undefined"
+              :rel="child.newWindow ? 'noopener noreferrer' : undefined"
+              @click="closeNavigation(item.id, $event)"
+            >{{ child.name }}</RouterLink>
             <span v-else>{{ child.name }}</span>
           </li>
         </ul>

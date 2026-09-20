@@ -7,6 +7,7 @@ const props = withDefaults(defineProps<{
   src: string
   title: string
   variant?: 'calendar' | 'home-wide' | 'home-compact' | 'page'
+  height?: number
   timeoutMs?: number
   testId?: string
 }>(), {
@@ -24,6 +25,7 @@ let observer: IntersectionObserver | null = null
 
 const frameKey = computed(() => `${props.src}:${attempt.value}`)
 const busy = computed(() => status.value === 'idle' || status.value === 'loading')
+const frameStyle = computed(() => props.height ? { '--hui-frame-height': `${props.height}px` } : undefined)
 
 function clearLoadTimeout() {
   if (timeout) clearTimeout(timeout)
@@ -91,6 +93,7 @@ onBeforeUnmount(() => {
     ref="container"
     class="hui-employment-frame"
     :class="`hui-employment-frame--${variant}`"
+    :style="frameStyle"
     :aria-busy="busy"
     :data-testid="testId"
     :data-frame-status="status"
@@ -104,6 +107,7 @@ onBeforeUnmount(() => {
       loading="lazy"
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen
+      scrolling="no"
       @load="markLoaded"
       @error="markFailed"
     />
@@ -123,8 +127,8 @@ onBeforeUnmount(() => {
 .hui-employment-frame{position:relative;width:100%;overflow:hidden;background:#fff;border:1px solid #ebeef2}
 .hui-employment-frame--calendar{height:260px}
 .hui-employment-frame--home-wide{height:470px}
-.hui-employment-frame--home-compact{height:250px}
-.hui-employment-frame--page{height:clamp(680px,78vh,980px)}
+.hui-employment-frame--home-compact{height:300px}
+.hui-employment-frame--page{height:var(--hui-frame-height,1300px)}
 .hui-employment-frame__content{display:block;width:100%;height:100%;border:0;background:#fff}
 .hui-employment-frame__state{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:10px;padding:24px;background:#f8fbff;color:#617185;text-align:center}
 .hui-employment-frame__state--failed{flex-direction:column;color:#515c6b}
@@ -138,6 +142,5 @@ onBeforeUnmount(() => {
   .hui-employment-frame--calendar{height:300px}
   .hui-employment-frame--home-wide{height:420px}
   .hui-employment-frame--home-compact{height:320px}
-  .hui-employment-frame--page{height:720px}
 }
 </style>

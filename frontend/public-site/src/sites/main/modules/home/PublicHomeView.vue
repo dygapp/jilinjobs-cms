@@ -269,7 +269,7 @@ onUnmounted(() => {
 
       <section class="home-recruitment-row">
         <section class="home-live-courses">
-          <header class="home-integrated-heading"><h2>直播课程</h2><router-link to="/page/live-course">更多 &gt;</router-link></header>
+          <router-link class="home-live-courses-more" to="/page/live-course" aria-label="查看更多直播课程">更多 &gt;</router-link>
           <HuiEmploymentFrame
             :src="HUI_EMPLOYMENT_HOME_TARGETS.liveCourses.url"
             :title="HUI_EMPLOYMENT_HOME_TARGETS.liveCourses.title"

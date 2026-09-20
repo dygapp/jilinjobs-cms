@@ -12,6 +12,7 @@ const target = computed(() => resolveHuiEmploymentPageTarget(props.rendererKey))
     v-if="target"
     :src="target.url"
     :title="target.title"
+    :height="target.height"
     variant="page"
     :test-id="`hui-employment-page-${rendererKey}`"
     data-page-renderer="HUI_EMPLOYMENT"
