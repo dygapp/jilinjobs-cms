@@ -84,13 +84,12 @@ Admin / Public contract 可以投影同一 Domain；Public projection 不泄漏 
 Content Migration 是独立 non-web application，持有：
 
 - site-neutral canonical migration orchestration；
-- load / preflight / execute / report 的 migration implementation；
-- bounded site-specific compatibility adapter；
+- load / preflight / compatibility / execute / report 的 migration implementation；
 - migration-only mapping / command / verifier responsibility。
 
 它依赖 Core，不依赖 Server，不启动 ordinary HTTP Server，也不因依赖 Core 被动获得 Controller / MVC / Servlet / multipart transport responsibility。
 
-Generic migration package 不吸收 Main / Party 具体 dataset facts或 accepted compatibility constants；这些事实留在 migration workspace / bounded adapter。具体 CLI、package、dispatcher、task 名由 Repository implementation 持有。
+Content Migration source 不吸收 Main / Party 等具体 Site / Theme identity，不维护业务专用 adapter、service、command 或 executable entrypoint。业务数据、source facts、accepted count 与 compatibility declaration 留在 `data-migrations/**`，并使用 Generic Canonical Contract / compatibility schema 被通用 loader 直接消费。Gradle 只提供通用 migration runner，不建立按业务数据集命名的 task。
 
 历史 canonical dataset 是来源证据，不因 Runtime Domain enum / wire representation 演进而就地改写。若 canonical input 使用的是已冻结的历史打开方式词汇（例如 `DEFAULT / SAME_WINDOW / NEW_WINDOW`），Content Migration 必须在 write boundary 显式转换为当前 Runtime `openMode` contract；转换后不得把退休值重新写回 current tables。来源文件中的 evidence（例如原始 HTML `target="_blank"`）继续保持其 canonical provenance 语义。
 
