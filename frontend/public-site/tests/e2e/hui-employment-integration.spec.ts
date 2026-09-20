@@ -101,7 +101,7 @@ test('导航切换后隐藏菜单，慧就业入口使用安全的新窗口行�
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto('/')
   await page.getByRole('button', { name: '展开导航' }).click()
-  const mobileGuideLink = page.getByRole('link', { name: '档案管理', exact: true })
+  const mobileGuideLink = page.locator('.shared-public-navigation').getByRole('link', { name: '档案管理', exact: true })
   await expect(mobileGuideLink).toBeVisible()
   await mobileGuideLink.click()
   await expect(page).toHaveURL(/\/page\/guide\/dagl$/)
