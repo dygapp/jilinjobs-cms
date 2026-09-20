@@ -62,7 +62,7 @@ setPageMeta({ description: '吉林省高等学校毕业生就业信息网，提�
 const shortcutItems = computed(() => items.value.filter(item => item.position === HOME_SHORTCUT_POSITION))
 const quickItems = computed(() => items.value.filter(item => item.position === HOME_QUICK_POSITION))
 const isExternalArticle = (article: PublicArticleSummary) => article.articleType === 'EXTERNAL_LINK' && Boolean(article.externalUrl)
-const newWindow = (mode: string, url: string | null | undefined) => mode === 'NEW_WINDOW' || (mode === 'DEFAULT' && Boolean(url?.startsWith('http')))
+const advertisementTarget = (mode: Advertisement['openMode']) => mode === '_self' || mode === '_blank' ? mode : undefined
 const activePromo = computed(() => promoAds.value[activePromoIndex.value] || null)
 const promoLinked = computed(() => Boolean(activePromo.value?.url) && activePromo.value?.openMode !== 'NO_LINK')
 
@@ -171,13 +171,13 @@ onUnmounted(() => {
               <router-link
                 v-if="carouselInternalRoute(carouselItem)"
                 :to="carouselInternalRoute(carouselItem)!"
-                :target="newWindow(carouselItem.openMode, carouselInternalRoute(carouselItem)) ? '_blank' : undefined"
-                :rel="newWindow(carouselItem.openMode, carouselInternalRoute(carouselItem)) ? 'noopener noreferrer' : undefined"
+                :target="carouselItem.openMode || undefined"
+                :rel="carouselItem.openMode === '_blank' ? 'noopener noreferrer' : undefined"
               >
                 <img :src="carouselImage(carouselItem)" :alt="carouselItem.title || '首页轮播图'" @error="markCarouselImageFailed(carouselItem.id)">
                 <span v-if="carouselItem.title" class="carousel-caption">{{ carouselItem.title }}</span>
               </router-link>
-              <a v-else-if="carouselHref(carouselItem)" :href="carouselHref(carouselItem)!" :target="newWindow(carouselItem.openMode, carouselHref(carouselItem)) ? '_blank' : undefined" rel="noopener noreferrer">
+              <a v-else-if="carouselHref(carouselItem)" :href="carouselHref(carouselItem)!" :target="carouselItem.openMode || undefined" :rel="carouselItem.openMode === '_blank' ? 'noopener noreferrer' : undefined">
                 <img :src="carouselImage(carouselItem)" :alt="carouselItem.title || '首页轮播图'" @error="markCarouselImageFailed(carouselItem.id)">
                 <span v-if="carouselItem.title" class="carousel-caption">{{ carouselItem.title }}</span>
               </a>
@@ -214,8 +214,8 @@ onUnmounted(() => {
 
         <aside class="home-top-shortcuts">
           <template v-for="link in shortcutItems" :key="link.id">
-            <a v-if="link.external" :href="link.href" :target="link.newWindow ? '_blank' : undefined" rel="noopener noreferrer"><img v-if="link.iconPath" :src="link.iconPath" alt=""><span>{{ link.name }}</span></a>
-            <router-link v-else :to="link.href"><img v-if="link.iconPath" :src="link.iconPath" alt=""><span>{{ link.name }}</span></router-link>
+            <a v-if="link.external" :href="link.href" :target="link.openMode || undefined" :rel="link.openMode === '_blank' ? 'noopener noreferrer' : undefined"><img v-if="link.iconPath" :src="link.iconPath" alt=""><span>{{ link.name }}</span></a>
+            <router-link v-else :to="link.href" :target="link.openMode || undefined" :rel="link.openMode === '_blank' ? 'noopener noreferrer' : undefined"><img v-if="link.iconPath" :src="link.iconPath" alt=""><span>{{ link.name }}</span></router-link>
           </template>
         </aside>
       </section>
@@ -245,15 +245,15 @@ onUnmounted(() => {
           <p class="service-phone"><img :src="phoneIcon" alt="">咨询电话：<strong>{{ contactPhone }}</strong></p>
           <div class="service-shortcuts">
             <template v-for="item in quickItems" :key="item.id">
-              <a v-if="item.external" :href="item.href" :target="item.newWindow ? '_blank' : undefined" rel="noopener noreferrer"><img v-if="item.iconPath" :src="item.iconPath" alt=""><span>{{ item.name }}</span></a>
-              <router-link v-else :to="item.href"><img v-if="item.iconPath" :src="item.iconPath" alt=""><span>{{ item.name }}</span></router-link>
+              <a v-if="item.external" :href="item.href" :target="item.openMode || undefined" :rel="item.openMode === '_blank' ? 'noopener noreferrer' : undefined"><img v-if="item.iconPath" :src="item.iconPath" alt=""><span>{{ item.name }}</span></a>
+              <router-link v-else :to="item.href" :target="item.openMode || undefined" :rel="item.openMode === '_blank' ? 'noopener noreferrer' : undefined"><img v-if="item.iconPath" :src="item.iconPath" alt=""><span>{{ item.name }}</span></router-link>
             </template>
           </div>
         </aside>
       </section>
 
       <template v-if="activePromo">
-        <a v-if="promoLinked" class="home-promo-banner" :data-testid="`home-promo-ad-${activePromo.id}`" :href="activePromo.url!" :target="newWindow(activePromo.openMode, activePromo.url) ? '_blank' : undefined" rel="noopener noreferrer"><img :src="activePromo.imagePath" :alt="activePromo.title"></a>
+        <a v-if="promoLinked" class="home-promo-banner" :data-testid="`home-promo-ad-${activePromo.id}`" :href="activePromo.url!" :target="advertisementTarget(activePromo.openMode)" :rel="advertisementTarget(activePromo.openMode) === '_blank' ? 'noopener noreferrer' : undefined"><img :src="activePromo.imagePath" :alt="activePromo.title"></a>
         <div v-else class="home-promo-banner" :data-testid="`home-promo-ad-${activePromo.id}`"><img :src="activePromo.imagePath" :alt="activePromo.title"></div>
       </template>
 
@@ -296,7 +296,7 @@ onUnmounted(() => {
         <div class="site-navigation-card">
           <div class="site-navigation-tabs" role="tablist"><button v-for="(group, index) in siteGroups" :key="group.name" type="button" :class="{ active: activeSiteGroup === index }" @click="activeSiteGroup = index">{{ group.name }}</button></div>
           <div v-if="siteGroups[activeSiteGroup]" class="site-link-group">
-            <a v-for="link in siteGroups[activeSiteGroup].links" :key="link.id" :href="link.url || '#'" :target="newWindow(link.openMode, link.url) ? '_blank' : undefined" rel="noopener noreferrer">{{ link.title }}</a>
+            <a v-for="link in siteGroups[activeSiteGroup].links" :key="link.id" :href="link.url || '#'" :target="link.openMode || undefined" :rel="link.openMode === '_blank' ? 'noopener noreferrer' : undefined">{{ link.title }}</a>
             <span v-if="!siteGroups[activeSiteGroup].links.length" class="empty-item">相关链接将在后续内容整理中补充</span>
           </div>
         </div>
