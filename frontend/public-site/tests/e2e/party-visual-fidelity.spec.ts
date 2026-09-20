@@ -77,7 +77,7 @@ async function seedVisualContent(request: APIRequestContext, suffix: string): Pr
         subtitle: null,
         url: `/party/article/${targetArticle.id}`,
         imagePath: '/static/health/baseline.png',
-        openMode: 'DEFAULT',
+        openMode: null,
         sortOrder: -300000 + index,
         enabled: true,
         extraJson: null,
