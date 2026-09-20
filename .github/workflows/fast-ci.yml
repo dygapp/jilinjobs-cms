@@ -1,0 +1,341 @@
+name: 快速 CI
+
+on:
+  pull_request:
+    paths-ignore:
+      - '**/*.md'
+      - 'docs/**'
+
+concurrency:
+  group: fast-ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  packages: read
+
+env:
+  BACKEND_IMAGE_REPOSITORY: ghcr.io/${{ github.repository }}-backend
+
+jobs:
+  fast:
+    name: 快速验证
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_ROOT_HOST: "%"
+          MYSQL_DATABASE: jilinjobs_cms
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=12
+
+    steps:
+      - name: 检出 PR exact Head
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - name: 识别受影响范围
+        id: changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="$(git rev-parse HEAD)"
+          git diff --name-only "$BASE_SHA" "$HEAD_SHA" | tee "$RUNNER_TEMP/changed-files.txt"
+
+          public=false
+          admin=false
+          backend=false
+          ci_runtime=false
+
+          while IFS= read -r file; do
+            case "$file" in
+              frontend/public-site/*)
+                public=true
+                ;;
+              frontend/admin/*)
+                admin=true
+                ;;
+              frontend/nginx.e2e.conf)
+                public=true
+                admin=true
+                ;;
+              backend/Dockerfile.runtime|backend/.dockerignore|scripts/backend-runtime-fingerprint.sh|.github/workflows/fast-ci.yml|.github/workflows/ci.yml)
+                public=true
+                admin=true
+                ci_runtime=true
+                ;;
+              backend/*)
+                backend=true
+                ;;
+            esac
+          done < "$RUNNER_TEMP/changed-files.txt"
+
+          if [ "$public" = true ] || [ "$admin" = true ]; then
+            frontend=true
+          else
+            frontend=false
+          fi
+
+          echo "public=$public" >> "$GITHUB_OUTPUT"
+          echo "admin=$admin" >> "$GITHUB_OUTPUT"
+          echo "backend=$backend" >> "$GITHUB_OUTPUT"
+          echo "frontend=$frontend" >> "$GITHUB_OUTPUT"
+          echo "ci_runtime=$ci_runtime" >> "$GITHUB_OUTPUT"
+
+      - name: 配置 Node.js
+        if: steps.changes.outputs.frontend == 'true'
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
+      - name: 登录 GHCR
+        if: steps.changes.outputs.frontend == 'true'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 计算 Backend Runtime fingerprint
+        id: backend-fingerprint
+        if: steps.changes.outputs.frontend == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          fingerprint="$(bash scripts/backend-runtime-fingerprint.sh)"
+          echo "value=$fingerprint" >> "$GITHUB_OUTPUT"
+
+      - name: 检查预构建 Backend image
+        id: backend-image
+        if: steps.changes.outputs.frontend == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          IMAGE="$BACKEND_IMAGE_REPOSITORY:${{ steps.backend-fingerprint.outputs.value }}"
+          echo "image=$IMAGE" >> "$GITHUB_OUTPUT"
+
+          if docker manifest inspect "$IMAGE" > "$RUNNER_TEMP/backend-manifest.json" 2> "$RUNNER_TEMP/backend-manifest.err"; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "Backend image 命中：$IMAGE"
+            exit 0
+          fi
+
+          if grep -Eqi 'manifest unknown|name unknown|not found' "$RUNNER_TEMP/backend-manifest.err"; then
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "Backend image 未命中，将为本次 Run 临时构建：$IMAGE"
+            exit 0
+          fi
+
+          cat "$RUNNER_TEMP/backend-manifest.err"
+          echo "无法确认 Backend image 是否存在；Registry 权限、网络或未知错误不得降级为 cache miss。" >&2
+          exit 1
+
+      - name: 配置 Java 21
+        if: (steps.changes.outputs.frontend == 'false' && steps.changes.outputs.backend == 'true') || (steps.changes.outputs.frontend == 'true' && steps.backend-image.outputs.exists == 'false')
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: 配置 Gradle
+        if: (steps.changes.outputs.frontend == 'false' && steps.changes.outputs.backend == 'true') || (steps.changes.outputs.frontend == 'true' && steps.backend-image.outputs.exists == 'false')
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: "9.6.1"
+
+      - name: Backend 快速构建或 image miss fallback
+        if: (steps.changes.outputs.frontend == 'false' && steps.changes.outputs.backend == 'true') || (steps.changes.outputs.frontend == 'true' && steps.backend-image.outputs.exists == 'false')
+        working-directory: backend
+        run: gradle clean test bootJar --no-daemon
+
+      - name: 构建本次 Run 的临时 Backend image
+        if: steps.changes.outputs.frontend == 'true' && steps.backend-image.outputs.exists == 'false'
+        shell: bash
+        run: |
+          set -euo pipefail
+          IMAGE="${{ steps.backend-image.outputs.image }}"
+          docker build             --label "org.opencontainers.image.source=https://github.com/${{ github.repository }}"             --label "org.opencontainers.image.revision=$(git rev-parse HEAD)"             --label "io.jilinjobs.backend-fingerprint=${{ steps.backend-fingerprint.outputs.value }}"             -t "$IMAGE"             -f backend/Dockerfile.runtime             backend
+
+      - name: 安装并构建 Public
+        if: steps.changes.outputs.public == 'true'
+        working-directory: frontend/public-site
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
+
+      - name: 安装并构建 Admin
+        if: steps.changes.outputs.admin == 'true'
+        working-directory: frontend/admin
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+
+      - name: 准备快速验证 Runtime
+        if: steps.changes.outputs.frontend == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf runtime-static runtime-fast
+          mkdir -p runtime-static runtime-fast/public runtime-fast/admin
+          printf '<!doctype html><title>unused public runtime</title>\n' > runtime-fast/public/index.html
+          printf '<!doctype html><title>unused admin runtime</title>\n' > runtime-fast/admin/index.html
+
+          if [ "${{ steps.changes.outputs.public }}" = "true" ]; then
+            rm -rf runtime-fast/public
+            mkdir -p runtime-fast/public
+            cp -a frontend/public-site/dist/. runtime-fast/public/
+          fi
+
+          if [ "${{ steps.changes.outputs.admin }}" = "true" ]; then
+            rm -rf runtime-fast/admin
+            mkdir -p runtime-fast/admin
+            cp -a frontend/admin/dist/. runtime-fast/admin/
+          fi
+
+      - name: 拉取快速验证 Runtime images
+        if: steps.changes.outputs.frontend == 'true'
+        timeout-minutes: 12
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker pull nginx:1.29.8-alpine > /tmp/nginx-pull.log 2>&1 &
+          nginx_pid=$!
+          docker pull mcr.microsoft.com/playwright:v1.61.0-noble > /tmp/playwright-pull.log 2>&1 &
+          playwright_pid=$!
+
+          backend_pid=""
+          if [ "${{ steps.backend-image.outputs.exists }}" = "true" ]; then
+            docker pull "${{ steps.backend-image.outputs.image }}" > /tmp/backend-pull.log 2>&1 &
+            backend_pid=$!
+          fi
+
+          wait "$nginx_pid" || { cat /tmp/nginx-pull.log; exit 1; }
+          wait "$playwright_pid" || { cat /tmp/playwright-pull.log; exit 1; }
+          if [ -n "$backend_pid" ]; then
+            wait "$backend_pid" || { cat /tmp/backend-pull.log; exit 1; }
+          fi
+
+      - name: 启动 Backend Runtime
+        if: steps.changes.outputs.frontend == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run -d --name cms-backend --network host             -e 'DB_URL=jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true'             -e DB_USERNAME=root             -e DB_PASSWORD=root             -e CMS_STATIC_ROOT=/runtime-static             -e CMS_SITE_PACKAGE_ROOT=/site-package             -e CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true             -v "$GITHUB_WORKSPACE/runtime-static:/runtime-static"             -v "$GITHUB_WORKSPACE/sites/jilinjobs:/site-package:ro"             "${{ steps.backend-image.outputs.image }}"
+
+          for i in $(seq 1 60); do
+            if curl --fail --silent http://127.0.0.1:8080/api/admin/columns > /dev/null; then
+              exit 0
+            fi
+            if [ "$i" -eq 60 ]; then
+              docker logs cms-backend
+              exit 1
+            fi
+            sleep 2
+          done
+
+      - name: 启动受影响前端 Gateway
+        if: steps.changes.outputs.frontend == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run -d --name cms-frontend --network host             -v "$GITHUB_WORKSPACE/runtime-fast/public:/usr/share/nginx/html/public:ro"             -v "$GITHUB_WORKSPACE/runtime-fast/admin:/usr/share/nginx/html/admin:ro"             -v "$GITHUB_WORKSPACE/frontend/nginx.e2e.conf:/etc/nginx/nginx.conf:ro"             nginx:1.29.8-alpine
+
+          for i in $(seq 1 30); do
+            public_ready=true
+            admin_ready=true
+
+            if [ "${{ steps.changes.outputs.public }}" = "true" ]; then
+              curl --fail --silent http://127.0.0.1:5173/ > /dev/null || public_ready=false
+            fi
+            if [ "${{ steps.changes.outputs.admin }}" = "true" ]; then
+              curl --fail --silent http://127.0.0.1:5173/admin/ > /dev/null || admin_ready=false
+            fi
+
+            if [ "$public_ready" = true ] && [ "$admin_ready" = true ]; then
+              exit 0
+            fi
+            sleep 1
+          done
+
+          docker logs cms-frontend
+          exit 1
+
+      - name: 执行 Public 快速浏览器验证
+        if: steps.changes.outputs.public == 'true'
+        timeout-minutes: 5
+        run: |
+          docker run --rm --init --ipc=host --network host             -e CI=true             -e CI_EXTERNAL_WEB_SERVER=true             -v "$GITHUB_WORKSPACE/frontend/public-site:/work"             -w /work             mcr.microsoft.com/playwright:v1.61.0-noble             bash -lc 'npx playwright test tests/e2e/main-shell-lifecycle.spec.ts --project=chromium --reporter=line'
+
+      - name: 执行 Admin 快速浏览器验证
+        if: steps.changes.outputs.admin == 'true'
+        timeout-minutes: 5
+        run: |
+          docker run --rm --init --ipc=host --network host             -e CI=true             -v "$GITHUB_WORKSPACE/frontend/admin:/work"             -w /work             mcr.microsoft.com/playwright:v1.61.0-noble             bash -lc 'npx playwright test tests/e2e/admin-module-routing.spec.ts --reporter=line'
+
+      - name: 上传快速浏览器证据
+        if: always() && steps.changes.outputs.frontend == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: fast-browser-evidence
+          path: |
+            frontend/public-site/playwright-report
+            frontend/public-site/test-results
+            frontend/admin/playwright-report
+            frontend/admin/test-results
+          if-no-files-found: warn
+          retention-days: 3
+
+      - name: 收集快速验证失败诊断
+        if: failure() && steps.changes.outputs.frontend == 'true'
+        shell: bash
+        run: |
+          mkdir -p runtime-diagnostics
+          docker ps -a > runtime-diagnostics/docker-ps.txt 2>&1 || true
+          docker inspect cms-backend > runtime-diagnostics/backend-inspect.json 2>&1 || true
+          docker logs cms-backend > runtime-diagnostics/backend.log 2>&1 || true
+          docker inspect cms-frontend > runtime-diagnostics/frontend-inspect.json 2>&1 || true
+          docker logs cms-frontend > runtime-diagnostics/frontend.log 2>&1 || true
+          cp "$RUNNER_TEMP/backend-manifest.err" runtime-diagnostics/backend-manifest.err 2>/dev/null || true
+
+      - name: 上传快速验证失败诊断
+        if: failure() && steps.changes.outputs.frontend == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: fast-runtime-diagnostics
+          path: runtime-diagnostics
+          if-no-files-found: warn
+          retention-days: 3
+
+      - name: 清理快速验证 Runtime
+        if: always() && steps.changes.outputs.frontend == 'true'
+        run: docker rm -f cms-backend cms-frontend || true
+
+      - name: 输出快速验证摘要
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "### 快速 CI"
+            echo "- 目标 Head：$(git rev-parse HEAD)"
+            echo "- Public 受影响：${{ steps.changes.outputs.public }}"
+            echo "- Admin 受影响：${{ steps.changes.outputs.admin }}"
+            echo "- Backend 受影响：${{ steps.changes.outputs.backend }}"
+            if [ "${{ steps.changes.outputs.frontend }}" = "true" ]; then
+              echo "- Backend fingerprint：${{ steps.backend-fingerprint.outputs.value }}"
+              echo "- Backend image：${{ steps.backend-image.outputs.image }}"
+              echo "- Backend image 命中：${{ steps.backend-image.outputs.exists }}"
+            fi
+            echo
+            echo "快速 CI 只提供开发反馈证据；Ready to Integrate 仍要求完整 CI。"
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -1,11 +1,11 @@
 # 当前工作（当前工作）
 
-Current Ready Execution Unit：**NONE**。
+Current Ready Execution Unit：**EU-58 — GitHub Actions CI 快速验证运行时优化**。
 
-当前没有 active / Ready Execution Unit。`docs/work/current/` 只负责当前执行生命周期定位，不复制已完成 Feature 的产品结果、长期 Requirement / Architecture、Historical Migration 状态、Roadmap candidate 或 GitHub 瞬时 Evidence。
+当前工作 artifact：`eu58-github-actions-ci-verification-runtime.md`。
 
-已完成 Execution Unit 的历史证据按需从 `../archive/` 定向读取；其稳定产品语义必须从当前 Requirement / Domain / Architecture / Specification / Technical 规范语义所有者 恢复，而不是从完成态 Work artifact 反向建立第二份 Authority。
+Controlling Issue：#182。
 
-如果 Fresh Context 的当前用户目标仅为状态恢复 / 检查 / 总结，完成当前 仓库权威 与必要 GitHub 当前证据 的只读核验后即停止。形成状态判断或准备激活高成本 CI / Review Runtime / Historical Migration 时，按当前直接责任重新执行 task-level Rule Discovery，并只读取返回的 candidate locator；本 Current Work locator 不发布固定 Rule 路径。
+当前单元已经完成 Readiness `PASS`，执行范围只覆盖 GitHub Actions / GitHub-hosted Runner 下的 CI 反馈优化，不包含 Historical Migration 数据预构建、本地 Codex CLI 开发环境、self-hosted Runner 或持久共享 Runtime。
 
-下一**产品执行生命周期**自然 Gate 是新的 **Fresh Context Planning / Readiness decision**。该表述只约束 Ready / active Execution Unit lifecycle，不替代当前 Project Governance / Review 等其他责任已经建立的 Gate。Roadmap、Open Issue、backlog、historical candidate 或已完成 Unit 都不会自动获得 Planning、Readiness 或执行授权；任何后续产品执行工作必须从当前仓库权威重新建立必要状态链。
+Fresh Context 继续按 `AGENTS.md`、`docs/README.md` 与本文件恢复当前执行生命周期，并协调 Open execution PR / Branch 与当前 GitHub Evidence。完成集成和 Post-Integration closure 后，本 locator 必须恢复为 `NONE`，完成态 artifact 移入 `docs/work/archive/`。
