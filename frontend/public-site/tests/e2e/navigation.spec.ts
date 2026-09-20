@@ -5,6 +5,7 @@ test('导航可维护并只把启用条目暴露为正确公开入口', async ({
   const columnName = `政策法规-${suffix}`
   const internalName = `政策入口-${suffix}`
   const externalName = `外部服务-${suffix}`
+  const defaultExternalName = `默认外部服务-${suffix}`
 
   const columnResponse = await request.post('/api/admin/columns', {
     data: {
@@ -39,12 +40,29 @@ test('导航可维护并只把启用条目暴露为正确公开入口', async ({
       targetColumnId: null,
       targetPageId: null,
       targetUrl: 'https://example.com/service',
-      openMode: 'DEFAULT',
+      openMode: '_blank',
       sortOrder: 20,
       enabled: true,
     },
   })
   expect(externalResponse.ok()).toBeTruthy()
+
+  const defaultExternalResponse = await request.post('/api/admin/navigations', {
+    data: {
+      parentId: null,
+      name: defaultExternalName,
+      position: 'MAIN',
+      category: null,
+      targetType: 'LINK',
+      targetColumnId: null,
+      targetPageId: null,
+      targetUrl: 'https://example.com/default-service',
+      openMode: null,
+      sortOrder: 21,
+      enabled: true,
+    },
+  })
+  expect(defaultExternalResponse.ok()).toBeTruthy()
 
   const navigationResponse = await request.get('/api/admin/navigations')
   expect(navigationResponse.ok()).toBeTruthy()
@@ -58,6 +76,11 @@ test('导航可维护并只把启用条目暴露为正确公开入口', async ({
   const externalLink = page.getByRole('link', { name: externalName, exact: true })
   await expect(externalLink).toHaveAttribute('href', 'https://example.com/service')
   await expect(externalLink).toHaveAttribute('target', '_blank')
+  await expect(externalLink).toHaveAttribute('rel', 'noopener noreferrer')
+  const defaultExternalLink = page.getByRole('link', { name: defaultExternalName, exact: true })
+  await expect(defaultExternalLink).toHaveAttribute('href', 'https://example.com/default-service')
+  await expect(defaultExternalLink).not.toHaveAttribute('target')
+  await expect(defaultExternalLink).not.toHaveAttribute('rel')
 
   await internalLink.click()
   await expect(page).toHaveURL(new RegExp(`/columns/${column.id}$`))

@@ -22,7 +22,7 @@ test('EU-30：Party canonical 历史文章、资源与 LINK/ARTICLE 混合轮播
       url: string | null
       imagePath: string | null
       effectiveImageResourceId: number | null
-      openMode: string
+      openMode: string | null
     }>
   }
   expect(carousel.items).toHaveLength(4)
@@ -30,7 +30,7 @@ test('EU-30：Party canonical 历史文章、资源与 LINK/ARTICLE 混合轮播
   expect(carousel.items.map(item => item.sourceType)).toEqual(['LINK', 'ARTICLE', 'LINK', 'LINK'])
 
   for (const [index, item] of carousel.items.entries()) {
-    expect(item.openMode).toBe('NEW_WINDOW')
+    expect(item.openMode).toBe('_blank')
     if (index === 1) {
       expect(item.articleId).not.toBeNull()
       expect(item.url).toBeNull()

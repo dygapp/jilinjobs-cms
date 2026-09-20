@@ -23,6 +23,20 @@ class NavigationServiceTest {
         assertFalse(result[0].external)
         assertEquals("https://example.com/service", result[1].href)
         assertTrue(result[1].external)
+        assertEquals(null, result[1].openMode)
+    }
+
+    @Test
+    fun `公开导航直接投影显式浏览上下文且不根据 URL 推断`() {
+        val repository = InMemoryNavigationRepository()
+        val service = NavigationService(repository, StubColumnQuery(), FakeNavigationLocationMapper("MAIN"))
+        service.create(NavigationDraft("默认外链", "MAIN", null, NavigationTargetType.LINK, null, "https://example.com/default", 10, true))
+        service.create(NavigationDraft("新窗口站内链接", "MAIN", null, NavigationTargetType.LINK, null, "/internal", 20, true, openMode = "_blank"))
+        val result = service.listPublic()
+        assertEquals(null, result[0].openMode)
+        assertTrue(result[0].external)
+        assertEquals("_blank", result[1].openMode)
+        assertFalse(result[1].external)
     }
 
     @Test fun `导航图标作为条目属性公开输出`() { val service = NavigationService(InMemoryNavigationRepository(), StubColumnQuery(), FakeNavigationLocationMapper("HOME_SHORTCUT")); service.create(NavigationDraft("快捷入口", "HOME_SHORTCUT", null, NavigationTargetType.LINK, null, "/service", 10, true, iconPath = "/static/icons/top-nav-01.png")); assertEquals("/static/icons/top-nav-01.png", service.listPublic().single().iconPath) }

@@ -34,7 +34,7 @@ async function createPlacement(
       url: 'https://example.invalid/list-owned-url-must-not-win',
       imagePath: null,
       imageResourceId,
-      openMode: 'DEFAULT',
+      openMode: '_blank',
       sortOrder: -300000,
       enabled: true,
       extraJson: null,

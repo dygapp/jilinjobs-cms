@@ -100,7 +100,7 @@ private fun resetStableStructureDatabase(dataSource: DataSource) {
 private fun insertStableStructureOperatorNavigation(dataSource: DataSource, name: String) {
     dataSource.connection.use { connection ->
         connection.prepareStatement(
-            "INSERT INTO cms_navigation(code,parent_id,name,position,category,target_type,target_column_id,target_page_id,target_url,open_mode,icon_path,sort_order,enabled,preset) VALUES(NULL,NULL,?,'MAIN',NULL,'LINK',NULL,NULL,'https://operator.invalid/','DEFAULT',NULL,999,1,0)",
+            "INSERT INTO cms_navigation(code,parent_id,name,position,category,target_type,target_column_id,target_page_id,target_url,open_mode,icon_path,sort_order,enabled,preset) VALUES(NULL,NULL,?,'MAIN',NULL,'LINK',NULL,NULL,'https://operator.invalid/','_blank',NULL,999,1,0)",
         ).use { statement ->
             statement.setString(1, name)
             statement.executeUpdate()
