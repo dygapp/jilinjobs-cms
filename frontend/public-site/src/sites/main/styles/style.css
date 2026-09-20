@@ -40,7 +40,7 @@ img{max-width:100%}
 .visual-empty{height:100%;display:grid;place-items:center;color:#8491a1}
 .home-panel,.service-panel{background:#fff;border:1px solid #ebeef2;padding:0 14px;min-width:0}
 .home-panel>header,.news-column>header,.service-panel>header{height:48px;display:flex;justify-content:space-between;align-items:stretch;margin:0 -14px;padding-right:14px;border-bottom:1px solid #ebeef2}
-.home-panel h2,.news-column h2,.service-panel h2{display:flex;align-items:center;position:relative;margin:-1px 0 -1px 0;padding:0 20px;border-top:3px solid #00aebd;border-right:1px solid #ebeef2;border-left:1px solid #ebeef2;background:#fff;color:#00aebd;font-size:18px;font-weight:600;line-height:48px}
+.home-panel h2,.news-column h2,.service-panel h2{display:flex;align-items:center;position:relative;margin:-1px 0 -1px 0;padding:0 20px;border:1px solid #ebeef2;border-top:3px solid #00aebd;border-bottom-color:#fff;border-radius:4px 4px 0 0;background:#fff;color:#00aebd;font-size:18px;font-weight:600;line-height:48px}
 .home-panel h2::after,.news-column h2::after,.service-panel h2::after{content:none}
 .home-panel header>a,.news-column header>a{display:flex;align-items:center;font-size:12px;text-decoration:none;color:#8491a1}
 .home-panel ul,.news-column ul{list-style:none;padding:6px 0 8px;margin:0}

@@ -82,6 +82,13 @@ test('视觉基线：桌面首页维持原站三列首屏与关键图片区块',
     await expect(panel).toHaveCSS('border-right-width', '1px')
   }
 
+  for (const headerSelector of ['.notice-panel > header', '.employment-panel > header', '.service-panel > header', '.recruitment-panel > header']) {
+    const header = page.locator(headerSelector)
+    await expect(header).toHaveCSS('border-bottom-width', '1px')
+    await expect(header).toHaveCSS('border-bottom-style', 'solid')
+    await expect(header).toHaveCSS('border-bottom-color', 'rgb(235, 238, 242)')
+  }
+
   const smallTitleLabels = page.locator('.home-panel h2, .service-panel h2')
   expect(await smallTitleLabels.count()).toBeGreaterThanOrEqual(4)
   for (const label of await smallTitleLabels.all()) {
@@ -93,6 +100,10 @@ test('视觉基线：桌面首页维持原站三列首屏与关键图片区块',
     await expect(label).toHaveCSS('border-right-width', '1px')
     await expect(label).toHaveCSS('border-left-color', 'rgb(235, 238, 242)')
     await expect(label).toHaveCSS('border-right-color', 'rgb(235, 238, 242)')
+    await expect(label).toHaveCSS('border-bottom-width', '1px')
+    await expect(label).toHaveCSS('border-bottom-color', 'rgb(255, 255, 255)')
+    await expect(label).toHaveCSS('border-top-left-radius', '4px')
+    await expect(label).toHaveCSS('border-top-right-radius', '4px')
     await expect(label).toHaveCSS('font-size', '18px')
     const dimensions = await label.evaluate(element => {
       const labelBox = element.getBoundingClientRect()
