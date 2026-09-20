@@ -73,6 +73,20 @@ test('视觉基线：桌面首页维持原站三列首屏与关键图片区块',
   }))
   expect(new Set(titleStyles).size).toBe(1)
 
+  const localTitleLabels = page.locator('.home-panel h2, .service-panel h2, .section-title h2')
+  expect(await localTitleLabels.count()).toBeGreaterThanOrEqual(6)
+  for (const label of await localTitleLabels.all()) {
+    await expect(label).toHaveCSS('border-top-width', '3px')
+    await expect(label).toHaveCSS('border-top-style', 'solid')
+    await expect(label).toHaveCSS('border-top-color', 'rgb(0, 174, 189)')
+    await expect(label).toHaveCSS('font-size', '18px')
+  }
+  const bottomAccents = await localTitleLabels.evaluateAll(elements => elements.map(element => getComputedStyle(element, '::after').content))
+  expect(bottomAccents.every(content => content === 'none')).toBeTruthy()
+
+  await expect(page.locator('.shared-public-nav-root > .shared-public-nav-item > .shared-public-nav-link').first()).toHaveCSS('font-size', '18px')
+  await expect(page.locator('.shared-public-nav-children a').first()).toHaveCSS('font-size', '17px')
+
   const listStyles = await page.locator('.news-column li a').evaluateAll(elements => elements.map(element => {
     const style = getComputedStyle(element)
     return `${style.color}|${style.fontFamily}|${style.fontSize}|${style.fontWeight}`
