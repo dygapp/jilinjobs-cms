@@ -7,15 +7,15 @@ import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
 data class AdvertisementSlot(val id:Long,val code:String,val name:String,val description:String,val sortOrder:Int,val enabled:Boolean,val system:Boolean,val preset:Boolean=false)
-data class Advertisement(val id:Long,val slotId:Long,val title:String,val imagePath:String,val url:String?,val openMode:String,val startAt:LocalDateTime?,val endAt:LocalDateTime?,val sortOrder:Int,val enabled:Boolean)
+data class Advertisement(val id:Long,val slotId:Long,val title:String,val imagePath:String,val url:String?,val openMode:String?,val startAt:LocalDateTime?,val endAt:LocalDateTime?,val sortOrder:Int,val enabled:Boolean)
 data class PublicAdvertisementSlot(val id:Long,val code:String,val name:String,val advertisements:List<Advertisement>)
 data class AdvertisementSlotDraft(val code:String,val name:String,val description:String="",val sortOrder:Int=0,val enabled:Boolean=true,val system:Boolean=false)
-data class AdvertisementDraft(val title:String,val imagePath:String,val url:String?=null,val openMode:String="DEFAULT",val startAt:LocalDateTime?=null,val endAt:LocalDateTime?=null,val sortOrder:Int=0,val enabled:Boolean=true)
+data class AdvertisementDraft(val title:String,val imagePath:String,val url:String?=null,val openMode:String?=null,val startAt:LocalDateTime?=null,val endAt:LocalDateTime?=null,val sortOrder:Int=0,val enabled:Boolean=true)
 class AdvertisementValidationException(message:String):RuntimeException(message)
 class AdvertisementSlotNotFoundException(value:String):RuntimeException("广告位不存在：$value")
 class AdvertisementNotFoundException(id:Long):RuntimeException("广告不存在：$id")
 data class AdvertisementSlotRecord(var id:Long?=null,var code:String="",var name:String="",var description:String="",var sortOrder:Int=0,var enabled:Boolean=true,var systemFlag:Boolean=false,var preset:Boolean=false)
-data class AdvertisementRecord(var id:Long?=null,var slotId:Long=0,var title:String="",var imagePath:String="",var url:String?=null,var openMode:String="DEFAULT",var startAt:LocalDateTime?=null,var endAt:LocalDateTime?=null,var sortOrder:Int=0,var enabled:Boolean=true)
+data class AdvertisementRecord(var id:Long?=null,var slotId:Long=0,var title:String="",var imagePath:String="",var url:String?=null,var openMode:String?=null,var startAt:LocalDateTime?=null,var endAt:LocalDateTime?=null,var sortOrder:Int=0,var enabled:Boolean=true)
 
 @Mapper
 interface AdvertisementMapper{
@@ -37,7 +37,7 @@ interface AdvertisementMapper{
 
 @Service
 class AdvertisementService(private val mapper:AdvertisementMapper){
- private val openModes=setOf("DEFAULT","SAME_WINDOW","NEW_WINDOW","NO_LINK")
+ private val openModes=setOf("_self","_blank","NO_LINK")
  @Transactional(readOnly=true) fun slots()=mapper.findSlots().map{it.model()}
  @Transactional(readOnly=true) fun ads(slotId:Long):List<Advertisement>{requireSlot(slotId);return mapper.findAds(slotId).map{it.model()}}
  @Transactional(readOnly=true) fun publicSlots()=mapper.findEnabledSlots().map{r->PublicAdvertisementSlot(requireNotNull(r.id),r.code,r.name,mapper.findActiveAds(requireNotNull(r.id)).map{it.model()})}
@@ -49,7 +49,7 @@ class AdvertisementService(private val mapper:AdvertisementMapper){
  @Transactional fun deleteAd(slotId:Long,id:Long){requireSlot(slotId);val c=mapper.findAd(id)?:throw AdvertisementNotFoundException(id);if(c.slotId!=slotId)throw AdvertisementValidationException("广告不属于当前广告位");mapper.deleteAd(id)}
  private fun requireSlot(id:Long)=mapper.findSlot(id)?:throw AdvertisementSlotNotFoundException(id.toString())
  private fun normalizeSlot(d:AdvertisementSlotDraft):AdvertisementSlotDraft{val code=d.code.trim().uppercase();if(!code.matches(Regex("[A-Z][A-Z0-9_]{1,99}")))throw AdvertisementValidationException("广告位 Code 格式不正确");val name=d.name.trim();if(name.isBlank())throw AdvertisementValidationException("广告位名称不能为空");return d.copy(code=code,name=name,description=d.description.trim())}
- private fun normalizeAd(d:AdvertisementDraft):AdvertisementDraft{val title=d.title.trim();if(title.isBlank())throw AdvertisementValidationException("广告标题不能为空");val image=d.imagePath.trim();if(!image.startsWith("/static/"))throw AdvertisementValidationException("广告图片必须使用 /static/ 资源路径");val mode=d.openMode.trim().uppercase();if(mode !in openModes)throw AdvertisementValidationException("广告打开方式不正确");val url=d.url?.trim()?.takeIf{it.isNotBlank()};if(url!=null)validateUrl(url);if(d.startAt!=null&&d.endAt!=null&&!d.endAt.isAfter(d.startAt))throw AdvertisementValidationException("广告结束时间必须晚于开始时间");return d.copy(title=title,imagePath=image,url=url,openMode=mode)}
+ private fun normalizeAd(d:AdvertisementDraft):AdvertisementDraft{val title=d.title.trim();if(title.isBlank())throw AdvertisementValidationException("广告标题不能为空");val image=d.imagePath.trim();if(!image.startsWith("/static/"))throw AdvertisementValidationException("广告图片必须使用 /static/ 资源路径");val mode=d.openMode?.trim()?.takeIf{it.isNotBlank()}?.let{if(it.equals("NO_LINK",ignoreCase=true))"NO_LINK" else it.lowercase()};if(mode!=null&&mode !in openModes)throw AdvertisementValidationException("广告打开方式不正确");val url=d.url?.trim()?.takeIf{it.isNotBlank()};if(url!=null)validateUrl(url);if(d.startAt!=null&&d.endAt!=null&&!d.endAt.isAfter(d.startAt))throw AdvertisementValidationException("广告结束时间必须晚于开始时间");return d.copy(title=title,imagePath=image,url=url,openMode=mode)}
  private fun validateUrl(v:String){if(v.startsWith("/")&&!v.startsWith("//"))return;val u=runCatching{URI(v)}.getOrElse{throw AdvertisementValidationException("广告 URL 格式不正确")};if(u.scheme?.lowercase() !in setOf("http","https")||u.host.isNullOrBlank())throw AdvertisementValidationException("广告 URL 必须是站内路径或 HTTP(S) 地址")}
  private fun AdvertisementSlotDraft.record(id:Long?=null)=AdvertisementSlotRecord(id,code,name,description,sortOrder,enabled,system)
  private fun AdvertisementDraft.record(slotId:Long,id:Long?=null)=AdvertisementRecord(id,slotId,title,imagePath,url,openMode,startAt,endAt,sortOrder,enabled)

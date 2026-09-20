@@ -40,7 +40,7 @@ data class CmsListItem(
     val imagePath: String?,
     val imageResourceId: Long?,
     val effectiveImageResourceId: Long?,
-    val openMode: String,
+    val openMode: String?,
     val sortOrder: Int,
     val enabled: Boolean,
     val extraJson: String?,
@@ -74,7 +74,7 @@ data class CmsListItemDraft(
     val url: String? = null,
     val imagePath: String? = null,
     val imageResourceId: Long? = null,
-    val openMode: String = "DEFAULT",
+    val openMode: String? = null,
     val sortOrder: Int = 0,
     val enabled: Boolean = true,
     val extraJson: String? = null,
@@ -107,7 +107,7 @@ data class CmsListItemRecord(
     var url: String? = null,
     var imagePath: String? = null,
     var imageResourceId: Long? = null,
-    var openMode: String = "DEFAULT",
+    var openMode: String? = null,
     var sortOrder: Int = 0,
     var enabled: Boolean = true,
     var extraJson: String? = null,
@@ -155,7 +155,7 @@ class CmsListService(
     private val articleResources: ArticleResourceAssociation,
     private val resourceService: ResourceService,
 ) {
-    private val openModes = setOf("DEFAULT", "SAME_WINDOW", "NEW_WINDOW")
+    private val openModes = setOf("_self", "_blank")
 
     @Transactional(readOnly = true)
     fun listDefinitions() = mapper.findAll().map { it.model() }
@@ -274,8 +274,8 @@ class CmsListService(
     }
 
     private fun normalizeItem(draft: CmsListItemDraft, policy: ContentImagePolicy): CmsListItemDraft {
-        val mode = draft.openMode.trim().uppercase()
-        if (mode !in openModes) throw CmsListValidationException("列表项打开方式不正确")
+        val mode = draft.openMode?.trim()?.takeIf { it.isNotBlank() }?.lowercase()
+        if (mode != null && mode !in openModes) throw CmsListValidationException("列表项打开方式不正确")
         val extra = draft.extraJson?.trim()?.takeIf { it.isNotBlank() }
         if (extra != null) runCatching { objectMapper.readTree(extra) }.getOrElse { throw CmsListValidationException("列表项扩展数据必须是合法 JSON") }
         return when (draft.sourceType) {

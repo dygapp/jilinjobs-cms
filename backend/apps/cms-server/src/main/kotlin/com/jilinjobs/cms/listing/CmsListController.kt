@@ -45,7 +45,7 @@ data class SaveCmsListItemRequest(
     val url: String? = null,
     val imagePath: String? = null,
     val imageResourceId: Long? = null,
-    val openMode: String = "DEFAULT",
+    val openMode: String? = null,
     val sortOrder: Int = 0,
     val enabled: Boolean = true,
     val extraJson: String? = null,
