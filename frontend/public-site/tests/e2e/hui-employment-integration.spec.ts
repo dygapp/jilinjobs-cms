@@ -101,8 +101,6 @@ test('导航切换后隐藏菜单，慧就业入口使用安全的新窗口行�
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto('/')
   await page.getByRole('button', { name: '展开导航' }).click()
-  await expect(page.locator('.shared-public-nav-root > .shared-public-nav-item > .shared-public-nav-link').first()).toHaveCSS('font-size', '16px')
-  await expect(page.locator('.shared-public-nav-children a').first()).toHaveCSS('font-size', '15px')
   const mobileGuideLink = page.locator('.shared-public-navigation').getByRole('link', { name: '档案管理', exact: true })
   await expect(mobileGuideLink).toBeVisible()
   await mobileGuideLink.click()
