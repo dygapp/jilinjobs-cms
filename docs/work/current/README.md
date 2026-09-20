@@ -2,7 +2,7 @@
 
 Current Ready Execution Unit：**EU-58 — GitHub Actions CI 快速验证运行时优化**。
 
-当前工作 artifact：`docs/work/current/eu58-github-actions-ci-verification-runtime.md`。
+当前工作 artifact：`eu58-github-actions-ci-verification-runtime.md`。
 
 Controlling Issue：#182。
 
