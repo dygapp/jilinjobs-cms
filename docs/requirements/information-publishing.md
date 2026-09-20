@@ -3,7 +3,7 @@ id: requirement-information-publishing
 title: 信息发布与网站服务产品需求
 type: business-requirement
 status: confirmed
-version: "V6.0"
+version: "V6.1"
 classification:
   - l1-06
   - l2-28
@@ -22,7 +22,7 @@ relations:
     - docs/specifications/rich-text-authoring.md
     - docs/specifications/content-migration.md
     - docs/requirements/hui-employment-integration.md
-updated_at: 2026-09-19
+updated_at: 2026-09-20
 ---
 
 # 信息发布与网站服务产品需求
@@ -124,6 +124,13 @@ Main 继续以吉林省高等学校毕业生就业信息网已经确认的信息
 - Page 与 PageGroup member；
 - 固定第三方业务集成入口 / seam；
 - 主导航、快捷入口、轮播、资讯区域、就业日历、招聘活动宣传、招聘公告、业务指南、网站链接与 Footer 等已确认页面能力。
+
+Main 首页的固定页面结构需要区分两类稳定模块形态：
+
+- **整行大板块**：独占首页内容主轴的一整行，用于承载需要完整横向空间或在原站中以独立整行模块存在的区域；当前“最新招聘”“网站导航”属于这一类；
+- **多列小板块**：参与首页多列组合的资讯 / 服务卡片，例如通知公告、就业动态、快速导航、招聘公告。
+
+整行大板块与多列小板块不要求共用同一标题 presentation；页面实现应保持这一结构差异，而不是为了统一样式把大板块压缩成普通卡片标题。
 
 需要持续运营的数据由 CMS 正式业务对象提供；无需运营维护的固定页面结构、装饰和第三方 seam 可以继续由工程实现承担。一旦真实需求要求运营维护，必须通过 Requirement Change 决定是否进入 CMS，而不是从已有页面结构反推配置需求。
 
