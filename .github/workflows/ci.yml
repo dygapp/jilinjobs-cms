@@ -137,11 +137,9 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: "24"
-          cache: npm
-          cache-dependency-path: frontend/public-site/package-lock.json
       - name: Install public site dependencies
         working-directory: frontend/public-site
-        run: npm ci --no-audit --no-fund
+        run: npm install --no-audit --no-fund
       - name: Build public site
         working-directory: frontend/public-site
         run: npm run build
@@ -281,7 +279,7 @@ jobs:
             -v "$GITHUB_WORKSPACE/frontend/public-site:/work" \
             -w /work \
             mcr.microsoft.com/playwright:v1.61.0-noble \
-            bash -lc 'npm ci --no-audit --no-fund && npm run test:e2e'
+            bash -lc 'npm install --no-audit --no-fund && npm run test:e2e'
       - name: Run admin browser verification
         if: ${{ hashFiles('frontend/admin/tests/e2e/*.spec.ts') != '' }}
         timeout-minutes: 8
