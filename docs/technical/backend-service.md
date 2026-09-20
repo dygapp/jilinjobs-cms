@@ -11,7 +11,7 @@ relations:
     - docs/technical/http-interface-contract.md
   verification:
     - docs/technical/verification-strategy.md
-updated_at: 2026-09-16
+updated_at: 2026-09-20
 ---
 
 # Backend 跨 Feature 技术契约
@@ -91,6 +91,8 @@ Content Migration 是独立 non-web application，持有：
 它依赖 Core，不依赖 Server，不启动 ordinary HTTP Server，也不因依赖 Core 被动获得 Controller / MVC / Servlet / multipart transport responsibility。
 
 Generic migration package 不吸收 Main / Party 具体 dataset facts或 accepted compatibility constants；这些事实留在 migration workspace / bounded adapter。具体 CLI、package、dispatcher、task 名由 Repository implementation 持有。
+
+历史 canonical dataset 是来源证据，不因 Runtime Domain enum / wire representation 演进而就地改写。若 canonical input 使用的是已冻结的历史打开方式词汇（例如 `DEFAULT / SAME_WINDOW / NEW_WINDOW`），Content Migration 必须在 write boundary 显式转换为当前 Runtime `openMode` contract；转换后不得把退休值重新写回 current tables。来源文件中的 evidence（例如原始 HTML `target="_blank"`）继续保持其 canonical provenance 语义。
 
 ## 6. Schema 与 Site Definition composition
 
