@@ -2,3 +2,8 @@
 !build/
 !build/libs/
 !build/libs/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar
+!apps/
+!apps/content-migration/
+!apps/content-migration/build/
+!apps/content-migration/build/libs/
+!apps/content-migration/build/libs/jilinjobs-cms-content-migration-0.1.0-SNAPSHOT.jar
