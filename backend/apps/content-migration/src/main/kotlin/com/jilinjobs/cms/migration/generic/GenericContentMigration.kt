@@ -204,7 +204,7 @@ data class LoadedDataset(
     val total: Int get() = articles.size + listItems.size + pages.size
 }
 
-enum class PlanAction { CREATE, SKIP }
+enum class PlanAction { CREATE, UPDATE, SKIP }
 
 data class ArticlePlan(
     val loaded: LoadedArticle,
@@ -492,7 +492,10 @@ class CanonicalMigrationPreflight(
     private val staticResourceService: StaticResourceService,
     private val pagePreflight: GenericPagePreflight,
 ) {
-    fun preflight(dataset: LoadedDataset): PreflightOutcome {
+    fun preflight(
+        dataset: LoadedDataset,
+        compatibilityKeys: Set<String> = emptySet(),
+    ): PreflightOutcome {
         val failures = mutableListOf<GenericMigrationResult>()
         val articlePlans = dataset.articles.mapNotNull { loaded ->
             val record = loaded.record
@@ -543,9 +546,11 @@ class CanonicalMigrationPreflight(
                 }
             }
             val existing = listItemMapping.find(loaded.sourceSystem, record.legacyKey)
+            val compatibilityKey = identity(loaded.sourceSystem, record.legacyKey)
             when {
                 existing == null -> ListItemPlan(loaded, definition.id, PlanAction.CREATE)
                 existing.sourceFingerprint == record.sourceFingerprint -> ListItemPlan(loaded, definition.id, PlanAction.SKIP, existing.listItemId)
+                compatibilityKey in compatibilityKeys -> ListItemPlan(loaded, definition.id, PlanAction.UPDATE, existing.listItemId)
                 else -> {
                     failures += conflict(GenericMigrationKind.LIST_ITEM, loaded.sourceSystem, record.legacyKey, existing.listItemId, "ListItem stable identity 已存在，但 source fingerprint 已变化")
                     null
@@ -644,6 +649,7 @@ class GenericListItemImporter(
     fun execute(plan: ListItemPlan): GenericMigrationResult {
         val loaded = plan.loaded
         val record = loaded.record
+        require(plan.action != PlanAction.UPDATE) { "GenericListItemImporter 不直接执行 compatibility UPDATE" }
         if (plan.action == PlanAction.SKIP) {
             return GenericMigrationResult(GenericMigrationKind.LIST_ITEM, loaded.sourceSystem, record.legacyKey, GenericMigrationStatus.SKIPPED, plan.existingListItemId)
         }
@@ -777,11 +783,11 @@ class GenericContentMigrationService(
                 listOf(invalid(GenericMigrationKind.DATASET, "dataset", "prepared", error.message ?: error::class.java.simpleName)),
             )
         }
-        val compatibilityOutcome = compatibilityService.apply(dataset, compatibility)
-        if (compatibilityOutcome.conflicts.isNotEmpty()) {
-            return report(GenericMigrationPhase.PREFLIGHT, dataset.total, compatibilityOutcome.conflicts)
+        val compatibilityPreflight = compatibilityService.preflight(dataset, compatibility)
+        if (compatibilityPreflight.conflicts.isNotEmpty()) {
+            return report(GenericMigrationPhase.PREFLIGHT, dataset.total, compatibilityPreflight.conflicts)
         }
-        val outcome = preflight.preflight(dataset)
+        val outcome = preflight.preflight(dataset, compatibilityPreflight.transitions.keys)
         outcome.report?.let { return it }
         val plan = requireNotNull(outcome.plan)
         val results = mutableListOf<GenericMigrationResult>()
@@ -789,18 +795,14 @@ class GenericContentMigrationService(
             plan.pages.forEach { results += pageImporter.execute(it) }
             plan.articles.forEach { results += articleImporter.execute(it) }
             plan.listItems.forEach { listPlan ->
-                val key = identity(listPlan.loaded.sourceSystem, listPlan.loaded.record.legacyKey)
-                val updatedId = compatibilityOutcome.updated[key]
-                results += if (updatedId != null) {
-                    GenericMigrationResult(
-                        GenericMigrationKind.LIST_ITEM,
-                        listPlan.loaded.sourceSystem,
-                        listPlan.loaded.record.legacyKey,
-                        GenericMigrationStatus.UPDATED,
-                        updatedId,
-                    )
+                if (listPlan.action == PlanAction.UPDATE) {
+                    val key = identity(listPlan.loaded.sourceSystem, listPlan.loaded.record.legacyKey)
+                    val transition = requireNotNull(compatibilityPreflight.transitions[key]) {
+                        "Compatibility UPDATE plan 缺少 transition：" + listPlan.loaded.record.legacyKey
+                    }
+                    results += compatibilityService.execute(listPlan, transition)
                 } else {
-                    listItemImporter.execute(listPlan)
+                    results += listItemImporter.execute(listPlan)
                 }
             }
         } catch (error: RuntimeException) {
