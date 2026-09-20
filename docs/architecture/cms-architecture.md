@@ -133,7 +133,7 @@ stable site assets
 
 长期运行不依赖 Legacy Source 网络。Acquisition 与 stable import 是两个阶段；只有显式 source-discovery / retry / reactivation activity 可以重新访问 Legacy Source。
 
-Generic migration capability 不持有 Main / Party 具体 dataset facts。Party accepted transition 等 site-specific compatibility 继续由对应 migration scope ownership 管理。
+Generic migration capability 不持有 Main / Party 具体 dataset facts，也不持有任何 Site / Theme 专用 adapter、service、command 或 compatibility implementation。Instance-specific compatibility facts 由对应 canonical dataset 以 site-neutral compatibility schema 显式声明；Content Migration 只提供通用读取、guard、原位 transition、idempotency 与 conflict reporting 能力。
 
 ### 4.4 运行时 CMS 数据
 
@@ -191,8 +191,10 @@ Server 不拥有 历史迁移 command lifecycle。
 承担：
 
 - canonical migration command / CLI lifecycle；
-- site-neutral migration engine usage；
-- bounded site-specific adapter / compatibility orchestration。
+- site-neutral canonical dataset load / preflight / execute / report；
+- site-neutral compatibility contract 的读取、guard 与原位 transition。
+
+Content Migration application 不持有 Main / Party 等具体 Site / Theme identity，不维护业务专用 adapter、service、command 或 executable entrypoint。业务数据、source facts 与 compatibility declaration 留在 `data-migrations/**`；Migration application 只解释稳定的 Generic Canonical Contract。
 
 Migration application 不依赖 CMS Server application，也不通过 Server root composition间接取得 Controller / MVC responsibility。
 
