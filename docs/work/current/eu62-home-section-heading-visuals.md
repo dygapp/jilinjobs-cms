@@ -13,7 +13,7 @@ base_sha: eff10d81abd1c6068d1032c077cb03adeda1908a
 
 修复人工评审发现的 Main 首页标题视觉偏差，恢复整行大板块与多列小板块的稳定视觉差异。
 
-## Authority
+## 权威输入
 
 - `docs/requirements/information-publishing.md` V6.1；
 - `docs/specifications/public-site.md` V3.5；
