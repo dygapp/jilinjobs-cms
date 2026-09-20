@@ -1,13 +1,14 @@
 {
-  "compatibilityVersion": 1,
-  "transitions": [
+  "version": 1,
+  "listItemTransitions": [
     {
-      "kind": "LIST_ITEM",
       "listCode": "PARTY_CAROUSEL",
       "sourceSystem": "legacy-jilinjobs",
       "legacyKey": "party-carousel:position:2",
       "fromFingerprint": "c2ad182b8b2dc981a3cbe3b0153a1e3e47604c1f01dd43e6d25971e1deed10dc",
       "fromSourceType": "LINK",
+      "fromUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=154659859759104",
+      "fromImagePath": "migrated/party/carousel/a00db48e094e24b778374ae621b6f150e235625c62f17efc860391223fac830b.png",
       "preserveRuntimeId": true
     }
   ]
