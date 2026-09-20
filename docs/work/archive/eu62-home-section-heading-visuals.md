@@ -1,10 +1,13 @@
 ---
 id: execution-unit:eu62-home-section-heading-visuals
 type: execution-unit
-status: active
+status: completed
 readiness: PASS
 controlling_issue: 193
 base_sha: eff10d81abd1c6068d1032c077cb03adeda1908a
+verified_head_sha: b2fde9e8ff7ef8e3a26135a9bb4fbadca5816d08
+integrated_sha: c1c76230b7071a6f1e9ce011bdb6db9e4a80103d
+completed_at: 2026-09-21
 ---
 
 # EU-62 首页大板块与小板块标题视觉收敛
@@ -54,3 +57,32 @@ base_sha: eff10d81abd1c6068d1032c077cb03adeda1908a
 ## 完成条件
 
 定向实现和验证通过后形成 PR；完成自动 Convergence 后停在人工视觉复评 Gate，不在缺少人工视觉结论时声明视觉验收完成。
+
+## 验证证据
+
+完成态 PR Head：`b2fde9e8ff7ef8e3a26135a9bb4fbadca5816d08`。
+
+| 验证范围 | 当前证据 | 结果 |
+| --- | --- | --- |
+| PR 文档治理 | Run `35521516687` / #213 | PASS |
+| PR 快速 CI | Run `35521516701` / #29 | PASS |
+| PR 完整 CI | Run `35521581088` / #1231 | PASS |
+| PR 人工评审环境 | Run `35523079756` / #898 | PASS |
+| PR AI / Browser、Runtime、外部地址验证 | Run `35523079756` 对应步骤 | PASS |
+| 人工视觉复评 | Issue #193 / PR #196 当前评审批次 | PASS |
+| 集成后 main 文档治理 | Run `35524616690` / #214 | PASS |
+| 集成后 main 完整 CI | Run `35524616630` / #1233 | PASS |
+| 集成后 main Backend / Public / Admin | Run `35524616630` 对应 jobs | PASS |
+| 集成后 main Integrated browser verification | Run `35524616630` | PASS |
+
+## 集成与闭环
+
+- Controlling Issue：Issue #193，已 completed；
+- 实现 PR：PR #196，已 squash 合并；
+- 完成态 PR Head：`b2fde9e8ff7ef8e3a26135a9bb4fbadca5816d08`；
+- 实际集成提交：`c1c76230b7071a6f1e9ce011bdb6db9e4a80103d`；
+- 人工视觉复评通过；
+- 集成后 `main` 文档治理、完整 CI 与 Integrated browser verification 均已通过；
+- 本归档只关闭 Work lifecycle，不再改变产品行为、Specification、Runtime 或测试。
+
+本次未执行 Production Deployment / Release。
