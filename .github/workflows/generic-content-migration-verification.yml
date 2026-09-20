@@ -45,32 +45,52 @@ jobs:
           --health-retries=12
     steps:
       - uses: actions/checkout@v7
+
+      - name: Verify site-neutral source layout
+        shell: bash
+        run: |
+          set -euo pipefail
+          migration_root="backend/apps/content-migration/src/main/kotlin/com/jilinjobs/cms/migration"
+          python3 - <<'PY'
+          from pathlib import Path
+
+          root = Path("backend/apps/content-migration/src/main/kotlin/com/jilinjobs/cms/migration")
+          allowed_files = {Path("LegacyMappings.kt")}
+          unexpected = []
+          for path in root.rglob("*.kt"):
+              relative = path.relative_to(root)
+              if relative in allowed_files or relative.parts[0] == "generic":
+                  continue
+              unexpected.append(str(relative))
+          if unexpected:
+              raise SystemExit("Content Migration 包含 site-specific implementation: " + ", ".join(sorted(unexpected)))
+          PY
+
       - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "21"
+
       - uses: gradle/actions/setup-gradle@v6
         with:
           gradle-version: "9.6.1"
-      - name: Verify generic source purity
-        shell: bash
-        run: |
-          set -euo pipefail
-          generic_root="backend/apps/content-migration/src/main/kotlin/com/jilinjobs/cms/migration/generic"
-          forbidden='party-|PARTY_CAROUSEL|party-carousel:position:|EU29|EU30|migrated/party/'
-          if grep -RniE "$forbidden" "$generic_root"; then
-            echo "Generic migration source contains compatibility-only identity"
-            exit 1
-          fi
+
       - name: Verify generic migration behavior and non-web composition
         working-directory: backend
         env:
           GENERIC_MIGRATION_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/generic_content_migration?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
           GENERIC_MIGRATION_VERIFY_DB_USERNAME: root
           GENERIC_MIGRATION_VERIFY_DB_PASSWORD: root
+          GENERIC_COMPATIBILITY_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/generic_content_migration?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          GENERIC_COMPATIBILITY_VERIFY_DB_USERNAME: root
+          GENERIC_COMPATIBILITY_VERIFY_DB_PASSWORD: root
           MIGRATION_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/generic_content_migration?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
           MIGRATION_VERIFY_DB_USERNAME: root
           MIGRATION_VERIFY_DB_PASSWORD: root
           CMS_STORAGE_ROOT: ${{ github.workspace }}/generic-content-migration/boundary-uploads
           CMS_STATIC_ROOT: ${{ github.workspace }}/generic-content-migration/boundary-static
-        run: gradle verifyGenericContentMigration verifyGenericPageContentMigration verifyContentMigrationBoundary --no-daemon
+        run: |
+          gradle verifyGenericContentMigration --no-daemon
+          gradle verifyGenericPageContentMigration --no-daemon
+          gradle verifyGenericListItemCompatibility --no-daemon
+          gradle verifyContentMigrationBoundary --no-daemon
