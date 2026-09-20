@@ -38,10 +38,10 @@ img{max-width:100%}
 .home-carousel img{width:100%;height:100%;object-fit:cover;display:block}
 .carousel-caption{position:absolute;left:0;right:0;bottom:0;height:38px;padding:10px 14px;background:rgba(0,18,41,.8);color:#fff;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .visual-empty{height:100%;display:grid;place-items:center;color:#8491a1}
-.home-panel{background:#fff;border:1px solid #ebeef2;padding:0 14px;min-width:0}
+.home-panel,.service-panel{background:#fff;border:1px solid #ebeef2;border-top:3px solid #00aebd;padding:0 14px;min-width:0}
 .home-panel>header,.news-column>header,.service-panel>header{height:48px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ebeef2}
-.home-panel h2,.news-column h2,.service-panel h2,.section-title h2{align-self:stretch;display:flex;align-items:center;position:relative;margin:0;padding:0 8px;border-top:3px solid #00aebd;color:#323b47;font-size:18px;font-weight:600;line-height:45px}
-.home-panel h2::after,.news-column h2::after,.service-panel h2::after,.section-title h2::after{content:none}
+.home-panel h2,.news-column h2,.service-panel h2{align-self:stretch;display:flex;align-items:center;position:relative;margin:0;padding:0 8px;border:0;color:#323b47;font-size:18px;font-weight:600;line-height:48px}
+.home-panel h2::after,.news-column h2::after,.service-panel h2::after{content:none}
 .home-panel header>a,.news-column header>a{font-size:12px;text-decoration:none;color:#8491a1}
 .home-panel ul,.news-column ul{list-style:none;padding:6px 0 8px;margin:0}
 .home-panel li,.news-column li{height:30px;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:0 2px;border:0}
@@ -54,7 +54,6 @@ img{max-width:100%}
 .home-top-shortcuts img{width:18px;height:18px;object-fit:contain}
 .home-secondary-row{display:grid;grid-template-columns:320px minmax(0,1fr) 320px;gap:12px;min-height:260px}
 .employment-panel{min-width:0}
-.service-panel{background:#fff;border:1px solid #ebeef2;padding:0 14px}
 .service-phone{display:flex;align-items:center;gap:5px;margin:8px 0 10px;font-size:12px;color:#515c6b}
 .service-phone img{width:16px;height:16px}
 .service-phone strong{color:#00aebd;font-weight:600}
@@ -64,15 +63,17 @@ img{max-width:100%}
 .service-shortcuts img{width:24px;height:24px;object-fit:contain}
 .home-promo-banner{display:block;height:157px;overflow:hidden;background:#005cd4}
 .home-promo-banner img{display:block;width:100%;height:100%;object-fit:cover}
-.home-section{padding:0}
-.section-title{height:48px;display:flex;align-items:stretch;position:relative;padding:0 14px;border-bottom:1px solid #ebeef2;background:#fff}
-.section-title::before{content:none}
+.home-section{width:100%;padding:0}
+.section-title{height:42px;display:flex;align-items:center;position:relative;background:transparent}
+.section-title::before{content:"";flex:0 0 4px;width:4px;height:18px;margin-right:12px;background:linear-gradient(to bottom,#00aebd 0 50%,#005cd4 50%)}
+.section-title h2{margin:0;padding:0;border:0;color:#323b47;font-size:20px;font-weight:500;line-height:42px}
+.section-title h2::after{content:none}
+.latest-recruitment,.site-navigation{width:100%}
 .latest-recruitment{margin-top:0}
 .home-recruitment-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-height:300px}
 .home-live-courses{position:relative;min-width:0}
 .home-live-courses-more{position:absolute;z-index:2;top:1px;right:1px;height:44px;display:flex;align-items:center;padding:0 14px 0 22px;background:#fff;color:#8491a1;font-size:13px;text-decoration:none}
 .home-live-courses-more:hover{color:#005cd4}
-.recruitment-panel{border:1px solid #ebeef2}
 .ncss-entrance{height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:#d3e6ff}
 .ncss-entrance>a{display:flex;align-items:center;height:45px}
 .ncss-entrance img{width:500px;height:45px;object-fit:contain;object-position:left center}

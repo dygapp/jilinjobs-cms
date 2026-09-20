@@ -67,22 +67,53 @@ test('视觉基线：桌面首页维持原站三列首屏与关键图片区块',
   expect(Math.abs(pairedModules[0].top - pairedModules[1].top)).toBeLessThanOrEqual(1)
   expect(Math.abs(pairedModules[0].height - pairedModules[1].height)).toBeLessThanOrEqual(1)
 
-  const titleStyles = await page.locator('.home-panel h2').evaluateAll(elements => elements.map(element => {
+  const smallTitleStyles = await page.locator('.home-panel h2, .service-panel h2').evaluateAll(elements => elements.map(element => {
     const style = getComputedStyle(element)
     return `${style.color}|${style.fontFamily}|${style.fontSize}|${style.fontWeight}`
   }))
-  expect(new Set(titleStyles).size).toBe(1)
+  expect(new Set(smallTitleStyles).size).toBe(1)
 
-  const localTitleLabels = page.locator('.home-panel h2, .service-panel h2, .section-title h2')
-  expect(await localTitleLabels.count()).toBeGreaterThanOrEqual(6)
-  for (const label of await localTitleLabels.all()) {
-    await expect(label).toHaveCSS('border-top-width', '3px')
-    await expect(label).toHaveCSS('border-top-style', 'solid')
-    await expect(label).toHaveCSS('border-top-color', 'rgb(0, 174, 189)')
+  for (const panelSelector of ['.notice-panel', '.employment-panel', '.service-panel', '.recruitment-panel']) {
+    const panel = page.locator(panelSelector)
+    await expect(panel).toHaveCSS('border-top-width', '3px')
+    await expect(panel).toHaveCSS('border-top-style', 'solid')
+    await expect(panel).toHaveCSS('border-top-color', 'rgb(0, 174, 189)')
+    await expect(panel).toHaveCSS('border-left-width', '1px')
+    await expect(panel).toHaveCSS('border-right-width', '1px')
+    await expect(panel).toHaveCSS('border-left-style', 'solid')
+    await expect(panel).toHaveCSS('border-right-style', 'solid')
+  }
+
+  const smallTitleLabels = page.locator('.home-panel h2, .service-panel h2')
+  expect(await smallTitleLabels.count()).toBeGreaterThanOrEqual(4)
+  for (const label of await smallTitleLabels.all()) {
+    await expect(label).toHaveCSS('border-top-width', '0px')
     await expect(label).toHaveCSS('font-size', '18px')
   }
-  const bottomAccents = await localTitleLabels.evaluateAll(elements => elements.map(element => getComputedStyle(element, '::after').content))
-  expect(bottomAccents.every(content => content === 'none')).toBeTruthy()
+  const smallBottomAccents = await smallTitleLabels.evaluateAll(elements => elements.map(element => getComputedStyle(element, '::after').content))
+  expect(smallBottomAccents.every(content => content === 'none')).toBeTruthy()
+
+  const homeContentBox = await page.locator('.home-content').boundingBox()
+  expect(homeContentBox).toBeTruthy()
+  for (const sectionSelector of ['.latest-recruitment', '.site-navigation']) {
+    const section = page.locator(sectionSelector)
+    const sectionBox = await section.boundingBox()
+    expect(sectionBox).toBeTruthy()
+    expect(Math.abs((sectionBox?.width ?? 0) - (homeContentBox?.width ?? 0))).toBeLessThanOrEqual(1)
+
+    const sectionTitle = section.locator('.section-title')
+    const heading = sectionTitle.locator('h2')
+    await expect(heading).toHaveCSS('border-top-width', '0px')
+    await expect(heading).toHaveCSS('font-size', '20px')
+    const marker = await sectionTitle.evaluate(element => {
+      const style = getComputedStyle(element, '::before')
+      return { content: style.content, width: style.width, height: style.height, backgroundImage: style.backgroundImage }
+    })
+    expect(marker.content).not.toBe('none')
+    expect(marker.width).toBe('4px')
+    expect(marker.height).toBe('18px')
+    expect(marker.backgroundImage).toContain('linear-gradient')
+  }
 
   await expect(page.locator('.site-navigation-tabs button').first()).toHaveCSS('font-size', '16px')
   await expect(page.locator('.site-link-group a').first()).toHaveCSS('font-size', '15px')
