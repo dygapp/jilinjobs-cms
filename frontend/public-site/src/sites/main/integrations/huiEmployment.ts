@@ -1,47 +1,50 @@
+const HUI_EMPLOYMENT_BASE_URL = 'https://student.hjiuye.com'
+const HUI_EMPLOYMENT_PAGE_BASE_URL = `${HUI_EMPLOYMENT_BASE_URL}/moreActivities/2685`
+
 export const HUI_EMPLOYMENT_HOME_TARGETS = Object.freeze({
   calendar: {
     title: '就业日历',
-    url: 'https://student.hjiuye.com/calendarEd/2685',
+    url: `${HUI_EMPLOYMENT_BASE_URL}/calendarEd/2685`,
   },
   latestRecruitment: {
     title: '最新招聘',
-    url: 'https://student.hjiuye.com/college/2685/4',
+    url: `${HUI_EMPLOYMENT_BASE_URL}/college/2685/4`,
   },
   liveCourses: {
     title: '直播课程',
-    url: 'https://student.hjiuye.com/college/2685/5',
+    url: `${HUI_EMPLOYMENT_BASE_URL}/college/2685/5`,
   },
 } as const)
 
 export const HUI_EMPLOYMENT_PAGE_TARGETS = Object.freeze({
   HUI_EMPLOYMENT_POSITIONS: {
     title: '在招职位',
-    url: 'https://student.hjiuye.com/moreActivities/2685/4/22',
+    url: `${HUI_EMPLOYMENT_PAGE_BASE_URL}/4/22`,
     height: 1300,
   },
   HUI_EMPLOYMENT_RECRUITMENT: {
     title: '招聘简章',
-    url: 'https://student.hjiuye.com/moreActivities/2685/4/23',
+    url: `${HUI_EMPLOYMENT_PAGE_BASE_URL}/4/23`,
     height: 1300,
   },
   HUI_EMPLOYMENT_JOB_FAIR: {
     title: '双选会',
-    url: 'https://student.hjiuye.com/moreActivities/2685/4/24',
+    url: `${HUI_EMPLOYMENT_PAGE_BASE_URL}/4/24`,
     height: 1300,
   },
   HUI_EMPLOYMENT_PRESENTATION: {
     title: '现场宣讲',
-    url: 'https://student.hjiuye.com/moreActivities/2685/4/25',
+    url: `${HUI_EMPLOYMENT_PAGE_BASE_URL}/4/25`,
     height: 1300,
   },
   HUI_EMPLOYMENT_JILIN: {
     title: '留省就业',
-    url: 'https://student.hjiuye.com/moreActivities/2685/4/30',
+    url: `${HUI_EMPLOYMENT_PAGE_BASE_URL}/4/30`,
     height: 1300,
   },
   HUI_EMPLOYMENT_LIVE_COURSES: {
     title: '直播课程',
-    url: 'https://student.hjiuye.com/moreActivities/2685/5/27',
+    url: `${HUI_EMPLOYMENT_PAGE_BASE_URL}/5/27`,
     height: 1250,
   },
 } as const)
