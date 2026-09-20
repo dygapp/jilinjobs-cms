@@ -7,7 +7,6 @@ import com.jilinjobs.cms.listing.CmsListItemSourceType
 import com.jilinjobs.cms.listing.CmsListMapper
 import com.jilinjobs.cms.migration.ArticleLegacyMappingMapper
 import com.jilinjobs.cms.migration.CmsListItemLegacyMappingMapper
-import com.jilinjobs.cms.migration.CmsListItemLegacyMappingRecord
 import com.jilinjobs.cms.resource.ResourceService
 import com.jilinjobs.cms.staticresource.StaticResourceNotFoundException
 import com.jilinjobs.cms.staticresource.StaticResourceService
@@ -41,8 +40,8 @@ data class CanonicalListItemCompatibilityTransition(
     val preserveRuntimeId: Boolean = true,
 )
 
-data class GenericCompatibilityOutcome(
-    val updated: Map<String, Long>,
+data class GenericCompatibilityPreflight(
+    val transitions: Map<String, CanonicalListItemCompatibilityTransition>,
     val conflicts: List<GenericMigrationResult>,
 )
 
@@ -90,15 +89,14 @@ class GenericListItemCompatibilityService(
     private val articleRepository: ArticleRepository,
     private val objectMapper: ObjectMapper,
 ) {
-    @Transactional
-    fun apply(
+    fun preflight(
         dataset: LoadedDataset,
         authority: CanonicalCompatibilityAuthority?,
-    ): GenericCompatibilityOutcome {
+    ): GenericCompatibilityPreflight {
         if (authority == null || authority.listItemTransitions.isEmpty()) {
-            return GenericCompatibilityOutcome(emptyMap(), emptyList())
+            return GenericCompatibilityPreflight(emptyMap(), emptyList())
         }
-        val updated = linkedMapOf<String, Long>()
+        val transitions = linkedMapOf<String, CanonicalListItemCompatibilityTransition>()
         val conflicts = mutableListOf<GenericMigrationResult>()
         dataset.listItems.forEach { loaded ->
             val record = loaded.record
@@ -110,9 +108,11 @@ class GenericListItemCompatibilityService(
                     it.legacyKey == record.legacyKey &&
                     it.fromFingerprint == existing.sourceFingerprint
             } ?: return@forEach
-
-            val prepared = runCatching { verifyAndBuildUpdate(loaded, transition, existing) }
-                .getOrElse { error ->
+            runCatching { verifySourceState(loaded, transition, existing.listItemId, existing.sourceUrl, existing.imageSourceUrl, existing.imageSha256) }
+                .onSuccess {
+                    transitions[identityKey(loaded.sourceSystem, record.legacyKey)] = transition
+                }
+                .onFailure { error ->
                     conflicts += GenericMigrationResult(
                         GenericMigrationKind.LIST_ITEM,
                         loaded.sourceSystem,
@@ -121,38 +121,65 @@ class GenericListItemCompatibilityService(
                         existing.listItemId,
                         error.message ?: error::class.java.simpleName,
                     )
-                    return@forEach
                 }
-            require(listMapper.updateItem(prepared.runtime) == 1) {
-                "Compatibility Runtime 原位更新失败：" + record.legacyKey
-            }
-            require(mappingMapper.update(prepared.mapping) == 1) {
-                "Compatibility mapping 更新失败：" + record.legacyKey
-            }
-            updated[listOf(loaded.sourceSystem, record.legacyKey).joinToString("\u0000")] = existing.listItemId
         }
-        return GenericCompatibilityOutcome(updated, conflicts)
+        return GenericCompatibilityPreflight(transitions, conflicts)
     }
 
-    private fun verifyAndBuildUpdate(
+    @Transactional
+    fun execute(
+        plan: ListItemPlan,
+        transition: CanonicalListItemCompatibilityTransition,
+    ): GenericMigrationResult {
+        require(plan.action == PlanAction.UPDATE) { "Compatibility execute 只接受 UPDATE plan" }
+        val loaded = plan.loaded
+        val record = loaded.record
+        val runtimeId = requireNotNull(plan.existingListItemId)
+        val existing = requireNotNull(mappingMapper.find(loaded.sourceSystem, record.legacyKey)) {
+            "Compatibility mapping 在 execute 时不存在：" + record.legacyKey
+        }
+        require(existing.listItemId == runtimeId && existing.sourceFingerprint == transition.fromFingerprint) {
+            "Compatibility mapping 在 preflight 后发生漂移"
+        }
+        verifySourceState(loaded, transition, runtimeId, existing.sourceUrl, existing.imageSourceUrl, existing.imageSha256)
+
+        val runtime = buildTargetRuntime(loaded, runtimeId, plan.listId)
+        require(listMapper.updateItem(runtime) == 1) { "Compatibility Runtime 原位更新失败：" + record.legacyKey }
+        val mapping = existing.copy(
+            sourceUrl = loaded.sourceProvenanceUrl ?: record.url ?: loaded.sourcePage.orEmpty(),
+            sourceFingerprint = record.sourceFingerprint,
+            imageSourceUrl = loaded.image?.canonical?.sourceUrl.orEmpty(),
+            imageSha256 = loaded.image?.canonical?.sha256.orEmpty(),
+        )
+        require(mappingMapper.update(mapping) == 1) { "Compatibility mapping 更新失败：" + record.legacyKey }
+        return GenericMigrationResult(
+            GenericMigrationKind.LIST_ITEM,
+            loaded.sourceSystem,
+            record.legacyKey,
+            GenericMigrationStatus.UPDATED,
+            runtimeId,
+        )
+    }
+
+    private fun verifySourceState(
         loaded: LoadedListItem,
         transition: CanonicalListItemCompatibilityTransition,
-        existing: CmsListItemLegacyMappingRecord,
-    ): PreparedCompatibilityUpdate {
+        runtimeId: Long,
+        mappingSourceUrl: String,
+        mappingImageSourceUrl: String,
+        mappingImageSha256: String,
+    ) {
         val record = loaded.record
-        require(existing.sourceFingerprint == transition.fromFingerprint) { "Compatibility mapping fromFingerprint 已漂移" }
         val list = listMapper.findByCode(loaded.listCode) ?: error("Compatibility target List 不存在：" + loaded.listCode)
         require(list.enabled) { "Compatibility target List 已停用：" + loaded.listCode }
-        val current = listMapper.findItem(existing.listItemId)
-            ?: error("Compatibility Runtime item 不存在：" + existing.listItemId)
-
-        require(current.id == existing.listItemId && current.listId == list.id) { "Compatibility Runtime list identity 已漂移" }
+        val current = listMapper.findItem(runtimeId) ?: error("Compatibility Runtime item 不存在：" + runtimeId)
+        require(current.id == runtimeId && current.listId == list.id) { "Compatibility Runtime list identity 已漂移" }
         require(current.sourceType == transition.fromSourceType.name) { "Compatibility Runtime source type 已漂移" }
         require(current.title == record.title && current.subtitle == record.subtitle) { "Compatibility Runtime title/subtitle 已漂移" }
         require(current.sortOrder == record.sourceOrder && current.enabled == record.enabled) { "Compatibility Runtime order/enabled 已漂移" }
-
-        val expectedOldOpenMode = canonicalOpenModeToRuntime(record.openMode, transition.fromUrl)
-        require(current.openMode == expectedOldOpenMode) { "Compatibility Runtime openMode 已漂移" }
+        require(current.openMode == canonicalOpenModeToRuntime(record.openMode, transition.fromUrl)) {
+            "Compatibility Runtime openMode 已漂移"
+        }
 
         when (transition.fromSourceType) {
             CmsListItemSourceType.LINK -> {
@@ -181,21 +208,12 @@ class GenericListItemCompatibilityService(
         }
 
         val oldSourceUrl = transition.fromUrl ?: loaded.sourcePage.orEmpty()
-        require(existing.sourceUrl == oldSourceUrl) { "Compatibility mapping source provenance 已漂移" }
+        require(mappingSourceUrl == oldSourceUrl) { "Compatibility mapping source provenance 已漂移" }
         if (image != null) {
-            require(existing.imageSourceUrl == image.canonical.sourceUrl && existing.imageSha256 == image.canonical.sha256) {
+            require(mappingImageSourceUrl == image.canonical.sourceUrl && mappingImageSha256 == image.canonical.sha256) {
                 "Compatibility mapping image evidence 已漂移"
             }
         }
-
-        val target = buildTargetRuntime(loaded, existing.listItemId, requireNotNull(list.id))
-        val mapping = existing.copy(
-            sourceUrl = loaded.sourceProvenanceUrl ?: record.url ?: loaded.sourcePage.orEmpty(),
-            sourceFingerprint = record.sourceFingerprint,
-            imageSourceUrl = image?.canonical?.sourceUrl.orEmpty(),
-            imageSha256 = image?.canonical?.sha256.orEmpty(),
-        )
-        return PreparedCompatibilityUpdate(target, mapping)
     }
 
     private fun buildTargetRuntime(
@@ -289,10 +307,7 @@ class GenericListItemCompatibilityService(
     }
 }
 
-private data class PreparedCompatibilityUpdate(
-    val runtime: CmsListItemRecord,
-    val mapping: CmsListItemLegacyMappingRecord,
-)
+private fun identityKey(sourceSystem: String, legacyKey: String) = listOf(sourceSystem, legacyKey).joinToString("\u0000")
 
 private fun validateCompatibilityHttpUrl(value: String, label: String) {
     val uri = runCatching { URI(value) }.getOrNull()
