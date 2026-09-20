@@ -19,7 +19,7 @@ relations:
     - docs/technical/public-site-frontend.md
   verification:
     - docs/technical/verification-strategy.md
-updated_at: 2026-09-16
+updated_at: 2026-09-20
 ---
 
 # CMS HTTP 接口兼容契约
@@ -175,10 +175,10 @@ CmsNavigation
 
 PublicNavigation
   id, parentId, name, position, category, sortOrder, targetType,
-  href, external, newWindow, clickable, iconPath
+  href, external, openMode, clickable, iconPath
 ```
 
-Navigation write payload 保持上述 editable fields；Public projection 直接提供 resolved `href / external / newWindow / clickable`，Public Renderer 不重新实现 target resolution 业务规则。
+Navigation write payload 保持上述 editable fields；`openMode` wire value 允许 `null | "_self" | "_blank"`。Public projection 直接提供 resolved `href / external / openMode / clickable`，Public Renderer 只投影 `openMode`，不得根据 URL 类型重新推导浏览上下文。
 
 ### 5.4 页面
 
@@ -234,7 +234,9 @@ PublicAdvertisementSlot
   id, code, name, advertisements
 ```
 
-Public projection 必须已经应用当前 Domain lifecycle / effective-item rules；Frontend 不通过获取 Admin 全量数据后自行修复 publish / effective semantics。
+`CmsListItem.openMode` wire value 允许 `null | "_self" | "_blank"`；`Advertisement.openMode` 允许 `null | "_self" | "_blank" | "NO_LINK"`。空值必须以 JSON `null` 表达，不使用 `DEFAULT` 作为替代值；`NO_LINK` 不得作为 HTML `target` 输出。
+
+Public projection 必须已经应用当前 Domain lifecycle / effective-item rules；Frontend 不通过获取 Admin 全量数据后自行修复 publish / effective semantics，也不得根据 URL 类型推断 open mode。
 
 ### 5.6 站点属性 / 静态资源（`SiteProperty` / `StaticResource`）
 

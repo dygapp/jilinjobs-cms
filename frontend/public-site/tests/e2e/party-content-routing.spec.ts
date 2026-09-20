@@ -95,7 +95,7 @@ test('EU-27：中心党建入口页按业务 scope 加载四栏目，顶部轮�
       subtitle: null,
       url: `https://example.com/carousel/${suffix}`,
       imagePath: '/static/health/baseline.png',
-      openMode: 'NEW_WINDOW',
+      openMode: '_blank',
       sortOrder: 10,
       enabled: true,
       extraJson: null,

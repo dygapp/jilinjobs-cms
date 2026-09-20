@@ -29,7 +29,7 @@ async function createLinkItem(
       url: null,
       imagePath,
       imageResourceId: null,
-      openMode: 'DEFAULT',
+      openMode: null,
       sortOrder,
       enabled: true,
       extraJson: null,

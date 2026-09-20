@@ -56,7 +56,7 @@ test('EU-30：列表管理区分直接链接、站内文章与外链文章的数
       data: {
         sourceType: 'LINK', articleId: null, title: `直接链接-${suffix}`, subtitle: null,
         url: 'https://example.com/direct', imagePath: null, imageResourceId: null,
-        openMode: 'DEFAULT', sortOrder: 0, enabled: true, extraJson: null,
+        openMode: null, sortOrder: 0, enabled: true, extraJson: null,
       },
     })
     expect(directLink.ok()).toBeTruthy()
@@ -66,7 +66,7 @@ test('EU-30：列表管理区分直接链接、站内文章与外链文章的数
         data: {
           sourceType: 'ARTICLE', articleId: article.id, title: '', subtitle: null,
           url: null, imagePath: null, imageResourceId: null,
-          openMode: 'DEFAULT', sortOrder, enabled: true, extraJson: null,
+          openMode: null, sortOrder, enabled: true, extraJson: null,
         },
       })
       expect(response.ok()).toBeTruthy()

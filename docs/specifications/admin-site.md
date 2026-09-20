@@ -3,7 +3,7 @@ id: specification-admin-site
 title: CMS 管理端产品规格
 type: specification
 status: accepted
-version: "V3.1"
+version: "V3.2"
 relations:
   requirements:
     - docs/requirements/information-publishing.md
@@ -13,7 +13,7 @@ relations:
   related:
     - docs/specifications/rich-text-authoring.md
     - docs/specifications/page-content.md
-updated_at: 2026-09-16
+updated_at: 2026-09-20
 ---
 
 # CMS 管理端产品规格
@@ -147,7 +147,8 @@ ordinary content edit 不允许通过普通表单随意改变 Domain 所定义�
 - parent candidate 只来自同一位置；
 - 当前 Site Definition / Domain 接受的稳定位置与条目明确显示受保护身份；
 - NavigationItem 图标是条目自身数据，可选择或上传受控图片；
-- 调整排序不得改变图标与业务语义的对应关系。
+- 调整排序不得改变图标与业务语义的对应关系；
+- 打开方式提供“默认 / 当前窗口 / 新窗口”三个可理解选项：“默认”表示不显式指定浏览上下文，“当前窗口”表示 `_self`，“新窗口”表示 `_blank`；外链不会因为 URL 类型而自动切换为“新窗口”。
 
 具体稳定位置 inventory 由其真实 Site Definition / Domain source 持有，不在本规格复制第二份 code 清单。
 
@@ -164,7 +165,8 @@ List definition 可以维护业务名称、列表标识、图片数据策略、�
 Admin 根据 Domain source identity 提供对应编辑体验：
 
 - LINK：维护自身 title / optional subtitle / target / open mode / allowed image；
-- ARTICLE：选择既有 Article；title / target 继续来自当前 Article，列表项维护 optional subtitle / open mode / placement image 等 presentation override。
+- ARTICLE：选择既有 Article；title / target 继续来自当前 Article，列表项维护 optional subtitle / open mode / placement image 等 presentation override；
+- 列表项打开方式提供“默认 / 当前窗口 / 新窗口”，语义与导航一致；是否为外部 URL 不改变已保存的打开方式。
 
 source type 创建后以不可切换方式呈现；既有 ARTICLE relation 不通过普通编辑改成另一篇文章。
 
@@ -192,7 +194,7 @@ source type 创建后以不可切换方式呈现；既有 ARTICLE relation 不�
 - 启停；
 - 可选有效期。
 
-`NO_LINK` 时保留 URL 但当前不产生点击，界面以简洁用户语言表达这一行为。
+打开方式提供“默认 / 当前窗口 / 新窗口 / 不跳转”：前三者分别表达不显式指定浏览上下文、`_self` 与 `_blank`；“不跳转”使用 `NO_LINK` 业务语义。`NO_LINK` 时保留 URL 但当前不产生点击，界面以简洁用户语言表达这一行为。
 
 ## 10. 网站属性
 

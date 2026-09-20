@@ -1,7 +1,7 @@
 package com.jilinjobs.cms.navigation
 
 enum class NavigationTargetType { HOME, COLUMN, PAGE, LINK, PLACEHOLDER }
-enum class NavigationOpenMode { DEFAULT, SAME_WINDOW, NEW_WINDOW }
+
 
 data class CmsNavigation(
     val id: Long,
@@ -15,7 +15,7 @@ data class CmsNavigation(
     val enabled: Boolean,
     val parentId: Long? = null,
     val targetPageId: Long? = null,
-    val openMode: NavigationOpenMode = NavigationOpenMode.DEFAULT,
+    val openMode: String? = null,
     val iconPath: String? = null,
     val preset: Boolean = false,
 )
@@ -31,7 +31,7 @@ data class NavigationDraft(
     val enabled: Boolean,
     val parentId: Long? = null,
     val targetPageId: Long? = null,
-    val openMode: NavigationOpenMode = NavigationOpenMode.DEFAULT,
+    val openMode: String? = null,
     val iconPath: String? = null,
 )
 
@@ -45,7 +45,7 @@ data class PublicNavigation(
     val href: String,
     val external: Boolean,
     val parentId: Long? = null,
-    val newWindow: Boolean = false,
+    val openMode: String? = null,
     val clickable: Boolean = true,
     val iconPath: String? = null,
 )

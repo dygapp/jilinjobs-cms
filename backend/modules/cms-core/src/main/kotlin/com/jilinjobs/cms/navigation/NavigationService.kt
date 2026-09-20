@@ -43,10 +43,15 @@ class NavigationService(
         if (iconPath != null && (!iconPath.startsWith("/static/") || iconPath.length > 1000)) {
             throw NavigationValidationException("导航图标必须使用有效的 /static/ 资源路径")
         }
+        val openMode = draft.openMode?.trim()?.takeIf { it.isNotBlank() }?.lowercase()
+        if (openMode !in setOf(null, "_self", "_blank")) {
+            throw NavigationValidationException("导航打开方式不正确")
+        }
         val base = draft.copy(
             name = name,
             position = position,
             category = draft.category?.trim()?.takeIf { it.isNotBlank() },
+            openMode = openMode,
             iconPath = iconPath,
         )
         return when (draft.targetType) {
@@ -97,14 +102,9 @@ class NavigationService(
             NavigationTargetType.PLACEHOLDER -> "#"
         }
         val external = href.startsWith("http://") || href.startsWith("https://")
-        val newWindow = when (openMode) {
-            NavigationOpenMode.NEW_WINDOW -> true
-            NavigationOpenMode.SAME_WINDOW -> false
-            NavigationOpenMode.DEFAULT -> external
-        }
         return PublicNavigation(
             id, name, position, category, sortOrder, targetType, href, external,
-            parentId, newWindow, targetType != NavigationTargetType.PLACEHOLDER, iconPath,
+            parentId, openMode, targetType != NavigationTargetType.PLACEHOLDER, iconPath,
         )
     }
 }

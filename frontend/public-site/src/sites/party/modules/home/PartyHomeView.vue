@@ -110,8 +110,7 @@ function carouselImage(item: CmsListItem) {
 }
 
 function itemTarget(item: CmsListItem) {
-  const href = carouselHref(item)
-  return item.openMode === 'NEW_WINDOW' || (item.openMode === 'DEFAULT' && Boolean(href?.startsWith('http'))) ? '_blank' : undefined
+  return item.openMode || undefined
 }
 </script>
 
@@ -142,13 +141,13 @@ function itemTarget(item: CmsListItem) {
                 <router-link
                   v-if="carouselInternalRoute(item)"
                   :to="carouselInternalRoute(item)!"
-                  :target="item.openMode === 'NEW_WINDOW' ? '_blank' : undefined"
-                  :rel="item.openMode === 'NEW_WINDOW' ? 'noopener noreferrer' : undefined"
+                  :target="item.openMode || undefined"
+                  :rel="item.openMode === '_blank' ? 'noopener noreferrer' : undefined"
                 >
                   <img v-if="carouselImage(item)" :src="carouselImage(item)" :alt="item.title" @error="markCarouselImageFailed(item.id)">
                   <strong>{{ item.title }}</strong>
                 </router-link>
-                <a v-else-if="carouselHref(item)" :href="carouselHref(item)!" :target="itemTarget(item)" :rel="itemTarget(item) ? 'noopener noreferrer' : undefined">
+                <a v-else-if="carouselHref(item)" :href="carouselHref(item)!" :target="itemTarget(item)" :rel="item.openMode === '_blank' ? 'noopener noreferrer' : undefined">
                   <img v-if="carouselImage(item)" :src="carouselImage(item)" :alt="item.title" @error="markCarouselImageFailed(item.id)">
                   <strong>{{ item.title }}</strong>
                 </a>

@@ -152,7 +152,7 @@ test('Feature-wide closure：HOME_QUICK 与通用列表进入原站快速导航�
         targetColumnId: null,
         targetPageId: null,
         targetUrl: row.targetUrl,
-        openMode: 'DEFAULT',
+        openMode: '_blank',
         sortOrder: row.sortOrder,
         enabled: true,
       },
@@ -172,7 +172,7 @@ test('Feature-wide closure：HOME_QUICK 与通用列表进入原站快速导航�
       subtitle: null,
       url: 'https://example.com/site',
       imagePath: null,
-      openMode: 'DEFAULT',
+      openMode: '_blank',
       sortOrder: 999,
       enabled: true,
       extraJson: null,
@@ -211,7 +211,7 @@ test('Feature-wide closure：广告位支持多图轮动、NO_LINK 保留 URL �
   try {
     const retainedUrl = `https://example.com/promo/${suffix}`
     const first = await createAd({title:`禁用跳转-${suffix}`,imagePath:'/static/home/recruitment-campaign.png',url:retainedUrl,openMode:'NO_LINK',startAt:null,endAt:null,sortOrder:-200,enabled:true})
-    const second = await createAd({title:`轮动广告-${suffix}`,imagePath:'/static/home/recruitment-campaign.png',url:`https://example.com/promo-next/${suffix}`,openMode:'NEW_WINDOW',startAt:null,endAt:null,sortOrder:-190,enabled:true})
+    const second = await createAd({title:`轮动广告-${suffix}`,imagePath:'/static/home/recruitment-campaign.png',url:`https://example.com/promo-next/${suffix}`,openMode:'_blank',startAt:null,endAt:null,sortOrder:-190,enabled:true})
     const expired = await createAd({title:`过期广告-${suffix}`,imagePath:'/static/home/recruitment-campaign.png',url:null,openMode:'NO_LINK',startAt:'2020-01-01T00:00:00',endAt:'2020-01-02T00:00:00',sortOrder:-300,enabled:true})
 
     const publicResponse = await request.get('/api/public/advertisements')
@@ -229,12 +229,12 @@ test('Feature-wide closure：广告位支持多图轮动、NO_LINK 保留 URL �
     expect(await noLinkVisual.getAttribute('href')).toBeNull()
 
     const updateResponse = await request.put(`/api/admin/advertisements/slots/${slot!.id}/items/${first.id}`, {
-      data: {title:`禁用跳转-${suffix}`,imagePath:'/static/home/recruitment-campaign.png',url:retainedUrl,openMode:'NEW_WINDOW',startAt:null,endAt:null,sortOrder:-200,enabled:true},
+      data: {title:`禁用跳转-${suffix}`,imagePath:'/static/home/recruitment-campaign.png',url:retainedUrl,openMode:'_blank',startAt:null,endAt:null,sortOrder:-200,enabled:true},
     })
     expect(updateResponse.ok()).toBeTruthy()
-    const updated = await updateResponse.json() as { url:string;openMode:string }
+    const updated = await updateResponse.json() as { url:string;openMode:string | null }
     expect(updated.url).toBe(retainedUrl)
-    expect(updated.openMode).toBe('NEW_WINDOW')
+    expect(updated.openMode).toBe('_blank')
 
     await page.reload()
     const restoredLink = page.getByTestId(`home-promo-ad-${first.id}`)

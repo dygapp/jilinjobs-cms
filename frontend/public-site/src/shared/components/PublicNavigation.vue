@@ -124,8 +124,8 @@ const legacyClass = computed(() => props.theme === 'main' ? 'site-nav' : 'party-
           class="shared-public-nav-link"
           :data-testid="`${testIdPrefix}-${item.id}`"
           :href="item.href"
-          :target="item.newWindow ? '_blank' : undefined"
-          :rel="item.newWindow ? 'noopener noreferrer' : undefined"
+          :target="item.openMode || undefined"
+          :rel="item.openMode === '_blank' ? 'noopener noreferrer' : undefined"
           @click="closeNavigation(item.id, $event)"
         >
           <span>{{ item.name }}</span>
@@ -136,8 +136,8 @@ const legacyClass = computed(() => props.theme === 'main' ? 'site-nav' : 'party-
           class="shared-public-nav-link"
           :data-testid="`${testIdPrefix}-${item.id}`"
           :to="item.href"
-          :target="item.newWindow ? '_blank' : undefined"
-          :rel="item.newWindow ? 'noopener noreferrer' : undefined"
+          :target="item.openMode || undefined"
+          :rel="item.openMode === '_blank' ? 'noopener noreferrer' : undefined"
           @click="closeNavigation(item.id, $event)"
         >
           <span>{{ item.name }}</span>
@@ -157,15 +157,15 @@ const legacyClass = computed(() => props.theme === 'main' ? 'site-nav' : 'party-
             <a
               v-if="child.clickable && usesDocumentNavigation(child)"
               :href="child.href"
-              :target="child.newWindow ? '_blank' : undefined"
-              :rel="child.newWindow ? 'noopener noreferrer' : undefined"
+              :target="child.openMode || undefined"
+              :rel="child.openMode === '_blank' ? 'noopener noreferrer' : undefined"
               @click="closeNavigation(item.id, $event)"
             >{{ child.name }}</a>
             <RouterLink
               v-else-if="child.clickable"
               :to="child.href"
-              :target="child.newWindow ? '_blank' : undefined"
-              :rel="child.newWindow ? 'noopener noreferrer' : undefined"
+              :target="child.openMode || undefined"
+              :rel="child.openMode === '_blank' ? 'noopener noreferrer' : undefined"
               @click="closeNavigation(item.id, $event)"
             >{{ child.name }}</RouterLink>
             <span v-else>{{ child.name }}</span>

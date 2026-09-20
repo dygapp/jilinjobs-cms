@@ -41,7 +41,7 @@ data class NavigationRecord(
     var targetColumnId: Long? = null,
     var targetPageId: Long? = null,
     var targetUrl: String? = null,
-    var openMode: String = NavigationOpenMode.DEFAULT.name,
+    var openMode: String? = null,
     var iconPath: String? = null,
     var sortOrder: Int = 0,
     var enabled: Boolean = true,
@@ -72,12 +72,12 @@ class MyBatisNavigationRepository(private val mapper: NavigationMapper) : Naviga
 
     private fun NavigationDraft.record(id: Long? = null) = NavigationRecord(
         id, parentId, name, position, category, targetType.name, targetColumnId, targetPageId,
-        targetUrl, openMode.name, iconPath, sortOrder, enabled,
+        targetUrl, openMode, iconPath, sortOrder, enabled,
     )
 
     private fun NavigationRecord.model() = CmsNavigation(
         requireNotNull(id), name, position, category, NavigationTargetType.valueOf(targetType),
         targetColumnId, targetUrl, sortOrder, enabled, parentId, targetPageId,
-        NavigationOpenMode.valueOf(openMode), iconPath, preset,
+        openMode, iconPath, preset,
     )
 }

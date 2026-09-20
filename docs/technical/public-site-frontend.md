@@ -88,6 +88,8 @@ Nginx规则、Vite input和具体 artifact名由 current Repository implementati
 
 Frontend adapter可以把 transport DTO转成 view-facing shape，但不能成为第二份 Interface / Domain Authority。Article、Page、CmsList、Resource 的 identity / lifecycle / effective content interpretation来自当前 Domain / Specification，HTTP representation来自 Interface Contract。
 
+Navigation、CmsListItem 与 Advertisement 的 `openMode` 属于 Backend 已投影的显式数据。Public renderer 对空值、`_self`、`_blank` 只做直接 HTML target 映射；Advertisement 的 `NO_LINK` 只控制是否生成可点击链接。不得保留“`DEFAULT` + HTTP(S) URL => 新窗口”一类二次推导 helper。
+
 异步装配必须绑定当前 route / scope；旧请求返回不得覆盖已经变化的 route state。
 
 ## 7. 页面渲染器集成
@@ -124,7 +126,7 @@ managed resource content / attachment 与 `/static/**` 的 HTTP namespace / bina
 
 当前 timeout 属于低风险工程参数，由组件内部持有，不进入 CMS 配置。由于跨源 iframe 无法读取内部 DOM，Public 只以浏览器可观察的 `load` / `error` 与 timeout 作为外层状态证据，不声称检查慧就业页面内部业务成功。
 
-共享 Navigation 在目标被选择时收起移动端菜单，并抑制当前指针仍停留在父项上造成的桌面下拉残留；指针离开后恢复正常 hover / focus 行为。Site Definition 继续通过 Navigation `openMode` 表达新窗口语义，Public 对 internal Router target 也必须投影 `NEW_WINDOW`，不得仅对 external URL 生效。
+共享 Navigation 在目标被选择时收起移动端菜单，并抑制当前指针仍停留在父项上造成的桌面下拉残留；指针离开后恢复正常 hover / focus 行为。Site Definition 继续通过 Navigation `openMode` 显式表达浏览上下文：空值不输出 `target`，`_self` / `_blank` 直接投影同名 HTML `target`。Internal Router target 与 external URL 使用同一投影规则，Public 不再通过 URL 类型推断是否新窗口。
 
 首页直播课程不得再包裹第二层同名标题；本站“更多”链接以覆盖嵌入页原入口的方式保持 `/page/live-course` 规范目标。招聘公告与其他首页资讯列表共用同一组字体、颜色与 hover token，不尝试跨源修改慧就业 iframe 内部样式。
 

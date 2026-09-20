@@ -3,7 +3,7 @@ id: requirement-cms-domain
 title: CMS 领域模型与长期业务规则
 type: domain-requirement
 status: confirmed
-version: "V2.0"
+version: "V2.1"
 relations:
   product:
     - docs/requirements/information-publishing.md
@@ -11,7 +11,7 @@ relations:
     - docs/requirements/index.md
   architecture:
     - docs/architecture/cms-architecture.md
-updated_at: 2026-09-16
+updated_at: 2026-09-20
 ---
 
 # CMS 领域模型与长期业务规则
@@ -188,6 +188,8 @@ NavigationItem 属于一个 NavigationLocation，可有 parent / child，并持�
 
 Navigation target 至少表达 HOME、COLUMN、PAGE、LINK、PLACEHOLDER 等 accepted semantics；HTTP representation 属于 Technical contract。
 
+NavigationItem 的 `openMode` 直接表达浏览上下文目标，不承担“根据 URL 类型推断打开方式”的策略。允许值为：空值表示不显式指定浏览上下文；`_self` 表示当前浏览上下文；`_blank` 表示新浏览上下文。外部 URL 不因自身是 HTTP(S) 地址而自动获得新窗口语义；需要新窗口时必须显式保存 `_blank`。
+
 ## 7. CmsList 与 CmsListItem
 
 CmsList 是可排序、可启停的 content placement container；不拥有 Public layout mode。
@@ -204,6 +206,8 @@ image data policy：`NONE`、`OPTIONAL`、`REQUIRED`。它只定义 data validit
 - `ARTICLE`：引用 existing Article 进行 placement，不复制 Article body。
 
 `sourceType` 与 ARTICLE relation 是 source identity；ordinary edit 不得 LINK ↔ ARTICLE，也不得把 ARTICLE placement 改成另一篇 Article。需要改变来源时删除旧 placement 并新建。
+
+CmsListItem 的 `openMode` 与 NavigationItem 使用同一浏览上下文语义：空值、`_self`、`_blank`。ARTICLE placement 的打开方式属于 CmsListItem 自身，不由关联 Article 的 URL 类型推断。
 
 ### 7.3 `ARTICLE` 投放
 
@@ -233,7 +237,9 @@ AdvertisementSlot 是 stable presentation container；Advertisement 是 ordinary
 
 - 一个 Slot 可以有多条 Advertisement；
 - Public 只消费当前 effective item；
-- `NO_LINK` 表示当前只展示、不点击，即使保留 URL 也不得跳转；
+- Advertisement 的 `openMode` 允许空值、`_self`、`_blank` 与 `NO_LINK`；
+- 空值、`_self`、`_blank` 与 NavigationItem / CmsListItem 的浏览上下文语义一致；
+- `NO_LINK` 是 Advertisement 的业务扩展值，不是 HTML `target` 值；它表示当前只展示、不点击，即使保留 URL 也不得跳转；
 - validity ended 不自动 delete record；
 - Slot stable identity 与 Advertisement Runtime lifecycle 分离；
 - target 指向 external URL 不会把 Advertisement 改造成 Article / CmsListItem。

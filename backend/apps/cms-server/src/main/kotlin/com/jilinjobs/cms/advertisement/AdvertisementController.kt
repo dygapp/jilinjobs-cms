@@ -28,6 +28,6 @@ data class SaveAdvertisementSlotRequest(val code: String, val name: String, val 
     fun draft() = AdvertisementSlotDraft(code, name, description, sortOrder, enabled, system)
 }
 
-data class SaveAdvertisementRequest(val title: String, val imagePath: String, val url: String? = null, val openMode: String = "DEFAULT", val startAt: LocalDateTime? = null, val endAt: LocalDateTime? = null, val sortOrder: Int = 0, val enabled: Boolean = true) {
+data class SaveAdvertisementRequest(val title: String, val imagePath: String, val url: String? = null, val openMode: String? = null, val startAt: LocalDateTime? = null, val endAt: LocalDateTime? = null, val sortOrder: Int = 0, val enabled: Boolean = true) {
     fun draft() = AdvertisementDraft(title, imagePath, url, openMode, startAt, endAt, sortOrder, enabled)
 }

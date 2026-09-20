@@ -144,17 +144,17 @@ test('EU-30：列表项数据类型和 ARTICLE 关联文章创建后不可修改
   expect(listResponse.ok()).toBeTruthy()
   const list=await listResponse.json() as {id:number;code:string}
   try {
-    const linkResponse=await request.post(`/api/admin/lists/${list.id}/items`,{data:{sourceType:'LINK',articleId:null,title:'身份链接',subtitle:null,url:'/identity-link',imagePath:null,imageResourceId:null,openMode:'DEFAULT',sortOrder:0,enabled:true,extraJson:null}})
+    const linkResponse=await request.post(`/api/admin/lists/${list.id}/items`,{data:{sourceType:'LINK',articleId:null,title:'身份链接',subtitle:null,url:'/identity-link',imagePath:null,imageResourceId:null,openMode:null,sortOrder:0,enabled:true,extraJson:null}})
     expect(linkResponse.ok()).toBeTruthy()
     const link=await linkResponse.json() as {id:number}
-    const changeType=await request.put(`/api/admin/lists/${list.id}/items/${link.id}`,{data:{sourceType:'ARTICLE',articleId:articleA.id,title:'忽略',subtitle:null,url:null,imagePath:null,imageResourceId:null,openMode:'DEFAULT',sortOrder:0,enabled:true,extraJson:null}})
+    const changeType=await request.put(`/api/admin/lists/${list.id}/items/${link.id}`,{data:{sourceType:'ARTICLE',articleId:articleA.id,title:'忽略',subtitle:null,url:null,imagePath:null,imageResourceId:null,openMode:null,sortOrder:0,enabled:true,extraJson:null}})
     expect(changeType.ok()).toBeFalsy()
     expect((await changeType.json() as {message:string}).message).toContain('数据类型创建后不可修改')
 
-    const articleItemResponse=await request.post(`/api/admin/lists/${list.id}/items`,{data:{sourceType:'ARTICLE',articleId:articleA.id,title:'',subtitle:null,url:null,imagePath:null,imageResourceId:null,openMode:'DEFAULT',sortOrder:1,enabled:true,extraJson:null}})
+    const articleItemResponse=await request.post(`/api/admin/lists/${list.id}/items`,{data:{sourceType:'ARTICLE',articleId:articleA.id,title:'',subtitle:null,url:null,imagePath:null,imageResourceId:null,openMode:null,sortOrder:1,enabled:true,extraJson:null}})
     expect(articleItemResponse.ok()).toBeTruthy()
     const articleItem=await articleItemResponse.json() as {id:number;title:string}
-    const changeArticle=await request.put(`/api/admin/lists/${list.id}/items/${articleItem.id}`,{data:{sourceType:'ARTICLE',articleId:articleB.id,title:'',subtitle:null,url:null,imagePath:null,imageResourceId:null,openMode:'DEFAULT',sortOrder:1,enabled:true,extraJson:null}})
+    const changeArticle=await request.put(`/api/admin/lists/${list.id}/items/${articleItem.id}`,{data:{sourceType:'ARTICLE',articleId:articleB.id,title:'',subtitle:null,url:null,imagePath:null,imageResourceId:null,openMode:null,sortOrder:1,enabled:true,extraJson:null}})
     expect(changeArticle.ok()).toBeFalsy()
     expect((await changeArticle.json() as {message:string}).message).toContain('关联文章创建后不可修改')
 
@@ -177,14 +177,14 @@ test('EU-30：列表图片策略在服务端按 LINK / ARTICLE 数据来源约�
   const requiredResponse=await request.post('/api/admin/lists',{data:{code:`E2E_REQUIRED_${suffix.replaceAll('-','_')}`,name:'E2E 图片必填',groupCode:'E2E',imagePolicy:'REQUIRED',description:'',sortOrder:990,enabled:true,system:false}})
   expect(requiredResponse.ok()).toBeTruthy()
   const requiredList=await requiredResponse.json() as {id:number}
-  const missingImage=await request.post(`/api/admin/lists/${requiredList.id}/items`,{data:{sourceType:'LINK',articleId:null,title:'无图项目',subtitle:null,url:null,imagePath:null,imageResourceId:null,openMode:'DEFAULT',sortOrder:0,enabled:true,extraJson:null}})
+  const missingImage=await request.post(`/api/admin/lists/${requiredList.id}/items`,{data:{sourceType:'LINK',articleId:null,title:'无图项目',subtitle:null,url:null,imagePath:null,imageResourceId:null,openMode:null,sortOrder:0,enabled:true,extraJson:null}})
   expect(missingImage.ok()).toBeFalsy()
   expect((await missingImage.json() as {message:string}).message).toContain('链接型列表项设置图片')
 
   const noneResponse=await request.post('/api/admin/lists',{data:{code:`E2E_NONE_${suffix.replaceAll('-','_')}`,name:'E2E 不使用图片',groupCode:'E2E',imagePolicy:'NONE',description:'',sortOrder:991,enabled:true,system:false}})
   expect(noneResponse.ok()).toBeTruthy()
   const noneList=await noneResponse.json() as {id:number}
-  const unexpectedImage=await request.post(`/api/admin/lists/${noneList.id}/items`,{data:{sourceType:'LINK',articleId:null,title:'错误带图项目',subtitle:null,url:null,imagePath:'/static/home/carousel-01.jpg',imageResourceId:null,openMode:'DEFAULT',sortOrder:0,enabled:true,extraJson:null}})
+  const unexpectedImage=await request.post(`/api/admin/lists/${noneList.id}/items`,{data:{sourceType:'LINK',articleId:null,title:'错误带图项目',subtitle:null,url:null,imagePath:'/static/home/carousel-01.jpg',imageResourceId:null,openMode:null,sortOrder:0,enabled:true,extraJson:null}})
   expect(unexpectedImage.ok()).toBeFalsy()
   expect((await unexpectedImage.json() as {message:string}).message).toContain('不使用图片')
 })
@@ -370,7 +370,7 @@ test('EU-30：Main 轮播按统一网站属性中的切换间隔运行', async (
   let createdId:number|null=null
   try {
     expect((await request.put('/api/admin/site-config/CAROUSEL_INTERVAL_SECONDS',{data:{value:'1'}})).ok()).toBeTruthy()
-    const created=await request.post(`/api/admin/lists/${carousel!.id}/items`,{data:{sourceType:'LINK',articleId:null,title:`轮播切换验证-${suffix}`,subtitle:null,url:null,imagePath:'/static/home/carousel-01.jpg',imageResourceId:null,openMode:'DEFAULT',sortOrder:999,enabled:true,extraJson:null}})
+    const created=await request.post(`/api/admin/lists/${carousel!.id}/items`,{data:{sourceType:'LINK',articleId:null,title:`轮播切换验证-${suffix}`,subtitle:null,url:null,imagePath:'/static/home/carousel-01.jpg',imageResourceId:null,openMode:null,sortOrder:999,enabled:true,extraJson:null}})
     expect(created.ok()).toBeTruthy()
     createdId=(await created.json() as {id:number}).id
     await page.goto('/')

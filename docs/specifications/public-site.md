@@ -3,7 +3,7 @@ id: specification-public-site
 title: 公开站产品规格
 type: specification
 status: accepted
-version: "V3.3"
+version: "V3.4"
 relations:
   requirements:
     - docs/requirements/information-publishing.md
@@ -216,7 +216,9 @@ Main / Party 轮播共享以下用户可观察 lifecycle：
 
 - Main 的 EXTERNAL_LINK Article 从内容列表、首页聚合或其他不带独立 open-mode 的 Article 入口进入当前外部来源时，以新窗口作为已接受基线；Article 不因此获得独立 `openMode` 字段；
 - Navigation、CmsList、Advertisement 使用各自 Domain open-mode contract；其中 ARTICLE 型 CmsListItem 继续遵守 placement 自身 open-mode contract；
-- 新窗口外链使用等价于 `noopener noreferrer` 的安全行为；
+- 对拥有 open mode 的对象，空值表示不输出 `target`，`_self` 直接投影为 `target="_self"`，`_blank` 直接投影为 `target="_blank"`；Advertisement 的 `NO_LINK` 表示不产生可点击链接；
+- Public Runtime 不根据 URL 是否为 HTTP(S)、是否离站或是否为站内 route 二次推断 open mode；
+- 所有最终使用 `target="_blank"` 的链接继续采用等价于 `noopener noreferrer` 的安全行为；
 - 当前没有 Requirement 要求统一离站确认页或外链徽标；
 - same-site internal target 使用 canonical route；
 - `/party/**` 作为跨 Site Entry 的站内目标仍保持其 canonical namespace。

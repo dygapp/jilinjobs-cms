@@ -9,14 +9,14 @@ test('中心党建作为主站特殊栏目入口并保持独立红色主题', as
     name: string
     targetType: string
     href: string
-    newWindow: boolean
+    openMode: null | '_self' | '_blank'
     clickable: boolean
   }>
   const partyNavigation = navigations.find(item => item.name === '中心党建')
   expect(partyNavigation).toMatchObject({
     targetType: 'LINK',
     href: '/party/',
-    newWindow: false,
+    openMode: '_self',
     clickable: true,
   })
 
@@ -26,7 +26,7 @@ test('中心党建作为主站特殊栏目入口并保持独立红色主题', as
   await expect(page.getByTestId('public-content')).toBeVisible()
   const partyLink = page.getByRole('link', { name: '中心党建', exact: true })
   await expect(partyLink).toHaveAttribute('href', '/party/')
-  await expect(partyLink).not.toHaveAttribute('target', '_blank')
+  await expect(partyLink).toHaveAttribute('target', '_self')
   await partyLink.click()
 
   await expect(page).toHaveURL(/\/party\/$/)

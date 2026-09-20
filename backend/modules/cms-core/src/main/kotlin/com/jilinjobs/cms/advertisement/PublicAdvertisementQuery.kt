@@ -66,7 +66,7 @@ class PublicAdvertisementQueryService(private val mapper: PublicAdvertisementQue
                         title = row.title.orEmpty(),
                         imagePath = row.imagePath.orEmpty(),
                         url = row.url,
-                        openMode = row.openMode ?: "DEFAULT",
+                        openMode = row.openMode,
                         startAt = row.startAt,
                         endAt = row.endAt,
                         sortOrder = row.sortOrder ?: 0,
