@@ -75,20 +75,31 @@ test('视觉基线：桌面首页维持原站三列首屏与关键图片区块',
 
   for (const panelSelector of ['.notice-panel', '.employment-panel', '.service-panel', '.recruitment-panel']) {
     const panel = page.locator(panelSelector)
-    await expect(panel).toHaveCSS('border-top-width', '3px')
+    await expect(panel).toHaveCSS('border-top-width', '1px')
     await expect(panel).toHaveCSS('border-top-style', 'solid')
-    await expect(panel).toHaveCSS('border-top-color', 'rgb(0, 174, 189)')
+    await expect(panel).toHaveCSS('border-top-color', 'rgb(235, 238, 242)')
     await expect(panel).toHaveCSS('border-left-width', '1px')
     await expect(panel).toHaveCSS('border-right-width', '1px')
-    await expect(panel).toHaveCSS('border-left-style', 'solid')
-    await expect(panel).toHaveCSS('border-right-style', 'solid')
   }
 
   const smallTitleLabels = page.locator('.home-panel h2, .service-panel h2')
   expect(await smallTitleLabels.count()).toBeGreaterThanOrEqual(4)
   for (const label of await smallTitleLabels.all()) {
-    await expect(label).toHaveCSS('border-top-width', '0px')
+    await expect(label).toHaveCSS('color', 'rgb(0, 174, 189)')
+    await expect(label).toHaveCSS('border-top-width', '3px')
+    await expect(label).toHaveCSS('border-top-style', 'solid')
+    await expect(label).toHaveCSS('border-top-color', 'rgb(0, 174, 189)')
+    await expect(label).toHaveCSS('border-left-width', '1px')
+    await expect(label).toHaveCSS('border-right-width', '1px')
+    await expect(label).toHaveCSS('border-left-color', 'rgb(235, 238, 242)')
+    await expect(label).toHaveCSS('border-right-color', 'rgb(235, 238, 242)')
     await expect(label).toHaveCSS('font-size', '18px')
+    const dimensions = await label.evaluate(element => {
+      const labelBox = element.getBoundingClientRect()
+      const headerBox = element.parentElement!.getBoundingClientRect()
+      return { labelWidth: labelBox.width, headerWidth: headerBox.width }
+    })
+    expect(dimensions.labelWidth).toBeLessThan(dimensions.headerWidth)
   }
   const smallBottomAccents = await smallTitleLabels.evaluateAll(elements => elements.map(element => getComputedStyle(element, '::after').content))
   expect(smallBottomAccents.every(content => content === 'none')).toBeTruthy()
