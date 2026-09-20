@@ -28,7 +28,7 @@ const editingItem = ref<number | null>(null)
 const articleOptions = ref<AdminArticleSummary[]>([])
 const selectedArticle = ref<CmsArticle | null>(null)
 const listForm = reactive<CmsListDraft>({ code: '', name: '', groupCode: 'GENERAL', imagePolicy: 'OPTIONAL', description: '', sortOrder: 0, enabled: true, system: false })
-const itemForm = reactive<CmsListItemDraft>({ sourceType: 'LINK', articleId: null, title: '', subtitle: null, url: null, imagePath: null, imageResourceId: null, openMode: 'DEFAULT', sortOrder: 0, enabled: true, extraJson: null })
+const itemForm = reactive<CmsListItemDraft>({ sourceType: 'LINK', articleId: null, title: '', subtitle: null, url: null, imagePath: null, imageResourceId: null, openMode: null, sortOrder: 0, enabled: true, extraJson: null })
 const active = computed(() => lists.value.find(item => item.id === activeId.value) || null)
 const editingListModel = computed(() => editingList.value == null ? null : lists.value.find(item => item.id === editingList.value) || null)
 const asItem = (row: unknown) => row as CmsListItem
@@ -56,7 +56,7 @@ async function removeList(row: CmsListDefinition) { try { await ElMessageBox.con
 async function addItem() {
   editingItem.value = null
   selectedArticle.value = null
-  Object.assign(itemForm, { sourceType: 'LINK', articleId: null, title: '', subtitle: null, url: null, imagePath: null, imageResourceId: null, openMode: 'DEFAULT', sortOrder: 0, enabled: true, extraJson: null })
+  Object.assign(itemForm, { sourceType: 'LINK', articleId: null, title: '', subtitle: null, url: null, imagePath: null, imageResourceId: null, openMode: null, sortOrder: 0, enabled: true, extraJson: null })
   articleOptions.value = []
   itemDialog.value = true
 }
@@ -244,7 +244,7 @@ const message = (error: unknown) => error instanceof Error ? error.message : '�
           </el-form-item>
         </template>
 
-        <el-form-item label="打开方式"><el-select v-model="itemForm.openMode" style="width:100%"><el-option label="按目标默认" value="DEFAULT" /><el-option label="当前窗口" value="SAME_WINDOW" /><el-option label="新窗口" value="NEW_WINDOW" /></el-select></el-form-item>
+        <el-form-item label="打开方式"><el-select v-model="itemForm.openMode" style="width:100%"><el-option label="默认" :value="null" /><el-option label="当前窗口" value="_self" /><el-option label="新窗口" value="_blank" /></el-select></el-form-item>
         <el-form-item label="排序"><el-input-number v-model="itemForm.sortOrder" /></el-form-item>
         <el-form-item label="启用"><el-switch v-model="itemForm.enabled" /></el-form-item>
       </el-form>
