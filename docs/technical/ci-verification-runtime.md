@@ -119,7 +119,7 @@ checkout PR exact Head
 → start Backend
 → build affected frontend
 → start bounded frontend gateway
-→ affected application smoke + changed E2E specs
+→ affected application bounded smoke
 → upload browser evidence / failure diagnostics
 ~~~
 
@@ -130,8 +130,8 @@ checkout PR exact Head
 - Registry 权限、网络或未知错误不得降级为“镜像不存在”；
 - Public / Admin 只构建实际受影响应用；未受影响应用可以使用空静态目录，只要本轮 smoke 不依赖它；
 - 默认 browser smoke 是稳定、低成本的集成探针，不宣称覆盖 Feature 全部 Acceptance；
-- 当前 PR 如果修改对应 E2E spec，快速 CI 追加这些 changed specs；
-- Feature-specific acceptance 仍由当前 Execution Unit 的 verification obligations 决定，不能因为 Fast CI PASS 自动省略；
+- 快速 CI 不尝试从任意 source diff 自动推导精确 E2E case；
+- Feature-specific targeted E2E 与其他 Acceptance 验证仍由当前 Execution Unit 的 verification obligations 选择，不能因为 Fast CI PASS 自动省略；
 - Fast CI PASS 只能形成 bounded development-feedback evidence。
 
 ## 7. 完整 CI
