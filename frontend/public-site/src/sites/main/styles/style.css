@@ -39,8 +39,8 @@ img{max-width:100%}
 .carousel-caption{position:absolute;left:0;right:0;bottom:0;height:38px;padding:10px 14px;background:rgba(0,18,41,.8);color:#fff;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .visual-empty{height:100%;display:grid;place-items:center;color:#8491a1}
 .home-panel,.service-panel{background:#fff;border:1px solid #ebeef2;padding:0 14px;min-width:0}
-.home-panel>header,.news-column>header,.service-panel>header{height:48px;display:flex;justify-content:space-between;align-items:stretch;margin:0 -14px;padding-right:14px;border-bottom:1px solid #ebeef2}
-.home-panel h2,.news-column h2,.service-panel h2{display:flex;align-items:center;position:relative;margin:-1px 0 -1px 0;padding:0 20px;border:1px solid #ebeef2;border-top:3px solid #00aebd;border-bottom-color:#fff;border-radius:4px 4px 0 0;background:#fff;color:#00aebd;font-size:18px;font-weight:600;line-height:48px}
+.home-panel>header,.news-column>header,.service-panel>header{height:32px;display:flex;justify-content:space-between;align-items:stretch;margin:0 -14px;padding-right:14px;border-bottom:1px solid #ebeef2}
+.home-panel h2,.news-column h2,.service-panel h2{height:32px;display:flex;align-items:center;position:relative;margin:-1px 0 -1px 0;padding:0 20px;border:1px solid #ebeef2;border-top:3px solid #00aebd;border-bottom-color:#fff;border-radius:4px 4px 0 0;background:#fff;color:#00aebd;font-size:17px;font-weight:600;line-height:1}
 .home-panel h2::after,.news-column h2::after,.service-panel h2::after{content:none}
 .home-panel header>a,.news-column header>a{display:flex;align-items:center;font-size:12px;text-decoration:none;color:#8491a1}
 .home-panel ul,.news-column ul{list-style:none;padding:6px 0 8px;margin:0}
@@ -72,7 +72,7 @@ img{max-width:100%}
 .latest-recruitment{margin-top:0}
 .home-recruitment-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-height:300px}
 .home-live-courses{position:relative;min-width:0}
-.home-live-courses-more{position:absolute;z-index:2;top:1px;right:1px;height:44px;display:flex;align-items:center;padding:0 14px 0 22px;background:#fff;color:#8491a1;font-size:13px;text-decoration:none}
+.home-live-courses-more{position:absolute;z-index:2;top:1px;right:1px;height:32px;display:flex;align-items:center;padding:0 14px 0 22px;background:#fff;color:#8491a1;font-size:13px;text-decoration:none}
 .home-live-courses-more:hover{color:#005cd4}
 .ncss-entrance{height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:#d3e6ff}
 .ncss-entrance>a{display:flex;align-items:center;height:45px}
