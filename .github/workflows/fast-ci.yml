@@ -98,10 +98,6 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: "24"
-          cache: npm
-          cache-dependency-path: |
-            frontend/public-site/package-lock.json
-            frontend/admin/package-lock.json
 
       - name: 登录 GHCR
         if: steps.changes.outputs.frontend == 'true'
@@ -175,7 +171,7 @@ jobs:
         if: steps.changes.outputs.public == 'true'
         working-directory: frontend/public-site
         run: |
-          npm ci --no-audit --no-fund
+          npm install --no-audit --no-fund
           npm run build
 
       - name: 安装并构建 Admin
