@@ -241,7 +241,7 @@ onUnmounted(() => {
         </section>
 
         <aside class="service-panel">
-          <h2>快速导航</h2>
+          <header><h2>快速导航</h2></header>
           <p class="service-phone"><img :src="phoneIcon" alt="">咨询电话：<strong>{{ contactPhone }}</strong></p>
           <div class="service-shortcuts">
             <template v-for="item in quickItems" :key="item.id">
