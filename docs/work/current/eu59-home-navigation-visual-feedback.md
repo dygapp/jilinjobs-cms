@@ -29,7 +29,7 @@ base_sha: dd08954b9ece718dbe7afdd3454e55fd3066524c
 - 不修改导航栏目、路由或 open-mode；
 - 不修改 Backend、Admin、数据库或 Site Definition。
 
-## Readiness
+## 就绪状态
 
 **PASS**
 
