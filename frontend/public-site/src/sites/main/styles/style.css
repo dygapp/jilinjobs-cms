@@ -81,10 +81,10 @@ img{max-width:100%}
 .ncss-login-buttons a:hover{background:#00439a}
 .site-navigation-card{background:#fff;border:1px solid #ebeef2}
 .site-navigation-tabs{height:48px;display:flex;align-items:flex-end;border-bottom:1px solid #ebeef2;padding-left:14px}
-.site-navigation-tabs button{height:48px;padding:0 18px;border:0;background:transparent;color:#323b47;font-weight:600;cursor:pointer;border-top:2px solid transparent}
+.site-navigation-tabs button{height:48px;padding:0 18px;border:0;background:transparent;color:#323b47;font-size:16px;font-weight:600;cursor:pointer;border-top:2px solid transparent}
 .site-navigation-tabs button.active{color:#00aebd;border-top-color:#00aebd}
 .site-link-group{min-height:160px;display:flex;align-content:flex-start;flex-wrap:wrap;gap:13px 48px;padding:22px 28px}
-.site-link-group a{min-width:210px;text-decoration:none;color:#515c6b;font-size:13px}
+.site-link-group a{min-width:210px;text-decoration:none;color:#515c6b;font-size:15px}
 .site-link-group a:hover{color:#005cd4}
 
 /* 页脚 */
