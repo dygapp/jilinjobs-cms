@@ -130,6 +130,12 @@ tasks.register<JavaExec>("verifySitePackageAssets") {
     configureServerVerification("com.jilinjobs.cms.provisioning.SitePackageAssetProjectionVerificationKt")
 }
 
+tasks.register<JavaExec>("verifyLinkOpenModeMigration") {
+    group = "verification"
+    description = "Verify EU-60 V4 to V5 link open-mode migration against real MySQL"
+    configureServerVerification("com.jilinjobs.cms.migration.LinkOpenModeMigrationVerificationKt")
+}
+
 tasks.register<JavaExec>("verifyPageContentOwnership") {
     group = "verification"
     description = "Verify EU-49 Site Package Page structure does not reclaim operator-managed Page content"

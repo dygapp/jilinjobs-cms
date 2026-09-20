@@ -87,6 +87,13 @@ jobs:
           SITE_PACKAGE_VERIFY_DB_USERNAME: root
           SITE_PACKAGE_VERIFY_DB_PASSWORD: root
         run: gradle verifySitePackageAssets --no-daemon
+      - name: Verify EU-60 link open-mode migration
+        working-directory: backend
+        env:
+          SITE_PACKAGE_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/eu37_site_package?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          SITE_PACKAGE_VERIFY_DB_USERNAME: root
+          SITE_PACKAGE_VERIFY_DB_PASSWORD: root
+        run: gradle verifyLinkOpenModeMigration --no-daemon
       - name: 计算 Backend Runtime fingerprint
         id: backend-fingerprint
         shell: bash
