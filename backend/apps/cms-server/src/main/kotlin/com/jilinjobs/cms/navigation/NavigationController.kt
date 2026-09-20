@@ -38,7 +38,7 @@ data class SaveNavigationRequest(
     val enabled: Boolean = true,
     val parentId: Long? = null,
     val targetPageId: Long? = null,
-    val openMode: NavigationOpenMode = NavigationOpenMode.DEFAULT,
+    val openMode: String? = null,
     @field:Size(max = 1000) val iconPath: String? = null,
 ) {
     fun draft() = NavigationDraft(
