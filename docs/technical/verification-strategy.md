@@ -10,7 +10,7 @@ relations:
     - docs/requirements/cms-domain.md
   interface:
     - docs/technical/http-interface-contract.md
-updated_at: 2026-09-16
+updated_at: 2026-09-20
 ---
 
 # 验证运行策略
@@ -114,7 +114,22 @@ Vue / TypeScript 变更按真实风险选择验证层：
 
 Functional Browser PASS 不自动等于 视觉保真 PASS。
 
-### 4.5 人工评审 / 评审环境
+### 4.5 快速反馈与完整验证
+
+高频开发反馈可以使用比最终完成验证更小的作用域，但必须明确其证据责任，不能把快速反馈的 PASS 改称目标提交已经完成完整验证。
+
+长期原则：
+
+- 快速验证按实际变化范围选择 type-check、build、Runtime smoke、targeted Browser 等必要层级；
+- 快速验证可以复用具有明确 provenance 的已验证 immutable artifact，以减少无关重复构建；
+- 复用 artifact 时必须记录当前 Target、artifact identity / provenance 与仍未被当前运行重新证明的 claim；
+- supporting Runtime 可以为了反馈速度复用构建产物，但 Database / fixture / session 等测试状态必须按当前验证需要保持隔离或可重建；
+- 最终 Completion / Ready to Integrate 声明仍必须由当前 Authority 所要求、与目标 exact Head 匹配的完整证据支持；
+- GitHub Actions、Local Runtime、self-hosted Runner 等不同运行环境可以采用不同的快速验证实现，不能把某一种运行时优化方式提升为通用 Verification Requirement。
+
+当前 GitHub Actions / GitHub-hosted Runner 下的具体实现由 `docs/technical/ci-verification-runtime.md` 持有；本文不复制 GHCR、Workflow trigger、fingerprint 或 Job 编排细节。
+
+### 4.6 人工评审 / 评审环境
 
 需要人工运行时观察的工作必须使用与目标 claim 对应的可复现 Review Runtime。
 
@@ -127,7 +142,7 @@ Functional Browser PASS 不自动等于 视觉保真 PASS。
 - 外部访问、内部 target、Run ownership 与释放状态分别可验证；
 - 临时验证授权不扩张为 Production / shared data 的破坏性操作授权。
 
-### 4.6 跨层语义与可再生性复核
+### 4.7 跨层语义与可再生性复核
 
 当 claim 涉及 Documentation Authority completeness、Fresh Context reconstruction、technology substitution 或 code-holdout regeneration 时，不能只检查文档存在、字段名称一致或单层测试通过；必须对当前受影响语义做双向 traceability challenge：
 
