@@ -2,9 +2,7 @@
 
 Current Ready Execution Unit：**EU-60 链接打开方式语义收敛**。
 
-当前 active work artifact：
-
-- `docs/work/current/eu60-link-open-mode-convergence.md`
+当前工作 artifact：`eu60-link-open-mode-convergence.md`
 
 Controlling Issue：Issue #188。
 
