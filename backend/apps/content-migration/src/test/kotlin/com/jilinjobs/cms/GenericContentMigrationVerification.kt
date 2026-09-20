@@ -91,6 +91,7 @@ fun main() {
             "--spring.main.banner-mode=off",
         )
         val dispatcherOutput = ByteArrayOutputStream()
+        val originalOut = System.out
         var dispatcherFailure: Throwable? = null
         try {
             System.setOut(PrintStream(dispatcherOutput, true, StandardCharsets.UTF_8))
