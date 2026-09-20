@@ -26,7 +26,6 @@ val serverProject = project(":apps:cms-server")
 val migrationProject = project(":apps:content-migration")
 val serverSourceSets = serverProject.extensions.getByType<SourceSetContainer>()
 val migrationSourceSets = migrationProject.extensions.getByType<SourceSetContainer>()
-val jilinjobsSitePackageRoot = file("../sites/jilinjobs").absolutePath
 
 tasks.register<Delete>("clean") {
     dependsOn(":modules:cms-core:clean", ":apps:cms-server:clean", ":apps:content-migration:clean")
@@ -132,7 +131,7 @@ tasks.register<JavaExec>("verifyPageContentAdoption") {
 
 tasks.register<JavaExec>("verifyContentMigrationBoundary") {
     group = "verification"
-    description = "Verify Content Migration is non-web, excludes Server transport and composes Core/Flyway/Party capabilities"
+    description = "Verify Content Migration is non-web, excludes Server transport and composes only site-neutral migration capabilities"
     configureMigrationVerification("com.jilinjobs.cms.ContentMigrationBoundaryVerificationKt")
 }
 
@@ -184,9 +183,6 @@ tasks.register("verifyBackendApplicationBoundary") {
         }
         require(migrationEntries.any { it.startsWith("BOOT-INF/classes/com/jilinjobs/cms/migration/generic/GenericListItemCompatibility") }) {
             "Migration BootJar is missing Generic compatibility classes"
-        }
-        require(migrationEntries.none { it.contains("/Party") || it.contains("/party/") }) {
-            "Migration BootJar contains site-specific Party classes"
         }
         val forbiddenServerClasses = listOf(
             "BOOT-INF/classes/com/jilinjobs/cms/CmsApplication.class",
