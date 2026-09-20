@@ -2,9 +2,7 @@
 
 Current Ready Execution Unit：**EU-59 — 首页栏目标签与导航字号反馈修复**。
 
-当前 active work artifact：
-
-- `docs/work/current/eu59-home-navigation-visual-feedback.md`
+当前工作 artifact：`eu59-home-navigation-visual-feedback.md`
 
 当前 controlling Issue：
 
