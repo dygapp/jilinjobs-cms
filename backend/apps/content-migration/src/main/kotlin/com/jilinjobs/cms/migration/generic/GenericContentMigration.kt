@@ -138,14 +138,16 @@ data class CanonicalListItemRecord(
     val title: String,
     val subtitle: String? = null,
     val url: String? = null,
+    val sourceProvenanceUrl: String? = null,
     val articleReference: CanonicalArticleReference? = null,
     val openMode: String = "DEFAULT",
     val enabled: Boolean = true,
     val sourceFingerprint: String,
     val image: CanonicalListImage? = null,
+    val staticTarget: String? = null,
 )
 
-enum class GenericMigrationStatus { CREATED, SKIPPED, CONFLICT, INVALID }
+enum class GenericMigrationStatus { CREATED, UPDATED, SKIPPED, CONFLICT, INVALID }
 enum class GenericMigrationPhase { PREFLIGHT, EXECUTE }
 enum class GenericMigrationKind { ARTICLE, LIST_ITEM, PAGE, DATASET }
 
@@ -162,6 +164,7 @@ data class GenericContentMigrationReport(
     val phase: GenericMigrationPhase,
     val total: Int,
     val created: Int,
+    val updated: Int,
     val skipped: Int,
     val conflicts: Int,
     val invalid: Int,
@@ -348,6 +351,7 @@ object CanonicalDatasetValidator {
         require(record.legacyKey.isNotBlank() && record.legacyKey.length <= 255) { "List item legacy identity 不合法" }
         require(record.sourceOrder > 0) { "List item sourceOrder 必须大于 0" }
         require(record.title.isNotBlank() && record.title.length <= 200) { "List item title 不合法" }
+        record.sourceProvenanceUrl?.let { validateHttpUrl(it, "List item source provenance URL") }
         require(record.openMode.uppercase() in CANONICAL_OPEN_MODES) { "List item openMode 不合法：${record.openMode}" }
         require(record.sourceFingerprint.matches(SHA256)) { "List item fingerprint 不合法：${record.legacyKey}" }
         when (record.sourceType) {
@@ -377,11 +381,14 @@ object CanonicalDatasetValidator {
             require(sha256Path(image.file) == canonical.sha256) { "Loaded List image SHA-256 不一致：${canonical.snapshotPath}" }
             CanonicalFileVerifier.validateStaticImageBytes(image.file, canonical.snapshotPath)
         }
-        loaded.staticTarget?.let {
+        record.staticTarget?.let {
             require(record.sourceType == CmsListItemSourceType.LINK && image != null) {
-                "Prepared static target 只允许用于带图片的 LINK ListItem"
+                "Canonical staticTarget 只允许用于带图片的 LINK ListItem"
             }
             CanonicalFileVerifier.validateStaticTarget(it)
+        }
+        loaded.staticTarget?.let {
+            require(it == record.staticTarget) { "Loaded staticTarget 与 canonical record 不一致：${record.legacyKey}" }
         }
     }
 }
@@ -460,7 +467,15 @@ class CanonicalDatasetLoader(
                             CanonicalFileVerifier.validateStaticImageBytes(file, canonical.snapshotPath)
                             LoadedListImage(canonical, file)
                         }
-                        LoadedListItem(index.listCode, index.sourceSystem, index.sourcePage, record, image)
+                        LoadedListItem(
+                            index.listCode,
+                            index.sourceSystem,
+                            index.sourcePage,
+                            record,
+                            image,
+                            sourceProvenanceUrl = record.sourceProvenanceUrl,
+                            staticTarget = record.staticTarget,
+                        )
                     }
                 }
                 .toList()
@@ -726,6 +741,8 @@ class GenericListItemImporter(
 @Service
 class GenericContentMigrationService(
     private val loader: CanonicalDatasetLoader,
+    private val compatibilityLoader: CanonicalCompatibilityLoader,
+    private val compatibilityService: GenericListItemCompatibilityService,
     private val preflight: CanonicalMigrationPreflight,
     private val articleImporter: GenericArticleImporter,
     private val listItemImporter: GenericListItemImporter,
@@ -739,16 +756,30 @@ class GenericContentMigrationService(
                 listOf(invalid(GenericMigrationKind.DATASET, "dataset", "snapshot", error.message ?: error::class.java.simpleName)),
             )
         }
-        return importPreparedDataset(dataset)
+        val compatibility = runCatching { compatibilityLoader.load(snapshotRoot) }.getOrElse { error ->
+            return report(
+                GenericMigrationPhase.PREFLIGHT,
+                dataset.total,
+                listOf(invalid(GenericMigrationKind.DATASET, "dataset", "compatibility", error.message ?: error::class.java.simpleName)),
+            )
+        }
+        return importPreparedDataset(dataset, compatibility)
     }
 
-    fun importPreparedDataset(dataset: LoadedDataset): GenericContentMigrationReport {
+    fun importPreparedDataset(
+        dataset: LoadedDataset,
+        compatibility: CanonicalCompatibilityAuthority? = null,
+    ): GenericContentMigrationReport {
         runCatching { CanonicalDatasetValidator.validate(dataset) }.getOrElse { error ->
             return report(
                 GenericMigrationPhase.PREFLIGHT,
                 dataset.total,
                 listOf(invalid(GenericMigrationKind.DATASET, "dataset", "prepared", error.message ?: error::class.java.simpleName)),
             )
+        }
+        val compatibilityOutcome = compatibilityService.apply(dataset, compatibility)
+        if (compatibilityOutcome.conflicts.isNotEmpty()) {
+            return report(GenericMigrationPhase.PREFLIGHT, dataset.total, compatibilityOutcome.conflicts)
         }
         val outcome = preflight.preflight(dataset)
         outcome.report?.let { return it }
@@ -757,26 +788,25 @@ class GenericContentMigrationService(
         try {
             plan.pages.forEach { results += pageImporter.execute(it) }
             plan.articles.forEach { results += articleImporter.execute(it) }
-            plan.listItems.forEach { results += listItemImporter.execute(it) }
+            plan.listItems.forEach { listPlan ->
+                val key = identity(listPlan.loaded.sourceSystem, listPlan.loaded.record.legacyKey)
+                val updatedId = compatibilityOutcome.updated[key]
+                results += if (updatedId != null) {
+                    GenericMigrationResult(
+                        GenericMigrationKind.LIST_ITEM,
+                        listPlan.loaded.sourceSystem,
+                        listPlan.loaded.record.legacyKey,
+                        GenericMigrationStatus.UPDATED,
+                        updatedId,
+                    )
+                } else {
+                    listItemImporter.execute(listPlan)
+                }
+            }
         } catch (error: RuntimeException) {
             results += invalid(GenericMigrationKind.DATASET, "dataset", "execute", error.message ?: error::class.java.simpleName)
         }
         return report(GenericMigrationPhase.EXECUTE, plan.total, results)
-    }
-}
-
-fun main(args: Array<String>) {
-    require(args.isNotEmpty()) { "用法：importCanonicalContent <snapshot-root> [Spring Boot args...]" }
-    val snapshotRoot = Path.of(args.first()).toAbsolutePath().normalize()
-    val context = SpringApplicationBuilder(ContentMigrationApplication::class.java)
-        .web(WebApplicationType.NONE)
-        .run(*args.drop(1).toTypedArray())
-    try {
-        val report = context.getBean(GenericContentMigrationService::class.java).importSnapshot(snapshotRoot)
-        println("CONTENT_MIGRATION_REPORT ${context.getBean(ObjectMapper::class.java).writeValueAsString(report)}")
-        require(report.conflicts == 0 && report.invalid == 0) { "Generic content migration 存在 conflict/invalid，拒绝静默完成" }
-    } finally {
-        context.close()
     }
 }
 
@@ -788,6 +818,7 @@ private fun report(
     phase = phase,
     total = total,
     created = results.count { it.status == GenericMigrationStatus.CREATED },
+    updated = results.count { it.status == GenericMigrationStatus.UPDATED },
     skipped = results.count { it.status == GenericMigrationStatus.SKIPPED },
     conflicts = results.count { it.status == GenericMigrationStatus.CONFLICT },
     invalid = results.count { it.status == GenericMigrationStatus.INVALID },
