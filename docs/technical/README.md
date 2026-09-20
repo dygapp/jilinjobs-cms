@@ -9,7 +9,8 @@
 - `admin-frontend.md` — Admin application / module 与共享 authoring implementation contract；
 - `public-site-frontend.md` — 当前 Public Renderer implementation adapter 与 source ownership contract；
 - `rich-text-authoring.md` — Rich Text 跨 consumer integration HOW；
-- `verification-strategy.md` — 跨 Feature verification layering、运行时组合 与 证据 contract。
+- `verification-strategy.md` — 跨 Feature verification layering、运行时组合 与 证据 contract；
+- `ci-verification-runtime.md` — GitHub Actions / GitHub-hosted Runner 场景中的快速 CI、Backend Artifact 复用与完整 CI 实现 contract。
 
 HTTP endpoint / wire compatibility 只由 `http-interface-contract.md` 长期持有；Backend / Admin / Public Technical owner 只说明各自如何消费或实现该 contract，不复制第二份 endpoint / DTO inventory。
 
