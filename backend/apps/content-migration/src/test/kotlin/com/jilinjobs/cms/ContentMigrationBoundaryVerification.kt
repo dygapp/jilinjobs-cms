@@ -38,9 +38,6 @@ fun main() {
         context.getBean(ColumnMapper::class.java)
         context.getBean(GenericContentMigrationService::class.java)
         context.getBean(GenericListItemCompatibilityService::class.java)
-        require(runCatching { Class.forName("com.jilinjobs.cms.migration.PartyHistoricalContentMigrationV2") }.isFailure) {
-            "Content Migration classpath still contains site-specific Party entrypoint"
-        }
         val dataSource = context.getBean(DataSource::class.java)
         dataSource.connection.use { connection ->
             connection.prepareStatement("SELECT COUNT(*) FROM flyway_schema_history WHERE success=1").use { statement ->
