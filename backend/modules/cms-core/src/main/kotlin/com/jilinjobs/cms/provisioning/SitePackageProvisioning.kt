@@ -2,7 +2,6 @@ package com.jilinjobs.cms.provisioning
 
 import com.jilinjobs.cms.common.ContentImagePolicy
 import com.jilinjobs.cms.common.RichTextHtmlPolicy
-import com.jilinjobs.cms.navigation.NavigationOpenMode
 import com.jilinjobs.cms.navigation.NavigationTargetType
 import com.jilinjobs.cms.page.PageContentModel
 import com.jilinjobs.cms.page.PageContentOwner
@@ -117,7 +116,7 @@ data class SitePackageNavigationItem(
     val targetPageGroupAlias: String? = null,
     val targetPageAlias: String? = null,
     val targetUrl: String? = null,
-    val openMode: String = NavigationOpenMode.DEFAULT.name,
+    val openMode: String? = null,
     val iconPath: String? = null,
     val sortOrder: Int = 0,
     val enabled: Boolean = true,
@@ -279,7 +278,7 @@ class SitePackageLoader(private val objectMapper: ObjectMapper) {
             if (!it.locationCode.matches(STRUCTURE_CODE) || it.locationCode.length > 32) throw SitePackageValidationException("NavigationItem locationCode 不合法：${it.code}")
             if (it.category != null && it.category.length > 50) throw SitePackageValidationException("NavigationItem category 过长：${it.code}")
             if (runCatching { NavigationTargetType.valueOf(it.targetType) }.isFailure) throw SitePackageValidationException("NavigationItem targetType 不合法：${it.code}")
-            if (runCatching { NavigationOpenMode.valueOf(it.openMode) }.isFailure) throw SitePackageValidationException("NavigationItem openMode 不合法：${it.code}")
+            if (it.openMode != null && it.openMode !in setOf("_self", "_blank")) throw SitePackageValidationException("NavigationItem openMode 不合法：${it.code}")
             if (it.targetColumnAlias != null && !it.targetColumnAlias.matches(LOWER_ALIAS)) throw SitePackageValidationException("NavigationItem targetColumnAlias 不合法：${it.code}")
             if (it.targetPageGroupAlias != null && !it.targetPageGroupAlias.matches(LOWER_ALIAS)) throw SitePackageValidationException("NavigationItem targetPageGroupAlias 不合法：${it.code}")
             if (it.targetPageAlias != null && !it.targetPageAlias.matches(LOWER_ALIAS)) throw SitePackageValidationException("NavigationItem targetPageAlias 不合法：${it.code}")
@@ -819,7 +818,7 @@ class SitePackageProvisioner(
         val targetColumnId: Long?,
         val targetPageId: Long?,
         val targetUrl: String?,
-        val openMode: String,
+        val openMode: String?,
         val iconPath: String?,
         val sortOrder: Int,
         val enabled: Boolean,
