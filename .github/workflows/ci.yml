@@ -94,6 +94,34 @@ jobs:
           SITE_PACKAGE_VERIFY_DB_USERNAME: root
           SITE_PACKAGE_VERIFY_DB_PASSWORD: root
         run: gradle verifyLinkOpenModeMigration --no-daemon
+      - name: Prepare isolated Content Migration verification databases
+        run: |
+          docker run --rm --network host mysql:8.4 \
+            mysql -h127.0.0.1 -uroot -proot -e \
+            "CREATE DATABASE IF NOT EXISTS migration_boundary; CREATE DATABASE IF NOT EXISTS generic_content_migration; CREATE DATABASE IF NOT EXISTS generic_list_item_compatibility;"
+      - name: Verify Content Migration application boundary
+        working-directory: backend
+        env:
+          MIGRATION_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/migration_boundary?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          MIGRATION_VERIFY_DB_USERNAME: root
+          MIGRATION_VERIFY_DB_PASSWORD: root
+        run: gradle verifyContentMigrationBoundary --no-daemon
+      - name: Verify Generic Content Migration
+        working-directory: backend
+        env:
+          GENERIC_MIGRATION_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/generic_content_migration?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          GENERIC_MIGRATION_VERIFY_DB_USERNAME: root
+          GENERIC_MIGRATION_VERIFY_DB_PASSWORD: root
+        run: |
+          gradle verifyGenericContentMigration --no-daemon
+          gradle verifyGenericPageContentMigration --no-daemon
+      - name: Verify Generic ListItem compatibility
+        working-directory: backend
+        env:
+          GENERIC_COMPATIBILITY_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/generic_list_item_compatibility?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          GENERIC_COMPATIBILITY_VERIFY_DB_USERNAME: root
+          GENERIC_COMPATIBILITY_VERIFY_DB_PASSWORD: root
+        run: gradle verifyGenericListItemCompatibility --no-daemon
       - name: 计算 Backend Runtime fingerprint
         id: backend-fingerprint
         shell: bash
@@ -111,17 +139,35 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 发布已验证 Backend Runtime image
+      - name: 发布已验证 Backend / Content Migration Runtime image
         if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
         shell: bash
         env:
           BACKEND_IMAGE: ghcr.io/${{ github.repository }}-backend:${{ steps.backend-fingerprint.outputs.value }}
+          MIGRATION_IMAGE: ghcr.io/${{ github.repository }}-content-migration:${{ steps.backend-fingerprint.outputs.value }}
         run: |
           set -euo pipefail
-          docker build             --label "org.opencontainers.image.source=https://github.com/${{ github.repository }}"             --label "org.opencontainers.image.revision=${{ steps.backend-fingerprint.outputs.source_sha }}"             --label "io.jilinjobs.backend-fingerprint=${{ steps.backend-fingerprint.outputs.value }}"             -t "$BACKEND_IMAGE"             -f backend/Dockerfile.runtime             backend
+          docker build \
+            --label "org.opencontainers.image.source=https://github.com/${{ github.repository }}" \
+            --label "org.opencontainers.image.revision=${{ steps.backend-fingerprint.outputs.source_sha }}" \
+            --label "io.jilinjobs.backend-fingerprint=${{ steps.backend-fingerprint.outputs.value }}" \
+            -t "$BACKEND_IMAGE" \
+            -f backend/Dockerfile.runtime \
+            backend
+          docker build \
+            --label "org.opencontainers.image.source=https://github.com/${{ github.repository }}" \
+            --label "org.opencontainers.image.revision=${{ steps.backend-fingerprint.outputs.source_sha }}" \
+            --label "io.jilinjobs.backend-fingerprint=${{ steps.backend-fingerprint.outputs.value }}" \
+            -t "$MIGRATION_IMAGE" \
+            -f backend/Dockerfile.migration-runtime \
+            backend
           docker push "$BACKEND_IMAGE"
-          echo "Backend Runtime image：$BACKEND_IMAGE" >> "$GITHUB_STEP_SUMMARY"
-          echo "Backend source SHA：${{ steps.backend-fingerprint.outputs.source_sha }}" >> "$GITHUB_STEP_SUMMARY"
+          docker push "$MIGRATION_IMAGE"
+          {
+            echo "Backend Runtime image：$BACKEND_IMAGE"
+            echo "Content Migration Runtime image：$MIGRATION_IMAGE"
+            echo "Backend source SHA：${{ steps.backend-fingerprint.outputs.source_sha }}"
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload backend artifact
         uses: actions/upload-artifact@v7

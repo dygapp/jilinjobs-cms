@@ -26,7 +26,6 @@ val serverProject = project(":apps:cms-server")
 val migrationProject = project(":apps:content-migration")
 val serverSourceSets = serverProject.extensions.getByType<SourceSetContainer>()
 val migrationSourceSets = migrationProject.extensions.getByType<SourceSetContainer>()
-val jilinjobsSitePackageRoot = file("../sites/jilinjobs").absolutePath
 
 tasks.register<Delete>("clean") {
     dependsOn(":modules:cms-core:clean", ":apps:cms-server:clean", ":apps:content-migration:clean")
@@ -46,30 +45,12 @@ tasks.register("bootJar") {
     finalizedBy("verifyBackendApplicationBoundary")
 }
 
-tasks.register<JavaExec>("importCanonicalContent") {
+tasks.register<JavaExec>("runContentMigration") {
     group = "migration"
-    description = "Import a site-neutral canonical content migration snapshot"
+    description = "Run the site-neutral canonical Content Migration application"
     dependsOn(":apps:content-migration:classes")
     classpath = migrationSourceSets.getByName("main").runtimeClasspath
-    mainClass.set("com.jilinjobs.cms.migration.generic.GenericContentMigrationKt")
-}
-
-tasks.register<JavaExec>("importPartyHistoricalContent") {
-    group = "migration"
-    description = "Import the canonical Party historical-content dataset through the bounded Party adapter and Generic engine"
-    dependsOn(":apps:content-migration:classes")
-    classpath = migrationSourceSets.getByName("main").runtimeClasspath
-    mainClass.set("com.jilinjobs.cms.migration.PartyHistoricalContentMigrationV2Kt")
-    environment("CMS_SITE_PACKAGE_ROOT", jilinjobsSitePackageRoot)
-}
-
-tasks.register<JavaExec>("importPartyCarousel") {
-    group = "migration"
-    description = "Import the Party carousel canonical dataset through compatibility guards and the Generic engine"
-    dependsOn(":apps:content-migration:classes")
-    classpath = migrationSourceSets.getByName("main").runtimeClasspath
-    mainClass.set("com.jilinjobs.cms.migration.PartyCarouselMigrationV2Kt")
-    environment("CMS_SITE_PACKAGE_ROOT", jilinjobsSitePackageRoot)
+    mainClass.set("com.jilinjobs.cms.ContentMigrationApplicationKt")
 }
 
 tasks.register<JavaExec>("provisionSitePackage") {
@@ -150,7 +131,7 @@ tasks.register<JavaExec>("verifyPageContentAdoption") {
 
 tasks.register<JavaExec>("verifyContentMigrationBoundary") {
     group = "verification"
-    description = "Verify Content Migration is non-web, excludes Server transport and composes Core/Flyway/Party capabilities"
+    description = "Verify Content Migration is non-web, excludes Server transport and composes only site-neutral migration capabilities"
     configureMigrationVerification("com.jilinjobs.cms.ContentMigrationBoundaryVerificationKt")
 }
 
@@ -166,22 +147,10 @@ tasks.register<JavaExec>("verifyGenericPageContentMigration") {
     configureMigrationVerification("com.jilinjobs.cms.GenericPageContentMigrationVerificationKt")
 }
 
-tasks.register<JavaExec>("verifyPartyMigrationSourceAuthority") {
+tasks.register<JavaExec>("verifyGenericListItemCompatibility") {
     group = "verification"
-    description = "Verify EU-48 Party current authority stays dataset-owned and Generic package stays Party-free"
-    configureMigrationVerification("com.jilinjobs.cms.PartyMigrationDespecializationVerificationKt")
-}
-
-tasks.register<JavaExec>("verifyPartyMigrationCompatibilityRuntime") {
-    group = "verification"
-    description = "Verify EU-48 Party old-state compatibility guards, in-place transition and Generic post-transition SKIP"
-    configureMigrationVerification("com.jilinjobs.cms.PartyMigrationCompatibilityRuntimeVerificationKt")
-}
-
-tasks.register("verifyPartyMigrationDespecialization") {
-    group = "verification"
-    description = "Verify EU-48 Party authority separation, bounded compatibility and Generic steady-state delegation"
-    dependsOn("verifyPartyMigrationSourceAuthority", "verifyPartyMigrationCompatibilityRuntime")
+    description = "Verify site-neutral ListItem compatibility guards, in-place transition and post-transition idempotency"
+    configureMigrationVerification("com.jilinjobs.cms.GenericListItemCompatibilityVerificationKt")
 }
 
 tasks.register("verifyBackendApplicationBoundary") {
@@ -209,11 +178,11 @@ tasks.register("verifyBackendApplicationBoundary") {
 
         val migrationEntries = jarEntries(migrationJar)
         require("BOOT-INF/classes/com/jilinjobs/cms/ContentMigrationApplication.class" in migrationEntries) { "Migration application class missing" }
-        require(migrationEntries.any { it.startsWith("BOOT-INF/classes/com/jilinjobs/cms/migration/PartyHistoricalContentMigrationV2") }) {
-            "Migration BootJar is missing Party migration classes"
-        }
         require(migrationEntries.any { it.startsWith("BOOT-INF/classes/com/jilinjobs/cms/migration/generic/GenericContentMigration") }) {
             "Migration BootJar is missing Generic content migration classes"
+        }
+        require(migrationEntries.any { it.startsWith("BOOT-INF/classes/com/jilinjobs/cms/migration/generic/GenericListItemCompatibility") }) {
+            "Migration BootJar is missing Generic compatibility classes"
         }
         val forbiddenServerClasses = listOf(
             "BOOT-INF/classes/com/jilinjobs/cms/CmsApplication.class",

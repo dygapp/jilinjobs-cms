@@ -1,26 +1,21 @@
 {
   "legacyKey": "party-carousel:position:2",
   "sourceOrder": 2,
+  "sourceType": "ARTICLE",
   "title": "吉林省高等学校毕业生就业指导中心学习贯彻习近平新时代中国特色社会主义思想主题教育",
-  "url": "https://24365.jl.smartedu.cn/detail.html?content_id=154659859759104",
+  "sourceProvenanceUrl": "https://24365.jl.smartedu.cn/detail.html?content_id=154659859759104",
+  "articleReference": {
+    "sourceSystem": "legacy-jilinjobs",
+    "legacyKey": "zhutijiaoyu:content:154659859759104"
+  },
   "openMode": "NEW_WINDOW",
+  "enabled": true,
   "sourceFingerprint": "f8b5d8df87021373803639b174bf88e46ae6cef7f2599a205763b5887c78be84",
   "image": {
     "sourceUrl": "https://24365.jl.smartedu.cn/group1/cms/t_biz_attachment/content1/2023-05-08/low/a0b72690-64a3-43aa-9c3a-d08cd3ca783f.png",
-    "originalReference": "/group1/cms/t_biz_attachment/content1/2023-05-08/low/a0b72690-64a3-43aa-9c3a-d08cd3ca783f.png",
     "snapshotPath": "assets/a00db48e094e24b778374ae621b6f150e235625c62f17efc860391223fac830b.png",
     "sha256": "a00db48e094e24b778374ae621b6f150e235625c62f17efc860391223fac830b",
     "contentType": "image/png",
     "sizeBytes": 146958
-  },
-  "evidence": {
-    "sourceHref": "detail.html?content_id=154659859759104",
-    "sourceImageReference": "/group1/cms/t_biz_attachment/content1/2023-05-08/low/a0b72690-64a3-43aa-9c3a-d08cd3ca783f.png",
-    "sourceTarget": "_blank"
-  },
-  "sourceType": "ARTICLE",
-  "articleRef": {
-    "sourceSystem": "legacy-jilinjobs",
-    "legacyKey": "zhutijiaoyu:content:154659859759104"
   }
 }

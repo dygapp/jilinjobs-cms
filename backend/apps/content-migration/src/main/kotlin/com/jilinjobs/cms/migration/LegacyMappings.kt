@@ -73,6 +73,16 @@ interface CmsListItemLegacyMappingMapper {
         """,
     )
     fun insert(record: CmsListItemLegacyMappingRecord): Int
+
+    @org.apache.ibatis.annotations.Update(
+        """
+        UPDATE cms_list_item_legacy_mapping
+        SET source_url=#{sourceUrl}, source_fingerprint=#{sourceFingerprint},
+            image_source_url=#{imageSourceUrl}, image_sha256=#{imageSha256}
+        WHERE id=#{id}
+        """,
+    )
+    fun update(record: CmsListItemLegacyMappingRecord): Int
 }
 
 data class CmsListItemLegacyMappingRecord(

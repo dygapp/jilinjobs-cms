@@ -16,7 +16,6 @@ import com.jilinjobs.cms.migration.generic.CanonicalListItemReference
 import com.jilinjobs.cms.migration.generic.CanonicalMigrationResource
 import com.jilinjobs.cms.migration.generic.GenericContentMigrationService
 import com.jilinjobs.cms.migration.generic.GenericMigrationPhase
-import com.jilinjobs.cms.migration.generic.main as runGenericCli
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 import java.nio.charset.StandardCharsets
@@ -91,32 +90,18 @@ fun main() {
             "--cms.static.root=$staticRoot",
             "--spring.main.banner-mode=off",
         )
-        val taskOutput = ByteArrayOutputStream()
-        val originalOut = System.out
-        var taskFailure: Throwable? = null
-        try {
-            System.setOut(PrintStream(taskOutput, true, StandardCharsets.UTF_8))
-            taskFailure = runCatching {
-                runGenericCli(arrayOf(validRoot.toString(), *commonArgs))
-            }.exceptionOrNull()
-        } finally {
-            System.setOut(originalOut)
-        }
-        require(taskFailure != null) { "Fingerprint conflict must produce non-success importCanonicalContent semantics" }
-        require(taskOutput.toString(StandardCharsets.UTF_8).contains("CONTENT_MIGRATION_REPORT")) { "Generic task report label missing" }
-        require(dataSource.connection.use(::snapshotCounts) == afterFirst) { "Task conflict preflight mutated Runtime data" }
-
         val dispatcherOutput = ByteArrayOutputStream()
+        val originalOut = System.out
         var dispatcherFailure: Throwable? = null
         try {
             System.setOut(PrintStream(dispatcherOutput, true, StandardCharsets.UTF_8))
             dispatcherFailure = runCatching {
-                main(arrayOf("generic-content", validRoot.toString(), *commonArgs))
+                main(arrayOf(validRoot.toString(), *commonArgs))
             }.exceptionOrNull()
         } finally {
             System.setOut(originalOut)
         }
-        require(dispatcherFailure != null) { "Fingerprint conflict must produce non-success generic-content command semantics" }
+        require(dispatcherFailure != null) { "Fingerprint conflict must produce non-success Content Migration command semantics" }
         require(dispatcherOutput.toString(StandardCharsets.UTF_8).contains("CONTENT_MIGRATION_REPORT")) { "Generic dispatcher report label missing" }
         require(dataSource.connection.use(::snapshotCounts) == afterFirst) { "Dispatcher conflict preflight mutated Runtime data" }
 

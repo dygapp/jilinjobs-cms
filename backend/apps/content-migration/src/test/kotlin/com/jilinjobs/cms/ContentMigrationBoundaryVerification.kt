@@ -1,7 +1,8 @@
 package com.jilinjobs.cms
 
 import com.jilinjobs.cms.column.ColumnMapper
-import com.jilinjobs.cms.migration.PartyHistoricalContentMigrationV2Service
+import com.jilinjobs.cms.migration.generic.GenericContentMigrationService
+import com.jilinjobs.cms.migration.generic.GenericListItemCompatibilityService
 import com.jilinjobs.cms.provisioning.SitePackageLoader
 import javax.sql.DataSource
 import org.springframework.boot.WebApplicationType
@@ -35,7 +36,8 @@ fun main() {
         }
         context.getBean(SitePackageLoader::class.java)
         context.getBean(ColumnMapper::class.java)
-        context.getBean(PartyHistoricalContentMigrationV2Service::class.java)
+        context.getBean(GenericContentMigrationService::class.java)
+        context.getBean(GenericListItemCompatibilityService::class.java)
         val dataSource = context.getBean(DataSource::class.java)
         dataSource.connection.use { connection ->
             connection.prepareStatement("SELECT COUNT(*) FROM flyway_schema_history WHERE success=1").use { statement ->
