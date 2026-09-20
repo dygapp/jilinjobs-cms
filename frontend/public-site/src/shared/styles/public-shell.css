@@ -35,7 +35,7 @@
   padding:0 8px;
   color:#fff;
   font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;
-  font-size:16px;
+  font-size:18px;
   font-weight:700;
   text-decoration:none;
   white-space:nowrap;
@@ -71,7 +71,7 @@
   align-items:center;
   padding:0 15px;
   color:var(--shared-nav-sub-color);
-  font-size:16px;
+  font-size:17px;
   font-weight:700;
   line-height:1.5;
   text-decoration:none;
@@ -125,7 +125,7 @@
   .shared-public-nav-root{display:none;height:auto;width:100%;padding:4px 12px 10px}
   .shared-public-navigation.is-open .shared-public-nav-root{display:block}
   .shared-public-nav-item{text-align:left}
-  .shared-public-nav-link{height:auto;min-height:42px;justify-content:flex-start;padding:12px;overflow:visible;text-overflow:clip}
+  .shared-public-nav-link{height:auto;min-height:42px;justify-content:flex-start;padding:12px;font-size:16px;overflow:visible;text-overflow:clip}
   .shared-public-nav-children{
     display:block;
     position:static;
@@ -139,7 +139,7 @@
   }
   .shared-public-nav-item.navigation-dismissed>.shared-public-nav-children{display:block}
   .shared-public-nav-children li{min-width:0;width:100%;min-height:0;border-bottom:1px solid rgba(255,255,255,.16)}
-  .shared-public-nav-children a,.shared-public-nav-children span{min-height:0;padding:8px 12px;color:#fff;font-size:14px;white-space:normal}
+  .shared-public-nav-children a,.shared-public-nav-children span{min-height:0;padding:8px 12px;color:#fff;font-size:15px;white-space:normal}
   .shared-public-nav-children a:hover,.shared-public-nav-children li.active>a{background:rgba(255,255,255,.12);color:#fff}
   .shared-public-footer-layout{display:block}
   .shared-public-footer-badges{justify-content:flex-start;margin-top:16px;min-width:0}
