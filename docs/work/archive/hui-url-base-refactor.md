@@ -1,6 +1,6 @@
 # HUI-URL-BASE-REFACTOR：慧就业地址公共部分抽取
 
-状态：`READY TO INTEGRATE`
+状态：`COMPLETED`
 
 ## 目标与范围
 
@@ -28,3 +28,17 @@
 - `npm run build`：`PASS`，覆盖 Public 源码边界检查、`vue-tsc --noEmit` 与 Vite 生产构建。
 - 最终源码差异复核：`PASS`，六个页面 URL 统一使用 `HUI_EMPLOYMENT_PAGE_BASE_URL`，原有 `/4/22`、`/4/23`、`/4/24`、`/4/25`、`/4/30` 与 `/5/27` 业务路径后缀保持不变。
 - `node scripts/verify-docs-governance.mjs` 与 `git diff --check`：`PASS`。
+
+## 集成与闭环证据
+
+- 实现 PR：#198，已 squash 合并；
+- 完成态 PR Head：`4510c8eec53b8f7a39bafe61207532ee9659eaaa`；
+- 实际集成提交：`df6618700fc615ff2f23d40c1074a55df0518ff4`；
+- PR 文档治理：Run `35526149522` / #217，`PASS`；
+- PR 快速 CI：Run `35526149579` / #30，`PASS`；
+- 集成后 `main` 文档治理：Run `35526324868` / #218，`PASS`；
+- 集成后 `main` 完整 CI：Run `35526324797` / #1234，`PASS`；
+- 集成后 Backend、Public、Admin、Integrated browser verification：均 `PASS`；
+- 本归档只关闭 Work lifecycle，不改变产品行为、Specification、Runtime 或测试。
+
+本次未执行 Production Deployment / Release。
