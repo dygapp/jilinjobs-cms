@@ -192,7 +192,7 @@ jobs:
           node-version: "24"
       - name: Install public site dependencies
         working-directory: frontend/public-site
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Build public site
         working-directory: frontend/public-site
         run: npm run build
@@ -332,7 +332,7 @@ jobs:
             -v "$GITHUB_WORKSPACE/frontend/public-site:/work" \
             -w /work \
             mcr.microsoft.com/playwright:v1.61.0-noble \
-            bash -lc 'npm install --no-audit --no-fund && npm run test:e2e'
+            bash -lc 'npm ci --no-audit --no-fund && npm run test:e2e'
       - name: Run admin browser verification
         if: ${{ hashFiles('frontend/admin/tests/e2e/*.spec.ts') != '' }}
         timeout-minutes: 8
@@ -550,7 +550,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 scripts/verify-review-runtime.py http://127.0.0.1:5173 | tee review-baseline-runtime.json
-          docker run --rm --init --ipc=host --network host             -e CI=true             -e CI_EXTERNAL_WEB_SERVER=true             -e PARTY_MIGRATION_RUNTIME=true             -v "$GITHUB_WORKSPACE/frontend/public-site:/work"             -w /work             mcr.microsoft.com/playwright:v1.61.0-noble             bash -lc 'npm install --no-audit --no-fund && npx playwright test tests/e2e/party-migration-runtime.spec.ts --project=chromium --reporter=line'
+          docker run --rm --init --ipc=host --network host             -e CI=true             -e CI_EXTERNAL_WEB_SERVER=true             -e PARTY_MIGRATION_RUNTIME=true             -v "$GITHUB_WORKSPACE/frontend/public-site:/work"             -w /work             mcr.microsoft.com/playwright:v1.61.0-noble             bash -lc 'npm ci --no-audit --no-fund && npx playwright test tests/e2e/party-migration-runtime.spec.ts --project=chromium --reporter=line'
 
       - name: 发布新 Review Baseline image
         if: steps.baseline-cache.outputs.exists == 'false'
