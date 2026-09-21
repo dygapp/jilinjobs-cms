@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
-  contents: write
+  contents: read
   packages: read
 
 env:
@@ -70,7 +70,7 @@ jobs:
                 public=true
                 admin=true
                 ;;
-              backend/Dockerfile.runtime|backend/.dockerignore|frontend/Dockerfile.runtime|scripts/backend-runtime-fingerprint.sh|scripts/frontend-runtime-fingerprint.sh|scripts/review-baseline-fingerprint.sh|scripts/review-verification-fingerprint.sh|scripts/prepare-review-baseline.sh|scripts/restore-review-baseline.sh|scripts/verify-review-runtime.py|.github/workflows/fast-ci.yml|.github/workflows/ci.yml|.github/workflows/review-environment.yml)
+              backend/Dockerfile.runtime|backend/.dockerignore|frontend/Dockerfile.runtime|scripts/backend-runtime-fingerprint.sh|scripts/frontend-runtime-fingerprint.sh|scripts/review-baseline-fingerprint.sh|scripts/review-verification-fingerprint.sh|scripts/prepare-review-baseline.sh|scripts/restore-review-baseline.sh|scripts/start-review-runtime.sh|scripts/apply-human-review-fixture.sh|scripts/verify-review-runtime.py|.github/workflows/fast-ci.yml|.github/workflows/ci.yml|.github/workflows/review-environment.yml)
                 public=true
                 admin=true
                 ci_runtime=true
@@ -171,35 +171,8 @@ jobs:
         if: steps.changes.outputs.public == 'true'
         working-directory: frontend/public-site
         run: |
-          npm install --no-audit --no-fund
+          npm ci --no-audit --no-fund
           npm run build
-
-      - name: 上传 Public lockfile candidate
-        if: steps.changes.outputs.public == 'true'
-        uses: actions/upload-artifact@v7
-        with:
-          name: public-package-lock-candidate
-          path: frontend/public-site/package-lock.json
-          if-no-files-found: error
-          retention-days: 1
-
-      - name: 提交 Public package-lock
-        if: steps.changes.outputs.public == 'true'
-        shell: bash
-        env:
-          HEAD_REF: ${{ github.event.pull_request.head.ref }}
-        run: |
-          set -euo pipefail
-          if git ls-files --error-unmatch frontend/public-site/package-lock.json >/dev/null 2>&1; then
-            echo "Public package-lock 已受版本控制。"
-            exit 0
-          fi
-          test -f frontend/public-site/package-lock.json
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add frontend/public-site/package-lock.json
-          git commit -m "build(public): 锁定 npm 依赖"
-          git push origin "HEAD:$HEAD_REF"
 
       - name: 安装并构建 Admin
         if: steps.changes.outputs.admin == 'true'
