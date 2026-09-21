@@ -53,6 +53,23 @@ canonical_root="$repo_root/data-migrations/party/v1"
 test -f "$canonical_root/manifest.json"
 test -f "$canonical_root/index.ndjson"
 test -f "$canonical_root/lists/PARTY_CAROUSEL/index.json"
+jq --exit-status '
+  (.status == "accepted-canonical" or .status == "candidate-extension")
+  and (if .status == "candidate-extension" then
+    .candidateExtension.status == "pending-human-review"
+    and .candidateExtension.acceptedEu29Articles == .acceptedSnapshot.articles
+    and .candidateExtension.runtimeDatasetArticles == (.acceptedSnapshot.articles + .candidateExtension.addedArticles)
+    and .candidateExtension.reportedTotal == .candidateExtension.addedArticles
+    and .candidateExtension.unresolved == 0
+  else true end)
+  and .acceptedSnapshot.articles == 181
+  and .acceptedSnapshot.internalArticles == 120
+  and .acceptedSnapshot.externalArticles == 61
+  and .acceptedSnapshot.carouselItems == 4
+  and .acceptedSnapshot.unresolved == 0
+  and .acceptedSnapshot.artifactDigest == "sha256:230ac0df997b3dc913ed38503a8289eae30d8bb0a455fd858e388ddc27066148"
+' "$canonical_root/manifest.json" >/dev/null
+test "$(find runtime-static -maxdepth 1 -type d -name 'verification-*' | wc -l)" -eq 0
 
 docker run --rm --network host \
   -e 'DB_URL=jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true' \
@@ -86,10 +103,12 @@ trap - EXIT
 
 docker run --rm --network host mysql:8.4 \
   mysqldump -h127.0.0.1 -uroot -proot --single-transaction --skip-comments --no-tablespaces jilinjobs_cms \
-  | gzip -9 > review-baseline-build/database.sql.gz
+  | gzip -9n > review-baseline-build/database.sql.gz
 
-tar -C runtime-static -czf review-baseline-build/runtime-static.tar.gz .
-tar -C runtime-uploads -czf review-baseline-build/runtime-uploads.tar.gz .
+tar --sort=name --mtime='UTC 1970-01-01' --owner=0 --group=0 --numeric-owner -C runtime-static -cf - . \
+  | gzip -9n > review-baseline-build/runtime-static.tar.gz
+tar --sort=name --mtime='UTC 1970-01-01' --owner=0 --group=0 --numeric-owner -C runtime-uploads -cf - . \
+  | gzip -9n > review-baseline-build/runtime-uploads.tar.gz
 
 python3 - <<'PY'
 import hashlib, json, os
