@@ -81,9 +81,32 @@ for item, source in zip(items, expected):
         'imageSha256': digest,
     })
 
+main_subset_evidence = {}
+baseline_manifest_path = Path('review-baseline-restore/manifest.json')
+if baseline_manifest_path.is_file():
+    baseline_manifest = json.loads(baseline_manifest_path.read_text(encoding='utf-8'))
+    main_subset = baseline_manifest.get('mainReviewSubset')
+    if main_subset:
+        assert main_subset['policy']['kind'] == 'latest-per-column', main_subset
+        assert main_subset['policy']['perColumn'] == 30, main_subset
+        for expected_column in main_subset['columns']:
+            alias = expected_column['columnAlias']
+            column = get('/api/public/columns/by-alias/' + alias)
+            result = get(f"/api/public/articles?columnId={column['id']}&page=0&size=100")
+            assert result['total'] >= expected_column['selected'], (alias, result['total'], expected_column['selected'])
+            titles = {item['title'] for item in result['items']}
+            assert expected_column['latestTitle'] in titles, (alias, expected_column['latestTitle'])
+            main_subset_evidence[alias] = {
+                'selected': expected_column['selected'],
+                'runtimeTotal': result['total'],
+                'latestTitle': expected_column['latestTitle'],
+                'latestPublishDate': expected_column['latestPublishDate'],
+            }
+
 print(json.dumps({
     'base': base,
     'status': manifest['status'],
     'columns': counts,
     'carousel': evidence,
+    'mainReviewSubset': main_subset_evidence,
 }, ensure_ascii=False))
