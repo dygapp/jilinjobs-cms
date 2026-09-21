@@ -276,6 +276,17 @@ Generic schema
 
 Baseline 使用 logical database dump 与文件归档，不缓存 MySQL raw datadir。Human Review fixture 不进入 baseline；它仍由每次评审启动在 baseline 恢复后单独注入。
 
+当完整 Historical Migration 数据量显著大于人工评审和浏览器验证所需规模时，Review Baseline 可以从**已接受的 canonical dataset** 派生有界测试子集，但必须保持以下约束：
+
+- 原始 canonical dataset、manifest、provenance 与 acceptance 状态不被裁剪或改写；
+- 派生选择只使用 Repository-owned canonical bytes，不重新访问 Legacy Source；
+- 栏目 / scope 集合来自当前 canonical migration authority，不在 Backend / Generic Migration 中硬编码站点业务；
+- 选择算法与数量上限进入 Review Baseline fingerprint；
+- 派生结果仍使用同一个 Generic Content Migration contract 导入，不建立 Main / Party 专用 migration command；
+- baseline manifest 记录派生策略、源 dataset digest、各 scope 选中数量与可验证摘要。
+
+当前主站评审数据采用 latest-per-column 子集，以 `data-migrations/main/source-surfaces.json#articleSurfaces` 为栏目集合；具体每栏目数量由当前 Review Baseline execution contract 持有。该子集是验证运行时数据，不是新的 Historical Migration Authority。
+
 已验证 baseline 以 immutable image 保存：
 
 ~~~text
