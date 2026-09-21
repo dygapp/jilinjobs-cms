@@ -70,7 +70,7 @@ jobs:
                 public=true
                 admin=true
                 ;;
-              backend/Dockerfile.runtime|backend/.dockerignore|frontend/Dockerfile.runtime|scripts/backend-runtime-fingerprint.sh|scripts/frontend-runtime-fingerprint.sh|scripts/review-baseline-fingerprint.sh|scripts/review-verification-fingerprint.sh|scripts/prepare-review-baseline.sh|scripts/restore-review-baseline.sh|scripts/start-review-runtime.sh|scripts/apply-human-review-fixture.sh|scripts/verify-review-runtime.py|.github/workflows/fast-ci.yml|.github/workflows/ci.yml|.github/workflows/review-environment.yml)
+              backend/Dockerfile.runtime|backend/.dockerignore|frontend/Dockerfile.runtime|scripts/backend-runtime-fingerprint.sh|scripts/frontend-runtime-fingerprint.sh|scripts/review-baseline-fingerprint.sh|scripts/review-verification-fingerprint.sh|scripts/prepare-review-baseline.sh|scripts/build-main-review-subset.py|scripts/restore-review-baseline.sh|scripts/start-review-runtime.sh|scripts/apply-human-review-fixture.sh|scripts/verify-review-runtime.py|.github/workflows/fast-ci.yml|.github/workflows/ci.yml|.github/workflows/review-environment.yml)
                 public=true
                 admin=true
                 ci_runtime=true
