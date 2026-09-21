@@ -92,8 +92,8 @@ if baseline_manifest_path.is_file():
         for expected_column in main_subset['columns']:
             alias = expected_column['columnAlias']
             column = get('/api/public/columns/by-alias/' + alias)
-            result = get(f"/api/public/articles?columnId={column['id']}&page=0&size=100")
-            assert result['total'] >= expected_column['selected'], (alias, result['total'], expected_column['selected'])
+            result = get(f"/api/public/articles?columnId={column['id']}&page=0&size=50")
+            assert result['total'] == expected_column['selected'], (alias, result['total'], expected_column['selected'])
             titles = {item['title'] for item in result['items']}
             assert expected_column['latestTitle'] in titles, (alias, expected_column['latestTitle'])
             main_subset_evidence[alias] = {
