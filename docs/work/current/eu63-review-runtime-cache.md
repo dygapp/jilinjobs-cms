@@ -58,6 +58,8 @@ Baseline 内容只包括：
 
 `Generic schema → Site Definition → stable assets → canonical historical migration`
 
+其中主站不为评审环境导入全部历史文章。Review Baseline 从已接受的 `data-migrations/main/v1` 派生测试子集，以 `data-migrations/main/source-surfaces.json#articleSurfaces` 作为栏目集合，每个栏目按 `publishDate DESC, sourceOrder ASC, legacyKey ASC` 选取最新 30 条，再交给同一个 Generic Content Migration 导入。完整主站 canonical dataset 保持不变，派生子集不成为新的 Historical Migration Authority。
+
 Human Review fixture 不进入 baseline，每次人工评审恢复 baseline 后单独注入。
 
 ### 3. 评审验证标识
@@ -101,6 +103,7 @@ Human Review fixture 不进入 baseline，每次人工评审恢复 baseline 后�
 10. 文档治理、Workflow 验证、完整 CI 与真实人工评审环境启动验证均通过。
 11. Public / Admin 依赖由受版本控制的 lockfile 固定，并通过 `npm ci` 复现。
 12. 同一 Frontend Runtime / Review Baseline / Review Verification fingerprint 不覆盖既有 GHCR artifact；cache-hit 时保持 producer SHA 并显式复用。
+13. 主站评审数据只从 accepted canonical dataset 派生，每个 article surface 导入最新 30 条；选择策略、栏目集合和派生脚本参与 Review Baseline identity，完整 canonical dataset 不被裁剪或改写。
 
 ## 完成条件
 
