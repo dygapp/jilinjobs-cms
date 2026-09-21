@@ -5,7 +5,7 @@ status: active
 relations:
   verification:
     - docs/technical/verification-strategy.md
-updated_at: 2026-09-20
+updated_at: 2026-09-21
 ---
 
 # GitHub Actions CI 验证运行时
@@ -202,41 +202,128 @@ UNKNOWN_ERROR
 当前方案不通过长期共享 Backend service 连接不同 Runner。
 
 
-## 11. 人工评审环境的运行时复用
+## 11. 人工评审环境的 verified Runtime 复用
 
-人工评审环境同样运行于 GitHub-hosted Runner，因此不得重复承担完整 CI 已经完成的 Backend / Content Migration 编译职责。
+人工评审环境同样运行于 GitHub-hosted Runner。完整 CI 已经完成并能够以稳定 build-input identity 证明的高成本工作，不应在每次人工评审启动时重新执行。
 
-目标 Head 的 `backend/**` build-input fingerprint 同时标识两个配套 Runtime artifact：
+### 11.1 四级 Runtime identity
+
+当前人工评审复用链分为四个独立 identity：
 
 ~~~text
-ghcr.io/dygapp/jilinjobs-cms-backend:<fingerprint>
-ghcr.io/dygapp/jilinjobs-cms-content-migration:<fingerprint>
+Backend fingerprint
+Frontend Runtime fingerprint
+Review Data Baseline fingerprint
+Review Verification fingerprint
 ~~~
 
-两个 image 都只能由完整 CI 在对应 exact Head 的 Backend / Content Migration verification 成功后发布。人工评审 Workflow 对目标 Head：
+Repository commit SHA 继续表示目标源码 provenance；上述 fingerprint 只标识各自真实输入形成的 immutable artifact / evidence identity。不同 Repository SHA 如果对应 fingerprint 完全一致，可以按当前证据复用规则消费同一 verified artifact，但不得把 producer SHA 改称 target SHA。
 
-- checkout 仍用于 Frontend、Site Package、canonical migration data 与 Review fixture；
-- 计算同一 Backend fingerprint；
-- 必须命中并拉取两个 verified image；
-- 不安装 Java / Gradle；
-- 不执行 Backend / Content Migration 本地编译；
-- Fresh MySQL、Frontend build、AI / Browser verification、人工基线重置、canonical migration、FRP 与租约仍由 Review Workflow 持有；
-- canonical migration data 作为运行时挂载输入传给 Content Migration image，不打包进 image；
-- verified image 缺失、Registry 权限失败或无法确认 provenance 时失败关闭，不静默退回未验证的现场构建。
+### 11.2 Backend / Content Migration Runtime
 
-人工评审环境产生的是 Human Review Runtime evidence；它不因为复用 verified image 取代完整 CI 的 exact-head completion evidence。
+目标 Head 的 `backend/**` fingerprint 继续标识两个配套 Runtime artifact：
+
+~~~text
+ghcr.io/dygapp/jilinjobs-cms-backend:<backend-fingerprint>
+ghcr.io/dygapp/jilinjobs-cms-content-migration:<backend-fingerprint>
+~~~
+
+两个 image 只能由完整 Backend verification 成功的完整 CI 发布。人工评审不得现场安装 Java / Gradle、重新编译或在 image miss 时降级构建。
+
+### 11.3 Frontend Runtime
+
+Frontend Runtime fingerprint 由真正影响 Public / Admin build 与 Review gateway 的输入形成，至少包括：
+
+- `frontend/public-site/**`；
+- `frontend/admin/**`；
+- `frontend/nginx.e2e.conf`；
+- Frontend Runtime Dockerfile 与 fingerprint contract 自身。
+
+完整 CI 必须先从目标 exact Head 完成 Public / Admin formal build 与 Integrated Browser verification，再把本次已验证的 `dist` 组装为：
+
+~~~text
+ghcr.io/dygapp/jilinjobs-cms-frontend-runtime:<frontend-fingerprint>
+~~~
+
+人工评审命中该 image 后不得重新执行 Node setup、npm install / ci 或 frontend build。
+
+### 11.4 Review Data Baseline
+
+Review Data Baseline 表示可重新生成的人工评审 canonical 数据起点，而不是 ordinary Runtime DB 的长期备份。
+
+Baseline fingerprint 至少覆盖：
+
+- Backend Runtime fingerprint；
+- MySQL Runtime contract；
+- `backend/modules/cms-core/src/main/resources/db/**`；
+- `sites/jilinjobs/**`；
+- `data-migrations/**`；
+- baseline preparation contract 自身。
+
+Baseline 内容按架构顺序产生：
+
+~~~text
+Generic schema
+→ Site Definition
+→ stable assets
+→ canonical Historical Migration
+→ logical DB snapshot + runtime-static + runtime-uploads
+~~~
+
+Baseline 使用 logical database dump 与文件归档，不缓存 MySQL raw datadir。Human Review fixture 不进入 baseline；它仍由每次评审启动在 baseline 恢复后单独注入。
+
+已验证 baseline 以 immutable image 保存：
+
+~~~text
+ghcr.io/dygapp/jilinjobs-cms-review-baseline:<review-baseline-fingerprint>
+~~~
+
+### 11.5 Review Verification marker
+
+Review Verification fingerprint 由 Backend / Frontend / Baseline identity 与会改变 Review Browser claim 的测试、配置和 verification contract 输入形成。
+
+只有完整 CI 已经同时证明：
+
+- Backend / Public / Admin formal verification；
+- Integrated Browser verification；
+- Review Baseline 可生成、恢复并满足 canonical runtime invariant；
+- 对恢复后的 Review Runtime 执行的 bounded browser probe 通过；
+
+才允许发布 matching verified marker：
+
+~~~text
+ghcr.io/dygapp/jilinjobs-cms-review-verification:<review-verification-fingerprint>
+~~~
+
+marker 只证明其 fingerprint 对应的自动化 claim 已被完整 CI 验证；它不替代 Human Runtime Observation。
+
+### 11.6 人工评审快速路径
+
+人工评审 Workflow 对目标 Head：
+
+1. checkout 只用于计算 fingerprint、读取 Review fixture / 外部运行配置及保留 target provenance；
+2. 必须命中 Backend、Content Migration、Frontend Runtime、Review Baseline 与 Review Verification marker；
+3. 恢复 logical DB snapshot、`runtime-static` 与 `runtime-uploads`；
+4. 启动 Backend 与 Frontend Runtime；
+5. 注入 Human Review fixture；
+6. 执行有界 Runtime smoke、外部地址、FRP ownership 与 lease 验证；
+7. 开放人工评审。
+
+matching verified marker 命中时，不重新执行 canonical migration 或完整 Playwright E2E。任一 artifact / marker 缺失、Registry 权限失败、fingerprint / provenance 无法确认时必须失败关闭，并要求目标 Head 先完成完整 CI；不得在人工评审 Workflow 中现场降级构建。
+
+完整 CI 仍拥有 exact-Head Completion verification；人工评审 Runtime 复用只是启动优化，不降低最终验证要求。
 
 ## 12. 构建缓存与生成物
 
 存储职责保持分离：
 
-- Git Repository：源码、Dockerfile、Workflow、脚本与 Authority；
-- GHCR：完整 CI 验证后可复用的 Backend / Content Migration Runtime image；
-- Actions Artifact：测试报告、诊断和短期构建证据；
+- Git Repository：源码、Dockerfile、Workflow、fingerprint / baseline contract 脚本与 Authority；
+- GHCR：完整 CI 产生并验证的 Backend / Content Migration Runtime、Frontend Runtime、Review Data Baseline 与 Review Verification marker；
+- Actions Artifact：测试报告、诊断、manifest 与短期构建证据；
 - Actions Cache：npm / Gradle 等可丢失的依赖缓存；
 - Release Asset：正式发布物（需要时）。
 
-Cache 不承担 artifact authority，Git 不存储构建二进制。
+GHCR artifact 必须保留 fingerprint 与 producer source SHA 等 provenance。Cache 不承担 artifact authority，Git 不存储生成二进制或数据库快照。
 
 ## 13. 可复用原则
 
