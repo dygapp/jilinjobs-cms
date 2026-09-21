@@ -81,6 +81,20 @@ jobs:
           docker pull "$baseline_image"
           docker pull "$verification_image"
 
+          marker_id="$(docker create "$verification_image")"
+          docker cp "$marker_id:/verification.json" review-verification.json
+          docker rm -f "$marker_id" >/dev/null
+          jq --exit-status \
+            --arg backend "$backend" \
+            --arg frontend "$frontend" \
+            --arg baseline "$baseline" \
+            --arg verification "$verification" \
+            '.backendFingerprint == $backend
+             and .frontendFingerprint == $frontend
+             and .baselineFingerprint == $baseline
+             and .verificationFingerprint == $verification' \
+            review-verification.json >/dev/null
+
           test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.backend-fingerprint" }}' "$backend_image")" = "$backend"
           test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.frontend-runtime-fingerprint" }}' "$frontend_image")" = "$frontend"
           test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.review-baseline-fingerprint" }}' "$baseline_image")" = "$baseline"
@@ -235,6 +249,7 @@ jobs:
             review-local-runtime.json
             review-external-runtime.json
             review-external-owner.json
+            review-verification.json
             review-baseline-restore/manifest.json
           if-no-files-found: error
           retention-days: 7
