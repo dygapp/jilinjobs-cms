@@ -22,7 +22,7 @@ updated_at: 2026-09-21
 - Persistent Integration Environment；
 - 本地 Docker Compose / Dev Container；
 - 未来 jilinjobs 主项目的 Local Development Runtime；
-- Historical Migration 数据预构建、数据库快照或迁移 Runtime 优化。
+- Production 数据库备份、灾难恢复或长期共享环境的数据持久化策略。
 
 当未来验证运行于具有持久环境和低成本本地反馈能力的 Runtime 时，应依据该 Runtime 的真实约束重新设计快速反馈路径，不机械复用本文的 GHCR / prebuilt Backend 模型。
 
