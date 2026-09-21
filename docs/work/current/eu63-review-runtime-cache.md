@@ -24,7 +24,7 @@ base_sha: 87f5dcee2dff898ad5a35b4e523d022d6f4705db
 
 ## 技术方案
 
-### 1. Frontend Runtime identity
+### 1. 前端运行时标识
 
 新增 Frontend Runtime fingerprint，覆盖：
 
@@ -39,7 +39,7 @@ base_sha: 87f5dcee2dff898ad5a35b4e523d022d6f4705db
 
 人工评审 Workflow 只消费该 verified image，不再执行 Node setup、npm install / ci 或 frontend build。
 
-### 2. Review Data Baseline identity
+### 2. 评审数据基线标识
 
 新增 Review Baseline fingerprint，至少覆盖：
 
@@ -58,7 +58,7 @@ Baseline 内容只包括：
 
 Human Review fixture 不进入 baseline，每次人工评审恢复 baseline 后单独注入。
 
-### 3. Review Verification identity
+### 3. 评审验证标识
 
 新增 Review Verification fingerprint，由 Backend / Frontend / Baseline fingerprint 与会影响 Review Browser claim 的 Playwright / verification inputs 共同决定。
 
