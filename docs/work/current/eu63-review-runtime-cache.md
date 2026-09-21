@@ -28,10 +28,12 @@ base_sha: 87f5dcee2dff898ad5a35b4e523d022d6f4705db
 
 新增 Frontend Runtime fingerprint，覆盖：
 
-- `frontend/public-site/**`；
-- `frontend/admin/**`；
+- `frontend/public-site/**`，包括受版本控制的 `package-lock.json`；
+- `frontend/admin/**`，包括受版本控制的 `package-lock.json`；
 - `frontend/nginx.e2e.conf`；
 - Frontend Runtime Dockerfile 与 fingerprint contract 自身。
+
+Public / Admin 的正式依赖安装使用 `npm ci`；相同 fingerprint 的 Frontend Runtime image 只校验并复用，不覆盖已有 tag。
 
 完整 CI 继续从 exact Head 执行 Public / Admin formal build 与 Integrated Browser verification；全部通过后，把同一批 `dist` 组装成：
 
@@ -71,6 +73,8 @@ Human Review fixture 不进入 baseline，每次人工评审恢复 baseline 后�
 
 之后，才发布 verified marker。
 
+同一 fingerprint 的 marker 不覆盖。完整 CI 仍执行 exact-Head 正式验证；若 Frontend Runtime、Review Baseline 与 matching marker 都已命中且 provenance 校验通过，缓存发布阶段可直接复用 marker，不重复执行该 marker 已证明的 Review Runtime probe。
+
 人工评审 Workflow 命中 matching marker 时不重复执行完整 Playwright；如果 image / marker 缺失或 provenance 无法确认，则失败关闭并要求目标 Head 先完成完整 CI，不现场降级构建。
 
 ## 执行范围
@@ -95,6 +99,8 @@ Human Review fixture 不进入 baseline，每次人工评审恢复 baseline 后�
 8. 人工评审仍执行必要的恢复、Runtime startup、fixture 注入、bounded smoke、FRP、外部地址与 lease 验证。
 9. cache miss / Registry / provenance 异常失败关闭。
 10. 文档治理、Workflow 验证、完整 CI 与真实人工评审环境启动验证均通过。
+11. Public / Admin 依赖由受版本控制的 lockfile 固定，并通过 `npm ci` 复现。
+12. 同一 Frontend Runtime / Review Baseline / Review Verification fingerprint 不覆盖既有 GHCR artifact；cache-hit 时保持 producer SHA 并显式复用。
 
 ## 完成条件
 
