@@ -193,7 +193,7 @@ jobs:
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/public-institution.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/wechat-qr.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/admin/columns | jq --exit-status 'length > 0' > /dev/null
-          python3 review-party-runtime.py http://review.cc-lotus.info | tee eu30-review-external-runtime.json
+          python3 scripts/verify-review-runtime.py http://review.cc-lotus.info | tee review-external-runtime.json
 
       - name: 记录评审环境归属与租约
         env:
@@ -233,6 +233,7 @@ jobs:
           name: review-external-runtime-evidence
           path: |
             review-local-runtime.json
+            review-external-runtime.json
             review-external-owner.json
             review-baseline-restore/manifest.json
           if-no-files-found: error
