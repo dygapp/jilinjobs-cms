@@ -98,6 +98,7 @@ jobs:
           test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.backend-fingerprint" }}' "$backend_image")" = "$backend"
           test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.frontend-runtime-fingerprint" }}' "$frontend_image")" = "$frontend"
           test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.review-baseline-fingerprint" }}' "$baseline_image")" = "$baseline"
+          test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.backend-fingerprint" }}' "$baseline_image")" = "$backend"
           test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.backend-fingerprint" }}' "$verification_image")" = "$backend"
           test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.frontend-runtime-fingerprint" }}' "$verification_image")" = "$frontend"
           test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.review-baseline-fingerprint" }}' "$verification_image")" = "$baseline"
@@ -116,6 +117,7 @@ jobs:
         env:
           BASELINE_IMAGE: ${{ steps.runtime-images.outputs.baseline_image }}
           EXPECTED_BASELINE_FINGERPRINT: ${{ steps.runtime-images.outputs.baseline }}
+          EXPECTED_BACKEND_FINGERPRINT: ${{ steps.runtime-images.outputs.backend }}
         run: bash scripts/restore-review-baseline.sh
 
       - name: 启动 verified Review Runtime
