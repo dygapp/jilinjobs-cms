@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
-  contents: read
+  contents: write
   packages: read
 
 env:
@@ -182,6 +182,24 @@ jobs:
           path: frontend/public-site/package-lock.json
           if-no-files-found: error
           retention-days: 1
+
+      - name: 提交 Public package-lock
+        if: steps.changes.outputs.public == 'true'
+        shell: bash
+        env:
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+        run: |
+          set -euo pipefail
+          if git ls-files --error-unmatch frontend/public-site/package-lock.json >/dev/null 2>&1; then
+            echo "Public package-lock 已受版本控制。"
+            exit 0
+          fi
+          test -f frontend/public-site/package-lock.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public-site/package-lock.json
+          git commit -m "build(public): 锁定 npm 依赖"
+          git push origin "HEAD:$HEAD_REF"
 
       - name: 安装并构建 Admin
         if: steps.changes.outputs.admin == 'true'
