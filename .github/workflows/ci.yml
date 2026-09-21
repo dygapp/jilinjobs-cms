@@ -462,7 +462,38 @@ jobs:
             test "$actual" = "$BACKEND_FINGERPRINT"
           done
 
+      - name: 解析 Frontend Runtime cache
+        id: frontend-cache
+        shell: bash
+        env:
+          FRONTEND_IMAGE: ${{ steps.review-identities.outputs.frontend_image }}
+          FRONTEND_FINGERPRINT: ${{ steps.review-identities.outputs.frontend }}
+        run: |
+          set -euo pipefail
+          if docker manifest inspect "$FRONTEND_IMAGE" >"$RUNNER_TEMP/frontend-manifest.json" 2>"$RUNNER_TEMP/frontend-manifest.err"; then
+            docker pull "$FRONTEND_IMAGE"
+            actual="$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.frontend-runtime-fingerprint" }}' "$FRONTEND_IMAGE")"
+            if [ "$actual" != "$FRONTEND_FINGERPRINT" ]; then
+              echo "Frontend Runtime tag 已存在但 fingerprint label 不匹配，拒绝覆盖：$FRONTEND_IMAGE" >&2
+              exit 1
+            fi
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "producer_sha=$(docker inspect --format '{{ index .Config.Labels "org.opencontainers.image.revision" }}' "$FRONTEND_IMAGE")" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if grep -Eqi 'manifest unknown|name unknown|not found' "$RUNNER_TEMP/frontend-manifest.err"; then
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "producer_sha=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          cat "$RUNNER_TEMP/frontend-manifest.err"
+          echo "无法确认 Frontend Runtime image 是否存在；Registry 错误不得降级为 cache miss。" >&2
+          exit 1
+
       - name: 构建并发布 Frontend Runtime image
+        if: steps.frontend-cache.outputs.exists == 'false'
         shell: bash
         env:
           FRONTEND_IMAGE: ${{ steps.review-identities.outputs.frontend_image }}
@@ -488,8 +519,15 @@ jobs:
         run: |
           set -euo pipefail
           if docker manifest inspect "$BASELINE_IMAGE" >"$RUNNER_TEMP/baseline-manifest.json" 2>"$RUNNER_TEMP/baseline-manifest.err"; then
-            echo "exists=true" >> "$GITHUB_OUTPUT"
             docker pull "$BASELINE_IMAGE"
+            actual_baseline="$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.review-baseline-fingerprint" }}' "$BASELINE_IMAGE")"
+            actual_backend="$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.backend-fingerprint" }}' "$BASELINE_IMAGE")"
+            if [ "$actual_baseline" != "${{ steps.review-identities.outputs.baseline }}" ] \
+              || [ "$actual_backend" != "${{ steps.review-identities.outputs.backend }}" ]; then
+              echo "Review Baseline tag 已存在但 provenance label 不匹配，拒绝覆盖：$BASELINE_IMAGE" >&2
+              exit 1
+            fi
+            echo "exists=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
@@ -500,6 +538,71 @@ jobs:
 
           cat "$RUNNER_TEMP/baseline-manifest.err"
           echo "无法确认 Review Baseline image 是否存在；Registry 错误不得降级为 cache miss。" >&2
+          exit 1
+
+      - name: 解析 Review Verification cache
+        id: verification-cache
+        shell: bash
+        env:
+          VERIFICATION_IMAGE: ${{ steps.review-identities.outputs.verification_image }}
+          FRONTEND_CACHE_HIT: ${{ steps.frontend-cache.outputs.exists }}
+          BASELINE_CACHE_HIT: ${{ steps.baseline-cache.outputs.exists }}
+          VERIFICATION_CACHE_HIT: ${{ steps.verification-cache.outputs.exists }}
+          VERIFICATION_PRODUCER_SHA: ${{ steps.verification-cache.outputs.producer_sha }}
+          BACKEND_FINGERPRINT: ${{ steps.review-identities.outputs.backend }}
+          FRONTEND_FINGERPRINT: ${{ steps.review-identities.outputs.frontend }}
+          BASELINE_FINGERPRINT: ${{ steps.review-identities.outputs.baseline }}
+          VERIFICATION_FINGERPRINT: ${{ steps.review-identities.outputs.verification }}
+          FRONTEND_CACHE_HIT: ${{ steps.frontend-cache.outputs.exists }}
+          BASELINE_CACHE_HIT: ${{ steps.baseline-cache.outputs.exists }}
+        run: |
+          set -euo pipefail
+
+          if [ "$FRONTEND_CACHE_HIT" != "true" ] || [ "$BASELINE_CACHE_HIT" != "true" ]; then
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "producer_sha=" >> "$GITHUB_OUTPUT"
+            echo "依赖 Runtime artifact 存在 cache miss，本次必须重新验证 Review Runtime。"
+            exit 0
+          fi
+
+          if docker manifest inspect "$VERIFICATION_IMAGE" >"$RUNNER_TEMP/verification-manifest.json" 2>"$RUNNER_TEMP/verification-manifest.err"; then
+            docker pull "$VERIFICATION_IMAGE"
+
+            test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.backend-fingerprint" }}' "$VERIFICATION_IMAGE")" = "$BACKEND_FINGERPRINT"
+            test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.frontend-runtime-fingerprint" }}' "$VERIFICATION_IMAGE")" = "$FRONTEND_FINGERPRINT"
+            test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.review-baseline-fingerprint" }}' "$VERIFICATION_IMAGE")" = "$BASELINE_FINGERPRINT"
+            test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.review-verification-fingerprint" }}' "$VERIFICATION_IMAGE")" = "$VERIFICATION_FINGERPRINT"
+
+            marker_id="$(docker create "$VERIFICATION_IMAGE")"
+            trap 'docker rm -f "$marker_id" >/dev/null 2>&1 || true' EXIT
+            docker cp "$marker_id:/verification.json" review-verification.json
+            docker rm -f "$marker_id" >/dev/null
+            trap - EXIT
+
+            jq --exit-status \
+              --arg backend "$BACKEND_FINGERPRINT" \
+              --arg frontend "$FRONTEND_FINGERPRINT" \
+              --arg baseline "$BASELINE_FINGERPRINT" \
+              --arg verification "$VERIFICATION_FINGERPRINT" \
+              '.backendFingerprint == $backend
+               and .frontendFingerprint == $frontend
+               and .baselineFingerprint == $baseline
+               and .verificationFingerprint == $verification' \
+              review-verification.json >/dev/null
+
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "producer_sha=$(docker inspect --format '{{ index .Config.Labels "org.opencontainers.image.revision" }}' "$VERIFICATION_IMAGE")" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if grep -Eqi 'manifest unknown|name unknown|not found' "$RUNNER_TEMP/verification-manifest.err"; then
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "producer_sha=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          cat "$RUNNER_TEMP/verification-manifest.err"
+          echo "无法确认 Review Verification marker 是否存在；Registry 错误不得降级为 cache miss。" >&2
           exit 1
 
       - name: 生成 Review Data Baseline
@@ -515,6 +618,7 @@ jobs:
         run: bash scripts/prepare-review-baseline.sh
 
       - name: 恢复 Review Data Baseline
+        if: steps.verification-cache.outputs.exists == 'false'
         shell: bash
         env:
           BASELINE_IMAGE: ${{ steps.review-identities.outputs.baseline_image }}
@@ -522,6 +626,7 @@ jobs:
         run: bash scripts/restore-review-baseline.sh
 
       - name: 启动 restored Review Runtime
+        if: steps.verification-cache.outputs.exists == 'false'
         shell: bash
         env:
           BACKEND_IMAGE: ${{ steps.review-identities.outputs.backend_image }}
@@ -545,6 +650,7 @@ jobs:
           done
 
       - name: 验证 restored canonical Review Runtime
+        if: steps.verification-cache.outputs.exists == 'false'
         timeout-minutes: 12
         shell: bash
         run: |
@@ -560,6 +666,7 @@ jobs:
         run: docker push "$BASELINE_IMAGE"
 
       - name: 发布 Review Verification marker
+        if: steps.verification-cache.outputs.exists == 'false'
         shell: bash
         env:
           VERIFICATION_IMAGE: ${{ steps.review-identities.outputs.verification_image }}
@@ -604,6 +711,7 @@ jobs:
             review-baseline-build/manifest.json
             review-baseline-restore/manifest.json
             review-baseline-runtime.json
+            review-verification.json
             frontend/public-site/test-results
           if-no-files-found: warn
           retention-days: 7
@@ -618,6 +726,12 @@ jobs:
             echo "Frontend Runtime image：$FRONTEND_IMAGE"
             echo "Review Baseline image：$BASELINE_IMAGE"
             echo "Review Verification marker：$VERIFICATION_IMAGE"
+            echo "Frontend Runtime cache 命中：$FRONTEND_CACHE_HIT"
+            echo "Review Baseline cache 命中：$BASELINE_CACHE_HIT"
+            echo "Review Verification cache 命中：$VERIFICATION_CACHE_HIT"
+            if [ -n "$VERIFICATION_PRODUCER_SHA" ]; then
+              echo "Review Verification producer SHA：$VERIFICATION_PRODUCER_SHA"
+            fi
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: 清理 Review Runtime
