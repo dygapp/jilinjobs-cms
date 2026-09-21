@@ -3,6 +3,7 @@ set -euo pipefail
 
 : "${BASELINE_IMAGE:?BASELINE_IMAGE is required}"
 : "${EXPECTED_BASELINE_FINGERPRINT:?EXPECTED_BASELINE_FINGERPRINT is required}"
+: "${EXPECTED_BACKEND_FINGERPRINT:?EXPECTED_BACKEND_FINGERPRINT is required}"
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$repo_root"
@@ -21,8 +22,12 @@ done
 docker rm -f "$container_id" >/dev/null
 trap - EXIT
 
-jq --exit-status --arg expected "$EXPECTED_BASELINE_FINGERPRINT" \
-  '.baselineFingerprint == $expected and .mysql == "8.4"' \
+jq --exit-status \
+  --arg expectedBaseline "$EXPECTED_BASELINE_FINGERPRINT" \
+  --arg expectedBackend "$EXPECTED_BACKEND_FINGERPRINT" \
+  '.baselineFingerprint == $expectedBaseline
+   and .backendFingerprint == $expectedBackend
+   and .mysql == "8.4"' \
   review-baseline-restore/manifest.json >/dev/null
 
 python3 - <<'PY'
