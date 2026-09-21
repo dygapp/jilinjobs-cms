@@ -554,13 +554,6 @@ jobs:
         run: |
           set -euo pipefail
 
-          if [ "$FRONTEND_CACHE_HIT" != "true" ] || [ "$BASELINE_CACHE_HIT" != "true" ]; then
-            echo "exists=false" >> "$GITHUB_OUTPUT"
-            echo "producer_sha=" >> "$GITHUB_OUTPUT"
-            echo "依赖 Runtime artifact 存在 cache miss，本次必须重新验证 Review Runtime。"
-            exit 0
-          fi
-
           if docker manifest inspect "$VERIFICATION_IMAGE" >"$RUNNER_TEMP/verification-manifest.json" 2>"$RUNNER_TEMP/verification-manifest.err"; then
             docker pull "$VERIFICATION_IMAGE"
 
@@ -588,11 +581,20 @@ jobs:
 
             echo "exists=true" >> "$GITHUB_OUTPUT"
             echo "producer_sha=$(docker inspect --format '{{ index .Config.Labels "org.opencontainers.image.revision" }}' "$VERIFICATION_IMAGE")" >> "$GITHUB_OUTPUT"
+
+            if [ "$FRONTEND_CACHE_HIT" = "true" ] && [ "$BASELINE_CACHE_HIT" = "true" ]; then
+              echo "reuse=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+
+            echo "reuse=false" >> "$GITHUB_OUTPUT"
+            echo "Verification marker 已存在，但依赖 Runtime artifact 存在 cache miss；本次重建依赖后重新执行 Review Runtime probe，并保留既有 marker。"
             exit 0
           fi
 
           if grep -Eqi 'manifest unknown|name unknown|not found' "$RUNNER_TEMP/verification-manifest.err"; then
             echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "reuse=false" >> "$GITHUB_OUTPUT"
             echo "producer_sha=" >> "$GITHUB_OUTPUT"
             exit 0
           fi
@@ -614,15 +616,16 @@ jobs:
         run: bash scripts/prepare-review-baseline.sh
 
       - name: 恢复 Review Data Baseline
-        if: steps.verification-cache.outputs.exists == 'false'
+        if: steps.verification-cache.outputs.reuse != 'true'
         shell: bash
         env:
           BASELINE_IMAGE: ${{ steps.review-identities.outputs.baseline_image }}
           EXPECTED_BASELINE_FINGERPRINT: ${{ steps.review-identities.outputs.baseline }}
+          EXPECTED_BACKEND_FINGERPRINT: ${{ steps.review-identities.outputs.backend }}
         run: bash scripts/restore-review-baseline.sh
 
       - name: 启动 restored Review Runtime
-        if: steps.verification-cache.outputs.exists == 'false'
+        if: steps.verification-cache.outputs.reuse != 'true'
         shell: bash
         env:
           BACKEND_IMAGE: ${{ steps.review-identities.outputs.backend_image }}
@@ -646,7 +649,7 @@ jobs:
           done
 
       - name: 验证 restored canonical Review Runtime
-        if: steps.verification-cache.outputs.exists == 'false'
+        if: steps.verification-cache.outputs.reuse != 'true'
         timeout-minutes: 12
         shell: bash
         run: |
@@ -720,6 +723,7 @@ jobs:
           FRONTEND_CACHE_HIT: ${{ steps.frontend-cache.outputs.exists }}
           BASELINE_CACHE_HIT: ${{ steps.baseline-cache.outputs.exists }}
           VERIFICATION_CACHE_HIT: ${{ steps.verification-cache.outputs.exists }}
+          VERIFICATION_CACHE_REUSE: ${{ steps.verification-cache.outputs.reuse }}
           VERIFICATION_PRODUCER_SHA: ${{ steps.verification-cache.outputs.producer_sha }}
         run: |
           {
@@ -729,6 +733,7 @@ jobs:
             echo "Frontend Runtime cache 命中：$FRONTEND_CACHE_HIT"
             echo "Review Baseline cache 命中：$BASELINE_CACHE_HIT"
             echo "Review Verification cache 命中：$VERIFICATION_CACHE_HIT"
+            echo "Review Verification marker 直接复用：$VERIFICATION_CACHE_REUSE"
             if [ -n "$VERIFICATION_PRODUCER_SHA" ]; then
               echo "Review Verification producer SHA：$VERIFICATION_PRODUCER_SHA"
             fi
