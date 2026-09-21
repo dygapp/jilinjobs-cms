@@ -545,10 +545,6 @@ jobs:
         shell: bash
         env:
           VERIFICATION_IMAGE: ${{ steps.review-identities.outputs.verification_image }}
-          FRONTEND_CACHE_HIT: ${{ steps.frontend-cache.outputs.exists }}
-          BASELINE_CACHE_HIT: ${{ steps.baseline-cache.outputs.exists }}
-          VERIFICATION_CACHE_HIT: ${{ steps.verification-cache.outputs.exists }}
-          VERIFICATION_PRODUCER_SHA: ${{ steps.verification-cache.outputs.producer_sha }}
           BACKEND_FINGERPRINT: ${{ steps.review-identities.outputs.backend }}
           FRONTEND_FINGERPRINT: ${{ steps.review-identities.outputs.frontend }}
           BASELINE_FINGERPRINT: ${{ steps.review-identities.outputs.baseline }}
@@ -721,6 +717,10 @@ jobs:
           FRONTEND_IMAGE: ${{ steps.review-identities.outputs.frontend_image }}
           BASELINE_IMAGE: ${{ steps.review-identities.outputs.baseline_image }}
           VERIFICATION_IMAGE: ${{ steps.review-identities.outputs.verification_image }}
+          FRONTEND_CACHE_HIT: ${{ steps.frontend-cache.outputs.exists }}
+          BASELINE_CACHE_HIT: ${{ steps.baseline-cache.outputs.exists }}
+          VERIFICATION_CACHE_HIT: ${{ steps.verification-cache.outputs.exists }}
+          VERIFICATION_PRODUCER_SHA: ${{ steps.verification-cache.outputs.producer_sha }}
         run: |
           {
             echo "Frontend Runtime image：$FRONTEND_IMAGE"
