@@ -219,7 +219,7 @@ Review Verification fingerprint
 
 Repository commit SHA 继续表示目标源码 provenance；上述 fingerprint 只标识各自真实输入形成的 immutable artifact / evidence identity。不同 Repository SHA 如果对应 fingerprint 完全一致，可以按当前证据复用规则消费同一 verified artifact，但不得把 producer SHA 改称 target SHA。
 
-### 11.2 Backend / Content Migration Runtime
+### 11.2 后端与内容迁移运行时
 
 目标 Head 的 `backend/**` fingerprint 继续标识两个配套 Runtime artifact：
 
@@ -230,7 +230,7 @@ ghcr.io/dygapp/jilinjobs-cms-content-migration:<backend-fingerprint>
 
 两个 image 只能由完整 Backend verification 成功的完整 CI 发布。人工评审不得现场安装 Java / Gradle、重新编译或在 image miss 时降级构建。
 
-### 11.3 Frontend Runtime
+### 11.3 前端运行时
 
 Frontend Runtime fingerprint 由真正影响 Public / Admin build 与 Review gateway 的输入形成，至少包括：
 
@@ -247,7 +247,7 @@ ghcr.io/dygapp/jilinjobs-cms-frontend-runtime:<frontend-fingerprint>
 
 人工评审命中该 image 后不得重新执行 Node setup、npm install / ci 或 frontend build。
 
-### 11.4 Review Data Baseline
+### 11.4 评审数据基线
 
 Review Data Baseline 表示可重新生成的人工评审 canonical 数据起点，而不是 ordinary Runtime DB 的长期备份。
 
@@ -278,7 +278,7 @@ Baseline 使用 logical database dump 与文件归档，不缓存 MySQL raw data
 ghcr.io/dygapp/jilinjobs-cms-review-baseline:<review-baseline-fingerprint>
 ~~~
 
-### 11.5 Review Verification marker
+### 11.5 评审验证标记
 
 Review Verification fingerprint 由 Backend / Frontend / Baseline identity 与会改变 Review Browser claim 的测试、配置和 verification contract 输入形成。
 
