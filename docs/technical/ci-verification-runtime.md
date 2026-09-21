@@ -234,18 +234,22 @@ ghcr.io/dygapp/jilinjobs-cms-content-migration:<backend-fingerprint>
 
 Frontend Runtime fingerprint 由真正影响 Public / Admin build 与 Review gateway 的输入形成，至少包括：
 
-- `frontend/public-site/**`；
-- `frontend/admin/**`；
+- `frontend/public-site/**`，其中 `package-lock.json` 与源码共同参与 identity；
+- `frontend/admin/**`，其中 `package-lock.json` 与源码共同参与 identity；
 - `frontend/nginx.e2e.conf`；
 - Frontend Runtime Dockerfile 与 fingerprint contract 自身。
 
-完整 CI 必须先从目标 exact Head 完成 Public / Admin formal build 与 Integrated Browser verification，再把本次已验证的 `dist` 组装为：
+Public / Admin 的正式依赖安装统一使用 `npm ci`；不得用浮动传递依赖的 `npm install` 生成可复用 Frontend Runtime。
+
+完整 CI 必须先从目标 exact Head 完成 Public / Admin formal build 与 Integrated Browser verification，再把对应 `dist` 组装为：
 
 ~~~text
 ghcr.io/dygapp/jilinjobs-cms-frontend-runtime:<frontend-fingerprint>
 ~~~
 
-人工评审命中该 image 后不得重新执行 Node setup、npm install / ci 或 frontend build。
+同一 fingerprint 的 Frontend Runtime image 采用只读复用语义：如果 tag 已存在，先核对 fingerprint label 与 producer provenance，再直接复用；不得用后续 Run 覆盖同一 fingerprint tag。只有 cache miss 才允许构建并首次发布该 image。
+
+人工评审命中该 image 后不得重新执行 Node setup、`npm ci` 或 frontend build。
 
 ### 11.4 评审数据基线
 
@@ -297,6 +301,8 @@ ghcr.io/dygapp/jilinjobs-cms-review-verification:<review-verification-fingerprin
 
 marker 只证明其 fingerprint 对应的自动化 claim 已被完整 CI 验证；它不替代 Human Runtime Observation。
 
+Review Verification marker 与 Frontend Runtime / Review Baseline 一样按 fingerprint 作为 immutable identity。完整 CI 的正式 Backend / Public / Admin / Integrated Browser verification 仍针对 exact Head 执行；在此基础上，如果 Frontend Runtime、Review Baseline 与 matching marker 均已存在且 provenance 校验通过，Review Runtime cache 发布阶段可以复用已有 marker，不重复执行该 marker 已证明的 baseline restore / canonical Review Runtime probe，也不得覆盖同一 marker tag。任一依赖 artifact cache miss 时，本次必须重新执行 Review Runtime probe 后才能首次发布新的 marker。
+
 ### 11.6 人工评审快速路径
 
 人工评审 Workflow 对目标 Head：
@@ -323,7 +329,7 @@ matching verified marker 命中时，不重新执行 canonical migration 或完�
 - Actions Cache：npm / Gradle 等可丢失的依赖缓存；
 - Release Asset：正式发布物（需要时）。
 
-GHCR artifact 必须保留 fingerprint 与 producer source SHA 等 provenance。Cache 不承担 artifact authority，Git 不存储生成二进制或数据库快照。
+GHCR artifact 必须保留 fingerprint 与 producer source SHA 等 provenance；同一 fingerprint tag 不因后续 Repository SHA 不同而覆盖。发生跨提交复用时，target SHA 与 producer SHA 必须保持分离，不能把复用产物的 producer 改写成当前 target。Cache 不承担 artifact authority，Git 不存储生成二进制或数据库快照。
 
 ## 13. 可复用原则
 
