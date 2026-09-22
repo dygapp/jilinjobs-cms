@@ -126,17 +126,33 @@ jobs:
           FRONTEND_IMAGE: ${{ steps.runtime-images.outputs.frontend_image }}
         run: bash scripts/start-review-runtime.sh
 
+      - name: 验证 restored canonical Review Runtime
+        run: |
+          set -euo pipefail
+          python3 scripts/verify-review-runtime.py http://127.0.0.1:5173 | tee review-local-runtime.json
+
       - name: 注入 Human Review fixture
         run: bash scripts/apply-human-review-fixture.sh
 
-      - name: 验证 Human Review Runtime
+      - name: 验证 Human Review fixture 与页面 Runtime
         run: |
           set -euo pipefail
           curl --fail --silent http://127.0.0.1:5173/admin/articles | grep -qi '<html'
           curl --fail --silent http://127.0.0.1:5173/party/ | grep -qi '<html'
           curl --fail --silent http://127.0.0.1:5173/static/home/header-banner.png >/dev/null
           curl --fail --silent http://127.0.0.1:5173/static/party/party-header-banner.jpg >/dev/null
-          python3 scripts/verify-review-runtime.py http://127.0.0.1:5173 | tee review-local-runtime.json
+
+          columns="$(curl --fail --silent http://127.0.0.1:5173/api/admin/columns)"
+          notice_id="$(echo "$columns" | jq -r '.[] | select(.alias == "notice") | .id' | head -1)"
+          employment_id="$(echo "$columns" | jq -r '.[] | select(.alias == "employment-news") | .id' | head -1)"
+          recruitment_id="$(echo "$columns" | jq -r '.[] | select(.alias == "recruitment-announcement") | .id' | head -1)"
+
+          curl --fail --silent "http://127.0.0.1:5173/api/public/articles?columnId=$notice_id&page=0&size=50" \
+            | jq --exit-status '[.items[].title] | index("管理端人工评审：就业服务工作通知") != null and index("管理端人工评审：毕业生就业手续办理提示") != null' >/dev/null
+          curl --fail --silent "http://127.0.0.1:5173/api/public/articles?columnId=$employment_id&page=0&size=50" \
+            | jq --exit-status '[.items[].title] | index("管理端人工评审：访企拓岗促就业专项行动") != null' >/dev/null
+          curl --fail --silent "http://127.0.0.1:5173/api/public/articles?columnId=$recruitment_id&page=0&size=50" \
+            | jq --exit-status '[.items[].title] | index("管理端人工评审：高校毕业生专场招聘公告") != null and index("管理端人工评审：重点单位招聘公告") != null' >/dev/null
 
       - name: 下载 frpc
         run: |
