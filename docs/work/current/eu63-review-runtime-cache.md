@@ -104,7 +104,7 @@ Human Review fixture 不进入 baseline，每次人工评审恢复 baseline 后�
 11. Public / Admin 依赖由受版本控制的 lockfile 固定，并通过 `npm ci` 复现。
 12. 同一 Frontend Runtime / Review Baseline / Review Verification fingerprint 不覆盖既有 GHCR artifact；cache-hit 时保持 producer SHA 并显式复用。
 13. 主站评审数据只从 accepted canonical dataset 派生，每个 article surface 导入最新 30 条；选择策略、栏目集合和派生脚本参与 Review Baseline identity，完整 canonical dataset 不被裁剪或改写。
-14. CI Runtime-only 变更的快速反馈不重复构建无关 Public / Admin 或拉取 Playwright Runtime；共享人工评审槽位只由真实 human-review / workflow_dispatch Run 竞争，新有效 Run 可立即接管旧租约。
+14. CI 编排与 Review Runtime-only 变更的快速反馈不重复构建无关 Public / Admin 或拉取 Playwright Runtime；Backend Runtime container contract 变化仍保留必要的快速集成覆盖；共享人工评审槽位只由真实 human-review / workflow_dispatch Run 竞争，新有效 Run 可立即接管旧租约。
 
 ## 完成条件
 
