@@ -125,7 +125,8 @@ ghcr.io/dygapp/jilinjobs-cms-backend:<backend-fingerprint>
 
 快速 CI 的约束：
 
-- CI / Review Workflow、fingerprint、Baseline / fixture / restore / verification 脚本等运行时编排变更，只执行 shell / Python 语法与 fingerprint contract 的轻量校验；除非同一 diff 同时改变真实 Frontend source / gateway，不因此重复 Public / Admin build、Playwright image 拉取或 browser smoke；
+- CI / Review Workflow、Frontend / Review fingerprint、Baseline / fixture / restore / verification 脚本等运行时编排变更，只执行 shell / Python 语法与 fingerprint contract 的轻量校验；除非同一 diff 同时改变真实 Frontend source / gateway，不因此重复 Public / Admin build、Playwright image 拉取或 browser smoke；
+- Backend Runtime Dockerfile、`.dockerignore` 或 Backend fingerprint contract 会改变可执行 Backend Runtime，快速 CI 仍保留 Backend Runtime 构建与至少一条 Public 集成 smoke，不把它们降级为纯语法检查；
 - MySQL 每个 Job 独立创建，不共享历史测试数据；
 - GHCR HIT 只避免 Backend build，不省略 Backend Runtime；
 - Registry 权限、网络或未知错误不得降级为“镜像不存在”；
