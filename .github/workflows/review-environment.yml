@@ -224,8 +224,28 @@ jobs:
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/brand/site-favicon.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/public-institution.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/wechat-qr.png > /dev/null
-          curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/admin/columns | jq --exit-status 'length > 0' > /dev/null
-          python3 scripts/verify-review-runtime.py http://review.cc-lotus.info | tee review-external-runtime.json
+          columns="$(curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/admin/columns)"
+          echo "$columns" | jq --exit-status 'length > 0' > /dev/null
+
+          notice_id="$(echo "$columns" | jq -r '.[] | select(.alias == "notice") | .id' | head -1)"
+          employment_id="$(echo "$columns" | jq -r '.[] | select(.alias == "employment-news") | .id' | head -1)"
+          recruitment_id="$(echo "$columns" | jq -r '.[] | select(.alias == "recruitment-announcement") | .id' | head -1)"
+
+          notice_fixture="$(curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors "http://review.cc-lotus.info/api/public/articles?columnId=$notice_id&page=0&size=50")"
+          employment_fixture="$(curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors "http://review.cc-lotus.info/api/public/articles?columnId=$employment_id&page=0&size=50")"
+          recruitment_fixture="$(curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors "http://review.cc-lotus.info/api/public/articles?columnId=$recruitment_id&page=0&size=50")"
+
+          echo "$notice_fixture" | jq --exit-status '[.items[].title] | index("管理端人工评审：就业服务工作通知") != null and index("管理端人工评审：毕业生就业手续办理提示") != null' > /dev/null
+          echo "$employment_fixture" | jq --exit-status '[.items[].title] | index("管理端人工评审：访企拓岗促就业专项行动") != null' > /dev/null
+          echo "$recruitment_fixture" | jq --exit-status '[.items[].title] | index("管理端人工评审：高校毕业生专场招聘公告") != null and index("管理端人工评审：重点单位招聘公告") != null' > /dev/null
+
+          jq -n \
+            --arg base "http://review.cc-lotus.info" \
+            --argjson noticeTotal "$(echo "$notice_fixture" | jq '.total')" \
+            --argjson employmentTotal "$(echo "$employment_fixture" | jq '.total')" \
+            --argjson recruitmentTotal "$(echo "$recruitment_fixture" | jq '.total')" \
+            '{base:$base,status:"external-review-runtime-ok",fixtureTotals:{notice:$noticeTotal,employmentNews:$employmentTotal,recruitmentAnnouncement:$recruitmentTotal}}' \
+            | tee review-external-runtime.json
 
       - name: 记录评审环境归属与租约
         env:
