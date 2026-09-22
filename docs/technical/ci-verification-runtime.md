@@ -316,6 +316,14 @@ Review Verification marker 与 Frontend Runtime / Review Baseline 一样按 fing
 
 ### 11.6 人工评审快速路径
 
+人工评审使用固定 `review.cc-lotus.info` 与固定 FRP proxy，因此整个仓库只有一个共享评审槽位。该共享资源采用 **latest-wins** 语义：
+
+- 新的有效人工评审 Run 必须取消仍占用该槽位的旧 Run，不排队等待旧租约自然到期；
+- 被取消 Run 的 lease 立即失效，cleanup 必须释放 Backend / Frontend / FRP 资源；
+- 新 Run 仍需通过 owner / lease / 外部地址验证后才能声明 ready；
+- 45 分钟 Human Review lease 只表示当前最新环境的可用窗口，不构成后继 Head 的等待时长；
+- GitHub Run cancellation 与 FRP 实际释放分别验证；若固定 proxy 尚未释放，只允许有界短重试，不恢复成长时间排队。
+
 人工评审 Workflow 对目标 Head：
 
 1. checkout 只用于计算 fingerprint、读取 Review fixture / 外部运行配置及保留 target provenance；
