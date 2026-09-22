@@ -71,8 +71,6 @@ jobs:
                 admin=true
                 ;;
               backend/Dockerfile.runtime|backend/.dockerignore|frontend/Dockerfile.runtime|scripts/backend-runtime-fingerprint.sh|scripts/frontend-runtime-fingerprint.sh|scripts/review-baseline-fingerprint.sh|scripts/review-verification-fingerprint.sh|scripts/prepare-review-baseline.sh|scripts/build-main-review-subset.py|scripts/restore-review-baseline.sh|scripts/start-review-runtime.sh|scripts/apply-human-review-fixture.sh|scripts/verify-review-runtime.py|.github/workflows/fast-ci.yml|.github/workflows/ci.yml|.github/workflows/review-environment.yml)
-                public=true
-                admin=true
                 ci_runtime=true
                 ;;
               backend/*)
@@ -92,6 +90,25 @@ jobs:
           echo "backend=$backend" >> "$GITHUB_OUTPUT"
           echo "frontend=$frontend" >> "$GITHUB_OUTPUT"
           echo "ci_runtime=$ci_runtime" >> "$GITHUB_OUTPUT"
+
+      - name: 验证 CI Runtime 脚本契约
+        if: steps.changes.outputs.ci_runtime == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash -n scripts/backend-runtime-fingerprint.sh
+          bash -n scripts/frontend-runtime-fingerprint.sh
+          bash -n scripts/review-baseline-fingerprint.sh
+          bash -n scripts/review-verification-fingerprint.sh
+          bash -n scripts/prepare-review-baseline.sh
+          bash -n scripts/restore-review-baseline.sh
+          bash -n scripts/start-review-runtime.sh
+          bash -n scripts/apply-human-review-fixture.sh
+          python3 -m py_compile scripts/build-main-review-subset.py scripts/verify-review-runtime.py
+          bash scripts/backend-runtime-fingerprint.sh >/dev/null
+          bash scripts/frontend-runtime-fingerprint.sh >/dev/null
+          bash scripts/review-baseline-fingerprint.sh >/dev/null
+          bash scripts/review-verification-fingerprint.sh >/dev/null
 
       - name: 配置 Node.js
         if: steps.changes.outputs.frontend == 'true'
@@ -331,6 +348,7 @@ jobs:
             echo "- Public 受影响：${{ steps.changes.outputs.public }}"
             echo "- Admin 受影响：${{ steps.changes.outputs.admin }}"
             echo "- Backend 受影响：${{ steps.changes.outputs.backend }}"
+            echo "- CI Runtime 受影响：${{ steps.changes.outputs.ci_runtime }}"
             if [ "${{ steps.changes.outputs.frontend }}" = "true" ]; then
               echo "- Backend fingerprint：${{ steps.backend-fingerprint.outputs.value }}"
               echo "- Backend image：${{ steps.backend-image.outputs.image }}"
