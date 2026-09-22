@@ -125,6 +125,7 @@ ghcr.io/dygapp/jilinjobs-cms-backend:<backend-fingerprint>
 
 快速 CI 的约束：
 
+- CI / Review Workflow、fingerprint、Baseline / fixture / restore / verification 脚本等运行时编排变更，只执行 shell / Python 语法与 fingerprint contract 的轻量校验；除非同一 diff 同时改变真实 Frontend source / gateway，不因此重复 Public / Admin build、Playwright image 拉取或 browser smoke；
 - MySQL 每个 Job 独立创建，不共享历史测试数据；
 - GHCR HIT 只避免 Backend build，不省略 Backend Runtime；
 - Registry 权限、网络或未知错误不得降级为“镜像不存在”；
@@ -322,7 +323,8 @@ Review Verification marker 与 Frontend Runtime / Review Baseline 一样按 fing
 - 被取消 Run 的 lease 立即失效，cleanup 必须释放 Backend / Frontend / FRP 资源；
 - 新 Run 仍需通过 owner / lease / 外部地址验证后才能声明 ready；
 - 45 分钟 Human Review lease 只表示当前最新环境的可用窗口，不构成后继 Head 的等待时长；
-- GitHub Run cancellation 与 FRP 实际释放分别验证；若固定 proxy 尚未释放，只允许有界短重试，不恢复成长时间排队。
+- GitHub Run cancellation 与 FRP 实际释放分别验证；若固定 proxy 尚未释放，只允许有界短重试，不恢复成长时间排队；
+- 只有真正获得评审槽位的 `human-review` / `workflow_dispatch` Run 参与共享并发组；其他 label 事件即使触发 Workflow 外壳，也不得取消或阻塞正在运行的人工评审环境。
 
 人工评审 Workflow 对目标 Head：
 
