@@ -98,7 +98,7 @@ Human Review fixture 不进入 baseline，每次人工评审恢复 baseline 后�
 5. Review Baseline 恢复后数据库、`runtime-static`、`runtime-uploads` 与 canonical runtime 一致。
 6. Human Review fixture 不进入缓存镜像。
 7. 人工评审 cache-hit 路径不安装 Node、不构建前端、不执行 canonical migration、不重复完整 Playwright。
-8. 人工评审仍执行必要的恢复、Runtime startup、fixture 注入、bounded smoke、FRP、外部地址与 lease 验证。
+8. 人工评审仍执行必要的恢复、Runtime startup、fixture 注入、bounded smoke、FRP、外部地址与 lease 验证；固定共享评审槽位采用 latest-wins，新有效 Run 不等待旧 45 分钟 lease 自然结束。
 9. cache miss / Registry / provenance 异常失败关闭。
 10. 文档治理、Workflow 验证、完整 CI 与真实人工评审环境启动验证均通过。
 11. Public / Admin 依赖由受版本控制的 lockfile 固定，并通过 `npm ci` 复现。
