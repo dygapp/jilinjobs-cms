@@ -192,7 +192,7 @@ jobs:
           node-version: "24"
       - name: Install public site dependencies
         working-directory: frontend/public-site
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Build public site
         working-directory: frontend/public-site
         run: npm run build
@@ -332,7 +332,7 @@ jobs:
             -v "$GITHUB_WORKSPACE/frontend/public-site:/work" \
             -w /work \
             mcr.microsoft.com/playwright:v1.61.0-noble \
-            bash -lc 'npm install --no-audit --no-fund && npm run test:e2e'
+            bash -lc 'npm ci --no-audit --no-fund && npm run test:e2e'
       - name: Run admin browser verification
         if: ${{ hashFiles('frontend/admin/tests/e2e/*.spec.ts') != '' }}
         timeout-minutes: 8
@@ -375,3 +375,370 @@ jobs:
       - name: Stop runtime containers
         if: always()
         run: docker rm -f cms-backend cms-frontend || true
+
+  review-runtime-cache:
+    name: Publish verified review runtime
+    if: github.event_name != 'pull_request' || github.event.label.name == 'full-ci'
+    needs: [backend, public-frontend, admin-frontend, e2e]
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_ROOT_HOST: "%"
+          MYSQL_DATABASE: jilinjobs_cms
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=12
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.ref || github.event.pull_request.head.sha || github.sha }}
+
+      - name: 登录 GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download public site artifact
+        uses: actions/download-artifact@v8
+        with:
+          name: public-site-dist
+          path: public-site-dist
+
+      - name: Download admin artifact
+        uses: actions/download-artifact@v8
+        with:
+          name: admin-dist
+          path: admin-dist
+
+      - name: 计算 Review Runtime identities
+        id: review-identities
+        shell: bash
+        run: |
+          set -euo pipefail
+          backend="$(bash scripts/backend-runtime-fingerprint.sh)"
+          frontend="$(bash scripts/frontend-runtime-fingerprint.sh)"
+          baseline="$(bash scripts/review-baseline-fingerprint.sh)"
+          verification="$(bash scripts/review-verification-fingerprint.sh)"
+          source_sha="$(git rev-parse HEAD)"
+
+          echo "backend=$backend" >> "$GITHUB_OUTPUT"
+          echo "frontend=$frontend" >> "$GITHUB_OUTPUT"
+          echo "baseline=$baseline" >> "$GITHUB_OUTPUT"
+          echo "verification=$verification" >> "$GITHUB_OUTPUT"
+          echo "source_sha=$source_sha" >> "$GITHUB_OUTPUT"
+          echo "backend_image=ghcr.io/${{ github.repository }}-backend:$backend" >> "$GITHUB_OUTPUT"
+          echo "migration_image=ghcr.io/${{ github.repository }}-content-migration:$backend" >> "$GITHUB_OUTPUT"
+          echo "frontend_image=ghcr.io/${{ github.repository }}-frontend-runtime:$frontend" >> "$GITHUB_OUTPUT"
+          echo "baseline_image=ghcr.io/${{ github.repository }}-review-baseline:$baseline" >> "$GITHUB_OUTPUT"
+          echo "verification_image=ghcr.io/${{ github.repository }}-review-verification:$verification" >> "$GITHUB_OUTPUT"
+
+      - name: 拉取已验证 Backend / Content Migration images
+        timeout-minutes: 12
+        shell: bash
+        env:
+          BACKEND_IMAGE: ${{ steps.review-identities.outputs.backend_image }}
+          MIGRATION_IMAGE: ${{ steps.review-identities.outputs.migration_image }}
+          BACKEND_FINGERPRINT: ${{ steps.review-identities.outputs.backend }}
+        run: |
+          set -euo pipefail
+          for image in "$BACKEND_IMAGE" "$MIGRATION_IMAGE"; do
+            if ! docker manifest inspect "$image" >/dev/null 2>manifest.err; then
+              cat manifest.err
+              echo "完整 CI Backend job 未发布所需 verified image：$image" >&2
+              exit 1
+            fi
+            docker pull "$image"
+            actual="$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.backend-fingerprint" }}' "$image")"
+            test "$actual" = "$BACKEND_FINGERPRINT"
+          done
+
+      - name: 解析 Frontend Runtime cache
+        id: frontend-cache
+        shell: bash
+        env:
+          FRONTEND_IMAGE: ${{ steps.review-identities.outputs.frontend_image }}
+          FRONTEND_FINGERPRINT: ${{ steps.review-identities.outputs.frontend }}
+        run: |
+          set -euo pipefail
+          if docker manifest inspect "$FRONTEND_IMAGE" >"$RUNNER_TEMP/frontend-manifest.json" 2>"$RUNNER_TEMP/frontend-manifest.err"; then
+            docker pull "$FRONTEND_IMAGE"
+            actual="$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.frontend-runtime-fingerprint" }}' "$FRONTEND_IMAGE")"
+            if [ "$actual" != "$FRONTEND_FINGERPRINT" ]; then
+              echo "Frontend Runtime tag 已存在但 fingerprint label 不匹配，拒绝覆盖：$FRONTEND_IMAGE" >&2
+              exit 1
+            fi
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "producer_sha=$(docker inspect --format '{{ index .Config.Labels "org.opencontainers.image.revision" }}' "$FRONTEND_IMAGE")" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if grep -Eqi 'manifest unknown|name unknown|not found' "$RUNNER_TEMP/frontend-manifest.err"; then
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "producer_sha=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          cat "$RUNNER_TEMP/frontend-manifest.err"
+          echo "无法确认 Frontend Runtime image 是否存在；Registry 错误不得降级为 cache miss。" >&2
+          exit 1
+
+      - name: 构建并发布 Frontend Runtime image
+        if: steps.frontend-cache.outputs.exists == 'false'
+        shell: bash
+        env:
+          FRONTEND_IMAGE: ${{ steps.review-identities.outputs.frontend_image }}
+          FRONTEND_FINGERPRINT: ${{ steps.review-identities.outputs.frontend }}
+          SOURCE_SHA: ${{ steps.review-identities.outputs.source_sha }}
+        run: |
+          set -euo pipefail
+          rm -rf frontend-runtime-build
+          mkdir -p frontend-runtime-build/public frontend-runtime-build/admin
+          cp -a public-site-dist/. frontend-runtime-build/public/
+          cp -a admin-dist/. frontend-runtime-build/admin/
+          cp frontend/nginx.e2e.conf frontend-runtime-build/nginx.conf
+          cp frontend/Dockerfile.runtime frontend-runtime-build/Dockerfile
+
+          docker build             --label "org.opencontainers.image.source=https://github.com/${{ github.repository }}"             --label "org.opencontainers.image.revision=$SOURCE_SHA"             --label "io.jilinjobs.frontend-runtime-fingerprint=$FRONTEND_FINGERPRINT"             -t "$FRONTEND_IMAGE" frontend-runtime-build
+          docker push "$FRONTEND_IMAGE"
+
+      - name: 解析 Review Baseline cache
+        id: baseline-cache
+        shell: bash
+        env:
+          BASELINE_IMAGE: ${{ steps.review-identities.outputs.baseline_image }}
+        run: |
+          set -euo pipefail
+          if docker manifest inspect "$BASELINE_IMAGE" >"$RUNNER_TEMP/baseline-manifest.json" 2>"$RUNNER_TEMP/baseline-manifest.err"; then
+            docker pull "$BASELINE_IMAGE"
+            actual_baseline="$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.review-baseline-fingerprint" }}' "$BASELINE_IMAGE")"
+            actual_backend="$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.backend-fingerprint" }}' "$BASELINE_IMAGE")"
+            if [ "$actual_baseline" != "${{ steps.review-identities.outputs.baseline }}" ] \
+              || [ "$actual_backend" != "${{ steps.review-identities.outputs.backend }}" ]; then
+              echo "Review Baseline tag 已存在但 provenance label 不匹配，拒绝覆盖：$BASELINE_IMAGE" >&2
+              exit 1
+            fi
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if grep -Eqi 'manifest unknown|name unknown|not found' "$RUNNER_TEMP/baseline-manifest.err"; then
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          cat "$RUNNER_TEMP/baseline-manifest.err"
+          echo "无法确认 Review Baseline image 是否存在；Registry 错误不得降级为 cache miss。" >&2
+          exit 1
+
+      - name: 解析 Review Verification cache
+        id: verification-cache
+        shell: bash
+        env:
+          VERIFICATION_IMAGE: ${{ steps.review-identities.outputs.verification_image }}
+          BACKEND_FINGERPRINT: ${{ steps.review-identities.outputs.backend }}
+          FRONTEND_FINGERPRINT: ${{ steps.review-identities.outputs.frontend }}
+          BASELINE_FINGERPRINT: ${{ steps.review-identities.outputs.baseline }}
+          VERIFICATION_FINGERPRINT: ${{ steps.review-identities.outputs.verification }}
+          FRONTEND_CACHE_HIT: ${{ steps.frontend-cache.outputs.exists }}
+          BASELINE_CACHE_HIT: ${{ steps.baseline-cache.outputs.exists }}
+        run: |
+          set -euo pipefail
+
+          if docker manifest inspect "$VERIFICATION_IMAGE" >"$RUNNER_TEMP/verification-manifest.json" 2>"$RUNNER_TEMP/verification-manifest.err"; then
+            docker pull "$VERIFICATION_IMAGE"
+
+            test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.backend-fingerprint" }}' "$VERIFICATION_IMAGE")" = "$BACKEND_FINGERPRINT"
+            test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.frontend-runtime-fingerprint" }}' "$VERIFICATION_IMAGE")" = "$FRONTEND_FINGERPRINT"
+            test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.review-baseline-fingerprint" }}' "$VERIFICATION_IMAGE")" = "$BASELINE_FINGERPRINT"
+            test "$(docker inspect --format '{{ index .Config.Labels "io.jilinjobs.review-verification-fingerprint" }}' "$VERIFICATION_IMAGE")" = "$VERIFICATION_FINGERPRINT"
+
+            marker_id="$(docker create "$VERIFICATION_IMAGE")"
+            trap 'docker rm -f "$marker_id" >/dev/null 2>&1 || true' EXIT
+            docker cp "$marker_id:/verification.json" review-verification.json
+            docker rm -f "$marker_id" >/dev/null
+            trap - EXIT
+
+            jq --exit-status \
+              --arg backend "$BACKEND_FINGERPRINT" \
+              --arg frontend "$FRONTEND_FINGERPRINT" \
+              --arg baseline "$BASELINE_FINGERPRINT" \
+              --arg verification "$VERIFICATION_FINGERPRINT" \
+              '.backendFingerprint == $backend
+               and .frontendFingerprint == $frontend
+               and .baselineFingerprint == $baseline
+               and .verificationFingerprint == $verification' \
+              review-verification.json >/dev/null
+
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "producer_sha=$(docker inspect --format '{{ index .Config.Labels "org.opencontainers.image.revision" }}' "$VERIFICATION_IMAGE")" >> "$GITHUB_OUTPUT"
+
+            if [ "$FRONTEND_CACHE_HIT" = "true" ] && [ "$BASELINE_CACHE_HIT" = "true" ]; then
+              echo "reuse=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+
+            echo "reuse=false" >> "$GITHUB_OUTPUT"
+            echo "Verification marker 已存在，但依赖 Runtime artifact 存在 cache miss；本次重建依赖后重新执行 Review Runtime probe，并保留既有 marker。"
+            exit 0
+          fi
+
+          if grep -Eqi 'manifest unknown|name unknown|not found' "$RUNNER_TEMP/verification-manifest.err"; then
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "reuse=false" >> "$GITHUB_OUTPUT"
+            echo "producer_sha=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          cat "$RUNNER_TEMP/verification-manifest.err"
+          echo "无法确认 Review Verification marker 是否存在；Registry 错误不得降级为 cache miss。" >&2
+          exit 1
+
+      - name: 生成 Review Data Baseline
+        if: steps.baseline-cache.outputs.exists == 'false'
+        shell: bash
+        env:
+          BACKEND_IMAGE: ${{ steps.review-identities.outputs.backend_image }}
+          MIGRATION_IMAGE: ${{ steps.review-identities.outputs.migration_image }}
+          BASELINE_IMAGE: ${{ steps.review-identities.outputs.baseline_image }}
+          BACKEND_FINGERPRINT: ${{ steps.review-identities.outputs.backend }}
+          BASELINE_FINGERPRINT: ${{ steps.review-identities.outputs.baseline }}
+          SOURCE_SHA: ${{ steps.review-identities.outputs.source_sha }}
+        run: bash scripts/prepare-review-baseline.sh
+
+      - name: 恢复 Review Data Baseline
+        if: steps.verification-cache.outputs.reuse != 'true'
+        shell: bash
+        env:
+          BASELINE_IMAGE: ${{ steps.review-identities.outputs.baseline_image }}
+          EXPECTED_BASELINE_FINGERPRINT: ${{ steps.review-identities.outputs.baseline }}
+          EXPECTED_BACKEND_FINGERPRINT: ${{ steps.review-identities.outputs.backend }}
+        run: bash scripts/restore-review-baseline.sh
+
+      - name: 启动 restored Review Runtime
+        if: steps.verification-cache.outputs.reuse != 'true'
+        shell: bash
+        env:
+          BACKEND_IMAGE: ${{ steps.review-identities.outputs.backend_image }}
+          FRONTEND_IMAGE: ${{ steps.review-identities.outputs.frontend_image }}
+        run: |
+          set -euo pipefail
+          docker rm -f review-cache-backend review-cache-frontend >/dev/null 2>&1 || true
+          docker run -d --name review-cache-backend --network host             -e 'DB_URL=jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true'             -e DB_USERNAME=root             -e DB_PASSWORD=root             -e CMS_STATIC_ROOT=/runtime-static             -e CMS_STORAGE_ROOT=/uploads             -e CMS_SITE_PACKAGE_ROOT=/site-package             -e CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true             -v "$GITHUB_WORKSPACE/runtime-static:/runtime-static"             -v "$GITHUB_WORKSPACE/runtime-uploads:/uploads"             -v "$GITHUB_WORKSPACE/sites/jilinjobs:/site-package:ro"             "$BACKEND_IMAGE"
+
+          for i in $(seq 1 60); do
+            if curl --fail --silent http://127.0.0.1:8080/api/admin/columns >/dev/null; then break; fi
+            if [ "$i" -eq 60 ]; then docker logs review-cache-backend; exit 1; fi
+            sleep 2
+          done
+
+          docker run -d --name review-cache-frontend --network host "$FRONTEND_IMAGE"
+          for i in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:5173/ >/dev/null               && curl --fail --silent http://127.0.0.1:5173/admin/ >/dev/null; then break; fi
+            if [ "$i" -eq 30 ]; then docker logs review-cache-frontend; exit 1; fi
+            sleep 1
+          done
+
+      - name: 验证 restored canonical Review Runtime
+        if: steps.verification-cache.outputs.reuse != 'true'
+        timeout-minutes: 12
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/verify-review-runtime.py http://127.0.0.1:5173 | tee review-baseline-runtime.json
+          docker run --rm --init --ipc=host --network host             -e CI=true             -e CI_EXTERNAL_WEB_SERVER=true             -e PARTY_MIGRATION_RUNTIME=true             -v "$GITHUB_WORKSPACE/frontend/public-site:/work"             -w /work             mcr.microsoft.com/playwright:v1.61.0-noble             bash -lc 'npm ci --no-audit --no-fund && npx playwright test tests/e2e/party-migration-runtime.spec.ts --project=chromium --reporter=line'
+
+      - name: 发布新 Review Baseline image
+        if: steps.baseline-cache.outputs.exists == 'false'
+        shell: bash
+        env:
+          BASELINE_IMAGE: ${{ steps.review-identities.outputs.baseline_image }}
+        run: docker push "$BASELINE_IMAGE"
+
+      - name: 发布 Review Verification marker
+        if: steps.verification-cache.outputs.exists == 'false'
+        shell: bash
+        env:
+          VERIFICATION_IMAGE: ${{ steps.review-identities.outputs.verification_image }}
+          VERIFICATION_FINGERPRINT: ${{ steps.review-identities.outputs.verification }}
+          BACKEND_FINGERPRINT: ${{ steps.review-identities.outputs.backend }}
+          FRONTEND_FINGERPRINT: ${{ steps.review-identities.outputs.frontend }}
+          BASELINE_FINGERPRINT: ${{ steps.review-identities.outputs.baseline }}
+          SOURCE_SHA: ${{ steps.review-identities.outputs.source_sha }}
+        run: |
+          set -euo pipefail
+          rm -rf review-verification-marker
+          mkdir -p review-verification-marker
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          data = {
+              'schemaVersion': 1,
+              'sourceSha': os.environ['SOURCE_SHA'],
+              'backendFingerprint': os.environ['BACKEND_FINGERPRINT'],
+              'frontendFingerprint': os.environ['FRONTEND_FINGERPRINT'],
+              'baselineFingerprint': os.environ['BASELINE_FINGERPRINT'],
+              'verificationFingerprint': os.environ['VERIFICATION_FINGERPRINT'],
+          }
+          Path('review-verification-marker/verification.json').write_text(
+              json.dumps(data, ensure_ascii=False, sort_keys=True, indent=2) + '\n',
+              encoding='utf-8',
+          )
+          PY
+          cat > review-verification-marker/Dockerfile <<'EOF'
+          FROM alpine:3.23
+          COPY verification.json /verification.json
+          EOF
+          docker build             --label "org.opencontainers.image.source=https://github.com/${{ github.repository }}"             --label "org.opencontainers.image.revision=$SOURCE_SHA"             --label "io.jilinjobs.backend-fingerprint=$BACKEND_FINGERPRINT"             --label "io.jilinjobs.frontend-runtime-fingerprint=$FRONTEND_FINGERPRINT"             --label "io.jilinjobs.review-baseline-fingerprint=$BASELINE_FINGERPRINT"             --label "io.jilinjobs.review-verification-fingerprint=$VERIFICATION_FINGERPRINT"             -t "$VERIFICATION_IMAGE" review-verification-marker
+          docker push "$VERIFICATION_IMAGE"
+
+      - name: 上传 Review Runtime cache 证据
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: review-runtime-cache-evidence
+          path: |
+            review-baseline-build/manifest.json
+            review-baseline-restore/manifest.json
+            review-baseline-runtime.json
+            review-verification.json
+            frontend/public-site/test-results
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: 输出 verified cache identities
+        env:
+          FRONTEND_IMAGE: ${{ steps.review-identities.outputs.frontend_image }}
+          BASELINE_IMAGE: ${{ steps.review-identities.outputs.baseline_image }}
+          VERIFICATION_IMAGE: ${{ steps.review-identities.outputs.verification_image }}
+          FRONTEND_CACHE_HIT: ${{ steps.frontend-cache.outputs.exists }}
+          BASELINE_CACHE_HIT: ${{ steps.baseline-cache.outputs.exists }}
+          VERIFICATION_CACHE_HIT: ${{ steps.verification-cache.outputs.exists }}
+          VERIFICATION_CACHE_REUSE: ${{ steps.verification-cache.outputs.reuse }}
+          VERIFICATION_PRODUCER_SHA: ${{ steps.verification-cache.outputs.producer_sha }}
+        run: |
+          {
+            echo "Frontend Runtime image：$FRONTEND_IMAGE"
+            echo "Review Baseline image：$BASELINE_IMAGE"
+            echo "Review Verification marker：$VERIFICATION_IMAGE"
+            echo "Frontend Runtime cache 命中：$FRONTEND_CACHE_HIT"
+            echo "Review Baseline cache 命中：$BASELINE_CACHE_HIT"
+            echo "Review Verification cache 命中：$VERIFICATION_CACHE_HIT"
+            echo "Review Verification marker 直接复用：$VERIFICATION_CACHE_REUSE"
+            if [ -n "$VERIFICATION_PRODUCER_SHA" ]; then
+              echo "Review Verification producer SHA：$VERIFICATION_PRODUCER_SHA"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: 清理 Review Runtime
+        if: always()
+        run: docker rm -f review-cache-backend review-cache-frontend review-baseline-backend review-baseline-copy || true
