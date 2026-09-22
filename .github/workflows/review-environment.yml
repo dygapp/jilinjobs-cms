@@ -11,8 +11,8 @@ on:
     types: [labeled]
 
 concurrency:
-  group: review-environment
-  cancel-in-progress: true
+  group: ${{ (github.event_name == 'workflow_dispatch' || github.event.label.name == 'human-review') && 'review-environment-active' || format('review-environment-noop-{0}', github.run_id) }}
+  cancel-in-progress: ${{ github.event_name == 'workflow_dispatch' || github.event.label.name == 'human-review' }}
 
 permissions:
   contents: read
