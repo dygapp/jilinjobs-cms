@@ -24,6 +24,7 @@ const currentRoots = [
   'docs/work/README.md',
   'docs/work/current',
   'skills',
+  'frontend/public-site/DESIGN.md',
 ]
 
 function collectMarkdown(target, { skipArchive = false } = {}) {
@@ -47,6 +48,16 @@ const failures = []
 const warnings = []
 const cjkRe = /[\u3400-\u9fff]/g
 const latinRe = /[A-Za-z]/g
+const designMdCanonicalHeadings = new Set([
+  'Overview',
+  'Colors',
+  'Typography',
+  'Layout',
+  'Elevation & Depth',
+  'Shapes',
+  'Components',
+  "Do's and Don'ts",
+])
 
 function stripNonNarrative(content) {
   return content
@@ -114,11 +125,13 @@ for (const file of languageFiles) {
     const exactSkillTitle = skillName && heading === skillName
     const exactCodeTitle = /^\`[^\`]+\`$/.test(heading)
     const stableTokenTitle = /^[A-Z][A-Z0-9_-]*$/.test(heading)
+    const canonicalDesignHeading = file === 'frontend/public-site/DESIGN.md' && designMdCanonicalHeadings.has(heading)
     if (
       !standardizedAgentTitle &&
       !exactSkillTitle &&
       !exactCodeTitle &&
       !stableTokenTitle &&
+      !canonicalDesignHeading &&
       !/[\u3400-\u9fff]/.test(heading)
     ) {
       addFailure(file, `面向人的结构标题必须以中文为主；精确机器标识、Skill 名或稳定状态值可保留原样。当前为“${heading}”。`)

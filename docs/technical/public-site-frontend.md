@@ -13,18 +13,20 @@ relations:
     - docs/architecture/decisions/ADR-0002-public-site-multi-entry-modular-spa.md
     - docs/architecture/decisions/ADR-0003-public-shared-shell-components.md
     - docs/architecture/decisions/ADR-0004-public-shared-column-page.md
+  design:
+    - frontend/public-site/DESIGN.md
   interface:
     - docs/technical/http-interface-contract.md
   verification:
     - docs/technical/verification-strategy.md
-updated_at: 2026-09-20
+updated_at: 2026-09-23
 ---
 
 # Public Frontend 跨 Feature 技术契约
 
 ## 1. 文档责任
 
-本文只维护当前 Public Renderer implementation 在多个 Feature 之间持续需要一致的 HOW。Main / Party 的用户可观察行为、canonical URL、Carousel lifecycle、失败状态和 验收 由 Product Specifications 持有；Site / Theme / replaceability boundary 由 CMS Architecture 与 ADR 持有；Backend ↔ Public 的稳定 HTTP compatibility 由 `docs/technical/http-interface-contract.md` 唯一持有。
+本文只维护当前 Public Renderer implementation 在多个 Feature 之间持续需要一致的 HOW。Main / Party 的用户可观察行为、canonical URL、Carousel lifecycle、失败状态和 验收 由 Product Specifications 持有；颜色、字体、尺寸、间距、形状、组件 presentation 与原站视觉复刻规则由 `frontend/public-site/DESIGN.md` 持有；Site / Theme / replaceability boundary 由 CMS Architecture 与 ADR 持有；Backend ↔ Public 的稳定 HTTP compatibility 由 `docs/technical/http-interface-contract.md` 唯一持有。
 
 本文不复制 CMS Domain rules、HTTP DTO inventory、历史迁移 dataset、精确 asset hash、当前 component inventory、package version 或 E2E case inventory。
 
@@ -128,15 +130,27 @@ managed resource content / attachment 与 `/static/**` 的 HTTP namespace / bina
 
 共享 Navigation 在目标被选择时收起移动端菜单，并抑制当前指针仍停留在父项上造成的桌面下拉残留；指针离开后恢复正常 hover / focus 行为。Site Definition 继续通过 Navigation `openMode` 显式表达浏览上下文：空值不输出 `target`，`_self` / `_blank` 直接投影同名 HTML `target`。Internal Router target 与 external URL 使用同一投影规则，Public 不再通过 URL 类型推断是否新窗口。
 
-首页直播课程不得再包裹第二层同名标题；本站“更多”链接以覆盖嵌入页原入口的方式保持 `/page/live-course` 规范目标。招聘公告与其他首页资讯列表共用同一组字体、颜色与 hover token，不尝试跨源修改慧就业 iframe 内部样式。
+首页直播课程不得再包裹第二层同名标题；本站“更多”链接以覆盖嵌入页原入口的方式保持 `/page/live-course` 规范目标。招聘公告与其他首页资讯列表消费 `frontend/public-site/DESIGN.md` 的同一组字体、颜色与交互 token，不尝试跨源修改慧就业 iframe 内部样式。
 
-## 10. 构建 / 验证适配
+## 10. 视觉设计 Authority 投影
+
+Public Renderer 必须把 `frontend/public-site/DESIGN.md` 当作视觉设计输入，而不是从现有 selector 或组件样式反向推导长期设计规则。
+
+实现约束：
+
+- YAML 中的 normative token 应通过 CSS variables、theme variables、组件 props / class 或等价的薄映射进入实现；本契约不强制一次性重构现有 CSS；
+- 同一语义颜色、typography 或 spacing 不应在多个组件各自复制一组含义相同但命名不同的 magic value；
+- 当前实现值与 DESIGN token 不一致时，先判断 implementation defect、stale Design Authority 或 `DESIGN.md` 已明确记录的 Known Gap；
+- `DESIGN.md` 的 Known Gap 不授予 Agent 自行选择最终视觉值的权限；后续修复应先取得当前 Authority / visual evidence，再 promotion；
+- renderer replacement 必须能够从 Requirement + Specification + Design + Architecture / Technical 重建公开站，而不是依赖读取被替换 CSS 作为设计输入。
+
+## 11. 构建 / 验证适配
 
 当前 Public package自己持有 Node engine、Vue / TypeScript / Vite与 scripts 的精确版本。正式 build包含 source-boundary guard、Vue-aware type-check与bundler build。
 
 影响 API adapter 时验证 `http-interface-contract.md` compatibility；影响 route、DOM、async data、resource或用户交互时追加 浏览器验证；存在视觉 验收时再取得对应 AI / 人工视觉证据。证据规则以 `docs/technical/verification-strategy.md` 与 live-discovered verification Rules为准。
 
-## 11. 不由本文拥有
+## 12. 不由本文拥有
 
 - Main / Party 产品身份与业务信息架构；
 - Carousel用户可观察行为；

@@ -3,7 +3,7 @@ id: specification-public-site
 title: 公开站产品规格
 type: specification
 status: accepted
-version: "V3.7"
+version: "V3.8"
 relations:
   requirements:
     - docs/requirements/information-publishing.md
@@ -11,10 +11,12 @@ relations:
     - docs/requirements/hui-employment-integration.md
   architecture:
     - docs/architecture/cms-architecture.md
+  design:
+    - frontend/public-site/DESIGN.md
   related:
     - docs/specifications/page-content.md
     - docs/specifications/rich-text-authoring.md
-updated_at: 2026-09-20
+updated_at: 2026-09-23
 ---
 
 # 公开站产品规格
@@ -23,7 +25,7 @@ updated_at: 2026-09-20
 
 本规格是 Main 与中心党建（Party）公开访问行为的唯一 Current public-surface Specification owner，定义访问者可以观察到的页面、导航、内容投影、跳转、作用域、响应式与失败行为。
 
-Main / Party 的长期产品定位与内容范围由 `docs/requirements/information-publishing.md` 持有；CMS business object、identity、lifecycle 与 ownership 由 `docs/requirements/cms-domain.md` 持有；Site / Theme / replaceability boundary 由 `docs/architecture/cms-architecture.md` 持有。具体前端框架、Entry、Router、源码目录、build 与 delivery mechanism 属于 Technical / implementation。
+Main / Party 的长期产品定位与内容范围由 `docs/requirements/information-publishing.md` 持有；CMS business object、identity、lifecycle 与 ownership 由 `docs/requirements/cms-domain.md` 持有；Site / Theme / replaceability boundary 由 `docs/architecture/cms-architecture.md` 持有；公开站颜色、字体、尺寸、间距、形状、组件 presentation 与原站视觉复刻规则由 `frontend/public-site/DESIGN.md` 持有。具体前端框架、Entry、Router、源码目录、build 与 delivery mechanism 属于 Technical / implementation。
 
 ## 2. 规范 URL（Canonical URL）
 
@@ -94,9 +96,8 @@ Main 首页继续保持已接受的固定页面结构与主要视觉识别，并
 首页标题 presentation 按模块形态区分：
 
 - “最新招聘”“网站导航”作为整行大板块，各自独占 Main 首页内容主轴的一整行；其标题沿用已接受的原站大板块基线，以独立 section heading 与左侧竖向视觉标记识别，不套用多列小板块的顶部横向强调边框；
-- 通知公告、就业动态、快速导航、招聘公告等多列小板块使用与首页“直播课程”可见标题协调的**卡片式 Tab 标题**：标题 Label 是白底卡片 Tab，标题文字使用强调色；顶部强调色横条只覆盖 Tab 自身宽度，不铺满整个卡片；Tab 左右保留 1px 中性边线，底边使用与内容区相同的白色，使 Tab 在视觉上与正文区域连通；
-- 卡片式 Tab 之外的 Header 区域继续使用 1px 中性底部分隔线；当前接受的小板块 Header / Tab 高度为 32px，标题字号为 17px；Tab 顶部左右允许使用轻微圆角；小板块标题文字不恢复旧的文字下划线强调；
-- 大板块与小板块可以共享字体、正文、日期与交互色彩体系，但不得为了表面统一抹平两类模块的结构差异。
+- 通知公告、就业动态、快速导航、招聘公告等多列小板块使用卡片式 Tab 标题，与内容区域形成连续视觉；
+- 大板块与小板块不得为了表面统一抹平结构差异；两类模块当前精确颜色、字号、高度、边线、强调条与圆角由 `frontend/public-site/DESIGN.md` 唯一持有。
 
 首页 iframe 在加载期间显示可辨识状态；在加载失败或限定时间内未确认加载完成时，显示“外部内容暂时不可用”的独立失败状态与重试操作。单个慧就业区域失败不得隐藏首页其他区域，也不得使 Main Header、Navigation 或 Footer 失效。
 
@@ -216,7 +217,7 @@ Main / Party 轮播共享以下用户可观察 lifecycle：
 
 自动切换间隔和前台最大有效项数量使用当前低风险 presentation configuration；具体 key / default value 由其真实配置 owner 持有，Public Specification 不另维护第二份配置。
 
-当前已接受的主要视觉比例为：Main 主轮播 `8:5`；Party 轮播 `585:329`。两者可以使用不同 caption、dot 和主题视觉，也不要求共用相同 DOM；改变这些已接受比例属于 Public visual Specification change，不应由局部实现重构静默漂移。
+Main / Party 可以使用不同 caption、dot 和主题视觉，也不要求共用相同 DOM。当前已接受的精确轮播视觉比例由 `frontend/public-site/DESIGN.md` 唯一持有；改变比例不得由局部实现重构静默漂移，若同时改变页面可观察结构则需要同步本 Specification。
 
 ## 10. 外部链接
 
@@ -307,8 +308,8 @@ Main 与 Party 当前保持一致的用户可观察行为包括：
 - 首页“直播课程”不重复显示宿主标题，“更多”入口进入 `/page/live-course`，并在 Main Shell 内加载当前 Requirement 指定的直播课程二级页面；
 - 招聘公告与其他首页资讯区采用一致的标题、列表正文、日期和交互色彩基线；
 - Main 首页“最新招聘”“网站导航”作为整行大板块分别占满内容主轴一整行，并采用独立 section heading / 左侧竖向视觉标记，不套用小板块顶部横向强调边框；
-- Main 首页通知公告、就业动态、快速导航、招聘公告等多列小板块采用卡片式 Tab 标题：Header / Tab 高度为 32px、标题字号为 17px，文字为强调色，3px 顶部强调色横条只覆盖 Tab 自身宽度，Tab 左右保留 1px 中性边线、底边与内容区同为白色，Header 余下部分保留 1px 中性底线；不得把 3px 强调色扩展为整个卡片通栏顶边，且不恢复标题文字下划线；
-- Main 首页“网站导航”模块的 Tab 与链接正文保持清晰可读；当前接受基线分别为 16px 与 15px，不因内容密度回退到过小字号；
+- Main 首页通知公告、就业动态、快速导航、招聘公告等多列小板块采用卡片式 Tab 标题，并满足 `frontend/public-site/DESIGN.md` 当前精确视觉 token；不得把局部强调条扩展为整个卡片通栏顶边，也不得恢复标题文字下划线；
+- Main 首页“网站导航”模块的 Tab 与链接正文保持清晰可读，并满足 `frontend/public-site/DESIGN.md` 的当前 typography token；
 - 导航目标切换后下拉菜单立即隐藏；招聘信息五个入口与“直播课程”导航入口使用安全的新窗口行为；
 - 招聘信息五个 PageGroup 成员的页面名称、当前 Tab 与实际慧就业业务映射一致；
 - 招聘信息和直播课程二级页面不显示 iframe 内部滚动条，以宿主页面滚动承载展开内容；
