@@ -10,7 +10,7 @@
 4. 如果任务只是状态检查且状态已无歧义，在此停止；
 5. 根 `README.md` 只在当前任务需要稳定项目范围摘要、人类入口或该 Authority 本身进入责任时读取，不作为固定 Bootstrap；
 6. Planning / durable route 按需读取 `docs/project/project-roadmap.md`；Method / execution routing 读取 `docs/project/project-capability-profile.md`，再按 selector 加载单个 canonical Method；
-7. Requirement 任务先读取 `docs/requirements/index.md` 定位唯一 fact owner；其他任务读取当前责任直接相关的 Domain / Architecture / Specification / Technical Authority；
+7. Requirement 任务先读取 `docs/requirements/index.md` 定位唯一 fact owner；其他任务读取当前责任直接相关的 Domain / Architecture / Specification / Design / Technical Authority；
 8. 当前 controlling Issue、PR / Actions 与其他当前证据；只有真正执行某项 Skill responsibility 时才加载对应 `SKILL.md`。
 
 普通运行不得自动访问 `dygapp/agentic-dev` 修补本地发现缺口。若 locator / source 缺失、Current owner 不明确、多个 primary responsibility 无法消歧或 Authority 冲突，必须 失败关闭，扩大最小本地读取并重新定位。
@@ -29,6 +29,7 @@
 | `docs/requirements/` | 当前 Product / Domain Requirement fact owner、Human Navigation 与 Authority Index | 先 Index，再读取命中 owner |
 | `docs/specifications/` | 当前用户可观察行为、Failure Behavior 与 Acceptance | 读取当前任务相关 owner |
 | `docs/technical/` | 跨 Feature implementation / HTTP Interface Contract 与 Verification Strategy | 读取当前任务相关 owner |
+| `frontend/public-site/DESIGN.md` | Main / Party 公开站视觉设计 token、组件 presentation、原站复刻规则与视觉 Known Gaps | 触达公开站视觉设计 / 实现 / 复核时读取 |
 | `docs/work/current/README.md` | 当前执行生命周期 Locator | state / execution lifecycle 任务读取 |
 | `docs/work/current/*.md` | active work artifact | locator 指向时读取 |
 | `docs/work/archive/` | 已完成 Execution Unit / execution evidence | 默认不读取 |
@@ -43,6 +44,7 @@
 - 慧就业公共网站集成 Requirement：`docs/requirements/hui-employment-integration.md`
 - CMS 长期 Architecture：`docs/architecture/cms-architecture.md`
 - Current Specifications：`docs/specifications/README.md`
+- Public Visual Design Authority：`frontend/public-site/DESIGN.md`
 - Backend Technical：`docs/technical/backend-service.md`
 - HTTP Interface Contract：`docs/technical/http-interface-contract.md`
 - Admin Technical：`docs/technical/admin-frontend.md`
@@ -60,7 +62,7 @@ Requirement Index 只拥有 locator / relation；长期 Product / Domain / 外�
 
 | 来源角色 | 当前事实地位 | 适用边界 |
 |---|---|---|
-| Current canonical Authority | 对其声明的 semantic responsibility 具有当前权威 | 只在 owner 的 Product / Domain / Architecture / Specification / Technical / Project / Method 等责任内成立 |
+| Current canonical Authority | 对其声明的 semantic responsibility 具有当前权威 | 只在 owner 的 Product / Domain / Architecture / Specification / Design / Technical / Project / Method 等责任内成立 |
 | Formal Decision / ADR | Accepted decision 的背景、候选、权衡与 supersede lineage | 用于解释为什么形成当前架构；当前叠加后的 Architecture State 仍以 `docs/architecture/cms-architecture.md` 等 当前状态所有者 为准 |
 | Versioned canonical source | 对自身明确拥有的稳定 Site Definition、canonical migration dataset、manifest / digest / provenance 等具体事实具有 bounded authority | `sites/jilinjobs/**` 不拥有 Product Requirement；`data-migrations/**` 不因保存 legacy-derived data 就成为普通 Runtime 或产品需求 owner |
 | External authoritative source | 对合同、法规、外部接口或外部系统自身事实提供有 provenance 的输入 | 必须保留来源、时间 / 版本与适用范围；外部事实不会自动覆盖 Consumer 已确认的其他 语义所有者 |

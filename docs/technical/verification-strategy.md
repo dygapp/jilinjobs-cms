@@ -10,7 +10,9 @@ relations:
     - docs/requirements/cms-domain.md
   interface:
     - docs/technical/http-interface-contract.md
-updated_at: 2026-09-20
+  design:
+    - frontend/public-site/DESIGN.md
+updated_at: 2026-09-23
 ---
 
 # 验证运行策略
@@ -98,6 +100,8 @@ Vue / TypeScript 变更按真实风险选择验证层：
 - Router、DOM、用户交互：追加 浏览器验证；
 - build / module / tsconfig：追加正式 build；
 - 存在视觉 验收：在功能验证之外取得对应 AI / 人工视觉证据。
+- 触达 `frontend/public-site/DESIGN.md`：使用仓库固定的 Google `DESIGN.md` CLI 版本执行格式 / token lint；
+- 触达公开站视觉实现：除 build / Browser 外，核对实现是否消费当前 Design Authority；Known Gap 未经 promotion 不得由测试固化成新的视觉事实。
 
 验证以当前 Consumer 实际 package、tsconfig、Workflow 与 仓库权威 为准，不为匹配外部 Technology Profile 机械升级依赖。
 
