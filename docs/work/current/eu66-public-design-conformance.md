@@ -75,6 +75,7 @@ started_at: 2026-09-24
 - 快速 CI 只在 `pull_request` 触发，未建立 PR 前无法取得 PR exact-head Runtime / Browser Actions 证据；
 - 尝试在 Runner 复现完整快速 CI 时，MySQL 8.4 image 已取得，但 Backend / nginx / Playwright Docker image 的长时间拉取被 Runner 单命令 120 秒上限反复截断；这属于 Runtime / Environment Problem，不作为产品失败；
 - 因缺少 PR exact-head Runtime / Browser evidence，本单元保持 `active`，不得声明 `Ready to Integrate` 或 completed。
+- 已核验 `.github/workflows/ci.yml`：PR 添加 `full-ci` 标签会触发完整 CI；其中 `Integrated browser verification` 在 PR exact Head 上执行 Public `npm run test:e2e`，会覆盖本单元修改的 `visual-fidelity.spec.ts` 与 `party-visual-fidelity.spec.ts`。因此剩余唯一验证 Gate 是：建立本分支到 `main` 的 PR，并添加 `full-ci` 标签，取得该 PR exact Head 的完整 CI success 证据。
 
 ## 验收
 
