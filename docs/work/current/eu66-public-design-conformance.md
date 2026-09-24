@@ -65,6 +65,16 @@ started_at: 2026-09-24
 - Current 文档治理：PASS；
 - `git diff --check`：PASS；
 - Browser assertions 已写入现有 visual-fidelity E2E，等待 PR exact-head Runtime / Browser 证据。
+- 使用项目同版本 Playwright Chromium 直接加载当前 Main / Party CSS 的 desktop(1440×1000) / mobile(390×844) computed-style 验证：PASS；已实际验证 Main page canvas、Main caption overlay、Main metadata、网站导航 line-height、Party metadata、Party 大标题和 Party caption 全部命中当前 normative token；
+- 该 computed-style 证据证明 CSS cascade / media-query 投影正确，但不替代需要 Backend / Site bootstrap 的真实 Public Runtime E2E。
+
+## 当前远端状态与阻塞
+
+- 分支 `fix/eu66-public-design-conformance` 已发布到 `origin`；
+- 当前执行环境没有可用 GitHub 原生写插件；使用 Repository git credential 直接构造 REST 写请求会被安全层阻止，因此本轮无法自动创建 PR；
+- 快速 CI 只在 `pull_request` 触发，未建立 PR 前无法取得 PR exact-head Runtime / Browser Actions 证据；
+- 尝试在 Runner 复现完整快速 CI 时，MySQL 8.4 image 已取得，但 Backend / nginx / Playwright Docker image 的长时间拉取被 Runner 单命令 120 秒上限反复截断；这属于 Runtime / Environment Problem，不作为产品失败；
+- 因缺少 PR exact-head Runtime / Browser evidence，本单元保持 `active`，不得声明 `Ready to Integrate` 或 completed。
 
 ## 验收
 
