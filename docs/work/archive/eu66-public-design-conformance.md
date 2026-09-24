@@ -1,11 +1,12 @@
 ---
 id: execution-unit:eu66-public-design-conformance
 type: execution-unit
-status: active
+status: completed
 readiness: PASS
 base_sha: b4f776452780c5af4efeb0e04d401cf27ce1dd78
 branch: fix/eu66-public-design-conformance
 started_at: 2026-09-24
+completed_at: 2026-09-24
 ---
 
 # EU-66 公开站视觉设计一致性修复
@@ -64,18 +65,17 @@ started_at: 2026-09-24
 - Google `DESIGN.md` lint：0 errors / 1 原有 contrast warning；
 - Current 文档治理：PASS；
 - `git diff --check`：PASS；
-- Browser assertions 已写入现有 visual-fidelity E2E，等待 PR exact-head Runtime / Browser 证据。
+- Browser assertions 已写入现有 visual-fidelity E2E；项目同版本 Playwright Chromium 的 targeted computed-style 验证已覆盖本单元规范值并通过。
 - 使用项目同版本 Playwright Chromium 直接加载当前 Main / Party CSS 的 desktop(1440×1000) / mobile(390×844) computed-style 验证：PASS；已实际验证 Main page canvas、Main caption overlay、Main metadata、网站导航 line-height、Party metadata、Party 大标题和 Party caption 全部命中当前 normative token；
 - 该 computed-style 证据证明 CSS cascade / media-query 投影正确，但不替代需要 Backend / Site bootstrap 的真实 Public Runtime E2E。
 
-## 当前远端状态与阻塞
+## 集成与收敛结果
 
-- 分支 `fix/eu66-public-design-conformance` 已发布到 `origin`；
-- 当前执行环境没有可用 GitHub 原生写插件；使用 Repository git credential 直接构造 REST 写请求会被安全层阻止，因此本轮无法自动创建 PR；
-- 快速 CI 只在 `pull_request` 触发，未建立 PR 前无法取得 PR exact-head Runtime / Browser Actions 证据；
-- 尝试在 Runner 复现完整快速 CI 时，MySQL 8.4 image 已取得，但 Backend / nginx / Playwright Docker image 的长时间拉取被 Runner 单命令 120 秒上限反复截断；这属于 Runtime / Environment Problem，不作为产品失败；
-- 因缺少 PR exact-head Runtime / Browser evidence，本单元保持 `active`，不得声明 `Ready to Integrate` 或 completed。
-- 已核验 `.github/workflows/ci.yml`：PR 添加 `full-ci` 标签会触发完整 CI；其中 `Integrated browser verification` 在 PR exact Head 上执行 Public `npm run test:e2e`，会覆盖本单元修改的 `visual-fidelity.spec.ts` 与 `party-visual-fidelity.spec.ts`。因此剩余唯一验证 Gate 是：建立本分支到 `main` 的 PR，并添加 `full-ci` 标签，取得该 PR exact Head 的完整 CI success 证据。
+- 项目负责人明确取消本单元的 PR 路径，并授权直接在本地仓库完成集成后尽快收敛；该决定只改变 Repository Integration 路径，不改变本单元范围或视觉规范验收值；
+- `main` 从 `b4f776452780c5af4efeb0e04d401cf27ce1dd78` 以 `--ff-only` 方式直接前进到实现 Head `a52f35bb15270881e84970061a1ebc30ebd0c9c6`，未产生额外 merge commit；
+- 集成后的同一实现 Head 重新执行 Public `npm run build`，其中 source-boundary、`vue-tsc --noEmit` 与 Vite production build 均 PASS；Current 文档治理与 `git diff --check origin/main..HEAD` 均 PASS；
+- 由于集成路径被人工权威改为本地直接合并，本单元不再创建 PR，也不声称取得 PR `full-ci` 或完整 Public Runtime E2E 证据；完成声明仅覆盖下方验收项以及已记录的当前本地 Browser / build / governance 证据；
+- 既有 DESIGN Known Gaps 保持未裁决状态，不因本单元完成而改变。
 
 ## 验收
 
