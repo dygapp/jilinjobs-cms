@@ -172,6 +172,11 @@ test('视觉基线：桌面首页维持原站三列首屏与关键图片区块',
   await expect(liveCourses).toHaveAttribute('data-frame-status', 'loaded')
   await page.waitForTimeout(1_000)
   await page.screenshot({ path: testInfo.outputPath('homepage-hui-employment-desktop.png'), fullPage: true })
+
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('/')
+  await expect(page.locator('.home-live-courses-more')).toHaveCSS('font-size', '13px')
+  await expect(page.locator('.home-live-courses-more')).toHaveCSS('line-height', '18.2px')
 })
 
 test('视觉基线：栏目、文章、固定页与业务指南匹配原站内容页主结构', async ({ page, request }, testInfo) => {

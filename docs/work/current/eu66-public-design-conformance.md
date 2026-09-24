@@ -50,7 +50,7 @@ started_at: 2026-09-24
 
 - Main page canvas 默认文字已由 `#212529` 恢复到 `text-primary = #323B47`；
 - Main 轮播 caption 遮罩已由 `rgba(0,18,41,.8)` 恢复到 `overlay-dark = rgba(0,18,41,.44)`；
-- Main 首页 panel “更多”、日期以及直播课程“更多”已统一到 metadata `13px / 1.4`；
+- Main 首页 panel “更多”、日期以及直播课程“更多”已统一到 metadata `13px / 1.4`，并移除 `<=760px` 下把直播课程“更多”降为 12px 的响应式覆盖；
 - 网站导航分类 Tab / 链接已分别补齐 `1.4 / 1.6` 行高；
 - Party 首页“更多”和 article-list 日期已统一到 `text-muted = #8491A1`、`13px / 1.4`；
 - Party `<=600px` 不再把大板块标题降到 21px，也不再把轮播 caption 降到 13px / 36px；移动端继续消费既有 24px 标题与 `14px / 20px / 40px` caption token；
