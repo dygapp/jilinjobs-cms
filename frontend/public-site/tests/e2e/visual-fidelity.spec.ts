@@ -26,10 +26,12 @@ test('视觉基线：原站关键静态资源与蓝色公共框架可用', async
   for (const name of BASELINE_ROOTS) expect(rootNames).toContain(name)
 
   await page.goto('/')
+  await expect(page.locator('body')).toHaveCSS('color', 'rgb(50, 59, 71)')
   await expect(page.locator('.platform-logo-icon')).toHaveAttribute('src', '/static/brand/smartedu-logo-icon.png')
   await expect(page.locator('.platform-logo-text')).toHaveAttribute('src', '/static/brand/smartedu-logo-text.png')
   await expect(page.locator('.site-hero')).toHaveCSS('background-image', /header-banner\.png/)
   await expect(page.locator('.home-carousel img')).toHaveAttribute('src', '/static/home/carousel-01.jpg')
+  await expect(page.locator('.carousel-caption')).toHaveCSS('background-color', 'rgba(0, 18, 41, 0.44)')
   await expect(page.locator('.home-promo-banner img')).toHaveAttribute('src', '/static/home/recruitment-campaign.png')
   const shortcutImages = page.locator('.service-shortcuts img')
   expect(await shortcutImages.count()).toBeGreaterThanOrEqual(6)
@@ -142,6 +144,17 @@ test('视觉基线：桌面首页维持原站三列首屏与关键图片区块',
 
   await expect(page.locator('.site-navigation-tabs button').first()).toHaveCSS('font-size', '16px')
   await expect(page.locator('.site-link-group a').first()).toHaveCSS('font-size', '15px')
+  await expect(page.locator('.site-navigation-tabs button').first()).toHaveCSS('line-height', '22.4px')
+  await expect(page.locator('.site-link-group a').first()).toHaveCSS('line-height', '24px')
+
+  const panelMore = page.locator('.home-panel header > a, .news-column header > a').first()
+  await expect(panelMore).toHaveCSS('font-size', '13px')
+  await expect(panelMore).toHaveCSS('line-height', '18.2px')
+  const panelDate = page.locator('.home-panel time, .news-column time').first()
+  await expect(panelDate).toHaveCSS('font-size', '13px')
+  await expect(panelDate).toHaveCSS('line-height', '18.2px')
+  await expect(page.locator('.home-live-courses-more')).toHaveCSS('font-size', '13px')
+  await expect(page.locator('.home-live-courses-more')).toHaveCSS('line-height', '18.2px')
 
   const listStyles = await page.locator('.news-column li a').evaluateAll(elements => elements.map(element => {
     const style = getComputedStyle(element)

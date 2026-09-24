@@ -29,13 +29,13 @@ body{font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;background:#f5
 .party-entry-top .party-section-panel{height:329px;overflow:hidden;border:1px solid #eceff2}
 .party-red-tab{position:relative;display:flex;align-items:center;justify-content:space-between;min-height:40px;padding:0 16px;border-top:2px solid #d00023;border-bottom:1px solid #edf0f2}
 .party-red-tab h2,.party-red-tab h3{margin:0;color:#d00023;font-size:14px;font-weight:700}
-.party-red-tab a{color:#8a929c;font-size:13px;text-decoration:none}
+.party-red-tab a{color:#8491a1;font-size:13px;line-height:1.4;text-decoration:none}
 .party-red-tab a:hover{color:#d00023}
 .party-article-list{list-style:none;margin:0;padding:16px}
 .party-article-list li{position:relative;display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:36px;color:#525b66}
 .party-article-list a{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#525b66;font-size:14px;text-decoration:none}
 .party-article-list a:hover{color:#d00023}
-.party-article-list time{flex:0 0 auto;color:#9ba2aa;font-size:13px}
+.party-article-list time{flex:0 0 auto;color:#8491a1;font-size:13px;line-height:1.4}
 .party-voice-list{padding:30px 16px 35px}
 .party-voice-list li{min-height:20px;line-height:20px;padding-left:24px;margin-bottom:25px}
 .party-voice-list li::before{content:"";position:absolute;left:0;top:50%;width:16px;height:16px;transform:translateY(-50%);background:url('/static/party/ic-title-yellow.png') center/16px 16px no-repeat}
@@ -105,9 +105,8 @@ body{font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;background:#f5
   .party-banner{height:128px}
   .party-nav-root li{flex-basis:50%}
   .party-entry-top{padding:8px}
-  .party-carousel-item strong{padding:8px 12px;min-height:36px;font-size:13px}
+  .party-carousel-item strong{padding:8px 12px;min-height:40px;font-size:14px;line-height:20px}
   .party-block{margin-top:22px}
-  .party-block-title h2{font-size:21px}
   .party-article-list{padding:12px}
   .party-article-list li{align-items:flex-start;flex-direction:column;gap:4px;padding:7px 0}
   .party-article-list a{width:100%;white-space:normal;line-height:1.6}
