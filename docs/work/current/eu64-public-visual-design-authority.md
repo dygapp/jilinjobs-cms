@@ -102,19 +102,19 @@ started_at: 2026-09-23
 
 当前本地实现与静态验证范围内 Blocking：**0**，Medium：**0**。本单元只建立 Design Authority，因此不以本轮证据声明现有网站全部视觉缺口已修复。
 
-GitHub exact-head Actions / PR evidence 需要在提交并发布当前分支后取得；在取得该远端证据前，本单元保持 active，不提前关闭为 completed。
+远端分支与 PR 已建立；当前进入 exact-head GitHub Actions / Integration evidence 阶段。本单元在 PR 验证、集成与 Post-Integration closure 完成前继续保持 active，不提前关闭为 completed。
 
 
-## 远端发布状态
+## 远端集成状态
 
-当前本地提交已经建立，但 Runner 到 GitHub 的远端传输不可用：
+2026-09-24 重新核验后，Runner 到 GitHub 的 HTTPS 通道已恢复：
 
-- HTTPS `git push` 与 `git ls-remote` 均在 TLS 握手阶段失败，错误为 `GnuTLS, handshake failed: TLS 链接非正常地终止了`；
-- 对 `https://github.com/dygapp/jilinjobs-cms` 的直接 `curl` 同样在代理建立连接后发生 TLS unexpected EOF；
-- 不修改 Repository remote 配置的 SSH `git ls-remote` 备用探测在 30 秒内超时；
-- 当前没有 branch push、PR 或 GitHub Actions exact-head 成功证据。
+- `docs/eu64-public-design-authority` 已发布到 `origin`，首次发布 Head 为 `074b631a31d80cd55e0ed5b3e462a689a5652a6c`；
+- GitHub PR #203 — `docs(public): 建立公开站视觉设计权威` 已创建，base=`main`；
+- PR 创建后重新读取确认首次 PR Head 与远端分支 Head 一致；
+- 前一轮 TLS / SSH 失败保留为本单元执行期外部传输 incident 证据，但已不再构成当前阻塞。
 
-因此本单元继续保持 `active`。上述失败属于外部传输阻塞，不改变已经取得的本地设计规范 / 文档治理验证结论，但在远端发布成功并取得 GitHub-native evidence 前不得声明集成完成。
+当前剩余 Gate 是把本次状态同步提交推送到 PR #203，取得该最终候选 exact Head 的 GitHub Actions 证据，满足 Integration 条件后执行正常集成；随后按 `docs/work/README.md` 完成 Post-Integration closure。
 
 ## 完成条件
 
