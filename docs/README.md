@@ -29,7 +29,7 @@
 | `docs/requirements/` | 当前 Product / Domain Requirement fact owner、Human Navigation 与 Authority Index | 先 Index，再读取命中 owner |
 | `docs/specifications/` | 当前用户可观察行为、Failure Behavior 与 Acceptance | 读取当前任务相关 owner |
 | `docs/technical/` | 跨 Feature implementation / HTTP Interface Contract 与 Verification Strategy | 读取当前任务相关 owner |
-| `frontend/public-site/DESIGN.md` | Main / Party 公开站视觉设计 token、组件 presentation、原站复刻规则与视觉 Known Gaps | 触达公开站视觉设计 / 实现 / 复核时读取 |
+| `docs/design/` | 当前视觉设计 token、组件 presentation、主题、原站复刻规则与视觉 Known Gaps | 触达视觉设计 / 实现 / 复核时读取 |
 | `docs/work/current/README.md` | 当前执行生命周期 Locator | state / execution lifecycle 任务读取 |
 | `docs/work/current/*.md` | active work artifact | locator 指向时读取 |
 | `docs/work/archive/` | 已完成 Execution Unit / execution evidence | 默认不读取 |
@@ -44,7 +44,7 @@
 - 慧就业公共网站集成 Requirement：`docs/requirements/hui-employment-integration.md`
 - CMS 长期 Architecture：`docs/architecture/cms-architecture.md`
 - Current Specifications：`docs/specifications/README.md`
-- Public Visual Design Authority：`frontend/public-site/DESIGN.md`
+- Public Visual Design Authority：`docs/design/public-site/DESIGN.md`
 - Backend Technical：`docs/technical/backend-service.md`
 - HTTP Interface Contract：`docs/technical/http-interface-contract.md`
 - Admin Technical：`docs/technical/admin-frontend.md`

@@ -7,7 +7,6 @@ on:
       - 'README.md'
       - 'docs/**'
       - 'skills/**'
-      - 'frontend/public-site/DESIGN.md'
       - 'scripts/verify-docs-governance.mjs'
       - '.github/workflows/docs-governance.yml'
   push:
@@ -17,7 +16,6 @@ on:
       - 'README.md'
       - 'docs/**'
       - 'skills/**'
-      - 'frontend/public-site/DESIGN.md'
       - 'scripts/verify-docs-governance.mjs'
       - '.github/workflows/docs-governance.yml'
   workflow_dispatch:
@@ -47,4 +45,4 @@ jobs:
       - name: 运行文档治理检查
         run: node scripts/verify-docs-governance.mjs
       - name: 校验公开站视觉设计规范
-        run: npx --yes @google/design.md@0.4.0 lint frontend/public-site/DESIGN.md
+        run: npx --yes @google/design.md@0.4.0 lint docs/design/public-site/DESIGN.md
