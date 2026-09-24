@@ -1,11 +1,12 @@
 ---
 id: execution-unit:eu64-public-visual-design-authority
 type: execution-unit
-status: active
+status: completed
 readiness: PASS
 base_sha: a8f96a949973f8d6592180464f5d72c52e8174be
 branch: docs/eu64-public-design-authority
 started_at: 2026-09-23
+completed_at: 2026-09-24
 ---
 
 # EU-64 公开站视觉设计权威建立
@@ -100,22 +101,24 @@ started_at: 2026-09-23
 
 ## 收敛状态
 
-当前本地实现与静态验证范围内 Blocking：**0**，Medium：**0**。本单元只建立 Design Authority，因此不以本轮证据声明现有网站全部视觉缺口已修复。
+最终 Blocking：**0**，Medium：**0**。本单元只建立 Design Authority，因此不以本轮证据声明现有网站全部视觉缺口已修复；这些视觉缺口继续由 `frontend/public-site/DESIGN.md` 的 Known Gaps 持有。
 
-远端分支与 PR 已建立；当前进入 exact-head GitHub Actions / Integration evidence 阶段。本单元在 PR 验证、集成与 Post-Integration closure 完成前继续保持 active，不提前关闭为 completed。
+PR exact-head、Integration 与 Post-Integration verification 已完成，本单元满足 closure 条件。
 
 
-## 远端集成状态
+## 远端集成与 Post-Integration 证据
 
-2026-09-24 重新核验后，Runner 到 GitHub 的 HTTPS 通道已恢复：
+2026-09-24 最终 GitHub-native 证据：
 
-- `docs/eu64-public-design-authority` 已发布到 `origin`，首次发布 Head 为 `074b631a31d80cd55e0ed5b3e462a689a5652a6c`；
-- GitHub PR #203 — `docs(public): 建立公开站视觉设计权威` 已创建，base=`main`；
-- PR 创建后重新读取确认首次 PR Head 与远端分支 Head 一致；
-- 前一轮 TLS / SSH 失败保留为本单元执行期外部传输 incident 证据，但已不再构成当前阻塞。
-
-当前剩余 Gate 是把本次状态同步提交推送到 PR #203，取得该最终候选 exact Head 的 GitHub Actions 证据，满足 Integration 条件后执行正常集成；随后按 `docs/work/README.md` 完成 Post-Integration closure。
+- PR #203 — `docs(public): 建立公开站视觉设计权威` 最终候选 Head：`068472e666ddab821c823492e1d30034e8d886f6`；
+- PR exact-head 文档治理检查 Run `35940738760`：`completed/success`；
+- PR exact-head 快速 CI Run `35940738735`：`completed/success`；
+- PR #203 已合并，Merge Commit：`cd7e0f694f749107ab4c2e2cee273ee0d7806dbc`；
+- Merge Commit 对应 main push 文档治理检查 Run `35940935346`：`completed/success`；
+- Merge Commit 对应 main push 完整 CI Run `35940935351`：`completed/success`，其中 Backend verify、Admin frontend verify、Public site frontend verify、Integrated browser verification 与 verified review runtime 发布均成功；
+- `origin/main` 已重新读取确认指向上述 Merge Commit；
+- 执行期出现过 GitHub TLS / SSH 传输 incident，但恢复后所有写操作均重新读取并验证真实远端状态，因此该 incident 不构成最终未验证项。
 
 ## 完成条件
 
-完成 scoped lint、文档治理检查、设计文件官方 lint 与最终 diff / ownership 复核后进入 Converge。只有 Authority、验证和工作树一致时才声明 Ready to Integrate；本单元不自行执行 Production Deployment。
+已完成 scoped lint、文档治理检查、设计文件官方 lint、最终 diff / ownership 复核、PR exact-head 验证、Integration 与 Post-Integration verification。本单元进入 completed / historical lifecycle；未执行 Production Deployment。
