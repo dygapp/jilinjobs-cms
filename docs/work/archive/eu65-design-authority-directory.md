@@ -1,11 +1,12 @@
 ---
 id: execution-unit:eu65-design-authority-directory
 type: execution-unit
-status: active
+status: completed
 readiness: PASS
 base_sha: 4006131eb1c90399f9f8494b6264a5793550f03e
 branch: docs/eu65-design-authority-directory
 started_at: 2026-09-24
+completed_at: 2026-09-24
 ---
 
 # EU-65 视觉设计权威目录重构
@@ -71,3 +72,15 @@ started_at: 2026-09-24
 - Workflow YAML 解析：PASS；
 - `git diff --check`：PASS；
 - Public runtime source guard：PASS。
+
+
+## 集成与 Post-Integration 证据
+
+- PR #205 — `docs(design): 迁移视觉设计权威到文档目录` 最终候选 Head：`9a3bd59b8d320e3b6cf1811ee0315b82bbbdafe7`；
+- PR exact-head 快速 CI Run `35944293680`：`completed/success`；
+- PR exact-head 文档治理检查 Run `35944293682`：`completed/success`；
+- PR #205 已合并，Merge Commit：`22adc20bbe0447558a0bd92a15c1f1b1e42bae11`；
+- GitHub 重新读取确认 PR #205 为 `closed + merged=true`，且 `origin/main` 指向上述 Merge Commit；
+- Merge Commit 对应 main push 文档治理检查 Run `35944489604`：`completed/success`；
+- Merge Commit 对应 main push 完整 CI Run `35944489596`：run 级 `completed successfully`；Backend verify、Public site frontend verify、Admin frontend verify、Integrated browser verification、Publish verified review runtime 均 success；
+- GitHub REST 公共匿名 rate limit 在 Post-Integration 后段被耗尽，因此完整 CI 最终状态通过同一 GitHub Actions 公共 Run 页面重新读取，而不是把 API rate-limit 错误当作 CI 失败。
