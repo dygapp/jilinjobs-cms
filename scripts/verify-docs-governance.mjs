@@ -24,7 +24,7 @@ const currentRoots = [
   'docs/work/README.md',
   'docs/work/current',
   'skills',
-  'frontend/public-site/DESIGN.md',
+  'docs/design',
 ]
 
 function collectMarkdown(target, { skipArchive = false } = {}) {
@@ -125,7 +125,7 @@ for (const file of languageFiles) {
     const exactSkillTitle = skillName && heading === skillName
     const exactCodeTitle = /^\`[^\`]+\`$/.test(heading)
     const stableTokenTitle = /^[A-Z][A-Z0-9_-]*$/.test(heading)
-    const canonicalDesignHeading = file === 'frontend/public-site/DESIGN.md' && designMdCanonicalHeadings.has(heading)
+    const canonicalDesignHeading = file === 'docs/design/public-site/DESIGN.md' && designMdCanonicalHeadings.has(heading)
     if (
       !standardizedAgentTitle &&
       !exactSkillTitle &&
