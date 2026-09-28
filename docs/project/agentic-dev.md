@@ -32,6 +32,8 @@ agentic-dev 在本 Consumer 中只以标准安装的 Agent Skills 作为正式 r
 
 activate-model-collaboration 被安装只表示 v0.2.0 Skill inventory 完整，不表示本项目已经启用多模型协作；任何可选能力仍以当前 Consumer facts 与显式采用结果为准。
 
+evals/** 是 jilinjobs-cms 自己的可选模型评审实验与 Evidence 资产，不属于 Provider runtime。其是否继续、调整或退出由 Consumer 自己的实验结论决定；安装 agentic-dev v0.2.0 不自动启用、替换或删除该实验。
+
 ## 安装 provenance
 
 本轮使用标准 installer 显式安装 exact tag：
