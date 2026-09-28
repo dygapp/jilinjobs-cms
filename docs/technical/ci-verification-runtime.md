@@ -103,7 +103,7 @@ Local Docker CI 同时记录：
 - 本轮 changed-file set；
 - 本轮运行结果与 Docker resource snapshot。
 
-因此 dirty worktree 的运行对象表示为“HEAD + worktree fingerprint”，不得写成 exact-HEAD PASS。
+因此 dirty worktree 的 source subject 表示为“HEAD + worktree fingerprint”，不得写成 exact-HEAD PASS；干净 worktree 的 source subject 直接绑定当前 exact HEAD。
 
 本地 Docker 验证读取实际工作树而不是只读取 Git commit，因此已修改但未提交的 tracked 文件，以及未被 .gitignore 排除的 untracked 输入，都可以参加 build / test。Docker build context 本身也不要求文件先提交；是否进入 context 由实际文件系统与 .dockerignore 决定。本项目 Local Docker CI 额外以 worktree fingerprint 约束该行为，避免把 dirty input 的运行结果误标为目标提交证据。
 

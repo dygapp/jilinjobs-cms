@@ -223,6 +223,12 @@ fingerprint_paths() {
 head_sha="$(git rev-parse HEAD)"
 branch="$(git branch --show-current || true)"
 worktree_fingerprint="$(fingerprint_paths repository .)"
+git_status="$(git status --short --untracked-files=all)"
+if [[ -n "$git_status" ]]; then
+  source_subject="${head_sha}+worktree:${worktree_fingerprint}"
+else
+  source_subject="$head_sha"
+fi
 backend_fingerprint="$(fingerprint_paths "backend|gradle=9.6.1|jdk=21" backend)"
 frontend_fingerprint="$(fingerprint_paths "frontend|node=24|nginx=1.29.8" \
   frontend/public-site frontend/admin frontend/nginx.e2e.conf frontend/Dockerfile.runtime)"
@@ -234,12 +240,11 @@ baseline_fingerprint="$(
     | sha256sum | awk '{print $1}'
 )"
 verification_fingerprint="$(
-  printf 'source=%s\nbackend=%s\nfrontend=%s\nbaseline=%s\nplaywright=%s\n' \
-    "$worktree_fingerprint" "$backend_fingerprint" "$frontend_fingerprint" \
+  printf 'subject=%s\nsource-bytes=%s\nbackend=%s\nfrontend=%s\nbaseline=%s\nplaywright=%s\n' \
+    "$source_subject" "$worktree_fingerprint" "$backend_fingerprint" "$frontend_fingerprint" \
     "$baseline_fingerprint" "$playwright_image" \
     | sha256sum | awk '{print $1}'
 )"
-source_subject="${head_sha}+worktree:${worktree_fingerprint}"
 
 backend_image="jilinjobs-cms-local/backend:${backend_fingerprint}"
 migration_image="jilinjobs-cms-local/content-migration:${backend_fingerprint}"
@@ -250,6 +255,7 @@ verification_image="jilinjobs-cms-local/review-verification:${verification_finge
 {
   printf 'head=%s\n' "$head_sha"
   printf 'branch=%s\n' "$branch"
+  printf 'source_subject=%s\n' "$source_subject"
   printf 'worktree_fingerprint=%s\n' "$worktree_fingerprint"
   printf 'backend_fingerprint=%s\n' "$backend_fingerprint"
   printf 'frontend_fingerprint=%s\n' "$frontend_fingerprint"
@@ -259,7 +265,7 @@ verification_image="jilinjobs-cms-local/review-verification:${verification_finge
   printf 'npm_registry=%s\n' "$npm_registry"
   printf 'started_at=%s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
   printf '\n[git status]\n'
-  git status --short --untracked-files=all
+  printf '%s\n' "$git_status"
 } | tee "$evidence_dir/subject.txt"
 
 docker system df -v > "$evidence_dir/docker-before.txt" 2>&1 || true
