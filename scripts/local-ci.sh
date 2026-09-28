@@ -207,25 +207,7 @@ trap cleanup_runtime EXIT INT TERM
 say "Ensure project-dedicated BuildKit builder: $builder"
 ensure_builder
 
-fingerprint_paths() {
-  local label="$1"
-  shift
-  {
-    printf 'label=%s\n' "$label"
-    git ls-files -co --exclude-standard -z -- "$@" \
-      | sort -z \
-      | while IFS= read -r -d '' path; do
-          printf 'path=%s\n' "$path"
-          if [[ -L "$path" ]]; then
-            printf 'link=%s\n' "$(readlink "$path")"
-          elif [[ -f "$path" ]]; then
-            sha256sum "$path"
-          else
-            printf 'missing\n'
-          fi
-        done
-  } | sha256sum | awk '{print $1}'
-}
+source "$repo_root/scripts/local-ci-fingerprint-lib.sh"
 
 head_sha="$(git rev-parse HEAD)"
 branch="$(git branch --show-current || true)"
@@ -236,16 +218,7 @@ if [[ -n "$git_status" ]]; then
 else
   source_subject="$head_sha"
 fi
-backend_fingerprint="$(fingerprint_paths "backend|gradle=9.6.1|jdk=21" backend)"
-frontend_fingerprint="$(fingerprint_paths "frontend|node=24|nginx=1.29.8" \
-  frontend/public-site frontend/admin frontend/nginx.e2e.conf frontend/Dockerfile.runtime)"
-baseline_input_fingerprint="$(fingerprint_paths "review-baseline|mysql=8.4|alpine=3.23" \
-  backend/modules/cms-core/src/main/resources/db sites/jilinjobs data-migrations \
-  scripts/build-main-review-subset.py scripts/prepare-review-baseline.sh scripts/restore-review-baseline.sh)"
-baseline_fingerprint="$(
-  printf 'backend=%s\ninputs=%s\n' "$backend_fingerprint" "$baseline_input_fingerprint" \
-    | sha256sum | awk '{print $1}'
-)"
+compute_local_ci_component_fingerprints
 verification_fingerprint="$(
   printf 'subject=%s\nsource-bytes=%s\nbackend=%s\nfrontend=%s\nbaseline=%s\nplaywright=%s\n' \
     "$source_subject" "$worktree_fingerprint" "$backend_fingerprint" "$frontend_fingerprint" \
@@ -267,6 +240,8 @@ verification_image="jilinjobs-cms-local/review-verification:${verification_finge
   printf 'backend_fingerprint=%s\n' "$backend_fingerprint"
   printf 'frontend_fingerprint=%s\n' "$frontend_fingerprint"
   printf 'baseline_fingerprint=%s\n' "$baseline_fingerprint"
+  printf 'review_control_fingerprint=%s\n' "$review_control_fingerprint"
+  printf 'review_runtime_fingerprint=%s\n' "$review_runtime_fingerprint"
   printf 'verification_fingerprint=%s\n' "$verification_fingerprint"
   printf 'base_ref=%s\n' "$base_ref"
   printf 'npm_registry=%s\n' "$npm_registry"
@@ -607,16 +582,17 @@ if [[ "$verification_exists" != "true" ]]; then
   marker_context="$run_root/review-verification-marker"
   mkdir -p "$marker_context"
   SOURCE_SUBJECT="$source_subject" BACKEND_FP="$backend_fingerprint" FRONTEND_FP="$frontend_fingerprint" \
-  BASELINE_FP="$baseline_fingerprint" VERIFICATION_FP="$verification_fingerprint" \
+  BASELINE_FP="$baseline_fingerprint" REVIEW_RUNTIME_FP="$review_runtime_fingerprint" VERIFICATION_FP="$verification_fingerprint" \
     python3 - "$marker_context/verification.json" <<'PY'
 import json, os, pathlib, sys
 path = pathlib.Path(sys.argv[1])
 path.write_text(json.dumps({
-    "schemaVersion": 1,
+    "schemaVersion": 2,
     "sourceSubject": os.environ["SOURCE_SUBJECT"],
     "backendFingerprint": os.environ["BACKEND_FP"],
     "frontendFingerprint": os.environ["FRONTEND_FP"],
     "baselineFingerprint": os.environ["BASELINE_FP"],
+    "reviewRuntimeFingerprint": os.environ["REVIEW_RUNTIME_FP"],
     "verificationFingerprint": os.environ["VERIFICATION_FP"],
 }, ensure_ascii=False, sort_keys=True, indent=2) + "\n", encoding="utf-8")
 PY
@@ -665,6 +641,7 @@ printf '%s\n' "$run_id" > "$evidence_root/latest.txt"
   printf 'frontend_image=%s\n' "$frontend_image"
   printf 'baseline_image=%s\n' "$baseline_image"
   printf 'verification_image=%s\n' "$verification_image"
+  printf 'review_runtime_fingerprint=%s\n' "$review_runtime_fingerprint"
   printf 'canonical_specialized=%s\n' "$run_canonical"
   printf 'upgrade_specialized=%s\n' "$run_upgrade"
 } | tee "$evidence_dir/result.txt"

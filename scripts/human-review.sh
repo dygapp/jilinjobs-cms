@@ -29,8 +29,9 @@ Environment:
   HUMAN_REVIEW_MYSQL_IMAGE=mysql:8.4
   HUMAN_REVIEW_ALPINE_IMAGE=alpine:3.23
 
-start/reset require a clean worktree and a matching exact-HEAD Local Docker CI PASS.
-They reuse verified project images and never delete project/base images or BuildKit caches.
+start/reset require current Runtime-relevant inputs to match an exact-commit Local Docker CI PASS.
+Docs and other non-Runtime changes may differ from the verified source commit.
+Verified project images and BuildKit/dependency caches are reused and never deleted.
 USAGE
 }
 
@@ -89,11 +90,8 @@ load_verified_evidence() {
   command -v git >/dev/null || die "git is required"
   command -v curl >/dev/null || die "curl is required"
   command -v jq >/dev/null || die "jq is required"
+  command -v sha256sum >/dev/null || die "sha256sum is required"
   docker info >/dev/null || die "Docker daemon is not available"
-
-  local dirty
-  dirty="$(git status --porcelain=v1)"
-  [[ -z "$dirty" ]] || die "工作树不干净；start/reset 只启动 exact-HEAD 已验证环境。请先完成变更并重新执行完整 Local Docker CI"
 
   current_head="$(git rev-parse HEAD)"
   evidence_dir="$(latest_evidence_dir)"
@@ -104,14 +102,37 @@ load_verified_evidence() {
 
   [[ "$(kv_value "$result_file" result)" == "PASS" ]] || die "指定 evidence 不是 PASS：$evidence_dir"
   evidence_subject="$(kv_value "$result_file" subject)"
-  [[ "$evidence_subject" == "$current_head" ]] || die "最新完整 CI subject=$evidence_subject，与当前 HEAD=$current_head 不一致；请先重新执行 bash scripts/local-ci.sh full"
+  [[ "$evidence_subject" =~ ^[0-9a-f]{40}$ ]] || die "Human Review 只接受 exact-commit Full CI Evidence；当前 subject=$evidence_subject"
 
   backend_image="$(kv_value "$result_file" backend_image)"
   frontend_image="$(kv_value "$result_file" frontend_image)"
   baseline_image="$(kv_value "$result_file" baseline_image)"
   verification_image="$(kv_value "$result_file" verification_image)"
   backend_fingerprint="$(kv_value "$subject_file" backend_fingerprint)"
+  frontend_fingerprint="$(kv_value "$subject_file" frontend_fingerprint)"
   baseline_fingerprint="$(kv_value "$subject_file" baseline_fingerprint)"
+  evidence_review_runtime_fingerprint="$(kv_value "$subject_file" review_runtime_fingerprint)"
+
+  source "$repo_root/scripts/local-ci-fingerprint-lib.sh"
+  local equivalence_rc=0
+  review_runtime_equivalent_to_commit "$evidence_subject" || equivalence_rc=$?
+  if [[ "$equivalence_rc" -eq 2 ]]; then
+    die "无法读取 verified source commit=$evidence_subject；请重新执行 bash scripts/local-ci.sh full"
+  elif [[ "$equivalence_rc" -ne 0 ]]; then
+    die "当前 Runtime-relevant inputs 与 verified source commit=$evidence_subject 不一致；请重新执行 bash scripts/local-ci.sh full"
+  fi
+
+  review_control_fingerprint="$(fingerprint_paths "human-review-control|schema=1" "${review_control_input_paths[@]}")"
+  current_review_runtime_fingerprint="$(
+    printf 'schema=1\nbackend=%s\nfrontend=%s\nbaseline=%s\ncontrol=%s\n' \
+      "$backend_fingerprint" "$frontend_fingerprint" "$baseline_fingerprint" "$review_control_fingerprint" \
+      | sha256sum | awk '{print $1}'
+  )"
+  if [[ -n "$evidence_review_runtime_fingerprint" ]] \
+    && [[ "$evidence_review_runtime_fingerprint" != "$current_review_runtime_fingerprint" ]]; then
+    die "当前 Human Review Runtime fingerprint 与 Evidence 不一致；请重新执行 bash scripts/local-ci.sh full"
+  fi
+  evidence_review_runtime_fingerprint="$current_review_runtime_fingerprint"
 
   local image
   for image in "$backend_image" "$frontend_image" "$baseline_image" "$verification_image"; do
@@ -120,8 +141,18 @@ load_verified_evidence() {
   done
 
   docker run --rm "$verification_image" cat /verification.json \
-    | jq --exit-status --arg head "$current_head" '.sourceSubject == $head' >/dev/null \
-    || die "Review verification marker 未绑定当前 HEAD=$current_head"
+    | jq --exit-status \
+        --arg subject "$evidence_subject" \
+        --arg backend "$backend_fingerprint" \
+        --arg frontend "$frontend_fingerprint" \
+        --arg baseline "$baseline_fingerprint" \
+        --arg runtime "$evidence_review_runtime_fingerprint" \
+        '.sourceSubject == $subject
+         and .backendFingerprint == $backend
+         and .frontendFingerprint == $frontend
+         and .baselineFingerprint == $baseline
+         and ((.reviewRuntimeFingerprint // $runtime) == $runtime)' >/dev/null \
+    || die "Review verification marker 与指定 Evidence / Runtime fingerprint 不一致"
 }
 
 ensure_mysql() {
@@ -173,6 +204,8 @@ write_state() {
   mkdir -p "$state_root"
   cat > "$state_file" <<STATE
 source_head=$current_head
+verified_source_subject=$evidence_subject
+runtime_fingerprint=$evidence_review_runtime_fingerprint
 evidence_dir=$evidence_dir
 backend_image=$backend_image
 frontend_image=$frontend_image
@@ -236,8 +269,8 @@ start_runtime() {
   load_verified_evidence
 
   if runtime_healthy && [[ -f "$state_file" ]] \
-    && [[ "$(kv_value "$state_file" source_head)" == "$current_head" ]]; then
-    say "Human Review Runtime 已在当前 verified HEAD 上运行"
+    && [[ "$(kv_value "$state_file" runtime_fingerprint)" == "$evidence_review_runtime_fingerprint" ]]; then
+    say "Human Review Runtime 已使用等价 verified Runtime inputs 运行"
     print_access
     return
   fi
@@ -263,6 +296,8 @@ status_runtime() {
 
   if [[ -f "$state_file" ]]; then
     printf 'source_head=%s\n' "$(kv_value "$state_file" source_head)"
+    printf 'verified_source_subject=%s\n' "$(kv_value "$state_file" verified_source_subject)"
+    printf 'runtime_fingerprint=%s\n' "$(kv_value "$state_file" runtime_fingerprint)"
     printf 'evidence_dir=%s\n' "$(kv_value "$state_file" evidence_dir)"
     printf 'started_at=%s\n' "$(kv_value "$state_file" started_at)"
     printf 'fixture=%s\n' "$(kv_value "$state_file" fixture)"

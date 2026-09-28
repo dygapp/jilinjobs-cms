@@ -66,7 +66,7 @@ bash scripts/human-review.sh reset
 bash scripts/human-review.sh status
 ```
 
-输出至少包括当前 Repository `HEAD`、Runtime `source_head`、evidence directory、fixture 状态、MySQL / Backend / Frontend container 状态，以及 `running`、`degraded` 或 `stopped`。
+输出至少包括当前 Repository `head`、启动时的 `source_head`、真正完成 Full CI 的 `verified_source_subject`、`runtime_fingerprint`、evidence directory、fixture 状态、MySQL / Backend / Frontend container 状态，以及 `running`、`degraded` 或 `stopped`。
 
 ### stop 停止
 
@@ -90,11 +90,25 @@ bash scripts/human-review.sh status
 
 因此停止人工评审环境不会破坏下一次快速启动或 CI cache。
 
-## 3. Verified evidence 边界
+## 3. Verified evidence 与 Runtime 等价边界
 
-人工评审默认只允许启动当前 **clean exact HEAD** 的完整 Local Docker CI PASS。
+Human Review Runtime 必须来源于一次 **exact-commit Full Local Docker CI PASS**，但当前 Repository `HEAD` 不再要求与该 verified source commit 完全相同。
 
-如果 `start` / `reset` 报告最新完整 CI subject 与当前 HEAD 不一致，应先执行：
+启动时使用两层身份：
+
+- **verified source subject**：完整 Local Docker CI 真正完成验证的 exact commit；
+- **Runtime fingerprint / equivalence**：当前 Backend、Frontend、Review Baseline 与人工评审运行控制输入是否仍与 verified source 等价。
+
+当前 Runtime-relevant inputs 包括：
+
+- Backend Runtime 输入；
+- Public/Admin Frontend Runtime 输入；
+- Review Baseline 的 Flyway、Site Package、canonical migration data 与 baseline prepare / restore 输入；
+- `start-review-runtime.sh`、`apply-human-review-fixture.sh`、`verify-review-runtime.py` 等人工评审运行控制输入。
+
+`docs/**`、Guide、Roadmap、Governance 等不参与 Runtime 的变化不会仅因为 Git `HEAD` 改变而使已有 verified images 失效；未提交的非 Runtime 变更同样允许存在。
+
+如果任何 tracked / untracked Runtime-relevant input 相对 verified source commit 发生变化，`start` / `reset` 必须失败关闭并要求：
 
 ```bash
 bash scripts/local-ci.sh full
@@ -102,7 +116,9 @@ bash scripts/local-ci.sh full
 
 通过后再启动人工评审环境。
 
-该约束防止人工观察误绑定旧 Backend / Frontend / Baseline image。dirty worktree 虽然允许进入 Local Docker CI 的开发验证，但默认不作为 Human Review Runtime 的 source subject。
+Review Verification marker 继续保留原始 `sourceSubject`，用于回答“这组 immutable project images 在哪个 commit 上完成完整验证”；它不被重写成当前仅 Runtime 等价但未重新执行 Full CI 的 `HEAD`。
+
+新 Evidence 同时记录 `review_runtime_fingerprint`。旧 Evidence 没有该字段时，可以通过既有 Backend / Frontend / Baseline fingerprints、verified source commit 与当前运行控制输入完成兼容性判定；一旦生成新版 Evidence，后续同时校验显式 Runtime fingerprint。
 
 如需要显式选择某个 evidence directory，可设置：
 
@@ -111,7 +127,7 @@ HUMAN_REVIEW_EVIDENCE_DIR=.local-ci/evidence/<run-id> \
   bash scripts/human-review.sh start
 ```
 
-该 override 仍必须满足 PASS、当前 exact HEAD 与 Review Verification marker 的绑定检查，不能绕过 source identity。
+该 override 仍必须满足 PASS、verified source exact commit 与 Review Verification marker 的绑定检查，不能绕过 source identity。当前工作分支可以位于另一个 Runtime-equivalent `HEAD`。
 
 ## 4. 人工评审 fixture
 

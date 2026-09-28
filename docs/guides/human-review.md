@@ -18,7 +18,7 @@ bash scripts/human-review.sh start
 bash scripts/human-review.sh start
 ```
 
-脚本会自动选择当前 `HEAD` 对应的已验证 Backend、Frontend 与 Review Baseline，不需要人工复制 Docker image tag。
+脚本会自动选择一组与当前 Runtime 输入等价的已验证 Backend、Frontend 与 Review Baseline，不需要人工复制 Docker image tag。纯文档或 Guide 变化不会仅因为 Git `HEAD` 改变而使环境失效。
 
 启动成功后会显示：
 
@@ -45,7 +45,8 @@ bash scripts/human-review.sh status
 
 主要关注：
 
-- `source_head` 是否等于当前 Repository `HEAD`；
+- `verified_source_subject`：这套环境真正在哪个 commit 上完成完整 CI；
+- `runtime_fingerprint`：当前环境对应的 Runtime 输入身份；
 - `status=running`；
 - MySQL、Backend、Frontend 三个 container 是否均为 `running`。
 
@@ -95,15 +96,19 @@ bash scripts/human-review.sh stop
 
 因此下次启动通常不需要重新下载或重新构建基础环境。
 
-## 5. 源码变化后无法启动
+## 5. 哪些变化需要重新跑完整 CI
 
-如果看到类似：
+纯文档、Guide、Roadmap、Governance 等不影响 Runtime 的变化，不再要求仅因为 Git `HEAD` 改变就重新执行完整 CI。只要当前 Runtime 输入与已有 verified source commit 等价，可以直接：
 
-```text
-最新完整 CI subject=<old-sha>，与当前 HEAD=<new-sha> 不一致
+```bash
+bash scripts/human-review.sh start
 ```
 
-说明当前源码提交还没有对应的完整 Local Docker CI PASS。
+如果 Backend、Frontend、Review Baseline、迁移数据或人工评审运行控制脚本等 Runtime-relevant input 发生变化，会看到类似：
+
+```text
+当前 Runtime-relevant inputs 与 verified source commit=<sha> 不一致
+```
 
 先执行：
 
@@ -118,6 +123,8 @@ bash scripts/human-review.sh start
 ```
 
 不要手工改 image tag 绕过这一检查。
+
+未提交的非 Runtime 文档变化可以保留；未提交的 Runtime-relevant 新文件或修改同样会触发失败关闭。
 
 ## 6. Full CI 与人工环境冲突
 
