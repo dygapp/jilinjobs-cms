@@ -49,7 +49,7 @@ Main Article snapshot 的当前 canonical data / provenance 由 `data-migrations
 
 统一 iframe 承载补齐延迟激活、加载、超时、失败隔离与原位重试；Public、Admin、Backend、Site Package、迁移兼容与集成浏览器验证均在完成态 Head 通过。当前长期语义由慧就业 Requirement、Public / Page Content Specification 与 Public Technical owner 持有，详细实施和验证证据归档于 EU-56 Work artifact、Issue #176、PR #177 与 GitHub Actions。
 
-## Consumer Method / Capability 演进
+## Consumer Method / Capability 演进（历史）
 
 ### V3-08 Track B 采用
 
@@ -71,7 +71,13 @@ Evaluated upstream frontier 推进到：
 
 采用 bounded Software Project Clarification、Feature responsibility boundary 与 direct-responsibility Rule Discovery checkpoint；Model Collaboration runtime 未采用、未启用。
 
-对应 upgrade / validation history 已物理归档至 `docs/project/archive/`。当前 capability instance 只由 `docs/project/project-capability-profile.md` 与真实 Method / Architecture / Rule / Skill owner定义。
+对应 upgrade / validation history 已物理归档至 docs/project/archive/。这些旧 Method / Rule / Capability runtime 只保留历史语义，不再作为 ordinary Fresh Context 的 Current dependency。
+
+### agentic-dev v0.2.0 Consumer 治理重建
+
+Consumer runtime 收敛为薄 AGENTS.md、Consumer-owned Authority / constraints 与标准安装的 .agents/skills/**。旧 Provider-like Method selector、Capability Profile、Rule Discovery runtime、Rule corpus 与 repository-root Skill mirror 退出 Current model；仍有效的项目约束迁移到真实 Consumer owner。agentic-dev-v0.2.0 的 exact tag / commit、安装 lock 与 Guide locator 由 docs/project/agentic-dev.md 持有。
+
+该变化不修改 Product / Domain Requirement、CMS Architecture 或用户可见行为；Provider release PASS 也不替代本 Consumer 对受影响恢复、安装边界和约束叠加的 targeted validation。
 
 ## Documentation Authority / Regenerability 演进
 

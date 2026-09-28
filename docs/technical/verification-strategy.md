@@ -12,7 +12,7 @@ relations:
     - docs/technical/http-interface-contract.md
   design:
     - docs/design/public-site/DESIGN.md
-updated_at: 2026-09-23
+updated_at: 2026-09-28
 ---
 
 # 验证运行策略
@@ -23,7 +23,7 @@ updated_at: 2026-09-23
 
 本文不缓存当前 Flyway 文件名、具体 migration 编号、固定域名 / proxy 名、当前 Workflow inventory、测试数量或某个 Execution Unit 的验证清单；这些高频事实由 Repository implementation、Workflow、Work lifecycle 与 GitHub 原生 证据 持有。
 
-更细粒度的验证约束通过当前任务的 Consumer-local Rule Discovery 按需激活；本文不复制 discoverable Rule 正文。
+任务级验证范围由当前 claim、适用 Authority、本文以及 path-scoped Consumer constraints 共同决定；不通过中央 Rule Discovery runtime 路由。
 
 ## 2. 核心原则
 
@@ -158,6 +158,18 @@ Functional Browser PASS 不自动等于 视觉保真 PASS。
 Repository implementation 可以在 Review 中作为 **证据** 暴露 当前权威内容 的遗漏、冲突或 stale contract：先建立 Expected vs Actual，再判断应修复 Authority、verification 还是 implementation。若 implementation 只是证明某个已经存在的上层 Requirement 在下游缺少可恢复 projection，可以把该已授权语义 promotion 到正确 owner；不得从 implementation convenience 反向发明新 Requirement。
 
 进入真正 code-holdout / technology-substitution design 后，replacement Agent 必须以 当前权威内容 为设计输入，不再通过读取被替换 implementation 来补齐缺失 contract；旧 implementation 只在结果比较阶段按实验协议作为对照 证据 使用。
+
+### 4.8 高成本验证与异步运行环境
+
+高成本 Runtime 只在当前 claim 确实需要时激活：
+
+- 只读状态恢复不启动 CI、Review Environment、Browser 或 Historical Migration；
+- docs-only / Authority-only 变更在没有改变产品行为、Runtime config、Migration、Fixture、Workflow 或版本化资源时，优先使用精确 diff、locator / Authority consistency 与必要 targeted static checks；
+- Workflow / Runtime configuration 变化先验证 trigger、scope、syntax 与受影响 Runtime，再按真实 claim 决定是否升级 Browser / Human Review；
+- Main historical migration 保持 FROZEN / explicit reactivation only；普通治理、文档或一般 Feature 工作不得隐式重新执行 Main source discovery、promotion、canonical import / reconcile；
+- review-environment.yml 只有 workflow_dispatch 或 PR 显式 human-review label 才表示人工评审 Runtime 激活；普通 opened / synchronize / reopened 不构成授权。
+
+GitHub Actions、远程 Job 或其他异步操作必须绑定目标 event / Head SHA / Run / Job。queued / pending / in-progress 状态只表示仍在执行；对可观察任务进行有界观察，失败时取得诊断证据后再决定最小修复、重试或升级，不用无限轮询替代失败处理。
 
 ## 5. 失败分类
 

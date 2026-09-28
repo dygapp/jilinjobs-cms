@@ -71,7 +71,7 @@ Repository Authority
 - 修改跨站响应式 /安全呈现要求 → `information-publishing.md` 产品级质量 section，再进入对应 Specification / Verification。
 - 修改慧就业嵌入范围、完整页面地址、业务分类编号 / 业务编号映射或外部系统边界 → `hui-employment-integration.md`；只有需要确认 Main 上层产品范围时再读取 `information-publishing.md`。
 
-如果 Index 不能唯一定位 owner、多个 Current owner 对同一长期事实给出不兼容结论，或真实事实不属于任何现有 owner，必须 失败关闭，返回 `method:requirement-baseline-establishment` / 人工权威，而不是在下游文档中静默选择。
+如果 Index 不能唯一定位 owner、多个 Current owner 对同一长期事实给出不兼容结论，或真实事实不属于任何现有 owner，必须失败关闭，返回真实 Requirement owner；若仍无法唯一确定长期事实，则升级到人工权威，而不是在下游文档中静默选择。
 
 ## 5. 分析边界
 

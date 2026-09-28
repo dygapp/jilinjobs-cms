@@ -1,32 +1,18 @@
-# 项目知识（Project Knowledge）
+# 项目知识
 
-`docs/project/` 只保存当前 `jilinjobs-cms` Repository 自身的长期 Project Knowledge，不作为“重要文档”通用收容区。
+docs/project/ 只保存 jilinjobs-cms 自身需要长期恢复的 Project Knowledge，不作为“重要文档”通用收容区。
 
-## 当前项目 owner
+## 当前 owner
 
-- Project Charter equivalent：根 `README.md`；
-- Project Capability Profile：`project-capability-profile.md`；
-- Project Roadmap：`project-roadmap.md`；
-- Project Evolution：`project-evolution.md`。
+- Project Charter equivalent / stable scope：根 README.md
+- Project Roadmap：project-roadmap.md
+- Project Evolution：project-evolution.md
+- agentic-dev adopted version / installation provenance / Guide locator：agentic-dev.md
 
-它们分别拥有项目使命 / 范围摘要、当前 capability instance、持久路线与稳定历史摘要，不复制 Method、Architecture、Rule、Skill、Feature Specification、Technical、当前工作 或 GitHub native state 的规范正文。
-
-## 语义所有权
-
-- reusable / Consumer-local complex workflow → `docs/methods/`；
-- long-lived structure / ownership / runtime invariant → `docs/architecture/`；
-- conditional policy / constraint / completion requirement → `docs/rules/`；
-- bounded executable procedure → `skills/`；
-- Product / Domain facts → `docs/requirements/`；
-- Feature observable contract → `docs/specifications/`；
-- cross-Feature implementation HOW / Verification Strategy → `docs/technical/`；
-- active execution lifecycle → `docs/work/`；
-- process evidence / upgrade history / completed planning → GitHub Evidence 或相应 `archive/`。
-
-不能因为内容重要、曾经放在 Project、包含“治理 / 规划 / 方法”等词，就继续留在 Project root。
+Product / Domain facts、Feature contract、Architecture、Design、Technical、current work 与 Consumer constraints 各自在自己的 owner 中维护，不复制到 Project Knowledge。
 
 ## 归档
 
-`archive/` 保存已完成或被取代、仍有 provenance / audit 价值的 Project-level planning、governance、baseline upgrade 与 validation history，默认不参与 ordinary Fresh Context。
+archive/ 保存已完成或被取代、仍有 provenance / audit 价值的 planning、governance、baseline upgrade 与 validation history，默认不参与 ordinary Fresh Context。
 
-目录边界的 canonical contract 由 `docs/architecture/project-knowledge.md` 持有；本 README 只提供 Human navigation。
+历史材料中出现旧 Method、Rule、Capability、Gate、Skill path 或 baseline identity 只表示当时证据，不重新取得 Current runtime responsibility。

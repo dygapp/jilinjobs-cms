@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "skills": {
+    "activate-model-collaboration": {
+      "source": "dygapp/agentic-dev",
+      "ref": "agentic-dev-v0.2.0",
+      "sourceType": "github",
+      "skillPath": "skills/activate-model-collaboration/SKILL.md",
+      "computedHash": "861a8778e68b3812b78771e2b02e1c460309688dd801b396138ad5f649c26ca2"
+    },
+    "clarify-architecture": {
+      "source": "dygapp/agentic-dev",
+      "ref": "agentic-dev-v0.2.0",
+      "sourceType": "github",
+      "skillPath": "skills/clarify-architecture/SKILL.md",
+      "computedHash": "93c8d79f70acad7e676cb066ca7211d4c747f87d8c92ea62f7b4c089ab981d0e"
+    },
+    "clarify-intent": {
+      "source": "dygapp/agentic-dev",
+      "ref": "agentic-dev-v0.2.0",
+      "sourceType": "github",
+      "skillPath": "skills/clarify-intent/SKILL.md",
+      "computedHash": "6ca88c01649edc3d92e11d5db1019b1cbf89de65142ee205e586b8acc7a03439"
+    },
+    "converge": {
+      "source": "dygapp/agentic-dev",
+      "ref": "agentic-dev-v0.2.0",
+      "sourceType": "github",
+      "skillPath": "skills/converge/SKILL.md",
+      "computedHash": "28994f21ce53ff32b230e451f66e84577ccbe8c0780d93b8af5f632f928e6ed9"
+    },
+    "establish-requirement-baseline": {
+      "source": "dygapp/agentic-dev",
+      "ref": "agentic-dev-v0.2.0",
+      "sourceType": "github",
+      "skillPath": "skills/establish-requirement-baseline/SKILL.md",
+      "computedHash": "a2e1dfc0951df9407da600753948636b329e0254915fbb2fd361a472f9f987c7"
+    },
+    "execute-unit": {
+      "source": "dygapp/agentic-dev",
+      "ref": "agentic-dev-v0.2.0",
+      "sourceType": "github",
+      "skillPath": "skills/execute-unit/SKILL.md",
+      "computedHash": "40eb122e4af6596cd175badd71add58c3e1e5a06570b3b0db49ce65f0366b37f"
+    },
+    "external-operation": {
+      "source": "dygapp/agentic-dev",
+      "ref": "agentic-dev-v0.2.0",
+      "sourceType": "github",
+      "skillPath": "skills/external-operation/SKILL.md",
+      "computedHash": "170a9b737dd251519acf7798f92b5a606e2f34d2a63edf3b4fc42e7ac0224586"
+    },
+    "github-actions-verification": {
+      "source": "dygapp/agentic-dev",
+      "ref": "agentic-dev-v0.2.0",
+      "sourceType": "github",
+      "skillPath": "skills/github-actions-verification/SKILL.md",
+      "computedHash": "e93ad7d52edec33971e7d9cb447490ad4d5b1a09b6868bcb0350997c8f08fb15"
+    },
+    "human-review": {
+      "source": "dygapp/agentic-dev",
+      "ref": "agentic-dev-v0.2.0",
+      "sourceType": "github",
+      "skillPath": "skills/human-review/SKILL.md",
+      "computedHash": "db2be0c61e810f345fbdc21bf4f37c52aa9c56b03fc3f29c073fd5cad06a5f29"
+    },
+    "readiness-check": {
+      "source": "dygapp/agentic-dev",
+      "ref": "agentic-dev-v0.2.0",
+      "sourceType": "github",
+      "skillPath": "skills/readiness-check/SKILL.md",
+      "computedHash": "f35b77b5f16303fdd440b0273f29ec7a48df627f543d33d43ebf937e889dd745"
+    },
+    "review-change": {
+      "source": "dygapp/agentic-dev",
+      "ref": "agentic-dev-v0.2.0",
+      "sourceType": "github",
+      "skillPath": "skills/review-change/SKILL.md",
+      "computedHash": "46c0621619bcd2f603eb6b67cff080ec67bd42292d61f73230a5ea874263fb04"
+    },
+    "slice-work": {
+      "source": "dygapp/agentic-dev",
+      "ref": "agentic-dev-v0.2.0",
+      "sourceType": "github",
+      "skillPath": "skills/slice-work/SKILL.md",
+      "computedHash": "404f980a07a883fc824aa74aed9f4230b8c7dac723f5ae3d2c0ba0ceb8b5a9ec"
+    },
+    "specify": {
+      "source": "dygapp/agentic-dev",
+      "ref": "agentic-dev-v0.2.0",
+      "sourceType": "github",
+      "skillPath": "skills/specify/SKILL.md",
+      "computedHash": "61e7d119d1efd2b20a30eded3e971faaf70e3fa579d6cd5d924c863c33926d71"
+    },
+    "systematic-debug": {
+      "source": "dygapp/agentic-dev",
+      "ref": "agentic-dev-v0.2.0",
+      "sourceType": "github",
+      "skillPath": "skills/systematic-debug/SKILL.md",
+      "computedHash": "5287fcb79229d80db5c60d776546aa347fff14fbf136e20b23f4de25851ec725"
+    },
+    "technical-plan": {
+      "source": "dygapp/agentic-dev",
+      "ref": "agentic-dev-v0.2.0",
+      "sourceType": "github",
+      "skillPath": "skills/technical-plan/SKILL.md",
+      "computedHash": "6de49693d74d8718e445471ad5702173f0d529e8393b70771be3aa6ffbab5c3a"
+    }
+  }
+}

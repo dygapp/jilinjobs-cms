@@ -1,39 +1,21 @@
-# 架构权威（Architecture Authority）
+# 架构权威
 
-`docs/architecture/` 保存 Consumer-local 长期 Architecture Context / State、reusable engineering capability architecture 与 ADR。
+docs/architecture/ 只保存 jilinjobs-cms 自己长期需要的 Architecture Context / State 与 ADR，不承载 Provider Method / Rule / Capability runtime。
 
-## 产品架构
+## 当前架构 owner
 
-- `cms-architecture.md` — `jilinjobs-cms` 当前跨 Feature 的 CMS / Site Definition / 历史迁移 / Runtime / Public Renderer、Backend application、Page Content、configuration/resource ownership 与验证组合边界。
+- cms-architecture.md：CMS / Site Definition / Historical Migration / Runtime / Public Renderer、Backend application、Page Content 与 configuration / resource ownership 的跨 Feature 长期边界；
+- requirement-authority.md：本项目长期 Requirement 的 semantic ownership、Authority Index / fact owner / analysis workspace 与 lifecycle；
+- decisions/**：值得长期追溯的决策背景、候选方案、主要权衡与 supersede relation。
 
-普通 Feature 只有在需要恢复多个 Feature 共同依赖的长期边界时才读取该文件；Feature-local、低风险、可逆 HOW 留给 Technical Planning。
-
-## 工程能力架构
-
-以下文件定义本 Consumer 本地采用的可复用工程能力结构，不承担产品 CMS Architecture：
-
-- `engineering-capability.md`
-- `consumer.md`
-- `method.md`
-- `requirement-authority.md` — Requirement Human Navigation / Authority Index / Fact Authority / Analysis Workspace 的 语义所有权 与 lifecycle；
-- `human-review.md` — Consumer 软件项目人工评审材料、反馈回写、派生视图与独立变更复核之间的长期边界；
-- `project-knowledge.md`
-- `rule.md`
-- `rule-discovery.md`
-- `skill.md`
-
-## 架构决策记录
-
-`decisions/` 保存值得长期追溯的决策背景、候选方案、主要权衡与 supersede 关系。
-
-ADR 不承担当前 Architecture State 的全量恢复；`cms-architecture.md` 描述当前叠加后的状态。只有当核心 decision / trade-off 真正改变时才新增或 supersede ADR，不为普通实现调整机械创建 ADR。
+普通 Feature 只在需要恢复多个 Feature 共同依赖的长期边界时读取相应 Architecture；局部、低风险、可逆 HOW 不为了形式完整提升成项目级 Architecture。
 
 ## 边界
 
 Architecture 文档不得：
 
 - 成为第二份 Product / Domain Requirement；
-- 保存当前 Ready Execution Unit、PR / Actions 等高频状态；
-- 长期复制 migration file list、resource counts 或可从代码直接恢复的 implementation inventory；
-- 把 Feature-local HOW 提前上升为项目级架构；
-- 通过实现便利发明新的产品事实。
+- 保存 Current Ready Execution Unit、PR / Actions 等高频状态；
+- 长期复制 migration file list、resource counts 或可从 implementation 唯一恢复的 inventory；
+- 通过技术便利发明新的产品事实；
+- 复制 agentic-dev Provider 的 Method / Rule / Capability architecture。
