@@ -53,13 +53,9 @@ Handoff 只保存不可恢复的 locator / unresolved boundary，不复制 Requi
 
 ## Git Commit 约束
 
-创建或整理 Commit 时默认使用：
+完整 Git Commit policy 的 Current owner 为 docs/governance/git-commit-conventions.md。
 
-    <type>(<scope>): <中文摘要>
-
-type / scope 使用小写英文，摘要以自然中文描述主要动作与对象，保留必要机器标识。优先复用 feat、fix、refactor、test、docs、chore、ci、build、style、data。
-
-一个 Commit 表达一个主要逻辑目的。重写历史后必须重新读取最终 Head / tree / diff；旧 Head 的证据不机械继承。
+创建、整理或重写 Commit 前必须读取该 owner；本文不维护第二份 Type / Scope / Message 格式清单，避免与 Current owner 漂移。
 
 ## 验证
 

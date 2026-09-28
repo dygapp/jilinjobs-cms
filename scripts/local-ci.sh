@@ -296,6 +296,9 @@ if [[ "$force_specialized" == "true" ]] || changed_matches \
   run_upgrade=true
 fi
 
+say "Verify Git Commit Message policy"
+python3 scripts/verify-git-commit-message.py --base-ref "$base_ref" 2>&1 | tee "$evidence_dir/commit-message.log"
+
 say "Start fresh MySQL 8.4"
 remove_container "$mysql_container"
 docker run -d --name "$mysql_container" --network host \

@@ -15,7 +15,8 @@ dygapp/jilinjobs-cms 是吉林省智慧就业云平台“信息发布与网站�
 3. 只有任务涉及正在进行的正式工作时，才读取 docs/work/current/README.md 并重新核验相关 Branch / PR / Actions；
 4. 需要通用执行 procedure 时，通过宿主原生 Agent Skills discovery 使用 .agents/skills/**；
 5. 读取当前任务实际适用的 Consumer-local constraints：全局入口为 docs/governance/constraints.md，path-scoped 约束由对应 subtree 的 AGENTS.md 持有；
-6. 只有当前任务是 agentic-dev adoption / upgrade，或明确需要方法论导航时，才读取 docs/project/agentic-dev.md 指向的 exact-version Guide。
+6. 只有当前任务是 agentic-dev adoption / upgrade，或明确需要方法论导航时，才读取 docs/project/agentic-dev.md 指向的 exact-version Guide；
+7. 创建、整理或重写 Commit 前，必须读取 docs/governance/git-commit-conventions.md；它是本仓库 Git Commit Message 的 Current owner。
 
 不得把其他聊天、个人记忆、其他 Repository、其他 checkout 或未经纳入本仓库的领域假设当作当前项目事实。
 

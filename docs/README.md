@@ -26,6 +26,7 @@
 | agentic-dev adopted version / provenance | docs/project/agentic-dev.md |
 | 正式 active Execution Unit locator | docs/work/current/README.md |
 | Consumer-local 横切约束 | docs/governance/constraints.md |
+| Git Commit 规范 | docs/governance/git-commit-conventions.md |
 | Frontend path-scoped constraints | frontend/AGENTS.md |
 | 通用执行 procedure | .agents/skills/**，由宿主原生 discovery 按需选择 |
 
