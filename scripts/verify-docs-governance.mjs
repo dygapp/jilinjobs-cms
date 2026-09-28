@@ -15,16 +15,15 @@ const currentRoots = [
   'README.md',
   'docs/README.md',
   'docs/project',
-  'docs/methods',
   'docs/architecture',
-  'docs/rules',
   'docs/requirements',
   'docs/specifications',
   'docs/technical',
   'docs/work/README.md',
   'docs/work/current',
-  'skills',
   'docs/design',
+  'docs/governance',
+  'frontend/AGENTS.md',
 ]
 
 function collectMarkdown(target, { skipArchive = false } = {}) {

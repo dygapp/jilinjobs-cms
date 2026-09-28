@@ -118,7 +118,7 @@ Repository Authority
 
 ### 生产者
 
-主要 producer：`method:requirement-baseline-establishment`、后续 Feature / Clarification 中经 仓库权威 确认需提升的长期 Requirement fact，以及 Human / Product Authority 的长期决定。
+主要 producer：显式 Requirement Baseline 建立 / 重建工作、后续 Feature / Clarification 中经仓库权威确认需提升的长期 Requirement fact，以及 Human / Product Authority 的长期决定。
 
 ### 触发条件
 
@@ -126,7 +126,7 @@ Repository Authority
 
 ### 使用方
 
-主要 consumer：`method:ai-development`、`method:architecture-clarification`、Feature Specification、Technical Planning、verification / review 与 Human Product / Requirement Review。
+主要 consumer：Feature / change implementation、Architecture clarification、Feature Specification、Technical Planning、verification / review 与 Human Product / Requirement Review。
 
 ### 持久化 / 更新 / 替代
 
@@ -136,7 +136,7 @@ Repository Authority
 
 ### 升级
 
-发现 current Authority 冲突、unique owner 不清、多种合理答案会实质改变 Product behavior / Acceptance、变更超出授权，或批量语义变换需要独立 review 时，返回 Requirement Method / 人工权威。
+发现 Current Authority 冲突、unique owner 不清、多种合理答案会实质改变 Product behavior / Acceptance、变更超出授权，或批量语义变换需要独立 review 时，返回真实 Requirement owner；需要产品判断或高影响裁决时升级到人工权威。
 
 ## 与 Specification / Architecture 的边界
 

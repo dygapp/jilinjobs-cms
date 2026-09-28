@@ -6,7 +6,9 @@ on:
       - 'AGENTS.md'
       - 'README.md'
       - 'docs/**'
-      - 'skills/**'
+      - '.agents/skills/**'
+      - 'skills-lock.json'
+      - 'frontend/AGENTS.md'
       - 'scripts/verify-docs-governance.mjs'
       - '.github/workflows/docs-governance.yml'
   push:
@@ -15,7 +17,9 @@ on:
       - 'AGENTS.md'
       - 'README.md'
       - 'docs/**'
-      - 'skills/**'
+      - '.agents/skills/**'
+      - 'skills-lock.json'
+      - 'frontend/AGENTS.md'
       - 'scripts/verify-docs-governance.mjs'
       - '.github/workflows/docs-governance.yml'
   workflow_dispatch:

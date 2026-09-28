@@ -1,68 +1,72 @@
 # 吉林智慧就业 CMS（jilinjobs-cms）
 
-`jilinjobs-cms` 是吉林省智慧就业云平台“信息发布与网站服务”相关能力的 Consumer Repository，负责通用 CMS、中心主站 / 中心党建公开站、JilinJobs Site Package 与历史内容迁移的版本化实现。
+jilinjobs-cms 是吉林省智慧就业云平台“信息发布与网站服务”相关能力的 Consumer Repository，负责通用 CMS、中心主站 / 中心党建公开站、JilinJobs Site Package 与历史内容迁移的版本化实现。
 
 ## 当前范围
 
 当前已接受的长期边界分为四层：
 
-1. **Generic CMS Core**：Spring Boot Backend 提供通用 CMS 业务模型、API、Schema evolution 与 site-neutral provisioning capability；
-2. **JilinJobs Site Package**：`sites/jilinjobs/**` 持有稳定站点结构、Fresh Site one-time bootstrap 与 stable Site assets；
-3. **Historical Content Migration**：`data-migrations/**` 持有 canonical historical data、provenance、compatibility 与迁移输入；
-4. **Replaceable Public Renderer**：`frontend/public-site` 是稳定 Public API / URL / Site Data Contract 的一个 Vue / Vite consumer。
+1. Generic CMS Core：Spring Boot Backend 提供通用 CMS 业务模型、API、Schema evolution 与 site-neutral provisioning capability；
+2. JilinJobs Site Package：sites/jilinjobs/** 持有稳定站点结构、Fresh Site one-time bootstrap 与 stable Site assets；
+3. Historical Content Migration：data-migrations/** 持有 canonical historical data、provenance、compatibility 与迁移输入；
+4. Replaceable Public Renderer：frontend/public-site 是稳定 Public API / URL / Site Data Contract 的一个 Vue / Vite consumer。
 
-管理端位于 `frontend/admin`，与公开站是同级独立前端工程并共享 Spring Boot CMS Backend。Main / Party 继续保持各自 Site / Theme / Router 边界，同时复用已接受的公共 CMS 与 Shared Shell contract。
+管理端位于 frontend/admin，与公开站是同级独立前端工程并共享 Spring Boot CMS Backend。Main / Party 继续保持各自 Site / Theme / Router 边界，同时复用已接受的公共 CMS 与 Shared Shell contract。
 
-当前产品范围、行为与验收标准不得从本 README 的摘要反向扩展；详细 Authority 由 `AGENTS.md` 与 `docs/README.md` 指向的 Current documents 决定。
+当前产品范围、行为与验收标准不得从本 README 的摘要反向扩展；详细 Authority 由 AGENTS.md 与 docs/README.md 指向的 Current documents 决定。
 
-Main historical migration execution 当前保持 **FROZEN / explicit reactivation only**：既有 `data-migrations/main/**` canonical evidence 保留，普通开发流程不得自行重新激活 Main migration；Party migration 不在该冻结范围内。
+Main historical migration execution 当前保持 FROZEN / explicit reactivation only：既有 data-migrations/main/** canonical evidence 保留，普通开发流程不得自行重新激活 Main migration；Party migration 不在该冻结范围内。
 
-## 仓库权威 与 Fresh Context
+## Fresh Context 恢复
 
-Fresh Context 先通过最小稳定 Bootstrap 到达 Consumer-local discovery，再按当前目标加载必要 owner，避免固定入口复制高频执行门禁或机械预加载完整 Method：
+Fresh Context 只需要固定两个入口：
 
-1. `AGENTS.md`：Repository Governance、Authority Boundary、Fresh Context 与操作规则；
-2. `docs/README.md`：Documentation IA / Local Discovery Entry；
-3. 由 `docs/README.md` 根据当前请求选择状态检查 / routing / execution 路径；当前执行状态需要时读取 `docs/work/current/README.md` 并协调当前 Open execution PR / Branch 与必要 GitHub 当前证据；
-4. 本 `README.md` 只在当前任务需要稳定项目范围摘要、人类入口或该 Authority 本身进入责任时读取，不作为 ordinary Fresh Context 的固定预读；
-5. 只有当前目标需要长期规划、Method routing 或实际 execution 时，才按需读取 `docs/project/project-roadmap.md`、`docs/project/project-capability-profile.md`、被 selector 选中的单个 `docs/methods/*.md`，以及当前 Requirement / Domain / Architecture / Specification / Technical Authority、controlling Issue / PR / Actions 当前证据。
+1. AGENTS.md：Repository 身份、Authority 边界、Skills / constraints locator 与稳定权限边界；
+2. docs/README.md：Consumer-owned Current Authority 导航。
 
-`docs/**/archive/**` 与 `docs/work/archive/**` 默认只承担 traceability / historical evidence，不参与 Fresh Context Current Authority 恢复，除非当前 Authority 明确要求读取。
+之后按任务只读取会改变当前判断的最小 owner。正式 active Execution Unit、Branch / PR / Actions、Roadmap、Requirement、Specification、Architecture、Technical 等均从其真实 owner 按需恢复，不在 Bootstrap 中复制。
 
-根 README **不维护** `Current Ready Execution Unit`、Readiness `PENDING/PASS`、exact execution Head 或最近 Actions 等高频状态。当前执行生命周期 的 Repository locator 统一为 `docs/work/current/README.md`，其 Entry / Exit / 失败关闭 契约由 `docs/work/README.md` 定义。Project Roadmap 只维护 durable route / planning direction，不作为 Execute Gate 缓存。
+docs/**/archive/** 与 docs/work/archive/** 默认只承担 traceability / historical evidence，不参与 ordinary Fresh Context，除非当前任务明确需要历史来源。
 
-GitHub PR / Branch / Actions 只对其各自原生瞬时事实负责；这不建立“GitHub 永远高于本地文件”的通用规则。Fresh Context 必须协调 Work locator、当前 Open execution work、就绪证据 与任务 Authority；缺失、冲突或歧义时 失败关闭，不得授予或继承 执行授权。
+## agentic-dev 采用
 
-只读状态检查与高成本 CI / Review Runtime / Historical Migration 激活都继续受 Consumer-local Rule 约束，但具体 Rule locator 只能由当前 task-level Rule Discovery 返回后按需读取；本 README 不发布固定 Rule 路径。相关 Rule 只限制副作用与验证作用域，不降低当前 Requirement / Specification / Verification Authority 所要求的真实 Acceptance。
+本仓库按 docs/project/agentic-dev.md 记录的 exact version 使用 agentic-dev：
+
+- installed Skills：.agents/skills/**
+- install lock / provenance：skills-lock.json
+- Consumer-local constraints：docs/governance/constraints.md
+- path-scoped frontend constraints：frontend/AGENTS.md
+
+Provider Guides 只在需要方法论导航时按 exact tag 定向读取；普通执行不依赖 Provider docs/**，本仓库也不维护 Provider Method / Rule / Capability runtime。
 
 ## 主要目录
 
-- `backend/`：Spring Boot CMS Backend；
-- `frontend/admin/`：CMS Admin Vue / Vite frontend；
-- `frontend/public-site/`：Main / Party Public Vue / Vite frontend；
-- `sites/`：Site Package schema 与具体 Site packages；
-- `data-migrations/`：Historical Content Migration workspace 与 canonical datasets；
-- `docs/`：Local Discovery、Project Knowledge、Methods、Requirements、Specifications、Technical / Architecture、Rules 与 Work lifecycle；
-- `skills/`：Consumer-local Skill corpus。
-
-各主要 subtree 的职责入口见对应稳定 Authority；README 只解释局部 ownership，不建立第二套全局 Authority Map。
+- backend/：Spring Boot CMS Backend；
+- frontend/admin/：CMS Admin Vue / Vite frontend；
+- frontend/public-site/：Main / Party Public Vue / Vite frontend；
+- sites/：Site Package schema 与具体 Site packages；
+- data-migrations/：Historical Content Migration workspace 与 canonical datasets；
+- docs/requirements/：Product / Domain Requirement；
+- docs/specifications/：Feature / surface observable contract；
+- docs/architecture/：长期系统结构、Requirement ownership 与 ADR；
+- docs/design/：设计权威；
+- docs/technical/：Implementation / Interface / Verification contract；
+- docs/project/：Roadmap、Evolution 与 adoption provenance；
+- docs/work/：只有需要正式 Execution Unit 时使用的 current / historical work；
+- .agents/skills/：标准安装的 agentic-dev Skills。
 
 ## 开发与验证入口
 
-- Repository 工作规则：`AGENTS.md`；
-- Local Discovery Entry / Documentation IA：`docs/README.md`；
-- Project Capability Profile / Method selector：`docs/project/project-capability-profile.md`；
-- Canonical Methods：`docs/methods/`；
-- Current execution locator：`docs/work/current/README.md`；
-- Work lifecycle：`docs/work/README.md`；
-- Project Roadmap：`docs/project/project-roadmap.md`；
-- Rule Discovery Architecture：`docs/architecture/rule-discovery.md`；
-- Rule root：`docs/rules/`；
-- Verification Strategy：`docs/technical/verification-strategy.md`；
-- Backend build / ownership entry：`backend/build.gradle.kts`、`backend/settings.gradle.kts`、`backend/README.md`；
-- Generic CMS Core：`backend/modules/cms-core/`；
-- CMS Server：`backend/apps/cms-server/`；
-- Content Migration application：`backend/apps/content-migration/`；
-- Admin / Public build 与脚本：分别以 `frontend/admin/package.json`、`frontend/public-site/package.json` 为准。
+- Repository 工作规则：AGENTS.md
+- Documentation / Authority 导航：docs/README.md
+- Product / Domain Requirement：docs/requirements/index.md
+- CMS Architecture：docs/architecture/cms-architecture.md
+- Verification Strategy：docs/technical/verification-strategy.md
+- Durable Roadmap：docs/project/project-roadmap.md
+- Current formal work locator：docs/work/current/README.md
+- Consumer-local constraints：docs/governance/constraints.md
+- agentic-dev adoption / provenance：docs/project/agentic-dev.md
+- Backend build / ownership：backend/build.gradle.kts、backend/settings.gradle.kts、backend/README.md
+- Frontend subtree：frontend/README.md + frontend/AGENTS.md
 
-成功、完成、通过或修复声明必须具有与目标提交匹配的 当前证据；GitHub Actions、PR Review 与 Post-Integration Evidence 仍按 Consumer-local Method / Rule / 仓库权威 执行。
+成功、完成、通过或修复声明必须具有与目标提交和 claim 类型匹配的当前证据。
