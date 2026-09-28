@@ -14,6 +14,7 @@ allprojects {
     group = "com.jilinjobs"
     version = "0.1.0-SNAPSHOT"
     repositories {
+        maven("https://maven.aliyun.com/repository/public/")
         mavenCentral()
     }
 }

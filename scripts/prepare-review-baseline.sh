@@ -22,7 +22,10 @@ docker run --rm --network host mysql:8.4 \
   mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot -e \
   'DROP DATABASE IF EXISTS jilinjobs_cms; CREATE DATABASE jilinjobs_cms CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;'
 
-sudo rm -rf runtime-static runtime-uploads review-baseline-build review-main-subset
+if ! rm -rf runtime-static runtime-uploads review-baseline-build review-main-subset 2>/dev/null; then
+  docker run --rm -v "$repo_root:/repo" alpine:3.23 sh -c \
+    'rm -rf /repo/runtime-static /repo/runtime-uploads /repo/review-baseline-build /repo/review-main-subset'
+fi
 mkdir -p runtime-static runtime-uploads review-baseline-build
 
 docker run -d --name review-baseline-backend --network host \

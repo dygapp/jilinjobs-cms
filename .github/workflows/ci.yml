@@ -26,7 +26,7 @@ permissions:
 jobs:
   backend:
     name: Backend verify
-    if: github.event_name != 'pull_request' || github.event.label.name == 'full-ci'
+    if: (github.event_name == 'workflow_dispatch' || vars.JILINJOBS_GITHUB_CI_ENABLED == 'true') && (github.event_name != 'pull_request' || github.event.label.name == 'full-ci')
     runs-on: ubuntu-latest
     timeout-minutes: 20
     services:
@@ -179,7 +179,7 @@ jobs:
 
   public-frontend:
     name: Public site frontend verify
-    if: github.event_name != 'pull_request' || github.event.label.name == 'full-ci'
+    if: (github.event_name == 'workflow_dispatch' || vars.JILINJOBS_GITHUB_CI_ENABLED == 'true') && (github.event_name != 'pull_request' || github.event.label.name == 'full-ci')
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -206,7 +206,7 @@ jobs:
 
   admin-frontend:
     name: Admin frontend verify
-    if: github.event_name != 'pull_request' || github.event.label.name == 'full-ci'
+    if: (github.event_name == 'workflow_dispatch' || vars.JILINJOBS_GITHUB_CI_ENABLED == 'true') && (github.event_name != 'pull_request' || github.event.label.name == 'full-ci')
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -235,7 +235,7 @@ jobs:
 
   e2e:
     name: Integrated browser verification
-    if: github.event_name != 'pull_request' || github.event.label.name == 'full-ci'
+    if: (github.event_name == 'workflow_dispatch' || vars.JILINJOBS_GITHUB_CI_ENABLED == 'true') && (github.event_name != 'pull_request' || github.event.label.name == 'full-ci')
     needs: [backend, public-frontend, admin-frontend]
     runs-on: ubuntu-latest
     timeout-minutes: 35
@@ -378,7 +378,7 @@ jobs:
 
   review-runtime-cache:
     name: Publish verified review runtime
-    if: github.event_name != 'pull_request' || github.event.label.name == 'full-ci'
+    if: (github.event_name == 'workflow_dispatch' || vars.JILINJOBS_GITHUB_CI_ENABLED == 'true') && (github.event_name != 'pull_request' || github.event.label.name == 'full-ci')
     needs: [backend, public-frontend, admin-frontend, e2e]
     runs-on: ubuntu-latest
     timeout-minutes: 35

@@ -27,6 +27,7 @@ permissions:
 jobs:
   generic-content-migration:
     name: Generic content migration verify
+    if: vars.JILINJOBS_GITHUB_CI_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     services:

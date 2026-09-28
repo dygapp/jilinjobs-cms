@@ -49,7 +49,10 @@ gzip -dc review-baseline-restore/database.sql.gz \
   | docker run --rm -i --network host mysql:8.4 \
       mysql --default-character-set=utf8mb4 -h127.0.0.1 -uroot -proot jilinjobs_cms
 
-sudo rm -rf runtime-static runtime-uploads
+if ! rm -rf runtime-static runtime-uploads 2>/dev/null; then
+  docker run --rm -v "$repo_root:/repo" alpine:3.23 sh -c \
+    'rm -rf /repo/runtime-static /repo/runtime-uploads'
+fi
 mkdir -p runtime-static runtime-uploads
 tar -C runtime-static -xzf review-baseline-restore/runtime-static.tar.gz
 tar -C runtime-uploads -xzf review-baseline-restore/runtime-uploads.tar.gz

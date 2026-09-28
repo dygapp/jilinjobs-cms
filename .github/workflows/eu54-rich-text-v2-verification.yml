@@ -15,6 +15,7 @@ permissions:
 jobs:
   exact-corpus:
     name: P1 P2 resource production round-trip
+    if: vars.JILINJOBS_GITHUB_CI_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     services:

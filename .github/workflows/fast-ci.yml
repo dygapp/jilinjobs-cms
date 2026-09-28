@@ -20,6 +20,7 @@ env:
 jobs:
   fast:
     name: 快速验证
+    if: vars.JILINJOBS_GITHUB_CI_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     services:

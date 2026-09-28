@@ -25,6 +25,7 @@ permissions:
 jobs:
   boundary:
     name: Backend application boundary verify
+    if: vars.JILINJOBS_GITHUB_CI_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     services:

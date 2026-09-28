@@ -56,6 +56,16 @@ Consumer runtime 只安装 .agents/skills/**。普通工作：
 
 只有工作确实需要独立恢复、依赖协调或独立验收生命周期时，才形成正式 Execution Unit。docs/work/current/README.md 为 NONE 只表示当前没有正式 active Unit，不阻止用户明确授权的新工作或有界直接变更。
 
+## 本地开发分支与集成
+
+在本地或受控 WebCodex Repository Runtime 中执行日常开发时，默认不使用 Pull Request 作为集成机制：
+
+- 简单任务：修改局部、低风险、可逆且无需独立恢复时，允许直接在 main 修改；完成适用验证后直接 commit，并按授权 push main；
+- 复杂任务：跨多个责任区、涉及架构 / 数据迁移 / CI 治理、需要长链路验证、独立回滚或独立恢复时，先创建独立 task branch；完成验证后在本地集成回 main，并按授权 push main；
+- 只有用户明确要求远程 Review、多人协作确实需要 PR，或外部仓库规则强制要求时才创建 PR。
+
+未提交工作树允许进入本地 Docker 验证。验证对象必须绑定实际 tracked / modified / untracked 且未被 ignore 的输入 bytes；dirty worktree 的结果只能声明为“当前 HEAD + worktree fingerprint”，不能冒充 exact-HEAD PASS。需要 Integration / Completion 级 exact-Head 证据时，先形成目标 commit，再在干净工作树对该 exact Head 重新执行要求的验证。
+
 ## Repository 操作与权限边界
 
 项目负责人已持续授权 dygapp/jilinjobs-cms 的日常 Repository 操作，包括读取和修改文件、创建 Branch / Commit / Issue / PR、Push 已验证变更、运行或观察 GitHub Actions，以及在满足本仓库验证和集成要求时执行正常仓库内操作。

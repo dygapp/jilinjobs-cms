@@ -19,6 +19,7 @@ permissions:
 jobs:
   eu29-to-current-upgrade:
     name: Accepted Party runtime -> current Generic canonical dataset
+    if: github.event_name == 'workflow_dispatch' || vars.JILINJOBS_GITHUB_CI_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     services:

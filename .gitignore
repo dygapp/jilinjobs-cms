@@ -6,7 +6,9 @@ __pycache__/
 *.py[cod]
 
 backend/.gradle/
+backend/.kotlin/
 backend/build/
+backend/**/build/
 
 frontend/**/node_modules/
 frontend/**/dist/
@@ -22,3 +24,6 @@ evals/artifacts/
 /*paired-results.tar.gz
 
 uploads/
+
+# Local Docker CI runtime, caches and bounded evidence.
+/.local-ci/

@@ -62,6 +62,7 @@ Provider Guides 只在需要方法论导航时按 exact tag 定向读取；普�
 - Product / Domain Requirement：docs/requirements/index.md
 - CMS Architecture：docs/architecture/cms-architecture.md
 - Verification Strategy：docs/technical/verification-strategy.md
+- 默认 CI：`bash scripts/local-ci.sh`（Local Docker）；运行时 contract：docs/technical/ci-verification-runtime.md
 - Durable Roadmap：docs/project/project-roadmap.md
 - Current formal work locator：docs/work/current/README.md
 - Consumer-local constraints：docs/governance/constraints.md

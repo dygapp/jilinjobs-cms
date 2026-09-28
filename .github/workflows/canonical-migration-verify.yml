@@ -19,6 +19,7 @@ permissions:
 jobs:
   canonical-dataset:
     name: Party canonical dataset on Generic Migration
+    if: github.event_name == 'workflow_dispatch' || vars.JILINJOBS_GITHUB_CI_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     services:

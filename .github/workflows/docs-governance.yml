@@ -30,6 +30,7 @@ permissions:
 jobs:
   verify-docs-governance:
     name: 中文主语言与文档引用完整性
+    if: github.event_name == 'workflow_dispatch' || vars.JILINJOBS_GITHUB_CI_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

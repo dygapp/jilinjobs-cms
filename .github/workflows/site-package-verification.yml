@@ -37,6 +37,7 @@ permissions:
 jobs:
   verify:
     name: Site Package verify
+    if: vars.JILINJOBS_GITHUB_CI_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     services:

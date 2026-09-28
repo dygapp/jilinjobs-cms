@@ -131,7 +131,7 @@ Functional Browser PASS 不自动等于 视觉保真 PASS。
 - 最终 Completion / Ready to Integrate 声明仍必须由当前 Authority 所要求、与目标 exact Head 匹配的完整证据支持；
 - GitHub Actions、Local Runtime、self-hosted Runner 等不同运行环境可以采用不同的快速验证实现，不能把某一种运行时优化方式提升为通用 Verification Requirement。
 
-当前 GitHub Actions / GitHub-hosted Runner 下的具体实现由 `docs/technical/ci-verification-runtime.md` 持有；本文不复制 GHCR、Workflow trigger、fingerprint 或 Job 编排细节。
+当前默认 Local Docker CI 与保留的 GitHub Actions fallback 具体执行实现由 `docs/technical/ci-verification-runtime.md` 持有；本文不复制 Docker cache、GHCR、Workflow gate、fingerprint 或 Job 编排细节。
 
 ### 4.6 人工评审 / 评审环境
 
