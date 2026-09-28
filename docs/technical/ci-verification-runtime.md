@@ -18,7 +18,7 @@ updated_at: 2026-09-28
 
 1. **Local Docker CI**：项目默认自动化验证路径；
 2. **GitHub Actions**：保留的远程备用路径，默认关闭自动执行；
-3. **Human Review Environment**：只服务显式人工评审，不属于默认 CI。
+3. **Human Review Environment**：只服务显式人工评审，不属于默认 CI；统一生命周期入口与 verified evidence 复用规则见 docs/technical/human-review-runtime.md。
 
 本文不重新定义 Product Requirement、Feature Acceptance 或通用验证方法。哪些 claim 必须被证明仍由当前 Requirement / Specification / Technical Authority 与 verification-strategy.md 决定；更换执行环境不能降低这些责任。
 

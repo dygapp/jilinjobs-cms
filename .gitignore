@@ -27,3 +27,9 @@ uploads/
 
 # Local Docker CI runtime, caches and bounded evidence.
 /.local-ci/
+
+# Local Human Review Runtime writable state.
+/runtime-static/
+/runtime-uploads/
+/review-baseline-restore/
+/runtime-review-meta/

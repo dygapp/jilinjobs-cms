@@ -195,6 +195,13 @@ find "$evidence_root" -mindepth 1 -maxdepth 1 -type d -printf '%T@ %p\n' \
   | sort -nr | awk 'NR>3 {sub(/^[^ ]+ /, ""); print}' \
   | xargs -r rm -rf
 acquire_lock
+
+for review_container in jilinjobs-human-review-mysql cms-backend cms-frontend; do
+  if [[ "$(docker inspect --format '{{.State.Running}}' "$review_container" 2>/dev/null || true)" == "true" ]]; then
+    rm -rf "$lock_dir" >/dev/null 2>&1 || true
+    die "Human Review Runtime container $review_container is running; execute bash scripts/human-review.sh stop before full Local Docker CI"
+  fi
+done
 trap cleanup_runtime EXIT INT TERM
 
 say "Ensure project-dedicated BuildKit builder: $builder"

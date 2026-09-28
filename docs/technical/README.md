@@ -11,6 +11,7 @@
 - `rich-text-authoring.md` — Rich Text 跨 consumer integration HOW；
 - `verification-strategy.md` — 跨 Feature verification layering、运行时组合 与 证据 contract；
 - `ci-verification-runtime.md` — 默认 Local Docker CI、可复用本地 Runtime / evidence，以及默认关闭但可低成本恢复的 GitHub Actions fallback 实现 contract。
+- `human-review-runtime.md` — 本地人工评审环境的 verified evidence 选择、统一生命周期入口、端口与缓存边界。
 
 HTTP endpoint / wire compatibility 只由 `http-interface-contract.md` 长期持有；Backend / Admin / Public Technical owner 只说明各自如何消费或实现该 contract，不复制第二份 endpoint / DTO inventory。
 
