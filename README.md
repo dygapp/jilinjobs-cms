@@ -50,6 +50,7 @@ Provider Guides 只在需要方法论导航时按 exact tag 定向读取；普�
 - docs/specifications/：Feature / surface observable contract；
 - docs/architecture/：长期系统结构、Requirement ownership 与 ADR；
 - docs/design/：设计权威；
+- docs/guides/：面向人的操作指南，不复制 Requirement / Technical Authority；
 - docs/technical/：Implementation / Interface / Verification contract；
 - docs/project/：Roadmap、Evolution 与 adoption provenance；
 - docs/work/：只有需要正式 Execution Unit 时使用的 current / historical work；
@@ -63,7 +64,7 @@ Provider Guides 只在需要方法论导航时按 exact tag 定向读取；普�
 - CMS Architecture：docs/architecture/cms-architecture.md
 - Verification Strategy：docs/technical/verification-strategy.md
 - 默认 CI：`bash scripts/local-ci.sh`（Local Docker）；运行时 contract：docs/technical/ci-verification-runtime.md
-- 人工评审环境：`bash scripts/human-review.sh start`；运行时 contract：docs/technical/human-review-runtime.md
+- 人工评审 / 演示环境：`bash scripts/human-review.sh start`；操作指南：docs/guides/human-review.md；运行时 contract：docs/technical/human-review-runtime.md
 - Durable Roadmap：docs/project/project-roadmap.md
 - Current formal work locator：docs/work/current/README.md
 - Consumer-local constraints：docs/governance/constraints.md

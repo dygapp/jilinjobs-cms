@@ -17,6 +17,8 @@ updated_at: 2026-09-28
 
 人工评审环境用于显式 Human Runtime Observation，不替代自动 CI，也不重新定义 Product Requirement、Feature Acceptance 或自动验证 claim。完整 Local Docker CI 的职责仍由 `docs/technical/ci-verification-runtime.md` 持有。
 
+面向人工评审、演示和手工测试人员的简化操作步骤见 `docs/guides/human-review.md`。该 Guide 是本文的使用投影，不拥有或复制本 Runtime contract。
+
 ## 2. 统一入口
 
 Repository-owned 唯一日常入口为：

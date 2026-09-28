@@ -21,6 +21,7 @@
 | 架构决策历史 | docs/architecture/decisions/** |
 | 设计权威 | docs/design/** |
 | HTTP / frontend / migration / verification 等长期技术契约 | docs/technical/** |
+| 面向人的操作指南 | docs/guides/**；只提供使用步骤，不拥有 Product / Technical contract |
 | Durable planning direction | docs/project/project-roadmap.md |
 | 稳定演进摘要 | docs/project/project-evolution.md |
 | agentic-dev adopted version / provenance | docs/project/agentic-dev.md |
@@ -41,6 +42,10 @@ Requirement Index 只拥有 locator / relation；长期 Product / Domain 事实�
 ### 实现 / 修复
 
 先确认当前 observable contract 与必要 Architecture / Technical owner。局部、低风险、可逆变更可以直接实施并按范围验证；只有确需独立恢复、依赖协调或独立验收时才使用正式 Execution Unit。
+
+### 人工操作 / 演示 / 手工测试
+
+先从 docs/guides/README.md 选择对应操作指南。Guide 只负责面向人的操作步骤与常见问题；遇到底层运行时、Evidence、端口、缓存或互斥语义时，继续读取 Guide 指向的 Technical owner。
 
 ### 规划
 
