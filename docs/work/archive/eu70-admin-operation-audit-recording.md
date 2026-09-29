@@ -1,18 +1,27 @@
 ---
 id: execution-unit:eu70-admin-operation-audit-recording
 type: execution-unit
-status: in_progress
+status: completed
 readiness: PASS
 base_sha: 2705a5f43794cebcb12af08d973641b926654ea5
 branch: codex/eu70-admin-operation-audit-recording
 started_at: 2026-09-29
+verified_head_sha: 4dfbec06e667367e5cd8f72119005a7cb77484ae
+integrated_sha: 4dfbec06e667367e5cd8f72119005a7cb77484ae
+completed_at: 2026-09-30
 ---
 
 # EU-70 管理操作审计记录
 
-## 当前执行状态
+## 完成结果与证据
 
-EU-70 的实现与分层验证已在目标 branch 工作树完成；独立安全 / 隐私 / 事务复核、History Convergence、目标 exact-head Local Docker CI、本地集成、Post-Integration Evidence、归档与推送闭环仍须依次完成。本段只记录执行进度，不构成 Completion / Integration 声明。
+- `cms-core` 已建立只写审计事件模型、持久化 contract、V6 append-only schema 与角色快照；`cms-server` 以显式 descriptor、请求拦截和 AOP / 事务边界覆盖当前 13 个 capability family 的全部 38 个 Admin 写 handler，读入口、Public、static read 与 Content Migration 不产生业务审计。
+- 可信 `CmsPrincipal` 同时校验认证状态及 `admin` / `super` 角色，主体、角色和结果不接受客户端自报；`STARTED → SUCCEEDED / FAILED / ROLLED_BACK`、初始审计失败 fail closed、成功终态同业务事务提交、失败终态独立持久化等语义均由真实 MySQL 事务验证覆盖。
+- Managed Resource 与 Static Resource 写操作已纳入暂存、备份、补偿和不确定结果边界；审计模型、诊断日志及自动化测试排除 token、password、完整请求体、Rich Text 正文、文件 bytes、异常堆栈与原始异常消息。
+- 独立安全 / 隐私 / 事务复核发现并修正了 fallback AOP 仅按 `CmsPrincipal` 类型信任、未再次校验认证状态和管理角色的问题；修正后的复核没有遗留 finding。History Convergence 确认实现为单一逻辑提交，未混入查询 API / UI、EU-71、真实身份提供方或 agentic-dev 变更。
+- 实现提交 `4dfbec06e667367e5cd8f72119005a7cb77484ae` 在任务分支取得 exact-head Full Local Docker CI PASS，证据位于 `.local-ci/evidence/20260929T232313Z-1263822/`；任务分支已推送到远端。该提交 fast-forward 到本地 `main` 后再次取得 Post-Integration Full Local Docker CI PASS，证据位于 `.local-ci/evidence/20260929T233636Z-1289456/`。
+- 两次完整验证均绑定同一实现 bytes；后一次包括 V1→V6 Fresh / upgrade migration、EU-70 真实事务 verifier、Backend / boundary / formal and review artifacts、Public Browser 60 通过 / 7 跳过、Admin Browser 46 通过 / 1 跳过，`canonical_specialized=true`、`upgrade_specialized=true`，无失败。
+- 本归档提交终止 EU-70 Execute Authority，并将 Current Ready Execution Unit 恢复为 **NONE**；EU-71 仍须从届时 Current Authority 独立规划和 readiness，不从本单元继承执行授权。
 
 ## 目标
 
