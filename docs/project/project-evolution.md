@@ -53,6 +53,10 @@ Main Article snapshot 的当前 canonical data / provenance 由 `data-migrations
 
 在 `cms-server` 建立按身份来源与用户 ID 区分的统一可信主体、可替换凭证验证与受控角色映射接缝，并用仅存在于测试源码的隔离身份适配器验证跨来源隔离及失败关闭。该阶段没有引入真实身份提供方，也没有启用 Admin 请求 / 方法授权或业务操作审计；当前长期语义仍由管理身份 Requirement、Specification、ADR-0005 与 Technical owner 持有，完成证据归档于 EU-67 Work artifact。
 
+### EU-68 — Core HTTP 与上传边界收敛
+
+将遗留在 Generic Core 的 Admin / Public HTTP Controller 归位 CMS Server，把 Core 上传服务改为 framework-neutral 的可重复读取输入，并让独立 Content Migration 从已校验文件构造该输入，不再依赖 multipart transport。既有 HTTP 行为、资源安全与 canonical 迁移结果经完整回归保持；该阶段未开启管理认证授权，长期 Backend / Interface / Security contract 仍由现行 Technical owner 持有，完成证据归档于 EU-68 Work artifact。
+
 ## Consumer Method / Capability 演进（历史）
 
 ### V3-08 Track B 采用

@@ -1,14 +1,25 @@
 ---
 id: execution-unit:eu68-core-http-boundary
 type: execution-unit
-status: active
+status: completed
 readiness: PASS
 base_sha: ccf89912dfa262fd4edbf7b2fe52cbd5c3ff99ee
 branch: codex/eu68-core-http-boundary
 started_at: 2026-09-29
+verified_head_sha: 96c2c889ed6f3dff187c64c8c118e91148bc803f
+integrated_sha: 96c2c889ed6f3dff187c64c8c118e91148bc803f
+completed_at: 2026-09-29
 ---
 
 # EU-68 Core HTTP 责任与上传输入边界收敛
+
+## 完成结果与证据
+
+- Core 的三个 HTTP Controller 已移至 Server，现有导航位置、公开列表和广告查询的 HTTP 映射不变；Core 不再包含 Controller、Servlet / HTTP 或 multipart transport 引用。
+- Core 托管 / 静态资源上传改用可重复打开流的中立 `UploadContent`；Server 适配真实 multipart，Migration 从已校验的 canonical 文件路径构造输入。Migration 的三个 `MultipartFile` 伪装类与 Core / Migration 的 Spring Web 直接依赖已移除；结构验证还检查非 Web Migration BootJar 不含 Spring Web transport 依赖。
+- 上传流中断时只清理本次独占创建的落盘文件，不会因存储键碰撞误删已有文件；新增空上传、Office 内容重复读取、路径输入和中断清理测试。没有改变 HTTP contract、数据库 Schema、canonical dataset 或 Admin 授权状态。
+- 最终实现提交 `96c2c889ed6f3dff187c64c8c118e91148bc803f` 在任务分支与 fast-forward 后的本地 `main` 均取得 `scripts/local-ci.sh full` PASS；证据分别位于 `.local-ci/evidence/20260929T060720Z-978031/` 和 `.local-ci/evidence/20260929T062051Z-1008891/`，后者 `subject.txt` / `result.txt` 绑定 `main` 的 exact commit。Backend clean build、Server / Migration BootJar、全新 MySQL 迁移链、Party canonical 与升级兼容、前端正式构建、Public Browser（60 通过、7 跳过）、Admin Browser（46 通过、1 跳过）和 Party 专项 Browser 均通过。
+- 最终变更经 `review-change` 复核没有阻断或中级 finding，`converge` 为 READY TO INTEGRATE；随后完成本地快进集成与集成后完整验证。下一单元仍须独立建立管理请求 / 方法授权的就绪与证据，本结果不表示 Admin API 已受保护。
 
 ## 目标
 

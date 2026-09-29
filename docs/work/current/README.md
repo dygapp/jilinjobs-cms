@@ -1,14 +1,7 @@
 # 当前正式工作
 
-Current Ready Execution Unit：**EU-68 Core HTTP 责任与上传输入边界收敛**。
+Current Ready Execution Unit：**NONE**。
 
-当前工作 artifact：`eu68-core-http-boundary.md`。
-
-- Status：`active`
-- Readiness：`PASS`
-- Branch：`codex/eu68-core-http-boundary`
-- Base：`ccf89912dfa262fd4edbf7b2fe52cbd5c3ff99ee`
-
-EU-68 关闭管理授权前必须处理的 Core HTTP / multipart 边界债务；它不实施 Spring Security 或改变当前 Admin / Public HTTP 授权结果。执行前须重新核对 artifact、Current Authority、Branch / Head、工作树和相关 GitHub native state。
+EU-68 已完成并归档至 `../archive/eu68-core-http-boundary.md`。下一候选为管理请求与方法授权，仍须按当前 Authority 建立自身范围、验证责任与执行就绪状态；EU-68 的 PASS 不自动授予后续执行权。
 
 已完成 Unit 的历史证据按需从 `../archive/` 定向读取；稳定产品语义必须从当前 Requirement / Architecture / Specification / Design / Technical owner 恢复，而不是从完成态 Work artifact 反向建立第二份 Authority。
