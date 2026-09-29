@@ -176,6 +176,9 @@ tasks.register("verifyBackendApplicationBoundary") {
         require(serverEntries.none { it.startsWith("BOOT-INF/classes/com/jilinjobs/cms/migration/") }) {
             "Server BootJar contains Content Migration classes"
         }
+        require(serverEntries.none {
+            it.startsWith("BOOT-INF/classes/com/jilinjobs/cms/identity/Test")
+        }) { "Server BootJar contains test identity adapter or configuration" }
 
         val migrationEntries = jarEntries(migrationJar)
         require("BOOT-INF/classes/com/jilinjobs/cms/ContentMigrationApplication.class" in migrationEntries) { "Migration application class missing" }
