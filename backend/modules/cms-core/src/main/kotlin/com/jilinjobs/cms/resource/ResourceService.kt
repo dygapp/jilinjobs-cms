@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
+import java.nio.file.StandardOpenOption
 import java.util.UUID
 
 interface FileStorage {
@@ -30,9 +31,12 @@ class LocalFileStorage(
     override fun store(file: UploadContent): StoredFile {
         val storageKey = UUID.randomUUID().toString()
         val target = safePath(storageKey)
+        val output = Files.newOutputStream(target, StandardOpenOption.CREATE_NEW, StandardOpenOption.WRITE)
         try {
-            file.inputStream.use { input ->
-                Files.copy(input, target)
+            output.use { sink ->
+                file.inputStream.use { input ->
+                    input.copyTo(sink)
+                }
             }
             return StoredFile(storageKey, Files.size(target))
         } catch (failure: Exception) {
