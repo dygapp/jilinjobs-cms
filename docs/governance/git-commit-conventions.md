@@ -104,6 +104,20 @@ Scope 表示稳定责任域，不表示单个文件、临时 Branch、Issue / EU
 3. 移除其中任一变化后，目标、正确性或验证是否会不完整；
 4. 是否混入可以独立理解、验证或回退的另一项变化。
 
+## Commit 生命周期与 History Convergence
+
+Git history 用于表达长期有意义的逻辑变化，不用于逐步记录 Agent 的执行过程。实现、测试、Readiness / Gate 状态、debug、修复、Review finding 处理和重测默认属于 **Working State**；不因为某个执行步骤进入终态就机械创建 Commit。
+
+只有当前 claim 确实需要 exact-Head Evidence、跨上下文 durable handoff，或一个已经形成稳定逻辑边界的变化需要成为长期 subject 时，才形成 **Candidate Commit**。Candidate 仍按“单一逻辑目的”组织，而不是按 Gate、测试轮次或工具调用组织。
+
+Candidate 尚未进入共享历史，并且当前授权允许历史整理时，同一逻辑目的内的后续修复可以收敛回 candidate。任何导致 Candidate SHA 变化的整理都会使旧 exact-Head Evidence 失效，必须按本文“历史重写与 Evidence”及当前 Verification Authority 重新取得受影响证据。
+
+在 push 或集成前执行 **History Convergence**：检查 checkpoint、WIP、Readiness、Gate、Evidence 记录、测试 / debug / Review 修复等过程性 Commit 是否只是同一逻辑目的的中间状态；如果是，并且当前 Repository policy 与授权允许，应收敛为最少必要 logical commits。已经进入共享历史或当前规则不允许改写的历史，不为了整洁重新改写。
+
+一个 Execution Unit、Issue、PR 或 Feature 不要求与 Commit 一一对应。窄而完整的变化通常自然形成一个 Commit；存在多个真正可以独立理解、验证和回退的逻辑目的时则保留多个 Commit，不机械合并。
+
+涉及多个 Git Repository 时，逐仓确认 Repository identity、branch、HEAD、staged / unstaged / untracked 状态、commit policy 与授权，并分别完成 Candidate Commit 和 History Convergence。父仓或项目根工作树干净不能证明被忽略的独立组件仓已经提交，也不得从项目根统一改写组件仓历史。若父仓以 `160000` gitlink / submodule 显式跟踪组件，组件 Candidate SHA 变化后必须同步核对父仓 gitlink、组合 SHA 与绑定 Evidence。
+
 ## Summary 与 Body
 
 Summary 应简短、独立可读，并以中文明确说明动作和对象。
