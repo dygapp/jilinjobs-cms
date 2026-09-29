@@ -1,14 +1,25 @@
 ---
 id: execution-unit:eu67-cms-principal-foundation
 type: execution-unit
-status: active
+status: completed
 readiness: PASS
 base_sha: 3f0e431ba1f0b3117eba9a939fb2976f6baa8df4
 branch: codex/eu67-cms-principal-foundation
 started_at: 2026-09-29
+verified_head_sha: 8dd1e03f6be2abe0cf0d153633d715cfd2083476
+integrated_sha: 8dd1e03f6be2abe0cf0d153633d715cfd2083476
+completed_at: 2026-09-29
 ---
 
 # EU-67 CMS 可信主体与隔离测试身份基础
+
+## 完成结果与证据
+
+- `cms-server` 已建立 `CmsPrincipal(identitySource, userId, roles)`、凭证验证器与服务端受控角色映射接缝；无效、过期、伪造、跨来源凭证及未知角色均失败关闭。
+- 随机不透明凭证的测试身份适配器只位于 test source；自动化测试覆盖同 `userId` 跨来源隔离、`admin` / `super` 角色与负向路径，`bootJar` 边界检查排除测试身份类。正式构建没有 Spring Security 默认用户或请求过滤链。
+- 未接入真实身份提供方，未开启 Admin 请求 / 方法授权、HTTP `401 / 403`、操作审计或前端身份状态；Admin API 仍未受保护。
+- 实现提交 `8dd1e03f6be2abe0cf0d153633d715cfd2083476` 在任务分支及快进后的本地 `main` 均取得 `scripts/local-ci.sh full` PASS；证据分别为 `.local-ci/evidence/20260929T034651Z-842669/` 与 `.local-ci/evidence/20260929T040052Z-872601/`，后者 `subject.txt` / `result.txt` 绑定 `main` 的 exact commit。后端与迁移边界、正式前端构建、Public Browser（60 通过、7 跳过）和 Admin Browser（46 通过、1 跳过）均通过。
+- 完成态变更经 `review-change` 无阻断或中级 finding，`converge` 返回 READY TO INTEGRATE；随后以 fast-forward 集成到本地 `main` 并重跑完整验证。归档与路线图更新是文档收口，不扩大本单元实现范围。
 
 ## 目标
 

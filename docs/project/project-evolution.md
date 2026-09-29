@@ -49,6 +49,10 @@ Main Article snapshot 的当前 canonical data / provenance 由 `data-migrations
 
 统一 iframe 承载补齐延迟激活、加载、超时、失败隔离与原位重试；Public、Admin、Backend、Site Package、迁移兼容与集成浏览器验证均在完成态 Head 通过。当前长期语义由慧就业 Requirement、Public / Page Content Specification 与 Public Technical owner 持有，详细实施和验证证据归档于 EU-56 Work artifact、Issue #176、PR #177 与 GitHub Actions。
 
+### EU-67 — CMS 可信主体基础
+
+在 `cms-server` 建立按身份来源与用户 ID 区分的统一可信主体、可替换凭证验证与受控角色映射接缝，并用仅存在于测试源码的隔离身份适配器验证跨来源隔离及失败关闭。该阶段没有引入真实身份提供方，也没有启用 Admin 请求 / 方法授权或业务操作审计；当前长期语义仍由管理身份 Requirement、Specification、ADR-0005 与 Technical owner 持有，完成证据归档于 EU-67 Work artifact。
+
 ## Consumer Method / Capability 演进（历史）
 
 ### V3-08 Track B 采用
