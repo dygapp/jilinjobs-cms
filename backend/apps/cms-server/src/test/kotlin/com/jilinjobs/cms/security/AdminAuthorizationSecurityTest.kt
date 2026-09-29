@@ -1,5 +1,11 @@
 package com.jilinjobs.cms.security
 
+import com.jilinjobs.cms.audit.AdminAuditObjectType
+import com.jilinjobs.cms.audit.AdminAuditOperation
+import com.jilinjobs.cms.audit.AdminAuditTransactions
+import com.jilinjobs.cms.audit.AdminAuditDescriptorResolver
+import com.jilinjobs.cms.audit.AdminAuditAttempt
+import com.jilinjobs.cms.audit.AdminAuditResult
 import com.jilinjobs.cms.advertisement.AdvertisementService
 import com.jilinjobs.cms.advertisement.PublicAdvertisementQueryService
 import com.jilinjobs.cms.column.ColumnService
@@ -29,6 +35,7 @@ import org.springframework.core.annotation.AnnotatedElementUtils
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.core.userdetails.UserDetailsService
 import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.authentication
+import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf
 import org.springframework.test.context.bean.override.mockito.MockitoBean
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
@@ -37,9 +44,10 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers.content
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+import org.springframework.web.bind.annotation.RequestMethod
 
 @WebMvcTest
-@Import(CmsSecurityConfiguration::class)
+@Import(CmsSecurityConfiguration::class, AdminAuditDescriptorResolver::class)
 class AdminAuthorizationSecurityTest {
     @Autowired lateinit var mockMvc: MockMvc
     @Autowired lateinit var handlerMapping: RequestMappingHandlerMapping
@@ -59,6 +67,7 @@ class AdminAuthorizationSecurityTest {
     @MockitoBean lateinit var resourceService: ResourceService
     @MockitoBean lateinit var siteConfigService: SiteConfigService
     @MockitoBean lateinit var staticResourceService: StaticResourceService
+    @MockitoBean lateinit var adminAuditTransactions: AdminAuditTransactions
 
     @Test
     fun `anonymous admin request is 401 with diagnostic json`() {
@@ -73,6 +82,7 @@ class AdminAuthorizationSecurityTest {
         mockMvc.perform(post("/api/admin/columns"))
             .andExpect(status().isUnauthorized)
             .andExpect(jsonPath("$.message").isString)
+        Mockito.verifyNoInteractions(adminAuditTransactions)
     }
 
     @Test
@@ -81,6 +91,47 @@ class AdminAuthorizationSecurityTest {
             post("/api/admin/columns")
                 .with(authentication(principal(CmsRole.ADMIN).toSpringAuthentication())),
         ).andExpect(status().isForbidden)
+        Mockito.verifyNoInteractions(adminAuditTransactions)
+    }
+
+    @Test
+    fun `authenticated input failure is audited without persisting request content`() {
+        mockMvc.perform(
+            post("/api/admin/columns")
+                .with(authentication(principal(CmsRole.ADMIN).toSpringAuthentication()))
+                .with(csrf())
+                .contentType("application/json")
+                .content("""{"name":"","token":"token-secret","password":"password-secret","bodyHtml":"rich-secret"}"""),
+        ).andExpect(status().isBadRequest)
+
+        val invocations = Mockito.mockingDetails(adminAuditTransactions).invocations
+        val startCall = invocations.single { it.method.name == "start" }
+        val attempt = startCall.arguments.single() as AdminAuditAttempt
+        assertEquals("security-test", attempt.identitySource)
+        assertEquals("admin-user", attempt.userId)
+        assertEquals(setOf("admin"), attempt.roles)
+        assertEquals("CREATE", attempt.action)
+        assertEquals("COLUMN", attempt.objectType)
+        assertFalse(attempt.toString().contains("token-secret"))
+        assertFalse(attempt.toString().contains("password-secret"))
+        assertFalse(attempt.toString().contains("rich-secret"))
+        val completion = invocations.single { it.method.name == "completeFailure" }.arguments
+        assertEquals(attempt.auditId, completion[0])
+        assertEquals(AdminAuditResult.FAILED, completion[1])
+        assertEquals(null, completion[2])
+    }
+
+    @Test
+    fun `authenticated identity without cms authority writes no business audit`() {
+        val verifiedButUnauthorized = UsernamePasswordAuthenticationToken.authenticated("verified-user", null, emptyList())
+        mockMvc.perform(
+            post("/api/admin/columns")
+                .with(authentication(verifiedButUnauthorized))
+                .with(csrf())
+                .contentType("application/json")
+                .content("""{"name":"blocked"}"""),
+        ).andExpect(status().isForbidden)
+        Mockito.verifyNoInteractions(adminAuditTransactions)
     }
 
     @Test
@@ -141,6 +192,31 @@ class AdminAuthorizationSecurityTest {
         }.toSet()
 
         assertEquals(expectedAdminEndpoints, actual)
+    }
+
+    @Test
+    fun `admin write handlers and audit descriptors guard each other in both directions`() {
+        val adminHandlers = handlerMapping.handlerMethods.filterKeys { info ->
+            info.patternValues.any { pattern -> pattern.startsWith("/api/admin/") }
+        }
+        val writeHandlers = adminHandlers.filterKeys { info ->
+            info.methodsCondition.methods.any { it in setOf(RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE) }
+        }
+        val readHandlers = adminHandlers - writeHandlers.keys
+
+        assertEquals(38, writeHandlers.size)
+        val descriptors = writeHandlers.values.map { handler ->
+            AnnotatedElementUtils.findMergedAnnotation(handler.method, AdminAuditOperation::class.java)
+                ?: error("Admin write handler is missing one audit descriptor: ${handler.beanType.name}#${handler.method.name}")
+        }
+        readHandlers.values.forEach { handler ->
+            assertEquals(
+                null,
+                AnnotatedElementUtils.findMergedAnnotation(handler.method, AdminAuditOperation::class.java),
+                "Admin read handler must not carry business-write audit: ${handler.beanType.name}#${handler.method.name}",
+            )
+        }
+        assertEquals(AdminAuditObjectType.entries.toSet(), descriptors.map { it.objectType }.toSet())
     }
 
     @Test

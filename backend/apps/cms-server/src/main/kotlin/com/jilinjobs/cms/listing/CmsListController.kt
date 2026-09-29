@@ -1,5 +1,6 @@
 package com.jilinjobs.cms.listing
 
+import com.jilinjobs.cms.audit.*
 import com.jilinjobs.cms.security.CmsAdminAccess
 
 import com.jilinjobs.cms.common.ContentImagePolicy
@@ -12,12 +13,18 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/api/admin/lists")
 class AdminCmsListController(private val service: CmsListService) {
     @GetMapping fun lists() = service.listDefinitions()
+    @AdminAuditOperation(AdminAuditAction.CREATE, AdminAuditObjectType.CMS_LIST)
     @PostMapping fun createList(@RequestBody request: SaveCmsListRequest) = ResponseEntity.status(HttpStatus.CREATED).body(service.createList(request.draft()))
+    @AdminAuditOperation(AdminAuditAction.UPDATE, AdminAuditObjectType.CMS_LIST, AdminAuditObjectIdSource.ARGUMENT, "id")
     @PutMapping("/{id}") fun updateList(@PathVariable id: Long, @RequestBody request: SaveCmsListRequest) = service.updateList(id, request.draft())
+    @AdminAuditOperation(AdminAuditAction.DELETE, AdminAuditObjectType.CMS_LIST, AdminAuditObjectIdSource.ARGUMENT, "id")
     @DeleteMapping("/{id}") fun deleteList(@PathVariable id: Long): ResponseEntity<Void> { service.deleteList(id); return ResponseEntity.noContent().build() }
     @GetMapping("/{id}/items") fun items(@PathVariable id: Long) = service.listItems(id)
+    @AdminAuditOperation(AdminAuditAction.CREATE, AdminAuditObjectType.CMS_LIST_ITEM)
     @PostMapping("/{id}/items") fun createItem(@PathVariable id: Long, @RequestBody request: SaveCmsListItemRequest) = ResponseEntity.status(HttpStatus.CREATED).body(service.createItem(id, request.draft()))
+    @AdminAuditOperation(AdminAuditAction.UPDATE, AdminAuditObjectType.CMS_LIST_ITEM, AdminAuditObjectIdSource.ARGUMENT, "itemId")
     @PutMapping("/{listId}/items/{itemId}") fun updateItem(@PathVariable listId: Long, @PathVariable itemId: Long, @RequestBody request: SaveCmsListItemRequest) = service.updateItem(listId, itemId, request.draft())
+    @AdminAuditOperation(AdminAuditAction.DELETE, AdminAuditObjectType.CMS_LIST_ITEM, AdminAuditObjectIdSource.ARGUMENT, "itemId")
     @DeleteMapping("/{listId}/items/{itemId}") fun deleteItem(@PathVariable listId: Long, @PathVariable itemId: Long): ResponseEntity<Void> { service.deleteItem(listId, itemId); return ResponseEntity.noContent().build() }
 }
 

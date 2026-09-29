@@ -1,5 +1,6 @@
 package com.jilinjobs.cms.navigation
 
+import com.jilinjobs.cms.audit.*
 import com.jilinjobs.cms.security.CmsAdminAccess
 
 import jakarta.validation.Valid
@@ -14,10 +15,13 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/api/admin/navigations")
 class AdminNavigationController(private val service: NavigationService) {
     @GetMapping fun list() = service.listAdmin()
+    @AdminAuditOperation(AdminAuditAction.CREATE, AdminAuditObjectType.NAVIGATION_ITEM)
     @PostMapping fun create(@Valid @RequestBody request: SaveNavigationRequest) =
         ResponseEntity.status(HttpStatus.CREATED).body(service.create(request.draft()))
+    @AdminAuditOperation(AdminAuditAction.UPDATE, AdminAuditObjectType.NAVIGATION_ITEM, AdminAuditObjectIdSource.ARGUMENT, "id")
     @PutMapping("/{id}") fun update(@PathVariable id: Long, @Valid @RequestBody request: SaveNavigationRequest) =
         service.update(id, request.draft())
+    @AdminAuditOperation(AdminAuditAction.DELETE, AdminAuditObjectType.NAVIGATION_ITEM, AdminAuditObjectIdSource.ARGUMENT, "id")
     @DeleteMapping("/{id}") fun delete(@PathVariable id: Long): ResponseEntity<Void> {
         service.delete(id)
         return ResponseEntity.noContent().build()

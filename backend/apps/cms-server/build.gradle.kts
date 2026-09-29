@@ -20,6 +20,8 @@ dependencies {
     implementation(project(":modules:cms-core"))
     implementation("org.springframework.boot:spring-boot-starter-webmvc")
     implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.aspectj:aspectjweaver")
+    implementation("org.springframework:spring-tx")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("tools.jackson.module:jackson-module-kotlin")
@@ -30,6 +32,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
     testImplementation("org.springframework.security:spring-security-test")
+    testImplementation("org.springframework:spring-jdbc")
     testImplementation("org.flywaydb:flyway-core")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }

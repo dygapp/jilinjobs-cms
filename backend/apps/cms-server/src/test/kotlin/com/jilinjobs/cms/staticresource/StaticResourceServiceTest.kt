@@ -3,6 +3,7 @@ package com.jilinjobs.cms.staticresource
 import com.jilinjobs.cms.siteconfig.SiteConfigMapper
 import com.jilinjobs.cms.siteconfig.SiteConfigRecord
 import com.jilinjobs.cms.resource.UploadContent
+import com.jilinjobs.cms.resource.FileMutationJournal
 import java.io.ByteArrayInputStream
 import java.nio.file.Files
 import java.nio.file.Path
@@ -108,10 +109,50 @@ class StaticResourceServiceTest {
         assertTrue(Files.size(tempDir.resolve("brand/logo.png")) > png.size)
     }
 
+    @Test
+    fun `replacement compensation restores the original visible bytes`() {
+        val journal = FileMutationJournal()
+        val service = service(journal = journal)
+        write("uploads/replace.png", png)
+        journal.begin()
+
+        service.upload("uploads/replace.png", bytesUpload("replace.png", png + byteArrayOf(0x01)), true)
+        assertTrue(Files.size(tempDir.resolve("uploads/replace.png")) > png.size)
+        journal.compensate()
+
+        assertTrue(Files.readAllBytes(tempDir.resolve("uploads/replace.png")).contentEquals(png))
+    }
+
+    @Test
+    fun `trash and restore compensation recover their previous visible state`() {
+        val journal = FileMutationJournal()
+        val service = service(journal = journal)
+        service.upload("uploads/recover.png", bytesUpload("recover.png", png), false)
+
+        journal.begin()
+        val trashed = service.delete("uploads/recover.png")
+        journal.compensate()
+        assertTrue(Files.isRegularFile(tempDir.resolve("uploads/recover.png")))
+
+        val deletedAgain = service.delete("uploads/recover.png")
+        journal.begin()
+        service.restore(deletedAgain.id)
+        journal.compensate()
+        assertFalse(Files.exists(tempDir.resolve("uploads/recover.png")))
+        assertTrue(service.trash().any { it.id == deletedAgain.id })
+        assertFalse(service.trash().any { it.id == trashed.id })
+    }
+
     private fun service(
         mapper: SiteConfigMapper = StaticFakeSiteConfigMapper(),
         protectedResources: String = "health/baseline.png,home/ncss-logo.png",
-    ) = StaticResourceService(tempDir.toString(), mapper, protectedResourcesText = protectedResources)
+        journal: FileMutationJournal = FileMutationJournal(),
+    ) = StaticResourceService(
+        tempDir.toString(),
+        mapper,
+        protectedResourcesText = protectedResources,
+        fileMutations = journal,
+    )
     private fun write(relative: String, bytes: ByteArray) { val path=tempDir.resolve(relative);Files.createDirectories(path.parent);Files.write(path,bytes) }
     private fun property(key:String,value:String,type:String)=SiteConfigRecord(configKey=key,propertyName=key,configValue=value,valueType=type,description=key)
 }

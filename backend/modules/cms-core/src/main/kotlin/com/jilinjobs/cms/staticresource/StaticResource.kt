@@ -5,6 +5,7 @@ import com.jilinjobs.cms.listing.CmsListMapper
 import com.jilinjobs.cms.navigation.NavigationMapper
 import com.jilinjobs.cms.provisioning.SitePackageAssetCatalog
 import com.jilinjobs.cms.resource.UploadContent
+import com.jilinjobs.cms.resource.FileMutationJournal
 import com.jilinjobs.cms.siteconfig.SiteConfigMapper
 import java.nio.charset.StandardCharsets
 import java.nio.file.*
@@ -35,9 +36,11 @@ class StaticResourceService(
     private val navigationMapper: NavigationMapper? = null,
     @Value("\${cms.static.protected-resources:}") protectedResourcesText: String = "",
     private val sitePackageAssetCatalog: SitePackageAssetCatalog? = null,
+    private val fileMutations: FileMutationJournal = FileMutationJournal(),
 ) {
     private val root = Paths.get(rootText).toAbsolutePath().normalize().also { Files.createDirectories(it) }
     private val trashRoot = root.resolve(".trash").also { Files.createDirectories(it) }
+    private val auditStageRoot = trashRoot.resolve(".audit-stage").also { Files.createDirectories(it) }
     private val configuredProtectedPaths = protectedResourcesText
         .split(',')
         .asSequence()
@@ -68,7 +71,37 @@ class StaticResourceService(
         val target = safeFile(relative)
         Files.createDirectories(target.parent)
         if (Files.exists(target) && !replace) throw StaticResourceValidationException("目标文件已存在，请明确选择替换")
-        file.inputStream.use { Files.copy(it, target, StandardCopyOption.REPLACE_EXISTING) }
+        val hadOriginal = Files.exists(target)
+        val mutationId = UUID.randomUUID().toString()
+        val staged = auditStageRoot.resolve("$mutationId.incoming")
+        val backup = if (hadOriginal) auditStageRoot.resolve("$mutationId.backup") else null
+        var targetReplaced = false
+        val compensate = {
+            if (targetReplaced && hadOriginal && backup != null && Files.exists(backup)) {
+                Files.move(backup, target, StandardCopyOption.REPLACE_EXISTING)
+            } else if (targetReplaced && !hadOriginal) {
+                Files.deleteIfExists(target)
+            }
+            backup?.let(Files::deleteIfExists)
+            Files.deleteIfExists(staged)
+            Unit
+        }
+        val cleanup = {
+            backup?.let(Files::deleteIfExists)
+            Files.deleteIfExists(staged)
+            Unit
+        }
+        fileMutations.register(compensate, cleanup)
+        try {
+            file.inputStream.use { Files.copy(it, staged, StandardCopyOption.REPLACE_EXISTING) }
+            backup?.let { Files.copy(target, it, StandardCopyOption.REPLACE_EXISTING) }
+            moveReplacing(staged, target)
+            targetReplaced = true
+        } catch (failure: Exception) {
+            if (!fileMutations.isActive()) runCatching(compensate).exceptionOrNull()?.let(failure::addSuppressed)
+            throw failure
+        }
+        if (!fileMutations.isActive()) cleanup()
         return entry(target, protectedPaths())
     }
 
@@ -78,8 +111,24 @@ class StaticResourceService(
         val source = safeFile(relative)
         if (!Files.isRegularFile(source)) throw StaticResourceNotFoundException(path)
         val id = UUID.randomUUID().toString()
-        Files.move(source, trashRoot.resolve("$id.data"), StandardCopyOption.REPLACE_EXISTING)
-        Files.writeString(trashRoot.resolve("$id.meta"), relative)
+        val data = trashRoot.resolve("$id.data")
+        val meta = trashRoot.resolve("$id.meta")
+        val compensate = {
+            if (Files.exists(data)) {
+                Files.createDirectories(source.parent)
+                Files.move(data, source, StandardCopyOption.REPLACE_EXISTING)
+            }
+            Files.deleteIfExists(meta)
+            Unit
+        }
+        fileMutations.register(compensate)
+        try {
+            Files.move(source, data, StandardCopyOption.REPLACE_EXISTING)
+            Files.writeString(meta, relative, StandardOpenOption.CREATE_NEW)
+        } catch (failure: Exception) {
+            if (!fileMutations.isActive()) runCatching(compensate).exceptionOrNull()?.let(failure::addSuppressed)
+            throw failure
+        }
         return TrashEntry(id, relative)
     }
 
@@ -97,8 +146,19 @@ class StaticResourceService(
         val target = safeFile(Files.readString(meta))
         if (Files.exists(target)) throw StaticResourceValidationException("原路径已有文件，不能直接恢复")
         Files.createDirectories(target.parent)
-        Files.move(data, target)
-        Files.deleteIfExists(meta)
+        val originalPath = Files.readString(meta)
+        val compensate = {
+            if (Files.exists(target)) Files.move(target, data, StandardCopyOption.REPLACE_EXISTING)
+            if (!Files.exists(meta)) Files.writeString(meta, originalPath, StandardOpenOption.CREATE_NEW)
+        }
+        fileMutations.register(compensate)
+        try {
+            Files.move(data, target)
+            Files.deleteIfExists(meta)
+        } catch (failure: Exception) {
+            if (!fileMutations.isActive()) runCatching(compensate).exceptionOrNull()?.let(failure::addSuppressed)
+            throw failure
+        }
         return entry(target, protectedPaths())
     }
 
@@ -183,6 +243,14 @@ class StaticResourceService(
         val path = root.resolve(value).normalize()
         if (!path.startsWith(root) || path.startsWith(trashRoot)) throw StaticResourceValidationException("静态资源路径越界")
         return path
+    }
+
+    private fun moveReplacing(source: Path, target: Path) {
+        try {
+            Files.move(source, target, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE)
+        } catch (_: AtomicMoveNotSupportedException) {
+            Files.move(source, target, StandardCopyOption.REPLACE_EXISTING)
+        }
     }
 
     private fun entry(path: Path, protectedPaths: Set<String>) = StaticEntry(

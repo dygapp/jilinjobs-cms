@@ -63,6 +63,12 @@ Main Article snapshot 的当前 canonical data / provenance 由 `data-migrations
 
 自动化 / 人工评审使用独立 Review source set / BootJar 注入隔离身份，正式 Server 产物不包含该入口；Provider-neutral Security 层不绑定具体 OIDC / JWT / session 方案。任务分支和 fast-forward 后的 `main` 均在同一实现 SHA `d1bfb62bd15aad74fd364a2ac86b94a5e7413972` 取得完整 Local Docker CI PASS。真实宿主身份、管理端身份反馈与业务操作审计仍是后续独立方向，当前长期语义由管理身份 Requirement、Specification、ADR-0005 和 Technical owner 持有。
 
+### EU-70 — CMS 管理写操作审计记录
+
+在可信 `CmsPrincipal` 与 Admin 请求 / 方法授权之上，为当前 13 个管理业务族的全部写 handler 建立显式审计 descriptor、请求前 `STARTED`、外层业务事务和 `SUCCEEDED / FAILED / ROLLED_BACK` 终态。身份来源与用户 ID 共同定位操作者，角色按操作时快照保存；对象定位只消费受控路径参数或实际返回对象，不持久化凭证、口令、完整请求体、Rich Text、文件内容、异常消息或堆栈。
+
+审计 schema 通过 Generic Core 的 append-only Flyway migration 提供且不关联业务对象删除；初始审计写入失败时业务不执行，成功终态与数据库业务共同提交，失败终态以独立事务持久化并在自身失败时保留 `STARTED`。Managed Resource 与 Static Resource 使用 Server 外层事务协调的文件暂存 / 补偿日志，明确覆盖上传、替换、入回收区与恢复；Core / Content Migration 继续不持有 HTTP 主体或 Server 审计切面。该阶段没有创建查询 API / UI、没有接入真实身份提供方，也没有授予后续审计查询 Execute Authority。
+
 ## Consumer Method / Capability 演进（历史）
 
 ### V3-08 Track B 采用

@@ -309,7 +309,7 @@ reset_database() {
   mysql_exec -e "DROP DATABASE IF EXISTS \`$database\`; CREATE DATABASE \`$database\` CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;"
 }
 
-for db in site_package_verify migration_boundary generic_content_migration generic_list_item_compatibility; do
+for db in site_package_verify admin_audit_verify migration_boundary generic_content_migration generic_list_item_compatibility; do
   reset_database "$db"
 done
 
@@ -341,6 +341,8 @@ docker run --rm --network host \
   --user "$uid:$gid" -e HOME=/tmp -e GRADLE_USER_HOME=/gradle-cache \
   -e 'SITE_PACKAGE_VERIFY_DB_URL=jdbc:mysql://127.0.0.1:3306/site_package_verify?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true' \
   -e SITE_PACKAGE_VERIFY_DB_USERNAME=root -e SITE_PACKAGE_VERIFY_DB_PASSWORD=root \
+  -e 'ADMIN_AUDIT_VERIFY_DB_URL=jdbc:mysql://127.0.0.1:3306/admin_audit_verify?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true' \
+  -e ADMIN_AUDIT_VERIFY_DB_USERNAME=root -e ADMIN_AUDIT_VERIFY_DB_PASSWORD=root \
   -e 'MIGRATION_VERIFY_DB_URL=jdbc:mysql://127.0.0.1:3306/migration_boundary?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true' \
   -e MIGRATION_VERIFY_DB_USERNAME=root -e MIGRATION_VERIFY_DB_PASSWORD=root \
   -e 'GENERIC_MIGRATION_VERIFY_DB_URL=jdbc:mysql://127.0.0.1:3306/generic_content_migration?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true' \
@@ -355,7 +357,7 @@ docker run --rm --network host \
     verifySitePackageFoundation verifyStableSiteStructure \
     verifyRuntimeSitePackageComposition verifySiteBootstrapBaselineSeparation \
     verifySitePackageAssets verifyPageContentOwnership verifyPageContentAdoption \
-    verifyLinkOpenModeMigration verifyContentMigrationBoundary \
+    verifyLinkOpenModeMigration verifyAdminAuditTransactions verifyContentMigrationBoundary \
     verifyGenericContentMigration verifyGenericPageContentMigration \
     verifyGenericListItemCompatibility --no-daemon \
   2>&1 | tee "$evidence_dir/backend.log"

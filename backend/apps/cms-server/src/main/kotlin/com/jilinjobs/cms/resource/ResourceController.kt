@@ -1,5 +1,6 @@
 package com.jilinjobs.cms.resource
 
+import com.jilinjobs.cms.audit.*
 import com.jilinjobs.cms.security.CmsAdminAccess
 
 import org.springframework.core.io.FileSystemResource
@@ -23,6 +24,7 @@ import java.nio.charset.StandardCharsets
 class ResourceController(
     private val service: ResourceService,
 ) {
+    @AdminAuditOperation(AdminAuditAction.UPLOAD, AdminAuditObjectType.MANAGED_RESOURCE)
     @PostMapping(consumes = [MediaType.MULTIPART_FORM_DATA_VALUE])
     fun upload(@RequestParam("file") file: MultipartFile): ResponseEntity<CmsResource> =
         ResponseEntity.status(HttpStatus.CREATED).body(service.upload(file.toUploadContent()))

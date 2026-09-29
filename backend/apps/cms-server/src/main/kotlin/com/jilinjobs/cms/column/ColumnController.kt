@@ -1,5 +1,6 @@
 package com.jilinjobs.cms.column
 
+import com.jilinjobs.cms.audit.*
 import com.jilinjobs.cms.security.CmsAdminAccess
 
 import com.jilinjobs.cms.common.ContentImagePolicy
@@ -14,8 +15,11 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/api/admin/columns")
 class ColumnController(private val service: ColumnService) {
     @GetMapping fun list(): List<CmsColumn> = service.list()
+    @AdminAuditOperation(AdminAuditAction.CREATE, AdminAuditObjectType.COLUMN)
     @PostMapping fun create(@Valid @RequestBody request: SaveColumnRequest): ResponseEntity<CmsColumn> = ResponseEntity.status(HttpStatus.CREATED).body(service.create(request.toDraft()))
+    @AdminAuditOperation(AdminAuditAction.UPDATE, AdminAuditObjectType.COLUMN, AdminAuditObjectIdSource.ARGUMENT, "id")
     @PutMapping("/{id}") fun update(@PathVariable id: Long, @Valid @RequestBody request: SaveColumnRequest): CmsColumn = service.update(id, request.toDraft())
+    @AdminAuditOperation(AdminAuditAction.DELETE, AdminAuditObjectType.COLUMN, AdminAuditObjectIdSource.ARGUMENT, "id")
     @DeleteMapping("/{id}") fun delete(@PathVariable id: Long): ResponseEntity<Void> { service.delete(id); return ResponseEntity.noContent().build() }
 }
 

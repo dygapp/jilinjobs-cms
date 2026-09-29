@@ -19,7 +19,7 @@ updated_at: 2026-09-29
 
 ## 责任与实施状态
 
-本文拥有第一版目标实现中跨 Admin API、身份来源和审计持续一致的技术接缝。当前 Server 已有统一主体、凭证验证器接缝、受信角色转换以及 Spring Security 请求 / 方法授权基础；没有正式身份提供方时 Admin fail closed。隔离 Review 身份只进入独立 Review source set / BootJar，正式 Server 产物不包含该入口。正式身份提供方、管理端身份反馈和业务操作审计仍未实现。角色的业务权限归属由 Requirement 持有，用户可观察结果由 Specification 持有，长期结构与框架选型由 Architecture / ADR 持有。下方矩阵只拥有访问与业务审计分类；HTTP 路径、方法及 wire compatibility 的唯一 owner 仍是 `docs/technical/http-interface-contract.md`，本文不复制其响应结构、Controller、SQL 或 Gradle dependency。
+本文拥有第一版目标实现中跨 Admin API、身份来源和审计持续一致的技术接缝。当前 Server 已有统一主体、凭证验证器接缝、受信角色转换、Spring Security 请求 / 方法授权以及管理写操作审计产生和持久化；没有正式身份提供方时 Admin fail closed。隔离 Review 身份只进入独立 Review source set / BootJar，正式 Server 产物不包含该入口。正式身份提供方、管理端身份反馈和审计查询仍未实现。角色的业务权限归属由 Requirement 持有，用户可观察结果由 Specification 持有，长期结构与框架选型由 Architecture / ADR 持有。下方矩阵只拥有访问与业务审计分类；HTTP 路径、方法及 wire compatibility 的唯一 owner 仍是 `docs/technical/http-interface-contract.md`，本文不复制其响应结构、Controller、SQL 或 Gradle dependency。
 
 ## 身份转换
 

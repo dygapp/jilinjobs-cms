@@ -1,5 +1,6 @@
 package com.jilinjobs.cms.siteconfig
 
+import com.jilinjobs.cms.audit.*
 import com.jilinjobs.cms.security.CmsAdminAccess
 
 import org.springframework.http.HttpStatus
@@ -12,9 +13,13 @@ import org.springframework.web.bind.annotation.*
 class AdminSiteConfigController(private val service: SiteConfigService) {
     @GetMapping fun list() = service.list()
     @GetMapping("/groups") fun groups() = service.groups()
+    @AdminAuditOperation(AdminAuditAction.CREATE, AdminAuditObjectType.SITE_PROPERTY, returnProperty = "key")
     @PostMapping fun create(@RequestBody request: SaveSiteConfigRequest) = ResponseEntity.status(HttpStatus.CREATED).body(service.create(request.draft()))
+    @AdminAuditOperation(AdminAuditAction.UPDATE, AdminAuditObjectType.SITE_PROPERTY, AdminAuditObjectIdSource.ARGUMENT, "key")
     @PutMapping("/{key}") fun updateValue(@PathVariable key: String, @RequestBody request: SiteConfigUpdateRequest) = service.update(key, request.value)
+    @AdminAuditOperation(AdminAuditAction.UPDATE, AdminAuditObjectType.SITE_PROPERTY, AdminAuditObjectIdSource.ARGUMENT, "key")
     @PutMapping("/{key}/definition") fun updateDefinition(@PathVariable key: String, @RequestBody request: SaveSiteConfigRequest) = service.updateDefinition(key, request.draft())
+    @AdminAuditOperation(AdminAuditAction.DELETE, AdminAuditObjectType.SITE_PROPERTY, AdminAuditObjectIdSource.ARGUMENT, "key")
     @DeleteMapping("/{key}") fun delete(@PathVariable key: String): ResponseEntity<Void> { service.delete(key); return ResponseEntity.noContent().build() }
 }
 

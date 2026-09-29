@@ -118,6 +118,12 @@ tasks.register<JavaExec>("verifyLinkOpenModeMigration") {
     configureServerVerification("com.jilinjobs.cms.migration.LinkOpenModeMigrationVerificationKt")
 }
 
+tasks.register<JavaExec>("verifyAdminAuditTransactions") {
+    group = "verification"
+    description = "Verify EU-70 audit migration, principal snapshots, transaction outcomes and write-failure policy against real MySQL"
+    configureServerVerification("com.jilinjobs.cms.audit.AdminAuditIntegrationVerificationKt")
+}
+
 tasks.register<JavaExec>("verifyPageContentOwnership") {
     group = "verification"
     description = "Verify EU-49 Site Package Page structure does not reclaim operator-managed Page content"

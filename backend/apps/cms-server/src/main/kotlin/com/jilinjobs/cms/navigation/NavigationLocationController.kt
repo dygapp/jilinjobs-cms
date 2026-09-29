@@ -1,5 +1,6 @@
 package com.jilinjobs.cms.navigation
 
+import com.jilinjobs.cms.audit.*
 import com.jilinjobs.cms.security.CmsAdminAccess
 
 import jakarta.validation.Valid
@@ -23,14 +24,17 @@ class AdminNavigationLocationController(private val service: NavigationLocationS
     @GetMapping
     fun list() = service.list()
 
+    @AdminAuditOperation(AdminAuditAction.CREATE, AdminAuditObjectType.NAVIGATION_LOCATION, returnProperty = "code")
     @PostMapping
     fun create(@Valid @RequestBody request: SaveNavigationLocationRequest) =
         ResponseEntity.status(HttpStatus.CREATED).body(service.create(request.draft()))
 
+    @AdminAuditOperation(AdminAuditAction.UPDATE, AdminAuditObjectType.NAVIGATION_LOCATION, AdminAuditObjectIdSource.ARGUMENT, "code")
     @PutMapping("/{code}")
     fun update(@PathVariable code: String, @Valid @RequestBody request: SaveNavigationLocationRequest) =
         service.update(code, request.draft())
 
+    @AdminAuditOperation(AdminAuditAction.DELETE, AdminAuditObjectType.NAVIGATION_LOCATION, AdminAuditObjectIdSource.ARGUMENT, "code")
     @DeleteMapping("/{code}")
     fun delete(@PathVariable code: String): ResponseEntity<Void> {
         service.delete(code)

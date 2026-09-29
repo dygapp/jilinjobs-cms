@@ -1,5 +1,6 @@
 package com.jilinjobs.cms.content
 
+import com.jilinjobs.cms.audit.*
 import com.jilinjobs.cms.security.CmsAdminAccess
 
 import jakarta.validation.Valid
@@ -35,9 +36,13 @@ class ArticleController(
     ): AdminArticlePage = query.list(keyword, columnId, status, articleType, page, size)
 
     @GetMapping("/{id}") fun get(@PathVariable id: Long): CmsArticle = service.get(id)
+    @AdminAuditOperation(AdminAuditAction.CREATE, AdminAuditObjectType.ARTICLE)
     @PostMapping fun create(@Valid @RequestBody request: SaveArticleRequest): ResponseEntity<CmsArticle> = ResponseEntity.status(HttpStatus.CREATED).body(service.create(request.toDraft()))
+    @AdminAuditOperation(AdminAuditAction.UPDATE, AdminAuditObjectType.ARTICLE, AdminAuditObjectIdSource.ARGUMENT, "id")
     @PutMapping("/{id}") fun update(@PathVariable id: Long, @Valid @RequestBody request: SaveArticleRequest): CmsArticle = service.update(id, request.toDraft())
+    @AdminAuditOperation(AdminAuditAction.PUBLISH, AdminAuditObjectType.ARTICLE, AdminAuditObjectIdSource.ARGUMENT, "id")
     @PostMapping("/{id}/publish") fun publish(@PathVariable id: Long): CmsArticle = service.publish(id)
+    @AdminAuditOperation(AdminAuditAction.WITHDRAW, AdminAuditObjectType.ARTICLE, AdminAuditObjectIdSource.ARGUMENT, "id")
     @PostMapping("/{id}/withdraw") fun withdraw(@PathVariable id: Long): CmsArticle = service.withdraw(id)
 }
 

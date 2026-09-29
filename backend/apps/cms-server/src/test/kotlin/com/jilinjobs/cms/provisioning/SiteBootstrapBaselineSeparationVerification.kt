@@ -139,6 +139,7 @@ private fun verifyGenericMigrationHistory(dbUrl: String, username: String, passw
                         "3" to "page content migration mapping",
                         "4" to "page content architecture",
                         "5" to "link open mode html target",
+                        "6" to "admin operation audit",
                     ),
                 ) {
                     "Backend Flyway history 必须只包含 accepted Generic CMS schema migrations：$migrations"

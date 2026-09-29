@@ -46,4 +46,32 @@ class ResourceUploadBoundaryTest {
         assertThrows(IOException::class.java) { LocalFileStorage(storageRoot.toString()).store(upload) }
         Files.list(storageRoot).use { assertEquals(0, it.count()) }
     }
+
+    @Test
+    fun `managed upload compensation removes file written before database rollback`() {
+        val storageRoot = Files.createDirectory(tempDir.resolve("managed-storage"))
+        val journal = FileMutationJournal()
+        val service = ResourceService(InMemoryResourceRepository(), LocalFileStorage(storageRoot.toString()), journal)
+        journal.begin()
+
+        service.upload(UploadContent("managed.bin", "application/octet-stream", 3) { byteArrayOf(1, 2, 3).inputStream() })
+        Files.list(storageRoot).use { assertEquals(1, it.count()) }
+        journal.compensate()
+
+        Files.list(storageRoot).use { assertEquals(0, it.count()) }
+    }
+}
+
+private class InMemoryResourceRepository : ResourceRepository {
+    private var nextId = 1L
+    override fun insert(draft: ResourceDraft) = CmsResource(
+        nextId++, draft.storageKey, draft.originalFilename, draft.contentType, draft.sizeBytes,
+    )
+    override fun findById(id: Long): CmsResource? = null
+    override fun findArticleResourceIds(articleId: Long, role: ArticleResourceRole) = emptyList<Long>()
+    override fun isPublishedImage(resourceId: Long) = false
+    override fun isPublishedBodyImage(resourceId: Long) = false
+    override fun isPublishedAttachment(resourceId: Long) = false
+    override fun deleteArticleLinks(articleId: Long) = Unit
+    override fun insertArticleLink(articleId: Long, resourceId: Long, role: ArticleResourceRole, sortOrder: Int) = Unit
 }

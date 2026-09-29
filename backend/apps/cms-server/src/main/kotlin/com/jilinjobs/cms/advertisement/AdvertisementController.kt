@@ -1,5 +1,6 @@
 package com.jilinjobs.cms.advertisement
 
+import com.jilinjobs.cms.audit.*
 import com.jilinjobs.cms.security.CmsAdminAccess
 
 import java.time.LocalDateTime
@@ -12,12 +13,18 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/api/admin/advertisements")
 class AdminAdvertisementController(private val service: AdvertisementService) {
     @GetMapping("/slots") fun slots() = service.slots()
+    @AdminAuditOperation(AdminAuditAction.CREATE, AdminAuditObjectType.ADVERTISEMENT_SLOT)
     @PostMapping("/slots") fun createSlot(@RequestBody request: SaveAdvertisementSlotRequest) = ResponseEntity.status(HttpStatus.CREATED).body(service.createSlot(request.draft()))
+    @AdminAuditOperation(AdminAuditAction.UPDATE, AdminAuditObjectType.ADVERTISEMENT_SLOT, AdminAuditObjectIdSource.ARGUMENT, "id")
     @PutMapping("/slots/{id}") fun updateSlot(@PathVariable id: Long, @RequestBody request: SaveAdvertisementSlotRequest) = service.updateSlot(id, request.draft())
+    @AdminAuditOperation(AdminAuditAction.DELETE, AdminAuditObjectType.ADVERTISEMENT_SLOT, AdminAuditObjectIdSource.ARGUMENT, "id")
     @DeleteMapping("/slots/{id}") fun deleteSlot(@PathVariable id: Long): ResponseEntity<Void> { service.deleteSlot(id); return ResponseEntity.noContent().build() }
     @GetMapping("/slots/{id}/items") fun ads(@PathVariable id: Long) = service.ads(id)
+    @AdminAuditOperation(AdminAuditAction.CREATE, AdminAuditObjectType.ADVERTISEMENT_ITEM)
     @PostMapping("/slots/{id}/items") fun createAd(@PathVariable id: Long, @RequestBody request: SaveAdvertisementRequest) = ResponseEntity.status(HttpStatus.CREATED).body(service.createAd(id, request.draft()))
+    @AdminAuditOperation(AdminAuditAction.UPDATE, AdminAuditObjectType.ADVERTISEMENT_ITEM, AdminAuditObjectIdSource.ARGUMENT, "adId")
     @PutMapping("/slots/{slotId}/items/{adId}") fun updateAd(@PathVariable slotId: Long, @PathVariable adId: Long, @RequestBody request: SaveAdvertisementRequest) = service.updateAd(slotId, adId, request.draft())
+    @AdminAuditOperation(AdminAuditAction.DELETE, AdminAuditObjectType.ADVERTISEMENT_ITEM, AdminAuditObjectIdSource.ARGUMENT, "adId")
     @DeleteMapping("/slots/{slotId}/items/{adId}") fun deleteAd(@PathVariable slotId: Long, @PathVariable adId: Long): ResponseEntity<Void> { service.deleteAd(slotId, adId); return ResponseEntity.noContent().build() }
 }
 

@@ -68,6 +68,7 @@ class LocalFileStorage(
 class ResourceService(
     private val repository: ResourceRepository,
     private val storage: FileStorage,
+    private val fileMutations: FileMutationJournal = FileMutationJournal(),
 ) : ArticleResourceAssociation {
     fun upload(file: UploadContent): CmsResource {
         if (file.isEmpty) {
@@ -75,6 +76,7 @@ class ResourceService(
         }
         val originalFilename = normalizeFilename(file.originalFilename)
         val stored = storage.store(file)
+        fileMutations.register(compensate = { storage.delete(stored.storageKey) })
         return try {
             repository.insert(
                 ResourceDraft(
@@ -85,7 +87,11 @@ class ResourceService(
                 ),
             )
         } catch (exception: RuntimeException) {
-            storage.delete(stored.storageKey)
+            try {
+                storage.delete(stored.storageKey)
+            } catch (cleanup: Exception) {
+                exception.addSuppressed(cleanup)
+            }
             throw exception
         }
     }

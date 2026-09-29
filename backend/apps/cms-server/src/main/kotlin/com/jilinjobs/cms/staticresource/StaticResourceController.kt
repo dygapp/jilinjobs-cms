@@ -1,5 +1,6 @@
 package com.jilinjobs.cms.staticresource
 
+import com.jilinjobs.cms.audit.*
 import com.jilinjobs.cms.security.CmsAdminAccess
 
 import com.jilinjobs.cms.resource.toUploadContent
@@ -16,9 +17,24 @@ import org.springframework.web.multipart.MultipartFile
 @RequestMapping("/api/admin/static-resources")
 class AdminStaticResourceController(private val service: StaticResourceService) {
     @GetMapping fun list(@RequestParam(defaultValue = "") path: String) = service.list(path)
+    @AdminAuditOperation(
+        action = AdminAuditAction.UPLOAD,
+        objectType = AdminAuditObjectType.STATIC_RESOURCE,
+        returnProperty = "path",
+        fallbackObjectIdParameter = "path",
+        alternateAction = AdminAuditAction.REPLACE,
+        alternateActionParameter = "replace",
+    )
     @PostMapping(consumes = [MediaType.MULTIPART_FORM_DATA_VALUE]) fun upload(@RequestParam path: String, @RequestPart file: MultipartFile, @RequestParam(defaultValue = "false") replace: Boolean) = service.upload(path, file.toUploadContent(), replace)
+    @AdminAuditOperation(AdminAuditAction.TRASH, AdminAuditObjectType.STATIC_RESOURCE, AdminAuditObjectIdSource.ARGUMENT, "path")
     @DeleteMapping fun delete(@RequestParam path: String) = service.delete(path)
     @GetMapping("/trash") fun trash() = service.trash()
+    @AdminAuditOperation(
+        AdminAuditAction.RESTORE,
+        AdminAuditObjectType.STATIC_RESOURCE,
+        returnProperty = "path",
+        fallbackObjectIdParameter = "id",
+    )
     @PostMapping("/restore/{id}") fun restore(@PathVariable id: String) = service.restore(id)
 }
 
