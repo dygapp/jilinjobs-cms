@@ -57,6 +57,12 @@ Main Article snapshot 的当前 canonical data / provenance 由 `data-migrations
 
 将遗留在 Generic Core 的 Admin / Public HTTP Controller 归位 CMS Server，把 Core 上传服务改为 framework-neutral 的可重复读取输入，并让独立 Content Migration 从已校验文件构造该输入，不再依赖 multipart transport。既有 HTTP 行为、资源安全与 canonical 迁移结果经完整回归保持；该阶段未开启管理认证授权，长期 Backend / Interface / Security contract 仍由现行 Technical owner 持有，完成证据归档于 EU-68 Work artifact。
 
+### EU-69 — CMS 管理请求与方法授权
+
+在 EU-67 可信主体和 EU-68 Server/Core/Migration 边界之上，为 `cms-server` 建立 Spring Security 请求级与方法级授权：Admin API 默认要求可信管理身份，`admin` / `super` 覆盖当前管理业务，Public / static 保持匿名读取，未分类请求失败关闭。实际 Admin handler 与 HTTP contract 由自动化双向守卫，Generic Core 与 Content Migration 不持有 HTTP 安全主体。
+
+自动化 / 人工评审使用独立 Review source set / BootJar 注入隔离身份，正式 Server 产物不包含该入口；Provider-neutral Security 层不绑定具体 OIDC / JWT / session 方案。任务分支和 fast-forward 后的 `main` 均在同一实现 SHA `d1bfb62bd15aad74fd364a2ac86b94a5e7413972` 取得完整 Local Docker CI PASS。真实宿主身份、管理端身份反馈与业务操作审计仍是后续独立方向，当前长期语义由管理身份 Requirement、Specification、ADR-0005 和 Technical owner 持有。
+
 ## Consumer Method / Capability 演进（历史）
 
 ### V3-08 Track B 采用

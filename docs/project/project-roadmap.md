@@ -26,11 +26,10 @@ Issue #153 / PR #154 Consumer Authority Foundation Rebuild 也已完成，不再
 
 以下均保持 **规划 / 评审候选**；不得从 Issue 排序、历史 EU 或旧 Roadmap 自动获得执行权。任何方向进入实际工作前，都必须从新的 Fresh Context 按当前 仓库权威 建立对应 Planning / Review lifecycle。
 
-- **CMS 管理身份、授权与操作审计第一版**：后续实施候选。已确认的业务事实见 `docs/requirements/cms-admin-identity-and-audit.md`，可观察目标见 `docs/specifications/admin-access-audit.md`，结构决策见 ADR-0005，技术接缝及已完成的管理入口权限矩阵见 `docs/technical/admin-security-integration.md`。可信主体、隔离测试身份与 Core HTTP / multipart 边界基础已建立，但 Admin API 仍未受保护。剩余方向按依赖顺序重新形成实施切片，各自取得目标提交的证据：
-  1. **管理请求与方法授权**：先双向核对实际注册路由与权限矩阵，再显式配置 Spring Security 的 Admin/Public 边界和方法级 AOP 授权。验证 `401 / 403`、Admin 业务权限、`super` 审计权限、Core / Migration 隔离及 Public 回归。部署切换前须保证管理入口不能匿名访问。
-  2. **业务操作审计**：实现写操作切面、持久化、事务结果判定和有界查询；验证成功、拒绝、失败、回滚、审计写入故障及敏感字段排除。新增 HTTP 接口时同步其唯一 Interface Contract。
-  3. **管理端与端到端验证**：呈现身份失效、禁止访问和 `super` 审计查询；完成 Backend、Interface、Frontend build、Browser、Fresh Runtime 与正式配置负向验证，证据绑定最终提交，收敛文档中“待实现”与实际状态。
-  4. **真实宿主接入**：智慧就业平台的凭证协议明确后接入其适配器；独立网站在确认正式身份提供方后接入对应适配器。两种场景分别验证真实登录 / 失效 / 退出及角色映射，不把测试身份当成正式方案。此步可以独立于第一版 CMS Core / Server 授权能力验收，但不能省略正式部署验收。
+- **CMS 管理身份、授权与操作审计第一版**：可信主体、Core / Server / Migration HTTP 边界以及 Admin 请求 / 方法授权已完成；当前 Admin API 在没有可信身份时 fail closed，已完成部分的稳定结果进入 `docs/project/project-evolution.md`，当前安全契约由 Requirement、Specification、ADR-0005 与 `docs/technical/admin-security-integration.md` 持有。剩余方向按依赖与真实宿主条件重新形成实施切片：
+  1. **业务操作审计**：实现写操作切面、持久化、事务结果判定和有界查询；验证成功、拒绝、失败、回滚、审计写入故障及敏感字段排除。新增 HTTP 接口时同步其唯一 Interface Contract。
+  2. **管理端身份反馈与端到端闭环**：呈现未认证、身份失效、禁止访问和后续 `super` 审计查询；按实际身份协议完成 Frontend / Browser / Fresh Runtime 验证，不让前端状态替代 Backend 授权。
+  3. **真实宿主接入**：智慧就业平台的凭证协议明确后接入其适配器；独立网站在确认正式身份提供方后接入对应适配器。两种场景分别验证真实登录 / 失效 / 退出及角色映射，不把 Review / 测试身份当成正式方案；Production Deployment 仍须独立验收。
 
 - **Issue #60 C1 — Loading / Skeleton Experience**：用户体验 规划候选。
 - **Issue #60 C2 — Mobile Layout 人工评审**：独立 人工评审 / follow-up candidate。

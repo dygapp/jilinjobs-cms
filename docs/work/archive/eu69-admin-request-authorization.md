@@ -1,14 +1,25 @@
 ---
 id: execution-unit:eu69-admin-request-authorization
 type: execution-unit
-status: active
+status: completed
 readiness: PASS
 base_sha: 463982ab341dd51c5796f1cce690011f693d4c21
 branch: codex/eu69-admin-request-authorization
 started_at: 2026-09-29
+verified_head_sha: d1bfb62bd15aad74fd364a2ac86b94a5e7413972
+integrated_sha: d1bfb62bd15aad74fd364a2ac86b94a5e7413972
+completed_at: 2026-09-29
 ---
 
 # EU-69 管理请求与方法授权
+
+## 完成结果与证据
+
+- `cms-server` 已引入 Spring Security 并显式建立 Admin / Public / static / 未分类请求边界；全部当前 `/api/admin/**` handler 同时受请求级认证与 `@CmsAdminAccess` 方法级 `admin` / `super` 授权，未认证返回 `401`，已认证但无 CMS 权限返回 `403`，Public GET 与公开静态资源保持匿名可读。
+- 正式 Server 未配置真实身份适配器时 fail closed，不启用 Spring 默认用户；Provider-neutral Security 层不预设具体身份协议的 session / stateless 策略，并保留默认 CSRF 保护。隔离 Review 身份只存在于独立 review source set / Review BootJar，正式 BootJar 与正式 Runtime 均拒绝该凭证入口。
+- Admin handler inventory 与 Technical HTTP contract 双向校验；Core / Content Migration 继续不依赖 Spring Security 请求主体。Local Docker CI 同时验证正式 Backend、Review Backend、Public/Admin Browser、迁移兼容、Review Runtime 与正式产物负向边界。
+- 最终实现提交 `d1bfb62bd15aad74fd364a2ac86b94a5e7413972` 在任务分支取得 exact-Head Full Local Docker CI PASS，证据位于 `.local-ci/evidence/20260929T083658Z-1130888/`；fast-forward 到本地 `main` 后再次取得 Full Local Docker CI PASS，证据位于 `.local-ci/evidence/20260929T085505Z-1160403/`。后者绑定同一 exact commit，Backend clean build 36/36 tasks、Public Browser 60 通过 / 7 跳过、Admin Browser 46 通过 / 1 跳过，均无失败。
+- 最终变更完成独立安全复核与 History Convergence，没有遗留 blocking / medium finding；随后以同一 SHA 快进集成并推送到远端 `main`。本单元没有实现真实 OIDC / JWT / 平台身份提供方、Admin 登录 / 失效反馈或业务操作审计，这些继续由后续独立工作承担。
 
 ## 目标
 
