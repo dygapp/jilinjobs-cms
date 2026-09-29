@@ -2,7 +2,7 @@
 id: execution-unit:eu68-core-http-boundary
 type: execution-unit
 status: active
-readiness: pending
+readiness: PASS
 base_sha: ccf89912dfa262fd4edbf7b2fe52cbd5c3ff99ee
 branch: codex/eu68-core-http-boundary
 started_at: 2026-09-29
@@ -60,3 +60,14 @@ started_at: 2026-09-29
 ## 完成条件
 
 上述边界、适配、结构守卫与行为回归均在目标 exact Head 有证据；对最终变更执行 `review-change` 与 feature convergence 后，只按仓库本地集成流程进入 `main`。实施集成后仍须取得与完成声明相符的证据，再归档本 artifact；不把本单元的通过解释为 Admin API 已受保护。
+
+## 就绪门禁
+
+**PASS**（2026-09-29，基线 `ccf89912dfa262fd4edbf7b2fe52cbd5c3ff99ee`，任务定义提交 `8dd495c34996f39e7f2d5b8eef42e7f9f3445e15`）。
+
+- 已接受的管理访问 Specification、ADR-0005、Backend application boundary 与 HTTP contract 对目标和非目标一致；现有 Technical contract 已规定跨模块 HOW，不需额外 Technical Plan 或新 ADR。
+- Core 中确有三个 HTTP Controller 及两个 `MultipartFile` 服务入口，Migration 中有三处 web multipart 伪装来源；范围与依赖可从当前代码直接恢复。
+- 当前为单仓任务，Backend 子树无额外 `AGENTS.md`；分支由干净的 `main` 基线创建，门禁时任务分支工作树干净，远端未占用同名分支。
+- 完成条件包括结构性守卫、现有 HTTP 回归、Migration Fresh Runtime 与 exact-Head 证据；不把边界收敛误称为已实施授权。
+
+此 PASS 仅允许执行 EU-68，不授予后续管理授权、merge、release 或 deploy 的权限。

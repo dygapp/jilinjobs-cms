@@ -5,7 +5,7 @@ Current Ready Execution Unit：**EU-68 Core HTTP 责任与上传输入边界收�
 当前工作 artifact：`eu68-core-http-boundary.md`。
 
 - Status：`active`
-- Readiness：`pending`
+- Readiness：`PASS`
 - Branch：`codex/eu68-core-http-boundary`
 - Base：`ccf89912dfa262fd4edbf7b2fe52cbd5c3ff99ee`
 
