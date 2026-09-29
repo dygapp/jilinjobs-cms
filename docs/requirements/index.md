@@ -3,7 +3,7 @@ id: requirement-authority-index
 title: 需求权威索引（Requirement Authority Index）
 type: requirement-index
 status: active
-updated_at: 2026-09-19
+updated_at: 2026-09-29
 ---
 
 # 需求权威索引（Requirement Authority Index）
@@ -19,6 +19,7 @@ updated_at: 2026-09-19
 | Requirement responsibility | Stable capability / fact boundary | 唯一当前 owner |
 |---|---|---|
 | Product Goal / Scope / Actors | 产品为什么存在、面向谁、当前包含和排除什么 | `information-publishing.md` §2～§4 |
+| CMS 管理身份、角色授权与操作审计 | 下一阶段管理主体、两角色权限、业务审计及外部身份转换的长期需求；当前实现状态另行核验 | `cms-admin-identity-and-audit.md` §1～§5 |
 | CMS content operations | 运营人员长期能够维护哪些内容与运营对象，以及这些能力产生什么业务结果 | `information-publishing.md` §5.1～§5.2 |
 | Main public delivery | Main 首页、栏目、文章、Page、固定业务 seam 与稳定公开访问习惯 | `information-publishing.md` §5.3、§6 |
 | 慧就业公共网站集成 | 首页就业日历、最新招聘、直播课程，以及招聘信息 / 直播课程二级页面与慧就业页面之间的地址映射、业务编号契约和外部系统边界 | `hui-employment-integration.md` §2～§15；历史已确认但未启用映射见附录 A |

@@ -12,7 +12,8 @@ relations:
     - docs/architecture/decisions/ADR-0002-public-site-multi-entry-modular-spa.md
     - docs/architecture/decisions/ADR-0003-public-shared-shell-components.md
     - docs/architecture/decisions/ADR-0004-public-shared-column-page.md
-updated_at: 2026-09-15
+    - docs/architecture/decisions/ADR-0005-admin-identity-authorization-audit.md
+updated_at: 2026-09-29
 ---
 
 # CMS 产品与系统长期架构
@@ -373,7 +374,9 @@ Admin 与 Public 可以消费同一 Domain，但 contract responsibility不同�
 
 当前 CMS Runtime 尚没有完整统一认证授权体系。
 
-Architecture 不通过虚构当前用户或角色填补该空白。Future auth/permission属于独立 Requirement / Architecture工作；当前 preset protection、immutable identity、resource safety等是 domain/data integrity，不等同于 role-based authorization。
+下一阶段的目标由 `docs/requirements/cms-admin-identity-and-audit.md` 与 ADR-0005 确认，但尚未成为当前实现状态：CMS Server 验证部署环境提供的身份，将稳定来源 / 用户 ID 转换成 CMS 自己的角色并在 Admin 边界授权和审计；Generic Core 不依赖 HTTP 用户或特定宿主后台，Content Migration 不伪造管理请求身份。独立网站正式部署须接入可信身份来源，测试身份不能替代正式登录。Public contract 保持匿名公开访问边界。
+
+当前 preset protection、immutable identity、resource safety 等是 domain/data integrity，不等同于 role-based authorization。尚未实现目标之前，不得因为需求已确认就声称 Admin API 已受保护。
 
 ## 14. 验证架构
 
@@ -406,6 +409,7 @@ Test fixture只建立测试场景数据，不重建第二份站点 baseline。
 8. operator content不被 ordinary reconcile覆盖；
 9. Generic migration capability不吸收具体 site dataset / compatibility facts；
 10. Product / Domain Authority不缓存 active implementation inventory。
+11. 管理身份的来源可以替换，但 CMS 角色权限与业务审计不由外部后台或 Public Renderer 拥有；任何角色都不能绕过 Domain 不变量。
 
 ## 16. ADR 关系
 
@@ -415,5 +419,6 @@ Test fixture只建立测试场景数据，不重建第二份站点 baseline。
 - ADR-0002：Main / Party Multi-entry Modular SPA；
 - ADR-0003：Navigation / Footer 进入 shared shell，定向修正 ADR-0002 的默认 shared boundary；
 - ADR-0004：Main / Party 二级栏目列表进入 shared presentation primitive，定向修正 ADR-0003 的默认判断。
+- ADR-0005：下一阶段 CMS 管理身份转换、Spring Security 方法授权与 AOP 审计的目标边界；实现尚未完成。
 
 本文描述这些决策叠加后的**当前 Architecture State**。后续若改变这些 decision 的核心 trade-off，应新增或 supersede ADR，而不是只修改本文抹去历史原因。

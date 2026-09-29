@@ -7,6 +7,7 @@
 - `backend-service.md` — Backend multi-project / application composition 与跨 Feature implementation contract；
 - `http-interface-contract.md` — Backend ↔ Admin/Public Frontend 稳定 HTTP compatibility、wire projection 与 technology-substitution seam；
 - `admin-frontend.md` — Admin application / module 与共享 authoring implementation contract；
+- `admin-security-integration.md` — 下一阶段 CMS Server 身份转换、Spring Security 方法授权与 AOP 审计的目标技术接缝；当前实现状态需单独核验；
 - `public-site-frontend.md` — 当前 Public Renderer implementation adapter 与 source ownership contract；
 - `rich-text-authoring.md` — Rich Text 跨 consumer integration HOW；
 - `verification-strategy.md` — 跨 Feature verification layering、运行时组合 与 证据 contract；

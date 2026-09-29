@@ -5,6 +5,7 @@
 ## 当前规格 owner
 
 - `admin-site.md` — CMS 管理端可观察行为与管理体验；
+- `admin-access-audit.md` — 下一阶段 CMS 管理身份、访问拒绝与业务操作审计的可观察目标；当前实现状态需单独核验；
 - `public-site.md` — Main / Party 全部公开访问行为、canonical URL、公开呈现、作用域、失败状态与 验收；
 - `page-content.md` — Page content profile、Structured Page 与相关 authoring / rendering 的可观察行为；
 - `rich-text-authoring.md` — Rich Text authoring、compatibility、resource 与 safety 的用户可观察 contract；

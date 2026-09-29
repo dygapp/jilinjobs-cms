@@ -8,12 +8,14 @@ relations:
   requirements:
     - docs/requirements/information-publishing.md
     - docs/requirements/cms-domain.md
+    - docs/requirements/cms-admin-identity-and-audit.md
   architecture:
     - docs/architecture/cms-architecture.md
   related:
     - docs/specifications/rich-text-authoring.md
     - docs/specifications/page-content.md
-updated_at: 2026-09-20
+    - docs/specifications/admin-access-audit.md
+updated_at: 2026-09-29
 ---
 
 # CMS 管理端产品规格
@@ -275,7 +277,7 @@ Verification 采用哪些自动化层次、Browser 工具或 evidence 由当前 
 
 ## 15. 非目标
 
-- 当前阶段的用户 / 角色 / 权限实现；
+- 当前已实现的 CMS 业务管理规格不覆盖尚未落地的身份、授权与审计；下一阶段的独立可观察规格见 `admin-access-audit.md`；
 - 通用系统设置中心；
 - generic Page Builder；
 - 通过 Specification 固化具体 Vue component / Element Plus control。

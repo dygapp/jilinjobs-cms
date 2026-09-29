@@ -22,7 +22,8 @@ relations:
     - docs/specifications/rich-text-authoring.md
     - docs/specifications/content-migration.md
     - docs/requirements/hui-employment-integration.md
-updated_at: 2026-09-20
+    - docs/requirements/cms-admin-identity-and-audit.md
+updated_at: 2026-09-29
 ---
 
 # 信息发布与网站服务产品需求
@@ -54,7 +55,7 @@ CMS business object、stable/source identity、state / lifecycle、content owner
 
 ### 3.2 CMS 运营人员
 
-运营人员通过管理端维护当前接受的 CMS 内容、内容结构、运营展示、网站属性和受控资源。当前阶段不依赖完整用户、角色和权限体系；未来认证授权属于独立 Requirement，不能由临时 UI identity 假设提前成为产品事实。
+运营人员通过管理端维护当前接受的 CMS 内容、内容结构、运营展示、网站属性和受控资源。当前 Runtime 尚未实现可信管理身份、角色授权与业务操作审计；下一阶段已确认的有界需求由 `cms-admin-identity-and-audit.md` 持有，不能由临时 UI identity 假设提前成为实现事实。
 
 ### 3.3 项目维护者
 
@@ -86,7 +87,7 @@ CMS business object、stable/source identity、state / lifecycle、content owner
 
 当前阶段不自动建设：
 
-- 完整用户、账号、角色、统一认证与权限体系；
+- 完整用户管理、账号库、密码登录、统一身份平台与细粒度数据权限；下一阶段的极简 CMS 管理身份、角色授权及审计由独立 Requirement 定义，当前 Runtime 尚未实现；
 - 多级内容审核；
 - 评论、点赞、收藏、投稿、留言、工单；
 - 通用全文搜索；
