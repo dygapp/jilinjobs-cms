@@ -42,7 +42,7 @@ docker run -d --name review-baseline-backend --network host \
   "$BACKEND_IMAGE"
 
 for i in $(seq 1 60); do
-  if curl --fail --silent http://127.0.0.1:8080/api/admin/columns >/dev/null; then
+  if curl --fail --silent http://127.0.0.1:8080/api/public/site-config >/dev/null; then
     break
   fi
   if [ "$i" -eq 60 ]; then
@@ -53,6 +53,11 @@ for i in $(seq 1 60); do
 done
 
 party_root="$repo_root/data-migrations/party/v1"
+formal_anonymous_status="$(curl --silent --output /dev/null --write-out '%{http_code}' http://127.0.0.1:8080/api/admin/columns)"
+[[ "$formal_anonymous_status" == "401" ]] || { echo "Expected formal Server anonymous Admin request to return 401, got $formal_anonymous_status" >&2; exit 1; }
+formal_review_header_status="$(curl --silent --output /dev/null --write-out '%{http_code}' -H 'X-Cms-Review-Credential: cms-local-review-admin' http://127.0.0.1:8080/api/admin/columns)"
+[[ "$formal_review_header_status" == "401" ]] || { echo "Formal Server must reject Review-only credential, got $formal_review_header_status" >&2; exit 1; }
+
 test -f "$party_root/manifest.json"
 test -f "$party_root/index.ndjson"
 test -f "$party_root/lists/PARTY_CAROUSEL/index.json"

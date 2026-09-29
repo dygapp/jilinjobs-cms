@@ -1,5 +1,7 @@
 package com.jilinjobs.cms.content
 
+import com.jilinjobs.cms.security.CmsAdminAccess
+
 import jakarta.validation.Valid
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.Size
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 import java.time.LocalDate
 
+@CmsAdminAccess
 @RestController
 @RequestMapping("/api/admin/articles")
 class ArticleController(

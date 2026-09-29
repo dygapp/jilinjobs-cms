@@ -1,8 +1,11 @@
 package com.jilinjobs.cms.page
 
+import com.jilinjobs.cms.security.CmsAdminAccess
+
 import org.springframework.http.*
 import org.springframework.web.bind.annotation.*
 
+@CmsAdminAccess
 @RestController
 @RequestMapping("/api/admin/page-groups")
 class AdminPageGroupController(private val service:PageService) {
@@ -11,6 +14,7 @@ class AdminPageGroupController(private val service:PageService) {
     @PutMapping("/{id}") fun update(@PathVariable id:Long,@RequestBody draft:PageGroupDraft)=service.updateGroup(id,draft)
 }
 
+@CmsAdminAccess
 @RestController
 @RequestMapping("/api/admin/pages")
 class AdminPageController(private val service:PageService) {

@@ -1,5 +1,7 @@
 package com.jilinjobs.cms.navigation
 
+import com.jilinjobs.cms.security.CmsAdminAccess
+
 import jakarta.validation.Valid
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.Size
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
+@CmsAdminAccess
 @RestController
 @RequestMapping("/api/admin/navigation-locations")
 class AdminNavigationLocationController(private val service: NavigationLocationService) {

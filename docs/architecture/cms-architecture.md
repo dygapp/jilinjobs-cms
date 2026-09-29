@@ -372,11 +372,9 @@ Admin 与 Public 可以消费同一 Domain，但 contract responsibility不同�
 
 ## 13. 认证 / 授权边界
 
-当前 CMS Runtime 尚没有完整统一认证授权体系。
+当前 CMS Server 已建立统一可信主体、Spring Security Admin 请求边界和方法级角色授权；没有正式身份适配器时 Admin 默认失败关闭，Public contract 与静态公开资源继续保持匿名读取。Generic Core 不依赖 HTTP 用户或特定宿主后台，Content Migration 不伪造管理请求身份。
 
-下一阶段的目标由 `docs/requirements/cms-admin-identity-and-audit.md` 与 ADR-0005 确认：CMS Server 验证部署环境提供的身份，将稳定来源 / 用户 ID 转换成 CMS 自己的角色并在 Admin 边界授权和审计；Generic Core 不依赖 HTTP 用户或特定宿主后台，Content Migration 不伪造管理请求身份。当前仅有 Server 内的主体转换基础和隔离测试身份适配器，尚无正式身份来源、Admin 请求 / 方法授权或业务审计。独立网站正式部署须接入可信身份来源，测试身份不能替代正式登录。Public contract 保持匿名公开访问边界。
-
-当前 preset protection、immutable identity、resource safety 等是 domain/data integrity，不等同于 role-based authorization。尚未实现目标之前，不得因为需求已确认就声称 Admin API 已受保护。
+后续仍需按 `docs/requirements/cms-admin-identity-and-audit.md` 与 ADR-0005 接入真实宿主身份、完成管理端身份反馈和业务操作审计。隔离 Review 身份只用于自动化 / 人工评审构建，不能替代独立网站或外部管理平台的正式登录。preset protection、immutable identity、resource safety 等仍属于 domain/data integrity，`admin` / `super` 也不得绕过这些业务不变量。
 
 ## 14. 验证架构
 

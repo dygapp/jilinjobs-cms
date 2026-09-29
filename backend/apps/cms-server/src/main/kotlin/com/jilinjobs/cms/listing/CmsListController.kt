@@ -1,10 +1,13 @@
 package com.jilinjobs.cms.listing
 
+import com.jilinjobs.cms.security.CmsAdminAccess
+
 import com.jilinjobs.cms.common.ContentImagePolicy
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
+@CmsAdminAccess
 @RestController
 @RequestMapping("/api/admin/lists")
 class AdminCmsListController(private val service: CmsListService) {

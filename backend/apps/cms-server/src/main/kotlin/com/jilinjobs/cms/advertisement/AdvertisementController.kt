@@ -1,10 +1,13 @@
 package com.jilinjobs.cms.advertisement
 
+import com.jilinjobs.cms.security.CmsAdminAccess
+
 import java.time.LocalDateTime
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
+@CmsAdminAccess
 @RestController
 @RequestMapping("/api/admin/advertisements")
 class AdminAdvertisementController(private val service: AdvertisementService) {

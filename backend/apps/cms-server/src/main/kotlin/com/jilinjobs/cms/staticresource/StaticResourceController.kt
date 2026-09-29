@@ -1,5 +1,7 @@
 package com.jilinjobs.cms.staticresource
 
+import com.jilinjobs.cms.security.CmsAdminAccess
+
 import com.jilinjobs.cms.resource.toUploadContent
 import jakarta.servlet.http.HttpServletRequest
 import java.nio.file.Files
@@ -9,6 +11,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.multipart.MultipartFile
 
+@CmsAdminAccess
 @RestController
 @RequestMapping("/api/admin/static-resources")
 class AdminStaticResourceController(private val service: StaticResourceService) {

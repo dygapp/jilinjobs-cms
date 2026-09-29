@@ -1,5 +1,7 @@
 package com.jilinjobs.cms.column
 
+import com.jilinjobs.cms.security.CmsAdminAccess
+
 import com.jilinjobs.cms.common.ContentImagePolicy
 import jakarta.validation.Valid
 import jakarta.validation.constraints.NotBlank
@@ -7,6 +9,7 @@ import jakarta.validation.constraints.Size
 import org.springframework.http.*
 import org.springframework.web.bind.annotation.*
 
+@CmsAdminAccess
 @RestController
 @RequestMapping("/api/admin/columns")
 class ColumnController(private val service: ColumnService) {

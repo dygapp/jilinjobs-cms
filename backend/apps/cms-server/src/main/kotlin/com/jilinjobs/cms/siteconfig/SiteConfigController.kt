@@ -1,9 +1,12 @@
 package com.jilinjobs.cms.siteconfig
 
+import com.jilinjobs.cms.security.CmsAdminAccess
+
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
+@CmsAdminAccess
 @RestController
 @RequestMapping("/api/admin/site-config")
 class AdminSiteConfigController(private val service: SiteConfigService) {

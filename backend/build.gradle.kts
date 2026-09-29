@@ -157,7 +157,7 @@ tasks.register<JavaExec>("verifyGenericListItemCompatibility") {
 tasks.register("verifyBackendApplicationBoundary") {
     group = "verification"
     description = "Inspect Server/Core/Migration source responsibilities and packaged application boundaries"
-    dependsOn(":apps:cms-server:bootJar", ":apps:content-migration:bootJar")
+    dependsOn(":apps:cms-server:bootJar", ":apps:cms-server:reviewBootJar", ":apps:content-migration:bootJar")
     doLast {
         fun transportReferences(root: java.io.File, forbidden: List<String>): List<String> =
             root.walkTopDown()
@@ -180,8 +180,10 @@ tasks.register("verifyBackendApplicationBoundary") {
         require(migrationTransport.isEmpty()) { "Migration contains HTTP transport responsibility: $migrationTransport" }
 
         val serverJar = layout.buildDirectory.file("libs/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar").get().asFile
+        val reviewServerJar = layout.buildDirectory.file("libs/jilinjobs-cms-backend-review-0.1.0-SNAPSHOT.jar").get().asFile
         val migrationJar = migrationProject.layout.buildDirectory.file("libs/jilinjobs-cms-content-migration-0.1.0-SNAPSHOT.jar").get().asFile
         require(serverJar.isFile) { "Server BootJar missing: $serverJar" }
+        require(reviewServerJar.isFile) { "Review Server BootJar missing: $reviewServerJar" }
         require(migrationJar.isFile) { "Migration BootJar missing: $migrationJar" }
 
         fun jarEntries(file: java.io.File): Set<String> = ZipFile(file).use { zip ->
@@ -192,6 +194,13 @@ tasks.register("verifyBackendApplicationBoundary") {
         }
 
         val serverEntries = jarEntries(serverJar)
+        require(serverEntries.none { it.contains("/ReviewIdentity") }) {
+            "Formal Server BootJar contains isolated Review identity classes"
+        }
+        val reviewServerEntries = jarEntries(reviewServerJar)
+        require(reviewServerEntries.any {
+            it == "BOOT-INF/classes/com/jilinjobs/cms/security/ReviewIdentityConfiguration.class"
+        }) { "Review Server BootJar is missing isolated Review identity configuration" }
         require("BOOT-INF/classes/com/jilinjobs/cms/CmsApplication.class" in serverEntries) { "Server application class missing" }
         require(serverEntries.none { it.startsWith("BOOT-INF/classes/com/jilinjobs/cms/migration/") }) {
             "Server BootJar contains Content Migration classes"

@@ -1,5 +1,7 @@
 package com.jilinjobs.cms.resource
 
+import com.jilinjobs.cms.security.CmsAdminAccess
+
 import org.springframework.core.io.FileSystemResource
 import org.springframework.core.io.Resource
 import org.springframework.http.ContentDisposition
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.multipart.MultipartFile
 import java.nio.charset.StandardCharsets
 
+@CmsAdminAccess
 @RestController
 @RequestMapping("/api/admin/resources")
 class ResourceController(

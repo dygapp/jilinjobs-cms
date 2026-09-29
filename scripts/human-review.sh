@@ -14,6 +14,7 @@ frontend_container="cms-frontend"
 mysql_image="${HUMAN_REVIEW_MYSQL_IMAGE:-mysql:8.4}"
 alpine_image="${HUMAN_REVIEW_ALPINE_IMAGE:-alpine:3.23}"
 apply_fixture="${HUMAN_REVIEW_APPLY_FIXTURE:-true}"
+review_identity_token="cms-local-review-admin"
 
 usage() {
   cat <<'USAGE'
@@ -105,6 +106,7 @@ load_verified_evidence() {
   [[ "$evidence_subject" =~ ^[0-9a-f]{40}$ ]] || die "Human Review 只接受 exact-commit Full CI Evidence；当前 subject=$evidence_subject"
 
   backend_image="$(kv_value "$result_file" backend_image)"
+  review_backend_image="$(kv_value "$result_file" review_backend_image)"
   frontend_image="$(kv_value "$result_file" frontend_image)"
   baseline_image="$(kv_value "$result_file" baseline_image)"
   verification_image="$(kv_value "$result_file" verification_image)"
@@ -135,7 +137,7 @@ load_verified_evidence() {
   evidence_review_runtime_fingerprint="$current_review_runtime_fingerprint"
 
   local image
-  for image in "$backend_image" "$frontend_image" "$baseline_image" "$verification_image"; do
+  for image in "$backend_image" "$review_backend_image" "$frontend_image" "$baseline_image" "$verification_image"; do
     [[ -n "$image" ]] || die "evidence 缺少必需 image binding：$result_file"
     docker image inspect "$image" >/dev/null 2>&1 || die "缺少 verified image：$image；请重新执行完整 Local Docker CI"
   done
@@ -208,6 +210,7 @@ verified_source_subject=$evidence_subject
 runtime_fingerprint=$evidence_review_runtime_fingerprint
 evidence_dir=$evidence_dir
 backend_image=$backend_image
+review_backend_image=$review_backend_image
 frontend_image=$frontend_image
 baseline_image=$baseline_image
 verification_image=$verification_image
@@ -220,7 +223,7 @@ runtime_healthy() {
   container_running "$mysql_container" \
     && container_running "$backend_container" \
     && container_running "$frontend_container" \
-    && http_ready http://127.0.0.1:8080/api/admin/columns \
+    && curl --fail --silent -H "X-Cms-Review-Credential: $review_identity_token" http://127.0.0.1:8080/api/admin/columns >/dev/null 2>&1 \
     && http_ready http://127.0.0.1:5173/ \
     && http_ready http://127.0.0.1:5173/admin/
 }
@@ -249,7 +252,7 @@ restore_and_start() {
     bash scripts/restore-review-baseline.sh
 
   say "启动 Backend + Public/Admin Runtime"
-  BACKEND_IMAGE="$backend_image" FRONTEND_IMAGE="$frontend_image" \
+  BACKEND_IMAGE="$review_backend_image" FRONTEND_IMAGE="$frontend_image" \
     bash scripts/start-review-runtime.sh
 
   if [[ "$apply_fixture" == "true" ]]; then

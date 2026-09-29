@@ -227,6 +227,7 @@ verification_fingerprint="$(
 )"
 
 backend_image="jilinjobs-cms-local/backend:${backend_fingerprint}"
+review_backend_image="jilinjobs-cms-local/review-backend:${backend_fingerprint}"
 migration_image="jilinjobs-cms-local/content-migration:${backend_fingerprint}"
 frontend_image="jilinjobs-cms-local/frontend:${frontend_fingerprint}"
 baseline_image="jilinjobs-cms-local/review-baseline:${baseline_fingerprint}"
@@ -404,6 +405,7 @@ buildx_local_image() {
 
 say "Build or reuse local Backend runtime images"
 buildx_local_image "$backend_image" backend "$backend_fingerprint" backend/Dockerfile.runtime backend 2>&1 | tee "$evidence_dir/backend-image.log"
+buildx_local_image "$review_backend_image" review-backend "$backend_fingerprint" backend/Dockerfile.review-runtime backend 2>&1 | tee "$evidence_dir/review-backend-image.log"
 buildx_local_image "$migration_image" content-migration "$backend_fingerprint" backend/Dockerfile.migration-runtime backend 2>&1 | tee "$evidence_dir/migration-image.log"
 
 say "Public formal build"
@@ -511,10 +513,11 @@ docker run -d --name "$backend_container" --network host --user "$uid:$gid" \
   -e DB_USERNAME=root -e DB_PASSWORD=root \
   -e CMS_STATIC_ROOT=/runtime-static -e CMS_STORAGE_ROOT=/uploads \
   -e CMS_SITE_PACKAGE_ROOT=/site-package -e CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true \
+  -e CMS_REVIEW_IDENTITY_TOKEN=cms-local-review-admin \
   -v "$runtime_root/static:/runtime-static" -v "$runtime_root/uploads:/uploads" \
-  -v "$repo_root/sites/jilinjobs:/site-package:ro" "$backend_image" >/dev/null
+  -v "$repo_root/sites/jilinjobs:/site-package:ro" "$review_backend_image" >/dev/null
 for i in $(seq 1 60); do
-  if curl --fail --silent http://127.0.0.1:8080/api/admin/columns >/dev/null; then break; fi
+  if curl --fail --silent http://127.0.0.1:8080/api/public/site-config >/dev/null; then break; fi
   if [[ "$i" -eq 60 ]]; then
     docker logs "$backend_container" | tee "$evidence_dir/integrated-backend.log"
     die "Backend runtime did not become ready"
@@ -522,6 +525,11 @@ for i in $(seq 1 60); do
   sleep 2
 done
 curl --fail --silent http://127.0.0.1:8080/static/health/baseline.png >/dev/null
+anonymous_admin_status="$(curl --silent --output /dev/null --write-out '%{http_code}' http://127.0.0.1:8080/api/admin/columns)"
+[[ "$anonymous_admin_status" == "401" ]] || die "Anonymous Admin request should return 401, got $anonymous_admin_status"
+invalid_review_status="$(curl --silent --output /dev/null --write-out '%{http_code}' -H 'X-Cms-Review-Credential: invalid-review-credential' http://127.0.0.1:8080/api/admin/columns)"
+[[ "$invalid_review_status" == "401" ]] || die "Invalid Review credential should return 401, got $invalid_review_status"
+curl --fail --silent -H 'X-Cms-Review-Credential: cms-local-review-admin' http://127.0.0.1:8080/api/admin/columns >/dev/null
 
 remove_container "$frontend_container"
 docker run -d --name "$frontend_container" --network host "$frontend_image" >/dev/null
@@ -568,7 +576,7 @@ if [[ "$verification_exists" != "true" ]]; then
   BASELINE_IMAGE="$baseline_image" EXPECTED_BASELINE_FINGERPRINT="$baseline_fingerprint" EXPECTED_BACKEND_FINGERPRINT="$backend_fingerprint" \
     bash scripts/restore-review-baseline.sh 2>&1 | tee "$evidence_dir/review-baseline-restore.log"
 
-  BACKEND_IMAGE="$backend_image" FRONTEND_IMAGE="$frontend_image" \
+  BACKEND_IMAGE="$review_backend_image" FRONTEND_IMAGE="$frontend_image" \
     bash scripts/start-review-runtime.sh 2>&1 | tee "$evidence_dir/review-runtime-start.log"
 
   python3 scripts/verify-review-runtime.py http://127.0.0.1:5173 | tee "$evidence_dir/review-baseline-runtime.json"
@@ -620,6 +628,7 @@ docker run --rm -v "$repo_root:/repo" "$alpine_image" sh -c \
 
 say "Bound project-local images and record final resource state"
 current_images="$backend_image
+$review_backend_image
 $migration_image
 $frontend_image
 $baseline_image
@@ -637,6 +646,7 @@ printf '%s\n' "$run_id" > "$evidence_root/latest.txt"
   printf 'completed_at=%s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
   printf 'subject=%s\n' "$source_subject"
   printf 'backend_image=%s\n' "$backend_image"
+  printf 'review_backend_image=%s\n' "$review_backend_image"
   printf 'migration_image=%s\n' "$migration_image"
   printf 'frontend_image=%s\n' "$frontend_image"
   printf 'baseline_image=%s\n' "$baseline_image"

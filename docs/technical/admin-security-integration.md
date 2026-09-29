@@ -19,7 +19,7 @@ updated_at: 2026-09-29
 
 ## 责任与实施状态
 
-本文拥有第一版目标实现中跨 Admin API、身份来源和审计持续一致的技术接缝。当前 Server 已有统一主体、凭证验证器接缝和受信角色转换基础，隔离测试适配器只存在于测试源码；尚无正式身份提供方、请求 / 方法授权或业务审计，Admin API 尚未受保护。角色的业务权限归属由 Requirement 持有，用户可观察结果由 Specification 持有，长期结构与框架选型由 Architecture / ADR 持有。下方矩阵只拥有访问与业务审计分类；HTTP 路径、方法及 wire compatibility 的唯一 owner 仍是 `docs/technical/http-interface-contract.md`，本文不复制其响应结构、Controller、SQL 或 Gradle dependency。
+本文拥有第一版目标实现中跨 Admin API、身份来源和审计持续一致的技术接缝。当前 Server 已有统一主体、凭证验证器接缝、受信角色转换以及 Spring Security 请求 / 方法授权基础；没有正式身份提供方时 Admin fail closed。隔离 Review 身份只进入独立 Review source set / BootJar，正式 Server 产物不包含该入口。正式身份提供方、管理端身份反馈和业务操作审计仍未实现。角色的业务权限归属由 Requirement 持有，用户可观察结果由 Specification 持有，长期结构与框架选型由 Architecture / ADR 持有。下方矩阵只拥有访问与业务审计分类；HTTP 路径、方法及 wire compatibility 的唯一 owner 仍是 `docs/technical/http-interface-contract.md`，本文不复制其响应结构、Controller、SQL 或 Gradle dependency。
 
 ## 身份转换
 
@@ -27,9 +27,9 @@ updated_at: 2026-09-29
 
 Spring Security 的 `Authentication` 可承载该主体和映射后的 authorities。应用业务审计只消费 `CmsPrincipal`，不持有外部令牌或用户详情。身份验证方式按实际宿主协议选择：标准 OIDC / JWT 使用对应 Spring Security 能力，专有平台协议在认证适配器内验证；若独立网站未配置真实提供方，正式管理功能不得启动为匿名可写模式。
 
-测试身份提供方与其入口只在隔离的测试配置下装配。生产配置不包含可启用的模拟凭证默认值，并在错误配置时失败关闭。不得使用 Spring Boot 默认随机用户、硬编码超级用户或客户端指定角色来替代测试身份协议。
+测试 / Review 身份提供方与其入口只在隔离的测试或 Review 构建中装配。生产配置和正式 BootJar 不包含可启用的模拟凭证默认值，并在没有正式身份适配器时失败关闭。不得使用 Spring Boot 默认随机用户、硬编码超级用户或客户端指定角色来替代测试身份协议。
 
-当前基础接缝由受信的 Server verifier 返回已验证用户 ID 和外部角色；来源标识取自该 verifier，而不是请求提供的来源值。Server 按来源使用受控角色映射，缺少映射、存在未知角色或没有允许角色时拒绝主体构建。当前测试适配器以测试源码和装配配置隔离，正式 Server 产物不包含它；在正式适配器和请求授权落地前，该接缝不处理普通 HTTP 请求。
+当前基础接缝由受信的 Server verifier 返回已验证用户 ID 和外部角色；来源标识取自该 verifier，而不是请求提供的来源值。Server 按来源使用受控角色映射，缺少映射、存在未知角色或没有允许角色时拒绝主体构建。隔离测试 verifier 与 Review HTTP 适配分别位于 test / review source set，正式 Server 产物不包含它们；正式适配器尚未接入时，普通 Admin HTTP 请求保持未认证并返回 `401`。
 
 ## 授权接缝
 
