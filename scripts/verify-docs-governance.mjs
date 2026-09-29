@@ -107,7 +107,7 @@ function addFailure(file, message) {
   console.error(`::error file=${file}::${escaped}`)
 }
 
-// 文件头规则由 docs/governance/constraints.md 持有；archive 不进入 currentFiles。
+// 文件头规则由 docs/governance/constraints.md 持有；archive 不进入 currentDocFiles。
 // README、Guide、Governance 说明可以没有文件头，DESIGN.md 使用设计工具自己的 schema。
 const authorityHeaderRules = {
   architecture: { types: ['architecture', 'architecture-state'], status: 'active' },
@@ -125,22 +125,16 @@ for (const file of currentDocFiles) {
   const lines = content.split(/\r?\n/)
   const decisionFile = file.startsWith('docs/architecture/decisions/')
   const adrNumber = file.match(/^docs\/architecture\/decisions\/ADR-(\d{4})-[^/]+\.md$/)?.[1]
-  if (decisionFile) {
-    checkedAdrs++
-    const opening = lines.slice(1, 8).join('\n')
-    if (!adrNumber) addFailure(file, '决策文件名应为 ADR-NNNN-说明.md。')
-    if (lines[0] === '---') addFailure(file, 'ADR 使用标题、状态与日期条目，不使用 YAML 文件头。')
-    if (adrNumber && !new RegExp(`^# ADR-${adrNumber}[：:]`).test(lines[0])) addFailure(file, 'ADR 标题编号必须与文件名一致。')
-    if (!/^- (?:状态|Status)[：:]\s*\S+/m.test(opening)) addFailure(file, 'ADR 开头缺少状态条目。')
-    if (!/^- (?:日期|Date)[：:]\s*\d{4}-\d{2}-\d{2}\b/m.test(opening)) addFailure(file, 'ADR 开头缺少 YYYY-MM-DD 日期条目。')
-    continue
-  }
+  if (decisionFile) checkedAdrs++
+  if (decisionFile && !adrNumber) addFailure(file, '决策文件名应为 ADR-NNNN-说明.md。')
 
   const area = file.match(/^docs\/(architecture|project|requirements|specifications|technical)\/([^/]+)\.md$/)
   const rule = area && area[2] !== 'README' ? authorityHeaderRules[area[1]] : null
-  const required = file === 'docs/requirements/index.md'
-    ? { types: ['requirement-index'], status: 'active' }
-    : rule
+  const required = decisionFile
+    ? { types: ['architecture-decision'], status: 'accepted' }
+    : file === 'docs/requirements/index.md'
+      ? { types: ['requirement-index'], status: 'active' }
+      : rule
   const design = file === 'docs/design/public-site/DESIGN.md'
   if (lines[0] !== '---') {
     if (required || design) addFailure(file, '当前 Authority 或设计文档缺少 YAML 文件头。')
@@ -180,6 +174,12 @@ for (const file of currentDocFiles) {
       if (seenIds.has(id)) addFailure(file, `id ${id} 与 ${seenIds.get(id)} 重复。`)
       else seenIds.set(id, file)
     }
+  }
+  if (decisionFile) {
+    if (fields.get('id') !== `ADR-${adrNumber}`) addFailure(file, 'ADR id 必须与文件名编号一致。')
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(fields.get('date') || '')) addFailure(file, 'ADR date 必须为 YYYY-MM-DD。')
+    const firstBodyLine = lines.slice(closing + 1).find(line => line.trim()) || ''
+    if (!new RegExp(`^# ADR-${adrNumber}[：:]`).test(firstBodyLine)) addFailure(file, 'ADR 标题编号必须与文件名一致。')
   }
   if (design) {
     for (const key of ['version', 'name', 'description', 'colors', 'typography']) {
@@ -265,7 +265,7 @@ if (!readyUnit) {
 
 console.log(`Current 文档语言扫描：${languageFiles.length} 个 Markdown 文档`)
 console.log(`Current Authority / locator 扫描：${currentFiles.length} 个 Markdown 文档`)
-console.log(`docs/** 当前文件头适用范围：${currentDocFiles.length} 个；YAML 文件头：${checkedHeaders} 个；ADR：${checkedAdrs} 个`)
+console.log(`docs/** 当前文件头适用范围：${currentDocFiles.length} 个；YAML 文件头：${checkedHeaders} 个（含 ${checkedAdrs} 个 ADR）`)
 
 if (warnings.length) {
   console.log('\n警告：')

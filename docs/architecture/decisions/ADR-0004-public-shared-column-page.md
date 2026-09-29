@@ -1,10 +1,15 @@
-# ADR-0004：Main / Party 二级栏目列表采用 Shared Column Page
+---
+id: ADR-0004
+type: architecture-decision
+status: accepted
+date: 2026-09-04
+scope: frontend/public-site
+evidence: EU-29 Human Review
+supersedes: >-
+  ADR-0003 §2.3 中“栏目模板主题视觉一律属于 Site Boundary”的默认判断，仅限二级栏目列表页；文章详情、首页内容区块和 Site-owned Frame/Branding 仍按 ADR-0003 保持隔离。
+---
 
-- Status: Accepted
-- Date: 2026-09-04
-- Scope: `frontend/public-site`
-- 证据： EU-29 Human Review
-- Supersedes: ADR-0003 §2.3 中“栏目模板主题视觉一律属于 Site Boundary”的默认判断，仅限二级栏目列表页；文章详情、首页内容区块和 Site-owned Frame/Branding 仍按 ADR-0003 保持隔离。
+# ADR-0004：Main / Party 二级栏目列表采用 Shared Column Page
 
 ## 1. 背景
 

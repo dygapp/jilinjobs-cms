@@ -1,8 +1,12 @@
-# ADR-0002：公开站采用按 Site Boundary 划分的 Multi-entry Modular SPA
+---
+id: ADR-0002
+type: architecture-decision
+status: accepted
+date: 2026-09-01
+scope: frontend/public-site
+---
 
-- Status: Accepted
-- Date: 2026-09-01
-- Scope: `frontend/public-site`
+# ADR-0002：公开站采用按 Site Boundary 划分的 Multi-entry Modular SPA
 
 ## 1. 背景
 

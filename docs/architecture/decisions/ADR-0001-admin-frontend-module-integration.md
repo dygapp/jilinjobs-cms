@@ -1,7 +1,11 @@
-# ADR-0001：管理端前端模块集成架构
+---
+id: ADR-0001
+type: architecture-decision
+status: accepted
+date: 2026-09-01
+---
 
-- 状态：Accepted
-- 日期：2026-09-01
+# ADR-0001：管理端前端模块集成架构
 
 ## 背景
 

@@ -88,6 +88,6 @@ Requirement Index 只拥有 locator / relation；长期 Product / Domain 事实�
 
 Current 文档默认使用自然中文叙述，精确机器标识和外部正式名称保持原样。自动检查由 scripts/verify-docs-governance.mjs 与 .github/workflows/docs-governance.yml 承担。
 
-Markdown 文件头按文档职责适用，规则由 docs/governance/constraints.md 持有；ADR 使用正文开头的决策元数据，设计文件遵循专用格式。
+Markdown 文件头按文档职责适用，规则由 docs/governance/constraints.md 持有；ADR 使用决策 YAML 文件头，设计文件遵循专用格式。
 
 历史 Evidence 以证据保真优先，不为了语言或格式统一批量重写；重新晋升为 Current 前先完成 semantic reconciliation。

@@ -1,9 +1,14 @@
-# ADR-0003：公开站 Navigation / Footer 采用跨 Site Shared Shell Components
+---
+id: ADR-0003
+type: architecture-decision
+status: accepted
+date: 2026-09-03
+scope: frontend/public-site
+supersedes: >-
+  ADR-0002 §2.3 中对 Navigation Layout / Footer 一律禁止进入 Shared 的默认约束；ADR-0002 其余 Multi-entry Site Boundary 决策继续有效。
+---
 
-- Status: Accepted
-- Date: 2026-09-03
-- Scope: `frontend/public-site`
-- Supersedes: ADR-0002 §2.3 中对 Navigation Layout / Footer 一律禁止进入 Shared 的默认约束；ADR-0002 其余 Multi-entry Site Boundary 决策继续有效。
+# ADR-0003：公开站 Navigation / Footer 采用跨 Site Shared Shell Components
 
 ## 1. 背景
 

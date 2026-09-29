@@ -1,8 +1,12 @@
-# ADR-0005：CMS 管理身份转换、方法授权与操作审计边界
+---
+id: ADR-0005
+type: architecture-decision
+status: accepted
+date: 2026-09-29
+scope: CMS 管理访问与操作审计
+---
 
-- 状态：Accepted（目标架构；实现待推进）
-- 日期：2026-09-29
-- 范围：CMS 管理访问与操作审计
+# ADR-0005：CMS 管理身份转换、方法授权与操作审计边界
 
 ## 背景
 
