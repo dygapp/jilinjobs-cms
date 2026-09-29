@@ -12,7 +12,7 @@ relations:
     - docs/technical/http-interface-contract.md
   design:
     - docs/design/public-site/DESIGN.md
-updated_at: 2026-09-28
+updated_at: 2026-09-29
 ---
 
 # 验证运行策略
@@ -80,7 +80,7 @@ Backend 变更至少按风险选择编译、静态检查、自动化测试、可
 - method + endpoint path / query compatibility；
 - request / response JSON field、nullability 与 enum token；
 - pagination、create/update/delete status semantics；
-- validation / not-found / upload-size 等受控失败的 `{message}` envelope 与 `400 / 404 / 413`；unknown `5xx` 只验证 consumer 可识别失败，不把 provider-specific body 当作稳定 contract；
+- validation / not-found / upload-size 等受控失败的 `{message}` envelope 与 `400 / 404 / 413`；管理身份能力进入受影响范围时追加 `401 / 403` 及拒绝无数据 / 无写入断言；unknown `5xx` 只验证 consumer 可识别失败，不把 provider-specific body 当作稳定 contract；
 - multipart field、binary resource content type 与 attachment disposition；
 - Public scoped query 不退化为 Admin/full-data projection；
 - Admin / Public frontend adapter 与同一个 canonical contract 对齐。

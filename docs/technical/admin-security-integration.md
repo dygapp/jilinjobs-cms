@@ -19,7 +19,7 @@ updated_at: 2026-09-29
 
 ## 责任与实施状态
 
-本文拥有第一版目标实现中跨 Admin API、身份来源和审计持续一致的技术接缝；当前实现尚未落地。角色的业务权限归属由 Requirement 持有，用户可观察结果由 Specification 持有，长期结构与框架选型由 Architecture / ADR 持有。本文不复制 Controller、SQL、Gradle dependency 或每个 endpoint 的第二清单。
+本文拥有第一版目标实现中跨 Admin API、身份来源和审计持续一致的技术接缝；当前实现尚未落地。角色的业务权限归属由 Requirement 持有，用户可观察结果由 Specification 持有，长期结构与框架选型由 Architecture / ADR 持有。下方矩阵只拥有访问与业务审计分类；HTTP 路径、方法及 wire compatibility 的唯一 owner 仍是 `docs/technical/http-interface-contract.md`，本文不复制其响应结构、Controller、SQL 或 Gradle dependency。
 
 ## 身份转换
 
@@ -36,6 +36,63 @@ Spring Security 的 `Authentication` 可承载该主体和映射后的 authoriti
 第一版 `admin` 覆盖现有全部 CMS 管理业务，`super` 继承这些能力并可查询审计。角色授予只决定是否可尝试操作，不跳过 Core 的 Domain 校验。授权切点应位于 Server 的 Admin application / transport 边界；Content Migration 命令调用 shared Core 时不需要伪造 HTTP 用户或绕过 Security 注解。
 
 管理端 Browser route 防护与菜单可见性只反映后端结果，不承担最终授权。管理 API 未认证与已认证无权限分别形成 `401` / `403`；若增加新的审计查询接口，应由 `docs/technical/http-interface-contract.md` 正式拥有 HTTP 路径与响应契约，而非在本文发明 endpoint。
+
+## 接口权限矩阵（第一版目标）
+
+下表以 HTTP contract 当前 Admin family 为授权匹配键；路径均相对于 `/api/admin`。每个列出的读、写入口都只允许 `admin` 或 `super` 尝试，且两角色都必须继续通过原有 Domain 校验。无有效身份返回 `401`，已认证但无 CMS 允许角色返回 `403`；拒绝时不得返回管理数据或产生业务写入。`super` 不因角色较高而绕过 preset、发布前置条件、来源身份或资源安全约束。
+
+| 业务族 | 读操作 | 写操作（均纳入业务审计） |
+|---|---|---|
+| 栏目 | `GET /columns` | `POST /columns`；`PUT/DELETE /columns/{id}` |
+| 文章 | `GET /articles`；`GET /articles/{id}` | `POST /articles`；`PUT /articles/{id}`；`POST /articles/{id}/publish`、`/withdraw` |
+| 导航位置 | `GET /navigation-locations` | `POST /navigation-locations`；`PUT/DELETE /navigation-locations/{code}` |
+| 导航条目 | `GET /navigations` | `POST /navigations`；`PUT/DELETE /navigations/{id}` |
+| 单页分组 | `GET /page-groups` | `POST /page-groups`；`PUT /page-groups/{id}` |
+| 单页 | `GET /pages` | `POST /pages`；`PUT/DELETE /pages/{id}` |
+| 列表定义 | `GET /lists` | `POST /lists`；`PUT/DELETE /lists/{id}` |
+| 列表项 | `GET /lists/{id}/items` | `POST /lists/{id}/items`；`PUT/DELETE /lists/{listId}/items/{itemId}` |
+| 广告位 | `GET /advertisements/slots` | `POST /advertisements/slots`；`PUT/DELETE /advertisements/slots/{id}` |
+| 广告项 | `GET /advertisements/slots/{id}/items` | `POST /advertisements/slots/{id}/items`；`PUT/DELETE /advertisements/slots/{slotId}/items/{adId}` |
+| 网站属性 | `GET /site-config`、`/site-config/groups` | `POST /site-config`；`PUT /site-config/{key}`、`/site-config/{key}/definition`；`DELETE /site-config/{key}` |
+| 托管资源 | `GET /resources/{id}`、`/resources/{id}/content` | `POST /resources`（multipart 上传） |
+| 静态资源 | `GET /static-resources`、`/static-resources/trash` | `POST /static-resources`（上传或明确替换）；`DELETE /static-resources`（入回收区）；`POST /static-resources/restore/{id}` |
+
+业务审计覆盖上述全部写入口，包括上传、替换、软删除、恢复及文章发布 / 撤回；授权拒绝记为安全事件，不伪造成已执行的业务写操作。当前没有托管资源删除接口，不为矩阵补造。审计查询是未来独立的 `super` 专属只读入口：无有效身份 `401`，其他已认证角色 `403`，`super` 只可有界分页查询；在 HTTP contract 正式确定路径和投影前，不把它计入当前 endpoint 清单。
+
+管理端现有八类 Browser 入口及其主要 Admin API consumer 如下；`/admin/articles` 等旧路径只重定向到对应 `/admin/cms/**`，不得绕过同一管理身份状态。
+
+| 页面路由 | 主要 Admin API 族 |
+|---|---|
+| `/admin/cms/articles` | 文章、栏目、托管资源 |
+| `/admin/cms/pages` | 单页、单页分组、托管资源 |
+| `/admin/cms/lists` | 列表定义、列表项、文章、托管资源 |
+| `/admin/cms/columns` | 栏目 |
+| `/admin/cms/navigation` | 导航位置、导航条目、静态资源选择 |
+| `/admin/cms/advertisements` | 广告位、广告项、静态资源选择 |
+| `/admin/cms/site-config` | 网站属性、静态资源选择 |
+| `/admin/cms/static-resources` | 静态资源 |
+
+匿名可进入待登录 / 无法认证展示，但不得读取管理数据；无允许角色展示禁止访问；`admin`、`super` 可进入现有业务页面。当前没有审计查询页面。直接访问、刷新、身份失效和页面内 API 请求必须同样受控，前端隐藏菜单不能替代服务端拒绝。
+
+Public 边界以下 17 个当前 GET 投影保持匿名可读；它们不获得 Admin 写入或完整管理数据。
+
+| 公开族 | 匿名可读入口 |
+|---|---|
+| 栏目 | `/api/public/columns/{id}`、`/api/public/columns/by-alias/{alias}` |
+| 文章 | `/api/public/articles`、`/api/public/articles/{id}` |
+| 导航 | `/api/public/navigations` |
+| 单页 | `/api/public/pages/{alias}`、`/api/public/page-groups/{groupAlias}`、`/api/public/page-groups/{groupAlias}/{alias}` |
+| 列表 | `/api/public/lists`、`/api/public/lists/by-code/{code}`、`/api/public/lists/by-group/{groupCode}` |
+| 宣传展示 | `/api/public/advertisements`、`/api/public/advertisements/slots/{code}` |
+| 网站属性 | `/api/public/site-config` |
+| 托管资源 | `/api/public/resources/{id}/content`、`/api/public/resources/{id}/attachment` |
+| 静态资源 | `/static/**` |
+
+其他 HTTP 方法和未分类路径不因属于 `/api/public/**` 或 `/static/**` 而自动开放。管理端的资源预览 `GET /api/admin/resources/{id}/content` 仍需管理身份，公开正文中的图片须由 Public projection 转为公开资源 URL，不能依赖 Admin 路径。
+
+Content Migration 是独立 non-web application，不经过 Admin HTTP 身份，也不伪造管理主体；其既有受控导入、报告和 Core Domain 约束继续适用。授权切点位于 Server 的管理入口，不能通过给 shared Core service 添加请求身份依赖或角色注解来封锁 Migration。进入方法授权实施前，应使当前落在 Core 的 HTTP Controller 和 multipart transport 依赖回到 Server 接缝；不能因为类所在模块或 URL 前缀推测该入口已经安全。
+
+矩阵的覆盖验证以 Server 实际注册的全部 handler method 与 HTTP contract 双向比对：每条 Admin 映射恰好归入一行，新增或迁移入口不得漏出；现有 13 个业务族的读、写及资源特殊动作分别验证匿名、无允许角色、`admin`、`super` 的结果，另验证过期身份、业务校验失败与无副作用拒绝。Public GET 与 `/static/**` 回归匿名读取和 Admin 数据隔离；Migration 以 non-web 启动及无 Server HTTP transport 依赖验证。此处的目标矩阵不构成当前 Runtime 已受保护的证据。
 
 ## 操作审计接缝
 

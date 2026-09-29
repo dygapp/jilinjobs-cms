@@ -8,6 +8,7 @@ relations:
     - docs/requirements/cms-domain.md
   specifications:
     - docs/specifications/admin-site.md
+    - docs/specifications/admin-access-audit.md
     - docs/specifications/public-site.md
     - docs/specifications/page-content.md
     - docs/specifications/rich-text-authoring.md
@@ -19,7 +20,7 @@ relations:
     - docs/technical/public-site-frontend.md
   verification:
     - docs/technical/verification-strategy.md
-updated_at: 2026-09-20
+updated_at: 2026-09-29
 ---
 
 # CMS HTTP 接口兼容契约
@@ -54,6 +55,7 @@ JSON contract 基线：
 - validation、not-found、upload-size 等受控 JSON failure 提供至少 `{ "message": string }` 的可诊断错误 envelope；
 - Domain / input validation 映射为 `400`，当前资源不存在映射为 `404`，上传体超过 Server 限制映射为 `413`；
 - 未受控的 provider / platform `5xx` 只要求 consumer 能识别请求失败，不把 Spring 或其他 provider 的默认 error body 提升为稳定 wire contract；
+- 在管理身份能力落地后，`/api/admin/**` 对无有效身份（包括失效凭证）返回 `401`，对已认证但无对应 CMS 权限的主体返回 `403`；两者均不得返回管理数据或执行写操作，并提供可诊断的 `{ "message": string }`。这定义目标传输结果，不表示当前 Runtime 已实现；角色归属和页面反馈分别由 Requirement 与 Specification 持有；
 - 普通 create endpoint 在当前 contract 中返回 `201` + created representation；普通 update / read 返回 `200`；明确无 response body 的 delete 返回 `204`；
 - binary resource 返回真实 content type；attachment projection 使用下载语义并保留原文件名。
 
