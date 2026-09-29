@@ -72,3 +72,13 @@ Handoff 只保存不可恢复的 locator / unresolved boundary，不复制 Requi
 - PASS、FAIL、READY、BLOCKED 等需要跨 surface 稳定识别的状态值。
 
 语言整理不得改变 Product Goal、Scope、业务边界、Architecture Decision、Specification 或技术契约。历史证据以保真为优先，不为了统一表达批量改写。
+
+## Markdown 文件头
+
+当前长期 Authority 正文按职责使用 YAML Front Matter，不把相同字段强加给所有 Markdown：
+
+- `docs/requirements/*.md`（含 `index.md`）、`docs/specifications/*.md`、`docs/architecture/*.md`、`docs/technical/*.md`、`docs/project/*.md` 的非 README 正文使用非空且唯一的 `id`、与职责相符的 `type` 和生命周期 `status`。`title`、`version`、`relations`、`updated_at` 仅在有实际用途时保留，不为凑齐字段补值。当前类别的允许值由 `scripts/verify-docs-governance.mjs` 校验。
+- `docs/design/public-site/DESIGN.md` 遵循设计工具的 `version`、`name`、`description` 与 token 文件头，由设计专用 lint 校验，不套用 Authority 的 `id/type/status`。
+- ADR 沿用 `# ADR-NNNN` 标题及紧随其后的状态、日期条目；范围与 supersede 关系按实际决策记录。ADR-0005 与其他 ADR 使用同一形式，无需另加 YAML 文件头。ADR 记录决策历史，当前叠加状态仍由 Architecture 正文持有。
+- README / 导航索引、Guide、Governance 说明不因目录位置而强制加头；`docs/requirements/index.md` 是带 `requirement-index` 身份的 Authority locator，按第一条校验。
+- `docs/**/archive/**` 保留历史原貌，不参与当前文件头补齐或格式校验；重新晋升为 Current 时才按目标职责检查。

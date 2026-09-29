@@ -1,8 +1,8 @@
 ---
 id: technical-rich-text-authoring
 title: 富文本编辑集成技术约束
-type: technical-authority
-status: current
+type: technical-contract
+status: active
 relations:
   specification:
     - docs/specifications/rich-text-authoring.md

@@ -42,6 +42,7 @@ function collectMarkdown(target, { skipArchive = false } = {}) {
 }
 
 const currentFiles = [...new Set(currentRoots.flatMap((p) => collectMarkdown(p, { skipArchive: true })))].sort()
+const currentDocFiles = collectMarkdown('docs', { skipArchive: true })
 const languageFiles = currentFiles
 const failures = []
 const warnings = []
@@ -104,6 +105,89 @@ function addFailure(file, message) {
   failures.push(`${file}: ${message}`)
   const escaped = message.replace(/%/g, '%25').replace(/\r/g, '%0D').replace(/\n/g, '%0A')
   console.error(`::error file=${file}::${escaped}`)
+}
+
+// 文件头规则由 docs/governance/constraints.md 持有；archive 不进入 currentFiles。
+// README、Guide、Governance 说明可以没有文件头，DESIGN.md 使用设计工具自己的 schema。
+const authorityHeaderRules = {
+  architecture: { types: ['architecture', 'architecture-state'], status: 'active' },
+  project: { types: ['project'], status: 'active' },
+  requirements: { types: ['business-requirement', 'domain-requirement'], status: 'confirmed' },
+  specifications: { types: ['specification'], status: 'accepted' },
+  technical: { types: ['technical-contract', 'technical-strategy'], status: 'active' },
+}
+const seenIds = new Map()
+let checkedHeaders = 0
+let checkedAdrs = 0
+
+for (const file of currentDocFiles) {
+  const content = fs.readFileSync(path.join(root, file), 'utf8')
+  const lines = content.split(/\r?\n/)
+  const decisionFile = file.startsWith('docs/architecture/decisions/')
+  const adrNumber = file.match(/^docs\/architecture\/decisions\/ADR-(\d{4})-[^/]+\.md$/)?.[1]
+  if (decisionFile) {
+    checkedAdrs++
+    const opening = lines.slice(1, 8).join('\n')
+    if (!adrNumber) addFailure(file, '决策文件名应为 ADR-NNNN-说明.md。')
+    if (lines[0] === '---') addFailure(file, 'ADR 使用标题、状态与日期条目，不使用 YAML 文件头。')
+    if (adrNumber && !new RegExp(`^# ADR-${adrNumber}[：:]`).test(lines[0])) addFailure(file, 'ADR 标题编号必须与文件名一致。')
+    if (!/^- (?:状态|Status)[：:]\s*\S+/m.test(opening)) addFailure(file, 'ADR 开头缺少状态条目。')
+    if (!/^- (?:日期|Date)[：:]\s*\d{4}-\d{2}-\d{2}\b/m.test(opening)) addFailure(file, 'ADR 开头缺少 YYYY-MM-DD 日期条目。')
+    continue
+  }
+
+  const area = file.match(/^docs\/(architecture|project|requirements|specifications|technical)\/([^/]+)\.md$/)
+  const rule = area && area[2] !== 'README' ? authorityHeaderRules[area[1]] : null
+  const required = file === 'docs/requirements/index.md'
+    ? { types: ['requirement-index'], status: 'active' }
+    : rule
+  const design = file === 'docs/design/public-site/DESIGN.md'
+  if (lines[0] !== '---') {
+    if (required || design) addFailure(file, '当前 Authority 或设计文档缺少 YAML 文件头。')
+    continue
+  }
+
+  const closing = lines.indexOf('---', 1)
+  if (closing < 0) {
+    addFailure(file, 'YAML 文件头缺少结束分隔符。')
+    continue
+  }
+  checkedHeaders++
+  const fields = new Map()
+  for (const line of lines.slice(1, closing)) {
+    if (!line.trim() || /^\s/.test(line) || line.startsWith('#')) continue
+    const match = line.match(/^([A-Za-z][A-Za-z0-9_-]*):(?:\s*(.*))?$/)
+    if (!match) {
+      addFailure(file, `无法识别的文件头顶层字段：${line}`)
+      continue
+    }
+    if (fields.has(match[1])) addFailure(file, `文件头字段重复：${match[1]}`)
+    fields.set(match[1], (match[2] || '').trim())
+  }
+
+  if (required) {
+    for (const key of ['id', 'type', 'status']) {
+      if (!fields.get(key)) addFailure(file, `当前 Authority 文件头缺少非空 ${key}。`)
+    }
+    if (fields.get('type') && !required.types.includes(fields.get('type'))) {
+      addFailure(file, `type 应为 ${required.types.join(' 或 ')}，当前为 ${fields.get('type')}。`)
+    }
+    if (fields.get('status') && fields.get('status') !== required.status) {
+      addFailure(file, `status 应为 ${required.status}，当前为 ${fields.get('status')}。`)
+    }
+    const id = fields.get('id')
+    if (id) {
+      if (seenIds.has(id)) addFailure(file, `id ${id} 与 ${seenIds.get(id)} 重复。`)
+      else seenIds.set(id, file)
+    }
+  }
+  if (design) {
+    for (const key of ['version', 'name', 'description', 'colors', 'typography']) {
+      if (!fields.has(key) || (!['colors', 'typography'].includes(key) && !fields.get(key))) {
+        addFailure(file, `设计文件头缺少 ${key}。`)
+      }
+    }
+  }
 }
 
 // Current 文档必须中文主述；精确技术标识、路径、命令、枚举与专名不参与机械语言比例判断。
@@ -181,6 +265,7 @@ if (!readyUnit) {
 
 console.log(`Current 文档语言扫描：${languageFiles.length} 个 Markdown 文档`)
 console.log(`Current Authority / locator 扫描：${currentFiles.length} 个 Markdown 文档`)
+console.log(`docs/** 当前文件头适用范围：${currentDocFiles.length} 个；YAML 文件头：${checkedHeaders} 个；ADR：${checkedAdrs} 个`)
 
 if (warnings.length) {
   console.log('\n警告：')
@@ -193,4 +278,4 @@ if (failures.length) {
   process.exit(1)
 }
 
-console.log('\nPASS：Current Markdown 满足中文主语言与本地引用完整性基线。')
+console.log('\nPASS：Current Markdown 满足文件头、ADR、中文主语言与本地引用完整性基线。')
