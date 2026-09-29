@@ -7,20 +7,17 @@ import com.jilinjobs.cms.page.PageMapper
 import com.jilinjobs.cms.page.PageRecord
 import com.jilinjobs.cms.page.PageRenderMode
 import com.jilinjobs.cms.page.PageService
+import com.jilinjobs.cms.resource.UploadContent
 import com.jilinjobs.cms.staticresource.StaticResourceNotFoundException
 import com.jilinjobs.cms.staticresource.StaticResourceService
-import java.io.File
-import java.io.InputStream
 import java.net.URI
 import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Path
-import java.nio.file.StandardCopyOption
 import java.security.MessageDigest
 import java.util.zip.ZipInputStream
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
-import org.springframework.web.multipart.MultipartFile
 import tools.jackson.databind.ObjectMapper
 
 private val PAGE_SHA256 = Regex("[0-9a-f]{64}")
@@ -282,7 +279,7 @@ class GenericPageImporter(
             if (existing == null) {
                 staticResourceService.upload(
                     target,
-                    PagePathMultipartFile(sourceFilename(resource), resource.contentType, loaded.file),
+                    UploadContent.fromPath(loaded.file, sourceFilename(resource), resource.contentType),
                     false,
                 )
             } else {
@@ -395,19 +392,4 @@ private fun sha256Path(path: Path): String = Files.newInputStream(path).use { in
         digest.update(buffer, 0, read)
     }
     digest.digest().joinToString("") { "%02x".format(it) }
-}
-
-private class PagePathMultipartFile(
-    private val originalFilename: String,
-    private val contentType: String?,
-    private val path: Path,
-) : MultipartFile {
-    override fun getName(): String = "file"
-    override fun getOriginalFilename(): String = originalFilename
-    override fun getContentType(): String? = contentType
-    override fun isEmpty(): Boolean = Files.size(path) == 0L
-    override fun getSize(): Long = Files.size(path)
-    override fun getBytes(): ByteArray = Files.readAllBytes(path)
-    override fun getInputStream(): InputStream = Files.newInputStream(path)
-    override fun transferTo(dest: File) { Files.copy(path, dest.toPath(), StandardCopyOption.REPLACE_EXISTING) }
 }

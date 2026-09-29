@@ -2,18 +2,19 @@ package com.jilinjobs.cms.staticresource
 
 import com.jilinjobs.cms.siteconfig.SiteConfigMapper
 import com.jilinjobs.cms.siteconfig.SiteConfigRecord
+import com.jilinjobs.cms.resource.UploadContent
 import java.io.ByteArrayInputStream
-import java.io.File
-import java.io.InputStream
 import java.nio.file.Files
 import java.nio.file.Path
+import java.util.concurrent.atomic.AtomicInteger
+import java.util.zip.ZipEntry
+import java.util.zip.ZipOutputStream
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.io.TempDir
-import org.springframework.web.multipart.MultipartFile
 
 class StaticResourceServiceTest {
     @TempDir lateinit var tempDir: Path
@@ -22,15 +23,46 @@ class StaticResourceServiceTest {
     @Test
     fun `rejects an image extension when file content is not the declared format`() {
         val service = service()
-        val error = assertThrows(StaticResourceValidationException::class.java) { service.upload("uploads/fake.png", BytesMultipartFile("fake.png", "plain text".toByteArray()), false) }
+        val error = assertThrows(StaticResourceValidationException::class.java) { service.upload("uploads/fake.png", bytesUpload("fake.png", "plain text".toByteArray()), false) }
         assertTrue(error.message!!.contains("实际内容"))
         assertFalse(Files.exists(tempDir.resolve("uploads/fake.png")))
     }
 
     @Test
+    fun `rejects an empty upload`() {
+        val error = assertThrows(StaticResourceValidationException::class.java) {
+            service().upload("uploads/empty.png", bytesUpload("empty.png", byteArrayOf()), false)
+        }
+        assertTrue(error.message!!.contains("不能为空"))
+        assertFalse(Files.exists(tempDir.resolve("uploads/empty.png")))
+    }
+
+    @Test
+    fun `reopens content for office signature and final copy`() {
+        val bytes = java.io.ByteArrayOutputStream().use { output ->
+            ZipOutputStream(output).use { zip ->
+                zip.putNextEntry(ZipEntry("word/document.xml"))
+                zip.write("<document/>".toByteArray())
+                zip.closeEntry()
+            }
+            output.toByteArray()
+        }
+        val opens = AtomicInteger()
+        val upload = UploadContent("sample.docx", "application/octet-stream", bytes.size.toLong()) {
+            opens.incrementAndGet()
+            ByteArrayInputStream(bytes)
+        }
+
+        service().upload("uploads/sample.docx", upload, false)
+
+        assertTrue(Files.readAllBytes(tempDir.resolve("uploads/sample.docx")).contentEquals(bytes))
+        assertEquals(3, opens.get())
+    }
+
+    @Test
     fun `accepts valid signature and keeps ordinary delete restore workflow`() {
         val service = service()
-        val uploaded = service.upload("uploads/real.png", BytesMultipartFile("real.png", png), false)
+        val uploaded = service.upload("uploads/real.png", bytesUpload("real.png", png), false)
         assertEquals("uploads/real.png", uploaded.path)
         assertFalse(uploaded.protectedResource)
         val removed = service.delete(uploaded.path)
@@ -71,7 +103,7 @@ class StaticResourceServiceTest {
         val mapper = StaticFakeSiteConfigMapper(property("LOGO_PATH", "/static/brand/logo.png", "RESOURCE_PATH"))
         val service = service(mapper)
         write("brand/logo.png", png)
-        val replaced = service.upload("brand/logo.png", BytesMultipartFile("logo.png", png + byteArrayOf(0x01)), true)
+        val replaced = service.upload("brand/logo.png", bytesUpload("logo.png", png + byteArrayOf(0x01)), true)
         assertTrue(replaced.protectedResource)
         assertTrue(Files.size(tempDir.resolve("brand/logo.png")) > png.size)
     }
@@ -95,6 +127,5 @@ private class StaticFakeSiteConfigMapper(vararg initial: SiteConfigRecord) : Sit
     override fun delete(key: String): Int = if(rows.remove(key)!=null)1 else 0
 }
 
-private class BytesMultipartFile(private val filename:String,private val data:ByteArray):MultipartFile{
-    override fun getName()="file";override fun getOriginalFilename()=filename;override fun getContentType():String?=null;override fun isEmpty()=data.isEmpty();override fun getSize()=data.size.toLong();override fun getBytes()=data;override fun getInputStream():InputStream=ByteArrayInputStream(data);override fun transferTo(dest:File){dest.parentFile?.mkdirs();dest.writeBytes(data)}
-}
+private fun bytesUpload(filename: String, data: ByteArray) =
+    UploadContent(filename, null, data.size.toLong()) { ByteArrayInputStream(data) }

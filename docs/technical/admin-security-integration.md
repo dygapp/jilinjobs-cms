@@ -92,7 +92,7 @@ Public 边界以下 17 个当前 GET 投影保持匿名可读；它们不获得 
 
 其他 HTTP 方法和未分类路径不因属于 `/api/public/**` 或 `/static/**` 而自动开放。管理端的资源预览 `GET /api/admin/resources/{id}/content` 仍需管理身份，公开正文中的图片须由 Public projection 转为公开资源 URL，不能依赖 Admin 路径。
 
-Content Migration 是独立 non-web application，不经过 Admin HTTP 身份，也不伪造管理主体；其既有受控导入、报告和 Core Domain 约束继续适用。授权切点位于 Server 的管理入口，不能通过给 shared Core service 添加请求身份依赖或角色注解来封锁 Migration。进入方法授权实施前，应使当前落在 Core 的 HTTP Controller 和 multipart transport 依赖回到 Server 接缝；不能因为类所在模块或 URL 前缀推测该入口已经安全。
+Content Migration 是独立 non-web application，不经过 Admin HTTP 身份，也不伪造管理主体；其既有受控导入、报告和 Core Domain 约束继续适用。授权切点位于 Server 的管理入口，不能通过给 shared Core service 添加请求身份依赖或角色注解来封锁 Migration。Core 中原有 HTTP Controller 已归位 Server，Core / Migration 的上传输入已退出 multipart transport 依赖；后续方法授权仍须按 Server 实际注册路由逐一核对，不能因为类所在模块或 URL 前缀推测该入口已经安全。
 
 矩阵的覆盖验证以 Server 实际注册的全部 handler method 与 HTTP contract 双向比对：每条 Admin 映射恰好归入一行，新增或迁移入口不得漏出；现有 13 个业务族的读、写及资源特殊动作分别验证匿名、无允许角色、`admin`、`super` 的结果，另验证过期身份、业务校验失败与无副作用拒绝。Public GET 与 `/static/**` 回归匿名读取和 Admin 数据隔离；Migration 以 non-web 启动及无 Server HTTP transport 依赖验证。此处的目标矩阵不构成当前 Runtime 已受保护的证据。
 

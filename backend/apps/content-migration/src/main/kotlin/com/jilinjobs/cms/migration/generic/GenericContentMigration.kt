@@ -14,22 +14,19 @@ import com.jilinjobs.cms.migration.ArticleLegacyMappingRecord
 import com.jilinjobs.cms.migration.CmsListItemLegacyMappingMapper
 import com.jilinjobs.cms.migration.CmsListItemLegacyMappingRecord
 import com.jilinjobs.cms.resource.ResourceService
+import com.jilinjobs.cms.resource.UploadContent
 import com.jilinjobs.cms.staticresource.StaticResourceNotFoundException
 import com.jilinjobs.cms.staticresource.StaticResourceService
-import java.io.File
-import java.io.InputStream
 import java.net.URI
 import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Path
-import java.nio.file.StandardCopyOption
 import java.security.MessageDigest
 import java.time.LocalDate
 import org.springframework.boot.WebApplicationType
 import org.springframework.boot.builder.SpringApplicationBuilder
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
-import org.springframework.web.multipart.MultipartFile
 import tools.jackson.databind.ObjectMapper
 
 private val SHA256 = Regex("[0-9a-f]{64}")
@@ -585,7 +582,7 @@ class GenericArticleImporter(
         var bodyHtml = record.content.bodyHtml
         plan.loaded.resources.forEach { loaded ->
             val resource = loaded.canonical
-            val uploaded = resourceService.upload(PathMultipartFile(sourceFilename(resource.sourceUrl, resource.sha256, resource.snapshotPath), resource.contentType, loaded.file))
+            val uploaded = resourceService.upload(UploadContent.fromPath(loaded.file, sourceFilename(resource.sourceUrl, resource.sha256, resource.snapshotPath), resource.contentType))
             when (resource.role) {
                 "BODY_IMAGE" -> {
                     bodyImages += uploaded.id
@@ -669,7 +666,7 @@ class GenericListItemImporter(
                     if (existing == null) {
                         staticResourceService.upload(
                             target,
-                            PathMultipartFile(sourceFilename(image.canonical.sourceUrl, image.canonical.sha256, image.canonical.snapshotPath), image.canonical.contentType, image.file),
+                            UploadContent.fromPath(image.file, sourceFilename(image.canonical.sourceUrl, image.canonical.sha256, image.canonical.snapshotPath), image.canonical.contentType),
                             false,
                         )
                     } else {
@@ -679,7 +676,7 @@ class GenericListItemImporter(
                 }
                 CmsListItemSourceType.ARTICLE -> {
                     imageResourceId = resourceService.upload(
-                        PathMultipartFile(sourceFilename(image.canonical.sourceUrl, image.canonical.sha256, image.canonical.snapshotPath), image.canonical.contentType, image.file),
+                        UploadContent.fromPath(image.file, sourceFilename(image.canonical.sourceUrl, image.canonical.sha256, image.canonical.snapshotPath), image.canonical.contentType),
                     ).id
                 }
             }
@@ -866,19 +863,4 @@ private fun sourceFilename(sourceUrl: String, sha: String, snapshotPath: String)
     val fromUrl = runCatching { Path.of(URI(sourceUrl).path).fileName?.toString() }.getOrNull().orEmpty()
     val fromSnapshot = runCatching { Path.of(snapshotPath).fileName?.toString() }.getOrNull().orEmpty()
     return fromUrl.ifBlank { fromSnapshot }.ifBlank { "$sha.bin" }.takeLast(255)
-}
-
-private class PathMultipartFile(
-    private val originalFilename: String,
-    private val contentType: String?,
-    private val path: Path,
-) : MultipartFile {
-    override fun getName(): String = "file"
-    override fun getOriginalFilename(): String = originalFilename
-    override fun getContentType(): String? = contentType
-    override fun isEmpty(): Boolean = Files.size(path) == 0L
-    override fun getSize(): Long = Files.size(path)
-    override fun getBytes(): ByteArray = Files.readAllBytes(path)
-    override fun getInputStream(): InputStream = Files.newInputStream(path)
-    override fun transferTo(dest: File) { Files.copy(path, dest.toPath(), StandardCopyOption.REPLACE_EXISTING) }
 }

@@ -4,6 +4,7 @@ import com.jilinjobs.cms.advertisement.AdvertisementMapper
 import com.jilinjobs.cms.listing.CmsListMapper
 import com.jilinjobs.cms.navigation.NavigationMapper
 import com.jilinjobs.cms.provisioning.SitePackageAssetCatalog
+import com.jilinjobs.cms.resource.UploadContent
 import com.jilinjobs.cms.siteconfig.SiteConfigMapper
 import java.nio.charset.StandardCharsets
 import java.nio.file.*
@@ -12,7 +13,6 @@ import java.util.UUID
 import java.util.zip.ZipInputStream
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
-import org.springframework.web.multipart.MultipartFile
 
 data class StaticEntry(
     val path: String,
@@ -60,7 +60,7 @@ class StaticResourceService(
         }
     }
 
-    fun upload(path: String, file: MultipartFile, replace: Boolean): StaticEntry {
+    fun upload(path: String, file: UploadContent, replace: Boolean): StaticEntry {
         if (file.isEmpty) throw StaticResourceValidationException("上传文件不能为空")
         val relative = normalizeFile(path)
         val ext = checkExtension(relative)
@@ -115,7 +115,7 @@ class StaticResourceService(
         return ext
     }
 
-    private fun validateContent(ext: String, file: MultipartFile) {
+    private fun validateContent(ext: String, file: UploadContent) {
         val header = file.inputStream.use { it.readNBytes(16) }
         val matches = when (ext) {
             "png" -> header.startsWith(byteArrayOf(0x89.toByte(), 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a))
@@ -132,7 +132,7 @@ class StaticResourceService(
         if (!matches) throw StaticResourceValidationException("文件实际内容与 .$ext 扩展名不匹配")
     }
 
-    private fun isOfficeOpenXml(file: MultipartFile, requiredPrefix: String): Boolean = runCatching {
+    private fun isOfficeOpenXml(file: UploadContent, requiredPrefix: String): Boolean = runCatching {
         ZipInputStream(file.inputStream).use { zip ->
             var item = zip.nextEntry
             while (item != null) {

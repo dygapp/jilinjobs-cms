@@ -3,14 +3,13 @@ package com.jilinjobs.cms.resource
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
 import org.springframework.stereotype.Service
-import org.springframework.web.multipart.MultipartFile
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
 import java.util.UUID
 
 interface FileStorage {
-    fun store(file: MultipartFile): StoredFile
+    fun store(file: UploadContent): StoredFile
 
     fun resolve(storageKey: String): Path
 
@@ -28,13 +27,22 @@ class LocalFileStorage(
 ) : FileStorage {
     private val root: Path = Paths.get(storageRoot).toAbsolutePath().normalize().also { Files.createDirectories(it) }
 
-    override fun store(file: MultipartFile): StoredFile {
+    override fun store(file: UploadContent): StoredFile {
         val storageKey = UUID.randomUUID().toString()
         val target = safePath(storageKey)
-        file.inputStream.use { input ->
-            Files.copy(input, target)
+        try {
+            file.inputStream.use { input ->
+                Files.copy(input, target)
+            }
+            return StoredFile(storageKey, Files.size(target))
+        } catch (failure: Exception) {
+            try {
+                Files.deleteIfExists(target)
+            } catch (cleanup: Exception) {
+                failure.addSuppressed(cleanup)
+            }
+            throw failure
         }
-        return StoredFile(storageKey, Files.size(target))
     }
 
     override fun resolve(storageKey: String): Path = safePath(storageKey)
@@ -57,7 +65,7 @@ class ResourceService(
     private val repository: ResourceRepository,
     private val storage: FileStorage,
 ) : ArticleResourceAssociation {
-    fun upload(file: MultipartFile): CmsResource {
+    fun upload(file: UploadContent): CmsResource {
         if (file.isEmpty) {
             throw ResourceValidationException("上传文件不能为空")
         }

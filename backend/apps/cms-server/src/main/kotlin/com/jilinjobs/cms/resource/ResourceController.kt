@@ -22,7 +22,7 @@ class ResourceController(
 ) {
     @PostMapping(consumes = [MediaType.MULTIPART_FORM_DATA_VALUE])
     fun upload(@RequestParam("file") file: MultipartFile): ResponseEntity<CmsResource> =
-        ResponseEntity.status(HttpStatus.CREATED).body(service.upload(file))
+        ResponseEntity.status(HttpStatus.CREATED).body(service.upload(file.toUploadContent()))
 
     @GetMapping("/{id}")
     fun get(@PathVariable id: Long): CmsResource = service.get(id)

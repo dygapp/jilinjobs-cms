@@ -6,10 +6,6 @@ import org.apache.ibatis.annotations.Param
 import org.apache.ibatis.annotations.Select
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
 
 data class PublicAdvertisementQueryRow(
     var slotId: Long = 0,
@@ -76,10 +72,4 @@ class PublicAdvertisementQueryService(private val mapper: PublicAdvertisementQue
             },
         )
     }
-}
-
-@RestController
-@RequestMapping("/api/public/advertisements")
-class PublicAdvertisementQueryController(private val service: PublicAdvertisementQueryService) {
-    @GetMapping("/slots/{code}") fun byCode(@PathVariable code: String) = service.byCode(code)
 }

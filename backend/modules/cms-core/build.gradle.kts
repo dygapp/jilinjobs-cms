@@ -14,7 +14,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot")
     implementation("org.springframework.boot:spring-boot-autoconfigure")
     implementation("org.springframework.boot:spring-boot-starter-flyway")
-    implementation("org.springframework:spring-web")
     implementation("org.springframework:spring-jdbc")
     implementation("org.springframework:spring-tx")
     implementation("jakarta.validation:jakarta.validation-api")

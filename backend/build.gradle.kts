@@ -156,9 +156,29 @@ tasks.register<JavaExec>("verifyGenericListItemCompatibility") {
 
 tasks.register("verifyBackendApplicationBoundary") {
     group = "verification"
-    description = "Inspect packaged Server and Migration BootJars for EU-46 application ownership boundaries"
+    description = "Inspect Server/Core/Migration source responsibilities and packaged application boundaries"
     dependsOn(":apps:cms-server:bootJar", ":apps:content-migration:bootJar")
     doLast {
+        fun transportReferences(root: java.io.File, forbidden: List<String>): List<String> =
+            root.walkTopDown()
+                .filter { it.isFile && it.extension in setOf("kt", "java") }
+                .flatMap { file ->
+                    val source = file.readText()
+                    forbidden.filter(source::contains).map { token -> "${file.relativeTo(root)}: $token" }
+                }
+                .toList()
+
+        val coreTransport = transportReferences(
+            project(":modules:cms-core").file("src/main"),
+            listOf("org.springframework.web.", "org.springframework.http.", "jakarta.servlet.", "@RestController", "MultipartFile"),
+        )
+        require(coreTransport.isEmpty()) { "Core contains HTTP transport responsibility: $coreTransport" }
+        val migrationTransport = transportReferences(
+            migrationProject.file("src/main"),
+            listOf("org.springframework.web.", "org.springframework.http.", "jakarta.servlet.", "@RestController", "MultipartFile"),
+        )
+        require(migrationTransport.isEmpty()) { "Migration contains HTTP transport responsibility: $migrationTransport" }
+
         val serverJar = layout.buildDirectory.file("libs/jilinjobs-cms-backend-0.1.0-SNAPSHOT.jar").get().asFile
         val migrationJar = migrationProject.layout.buildDirectory.file("libs/jilinjobs-cms-content-migration-0.1.0-SNAPSHOT.jar").get().asFile
         require(serverJar.isFile) { "Server BootJar missing: $serverJar" }
@@ -179,8 +199,16 @@ tasks.register("verifyBackendApplicationBoundary") {
         require(serverEntries.none {
             it.startsWith("BOOT-INF/classes/com/jilinjobs/cms/identity/Test")
         }) { "Server BootJar contains test identity adapter or configuration" }
+        listOf(
+            "BOOT-INF/classes/com/jilinjobs/cms/navigation/AdminNavigationLocationController.class",
+            "BOOT-INF/classes/com/jilinjobs/cms/listing/PublicCmsListQueryController.class",
+            "BOOT-INF/classes/com/jilinjobs/cms/advertisement/PublicAdvertisementQueryController.class",
+        ).forEach { require(it in serverEntries) { "Server transport class missing: $it" } }
 
         val migrationEntries = jarEntries(migrationJar)
+        require(migrationEntries.none { it.startsWith("BOOT-INF/lib/spring-web-") || it.startsWith("BOOT-INF/lib/spring-webmvc-") }) {
+            "Non-web Migration BootJar contains Spring Web transport dependency"
+        }
         require("BOOT-INF/classes/com/jilinjobs/cms/ContentMigrationApplication.class" in migrationEntries) { "Migration application class missing" }
         require(migrationEntries.any { it.startsWith("BOOT-INF/classes/com/jilinjobs/cms/migration/generic/GenericContentMigration") }) {
             "Migration BootJar is missing Generic content migration classes"

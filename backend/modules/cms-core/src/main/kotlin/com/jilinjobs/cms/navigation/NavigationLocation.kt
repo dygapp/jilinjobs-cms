@@ -1,14 +1,8 @@
 package com.jilinjobs.cms.navigation
 
-import jakarta.validation.Valid
-import jakarta.validation.constraints.NotBlank
-import jakarta.validation.constraints.Size
 import org.apache.ibatis.annotations.*
-import org.springframework.http.HttpStatus
-import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
-import org.springframework.web.bind.annotation.*
 
 data class NavigationLocation(val id:Long,val code:String,val name:String,val description:String,val sortOrder:Int,val enabled:Boolean,val system:Boolean,val preset:Boolean=false)
 data class NavigationLocationDraft(val code:String,val name:String,val description:String="",val sortOrder:Int=0,val enabled:Boolean=true,val system:Boolean=false)
@@ -35,9 +29,3 @@ class NavigationLocationService(private val mapper:NavigationLocationMapper,priv
  private fun NavigationLocationDraft.record()=NavigationLocationRecord(code=code,name=name,description=description,sortOrder=sortOrder,enabled=enabled,systemFlag=system)
  private fun NavigationLocationRecord.model()=NavigationLocation(requireNotNull(id),code,name,description,sortOrder,enabled,systemFlag,preset)
 }
-
-@RestController @RequestMapping("/api/admin/navigation-locations")
-class AdminNavigationLocationController(private val service:NavigationLocationService){
- @GetMapping fun list()=service.list();@PostMapping fun create(@Valid @RequestBody r:SaveNavigationLocationRequest)=ResponseEntity.status(HttpStatus.CREATED).body(service.create(r.draft()));@PutMapping("/{code}") fun update(@PathVariable code:String,@Valid @RequestBody r:SaveNavigationLocationRequest)=service.update(code,r.draft());@DeleteMapping("/{code}") fun delete(@PathVariable code:String):ResponseEntity<Void>{service.delete(code);return ResponseEntity.noContent().build()}
-}
-data class SaveNavigationLocationRequest(@field:NotBlank @field:Size(max=50) val code:String,@field:NotBlank @field:Size(max=100) val name:String,@field:Size(max=255) val description:String="",val sortOrder:Int=0,val enabled:Boolean=true,val system:Boolean=false){fun draft()=NavigationLocationDraft(code,name,description,sortOrder,enabled,system)}

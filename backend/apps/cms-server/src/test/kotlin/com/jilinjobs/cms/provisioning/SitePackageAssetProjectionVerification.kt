@@ -1,16 +1,14 @@
 package com.jilinjobs.cms.provisioning
 
 import com.jilinjobs.cms.CmsApplication
+import com.jilinjobs.cms.resource.UploadContent
 import com.jilinjobs.cms.staticresource.StaticResourceService
 import com.jilinjobs.cms.staticresource.StaticResourceValidationException
 import org.flywaydb.core.Flyway
 import org.springframework.boot.WebApplicationType
 import org.springframework.boot.builder.SpringApplicationBuilder
-import org.springframework.web.multipart.MultipartFile
 import tools.jackson.databind.ObjectMapper
 import java.io.ByteArrayInputStream
-import java.io.File
-import java.io.InputStream
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.StandardCopyOption
@@ -53,12 +51,12 @@ fun main() {
 
         val original = Files.readAllBytes(staticRoot.resolve("health/baseline.png"))
         replacement = original + byteArrayOf(0x01)
-        val replaced = service.upload("health/baseline.png", AssetBytesMultipartFile("baseline.png", replacement), true)
+        val replaced = service.upload("health/baseline.png", assetBytesUpload("baseline.png", replacement), true)
         require(replaced.protectedResource)
         require(Files.readAllBytes(staticRoot.resolve("health/baseline.png")).contentEquals(replacement))
 
         uploadBytes = original + byteArrayOf(0x02)
-        val uploaded = service.upload("uploads/operator.png", AssetBytesMultipartFile("operator.png", uploadBytes), false)
+        val uploaded = service.upload("uploads/operator.png", assetBytesUpload("operator.png", uploadBytes), false)
         require(!uploaded.protectedResource)
 
         val projector = first.getBean(SitePackageAssetProjector::class.java)
@@ -164,13 +162,5 @@ private fun expectAssetValidation(label: String, action: () -> Unit) {
 private fun requireAssetEnv(name: String): String = System.getenv(name)?.takeIf { it.isNotBlank() }
     ?: error("缺少验证环境变量：$name")
 
-private class AssetBytesMultipartFile(private val filename: String, private val data: ByteArray) : MultipartFile {
-    override fun getName() = "file"
-    override fun getOriginalFilename() = filename
-    override fun getContentType(): String? = null
-    override fun isEmpty() = data.isEmpty()
-    override fun getSize() = data.size.toLong()
-    override fun getBytes() = data
-    override fun getInputStream(): InputStream = ByteArrayInputStream(data)
-    override fun transferTo(dest: File) { dest.parentFile?.mkdirs(); dest.writeBytes(data) }
-}
+private fun assetBytesUpload(filename: String, data: ByteArray) =
+    UploadContent(filename, null, data.size.toLong()) { ByteArrayInputStream(data) }
