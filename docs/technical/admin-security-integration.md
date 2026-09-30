@@ -19,7 +19,7 @@ updated_at: 2026-09-30
 
 ## 责任与实施状态
 
-本文拥有第一版目标实现中跨 Admin API、身份来源和审计持续一致的技术接缝。当前 Server 已有统一主体、凭证验证器接缝、受信角色转换、Spring Security 请求 / 方法授权、管理写操作审计产生和持久化，以及与写入 contract 分离的 `super` 专属审计查询；没有正式身份提供方时 Admin fail closed。隔离 Review 身份只进入独立 Review source set / BootJar，正式 Server 产物不包含该入口。正式身份提供方和全局管理端身份反馈仍未实现。角色的业务权限归属由 Requirement 持有，用户可观察结果由 Specification 持有，长期结构与框架选型由 Architecture / ADR 持有。下方矩阵只拥有访问与业务审计分类；HTTP 路径、方法及 wire compatibility 的唯一 owner 仍是 `docs/technical/http-interface-contract.md`，本文不复制其响应结构、Controller、SQL 或 Gradle dependency。
+本文拥有第一版目标实现中跨 Admin API、身份来源、前端身份反馈和审计持续一致的技术接缝。当前 Server 已有统一主体、凭证验证器接缝、受信角色转换、Spring Security 请求 / 方法授权、管理写操作审计产生和持久化，以及与写入 contract 分离的 `super` 专属审计查询；没有正式身份提供方时 Admin fail closed。隔离 Review 身份只进入独立 Review source set / BootJar，正式 Server 产物不包含该入口。正式身份提供方仍未实现；全局管理端身份反馈与可操作 Review 登录按当前执行单元实现。角色的业务权限归属由 Requirement 持有，用户可观察结果由 Specification 持有，长期结构与框架选型由 Architecture / ADR 持有。下方矩阵只拥有访问与业务审计分类；HTTP 路径、方法及 wire compatibility 的唯一 owner 仍是 `docs/technical/http-interface-contract.md`，本文不复制其响应结构、Controller、SQL 或 Gradle dependency。
 
 ## 身份转换
 
@@ -28,6 +28,10 @@ updated_at: 2026-09-30
 Spring Security 的 `Authentication` 可承载该主体和映射后的 authorities。应用业务审计只消费 `CmsPrincipal`，不持有外部令牌或用户详情。身份验证方式按实际宿主协议选择：标准 OIDC / JWT 使用对应 Spring Security 能力，专有平台协议在认证适配器内验证；若独立网站未配置真实提供方，正式管理功能不得启动为匿名可写模式。
 
 测试 / Review 身份提供方与其入口只在隔离的测试或 Review 构建中装配。生产配置和正式 BootJar 不包含可启用的模拟凭证默认值，并在没有正式身份适配器时失败关闭。不得使用 Spring Boot 默认随机用户、硬编码超级用户或客户端指定角色来替代测试身份协议。
+
+隔离 Review Browser 登录使用 Server 控制的固定 `admin` / `super` profile 创建内存短期会话。Browser 只提交稳定 profile token，不能提交 user ID、identity source 或角色集合；Server 返回随机 opaque credential，Frontend 仅在当前 tab 的 `sessionStorage` 保存并通过 `X-Cms-Review-Credential` 发送。会话有受控到期时间，退出 / 主动模拟失效立即从 Server registry 删除。Runtime restart 清空全部短期会话；该 registry 不构成账号库、正式 session store 或生产身份实现。
+
+Review 自动化 credential 与人工短期会话由同一 Review verifier 转换为 `CmsPrincipal`，但必须分别支持 `admin` 和 `super`，不能继续依赖代理层为所有 Browser 请求静默注入单一超级身份。Review runtime marker 只控制 Admin 是否展示测试入口，不构成 Backend 信任；正式 Server 即使收到 marker 或 Review Header 也仍然失败关闭。
 
 当前基础接缝由受信的 Server verifier 返回已验证用户 ID 和外部角色；来源标识取自该 verifier，而不是请求提供的来源值。Server 按来源使用受控角色映射，缺少映射、存在未知角色或没有允许角色时拒绝主体构建。隔离测试 verifier 与 Review HTTP 适配分别位于 test / review source set，正式 Server 产物不包含它们；正式适配器尚未接入时，普通 Admin HTTP 请求保持未认证并返回 `401`。
 
@@ -38,6 +42,8 @@ Spring Security 的 `Authentication` 可承载该主体和映射后的 authoriti
 第一版 `admin` 覆盖现有全部 CMS 管理业务，`super` 继承这些能力并可查询审计。角色授予只决定是否可尝试操作，不跳过 Core 的 Domain 校验。授权切点应位于 Server 的 Admin application / transport 边界；Content Migration 命令调用 shared Core 时不需要伪造 HTTP 用户或绕过 Security 注解。
 
 管理端 Browser route 防护与菜单可见性只反映后端结果，不承担最终授权。管理 API 未认证与已认证无权限分别形成 `401` / `403`；审计查询接口的 HTTP 路径与响应契约由 `docs/technical/http-interface-contract.md` 正式拥有，本文只约束其安全与集成接缝。
+
+Admin Frontend 使用单一状态化身份边界和共享 Admin HTTP adapter：启动时先查询当前可信主体，成功后才挂载管理工作区；任一 Admin 请求 `401` 都清除 Review 短期 credential 并切换为未认证 / 已失效状态，`403` 保留当前主体并发布统一禁止访问反馈。所有既有 JSON、multipart、binary Admin adapter 都必须经过该边界；Public 请求不附带 Review credential，也不被 Admin 身份状态拦截。导航依据 Server 返回的 CMS role 裁剪，但 direct route 和 API 继续依赖 Server 授权。
 
 ## 接口权限矩阵（第一版目标）
 

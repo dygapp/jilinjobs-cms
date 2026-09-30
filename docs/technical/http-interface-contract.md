@@ -68,6 +68,7 @@ JSON contract 基线：
 
 | Capability | Current HTTP surface |
 |---|---|
+| AdminIdentity | `GET /api/admin/identity` |
 | Column | `GET/POST /api/admin/columns`；`PUT/DELETE /api/admin/columns/{id}` |
 | Article | `GET/POST /api/admin/articles`；`GET/PUT /api/admin/articles/{id}`；`POST /api/admin/articles/{id}/publish`；`POST /api/admin/articles/{id}/withdraw` |
 | NavigationLocation | `GET/POST /api/admin/navigation-locations`；`PUT/DELETE /api/admin/navigation-locations/{code}` |
@@ -82,6 +83,17 @@ JSON contract 基线：
 | Managed Resource | `POST /api/admin/resources` multipart field `file`；`GET /api/admin/resources/{id}`；`GET /api/admin/resources/{id}/content` |
 | StaticResource | `GET /api/admin/static-resources?path=...`；`POST /api/admin/static-resources?path=...&replace=...` multipart field `file`；`DELETE /api/admin/static-resources?path=...`；`GET /api/admin/static-resources/trash`；`POST /api/admin/static-resources/restore/{id}` |
 | AdminAuditEvent | `GET /api/admin/audit-events`；`GET /api/admin/audit-events/{auditId}`（仅 `super`） |
+
+`GET /api/admin/identity` 返回当前经过验证并完成 CMS 角色转换的 `AdminIdentity { identitySource, userId, roles }`。`roles` 只包含稳定 CMS role token `admin | super`，顺序确定；该 endpoint 允许 `admin`、`super`，匿名 / 失效凭证为 `401`，没有允许角色为 `403`。它不返回外部凭证、用户详情或角色映射配置，也不产生业务写操作审计。
+
+隔离 Review Server 额外提供非正式部署 contract：
+
+- `POST /api/review/identity/sessions` 接受 `{ profile: "admin" | "super" }`，由 Server 选择固定测试主体并返回短期 opaque credential、到期时间及对应 `AdminIdentity`；请求不能指定 identity source、user ID 或 role 集合；
+- `DELETE /api/review/identity/sessions/current` 使 `X-Cms-Review-Credential` 指向的当前短期会话退出，幂等返回无正文成功；
+- `POST /api/review/identity/sessions/current/expire` 主动使当前短期会话失效，用于人工 / Browser 验证运行中身份过期；
+- 自动化仍可使用由 Review Runtime 显式配置的 `admin` / `super` credential；短期会话与自动化 credential 都只由 Review verifier 接受。
+
+上述 `/api/review/**` surface、测试 verifier 和预置主体只存在于独立 Review source set / BootJar。正式 Server 不实现它们，且对 `X-Cms-Review-Credential` 不形成管理身份。Review Browser Runtime 通过独立 runtime marker 启用测试登录展示；缺少该 marker 时 Admin 只呈现正式身份未认证反馈，不猜测 Review 能力。
 
 Article list query 支持当前 Admin filtering / paging contract：`keyword`、`columnId`、`status`、`articleType`、`page`、`size`；未指定 page / size 时保持零基页码与当前默认 page size 语义。
 

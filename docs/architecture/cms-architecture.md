@@ -374,7 +374,7 @@ Admin 与 Public 可以消费同一 Domain，但 contract responsibility不同�
 
 当前 CMS Server 已建立统一可信主体、Spring Security Admin 请求边界和方法级角色授权；没有正式身份适配器时 Admin 默认失败关闭，Public contract 与静态公开资源继续保持匿名读取。Generic Core 不依赖 HTTP 用户或特定宿主后台，Content Migration 不伪造管理请求身份。
 
-CMS Server 已按 `docs/requirements/cms-admin-identity-and-audit.md` 与 ADR-0005 建立管理写操作审计产生和持久化，可信主体、动作、对象定位与提交 / 失败 / 回滚结果由 Server 审计边界采集；`super` 可通过独立只读 contract、稳定 cursor 与受限投影查询历史审计，查询本身不进入业务写审计。真实宿主身份和全局管理端身份反馈仍属于独立后续能力。隔离 Review 身份只用于自动化 / 人工评审构建，不能替代独立网站或外部管理平台的正式登录。preset protection、immutable identity、resource safety 等仍属于 domain/data integrity，`admin` / `super` 也不得绕过这些业务不变量。
+CMS Server 已按 `docs/requirements/cms-admin-identity-and-audit.md` 与 ADR-0005 建立管理写操作审计产生和持久化，可信主体、动作、对象定位与提交 / 失败 / 回滚结果由 Server 审计边界采集；`super` 可通过独立只读 contract、稳定 cursor 与受限投影查询历史审计，查询本身不进入业务写审计。真实宿主身份仍属于独立后续能力。Admin Application 通过统一身份状态与请求边界消费 Server 认证结果；隔离 Review 构建可以提供人工 / 自动化使用的短期模拟会话，但其端点、验证器和预置主体不得进入正式 Server，且不能替代独立网站或外部管理平台的正式登录。preset protection、immutable identity、resource safety 等仍属于 domain/data integrity，`admin` / `super` 也不得绕过这些业务不变量。
 
 ## 14. 验证架构
 
