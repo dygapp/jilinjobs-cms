@@ -15,7 +15,7 @@ docs/architecture/ 只保存 jilinjobs-cms 自己长期需要的 Architecture Co
 Architecture 文档不得：
 
 - 成为第二份 Product / Domain Requirement；
-- 保存 Current Ready Execution Unit、PR / Actions 等高频状态；
+- 保存具体 Execution Unit lifecycle、PR / Actions 等高频状态；
 - 长期复制 migration file list、resource counts 或可从 implementation 唯一恢复的 inventory；
 - 通过技术便利发明新的产品事实；
 - 复制 agentic-dev Provider 的 Method / Rule / Capability architecture。

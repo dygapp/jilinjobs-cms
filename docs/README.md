@@ -25,7 +25,7 @@
 | Durable planning direction | docs/project/project-roadmap.md |
 | 稳定演进摘要 | docs/project/project-evolution.md |
 | agentic-dev adopted version / provenance | docs/project/agentic-dev.md |
-| 正式 active Execution Unit locator | docs/work/current/README.md |
+| 正式 Execution Unit lifecycle | docs/work/README.md + docs/work/*.md 文件头 |
 | Consumer-local 横切约束 | docs/governance/constraints.md |
 | Git Commit 规范 | docs/governance/git-commit-conventions.md |
 | Frontend path-scoped constraints | frontend/AGENTS.md |
@@ -53,7 +53,7 @@ Requirement Index 只拥有 locator / relation；长期 Product / Domain 事实�
 
 ### 正式 Execution Unit
 
-读取 docs/work/README.md 与 docs/work/current/README.md，并重新核验任务相关 Open Branch / PR / Actions。NONE 只表示没有正式 active Unit。
+读取 docs/work/README.md，扫描 docs/work/*.md（排除 README.md）并按文件头状态定位当前相关 Unit，再重新核验任务相关 Open Branch / PR / Actions。没有非终态 Unit 只表示当前没有正式 active Unit。
 
 ### agentic-dev 使用 / 升级
 

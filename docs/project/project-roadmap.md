@@ -10,7 +10,7 @@ status: active
 
 本 Roadmap 只维护 `jilinjobs-cms` 的**当前治理 / 产品演进方向、durable planning boundary 与 deferred direction**。它不拥有产品 Requirement、Domain、Architecture 正文，不保存已完成 Execution Unit 的实施流水，也不缓存 `Current Ready Execution Unit`、Readiness、exact Head、Actions 结果或可由其他 规范语义所有者 唯一恢复的数据 inventory。
 
-当前执行生命周期 统一从 `docs/work/current/README.md` 恢复；已完成里程碑的稳定摘要由 `docs/project/project-evolution.md` 持有；具体历史 Evidence 留在 Git / Issue / PR / Actions、`docs/work/archive/` 与各类 archive。
+正式 Execution Unit 生命周期统一从 `docs/work/README.md` 与 `docs/work/*.md` 文件头恢复；已完成里程碑的稳定摘要由 `docs/project/project-evolution.md` 持有；具体历史 Evidence 留在 Git / Issue / PR / Actions、近期 working set 与 `docs/work/archive/` 等历史材料中。
 
 Roadmap 顺序、Issue 编号或候选名称均不授予 执行授权。Feature 只有经过当前 Method 的 Specification / conditional Technical Planning / Slice & Ready / Readiness Gate 后才能进入 Execute。
 

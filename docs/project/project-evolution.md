@@ -125,7 +125,7 @@ Consumer runtime 收敛为薄 AGENTS.md、Consumer-owned Authority / constraints
 
 ## 追溯入口
 
-- completed Execution Units：`docs/work/archive/`；
+- completed Execution Units：近期记录可保留在 `docs/work/*.md`，冷历史位于 `docs/work/archive/`；
 - completed project planning / baseline upgrade / validation records：`docs/project/archive/`；
 - Main / Party canonical migration evidence：`data-migrations/**`；
 - detailed commit / PR / review / workflow evidence：GitHub native history；

@@ -12,7 +12,7 @@ dygapp/jilinjobs-cms 是吉林省智慧就业云平台“信息发布与网站�
 
 1. 明确定位当前 jilinjobs-cms Repository / Runtime，并读取本文件；
 2. 读取 docs/README.md，按当前任务找到最小必要的 Current Authority；
-3. 只有任务涉及正在进行的正式工作时，才读取 docs/work/current/README.md 并重新核验相关 Branch / PR / Actions；
+3. 只有任务涉及正在进行的正式工作时，才读取 docs/work/README.md，并扫描 docs/work/*.md（排除 README.md）文件头恢复相关 Execution Unit，再重新核验相关 Branch / PR / Actions；
 4. 需要通用执行 procedure 时，通过宿主原生 Agent Skills discovery 使用 .agents/skills/**；
 5. 读取当前任务实际适用的 Consumer-local constraints：全局入口为 docs/governance/constraints.md，path-scoped 约束由对应 subtree 的 AGENTS.md 持有；
 6. 只有当前任务是 agentic-dev adoption / upgrade，或明确需要方法论导航时，才读取 docs/project/agentic-dev.md 指向的 exact-version Guide；
@@ -33,7 +33,7 @@ dygapp/jilinjobs-cms 是吉林省智慧就业云平台“信息发布与网站�
 - docs/technical/**：长期 implementation / interface / verification contract；
 - docs/project/project-roadmap.md：durable planning direction；
 - docs/project/project-evolution.md：稳定历史摘要；
-- docs/work/current/README.md：仅在使用正式 Execution Unit 时定位当前 active work；
+- docs/work/*.md：正式 Execution Unit working set；Unit 文件头拥有执行生命周期状态，docs/work/archive/** 只承担历史冷存储；
 - Code / Tests / Runtime：证明当前实现状态，不反向发明 Product Requirement；
 - GitHub Branch / PR / Issue / Actions：拥有各自原生瞬时状态，不取代长期 Repository Authority。
 
@@ -55,7 +55,7 @@ Consumer runtime 只安装 .agents/skills/**。普通工作：
 
 目标、Scope、Acceptance 与适用 Authority 已清楚，且修改局部、低风险、可逆时，可以直接实施并按影响范围验证；不因为修改代码或文档就机械创建 Method artifact、Execution Unit 或 Gate。
 
-只有工作确实需要独立恢复、依赖协调或独立验收生命周期时，才形成正式 Execution Unit。docs/work/current/README.md 为 NONE 只表示当前没有正式 active Unit，不阻止用户明确授权的新工作或有界直接变更。
+只有工作确实需要独立恢复、依赖协调或独立验收生命周期时，才形成正式 Execution Unit。没有非终态 docs/work/*.md 只表示当前没有正式 active Unit，不阻止用户明确授权的新工作或有界直接变更。
 
 ## 本地开发分支与集成
 

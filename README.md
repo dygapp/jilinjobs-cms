@@ -53,7 +53,7 @@ Provider Guides 只在需要方法论导航时按 exact tag 定向读取；普�
 - docs/guides/：面向人的操作指南，不复制 Requirement / Technical Authority；
 - docs/technical/：Implementation / Interface / Verification contract；
 - docs/project/：Roadmap、Evolution 与 adoption provenance；
-- docs/work/：只有需要正式 Execution Unit 时使用的 current / historical work；
+- docs/work/：只有需要正式 Execution Unit 时使用的 working set / historical work；
 - .agents/skills/：标准安装的 agentic-dev Skills。
 
 ## 开发与验证入口
@@ -66,7 +66,7 @@ Provider Guides 只在需要方法论导航时按 exact tag 定向读取；普�
 - 默认 CI：`bash scripts/local-ci.sh`（Local Docker）；运行时 contract：docs/technical/ci-verification-runtime.md
 - 人工评审 / 演示环境：`bash scripts/human-review.sh start`；操作指南：docs/guides/human-review.md；运行时 contract：docs/technical/human-review-runtime.md
 - Durable Roadmap：docs/project/project-roadmap.md
-- Current formal work locator：docs/work/current/README.md
+- Formal work lifecycle：docs/work/README.md + docs/work/*.md 文件头
 - Consumer-local constraints：docs/governance/constraints.md
 - agentic-dev adoption / provenance：docs/project/agentic-dev.md
 - Backend build / ownership：backend/build.gradle.kts、backend/settings.gradle.kts、backend/README.md

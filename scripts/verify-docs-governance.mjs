@@ -19,8 +19,7 @@ const currentRoots = [
   'docs/requirements',
   'docs/specifications',
   'docs/technical',
-  'docs/work/README.md',
-  'docs/work/current',
+  'docs/work',
   'docs/design',
   'docs/governance',
   'frontend/AGENTS.md',
@@ -242,24 +241,58 @@ for (const file of currentFiles) {
     if (!fs.existsSync(path.join(root, ref))) addFailure(file, `引用了不存在的本地文档 ${ref}`)
   }
 
-  if (/Current Ready Execution Unit\s*:/i.test(content) && file !== 'docs/work/current/README.md') {
-    warnings.push(`${file}: 仍包含 Current Ready Execution Unit 字样；确认它不是第二份 Current State truth。`)
-  }
 }
 
-const currentLocator = fs.readFileSync(path.join(root, 'docs/work/current/README.md'), 'utf8')
-const readyUnit = currentLocator.match(/Current Ready Execution Unit[：:]\s*\*\*([^*]+)\*\*/)?.[1]?.trim()
-const currentWorkFiles = collectMarkdown('docs/work/current').filter(file => file !== 'docs/work/current/README.md')
-if (!readyUnit) {
-  addFailure('docs/work/current/README.md', '缺少可解析的 Current Ready Execution Unit。')
-} else if (readyUnit === 'NONE') {
-  if (currentWorkFiles.length) addFailure('docs/work/current/README.md', 'Current Ready Execution Unit 为 NONE 时不得保留 active work artifact。')
-} else {
-  const activeArtifact = currentLocator.match(/当前工作 artifact[：:]\s*`([^`]+\.md)`/)?.[1]
-  if (!activeArtifact) {
-    addFailure('docs/work/current/README.md', '存在 active Execution Unit 时必须定位当前工作 artifact。')
-  } else if (!fs.existsSync(path.join(root, 'docs/work/current', activeArtifact))) {
-    addFailure('docs/work/current/README.md', `当前工作 artifact 不存在：${activeArtifact}`)
+// docs/work 根目录是 Execution Unit working set；状态来自 Unit 文件头，archive 只承担历史冷存储。
+const workUnitStatuses = new Set(['planned', 'ready', 'active', 'blocked', 'completed'])
+const workUnitFiles = collectMarkdown('docs/work', { skipArchive: true }).filter(file => file !== 'docs/work/README.md')
+for (const file of workUnitFiles) {
+  if (!/^docs\/work\/[^/]+\.md$/.test(file)) {
+    addFailure(file, 'Execution Unit working set 必须直接位于 docs/work/ 根目录。')
+    continue
+  }
+
+  const content = fs.readFileSync(path.join(root, file), 'utf8')
+  const lines = content.split(/\r?\n/)
+  if (lines[0] !== '---') {
+    addFailure(file, 'Execution Unit 缺少 YAML 文件头。')
+    continue
+  }
+  const closing = lines.indexOf('---', 1)
+  if (closing < 0) {
+    addFailure(file, 'Execution Unit YAML 文件头缺少结束分隔符。')
+    continue
+  }
+
+  const fields = new Map()
+  for (const line of lines.slice(1, closing)) {
+    if (!line.trim() || /^\s/.test(line) || line.startsWith('#')) continue
+    const match = line.match(/^([A-Za-z][A-Za-z0-9_-]*):(?:\s*(.*))?$/)
+    if (!match) {
+      addFailure(file, `Execution Unit 文件头无法识别字段：${line}`)
+      continue
+    }
+    if (fields.has(match[1])) addFailure(file, `Execution Unit 文件头字段重复：${match[1]}`)
+    fields.set(match[1], (match[2] || '').trim())
+  }
+
+  for (const key of ['id', 'type', 'status']) {
+    if (!fields.get(key)) addFailure(file, `Execution Unit 文件头缺少非空 ${key}。`)
+  }
+  if (fields.get('type') && fields.get('type') !== 'execution-unit') {
+    addFailure(file, `Execution Unit type 应为 execution-unit，当前为 ${fields.get('type')}。`)
+  }
+  const status = fields.get('status')
+  if (status && !workUnitStatuses.has(status)) {
+    addFailure(file, `Execution Unit status 应为 ${[...workUnitStatuses].join(' / ')}，当前为 ${status}。`)
+  }
+  const id = fields.get('id')
+  if (id && !id.startsWith('execution-unit:')) {
+    addFailure(file, 'Execution Unit id 必须以 execution-unit: 开头。')
+  }
+  if (id) {
+    if (seenIds.has(id)) addFailure(file, `id ${id} 与 ${seenIds.get(id)} 重复。`)
+    else seenIds.set(id, file)
   }
 }
 

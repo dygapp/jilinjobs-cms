@@ -10,7 +10,7 @@ Product / Domain / Architecture / Specification / Design / Technical 事实仍�
 
 - 先从真实 owner 恢复事实，再实施或复核；Code / Tests 可以证明当前实现，但不能单独发明 Requirement。
 - 用户只要求只读状态检查时保持只读；观察到的维护项不自动升级为新的修复生命周期。
-- docs/work/current/README.md 的 NONE 仅表示没有正式 active Execution Unit，不表示没有用户授权的直接变更或规划候选。
+- docs/work/*.md 的 Execution Unit 文件头是正式工作生命周期状态来源；没有非终态 Unit 仅表示没有正式 active Execution Unit，不表示没有用户授权的直接变更或规划候选。
 - Current owner 被替换、退役或归档时，同时检查仍消费其身份、路径或契约的 Current locator、测试、Workflow、Roadmap 与恢复入口；历史材料可以保留旧身份，但不得继续成为 ordinary runtime dependency。
 
 ## 实施纪律
@@ -80,5 +80,6 @@ Handoff 只保存不可恢复的 locator / unresolved boundary，不复制 Requi
 - `docs/requirements/*.md`（含 `index.md`）、`docs/specifications/*.md`、`docs/architecture/*.md`、`docs/architecture/decisions/ADR-*.md`、`docs/technical/*.md`、`docs/project/*.md` 的非 README 正文统一使用非空且唯一的 `id`、与职责相符的 `type` 和生命周期 `status`。`title`、`version`、`relations`、`updated_at` 仅在有实际用途时保留，不为凑齐字段补值。当前类别的允许值由 `scripts/verify-docs-governance.mjs` 校验。
 - `docs/design/public-site/DESIGN.md` 遵循设计工具的 `version`、`name`、`description` 与 token 文件头，由设计专用 lint 校验，不套用 Authority 的 `id/type/status`。
 - ADR 使用 `id: ADR-NNNN`、`type: architecture-decision`、`status: accepted` 与决策 `date`；范围、证据及定向 supersede 关系仅在适用时记录。`accepted` 表示决策已接受，不宣称目标架构已经实现。ADR 记录决策历史，当前叠加状态仍由 Architecture 正文持有。
+- `docs/work/*.md`（排除 `README.md`）是 Execution Unit working set，统一使用非空且唯一的 `id`、`type: execution-unit` 与 lifecycle `status`；它们不是长期 Authority，允许值和归档边界由 `docs/work/README.md` 持有并由文档治理脚本校验。
 - README / 导航索引、Guide、Governance 说明不因目录位置而强制加头；`docs/requirements/index.md` 是带 `requirement-index` 身份的 Authority locator，按第一条校验。
 - `docs/**/archive/**` 保留历史原貌，不参与当前文件头补齐或格式校验；重新晋升为 Current 时才按目标职责检查。
