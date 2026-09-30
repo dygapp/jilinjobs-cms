@@ -75,6 +75,12 @@ Main Article snapshot 的当前 canonical data / provenance 由 `data-migrations
 
 V7 只追加查询索引，不改写 EU-70 schema；隔离 Review 构建提供 `super` 验证路径，正式 Server 仍不包含模拟身份。实现提交 `2207e3e33446b072dafe7b1e5c1bd3cf2a3cf17e` 在任务分支 exact head 与本地 fast-forward 后的 `main` 分别取得完整 Local Docker CI PASS。真实宿主身份与全局管理端身份反馈仍是独立后续方向。
 
+### EU-72 — 管理端身份反馈与隔离测试登录
+
+建立受保护的当前可信主体投影、Admin 启动身份 gate、统一 HTTP 身份反馈和角色导航，使未认证、身份失效与禁止访问在日常管理页面保持一致。隔离 Review 构建提供测试人员可操作的 `admin` / `super` 模拟登录、刷新、退出和主动失效，使用 Server-controlled profile 与有界短期 opaque 会话；正式产物保持隔离和 fail closed，Public 不要求管理身份。
+
+移除代理层静默超级身份，自动化只显式认证同源 Admin 请求；Human Review 默认启动、fixture、Full / Fast fallback 产物链和登录 marker 同步。目标实现提交 `c252a9eb54628aa72c8fa88826e4d53f56e8a549` 取得 exact-head Full Local Docker CI 与独立复核 PASS，本地 fast-forward 后以同 SHA 复用 Full 证据并追加默认启动及六项 Browser 的 Post-Integration Evidence；随后恢复干净人工评审起点。该结果不等于人工观察、远端 Actions PASS、真实宿主身份接入或生产登录闭环。当前长期行为仍由 Requirement、Specification 与 Technical owner 持有，详细证据归档于 EU-72 Work artifact。
+
 ## Consumer Method / Capability 演进（历史）
 
 ### V3-08 Track B 采用

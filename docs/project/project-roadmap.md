@@ -26,9 +26,7 @@ Issue #153 / PR #154 Consumer Authority Foundation Rebuild 也已完成，不再
 
 以下均保持 **规划 / 评审候选**；不得从 Issue 排序、历史 EU 或旧 Roadmap 自动获得执行权。任何方向进入实际工作前，都必须从新的 Fresh Context 按当前 仓库权威 建立对应 Planning / Review lifecycle。
 
-- **CMS 管理身份、授权与操作审计第一版**：可信主体、Core / Server / Migration HTTP 边界、Admin 请求 / 方法授权、管理写操作审计产生与持久化，以及 `super` 专属的有界审计查询 API / 页面已完成；当前 Admin API 在没有可信身份时 fail closed，已完成部分的稳定结果进入 `docs/project/project-evolution.md`，当前安全契约由 Requirement、Specification、ADR-0005 与 `docs/technical/admin-security-integration.md` 持有。剩余候选按依赖与真实宿主条件重新形成独立实施切片：
-  1. **管理端身份反馈与端到端闭环**：已由当前授权进入正式执行；在现有管理页面统一呈现未认证、身份失效和禁止访问，并在隔离 Review 构建提供测试人员可操作的模拟登录、退出与失效入口；按 Review 身份协议完成 Frontend / Browser / Fresh Runtime 验证，不让前端状态替代 Backend 授权。完成后从此候选列表退出并进入稳定演进摘要。
-  2. **真实宿主接入**：智慧就业平台的凭证协议明确后接入其适配器；独立网站在确认正式身份提供方后接入对应适配器。两种场景分别验证真实登录 / 失效 / 退出及角色映射，不把 Review / 测试身份当成正式方案；Production Deployment 仍须独立验收。
+- **CMS 管理身份、授权与操作审计第一版的真实宿主接入**：可信主体、HTTP 边界、Admin 授权、可信写审计、有界审计查询、全局身份反馈及可操作隔离测试登录已完成，稳定结果进入 `docs/project/project-evolution.md`，安全契约由 Requirement、Specification、ADR-0005 与 `docs/technical/admin-security-integration.md` 持有。剩余方向是在智慧就业平台凭证协议明确后接入其适配器，或在独立网站确认正式身份提供方后接入对应适配器；分别验证真实登录 / 失效 / 退出及角色映射，不把 Review 身份当成正式方案。没有可信身份时正式 Admin 继续 fail closed；Production Deployment 仍须独立验收。
 
 - **Issue #60 C1 — Loading / Skeleton Experience**：用户体验 规划候选。
 - **Issue #60 C2 — Mobile Layout 人工评审**：独立 人工评审 / follow-up candidate。

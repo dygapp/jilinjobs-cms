@@ -37,6 +37,13 @@ http://localhost:5173/admin/
 
 默认会注入便于人工识别的评审测试数据。
 
+若本机启用了 HTTP 代理，loopback 请求可能被代理误转发；可显式直连本地地址启动（`reset` / `status` 同理）：
+
+```bash
+NO_PROXY=127.0.0.1,localhost,::1 no_proxy=127.0.0.1,localhost,::1 \
+  bash scripts/human-review.sh start
+```
+
 打开 Admin 后先看到标有“仅限隔离测试环境”的身份入口：
 
 - “以内容管理员登录”用于复核普通内容管理能力；该身份不显示“操作审计”，直接访问审计地址会得到禁止访问反馈；

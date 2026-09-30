@@ -1,10 +1,7 @@
 # 当前正式工作
 
-Current Ready Execution Unit：**EU-72 管理端身份反馈与端到端闭环**。
+Current Ready Execution Unit：**NONE**。
 
-- 当前工作 artifact：`eu72-admin-identity-feedback.md`；
-- Branch：`codex/eu72-admin-identity-feedback`；
-- Base：`7d2682b7608d3d00d28b9758ceb5675a31e2e6d6`；
-- 状态：Readiness **PASS**，进入实施与验证。
+EU-72 已完成实现、独立复核、目标 exact-head Full Local Docker CI、本地集成与 Post-Integration Evidence，artifact 已归档至 `../archive/eu72-admin-identity-feedback.md`。
 
-当前 Execute Authority 只覆盖 EU-72 artifact 的 Scope。真实宿主身份提供方、CMS 本地账号 / 密码、用户管理、Production Deployment、审计 mutation / export / retention 与 agentic-dev 修改均不在本单元范围。
+NONE 只表示没有正式 active Unit，不阻止用户明确授权的有界直接变更。真实宿主身份提供方等后续方向必须从届时 Current Authority 独立恢复与规划，不继承已归档 Unit 的执行授权。

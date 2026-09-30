@@ -1,14 +1,30 @@
 ---
 id: execution-unit:eu72-admin-identity-feedback
 type: execution-unit
-status: executing
+status: completed
 readiness: PASS
 base_sha: 7d2682b7608d3d00d28b9758ceb5675a31e2e6d6
 branch: codex/eu72-admin-identity-feedback
 started_at: 2026-09-30
+verified_head_sha: c252a9eb54628aa72c8fa88826e4d53f56e8a549
+integrated_sha: c252a9eb54628aa72c8fa88826e4d53f56e8a549
+completed_at: 2026-09-30
 ---
 
 # EU-72 管理端身份反馈与端到端闭环
+
+## 完成结果与证据
+
+- 受保护的 `GET /api/admin/identity` 仅投影可信 `CmsPrincipal` 的来源、用户 ID 和稳定角色；Admin 统一身份 gate / HTTP adapter 支持主体展示、角色导航、deep link / 刷新、全局 `401 / 403` 与网络退出失败的真实反馈。全部既有 Admin adapter 使用同一边界，Public 保持匿名。
+- 隔离 Review BootJar 提供测试人员可操作的 `admin` / `super` 登录、退出和主动模拟失效；Server 控制固定 profile，随机 opaque credential、短期 TTL、有界内存 registry 与立即撤销。仅资源内容 GET 可使用 scoped HttpOnly / SameSite Cookie，其他读写仍须 Header。正式产物不包含 Review endpoint / verifier，仍 fail closed。
+- 最终实现提交 `c252a9eb54628aa72c8fa88826e4d53f56e8a549` 在干净任务分支取得 exact-head Full Local Docker CI PASS：`.local-ci/evidence/20260930T083124Z-1659690`，完成时间 `2026-09-30T08:43:51Z`。Backend 40 个 task；Review session 4 项、Admin Security 14 项；Public 60 passed / 7 skipped，Admin 53 passed / 1 skipped，restored Review Party 1 passed；`canonical_specialized=true`、`upgrade_specialized=true`。包含 Fresh MySQL V1～V7、EU-70 审计事务 / 资源补偿、EU-71 查询及正式 fail-closed 回归；没有新增 schema 或改变审计状态机。
+- 独立 fresh context reviewer `/root/eu72_final_review` 对最终 SHA / diff / Authority / 证据给出限定 Review PASS，无未解决阻塞或 P2。关闭自动化全局 Header 外泄、混合 Admin 场景身份缺失、人工 fixture 匿名请求、fallback 正式 / Review 产物误用及租约 marker 覆盖等 findings；三 Workflow YAML 与 72 段 inline shell 语法 PASS。`.dockerignore` 排除 Review jar 的初步推测撤回；本轮实际执行当前构建上下文，BuildKit 层缓存不被描述为禁缓存构建。
+- History Convergence 保留共享规划 `e7dd1dea` 和功能 `32708880`；集成后发现的运行控制修复收敛为一个 logical commit `c252a9eb`。没有 force push、WIP 或按验证轮次堆叠过程性提交；归档另成 docs-only closure。
+- 任务分支已推送并回读为最终 SHA；本地 `main` fast-forward 后仍是同一 exact SHA，任务→main diff 为空。因此复用上述同 SHA Full 证据，不声明第二轮 Full Run。Post-Integration Evidence：`.local-ci/evidence/eu72-post-integration-c252a9eb`，默认 `human-review.sh start`、人工 fixture 注入和六项 EU-72 Browser 均 PASS；随后 `reset` 恢复 verified baseline 并重新注入人工 fixture，清除自动测试可写状态与会话，保留可供测试人员操作的本地 Review Runtime。
+- 归档 closure 只改变 Work locator、Roadmap、Evolution 和 Guide，不改变 Runtime 输入；通过精确 ancestor→closure diff 与 Runtime fingerprint 等价校验复用实现 SHA 的构建 / Browser 证据。Current Unit 恢复为 NONE，不从本历史 artifact 推导新 Execute Authority。
+- 本轮是自动验证与独立 AI 复核，不声称人工观察、远端 GitHub Actions Run PASS、真实身份提供方接入或 Production Deployment。真实宿主协议仍是独立后续方向。
+
+以下保留规划、readiness 与阶段进展的历史，阶段性“尚待”不代表当前未完成。
 
 ## 目标
 
