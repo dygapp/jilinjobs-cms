@@ -148,6 +148,8 @@ HUMAN_REVIEW_APPLY_FIXTURE=false \
 
 fixture 只属于当前可写人工评审数据库状态，不进入 canonical dataset，也不成为 Product Requirement。
 
+统一入口显式传入 `CMS_REVIEW_FIXTURE_CREDENTIAL` 给底层 fixture 脚本，以受控 Review 自动化身份调用 Admin API；缺少该配置立即拒绝执行。凭证不用于 Public 请求，也不通过代理注入普通 Browser 请求。Local Docker CI 对 fixture 注入、匿名 Public 可见结果与匿名 Admin 仍为 `401` 做回归。
+
 ## 5. 访问地址与固定端口
 
 Human Review Runtime 使用 host network，与 Local Docker CI 使用相同固定端口：

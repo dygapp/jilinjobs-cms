@@ -305,6 +305,8 @@ bash scripts/local-ci.sh clean
 
 .github/workflows/** 继续保留，作为远程 fallback 与 GitHub-native 验证实现，不删除其现有 build、artifact、GHCR、browser、migration 和 review-runtime 编排。
 
+远程 fallback 分别发布正式 `-backend` 与隔离 `-review-backend` 镜像；正式镜像用于 baseline 的 fail-closed 验证，Browser / restored Review / Human Review 只消费匹配 fingerprint 的 Review 镜像或独立 Review jar，并显式配置双角色测试凭证。正式 jar / 镜像不得为了测试而装入模拟身份。运行控制复用本地脚本；没有目标 Run / Job 证据时，Workflow 配置和本地等价验证不能被表述为远端 Actions PASS。
+
 ### 9.1 默认关闭
 
 普通自动 CI job 统一受 Repository Actions variable 控制：

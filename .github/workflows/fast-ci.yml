@@ -15,7 +15,7 @@ permissions:
   packages: read
 
 env:
-  BACKEND_IMAGE_REPOSITORY: ghcr.io/${{ github.repository }}-backend
+  BACKEND_IMAGE_REPOSITORY: ghcr.io/${{ github.repository }}-review-backend
 
 jobs:
   fast:
@@ -187,7 +187,7 @@ jobs:
         run: |
           set -euo pipefail
           IMAGE="${{ steps.backend-image.outputs.image }}"
-          docker build             --label "org.opencontainers.image.source=https://github.com/${{ github.repository }}"             --label "org.opencontainers.image.revision=$(git rev-parse HEAD)"             --label "io.jilinjobs.backend-fingerprint=${{ steps.backend-fingerprint.outputs.value }}"             -t "$IMAGE"             -f backend/Dockerfile.runtime             backend
+          docker build             --label "org.opencontainers.image.source=https://github.com/${{ github.repository }}"             --label "org.opencontainers.image.revision=$(git rev-parse HEAD)"             --label "io.jilinjobs.backend-fingerprint=${{ steps.backend-fingerprint.outputs.value }}"             -t "$IMAGE"             -f backend/Dockerfile.review-runtime             backend
 
       - name: 安装并构建 Public
         if: steps.changes.outputs.public == 'true'
@@ -253,10 +253,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          docker run -d --name cms-backend --network host             -e 'DB_URL=jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true'             -e DB_USERNAME=root             -e DB_PASSWORD=root             -e CMS_STATIC_ROOT=/runtime-static             -e CMS_SITE_PACKAGE_ROOT=/site-package             -e CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true             -v "$GITHUB_WORKSPACE/runtime-static:/runtime-static"             -v "$GITHUB_WORKSPACE/sites/jilinjobs:/site-package:ro"             "${{ steps.backend-image.outputs.image }}"
+          docker run -d --name cms-backend --network host             -e 'DB_URL=jdbc:mysql://127.0.0.1:3306/jilinjobs_cms?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true'             -e DB_USERNAME=root             -e DB_PASSWORD=root             -e CMS_STATIC_ROOT=/runtime-static             -e CMS_SITE_PACKAGE_ROOT=/site-package             -e CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true             -e CMS_REVIEW_IDENTITY_ADMIN_TOKEN=cms-local-review-admin             -e CMS_REVIEW_IDENTITY_SUPER_TOKEN=cms-local-review-super             -v "$GITHUB_WORKSPACE/runtime-static:/runtime-static"             -v "$GITHUB_WORKSPACE/sites/jilinjobs:/site-package:ro"             "${{ steps.backend-image.outputs.image }}"
 
           for i in $(seq 1 60); do
-            if curl --fail --silent http://127.0.0.1:8080/api/admin/columns > /dev/null; then
+            if curl --fail --silent -H 'X-Cms-Review-Credential: cms-local-review-super' http://127.0.0.1:8080/api/admin/columns > /dev/null; then
               exit 0
             fi
             if [ "$i" -eq 60 ]; then
@@ -271,7 +271,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          docker run -d --name cms-frontend --network host             -v "$GITHUB_WORKSPACE/runtime-fast/public:/usr/share/nginx/html/public:ro"             -v "$GITHUB_WORKSPACE/runtime-fast/admin:/usr/share/nginx/html/admin:ro"             -v "$GITHUB_WORKSPACE/frontend/nginx.e2e.conf:/etc/nginx/nginx.conf:ro"             nginx:1.29.8-alpine
+          printf '{"reviewIdentity":{"enabled":true}}\n' > runtime-fast/review-environment.json
+          docker run -d --name cms-frontend --network host             -v "$GITHUB_WORKSPACE/runtime-fast/review-environment.json:/usr/share/nginx/html/public/review-environment.json:ro"             -v "$GITHUB_WORKSPACE/runtime-fast/public:/usr/share/nginx/html/public:ro"             -v "$GITHUB_WORKSPACE/runtime-fast/admin:/usr/share/nginx/html/admin:ro"             -v "$GITHUB_WORKSPACE/frontend/nginx.e2e.conf:/etc/nginx/nginx.conf:ro"             nginx:1.29.8-alpine
 
           for i in $(seq 1 30); do
             public_ready=true

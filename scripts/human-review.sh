@@ -257,7 +257,8 @@ restore_and_start() {
 
   if [[ "$apply_fixture" == "true" ]]; then
     say "注入人工评审 fixture"
-    REVIEW_BASE_URL=http://127.0.0.1:5173 bash scripts/apply-human-review-fixture.sh
+    CMS_REVIEW_FIXTURE_CREDENTIAL="$review_identity_token" \
+      REVIEW_BASE_URL=http://127.0.0.1:5173 bash scripts/apply-human-review-fixture.sh
   elif [[ "$apply_fixture" != "false" ]]; then
     die "HUMAN_REVIEW_APPLY_FIXTURE 只能为 true 或 false"
   fi

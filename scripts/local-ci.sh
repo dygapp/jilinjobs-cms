@@ -599,6 +599,17 @@ if [[ "$verification_exists" != "true" ]]; then
     npx playwright test tests/e2e/party-migration-runtime.spec.ts --project=chromium --reporter=line \
     2>&1 | tee "$evidence_dir/review-party-runtime-e2e.log"
 
+  say "Human Review fixture 显式认证回归"
+  CMS_REVIEW_FIXTURE_CREDENTIAL=cms-local-review-super \
+    REVIEW_BASE_URL=http://127.0.0.1:5173 \
+    bash scripts/apply-human-review-fixture.sh 2>&1 | tee "$evidence_dir/human-review-fixture.log"
+  fixture_columns="$(curl --fail --silent -H 'X-Cms-Review-Credential: cms-local-review-super' http://127.0.0.1:5173/api/admin/columns)"
+  fixture_notice_id="$(jq -r '.[] | select(.alias == "notice") | .id' <<< "$fixture_columns")"
+  curl --fail --silent "http://127.0.0.1:5173/api/public/articles?columnId=$fixture_notice_id&page=0&size=50" \
+    | jq --exit-status '[.items[].title] | index("管理端人工评审：就业服务工作通知") != null and index("管理端人工评审：毕业生就业手续办理提示") != null' >/dev/null
+  [[ "$(curl --silent --output /dev/null --write-out '%{http_code}' http://127.0.0.1:5173/api/admin/columns)" == "401" ]] \
+    || die "Human Review fixture 不得改变匿名 Admin 拒绝边界"
+
   marker_context="$run_root/review-verification-marker"
   mkdir -p "$marker_context"
   SOURCE_SUBJECT="$source_subject" BACKEND_FP="$backend_fingerprint" FRONTEND_FP="$frontend_fingerprint" \

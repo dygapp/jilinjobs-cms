@@ -63,7 +63,7 @@ jobs:
           baseline="$(bash scripts/review-baseline-fingerprint.sh)"
           verification="$(bash scripts/review-verification-fingerprint.sh)"
 
-          backend_image="ghcr.io/${{ github.repository }}-backend:$backend"
+          backend_image="ghcr.io/${{ github.repository }}-review-backend:$backend"
           frontend_image="ghcr.io/${{ github.repository }}-frontend-runtime:$frontend"
           baseline_image="ghcr.io/${{ github.repository }}-review-baseline:$baseline"
           verification_image="ghcr.io/${{ github.repository }}-review-verification:$verification"
@@ -132,6 +132,8 @@ jobs:
           python3 scripts/verify-review-runtime.py http://127.0.0.1:5173 | tee review-local-runtime.json
 
       - name: 注入 Human Review fixture
+        env:
+          CMS_REVIEW_FIXTURE_CREDENTIAL: cms-local-review-super
         run: bash scripts/apply-human-review-fixture.sh
 
       - name: 验证 Human Review fixture 与页面 Runtime
@@ -142,7 +144,7 @@ jobs:
           curl --fail --silent http://127.0.0.1:5173/static/home/header-banner.png >/dev/null
           curl --fail --silent http://127.0.0.1:5173/static/party/party-header-banner.jpg >/dev/null
 
-          columns="$(curl --fail --silent http://127.0.0.1:5173/api/admin/columns)"
+          columns="$(curl --fail --silent -H 'X-Cms-Review-Credential: cms-local-review-super' http://127.0.0.1:5173/api/admin/columns)"
           notice_id="$(echo "$columns" | jq -r '.[] | select(.alias == "notice") | .id' | head -1)"
           employment_id="$(echo "$columns" | jq -r '.[] | select(.alias == "employment-news") | .id' | head -1)"
           recruitment_id="$(echo "$columns" | jq -r '.[] | select(.alias == "recruitment-announcement") | .id' | head -1)"
@@ -224,12 +226,10 @@ jobs:
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/brand/site-favicon.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/public-institution.png > /dev/null
           curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/static/footer/wechat-qr.png > /dev/null
-          columns="$(curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/api/admin/columns)"
-          echo "$columns" | jq --exit-status 'length > 0' > /dev/null
-
-          notice_id="$(echo "$columns" | jq -r '.[] | select(.alias == "notice") | .id' | head -1)"
-          employment_id="$(echo "$columns" | jq -r '.[] | select(.alias == "employment-news") | .id' | head -1)"
-          recruitment_id="$(echo "$columns" | jq -r '.[] | select(.alias == "recruitment-announcement") | .id' | head -1)"
+          test "$(curl --silent --output /dev/null --write-out '%{http_code}' http://review.cc-lotus.info/api/admin/columns)" = "401"
+          notice_id="$(curl --fail --show-error --silent http://review.cc-lotus.info/api/public/columns/by-alias/notice | jq --exit-status '.id')"
+          employment_id="$(curl --fail --show-error --silent http://review.cc-lotus.info/api/public/columns/by-alias/employment-news | jq --exit-status '.id')"
+          recruitment_id="$(curl --fail --show-error --silent http://review.cc-lotus.info/api/public/columns/by-alias/recruitment-announcement | jq --exit-status '.id')"
 
           notice_fixture="$(curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors "http://review.cc-lotus.info/api/public/articles?columnId=$notice_id&page=0&size=50")"
           employment_fixture="$(curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-all-errors "http://review.cc-lotus.info/api/public/articles?columnId=$employment_id&page=0&size=50")"
@@ -265,6 +265,7 @@ jobs:
           seconds = 2700 if human else 120
           now = datetime.datetime.now(datetime.timezone.utc)
           owner = {'runId': os.environ['GITHUB_RUN_ID'], 'headSha': os.environ['REVIEW_HEAD_SHA'],
+                   'reviewIdentity': {'enabled': True},
                    'mode': 'human-review' if human else 'verification',
                    'verificationFingerprint': os.environ['REVIEW_VERIFICATION_FINGERPRINT'],
                    'verificationProducerSha': os.environ['REVIEW_VERIFICATION_PRODUCER_SHA'],
@@ -278,6 +279,7 @@ jobs:
           PY
           curl --fail --silent --show-error --retry 5 --retry-delay 2 --retry-all-errors http://review.cc-lotus.info/review-environment.json -o review-external-owner.json
           cmp runtime-review-meta/review-environment.json review-external-owner.json
+          jq --exit-status '.reviewIdentity.enabled == true' review-external-owner.json >/dev/null
 
       - name: 上传外部访问与租约证据
         uses: actions/upload-artifact@v7
