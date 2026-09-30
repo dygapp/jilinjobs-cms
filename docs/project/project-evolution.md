@@ -69,6 +69,12 @@ Main Article snapshot 的当前 canonical data / provenance 由 `data-migrations
 
 审计 schema 通过 Generic Core 的 append-only Flyway migration 提供且不关联业务对象删除；初始审计写入失败时业务不执行，成功终态与数据库业务共同提交，失败终态以独立事务持久化并在自身失败时保留 `STARTED`。Managed Resource 与 Static Resource 使用 Server 外层事务协调的文件暂存 / 补偿日志，明确覆盖上传、替换、入回收区与恢复；Core / Content Migration 继续不持有 HTTP 主体或 Server 审计切面。该阶段没有创建查询 API / UI、没有接入真实身份提供方，也没有授予后续审计查询 Execute Authority。
 
+### EU-71 — CMS 管理操作审计查询
+
+在 EU-70 append-only 审计记录之上建立与写入 contract 分离的只读查询边界，以 `startedAt + auditId` 稳定 cursor、有界 page size、组合精确过滤和批量历史角色快照读取支持持续增长的审计集合。Admin transport 只向 `super` 暴露列表与详情，查询本身不产生业务写审计；Admin CMS 模块提供独立安全审计入口、四种结果语义和明确的未认证 / 禁止访问 / 失败状态，不提供修改、删除、导出、total count、用户详情或当前业务对象回填。
+
+V7 只追加查询索引，不改写 EU-70 schema；隔离 Review 构建提供 `super` 验证路径，正式 Server 仍不包含模拟身份。实现提交 `2207e3e33446b072dafe7b1e5c1bd3cf2a3cf17e` 在任务分支 exact head 与本地 fast-forward 后的 `main` 分别取得完整 Local Docker CI PASS。真实宿主身份与全局管理端身份反馈仍是独立后续方向。
+
 ## Consumer Method / Capability 演进（历史）
 
 ### V3-08 Track B 采用

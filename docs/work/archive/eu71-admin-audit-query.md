@@ -1,20 +1,28 @@
 ---
 id: execution-unit:eu71-admin-audit-query
 type: execution-unit
-status: in_progress
+status: completed
 readiness: PASS
 base_sha: 58a97ac2e1ae71dd1df5db7f959c174a4999d949
 branch: codex/eu71-admin-audit-query
 started_at: 2026-09-30
+verified_head_sha: 2207e3e33446b072dafe7b1e5c1bd3cf2a3cf17e
+integrated_sha: 2207e3e33446b072dafe7b1e5c1bd3cf2a3cf17e
+completed_at: 2026-09-30
 ---
 
 # EU-71 管理操作审计查询
 
-## 当前执行状态
+## 完成结果与证据
 
-EU-71 已完成实现、当前 HEAD + worktree 指纹的全量 Local Docker CI，以及独立安全 / 隐私 / 查询边界复核；复核无阻塞或中等级 finding。形成 candidate commit 后仍须完成 exact-head Local Docker CI、最终 History Convergence、本地集成、Post-Integration Evidence、归档与推送闭环。本段只记录执行进度，不构成 Completion 声明。
-
-当前分层证据：`.local-ci/evidence/20260930T010423Z-1324456`，subject 为 `232e1c717b4905806afde3e9f26b695ca23c929c+worktree:7dee4786c3427f3efd6c119d243331d36a8560786184780b85ac7a8e0bd8e7bc`。该证据证明实现工作树的完整 Docker CI，但不冒充尚未形成的 exact-head 证据；其后的 Current Authority 状态收敛另由文档治理检查覆盖。
+- `cms-core` 已建立与 `AdminAuditPersistence` 分离的只读 query contract、事件 projection、组合过滤、批量角色快照读取与稳定 keyset cursor；V7 append-only migration 补齐通用开始时间和动作索引，没有改写 V6。
+- `cms-server` 已提供 `GET /api/admin/audit-events` 与 `GET /api/admin/audit-events/{auditId}`，默认 20 / 最大 100、`limit + 1`、`startedAt DESC, auditId DESC`，严格校验操作者 / 对象组合、枚举、时间范围与 cursor。查询类以 `cms:super` 独立保护，匿名为 `401`、`admin` 为 `403`，且查询入口不携带写审计 descriptor。
+- Admin CMS 模块已提供 `/admin/cms/audit` 只读页面及 `/admin/audit` compatibility redirect，呈现历史角色快照、四种结果、组合过滤、cursor 前后翻页、详情及 `401 / 403 / failure` 状态；没有 mutation、export、total count、用户目录或当前业务对象回填。
+- Review-only 身份映射为 `super` 以形成 Browser / Runtime 证据，正式 BootJar 继续排除该入口；查询 projection、页面和自动化证据不包含 token、password、完整请求体、Rich Text、文件 bytes、异常消息或堆栈。
+- 独立安全 / 隐私 / 查询边界复核无阻塞或中等级 finding；SQL 全部参数化，持续增长集合有强制 page bound，V6 `TIMESTAMP(3)` 与毫秒 cursor 精度一致，角色快照缺失时失败关闭。History Convergence 保留已共享规划提交，并将实现、测试、migration、CI 接线与 Authority 同步收敛为单一实现提交。
+- 工作树分层证据位于 `.local-ci/evidence/20260930T010423Z-1324456/`；实现提交 `2207e3e33446b072dafe7b1e5c1bd3cf2a3cf17e` 在任务分支取得 exact-head Full Local Docker CI PASS，证据位于 `.local-ci/evidence/20260930T013110Z-1353843/`。任务分支已推送并回读为同一 SHA。
+- 该提交 fast-forward 到本地 `main` 后再次取得 Post-Integration Full Local Docker CI PASS，证据位于 `.local-ci/evidence/20260930T014417Z-1378895/`；包括 Fresh / upgrade V1→V7、EU-70 写入事务回归、EU-71 MySQL query verifier、正式 / Review artifact、Public Browser 60 通过 / 7 既定跳过、Admin Browser 47 通过 / 1 既定跳过，且 `canonical_specialized=true`、`upgrade_specialized=true`。
+- 本归档提交终止 EU-71 Execute Authority，并将 Current Ready Execution Unit 恢复为 **NONE**。真实身份提供方与全局管理端身份反馈仍须从届时 Current Authority 独立规划，不从本单元继承执行授权。
 
 ## 目标
 
