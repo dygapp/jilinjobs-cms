@@ -15,7 +15,7 @@ relations:
     - docs/specifications/rich-text-authoring.md
     - docs/specifications/page-content.md
     - docs/specifications/admin-access-audit.md
-updated_at: 2026-09-29
+updated_at: 2026-09-30
 ---
 
 # CMS 管理端产品规格
@@ -36,6 +36,8 @@ CMS business object、stable/source identity、state/lifecycle 与数据完整�
 - 内容结构：栏目、导航；
 - 运营展示：宣传展示；
 - 站点设置：网站属性、静态资源。
+
+上述四组和八类入口是日常业务管理能力。具有 `super` 权限的管理主体还可进入独立“安全审计 → 操作审计”入口；该入口只读，不与内容编辑入口混排为新的业务对象类型。具体授权、查询、拒绝和敏感字段行为由 `admin-access-audit.md` 持有。
 
 界面使用运营人员可理解的业务术语，不暴露数据库表、Frontend module、Migration、Backend class 或其他实现术语。
 
@@ -260,7 +262,7 @@ Admin 必须显式呈现：
 触达管理端行为时，最终结果至少满足实际涉及的以下 contract：
 
 - `/admin/cms/**` canonical entry 与必要 compatibility redirect 可用；
-- 四个业务分组和八类正式入口保持可达；
+- 四个业务分组和八类业务入口保持可达；`super` 还可进入独立操作审计入口；
 - 主侧栏 / 局部组织面板可收起与恢复；
 - Article 栏目上下文、source identity 与 cover policy 的用户可观察限制正确；
 - Article 草稿 / 发布 / 撤回 / 重新发布与“普通保存不改变发布状态”的可观察 lifecycle 正确；
@@ -277,7 +279,7 @@ Verification 采用哪些自动化层次、Browser 工具或 evidence 由当前 
 
 ## 15. 非目标
 
-- 当前已实现的 CMS 业务管理规格不覆盖尚未落地的身份、授权与审计；下一阶段的独立可观察规格见 `admin-access-audit.md`；
+- 管理身份、授权、拒绝与操作审计行为由独立 `admin-access-audit.md` 持有，本文不建立第二套安全或审计规则；
 - 通用系统设置中心；
 - generic Page Builder；
 - 通过 Specification 固化具体 Vue component / Element Plus control。

@@ -6,6 +6,7 @@ relations:
   requirements:
     - docs/requirements/information-publishing.md
     - docs/requirements/cms-domain.md
+    - docs/requirements/cms-admin-identity-and-audit.md
   specifications:
     - docs/specifications/admin-site.md
     - docs/specifications/admin-access-audit.md
@@ -20,7 +21,7 @@ relations:
     - docs/technical/public-site-frontend.md
   verification:
     - docs/technical/verification-strategy.md
-updated_at: 2026-09-29
+updated_at: 2026-09-30
 ---
 
 # CMS HTTP 接口兼容契约
@@ -80,8 +81,19 @@ JSON contract 基线：
 | SiteProperty | `GET/POST /api/admin/site-config`；`GET /api/admin/site-config/groups`；`PUT/DELETE /api/admin/site-config/{key}`；`PUT /api/admin/site-config/{key}/definition` |
 | Managed Resource | `POST /api/admin/resources` multipart field `file`；`GET /api/admin/resources/{id}`；`GET /api/admin/resources/{id}/content` |
 | StaticResource | `GET /api/admin/static-resources?path=...`；`POST /api/admin/static-resources?path=...&replace=...` multipart field `file`；`DELETE /api/admin/static-resources?path=...`；`GET /api/admin/static-resources/trash`；`POST /api/admin/static-resources/restore/{id}` |
+| AdminAuditEvent | `GET /api/admin/audit-events`；`GET /api/admin/audit-events/{auditId}`（仅 `super`） |
 
 Article list query 支持当前 Admin filtering / paging contract：`keyword`、`columnId`、`status`、`articleType`、`page`、`size`；未指定 page / size 时保持零基页码与当前默认 page size 语义。
+
+Admin audit query 使用持续增长集合适用的 cursor contract：
+
+- `GET /api/admin/audit-events` 支持 `identitySource`、`userId`、`action`、`objectType`、`objectId`、`result`、`requestCorrelationId`、`startedFrom`、`startedBefore`、`cursor`、`limit`；未指定 `limit` 时为 `20`，最大为 `100`；
+- `identitySource` 与 `userId` 必须同时出现或同时省略，表示完整操作者标识的 exact match；`objectId` 只有与 `objectType` 同时出现时才有效；其他 token 也使用 exact match，不执行模糊正文搜索；
+- `startedFrom` 为 inclusive ISO-compatible instant，`startedBefore` 为 exclusive ISO-compatible instant；两者同时出现时前者必须早于后者；
+- 结果按 `startedAt DESC, auditId DESC` 稳定排序；响应为 `AdminAuditEventPage { items, nextCursor }`，`nextCursor` 为 opaque nullable string。Consumer 必须把 cursor 与同一组过滤条件共同使用，改变过滤条件时丢弃旧 cursor；
+- malformed cursor、非法枚举、超限 `limit`、不完整操作者 / 对象组合或非法时间范围返回 `400` diagnostic envelope；不会因为越界参数静默执行无界读取；
+- `GET /api/admin/audit-events/{auditId}` 返回单条 `AdminAuditEvent`，不存在时为 `404`；列表与详情均只允许 `cms:super`，`cms:admin` 返回 `403`，未认证返回 `401`；
+- 查询接口只读，不创建业务写操作审计，也不提供 mutation、delete、export 或 total-count endpoint。
 
 Admin Article query 的 `columnId` 表示**所选栏目子树**：结果包含该 Column 自身以及当前全部 descendant Column 中满足其余过滤条件的 Article。该语义对应 Admin Specification 的“选择父栏目时聚合其后代栏目文章”，不是 exact-column filter。`columnId = null` 表示不按栏目限制。
 
@@ -262,6 +274,19 @@ TrashEntry
 ```
 
 SiteProperty typed business validity 仍由 Domain / Backend write boundary保证；Public frontend 可以对 presentation parameter 做 defensive interpretation，但不能因此改变 persisted value contract。
+
+### 5.7 管理操作审计
+
+```text
+AdminAuditEvent
+  auditId, requestCorrelationId, identitySource, userId, roles,
+  action, objectType, objectId, startedAt, completedAt, result
+
+AdminAuditEventPage
+  items, nextCursor
+```
+
+`roles` 是操作发生时保存的非空角色快照，按稳定字符串数组返回；`objectId`、`completedAt` 与 `nextCursor` 可为 `null`。`action`、`objectType` 和 `result` 保持持久化的受控 token；查询 projection 不增加当前用户详情、业务对象当前状态、请求内容、异常内容或其他推断字段。
 
 ## 6. 资源 / multipart 兼容性
 

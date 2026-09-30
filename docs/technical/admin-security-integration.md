@@ -12,7 +12,7 @@ relations:
     - docs/architecture/decisions/ADR-0005-admin-identity-authorization-audit.md
   interface:
     - docs/technical/http-interface-contract.md
-updated_at: 2026-09-29
+updated_at: 2026-09-30
 ---
 
 # CMS 管理身份、授权与审计技术接缝
@@ -58,8 +58,9 @@ Spring Security 的 `Authentication` 可承载该主体和映射后的 authoriti
 | 网站属性 | `GET /site-config`、`/site-config/groups` | `POST /site-config`；`PUT /site-config/{key}`、`/site-config/{key}/definition`；`DELETE /site-config/{key}` |
 | 托管资源 | `GET /resources/{id}`、`/resources/{id}/content` | `POST /resources`（multipart 上传） |
 | 静态资源 | `GET /static-resources`、`/static-resources/trash` | `POST /static-resources`（上传或明确替换）；`DELETE /static-resources`（入回收区）；`POST /static-resources/restore/{id}` |
+| 操作审计 | `GET /audit-events`、`GET /audit-events/{auditId}`（仅 `super`） | 无 |
 
-业务审计覆盖上述全部写入口，包括上传、替换、软删除、恢复及文章发布 / 撤回；授权拒绝记为安全事件，不伪造成已执行的业务写操作。当前没有托管资源删除接口，不为矩阵补造。审计查询是未来独立的 `super` 专属只读入口：无有效身份 `401`，其他已认证角色 `403`，`super` 只可有界分页查询；在 HTTP contract 正式确定路径和投影前，不把它计入当前 endpoint 清单。
+业务审计覆盖上述全部写入口，包括上传、替换、软删除、恢复及文章发布 / 撤回；授权拒绝记为安全事件，不伪造成已执行的业务写操作。当前没有托管资源删除接口，不为矩阵补造。操作审计行是独立后续目标：无有效身份 `401`，`admin` 或其他已认证非 `super` 角色 `403`，`super` 只可按 HTTP contract 有界查询；它是只读入口，不进入业务写操作 descriptor inventory。
 
 管理端现有八类 Browser 入口及其主要 Admin API consumer 如下；`/admin/articles` 等旧路径只重定向到对应 `/admin/cms/**`，不得绕过同一管理身份状态。
 
@@ -120,7 +121,11 @@ Content Migration 是独立 non-web application，不经过 Admin HTTP 身份，
 
 实际注册的全部 Admin 写 handler 必须与审计 descriptor inventory 双向一致，覆盖栏目、文章、导航位置、导航条目、单页分组、单页、列表定义、列表项、广告位、广告项、网站属性、托管资源及静态资源；新增写 handler 未声明审计时验证必须失败。Content Migration 继续不构造 `CmsPrincipal`，也不进入 Server 业务审计切面。
 
-审计查询是独立后续能力：必须分页 / 有界过滤并仅对 `super` 开放；在 `docs/technical/http-interface-contract.md` 正式确定路径、查询条件与投影前，不创建查询 endpoint 或 Admin 页面。第一版保留期限、导出、外部审计平台、篡改防护增强和自动处理长期 `STARTED` 记录仍属于后续独立要求。
+审计查询使用与 `AdminAuditPersistence` 分离的 framework-neutral read contract，避免普通业务写服务取得审计记录 mutation 能力。数据集合持续增长，查询按 `startedAt + auditId` 稳定倒序并使用 opaque cursor、`limit + 1` 判定下一页，不执行全量读取或 total count；持久化索引必须支持无过滤时间顺序以及操作者、动作、对象、结果、请求关联标识等已声明过滤维度。角色快照只对当前页 / 单条详情批量读取，避免逐行查询。
+
+Server 只在 Admin transport 层公开 `docs/technical/http-interface-contract.md` 拥有的 query / detail surface，并以 `cms:super` 方法授权独立保护；请求级认证仍由统一 `/api/admin/**` 边界承担。查询 handler 不携带 `AdminAuditOperation`，读取行为不产生新的业务写审计。Admin 页面仅渲染持久化 projection、cursor 翻页和页面自身的 `401 / 403 / failure` 状态，不通过查询当前业务对象或用户目录“补全”历史。
+
+隔离 Review 构建必须提供可验证 `super` 查询路径，以完成真实 Browser / Runtime 证据，但该能力仍只能存在于 review source set / Review BootJar，不能进入正式产物或替代真实身份提供方。第一版保留期限、导出、外部审计平台、篡改防护增强和自动处理长期 `STARTED` 记录仍属于后续独立要求。
 
 ## 验证与切换
 
