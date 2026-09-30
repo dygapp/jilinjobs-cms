@@ -1,6 +1,8 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { expect, test, type Page, type TestInfo } from '@playwright/test'
+import { expect, test, type Page, type TestInfo } from '../support/reviewTest'
+
+test.use({ reviewBrowserIdentity: true })
 
 type ReviewResource = {
   role: 'BODY_IMAGE' | 'ATTACHMENT'

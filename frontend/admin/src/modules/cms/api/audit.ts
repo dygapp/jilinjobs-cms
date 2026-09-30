@@ -1,3 +1,5 @@
+import { adminFetch } from '../../../shared/adminHttp'
+
 export type AdminAuditResult = 'STARTED' | 'SUCCEEDED' | 'FAILED' | 'ROLLED_BACK'
 export type AdminAuditAction = 'CREATE' | 'UPDATE' | 'DELETE' | 'PUBLISH' | 'WITHDRAW' | 'UPLOAD' | 'REPLACE' | 'TRASH' | 'RESTORE'
 export type AdminAuditObjectType = 'COLUMN' | 'ARTICLE' | 'NAVIGATION_LOCATION' | 'NAVIGATION_ITEM' | 'PAGE_GROUP' | 'PAGE' | 'CMS_LIST' | 'CMS_LIST_ITEM' | 'ADVERTISEMENT_SLOT' | 'ADVERTISEMENT_ITEM' | 'SITE_PROPERTY' | 'MANAGED_RESOURCE' | 'STATIC_RESOURCE'
@@ -42,7 +44,7 @@ export class AdminAuditRequestError extends Error {
 }
 
 async function request<T>(url: string): Promise<T> {
-  const response = await fetch(url)
+  const response = await adminFetch(url)
   if (!response.ok) {
     const error = await response.json().catch(() => ({ message: `请求失败：${response.status}` })) as { message?: string }
     throw new AdminAuditRequestError(response.status, error.message ?? `请求失败：${response.status}`)

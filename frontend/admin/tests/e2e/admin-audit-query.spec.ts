@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from '../support/reviewTest'
 
 test('EU-71：super 可有界筛选、翻页并查看不含请求内容的操作审计详情', async ({ page, request }) => {
   const suffix = Date.now()

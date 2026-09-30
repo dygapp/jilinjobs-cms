@@ -1,4 +1,4 @@
-import { expect, test, type APIRequestContext } from '@playwright/test'
+import { expect, test, type APIRequestContext } from '../support/reviewTest'
 
 async function createArticle(request: APIRequestContext, columnId: number, title: string) {
   const response = await request.post('/api/admin/articles', { data: { columnId, title, bodyHtml:`<p>${title} 正文</p>`, source:'Admin E2E', articleType:'INTERNAL', externalUrl:null, publishDate:'2026-08-29', pinned:false, sortOrder:0, coverResourceId:null, bodyImageResourceIds:[], attachmentResourceIds:[] } })

@@ -1,4 +1,6 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from '../support/reviewTest'
+
+test.use({ reviewBrowserIdentity: true })
 
 test('栏目可以通过管理界面维护且父栏目删除约束生效', async ({ page, request }, testInfo) => {
   const suffix = `${Date.now()}-${testInfo.retry}`

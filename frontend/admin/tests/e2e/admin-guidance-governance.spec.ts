@@ -1,4 +1,4 @@
-import { expect, test, type Locator } from '@playwright/test'
+import { expect, test, type Locator } from '../support/reviewTest'
 
 async function expectFormLabel(dialog: Locator, label: string) {
   await expect(dialog.getByText(label, { exact: true }).first()).toBeVisible()

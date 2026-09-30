@@ -1,4 +1,4 @@
-import { expect, test, type APIRequestContext } from '@playwright/test'
+import { expect, test, type APIRequestContext } from '../support/reviewTest'
 import { normalizePublicSiteConfigItem, type SiteConfigItem } from '../../src/shared/api/siteConfig'
 
 type AdminList = { id: number; code: string }

@@ -153,6 +153,20 @@ class AdminAuthorizationSecurityTest {
     }
 
     @Test
+    fun `current identity returns only trusted stable principal fields`() {
+        mockMvc.perform(
+            get("/api/admin/identity")
+                .with(authentication(principal(CmsRole.SUPER).toSpringAuthentication())),
+        )
+            .andExpect(status().isOk)
+            .andExpect(jsonPath("$.identitySource").value("security-test"))
+            .andExpect(jsonPath("$.userId").value("super-user"))
+            .andExpect(jsonPath("$.roles[0]").value("super"))
+            .andExpect(jsonPath("$.credential").doesNotExist())
+        Mockito.verifyNoInteractions(adminAuditTransactions)
+    }
+
+    @Test
     fun `audit query requires super authority and creates no write audit`() {
         mockMvc.perform(get("/api/admin/audit-events"))
             .andExpect(status().isUnauthorized)
@@ -255,6 +269,7 @@ class AdminAuthorizationSecurityTest {
 
     private companion object {
         val expectedAdminEndpoints = setOf(
+            "GET /api/admin/identity",
             "GET /api/admin/columns",
             "POST /api/admin/columns",
             "PUT /api/admin/columns/{id}",

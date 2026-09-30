@@ -1,4 +1,4 @@
-import { expect, test, type APIRequestContext } from '@playwright/test'
+import { expect, test, type APIRequestContext } from '../support/reviewTest'
 
 type Column = { id: number; alias: string }
 type Article = { id: number; title: string }

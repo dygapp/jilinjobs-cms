@@ -57,6 +57,8 @@ formal_anonymous_status="$(curl --silent --output /dev/null --write-out '%{http_
 [[ "$formal_anonymous_status" == "401" ]] || { echo "Expected formal Server anonymous Admin request to return 401, got $formal_anonymous_status" >&2; exit 1; }
 formal_review_header_status="$(curl --silent --output /dev/null --write-out '%{http_code}' -H 'X-Cms-Review-Credential: cms-local-review-admin' http://127.0.0.1:8080/api/admin/columns)"
 [[ "$formal_review_header_status" == "401" ]] || { echo "Formal Server must reject Review-only credential, got $formal_review_header_status" >&2; exit 1; }
+formal_review_login_status="$(curl --silent --output /dev/null --write-out '%{http_code}' -H 'Content-Type: application/json' --data '{"profile":"super"}' http://127.0.0.1:8080/api/review/identity/sessions)"
+[[ "$formal_review_login_status" != "200" && "$formal_review_login_status" != "201" ]] || { echo "Formal Server exposed Review identity login: $formal_review_login_status" >&2; exit 1; }
 
 test -f "$party_root/manifest.json"
 test -f "$party_root/index.ndjson"

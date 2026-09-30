@@ -44,7 +44,7 @@ bash scripts/human-review.sh stop
 6. 读取 Review Verification marker，确认 `sourceSubject` 等于当前 `HEAD`；
 7. 启动 Human Review MySQL；
 8. 恢复 verified Review Baseline；
-9. 启动 Backend 与 Public/Admin Runtime；
+9. 启动带 `admin` / `super` 短期模拟会话的隔离 Review Backend 与 Public/Admin Runtime；Admin 首次进入保持匿名，由测试人员在页面选择身份；
 10. 默认注入人工评审 fixture；
 11. 完成 HTTP health probe 后输出访问地址。
 
@@ -167,6 +167,8 @@ http://localhost:5173/admin/
 ```
 
 如果宿主端口已被其他服务占用，先释放对应端口；不要通过任意替换端口来改变当前 Review Runtime contract。
+
+Review Frontend 通过运行时挂载的 `/review-environment.json` 显示测试身份入口；该 marker 只改变界面能力发现，不授予身份。登录由 Review BootJar 的 `/api/review/identity/sessions` 创建有界短期会话，正式 Server 不包含该 endpoint 或 verifier。代理层不得为普通 Browser 请求静默注入超级身份；自动化测试必须显式携带其 Review credential。
 
 ## 6. 与 Local Docker CI 的互斥关系
 

@@ -19,7 +19,7 @@ updated_at: 2026-09-30
 
 ## 责任与实施状态
 
-本文拥有第一版目标实现中跨 Admin API、身份来源、前端身份反馈和审计持续一致的技术接缝。当前 Server 已有统一主体、凭证验证器接缝、受信角色转换、Spring Security 请求 / 方法授权、管理写操作审计产生和持久化，以及与写入 contract 分离的 `super` 专属审计查询；没有正式身份提供方时 Admin fail closed。隔离 Review 身份只进入独立 Review source set / BootJar，正式 Server 产物不包含该入口。正式身份提供方仍未实现；全局管理端身份反馈与可操作 Review 登录按当前执行单元实现。角色的业务权限归属由 Requirement 持有，用户可观察结果由 Specification 持有，长期结构与框架选型由 Architecture / ADR 持有。下方矩阵只拥有访问与业务审计分类；HTTP 路径、方法及 wire compatibility 的唯一 owner 仍是 `docs/technical/http-interface-contract.md`，本文不复制其响应结构、Controller、SQL 或 Gradle dependency。
+本文拥有第一版目标实现中跨 Admin API、身份来源、前端身份反馈和审计持续一致的技术接缝。当前 Server 已有统一主体、凭证验证器接缝、受信角色转换、Spring Security 请求 / 方法授权、管理写操作审计产生和持久化，以及与写入 contract 分离的 `super` 专属审计查询；没有正式身份提供方时 Admin fail closed。隔离 Review 身份只进入独立 Review source set / BootJar，正式 Server 产物不包含该入口。全局管理端身份反馈与可操作 Review 登录已实现，正式身份提供方仍未实现。角色的业务权限归属由 Requirement 持有，用户可观察结果由 Specification 持有，长期结构与框架选型由 Architecture / ADR 持有。下方矩阵只拥有访问与业务审计分类；HTTP 路径、方法及 wire compatibility 的唯一 owner 仍是 `docs/technical/http-interface-contract.md`，本文不复制其响应结构、Controller、SQL 或 Gradle dependency。
 
 ## 身份转换
 
@@ -29,9 +29,11 @@ Spring Security 的 `Authentication` 可承载该主体和映射后的 authoriti
 
 测试 / Review 身份提供方与其入口只在隔离的测试或 Review 构建中装配。生产配置和正式 BootJar 不包含可启用的模拟凭证默认值，并在没有正式身份适配器时失败关闭。不得使用 Spring Boot 默认随机用户、硬编码超级用户或客户端指定角色来替代测试身份协议。
 
-隔离 Review Browser 登录使用 Server 控制的固定 `admin` / `super` profile 创建内存短期会话。Browser 只提交稳定 profile token，不能提交 user ID、identity source 或角色集合；Server 返回随机 opaque credential，Frontend 仅在当前 tab 的 `sessionStorage` 保存并通过 `X-Cms-Review-Credential` 发送。会话有受控到期时间，退出 / 主动模拟失效立即从 Server registry 删除。Runtime restart 清空全部短期会话；该 registry 不构成账号库、正式 session store 或生产身份实现。
+隔离 Review Browser 登录使用 Server 控制的固定 `admin` / `super` profile 创建内存短期会话。Browser 只提交稳定 profile token，不能提交 user ID、identity source 或角色集合；Server 返回随机 opaque credential，Frontend 仅在当前 tab 的 `sessionStorage` 保存并通过 `X-Cms-Review-Credential` 发送。会话有受控到期时间、最大并发数量和过期清理，退出 / 主动模拟失效立即从 Server registry 删除。Runtime restart 清空全部短期会话；该 registry 不构成账号库、正式 session store 或生产身份实现。原生 `<img>` 无法附加认证 Header，Review 登录同时设置只对 `/api/admin/resources/*/content` 生效的 `HttpOnly`、`SameSite=Strict` 预览 Cookie；Review filter 只允许该 Cookie 认证匹配的 GET 内容请求，任何写操作仍必须提供 Header credential。
 
 Review 自动化 credential 与人工短期会话由同一 Review verifier 转换为 `CmsPrincipal`，但必须分别支持 `admin` 和 `super`，不能继续依赖代理层为所有 Browser 请求静默注入单一超级身份。Review runtime marker 只控制 Admin 是否展示测试入口，不构成 Backend 信任；正式 Server 即使收到 marker 或 Review Header 也仍然失败关闭。
+
+Review 会话的受控配置为 `cms.review-identity.session-ttl`（默认 `PT30M`，大于零且不超过 24 小时）和 `cms.review-identity.max-sessions`（默认 256，范围 1～10000）；双角色自动化 token 必须显式配置且互不相同。创建时清理过期会话，超过容量拒绝创建；验证在到期边界拒绝旧凭证，退出 / 模拟失效不撤销配置的自动化 token。
 
 当前基础接缝由受信的 Server verifier 返回已验证用户 ID 和外部角色；来源标识取自该 verifier，而不是请求提供的来源值。Server 按来源使用受控角色映射，缺少映射、存在未知角色或没有允许角色时拒绝主体构建。隔离测试 verifier 与 Review HTTP 适配分别位于 test / review source set，正式 Server 产物不包含它们；正式适配器尚未接入时，普通 Admin HTTP 请求保持未认证并返回 `401`。
 
@@ -45,12 +47,15 @@ Review 自动化 credential 与人工短期会话由同一 Review verifier 转�
 
 Admin Frontend 使用单一状态化身份边界和共享 Admin HTTP adapter：启动时先查询当前可信主体，成功后才挂载管理工作区；任一 Admin 请求 `401` 都清除 Review 短期 credential 并切换为未认证 / 已失效状态，`403` 保留当前主体并发布统一禁止访问反馈。所有既有 JSON、multipart、binary Admin adapter 都必须经过该边界；Public 请求不附带 Review credential，也不被 Admin 身份状态拦截。导航依据 Server 返回的 CMS role 裁剪，但 direct route 和 API 继续依赖 Server 授权。
 
+共享 adapter 只向同源 `/api/admin/**` 附加当前 tab 的 Review credential，并拒绝重定向以避免凭证跨源转发；旧会话的迟到响应不影响新会话。退出网络失败仍清除页面凭证，但必须明确提示服务端会话失效未获确认、将按 TTL 到期，不得显示“已退出”冒充服务端成功。
+
 ## 接口权限矩阵（第一版目标）
 
 下表以 HTTP contract 当前 Admin family 为授权匹配键；路径均相对于 `/api/admin`。每个列出的读、写入口都只允许 `admin` 或 `super` 尝试，且两角色都必须继续通过原有 Domain 校验。无有效身份返回 `401`，已认证但无 CMS 允许角色返回 `403`；拒绝时不得返回管理数据或产生业务写入。`super` 不因角色较高而绕过 preset、发布前置条件、来源身份或资源安全约束。
 
 | 业务族 | 读操作 | 写操作（均纳入业务审计） |
 |---|---|---|
+| 当前主体 | `GET /identity` | 无 |
 | 栏目 | `GET /columns` | `POST /columns`；`PUT/DELETE /columns/{id}` |
 | 文章 | `GET /articles`；`GET /articles/{id}` | `POST /articles`；`PUT /articles/{id}`；`POST /articles/{id}/publish`、`/withdraw` |
 | 导航位置 | `GET /navigation-locations` | `POST /navigation-locations`；`PUT/DELETE /navigation-locations/{code}` |

@@ -417,6 +417,6 @@ Test fixture只建立测试场景数据，不重建第二份站点 baseline。
 - ADR-0002：Main / Party Multi-entry Modular SPA；
 - ADR-0003：Navigation / Footer 进入 shared shell，定向修正 ADR-0002 的默认 shared boundary；
 - ADR-0004：Main / Party 二级栏目列表进入 shared presentation primitive，定向修正 ADR-0003 的默认判断。
-- ADR-0005：CMS 管理身份转换、Spring Security 方法授权与 AOP 审计的目标边界；可信主体、请求 / 方法授权、管理写操作审计记录及 `super` 专属审计查询已实现，真实身份与全局页面身份反馈仍待独立完成。
+- ADR-0005：CMS 管理身份转换、Spring Security 方法授权与 AOP 审计的目标边界；可信主体、请求 / 方法授权、管理写操作审计记录、`super` 专属审计查询及全局页面身份反馈已实现，隔离 Review 提供可操作的模拟登录；真实身份仍待独立完成。
 
 本文描述这些决策叠加后的**当前 Architecture State**。后续若改变这些 decision 的核心 trade-off，应新增或 supersede ADR，而不是只修改本文抹去历史原因。

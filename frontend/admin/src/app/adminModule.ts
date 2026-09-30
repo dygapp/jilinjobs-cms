@@ -4,6 +4,7 @@ export interface AdminNavigationItem {
   to: string
   label: string
   icon: string
+  requiredRole?: 'super'
 }
 
 export interface AdminNavigationSection {

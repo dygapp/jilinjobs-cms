@@ -1,4 +1,4 @@
-import { expect, test, type APIRequestContext } from '@playwright/test'
+import { expect, test, type APIRequestContext } from '../support/reviewTest'
 
 async function createArticle(
   request: APIRequestContext,

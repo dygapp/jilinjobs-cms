@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from '../support/reviewTest'
 
 const HUI_HOST = 'https://student.hjiuye.com'
 

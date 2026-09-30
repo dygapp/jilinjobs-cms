@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from '../support/reviewTest'
 
 const SITE_NAME = '吉林省高等学校毕业生就业信息网'
 

@@ -16,6 +16,13 @@ val reviewSourceSet = sourceSets.create("review") {
 configurations[reviewSourceSet.implementationConfigurationName].extendsFrom(configurations["implementation"])
 configurations[reviewSourceSet.runtimeOnlyConfigurationName].extendsFrom(configurations["runtimeOnly"])
 
+val reviewTestSourceSet = sourceSets.create("reviewTest") {
+    compileClasspath += mainSourceSet.output + reviewSourceSet.output
+    runtimeClasspath += mainSourceSet.output + reviewSourceSet.output
+}
+configurations[reviewTestSourceSet.implementationConfigurationName].extendsFrom(configurations["testImplementation"])
+configurations[reviewTestSourceSet.runtimeOnlyConfigurationName].extendsFrom(configurations["testRuntimeOnly"])
+
 dependencies {
     implementation(project(":modules:cms-core"))
     implementation("org.springframework.boot:spring-boot-starter-webmvc")
@@ -69,4 +76,11 @@ tasks.register<BootJar>("reviewBootJar") {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+tasks.register<Test>("reviewTest") {
+    group = "verification"
+    description = "Verify isolated Review identity session lifecycle without exposing it to formal tests or artifacts"
+    testClassesDirs = reviewTestSourceSet.output.classesDirs
+    classpath = reviewTestSourceSet.runtimeClasspath
 }

@@ -14,7 +14,7 @@ frontend_container="cms-frontend"
 mysql_image="${HUMAN_REVIEW_MYSQL_IMAGE:-mysql:8.4}"
 alpine_image="${HUMAN_REVIEW_ALPINE_IMAGE:-alpine:3.23}"
 apply_fixture="${HUMAN_REVIEW_APPLY_FIXTURE:-true}"
-review_identity_token="cms-local-review-admin"
+review_identity_token="cms-local-review-super"
 
 usage() {
   cat <<'USAGE'

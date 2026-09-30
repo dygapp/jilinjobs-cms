@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from '../support/reviewTest'
 
 const BASELINE_ROOTS = ['网站首页', '中心党建', '招聘信息', '业务指南', '政策法规', '就业指导', '典型事迹', '预决算公开', '关于我们']
 

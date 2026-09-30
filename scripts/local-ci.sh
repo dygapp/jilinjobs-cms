@@ -517,7 +517,8 @@ docker run -d --name "$backend_container" --network host --user "$uid:$gid" \
   -e DB_USERNAME=root -e DB_PASSWORD=root \
   -e CMS_STATIC_ROOT=/runtime-static -e CMS_STORAGE_ROOT=/uploads \
   -e CMS_SITE_PACKAGE_ROOT=/site-package -e CMS_SITE_PACKAGE_BOOTSTRAP_ON_START=true \
-  -e CMS_REVIEW_IDENTITY_TOKEN=cms-local-review-admin \
+  -e CMS_REVIEW_IDENTITY_ADMIN_TOKEN=cms-local-review-admin \
+  -e CMS_REVIEW_IDENTITY_SUPER_TOKEN=cms-local-review-super \
   -v "$runtime_root/static:/runtime-static" -v "$runtime_root/uploads:/uploads" \
   -v "$repo_root/sites/jilinjobs:/site-package:ro" "$review_backend_image" >/dev/null
 for i in $(seq 1 60); do
@@ -534,9 +535,16 @@ anonymous_admin_status="$(curl --silent --output /dev/null --write-out '%{http_c
 invalid_review_status="$(curl --silent --output /dev/null --write-out '%{http_code}' -H 'X-Cms-Review-Credential: invalid-review-credential' http://127.0.0.1:8080/api/admin/columns)"
 [[ "$invalid_review_status" == "401" ]] || die "Invalid Review credential should return 401, got $invalid_review_status"
 curl --fail --silent -H 'X-Cms-Review-Credential: cms-local-review-admin' http://127.0.0.1:8080/api/admin/columns >/dev/null
+admin_audit_status="$(curl --silent --output /dev/null --write-out '%{http_code}' -H 'X-Cms-Review-Credential: cms-local-review-admin' http://127.0.0.1:8080/api/admin/audit-events)"
+[[ "$admin_audit_status" == "403" ]] || die "Review admin should not read audit events, got $admin_audit_status"
+curl --fail --silent -H 'X-Cms-Review-Credential: cms-local-review-super' 'http://127.0.0.1:8080/api/admin/audit-events?limit=1' >/dev/null
 
 remove_container "$frontend_container"
-docker run -d --name "$frontend_container" --network host "$frontend_image" >/dev/null
+mkdir -p runtime-review-meta
+printf '{"reviewIdentity":{"enabled":true}}\n' > runtime-review-meta/review-environment.json
+docker run -d --name "$frontend_container" --network host \
+  -v "$repo_root/runtime-review-meta/review-environment.json:/usr/share/nginx/html/public/review-environment.json:ro" \
+  "$frontend_image" >/dev/null
 for i in $(seq 1 30); do
   if curl --fail --silent http://127.0.0.1:5173/ >/dev/null && curl --fail --silent http://127.0.0.1:5173/admin/ >/dev/null; then break; fi
   if [[ "$i" -eq 30 ]]; then

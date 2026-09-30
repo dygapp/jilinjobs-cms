@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from '../support/reviewTest'
 
 test('EU-29 Human Review：Main 与 Party 二级栏目复用公共列表展示组件', async ({ page }) => {
   await page.goto('/column/notice')

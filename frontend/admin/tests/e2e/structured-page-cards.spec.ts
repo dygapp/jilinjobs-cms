@@ -1,4 +1,4 @@
-import { expect, test, type APIRequestContext } from '@playwright/test'
+import { expect, test, type APIRequestContext } from '../support/reviewTest'
 
 type StructuredCard = { title: string; bodyHtml: string }
 type StructuredContent = { schemaVersion: number; kind: string; items: StructuredCard[] }

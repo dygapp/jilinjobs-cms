@@ -1,7 +1,7 @@
 ---
 id: execution-unit:eu72-admin-identity-feedback
 type: execution-unit
-status: ready
+status: executing
 readiness: PASS
 base_sha: 7d2682b7608d3d00d28b9758ceb5675a31e2e6d6
 branch: codex/eu72-admin-identity-feedback
@@ -76,3 +76,20 @@ started_at: 2026-09-30
 - `node scripts/verify-docs-governance.mjs` 与 `git diff --check` 均 PASS。
 
 此 PASS 只授予 `codex/eu72-admin-identity-feedback` 上的 EU-72 实施与验证，不授予真实身份提供方、CMS 本地账号 / 密码、Production Deployment、审计扩展或 agentic-dev 修改。
+
+## 实施与验证进展
+
+- 已完成受保护的当前主体投影、Review-only 双角色短期会话与人工登录 / 退出 / 模拟失效、同源共享 Admin HTTP adapter、启动身份 gate、全局主体反馈和角色导航裁剪；移除 Browser 代理静默超级身份注入。
+- 已完成全部 Admin adapter 接入、正式产物隔离检查、Review runtime / Human Review 启动及 Guide 更新。未改动 schema 或 EU-70 审计事务状态机。
+- Dirty full Local Docker CI：`.local-ci/evidence/20260930T034418Z-1469557`，绑定 `e7dd1dea1e715acb10d654fc3f89ffbe534acf40` + fingerprint `191bcccc621635344c169b46925fd0f3fbc408876f7b0f398ec65bea7c8de438`，PASS；Public 60 passed / 7 skipped，Admin 48 passed / 1 skipped，Review 1 passed。此证据不是 exact-head，也不覆盖之后补充的测试与修复。
+- 最终补充自然到期 / 容量 / 配置 fail-closed、旧 credential 拒绝、普通管理员写入审计归属、Cookie 仅内容 GET、断网退出及正式 marker 缺失的验证；目标提交和集成后证据尚待生成。
+
+## 安全 / 隐私 / 事务复核与 History Convergence
+
+实现者自查与独立复核分别进行；按 `review-change` 在不继承作者结论的 fresh context 重新恢复 Authority 与 exact diff，没有人工 reviewer。
+
+- 检查了主体来源、方法与请求授权、敏感字段、短期凭证 / Cookie 范围、公开边界、Review BootJar 隔离、审计归属与未触碰的事务边界。发现并修复跨源附加凭证、迟到响应影响新身份和断网退出误报成功风险；补充相应防护及回归。
+- 独立 reviewer 对候选 `ab3d1f284a51d5c85366fb58e0a47c0d3c7bc1f4` 发现 P2：Playwright 全局 Header 会将 Review credential 发往外部 iframe，并污染 Public 匿名证据。已停止该轮 CI（`.local-ci/evidence/20260930T071736Z-1514404`，没有 Full PASS），移除全局 Header，改为同源 Admin-only fixture 请求；Admin Browser 从受控当前 tab 身份发送请求，Public / 外部保持匿名。补充 fixture 同源 / 跨源 / redirect、Browser Public / 外部无凭证及业务页面 401 回归。最终修复 diff 的独立复核与 exact-head 全量验证仍为必要完成条件。
+- 修复后的独立复核发现 Public 套件中四个混合 Admin UI 场景需要显式启用其 Browser 测试身份；仅这些文件开启同源 `/admin` tab 身份，其余 Public Browser 保持匿名。第二轮候选 CI 因此在 Browser 前暂停，没有 Full PASS；随后继续复核最终 diff。
+- Docker 输入检查将 scoped fixture helper 归位各独立 Frontend 应用内，避免单应用 `/work` 挂载下跨包导入失败；实际 CI Playwright 镜像的隔离挂载发现检查通过（Public 67 / Admin 54）。运行 `.local-ci/evidence/20260930T073728Z-1556455` 在 Backend 就绪检查失败；loopback 对照为默认 curl 502、显式直连 200，确认宿主代理路由问题，后续本地验证设置 `NO_PROXY=127.0.0.1,localhost,::1` 与 `no_proxy`，不修改产品认证或授权来迎合该环境。
+- 已共享的规划 commit `e7dd1dea1e715acb10d654fc3f89ffbe534acf40` 保留；所有本单元实现、测试、debug 修复和 owner 同步收敛为一个功能 candidate，不为中间运行另建提交。归档为独立 docs-only closure，不改写已共享历史。

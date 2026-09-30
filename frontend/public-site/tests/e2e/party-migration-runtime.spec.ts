@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from '../support/reviewTest'
 
 const enabled = process.env.PARTY_MIGRATION_RUNTIME === 'true'
 const carouselTitles = [

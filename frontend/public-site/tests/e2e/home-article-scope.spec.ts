@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from '../support/reviewTest'
 
 test('首页按真实业务作用域加载公开内容', async ({ page, request }) => {
   const aliases = ['notice', 'employment-news', 'recruitment-announcement']

@@ -36,7 +36,7 @@ tasks.register<Delete>("clean") {
 tasks.register("test") {
     group = "verification"
     description = "Run Core, Server and Content Migration unit tests"
-    dependsOn(":modules:cms-core:test", ":apps:cms-server:test", ":apps:content-migration:test")
+    dependsOn(":modules:cms-core:test", ":apps:cms-server:test", ":apps:cms-server:reviewTest", ":apps:content-migration:test")
 }
 
 tasks.register("bootJar") {
@@ -213,6 +213,9 @@ tasks.register("verifyBackendApplicationBoundary") {
         require(reviewServerEntries.any {
             it == "BOOT-INF/classes/com/jilinjobs/cms/security/ReviewIdentityConfiguration.class"
         }) { "Review Server BootJar is missing isolated Review identity configuration" }
+        require(reviewServerEntries.any {
+            it == "BOOT-INF/classes/com/jilinjobs/cms/security/ReviewIdentitySessionController.class"
+        }) { "Review Server BootJar is missing isolated Review login controller" }
         require("BOOT-INF/classes/com/jilinjobs/cms/CmsApplication.class" in serverEntries) { "Server application class missing" }
         require(serverEntries.none { it.startsWith("BOOT-INF/classes/com/jilinjobs/cms/migration/") }) {
             "Server BootJar contains Content Migration classes"

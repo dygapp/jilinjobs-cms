@@ -1,4 +1,4 @@
-import { expect, test, type Page, type Response, type TestInfo } from '@playwright/test'
+import { expect, test, type Page, type Response, type TestInfo } from '../support/reviewTest'
 import { createHash } from 'node:crypto'
 import { writeFile } from 'node:fs/promises'
 

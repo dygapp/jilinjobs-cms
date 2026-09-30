@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from '../support/reviewTest'
 
 test('EU-21：网站属性图片使用自适应缩略图并复用 Element Plus Viewer', async ({ page }) => {
   await page.goto('/admin/site-config')

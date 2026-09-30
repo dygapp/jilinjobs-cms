@@ -1,5 +1,5 @@
 import { readFile, readdir } from 'node:fs/promises'
-import { expect, test } from '@playwright/test'
+import { expect, test } from '../support/reviewTest'
 
 const canonicalRoutes = [
   ['articles', '/admin/cms/articles'],

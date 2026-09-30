@@ -1,3 +1,5 @@
+import { adminFetch } from '../../../shared/adminHttp'
+
 export interface StaticEntry {
   path: string
   name: string
@@ -28,24 +30,24 @@ async function checked<T>(responsePromise: Promise<Response>): Promise<T> {
 }
 
 export const listStaticResources = (path = '') => checked<StaticEntry[]>(
-  fetch(`/api/admin/static-resources?path=${encodeURIComponent(path)}`),
+  adminFetch(`/api/admin/static-resources?path=${encodeURIComponent(path)}`),
 )
 
 export async function uploadStaticResource(path: string, file: File, replace = false) {
   const form = new FormData()
   form.append('file', file)
-  return checked<StaticEntry>(fetch(
+  return checked<StaticEntry>(adminFetch(
     `/api/admin/static-resources?path=${encodeURIComponent(path)}&replace=${replace}`,
     { method: 'POST', body: form },
   ))
 }
 
 export const deleteStaticResource = (path: string) => checked<TrashEntry>(
-  fetch(`/api/admin/static-resources?path=${encodeURIComponent(path)}`, { method: 'DELETE' }),
+  adminFetch(`/api/admin/static-resources?path=${encodeURIComponent(path)}`, { method: 'DELETE' }),
 )
 
-export const listStaticTrash = () => checked<TrashEntry[]>(fetch('/api/admin/static-resources/trash'))
+export const listStaticTrash = () => checked<TrashEntry[]>(adminFetch('/api/admin/static-resources/trash'))
 
 export const restoreStaticResource = (id: string) => checked<StaticEntry>(
-  fetch(`/api/admin/static-resources/restore/${id}`, { method: 'POST' }),
+  adminFetch(`/api/admin/static-resources/restore/${id}`, { method: 'POST' }),
 )

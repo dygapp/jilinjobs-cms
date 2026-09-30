@@ -37,7 +37,7 @@ export const cmsAdminModule: AdminModule = {
     {
       label: '安全审计',
       items: [
-        { to: '/cms/audit', label: '操作审计', icon: '审' },
+        { to: '/cms/audit', label: '操作审计', icon: '审', requiredRole: 'super' },
       ],
     },
   ],

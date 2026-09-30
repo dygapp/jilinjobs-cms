@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from '../support/reviewTest'
 
 const PARTY_BANNER = '/static/party/party-header-banner.jpg'
 

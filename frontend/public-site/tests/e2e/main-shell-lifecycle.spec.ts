@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from '../support/reviewTest'
 
 test('Main Site Shell 在同一 SPA 生命周期内只装配一次导航与站点属性', async ({ page }) => {
   const requestPaths: string[] = []

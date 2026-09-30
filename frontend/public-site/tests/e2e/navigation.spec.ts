@@ -1,4 +1,6 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from '../support/reviewTest'
+
+test.use({ reviewBrowserIdentity: true })
 
 test('导航可维护并只把启用条目暴露为正确公开入口', async ({ page, request }, testInfo) => {
   const suffix = `${Date.now()}-${testInfo.retry}`

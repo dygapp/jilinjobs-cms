@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from '../support/reviewTest'
 
 test('固定慧就业 Page 在后台显示只读诊断且不开放地址或正文编辑', async ({ page, request }) => {
   const response = await request.get('/api/admin/pages')

@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test } from '../support/reviewTest'
 
 test('列表图片要求使用简洁文案且无图片时不显示额外提示', async ({ page }) => {
   await page.goto('/admin/lists')

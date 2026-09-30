@@ -30,4 +30,19 @@ button,input,select,textarea{font:inherit}
 .admin-topbar-main{display:flex;align-items:baseline;gap:14px;min-width:0}
 .admin-topbar-main strong{font-size:16px;white-space:nowrap}
 .admin-topbar-main span{color:#8a99aa;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.admin-identity-summary{margin-left:auto;display:grid;grid-template-columns:auto auto auto;align-items:center;gap:2px 8px;color:#526579;text-align:right}
+.admin-identity-summary span{grid-row:1;font-size:12px;white-space:nowrap}
+.admin-identity-summary small{grid-row:2;grid-column:1;color:#8796a8}
+.admin-identity-summary .el-button{grid-row:1/3;margin:0}
+.admin-access-alert{border-radius:0}
+.admin-identity-gate{min-height:100vh;display:grid;place-items:center;padding:32px;background:radial-gradient(circle at top,#eef6ff 0,#f3f6fa 55%)}
+.admin-identity-card{width:min(520px,100%);padding:40px;border:1px solid #dce5ef;border-radius:14px;background:#fff;box-shadow:0 18px 50px rgba(29,58,91,.12);text-align:center}
+.admin-identity-brand{display:flex;flex-direction:column;gap:6px;margin-bottom:28px;color:#17375e}
+.admin-identity-brand strong{font-size:21px}.admin-identity-brand span{color:#7c8ea2;font-size:13px}
+.admin-identity-card h1{margin:12px 0 8px;font-size:24px}.admin-identity-card>p{margin:0 auto 24px;max-width:390px;color:#637589;line-height:1.7}
+.admin-identity-spinner{color:#0b6fc8}.identity-spinner-dot{animation:identity-pulse 1s ease-in-out infinite}
+.review-login{margin:24px 0;padding:22px;border:1px solid #f0d79b;border-radius:10px;background:#fffaf0}
+.review-login p{margin:12px 0 18px;color:#725e32;line-height:1.6}.review-login-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.identity-public-link{display:inline-block;margin-top:24px;color:#356c9f}
+@keyframes identity-pulse{50%{opacity:.25;transform:scale(.8)}}
 @media(max-width:900px){.admin-app{grid-template-columns:180px minmax(0,1fr)}.admin-app.sidebar-collapsed{grid-template-columns:64px minmax(0,1fr)}.admin-sidebar{position:relative}.admin-topbar{padding:0 18px}}
