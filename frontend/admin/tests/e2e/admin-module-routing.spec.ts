@@ -10,6 +10,7 @@ const canonicalRoutes = [
   ['advertisements', '/admin/cms/advertisements'],
   ['site-config', '/admin/cms/site-config'],
   ['static-resources', '/admin/cms/static-resources'],
+  ['audit', '/admin/cms/audit'],
 ] as const
 
 async function sourceFiles(root: URL): Promise<URL[]> {

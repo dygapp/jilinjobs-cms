@@ -63,7 +63,7 @@ jobs:
         run: |
           docker run --rm --network host mysql:8.4 \
             mysql -h127.0.0.1 -uroot -proot -e \
-            "DROP DATABASE IF EXISTS admin_audit_verify; CREATE DATABASE admin_audit_verify CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;"
+            "DROP DATABASE IF EXISTS admin_audit_verify; CREATE DATABASE admin_audit_verify CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci; DROP DATABASE IF EXISTS admin_audit_query_verify; CREATE DATABASE admin_audit_query_verify CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;"
       - name: Verify admin operation audit transactions
         working-directory: backend
         env:
@@ -71,6 +71,13 @@ jobs:
           ADMIN_AUDIT_VERIFY_DB_USERNAME: root
           ADMIN_AUDIT_VERIFY_DB_PASSWORD: root
         run: gradle verifyAdminAuditTransactions --no-daemon
+      - name: Verify admin operation audit query
+        working-directory: backend
+        env:
+          ADMIN_AUDIT_QUERY_VERIFY_DB_URL: jdbc:mysql://127.0.0.1:3306/admin_audit_query_verify?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+          ADMIN_AUDIT_QUERY_VERIFY_DB_USERNAME: root
+          ADMIN_AUDIT_QUERY_VERIFY_DB_PASSWORD: root
+        run: gradle verifyAdminAuditQuery --no-daemon
       - name: Verify Site Package foundation
         working-directory: backend
         env:

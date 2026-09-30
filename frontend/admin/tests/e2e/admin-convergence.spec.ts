@@ -13,6 +13,8 @@ test('EU-21：独立管理端 Shell 按内容职责组织八类 CMS 管理入口
   for (const id of ['articles','pages','lists','columns','navigation','advertisements','site-config','static-resources']) await expect(page.getByTestId(`admin-nav-${id}`)).toBeVisible()
   await expect(page.getByTestId('admin-nav-pages')).toContainText('单页管理')
   await expect(page.getByTestId('admin-nav-advertisements')).toContainText('宣传展示')
+  await expect(page.getByTestId('admin-nav-section-安全审计')).toBeVisible()
+  await expect(page.getByTestId('admin-nav-audit')).toContainText('操作审计')
 
   const shell=page.locator('.admin-app')
   await page.getByTestId('admin-sidebar-toggle').click()

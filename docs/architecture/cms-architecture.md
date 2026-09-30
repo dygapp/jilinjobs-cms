@@ -374,7 +374,7 @@ Admin 与 Public 可以消费同一 Domain，但 contract responsibility不同�
 
 当前 CMS Server 已建立统一可信主体、Spring Security Admin 请求边界和方法级角色授权；没有正式身份适配器时 Admin 默认失败关闭，Public contract 与静态公开资源继续保持匿名读取。Generic Core 不依赖 HTTP 用户或特定宿主后台，Content Migration 不伪造管理请求身份。
 
-CMS Server 已按 `docs/requirements/cms-admin-identity-and-audit.md` 与 ADR-0005 建立管理写操作审计产生和持久化，可信主体、动作、对象定位与提交 / 失败 / 回滚结果由 Server 审计边界采集；审计查询、真实宿主身份和管理端身份反馈仍属于独立后续能力。隔离 Review 身份只用于自动化 / 人工评审构建，不能替代独立网站或外部管理平台的正式登录。preset protection、immutable identity、resource safety 等仍属于 domain/data integrity，`admin` / `super` 也不得绕过这些业务不变量。
+CMS Server 已按 `docs/requirements/cms-admin-identity-and-audit.md` 与 ADR-0005 建立管理写操作审计产生和持久化，可信主体、动作、对象定位与提交 / 失败 / 回滚结果由 Server 审计边界采集；`super` 可通过独立只读 contract、稳定 cursor 与受限投影查询历史审计，查询本身不进入业务写审计。真实宿主身份和全局管理端身份反馈仍属于独立后续能力。隔离 Review 身份只用于自动化 / 人工评审构建，不能替代独立网站或外部管理平台的正式登录。preset protection、immutable identity、resource safety 等仍属于 domain/data integrity，`admin` / `super` 也不得绕过这些业务不变量。
 
 ## 14. 验证架构
 
@@ -417,6 +417,6 @@ Test fixture只建立测试场景数据，不重建第二份站点 baseline。
 - ADR-0002：Main / Party Multi-entry Modular SPA；
 - ADR-0003：Navigation / Footer 进入 shared shell，定向修正 ADR-0002 的默认 shared boundary；
 - ADR-0004：Main / Party 二级栏目列表进入 shared presentation primitive，定向修正 ADR-0003 的默认判断。
-- ADR-0005：CMS 管理身份转换、Spring Security 方法授权与 AOP 审计的目标边界；可信主体、请求 / 方法授权和管理写操作审计记录已实现，真实身份、页面反馈与审计查询仍待独立完成。
+- ADR-0005：CMS 管理身份转换、Spring Security 方法授权与 AOP 审计的目标边界；可信主体、请求 / 方法授权、管理写操作审计记录及 `super` 专属审计查询已实现，真实身份与全局页面身份反馈仍待独立完成。
 
 本文描述这些决策叠加后的**当前 Architecture State**。后续若改变这些 decision 的核心 trade-off，应新增或 supersede ADR，而不是只修改本文抹去历史原因。

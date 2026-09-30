@@ -19,7 +19,7 @@ updated_at: 2026-09-30
 
 ## 责任与实施状态
 
-本文拥有第一版目标实现中跨 Admin API、身份来源和审计持续一致的技术接缝。当前 Server 已有统一主体、凭证验证器接缝、受信角色转换、Spring Security 请求 / 方法授权以及管理写操作审计产生和持久化；没有正式身份提供方时 Admin fail closed。隔离 Review 身份只进入独立 Review source set / BootJar，正式 Server 产物不包含该入口。正式身份提供方、管理端身份反馈和审计查询仍未实现。角色的业务权限归属由 Requirement 持有，用户可观察结果由 Specification 持有，长期结构与框架选型由 Architecture / ADR 持有。下方矩阵只拥有访问与业务审计分类；HTTP 路径、方法及 wire compatibility 的唯一 owner 仍是 `docs/technical/http-interface-contract.md`，本文不复制其响应结构、Controller、SQL 或 Gradle dependency。
+本文拥有第一版目标实现中跨 Admin API、身份来源和审计持续一致的技术接缝。当前 Server 已有统一主体、凭证验证器接缝、受信角色转换、Spring Security 请求 / 方法授权、管理写操作审计产生和持久化，以及与写入 contract 分离的 `super` 专属审计查询；没有正式身份提供方时 Admin fail closed。隔离 Review 身份只进入独立 Review source set / BootJar，正式 Server 产物不包含该入口。正式身份提供方和全局管理端身份反馈仍未实现。角色的业务权限归属由 Requirement 持有，用户可观察结果由 Specification 持有，长期结构与框架选型由 Architecture / ADR 持有。下方矩阵只拥有访问与业务审计分类；HTTP 路径、方法及 wire compatibility 的唯一 owner 仍是 `docs/technical/http-interface-contract.md`，本文不复制其响应结构、Controller、SQL 或 Gradle dependency。
 
 ## 身份转换
 
@@ -37,7 +37,7 @@ Spring Security 的 `Authentication` 可承载该主体和映射后的 authoriti
 
 第一版 `admin` 覆盖现有全部 CMS 管理业务，`super` 继承这些能力并可查询审计。角色授予只决定是否可尝试操作，不跳过 Core 的 Domain 校验。授权切点应位于 Server 的 Admin application / transport 边界；Content Migration 命令调用 shared Core 时不需要伪造 HTTP 用户或绕过 Security 注解。
 
-管理端 Browser route 防护与菜单可见性只反映后端结果，不承担最终授权。管理 API 未认证与已认证无权限分别形成 `401` / `403`；若增加新的审计查询接口，应由 `docs/technical/http-interface-contract.md` 正式拥有 HTTP 路径与响应契约，而非在本文发明 endpoint。
+管理端 Browser route 防护与菜单可见性只反映后端结果，不承担最终授权。管理 API 未认证与已认证无权限分别形成 `401` / `403`；审计查询接口的 HTTP 路径与响应契约由 `docs/technical/http-interface-contract.md` 正式拥有，本文只约束其安全与集成接缝。
 
 ## 接口权限矩阵（第一版目标）
 
@@ -60,9 +60,9 @@ Spring Security 的 `Authentication` 可承载该主体和映射后的 authoriti
 | 静态资源 | `GET /static-resources`、`/static-resources/trash` | `POST /static-resources`（上传或明确替换）；`DELETE /static-resources`（入回收区）；`POST /static-resources/restore/{id}` |
 | 操作审计 | `GET /audit-events`、`GET /audit-events/{auditId}`（仅 `super`） | 无 |
 
-业务审计覆盖上述全部写入口，包括上传、替换、软删除、恢复及文章发布 / 撤回；授权拒绝记为安全事件，不伪造成已执行的业务写操作。当前没有托管资源删除接口，不为矩阵补造。操作审计行是独立后续目标：无有效身份 `401`，`admin` 或其他已认证非 `super` 角色 `403`，`super` 只可按 HTTP contract 有界查询；它是只读入口，不进入业务写操作 descriptor inventory。
+业务审计覆盖上述全部写入口，包括上传、替换、软删除、恢复及文章发布 / 撤回；授权拒绝记为安全事件，不伪造成已执行的业务写操作。当前没有托管资源删除接口，不为矩阵补造。操作审计行已实现独立读取边界：无有效身份 `401`，`admin` 或其他已认证非 `super` 角色 `403`，`super` 只可按 HTTP contract 有界查询；它是只读入口，不进入业务写操作 descriptor inventory。
 
-管理端现有八类 Browser 入口及其主要 Admin API consumer 如下；`/admin/articles` 等旧路径只重定向到对应 `/admin/cms/**`，不得绕过同一管理身份状态。
+管理端现有八类日常业务 Browser 入口及独立的安全审计入口如下；`/admin/articles` 等旧路径只重定向到对应 `/admin/cms/**`，不得绕过同一管理身份状态。
 
 | 页面路由 | 主要 Admin API 族 |
 |---|---|
@@ -74,8 +74,9 @@ Spring Security 的 `Authentication` 可承载该主体和映射后的 authoriti
 | `/admin/cms/advertisements` | 广告位、广告项、静态资源选择 |
 | `/admin/cms/site-config` | 网站属性、静态资源选择 |
 | `/admin/cms/static-resources` | 静态资源 |
+| `/admin/cms/audit` | 操作审计（仅 `super`） |
 
-匿名可进入待登录 / 无法认证展示，但不得读取管理数据；无允许角色展示禁止访问；`admin`、`super` 可进入现有业务页面。当前没有审计查询页面。直接访问、刷新、身份失效和页面内 API 请求必须同样受控，前端隐藏菜单不能替代服务端拒绝。
+匿名可进入待登录 / 无法认证展示，但不得读取管理数据；无允许角色展示禁止访问；`admin`、`super` 可进入现有业务页面，只有 `super` 可进入并读取操作审计页面。直接访问、刷新、身份失效和页面内 API 请求必须同样受控，前端隐藏菜单不能替代服务端拒绝。
 
 Public 边界以下 17 个当前 GET 投影保持匿名可读；它们不获得 Admin 写入或完整管理数据。
 

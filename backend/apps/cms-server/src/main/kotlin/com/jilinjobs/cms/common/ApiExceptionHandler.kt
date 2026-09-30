@@ -1,6 +1,7 @@
 package com.jilinjobs.cms.common
 
 import com.jilinjobs.cms.advertisement.*
+import com.jilinjobs.cms.audit.*
 import com.jilinjobs.cms.column.*
 import com.jilinjobs.cms.content.*
 import com.jilinjobs.cms.listing.*
@@ -26,6 +27,7 @@ class ApiExceptionHandler {
         StaticResourceValidationException::class,
         CmsListValidationException::class,
         AdvertisementValidationException::class,
+        AdminAuditQueryValidationException::class,
     )
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     fun validation(e: RuntimeException) = ApiError(e.message ?: "请求不合法")
@@ -44,6 +46,7 @@ class ApiExceptionHandler {
         CmsListItemNotFoundException::class,
         AdvertisementSlotNotFoundException::class,
         AdvertisementNotFoundException::class,
+        AdminAuditEventNotFoundException::class,
     )
     @ResponseStatus(HttpStatus.NOT_FOUND)
     fun notFound(e: RuntimeException) = ApiError(e.message ?: "资源不存在")

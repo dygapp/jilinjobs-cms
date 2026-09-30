@@ -11,14 +11,14 @@ relations:
     - docs/requirements/index.md
   architecture:
     - docs/architecture/cms-architecture.md
-updated_at: 2026-09-29
+updated_at: 2026-09-30
 ---
 
 # CMS 管理身份、授权与操作审计需求
 
 ## 1. 责任与阶段
 
-本文拥有 CMS 管理访问的长期 Product / Domain 事实：可信操作人、CMS 角色、管理操作授权、操作审计及独立部署和外部管理平台集成的共同边界。当前 Server 已建立统一管理主体、Admin 请求 / 方法授权以及管理写操作审计产生和持久化；正式身份提供方、管理端身份反馈和审计查询仍未完成，因此当前能力不等同于生产登录或审计消费闭环。
+本文拥有 CMS 管理访问的长期 Product / Domain 事实：可信操作人、CMS 角色、管理操作授权、操作审计及独立部署和外部管理平台集成的共同边界。当前 Server 已建立统一管理主体、Admin 请求 / 方法授权、管理写操作审计产生和持久化，并提供 `super` 专属的有界审计查询；正式身份提供方和全局管理端身份反馈仍未完成，因此当前能力不等同于生产登录闭环。
 
 本文不规定安全框架、AOP 注解、数据库表、登录协议、界面组件或具体推进顺序。管理端可观察行为由对应 Specification 持有，结构与技术选择由 Architecture / Technical 持有。
 

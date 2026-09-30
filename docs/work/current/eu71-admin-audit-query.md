@@ -1,7 +1,7 @@
 ---
 id: execution-unit:eu71-admin-audit-query
 type: execution-unit
-status: ready
+status: in_progress
 readiness: PASS
 base_sha: 58a97ac2e1ae71dd1df5db7f959c174a4999d949
 branch: codex/eu71-admin-audit-query
@@ -12,7 +12,9 @@ started_at: 2026-09-30
 
 ## 当前执行状态
 
-EU-71 已由当前 Requirement / Specification / Technical contract 切分，并在基线 `58a97ac2e1ae71dd1df5db7f959c174a4999d949` 通过独立 Readiness Gate；当前获得本文范围内的 Execute Authority。
+EU-71 已完成实现、当前 HEAD + worktree 指纹的全量 Local Docker CI，以及独立安全 / 隐私 / 查询边界复核；复核无阻塞或中等级 finding。形成 candidate commit 后仍须完成 exact-head Local Docker CI、最终 History Convergence、本地集成、Post-Integration Evidence、归档与推送闭环。本段只记录执行进度，不构成 Completion 声明。
+
+当前分层证据：`.local-ci/evidence/20260930T010423Z-1324456`，subject 为 `232e1c717b4905806afde3e9f26b695ca23c929c+worktree:7dee4786c3427f3efd6c119d243331d36a8560786184780b85ac7a8e0bd8e7bc`。该证据证明实现工作树的完整 Docker CI，但不冒充尚未形成的 exact-head 证据；其后的 Current Authority 状态收敛另由文档治理检查覆盖。
 
 ## 目标
 

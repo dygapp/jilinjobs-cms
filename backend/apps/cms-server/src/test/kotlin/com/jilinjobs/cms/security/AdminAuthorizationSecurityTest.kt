@@ -6,6 +6,7 @@ import com.jilinjobs.cms.audit.AdminAuditTransactions
 import com.jilinjobs.cms.audit.AdminAuditDescriptorResolver
 import com.jilinjobs.cms.audit.AdminAuditAttempt
 import com.jilinjobs.cms.audit.AdminAuditResult
+import com.jilinjobs.cms.audit.AdminAuditQueryService
 import com.jilinjobs.cms.advertisement.AdvertisementService
 import com.jilinjobs.cms.advertisement.PublicAdvertisementQueryService
 import com.jilinjobs.cms.column.ColumnService
@@ -68,6 +69,7 @@ class AdminAuthorizationSecurityTest {
     @MockitoBean lateinit var siteConfigService: SiteConfigService
     @MockitoBean lateinit var staticResourceService: StaticResourceService
     @MockitoBean lateinit var adminAuditTransactions: AdminAuditTransactions
+    @MockitoBean lateinit var adminAuditQueryService: AdminAuditQueryService
 
     @Test
     fun `anonymous admin request is 401 with diagnostic json`() {
@@ -151,6 +153,24 @@ class AdminAuthorizationSecurityTest {
     }
 
     @Test
+    fun `audit query requires super authority and creates no write audit`() {
+        mockMvc.perform(get("/api/admin/audit-events"))
+            .andExpect(status().isUnauthorized)
+
+        mockMvc.perform(
+            get("/api/admin/audit-events")
+                .with(authentication(principal(CmsRole.ADMIN).toSpringAuthentication())),
+        ).andExpect(status().isForbidden)
+
+        mockMvc.perform(
+            get("/api/admin/audit-events")
+                .with(authentication(principal(CmsRole.SUPER).toSpringAuthentication())),
+        ).andExpect(status().isOk)
+
+        Mockito.verifyNoInteractions(adminAuditTransactions)
+    }
+
+    @Test
     fun `public get and static resource remain anonymous`() {
         mockMvc.perform(get("/api/public/navigations"))
             .andExpect(status().isOk)
@@ -179,9 +199,11 @@ class AdminAuthorizationSecurityTest {
         assertTrue(adminHandlers.isNotEmpty())
 
         adminHandlers.values.forEach { handler ->
+            val adminAccess = AnnotatedElementUtils.hasAnnotation(handler.beanType, CmsAdminAccess::class.java)
+            val superAccess = AnnotatedElementUtils.hasAnnotation(handler.beanType, CmsSuperAccess::class.java)
             assertTrue(
-                AnnotatedElementUtils.hasAnnotation(handler.beanType, CmsAdminAccess::class.java),
-                "Admin handler is missing @CmsAdminAccess: ${handler.beanType.name}#${handler.method.name}",
+                adminAccess.xor(superAccess),
+                "Admin handler must carry exactly one access annotation: ${handler.beanType.name}#${handler.method.name}",
             )
         }
 
@@ -288,6 +310,8 @@ class AdminAuthorizationSecurityTest {
             "DELETE /api/admin/static-resources",
             "GET /api/admin/static-resources/trash",
             "POST /api/admin/static-resources/restore/{id}",
+            "GET /api/admin/audit-events",
+            "GET /api/admin/audit-events/{auditId}",
         )
     }
 }

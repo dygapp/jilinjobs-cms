@@ -25,7 +25,7 @@ class ReviewIdentityConfiguration {
         val verifier = ReviewCredentialVerifier(token)
         val converter = CmsIdentityConverter(
             listOf(verifier),
-            mapOf(verifier.identitySource to mapOf(ReviewCredentialVerifier.ADMIN_ROLE to CmsRole.ADMIN)),
+            mapOf(verifier.identitySource to mapOf(ReviewCredentialVerifier.SUPER_ROLE to CmsRole.SUPER)),
         )
         val filter = ReviewIdentityFilter(converter, verifier.identitySource)
         return CmsHttpAuthenticationConfigurer { http ->
@@ -44,11 +44,11 @@ private class ReviewCredentialVerifier(
     override val identitySource: String = "local-review"
 
     override fun verify(credential: String): VerifiedIdentity? =
-        if (credential == expectedToken) VerifiedIdentity(REVIEW_USER_ID, setOf(ADMIN_ROLE)) else null
+        if (credential == expectedToken) VerifiedIdentity(REVIEW_USER_ID, setOf(SUPER_ROLE)) else null
 
     companion object {
-        const val ADMIN_ROLE = "review-admin"
-        const val REVIEW_USER_ID = "local-review-admin"
+        const val SUPER_ROLE = "review-super"
+        const val REVIEW_USER_ID = "local-review-super"
     }
 }
 

@@ -34,6 +34,12 @@ export const cmsAdminModule: AdminModule = {
         { to: '/cms/static-resources', label: '静态资源', icon: '资' },
       ],
     },
+    {
+      label: '安全审计',
+      items: [
+        { to: '/cms/audit', label: '操作审计', icon: '审' },
+      ],
+    },
   ],
   routes: [
     { path: '/cms/articles', name: 'admin-cms-articles', component: () => import('./views/admin/ArticleManagementView.vue') },
@@ -44,6 +50,7 @@ export const cmsAdminModule: AdminModule = {
     { path: '/cms/advertisements', name: 'admin-cms-advertisements', component: () => import('./views/admin/AdvertisementManagementView.vue') },
     { path: '/cms/site-config', name: 'admin-cms-site-config', component: () => import('./views/admin/SiteConfigManagementView.vue') },
     { path: '/cms/static-resources', name: 'admin-cms-static-resources', component: () => import('./views/admin/StaticResourceManagementView.vue') },
+    { path: '/cms/audit', name: 'admin-cms-audit', component: () => import('./views/admin/AuditManagementView.vue') },
   ],
   compatibilityRoutes: [
     { path: '/articles', redirect: '/cms/articles' },
@@ -54,5 +61,6 @@ export const cmsAdminModule: AdminModule = {
     { path: '/advertisements', redirect: '/cms/advertisements' },
     { path: '/site-config', redirect: '/cms/site-config' },
     { path: '/static-resources', redirect: '/cms/static-resources' },
+    { path: '/audit', redirect: '/cms/audit' },
   ],
 }

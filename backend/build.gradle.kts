@@ -124,6 +124,12 @@ tasks.register<JavaExec>("verifyAdminAuditTransactions") {
     configureServerVerification("com.jilinjobs.cms.audit.AdminAuditIntegrationVerificationKt")
 }
 
+tasks.register<JavaExec>("verifyAdminAuditQuery") {
+    group = "verification"
+    description = "Verify EU-71 audit cursor query, filters, snapshots and indexes against real MySQL"
+    configureServerVerification("com.jilinjobs.cms.audit.AdminAuditQueryIntegrationVerificationKt")
+}
+
 tasks.register<JavaExec>("verifyPageContentOwnership") {
     group = "verification"
     description = "Verify EU-49 Site Package Page structure does not reclaim operator-managed Page content"
